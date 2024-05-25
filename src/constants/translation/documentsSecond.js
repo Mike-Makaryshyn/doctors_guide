@@ -232,7 +232,7 @@ export const documentSecond = [
          },
          {
             landName: "Hamburg",
-            link: "https://www.hamburg.de/contentblob/2773700/f308f6887c612e299d0b933fdf23ca39/data/merkblatt-beantragung-approbation-eu.pdf",
+            link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-drittst-.pdf",
             text: {
                en: "The application is submitted online",
                fr: "La demande se fait en ligne",
