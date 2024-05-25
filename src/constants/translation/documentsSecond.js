@@ -260,7 +260,7 @@ export const documentSecond = [
                de: "Anlage im Dokument",
             },
          },
-
+],
       
 
 
@@ -521,7 +521,7 @@ text: {
                ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
                de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
             },
-
+],
 id: 3,
       name: {
          en: " Written, informal declaration with the following wording: 'I hereby declare that I have no criminal record and that neither a judicial criminal proceeding nor a prosecutorial investigation is pending against me",
@@ -780,7 +780,6 @@ text: {
                de: "Füllen Sie den Antrag hier aus",
             },
          },
-
       ],
    },
 ];
