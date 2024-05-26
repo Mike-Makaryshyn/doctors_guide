@@ -1042,37 +1042,5 @@ text: {
    },
 
 
-   {
-      id: 3,
-      ...defaultPropsSecond,
-      name: {
-         en: "__",
-         fr: "__",
-         es: "__",
-         ar: "__",
-         tr: "__",
-         pl: "__",
-         uk: "__",
-         ru: "__",
-         de: "__",
-      },
-      links: [
-         {
-            landName: "__",
-            link: "__",
-            text: {
-               en: "__",
-               fr: "__",
-               es: "__",
-               ar: "__",
-               tr: "__",
-               pl: "__",
-               uk: "__",
-               ru: "__",
-               de: "__",
-            },
-         },
-      ],
-   },
    // END OF THE LINE
 ];
