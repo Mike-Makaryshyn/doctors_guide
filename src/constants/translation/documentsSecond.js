@@ -522,14 +522,14 @@ export const documentSecond = [
   { id: 3,
       name: {
          en: " Written, informal declaration with the following wording: 'I hereby declare that I have no criminal record and that neither a judicial criminal proceeding nor a prosecutorial investigation is pending against me",
-         fr: " "Déclaration écrite et informelle avec le texte suivant : « Je déclare par la présente que je n'ai pas de casier judiciaire et qu'aucune procédure pénale judiciaire ni aucune enquête du procureur n'est en cours contre moi ",
+         fr: " Déclaration écrite et informelle avec le texte suivant : « Je déclare par la présente que je n'ai pas de casier judiciaire et qu'aucune procédure pénale judiciaire ni aucune enquête du procureur n'est en cours contre moi ",
          es: " Declaración escrita e informal con el siguiente texto: 'Por la presente declaro que no tengo antecedentes penales y que no hay ningún procedimiento penal judicial ni investigación fiscal pendiente en mi contra",
          ar: "إقرار مكتوب وغير رسمي وموقع شخصيًا بأنك لم تقدم طلبًا للحصول على الترخيص في ألمانيا سابقًا",
          tr: "Aşağıdaki ifadeyi içeren yazılı, resmi olmayan beyan: 'Burada, sabıka kaydım olmadığını ve aleyhimde devam eden herhangi bir yargı ceza davası veya savcılık soruşturması bulunmadığını beyan ederim",
          pl: " Pisemne, nieformalne oświadczenie o następującej treści: 'Niniejszym oświadczam, że nie jestem karany i że nie toczy się przeciwko mnie żadne sądowe postępowanie karne ani prokuratorskie postępowanie przygotowawcze",
          uk: "Письмова, неформальна заява з наступним текстом: 'Цим заявляю, що у мене немає судимості і що проти мене не ведеться жодне судове кримінальне провадження чи прокурорське розслідування",
-         ru: Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
-         de: Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
+         ru: "Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
+         de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
       },
 links: [
          {
