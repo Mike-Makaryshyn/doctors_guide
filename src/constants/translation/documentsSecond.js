@@ -521,6 +521,7 @@ export const documentSecond = [
    },
    {
       id: 3,
+      ...defaultPropsSecond,
       name: {
          en: " Written, informal declaration with the following wording: 'I hereby declare that I have no criminal record and that neither a judicial criminal proceeding nor a prosecutorial investigation is pending against me",
          fr: " Déclaration écrite et informelle avec le texte suivant : « Je déclare par la présente que je n'ai pas de casier judiciaire et qu'aucune procédure pénale judiciaire ni aucune enquête du procureur n'est en cours contre moi ",
@@ -778,6 +779,7 @@ export const documentSecond = [
 
    {
       id: 4,
+      ...defaultPropsSecond,
       name: {
          en: "Current medical certificate confirming your health suitability to practice your profession (the certificate must have been issued no more than three months before the application date)",
          fr: "Certificat médical actuel confirmant votre aptitude physique à exercer votre profession (le certificat doit avoir été délivré au plus tard trois mois avant la date de la demande)",
