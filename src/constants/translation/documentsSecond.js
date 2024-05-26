@@ -869,8 +869,7 @@ text: {
          },
          {
             landName: "Mecklenburg Vorpommern",
-            link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1638895
-",
+            link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1638895",
             text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
