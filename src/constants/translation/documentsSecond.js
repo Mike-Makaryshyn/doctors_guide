@@ -563,7 +563,7 @@ text: {
             },
          },
          {
-            landName: "BadenW",
+            landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
                                     text: {
                en: "The relevant form is included in the application for licensure. Link here",
@@ -578,7 +578,7 @@ text: {
             },
          },
          {
-            landName: "NRW",
+            landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
                         text: {
                en: "The relevant form is included in the application for licensure. Link here",
@@ -656,7 +656,7 @@ text: {
             },
          },
          {
-            landName: " RheinlandPfalz ",
+            landName: "RheinlandPfalz",
             link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Berufserlaubnis_Antrag_Ausland.pdf",
             text: {
                en: "The relevant form is included in the application for licensure. Link here",
@@ -823,7 +823,7 @@ text: {
             },
          },
          {
-            landName: "BadenW",
+            landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
                                                 text: {
                en: "Fill out the application here",
@@ -838,7 +838,7 @@ text: {
             },
          },
          {
-            landName: "NRW",
+            landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
                         text: {
                en: "The relevant form is included in the application for licensure. Link here",
@@ -854,8 +854,7 @@ text: {
          },
          {
             landName: "Brandenburg",
-            link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-8_Ärztliche_Bescheinigung.pdf
-",
+            link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-8_Ärztliche_Bescheinigung.pdf",
             text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
@@ -916,7 +915,7 @@ text: {
             },
          },
          {
-            landName: " RheinlandPfalz ",
+            landName: "RheinlandPfalz",
             link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Aerztliche_Bescheinigung.pdf",
                         text: {
                en: "Fill out the application here",
@@ -932,7 +931,7 @@ text: {
          },
          {
             landName: "Sachsen",
-            link: https://www.lds.sachsen.de/ref/?ID=10676&art_param=485&abteilung_id=4&referat_id=16",
+            link: "https://www.lds.sachsen.de/ref/?ID=10676&art_param=485&abteilung_id=4&referat_id=16",
                         text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
