@@ -71,6 +71,8 @@ export const documents = [
    {
       id: 1,
       ...defaultProps,
+      apostile: "Не потрібно",
+      translation: "Не потрібно",
       category: "Пітвердження особистості (Закордонний паспорт або паспорт)",
       English: "",
       German: "",
