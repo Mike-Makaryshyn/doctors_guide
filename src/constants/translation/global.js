@@ -10,6 +10,8 @@ export const languageFlags = {
    pl: "🇵🇱", // Polish
 };
 
+export const DOMAIN_NAME = `https://doctors-guide-chi.vercel.app`;
+
 export const DEFAULT_LANGUAGE = 'de'
 
 export const languages = {

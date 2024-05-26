@@ -120,27 +120,13 @@ export const documents = [
       German:
          "Додаток до диплому, де вписаний огляд усіх пройдених предметів із годинами (не курікуюм)",
    },
-
-   {
-      id: 13,
-      ...defaultProps,
-      apostile: "",
-      notary: " ",
-      translation: " ",
-      ready_copies: " ",
-      link: "https://doctors-guide-chi.vercel.app/language-study",
-      category:
-         "Доказ про достатні знання німецької мови. Мінімум сертифікат Б2",
-      English: "",
-      German: "",
-   },
 ];
 
 export const documentsOptional = [
    {
       id: 3,
       ...defaultProps,
-      optional: true,
+      optional: true,   
       hide: true,
       category: "Свідоцтво про зміну імя чи прізвища (опціонально)",
       English: "Proof of Name Change",

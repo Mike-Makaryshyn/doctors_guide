@@ -94,13 +94,29 @@ const BodyItem = ({
                            )
                      )}
 
-                     {!selectedRegion && (
+                     {!selectedRegion && !row?.noLandCheckNeeded && (
                         <div key={index}>
                            <a href="/lands" rel="noopener noreferrer">
                               Select a region
                            </a>
                         </div>
                      )}
+                  </div>
+               )}
+
+               {row?.singleLink?.link && column?.name === "links" && (
+                  <div className={styles.cellContent}>
+
+                        <div>
+                           <a
+                              href={row?.singleLink?.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                           >
+                              {row?.singleLink?.text[selectedLanguage]}
+                           </a>
+                        </div>
+
                   </div>
                )}
 

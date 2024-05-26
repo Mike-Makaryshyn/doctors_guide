@@ -1,3 +1,5 @@
+import { DOMAIN_NAME } from "./global";
+
 const defaultPropsSecond = {
    is_exist: "not_check",
    sent: "not_check",
@@ -5,6 +7,50 @@ const defaultPropsSecond = {
 
 // Second table
 export const documentSecond = [
+   {
+      id: 121323,
+      ...defaultPropsSecond,
+      noLandCheckNeeded: true,
+      name: {
+         uk: "Доказ про достатні знання німецької мови. Мінімум сертифікат Б2",
+      },
+      singleLink: {
+         text: {
+            uk: "Вивчення мови",
+         },
+         link: `${DOMAIN_NAME}/language-study`,
+      },
+   },
+   {
+      ...defaultPropsSecond,
+      id: 1312,
+      noLandCheckNeeded: true,
+      name: {
+         en: "Current, tabular, personally signed CV (showing the studies and career path up to the date of application without any gaps)",
+         fr: "CV actuel, tabulaire, signé personnellement (indiquant les études et le parcours professionnel jusqu'à la date de la demande sans lacunes)",
+         es: "CV actual, tabular, firmado personalmente (mostrando los estudios y la trayectoria profesional hasta la fecha de la solicitud sin lagunas)",
+         ar: "السيرة الذاتية الحالية، منظمة في جدول وموقعة شخصيًا (تُظهر الدراسة والمسار الوظيفي حتى تاريخ تقديم الطلب دون أي فجوات)",
+         tr: "Güncel, tablo halinde, kişisel olarak imzalanmış özgeçmiş (başvuru tarihine kadar olan eğitim ve kariyer yolunu kesintisiz olarak gösteren)",
+         pl: "Aktualny, tabelaryczny, osobiście podpisany życiorys (przedstawiający studia i ścieżkę kariery do daty złożenia wniosku bez luk)",
+         uk: "Актуальне, табличне, особисто підписане резюме (яке показує навчання та кар'єрний шлях до дати подання заявки без прогалин)",
+         ru: "Актуальное, табличное, лично подписанное резюме (отражающее учебу и карьерный путь до даты подачи заявки без пробелов)",
+         de: "Aktueller, tabellarischer, persönlich unterschriebener Lebenslauf (darin sind Studium und der berufliche Werdegang bis zum Datum der Antragstellung lückenlos darzustellen)",
+      },
+      singleLink: {
+         text: {
+            en: "Create a CV",
+            fr: "Créer un CV",
+            es: "Crear un CV",
+            ar: "إنشاء سيرة ذاتية",
+            tr: "CV Oluştur",
+            pl: "Utwórz CV",
+            uk: "Створити резюме",
+            ru: "Создать резюме",
+            de: "Einen Lebenslauf erstellen",
+         },
+         link: `${DOMAIN_NAME}/resume`,
+      },
+   },
    {
       ...defaultPropsSecond,
       id: 1,
