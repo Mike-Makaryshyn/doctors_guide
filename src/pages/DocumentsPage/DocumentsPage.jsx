@@ -27,29 +27,43 @@ const DocumentsPage = () => {
 
    const [tableData, setTableData] = useState(documents);
    const [tableDataSecond, setTableDataSecond] = useState(documentSecond);
-   const [optionalTableData, setOptionalTableData] = useState(documentsOptional);
-   const [progress, setProgress] = useState(0);
-   const savedData = localStorage.getItem("docs_table_data");
+   const [optionalTableData, setOptionalTableData] =
+      useState(documentsOptional);
 
+   const [progress, setProgress] = useState(0);
+   const savedData = localStorage.getItem("stored_tables");
    const handlePrint = useReactToPrint({
       content: () => combinedRef.current,
    });
 
    useEffect(() => {
       if (savedData) {
-         setTableData(JSON.parse(savedData));
+         const parsedData =JSON.parse(savedData);
+         setTableData(parsedData?.table1);
+         setTableDataSecond(parsedData?.table2);
+         setOptionalTableData(parsedData?.table3);
       }
    }, []);
 
    useEffect(() => {
-      localStorage.setItem("docs_table_data", JSON.stringify(tableData));
-   }, [tableData]);
+      const storedData =
+         JSON.parse(localStorage.getItem("stored_tables")) || {};
+
+      const updatedStoredData = {
+         ...storedData,
+         table1: tableData,
+         table2: tableDataSecond,
+         table3: optionalTableData,
+      };
+
+      localStorage.setItem("stored_tables", JSON.stringify(updatedStoredData));
+   }, [tableData, tableDataSecond, optionalTableData]);
 
    const calculateProgress = () => {
       let totalCheckboxes = 0;
       let checkedCheckboxes = 0;
 
-      const filteredData = tableData?.filter((item) => !item?.hide);
+      const filteredData = [...tableData, ...tableDataSecond, ...optionalTableData]?.filter((item) => !item?.hide);
 
       filteredData.forEach((item) => {
          Object.keys(item).forEach((key) => {
@@ -80,7 +94,7 @@ const DocumentsPage = () => {
 
    useEffect(() => {
       setProgress(calculateProgress());
-   }, [tableData]);
+   }, [tableData, tableDataSecond, optionalTableData]);
 
    const getMessage = (progress) => {
       if (progress < 20) {
@@ -138,9 +152,8 @@ const DocumentsPage = () => {
                            { name: "sent", label: "Відправлено" },
                         ]}
                         tableRef={secondRef}
-                        tableData={tableDataSecond}
                         setTableData={setTableDataSecond}
-                        data={documentSecond}
+                        data={tableDataSecond}
                         noTitleAndColumns
                      />
                      <Table
