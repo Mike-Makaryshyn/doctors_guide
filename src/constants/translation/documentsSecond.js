@@ -594,8 +594,7 @@ text: {
          },
          {
             landName: "Brandenburg",
-            link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-6_Drittland_Vordruck_Versicherungen_zum_Antrag.pdf
-",
+            link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-6_Drittland_Vordruck_Versicherungen_zum_Antrag.pdf",
             text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
@@ -610,8 +609,7 @@ text: {
          },
          {
             landName: "Mecklenburg Vorpommern",
-            link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1664377
-",
+            link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1664377",
                                     text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
@@ -717,8 +715,7 @@ text: {
          },
          {
             landName: "Saarland",
-            link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Antrag_Erteilung_Approbation.pdf?__blob=publicationFile&v=6
-",
+            link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Antrag_Erteilung_Approbation.pdf?__blob=publicationFile&v=6",
             text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
@@ -763,8 +760,7 @@ text: {
          },
          {
             landName: "Bremen",
-            link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf
-",
+            link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
 text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
