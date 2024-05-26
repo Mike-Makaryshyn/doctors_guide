@@ -519,7 +519,8 @@ export const documentSecond = [
          },
       ],
    },
-  { id: 3,
+   {
+      id: 3,
       name: {
          en: " Written, informal declaration with the following wording: 'I hereby declare that I have no criminal record and that neither a judicial criminal proceeding nor a prosecutorial investigation is pending against me",
          fr: " Déclaration écrite et informelle avec le texte suivant : « Je déclare par la présente que je n'ai pas de casier judiciaire et qu'aucune procédure pénale judiciaire ni aucune enquête du procureur n'est en cours contre moi ",
@@ -531,11 +532,11 @@ export const documentSecond = [
          ru: "Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
          de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
       },
-links: [
+      links: [
          {
             landName: "Bayern",
             link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi/regierungen/regierungen/rob/approbationen/index?caller=8995476647409",
-text: {
+            text: {
                en: "The application is submitted online",
                fr: "La demande se fait en ligne",
                es: "La solicitud se realiza en línea",
@@ -546,7 +547,7 @@ text: {
                ru: "Подача заявления осуществляется онлайн",
                de: "Der Antrag wird online eingereicht",
             },
-},
+         },
          {
             landName: "Niedersachsen",
             link: "https://www.nizza.niedersachsen.de/download/203484/Aerztin_Arzt_Erklaerung_Straffreiheit.pdf",
@@ -565,7 +566,7 @@ text: {
          {
             landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
-                                    text: {
+            text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
                es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
@@ -580,7 +581,7 @@ text: {
          {
             landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
-                        text: {
+            text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
                es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
@@ -610,7 +611,7 @@ text: {
          {
             landName: "Mecklenburg Vorpommern",
             link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1664377",
-                                    text: {
+            text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
                es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
@@ -625,7 +626,7 @@ text: {
          {
             landName: "Hessen",
             link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-03/antrag_medizin_approbation_und_berufserlaubnis_drittstaaten_stand_16.02.23.pdf",
-                                    text: {
+            text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
                es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
@@ -636,7 +637,6 @@ text: {
                ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
                de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
             },
-
          },
          {
             landName: "Sachsen-Anhalt",
@@ -761,7 +761,7 @@ text: {
          {
             landName: "Bremen",
             link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
-text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -776,22 +776,24 @@ text: {
       ],
    },
 
-{ id: 4,
-      name: { 
-en: "Current medical certificate confirming your health suitability to practice your profession (the certificate must have been issued no more than three months before the application date)", 
-fr: "Certificat médical actuel confirmant votre aptitude physique à exercer votre profession (le certificat doit avoir été délivré au plus tard trois mois avant la date de la demande)", 
-es: "Certificado médico actual que confirme su idoneidad de salud para ejercer su profesión (el certificado debe haber sido emitido no más de tres meses antes de la fecha de la solicitud)", 
-ar: "شهادة طبية حديثة تؤكد لياقتك الصحية لممارسة مهنتك (يجب أن تكون الشهادة قد صدرت في غضون الأشهر الثلاثة التي تسبق تاريخ تقديم الطلب)", tr: "Mesleğinizi icra etmeye uygun olduğunuzu teyit eden güncel sağlık raporu (rapor, başvuru tarihinden en fazla üç ay önce düzenlenmiş olmalıdır)", 
-pl: "Aktualne zaświadczenie lekarskie potwierdzające Twoją zdolność zdrowotną do wykonywania zawodu (zaświadczenie nie może być wystawione wcześniej niż trzy miesiące przed złożeniem wniosku)", 
-uk: "Актуальна медична довідка, що підтверджує вашу придатність до здійснення професійної діяльності (довідка повинна бути видана не пізніше ніж за три місяці до дати подання заяви)", 
-ru: "Актуальная медицинская справка, подтверждающая вашу пригодность к выполнению профессиональных обязанностей (справка должна быть выдана не ранее чем за три месяца до подачи заявления)", 
-de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)" },
-links: [
-
-{
+   {
+      id: 4,
+      name: {
+         en: "Current medical certificate confirming your health suitability to practice your profession (the certificate must have been issued no more than three months before the application date)",
+         fr: "Certificat médical actuel confirmant votre aptitude physique à exercer votre profession (le certificat doit avoir été délivré au plus tard trois mois avant la date de la demande)",
+         es: "Certificado médico actual que confirme su idoneidad de salud para ejercer su profesión (el certificado debe haber sido emitido no más de tres meses antes de la fecha de la solicitud)",
+         ar: "شهادة طبية حديثة تؤكد لياقتك الصحية لممارسة مهنتك (يجب أن تكون الشهادة قد صدرت في غضون الأشهر الثلاثة التي تسبق تاريخ تقديم الطلب)",
+         tr: "Mesleğinizi icra etmeye uygun olduğunuzu teyit eden güncel sağlık raporu (rapor, başvuru tarihinden en fazla üç ay önce düzenlenmiş olmalıdır)",
+         pl: "Aktualne zaświadczenie lekarskie potwierdzające Twoją zdolność zdrowotną do wykonywania zawodu (zaświadczenie nie może być wystawione wcześniej niż trzy miesiące przed złożeniem wniosku)",
+         uk: "Актуальна медична довідка, що підтверджує вашу придатність до здійснення професійної діяльності (довідка повинна бути видана не пізніше ніж за три місяці до дати подання заяви)",
+         ru: "Актуальная медицинская справка, подтверждающая вашу пригодность к выполнению профессиональных обязанностей (справка должна быть выдана не ранее чем за три месяца до подачи заявления)",
+         de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
+      },
+      links: [
+         {
             landName: "Bayern",
             link: " https://formularserver.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
-text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -802,7 +804,7 @@ text: {
                ru: "Заполните заявление здесь",
                de: "Füllen Sie den Antrag hier aus",
             },
-},
+         },
          {
             landName: "Niedersachsen",
             link: "https://www.nizza.niedersachsen.de/download/200366/Aerztin_Arzt_aerztliche_Bescheinigung.pdf",
@@ -821,7 +823,7 @@ text: {
          {
             landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
-                                                text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -836,7 +838,7 @@ text: {
          {
             landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
-                        text: {
+            text: {
                en: "The relevant form is included in the application for licensure. Link here",
                fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
                es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
@@ -881,7 +883,7 @@ text: {
          {
             landName: "Hessen",
             link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-03/aerztliche_bescheinigung_neu.pdf",
-text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -892,7 +894,6 @@ text: {
                ru: "Заполните заявление здесь",
                de: "Füllen Sie den Antrag hier aus",
             },
-
          },
          {
             landName: "Sachsen-Anhalt",
@@ -912,7 +913,7 @@ text: {
          {
             landName: "RheinlandPfalz",
             link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Aerztliche_Bescheinigung.pdf",
-                        text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -927,7 +928,7 @@ text: {
          {
             landName: "Sachsen",
             link: "https://www.lds.sachsen.de/ref/?ID=10676&art_param=485&abteilung_id=4&referat_id=16",
-                        text: {
+            text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
@@ -953,7 +954,6 @@ text: {
                ru: "Заполните заявление здесь",
                de: "Füllen Sie den Antrag hier aus",
             },
-
          },
          {
             landName: "SchleswigHolstein",
@@ -1033,7 +1033,6 @@ text: {
          },
       ],
    },
-
 
    // END OF THE LINE
 ];
