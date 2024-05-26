@@ -1,5 +1,9 @@
 import Table from "../../components/Table/Table";
-import { documents, messages } from "../../constants/translation/documents";
+import {
+   documents,
+   messages,
+   documentsOptional,
+} from "../../constants/translation/documents";
 import { useState, useEffect, useRef } from "react";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -7,16 +11,6 @@ import styles from "./styles.module.scss";
 import { useReactToPrint } from "react-to-print";
 import { documentSecond } from "../../constants/translation/documentsSecond";
 import TableSecond from "./TableSecond/Table";
-
-const sortByOptional = (a, b) => {
-   if (a.optional === b.optional) {
-     return 0;
-   } else if (a.optional) {
-     return 1;  // a.optional is true, so it should come after
-   } else {
-     return -1; // a.optional is false or undefined, so it should come before
-   }
- };
 
 const DocumentsPage = () => {
    const {
@@ -28,6 +22,7 @@ const DocumentsPage = () => {
 
    const firstRef = useRef();
    const secondRef = useRef();
+   const thirdRef = useRef();
    const combinedRef = useRef();
 
    const [tableData, setTableData] = useState(documents);
@@ -41,7 +36,7 @@ const DocumentsPage = () => {
 
    useEffect(() => {
       if (savedData) {
-         setTableData(JSON.parse(savedData)?.sort(sortByOptional));
+         setTableData(JSON.parse(savedData));
       }
    }, []);
 
@@ -117,6 +112,7 @@ const DocumentsPage = () => {
                   </div>
                   <div ref={combinedRef}>
                      <Table
+                        title="Подача заяв"
                         columns={[
                            { name: "category", label: "Документ" },
                            { name: "is_exist", label: "Наявно" },
@@ -145,6 +141,24 @@ const DocumentsPage = () => {
                         setTableData={setTableDataSecond}
                         data={documentSecond}
                         noTitleAndColumns
+                     />
+                     <Table
+                        title="Опціональні документи"
+                        columns={[
+                           { name: "category", label: "Документ" },
+                           { name: "is_exist", label: "Наявно" },
+                           { name: "apostile", label: "Апостиль" },
+                           { name: "notary", label: "Завірено нотаріусом" },
+                           {
+                              name: "translation",
+                              label: "Професійний переклад",
+                           },
+                           { name: "ready_copies", label: "Завірені копії" },
+                           { name: "sent", label: "Відправлено" },
+                        ]}
+                        tableRef={thirdRef}
+                        data={documentsOptional}
+                        setTableData={setTableData}
                      />
                   </div>
                </div>
