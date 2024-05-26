@@ -8,6 +8,16 @@ import { useReactToPrint } from "react-to-print";
 import { documentSecond } from "../../constants/translation/documentsSecond";
 import TableSecond from "./TableSecond/Table";
 
+const sortByOptional = (a, b) => {
+   if (a.optional === b.optional) {
+     return 0;
+   } else if (a.optional) {
+     return 1;  // a.optional is true, so it should come after
+   } else {
+     return -1; // a.optional is false or undefined, so it should come before
+   }
+ };
+
 const DocumentsPage = () => {
    const {
       selectedLanguage: language,
@@ -31,7 +41,7 @@ const DocumentsPage = () => {
 
    useEffect(() => {
       if (savedData) {
-         setTableData(JSON.parse(savedData));
+         setTableData(JSON.parse(savedData)?.sort(sortByOptional));
       }
    }, []);
 
