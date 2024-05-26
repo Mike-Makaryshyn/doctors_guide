@@ -89,8 +89,7 @@ const BodyItem = ({
                                     rel="noopener noreferrer"
                                  >
                                     {linkObj.text[selectedLanguage]}
-                                 </a>{" "}
-                                 ({linkObj.landName})
+                                 </a>
                               </div>
                            )
                      )}
