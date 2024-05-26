@@ -51,7 +51,7 @@ export const documentSecond = [
             },
          },
          {
-            landName: "BadenW",
+            landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
             text: {
                en: "Fill out the application here",
@@ -66,7 +66,7 @@ export const documentSecond = [
             },
          },
          {
-            landName: "NRW",
+            landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
             text: {
                en: "Fill out the application here",
@@ -308,7 +308,7 @@ export const documentSecond = [
             },
          },
          {
-            landName: "BadenW",
+            landName: "Baden-Württemberg",
             link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
             text: {
                en: "The relevant form is included in the application for licensure. Link here",
@@ -323,7 +323,7 @@ export const documentSecond = [
             },
          },
          {
-            landName: "NRW",
+            landName: "Nordrhein-Westfalen",
             link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
             text: {
                en: "The relevant form is included in the application for licensure. Link here",
