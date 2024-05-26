@@ -16,14 +16,17 @@ const DocumentsPage = () => {
       selectedRegion,
    } = useGetGlobalInfo();
 
-   const tableRef = useRef(null);
+   const firstRef = useRef();
+   const secondRef = useRef();
+   const combinedRef = useRef();
+
    const [tableData, setTableData] = useState(documents);
    const [tableDataSecond, setTableDataSecond] = useState(documentSecond);
    const [progress, setProgress] = useState(0);
    const savedData = localStorage.getItem("docs_table_data");
 
    const handlePrint = useReactToPrint({
-      content: () => tableRef.current,
+      content: () => combinedRef.current,
    });
 
    useEffect(() => {
@@ -102,32 +105,38 @@ const DocumentsPage = () => {
                         {progress}% - {getMessage(progress)}
                      </div>
                   </div>
-                  <Table
-                     columns={[
-                        { name: "category", label: "Документ" },
-                        { name: "is_exist", label: "Наявно" },
-                        { name: "apostile", label: "Апостиль" },
-                        { name: "notary", label: "Завірено нотаріусом" },
-                        { name: "translation", label: "Професійний переклад" },
-                        { name: "ready_copies", label: "Завірені копії" },
-                        { name: "sent", label: "Відправлено" },
-                     ]}
-                     tableRef={tableRef}
-                     data={tableData}
-                     setTableData={setTableData}
-                  />
-                  <TableSecond
-                     columns={[
-                        { name: "name", label: "Документ" },
-                        { name: "is_exist", label: "Наявно" },
-                        { name: "links", label: "Посилання на документ" },
-                        { name: "sent", label: "Відправлено" },
-                     ]}
-                     tableRef={tableRef}
-                     tableData={tableDataSecond}
-                     setTableData={setTableDataSecond}
-                     data={documentSecond}
-                  />
+                  <div ref={combinedRef}>
+                     <Table
+                        columns={[
+                           { name: "category", label: "Документ" },
+                           { name: "is_exist", label: "Наявно" },
+                           { name: "apostile", label: "Апостиль" },
+                           { name: "notary", label: "Завірено нотаріусом" },
+                           {
+                              name: "translation",
+                              label: "Професійний переклад",
+                           },
+                           { name: "ready_copies", label: "Завірені копії" },
+                           { name: "sent", label: "Відправлено" },
+                        ]}
+                        tableRef={firstRef}
+                        data={tableData}
+                        setTableData={setTableData}
+                     />
+                     <TableSecond
+                        columns={[
+                           { name: "name", label: "Документ" },
+                           { name: "is_exist", label: "Наявно" },
+                           { name: "links", label: "Посилання на документ" },
+                           { name: "sent", label: "Відправлено" },
+                        ]}
+                        tableRef={secondRef}
+                        tableData={tableDataSecond}
+                        setTableData={setTableDataSecond}
+                        data={documentSecond}
+                        noTitleAndColumns
+                     />
+                  </div>
                </div>
                <button
                   className={"main_menu_back"}

@@ -56,7 +56,6 @@
       position: relative;
       border: solid 1px transparent;
       min-width: 110px;
-      max-width: 250px;
 
       border-style: solid none;
       padding: 10px;
@@ -146,6 +145,18 @@
       position: relative;
 
       td {
+         &:nth-child(1) {
+            width: 38% !important;
+         }
+         &:nth-child(3) {
+            width: 60%;
+            div {
+               text-align: center;
+               vertical-align: middle;
+               font-size: 16px;
+               font-weight: 500;
+            }
+         }
          position: relative;
          padding: 1rem;
          font-size: 14px;

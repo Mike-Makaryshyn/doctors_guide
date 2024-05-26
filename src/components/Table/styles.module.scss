@@ -59,6 +59,10 @@
       border-style: solid none;
       padding: 10px;
       background-color: transparent;
+
+      &:nth-child(1) {
+         width: 31.3% !important;
+      }
    }
 
    td:first-child {

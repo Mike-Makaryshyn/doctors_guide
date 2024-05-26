@@ -10,6 +10,7 @@ const TableSecond = ({
    maxWordsLength = 19,
    setTableData,
    tableRef,
+   noTitleAndColumns
 }) => {
    return (
       <div
@@ -17,21 +18,7 @@ const TableSecond = ({
          style={{ maxHeight }}
          className={styles.table_container}
       >
-         <div className={styles.title}> Подача заяв</div>
-
          <table className={cn(styles.table)}>
-            <thead className={styles.thead}>
-               <tr>
-                  {columns?.map((column, index) => (
-                     <th
-                        key={column?.name}
-                        className={cn(styles.header, "noselect")}
-                     >
-                        <span>{column?.label?.replaceAll("_", " ")}</span>
-                     </th>
-                  ))}
-               </tr>
-            </thead>
             <tbody className={styles.tbody}>
                {data?.map((row, index) => (
                   <BodyItem
