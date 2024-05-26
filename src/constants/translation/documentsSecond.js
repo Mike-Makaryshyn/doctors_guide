@@ -795,7 +795,7 @@ links: [
 {
             landName: "Bayern",
             link: " https://formularserver.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
-Text: {
+text: {
                en: "Fill out the application here",
                fr: "Remplissez la demande ici",
                es: "Complete la solicitud aquí",
