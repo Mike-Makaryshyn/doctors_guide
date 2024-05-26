@@ -5,14 +5,16 @@ import {
 } from "../../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import { useNavigate } from "react-router-dom";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import "./header.css";
-
 
 const Header = () => {
    const selectedLanguage = localStorageGet(
       "selectedLanguage",
       DEFAULT_LANGUAGE
    );
+
+   const { selectedRegion } = useGetGlobalInfo();
 
    const navigate = useNavigate();
 
@@ -32,6 +34,7 @@ const Header = () => {
          >
             Germanmovein
          </h2>
+         <span>{selectedRegion}</span>
          <div className="flexBt">
             <span style={{ marginRight: "20px" }}>
                {languages[selectedLanguage].language}
