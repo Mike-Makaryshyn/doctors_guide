@@ -27,6 +27,7 @@ const DocumentsPage = () => {
 
    const [tableData, setTableData] = useState(documents);
    const [tableDataSecond, setTableDataSecond] = useState(documentSecond);
+   const [optionalTableData, setOptionalTableData] = useState(documentsOptional);
    const [progress, setProgress] = useState(0);
    const savedData = localStorage.getItem("docs_table_data");
 
@@ -157,8 +158,8 @@ const DocumentsPage = () => {
                            { name: "sent", label: "Відправлено" },
                         ]}
                         tableRef={thirdRef}
-                        data={documentsOptional}
-                        setTableData={setTableData}
+                        data={optionalTableData}
+                        setTableData={setOptionalTableData}
                      />
                   </div>
                </div>

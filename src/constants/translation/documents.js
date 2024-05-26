@@ -84,16 +84,7 @@ export const documents = [
       English: "Birth Certificate",
       German: "Geburtsurkunde / Auszug aus dem Familienbuch",
    },
-   {
-      id: 3,
-      ...defaultProps,
-      optional: true,
-      hide: true,
-      category: "Свідоцтво про зміну імя чи прізвища (опціонально)",
-      English: "Proof of Name Change",
-      German:
-         "Bei Namensänderung: Nachweis / Urkunde über die Änderung des Namens",
-   },
+
    {
       id: 4,
       ...defaultProps,
@@ -112,16 +103,7 @@ export const documents = [
       English: "Certificate of Good Standing",
       German: "Dovídka допропорядочності (Certificate of good Standing)",
    },
-   {
-      id: 6,
-      ...defaultProps,
-      optional: true,
-      hide: true,
-      category:
-         "Довідка із попереднього місця роботи, що ви без обмежень могли працювати по професії (опціонально)",
-      English: "Employment Certificate",
-      German: "Довідка із попереднього місця роботи",
-   },
+
    {
       id: 7,
       ...defaultProps,
@@ -139,6 +121,42 @@ export const documents = [
          "Додаток до диплому, де вписаний огляд усіх пройдених предметів із годинами (не курікуюм)",
    },
 
+   {
+      id: 13,
+      ...defaultProps,
+      apostile: "",
+      notary: " ",
+      translation: " ",
+      ready_copies: " ",
+      link: "https://doctors-guide-chi.vercel.app/language-study",
+      category:
+         "Доказ про достатні знання німецької мови. Мінімум сертифікат Б2",
+      English: "",
+      German: "",
+   },
+];
+
+export const documentsOptional = [
+   {
+      id: 3,
+      ...defaultProps,
+      optional: true,
+      hide: true,
+      category: "Свідоцтво про зміну імя чи прізвища (опціонально)",
+      English: "Proof of Name Change",
+      German:
+         "Bei Namensänderung: Nachweis / Urkunde über die Änderung des Namens",
+   },
+   {
+      id: 6,
+      ...defaultProps,
+      optional: true,
+      hide: true,
+      category:
+         "Довідка із попереднього місця роботи, що ви без обмежень могли працювати по професії (опціонально)",
+      English: "Employment Certificate",
+      German: "Довідка із попереднього місця роботи",
+   },
    {
       id: 9,
       ...defaultProps,
@@ -178,19 +196,6 @@ export const documents = [
          "Сертифікти про пройдені курси підвищення кваліфікації (опціонально)",
       English: "Course Certificates",
       German: "Сертифікти про пройдені курси підвищення кваліфікації",
-   },
-   {
-      id: 13,
-      ...defaultProps,
-      apostile: "",
-      notary: " ",
-      translation: " ",
-      ready_copies: " ",
-      link: "https://doctors-guide-chi.vercel.app/language-study",
-      category:
-         "Доказ про достатні знання німецької мови. Мінімум сертифікат Б2",
-      English: "",
-      German: "",
    },
    {
       id: 14,
