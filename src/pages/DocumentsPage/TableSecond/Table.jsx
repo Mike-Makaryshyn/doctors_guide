@@ -16,7 +16,7 @@ const TableSecond = ({
       <div
          ref={tableRef}
          style={{ maxHeight }}
-         className={styles.table_container}
+         className={cn(styles.table_container, 'no-page-break')}
       >
          <table className={cn(styles.table)}>
             <tbody className={styles.tbody}>

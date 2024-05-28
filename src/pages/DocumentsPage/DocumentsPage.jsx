@@ -38,7 +38,7 @@ const DocumentsPage = () => {
 
    useEffect(() => {
       if (savedData) {
-         const parsedData =JSON.parse(savedData);
+         const parsedData = JSON.parse(savedData);
          setTableData(parsedData?.table1);
          setTableDataSecond(parsedData?.table2);
          setOptionalTableData(parsedData?.table3);
@@ -63,7 +63,11 @@ const DocumentsPage = () => {
       let totalCheckboxes = 0;
       let checkedCheckboxes = 0;
 
-      const filteredData = [...tableData, ...tableDataSecond, ...optionalTableData]?.filter((item) => !item?.hide);
+      const filteredData = [
+         ...tableData,
+         ...tableDataSecond,
+         ...optionalTableData,
+      ]?.filter((item) => !item?.hide);
 
       filteredData.forEach((item) => {
          Object.keys(item).forEach((key) => {
@@ -156,24 +160,26 @@ const DocumentsPage = () => {
                         data={tableDataSecond}
                         noTitleAndColumns
                      />
-                     <Table
-                        title="Опціональні документи"
-                        columns={[
-                           { name: "category", label: "Документ" },
-                           { name: "is_exist", label: "Наявно" },
-                           { name: "apostile", label: "Апостиль" },
-                           { name: "notary", label: "Завірено нотаріусом" },
-                           {
-                              name: "translation",
-                              label: "Професійний переклад",
-                           },
-                           { name: "ready_copies", label: "Завірені копії" },
-                           { name: "sent", label: "Відправлено" },
-                        ]}
-                        tableRef={thirdRef}
-                        data={optionalTableData}
-                        setTableData={setOptionalTableData}
-                     />
+                     <div className="page-break">
+                        <Table
+                           title="Опціональні документи"
+                           columns={[
+                              { name: "category", label: "Документ" },
+                              { name: "is_exist", label: "Наявно" },
+                              { name: "apostile", label: "Апостиль" },
+                              { name: "notary", label: "Завірено нотаріусом" },
+                              {
+                                 name: "translation",
+                                 label: "Професійний переклад",
+                              },
+                              { name: "ready_copies", label: "Завірені копії" },
+                              { name: "sent", label: "Відправлено" },
+                           ]}
+                           tableRef={thirdRef}
+                           data={optionalTableData}
+                           setTableData={setOptionalTableData}
+                        />
+                     </div>
                   </div>
                </div>
                <button

@@ -90,3 +90,20 @@ button:hover {
    font-weight: bold;
    color: #333;
 }
+
+@media print {
+   .print-section {
+      page-break-after: always;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .no-page-break {
+      page-break-inside: avoid;
+    }
+ }
+
+ .sc-dmqGRC {
+   width: 20px !important;
+   height: 20px !important;
+  }
