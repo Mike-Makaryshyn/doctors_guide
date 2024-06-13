@@ -129,6 +129,15 @@ export const documents = [
       German:
          "Докази спеціалізованої медичної підготовки або свідоцтва про набутий професійний досвід",
    },
+   {
+      id: 17,
+      ...defaultProps,
+      category:
+         "Курікулюм",
+      English: "Transcript",
+      German:
+         "Курікулюм",
+   },
 ];
 
 export const documentsOptional = [
