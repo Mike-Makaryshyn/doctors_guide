@@ -132,11 +132,20 @@ export const documents = [
    {
       id: 17,
       ...defaultProps,
+      ready_copies: "Подається оригінал"
       category:
          "Курікулюм",
-      English: "Transcript",
-      German:
-         "Курікулюм",
+      
+German: "Lehrplan/Curriculum",
+English: "Curriculum",
+Ukrainian: "Навчальний план",
+Russian: "Учебный план",
+Turkish: "Müfredat",
+Arabic: "منهج دراسي",
+French: "Programme d'études",
+Spanish: "Plan de estudios",
+Polish: "Program nauczania",
+
    },
 ];
 
