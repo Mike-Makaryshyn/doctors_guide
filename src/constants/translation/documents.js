@@ -109,7 +109,7 @@ export const documents = [
    {
       id: 4,
       ...defaultProps,
-      "category": {
+      category: {
     "en": "Extract from penal registers from all countries where you have resided in the last 5 years (must be no older than 3 months at the time of application)",
     "fr": "Extrait des registres pénaux de tous les pays où vous avez résidé au cours des 5 dernières années (ne doit pas dater de plus de 3 mois à la date de la demande)",
     "es": "Extracto de los registros penales de todos los países donde haya residido en los últimos 5 años (no debe tener más de 3 meses al momento de la solicitud)",
@@ -163,7 +163,7 @@ export const documents = [
    {
       id: 8,
       ...defaultProps,
-      "category": {
+      category: {
     "en": "Diploma supplement that provides an overview of all completed courses with hours (not curriculum)",
     "fr": "Supplément au diplôme qui fournit un aperçu de tous les cours terminés avec les heures (pas de programme)",
     "es": "Suplemento de diploma que proporciona una visión general de todos los cursos completados con horas (no plan de estudios)",
@@ -199,7 +199,7 @@ export const documents = [
       id: 17,
       ...defaultProps,
       ready_copies: "Оригінал"
-      "category": {
+   category: {
     "en": "Curriculum/Detailed syllabus with hours and covered subjects",
     "fr": "Curriculum/Programme détaillé avec heures et matières couvertes",
     "es": "Currículo/Plan de estudios detallado con horas y materias cubiertas",
@@ -212,6 +212,7 @@ export const documents = [
   },
 
    
+   
 ];
 
 export const documentsOptional = [
@@ -220,7 +221,17 @@ export const documentsOptional = [
       ...defaultProps,
       optional: true,   
       hide: true,
-      category: "Свідоцтво про зміну імя чи прізвища (опціонально)",
+      category: {
+    "en": "Certificate of Name or Surname Change",
+    "fr": "Certificat de changement de nom ou de prénom",
+    "es": "Certificado de cambio de nombre o apellido",
+    "ar": "شهادة تغيير الاسم أو اللقب",
+    "tr": "Ad veya Soyadı Değişikliği Sertifikası",
+    "pl": "Świadectwo zmiany imienia lub nazwiska",
+    "uk": "Свідоцтво про зміну ім’я чи прізвища",
+    "ru": "Свидетельство о смене имени или фамилии",
+    "de": "Bescheinigung über Namens- oder Nachnamensänderung"
+  },
       English: "Proof of Name Change",
       German:
          "Bei Namensänderung: Nachweis / Urkunde über die Änderung des Namens",
@@ -230,9 +241,17 @@ export const documentsOptional = [
       ...defaultProps,
       optional: true,
       hide: true,
-      category:
-         "Довідка із попереднього місця роботи, що ви без обмежень могли працювати по професії (опціонально)",
-      English: "Employment Certificate",
+      category: {
+   "en": "Proof of practical skills during training/ Specialist certificate proves this",
+   "fr": "Preuve des compétences pratiques pendant la formation/ Le certificat de spécialiste le prouve",
+   "es": "Prueba de habilidades prácticas durante la formación/ El certificado de especialista lo demuestra",
+   "ar": "إثبات المهارات العملية خلال التدريب / شهادة الأخصائي تثبت ذلك",
+   "tr": "Eğitim sırasında pratik becerilerin kanıtı/ Uzman sertifikası bunu kanıtlar",
+   "pl": "Dowód umiejętności praktycznych podczas szkolenia / Certyfikat specjalisty to potwierdza",
+   "uk": "Доказ про проходження практичних навичок протягом навчання/ Сертифікат спеціаліста доказує це",
+   "ru": "Доказательство практических навыков во время обучения/ Сертификат специалиста подтверждает это",
+   "de": "Nachweis praktischer Fähigkeiten während der Ausbildung/ Das Fachzertifikat bestätigt dies"
+},
       German: "Довідка із попереднього місця роботи",
    },
    {
@@ -240,8 +259,17 @@ export const documentsOptional = [
       ...defaultProps,
       optional: true,
       hide: true,
-      category:
-         "Доказ про проходження практичних навичок протягом навчання (опціонально)",
+      category: {
+    "en": "Proof of Practical Skills Acquired During Training",
+    "fr": "Preuve des compétences pratiques acquises pendant la formation",
+    "es": "Prueba de habilidades prácticas adquiridas durante la formación",
+    "ar": "إثبات المهارات العملية المكتسبة خلال التدريب",
+    "tr": "Eğitim Süresince Kazanılan Uygulamalı Beceri Kanıtı",
+    "pl": "Dowód nabytych umiejętności praktycznych podczas szkolenia",
+    "uk": "Доказ про проходження практичних навичок протягом навчання",
+    "ru": "Доказательство приобретенных практических навыков в ходе обучения",
+    "de": "Nachweis der während der Ausbildung erworbenen praktischen Fähigkeiten"
+  },
       English: "",
       German: "",
    },
@@ -250,7 +278,17 @@ export const documentsOptional = [
       ...defaultProps,
       optional: true,
       hide: true,
-      category: "Доказ про визнання остіти в одній із країн ЕС (опціонально)",
+     category: {
+    "en": "Proof of Asylum Recognition in an EU Country",
+    "fr": "Preuve de reconnaissance de l'asile dans un pays de l'UE",
+    "es": "Prueba de reconocimiento de asilo en un país de la UE",
+    "ar": "إثبات الاعتراف باللجوء في إحدى دول الاتحاد الأوروبي",
+    "tr": "AB Ülkesinde Sığınma Tanınma Kanıtı",
+    "pl": "Dowód uznania azylu w kraju UE",
+    "uk": "Доказ про визнання остіти в одній із країн ЕС",
+    "ru": "Доказательство признания убежища в одной из стран ЕС",
+    "de": "Nachweis der Anerkennung von Asyl in einem EU-Land"
+  },
       English: "",
       German: "",
    },
@@ -260,7 +298,17 @@ export const documentsOptional = [
       optional: true,
       hide: true,
       apostile: "Не потрібно",
-      category: "Характеристика із попередньго місця роботи (опціонально) ",
+      category: {
+    "en": "Reference from a previous workplace",
+    "fr": "Référence d'un précédent lieu de travail",
+    "es": "Referencia de un trabajo anterior",
+    "ar": "مرجع من مكان العمل السابق",
+    "tr": "Önceki iş yerinden referans",
+    "pl": "Referencje z poprzedniego miejsca pracy",
+    "uk": "Характеристика із попередньго місця роботи",
+    "ru": "Рекомендация с предыдущего места работы",
+    "de": "Referenz von einem früheren Arbeitsplatz"
+  },
       English: "",
       German: "",
    },
@@ -270,8 +318,17 @@ export const documentsOptional = [
       optional: true,
       hide: true,
       apostile: "Не потрібно",
-      category:
-         "Сертифікти про пройдені курси підвищення кваліфікації (опціонально)",
+      category: {
+        "en": "Certificates of Professional Development Courses Completed",
+        "fr": "Certificats de cours de développement professionnel complétés",
+        "es": "Certificados de Cursos de Desarrollo Profesional Completados",
+        "ar": "شهادات إتمام دورات التطوير المهني",
+        "tr": "Tamamlanan Mesleki Gelişim Kursları Sertifikaları",
+        "pl": "Certyfikaty ukończenia kursów doskonalenia zawodowego",
+        "uk": "Сертифікати про пройдені курси підвищення кваліфікації",
+        "ru": "Сертификаты о пройденных курсах повышения квалификации",
+        "de": "Zertifikate für absolvierte Fortbildungskurse"
+    },
       English: "Course Certificates",
       German: "Сертифікти про пройдені курси підвищення кваліфікації",
    },
@@ -285,8 +342,16 @@ export const documentsOptional = [
       translation: " ",
       ready_copies: " ",
       link: "https://www.fuehrungszeugnis.bund.de/ffw/form/display.do?%24context=B87C1BAAEFAEFC7F88FA",
-      category:
-         "Довідка про несудимість із Німеччини ( у рази, якщо до подання заяви ви перебуваєте в Німеччині більш ніж 6 місяців)(опціонально) ",
+      category: {
+      "en": "Certificate of No Criminal Record from Germany (if you have been in Germany for more than 6 months prior to the application)",
+      "fr": "Certificat de non-criminalité d'Allemagne (si vous avez séjourné en Allemagne pendant plus de 6 mois avant la demande)",
+      "es": "Certificado de Antecedentes Penales de Alemania (si ha estado en Alemania durante más de 6 meses antes de la solicitud)",
+      "ar": "شهادة عدم وجود سجل جنائي من ألمانيا (إذا كنت قد أقمت في ألمانيا لأكثر من 6 أشهر قبل التقديم)",
+      "tr": "Almanya'dan Sabıka Kaydı Belgesi (başvurudan önce Almanya'da 6 aydan fazla kaldıysanız)",
+      "pl": "Zaświadczenie o niekaralności z Niemiec (jeśli przebywałeś w Niemczech ponad 6 miesięcy przed złożeniem wniosku)",
+      "uk": "Довідка про несудимість із Німеччини (у разі, якщо до подання заяви ви перебуваєте в Німеччині більш ніж 6 місяців)",
+      "ru": "Справка о несудимости из Германии (если вы находились в Германии более 6 месяцев до подачи заявления)",
+      "de": "Unbedenklichkeitsbescheinigung aus Deutschland (wenn Sie sich vor der Antragstellung länger als 6 Monate in Deutschland aufgehalten haben)"
    },
    {
       id: 15,
@@ -297,7 +362,17 @@ export const documentsOptional = [
       notary: "Не потрібно",
       translation: "Не потрібно",
       ready_copies: "Не потрібно",
-      category: "Прописка в Німеччині (опціонально)",
+      category: {
+      "en": "Residence registration in Germany",
+      "fr": "Enregistrement de résidence en Allemagne",
+      "es": "Registro de residencia en Alemania",
+      "ar": "تسجيل الإقامة في ألمانيا",
+      "tr": "Almanya'da ikamet kaydı",
+      "pl": "Rejestracja zameldowania w Niemczech",
+      "uk": "Прописка в Німеччині",
+      "ru": "Регистрация проживания в Германии",
+      "de": "Wohnsitzanmeldung in Deutschland"
+   },
       English: "",
       German: "",
    },
