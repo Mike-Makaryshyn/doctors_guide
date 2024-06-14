@@ -198,7 +198,8 @@ export const documents = [
    {
       id: 17,
       ...defaultProps,
-      ready_copies: "Оригінал"
+      ready_copies: "Не потрібно"
+      
    category: {
     "en": "Curriculum/Detailed syllabus with hours and covered subjects",
     "fr": "Curriculum/Programme détaillé avec heures et matières couvertes",
