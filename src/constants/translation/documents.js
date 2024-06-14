@@ -73,7 +73,17 @@ export const documents = [
       ...defaultProps,
       apostile: "Не потрібно",
       translation: "Не потрібно",
-      category: "Пітвердження особистості (Закордонний паспорт або паспорт)",
+      category: {
+    en: "Identity verification (Foreign passport or passport)",
+    fr: "Vérification d'identité (Passeport étranger ou passeport)",
+    es: "Verificación de identidad (Pasaporte extranjero o pasaporte)",
+    ar: "التحقق من الهوية (جواز السفر الأجنبي أو جواز السفر)",
+    tr: "Kimlik doğrulama (Yabancı pasaport veya pasaport)",
+    pl: "Weryfikacja tożsamości (Paszport zagraniczny lub paszport)",
+    uk: "Підтвердження особистості (Закордонний паспорт або паспорт)",
+    ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
+    de: "Identitätsüberprüfung (Reisepass oder Pass)"
+            },
       English: "",
       German: "",
    },
@@ -84,6 +94,7 @@ export const documents = [
       English: "Birth Certificate",
       German: "Geburtsurkunde / Auszug aus dem Familienbuch",
    },
+
 
    {
       id: 4,
