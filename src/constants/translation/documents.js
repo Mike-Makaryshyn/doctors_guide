@@ -132,7 +132,7 @@ export const documents = [
    {
       id: 17,
       ...defaultProps,
-      ready_copies: "Подається оригінал"
+      ready_copies: "Оригінал"
       category:
          "Курікулюм",
       
