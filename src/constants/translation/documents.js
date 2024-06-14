@@ -198,9 +198,7 @@ export const documents = [
    {
       id: 17,
       ...defaultProps,
-      ready_copies: "Не потрібно"
-      
-   category: {
+      category: {
     "en": "Curriculum/Detailed syllabus with hours and covered subjects",
     "fr": "Curriculum/Programme détaillé avec heures et matières couvertes",
     "es": "Currículo/Plan de estudios detallado con horas y materias cubiertas",
@@ -209,7 +207,10 @@ export const documents = [
     "pl": "Kurs szczegółowy/program nauczania z godzinami i przerobionymi przedmiotami",
     "uk": "Курікулюм/Розгорнутий навчальний план із годинами та пройденими предметами",
     "ru": "Учебный план/Детализированный учебный план с часами и пройденными предметами",
-    "de": "Lehrplan/Ausführlicher Lehrplan mit Stunden und behandelten Fächern"
+    "de": "Lehrplan/Ausführlicher Lehrplan mit Stunden und behandelten Fächern" },
+      ready_copies: "Не потрібно"
+      
+   
   },
 
    
