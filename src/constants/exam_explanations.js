@@ -1,3 +1,8 @@
+import child_tab_img_1 from "../assets/tab_images/child_tab_1.jpg";
+import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
+import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
+// ... for new images
+
 export const parentTabs = [
    {
       id: 1,
@@ -106,8 +111,8 @@ export const parentTabs = [
                },
             ],
          },
-          // 4 tab
-          {
+         // 4 tab
+         {
             id: 14,
             title: "4 tab",
             tableColumns: [
@@ -141,6 +146,23 @@ export const parentTabs = [
                },
             ],
          },
+         // tab 5
+         {
+            id: 15,
+            title: "tab 5",
+            img: child_tab_img_1,
+            text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
+            text_list: [
+               {
+                  bold: "Gantry:",
+                  other: "Das auffälligste Merkmal eines CT-Geräts ist die Gantry, eine große, ringförmige Struktur, in die der Patient auf einem beweglichen Tisch hineingeschoben wird. Innerhalb der Gantry rotiert eine Röntgenröhre schnell um den Patienten herum, während gegenüberliegend Röntgendetektoren angebracht sind.",
+               },
+               {
+                  bold: "Röntgenröhre:",
+                  other: "Die Röntgenröhre sendet während der Drehung um den Patienten herum kontinuierlich Röntgenstrahlen aus. Diese Strahlen durchdringen den Körper und werden je nach Dichte der verschiedenen Gewebe und Strukturen unterschiedlich absorbiert.",
+               },
+            ],
+         },
       ],
    },
    //
@@ -149,6 +171,7 @@ export const parentTabs = [
       title: "Next",
       childTabs: [
          {
+            // 1 tab
             id: 21,
             title: "Einleitung",
             list: [
@@ -180,6 +203,7 @@ export const parentTabs = [
                },
             ],
          },
+         // 2tab
          {
             id: 22,
             title: "Patient-Arzt Gespräch",
@@ -214,6 +238,7 @@ export const parentTabs = [
                },
             ],
          },
+         // 3tab
          {
             id: 13,
             title: "3 tab",
@@ -248,8 +273,8 @@ export const parentTabs = [
                },
             ],
          },
-          // 4tab
-          {
+         // 4tab
+         {
             id: 14,
             title: "4 tab",
             tableColumns: [
@@ -280,6 +305,23 @@ export const parentTabs = [
                   third: "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
                   fourth:
                      "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+               },
+            ],
+         },
+         // tab 5
+         {
+            id: 25,
+            title: "tab 5",
+            img: child_tab_img_2,
+            text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
+            text_list: [
+               {
+                  bold: "Gantry:",
+                  other: "Das auffälligste Merkmal eines CT-Geräts ist die Gantry, eine große, ringförmige Struktur, in die der Patient auf einem beweglichen Tisch hineingeschoben wird. Innerhalb der Gantry rotiert eine Röntgenröhre schnell um den Patienten herum, während gegenüberliegend Röntgendetektoren angebracht sind.",
+               },
+               {
+                  bold: "Röntgenröhre:",
+                  other: "Die Röntgenröhre sendet während der Drehung um den Patienten herum kontinuierlich Röntgenstrahlen aus. Diese Strahlen durchdringen den Körper und werden je nach Dichte der verschiedenen Gewebe und Strukturen unterschiedlich absorbiert.",
                },
             ],
          },

@@ -61,6 +61,30 @@ const ExamExplanationsPage = () => {
             </div>
          );
       }
+
+      if (childIdx === 4) {
+         return (
+            <div className={styles.tabFive}>
+               <div className={styles.tabFiveTop}>
+                  {childTab?.img && <img src={childTab?.img} alt="Schema" />}
+                  <div>{childTab?.text}</div>
+               </div>
+
+               <div  className={styles.text_left}>
+                  {childTab?.text_list?.map((item, idx) => (
+                     <p className={styles.bottom_item} key={idx}>
+                        <strong>
+                           {idx + 1}. 
+                           {item?.bold}
+                        </strong>
+                        {item?.other}
+                     </p>
+                  ))}
+               </div>
+            </div>
+         );
+      }
+
       return null; // Handle other cases if needed
    };
 
