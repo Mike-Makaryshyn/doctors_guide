@@ -1,6 +1,7 @@
 .table_wrapper {
    margin-top: 20px;
    padding: 0px 8px;
+   cursor: default;
 }
 
 .parentTabsWrapper {
@@ -104,17 +105,28 @@
 
 .tabFiveTop {
    margin-bottom: 25px;
+   cursor: default;
 
    display: flex;
-   align-items: center;
    gap: 25px;
    font-size: 17px;
-   font-weight: 600;
-   text-align: left;
 
    img {
-      width: 45%;
+      width: 50%;
+      max-height: 360px;
+      object-fit: cover;
    }
+
+   .text {
+      margin-bottom: 32px;
+   }
+}
+
+.text_top {
+   margin-top: 8px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
 }
 
 .bottom_item {

@@ -67,19 +67,44 @@ const ExamExplanationsPage = () => {
             <div className={styles.tabFive}>
                <div className={styles.tabFiveTop}>
                   {childTab?.img && <img src={childTab?.img} alt="Schema" />}
-                  <div>{childTab?.text}</div>
-               </div>
+                  <div className={styles.text_top}>
+                     <p className={styles.text}>{childTab?.text}</p>
 
-               <div  className={styles.text_left}>
-                  {childTab?.text_list?.map((item, idx) => (
-                     <p className={styles.bottom_item} key={idx}>
-                        <strong>
-                           {idx + 1}. 
-                           {item?.bold}
-                        </strong>
-                        {item?.other}
-                     </p>
-                  ))}
+                     <div className={styles.text_left}>
+                        {childTab?.text_list?.map((item, idx) => (
+                           <p className={styles.bottom_item} key={idx}>
+                              <strong>
+                                 {idx + 1}.{item?.bold}
+                              </strong>
+                              {item?.other}
+                           </p>
+                        ))}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         );
+      }
+
+      if (childIdx === 5) {
+         return (
+            <div className={styles.tabFive}>
+               <div className={styles.tabFiveTop}>
+                  {childTab?.img && <img src={childTab?.img} alt="Schema" />}
+                  <div className={styles.text_top}>
+                     <p className={styles.text}>{childTab?.text}</p>
+
+                     <div className={styles.text_left}>
+                        {childTab?.text_list?.map((item, idx) => (
+                           <p className={styles.bottom_item} key={idx}>
+                              <strong>
+                                 {idx + 1}.{item?.bold}
+                              </strong>
+                              {item?.other}
+                           </p>
+                        ))}
+                     </div>
+                  </div>
                </div>
             </div>
          );
