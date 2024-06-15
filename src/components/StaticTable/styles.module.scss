@@ -42,7 +42,7 @@
 
 .minWidth {
    td {
-      min-width: 150px;
+      max-width: 200px;
    }
 }
 
@@ -143,19 +143,11 @@
 .tbody {
    tr {
       position: relative;
+      text-align: left;
 
       td {
          &:nth-child(1) {
-            width: 38% !important;
-         }
-         &:nth-child(3) {
-            width: 60%;
-            div {
-               text-align: center;
-               vertical-align: middle;
-               font-size: 16px;
-               font-weight: 500;
-            }
+            width: 15% !important;
          }
          position: relative;
          padding: 1rem;
