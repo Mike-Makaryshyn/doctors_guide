@@ -1,0 +1,82 @@
+.table_wrapper {
+   margin-top: 45px;
+   padding: 0px 8px;
+}
+
+.parentTabsWrapper {
+   color: black;
+   margin-top: 80px;
+}
+
+.parentTabItem {
+   background-color: rgb(232, 231, 231);
+   font-weight: 500;
+   padding: 10px;
+   border-radius: 10px;
+   margin: 10px;
+   position: relative;  
+}
+
+.childTabsWrapper {
+   display: none;
+   margin-top: 20px;
+}
+
+.childTab {
+   background-color: whitesmoke;
+   padding: 10px;
+   width: 100%;
+   cursor: pointer;
+   position: relative;
+}
+
+.showTab {
+   display: flex;
+}
+
+.childTabContentWrapper {
+   border-top: 1px solid #000;
+   display: none;
+   margin-top: 10px;
+   background-color: rgba(0, 128, 0, 0.256);
+   padding: 10px;
+}
+
+.showChildTab {
+   display: block;
+}
+
+.childTabContent {
+   display: block;
+   text-align-last: left;
+   cursor: default;
+   font-weight: 400;
+
+   font-size: 14px;
+}
+
+.option_title {
+   font-weight: 600;
+   font-size: 15px;
+   margin-bottom: 20px;
+}
+
+.bold {
+   display: inline-block;
+   font-weight: 600;
+   margin-right: 5px;
+}
+
+.options {
+   margin-bottom: 20px;
+   padding-left: 20px;
+
+   position: relative;
+
+   &::after {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+   }
+}

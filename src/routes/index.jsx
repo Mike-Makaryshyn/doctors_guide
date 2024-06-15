@@ -25,19 +25,22 @@ const WhatIsFSPPage = React.lazy(() =>
    import("../pages/WhatIsFSPPage/WhatIsFSPPage")
 );
 
-export default function Routers() {
+const ExamEmplanationsPage = React.lazy(() =>
+   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
+);
 
+export default function Routers() {
    return (
       <Suspense>
          <Routes>
             {/* Dynamic rendering of initial page based on localStorage */}
-            { localStorageGet("currentPage", "/") === "/lands" && (
+            {localStorageGet("currentPage", "/") === "/lands" && (
                <Route path="/" element={<GermanyLandsPage />} />
             )}
-            { localStorageGet("currentPage", "/") === "/main_menu" && (
+            {localStorageGet("currentPage", "/") === "/main_menu" && (
                <Route path="/" element={<MainMenuPage />} />
             )}
-            { localStorageGet("currentPage", "/") === '/' && (
+            {localStorageGet("currentPage", "/") === "/" && (
                <Route path="/" element={<IntroductionPage />} />
             )}
 
@@ -45,7 +48,14 @@ export default function Routers() {
             <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
             <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
             <Route path={pathList.documents.path} element={<DocumentsPage />} />
-            <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
+            <Route
+               path={pathList.what_is_fsp.path}
+               element={<WhatIsFSPPage />}
+            />
+            <Route
+               path={pathList.exam_explanations.path}
+               element={<ExamEmplanationsPage />}
+            />
 
             {/* NOT FOUND PAGE */}
             <Route
@@ -58,8 +68,7 @@ export default function Routers() {
                            padding: "20px",
                            fontWeight: "bold",
                         }}
-                     >
-                     </div>
+                     ></div>
                   </MainLayout>
                }
             />

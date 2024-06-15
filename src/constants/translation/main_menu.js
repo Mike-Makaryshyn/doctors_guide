@@ -176,7 +176,7 @@ export const main_menu_items = {
                uk: "Скорочення",
                ru: "Сокращения",
                de: "Abkürzungen",
-               link: "/abbreviations", // Link for the item
+               link: "/abbreviations", 
             },
             {
                en: "Procedure Explanation",
@@ -188,7 +188,7 @@ export const main_menu_items = {
                uk: "Пояснення процедур",
                ru: "Пояснение процедур",
                de: "Verfahrenserklärung",
-               link: "/procedure-explanation", // Link for the item
+               link: "/exam_explanations", 
             },
             {
                en: "Chat in Region",

@@ -17,4 +17,7 @@ export const pathList = {
     what_is_fsp: {
         path: '/what_is_fsp'
     },
+    exam_explanations: {
+        path: '/exam_explanations'
+    },
 };
