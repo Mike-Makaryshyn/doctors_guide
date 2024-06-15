@@ -3,6 +3,7 @@ export const parentTabs = [
       id: 1,
       title: "MRT",
       childTabs: [
+         // 1 tab
          {
             id: 11,
             title: "Einleitung",
@@ -35,6 +36,7 @@ export const parentTabs = [
                },
             ],
          },
+         // 2 tab
          {
             id: 12,
             title: "Patient-Arzt Gespräch",
@@ -69,9 +71,44 @@ export const parentTabs = [
                },
             ],
          },
+         // 3 tab
+         {
+            id: 13,
+            title: "3 tab",
+            tableColumns: [
+               { name: "first", visualText: "" },
+               { name: "second", visualText: "lala" },
+               {
+                  name: "third",
+                  visualText: "mwsad",
+               },
+               {
+                  name: "fourth",
+                  visualText: "dadfaw",
+               },
+            ],
+            tableRows: [
+               {
+                  first: "Ziel der Untersuchung",
+                  second:
+                     "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+                  third: "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+                  fourth:
+                     "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+               },
+               {
+                  first: "Ablauf",
+                  second:
+                     "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+                  third: "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+                  fourth:
+                     "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+               },
+            ],
+         },
       ],
    },
-   // 
+   //
    {
       id: 2,
       title: "Next",
@@ -121,6 +158,40 @@ export const parentTabs = [
                {
                   name: "fourth",
                   visualText: "Beispiel 2: Was man sagen kann",
+               },
+            ],
+            tableRows: [
+               {
+                  first: "Ziel der Untersuchung",
+                  second:
+                     "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+                  third: "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+                  fourth:
+                     "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+               },
+               {
+                  first: "Ablauf",
+                  second:
+                     "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+                  third: "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+                  fourth:
+                     "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+               },
+            ],
+         },
+         {
+            id: 13,
+            title: "3 tab",
+            tableColumns: [
+               { name: "first", visualText: "" },
+               { name: "second", visualText: "lala" },
+               {
+                  name: "third",
+                  visualText: "mwsad",
+               },
+               {
+                  name: "fourth",
+                  visualText: "dadfaw",
                },
             ],
             tableRows: [

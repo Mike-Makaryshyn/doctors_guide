@@ -49,7 +49,8 @@ const ExamExplanationsPage = () => {
             </li>
          ));
       }
-      if (childIdx === 1) {
+
+      if (childIdx === 1 || childIdx === 2) {
          return (
             <div className={styles.table_wrapper}>
                <StaticTable
