@@ -8,6 +8,7 @@ export const parentTabs = [
    {
       id: 1,
       title: "MRT",
+      checked: false,
       childTabs: [
          // 1tab
          {
@@ -192,6 +193,7 @@ export const parentTabs = [
    {
       id: 2,
       title: "Next",
+      checked: false,
       childTabs: [
          // 1tab
          {
