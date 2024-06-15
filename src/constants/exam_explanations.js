@@ -94,7 +94,7 @@ export const parentTabs = [
             ],
             tableRows: [
                {
-                  first: "Ziel der Untersuchung",
+                  first: "your_text",
                   second:
                      "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
                   third: "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
@@ -129,7 +129,7 @@ export const parentTabs = [
             ],
             tableRows: [
                {
-                  first: "Ziel der Untersuchung",
+                  first: "your_text",
                   second:
                      "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
                   third: "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
@@ -277,7 +277,7 @@ export const parentTabs = [
             ],
             tableRows: [
                {
-                  first: "Ziel der Untersuchung",
+                  first: "your_text",
                   second:
                      "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
                   third: "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",

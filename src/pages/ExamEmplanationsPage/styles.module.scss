@@ -1,7 +1,6 @@
 .table_wrapper {
    margin-top: 20px;
    padding: 0px 8px;
-   cursor: default;
 }
 
 .parentTabsWrapper {
@@ -12,12 +11,14 @@
 .parentTabItem {
    background-color: rgb(224, 224, 224);
    font-weight: 500;
-   padding: 12px;
+   padding: 16px;
    border-radius: 10px;
    margin: 10px;
    position: relative;
    transition: all 0.2s ease;
+
    cursor: pointer;
+
    &:hover {
       transform: scale(100.5%);
    }
@@ -30,9 +31,9 @@
 
 .childTabs {
    width: 100%;
-   cursor: pointer;
    position: relative;
    display: flex;
+   gap: 10px;
 }
 
 .showTab {
@@ -40,21 +41,31 @@
 }
 
 .child_tab {
-   border-bottom: 1px transparent;
+   border-bottom: 2px transparent;
    width: 100%;
-   margin-right: 10px;
    padding: 10px;
+   cursor: pointer;
+
+   transition: all 0.2s ease;
+
+   &:hover {
+      border-bottom: 1px solid gray;
+   }
 }
 
 .active_child_tab {
    border-bottom: 1px solid black;
-}
 
+   &:hover {
+      border-bottom: 1px solid black;
+   }
+}
 
 .childTabContentWrapper {
    display: none;
    padding: 10px;
    padding-top: 42px;
+   cursor: default;
 
    li {
       margin-left: 20px;

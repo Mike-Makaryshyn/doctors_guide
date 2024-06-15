@@ -131,7 +131,7 @@ const ExamExplanationsPage = () => {
                         className={styles.parentTabItem}
                         key={parentTab?.id}
                      >
-                        <div className={styles.pTab}>{parentTab?.title}</div>
+                        <div className={cn(styles.pTab, 'noselect')}>{parentTab?.title}</div>
 
                         <div
                            className={cn(
@@ -141,7 +141,7 @@ const ExamExplanationsPage = () => {
                                  : ""
                            )}
                         >
-                           <div className={styles.childTabs}>
+                           <div onClick={(e)=> e.stopPropagation()} className={styles.childTabs}>
                               {parentTab?.childTabs?.map(
                                  (childTab, childIdx) => (
                                     <div
@@ -150,7 +150,8 @@ const ExamExplanationsPage = () => {
                                           childTabOpen?.id === childTab?.id
                                              ? styles.active_child_tab
                                              : "",
-                                             childTab?.link ? styles.lessWidth : ''
+                                             childTab?.link ? styles.lessWidth : '',
+                                             'noselect'
                                        )}
                                        onClick={(e) =>
                                           clickActiveChildTab(e, childTab)
