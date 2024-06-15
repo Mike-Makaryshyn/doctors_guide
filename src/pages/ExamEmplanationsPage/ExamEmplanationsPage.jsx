@@ -23,6 +23,12 @@ const ExamExplanationsPage = () => {
 
    const clickActiveChildTab = (e, tab) => {
       e.stopPropagation();
+
+      if (tab?.link) {
+         window.open(tab?.link, "_blank");
+         return;
+      }
+
       if (childTabOpen?.id === tab?.id) {
          setChildTabOpen(null);
       } else {
@@ -125,7 +131,7 @@ const ExamExplanationsPage = () => {
                         className={styles.parentTabItem}
                         key={parentTab?.id}
                      >
-                        <div>{parentTab?.title}</div>
+                        <div className={styles.pTab}>{parentTab?.title}</div>
 
                         <div
                            className={cn(
@@ -143,7 +149,8 @@ const ExamExplanationsPage = () => {
                                           styles.child_tab,
                                           childTabOpen?.id === childTab?.id
                                              ? styles.active_child_tab
-                                             : ""
+                                             : "",
+                                             childTab?.link ? styles.lessWidth : ''
                                        )}
                                        onClick={(e) =>
                                           clickActiveChildTab(e, childTab)

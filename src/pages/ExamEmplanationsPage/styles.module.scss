@@ -50,6 +50,7 @@
    border-bottom: 1px solid black;
 }
 
+
 .childTabContentWrapper {
    display: none;
    padding: 10px;
@@ -131,4 +132,9 @@
 
 .bottom_item {
    margin-bottom: 15px;
+}
+
+.lessWidth {
+   width: 50px;
+   margin-right: 20px;
 }

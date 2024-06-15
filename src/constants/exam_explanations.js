@@ -178,6 +178,11 @@ export const parentTabs = [
                   other: "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
                },
             ],
+         },
+         {
+            id: 17, 
+            title: 'PDF',
+            link: 'https://clickdimensions.com/links/TestPDFfile.pdf'
          }
       ],
    },
@@ -219,7 +224,7 @@ export const parentTabs = [
                },
             ],
          },
-         // 2tab
+         // tab 2
          {
             id: 22,
             title: "Patient-Arzt Gespräch",
@@ -341,6 +346,7 @@ export const parentTabs = [
                },
             ],
          },
+         // tab 6
          {
             id: 26,
             title: "Wortschatz",
@@ -355,6 +361,11 @@ export const parentTabs = [
                   other: "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
                },
             ],
+         },
+         {
+            id: 27, 
+            title: 'PDF',
+            link: 'https://clickdimensions.com/links/TestPDFfile.pdf'
          }
       ],
    },
