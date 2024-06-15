@@ -12,6 +12,7 @@ const Table = ({
    tableRef,
    title,
    isHeaderNeeded = true,
+   selectedLanguage,
 }) => {
    return (
       <div
@@ -30,7 +31,12 @@ const Table = ({
                            key={column?.name}
                            className={cn(styles.header, "noselect")}
                         >
-                           <span>{column?.label?.replaceAll("_", " ")}</span>
+                           <span>
+                              {column?.label?.[selectedLanguage]?.replaceAll(
+                                 "_",
+                                 " "
+                              )}
+                           </span>
                         </th>
                      ))}
                   </tr>

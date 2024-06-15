@@ -78,6 +78,132 @@ const notNeededText = {
    de: "Nicht nötig",
 };
 
+export const columnsFirst = [
+   {
+      name: "category",
+      label: {
+         uk: "Документ",
+         en: "Document",
+         fr: "Document",
+         es: "Documento",
+         ar: "وثيقة",
+         tr: "Belge",
+         pl: "Dokument",
+         ru: "Документ",
+         de: "Dokument",
+      },
+   },
+   {
+      name: "is_exist",
+      label: {
+         uk: "Наявно",
+         en: "Available",
+         fr: "Disponible",
+         es: "Disponible",
+         ar: "متاح",
+         tr: "Mevcut",
+         pl: "Dostępne",
+         ru: "Доступно",
+         de: "Verfügbar",
+      },
+   },
+   {
+      name: "apostile",
+      label: {
+         uk: "Апостиль",
+         en: "Apostille",
+         fr: "Apostille",
+         es: "Apostilla",
+         ar: "توثيق",
+         tr: "Apostil",
+         pl: "Apostille",
+         ru: "Апостиль",
+         de: "Apostille",
+      },
+   },
+   {
+      name: "notary",
+      label: {
+         uk: "Завірено нотаріусом",
+         en: "Notarized",
+         fr: "Notarié",
+         es: "Notariado",
+         ar: "موثق",
+         tr: "Noter Tasdikli",
+         pl: "Notarialnie poświadczone",
+         ru: "Заверено нотариусом",
+         de: "Notariell beglaubigt",
+      },
+   },
+   {
+      name: "translation",
+      label: {
+         uk: "Професійний переклад",
+         en: "Professional Translation",
+         fr: "Traduction professionnelle",
+         es: "Traducción profesional",
+         ar: "ترجمة احترافية",
+         tr: "Profesyonel Çeviri",
+         pl: "Profesjonalne tłumaczenie",
+         ru: "Профессиональный перевод",
+         de: "Professionelle Übersetzung",
+      },
+   },
+   {
+      name: "ready_copies",
+      label: {
+         uk: "Завірені копії",
+         en: "Certified Copies",
+         fr: "Copies certifiées",
+         es: "Copias certificadas",
+         ar: "نسخ مصدقة",
+         tr: "Onaylı Kopyalar",
+         pl: "Potwierdzone kopie",
+         ru: "Заверенные копии",
+         de: "Beglaubigte Kopien",
+      },
+   },
+   {
+      name: "sent",
+      label: {
+         uk: "Відправлено",
+         en: "Sent",
+         fr: "Envoyé",
+         es: "Enviado",
+         ar: "أرسلت",
+         tr: "Gönderildi",
+         pl: "Wysłane",
+         ru: "Отправлено",
+         de: "Gesendet",
+      },
+   },
+];
+
+export const titles = {
+   main: {
+      uk: "Подача заяв",
+      en: "Submission of Applications",
+      fr: "Soumission des Candidatures",
+      es: "Presentación de Solicitudes",
+      ar: "تقديم الطلبات",
+      tr: "Başvuruların Sunulması",
+      pl: "Składanie Wniosków",
+      ru: "Подача заявлений",
+      de: "Einreichung von Anträgen",
+   },
+   optional: {
+      uk: "ОПЦІОНАЛЬНІ ДОКУМЕНТИ",
+      en: "Optional Documents",
+      fr: "Documents Optionnels",
+      es: "Documentos Opcionales",
+      ar: "وثائق اختيارية",
+      tr: "İsteğe Bağlı Belgeler",
+      pl: "Dokumenty Opcjonalne",
+      ru: "Дополнительные документы",
+      de: "Optionale Dokumente",
+   },
+};
+
 // Подача заяви
 export const documents = [
    {

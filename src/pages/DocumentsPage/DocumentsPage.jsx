@@ -3,6 +3,8 @@ import {
    documents,
    messages,
    documentsOptional,
+   columnsFirst,
+   titles,
 } from "../../constants/translation/documents";
 import { useState, useEffect, useRef } from "react";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -38,17 +40,17 @@ const DocumentsPage = () => {
 
    const cleanTableData = (data) => {
       if (!data) return null;
-    
+
       return data.map((item) => {
-        const cleanedItem = { ...item };
-        Object.keys(item).forEach((key) => {
-          if (key.includes('_showIcon')) {
-            delete cleanedItem[key];
-          }
-        });
-        return cleanedItem;
+         const cleanedItem = { ...item };
+         Object.keys(item).forEach((key) => {
+            if (key.includes("_showIcon")) {
+               delete cleanedItem[key];
+            }
+         });
+         return cleanedItem;
       });
-    };
+   };
 
    useEffect(() => {
       if (savedData) {
@@ -56,7 +58,7 @@ const DocumentsPage = () => {
          const cleanedTableData = cleanTableData(parsedData?.table1);
          const cleanedTableDataSecond = cleanTableData(parsedData?.table2);
          const cleanedOptionalTableData = cleanTableData(parsedData?.table3);
-       
+
          setTableData(cleanedTableData);
          setTableDataSecond(cleanedTableDataSecond);
          setOptionalTableData(cleanedOptionalTableData);
@@ -130,6 +132,9 @@ const DocumentsPage = () => {
       }
    };
 
+   const mainTitle = titles?.main?.[language];
+   const optionalTitle = titles?.optional?.[language];
+
    return (
       <MainLayout>
          <div className="page page1 containerBigger mt-20">
@@ -149,29 +154,19 @@ const DocumentsPage = () => {
                   </div>
                   <div ref={combinedRef}>
                      <Table
-                        title="Подача заяв"
-                        columns={[
-                           { name: "category", label: "Документ" },
-                           { name: "is_exist", label: "Наявно" },
-                           { name: "apostile", label: "Апостиль" },
-                           { name: "notary", label: "Завірено нотаріусом" },
-                           {
-                              name: "translation",
-                              label: "Професійний переклад",
-                           },
-                           { name: "ready_copies", label: "Завірені копії" },
-                           { name: "sent", label: "Відправлено" },
-                        ]}
+                        title={mainTitle}
+                        columns={columnsFirst}
                         tableRef={firstRef}
                         data={tableData}
                         setTableData={setTableData}
+                        selectedLanguage={language}
                      />
                      <TableSecond
                         columns={[
-                           { name: "name", label: "Документ" },
-                           { name: "is_exist", label: "Наявно" },
-                           { name: "links", label: "Посилання на документ" },
-                           { name: "sent", label: "Відправлено" },
+                           { name: "name" },
+                           { name: "is_exist" },
+                           { name: "links" },
+                           { name: "sent" },
                         ]}
                         tableRef={secondRef}
                         setTableData={setTableDataSecond}
@@ -180,22 +175,12 @@ const DocumentsPage = () => {
                      />
                      <div className="page-break">
                         <Table
-                           title="Опціональні документи"
-                           columns={[
-                              { name: "category", label: "Документ" },
-                              { name: "is_exist", label: "Наявно" },
-                              { name: "apostile", label: "Апостиль" },
-                              { name: "notary", label: "Завірено нотаріусом" },
-                              {
-                                 name: "translation",
-                                 label: "Професійний переклад",
-                              },
-                              { name: "ready_copies", label: "Завірені копії" },
-                              { name: "sent", label: "Відправлено" },
-                           ]}
+                           title={optionalTitle}
+                           columns={columnsFirst}
                            tableRef={thirdRef}
                            data={optionalTableData}
                            setTableData={setOptionalTableData}
+                           selectedLanguage={language}
                         />
                      </div>
                   </div>
