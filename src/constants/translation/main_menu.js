@@ -113,19 +113,6 @@ export const main_menu_items = {
                de: "Erforderliche Dokumente",
                link: "/documents",
             },
-            {
-               en: "Document Collection",
-               fr: "Collecte de documents",
-               es: "Recopilación de documentos",
-               ar: "جمع الوثائق",
-               tr: "Belge Toplama",
-               pl: "Zbieranie dokumentów",
-               uk: "Збір документів",
-               ru: "Сбор документов",
-               de: "Dokumentensammlung",
-               link: "/document-collection",
-            },
-            // Add other items in this section as needed
          ],
       },
       {

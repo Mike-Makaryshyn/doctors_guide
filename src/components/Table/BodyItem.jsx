@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import cn from "classnames";
 import { useNavigate } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import Checkbox from "../Checkbox/Checkbox";
 import docIcon from "../../assets/mark.svg";
+
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const checkboxProp = "check";
 
@@ -16,6 +19,8 @@ const BodyItem = ({
    setTableData,
    tableData,
 }) => {
+   const { selectedLanguage: lang } = useGetGlobalInfo();
+
    const changeHiddenProp = () => {
       setTableData((prevData) =>
          prevData.map((item) => {
@@ -52,30 +57,39 @@ const BodyItem = ({
       >
          {columns?.map((column, columnIndex) => (
             <td key={`cell-${index}-${columnIndex}`}>
-               {row?.[column?.name]?.includes(checkboxProp) && (
-                  <div className={styles.checkbox_wraapper}>
-                     {row?.[column?.required] && (
-                        <img
-                           className={styles.req_img}
-                           src={docIcon}
-                           alt="mark"
-                        />
-                     )}
-                     {!row?.hide && (
-                        <Checkbox
-                           value={row?.[column.name] === "check" ? true : false}
-                           onChange={() =>
-                              handleCheckboxChange(row, column.name)
-                           }
-                           disabled={row?.[column?.required]}
-                        />
-                     )}
-                  </div>
-               )}
+               {typeof row?.[column?.name] === "string" &&
+                  row?.[column?.name]?.includes(checkboxProp) && (
+                     <div className={styles.checkbox_wraapper}>
+                        {row?.[`${column.name}_showIcon`] && (
+                           <img
+                              className={styles.req_img}
+                              src={docIcon}
+                              alt="mark"
+                           />
+                        )}
 
-               {!row?.[column?.name]?.includes(checkboxProp) && (
+                        {!row?.hide && (
+                           <Checkbox
+                              value={row?.[column.name] === "check"}
+                              onChange={() =>
+                                 handleCheckboxChange(row, column.name)
+                              }
+                              disabled={row?.[column?.required]}
+                           />
+                        )}
+                     </div>
+                  )}
+
+               {typeof row?.[column?.name] === "string" &&
+                  !row?.[column?.name]?.includes(checkboxProp) && (
+                     <div className={styles.cellContent}>
+                        <div>{row?.[column?.name]}</div>
+                     </div>
+                  )}
+
+               {typeof row?.[column?.name] === "object" && (
                   <div className={styles.cellContent}>
-                     <div>{row?.[column?.name]}</div>
+                     <div>{row?.[column?.name]?.[lang]}</div>
                   </div>
                )}
 
@@ -94,7 +108,12 @@ const BodyItem = ({
                )}
 
                {row?.optional && column?.name === "category" && (
-                  <div className={styles.optional_cehckbox_wrapper}>
+                  <div
+                     className={cn(
+                        styles.optional_cehckbox_wrapper,
+                        "optional_checkbox_wrapper"
+                     )}
+                  >
                      <Checkbox
                         label={row.hide ? "Виключено" : "Включено"}
                         value={row.hide}

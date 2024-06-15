@@ -11,7 +11,7 @@ const Table = ({
    setTableData,
    tableRef,
    title,
-   isHeaderNeeded = true
+   isHeaderNeeded = true,
 }) => {
    return (
       <div

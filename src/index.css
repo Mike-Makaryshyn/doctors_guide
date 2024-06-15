@@ -94,16 +94,34 @@ button:hover {
 @media print {
    .print-section {
       page-break-after: always;
-    }
-    .page-break {
+   }
+   .page-break {
       page-break-before: always;
-    }
-    .no-page-break {
+   }
+   .no-page-break {
       page-break-inside: avoid;
-    }
- }
+   }
+}
 
- .sc-dmqGRC {
-   width: 20px !important;
-   height: 20px !important;
-  }
+.sc-dmqGRC {
+   width: 25px !important;
+   height: 25px !important;
+   transform: translateY(-5px);
+}
+
+.sc-dmqGRC::after {
+   left: 28% !important;
+   width: 10px !important;
+   height: 15px !important;
+
+}
+
+.optional_checkbox_wrapper .sc-dmqGRC {
+   width: 17px !important;
+   height: 17px !important;
+
+}
+.optional_checkbox_wrapper .sc-dmqGRC::after {
+   width: 6px !important;
+   height: 10px !important;
+}

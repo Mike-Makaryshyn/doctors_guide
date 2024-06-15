@@ -36,12 +36,30 @@ const DocumentsPage = () => {
       content: () => combinedRef.current,
    });
 
+   const cleanTableData = (data) => {
+      if (!data) return null;
+    
+      return data.map((item) => {
+        const cleanedItem = { ...item };
+        Object.keys(item).forEach((key) => {
+          if (key.includes('_showIcon')) {
+            delete cleanedItem[key];
+          }
+        });
+        return cleanedItem;
+      });
+    };
+
    useEffect(() => {
       if (savedData) {
          const parsedData = JSON.parse(savedData);
-         setTableData(parsedData?.table1);
-         setTableDataSecond(parsedData?.table2);
-         setOptionalTableData(parsedData?.table3);
+         const cleanedTableData = cleanTableData(parsedData?.table1);
+         const cleanedTableDataSecond = cleanTableData(parsedData?.table2);
+         const cleanedOptionalTableData = cleanTableData(parsedData?.table3);
+       
+         setTableData(cleanedTableData);
+         setTableDataSecond(cleanedTableDataSecond);
+         setOptionalTableData(cleanedOptionalTableData);
       }
    }, []);
 
