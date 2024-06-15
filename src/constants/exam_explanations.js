@@ -39,15 +39,15 @@ export const parentTabs = [
             id: 12,
             title: "Patient-Arzt Gespräch",
             tableColumns: [
-               { name: "first", vialText: "" },
-               { name: "second", vialText: "Was man machen soll" },
+               { name: "first", visualText: "" },
+               { name: "second", visualText: "Was man machen soll" },
                {
                   name: "third",
-                  vialText: "Beispiel 1: Was man sagen kann",
+                  visualText: "Beispiel 1: Was man sagen kann",
                },
                {
                   name: "fourth",
-                  vialText: "Beispiel 2: Was man sagen kann",
+                  visualText: "Beispiel 2: Was man sagen kann",
                },
             ],
             tableRows: [
@@ -74,7 +74,7 @@ export const parentTabs = [
    // 
    {
       id: 2,
-      title: "SECOND_PARENT_TAB",
+      title: "Next",
       childTabs: [
          {
             id: 21,
@@ -112,15 +112,15 @@ export const parentTabs = [
             id: 22,
             title: "Patient-Arzt Gespräch",
             tableColumns: [
-               { name: "first", vialText: "" },
-               { name: "second", vialText: "Was man machen soll" },
+               { name: "first", visualText: "" },
+               { name: "second", visualText: "Was man machen soll" },
                {
                   name: "third",
-                  vialText: "Beispiel 1: Was man sagen kann",
+                  visualText: "Beispiel 1: Was man sagen kann",
                },
                {
                   name: "fourth",
-                  vialText: "Beispiel 2: Was man sagen kann",
+                  visualText: "Beispiel 2: Was man sagen kann",
                },
             ],
             tableRows: [

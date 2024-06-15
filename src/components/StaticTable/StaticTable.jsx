@@ -19,6 +19,18 @@ const StaticTable = ({
          className={cn(styles.table_container, "no-page-break")}
       >
          <table className={cn(styles.table)}>
+            <thead>
+               <tr>
+                  {columns?.map((column, index) => (
+                     <th
+                        key={column?.name}
+                        className={cn(styles.header, "noselect")}
+                     >
+                        <span>{column?.visualText}</span>
+                     </th>
+                  ))}
+               </tr>
+            </thead>
             <tbody className={styles.tbody}>
                {data?.map((row, index) => (
                   <BodyItem

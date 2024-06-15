@@ -14,8 +14,10 @@ const ExamExplanationsPage = () => {
 
       if (parentTabOpen?.id === tab?.id) {
          setParentTabOpen(null);
+         setChildTabOpen(null);
       } else {
          setParentTabOpen(tab);
+         setChildTabOpen(tab?.childTabs?.[0]);
       }
    };
 
@@ -48,12 +50,18 @@ const ExamExplanationsPage = () => {
          ));
       }
       if (childIdx === 1) {
-         return "Table";
+         return (
+            <div className={styles.table_wrapper}>
+               <StaticTable
+                  title={"test"}
+                  columns={childTab?.tableColumns}
+                  data={childTab?.tableRows}
+               />
+            </div>
+         );
       }
       return null; // Handle other cases if needed
    };
-
-   console.log(childTabOpen);
 
    return (
       <MainLayout>
@@ -73,20 +81,37 @@ const ExamExplanationsPage = () => {
                            className={cn(
                               styles.childTabsWrapper,
                               parentTabOpen?.id === parentTab?.id
-                                 ? styles.showTab
+                                 ? styles.showChildTab
                                  : ""
                            )}
                         >
+                           <div className={styles.childTabs}>
+                              {parentTab?.childTabs?.map(
+                                 (childTab, childIdx) => (
+                                    <div
+                                       className={cn(
+                                          styles.child_tab,
+                                          childTabOpen?.id === childTab?.id
+                                             ? styles.active_child_tab
+                                             : ""
+                                       )}
+                                       onClick={(e) =>
+                                          clickActiveChildTab(e, childTab)
+                                       }
+                                    >
+                                       {childTab?.title}
+                                    </div>
+                                 )
+                              )}
+                           </div>
+
                            {parentTab?.childTabs?.map((childTab, childIdx) => (
                               <div
                                  onClick={(e) =>
                                     clickActiveChildTab(e, childTab)
                                  }
                                  key={childIdx}
-                                 className={styles.childTab}
                               >
-                                 <div>{childTab?.title}</div>
-
                                  <div
                                     onClick={(e) => e.stopPropagation()}
                                     className={cn(
@@ -98,23 +123,6 @@ const ExamExplanationsPage = () => {
                                  >
                                     {renderChildTabContent(childTab, childIdx)}
                                  </div>
-
-                                 {/* <div
-                                    className={cn(
-                                       styles.childTabContent,
-                                       parentTabOpen?.id === parentTab?.id
-                                          ? styles.showTab
-                                          : ""
-                                    )}
-                                 >
-                                    <div className={styles.table_wrapper}>
-                                       <StaticTable
-                                          title={""}
-                                          columns={[]}
-                                          data={[]}
-                                       />
-                                    </div>
-                                 </div> */}
                               </div>
                            ))}
                         </div>
