@@ -311,9 +311,19 @@ export const parentTabs = [
               "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
           },
         ],
+        id: 17,
+        title: "Матеріали для самостійного вивчення",
+        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text_list: [
+          {
+            bold: "Computertomographie (CT):",
+            other:
+              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+          },
+        ],
       },
       {
-        id: 17,
+        id: 18,
         title: "PDF",
         link: "https://clickdimensions.com/links/TestPDFfile.pdf",
       },
