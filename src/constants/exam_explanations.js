@@ -144,74 +144,134 @@ export const parentTabs = [
       // 3tab
       {
         id: 13,
-        title: "3 tab",
+        title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
-          { name: "second", visualText: "lala" },
+          { name: "second", visualText: "Was man machen soll" },
           {
             name: "third",
-            visualText: "mwsad",
+            visualText: "Beispiel 1: Was man sagen kann",
           },
           {
             name: "fourth",
-            visualText: "dadfaw",
+            visualText: "Beispiel 2: Was man sagen kann",
           },
         ],
         tableRows: [
           {
-            first: "your_text",
-            second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
-            third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
-            fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second: "",
+            third: "",
+            fourth: "",
           },
           {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
-            third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
-            fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+            first: "Was können wir damit untersuchen",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Indikationen",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Kontraindikationen",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Behandlungspläne",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "DokumentaAon und Weiterverfolgung",
+            second: "",
+            third: "",
+            fourth: "",
           },
         ],
       },
       // 4tab
       {
         id: 14,
-        title: "4 tab",
+        title: "Bespiele der pathologischen Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
-          { name: "second", visualText: "lala" },
+          { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "mwsad",
+            visualText: "Erster Pathologischer Befund",
           },
           {
             name: "fourth",
-            visualText: "dadfaw",
+            visualText: "Zweiter Pathologischer Befund",
           },
         ],
         tableRows: [
           {
-            first: "your_text",
-            second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
-            third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
-            fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+            first: "Einführung in den klinischen Fall",
+            second: "",
+            third: "",
+            fourth: "",
           },
           {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
-            third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
-            fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+            first: "Ergebnisse der Untersuchung",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Diagnose",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Visuelle Hilfsmietel",
+            second: "",
+            third: "",
+            fourth: "",
+          },
+          {
+            first: "Fallabschluss",
+            second: "",
+            third: "",
+            fourth: "",
           },
         ],
       },
