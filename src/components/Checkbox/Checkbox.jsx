@@ -11,6 +11,7 @@ const Input = styled.input`
 const Label = styled.label`
    position: relative;
    display: inline-block;
+   padding-left: 7px;
    cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
    user-select: none; 
 `;
@@ -77,11 +78,13 @@ export default function Checkbox({
    label,
    disabled,
    isDocument,
-   defaultValue
+   defaultValue,
+   labelRight
 }) {
    return (
       <Label htmlFor={id} disabled={disabled}>
-         {label}
+         {!labelRight && label}
+
          <Input
             id={id}
             type="checkbox"
@@ -92,6 +95,7 @@ export default function Checkbox({
             onChange={onChange}
             defaultChecked={defaultValue}
          />
+         {labelRight && label}
          <Indicator />
       </Label>
    );

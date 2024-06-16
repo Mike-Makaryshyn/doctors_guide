@@ -1,13 +1,16 @@
+import { useState, useEffect } from "react";
 import StaticTable from "../../components/StaticTable/StaticTable";
-import { useState } from "react";
+import Checkbox from "../../components/Checkbox/Checkbox";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import styles from "./styles.module.scss";
 import { parentTabs } from "../../constants/exam_explanations";
+import styles from "./styles.module.scss";
+import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import cn from "classnames";
 
 const ExamExplanationsPage = () => {
    const [parentTabOpen, setParentTabOpen] = useState(null);
    const [childTabOpen, setChildTabOpen] = useState(null);
+   const [checkedParentIds, setCheckedParentIds] = useState([]);
 
    const clickActiveParentTab = (e, tab) => {
       e.stopPropagation();
@@ -35,6 +38,28 @@ const ExamExplanationsPage = () => {
          setChildTabOpen(tab);
       }
    };
+
+   const handleCheckboxChange = (parentId) => {
+      setCheckedParentIds((prevCheckedParentIds) => {
+         if (prevCheckedParentIds.includes(parentId)) {
+            const updatedCheckedParentIds = prevCheckedParentIds.filter(id => id !== parentId);
+            localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
+            return updatedCheckedParentIds;
+         } else {
+            const updatedCheckedParentIds = [...prevCheckedParentIds, parentId];
+            localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
+            return updatedCheckedParentIds;
+         }
+      });
+   };
+
+   // Initialize state from localStorage
+   useEffect(() => {
+      const parentCheckedIds = localStorageGet('checkedParentTabIds');
+      if (parentCheckedIds) {
+         setCheckedParentIds(JSON.parse(parentCheckedIds));
+      }
+   }, []);
 
    const renderChildTabContent = (childTab, childIdx) => {
       if (childIdx === 0) {
@@ -131,8 +156,18 @@ const ExamExplanationsPage = () => {
                         className={styles.parentTabItem}
                         key={parentTab?.id}
                      >
-                        <div className={cn(styles.pTab, 'noselect')}>{parentTab?.title}</div>
+                           <div className={cn(styles.pTab, 'noselect')}>
+                              <div className={styles.pTitle}>{parentTab?.title}</div>
 
+                              <Checkbox
+                                 label={'Gelernt'}
+                                    value={checkedParentIds?.includes(parentTab?.id)}
+                                    onChange={() =>
+                                       handleCheckboxChange(parentTab?.id)
+                                    }
+                                    labelRight
+                                 />
+                           </div>
                         <div
                            className={cn(
                               styles.childTabsWrapper,

@@ -5,7 +5,6 @@
 
 .parentTabsWrapper {
    color: black;
-   margin-top: 130px;
 }
 
 .parentTabItem {
@@ -148,4 +147,16 @@
 .lessWidth {
    width: 50px;
    margin-right: 20px;
+}
+
+.pTab {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 30px;
+   font-size: 16px;
+}
+
+.pTitle {
+   font-weight: 600;
+   font-size: 17px;
 }
