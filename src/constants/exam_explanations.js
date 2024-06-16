@@ -217,7 +217,7 @@ export const parentTabs = [
       // 4tab
       {
         id: 14,
-        title: "Bespiele der pathologischen Befunden und Normalbefund",
+        title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
           { name: "second", visualText: "Normaler Befund" },
@@ -278,7 +278,7 @@ export const parentTabs = [
       // 5tab
       {
         id: 15,
-        title: "tab 5",
+        title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
         text_list: [
