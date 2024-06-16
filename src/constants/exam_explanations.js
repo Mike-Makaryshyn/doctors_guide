@@ -16,28 +16,106 @@ export const parentTabs = [
         title: "Einleitung",
         list: [
           {
-            title: "Einleitung:",
+            title: "Einleitung",
             items: [
               {
                 bold_text: "Ziel und Kontext:",
-                text: "Die CT ist ein wesentliches bildgebendes Verfahren in der deutschen Medizinlandscha9. Sie wird für eine Vielzahl von diagnos?schen und therapeu?schen Zwecken eingesetzt.",
+                text: "",
               },
               {
                 bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die CT findet Anwendung in der Neurologie, Onkologie, Kardiologie und vielen weiteren Fachbereichen. Sie ist unerlässlich für die schnelle und genaue Diagnos?k.",
+                text: "",
               },
             ],
           },
           {
-            title: "Grundprinzipien:",
+            title: "Grundprinzipien",
             items: [
               {
-                bold_text: "TheoreAsche Grundlagen:",
-                text: "Die CT nutzt Röntgenstrahlen, um detaillierte QuerschniQsbilder des Körpers zu erzeugen. Ein Computer verarbeitet die Daten, um ein dreidimensionales Bild zu erstellen.",
+                bold_text: "Theoretische Grundlagen:",
+                text: "",
               },
               {
                 bold_text: "Technische Aspekte:",
-                text: "Moderne CT-Scanner verwenden Spiral- oder MehrschichQechniken, um hochauflösende Bilder zu erzeugen. Die Untersuchung ist meist schnell und schmerzfrei.",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "•	Auswertung und Interpretation:",
+                text: "",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "",
+              },
+              {
+                bold_text: "Risiken::",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "",
               },
             ],
           },
