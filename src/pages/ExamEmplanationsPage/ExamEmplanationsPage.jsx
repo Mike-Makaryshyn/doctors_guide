@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import StaticTable from "../../components/StaticTable/StaticTable";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -11,6 +11,7 @@ const ExamExplanationsPage = () => {
    const [parentTabOpen, setParentTabOpen] = useState(null);
    const [childTabOpen, setChildTabOpen] = useState(null);
    const [checkedParentIds, setCheckedParentIds] = useState([]);
+   const [congrats, setCongrats] = useState(false);
 
    const clickActiveParentTab = (e, tab) => {
       e.stopPropagation();
@@ -46,6 +47,7 @@ const ExamExplanationsPage = () => {
             localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
             return updatedCheckedParentIds;
          } else {
+            setCongrats(true);
             const updatedCheckedParentIds = [...prevCheckedParentIds, parentId];
             localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
             return updatedCheckedParentIds;
@@ -64,14 +66,14 @@ const ExamExplanationsPage = () => {
    const renderChildTabContent = (childTab, childIdx) => {
       if (childIdx === 0) {
          return childTab?.list?.map((tab, idx) => (
-            <li className={styles.childTabContent} key={tab?.title}>
+            <li className={styles.childTabContent} key={`${tab?.title}${idx}`}>
                <div className={styles.option_title}>
                   {idx + 1}. {tab.title}
                </div>
 
                <ul>
-                  {tab?.items?.map((item) => (
-                     <li className={styles.options}>
+                  {tab?.items?.map((item, iidx) => (
+                     <li key={`${iidx}${item?.text}`} className={styles.options}>
                         <span className={styles.bold}>{item?.bold_text}</span>
                         <span>{item?.text}</span>
                      </li>
@@ -103,7 +105,7 @@ const ExamExplanationsPage = () => {
 
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
-                           <p className={styles.bottom_item} key={idx}>
+                           <p className={styles.bottom_item} key={`childTab${idx}`}>
                               <strong>
                                  {idx + 1}.{item?.bold}
                               </strong>
@@ -127,7 +129,7 @@ const ExamExplanationsPage = () => {
 
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
-                           <p className={styles.bottom_item} key={idx}>
+                           <p className={styles.bottom_item} key={`ctab${idx}`}>
                               <strong>
                                  {idx + 1}.{item?.bold}
                               </strong>
@@ -150,6 +152,7 @@ const ExamExplanationsPage = () => {
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>
+
                   {parentTabs?.map((parentTab) => (
                      <div
                         onClick={(e) => clickActiveParentTab(e, parentTab)}
@@ -158,7 +161,6 @@ const ExamExplanationsPage = () => {
                      >
                            <div className={cn(styles.pTab, 'noselect')}>
                               <div className={styles.pTitle}>{parentTab?.title}</div>
-
                               <Checkbox
                                  label={'Gelernt'}
                                     value={checkedParentIds?.includes(parentTab?.id)}
@@ -191,6 +193,7 @@ const ExamExplanationsPage = () => {
                                        onClick={(e) =>
                                           clickActiveChildTab(e, childTab)
                                        }
+                                       key={childTab?.id}
                                     >
                                        {childTab?.title}
                                     </div>
@@ -203,7 +206,7 @@ const ExamExplanationsPage = () => {
                                  onClick={(e) =>
                                     clickActiveChildTab(e, childTab)
                                  }
-                                 key={childIdx}
+                                 key={`child${childIdx}`}
                               >
                                  <div
                                     onClick={(e) => e.stopPropagation()}

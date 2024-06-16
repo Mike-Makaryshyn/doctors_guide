@@ -135,3 +135,14 @@ button:hover {
              user-select: none; /* Non-prefixed version, currently
                                    supported by Chrome, Edge, Opera and Firefox */
  }
+
+ .pushup {
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   background-color: #2a7c6f;
+   z-index: 1000;
+   position: fixed;
+   color: whitesmoke;
+   transition: all 0.3s ease;
+ }
