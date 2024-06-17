@@ -942,6 +942,8 @@ export const parentTabs = [
                   other: "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
                },
             ],
+         },
+         {
             id: 27,
             title: "Матеріали для самостійного вивчення",
             text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
@@ -1121,9 +1123,9 @@ export const parentTabs = [
                },
             ],
          },
-         // 6tab
-         {
-            id: 36,
+          // 6tab
+          {
+            id: 16,
             title: "Wortschatz",
             text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
             text_list: [
@@ -1135,7 +1137,95 @@ export const parentTabs = [
                   bold: "Gantry:",
                   other: "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
                },
+               {
+                  bold: "Röntgentomographie:",
+                  other: "Ein anderer Begriff für CT.",
+               },
+               {
+                  bold: "Röntgenstrahlen:",
+                  other: "Die Strahlung, die zur Erstellung der Bilder verwendet wird.",
+               },
+               {
+                  bold: "Gantry:",
+                  other: "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
+               },
+
+               {
+                  bold: "Querschnittsbilder:",
+                  other: "Die durch die CT erzeugten Schnittbilder des Körpers.",
+               },
+               {
+                  bold: "Kontrastmittel :",
+                  other: "Substanzen, die intravenös verabreicht werden, um die Unterschiede zwischen Geweben zu verstärken.",
+               },
+               {
+                  bold: "Spikulierung :",
+                  other: "Ein Zeichen, das häufig bei malignen Tumoren auf CT-Bildern zu sehen ist.",
+               },
+               {
+                  bold: "Pleuraeinziehung :",
+                  other: "Ein Befund, der auf eine Erkrankung wie ein Tumor hinweisen kann.",
+               },
+               {
+                  bold: "Strahlenbelastung :",
+                  other: "Die Menge der Röntgenstrahlen, der ein Patient während der CT ausgesetzt ist.",
+               },
+               {
+                  bold: "Bildauflösung :",
+                  other: "Die Detailgenauigkeit der CT-Bilder.",
+               },
+               {
+                  bold: "Volumenrekonstruktion :",
+                  other: "Der Prozess der Erstellung dreidimensionaler Bilder aus den Querschnittsbildern.",
+               },
+               {
+                  bold: "Multidetektor-CT (MDCT):",
+                  other: "Eine fortschrittliche Form der CT mit mehreren Detektoren.",
+               },
+               {
+                  bold: "Hounsfield-Einheiten (HU):",
+                  other: "Ein Maß für die Dichte von Geweben im CT-Bild.",
+               },
+               {
+                  bold: "Füllungsdefekt :",
+                  other: "Ein Bereich, der auf eine Lungenembolie hinweisen kann.",
+               },
+               {
+                  bold: "Artefakte :",
+                  other: "Bildfehler, die durch verschiedene Faktoren wie Bewegung oder Metallimplantate verursacht werden.",
+               },
+               {
+                  bold: "Strahlenhärtung :",
+                  other: "Ein Effekt, der durch den Unterschied in der Absorption von Röntgenstrahlen entsteht.",
+               },
+               {
+                  bold: "Spiral-CT:",
+                  other: "Ein Verfahren, bei dem der Patient kontinuierlich durch den CT-Scanner bewegt wird.",
+               },
+               {
+                  bold: "Low-Dose-CT:",
+                  other: "Eine CT-Untersuchung mit reduzierter Strahlenbelastung.",
+               },
+               {
+                  bold: "Bildrekonstruktion:",
+                  other: "Der Prozess der Umwandlung von Rohdaten in sichtbare Bilder.",
+               },
+               {
+                  bold: "Interdisziplinäre Zusammenarbeit :",
+                  other: "Die Zusammenarbeit zwischen verschiedenen Fachbereichen bei der Interpretation der CT-Bilder.",
+               },
+               {
+                  bold: "Sicherheitsprotokolle:",
+                  other: "Richtlinien zum Schutz von Patienten und Personal vor der Strahlenbelastung.",
+               },
+
+               {
+                  text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der CT wichtig ist und können in einer Prüfungssituation nützlich sein.",
+               },
             ],
+         },
+         // 7tab
+         {
             id: 37,
             title: "Матеріали для самостійного вивчення",
             text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
@@ -1146,7 +1236,7 @@ export const parentTabs = [
                },
             ],
          },
-         // 7tab
+         // 8tab
          {
             id: 38,
             title: "PDF",

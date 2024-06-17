@@ -119,7 +119,7 @@ const ExamExplanationsPage = () => {
          );
       }
 
-      if (childIdx === 5) {
+      if (childIdx === 5 || childIdx === 6) {
          return (
             <div className={styles.tabFive}>
                <div className={styles.tabFiveTop}>
