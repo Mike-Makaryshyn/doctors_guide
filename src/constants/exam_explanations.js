@@ -1,7 +1,6 @@
 import child_tab_img_1 from "../assets/tab_images/child_tab_1.jpg";
-import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
-import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
-// ... for new images
+import child_tab_img_2 from "../assets/tab_images/child_tab_2.jpg";
+import child_tab_img_3 from "../assets/tab_images/child_tab_3.jpg";
 
 export const parentTabs = [
   // start of parent tab: 1
@@ -14,6 +13,7 @@ export const parentTabs = [
       {
         id: 11,
         title: "Einleitung",
+
         list: [
           {
             title: "Einleitung",
@@ -45,7 +45,7 @@ export const parentTabs = [
             title: "Interpretation",
             items: [
               {
-                bold_text: "•	Auswertung und Interpretation:",
+                bold_text: "Auswertung und Interpretation:",
                 text: "Radiologen interpretieren die CT-Bilder, indem sie die Graustufenanalysen und strukturellen Details berücksichtigen. Jede Gewebedichte wird durch verschiedene Graustufen dargestellt, was eine präzise Identifikation von Anomalien ermöglicht.",
               },
               {
@@ -66,7 +66,7 @@ export const parentTabs = [
                 text: "Ein Nachteil ist die Strahlenbelastung, die höher ist als bei konventionellen Röntgenaufnahmen. Zudem können Kontrastmittel Nebenwirkungen verursachen.",
               },
               {
-                bold_text: "Risiken::",
+                bold_text: "Risiken:",
                 text: "Die Hauptgefahr besteht in der Strahlenexposition, die das Risiko von Krebs erhöhen kann. Auch die Verwendung von Kontrastmitteln kann allergische Reaktionen oder Nierenschäden verursachen.",
               },
             ],
@@ -89,7 +89,7 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "",
-                text: "•	Alternative bildgebende Verfahren sind die Magnetresonanztomographie (MRT), die Ultraschalluntersuchung und die konventionelle Röntgendiagnostik. Diese Alternativen haben jeweils spezifische Vor- und Nachteile in Bezug auf Bildqualität, Untersuchungsdauer und Risiken.",
+                text: "Alternative bildgebende Verfahren sind die Magnetresonanztomographie (MRT), die Ultraschalluntersuchung und die konventionelle Röntgendiagnostik. Diese Alternativen haben jeweils spezifische Vor- und Nachteile in Bezug auf Bildqualität, Untersuchungsdauer und Risiken.",
               },
             ],
           },
@@ -158,7 +158,6 @@ export const parentTabs = [
           },
           {
             first: "Vorbereitung",
-
             second:
               "Informieren, ob der Patient Kontrastmittel trinken oder injiziert bekommen muss, und dass Schmuck und Metallgegenstände entfernt werden müssen.",
             third:
@@ -202,7 +201,6 @@ export const parentTabs = [
             fourth:
               "Wenn Sie eine schwere Niereninsuffizienz haben, könnten wir auf die CT verzichten.",
           },
-
           {
             first: "Mögliche Ergebnisse",
             second:
@@ -265,7 +263,6 @@ export const parentTabs = [
             visualText: "Beispiel 2: Was man sagen kann",
           },
         ],
-
         tableRows: [
           {
             first: "Was ist eigentlich die angegebene Untersuchung",
@@ -349,7 +346,7 @@ export const parentTabs = [
               "Um die Qualität der CT-Untersuchungen zu gewährleisten, müssen wir regelmäßige Wartungen, Kalibrierungen und Qualitätskontrollen der Geräte durchführen. Darüber hinaus ist die fortlaufende Schulung des medizinischen Personals unerlässlich.",
           },
           {
-            first: "DokumentaAon und Weiterverfolgung",
+            first: "Dokumentation und Weiterverfolgung",
             second:
               "Erklären, dass die Ergebnisse der CT-Untersuchung sorgfältig dokumentiert und in die Patientenakte aufgenommen werden müssen. Eine klare und präzise Dokumentation ermöglicht die Nachverfolgung des Krankheitsverlaufs und die Planung weiterer diagnostischer oder therapeutischer Maßnahmen. Regelmäßige Überprüfungen und Aktualisierungen der Patientenakte sind essentiell für eine kontinuierliche Betreuung.",
             third:
@@ -422,7 +419,7 @@ export const parentTabs = [
               "Diagnose einer Lungenembolie aufgrund der CT-Ergebnisse und Symptomatik.",
           },
           {
-            first: "Visuelle Hilfsmietel",
+            first: "Visuelle Hilfsmittel",
             second:
               "Homogenes Lungengewebe ohne Auffälligkeiten in allen Sequenzen.",
             third:
@@ -469,12 +466,12 @@ export const parentTabs = [
           {
             bold: "Computertomographie (CT):",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte Querschnittsbilder des Körpers zu erstellen.",
           },
           {
             bold: "Gantry:",
             other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
+              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Patienten umgibt.",
           },
           {
             bold: "Röntgentomographie:",
@@ -486,41 +483,35 @@ export const parentTabs = [
               "Die Strahlung, die zur Erstellung der Bilder verwendet wird.",
           },
           {
-            bold: "Gantry:",
-            other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
-          },
-
-          {
             bold: "Querschnittsbilder:",
             other: "Die durch die CT erzeugten Schnittbilder des Körpers.",
           },
           {
-            bold: "Kontrastmittel :",
+            bold: "Kontrastmittel:",
             other:
               "Substanzen, die intravenös verabreicht werden, um die Unterschiede zwischen Geweben zu verstärken.",
           },
           {
-            bold: "Spikulierung :",
+            bold: "Spikulierung:",
             other:
               "Ein Zeichen, das häufig bei malignen Tumoren auf CT-Bildern zu sehen ist.",
           },
           {
-            bold: "Pleuraeinziehung :",
+            bold: "Pleuraeinziehung:",
             other:
               "Ein Befund, der auf eine Erkrankung wie ein Tumor hinweisen kann.",
           },
           {
-            bold: "Strahlenbelastung :",
+            bold: "Strahlenbelastung:",
             other:
               "Die Menge der Röntgenstrahlen, der ein Patient während der CT ausgesetzt ist.",
           },
           {
-            bold: "Bildauflösung :",
+            bold: "Bildauflösung:",
             other: "Die Detailgenauigkeit der CT-Bilder.",
           },
           {
-            bold: "Volumenrekonstruktion :",
+            bold: "Volumenrekonstruktion:",
             other:
               "Der Prozess der Erstellung dreidimensionaler Bilder aus den Querschnittsbildern.",
           },
@@ -533,16 +524,16 @@ export const parentTabs = [
             other: "Ein Maß für die Dichte von Geweben im CT-Bild.",
           },
           {
-            bold: "Füllungsdefekt :",
+            bold: "Füllungsdefekt:",
             other: "Ein Bereich, der auf eine Lungenembolie hinweisen kann.",
           },
           {
-            bold: "Artefakte :",
+            bold: "Artefakte:",
             other:
               "Bildfehler, die durch verschiedene Faktoren wie Bewegung oder Metallimplantate verursacht werden.",
           },
           {
-            bold: "Strahlenhärtung :",
+            bold: "Strahlenhärtung:",
             other:
               "Ein Effekt, der durch den Unterschied in der Absorption von Röntgenstrahlen entsteht.",
           },
@@ -561,7 +552,7 @@ export const parentTabs = [
               "Der Prozess der Umwandlung von Rohdaten in sichtbare Bilder.",
           },
           {
-            bold: "Interdisziplinäre Zusammenarbeit :",
+            bold: "Interdisziplinäre Zusammenarbeit:",
             other:
               "Die Zusammenarbeit zwischen verschiedenen Fachbereichen bei der Interpretation der CT-Bilder.",
           },
@@ -570,7 +561,6 @@ export const parentTabs = [
             other:
               "Richtlinien zum Schutz von Patienten und Personal vor der Strahlenbelastung.",
           },
-
           {
             text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der CT wichtig ist und können in einer Prüfungssituation nützlich sein.",
           },
@@ -578,432 +568,38 @@ export const parentTabs = [
       },
       {
         id: 17,
-  title: "Матеріали для самостійного вивчення",
-  text: "",
-  text_list: [
-    {
-      bold: "DocCheck Flexikon",
-      other: "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon](https://flexikon.doccheck.com/de/Computertomographie)."
-    },
-    {
-      bold: "Stiftung Gesundheitswissen",
-      other: "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen](https://www.stiftung-gesundheitswissen.de)."
-    },
-    {
-      bold: "Praktischarzt.de",
-      other: "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de](https://www.praktischarzt.de)."
-    },
-    {
-      bold: "Navigator Medizin",
-      other: "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin](https://www.navigator-medizin.de)."
-    },
-    {
-      bold: "Gesundheit.de",
-      other: "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de](https://www.gesundheit.de)."
-    },
-    {
-      bold: "Onmeda",
-      other: "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda](https://www.onmeda.de)."
-    },
-            ],
-          },
-        {
-        id: 18,
-        title: "PDF",
-        link: "https://clickdimensions.com/links/TestPDFfile.pdf",
-       },    
-       
-       
-       
-  },
-  // end of parent tab: 1
-  // start of parent tab: 2
-  {
-    id: 1,
-    title: "MRT",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 11,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen:",
-                text: "",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "•	Auswertung und Interpretation:",
-                text: "",
-              },
-              {
-                bold_text: "Typische Befunde:",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile:",
-                text: "",
-              },
-              {
-                bold_text: "Nachteile:",
-                text: "",
-              },
-              {
-                bold_text: "Risiken::",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text: "",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse:",
-                text: "",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven:",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "",
-              },
-              {
-                bold_text: "Gesamtbedeutung:",
-                text: "",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 12,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Ablauf",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Vorbereitung",
-
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Risiken",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Vorteile",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Alternativen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Kontraindikationen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 13,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Indikationen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Kontraindikationen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Behandlungspläne",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "DokumentaAon und Weiterverfolgung",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 14,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Diagnose",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Visuelle Hilfsmietel",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-          {
-            first: "Fallabschluss",
-            second: "",
-            third: "",
-            fourth: "",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 15,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
-        text_list: [
-          {
-            bold: "Gantry:",
-            other:
-              "Das auffälligste Merkmal eines CT-Geräts ist die Gantry, eine große, ringförmige Struktur, in die der Patient auf einem beweglichen Tisch hineingeschoben wird. Innerhalb der Gantry rotiert eine Röntgenröhre schnell um den Patienten herum, während gegenüberliegend Röntgendetektoren angebracht sind.",
-          },
-          {
-            bold: "Röntgenröhre:",
-            other:
-              "Die Röntgenröhre sendet während der Drehung um den Patienten herum kontinuierlich Röntgenstrahlen aus. Diese Strahlen durchdringen den Körper und werden je nach Dichte der verschiedenen Gewebe und Strukturen unterschiedlich absorbiert.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 16,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
-        text_list: [
-          {
-            bold: "Computertomographie (CT):",
-            other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
-          },
-          {
-            bold: "Gantry:",
-            other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
-          },
-        ],
-        id: 17,
         title: "Матеріали для самостійного вивчення",
-        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text: "",
         text_list: [
           {
-            bold: "Computertomographie (CT):",
+            bold: "DocCheck Flexikon",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon](https://flexikon.doccheck.com/de/Computertomographie).",
+          },
+          {
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen](https://www.stiftung-gesundheitswissen.de).",
+          },
+          {
+            bold: "Praktischarzt.de",
+            other:
+              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de](https://www.praktischarzt.de).",
+          },
+          {
+            bold: "Navigator Medizin",
+            other:
+              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin](https://www.navigator-medizin.de).",
+          },
+          {
+            bold: "Gesundheit.de",
+            other:
+              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de](https://www.gesundheit.de).",
+          },
+          {
+            bold: "Onmeda",
+            other:
+              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda](https://www.onmeda.de).",
           },
         ],
       },
@@ -1016,85 +612,11 @@ export const parentTabs = [
   },
   // end of parent tab: 1
 
+  // start of parent tab: 2
   {
     id: 2,
-    title: "Next",
-    checked: false,
+    title: "Second parent tab",
     childTabs: [
-      // 1tab
-      {
-        id: 21,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung:",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "Die CT ist ein wesentliches bildgebendes Verfahren in der deutschen Medizinlandscha9. Sie wird für eine Vielzahl von diagnos?schen und therapeu?schen Zwecken eingesetzt.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die CT findet Anwendung in der Neurologie, Onkologie, Kardiologie und vielen weiteren Fachbereichen. Sie ist unerlässlich für die schnelle und genaue Diagnos?k.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien:",
-            items: [
-              {
-                bold_text: "TheoreAsche Grundlagen:",
-                text: "Die CT nutzt Röntgenstrahlen, um detaillierte QuerschniQsbilder des Körpers zu erzeugen. Ein Computer verarbeitet die Daten, um ein dreidimensionales Bild zu erstellen.",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "Moderne CT-Scanner verwenden Spiral- oder MehrschichQechniken, um hochauflösende Bilder zu erzeugen. Die Untersuchung ist meist schnell und schmerzfrei.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 22,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
-            third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
-            fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
-            third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
-            fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
-          },
-        ],
-      },
-
-
-      
-      // 3tab
       {
         id: 23,
         title: "3 tab",
@@ -1114,18 +636,18 @@ export const parentTabs = [
           {
             first: "your_text",
             second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+              "Erläutern Sie den diagnostischen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
             third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+              "Diese Untersuchung hilft uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
             fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die richtige Diagnose zu stellen.",
           },
           {
             first: "Ablauf",
             second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+              "Beschreiben Sie den Prozess der CT-Untersuchung, einschließlich der Positionierung im Scanner.",
             third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie still liegen, um klare Bilder zu erhalten.",
             fourth:
               "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
           },
@@ -1151,18 +673,18 @@ export const parentTabs = [
           {
             first: "Ziel der Untersuchung",
             second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+              "Erläutern Sie den diagnostischen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
             third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+              "Diese Untersuchung hilft uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
             fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die richtige Diagnose zu stellen.",
           },
           {
             first: "Ablauf",
             second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+              "Beschreiben Sie den Prozess der CT-Untersuchung, einschließlich der Positionierung im Scanner.",
             third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie still liegen, um klare Bilder zu erhalten.",
             fourth:
               "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
           },
@@ -1196,22 +718,24 @@ export const parentTabs = [
           {
             bold: "Computertomographie (CT):",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte Querschnittsbilder des Körpers zu erstellen.",
           },
           {
             bold: "Gantry:",
             other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
+              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Patienten umgibt.",
           },
         ],
+      },
+      {
         id: 27,
         title: "Матеріали для самостійного вивчення",
-        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text: "",
         text_list: [
           {
-            bold: "Computertomographie (CT):",
+            bold: "DocCheck Flexikon",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon](https://flexikon.doccheck.com/de/Computertomographie).",
           },
         ],
       },
@@ -1223,7 +747,7 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 2
-  // start of parent tab 3
-]
-},
+  // end of parent tab: 2
+
+  // start of parent tab: 3
+];
