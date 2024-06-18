@@ -1220,7 +1220,7 @@ export const parentTabs = [
       {
         id: 28,
         title: "PDF",
-        link: "https://clickdimensions.com/links/TestPDFfile.pdf",
+        link: "https://drive.google.com/file/d/1wJJz9PBp2etWttW0nGwgu567JforFgvS/view?usp=share_link",
       },
     ],
   },
