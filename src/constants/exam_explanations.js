@@ -453,7 +453,7 @@ export const parentTabs = [
           {
             bold: "Röntgenröhre:",
             other:
-              "",
+              "erzeugt die Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
           },
           {
             bold: "Detektoren:",
