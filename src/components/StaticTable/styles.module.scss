@@ -145,6 +145,14 @@
       position: relative;
       text-align: left;
 
+      transition: all 0.3s ease;
+
+      &:hover {
+         transform: scale(1.01);
+         background-color: rgba(0,128,0,0.054);
+         z-index: 100;
+      }
+      
       td {
          &:nth-child(1) {
             width: 15% !important;
