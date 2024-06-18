@@ -4,7 +4,7 @@ import {
    DEFAULT_LANGUAGE,
 } from "../../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import "./header.css";
 
@@ -17,6 +17,7 @@ const Header = () => {
    const { selectedRegion } = useGetGlobalInfo();
 
    const navigate = useNavigate();
+   const location = useLocation();
 
    const handleChangeLanguage = (event) => {
       const newLanguage = event.target.value;
@@ -34,7 +35,7 @@ const Header = () => {
          >
             Germanmovein
          </h2>
-         <span>{selectedRegion}</span>
+         <span className={"selected"}>{location?.pathname !== "/lands" &&selectedRegion}</span>
          <div className="flexBt">
             <span style={{ marginRight: "20px" }}>
                {languages[selectedLanguage].language}
