@@ -660,7 +660,7 @@ export const parentTabs = [
             title: "Interpretation",
             items: [
               {
-                bold_text: "•	Auswertung und Interpretation:",
+                bold_text: "Auswertung und Interpretation:",
                 text: "Radiologen sind spezialisiert darauf, die MRT-Bilder zu analysieren und zu interpretieren. Sie suchen nach Anomalien wie Tumoren, Entzündungen oder strukturellen Veränderungen. Es ist wichtig, normale von pathologischen Befunden unterscheiden zu können.",
               },
               {
@@ -681,7 +681,7 @@ export const parentTabs = [
                 text: "Ein wesentlicher Nachteil der MRT sind die hohen Kosten, sowohl für die Anschaffung und Wartung der Geräte als auch für die Durchführung der Untersuchung. Die Untersuchungsdauer kann relativ lang sein, was für Patienten anstrengend sein kann. Die Enge der MRT-Röhre kann bei manchen Patienten Platzangst auslösen, was die Durchführung der Untersuchung erschwert.",
               },
               {
-                bold_text: "Risiken::",
+                bold_text: "Risiken:",
                 text: "Die MRT ist im Allgemeinen sicher, aber es gibt einige Risiken. Manche Patienten können auf die verwendeten Kontrastmittel allergisch reagieren. Patienten mit Metallimplantaten, Herzschrittmachern oder anderen elektronischen Geräten im Körper können nicht untersucht werden, da das starke Magnetfeld diese Geräte beeinflussen kann. Es besteht auch ein geringes Risiko für thermische Verletzungen, wenn sich Metallgegenstände oder Tätowierungen erhitzen.",
               },
             ],
@@ -704,7 +704,7 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "",
-                text: "•	Zu den Alternativen zur Magnetresonanztomographie (MRT) gehören die Computertomographie (CT), die schnelle und detaillierte Bilder liefern kann, jedoch ionisierende Strahlung verwendet. Ultraschall ist eine weitere Alternative, die insbesondere bei der Untersuchung von Weichteilen und in der pränatalen Diagnostik weit verbreitet ist. Die Positronen-Emissions-Tomographie (PET) kombiniert die Bildgebung mit funktionellen Informationen, indem sie Stoffwechselprozesse im Körper darstellt. Röntgenaufnahmen sind eine schnelle und kostengünstige Methode zur Visualisierung von Knochen und anderen harten Strukturen, jedoch weniger geeignet für die detaillierte Untersuchung von Weichteilgeweben.",
+                text: "Zu den Alternativen zur Magnetresonanztomographie (MRT) gehören die Computertomographie (CT), die schnelle und detaillierte Bilder liefern kann, jedoch ionisierende Strahlung verwendet. Ultraschall ist eine weitere Alternative, die insbesondere bei der Untersuchung von Weichteilen und in der pränatalen Diagnostik weit verbreitet ist. Die Positronen-Emissions-Tomographie (PET) kombiniert die Bildgebung mit funktionellen Informationen, indem sie Stoffwechselprozesse im Körper darstellt. Röntgenaufnahmen sind eine schnelle und kostengünstige Methode zur Visualisierung von Knochen und anderen harten Strukturen, jedoch weniger geeignet für die detaillierte Untersuchung von Weichteilgeweben.",
               },
             ],
           },
