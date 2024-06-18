@@ -613,7 +613,7 @@ export const parentTabs = [
       {
         id: 18,
         title: "PDF",
-        link: "https://untersuchungenpdf.s3.eu-north-1.amazonaws.com/CT.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHIaCmV1LW5vcnRoLTEiRjBEAiAVbnoltrGNtZkhUnzVUsqBkUp9wNUzMdAnukwmafkwCQIgOTO%2BaR%2FuEDnpJFgJgvwXY9ujx4y%2BkRoyo5%2FeZz3CDzIq5AIIGxAAGgwwNTgyNjQ0MzI2MzQiDPmH8DKcytSa4I0srirBAqLwo2B3x6ToGbUgNgIkim%2FkWr5N4Z322ra4R%2B3pWCCheVxNyUiscMCUFBSeUO9mQ8DcUmZv3%2BuAPzBvS8lq4MFbXIpMGE6zGXPXnpPlL9mJ%2B63ky5YDeIoCzxO7djAVGQyn2kM01%2BC%2BMSFkm87H6pMFbmXSRLuwVpBUCc0vez6VNc3Oeh4lxW6tLVjiXsspypYDMak2OcQA8RAEuvHp2bBqDnLijwaTGuWEVqa6KdW5lKb3ZZ1DHOK9ET0qnAkLyU1O9TlYYiLbsxb%2B6pX2jaOOkPHUPbxEL%2BhRwUfB1wrhCwc7DTCEPtelq8WL5%2FZXzgYwEckvE3nq2X2BpBUcgBTpnrKKnrY6IV41BWgF2I62ZiJmRd%2Fn4cpx8QPG81n2mGiIbX57rrHUY4E9xmIjqC2ap%2BgQUUbzBnxI8VVFKiLaxTDbkMezBjq0Am9rOqvgZi1VBo029Sd57QKKfckcog90wPMrMHeLICQcNRPYhPCe1%2BHWS0ojgXu9yoTkHX3eDX2V3kaKf267oUAuiceDGTrtFYFHOpCDB6v0LTJHL3opLj5B4bwF38hYwYR%2BTLjvVjD6qwuwSmRxbjTeOnPLgVMm4GWvaTua9%2BX3kayeOuIzE5ZbMe3M9k%2F%2F8EF1hb0hOREcE5fcBvGk%2FZlH9SRt%2BQquWUCCuNL%2BU85jwOYemc%2BhYn1N6vPhwKIbkDPZPdV9QP4jPo6K3m1fS8%2FCtaO5u1yh7WKK5MA8qPDrP7adKwmfCQypQlY%2B%2FnWH%2B0R4qvdIu6vf%2Fl53U7WQrxFQU3DeL2EcqJrypc%2FFt4zH0dPxcZSdaIgI%2BaomUcuVhOhlEKgAg%2B1fmnUtk1S6svPsXs76&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240618T175312Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3EGUV75H7YJN2PY%2F20240618%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Signature=44bf5a9c71e83fa4046113135e9e71c2e7f746eaebec8e50cb18d3d19f4dad07",
+        link: "https://drive.google.com/file/d/1m67Ctkv7GwGGPOT3skZR4HEstFSmUU80/view?usp=share_link",
       },
     ],
   },
