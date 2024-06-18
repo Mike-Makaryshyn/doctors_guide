@@ -1,4 +1,4 @@
-import child_tab_img_1 from "../assets/tab_images/child_tab_1.jpg";
+import child_tab_img_1 from "../assets/tab_images/child_tab_2.jpg";
 import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
