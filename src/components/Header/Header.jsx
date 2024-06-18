@@ -35,7 +35,7 @@ const Header = () => {
          >
             Germanmovein
          </h2>
-         <span className={"selected"}>{location?.pathname !== "/lands" &&selectedRegion}</span>
+         <span className={'sRegion'}>{location?.pathname !== "/lands" &&selectedRegion}</span>
          <div className="flexBt">
             <span style={{ marginRight: "20px" }}>
                {languages[selectedLanguage].language}
