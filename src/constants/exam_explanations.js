@@ -448,12 +448,52 @@ export const parentTabs = [
           {
             bold: "Gantry:",
             other:
-              "Das auffälligste Merkmal eines CT-Geräts ist die Gantry, eine große, ringförmige Struktur, in die der Patient auf einem beweglichen Tisch hineingeschoben wird. Innerhalb der Gantry rotiert eine Röntgenröhre schnell um den Patienten herum, während gegenüberliegend Röntgendetektoren angebracht sind.",
+              "Gantry: ist der ringförmige Teil des CT-Geräts, der die Röntgenröhre und die Detektoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
           },
           {
             bold: "Röntgenröhre:",
             other:
-              "Die Röntgenröhre sendet während der Drehung um den Patienten herum kontinuierlich Röntgenstrahlen aus. Diese Strahlen durchdringen den Körper und werden je nach Dichte der verschiedenen Gewebe und Strukturen unterschiedlich absorbiert.",
+              "",
+          },
+          {
+            bold: "Detektoren:",
+            other:
+              "sind gegenüber der Röntgenröhre im Gantry angeordnet. Sie erfassen die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Patiententisch:",
+            other:
+              "ist motorisiert und kann horizontal in den Gantry hinein- und herausgefahren werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation:",
+            other:
+              "besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung.",
+          },
+          {
+            bold: "Kontrastmittelinjektor:",
+            other:
+              "wird häufig verwendet, um Kontrastmittel intravenös zu verabreichen. Dies verbessert die Sichtbarkeit bestimmter Strukturen oder Pathologien im Körper.",
+          },
+          {
+            bold: "Steuerkonsole:",
+            other:
+              "ermöglicht dem Technologen, das CT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Kühlungssystem:",
+            other:
+              "ist notwendig, um die Röntgenröhre zu kühlen, da sie während der Erzeugung von Röntgenstrahlen viel Wärme produziert",
+          },
+          {
+            bold: "Multidetektor-CT (MDCT):",
+            other:
+              "Moderne CT-Geräte sind oft als Multidetektor-CT (MDCT) konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem:",
+            other:
+              "ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben",
           },
         ],
       },
