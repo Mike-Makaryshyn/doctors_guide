@@ -1888,4 +1888,735 @@ export const parentTabs = [
   },
   // end of parent tab 3
   // start of parent tab 4
+  {
+    id: 4,
+    title: "Ultraschall",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 39,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Ziel einer Ultraschalluntersuchung ist die visuelle Darstellung von inneren Strukturen des Körpers, um pathologische Veränderungen zu erkennen, diagnostische Einschätzungen zu treffen und therapeutische Entscheidungen zu unterstützen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Ultraschall wird in vielen medizinischen Fachgebieten eingesetzt, darunter Kardiologie, Gynäkologie, Radiologie und Notfallmedizin. Seine Relevanz liegt in der nicht-invasiven, schnellen und kosteneffizienten Diagnostik ohne Strahlenbelastung.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Ultraschall basiert auf dem Prinzip der Schallwellen, die von einem Schallkopf ausgesendet und von Gewebegrenzen reflektiert werden. Die reflektierten Schallwellen werden vom Schallkopf empfangen und in Bilder umgewandelt.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Wichtige technische Parameter sind die Frequenz des Schallkopfes, die Eindringtiefe und die Auflösung. Höhere Frequenzen bieten bessere Auflösung, haben jedoch eine geringere Eindringtiefe.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation von Ultraschallbildern erfordert Kenntnisse über die normale Anatomie und die typischen sonographischen Muster von Erkrankungen. Pathologische Befunde werden durch Veränderungen in Form, Struktur und Echogenität erkannt.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Beispiele für typische Befunde sind zystische Läsionen, die als echoarme (dunkle) Bereiche erscheinen, und solide Tumoren, die echoarm oder echoreich sein können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ultraschall ist eine sichere, schmerzfreie und wiederholbare Untersuchungsmethode ohne ionisierende Strahlung. Er ermöglicht die Echtzeit-Beobachtung und ist oft sofort verfügbar.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Bildqualität kann durch adipöses Gewebe oder Luft beeinträchtigt werden. Zudem ist die Untersuchung stark anwenderabhängig und erfordert Erfahrung und Schulung.",
+              },
+              {
+                bold_text: "Risiken::",
+                text: "Die Risiken sind minimal. Bei unsachgemäßer Anwendung kann es zu Überhitzung oder mechanischen Schäden im Gewebe kommen, jedoch sind solche Fälle äußerst selten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Ultraschall spielt eine zentrale Rolle in der Diagnostik von Erkrankungen wie Gallensteinen, Tumoren und Gefäßpathologien. Er wird auch in der interventionellen Radiologie, wie bei Biopsien und Drainagen, verwendet.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch seine Fähigkeit, schnelle und genaue Diagnosen zu liefern, trägt der Ultraschall wesentlich zur Planung und Anpassung der Therapie bei und verbessert das Management von Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternative bildgebende Verfahren umfassen Röntgen, Computertomographie (CT) und Magnetresonanztomographie (MRT). Diese Methoden bieten unterschiedliche Vorteile und sind je nach klinischer Fragestellung einzusetzen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungen fokussieren sich auf die Verbesserung der Bildqualität, die Entwicklung von Kontrastmitteln und die Anwendung von Ultraschall in der Bildfusion und der Therapie.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Einführung von Künstlicher Intelligenz zur Bildanalyse und die Erweiterung therapeutischer Anwendungen, wie die fokussierte Ultraschallchirurgie, umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Ultraschall ist eine unverzichtbare, vielseitige und sichere Diagnosetechnik, die in vielen medizinischen Disziplinen Anwendung findet.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Aufgrund seiner zahlreichen Vorteile und breiten Anwendbarkeit bleibt der Ultraschall ein Grundpfeiler der modernen medizinischen Diagnostik und Therapie.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 40,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklärung, dass die Ultraschalluntersuchung dazu dient, innere Strukturen des Körpers sichtbar zu machen, um krankhafte Veränderungen zu erkennen.",
+            third:
+              "Wir machen den Ultraschall, um Ihre Bauchorgane auf mögliche Veränderungen wie Entzündungen oder Tumore zu untersuchen.",
+            fourth:
+              "Der Ultraschall hilft uns, den Zustand Ihres Herzens zu beurteilen und mögliche Funktionsstörungen zu erkennen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreibung des Verfahrens: Auftragen von Gel auf die Haut, Bewegung des Schallkopfes über die Körperstelle, Erzeugung und Aufnahme von Bildern.",
+            third:
+              "Ich werde ein spezielles Gel auf Ihren Bauch auftragen und dann mit diesem Gerät über Ihre Haut fahren.",
+            fourth:
+              "Während der Untersuchung bewege ich den Schallkopf über Ihre Brust, um verschiedene Bilder Ihres Herzens zu machen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Hinweise zur Vorbereitung: eventuell nüchtern erscheinen, bestimmte Kleidungsstücke ablegen, spezifische Körperstellen freilegen",
+            third:
+              "Bitte erscheinen Sie nüchtern zur Untersuchung, das bedeutet, dass Sie mindestens sechs Stunden vorher nichts essen.",
+            fourth:
+              "Sie können Ihre normale Kleidung tragen, aber es wäre gut, wenn Sie einen lockeren Oberteil anziehen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Information über minimale Risiken: Möglichkeit von leichtem Unbehagen durch Druck des Schallkopfes, ansonsten keine bekannten Risiken.",
+            third:
+              "Der Ultraschall ist sehr sicher und verursacht keine Schmerzen. Sie könnten nur ein wenig Druck spüren.",
+            fourth:
+              "Es gibt keine bekannten Risiken bei dieser Untersuchung. Es könnte sich lediglich kalt anfühlen durch das Gel.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Vorteile des Ultraschalls: keine Strahlenbelastung, nicht-invasiv, schmerzfrei, schnelle und sofortige Ergebnisse, wiederholbar.",
+            third:
+              "Ein großer Vorteil ist, dass es keine Strahlung gibt, wie es bei Röntgenuntersuchungen der Fall ist.",
+            fourth:
+              "Der Ultraschall ist schmerzfrei und die Ergebnisse sind sofort verfügbar, sodass wir direkt darüber sprechen können.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Aufklärung über alternative Untersuchungsmethoden wie Röntgen, CT oder MRT, je nach spezifischer Fragestellung und medizinischer Indikation.",
+            third:
+              "Alternativ könnten wir ein CT machen, aber das würde Strahlung beinhalten.",
+            fourth:
+              "Eine andere Möglichkeit wäre eine MRT, aber das ist teurer und dauert länger.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläuterung, dass es wenige Kontraindikationen gibt, aber bei bestimmten Hauterkrankungen oder offenen Wunden der Schallkopf nicht angewendet wird.",
+            third:
+              "Wenn Sie eine offene Wunde an der zu untersuchenden Stelle haben, könnten wir den Ultraschall dort nicht anwenden.",
+            fourth:
+              "Bestimmte Hauterkrankungen könnten den Ultraschall beeinträchtigen, aber das ist sehr selten.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Besprechung möglicher Befunde: normale Ergebnisse, zystische oder solide Läsionen, Entzündungen, Tumoren oder andere pathologische Veränderungen.",
+            third:
+              "Ein mögliches Ergebnis könnte eine Zyste sein, die wir als dunklen Bereich auf dem Bild sehen.",
+            fourth:
+              "Wenn wir Entzündungen finden, sehen sie oft als helle, echoreiche Bereiche auf den Bildern aus.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonung der Notwendigkeit des informierten Einverständnisses vor der Untersuchung zur Sicherstellung des Verständnisses und der Zustimmung des Patienten.",
+            third:
+              "Es ist wichtig, dass Sie die Untersuchung und ihre Gründe verstehen und uns Ihre Zustimmung geben.",
+            fourth:
+              "Wir benötigen Ihre Zustimmung, bevor wir mit der Untersuchung beginnen können, um sicherzustellen, dass Sie einverstanden sind.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Aktives Einholen des Einverständnisses des Patienten durch mündliche Zustimmung oder Unterschrift auf einem Formular.",
+            third:
+              "Bitte unterschreiben Sie dieses Formular, um Ihr Einverständnis zu geben.",
+            fourth:
+              "Könnten Sie mir bitte mündlich bestätigen, dass Sie der Untersuchung zustimmen?",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Hinweise nach der Untersuchung: eventuelle Maßnahmen, die zu beachten sind, z.B. Nachsorge oder Verhaltensempfehlungen bei spezifischen Befunden.",
+            third:
+              "Nach der Untersuchung können Sie Ihre normalen Aktivitäten sofort wieder aufnehmen.",
+            fourth:
+              "Wenn wir etwas Auffälliges finden, werden wir sofort über die nächsten Schritte sprechen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Mitteilung, dass die Ergebnisse meist sofort besprochen werden können und bei Bedarf weitere diagnostische Schritte oder Behandlungen eingeleitet werden.",
+            third:
+              "Die Ergebnisse werden sofort verfügbar sein, und wir besprechen sie direkt im Anschluss.",
+            fourth:
+              "Sollten weitere Untersuchungen nötig sein, werden wir das nach Durchsicht der Ergebnisse sofort klären.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 41,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklärung der Ultraschalluntersuchung als nicht-invasives bildgebendes Verfahren, das Schallwellen nutzt, um Bilder von inneren Organen und Strukturen zu erzeugen.",
+            third:
+              "Ultraschall ist ein bildgebendes Verfahren, das hochfrequente Schallwellen verwendet, um innere Strukturen darzustellen.",
+            fourth:
+              "Wir verwenden Ultraschall, um detaillierte Bilder von Organen und Geweben zu erhalten, ohne Strahlung zu nutzen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Aufzählung der Einsatzgebiete, z.B. Untersuchung von Bauchorganen, Herz, Blutgefäßen, Schilddrüse, sowie in der Gynäkologie und Schwangerschaftsvorsorge.",
+            third:
+              "Mit Ultraschall können wir die Bauchorgane wie Leber, Gallenblase und Nieren untersuchen.",
+            fourth:
+              "Der Ultraschall ist besonders nützlich zur Beurteilung des Herzens, der Blutgefäße und der Schilddrüse.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreibung der möglichen Befunde wie zystische oder solide Läsionen, Entzündungen, Tumore, Gefäßanomalien oder normale Befunde, und deren Bedeutung für die Diagnose.",
+            third:
+              "Die Untersuchung zeigte eine zystische Läsion in der Niere, was auf eine einfache Nierenzyste hindeutet.",
+            fourth:
+              "Wir haben eine echoreiche Masse in der Leber gefunden, die weiter abgeklärt werden muss, um einen Tumor auszuschließen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Darstellung der klinischen Situationen, in denen Ultraschall indiziert ist, z.B. Verdacht auf Gallensteine, Abklärung von Bauchschmerzen, Herzinsuffizienz, Kontrolle von Schwangerschaftsverlauf.",
+            third:
+              "Ultraschall ist indiziert bei Verdacht auf Gallensteine, da er Steine und Entzündungen in der Gallenblase gut sichtbar macht.",
+            fourth:
+              "Bei unklaren Bauchschmerzen kann Ultraschall helfen, Ursachen wie Blinddarmentzündung oder Nierensteine zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnung der wenigen Kontraindikationen, wie offene Wunden oder schwere Hauterkrankungen an der Untersuchungsstelle, die die Durchführung erschweren oder unmöglich machen könnten.",
+            third:
+              "Offene Wunden im Untersuchungsbereich sind eine Kontraindikation für den Ultraschall, da sie die Bildgebung stören.",
+            fourth:
+              "Schwere Hautinfektionen können ebenfalls eine Kontraindikation darstellen, da sie die Anwendung des Schallkopfes erschweren.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Besprechung der Differenzialdiagnosen, die durch Ultraschall unterstützt werden können, z.B. Abgrenzung zwischen zystischen und soliden Tumoren, Entzündungen vs. Tumore, gutartig vs. bösartig.",
+            third:
+              "Ein Ultraschall kann helfen, eine gutartige Zyste von einem soliden Tumor in der Leber zu unterscheiden.",
+            fourth:
+              "Bei unklaren Bauchschmerzen können Differenzialdiagnosen wie Appendizitis, Divertikulitis oder Pankreatitis gestellt werden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklärung, wie die Ultraschallergebnisse in die Planung der weiteren Behandlung einfließen, z.B. chirurgische Eingriffe bei Tumoren, medikamentöse Therapie bei Entzündungen, engmaschige Kontrollen bei Schwangerschaftskomplikationen.",
+            third:
+              "Bei Bestätigung eines Gallensteins könnte eine Cholezystektomie geplant werden.",
+            fourth:
+              "Wenn eine Entzündung festgestellt wird, kann eine antibiotische Behandlung eingeleitet und der Verlauf per Ultraschall kontrolliert werden.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonung der Notwendigkeit der Zusammenarbeit mit anderen Fachrichtungen, wie Radiologen, Kardiologen, Gynäkologen, Chirurgen.",
+            third:
+              "Die enge Zusammenarbeit mit Radiologen ermöglicht eine genaue Interpretation und weiterführende Diagnostik.",
+            fourth:
+              "Bei Herzuntersuchungen arbeiten wir eng mit Kardiologen zusammen, um umfassende Behandlungspläne zu erstellen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Darstellung der Maßnahmen zur Sicherstellung der Qualität der Ultraschalluntersuchung, wie regelmäßige Wartung der Geräte, Schulung des Personals, standardisierte Protokolle und regelmäßige Überprüfungen der Untersuchungsqualität.",
+            third:
+              "Wir führen regelmäßig Schulungen für unser Personal durch, um die Qualität der Ultraschalluntersuchungen zu gewährleisten.",
+            fourth:
+              "Unsere Geräte werden regelmäßig gewartet und kalibriert, um die bestmögliche Bildqualität zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläuterung der Wichtigkeit einer gründlichen Dokumentation der Befunde, Speicherung der Bilder und Berichte im Patientenakt, sowie der Planung und Durchführung von Folgeuntersuchungen oder Überweisungen bei auffälligen Befunden.",
+            third:
+              "Alle Ultraschallergebnisse werden digital gespeichert und sind sofort im Patientenakt verfügbar.",
+            fourth:
+              "Bei auffälligen Befunden planen wir sofortige Folgeuntersuchungen oder Überweisungen an Spezialisten.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 42,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall :",
+            second:
+              "35-jährige Patientin ohne Beschwerden, kommt zur Routineuntersuchung des Abdomens.",
+            third:
+              "65-jährige Patientin mit bekanntem Brustkrebs, klagt über Oberbauchschmerzen und Gewichtsverlust.",
+            fourth:
+              "50-jähriger Patient mit wiederkehrenden rechtsseitigen Oberbauchschmerzen, besonders nach fettigen Mahlzeiten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung :",
+            second:
+              "Ultraschall des Abdomens zeigt normale Leber, Gallenblase, Bauchspeicheldrüse und Nieren ohne Auffälligkeiten.",
+            third:
+              "Ultraschall zeigt mehrere hypoechogene Läsionen in der Leber, die auf Metastasen hindeuten.",
+            fourth:
+              "Ultraschall zeigt echogene Strukturen in der Gallenblase mit dorsalem Schallschatten, typisch für Gallensteine.",
+          },
+          {
+            first: "Interpretation der Ergebnisse :",
+            second:
+              "Keine pathologischen Befunde; das Ultraschallergebnis unterstützt den Ausschluss abdominaler Erkrankungen.",
+            third:
+              "Der Befund deutet auf Lebermetastasen hin, was mit der Anamnese der Patientin übereinstimmt.",
+            fourth:
+              "Die echogenen Strukturen und der Schallschatten sind typische Befunde für Gallensteine und erklären die Symptome des Patienten.",
+          },
+          {
+            first: "Integration in die Patientenversorgung :",
+            second:
+              "Befund dient der Beruhigung der Patientin und bestätigt die Abwesenheit von pathologischen Veränderungen.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer systemischen Chemotherapie und eventuellen chirurgischen Eingriffs.",
+            fourth:
+              "Wichtig für die Planung einer möglichen Cholezystektomie und Ernährungsanpassungen zur Symptomkontrolle.",
+          },
+          {
+            first: "Diagnose :",
+            second:
+              "Bestätigung des gesunden Zustands des Abdomens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose von Lebermetastasen basierend auf Ultraschallbefunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Gallensteinen aufgrund der Ultraschallergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel :",
+            second:
+              "Homogene und normale echogene Strukturen aller abdominalen Organe.",
+            third:
+              "Ultraschallbilder zeigen mehrere unregelmäßige, hypoechogene Läsionen in der Leber.",
+            fourth:
+              "Ultraschallbilder zeigen echogene Steine in der Gallenblase mit dorsalem Schallschatten.",
+          },
+          {
+            first: "Fallabschluss :",
+            second:
+              "Wir empfehlen, dass die Patientin regelmäßige Routineuntersuchungen beibehält, um die Gesundheit zu überwachen.",
+            third:
+              "Wir empfehlen, dass die Patientin sich einer systemischen Chemotherapie unterzieht und eine Konsultation bei einem Chirurgen einholt.",
+            fourth:
+              "Wir empfehlen, dass der Patient eine Cholezystektomie in Erwägung zieht und eine Diätanpassung zur Linderung der Symptome durchführt.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 43,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
+        text_list: [
+          {
+            bold: "Aufbau und Funktionsweise eines Ultraschallgeräts :",
+            other:
+              "Ein Ultraschallgerät besteht aus mehreren wesentlichen Komponenten, die zusammenarbeiten, um Ultraschallbilder zu erzeugen. Die wichtigsten Bestandteile sind der Schallkopf (Transducer), der Pulsgenerator, der Empfänger, der Prozessor und das Display.",
+          },
+
+          {
+            bold: "Schallkopf (Transducer) :",
+            other:
+              "Der Schallkopf ist das zentrale Element des Ultraschallgeräts. Er enthält Piezoelektrische Kristalle, die sowohl Ultraschallwellen erzeugen als auch die von Geweben reflektierten Wellen empfangen können. Diese Kristalle verändern ihre Form, wenn eine elektrische Spannung angelegt wird, wodurch Schallwellen erzeugt werden. Wenn diese Schallwellen auf Gewebe treffen, werden sie teilweise reflektiert und kehren zum Schallkopf zurück. Diese reflektierten Wellen werden dann von den Kristallen wieder in elektrische Signale umgewandelt.",
+          },
+
+          {
+            bold: "Pulsgenerator :",
+            other:
+              "Der Pulsgenerator ist für die Steuerung der elektrischen Spannung verantwortlich, die an die Piezoelektrischen Kristalle im Schallkopf angelegt wird. Er bestimmt die Frequenz und Dauer der erzeugten Ultraschallpulse. Typische Frequenzen für medizinische Anwendungen liegen zwischen 2 und 15 MHz.",
+          },
+
+          {
+            bold: "Empfänger :",
+            other:
+              "Der Empfänger empfängt die vom Gewebe reflektierten Ultraschallwellen und wandelt sie in elektrische Signale um. Diese Signale sind in der Regel sehr schwach und müssen verstärkt werden, um weiterverarbeitet werden zu können.",
+          },
+
+          {
+            bold: "Prozessor :",
+            other:
+              "Der Prozessor analysiert die verstärkten Signale und wandelt sie in Bilddaten um. Dabei wird die Zeit gemessen, die die Ultraschallwellen benötigen, um von der Gewebestruktur zurückzukehren, und die Intensität der reflektierten Wellen ausgewertet. Diese Informationen werden genutzt, um ein zweidimensionales Bild der inneren Strukturen zu erzeugen.",
+          },
+
+          {
+            bold: "Display :",
+            other:
+              "Das Display zeigt die vom Prozessor erstellten Bilder in Echtzeit an. Moderne Ultraschallgeräte verfügen über hochauflösende Monitore, die detaillierte und klare Bilder der untersuchten Gewebe und Organe darstellen können.",
+          },
+
+          { bold: "Funktionsweise des Ultraschallgeräts :", other: "" },
+
+          {
+            bold: "Erzeugung und Empfang von Ultraschallwellen :",
+            other:
+              "Wenn eine elektrische Spannung an die Piezoelektrischen Kristalle im Schallkopf angelegt wird, erzeugen diese Ultraschallwellen, die in den Körper des Patienten eindringen. Die Schallwellen werden an den Grenzen unterschiedlicher Gewebearten reflektiert und kehren zum Schallkopf zurück. Diese reflektierten Wellen erzeugen in den Kristallen elektrische Signale, die zur weiteren Verarbeitung an den Empfänger weitergeleitet werden.",
+          },
+
+          {
+            bold: "Bildentstehung :",
+            other:
+              "Die reflektierten Ultraschallwellen werden im Prozessor analysiert, wobei die Zeit, die die Wellen benötigen, um zurückzukehren, und ihre Intensität gemessen werden. Diese Daten werden verwendet, um ein Bild der inneren Strukturen zu erstellen. Unterschiedliche Gewebearten reflektieren die Schallwellen unterschiedlich stark, was zu Variationen in der Helligkeit und im Kontrast des Ultraschallbildes führt.",
+          },
+
+          {
+            bold: "Anwendungen des Ultraschalls :",
+            other:
+              "Ultraschall wird in verschiedenen medizinischen Bereichen eingesetzt, darunter:",
+          },
+
+          {
+            bold: "Diagnostik :",
+            other:
+              "Zur Untersuchung von Organen wie Herz, Leber, Nieren und Schilddrüse.",
+          },
+
+          {
+            bold: "Schwangerschaftsvorsorge :",
+            other: "Zur Überwachung der Entwicklung des Fötus.",
+          },
+
+          {
+            bold: "Gefäßuntersuchungen :",
+            other:
+              "Zur Beurteilung des Blutflusses und zur Erkennung von Gefäßanomalien.",
+          },
+
+          {
+            bold: "Interventionelle Verfahren :",
+            other:
+              "Zur Unterstützung bei Biopsien und minimalinvasiven Eingriffen.",
+          },
+
+          {
+            bold: "Vorteile und Anwendungsbereiche :",
+            other:
+              "Ultraschall ist eine nicht-invasive und sichere Methode zur Bildgebung, die keine ionisierende Strahlung verwendet. Er bietet Echtzeitbilder, die für die Diagnose und Überwachung von Erkrankungen sowie für therapeutische Eingriffe von großem Nutzen sind. Die Technik wird häufig aufgrund ihrer Vielseitigkeit und ihrer Fähigkeit, schnelle und genaue Diagnosen zu liefern, bevorzugt.",
+          },
+
+          {
+            bold: "Fazit :",
+            other:
+              "Ultraschallgeräte nutzen die physikalischen Prinzipien der Schallwellen, um detaillierte Bilder der inneren Strukturen des Körpers zu erstellen. Durch die Kombination von Piezoelektrischen Kristallen, fortschrittlicher Signalverarbeitung und hochauflösenden Displays ermöglicht der Ultraschall eine breite Palette medizinischer Anwendungen, von der Diagnostik bis zur interventionellen Therapie.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 44,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Ultraschall(Sonographie), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text_list: [
+          {
+            bold: "Ultraschall (Sonographie) :",
+            other:
+              "Ein bildgebendes Verfahren, das hochfrequente Schallwellen verwendet, um Bilder von inneren Organen und Strukturen zu erzeugen.",
+          },
+          {
+            bold: "Schallkopf (Transducer) :",
+            other:
+              "Das Gerät, das Schallwellen aussendet und die reflektierten Wellen empfängt.",
+          },
+          {
+            bold: "Echogenität :",
+            other:
+              "Die Fähigkeit von Geweben, Schallwellen zu reflektieren; unterschiedliche Gewebe haben unterschiedliche Echogenitäten (z.B. hypoechogen, hyperechogen, isoechogen).",
+          },
+          {
+            bold: "Hypoechogen :",
+            other:
+              "Gewebe, das weniger Schallwellen reflektiert und auf dem Ultraschallbild dunkler erscheint.",
+          },
+          {
+            bold: "Hyperechogen :",
+            other:
+              "Gewebe, das mehr Schallwellen reflektiert und auf dem Ultraschallbild heller erscheint.",
+          },
+          {
+            bold: "Isoechogen :",
+            other:
+              "Gewebe, das ähnlich wie das umgebende Gewebe Schallwellen reflektiert und auf dem Ultraschallbild eine ähnliche Helligkeit zeigt.",
+          },
+          {
+            bold: "Doppler-Ultraschall :",
+            other:
+              "Eine spezielle Form des Ultraschalls, die zur Messung der Blutflussgeschwindigkeit und -richtung verwendet wird.",
+          },
+          {
+            bold: "B-Bild (Brightness Mode) :",
+            other:
+              "Der Standardmodus im Ultraschall, der zweidimensionale Schnittbilder des Gewebes erzeugt.",
+          },
+          {
+            bold: "M-Mode (Motion Mode) :",
+            other:
+              "Ein Modus, der die Bewegung von Strukturen, wie Herzklappen, in Echtzeit darstellt.",
+          },
+          {
+            bold: "Farbdoppler :",
+            other:
+              "Ein Verfahren, das die Blutflussrichtung und -geschwindigkeit in Farbe darstellt.",
+          },
+          {
+            bold: "Pulswerter-Doppler :",
+            other:
+              "Ein Verfahren zur Messung der Geschwindigkeit des Blutflusses in einem bestimmten Gefäßsegment.",
+          },
+          {
+            bold: "Continuous-Wave-Doppler :",
+            other:
+              "Ein Verfahren zur Messung hoher Blutflussgeschwindigkeiten ohne Geschwindigkeitsbegrenzung.",
+          },
+          {
+            bold: "Artefakte :",
+            other:
+              "Störsignale oder Bildfehler, die das Ultraschallbild beeinflussen können (z.B. Spiegelartefakte, Nachhallartefakte).",
+          },
+          {
+            bold: "Kontrastmittelsonographie :",
+            other:
+              "Eine Ultraschalluntersuchung, bei der Kontrastmittel verwendet werden, um die Darstellung bestimmter Strukturen oder Blutgefäße zu verbessern.",
+          },
+          {
+            bold: "Schallgel :",
+            other:
+              "Ein spezielles Gel, das zwischen Schallkopf und Haut aufgetragen wird, um die Schallübertragung zu verbessern.",
+          },
+          {
+            bold: "Frequenz :",
+            other:
+              "Die Anzahl der Schallwellen pro Sekunde, gemessen in Hertz (Hz); beeinflusst die Eindringtiefe und Auflösung des Ultraschallbildes.",
+          },
+          {
+            bold: "Auflösung :",
+            other:
+              "Die Fähigkeit, kleine Details und Strukturen im Ultraschallbild zu unterscheiden.",
+          },
+          {
+            bold: "Eindringtiefe :",
+            other:
+              "Die maximale Tiefe, in die die Schallwellen eindringen können; abhängig von der Frequenz des Schallkopfes.",
+          },
+          {
+            bold: "Duplex-Ultraschall :",
+            other:
+              "Eine Kombination aus B-Bild und Doppler-Ultraschall, um gleichzeitig Strukturen und Blutfluss darzustellen.",
+          },
+          {
+            bold: "Anisotropie :",
+            other:
+              "Ein Phänomen, bei dem die Echogenität eines Gewebes je nach Schallkopf-Winkel variiert, oft in Muskeln und Sehnen beobachtet.",
+          },
+          {
+            bold: "Cystisch :",
+            other:
+              "Eine Flüssigkeitsansammlung, die auf dem Ultraschallbild als echoarme (dunkle) Struktur erscheint.",
+          },
+          {
+            bold: "Solide :",
+            other:
+              "Eine Gewebeansammlung, die auf dem Ultraschallbild als echoreiche (helle) Struktur erscheint.",
+          },
+          {
+            bold: "Fokussierung :",
+            other:
+              "Die Einstellung des Schallkopfes, um die Bildauflösung in einem bestimmten Tiefenbereich zu optimieren.",
+          },
+          {
+            bold: "Gain :",
+            other:
+              "Die Verstärkung der empfangenen Schallwellen, um die Helligkeit des Ultraschallbildes zu steuern.",
+          },
+          {
+            bold: "Time Gain Compensation (TGC) :",
+            other:
+              "Eine Einstellung, die die Verstärkung der Schallwellen in verschiedenen Tiefenbereichen anpasst, um ein gleichmäßiges Bild zu erzeugen.",
+          },
+          {
+            bold: "Bildrekonstruktion :",
+            other:
+              "Der Prozess der Umwandlung der empfangenen Schallwellen in sichtbare Bilder.",
+          },
+
+          {
+            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der Ulraschall wichtig ist und können in einer Prüfungssituation nützlich sein.",
+          },
+        ],
+      },
+      {
+        id: 45,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "Stiftung Gesundheitswissen :",
+            other:
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+          },
+          {
+            bold: "NetDoktor :",
+            other:
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links](https://www.netdoktor.de)",
+          },
+          {
+            bold: "Gesundheitsinformation.de :",
+            other:
+              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links](https://www.gesundheitsinformation.de)",
+          },
+          {
+            bold: "BARMER :",
+            other:
+              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links](https://www.barmer.de)",
+          },
+          {
+            bold: "PraktischArzt :",
+            other:
+              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links](https://www.praktischarzt.de)",
+          },
+          {
+            bold: "Krebsinformationsdienst :",
+            other:
+              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links](https://www.krebsinformationsdienst.de)",
+          },
+          {
+            bold: "DokCheck :",
+            other:
+              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links](https://www.doccheck.com)",
+          },
+          {
+            bold: "AMBOSS :",
+            other:
+              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links](https://www.amboss.com/de)",
+          },
+        ],
+      },
+      {
+        id: 46,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1Mswe_EelReCeS3bTemt6XtZv5RHMjLqg/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 4
+  // start of parent tab 5
 ];
