@@ -615,7 +615,7 @@ export const parentTabs = [
       },
       {
         id: 17,
-        title: "Матеріали для самостійного вивчення",
+        title: "Links",
         text: "",
         text_list: [
           {
