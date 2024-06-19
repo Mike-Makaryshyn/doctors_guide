@@ -1222,7 +1222,7 @@ export const parentTabs = [
       },
       {
         id: 27,
-        title: "Матеріали для самостійного вивчення",
+        title: "Links",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
           {
@@ -1701,7 +1701,7 @@ export const parentTabs = [
       // 5tab
       {
         id: 35,
-        title: "tab 5",
+        title: "Gerätbeschreibung",
         img: child_tab_img_2,
         text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
         text_list: [
