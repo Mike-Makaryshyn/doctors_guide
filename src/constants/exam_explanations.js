@@ -1510,74 +1510,191 @@ export const parentTabs = [
       // 3tab
       {
         id: 33,
-        title: "3 tab",
+        title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
-          { name: "second", visualText: "lala" },
+          { name: "second", visualText: "Was man machen soll" },
           {
             name: "third",
-            visualText: "mwsad",
+            visualText: "Beispiel 1: Was man sagen kann",
           },
           {
             name: "fourth",
-            visualText: "dadfaw",
+            visualText: "Beispiel 2: Was man sagen kann",
           },
         ],
         tableRows: [
           {
-            first: "your_text",
+            first: "Was ist eigentlich die angegebene Untersuchung",
             second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+              "Erklären, dass es sich bei der Röntgenuntersuchung um ein bildgebendes Verfahren handelt, das mithilfe von Röntgenstrahlen detaillierte Bilder von Knochen und Organen erstellt.",
             third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+              "Die Röntgenuntersuchung ermöglicht es uns, die inneren Strukturen des Körpers sichtbar zu machen, insbesondere Knochen und einige Organe.",
             fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+              "Röntgenbilder werden erzeugt, indem Röntgenstrahlen durch den Körper geschickt und auf einem Detektor aufgezeichnet werden, um diagnostische Informationen zu gewinnen.",
           },
           {
-            first: "Ablauf",
+            first: "Was können wir damit untersuchen",
             second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+              "Aufzeigen, dass Röntgenuntersuchungen zur Diagnose von Knochenbrüchen, Infektionen, Tumoren, Lungenerkrankungen und Herzvergrößerungen eingesetzt werden können.",
             third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+              "Mit Röntgen können wir Frakturen, Infektionen in der Lunge oder Abnormalitäten im Brustkorb diagnostizieren.",
             fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+              "Wir können Tumore im Knochen oder Weichteilgewebe, entzündliche Prozesse oder strukturelle Anomalien nachweisen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben, dass die Ergebnisse auf Frakturen, pathologische Veränderungen wie Tumore oder Infektionen und anatomische Anomalien hinweisen können.",
+            third:
+              "Die Röntgenbilder zeigen eine klare Fraktur im distalen Radius.",
+            fourth:
+              "Es gibt Hinweise auf eine konsolidierte Lungenentzündung im rechten unteren Lungenfeld.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären, dass Indikationen für eine Röntgenuntersuchung unter anderem Trauma, anhaltende Schmerzen, Verdacht auf Frakturen, Infektionen oder Tumore sind.",
+            third:
+              "Indikationen umfassen ein Trauma des Handgelenks mit Verdacht auf Fraktur.",
+            fourth:
+              "Bei Verdacht auf Pneumonie bei einem Patienten mit Fieber und Husten ist eine Röntgenuntersuchung indiziert.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Darlegen, dass Kontraindikationen Schwangerschaft (außer in Notfällen) und bestimmte metallische Implantate sind, die das Bild stören oder zu Schäden führen könnten.",
+            third:
+              "Bei schwangeren Patientinnen sollten Röntgenuntersuchungen vermieden werden, es sei denn, es ist dringend notwendig.",
+            fourth:
+              "Patienten mit Herzschrittmachern oder bestimmten metallischen Implantaten sollten je nach Lage und Art des Implantats individuell beurteilt werden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Aufzeigen, dass Röntgenbilder helfen können, verschiedene Differenzialdiagnosen wie Pneumonie vs. Tuberkulose oder benigne vs. maligne Tumore zu unterscheiden.",
+            third:
+              "Die Röntgenbilder helfen uns, zwischen einer bakteriellen Pneumonie und einer Tuberkulose zu differenzieren.",
+            fourth:
+              "Es ermöglicht uns, eine gutartige Knochenschwellung von einem malignen Knochentumor zu unterscheiden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen, dass die Röntgenergebnisse zur Erstellung eines Behandlungsplans beitragen, wie z.B. operative Eingriffe bei Frakturen oder medikamentöse Therapie bei Infektionen.",
+            third:
+              "Aufgrund der Fraktur im Röntgenbild planen wir eine operative Fixierung des Knochens.",
+            fourth:
+              "Bei nachgewiesener Lungenentzündung beginnen wir mit einer antibiotischen Therapie basierend auf den Röntgenbefunden.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erklären, dass die Zusammenarbeit mit Radiologen, Orthopäden und anderen Fachärzten notwendig ist, um die Ergebnisse zu interpretieren und den Behandlungsplan zu optimieren.",
+            third:
+              "Wir werden den Radiologen konsultieren, um die genaue Ausdehnung der Fraktur zu besprechen und den optimalen Behandlungsansatz zu bestimmen.",
+            fourth:
+              "Die enge Zusammenarbeit mit dem Kardiologen ist notwendig, um die Herzvergrößerung im Röntgenbild weiter zu bewerten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Betonen, dass Qualitätsmanagementprozesse sicherstellen, dass die Röntgenaufnahmen korrekt durchgeführt und interpretiert werden, um optimale Patientenergebnisse zu gewährleisten.",
+            third:
+              "Durch regelmäßige Kalibrierung und Wartung der Röntgengeräte stellen wir die Bildqualität sicher.",
+            fourth:
+              "Fortlaufende Schulungen für das Personal sorgen dafür, dass die Aufnahmen nach den neuesten Standards durchgeführt werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären, dass alle Untersuchungsergebnisse und Maßnahmen dokumentiert werden müssen und eine kontinuierliche Nachverfolgung des Patienten notwendig ist, um den Behandlungserfolg zu überwachen.",
+            third:
+              "Die Ergebnisse der Röntgenuntersuchung werden in der Patientenakte dokumentiert und regelmäßig überprüft, um den Heilungsfortschritt zu überwachen.",
+            fourth:
+              "Eine Nachkontrolle in zwei Wochen wird angesetzt, um den Heilungsverlauf des Knochenbruchs zu beurteilen.",
           },
         ],
       },
       // 4tab
       {
         id: 34,
-        title: "4 tab",
+        title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
-          { name: "second", visualText: "lala" },
+          { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "mwsad",
+            visualText: "Erster Pathologischer Befund (z.B. Lungentumor)",
           },
           {
             name: "fourth",
-            visualText: "dadfaw",
+            visualText: "Zweiter Pathologischer Befund (z.B. Lungenembolie)",
           },
         ],
         tableRows: [
           {
-            first: "Ziel der Untersuchung",
+            first: "Einführung in den klinischen Fall",
             second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
             third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+              "60-jähriger Patient mit chronischem Husten und Gewichtsverlust. Vorgeschichte von Rauchen.",
             fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+              "45-jährige Patientin mit Fieber, Husten und Atembeschwerden. Keine signifikante Vorgeschichte.",
           },
           {
-            first: "Ablauf",
+            first: "Ergebnisse der Untersuchung",
             second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+              "Röntgenbild der Lunge zeigt klare Lungenfelder ohne Anzeichen pathologischer Veränderungen.",
             third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+              "Röntgenbild zeigt eine unscharf begrenzte, lobäre Verschattung im rechten oberen Lungenlappen.",
             fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+              "Röntgenbild zeigt diffuse, inhomogene Verschattungen in beiden unteren Lungenfeldern.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Röntgenergebnis unterstützt den Ausschluss pulmonaler Erkrankungen.",
+            third:
+              "Der Befund deutet auf ein Bronchialkarzinom hin. Die Lokalisation und das Erscheinungsbild sind verdächtig für einen malignen Prozess.",
+            fourth:
+              "Die Verteilung und das Erscheinungsbild der Verschattungen sind typisch für eine bakterielle Pneumonie.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer Biopsie und weiterer onkologischer Abklärung.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer antibiotischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Lunge. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Bronchialkarzinoms basierend auf Röntgenbefunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer bakteriellen Pneumonie aufgrund der Röntgenergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmietel",
+            second:
+              "Homogene Lungenfelder ohne Auffälligkeiten in allen Bereichen.",
+            third:
+              "Röntgenbild zeigt eine unscharf begrenzte Verschattung im rechten oberen Lungenlappen.",
+            fourth:
+              "Röntgenbild zeigt inhomogene Verschattungen in beiden unteren Lungenfeldern.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen dem Patienten, seinen gesunden Lebensstil beizubehalten und regelmäßige Routineuntersuchungen durchzuführen.",
+            third:
+              "Wir empfehlen, den Patienten zur weiteren onkologischen Abklärung und Behandlung an einen Spezialisten zu überweisen. Der Patient sollte das Rauchen aufgeben und einen gesunden Lebensstil pflegen.",
+            fourth:
+              "Wir empfehlen eine vollständige antibiotische Therapie und eine Nachkontrolle in zwei Wochen. Der Patient sollte viel Flüssigkeit zu sich nehmen und sich ausreichend erholen.",
           },
         ],
       },
@@ -1604,128 +1721,160 @@ export const parentTabs = [
       {
         id: 16,
         title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Röntgen, ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
           {
-            bold: "Computertomographie (CT):",
+            bold: "Röntgenstrahlen :",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Elektromagnetische Strahlung, die zur Bildgebung von Knochen und Geweben verwendet wird.",
           },
           {
-            bold: "Gantry:",
+            bold: "Röntgenaufnahme :",
+            other: "Das erzeugte Bild einer Röntgenuntersuchung.",
+          },
+          {
+            bold: "Radiologe :",
             other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
+              "Arzt, der auf die Interpretation von Röntgenbildern spezialisiert ist.",
           },
           {
-            bold: "Röntgentomographie:",
-            other: "Ein anderer Begriff für CT.",
+            bold: "Röntgenröhre :",
+            other: "Gerät, das Röntgenstrahlen erzeugt.",
           },
           {
-            bold: "Röntgenstrahlen:",
+            bold: "Detektor :",
             other:
-              "Die Strahlung, die zur Erstellung der Bilder verwendet wird.",
-          },
-          {
-            bold: "Gantry:",
-            other:
-              "Der Teil des CT-Scanners, der die Röntgenröhre und die Detektoren enthält und den Pa?enten umgibt.",
-          },
-
-          {
-            bold: "Querschnittsbilder:",
-            other: "Die durch die CT erzeugten Schnittbilder des Körpers.",
+              "Gerät, das die durch den Körper gehenden Röntgenstrahlen aufzeichnet.",
           },
           {
             bold: "Kontrastmittel :",
             other:
-              "Substanzen, die intravenös verabreicht werden, um die Unterschiede zwischen Geweben zu verstärken.",
+              "Substanz, die die Sichtbarkeit bestimmter Strukturen im Röntgenbild erhöht.",
           },
           {
-            bold: "Spikulierung :",
+            bold: "Absorption :",
             other:
-              "Ein Zeichen, das häufig bei malignen Tumoren auf CT-Bildern zu sehen ist.",
+              "Aufnahme von Röntgenstrahlen durch Gewebe, was zur Bildentstehung beiträgt.",
           },
           {
-            bold: "Pleuraeinziehung :",
+            bold: "Graustufen :",
             other:
-              "Ein Befund, der auf eine Erkrankung wie ein Tumor hinweisen kann.",
+              "Unterschiedliche Schattierungen auf dem Röntgenbild, die verschiedene Gewebedichten darstellen.",
+          },
+          {
+            bold: "Dosis :",
+            other: "Menge der Röntgenstrahlen, die auf den Körper einwirkt.",
           },
           {
             bold: "Strahlenbelastung :",
             other:
-              "Die Menge der Röntgenstrahlen, der ein Patient während der CT ausgesetzt ist.",
+              "Potenzielles Risiko durch die Exposition gegenüber Röntgenstrahlen.",
           },
           {
-            bold: "Bildauflösung :",
-            other: "Die Detailgenauigkeit der CT-Bilder.",
-          },
-          {
-            bold: "Volumenrekonstruktion :",
+            bold: "Indikation :",
             other:
-              "Der Prozess der Erstellung dreidimensionaler Bilder aus den Querschnittsbildern.",
+              "Medizinischer Grund für die Durchführung einer Röntgenuntersuchung.",
           },
           {
-            bold: "Multidetektor-CT (MDCT):",
-            other: "Eine fortschrittliche Form der CT mit mehreren Detektoren.",
-          },
-          {
-            bold: "Hounsfield-Einheiten (HU):",
-            other: "Ein Maß für die Dichte von Geweben im CT-Bild.",
-          },
-          {
-            bold: "Füllungsdefekt :",
-            other: "Ein Bereich, der auf eine Lungenembolie hinweisen kann.",
-          },
-          {
-            bold: "Artefakte :",
+            bold: "Kontraindikation :",
             other:
-              "Bildfehler, die durch verschiedene Faktoren wie Bewegung oder Metallimplantate verursacht werden.",
+              "Bedingung, die gegen die Durchführung einer Röntgenuntersuchung spricht.",
           },
           {
-            bold: "Strahlenhärtung :",
+            bold: "Fraktur :",
+            other: "Knochenbruch, oft auf Röntgenbildern sichtbar.",
+          },
+          {
+            bold: "Tumor :",
             other:
-              "Ein Effekt, der durch den Unterschied in der Absorption von Röntgenstrahlen entsteht.",
+              "Abnorme Gewebemasse, die auf Röntgenbildern erkannt werden kann.",
           },
           {
-            bold: "Spiral-CT:",
+            bold: "Pneumonie :",
             other:
-              "Ein Verfahren, bei dem der Patient kontinuierlich durch den CT-Scanner bewegt wird.",
+              "Lungenentzündung, die auf Röntgenbildern charakteristische Verschattungen zeigt.",
           },
           {
-            bold: "Low-Dose-CT:",
-            other: "Eine CT-Untersuchung mit reduzierter Strahlenbelastung.",
-          },
-          {
-            bold: "Bildrekonstruktion:",
+            bold: "Lobärverschattung :",
             other:
-              "Der Prozess der Umwandlung von Rohdaten in sichtbare Bilder.",
+              "Abnorme Verdichtung in einem Lungenlappen, typisch für bestimmte Pathologien.",
           },
           {
-            bold: "Interdisziplinäre Zusammenarbeit :",
+            bold: "Demyelinisierung :",
             other:
-              "Die Zusammenarbeit zwischen verschiedenen Fachbereichen bei der Interpretation der CT-Bilder.",
+              "Verlust der Myelinscheide um Nervenfasern, sichtbar in speziellen bildgebenden Verfahren.",
           },
           {
-            bold: "Sicherheitsprotokolle:",
+            bold: "Periventrikulär :",
             other:
-              "Richtlinien zum Schutz von Patienten und Personal vor der Strahlenbelastung.",
+              "Bereich um die Ventrikel des Gehirns, oft bei neurologischen Untersuchungen erwähnt.",
+          },
+          {
+            bold: "Routinekontrolle :",
+            other:
+              "Regelmäßige Untersuchung zur Überprüfung des Gesundheitszustandes ohne spezifischen Verdacht.",
+          },
+          {
+            bold: "Hyperintens :",
+            other:
+              "Erhöhte Signalintensität in bildgebenden Verfahren, oft Hinweis auf bestimmte Pathologien.",
+          },
+          {
+            bold: "Differenzialdiagnose :",
+            other:
+              "Unterscheidung zwischen zwei oder mehr Krankheitsbildern mit ähnlichen Symptomen.",
+          },
+          {
+            bold: "Nachverfolgung :",
+            other:
+              "Kontinuierliche Überwachung des Patienten nach einer diagnostischen oder therapeutischen Maßnahme.",
+          },
+          {
+            bold: "Einverständniserklärung :",
+            other:
+              "Schriftliche Zustimmung des Patienten zur Durchführung einer medizinischen Maßnahme.",
           },
 
           {
-            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der CT wichtig ist und können in einer Prüfungssituation nützlich sein.",
+            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der Röntgen wichtig ist und können in einer Prüfungssituation nützlich sein.",
           },
         ],
       },
       // 7tab
       {
         id: 37,
-        title: "Матеріали для самостійного вивчення",
+        title: "Links",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
           {
-            bold: "Computertomographie (CT):",
+            bold: "Stiftung Gesundheitswissen",
             other:
-              "Bildgebendes Verfahren, das Röntgenstrahlen verwendet, um detaillierte QuerschniQsbilder des Körpers zu erstellen.",
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Röntgenuntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+          },
+          {
+            bold: "NetDoktor",
+            other:
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Röntgenuntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Röntgenverfahren wie Mammografie und Angiografie beschrieben. [Links](https://www.netdoktor.de)",
+          },
+          {
+            bold: "Lifeline",
+            other:
+              "Lifeline erklärt detailliert die Risiken und Vorteile von Röntgenuntersuchungen und beschreibt den Ablauf der Untersuchung einschließlich der Vorbereitung und der Nutzung von Kontrastmitteln. [Links](https://www.lifeline.de)",
+          },
+          {
+            bold: "Medpertise",
+            other:
+              "Diese Webseite bietet Informationen zu den Anwendungsgebieten und dem Ablauf von Röntgenuntersuchungen. Es wird auch auf die möglichen Komplikationen und Alternativen zu Röntgen eingegangen. [Links](https://www.medpertise.de)",
+          },
+          {
+            bold: "praktischArzt",
+            other:
+              "Hier findest du Informationen über den Ablauf von Röntgenuntersuchungen, einschließlich Vorbereitung und Durchführung, sowie Anwendungsbereiche wie das Röntgen der Lunge und der Hand. [Links](https://www.praktischarzt.de)",
+          },
+          {
+            bold: "Medizinio",
+            other:
+              "Diese Seite informiert über die Strahlenbelastung bei Röntgenuntersuchungen, Risiken für bestimmte Patientengruppen und den Einsatz von Röntgen in der Schwangerschaft. [Links](https://www.medizinio.de)",
           },
         ],
       },
@@ -1733,7 +1882,7 @@ export const parentTabs = [
       {
         id: 38,
         title: "PDF",
-        link: "https://clickdimensions.com/links/TestPDFfile.pdf",
+        link: "https://drive.google.com/file/d/1agdYrVUppxEZly2cLl4a2-o6T5Sgv9e4/view?usp=share_link",
       },
     ],
   },
