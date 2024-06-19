@@ -1268,7 +1268,7 @@ export const parentTabs = [
   // start of parent tab: 3
   {
     id: 3,
-    title: "Next",
+    title: "Röntgen",
     checked: false,
     childTabs: [
       // 1tab
@@ -1277,28 +1277,106 @@ export const parentTabs = [
         title: "Einleitung",
         list: [
           {
-            title: "Einleitung:",
+            title: "Einleitung",
             items: [
               {
                 bold_text: "Ziel und Kontext:",
-                text: "Die CT ist ein wesentliches bildgebendes Verfahren in der deutschen Medizinlandscha9. Sie wird für eine Vielzahl von diagnos?schen und therapeu?schen Zwecken eingesetzt.",
+                text: "Das Ziel der Röntgenuntersuchung ist es, detaillierte Bilder von Strukturen innerhalb des Körpers zu erstellen, um Diagnose und Behandlung zu unterstützen. Diese Bilder ermöglichen es Ärzten, Knochenbrüche, Tumore, Infektionen und andere Anomalien zu identifizieren.",
               },
               {
                 bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die CT findet Anwendung in der Neurologie, Onkologie, Kardiologie und vielen weiteren Fachbereichen. Sie ist unerlässlich für die schnelle und genaue Diagnos?k.",
+                text: "Röntgenstrahlen werden in verschiedenen medizinischen Bereichen eingesetzt, darunter Orthopädie, Kardiologie und Onkologie. Sie sind besonders nützlich für die Untersuchung von Knochen und Gelenken, der Lunge und des Brustkorbs.",
               },
             ],
           },
           {
-            title: "Grundprinzipien:",
+            title: "Grundprinzipien",
             items: [
               {
-                bold_text: "TheoreAsche Grundlagen:",
-                text: "Die CT nutzt Röntgenstrahlen, um detaillierte QuerschniQsbilder des Körpers zu erzeugen. Ein Computer verarbeitet die Daten, um ein dreidimensionales Bild zu erstellen.",
+                bold_text: "Theoretische Grundlagen:",
+                text: "Röntgenstrahlen sind eine Form elektromagnetischer Strahlung mit einer hohen Energie, die durch den Körper dringt. Unterschiedliche Gewebearten absorbieren diese Strahlen unterschiedlich stark, wodurch ein Kontrast auf dem Röntgenbild entsteht.",
               },
               {
                 bold_text: "Technische Aspekte:",
-                text: "Moderne CT-Scanner verwenden Spiral- oder MehrschichQechniken, um hochauflösende Bilder zu erzeugen. Die Untersuchung ist meist schnell und schmerzfrei.",
+                text: "Ein Röntgengerät besteht aus einer Röntgenröhre, die Strahlen erzeugt, und einem Detektor, der diese Strahlen aufzeichnet. Der Patient wird zwischen der Röhre und dem Detektor positioniert, und die Strahlen werden durch den Körper auf den Detektor gelenkt.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der Röntgenbilder erfordert Kenntnisse über normale anatomische Strukturen und pathologische Veränderungen. Ärzte müssen in der Lage sein, subtile Unterschiede in den Graustufen zu erkennen und diese korrekt zu interpretieren.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen Knochenbrüche, Arthritis, Lungenerkrankungen wie Pneumonie oder Tuberkulose und Herzvergrößerungen. Jede dieser Erkrankungen hat spezifische Merkmale, die auf dem Röntgenbild erkennbar sind.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Röntgenuntersuchungen sind schnell, nicht-invasiv und weit verbreitet. Sie bieten eine klare Darstellung von Knochen und bestimmten Weichgewebestrukturen, was die Diagnose erleichtert.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Bildqualität kann durch Überlagerung von Strukturen beeinträchtigt werden. Weichteile sind weniger detailliert darstellbar als bei anderen bildgebenden Verfahren wie MRT oder CT.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Röntgenstrahlen beinhalten ionisierende Strahlung, die potenziell gesundheitsschädlich sein kann. Das Risiko ist jedoch bei diagnostischen Dosen gering, sollte aber dennoch berücksichtigt werden, insbesondere bei Kindern und schwangeren Frauen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Röntgenbilder spielen eine entscheidende Rolle bei der Erstdiagnose und der weiteren Behandlung vieler Erkrankungen. Sie liefern schnelle und zuverlässige Informationen, die für die Planung der Therapie unerlässlich sind.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Die Fähigkeit, schnelle und genaue Diagnosen zu stellen, verbessert das Patientenmanagement erheblich. Es ermöglicht eine zeitnahe Intervention und Überwachung des Krankheitsverlaufs.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur Röntgenuntersuchung zählen Ultraschall, Magnetresonanztomographie (MRT) und Computertomographie (CT). Diese Methoden haben jeweils ihre eigenen Vor- und Nachteile und werden je nach klinischer Fragestellung eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neueste Forschungsergebnisse befassen sich mit der Reduktion der Strahlenbelastung durch verbesserte Technologie und Protokolle. Außerdem gibt es Fortschritte in der digitalen Bildgebung, die die Bildqualität weiter erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die Zukunft der Röntgendiagnostik könnte durch Entwicklungen wie künstliche Intelligenz und maschinelles Lernen geprägt sein, die eine noch genauere Interpretation und schnellere Befundung ermöglichen könnten.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Röntgenuntersuchungen sind ein essenzielles Werkzeug in der medizinischen Diagnostik, das durch seine Schnelligkeit und Zuverlässigkeit besticht. Trotz gewisser Risiken überwiegen die Vorteile deutlich.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die Fähigkeit, genaue und schnelle Diagnosen zu stellen, macht das Röntgen zu einem unverzichtbaren Bestandteil der modernen Medizin. Es unterstützt Ärzte dabei, fundierte Entscheidungen zu treffen und die bestmögliche Patientenversorgung zu gewährleisten.",
               },
             ],
           },
@@ -1324,20 +1402,108 @@ export const parentTabs = [
           {
             first: "Ziel der Untersuchung",
             second:
-              "Erläutern Sie den diagnos?schen Zweck der CT, z.B. zur Erkennung von Tumoren oder Knochenbrüchen.",
+              "Erklären, dass die Röntgenuntersuchung dazu dient, detaillierte Bilder von Knochen, Organen und Geweben zu erstellen, um mögliche Krankheiten oder Verletzungen zu diagnostizieren.",
             third:
-              "Diese Untersuchung hil9 uns, detaillierte Bilder Ihres Körpers zu erhalten, um den Verdacht auf [spezifische Erkrankung] zu überprüfen.",
+              "Wir machen diese Röntgenaufnahme, um zu sehen, ob Ihr Arm gebrochen ist.",
             fourth:
-              "Mit der CT können wir Strukturen in Ihrem Körper genau betrachten, um die rich?ge Diagnose zu stellen.",
+              "Die Röntgenuntersuchung hilft uns, Ihre Lunge auf Anzeichen einer Infektion zu überprüfen.",
           },
           {
             first: "Ablauf",
             second:
-              "Beschreiben Sie den Prozess der CT- Untersuchung, einschließlich der Posi?onierung im Scanner.",
+              "Beschreiben, wie die Röntgenuntersuchung durchgeführt wird: Der Patient wird positioniert, die Röntgenröhre und der Detektor werden eingestellt, und die Strahlen durchdringen den Körper, um Bilder zu erzeugen.",
             third:
-              "Sie werden auf einem Tisch liegen, der langsam durch den Scanner fährt. Dabei sollten Sie s?ll liegen, um klare Bilder zu erhalten",
+              "Sie werden gebeten, sich auf den Untersuchungstisch zu legen und stillzuhalten, während das Bild gemacht wird.",
             fourth:
-              "Die Untersuchung dauert nur wenige Minuten. Sie hören dabei eventuell leise Geräusche, das ist normal.",
+              "Bitte stehen Sie vor dem Röntgengerät und folgen Sie den Anweisungen des Technikers.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren, dass in der Regel keine besondere Vorbereitung erforderlich ist, außer das Entfernen von Schmuck oder metallischen Gegenständen, die das Bild beeinträchtigen könnten.",
+            third:
+              "Bitte entfernen Sie Ihren Schmuck und ziehen Sie das Krankenhaushemd an.",
+            fourth:
+              "Stellen Sie sicher, dass Sie keine metallischen Gegenstände bei sich tragen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären, dass die Strahlenbelastung gering ist, aber trotzdem vorhanden. Besonders bei schwangeren Frauen und Kindern sollte das Risiko abgewogen werden.",
+            third:
+              "Die Strahlung ist minimal, aber wir vermeiden unnötige Röntgenaufnahmen bei schwangeren Frauen.",
+            fourth:
+              "Die Strahlenbelastung ist gering und wird auf das notwendige Minimum reduziert.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Hervorheben, dass Röntgenbilder schnell und nicht-invasiv sind und zuverlässige Informationen liefern, die für die Diagnose und Behandlung wichtig sind.",
+            third:
+              "Röntgenbilder sind schnell verfügbar und helfen uns, schnell eine Diagnose zu stellen.",
+            fourth:
+              "Mit einer Röntgenaufnahme können wir zuverlässig und ohne Eingriff feststellen, was im Körper vor sich geht.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen von Alternativen wie Ultraschall, MRT oder CT, die je nach Situation und zu untersuchendem Körperteil eingesetzt werden können.",
+            third:
+              "Falls nötig, können wir alternativ einen Ultraschall machen.",
+            fourth:
+              "Eine MRT wäre eine andere Möglichkeit, um detaillierte Bilder zu bekommen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären, dass Röntgenuntersuchungen bei schwangeren Frauen nur in Notfällen durchgeführt werden sollten und bei bestimmten metallischen Implantaten Vorsicht geboten ist.",
+            third:
+              "Bei Schwangeren führen wir Röntgenaufnahmen nur im Notfall durch.",
+            fourth:
+              "Wenn Sie metallische Implantate haben, informieren Sie bitte den Techniker.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Beschreiben, dass die Ergebnisse Hinweise auf Frakturen, Infektionen, Tumore oder andere Anomalien geben können.",
+            third: "Das Röntgenbild kann zeigen, ob Ihr Knochen gebrochen ist.",
+            fourth:
+              "Wir können auf dem Röntgenbild sehen, ob Sie eine Lungenentzündung haben.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen, dass es wichtig ist, das Einverständnis des Patienten zu haben, da der Eingriff mit Strahlenbelastung verbunden ist und der Patient die möglichen Risiken verstehen muss.",
+            third:
+              "Wir benötigen Ihre Zustimmung, bevor wir die Röntgenaufnahme machen können.",
+            fourth:
+              "Es ist wichtig, dass Sie die Risiken verstehen und der Untersuchung zustimmen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Sicherstellen, dass der Patient das Verfahren und die Risiken verstanden hat und sein Einverständnis dokumentiert wird.",
+            third:
+              "Bitte unterschreiben Sie hier, um Ihre Zustimmung zu bestätigen.",
+            fourth:
+              "Können Sie mir bestätigen, dass Sie die Risiken verstanden haben und der Untersuchung zustimmen?",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Den Patienten informieren, dass sie während der Untersuchung stillhalten müssen und dass das Personal während der Untersuchung Anweisungen gibt.",
+            third: "Bitte bleiben Sie während der Aufnahme ganz still liegen.",
+            fourth:
+              "Halten Sie bitte die Anweisungen des Technikers genau ein, um ein klares Bild zu bekommen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären, dass die Ergebnisse meist schnell verfügbar sind und von einem Radiologen interpretiert werden, der die Befunde dann mit dem behandelnden Arzt bespricht.",
+            third:
+              "Die Ergebnisse werden in der Regel innerhalb einer Stunde verfügbar sein.",
+            fourth:
+              "Der Radiologe wird die Bilder interpretieren und wir besprechen die Befunde anschließend mit Ihnen.",
           },
         ],
       },
