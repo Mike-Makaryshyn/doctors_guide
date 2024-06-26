@@ -2619,4 +2619,741 @@ export const parentTabs = [
   },
   // end of parent tab 4
   // start of parent tab 5
+  {
+    id: 5,
+    title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 47,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der ERCP ist die Darstellung und gegebenenfalls die Behandlung von Erkrankungen der Gallenwege und des Pankreas. Dazu gehören Gallensteine, entzündliche Erkrankungen, Tumore und strukturelle Anomalien.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "ERCP wird vor allem bei Patienten mit Verdacht auf Obstruktionen oder Entzündungen der Gallenwege und des Pankreas eingesetzt. Typische Anwendungsbereiche sind die Diagnose von Gallengangsteinen, Pankreatitis, Cholangitis und die Evaluation von Pankreastumoren.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die ERCP kombiniert endoskopische und radiologische Techniken, um detaillierte Bilder der Gallen- und Pankreasgänge zu erstellen. Dabei wird ein Endoskop durch den Mund des Patienten in den Zwölffingerdarm eingeführt, wo Kontrastmittel in die Gänge injiziert wird, um diese unter Röntgendurchleuchtung sichtbar zu machen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Verfahren erfordert die Verwendung eines speziellen seitblickenden Endoskops, eines sogenannten Duodenoskops. Nach der Lokalisierung der Papilla Vateri wird ein Katheter durch den Arbeitskanal des Endoskops eingeführt, um Kontrastmittel in die Gallengänge oder den Pankreasgang zu spritzen und Röntgenbilder zu erstellen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der ERCP-Bilder erfolgt durch die Identifizierung von Anomalien wie Strikturen, Steinen, Tumoren oder Entzündungszeichen. Eine genaue Interpretation erfordert fundierte Kenntnisse der normalen und pathologischen Anatomie der Gallengänge und des Pankreas.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Häufige Befunde bei der ERCP sind Gallengangsteine, die als füllungsdefekte Strukturen im Kontrastmittel erscheinen, entzündliche Verengungen (Strikturen) und Tumormassen, die zu einer Obstruktion führen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "ERCP ermöglicht nicht nur die Diagnose, sondern auch die therapeutische Intervention, wie die Entfernung von Gallengangsteinen oder die Platzierung von Stents zur Behandlung von Verengungen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "ERCP ist ein invasives Verfahren, das spezielle technische Fähigkeiten und Erfahrung erfordert. Es ist zeitaufwändig und erfordert oft eine Sedierung oder Narkose des Patienten.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken der ERCP gehören Pankreatitis, Infektionen, Blutungen und Perforationen. Diese Komplikationen können schwerwiegend sein und erfordern eine sorgfältige Überwachung und Behandlung.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "ERCP spielt eine entscheidende Rolle in der Diagnose und Behandlung von Erkrankungen der Gallenwege und des Pankreas. Es ermöglicht eine genaue Diagnose und bietet gleichzeitig therapeutische Möglichkeiten, was es zu einem unverzichtbaren Werkzeug in der gastroenterologischen Praxis macht.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Die Fähigkeit, diagnostische und therapeutische Maßnahmen in einem einzigen Eingriff zu kombinieren, macht ERCP besonders wertvoll für das Management komplexer hepatobiliärer und pankreatischer Erkrankungen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur ERCP gehören die Magnetresonanz-Cholangiopankreatikographie (MRCP) und die endoskopische Ultraschalluntersuchung (EUS). Beide Verfahren sind weniger invasiv und bieten wertvolle diagnostische Informationen, haben jedoch keine therapeutischen Möglichkeiten.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse konzentrieren sich auf die Verbesserung der technischen Aspekte der ERCP, die Reduzierung von Komplikationen und die Entwicklung neuer therapeutischer Ansätze.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Integration neuer Bildgebungsverfahren und minimal-invasiver Techniken umfassen, um die Sicherheit und Effektivität der ERCP weiter zu verbessern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "ERCP ist ein unverzichtbares Verfahren in der modernen Gastroenterologie, das sowohl diagnostische als auch therapeutische Möglichkeiten bietet. Es ist jedoch mit gewissen Risiken verbunden und erfordert spezielle technische Fähigkeiten.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Trotz seiner invasiven Natur bleibt ERCP ein wertvolles Werkzeug zur Diagnose und Behandlung von Erkrankungen der Gallenwege und des Pankreas, mit einem erheblichen Nutzen für das Patientenmanagement und die klinische Praxis.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 48,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der ERCP darin besteht, Erkrankungen der Gallenwege und des Pankreas zu diagnostizieren und gegebenenfalls zu behandeln, z.B. Entfernung von Gallensteinen.",
+            third:
+              "Das Ziel dieser Untersuchung ist es, Ihre Gallengänge und Ihren Pankreasgang auf Verstopfungen oder andere Probleme zu untersuchen und diese gegebenenfalls zu behandeln.",
+            fourth:
+              "Wir führen diese Untersuchung durch, um festzustellen, ob Gallensteine vorhanden sind und ob eine Blockade oder Verengung in Ihren Gallengängen besteht.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den Ablauf des Verfahrens: Ein Endoskop wird durch den Mund in den Zwölffingerdarm eingeführt, Kontrastmittel wird injiziert, und Röntgenbilder werden gemacht.",
+            third:
+              "Während der ERCP führen wir ein dünnes, flexibles Endoskop durch Ihren Mund bis in den Zwölffingerdarm ein. Dort wird Kontrastmittel injiziert und Röntgenbilder gemacht.",
+            fourth:
+              "Zunächst werden Sie sediert, dann führen wir ein Endoskop durch Ihren Mund ein, um Kontrastmittel in die Gallengänge zu spritzen und diese sichtbar zu machen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erklären Sie, dass der Patient nüchtern sein muss, also mehrere Stunden vor der Untersuchung nichts essen oder trinken darf. Eventuell müssen Blutgerinnungshemmer pausiert werden.",
+            third:
+              "Sie dürfen ab Mitternacht vor dem Eingriff nichts mehr essen oder trinken, um den Magen leer zu halten.",
+            fourth:
+              "Es ist wichtig, dass Sie 6 Stunden vor der Untersuchung nüchtern bleiben. Bitte besprechen Sie mit Ihrem Arzt, ob Sie Ihre Blutgerinnungshemmer absetzen müssen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erläutern Sie die möglichen Risiken wie Pankreatitis, Infektionen, Blutungen und Perforationen.",
+            third:
+              "Zu den Risiken der ERCP gehören Entzündungen der Bauchspeicheldrüse, Infektionen, Blutungen und in seltenen Fällen Verletzungen der Darmwand.",
+            fourth:
+              "Einige der Risiken sind Pankreatitis, die eine Entzündung der Bauchspeicheldrüse ist, sowie Infektionen oder Blutungen, die behandelt werden müssen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie die Vorteile, wie die Möglichkeit, sowohl Diagnosen zu stellen als auch therapeutische Maßnahmen durchzuführen, z.B. die Entfernung von Steinen oder das Setzen von Stents.",
+            third:
+              "Ein großer Vorteil der ERCP ist, dass wir nicht nur Probleme erkennen, sondern auch direkt behandeln können, wie z.B. das Entfernen von Gallengangsteinen.",
+            fourth:
+              "Die ERCP ermöglicht uns, Verstopfungen in Ihren Gallengängen nicht nur zu finden, sondern auch sofort zu beheben, indem wir z.B. Stents setzen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erläutern Sie alternative Untersuchungsmethoden wie die Magnetresonanz- (MRCP) und die endoskopische Ultraschalluntersuchung (EUS), die weniger invasiv sind.",
+            third:
+              "Alternativen zur ERCP sind die MRCP, die ebenfalls detaillierte Bilder liefert, aber nicht therapeutisch eingreifen kann.",
+            fourth:
+              "Eine andere Möglichkeit ist die endoskopische Ultraschalluntersuchung, die weniger invasiv ist, aber keine sofortigen Behandlungsoptionen bietet.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie die Kontraindikationen, wie z.B. schwere Herz- oder Lungenerkrankungen, die das Risiko des Verfahrens erhöhen könnten.",
+            third:
+              "Patienten mit schweren Herz- oder Lungenerkrankungen sollten keine ERCP erhalten, da das Risiko für Komplikationen erhöht ist.",
+            fourth:
+              "Wenn Sie eine schwere Herz- oder Lungenerkrankung haben, ist dieses Verfahren möglicherweise nicht für Sie geeignet, da es Ihr Risiko erhöht.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erläutern Sie, welche Ergebnisse die Untersuchung liefern kann, z.B. Nachweis von Steinen, Tumoren oder Verengungen in den Gallenwegen oder dem Pankreasgang.",
+            third:
+              "Die Untersuchung kann zeigen, ob Steine, Tumore oder Verengungen in den Gallenwegen oder dem Pankreasgang vorhanden sind.",
+            fourth:
+              "Wir können feststellen, ob es Blockaden durch Gallensteine gibt oder ob Tumore oder Verengungen vorliegen, die behandelt werden müssen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie, warum es wichtig ist, dass der Patient seine Zustimmung zur Untersuchung gibt, um sicherzustellen, dass er die Risiken und Vorteile versteht.",
+            third:
+              "Es ist wichtig, dass Sie Ihr Einverständnis geben, damit wir sicherstellen können, dass Sie die Risiken und Vorteile des Verfahrens verstehen.",
+            fourth:
+              "Ihr Einverständnis ist notwendig, um den Eingriff rechtlich abzusichern und zu bestätigen, dass Sie über alle möglichen Risiken informiert wurden.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie den Prozess des Einverständnisses: Der Patient erhält Informationen über den Eingriff und unterzeichnet ein Formular.",
+            third:
+              "Vor dem Eingriff erhalten Sie ein Formular, das alle Details und Risiken erklärt. Sie müssen dieses Formular unterschreiben, um Ihr Einverständnis zu geben.",
+            fourth:
+              "Wir werden Ihnen ein Informationsblatt aushändigen und Ihre schriftliche Zustimmung einholen, bevor wir mit der Untersuchung beginnen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Erläutern Sie, was nach dem Eingriff zu erwarten ist, z.B. mögliche Beschwerden, Beobachtungszeitraum im Krankenhaus.",
+            third:
+              "Nach dem Eingriff bleiben Sie zur Beobachtung noch einige Stunden im Krankenhaus. Leichte Halsschmerzen und Blähungen können auftreten.",
+            fourth:
+              "Es ist normal, nach der ERCP leichte Bauchschmerzen zu haben. Sie sollten sich am Tag der Untersuchung ausruhen und können am nächsten Tag zu Ihren normalen Aktivitäten zurückkehren.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient über die Ergebnisse der Untersuchung informiert wird und welche weiteren Schritte eventuell notwendig sind.",
+            third:
+              "Wir besprechen die Ergebnisse der Untersuchung, sobald Sie wach und stabil sind. Je nach Befund besprechen wir die weiteren Behandlungsschritte.",
+            fourth:
+              "Sie erhalten die Ergebnisse meist noch am selben Tag. Bei auffälligen Befunden besprechen wir sofort das weitere Vorgehen und mögliche Behandlungen.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 48,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die ERCP (endoskopische retrograde Cholangiopankreatikographie) ein Verfahren ist, das endoskopische und radiologische Techniken kombiniert, um die Gallen- und Pankreasgänge darzustellen.",
+            third:
+              "Die ERCP ist ein kombiniertes endoskopisch-radiologisches Verfahren, bei dem Kontrastmittel in die Gallengänge und den Pankreasgang injiziert wird, um diese sichtbar zu machen.",
+            fourth:
+              "ERCP steht für endoskopische retrograde Cholangiopankreatikographie und dient der Darstellung und Behandlung von Erkrankungen der Gallenwege und des Pankreas.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die ERCP zur Diagnose und Behandlung von Erkrankungen der Gallenwege und des Pankreas eingesetzt wird, wie z.B. Gallengangsteine, Pankreatitis, Tumore und Strikturen.",
+            third:
+              "Mit der ERCP können wir Gallensteine diagnostizieren und entfernen, Strikturen dilatieren und Tumoren in den Gallen- oder Pankreasgängen erkennen.",
+            fourth:
+              "Das Verfahren ermöglicht uns, Verengungen in den Gallengängen zu identifizieren, Gallensteine zu extrahieren und Pankreatitis sowie Tumoren zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie typische Befunde der ERCP, wie z.B. das Vorhandensein von Gallensteinen, entzündlichen Verengungen, Tumormassen oder anatomischen Anomalien.",
+            third:
+              "Bei der ERCP fanden wir mehrere Gallensteine im Ductus choledochus und eine entzündliche Verengung im Pankreasgang.",
+            fourth:
+              "Die Untersuchung zeigte eine distale Gallengangsstriktur und einen Verdacht auf Cholangiokarzinom.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie die Indikationen für eine ERCP, einschließlich Verdacht auf Gallensteine, Pankreatitis, Cholangitis, biliäre Strikturen und Verdacht auf Tumoren der Gallenwege oder des Pankreas.",
+            third:
+              "Indikationen für die ERCP sind unter anderem Verdacht auf Cholangitis, akute Pankreatitis unklarer Genese und Ikterus durch vermutete Gallengangsobstruktion.",
+            fourth:
+              "Wir führen die ERCP durch bei Patienten mit anhaltendem Ikterus, Verdacht auf Gallengangstumor oder wiederkehrender biliärer Pankreatitis.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie die Kontraindikationen, wie z.B. schwere kardiopulmonale Erkrankungen, akute Infektionen oder anatomische Anomalien, die das Verfahren erschweren könnten.",
+            third:
+              "Patienten mit schweren Herz- oder Lungenerkrankungen sollten keine ERCP erhalten, da das Risiko für Komplikationen erhöht ist.",
+            fourth:
+              "Bei akuten Bauchinfektionen oder anatomischen Anomalien der Gallenwege ist eine ERCP kontraindiziert.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erläutern Sie die Differenzialdiagnosen, die bei der Interpretation der ERCP-Befunde in Betracht gezogen werden sollten, wie z.B. Pankreaspseudozysten, chronische Pankreatitis und Gallengangskarzinome.",
+            third:
+              "Differenzialdiagnosen umfassen chronische Pankreatitis, die ebenfalls zu Verengungen im Pankreasgang führen kann, und Pankreaspseudozysten.",
+            fourth:
+              "Bei der Diagnose von Gallengangstumoren müssen wir auch an benigne Strikturen und Entzündungen, wie bei der primär sklerosierenden Cholangitis, denken.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie die möglichen therapeutischen Maßnahmen, die im Rahmen der ERCP durchgeführt werden können, wie z.B. Steinextraktion, Dilatation von Strikturen und Platzierung von biliären Stents.",
+            third:
+              "Der Behandlungsplan für diesen Patienten umfasst die Extraktion der gefundenen Gallensteine und die Platzierung eines Stents zur Aufrechterhaltung des Gallenflusses.",
+            fourth:
+              "Nach der Diagnose der Striktur haben wir uns entschieden, eine Ballondilatation durchzuführen und einen Stent zur Vermeidung einer erneuten Obstruktion zu setzen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Beschreiben Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen wie Chirurgie, Radiologie und Onkologie für eine umfassende Diagnostik und Behandlung der Patienten.",
+            third:
+              "Die Zusammenarbeit mit der Radiologie ist entscheidend, um präzise Bildgebungsergebnisse zu erhalten und die Chirurgie für eventuelle operative Eingriffe zu konsultieren.",
+            fourth:
+              "Für diesen Fall ist die Zusammenarbeit mit der Onkologie wichtig, um eine adäquate Nachsorge und weitere Therapieoptionen bei Verdacht auf Malignität zu planen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, wie die Qualität der ERCP-Verfahren durch Schulungen, Überwachung der Komplikationsraten und regelmäßige Überprüfung der Verfahrensergebnisse sichergestellt wird.",
+            third:
+              "Qualitätsmanagement umfasst regelmäßige Schulungen des endoskopischen Personals und die kontinuierliche Überwachung und Dokumentation von Komplikationen.",
+            fourth:
+              "Um die Qualität der ERCP zu gewährleisten, führen wir regelmäßig Fallbesprechungen durch und evaluieren die Ergebnisse, um Prozesse stetig zu verbessern.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Besprechen Sie die Notwendigkeit einer detaillierten Dokumentation der Befunde und durchgeführten Maßnahmen sowie die Bedeutung der Nachsorge, um den Behandlungserfolg zu überwachen und Komplikationen frühzeitig zu erkennen.",
+            third:
+              "Nach dem Eingriff dokumentieren wir alle Befunde und Maßnahmen detailliert und vereinbaren Nachsorgetermine, um den Heilungsverlauf zu überwachen.",
+            fourth:
+              "Eine gründliche Dokumentation ist unerlässlich, um die Patientenakte vollständig zu halten und die Nachsorge sowie eventuelle weitere Behandlungen zu planen.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 49,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "50-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient mit Gelbsucht, ungewolltem Gewichtsverlust und dunklem Urin.",
+            fourth:
+              "45-jährige Patientin mit wiederkehrenden Bauchschmerzen, Übelkeit und Gewichtsverlust.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "ERCP zeigt eine normale Anatomie der Gallen- und Pankreasgänge ohne Auffälligkeiten.",
+            third:
+              "ERCP zeigt eine stenosierende, unregelmäßige Masse im distalen Gallengang.",
+            fourth:
+              "ERCP offenbart multiple Strikturen und Dilatationen im Pankreasgang.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das ERCP-Ergebnis bestätigt die normale Funktion der Gallen- und Pankreasgänge.",
+            third:
+              "Der Befund deutet auf ein Gallengangskarzinom hin. Die Stenose erklärt die Cholestase-Symptome des Patienten.",
+            fourth:
+              "Die Veränderungen sind typisch für eine chronische Pankreatitis. Zusammenhang mit den klinischen Symptomen der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer langfristigen Therapie zur Schmerz- und Symptomkontrolle.",
+            fourth:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Gallen- und Pankreasgänge. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer chronischen Pankreatitis aufgrund der ERCP-Ergebnisse und Symptomatik.",
+            fourth:
+              "Bestätigung des gesunden Zustandes der Gallen- und Pankreasgänge. Keine Anzeichen für pathologische Veränderungen.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Darstellung der Gallen- und Pankreasgänge ohne Auffälligkeiten in allen Aufnahmen.",
+            third:
+              "ERCP-Bilder zeigen multiple Strikturen und Dilatationen im Pankreasgang, typisch für chronische Pankreatitis.",
+            fourth:
+              "Homogene Darstellung der Gallen- und Pankreasgänge ohne Auffälligkeiten in allen Aufnahmen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine chirurgische Resektion der betroffenen Gallengänge, gefolgt von einer adjuvanten Chemotherapie.",
+            third:
+              "Es ist zu empfehlen, eine langfristige, symptomatische Therapie zu beginnen, die Schmerzmanagement und Ernährungsberatung einschließt.",
+            fourth:
+              "Wir empfehlen, regelmäßige gesundheitliche Überprüfungen fortzusetzen, um die anhaltende Gesundheit zu überwachen.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 43,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein ERCP-Gerät ist ein spezialisiertes medizinisches Instrument, das zur endoskopischen retrograden Cholangiopankreatikographie (ERCP) verwendet wird. Es kombiniert endoskopische und radiologische Techniken, um detaillierte Bilder der Gallen- und Pankreasgänge zu erstellen und therapeutische Eingriffe durchzuführen. Hier sind die wesentlichen Komponenten und Funktionen eines ERCP-Geräts:Gantry: ist der ringförmige Teil des CT-Geräts, der die Röntgenröhre und die Detektoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
+        text_list: [
+          {
+            bold: "Endoskop :",
+            other:
+              "Ein flexibles, schlauchförmiges Instrument, das durch den Mund des Patienten eingeführt wird. Es enthält eine Lichtquelle und eine Kamera, die Bilder des Verdauungstrakts auf einen Monitor überträgt. Das Endoskop hat auch einen Arbeitskanal für die Einführung von Werkzeugen und Kontrastmittel.",
+          },
+          {
+            bold: "Seitblick-Endoskop (Duodenoskop) :",
+            other:
+              "Ein spezielles Endoskop, das für ERCP verwendet wird. Es hat eine seitliche Sichtoptik und einen zusätzlichen Arbeitskanal, der den Zugang zur Papilla Vateri erleichtert.",
+          },
+          {
+            bold: "Röntgengerät :",
+            other:
+              "Erzeugt Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Die Röntgenstrahlen werden vom Kontrastmittel, das in die Gallen- und Pankreasgänge injiziert wird, absorbiert und auf einem Röntgenbildschirm sichtbar gemacht.",
+          },
+          {
+            bold: "Kontrastmittelinjektor :",
+            other:
+              "Ein Gerät zur Verabreichung von Kontrastmittel durch einen Katheter. Das Kontrastmittel füllt die Gallen- und Pankreasgänge, um sie unter Röntgendurchleuchtung sichtbar zu machen.",
+          },
+          {
+            bold: "Fluoroskopie :",
+            other:
+              "Eine Technik zur Echtzeit-Bildgebung mit Röntgenstrahlen. Sie ermöglicht es dem Arzt, die Bewegung von Kontrastmittel durch die Gallen- und Pankreasgänge zu beobachten und Eingriffe präzise durchzuführen.",
+          },
+          {
+            bold: "Katheter und Führungsdraht :",
+            other:
+              "Flexible Röhren und Drähte, die durch den Arbeitskanal des Endoskops eingeführt werden, um Kontrastmittel zu injizieren oder therapeutische Werkzeuge zu platzieren.",
+          },
+          {
+            bold: "Therapeutische Werkzeuge :",
+            other:
+              "Verschiedene Instrumente, die durch das Endoskop geführt werden können, um Steine zu entfernen, Strikturen zu dilatieren oder Stents zu setzen. Dazu gehören Ballondilatatoren, Steinfangkörbe und Stent-Einführsysteme.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Ein Computer und Monitoren, die zur Steuerung des Röntgengeräts und zur Anzeige der Röntgenbilder verwendet werden. Der Radiologe oder Gastroenterologe steuert von hier aus die Untersuchung und Eingriffe.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Ermöglicht dem Technologen, das ERCP-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Eine motorisierte Liege, die den Patienten in die richtige Position bringt und während der Untersuchung stabil hält.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Monitor für Endoskopiebilder :",
+            other:
+              "Zeigt die Live-Bilder des Endoskops an, die der Arzt während des Eingriffs beobachtet, um präzise Manöver durchzuführen.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Kühlt die Röntgenröhre und andere hitzeempfindliche Komponenten, um eine Überhitzung zu verhindern und die Funktionalität des Geräts zu gewährleisten.",
+          },
+          {
+            bold: "Dokumentationssystem :",
+            other:
+              "Ein digitales System zur Aufzeichnung und Speicherung der Bilddaten und der durchgeführten Eingriffe für spätere Analysen und zur Patientenakte.",
+          },
+          {
+            bold: "Notfallsystem :",
+            other:
+              "Ausrüstung und Protokolle zur schnellen Reaktion auf Komplikationen während des Eingriffs, wie z.B. Notfallmedikamente und Reanimationsgeräte.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 44,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der ERCP-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "ERCP :",
+            other: "Endoskopische retrograde Cholangiopankreatikographie",
+          },
+          {
+            bold: "Endoskop :",
+            other:
+              "Ein flexibles Instrument zur Untersuchung des Verdauungstraktes",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die zur besseren Darstellung der Gallen- und Pankreasgänge verwendet wird",
+          },
+          {
+            bold: "Papilla Vateri :",
+            other:
+              "Die Mündung des Gallengangs und des Pankreasgangs in den Zwölffingerdarm",
+          },
+          {
+            bold: "Gallengang :",
+            other: "Ductus choledochus",
+          },
+          {
+            bold: "Pankreasgang :",
+            other: "Ductus pancreaticus",
+          },
+          {
+            bold: "Cholestase :",
+            other: "Stauung der Gallenflüssigkeit",
+          },
+          {
+            bold: "Striktur :",
+            other: "Verengung eines Ganges",
+          },
+          {
+            bold: "Dilatation :",
+            other: "Erweiterung einer Verengung",
+          },
+          {
+            bold: "Stent :",
+            other: "Ein Röhrchen zur Offenhaltung verengter Gänge",
+          },
+          {
+            bold: "Sphinkterotomie :",
+            other: "Schnitt durch den Schließmuskel der Papilla Vateri",
+          },
+          {
+            bold: "Steinextraktion :",
+            other: "Entfernung von Gallensteinen",
+          },
+          {
+            bold: "Pankreatitis :",
+            other: "Entzündung der Bauchspeicheldrüse",
+          },
+          {
+            bold: "Cholangitis :",
+            other: "Entzündung der Gallengänge",
+          },
+          {
+            bold: "Aufklärung :",
+            other: "Patienteninformation über Risiken und Ablauf",
+          },
+          {
+            bold: "Einverständniserklärung :",
+            other: "Schriftliche Zustimmung des Patienten",
+          },
+          {
+            bold: "Post-ERCP-Pankreatitis :",
+            other: "Entzündung der Bauchspeicheldrüse nach ERCP",
+          },
+          {
+            bold: "Radiologische Bildgebung :",
+            other: "Verfahren zur Darstellung innerer Strukturen",
+          },
+          {
+            bold: "Fluoroskopie :",
+            other: "Echtzeit-Röntgendurchleuchtung",
+          },
+          {
+            bold: "Diagnostische ERCP :",
+            other: "ERCP zur Untersuchung",
+          },
+          {
+            bold: "Therapeutische ERCP :",
+            other: "ERCP zur Behandlung",
+          },
+          {
+            bold: "Routinekontrolle :",
+            other: "Regelmäßige Überprüfung ohne spezifischen Verdacht",
+          },
+          {
+            bold: "Leberwerte :",
+            other: "Laborwerte zur Beurteilung der Leberfunktion",
+          },
+          {
+            bold: "Ikterus :",
+            other: "Gelbsucht",
+          },
+          {
+            bold: "Dysphagie :",
+            other: "Schluckstörung",
+          },
+          {
+            bold: "MRCP :",
+            other: "Magnetresonanz-Cholangiopankreatikographie",
+          },
+          {
+            bold: "EUS :",
+            other: "Endoskopischer Ultraschall",
+          },
+          {
+            bold: "Prämedikation :",
+            other: "Vorbereitende Medikamentengabe",
+          },
+          {
+            bold: "Biliäre Striktur :",
+            other: "Verengung der Gallengänge",
+          },
+          {
+            bold: "Gallengangskarzinom :",
+            other: "Bösartiger Tumor der Gallengänge",
+          },
+          {
+            bold: "Stenose :",
+            other: "Verengung eines Hohlorgans",
+          },
+          {
+            bold: "Ductus cysticus :",
+            other: "Gallenblasengang",
+          },
+          {
+            bold: "Gallenkolik :",
+            other: "Schmerzhaftes Ereignis durch Gallensteine",
+          },
+          {
+            bold: "Endoskopische Resektion :",
+            other: "Entfernung von Gewebe durch das Endoskop",
+          },
+          {
+            bold: "Radiologische Anatomie :",
+            other: "Strukturen, wie sie im Röntgenbild erscheinen",
+          },
+          {
+            bold: "Bildinterpretation :",
+            other: "Analyse und Deutung radiologischer Bilder",
+          },
+          {
+            bold: "Bildgebende Diagnostik :",
+            other:
+              "Verfahren zur Darstellung von Körperstrukturen mittels Röntgen, MRT, CT etc.",
+          },
+
+          {
+            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der ERCP wichtig ist und können in einer Prüfungssituation nützlich sein.",
+          },
+        ],
+      },
+      {
+        id: 45,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "Stiftung Gesundheitswissen :",
+            other:
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+          },
+          {
+            bold: "NetDoktor :",
+            other:
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links](https://www.netdoktor.de)",
+          },
+          {
+            bold: "Gesundheitsinformation.de :",
+            other:
+              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links](https://www.gesundheitsinformation.de)",
+          },
+          {
+            bold: "BARMER :",
+            other:
+              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links](https://www.barmer.de)",
+          },
+          {
+            bold: "PraktischArzt :",
+            other:
+              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links](https://www.praktischarzt.de)",
+          },
+          {
+            bold: "Krebsinformationsdienst :",
+            other:
+              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links](https://www.krebsinformationsdienst.de)",
+          },
+          {
+            bold: "DokCheck :",
+            other:
+              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links](https://www.doccheck.com)",
+          },
+          {
+            bold: "AMBOSS :",
+            other:
+              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links](https://www.amboss.com/de)",
+          },
+        ],
+      },
+      {
+        id: 46,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1PqRkOW_XHA6f1_mxulrp3YX1hGNTV4uv/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 6
 ];
