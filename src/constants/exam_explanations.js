@@ -3055,7 +3055,7 @@ export const parentTabs = [
       },
       // 5tab
       {
-        id: 43,
+        id: 50,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein ERCP-Gerät ist ein spezialisiertes medizinisches Instrument, das zur endoskopischen retrograden Cholangiopankreatikographie (ERCP) verwendet wird. Es kombiniert endoskopische und radiologische Techniken, um detaillierte Bilder der Gallen- und Pankreasgänge zu erstellen und therapeutische Eingriffe durchzuführen. Hier sind die wesentlichen Komponenten und Funktionen eines ERCP-Geräts:Gantry: ist der ringförmige Teil des CT-Geräts, der die Röntgenröhre und die Detektoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
@@ -3139,7 +3139,7 @@ export const parentTabs = [
       },
       // 6tab
       {
-        id: 44,
+        id: 51,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im Bereich der ERCP-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
         text_list: [
@@ -3302,7 +3302,7 @@ export const parentTabs = [
         ],
       },
       {
-        id: 45,
+        id: 52,
         title: "Links",
         text: "",
         text_list: [
@@ -3349,7 +3349,7 @@ export const parentTabs = [
         ],
       },
       {
-        id: 46,
+        id: 53,
         title: "PDF",
         link: "https://drive.google.com/file/d/1PqRkOW_XHA6f1_mxulrp3YX1hGNTV4uv/view?usp=share_link",
       },
