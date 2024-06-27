@@ -4012,5 +4012,671 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 7
+  // end of parent tab 6
+  {
+    id: 7,
+    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 55,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext: ",
+                text: "Das Hauptziel der SPECT-Untersuchung ist es, funktionelle Informationen über Organe und Gewebe zu erhalten. Dies wird durch die Messung der Verteilung von radioaktiv markierten Substanzen im Körper erreicht.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche: ",
+                text: "Die SPECT wird in zahlreichen medizinischen Bereichen eingesetzt, darunter die Kardiologie zur Bewertung der Myokardperfusion, die Neurologie zur Untersuchung von Hirnfunktionen und die Onkologie zur Detektion von Tumoren und Metastasen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen: ",
+                text: "SPECT basiert auf der Verabreichung von Radiopharmaka, die Gammastrahlen emittieren. Diese Strahlen werden von einem Gamma-Kamera-System erfasst, das um den Patienten rotiert, um dreidimensionale Bilder zu erstellen.",
+              },
+              {
+                bold_text: "Technische Aspekte: ",
+                text: "Die Hauptkomponenten einer SPECT-Anlage sind die Gamma-Kamera, die Kollimatoren zur Richtungsbestimmung der Strahlen, und ein Computer zur Bildrekonstruktion. Die Qualität der Bilder hängt von der Energie des Radiopharmakons und der Empfindlichkeit der Detektoren ab.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation: ",
+                text: "Die Bilder werden von spezialisierten Ärzten analysiert, die die Verteilung des Radiopharmakons im Gewebe beurteilen. Dies ermöglicht Rückschlüsse auf die Funktion und mögliche Pathologien der untersuchten Organe.",
+              },
+              {
+                bold_text: "Typische Befunde: ",
+                text: "Typische Befunde umfassen Bereiche mit erhöhter oder verminderter Radiopharmakon-Anreicherung, die auf pathologische Veränderungen wie Tumoren, Durchblutungsstörungen oder neurologische Erkrankungen hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile: ",
+                text: "SPECT bietet detaillierte funktionelle Informationen und kann pathologische Veränderungen frühzeitig erkennen. Es ist nicht invasiv und hat eine relativ geringe Strahlenbelastung.",
+              },
+              {
+                bold_text: "Nachteile: ",
+                text: "Zu den Nachteilen gehören die begrenzte räumliche Auflösung im Vergleich zu anderen bildgebenden Verfahren und die Notwendigkeit, Radiopharmaka zu verwenden, die spezielle Handhabung erfordern.",
+              },
+              {
+                bold_text: "Risiken: ",
+                text: "Die Risiken umfassen mögliche allergische Reaktionen auf das Radiopharmakon und eine geringe Strahlenexposition. Bei sachgemäßer Durchführung sind diese Risiken jedoch minimal.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung: ",
+                text: "SPECT spielt eine zentrale Rolle in der Diagnostik und Therapieplanung, insbesondere bei kardiovaskulären und neurologischen Erkrankungen. Es unterstützt die Entscheidung über therapeutische Maßnahmen und die Überwachung des Behandlungserfolgs.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement: ",
+                text: "Durch die Bereitstellung präziser funktioneller Informationen trägt SPECT wesentlich zur individuellen Patientenbetreuung und zur Optimierung von Behandlungsstrategien bei.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "Alternativen zur SPECT: ",
+                text: "umfassen die Positronen-Emissions-Tomographie (PET), die eine höhere Empfindlichkeit bietet, und die Magnetresonanztomographie (MRT), die ohne Strahlenbelastung auskommt, aber keine funktionellen Informationen liefert.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse: ",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildqualität und die Entwicklung neuer Radiopharmaka, die spezifischere diagnostische Informationen liefern können.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven: ",
+                text: "Zukünftige Entwicklungen zielen darauf ab, die SPECT-Technologie weiter zu verfeinern und ihre Anwendungen zu erweitern, insbesondere in der personalisierten Medizin und der präzisen Tumordiagnostik.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften: ",
+                text: "Die SPECT ist ein unverzichtbares Werkzeug in der modernen Medizin, das funktionelle Bildgebung ermöglicht und eine entscheidende Rolle in der Diagnose und Behandlung spielt.",
+              },
+              {
+                bold_text: "Gesamtbedeutung: ",
+                text: "Insgesamt trägt die SPECT durch ihre Fähigkeit, detaillierte und spezifische Informationen über die Funktion von Organen und Geweben zu liefern, erheblich zur Verbesserung der medizinischen Versorgung und des Patientenmanagements bei.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 56,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der SPECT-Untersuchung darin besteht, funktionelle Informationen über Organe und Gewebe zu erhalten, um Krankheiten zu diagnostizieren und zu beurteilen.",
+            third:
+              "Wir möchten feststellen, wie gut Ihr Herzmuskel durchblutet wird.",
+            fourth:
+              "Die Untersuchung hilft uns, die Funktionsweise Ihres Gehirns bei Verdacht auf Epilepsie zu bewerten.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Patienten den Ablauf: Verabreichung eines radioaktiven Stoffes (Radiopharmakon), Wartezeit zur Verteilung im Körper, anschließende Aufnahme der Gammastrahlen mit der Gamma-Kamera, und die Dauer der Untersuchung.",
+            third:
+              "Nach der Injektion des Radiopharmakons warten wir etwa 30-60 Minuten, bevor die Kamera Bilder aufnimmt.",
+            fourth:
+              "Die gesamte Untersuchung dauert ungefähr zwei Stunden, einschließlich der Wartezeit nach der Injektion.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über die notwendigen Vorbereitungen: z.B. Nüchternheit vor der Untersuchung, Verzicht auf bestimmte Medikamente oder Lebensmittel, bequeme Kleidung.",
+            third:
+              "Bitte kommen Sie nüchtern zur Untersuchung und trinken Sie vorher nur Wasser.",
+            fourth:
+              "Vermeiden Sie koffeinhaltige Getränke 24 Stunden vor dem Termin.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie mögliche Risiken, wie allergische Reaktionen auf das Radiopharmakon oder die geringe Strahlenbelastung, und betonen Sie, dass diese Risiken minimal sind.",
+            third:
+              "Es besteht ein sehr geringes Risiko einer allergischen Reaktion auf den radioaktiven Stoff.",
+            fourth:
+              "Die Strahlenbelastung ist vergleichbar mit einer Röntgenaufnahme und daher sehr gering.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Heben Sie die Vorteile hervor: detaillierte funktionelle Informationen, frühzeitige Erkennung von pathologischen Veränderungen, nicht-invasiv mit relativ geringer Strahlenbelastung.",
+            third:
+              "Wir erhalten genaue Informationen über die Funktion Ihres Organs, was uns bei der Diagnose hilft.",
+            fourth:
+              "Frühzeitige Erkennung von Durchblutungsstörungen kann lebensrettend sein.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie alternative Untersuchungsmethoden wie die Positronen-Emissions-Tomographie (PET) und die Magnetresonanztomographie (MRT).",
+            third:
+              "Eine Alternative wäre die PET-Untersuchung, die jedoch oft teurer und nicht überall verfügbar ist.",
+            fourth:
+              "Die MRT liefert anatomische Details, jedoch keine funktionellen Informationen wie die SPECT.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen, z.B. Schwangerschaft, Stillzeit oder Allergien gegen das Radiopharmakon, und die Notwendigkeit, diese vor der Untersuchung zu klären.",
+            third:
+              "Bei einer Schwangerschaft sollten wir die Untersuchung verschieben oder eine Alternative prüfen.",
+            fourth:
+              "Falls Sie stillen, müssen wir spezielle Vorsichtsmaßnahmen treffen oder die Untersuchung verschieben.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche Arten von Ergebnissen erwartet werden können, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese für die Diagnose bedeuten könnten.",
+            third:
+              "Ein normales Ergebnis zeigt eine gleichmäßige Verteilung des Stoffes im Organ.",
+            fourth:
+              "Eine ungleichmäßige Verteilung könnte auf eine Durchblutungsstörung oder einen Tumor hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten, um sicherzustellen, dass er die Untersuchung und deren mögliche Risiken und Vorteile versteht.",
+            third:
+              "Ihre Zustimmung ist wichtig, damit wir sicherstellen können, dass Sie alle Aspekte der Untersuchung verstanden haben.",
+            fourth:
+              "Bitte stellen Sie sicher, dass Sie alle Fragen klären, bevor Sie das Einverständnisformular unterschreiben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess des Einholens der Einverständniserklärung: Aufklärungsgespräch, Zeit für Fragen des Patienten, schriftliche Zustimmung.",
+            third:
+              "Nach dem Gespräch haben Sie Zeit, alle Ihre Fragen zu stellen, bevor Sie das Formular unterschreiben.",
+            fourth:
+              "Wir werden Ihnen alle Details erklären und bitten Sie dann, Ihre Zustimmung schriftlich zu geben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Untersuchung, z.B. Verhalten nach der Untersuchung, mögliche Nachwirkungen, und wann die Ergebnisse vorliegen.",
+            third:
+              "Trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller auszuscheiden.",
+            fourth:
+              "Vermeiden Sie intensive körperliche Aktivität für den Rest des Tages.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient die Ergebnisse erhalten wird, und wer die Ergebnisse mit ihm besprechen wird.",
+            third:
+              "Die Ergebnisse werden innerhalb einer Woche vorliegen und Ihr Arzt wird sie mit Ihnen besprechen.",
+            fourth:
+              "Nach der Untersuchung vereinbaren wir einen Termin, um die Ergebnisse gemeinsam zu besprechen.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 57,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie kurz, dass die Single-Photon-Emissions-Computertomographie (SPECT) eine nuklearmedizinische Bildgebungstechnik ist, die zur Erfassung funktioneller Informationen über Organe und Gewebe verwendet wird.",
+            third:
+              "Die SPECT ist eine nuklearmedizinische Technik, die Gammastrahlen verwendet, um dreidimensionale Bilder der Verteilung eines Radiopharmakons im Körper zu erstellen.",
+            fourth:
+              "Mit SPECT können wir die Funktion von Organen wie dem Herz und dem Gehirn durch die Verteilung eines injizierten radioaktiven Stoffes bildlich darstellen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, dass SPECT zur Untersuchung von Durchblutungsstörungen des Herzens, Hirnfunktionen, Tumoren und anderen pathologischen Veränderungen verwendet wird.",
+            third:
+              "Wir nutzen SPECT zur Beurteilung der Myokardperfusion bei Verdacht auf koronare Herzkrankheit.",
+            fourth:
+              "SPECT wird auch zur Analyse der Hirnaktivität bei Patienten mit Epilepsie eingesetzt.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse interpretiert werden, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese Ergebnisse diagnostisch bedeuten.",
+            third:
+              "Eine homogene Verteilung des Radiopharmakons im Herz deutet auf eine normale Durchblutung hin.",
+            fourth:
+              "Fokale Anreicherungen im Gehirn könnten auf epileptische Aktivität oder einen Tumor hinweisen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, welche klinischen Fragestellungen die SPECT rechtfertigen, z.B. Ischämie-Diagnostik bei koronaren Herzkrankheiten, Diagnose und Verlaufskontrolle bei Epilepsie und Demenz.",
+            third:
+              "Indikationen für eine SPECT sind unter anderem die Ischämie-Diagnostik und die Evaluation der Myokardvitalität.",
+            fourth:
+              "Bei Verdacht auf Demenz kann SPECT zur Differenzierung zwischen Alzheimer und anderen Demenzformen beitragen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Nennen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen das Radiopharmakon.",
+            third:
+              "Schwangerschaft ist eine Kontraindikation aufgrund der Strahlenbelastung.",
+            fourth:
+              "Bekannte Allergien gegen das verwendete Radiopharmakon stellen ebenfalls eine Kontraindikation dar.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die anhand der SPECT-Befunde abgeklärt werden können, z.B. Differenzierung zwischen ischämischen und nicht-ischämischen Herzerkrankungen.",
+            third:
+              "Bei der Myokard-SPECT können wir zwischen ischämischer und nicht-ischämischer Kardiomyopathie unterscheiden.",
+            fourth:
+              "Bei neurologischen SPECT-Untersuchungen können wir epileptische Herde von anderen Hirnpathologien abgrenzen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die SPECT-Ergebnisse in die Erstellung und Anpassung von Behandlungsplänen einfließen, z.B. Entscheidung über Revaskularisationsmaßnahmen oder antiepileptische Therapien.",
+            third:
+              "Basierend auf den SPECT-Ergebnissen kann entschieden werden, ob eine Koronarangioplastie notwendig ist.",
+            fourth:
+              "Die Identifikation epileptischer Herde mittels SPECT kann die Wahl der antiepileptischen Therapie beeinflussen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie Radiologie, Neurologie, Kardiologie und Onkologie für eine umfassende Diagnose und Therapie.",
+            third:
+              "Die enge Zusammenarbeit mit Kardiologen ist essenziell, um die SPECT-Ergebnisse korrekt zu interpretieren und therapeutische Maßnahmen einzuleiten.",
+            fourth:
+              "Neurologen und Nuklearmediziner arbeiten zusammen, um die besten Behandlungsstrategien für Patienten mit Epilepsie zu entwickeln.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität der SPECT-Untersuchungen, z.B. regelmäßige Kalibrierung der Geräte, Schulung des Personals und Einhaltung von Protokollen.",
+            third:
+              "Regelmäßige Kalibrierung der Gamma-Kameras ist notwendig, um eine hohe Bildqualität zu gewährleisten.",
+            fourth:
+              "Das Personal wird kontinuierlich geschult, um sicherzustellen, dass die Protokolle und Sicherheitsstandards eingehalten werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Notwendigkeit der Nachverfolgung, um die Behandlungserfolge zu überwachen und weitere diagnostische Schritte zu planen.",
+            third:
+              "Eine detaillierte Dokumentation der SPECT-Ergebnisse ist wichtig, um den Verlauf der Therapie zu überwachen.",
+            fourth:
+              "Die Ergebnisse werden im Patientenakte dokumentiert und mit den behandelnden Ärzten besprochen, um die nächsten Schritte zu planen.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 58,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung zur Herzgesundheit.",
+            third:
+              "55-jähriger Patient klagt über Brustschmerzen und Kurzatmigkeit bei Belastung. Vorgeschichte eines Bluthochdrucks.",
+            fourth:
+              "70-jährige Patientin berichtet über zunehmende Gedächtnisstörungen und Orientierungslosigkeit. Familiengeschichte mit Alzheimer.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "SPECT-Bilder zeigen eine homogene Perfusion ohne Anzeichen von Minderdurchblutung oder pathologischen Veränderungen.",
+            third:
+              "SPECT zeigt eine reduzierte Perfusion im anterioren Bereich des linken Ventrikels, besonders bei Belastung.",
+            fourth:
+              "SPECT zeigt eine verminderte Aktivität im parietalen und temporalen Kortex.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Ergebnisse bestätigen eine normale Herzfunktion.",
+            third:
+              "Der Befund deutet auf eine myokardiale Ischämie hin, die mit den Symptomen des Patienten übereinstimmt.",
+            fourth:
+              "Die Befunde sind typisch für Alzheimer und korrelieren mit den klinischen Symptomen der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer möglichen koronaren Intervention wie Angioplastie oder Bypass-Operation.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer cholinesterasehemmenden Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer myokardialen Ischämie basierend auf SPECT-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Alzheimer aufgrund der SPECT-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmietel",
+            second:
+              "Homogene Perfusion in allen Bereichen des Herzens, keine Auffälligkeiten sichtbar.",
+            third:
+              "SPECT-Bilder zeigen eine deutliche Minderdurchblutung im belasteten Zustand im anterioren Bereich des linken Ventrikels.",
+            fourth:
+              "SPECT-Bilder zeigen eine diffuse Hypoperfusion im parietalen und temporalen Kortex, typisch für Alzheimer.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine jährliche Routinekontrolle zur Überwachung der Herzgesundheit. Der Patient sollte weiterhin einen gesunden Lebensstil pflegen, um das Risiko von Herzkrankheiten zu minimieren.",
+            third:
+              "Wir empfehlen eine koronare Angiographie zur weiteren Abklärung und gegebenenfalls interventionelle Maßnahmen. Regelmäßige Nachuntersuchungen sind ebenfalls wichtig.",
+            fourth:
+              "Es ist zu empfehlen, eine neuropsychologische Testung und eine langfristige Therapieplanung in Erwägung zu ziehen. Regelmäßige kognitive Tests zur Überwachung des Fortschreitens der Erkrankung sind notwendig.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 59,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Single-Photon-Emissions-Computertomographie (SPECT) Gerät ist ein fortschrittliches medizinisches Bildgebungsgerät, das detaillierte dreidimensionale Bilder der funktionellen Prozesse im Körper erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines SPECT-Geräts:",
+        text_list: [
+          {
+            bold: "Gantry: ",
+            other:
+              "Ist der ringförmige Teil des SPECT-Geräts, der die Gamma-Kameras und Kollimatoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
+          },
+          {
+            bold: "Gamma-Kamera: ",
+            other:
+              "Erfasst die von den Radiopharmaka emittierten Gammastrahlen. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "Kollimatoren: ",
+            other:
+              "Sind vor den Detektoren angeordnet und filtern die eintreffenden Gammastrahlen, um nur diejenigen durchzulassen, die aus bestimmten Winkeln kommen. Dies verbessert die Bildqualität.",
+          },
+          {
+            bold: "Radiopharmakon: ",
+            other:
+              "Ein radioaktives Medikament, das in den Körper des Patienten injiziert wird und sich in bestimmten Organen oder Geweben ansammelt, je nach diagnostischer Fragestellung.",
+          },
+          {
+            bold: "Patiententisch: ",
+            other:
+              "Ist motorisiert und kann horizontal in den Gantry hinein- und herausgefahren werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation: ",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung.",
+          },
+          {
+            bold: "Steuerkonsole: ",
+            other:
+              "Ermöglicht dem Technologen, das SPECT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Kühlungssystem: ",
+            other:
+              "Ist notwendig, um die elektronischen Komponenten und insbesondere die Gamma-Kameras zu kühlen, da sie während der Erfassung der Gammastrahlen Wärme produzieren.",
+          },
+          {
+            bold: "Multidetektor-SPECT (MDSPECT): ",
+            other:
+              "Moderne SPECT-Geräte sind oft als Multidetektor-SPECT (MDSPECT) konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem: ",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Bildrekonstruktionssoftware: ",
+            other:
+              "Wandelt die erfassten Gammastrahlendaten in dreidimensionale Bilder um, die vom Radiologen zur Diagnose und Planung von Behandlungen verwendet werden.",
+          },
+          {
+            bold: "Strahlenschutzvorrichtungen: ",
+            other:
+              "Gewährleisten die Sicherheit des medizinischen Personals und des Patienten, indem sie die Strahlenbelastung minimieren.",
+          },
+          {
+            bold: "Kalibrierungswerkzeuge: ",
+            other:
+              "Werden verwendet, um die Genauigkeit und Präzision der Gamma-Kameras und anderer Komponenten regelmäßig zu überprüfen und sicherzustellen.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 60,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Single-Photon-Emissions-Computertomographie (SPECT): ",
+            other:
+              "Ein bildgebendes Verfahren in der Nuklearmedizin zur Darstellung der funktionellen Informationen von Organen.",
+          },
+          {
+            bold: "Nuklearmedizin: ",
+            other:
+              "Ein medizinisches Fachgebiet, das radioaktive Substanzen zur Diagnose und Therapie verwendet.",
+          },
+          {
+            bold: "Radiopharmakon: ",
+            other:
+              "Ein radioaktives Medikament, das in den Körper injiziert wird, um spezifische Organe oder Gewebe zu visualisieren.",
+          },
+          {
+            bold: "Gamma-Kamera: ",
+            other:
+              "Ein Gerät, das die von den Radiopharmaka emittierten Gammastrahlen erfasst und Bilder erstellt.",
+          },
+          {
+            bold: "Kollimator: ",
+            other:
+              "Ein Gerät, das die Richtung der eintreffenden Strahlung bestimmt, um präzisere Bilder zu erhalten.",
+          },
+          {
+            bold: "Bildrekonstruktion: ",
+            other:
+              "Der Prozess der Umwandlung der gesammelten Daten in diagnostische Bilder.",
+          },
+          {
+            bold: "Funktionelle Bildgebung: ",
+            other:
+              "Bildgebung, die Informationen über die Funktion von Organen und Geweben liefert, nicht nur deren Struktur.",
+          },
+          {
+            bold: "Strahlenbelastung: ",
+            other:
+              "Die Menge an ionisierender Strahlung, der ein Patient während einer Untersuchung ausgesetzt ist.",
+          },
+          {
+            bold: "Isotop: ",
+            other:
+              "Eine Variante eines chemischen Elements, die durch eine unterschiedliche Anzahl von Neutronen im Kern gekennzeichnet ist.",
+          },
+          {
+            bold: "Tracer: ",
+            other:
+              "Ein radioaktiver Marker, der im Körper verteilt wird, um spezifische physiologische Prozesse sichtbar zu machen.",
+          },
+          {
+            bold: "Wartezeit: ",
+            other:
+              "Die Zeit, die benötigt wird, damit sich das Radiopharmakon im Körper verteilt.",
+          },
+          {
+            bold: "Kontrastmittel: ",
+            other:
+              "Eine Substanz, die verwendet wird, um die Sichtbarkeit von Strukturen oder Flüssigkeiten im Körper zu erhöhen.",
+          },
+          {
+            bold: "Protokoll: ",
+            other:
+              "Eine Reihe von Anweisungen und Verfahren zur Durchführung der SPECT-Untersuchung.",
+          },
+          {
+            bold: "Kalibrierung: ",
+            other:
+              "Die Justierung der Gamma-Kamera und anderer Geräte, um genaue Messungen zu gewährleisten.",
+          },
+          {
+            bold: "Myokardperfusion: ",
+            other:
+              "Die Durchblutung des Herzmuskels, die mit SPECT untersucht werden kann.",
+          },
+          {
+            bold: "Hirnfunktionsanalyse: ",
+            other:
+              "Die Untersuchung der Aktivität und Durchblutung des Gehirns mithilfe von SPECT.",
+          },
+          {
+            bold: "Tumordetektion: ",
+            other:
+              "Die Erkennung von Tumoren durch die Visualisierung abnormer Zellaktivitäten.",
+          },
+          {
+            bold: "Epilepsie-Diagnostik: ",
+            other:
+              "Die Untersuchung und Identifizierung epileptischer Herde im Gehirn mittels SPECT.",
+          },
+          {
+            bold: "Alzheimer-Diagnose: ",
+            other:
+              "Die Diagnose der Alzheimer-Krankheit durch die Visualisierung charakteristischer Hirnveränderungen.",
+          },
+          {
+            bold: "Koronare Intervention: ",
+            other:
+              "Therapeutische Maßnahmen zur Behandlung von Herzkrankheiten, die auf SPECT-Befunden basieren können.",
+          },
+          {
+            bold: "Angioplastie: ",
+            other:
+              "Ein Verfahren zur Erweiterung verengter Blutgefäße im Herzen.",
+          },
+        ],
+      },
+      {
+        id: 61,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "NetDoktor: ",
+            other:
+              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT](https://www.netdoktor.de/diagnostik/spect/)",
+          },
+          {
+            bold: "Apotheken Umschau: ",
+            other:
+              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT](https://www.apotheken-umschau.de/diagnose/spect)",
+          },
+          {
+            bold: "Welt der Physik: ",
+            other:
+              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT](https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
+          },
+          {
+            bold: "Universitätsklinikum Münster: ",
+            other:
+              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT](https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
+          },
+          {
+            bold: "Miomedi: ",
+            other:
+              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT](https://www.miomedi.de/diagnostik/spect/)",
+          },
+          {
+            bold: "MedLexi: ",
+            other:
+              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT](https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
+          },
+        ],
+      },
+      {
+        id: 62,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1_AhtgQKA6hESjiROQr_SO-om4QgJWbrl/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 8
 ];
