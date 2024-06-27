@@ -3355,5 +3355,662 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 6
+  // end of parent tab 5
+  // start of parent tab 6
+  {
+    id: 6,
+    title:
+      "PET-CT (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 47,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die PET-CT-Untersuchung zielt darauf ab, metabolische und anatomische Informationen des Körpers zu kombinieren, um präzise diagnostische Aussagen zu ermöglichen. Dies ist besonders wichtig bei der Diagnose und dem Management von Krebserkrankungen, neurologischen und kardiologischen Störungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Relevanz der PET-CT liegt in ihrer Fähigkeit, sowohl funktionelle als auch strukturelle Bildgebung zu liefern. Anwendungsbereiche umfassen die Onkologie zur Tumordetektion und -charakterisierung, die Neurologie zur Untersuchung von Hirnstoffwechselstörungen und die Kardiologie zur Bewertung der Myokardperfusion.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die PET-CT basiert auf der Kombination zweier Bildgebungstechniken: der Positronen-Emissions-Tomographie (PET), die Stoffwechselprozesse sichtbar macht, und der Computertomographie (CT), die detaillierte anatomische Bilder liefert. Dabei werden Radiotracer verwendet, die sich in spezifischen Geweben anreichern und Positronen emittieren, welche dann detektiert werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Technisch gesehen, erfolgt die PET-CT in mehreren Schritten: Injektion des Radiotracers, Wartezeit für die Anreicherung im Zielgewebe, Durchführung der PET- und CT-Scans und schließlich die Kombination der beiden Bildgebungen zu einem integrierten Bild.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der PET-CT-Bilder erfordert spezielle Kenntnisse in der Interpretation sowohl der metabolischen Aktivität (PET) als auch der anatomischen Struktur (CT). Typischerweise werden Regionen mit erhöhtem Radiotracer-Uptake identifiziert und mit den anatomischen Bildern abgeglichen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei der PET-CT umfassen die Identifikation von Tumoren, Metastasen, Entzündungsherden und neurologischen Anomalien. Auffällige Befunde zeigen sich durch Regionen mit abnorm hoher oder niedriger Stoffwechselaktivität.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Zu den Vorteilen der PET-CT gehören die hohe Sensitivität und Spezifität, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, frühzeitig pathologische Veränderungen zu erkennen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Nachteile umfassen die hohen Kosten, die begrenzte Verfügbarkeit und die Notwendigkeit von Radiotracern, die eine Strahlenexposition mit sich bringen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Risiken der PET-CT umfassen die Strahlenbelastung durch die Radiotracer und den CT-Scan sowie mögliche allergische Reaktionen auf Kontrastmittel.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die PET-CT spielt eine zentrale Rolle in der Diagnose und Behandlung von Krebserkrankungen, da sie präzise Informationen über Tumoraktivität und -ausbreitung liefert. Auch in der Neurologie und Kardiologie ist sie ein wichtiges diagnostisches Werkzeug.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die PET-CT unerlässlich, da sie hilft, Therapieentscheidungen zu treffen, den Therapieerfolg zu überwachen und die Prognose zu beurteilen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur PET-CT umfassen MRT, CT, SPECT und Ultraschall, die je nach klinischer Fragestellung eingesetzt werden können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse zeigen Fortschritte in der Entwicklung neuer Radiotracer, die spezifischere Diagnosen ermöglichen, sowie Verbesserungen in der Bildqualität und Reduzierung der Strahlenexposition.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von künstlicher Intelligenz zur Verbesserung der Bildinterpretation und die Weiterentwicklung der Hybridbildgebungstechniken.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die PET-CT ist ein leistungsstarkes diagnostisches Werkzeug, das sowohl funktionelle als auch anatomische Informationen liefert und in vielen medizinischen Bereichen unverzichtbar ist.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die Gesamtbedeutung der PET-CT liegt in ihrer Fähigkeit, präzise Diagnosen zu stellen und das Management von Patienten signifikant zu verbessern. Sie ist ein Schlüsselinstrument in der modernen Medizin und wird durch kontinuierliche Forschung und Entwicklung weiter optimiert.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 48,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern Sie dem Patienten, dass das Ziel der PET-CT darin besteht, detaillierte Informationen über die Stoffwechselaktivität und die Anatomie des Körpers zu erhalten, um Erkrankungen wie Krebs zu diagnostizieren und zu bewerten.",
+            third:
+              "Die PET-CT hilft uns, Tumoren frühzeitig zu erkennen und deren genaue Lage und Aktivität zu bestimmen.",
+            fourth:
+              "Mit der PET-CT können wir feststellen, ob sich der Krebs auf andere Körperregionen ausgebreitet hat.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf der Untersuchung: Injektion eines Radiotracers, Wartezeit für die Verteilung des Tracers, Durchführung des PET-Scans und anschließend des CT-Scans, sowie die Kombination der Bilder.",
+            third:
+              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff, dann warten wir etwa eine Stunde, bevor wir die eigentlichen Scans durchführen.",
+            fourth:
+              "Während der Untersuchung liegen Sie ruhig auf einer Liege, die sich durch den Scanner bewegt. Die gesamte Prozedur dauert etwa zwei Stunden.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie über notwendige Vorbereitungen wie Nüchternheit, spezielle Diätvorgaben, das Tragen bequemer Kleidung und das Entfernen von Schmuck oder metallischen Gegenständen.",
+            third:
+              "Bitte kommen Sie nüchtern zur Untersuchung, das heißt, essen und trinken Sie nichts vier Stunden vorher.",
+            fourth:
+              "Vermeiden Sie koffeinhaltige Getränke und körperliche Anstrengungen am Tag vor der Untersuchung.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie die Risiken der Untersuchung, wie die Strahlenbelastung durch den Radiotracer und den CT-Scan, mögliche allergische Reaktionen auf Kontrastmittel.",
+            third:
+              "Es besteht eine geringe Strahlenbelastung, ähnlich wie bei einer Röntgenuntersuchung, die jedoch als sicher gilt.",
+            fourth:
+              "In seltenen Fällen kann es zu allergischen Reaktionen auf das Kontrastmittel kommen. Informieren Sie uns bitte, wenn Sie bekannte Allergien haben.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Heben Sie die Vorteile hervor, wie die hohe Genauigkeit der Diagnose, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, Erkrankungen frühzeitig zu erkennen.",
+            third:
+              "Die PET-CT bietet eine sehr präzise Diagnose, indem sie Stoffwechselprozesse und anatomische Strukturen gleichzeitig darstellt.",
+            fourth:
+              "Dank der PET-CT können wir Tumore frühzeitig erkennen und gezielt behandeln.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie alternative Untersuchungsmethoden wie MRT, CT, SPECT oder Ultraschall und warum PET-CT in bestimmten Fällen bevorzugt wird.",
+            third:
+              "Alternativen wie MRT oder CT liefern zwar detaillierte Bilder, zeigen aber nicht die Stoffwechselaktivität der Gewebe.",
+            fourth:
+              "Die SPECT ist eine weitere Alternative, aber die PET-CT bietet eine höhere Auflösung und genauere Ergebnisse.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen Kontrastmittel.",
+            third:
+              "Wenn Sie schwanger sind oder stillen, sollten Sie uns dies unbedingt mitteilen, da die Strahlung dem Kind schaden könnte.",
+            fourth:
+              "Falls Sie bekannte Allergien gegen Kontrastmittel haben, informieren Sie uns bitte, damit wir geeignete Vorsichtsmaßnahmen treffen können.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die Art der möglichen Ergebnisse, die von normalen Befunden bis hin zu pathologischen Veränderungen reichen können.",
+            third:
+              "Ein normales Ergebnis zeigt keine Anzeichen von Tumoren oder anderen Auffälligkeiten. Sollte etwas gefunden werden, besprechen wir die weiteren Schritte mit Ihnen.",
+            fourth:
+              "Die Ergebnisse können auch Hinweise auf andere Erkrankungen geben, wie zum Beispiel Entzündungen oder neurologische Störungen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit der Einwilligung des Patienten vor der Durchführung der Untersuchung, um sicherzustellen, dass der Patient alle Informationen verstanden hat.",
+            third:
+              "Ihre Zustimmung ist notwendig, damit wir die Untersuchung durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben und einverstanden sind.",
+            fourth:
+              "Vor der Untersuchung benötigen wir Ihre schriftliche Einwilligung. Dies stellt sicher, dass Sie über alle Aspekte der Untersuchung informiert sind und zugestimmt haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie den Prozess des Einverständnisses: Der Patient muss ein Formular unterschreiben, nachdem er über alle relevanten Aspekte der Untersuchung informiert wurde.",
+            third:
+              "Nachdem wir alle Ihre Fragen beantwortet haben, bitten wir Sie, dieses Einwilligungsformular zu unterschreiben.",
+            fourth:
+              "Bitte lesen Sie das Formular sorgfältig durch und unterschreiben Sie es, wenn Sie mit der Untersuchung einverstanden sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Vermeidung von engem Kontakt mit Schwangeren und kleinen Kindern für eine bestimmte Zeit und das Trinken von viel Wasser zur Ausscheidung des Radiotracers.",
+            third:
+              "Nach der Untersuchung sollten Sie für 24 Stunden engen Kontakt mit Schwangeren und kleinen Kindern vermeiden, um die Strahlenexposition zu minimieren.",
+            fourth:
+              "Trinken Sie viel Wasser nach der Untersuchung, um den Radiotracer schneller aus Ihrem Körper auszuspülen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient die Ergebnisse der Untersuchung erhält, und dass ein Folgetermin zur Besprechung der Ergebnisse vereinbart wird.",
+            third:
+              "Die Auswertung der Bilder kann einige Tage in Anspruch nehmen. Wir vereinbaren einen Termin, um die Ergebnisse mit Ihnen zu besprechen.",
+            fourth:
+              "Sie werden die Ergebnisse von Ihrem behandelnden Arzt erhalten, der dann die nächsten Schritte mit Ihnen bespricht.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 49,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie dem Kollegen, dass es sich bei der PET-CT um eine kombinierte bildgebende Untersuchung handelt, die sowohl funktionelle als auch anatomische Informationen liefert.",
+            third:
+              "Die PET-CT kombiniert die metabolischen Daten der Positronen-Emissions-Tomographie mit den detaillierten anatomischen Bildern der Computertomographie.",
+            fourth:
+              "Bei der PET-CT wird ein Radiotracer verwendet, um Stoffwechselaktivitäten im Körper sichtbar zu machen und diese mit der anatomischen Bildgebung der CT zu kombinieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, dass die PET-CT zur Diagnose und Beurteilung von Krebs, neurologischen Erkrankungen und Herzkrankheiten verwendet wird, indem sie metabolische Aktivitäten und anatomische Strukturen sichtbar macht.",
+            third:
+              "Mit der PET-CT können wir Tumore, Metastasen, neurologische Erkrankungen wie Alzheimer und kardiale Erkrankungen wie Myokardvitalität untersuchen.",
+            fourth:
+              "Die PET-CT ist besonders hilfreich bei der Detektion und Beurteilung der metabolischen Aktivität von Krebszellen sowie bei der Diagnose von entzündlichen und neurologischen Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Diskutieren Sie typische Befunde wie Tumorlokalisation, -größe und -aktivität, Metastasen, entzündliche Prozesse oder neurologische Anomalien, die durch die PET-CT identifiziert werden können.",
+            third:
+              "Ein positives PET-CT-Ergebnis kann uns genaue Informationen über die Größe und Lokalisation eines Tumors sowie das Vorhandensein von Metastasen geben.",
+            fourth:
+              "Die Untersuchungsergebnisse zeigen erhöhte Stoffwechselaktivität in den Lymphknoten, was auf eine mögliche Metastasierung hindeutet.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie, dass Indikationen für eine PET-CT unter anderem die Staging und Restaging von Krebs, die Beurteilung von Therapieantworten, die Diagnose von Demenzerkrankungen und die Evaluierung von Myokardvitalität sind.",
+            third:
+              "Eine PET-CT ist indiziert bei Patienten mit Lungenkrebs zur Beurteilung der Tumorausbreitung und zur Überprüfung des Ansprechens auf die Therapie.",
+            fourth:
+              "Bei Patienten mit unklaren neurologischen Symptomen kann eine PET-CT helfen, eine Demenz vom Alzheimer-Typ von anderen Demenzformen zu unterscheiden.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie Kontraindikationen wie Schwangerschaft, Stillzeit, bekannte Allergien gegen Kontrastmittel und schwere Niereninsuffizienz.",
+            third:
+              "Schwangere sollten keine PET-CT-Untersuchung erhalten, da die Strahlenexposition das ungeborene Kind schädigen könnte.",
+            fourth:
+              "Patienten mit einer bekannten Allergie gegen Kontrastmittel müssen sorgfältig überwacht werden, und alternative Untersuchungen sollten in Betracht gezogen werden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erörtern Sie, wie die PET-CT hilft, zwischen verschiedenen Krankheitsbildern zu differenzieren, z.B. zwischen malignen und benignen Tumoren oder zwischen Alzheimer und anderen Demenzformen.",
+            third:
+              "Die PET-CT ermöglicht es uns, maligne von benignen Tumoren zu unterscheiden, indem sie die unterschiedliche Stoffwechselaktivität der Gewebe sichtbar macht.",
+            fourth:
+              "Bei Verdacht auf Alzheimer kann die PET-CT helfen, diese Diagnose von anderen Formen der Demenz zu unterscheiden, basierend auf spezifischen Stoffwechselmustern im Gehirn.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse der PET-CT zur Planung und Anpassung von Behandlungsstrategien beitragen können, einschließlich Operation, Strahlentherapie oder Chemotherapie.",
+            third:
+              "Die Ergebnisse der PET-CT können uns helfen, die Notwendigkeit einer chirurgischen Entfernung eines Tumors besser zu beurteilen und den Operationsumfang zu planen.",
+            fourth:
+              "Anhand der PET-CT-Ergebnisse können wir die Wirksamkeit der aktuellen Chemotherapie beurteilen und gegebenenfalls das Behandlungsschema anpassen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit Radiologen, Nuklearmedizinern, Onkologen, Neurologen und Kardiologen für die optimale Nutzung der PET-CT-Ergebnisse.",
+            third:
+              "Eine enge Zusammenarbeit zwischen Onkologen und Radiologen ist entscheidend, um die PET-CT-Ergebnisse optimal zu interpretieren und in die Behandlungsplanung einzubeziehen.",
+            fourth:
+              "Für eine umfassende Versorgung ist es wichtig, dass wir mit Nuklearmedizinern und Kardiologen zusammenarbeiten, um die Ergebnisse der PET-CT richtig zu interpretieren und anzuwenden.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie Maßnahmen zur Sicherstellung der Qualität und Genauigkeit der PET-CT-Untersuchungen, einschließlich regelmäßiger Kalibrierung der Geräte und Schulung des medizinischen Personals.",
+            third:
+              "Um die Qualität unserer PET-CT-Untersuchungen zu gewährleisten, führen wir regelmäßige Kalibrierungen der Geräte durch und stellen sicher, dass unser Personal gut geschult ist.",
+            fourth:
+              "Qualitätskontrollen und regelmäßige Wartung der PET-CT-Geräte sind unerlässlich, um konsistente und genaue Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Besprechen Sie die Notwendigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Bedeutung einer lückenlosen Weiterverfolgung zur Überprüfung des Behandlungserfolgs.",
+            third:
+              "Die detaillierte Dokumentation der PET-CT-Befunde ist wichtig für die Weiterverfolgung und Planung der Therapie. Wir sollten sicherstellen, dass alle Befunde klar und präzise festgehalten werden.",
+            fourth:
+              "Eine gründliche Dokumentation und regelmäßige Nachuntersuchungen sind entscheidend, um den Fortschritt der Behandlung zu überwachen und gegebenenfalls Anpassungen vorzunehmen.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 50,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
+            fourth:
+              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "PET-CT des Gehirns zeigt eine gleichmäßige Radiotracer-Verteilung ohne Anomalien, keine Anzeichen pathologischer Veränderungen.",
+            third:
+              "PET-CT zeigt eine erhöhte Aufnahme des Radiotracers im linken Frontallappen, korrespondierend mit einer 2 cm großen, kontrastmittelaufnehmenden Masse.",
+            fourth:
+              "PET-CT offenbart mehrere Areale mit verringerter Radiotracer-Aufnahme, die periventrikulär verteilt sind, korrespondierend mit demyelinisierenden Läsionen.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das PET-CT-Ergebnis unterstützt den Ausschluss neurologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen Glioblastom hin. Die Lokalisation und der erhöhte Metabolismus korrelieren mit den neurologischen Symptomen des Patienten.",
+            fourth:
+              "Die Verteilung und das Erscheinungsbild der Läsionen sind typisch für Multiple Sklerose. Zusammenhang mit den klinischen Symptomen und typischen demyelinisierenden Veränderungen.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung der neurochirurgischen Resektion und anschließender Radiotherapie.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer immunmodulatorischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Gehirns. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Glioblastoms basierend auf PET-CT-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Multipler Sklerose aufgrund der PET-CT-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Radiotracer-Verteilung ohne Auffälligkeiten in allen Sequenzen.",
+            third:
+              "PET-CT-Aufnahmen zeigen eine deutlich abgegrenzte Region mit hoher Radiotracer-Aufnahme im linken Frontallappen.",
+            fourth:
+              "PET-CT-Bilder zeigen multiple Regionen mit verringerter Radiotracer-Aufnahme, charakteristisch für demyelinisierende Läsionen bei MS.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, weiterhin regelmäßige Gesundheitschecks durchzuführen, um den aktuellen Gesundheitszustand zu überwachen.",
+            third:
+              "Wir empfehlen eine sofortige Überweisung an die Neurochirurgie zur Planung der Resektion. Zusätzlich ist eine anschließende Radiotherapie und gegebenenfalls eine Chemotherapie zu erwägen.",
+            fourth:
+              "Es ist zu empfehlen, eine immunmodulatorische Therapie zu beginnen und regelmäßige neurologische Kontrolluntersuchungen durchzuführen.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 51,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Positronen-Emissions-Tomographie kombiniert mit Computertomographie (PET-CT) Gerät ist ein hochentwickeltes medizinisches Bildgebungsgerät, das sowohl detaillierte anatomische als auch funktionelle Bilder des Körpers erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines PET-CT-Geräts:",
+        text_list: [
+          {
+            bold: "Gantry :",
+            other:
+              "Der ringförmige Teil des PET-CT-Geräts, der sowohl die Röntgenröhre für die CT als auch die Detektoren für die PET enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
+          },
+          {
+            bold: "Röntgenröhre :",
+            other:
+              "Erzeugt die Röntgenstrahlen für die CT-Komponente des Geräts. Diese Strahlen durchdringen den Körper des Patienten und ermöglichen die Erstellung detaillierter anatomischer Bilder. Die Röntgenröhre ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "PET-Detektoren :",
+            other:
+              "Erfassen die Positronen, die vom injizierten Radiotracer emittiert werden, nachdem sie mit Elektronen im Körper des Patienten kollidiert sind. Diese Detektoren wandeln die Strahlung in elektrische Signale um, die dann zu Bildern verarbeitet werden.",
+          },
+          {
+            bold: "CT-Detektoren :",
+            other:
+              "Befinden sich gegenüber der Röntgenröhre im Gantry. Sie erfassen die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Ein motorisierter Tisch, der horizontal in den Gantry hinein- und herausgefahren werden kann. Der Patient liegt während der gesamten Untersuchung auf diesem Tisch, der sich präzise bewegt, um die verschiedenen Körperregionen zu scannen.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung, verarbeitet die Bilddaten und interpretiert die Ergebnisse.",
+          },
+          {
+            bold: "Kontrastmittelinjektor :",
+            other:
+              "Wird häufig verwendet, um Kontrastmittel intravenös zu verabreichen. Dies verbessert die Sichtbarkeit bestimmter Strukturen oder Pathologien im Körper während der CT-Komponente der Untersuchung.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Ermöglicht dem Technologen, das PET-CT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen. Hier werden auch Parameter wie Strahlendosis und Scanzeit eingestellt.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Notwendig, um die Röntgenröhre und die PET-Detektoren zu kühlen, da sie während der Erzeugung von Strahlung viel Wärme produzieren. Ein effektives Kühlsystem verhindert Überhitzung und gewährleistet die Zuverlässigkeit des Geräts.",
+          },
+          {
+            bold: "Multidetektor-CT (MDCT) :",
+            other:
+              "Moderne PET-CT-Geräte sind oft als Multidetektor-CT konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung, wodurch sowohl die anatomische als auch die funktionelle Bildgebung verbessert wird.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist besonders wichtig, um sicherzustellen, dass der Patient still liegt und um eventuelle Fragen oder Unbehagen zu klären.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 52,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der PET-CT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "PET-CT :",
+            other:
+              "Ein bildgebendes Verfahren, das sowohl funktionelle als auch anatomische Informationen liefert.",
+          },
+          {
+            bold: "Radiotracer :",
+            other:
+              "Eine schwach radioaktive Substanz, die in den Körper injiziert wird, um Stoffwechselprozesse sichtbar zu machen.",
+          },
+          {
+            bold: "Metabolische Aktivität :",
+            other:
+              "Die biochemischen Prozesse, die in Zellen und Geweben ablaufen, oft erhöht in Tumorzellen.",
+          },
+          {
+            bold: "Anatomische Bildgebung :",
+            other:
+              "Darstellung der physischen Strukturen des Körpers durch Verfahren wie CT oder MRT.",
+          },
+          {
+            bold: "Staging :",
+            other:
+              "Die Bestimmung des Ausmaßes und der Ausbreitung einer Krebserkrankung im Körper.",
+          },
+          {
+            bold: "Restaging :",
+            other:
+              "Die Neubewertung des Krankheitsstadiums nach einer Behandlung.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die vor der Bildgebung injiziert wird, um bestimmte Gewebe besser sichtbar zu machen.",
+          },
+          {
+            bold: "Demyelinisierende Läsion :",
+            other:
+              "Schäden an der Myelinschicht von Nervenfasern, typisch für Erkrankungen wie Multiple Sklerose.",
+          },
+          {
+            bold: "Hyperintens :",
+            other:
+              "Gebiete, die auf dem Bild heller erscheinen, oft aufgrund einer erhöhten Stoffwechselaktivität.",
+          },
+          {
+            bold: "Hypointens :",
+            other:
+              "Gebiete, die auf dem Bild dunkler erscheinen, oft aufgrund einer verringerten Stoffwechselaktivität.",
+          },
+          {
+            bold: "Glioblastom :",
+            other:
+              "Ein aggressiver Hirntumor, der oft in der PET-CT durch hohe metabolische Aktivität erkennbar ist.",
+          },
+          {
+            bold: "Dawson-Finger :",
+            other:
+              "Charakteristische MRT-Befunde bei Multipler Sklerose, die fingerartige Projektionen von Läsionen entlang der Ventrikelwände zeigen.",
+          },
+          {
+            bold: "Strahlenbelastung :",
+            other:
+              "Die Menge an Strahlung, der ein Patient während einer bildgebenden Untersuchung ausgesetzt ist.",
+          },
+          {
+            bold: "Myokardvitalität :",
+            other:
+              "Die Lebensfähigkeit des Herzmuskels, oft untersucht bei Verdacht auf Herzinfarkt oder andere Herzkrankheiten.",
+          },
+          {
+            bold: "Spezifität :",
+            other:
+              "Die Fähigkeit eines diagnostischen Tests, nur die Zielerkrankung zu identifizieren und keine falsch positiven Ergebnisse zu liefern.",
+          },
+          {
+            bold: "Sensitivität :",
+            other:
+              "Die Fähigkeit eines diagnostischen Tests, auch bei geringer Krankheitslast positive Ergebnisse zu liefern, also keine falsch negativen Ergebnisse zu produzieren.",
+          },
+          {
+            bold: "Nuklearmedizin :",
+            other:
+              "Ein medizinisches Fachgebiet, das radioaktive Substanzen für Diagnose und Therapie verwendet.",
+          },
+          {
+            bold: "Follow-up :",
+            other:
+              "Die Nachsorge oder weitere Überwachung eines Patienten nach einer Diagnose oder Behandlung.",
+          },
+
+          {
+            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der PET-CT-Diagnostik wichtig ist und können in einer Prüfungssituation nützlich sein.",
+          },
+        ],
+      },
+      {
+        id: 53,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "DocCheck Flexikon",
+            other:
+              "Diese Seite bietet umfassende Informationen zur Positronen-Emissions-Tomographie (PET) und PET-CT, einschließlich Funktionsprinzipien, Radionukliden und Anwendungsmöglichkeiten. URL: https://flexikon.doccheck.com/de/Positronenemissionstomographie",
+          },
+          {
+            bold: "DocCheck Flexikon",
+            other:
+              "Informationen zu PSMA-PET/CT, einschließlich Definition, Hintergrund und Indikationen. URL: https://flexikon.doccheck.com/de/PSMA-PET/CT",
+          },
+          {
+            bold: "Amboss",
+            other:
+              "Amboss ist ein medizinisches Nachschlagewerk für Studenten und Ärzte. Es bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich PET-CT. URL: https://www.amboss.com/de",
+          },
+          {
+            bold: "PraktischArzt",
+            other:
+              "Auf dieser Seite wird der Ablauf einer PET-CT-Untersuchung sowie deren Vorbereitung und typische Anwendungsgebiete erläutert. URL: https://www.praktischarzt.de/untersuchung/pet-ct/",
+          },
+          {
+            bold: "Universitätsklinikum Freiburg",
+            other:
+              "Diese Seite bietet detaillierte Informationen zu den speziellen Aspekten und Anwendungen der PET-CT im klinischen Alltag. URL: https://ims.uniklinik-freiburg.de/de/leistungsangebot/nuklearmedizin/pet-ct.html",
+          },
+          {
+            bold: "Stärker gegen Krebs",
+            other:
+              "Diese Webseite erklärt die Vorteile und Risiken der PET-CT, insbesondere in der Krebsdiagnostik. URL: https://www.staerkergegenkrebs.de/pet-ct/",
+          },
+          {
+            bold: "Radiologie München",
+            other:
+              "Diese Seite bietet Informationen über die Durchführung von PET-CT-Untersuchungen und deren spezielle Anwendungen, wie z.B. beim Prostatakarzinom. URL: https://www.radiologie-muenchen.de/pet-ct/",
+          },
+          {
+            bold: "Helios Gesundheit",
+            other:
+              "Hier wird erklärt, wie PET-CT-Untersuchungen zur Diagnose und Therapiekontrolle verwendet werden und welche Vorbereitungen dafür notwendig sind. URL: https://www.helios-gesundheit.de/",
+          },
+        ],
+      },
+      {
+        id: 54,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1oNhdsA-M_KFw_QCaGB6H6aoBDGSy1PGn/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 7
 ];
