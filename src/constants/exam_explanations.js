@@ -4679,4 +4679,727 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 8
+  {
+    id: 8,
+    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 63,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Der Breischluck-Test wird durchgeführt, um die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen. Ziel ist es, strukturelle oder funktionelle Anomalien zu identifizieren, die zu Symptomen wie Dysphagie, Regurgitation oder chronischem Husten führen können.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Der Breischluck-Test ist relevant in der Diagnostik von Erkrankungen wie Achalasie, gastroösophagealem Reflux, Ösophagusstrikturen und Tumoren. Er wird häufig in der gastroenterologischen und HNO-Diagnostik eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Der Breischluck-Test basiert auf der Röntgenfluoroskopie, bei der der Patient eine Kontrastmittelhaltige Flüssigkeit (Barium) trinkt. Das Barium ermöglicht es, die Konturen und Bewegungen der Speiseröhre und des Magens auf Röntgenbildern sichtbar zu machen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Technisch erfordert der Test die Verwendung eines Röntgenfluoroskops sowie eines Bariumbrei-Kontrastmittels. Der Patient trinkt das Barium, während kontinuierliche Röntgenaufnahmen gemacht werden, um die Passage des Kontrastmittels durch den oberen Gastrointestinaltrakt zu visualisieren.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung erfolgt durch einen Radiologen, der die Aufnahmen auf Abnormalitäten wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore untersucht. Die dynamische Beurteilung der Kontrastmittelpassage ist dabei von zentraler Bedeutung.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können eine verzögerte Kontrastmittelpassage bei Achalasie, retrosternale Füllungsdefekte bei Tumoren oder Refluxphänomene bei gastroösophagealem Reflux umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ein wesentlicher Vorteil des Breischluck-Verfahrens liegt in seiner Nicht-Invasivität. Es ermöglicht die Beurteilung von Schluckstörungen, ohne dass invasive Maßnahmen erforderlich sind. Ein weiterer Vorteil ist die Möglichkeit der Echtzeit-Beobachtung der Schluckfunktion. Dies erlaubt es dem Radiologen, die dynamischen Prozesse während des Schluckakts direkt zu sehen und zu beurteilen. Zudem weist das Breischluck-Verfahren eine hohe diagnostische Genauigkeit für bestimmte Pathologien auf, was es zu einem wertvollen Instrument in der Diagnostik macht.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Trotz der vielen Vorteile hat das Breischluck-Verfahren auch einige Nachteile. Einer der Hauptnachteile ist die Strahlenexposition, die mit jeder Röntgenuntersuchung einhergeht. Dies ist besonders bei wiederholten Untersuchungen von Bedeutung. Ein weiterer Nachteil ist die Einschränkung bei Patienten mit Kontrastmittelallergien, da das Verfahren die Verabreichung eines bariumsulfathaltigen Kontrastmittels erfordert.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken des Breischluck-Verfahrens umfassen in erster Linie die Strahlenbelastung, die zwar relativ gering ist, aber dennoch berücksichtigt werden muss, insbesondere bei Patienten, die häufig untersucht werden müssen. Ein weiteres Risiko ist die mögliche Aspiration des Kontrastmittels, was zu Komplikationen wie einer Aspirationspneumonie führen kann. Darüber hinaus können bei einigen Patienten Unverträglichkeiten gegenüber dem Kontrastmittel auftreten, was zu Nebenwirkungen oder allergischen Reaktionen führen kann.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Der Breischluck-Test spielt eine wichtige Rolle in der Diagnose und Differenzialdiagnose von Erkrankungen des oberen Gastrointestinaltrakts. Er liefert entscheidende Informationen, die die weitere Therapieplanung beeinflussen können.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die Identifikation von pathologischen Veränderungen kann der Breischluck-Test die Wahl der geeigneten therapeutischen Maßnahmen und das Management des Patienten wesentlich beeinflussen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen gehören die Ösophagogastroduodenoskopie (ÖGD), die hochauflösende Manometrie und die pH-Metrie. Jede dieser Methoden hat ihre spezifischen Indikationen und Vorteile.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neuere Studien befassen sich mit der Verbesserung der Bildqualität und der Reduktion der Strahlenbelastung durch neue Technologien. Zudem wird die Rolle des Breischluck-Tests in der Beurteilung von Patienten nach bariatrischen Operationen untersucht.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten den Einsatz von MRT-Kontrastmitteln anstelle von Barium umfassen, um die Strahlenbelastung weiter zu reduzieren und die diagnostische Genauigkeit zu erhöhen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Der Breischluck-Test ist ein zentrales diagnostisches Werkzeug in der Gastroenterologie, das eine nicht-invasive Beurteilung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht. Er bietet klare Vorteile, birgt jedoch auch gewisse Risiken und Einschränkungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist der Breischluck-Test ein unverzichtbares Verfahren in der klinischen Diagnostik, das essenzielle Informationen für die Diagnose und das Management von Patienten mit gastrointestinalen Beschwerden liefert.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 64,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern, dass der Breischluck-Test durchgeführt wird, um die Struktur der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen und strukturelle oder funktionelle Anomalien zu identifizieren.",
+            third:
+              "Wir führen diesen Test durch, um herauszufinden, ob es Probleme mit Ihrer Speiseröhre oder Ihrem oberen Magen-Darm-Trakt gibt, wie Verengungen oder Bewegungsstörungen.",
+            fourth:
+              "Der Test hilft uns, die Ursache Ihrer Schluckbeschwerden zu finden, indem wir die Struktur und Funktion Ihrer Speiseröhre sichtbar machen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben, dass der Patient ein Kontrastmittelhaltiges Getränk (Barium) zu sich nimmt und dabei kontinuierliche Röntgenaufnahmen gemacht werden, um die Bewegung des Kontrastmittels durch den oberen Gastrointestinaltrakt zu beobachten.",
+            third:
+              "Sie trinken eine Flüssigkeit, die Barium enthält. Während Sie trinken, machen wir Röntgenaufnahmen, um zu sehen, wie die Flüssigkeit durch Ihre Speiseröhre fließt.",
+            fourth:
+              "Zuerst trinken Sie eine bariumsulfathaltige Flüssigkeit. Dann nehmen wir Röntgenbilder auf, um den Weg der Flüssigkeit durch Ihre Speiseröhre und Ihren Magen zu verfolgen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erklären, dass der Patient nüchtern sein sollte, also mindestens sechs Stunden vor dem Test nichts essen oder trinken darf. Informieren über eventuelle Medikamenteneinnahmen und allergische Reaktionen auf Kontrastmittel.",
+            third:
+              "Bitte essen oder trinken Sie mindestens sechs Stunden vor der Untersuchung nichts. Informieren Sie uns bitte, wenn Sie allergisch gegen Kontrastmittel sind.",
+            fourth:
+              "Sie müssen ab Mitternacht vor dem Test nüchtern bleiben. Wenn Sie regelmäßig Medikamente einnehmen, besprechen Sie dies bitte mit uns vorher.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren über mögliche Risiken wie Strahlenbelastung, Unbehagen durch das Trinken des Bariums, Aspiration des Kontrastmittels und seltene Verstopfung.",
+            third:
+              "Es gibt eine geringe Strahlenbelastung durch die Röntgenaufnahmen. Das Trinken des Bariums kann unangenehm sein und in seltenen Fällen kann es zu Verstopfung kommen.",
+            fourth:
+              "Während des Tests besteht ein kleines Risiko, dass das Kontrastmittel in Ihre Atemwege gelangt. Zudem kann es nach dem Test zu Verstopfung kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Hervorheben, dass der Breischluck-Test eine nicht-invasive Methode ist, die eine gute Visualisierung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht und schnell durchführbar ist.",
+            third:
+              "Der Vorteil dieses Tests ist, dass er nicht invasiv ist und uns eine gute Sicht auf die Funktion Ihrer Speiseröhre gibt.",
+            fourth:
+              "Dieser Test ist schnell und nicht-invasiv, was bedeutet, dass wir keine Operation durchführen müssen, um eine Diagnose zu stellen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen von Alternativen wie Ösophagogastroduodenoskopie (ÖGD), hochauflösende Manometrie und pH-Metrie, und deren spezifische Indikationen und Vorteile kurz beschreiben.",
+            third:
+              "Alternativ könnten wir eine Ösophagogastroduodenoskopie (ÖGD) durchführen, bei der eine Kamera in Ihre Speiseröhre eingeführt wird, um eine direkte Sicht zu erhalten.",
+            fourth:
+              "Eine andere Möglichkeit wäre eine hochauflösende Manometrie, bei der wir den Druck in Ihrer Speiseröhre messen, um Bewegungsstörungen zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Auf mögliche Kontraindikationen hinweisen, wie z.B. bekannte Allergien gegen Kontrastmittel, Schwangerschaft oder schwerwiegende Schluckstörungen.",
+            third:
+              "Dieser Test ist nicht geeignet, wenn Sie schwanger sind oder eine bekannte Allergie gegen Barium haben.",
+            fourth:
+              "Falls Sie schwerwiegende Schluckstörungen haben oder schwanger sind, könnte dieser Test nicht sicher für Sie sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären, dass typische Befunde strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore sein können.",
+            third:
+              "Die Ergebnisse könnten zeigen, dass Ihre Speiseröhre verengt ist oder nicht richtig funktioniert, was uns hilft, die richtige Behandlung für Sie zu finden.",
+            fourth:
+              "Wir könnten feststellen, dass es Tumore oder Divertikel in Ihrer Speiseröhre gibt, was uns helfen würde, die Ursache Ihrer Beschwerden genauer zu bestimmen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen, dass das Einverständnis des Patienten notwendig ist, um den Test durchzuführen.",
+            third:
+              "Ihr Einverständnis ist notwendig, damit wir diesen Test durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben.",
+            fourth:
+              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir fortfahren. Es ist wichtig, dass Sie über alle Aspekte des Tests informiert sind und sich wohl damit fühlen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Den Patienten bitten, das Einverständnis schriftlich zu geben und sicherstellen, dass er alle Fragen zum Test und dessen Ablauf beantwortet bekommt.",
+            third:
+              "Bitte unterschreiben Sie hier, um Ihr Einverständnis zu bestätigen. Haben Sie noch Fragen zu dem, was wir besprochen haben?",
+            fourth:
+              "Um fortzufahren, brauche ich Ihre Unterschrift auf diesem Formular. Gibt es noch etwas, das Sie wissen möchten?",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Den Patienten darauf hinweisen, dass er nach der Untersuchung viel Wasser trinken sollte, um das Barium aus dem Körper zu spülen.",
+            third:
+              "Nach dem Test sollten Sie viel Wasser trinken, um das Barium aus Ihrem Körper zu spülen. Es ist normal, wenn Ihr Stuhl vorübergehend weißlich aussieht.",
+            fourth:
+              "Trinken Sie bitte nach der Untersuchung viel Wasser, um das Barium auszuspülen. Ihr Stuhl könnte eine weiße Färbung annehmen, was vorübergehend normal ist.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren, dass die Ergebnisse der Untersuchung in der Regel innerhalb weniger Tage vorliegen und der behandelnde Arzt diese dann mit dem Patienten besprechen wird.",
+            third:
+              "Die Ergebnisse werden in ein paar Tagen vorliegen und Ihr Arzt wird diese mit Ihnen besprechen und die nächsten Schritte planen.",
+            fourth:
+              "Sie erhalten die Ergebnisse normalerweise innerhalb von wenigen Tagen. Ihr behandelnder Arzt wird dann die Ergebnisse mit Ihnen besprechen und das weitere Vorgehen klären.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 65,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Beschreiben, dass es sich beim Breischluck-Test um eine Röntgenuntersuchung mit einem Kontrastmittel handelt, die die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts sichtbar macht.",
+            third:
+              "Der Breischluck-Test ist eine radiologische Untersuchung, bei der der Patient Barium trinkt, um die Anatomie und Beweglichkeit der Speiseröhre und des oberen Magen-Darm-Trakts darzustellen.",
+            fourth:
+              "Dieser Test verwendet Barium als Kontrastmittel und ermöglicht es uns, unter Röntgendurchleuchtung die Passage und eventuelle Abnormitäten in der Speiseröhre zu visualisieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären, dass mit dieser Untersuchung strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen und Tumore sowie funktionelle Probleme der Speiseröhre erkannt werden können.",
+            third:
+              "Mit dem Breischluck können wir strukturelle Probleme wie Engstellen, Divertikel oder Tumore sowie funktionelle Störungen wie eine verzögerte Passage oder unkoordinierte Bewegungen feststellen.",
+            fourth:
+              "Dieser Test ermöglicht uns, Motilitätsstörungen, Refluxphänomene und strukturelle Anomalien der Speiseröhre und des oberen Magen-Darm-Trakts zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen, dass die Ergebnisse auf strukturelle oder funktionelle Anomalien hinweisen können, wie z.B. verzögerte Kontrastmittelpassage, retrosternale Füllungsdefekte oder Refluxphänomene.",
+            third:
+              "Die Untersuchung hat eine verzögerte Passage des Kontrastmittels durch die Speiseröhre gezeigt, was auf eine Achalasie hinweisen könnte.",
+            fourth:
+              "Wir haben multiple Divertikel in der Speiseröhre festgestellt, was die Ursache für die Dysphagie des Patienten sein könnte.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen, dass die Hauptindikationen für den Breischluck-Test Dysphagie, Verdacht auf gastroösophagealen Reflux, postoperative Kontrolle und Verdacht auf strukturelle Anomalien sind.",
+            third:
+              "Hauptindikationen für den Breischluck-Test sind Schluckbeschwerden (Dysphagie), Verdacht auf gastroösophagealen Reflux und postoperative Überprüfung nach Ösophagusoperationen.",
+            fourth:
+              "Wir führen den Breischluck-Test häufig bei Patienten mit Verdacht auf anatomische Anomalien oder Motilitätsstörungen der Speiseröhre durch.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Hinweis darauf, dass Kontraindikationen bekannte Allergien gegen Kontrastmittel, Schwangerschaft und schwerwiegende Schluckstörungen umfassen.",
+            third:
+              "Kontraindikationen umfassen bekannte Allergien gegen Barium, Schwangerschaft und schwerwiegende Schluckstörungen, die ein Aspirationsrisiko darstellen.",
+            fourth:
+              "Bei Patienten mit einer bekannten Bariumallergie oder während der Schwangerschaft ist dieser Test kontraindiziert.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären, dass Differenzialdiagnosen Achalasie, gastroösophagealer Reflux, Ösophaguskarzinom, Divertikel und strukturelle Anomalien umfassen können.",
+            third:
+              "Differenzialdiagnosen, die wir in Betracht ziehen müssen, umfassen Achalasie, gastroösophagealen Reflux, Ösophaguskarzinome und anatomische Variationen wie Divertikel.",
+            fourth:
+              "Wir sollten auch an Differenzialdiagnosen wie Motilitätsstörungen, Tumore und Strikturen der Speiseröhre denken.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren, dass die Ergebnisse des Breischluck-Tests die Basis für weitere diagnostische Schritte oder therapeutische Maßnahmen wie endoskopische Untersuchungen oder chirurgische Eingriffe sein können.",
+            third:
+              "Auf Basis der Ergebnisse des Breischluck-Tests könnten wir eine Ösophagogastroduodenoskopie zur weiteren Abklärung oder eine chirurgische Intervention in Erwägung ziehen.",
+            fourth:
+              "Die festgestellten Anomalien könnten eine medikamentöse Behandlung, endoskopische Dehnung oder eine operative Korrektur erforderlich machen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen, dass eine enge Zusammenarbeit zwischen Radiologen, Gastroenterologen, Chirurgen und ggf. HNO-Ärzten notwendig ist, um eine umfassende Diagnostik und Behandlung zu gewährleisten.",
+            third:
+              "Für eine umfassende Betreuung des Patienten ist eine enge Zusammenarbeit zwischen Radiologie, Gastroenterologie und Chirurgie essenziell.",
+            fourth:
+              "Die interdisziplinäre Zusammenarbeit mit Radiologen, Gastroenterologen und ggf. HNO-Ärzten ist entscheidend für eine korrekte Diagnose und effiziente Behandlung.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Hinweis auf die Bedeutung standardisierter Protokolle zur Durchführung und Auswertung des Breischluck-Tests sowie die regelmäßige Schulung des medizinischen Personals zur Sicherstellung hoher Qualitätsstandards.",
+            third:
+              "Standardisierte Protokolle und regelmäßige Schulungen sind wichtig, um die Qualität und Konsistenz der Breischluck-Untersuchungen zu gewährleisten.",
+            fourth:
+              "Ein strukturiertes Qualitätsmanagement, einschließlich regelmäßiger Überprüfungen und Fortbildungen, sichert die hohe Qualität der diagnostischen Ergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern, dass eine gründliche Dokumentation der Untersuchungsergebnisse und eine klare Kommunikation mit dem weiterbehandelnden Arzt entscheidend sind, um die weitere Patientenversorgung zu planen und zu optimieren.",
+            third:
+              "Die sorgfältige Dokumentation der Ergebnisse und die Kommunikation mit dem weiterbehandelnden Arzt sind entscheidend für die optimale Nachsorge des Patienten.",
+            fourth:
+              "Eine lückenlose Dokumentation und eine effiziente Weitergabe der Untersuchungsergebnisse an das Behandlungsteam sind essenziell für eine kontinuierliche Patientenbetreuung.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 66,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "55-jähriger Patient klagt über Schwierigkeiten beim Schlucken und retrosternale Schmerzen. Keine bekannte Vorgeschichte von Magen-Darm-Erkrankungen.",
+            fourth:
+              "40-jährige Patientin berichtet über chronisches Sodbrennen und nächtliches Aufstoßen. Vorgeschichte von milden Refluxsymptomen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Der Breischluck zeigt eine normale Passage des Kontrastmittels ohne Hinweise auf Anomalien oder Reflux.",
+            third:
+              "Der Breischluck zeigt eine verzögerte Passage des Kontrastmittels und eine Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
+            fourth:
+              "Der Breischluck zeigt Reflux des Kontrastmittels in den Ösophagus aus dem Magen und eine Schleimhautschädigung.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss gastrointestinaler Störungen.",
+            third:
+              "Der Befund deutet auf Achalasie hin, was durch die fehlende Entspannung des unteren Ösophagussphinkters und die dilatierte Speiseröhre bestätigt wird.",
+            fourth:
+              "Die Beobachtung von Reflux und Schleimhautschäden unterstützt die Diagnose eines gastroösophagealen Refluxes.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung weiterer diagnostischer Schritte wie Manometrie und mögliche endoskopische oder chirurgische Interventionen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer medikamentösen oder chirurgischen Therapie zur Kontrolle des Refluxes.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des oberen Magen-Darm-Trakts. Keine Anzeichen für pathologische Veränderungen",
+            third:
+              "Diagnose einer Achalasie basierend auf Breischluck-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von gastroösophagealem Reflux aufgrund der Breischluck-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene und normale Passage des Kontrastmittels ohne Auffälligkeiten.",
+            third:
+              "Röntgenbilder zeigen eine verzögerte Passage und Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
+            fourth:
+              "Röntgenbilder zeigen den Rückfluss von Barium aus dem Magen in die Speiseröhre und Schleimhautirritationen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige Gesundheitsüberprüfungen, auch wenn keine aktuellen Beschwerden vorliegen, um einen guten allgemeinen Gesundheitszustand sicherzustellen.",
+            third:
+              "Wir empfehlen eine Ballondilatation oder Heller-Myotomie zur Behandlung der Achalasie. Der Patient sollte über die Prognose und die Notwendigkeit regelmäßiger Folgeuntersuchungen informiert werden.",
+            fourth:
+              "Wir empfehlen eine Kombination aus medikamentöser Therapie (Protonenpumpenhemmer) und Lebensstiländerungen zur Kontrolle des Refluxes. Langfristige Behandlungsstrategien und regelmäßige Kontrollen sind wichtig.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 59,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: " ",
+        text_list: [
+          {
+            bold: "Röntgenfluoroskopiegerät :",
+            other:
+              "Ein spezielles Röntgengerät, das kontinuierliche Röntgenbilder (Fluoroskopie) in Echtzeit erzeugt, um die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten.",
+          },
+          {
+            bold: "Barium-Kontrastmittel :",
+            other:
+              "Ein bariumsulfathaltiges Kontrastmittel, das der Patient trinkt. Es macht die Speiseröhre und den oberen Magen-Darm-Trakt auf den Röntgenbildern sichtbar.",
+          },
+          {
+            bold: "Gantry :",
+            other:
+              "Der ringförmige Teil des Röntgenfluoroskopiegeräts, der die Röntgenröhre und die Detektoren enthält. Er kann um den Patienten herum gedreht werden, um verschiedene Blickwinkel zu erfassen.",
+          },
+          {
+            bold: "Röntgenröhre :",
+            other:
+              "Erzeugt die Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "Detektoren :",
+            other:
+              "Gegenüber der Röntgenröhre im Gantry angeordnet, erfassen sie die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Ein motorisierter Tisch, der den Patienten in die richtige Position bringt. Der Patient liegt während der Untersuchung auf diesem Tisch und kann bei Bedarf in den Gantry hinein- und herausgefahren werden.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder in Echtzeit angezeigt und analysiert werden. Der Radiologe oder radiologische Technologe steuert von hier aus die Untersuchung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu kommunizieren und Anweisungen zu geben, wie z.B. das Schlucken des Kontrastmittels zu koordinieren.",
+          },
+          {
+            bold: "Strahlenschutzvorrichtungen :",
+            other:
+              "Schilde und Schutzkleidung, die sowohl den Patienten als auch das medizinische Personal vor übermäßiger Strahlenexposition schützen.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Zeigt die Echtzeitbilder des Röntgenfluoroskops an, die es dem Radiologen ermöglichen, die Passage des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten und zu bewerten.",
+          },
+          {
+            bold: "Aufzeichnungssystem :",
+            other:
+              "Erfasst und speichert die Bilder und Videos der Untersuchung für die spätere Analyse und Dokumentation.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Notwendig, um die Röntgenröhre zu kühlen, da sie während der Erzeugung von Röntgenstrahlen viel Wärme produziert.",
+          },
+          {
+            bold: "Bildverarbeitungssoftware :",
+            other:
+              "Software zur Verarbeitung und Analyse der erfassten Röntgenbilder, die es dem Radiologen ermöglicht, detaillierte diagnostische Informationen zu extrahieren.",
+          },
+          {
+            bold: "Vorbereitung des Patienten :",
+            other:
+              "Der Patient wird gebeten, jeglichen Schmuck abzulegen und sich auf den Untersuchungstisch zu legen. Der Radiologe erklärt den Ablauf und das Kontrastmittel.",
+          },
+          {
+            bold: "Verabreichung des Kontrastmittels :",
+            other:
+              "Der Patient trinkt das Barium-Kontrastmittel, während er auf dem Untersuchungstisch liegt.",
+          },
+          {
+            bold: "Durchführung der Untersuchung :",
+            other:
+              "Das Röntgenfluoroskopiegerät wird aktiviert, und der Gantry bewegt sich um den Patienten, während kontinuierliche Röntgenbilder aufgenommen werden. Der Radiologe beobachtet in Echtzeit die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt.",
+          },
+          {
+            bold: "Kommunikation während der Untersuchung :",
+            other:
+              "Der Radiologe gibt dem Patienten Anweisungen, wie z.B. 'Schlucken Sie jetzt' oder 'Halten Sie den Atem an', um bestimmte Phasen der Kontrastmittelpassage besser sichtbar zu machen.",
+          },
+          {
+            bold: "Auswertung der Bilder :",
+            other:
+              "Nach der Untersuchung werden die Bilder auf der Arbeitsstation analysiert, um diagnostische Informationen zu erhalten. Der Radiologe bewertet die Struktur und Funktion der Speiseröhre und des oberen Magen-Darm-Trakts.",
+          },
+          {
+            bold: "Nachbereitung :",
+            other:
+              "Der Patient wird angewiesen, nach der Untersuchung viel Wasser zu trinken, um das Barium aus dem Körper zu spülen. Der Radiologe bespricht die vorläufigen Ergebnisse mit dem Patienten und informiert über mögliche nächste Schritte.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 60,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Breischluck :",
+            other:
+              "Röntgenuntersuchung mit Kontrastmittel zur Beurteilung der Speiseröhre und des oberen Magen-Darm-Trakts.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Substanz (meist Barium), die geschluckt wird, um Strukturen im Röntgenbild sichtbar zu machen.",
+          },
+          {
+            bold: "Fluoroskopie :",
+            other:
+              "Bildgebendes Verfahren, das Echtzeit-Röntgenbilder ermöglicht.",
+          },
+          {
+            bold: "Dysphagie :",
+            other:
+              "Schluckstörung, häufig ein Symptom bei pathologischen Befunden.",
+          },
+          {
+            bold: "Achalasie :",
+            other:
+              "Motilitätsstörung der Speiseröhre, charakterisiert durch eine fehlende Entspannung des unteren Ösophagussphinkters.",
+          },
+          {
+            bold: "Gastroösophagealer Reflux (GERD) :",
+            other:
+              "Rückfluss von Mageninhalt in die Speiseröhre, häufig mit Sodbrennen verbunden.",
+          },
+          {
+            bold: "Striktur :",
+            other:
+              "Verengung der Speiseröhre, die die Passage von Nahrung erschwert.",
+          },
+          {
+            bold: "Divertikel :",
+            other:
+              "Aussackungen der Speiseröhrenwand, die die Passage von Nahrung beeinflussen können.",
+          },
+          {
+            bold: "Motilitätsstörung :",
+            other:
+              "Beeinträchtigung der normalen Bewegungsfähigkeit der Speiseröhre.",
+          },
+          {
+            bold: "Ösophaguskarzinom :",
+            other: "Bösartiger Tumor in der Speiseröhre.",
+          },
+          {
+            bold: "Barium :",
+            other: "Häufig verwendetes Kontrastmittel im Breischluck-Test.",
+          },
+          {
+            bold: "Manometrie :",
+            other:
+              "Diagnostisches Verfahren zur Messung des Drucks in der Speiseröhre.",
+          },
+          {
+            bold: "Ösophagogastroduodenoskopie (ÖGD) :",
+            other:
+              "Endoskopische Untersuchung der Speiseröhre, des Magens und des Zwölffingerdarms.",
+          },
+          {
+            bold: "Aspiration :",
+            other:
+              "Eindringen von Flüssigkeiten oder Feststoffen in die Atemwege.",
+          },
+          {
+            bold: "Reflux :",
+            other: "Rückfluss von Mageninhalt in die Speiseröhre.",
+          },
+          {
+            bold: "Radiologe :",
+            other:
+              "Facharzt für Bildgebende Verfahren, der die Untersuchung durchführt und interpretiert.",
+          },
+          {
+            bold: "Ballondilatation :",
+            other:
+              "Verfahren zur Erweiterung verengter Bereiche der Speiseröhre mittels eines Ballonkatheters.",
+          },
+          {
+            bold: "Heller-Myotomie :",
+            other:
+              "Chirurgischer Eingriff zur Behandlung der Achalasie durch Durchtrennung der Muskelfasern am unteren Ösophagussphinkter.",
+          },
+          {
+            bold: "Kontraindikation :",
+            other:
+              "Umstand, der die Anwendung eines bestimmten medizinischen Verfahrens verbietet.",
+          },
+          {
+            bold: "Strahlenbelastung :",
+            other:
+              "Exposition des Körpers gegenüber Röntgenstrahlen während der Untersuchung.",
+          },
+          {
+            bold: "Protonenpumpenhemmer (PPI) :",
+            other:
+              "Medikament zur Reduktion der Magensäureproduktion, häufig bei GERD eingesetzt.",
+          },
+          {
+            bold: "Schleimhautschädigung :",
+            other:
+              "Beschädigung der inneren Auskleidung der Speiseröhre, oft durch Reflux verursacht.",
+          },
+          {
+            bold: "Peristaltik :",
+            other:
+              "Wellenförmige Muskelkontraktionen, die die Nahrung durch die Speiseröhre bewegen.",
+          },
+          {
+            bold: "Bariumsulfat :",
+            other:
+              "Spezielles Bariumpräparat, das im Breischluck-Test verwendet wird.",
+          },
+          {
+            bold: "Stenose :",
+            other:
+              "Einengung oder Verengung eines Hohlorgans, wie der Speiseröhre.",
+          },
+        ],
+      },
+      {
+        id: 61,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "<a href='https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck'>DocCheck Flexikon:</a>",
+            other:
+              "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
+          },
+          {
+            bold: "<a href='https://flexikon.doccheck.com/de/%C3%96sophagusachalasie'>DocCheck Flexikon:</a>",
+            other:
+              "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
+          },
+          {
+            bold: "<a href='https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung'>DocCheck Flexikon:</a>",
+            other:
+              "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
+          },
+          {
+            bold: "<a href='https://www.amboss.com'>Amboss:</a>",
+            other:
+              "Hier kannst du dich anmelden und detaillierte medizinische Informationen zu verschiedenen Untersuchungen und Erkrankungen finden, einschließlich des Breischluck-Tests.",
+          },
+          {
+            bold: "<a href='https://en.wikipedia.org/wiki/Barium_swallow'>Wikipedia:</a>",
+            other:
+              "Eine umfassende Erklärung des Breischluck-Tests auf Englisch, einschließlich der klinischen Anwendung und Interpretation der Ergebnisse.",
+          },
+          {
+            bold: "<a href='https://radiopaedia.org'>Radiopaedia:</a>",
+            other:
+              "Eine umfangreiche Ressource für radiologische Diagnostik, mit Fallstudien und Bildern zum Breischluck-Test und anderen radiologischen Untersuchungen.",
+          },
+          {
+            bold: "<a href='https://www.aerzteblatt.de'>Deutsches Ärzteblatt:</a>",
+            other:
+              "Artikel und Studien über verschiedene diagnostische Verfahren, einschließlich des Breischluck-Tests, sowie aktuelle Forschungsergebnisse und klinische Leitlinien.",
+          },
+          {
+            bold: "<a href='https://www.klinikbewertungen.de'>Klinikbewertungen.de:</a>",
+            other:
+              "Erfahrungsberichte und Bewertungen von Patienten zu verschiedenen medizinischen Untersuchungen und Behandlungen, einschließlich des Breischluck-Tests.",
+          },
+        ],
+      },
+      {
+        id: 62,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 8
 ];
