@@ -4681,7 +4681,7 @@ export const parentTabs = [
   // end of parent tab 8
   {
     id: 8,
-    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
+    title: "Breischluck",
     checked: false,
     childTabs: [
       // 1tab
