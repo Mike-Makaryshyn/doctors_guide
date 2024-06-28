@@ -5,6 +5,7 @@
 
 .parentTabsWrapper {
    color: black;
+   overflow-y: auto;
 }
 
 .parentTabItem {
@@ -151,6 +152,10 @@
 
 .bottom_item {
    margin-bottom: 15px;
+
+   strong {
+      margin-right: 5px;
+   }
 }
 
 .lessWidth {

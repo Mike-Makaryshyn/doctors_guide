@@ -5353,42 +5353,50 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold: "<a href='https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck'>DocCheck Flexikon:</a>",
+            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
+            bold: "DocCheck Flexikon:",
             other:
               "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
           },
           {
-            bold: "<a href='https://flexikon.doccheck.com/de/%C3%96sophagusachalasie'>DocCheck Flexikon:</a>",
+            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
+            bold: "DocCheck Flexikon:",
             other:
               "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
           },
           {
-            bold: "<a href='https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung'>DocCheck Flexikon:</a>",
+            bold_link: "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
+            bold: "DocCheck Flexikon:",
             other:
               "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
           },
           {
-            bold: "<a href='https://www.amboss.com'>Amboss:</a>",
+            bold_link: "https://www.amboss.com",
+            bold: "Amboss:",
             other:
               "Hier kannst du dich anmelden und detaillierte medizinische Informationen zu verschiedenen Untersuchungen und Erkrankungen finden, einschließlich des Breischluck-Tests.",
           },
           {
-            bold: "<a href='https://en.wikipedia.org/wiki/Barium_swallow'>Wikipedia:</a>",
+            bold_link: "https://en.wikipedia.org/wiki/Barium_swallow",
+            bold: "Wikipedia:",
             other:
               "Eine umfassende Erklärung des Breischluck-Tests auf Englisch, einschließlich der klinischen Anwendung und Interpretation der Ergebnisse.",
           },
           {
-            bold: "<a href='https://radiopaedia.org'>Radiopaedia:</a>",
+            bold_link: "https://radiopaedia.org",
+            bold: "Radiopaedia:",
             other:
               "Eine umfangreiche Ressource für radiologische Diagnostik, mit Fallstudien und Bildern zum Breischluck-Test und anderen radiologischen Untersuchungen.",
           },
           {
-            bold: "<a href='https://www.aerzteblatt.de'>Deutsches Ärzteblatt:</a>",
+            bold_link: "https://www.aerzteblatt.de",
+            bold: "Deutsches Ärzteblatt:",
             other:
               "Artikel und Studien über verschiedene diagnostische Verfahren, einschließlich des Breischluck-Tests, sowie aktuelle Forschungsergebnisse und klinische Leitlinien.",
           },
           {
-            bold: "<a href='https://www.klinikbewertungen.de'>Klinikbewertungen.de:</a>",
+            bold_link: "https://www.klinikbewertungen.de",
+            bold: "Klinikbewertungen.de:",
             other:
               "Erfahrungsberichte und Bewertungen von Patienten zu verschiedenen medizinischen Untersuchungen und Behandlungen, einschließlich des Breischluck-Tests.",
           },

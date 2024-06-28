@@ -12,8 +12,9 @@ const ExamExplanationsPage = () => {
    const [childTabOpen, setChildTabOpen] = useState(null);
    const [checkedParentIds, setCheckedParentIds] = useState([]);
    const [congrats, setCongrats] = useState(false);
+   const activeTabRef = useRef(null);
 
-   const clickActiveParentTab = (e, tab) => {
+   const clickActiveParentTab = (e, tab, index) => {
       e.stopPropagation();
 
       if (parentTabOpen?.id === tab?.id) {
@@ -22,6 +23,22 @@ const ExamExplanationsPage = () => {
       } else {
          setParentTabOpen(tab);
          setChildTabOpen(tab?.childTabs?.[0]);
+
+         if (activeTabRef.current) {
+            activeTabRef.current.scrollIntoView({
+               behavior: "smooth",
+               block: "start",
+            });
+
+            setTimeout(() => {
+               const rect = activeTabRef.current.getBoundingClientRect();
+               const offset = 80; // Offset value
+               window.scrollBy({
+                  top: rect.top - offset,
+                  behavior: "smooth",
+               });
+            }, 0);
+         }
       }
    };
 
@@ -108,9 +125,20 @@ const ExamExplanationsPage = () => {
                         key={`${iidx}${item?.text}`}
                         className={styles.options}
                      >
-                        <span className={styles.bold}>
-                           {renderTextWithLinks(item?.bold_text)}
-                        </span>
+                        {item?.bold_link && (
+                           <a
+                              href={bold_link}
+                              target="_blank"
+                              className={styles.bold}
+                           >
+                              {item?.bold_text}
+                           </a>
+                        )}
+                        {!item?.bold_link && (
+                           <span className={styles.bold}>
+                              {item?.bold_text}
+                           </span>
+                        )}
                         {!!item?.text?.length && (
                            <span>{renderTextWithLinks(item?.text)}</span>
                         )}
@@ -153,7 +181,18 @@ const ExamExplanationsPage = () => {
                               key={`childTab${idx}`}
                            >
                               <strong>
-                                 {idx + 1}.{renderTextWithLinks(item?.bold)}
+                                 {idx + 1}.
+                                 {item?.bold_link && (
+                                    <a
+                                       className={"link"}
+                                       target={"_blank"}
+                                       href={item?.bold_link}
+                                    >
+                                       {item?.bold}
+                                    </a>
+                                 )}
+                                 {!item?.bold_link &&
+                                    renderTextWithLinks(item?.bold)}
                               </strong>
                               {renderTextWithLinks(item?.other)}
                            </p>
@@ -181,7 +220,18 @@ const ExamExplanationsPage = () => {
                         {childTab?.text_list?.map((item, idx) => (
                            <p className={styles.bottom_item} key={`ctab${idx}`}>
                               <strong>
-                                 {idx + 1}.{renderTextWithLinks(item?.bold)}
+                                 {idx + 1}.
+                                 {item?.bold_link && (
+                                    <a
+                                       className={"link"}
+                                       target={"_blank"}
+                                       href={item?.bold_link}
+                                    >
+                                       {item?.bold}
+                                    </a>
+                                 )}
+                                 {!item?.bold_link &&
+                                    renderTextWithLinks(item?.bold)}
                               </strong>
                               {renderTextWithLinks(item?.other)}
                            </p>
@@ -202,11 +252,18 @@ const ExamExplanationsPage = () => {
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>
-                  {parentTabs?.map((parentTab) => (
+                  {parentTabs?.map((parentTab, index) => (
                      <div
-                        onClick={(e) => clickActiveParentTab(e, parentTab)}
+                        onClick={(e) =>
+                           clickActiveParentTab(e, parentTab, index)
+                        }
                         className={styles.parentTabItem}
                         key={parentTab?.id}
+                        ref={
+                           parentTabOpen?.id === parentTab?.id
+                              ? activeTabRef
+                              : null
+                        }
                      >
                         <div className={cn(styles.pTab, "noselect")}>
                            <div className={styles.pTitle}>
