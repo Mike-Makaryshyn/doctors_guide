@@ -621,32 +621,32 @@ export const parentTabs = [
           {
             bold: "DocCheck Flexikon",
             other:
-              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon](https://flexikon.doccheck.com/de/Computertomographie).",
+              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon] https://flexikon.doccheck.com/de/Computertomographie",
           },
           {
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen](https://www.stiftung-gesundheitswissen.de).",
+              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de",
           },
           {
             bold: "Praktischarzt.de",
             other:
-              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de](https://www.praktischarzt.de).",
+              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de] https://www.praktischarzt.de",
           },
           {
             bold: "Navigator Medizin",
             other:
-              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin](https://www.navigator-medizin.de).",
+              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin] https://www.navigator-medizin.de",
           },
           {
             bold: "Gesundheit.de",
             other:
-              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de](https://www.gesundheit.de).",
+              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de] https://www.gesundheit.de",
           },
           {
             bold: "Onmeda",
             other:
-              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda](https://www.onmeda.de).",
+              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda] https://www.onmeda.de",
           },
         ],
       },
@@ -1228,32 +1228,32 @@ export const parentTabs = [
           {
             bold: "DocCheck Flexikon",
             other:
-              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen. [DocCheck Flexikon - MRT​](https://flexikon.doccheck.com/de/MRT)​​ [DocCheck Flexikon](https://flexikon.doccheck.com/de/MRT)​​ [DocCheck Flexikon](https://flexikon.doccheck.com/de/MRT)​​ ",
+              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen. [DocCheck Flexikon - MRT​] https://flexikon.doccheck.com/de/MRT​ [DocCheck Flexikon] https://flexikon.doccheck.com/de/MRT​ [DocCheck Flexikon] https://flexikon.doccheck.com/de/MRT​​",
           },
           {
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden. [Stiftung Gesundheitswissen](https://www.stiftung-gesundheitswissen.de)",
+              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden. [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de",
           },
           {
             bold: "praktischArzt",
             other:
-              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge. [praktischArzt](https://www.praktischarzt.de)",
+              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge. [praktischArzt] https://www.praktischarzt.de",
           },
           {
             bold: "NetDoktor",
             other:
-              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln. [NetDoktor](https://www.netdoktor.de)",
+              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln. [NetDoktor] https://www.netdoktor.de",
           },
           {
             bold: "Med 360°",
             other:
-              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT. [Med 360°](https://www.med360grad.de)",
+              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT. [Med 360°] https://www.med360grad.de",
           },
           {
             bold: "Lifeline",
             other:
-              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT. Es wird auch erläutert, welche Symptome und Krankheiten mit einer MRT abgeklärt werden können. [Lifeline](https://www.lifeline.de)",
+              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT. Es wird auch erläutert, welche Symptome und Krankheiten mit einer MRT abgeklärt werden können. [Lifeline] https://www.lifeline.de",
           },
         ],
       },
@@ -1849,32 +1849,32 @@ export const parentTabs = [
           {
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Röntgenuntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Röntgenuntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links] https://www.stiftung-gesundheitswissen.de",
           },
           {
             bold: "NetDoktor",
             other:
-              "Auf NetDoktor kannst du mehr über die Gründe für eine Röntgenuntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Röntgenverfahren wie Mammografie und Angiografie beschrieben. [Links](https://www.netdoktor.de)",
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Röntgenuntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Röntgenverfahren wie Mammografie und Angiografie beschrieben. [Links] https://www.netdoktor.de",
           },
           {
             bold: "Lifeline",
             other:
-              "Lifeline erklärt detailliert die Risiken und Vorteile von Röntgenuntersuchungen und beschreibt den Ablauf der Untersuchung einschließlich der Vorbereitung und der Nutzung von Kontrastmitteln. [Links](https://www.lifeline.de)",
+              "Lifeline erklärt detailliert die Risiken und Vorteile von Röntgenuntersuchungen und beschreibt den Ablauf der Untersuchung einschließlich der Vorbereitung und der Nutzung von Kontrastmitteln. [Links] https://www.lifeline.de",
           },
           {
             bold: "Medpertise",
             other:
-              "Diese Webseite bietet Informationen zu den Anwendungsgebieten und dem Ablauf von Röntgenuntersuchungen. Es wird auch auf die möglichen Komplikationen und Alternativen zu Röntgen eingegangen. [Links](https://www.medpertise.de)",
+              "Diese Webseite bietet Informationen zu den Anwendungsgebieten und dem Ablauf von Röntgenuntersuchungen. Es wird auch auf die möglichen Komplikationen und Alternativen zu Röntgen eingegangen. [Links] https://www.medpertise.de",
           },
           {
             bold: "praktischArzt",
             other:
-              "Hier findest du Informationen über den Ablauf von Röntgenuntersuchungen, einschließlich Vorbereitung und Durchführung, sowie Anwendungsbereiche wie das Röntgen der Lunge und der Hand. [Links](https://www.praktischarzt.de)",
+              "Hier findest du Informationen über den Ablauf von Röntgenuntersuchungen, einschließlich Vorbereitung und Durchführung, sowie Anwendungsbereiche wie das Röntgen der Lunge und der Hand. [Links] https://www.praktischarzt.de",
           },
           {
             bold: "Medizinio",
             other:
-              "Diese Seite informiert über die Strahlenbelastung bei Röntgenuntersuchungen, Risiken für bestimmte Patientengruppen und den Einsatz von Röntgen in der Schwangerschaft. [Links](https://www.medizinio.de)",
+              "Diese Seite informiert über die Strahlenbelastung bei Röntgenuntersuchungen, Risiken für bestimmte Patientengruppen und den Einsatz von Röntgen in der Schwangerschaft. [Links] https://www.medizinio.de",
           },
         ],
       },
@@ -2571,42 +2571,42 @@ export const parentTabs = [
           {
             bold: "Stiftung Gesundheitswissen :",
             other:
-              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links] https://www.stiftung-gesundheitswissen.de",
           },
           {
             bold: "NetDoktor :",
             other:
-              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links](https://www.netdoktor.de)",
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links] https://www.netdoktor.de",
           },
           {
             bold: "Gesundheitsinformation.de :",
             other:
-              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links](https://www.gesundheitsinformation.de)",
+              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links] https://www.gesundheitsinformation.de",
           },
           {
             bold: "BARMER :",
             other:
-              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links](https://www.barmer.de)",
+              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links] https://www.barmer.de",
           },
           {
             bold: "PraktischArzt :",
             other:
-              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links](https://www.praktischarzt.de)",
+              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links] https://www.praktischarzt.de",
           },
           {
             bold: "Krebsinformationsdienst :",
             other:
-              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links](https://www.krebsinformationsdienst.de)",
+              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links] https://www.krebsinformationsdienst.de",
           },
           {
             bold: "DokCheck :",
             other:
-              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links](https://www.doccheck.com)",
+              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links] https://www.doccheck.com)",
           },
           {
             bold: "AMBOSS :",
             other:
-              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links](https://www.amboss.com/de)",
+              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links] https://www.amboss.com/de)",
           },
         ],
       },
@@ -3309,42 +3309,42 @@ export const parentTabs = [
           {
             bold: "Stiftung Gesundheitswissen :",
             other:
-              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links](https://www.stiftung-gesundheitswissen.de)",
+              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links] https://www.stiftung-gesundheitswissen.de",
           },
           {
             bold: "NetDoktor :",
             other:
-              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links](https://www.netdoktor.de)",
+              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links] https://www.netdoktor.de",
           },
           {
             bold: "Gesundheitsinformation.de :",
             other:
-              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links](https://www.gesundheitsinformation.de)",
+              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links] https://www.gesundheitsinformation.de",
           },
           {
             bold: "BARMER :",
             other:
-              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links](https://www.barmer.de)",
+              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links] https://www.barmer.de",
           },
           {
             bold: "PraktischArzt :",
             other:
-              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links](https://www.praktischarzt.de)",
+              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links] https://www.praktischarzt.de",
           },
           {
             bold: "Krebsinformationsdienst :",
             other:
-              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links](https://www.krebsinformationsdienst.de)",
+              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links] https://www.krebsinformationsdienst.de",
           },
           {
             bold: "DokCheck :",
             other:
-              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links](https://www.doccheck.com)",
+              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links] https://www.doccheck.com)",
           },
           {
             bold: "AMBOSS :",
             other:
-              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links](https://www.amboss.com/de)",
+              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links] https://www.amboss.com/de)",
           },
         ],
       },
@@ -3575,7 +3575,7 @@ export const parentTabs = [
           {
             first: "Erhalt des Einverständnisses",
             second:
-              "Erklären Sie den Prozess des Einverständnisses: Der Patient muss ein Formular unterschreiben, nachdem er über alle relevanten Aspekte der Untersuchung informiert wurde.",
+              "Erklären Sie den Prozess des Einverständnisses: Der Patient muss ein Formular unterschreiben, nachdem er über alle relevanten Aspekte der Untersuchung informiert wurde",
             third:
               "Nachdem wir alle Ihre Fragen beantwortet haben, bitten wir Sie, dieses Einwilligungsformular zu unterschreiben.",
             fourth:
@@ -4642,32 +4642,32 @@ export const parentTabs = [
           {
             bold: "NetDoktor: ",
             other:
-              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT](https://www.netdoktor.de/diagnostik/spect/)",
+              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT] https://www.netdoktor.de/diagnostik/spect/)",
           },
           {
             bold: "Apotheken Umschau: ",
             other:
-              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT](https://www.apotheken-umschau.de/diagnose/spect)",
+              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT] https://www.apotheken-umschau.de/diagnose/spect)",
           },
           {
             bold: "Welt der Physik: ",
             other:
-              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT](https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
+              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT] https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
           },
           {
             bold: "Universitätsklinikum Münster: ",
             other:
-              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT](https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
+              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT] https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
           },
           {
             bold: "Miomedi: ",
             other:
-              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT](https://www.miomedi.de/diagnostik/spect/)",
+              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT] https://www.miomedi.de/diagnostik/spect/)",
           },
           {
             bold: "MedLexi: ",
             other:
-              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT](https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
+              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT] https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
           },
         ],
       },

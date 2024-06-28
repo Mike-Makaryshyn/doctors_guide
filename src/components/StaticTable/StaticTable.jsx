@@ -11,6 +11,7 @@ const StaticTable = ({
    setTableData,
    tableRef,
    noTitleAndColumns,
+   renderTextWithLinks
 }) => {
    return (
       <div
@@ -26,7 +27,7 @@ const StaticTable = ({
                         key={column?.name}
                         className={cn(styles.header, "noselect")}
                      >
-                        <span>{column?.visualText}</span>
+                        <span>{renderTextWithLinks ? renderTextWithLinks(column?.visualText) : column?.visualText}</span>
                      </th>
                   ))}
                </tr>
@@ -41,6 +42,7 @@ const StaticTable = ({
                      maxWordsLength={maxWordsLength}
                      setTableData={setTableData}
                      tableData={data}
+                     renderTextWithLinks={renderTextWithLinks}
                   />
                ))}
             </tbody>

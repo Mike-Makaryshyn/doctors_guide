@@ -10,6 +10,7 @@ const BodyItem = ({
    maxWordsLength = 20,
    setTableData,
    tableData,
+   renderTextWithLinks
 }) => {
    return (
       <tr
@@ -17,7 +18,7 @@ const BodyItem = ({
          className={cn(index % 2 === 0 ? styles.rowOdd : "")}
       >
          {columns?.map((column, columnIndex) => (
-            <td key={`cell-${index}-${columnIndex}`}>{row?.[column?.name]}</td>
+            <td key={`cell-${index}-${columnIndex}`}>{renderTextWithLinks ? renderTextWithLinks(row?.[column?.name]) : row?.[column?.name]}</td>
          ))}
       </tr>
    );

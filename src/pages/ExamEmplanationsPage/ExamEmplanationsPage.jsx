@@ -25,6 +25,29 @@ const ExamExplanationsPage = () => {
       }
    };
 
+   const renderTextWithLinks = (text) => {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const parts = text?.split(urlRegex);
+
+      return parts?.map((part, index) => {
+         if (part.match(urlRegex)) {
+            return (
+               <a
+                  className={"link"}
+                  key={index}
+                  href={part}
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  {part}
+               </a>
+            );
+         } else {
+            return <span key={index}>{part}</span>;
+         }
+      });
+   };
+
    const clickActiveChildTab = (e, tab) => {
       e.stopPropagation();
 
@@ -43,13 +66,21 @@ const ExamExplanationsPage = () => {
    const handleCheckboxChange = (parentId) => {
       setCheckedParentIds((prevCheckedParentIds) => {
          if (prevCheckedParentIds.includes(parentId)) {
-            const updatedCheckedParentIds = prevCheckedParentIds.filter(id => id !== parentId);
-            localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
+            const updatedCheckedParentIds = prevCheckedParentIds.filter(
+               (id) => id !== parentId
+            );
+            localStorageSet(
+               "checkedParentTabIds",
+               JSON.stringify(updatedCheckedParentIds)
+            );
             return updatedCheckedParentIds;
          } else {
             setCongrats(true);
             const updatedCheckedParentIds = [...prevCheckedParentIds, parentId];
-            localStorageSet('checkedParentTabIds', JSON.stringify(updatedCheckedParentIds));
+            localStorageSet(
+               "checkedParentTabIds",
+               JSON.stringify(updatedCheckedParentIds)
+            );
             return updatedCheckedParentIds;
          }
       });
@@ -57,7 +88,7 @@ const ExamExplanationsPage = () => {
 
    // Initialize state from localStorage
    useEffect(() => {
-      const parentCheckedIds = localStorageGet('checkedParentTabIds');
+      const parentCheckedIds = localStorageGet("checkedParentTabIds");
       if (parentCheckedIds) {
          setCheckedParentIds(JSON.parse(parentCheckedIds));
       }
@@ -73,9 +104,16 @@ const ExamExplanationsPage = () => {
 
                <ul>
                   {tab?.items?.map((item, iidx) => (
-                     <li key={`${iidx}${item?.text}`} className={styles.options}>
-                        <span className={styles.bold}>{item?.bold_text}</span>
-                        <span>{item?.text}</span>
+                     <li
+                        key={`${iidx}${item?.text}`}
+                        className={styles.options}
+                     >
+                        <span className={styles.bold}>
+                           {renderTextWithLinks(item?.bold_text)}
+                        </span>
+                        {!!item?.text?.length && (
+                           <span>{renderTextWithLinks(item?.text)}</span>
+                        )}
                      </li>
                   ))}
                </ul>
@@ -90,6 +128,7 @@ const ExamExplanationsPage = () => {
                   title={"test"}
                   columns={childTab?.tableColumns}
                   data={childTab?.tableRows}
+                  renderTextWithLinks={renderTextWithLinks}
                />
             </div>
          );
@@ -101,15 +140,22 @@ const ExamExplanationsPage = () => {
                <div className={styles.tabFiveTop}>
                   {childTab?.img && <img src={childTab?.img} alt="Schema" />}
                   <div className={styles.text_top}>
-                     <p className={styles.text}>{childTab?.text}</p>
+                     {!!childTab?.text?.length && (
+                        <p className={styles.text}>
+                           {renderTextWithLinks(childTab?.text)}
+                        </p>
+                     )}
 
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
-                           <p className={styles.bottom_item} key={`childTab${idx}`}>
+                           <p
+                              className={styles.bottom_item}
+                              key={`childTab${idx}`}
+                           >
                               <strong>
-                                 {idx + 1}.{item?.bold}
+                                 {idx + 1}.{renderTextWithLinks(item?.bold)}
                               </strong>
-                              {item?.other}
+                              {renderTextWithLinks(item?.other)}
                            </p>
                         ))}
                      </div>
@@ -125,15 +171,19 @@ const ExamExplanationsPage = () => {
                <div className={styles.tabFiveTop}>
                   {childTab?.img && <img src={childTab?.img} alt="Schema" />}
                   <div className={styles.text_top}>
-                     <p className={styles.text}>{childTab?.text}</p>
+                     {!!childTab?.text?.length && (
+                        <p className={styles.text}>
+                           {renderTextWithLinks(childTab?.text)}
+                        </p>
+                     )}
 
                      <div className={styles.text_left}>
                         {childTab?.text_list?.map((item, idx) => (
                            <p className={styles.bottom_item} key={`ctab${idx}`}>
                               <strong>
-                                 {idx + 1}.{item?.bold}
+                                 {idx + 1}.{renderTextWithLinks(item?.bold)}
                               </strong>
-                              {item?.other}
+                              {renderTextWithLinks(item?.other)}
                            </p>
                         ))}
                      </div>
@@ -152,24 +202,25 @@ const ExamExplanationsPage = () => {
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>
-
                   {parentTabs?.map((parentTab) => (
                      <div
                         onClick={(e) => clickActiveParentTab(e, parentTab)}
                         className={styles.parentTabItem}
                         key={parentTab?.id}
                      >
-                           <div className={cn(styles.pTab, 'noselect')}>
-                              <div className={styles.pTitle}>{parentTab?.title}</div>
-                              <Checkbox
-                                 label={'Gelernt'}
-                                    value={checkedParentIds?.includes(parentTab?.id)}
-                                    onChange={() =>
-                                       handleCheckboxChange(parentTab?.id)
-                                    }
-                                    labelRight
-                                 />
+                        <div className={cn(styles.pTab, "noselect")}>
+                           <div className={styles.pTitle}>
+                              {parentTab?.title}
                            </div>
+                           <Checkbox
+                              label={"Gelernt"}
+                              value={checkedParentIds?.includes(parentTab?.id)}
+                              onChange={() =>
+                                 handleCheckboxChange(parentTab?.id)
+                              }
+                              labelRight
+                           />
+                        </div>
                         <div
                            className={cn(
                               styles.childTabsWrapper,
@@ -178,7 +229,10 @@ const ExamExplanationsPage = () => {
                                  : ""
                            )}
                         >
-                           <div onClick={(e)=> e.stopPropagation()} className={styles.childTabs}>
+                           <div
+                              onClick={(e) => e.stopPropagation()}
+                              className={styles.childTabs}
+                           >
                               {parentTab?.childTabs?.map(
                                  (childTab, childIdx) => (
                                     <div
@@ -187,8 +241,10 @@ const ExamExplanationsPage = () => {
                                           childTabOpen?.id === childTab?.id
                                              ? styles.active_child_tab
                                              : "",
-                                             childTab?.link ? styles.lessWidth : '',
-                                             'noselect'
+                                          childTab?.link
+                                             ? styles.lessWidth
+                                             : "",
+                                          "noselect"
                                        )}
                                        onClick={(e) =>
                                           clickActiveChildTab(e, childTab)

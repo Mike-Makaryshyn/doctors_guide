@@ -146,3 +146,7 @@ button:hover {
    color: whitesmoke;
    transition: all 0.3s ease;
  }
+
+ .link {
+   color: rgb(103, 103, 246);
+ }
