@@ -33,7 +33,7 @@ const Header = () => {
             }}
             className="upcase mainLogo"
          >
-            Germanmovein
+            Germanmove
          </h2>
          <span className={'sRegion'}>{location?.pathname !== "/lands" &&selectedRegion}</span>
          <div className="flexBt">

@@ -198,7 +198,7 @@ const ExamExplanationsPage = () => {
 
    return (
       <MainLayout>
-         <div className="page page1 containerBigger mt-20">
+         <div className="page page1 containerBigger containerMax mt-20">
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>

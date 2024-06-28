@@ -17,6 +17,10 @@
    padding: 0px 15px;
 }
 
+.containerMax {
+   max-width: 1320px;
+}
+
 body {
    font-family: Arial, sans-serif;
    margin: 0;

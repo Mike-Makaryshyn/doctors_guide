@@ -15,6 +15,7 @@
 .sRegion {
    font-weight: 600;
    font-size: 18px;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .langSelect {
    display: flex;
@@ -46,9 +47,10 @@ select {
 
 
 .mainLogo {
-   font-weight: 500;
+   font-weight: 600;
    cursor: pointer;
    transition: all 0.2s ease;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .mainLogo:hover {

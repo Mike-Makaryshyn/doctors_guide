@@ -19,7 +19,6 @@ const DocumentsPage = () => {
       selectedLanguage: language,
       redirectToRegionPage,
       handleChangePage,
-      selectedRegion,
    } = useGetGlobalInfo();
 
    const firstRef = useRef();
