@@ -5414,7 +5414,7 @@ export const parentTabs = [
   },
   // end of parent tab 8
   {
-    id: 8,
+    id: 9,
     title: "Skelettszintigraphie",
     checked: false,
     childTabs: [
