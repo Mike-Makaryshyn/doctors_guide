@@ -4678,7 +4678,7 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 8
+  // end of parent tab 7
   {
     id: 8,
     title: "Breischluck",
@@ -5115,7 +5115,7 @@ export const parentTabs = [
       },
       // 5tab
       {
-        id: 59,
+        id: 67,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: " ",
@@ -5219,7 +5219,7 @@ export const parentTabs = [
       },
       // 6tab
       {
-        id: 60,
+        id: 68,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
         text_list: [
@@ -5348,24 +5348,27 @@ export const parentTabs = [
         ],
       },
       {
-        id: 61,
+        id: 69,
         title: "Links",
         text: "",
         text_list: [
           {
-            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
+            bold_link:
+              "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
             bold: "DocCheck Flexikon:",
             other:
               "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
           },
           {
-            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
+            bold_link:
+              "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
             bold: "DocCheck Flexikon:",
             other:
               "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
           },
           {
-            bold_link: "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
+            bold_link:
+              "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
             bold: "DocCheck Flexikon:",
             other:
               "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
@@ -5403,7 +5406,700 @@ export const parentTabs = [
         ],
       },
       {
-        id: 62,
+        id: 70,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 8
+  {
+    id: 8,
+    title: "Skelettszintigraphie",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 71,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Skelettszintigraphie dient der frühzeitigen Erkennung und Bewertung von Knochenanomalien. Sie wird verwendet, um pathologische Veränderungen im Skelettsystem zu diagnostizieren, bevor sie auf konventionellen Röntgenaufnahmen sichtbar werden.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Skelettszintigraphie ist besonders relevant bei der Diagnose von Metastasen, entzündlichen Erkrankungen, Frakturen, Osteomyelitis und anderen Knochenerkrankungen. Sie wird häufig in der Onkologie, Orthopädie und Rheumatologie eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Skelettszintigraphie basiert auf der Verwendung radioaktiver Isotope, die sich in den Knochen anreichern. Technetium-99m ist das häufigste verwendete Isotop, das aufgrund seiner physikalischen Eigenschaften und seiner Affinität zum Knochenstoffwechsel bevorzugt wird.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Bei der Skelettszintigraphie wird dem Patienten eine geringe Menge des radioaktiven Isotops intravenös injiziert. Nach einer gewissen Wartezeit, die es dem Isotop ermöglicht, sich in den Knochen anzureichern, wird der gesamte Körper des Patienten mit einer Gamma-Kamera gescannt, um die Verteilung des Isotops zu visualisieren.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der Skelettszintigraphie erfolgt durch einen Nuklearmediziner. Anhand der Verteilung des radioaktiven Isotops im Skelettsystem können Bereiche mit erhöhtem oder vermindertem Knochenstoffwechsel identifiziert werden.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen Hot-Spots, die auf erhöhte osteoblastische Aktivität hinweisen und oft bei Metastasen oder Frakturen beobachtet werden, sowie Cold-Spots, die auf eine verminderte Durchblutung oder Osteonekrose hindeuten können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Skelettszintigraphie ist eine sensitive Methode zur frühzeitigen Erkennung von Knochenerkrankungen. Sie ermöglicht eine umfassende Untersuchung des gesamten Skelettsystems in kurzer Zeit.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen gehören die Exposition gegenüber radioaktiver Strahlung und die mögliche Notwendigkeit weiterer diagnostischer Tests zur Bestätigung der Befunde.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Obwohl die Strahlenbelastung gering ist, besteht ein gewisses Risiko für strahlenbedingte Schäden. Kontraindikationen umfassen Schwangerschaft und Stillzeit.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Skelettszintigraphie spielt eine zentrale Rolle in der Diagnostik und Therapieplanung vieler Knochenerkrankungen. Sie hilft bei der Erkennung von Metastasen, der Bewertung von Frakturen und der Überwachung des Behandlungserfolgs.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die Skelettszintigraphie ein wertvolles Instrument, das hilft, frühzeitige und präzise Diagnosen zu stellen und den Krankheitsverlauf zu überwachen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur Skelettszintigraphie umfassen Röntgenaufnahmen, CT- und MRT-Scans sowie PET-Scans, die je nach klinischer Fragestellung eingesetzt werden können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildgebungstechniken und die Entwicklung neuer Radiotracer, um die diagnostische Genauigkeit und Sicherheit der Skelettszintigraphie zu erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von KI zur Bildanalyse und die personalisierte Medizin, die auf den spezifischen Stoffwechsel des Patienten abgestimmte Radiotracer verwendet.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Skelettszintigraphie ist eine wichtige diagnostische Methode zur Erkennung und Überwachung von Knochenerkrankungen. Sie bietet eine hohe Sensitivität und ermöglicht eine ganzheitliche Untersuchung des Skelettsystems.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt stellt die Skelettszintigraphie ein unverzichtbares Werkzeug in der modernen Medizin dar, das Ärzten dabei hilft, fundierte Diagnosen zu stellen und effektive Behandlungsstrategien zu entwickeln.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 72,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Untersuchung zur frühzeitigen Erkennung und Bewertung von Knochenanomalien dient.",
+            third:
+              "Die Untersuchung hilft uns, Metastasen oder andere Knochenerkrankungen frühzeitig zu erkennen.",
+            fourth:
+              "Wir möchten sicherstellen, dass keine Knochenentzündungen oder Frakturen übersehen werden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie detailliert den Ablauf der Untersuchung, einschließlich der Injektion des radioaktiven Isotops und der Nutzung der Gamma-Kamera.",
+            third:
+              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff. Nach etwa drei Stunden werden Aufnahmen von Ihrem Skelett gemacht.",
+            fourth:
+              "Nach der Injektion des radioaktiven Stoffes müssen Sie etwa drei Stunden warten, bevor die eigentliche Untersuchung beginnt.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Geben Sie Hinweise zur notwendigen Vorbereitung, wie z.B. das Trinken von ausreichend Wasser und mögliche Einschränkungen bei der Nahrungsaufnahme.",
+            third:
+              "Bitte trinken Sie vor der Untersuchung viel Wasser, um die Ausscheidung des Isotops zu fördern.",
+            fourth:
+              "Verzichten Sie bitte vier Stunden vor der Untersuchung auf feste Nahrung, um optimale Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie über die Strahlenexposition und mögliche Risiken wie allergische Reaktionen auf das Kontrastmittel.",
+            third:
+              "Es besteht eine geringe Strahlenbelastung. Allergische Reaktionen auf das Kontrastmittel sind selten, aber möglich.",
+            fourth:
+              "Die Strahlung, der Sie ausgesetzt sind, ist gering und vergleichbar mit einer Röntgenaufnahme.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile, wie die hohe Sensitivität und die Möglichkeit, das gesamte Skelettsystem zu untersuchen.",
+            third:
+              "Die Methode ist sehr empfindlich und ermöglicht uns, das gesamte Skelettsystem zu beurteilen.",
+            fourth:
+              "Mit dieser Untersuchung können wir Veränderungen im Knochenstoffwechsel frühzeitig feststellen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie mögliche Alternativen zur Skelettszintigraphie wie Röntgen, CT, MRT und PET-Scans.",
+            third:
+              "Eine Alternative zur Skelettszintigraphie könnte eine MRT-Untersuchung sein.",
+            fourth:
+              "Eine andere Möglichkeit wäre eine PET-CT-Untersuchung, die ebenfalls sehr genau ist.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Geben Sie die Kontraindikationen an, z.B. Schwangerschaft und Stillzeit.",
+            third:
+              "Wir führen die Untersuchung nicht bei schwangeren Frauen durch, da das Risiko für das ungeborene Kind zu hoch ist.",
+            fourth:
+              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden keine Muttermilch abpumpen oder füttern.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie typische Ergebnisse der Untersuchung, wie Hot-Spots und Cold-Spots, und deren Bedeutung.",
+            third:
+              "Ein 'Hot-Spot' könnte auf eine Knochenmetastase hinweisen, während ein 'Cold-Spot' auf eine Osteonekrose hindeuten könnte.",
+            fourth:
+              "Ein 'Hot-Spot' zeigt uns Bereiche mit erhöhter Aktivität, was auf Entzündungen oder Tumoren hinweisen kann.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit, dass der Patient das Verfahren und die damit verbundenen Risiken versteht und zustimmt.",
+            third:
+              "Es ist wichtig, dass Sie alle Informationen über die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir beginnen.",
+            fourth:
+              "Bitte lesen und verstehen Sie die Einwilligungserklärung sorgfältig, damit Sie über alle Aspekte der Untersuchung informiert sind.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess zum Erhalt des schriftlichen Einverständnisses des Patienten.",
+            third:
+              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung fortfahren können.",
+            fourth:
+              "Sie müssen das Einverständnisformular unterschreiben, bevor wir mit der Prozedur fortfahren können.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Nachsorge und Verhaltensweisen nach der Untersuchung, wie z.B. viel trinken zur Ausscheidung des Isotops.",
+            third:
+              "Nach der Untersuchung sollten Sie viel Wasser trinken, um das radioaktive Isotop schneller auszuscheiden.",
+            fourth:
+              "Es ist wichtig, nach der Untersuchung ausreichend Flüssigkeit zu sich zu nehmen, um die Ausscheidung des Isotops zu unterstützen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient über die Ergebnisse informiert wird und wer die Ergebnisse mit ihm bespricht.",
+            third:
+              "Sie werden in der Regel innerhalb einer Woche von Ihrem behandelnden Arzt über die Ergebnisse informiert.",
+            fourth:
+              "Die Ergebnisse der Untersuchung werden Ihnen in einem Nachgespräch mitgeteilt und erklärt.",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 73,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass es sich bei der Skelettszintigraphie um eine nuklearmedizinische Untersuchung handelt, die zur Darstellung des Knochenstoffwechsels dient.",
+            third:
+              "Die Skelettszintigraphie ist eine bildgebende Methode, die den Knochenstoffwechsel darstellt und häufig zur Detektion von Knochenmetastasen verwendet wird.",
+            fourth:
+              "Es handelt sich um eine nuklearmedizinische Untersuchung, bei der ein radioaktives Isotop verwendet wird, um pathologische Veränderungen im Knochen aufzuspüren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass wir mit dieser Untersuchung frühzeitig pathologische Veränderungen im Skelettsystem wie Metastasen, Frakturen oder Entzündungen erkennen können.",
+            third:
+              "Mit der Skelettszintigraphie können wir Metastasen, die bei konventionellen Röntgenbildern nicht sichtbar sind, frühzeitig erkennen.",
+            fourth:
+              "Diese Untersuchung ermöglicht uns die frühzeitige Erkennung von entzündlichen Veränderungen oder Stressfrakturen, die bei anderen Bildgebungsverfahren übersehen werden könnten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erwähnen Sie, dass die Ergebnisse der Untersuchung typische Muster wie Hot-Spots und Cold-Spots zeigen, die auf verschiedene pathologische Prozesse hinweisen.",
+            third:
+              "Ein Hot-Spot in der Skelettszintigraphie könnte auf eine metastatische Läsion oder eine frische Fraktur hinweisen.",
+            fourth:
+              "Cold-Spots können auf eine verminderte Durchblutung hinweisen, was bei einer Osteonekrose der Fall sein kann.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, dass die Indikationen für die Skelettszintigraphie unter anderem die Suche nach Knochenmetastasen, die Diagnose von Osteomyelitis und die Bewertung von Knochenfrakturen umfassen.",
+            third:
+              "Typische Indikationen umfassen die Suche nach Knochenmetastasen bei Patienten mit bekannten Primärtumoren und die Diagnose von Osteomyelitis.",
+            fourth:
+              "Wir setzen die Skelettszintigraphie auch zur Bewertung unklarer Knochen- oder Gelenkschmerzen ein, um verborgene Frakturen oder Entzündungen zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass Kontraindikationen die Schwangerschaft und Stillzeit umfassen, da die Strahlenbelastung Risiken für das ungeborene Kind und den Säugling darstellen kann.",
+            third:
+              "Bei schwangeren Frauen vermeiden wir die Skelettszintigraphie aufgrund der potenziellen Strahlenbelastung für den Fötus.",
+            fourth:
+              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden abpumpen und die Milch verwerfen, um eine Strahlenexposition des Säuglings zu vermeiden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erwähnen Sie mögliche Differenzialdiagnosen, die bei der Interpretation der Skelettszintigraphie berücksichtigt werden müssen, wie z.B. benigne Knochenveränderungen oder entzündliche Prozesse.",
+            third:
+              "Benigne Knochenveränderungen wie Enchondrome können ebenfalls Hot-Spots verursachen und sollten differenzialdiagnostisch berücksichtigt werden.",
+            fourth:
+              "Auch entzündliche Prozesse wie Arthritis können in der Szintigraphie als Hot-Spots erscheinen und müssen von malignen Veränderungen unterschieden werden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, wie die Ergebnisse der Skelettszintigraphie in die Behandlungspläne der Patienten integriert werden können, um gezielte Therapieansätze zu entwickeln.",
+            third:
+              "Bei Nachweis von Knochenmetastasen würden wir eine systemische Therapie einleiten und ggf. eine lokale Bestrahlung in Erwägung ziehen.",
+            fourth:
+              "Die Ergebnisse können auch zur Entscheidung über eine operative Versorgung von Frakturen herangezogen werden, insbesondere bei Patienten mit komplexen Verletzungen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der interprofessionellen Zusammenarbeit zwischen Nuklearmedizinern, Onkologen, Orthopäden und anderen Fachrichtungen zur optimalen Patientenversorgung.",
+            third:
+              "Eine enge Zusammenarbeit zwischen Nuklearmedizinern und Onkologen ist entscheidend, um die Ergebnisse der Skelettszintigraphie optimal in den Therapieplan zu integrieren.",
+            fourth:
+              "Orthopäden und Nuklearmediziner müssen bei der Interpretation der Befunde eng zusammenarbeiten, um die beste Behandlungsstrategie für den Patienten zu entwickeln.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erwähnen Sie die Rolle des Qualitätsmanagements bei der Sicherstellung der Genauigkeit und Zuverlässigkeit der Untersuchungsergebnisse.",
+            third:
+              "Regelmäßige Kalibrierung der Gamma-Kamera und Schulungen des Personals sind essenziell, um konsistente und verlässliche Ergebnisse zu gewährleisten.",
+            fourth:
+              "Qualitätsmanagement sorgt dafür, dass die Protokolle für die Durchführung und Auswertung der Skelettszintigraphie strikt eingehalten werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Wichtigkeit der Dokumentation der Untersuchungsergebnisse und der Weiterverfolgung der Patienten zur Überwachung des Krankheitsverlaufs und der Therapieeffekte.",
+            third:
+              "Eine sorgfältige Dokumentation der Befunde ermöglicht es uns, den Krankheitsverlauf über die Zeit zu verfolgen und Therapieanpassungen vorzunehmen.",
+            fourth:
+              "Wir dokumentieren alle Untersuchungsergebnisse detailliert, um bei Nachkontrollen und zur langfristigen Planung der Patientenbehandlung darauf zurückgreifen zu können.",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 74,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "45-jähriger Patient ohne Beschwerden, Routinekontrolle nach einem Jahr ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über diffuse Knochenschmerzen und Gewichtsverlust. Vorgeschichte eines Prostatakarzinoms.",
+            fourth:
+              "50-jährige Patientin mit persistierenden Schmerzen und Schwellungen im rechten Bein. Keine bekannte Vorgeschichte von Knochenerkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Skelettszintigraphie zeigt eine gleichmäßige Verteilung des Isotops ohne Anzeichen von Hot-Spots oder anderen Auffälligkeiten.",
+            third:
+              "Skelettszintigraphie zeigt multiple Hot-Spots, insbesondere in der Wirbelsäule und den Beckenknochen.",
+            fourth:
+              "Skelettszintigraphie zeigt einen ausgeprägten Hot-Spot im distalen Femur, umgeben von einer diffusen Aufnahme.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Skelettszintigraphie unterstützt den Ausschluss von Knochenpathologien.",
+            third:
+              "Der Befund deutet auf Knochenmetastasen hin. Die Lokalisation und die Anzahl der Hot-Spots korrelieren mit der Vorgeschichte eines Prostatakarzinoms.",
+            fourth:
+              "Der ausgeprägte Hot-Spot im distalen Femur ist typisch für eine Osteomyelitis. Die diffuse Aufnahme deutet auf eine entzündliche Reaktion hin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer systemischen Therapie und regelmäßiger Kontrolluntersuchungen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer antibiotischen Therapie sowie chirurgischer Maßnahmen, falls notwendig.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Skelettsystems. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose von Knochenmetastasen basierend auf der Skelettszintigraphie und der klinischen Vorgeschichte.",
+            fourth:
+              "Diagnose einer Osteomyelitis aufgrund der Skelettszintigraphie-Ergebnisse und der klinischen Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Verteilung des Isotops ohne Auffälligkeiten in allen Bereichen des Skelettsystems.",
+            third:
+              "Skelettszintigraphie-Aufnahmen zeigen multiple Hot-Spots in der Wirbelsäule und den Beckenknochen.",
+            fourth:
+              "Skelettszintigraphie-Bilder zeigen einen ausgeprägten Hot-Spot im distalen Femur mit diffuser Aufnahme um die Läsion herum.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, dass der Patient regelmäßig zu Routinekontrollen erscheint, um den gesunden Zustand zu überwachen.",
+            third:
+              "Sie sollten die Diagnose mit dem Onkologen besprechen und eine systemische Therapie planen. Regelmäßige Kontrolluntersuchungen sind erforderlich, um den Krankheitsverlauf zu überwachen.",
+            fourth:
+              "Wir empfehlen, dass Sie die Diagnose mit dem Orthopäden und Infektiologen besprechen, um die antibiotische Therapie und gegebenenfalls chirurgische Maßnahmen zu planen.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 75,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: " ",
+        text_list: [
+          {
+            bold: "Gamma-Kamera",
+            other:
+              "Besteht aus einem Kollimator, einem Szintillationskristall und Photomultiplier-Röhren. Erfasst die von den radioaktiven Isotopen ausgesendete Gammastrahlung, die sich in den Knochen anreichern.",
+          },
+          {
+            bold: "Radioaktive Isotope",
+            other:
+              "Am häufigsten wird Technetium-99m verwendet. Wird dem Patienten intravenös injiziert und reichert sich in Bereichen mit hohem Knochenstoffwechsel an.",
+          },
+          {
+            bold: "Kollimator",
+            other:
+              "Ein Gerät, das nur Gammastrahlen aus bestimmten Winkeln durchlässt, um die Bildauflösung zu verbessern. Hilft dabei, die Richtung der einfallenden Gammastrahlen zu bestimmen und unerwünschte Strahlung zu blockieren.",
+          },
+          {
+            bold: "Szintillationskristall",
+            other:
+              "Wandelt die Gammastrahlen in Lichtblitze um. Typischerweise aus Natriumjodid (NaI) hergestellt.",
+          },
+          {
+            bold: "Photomultiplier-Röhren",
+            other:
+              "Verstärken die Lichtblitze, die vom Szintillationskristall erzeugt werden. Wandeln das Licht in elektrische Signale um, die dann zur Bildgebung verwendet werden.",
+          },
+          {
+            bold: "Patiententisch",
+            other:
+              "Ist motorisiert und kann in die richtige Position für die Untersuchung bewegt werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Nuklearmediziner oder radiologische Technologe steuert von hier aus die Untersuchung und verarbeitet die Bilder.",
+          },
+          {
+            bold: "Kontrastmittelinjektor (optional)",
+            other:
+              "In bestimmten Fällen kann ein Kontrastmittel verwendet werden, um die Sichtbarkeit bestimmter Strukturen zu verbessern. Wird intravenös verabreicht.",
+          },
+          {
+            bold: "Steuerkonsole",
+            other:
+              "Ermöglicht dem Technologen, das Skelettszintigraphie-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Kühlungssystem",
+            other:
+              "Hält die empfindlichen Komponenten des Geräts auf einer optimalen Betriebstemperatur. Verhindert Überhitzung und sichert eine gleichbleibende Bildqualität.",
+          },
+          {
+            bold: "Software zur Bildrekonstruktion",
+            other:
+              "Verarbeitet die erfassten Daten und rekonstruiert daraus die Bilder des Skelettsystems. Ermöglicht die Erstellung von 2D- und 3D-Bildern zur besseren Diagnose.",
+          },
+          {
+            bold: "Sprachkommunikationssystem",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Multidetektor-Technologie",
+            other:
+              "Moderne Skelettszintigraphie-Geräte sind oft mit Multidetektoren ausgestattet. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 76,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der Skelettszintigraphie -Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Skelettszintigraphie",
+            other:
+              "Ein nuklearmedizinisches Bildgebungsverfahren zur Darstellung des Knochenstoffwechsels.",
+          },
+          {
+            bold: "Gamma-Kamera",
+            other:
+              "Gerät zur Erfassung der Gammastrahlung, die von den radioaktiven Isotopen ausgesendet wird.",
+          },
+          {
+            bold: "Technetium-99m (Tc-99m)",
+            other:
+              "Das häufig verwendete radioaktive Isotop in der Skelettszintigraphie.",
+          },
+          {
+            bold: "Hot-Spot",
+            other:
+              "Bereich mit erhöhter Aufnahme des Isotops, deutet auf erhöhten Knochenstoffwechsel hin.",
+          },
+          {
+            bold: "Cold-Spot",
+            other:
+              "Bereich mit verminderter Aufnahme des Isotops, deutet auf reduzierten Knochenstoffwechsel hin.",
+          },
+          {
+            bold: "Kollimator",
+            other:
+              "Gerät zur Begrenzung und Ausrichtung der einfallenden Gammastrahlen auf die Gamma-Kamera.",
+          },
+          {
+            bold: "Szintillationskristall",
+            other: "Wandelt Gammastrahlen in Lichtblitze um.",
+          },
+          {
+            bold: "Photomultiplier-Röhren",
+            other:
+              "Verstärken die Lichtblitze und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Intravenöse Injektion",
+            other:
+              "Methode zur Verabreichung des radioaktiven Isotops in die Blutbahn.",
+          },
+          {
+            bold: "Radioaktive Tracer",
+            other:
+              "Stoffe, die radioaktive Isotope enthalten und sich im Körper anreichern.",
+          },
+          {
+            bold: "Metastasen",
+            other:
+              "Tumorabsiedlungen in den Knochen, häufige Indikation für eine Skelettszintigraphie.",
+          },
+          {
+            bold: "Osteomyelitis",
+            other:
+              "Knochenentzündung, die mittels Skelettszintigraphie diagnostiziert werden kann.",
+          },
+          {
+            bold: "Frakturen",
+            other:
+              "Knochenbrüche, die durch erhöhte Isotopenaufnahme sichtbar gemacht werden können.",
+          },
+          {
+            bold: "Knochenstoffwechsel",
+            other: "Prozess des Auf- und Abbaus von Knochengewebe.",
+          },
+          {
+            bold: "Patiententisch",
+            other:
+              "Motorisierter Tisch, auf dem der Patient während der Untersuchung liegt.",
+          },
+          {
+            bold: "Arbeitsstation",
+            other:
+              "Computer und Monitore zur Steuerung und Auswertung der Untersuchung.",
+          },
+          {
+            bold: "Kontrastmittel",
+            other:
+              "Substanz, die die Bildgebung bestimmter Strukturen im Körper verbessert.",
+          },
+          {
+            bold: "Steuerkonsole",
+            other:
+              "Bedieneinheit zur Steuerung des Skelettszintigraphie-Geräts.",
+          },
+          {
+            bold: "Radiologischer Technologe",
+            other:
+              "Fachperson, die die Untersuchung durchführt und das Gerät bedient.",
+          },
+          {
+            bold: "Nuklearmediziner",
+            other:
+              "Arzt, der auf die Anwendung von radioaktiven Substanzen zu diagnostischen und therapeutischen Zwecken spezialisiert ist.",
+          },
+          {
+            bold: "Bildrekonstruktion",
+            other:
+              "Softwaregestützte Erstellung von 2D- und 3D-Bildern aus den gesammelten Daten.",
+          },
+          {
+            bold: "Diagnostische Genauigkeit",
+            other:
+              "Maß für die Fähigkeit der Untersuchung, korrekte Diagnosen zu stellen.",
+          },
+        ],
+      },
+      {
+        id: 77,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link:
+              "https://www.praktischarzt.de/diagnostik/knochenszintigraphie/",
+            bold: "practischArzt",
+            other:
+              " bietet detaillierte Informationen über die Durchführung der Knochenszintigraphie, einschließlich Vorbereitung, Dauer und mögliche Risiken.",
+          },
+          {
+            bold_link:
+              "https://www.apotheken-umschau.de/diagnostik/szintigrafie",
+            bold: "Apotheken Umschau",
+            other:
+              " beschreibt, wie eine Knochenszintigraphie durchgeführt wird, und bietet ein Video zur besseren Verständigung der Prozedur.",
+          },
+          {
+            bold_link:
+              "https://www.radiologie.de/leistungen/skelettszintigraphie",
+            bold: "Radiologie.de",
+            other:
+              " erklärt, wie mit der Skelettszintigraphie aktive Veränderungen im Knochen festgestellt werden können, besonders für die Diagnose von Entzündungen und Metastasen.",
+          },
+          {
+            bold_link:
+              "https://nuklearmedizin.mri.tum.de/leistungen/skelettszintigraphie",
+            bold: "Nuklearmedizin - Klinikum rechts der Isar",
+            other:
+              " beschreibt den Prozess der Skelettszintigraphie detailliert, einschließlich Vorbereitung, Durchführung und Dauer der Untersuchung.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/szintigrafie/",
+            bold: "NetDoktor.de",
+            other:
+              " bietet umfassende Informationen über verschiedene Formen der Szintigraphie, einschließlich der Skelettszintigraphie, und deren Indikationen, Risiken und Vorteile.",
+          },
+          {
+            bold_link:
+              "https://www.medizin.uni-tuebingen.de/kliniken/nuklearmedizin/leistungen/skelettszintigraphie",
+            bold: "Universitätsklinikum Tübingen",
+            other:
+              " liefert Informationen über die Durchführung der Skelettszintigraphie in der Klinik, die Vorbereitung der Patienten und die notwendigen Maßnahmen nach der Untersuchung.",
+          },
+          {
+            bold_link: "https://flexikon.doccheck.com/de/Skelettszintigraphie",
+            bold: "DocCheck Flexikon",
+            other:
+              " bietet eine umfassende Definition der Skelettszintigraphie, einschließlich Indikationen, Durchführung und Interpretation der Ergebnisse.",
+          },
+          {
+            bold_link: "https://www.amboss.com/de",
+            bold: "Amboss",
+            other:
+              " beschreibt detailliert die Indikationen, Kontraindikationen, Durchführung und Interpretation der Skelettszintigraphie.",
+          },
+        ],
+      },
+
+      {
+        id: 78,
         title: "PDF",
         link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
       },
