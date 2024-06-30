@@ -6106,4 +6106,659 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 8
+  {
+    id: 10,
+    title: "Schilddrüsen-Szintigraphie",
+    checked: false,
+    childTabs: [
+      // 1tab
+      {
+        id: 79,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Schilddrüsen-Szintigraphie besteht darin, Funktionsstörungen der Schilddrüse zu diagnostizieren und morphologische Veränderungen zu erkennen. Dabei wird die Verteilung eines radioaktiven Tracers in der Schilddrüse visuell dargestellt.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Schilddrüsen-Szintigraphie ist von großer Bedeutung für die Diagnose von Schilddrüsenerkrankungen wie Hyperthyreose, Knoten und Krebs. Sie findet Anwendung in der Differenzialdiagnose von Schilddrüsenknoten, der Beurteilung der Schilddrüsenfunktion und der Überwachung von Schilddrüsenkrebs.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das Verfahren basiert auf der Aufnahme von radioaktiven Isotopen durch die Schilddrüse. Typischerweise werden Technetium-99m oder Iod-123 verwendet, da diese Isotope von der Schilddrüse aufgenommen und gespeichert werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Nach der intravenösen Injektion des radioaktiven Tracers wird eine Gammakamera verwendet, um die emittierte Strahlung zu detektieren und ein Bild der Schilddrüse zu erzeugen. Die Untersuchung dauert etwa 20-30 Minuten und erfordert keine speziellen Vorbereitungen des Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: 'Die Auswertung der Schilddrüsen-Szintigraphie erfolgt durch die Beurteilung der Verteilung des Tracers in der Schilddrüse. Bereiche mit erhöhter Aktivität ("heiße Knoten") können auf eine Überfunktion hinweisen, während Bereiche mit verminderter Aktivität ("kalte Knoten") auf Hypofunktion oder maligne Veränderungen hindeuten können.',
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden zählen diffuse Vergrößerungen, fokale Knoten und unregelmäßige Verteilungen des Tracers, die auf unterschiedliche pathologische Zustände hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ein wesentlicher Vorteil der Schilddrüsen-Szintigraphie ist ihre nicht-invasive Natur, die es ermöglicht, detaillierte Informationen über die Schilddrüsenfunktion zu erhalten, ohne einen chirurgischen Eingriff vornehmen zu müssen. Außerdem ist die Strahlenbelastung durch das Verfahren gering, was es zu einer sicheren Option für viele Patienten macht. Die hohe Sensitivität der Szintigraphie erlaubt es, funktionelle Veränderungen der Schilddrüse frühzeitig zu erkennen und entsprechend zu behandeln.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen der Schilddrüsen-Szintigraphie gehört die begrenzte Verfügbarkeit der notwendigen Ausrüstung und Tracer in einigen Regionen, was den Zugang zu diesem diagnostischen Verfahren einschränken kann. Darüber hinaus kann es bei einigen Patienten zu allergischen Reaktionen auf den verwendeten Tracer kommen, obwohl dies selten ist.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken der Schilddrüsen-Szintigraphie sind minimal, umfassen jedoch die geringe Strahlenexposition, die mit der Injektion des radioaktiven Tracers verbunden ist. Diese Strahlenbelastung ist jedoch deutlich niedriger als bei vielen anderen bildgebenden Verfahren. Seltene allergische Reaktionen auf den Tracer können auftreten, die jedoch in der Regel mild und gut behandelbar sind.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Schilddrüsen-Szintigraphie spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Schilddrüsenerkrankungen. Sie liefert wichtige Informationen zur Funktionsbewertung und trägt zur Entscheidung über therapeutische Maßnahmen bei.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die präzise Bestimmung der Schilddrüsenfunktion und -morphologie kann die Szintigraphie das Management und die Prognose von Patienten mit Schilddrüsenerkrankungen erheblich verbessern.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text:
+                  "Alternative Verfahren zur Schilddrüsen-Szintigraphie umfassen Ultraschall, Feinnadelbiopsie und Bluttests zur Bestimmung der Schilddrüsenhormone. Diese Methoden können ergänzend oder alternativ eingesetzt werden, je nach klinischer Fragestellung.",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der Tracer und Bildgebungstechnologien, um die diagnostische Genauigkeit und Sicherheit zu erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Einführung neuer Tracer und fortschrittlicherer Bildgebungstechniken umfassen, die eine noch detailliertere Beurteilung der Schilddrüsenfunktion ermöglichen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Schilddrüsen-Szintigraphie ist ein wesentliches diagnostisches Werkzeug zur Beurteilung von Schilddrüsenerkrankungen, das durch seine nicht-invasive Natur und hohe diagnostische Genauigkeit überzeugt.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre Rolle in der modernen Medizin ist unbestritten, und kontinuierliche Forschungsbemühungen tragen dazu bei, ihre Anwendungsmöglichkeiten und diagnostische Leistungsfähigkeit weiter zu verbessern.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab
+      {
+        id: 80,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Schilddrüsen-Szintigraphie zur Beurteilung der Schilddrüsenfunktion und zur Unterscheidung zwischen kalten und heißen Knoten dient.",
+            third:
+              "„Wir möchten herausfinden, ob Ihre Schilddrüse über- oder unteraktiv ist und ob Knoten vorhanden sind, die weiter untersucht werden müssen.“",
+            fourth:
+              "„Die Untersuchung hilft uns, festzustellen, ob ein Knoten in Ihrer Schilddrüse gutartig oder bösartig sein könnte.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf: Verabreichung eines radioaktiven Stoffes per Injektion, Wartezeit, anschließende Bildaufnahme der Schilddrüse mit einer Gamma-Kamera.",
+            third:
+              "„Sie erhalten eine kleine Menge eines radioaktiven Stoffes über eine Injektion. Nach etwa 20 Minuten machen wir mit einer speziellen Kamera Bilder Ihrer Schilddrüse.“",
+            fourth:
+              "„Nach der Injektion des Radiopharmakons müssen Sie etwa 20 Minuten warten. Danach erstellen wir mit einer Gamma-Kamera Bilder, die die Funktion Ihrer Schilddrüse zeigen.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Weisen Sie auf die Vorbereitung hin: Nüchternheit am Untersuchungstag und Absetzen bestimmter Medikamente nach Absprache mit dem Arzt.",
+            third:
+              "„Bitte kommen Sie nüchtern zur Untersuchung und setzen Sie Ihre Schilddrüsenmedikamente drei Tage vorher ab.“",
+            fourth:
+              "„Es ist wichtig, dass Sie am Tag der Untersuchung nichts essen und bestimmte Medikamente, wie Jodtabletten, vorher absetzen.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie über die Risiken: Minimale Strahlenexposition und sehr seltene allergische Reaktionen auf das Radiopharmakon.",
+            third:
+              "„Die Strahlenbelastung ist sehr gering und vergleichbar mit einer Röntgenaufnahme. Allergische Reaktionen sind äußerst selten.“",
+            fourth:
+              "„Die Risiken sind minimal. Es gibt eine sehr geringe Strahlenexposition und das Risiko einer allergischen Reaktion ist sehr niedrig.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Stellen Sie die Vorteile dar: Nicht-invasive, schmerzlose Methode, die wichtige funktionelle Informationen über die Schilddrüse liefert.",
+            third:
+              "„Die Methode ist schmerzlos und liefert uns wertvolle Informationen über die Funktion Ihrer Schilddrüse.“",
+            fourth:
+              "„Dieses Verfahren ist nicht-invasiv und hilft uns, genaue Daten über Ihre Schilddrüsenaktivität zu erhalten.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie Alternativen: Ultraschall der Schilddrüse für anatomische Informationen, Feinnadelaspiration zur zytologischen Untersuchung von Schilddrüsenknoten.",
+            third:
+              "„Eine Alternative wäre ein Ultraschall, der uns aber keine funktionellen Informationen liefert.“",
+            fourth:
+              "„Wir könnten auch eine Feinnadelaspiration durchführen, um Zellen aus einem Knoten zu untersuchen.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Nennen Sie die Kontraindikationen: Schwangerschaft, Stillzeit und bekannte Allergien gegen das verwendete Radiopharmakon.",
+            third:
+              "„Diese Untersuchung ist nicht geeignet für Schwangere und stillende Frauen.“",
+            fourth:
+              "„Wenn Sie schwanger sind oder stillen, sollten Sie diese Untersuchung nicht durchführen lassen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erläutern Sie mögliche Ergebnisse: Identifikation von kalten Knoten (weniger aktiv) und heißen Knoten (stärker aktiv), die auf verschiedene Schilddrüsenkrankheiten hinweisen.",
+            third:
+              "„Wir könnten kalte Knoten finden, die weniger aktiv sind und weitere Untersuchungen benötigen.“",
+            fourth:
+              "„Heiße Knoten zeigen eine erhöhte Aktivität und könnten auf eine Schilddrüsenüberfunktion hinweisen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit: Der Patient muss umfassend über Ablauf, Risiken und Nutzen der Untersuchung informiert werden und schriftlich einwilligen.",
+            third:
+              "„Es ist wichtig, dass Sie die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir Ihre Zustimmung einholen.“",
+            fourth:
+              "„Wir benötigen Ihre schriftliche Einwilligung, nachdem wir Sie ausführlich über den Ablauf und die möglichen Risiken informiert haben.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess der Einwilligung: Schriftliche Zustimmung des Patienten nach ausführlicher Aufklärung durch den Arzt.",
+            third:
+              "„Nach der Aufklärung durch den Arzt unterschreiben Sie bitte das Einverständnisformular.“",
+            fourth:
+              "„Sie erhalten alle notwendigen Informationen und geben dann schriftlich Ihre Zustimmung zur Untersuchung.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Anweisungen: Patient sollte nach der Untersuchung viel Flüssigkeit trinken und sich bei Fragen oder Beschwerden an seinen Arzt wenden.",
+            third:
+              "„Bitte trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller aus Ihrem Körper zu entfernen.“",
+            fourth:
+              "„Falls Sie nach der Untersuchung Fragen haben oder sich unwohl fühlen, kontaktieren Sie bitte umgehend Ihren Arzt.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie die Ergebnisbesprechung: Der Arzt erläutert dem Patienten die Befunde der Untersuchung, deren Bedeutung und die empfohlenen nächsten Schritte.",
+            third:
+              "„Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und wir planen die weiteren Schritte.“",
+            fourth:
+              "„Wir erklären Ihnen, was die Befunde bedeuten und welche Behandlungen oder Untersuchungen eventuell folgen sollten.“",
+          },
+        ],
+      },
+      // 3tab
+      {
+        id: 81,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Schilddrüsen-Szintigraphie eine nuklearmedizinische Bildgebungstechnik ist, die zur Beurteilung der Schilddrüsenfunktion und zur Identifikation von Knoten eingesetzt wird.",
+            third:
+              "„Die Schilddrüsen-Szintigraphie ist ein bildgebendes Verfahren, bei dem radioaktive Substanzen verwendet werden, um die Funktion der Schilddrüse darzustellen.“",
+            fourth:
+              "„Dieses Verfahren nutzt ein Radiopharmakon und eine Gamma-Kamera, um die Aktivität und Struktur der Schilddrüse zu visualisieren.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass die Untersuchung die funktionelle Aktivität der Schilddrüse visualisiert und zwischen kalten und heißen Knoten unterscheidet, was für die Diagnose von Schilddrüsenerkrankungen entscheidend ist.",
+            third:
+              "„Wir können damit die Aktivität der Schilddrüse messen und feststellen, ob Knoten über- oder unteraktiv sind.“",
+            fourth:
+              "„Es ermöglicht uns, funktionsgestörte Bereiche der Schilddrüse zu identifizieren und zu beurteilen.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erläutern Sie die typischen Befunde wie kalte Knoten, die auf Hypofunktion oder Malignität hinweisen können, und heiße Knoten, die auf Hyperfunktion hinweisen, wie bei autonomen Adenomen oder Morbus Basedow.",
+            third:
+              "„Ein kalter Knoten könnte auf eine Zyste oder ein Karzinom hinweisen, während ein heißer Knoten auf ein autonomes Adenom hindeuten kann.“",
+            fourth:
+              "„Die Untersuchung kann heiße Knoten zeigen, die oft gutartig sind, oder kalte Knoten, die weiter abgeklärt werden müssen.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen: Unklare Schilddrüsenknoten, Verdacht auf Schilddrüsenfunktionsstörungen (Hyperthyreose oder Hypothyreose), Abklärung einer Struma.",
+            third:
+              "„Typische Indikationen sind unklare Knoten, Verdacht auf Hyperthyreose oder eine vergrößerte Schilddrüse.“",
+            fourth:
+              "„Wir setzen die Szintigraphie bei Verdacht auf Funktionsstörungen oder zur Abklärung von Schilddrüsenknoten ein.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie die Kontraindikationen: Schwangerschaft, Stillzeit, bekannte Allergien gegen das Radiopharmakon.",
+            third:
+              "„Kontraindikationen umfassen Schwangerschaft und Stillzeit sowie bekannte Allergien gegen das Radiopharmakon.“",
+            fourth:
+              "„Die Untersuchung ist kontraindiziert bei Schwangeren und bei Patienten mit kürzlich erfolgter Gabe von jodhaltigen Kontrastmitteln.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Besprechen Sie Differenzialdiagnosen: Knoten können gutartig (z.B. Zysten, Adenome) oder bösartig (Karzinome) sein; funktionelle Störungen wie Morbus Basedow oder Hashimoto-Thyreoiditis sollten ebenfalls berücksichtigt werden.",
+            third:
+              "„Differenzialdiagnosen umfassen gutartige Knoten wie Zysten und Adenome sowie bösartige Tumoren.“",
+            fourth:
+              "„Wir müssen auch an funktionelle Störungen wie Morbus Basedow oder eine Thyreoiditis denken.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie die möglichen Behandlungspläne: Abhängig von den Befunden könnten eine medikamentöse Therapie, Radiojodtherapie oder chirurgische Intervention erforderlich sein.",
+            third:
+              "„Abhängig vom Ergebnis könnte eine medikamentöse Therapie, eine Radiojodtherapie oder eine Operation notwendig sein.“",
+            fourth:
+              "„Für kalte Knoten könnte eine Operation erforderlich sein, während heiße Knoten oft medikamentös behandelt werden.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Wichtigkeit der Zusammenarbeit zwischen Endokrinologen, Nuklearmedizinern, Chirurgen und Hausärzten.",
+            third:
+              "„Die enge Zusammenarbeit zwischen Endokrinologen und Nuklearmedizinern ist entscheidend für eine präzise Diagnostik und Therapie.“",
+            fourth:
+              "„Chirurgen und Endokrinologen müssen bei der Entscheidungsfindung eng kooperieren.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie die Notwendigkeit eines kontinuierlichen Qualitätsmanagements, um die Genauigkeit der Diagnoseverfahren und die Patientensicherheit zu gewährleisten.",
+            third:
+              "„Regelmäßige Kalibrierung der Geräte und Fortbildung des Personals sind essenziell für eine hohe Diagnosesicherheit.“",
+            fourth:
+              "„Ein umfassendes Qualitätsmanagementsystem hilft uns, die Genauigkeit und Sicherheit der Untersuchungen zu gewährleisten.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Heben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der anschließenden Nachverfolgung hervor, um eine angemessene Behandlung und Überwachung der Patienten zu gewährleisten.",
+            third:
+              "„Eine gründliche Dokumentation der Ergebnisse und regelmäßige Nachkontrollen sind wichtig, um den Behandlungserfolg zu überwachen.“",
+            fourth:
+              "„Die Ergebnisse müssen genau dokumentiert und die Patienten in regelmäßigen Abständen nachuntersucht werden.“",
+          },
+        ],
+      },
+      // 4tab
+      {
+        id: 82,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle, keine Auffälligkeiten in der Schilddrüsenfunktion.",
+            third:
+              "50-jähriger Patient mit einem tastbaren Knoten in der Schilddrüse und allgemeiner Müdigkeit.",
+            fourth:
+              "40-jährige Patientin klagt über Herzrasen, Gewichtsverlust und Nervosität.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Homogene Verteilung des Radiopharmakons in der Schilddrüse, keine Knoten oder Auffälligkeiten erkennbar.",
+            third:
+              "Szintigraphie zeigt einen kalten Knoten im rechten Schilddrüsenlappen, der kein Radiopharmakon aufnimmt.",
+            fourth:
+              "Szintigraphie zeigt einen heißen Knoten im linken Schilddrüsenlappen, der vermehrt Radiopharmakon aufnimmt.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis zeigt eine normale, gleichmäßige Schilddrüsenfunktion ohne Knoten.",
+            third:
+              "Der kalte Knoten könnte auf eine Zyste, ein Adenom oder ein Karzinom hinweisen und erfordert weitere Abklärung, eventuell eine Feinnadelbiopsie.",
+            fourth:
+              "Der heiße Knoten deutet auf ein autonomes Adenom hin, das oft gutartig ist, aber eine Hyperthyreose verursachen kann.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund dient der Beruhigung des Patienten und der Bestätigung der normalen Schilddrüsenfunktion.",
+            third:
+              "Der Befund erfordert eine weiterführende Diagnostik wie Ultraschall und Biopsie, um die Art des Knotens zu bestimmen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose einer Hyperthyreose und Einleitung einer entsprechenden Therapie, wie z.B. Radiojodtherapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung der normalen Schilddrüsenfunktion ohne pathologische Veränderungen.",
+            third:
+              "Diagnose eines kalten Knotens in der Schilddrüse mit Verdacht auf Zyste, Adenom oder Karzinom basierend auf Szintigraphie-Ergebnissen und klinischem Bild.",
+            fourth:
+              "Diagnose eines heißen Knotens, vermutlich ein autonomes Adenom, das eine Hyperthyreose verursacht.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Gleichmäßige Verteilung des Radiopharmakons ohne Auffälligkeiten in der gesamten Schilddrüse.",
+            third:
+              "Szintigraphie zeigt eine abgegrenzte, inaktive Region im rechten Schilddrüsenlappen.",
+            fourth:
+              "Szintigraphie zeigt eine deutlich hyperaktive Region im linken Schilddrüsenlappen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um die normale Schilddrüsenfunktion weiterhin zu bestätigen.",
+            third:
+              "Es ist ratsam, eine weiterführende Diagnostik durchzuführen, wie Ultraschall und Biopsie, um die Art des kalten Knotens genauer zu bestimmen.",
+            fourth:
+              "Wir empfehlen die Einleitung einer Therapie, wie z.B. Radiojodtherapie, um die Hyperthyreose zu behandeln und weitere Symptome zu vermeiden.",
+          },
+        ],
+      },
+      // 5tab
+      {
+        id: 83,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Schilddrüsenszintigraphiegerät ist ein spezialisiertes medizinisches Bildgebungsgerät, das zur Beurteilung der Funktion und Morphologie der Schilddrüse verwendet wird. Hier sind die wesentlichen Komponenten und Funktionen eines Schilddrüsenszintigraphiegeräts:",
+        text_list: [
+          {
+            bold: "Gammakamera :",
+            other:
+              "Die Gammakamera ist das zentrale Element des Szintigraphiegeräts. Sie erfasst die vom radioaktiven Tracer emittierte Gammastrahlung, die von der Schilddrüse aufgenommen wird. Die Kamera besteht aus einem Kollimator, einem Szintillator und Photomultiplier-Röhren, die zusammenarbeiten, um die Strahlung in elektrische Signale umzuwandeln und Bilder zu erzeugen.",
+          },
+          {
+            bold: "Radioaktiver Tracer :",
+            other:
+              "Für die Schilddrüsenszintigraphie werden üblicherweise radioaktive Isotope wie Technetium-99m oder Iod-123 verwendet. Diese Tracer werden dem Patienten intravenös injiziert und reichern sich in der Schilddrüse an, wo sie Strahlung aussenden, die von der Gammakamera erfasst wird.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Der Patiententisch ist motorisiert und kann vertikal und horizontal bewegt werden, um den Patienten in die optimale Position für die Bildgebung zu bringen. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Die Arbeitsstation besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung und bewertet die Ergebnisse.",
+          },
+          {
+            bold: "Kollimator :",
+            other:
+              "Der Kollimator ist ein Teil der Gammakamera, der nur Strahlung in bestimmten Winkeln durchlässt. Er verbessert die Bildqualität, indem er Streustrahlung reduziert und die räumliche Auflösung erhöht.",
+          },
+          {
+            bold: "Szintillator :",
+            other:
+              "Der Szintillator ist ein Material innerhalb der Gammakamera, das die Gammastrahlen in sichtbares Licht umwandelt. Dieses Licht wird dann von den Photomultiplier-Röhren erfasst und in elektrische Signale umgewandelt.",
+          },
+          {
+            bold: "Photomultiplier-Röhren :",
+            other:
+              "Diese Röhren verstärken die vom Szintillator erzeugten Lichtsignale und wandeln sie in elektrische Signale um, die zur Erstellung der Bilder verwendet werden.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Die Steuerkonsole ermöglicht dem Technologen, das Szintigraphiegerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scan-Prozess zu überwachen. Hier können Parameter wie die Dauer der Bildaufnahme und die Position des Patienten eingestellt werden.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Ein Kühlsystem ist notwendig, um die elektronischen Komponenten des Szintigraphiegeräts zu kühlen und eine Überhitzung zu verhindern. Dies gewährleistet eine stabile und zuverlässige Bildgebung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ein Sprachkommunikationssystem ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist wichtig, um die korrekte Positionierung des Patienten sicherzustellen und Anweisungen während der Untersuchung zu geben.",
+          },
+          {
+            bold: "Multidetektor-Szintigraphie :",
+            other:
+              "Moderne Szintigraphiegeräte können als Multidetektor-Szintigraphie konfiguriert sein, was bedeutet, dass sie mehrere Detektoren haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+        ],
+      },
+      // 6tab
+      {
+        id: 84,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der Schilddrüsen-Szintigraphie-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Schilddrüsen-Szintigraphie :",
+            other:
+              "Nuklearmedizinisches Verfahren zur Beurteilung der Schilddrüsenfunktion.",
+          },
+          {
+            bold: "Radiopharmakon :",
+            other:
+              "Radioaktiv markierte Substanz, die zur Bildgebung verwendet wird.",
+          },
+          {
+            bold: "Gamma-Kamera :",
+            other:
+              "Gerät zur Aufnahme der Verteilung des Radiopharmakons in der Schilddrüse.",
+          },
+          {
+            bold: "Kalter Knoten :",
+            other:
+              "Bereich in der Schilddrüse, der das Radiopharmakon nicht aufnimmt und auf Hypofunktion oder Malignität hinweisen kann.",
+          },
+          {
+            bold: "Heißer Knoten :",
+            other:
+              "Bereich in der Schilddrüse, der das Radiopharmakon vermehrt aufnimmt und oft auf eine Hyperthyreose hinweist.",
+          },
+          {
+            bold: "Hyperthyreose :",
+            other:
+              "Überfunktion der Schilddrüse, die zu erhöhtem Stoffwechsel führt.",
+          },
+          {
+            bold: "Hypothyreose :",
+            other:
+              "Unterfunktion der Schilddrüse, die zu einem verminderten Stoffwechsel führt.",
+          },
+          {
+            bold: "Struma :",
+            other: "Vergrößerung der Schilddrüse, oft als Kropf bezeichnet.",
+          },
+          {
+            bold: "Feinnadelaspiration :",
+            other:
+              "Diagnostische Methode zur Zellgewinnung aus Schilddrüsenknoten.",
+          },
+          {
+            bold: "Technetium-99m :",
+            other:
+              "Häufig verwendetes Radiopharmakon in der Schilddrüsen-Szintigraphie.",
+          },
+          {
+            bold: "Jod-123 :",
+            other:
+              "Alternative radioaktive Substanz, die in der Szintigraphie verwendet wird.",
+          },
+          {
+            bold: "Thyreozyten :",
+            other:
+              "Schilddrüsenzellen, die Jod aufnehmen und Hormone produzieren.",
+          },
+          {
+            bold: "Autoimmunthyreoiditis (Hashimoto) :",
+            other:
+              "Chronische Entzündung der Schilddrüse aufgrund einer Autoimmunerkrankung.",
+          },
+          {
+            bold: "Morbus Basedow (Graves) :",
+            other: "Autoimmunerkrankung, die eine Hyperthyreose verursacht.",
+          },
+          {
+            bold: "Szintigramm :",
+            other: "Das Bild, das durch die Szintigraphie erzeugt wird.",
+          },
+          {
+            bold: "Dosis :",
+            other:
+              "Menge des Radiopharmakons, die dem Patienten verabreicht wird.",
+          },
+          {
+            bold: "Nuklearmedizin :",
+            other:
+              "Fachbereich der Medizin, der radioaktive Substanzen zur Diagnose und Therapie einsetzt.",
+          },
+          {
+            bold: "T3/T4 :",
+            other:
+              "Schilddrüsenhormone, die in der Diagnostik und Behandlung von Schilddrüsenerkrankungen eine Rolle spielen.",
+          },
+        ],
+      },
+       // 7tab
+      {
+        id: 85,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+       // 8tab
+      {
+        id: 86,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 9
 ];
