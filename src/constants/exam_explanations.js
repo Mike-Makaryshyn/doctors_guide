@@ -6762,7 +6762,7 @@ export const parentTabs = [
   // start of parent tab 11 echokardiographie
   {
     id: 11,
-    title: "Elektrokardiogramm (EKG)",
+    title: "Echokardiographie",
     checked: false,
     childTabs: [
       // 1tab 95
