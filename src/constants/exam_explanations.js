@@ -7445,7 +7445,7 @@ export const parentTabs = [
       {
         id: 102,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1fcpky8nGyV-azEghdRditSI6e7z26lJT/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1X9aLJxIlC_xoszfyZFZyyH48Et5m6tIB/view?usp=share_link",
       },
     ],
   },
