@@ -3,13 +3,13 @@ import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
 export const parentTabs = [
-  // start of parent tab: 1
+  // start of parent tab: 1 Computertomographie
   {
     id: 1,
     title: "Computertomographie(CT)",
     checked: false,
     childTabs: [
-      // 1tab
+      // 1tab id11
       {
         id: 11,
         title: "Einleitung",
@@ -120,7 +120,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 2tab
+      // 2tab id12
       {
         id: 12,
         title: "Patient-Arzt Gespräch",
@@ -247,7 +247,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 3tab
+      // 3tab id13
       {
         id: 13,
         title: "Arzt-Arzt Gespräch",
@@ -356,7 +356,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 4tab
+      // 4tab id14
       {
         id: 14,
         title: "Die pathologische Befunden und Normalbefund",
@@ -438,7 +438,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 5tab
+      // 5tab id15
       {
         id: 15,
         title: "Gerätbeschreibung",
@@ -497,7 +497,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 6tab
+      // 6tab id16
       {
         id: 16,
         title: "Wortschatz",
@@ -613,6 +613,7 @@ export const parentTabs = [
           },
         ],
       },
+      // 7tab id17
       {
         id: 17,
         title: "Links",
@@ -650,24 +651,25 @@ export const parentTabs = [
           },
         ],
       },
+      // 8tab id18
       {
         id: 18,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1m67Ctkv7GwGGPOT3skZR4HEstFSmUU80/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1VwDsXfFEppPwnn21kHvi9cOmjTs0eU02/view?usp=share_link",
       },
     ],
   },
   // end of parent tab: 1
-  // start of parent tab: 2
+  // start of parent tab: 2 2MRT
   {
     id: 2,
     title: "MRT",
 
     checked: false,
     childTabs: [
-      // 1tab
+      // 1tab id19
       {
-        id: 21,
+        id: 19,
         title: "Einleitung",
         list: [
           {
@@ -776,9 +778,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 2tab
+      // 2tab 20
       {
-        id: 22,
+        id: 20,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -904,9 +906,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 3tab
+      // 3tab 21
       {
-        id: 23,
+        id: 21,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -1013,9 +1015,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 4tab
+      // 4tab 22
       {
-        id: 24,
+        id: 22,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -1095,9 +1097,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 5tab
+      // 5tab 23
       {
-        id: 25,
+        id: 23,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
@@ -1114,9 +1116,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 6tab
+      // 6tab 24
       {
-        id: 26,
+        id: 24,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
@@ -1220,8 +1222,9 @@ export const parentTabs = [
           },
         ],
       },
+      // 7tab 25
       {
-        id: 27,
+        id: 25,
         title: "Links",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
@@ -1257,23 +1260,24 @@ export const parentTabs = [
           },
         ],
       },
+      // 8tab 26
       {
-        id: 28,
+        id: 26,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1wJJz9PBp2etWttW0nGwgu567JforFgvS/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1FZBbVLG693amI9jnMWvPSRo7RdB-UEoN/view?usp=share_link",
       },
     ],
   },
   // end of parent tab: 2
-  // start of parent tab: 3
+  // start of parent tab: 3 Röntgen
   {
     id: 3,
     title: "Röntgen",
     checked: false,
     childTabs: [
-      // 1tab
+      // 1tab 27
       {
-        id: 31,
+        id: 27,
         title: "Einleitung",
         list: [
           {
@@ -1382,9 +1386,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 2tab
+      // 2tab 28
       {
-        id: 32,
+        id: 28,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -1507,9 +1511,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 3tab
+      // 3tab 29
       {
-        id: 33,
+        id: 29,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -1616,9 +1620,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 4tab
+      // 4tab 30
       {
-        id: 34,
+        id: 30,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -1698,9 +1702,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 5tab
+      // 5tab 31
       {
-        id: 35,
+        id: 31,
         title: "Gerätbeschreibung",
         img: child_tab_img_2,
         text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
@@ -1717,9 +1721,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 6tab
+      // 6tab 32
       {
-        id: 16,
+        id: 32,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Röntgen, ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
@@ -1840,9 +1844,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 7tab
+      // 7tab 33
       {
-        id: 37,
+        id: 33,
         title: "Links",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
@@ -1878,24 +1882,24 @@ export const parentTabs = [
           },
         ],
       },
-      // 8tab
+      // 8tab 34
       {
-        id: 38,
+        id: 34,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1agdYrVUppxEZly2cLl4a2-o6T5Sgv9e4/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1Fmd2JsarEZJCX065cVemBOKQNYNDqXuo/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 3
-  // start of parent tab 4
+  // start of parent tab 4 Ultraschall
   {
     id: 4,
     title: "Ultraschall",
     checked: false,
     childTabs: [
-      // 1tab
+      // 1tab 35
       {
-        id: 39,
+        id: 35,
         title: "Einleitung",
         list: [
           {
@@ -2004,9 +2008,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 2tab
+      // 2tab 36
       {
-        id: 40,
+        id: 36,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -2131,9 +2135,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 3tab
+      // 3tab 37
       {
-        id: 41,
+        id: 37,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -2240,9 +2244,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 4tab
+      // 4tab 38
       {
-        id: 42,
+        id: 38,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -2322,9 +2326,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 5tab
+      // 5tab 39
       {
-        id: 43,
+        id: 39,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein Computertomographie (CT)-Gerät ist ein fortgeschrittenes bildgebendes medizinisches Instrument, das für detaillierte innere Bilder des Körpers verwendet wird. Hier sind die Hauptkomponenten und Funktionen eines CT-Geräts:",
@@ -2421,9 +2425,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 6tab
+      // 6tab 40
       {
-        id: 44,
+        id: 40,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Ultraschall(Sonographie), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
@@ -2563,8 +2567,9 @@ export const parentTabs = [
           },
         ],
       },
+      // 6tab 41
       {
-        id: 45,
+        id: 41,
         title: "Links",
         text: "",
         text_list: [
@@ -2610,24 +2615,3442 @@ export const parentTabs = [
           },
         ],
       },
+      // 6tab 42
       {
-        id: 46,
+        id: 42,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1Mswe_EelReCeS3bTemt6XtZv5RHMjLqg/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1IpVZbjr-QxFfXF2JnXUQR8UJ2KDo288D/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 4
-  // start of parent tab 5
+  // start of parent tab 5 (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)
   {
     id: 5,
+    title:
+      "PET-CT (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)",
+    checked: false,
+    childTabs: [
+      // 1tab 43
+      {
+        id: 43,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die PET-CT-Untersuchung zielt darauf ab, metabolische und anatomische Informationen des Körpers zu kombinieren, um präzise diagnostische Aussagen zu ermöglichen. Dies ist besonders wichtig bei der Diagnose und dem Management von Krebserkrankungen, neurologischen und kardiologischen Störungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Relevanz der PET-CT liegt in ihrer Fähigkeit, sowohl funktionelle als auch strukturelle Bildgebung zu liefern. Anwendungsbereiche umfassen die Onkologie zur Tumordetektion und -charakterisierung, die Neurologie zur Untersuchung von Hirnstoffwechselstörungen und die Kardiologie zur Bewertung der Myokardperfusion.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die PET-CT basiert auf der Kombination zweier Bildgebungstechniken: der Positronen-Emissions-Tomographie (PET), die Stoffwechselprozesse sichtbar macht, und der Computertomographie (CT), die detaillierte anatomische Bilder liefert. Dabei werden Radiotracer verwendet, die sich in spezifischen Geweben anreichern und Positronen emittieren, welche dann detektiert werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Technisch gesehen, erfolgt die PET-CT in mehreren Schritten: Injektion des Radiotracers, Wartezeit für die Anreicherung im Zielgewebe, Durchführung der PET- und CT-Scans und schließlich die Kombination der beiden Bildgebungen zu einem integrierten Bild.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der PET-CT-Bilder erfordert spezielle Kenntnisse in der Interpretation sowohl der metabolischen Aktivität (PET) als auch der anatomischen Struktur (CT). Typischerweise werden Regionen mit erhöhtem Radiotracer-Uptake identifiziert und mit den anatomischen Bildern abgeglichen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei der PET-CT umfassen die Identifikation von Tumoren, Metastasen, Entzündungsherden und neurologischen Anomalien. Auffällige Befunde zeigen sich durch Regionen mit abnorm hoher oder niedriger Stoffwechselaktivität.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Zu den Vorteilen der PET-CT gehören die hohe Sensitivität und Spezifität, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, frühzeitig pathologische Veränderungen zu erkennen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Nachteile umfassen die hohen Kosten, die begrenzte Verfügbarkeit und die Notwendigkeit von Radiotracern, die eine Strahlenexposition mit sich bringen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Risiken der PET-CT umfassen die Strahlenbelastung durch die Radiotracer und den CT-Scan sowie mögliche allergische Reaktionen auf Kontrastmittel.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die PET-CT spielt eine zentrale Rolle in der Diagnose und Behandlung von Krebserkrankungen, da sie präzise Informationen über Tumoraktivität und -ausbreitung liefert. Auch in der Neurologie und Kardiologie ist sie ein wichtiges diagnostisches Werkzeug.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die PET-CT unerlässlich, da sie hilft, Therapieentscheidungen zu treffen, den Therapieerfolg zu überwachen und die Prognose zu beurteilen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur PET-CT umfassen MRT, CT, SPECT und Ultraschall, die je nach klinischer Fragestellung eingesetzt werden können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse zeigen Fortschritte in der Entwicklung neuer Radiotracer, die spezifischere Diagnosen ermöglichen, sowie Verbesserungen in der Bildqualität und Reduzierung der Strahlenexposition.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von künstlicher Intelligenz zur Verbesserung der Bildinterpretation und die Weiterentwicklung der Hybridbildgebungstechniken.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die PET-CT ist ein leistungsstarkes diagnostisches Werkzeug, das sowohl funktionelle als auch anatomische Informationen liefert und in vielen medizinischen Bereichen unverzichtbar ist.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die Gesamtbedeutung der PET-CT liegt in ihrer Fähigkeit, präzise Diagnosen zu stellen und das Management von Patienten signifikant zu verbessern. Sie ist ein Schlüsselinstrument in der modernen Medizin und wird durch kontinuierliche Forschung und Entwicklung weiter optimiert.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 44
+      {
+        id: 44,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern Sie dem Patienten, dass das Ziel der PET-CT darin besteht, detaillierte Informationen über die Stoffwechselaktivität und die Anatomie des Körpers zu erhalten, um Erkrankungen wie Krebs zu diagnostizieren und zu bewerten.",
+            third:
+              "Die PET-CT hilft uns, Tumoren frühzeitig zu erkennen und deren genaue Lage und Aktivität zu bestimmen.",
+            fourth:
+              "Mit der PET-CT können wir feststellen, ob sich der Krebs auf andere Körperregionen ausgebreitet hat.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf der Untersuchung: Injektion eines Radiotracers, Wartezeit für die Verteilung des Tracers, Durchführung des PET-Scans und anschließend des CT-Scans, sowie die Kombination der Bilder.",
+            third:
+              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff, dann warten wir etwa eine Stunde, bevor wir die eigentlichen Scans durchführen.",
+            fourth:
+              "Während der Untersuchung liegen Sie ruhig auf einer Liege, die sich durch den Scanner bewegt. Die gesamte Prozedur dauert etwa zwei Stunden.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie über notwendige Vorbereitungen wie Nüchternheit, spezielle Diätvorgaben, das Tragen bequemer Kleidung und das Entfernen von Schmuck oder metallischen Gegenständen.",
+            third:
+              "Bitte kommen Sie nüchtern zur Untersuchung, das heißt, essen und trinken Sie nichts vier Stunden vorher.",
+            fourth:
+              "Vermeiden Sie koffeinhaltige Getränke und körperliche Anstrengungen am Tag vor der Untersuchung.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie die Risiken der Untersuchung, wie die Strahlenbelastung durch den Radiotracer und den CT-Scan, mögliche allergische Reaktionen auf Kontrastmittel.",
+            third:
+              "Es besteht eine geringe Strahlenbelastung, ähnlich wie bei einer Röntgenuntersuchung, die jedoch als sicher gilt.",
+            fourth:
+              "In seltenen Fällen kann es zu allergischen Reaktionen auf das Kontrastmittel kommen. Informieren Sie uns bitte, wenn Sie bekannte Allergien haben.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Heben Sie die Vorteile hervor, wie die hohe Genauigkeit der Diagnose, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, Erkrankungen frühzeitig zu erkennen.",
+            third:
+              "Die PET-CT bietet eine sehr präzise Diagnose, indem sie Stoffwechselprozesse und anatomische Strukturen gleichzeitig darstellt.",
+            fourth:
+              "Dank der PET-CT können wir Tumore frühzeitig erkennen und gezielt behandeln.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie alternative Untersuchungsmethoden wie MRT, CT, SPECT oder Ultraschall und warum PET-CT in bestimmten Fällen bevorzugt wird.",
+            third:
+              "Alternativen wie MRT oder CT liefern zwar detaillierte Bilder, zeigen aber nicht die Stoffwechselaktivität der Gewebe.",
+            fourth:
+              "Die SPECT ist eine weitere Alternative, aber die PET-CT bietet eine höhere Auflösung und genauere Ergebnisse.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen Kontrastmittel.",
+            third:
+              "Wenn Sie schwanger sind oder stillen, sollten Sie uns dies unbedingt mitteilen, da die Strahlung dem Kind schaden könnte.",
+            fourth:
+              "Falls Sie bekannte Allergien gegen Kontrastmittel haben, informieren Sie uns bitte, damit wir geeignete Vorsichtsmaßnahmen treffen können.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die Art der möglichen Ergebnisse, die von normalen Befunden bis hin zu pathologischen Veränderungen reichen können.",
+            third:
+              "Ein normales Ergebnis zeigt keine Anzeichen von Tumoren oder anderen Auffälligkeiten. Sollte etwas gefunden werden, besprechen wir die weiteren Schritte mit Ihnen.",
+            fourth:
+              "Die Ergebnisse können auch Hinweise auf andere Erkrankungen geben, wie zum Beispiel Entzündungen oder neurologische Störungen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit der Einwilligung des Patienten vor der Durchführung der Untersuchung, um sicherzustellen, dass der Patient alle Informationen verstanden hat.",
+            third:
+              "Ihre Zustimmung ist notwendig, damit wir die Untersuchung durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben und einverstanden sind.",
+            fourth:
+              "Vor der Untersuchung benötigen wir Ihre schriftliche Einwilligung. Dies stellt sicher, dass Sie über alle Aspekte der Untersuchung informiert sind und zugestimmt haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie den Prozess des Einverständnisses: Der Patient muss ein Formular unterschreiben, nachdem er über alle relevanten Aspekte der Untersuchung informiert wurde",
+            third:
+              "Nachdem wir alle Ihre Fragen beantwortet haben, bitten wir Sie, dieses Einwilligungsformular zu unterschreiben.",
+            fourth:
+              "Bitte lesen Sie das Formular sorgfältig durch und unterschreiben Sie es, wenn Sie mit der Untersuchung einverstanden sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Vermeidung von engem Kontakt mit Schwangeren und kleinen Kindern für eine bestimmte Zeit und das Trinken von viel Wasser zur Ausscheidung des Radiotracers.",
+            third:
+              "Nach der Untersuchung sollten Sie für 24 Stunden engen Kontakt mit Schwangeren und kleinen Kindern vermeiden, um die Strahlenexposition zu minimieren.",
+            fourth:
+              "Trinken Sie viel Wasser nach der Untersuchung, um den Radiotracer schneller aus Ihrem Körper auszuspülen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient die Ergebnisse der Untersuchung erhält, und dass ein Folgetermin zur Besprechung der Ergebnisse vereinbart wird.",
+            third:
+              "Die Auswertung der Bilder kann einige Tage in Anspruch nehmen. Wir vereinbaren einen Termin, um die Ergebnisse mit Ihnen zu besprechen.",
+            fourth:
+              "Sie werden die Ergebnisse von Ihrem behandelnden Arzt erhalten, der dann die nächsten Schritte mit Ihnen bespricht.",
+          },
+        ],
+      },
+      // 3tab 45
+      {
+        id: 45,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie dem Kollegen, dass es sich bei der PET-CT um eine kombinierte bildgebende Untersuchung handelt, die sowohl funktionelle als auch anatomische Informationen liefert.",
+            third:
+              "Die PET-CT kombiniert die metabolischen Daten der Positronen-Emissions-Tomographie mit den detaillierten anatomischen Bildern der Computertomographie.",
+            fourth:
+              "Bei der PET-CT wird ein Radiotracer verwendet, um Stoffwechselaktivitäten im Körper sichtbar zu machen und diese mit der anatomischen Bildgebung der CT zu kombinieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, dass die PET-CT zur Diagnose und Beurteilung von Krebs, neurologischen Erkrankungen und Herzkrankheiten verwendet wird, indem sie metabolische Aktivitäten und anatomische Strukturen sichtbar macht.",
+            third:
+              "Mit der PET-CT können wir Tumore, Metastasen, neurologische Erkrankungen wie Alzheimer und kardiale Erkrankungen wie Myokardvitalität untersuchen.",
+            fourth:
+              "Die PET-CT ist besonders hilfreich bei der Detektion und Beurteilung der metabolischen Aktivität von Krebszellen sowie bei der Diagnose von entzündlichen und neurologischen Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Diskutieren Sie typische Befunde wie Tumorlokalisation, -größe und -aktivität, Metastasen, entzündliche Prozesse oder neurologische Anomalien, die durch die PET-CT identifiziert werden können.",
+            third:
+              "Ein positives PET-CT-Ergebnis kann uns genaue Informationen über die Größe und Lokalisation eines Tumors sowie das Vorhandensein von Metastasen geben.",
+            fourth:
+              "Die Untersuchungsergebnisse zeigen erhöhte Stoffwechselaktivität in den Lymphknoten, was auf eine mögliche Metastasierung hindeutet.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie, dass Indikationen für eine PET-CT unter anderem die Staging und Restaging von Krebs, die Beurteilung von Therapieantworten, die Diagnose von Demenzerkrankungen und die Evaluierung von Myokardvitalität sind.",
+            third:
+              "Eine PET-CT ist indiziert bei Patienten mit Lungenkrebs zur Beurteilung der Tumorausbreitung und zur Überprüfung des Ansprechens auf die Therapie.",
+            fourth:
+              "Bei Patienten mit unklaren neurologischen Symptomen kann eine PET-CT helfen, eine Demenz vom Alzheimer-Typ von anderen Demenzformen zu unterscheiden.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie Kontraindikationen wie Schwangerschaft, Stillzeit, bekannte Allergien gegen Kontrastmittel und schwere Niereninsuffizienz.",
+            third:
+              "Schwangere sollten keine PET-CT-Untersuchung erhalten, da die Strahlenexposition das ungeborene Kind schädigen könnte.",
+            fourth:
+              "Patienten mit einer bekannten Allergie gegen Kontrastmittel müssen sorgfältig überwacht werden, und alternative Untersuchungen sollten in Betracht gezogen werden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erörtern Sie, wie die PET-CT hilft, zwischen verschiedenen Krankheitsbildern zu differenzieren, z.B. zwischen malignen und benignen Tumoren oder zwischen Alzheimer und anderen Demenzformen.",
+            third:
+              "Die PET-CT ermöglicht es uns, maligne von benignen Tumoren zu unterscheiden, indem sie die unterschiedliche Stoffwechselaktivität der Gewebe sichtbar macht.",
+            fourth:
+              "Bei Verdacht auf Alzheimer kann die PET-CT helfen, diese Diagnose von anderen Formen der Demenz zu unterscheiden, basierend auf spezifischen Stoffwechselmustern im Gehirn.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse der PET-CT zur Planung und Anpassung von Behandlungsstrategien beitragen können, einschließlich Operation, Strahlentherapie oder Chemotherapie.",
+            third:
+              "Die Ergebnisse der PET-CT können uns helfen, die Notwendigkeit einer chirurgischen Entfernung eines Tumors besser zu beurteilen und den Operationsumfang zu planen.",
+            fourth:
+              "Anhand der PET-CT-Ergebnisse können wir die Wirksamkeit der aktuellen Chemotherapie beurteilen und gegebenenfalls das Behandlungsschema anpassen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit Radiologen, Nuklearmedizinern, Onkologen, Neurologen und Kardiologen für die optimale Nutzung der PET-CT-Ergebnisse.",
+            third:
+              "Eine enge Zusammenarbeit zwischen Onkologen und Radiologen ist entscheidend, um die PET-CT-Ergebnisse optimal zu interpretieren und in die Behandlungsplanung einzubeziehen.",
+            fourth:
+              "Für eine umfassende Versorgung ist es wichtig, dass wir mit Nuklearmedizinern und Kardiologen zusammenarbeiten, um die Ergebnisse der PET-CT richtig zu interpretieren und anzuwenden.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie Maßnahmen zur Sicherstellung der Qualität und Genauigkeit der PET-CT-Untersuchungen, einschließlich regelmäßiger Kalibrierung der Geräte und Schulung des medizinischen Personals.",
+            third:
+              "Um die Qualität unserer PET-CT-Untersuchungen zu gewährleisten, führen wir regelmäßige Kalibrierungen der Geräte durch und stellen sicher, dass unser Personal gut geschult ist.",
+            fourth:
+              "Qualitätskontrollen und regelmäßige Wartung der PET-CT-Geräte sind unerlässlich, um konsistente und genaue Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Besprechen Sie die Notwendigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Bedeutung einer lückenlosen Weiterverfolgung zur Überprüfung des Behandlungserfolgs.",
+            third:
+              "Die detaillierte Dokumentation der PET-CT-Befunde ist wichtig für die Weiterverfolgung und Planung der Therapie. Wir sollten sicherstellen, dass alle Befunde klar und präzise festgehalten werden.",
+            fourth:
+              "Eine gründliche Dokumentation und regelmäßige Nachuntersuchungen sind entscheidend, um den Fortschritt der Behandlung zu überwachen und gegebenenfalls Anpassungen vorzunehmen.",
+          },
+        ],
+      },
+      // 4tab 46
+      {
+        id: 46,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
+            fourth:
+              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "PET-CT des Gehirns zeigt eine gleichmäßige Radiotracer-Verteilung ohne Anomalien, keine Anzeichen pathologischer Veränderungen.",
+            third:
+              "PET-CT zeigt eine erhöhte Aufnahme des Radiotracers im linken Frontallappen, korrespondierend mit einer 2 cm großen, kontrastmittelaufnehmenden Masse.",
+            fourth:
+              "PET-CT offenbart mehrere Areale mit verringerter Radiotracer-Aufnahme, die periventrikulär verteilt sind, korrespondierend mit demyelinisierenden Läsionen.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das PET-CT-Ergebnis unterstützt den Ausschluss neurologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen Glioblastom hin. Die Lokalisation und der erhöhte Metabolismus korrelieren mit den neurologischen Symptomen des Patienten.",
+            fourth:
+              "Die Verteilung und das Erscheinungsbild der Läsionen sind typisch für Multiple Sklerose. Zusammenhang mit den klinischen Symptomen und typischen demyelinisierenden Veränderungen.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung der neurochirurgischen Resektion und anschließender Radiotherapie.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer immunmodulatorischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Gehirns. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Glioblastoms basierend auf PET-CT-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Multipler Sklerose aufgrund der PET-CT-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Radiotracer-Verteilung ohne Auffälligkeiten in allen Sequenzen.",
+            third:
+              "PET-CT-Aufnahmen zeigen eine deutlich abgegrenzte Region mit hoher Radiotracer-Aufnahme im linken Frontallappen.",
+            fourth:
+              "PET-CT-Bilder zeigen multiple Regionen mit verringerter Radiotracer-Aufnahme, charakteristisch für demyelinisierende Läsionen bei MS.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, weiterhin regelmäßige Gesundheitschecks durchzuführen, um den aktuellen Gesundheitszustand zu überwachen.",
+            third:
+              "Wir empfehlen eine sofortige Überweisung an die Neurochirurgie zur Planung der Resektion. Zusätzlich ist eine anschließende Radiotherapie und gegebenenfalls eine Chemotherapie zu erwägen.",
+            fourth:
+              "Es ist zu empfehlen, eine immunmodulatorische Therapie zu beginnen und regelmäßige neurologische Kontrolluntersuchungen durchzuführen.",
+          },
+        ],
+      },
+      // 5tab 47
+      {
+        id: 47,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Positronen-Emissions-Tomographie kombiniert mit Computertomographie (PET-CT) Gerät ist ein hochentwickeltes medizinisches Bildgebungsgerät, das sowohl detaillierte anatomische als auch funktionelle Bilder des Körpers erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines PET-CT-Geräts:",
+        text_list: [
+          {
+            bold: "Gantry :",
+            other:
+              "Der ringförmige Teil des PET-CT-Geräts, der sowohl die Röntgenröhre für die CT als auch die Detektoren für die PET enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
+          },
+          {
+            bold: "Röntgenröhre :",
+            other:
+              "Erzeugt die Röntgenstrahlen für die CT-Komponente des Geräts. Diese Strahlen durchdringen den Körper des Patienten und ermöglichen die Erstellung detaillierter anatomischer Bilder. Die Röntgenröhre ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "PET-Detektoren :",
+            other:
+              "Erfassen die Positronen, die vom injizierten Radiotracer emittiert werden, nachdem sie mit Elektronen im Körper des Patienten kollidiert sind. Diese Detektoren wandeln die Strahlung in elektrische Signale um, die dann zu Bildern verarbeitet werden.",
+          },
+          {
+            bold: "CT-Detektoren :",
+            other:
+              "Befinden sich gegenüber der Röntgenröhre im Gantry. Sie erfassen die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Ein motorisierter Tisch, der horizontal in den Gantry hinein- und herausgefahren werden kann. Der Patient liegt während der gesamten Untersuchung auf diesem Tisch, der sich präzise bewegt, um die verschiedenen Körperregionen zu scannen.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung, verarbeitet die Bilddaten und interpretiert die Ergebnisse.",
+          },
+          {
+            bold: "Kontrastmittelinjektor :",
+            other:
+              "Wird häufig verwendet, um Kontrastmittel intravenös zu verabreichen. Dies verbessert die Sichtbarkeit bestimmter Strukturen oder Pathologien im Körper während der CT-Komponente der Untersuchung.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Ermöglicht dem Technologen, das PET-CT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen. Hier werden auch Parameter wie Strahlendosis und Scanzeit eingestellt.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Notwendig, um die Röntgenröhre und die PET-Detektoren zu kühlen, da sie während der Erzeugung von Strahlung viel Wärme produzieren. Ein effektives Kühlsystem verhindert Überhitzung und gewährleistet die Zuverlässigkeit des Geräts.",
+          },
+          {
+            bold: "Multidetektor-CT (MDCT) :",
+            other:
+              "Moderne PET-CT-Geräte sind oft als Multidetektor-CT konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung, wodurch sowohl die anatomische als auch die funktionelle Bildgebung verbessert wird.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist besonders wichtig, um sicherzustellen, dass der Patient still liegt und um eventuelle Fragen oder Unbehagen zu klären.",
+          },
+        ],
+      },
+      // 6tab 48
+      {
+        id: 49,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der PET-CT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "PET-CT :",
+            other:
+              "Ein bildgebendes Verfahren, das sowohl funktionelle als auch anatomische Informationen liefert.",
+          },
+          {
+            bold: "Radiotracer :",
+            other:
+              "Eine schwach radioaktive Substanz, die in den Körper injiziert wird, um Stoffwechselprozesse sichtbar zu machen.",
+          },
+          {
+            bold: "Metabolische Aktivität :",
+            other:
+              "Die biochemischen Prozesse, die in Zellen und Geweben ablaufen, oft erhöht in Tumorzellen.",
+          },
+          {
+            bold: "Anatomische Bildgebung :",
+            other:
+              "Darstellung der physischen Strukturen des Körpers durch Verfahren wie CT oder MRT.",
+          },
+          {
+            bold: "Staging :",
+            other:
+              "Die Bestimmung des Ausmaßes und der Ausbreitung einer Krebserkrankung im Körper.",
+          },
+          {
+            bold: "Restaging :",
+            other:
+              "Die Neubewertung des Krankheitsstadiums nach einer Behandlung.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die vor der Bildgebung injiziert wird, um bestimmte Gewebe besser sichtbar zu machen.",
+          },
+          {
+            bold: "Demyelinisierende Läsion :",
+            other:
+              "Schäden an der Myelinschicht von Nervenfasern, typisch für Erkrankungen wie Multiple Sklerose.",
+          },
+          {
+            bold: "Hyperintens :",
+            other:
+              "Gebiete, die auf dem Bild heller erscheinen, oft aufgrund einer erhöhten Stoffwechselaktivität.",
+          },
+          {
+            bold: "Hypointens :",
+            other:
+              "Gebiete, die auf dem Bild dunkler erscheinen, oft aufgrund einer verringerten Stoffwechselaktivität.",
+          },
+          {
+            bold: "Glioblastom :",
+            other:
+              "Ein aggressiver Hirntumor, der oft in der PET-CT durch hohe metabolische Aktivität erkennbar ist.",
+          },
+          {
+            bold: "Dawson-Finger :",
+            other:
+              "Charakteristische MRT-Befunde bei Multipler Sklerose, die fingerartige Projektionen von Läsionen entlang der Ventrikelwände zeigen.",
+          },
+          {
+            bold: "Strahlenbelastung :",
+            other:
+              "Die Menge an Strahlung, der ein Patient während einer bildgebenden Untersuchung ausgesetzt ist.",
+          },
+          {
+            bold: "Myokardvitalität :",
+            other:
+              "Die Lebensfähigkeit des Herzmuskels, oft untersucht bei Verdacht auf Herzinfarkt oder andere Herzkrankheiten.",
+          },
+          {
+            bold: "Spezifität :",
+            other:
+              "Die Fähigkeit eines diagnostischen Tests, nur die Zielerkrankung zu identifizieren und keine falsch positiven Ergebnisse zu liefern.",
+          },
+          {
+            bold: "Sensitivität :",
+            other:
+              "Die Fähigkeit eines diagnostischen Tests, auch bei geringer Krankheitslast positive Ergebnisse zu liefern, also keine falsch negativen Ergebnisse zu produzieren.",
+          },
+          {
+            bold: "Nuklearmedizin :",
+            other:
+              "Ein medizinisches Fachgebiet, das radioaktive Substanzen für Diagnose und Therapie verwendet.",
+          },
+          {
+            bold: "Follow-up :",
+            other:
+              "Die Nachsorge oder weitere Überwachung eines Patienten nach einer Diagnose oder Behandlung.",
+          },
+
+          {
+            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der PET-CT-Diagnostik wichtig ist und können in einer Prüfungssituation nützlich sein.",
+          },
+        ],
+      },
+      // 6tab 49
+      {
+        id: 49,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "DocCheck Flexikon",
+            other:
+              "Diese Seite bietet umfassende Informationen zur Positronen-Emissions-Tomographie (PET) und PET-CT, einschließlich Funktionsprinzipien, Radionukliden und Anwendungsmöglichkeiten. URL: https://flexikon.doccheck.com/de/Positronenemissionstomographie",
+          },
+          {
+            bold: "DocCheck Flexikon",
+            other:
+              "Informationen zu PSMA-PET/CT, einschließlich Definition, Hintergrund und Indikationen. URL: https://flexikon.doccheck.com/de/PSMA-PET/CT",
+          },
+          {
+            bold: "Amboss",
+            other:
+              "Amboss ist ein medizinisches Nachschlagewerk für Studenten und Ärzte. Es bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich PET-CT. URL: https://www.amboss.com/de",
+          },
+          {
+            bold: "PraktischArzt",
+            other:
+              "Auf dieser Seite wird der Ablauf einer PET-CT-Untersuchung sowie deren Vorbereitung und typische Anwendungsgebiete erläutert. URL: https://www.praktischarzt.de/untersuchung/pet-ct/",
+          },
+          {
+            bold: "Universitätsklinikum Freiburg",
+            other:
+              "Diese Seite bietet detaillierte Informationen zu den speziellen Aspekten und Anwendungen der PET-CT im klinischen Alltag. URL: https://ims.uniklinik-freiburg.de/de/leistungsangebot/nuklearmedizin/pet-ct.html",
+          },
+          {
+            bold: "Stärker gegen Krebs",
+            other:
+              "Diese Webseite erklärt die Vorteile und Risiken der PET-CT, insbesondere in der Krebsdiagnostik. URL: https://www.staerkergegenkrebs.de/pet-ct/",
+          },
+          {
+            bold: "Radiologie München",
+            other:
+              "Diese Seite bietet Informationen über die Durchführung von PET-CT-Untersuchungen und deren spezielle Anwendungen, wie z.B. beim Prostatakarzinom. URL: https://www.radiologie-muenchen.de/pet-ct/",
+          },
+          {
+            bold: "Helios Gesundheit",
+            other:
+              "Hier wird erklärt, wie PET-CT-Untersuchungen zur Diagnose und Therapiekontrolle verwendet werden und welche Vorbereitungen dafür notwendig sind. URL: https://www.helios-gesundheit.de/",
+          },
+        ],
+      },
+      // 6tab 50
+      {
+        id: 50,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/14aFKMVI0X9AmYn58UC4jIt0OcJpIbfdf/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 5
+  // start of parent tab 6 Single-Photon-Emissions-Computertomographie (SPECT)
+  {
+    id: 6,
+    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
+    checked: false,
+    childTabs: [
+      // 1tab 51
+      {
+        id: 51,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext: ",
+                text: "Das Hauptziel der SPECT-Untersuchung ist es, funktionelle Informationen über Organe und Gewebe zu erhalten. Dies wird durch die Messung der Verteilung von radioaktiv markierten Substanzen im Körper erreicht.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche: ",
+                text: "Die SPECT wird in zahlreichen medizinischen Bereichen eingesetzt, darunter die Kardiologie zur Bewertung der Myokardperfusion, die Neurologie zur Untersuchung von Hirnfunktionen und die Onkologie zur Detektion von Tumoren und Metastasen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen: ",
+                text: "SPECT basiert auf der Verabreichung von Radiopharmaka, die Gammastrahlen emittieren. Diese Strahlen werden von einem Gamma-Kamera-System erfasst, das um den Patienten rotiert, um dreidimensionale Bilder zu erstellen.",
+              },
+              {
+                bold_text: "Technische Aspekte: ",
+                text: "Die Hauptkomponenten einer SPECT-Anlage sind die Gamma-Kamera, die Kollimatoren zur Richtungsbestimmung der Strahlen, und ein Computer zur Bildrekonstruktion. Die Qualität der Bilder hängt von der Energie des Radiopharmakons und der Empfindlichkeit der Detektoren ab.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation: ",
+                text: "Die Bilder werden von spezialisierten Ärzten analysiert, die die Verteilung des Radiopharmakons im Gewebe beurteilen. Dies ermöglicht Rückschlüsse auf die Funktion und mögliche Pathologien der untersuchten Organe.",
+              },
+              {
+                bold_text: "Typische Befunde: ",
+                text: "Typische Befunde umfassen Bereiche mit erhöhter oder verminderter Radiopharmakon-Anreicherung, die auf pathologische Veränderungen wie Tumoren, Durchblutungsstörungen oder neurologische Erkrankungen hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile: ",
+                text: "SPECT bietet detaillierte funktionelle Informationen und kann pathologische Veränderungen frühzeitig erkennen. Es ist nicht invasiv und hat eine relativ geringe Strahlenbelastung.",
+              },
+              {
+                bold_text: "Nachteile: ",
+                text: "Zu den Nachteilen gehören die begrenzte räumliche Auflösung im Vergleich zu anderen bildgebenden Verfahren und die Notwendigkeit, Radiopharmaka zu verwenden, die spezielle Handhabung erfordern.",
+              },
+              {
+                bold_text: "Risiken: ",
+                text: "Die Risiken umfassen mögliche allergische Reaktionen auf das Radiopharmakon und eine geringe Strahlenexposition. Bei sachgemäßer Durchführung sind diese Risiken jedoch minimal.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung: ",
+                text: "SPECT spielt eine zentrale Rolle in der Diagnostik und Therapieplanung, insbesondere bei kardiovaskulären und neurologischen Erkrankungen. Es unterstützt die Entscheidung über therapeutische Maßnahmen und die Überwachung des Behandlungserfolgs.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement: ",
+                text: "Durch die Bereitstellung präziser funktioneller Informationen trägt SPECT wesentlich zur individuellen Patientenbetreuung und zur Optimierung von Behandlungsstrategien bei.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "Alternativen zur SPECT: ",
+                text: "umfassen die Positronen-Emissions-Tomographie (PET), die eine höhere Empfindlichkeit bietet, und die Magnetresonanztomographie (MRT), die ohne Strahlenbelastung auskommt, aber keine funktionellen Informationen liefert.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse: ",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildqualität und die Entwicklung neuer Radiopharmaka, die spezifischere diagnostische Informationen liefern können.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven: ",
+                text: "Zukünftige Entwicklungen zielen darauf ab, die SPECT-Technologie weiter zu verfeinern und ihre Anwendungen zu erweitern, insbesondere in der personalisierten Medizin und der präzisen Tumordiagnostik.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften: ",
+                text: "Die SPECT ist ein unverzichtbares Werkzeug in der modernen Medizin, das funktionelle Bildgebung ermöglicht und eine entscheidende Rolle in der Diagnose und Behandlung spielt.",
+              },
+              {
+                bold_text: "Gesamtbedeutung: ",
+                text: "Insgesamt trägt die SPECT durch ihre Fähigkeit, detaillierte und spezifische Informationen über die Funktion von Organen und Geweben zu liefern, erheblich zur Verbesserung der medizinischen Versorgung und des Patientenmanagements bei.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 52
+      {
+        id: 52,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der SPECT-Untersuchung darin besteht, funktionelle Informationen über Organe und Gewebe zu erhalten, um Krankheiten zu diagnostizieren und zu beurteilen.",
+            third:
+              "Wir möchten feststellen, wie gut Ihr Herzmuskel durchblutet wird.",
+            fourth:
+              "Die Untersuchung hilft uns, die Funktionsweise Ihres Gehirns bei Verdacht auf Epilepsie zu bewerten.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Patienten den Ablauf: Verabreichung eines radioaktiven Stoffes (Radiopharmakon), Wartezeit zur Verteilung im Körper, anschließende Aufnahme der Gammastrahlen mit der Gamma-Kamera, und die Dauer der Untersuchung.",
+            third:
+              "Nach der Injektion des Radiopharmakons warten wir etwa 30-60 Minuten, bevor die Kamera Bilder aufnimmt.",
+            fourth:
+              "Die gesamte Untersuchung dauert ungefähr zwei Stunden, einschließlich der Wartezeit nach der Injektion.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über die notwendigen Vorbereitungen: z.B. Nüchternheit vor der Untersuchung, Verzicht auf bestimmte Medikamente oder Lebensmittel, bequeme Kleidung.",
+            third:
+              "Bitte kommen Sie nüchtern zur Untersuchung und trinken Sie vorher nur Wasser.",
+            fourth:
+              "Vermeiden Sie koffeinhaltige Getränke 24 Stunden vor dem Termin.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie mögliche Risiken, wie allergische Reaktionen auf das Radiopharmakon oder die geringe Strahlenbelastung, und betonen Sie, dass diese Risiken minimal sind.",
+            third:
+              "Es besteht ein sehr geringes Risiko einer allergischen Reaktion auf den radioaktiven Stoff.",
+            fourth:
+              "Die Strahlenbelastung ist vergleichbar mit einer Röntgenaufnahme und daher sehr gering.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Heben Sie die Vorteile hervor: detaillierte funktionelle Informationen, frühzeitige Erkennung von pathologischen Veränderungen, nicht-invasiv mit relativ geringer Strahlenbelastung.",
+            third:
+              "Wir erhalten genaue Informationen über die Funktion Ihres Organs, was uns bei der Diagnose hilft.",
+            fourth:
+              "Frühzeitige Erkennung von Durchblutungsstörungen kann lebensrettend sein.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie alternative Untersuchungsmethoden wie die Positronen-Emissions-Tomographie (PET) und die Magnetresonanztomographie (MRT).",
+            third:
+              "Eine Alternative wäre die PET-Untersuchung, die jedoch oft teurer und nicht überall verfügbar ist.",
+            fourth:
+              "Die MRT liefert anatomische Details, jedoch keine funktionellen Informationen wie die SPECT.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen, z.B. Schwangerschaft, Stillzeit oder Allergien gegen das Radiopharmakon, und die Notwendigkeit, diese vor der Untersuchung zu klären.",
+            third:
+              "Bei einer Schwangerschaft sollten wir die Untersuchung verschieben oder eine Alternative prüfen.",
+            fourth:
+              "Falls Sie stillen, müssen wir spezielle Vorsichtsmaßnahmen treffen oder die Untersuchung verschieben.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche Arten von Ergebnissen erwartet werden können, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese für die Diagnose bedeuten könnten.",
+            third:
+              "Ein normales Ergebnis zeigt eine gleichmäßige Verteilung des Stoffes im Organ.",
+            fourth:
+              "Eine ungleichmäßige Verteilung könnte auf eine Durchblutungsstörung oder einen Tumor hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten, um sicherzustellen, dass er die Untersuchung und deren mögliche Risiken und Vorteile versteht.",
+            third:
+              "Ihre Zustimmung ist wichtig, damit wir sicherstellen können, dass Sie alle Aspekte der Untersuchung verstanden haben.",
+            fourth:
+              "Bitte stellen Sie sicher, dass Sie alle Fragen klären, bevor Sie das Einverständnisformular unterschreiben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess des Einholens der Einverständniserklärung: Aufklärungsgespräch, Zeit für Fragen des Patienten, schriftliche Zustimmung.",
+            third:
+              "Nach dem Gespräch haben Sie Zeit, alle Ihre Fragen zu stellen, bevor Sie das Formular unterschreiben.",
+            fourth:
+              "Wir werden Ihnen alle Details erklären und bitten Sie dann, Ihre Zustimmung schriftlich zu geben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Untersuchung, z.B. Verhalten nach der Untersuchung, mögliche Nachwirkungen, und wann die Ergebnisse vorliegen.",
+            third:
+              "Trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller auszuscheiden.",
+            fourth:
+              "Vermeiden Sie intensive körperliche Aktivität für den Rest des Tages.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient die Ergebnisse erhalten wird, und wer die Ergebnisse mit ihm besprechen wird.",
+            third:
+              "Die Ergebnisse werden innerhalb einer Woche vorliegen und Ihr Arzt wird sie mit Ihnen besprechen.",
+            fourth:
+              "Nach der Untersuchung vereinbaren wir einen Termin, um die Ergebnisse gemeinsam zu besprechen.",
+          },
+        ],
+      },
+      // 3tab 53
+      {
+        id: 53,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie kurz, dass die Single-Photon-Emissions-Computertomographie (SPECT) eine nuklearmedizinische Bildgebungstechnik ist, die zur Erfassung funktioneller Informationen über Organe und Gewebe verwendet wird.",
+            third:
+              "Die SPECT ist eine nuklearmedizinische Technik, die Gammastrahlen verwendet, um dreidimensionale Bilder der Verteilung eines Radiopharmakons im Körper zu erstellen.",
+            fourth:
+              "Mit SPECT können wir die Funktion von Organen wie dem Herz und dem Gehirn durch die Verteilung eines injizierten radioaktiven Stoffes bildlich darstellen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, dass SPECT zur Untersuchung von Durchblutungsstörungen des Herzens, Hirnfunktionen, Tumoren und anderen pathologischen Veränderungen verwendet wird.",
+            third:
+              "Wir nutzen SPECT zur Beurteilung der Myokardperfusion bei Verdacht auf koronare Herzkrankheit.",
+            fourth:
+              "SPECT wird auch zur Analyse der Hirnaktivität bei Patienten mit Epilepsie eingesetzt.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse interpretiert werden, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese Ergebnisse diagnostisch bedeuten.",
+            third:
+              "Eine homogene Verteilung des Radiopharmakons im Herz deutet auf eine normale Durchblutung hin.",
+            fourth:
+              "Fokale Anreicherungen im Gehirn könnten auf epileptische Aktivität oder einen Tumor hinweisen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, welche klinischen Fragestellungen die SPECT rechtfertigen, z.B. Ischämie-Diagnostik bei koronaren Herzkrankheiten, Diagnose und Verlaufskontrolle bei Epilepsie und Demenz.",
+            third:
+              "Indikationen für eine SPECT sind unter anderem die Ischämie-Diagnostik und die Evaluation der Myokardvitalität.",
+            fourth:
+              "Bei Verdacht auf Demenz kann SPECT zur Differenzierung zwischen Alzheimer und anderen Demenzformen beitragen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Nennen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen das Radiopharmakon.",
+            third:
+              "Schwangerschaft ist eine Kontraindikation aufgrund der Strahlenbelastung.",
+            fourth:
+              "Bekannte Allergien gegen das verwendete Radiopharmakon stellen ebenfalls eine Kontraindikation dar.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die anhand der SPECT-Befunde abgeklärt werden können, z.B. Differenzierung zwischen ischämischen und nicht-ischämischen Herzerkrankungen.",
+            third:
+              "Bei der Myokard-SPECT können wir zwischen ischämischer und nicht-ischämischer Kardiomyopathie unterscheiden.",
+            fourth:
+              "Bei neurologischen SPECT-Untersuchungen können wir epileptische Herde von anderen Hirnpathologien abgrenzen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die SPECT-Ergebnisse in die Erstellung und Anpassung von Behandlungsplänen einfließen, z.B. Entscheidung über Revaskularisationsmaßnahmen oder antiepileptische Therapien.",
+            third:
+              "Basierend auf den SPECT-Ergebnissen kann entschieden werden, ob eine Koronarangioplastie notwendig ist.",
+            fourth:
+              "Die Identifikation epileptischer Herde mittels SPECT kann die Wahl der antiepileptischen Therapie beeinflussen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie Radiologie, Neurologie, Kardiologie und Onkologie für eine umfassende Diagnose und Therapie.",
+            third:
+              "Die enge Zusammenarbeit mit Kardiologen ist essenziell, um die SPECT-Ergebnisse korrekt zu interpretieren und therapeutische Maßnahmen einzuleiten.",
+            fourth:
+              "Neurologen und Nuklearmediziner arbeiten zusammen, um die besten Behandlungsstrategien für Patienten mit Epilepsie zu entwickeln.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität der SPECT-Untersuchungen, z.B. regelmäßige Kalibrierung der Geräte, Schulung des Personals und Einhaltung von Protokollen.",
+            third:
+              "Regelmäßige Kalibrierung der Gamma-Kameras ist notwendig, um eine hohe Bildqualität zu gewährleisten.",
+            fourth:
+              "Das Personal wird kontinuierlich geschult, um sicherzustellen, dass die Protokolle und Sicherheitsstandards eingehalten werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Notwendigkeit der Nachverfolgung, um die Behandlungserfolge zu überwachen und weitere diagnostische Schritte zu planen.",
+            third:
+              "Eine detaillierte Dokumentation der SPECT-Ergebnisse ist wichtig, um den Verlauf der Therapie zu überwachen.",
+            fourth:
+              "Die Ergebnisse werden im Patientenakte dokumentiert und mit den behandelnden Ärzten besprochen, um die nächsten Schritte zu planen.",
+          },
+        ],
+      },
+      // 4tab 54
+      {
+        id: 54,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung zur Herzgesundheit.",
+            third:
+              "55-jähriger Patient klagt über Brustschmerzen und Kurzatmigkeit bei Belastung. Vorgeschichte eines Bluthochdrucks.",
+            fourth:
+              "70-jährige Patientin berichtet über zunehmende Gedächtnisstörungen und Orientierungslosigkeit. Familiengeschichte mit Alzheimer.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "SPECT-Bilder zeigen eine homogene Perfusion ohne Anzeichen von Minderdurchblutung oder pathologischen Veränderungen.",
+            third:
+              "SPECT zeigt eine reduzierte Perfusion im anterioren Bereich des linken Ventrikels, besonders bei Belastung.",
+            fourth:
+              "SPECT zeigt eine verminderte Aktivität im parietalen und temporalen Kortex.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Ergebnisse bestätigen eine normale Herzfunktion.",
+            third:
+              "Der Befund deutet auf eine myokardiale Ischämie hin, die mit den Symptomen des Patienten übereinstimmt.",
+            fourth:
+              "Die Befunde sind typisch für Alzheimer und korrelieren mit den klinischen Symptomen der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer möglichen koronaren Intervention wie Angioplastie oder Bypass-Operation.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer cholinesterasehemmenden Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer myokardialen Ischämie basierend auf SPECT-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Alzheimer aufgrund der SPECT-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmietel",
+            second:
+              "Homogene Perfusion in allen Bereichen des Herzens, keine Auffälligkeiten sichtbar.",
+            third:
+              "SPECT-Bilder zeigen eine deutliche Minderdurchblutung im belasteten Zustand im anterioren Bereich des linken Ventrikels.",
+            fourth:
+              "SPECT-Bilder zeigen eine diffuse Hypoperfusion im parietalen und temporalen Kortex, typisch für Alzheimer.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine jährliche Routinekontrolle zur Überwachung der Herzgesundheit. Der Patient sollte weiterhin einen gesunden Lebensstil pflegen, um das Risiko von Herzkrankheiten zu minimieren.",
+            third:
+              "Wir empfehlen eine koronare Angiographie zur weiteren Abklärung und gegebenenfalls interventionelle Maßnahmen. Regelmäßige Nachuntersuchungen sind ebenfalls wichtig.",
+            fourth:
+              "Es ist zu empfehlen, eine neuropsychologische Testung und eine langfristige Therapieplanung in Erwägung zu ziehen. Regelmäßige kognitive Tests zur Überwachung des Fortschreitens der Erkrankung sind notwendig.",
+          },
+        ],
+      },
+      // 5tab 55
+      {
+        id: 55,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Single-Photon-Emissions-Computertomographie (SPECT) Gerät ist ein fortschrittliches medizinisches Bildgebungsgerät, das detaillierte dreidimensionale Bilder der funktionellen Prozesse im Körper erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines SPECT-Geräts:",
+        text_list: [
+          {
+            bold: "Gantry: ",
+            other:
+              "Ist der ringförmige Teil des SPECT-Geräts, der die Gamma-Kameras und Kollimatoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
+          },
+          {
+            bold: "Gamma-Kamera: ",
+            other:
+              "Erfasst die von den Radiopharmaka emittierten Gammastrahlen. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "Kollimatoren: ",
+            other:
+              "Sind vor den Detektoren angeordnet und filtern die eintreffenden Gammastrahlen, um nur diejenigen durchzulassen, die aus bestimmten Winkeln kommen. Dies verbessert die Bildqualität.",
+          },
+          {
+            bold: "Radiopharmakon: ",
+            other:
+              "Ein radioaktives Medikament, das in den Körper des Patienten injiziert wird und sich in bestimmten Organen oder Geweben ansammelt, je nach diagnostischer Fragestellung.",
+          },
+          {
+            bold: "Patiententisch: ",
+            other:
+              "Ist motorisiert und kann horizontal in den Gantry hinein- und herausgefahren werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation: ",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung.",
+          },
+          {
+            bold: "Steuerkonsole: ",
+            other:
+              "Ermöglicht dem Technologen, das SPECT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Kühlungssystem: ",
+            other:
+              "Ist notwendig, um die elektronischen Komponenten und insbesondere die Gamma-Kameras zu kühlen, da sie während der Erfassung der Gammastrahlen Wärme produzieren.",
+          },
+          {
+            bold: "Multidetektor-SPECT (MDSPECT): ",
+            other:
+              "Moderne SPECT-Geräte sind oft als Multidetektor-SPECT (MDSPECT) konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem: ",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Bildrekonstruktionssoftware: ",
+            other:
+              "Wandelt die erfassten Gammastrahlendaten in dreidimensionale Bilder um, die vom Radiologen zur Diagnose und Planung von Behandlungen verwendet werden.",
+          },
+          {
+            bold: "Strahlenschutzvorrichtungen: ",
+            other:
+              "Gewährleisten die Sicherheit des medizinischen Personals und des Patienten, indem sie die Strahlenbelastung minimieren.",
+          },
+          {
+            bold: "Kalibrierungswerkzeuge: ",
+            other:
+              "Werden verwendet, um die Genauigkeit und Präzision der Gamma-Kameras und anderer Komponenten regelmäßig zu überprüfen und sicherzustellen.",
+          },
+        ],
+      },
+      // 6tab 56
+      {
+        id: 56,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Single-Photon-Emissions-Computertomographie (SPECT): ",
+            other:
+              "Ein bildgebendes Verfahren in der Nuklearmedizin zur Darstellung der funktionellen Informationen von Organen.",
+          },
+          {
+            bold: "Nuklearmedizin: ",
+            other:
+              "Ein medizinisches Fachgebiet, das radioaktive Substanzen zur Diagnose und Therapie verwendet.",
+          },
+          {
+            bold: "Radiopharmakon: ",
+            other:
+              "Ein radioaktives Medikament, das in den Körper injiziert wird, um spezifische Organe oder Gewebe zu visualisieren.",
+          },
+          {
+            bold: "Gamma-Kamera: ",
+            other:
+              "Ein Gerät, das die von den Radiopharmaka emittierten Gammastrahlen erfasst und Bilder erstellt.",
+          },
+          {
+            bold: "Kollimator: ",
+            other:
+              "Ein Gerät, das die Richtung der eintreffenden Strahlung bestimmt, um präzisere Bilder zu erhalten.",
+          },
+          {
+            bold: "Bildrekonstruktion: ",
+            other:
+              "Der Prozess der Umwandlung der gesammelten Daten in diagnostische Bilder.",
+          },
+          {
+            bold: "Funktionelle Bildgebung: ",
+            other:
+              "Bildgebung, die Informationen über die Funktion von Organen und Geweben liefert, nicht nur deren Struktur.",
+          },
+          {
+            bold: "Strahlenbelastung: ",
+            other:
+              "Die Menge an ionisierender Strahlung, der ein Patient während einer Untersuchung ausgesetzt ist.",
+          },
+          {
+            bold: "Isotop: ",
+            other:
+              "Eine Variante eines chemischen Elements, die durch eine unterschiedliche Anzahl von Neutronen im Kern gekennzeichnet ist.",
+          },
+          {
+            bold: "Tracer: ",
+            other:
+              "Ein radioaktiver Marker, der im Körper verteilt wird, um spezifische physiologische Prozesse sichtbar zu machen.",
+          },
+          {
+            bold: "Wartezeit: ",
+            other:
+              "Die Zeit, die benötigt wird, damit sich das Radiopharmakon im Körper verteilt.",
+          },
+          {
+            bold: "Kontrastmittel: ",
+            other:
+              "Eine Substanz, die verwendet wird, um die Sichtbarkeit von Strukturen oder Flüssigkeiten im Körper zu erhöhen.",
+          },
+          {
+            bold: "Protokoll: ",
+            other:
+              "Eine Reihe von Anweisungen und Verfahren zur Durchführung der SPECT-Untersuchung.",
+          },
+          {
+            bold: "Kalibrierung: ",
+            other:
+              "Die Justierung der Gamma-Kamera und anderer Geräte, um genaue Messungen zu gewährleisten.",
+          },
+          {
+            bold: "Myokardperfusion: ",
+            other:
+              "Die Durchblutung des Herzmuskels, die mit SPECT untersucht werden kann.",
+          },
+          {
+            bold: "Hirnfunktionsanalyse: ",
+            other:
+              "Die Untersuchung der Aktivität und Durchblutung des Gehirns mithilfe von SPECT.",
+          },
+          {
+            bold: "Tumordetektion: ",
+            other:
+              "Die Erkennung von Tumoren durch die Visualisierung abnormer Zellaktivitäten.",
+          },
+          {
+            bold: "Epilepsie-Diagnostik: ",
+            other:
+              "Die Untersuchung und Identifizierung epileptischer Herde im Gehirn mittels SPECT.",
+          },
+          {
+            bold: "Alzheimer-Diagnose: ",
+            other:
+              "Die Diagnose der Alzheimer-Krankheit durch die Visualisierung charakteristischer Hirnveränderungen.",
+          },
+          {
+            bold: "Koronare Intervention: ",
+            other:
+              "Therapeutische Maßnahmen zur Behandlung von Herzkrankheiten, die auf SPECT-Befunden basieren können.",
+          },
+          {
+            bold: "Angioplastie: ",
+            other:
+              "Ein Verfahren zur Erweiterung verengter Blutgefäße im Herzen.",
+          },
+        ],
+      },
+      // 6tab 57
+      {
+        id: 57,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold: "NetDoktor: ",
+            other:
+              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT] https://www.netdoktor.de/diagnostik/spect/)",
+          },
+          {
+            bold: "Apotheken Umschau: ",
+            other:
+              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT] https://www.apotheken-umschau.de/diagnose/spect)",
+          },
+          {
+            bold: "Welt der Physik: ",
+            other:
+              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT] https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
+          },
+          {
+            bold: "Universitätsklinikum Münster: ",
+            other:
+              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT] https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
+          },
+          {
+            bold: "Miomedi: ",
+            other:
+              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT] https://www.miomedi.de/diagnostik/spect/)",
+          },
+          {
+            bold: "MedLexi: ",
+            other:
+              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT] https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
+          },
+        ],
+      },
+      // 6tab 58
+      {
+        id: 58,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/15ZP4ZU52B5aum3KCNZ5uqzlgAUgYkEl1/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 6
+  // start of parent tab 7 Breischluck
+  {
+    id: 7,
+    title: "Breischluck",
+    checked: false,
+    childTabs: [
+      // 1tab 59
+      {
+        id: 59,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Der Breischluck-Test wird durchgeführt, um die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen. Ziel ist es, strukturelle oder funktionelle Anomalien zu identifizieren, die zu Symptomen wie Dysphagie, Regurgitation oder chronischem Husten führen können.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Der Breischluck-Test ist relevant in der Diagnostik von Erkrankungen wie Achalasie, gastroösophagealem Reflux, Ösophagusstrikturen und Tumoren. Er wird häufig in der gastroenterologischen und HNO-Diagnostik eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Der Breischluck-Test basiert auf der Röntgenfluoroskopie, bei der der Patient eine Kontrastmittelhaltige Flüssigkeit (Barium) trinkt. Das Barium ermöglicht es, die Konturen und Bewegungen der Speiseröhre und des Magens auf Röntgenbildern sichtbar zu machen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Technisch erfordert der Test die Verwendung eines Röntgenfluoroskops sowie eines Bariumbrei-Kontrastmittels. Der Patient trinkt das Barium, während kontinuierliche Röntgenaufnahmen gemacht werden, um die Passage des Kontrastmittels durch den oberen Gastrointestinaltrakt zu visualisieren.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung erfolgt durch einen Radiologen, der die Aufnahmen auf Abnormalitäten wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore untersucht. Die dynamische Beurteilung der Kontrastmittelpassage ist dabei von zentraler Bedeutung.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können eine verzögerte Kontrastmittelpassage bei Achalasie, retrosternale Füllungsdefekte bei Tumoren oder Refluxphänomene bei gastroösophagealem Reflux umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ein wesentlicher Vorteil des Breischluck-Verfahrens liegt in seiner Nicht-Invasivität. Es ermöglicht die Beurteilung von Schluckstörungen, ohne dass invasive Maßnahmen erforderlich sind. Ein weiterer Vorteil ist die Möglichkeit der Echtzeit-Beobachtung der Schluckfunktion. Dies erlaubt es dem Radiologen, die dynamischen Prozesse während des Schluckakts direkt zu sehen und zu beurteilen. Zudem weist das Breischluck-Verfahren eine hohe diagnostische Genauigkeit für bestimmte Pathologien auf, was es zu einem wertvollen Instrument in der Diagnostik macht.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Trotz der vielen Vorteile hat das Breischluck-Verfahren auch einige Nachteile. Einer der Hauptnachteile ist die Strahlenexposition, die mit jeder Röntgenuntersuchung einhergeht. Dies ist besonders bei wiederholten Untersuchungen von Bedeutung. Ein weiterer Nachteil ist die Einschränkung bei Patienten mit Kontrastmittelallergien, da das Verfahren die Verabreichung eines bariumsulfathaltigen Kontrastmittels erfordert.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken des Breischluck-Verfahrens umfassen in erster Linie die Strahlenbelastung, die zwar relativ gering ist, aber dennoch berücksichtigt werden muss, insbesondere bei Patienten, die häufig untersucht werden müssen. Ein weiteres Risiko ist die mögliche Aspiration des Kontrastmittels, was zu Komplikationen wie einer Aspirationspneumonie führen kann. Darüber hinaus können bei einigen Patienten Unverträglichkeiten gegenüber dem Kontrastmittel auftreten, was zu Nebenwirkungen oder allergischen Reaktionen führen kann.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Der Breischluck-Test spielt eine wichtige Rolle in der Diagnose und Differenzialdiagnose von Erkrankungen des oberen Gastrointestinaltrakts. Er liefert entscheidende Informationen, die die weitere Therapieplanung beeinflussen können.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die Identifikation von pathologischen Veränderungen kann der Breischluck-Test die Wahl der geeigneten therapeutischen Maßnahmen und das Management des Patienten wesentlich beeinflussen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen gehören die Ösophagogastroduodenoskopie (ÖGD), die hochauflösende Manometrie und die pH-Metrie. Jede dieser Methoden hat ihre spezifischen Indikationen und Vorteile.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neuere Studien befassen sich mit der Verbesserung der Bildqualität und der Reduktion der Strahlenbelastung durch neue Technologien. Zudem wird die Rolle des Breischluck-Tests in der Beurteilung von Patienten nach bariatrischen Operationen untersucht.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten den Einsatz von MRT-Kontrastmitteln anstelle von Barium umfassen, um die Strahlenbelastung weiter zu reduzieren und die diagnostische Genauigkeit zu erhöhen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Der Breischluck-Test ist ein zentrales diagnostisches Werkzeug in der Gastroenterologie, das eine nicht-invasive Beurteilung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht. Er bietet klare Vorteile, birgt jedoch auch gewisse Risiken und Einschränkungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist der Breischluck-Test ein unverzichtbares Verfahren in der klinischen Diagnostik, das essenzielle Informationen für die Diagnose und das Management von Patienten mit gastrointestinalen Beschwerden liefert.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 60
+      {
+        id: 60,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern, dass der Breischluck-Test durchgeführt wird, um die Struktur der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen und strukturelle oder funktionelle Anomalien zu identifizieren.",
+            third:
+              "Wir führen diesen Test durch, um herauszufinden, ob es Probleme mit Ihrer Speiseröhre oder Ihrem oberen Magen-Darm-Trakt gibt, wie Verengungen oder Bewegungsstörungen.",
+            fourth:
+              "Der Test hilft uns, die Ursache Ihrer Schluckbeschwerden zu finden, indem wir die Struktur und Funktion Ihrer Speiseröhre sichtbar machen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben, dass der Patient ein Kontrastmittelhaltiges Getränk (Barium) zu sich nimmt und dabei kontinuierliche Röntgenaufnahmen gemacht werden, um die Bewegung des Kontrastmittels durch den oberen Gastrointestinaltrakt zu beobachten.",
+            third:
+              "Sie trinken eine Flüssigkeit, die Barium enthält. Während Sie trinken, machen wir Röntgenaufnahmen, um zu sehen, wie die Flüssigkeit durch Ihre Speiseröhre fließt.",
+            fourth:
+              "Zuerst trinken Sie eine bariumsulfathaltige Flüssigkeit. Dann nehmen wir Röntgenbilder auf, um den Weg der Flüssigkeit durch Ihre Speiseröhre und Ihren Magen zu verfolgen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erklären, dass der Patient nüchtern sein sollte, also mindestens sechs Stunden vor dem Test nichts essen oder trinken darf. Informieren über eventuelle Medikamenteneinnahmen und allergische Reaktionen auf Kontrastmittel.",
+            third:
+              "Bitte essen oder trinken Sie mindestens sechs Stunden vor der Untersuchung nichts. Informieren Sie uns bitte, wenn Sie allergisch gegen Kontrastmittel sind.",
+            fourth:
+              "Sie müssen ab Mitternacht vor dem Test nüchtern bleiben. Wenn Sie regelmäßig Medikamente einnehmen, besprechen Sie dies bitte mit uns vorher.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren über mögliche Risiken wie Strahlenbelastung, Unbehagen durch das Trinken des Bariums, Aspiration des Kontrastmittels und seltene Verstopfung.",
+            third:
+              "Es gibt eine geringe Strahlenbelastung durch die Röntgenaufnahmen. Das Trinken des Bariums kann unangenehm sein und in seltenen Fällen kann es zu Verstopfung kommen.",
+            fourth:
+              "Während des Tests besteht ein kleines Risiko, dass das Kontrastmittel in Ihre Atemwege gelangt. Zudem kann es nach dem Test zu Verstopfung kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Hervorheben, dass der Breischluck-Test eine nicht-invasive Methode ist, die eine gute Visualisierung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht und schnell durchführbar ist.",
+            third:
+              "Der Vorteil dieses Tests ist, dass er nicht invasiv ist und uns eine gute Sicht auf die Funktion Ihrer Speiseröhre gibt.",
+            fourth:
+              "Dieser Test ist schnell und nicht-invasiv, was bedeutet, dass wir keine Operation durchführen müssen, um eine Diagnose zu stellen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen von Alternativen wie Ösophagogastroduodenoskopie (ÖGD), hochauflösende Manometrie und pH-Metrie, und deren spezifische Indikationen und Vorteile kurz beschreiben.",
+            third:
+              "Alternativ könnten wir eine Ösophagogastroduodenoskopie (ÖGD) durchführen, bei der eine Kamera in Ihre Speiseröhre eingeführt wird, um eine direkte Sicht zu erhalten.",
+            fourth:
+              "Eine andere Möglichkeit wäre eine hochauflösende Manometrie, bei der wir den Druck in Ihrer Speiseröhre messen, um Bewegungsstörungen zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Auf mögliche Kontraindikationen hinweisen, wie z.B. bekannte Allergien gegen Kontrastmittel, Schwangerschaft oder schwerwiegende Schluckstörungen.",
+            third:
+              "Dieser Test ist nicht geeignet, wenn Sie schwanger sind oder eine bekannte Allergie gegen Barium haben.",
+            fourth:
+              "Falls Sie schwerwiegende Schluckstörungen haben oder schwanger sind, könnte dieser Test nicht sicher für Sie sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären, dass typische Befunde strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore sein können.",
+            third:
+              "Die Ergebnisse könnten zeigen, dass Ihre Speiseröhre verengt ist oder nicht richtig funktioniert, was uns hilft, die richtige Behandlung für Sie zu finden.",
+            fourth:
+              "Wir könnten feststellen, dass es Tumore oder Divertikel in Ihrer Speiseröhre gibt, was uns helfen würde, die Ursache Ihrer Beschwerden genauer zu bestimmen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen, dass das Einverständnis des Patienten notwendig ist, um den Test durchzuführen.",
+            third:
+              "Ihr Einverständnis ist notwendig, damit wir diesen Test durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben.",
+            fourth:
+              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir fortfahren. Es ist wichtig, dass Sie über alle Aspekte des Tests informiert sind und sich wohl damit fühlen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Den Patienten bitten, das Einverständnis schriftlich zu geben und sicherstellen, dass er alle Fragen zum Test und dessen Ablauf beantwortet bekommt.",
+            third:
+              "Bitte unterschreiben Sie hier, um Ihr Einverständnis zu bestätigen. Haben Sie noch Fragen zu dem, was wir besprochen haben?",
+            fourth:
+              "Um fortzufahren, brauche ich Ihre Unterschrift auf diesem Formular. Gibt es noch etwas, das Sie wissen möchten?",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Den Patienten darauf hinweisen, dass er nach der Untersuchung viel Wasser trinken sollte, um das Barium aus dem Körper zu spülen.",
+            third:
+              "Nach dem Test sollten Sie viel Wasser trinken, um das Barium aus Ihrem Körper zu spülen. Es ist normal, wenn Ihr Stuhl vorübergehend weißlich aussieht.",
+            fourth:
+              "Trinken Sie bitte nach der Untersuchung viel Wasser, um das Barium auszuspülen. Ihr Stuhl könnte eine weiße Färbung annehmen, was vorübergehend normal ist.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren, dass die Ergebnisse der Untersuchung in der Regel innerhalb weniger Tage vorliegen und der behandelnde Arzt diese dann mit dem Patienten besprechen wird.",
+            third:
+              "Die Ergebnisse werden in ein paar Tagen vorliegen und Ihr Arzt wird diese mit Ihnen besprechen und die nächsten Schritte planen.",
+            fourth:
+              "Sie erhalten die Ergebnisse normalerweise innerhalb von wenigen Tagen. Ihr behandelnder Arzt wird dann die Ergebnisse mit Ihnen besprechen und das weitere Vorgehen klären.",
+          },
+        ],
+      },
+      // 3tab 61
+      {
+        id: 61,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Beschreiben, dass es sich beim Breischluck-Test um eine Röntgenuntersuchung mit einem Kontrastmittel handelt, die die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts sichtbar macht.",
+            third:
+              "Der Breischluck-Test ist eine radiologische Untersuchung, bei der der Patient Barium trinkt, um die Anatomie und Beweglichkeit der Speiseröhre und des oberen Magen-Darm-Trakts darzustellen.",
+            fourth:
+              "Dieser Test verwendet Barium als Kontrastmittel und ermöglicht es uns, unter Röntgendurchleuchtung die Passage und eventuelle Abnormitäten in der Speiseröhre zu visualisieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären, dass mit dieser Untersuchung strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen und Tumore sowie funktionelle Probleme der Speiseröhre erkannt werden können.",
+            third:
+              "Mit dem Breischluck können wir strukturelle Probleme wie Engstellen, Divertikel oder Tumore sowie funktionelle Störungen wie eine verzögerte Passage oder unkoordinierte Bewegungen feststellen.",
+            fourth:
+              "Dieser Test ermöglicht uns, Motilitätsstörungen, Refluxphänomene und strukturelle Anomalien der Speiseröhre und des oberen Magen-Darm-Trakts zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen, dass die Ergebnisse auf strukturelle oder funktionelle Anomalien hinweisen können, wie z.B. verzögerte Kontrastmittelpassage, retrosternale Füllungsdefekte oder Refluxphänomene.",
+            third:
+              "Die Untersuchung hat eine verzögerte Passage des Kontrastmittels durch die Speiseröhre gezeigt, was auf eine Achalasie hinweisen könnte.",
+            fourth:
+              "Wir haben multiple Divertikel in der Speiseröhre festgestellt, was die Ursache für die Dysphagie des Patienten sein könnte.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen, dass die Hauptindikationen für den Breischluck-Test Dysphagie, Verdacht auf gastroösophagealen Reflux, postoperative Kontrolle und Verdacht auf strukturelle Anomalien sind.",
+            third:
+              "Hauptindikationen für den Breischluck-Test sind Schluckbeschwerden (Dysphagie), Verdacht auf gastroösophagealen Reflux und postoperative Überprüfung nach Ösophagusoperationen.",
+            fourth:
+              "Wir führen den Breischluck-Test häufig bei Patienten mit Verdacht auf anatomische Anomalien oder Motilitätsstörungen der Speiseröhre durch.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Hinweis darauf, dass Kontraindikationen bekannte Allergien gegen Kontrastmittel, Schwangerschaft und schwerwiegende Schluckstörungen umfassen.",
+            third:
+              "Kontraindikationen umfassen bekannte Allergien gegen Barium, Schwangerschaft und schwerwiegende Schluckstörungen, die ein Aspirationsrisiko darstellen.",
+            fourth:
+              "Bei Patienten mit einer bekannten Bariumallergie oder während der Schwangerschaft ist dieser Test kontraindiziert.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären, dass Differenzialdiagnosen Achalasie, gastroösophagealer Reflux, Ösophaguskarzinom, Divertikel und strukturelle Anomalien umfassen können.",
+            third:
+              "Differenzialdiagnosen, die wir in Betracht ziehen müssen, umfassen Achalasie, gastroösophagealen Reflux, Ösophaguskarzinome und anatomische Variationen wie Divertikel.",
+            fourth:
+              "Wir sollten auch an Differenzialdiagnosen wie Motilitätsstörungen, Tumore und Strikturen der Speiseröhre denken.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren, dass die Ergebnisse des Breischluck-Tests die Basis für weitere diagnostische Schritte oder therapeutische Maßnahmen wie endoskopische Untersuchungen oder chirurgische Eingriffe sein können.",
+            third:
+              "Auf Basis der Ergebnisse des Breischluck-Tests könnten wir eine Ösophagogastroduodenoskopie zur weiteren Abklärung oder eine chirurgische Intervention in Erwägung ziehen.",
+            fourth:
+              "Die festgestellten Anomalien könnten eine medikamentöse Behandlung, endoskopische Dehnung oder eine operative Korrektur erforderlich machen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen, dass eine enge Zusammenarbeit zwischen Radiologen, Gastroenterologen, Chirurgen und ggf. HNO-Ärzten notwendig ist, um eine umfassende Diagnostik und Behandlung zu gewährleisten.",
+            third:
+              "Für eine umfassende Betreuung des Patienten ist eine enge Zusammenarbeit zwischen Radiologie, Gastroenterologie und Chirurgie essenziell.",
+            fourth:
+              "Die interdisziplinäre Zusammenarbeit mit Radiologen, Gastroenterologen und ggf. HNO-Ärzten ist entscheidend für eine korrekte Diagnose und effiziente Behandlung.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Hinweis auf die Bedeutung standardisierter Protokolle zur Durchführung und Auswertung des Breischluck-Tests sowie die regelmäßige Schulung des medizinischen Personals zur Sicherstellung hoher Qualitätsstandards.",
+            third:
+              "Standardisierte Protokolle und regelmäßige Schulungen sind wichtig, um die Qualität und Konsistenz der Breischluck-Untersuchungen zu gewährleisten.",
+            fourth:
+              "Ein strukturiertes Qualitätsmanagement, einschließlich regelmäßiger Überprüfungen und Fortbildungen, sichert die hohe Qualität der diagnostischen Ergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern, dass eine gründliche Dokumentation der Untersuchungsergebnisse und eine klare Kommunikation mit dem weiterbehandelnden Arzt entscheidend sind, um die weitere Patientenversorgung zu planen und zu optimieren.",
+            third:
+              "Die sorgfältige Dokumentation der Ergebnisse und die Kommunikation mit dem weiterbehandelnden Arzt sind entscheidend für die optimale Nachsorge des Patienten.",
+            fourth:
+              "Eine lückenlose Dokumentation und eine effiziente Weitergabe der Untersuchungsergebnisse an das Behandlungsteam sind essenziell für eine kontinuierliche Patientenbetreuung.",
+          },
+        ],
+      },
+      // 4tab 62
+      {
+        id: 62,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "55-jähriger Patient klagt über Schwierigkeiten beim Schlucken und retrosternale Schmerzen. Keine bekannte Vorgeschichte von Magen-Darm-Erkrankungen.",
+            fourth:
+              "40-jährige Patientin berichtet über chronisches Sodbrennen und nächtliches Aufstoßen. Vorgeschichte von milden Refluxsymptomen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Der Breischluck zeigt eine normale Passage des Kontrastmittels ohne Hinweise auf Anomalien oder Reflux.",
+            third:
+              "Der Breischluck zeigt eine verzögerte Passage des Kontrastmittels und eine Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
+            fourth:
+              "Der Breischluck zeigt Reflux des Kontrastmittels in den Ösophagus aus dem Magen und eine Schleimhautschädigung.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss gastrointestinaler Störungen.",
+            third:
+              "Der Befund deutet auf Achalasie hin, was durch die fehlende Entspannung des unteren Ösophagussphinkters und die dilatierte Speiseröhre bestätigt wird.",
+            fourth:
+              "Die Beobachtung von Reflux und Schleimhautschäden unterstützt die Diagnose eines gastroösophagealen Refluxes.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung weiterer diagnostischer Schritte wie Manometrie und mögliche endoskopische oder chirurgische Interventionen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer medikamentösen oder chirurgischen Therapie zur Kontrolle des Refluxes.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des oberen Magen-Darm-Trakts. Keine Anzeichen für pathologische Veränderungen",
+            third:
+              "Diagnose einer Achalasie basierend auf Breischluck-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von gastroösophagealem Reflux aufgrund der Breischluck-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene und normale Passage des Kontrastmittels ohne Auffälligkeiten.",
+            third:
+              "Röntgenbilder zeigen eine verzögerte Passage und Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
+            fourth:
+              "Röntgenbilder zeigen den Rückfluss von Barium aus dem Magen in die Speiseröhre und Schleimhautirritationen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige Gesundheitsüberprüfungen, auch wenn keine aktuellen Beschwerden vorliegen, um einen guten allgemeinen Gesundheitszustand sicherzustellen.",
+            third:
+              "Wir empfehlen eine Ballondilatation oder Heller-Myotomie zur Behandlung der Achalasie. Der Patient sollte über die Prognose und die Notwendigkeit regelmäßiger Folgeuntersuchungen informiert werden.",
+            fourth:
+              "Wir empfehlen eine Kombination aus medikamentöser Therapie (Protonenpumpenhemmer) und Lebensstiländerungen zur Kontrolle des Refluxes. Langfristige Behandlungsstrategien und regelmäßige Kontrollen sind wichtig.",
+          },
+        ],
+      },
+      // 5tab 63
+      {
+        id: 63,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: " ",
+        text_list: [
+          {
+            bold: "Röntgenfluoroskopiegerät :",
+            other:
+              "Ein spezielles Röntgengerät, das kontinuierliche Röntgenbilder (Fluoroskopie) in Echtzeit erzeugt, um die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten.",
+          },
+          {
+            bold: "Barium-Kontrastmittel :",
+            other:
+              "Ein bariumsulfathaltiges Kontrastmittel, das der Patient trinkt. Es macht die Speiseröhre und den oberen Magen-Darm-Trakt auf den Röntgenbildern sichtbar.",
+          },
+          {
+            bold: "Gantry :",
+            other:
+              "Der ringförmige Teil des Röntgenfluoroskopiegeräts, der die Röntgenröhre und die Detektoren enthält. Er kann um den Patienten herum gedreht werden, um verschiedene Blickwinkel zu erfassen.",
+          },
+          {
+            bold: "Röntgenröhre :",
+            other:
+              "Erzeugt die Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
+          },
+          {
+            bold: "Detektoren :",
+            other:
+              "Gegenüber der Röntgenröhre im Gantry angeordnet, erfassen sie die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Ein motorisierter Tisch, der den Patienten in die richtige Position bringt. Der Patient liegt während der Untersuchung auf diesem Tisch und kann bei Bedarf in den Gantry hinein- und herausgefahren werden.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder in Echtzeit angezeigt und analysiert werden. Der Radiologe oder radiologische Technologe steuert von hier aus die Untersuchung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu kommunizieren und Anweisungen zu geben, wie z.B. das Schlucken des Kontrastmittels zu koordinieren.",
+          },
+          {
+            bold: "Strahlenschutzvorrichtungen :",
+            other:
+              "Schilde und Schutzkleidung, die sowohl den Patienten als auch das medizinische Personal vor übermäßiger Strahlenexposition schützen.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Zeigt die Echtzeitbilder des Röntgenfluoroskops an, die es dem Radiologen ermöglichen, die Passage des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten und zu bewerten.",
+          },
+          {
+            bold: "Aufzeichnungssystem :",
+            other:
+              "Erfasst und speichert die Bilder und Videos der Untersuchung für die spätere Analyse und Dokumentation.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Notwendig, um die Röntgenröhre zu kühlen, da sie während der Erzeugung von Röntgenstrahlen viel Wärme produziert.",
+          },
+          {
+            bold: "Bildverarbeitungssoftware :",
+            other:
+              "Software zur Verarbeitung und Analyse der erfassten Röntgenbilder, die es dem Radiologen ermöglicht, detaillierte diagnostische Informationen zu extrahieren.",
+          },
+          {
+            bold: "Vorbereitung des Patienten :",
+            other:
+              "Der Patient wird gebeten, jeglichen Schmuck abzulegen und sich auf den Untersuchungstisch zu legen. Der Radiologe erklärt den Ablauf und das Kontrastmittel.",
+          },
+          {
+            bold: "Verabreichung des Kontrastmittels :",
+            other:
+              "Der Patient trinkt das Barium-Kontrastmittel, während er auf dem Untersuchungstisch liegt.",
+          },
+          {
+            bold: "Durchführung der Untersuchung :",
+            other:
+              "Das Röntgenfluoroskopiegerät wird aktiviert, und der Gantry bewegt sich um den Patienten, während kontinuierliche Röntgenbilder aufgenommen werden. Der Radiologe beobachtet in Echtzeit die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt.",
+          },
+          {
+            bold: "Kommunikation während der Untersuchung :",
+            other:
+              "Der Radiologe gibt dem Patienten Anweisungen, wie z.B. 'Schlucken Sie jetzt' oder 'Halten Sie den Atem an', um bestimmte Phasen der Kontrastmittelpassage besser sichtbar zu machen.",
+          },
+          {
+            bold: "Auswertung der Bilder :",
+            other:
+              "Nach der Untersuchung werden die Bilder auf der Arbeitsstation analysiert, um diagnostische Informationen zu erhalten. Der Radiologe bewertet die Struktur und Funktion der Speiseröhre und des oberen Magen-Darm-Trakts.",
+          },
+          {
+            bold: "Nachbereitung :",
+            other:
+              "Der Patient wird angewiesen, nach der Untersuchung viel Wasser zu trinken, um das Barium aus dem Körper zu spülen. Der Radiologe bespricht die vorläufigen Ergebnisse mit dem Patienten und informiert über mögliche nächste Schritte.",
+          },
+        ],
+      },
+      // 6tab 64
+      {
+        id: 64,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Breischluck :",
+            other:
+              "Röntgenuntersuchung mit Kontrastmittel zur Beurteilung der Speiseröhre und des oberen Magen-Darm-Trakts.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Substanz (meist Barium), die geschluckt wird, um Strukturen im Röntgenbild sichtbar zu machen.",
+          },
+          {
+            bold: "Fluoroskopie :",
+            other:
+              "Bildgebendes Verfahren, das Echtzeit-Röntgenbilder ermöglicht.",
+          },
+          {
+            bold: "Dysphagie :",
+            other:
+              "Schluckstörung, häufig ein Symptom bei pathologischen Befunden.",
+          },
+          {
+            bold: "Achalasie :",
+            other:
+              "Motilitätsstörung der Speiseröhre, charakterisiert durch eine fehlende Entspannung des unteren Ösophagussphinkters.",
+          },
+          {
+            bold: "Gastroösophagealer Reflux (GERD) :",
+            other:
+              "Rückfluss von Mageninhalt in die Speiseröhre, häufig mit Sodbrennen verbunden.",
+          },
+          {
+            bold: "Striktur :",
+            other:
+              "Verengung der Speiseröhre, die die Passage von Nahrung erschwert.",
+          },
+          {
+            bold: "Divertikel :",
+            other:
+              "Aussackungen der Speiseröhrenwand, die die Passage von Nahrung beeinflussen können.",
+          },
+          {
+            bold: "Motilitätsstörung :",
+            other:
+              "Beeinträchtigung der normalen Bewegungsfähigkeit der Speiseröhre.",
+          },
+          {
+            bold: "Ösophaguskarzinom :",
+            other: "Bösartiger Tumor in der Speiseröhre.",
+          },
+          {
+            bold: "Barium :",
+            other: "Häufig verwendetes Kontrastmittel im Breischluck-Test.",
+          },
+          {
+            bold: "Manometrie :",
+            other:
+              "Diagnostisches Verfahren zur Messung des Drucks in der Speiseröhre.",
+          },
+          {
+            bold: "Ösophagogastroduodenoskopie (ÖGD) :",
+            other:
+              "Endoskopische Untersuchung der Speiseröhre, des Magens und des Zwölffingerdarms.",
+          },
+          {
+            bold: "Aspiration :",
+            other:
+              "Eindringen von Flüssigkeiten oder Feststoffen in die Atemwege.",
+          },
+          {
+            bold: "Reflux :",
+            other: "Rückfluss von Mageninhalt in die Speiseröhre.",
+          },
+          {
+            bold: "Radiologe :",
+            other:
+              "Facharzt für Bildgebende Verfahren, der die Untersuchung durchführt und interpretiert.",
+          },
+          {
+            bold: "Ballondilatation :",
+            other:
+              "Verfahren zur Erweiterung verengter Bereiche der Speiseröhre mittels eines Ballonkatheters.",
+          },
+          {
+            bold: "Heller-Myotomie :",
+            other:
+              "Chirurgischer Eingriff zur Behandlung der Achalasie durch Durchtrennung der Muskelfasern am unteren Ösophagussphinkter.",
+          },
+          {
+            bold: "Kontraindikation :",
+            other:
+              "Umstand, der die Anwendung eines bestimmten medizinischen Verfahrens verbietet.",
+          },
+          {
+            bold: "Strahlenbelastung :",
+            other:
+              "Exposition des Körpers gegenüber Röntgenstrahlen während der Untersuchung.",
+          },
+          {
+            bold: "Protonenpumpenhemmer (PPI) :",
+            other:
+              "Medikament zur Reduktion der Magensäureproduktion, häufig bei GERD eingesetzt.",
+          },
+          {
+            bold: "Schleimhautschädigung :",
+            other:
+              "Beschädigung der inneren Auskleidung der Speiseröhre, oft durch Reflux verursacht.",
+          },
+          {
+            bold: "Peristaltik :",
+            other:
+              "Wellenförmige Muskelkontraktionen, die die Nahrung durch die Speiseröhre bewegen.",
+          },
+          {
+            bold: "Bariumsulfat :",
+            other:
+              "Spezielles Bariumpräparat, das im Breischluck-Test verwendet wird.",
+          },
+          {
+            bold: "Stenose :",
+            other:
+              "Einengung oder Verengung eines Hohlorgans, wie der Speiseröhre.",
+          },
+        ],
+      },
+      // 6tab 65
+      {
+        id: 65,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link:
+              "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
+            bold: "DocCheck Flexikon:",
+            other:
+              "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
+          },
+          {
+            bold_link:
+              "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
+            bold: "DocCheck Flexikon:",
+            other:
+              "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
+          },
+          {
+            bold_link:
+              "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
+            bold: "DocCheck Flexikon:",
+            other:
+              "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "Amboss:",
+            other:
+              "Hier kannst du dich anmelden und detaillierte medizinische Informationen zu verschiedenen Untersuchungen und Erkrankungen finden, einschließlich des Breischluck-Tests.",
+          },
+          {
+            bold_link: "https://en.wikipedia.org/wiki/Barium_swallow",
+            bold: "Wikipedia:",
+            other:
+              "Eine umfassende Erklärung des Breischluck-Tests auf Englisch, einschließlich der klinischen Anwendung und Interpretation der Ergebnisse.",
+          },
+          {
+            bold_link: "https://radiopaedia.org",
+            bold: "Radiopaedia:",
+            other:
+              "Eine umfangreiche Ressource für radiologische Diagnostik, mit Fallstudien und Bildern zum Breischluck-Test und anderen radiologischen Untersuchungen.",
+          },
+          {
+            bold_link: "https://www.aerzteblatt.de",
+            bold: "Deutsches Ärzteblatt:",
+            other:
+              "Artikel und Studien über verschiedene diagnostische Verfahren, einschließlich des Breischluck-Tests, sowie aktuelle Forschungsergebnisse und klinische Leitlinien.",
+          },
+          {
+            bold_link: "https://www.klinikbewertungen.de",
+            bold: "Klinikbewertungen.de:",
+            other:
+              "Erfahrungsberichte und Bewertungen von Patienten zu verschiedenen medizinischen Untersuchungen und Behandlungen, einschließlich des Breischluck-Tests.",
+          },
+        ],
+      },
+      // 6tab 66
+      {
+        id: 66,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1cATr2Qz9M7H-UIzVuR1q_rgouAyOC4iY/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 7
+  // start of parent tab 8 Skelettszintigraphie
+  {
+    id: 8,
+    title: "Skelettszintigraphie",
+    checked: false,
+    childTabs: [
+      // 1tab 67
+      {
+        id: 67,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Skelettszintigraphie dient der frühzeitigen Erkennung und Bewertung von Knochenanomalien. Sie wird verwendet, um pathologische Veränderungen im Skelettsystem zu diagnostizieren, bevor sie auf konventionellen Röntgenaufnahmen sichtbar werden.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Skelettszintigraphie ist besonders relevant bei der Diagnose von Metastasen, entzündlichen Erkrankungen, Frakturen, Osteomyelitis und anderen Knochenerkrankungen. Sie wird häufig in der Onkologie, Orthopädie und Rheumatologie eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Skelettszintigraphie basiert auf der Verwendung radioaktiver Isotope, die sich in den Knochen anreichern. Technetium-99m ist das häufigste verwendete Isotop, das aufgrund seiner physikalischen Eigenschaften und seiner Affinität zum Knochenstoffwechsel bevorzugt wird.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Bei der Skelettszintigraphie wird dem Patienten eine geringe Menge des radioaktiven Isotops intravenös injiziert. Nach einer gewissen Wartezeit, die es dem Isotop ermöglicht, sich in den Knochen anzureichern, wird der gesamte Körper des Patienten mit einer Gamma-Kamera gescannt, um die Verteilung des Isotops zu visualisieren.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der Skelettszintigraphie erfolgt durch einen Nuklearmediziner. Anhand der Verteilung des radioaktiven Isotops im Skelettsystem können Bereiche mit erhöhtem oder vermindertem Knochenstoffwechsel identifiziert werden.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen Hot-Spots, die auf erhöhte osteoblastische Aktivität hinweisen und oft bei Metastasen oder Frakturen beobachtet werden, sowie Cold-Spots, die auf eine verminderte Durchblutung oder Osteonekrose hindeuten können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Skelettszintigraphie ist eine sensitive Methode zur frühzeitigen Erkennung von Knochenerkrankungen. Sie ermöglicht eine umfassende Untersuchung des gesamten Skelettsystems in kurzer Zeit.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen gehören die Exposition gegenüber radioaktiver Strahlung und die mögliche Notwendigkeit weiterer diagnostischer Tests zur Bestätigung der Befunde.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Obwohl die Strahlenbelastung gering ist, besteht ein gewisses Risiko für strahlenbedingte Schäden. Kontraindikationen umfassen Schwangerschaft und Stillzeit.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Skelettszintigraphie spielt eine zentrale Rolle in der Diagnostik und Therapieplanung vieler Knochenerkrankungen. Sie hilft bei der Erkennung von Metastasen, der Bewertung von Frakturen und der Überwachung des Behandlungserfolgs.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die Skelettszintigraphie ein wertvolles Instrument, das hilft, frühzeitige und präzise Diagnosen zu stellen und den Krankheitsverlauf zu überwachen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur Skelettszintigraphie umfassen Röntgenaufnahmen, CT- und MRT-Scans sowie PET-Scans, die je nach klinischer Fragestellung eingesetzt werden können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildgebungstechniken und die Entwicklung neuer Radiotracer, um die diagnostische Genauigkeit und Sicherheit der Skelettszintigraphie zu erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von KI zur Bildanalyse und die personalisierte Medizin, die auf den spezifischen Stoffwechsel des Patienten abgestimmte Radiotracer verwendet.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Skelettszintigraphie ist eine wichtige diagnostische Methode zur Erkennung und Überwachung von Knochenerkrankungen. Sie bietet eine hohe Sensitivität und ermöglicht eine ganzheitliche Untersuchung des Skelettsystems.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt stellt die Skelettszintigraphie ein unverzichtbares Werkzeug in der modernen Medizin dar, das Ärzten dabei hilft, fundierte Diagnosen zu stellen und effektive Behandlungsstrategien zu entwickeln.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 68
+      {
+        id: 68,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Untersuchung zur frühzeitigen Erkennung und Bewertung von Knochenanomalien dient.",
+            third:
+              "Die Untersuchung hilft uns, Metastasen oder andere Knochenerkrankungen frühzeitig zu erkennen.",
+            fourth:
+              "Wir möchten sicherstellen, dass keine Knochenentzündungen oder Frakturen übersehen werden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie detailliert den Ablauf der Untersuchung, einschließlich der Injektion des radioaktiven Isotops und der Nutzung der Gamma-Kamera.",
+            third:
+              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff. Nach etwa drei Stunden werden Aufnahmen von Ihrem Skelett gemacht.",
+            fourth:
+              "Nach der Injektion des radioaktiven Stoffes müssen Sie etwa drei Stunden warten, bevor die eigentliche Untersuchung beginnt.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Geben Sie Hinweise zur notwendigen Vorbereitung, wie z.B. das Trinken von ausreichend Wasser und mögliche Einschränkungen bei der Nahrungsaufnahme.",
+            third:
+              "Bitte trinken Sie vor der Untersuchung viel Wasser, um die Ausscheidung des Isotops zu fördern.",
+            fourth:
+              "Verzichten Sie bitte vier Stunden vor der Untersuchung auf feste Nahrung, um optimale Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie über die Strahlenexposition und mögliche Risiken wie allergische Reaktionen auf das Kontrastmittel.",
+            third:
+              "Es besteht eine geringe Strahlenbelastung. Allergische Reaktionen auf das Kontrastmittel sind selten, aber möglich.",
+            fourth:
+              "Die Strahlung, der Sie ausgesetzt sind, ist gering und vergleichbar mit einer Röntgenaufnahme.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile, wie die hohe Sensitivität und die Möglichkeit, das gesamte Skelettsystem zu untersuchen.",
+            third:
+              "Die Methode ist sehr empfindlich und ermöglicht uns, das gesamte Skelettsystem zu beurteilen.",
+            fourth:
+              "Mit dieser Untersuchung können wir Veränderungen im Knochenstoffwechsel frühzeitig feststellen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie mögliche Alternativen zur Skelettszintigraphie wie Röntgen, CT, MRT und PET-Scans.",
+            third:
+              "Eine Alternative zur Skelettszintigraphie könnte eine MRT-Untersuchung sein.",
+            fourth:
+              "Eine andere Möglichkeit wäre eine PET-CT-Untersuchung, die ebenfalls sehr genau ist.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Geben Sie die Kontraindikationen an, z.B. Schwangerschaft und Stillzeit.",
+            third:
+              "Wir führen die Untersuchung nicht bei schwangeren Frauen durch, da das Risiko für das ungeborene Kind zu hoch ist.",
+            fourth:
+              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden keine Muttermilch abpumpen oder füttern.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie typische Ergebnisse der Untersuchung, wie Hot-Spots und Cold-Spots, und deren Bedeutung.",
+            third:
+              "Ein 'Hot-Spot' könnte auf eine Knochenmetastase hinweisen, während ein 'Cold-Spot' auf eine Osteonekrose hindeuten könnte.",
+            fourth:
+              "Ein 'Hot-Spot' zeigt uns Bereiche mit erhöhter Aktivität, was auf Entzündungen oder Tumoren hinweisen kann.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit, dass der Patient das Verfahren und die damit verbundenen Risiken versteht und zustimmt.",
+            third:
+              "Es ist wichtig, dass Sie alle Informationen über die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir beginnen.",
+            fourth:
+              "Bitte lesen und verstehen Sie die Einwilligungserklärung sorgfältig, damit Sie über alle Aspekte der Untersuchung informiert sind.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess zum Erhalt des schriftlichen Einverständnisses des Patienten.",
+            third:
+              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung fortfahren können.",
+            fourth:
+              "Sie müssen das Einverständnisformular unterschreiben, bevor wir mit der Prozedur fortfahren können.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Nachsorge und Verhaltensweisen nach der Untersuchung, wie z.B. viel trinken zur Ausscheidung des Isotops.",
+            third:
+              "Nach der Untersuchung sollten Sie viel Wasser trinken, um das radioaktive Isotop schneller auszuscheiden.",
+            fourth:
+              "Es ist wichtig, nach der Untersuchung ausreichend Flüssigkeit zu sich zu nehmen, um die Ausscheidung des Isotops zu unterstützen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient über die Ergebnisse informiert wird und wer die Ergebnisse mit ihm bespricht.",
+            third:
+              "Sie werden in der Regel innerhalb einer Woche von Ihrem behandelnden Arzt über die Ergebnisse informiert.",
+            fourth:
+              "Die Ergebnisse der Untersuchung werden Ihnen in einem Nachgespräch mitgeteilt und erklärt.",
+          },
+        ],
+      },
+      // 3tab 69
+      {
+        id: 69,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass es sich bei der Skelettszintigraphie um eine nuklearmedizinische Untersuchung handelt, die zur Darstellung des Knochenstoffwechsels dient.",
+            third:
+              "Die Skelettszintigraphie ist eine bildgebende Methode, die den Knochenstoffwechsel darstellt und häufig zur Detektion von Knochenmetastasen verwendet wird.",
+            fourth:
+              "Es handelt sich um eine nuklearmedizinische Untersuchung, bei der ein radioaktives Isotop verwendet wird, um pathologische Veränderungen im Knochen aufzuspüren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass wir mit dieser Untersuchung frühzeitig pathologische Veränderungen im Skelettsystem wie Metastasen, Frakturen oder Entzündungen erkennen können.",
+            third:
+              "Mit der Skelettszintigraphie können wir Metastasen, die bei konventionellen Röntgenbildern nicht sichtbar sind, frühzeitig erkennen.",
+            fourth:
+              "Diese Untersuchung ermöglicht uns die frühzeitige Erkennung von entzündlichen Veränderungen oder Stressfrakturen, die bei anderen Bildgebungsverfahren übersehen werden könnten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erwähnen Sie, dass die Ergebnisse der Untersuchung typische Muster wie Hot-Spots und Cold-Spots zeigen, die auf verschiedene pathologische Prozesse hinweisen.",
+            third:
+              "Ein Hot-Spot in der Skelettszintigraphie könnte auf eine metastatische Läsion oder eine frische Fraktur hinweisen.",
+            fourth:
+              "Cold-Spots können auf eine verminderte Durchblutung hinweisen, was bei einer Osteonekrose der Fall sein kann.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, dass die Indikationen für die Skelettszintigraphie unter anderem die Suche nach Knochenmetastasen, die Diagnose von Osteomyelitis und die Bewertung von Knochenfrakturen umfassen.",
+            third:
+              "Typische Indikationen umfassen die Suche nach Knochenmetastasen bei Patienten mit bekannten Primärtumoren und die Diagnose von Osteomyelitis.",
+            fourth:
+              "Wir setzen die Skelettszintigraphie auch zur Bewertung unklarer Knochen- oder Gelenkschmerzen ein, um verborgene Frakturen oder Entzündungen zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass Kontraindikationen die Schwangerschaft und Stillzeit umfassen, da die Strahlenbelastung Risiken für das ungeborene Kind und den Säugling darstellen kann.",
+            third:
+              "Bei schwangeren Frauen vermeiden wir die Skelettszintigraphie aufgrund der potenziellen Strahlenbelastung für den Fötus.",
+            fourth:
+              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden abpumpen und die Milch verwerfen, um eine Strahlenexposition des Säuglings zu vermeiden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erwähnen Sie mögliche Differenzialdiagnosen, die bei der Interpretation der Skelettszintigraphie berücksichtigt werden müssen, wie z.B. benigne Knochenveränderungen oder entzündliche Prozesse.",
+            third:
+              "Benigne Knochenveränderungen wie Enchondrome können ebenfalls Hot-Spots verursachen und sollten differenzialdiagnostisch berücksichtigt werden.",
+            fourth:
+              "Auch entzündliche Prozesse wie Arthritis können in der Szintigraphie als Hot-Spots erscheinen und müssen von malignen Veränderungen unterschieden werden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, wie die Ergebnisse der Skelettszintigraphie in die Behandlungspläne der Patienten integriert werden können, um gezielte Therapieansätze zu entwickeln.",
+            third:
+              "Bei Nachweis von Knochenmetastasen würden wir eine systemische Therapie einleiten und ggf. eine lokale Bestrahlung in Erwägung ziehen.",
+            fourth:
+              "Die Ergebnisse können auch zur Entscheidung über eine operative Versorgung von Frakturen herangezogen werden, insbesondere bei Patienten mit komplexen Verletzungen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der interprofessionellen Zusammenarbeit zwischen Nuklearmedizinern, Onkologen, Orthopäden und anderen Fachrichtungen zur optimalen Patientenversorgung.",
+            third:
+              "Eine enge Zusammenarbeit zwischen Nuklearmedizinern und Onkologen ist entscheidend, um die Ergebnisse der Skelettszintigraphie optimal in den Therapieplan zu integrieren.",
+            fourth:
+              "Orthopäden und Nuklearmediziner müssen bei der Interpretation der Befunde eng zusammenarbeiten, um die beste Behandlungsstrategie für den Patienten zu entwickeln.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erwähnen Sie die Rolle des Qualitätsmanagements bei der Sicherstellung der Genauigkeit und Zuverlässigkeit der Untersuchungsergebnisse.",
+            third:
+              "Regelmäßige Kalibrierung der Gamma-Kamera und Schulungen des Personals sind essenziell, um konsistente und verlässliche Ergebnisse zu gewährleisten.",
+            fourth:
+              "Qualitätsmanagement sorgt dafür, dass die Protokolle für die Durchführung und Auswertung der Skelettszintigraphie strikt eingehalten werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Wichtigkeit der Dokumentation der Untersuchungsergebnisse und der Weiterverfolgung der Patienten zur Überwachung des Krankheitsverlaufs und der Therapieeffekte.",
+            third:
+              "Eine sorgfältige Dokumentation der Befunde ermöglicht es uns, den Krankheitsverlauf über die Zeit zu verfolgen und Therapieanpassungen vorzunehmen.",
+            fourth:
+              "Wir dokumentieren alle Untersuchungsergebnisse detailliert, um bei Nachkontrollen und zur langfristigen Planung der Patientenbehandlung darauf zurückgreifen zu können.",
+          },
+        ],
+      },
+      // 4tab 70
+      {
+        id: 70,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "45-jähriger Patient ohne Beschwerden, Routinekontrolle nach einem Jahr ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über diffuse Knochenschmerzen und Gewichtsverlust. Vorgeschichte eines Prostatakarzinoms.",
+            fourth:
+              "50-jährige Patientin mit persistierenden Schmerzen und Schwellungen im rechten Bein. Keine bekannte Vorgeschichte von Knochenerkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Skelettszintigraphie zeigt eine gleichmäßige Verteilung des Isotops ohne Anzeichen von Hot-Spots oder anderen Auffälligkeiten.",
+            third:
+              "Skelettszintigraphie zeigt multiple Hot-Spots, insbesondere in der Wirbelsäule und den Beckenknochen.",
+            fourth:
+              "Skelettszintigraphie zeigt einen ausgeprägten Hot-Spot im distalen Femur, umgeben von einer diffusen Aufnahme.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Skelettszintigraphie unterstützt den Ausschluss von Knochenpathologien.",
+            third:
+              "Der Befund deutet auf Knochenmetastasen hin. Die Lokalisation und die Anzahl der Hot-Spots korrelieren mit der Vorgeschichte eines Prostatakarzinoms.",
+            fourth:
+              "Der ausgeprägte Hot-Spot im distalen Femur ist typisch für eine Osteomyelitis. Die diffuse Aufnahme deutet auf eine entzündliche Reaktion hin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer systemischen Therapie und regelmäßiger Kontrolluntersuchungen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer antibiotischen Therapie sowie chirurgischer Maßnahmen, falls notwendig.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Skelettsystems. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose von Knochenmetastasen basierend auf der Skelettszintigraphie und der klinischen Vorgeschichte.",
+            fourth:
+              "Diagnose einer Osteomyelitis aufgrund der Skelettszintigraphie-Ergebnisse und der klinischen Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Verteilung des Isotops ohne Auffälligkeiten in allen Bereichen des Skelettsystems.",
+            third:
+              "Skelettszintigraphie-Aufnahmen zeigen multiple Hot-Spots in der Wirbelsäule und den Beckenknochen.",
+            fourth:
+              "Skelettszintigraphie-Bilder zeigen einen ausgeprägten Hot-Spot im distalen Femur mit diffuser Aufnahme um die Läsion herum.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, dass der Patient regelmäßig zu Routinekontrollen erscheint, um den gesunden Zustand zu überwachen.",
+            third:
+              "Sie sollten die Diagnose mit dem Onkologen besprechen und eine systemische Therapie planen. Regelmäßige Kontrolluntersuchungen sind erforderlich, um den Krankheitsverlauf zu überwachen.",
+            fourth:
+              "Wir empfehlen, dass Sie die Diagnose mit dem Orthopäden und Infektiologen besprechen, um die antibiotische Therapie und gegebenenfalls chirurgische Maßnahmen zu planen.",
+          },
+        ],
+      },
+      // 5tab 71
+      {
+        id: 71,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: " ",
+        text_list: [
+          {
+            bold: "Gamma-Kamera",
+            other:
+              "Besteht aus einem Kollimator, einem Szintillationskristall und Photomultiplier-Röhren. Erfasst die von den radioaktiven Isotopen ausgesendete Gammastrahlung, die sich in den Knochen anreichern.",
+          },
+          {
+            bold: "Radioaktive Isotope",
+            other:
+              "Am häufigsten wird Technetium-99m verwendet. Wird dem Patienten intravenös injiziert und reichert sich in Bereichen mit hohem Knochenstoffwechsel an.",
+          },
+          {
+            bold: "Kollimator",
+            other:
+              "Ein Gerät, das nur Gammastrahlen aus bestimmten Winkeln durchlässt, um die Bildauflösung zu verbessern. Hilft dabei, die Richtung der einfallenden Gammastrahlen zu bestimmen und unerwünschte Strahlung zu blockieren.",
+          },
+          {
+            bold: "Szintillationskristall",
+            other:
+              "Wandelt die Gammastrahlen in Lichtblitze um. Typischerweise aus Natriumjodid (NaI) hergestellt.",
+          },
+          {
+            bold: "Photomultiplier-Röhren",
+            other:
+              "Verstärken die Lichtblitze, die vom Szintillationskristall erzeugt werden. Wandeln das Licht in elektrische Signale um, die dann zur Bildgebung verwendet werden.",
+          },
+          {
+            bold: "Patiententisch",
+            other:
+              "Ist motorisiert und kann in die richtige Position für die Untersuchung bewegt werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Nuklearmediziner oder radiologische Technologe steuert von hier aus die Untersuchung und verarbeitet die Bilder.",
+          },
+          {
+            bold: "Kontrastmittelinjektor (optional)",
+            other:
+              "In bestimmten Fällen kann ein Kontrastmittel verwendet werden, um die Sichtbarkeit bestimmter Strukturen zu verbessern. Wird intravenös verabreicht.",
+          },
+          {
+            bold: "Steuerkonsole",
+            other:
+              "Ermöglicht dem Technologen, das Skelettszintigraphie-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
+          },
+          {
+            bold: "Kühlungssystem",
+            other:
+              "Hält die empfindlichen Komponenten des Geräts auf einer optimalen Betriebstemperatur. Verhindert Überhitzung und sichert eine gleichbleibende Bildqualität.",
+          },
+          {
+            bold: "Software zur Bildrekonstruktion",
+            other:
+              "Verarbeitet die erfassten Daten und rekonstruiert daraus die Bilder des Skelettsystems. Ermöglicht die Erstellung von 2D- und 3D-Bildern zur besseren Diagnose.",
+          },
+          {
+            bold: "Sprachkommunikationssystem",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Multidetektor-Technologie",
+            other:
+              "Moderne Skelettszintigraphie-Geräte sind oft mit Multidetektoren ausgestattet. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+        ],
+      },
+      // 6tab 72
+      {
+        id: 72,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der Skelettszintigraphie -Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Skelettszintigraphie",
+            other:
+              "Ein nuklearmedizinisches Bildgebungsverfahren zur Darstellung des Knochenstoffwechsels.",
+          },
+          {
+            bold: "Gamma-Kamera",
+            other:
+              "Gerät zur Erfassung der Gammastrahlung, die von den radioaktiven Isotopen ausgesendet wird.",
+          },
+          {
+            bold: "Technetium-99m (Tc-99m)",
+            other:
+              "Das häufig verwendete radioaktive Isotop in der Skelettszintigraphie.",
+          },
+          {
+            bold: "Hot-Spot",
+            other:
+              "Bereich mit erhöhter Aufnahme des Isotops, deutet auf erhöhten Knochenstoffwechsel hin.",
+          },
+          {
+            bold: "Cold-Spot",
+            other:
+              "Bereich mit verminderter Aufnahme des Isotops, deutet auf reduzierten Knochenstoffwechsel hin.",
+          },
+          {
+            bold: "Kollimator",
+            other:
+              "Gerät zur Begrenzung und Ausrichtung der einfallenden Gammastrahlen auf die Gamma-Kamera.",
+          },
+          {
+            bold: "Szintillationskristall",
+            other: "Wandelt Gammastrahlen in Lichtblitze um.",
+          },
+          {
+            bold: "Photomultiplier-Röhren",
+            other:
+              "Verstärken die Lichtblitze und wandeln sie in elektrische Signale um.",
+          },
+          {
+            bold: "Intravenöse Injektion",
+            other:
+              "Methode zur Verabreichung des radioaktiven Isotops in die Blutbahn.",
+          },
+          {
+            bold: "Radioaktive Tracer",
+            other:
+              "Stoffe, die radioaktive Isotope enthalten und sich im Körper anreichern.",
+          },
+          {
+            bold: "Metastasen",
+            other:
+              "Tumorabsiedlungen in den Knochen, häufige Indikation für eine Skelettszintigraphie.",
+          },
+          {
+            bold: "Osteomyelitis",
+            other:
+              "Knochenentzündung, die mittels Skelettszintigraphie diagnostiziert werden kann.",
+          },
+          {
+            bold: "Frakturen",
+            other:
+              "Knochenbrüche, die durch erhöhte Isotopenaufnahme sichtbar gemacht werden können.",
+          },
+          {
+            bold: "Knochenstoffwechsel",
+            other: "Prozess des Auf- und Abbaus von Knochengewebe.",
+          },
+          {
+            bold: "Patiententisch",
+            other:
+              "Motorisierter Tisch, auf dem der Patient während der Untersuchung liegt.",
+          },
+          {
+            bold: "Arbeitsstation",
+            other:
+              "Computer und Monitore zur Steuerung und Auswertung der Untersuchung.",
+          },
+          {
+            bold: "Kontrastmittel",
+            other:
+              "Substanz, die die Bildgebung bestimmter Strukturen im Körper verbessert.",
+          },
+          {
+            bold: "Steuerkonsole",
+            other:
+              "Bedieneinheit zur Steuerung des Skelettszintigraphie-Geräts.",
+          },
+          {
+            bold: "Radiologischer Technologe",
+            other:
+              "Fachperson, die die Untersuchung durchführt und das Gerät bedient.",
+          },
+          {
+            bold: "Nuklearmediziner",
+            other:
+              "Arzt, der auf die Anwendung von radioaktiven Substanzen zu diagnostischen und therapeutischen Zwecken spezialisiert ist.",
+          },
+          {
+            bold: "Bildrekonstruktion",
+            other:
+              "Softwaregestützte Erstellung von 2D- und 3D-Bildern aus den gesammelten Daten.",
+          },
+          {
+            bold: "Diagnostische Genauigkeit",
+            other:
+              "Maß für die Fähigkeit der Untersuchung, korrekte Diagnosen zu stellen.",
+          },
+        ],
+      },
+      // 6tab 73
+      {
+        id: 73,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link:
+              "https://www.praktischarzt.de/diagnostik/knochenszintigraphie/",
+            bold: "practischArzt",
+            other:
+              " bietet detaillierte Informationen über die Durchführung der Knochenszintigraphie, einschließlich Vorbereitung, Dauer und mögliche Risiken.",
+          },
+          {
+            bold_link:
+              "https://www.apotheken-umschau.de/diagnostik/szintigrafie",
+            bold: "Apotheken Umschau",
+            other:
+              " beschreibt, wie eine Knochenszintigraphie durchgeführt wird, und bietet ein Video zur besseren Verständigung der Prozedur.",
+          },
+          {
+            bold_link:
+              "https://www.radiologie.de/leistungen/skelettszintigraphie",
+            bold: "Radiologie.de",
+            other:
+              " erklärt, wie mit der Skelettszintigraphie aktive Veränderungen im Knochen festgestellt werden können, besonders für die Diagnose von Entzündungen und Metastasen.",
+          },
+          {
+            bold_link:
+              "https://nuklearmedizin.mri.tum.de/leistungen/skelettszintigraphie",
+            bold: "Nuklearmedizin - Klinikum rechts der Isar",
+            other:
+              " beschreibt den Prozess der Skelettszintigraphie detailliert, einschließlich Vorbereitung, Durchführung und Dauer der Untersuchung.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/szintigrafie/",
+            bold: "NetDoktor.de",
+            other:
+              " bietet umfassende Informationen über verschiedene Formen der Szintigraphie, einschließlich der Skelettszintigraphie, und deren Indikationen, Risiken und Vorteile.",
+          },
+          {
+            bold_link:
+              "https://www.medizin.uni-tuebingen.de/kliniken/nuklearmedizin/leistungen/skelettszintigraphie",
+            bold: "Universitätsklinikum Tübingen",
+            other:
+              " liefert Informationen über die Durchführung der Skelettszintigraphie in der Klinik, die Vorbereitung der Patienten und die notwendigen Maßnahmen nach der Untersuchung.",
+          },
+          {
+            bold_link: "https://flexikon.doccheck.com/de/Skelettszintigraphie",
+            bold: "DocCheck Flexikon",
+            other:
+              " bietet eine umfassende Definition der Skelettszintigraphie, einschließlich Indikationen, Durchführung und Interpretation der Ergebnisse.",
+          },
+          {
+            bold_link: "https://www.amboss.com/de",
+            bold: "Amboss",
+            other:
+              " beschreibt detailliert die Indikationen, Kontraindikationen, Durchführung und Interpretation der Skelettszintigraphie.",
+          },
+        ],
+      },
+      // 6tab 74
+      {
+        id: 74,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1iYEeMwnT4JXh8MaMOWQ9KjySIqVxmQk_/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 8
+  // start of parent tab 9 Schilddrüsen-Szintigraphie
+  {
+    id: 9,
+    title: "Schilddrüsen-Szintigraphie",
+    checked: false,
+    childTabs: [
+      // 1tab 75
+      {
+        id: 75,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Schilddrüsen-Szintigraphie besteht darin, Funktionsstörungen der Schilddrüse zu diagnostizieren und morphologische Veränderungen zu erkennen. Dabei wird die Verteilung eines radioaktiven Tracers in der Schilddrüse visuell dargestellt.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Schilddrüsen-Szintigraphie ist von großer Bedeutung für die Diagnose von Schilddrüsenerkrankungen wie Hyperthyreose, Knoten und Krebs. Sie findet Anwendung in der Differenzialdiagnose von Schilddrüsenknoten, der Beurteilung der Schilddrüsenfunktion und der Überwachung von Schilddrüsenkrebs.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das Verfahren basiert auf der Aufnahme von radioaktiven Isotopen durch die Schilddrüse. Typischerweise werden Technetium-99m oder Iod-123 verwendet, da diese Isotope von der Schilddrüse aufgenommen und gespeichert werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Nach der intravenösen Injektion des radioaktiven Tracers wird eine Gammakamera verwendet, um die emittierte Strahlung zu detektieren und ein Bild der Schilddrüse zu erzeugen. Die Untersuchung dauert etwa 20-30 Minuten und erfordert keine speziellen Vorbereitungen des Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: 'Die Auswertung der Schilddrüsen-Szintigraphie erfolgt durch die Beurteilung der Verteilung des Tracers in der Schilddrüse. Bereiche mit erhöhter Aktivität ("heiße Knoten") können auf eine Überfunktion hinweisen, während Bereiche mit verminderter Aktivität ("kalte Knoten") auf Hypofunktion oder maligne Veränderungen hindeuten können.',
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden zählen diffuse Vergrößerungen, fokale Knoten und unregelmäßige Verteilungen des Tracers, die auf unterschiedliche pathologische Zustände hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ein wesentlicher Vorteil der Schilddrüsen-Szintigraphie ist ihre nicht-invasive Natur, die es ermöglicht, detaillierte Informationen über die Schilddrüsenfunktion zu erhalten, ohne einen chirurgischen Eingriff vornehmen zu müssen. Außerdem ist die Strahlenbelastung durch das Verfahren gering, was es zu einer sicheren Option für viele Patienten macht. Die hohe Sensitivität der Szintigraphie erlaubt es, funktionelle Veränderungen der Schilddrüse frühzeitig zu erkennen und entsprechend zu behandeln.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen der Schilddrüsen-Szintigraphie gehört die begrenzte Verfügbarkeit der notwendigen Ausrüstung und Tracer in einigen Regionen, was den Zugang zu diesem diagnostischen Verfahren einschränken kann. Darüber hinaus kann es bei einigen Patienten zu allergischen Reaktionen auf den verwendeten Tracer kommen, obwohl dies selten ist.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken der Schilddrüsen-Szintigraphie sind minimal, umfassen jedoch die geringe Strahlenexposition, die mit der Injektion des radioaktiven Tracers verbunden ist. Diese Strahlenbelastung ist jedoch deutlich niedriger als bei vielen anderen bildgebenden Verfahren. Seltene allergische Reaktionen auf den Tracer können auftreten, die jedoch in der Regel mild und gut behandelbar sind.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Schilddrüsen-Szintigraphie spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Schilddrüsenerkrankungen. Sie liefert wichtige Informationen zur Funktionsbewertung und trägt zur Entscheidung über therapeutische Maßnahmen bei.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die präzise Bestimmung der Schilddrüsenfunktion und -morphologie kann die Szintigraphie das Management und die Prognose von Patienten mit Schilddrüsenerkrankungen erheblich verbessern.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text:
+                  "Alternative Verfahren zur Schilddrüsen-Szintigraphie umfassen Ultraschall, Feinnadelbiopsie und Bluttests zur Bestimmung der Schilddrüsenhormone. Diese Methoden können ergänzend oder alternativ eingesetzt werden, je nach klinischer Fragestellung.",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der Tracer und Bildgebungstechnologien, um die diagnostische Genauigkeit und Sicherheit zu erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Einführung neuer Tracer und fortschrittlicherer Bildgebungstechniken umfassen, die eine noch detailliertere Beurteilung der Schilddrüsenfunktion ermöglichen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Schilddrüsen-Szintigraphie ist ein wesentliches diagnostisches Werkzeug zur Beurteilung von Schilddrüsenerkrankungen, das durch seine nicht-invasive Natur und hohe diagnostische Genauigkeit überzeugt.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre Rolle in der modernen Medizin ist unbestritten, und kontinuierliche Forschungsbemühungen tragen dazu bei, ihre Anwendungsmöglichkeiten und diagnostische Leistungsfähigkeit weiter zu verbessern.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 76
+      {
+        id: 76,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Schilddrüsen-Szintigraphie zur Beurteilung der Schilddrüsenfunktion und zur Unterscheidung zwischen kalten und heißen Knoten dient.",
+            third:
+              "„Wir möchten herausfinden, ob Ihre Schilddrüse über- oder unteraktiv ist und ob Knoten vorhanden sind, die weiter untersucht werden müssen.“",
+            fourth:
+              "„Die Untersuchung hilft uns, festzustellen, ob ein Knoten in Ihrer Schilddrüse gutartig oder bösartig sein könnte.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf: Verabreichung eines radioaktiven Stoffes per Injektion, Wartezeit, anschließende Bildaufnahme der Schilddrüse mit einer Gamma-Kamera.",
+            third:
+              "„Sie erhalten eine kleine Menge eines radioaktiven Stoffes über eine Injektion. Nach etwa 20 Minuten machen wir mit einer speziellen Kamera Bilder Ihrer Schilddrüse.“",
+            fourth:
+              "„Nach der Injektion des Radiopharmakons müssen Sie etwa 20 Minuten warten. Danach erstellen wir mit einer Gamma-Kamera Bilder, die die Funktion Ihrer Schilddrüse zeigen.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Weisen Sie auf die Vorbereitung hin: Nüchternheit am Untersuchungstag und Absetzen bestimmter Medikamente nach Absprache mit dem Arzt.",
+            third:
+              "„Bitte kommen Sie nüchtern zur Untersuchung und setzen Sie Ihre Schilddrüsenmedikamente drei Tage vorher ab.“",
+            fourth:
+              "„Es ist wichtig, dass Sie am Tag der Untersuchung nichts essen und bestimmte Medikamente, wie Jodtabletten, vorher absetzen.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie über die Risiken: Minimale Strahlenexposition und sehr seltene allergische Reaktionen auf das Radiopharmakon.",
+            third:
+              "„Die Strahlenbelastung ist sehr gering und vergleichbar mit einer Röntgenaufnahme. Allergische Reaktionen sind äußerst selten.“",
+            fourth:
+              "„Die Risiken sind minimal. Es gibt eine sehr geringe Strahlenexposition und das Risiko einer allergischen Reaktion ist sehr niedrig.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Stellen Sie die Vorteile dar: Nicht-invasive, schmerzlose Methode, die wichtige funktionelle Informationen über die Schilddrüse liefert.",
+            third:
+              "„Die Methode ist schmerzlos und liefert uns wertvolle Informationen über die Funktion Ihrer Schilddrüse.“",
+            fourth:
+              "„Dieses Verfahren ist nicht-invasiv und hilft uns, genaue Daten über Ihre Schilddrüsenaktivität zu erhalten.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie Alternativen: Ultraschall der Schilddrüse für anatomische Informationen, Feinnadelaspiration zur zytologischen Untersuchung von Schilddrüsenknoten.",
+            third:
+              "„Eine Alternative wäre ein Ultraschall, der uns aber keine funktionellen Informationen liefert.“",
+            fourth:
+              "„Wir könnten auch eine Feinnadelaspiration durchführen, um Zellen aus einem Knoten zu untersuchen.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Nennen Sie die Kontraindikationen: Schwangerschaft, Stillzeit und bekannte Allergien gegen das verwendete Radiopharmakon.",
+            third:
+              "„Diese Untersuchung ist nicht geeignet für Schwangere und stillende Frauen.“",
+            fourth:
+              "„Wenn Sie schwanger sind oder stillen, sollten Sie diese Untersuchung nicht durchführen lassen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erläutern Sie mögliche Ergebnisse: Identifikation von kalten Knoten (weniger aktiv) und heißen Knoten (stärker aktiv), die auf verschiedene Schilddrüsenkrankheiten hinweisen.",
+            third:
+              "„Wir könnten kalte Knoten finden, die weniger aktiv sind und weitere Untersuchungen benötigen.“",
+            fourth:
+              "„Heiße Knoten zeigen eine erhöhte Aktivität und könnten auf eine Schilddrüsenüberfunktion hinweisen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit: Der Patient muss umfassend über Ablauf, Risiken und Nutzen der Untersuchung informiert werden und schriftlich einwilligen.",
+            third:
+              "„Es ist wichtig, dass Sie die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir Ihre Zustimmung einholen.“",
+            fourth:
+              "„Wir benötigen Ihre schriftliche Einwilligung, nachdem wir Sie ausführlich über den Ablauf und die möglichen Risiken informiert haben.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess der Einwilligung: Schriftliche Zustimmung des Patienten nach ausführlicher Aufklärung durch den Arzt.",
+            third:
+              "„Nach der Aufklärung durch den Arzt unterschreiben Sie bitte das Einverständnisformular.“",
+            fourth:
+              "„Sie erhalten alle notwendigen Informationen und geben dann schriftlich Ihre Zustimmung zur Untersuchung.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Anweisungen: Patient sollte nach der Untersuchung viel Flüssigkeit trinken und sich bei Fragen oder Beschwerden an seinen Arzt wenden.",
+            third:
+              "„Bitte trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller aus Ihrem Körper zu entfernen.“",
+            fourth:
+              "„Falls Sie nach der Untersuchung Fragen haben oder sich unwohl fühlen, kontaktieren Sie bitte umgehend Ihren Arzt.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie die Ergebnisbesprechung: Der Arzt erläutert dem Patienten die Befunde der Untersuchung, deren Bedeutung und die empfohlenen nächsten Schritte.",
+            third:
+              "„Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und wir planen die weiteren Schritte.“",
+            fourth:
+              "„Wir erklären Ihnen, was die Befunde bedeuten und welche Behandlungen oder Untersuchungen eventuell folgen sollten.“",
+          },
+        ],
+      },
+      // 3tab 77
+      {
+        id: 77,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Schilddrüsen-Szintigraphie eine nuklearmedizinische Bildgebungstechnik ist, die zur Beurteilung der Schilddrüsenfunktion und zur Identifikation von Knoten eingesetzt wird.",
+            third:
+              "„Die Schilddrüsen-Szintigraphie ist ein bildgebendes Verfahren, bei dem radioaktive Substanzen verwendet werden, um die Funktion der Schilddrüse darzustellen.“",
+            fourth:
+              "„Dieses Verfahren nutzt ein Radiopharmakon und eine Gamma-Kamera, um die Aktivität und Struktur der Schilddrüse zu visualisieren.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass die Untersuchung die funktionelle Aktivität der Schilddrüse visualisiert und zwischen kalten und heißen Knoten unterscheidet, was für die Diagnose von Schilddrüsenerkrankungen entscheidend ist.",
+            third:
+              "„Wir können damit die Aktivität der Schilddrüse messen und feststellen, ob Knoten über- oder unteraktiv sind.“",
+            fourth:
+              "„Es ermöglicht uns, funktionsgestörte Bereiche der Schilddrüse zu identifizieren und zu beurteilen.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erläutern Sie die typischen Befunde wie kalte Knoten, die auf Hypofunktion oder Malignität hinweisen können, und heiße Knoten, die auf Hyperfunktion hinweisen, wie bei autonomen Adenomen oder Morbus Basedow.",
+            third:
+              "„Ein kalter Knoten könnte auf eine Zyste oder ein Karzinom hinweisen, während ein heißer Knoten auf ein autonomes Adenom hindeuten kann.“",
+            fourth:
+              "„Die Untersuchung kann heiße Knoten zeigen, die oft gutartig sind, oder kalte Knoten, die weiter abgeklärt werden müssen.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen: Unklare Schilddrüsenknoten, Verdacht auf Schilddrüsenfunktionsstörungen (Hyperthyreose oder Hypothyreose), Abklärung einer Struma.",
+            third:
+              "„Typische Indikationen sind unklare Knoten, Verdacht auf Hyperthyreose oder eine vergrößerte Schilddrüse.“",
+            fourth:
+              "„Wir setzen die Szintigraphie bei Verdacht auf Funktionsstörungen oder zur Abklärung von Schilddrüsenknoten ein.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie die Kontraindikationen: Schwangerschaft, Stillzeit, bekannte Allergien gegen das Radiopharmakon.",
+            third:
+              "„Kontraindikationen umfassen Schwangerschaft und Stillzeit sowie bekannte Allergien gegen das Radiopharmakon.“",
+            fourth:
+              "„Die Untersuchung ist kontraindiziert bei Schwangeren und bei Patienten mit kürzlich erfolgter Gabe von jodhaltigen Kontrastmitteln.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Besprechen Sie Differenzialdiagnosen: Knoten können gutartig (z.B. Zysten, Adenome) oder bösartig (Karzinome) sein; funktionelle Störungen wie Morbus Basedow oder Hashimoto-Thyreoiditis sollten ebenfalls berücksichtigt werden.",
+            third:
+              "„Differenzialdiagnosen umfassen gutartige Knoten wie Zysten und Adenome sowie bösartige Tumoren.“",
+            fourth:
+              "„Wir müssen auch an funktionelle Störungen wie Morbus Basedow oder eine Thyreoiditis denken.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie die möglichen Behandlungspläne: Abhängig von den Befunden könnten eine medikamentöse Therapie, Radiojodtherapie oder chirurgische Intervention erforderlich sein.",
+            third:
+              "„Abhängig vom Ergebnis könnte eine medikamentöse Therapie, eine Radiojodtherapie oder eine Operation notwendig sein.“",
+            fourth:
+              "„Für kalte Knoten könnte eine Operation erforderlich sein, während heiße Knoten oft medikamentös behandelt werden.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Wichtigkeit der Zusammenarbeit zwischen Endokrinologen, Nuklearmedizinern, Chirurgen und Hausärzten.",
+            third:
+              "„Die enge Zusammenarbeit zwischen Endokrinologen und Nuklearmedizinern ist entscheidend für eine präzise Diagnostik und Therapie.“",
+            fourth:
+              "„Chirurgen und Endokrinologen müssen bei der Entscheidungsfindung eng kooperieren.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie die Notwendigkeit eines kontinuierlichen Qualitätsmanagements, um die Genauigkeit der Diagnoseverfahren und die Patientensicherheit zu gewährleisten.",
+            third:
+              "„Regelmäßige Kalibrierung der Geräte und Fortbildung des Personals sind essenziell für eine hohe Diagnosesicherheit.“",
+            fourth:
+              "„Ein umfassendes Qualitätsmanagementsystem hilft uns, die Genauigkeit und Sicherheit der Untersuchungen zu gewährleisten.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Heben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der anschließenden Nachverfolgung hervor, um eine angemessene Behandlung und Überwachung der Patienten zu gewährleisten.",
+            third:
+              "„Eine gründliche Dokumentation der Ergebnisse und regelmäßige Nachkontrollen sind wichtig, um den Behandlungserfolg zu überwachen.“",
+            fourth:
+              "„Die Ergebnisse müssen genau dokumentiert und die Patienten in regelmäßigen Abständen nachuntersucht werden.“",
+          },
+        ],
+      },
+      // 4tab 78
+      {
+        id: 78,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle, keine Auffälligkeiten in der Schilddrüsenfunktion.",
+            third:
+              "50-jähriger Patient mit einem tastbaren Knoten in der Schilddrüse und allgemeiner Müdigkeit.",
+            fourth:
+              "40-jährige Patientin klagt über Herzrasen, Gewichtsverlust und Nervosität.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Homogene Verteilung des Radiopharmakons in der Schilddrüse, keine Knoten oder Auffälligkeiten erkennbar.",
+            third:
+              "Szintigraphie zeigt einen kalten Knoten im rechten Schilddrüsenlappen, der kein Radiopharmakon aufnimmt.",
+            fourth:
+              "Szintigraphie zeigt einen heißen Knoten im linken Schilddrüsenlappen, der vermehrt Radiopharmakon aufnimmt.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis zeigt eine normale, gleichmäßige Schilddrüsenfunktion ohne Knoten.",
+            third:
+              "Der kalte Knoten könnte auf eine Zyste, ein Adenom oder ein Karzinom hinweisen und erfordert weitere Abklärung, eventuell eine Feinnadelbiopsie.",
+            fourth:
+              "Der heiße Knoten deutet auf ein autonomes Adenom hin, das oft gutartig ist, aber eine Hyperthyreose verursachen kann.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund dient der Beruhigung des Patienten und der Bestätigung der normalen Schilddrüsenfunktion.",
+            third:
+              "Der Befund erfordert eine weiterführende Diagnostik wie Ultraschall und Biopsie, um die Art des Knotens zu bestimmen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose einer Hyperthyreose und Einleitung einer entsprechenden Therapie, wie z.B. Radiojodtherapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung der normalen Schilddrüsenfunktion ohne pathologische Veränderungen.",
+            third:
+              "Diagnose eines kalten Knotens in der Schilddrüse mit Verdacht auf Zyste, Adenom oder Karzinom basierend auf Szintigraphie-Ergebnissen und klinischem Bild.",
+            fourth:
+              "Diagnose eines heißen Knotens, vermutlich ein autonomes Adenom, das eine Hyperthyreose verursacht.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Gleichmäßige Verteilung des Radiopharmakons ohne Auffälligkeiten in der gesamten Schilddrüse.",
+            third:
+              "Szintigraphie zeigt eine abgegrenzte, inaktive Region im rechten Schilddrüsenlappen.",
+            fourth:
+              "Szintigraphie zeigt eine deutlich hyperaktive Region im linken Schilddrüsenlappen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um die normale Schilddrüsenfunktion weiterhin zu bestätigen.",
+            third:
+              "Es ist ratsam, eine weiterführende Diagnostik durchzuführen, wie Ultraschall und Biopsie, um die Art des kalten Knotens genauer zu bestimmen.",
+            fourth:
+              "Wir empfehlen die Einleitung einer Therapie, wie z.B. Radiojodtherapie, um die Hyperthyreose zu behandeln und weitere Symptome zu vermeiden.",
+          },
+        ],
+      },
+      // 5tab 79
+      {
+        id: 79,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Schilddrüsenszintigraphiegerät ist ein spezialisiertes medizinisches Bildgebungsgerät, das zur Beurteilung der Funktion und Morphologie der Schilddrüse verwendet wird. Hier sind die wesentlichen Komponenten und Funktionen eines Schilddrüsenszintigraphiegeräts:",
+        text_list: [
+          {
+            bold: "Gammakamera :",
+            other:
+              "Die Gammakamera ist das zentrale Element des Szintigraphiegeräts. Sie erfasst die vom radioaktiven Tracer emittierte Gammastrahlung, die von der Schilddrüse aufgenommen wird. Die Kamera besteht aus einem Kollimator, einem Szintillator und Photomultiplier-Röhren, die zusammenarbeiten, um die Strahlung in elektrische Signale umzuwandeln und Bilder zu erzeugen.",
+          },
+          {
+            bold: "Radioaktiver Tracer :",
+            other:
+              "Für die Schilddrüsenszintigraphie werden üblicherweise radioaktive Isotope wie Technetium-99m oder Iod-123 verwendet. Diese Tracer werden dem Patienten intravenös injiziert und reichern sich in der Schilddrüse an, wo sie Strahlung aussenden, die von der Gammakamera erfasst wird.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Der Patiententisch ist motorisiert und kann vertikal und horizontal bewegt werden, um den Patienten in die optimale Position für die Bildgebung zu bringen. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Die Arbeitsstation besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung und bewertet die Ergebnisse.",
+          },
+          {
+            bold: "Kollimator :",
+            other:
+              "Der Kollimator ist ein Teil der Gammakamera, der nur Strahlung in bestimmten Winkeln durchlässt. Er verbessert die Bildqualität, indem er Streustrahlung reduziert und die räumliche Auflösung erhöht.",
+          },
+          {
+            bold: "Szintillator :",
+            other:
+              "Der Szintillator ist ein Material innerhalb der Gammakamera, das die Gammastrahlen in sichtbares Licht umwandelt. Dieses Licht wird dann von den Photomultiplier-Röhren erfasst und in elektrische Signale umgewandelt.",
+          },
+          {
+            bold: "Photomultiplier-Röhren :",
+            other:
+              "Diese Röhren verstärken die vom Szintillator erzeugten Lichtsignale und wandeln sie in elektrische Signale um, die zur Erstellung der Bilder verwendet werden.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Die Steuerkonsole ermöglicht dem Technologen, das Szintigraphiegerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scan-Prozess zu überwachen. Hier können Parameter wie die Dauer der Bildaufnahme und die Position des Patienten eingestellt werden.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Ein Kühlsystem ist notwendig, um die elektronischen Komponenten des Szintigraphiegeräts zu kühlen und eine Überhitzung zu verhindern. Dies gewährleistet eine stabile und zuverlässige Bildgebung.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ein Sprachkommunikationssystem ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist wichtig, um die korrekte Positionierung des Patienten sicherzustellen und Anweisungen während der Untersuchung zu geben.",
+          },
+          {
+            bold: "Multidetektor-Szintigraphie :",
+            other:
+              "Moderne Szintigraphiegeräte können als Multidetektor-Szintigraphie konfiguriert sein, was bedeutet, dass sie mehrere Detektoren haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
+          },
+        ],
+      },
+      // 6tab 80
+      {
+        id: 80,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der Schilddrüsen-Szintigraphie-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Schilddrüsen-Szintigraphie :",
+            other:
+              "Nuklearmedizinisches Verfahren zur Beurteilung der Schilddrüsenfunktion.",
+          },
+          {
+            bold: "Radiopharmakon :",
+            other:
+              "Radioaktiv markierte Substanz, die zur Bildgebung verwendet wird.",
+          },
+          {
+            bold: "Gamma-Kamera :",
+            other:
+              "Gerät zur Aufnahme der Verteilung des Radiopharmakons in der Schilddrüse.",
+          },
+          {
+            bold: "Kalter Knoten :",
+            other:
+              "Bereich in der Schilddrüse, der das Radiopharmakon nicht aufnimmt und auf Hypofunktion oder Malignität hinweisen kann.",
+          },
+          {
+            bold: "Heißer Knoten :",
+            other:
+              "Bereich in der Schilddrüse, der das Radiopharmakon vermehrt aufnimmt und oft auf eine Hyperthyreose hinweist.",
+          },
+          {
+            bold: "Hyperthyreose :",
+            other:
+              "Überfunktion der Schilddrüse, die zu erhöhtem Stoffwechsel führt.",
+          },
+          {
+            bold: "Hypothyreose :",
+            other:
+              "Unterfunktion der Schilddrüse, die zu einem verminderten Stoffwechsel führt.",
+          },
+          {
+            bold: "Struma :",
+            other: "Vergrößerung der Schilddrüse, oft als Kropf bezeichnet.",
+          },
+          {
+            bold: "Feinnadelaspiration :",
+            other:
+              "Diagnostische Methode zur Zellgewinnung aus Schilddrüsenknoten.",
+          },
+          {
+            bold: "Technetium-99m :",
+            other:
+              "Häufig verwendetes Radiopharmakon in der Schilddrüsen-Szintigraphie.",
+          },
+          {
+            bold: "Jod-123 :",
+            other:
+              "Alternative radioaktive Substanz, die in der Szintigraphie verwendet wird.",
+          },
+          {
+            bold: "Thyreozyten :",
+            other:
+              "Schilddrüsenzellen, die Jod aufnehmen und Hormone produzieren.",
+          },
+          {
+            bold: "Autoimmunthyreoiditis (Hashimoto) :",
+            other:
+              "Chronische Entzündung der Schilddrüse aufgrund einer Autoimmunerkrankung.",
+          },
+          {
+            bold: "Morbus Basedow (Graves) :",
+            other: "Autoimmunerkrankung, die eine Hyperthyreose verursacht.",
+          },
+          {
+            bold: "Szintigramm :",
+            other: "Das Bild, das durch die Szintigraphie erzeugt wird.",
+          },
+          {
+            bold: "Dosis :",
+            other:
+              "Menge des Radiopharmakons, die dem Patienten verabreicht wird.",
+          },
+          {
+            bold: "Nuklearmedizin :",
+            other:
+              "Fachbereich der Medizin, der radioaktive Substanzen zur Diagnose und Therapie einsetzt.",
+          },
+          {
+            bold: "T3/T4 :",
+            other:
+              "Schilddrüsenhormone, die in der Diagnostik und Behandlung von Schilddrüsenerkrankungen eine Rolle spielen.",
+          },
+        ],
+      },
+      // 7tab 81
+      {
+        id: 81,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 82
+      {
+        id: 86,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1II0BGs_AextjPv-qUWRyEAobC-2eFbmu/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 9
+  // start of parent tab 10 Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+  {
+    id: 10,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
     checked: false,
     childTabs: [
       // 1tab
       {
-        id: 47,
+        id: 11111,
         title: "Einleitung",
+
         list: [
           {
             title: "Einleitung",
@@ -2737,7 +6160,7 @@ export const parentTabs = [
       },
       // 2tab
       {
-        id: 48,
+        id: 22222,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -2864,7 +6287,7 @@ export const parentTabs = [
       },
       // 3tab
       {
-        id: 49,
+        id: 33333,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -2973,7 +6396,7 @@ export const parentTabs = [
       },
       // 4tab
       {
-        id: 50,
+        id: 44444,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -3055,7 +6478,7 @@ export const parentTabs = [
       },
       // 5tab
       {
-        id: 51,
+        id: 55555,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein ERCP-Gerät ist ein spezialisiertes medizinisches Instrument, das zur endoskopischen retrograden Cholangiopankreatikographie (ERCP) verwendet wird. Es kombiniert endoskopische und radiologische Techniken, um detaillierte Bilder der Gallen- und Pankreasgänge zu erstellen und therapeutische Eingriffe durchzuführen. Hier sind die wesentlichen Komponenten und Funktionen eines ERCP-Geräts:Gantry: ist der ringförmige Teil des CT-Geräts, der die Röntgenröhre und die Detektoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
@@ -3139,7 +6562,7 @@ export const parentTabs = [
       },
       // 6tab
       {
-        id: 52,
+        id: 555552,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im Bereich der ERCP-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
         text_list: [
@@ -3302,7 +6725,7 @@ export const parentTabs = [
         ],
       },
       {
-        id: 53,
+        id: 56523,
         title: "Links",
         text: "",
         text_list: [
@@ -3349,3416 +6772,11 @@ export const parentTabs = [
         ],
       },
       {
-        id: 54,
+        id: 52344,
         title: "PDF",
         link: "https://drive.google.com/file/d/1PqRkOW_XHA6f1_mxulrp3YX1hGNTV4uv/view?usp=share_link",
       },
     ],
   },
-  // end of parent tab 5
-  // start of parent tab 6
-  {
-    id: 6,
-    title:
-      "PET-CT (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 47,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "Die PET-CT-Untersuchung zielt darauf ab, metabolische und anatomische Informationen des Körpers zu kombinieren, um präzise diagnostische Aussagen zu ermöglichen. Dies ist besonders wichtig bei der Diagnose und dem Management von Krebserkrankungen, neurologischen und kardiologischen Störungen.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die Relevanz der PET-CT liegt in ihrer Fähigkeit, sowohl funktionelle als auch strukturelle Bildgebung zu liefern. Anwendungsbereiche umfassen die Onkologie zur Tumordetektion und -charakterisierung, die Neurologie zur Untersuchung von Hirnstoffwechselstörungen und die Kardiologie zur Bewertung der Myokardperfusion.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen:",
-                text: "Die PET-CT basiert auf der Kombination zweier Bildgebungstechniken: der Positronen-Emissions-Tomographie (PET), die Stoffwechselprozesse sichtbar macht, und der Computertomographie (CT), die detaillierte anatomische Bilder liefert. Dabei werden Radiotracer verwendet, die sich in spezifischen Geweben anreichern und Positronen emittieren, welche dann detektiert werden.",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "Technisch gesehen, erfolgt die PET-CT in mehreren Schritten: Injektion des Radiotracers, Wartezeit für die Anreicherung im Zielgewebe, Durchführung der PET- und CT-Scans und schließlich die Kombination der beiden Bildgebungen zu einem integrierten Bild.",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "Auswertung und Interpretation:",
-                text: "Die Auswertung der PET-CT-Bilder erfordert spezielle Kenntnisse in der Interpretation sowohl der metabolischen Aktivität (PET) als auch der anatomischen Struktur (CT). Typischerweise werden Regionen mit erhöhtem Radiotracer-Uptake identifiziert und mit den anatomischen Bildern abgeglichen.",
-              },
-              {
-                bold_text: "Typische Befunde:",
-                text: "Typische Befunde bei der PET-CT umfassen die Identifikation von Tumoren, Metastasen, Entzündungsherden und neurologischen Anomalien. Auffällige Befunde zeigen sich durch Regionen mit abnorm hoher oder niedriger Stoffwechselaktivität.",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile:",
-                text: "Zu den Vorteilen der PET-CT gehören die hohe Sensitivität und Spezifität, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, frühzeitig pathologische Veränderungen zu erkennen.",
-              },
-              {
-                bold_text: "Nachteile:",
-                text: "Nachteile umfassen die hohen Kosten, die begrenzte Verfügbarkeit und die Notwendigkeit von Radiotracern, die eine Strahlenexposition mit sich bringen.",
-              },
-              {
-                bold_text: "Risiken:",
-                text: "Risiken der PET-CT umfassen die Strahlenbelastung durch die Radiotracer und den CT-Scan sowie mögliche allergische Reaktionen auf Kontrastmittel.",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "Die PET-CT spielt eine zentrale Rolle in der Diagnose und Behandlung von Krebserkrankungen, da sie präzise Informationen über Tumoraktivität und -ausbreitung liefert. Auch in der Neurologie und Kardiologie ist sie ein wichtiges diagnostisches Werkzeug.",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "Für das Patientenmanagement ist die PET-CT unerlässlich, da sie hilft, Therapieentscheidungen zu treffen, den Therapieerfolg zu überwachen und die Prognose zu beurteilen.",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text: "",
-                text: "Alternativen zur PET-CT umfassen MRT, CT, SPECT und Ultraschall, die je nach klinischer Fragestellung eingesetzt werden können.",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse:",
-                text: "Aktuelle Forschungsergebnisse zeigen Fortschritte in der Entwicklung neuer Radiotracer, die spezifischere Diagnosen ermöglichen, sowie Verbesserungen in der Bildqualität und Reduzierung der Strahlenexposition.",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven:",
-                text: "Zukünftige Perspektiven beinhalten die Integration von künstlicher Intelligenz zur Verbesserung der Bildinterpretation und die Weiterentwicklung der Hybridbildgebungstechniken.",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "Die PET-CT ist ein leistungsstarkes diagnostisches Werkzeug, das sowohl funktionelle als auch anatomische Informationen liefert und in vielen medizinischen Bereichen unverzichtbar ist.",
-              },
-              {
-                bold_text: "Gesamtbedeutung:",
-                text: "Die Gesamtbedeutung der PET-CT liegt in ihrer Fähigkeit, präzise Diagnosen zu stellen und das Management von Patienten signifikant zu verbessern. Sie ist ein Schlüsselinstrument in der modernen Medizin und wird durch kontinuierliche Forschung und Entwicklung weiter optimiert.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 48,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erläutern Sie dem Patienten, dass das Ziel der PET-CT darin besteht, detaillierte Informationen über die Stoffwechselaktivität und die Anatomie des Körpers zu erhalten, um Erkrankungen wie Krebs zu diagnostizieren und zu bewerten.",
-            third:
-              "Die PET-CT hilft uns, Tumoren frühzeitig zu erkennen und deren genaue Lage und Aktivität zu bestimmen.",
-            fourth:
-              "Mit der PET-CT können wir feststellen, ob sich der Krebs auf andere Körperregionen ausgebreitet hat.",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Ablauf der Untersuchung: Injektion eines Radiotracers, Wartezeit für die Verteilung des Tracers, Durchführung des PET-Scans und anschließend des CT-Scans, sowie die Kombination der Bilder.",
-            third:
-              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff, dann warten wir etwa eine Stunde, bevor wir die eigentlichen Scans durchführen.",
-            fourth:
-              "Während der Untersuchung liegen Sie ruhig auf einer Liege, die sich durch den Scanner bewegt. Die gesamte Prozedur dauert etwa zwei Stunden.",
-          },
-          {
-            first: "Vorbereitung",
-            second:
-              "Informieren Sie über notwendige Vorbereitungen wie Nüchternheit, spezielle Diätvorgaben, das Tragen bequemer Kleidung und das Entfernen von Schmuck oder metallischen Gegenständen.",
-            third:
-              "Bitte kommen Sie nüchtern zur Untersuchung, das heißt, essen und trinken Sie nichts vier Stunden vorher.",
-            fourth:
-              "Vermeiden Sie koffeinhaltige Getränke und körperliche Anstrengungen am Tag vor der Untersuchung.",
-          },
-          {
-            first: "Risiken",
-            second:
-              "Erklären Sie die Risiken der Untersuchung, wie die Strahlenbelastung durch den Radiotracer und den CT-Scan, mögliche allergische Reaktionen auf Kontrastmittel.",
-            third:
-              "Es besteht eine geringe Strahlenbelastung, ähnlich wie bei einer Röntgenuntersuchung, die jedoch als sicher gilt.",
-            fourth:
-              "In seltenen Fällen kann es zu allergischen Reaktionen auf das Kontrastmittel kommen. Informieren Sie uns bitte, wenn Sie bekannte Allergien haben.",
-          },
-          {
-            first: "Vorteile",
-            second:
-              "Heben Sie die Vorteile hervor, wie die hohe Genauigkeit der Diagnose, die Kombination von funktionellen und anatomischen Informationen und die Fähigkeit, Erkrankungen frühzeitig zu erkennen.",
-            third:
-              "Die PET-CT bietet eine sehr präzise Diagnose, indem sie Stoffwechselprozesse und anatomische Strukturen gleichzeitig darstellt.",
-            fourth:
-              "Dank der PET-CT können wir Tumore frühzeitig erkennen und gezielt behandeln.",
-          },
-          {
-            first: "Alternativen",
-            second:
-              "Nennen Sie alternative Untersuchungsmethoden wie MRT, CT, SPECT oder Ultraschall und warum PET-CT in bestimmten Fällen bevorzugt wird.",
-            third:
-              "Alternativen wie MRT oder CT liefern zwar detaillierte Bilder, zeigen aber nicht die Stoffwechselaktivität der Gewebe.",
-            fourth:
-              "Die SPECT ist eine weitere Alternative, aber die PET-CT bietet eine höhere Auflösung und genauere Ergebnisse.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Besprechen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen Kontrastmittel.",
-            third:
-              "Wenn Sie schwanger sind oder stillen, sollten Sie uns dies unbedingt mitteilen, da die Strahlung dem Kind schaden könnte.",
-            fourth:
-              "Falls Sie bekannte Allergien gegen Kontrastmittel haben, informieren Sie uns bitte, damit wir geeignete Vorsichtsmaßnahmen treffen können.",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second:
-              "Informieren Sie den Patienten über die Art der möglichen Ergebnisse, die von normalen Befunden bis hin zu pathologischen Veränderungen reichen können.",
-            third:
-              "Ein normales Ergebnis zeigt keine Anzeichen von Tumoren oder anderen Auffälligkeiten. Sollte etwas gefunden werden, besprechen wir die weiteren Schritte mit Ihnen.",
-            fourth:
-              "Die Ergebnisse können auch Hinweise auf andere Erkrankungen geben, wie zum Beispiel Entzündungen oder neurologische Störungen.",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second:
-              "Betonen Sie die Wichtigkeit der Einwilligung des Patienten vor der Durchführung der Untersuchung, um sicherzustellen, dass der Patient alle Informationen verstanden hat.",
-            third:
-              "Ihre Zustimmung ist notwendig, damit wir die Untersuchung durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben und einverstanden sind.",
-            fourth:
-              "Vor der Untersuchung benötigen wir Ihre schriftliche Einwilligung. Dies stellt sicher, dass Sie über alle Aspekte der Untersuchung informiert sind und zugestimmt haben.",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second:
-              "Erklären Sie den Prozess des Einverständnisses: Der Patient muss ein Formular unterschreiben, nachdem er über alle relevanten Aspekte der Untersuchung informiert wurde",
-            third:
-              "Nachdem wir alle Ihre Fragen beantwortet haben, bitten wir Sie, dieses Einwilligungsformular zu unterschreiben.",
-            fourth:
-              "Bitte lesen Sie das Formular sorgfältig durch und unterschreiben Sie es, wenn Sie mit der Untersuchung einverstanden sind.",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second:
-              "Geben Sie abschließende Hinweise zur Vermeidung von engem Kontakt mit Schwangeren und kleinen Kindern für eine bestimmte Zeit und das Trinken von viel Wasser zur Ausscheidung des Radiotracers.",
-            third:
-              "Nach der Untersuchung sollten Sie für 24 Stunden engen Kontakt mit Schwangeren und kleinen Kindern vermeiden, um die Strahlenexposition zu minimieren.",
-            fourth:
-              "Trinken Sie viel Wasser nach der Untersuchung, um den Radiotracer schneller aus Ihrem Körper auszuspülen.",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second:
-              "Erklären Sie, wie und wann der Patient die Ergebnisse der Untersuchung erhält, und dass ein Folgetermin zur Besprechung der Ergebnisse vereinbart wird.",
-            third:
-              "Die Auswertung der Bilder kann einige Tage in Anspruch nehmen. Wir vereinbaren einen Termin, um die Ergebnisse mit Ihnen zu besprechen.",
-            fourth:
-              "Sie werden die Ergebnisse von Ihrem behandelnden Arzt erhalten, der dann die nächsten Schritte mit Ihnen bespricht.",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 49,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second:
-              "Erklären Sie dem Kollegen, dass es sich bei der PET-CT um eine kombinierte bildgebende Untersuchung handelt, die sowohl funktionelle als auch anatomische Informationen liefert.",
-            third:
-              "Die PET-CT kombiniert die metabolischen Daten der Positronen-Emissions-Tomographie mit den detaillierten anatomischen Bildern der Computertomographie.",
-            fourth:
-              "Bei der PET-CT wird ein Radiotracer verwendet, um Stoffwechselaktivitäten im Körper sichtbar zu machen und diese mit der anatomischen Bildgebung der CT zu kombinieren.",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second:
-              "Beschreiben Sie, dass die PET-CT zur Diagnose und Beurteilung von Krebs, neurologischen Erkrankungen und Herzkrankheiten verwendet wird, indem sie metabolische Aktivitäten und anatomische Strukturen sichtbar macht.",
-            third:
-              "Mit der PET-CT können wir Tumore, Metastasen, neurologische Erkrankungen wie Alzheimer und kardiale Erkrankungen wie Myokardvitalität untersuchen.",
-            fourth:
-              "Die PET-CT ist besonders hilfreich bei der Detektion und Beurteilung der metabolischen Aktivität von Krebszellen sowie bei der Diagnose von entzündlichen und neurologischen Erkrankungen.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Diskutieren Sie typische Befunde wie Tumorlokalisation, -größe und -aktivität, Metastasen, entzündliche Prozesse oder neurologische Anomalien, die durch die PET-CT identifiziert werden können.",
-            third:
-              "Ein positives PET-CT-Ergebnis kann uns genaue Informationen über die Größe und Lokalisation eines Tumors sowie das Vorhandensein von Metastasen geben.",
-            fourth:
-              "Die Untersuchungsergebnisse zeigen erhöhte Stoffwechselaktivität in den Lymphknoten, was auf eine mögliche Metastasierung hindeutet.",
-          },
-          {
-            first: "Indikationen",
-            second:
-              "Erläutern Sie, dass Indikationen für eine PET-CT unter anderem die Staging und Restaging von Krebs, die Beurteilung von Therapieantworten, die Diagnose von Demenzerkrankungen und die Evaluierung von Myokardvitalität sind.",
-            third:
-              "Eine PET-CT ist indiziert bei Patienten mit Lungenkrebs zur Beurteilung der Tumorausbreitung und zur Überprüfung des Ansprechens auf die Therapie.",
-            fourth:
-              "Bei Patienten mit unklaren neurologischen Symptomen kann eine PET-CT helfen, eine Demenz vom Alzheimer-Typ von anderen Demenzformen zu unterscheiden.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Besprechen Sie Kontraindikationen wie Schwangerschaft, Stillzeit, bekannte Allergien gegen Kontrastmittel und schwere Niereninsuffizienz.",
-            third:
-              "Schwangere sollten keine PET-CT-Untersuchung erhalten, da die Strahlenexposition das ungeborene Kind schädigen könnte.",
-            fourth:
-              "Patienten mit einer bekannten Allergie gegen Kontrastmittel müssen sorgfältig überwacht werden, und alternative Untersuchungen sollten in Betracht gezogen werden.",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second:
-              "Erörtern Sie, wie die PET-CT hilft, zwischen verschiedenen Krankheitsbildern zu differenzieren, z.B. zwischen malignen und benignen Tumoren oder zwischen Alzheimer und anderen Demenzformen.",
-            third:
-              "Die PET-CT ermöglicht es uns, maligne von benignen Tumoren zu unterscheiden, indem sie die unterschiedliche Stoffwechselaktivität der Gewebe sichtbar macht.",
-            fourth:
-              "Bei Verdacht auf Alzheimer kann die PET-CT helfen, diese Diagnose von anderen Formen der Demenz zu unterscheiden, basierend auf spezifischen Stoffwechselmustern im Gehirn.",
-          },
-          {
-            first: "Behandlungspläne",
-            second:
-              "Diskutieren Sie, wie die Ergebnisse der PET-CT zur Planung und Anpassung von Behandlungsstrategien beitragen können, einschließlich Operation, Strahlentherapie oder Chemotherapie.",
-            third:
-              "Die Ergebnisse der PET-CT können uns helfen, die Notwendigkeit einer chirurgischen Entfernung eines Tumors besser zu beurteilen und den Operationsumfang zu planen.",
-            fourth:
-              "Anhand der PET-CT-Ergebnisse können wir die Wirksamkeit der aktuellen Chemotherapie beurteilen und gegebenenfalls das Behandlungsschema anpassen.",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second:
-              "Betonen Sie die Bedeutung der Zusammenarbeit mit Radiologen, Nuklearmedizinern, Onkologen, Neurologen und Kardiologen für die optimale Nutzung der PET-CT-Ergebnisse.",
-            third:
-              "Eine enge Zusammenarbeit zwischen Onkologen und Radiologen ist entscheidend, um die PET-CT-Ergebnisse optimal zu interpretieren und in die Behandlungsplanung einzubeziehen.",
-            fourth:
-              "Für eine umfassende Versorgung ist es wichtig, dass wir mit Nuklearmedizinern und Kardiologen zusammenarbeiten, um die Ergebnisse der PET-CT richtig zu interpretieren und anzuwenden.",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second:
-              "Erklären Sie Maßnahmen zur Sicherstellung der Qualität und Genauigkeit der PET-CT-Untersuchungen, einschließlich regelmäßiger Kalibrierung der Geräte und Schulung des medizinischen Personals.",
-            third:
-              "Um die Qualität unserer PET-CT-Untersuchungen zu gewährleisten, führen wir regelmäßige Kalibrierungen der Geräte durch und stellen sicher, dass unser Personal gut geschult ist.",
-            fourth:
-              "Qualitätskontrollen und regelmäßige Wartung der PET-CT-Geräte sind unerlässlich, um konsistente und genaue Ergebnisse zu gewährleisten.",
-          },
-          {
-            first: "Dokumentation und Weiterverfolgung",
-            second:
-              "Besprechen Sie die Notwendigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Bedeutung einer lückenlosen Weiterverfolgung zur Überprüfung des Behandlungserfolgs.",
-            third:
-              "Die detaillierte Dokumentation der PET-CT-Befunde ist wichtig für die Weiterverfolgung und Planung der Therapie. Wir sollten sicherstellen, dass alle Befunde klar und präzise festgehalten werden.",
-            fourth:
-              "Eine gründliche Dokumentation und regelmäßige Nachuntersuchungen sind entscheidend, um den Fortschritt der Behandlung zu überwachen und gegebenenfalls Anpassungen vorzunehmen.",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 50,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second:
-              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
-            third:
-              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
-            fourth:
-              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "PET-CT des Gehirns zeigt eine gleichmäßige Radiotracer-Verteilung ohne Anomalien, keine Anzeichen pathologischer Veränderungen.",
-            third:
-              "PET-CT zeigt eine erhöhte Aufnahme des Radiotracers im linken Frontallappen, korrespondierend mit einer 2 cm großen, kontrastmittelaufnehmenden Masse.",
-            fourth:
-              "PET-CT offenbart mehrere Areale mit verringerter Radiotracer-Aufnahme, die periventrikulär verteilt sind, korrespondierend mit demyelinisierenden Läsionen.",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second:
-              "Keine pathologischen Befunde; das PET-CT-Ergebnis unterstützt den Ausschluss neurologischer Erkrankungen.",
-            third:
-              "Der Befund deutet auf einen Glioblastom hin. Die Lokalisation und der erhöhte Metabolismus korrelieren mit den neurologischen Symptomen des Patienten.",
-            fourth:
-              "Die Verteilung und das Erscheinungsbild der Läsionen sind typisch für Multiple Sklerose. Zusammenhang mit den klinischen Symptomen und typischen demyelinisierenden Veränderungen.",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second:
-              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
-            third:
-              "Die Ergebnisse sind entscheidend für die Planung der neurochirurgischen Resektion und anschließender Radiotherapie.",
-            fourth:
-              "Wichtig für die Bestätigung der Diagnose und Einleitung einer immunmodulatorischen Therapie.",
-          },
-          {
-            first: "Diagnose",
-            second:
-              "Bestätigung des gesunden Zustandes des Gehirns. Keine Anzeichen für pathologische Veränderungen.",
-            third:
-              "Diagnose eines Glioblastoms basierend auf PET-CT-Befunden und klinischem Bild.",
-            fourth:
-              "Diagnose von Multipler Sklerose aufgrund der PET-CT-Ergebnisse und Symptomatik.",
-          },
-          {
-            first: "Visuelle Hilfsmittel",
-            second:
-              "Homogene Radiotracer-Verteilung ohne Auffälligkeiten in allen Sequenzen.",
-            third:
-              "PET-CT-Aufnahmen zeigen eine deutlich abgegrenzte Region mit hoher Radiotracer-Aufnahme im linken Frontallappen.",
-            fourth:
-              "PET-CT-Bilder zeigen multiple Regionen mit verringerter Radiotracer-Aufnahme, charakteristisch für demyelinisierende Läsionen bei MS.",
-          },
-          {
-            first: "Fallabschluss",
-            second:
-              "Es ist zu empfehlen, weiterhin regelmäßige Gesundheitschecks durchzuführen, um den aktuellen Gesundheitszustand zu überwachen.",
-            third:
-              "Wir empfehlen eine sofortige Überweisung an die Neurochirurgie zur Planung der Resektion. Zusätzlich ist eine anschließende Radiotherapie und gegebenenfalls eine Chemotherapie zu erwägen.",
-            fourth:
-              "Es ist zu empfehlen, eine immunmodulatorische Therapie zu beginnen und regelmäßige neurologische Kontrolluntersuchungen durchzuführen.",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 51,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: "Ein Positronen-Emissions-Tomographie kombiniert mit Computertomographie (PET-CT) Gerät ist ein hochentwickeltes medizinisches Bildgebungsgerät, das sowohl detaillierte anatomische als auch funktionelle Bilder des Körpers erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines PET-CT-Geräts:",
-        text_list: [
-          {
-            bold: "Gantry :",
-            other:
-              "Der ringförmige Teil des PET-CT-Geräts, der sowohl die Röntgenröhre für die CT als auch die Detektoren für die PET enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
-          },
-          {
-            bold: "Röntgenröhre :",
-            other:
-              "Erzeugt die Röntgenstrahlen für die CT-Komponente des Geräts. Diese Strahlen durchdringen den Körper des Patienten und ermöglichen die Erstellung detaillierter anatomischer Bilder. Die Röntgenröhre ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
-          },
-          {
-            bold: "PET-Detektoren :",
-            other:
-              "Erfassen die Positronen, die vom injizierten Radiotracer emittiert werden, nachdem sie mit Elektronen im Körper des Patienten kollidiert sind. Diese Detektoren wandeln die Strahlung in elektrische Signale um, die dann zu Bildern verarbeitet werden.",
-          },
-          {
-            bold: "CT-Detektoren :",
-            other:
-              "Befinden sich gegenüber der Röntgenröhre im Gantry. Sie erfassen die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
-          },
-          {
-            bold: "Patiententisch :",
-            other:
-              "Ein motorisierter Tisch, der horizontal in den Gantry hinein- und herausgefahren werden kann. Der Patient liegt während der gesamten Untersuchung auf diesem Tisch, der sich präzise bewegt, um die verschiedenen Körperregionen zu scannen.",
-          },
-          {
-            bold: "Arbeitsstation :",
-            other:
-              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung, verarbeitet die Bilddaten und interpretiert die Ergebnisse.",
-          },
-          {
-            bold: "Kontrastmittelinjektor :",
-            other:
-              "Wird häufig verwendet, um Kontrastmittel intravenös zu verabreichen. Dies verbessert die Sichtbarkeit bestimmter Strukturen oder Pathologien im Körper während der CT-Komponente der Untersuchung.",
-          },
-          {
-            bold: "Steuerkonsole :",
-            other:
-              "Ermöglicht dem Technologen, das PET-CT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen. Hier werden auch Parameter wie Strahlendosis und Scanzeit eingestellt.",
-          },
-          {
-            bold: "Kühlungssystem :",
-            other:
-              "Notwendig, um die Röntgenröhre und die PET-Detektoren zu kühlen, da sie während der Erzeugung von Strahlung viel Wärme produzieren. Ein effektives Kühlsystem verhindert Überhitzung und gewährleistet die Zuverlässigkeit des Geräts.",
-          },
-          {
-            bold: "Multidetektor-CT (MDCT) :",
-            other:
-              "Moderne PET-CT-Geräte sind oft als Multidetektor-CT konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung, wodurch sowohl die anatomische als auch die funktionelle Bildgebung verbessert wird.",
-          },
-          {
-            bold: "Sprachkommunikationssystem :",
-            other:
-              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist besonders wichtig, um sicherzustellen, dass der Patient still liegt und um eventuelle Fragen oder Unbehagen zu klären.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 52,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im Bereich der PET-CT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
-        text_list: [
-          {
-            bold: "PET-CT :",
-            other:
-              "Ein bildgebendes Verfahren, das sowohl funktionelle als auch anatomische Informationen liefert.",
-          },
-          {
-            bold: "Radiotracer :",
-            other:
-              "Eine schwach radioaktive Substanz, die in den Körper injiziert wird, um Stoffwechselprozesse sichtbar zu machen.",
-          },
-          {
-            bold: "Metabolische Aktivität :",
-            other:
-              "Die biochemischen Prozesse, die in Zellen und Geweben ablaufen, oft erhöht in Tumorzellen.",
-          },
-          {
-            bold: "Anatomische Bildgebung :",
-            other:
-              "Darstellung der physischen Strukturen des Körpers durch Verfahren wie CT oder MRT.",
-          },
-          {
-            bold: "Staging :",
-            other:
-              "Die Bestimmung des Ausmaßes und der Ausbreitung einer Krebserkrankung im Körper.",
-          },
-          {
-            bold: "Restaging :",
-            other:
-              "Die Neubewertung des Krankheitsstadiums nach einer Behandlung.",
-          },
-          {
-            bold: "Kontrastmittel :",
-            other:
-              "Eine Substanz, die vor der Bildgebung injiziert wird, um bestimmte Gewebe besser sichtbar zu machen.",
-          },
-          {
-            bold: "Demyelinisierende Läsion :",
-            other:
-              "Schäden an der Myelinschicht von Nervenfasern, typisch für Erkrankungen wie Multiple Sklerose.",
-          },
-          {
-            bold: "Hyperintens :",
-            other:
-              "Gebiete, die auf dem Bild heller erscheinen, oft aufgrund einer erhöhten Stoffwechselaktivität.",
-          },
-          {
-            bold: "Hypointens :",
-            other:
-              "Gebiete, die auf dem Bild dunkler erscheinen, oft aufgrund einer verringerten Stoffwechselaktivität.",
-          },
-          {
-            bold: "Glioblastom :",
-            other:
-              "Ein aggressiver Hirntumor, der oft in der PET-CT durch hohe metabolische Aktivität erkennbar ist.",
-          },
-          {
-            bold: "Dawson-Finger :",
-            other:
-              "Charakteristische MRT-Befunde bei Multipler Sklerose, die fingerartige Projektionen von Läsionen entlang der Ventrikelwände zeigen.",
-          },
-          {
-            bold: "Strahlenbelastung :",
-            other:
-              "Die Menge an Strahlung, der ein Patient während einer bildgebenden Untersuchung ausgesetzt ist.",
-          },
-          {
-            bold: "Myokardvitalität :",
-            other:
-              "Die Lebensfähigkeit des Herzmuskels, oft untersucht bei Verdacht auf Herzinfarkt oder andere Herzkrankheiten.",
-          },
-          {
-            bold: "Spezifität :",
-            other:
-              "Die Fähigkeit eines diagnostischen Tests, nur die Zielerkrankung zu identifizieren und keine falsch positiven Ergebnisse zu liefern.",
-          },
-          {
-            bold: "Sensitivität :",
-            other:
-              "Die Fähigkeit eines diagnostischen Tests, auch bei geringer Krankheitslast positive Ergebnisse zu liefern, also keine falsch negativen Ergebnisse zu produzieren.",
-          },
-          {
-            bold: "Nuklearmedizin :",
-            other:
-              "Ein medizinisches Fachgebiet, das radioaktive Substanzen für Diagnose und Therapie verwendet.",
-          },
-          {
-            bold: "Follow-up :",
-            other:
-              "Die Nachsorge oder weitere Überwachung eines Patienten nach einer Diagnose oder Behandlung.",
-          },
-
-          {
-            text: "Diese Begriffe bilden einen grundlegenden Wortschatz, der für die Fachsprache im Bereich der PET-CT-Diagnostik wichtig ist und können in einer Prüfungssituation nützlich sein.",
-          },
-        ],
-      },
-      {
-        id: 53,
-        title: "Links",
-        text: "",
-        text_list: [
-          {
-            bold: "DocCheck Flexikon",
-            other:
-              "Diese Seite bietet umfassende Informationen zur Positronen-Emissions-Tomographie (PET) und PET-CT, einschließlich Funktionsprinzipien, Radionukliden und Anwendungsmöglichkeiten. URL: https://flexikon.doccheck.com/de/Positronenemissionstomographie",
-          },
-          {
-            bold: "DocCheck Flexikon",
-            other:
-              "Informationen zu PSMA-PET/CT, einschließlich Definition, Hintergrund und Indikationen. URL: https://flexikon.doccheck.com/de/PSMA-PET/CT",
-          },
-          {
-            bold: "Amboss",
-            other:
-              "Amboss ist ein medizinisches Nachschlagewerk für Studenten und Ärzte. Es bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich PET-CT. URL: https://www.amboss.com/de",
-          },
-          {
-            bold: "PraktischArzt",
-            other:
-              "Auf dieser Seite wird der Ablauf einer PET-CT-Untersuchung sowie deren Vorbereitung und typische Anwendungsgebiete erläutert. URL: https://www.praktischarzt.de/untersuchung/pet-ct/",
-          },
-          {
-            bold: "Universitätsklinikum Freiburg",
-            other:
-              "Diese Seite bietet detaillierte Informationen zu den speziellen Aspekten und Anwendungen der PET-CT im klinischen Alltag. URL: https://ims.uniklinik-freiburg.de/de/leistungsangebot/nuklearmedizin/pet-ct.html",
-          },
-          {
-            bold: "Stärker gegen Krebs",
-            other:
-              "Diese Webseite erklärt die Vorteile und Risiken der PET-CT, insbesondere in der Krebsdiagnostik. URL: https://www.staerkergegenkrebs.de/pet-ct/",
-          },
-          {
-            bold: "Radiologie München",
-            other:
-              "Diese Seite bietet Informationen über die Durchführung von PET-CT-Untersuchungen und deren spezielle Anwendungen, wie z.B. beim Prostatakarzinom. URL: https://www.radiologie-muenchen.de/pet-ct/",
-          },
-          {
-            bold: "Helios Gesundheit",
-            other:
-              "Hier wird erklärt, wie PET-CT-Untersuchungen zur Diagnose und Therapiekontrolle verwendet werden und welche Vorbereitungen dafür notwendig sind. URL: https://www.helios-gesundheit.de/",
-          },
-        ],
-      },
-      {
-        id: 54,
-        title: "PDF",
-        link: "https://drive.google.com/file/d/1oNhdsA-M_KFw_QCaGB6H6aoBDGSy1PGn/view?usp=share_link",
-      },
-    ],
-  },
-  // end of parent tab 6
-  {
-    id: 7,
-    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 55,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext: ",
-                text: "Das Hauptziel der SPECT-Untersuchung ist es, funktionelle Informationen über Organe und Gewebe zu erhalten. Dies wird durch die Messung der Verteilung von radioaktiv markierten Substanzen im Körper erreicht.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche: ",
-                text: "Die SPECT wird in zahlreichen medizinischen Bereichen eingesetzt, darunter die Kardiologie zur Bewertung der Myokardperfusion, die Neurologie zur Untersuchung von Hirnfunktionen und die Onkologie zur Detektion von Tumoren und Metastasen.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen: ",
-                text: "SPECT basiert auf der Verabreichung von Radiopharmaka, die Gammastrahlen emittieren. Diese Strahlen werden von einem Gamma-Kamera-System erfasst, das um den Patienten rotiert, um dreidimensionale Bilder zu erstellen.",
-              },
-              {
-                bold_text: "Technische Aspekte: ",
-                text: "Die Hauptkomponenten einer SPECT-Anlage sind die Gamma-Kamera, die Kollimatoren zur Richtungsbestimmung der Strahlen, und ein Computer zur Bildrekonstruktion. Die Qualität der Bilder hängt von der Energie des Radiopharmakons und der Empfindlichkeit der Detektoren ab.",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "Auswertung und Interpretation: ",
-                text: "Die Bilder werden von spezialisierten Ärzten analysiert, die die Verteilung des Radiopharmakons im Gewebe beurteilen. Dies ermöglicht Rückschlüsse auf die Funktion und mögliche Pathologien der untersuchten Organe.",
-              },
-              {
-                bold_text: "Typische Befunde: ",
-                text: "Typische Befunde umfassen Bereiche mit erhöhter oder verminderter Radiopharmakon-Anreicherung, die auf pathologische Veränderungen wie Tumoren, Durchblutungsstörungen oder neurologische Erkrankungen hinweisen können.",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile: ",
-                text: "SPECT bietet detaillierte funktionelle Informationen und kann pathologische Veränderungen frühzeitig erkennen. Es ist nicht invasiv und hat eine relativ geringe Strahlenbelastung.",
-              },
-              {
-                bold_text: "Nachteile: ",
-                text: "Zu den Nachteilen gehören die begrenzte räumliche Auflösung im Vergleich zu anderen bildgebenden Verfahren und die Notwendigkeit, Radiopharmaka zu verwenden, die spezielle Handhabung erfordern.",
-              },
-              {
-                bold_text: "Risiken: ",
-                text: "Die Risiken umfassen mögliche allergische Reaktionen auf das Radiopharmakon und eine geringe Strahlenexposition. Bei sachgemäßer Durchführung sind diese Risiken jedoch minimal.",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung: ",
-                text: "SPECT spielt eine zentrale Rolle in der Diagnostik und Therapieplanung, insbesondere bei kardiovaskulären und neurologischen Erkrankungen. Es unterstützt die Entscheidung über therapeutische Maßnahmen und die Überwachung des Behandlungserfolgs.",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement: ",
-                text: "Durch die Bereitstellung präziser funktioneller Informationen trägt SPECT wesentlich zur individuellen Patientenbetreuung und zur Optimierung von Behandlungsstrategien bei.",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text: "Alternativen zur SPECT: ",
-                text: "umfassen die Positronen-Emissions-Tomographie (PET), die eine höhere Empfindlichkeit bietet, und die Magnetresonanztomographie (MRT), die ohne Strahlenbelastung auskommt, aber keine funktionellen Informationen liefert.",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse: ",
-                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildqualität und die Entwicklung neuer Radiopharmaka, die spezifischere diagnostische Informationen liefern können.",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven: ",
-                text: "Zukünftige Entwicklungen zielen darauf ab, die SPECT-Technologie weiter zu verfeinern und ihre Anwendungen zu erweitern, insbesondere in der personalisierten Medizin und der präzisen Tumordiagnostik.",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften: ",
-                text: "Die SPECT ist ein unverzichtbares Werkzeug in der modernen Medizin, das funktionelle Bildgebung ermöglicht und eine entscheidende Rolle in der Diagnose und Behandlung spielt.",
-              },
-              {
-                bold_text: "Gesamtbedeutung: ",
-                text: "Insgesamt trägt die SPECT durch ihre Fähigkeit, detaillierte und spezifische Informationen über die Funktion von Organen und Geweben zu liefern, erheblich zur Verbesserung der medizinischen Versorgung und des Patientenmanagements bei.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 56,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erklären Sie dem Patienten, dass das Ziel der SPECT-Untersuchung darin besteht, funktionelle Informationen über Organe und Gewebe zu erhalten, um Krankheiten zu diagnostizieren und zu beurteilen.",
-            third:
-              "Wir möchten feststellen, wie gut Ihr Herzmuskel durchblutet wird.",
-            fourth:
-              "Die Untersuchung hilft uns, die Funktionsweise Ihres Gehirns bei Verdacht auf Epilepsie zu bewerten.",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Patienten den Ablauf: Verabreichung eines radioaktiven Stoffes (Radiopharmakon), Wartezeit zur Verteilung im Körper, anschließende Aufnahme der Gammastrahlen mit der Gamma-Kamera, und die Dauer der Untersuchung.",
-            third:
-              "Nach der Injektion des Radiopharmakons warten wir etwa 30-60 Minuten, bevor die Kamera Bilder aufnimmt.",
-            fourth:
-              "Die gesamte Untersuchung dauert ungefähr zwei Stunden, einschließlich der Wartezeit nach der Injektion.",
-          },
-          {
-            first: "Vorbereitung",
-            second:
-              "Informieren Sie den Patienten über die notwendigen Vorbereitungen: z.B. Nüchternheit vor der Untersuchung, Verzicht auf bestimmte Medikamente oder Lebensmittel, bequeme Kleidung.",
-            third:
-              "Bitte kommen Sie nüchtern zur Untersuchung und trinken Sie vorher nur Wasser.",
-            fourth:
-              "Vermeiden Sie koffeinhaltige Getränke 24 Stunden vor dem Termin.",
-          },
-          {
-            first: "Risiken",
-            second:
-              "Erklären Sie mögliche Risiken, wie allergische Reaktionen auf das Radiopharmakon oder die geringe Strahlenbelastung, und betonen Sie, dass diese Risiken minimal sind.",
-            third:
-              "Es besteht ein sehr geringes Risiko einer allergischen Reaktion auf den radioaktiven Stoff.",
-            fourth:
-              "Die Strahlenbelastung ist vergleichbar mit einer Röntgenaufnahme und daher sehr gering.",
-          },
-          {
-            first: "Vorteile",
-            second:
-              "Heben Sie die Vorteile hervor: detaillierte funktionelle Informationen, frühzeitige Erkennung von pathologischen Veränderungen, nicht-invasiv mit relativ geringer Strahlenbelastung.",
-            third:
-              "Wir erhalten genaue Informationen über die Funktion Ihres Organs, was uns bei der Diagnose hilft.",
-            fourth:
-              "Frühzeitige Erkennung von Durchblutungsstörungen kann lebensrettend sein.",
-          },
-          {
-            first: "Alternativen",
-            second:
-              "Nennen Sie alternative Untersuchungsmethoden wie die Positronen-Emissions-Tomographie (PET) und die Magnetresonanztomographie (MRT).",
-            third:
-              "Eine Alternative wäre die PET-Untersuchung, die jedoch oft teurer und nicht überall verfügbar ist.",
-            fourth:
-              "Die MRT liefert anatomische Details, jedoch keine funktionellen Informationen wie die SPECT.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Besprechen Sie mögliche Kontraindikationen, z.B. Schwangerschaft, Stillzeit oder Allergien gegen das Radiopharmakon, und die Notwendigkeit, diese vor der Untersuchung zu klären.",
-            third:
-              "Bei einer Schwangerschaft sollten wir die Untersuchung verschieben oder eine Alternative prüfen.",
-            fourth:
-              "Falls Sie stillen, müssen wir spezielle Vorsichtsmaßnahmen treffen oder die Untersuchung verschieben.",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second:
-              "Erklären Sie, welche Arten von Ergebnissen erwartet werden können, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese für die Diagnose bedeuten könnten.",
-            third:
-              "Ein normales Ergebnis zeigt eine gleichmäßige Verteilung des Stoffes im Organ.",
-            fourth:
-              "Eine ungleichmäßige Verteilung könnte auf eine Durchblutungsstörung oder einen Tumor hinweisen.",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second:
-              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten, um sicherzustellen, dass er die Untersuchung und deren mögliche Risiken und Vorteile versteht.",
-            third:
-              "Ihre Zustimmung ist wichtig, damit wir sicherstellen können, dass Sie alle Aspekte der Untersuchung verstanden haben.",
-            fourth:
-              "Bitte stellen Sie sicher, dass Sie alle Fragen klären, bevor Sie das Einverständnisformular unterschreiben.",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second:
-              "Beschreiben Sie den Prozess des Einholens der Einverständniserklärung: Aufklärungsgespräch, Zeit für Fragen des Patienten, schriftliche Zustimmung.",
-            third:
-              "Nach dem Gespräch haben Sie Zeit, alle Ihre Fragen zu stellen, bevor Sie das Formular unterschreiben.",
-            fourth:
-              "Wir werden Ihnen alle Details erklären und bitten Sie dann, Ihre Zustimmung schriftlich zu geben.",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second:
-              "Geben Sie abschließende Hinweise zur Untersuchung, z.B. Verhalten nach der Untersuchung, mögliche Nachwirkungen, und wann die Ergebnisse vorliegen.",
-            third:
-              "Trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller auszuscheiden.",
-            fourth:
-              "Vermeiden Sie intensive körperliche Aktivität für den Rest des Tages.",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second:
-              "Erklären Sie, wie und wann der Patient die Ergebnisse erhalten wird, und wer die Ergebnisse mit ihm besprechen wird.",
-            third:
-              "Die Ergebnisse werden innerhalb einer Woche vorliegen und Ihr Arzt wird sie mit Ihnen besprechen.",
-            fourth:
-              "Nach der Untersuchung vereinbaren wir einen Termin, um die Ergebnisse gemeinsam zu besprechen.",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 57,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second:
-              "Erläutern Sie kurz, dass die Single-Photon-Emissions-Computertomographie (SPECT) eine nuklearmedizinische Bildgebungstechnik ist, die zur Erfassung funktioneller Informationen über Organe und Gewebe verwendet wird.",
-            third:
-              "Die SPECT ist eine nuklearmedizinische Technik, die Gammastrahlen verwendet, um dreidimensionale Bilder der Verteilung eines Radiopharmakons im Körper zu erstellen.",
-            fourth:
-              "Mit SPECT können wir die Funktion von Organen wie dem Herz und dem Gehirn durch die Verteilung eines injizierten radioaktiven Stoffes bildlich darstellen.",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second:
-              "Beschreiben Sie, dass SPECT zur Untersuchung von Durchblutungsstörungen des Herzens, Hirnfunktionen, Tumoren und anderen pathologischen Veränderungen verwendet wird.",
-            third:
-              "Wir nutzen SPECT zur Beurteilung der Myokardperfusion bei Verdacht auf koronare Herzkrankheit.",
-            fourth:
-              "SPECT wird auch zur Analyse der Hirnaktivität bei Patienten mit Epilepsie eingesetzt.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Diskutieren Sie, wie die Ergebnisse interpretiert werden, z.B. normale oder abnormale Verteilung des Radiopharmakons, und was diese Ergebnisse diagnostisch bedeuten.",
-            third:
-              "Eine homogene Verteilung des Radiopharmakons im Herz deutet auf eine normale Durchblutung hin.",
-            fourth:
-              "Fokale Anreicherungen im Gehirn könnten auf epileptische Aktivität oder einen Tumor hinweisen.",
-          },
-          {
-            first: "Indikationen",
-            second:
-              "Erklären Sie, welche klinischen Fragestellungen die SPECT rechtfertigen, z.B. Ischämie-Diagnostik bei koronaren Herzkrankheiten, Diagnose und Verlaufskontrolle bei Epilepsie und Demenz.",
-            third:
-              "Indikationen für eine SPECT sind unter anderem die Ischämie-Diagnostik und die Evaluation der Myokardvitalität.",
-            fourth:
-              "Bei Verdacht auf Demenz kann SPECT zur Differenzierung zwischen Alzheimer und anderen Demenzformen beitragen.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Nennen Sie mögliche Kontraindikationen wie Schwangerschaft, Stillzeit oder bekannte Allergien gegen das Radiopharmakon.",
-            third:
-              "Schwangerschaft ist eine Kontraindikation aufgrund der Strahlenbelastung.",
-            fourth:
-              "Bekannte Allergien gegen das verwendete Radiopharmakon stellen ebenfalls eine Kontraindikation dar.",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second:
-              "Diskutieren Sie mögliche Differenzialdiagnosen, die anhand der SPECT-Befunde abgeklärt werden können, z.B. Differenzierung zwischen ischämischen und nicht-ischämischen Herzerkrankungen.",
-            third:
-              "Bei der Myokard-SPECT können wir zwischen ischämischer und nicht-ischämischer Kardiomyopathie unterscheiden.",
-            fourth:
-              "Bei neurologischen SPECT-Untersuchungen können wir epileptische Herde von anderen Hirnpathologien abgrenzen.",
-          },
-          {
-            first: "Behandlungspläne",
-            second:
-              "Besprechen Sie, wie die SPECT-Ergebnisse in die Erstellung und Anpassung von Behandlungsplänen einfließen, z.B. Entscheidung über Revaskularisationsmaßnahmen oder antiepileptische Therapien.",
-            third:
-              "Basierend auf den SPECT-Ergebnissen kann entschieden werden, ob eine Koronarangioplastie notwendig ist.",
-            fourth:
-              "Die Identifikation epileptischer Herde mittels SPECT kann die Wahl der antiepileptischen Therapie beeinflussen.",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second:
-              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie Radiologie, Neurologie, Kardiologie und Onkologie für eine umfassende Diagnose und Therapie.",
-            third:
-              "Die enge Zusammenarbeit mit Kardiologen ist essenziell, um die SPECT-Ergebnisse korrekt zu interpretieren und therapeutische Maßnahmen einzuleiten.",
-            fourth:
-              "Neurologen und Nuklearmediziner arbeiten zusammen, um die besten Behandlungsstrategien für Patienten mit Epilepsie zu entwickeln.",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second:
-              "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität der SPECT-Untersuchungen, z.B. regelmäßige Kalibrierung der Geräte, Schulung des Personals und Einhaltung von Protokollen.",
-            third:
-              "Regelmäßige Kalibrierung der Gamma-Kameras ist notwendig, um eine hohe Bildqualität zu gewährleisten.",
-            fourth:
-              "Das Personal wird kontinuierlich geschult, um sicherzustellen, dass die Protokolle und Sicherheitsstandards eingehalten werden.",
-          },
-          {
-            first: "Dokumentation und Weiterverfolgung",
-            second:
-              "Beschreiben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die Notwendigkeit der Nachverfolgung, um die Behandlungserfolge zu überwachen und weitere diagnostische Schritte zu planen.",
-            third:
-              "Eine detaillierte Dokumentation der SPECT-Ergebnisse ist wichtig, um den Verlauf der Therapie zu überwachen.",
-            fourth:
-              "Die Ergebnisse werden im Patientenakte dokumentiert und mit den behandelnden Ärzten besprochen, um die nächsten Schritte zu planen.",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 58,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second:
-              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung zur Herzgesundheit.",
-            third:
-              "55-jähriger Patient klagt über Brustschmerzen und Kurzatmigkeit bei Belastung. Vorgeschichte eines Bluthochdrucks.",
-            fourth:
-              "70-jährige Patientin berichtet über zunehmende Gedächtnisstörungen und Orientierungslosigkeit. Familiengeschichte mit Alzheimer.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "SPECT-Bilder zeigen eine homogene Perfusion ohne Anzeichen von Minderdurchblutung oder pathologischen Veränderungen.",
-            third:
-              "SPECT zeigt eine reduzierte Perfusion im anterioren Bereich des linken Ventrikels, besonders bei Belastung.",
-            fourth:
-              "SPECT zeigt eine verminderte Aktivität im parietalen und temporalen Kortex.",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second:
-              "Keine pathologischen Befunde; die Ergebnisse bestätigen eine normale Herzfunktion.",
-            third:
-              "Der Befund deutet auf eine myokardiale Ischämie hin, die mit den Symptomen des Patienten übereinstimmt.",
-            fourth:
-              "Die Befunde sind typisch für Alzheimer und korrelieren mit den klinischen Symptomen der Patientin.",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second:
-              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
-            third:
-              "Die Ergebnisse sind entscheidend für die Planung einer möglichen koronaren Intervention wie Angioplastie oder Bypass-Operation.",
-            fourth:
-              "Wichtig für die Bestätigung der Diagnose und Einleitung einer cholinesterasehemmenden Therapie.",
-          },
-          {
-            first: "Diagnose",
-            second:
-              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
-            third:
-              "Diagnose einer myokardialen Ischämie basierend auf SPECT-Befunden und klinischem Bild.",
-            fourth:
-              "Diagnose von Alzheimer aufgrund der SPECT-Ergebnisse und Symptomatik.",
-          },
-          {
-            first: "Visuelle Hilfsmietel",
-            second:
-              "Homogene Perfusion in allen Bereichen des Herzens, keine Auffälligkeiten sichtbar.",
-            third:
-              "SPECT-Bilder zeigen eine deutliche Minderdurchblutung im belasteten Zustand im anterioren Bereich des linken Ventrikels.",
-            fourth:
-              "SPECT-Bilder zeigen eine diffuse Hypoperfusion im parietalen und temporalen Kortex, typisch für Alzheimer.",
-          },
-          {
-            first: "Fallabschluss",
-            second:
-              "Wir empfehlen eine jährliche Routinekontrolle zur Überwachung der Herzgesundheit. Der Patient sollte weiterhin einen gesunden Lebensstil pflegen, um das Risiko von Herzkrankheiten zu minimieren.",
-            third:
-              "Wir empfehlen eine koronare Angiographie zur weiteren Abklärung und gegebenenfalls interventionelle Maßnahmen. Regelmäßige Nachuntersuchungen sind ebenfalls wichtig.",
-            fourth:
-              "Es ist zu empfehlen, eine neuropsychologische Testung und eine langfristige Therapieplanung in Erwägung zu ziehen. Regelmäßige kognitive Tests zur Überwachung des Fortschreitens der Erkrankung sind notwendig.",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 59,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: "Ein Single-Photon-Emissions-Computertomographie (SPECT) Gerät ist ein fortschrittliches medizinisches Bildgebungsgerät, das detaillierte dreidimensionale Bilder der funktionellen Prozesse im Körper erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines SPECT-Geräts:",
-        text_list: [
-          {
-            bold: "Gantry: ",
-            other:
-              "Ist der ringförmige Teil des SPECT-Geräts, der die Gamma-Kameras und Kollimatoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
-          },
-          {
-            bold: "Gamma-Kamera: ",
-            other:
-              "Erfasst die von den Radiopharmaka emittierten Gammastrahlen. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
-          },
-          {
-            bold: "Kollimatoren: ",
-            other:
-              "Sind vor den Detektoren angeordnet und filtern die eintreffenden Gammastrahlen, um nur diejenigen durchzulassen, die aus bestimmten Winkeln kommen. Dies verbessert die Bildqualität.",
-          },
-          {
-            bold: "Radiopharmakon: ",
-            other:
-              "Ein radioaktives Medikament, das in den Körper des Patienten injiziert wird und sich in bestimmten Organen oder Geweben ansammelt, je nach diagnostischer Fragestellung.",
-          },
-          {
-            bold: "Patiententisch: ",
-            other:
-              "Ist motorisiert und kann horizontal in den Gantry hinein- und herausgefahren werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
-          },
-          {
-            bold: "Arbeitsstation: ",
-            other:
-              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung.",
-          },
-          {
-            bold: "Steuerkonsole: ",
-            other:
-              "Ermöglicht dem Technologen, das SPECT-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
-          },
-          {
-            bold: "Kühlungssystem: ",
-            other:
-              "Ist notwendig, um die elektronischen Komponenten und insbesondere die Gamma-Kameras zu kühlen, da sie während der Erfassung der Gammastrahlen Wärme produzieren.",
-          },
-          {
-            bold: "Multidetektor-SPECT (MDSPECT): ",
-            other:
-              "Moderne SPECT-Geräte sind oft als Multidetektor-SPECT (MDSPECT) konfiguriert, was bedeutet, dass sie mehrere Detektorreihen haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
-          },
-          {
-            bold: "Sprachkommunikationssystem: ",
-            other:
-              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
-          },
-          {
-            bold: "Bildrekonstruktionssoftware: ",
-            other:
-              "Wandelt die erfassten Gammastrahlendaten in dreidimensionale Bilder um, die vom Radiologen zur Diagnose und Planung von Behandlungen verwendet werden.",
-          },
-          {
-            bold: "Strahlenschutzvorrichtungen: ",
-            other:
-              "Gewährleisten die Sicherheit des medizinischen Personals und des Patienten, indem sie die Strahlenbelastung minimieren.",
-          },
-          {
-            bold: "Kalibrierungswerkzeuge: ",
-            other:
-              "Werden verwendet, um die Genauigkeit und Präzision der Gamma-Kameras und anderer Komponenten regelmäßig zu überprüfen und sicherzustellen.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 60,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
-        text_list: [
-          {
-            bold: "Single-Photon-Emissions-Computertomographie (SPECT): ",
-            other:
-              "Ein bildgebendes Verfahren in der Nuklearmedizin zur Darstellung der funktionellen Informationen von Organen.",
-          },
-          {
-            bold: "Nuklearmedizin: ",
-            other:
-              "Ein medizinisches Fachgebiet, das radioaktive Substanzen zur Diagnose und Therapie verwendet.",
-          },
-          {
-            bold: "Radiopharmakon: ",
-            other:
-              "Ein radioaktives Medikament, das in den Körper injiziert wird, um spezifische Organe oder Gewebe zu visualisieren.",
-          },
-          {
-            bold: "Gamma-Kamera: ",
-            other:
-              "Ein Gerät, das die von den Radiopharmaka emittierten Gammastrahlen erfasst und Bilder erstellt.",
-          },
-          {
-            bold: "Kollimator: ",
-            other:
-              "Ein Gerät, das die Richtung der eintreffenden Strahlung bestimmt, um präzisere Bilder zu erhalten.",
-          },
-          {
-            bold: "Bildrekonstruktion: ",
-            other:
-              "Der Prozess der Umwandlung der gesammelten Daten in diagnostische Bilder.",
-          },
-          {
-            bold: "Funktionelle Bildgebung: ",
-            other:
-              "Bildgebung, die Informationen über die Funktion von Organen und Geweben liefert, nicht nur deren Struktur.",
-          },
-          {
-            bold: "Strahlenbelastung: ",
-            other:
-              "Die Menge an ionisierender Strahlung, der ein Patient während einer Untersuchung ausgesetzt ist.",
-          },
-          {
-            bold: "Isotop: ",
-            other:
-              "Eine Variante eines chemischen Elements, die durch eine unterschiedliche Anzahl von Neutronen im Kern gekennzeichnet ist.",
-          },
-          {
-            bold: "Tracer: ",
-            other:
-              "Ein radioaktiver Marker, der im Körper verteilt wird, um spezifische physiologische Prozesse sichtbar zu machen.",
-          },
-          {
-            bold: "Wartezeit: ",
-            other:
-              "Die Zeit, die benötigt wird, damit sich das Radiopharmakon im Körper verteilt.",
-          },
-          {
-            bold: "Kontrastmittel: ",
-            other:
-              "Eine Substanz, die verwendet wird, um die Sichtbarkeit von Strukturen oder Flüssigkeiten im Körper zu erhöhen.",
-          },
-          {
-            bold: "Protokoll: ",
-            other:
-              "Eine Reihe von Anweisungen und Verfahren zur Durchführung der SPECT-Untersuchung.",
-          },
-          {
-            bold: "Kalibrierung: ",
-            other:
-              "Die Justierung der Gamma-Kamera und anderer Geräte, um genaue Messungen zu gewährleisten.",
-          },
-          {
-            bold: "Myokardperfusion: ",
-            other:
-              "Die Durchblutung des Herzmuskels, die mit SPECT untersucht werden kann.",
-          },
-          {
-            bold: "Hirnfunktionsanalyse: ",
-            other:
-              "Die Untersuchung der Aktivität und Durchblutung des Gehirns mithilfe von SPECT.",
-          },
-          {
-            bold: "Tumordetektion: ",
-            other:
-              "Die Erkennung von Tumoren durch die Visualisierung abnormer Zellaktivitäten.",
-          },
-          {
-            bold: "Epilepsie-Diagnostik: ",
-            other:
-              "Die Untersuchung und Identifizierung epileptischer Herde im Gehirn mittels SPECT.",
-          },
-          {
-            bold: "Alzheimer-Diagnose: ",
-            other:
-              "Die Diagnose der Alzheimer-Krankheit durch die Visualisierung charakteristischer Hirnveränderungen.",
-          },
-          {
-            bold: "Koronare Intervention: ",
-            other:
-              "Therapeutische Maßnahmen zur Behandlung von Herzkrankheiten, die auf SPECT-Befunden basieren können.",
-          },
-          {
-            bold: "Angioplastie: ",
-            other:
-              "Ein Verfahren zur Erweiterung verengter Blutgefäße im Herzen.",
-          },
-        ],
-      },
-      {
-        id: 61,
-        title: "Links",
-        text: "",
-        text_list: [
-          {
-            bold: "NetDoktor: ",
-            other:
-              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT] https://www.netdoktor.de/diagnostik/spect/)",
-          },
-          {
-            bold: "Apotheken Umschau: ",
-            other:
-              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT] https://www.apotheken-umschau.de/diagnose/spect)",
-          },
-          {
-            bold: "Welt der Physik: ",
-            other:
-              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT] https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
-          },
-          {
-            bold: "Universitätsklinikum Münster: ",
-            other:
-              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT] https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
-          },
-          {
-            bold: "Miomedi: ",
-            other:
-              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT] https://www.miomedi.de/diagnostik/spect/)",
-          },
-          {
-            bold: "MedLexi: ",
-            other:
-              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT] https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
-          },
-        ],
-      },
-      {
-        id: 62,
-        title: "PDF",
-        link: "https://drive.google.com/file/d/1_AhtgQKA6hESjiROQr_SO-om4QgJWbrl/view?usp=share_link",
-      },
-    ],
-  },
-  // end of parent tab 7
-  {
-    id: 8,
-    title: "Breischluck",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 63,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "Der Breischluck-Test wird durchgeführt, um die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen. Ziel ist es, strukturelle oder funktionelle Anomalien zu identifizieren, die zu Symptomen wie Dysphagie, Regurgitation oder chronischem Husten führen können.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Der Breischluck-Test ist relevant in der Diagnostik von Erkrankungen wie Achalasie, gastroösophagealem Reflux, Ösophagusstrikturen und Tumoren. Er wird häufig in der gastroenterologischen und HNO-Diagnostik eingesetzt.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen:",
-                text: "Der Breischluck-Test basiert auf der Röntgenfluoroskopie, bei der der Patient eine Kontrastmittelhaltige Flüssigkeit (Barium) trinkt. Das Barium ermöglicht es, die Konturen und Bewegungen der Speiseröhre und des Magens auf Röntgenbildern sichtbar zu machen.",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "Technisch erfordert der Test die Verwendung eines Röntgenfluoroskops sowie eines Bariumbrei-Kontrastmittels. Der Patient trinkt das Barium, während kontinuierliche Röntgenaufnahmen gemacht werden, um die Passage des Kontrastmittels durch den oberen Gastrointestinaltrakt zu visualisieren.",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "Auswertung und Interpretation:",
-                text: "Die Auswertung erfolgt durch einen Radiologen, der die Aufnahmen auf Abnormalitäten wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore untersucht. Die dynamische Beurteilung der Kontrastmittelpassage ist dabei von zentraler Bedeutung.",
-              },
-              {
-                bold_text: "Typische Befunde:",
-                text: "Typische Befunde können eine verzögerte Kontrastmittelpassage bei Achalasie, retrosternale Füllungsdefekte bei Tumoren oder Refluxphänomene bei gastroösophagealem Reflux umfassen.",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile:",
-                text: "Ein wesentlicher Vorteil des Breischluck-Verfahrens liegt in seiner Nicht-Invasivität. Es ermöglicht die Beurteilung von Schluckstörungen, ohne dass invasive Maßnahmen erforderlich sind. Ein weiterer Vorteil ist die Möglichkeit der Echtzeit-Beobachtung der Schluckfunktion. Dies erlaubt es dem Radiologen, die dynamischen Prozesse während des Schluckakts direkt zu sehen und zu beurteilen. Zudem weist das Breischluck-Verfahren eine hohe diagnostische Genauigkeit für bestimmte Pathologien auf, was es zu einem wertvollen Instrument in der Diagnostik macht.",
-              },
-              {
-                bold_text: "Nachteile:",
-                text: "Trotz der vielen Vorteile hat das Breischluck-Verfahren auch einige Nachteile. Einer der Hauptnachteile ist die Strahlenexposition, die mit jeder Röntgenuntersuchung einhergeht. Dies ist besonders bei wiederholten Untersuchungen von Bedeutung. Ein weiterer Nachteil ist die Einschränkung bei Patienten mit Kontrastmittelallergien, da das Verfahren die Verabreichung eines bariumsulfathaltigen Kontrastmittels erfordert.",
-              },
-              {
-                bold_text: "Risiken:",
-                text: "Die Risiken des Breischluck-Verfahrens umfassen in erster Linie die Strahlenbelastung, die zwar relativ gering ist, aber dennoch berücksichtigt werden muss, insbesondere bei Patienten, die häufig untersucht werden müssen. Ein weiteres Risiko ist die mögliche Aspiration des Kontrastmittels, was zu Komplikationen wie einer Aspirationspneumonie führen kann. Darüber hinaus können bei einigen Patienten Unverträglichkeiten gegenüber dem Kontrastmittel auftreten, was zu Nebenwirkungen oder allergischen Reaktionen führen kann.",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "Der Breischluck-Test spielt eine wichtige Rolle in der Diagnose und Differenzialdiagnose von Erkrankungen des oberen Gastrointestinaltrakts. Er liefert entscheidende Informationen, die die weitere Therapieplanung beeinflussen können.",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "Durch die Identifikation von pathologischen Veränderungen kann der Breischluck-Test die Wahl der geeigneten therapeutischen Maßnahmen und das Management des Patienten wesentlich beeinflussen.",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text: "",
-                text: "Zu den Alternativen gehören die Ösophagogastroduodenoskopie (ÖGD), die hochauflösende Manometrie und die pH-Metrie. Jede dieser Methoden hat ihre spezifischen Indikationen und Vorteile.",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse:",
-                text: "Neuere Studien befassen sich mit der Verbesserung der Bildqualität und der Reduktion der Strahlenbelastung durch neue Technologien. Zudem wird die Rolle des Breischluck-Tests in der Beurteilung von Patienten nach bariatrischen Operationen untersucht.",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven:",
-                text: "Zukünftige Entwicklungen könnten den Einsatz von MRT-Kontrastmitteln anstelle von Barium umfassen, um die Strahlenbelastung weiter zu reduzieren und die diagnostische Genauigkeit zu erhöhen.",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "Der Breischluck-Test ist ein zentrales diagnostisches Werkzeug in der Gastroenterologie, das eine nicht-invasive Beurteilung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht. Er bietet klare Vorteile, birgt jedoch auch gewisse Risiken und Einschränkungen.",
-              },
-              {
-                bold_text: "Gesamtbedeutung:",
-                text: "Insgesamt ist der Breischluck-Test ein unverzichtbares Verfahren in der klinischen Diagnostik, das essenzielle Informationen für die Diagnose und das Management von Patienten mit gastrointestinalen Beschwerden liefert.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 64,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erläutern, dass der Breischluck-Test durchgeführt wird, um die Struktur der Speiseröhre und des oberen Magen-Darm-Trakts zu beurteilen und strukturelle oder funktionelle Anomalien zu identifizieren.",
-            third:
-              "Wir führen diesen Test durch, um herauszufinden, ob es Probleme mit Ihrer Speiseröhre oder Ihrem oberen Magen-Darm-Trakt gibt, wie Verengungen oder Bewegungsstörungen.",
-            fourth:
-              "Der Test hilft uns, die Ursache Ihrer Schluckbeschwerden zu finden, indem wir die Struktur und Funktion Ihrer Speiseröhre sichtbar machen.",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben, dass der Patient ein Kontrastmittelhaltiges Getränk (Barium) zu sich nimmt und dabei kontinuierliche Röntgenaufnahmen gemacht werden, um die Bewegung des Kontrastmittels durch den oberen Gastrointestinaltrakt zu beobachten.",
-            third:
-              "Sie trinken eine Flüssigkeit, die Barium enthält. Während Sie trinken, machen wir Röntgenaufnahmen, um zu sehen, wie die Flüssigkeit durch Ihre Speiseröhre fließt.",
-            fourth:
-              "Zuerst trinken Sie eine bariumsulfathaltige Flüssigkeit. Dann nehmen wir Röntgenbilder auf, um den Weg der Flüssigkeit durch Ihre Speiseröhre und Ihren Magen zu verfolgen.",
-          },
-          {
-            first: "Vorbereitung",
-            second:
-              "Erklären, dass der Patient nüchtern sein sollte, also mindestens sechs Stunden vor dem Test nichts essen oder trinken darf. Informieren über eventuelle Medikamenteneinnahmen und allergische Reaktionen auf Kontrastmittel.",
-            third:
-              "Bitte essen oder trinken Sie mindestens sechs Stunden vor der Untersuchung nichts. Informieren Sie uns bitte, wenn Sie allergisch gegen Kontrastmittel sind.",
-            fourth:
-              "Sie müssen ab Mitternacht vor dem Test nüchtern bleiben. Wenn Sie regelmäßig Medikamente einnehmen, besprechen Sie dies bitte mit uns vorher.",
-          },
-          {
-            first: "Risiken",
-            second:
-              "Informieren über mögliche Risiken wie Strahlenbelastung, Unbehagen durch das Trinken des Bariums, Aspiration des Kontrastmittels und seltene Verstopfung.",
-            third:
-              "Es gibt eine geringe Strahlenbelastung durch die Röntgenaufnahmen. Das Trinken des Bariums kann unangenehm sein und in seltenen Fällen kann es zu Verstopfung kommen.",
-            fourth:
-              "Während des Tests besteht ein kleines Risiko, dass das Kontrastmittel in Ihre Atemwege gelangt. Zudem kann es nach dem Test zu Verstopfung kommen.",
-          },
-          {
-            first: "Vorteile",
-            second:
-              "Hervorheben, dass der Breischluck-Test eine nicht-invasive Methode ist, die eine gute Visualisierung der Anatomie und Funktion des oberen Magen-Darm-Trakts ermöglicht und schnell durchführbar ist.",
-            third:
-              "Der Vorteil dieses Tests ist, dass er nicht invasiv ist und uns eine gute Sicht auf die Funktion Ihrer Speiseröhre gibt.",
-            fourth:
-              "Dieser Test ist schnell und nicht-invasiv, was bedeutet, dass wir keine Operation durchführen müssen, um eine Diagnose zu stellen.",
-          },
-          {
-            first: "Alternativen",
-            second:
-              "Nennen von Alternativen wie Ösophagogastroduodenoskopie (ÖGD), hochauflösende Manometrie und pH-Metrie, und deren spezifische Indikationen und Vorteile kurz beschreiben.",
-            third:
-              "Alternativ könnten wir eine Ösophagogastroduodenoskopie (ÖGD) durchführen, bei der eine Kamera in Ihre Speiseröhre eingeführt wird, um eine direkte Sicht zu erhalten.",
-            fourth:
-              "Eine andere Möglichkeit wäre eine hochauflösende Manometrie, bei der wir den Druck in Ihrer Speiseröhre messen, um Bewegungsstörungen zu erkennen.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Auf mögliche Kontraindikationen hinweisen, wie z.B. bekannte Allergien gegen Kontrastmittel, Schwangerschaft oder schwerwiegende Schluckstörungen.",
-            third:
-              "Dieser Test ist nicht geeignet, wenn Sie schwanger sind oder eine bekannte Allergie gegen Barium haben.",
-            fourth:
-              "Falls Sie schwerwiegende Schluckstörungen haben oder schwanger sind, könnte dieser Test nicht sicher für Sie sein.",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second:
-              "Erklären, dass typische Befunde strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen oder Tumore sein können.",
-            third:
-              "Die Ergebnisse könnten zeigen, dass Ihre Speiseröhre verengt ist oder nicht richtig funktioniert, was uns hilft, die richtige Behandlung für Sie zu finden.",
-            fourth:
-              "Wir könnten feststellen, dass es Tumore oder Divertikel in Ihrer Speiseröhre gibt, was uns helfen würde, die Ursache Ihrer Beschwerden genauer zu bestimmen.",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second:
-              "Betonen, dass das Einverständnis des Patienten notwendig ist, um den Test durchzuführen.",
-            third:
-              "Ihr Einverständnis ist notwendig, damit wir diesen Test durchführen können. Es ist wichtig, dass Sie alle Informationen verstanden haben.",
-            fourth:
-              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir fortfahren. Es ist wichtig, dass Sie über alle Aspekte des Tests informiert sind und sich wohl damit fühlen.",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second:
-              "Den Patienten bitten, das Einverständnis schriftlich zu geben und sicherstellen, dass er alle Fragen zum Test und dessen Ablauf beantwortet bekommt.",
-            third:
-              "Bitte unterschreiben Sie hier, um Ihr Einverständnis zu bestätigen. Haben Sie noch Fragen zu dem, was wir besprochen haben?",
-            fourth:
-              "Um fortzufahren, brauche ich Ihre Unterschrift auf diesem Formular. Gibt es noch etwas, das Sie wissen möchten?",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second:
-              "Den Patienten darauf hinweisen, dass er nach der Untersuchung viel Wasser trinken sollte, um das Barium aus dem Körper zu spülen.",
-            third:
-              "Nach dem Test sollten Sie viel Wasser trinken, um das Barium aus Ihrem Körper zu spülen. Es ist normal, wenn Ihr Stuhl vorübergehend weißlich aussieht.",
-            fourth:
-              "Trinken Sie bitte nach der Untersuchung viel Wasser, um das Barium auszuspülen. Ihr Stuhl könnte eine weiße Färbung annehmen, was vorübergehend normal ist.",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second:
-              "Informieren, dass die Ergebnisse der Untersuchung in der Regel innerhalb weniger Tage vorliegen und der behandelnde Arzt diese dann mit dem Patienten besprechen wird.",
-            third:
-              "Die Ergebnisse werden in ein paar Tagen vorliegen und Ihr Arzt wird diese mit Ihnen besprechen und die nächsten Schritte planen.",
-            fourth:
-              "Sie erhalten die Ergebnisse normalerweise innerhalb von wenigen Tagen. Ihr behandelnder Arzt wird dann die Ergebnisse mit Ihnen besprechen und das weitere Vorgehen klären.",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 65,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second:
-              "Beschreiben, dass es sich beim Breischluck-Test um eine Röntgenuntersuchung mit einem Kontrastmittel handelt, die die Funktion und Anatomie der Speiseröhre und des oberen Magen-Darm-Trakts sichtbar macht.",
-            third:
-              "Der Breischluck-Test ist eine radiologische Untersuchung, bei der der Patient Barium trinkt, um die Anatomie und Beweglichkeit der Speiseröhre und des oberen Magen-Darm-Trakts darzustellen.",
-            fourth:
-              "Dieser Test verwendet Barium als Kontrastmittel und ermöglicht es uns, unter Röntgendurchleuchtung die Passage und eventuelle Abnormitäten in der Speiseröhre zu visualisieren.",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second:
-              "Erklären, dass mit dieser Untersuchung strukturelle Anomalien wie Stenosen, Divertikel, Motilitätsstörungen und Tumore sowie funktionelle Probleme der Speiseröhre erkannt werden können.",
-            third:
-              "Mit dem Breischluck können wir strukturelle Probleme wie Engstellen, Divertikel oder Tumore sowie funktionelle Störungen wie eine verzögerte Passage oder unkoordinierte Bewegungen feststellen.",
-            fourth:
-              "Dieser Test ermöglicht uns, Motilitätsstörungen, Refluxphänomene und strukturelle Anomalien der Speiseröhre und des oberen Magen-Darm-Trakts zu diagnostizieren.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Besprechen, dass die Ergebnisse auf strukturelle oder funktionelle Anomalien hinweisen können, wie z.B. verzögerte Kontrastmittelpassage, retrosternale Füllungsdefekte oder Refluxphänomene.",
-            third:
-              "Die Untersuchung hat eine verzögerte Passage des Kontrastmittels durch die Speiseröhre gezeigt, was auf eine Achalasie hinweisen könnte.",
-            fourth:
-              "Wir haben multiple Divertikel in der Speiseröhre festgestellt, was die Ursache für die Dysphagie des Patienten sein könnte.",
-          },
-          {
-            first: "Indikationen",
-            second:
-              "Nennen, dass die Hauptindikationen für den Breischluck-Test Dysphagie, Verdacht auf gastroösophagealen Reflux, postoperative Kontrolle und Verdacht auf strukturelle Anomalien sind.",
-            third:
-              "Hauptindikationen für den Breischluck-Test sind Schluckbeschwerden (Dysphagie), Verdacht auf gastroösophagealen Reflux und postoperative Überprüfung nach Ösophagusoperationen.",
-            fourth:
-              "Wir führen den Breischluck-Test häufig bei Patienten mit Verdacht auf anatomische Anomalien oder Motilitätsstörungen der Speiseröhre durch.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Hinweis darauf, dass Kontraindikationen bekannte Allergien gegen Kontrastmittel, Schwangerschaft und schwerwiegende Schluckstörungen umfassen.",
-            third:
-              "Kontraindikationen umfassen bekannte Allergien gegen Barium, Schwangerschaft und schwerwiegende Schluckstörungen, die ein Aspirationsrisiko darstellen.",
-            fourth:
-              "Bei Patienten mit einer bekannten Bariumallergie oder während der Schwangerschaft ist dieser Test kontraindiziert.",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second:
-              "Erklären, dass Differenzialdiagnosen Achalasie, gastroösophagealer Reflux, Ösophaguskarzinom, Divertikel und strukturelle Anomalien umfassen können.",
-            third:
-              "Differenzialdiagnosen, die wir in Betracht ziehen müssen, umfassen Achalasie, gastroösophagealen Reflux, Ösophaguskarzinome und anatomische Variationen wie Divertikel.",
-            fourth:
-              "Wir sollten auch an Differenzialdiagnosen wie Motilitätsstörungen, Tumore und Strikturen der Speiseröhre denken.",
-          },
-          {
-            first: "Behandlungspläne",
-            second:
-              "Diskutieren, dass die Ergebnisse des Breischluck-Tests die Basis für weitere diagnostische Schritte oder therapeutische Maßnahmen wie endoskopische Untersuchungen oder chirurgische Eingriffe sein können.",
-            third:
-              "Auf Basis der Ergebnisse des Breischluck-Tests könnten wir eine Ösophagogastroduodenoskopie zur weiteren Abklärung oder eine chirurgische Intervention in Erwägung ziehen.",
-            fourth:
-              "Die festgestellten Anomalien könnten eine medikamentöse Behandlung, endoskopische Dehnung oder eine operative Korrektur erforderlich machen.",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second:
-              "Betonen, dass eine enge Zusammenarbeit zwischen Radiologen, Gastroenterologen, Chirurgen und ggf. HNO-Ärzten notwendig ist, um eine umfassende Diagnostik und Behandlung zu gewährleisten.",
-            third:
-              "Für eine umfassende Betreuung des Patienten ist eine enge Zusammenarbeit zwischen Radiologie, Gastroenterologie und Chirurgie essenziell.",
-            fourth:
-              "Die interdisziplinäre Zusammenarbeit mit Radiologen, Gastroenterologen und ggf. HNO-Ärzten ist entscheidend für eine korrekte Diagnose und effiziente Behandlung.",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second:
-              "Hinweis auf die Bedeutung standardisierter Protokolle zur Durchführung und Auswertung des Breischluck-Tests sowie die regelmäßige Schulung des medizinischen Personals zur Sicherstellung hoher Qualitätsstandards.",
-            third:
-              "Standardisierte Protokolle und regelmäßige Schulungen sind wichtig, um die Qualität und Konsistenz der Breischluck-Untersuchungen zu gewährleisten.",
-            fourth:
-              "Ein strukturiertes Qualitätsmanagement, einschließlich regelmäßiger Überprüfungen und Fortbildungen, sichert die hohe Qualität der diagnostischen Ergebnisse.",
-          },
-          {
-            first: "Dokumentation und Weiterverfolgung",
-            second:
-              "Erläutern, dass eine gründliche Dokumentation der Untersuchungsergebnisse und eine klare Kommunikation mit dem weiterbehandelnden Arzt entscheidend sind, um die weitere Patientenversorgung zu planen und zu optimieren.",
-            third:
-              "Die sorgfältige Dokumentation der Ergebnisse und die Kommunikation mit dem weiterbehandelnden Arzt sind entscheidend für die optimale Nachsorge des Patienten.",
-            fourth:
-              "Eine lückenlose Dokumentation und eine effiziente Weitergabe der Untersuchungsergebnisse an das Behandlungsteam sind essenziell für eine kontinuierliche Patientenbetreuung.",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 66,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second:
-              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
-            third:
-              "55-jähriger Patient klagt über Schwierigkeiten beim Schlucken und retrosternale Schmerzen. Keine bekannte Vorgeschichte von Magen-Darm-Erkrankungen.",
-            fourth:
-              "40-jährige Patientin berichtet über chronisches Sodbrennen und nächtliches Aufstoßen. Vorgeschichte von milden Refluxsymptomen.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Der Breischluck zeigt eine normale Passage des Kontrastmittels ohne Hinweise auf Anomalien oder Reflux.",
-            third:
-              "Der Breischluck zeigt eine verzögerte Passage des Kontrastmittels und eine Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
-            fourth:
-              "Der Breischluck zeigt Reflux des Kontrastmittels in den Ösophagus aus dem Magen und eine Schleimhautschädigung.",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second:
-              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss gastrointestinaler Störungen.",
-            third:
-              "Der Befund deutet auf Achalasie hin, was durch die fehlende Entspannung des unteren Ösophagussphinkters und die dilatierte Speiseröhre bestätigt wird.",
-            fourth:
-              "Die Beobachtung von Reflux und Schleimhautschäden unterstützt die Diagnose eines gastroösophagealen Refluxes.",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second:
-              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
-            third:
-              "Die Ergebnisse sind entscheidend für die Planung weiterer diagnostischer Schritte wie Manometrie und mögliche endoskopische oder chirurgische Interventionen.",
-            fourth:
-              "Wichtig für die Bestätigung der Diagnose und Einleitung einer medikamentösen oder chirurgischen Therapie zur Kontrolle des Refluxes.",
-          },
-          {
-            first: "Diagnose",
-            second:
-              "Bestätigung des gesunden Zustandes des oberen Magen-Darm-Trakts. Keine Anzeichen für pathologische Veränderungen",
-            third:
-              "Diagnose einer Achalasie basierend auf Breischluck-Befunden und klinischem Bild.",
-            fourth:
-              "Diagnose von gastroösophagealem Reflux aufgrund der Breischluck-Ergebnisse und Symptomatik.",
-          },
-          {
-            first: "Visuelle Hilfsmittel",
-            second:
-              "Homogene und normale Passage des Kontrastmittels ohne Auffälligkeiten.",
-            third:
-              "Röntgenbilder zeigen eine verzögerte Passage und Erweiterung der Speiseröhre oberhalb eines enggestellten unteren Ösophagussphinkters.",
-            fourth:
-              "Röntgenbilder zeigen den Rückfluss von Barium aus dem Magen in die Speiseröhre und Schleimhautirritationen.",
-          },
-          {
-            first: "Fallabschluss",
-            second:
-              "Wir empfehlen regelmäßige Gesundheitsüberprüfungen, auch wenn keine aktuellen Beschwerden vorliegen, um einen guten allgemeinen Gesundheitszustand sicherzustellen.",
-            third:
-              "Wir empfehlen eine Ballondilatation oder Heller-Myotomie zur Behandlung der Achalasie. Der Patient sollte über die Prognose und die Notwendigkeit regelmäßiger Folgeuntersuchungen informiert werden.",
-            fourth:
-              "Wir empfehlen eine Kombination aus medikamentöser Therapie (Protonenpumpenhemmer) und Lebensstiländerungen zur Kontrolle des Refluxes. Langfristige Behandlungsstrategien und regelmäßige Kontrollen sind wichtig.",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 67,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: " ",
-        text_list: [
-          {
-            bold: "Röntgenfluoroskopiegerät :",
-            other:
-              "Ein spezielles Röntgengerät, das kontinuierliche Röntgenbilder (Fluoroskopie) in Echtzeit erzeugt, um die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten.",
-          },
-          {
-            bold: "Barium-Kontrastmittel :",
-            other:
-              "Ein bariumsulfathaltiges Kontrastmittel, das der Patient trinkt. Es macht die Speiseröhre und den oberen Magen-Darm-Trakt auf den Röntgenbildern sichtbar.",
-          },
-          {
-            bold: "Gantry :",
-            other:
-              "Der ringförmige Teil des Röntgenfluoroskopiegeräts, der die Röntgenröhre und die Detektoren enthält. Er kann um den Patienten herum gedreht werden, um verschiedene Blickwinkel zu erfassen.",
-          },
-          {
-            bold: "Röntgenröhre :",
-            other:
-              "Erzeugt die Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Sie ist im Gantry montiert und bewegt sich während der Untersuchung um den Patienten herum.",
-          },
-          {
-            bold: "Detektoren :",
-            other:
-              "Gegenüber der Röntgenröhre im Gantry angeordnet, erfassen sie die Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen, und wandeln sie in elektrische Signale um.",
-          },
-          {
-            bold: "Patiententisch :",
-            other:
-              "Ein motorisierter Tisch, der den Patienten in die richtige Position bringt. Der Patient liegt während der Untersuchung auf diesem Tisch und kann bei Bedarf in den Gantry hinein- und herausgefahren werden.",
-          },
-          {
-            bold: "Arbeitsstation :",
-            other:
-              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder in Echtzeit angezeigt und analysiert werden. Der Radiologe oder radiologische Technologe steuert von hier aus die Untersuchung.",
-          },
-          {
-            bold: "Sprachkommunikationssystem :",
-            other:
-              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu kommunizieren und Anweisungen zu geben, wie z.B. das Schlucken des Kontrastmittels zu koordinieren.",
-          },
-          {
-            bold: "Strahlenschutzvorrichtungen :",
-            other:
-              "Schilde und Schutzkleidung, die sowohl den Patienten als auch das medizinische Personal vor übermäßiger Strahlenexposition schützen.",
-          },
-          {
-            bold: "Monitor :",
-            other:
-              "Zeigt die Echtzeitbilder des Röntgenfluoroskops an, die es dem Radiologen ermöglichen, die Passage des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt zu beobachten und zu bewerten.",
-          },
-          {
-            bold: "Aufzeichnungssystem :",
-            other:
-              "Erfasst und speichert die Bilder und Videos der Untersuchung für die spätere Analyse und Dokumentation.",
-          },
-          {
-            bold: "Kühlungssystem :",
-            other:
-              "Notwendig, um die Röntgenröhre zu kühlen, da sie während der Erzeugung von Röntgenstrahlen viel Wärme produziert.",
-          },
-          {
-            bold: "Bildverarbeitungssoftware :",
-            other:
-              "Software zur Verarbeitung und Analyse der erfassten Röntgenbilder, die es dem Radiologen ermöglicht, detaillierte diagnostische Informationen zu extrahieren.",
-          },
-          {
-            bold: "Vorbereitung des Patienten :",
-            other:
-              "Der Patient wird gebeten, jeglichen Schmuck abzulegen und sich auf den Untersuchungstisch zu legen. Der Radiologe erklärt den Ablauf und das Kontrastmittel.",
-          },
-          {
-            bold: "Verabreichung des Kontrastmittels :",
-            other:
-              "Der Patient trinkt das Barium-Kontrastmittel, während er auf dem Untersuchungstisch liegt.",
-          },
-          {
-            bold: "Durchführung der Untersuchung :",
-            other:
-              "Das Röntgenfluoroskopiegerät wird aktiviert, und der Gantry bewegt sich um den Patienten, während kontinuierliche Röntgenbilder aufgenommen werden. Der Radiologe beobachtet in Echtzeit die Bewegung des Kontrastmittels durch die Speiseröhre und den oberen Magen-Darm-Trakt.",
-          },
-          {
-            bold: "Kommunikation während der Untersuchung :",
-            other:
-              "Der Radiologe gibt dem Patienten Anweisungen, wie z.B. 'Schlucken Sie jetzt' oder 'Halten Sie den Atem an', um bestimmte Phasen der Kontrastmittelpassage besser sichtbar zu machen.",
-          },
-          {
-            bold: "Auswertung der Bilder :",
-            other:
-              "Nach der Untersuchung werden die Bilder auf der Arbeitsstation analysiert, um diagnostische Informationen zu erhalten. Der Radiologe bewertet die Struktur und Funktion der Speiseröhre und des oberen Magen-Darm-Trakts.",
-          },
-          {
-            bold: "Nachbereitung :",
-            other:
-              "Der Patient wird angewiesen, nach der Untersuchung viel Wasser zu trinken, um das Barium aus dem Körper zu spülen. Der Radiologe bespricht die vorläufigen Ergebnisse mit dem Patienten und informiert über mögliche nächste Schritte.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 68,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im Bereich der SPECT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
-        text_list: [
-          {
-            bold: "Breischluck :",
-            other:
-              "Röntgenuntersuchung mit Kontrastmittel zur Beurteilung der Speiseröhre und des oberen Magen-Darm-Trakts.",
-          },
-          {
-            bold: "Kontrastmittel :",
-            other:
-              "Substanz (meist Barium), die geschluckt wird, um Strukturen im Röntgenbild sichtbar zu machen.",
-          },
-          {
-            bold: "Fluoroskopie :",
-            other:
-              "Bildgebendes Verfahren, das Echtzeit-Röntgenbilder ermöglicht.",
-          },
-          {
-            bold: "Dysphagie :",
-            other:
-              "Schluckstörung, häufig ein Symptom bei pathologischen Befunden.",
-          },
-          {
-            bold: "Achalasie :",
-            other:
-              "Motilitätsstörung der Speiseröhre, charakterisiert durch eine fehlende Entspannung des unteren Ösophagussphinkters.",
-          },
-          {
-            bold: "Gastroösophagealer Reflux (GERD) :",
-            other:
-              "Rückfluss von Mageninhalt in die Speiseröhre, häufig mit Sodbrennen verbunden.",
-          },
-          {
-            bold: "Striktur :",
-            other:
-              "Verengung der Speiseröhre, die die Passage von Nahrung erschwert.",
-          },
-          {
-            bold: "Divertikel :",
-            other:
-              "Aussackungen der Speiseröhrenwand, die die Passage von Nahrung beeinflussen können.",
-          },
-          {
-            bold: "Motilitätsstörung :",
-            other:
-              "Beeinträchtigung der normalen Bewegungsfähigkeit der Speiseröhre.",
-          },
-          {
-            bold: "Ösophaguskarzinom :",
-            other: "Bösartiger Tumor in der Speiseröhre.",
-          },
-          {
-            bold: "Barium :",
-            other: "Häufig verwendetes Kontrastmittel im Breischluck-Test.",
-          },
-          {
-            bold: "Manometrie :",
-            other:
-              "Diagnostisches Verfahren zur Messung des Drucks in der Speiseröhre.",
-          },
-          {
-            bold: "Ösophagogastroduodenoskopie (ÖGD) :",
-            other:
-              "Endoskopische Untersuchung der Speiseröhre, des Magens und des Zwölffingerdarms.",
-          },
-          {
-            bold: "Aspiration :",
-            other:
-              "Eindringen von Flüssigkeiten oder Feststoffen in die Atemwege.",
-          },
-          {
-            bold: "Reflux :",
-            other: "Rückfluss von Mageninhalt in die Speiseröhre.",
-          },
-          {
-            bold: "Radiologe :",
-            other:
-              "Facharzt für Bildgebende Verfahren, der die Untersuchung durchführt und interpretiert.",
-          },
-          {
-            bold: "Ballondilatation :",
-            other:
-              "Verfahren zur Erweiterung verengter Bereiche der Speiseröhre mittels eines Ballonkatheters.",
-          },
-          {
-            bold: "Heller-Myotomie :",
-            other:
-              "Chirurgischer Eingriff zur Behandlung der Achalasie durch Durchtrennung der Muskelfasern am unteren Ösophagussphinkter.",
-          },
-          {
-            bold: "Kontraindikation :",
-            other:
-              "Umstand, der die Anwendung eines bestimmten medizinischen Verfahrens verbietet.",
-          },
-          {
-            bold: "Strahlenbelastung :",
-            other:
-              "Exposition des Körpers gegenüber Röntgenstrahlen während der Untersuchung.",
-          },
-          {
-            bold: "Protonenpumpenhemmer (PPI) :",
-            other:
-              "Medikament zur Reduktion der Magensäureproduktion, häufig bei GERD eingesetzt.",
-          },
-          {
-            bold: "Schleimhautschädigung :",
-            other:
-              "Beschädigung der inneren Auskleidung der Speiseröhre, oft durch Reflux verursacht.",
-          },
-          {
-            bold: "Peristaltik :",
-            other:
-              "Wellenförmige Muskelkontraktionen, die die Nahrung durch die Speiseröhre bewegen.",
-          },
-          {
-            bold: "Bariumsulfat :",
-            other:
-              "Spezielles Bariumpräparat, das im Breischluck-Test verwendet wird.",
-          },
-          {
-            bold: "Stenose :",
-            other:
-              "Einengung oder Verengung eines Hohlorgans, wie der Speiseröhre.",
-          },
-        ],
-      },
-      {
-        id: 69,
-        title: "Links",
-        text: "",
-        text_list: [
-          {
-            bold_link:
-              "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
-            bold: "DocCheck Flexikon:",
-            other:
-              "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
-          },
-          {
-            bold_link:
-              "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
-            bold: "DocCheck Flexikon:",
-            other:
-              "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
-          },
-          {
-            bold_link:
-              "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
-            bold: "DocCheck Flexikon:",
-            other:
-              "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
-          },
-          {
-            bold_link: "https://www.amboss.com",
-            bold: "Amboss:",
-            other:
-              "Hier kannst du dich anmelden und detaillierte medizinische Informationen zu verschiedenen Untersuchungen und Erkrankungen finden, einschließlich des Breischluck-Tests.",
-          },
-          {
-            bold_link: "https://en.wikipedia.org/wiki/Barium_swallow",
-            bold: "Wikipedia:",
-            other:
-              "Eine umfassende Erklärung des Breischluck-Tests auf Englisch, einschließlich der klinischen Anwendung und Interpretation der Ergebnisse.",
-          },
-          {
-            bold_link: "https://radiopaedia.org",
-            bold: "Radiopaedia:",
-            other:
-              "Eine umfangreiche Ressource für radiologische Diagnostik, mit Fallstudien und Bildern zum Breischluck-Test und anderen radiologischen Untersuchungen.",
-          },
-          {
-            bold_link: "https://www.aerzteblatt.de",
-            bold: "Deutsches Ärzteblatt:",
-            other:
-              "Artikel und Studien über verschiedene diagnostische Verfahren, einschließlich des Breischluck-Tests, sowie aktuelle Forschungsergebnisse und klinische Leitlinien.",
-          },
-          {
-            bold_link: "https://www.klinikbewertungen.de",
-            bold: "Klinikbewertungen.de:",
-            other:
-              "Erfahrungsberichte und Bewertungen von Patienten zu verschiedenen medizinischen Untersuchungen und Behandlungen, einschließlich des Breischluck-Tests.",
-          },
-        ],
-      },
-      {
-        id: 70,
-        title: "PDF",
-        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
-      },
-    ],
-  },
-  // end of parent tab 8
-  {
-    id: 9,
-    title: "Skelettszintigraphie",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 71,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "Die Skelettszintigraphie dient der frühzeitigen Erkennung und Bewertung von Knochenanomalien. Sie wird verwendet, um pathologische Veränderungen im Skelettsystem zu diagnostizieren, bevor sie auf konventionellen Röntgenaufnahmen sichtbar werden.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die Skelettszintigraphie ist besonders relevant bei der Diagnose von Metastasen, entzündlichen Erkrankungen, Frakturen, Osteomyelitis und anderen Knochenerkrankungen. Sie wird häufig in der Onkologie, Orthopädie und Rheumatologie eingesetzt.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen:",
-                text: "Die Skelettszintigraphie basiert auf der Verwendung radioaktiver Isotope, die sich in den Knochen anreichern. Technetium-99m ist das häufigste verwendete Isotop, das aufgrund seiner physikalischen Eigenschaften und seiner Affinität zum Knochenstoffwechsel bevorzugt wird.",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "Bei der Skelettszintigraphie wird dem Patienten eine geringe Menge des radioaktiven Isotops intravenös injiziert. Nach einer gewissen Wartezeit, die es dem Isotop ermöglicht, sich in den Knochen anzureichern, wird der gesamte Körper des Patienten mit einer Gamma-Kamera gescannt, um die Verteilung des Isotops zu visualisieren.",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "Auswertung und Interpretation:",
-                text: "Die Auswertung der Skelettszintigraphie erfolgt durch einen Nuklearmediziner. Anhand der Verteilung des radioaktiven Isotops im Skelettsystem können Bereiche mit erhöhtem oder vermindertem Knochenstoffwechsel identifiziert werden.",
-              },
-              {
-                bold_text: "Typische Befunde:",
-                text: "Typische Befunde umfassen Hot-Spots, die auf erhöhte osteoblastische Aktivität hinweisen und oft bei Metastasen oder Frakturen beobachtet werden, sowie Cold-Spots, die auf eine verminderte Durchblutung oder Osteonekrose hindeuten können.",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile:",
-                text: "Die Skelettszintigraphie ist eine sensitive Methode zur frühzeitigen Erkennung von Knochenerkrankungen. Sie ermöglicht eine umfassende Untersuchung des gesamten Skelettsystems in kurzer Zeit.",
-              },
-              {
-                bold_text: "Nachteile:",
-                text: "Zu den Nachteilen gehören die Exposition gegenüber radioaktiver Strahlung und die mögliche Notwendigkeit weiterer diagnostischer Tests zur Bestätigung der Befunde.",
-              },
-              {
-                bold_text: "Risiken:",
-                text: "Obwohl die Strahlenbelastung gering ist, besteht ein gewisses Risiko für strahlenbedingte Schäden. Kontraindikationen umfassen Schwangerschaft und Stillzeit.",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "Die Skelettszintigraphie spielt eine zentrale Rolle in der Diagnostik und Therapieplanung vieler Knochenerkrankungen. Sie hilft bei der Erkennung von Metastasen, der Bewertung von Frakturen und der Überwachung des Behandlungserfolgs.",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "Für das Patientenmanagement ist die Skelettszintigraphie ein wertvolles Instrument, das hilft, frühzeitige und präzise Diagnosen zu stellen und den Krankheitsverlauf zu überwachen.",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text: "",
-                text: "Alternativen zur Skelettszintigraphie umfassen Röntgenaufnahmen, CT- und MRT-Scans sowie PET-Scans, die je nach klinischer Fragestellung eingesetzt werden können.",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse:",
-                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildgebungstechniken und die Entwicklung neuer Radiotracer, um die diagnostische Genauigkeit und Sicherheit der Skelettszintigraphie zu erhöhen.",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven:",
-                text: "Zukünftige Perspektiven beinhalten die Integration von KI zur Bildanalyse und die personalisierte Medizin, die auf den spezifischen Stoffwechsel des Patienten abgestimmte Radiotracer verwendet.",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "Die Skelettszintigraphie ist eine wichtige diagnostische Methode zur Erkennung und Überwachung von Knochenerkrankungen. Sie bietet eine hohe Sensitivität und ermöglicht eine ganzheitliche Untersuchung des Skelettsystems.",
-              },
-              {
-                bold_text: "Gesamtbedeutung:",
-                text: "Insgesamt stellt die Skelettszintigraphie ein unverzichtbares Werkzeug in der modernen Medizin dar, das Ärzten dabei hilft, fundierte Diagnosen zu stellen und effektive Behandlungsstrategien zu entwickeln.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 72,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erklären Sie, dass die Untersuchung zur frühzeitigen Erkennung und Bewertung von Knochenanomalien dient.",
-            third:
-              "Die Untersuchung hilft uns, Metastasen oder andere Knochenerkrankungen frühzeitig zu erkennen.",
-            fourth:
-              "Wir möchten sicherstellen, dass keine Knochenentzündungen oder Frakturen übersehen werden.",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie detailliert den Ablauf der Untersuchung, einschließlich der Injektion des radioaktiven Isotops und der Nutzung der Gamma-Kamera.",
-            third:
-              "Zuerst bekommen Sie eine Injektion mit einem schwach radioaktiven Stoff. Nach etwa drei Stunden werden Aufnahmen von Ihrem Skelett gemacht.",
-            fourth:
-              "Nach der Injektion des radioaktiven Stoffes müssen Sie etwa drei Stunden warten, bevor die eigentliche Untersuchung beginnt.",
-          },
-          {
-            first: "Vorbereitung",
-            second:
-              "Geben Sie Hinweise zur notwendigen Vorbereitung, wie z.B. das Trinken von ausreichend Wasser und mögliche Einschränkungen bei der Nahrungsaufnahme.",
-            third:
-              "Bitte trinken Sie vor der Untersuchung viel Wasser, um die Ausscheidung des Isotops zu fördern.",
-            fourth:
-              "Verzichten Sie bitte vier Stunden vor der Untersuchung auf feste Nahrung, um optimale Ergebnisse zu gewährleisten.",
-          },
-          {
-            first: "Risiken",
-            second:
-              "Informieren Sie über die Strahlenexposition und mögliche Risiken wie allergische Reaktionen auf das Kontrastmittel.",
-            third:
-              "Es besteht eine geringe Strahlenbelastung. Allergische Reaktionen auf das Kontrastmittel sind selten, aber möglich.",
-            fourth:
-              "Die Strahlung, der Sie ausgesetzt sind, ist gering und vergleichbar mit einer Röntgenaufnahme.",
-          },
-          {
-            first: "Vorteile",
-            second:
-              "Erläutern Sie die Vorteile, wie die hohe Sensitivität und die Möglichkeit, das gesamte Skelettsystem zu untersuchen.",
-            third:
-              "Die Methode ist sehr empfindlich und ermöglicht uns, das gesamte Skelettsystem zu beurteilen.",
-            fourth:
-              "Mit dieser Untersuchung können wir Veränderungen im Knochenstoffwechsel frühzeitig feststellen.",
-          },
-          {
-            first: "Alternativen",
-            second:
-              "Erwähnen Sie mögliche Alternativen zur Skelettszintigraphie wie Röntgen, CT, MRT und PET-Scans.",
-            third:
-              "Eine Alternative zur Skelettszintigraphie könnte eine MRT-Untersuchung sein.",
-            fourth:
-              "Eine andere Möglichkeit wäre eine PET-CT-Untersuchung, die ebenfalls sehr genau ist.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Geben Sie die Kontraindikationen an, z.B. Schwangerschaft und Stillzeit.",
-            third:
-              "Wir führen die Untersuchung nicht bei schwangeren Frauen durch, da das Risiko für das ungeborene Kind zu hoch ist.",
-            fourth:
-              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden keine Muttermilch abpumpen oder füttern.",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second:
-              "Erklären Sie typische Ergebnisse der Untersuchung, wie Hot-Spots und Cold-Spots, und deren Bedeutung.",
-            third:
-              "Ein 'Hot-Spot' könnte auf eine Knochenmetastase hinweisen, während ein 'Cold-Spot' auf eine Osteonekrose hindeuten könnte.",
-            fourth:
-              "Ein 'Hot-Spot' zeigt uns Bereiche mit erhöhter Aktivität, was auf Entzündungen oder Tumoren hinweisen kann.",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second:
-              "Betonen Sie die Wichtigkeit, dass der Patient das Verfahren und die damit verbundenen Risiken versteht und zustimmt.",
-            third:
-              "Es ist wichtig, dass Sie alle Informationen über die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir beginnen.",
-            fourth:
-              "Bitte lesen und verstehen Sie die Einwilligungserklärung sorgfältig, damit Sie über alle Aspekte der Untersuchung informiert sind.",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second:
-              "Beschreiben Sie den Prozess zum Erhalt des schriftlichen Einverständnisses des Patienten.",
-            third:
-              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung fortfahren können.",
-            fourth:
-              "Sie müssen das Einverständnisformular unterschreiben, bevor wir mit der Prozedur fortfahren können.",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second:
-              "Geben Sie abschließende Hinweise zur Nachsorge und Verhaltensweisen nach der Untersuchung, wie z.B. viel trinken zur Ausscheidung des Isotops.",
-            third:
-              "Nach der Untersuchung sollten Sie viel Wasser trinken, um das radioaktive Isotop schneller auszuscheiden.",
-            fourth:
-              "Es ist wichtig, nach der Untersuchung ausreichend Flüssigkeit zu sich zu nehmen, um die Ausscheidung des Isotops zu unterstützen.",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second:
-              "Erklären Sie, wie und wann der Patient über die Ergebnisse informiert wird und wer die Ergebnisse mit ihm bespricht.",
-            third:
-              "Sie werden in der Regel innerhalb einer Woche von Ihrem behandelnden Arzt über die Ergebnisse informiert.",
-            fourth:
-              "Die Ergebnisse der Untersuchung werden Ihnen in einem Nachgespräch mitgeteilt und erklärt.",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 73,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second:
-              "Erklären Sie, dass es sich bei der Skelettszintigraphie um eine nuklearmedizinische Untersuchung handelt, die zur Darstellung des Knochenstoffwechsels dient.",
-            third:
-              "Die Skelettszintigraphie ist eine bildgebende Methode, die den Knochenstoffwechsel darstellt und häufig zur Detektion von Knochenmetastasen verwendet wird.",
-            fourth:
-              "Es handelt sich um eine nuklearmedizinische Untersuchung, bei der ein radioaktives Isotop verwendet wird, um pathologische Veränderungen im Knochen aufzuspüren.",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second:
-              "Betonen Sie, dass wir mit dieser Untersuchung frühzeitig pathologische Veränderungen im Skelettsystem wie Metastasen, Frakturen oder Entzündungen erkennen können.",
-            third:
-              "Mit der Skelettszintigraphie können wir Metastasen, die bei konventionellen Röntgenbildern nicht sichtbar sind, frühzeitig erkennen.",
-            fourth:
-              "Diese Untersuchung ermöglicht uns die frühzeitige Erkennung von entzündlichen Veränderungen oder Stressfrakturen, die bei anderen Bildgebungsverfahren übersehen werden könnten.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Erwähnen Sie, dass die Ergebnisse der Untersuchung typische Muster wie Hot-Spots und Cold-Spots zeigen, die auf verschiedene pathologische Prozesse hinweisen.",
-            third:
-              "Ein Hot-Spot in der Skelettszintigraphie könnte auf eine metastatische Läsion oder eine frische Fraktur hinweisen.",
-            fourth:
-              "Cold-Spots können auf eine verminderte Durchblutung hinweisen, was bei einer Osteonekrose der Fall sein kann.",
-          },
-          {
-            first: "Indikationen",
-            second:
-              "Erklären Sie, dass die Indikationen für die Skelettszintigraphie unter anderem die Suche nach Knochenmetastasen, die Diagnose von Osteomyelitis und die Bewertung von Knochenfrakturen umfassen.",
-            third:
-              "Typische Indikationen umfassen die Suche nach Knochenmetastasen bei Patienten mit bekannten Primärtumoren und die Diagnose von Osteomyelitis.",
-            fourth:
-              "Wir setzen die Skelettszintigraphie auch zur Bewertung unklarer Knochen- oder Gelenkschmerzen ein, um verborgene Frakturen oder Entzündungen zu erkennen.",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Betonen Sie, dass Kontraindikationen die Schwangerschaft und Stillzeit umfassen, da die Strahlenbelastung Risiken für das ungeborene Kind und den Säugling darstellen kann.",
-            third:
-              "Bei schwangeren Frauen vermeiden wir die Skelettszintigraphie aufgrund der potenziellen Strahlenbelastung für den Fötus.",
-            fourth:
-              "Stillende Mütter sollten nach der Untersuchung für 24 Stunden abpumpen und die Milch verwerfen, um eine Strahlenexposition des Säuglings zu vermeiden.",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second:
-              "Erwähnen Sie mögliche Differenzialdiagnosen, die bei der Interpretation der Skelettszintigraphie berücksichtigt werden müssen, wie z.B. benigne Knochenveränderungen oder entzündliche Prozesse.",
-            third:
-              "Benigne Knochenveränderungen wie Enchondrome können ebenfalls Hot-Spots verursachen und sollten differenzialdiagnostisch berücksichtigt werden.",
-            fourth:
-              "Auch entzündliche Prozesse wie Arthritis können in der Szintigraphie als Hot-Spots erscheinen und müssen von malignen Veränderungen unterschieden werden.",
-          },
-          {
-            first: "Behandlungspläne",
-            second:
-              "Erklären Sie, wie die Ergebnisse der Skelettszintigraphie in die Behandlungspläne der Patienten integriert werden können, um gezielte Therapieansätze zu entwickeln.",
-            third:
-              "Bei Nachweis von Knochenmetastasen würden wir eine systemische Therapie einleiten und ggf. eine lokale Bestrahlung in Erwägung ziehen.",
-            fourth:
-              "Die Ergebnisse können auch zur Entscheidung über eine operative Versorgung von Frakturen herangezogen werden, insbesondere bei Patienten mit komplexen Verletzungen.",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second:
-              "Betonen Sie die Bedeutung der interprofessionellen Zusammenarbeit zwischen Nuklearmedizinern, Onkologen, Orthopäden und anderen Fachrichtungen zur optimalen Patientenversorgung.",
-            third:
-              "Eine enge Zusammenarbeit zwischen Nuklearmedizinern und Onkologen ist entscheidend, um die Ergebnisse der Skelettszintigraphie optimal in den Therapieplan zu integrieren.",
-            fourth:
-              "Orthopäden und Nuklearmediziner müssen bei der Interpretation der Befunde eng zusammenarbeiten, um die beste Behandlungsstrategie für den Patienten zu entwickeln.",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second:
-              "Erwähnen Sie die Rolle des Qualitätsmanagements bei der Sicherstellung der Genauigkeit und Zuverlässigkeit der Untersuchungsergebnisse.",
-            third:
-              "Regelmäßige Kalibrierung der Gamma-Kamera und Schulungen des Personals sind essenziell, um konsistente und verlässliche Ergebnisse zu gewährleisten.",
-            fourth:
-              "Qualitätsmanagement sorgt dafür, dass die Protokolle für die Durchführung und Auswertung der Skelettszintigraphie strikt eingehalten werden.",
-          },
-          {
-            first: "Dokumentation und Weiterverfolgung",
-            second:
-              "Erklären Sie die Wichtigkeit der Dokumentation der Untersuchungsergebnisse und der Weiterverfolgung der Patienten zur Überwachung des Krankheitsverlaufs und der Therapieeffekte.",
-            third:
-              "Eine sorgfältige Dokumentation der Befunde ermöglicht es uns, den Krankheitsverlauf über die Zeit zu verfolgen und Therapieanpassungen vorzunehmen.",
-            fourth:
-              "Wir dokumentieren alle Untersuchungsergebnisse detailliert, um bei Nachkontrollen und zur langfristigen Planung der Patientenbehandlung darauf zurückgreifen zu können.",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 74,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second:
-              "45-jähriger Patient ohne Beschwerden, Routinekontrolle nach einem Jahr ohne auffällige Vorgeschichte.",
-            third:
-              "60-jähriger Patient klagt über diffuse Knochenschmerzen und Gewichtsverlust. Vorgeschichte eines Prostatakarzinoms.",
-            fourth:
-              "50-jährige Patientin mit persistierenden Schmerzen und Schwellungen im rechten Bein. Keine bekannte Vorgeschichte von Knochenerkrankungen.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Skelettszintigraphie zeigt eine gleichmäßige Verteilung des Isotops ohne Anzeichen von Hot-Spots oder anderen Auffälligkeiten.",
-            third:
-              "Skelettszintigraphie zeigt multiple Hot-Spots, insbesondere in der Wirbelsäule und den Beckenknochen.",
-            fourth:
-              "Skelettszintigraphie zeigt einen ausgeprägten Hot-Spot im distalen Femur, umgeben von einer diffusen Aufnahme.",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second:
-              "Keine pathologischen Befunde; die Skelettszintigraphie unterstützt den Ausschluss von Knochenpathologien.",
-            third:
-              "Der Befund deutet auf Knochenmetastasen hin. Die Lokalisation und die Anzahl der Hot-Spots korrelieren mit der Vorgeschichte eines Prostatakarzinoms.",
-            fourth:
-              "Der ausgeprägte Hot-Spot im distalen Femur ist typisch für eine Osteomyelitis. Die diffuse Aufnahme deutet auf eine entzündliche Reaktion hin.",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second:
-              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
-            third:
-              "Die Ergebnisse sind entscheidend für die Planung einer systemischen Therapie und regelmäßiger Kontrolluntersuchungen.",
-            fourth:
-              "Wichtig für die Bestätigung der Diagnose und Einleitung einer antibiotischen Therapie sowie chirurgischer Maßnahmen, falls notwendig.",
-          },
-          {
-            first: "Diagnose",
-            second:
-              "Bestätigung des gesunden Zustandes des Skelettsystems. Keine Anzeichen für pathologische Veränderungen.",
-            third:
-              "Diagnose von Knochenmetastasen basierend auf der Skelettszintigraphie und der klinischen Vorgeschichte.",
-            fourth:
-              "Diagnose einer Osteomyelitis aufgrund der Skelettszintigraphie-Ergebnisse und der klinischen Symptomatik.",
-          },
-          {
-            first: "Visuelle Hilfsmittel",
-            second:
-              "Homogene Verteilung des Isotops ohne Auffälligkeiten in allen Bereichen des Skelettsystems.",
-            third:
-              "Skelettszintigraphie-Aufnahmen zeigen multiple Hot-Spots in der Wirbelsäule und den Beckenknochen.",
-            fourth:
-              "Skelettszintigraphie-Bilder zeigen einen ausgeprägten Hot-Spot im distalen Femur mit diffuser Aufnahme um die Läsion herum.",
-          },
-          {
-            first: "Fallabschluss",
-            second:
-              "Wir empfehlen, dass der Patient regelmäßig zu Routinekontrollen erscheint, um den gesunden Zustand zu überwachen.",
-            third:
-              "Sie sollten die Diagnose mit dem Onkologen besprechen und eine systemische Therapie planen. Regelmäßige Kontrolluntersuchungen sind erforderlich, um den Krankheitsverlauf zu überwachen.",
-            fourth:
-              "Wir empfehlen, dass Sie die Diagnose mit dem Orthopäden und Infektiologen besprechen, um die antibiotische Therapie und gegebenenfalls chirurgische Maßnahmen zu planen.",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 75,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: " ",
-        text_list: [
-          {
-            bold: "Gamma-Kamera",
-            other:
-              "Besteht aus einem Kollimator, einem Szintillationskristall und Photomultiplier-Röhren. Erfasst die von den radioaktiven Isotopen ausgesendete Gammastrahlung, die sich in den Knochen anreichern.",
-          },
-          {
-            bold: "Radioaktive Isotope",
-            other:
-              "Am häufigsten wird Technetium-99m verwendet. Wird dem Patienten intravenös injiziert und reichert sich in Bereichen mit hohem Knochenstoffwechsel an.",
-          },
-          {
-            bold: "Kollimator",
-            other:
-              "Ein Gerät, das nur Gammastrahlen aus bestimmten Winkeln durchlässt, um die Bildauflösung zu verbessern. Hilft dabei, die Richtung der einfallenden Gammastrahlen zu bestimmen und unerwünschte Strahlung zu blockieren.",
-          },
-          {
-            bold: "Szintillationskristall",
-            other:
-              "Wandelt die Gammastrahlen in Lichtblitze um. Typischerweise aus Natriumjodid (NaI) hergestellt.",
-          },
-          {
-            bold: "Photomultiplier-Röhren",
-            other:
-              "Verstärken die Lichtblitze, die vom Szintillationskristall erzeugt werden. Wandeln das Licht in elektrische Signale um, die dann zur Bildgebung verwendet werden.",
-          },
-          {
-            bold: "Patiententisch",
-            other:
-              "Ist motorisiert und kann in die richtige Position für die Untersuchung bewegt werden. Der Patient liegt während der Untersuchung auf diesem Tisch.",
-          },
-          {
-            bold: "Arbeitsstation",
-            other:
-              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Nuklearmediziner oder radiologische Technologe steuert von hier aus die Untersuchung und verarbeitet die Bilder.",
-          },
-          {
-            bold: "Kontrastmittelinjektor (optional)",
-            other:
-              "In bestimmten Fällen kann ein Kontrastmittel verwendet werden, um die Sichtbarkeit bestimmter Strukturen zu verbessern. Wird intravenös verabreicht.",
-          },
-          {
-            bold: "Steuerkonsole",
-            other:
-              "Ermöglicht dem Technologen, das Skelettszintigraphie-Gerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scanning-Prozess zu überwachen.",
-          },
-          {
-            bold: "Kühlungssystem",
-            other:
-              "Hält die empfindlichen Komponenten des Geräts auf einer optimalen Betriebstemperatur. Verhindert Überhitzung und sichert eine gleichbleibende Bildqualität.",
-          },
-          {
-            bold: "Software zur Bildrekonstruktion",
-            other:
-              "Verarbeitet die erfassten Daten und rekonstruiert daraus die Bilder des Skelettsystems. Ermöglicht die Erstellung von 2D- und 3D-Bildern zur besseren Diagnose.",
-          },
-          {
-            bold: "Sprachkommunikationssystem",
-            other:
-              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
-          },
-          {
-            bold: "Multidetektor-Technologie",
-            other:
-              "Moderne Skelettszintigraphie-Geräte sind oft mit Multidetektoren ausgestattet. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 76,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im Bereich der Skelettszintigraphie -Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
-        text_list: [
-          {
-            bold: "Skelettszintigraphie",
-            other:
-              "Ein nuklearmedizinisches Bildgebungsverfahren zur Darstellung des Knochenstoffwechsels.",
-          },
-          {
-            bold: "Gamma-Kamera",
-            other:
-              "Gerät zur Erfassung der Gammastrahlung, die von den radioaktiven Isotopen ausgesendet wird.",
-          },
-          {
-            bold: "Technetium-99m (Tc-99m)",
-            other:
-              "Das häufig verwendete radioaktive Isotop in der Skelettszintigraphie.",
-          },
-          {
-            bold: "Hot-Spot",
-            other:
-              "Bereich mit erhöhter Aufnahme des Isotops, deutet auf erhöhten Knochenstoffwechsel hin.",
-          },
-          {
-            bold: "Cold-Spot",
-            other:
-              "Bereich mit verminderter Aufnahme des Isotops, deutet auf reduzierten Knochenstoffwechsel hin.",
-          },
-          {
-            bold: "Kollimator",
-            other:
-              "Gerät zur Begrenzung und Ausrichtung der einfallenden Gammastrahlen auf die Gamma-Kamera.",
-          },
-          {
-            bold: "Szintillationskristall",
-            other: "Wandelt Gammastrahlen in Lichtblitze um.",
-          },
-          {
-            bold: "Photomultiplier-Röhren",
-            other:
-              "Verstärken die Lichtblitze und wandeln sie in elektrische Signale um.",
-          },
-          {
-            bold: "Intravenöse Injektion",
-            other:
-              "Methode zur Verabreichung des radioaktiven Isotops in die Blutbahn.",
-          },
-          {
-            bold: "Radioaktive Tracer",
-            other:
-              "Stoffe, die radioaktive Isotope enthalten und sich im Körper anreichern.",
-          },
-          {
-            bold: "Metastasen",
-            other:
-              "Tumorabsiedlungen in den Knochen, häufige Indikation für eine Skelettszintigraphie.",
-          },
-          {
-            bold: "Osteomyelitis",
-            other:
-              "Knochenentzündung, die mittels Skelettszintigraphie diagnostiziert werden kann.",
-          },
-          {
-            bold: "Frakturen",
-            other:
-              "Knochenbrüche, die durch erhöhte Isotopenaufnahme sichtbar gemacht werden können.",
-          },
-          {
-            bold: "Knochenstoffwechsel",
-            other: "Prozess des Auf- und Abbaus von Knochengewebe.",
-          },
-          {
-            bold: "Patiententisch",
-            other:
-              "Motorisierter Tisch, auf dem der Patient während der Untersuchung liegt.",
-          },
-          {
-            bold: "Arbeitsstation",
-            other:
-              "Computer und Monitore zur Steuerung und Auswertung der Untersuchung.",
-          },
-          {
-            bold: "Kontrastmittel",
-            other:
-              "Substanz, die die Bildgebung bestimmter Strukturen im Körper verbessert.",
-          },
-          {
-            bold: "Steuerkonsole",
-            other:
-              "Bedieneinheit zur Steuerung des Skelettszintigraphie-Geräts.",
-          },
-          {
-            bold: "Radiologischer Technologe",
-            other:
-              "Fachperson, die die Untersuchung durchführt und das Gerät bedient.",
-          },
-          {
-            bold: "Nuklearmediziner",
-            other:
-              "Arzt, der auf die Anwendung von radioaktiven Substanzen zu diagnostischen und therapeutischen Zwecken spezialisiert ist.",
-          },
-          {
-            bold: "Bildrekonstruktion",
-            other:
-              "Softwaregestützte Erstellung von 2D- und 3D-Bildern aus den gesammelten Daten.",
-          },
-          {
-            bold: "Diagnostische Genauigkeit",
-            other:
-              "Maß für die Fähigkeit der Untersuchung, korrekte Diagnosen zu stellen.",
-          },
-        ],
-      },
-      {
-        id: 77,
-        title: "Links",
-        text: "",
-        text_list: [
-          {
-            bold_link:
-              "https://www.praktischarzt.de/diagnostik/knochenszintigraphie/",
-            bold: "practischArzt",
-            other:
-              " bietet detaillierte Informationen über die Durchführung der Knochenszintigraphie, einschließlich Vorbereitung, Dauer und mögliche Risiken.",
-          },
-          {
-            bold_link:
-              "https://www.apotheken-umschau.de/diagnostik/szintigrafie",
-            bold: "Apotheken Umschau",
-            other:
-              " beschreibt, wie eine Knochenszintigraphie durchgeführt wird, und bietet ein Video zur besseren Verständigung der Prozedur.",
-          },
-          {
-            bold_link:
-              "https://www.radiologie.de/leistungen/skelettszintigraphie",
-            bold: "Radiologie.de",
-            other:
-              " erklärt, wie mit der Skelettszintigraphie aktive Veränderungen im Knochen festgestellt werden können, besonders für die Diagnose von Entzündungen und Metastasen.",
-          },
-          {
-            bold_link:
-              "https://nuklearmedizin.mri.tum.de/leistungen/skelettszintigraphie",
-            bold: "Nuklearmedizin - Klinikum rechts der Isar",
-            other:
-              " beschreibt den Prozess der Skelettszintigraphie detailliert, einschließlich Vorbereitung, Durchführung und Dauer der Untersuchung.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/szintigrafie/",
-            bold: "NetDoktor.de",
-            other:
-              " bietet umfassende Informationen über verschiedene Formen der Szintigraphie, einschließlich der Skelettszintigraphie, und deren Indikationen, Risiken und Vorteile.",
-          },
-          {
-            bold_link:
-              "https://www.medizin.uni-tuebingen.de/kliniken/nuklearmedizin/leistungen/skelettszintigraphie",
-            bold: "Universitätsklinikum Tübingen",
-            other:
-              " liefert Informationen über die Durchführung der Skelettszintigraphie in der Klinik, die Vorbereitung der Patienten und die notwendigen Maßnahmen nach der Untersuchung.",
-          },
-          {
-            bold_link: "https://flexikon.doccheck.com/de/Skelettszintigraphie",
-            bold: "DocCheck Flexikon",
-            other:
-              " bietet eine umfassende Definition der Skelettszintigraphie, einschließlich Indikationen, Durchführung und Interpretation der Ergebnisse.",
-          },
-          {
-            bold_link: "https://www.amboss.com/de",
-            bold: "Amboss",
-            other:
-              " beschreibt detailliert die Indikationen, Kontraindikationen, Durchführung und Interpretation der Skelettszintigraphie.",
-          },
-        ],
-      },
-
-      {
-        id: 78,
-        title: "PDF",
-        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
-      },
-    ],
-  },
-  // end of parent tab 8
-  {
-    id: 10,
-    title: "Schilddrüsen-Szintigraphie",
-    checked: false,
-    childTabs: [
-      // 1tab
-      {
-        id: 79,
-        title: "Einleitung",
-        list: [
-          {
-            title: "Einleitung",
-            items: [
-              {
-                bold_text: "Ziel und Kontext:",
-                text: "Das Hauptziel der Schilddrüsen-Szintigraphie besteht darin, Funktionsstörungen der Schilddrüse zu diagnostizieren und morphologische Veränderungen zu erkennen. Dabei wird die Verteilung eines radioaktiven Tracers in der Schilddrüse visuell dargestellt.",
-              },
-              {
-                bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Die Schilddrüsen-Szintigraphie ist von großer Bedeutung für die Diagnose von Schilddrüsenerkrankungen wie Hyperthyreose, Knoten und Krebs. Sie findet Anwendung in der Differenzialdiagnose von Schilddrüsenknoten, der Beurteilung der Schilddrüsenfunktion und der Überwachung von Schilddrüsenkrebs.",
-              },
-            ],
-          },
-          {
-            title: "Grundprinzipien",
-            items: [
-              {
-                bold_text: "Theoretische Grundlagen:",
-                text: "Das Verfahren basiert auf der Aufnahme von radioaktiven Isotopen durch die Schilddrüse. Typischerweise werden Technetium-99m oder Iod-123 verwendet, da diese Isotope von der Schilddrüse aufgenommen und gespeichert werden.",
-              },
-              {
-                bold_text: "Technische Aspekte:",
-                text: "Nach der intravenösen Injektion des radioaktiven Tracers wird eine Gammakamera verwendet, um die emittierte Strahlung zu detektieren und ein Bild der Schilddrüse zu erzeugen. Die Untersuchung dauert etwa 20-30 Minuten und erfordert keine speziellen Vorbereitungen des Patienten.",
-              },
-            ],
-          },
-          {
-            title: "Interpretation",
-            items: [
-              {
-                bold_text: "Auswertung und Interpretation:",
-                text: 'Die Auswertung der Schilddrüsen-Szintigraphie erfolgt durch die Beurteilung der Verteilung des Tracers in der Schilddrüse. Bereiche mit erhöhter Aktivität ("heiße Knoten") können auf eine Überfunktion hinweisen, während Bereiche mit verminderter Aktivität ("kalte Knoten") auf Hypofunktion oder maligne Veränderungen hindeuten können.',
-              },
-              {
-                bold_text: "Typische Befunde:",
-                text: "Zu den typischen Befunden zählen diffuse Vergrößerungen, fokale Knoten und unregelmäßige Verteilungen des Tracers, die auf unterschiedliche pathologische Zustände hinweisen können.",
-              },
-            ],
-          },
-          {
-            title: "Risiken und Vorteile",
-            items: [
-              {
-                bold_text: "Vorteile:",
-                text: "Ein wesentlicher Vorteil der Schilddrüsen-Szintigraphie ist ihre nicht-invasive Natur, die es ermöglicht, detaillierte Informationen über die Schilddrüsenfunktion zu erhalten, ohne einen chirurgischen Eingriff vornehmen zu müssen. Außerdem ist die Strahlenbelastung durch das Verfahren gering, was es zu einer sicheren Option für viele Patienten macht. Die hohe Sensitivität der Szintigraphie erlaubt es, funktionelle Veränderungen der Schilddrüse frühzeitig zu erkennen und entsprechend zu behandeln.",
-              },
-              {
-                bold_text: "Nachteile:",
-                text: "Zu den Nachteilen der Schilddrüsen-Szintigraphie gehört die begrenzte Verfügbarkeit der notwendigen Ausrüstung und Tracer in einigen Regionen, was den Zugang zu diesem diagnostischen Verfahren einschränken kann. Darüber hinaus kann es bei einigen Patienten zu allergischen Reaktionen auf den verwendeten Tracer kommen, obwohl dies selten ist.",
-              },
-              {
-                bold_text: "Risiken:",
-                text: "Die Risiken der Schilddrüsen-Szintigraphie sind minimal, umfassen jedoch die geringe Strahlenexposition, die mit der Injektion des radioaktiven Tracers verbunden ist. Diese Strahlenbelastung ist jedoch deutlich niedriger als bei vielen anderen bildgebenden Verfahren. Seltene allergische Reaktionen auf den Tracer können auftreten, die jedoch in der Regel mild und gut behandelbar sind.",
-              },
-            ],
-          },
-          {
-            title: "Klinische Bedeutung",
-            items: [
-              {
-                bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "Die Schilddrüsen-Szintigraphie spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Schilddrüsenerkrankungen. Sie liefert wichtige Informationen zur Funktionsbewertung und trägt zur Entscheidung über therapeutische Maßnahmen bei.",
-              },
-              {
-                bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "Durch die präzise Bestimmung der Schilddrüsenfunktion und -morphologie kann die Szintigraphie das Management und die Prognose von Patienten mit Schilddrüsenerkrankungen erheblich verbessern.",
-              },
-            ],
-          },
-          {
-            title: "Alternativen",
-            items: [
-              {
-                bold_text:
-                  "Alternative Verfahren zur Schilddrüsen-Szintigraphie umfassen Ultraschall, Feinnadelbiopsie und Bluttests zur Bestimmung der Schilddrüsenhormone. Diese Methoden können ergänzend oder alternativ eingesetzt werden, je nach klinischer Fragestellung.",
-                text: "",
-              },
-            ],
-          },
-          {
-            title: "Neueste Forschung",
-            items: [
-              {
-                bold_text: "Aktuelle Erkenntnisse:",
-                text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der Tracer und Bildgebungstechnologien, um die diagnostische Genauigkeit und Sicherheit zu erhöhen.",
-              },
-              {
-                bold_text: "Zukünftige Perspektiven:",
-                text: "Zukünftige Entwicklungen könnten die Einführung neuer Tracer und fortschrittlicherer Bildgebungstechniken umfassen, die eine noch detailliertere Beurteilung der Schilddrüsenfunktion ermöglichen.",
-              },
-            ],
-          },
-          {
-            title: "Fazit",
-            items: [
-              {
-                bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "Die Schilddrüsen-Szintigraphie ist ein wesentliches diagnostisches Werkzeug zur Beurteilung von Schilddrüsenerkrankungen, das durch seine nicht-invasive Natur und hohe diagnostische Genauigkeit überzeugt.",
-              },
-              {
-                bold_text: "Gesamtbedeutung:",
-                text: "Ihre Rolle in der modernen Medizin ist unbestritten, und kontinuierliche Forschungsbemühungen tragen dazu bei, ihre Anwendungsmöglichkeiten und diagnostische Leistungsfähigkeit weiter zu verbessern.",
-              },
-            ],
-          },
-        ],
-      },
-      // 2tab
-      {
-        id: 80,
-        title: "Patient-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Ziel der Untersuchung",
-            second:
-              "Erklären Sie, dass die Schilddrüsen-Szintigraphie zur Beurteilung der Schilddrüsenfunktion und zur Unterscheidung zwischen kalten und heißen Knoten dient.",
-            third:
-              "„Wir möchten herausfinden, ob Ihre Schilddrüse über- oder unteraktiv ist und ob Knoten vorhanden sind, die weiter untersucht werden müssen.“",
-            fourth:
-              "„Die Untersuchung hilft uns, festzustellen, ob ein Knoten in Ihrer Schilddrüse gutartig oder bösartig sein könnte.“",
-          },
-          {
-            first: "Ablauf",
-            second:
-              "Beschreiben Sie den Ablauf: Verabreichung eines radioaktiven Stoffes per Injektion, Wartezeit, anschließende Bildaufnahme der Schilddrüse mit einer Gamma-Kamera.",
-            third:
-              "„Sie erhalten eine kleine Menge eines radioaktiven Stoffes über eine Injektion. Nach etwa 20 Minuten machen wir mit einer speziellen Kamera Bilder Ihrer Schilddrüse.“",
-            fourth:
-              "„Nach der Injektion des Radiopharmakons müssen Sie etwa 20 Minuten warten. Danach erstellen wir mit einer Gamma-Kamera Bilder, die die Funktion Ihrer Schilddrüse zeigen.“",
-          },
-          {
-            first: "Vorbereitung",
-            second:
-              "Weisen Sie auf die Vorbereitung hin: Nüchternheit am Untersuchungstag und Absetzen bestimmter Medikamente nach Absprache mit dem Arzt.",
-            third:
-              "„Bitte kommen Sie nüchtern zur Untersuchung und setzen Sie Ihre Schilddrüsenmedikamente drei Tage vorher ab.“",
-            fourth:
-              "„Es ist wichtig, dass Sie am Tag der Untersuchung nichts essen und bestimmte Medikamente, wie Jodtabletten, vorher absetzen.“",
-          },
-          {
-            first: "Risiken",
-            second:
-              "Informieren Sie über die Risiken: Minimale Strahlenexposition und sehr seltene allergische Reaktionen auf das Radiopharmakon.",
-            third:
-              "„Die Strahlenbelastung ist sehr gering und vergleichbar mit einer Röntgenaufnahme. Allergische Reaktionen sind äußerst selten.“",
-            fourth:
-              "„Die Risiken sind minimal. Es gibt eine sehr geringe Strahlenexposition und das Risiko einer allergischen Reaktion ist sehr niedrig.“",
-          },
-          {
-            first: "Vorteile",
-            second:
-              "Stellen Sie die Vorteile dar: Nicht-invasive, schmerzlose Methode, die wichtige funktionelle Informationen über die Schilddrüse liefert.",
-            third:
-              "„Die Methode ist schmerzlos und liefert uns wertvolle Informationen über die Funktion Ihrer Schilddrüse.“",
-            fourth:
-              "„Dieses Verfahren ist nicht-invasiv und hilft uns, genaue Daten über Ihre Schilddrüsenaktivität zu erhalten.“",
-          },
-          {
-            first: "Alternativen",
-            second:
-              "Erwähnen Sie Alternativen: Ultraschall der Schilddrüse für anatomische Informationen, Feinnadelaspiration zur zytologischen Untersuchung von Schilddrüsenknoten.",
-            third:
-              "„Eine Alternative wäre ein Ultraschall, der uns aber keine funktionellen Informationen liefert.“",
-            fourth:
-              "„Wir könnten auch eine Feinnadelaspiration durchführen, um Zellen aus einem Knoten zu untersuchen.“",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Nennen Sie die Kontraindikationen: Schwangerschaft, Stillzeit und bekannte Allergien gegen das verwendete Radiopharmakon.",
-            third:
-              "„Diese Untersuchung ist nicht geeignet für Schwangere und stillende Frauen.“",
-            fourth:
-              "„Wenn Sie schwanger sind oder stillen, sollten Sie diese Untersuchung nicht durchführen lassen.“",
-          },
-          {
-            first: "Mögliche Ergebnisse",
-            second:
-              "Erläutern Sie mögliche Ergebnisse: Identifikation von kalten Knoten (weniger aktiv) und heißen Knoten (stärker aktiv), die auf verschiedene Schilddrüsenkrankheiten hinweisen.",
-            third:
-              "„Wir könnten kalte Knoten finden, die weniger aktiv sind und weitere Untersuchungen benötigen.“",
-            fourth:
-              "„Heiße Knoten zeigen eine erhöhte Aktivität und könnten auf eine Schilddrüsenüberfunktion hinweisen.“",
-          },
-          {
-            first: "Wichtigkeit des Einverständnisses",
-            second:
-              "Betonen Sie die Notwendigkeit: Der Patient muss umfassend über Ablauf, Risiken und Nutzen der Untersuchung informiert werden und schriftlich einwilligen.",
-            third:
-              "„Es ist wichtig, dass Sie die Untersuchung und die damit verbundenen Risiken verstehen, bevor wir Ihre Zustimmung einholen.“",
-            fourth:
-              "„Wir benötigen Ihre schriftliche Einwilligung, nachdem wir Sie ausführlich über den Ablauf und die möglichen Risiken informiert haben.“",
-          },
-          {
-            first: "Erhalt des Einverständnisses",
-            second:
-              "Beschreiben Sie den Prozess der Einwilligung: Schriftliche Zustimmung des Patienten nach ausführlicher Aufklärung durch den Arzt.",
-            third:
-              "„Nach der Aufklärung durch den Arzt unterschreiben Sie bitte das Einverständnisformular.“",
-            fourth:
-              "„Sie erhalten alle notwendigen Informationen und geben dann schriftlich Ihre Zustimmung zur Untersuchung.“",
-          },
-          {
-            first: "Abschließende Hinweise",
-            second:
-              "Geben Sie abschließende Anweisungen: Patient sollte nach der Untersuchung viel Flüssigkeit trinken und sich bei Fragen oder Beschwerden an seinen Arzt wenden.",
-            third:
-              "„Bitte trinken Sie nach der Untersuchung viel Wasser, um den radioaktiven Stoff schneller aus Ihrem Körper zu entfernen.“",
-            fourth:
-              "„Falls Sie nach der Untersuchung Fragen haben oder sich unwohl fühlen, kontaktieren Sie bitte umgehend Ihren Arzt.“",
-          },
-          {
-            first: "Information über Ergebnisse",
-            second:
-              "Erklären Sie die Ergebnisbesprechung: Der Arzt erläutert dem Patienten die Befunde der Untersuchung, deren Bedeutung und die empfohlenen nächsten Schritte.",
-            third:
-              "„Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und wir planen die weiteren Schritte.“",
-            fourth:
-              "„Wir erklären Ihnen, was die Befunde bedeuten und welche Behandlungen oder Untersuchungen eventuell folgen sollten.“",
-          },
-        ],
-      },
-      // 3tab
-      {
-        id: 81,
-        title: "Arzt-Arzt Gespräch",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Was man machen soll" },
-          {
-            name: "third",
-            visualText: "Beispiel 1: Was man sagen kann",
-          },
-          {
-            name: "fourth",
-            visualText: "Beispiel 2: Was man sagen kann",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Was ist eigentlich die angegebene Untersuchung",
-            second:
-              "Erklären Sie, dass die Schilddrüsen-Szintigraphie eine nuklearmedizinische Bildgebungstechnik ist, die zur Beurteilung der Schilddrüsenfunktion und zur Identifikation von Knoten eingesetzt wird.",
-            third:
-              "„Die Schilddrüsen-Szintigraphie ist ein bildgebendes Verfahren, bei dem radioaktive Substanzen verwendet werden, um die Funktion der Schilddrüse darzustellen.“",
-            fourth:
-              "„Dieses Verfahren nutzt ein Radiopharmakon und eine Gamma-Kamera, um die Aktivität und Struktur der Schilddrüse zu visualisieren.“",
-          },
-          {
-            first: "Was können wir damit untersuchen",
-            second:
-              "Betonen Sie, dass die Untersuchung die funktionelle Aktivität der Schilddrüse visualisiert und zwischen kalten und heißen Knoten unterscheidet, was für die Diagnose von Schilddrüsenerkrankungen entscheidend ist.",
-            third:
-              "„Wir können damit die Aktivität der Schilddrüse messen und feststellen, ob Knoten über- oder unteraktiv sind.“",
-            fourth:
-              "„Es ermöglicht uns, funktionsgestörte Bereiche der Schilddrüse zu identifizieren und zu beurteilen.“",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Erläutern Sie die typischen Befunde wie kalte Knoten, die auf Hypofunktion oder Malignität hinweisen können, und heiße Knoten, die auf Hyperfunktion hinweisen, wie bei autonomen Adenomen oder Morbus Basedow.",
-            third:
-              "„Ein kalter Knoten könnte auf eine Zyste oder ein Karzinom hinweisen, während ein heißer Knoten auf ein autonomes Adenom hindeuten kann.“",
-            fourth:
-              "„Die Untersuchung kann heiße Knoten zeigen, die oft gutartig sind, oder kalte Knoten, die weiter abgeklärt werden müssen.“",
-          },
-          {
-            first: "Indikationen",
-            second:
-              "Nennen Sie die Indikationen: Unklare Schilddrüsenknoten, Verdacht auf Schilddrüsenfunktionsstörungen (Hyperthyreose oder Hypothyreose), Abklärung einer Struma.",
-            third:
-              "„Typische Indikationen sind unklare Knoten, Verdacht auf Hyperthyreose oder eine vergrößerte Schilddrüse.“",
-            fourth:
-              "„Wir setzen die Szintigraphie bei Verdacht auf Funktionsstörungen oder zur Abklärung von Schilddrüsenknoten ein.“",
-          },
-          {
-            first: "Kontraindikationen",
-            second:
-              "Erwähnen Sie die Kontraindikationen: Schwangerschaft, Stillzeit, bekannte Allergien gegen das Radiopharmakon.",
-            third:
-              "„Kontraindikationen umfassen Schwangerschaft und Stillzeit sowie bekannte Allergien gegen das Radiopharmakon.“",
-            fourth:
-              "„Die Untersuchung ist kontraindiziert bei Schwangeren und bei Patienten mit kürzlich erfolgter Gabe von jodhaltigen Kontrastmitteln.“",
-          },
-          {
-            first: "Differenzialdiagnosen",
-            second:
-              "Besprechen Sie Differenzialdiagnosen: Knoten können gutartig (z.B. Zysten, Adenome) oder bösartig (Karzinome) sein; funktionelle Störungen wie Morbus Basedow oder Hashimoto-Thyreoiditis sollten ebenfalls berücksichtigt werden.",
-            third:
-              "„Differenzialdiagnosen umfassen gutartige Knoten wie Zysten und Adenome sowie bösartige Tumoren.“",
-            fourth:
-              "„Wir müssen auch an funktionelle Störungen wie Morbus Basedow oder eine Thyreoiditis denken.“",
-          },
-          {
-            first: "Behandlungspläne",
-            second:
-              "Diskutieren Sie die möglichen Behandlungspläne: Abhängig von den Befunden könnten eine medikamentöse Therapie, Radiojodtherapie oder chirurgische Intervention erforderlich sein.",
-            third:
-              "„Abhängig vom Ergebnis könnte eine medikamentöse Therapie, eine Radiojodtherapie oder eine Operation notwendig sein.“",
-            fourth:
-              "„Für kalte Knoten könnte eine Operation erforderlich sein, während heiße Knoten oft medikamentös behandelt werden.“",
-          },
-          {
-            first: "Interprofessionelle Zusammenarbeit",
-            second:
-              "Betonen Sie die Wichtigkeit der Zusammenarbeit zwischen Endokrinologen, Nuklearmedizinern, Chirurgen und Hausärzten.",
-            third:
-              "„Die enge Zusammenarbeit zwischen Endokrinologen und Nuklearmedizinern ist entscheidend für eine präzise Diagnostik und Therapie.“",
-            fourth:
-              "„Chirurgen und Endokrinologen müssen bei der Entscheidungsfindung eng kooperieren.“",
-          },
-          {
-            first: "Qualitätsmanagement",
-            second:
-              "Erklären Sie die Notwendigkeit eines kontinuierlichen Qualitätsmanagements, um die Genauigkeit der Diagnoseverfahren und die Patientensicherheit zu gewährleisten.",
-            third:
-              "„Regelmäßige Kalibrierung der Geräte und Fortbildung des Personals sind essenziell für eine hohe Diagnosesicherheit.“",
-            fourth:
-              "„Ein umfassendes Qualitätsmanagementsystem hilft uns, die Genauigkeit und Sicherheit der Untersuchungen zu gewährleisten.“",
-          },
-          {
-            first: "Dokumentation und Weiterverfolgung",
-            second:
-              "Heben Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der anschließenden Nachverfolgung hervor, um eine angemessene Behandlung und Überwachung der Patienten zu gewährleisten.",
-            third:
-              "„Eine gründliche Dokumentation der Ergebnisse und regelmäßige Nachkontrollen sind wichtig, um den Behandlungserfolg zu überwachen.“",
-            fourth:
-              "„Die Ergebnisse müssen genau dokumentiert und die Patienten in regelmäßigen Abständen nachuntersucht werden.“",
-          },
-        ],
-      },
-      // 4tab
-      {
-        id: 82,
-        title: "Die pathologische Befunden und Normalbefund",
-        tableColumns: [
-          { name: "first", visualText: "" },
-          { name: "second", visualText: "Normaler Befund" },
-          {
-            name: "third",
-            visualText: "Erster Pathologischer Befund",
-          },
-          {
-            name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
-          },
-        ],
-        tableRows: [
-          {
-            first: "Einführung in den klinischen Fall",
-            second:
-              "35-jähriger Patient ohne Beschwerden, Routinekontrolle, keine Auffälligkeiten in der Schilddrüsenfunktion.",
-            third:
-              "50-jähriger Patient mit einem tastbaren Knoten in der Schilddrüse und allgemeiner Müdigkeit.",
-            fourth:
-              "40-jährige Patientin klagt über Herzrasen, Gewichtsverlust und Nervosität.",
-          },
-          {
-            first: "Ergebnisse der Untersuchung",
-            second:
-              "Homogene Verteilung des Radiopharmakons in der Schilddrüse, keine Knoten oder Auffälligkeiten erkennbar.",
-            third:
-              "Szintigraphie zeigt einen kalten Knoten im rechten Schilddrüsenlappen, der kein Radiopharmakon aufnimmt.",
-            fourth:
-              "Szintigraphie zeigt einen heißen Knoten im linken Schilddrüsenlappen, der vermehrt Radiopharmakon aufnimmt.",
-          },
-          {
-            first: "Interpretation der Ergebnisse",
-            second:
-              "Keine pathologischen Befunde; das Ergebnis zeigt eine normale, gleichmäßige Schilddrüsenfunktion ohne Knoten.",
-            third:
-              "Der kalte Knoten könnte auf eine Zyste, ein Adenom oder ein Karzinom hinweisen und erfordert weitere Abklärung, eventuell eine Feinnadelbiopsie.",
-            fourth:
-              "Der heiße Knoten deutet auf ein autonomes Adenom hin, das oft gutartig ist, aber eine Hyperthyreose verursachen kann.",
-          },
-          {
-            first: "Integration in die Patientenversorgung",
-            second:
-              "Der Befund dient der Beruhigung des Patienten und der Bestätigung der normalen Schilddrüsenfunktion.",
-            third:
-              "Der Befund erfordert eine weiterführende Diagnostik wie Ultraschall und Biopsie, um die Art des Knotens zu bestimmen.",
-            fourth:
-              "Wichtig für die Bestätigung der Diagnose einer Hyperthyreose und Einleitung einer entsprechenden Therapie, wie z.B. Radiojodtherapie.",
-          },
-          {
-            first: "Diagnose",
-            second:
-              "Bestätigung der normalen Schilddrüsenfunktion ohne pathologische Veränderungen.",
-            third:
-              "Diagnose eines kalten Knotens in der Schilddrüse mit Verdacht auf Zyste, Adenom oder Karzinom basierend auf Szintigraphie-Ergebnissen und klinischem Bild.",
-            fourth:
-              "Diagnose eines heißen Knotens, vermutlich ein autonomes Adenom, das eine Hyperthyreose verursacht.",
-          },
-          {
-            first: "Visuelle Hilfsmittel",
-            second:
-              "Gleichmäßige Verteilung des Radiopharmakons ohne Auffälligkeiten in der gesamten Schilddrüse.",
-            third:
-              "Szintigraphie zeigt eine abgegrenzte, inaktive Region im rechten Schilddrüsenlappen.",
-            fourth:
-              "Szintigraphie zeigt eine deutlich hyperaktive Region im linken Schilddrüsenlappen.",
-          },
-          {
-            first: "Fallabschluss",
-            second:
-              "Wir empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um die normale Schilddrüsenfunktion weiterhin zu bestätigen.",
-            third:
-              "Es ist ratsam, eine weiterführende Diagnostik durchzuführen, wie Ultraschall und Biopsie, um die Art des kalten Knotens genauer zu bestimmen.",
-            fourth:
-              "Wir empfehlen die Einleitung einer Therapie, wie z.B. Radiojodtherapie, um die Hyperthyreose zu behandeln und weitere Symptome zu vermeiden.",
-          },
-        ],
-      },
-      // 5tab
-      {
-        id: 83,
-        title: "Gerätbeschreibung",
-        img: child_tab_img_1,
-        text: "Ein Schilddrüsenszintigraphiegerät ist ein spezialisiertes medizinisches Bildgebungsgerät, das zur Beurteilung der Funktion und Morphologie der Schilddrüse verwendet wird. Hier sind die wesentlichen Komponenten und Funktionen eines Schilddrüsenszintigraphiegeräts:",
-        text_list: [
-          {
-            bold: "Gammakamera :",
-            other:
-              "Die Gammakamera ist das zentrale Element des Szintigraphiegeräts. Sie erfasst die vom radioaktiven Tracer emittierte Gammastrahlung, die von der Schilddrüse aufgenommen wird. Die Kamera besteht aus einem Kollimator, einem Szintillator und Photomultiplier-Röhren, die zusammenarbeiten, um die Strahlung in elektrische Signale umzuwandeln und Bilder zu erzeugen.",
-          },
-          {
-            bold: "Radioaktiver Tracer :",
-            other:
-              "Für die Schilddrüsenszintigraphie werden üblicherweise radioaktive Isotope wie Technetium-99m oder Iod-123 verwendet. Diese Tracer werden dem Patienten intravenös injiziert und reichern sich in der Schilddrüse an, wo sie Strahlung aussenden, die von der Gammakamera erfasst wird.",
-          },
-          {
-            bold: "Patiententisch :",
-            other:
-              "Der Patiententisch ist motorisiert und kann vertikal und horizontal bewegt werden, um den Patienten in die optimale Position für die Bildgebung zu bringen. Der Patient liegt während der Untersuchung auf diesem Tisch.",
-          },
-          {
-            bold: "Arbeitsstation :",
-            other:
-              "Die Arbeitsstation besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder der radiologische Technologe steuert von hier aus die Untersuchung und bewertet die Ergebnisse.",
-          },
-          {
-            bold: "Kollimator :",
-            other:
-              "Der Kollimator ist ein Teil der Gammakamera, der nur Strahlung in bestimmten Winkeln durchlässt. Er verbessert die Bildqualität, indem er Streustrahlung reduziert und die räumliche Auflösung erhöht.",
-          },
-          {
-            bold: "Szintillator :",
-            other:
-              "Der Szintillator ist ein Material innerhalb der Gammakamera, das die Gammastrahlen in sichtbares Licht umwandelt. Dieses Licht wird dann von den Photomultiplier-Röhren erfasst und in elektrische Signale umgewandelt.",
-          },
-          {
-            bold: "Photomultiplier-Röhren :",
-            other:
-              "Diese Röhren verstärken die vom Szintillator erzeugten Lichtsignale und wandeln sie in elektrische Signale um, die zur Erstellung der Bilder verwendet werden.",
-          },
-          {
-            bold: "Steuerkonsole :",
-            other:
-              "Die Steuerkonsole ermöglicht dem Technologen, das Szintigraphiegerät zu bedienen, Untersuchungseinstellungen vorzunehmen und den Scan-Prozess zu überwachen. Hier können Parameter wie die Dauer der Bildaufnahme und die Position des Patienten eingestellt werden.",
-          },
-          {
-            bold: "Kühlungssystem :",
-            other:
-              "Ein Kühlsystem ist notwendig, um die elektronischen Komponenten des Szintigraphiegeräts zu kühlen und eine Überhitzung zu verhindern. Dies gewährleistet eine stabile und zuverlässige Bildgebung.",
-          },
-          {
-            bold: "Sprachkommunikationssystem :",
-            other:
-              "Ein Sprachkommunikationssystem ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist wichtig, um die korrekte Positionierung des Patienten sicherzustellen und Anweisungen während der Untersuchung zu geben.",
-          },
-          {
-            bold: "Multidetektor-Szintigraphie :",
-            other:
-              "Moderne Szintigraphiegeräte können als Multidetektor-Szintigraphie konfiguriert sein, was bedeutet, dass sie mehrere Detektoren haben. Dies ermöglicht schnellere Scans und eine höhere Bildauflösung.",
-          },
-        ],
-      },
-      // 6tab
-      {
-        id: 84,
-        title: "Wortschatz",
-        text: "Für eine Fachsprachenprüfung im Bereich der Schilddrüsen-Szintigraphie-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
-        text_list: [
-          {
-            bold: "Schilddrüsen-Szintigraphie :",
-            other:
-              "Nuklearmedizinisches Verfahren zur Beurteilung der Schilddrüsenfunktion.",
-          },
-          {
-            bold: "Radiopharmakon :",
-            other:
-              "Radioaktiv markierte Substanz, die zur Bildgebung verwendet wird.",
-          },
-          {
-            bold: "Gamma-Kamera :",
-            other:
-              "Gerät zur Aufnahme der Verteilung des Radiopharmakons in der Schilddrüse.",
-          },
-          {
-            bold: "Kalter Knoten :",
-            other:
-              "Bereich in der Schilddrüse, der das Radiopharmakon nicht aufnimmt und auf Hypofunktion oder Malignität hinweisen kann.",
-          },
-          {
-            bold: "Heißer Knoten :",
-            other:
-              "Bereich in der Schilddrüse, der das Radiopharmakon vermehrt aufnimmt und oft auf eine Hyperthyreose hinweist.",
-          },
-          {
-            bold: "Hyperthyreose :",
-            other:
-              "Überfunktion der Schilddrüse, die zu erhöhtem Stoffwechsel führt.",
-          },
-          {
-            bold: "Hypothyreose :",
-            other:
-              "Unterfunktion der Schilddrüse, die zu einem verminderten Stoffwechsel führt.",
-          },
-          {
-            bold: "Struma :",
-            other: "Vergrößerung der Schilddrüse, oft als Kropf bezeichnet.",
-          },
-          {
-            bold: "Feinnadelaspiration :",
-            other:
-              "Diagnostische Methode zur Zellgewinnung aus Schilddrüsenknoten.",
-          },
-          {
-            bold: "Technetium-99m :",
-            other:
-              "Häufig verwendetes Radiopharmakon in der Schilddrüsen-Szintigraphie.",
-          },
-          {
-            bold: "Jod-123 :",
-            other:
-              "Alternative radioaktive Substanz, die in der Szintigraphie verwendet wird.",
-          },
-          {
-            bold: "Thyreozyten :",
-            other:
-              "Schilddrüsenzellen, die Jod aufnehmen und Hormone produzieren.",
-          },
-          {
-            bold: "Autoimmunthyreoiditis (Hashimoto) :",
-            other:
-              "Chronische Entzündung der Schilddrüse aufgrund einer Autoimmunerkrankung.",
-          },
-          {
-            bold: "Morbus Basedow (Graves) :",
-            other: "Autoimmunerkrankung, die eine Hyperthyreose verursacht.",
-          },
-          {
-            bold: "Szintigramm :",
-            other: "Das Bild, das durch die Szintigraphie erzeugt wird.",
-          },
-          {
-            bold: "Dosis :",
-            other:
-              "Menge des Radiopharmakons, die dem Patienten verabreicht wird.",
-          },
-          {
-            bold: "Nuklearmedizin :",
-            other:
-              "Fachbereich der Medizin, der radioaktive Substanzen zur Diagnose und Therapie einsetzt.",
-          },
-          {
-            bold: "T3/T4 :",
-            other:
-              "Schilddrüsenhormone, die in der Diagnostik und Behandlung von Schilddrüsenerkrankungen eine Rolle spielen.",
-          },
-        ],
-      },
-       // 7tab
-      {
-        id: 85,
-        title: "Links",
-        text: "",
-        text_list: [
-          {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
-            other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
-          },
-          {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
-            other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
-            other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
-          },
-        ],
-      },
-       // 8tab
-      {
-        id: 86,
-        title: "PDF",
-        link: "https://drive.google.com/file/d/1UpNRifrVQTXUqpARD_tL1kFb8MHFOK_p/view?usp=share_link",
-      },
-    ],
-  },
-  // end of parent tab 9
+  // end of parent tab 10
 ];
