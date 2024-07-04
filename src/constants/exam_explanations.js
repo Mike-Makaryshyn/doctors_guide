@@ -3,6 +3,8 @@ import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
 export const parentTabs = [
+  // Bildgebender Verfahren zum Herunterladen
+
   // start of parent tab: 1 Computertomographie
   {
     id: 1,
@@ -6040,7 +6042,1419 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 9
-  // start of parent tab 10 Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+
+  //Kardiologische Untersuchungen
+
+  // start of parent tab 10 EKG
+  {
+    id: 10,
+    title: "Elektrokardiogramm (EKG)",
+    checked: false,
+    childTabs: [
+      // 1tab 87
+      {
+        id: 87,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel des EKGs ist es, die elektrische Aktivität des Herzens aufzuzeichnen und zu analysieren, um Abweichungen vom normalen Herzrhythmus zu erkennen und eine genaue Diagnose zu stellen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Das EKG ist in vielen medizinischen Bereichen relevant, insbesondere in der Notfallmedizin, der Kardiologie und der allgemeinen Inneren Medizin. Es wird häufig verwendet, um Herzrhythmusstörungen, ischämische Veränderungen, hypertrophe Kardiomyopathien und Elektrolytstörungen zu diagnostizieren.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das EKG basiert auf der Messung der elektrischen Potenziale, die durch die Depolarisation und Repolarisation des Herzmuskels erzeugt werden. Diese elektrischen Signale werden an der Körperoberfläche durch Elektroden erfasst und als Kurvenverlauf auf Papier oder digital aufgezeichnet.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Ein Standard-EKG verwendet 12 Ableitungen, um ein umfassendes Bild der Herzaktivität aus verschiedenen Blickwinkeln zu erhalten. Die Elektroden werden an spezifischen Punkten am Körper angebracht: vier an den Extremitäten und sechs auf dem Brustkorb. Die Ableitungen sind in bipolare (I, II, III), unipolare Extremitätenableitungen (aVR, aVL, aVF) und unipolare Brustwandableitungen (V1-V6) unterteilt.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Typische Befunde in einem EKG umfassen Sinusrhythmus, Vorhofflimmern, ventrikuläre Tachykardien, Myokardinfarktzeichen (wie ST-Hebungen oder -Senkungen), links- oder rechtsschenkelblock und Anzeichen einer Hypertrophie.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde in einem EKG umfassen Sinusrhythmus, Vorhofflimmern, ventrikuläre Tachykardien, Myokardinfarktzeichen (wie ST-Hebungen oder -Senkungen), links- oder rechtsschenkelblock und Anzeichen einer Hypertrophie.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Das EKG ist ein nicht-invasives, schnelles und kostengünstiges Verfahren, das wertvolle Informationen über die Herzgesundheit liefert. Es kann in verschiedenen klinischen Umgebungen durchgeführt werden, einschließlich Krankenhäusern, Arztpraxen und sogar im Rettungsdienst.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Interpretation eines EKGs kann komplex sein und erfordert fundiertes Fachwissen. Ein EKG liefert möglicherweise keine definitive Diagnose und muss oft mit anderen diagnostischen Tests kombiniert werden.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Da das EKG nicht invasiv ist, sind die Risiken minimal. Mögliche Unannehmlichkeiten könnten Hautirritationen durch die Elektroden oder gelegentliche Fehlinterpretationen der Ergebnisse sein.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Das EKG spielt eine entscheidende Rolle in der Diagnose und Überwachung von Herz-Kreislauf-Erkrankungen. Es hilft, therapeutische Entscheidungen zu treffen und den Behandlungserfolg zu überwachen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Ein korrekt interpretiertes EKG kann lebensrettend sein, indem es frühzeitig kritische Herzprobleme erkennt und eine sofortige Behandlung ermöglicht. Es unterstützt das klinische Management und die Prognosebewertung von Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zum EKG gehören die Echokardiographie, die Magnetresonanztomographie (MRT) des Herzens und die Computertomographie (CT) des Herzens. Diese Verfahren bieten ergänzende Informationen und werden je nach klinischer Fragestellung eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsarbeiten befassen sich mit der Verbesserung der EKG-Technologie, einschließlich der Entwicklung tragbarer EKG-Geräte und der Anwendung künstlicher Intelligenz zur automatisierten Auswertung und Diagnose.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die zukünftige Forschung zielt darauf ab, die diagnostische Genauigkeit und Benutzerfreundlichkeit von EKGs weiter zu verbessern, was zu einer breiteren Anwendung und besseren Patientenversorgung führen könnte.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Das EKG ist ein unverzichtbares Werkzeug in der modernen Kardiologie, das wichtige Informationen über die elektrische Aktivität des Herzens liefert. Es ist schnell, kostengünstig und weit verbreitet in der klinischen Praxis.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt trägt das EKG wesentlich zur Diagnostik und Überwachung von Herz-Kreislauf-Erkrankungen bei und ist ein unverzichtbares Instrument für die tägliche medizinische Praxis und das Patientenmanagement.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 88
+      {
+        id: 88,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel des EKGs darin besteht, die elektrische Aktivität des Herzens aufzuzeichnen und Abweichungen vom normalen Herzrhythmus zu erkennen.",
+            third:
+              '"Wir machen ein EKG, um zu sehen, wie Ihr Herz arbeitet und um eventuelle Unregelmäßigkeiten im Herzrhythmus zu erkennen."',
+            fourth:
+              '"Das EKG hilft uns, festzustellen, ob Ihr Herz regelmäßig schlägt und ob es Anzeichen für Herzprobleme gibt."',
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, wie der Ablauf des EKGs funktioniert, indem Elektroden an bestimmten Körperstellen angebracht und die Herzaktivität aufgezeichnet wird.",
+            third:
+              '"Wir werden Ihnen kleine Elektroden auf die Brust, Arme und Beine kleben, die dann die elektrische Aktivität Ihres Herzens messen."',
+            fourth:
+              '"Die Elektroden erfassen die elektrischen Signale Ihres Herzens und übertragen sie auf das EKG-Gerät."',
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erwähnen Sie, dass der Patient entspannt und ruhig sein sollte und dass die Haut an den Stellen, an denen die Elektroden angebracht werden, sauber und trocken sein muss.",
+            third:
+              '"Bitte entspannen Sie sich und atmen Sie ruhig. Wir müssen sicherstellen, dass Ihre Haut sauber und trocken ist, wo die Elektroden angebracht werden."',
+            fourth:
+              '"Es ist wichtig, dass Sie ruhig liegen und sich entspannen, damit wir genaue Ergebnisse erhalten."',
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass das EKG ein nicht-invasives Verfahren ist und daher nur minimale Risiken bestehen, wie seltene Hautirritationen durch die Elektroden.",
+            third:
+              '"Das EKG ist sehr sicher. Gelegentlich kann es zu leichter Hautrötung kommen, wo die Elektroden angebracht werden."',
+            fourth:
+              '"Da das EKG nicht-invasiv ist, sind Risiken wie Hautirritationen durch die Elektroden selten und meist harmlos."',
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Heben Sie hervor, dass das EKG schnell, kostengünstig und wertvoll für die Diagnose und Überwachung der Herzgesundheit ist.",
+            third:
+              '"Ein EKG ist eine schnelle und kostengünstige Methode, um viele Herzprobleme frühzeitig zu erkennen."',
+            fourth:
+              '"Das EKG liefert uns wichtige Informationen über Ihr Herz, und das in kurzer Zeit und ohne großen Aufwand."',
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie die Alternativen zum EKG, wie Echokardiographie, MRT und CT des Herzens, und erläutern Sie, dass diese Verfahren ergänzende Informationen bieten.",
+            third:
+              '"Neben dem EKG gibt es auch die Möglichkeit einer Echokardiographie, bei der wir das Herz mittels Ultraschall untersuchen."',
+            fourth:
+              '"Für detailliertere Bilder könnten wir auch eine MRT oder CT des Herzens in Betracht ziehen."',
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, dass es kaum Kontraindikationen gibt, aber Hauterkrankungen an den Stellen, wo die Elektroden angebracht werden, problematisch sein könnten.",
+            third:
+              '"Es gibt nur wenige Gründe, warum wir kein EKG machen könnten, wie zum Beispiel schwere Hautprobleme an den Elektrodenstellen."',
+            fourth:
+              '"Bei Hauterkrankungen in den Bereichen, wo die Elektroden angebracht werden, müssen wir möglicherweise eine andere Methode wählen."',
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie die möglichen Ergebnisse eines EKGs, wie normale Befunde, Herzrhythmusstörungen, Anzeichen eines Herzinfarkts oder Hypertrophie des Herzmuskels.",
+            third:
+              '"Das EKG kann normale Herzaktivität zeigen oder Probleme wie Herzrhythmusstörungen oder Hinweise auf einen Herzinfarkt aufdecken."',
+            fourth:
+              '"Wir können auch sehen, ob Ihr Herzmuskel vergrößert ist, was auf bestimmte Herzkrankheiten hinweisen könnte."',
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit des Einverständnisses des Patienten, um sicherzustellen, dass er die Untersuchung versteht und damit einverstanden ist.",
+            third:
+              '"Es ist wichtig, dass Sie der Untersuchung zustimmen, nachdem Sie alle Informationen erhalten haben und Ihre Fragen beantwortet wurden."',
+            fourth:
+              '"Ihr Einverständnis ist notwendig, damit wir die Untersuchung durchführen können und Sie die Untersuchung verstehen."',
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie, wie der Arzt dem Patienten die Untersuchung und deren Zweck erklärt und sicherstellt, dass der Patient alle Fragen verstanden hat, bevor er um schriftliches Einverständnis bittet.",
+            third:
+              '"Ich werde Ihnen jetzt genau erklären, warum wir ein EKG durchführen und wie es abläuft. Haben Sie dazu noch Fragen, bevor wir beginnen?"',
+            fourth:
+              '"Nachdem ich Ihnen alles erklärt habe, möchte ich sicherstellen, dass Sie alles verstanden haben, bevor Sie Ihr Einverständnis geben."',
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Weisen Sie den Patienten darauf hin, dass die Ergebnisse der Untersuchung mit ihm besprochen werden und informieren Sie ihn darüber, wann und wie er die Ergebnisse erhalten wird.",
+            third:
+              '"Nach der Untersuchung werde ich die Ergebnisse mit Ihnen besprechen und Ihnen sagen, wie es weitergeht."',
+            fourth:
+              '"Wir informieren Sie, sobald die Ergebnisse vorliegen, und besprechen dann die nächsten Schritte gemeinsam."',
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie die Ergebnisse in verständlicher Sprache, erläutern Sie mögliche Befunde und besprechen Sie die nächsten Schritte oder Behandlungsoptionen.",
+            third:
+              '"Die Ergebnisse zeigen, dass Ihr Herz regelmäßig schlägt, was ein gutes Zeichen ist. Wir werden dennoch einige weitere Tests durchführen."',
+            fourth:
+              '"Es gibt Anzeichen für eine Herzrhythmusstörung. Ich werde Ihnen die möglichen Behandlungsoptionen erklären und wie wir weiter vorgehen."',
+          },
+        ],
+      },
+      // 3tab 89
+      {
+        id: 89,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass das EKG (Elektrokardiogramm) ein Verfahren zur Aufzeichnung der elektrischen Aktivität des Herzens ist, das über an der Haut angebrachte Elektroden durchgeführt wird.",
+            third:
+              "Das EKG ist eine Methode, um die elektrische Aktivität des Herzens zu messen, indem wir Elektroden auf die Haut des Patienten kleben.",
+            fourth:
+              "Das Elektrokardiogramm zeichnet die elektrischen Impulse auf, die durch das Herz wandern, um den Herzschlag zu koordinieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass das EKG zur Diagnose von Herzrhythmusstörungen, Myokardinfarkten, Elektrolytstörungen und hypertrophen Kardiomyopathien verwendet wird.",
+            third:
+              "Mit dem EKG können wir Herzrhythmusstörungen, wie Vorhofflimmern oder ventrikuläre Tachykardien, feststellen.",
+            fourth:
+              "Das EKG hilft uns, akute Myokardinfarkte und chronische Herzprobleme wie Hypertrophien zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie, dass die Ergebnisse des EKGs Aufschluss über den Herzrhythmus, die Herzfrequenz, die elektrische Achse und mögliche pathologische Veränderungen wie Ischämien oder Infarkte geben.",
+            third:
+              "Die Ergebnisse zeigen uns, ob der Herzrhythmus regelmäßig oder unregelmäßig ist und ob es Anzeichen für einen Herzinfarkt gibt.",
+            fourth:
+              "Das EKG kann uns auch die elektrische Achse des Herzens anzeigen und Hinweise auf andere Erkrankungen wie eine Hypertrophie geben.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie Indikationen wie Brustschmerzen, Verdacht auf Herzrhythmusstörungen, bekannte Herzkrankheiten, Überwachung von Patienten mit kardiovaskulären Risikofaktoren und präoperative Beurteilungen.",
+            third:
+              "Ein EKG ist indiziert bei Patienten mit Brustschmerzen, um einen Myokardinfarkt auszuschließen.",
+            fourth:
+              "Wir führen ein EKG durch, um Herzrhythmusstörungen bei Patienten mit bekannten Herzkrankheiten zu überwachen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, dass es wenige Kontraindikationen gibt, aber Hauterkrankungen oder schwere Verbrennungen an den Elektrodenstellen könnten problematisch sein.",
+            third:
+              "Kontraindikationen sind selten, aber bei schweren Hautinfektionen an den Elektrodenstellen sollten wir vorsichtig sein.",
+            fourth:
+              "Bei Patienten mit großflächigen Verbrennungen an der Brust könnte es schwierig sein, Elektroden korrekt anzubringen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären Sie, dass das EKG bei der Differenzierung zwischen verschiedenen Herzrhythmusstörungen, Myokardinfarkt, Perikarditis und Lungenembolie helfen kann.",
+            third:
+              "Das EKG hilft uns, zwischen Vorhofflimmern und anderen supraventrikulären Tachykardien zu unterscheiden.",
+            fourth:
+              "Es kann auch nützlich sein, um eine Perikarditis von einem akuten Myokardinfarkt zu unterscheiden.",
+          },
+          {
+            first: "Veränderungen beim Myokardinfarkt",
+            second:
+              "Beschreiben Sie typische EKG-Veränderungen beim Myokardinfarkt wie ST-Hebungen, T-Wellen-Inversionen und pathologische Q-Wellen.",
+            third:
+              "Bei einem akuten Myokardinfarkt sehen wir häufig ST-Hebungen in bestimmten Ableitungen.",
+            fourth:
+              "Chronische Infarkte können durch das Vorhandensein pathologischer Q-Wellen im EKG identifiziert werden.",
+          },
+          {
+            first: "Veränderungen bei Arrhythmien",
+            second:
+              "Erläutern Sie EKG-Veränderungen bei verschiedenen Arrhythmien, z.B. Vorhofflimmern (unregelmäßiger Rhythmus, fehlende P-Wellen) und ventrikuläre Tachykardie (breiter QRS-Komplex).",
+            third:
+              "Vorhofflimmern zeigt sich durch einen unregelmäßigen Rhythmus und das Fehlen von P-Wellen im EKG.",
+            fourth:
+              "Eine ventrikuläre Tachykardie ist durch einen breiten QRS-Komplex und eine hohe Herzfrequenz gekennzeichnet.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie die Erstellung von Behandlungsplänen basierend auf EKG-Befunden, wie Antiarrhythmika bei Herzrhythmusstörungen oder Reperfusionsstrategien bei Myokardinfarkt.",
+            third:
+              "Bei Vorhofflimmern können wir Antiarrhythmika einsetzen oder eine Kardioversion in Erwägung ziehen.",
+            fourth:
+              "Bei einem Myokardinfarkt ist eine sofortige Reperfusionstherapie, entweder durch PCI oder Thrombolyse, notwendig.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit Kardiologen, Radiologen, Pflegepersonal und Notfallmedizinern.",
+            third:
+              "Eine enge Zusammenarbeit mit Kardiologen ist wichtig, um die beste Behandlung für Patienten mit komplexen Herzrhythmusstörungen zu gewährleisten.",
+            fourth:
+              "Wir sollten auch Radiologen einbeziehen, um ergänzende bildgebende Diagnostik zu nutzen, falls erforderlich.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie, wie regelmäßige Überprüfungen und Kalibrierungen der EKG-Geräte, sowie Schulungen des Personals, zur Sicherstellung der Qualität beitragen.",
+            third:
+              "Regelmäßige Kalibrierung der EKG-Geräte und Fortbildungen für das Personal sind unerlässlich für genaue Diagnosen.",
+            fourth:
+              "Durch regelmäßige Qualitätskontrollen stellen wir sicher, dass die EKG-Daten zuverlässig und präzise sind.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Wichtigkeit der sorgfältigen Dokumentation der EKG-Ergebnisse im Patientendossier.",
+            third:
+              "Es ist wichtig, die EKG-Befunde detailliert im Patientendossier zu dokumentieren und bei auffälligen Ergebnissen eine zeitnahe Weiterverfolgung zu planen.",
+            fourth:
+              "Bei abnormalen EKG-Befunden sollten wir eine Überweisung an einen Kardiologen und gegebenenfalls weitere diagnostische Tests veranlassen.",
+          },
+        ],
+      },
+      // 4tab 90
+      {
+        id: 90,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "50-jähriger Patient klagt über plötzliche Brustschmerzen und Atemnot. Vorgeschichte von Bluthochdruck.",
+            fourth:
+              "65-jährige Patientin berichtet über unregelmäßigen Herzschlag und Schwindelgefühle. Vorgeschichte einer Herzinsuffizienz.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "EKG zeigt einen regelmäßigen Sinusrhythmus, normale P-Wellen, QRS-Komplexe und T-Wellen.",
+            third:
+              "EKG zeigt ST-Hebungen in den Ableitungen V2-V4, pathologische Q-Wellen in V1-V3.",
+            fourth:
+              "EKG zeigt unregelmäßigen Rhythmus ohne erkennbare P-Wellen und unregelmäßige QRS-Komplexe.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das EKG-Ergebnis unterstützt den Ausschluss kardiologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen akuten Myokardinfarkt hin. Die ST-Hebungen und pathologischen Q-Wellen korrelieren mit den Symptomen des Patienten.",
+            fourth:
+              "Die unregelmäßigen Rhythmen und fehlenden P-Wellen sind typisch für Vorhofflimmern.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die sofortige Einleitung der Reperfusionsbehandlung, wie PCI oder Thrombolyse.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer Antiarrhythmika-Therapie oder möglicherweise einer Kardioversion.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines akuten Myokardinfarkts basierend auf EKG-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Vorhofflimmern aufgrund der EKG-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmietel",
+            second:
+              "EKG zeigt normale Sinuskurven ohne Auffälligkeiten in allen Ableitungen.",
+            third:
+              "EKG-Aufnahmen zeigen deutliche ST-Hebungen und pathologische Q-Wellen.",
+            fourth:
+              "EKG-Bilder zeigen unregelmäßige QRS-Komplexe und fehlende P-Wellen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige Kontrolluntersuchungen zur Überwachung des Herz-Kreislauf-Systems und zur Prävention kardiovaskulärer Erkrankungen.",
+            third:
+              "Wir empfehlen eine sofortige PCI oder Thrombolyse, gefolgt von einer engmaschigen Überwachung auf der Intensivstation.",
+            fourth:
+              "Wir empfehlen eine Antiarrhythmika-Therapie und erwägen eine Kardioversion. Langfristig sollte eine Antikoagulation in Betracht gezogen werden.",
+          },
+        ],
+      },
+      // 5tab 91
+      {
+        id: 91,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Elektrokardiogramm (EKG)-Gerät ist ein wichtiges medizinisches Diagnosewerkzeug, das die elektrische Aktivität des Herzens aufzeichnet und darstellt. Hier sind die wesentlichen Komponenten und Funktionen eines EKG-Geräts: ",
+        text_list: [
+          {
+            bold: "Elektroden: ",
+            other:
+              "Sind kleine, leitende Pads, die auf die Haut des Patienten geklebt werden. Sie erfassen die elektrischen Signale des Herzens. Üblicherweise werden 10 Elektroden an bestimmten Stellen am Körper angebracht (vier an den Extremitäten und sechs auf der Brust).",
+          },
+          {
+            bold: "Elektrokabel: ",
+            other:
+              "Verbinden die Elektroden mit dem EKG-Gerät und leiten die erfassten elektrischen Signale weiter.",
+          },
+          {
+            bold: "Verstärker: ",
+            other:
+              "Verstärkt die schwachen elektrischen Signale des Herzens, sodass sie gemessen und analysiert werden können.",
+          },
+          {
+            bold: "Filter: ",
+            other:
+              "Dienen dazu, Störungen und Rauschen aus den Signalen zu entfernen, um klare und genaue EKG-Daten zu gewährleisten.",
+          },
+          {
+            bold: "Schreibgerät oder Display: ",
+            other:
+              "Ein moderner EKG-Monitor zeigt die Herzaktivität in Echtzeit auf einem Bildschirm an. Bei älteren Geräten wird die Herzaktivität auf Papier gedruckt.",
+          },
+          {
+            bold: "Papierlaufwerk: ",
+            other:
+              "Bei traditionellen EKG-Geräten wird die Herzaktivität auf spezielles Millimeterpapier gedruckt, das sich kontinuierlich unter den Schreibstiften bewegt.",
+          },
+          {
+            bold: "Steuerkonsole: ",
+            other:
+              "Ermöglicht dem Bediener, das EKG-Gerät zu steuern, Einstellungen vorzunehmen, den Patienten zu identifizieren und den Aufnahmeprozess zu starten.",
+          },
+          {
+            bold: "Computer- oder Datenverarbeitungseinheit: ",
+            other:
+              "Analysiert die elektrischen Signale des Herzens und erzeugt die EKG-Kurven. Moderne Geräte verfügen über Software zur Interpretation und Analyse der Daten.",
+          },
+          {
+            bold: "Speicherungseinheit: ",
+            other:
+              "Speichert die aufgenommenen EKG-Daten für spätere Analyse und Vergleich. Dies kann ein interner Speicher oder ein externer Datenträger sein.",
+          },
+          {
+            bold: "Kommunikationsschnittstellen: ",
+            other:
+              "Ermöglichen die Übertragung der EKG-Daten zu anderen Geräten oder in elektronische Patientenakten (EPA). Dies kann durch USB, Netzwerkverbindungen oder drahtlos erfolgen.",
+          },
+          {
+            bold: "Patientenerdung: ",
+            other:
+              "Eine Sicherheitsmaßnahme, die sicherstellt, dass der Patient geerdet ist, um elektrische Störungen und das Risiko eines elektrischen Schlags zu minimieren.",
+          },
+          {
+            bold: "Sprachkommunikationssystem: ",
+            other:
+              "Ermöglicht dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben, falls erforderlich.",
+          },
+          {
+            bold: "Alarmsystem: ",
+            other:
+              "Warnt das medizinische Personal bei Erkennung abnormaler Herzrhythmen oder technischer Probleme während der Untersuchung.",
+          },
+          {
+            bold: "Batteriebetrieb: ",
+            other:
+              "Moderne tragbare EKG-Geräte verfügen oft über einen Batteriebetrieb, um Mobilität und Einsatz in Notfallsituationen zu gewährleisten.",
+          },
+        ],
+      },
+      // 6tab 92
+      {
+        id: 92,
+        title: "Wortschatz",
+        text: "Für eine Fachsprachenprüfung im Bereich der Schilddrüsen-Szintigraphie-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
+        text_list: [
+          {
+            bold: "Elektrokardiogramm (EKG): ",
+            other: "Aufzeichnung der elektrischen Aktivität des Herzens.",
+          },
+          {
+            bold: "Elektroden: ",
+            other:
+              "Kleine, leitende Pads, die auf die Haut geklebt werden, um elektrische Signale des Herzens zu erfassen.",
+          },
+          {
+            bold: "Ableitungen: ",
+            other:
+              "Verschiedene Blickwinkel, aus denen die elektrische Aktivität des Herzens aufgezeichnet wird; Standard sind 12 Ableitungen.",
+          },
+          {
+            bold: "Sinusrhythmus: ",
+            other: "Normaler Herzrhythmus, der vom Sinusknoten ausgeht.",
+          },
+          {
+            bold: "Arrhythmie: ",
+            other: "Unregelmäßiger Herzrhythmus.",
+          },
+          {
+            bold: "Vorhofflimmern: ",
+            other:
+              "Häufige Form der Arrhythmie mit unregelmäßigem und oft schnellem Herzschlag.",
+          },
+          {
+            bold: "Ventrikuläre Tachykardie: ",
+            other: "Schneller Herzschlag, der in den Herzkammern beginnt.",
+          },
+          {
+            bold: "Bradykardie: ",
+            other: "Langsamer Herzschlag.",
+          },
+          {
+            bold: "Tachykardie: ",
+            other: "Schneller Herzschlag.",
+          },
+          {
+            bold: "ST-Hebung: ",
+            other:
+              "Erhöhung der ST-Strecke im EKG, oft Hinweis auf Myokardinfarkt.",
+          },
+          {
+            bold: "QRS-Komplex: ",
+            other:
+              "Teil des EKGs, der die Erregungsausbreitung in den Herzkammern darstellt.",
+          },
+          {
+            bold: "P-Welle: ",
+            other:
+              "Darstellung der Erregungsausbreitung in den Vorhöfen des Herzens.",
+          },
+          {
+            bold: "T-Welle: ",
+            other: "Darstellung der Erregungsrückbildung in den Herzkammern.",
+          },
+          {
+            bold: "U-Welle: ",
+            other:
+              "Kleine Welle nach der T-Welle, deren Ursprung nicht vollständig geklärt ist.",
+          },
+          {
+            bold: "Pathologische Q-Welle: ",
+            other:
+              "Hinweis auf eine frühere Schädigung des Herzmuskels, wie einen Myokardinfarkt.",
+          },
+          {
+            bold: "Repolarisation: ",
+            other: "Phase der Erregungsrückbildung im Herzen.",
+          },
+          {
+            bold: "Depolarisation: ",
+            other: "Phase der Erregungsausbreitung im Herzen.",
+          },
+          {
+            bold: "Ischämie: ",
+            other:
+              "Minderdurchblutung des Herzmuskels, oft erkennbar durch ST-Senkungen.",
+          },
+          {
+            bold: "Elektrokardiograph: ",
+            other: "Gerät zur Aufzeichnung des EKGs.",
+          },
+          {
+            bold: "Myokardinfarkt: ",
+            other:
+              "Herzinfarkt, verursacht durch den Verschluss einer oder mehrerer Koronararterien.",
+          },
+          {
+            bold: "Herzachse: ",
+            other:
+              "Elektrische Achse des Herzens, gibt die Hauptrichtung der Erregungsausbreitung an.",
+          },
+          {
+            bold: "Herzfrequenz: ",
+            other: "Anzahl der Herzschläge pro Minute.",
+          },
+          {
+            bold: "Holter-EKG: ",
+            other: "Langzeit-EKG, das über 24 Stunden oder länger aufzeichnet.",
+          },
+          {
+            bold: "Stress-EKG: ",
+            other:
+              "EKG-Aufzeichnung während körperlicher Belastung, um belastungsinduzierte Herzprobleme zu erkennen.",
+          },
+          {
+            bold: "Kardiologie: ",
+            other:
+              "Medizinisches Fachgebiet, das sich mit Herz- und Kreislauferkrankungen beschäftigt.",
+          },
+        ],
+      },
+      // 7tab 93
+      {
+        id: 93,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 94
+      {
+        id: 94,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1fcpky8nGyV-azEghdRditSI6e7z26lJT/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 10
+  // start of parent tab 11 echokardiographie
+  {
+    id: 11,
+    title: "Elektrokardiogramm (EKG)",
+    checked: false,
+    childTabs: [
+      // 1tab 95
+      {
+        id: 95,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Echokardiographie wird zur Beurteilung der Herzstruktur und -funktion eingesetzt. Sie dient der Diagnose und Überwachung verschiedener Herzerkrankungen, einschließlich Herzinsuffizienz, Klappenerkrankungen und angeborener Herzfehler.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Echokardiographie ist ein zentrales Werkzeug in der Kardiologie. Sie wird sowohl in der Notfalldiagnostik als auch in der Routineuntersuchung verwendet und ist unerlässlich für die Entscheidungsfindung bei der Behandlung kardiovaskulärer Erkrankungen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Echokardiographie basiert auf der Verwendung von Ultraschallwellen zur Bildgebung des Herzens. Diese Wellen werden von einem Transducer ausgesendet und reflektieren an den Strukturen des Herzens, um ein Bild zu erzeugen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Zu den wichtigsten technischen Aspekten gehören die Wahl des geeigneten Transducers, die Einstellung der Bildparameter und die Interpretation der erzeugten Bilder. Die wichtigsten Modi sind der M-Mode, der 2D-Modus und der Doppler-Modus.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation der Echokardiographie erfordert ein tiefes Verständnis der normalen und pathologischen Herzstruktur und -funktion. Ärzte müssen in der Lage sein, verschiedene Schnittebenen und -ansichten zu analysieren.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den häufigsten Befunden gehören Klappenerkrankungen, Ventrikelfunktionsstörungen und perikardiale Erkrankungen. Die genaue Interpretation dieser Befunde ist entscheidend für die Diagnose und das Management der Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Echokardiographie ist nicht invasiv, relativ kostengünstig und weit verbreitet verfügbar. Sie liefert schnelle und präzise Informationen über die Herzfunktion.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Bildqualität kann bei Patienten mit Adipositas oder Lungenkrankheiten eingeschränkt sein. Außerdem ist die Untersuchung stark anwenderabhängig.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Da die Echokardiographie auf Ultraschall basiert, gibt es keine signifikanten Risiken für den Patienten. Es sind keine Strahlenbelastungen oder invasiven Eingriffe erforderlich.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Echokardiographie spielt eine entscheidende Rolle bei der Diagnose und Überwachung von Herzkrankheiten. Sie unterstützt die Entscheidung über medikamentöse Behandlungen und operative Eingriffe.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Eine präzise Echokardiographie ist essenziell für das Management von Patienten mit Herzerkrankungen, da sie wichtige Informationen über die Herzfunktion und -struktur liefert.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text:
+                  "Zu den Alternativen der Echokardiographie gehören die Magnetresonanztomographie (MRT) des Herzens, die Computertomographie (CT) und die Herzkatheteruntersuchung. Diese Methoden bieten zusätzliche Informationen, sind jedoch meist invasiver und kostenintensiver.",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neueste Forschungsergebnisse zeigen Fortschritte in der 3D-Echokardiographie und der Anwendung von Kontrastmitteln zur Verbesserung der Bildqualität.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die zukünftige Entwicklung der Echokardiographie könnte die Integration von Künstlicher Intelligenz zur Automatisierung und Verbesserung der Bildauswertung umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Echokardiographie ist ein unverzichtbares diagnostisches Werkzeug in der Kardiologie, das eine nicht-invasive, sichere und effektive Beurteilung der Herzfunktion ermöglicht.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre Bedeutung im klinischen Alltag und die kontinuierliche Weiterentwicklung machen die Echokardiographie zu einer Schlüsselmethode in der modernen Herzmedizin.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 96
+      {
+        id: 96,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Echokardiographie dazu dient, die Struktur und Funktion des Herzens zu beurteilen, um Herzerkrankungen wie Herzinsuffizienz, Klappenerkrankungen und angeborene Herzfehler zu diagnostizieren und zu überwachen.",
+            third:
+              "Wir möchten Ihre Herzstruktur und -funktion überprüfen, um sicherzustellen, dass es keine Probleme wie Herzinsuffizienz oder Klappenerkrankungen gibt.",
+            fourth:
+              "Diese Untersuchung hilft uns, festzustellen, ob Ihr Herz normal arbeitet oder ob es Anomalien gibt, die behandelt werden müssen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erklären Sie, dass ein Gel auf die Brust des Patienten aufgetragen wird, um den Kontakt zwischen Haut und Ultraschallkopf zu verbessern. Der Ultraschallkopf wird über die Brust bewegt, um Bilder des Herzens zu erzeugen. Dies dauert in der Regel 30-60 Minuten.",
+            third:
+              "Zuerst tragen wir ein Gel auf Ihre Brust auf, dann bewegen wir den Ultraschallkopf, um Bilder Ihres Herzens zu machen. Das dauert etwa 30 bis 60 Minuten.",
+            fourth:
+              "Wir werden ein spezielles Gel auf Ihre Brust auftragen, damit der Ultraschallkopf gute Bilder Ihres Herzens aufnehmen kann. Die gesamte Prozedur dauert in der Regel nicht länger als eine Stunde.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass keine spezielle Vorbereitung erforderlich ist. Der Patient sollte bequeme Kleidung tragen und eventuell Schmuck ablegen, der den Zugang zur Brust behindern könnte.",
+            third:
+              "Es ist keine besondere Vorbereitung nötig. Tragen Sie bitte bequeme Kleidung und legen Sie eventuell Schmuck ab, der im Weg sein könnte.",
+            fourth:
+              "Sie müssen nichts Spezielles tun, um sich vorzubereiten. Bitte tragen Sie lockere Kleidung und entfernen Sie Schmuck, der die Untersuchung stören könnte.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie, dass die Echokardiographie ein sicheres, nicht-invasives Verfahren ist und keine bekannten Risiken oder Nebenwirkungen hat, da sie auf Ultraschall basiert und keine Strahlenbelastung beinhaltet.",
+            third:
+              "Dieses Verfahren ist sehr sicher und verursacht keine Schmerzen oder Strahlenbelastung. Es gibt keine bekannten Risiken.",
+            fourth:
+              "Da es sich um Ultraschall handelt, besteht keine Gefahr durch Strahlung oder invasive Eingriffe. Es ist ein sehr sicheres Verfahren.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie, dass die Echokardiographie eine schnelle, schmerzlose und zuverlässige Methode zur Beurteilung der Herzfunktion ist, die wertvolle Informationen ohne invasive Eingriffe liefert.",
+            third:
+              "Die Echokardiographie ist schnell, schmerzlos und liefert uns wertvolle Informationen über Ihr Herz ohne invasive Maßnahmen.",
+            fourth:
+              "Mit dieser Untersuchung können wir schnell und zuverlässig feststellen, wie Ihr Herz funktioniert, ohne dass Sie Schmerzen haben oder invasive Eingriffe notwendig sind.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erklären Sie, dass es alternative Untersuchungsmethoden wie die Magnetresonanztomographie (MRT), Computertomographie (CT) und Herzkatheteruntersuchungen gibt, die jedoch oft invasiver, teurer und mit mehr Risiken verbunden sind.",
+            third:
+              "Alternativen sind MRT oder CT des Herzens, die aber invasiver und teurer sein können und zusätzliche Risiken bergen.",
+            fourth:
+              "Es gibt auch die Möglichkeit einer Herzkatheteruntersuchung, aber diese ist invasiver und mit höheren Kosten und Risiken verbunden.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass es nur wenige Kontraindikationen gibt, aber bei Patienten mit schweren Lungenerkrankungen oder Brustdeformitäten könnte die Bildqualität eingeschränkt sein.",
+            third:
+              "Die Untersuchung ist für fast jeden geeignet, aber bei schweren Lungenerkrankungen oder Brustdeformitäten könnten die Bilder weniger klar sein.",
+            fourth:
+              "Für die meisten Menschen ist das Verfahren sicher. Bei bestimmten Lungenerkrankungen oder Brustdeformitäten kann die Bildqualität beeinträchtigt sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Untersuchung Hinweise auf Herzklappenerkrankungen, Pumpfunktionsstörungen, strukturelle Anomalien und andere Herzerkrankungen geben kann, die für die weitere Behandlung und das Management des Patienten wichtig sind.",
+            third:
+              "Wir könnten Herzklappenerkrankungen, Pumpfunktionsstörungen oder andere strukturelle Probleme feststellen, die weiter behandelt werden müssen.",
+            fourth:
+              "Die Untersuchung kann Anomalien wie Herzklappenerkrankungen oder strukturelle Defekte aufzeigen, die für Ihre weitere Behandlung wichtig sind.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass das Einverständnis des Patienten für jede medizinische Untersuchung, einschließlich der Echokardiographie, unerlässlich ist, um sicherzustellen, dass der Patient über das Verfahren, seine Vorteile und Risiken informiert ist und seine Zustimmung gegeben hat.",
+            third:
+              "Ihr Einverständnis ist wichtig, damit wir sicherstellen können, dass Sie alle Informationen über das Verfahren und seine Risiken verstanden haben.",
+            fourth:
+              "Bevor wir mit der Untersuchung beginnen, benötigen wir Ihr Einverständnis. Das zeigt, dass Sie vollständig über den Ablauf und mögliche Risiken informiert sind.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient eine Einverständniserklärung unterschreiben muss, nachdem er umfassend über den Zweck, den Ablauf, die Risiken und Alternativen der Echokardiographie informiert wurde und alle seine Fragen beantwortet wurden.",
+            third:
+              "Sie werden gebeten, eine Einverständniserklärung zu unterschreiben, nachdem wir alle Details und Ihre Fragen geklärt haben.",
+            fourth:
+              "Bevor wir beginnen, unterschreiben Sie bitte eine Einverständniserklärung, die bestätigt, dass Sie über alles informiert wurden und einverstanden sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Betonen Sie, dass der Patient während der Untersuchung entspannt bleiben sollte und dass das medizinische Personal jederzeit zur Verfügung steht, um Fragen zu beantworten und den Patienten zu unterstützen.",
+            third:
+              "Bleiben Sie während der Untersuchung bitte entspannt. Wir sind hier, um Ihnen zu helfen und Ihre Fragen zu beantworten.",
+            fourth:
+              "Entspannen Sie sich während der Untersuchung. Unser Team steht Ihnen jederzeit zur Verfügung, um Ihnen zu helfen und Fragen zu klären.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der Echokardiographie nach der Untersuchung vom Arzt analysiert und mit dem Patienten besprochen werden. Der Arzt wird die Befunde erklären und gegebenenfalls weitere diagnostische Schritte oder Behandlungsmaßnahmen empfehlen.",
+            third:
+              "Nach der Untersuchung werden wir die Ergebnisse analysieren und mit Ihnen besprechen, was sie bedeuten und welche Schritte als nächstes folgen.",
+            fourth:
+              "Ihr Arzt wird die Ergebnisse der Echokardiographie mit Ihnen durchgehen und Ihnen erklären, was sie bedeuten und welche weiteren Maßnahmen notwendig sind.",
+          },
+        ],
+      },
+      // 3tab 97
+      {
+        id: 97,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Echokardiographie ein bildgebendes Verfahren ist, das Ultraschallwellen nutzt, um detaillierte Bilder des Herzens zu erzeugen. Sie ist nicht invasiv, sicher und weit verbreitet zur Beurteilung der Herzstruktur und -funktion.",
+            third:
+              "Die Echokardiographie ist eine nicht-invasive Bildgebungstechnik, die Ultraschallwellen verwendet, um detaillierte Bilder des Herzens zu erstellen. Sie ist sicher und weit verbreitet zur Untersuchung der Herzstruktur und -funktion.",
+            fourth:
+              "Bei der Echokardiographie handelt es sich um ein bildgebendes Verfahren, das mit Ultraschall arbeitet, um die Herzstruktur und -funktion detailliert darzustellen. Es ist eine sichere und nicht-invasive Methode.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die Echokardiographie verwendet wird, um Herzklappen, die Pumpfunktion, die Größe und Form der Herzkammern, die Dicke der Herzwände und das Vorhandensein von Flüssigkeit im Herzbeutel zu beurteilen.",
+            third:
+              "Mit der Echokardiographie können wir die Herzklappenfunktion, die Pumpkraft des Herzens, die Größe und Form der Herzkammern, die Dicke der Herzwände sowie eventuelle Flüssigkeitsansammlungen im Herzbeutel untersuchen.",
+            fourth:
+              "Dieses Verfahren ermöglicht uns, die Funktion der Herzklappen, die Pumpleistung, die Größe und Form der Kammern, die Wanddicke des Herzens sowie das Vorhandensein von Flüssigkeit im Herzbeutel zu bewerten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie, dass die Ergebnisse der Echokardiographie strukturelle Anomalien wie Herzklappenfehler, ventrikuläre Dysfunktionen, septale Defekte und Perikardergüsse aufzeigen können. Diese Informationen sind entscheidend für die Diagnose und das Management von Herzerkrankungen.",
+            third:
+              "Die Echokardiographie kann strukturelle Anomalien wie Herzklappenfehler, ventrikuläre Dysfunktionen, septale Defekte und Perikardergüsse aufzeigen. Diese Ergebnisse sind entscheidend für die weitere Diagnose und das Management des Patienten.",
+            fourth:
+              "Wir können damit strukturelle Probleme wie Herzklappenfehler, Funktionsstörungen der Ventrikel, septale Defekte und Perikardergüsse identifizieren. Diese Befunde sind wesentlich für die Diagnose und Behandlung des Patienten.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, dass die Hauptindikationen für eine Echokardiographie Symptome wie Dyspnoe, Thoraxschmerzen, Herzgeräusche, Verdacht auf Herzinsuffizienz, Klappenerkrankungen und angeborene Herzfehler sind.",
+            third:
+              "Zu den Hauptindikationen für eine Echokardiographie gehören Symptome wie Atemnot, Brustschmerzen, auffällige Herzgeräusche sowie der Verdacht auf Herzinsuffizienz, Klappenerkrankungen und angeborene Herzfehler.",
+            fourth:
+              "Die Echokardiographie ist indiziert bei Symptomen wie Dyspnoe, Thoraxschmerzen, Herzgeräuschen und dem Verdacht auf Herzinsuffizienz, Klappenerkrankungen oder angeborenen Herzfehlern.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass es nur wenige Kontraindikationen gibt, aber bei Patienten mit schwerer Adipositas, COPD oder Brustdeformitäten kann die Bildqualität eingeschränkt sein. Auch bei Patienten mit Infektionen oder Hautläsionen im Brustbereich sollte die Untersuchung sorgfältig abgewogen werden.",
+            third:
+              "Es gibt wenige Kontraindikationen, aber bei Patienten mit schwerer Adipositas, COPD oder Brustdeformitäten kann die Bildqualität eingeschränkt sein. Infektionen oder Hautläsionen im Brustbereich müssen ebenfalls berücksichtigt werden.",
+            fourth:
+              "Während es nur wenige Kontraindikationen gibt, kann die Bildqualität bei stark adipösen Patienten, solchen mit COPD oder Brustdeformitäten eingeschränkt sein. Infektionen oder Hautläsionen im Brustbereich sind auch zu beachten.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erläutern Sie, dass die Echokardiographie hilft, verschiedene Differenzialdiagnosen zu klären, wie z.B. zwischen Herzinsuffizienz, Kardiomyopathien, Myokarditis, Perikarditis und anderen kardiovaskulären Erkrankungen.",
+            third:
+              "Die Echokardiographie unterstützt uns bei der Differenzierung von Diagnosen wie Herzinsuffizienz, Kardiomyopathien, Myokarditis und Perikarditis sowie anderen kardiovaskulären Erkrankungen.",
+            fourth:
+              "Mit dieser Untersuchung können wir verschiedene Differenzialdiagnosen wie Herzinsuffizienz, Kardiomyopathien, Myokarditis, Perikarditis und andere Herzerkrankungen genauer abklären.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, dass die Ergebnisse der Echokardiographie wesentliche Informationen für die Erstellung und Anpassung von Behandlungsplänen liefern, wie z.B. die Notwendigkeit für medikamentöse Therapie, chirurgische Eingriffe oder interventionelle Kardiologie.",
+            third:
+              "Die Ergebnisse der Echokardiographie sind entscheidend für die Erstellung von Behandlungsplänen. Sie können Hinweise darauf geben, ob eine medikamentöse Therapie, ein chirurgischer Eingriff oder interventionelle Maßnahmen erforderlich sind.",
+            fourth:
+              "Basierend auf den Ergebnissen der Echokardiographie können wir Behandlungspläne anpassen und entscheiden, ob medikamentöse Therapien, chirurgische Eingriffe oder interventionelle Kardiologie notwendig sind.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie, dass die Echokardiographie oft eine enge Zusammenarbeit zwischen Kardiologen, Radiologen, Chirurgen und anderen Fachkräften erfordert, um eine umfassende Betreuung und optimale Behandlung des Patienten sicherzustellen.",
+            third:
+              "Eine erfolgreiche Echokardiographie erfordert die enge Zusammenarbeit von Kardiologen, Radiologen und eventuell Chirurgen, um eine optimale Patientenversorgung zu gewährleisten.",
+            fourth:
+              "Dieses Verfahren setzt eine gute interprofessionelle Zusammenarbeit zwischen Kardiologen, Radiologen und Chirurgen voraus, um eine umfassende Behandlung sicherzustellen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie, dass regelmäßige Schulungen und Kalibrierungen der Geräte sowie die Einhaltung von Standardprotokollen und Qualitätskontrollen entscheidend sind, um eine hohe Qualität und Zuverlässigkeit der Echokardiographie-Ergebnisse sicherzustellen.",
+            third:
+              "Um eine hohe Qualität der Echokardiographie zu gewährleisten, sind regelmäßige Schulungen des Personals, Kalibrierungen der Geräte und strikte Einhaltung von Standardprotokollen notwendig.",
+            fourth:
+              "Qualitätsmanagement in der Echokardiographie umfasst regelmäßige Gerätekalibrierungen, Schulungen und die Einhaltung standardisierter Protokolle, um zuverlässige und präzise Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Betonen Sie, dass eine detaillierte Dokumentation der Echokardiographie-Befunde unerlässlich ist. Dies umfasst die Aufzeichnung der Bilder und die Erstellung eines ausführlichen Berichts, der in die Patientenakte eingepflegt wird. Eine regelmäßige Überwachung und Nachuntersuchungen sind wichtig für das Patientenmanagement.",
+            third:
+              "Eine umfassende Dokumentation der Echokardiographie-Befunde ist entscheidend. Dies beinhaltet die Speicherung der Bilder und die Erstellung eines detaillierten Berichts, der regelmäßig überprüft und aktualisiert wird.",
+            fourth:
+              "Die detaillierte Dokumentation der Untersuchungsergebnisse und regelmäßige Nachkontrollen sind essenziell, um den Verlauf der Herzerkrankung und die Wirksamkeit der Behandlung zu überwachen.",
+          },
+        ],
+      },
+      // 4tab 98
+      {
+        id: 98,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "45-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über Müdigkeit, Atemnot und unregelmäßigen Herzschlag. Keine bekannte Herzerkrankung in der Vorgeschichte.",
+            fourth:
+              "75-jährige Patientin berichtet über Brustschmerzen, Schwindel und Atemnot bei Anstrengung. Familiengeschichte von Herzerkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Echokardiographische Untersuchung zeigt normale Herzklappenfunktion, normale Größe und Funktion der Herzkammern ohne Auffälligkeiten.",
+            third:
+              "Die Echokardiographie zeigt eine deutliche Verlagerung des hinteren Mitralklappenblatts und einen signifikanten Rückfluss des Blutes in den linken Vorhof während der Systole.",
+            fourth:
+              "Die Echokardiographie offenbart eine Verengung der Aortenklappe mit einer reduzierten Öffnungsfläche und erhöhtem Druckgradienten über die Klappe.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Echokardiographie-Ergebnis unterstützt den Ausschluss von Herzerkrankungen und bestätigt die normale Herzfunktion.",
+            third:
+              "Der Befund deutet auf einen Mitralklappenprolaps hin, was die Symptome des Patienten erklärt und eine potenzielle Ursache für den Vorhofrückfluss darstellt.",
+            fourth:
+              "Die Verengung der Aortenklappe ist charakteristisch für eine Aortenklappenstenose, was die Brustschmerzen und die Atemnot der Patientin erklärt. Der erhöhte Druckgradient weist auf eine fortgeschrittene Erkrankung hin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe. Empfehlung für eine regelmäßige Kontrolle und gesunden Lebensstil zur Aufrechterhaltung der Herzgesundheit.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer möglichen chirurgischen Korrektur der Mitralklappe oder eine medikamentöse Behandlung zur Reduzierung der Symptome und Verhinderung von Komplikationen wie Vorhofflimmern.",
+            fourth:
+              "Die Echokardiographie-Ergebnisse sind wichtig für die Planung einer operativen Aortenklappenersatz- oder -reparatur sowie für die medikamentöse Management der Symptome und Prävention von Herzinsuffizienz.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Mitralklappenprolaps basierend auf den Echokardiographie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer Aortenklappenstenose aufgrund der Echokardiographie-Ergebnisse und der klinischen Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Herzstrukturen ohne Auffälligkeiten in allen Ansichten. Normale Herzklappen- und Kammerfunktion.",
+            third:
+              "Die Echokardiographie zeigt eine Verlagerung und Verformung des hinteren Mitralklappenblatts sowie einen deutlichen Blutflussrückfluss in den linken Vorhof.",
+            fourth:
+              "Echokardiographische Bilder zeigen eine stark verkalkte und verengte Aortenklappe mit reduziertem Öffnungsdurchmesser und erhöhtem Druckgradienten.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige gesundheitliche Überprüfungen zur Sicherstellung der fortdauernden Herzgesundheit und einen gesunden Lebensstil.",
+            third:
+              "Wir empfehlen eine chirurgische Korrektur der Mitralklappe in Betracht zu ziehen und/oder eine medikamentöse Therapie zur Symptomlinderung und Vermeidung von Komplikationen wie Vorhofflimmern. Regelmäßige Nachkontrollen sind notwendig.",
+            fourth:
+              "Es ist zu empfehlen, die Möglichkeit eines operativen Aortenklappenersatzes zu prüfen und die Symptome medikamentös zu managen. Eine regelmäßige Überwachung ist notwendig, um eine Verschlechterung der Klappenfunktion zu verhindern. Langfristige Behandlungsstrategien und Prognose sollten besprochen werden.",
+          },
+        ],
+      },
+      // 5tab 99
+      {
+        id: 99,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Echokardiographie-Gerät ist ein hochentwickeltes medizinisches Bildgebungsgerät, das detaillierte Bilder des Herzens erstellt. Hier sind die wesentlichen Komponenten und Funktionen eines Echokardiographie-Geräts:",
+        text_list: [
+          {
+            bold: "Transducer (Ultraschallkopf) :",
+            other:
+              "Erzeugt Ultraschallwellen und empfängt die reflektierten Wellen vom Herzen. Der Transducer wird auf die Brust des Patienten aufgesetzt und bewegt, um verschiedene Ansichten des Herzens zu erhalten.",
+          },
+          {
+            bold: "Ultraschallkonsole :",
+            other:
+              "Beinhaltet die Steuerungseinheiten und die Computer, die die vom Transducer empfangenen Daten verarbeiten und in Bilder umwandeln. Hier werden auch Einstellungen für die Bildqualität und -modi vorgenommen.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Zeigt die Echtzeitbilder des Herzens an, die vom Transducer aufgenommen werden. Der Monitor ermöglicht dem Arzt oder Technologen, die Bilder während der Untersuchung zu beobachten und zu interpretieren.",
+          },
+          {
+            bold: "Patientenliege :",
+            other:
+              "Eine verstellbare Liege, auf der der Patient während der Untersuchung liegt. Die Liege kann in verschiedene Positionen gebracht werden, um den Zugang zum Herzbereich zu optimieren.",
+          },
+          {
+            bold: "EKG-Synchronisationssystem :",
+            other:
+              "Zeichnet das Elektrokardiogramm (EKG) des Patienten auf und synchronisiert es mit den Ultraschallbildern. Dies hilft, die Herzaktivität in Bezug auf die verschiedenen Phasen des Herzzyklus zu analysieren.",
+          },
+          {
+            bold: "Doppler-Funktion :",
+            other:
+              "Eine spezielle Funktion, die die Flussgeschwindigkeit des Blutes durch die Herzkammern und Klappen misst. Dies ist wichtig, um Informationen über den Blutfluss und mögliche Stenosen oder Insuffizienzen der Herzklappen zu erhalten.",
+          },
+          {
+            bold: "Bildarchivierungssystem (PACS) :",
+            other:
+              "Ermöglicht die Speicherung und Verwaltung der aufgenommenen Bilder und Videos. Bilder können zur späteren Analyse, Diagnose und Dokumentation gespeichert werden.",
+          },
+          {
+            bold: "Kontrastmittelinjektor :",
+            other:
+              "Wird manchmal verwendet, um Kontrastmittel intravenös zu verabreichen. Dies verbessert die Sichtbarkeit bestimmter Strukturen oder Pathologien im Herzen.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Ein internes System, das dafür sorgt, dass die Komponenten des Echokardiographie-Geräts während des Betriebs nicht überhitzen. Dies ist besonders wichtig für den Transducer, der kontinuierlich Ultraschallwellen erzeugt.",
+          },
+          {
+            bold: "Tragbares Gerät (bei tragbaren Echokardiographie-Geräten) :",
+            other:
+              "Einige Echokardiographie-Geräte sind tragbar und können leicht transportiert werden, um am Patientenbett oder in Notfallsituationen eingesetzt zu werden. Diese Geräte haben oft eine kompakte Konsole und einen kleineren Monitor.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben. Dies ist besonders nützlich, um den Patienten zu beruhigen und ihm Anweisungen zu geben.",
+          },
+        ],
+      },
+      // 6tab 100
+      {
+        id: 100,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für eine Fachsprachenprüfung im Bereich der Echokardiographie und helfen, die Untersuchung und deren Ergebnisse präzise zu beschreiben und zu diskutieren.",
+        text_list: [
+          {
+            bold: "Echokardiographie :",
+            other:
+              "Ultraschalluntersuchung des Herzens zur Beurteilung der Herzstruktur und -funktion.",
+          },
+          {
+            bold: "Transducer (Ultraschallkopf) :",
+            other:
+              "Gerät, das Ultraschallwellen erzeugt und empfängt, um Bilder des Herzens zu erstellen.",
+          },
+          {
+            bold: "M-Mode :",
+            other:
+              "Modus der Echokardiographie, der eine ein-dimensionale Darstellung des Herzens in Bewegung liefert.",
+          },
+          {
+            bold: "2D-Modus :",
+            other:
+              "Modus der Echokardiographie, der zweidimensionale Bilder des Herzens in Echtzeit liefert.",
+          },
+          {
+            bold: "Doppler-Echokardiographie :",
+            other:
+              "Technik zur Messung und Darstellung des Blutflusses durch die Herzkammern und -klappen.",
+          },
+          {
+            bold: "Farbdoppler :",
+            other:
+              "Visualisiert den Blutfluss im Herzen farblich, um Strömungsrichtungen und -geschwindigkeiten darzustellen.",
+          },
+          {
+            bold: "Spektraldoppler :",
+            other:
+              "Graphische Darstellung der Blutflussgeschwindigkeit über die Zeit.",
+          },
+          {
+            bold: "Ventrikel :",
+            other:
+              "Die beiden unteren Herzkammern, die das Blut aus dem Herzen pumpen.",
+          },
+          {
+            bold: "Vorhöfe (Atrien) :",
+            other:
+              "Die beiden oberen Herzkammern, die das Blut aus dem Körper und der Lunge empfangen.",
+          },
+          {
+            bold: "Herzklappen :",
+            other:
+              "Strukturen im Herzen, die den Blutfluss in die richtige Richtung lenken (z.B. Mitralklappe, Aortenklappe).",
+          },
+          {
+            bold: "Mitralinsuffizienz :",
+            other:
+              "Rückfluss des Blutes durch die Mitralklappe in den linken Vorhof.",
+          },
+          {
+            bold: "Aortenstenose :",
+            other:
+              "Verengung der Aortenklappe, die den Blutfluss aus dem linken Ventrikel in die Aorta behindert.",
+          },
+          {
+            bold: "Perikarderguss :",
+            other: "Flüssigkeitsansammlung im Herzbeutel (Perikard).",
+          },
+          {
+            bold: "Herzinsuffizienz :",
+            other:
+              "Unfähigkeit des Herzens, ausreichend Blut zu pumpen, um den Körper mit Sauerstoff zu versorgen.",
+          },
+          {
+            bold: "Myokard :",
+            other: "Herzmuskelgewebe.",
+          },
+          {
+            bold: "Endokarditis :",
+            other:
+              "Entzündung der Herzinnenhaut, oft verursacht durch eine Infektion.",
+          },
+          {
+            bold: "Hypertrophie :",
+            other: "Verdickung des Herzmuskelgewebes.",
+          },
+          {
+            bold: "Diastole :",
+            other:
+              "Entspannungsphase des Herzens, in der sich die Kammern mit Blut füllen.",
+          },
+          {
+            bold: "Systole :",
+            other:
+              "Kontraktionsphase des Herzens, in der das Blut aus den Kammern gepumpt wird.",
+          },
+          {
+            bold: "Parasternaler Langachsenschnitt :",
+            other:
+              "Echokardiographische Schnittebene, die entlang der langen Achse des Herzens verläuft.",
+          },
+          {
+            bold: "Apikaler Vierkammerblick :",
+            other:
+              "Schnittebene, die alle vier Herzkammern gleichzeitig darstellt.",
+          },
+          {
+            bold: "TTE (Transthorakale Echokardiographie) :",
+            other:
+              "Echokardiographie durch die Brustwand, die am häufigsten verwendete Methode.",
+          },
+          {
+            bold: "Pulswellen-Doppler :",
+            other:
+              "Misst die Blutflussgeschwindigkeit an einem bestimmten Punkt im Herzen.",
+          },
+          {
+            bold: "Gewebedoppler :",
+            other:
+              "Misst die Geschwindigkeit der Herzmuskelbewegung, um die Funktion des Myokards zu beurteilen.",
+          },
+          {
+            bold: "Linksventrikuläre Ejektionsfraktion (LVEF) :",
+            other:
+              "Prozentsatz des Blutes, das der linke Ventrikel bei jedem Herzschlag auswirft.",
+          },
+        ],
+      },
+      // 7tab 101
+      {
+        id: 101,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 102
+      {
+        id: 102,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1fcpky8nGyV-azEghdRditSI6e7z26lJT/view?usp=share_link",
+      },
+    ],
+  },
+
+  // end of parent tab 11
+  // start of parent tab 12 echokardiographie
+
+  // Endoskopische Verfahren
+  // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
   {
     id: 10,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
@@ -6778,5 +8192,5 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 10
+  // end of parent tab
 ];
