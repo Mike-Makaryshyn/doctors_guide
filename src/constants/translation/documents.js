@@ -256,7 +256,6 @@ export const documents = [
    {
       id: 5,
       ...defaultProps,
-      apostile: notNeededText,
       category: {
          en: "A Certificate of Good Standing is issued by the relevant health authorities where you have worked professionally",
          fr: "Un certificat de bonne conduite est délivré par les autorités sanitaires compétentes où vous avez exercé professionnellement",
