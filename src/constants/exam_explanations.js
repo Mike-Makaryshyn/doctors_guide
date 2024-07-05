@@ -3,8 +3,26 @@ import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
 export const exam_categories = [
-   {id: 1, title: 'Bildgebender Verfahren zum Herunterladen', show_before_id: 1},
-   {id: 2, title: 'Bildgebender. 2', show_before_id: 6}
+   {
+      id: 1, 
+      title: 'Bildgebender Verfahren zum Herunterladen',
+      show_before_id: 1
+   },
+   {
+      id: 2,
+      title: 'Bildgebender. 2',
+      show_before_id: 6
+   },
+   {
+      id: 3, 
+      title: 'Bildgebender. 3',
+      show_before_id: 11
+   },
+   // {
+   //    id: 4, 
+   //    title: 'Bildgebender. 3',
+   //    show_before_id: 21
+   // },
 ]
 
 export const parentTabs = [
