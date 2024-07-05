@@ -18,11 +18,7 @@ export const exam_categories = [
       title: 'Bildgebender. 3',
       show_before_id: 11
    },
-   // {
-   //    id: 4, 
-   //    title: 'Bildgebender. 3',
-   //    show_before_id: 21
-   // },
+   // Тут далі вставляй нові категорії по прикладу попередніх.
 ]
 
 export const parentTabs = [
