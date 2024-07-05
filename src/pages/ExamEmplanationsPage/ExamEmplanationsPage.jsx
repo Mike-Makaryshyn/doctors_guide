@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import StaticTable from "../../components/StaticTable/StaticTable";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { parentTabs } from "../../constants/exam_explanations";
+import { exam_categories, parentTabs } from "../../constants/exam_explanations";
 import styles from "./styles.module.scss";
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import cn from "classnames";
@@ -252,91 +252,81 @@ const ExamExplanationsPage = () => {
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>
-                  {parentTabs?.map((parentTab, index) => (
-                     <div
-                        onClick={(e) =>
-                           clickActiveParentTab(e, parentTab, index)
-                        }
-                        className={styles.parentTabItem}
-                        key={parentTab?.id}
-                        ref={
-                           parentTabOpen?.id === parentTab?.id
-                              ? activeTabRef
-                              : null
-                        }
-                     >
-                        <div className={cn(styles.pTab, "noselect")}>
-                           <div className={styles.pTitle}>
-                              {parentTab?.title}
-                           </div>
-                           <Checkbox
-                              label={"Gelernt"}
-                              value={checkedParentIds?.includes(parentTab?.id)}
-                              onChange={() =>
-                                 handleCheckboxChange(parentTab?.id)
-                              }
-                              labelRight
-                           />
-                        </div>
-                        <div
-                           className={cn(
-                              styles.childTabsWrapper,
-                              parentTabOpen?.id === parentTab?.id
-                                 ? styles.showChildTab
-                                 : ""
-                           )}
-                        >
-                           <div
-                              onClick={(e) => e.stopPropagation()}
-                              className={styles.childTabs}
-                           >
-                              {parentTab?.childTabs?.map(
-                                 (childTab, childIdx) => (
-                                    <div
-                                       className={cn(
-                                          styles.child_tab,
-                                          childTabOpen?.id === childTab?.id
-                                             ? styles.active_child_tab
-                                             : "",
-                                          childTab?.link
-                                             ? styles.lessWidth
-                                             : "",
-                                          "noselect"
-                                       )}
-                                       onClick={(e) =>
-                                          clickActiveChildTab(e, childTab)
-                                       }
-                                       key={childTab?.id}
-                                    >
-                                       {childTab?.title}
-                                    </div>
-                                 )
-                              )}
-                           </div>
+               {parentTabs.map((parentTab, index) => {
+   
+            const category = exam_categories?.find(cat => cat?.show_before_id === parentTab.id);
 
+            return (
+               <div key={parentTab?.id}>
+                  {category && (
+                     <div className={styles.categoryTitle}>
+                        {category.title}
+                     </div>
+                  )}
+
+                  <div
+                     onClick={(e) => clickActiveParentTab(e, parentTab, index)}
+                     className={styles.parentTabItem}
+                     ref={parentTabOpen?.id === parentTab?.id ? activeTabRef : null}
+                  >
+                     <div className={cn(styles.pTab, "noselect")}>
+                        <div className={styles.pTitle}>
+                           {parentTab?.title}
+                        </div>
+                        <Checkbox
+                           label={"Gelernt"}
+                           value={checkedParentIds.includes(parentTab?.id)}
+                           onChange={() => handleCheckboxChange(parentTab?.id)}
+                           labelRight
+                        />
+                     </div>
+                     <div
+                        className={cn(
+                           styles.childTabsWrapper,
+                           parentTabOpen?.id === parentTab?.id ? styles.showChildTab : ""
+                        )}
+                     >
+                        <div
+                           onClick={(e) => e.stopPropagation()}
+                           className={styles.childTabs}
+                        >
                            {parentTab?.childTabs?.map((childTab, childIdx) => (
                               <div
-                                 onClick={(e) =>
-                                    clickActiveChildTab(e, childTab)
-                                 }
-                                 key={`child${childIdx}`}
+                                 className={cn(
+                                    styles.child_tab,
+                                    childTabOpen?.id === childTab?.id ? styles.active_child_tab : "",
+                                    childTab?.link ? styles.lessWidth : "",
+                                    "noselect"
+                                 )}
+                                 onClick={(e) => clickActiveChildTab(e, childTab)}
+                                 key={childTab?.id}
                               >
-                                 <div
-                                    onClick={(e) => e.stopPropagation()}
-                                    className={cn(
-                                       styles.childTabContentWrapper,
-                                       childTabOpen?.id === childTab?.id
-                                          ? styles.showChildTab
-                                          : ""
-                                    )}
-                                 >
-                                    {renderChildTabContent(childTab, childIdx)}
-                                 </div>
+                                 {childTab?.title}
                               </div>
                            ))}
                         </div>
+
+                        {parentTab?.childTabs?.map((childTab, childIdx) => (
+                           <div
+                              onClick={(e) => clickActiveChildTab(e, childTab)}
+                              key={`child${childIdx}`}
+                           >
+                              <div
+                                 onClick={(e) => e.stopPropagation()}
+                                 className={cn(
+                                    styles.childTabContentWrapper,
+                                    childTabOpen?.id === childTab?.id ? styles.showChildTab : ""
+                                 )}
+                              >
+                                 {renderChildTabContent(childTab, childIdx)}
+                              </div>
+                           </div>
+                        ))}
                      </div>
-                  ))}
+                  </div>
+               </div>
+            );
+         })}
                </div>
             </div>
             <button

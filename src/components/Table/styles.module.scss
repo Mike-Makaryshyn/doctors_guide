@@ -6,6 +6,11 @@
    overflow-x: auto;
    padding-right: 5px;
 
+
+   @media (max-width: 769px) {
+      overflow-x: auto;
+    }
+
    @media print {
       table {
          th,

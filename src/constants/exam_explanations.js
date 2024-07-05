@@ -2,6 +2,11 @@ import child_tab_img_1 from "../assets/tab_images/child_tab_3.png";
 import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
+export const exam_categories = [
+   {id: 1, title: 'Bildgebender Verfahren zum Herunterladen', show_before_id: 1},
+   {id: 2, title: 'Bildgebender. 2', show_before_id: 6}
+]
+
 export const parentTabs = [
   // Bildgebender Verfahren zum Herunterladen
 
@@ -3128,7 +3133,7 @@ export const parentTabs = [
       },
       // 6tab 48
       {
-        id: 49,
+        id: 48,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im Bereich der PET-CT-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
         text_list: [
@@ -7456,7 +7461,7 @@ export const parentTabs = [
   // Endoskopische Verfahren
   // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
   {
-    id: 10,
+    id: 12,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
     checked: false,
     childTabs: [

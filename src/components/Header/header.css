@@ -9,8 +9,19 @@
    position: fixed;
    width: 100%;
    top: 0;
-}
 
+   @media (max-width: 509px) {
+      font-size: 13px;
+
+      .sRegion {
+         margin-bottom: 5px;
+      }
+
+      select {
+         font-size: 12px;
+      }
+    }
+}
 
 .sRegion {
    font-weight: 600;

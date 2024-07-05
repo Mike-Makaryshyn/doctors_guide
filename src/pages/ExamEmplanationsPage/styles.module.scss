@@ -42,6 +42,17 @@
    position: relative;
    display: flex;
    gap: 10px;
+
+   @media (max-width: 909px) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+
+   @media (max-width: 509px) {
+      display: grid;
+      grid-template-columns: auto auto;
+      font-size: 14px;
+    }
 }
 
 .showTab {
@@ -59,10 +70,27 @@
    &:hover {
       border-bottom: 1px solid gray;
    }
+
+   @media (max-width: 769px) {
+      border: 1px solid gray;
+      border-radius: 10px;
+    }
+}
+
+.categoryTitle {
+   font-size: 22px;
+   font-weight: bold;
+   color: white;
+   padding: 15px;
+   margin: 10px;
 }
 
 .active_child_tab {
    border-bottom: 1px solid black;
+
+   @media (max-width: 769px) {
+      box-shadow: rgba(128, 128, 240, 0.25) 0px 30px 60px -12px inset, rgba(208, 40, 40, 0.3) 0px 18px 36px -18px inset;
+    }
 
    &:hover {
       border-bottom: 1px solid black;
@@ -141,6 +169,10 @@
    .text {
       margin-bottom: 32px;
    }
+
+   @media (max-width: 769px) {
+      flex-direction: column;
+    }
 }
 
 .text_top {
@@ -168,9 +200,22 @@
    justify-content: space-between;
    padding: 10px 30px;
    font-size: 16px;
+
+   @media (max-width: 509px) {
+      display: flex;
+      flex-direction: column;
+    }
 }
 
 .pTitle {
    font-weight: 600;
    font-size: 17px;
+
+   @media (max-width: 509px) {
+      margin-bottom: 20px;
+    }
+
+    label {
+      text-align: left !important;
+    }
 }
