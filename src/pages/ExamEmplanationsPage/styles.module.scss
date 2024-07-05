@@ -77,13 +77,26 @@
     }
 }
 
+.images {
+   display: flex;
+   flex-direction: column;
+   min-width: 40%;
+   max-height: 100%;
+   
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
 .categoryTitle {
    font-size: 22px;
    font-weight: bold;
    color: white;
    padding: 15px;
-   margin: 24px;
-   margin-bottom: 20px;
+   margin: 20px;
+   margin-bottom: 22px;
 }
 
 .active_child_tab {
@@ -160,12 +173,6 @@
    display: flex;
    gap: 25px;
    font-size: 17px;
-
-   img {
-      width: 50%;
-      max-height: 100%;
-      object-fit: cover;
-   }
 
    .text {
       margin-bottom: 32px;

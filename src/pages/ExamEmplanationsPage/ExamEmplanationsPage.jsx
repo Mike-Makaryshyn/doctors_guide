@@ -166,7 +166,10 @@ const ExamExplanationsPage = () => {
          return (
             <div className={styles.tabFive}>
                <div className={styles.tabFiveTop}>
-                  {childTab?.img && <img src={childTab?.img} alt="Schema" />}
+                  <div className={styles.images}>
+                     {childTab?.img && <img src={childTab?.img} alt="Schema" />}
+                     {childTab?.second_img && <img src={childTab?.img} alt="Schema" />}
+                  </div>
                   <div className={styles.text_top}>
                      {!!childTab?.text?.length && (
                         <p className={styles.text}>
