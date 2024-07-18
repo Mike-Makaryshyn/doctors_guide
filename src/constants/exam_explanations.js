@@ -3,23 +3,23 @@ import child_tab_img_2 from "../assets/tab_images/child_tab_1.jpg";
 import child_tab_img_3 from "../assets/tab_images/child_tab_1.jpg";
 
 export const exam_categories = [
-   {
-      id: 1, 
-      title: 'Bildgebender Verfahren zum Herunterladen',
-      show_before_id: 1
-   },
-   {
-      id: 2,
-      title: 'Bildgebender. 2',
-      show_before_id: 6
-   },
-   {
-      id: 3, 
-      title: 'Bildgebender. 3',
-      show_before_id: 11
-   },
-   // Тут далі вставляй нові категорії по прикладу попередніх.
-]
+  {
+    id: 1,
+    title: "Bildgebender Verfahren",
+    show_before_id: 1,
+  },
+  {
+    id: 2,
+    title: "Kardiologische Untersuchungen",
+    show_before_id: 10,
+  },
+  {
+    id: 3,
+    title: "Endoskopische Verfahren",
+    show_before_id: 22,
+  },
+  // Тут далі вставляй нові категорії по прикладу попередніх.
+];
 
 export const parentTabs = [
   // Bildgebender Verfahren zum Herunterladen
@@ -7468,14 +7468,1373 @@ export const parentTabs = [
       },
     ],
   },
-
   // end of parent tab 11
-  // start of parent tab 12 echokardiographie
-
-  // Endoskopische Verfahren
-  // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+  // start of parent tab 12 Belastung EKG
   {
     id: 12,
+    title: "Belastung-EKG",
+    checked: false,
+    childTabs: [
+      // 1tab 103
+      {
+        id: 103,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Belastung-EKG, auch als Ergometrie bekannt, wird eingesetzt, um die Funktion des Herzens unter körperlicher Belastung zu bewerten. Es dient der Diagnose von koronaren Herzkrankheiten, der Beurteilung der Leistungsfähigkeit und der Feststellung von Rhythmusstörungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Das Belastung-EKG ist von besonderer Bedeutung bei der Erkennung von Angina pectoris, der Überwachung der Behandlung von Herz-Kreislauf-Erkrankungen und der Beurteilung der körperlichen Belastbarkeit von Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das Belastung-EKG basiert auf der kontinuierlichen Überwachung der elektrischen Aktivität des Herzens während einer definierten körperlichen Anstrengung. Dies ermöglicht die Identifikation von Durchblutungsstörungen, die in Ruhe nicht erkennbar sind.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Der Patient führt die Belastung entweder auf einem Fahrradergometer oder einem Laufband durch. Die Belastung wird stufenweise erhöht, während kontinuierlich EKG-Ableitungen aufgezeichnet und Blutdruckmessungen durchgeführt werden.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die EKG-Daten werden auf Anzeichen von Ischämie, Arrhythmien und anderen Herzfunktionsstörungen analysiert. Wichtige Parameter sind ST-Strecken-Veränderungen, Herzfrequenz und Blutdruckreaktionen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können ST-Strecken-Senkungen, T-Wellen-Veränderungen oder das Auftreten von ventrikulären Arrhythmien sein, die auf eine koronare Herzkrankheit hinweisen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Das Belastung-EKG ist nicht-invasiv, relativ kostengünstig und weit verbreitet verfügbar. Es liefert wertvolle Informationen über die Herzfunktion unter Belastung.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Aussagekraft kann durch unzureichende Belastung oder technische Artefakte eingeschränkt sein.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Es besteht ein geringes Risiko für schwerwiegende Komplikationen wie Herzinfarkt oder schwerwiegende Arrhythmien während der Untersuchung, insbesondere bei Patienten mit bekannten Herzkrankheiten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Ergebnisse des Belastung-EKGs beeinflussen maßgeblich das Management von Patienten mit Herz-Kreislauf-Erkrankungen und die Entscheidung über weiterführende diagnostische oder therapeutische Maßnahmen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Die Ergebnisse des Belastung-EKGs beeinflussen maßgeblich das Management von Patienten mit Herz-Kreislauf-Erkrankungen und die Entscheidung über weiterführende diagnostische oder therapeutische Maßnahmen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zum Belastung-EKG gehören bildgebende Verfahren wie die Myokardszintigraphie, das Stress-Echo und die Kardio-MRT, die ebenfalls Aufschluss über die Herzfunktion unter Belastung geben können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Forschungsergebnisse fokussieren sich auf die Verbesserung der diagnostischen Genauigkeit durch kombinierte Methoden und die Integration von künstlicher Intelligenz zur besseren Auswertung der EKG-Daten.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Anwendung von Wearables zur kontinuierlichen Überwachung der Herzfunktion und personalisierte Belastungstests umfassen, die auf den individuellen Gesundheitszustand des Patienten abgestimmt sind.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Das Belastung-EKG ist ein essenzielles diagnostisches Werkzeug in der Kardiologie, das wertvolle Informationen über die Herzfunktion unter Belastung liefert. Es ist nicht-invasiv, relativ kostengünstig und weit verbreitet.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Aufgrund seiner Bedeutung in der Diagnose und dem Management von Herz-Kreislauf-Erkrankungen bleibt das Belastung-EKG eine unverzichtbare Methode in der modernen Medizin.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 104
+      {
+        id: 104,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Belastung-EKG durchgeführt wird, um die Herzfunktion unter körperlicher Belastung zu bewerten und mögliche Durchblutungsstörungen/Rhythmusstörungen zu erkennen.",
+            third:
+              "Wir möchten sehen, wie Ihr Herz auf körperliche Anstrengung reagiert und ob es dabei zu Durchblutungsstörungen kommt.",
+            fourth:
+              "Diese Untersuchung hilft uns zu verstehen, ob Ihr Herz unter Belastung ausreichend mit Blut versorgt wird.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erklären Sie dem Patienten den Ablauf der Untersuchung: Der Patient wird auf einem Fahrradergometer oder Laufband trainieren, während kontinuierlich das EKG und der Blutdruck überwacht werden.",
+            third:
+              "Sie werden auf einem Fahrradergometer sitzen und in Intervallen in die Pedale treten, während wir Ihr EKG und Ihren Blutdruck überwachen.",
+            fourth:
+              "Wir beginnen mit einer leichten Belastung auf dem Laufband, die wir nach und nach erhöhen, während wir Ihr Herz überwachen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass der Patient bequeme Kleidung und Sportschuhe tragen soll. Der Patient sollte zwei Stunden vor der Untersuchung keine schweren Mahlzeiten zu sich nehmen und bestimmte Medikamente möglicherweise pausieren.",
+            third:
+              "Bitte tragen Sie bequeme Kleidung und Sportschuhe und essen Sie mindestens zwei Stunden vorher nichts Schweres.",
+            fourth:
+              "Kommen Sie in bequemer Sportkleidung und verzichten Sie auf große Mahlzeiten kurz vor der Untersuchung.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie den Patienten über mögliche Risiken wie Herzrhythmusstörungen, Brustschmerzen oder seltene Fälle eines Herzinfarkts.",
+            third:
+              "Es kann zu Herzrhythmusstörungen oder Brustschmerzen kommen, aber wir überwachen Sie kontinuierlich und sind vorbereitet.",
+            fourth:
+              "Seltene Komplikationen wie ein Herzinfarkt sind möglich, aber unwahrscheinlich. Wir sind jederzeit bereit einzugreifen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass das Belastung-EKG eine nicht-invasive Methode ist, die wertvolle Informationen über die Herzfunktion und mögliche Durchblutungsstörungen liefert.",
+            third:
+              "Dieses Verfahren gibt uns wichtige Informationen über die Leistungsfähigkeit Ihres Herzens ohne einen invasiven Eingriff.",
+            fourth:
+              "Mit dem Belastung-EKG können wir gezielt herausfinden, ob Ihr Herz unter Belastung gut arbeitet, ohne eine Operation zu benötigen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie den Patienten über alternative Untersuchungsmethoden wie das Stress-Echokardiogramm, die Myokardszintigraphie oder die Kardio-MRT.",
+            third:
+              "Eine Alternative wäre das Stress-Echokardiogramm, bei dem wir die Herzfunktion mittels Ultraschalles unter Belastung beobachten.",
+            fourth:
+              "Wir könnten auch eine Myokardszintigraphie durchführen, um die Durchblutung Ihres Herzens zu überprüfen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass das Belastung-EKG bei bestimmten Patienten nicht durchführbar ist, zum Beispiel bei akuten Herzinfarkten, schweren Herzrhythmusstörungen oder schweren Herzklappenfehlern.",
+            third:
+              "Bei einem kürzlich aufgetretenen Herzinfarkt ist dieses Verfahren nicht geeignet.",
+            fourth:
+              "Patienten mit schweren Herzrhythmusstörungen sollten kein Belastung-EKG durchführen lassen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Untersuchung sowohl normale als auch pathologische Ergebnisse liefern kann, wie ST-Strecken-Senkungen, T-Wellen-Veränderungen oder Arrhythmien.",
+            third:
+              "Wir könnten Veränderungen in der ST-Strecke sehen, die auf eine mögliche Durchblutungsstörung hinweisen.",
+            fourth:
+              "Falls Arrhythmien während der Belastung auftreten, könnte das ein Hinweis auf eine Herzkrankheit sein.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Ein informiertes Einverständnis des Patienten ist notwendig, da die Untersuchung mit körperlicher Anstrengung und potenziellen Risiken verbunden ist.",
+            third:
+              "Es ist wichtig, dass Sie verstehen und zustimmen, da die Untersuchung eine körperliche Belastung beinhaltet.",
+            fourth:
+              "Wir benötigen Ihr Einverständnis, um sicherzustellen, dass Sie über alle Risiken und den Ablauf informiert sind.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient eine Einverständniserklärung unterschreiben muss, nachdem alle Fragen geklärt und alle Informationen bereitgestellt wurden.",
+            third:
+              "Bitte unterschreiben Sie hier, nachdem wir alle Ihre Fragen beantwortet haben.",
+            fourth:
+              "Nachdem wir alles besprochen haben, benötigen wir Ihre Unterschrift auf diesem Formular.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten Hinweise zur Vorbereitung und zum Verhalten. Erklären Sie, dass der Patient alle auftretenden Beschwerden sofort mitteilen soll.",
+            third:
+              "Falls Sie während der Untersuchung Beschwerden haben, informieren Sie uns bitte sofort.",
+            fourth:
+              "Es ist wichtig, dass Sie uns sofort Bescheid geben, wenn Sie Schmerzen oder Unwohlsein verspüren.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie dem Patienten, dass die Ergebnisse der Untersuchung ausführlich mit ihm besprochen werden und gegebenenfalls weitere diagnostische oder therapeutische Maßnahmen folgen.",
+            third:
+              "Nach der Untersuchung werden wir die Ergebnisse ausführlich besprechen und das weitere Vorgehen planen.",
+            fourth:
+              "Wir werden die Ergebnisse in einem persönlichen Gespräch durchgehen und entscheiden, ob weitere Untersuchungen notwendig sind.",
+          },
+        ],
+      },
+      // 3tab 105
+      {
+        id: 105,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass das Belastung-EKG eine diagnostische Methode zur Beurteilung der Herzfunktion unter körperlicher Belastung ist, um mögliche ischämische Herzkrankheiten oder Rhythmusstörungen zu erkennen.",
+            third:
+              "Das Belastung-EKG ist ein Test, bei dem wir die elektrische Aktivität des Herzens unter körperlicher Belastung aufzeichnen, um Durchblutungsstörungen oder Arrhythmien zu erkennen.",
+            fourth:
+              "Es handelt sich um eine Methode, bei der wir die Herzaktivität während der körperlichen Anstrengung überwachen, um versteckte Herzprobleme aufzudecken.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass das Belastung-EKG zur Erkennung von koronarer Herzkrankheit, zur Beurteilung der körperlichen Leistungsfähigkeit, zur Überprüfung von Therapieerfolgen und zur Feststellung von Belastungsarrhythmien eingesetzt wird.",
+            third:
+              "Mit dem Belastung-EKG können wir feststellen, ob eine koronare Herzkrankheit vorliegt oder ob bestehende Therapien wirksam sind.",
+            fourth:
+              "Es hilft uns auch, die Belastungsfähigkeit des Patienten zu beurteilen und eventuelle Belastungsarrhythmien zu identifizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die möglichen Ergebnisse, einschließlich normaler Befunde, ST-Strecken-Veränderungen, T-Wellen-Veränderungen und das Auftreten von Arrhythmien.",
+            third:
+              "Ein positives Ergebnis könnte eine ST-Strecken-Senkung sein, die auf eine Ischämie hinweist. Normale Ergebnisse zeigen keine signifikanten Veränderungen.",
+            fourth:
+              "Wir könnten auch T-Wellen-Veränderungen beobachten, die auf eine koronare Herzkrankheit hindeuten könnten. Arrhythmien unter Belastung sind ebenfalls ein wichtiges Ergebnis.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen für ein Belastung-EKG, wie Verdacht auf koronare Herzkrankheit, Abklärung von Brustschmerzen, Bewertung der Belastbarkeit.",
+            third:
+              "Wir führen das Belastung-EKG durch, wenn der Verdacht auf eine koronare Herzkrankheit besteht oder bei unklaren Brustschmerzen.",
+            fourth:
+              "Es ist auch indiziert bei der Beurteilung der Belastbarkeit von Patienten mit bekannter Herzkrankheit und zur Überprüfung der Wirksamkeit von Therapien.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Diskutieren Sie die Kontraindikationen, wie akuter Herzinfarkt, instabile Angina pectoris, schwere Herzrhythmusstörungen, schwere Aortenstenose und andere schwere kardiovaskuläre Erkrankungen.",
+            third:
+              "Bei einem akuten Herzinfarkt oder instabiler Angina pectoris ist das Belastung-EKG kontraindiziert.",
+            fourth:
+              "Auch bei schweren Herzrhythmusstörungen oder einer schweren Aortenstenose sollten wir von einem Belastung-EKG absehen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären Sie, welche Differenzialdiagnosen bei auffälligen Befunden in Betracht gezogen werden sollten, wie andere Formen der Angina pectoris, hypertensive Herzkrankheit und nicht-kardiale Ursachen.",
+            third:
+              "Zu den Differenzialdiagnosen bei auffälligen Befunden gehören andere Formen der Angina pectoris und hypertensive Herzkrankheit.",
+            fourth:
+              "Wir sollten auch nicht-kardiale Ursachen wie gastroösophageale Refluxkrankheit oder muskuläre Probleme in Betracht ziehen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse des Belastung-EKGs zur Erstellung oder Anpassung von Behandlungsplänen genutzt werden können, einschließlich der Therapie, der Lebensstiländerung und ggf. weitere Diagnostik.",
+            third:
+              "Basierend auf den Ergebnissen des Belastung-EKGs könnten wir die medikamentöse Therapie anpassen oder eine koronare Angiographie empfehlen.",
+            fourth:
+              "Die Ergebnisse könnten auch zu Empfehlungen für Lebensstiländerungen oder eine Intensivierung der kardiologischen Überwachung führen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit Kardiologen, Physiotherapeuten, Pflegekräften und anderen Fachrichtungen zur optimalen Betreuung und Nachsorge des Patienten.",
+            third:
+              "Wir sollten eng mit Kardiologen zusammenarbeiten, um die Ergebnisse des Belastung-EKGs zu interpretieren und geeignete Behandlungspläne zu erstellen.",
+            fourth:
+              "Die Zusammenarbeit mit Physiotherapeuten ist ebenfalls wichtig, um geeignete Rehabilitationsmaßnahmen basierend auf der Belastungsfähigkeit des Patienten zu entwickeln.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Diskutieren Sie Maßnahmen zur Sicherstellung der Qualität der Belastung-EKG-Untersuchungen, wie regelmäßige Kalibrierung, Schulung des Personals und standardisierte Protokolle.",
+            third:
+              "Regelmäßige Kalibrierung der EKG-Geräte und Schulung des Personals sind entscheidend, um die Genauigkeit der Untersuchungen zu gewährleisten.",
+            fourth:
+              "Wir sollten standardisierte Protokolle verwenden, um konsistente und verlässliche Ergebnisse zu erzielen.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Notwendigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse, der Besprechung dieser Ergebnisse mit dem Patienten und der Planung von Nachsorgeuntersuchungen oder weiteren diagnostischen Schritten.",
+            third:
+              "Es ist wichtig, die Ergebnisse des Belastung-EKGs ausführlich zu dokumentieren und mit dem Patienten zu besprechen, um weitere Schritte zu planen.",
+            fourth:
+              "Wir sollten die Untersuchungsergebnisse sorgfältig dokumentieren und einen Plan für die Nachsorge oder weiterführende Diagnostik erstellen.",
+          },
+        ],
+      },
+      // 4tab 106
+      {
+        id: 106,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "55-jähriger Patient klagt über Brustschmerzen und Atemnot bei körperlicher Anstrengung. Vorgeschichte von Hypertonie und Hyperlipidämie.",
+            fourth:
+              "60-jährige Patientin berichtet von unregelmäßigem Herzschlag und Schwindel während körperlicher Aktivität. Familiengeschichte von Herzerkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Belastung-EKG ohne signifikante ST-Strecken-Veränderungen oder Arrhythmien. Herzfrequenz und Blutdruck reagieren physiologisch auf die Belastung.",
+            third:
+              "Belastung-EKG zeigt eine ST-Strecken-Senkung von 2 mm in den inferolateralen Ableitungen bei einer Herzfrequenz von 130 bpm.",
+            fourth:
+              "Belastung-EKG offenbart das Auftreten von ventrikulären Extrasystolen und eine polymorphe ventrikuläre Tachykardie bei 7 METS Belastung.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Belastung-EKG-Ergebnis unterstützt den Ausschluss von ischämischen oder rhythmischen Herzproblemen.",
+            third:
+              "Der Befund deutet auf eine ischämische Herzkrankheit hin. Die ST-Strecken-Senkungen korrelieren mit den Angina-Symptomen des Patienten.",
+            fourth:
+              "Die während der Belastung aufgetretenen Arrhythmien deuten auf eine Belastungsarrhythmie hin, möglicherweise bedingt durch eine zugrunde liegende Herzkrankheit.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe. Empfehlung zu regelmäßiger Bewegung und gesundem Lebensstil.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer Koronarangiographie und möglicher Revaskularisationsmaßnahmen wie PTCA oder CABG.",
+            fourth:
+              "Wichtig für die weitere Abklärung durch eine elektrophysiologische Untersuchung und die Einleitung einer antiarrhythmischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer ischämischen Herzkrankheit basierend auf Belastung-EKG-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer Belastungsarrhythmie aufgrund der Belastung-EKG-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Darstellung",
+            second:
+              "EKG-Aufzeichnungen zeigen normale Kurven ohne Auffälligkeiten in allen Belastungsstufen.",
+            third:
+              "EKG-Aufzeichnungen zeigen signifikante ST-Strecken-Senkungen in mehreren Ableitungen während der Belastung.",
+            fourth:
+              "EKG-Aufzeichnungen zeigen ventrikuläre Extrasystolen und eine polymorphe ventrikuläre Tachykardie während der Belastung.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine Fortsetzung der regelmäßigen körperlichen Aktivität und gesunden Lebensweise. Eine jährliche Kontrolluntersuchung zur Überwachung der Herzgesundheit ist ebenfalls zu empfehlen.",
+            third:
+              "Wir empfehlen eine Koronarangiographie zur genauen Beurteilung der Koronararterien und gegebenenfalls eine Revaskularisationstherapie. Es ist auch ratsam, den Lebensstil anzupassen und Risikofaktoren wie Bluthochdruck und Hyperlipidämie zu kontrollieren.",
+            fourth:
+              "Es ist zu empfehlen, eine elektrophysiologische Untersuchung durchzuführen und eine antiarrhythmische Therapie zu erwägen. Langfristig sollte eine regelmäßige kardiologische Überwachung erfolgen, um weitere Arrhythmien frühzeitig zu erkennen und zu behandeln.",
+          },
+        ],
+      },
+      // 5tab 107
+      {
+        id: 107,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Belastung-EKG ist ein diagnostisches Verfahren, das die elektrische Aktivität des Herzens während körperlicher Anstrengung aufzeichnet. Es wird verwendet, um die Herzfunktion unter Stress zu beurteilen und kann dabei helfen, Herz-Kreislauf-Erkrankungen zu diagnostizieren und zu überwachen. Hier sind die wesentlichen Komponenten und Funktionen eines Belastung-EKG-Geräts:",
+        text_list: [
+          {
+            bold: "Ergometer :",
+            other:
+              "Funktion: Das Ergometer ist ein spezielles Trainingsgerät, das verwendet wird, um den Patienten während der Untersuchung körperlich zu belasten. Es kann entweder ein Fahrradergometer oder ein Laufband sein.\nBedeutung: Es ermöglicht die graduelle Steigerung der Belastungsintensität, wodurch die Herzreaktion unter verschiedenen Belastungsstufen beobachtet werden kann.",
+          },
+          {
+            bold: "EKG-Gerät :",
+            other:
+              "Funktion: Das EKG-Gerät zeichnet die elektrische Aktivität des Herzens auf. Es besteht aus Elektroden, die am Körper des Patienten befestigt sind, und einem Monitor, der die Herzfrequenz und den Herzrhythmus in Echtzeit anzeigt.\nBedeutung: Es überwacht kontinuierlich die Herzfunktion während der Belastung und hilft, Veränderungen im EKG-Muster zu erkennen, die auf eine Ischämie oder Arrhythmien hinweisen können.",
+          },
+          {
+            bold: "Blutdruckmessgerät :",
+            other:
+              "Funktion: Das Blutdruckmessgerät misst den Blutdruck des Patienten während der Belastung in regelmäßigen Abständen.\nBedeutung: Es ist wichtig, um die Blutdruckreaktion auf die körperliche Belastung zu überwachen, da abnormale Reaktionen auf Herz-Kreislauf-Probleme hinweisen können.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Funktion: Die Steuerkonsole ermöglicht es dem medizinischen Personal, die Belastungsintensität zu steuern, die EKG-Daten zu überwachen und die Untersuchung zu dokumentieren.\nBedeutung: Sie ist das zentrale Bedienfeld, das die gesamte Untersuchung kontrolliert und sicherstellt, dass alle Parameter korrekt erfasst werden.",
+          },
+          {
+            bold: "Software zur Datenauswertung :",
+            other:
+              "Funktion: Die Software analysiert die aufgezeichneten EKG-Daten und erstellt Berichte, die dem Arzt helfen, die Herzfunktion des Patienten zu bewerten.\nBedeutung: Sie ermöglicht eine detaillierte Analyse der EKG-Kurven und hilft bei der Identifikation von pathologischen Veränderungen.",
+          },
+          {
+            bold: "Notfallausrüstung :",
+            other:
+              "Funktion: Die Notfallausrüstung umfasst Defibrillatoren und Medikamente, die bei Bedarf sofort eingesetzt werden können.\nBedeutung: Sie ist essenziell, um auf eventuelle Komplikationen wie Herzrhythmusstörungen oder Herzinfarkte schnell reagieren zu können.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Funktion: Ein Kühlungssystem ist notwendig, um die elektronischen Komponenten des EKG-Geräts zu kühlen und einen reibungslosen Betrieb zu gewährleisten.\nBedeutung: Es verhindert Überhitzung und mögliche Geräteschäden während der Untersuchung.",
+          },
+          {
+            bold: "Patientenüberwachung :",
+            other:
+              "Funktion: Ein umfassendes Überwachungssystem, das Herzfrequenz, EKG und Blutdruck des Patienten in Echtzeit anzeigt.\nBedeutung: Es ermöglicht eine kontinuierliche Beobachtung der vitalen Parameter des Patienten während der Belastung und trägt zur Sicherheit bei.",
+          },
+          {
+            bold: "Dokumentationssystem :",
+            other:
+              "Funktion: Ein System zur Speicherung und Verwaltung der erhobenen Daten und Befunde.\nBedeutung: Es stellt sicher, dass alle relevanten Informationen für die spätere Auswertung und Patientenakte verfügbar sind.",
+          },
+        ],
+      },
+      // 6tab 108
+      {
+        id: 108,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für eine Fachsprachenprüfung im Bereich der Echokardiographie und helfen, die Untersuchung und deren Ergebnisse präzise zu beschreiben und zu diskutieren.",
+        text_list: [
+          {
+            bold: "Belastung-EKG (Ergometrie) :",
+            other:
+              "Ein diagnostisches Verfahren zur Beurteilung der Herzfunktion unter körperlicher Belastung.",
+          },
+          {
+            bold: "Ergometer :",
+            other:
+              "Ein Trainingsgerät (Fahrradergometer oder Laufband), das zur Durchführung der Belastung verwendet wird.",
+          },
+          {
+            bold: "Elektrokardiogramm (EKG) :",
+            other: "Die Aufzeichnung der elektrischen Aktivität des Herzens.",
+          },
+          {
+            bold: "Elektroden :",
+            other:
+              "Sensoren, die auf der Haut des Patienten angebracht werden, um die Herzaktivität zu erfassen.",
+          },
+          {
+            bold: "ST-Strecken-Senkung :",
+            other:
+              "Eine Veränderung im EKG, die auf eine mögliche Myokardischämie hinweist.",
+          },
+          {
+            bold: "T-Wellen-Veränderung :",
+            other:
+              "Veränderungen in der EKG-Kurve, die auf eine mögliche Herzkrankheit hinweisen können.",
+          },
+          {
+            bold: "Herzfrequenz :",
+            other: "Die Anzahl der Herzschläge pro Minute.",
+          },
+          {
+            bold: "Blutdruck :",
+            other:
+              "Der Druck, den das Blut auf die Wände der Arterien ausübt; wird während der Belastung regelmäßig gemessen.",
+          },
+          {
+            bold: "Arrhythmie :",
+            other:
+              "Unregelmäßigkeiten im Herzrhythmus, die während der Belastung auftreten können.",
+          },
+          {
+            bold: "Myokardischämie :",
+            other:
+              "Eine Durchblutungsstörung des Herzmuskels, oft durch eine ST-Strecken-Senkung im EKG angezeigt.",
+          },
+          {
+            bold: "Koronare Herzkrankheit (KHK) :",
+            other:
+              "Eine Erkrankung der Herzkranzgefäße, die zu einer verminderten Durchblutung des Herzmuskels führt.",
+          },
+          {
+            bold: "Ventrikuläre Extrasystolen :",
+            other:
+              "Zusätzliche Herzschläge, die von den Herzkammern ausgehen und während der Belastung auftreten können.",
+          },
+          {
+            bold: "Polymorphe ventrikuläre Tachykardie :",
+            other:
+              "Eine schnelle Herzrhythmusstörung, die während der Belastung auftreten kann und potenziell lebensbedrohlich ist.",
+          },
+          {
+            bold: "Revaskularisation :",
+            other:
+              "Ein medizinischer Eingriff zur Wiederherstellung der Durchblutung, z.B. PTCA (perkutane transluminale koronare Angioplastie) oder CABG (Koronarbypass-Operation).",
+          },
+          {
+            bold: "Koronarangiographie :",
+            other:
+              "Ein bildgebendes Verfahren zur Darstellung der Herzkranzgefäße.",
+          },
+          {
+            bold: "Kardiologe :",
+            other: "Ein Facharzt für Herzkrankheiten.",
+          },
+          {
+            bold: "Radiologischer Technologe :",
+            other:
+              "Ein medizinischer Fachangestellter, der Bildgebungsverfahren durchführt und überwacht.",
+          },
+          {
+            bold: "Notfallausrüstung :",
+            other:
+              "Geräte und Medikamente, die bereitgehalten werden, um auf Komplikationen während der Untersuchung reagieren zu können.",
+          },
+          {
+            bold: "Patientenaufklärung :",
+            other:
+              "Der Prozess, bei dem der Patient über den Ablauf, die Risiken und den Zweck der Untersuchung informiert wird.",
+          },
+          {
+            bold: "Herz-Kreislauf-Erkrankungen :",
+            other: "Erkrankungen, die das Herz und die Blutgefäße betreffen.",
+          },
+          {
+            bold: "Physiologische Reaktion :",
+            other:
+              "Die normale Reaktion des Körpers auf körperliche Belastung, z.B. Anstieg der Herzfrequenz und des Blutdrucks.",
+          },
+        ],
+      },
+      // 7tab 109
+      {
+        id: 109,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 110
+      {
+        id: 110,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1lKi14qBbYzsc1OJQKhWKKYastuUM8ucZ/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 12
+  // start of parent tab 13 Langzeit EKG
+  {
+    id: 12,
+    title: "Langzeit-EKG",
+    checked: false,
+    childTabs: [
+      // 1tab 111
+      {
+        id: 111,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Ziel des Langzeit-EKGs ist es, Herzrhythmusstörungen zu erkennen und zu quantifizieren, die intermittierend auftreten und bei einer kurzen EKG-Aufzeichnung nicht erfasst werden können. Darüber hinaus hilft es bei der Bewertung der Herzfrequenzvariabilität und der Reaktion des Herzens auf alltägliche Aktivitäten und Stresssituationen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Das Langzeit-EKG ist besonders relevant für Patienten mit Verdacht auf intermittierende Herzrhythmusstörungen, Synkopen unklarer Genese, Palpitationen, und bei der Überwachung von Patienten mit bekannten Herzrhythmusstörungen. Es wird auch bei der Bewertung der Wirksamkeit von Antiarrhythmika und zur Nachsorge nach einem Herzinfarkt eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Ein EKG misst die elektrische Aktivität des Herzens und stellt sie in Form von Wellen und Intervallen dar. Diese Aufzeichnungen helfen dabei, Herzrhythmusstörungen und andere Herzprobleme zu diagnostizieren, indem sie die elektrische Leitung und die Herzmuskelfunktion analysieren.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Langzeit-EKG verwendet tragbare Rekorder, die mit Elektroden verbunden sind, die auf der Haut des Patienten angebracht werden. Diese Rekorder zeichnen die elektrische Herzaktivität kontinuierlich auf, während der Patient seinen normalen täglichen Aktivitäten nachgeht. Die gesammelten Daten werden anschließend auf einem Computer analysiert.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung des Langzeit-EKGs erfolgt durch einen Arzt, der die aufgezeichneten Daten auf Unregelmäßigkeiten untersucht. Dabei werden Parameter wie die Herzfrequenz, die Herzrhythmusstabilität und das Auftreten von Arrhythmien analysiert.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde eines Langzeit-EKGs können normale Herzfrequenzmuster, verschiedene Arten von Arrhythmien wie Vorhofflimmern, ventrikuläre Tachykardien, Pausen oder AV-Blockaden umfassen. Diese Befunde helfen, die genaue Ursache der Symptome des Patienten zu bestimmen und entsprechende therapeutische Maßnahmen zu ergreifen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Das Langzeit-EKG bietet eine umfassende und detaillierte Überwachung der Herzaktivität über einen längeren Zeitraum, was die Diagnose von intermittierenden Herzrhythmusstörungen erleichtert. Es ist nicht-invasiv und kann leicht im Alltag des Patienten integriert werden.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Ein Nachteil ist die mögliche Unannehmlichkeit für den Patienten, der das Gerät über einen längeren Zeitraum tragen muss. Zudem können Artefakte oder Signalverluste durch Elektrodenablösungen auftreten, was die Datenqualität beeinträchtigen kann.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken des Langzeit-EKGs sind minimal. Es können Hautirritationen oder Allergien durch die Elektroden auftreten, aber ernsthafte Komplikationen sind selten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Das Langzeit-EKG spielt eine zentrale Rolle in der Diagnose von Herzrhythmusstörungen und bei der Überwachung der Wirksamkeit von Behandlungen. Es ermöglicht eine genaue Beurteilung der Herzfunktion im täglichen Leben und hilft, individuelle Therapieentscheidungen zu treffen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Management von Patienten mit kardiovaskulären Erkrankungen ist das Langzeit-EKG unerlässlich. Es unterstützt die Anpassung von Medikamentendosierungen, die Entscheidung über invasive Maßnahmen und die langfristige Überwachung der Herzgesundheit.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zum Langzeit-EKG umfassen Ereignisrekorder, die nur bei Auftreten von Symptomen aktiviert werden, sowie implantierbare Loop-Rekorder, die eine noch längere Überwachung ermöglichen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse zeigen, dass moderne Technologien wie tragbare Sensoren und drahtlose Überwachungssysteme die Genauigkeit und Patientenakzeptanz des Langzeit-EKGs verbessern können. Zudem wird die Integration von KI-gestützten Analysesystemen untersucht, um die Dateninterpretation zu optimieren.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Verwendung von Langzeit-EKGs weiter revolutionieren, indem sie die kontinuierliche Überwachung in Echtzeit und die frühzeitige Erkennung von kardialen Ereignissen ermöglichen. Auch die Miniaturisierung und Verbesserung des Patientenkomforts stehen im Fokus der Forschung.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Das Langzeit-EKG ist ein unverzichtbares diagnostisches Werkzeug zur Erkennung und Überwachung von Herzrhythmusstörungen. Es bietet eine detaillierte und kontinuierliche Aufzeichnung der Herzaktivität und unterstützt die individuelle Therapieplanung und Patientenüberwachung.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Durch seine hohe diagnostische Aussagekraft und die Möglichkeit, den Herzrhythmus über einen längeren Zeitraum zu überwachen, leistet das Langzeit-EKG einen entscheidenden Beitrag zur modernen Kardiologie und zur Verbesserung der Patientenversorgung.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 112
+      {
+        id: 112,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären, dass das Langzeit-EKG zur Erkennung von Herzrhythmusstörungen und zur Überwachung der Herzaktivität über einen längeren Zeitraum dient.",
+            third:
+              "„Wir möchten feststellen, ob Ihr Herz unregelmäßige Rhythmen hat, die nur sporadisch auftreten und daher bei einem kurzen EKG nicht erkannt werden könnten.“",
+            fourth:
+              "„Durch die kontinuierliche Aufzeichnung können wir genau beobachten, wie Ihr Herz auf verschiedene Aktivitäten und Stresssituationen reagiert.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben, wie die Elektroden auf der Haut des Patienten angebracht werden, der tragbare Rekorder die Herzaktivität aufzeichnet und der Patient seinen normalen Aktivitäten nachgeht.",
+            third:
+              "„Wir werden kleine Elektroden auf Ihre Brust kleben, die mit einem tragbaren Gerät verbunden sind, das Sie für 24 Stunden tragen.“",
+            fourth:
+              "„Während Sie das Gerät tragen, können Sie Ihren normalen Tagesablauf fortsetzen, einschließlich Arbeiten, Schlafen und Sport treiben.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren, dass spezielle Vorbereitungen in der Regel nicht notwendig sind, der Patient jedoch auf die Hygiene und Trockenheit der Haut im Bereich der Elektroden achten sollte.",
+            third:
+              "„Es ist wichtig, dass Ihre Haut sauber und trocken ist, bevor wir die Elektroden anbringen.“",
+            fourth:
+              "„Vermeiden Sie es, Lotionen oder Cremes auf Ihrer Brust zu verwenden, da diese die Haftung der Elektroden beeinträchtigen können.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen, dass die Risiken minimal sind, aber Hautirritationen oder Allergien durch die Elektroden auftreten können.",
+            third:
+              "„Manche Patienten berichten über leichte Hautirritationen, wo die Elektroden angebracht sind.“",
+            fourth:
+              "„In seltenen Fällen kann es zu allergischen Reaktionen auf den Kleber der Elektroden kommen.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Hervorheben, dass das Langzeit-EKG eine detaillierte und kontinuierliche Überwachung der Herzaktivität ermöglicht und somit eine genaue Diagnose von intermittierenden Herzrhythmusstörungen erlaubt.",
+            third:
+              "„Ein großer Vorteil ist, dass wir so auch seltene Herzrhythmusstörungen erfassen können, die bei einem normalen EKG nicht sichtbar sind.“",
+            fourth:
+              "„Es ermöglicht uns, ein umfassenderes Bild Ihrer Herzgesundheit zu bekommen, indem wir Ihre Herzaktivität in Ihrer normalen Umgebung überwachen.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Alternativen wie Ereignisrekorder und implantierbare Loop-Rekorder erwähnen, die bei Bedarf eingesetzt werden können.",
+            third:
+              "„Eine Alternative wäre ein Ereignisrekorder, den Sie selbst aktivieren können, wenn Sie Symptome bemerken.“",
+            fourth:
+              "„In einigen Fällen könnten wir auch einen implantierbaren Loop-Rekorder in Erwägung ziehen, der über mehrere Monate hinweg die Herzaktivität aufzeichnet.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Hinweis, dass es kaum Kontraindikationen gibt, aber bei bestimmten Hauterkrankungen oder Allergien gegen Elektrodenkleber Vorsicht geboten ist.",
+            third:
+              "„Wenn Sie eine bekannte Allergie gegen den Elektrodenkleber haben, sollten Sie uns das mitteilen.“",
+            fourth:
+              "„Bei bestehenden Hauterkrankungen im Brustbereich sollten wir überlegen, ob diese Untersuchung für Sie geeignet ist.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären, dass typische Befunde normale Herzfrequenzmuster oder verschiedene Arten von Arrhythmien sein können, die eine spezifische Behandlung erfordern.",
+            third:
+              "„Wir könnten normale Ergebnisse finden, was gut wäre, oder Anzeichen von Arrhythmien, die behandelt werden müssten.“",
+            fourth:
+              "„Wenn wir eine unregelmäßige Herzaktivität feststellen, werden wir gemeinsam über die nächsten Schritte sprechen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen, dass das Einverständnis des Patienten notwendig ist, um die Untersuchung durchzuführen und dass der Patient vollständig über den Ablauf und die möglichen Risiken informiert sein sollte.",
+            third:
+              "„Es ist wichtig, dass Sie der Untersuchung zustimmen, nachdem Sie alle Informationen erhalten haben.“",
+            fourth:
+              "„Ihre Einwilligung ist erforderlich, damit wir mit der Untersuchung fortfahren können.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Der Arzt sollte den Patienten klar und verständlich über die Untersuchung informieren und das schriftliche Einverständnis einholen.",
+            third:
+              "„Bitte lesen Sie diese Einverständniserklärung sorgfältig durch und unterschreiben Sie, wenn Sie einverstanden sind.“",
+            fourth:
+              "„Nachdem ich Ihnen alles erklärt habe, brauche ich Ihre schriftliche Zustimmung.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Den Patienten darauf hinweisen, dass sie den Rekorder nicht nass machen sollen und die normale Alltagsaktivität fortsetzen können.",
+            third:
+              "„Bitte vermeiden Sie es, den Rekorder nass zu machen. Sie können wie gewohnt essen, schlafen und arbeiten.“",
+            fourth:
+              "„Es wäre hilfreich, wenn Sie ein Tagebuch führen könnten, um Aktivitäten und Symptome festzuhalten.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren, dass die Ergebnisse nach der Analyse der aufgezeichneten Daten mit dem Patienten besprochen werden und dass weitere Schritte je nach den Befunden festgelegt werden.",
+            third:
+              "„Wir werden die Daten analysieren und die Ergebnisse mit Ihnen in einem weiteren Termin besprechen.“",
+            fourth:
+              "„Je nach den Ergebnissen können wir entscheiden, ob weitere Untersuchungen oder Behandlungen notwendig sind.“",
+          },
+        ],
+      },
+      // 3tab 113
+      {
+        id: 113,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern, dass es sich bei der Untersuchung um ein Langzeit-EKG handelt, bei dem die elektrische Herzaktivität über einen längeren Zeitraum, typischerweise 24 bis 48 Stunden, kontinuierlich aufgezeichnet wird.",
+            third:
+              "Das Langzeit-EKG ist ein Verfahren, bei dem wir die Herzaktivität kontinuierlich über 24 bis 48 Stunden aufzeichnen, um eine umfassende Überwachung zu gewährleisten.",
+            fourth:
+              "Dabei handelt es sich um eine nicht-invasive Methode, die die elektrische Aktivität des Herzens über einen längeren Zeitraum aufzeichnet, um auch seltene Herzrhythmusstörungen zu erfassen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären, dass das Langzeit-EKG zur Erkennung und Bewertung von intermittierenden Herzrhythmusstörungen dient, die bei einer kurzen EKG-Aufzeichnung möglicherweise nicht erfasst werden können.",
+            third:
+              "Mit dem Langzeit-EKG können wir intermittierende Herzrhythmusstörungen erkennen, die bei einer kurzen EKG-Aufzeichnung unbemerkt bleiben könnten.",
+            fourth:
+              "Es ermöglicht uns, die Herzfrequenz und den Herzrhythmus über einen längeren Zeitraum zu beobachten und so belastungsabhängige Arrhythmien zu identifizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben, dass die Ergebnisse des Langzeit-EKGs Aufschluss über die Herzfrequenz, die Stabilität des Herzrhythmus und das Auftreten von Arrhythmien geben, was zur weiteren Diagnostik und Therapieplanung genutzt werden kann.",
+            third:
+              "Die Ergebnisse zeigen uns, ob und wann Herzrhythmusstörungen auftreten und wie häufig diese sind, was für die weitere Therapieplanung wichtig ist.",
+            fourth:
+              "Wir können anhand der Ergebnisse sehen, ob es periodische Unregelmäßigkeiten in der Herzaktivität gibt, die spezifische Behandlungsmaßnahmen erfordern.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen, dass die Hauptindikationen für ein Langzeit-EKG der Verdacht auf intermittierende Herzrhythmusstörungen, unklare Synkopen, Palpitationen und die Überwachung der Wirksamkeit von Antiarrhythmika sind.",
+            third:
+              "Ein Langzeit-EKG ist indiziert bei Patienten mit unklaren Synkopen, wiederkehrenden Palpitationen und zur Überwachung der Therapie bei bekannten Herzrhythmusstörungen.",
+            fourth:
+              "Wir verwenden das Langzeit-EKG häufig bei Patienten, die über unregelmäßigen Herzschlag oder episodische Ohnmachtsanfälle klagen, um die Ursache zu identifizieren.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären, dass es wenige Kontraindikationen gibt, aber bei Patienten mit bestimmten Hauterkrankungen oder Allergien gegen Elektrodenkleber Vorsicht geboten ist.",
+            third:
+              "Eine Kontraindikation kann eine schwere Hauterkrankung sein, die das Anbringen der Elektroden erschwert, oder eine bekannte Allergie gegen den Kleber der Elektroden.",
+            fourth:
+              "Patienten mit empfindlicher Haut oder Hautausschlägen sollten wir vorsichtig behandeln, um Reizungen durch die Elektroden zu vermeiden.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erwähnen, dass Differenzialdiagnosen bei auffälligen Befunden unter anderem Vorhofflimmern, ventrikuläre Tachykardien, AV-Blockaden und andere Herzrhythmusstörungen umfassen können.",
+            third:
+              "Wenn das Langzeit-EKG Auffälligkeiten zeigt, könnten Differenzialdiagnosen wie Vorhofflimmern, ventrikuläre Tachykardien oder AV-Blockaden in Betracht gezogen werden.",
+            fourth:
+              "Wir müssen bei den Ergebnissen auch an andere Herzrhythmusstörungen denken, wie zum Beispiel Vorhofflattern oder supraventrikuläre Tachykardien.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Je nach den Ergebnissen des Langzeit-EKGs können wir die Medikation anpassen oder weitere diagnostische Schritte wie eine elektrophysiologische Untersuchung empfehlen.",
+            third:
+              "Je nach den Ergebnissen des Langzeit-EKGs können wir die Medikation anpassen oder weitere diagnostische Schritte wie eine Elektrophysiologische Untersuchung empfehlen.",
+            fourth:
+              "Falls das Langzeit-EKG signifikante Arrhythmien zeigt, könnte eine Überweisung zur Ablation oder eine Anpassung der Antiarrhythmika notwendig sein.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen, dass eine enge Zusammenarbeit mit Kardiologen, Pflegepersonal und gegebenenfalls Elektrophysiologen für die bestmögliche Versorgung wichtig ist.",
+            third:
+              "Für eine optimale Patientenversorgung arbeiten wir eng mit Kardiologen und Elektrophysiologen zusammen, um die besten Therapieentscheidungen zu treffen.",
+            fourth:
+              "Die enge Zusammenarbeit mit dem Pflegepersonal und den Kardiologen ist essenziell, um sicherzustellen, dass der Patient die notwendige Nachsorge erhält.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären, dass die Qualität der Langzeit-EKG-Daten durch regelmäßige Kalibrierung der Geräte, Schulung des medizinischen Personals und Überprüfung der Aufzeichnungspraxis gesichert wird.",
+            third:
+              "Wir stellen die Datenqualität durch regelmäßige Kalibrierung der Geräte und Schulungen für das medizinische Personal sicher.",
+            fourth:
+              "Qualitätskontrollen und die Überprüfung der Aufzeichnungspraxis sind wichtige Maßnahmen, um die Zuverlässigkeit der Langzeit-EKG-Ergebnisse zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Hervorheben, dass eine gründliche Dokumentation der Ergebnisse und die Erstellung eines klaren Berichts für die Weiterverfolgung entscheidend sind, um sicherzustellen, dass alle relevanten Informationen für die weitere Behandlung verfügbar sind.",
+            third:
+              "Eine sorgfältige Dokumentation der Ergebnisse und ein klarer Bericht sind entscheidend, um die weiteren Schritte in der Behandlung des Patienten zu planen.",
+            fourth:
+              "Wir müssen sicherstellen, dass alle Befunde gut dokumentiert sind und die Nachsorge koordiniert wird, damit der Patient die beste Behandlung erhält.",
+          },
+        ],
+      },
+      // 4tab 114
+      {
+        id: 114,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "30-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte",
+            third:
+              "65-jähriger Patient klagt über unregelmäßigen Herzschlag und gelegentliche Schwindelanfälle. Vorgeschichte von Bluthochdruck.",
+            fourth:
+              "45-jähriger Patient berichtet über plötzliche Herzrasen und kurzzeitige Bewusstlosigkeit. Keine bekannte Herzerkrankung.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Langzeit-EKG zeigt einen durchgehend normalen Herzrhythmus ohne Auffälligkeiten oder Arrhythmien.",
+            third:
+              "Langzeit-EKG zeigt wiederholte Episoden von unregelmäßigem Herzrhythmus, insbesondere paroxysmales Vorhofflimmern.",
+            fourth:
+              "Langzeit-EKG dokumentiert mehrere Episoden von schnellen, unregelmäßigen Herzschlägen, charakteristisch für ventrikuläre Tachykardie.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Langzeit-EKG-Ergebnis unterstützt den Ausschluss von Herzrhythmusstörungen.",
+            third:
+              "Der Befund bestätigt das Vorhandensein von paroxysmalem Vorhofflimmern, das mit den Symptomen des Patienten korreliert.",
+            fourth:
+              "Die Ergebnisse deuten auf ventrikuläre Tachykardie hin, was die klinischen Symptome des Patienten erklärt und eine sofortige kardiologische Intervention erfordert.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer medikamentösen Therapie zur Kontrolle des Herzrhythmus und zur Vermeidung thromboembolischer Ereignisse.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und die Einleitung einer sofortigen antiarrhythmischen Therapie oder die Planung eines implantierbaren Defibrillators.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Herzens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose von paroxysmalem Vorhofflimmern basierend auf den Langzeit-EKG-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von ventrikulärer Tachykardie aufgrund der Langzeit-EKG-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Langzeit-EKG-Aufnahmen zeigen durchgehend normale P-Wellen, QRS-Komplexe und T-Wellen ohne Auffälligkeiten.",
+            third:
+              "Langzeit-EKG-Aufnahmen zeigen unregelmäßige P-Wellen und unregelmäßige QRS-Komplexe, die typisch für Vorhofflimmern sind.",
+            fourth:
+              "Langzeit-EKG zeigt schnelle, breite QRS-Komplexe, charakteristisch für ventrikuläre Tachykardie.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige gesundheitliche Überprüfungen, um sicherzustellen, dass der Zustand des Herzens weiterhin normal bleibt.",
+            third:
+              "Wir empfehlen die Einleitung einer medikamentösen Therapie zur Kontrolle des Herzrhythmus und zur Vermeidung von Thromboembolien. Regelmäßige Kontrolluntersuchungen sind ebenfalls notwendig.",
+            fourth:
+              "Es ist zu empfehlen, sofort eine antiarrhythmische Therapie zu beginnen und die Möglichkeit eines implantierbaren Defibrillators in Betracht zu ziehen.",
+          },
+        ],
+      },
+      // 5tab 115
+      {
+        id: 115,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Das Langzeit-EKG-Gerät besteht aus mehreren wesentlichen Komponenten. Elektroden sind kleine, klebende Sensoren, die auf der Haut des Patienten angebracht werden, um elektrische Signale des Herzens zu erfassen. Diese Signale werden über Kabel an den Rekorder weitergeleitet, ein tragbares Gerät, das die Daten speichert und oft am Gürtel oder um den Hals getragen wird. Der Rekorder enthält eine Batterie, die das Gerät mit Energie versorgt, sowie ein Speichermedium, das die aufgezeichneten EKG-Daten speichert.Zur Unterstützung der Patientenführung dient ein Patiententagebuch, in dem der Patient Aktivitäten und Symptome während der Aufzeichnungszeit festhält. Nach der Aufzeichnung werden die Daten mit spezieller Software zur Datenanalyse ausgewertet. Der Rekorder ist mit einem Display ausgestattet, das grundlegende Informationen und Statusmeldungen anzeigt. Eine Holter-Hülle oder ein Tragegurt sorgt für den komfortablen Sitz des Rekorders am Körper des Patienten.",
+        text_list: [
+          {
+            bold: "Elektroden: ",
+            other:
+              "Kleine, klebende Sensoren, die auf die Haut des Patienten aufgebracht werden, um elektrische Signale des Herzens zu erfassen.",
+          },
+          {
+            bold: "Rekorder: ",
+            other:
+              "Ein tragbares Gerät, das die von den Elektroden gesammelten elektrischen Signale speichert. Es wird oft am Gürtel des Patienten befestigt oder um den Hals getragen.",
+          },
+          {
+            bold: "Batterie: ",
+            other:
+              "Eine Stromquelle, die das Langzeit-EKG-Gerät während der gesamten Aufzeichnungszeit mit Energie versorgt.",
+          },
+          {
+            bold: "Speichermedium: ",
+            other:
+              "Interner Speicher oder eine Speicherkarte, die die aufgezeichneten EKG-Daten speichert.",
+          },
+          {
+            bold: "Patiententagebuch: ",
+            other:
+              "Ein schriftliches oder elektronisches Protokoll, das der Patient führt, um Aktivitäten und Symptome während der Aufzeichnungszeit festzuhalten.",
+          },
+          {
+            bold: "Software zur Datenanalyse: ",
+            other:
+              "Spezielle Computerprogramme, die die aufgezeichneten EKG-Daten analysieren und dem Arzt ermöglichen, die Herzaktivität des Patienten zu bewerten.",
+          },
+          {
+            bold: "Display: ",
+            other:
+              "Ein kleines Bildschirmdisplay auf dem Rekorder, das grundlegende Informationen und Statusmeldungen anzeigt.",
+          },
+          {
+            bold: "Kabel: ",
+            other:
+              "Verbindungskabel zwischen den Elektroden und dem Rekorder, die die elektrischen Signale weiterleiten.",
+          },
+          {
+            bold: "Holter-Hülle oder Tragegurt: ",
+            other:
+              "Eine Hülle oder ein Gurt, der verwendet wird, um den Rekorder bequem am Körper des Patienten zu befestigen.",
+          },
+          {
+            bold: "Software zur Berichtserstellung: ",
+            other:
+              "Computerprogramme, die detaillierte Berichte über die Herzaktivität und etwaige Auffälligkeiten erstellen.",
+          },
+          {
+            bold: "Benutzerhandbuch: ",
+            other:
+              "Ein Handbuch, das Anweisungen zur Bedienung des Geräts, zur Elektrodenplatzierung und zur Datenaufzeichnung enthält.",
+          },
+          {
+            bold: "Signalverstärker: ",
+            other:
+              "Ein Bauteil, das die von den Elektroden erfassten schwachen elektrischen Signale verstärkt, bevor sie im Rekorder gespeichert werden.",
+          },
+          {
+            bold: "Kalibrierungsfunktionen: ",
+            other:
+              "Funktionen zur Überprüfung und Anpassung der Genauigkeit des Geräts vor Beginn der Aufzeichnung.",
+          },
+          {
+            bold: "Telemetriefunktion (optional): ",
+            other:
+              "Einige moderne Langzeit-EKG-Geräte haben eine Telemetriefunktion, die es ermöglicht, die EKG-Daten in Echtzeit an eine zentrale Überwachungsstation zu senden.",
+          },
+        ],
+      },
+      // 6tab 116
+      {
+        id: 116,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text_list: [
+          {
+            bold: "Langzeit-EKG (Holter-EKG): ",
+            other:
+              "Ein Gerät zur kontinuierlichen Aufzeichnung der elektrischen Herzaktivität über einen längeren Zeitraum, typischerweise 24-48 Stunden.",
+          },
+          {
+            bold: "Elektrode: ",
+            other:
+              "Kleiner, klebender Sensor, der auf der Haut angebracht wird, um elektrische Signale des Herzens zu erfassen.",
+          },
+          {
+            bold: "Rekorder: ",
+            other:
+              "Tragbares Gerät, das die von den Elektroden gesammelten EKG-Daten speichert.",
+          },
+          {
+            bold: "R-R-Intervall: ",
+            other:
+              "Der Abstand zwischen zwei aufeinanderfolgenden R-Zacken im EKG, wichtig zur Bestimmung der Herzfrequenz.",
+          },
+          {
+            bold: "Artefakte: ",
+            other:
+              "Störsignale im EKG, die durch Bewegungen, lose Elektroden oder elektrische Interferenzen entstehen.",
+          },
+          {
+            bold: "Sinusrhythmus: ",
+            other:
+              "Normaler, regelmäßiger Herzrhythmus, der vom Sinusknoten ausgeht.",
+          },
+          {
+            bold: "Arrhythmie: ",
+            other:
+              "Unregelmäßigkeiten im Herzrhythmus, die verschiedene Ursachen haben können.",
+          },
+          {
+            bold: "Vorhofflimmern (AFib): ",
+            other:
+              "Häufige Art der Arrhythmie, bei der die Vorhöfe des Herzens unregelmäßig schlagen.",
+          },
+          {
+            bold: "Ventrikuläre Tachykardie (VT): ",
+            other:
+              "Schnelle Herzfrequenz, die in den Herzkammern (Ventrikeln) entsteht.",
+          },
+          {
+            bold: "AV-Block: ",
+            other:
+              "Eine Form der Herzrhythmusstörung, bei der die Übertragung der elektrischen Signale vom Vorhof zu den Kammern gestört ist.",
+          },
+          {
+            bold: "Herzfrequenzvariabilität (HRV): ",
+            other:
+              "Die Variation der Zeitintervalle zwischen aufeinanderfolgenden Herzschlägen, ein Indikator für die autonome Regulation des Herzens.",
+          },
+          {
+            bold: "Bradykardie: ",
+            other:
+              "Langsame Herzfrequenz, typischerweise unter 60 Schlägen pro Minute.",
+          },
+          {
+            bold: "Tachykardie: ",
+            other:
+              "Schnelle Herzfrequenz, typischerweise über 100 Schlägen pro Minute.",
+          },
+          {
+            bold: "Palpitationen: ",
+            other:
+              "Wahrnehmung eines schnellen oder unregelmäßigen Herzschlags durch den Patienten.",
+          },
+          {
+            bold: "Synkope: ",
+            other:
+              "Kurzzeitige Bewusstlosigkeit aufgrund eines vorübergehenden Abfalls der Durchblutung des Gehirns.",
+          },
+          {
+            bold: "Kardioversion: ",
+            other:
+              "Medizinisches Verfahren zur Wiederherstellung eines normalen Herzrhythmus bei Arrhythmien.",
+          },
+          {
+            bold: "Antikoagulantien: ",
+            other:
+              "Medikamente zur Verringerung der Blutgerinnung, oft bei Vorhofflimmern eingesetzt, um Schlaganfälle zu verhindern.",
+          },
+          {
+            bold: "P-Welle: ",
+            other:
+              "Teil des EKG, der die elektrische Aktivität der Vorhöfe darstellt.",
+          },
+          {
+            bold: "QRS-Komplex: ",
+            other:
+              "Teil des EKG, der die elektrische Aktivität der Herzkammern darstellt.",
+          },
+          {
+            bold: "T-Welle: ",
+            other:
+              "Teil des EKG, der die Repolarisation der Herzkammern darstellt.",
+          },
+          {
+            bold: "Holter-Monitoring: ",
+            other:
+              "Synonym für Langzeit-EKG, benannt nach dem Erfinder Norman Holter.",
+          },
+          {
+            bold: "Ereignisrekorder: ",
+            other:
+              "Ein Gerät zur Aufzeichnung der Herzaktivität, das vom Patienten bei Symptomen aktiviert wird.",
+          },
+          {
+            bold: "Implantierbarer Loop-Rekorder: ",
+            other:
+              "Ein kleines Gerät, das unter die Haut implantiert wird und die Herzaktivität über Monate bis Jahre aufzeichnet.",
+          },
+          {
+            bold: "Patiententagebuch: ",
+            other:
+              "Ein Protokoll, das der Patient führt, um Aktivitäten und Symptome während der Langzeit-EKG-Überwachung festzuhalten.",
+          },
+        ],
+      },
+      // 7tab 117
+      {
+        id: 109,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 118
+      {
+        id: 110,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1eIQwPaAom8VCzIEneFSngyR395IEg8E7/view?usp=share_link",
+      },
+    ],
+  },
+
+  // Endoskopischer Verfahren
+  // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+  {
+    id: 22,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
     checked: false,
     childTabs: [
