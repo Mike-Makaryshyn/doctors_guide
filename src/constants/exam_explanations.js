@@ -8830,7 +8830,738 @@ export const parentTabs = [
       },
     ],
   },
-
+  // end of parent tab 12
+  // start of parent tab 13 Herzkatheteruntersuchung
+  {
+    id: 13,
+    title: "Herzkatheteruntersuchung",
+    checked: false,
+    childTabs: [
+      // 1tab 119
+      {
+        id: 119,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Primäres Ziel ist die Diagnose und Behandlung von Herzerkrankungen, insbesondere von koronaren Herzkrankheiten.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Untersuchung wird häufig bei Verdacht auf koronare Herzkrankheit, Herzklappenfehler und angeborene Herzfehler eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Herzkatheteruntersuchung basiert auf der Einführung eines Katheters über ein Blutgefäß zum Herzen, um Druckmessungen durchzuführen und Kontrastmittel für die Bildgebung zu injizieren.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Der Eingriff erfolgt meist unter Röntgenkontrolle. Ein Kontrastmittel wird injiziert, um die Herzkranzgefäße sichtbar zu machen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die erhaltenen Bilder und Druckmessungen werden ausgewertet, um Durchblutungsstörungen, Verengungen oder Verschlüsse der Herzkranzgefäße zu erkennen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen Stenosen, Verschlüsse, Aneurysmen und Anomalien der Herzkranzgefäße.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Herzkatheteruntersuchung ermöglicht eine präzise Diagnostik und sofortige therapeutische Interventionen wie die Ballondilatation und Stentimplantation.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Der Eingriff erfordert spezielle technische Ausrüstung und erfahrenes Personal.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören Blutungen, Infektionen, allergische Reaktionen auf das Kontrastmittel, Herzrhythmusstörungen und in seltenen Fällen Herzinfarkt oder Schlaganfall.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Herzkatheteruntersuchung ist entscheidend für die Diagnose und Behandlung von Herzkrankheiten. Sie bietet detaillierte Informationen, die andere bildgebende Verfahren nicht liefern können.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Sie ermöglicht eine gezielte Therapieplanung und eine sofortige interventionelle Behandlung, was die Prognose erheblich verbessern kann.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Es gibt nicht-invasive Alternativen wie die Koronar-CT-Angiographie oder Stress-Echokardiographie. Diese können initiale Hinweise geben, ersetzen jedoch nicht die diagnostische Genauigkeit und therapeutischen Möglichkeiten der Herzkatheteruntersuchung.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Bildgebungstechniken und die Entwicklung neuer Stents und Katheter.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Fortschritte in der Technologie und Materialien könnten die Risiken weiter minimieren und die Anwendungsmöglichkeiten erweitern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Herzkatheteruntersuchung ist ein unverzichtbares Instrument in der modernen Kardiologie. Sie bietet umfassende diagnostische und therapeutische Möglichkeiten bei Herzerkrankungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre Bedeutung für die Diagnose, Behandlung und das Management von Herzerkrankungen kann nicht hoch genug eingeschätzt werden. Fortschritte in der Forschung und Technologie versprechen, die Effizienz und Sicherheit dieses Verfahrens weiter zu verbessern.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 120
+      {
+        id: 120,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel der Untersuchung die Diagnose und Behandlung von Herzerkrankungen ist.",
+            third:
+              "Das Ziel dieser Untersuchung ist es, mögliche Verengungen in Ihren Herzkranzgefäßen zu identifizieren und gegebenenfalls sofort zu behandeln.",
+            fourth:
+              "Wir möchten durch diese Untersuchung die genaue Ursache Ihrer Brustschmerzen feststellen und entsprechende Maßnahmen ergreifen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, dass ein dünner Schlauch (Katheter) in ein Blutgefäß eingeführt und bis zum Herzen geführt wird.",
+            third:
+              "Während der Untersuchung wird ein Katheter über eine Arterie in Ihrer Leiste bis zum Herzen vorgeschoben.",
+            fourth:
+              "Wir führen einen dünnen Schlauch über eine Vene in Ihrem Arm ein, der bis zum Herzen geht, um die Blutgefäße zu untersuchen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass der Patient möglicherweise nüchtern bleiben muss und im Voraus bestimmte Tests wie ein EKG durchführt.",
+            third:
+              "Bitte bleiben Sie ab Mitternacht vor der Untersuchung nüchtern und kommen Sie eine Stunde vorher für ein EKG.",
+            fourth:
+              "Es ist wichtig, dass Sie sechs Stunden vor der Untersuchung nichts essen oder trinken. Wir machen vorher auch ein Blutbild.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erläutern Sie, dass es Risiken wie Blutungen, Infektionen und seltene Komplikationen wie Herzinfarkt gibt.",
+            third:
+              "Es gibt einige Risiken wie Blutungen an der Einstichstelle und sehr selten einen Herzinfarkt während des Eingriffs.",
+            fourth:
+              "Nebenwirkungen können Infektionen oder allergische Reaktionen auf das Kontrastmittel sein, aber diese sind selten.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie, dass die Untersuchung präzise Diagnosen und sofortige therapeutische Eingriffe ermöglicht.",
+            third:
+              "Ein Vorteil dieser Untersuchung ist, dass wir Verengungen sofort behandeln können, falls wir welche finden.",
+            fourth:
+              "Diese Untersuchung bietet uns eine sehr genaue Darstellung der Herzkranzgefäße, was andere Tests nicht leisten können.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie Alternativen wie die Koronar-CT-Angiographie oder Stress-Echokardiographie und erklären Sie deren Grenzen.",
+            third:
+              "Alternativen wären eine CT-Angiographie oder ein Belastungstest, aber diese liefern nicht immer so präzise Ergebnisse.",
+            fourth:
+              "Eine Stress-Echokardiographie könnte auch durchgeführt werden, jedoch bietet sie keine unmittelbaren Behandlungsmöglichkeiten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, dass bei bestimmten Vorerkrankungen oder Allergien das Verfahren nicht geeignet sein könnte.",
+            third:
+              "Falls Sie eine Jodallergie haben, müssen wir vorsichtig sein, da das Kontrastmittel Jod enthält.",
+            fourth:
+              "Bei schweren Nierenerkrankungen könnte das Kontrastmittel Probleme verursachen, daher müssen wir das vorher abklären.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Beschreiben Sie, dass typische Ergebnisse Verengungen oder Verschlüsse der Herzkranzgefäße sein können.",
+            third:
+              "Wir könnten Verengungen in Ihren Herzkranzgefäßen feststellen, die wir dann mit einem Stent behandeln.",
+            fourth:
+              "Die Untersuchung könnte zeigen, dass Ihre Herzkranzgefäße frei sind, was bedeutet, dass Ihre Symptome andere Ursachen haben.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass das Einverständnis des Patienten erforderlich ist, um über die Risiken und den Ablauf aufgeklärt zu sein.",
+            third:
+              "Ihr schriftliches Einverständnis ist notwendig, nachdem Sie über alle Risiken und den Ablauf informiert wurden.",
+            fourth:
+              "Wir benötigen Ihr Einverständnis, da es wichtig ist, dass Sie alle Informationen zu den Risiken und dem Verfahren verstanden haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient schriftlich sein Einverständnis geben muss, nachdem er alle Informationen erhalten hat.",
+            third:
+              "Sie werden gebeten, ein Formular zu unterschreiben, das bestätigt, dass Sie die Risiken und Vorteile verstanden haben.",
+            fourth:
+              "Nachdem wir alle Details besprochen haben, bitten wir Sie, Ihr Einverständnis schriftlich zu geben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Empfehlen Sie dem Patienten, nach der Untersuchung Ruhe zu bewahren und sich an die Anweisungen des Arztes zu halten.",
+            third:
+              "Nach der Untersuchung sollten Sie sich ausruhen und starke körperliche Aktivitäten für ein paar Tage vermeiden.",
+            fourth:
+              "Es ist wichtig, dass Sie die Anweisungen zum Verhalten nach der Untersuchung genau befolgen, um Komplikationen zu vermeiden.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass der Arzt die Ergebnisse der Untersuchung mit dem Patienten besprechen wird, um die nächsten Schritte zu planen.",
+            third:
+              "Nach der Untersuchung wird Ihr Arzt die Ergebnisse mit Ihnen besprechen und den weiteren Behandlungsplan erläutern.",
+            fourth:
+              "Wir werden die Ergebnisse ausführlich mit Ihnen besprechen, um gemeinsam die besten weiteren Schritte zu entscheiden.",
+          },
+        ],
+      },
+      // 3tab 121
+      {
+        id: 121,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass es sich um eine Herzkatheteruntersuchung handelt, bei der ein Katheter ins Herz eingeführt wird, um die Herzkranzgefäße zu untersuchen und gegebenenfalls zu behandeln.",
+            third:
+              "Die Herzkatheteruntersuchung ermöglicht es uns, einen Katheter über ein Blutgefäß bis zum Herzen zu führen und die Herzkranzgefäße zu visualisieren.",
+            fourth:
+              "Bei dieser Untersuchung führen wir einen dünnen Schlauch in die Herzkranzgefäße ein, um Verengungen oder Verschlüsse zu erkennen und gegebenenfalls sofort zu behandeln.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass die Untersuchung dazu dient, Verengungen oder Verschlüsse der Herzkranzgefäße zu diagnostizieren und zu behandeln sowie Druckmessungen im Herzen durchzuführen.",
+            third:
+              "Mit der Herzkatheteruntersuchung können wir die genaue Lage und Schwere von Verengungen in den Herzkranzgefäßen feststellen.",
+            fourth:
+              "Diese Untersuchung erlaubt es uns, Druckmessungen innerhalb der Herzkammern durchzuführen und die Herzkranzgefäße auf Verengungen zu prüfen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erläutern Sie, dass typische Ergebnisse Verengungen, Verschlüsse oder Anomalien der Herzkranzgefäße sind, die präzise diagnostiziert und sofort behandelt werden können.",
+            third:
+              "Die Untersuchung zeigte eine signifikante Stenose der linken Koronararterie, die wir mit einem Stent versorgt haben.",
+            fourth:
+              "Wir fanden eine Verschluss der rechten Koronararterie, die wir durch eine Ballondilatation öffnen konnten.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie Indikationen wie Verdacht auf koronare Herzkrankheit, unklare Brustschmerzen, Herzinfarkte, Herzklappenfehler und angeborene Herzfehler.",
+            third:
+              "Die Hauptindikation für die Untersuchung war der Verdacht auf eine koronare Herzkrankheit aufgrund von Angina-pectoris-Beschwerden.",
+            fourth:
+              "Der Patient zeigte Symptome eines akuten Herzinfarkts, was die dringende Indikation für eine Herzkatheteruntersuchung war.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, dass Kontraindikationen schwere Nierenerkrankungen, unbehandelte Infektionen, schwere Gerinnungsstörungen und bestimmte Allergien (z. B. gegen Kontrastmittel) sein können.",
+            third:
+              "Aufgrund der schweren Niereninsuffizienz des Patienten mussten wir die Untersuchung verschieben und alternative Bildgebungsverfahren in Betracht ziehen.",
+            fourth:
+              "Eine bekannte Allergie gegen das Kontrastmittel erfordert besondere Vorsichtsmaßnahmen und alternative Planung.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die durch eine Herzkatheteruntersuchung ausgeschlossen oder bestätigt werden können, wie z. B. Myokarditis, Kardiomyopathien und Lungenembolien.",
+            third:
+              "Durch die Herzkatheteruntersuchung konnten wir eine koronare Herzkrankheit bestätigen und eine Kardiomyopathie ausschließen.",
+            fourth:
+              "Die Untersuchung half uns, eine Myokarditis auszuschließen und eine koronare Stenose zu diagnostizieren.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie, dass auf Basis der Untersuchungsergebnisse spezifische Behandlungspläne entwickelt werden können, einschließlich medikamentöser Therapie, Ballondilatation und Stentimplantation.",
+            third:
+              "Basierend auf den Untersuchungsergebnissen planen wir die Implantation eines Stents und eine anschließende duale Plättchenhemmung.",
+            fourth:
+              "Die Ergebnisse legen nahe, dass eine Kombination aus Ballondilatation und Stentimplantation die beste Behandlungsstrategie ist.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit Kardiologen, Radiologen, Anästhesisten und Pflegepersonal, um eine optimale Patientenversorgung sicherzustellen.",
+            third:
+              "Für eine erfolgreiche Durchführung der Untersuchung ist die enge Zusammenarbeit mit dem kardiologischen Team und den Radiologen entscheidend.",
+            fourth:
+              "Wir müssen eng mit den Anästhesisten und Pflegekräften zusammenarbeiten, um eine sichere und effektive Durchführung der Herzkatheteruntersuchung zu gewährleisten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, dass regelmäßige Überprüfungen und Audits der Eingriffsprotokolle und -ergebnisse durchgeführt werden, um die Qualität und Sicherheit der Herzkatheteruntersuchungen zu gewährleisten.",
+            third:
+              "Regelmäßige Audits unserer Herzkatheterlabore helfen uns, die hohen Qualitätsstandards zu halten und kontinuierlich zu verbessern.",
+            fourth:
+              "Durch standardisierte Überprüfungen der Eingriffsprotokolle stellen wir sicher, dass alle Verfahren den Qualitätsrichtlinien entsprechen.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Betonen Sie die Notwendigkeit einer ausführlichen Dokumentation der Untersuchungsergebnisse und der durchgeführten Maßnahmen sowie der Planung und Durchführung der Nachsorgeuntersuchungen.",
+            third:
+              "Eine detaillierte Dokumentation der Untersuchungsergebnisse und der durchgeführten Interventionen ist unerlässlich für die Nachsorge.",
+            fourth:
+              "Wir müssen sicherstellen, dass alle Ergebnisse und Maßnahmen genau dokumentiert werden, um eine effektive Nachsorge zu gewährleisten.",
+          },
+        ],
+      },
+      // 4tab 122
+      {
+        id: 122,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "55-jähriger Patient klagt über anhaltende Brustschmerzen und Atemnot. Vorgeschichte einer Hypercholesterinämie.",
+            third:
+              "65-jährige Patientin berichtet von Müdigkeit und Atemnot bei Anstrengung. Vorgeschichte von Rheumatischem Fieber.",
+            fourth:
+              "40-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Herzkatheteruntersuchung zeigt normale Herzkranzgefäße ohne Verengungen oder Anomalien.",
+            third:
+              "Herzkatheteruntersuchung zeigt multiple Stenosen in der linken Koronararterie.",
+            fourth:
+              "Herzkatheteruntersuchung zeigt eine schwere Aortenklappenstenose.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Untersuchung unterstützt den Ausschluss koronarer Herzkrankheiten.",
+            third:
+              "Der Befund deutet auf eine schwere koronare Herzkrankheit hin. Die Stenosen korrelieren mit den Symptomen des Patienten.",
+            fourth:
+              "Die Befunde bestätigen eine schwere Aortenklappenstenose, die die klinischen Symptome erklärt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer koronaren Bypass-Operation oder einer perkutane Koronarintervention (PCI).",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Planung einer Aortenklappenersatzoperation.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Herzkranzgefäße. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer schweren koronaren Herzkrankheit basierend auf den Befunden der Herzkatheteruntersuchung.",
+            fourth:
+              "Diagnose einer schweren Aortenklappenstenose basierend auf den Befunden der Herzkatheteruntersuchung.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Angiographiebilder zeigen klare, ungestörte Herzkranzgefäße ohne Verengungen.",
+            third:
+              "Angiographiebilder zeigen multiple signifikante Verengungen in der linken Koronararterie.",
+            fourth:
+              "Angiographiebilder zeigen eine stark verkalkte und verengte Aortenklappe.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen weiterhin regelmäßige gesundheitliche Überprüfungen und einen gesunden Lebensstil, um Herzkrankheiten vorzubeugen. Der Patient sollte beruhigt sein, dass keine pathologischen Veränderungen vorliegen.",
+            third:
+              "Wir empfehlen die Durchführung einer koronaren Bypass-Operation oder einer perkutane Koronarintervention (PCI) zur Behandlung der Stenosen. Eine enge Nachverfolgung und regelmäßige kardiologische Kontrollen sind ebenfalls erforderlich.",
+            fourth:
+              "Wir empfehlen einen operativen Aortenklappenersatz, um die Symptome zu lindern und die Lebensqualität zu verbessern. Eine langfristige Nachsorge und regelmäßige Kontrollen sind wichtig, um den Erfolg der Behandlung zu überwachen.",
+          },
+        ],
+      },
+      // 5tab 123
+      {
+        id: 123,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Herzkatheteruntersuchungssystem ist ein spezialisiertes medizinisches Gerät zur Diagnose und Behandlung von Herzkrankheiten. Hier sind die wesentlichen Komponenten und Funktionen eines Herzkatheteruntersuchungssystems:",
+        text_list: [
+          {
+            bold: "Katheterlabor :",
+            other:
+              "Ein speziell ausgestatteter Raum, in dem Herzkatheteruntersuchungen durchgeführt werden. Es enthält alle notwendigen Geräte und ist oft mit einem sterilen Umfeld ausgestattet.",
+          },
+          {
+            bold: "Röntgenanlage :",
+            other:
+              "Erzeugt Röntgenstrahlen, die zur Bildgebung des Herzens und der Blutgefäße verwendet werden. Sie besteht aus einer Röntgenröhre und einem Detektor.",
+          },
+          {
+            bold: "Röntgenröhre :",
+            other:
+              "Erzeugt die Röntgenstrahlen, die durch den Körper des Patienten gesendet werden. Sie befindet sich in der Röntgenanlage und kann um den Patienten herum bewegt werden.",
+          },
+          {
+            bold: "Detektoren :",
+            other:
+              "Erfassung der Röntgenstrahlen, die durch den Körper des Patienten hindurchgehen. Sie wandeln die Strahlen in digitale Bilder um, die auf Monitoren angezeigt werden.",
+          },
+          {
+            bold: "Bildverstärker :",
+            other:
+              "Verstärkt die Röntgenbilder, um eine klare und detaillierte Ansicht der Herzkranzgefäße zu gewährleisten. Er verbessert die Bildqualität und erleichtert die Diagnose.",
+          },
+          {
+            bold: "Fluoroskopie-System :",
+            other:
+              "Ein bildgebendes Verfahren, das kontinuierliche Röntgenbilder liefert, um Echtzeit-Bewegungen des Herzens und der Katheter zu beobachten.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Ein motorisierter Tisch, auf dem der Patient während der Untersuchung liegt. Er kann in verschiedene Positionen bewegt werden, um den Zugang zu verschiedenen Bereichen des Herzens zu ermöglichen.",
+          },
+          {
+            bold: "Katheter :",
+            other:
+              "Ein dünner, flexibler Schlauch, der über ein Blutgefäß bis zum Herzen geführt wird. Er wird zur Druckmessung, Injektion von Kontrastmitteln und Durchführung von therapeutischen Maßnahmen verwendet.",
+          },
+          {
+            bold: "Kontrastmittelinjektor :",
+            other:
+              "Ein Gerät zur intravenösen Verabreichung von Kontrastmitteln. Das Kontrastmittel verbessert die Sichtbarkeit der Herzkranzgefäße und hilft bei der Diagnose von Verengungen oder Verschlüssen.",
+          },
+          {
+            bold: "Elektrokardiogramm (EKG) :",
+            other:
+              "Überwacht die elektrische Aktivität des Herzens während der Untersuchung. Es hilft, Herzrhythmusstörungen zu erkennen und die Position des Katheters zu kontrollieren.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Ermöglicht dem Radiologen oder kardiologischen Technologen, das Herzkatheteruntersuchungssystem zu bedienen, Einstellungen vorzunehmen und den gesamten Ablauf der Untersuchung zu überwachen.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Besteht aus einem Computer und Monitoren, auf denen die erfassten Bilder angezeigt und analysiert werden. Der Radiologe oder Kardiologe interpretiert hier die Ergebnisse der Untersuchung.",
+          },
+          {
+            bold: "Kühlungssystem :",
+            other:
+              "Ein notwendiges System, um die Röntgenröhre und andere hitzeempfindliche Komponenten zu kühlen, da sie während des Betriebs viel Wärme erzeugen.",
+          },
+          {
+            bold: "Ablationssystem :",
+            other:
+              "Wird bei der Behandlung von Herzrhythmusstörungen verwendet. Es ermöglicht die gezielte Ablation von Herzgewebe, um fehlerhafte elektrische Signale zu beseitigen.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+          {
+            bold: "Monitoring-Geräte :",
+            other:
+              "Überwachen kontinuierlich die Vitalzeichen des Patienten, einschließlich Blutdruck, Herzfrequenz und Sauerstoffsättigung, um die Sicherheit während des Eingriffs zu gewährleisten.",
+          },
+          {
+            bold: "Steriles Umfeld :",
+            other:
+              "Ein Bereich im Katheterlabor, der steril gehalten wird, um das Risiko von Infektionen während des Eingriffs zu minimieren.",
+          },
+        ],
+      },
+      // 6tab 124
+      {
+        id: 124,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text_list: [
+          {
+            bold: "Herzkatheteruntersuchung :",
+            other:
+              "Ein Verfahren, bei dem ein dünner Schlauch (Katheter) in ein Blutgefäß eingeführt und bis zum Herzen vorgeschoben wird.",
+          },
+          {
+            bold: "Koronarangiographie :",
+            other:
+              "Röntgenuntersuchung der Herzkranzgefäße mit Kontrastmittel.",
+          },
+          {
+            bold: "Katheter :",
+            other:
+              "Ein dünner, flexibler Schlauch, der in ein Blutgefäß eingeführt wird.",
+          },
+          {
+            bold: "Stenose :",
+            other: "Verengung eines Blutgefäßes.",
+          },
+          {
+            bold: "Verschluss :",
+            other: "Blockierung eines Blutgefäßes.",
+          },
+          {
+            bold: "Ballondilatation :",
+            other:
+              "Aufdehnung eines verengten Blutgefäßes mittels eines Ballonkatheters.",
+          },
+          {
+            bold: "Stent :",
+            other:
+              "Eine Gefäßstütze, die in ein verengtes oder verschlossenes Blutgefäß eingesetzt wird, um es offen zu halten.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die in den Körper injiziert wird, um Strukturen im Röntgenbild besser sichtbar zu machen.",
+          },
+          {
+            bold: "Röntgendurchleuchtung :",
+            other:
+              "Ein Verfahren, bei dem kontinuierliche Röntgenstrahlen verwendet werden, um bewegte Bilder von inneren Strukturen zu erstellen.",
+          },
+          {
+            bold: "Koronare Herzkrankheit (KHK) :",
+            other:
+              "Eine Erkrankung, bei der die Herzkranzgefäße verengt oder blockiert sind.",
+          },
+          {
+            bold: "Herzinfarkt :",
+            other:
+              "Schädigung des Herzmuskels aufgrund einer Unterbrechung der Blutversorgung.",
+          },
+          {
+            bold: "Druckmessung :",
+            other:
+              "Messung des Drucks in den Herzkammern und Blutgefäßen während der Herzkatheteruntersuchung.",
+          },
+          {
+            bold: "Aortenklappenstenose :",
+            other:
+              "Verengung der Aortenklappe, die den Blutfluss aus dem Herzen behindert.",
+          },
+          {
+            bold: "Interventionelle Kardiologie :",
+            other:
+              "Ein Bereich der Kardiologie, der minimalinvasive Verfahren zur Behandlung von Herzkrankheiten umfasst.",
+          },
+          {
+            bold: "Myokard :",
+            other: "Herzmuskel.",
+          },
+          {
+            bold: "Ischämie :",
+            other: "Minderdurchblutung eines Gewebes.",
+          },
+          {
+            bold: "Hypo- und Hyperdens :",
+            other:
+              "Bezeichnung für Strukturen, die im Röntgenbild weniger oder mehr dicht erscheinen als das umgebende Gewebe.",
+          },
+          {
+            bold: "Perkutane Koronarintervention (PCI) :",
+            other:
+              "Ein Verfahren zur Aufdehnung verengter Koronararterien mittels Ballondilatation und/oder Stentimplantation.",
+          },
+          {
+            bold: "Koronargefäße :",
+            other:
+              "Blutgefäße, die den Herzmuskel mit Sauerstoff und Nährstoffen versorgen.",
+          },
+          {
+            bold: "Komplikationen :",
+            other:
+              "Mögliche unerwünschte Folgen oder Risiken eines medizinischen Eingriffs, wie Blutungen oder Infektionen.",
+          },
+          {
+            bold: "Niereninsuffizienz :",
+            other:
+              "Beeinträchtigung der Nierenfunktion, was die Verwendung bestimmter Kontrastmittel einschränken kann.",
+          },
+          {
+            bold: "Elektrokardiogramm (EKG) :",
+            other: "Aufzeichnung der elektrischen Aktivität des Herzens.",
+          },
+          {
+            bold: "Angioplastie :",
+            other:
+              "Ein Verfahren zur Erweiterung verengter oder blockierter Blutgefäße.",
+          },
+          {
+            bold: "Bifurkation :",
+            other: "Aufzweigung eines Blutgefäßes in zwei Äste.",
+          },
+          {
+            bold: "Fluoroskopie :",
+            other:
+              "Bildgebendes Verfahren, das kontinuierliche Röntgenbilder erzeugt, um bewegte Körperstrukturen zu beobachten.",
+          },
+          {
+            bold: "Röntgenbild :",
+            other:
+              "Bild, das durch Durchleuchten des Körpers mit Röntgenstrahlen erstellt wird.",
+          },
+          {
+            bold: "Vaskuläre Zugangswege :",
+            other:
+              "Blutgefäße, die für den Katheterzugang verwendet werden, z.B. die Femoral- oder Radialarterie.",
+          },
+          {
+            bold: "Intravaskulärer Ultraschall (IVUS) :",
+            other:
+              "Ultraschallverfahren zur Darstellung der Innenwand von Blutgefäßen.",
+          },
+        ],
+      },
+      // 7tab 125
+      {
+        id: 125,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 126
+      {
+        id: 126,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1XBfLjU_kl2SF2LTDlGbxS1ZW6RqDumYg/view?usp=share_link",
+      },
+    ],
+  },
   // Endoskopischer Verfahren
   // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
   {
