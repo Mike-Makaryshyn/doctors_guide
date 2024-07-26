@@ -12207,7 +12207,7 @@ export const parentTabs = [
       {
         id: 156,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text: "Diese Liste umfasst wesentliche Begriffe und Phrasen, die im Rahmen der Fachsprachenprüfung für die Koloskopie-Diagnostik relevant sind.",
         text_list: [
           {
             bold: "Koloskopie :",
@@ -12390,6 +12390,703 @@ export const parentTabs = [
         id: 158,
         title: "PDF",
         link: "https://drive.google.com/file/d/1_LmuIoLyEXR2YtFS1FtCxw9c9lXQEP7a/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 16
+  // start of parent tab 18 Koloskopie
+  {
+    id: 18,
+    title: "Ösophagogastroduodenoskopie",
+    checked: false,
+    childTabs: [
+      // 1tab 159
+      {
+        id: 159,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die OGD dient der visuellen Beurteilung und Diagnostik von Erkrankungen des Ösophagus, des Magens und des Duodenums. Sie ermöglicht die Identifizierung von Läsionen, Entzündungen, Tumoren und anderen pathologischen Veränderungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die OGD wird häufig bei Patienten mit Symptomen wie Dysphagie, Oberbauchschmerzen, Sodbrennen, Übelkeit, Erbrechen und gastrointestinalen Blutungen eingesetzt. Sie ist entscheidend für die Diagnose und Behandlung von Erkrankungen wie Ulkuskrankheit, Refluxösophagitis, Gastritis und Malignomen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die OGD basiert auf der Verwendung eines flexiblen Endoskops, das durch den Mund in den Ösophagus, den Magen und das Duodenum eingeführt wird. Das Endoskop ist mit einer Lichtquelle und einer Kamera ausgestattet, die Echtzeitbilder auf einen Monitor überträgt.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Verfahren wird in der Regel unter Sedierung durchgeführt. Das Endoskop ermöglicht die Entnahme von Biopsien und die Durchführung therapeutischer Maßnahmen wie Blutstillung, Polypektomie und Dilatation von Strikturen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation der Endoskopiebilder erfordert Erfahrung und Fachwissen. Typische Befunde können Erosionen, Ulzera, Polypen, Tumore und entzündliche Veränderungen umfassen. Die Biopsien werden histopathologisch untersucht, um spezifische Diagnosen zu stellen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den häufigen Befunden gehören Refluxösophagitis, peptische Ulzera, gastrische und duodenale Polypen sowie Magen- und Ösophaguskarzinome.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die OGD bietet eine direkte visuelle Inspektion und ermöglicht gezielte Biopsien und therapeutische Interventionen. Sie hat eine hohe diagnostische Genauigkeit und kann viele Erkrankungen frühzeitig erkennen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Vorbereitung und Sedierung können für Patienten unangenehm sein. Es besteht ein geringes Risiko für Komplikationen wie Perforation und Infektion.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören Blutungen, Perforationen und allergische Reaktionen auf Sedativa. Diese Komplikationen sind jedoch selten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die OGD spielt eine zentrale Rolle in der Diagnose und Behandlung vieler gastrointestinaler Erkrankungen. Sie ist oft der Goldstandard für die Evaluierung von Symptomen und die Überwachung bekannter Erkrankungen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Die Ergebnisse der OGD beeinflussen maßgeblich die klinische Entscheidungsfindung und das Management der Patienten. Sie hilft, therapeutische Strategien zu planen und den Krankheitsverlauf zu überwachen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternative diagnostische Methoden sind die Bariumkontraststudie und die Magnetresonanztomographie (MRT). Diese Verfahren bieten jedoch keine Möglichkeit zur direkten Visualisierung und Biopsie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Techniken wie die Endoskopische Submukosadissektion (ESD) und die transnasale Endoskopie erweitern die diagnostischen und therapeutischen Möglichkeiten der OGD.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die Weiterentwicklung der Endoskopietechnologie, einschließlich verbesserter Bildgebung und minimal-invasiver Techniken, wird die Diagnose und Behandlungsmöglichkeiten weiter verbessern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Ösophagogastroduodenoskopie ist ein unverzichtbares Verfahren in der Gastroenterologie. Sie bietet präzise diagnostische und therapeutische Möglichkeiten bei einer Vielzahl von gastrointestinalen Erkrankungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die OGD ist ein zentrales Instrument in der modernen medizinischen Praxis, das die Patientenversorgung erheblich verbessert und die klinische Entscheidungsfindung unterstützt.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 160
+      {
+        id: 160,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die ÖGD zur Diagnose und Beurteilung von Erkrankungen des Ösophagus, Magens und Duodenums dient.",
+            third:
+              "„Wir möchten feststellen, ob eine Entzündung, ein Geschwür oder ein Tumor in Ihrem Magen-Darm-Trakt vorliegt.“",
+            fourth:
+              "„Diese Untersuchung hilft uns, die Ursache Ihrer Beschwerden wie Magenschmerzen oder Schluckbeschwerden zu finden.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Informieren Sie den Patienten über den genauen Ablauf der Untersuchung, einschließlich der Einführung des Endoskops durch den Mund, der Untersuchung des oberen Gastrointestinaltrakts und der Möglichkeit, Biopsien zu entnehmen.",
+            third:
+              "„Wir werden ein flexibles Endoskop durch Ihren Mund einführen und langsam durch den Ösophagus, Magen und Zwölffingerdarm führen.“",
+            fourth:
+              "„Während der Untersuchung können wir kleine Gewebeproben entnehmen, um sie auf mögliche Erkrankungen zu untersuchen.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erklären Sie, dass der Patient nüchtern sein muss, normalerweise mindestens sechs Stunden vor der Untersuchung nichts essen oder trinken darf, und Anweisungen zur Medikation erhält.",
+            third:
+              "„Bitte essen oder trinken Sie ab Mitternacht nichts mehr, da Ihr Magen leer sein muss.“",
+            fourth:
+              "„Informieren Sie uns bitte über alle Medikamente, die Sie einnehmen, damit wir Sie anweisen können, welche Sie vor der Untersuchung absetzen sollten.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie über mögliche Risiken, wie Blutungen, Perforationen, Infektionen und allergische Reaktionen auf Sedativa, und erwähnen Sie, dass diese Komplikationen selten sind.",
+            third:
+              "„Es besteht ein geringes Risiko für Blutungen oder Infektionen, aber solche Komplikationen sind selten.“",
+            fourth:
+              "„Eine seltene, aber mögliche Komplikation ist die Perforation der Darmwand, die eine sofortige Behandlung erfordern würde.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile der ÖGD, wie die direkte visuelle Inspektion, gezielte Biopsien, therapeutische Interventionen und die hohe diagnostische Genauigkeit.",
+            third:
+              "„Die ÖGD erlaubt es uns, den Verdauungstrakt direkt anzusehen und gegebenenfalls sofort zu behandeln.“",
+            fourth:
+              "„Diese Methode hat eine hohe Genauigkeit und kann frühe Stadien von Krankheiten erkennen, was die Behandlungschancen verbessert.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erklären Sie alternative diagnostische Methoden, wie die Bariumkontraststudie und die Magnetresonanztomographie (MRT), und erwähnen Sie, dass diese keine direkte Visualisierung und Biopsie ermöglichen.",
+            third:
+              "„Eine Alternative wäre eine Bariumkontraststudie, bei der Sie eine spezielle Flüssigkeit trinken und dann geröntgt werden.“",
+            fourth:
+              "„Eine andere Möglichkeit ist die MRT, die jedoch keine direkten Biopsien ermöglicht, wie es bei der ÖGD der Fall ist.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie über mögliche Kontraindikationen, wie schwere Herz- oder Lungenerkrankungen, akute Infektionen und unkontrollierte Blutgerinnungsstörungen.",
+            third:
+              "„Wenn Sie an schweren Herzproblemen oder unkontrollierten Blutgerinnungsstörungen leiden, sollten wir die OGD möglicherweise nicht durchführen.“",
+            fourth:
+              "„Bei einer akuten Infektion oder schweren Atemproblemen wäre es sicherer, die Untersuchung zu verschieben.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erläutern Sie die möglichen Ergebnisse der ÖGD, einschließlich normaler Befunde, Entzündungen, Ulzera, Polypen und Tumore.",
+            third:
+              "„Ein mögliches Ergebnis könnte eine normale Untersuchung sein, was bedeutet, dass keine Auffälligkeiten gefunden wurden.“",
+            fourth:
+              "„Falls wir Polypen oder Tumore entdecken, würden wir diese näher untersuchen und eine geeignete Therapie einleiten.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie die Notwendigkeit einer Einwilligung, bevor die Untersuchung durchgeführt wird, um sicherzustellen, dass der Patient über die Verfahren, Risiken und Vorteile informiert ist.",
+            third:
+              "„Es ist wichtig, dass Sie alle Informationen verstehen und zustimmen, bevor wir mit der Untersuchung beginnen.“",
+            fourth:
+              "„Wir benötigen Ihr schriftliches Einverständnis, um sicherzustellen, dass Sie über die möglichen Risiken und Vorteile informiert sind.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Informieren Sie darüber, dass das Einverständnis schriftlich dokumentiert wird, und stellen Sie sicher, dass der Patient alle Fragen gestellt und beantwortet hat.",
+            third:
+              "„Bitte lesen Sie die Einverständniserklärung sorgfältig durch und stellen Sie alle Fragen, die Sie haben könnten.“",
+            fourth:
+              "„Nachdem wir Ihre Fragen beantwortet haben, werden Sie gebeten, das Formular zu unterschreiben, um Ihre Zustimmung zu bestätigen.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Untersuchung, was nach dem Eingriff zu erwarten ist, und wer die Ergebnisse mit ihm besprechen wird.",
+            third:
+              "„Nach der Untersuchung werden Sie sich möglicherweise noch etwas benommen fühlen. Es ist wichtig, dass Sie sich ausruhen und keine schweren Maschinen bedienen.“",
+            fourth:
+              "„Wir besprechen die Ergebnisse der Untersuchung, sobald die Sedierung abgeklungen ist und Sie vollständig wach sind.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann der Patient über die Ergebnisse der Untersuchung informiert wird, und welche Schritte basierend auf den Befunden unternommen werden können.",
+            third:
+              "„Die Ergebnisse der Untersuchung werden Ihnen in einem Nachgespräch mitgeteilt. Bei Auffälligkeiten planen wir die nächsten Schritte.“",
+            fourth:
+              "„Sollten Biopsien entnommen worden sein, erhalten Sie die detaillierten Ergebnisse in etwa einer Woche.“",
+          },
+        ],
+      },
+      // 3tab 161
+      {
+        id: 161,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die ÖGD ein endoskopisches Verfahren ist, das zur visuellen Beurteilung des oberen Gastrointestinaltrakts eingesetzt wird.",
+            third:
+              "„Die ÖGD ist ein Verfahren, bei dem wir ein flexibles Endoskop verwenden, um den Ösophagus, den Magen und das Duodenum zu untersuchen.“",
+            fourth:
+              "„Bei der ÖGD führen wir ein Endoskop durch den Mund ein, um direkt die Schleimhaut des oberen Magen-Darm-Trakts zu beurteilen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass die ÖGD zur Untersuchung des Ösophagus, Magens und Duodenums dient und pathologische Veränderungen wie Entzündungen, Ulzera und Tumoren identifizieren kann.",
+            third:
+              "„Mit der ÖGD können wir Erkrankungen wie Refluxösophagitis, Magengeschwüre und Tumoren frühzeitig erkennen.“",
+            fourth:
+              "„Die Untersuchung hilft uns, Ursachen für Beschwerden wie Schluckstörungen oder Oberbauchschmerzen zu identifizieren.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erwähnen Sie die typischen Befunde wie Refluxösophagitis, peptische Ulzera, Polypen und Malignome, und erläutern Sie deren klinische Bedeutung.",
+            third:
+              "„Typische Befunde sind Entzündungen, die auf eine Refluxösophagitis hinweisen, oder Geschwüre, die durch Helicobacter pylori verursacht werden.“",
+            fourth:
+              "„Wir könnten Polypen finden, die meist gutartig sind, aber auch Anzeichen von Malignomen, die eine sofortige Therapie erfordern.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die häufigsten Indikationen für eine ÖGD, wie Dysphagie, Oberbauchschmerzen, unklare Anämie, gastrointestinalen Blutungen und Überwachung bekannter Läsionen.",
+            third:
+              "„Eine ÖGD ist indiziert bei Patienten mit anhaltendem Sodbrennen und Verdacht auf Barrett-Ösophagus.“",
+            fourth:
+              "„Wir führen die Untersuchung durch bei unklaren Blutungen im oberen Magen-Darm-Trakt, um die Blutungsquelle zu lokalisieren.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie die Kontraindikationen wie schwere Herz- oder Lungenerkrankungen, akute Infektionen und unkontrollierte Blutgerinnungsstörungen.",
+            third:
+              "„Patienten mit schwerer COPD sollten sorgfältig abgewogen werden, ob eine Sedierung für die ÖGD sicher ist.“",
+            fourth:
+              "„Bei Patienten mit akuten Herzinfarkten ist die Durchführung einer ÖGD kontraindiziert.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erwähnen Sie mögliche Differenzialdiagnosen, die mit der ÖGD abgeklärt werden können, wie gastroösophageale Refluxkrankheit, peptische Ulzera und Malignome.",
+            third:
+              "„Differenzialdiagnosen umfassen neben der Refluxkrankheit auch eosinophile Ösophagitis und infektiöse Ösophagitiden.“",
+            fourth:
+              "„Die ÖGD hilft, zwischen gutartigen Ulzera und malignen Veränderungen zu unterscheiden.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, wie die Ergebnisse der ÖGD in die Erstellung von Behandlungsplänen einfließen, z.B. medikamentöse Therapie bei Refluxösophagitis oder operative Maßnahmen bei malignen Tumoren.",
+            third:
+              "„Bei einem Befund von Refluxösophagitis würden wir einen PPI verschreiben und diätetische Maßnahmen empfehlen.“",
+            fourth:
+              "„Falls wir ein Karzinom finden, besprechen wir den Fall im Tumorboard und planen eine operative Entfernung.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachdisziplinen, wie Pathologie für die Auswertung von Biopsien und Onkologie für die Behandlung von Karzinomen.",
+            third:
+              "„Die Zusammenarbeit mit der Pathologie ist entscheidend, um Biopsieergebnisse korrekt zu interpretieren und die Diagnose zu bestätigen.“",
+            fourth:
+              "„Bei malignen Befunden koordinieren wir mit Onkologen die weitere Therapie, einschließlich Chemotherapie und Strahlentherapie.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erwähnen Sie die Bedeutung von Qualitätsmanagement in der Endoskopie, einschließlich der Schulung des Personals, der Einhaltung von Hygieneprotokollen und der regelmäßigen Überprüfung der Geräte.",
+            third:
+              "„Regelmäßige Fortbildungen für das Team stellen sicher, dass wir auf dem neuesten Stand der Technik und der Protokolle bleiben.“",
+            fourth:
+              "„Wir überprüfen und kalibrieren die Endoskopiegeräte regelmäßig, um optimale Bildqualität und Patientensicherheit zu gewährleisten.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Notwendigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der geplanten weiteren Schritte, sowie der Kommunikation der Befunde an den weiterbehandelnden Arzt.",
+            third:
+              "„Eine detaillierte Dokumentation der Befunde und Biopsieergebnisse ist essenziell für die weitere Behandlung und Verlaufskontrolle.“",
+            fourth:
+              "„Wir stellen sicher, dass die Ergebnisse der ÖGD umgehend an den Hausarzt übermittelt werden, um eine nahtlose Weiterbehandlung zu gewährleisten.“",
+          },
+        ],
+      },
+      // 4tab 162
+      {
+        id: 162,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "50-jähriger Patient klagt über anhaltende Oberbauchschmerzen und gelegentliche Übelkeit.",
+            fourth:
+              "60-jähriger Patient mit chronischem Sodbrennen und gelegentlichen Schluckbeschwerden.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "ÖGD des oberen Gastrointestinaltrakts ohne Anomalien, keine Anzeichen pathologischer Veränderungen.",
+            third:
+              "ÖGD zeigt ein tiefes, gut abgegrenztes Ulkus im Antrum des Magens mit fibrinbelegtem Grund.",
+            fourth:
+              "ÖGD zeigt eine Zylinderepithelmetaplasie im distalen Ösophagus, typisch für Barrett.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das ÖGD-Ergebnis unterstützt den Ausschluss von GI-Erkrankungen.",
+            third:
+              "Der Befund deutet auf ein peptisches Ulkus hin, wahrscheinlich verursacht durch H. pylori oder NSAID-Gebrauch.",
+            fourth:
+              "Die Zylinderepithelmetaplasie ist typisch für Barrett-Ösophagus und erfordert regelmäßige Überwachung.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer medikamentösen Ulkustherapie und Eradikationstherapie für H. pylori.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer PPI-Therapie sowie Überwachung zur Früherkennung von Dysplasien.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des oberen Gastrointestinaltrakts.",
+            third:
+              "Diagnose eines peptischen Ulkus basierend auf ÖGD-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Barrett-Ösophagus aufgrund der ÖGD-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Schleimhaut ohne Auffälligkeiten in allen untersuchten Bereichen.",
+            third:
+              "ÖGD-Aufnahmen zeigen ein tiefes Ulkus im Antrum mit fibrinbelegtem Grund.",
+            fourth:
+              "ÖGD-Aufnahmen zeigen Zylinderepithelmetaplasie im distalen Ösophagus.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige Routineuntersuchungen alle 2 Jahre zur Überwachung der allgemeinen Gesundheit.",
+            third:
+              "Wir empfehlen eine Eradikationstherapie für H. pylori und eine anschließende Kontrolle nach 4-6 Wochen.",
+            fourth:
+              "Es ist zu empfehlen, eine regelmäßige endoskopische Überwachung durchzuführen, um frühe Veränderungen zu erkennen.",
+          },
+        ],
+      },
+      // 5tab 163
+      {
+        id: 163,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Diese Komponenten und Funktionen sind entscheidend für eine erfolgreiche Durchführung der ÖGD und tragen zur Diagnose und Behandlung von Erkrankungen des oberen Gastrointestinaltrakts bei.",
+        text_list: [
+          {
+            bold: "Endoskop :",
+            other:
+              "Das Hauptinstrument der ÖGD, bestehend aus einem flexiblen Schlauch, der durch den Mund des Patienten in den Ösophagus, den Magen und das Duodenum eingeführt wird. Es enthält eine Lichtquelle und eine Kamera zur Visualisierung des Gastrointestinaltrakts.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Eine starke Lichtquelle, meist LED, die durch das Endoskop leuchtet und den inneren Gastrointestinaltrakt ausleuchtet, um klare Bilder zu ermöglichen.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Am Ende des Endoskops montiert, überträgt die Kamera Echtzeitbilder des inneren Gastrointestinaltrakts auf einen Monitor. Diese Bilder werden zur Diagnose und Dokumentation verwendet.",
+          },
+          {
+            bold: "Arbeitskanäle :",
+            other:
+              "Das Endoskop verfügt über mehrere Kanäle, durch die Instrumente eingeführt werden können, um Biopsien zu entnehmen, Polypen zu entfernen oder therapeutische Eingriffe vorzunehmen.",
+          },
+          {
+            bold: "Biopsiezange :",
+            other:
+              "Ein spezielles Instrument, das durch den Arbeitskanal des Endoskops eingeführt wird, um Gewebeproben für die histopathologische Untersuchung zu entnehmen.",
+          },
+          {
+            bold: "Insufflator :",
+            other:
+              "Ein Gerät, das Luft oder CO2 in den Magen-Darm-Trakt bläst, um diesen aufzublähen und die Sichtbarkeit zu verbessern.",
+          },
+          {
+            bold: "Absaugsystem :",
+            other:
+              "Ein System, das Flüssigkeiten, Schleim und Luft aus dem Magen-Darm-Trakt absaugt, um eine klare Sicht zu gewährleisten und Probenentnahmen zu erleichtern.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Ein Bildschirm, auf dem die vom Endoskop übertragenden Bilder in Echtzeit angezeigt werden. Der Arzt kann so den Zustand des Gastrointestinaltrakts genau beurteilen.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Ein Bedienfeld, das es dem Endoskopisten ermöglicht, die Funktionen des Endoskops zu steuern, wie z.B. Beleuchtung, Luft- und Wasserzufuhr, und die Bewegung der Kamera.",
+          },
+          {
+            bold: "Desinfektionssystem :",
+            other:
+              "Ein System zur gründlichen Reinigung und Desinfektion des Endoskops und der verwendeten Instrumente, um die Übertragung von Infektionen zu verhindern.",
+          },
+          {
+            bold: "Dokumentationssystem :",
+            other:
+              "Ein System zur Erfassung und Speicherung der während der Untersuchung aufgenommenen Bilder und Videos für die spätere Analyse und Dokumentation.",
+          },
+          {
+            bold: "Wasserspülsystem :",
+            other:
+              "Eine Funktion des Endoskops, die es ermöglicht, Wasser in den Gastrointestinaltrakt zu spritzen, um Schleim und Ablagerungen von der Kamera zu entfernen und die Sicht zu verbessern.",
+          },
+          {
+            bold: "CO2-Insufflationssystem :",
+            other:
+              "Eine alternative Methode zur Luftinsufflation, die die Beschwerden des Patienten nach der Untersuchung reduziert.",
+          },
+          {
+            bold: "Anästhesiesystem :",
+            other:
+              "Ein System zur Verabreichung von Lokalanästhetika oder Sedativa, um den Patienten während der Untersuchung zu beruhigen und Schmerzen zu minimieren.",
+          },
+        ],
+      },
+      // 6tab 164
+      {
+        id: 156,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Kommunikation und das Verständnis im Bereich der ÖGD-Diagnostik und sollten für die Fachsprachenprüfung gut beherrscht werden.",
+        text_list: [
+          {
+            bold: "Ösophagogastroduodenoskopie (ÖGD) :",
+            other:
+              "Endoskopisches Verfahren zur Untersuchung des Ösophagus, Magens und Duodenums.",
+          },
+          {
+            bold: "Endoskop :",
+            other:
+              "Flexibler Schlauch mit Lichtquelle und Kamera, der durch den Mund in den oberen Gastrointestinaltrakt eingeführt wird.",
+          },
+          {
+            bold: "Gastrointestinaltrakt :",
+            other: "Verdauungstrakt, der den Magen und Darm umfasst.",
+          },
+          {
+            bold: "Biopsie :",
+            other:
+              "Entnahme von Gewebeproben zur histopathologischen Untersuchung.",
+          },
+          {
+            bold: "Insufflation :",
+            other:
+              "Einblasen von Luft oder CO2 in den Gastrointestinaltrakt zur besseren Sichtbarkeit.",
+          },
+          {
+            bold: "Absaugung :",
+            other:
+              "Entfernen von Flüssigkeiten und Schleim aus dem Gastrointestinaltrakt zur Klarstellung des Sichtfelds.",
+          },
+          {
+            bold: "Polyp :",
+            other:
+              "Gutartige Gewebewucherung im Magen-Darm-Trakt, die während der ÖGD entfernt werden kann.",
+          },
+          {
+            bold: "Ulzera :",
+            other:
+              "Geschwürartige Läsionen im Magen oder Duodenum, häufig durch Helicobacter pylori oder NSAID verursacht.",
+          },
+          {
+            bold: "Barrett-Ösophagus :",
+            other:
+              "Zylinderepithelmetaplasie im distalen Ösophagus, oft als Folge von chronischem Sodbrennen.",
+          },
+          {
+            bold: "Sedierung :",
+            other:
+              "Verabreichung von Beruhigungs- oder Betäubungsmitteln, um den Patienten während der Untersuchung ruhigzustellen.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Beleuchtet den inneren Gastrointestinaltrakt für bessere Sicht während der Untersuchung.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Nimmt Bilder und Videos des inneren Gastrointestinaltrakts auf und überträgt diese auf einen Monitor.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Gerät, auf dem die vom Endoskop übertragenen Bilder in Echtzeit angezeigt werden.",
+          },
+          {
+            bold: "Histopathologie :",
+            other:
+              "Untersuchung von Gewebeproben unter dem Mikroskop zur Diagnose von Krankheiten.",
+          },
+          {
+            bold: "Perforation :",
+            other:
+              "Seltene Komplikation, bei der ein Loch im Gastrointestinaltrakt entsteht, oft infolge der Untersuchung.",
+          },
+          {
+            bold: "Refluxösophagitis :",
+            other:
+              "Entzündung des Ösophagus, häufig verursacht durch Rückfluss von Magensäure.",
+          },
+          {
+            bold: "Arbeitskanäle :",
+            other:
+              "Kanäle im Endoskop, durch die Instrumente für therapeutische Eingriffe eingeführt werden.",
+          },
+          {
+            bold: "Ulkustherapie :",
+            other:
+              "Behandlung eines Magengeschwürs, oft durch Medikamente und Eradikation von Helicobacter pylori.",
+          },
+          {
+            bold: "Erosionen :",
+            other:
+              "Oberflächliche Verletzungen der Schleimhaut im Gastrointestinaltrakt.",
+          },
+          {
+            bold: "Hyperplasie :",
+            other:
+              "Vergrößerung eines Gewebes durch Zunahme der Zellzahl, oft gutartig.",
+          },
+          {
+            bold: "Dysplasie :",
+            other:
+              "Abnormale Zellveränderungen, die Vorstufen zu Krebs sein können.",
+          },
+          {
+            bold: "Hämostase :",
+            other:
+              "Stillung einer Blutung, oft durch endoskopische Methoden während der ÖGD.",
+          },
+          {
+            bold: "Retroflexion :",
+            other:
+              "Technik, bei der das Endoskop gebogen wird, um den Magen aus einem anderen Winkel zu betrachten.",
+          },
+        ],
+      },
+      // 7tab 165
+      {
+        id: 165,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 166
+      {
+        id: 166,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/150LBxYO2FAWXMB7hyXLks0h5vnkeWGWk/view?usp=share_link",
       },
     ],
   },
