@@ -12393,8 +12393,8 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 16
-  // start of parent tab 18 Koloskopie
+  // end of parent tab 18
+  // start of parent tab 19 KoloskopieÖsophagogastroduodenoskopie
   {
     id: 18,
     title: "Ösophagogastroduodenoskopie",
