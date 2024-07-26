@@ -10237,7 +10237,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 15
-  // start of parent tab 16 Arthroskopie
+  // start of parent tab 16 Gastroskopie
   {
     id: 16,
     title: "Gastroskopie ",
@@ -10958,16 +10958,16 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 17
-  // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+  // end of parent tab 16
+  // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)
   {
-    id: 22,
+    id: 17,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
     checked: false,
     childTabs: [
-      // 1tab
+      // 1tab 143
       {
-        id: 11111,
+        id: 143,
         title: "Einleitung",
 
         list: [
@@ -11077,9 +11077,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 2tab
+      // 2tab 144
       {
-        id: 22222,
+        id: 144,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -11204,9 +11204,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 3tab
+      // 3tab 145
       {
-        id: 33333,
+        id: 145,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -11315,7 +11315,7 @@ export const parentTabs = [
       },
       // 4tab
       {
-        id: 44444,
+        id: 146,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -11397,7 +11397,7 @@ export const parentTabs = [
       },
       // 5tab
       {
-        id: 55555,
+        id: 147,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein ERCP-Gerät ist ein spezialisiertes medizinisches Instrument, das zur endoskopischen retrograden Cholangiopankreatikographie (ERCP) verwendet wird. Es kombiniert endoskopische und radiologische Techniken, um detaillierte Bilder der Gallen- und Pankreasgänge zu erstellen und therapeutische Eingriffe durchzuführen. Hier sind die wesentlichen Komponenten und Funktionen eines ERCP-Geräts:Gantry: ist der ringförmige Teil des CT-Geräts, der die Röntgenröhre und die Detektoren enthält. Er kann sich um den Patienten drehen, um aus verschiedenen Winkeln Bilder zu erstellen.",
@@ -11479,9 +11479,9 @@ export const parentTabs = [
           },
         ],
       },
-      // 6tab
+      // 6tab 148
       {
-        id: 555552,
+        id: 148,
         title: "Wortschatz",
         text: "Für eine Fachsprachenprüfung im Bereich der ERCP-Diagnostik sind folgende Begriffe und Phrasen wesentlich:",
         text_list: [
@@ -11644,7 +11644,7 @@ export const parentTabs = [
         ],
       },
       {
-        id: 56523,
+        id: 149,
         title: "Links",
         text: "",
         text_list: [
@@ -11690,12 +11690,708 @@ export const parentTabs = [
           },
         ],
       },
+      // tab 150
       {
-        id: 52344,
+        id: 150,
         title: "PDF",
         link: "https://drive.google.com/file/d/1PqRkOW_XHA6f1_mxulrp3YX1hGNTV4uv/view?usp=share_link",
       },
     ],
   },
-  // end of parent tab
+  // end of parent tab 17
+  // start of parent tab 18 Koloskopie
+  {
+    id: 18,
+    title: "Koloskopie  ",
+    checked: false,
+    childTabs: [
+      // 1tab 151
+      {
+        id: 151,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Hauptziele der Gastroskopie sind die Diagnose und Beurteilung von Erkrankungen des oberen Verdauungstrakts, wie z.B. Geschwüre, Entzündungen, Blutungen, Tumore und andere pathologische Veränderungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Gastroskopie ist von entscheidender Bedeutung in der Gastroenterologie, da sie eine direkte Visualisierung und Biopsieentnahme ermöglicht. Sie wird häufig bei Patienten mit Symptomen wie Oberbauchschmerzen, Sodbrennen, Übelkeit, Erbrechen und unklaren Blutungen eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Gastroskopie basiert auf der direkten visuellen Inspektion der Schleimhaut des oberen Gastrointestinaltrakts mithilfe eines flexiblen Endoskops. Das Endoskop ist mit einer Lichtquelle und einer Kamera ausgestattet, die Bilder in Echtzeit auf einen Monitor überträgt.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Endoskop wird vorsichtig über den Mund und die Speiseröhre in den Magen und den Zwölffingerdarm eingeführt. Der Patient liegt dabei in der Regel in Seitenlage. Während der Untersuchung können Luft und Wasser über das Endoskop eingebracht werden, um die Sicht zu verbessern und Gewebeproben zu entnehmen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation der Gastroskopieergebnisse erfolgt durch die visuelle Beurteilung der Schleimhaut. Auffällige Bereiche werden genau dokumentiert, und gegebenenfalls werden Gewebeproben zur histologischen Untersuchung entnommen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können entzündliche Veränderungen (Gastritis), Ulzera (Magengeschwüre), Tumore, Varizen, Polypen und Anzeichen von Refluxerkrankungen umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Gastroskopie ermöglicht eine direkte und detaillierte Visualisierung des oberen Gastrointestinaltrakts, eine präzise Diagnosestellung und die Möglichkeit zur sofortigen therapeutischen Intervention (z.B. Blutstillung).",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Das Verfahren kann für den Patienten unangenehm sein und erfordert eine Sedierung. Es besteht ein geringes Risiko für Komplikationen wie Blutungen oder Perforationen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Mögliche Risiken umfassen Infektionen, Blutungen, Perforationen und Nebenwirkungen der Sedierung. Diese Risiken sind jedoch selten und treten bei erfahrenen Anwendern nur in Ausnahmefällen auf.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Gastroskopie spielt eine zentrale Rolle in der Diagnose und Behandlung von Erkrankungen des oberen Verdauungstrakts. Sie ermöglicht nicht nur die Diagnose, sondern auch therapeutische Maßnahmen wie die Entfernung von Polypen oder die Blutstillung.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die Gastroskopie können rasch und gezielt Diagnosen gestellt und Behandlungsstrategien entwickelt werden. Dies verbessert das Patientenmanagement erheblich und trägt zur schnellen Genesung bei.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen der Gastroskopie zählen die radiologische Diagnostik (z.B. Bariumkontrastmittelstudien) und nicht-invasive Tests (z.B. Atemtests für Helicobacter pylori). Diese Alternativen bieten jedoch nicht die gleiche diagnostische Genauigkeit und therapeutische Möglichkeiten wie die Gastroskopie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die jüngste Forschung konzentriert sich auf die Verbesserung der Bildgebungstechnologien und die Entwicklung neuer endoskopischer Techniken, wie die optische Kohärenztomographie und die konfokale Laserendoskopie.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten minimalinvasivere Techniken und verbesserte diagnostische Genauigkeit bieten. Auch die Integration von Künstlicher Intelligenz zur automatischen Erkennung von Pathologien wird erforscht.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Gastroskopie ist ein unverzichtbares Verfahren in der Gastroenterologie, das eine direkte Visualisierung und Intervention im oberen Gastrointestinaltrakt ermöglicht. Es bietet zahlreiche diagnostische und therapeutische Vorteile bei geringen Risiken.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die Gastroskopie hat eine herausragende Bedeutung für die frühzeitige Diagnose und Behandlung von Erkrankungen des oberen Verdauungstrakts und ist ein wesentliches Instrument für das effektive Patientenmanagement in der modernen Medizin.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 152
+      {
+        id: 152,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Koloskopie dazu dient, den Dickdarm auf Auffälligkeiten wie Polypen, Tumore oder Entzündungen zu untersuchen. Das Hauptziel ist die Früherkennung und Prävention von Darmkrebs.",
+            third:
+              "„Wir führen diese Untersuchung durch, um sicherzustellen, dass sich keine krankhaften Veränderungen in Ihrem Darm befinden.“",
+            fourth:
+              "„Das Ziel der Koloskopie ist es, mögliche Polypen oder Tumore frühzeitig zu erkennen und gegebenenfalls zu entfernen.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Informieren Sie den Patienten über den Ablauf der Koloskopie. Beschreiben Sie, wie das Endoskop eingeführt wird und der Darm visuell untersucht wird. Erklären Sie, dass während der Untersuchung auch Gewebeproben entnommen.",
+            third:
+              "„Das Endoskop wird vorsichtig durch den Anus in den Darm eingeführt und langsam vorgeschoben, während wir den Darm auf einem Monitor betrachten.“",
+            fourth:
+              "„Während der Untersuchung können wir kleine Gewebeproben entnehmen oder Polypen entfernen, falls wir welche finden.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erklären Sie, dass der Patient eine spezielle Diät einhalten und Abführmittel einnehmen muss, um den Darm zu reinigen. Dies ist notwendig, um eine klare Sicht während der Untersuchung zu gewährleisten.",
+            third:
+              "„Bitte halten Sie sich zwei Tage vor der Untersuchung an eine spezielle Diät und nehmen Sie die Abführmittel wie verschrieben ein.“",
+            fourth:
+              "„Es ist wichtig, dass Ihr Darm vollständig gereinigt ist, damit wir eine klare Sicht haben und keine Veränderungen übersehen.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie mögliche Risiken wie Blutungen, Perforationen des Darms, Infektionen und Reaktionen auf die Sedierung. Stellen Sie klar, dass diese Komplikationen selten sind.",
+            third:
+              "„Obwohl die Koloskopie im Allgemeinen sicher ist, besteht ein geringes Risiko für Blutungen oder Darmverletzungen.“",
+            fourth:
+              "„Seltene Komplikationen können Infektionen oder Reaktionen auf die Beruhigungsmittel sein, die wir Ihnen geben.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie die Vorteile der Koloskopie, wie die genaue Diagnose und die Möglichkeit, Polypen direkt zu entfernen und somit das Risiko von Darmkrebs zu reduzieren.",
+            third:
+              "„Ein großer Vorteil der Koloskopie ist, dass wir Polypen direkt entfernen können, bevor sie sich zu Krebs entwickeln.“",
+            fourth:
+              "„Die Koloskopie ermöglicht es uns, sehr präzise Diagnosen zu stellen und sofortige Maßnahmen zu ergreifen.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie Alternativen zur Koloskopie wie die virtuelle Koloskopie (CT/MRT), den FIT (fäkaler Immunochemischer Test) und die Sigmoidoskopie.",
+            third:
+              "„Alternativ zur Koloskopie können wir eine virtuelle Koloskopie mit CT oder MRT durchführen.“",
+            fourth:
+              "„Ein weiterer Ansatz wäre der fäkale Immunochemische Test, der Blut im Stuhl nachweist, jedoch weniger detailliert ist.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, welche Patienten möglicherweise keine Koloskopie erhalten sollten, z.B. bei schweren Herzerkrankungen, unkontrollierter Blutgerinnungsstörung oder akuter Divertikulitis.",
+            third:
+              "„Patienten mit schweren Herzerkrankungen oder unkontrollierten Blutgerinnungsstörungen sollten keine Koloskopie durchführen lassen.“",
+            fourth:
+              "„Bei einer akuten Divertikulitis ist das Risiko zu hoch, sodass wir die Koloskopie verschieben müssen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die möglichen Ergebnisse der Koloskopie, wie Polypen, Entzündung oder Tumoren, und die Bedeutung dieser Befunde.",
+            third:
+              "„Sollten wir Polypen finden, werden wir diese entfernen und zur weiteren Untersuchung ins Labor schicken.“",
+            fourth:
+              "„Falls wir entzündliche Veränderungen feststellen, könnte dies auf eine chronische Darmerkrankung hinweisen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, wie wichtig das Einverständnis des Patienten für die Durchführung der Koloskopie ist und dass alle Fragen und Bedenken im Vorfeld geklärt werden sollten.",
+            third:
+              "„Ihr Einverständnis ist entscheidend. Bitte stellen Sie sicher, dass Sie alle Ihre Fragen vor der Untersuchung stellen.“",
+            fourth:
+              "„Es ist wichtig, dass Sie alle Aspekte der Untersuchung verstehen und Ihre Zustimmung geben, bevor wir beginnen.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass vor der Untersuchung ein Einverständnis eingeholt wird, nachdem der Patient umfassend informiert wurde.",
+            third:
+              "„Bevor wir beginnen, werden Sie ein Formular unterschreiben, das Ihr Einverständnis zur Untersuchung bestätigt.“",
+            fourth:
+              "„Das schriftliche Einverständnis stellt sicher, dass Sie über alle Details und möglichen Risiken informiert sind.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Vermeidung von Komplikationen nach der Koloskopie und erklären Sie, was nach der Untersuchung zu erwarten ist.",
+            third:
+              "„Nach der Untersuchung sollten Sie sich ausruhen und viel trinken. Leichte Bauchkrämpfe können normal sein.“",
+            fourth:
+              "„Vermeiden Sie körperliche Anstrengungen für die nächsten 24 Stunden und melden Sie sich bei uns, wenn Sie starke Schmerzen oder Blutungen bemerken.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, wie und wann die Ergebnisse der Koloskopie mit ihm besprochen werden und welche weiteren Schritte möglicherweise erforderlich sind.",
+            third:
+              "„Die Ergebnisse der Koloskopie werden in der Regel innerhalb weniger Tage vorliegen, und wir werden einen Termin zur Besprechung vereinbaren.“",
+            fourth:
+              "„Wenn Biopsien entnommen wurden, kann es etwas länger dauern, aber wir informieren Sie sofort, wenn alle Ergebnisse vorliegen.“",
+          },
+        ],
+      },
+      // 3tab 153
+      {
+        id: 153,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, dass die Koloskopie eine endoskopische Untersuchung des Dickdarms ist, bei der ein flexibles Endoskop verwendet wird, um den Darm auf Auffälligkeiten zu untersuchen und Eingriffe vorzunehmen.",
+            third:
+              "„Die Koloskopie ist ein Verfahren, bei dem wir ein flexibles Endoskop durch den Anus einführen, um den gesamten Dickdarm zu untersuchen.“",
+            fourth:
+              "„Bei der Koloskopie können wir nicht nur diagnostisch tätig werden, sondern auch therapeutische Maßnahmen wie die Entfernung von Polypen durchführen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass die Koloskopie zur Untersuchung von Polypen, Tumoren, entzündlichen Veränderungen und anderen Pathologien im Dickdarm dient. Sie kann auch zur Entnahme von Biopsien und Entfernung von Polypen verwendet werden.",
+            third:
+              "„Mit der Koloskopie können wir Polypen, Tumore, Entzündungen und andere pathologische Veränderungen im Dickdarm feststellen.“",
+            fourth:
+              "„Die Untersuchung ermöglicht es uns, Gewebeproben für die Histologie zu entnehmen und gegebenenfalls Polypen direkt zu entfernen.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie die möglichen Ergebnisse der Koloskopie, einschließlich normaler Befunde, gutartiger Polypen, adenomatöser Polypen, entzündlicher Veränderungen, Divertikel und bösartiger Tumoren.",
+            third:
+              "„Typische Ergebnisse können gutartige Polypen, adenomatöse Polypen, entzündliche Veränderungen oder bösartige Tumore sein.“",
+            fourth:
+              "„Wir können auch normale Befunde oder Divertikel feststellen, die keine unmittelbare Behandlung erfordern.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen für eine Koloskopie, wie Darmkrebsvorsorge, Abklärung von Blut im Stuhl, chronische Bauchschmerzen, unklare Anämie, Veränderungen der Stuhlgewohnheiten.",
+            third:
+              "„Indikationen für eine Koloskopie sind unter anderem die Darmkrebsvorsorge, Blut im Stuhl und chronische Bauchschmerzen.“",
+            fourth:
+              "„Wir führen Koloskopien auch bei Patienten mit unklarer Anämie oder zur Überwachung chronisch entzündlicher Darmerkrankungen durch.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie die Kontraindikationen für eine Koloskopie, wie schwere kardiopulmonale Erkrankungen, unkontrollierte Blutgerinnungsstörungen, akute Divertikulitis und Peritonitis.",
+            third:
+              "„Kontraindikationen umfassen schwere kardiopulmonale Erkrankungen und unkontrollierte Blutgerinnungsstörungen.“",
+            fourth:
+              "„Bei akuter Divertikulitis oder Peritonitis ist die Koloskopie kontraindiziert, um Komplikationen zu vermeiden.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Besprechen Sie die Differenzialdiagnosen, die bei auffälligen Befunden in Betracht gezogen werden müssen, wie Colitis ulcerosa, Morbus Crohn, kolorektale Karzinome, infektiöse Kolitis und ischämische Kolitis.",
+            third:
+              "„Zu den Differenzialdiagnosen bei auffälligen Befunden gehören Colitis ulcerosa, Morbus Crohn und kolorektale Karzinome.“",
+            fourth:
+              "„Wir müssen auch infektiöse Kolitis und ischämische Kolitis in Betracht ziehen, wenn wir entzündliche Veränderungen sehen.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, wie die Ergebnisse der Koloskopie in die Erstellung eines Behandlungsplans einfließen, einschließlich Überwachung, Therapie, endoskopischer Entfernung von Polypen oder chirurgischer Eingriffe bei malignen Befunden.",
+            third:
+              "„Abhängig von den Ergebnissen können wir Überwachungsstrategien, medikamentöse Therapien oder chirurgische Eingriffe planen.“",
+            fourth:
+              "„Bei malignen Befunden wird in der Regel ein interdisziplinäres Team zur Planung der weiteren Therapie hinzugezogen.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen wie Chirurgie, Onkologie, Pathologie und Radiologie bei der Diagnose und Behandlung von Darmkrankheiten.",
+            third:
+              "„Die Zusammenarbeit mit Chirurgie, Onkologie und Pathologie ist entscheidend für die umfassende Behandlung von Darmkrebs.“",
+            fourth:
+              "„Wir arbeiten eng mit der Radiologie zusammen, um präzise Bildgebungen zu erhalten, die unsere Diagnose und Therapieplanung unterstützen.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie Maßnahmen zur Qualitätssicherung in der Koloskopie, wie regelmäßige Schulungen des Personals, Einhaltung von Hygienestandards, Dokumentation von Komplikationen und regelmäßige Überprüfung der Geräte.",
+            third:
+              "„Qualitätssicherung umfasst regelmäßige Schulungen und die Einhaltung strikter Hygienestandards während der Koloskopie.“",
+            fourth:
+              "„Wir dokumentieren alle Komplikationen und überprüfen unsere Geräte regelmäßig, um die Patientensicherheit zu gewährleisten.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Notwendigkeit einer gründlichen Dokumentation der Untersuchungsergebnisse, Nachverfolgung der Patientenbefunde und Planung von Kontrolluntersuchungen oder weiteren diagnostischen Maßnahmen.",
+            third:
+              "„Eine gründliche Dokumentation der Untersuchungsergebnisse ist essenziell für die Nachverfolgung und Planung weiterer Maßnahmen.“",
+            fourth:
+              "„Wir planen Kontrolluntersuchungen basierend auf den initialen Befunden und dokumentieren jeden Schritt im Patientenmanagementsystem.“",
+          },
+        ],
+      },
+      // 4tab 154
+      {
+        id: 154,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "50-jähriger Patient ohne Beschwerden, Routineuntersuchung ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über Blut im Stuhl und unerklärlichen Gewichtsverlust. Keine bekannte Vorgeschichte von Darmkrankheiten.",
+            fourth:
+              "25-jährige Patientin berichtet von chronischen Bauchschmerzen und blutigem Durchfall. Familiengeschichte von Darmerkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Koloskopie zeigt normale Schleimhaut ohne Anzeichen von Polypen, Tumoren oder Entzündungen.",
+            third:
+              "Koloskopie zeigt eine 4 cm große, ulzerierende Masse im distalen Colon. Biopsie bestätigt Adenokarzinom.",
+            fourth:
+              "Koloskopie offenbart multiple entzündliche Ulzera im gesamten Colon, insbesondere im Rektum und Sigma.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer chirurgischen Resektion und anschließender Chemotherapie.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer entzündungshemmenden Therapie.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Bestätigung des gesunden Zustandes des Darms. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines kolorektalen Karzinoms basierend auf Koloskopie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Colitis ulcerosa aufgrund der Koloskopie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Darms. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines kolorektalen Karzinoms basierend auf Koloskopie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Colitis ulcerosa aufgrund der Koloskopie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Darmschleimhaut ohne Auffälligkeiten in allen untersuchten Abschnitten.",
+            third:
+              "Koloskopie-Bilder zeigen eine deutlich abgegrenzte, ulzerierende Masse im distalen Colon.",
+            fourth:
+              "Koloskopie-Bilder zeigen multiple entzündliche Ulzera und Schleimhautveränderungen im gesamten Colon.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, regelmäßige gesundheitliche Überprüfungen beizubehalten, um die Gesundheit des Darms zu sichern.",
+            third:
+              "Es ist zu empfehlen, dass der Patient einer chirurgischen Resektion unterzogen wird, gefolgt von einer Chemotherapie. Regelmäßige Nachsorgeuntersuchungen sind erforderlich, um den Krankheitsverlauf zu überwachen.",
+            fourth:
+              "Es ist zu empfehlen, eine entzündungshemmende Therapie zu beginnen und regelmäßige Kontrolluntersuchungen durchzuführen, um den Krankheitsverlauf zu überwachen.",
+          },
+        ],
+      },
+      // 5tab 155
+      {
+        id: 155,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "",
+        text_list: [
+          {
+            bold: "Kolonoskop :",
+            other:
+              "Das Kolonoskop ist ein flexibler, schlauchförmiger Apparat, der mit einer Lichtquelle und einer Kamera ausgestattet ist. Es wird durch den Anus in den Dickdarm eingeführt und ermöglicht die visuelle Untersuchung der Darmschleimhaut.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Die Lichtquelle ist in das Kolonoskop integriert und beleuchtet den Darm während der Untersuchung, um eine klare Sicht auf die Darmschleimhaut zu gewährleisten.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Die Kamera befindet sich an der Spitze des Kolonoskops und überträgt Echtzeitbilder der Darmschleimhaut auf einen Monitor. Diese Bilder ermöglichen es dem Arzt, eventuelle Anomalien zu erkennen und zu dokumentieren.",
+          },
+          {
+            bold: "Insufflationssystem :",
+            other:
+              "Das Insufflationssystem pumpt Luft oder CO2 in den Darm, um ihn aufzublähen und die Sichtbarkeit der Darmschleimhaut zu verbessern. Dies erleichtert die Navigation und Untersuchung des Kolonoskops durch den Darm.",
+          },
+          {
+            bold: "Absaugung und Spülung :",
+            other:
+              "Das Kolonoskop ist mit Kanälen ausgestattet, die eine Absaugung von Flüssigkeiten und eine Spülung mit Wasser ermöglichen. Dies hilft, die Sicht während der Untersuchung zu klären und Kotreste zu entfernen.",
+          },
+          {
+            bold: "Biopsiekanal :",
+            other:
+              "Der Biopsiekanal ermöglicht das Einführen von Instrumenten zur Entnahme von Gewebeproben (Biopsien) oder zur Entfernung von Polypen während der Untersuchung.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Der Monitor zeigt die Echtzeitbilder der Kamera an, die durch das Kolonoskop übertragen werden. Der Arzt kann die Bilder vergrößern, um detaillierte Untersuchungen durchzuführen.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Die Steuerkonsole ermöglicht dem Arzt, das Kolonoskop zu steuern, die Kamera zu bewegen, Luft oder CO2 zu insufflieren und Spülungen durchzuführen. Sie enthält auch Bedienelemente zur Aufnahme von Bildern oder Videos.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Der Patiententisch ist motorisiert und kann in verschiedene Positionen gebracht werden, um dem Arzt den besten Zugang zum Anus und dem Dickdarm des Patienten zu ermöglichen. Der Patient liegt während der Untersuchung auf diesem Tisch.",
+          },
+          {
+            bold: "Sedierungs- und Überwachungssystem :",
+            other:
+              "Während der Koloskopie wird häufig eine Sedierung verabreicht, um dem Patienten zu helfen, sich zu entspannen und mögliche Beschwerden zu minimieren. Überwachungssysteme zur Kontrolle der Vitalzeichen des Patienten (z.B. Herzfrequenz, Blutdruck, Sauerstoffsättigung) sind während der Untersuchung unerlässlich.",
+          },
+          {
+            bold: "Dokumentationssystem :",
+            other:
+              "Moderne Koloskopie-Geräte sind mit einem System zur Aufzeichnung und Dokumentation der Untersuchungsergebnisse ausgestattet. Dies umfasst die Speicherung von Bildern, Videos und Berichten für die spätere Analyse und Verlaufskontrolle.",
+          },
+          {
+            bold: "CO2-Insufflator :",
+            other:
+              "Einige moderne Koloskopie-Einrichtungen verwenden CO2 anstelle von Luft zur Aufblähung des Darms, da CO2 schneller vom Körper absorbiert wird und weniger Beschwerden nach der Untersuchung verursacht.",
+          },
+        ],
+      },
+      // 6tab 156
+      {
+        id: 156,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text_list: [
+          {
+            bold: "Koloskopie :",
+            other:
+              "Endoskopische Untersuchung des Dickdarms zur Diagnose und Behandlung von Darmerkrankungen.",
+          },
+          {
+            bold: "Kolonoskop :",
+            other:
+              "Flexibles, schlauchförmiges Instrument mit Kamera und Lichtquelle zur visuellen Inspektion des Darms.",
+          },
+          {
+            bold: "Biopsie :",
+            other:
+              "Entnahme einer Gewebeprobe zur histologischen Untersuchung.",
+          },
+          {
+            bold: "Polypektomie :",
+            other:
+              "Entfernung von Polypen aus dem Darm während der Koloskopie.",
+          },
+          {
+            bold: "Insufflation :",
+            other:
+              "Einblasen von Luft oder CO2 in den Darm zur besseren Sichtbarkeit der Schleimhaut.",
+          },
+          {
+            bold: "Sedierung :",
+            other:
+              "Verabreichung von Beruhigungsmitteln zur Minimierung von Unbehagen während der Untersuchung.",
+          },
+          {
+            bold: "Darmschleimhaut :",
+            other:
+              "Die innere Auskleidung des Darms, die während der Koloskopie untersucht wird.",
+          },
+          {
+            bold: "Divertikel :",
+            other:
+              "Ausstülpungen der Darmschleimhaut, die während der Koloskopie erkannt werden können.",
+          },
+          {
+            bold: "Adenom :",
+            other:
+              "Gutartiger Tumor, der im Darm gefunden und entfernt werden kann.",
+          },
+          {
+            bold: "Karzinom :",
+            other: "Bösartiger Tumor, der im Darm diagnostiziert werden kann.",
+          },
+          {
+            bold: "Colitis ulcerosa :",
+            other:
+              "Chronisch entzündliche Darmerkrankung, die während der Koloskopie diagnostiziert wird.",
+          },
+          {
+            bold: "Morbus Crohn :",
+            other:
+              "Chronisch entzündliche Darmerkrankung, die den gesamten Verdauungstrakt betreffen kann.",
+          },
+          {
+            bold: "Darmperforation :",
+            other:
+              "Durchbruch der Darmwand, eine seltene aber schwerwiegende Komplikation der Koloskopie.",
+          },
+          {
+            bold: "Darmreinigung :",
+            other:
+              "Vorbereitung des Darms durch spezielle Diät und Abführmittel vor der Koloskopie.",
+          },
+          {
+            bold: "Rücksprache :",
+            other:
+              "Kommunikation mit anderen Fachärzten über die Befunde und weitere Behandlungsschritte.",
+          },
+          {
+            bold: "Endoskopische Resektion :",
+            other: "Entfernung von Gewebe durch endoskopische Techniken.",
+          },
+          {
+            bold: "Nachsorge :",
+            other:
+              "Überwachung und Behandlung des Patienten nach der Koloskopie.",
+          },
+          {
+            bold: "CT-Koloskopie :",
+            other:
+              "Alternative bildgebende Untersuchung zur Darstellung des Darms mittels Computertomographie.",
+          },
+          {
+            bold: "Screening :",
+            other: "Vorsorgeuntersuchung zur Früherkennung von Darmkrebs.",
+          },
+          {
+            bold: "Pathologie :",
+            other:
+              "Untersuchung der entnommenen Gewebeproben zur Bestimmung der Art der Erkrankung.",
+          },
+          {
+            bold: "Einverständniserklärung :",
+            other:
+              "Schriftliche Zustimmung des Patienten zur Durchführung der Koloskopie.",
+          },
+          {
+            bold: "Patientenvorbereitung :",
+            other:
+              "Aufklärung und Vorbereitung des Patienten vor der Untersuchung.",
+          },
+          {
+            bold: "Therapeutische Koloskopie :",
+            other:
+              "Durchführung von Behandlungsmaßnahmen während der Koloskopie.",
+          },
+          {
+            bold: "Komplikationsmanagement :",
+            other:
+              "Umgang mit möglichen Komplikationen während und nach der Koloskopie.",
+          },
+          {
+            bold: "Follow-up :",
+            other:
+              "Nachkontrolle zur Überwachung des Behandlungserfolgs und frühzeitigen Erkennung von Rezidiven.",
+          },
+        ],
+      },
+      // 7tab 157
+      {
+        id: 157,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 158
+      {
+        id: 158,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1_LmuIoLyEXR2YtFS1FtCxw9c9lXQEP7a/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 16
 ];
