@@ -16,7 +16,7 @@ export const exam_categories = [
   {
     id: 3,
     title: "Endoskopische Verfahren",
-    show_before_id: 22,
+    show_before_id: 15,
   },
   // Тут далі вставляй нові категорії по прикладу попередніх.
 ];
@@ -8130,7 +8130,7 @@ export const parentTabs = [
   // end of parent tab 12
   // start of parent tab 13 Langzeit EKG
   {
-    id: 12,
+    id: 13,
     title: "Langzeit-EKG",
     checked: false,
     childTabs: [
@@ -8772,7 +8772,7 @@ export const parentTabs = [
       },
       // 7tab 117
       {
-        id: 109,
+        id: 117,
         title: "Links",
         text: "",
         text_list: [
@@ -8824,16 +8824,16 @@ export const parentTabs = [
       },
       // 8tab 118
       {
-        id: 110,
+        id: 118,
         title: "PDF",
         link: "https://drive.google.com/file/d/1eIQwPaAom8VCzIEneFSngyR395IEg8E7/view?usp=share_link",
       },
     ],
   },
-  // end of parent tab 12
-  // start of parent tab 13 Herzkatheteruntersuchung
+  // end of parent tab 13
+  // start of parent tab 14 Herzkatheteruntersuchung
   {
-    id: 13,
+    id: 14,
     title: "Herzkatheteruntersuchung",
     checked: false,
     childTabs: [
@@ -9563,6 +9563,1402 @@ export const parentTabs = [
     ],
   },
   // Endoskopischer Verfahren
+  // start of parent tab 15 Arthroskopie
+  {
+    id: 15,
+    title: "Arthroskopie",
+    checked: false,
+    childTabs: [
+      // 1tab 127
+      {
+        id: 127,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das primäre Ziel der Arthroskopie besteht darin, Erkrankungen und Verletzungen von Gelenken diagnostisch zu erfassen und gegebenenfalls therapeutische Maßnahmen direkt durchzuführen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Arthroskopie wird häufig bei Gelenkerkrankungen wie Meniskusschäden, Kreuzbandrissen und Knorpelschäden eingesetzt. Sie ist besonders relevant in der Orthopädie und Unfallchirurgie und bietet minimalinvasive Möglichkeiten zur Diagnose und Therapie.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Arthroskopie basiert auf der Einführung eines Arthroskops, ein spezielles Endoskop, in das betroffene Gelenk. Dies ermöglicht eine direkte visuelle Beurteilung des Gelenkinneren.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Ein Arthroskop besteht aus einer Lichtquelle und einer Kamera, die Bilder in Echtzeit auf einen Monitor überträgt. Es werden kleine Hautschnitte gemacht, durch die das Arthroskop und die erforderlichen chirurgischen Instrumente eingeführt werden.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der arthroskopischen Bilder erfolgt in Echtzeit. Der Chirurg kann anhand der visuellen Befunde Entscheidungen über die weitere Therapie treffen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen Meniskusrisse, Knorpelschäden, freie Gelenkkörper und Entzündungen der Gelenkinnenhaut. Diese Befunde können sofort behandelt oder für eine spätere Therapie dokumentiert werden.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Arthroskopie bietet zahlreiche Vorteile, die sie zu einem bevorzugten Verfahren in der Diagnose und Behandlung von Gelenkerkrankungen machen. Einer der größten Vorteile ist die Minimalinvasivität der Methode. Durch die Verwendung kleiner Hautschnitte werden die Weichteile und die umliegenden Strukturen des Gelenks weitgehend geschont, was zu einer deutlich kürzeren Erholungszeit für den Patienten führt. Zudem sind die postoperativen Schmerzen in der Regel geringer als bei offenen chirurgischen Eingriffen. Ein weiterer wesentlicher Vorteil ist die Möglichkeit, diagnostische und therapeutische Maßnahmen in einem einzigen Eingriff zu kombinieren. Dies spart nicht nur Zeit und Kosten, sondern minimiert auch die Belastung für den Patienten.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Trotz ihrer vielen Vorteile ist die Arthroskopie nicht ohne Nachteile. Einer der Hauptnachteile ist die technische Komplexität des Verfahrens. Es erfordert eine erhebliche Erfahrung und Geschicklichkeit seitens des Chirurgen, um präzise und effektive Ergebnisse zu erzielen. Zudem können nicht alle Gelenkprobleme durch Arthroskopie behandelt werden. In einigen Fällen ist ein offener chirurgischer Eingriff notwendig, um umfassendere Reparaturen oder Rekonstruktionen durchzuführen. Auch die Anschaffung und Wartung der speziellen arthroskopischen Ausrüstung kann kostenintensiv sein und erfordert regelmäßige Schulungen des medizinischen Personals.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Wie bei jedem chirurgischen Eingriff sind auch bei der Arthroskopie Risiken vorhanden. Zu den häufigsten Risiken zählen Infektionen, die trotz steriler Arbeitsweise auftreten können. Blutungen sind ein weiteres mögliches Risiko, insbesondere wenn Blutgefäße im Bereich des Gelenks verletzt werden. Es besteht auch die Gefahr, dass während des Eingriffs umliegende Gelenkstrukturen beschädigt werden. Darüber hinaus gibt es die allgemeinen Anästhesierisiken, die von allergischen Reaktionen bis hin zu Komplikationen bei der Atemwegssicherung reichen können. Auch wenn diese Risiken im Vergleich zu offenen chirurgischen Eingriffen geringer sind, müssen sie dennoch bei der Planung und Durchführung einer Arthroskopie berücksichtigt werden.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Arthroskopie spielt eine entscheidende Rolle in der Diagnose und Behandlung von Gelenkerkrankungen. Sie ermöglicht eine präzise Beurteilung und gezielte Therapie.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die minimalinvasive Natur der Arthroskopie kann das Patientenmanagement verbessert werden, indem die Erholungszeiten verkürzt und postoperative Komplikationen minimiert werden.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur Arthroskopie zählen bildgebende Verfahren wie MRT und CT, die jedoch nur diagnostisch und nicht therapeutisch eingesetzt werden können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der technischen Ausrüstung und die Entwicklung neuer minimalinvasiver Techniken.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von robotergestützten Systemen und die Weiterentwicklung biologischer Therapien zur Gelenkreparatur.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Arthroskopie ist ein essenzielles Verfahren in der Orthopädie und Unfallchirurgie, das eine präzise Diagnose und Behandlung von Gelenkerkrankungen ermöglicht.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre minimalinvasive Natur und die Möglichkeit, diagnostische und therapeutische Maßnahmen zu kombinieren, machen die Arthroskopie zu einem unverzichtbaren Werkzeug im modernen medizinischen Alltag.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 128
+      {
+        id: 128,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der Arthroskopie darin besteht, das betroffene Gelenk zu untersuchen und mögliche Schäden oder Erkrankungen zu diagnostizieren und zu behandeln.",
+            third:
+              "„Wir führen die Arthroskopie durch, um genau zu sehen, was in Ihrem Knie los ist und ob es einen Schaden gibt, den wir sofort behandeln können.“",
+            fourth:
+              "„Mit der Arthroskopie können wir die genaue Ursache Ihrer Schulterbeschwerden feststellen und eventuell direkt während des Eingriffs behandeln.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den genauen Ablauf der Arthroskopie, einschließlich der Einführung des Arthroskops durch kleine Hautschnitte, der Untersuchung des Gelenks und der Durchführung therapeutischer Maßnahmen.",
+            third:
+              "„Während der Arthroskopie machen wir kleine Schnitte um das Knie und führen das Arthroskop ein, um das Gelenk von innen zu betrachten und ggf. zu behandeln.“",
+            fourth:
+              "„Wir werden durch kleine Einschnitte an Ihrer Schulter das Arthroskop einführen. Dadurch können wir die Gelenkstrukturen genau inspizieren und nötigenfalls behandeln.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über die notwendigen Vorbereitungen, wie z. B. das Fasten vor dem Eingriff, die Einnahme oder das Absetzen bestimmter Medikamente.",
+            third:
+              "„Bitte fasten Sie ab Mitternacht vor dem Eingriff und informieren Sie uns über alle Medikamente, die Sie einnehmen.“",
+            fourth:
+              "„Vor der Arthroskopie sollten Sie ab 6 Uhr morgens nichts mehr essen oder trinken. Bringen Sie uns eine Liste Ihrer aktuellen Medikamente mit.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie die möglichen Risiken der Arthroskopie, einschließlich Infektionen, Blutungen, Verletzungen von Gelenkstrukturen und Anästhesierisiken.",
+            third:
+              "„Zu den Risiken gehören Infektionen, Blutungen und die Möglichkeit, dass Gelenkstrukturen verletzt werden.“",
+            fourth:
+              "„Es gibt ein geringes Risiko von Infektionen und Blutungen, und es besteht die Möglichkeit, dass das Gelenk während des Eingriffs verletzt wird.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie die Vorteile des Verfahrens, wie die minimalinvasive Natur, die kürzere Erholungszeit, geringere postoperative Schmerzen und die Möglichkeit, Diagnose und Therapie in einem Eingriff zu kombinieren.",
+            third:
+              "„Der Vorteil der Arthroskopie ist, dass sie minimalinvasiv ist, was zu einer schnelleren Genesung und weniger Schmerzen führt.“",
+            fourth:
+              "„Ein großer Vorteil dieses Verfahrens ist, dass wir es minimalinvasiv durchführen können, was Ihre Erholungszeit verkürzt und postoperative Schmerzen reduziert.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie alternative Diagnose- und Behandlungsmethoden, wie z. B. MRT, CT oder offene chirurgische Eingriffe, und erläutern Sie deren Vor- und Nachteile.",
+            third:
+              "„Als Alternative könnten wir ein MRT machen, aber das zeigt nur Bilder und keine Möglichkeit zur direkten Behandlung.“",
+            fourth:
+              "„Ein offener chirurgischer Eingriff wäre eine Alternative, ist jedoch invasiver und mit längerer Erholungszeit verbunden.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie mögliche Kontraindikationen, bei denen eine Arthroskopie nicht durchgeführt werden sollte, wie z. B. schwere Infektionen oder bestimmte gesundheitliche Vorbedingungen.",
+            third:
+              "„Bei akuten Infektionen im Gelenkbereich oder schwerwiegenden Herz-Kreislauf-Erkrankungen sollten wir die Arthroskopie nicht durchführen.“",
+            fourth:
+              "„Wenn Sie unter schwerwiegenden systemischen Infektionen oder Blutgerinnungsstörungen leiden, ist die Arthroskopie nicht zu empfehlen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die möglichen Ergebnisse der Arthroskopie, einschließlich der Meniskusrissen, Knorpelschäden oder Entzündungen.",
+            third:
+              "„Mögliche Ergebnisse können Meniskusrisse oder Knorpelschäden sein, die wir während des Eingriffs behandeln können.“",
+            fourth:
+              "„Wir könnten Entzündungen oder freie Gelenkkörper finden, die dann entfernt oder behandelt werden.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Bedeutung des informierten Einverständnisses des Patienten vor dem Eingriff, um sicherzustellen, dass dieser über alle Aspekte und Risiken aufgeklärt ist.",
+            third:
+              "„Es ist sehr wichtig, dass Sie Ihr Einverständnis geben, nachdem Sie alle Informationen über den Eingriff und die möglichen Risiken erhalten haben.“",
+            fourth:
+              "„Ihr schriftliches Einverständnis ist notwendig, damit wir sicherstellen können, dass Sie umfassend informiert wurden und dem Eingriff zustimmen.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie den Prozess des Einholens des Einverständnisses, einschließlich der Bereitstellung detaillierter Informationen und der Beantwortung aller Fragen des Patienten.",
+            third:
+              "„Wir werden Ihnen alle Details des Eingriffs erklären und Ihre Fragen beantworten, bevor Sie Ihr Einverständnis geben.“",
+            fourth:
+              "„Vor dem Eingriff erhalten Sie ein Formular, das wir gemeinsam durchgehen, um sicherzustellen, dass alle Ihre Fragen beantwortet wurden.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Nachsorge, wie z. B. Verhalten nach dem Eingriff, mögliche Symptome, die beobachtet werden sollten, und Nachkontrolltermine.",
+            third:
+              "„Nach der Arthroskopie sollten Sie das betroffene Gelenk schonen und auf Anzeichen einer Infektion achten.“",
+            fourth:
+              "„Wir vereinbaren einen Nachsorgetermin, um den Heilungsverlauf zu überprüfen und eventuelle Fragen zu klären.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, wann und wie er die Ergebnisse der Arthroskopie erhalten wird und wie diese Ergebnisse seine weitere Behandlung beeinflussen können.",
+            third:
+              "„Die Ergebnisse der Arthroskopie besprechen wir in der Nachsorgeuntersuchung in etwa einer Woche.“",
+            fourth:
+              "„Wir informieren Sie direkt nach dem Eingriff über die ersten Ergebnisse, und detaillierte Informationen erhalten Sie beim nächsten Termin.“",
+          },
+        ],
+      },
+      // 3tab 129
+      {
+        id: 129,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie kurz die Natur der Untersuchung, in diesem Fall die Arthroskopie, als minimalinvasives Verfahren zur Untersuchung und Behandlung von Gelenken.",
+            third:
+              "„Die Arthroskopie ist ein minimalinvasives Verfahren, bei dem wir mithilfe eines Arthroskops das Innere eines Gelenks untersuchen.“",
+            fourth:
+              "„Bei der Arthroskopie führen wir eine kleine Kamera in das Gelenk ein, um direkt visuell Diagnosen zu stellen und Behandlungen durchzuführen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Besprechen Sie die spezifischen Gelenkstrukturen, die durch die Arthroskopie sichtbar gemacht werden können, wie z. B. Knorpel, Menisken, Bänder und die Gelenkinnenhaut.",
+            third:
+              "„Mit der Arthroskopie können wir Strukturen wie den Knorpel, die Menisken, Bänder und die Gelenkinnenhaut genau untersuchen.“",
+            fourth:
+              "„Wir nutzen die Arthroskopie, um Schäden an den Bändern, Knorpelrisse oder Meniskusverletzungen direkt zu visualisieren und zu behandeln.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erklären Sie die möglichen diagnostischen Ergebnisse, die durch die Arthroskopie gewonnen werden können, und wie diese die weitere Behandlung beeinflussen.",
+            third:
+              "„Die Arthroskopie kann Risse im Meniskus, Knorpelschäden oder freie Gelenkkörper aufzeigen, die wir dann sofort behandeln können.“",
+            fourth:
+              "„Durch die Arthroskopie erhalten wir genaue Informationen über das Ausmaß von Gelenkschäden, was uns hilft, den besten Behandlungsplan zu entwickeln.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Hauptindikationen für die Durchführung einer Arthroskopie, z. B. anhaltende Gelenkschmerzen, Schwellungen oder mechanische Blockaden im Gelenk.",
+            third:
+              "„Hauptindikationen sind anhaltende Gelenkschmerzen, Schwellungen und mechanische Blockaden, die durch Bildgebung nicht klar diagnostiziert werden können.“",
+            fourth:
+              "„Wir führen die Arthroskopie durch bei Verdacht auf Meniskusschäden, Kreuzbandverletzungen oder bei unklaren Gelenkbeschwerden.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie die Kontraindikationen, bei denen eine Arthroskopie nicht empfohlen wird, wie akute Infektionen oder schwerwiegende systemische Erkrankungen.",
+            third:
+              "„Kontraindikationen umfassen akute Infektionen im Gelenkbereich und schwerwiegende systemische Erkrankungen, die das Risiko erhöhen.“",
+            fourth:
+              "„Patienten mit schwerwiegenden Blutgerinnungsstörungen oder akuten Hautinfektionen im Bereich des betroffenen Gelenks sind keine guten Kandidaten für eine Arthroskopie.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die in Betracht gezogen werden sollten, wenn die Symptome des Patienten unklar sind.",
+            third:
+              "„Differenzialdiagnosen umfassen rheumatoide Arthritis, Gicht und infektiöse Arthritis, die ähnliche Symptome verursachen können.“",
+            fourth:
+              "„Bei Gelenkschmerzen müssen wir auch an Bursitis, Tendinitis und Osteoarthritis denken, die ebenfalls ähnliche klinische Bilder zeigen.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse der Arthroskopie in die Entwicklung von Behandlungsplänen einfließen und welche therapeutischen Optionen in Betracht gezogen werden.",
+            third:
+              "„Basierend auf den arthroskopischen Befunden können wir gezielt Behandlungen wie Meniskusresektionen oder Knorpelglättungen planen.“",
+            fourth:
+              "„Die Ergebnisse der Arthroskopie helfen uns, einen individuellen Behandlungsplan zu erstellen, der konservative oder chirurgische Optionen umfassen kann.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erklären Sie die Bedeutung der Zusammenarbeit mit anderen Fachdisziplinen, wie Physiotherapie und Anästhesiologie, im Kontext der Arthroskopie.",
+            third:
+              "„Eine enge Zusammenarbeit mit der Physiotherapie ist wichtig, um die postoperative Rehabilitation und die Wiederherstellung der Gelenkfunktion zu optimieren.“",
+            fourth:
+              "„Wir arbeiten eng mit der Anästhesiologie zusammen, um eine sichere Narkose zu gewährleisten und postoperative Schmerzen effektiv zu managen.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Diskutieren Sie Maßnahmen zur Sicherstellung der Qualität und Sicherheit bei der Durchführung von Arthroskopien, einschließlich Sterilitätsprotokollen und Schulungen.",
+            third:
+              "„Wir stellen sicher, dass alle Geräte sterilisiert und regelmäßig gewartet werden, um Infektionsrisiken zu minimieren.“",
+            fourth:
+              "„Durch kontinuierliche Schulungen und die Einhaltung von Qualitätsstandards können wir die Sicherheit und Effektivität der Arthroskopien gewährleisten.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern Sie die wichtigen Aspekte der Dokumentation der Untersuchungsergebnisse und die Planung der Nachsorge sowie die Bedeutung der umfassenden Patientenakte.",
+            third:
+              "„Eine gründliche Dokumentation der arthroskopischen Befunde und durchgeführten Maßnahmen ist entscheidend für die Nachsorge und weitere Therapieentscheidungen.“",
+            fourth:
+              "„Nach der Arthroskopie planen wir regelmäßige Nachuntersuchungen und dokumentieren den Heilungsverlauf detailliert, um den Behandlungserfolg zu überwachen.“",
+          },
+        ],
+      },
+      // 4tab 130
+      {
+        id: 130,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Knieschmerzen und Schwellungen nach einem Sportunfall.",
+            fourth:
+              "30-jährige Patientin berichtet von Instabilität und Schmerzen im Knie nach einem Sturz beim Skifahren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Arthroskopie des Knies zeigt keine Anomalien, keine Anzeichen pathologischer Veränderungen.",
+            third:
+              "Arthroskopie zeigt einen deutlichen Riss im medialen Meniskus.",
+            fourth:
+              "Arthroskopie offenbart einen vollständigen Riss des vorderen Kreuzbandes.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das arthroskopische Ergebnis bestätigt das Fehlen von Schäden oder Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen Meniskusriss hin, der die Beschwerden des Patienten erklärt.",
+            fourth:
+              "Die Diagnose eines Kreuzbandrisses korreliert mit der berichteten Instabilität und den Schmerzen der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer arthroskopischen Meniskusresektion oder -naht.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer Rekonstruktionsoperation des Kreuzbandes.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Knies. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Meniskusrisses basierend auf arthroskopischen Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose eines Kreuzbandrisses aufgrund der arthroskopischen Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Darstellung",
+            second: "Homogene, normale Gelenkstrukturen ohne Auffälligkeiten.",
+            third:
+              "Arthroskopische Aufnahmen zeigen einen klaren, längs verlaufenden Riss im medialen Meniskus.",
+            fourth:
+              "Arthroskopische Bilder zeigen den vollständigen Riss des vorderen Kreuzbandes mit sichtbarer Instabilität des Gelenks.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, die Gesundheit des Patienten durch regelmäßige Kontrollen zu überwachen, um sicherzustellen, dass keine zukünftigen Probleme auftreten.",
+            third:
+              "Wir empfehlen eine arthroskopische Meniskusresektion oder -naht, um die Beschwerden zu lindern und die Funktion des Knies wiederherzustellen.",
+            fourth:
+              "Es ist zu empfehlen, eine operative Rekonstruktion des Kreuzbandes durchzuführen, gefolgt von einem gezielten Rehabilitationsprogramm.",
+          },
+        ],
+      },
+      // 5tab 131
+      {
+        id: 131,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Arthroskopie-Gerät ist ein hochentwickeltes medizinisches Instrument zur Untersuchung und Behandlung von Gelenken. Es ermöglicht minimalinvasive Eingriffe und bietet direkte visuelle Inspektionen der Gelenkstrukturen. Hier sind die wesentlichen Komponenten und Funktionen eines Arthroskopie-Geräts:",
+        text_list: [
+          {
+            bold: "Arthroskop :",
+            other:
+              "Das Arthroskop ist ein dünnes, röhrenförmiges Instrument, das mit einer Lichtquelle und einer Kamera ausgestattet ist. Es wird in das Gelenk eingeführt, um Bilder des Gelenkinneren auf einem Monitor zu übertragen, sodass der Chirurg die Strukturen direkt sehen kann.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Eine starke Lichtquelle, die mit dem Arthroskop verbunden ist. Sie beleuchtet das Innere des Gelenks, um klare und detaillierte Bilder zu ermöglichen.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Eine miniaturisierte Kamera, die am Ende des Arthroskops angebracht ist. Sie überträgt die visuellen Informationen auf einen Monitor, sodass der Chirurg das Gelenk in Echtzeit sehen kann.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Ein hochauflösender Bildschirm. Er zeigt die Bilder, die von der Kamera im Arthroskop erfasst werden, an. Der Chirurg kann das Gelenk detailliert untersuchen und die Operation präzise durchführen.",
+          },
+          {
+            bold: "Flüssigkeitspumpe :",
+            other:
+              "Eine Pumpe, die sterile Flüssigkeit in das Gelenk leitet. Sie spült das Gelenk, um klare Sichtverhältnisse zu schaffen, indem Blut und andere Gewebetrümmer weggespült werden.",
+          },
+          {
+            bold: "Arthroskopische Instrumente :",
+            other:
+              "Verschiedene kleine Instrumente wie Zangen, Scheren und Shaver. Sie werden durch zusätzliche kleine Einschnitte eingeführt, um operative Maßnahmen wie Biopsien, Resektionen und Nahttechniken durchzuführen.",
+          },
+          {
+            bold: "Trokar :",
+            other:
+              "Ein hohler Führungsstab. Er erlaubt das Einführen des Arthroskops und der chirurgischen Instrumente in das Gelenk.",
+          },
+          {
+            bold: "Fluid Management System :",
+            other:
+              "Ein System zur Steuerung des Flüssigkeitsflusses in das und aus dem Gelenk. Es hält den Druck im Gelenkraum konstant und sorgt für eine klare Sicht während der Arthroskopie.",
+          },
+          {
+            bold: "Insufflator :",
+            other:
+              "Ein Gerät, das Luft oder Gas in das Gelenk pumpt. Es dehnt das Gelenk aus, um mehr Platz für die Untersuchung und chirurgische Eingriffe zu schaffen.",
+          },
+        ],
+      },
+      // 6tab 132
+      {
+        id: 132,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text_list: [
+          {
+            bold: "Arthroskopie :",
+            other:
+              "Minimalinvasives Verfahren zur Untersuchung und Behandlung von Gelenken.",
+          },
+          {
+            bold: "Arthroskop :",
+            other:
+              "Instrument, das eine Kamera und eine Lichtquelle enthält, um das Gelenkinnere sichtbar zu machen.",
+          },
+          {
+            bold: "Gelenkspiegelung :",
+            other: "Synonym für Arthroskopie.",
+          },
+          {
+            bold: "Meniskusriss :",
+            other: "Verletzung des Meniskus, häufig im Kniegelenk.",
+          },
+          {
+            bold: "Kreuzbandriss :",
+            other:
+              "Verletzung des vorderen oder hinteren Kreuzbandes im Kniegelenk.",
+          },
+          {
+            bold: "Knorpelschaden :",
+            other: "Schädigung des Knorpelgewebes im Gelenk.",
+          },
+          {
+            bold: "Gelenkinnenhaut :",
+            other:
+              "Synoviale Membran, die das Innere eines Gelenks auskleidet.",
+          },
+          {
+            bold: "Synovitis :",
+            other: "Entzündung der Gelenkinnenhaut.",
+          },
+          {
+            bold: "Freie Gelenkkörper :",
+            other:
+              "Kleine Stücke von Knochen oder Knorpel, die sich im Gelenk bewegen können.",
+          },
+          {
+            bold: "Diagnostische Arthroskopie :",
+            other:
+              "Verfahren zur Untersuchung und Diagnose von Gelenkproblemen.",
+          },
+          {
+            bold: "Therapeutische Arthroskopie :",
+            other: "Verfahren zur Behandlung von Gelenkproblemen.",
+          },
+          {
+            bold: "Resektion :",
+            other: "Entfernung von beschädigtem Gewebe oder Knochen.",
+          },
+          {
+            bold: "Rekonstruktion :",
+            other:
+              "Wiederherstellung von beschädigtem Gewebe oder Strukturen, z.B. Kreuzbandrekonstruktion.",
+          },
+          {
+            bold: "Minimalinvasiv :",
+            other: "Verfahren, das nur kleine Einschnitte erfordert.",
+          },
+          {
+            bold: "Postoperative Nachsorge :",
+            other:
+              "Betreuung und Überwachung nach einem chirurgischen Eingriff.",
+          },
+          {
+            bold: "Rehabilitation :",
+            other:
+              "Maßnahmen zur Wiederherstellung der Funktion und Beweglichkeit des Gelenks nach einer Operation.",
+          },
+          {
+            bold: "Sterilität :",
+            other:
+              "Keimfreiheit, ein wichtiger Aspekt zur Vermeidung von Infektionen während des Eingriffs.",
+          },
+          {
+            bold: "Routinekontrolle :",
+            other:
+              "Regelmäßige Untersuchung ohne spezifischen Verdacht auf eine Erkrankung.",
+          },
+          {
+            bold: "Indikation :",
+            other: "Medizinische Notwendigkeit oder Grund für einen Eingriff.",
+          },
+          {
+            bold: "Kontraindikation :",
+            other:
+              "Umstände oder Bedingungen, bei denen ein bestimmter Eingriff nicht durchgeführt werden sollte.",
+          },
+          {
+            bold: "Differenzialdiagnose :",
+            other:
+              "Abwägen verschiedener Diagnosen, die ähnliche Symptome verursachen können.",
+          },
+          {
+            bold: "Visuelle Befunde :",
+            other:
+              "Bilder und Beobachtungen, die während der Arthroskopie gemacht werden.",
+          },
+          {
+            bold: "MRT (Magnetresonanztomographie) :",
+            other:
+              "Bildgebendes Verfahren zur Darstellung von Weichteilen und Gelenkstrukturen.",
+          },
+          {
+            bold: "Patientenakte :",
+            other:
+              "Dokumentation aller relevanten medizinischen Informationen und Untersuchungsergebnisse des Patienten.",
+          },
+          {
+            bold: "Einverständniserklärung :",
+            other:
+              "Schriftliche Zustimmung des Patienten nach umfassender Aufklärung über den Eingriff und seine Risiken.",
+          },
+        ],
+      },
+      // 7tab 133
+      {
+        id: 109,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 134
+      {
+        id: 118,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1IRSz4kiJegr2ASO9uUSLkVH2QmbnDOYg/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 15
+  // start of parent tab 16 Arthroskopie
+  {
+    id: 16,
+    title: "Gastroskopie ",
+    checked: false,
+    childTabs: [
+      // 1tab 135
+      {
+        id: 135,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Hauptziele der Gastroskopie sind die Diagnose und Beurteilung von Erkrankungen des oberen Verdauungstrakts, wie z.B. Geschwüre, Entzündungen, Blutungen, Tumore und andere pathologische Veränderungen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Gastroskopie ist von entscheidender Bedeutung in der Gastroenterologie, da sie eine direkte Visualisierung und Biopsieentnahme ermöglicht. Sie wird häufig bei Patienten mit Symptomen wie Oberbauchschmerzen, Sodbrennen, Übelkeit, Erbrechen und unklaren Blutungen eingesetzt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Gastroskopie basiert auf der direkten visuellen Inspektion der Schleimhaut des oberen Gastrointestinaltrakts mithilfe eines flexiblen Endoskops. Das Endoskop ist mit einer Lichtquelle und einer Kamera ausgestattet, die Bilder in Echtzeit auf einen Monitor überträgt.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Endoskop wird vorsichtig über den Mund und die Speiseröhre in den Magen und den Zwölffingerdarm eingeführt. Der Patient liegt dabei in der Regel in Seitenlage. Während der Untersuchung können Luft und Wasser über das Endoskop eingebracht werden, um die Sicht zu verbessern und Gewebeproben zu entnehmen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation der Gastroskopieergebnisse erfolgt durch die visuelle Beurteilung der Schleimhaut. Auffällige Bereiche werden genau dokumentiert, und gegebenenfalls werden Gewebeproben zur histologischen Untersuchung entnommen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können entzündliche Veränderungen (Gastritis), Ulzera (Magengeschwüre), Tumore, Varizen, Polypen und Anzeichen von Refluxerkrankungen umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Gastroskopie ermöglicht eine direkte und detaillierte Visualisierung des oberen Gastrointestinaltrakts, eine präzise Diagnosestellung und die Möglichkeit zur sofortigen therapeutischen Intervention (z.B. Blutstillung).",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Das Verfahren kann für den Patienten unangenehm sein und erfordert eine Sedierung. Es besteht ein geringes Risiko für Komplikationen wie Blutungen oder Perforationen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Mögliche Risiken umfassen Infektionen, Blutungen, Perforationen und Nebenwirkungen der Sedierung. Diese Risiken sind jedoch selten und treten bei erfahrenen Anwendern nur in Ausnahmefällen auf.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Gastroskopie spielt eine zentrale Rolle in der Diagnose und Behandlung von Erkrankungen des oberen Verdauungstrakts. Sie ermöglicht nicht nur die Diagnose, sondern auch therapeutische Maßnahmen wie die Entfernung von Polypen oder die Blutstillung.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die Gastroskopie können rasch und gezielt Diagnosen gestellt und Behandlungsstrategien entwickelt werden. Dies verbessert das Patientenmanagement erheblich und trägt zur schnellen Genesung bei.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen der Gastroskopie zählen die radiologische Diagnostik (z.B. Bariumkontrastmittelstudien) und nicht-invasive Tests (z.B. Atemtests für Helicobacter pylori). Diese Alternativen bieten jedoch nicht die gleiche diagnostische Genauigkeit und therapeutische Möglichkeiten wie die Gastroskopie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die jüngste Forschung konzentriert sich auf die Verbesserung der Bildgebungstechnologien und die Entwicklung neuer endoskopischer Techniken, wie die optische Kohärenztomographie und die konfokale Laserendoskopie.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten minimalinvasivere Techniken und verbesserte diagnostische Genauigkeit bieten. Auch die Integration von Künstlicher Intelligenz zur automatischen Erkennung von Pathologien wird erforscht.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Gastroskopie ist ein unverzichtbares Verfahren in der Gastroenterologie, das eine direkte Visualisierung und Intervention im oberen Gastrointestinaltrakt ermöglicht. Es bietet zahlreiche diagnostische und therapeutische Vorteile bei geringen Risiken.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die Gastroskopie hat eine herausragende Bedeutung für die frühzeitige Diagnose und Behandlung von Erkrankungen des oberen Verdauungstrakts und ist ein wesentliches Instrument für das effektive Patientenmanagement in der modernen Medizin.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 136
+      {
+        id: 136,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der Gastroskopie darin besteht, den oberen Verdauungstrakt (Speiseröhre, Magen, Zwölffingerdarm) zu untersuchen und mögliche Krankheiten zu diagnostizieren.",
+            third:
+              "Wir möchten herausfinden, ob Sie ein Magengeschwür oder eine Entzündung der Speiseröhre haben.",
+            fourth:
+              "Diese Untersuchung hilft uns, die Ursache Ihrer anhaltenden Magenschmerzen zu finden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, dass während der Gastroskopie ein flexibles Endoskop über den Mund in den Magen eingeführt wird, um die Schleimhaut zu betrachten und gegebenenfalls Gewebeproben zu entnehmen.",
+            third:
+              "Ein dünnes, flexibles Rohr mit einer Kamera wird durch Ihren Mund in den Magen geführt.",
+            fourth:
+              "Während der Untersuchung können wir kleine Proben der Magenschleimhaut entnehmen, um sie im Labor zu analysieren.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erläutern Sie, dass der Patient nüchtern sein muss (in der Regel mindestens 6-8 Stunden vorher nichts essen oder trinken) und möglicherweise eine Beruhigungsspritze erhält.",
+            third:
+              "Bitte essen und trinken Sie mindestens 6 Stunden vor der Untersuchung nichts.",
+            fourth:
+              "Sie werden eine Beruhigungsspritze bekommen, um die Untersuchung angenehmer zu gestalten.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie die möglichen Risiken, einschließlich Infektionen, Blutungen, Perforationen und Nebenwirkungen der Sedierung, betonen Sie jedoch, dass diese selten sind.",
+            third:
+              "Es besteht ein geringes Risiko für Infektionen oder Blutungen, die jedoch selten sind.",
+            fourth:
+              "In sehr seltenen Fällen kann es zu einer Perforation der Magenwand kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Nennen Sie die Vorteile der Gastroskopie, wie die direkte Visualisierung und Diagnose von Erkrankungen, die Möglichkeit zur sofortigen Behandlung und die Entnahme von Gewebeproben.",
+            third:
+              "Wir können sofort sehen, ob es Probleme gibt, und bei Bedarf sofort Maßnahmen ergreifen.",
+            fourth:
+              "Die Untersuchung ermöglicht es uns, direkt Gewebeproben zu entnehmen, ohne dass ein größerer Eingriff nötig ist.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erklären Sie mögliche Alternativen wie radiologische Untersuchungen (Bariumkontrastmittelstudien) und nicht-invasive Tests (z.B. Atemtests für Helicobacter pylori), die jedoch nicht so genau sind.",
+            third:
+              "Eine Alternative wäre eine Röntgenuntersuchung mit Kontrastmittel, die jedoch weniger genau ist.",
+            fourth:
+              "Es gibt auch Atemtests für bestimmte Infektionen, aber sie liefern nicht so detaillierte Informationen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie mögliche Kontraindikationen, wie schwere Herz- oder Lungenerkrankungen, die das Risiko der Untersuchung erhöhen könnten.",
+            third:
+              "Wenn Sie schwere Herzprobleme haben, könnte die Untersuchung riskanter sein.",
+            fourth:
+              "Bei schweren Lungenerkrankungen kann es ebenfalls zu erhöhten Risiken kommen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass mögliche Ergebnisse der Gastroskopie entzündliche Veränderungen, Geschwüre, Tumore oder andere pathologische Befunde umfassen können.",
+            third:
+              "Wir könnten feststellen, dass Sie eine Magenentzündung oder ein Magengeschwür haben.",
+            fourth:
+              "Es ist möglich, dass wir Anzeichen für einen Tumor finden, der weiter untersucht werden muss.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, wie wichtig es ist, dass der Patient das Verfahren und die damit verbundenen Risiken und Vorteile versteht und sein Einverständnis gibt.",
+            third:
+              "Ihr schriftliches Einverständnis ist wichtig, damit wir sicher sind, dass Sie die Untersuchung und Risiken verstehen.",
+            fourth:
+              "Ohne Ihre Einwilligung können wir die Untersuchung nicht durchführen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erläutern Sie, dass das Einverständnis schriftlich eingeholt wird, nachdem der Patient umfassend über das Verfahren und die möglichen Risiken aufgeklärt wurde.",
+            third:
+              "Wir werden Sie bitten, ein Formular zu unterschreiben, das Ihr Einverständnis dokumentiert.",
+            fourth:
+              "Vor der Untersuchung erklären wir Ihnen alles im Detail und beantworten Ihre Fragen, bevor Sie das Formular unterschreiben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Nachsorge, z.B. dass er sich nach der Sedierung ausruhen sollte und keine schweren Maschinen bedienen darf.",
+            third:
+              "Nach der Untersuchung sollten Sie sich ausruhen und für den Rest des Tages keine Maschinen bedienen.",
+            fourth:
+              "Stellen Sie sicher, dass jemand Sie nach Hause begleitet, da Sie möglicherweise noch benommen von der Sedierung sind.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der Gastroskopie in einem Nachgespräch erläutert werden und bei Bedarf weitere Behandlungsschritte besprochen werden.",
+            third:
+              "Die Ergebnisse besprechen wir in einem Nachgespräch, um die nächsten Schritte zu planen.",
+            fourth:
+              "Die Ergebnisse besprechen wir in einem Nachgespräch, um die nächsten Schritte zu planen.",
+          },
+        ],
+      },
+      // 3tab 137
+      {
+        id: 137,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, dass es sich bei der Gastroskopie um eine endoskopische Untersuchung des oberen Gastrointestinaltrakts handelt, bei der ein flexibles Endoskop zur direkten Visualisierung und Biopsieentnahme eingesetzt wird.",
+            third:
+              "Die Gastroskopie ist eine Methode, bei der ein flexibles Endoskop durch den Mund in den Magen und den Zwölffingerdarm eingeführt wird, um die Schleimhaut zu betrachten und bei Bedarf Biopsien zu entnehmen.",
+            fourth:
+              "Mit der Gastroskopie können wir direkt in den oberen Verdauungstrakt sehen und diagnostische oder therapeutische Maßnahmen ergreifen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass die Gastroskopie zur Diagnose und Beurteilung von Erkrankungen wie Gastritis, Ulzera, Tumoren, Blutungen und Refluxkrankheit verwendet wird.",
+            third:
+              "Mit der Gastroskopie können wir Erkrankungen wie Magengeschwüre, Gastritis und Anzeichen von Reflux diagnostizieren.",
+            fourth:
+              "Diese Untersuchung ist besonders nützlich, um Blutungsquellen zu identifizieren und Tumore im oberen Gastrointestinaltrakt zu erkennen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die potenziellen Befunde, einschließlich normaler Schleimhaut, entzündlicher Veränderungen, Geschwüre, Tumoren, Polypen und anderer pathologischer Veränderungen.",
+            third:
+              "Bei der letzten Gastroskopie fanden wir eine erosive Gastritis und ein kleines Magengeschwür im Antrum.",
+            fourth:
+              "Es wurden multiple Polypen im Magen entdeckt, die biopsiert wurden, um eine maligne Transformation auszuschließen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen für eine Gastroskopie, wie z.B. unklare Oberbauchschmerzen, Dysphagie, anhaltendes Erbrechen, Gewichtsverlust, Verdacht auf Blutungen oder Tumore.",
+            third:
+              "Eine Gastroskopie ist indiziert bei Patienten mit anhaltenden Oberbauchschmerzen und Verdacht auf eine Ulkuskrankheit.",
+            fourth:
+              "Bei anhaltendem Erbrechen und unklarem Gewichtsverlust ist eine Gastroskopie zur Abklärung der Ursache notwendig.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie mögliche Kontraindikationen, wie schwere kardiopulmonale Erkrankungen, unkontrollierte Blutgerinnungsstörungen und instabile Allgemeinzustände.",
+            third:
+              "Bei Patienten mit schweren Herz-Kreislauf-Erkrankungen besteht ein erhöhtes Risiko, weshalb die Indikation streng gestellt werden muss.",
+            fourth:
+              "Patienten mit unkontrollierter Blutgerinnungsstörung sind aufgrund des hohen Blutungsrisikos für eine Gastroskopie nicht geeignet.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die bei den Symptomen des Patienten in Betracht gezogen werden sollten, wie z.B. Refluxösophagitis, peptische Ulzera oder funktionelle Dyspepsie.",
+            third:
+              "Zu den Differenzialdiagnosen gehören neben der Refluxösophagitis auch peptische Ulzera und eine funktionelle Dyspepsie.",
+            fourth:
+              "Es ist wichtig, auch an eine Gallenkolik oder Pankreatitis zu denken, wenn wir die Symptome des Patienten bewerten.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse der Gastroskopie in die Erstellung eines individuellen Behandlungsplans einfließen, einschließlich medikamentöser und chirurgischer Optionen sowie Nachsorge.",
+            third:
+              "Bei Nachweis eines Magengeschwürs wird eine Therapie mit Protonenpumpenhemmern eingeleitet und eine erneute Kontrolle nach 6 Wochen geplant.",
+            fourth:
+              "Falls ein Tumor gefunden wird, wird der Patient an die Onkologie überwiesen und ein interdisziplinäres Behandlungskonzept erstellt.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erörtern Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen, wie z.B. Pathologie (für Biopsieergebnisse), Chirurgie (bei operativen Eingriffen) und Onkologie (bei Tumorbefunden).",
+            third:
+              "Bei auffälligen Befunden aus der Biopsie arbeiten wir eng mit der Pathologie zusammen, um die Diagnose zu bestätigen.",
+            fourth:
+              "Die enge Zusammenarbeit mit der Chirurgie ist essenziell, wenn operative Maßnahmen nach der Diagnosestellung erforderlich sind.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Beschreiben Sie die Maßnahmen zur Qualitätssicherung bei der Durchführung und Auswertung der Gastroskopie, einschließlich Schulung des Personals und regelmäßiger Überprüfung der Endoskopietechniken.",
+            third:
+              "Wir führen regelmäßige Schulungen für das Endoskopiepersonal durch, um sicherzustellen, dass die Verfahren nach den neuesten Standards durchgeführt werden.",
+            fourth:
+              "Die Qualität der Gastroskopien wird durch eine kontinuierliche Überprüfung und Auditierung der Bildqualität und Dokumentation sichergestellt.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Betonen Sie die Wichtigkeit einer detaillierten Dokumentation der Untersuchungsergebnisse und der Patientenaufklärung sowie die Planung der weiteren diagnostischen und therapeutischen Schritte.",
+            third:
+              "Jeder Befund wird detailliert dokumentiert und dem Patienten sowie dem weiterbehandelnden Arzt schriftlich mitgeteilt.",
+            fourth:
+              "Nach der Gastroskopie planen wir ein Follow-up, um sicherzustellen, dass die empfohlene Therapie eingehalten wird und der Heilungsverlauf überwacht wird.",
+          },
+        ],
+      },
+      // 4tab 138
+      {
+        id: 138,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Erster Pathologischer Befund",
+          },
+          {
+            name: "fourth",
+            visualText: "Zweiter Pathologischer Befund",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "50-jähriger Patient klagt über starke Oberbauchschmerzen und Übelkeit. Anamnese mit häufigem Sodbrennen und Rauchen.",
+            fourth:
+              "40-jährige Patientin berichtet von anhaltendem Völlegefühl und Übelkeit. Keine signifikante medizinische Vorgeschichte.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Gastroskopie zeigt eine normale, intakte Magenschleimhaut ohne Anzeichen von Pathologien.",
+            third:
+              "Gastroskopie zeigt ein 1 cm großes Ulkus im Antrum des Magens mit entzündlichen Rändern.",
+            fourth:
+              "Gastroskopie zeigt diffuse Rötung und Schwellung der Magenschleimhaut ohne Ulzerationen.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Gastroskopie unterstützt den Ausschluss gastrointestinaler Erkrankungen.",
+            third:
+              "Der Befund deutet auf ein peptisches Ulkus hin. Die Lokalisation und das Erscheinungsbild passen zu den Symptomen des Patienten.",
+            fourth:
+              "Der Befund ist typisch für eine Gastritis. Die diffuse Rötung korreliert mit den klinischen Symptomen.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer Protonenpumpenhemmer-Therapie und Überwachung auf Heilung.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer antientzündlichen Diät sowie medikamentöser Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Magens. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines peptischen Ulkus basierend auf Gastroskopie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer Gastritis aufgrund der Gastroskopie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Magenschleimhaut ohne Auffälligkeiten in allen Bereichen.",
+            third:
+              "Gastroskopie zeigt ein deutlich abgegrenztes, entzündliches Ulkus im Antrum des Magens.",
+            fourth:
+              "Gastroskopie zeigt eine diffuse Rötung und Schwellung der Magenschleimhaut.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine gesunde Ernährung und regelmäßige Vorsorgeuntersuchungen.",
+            third:
+              "Wir empfehlen die Einleitung einer Therapie mit Protonenpumpenhemmern und eine Kontrolle nach 4-6 Wochen zur Beurteilung der Heilung.",
+            fourth:
+              "Wir empfehlen eine antientzündliche Diät, H2-Rezeptorantagonisten und gegebenenfalls eine Nachuntersuchung.",
+          },
+        ],
+      },
+      // 5tab 139
+      {
+        id: 139,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Ein Arthroskopie-Gerät ist ein hochentwickeltes medizinisches Instrument zur Untersuchung und Behandlung von Gelenken. Es ermöglicht minimalinvasive Eingriffe und bietet direkte visuelle Inspektionen der Gelenkstrukturen. Hier sind die wesentlichen Komponenten und Funktionen eines Arthroskopie-Geräts:",
+        text_list: [
+          {
+            bold: "Endoskop :",
+            other:
+              "Das Endoskop ist ein flexibler, schlauchförmiger Teil des Gastroskopie-Geräts, das durch den Mund des Patienten in den Magen und den Zwölffingerdarm eingeführt wird. Es enthält eine Lichtquelle und eine Kamera, die Bilder der inneren Schleimhaut auf einen Monitor überträgt.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Die Lichtquelle, oft eine LED oder Halogenlampe, befindet sich am Ende des Endoskops und beleuchtet die inneren Organe, um eine klare Sicht zu ermöglichen.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Die Kamera, die sich ebenfalls am Ende des Endoskops befindet, überträgt Echtzeitbilder der inneren Schleimhaut auf einen Monitor, sodass der Arzt die Strukturen genau untersuchen kann.",
+          },
+          {
+            bold: "Spül- und Absaugkanäle :",
+            other:
+              "Das Endoskop enthält Kanäle, durch die Wasser oder Luft eingeleitet werden können, um die Sicht zu verbessern oder Flüssigkeiten abzusaugen. Dies hilft, eine klare Sicht auf die Schleimhaut zu gewährleisten.",
+          },
+          {
+            bold: "Biopsiekanal :",
+            other:
+              "Über diesen Kanal können Instrumente wie Zangen oder Schlingen eingeführt werden, um Gewebeproben (Biopsien) zu entnehmen oder therapeutische Maßnahmen durchzuführen.",
+          },
+          {
+            bold: "Monitore :",
+            other:
+              "Die Monitore zeigen die vom Endoskop übertragenden Bilder in Echtzeit an, sodass der Arzt die Untersuchung visuell verfolgen und dokumentieren kann.",
+          },
+          {
+            bold: "Luft-/Wasserpumpe :",
+            other:
+              "Diese Pumpe liefert Luft oder Wasser durch das Endoskop, um den Magen zu dehnen oder zu spülen und somit eine bessere Sicht und eine genauere Untersuchung zu ermöglichen.",
+          },
+          {
+            bold: "Saugvorrichtung :",
+            other:
+              "Die Saugvorrichtung entfernt Flüssigkeiten und Luft aus dem Magen, um die Sicht zu verbessern und den Komfort des Patienten zu erhöhen.",
+          },
+          {
+            bold: "Prozessoreinheit :",
+            other:
+              "Diese Einheit verarbeitet die von der Kamera aufgenommenen Bilder und stellt sie in hoher Auflösung auf den Monitoren dar. Sie kann auch Bilder speichern und analysieren.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Über die Steuerkonsole kann der Arzt die Funktionen des Endoskops steuern, einschließlich der Beleuchtung, der Bildaufnahme und der Bedienung der Spül- und Absaugvorrichtungen.",
+          },
+          {
+            bold: "Patientenlagerungssystem :",
+            other:
+              "Ein speziell entworfener Tisch oder Liege, auf dem der Patient während der Untersuchung bequem und stabil liegt. Dies ermöglicht eine präzise und sichere Einführung des Endoskops.",
+          },
+          {
+            bold: "Desinfektions- und Aufbereitungssystem :",
+            other:
+              "Nach jeder Untersuchung wird das Endoskop gründlich gereinigt und desinfiziert, um eine Infektionsübertragung zu verhindern. Dies umfasst spezielle Wasch- und Sterilisationsmaschinen.",
+          },
+          {
+            bold: "Kommunikationssystem :",
+            other:
+              "Ein Sprachkommunikationssystem ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu kommunizieren und Anweisungen zu geben.",
+          },
+          {
+            bold: "Bilddokumentationssystem :",
+            other:
+              "Dieses System speichert und dokumentiert die während der Gastroskopie aufgenommenen Bilder und Videos zur späteren Analyse und zur Erstellung von Berichten.",
+          },
+        ],
+      },
+      // 6tab 140
+      {
+        id: 140,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text_list: [
+          {
+            bold: "Gastroskopie :",
+            other:
+              "Endoskopische Untersuchung des oberen Gastrointestinaltrakts (Speiseröhre, Magen, Zwölffingerdarm).",
+          },
+          {
+            bold: "Endoskop :",
+            other:
+              "Flexibles, schlauchförmiges Instrument mit Kamera und Lichtquelle zur Untersuchung des Verdauungstrakts.",
+          },
+          {
+            bold: "Biopsie :",
+            other: "Entnahme von Gewebeproben zur histologischen Untersuchung.",
+          },
+          {
+            bold: "Antrum :",
+            other:
+              "Der untere Teil des Magens, der vor dem Magenausgang liegt.",
+          },
+          {
+            bold: "Gastritis :",
+            other: "Entzündung der Magenschleimhaut.",
+          },
+          {
+            bold: "Ulzera :",
+            other: "Geschwüre, meist im Magen oder Zwölffingerdarm.",
+          },
+          {
+            bold: "Refluxösophagitis :",
+            other: "Entzündung der Speiseröhre durch Rückfluss von Magensäure.",
+          },
+          {
+            bold: "Polypen :",
+            other:
+              "Gutartige Wucherungen der Schleimhaut, die bei der Gastroskopie entdeckt werden können.",
+          },
+          {
+            bold: "Sedierung :",
+            other:
+              "Verabreichung von Beruhigungsmitteln zur Entspannung des Patienten während der Untersuchung.",
+          },
+          {
+            bold: "Perforation :",
+            other:
+              "Durchbruch der Magen- oder Darmwand, eine mögliche Komplikation.",
+          },
+          {
+            bold: "Blutungen :",
+            other:
+              "Potenzielle Komplikation oder Diagnose, die während der Gastroskopie festgestellt werden kann.",
+          },
+          {
+            bold: "H. pylori :",
+            other:
+              "Helicobacter pylori, ein Bakterium, das Magengeschwüre verursachen kann.",
+          },
+          {
+            bold: "Dyspepsie :",
+            other:
+              "Oberbauchbeschwerden, die oft der Grund für eine Gastroskopie sind.",
+          },
+          {
+            bold: "Dysphagie :",
+            other:
+              "Schluckbeschwerden, die eine Gastroskopie indizieren können.",
+          },
+          {
+            bold: "Endoskopische Resektion :",
+            other:
+              "Entfernung von Polypen oder anderen Wucherungen während der Gastroskopie.",
+          },
+          {
+            bold: "Röntgenkontrastmittel :",
+            other:
+              "Flüssigkeit, die vor der Untersuchung getrunken wird, um die Sichtbarkeit im Röntgenbild zu verbessern.",
+          },
+          {
+            bold: "Nüchternheit :",
+            other:
+              "Verzicht auf Essen und Trinken vor der Untersuchung, um genaue Ergebnisse zu gewährleisten.",
+          },
+          {
+            bold: "Oberbauchschmerzen :",
+            other:
+              "Häufiges Symptom, das eine Gastroskopie erforderlich machen kann.",
+          },
+          {
+            bold: "Zöliakie :",
+            other:
+              "Glutenunverträglichkeit, die durch eine Biopsie der Dünndarmschleimhaut diagnostiziert werden kann.",
+          },
+          {
+            bold: "Varizen :",
+            other:
+              "Erweiterte Venen, insbesondere in der Speiseröhre, die bei einer Gastroskopie entdeckt werden können.",
+          },
+          {
+            bold: "Maligne :",
+            other: "Bösartig, im Kontext von Tumoren oder Geschwüren.",
+          },
+          {
+            bold: "Benigne :",
+            other: "Gutartig, im Kontext von Tumoren oder Polypen.",
+          },
+          {
+            bold: "Oesophagogastroduodenoskopie (ÖGD) :",
+            other:
+              "Vollständiger medizinischer Begriff für die Gastroskopie, der Speiseröhre, Magen und Zwölffingerdarm umfasst.",
+          },
+          {
+            bold: "Therapeutische Gastroskopie :",
+            other:
+              "Gastroskopie, bei der nicht nur diagnostiziert, sondern auch behandelt wird, z.B. Blutstillung oder Polypenentfernung.",
+          },
+          {
+            bold: "Periorale Anästhesie :",
+            other:
+              "Lokalanästhesie im Mund- und Rachenraum zur Minderung des Würgereizes.",
+          },
+          {
+            bold: "Mukosale Veränderungen :",
+            other:
+              "Veränderungen der Schleimhaut, die auf entzündliche oder neoplastische Prozesse hinweisen können.",
+          },
+          {
+            bold: "Duodenum :",
+            other:
+              "Der erste Abschnitt des Dünndarms, der ebenfalls bei einer Gastroskopie untersucht wird.",
+          },
+          {
+            bold: "Protonenpumpenhemmer :",
+            other:
+              "Medikament zur Reduzierung der Magensäureproduktion, oft nach einer Gastroskopie verschrieben.",
+          },
+          {
+            bold: "Endoskopische Ultraschalluntersuchung (EUS) :",
+            other:
+              "Kombinierte Methode von Endoskopie und Ultraschall zur detaillierten Beurteilung der Verdauungsorgane.",
+          },
+        ],
+      },
+      // 7tab 141
+      {
+        id: 141,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 142
+      {
+        id: 142,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/13mCwYgkvZVtOCtP4G9wHAP-nstNKSYZU/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 17
   // start of parent tab  Endoskopische retrograde Cholangiopankreatikographie (ERCP)
   {
     id: 22,
