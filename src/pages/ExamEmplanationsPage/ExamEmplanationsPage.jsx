@@ -43,6 +43,8 @@ const ExamExplanationsPage = () => {
    };
 
    const renderTextWithLinks = (text) => {
+      if(typeof text !== 'string') return;
+
       const urlRegex = /(https?:\/\/[^\s]+)/g;
       const parts = text?.split(urlRegex);
 
