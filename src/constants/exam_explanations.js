@@ -14428,5 +14428,716 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 20
+  // end of parent tab 21
+  // start of parent tab 21 Die bronchoalveoläre Lavage
+  {
+    id: 21,
+    title: "Zystoskopie",
+    checked: false,
+    childTabs: [
+      // 1tab 183
+      {
+        id: 183,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Zystoskopie wird durchgeführt, um eine Vielzahl von urologischen Beschwerden und Erkrankungen zu diagnostizieren und zu behandeln. Dazu gehören Harnwegsinfektionen, Blasensteine, Tumoren, anatomische Anomalien und Blut im Urin.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Dieses Verfahren ist besonders relevant bei der Diagnose von Blasenkrebs, Harnröhrenstrikturen und chronischen Blasenentzündungen. Es wird sowohl in der ambulanten Praxis als auch im Krankenhaus angewendet und kann diagnostische sowie therapeutische Maßnahmen umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Zystoskopie basiert auf der Einführung eines Zystoskops durch die Harnröhre in die Blase, um diese unter direkter Sicht zu untersuchen. Es kann entweder ein starres oder flexibles Zystoskop verwendet werden, je nach Bedarf und Indikation.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Zystoskop ist ein spezielles Endoskop mit einer Lichtquelle und einer Kamera. Bei der Untersuchung kann sterile Kochsalzlösung verwendet werden, um die Blase zu füllen und die Sicht zu verbessern. Je nach Befund können zusätzliche Instrumente über den Arbeitskanal eingeführt werden, um Biopsien zu entnehmen oder kleinere operative Eingriffe durchzuführen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung erfolgt durch die direkte Betrachtung der Blasenschleimhaut und der Harnröhre. Auffällige Befunde wie Tumore, Entzündungen, Blutungen oder anatomische Anomalien werden dokumentiert und gegebenenfalls weiter untersucht.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei einer Zystoskopie können Blasentumore, Harnsteine, Blasendivertikel, Harnröhrenstrikturen und entzündliche Veränderungen der Blasenschleimhaut sein.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Zystoskopie ermöglicht eine direkte und detaillierte Untersuchung der Blase und der Harnröhre. Sie kann sowohl diagnostische als auch therapeutische Maßnahmen in einem Verfahren vereinen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Ein Nachteil ist die Invasivität des Verfahrens, die bei einigen Patienten Schmerzen oder Unwohlsein verursachen kann. Auch die Notwendigkeit einer lokalen oder allgemeinen Anästhesie kann als Nachteil angesehen werden.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Mögliche Risiken umfassen Harnwegsinfektionen, Blutungen, Verletzungen der Harnröhre oder Blase und selten allergische Reaktionen auf verwendete Materialien.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Zystoskopie spielt eine zentrale Rolle in der Diagnose und Behandlung vieler urologischer Erkrankungen. Sie ermöglicht eine genaue Diagnosestellung und oft auch sofortige therapeutische Maßnahmen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die Zystoskopie von großer Bedeutung, da sie präzise Informationen liefert, die für die weitere Therapieplanung unerlässlich sind.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Als Alternativen zur Zystoskopie stehen bildgebende Verfahren wie die Sonographie, die MRT und die CT zur Verfügung. Diese Methoden sind jedoch weniger invasiv, bieten aber nicht die gleiche Detailgenauigkeit und therapeutische Möglichkeiten wie die Zystoskopie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Weiterentwicklung der Zystoskope, um die Bildqualität zu verbessern und die Invasivität zu reduzieren. Auch die Untersuchung von Biomarkern zur frühzeitigen Erkennung von Blasenkrebs ist ein wichtiger Forschungsbereich.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven umfassen die Integration von künstlicher Intelligenz zur automatisierten Befundung und die Entwicklung minimalinvasiver Techniken, um die Patientenbelastung weiter zu reduzieren.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Zystoskopie ist ein essenzielles Verfahren in der Urologie, das detaillierte Einblicke in die Blase und die Harnröhre bietet. Sie ermöglicht sowohl die Diagnostik als auch die Therapie in einem Eingriff.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist die Zystoskopie ein unverzichtbares Instrument in der urologischen Praxis, das eine präzise Diagnose und effiziente Behandlung vieler urologischer Erkrankungen ermöglicht.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 184
+      {
+        id: 184,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Zystoskopie durchgeführt wird, um die Blase und die Harnröhre zu untersuchen und mögliche Ursachen für Beschwerden wie Blut im Urin, Harnwegsinfektionen oder Schmerzen abzuklären.",
+            third:
+              "Wir führen diese Untersuchung durch, um die Ursache für Ihr wiederkehrendes Blut im Urin zu finden und sicherzustellen, dass keine ernsthafte Erkrankung vorliegt.",
+            fourth:
+              "Die Zystoskopie hilft uns, Ihre wiederkehrenden Harnwegsinfektionen zu untersuchen und mögliche anatomische Anomalien zu identifizieren.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den Patienten, dass ein dünnes, flexibles Instrument (Zystoskop) durch die Harnröhre in die Blase eingeführt wird, um diese unter direkter Sicht zu untersuchen.",
+            third:
+              "Wir führen ein dünnes, flexibles Instrument durch Ihre Harnröhre in die Blase ein, um diese genau zu betrachten.",
+            fourth:
+              "Ein spezielles Endoskop wird durch die Harnröhre in die Blase eingeführt, damit wir die Blasenschleimhaut und andere Strukturen direkt untersuchen können.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erwähnen Sie, dass der Patient vor der Untersuchung möglicherweise nüchtern bleiben und eine lokale oder allgemeine Anästhesie erhalten muss.",
+            third:
+              "Bitte bleiben Sie ab Mitternacht nüchtern, da Sie eine leichte Narkose erhalten werden.",
+            fourth:
+              "Sie müssen möglicherweise eine lokale Betäubung erhalten, daher informieren Sie uns bitte, wenn Sie Allergien gegen Betäubungsmittel haben.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie die möglichen Risiken wie Infektionen, Blutungen, Schmerzen oder Verletzungen der Harnröhre oder Blase.",
+            third:
+              "Es besteht ein geringes Risiko für Infektionen oder leichte Blutungen nach dem Eingriff.",
+            fourth:
+              "Sie könnten nach der Untersuchung ein brennendes Gefühl beim Wasserlassen verspüren, aber das sollte bald abklingen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass die Zystoskopie eine direkte und genaue Diagnose ermöglicht und oft auch therapeutische Maßnahmen durchgeführt werden können.",
+            third:
+              "Ein großer Vorteil ist, dass wir direkt sehen können, was in Ihrer Blase vor sich geht, und gegebenenfalls sofort behandeln können.",
+            fourth:
+              "Dieses Verfahren ermöglicht uns, sehr präzise Diagnosen zu stellen und, falls nötig, sofort kleine Eingriffe durchzuführen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erläutern Sie, dass bildgebende Verfahren wie Ultraschall, MRT oder CT zur Verfügung stehen, diese jedoch nicht die gleiche Detailgenauigkeit bieten.",
+            third:
+              "Alternativ könnten wir einen Ultraschall durchführen, aber dieser zeigt uns nicht die gleichen Details wie die Zystoskopie.",
+            fourth:
+              "Eine MRT könnte ebenfalls hilfreich sein, aber sie kann nicht die direkte Sicht bieten, die wir durch eine Zystoskopie erhalten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass bestimmte Bedingungen wie schwere Harnwegsinfektionen oder Blutgerinnungsstörungen Kontraindikationen darstellen können.",
+            third:
+              "Wenn Sie aktuell eine schwere Harnwegsinfektion haben, müssen wir die Untersuchung möglicherweise verschieben.",
+            fourth:
+              "Bei Blutgerinnungsstörungen besteht ein höheres Risiko für Komplikationen, daher müssen wir dies vorher genau abklären.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche Befunde möglich sind, wie Tumore, Entzündungen, Steine oder anatomische Anomalien.",
+            third:
+              "Wir könnten Tumore, entzündliche Veränderungen, Blasensteine oder anatomische Anomalien finden.",
+            fourth:
+              "Mögliche Ergebnisse sind zum Beispiel Entzündungen der Blasenschleimhaut oder das Vorhandensein von Blasentumoren.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten vor der Durchführung der Untersuchung.",
+            third:
+              "Es ist wichtig, dass Sie alle Informationen verstehen und Ihr Einverständnis geben, bevor wir mit der Untersuchung beginnen.",
+            fourth:
+              "Ihr schriftliches Einverständnis ist notwendig, damit wir sicherstellen können, dass Sie die Untersuchung und die möglichen Risiken vollständig verstanden haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erläutern Sie, wie das Einverständnis eingeholt wird, durch eine ausführliche Aufklärung des Patienten über den Ablauf, die Risiken und Vorteile der Untersuchung.",
+            third:
+              "Wir werden Ihnen alle Details des Verfahrens erklären und Ihre Fragen beantworten, bevor Sie das Einverständnisformular unterschreiben.",
+            fourth:
+              "Nachdem wir das Verfahren, die Risiken und Vorteile ausführlich besprochen haben, bitten wir Sie, das Einverständnisformular zu unterzeichnen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Nachsorge und Verhalten nach der Untersuchung, wie beispielsweise das Trinken von viel Wasser zur Vermeidung von Infektionen.",
+            third:
+              "Trinken Sie bitte viel Wasser nach der Untersuchung, um das Risiko einer Infektion zu verringern.",
+            fourth:
+              "Vermeiden Sie körperliche Anstrengung für 24 Stunden nach der Untersuchung und trinken Sie reichlich Flüssigkeit.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die Ergebnisse der Zystoskopie im Anschluss an die Untersuchung mit ihm besprochen werden und weitere Schritte je nach Befund geplant werden.",
+            third:
+              "Wir werden die Ergebnisse sofort nach der Untersuchung mit Ihnen besprechen und die nächsten Schritte planen.",
+            fourth:
+              "Nach der Untersuchung werden wir Sie über die Befunde informieren und falls nötig, die nächsten diagnostischen oder therapeutischen Schritte besprechen.",
+          },
+        ],
+      },
+      // 3tab 185
+      {
+        id: 185,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie dem Kollegen, dass es sich bei der Zystoskopie um eine endoskopische Untersuchung der Harnblase und der Harnröhre handelt, bei der ein Zystoskop verwendet wird, um direkte visuelle Diagnostik und gegebenenfalls therapeutische Maßnahmen durchzuführen.",
+            third:
+              "Die Zystoskopie ist eine endoskopische Untersuchung der Blase und Harnröhre mittels eines Zystoskops, das es uns ermöglicht, diese Strukturen direkt zu inspizieren und bei Bedarf therapeutisch zu intervenieren.",
+            fourth:
+              "Es handelt sich um eine minimalinvasive Methode, bei der ein flexibles oder starres Endoskop durch die Harnröhre in die Blase eingeführt wird, um eine direkte Sicht auf die Schleimhäute zu ermöglichen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die Zystoskopie zur Untersuchung von Blasen- und Harnröhrenanomalien wie Tumoren, Steinen, Strikturen und Entzündungen dient.",
+            third:
+              "Mit der Zystoskopie können wir Anomalien wie Blasentumoren, Harnröhrenstrikturen, Blasensteine und entzündliche Prozesse identifizieren.",
+            fourth:
+              "Diese Untersuchung ermöglicht uns, sowohl strukturelle als auch entzündliche Veränderungen der Blase und Harnröhre zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die typischen Befunde wie Tumore, Blasensteine, Entzündungen, Divertikel und Harnröhrenstrikturen sowie deren diagnostische und therapeutische Konsequenzen.",
+            third:
+              "Typische Befunde können Blasentumore, die wir zur Biopsie entnehmen können, oder Harnröhrenstrikturen sein, die wir sofort dilatieren können.",
+            fourth:
+              "Wir können Blasensteine identifizieren und entfernen oder entzündliche Veränderungen diagnostizieren und gegebenenfalls Biopsien nehmen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erwähnen Sie, dass Indikationen für die Zystoskopie u.a. persistierende Hämaturie, wiederkehrende Harnwegsinfektionen, Verdacht auf Blasentumoren und Harnröhrenanomalien sind.",
+            third:
+              "Indikationen umfassen anhaltende Blutungen im Urin, wiederkehrende Infektionen, verdächtige Läsionen im Ultraschall und Symptome einer Harnröhrenobstruktion.",
+            fourth:
+              "Bei Patienten mit wiederholten Harnwegsinfektionen oder Verdacht auf Blasenkrebs wird eine Zystoskopie dringend empfohlen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, dass Kontraindikationen schwere Harnwegsinfektionen, akute Harnröhrenverletzungen und ausgeprägte Blutgerinnungsstörungen umfassen.",
+            third:
+              "Schwere Infektionen der Harnwege oder akute Verletzungen der Harnröhre stellen Kontraindikationen dar.",
+            fourth:
+              "Bei Patienten mit erheblichen Gerinnungsstörungen müssen wir besonders vorsichtig sein oder alternative diagnostische Methoden in Betracht ziehen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen bei den zu untersuchenden Symptomen, wie zum Beispiel Nephrolithiasis, interstitielle Zystitis und Prostatavergrößerung.",
+            third:
+              "Differenzialdiagnosen umfassen Nephrolithiasis, die durch Bildgebung bestätigt werden könnte, und interstitielle Zystitis, die durch Biopsie diagnostiziert werden kann.",
+            fourth:
+              "Neben Blasentumoren sollten wir auch an chronische Blasenentzündungen oder eine vergrößerte Prostata denken, die ähnliche Symptome hervorrufen können.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erläutern Sie, wie die Ergebnisse der Zystoskopie in die weiteren Behandlungspläne integriert werden können, einschließlich operativer Eingriffe oder medikamentöser Therapien.",
+            third:
+              "Die Ergebnisse der Zystoskopie helfen uns, die Notwendigkeit für operative Eingriffe wie die Resektion eines Tumors oder die Dilatation einer Striktur zu bestimmen.",
+            fourth:
+              "Basierend auf den Befunden können wir medikamentöse Therapien gegen Infektionen oder Entzündungen einleiten und weitere diagnostische Tests planen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Wichtigkeit der Zusammenarbeit mit Radiologen, Pathologen und Onkologen bei der Diagnose und Behandlung der durch Zystoskopie entdeckten Erkrankungen.",
+            third:
+              "Eine enge Zusammenarbeit mit Radiologen für die Bildgebung und Pathologen für die Histologie ist unerlässlich, um eine genaue Diagnose zu stellen.",
+            fourth:
+              "Bei der Behandlung von Blasentumoren arbeiten wir eng mit Onkologen zusammen, um eine umfassende Therapie zu gewährleisten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Diskutieren Sie, wie die Qualität der Zystoskopieprozeduren durch regelmäßige Schulungen, standardisierte Protokolle und Qualitätssicherungsmaßnahmen gewährleistet wird.",
+            third:
+              "Regelmäßige Schulungen des Personals und die Anwendung standardisierter Protokolle sind entscheidend für die Aufrechterhaltung hoher Qualitätsstandards.",
+            fourth:
+              "Qualitätssicherungsmaßnahmen wie regelmäßige Überprüfungen und Feedbackschleifen helfen, die Prozeduren stetig zu verbessern.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie, wie die Befunde der Zystoskopie detailliert dokumentiert werden sollten und welche Schritte zur Nachverfolgung und weiteren Betreuung der Patienten notwendig sind.",
+            third:
+              "Eine detaillierte Dokumentation der Befunde in der Patientenakte ist wichtig, und es sollten klare Nachverfolgungspläne erstellt werden, einschließlich Kontrollterminen.",
+            fourth:
+              "Wir müssen sicherstellen, dass alle Befunde dokumentiert und der Patient über die nächsten Schritte, wie Kontrolluntersuchungen oder weitere Behandlungen, informiert wird.",
+          },
+        ],
+      },
+      // 4tab 186
+      {
+        id: 186,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über Blut im Urin und Schmerzen beim Wasserlassen. Keine relevante Vorgeschichte.",
+            fourth:
+              "45-jährige Patientin berichtet über wiederkehrende Harnwegsinfektionen und Schmerzen im Unterbauch.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Zystoskopie zeigt eine glatte, rosa Blasenschleimhaut ohne Anomalien.",
+            third:
+              "Zystoskopie zeigt eine 3 cm große, unregelmäßige, leicht blutende Masse an der Blasenwand.",
+            fourth:
+              "Zystoskopie zeigt mehrere kleine, harte, weißliche Blasensteine in der Blase.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss urologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen Blasentumor hin. Die Lokalisation und das Erscheinungsbild korrelieren mit den Symptomen des Patienten.",
+            fourth:
+              "Die Steine verursachen mechanische Reizung und könnten für die wiederkehrenden Infektionen verantwortlich sein.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer transurethralen Resektion und gegebenenfalls weiterer onkologischer Therapien.",
+            fourth:
+              "Wichtig für die Planung der Entfernung der Steine mittels Zystolitholapaxie und Vorbeugung weiterer Steinbildung.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Blase. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Blasentumors basierend auf Zystoskopie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Blasensteinen aufgrund der Zystoskopie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Blasenschleimhaut ohne Auffälligkeiten in allen Bereichen.",
+            third:
+              "Zystoskopische Aufnahmen zeigen eine unregelmäßige, hypervaskularisierte Masse an der Blasenwand.",
+            fourth:
+              "Zystoskopische Aufnahmen zeigen mehrere kleine, harte Steine, die in der Blase verteilt sind.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige gesundheitliche Überprüfungen und jährliche Vorsorgeuntersuchungen. Es ist zu empfehlen, weiterhin auf Symptome zu achten und bei Veränderungen sofort einen Arzt zu konsultieren.",
+            third:
+              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+            fourth:
+              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+          },
+        ],
+      },
+      // 5tab 187
+      {
+        id: 187,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text_list: [
+          {
+            bold: "Zystoskop :",
+            other:
+              "Das Hauptinstrument der Zystoskopie, ein dünnes, flexibles oder starres Rohr, das mit einer Lichtquelle und einer Kamera ausgestattet ist. Das Zystoskop wird durch die Harnröhre in die Blase eingeführt.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Eine starke Lichtquelle, die über Glasfasern oder LED-Technologie das Innere der Harnröhre und Blase beleuchtet, um eine klare Sicht zu gewährleisten.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Eine hochauflösende Kamera am Ende des Zystoskops, die Bilder des Harntrakts auf einen Monitor überträgt. Diese Bilder ermöglichen dem Arzt, die inneren Strukturen detailliert zu untersuchen.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Ein Bildschirm, auf dem die Live-Bilder der Kamera angezeigt werden. Der Arzt beobachtet den Monitor, um die Untersuchung durchzuführen und diagnostische Entscheidungen zu treffen.",
+          },
+          {
+            bold: "Arbeitskanal :",
+            other:
+              "Ein Kanal im Zystoskop, durch den kleine Instrumente eingeführt werden können, um Gewebeproben zu entnehmen (Biopsie) oder kleinere Eingriffe durchzuführen, wie z.B. das Entfernen von Blasensteinen.",
+          },
+          {
+            bold: "Spül- und Absaugsystem :",
+            other:
+              "Ein System zur Spülung der Blase mit steriler Flüssigkeit, um eine klare Sicht zu ermöglichen. Überschüssige Flüssigkeit und kleine Partikel werden abgesaugt, um die Sicht nicht zu behindern.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Eine Konsole, über die der Arzt das Zystoskop und die angeschlossenen Systeme steuert. Hier können Einstellungen vorgenommen und Funktionen wie Lichtintensität und Kamerafokus angepasst werden.",
+          },
+          {
+            bold: "Flüssigkeitsbehälter :",
+            other:
+              "Behälter für die sterile Spülflüssigkeit, die während der Zystoskopie in die Blase eingeführt wird.",
+          },
+          {
+            bold: "Biopsiezangen und andere Instrumente :",
+            other:
+              "Spezielle Werkzeuge, die durch den Arbeitskanal des Zystoskops eingeführt werden können, um Gewebeproben zu entnehmen oder therapeutische Eingriffe durchzuführen.",
+          },
+          {
+            bold: "Desinfektionssystem :",
+            other:
+              "Ein System zur gründlichen Reinigung und Sterilisation des Zystoskops nach jeder Verwendung, um Infektionen zu verhindern.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+        ],
+      },
+      // 6tab 188
+      {
+        id: 180,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Zystoskopie :",
+            other: "Endoskopische Untersuchung der Blase und Harnröhre.",
+          },
+          {
+            bold: "Zystoskop :",
+            other:
+              "Das Instrument, das zur Durchführung der Zystoskopie verwendet wird.",
+          },
+          {
+            bold: "Blasenschleimhaut :",
+            other: "Die innere Auskleidung der Blase.",
+          },
+          {
+            bold: "Harnröhre :",
+            other:
+              "Der Kanal, der den Urin von der Blase nach außen transportiert.",
+          },
+          {
+            bold: "Biopsie :",
+            other: "Entnahme von Gewebeproben zur weiteren Untersuchung.",
+          },
+          {
+            bold: "Blasentumor :",
+            other:
+              "Ein abnormales Wachstum von Zellen in der Blase, das bösartig oder gutartig sein kann.",
+          },
+          {
+            bold: "Blasensteine :",
+            other:
+              "Verhärtete Ablagerungen aus Mineralien, die sich in der Blase bilden.",
+          },
+          {
+            bold: "Harnröhrenstriktur :",
+            other: "Eine Verengung der Harnröhre, die den Urinfluss behindert.",
+          },
+          {
+            bold: "Anästhesie :",
+            other:
+              "Betäubung, um Schmerzen während der Untersuchung zu vermeiden.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die verwendet wird, um Strukturen während der Bildgebung sichtbarer zu machen.",
+          },
+          {
+            bold: "Sterile Kochsalzlösung :",
+            other:
+              "Eine Lösung, die verwendet wird, um die Blase während der Zystoskopie zu füllen und die Sicht zu verbessern.",
+          },
+          {
+            bold: "Resektion :",
+            other: "Chirurgische Entfernung von Gewebe, z.B. eines Tumors.",
+          },
+          {
+            bold: "Dilatation :",
+            other: "Erweiterung einer verengten Harnröhre.",
+          },
+          {
+            bold: "Hämaturie :",
+            other: "Blut im Urin.",
+          },
+          {
+            bold: "Prozedur :",
+            other: "Ein medizinischer Eingriff oder eine Untersuchung.",
+          },
+          {
+            bold: "Komplikationen :",
+            other:
+              "Unerwünschte Ereignisse oder Nebenwirkungen während oder nach einem Eingriff.",
+          },
+          {
+            bold: "Urologie :",
+            other:
+              "Das medizinische Fachgebiet, das sich mit Erkrankungen des Harntrakts und des männlichen Genitaltrakts beschäftigt.",
+          },
+          {
+            bold: "Nephrolithiasis :",
+            other: "Nierensteine.",
+          },
+          {
+            bold: "Interstitielle Zystitis :",
+            other: "Chronische Entzündung der Blasenwand.",
+          },
+          {
+            bold: "Pathologischer Befund :",
+            other:
+              "Diagnose einer Krankheit basierend auf Untersuchungsergebnissen.",
+          },
+          {
+            bold: "Therapieoptionen :",
+            other: "Verschiedene Behandlungsmöglichkeiten.",
+          },
+          {
+            bold: "Nachsorge :",
+            other:
+              "Medizinische Betreuung und Überwachung nach einem Eingriff oder einer Behandlung.",
+          },
+          {
+            bold: "Prognose :",
+            other: "Vorhersage über den Verlauf und Ausgang einer Krankheit.",
+          },
+          {
+            bold: "Urinanalyse :",
+            other: "Untersuchung des Urins auf Anomalien.",
+          },
+          {
+            bold: "Hydronephrose :",
+            other: "Schwellung der Niere aufgrund von Harnstau.",
+          },
+          {
+            bold: "Blasendivertikel :",
+            other: "Ausstülpungen der Blasenwand.",
+          },
+          {
+            bold: "Endoskopische Chirurgie :",
+            other:
+              "Chirurgische Eingriffe, die mit einem Endoskop durchgeführt werden.",
+          },
+          {
+            bold: "Invasiv :",
+            other: "Ein medizinisches Verfahren, das in den Körper eingreift.",
+          },
+          {
+            bold: "Minimalinvasiv :",
+            other:
+              "Ein Verfahren, das so wenig wie möglich in den Körper eingreift.",
+          },
+          {
+            bold: "Blasenkatheter :",
+            other:
+              "Ein Schlauch, der in die Blase eingeführt wird, um den Urin abzuleiten.",
+          },
+          {
+            bold: "Blasenspiegelung :",
+            other: "Ein anderer Begriff für Zystoskopie.",
+          },
+          {
+            bold: "Prostatavergrößerung :",
+            other:
+              "Vergrößerung der Prostata, die den Harnfluss behindern kann.",
+          },
+        ],
+      },
+      // 7tab 189
+      {
+        id: 181,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 190
+      {
+        id: 182,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1fySNrY2yf3ULuwHllWan-m7ZE39wqzTN/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 21
 ];
