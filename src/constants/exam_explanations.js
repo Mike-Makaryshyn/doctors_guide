@@ -14429,9 +14429,9 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 21
-  // start of parent tab 21 Die bronchoalveoläre Lavage
+  // start of parent tab 22 Zystoskopie
   {
-    id: 21,
+    id: 22,
     title: "Zystoskopie",
     checked: false,
     childTabs: [
@@ -14930,7 +14930,7 @@ export const parentTabs = [
       },
       // 6tab 188
       {
-        id: 180,
+        id: 188,
         title: "Wortschatz",
         text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
         text_list: [
@@ -15081,7 +15081,7 @@ export const parentTabs = [
       },
       // 7tab 189
       {
-        id: 181,
+        id: 189,
         title: "Links",
         text: "",
         text_list: [
@@ -15133,11 +15133,11 @@ export const parentTabs = [
       },
       // 8tab 190
       {
-        id: 182,
+        id: 190,
         title: "PDF",
         link: "https://drive.google.com/file/d/1fySNrY2yf3ULuwHllWan-m7ZE39wqzTN/view?usp=share_link",
       },
     ],
   },
-  // end of parent tab 21
+  // end of parent tab 22
 ];
