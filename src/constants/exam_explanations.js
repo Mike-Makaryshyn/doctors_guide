@@ -18,6 +18,11 @@ export const exam_categories = [
     title: "Endoskopische Verfahren",
     show_before_id: 15,
   },
+  {
+    id: 4,
+    title: "Labor Untersuchungen",
+    show_before_id: 15,
+  },
   // Тут далі вставляй нові категорії по прикладу попередніх.
 ];
 
@@ -15140,4 +15145,1541 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 22
+
+  // Labor Untersuchungen
+
+  // start of parent tab 23 Blutbild
+  {
+    id: 23,
+    title: "Blutbild",
+    checked: false,
+    childTabs: [
+      // 1tab 191
+      {
+        id: 191,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Blutbilduntersuchung ist es, eine umfassende Analyse der zellulären Bestandteile des Blutes zu ermöglichen. Dies schließt die Bestimmung der Anzahl und Art der verschiedenen Blutzellen ein, um Hinweise auf mögliche Erkrankungen zu erhalten.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Blutbilduntersuchung ist ein grundlegendes diagnostisches Werkzeug in der Medizin. Sie wird in einer Vielzahl von klinischen Situationen eingesetzt, darunter die Diagnostik von Anämien, Infektionen, Entzündungen und hämatologischen Erkrankungen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Ein Blutbild liefert quantitative und qualitative Daten zu den zellulären Bestandteilen des Blutes, einschließlich der Erythrozyten, Leukozyten und Thrombozyten. Es basiert auf der Analyse einer Blutprobe unter Verwendung von automatisierten Hämatologie-Analysegeräten.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Die Blutprobe wird durch Venenpunktion gewonnen und in speziellen Röhrchen mit Antikoagulanzien gesammelt. Anschließend wird sie in einem Hämatologie-Analysator untersucht, der die Zellen zählt und charakterisiert. Moderne Geräte nutzen dabei Methoden wie Durchflusszytometrie und Impedanzmessung.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Interpretation der Ergebnisse erfordert eine sorgfältige Analyse der absoluten Zellzahlen sowie der Verhältnisse zwischen den verschiedenen Zelltypen. Abweichungen von den Normwerten können auf verschiedene pathologische Zustände hinweisen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden gehören Anämien, Leukopenien, Leukocytosen und Thrombozytopenien. Jede dieser Abweichungen kann spezifische Ursachen haben, die weiter abgeklärt werden müssen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Blutbilduntersuchung ist eine schnelle und kostengünstige Methode zur ersten Diagnostik von verschiedenen Erkrankungen. Sie bietet umfassende Informationen über den Gesundheitszustand des Blutes, indem sie detaillierte Daten zu den zellulären Bestandteilen des Blutes liefert. Darüber hinaus hilft sie bei der Überwachung von Erkrankungen und Therapieverläufen, indem regelmäßige Blutbilduntersuchungen Veränderungen im Krankheitsverlauf aufzeigen und Therapieanpassungen ermöglichen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Ein Nachteil der Blutbilduntersuchung besteht darin, dass sie eine Blutentnahme erfordert, die für manche Patienten unangenehm oder schmerzhaft sein kann. Des Weiteren können die Ergebnisse der Blutbilduntersuchung durch technische Fehler oder präanalytische Variablen, wie z.B. falsche Lagerung der Blutprobe, beeinflusst werden, was zu ungenauen Ergebnissen führen kann.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Obwohl die Risiken einer Blutbilduntersuchung minimal sind, können sie dennoch nicht vollständig ausgeschlossen werden. Zu den möglichen Risiken gehören Blutungen oder Infektionen an der Einstichstelle, die jedoch in der Regel selten und geringfügig sind. Bei einigen Patienten kann es auch zu Schwindel oder Ohnmacht während oder nach der Blutentnahme kommen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Das Blutbild spielt eine zentrale Rolle in der Diagnostik und Behandlung vieler Erkrankungen. Es ist oft der erste Schritt in der diagnostischen Kette und liefert entscheidende Hinweise für weitere Untersuchungen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch regelmäßige Blutbilduntersuchungen können Krankheitsverläufe überwacht und Therapien angepasst werden. Dies ist besonders wichtig bei chronischen Erkrankungen und in der Onkologie.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur Blutbilduntersuchung gehören spezifische Tests wie die Blutausstrichmikroskopie, spezielle immunologische Tests und molekulargenetische Untersuchungen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Sensitivität und Spezifität der Analyseverfahren sowie auf die Integration neuer Biomarker in die Routineanalytik.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten personalisierte Medizinansätze ermöglichen, bei denen individuelle Blutbildprofile zur präziseren Diagnose und Therapieplanung genutzt werden.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Blutbilduntersuchung ist ein unverzichtbares diagnostisches Werkzeug in der modernen Medizin, das schnelle und umfassende Informationen über den Zustand des Blutes liefert.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Ihre Anwendung trägt wesentlich zur Diagnostik, Therapieplanung und Überwachung von Patienten bei und bleibt ein zentraler Bestandteil der klinischen Routine.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 192
+      {
+        id: 192,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern das Ziel der Blutbilduntersuchung, die zellulären Bestandteile des Blutes zu analysieren, um Hinweise auf mögliche Erkrankungen wie Anämien, Infektionen oder Blutgerinnungsstörungen zu erhalten.",
+            third:
+              "Wir führen die Blutbilduntersuchung durch, um mögliche Blutarmut oder Infektionen zu erkennen.",
+            fourth:
+              "Das Ziel dieser Untersuchung ist es, Ihre weißen Blutkörperchen zu überprüfen, um Entzündungen festzustellen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, dass eine Blutprobe durch eine Venenpunktion entnommen wird, die dann in einem Labor analysiert wird. Dies ist normalerweise schnell und wenig schmerzhaft.",
+            third:
+              "Wir entnehmen eine kleine Menge Blut aus Ihrer Vene am Arm, was nur einen kurzen Moment dauert.",
+            fourth:
+              "Die Blutprobe wird in einem speziellen Röhrchen gesammelt und ins Labor geschickt, wo sie analysiert wird.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass in der Regel keine Vorbereitung notwendig ist. In manchen Fällen kann es jedoch wichtig sein, vor der Blutentnahme nicht zu essen oder bestimmte Medikamente absetzen.",
+            third: "Für diese Blutuntersuchung müssen Sie nicht nüchtern sein.",
+            fourth:
+              "Bitte informieren Sie uns, wenn Sie Medikamente einnehmen, da dies die Ergebnisse beeinflussen könnte.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie die minimalen Risiken der Blutentnahme, wie Blutungen, Infektionen an der Einstichstelle oder selten auftretende Schwindelgefühle.",
+            third:
+              "Es besteht ein geringes Risiko einer kleinen Blutung an der Einstichstelle.",
+            fourth:
+              "In seltenen Fällen kann es zu einer leichten Infektion an der Einstichstelle kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie die schnellen und kostengünstigen diagnostischen Vorteile der Blutbilduntersuchung, die umfassende Informationen über den Gesundheitszustand des Blutes liefert und bei der Überwachung von Therapieverläufen hilft.",
+            third:
+              "Ein Blutbild gibt uns schnell einen Überblick über Ihre Gesundheit.",
+            fourth:
+              "Diese Untersuchung ist kostengünstig und liefert wichtige Informationen zur Diagnosestellung.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Weisen Sie auf mögliche Alternativen hin, wie die Blutausstrichmikroskopie, spezielle immunologische Tests oder molekulargenetische Untersuchungen.",
+            third:
+              "Eine Alternative ist die Blutausstrichmikroskopie, die detailliertere Informationen geben kann.",
+            fourth:
+              "In bestimmten Fällen könnte ein immunologischer Test genauer sein.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, dass es wenige Kontraindikationen gibt, jedoch sollten bestimmte Patienten mit bekannten Blutungsstörungen beachten werden.",
+            third:
+              "Patienten mit Hämophilie sollten besondere Vorsicht walten lassen.",
+            fourth:
+              "Bei bekannter Blutgerinnungsstörung informieren Sie uns bitte vorher.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über mögliche Befunde, wie Anämien, Leukopenien, Leukocytosen oder Thrombozytopenien, und dass weitere Untersuchungen notwendig sein können.",
+            third: "Ein niedriges Hämoglobin könnte auf eine Anämie hinweisen.",
+            fourth:
+              "Erhöhte weiße Blutkörperchen könnten auf eine Infektion hindeuten.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit des Einverständnisses vor der Blutentnahme und erklären Sie, dass der Patient über den Ablauf, die Risiken und Vorteile informiert werden muss.",
+            third:
+              "Ihr Einverständnis ist wichtig, damit wir die Untersuchung durchführen können.",
+            fourth:
+              "Sie sollten vollständig informiert sein, bevor Sie der Blutentnahme zustimmen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Stellen Sie sicher, dass der Patient die Möglichkeit hat, Fragen zu stellen, und bestätigen Sie das Einverständnis schriftlich.",
+            third: "Haben Sie noch Fragen, bevor wir beginnen?",
+            fourth:
+              "Bitte unterschreiben Sie dieses Formular, um Ihr Einverständnis zu bestätigen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise, wie das Vermeiden körperlicher Belastung nach der Blutentnahme, und erinnern Sie ihn daran, sich bei ungewöhnlichen Symptomen zu melden.",
+            third:
+              "Bitte vermeiden Sie starke körperliche Aktivitäten nach der Blutentnahme.",
+            fourth:
+              "Wenn Sie nach der Blutentnahme Schwellungen oder Schmerzen bemerken, informieren Sie uns bitte umgehend.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie dem Patienten, wie und wann er die Ergebnisse der Blutuntersuchung erhält, und dass ein Arzt die Ergebnisse mit ihm bespricht.",
+            third:
+              "Die Ergebnisse liegen in etwa zwei Tagen vor und wir besprechen diese dann mit Ihnen.",
+            fourth:
+              "Ihr Arzt wird die Ergebnisse in der nächsten Konsultation mit Ihnen durchgehen und die nächsten Schritte planen.",
+          },
+        ],
+      },
+      // 3tab 193
+      {
+        id: 193,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, dass es sich bei der Blutbilduntersuchung um eine Analyse der zellulären Bestandteile des Blutes handelt, die quantitative und qualitative Daten zu Erythrozyten, Leukozyten und Thrombozyten liefert.",
+            third:
+              "Ein Blutbild liefert uns eine umfassende Analyse der Blutzellen, einschließlich ihrer Anzahl und ihres Zustands.",
+            fourth:
+              "Die Untersuchung gibt uns Aufschluss über die Konzentration und Verteilung der verschiedenen Blutzellen im Blut.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass die Untersuchung dazu dient, Anämien, Infektionen, Entzündungen, hämatologische Erkrankungen und andere Blutpathologien zu diagnostizieren und zu überwachen.",
+            third:
+              "Wir können Anämien, wie Eisenmangelanämie, oder Infektionen feststellen und deren Verlauf überwachen.",
+            fourth:
+              "Durch das Blutbild können wir entzündliche Prozesse im Körper identifizieren und hämatologische Erkrankungen diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie typische Befunde wie erhöhte oder verringerte Zellzahlen, die auf spezifische Erkrankungen hinweisen können.",
+            third:
+              "Eine erhöhte Anzahl weißer Blutkörperchen kann auf eine Infektion hinweisen.",
+            fourth:
+              "Eine niedrige Thrombozytenzahl könnte auf eine Thrombozytopenie hinweisen, die weiter untersucht werden muss.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die häufigsten Indikationen für ein Blutbild, wie zum Beispiel Verdacht auf Anämie, Infektionen, Überwachung von Chemotherapien oder bei unklaren Krankheitsbildern.",
+            third:
+              "Bei Patienten mit Symptomen wie Müdigkeit und Blässe führen wir ein Blutbild durch, um Anämie auszuschließen.",
+            fourth:
+              "Bei Fieber unbekannter Ursache ist ein Blutbild indiziert, um eine mögliche Infektion zu erkennen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, dass es wenige Kontraindikationen gibt, aber bei Patienten mit schweren Blutgerinnungsstörungen oder extremer Angst vor Nadeln Vorsichtsmaßnahmen getroffen werden sollten.",
+            third:
+              "Bei Patienten mit Hämophilie sollte die Blutentnahme mit besonderer Vorsicht durchgeführt werden.",
+            fourth:
+              "Bei extremer Angst vor Nadeln können sedierende Maßnahmen oder psychologische Unterstützung erforderlich sein.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die in Betracht gezogen werden sollten, wenn abnormale Blutbildwerte gefunden werden, wie etwa verschiedene Formen von Leukämie oder Myelodysplasien.",
+            third:
+              "Bei einer Leukozytose könnte neben einer Infektion auch eine Leukämie in Betracht gezogen werden.",
+            fourth:
+              "Eine Thrombozytopenie könnte auf eine idiopathische thrombozytopenische Purpura oder eine aplastische Anämie hinweisen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie, wie die Ergebnisse der Blutbilduntersuchung in die Erstellung von Behandlungsplänen einfließen, einschließlich der Anpassung von Medikamenten und der Planung weiterer diagnostischer Schritte.",
+            third:
+              "Bei festgestellter Anämie planen wir eine Eisen- oder Vitamin B12-Substitution.",
+            fourth:
+              "Bei auffälligem Blutbild bei einer Infektion können Antibiotika angepasst und zusätzliche Untersuchungen angeordnet werden.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie der Hämatologie, Infektiologie und Onkologie, um eine umfassende Versorgung zu gewährleisten.",
+            third:
+              "Wir sollten die Ergebnisse mit dem Hämatologen besprechen, um eine mögliche Leukämie abzuklären.",
+            fourth:
+              "Bei Verdacht auf eine schwere Infektion konsultieren wir den Infektiologen zur weiteren Therapieplanung.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, wie Qualitätskontrollen und standardisierte Verfahren sicherstellen, dass die Blutbilduntersuchung zuverlässig und genau durchgeführt wird, und wie Fehler vermieden werden können.",
+            third:
+              "Regelmäßige Kalibrierung der Analysegeräte und Teilnahme an Ringversuchen sichern die Qualität der Ergebnisse.",
+            fourth:
+              "Standardisierte Protokolle für die Blutentnahme und -verarbeitung minimieren das Risiko von Präanalytikfehlern.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Wichtigkeit der sorgfältigen Dokumentation der Untersuchungsergebnisse und die Planung der weiteren diagnostischen oder therapeutischen Maßnahmen basierend auf den Ergebnissen.",
+            third:
+              "Die Ergebnisse werden in der Patientenakte dokumentiert und der weitere Verlauf wird engmaschig überwacht.",
+            fourth:
+              "Wir dokumentieren die Blutbildwerte genau und planen bei Auffälligkeiten sofortige Nachuntersuchungen.",
+          },
+        ],
+      },
+      // 4tab 194
+      {
+        id: 194,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "60-jährige Patientin klagt über Müdigkeit, Blässe und Kurzatmigkeit. Vorgeschichte von gastrointestinalen Beschwerden.",
+            fourth:
+              "45-jähriger Patient berichtet von anhaltender Müdigkeit, häufigen Infektionen und Nachtschweiß. Keine signifikante Vorgeschichte.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Blutbild zeigt normale Werte für Hämoglobin, Hämatokrit, Leukozyten und Thrombozyten.",
+            third:
+              "Blutbild zeigt einen Hämoglobinwert von 8 g/dL, niedrigen Hämatokrit und reduzierte Erythrozytenzahl.",
+            fourth:
+              "Blutbild zeigt eine stark erhöhte Anzahl von Leukozyten, unreife Zellen im Differentialblutbild und eine Anämie.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Blutbild bestätigt einen normalen Gesundheitszustand des Patienten.",
+            third:
+              "Der Befund deutet auf eine Eisenmangelanämie hin. Die niedrigen Erythrozytenzahlen korrelieren mit den Symptomen der Patientin.",
+            fourth:
+              "Der Befund ist typisch für eine akute myeloische Leukämie (AML). Die erhöhte Anzahl unreifer Leukozyten erklärt die Symptomatik.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und bestätigt die Notwendigkeit regelmäßiger Kontrollen.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer Eisensupplementation und die Abklärung der Ursache der Eisenmangelanämie.",
+            fourth:
+              "Wichtig für die Einleitung einer sofortigen hämatologischen Untersuchung und Chemotherapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Blutes. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer Eisenmangelanämie basierend auf Blutbildbefunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer akuten myeloischen Leukämie basierend auf Blutbildbefunden und klinischen Symptomen.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Normale Verteilung und Morphologie der Blutzellen in der mikroskopischen Untersuchung.",
+            third:
+              "Mikroskopische Untersuchung zeigt hypochrome, mikrozytäre Erythrozyten.",
+            fourth:
+              "Mikroskopische Untersuchung zeigt eine hohe Anzahl von Blasten und unreifen weißen Blutzellen.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen dem Patienten, regelmäßige Vorsorgeuntersuchungen zur Überwachung der allgemeinen Gesundheit durchzuführen.",
+            third:
+              "Wir empfehlen die Einleitung einer Eisensupplementation und eine weiterführende gastroenterologische Abklärung.",
+            fourth:
+              "Es ist zu empfehlen, sofort eine hämatologische Fachkonsultation und eine Chemotherapie zu beginnen.",
+          },
+        ],
+      },
+      // 5tab 195
+      {
+        id: 195,
+        title: "Einheiten",
+        img: child_tab_img_1,
+        text: "Diese Einheiten und Erklärungen geben Ihnen eine umfassende Übersicht über die wichtigsten Parameter eines Blutbildes und deren Bedeutung in der klinischen Diagnostik:",
+        text_list: [
+          {
+            bold: "Hämoglobin (Hb):",
+            other: [
+              "• Einheit: g/dL (Gramm pro Deziliter)",
+              "• Erklärung: Hämoglobin ist ein Protein in den roten Blutkörperchen, das für den Sauerstofftransport im Blut verantwortlich ist. Ein niedriger Hb-Wert kann auf Anämie hinweisen.",
+            ],
+          },
+          {
+            bold: "Hämatokrit (Hkt):",
+            other: [
+              "• Einheit: % (Prozent)",
+              "• Erklärung: Der Hämatokritwert gibt den Anteil der roten Blutkörperchen am Gesamtblutvolumen an. Ein niedriger Wert kann auf Anämie, ein hoher Wert auf Dehydratation oder Polyzythämie hinweisen.",
+            ],
+          },
+          {
+            bold: "Erythrozyten (RBC):",
+            other: [
+              "• Einheit: x10^6/µL (Millionen pro Mikroliter)",
+              "• Erklärung: Erythrozyten, auch rote Blutkörperchen genannt, sind für den Sauerstofftransport im Blut verantwortlich. Abnormale Werte können auf verschiedene Erkrankungen hinweisen.",
+            ],
+          },
+          {
+            bold: "Leukozyten (WBC):",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Leukozyten, oder weiße Blutkörperchen, sind Teil des Immunsystems und helfen bei der Bekämpfung von Infektionen. Erhöhte oder verringerte Werte können auf Infektionen, Entzündungen oder hämatologische Erkrankungen hinweisen.",
+            ],
+          },
+          {
+            bold: "Thrombozyten (PLT):",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Thrombozyten, oder Blutplättchen, sind für die Blutgerinnung verantwortlich. Niedrige Werte können das Blutungsrisiko erhöhen, während hohe Werte das Risiko für Thrombosen steigern können.",
+            ],
+          },
+          {
+            bold: "Mittleres korpuskuläres Volumen (MCV):",
+            other: [
+              "• Einheit: fL (Femtoliter)",
+              "• Erklärung: Das MCV gibt das durchschnittliche Volumen eines Erythrozyten an. Abweichungen können auf Mikrozytose (kleine Zellen) oder Makrozytose (große Zellen) hinweisen.",
+            ],
+          },
+          {
+            bold: "Mittlerer korpuskulärer Hämoglobingehalt (MCH):",
+            other: [
+              "• Einheit: pg (Pikogramm)",
+              "• Erklärung: Der MCH-Wert gibt die durchschnittliche Hämoglobinmenge in einem Erythrozyten an. Niedrige Werte können auf Eisenmangelanämie, hohe Werte auf Makrozytose hinweisen.",
+            ],
+          },
+          {
+            bold: "Mittlere korpuskuläre Hämoglobinkonzentration (MCHC):",
+            other: [
+              "• Einheit: g/dL (Gramm pro Deziliter)",
+              "• Erklärung: Die MCHC gibt die durchschnittliche Hämoglobinkonzentration in einem Erythrozyten an. Abweichungen können auf verschiedene Formen der Anämie hinweisen.",
+            ],
+          },
+          {
+            bold: "Erythrozytenverteilungsbreite (RDW):",
+            other: [
+              "• Einheit: % (Prozent)",
+              "• Erklärung: Die RDW misst die Variation der Größe der roten Blutkörperchen. Hohe Werte können auf eine gemischte Anämie oder eine Reaktion auf Blutverlust hinweisen.",
+            ],
+          },
+          {
+            bold: "Absolute Neutrophilenzahl (ANC):",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Neutrophile sind eine Art von weißen Blutkörperchen, die Infektionen bekämpfen. Niedrige Werte können auf Neutropenie, hohe Werte auf eine Infektion oder Entzündung hinweisen.",
+            ],
+          },
+          {
+            bold: "Absolute Lymphozytenzahl (ALC):",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Lymphozyten sind eine Art von weißen Blutkörperchen, die eine wichtige Rolle im Immunsystem spielen. Abweichungen können auf virale Infektionen oder hämatologische Erkrankungen hinweisen.",
+            ],
+          },
+          {
+            bold: "Absolute Monozytenzahl:",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Monozyten sind weiße Blutkörperchen, die bei der Bekämpfung von Infektionen und bei der Immunabwehr eine Rolle spielen. Hohe Werte können auf eine chronische Infektion oder eine Entzündung hinweisen.",
+            ],
+          },
+          {
+            bold: "Absolute Eosinophilenzahl:",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Eosinophile sind weiße Blutkörperchen, die an allergischen Reaktionen und der Bekämpfung parasitärer Infektionen beteiligt sind. Erhöhte Werte können auf Allergien oder Parasiteninfektionen hinweisen.",
+            ],
+          },
+          {
+            bold: "Absolute Basophilenzahl:",
+            other: [
+              "• Einheit: x10^3/µL (Tausend pro Mikroliter)",
+              "• Erklärung: Basophile sind die am seltensten vorkommenden weißen Blutkörperchen und spielen eine Rolle bei allergischen Reaktionen. Erhöhte Werte können auf bestimmte Leukämien oder chronische Entzündungen hinweisen.",
+            ],
+          },
+        ],
+      },
+      // 6tab 196
+      {
+        id: 196,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Hämoglobin (Hb) :",
+            other:
+              "Protein in den roten Blutkörperchen, das Sauerstoff transportiert.",
+          },
+          {
+            bold: "Hämatokrit (Hkt) :",
+            other: "Prozentsatz der roten Blutkörperchen im Blut.",
+          },
+          {
+            bold: "Erythrozyten (RBC) :",
+            other:
+              "Rote Blutkörperchen, die für den Sauerstofftransport verantwortlich sind.",
+          },
+          {
+            bold: "Leukozyten (WBC) :",
+            other: "Weiße Blutkörperchen, die Infektionen bekämpfen.",
+          },
+          {
+            bold: "Thrombozyten (PLT) :",
+            other: "Blutplättchen, die für die Blutgerinnung zuständig sind.",
+          },
+          {
+            bold: "Mittleres korpuskuläres Volumen (MCV) :",
+            other: "Durchschnittliches Volumen eines Erythrozyten.",
+          },
+          {
+            bold: "Mittlerer korpuskulärer Hämoglobingehalt (MCH) :",
+            other: "Durchschnittliche Hämoglobinmenge in einem Erythrozyten.",
+          },
+          {
+            bold: "Mittlere korpuskuläre Hämoglobinkonzentration (MCHC) :",
+            other:
+              "Durchschnittliche Hämoglobinkonzentration in einem Erythrozyten.",
+          },
+          {
+            bold: "Erythrozytenverteilungsbreite (RDW) :",
+            other: "Maß für die Größenverteilung der roten Blutkörperchen.",
+          },
+          {
+            bold: "Absolute Neutrophilenzahl (ANC) :",
+            other: "Anzahl der Neutrophilen, eine Art weißer Blutkörperchen.",
+          },
+          {
+            bold: "Absolute Lymphozytenzahl (ALC) :",
+            other: "Anzahl der Lymphozyten, eine Art weißer Blutkörperchen.",
+          },
+          {
+            bold: "Absolute Monozytenzahl :",
+            other: "Anzahl der Monozyten, eine Art weißer Blutkörperchen.",
+          },
+          {
+            bold: "Absolute Eosinophilenzahl :",
+            other: "Anzahl der Eosinophilen, eine Art weißer Blutkörperchen.",
+          },
+          {
+            bold: "Absolute Basophilenzahl :",
+            other: "Anzahl der Basophilen, eine Art weißer Blutkörperchen.",
+          },
+          {
+            bold: "Anämie :",
+            other: "Zustand mit niedrigen Hämoglobin- oder Erythrozytenwerten.",
+          },
+          {
+            bold: "Leukopenie :",
+            other: "Verringerte Anzahl der Leukozyten.",
+          },
+          {
+            bold: "Leukozytose :",
+            other: "Erhöhte Anzahl der Leukozyten.",
+          },
+          {
+            bold: "Thrombozytopenie :",
+            other: "Verringerte Anzahl der Thrombozyten.",
+          },
+          {
+            bold: "Thrombozytose :",
+            other: "Erhöhte Anzahl der Thrombozyten.",
+          },
+          {
+            bold: "Differentialblutbild :",
+            other: "Analyse der verschiedenen Arten von weißen Blutkörperchen.",
+          },
+          {
+            bold: "Hypochromie :",
+            other: "Niedriger Hämoglobingehalt in den Erythrozyten.",
+          },
+          {
+            bold: "Mikrozytose :",
+            other: "Abnorm kleine rote Blutkörperchen.",
+          },
+          {
+            bold: "Makrozytose :",
+            other: "Abnorm große rote Blutkörperchen.",
+          },
+          {
+            bold: "Blasten :",
+            other: "Unreife Zellen, oft im Kontext von Leukämie gefunden.",
+          },
+          {
+            bold: "Retikulozyten :",
+            other: "Unreife rote Blutkörperchen.",
+          },
+          {
+            bold: "Normozytär :",
+            other: "Normale Größe der roten Blutkörperchen.",
+          },
+          {
+            bold: "Hypochrom :",
+            other: "Niedriger Hämoglobingehalt in den roten Blutkörperchen.",
+          },
+          {
+            bold: "Eisenmangelanämie :",
+            other: "Anämie aufgrund von Eisenmangel.",
+          },
+          {
+            bold: "Hämolytische Anämie :",
+            other:
+              "Anämie aufgrund von gesteigertem Abbau der roten Blutkörperchen.",
+          },
+          {
+            bold: "Aplastische Anämie :",
+            other:
+              "Anämie aufgrund von unzureichender Produktion der Blutzellen im Knochenmark.",
+          },
+          {
+            bold: "Myelodysplastisches Syndrom :",
+            other:
+              "Gruppe von Erkrankungen, bei denen das Knochenmark keine normalen Blutzellen produziert.",
+          },
+          {
+            bold: "Polyzythämie :",
+            other: "Erhöhte Anzahl roter Blutkörperchen.",
+          },
+          {
+            bold: "Pancytopenie :",
+            other:
+              "Reduktion der Anzahl aller Blutzelltypen (rote und weiße Blutkörperchen, Thrombozyten).",
+          },
+          {
+            bold: "Blutgerinnung :",
+            other:
+              "Prozess, durch den Blut flüssig bleibt und bei Verletzungen gerinnt.",
+          },
+          {
+            bold: "Blutungsneigung :",
+            other: "Erhöhte Tendenz zu bluten.",
+          },
+          {
+            bold: "Koagulopathie :",
+            other: "Störung der Blutgerinnung.",
+          },
+          {
+            bold: "Ferritin :",
+            other:
+              "Protein, das Eisen speichert; niedrige Werte deuten auf Eisenmangel.",
+          },
+          {
+            bold: "Transferrinsättigung :",
+            other: "Maß für die Eisenbindungskapazität des Blutes.",
+          },
+          {
+            bold: "Erythropoese :",
+            other: "Produktion der roten Blutkörperchen im Knochenmark.",
+          },
+          {
+            bold: "Knochenmarkbiopsie :",
+            other:
+              "Entnahme einer Gewebeprobe aus dem Knochenmark zur Untersuchung.",
+          },
+          {
+            bold: "Serumelektrophorese :",
+            other: "Test zur Analyse von Proteinen im Blutserum.",
+          },
+          {
+            bold: "Hämoglobinopathien :",
+            other:
+              "Erbkrankheiten, die das Hämoglobin betreffen (z.B. Sichelzellanämie).",
+          },
+          {
+            bold: "Normochrom :",
+            other: "Normale Färbung der roten Blutkörperchen.",
+          },
+          {
+            bold: "Sichelzellanämie :",
+            other:
+              "Erbliche Erkrankung, bei der die roten Blutkörperchen sichelförmig sind.",
+          },
+          {
+            bold: "Thalassämie :",
+            other:
+              "Erbliche Erkrankung, bei der die Hämoglobinproduktion gestört ist.",
+          },
+          {
+            bold: "Bluttransfusion :",
+            other:
+              "Übertragung von Blutprodukten von einem Spender auf einen Empfänger.",
+          },
+          {
+            bold: "Plasmapherese :",
+            other: "Verfahren zur Entfernung von Plasma aus dem Blut.",
+          },
+          {
+            bold: "Leukämie :",
+            other: "Blutkrebs, der weiße Blutkörperchen betrifft.",
+          },
+          {
+            bold: "Lymphom :",
+            other: "Krebs des lymphatischen Systems.",
+          },
+          {
+            bold: "Neutropenie :",
+            other: "Abnorm niedrige Anzahl von Neutrophilen.",
+          },
+        ],
+      },
+      // 7tab 197
+      {
+        id: 197,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 198
+      {
+        id: 198,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1n-HXb96uL2bo7Ymzsc-9pvz5UJplubZk/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 23
+
+  // start of parent tab 24 Blutuntersuchung
+  {
+    id: 24,
+    title: "Blutuntersuchung",
+    checked: false,
+    childTabs: [
+      // 1tab 199
+      {
+        id: 199,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Zystoskopie wird durchgeführt, um eine Vielzahl von urologischen Beschwerden und Erkrankungen zu diagnostizieren und zu behandeln. Dazu gehören Harnwegsinfektionen, Blasensteine, Tumoren, anatomische Anomalien und Blut im Urin.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Dieses Verfahren ist besonders relevant bei der Diagnose von Blasenkrebs, Harnröhrenstrikturen und chronischen Blasenentzündungen. Es wird sowohl in der ambulanten Praxis als auch im Krankenhaus angewendet und kann diagnostische sowie therapeutische Maßnahmen umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Zystoskopie basiert auf der Einführung eines Zystoskops durch die Harnröhre in die Blase, um diese unter direkter Sicht zu untersuchen. Es kann entweder ein starres oder flexibles Zystoskop verwendet werden, je nach Bedarf und Indikation.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Das Zystoskop ist ein spezielles Endoskop mit einer Lichtquelle und einer Kamera. Bei der Untersuchung kann sterile Kochsalzlösung verwendet werden, um die Blase zu füllen und die Sicht zu verbessern. Je nach Befund können zusätzliche Instrumente über den Arbeitskanal eingeführt werden, um Biopsien zu entnehmen oder kleinere operative Eingriffe durchzuführen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung erfolgt durch die direkte Betrachtung der Blasenschleimhaut und der Harnröhre. Auffällige Befunde wie Tumore, Entzündungen, Blutungen oder anatomische Anomalien werden dokumentiert und gegebenenfalls weiter untersucht.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei einer Zystoskopie können Blasentumore, Harnsteine, Blasendivertikel, Harnröhrenstrikturen und entzündliche Veränderungen der Blasenschleimhaut sein.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Zystoskopie ermöglicht eine direkte und detaillierte Untersuchung der Blase und der Harnröhre. Sie kann sowohl diagnostische als auch therapeutische Maßnahmen in einem Verfahren vereinen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Ein Nachteil ist die Invasivität des Verfahrens, die bei einigen Patienten Schmerzen oder Unwohlsein verursachen kann. Auch die Notwendigkeit einer lokalen oder allgemeinen Anästhesie kann als Nachteil angesehen werden.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Mögliche Risiken umfassen Harnwegsinfektionen, Blutungen, Verletzungen der Harnröhre oder Blase und selten allergische Reaktionen auf verwendete Materialien.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Zystoskopie spielt eine zentrale Rolle in der Diagnose und Behandlung vieler urologischer Erkrankungen. Sie ermöglicht eine genaue Diagnosestellung und oft auch sofortige therapeutische Maßnahmen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die Zystoskopie von großer Bedeutung, da sie präzise Informationen liefert, die für die weitere Therapieplanung unerlässlich sind.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Als Alternativen zur Zystoskopie stehen bildgebende Verfahren wie die Sonographie, die MRT und die CT zur Verfügung. Diese Methoden sind jedoch weniger invasiv, bieten aber nicht die gleiche Detailgenauigkeit und therapeutische Möglichkeiten wie die Zystoskopie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Weiterentwicklung der Zystoskope, um die Bildqualität zu verbessern und die Invasivität zu reduzieren. Auch die Untersuchung von Biomarkern zur frühzeitigen Erkennung von Blasenkrebs ist ein wichtiger Forschungsbereich.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven umfassen die Integration von künstlicher Intelligenz zur automatisierten Befundung und die Entwicklung minimalinvasiver Techniken, um die Patientenbelastung weiter zu reduzieren.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Zystoskopie ist ein essenzielles Verfahren in der Urologie, das detaillierte Einblicke in die Blase und die Harnröhre bietet. Sie ermöglicht sowohl die Diagnostik als auch die Therapie in einem Eingriff.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist die Zystoskopie ein unverzichtbares Instrument in der urologischen Praxis, das eine präzise Diagnose und effiziente Behandlung vieler urologischer Erkrankungen ermöglicht.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 200
+      {
+        id: 200,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Zystoskopie durchgeführt wird, um die Blase und die Harnröhre zu untersuchen und mögliche Ursachen für Beschwerden wie Blut im Urin, Harnwegsinfektionen oder Schmerzen abzuklären.",
+            third:
+              "Wir führen diese Untersuchung durch, um die Ursache für Ihr wiederkehrendes Blut im Urin zu finden und sicherzustellen, dass keine ernsthafte Erkrankung vorliegt.",
+            fourth:
+              "Die Zystoskopie hilft uns, Ihre wiederkehrenden Harnwegsinfektionen zu untersuchen und mögliche anatomische Anomalien zu identifizieren.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den Patienten, dass ein dünnes, flexibles Instrument (Zystoskop) durch die Harnröhre in die Blase eingeführt wird, um diese unter direkter Sicht zu untersuchen.",
+            third:
+              "Wir führen ein dünnes, flexibles Instrument durch Ihre Harnröhre in die Blase ein, um diese genau zu betrachten.",
+            fourth:
+              "Ein spezielles Endoskop wird durch die Harnröhre in die Blase eingeführt, damit wir die Blasenschleimhaut und andere Strukturen direkt untersuchen können.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Erwähnen Sie, dass der Patient vor der Untersuchung möglicherweise nüchtern bleiben und eine lokale oder allgemeine Anästhesie erhalten muss.",
+            third:
+              "Bitte bleiben Sie ab Mitternacht nüchtern, da Sie eine leichte Narkose erhalten werden.",
+            fourth:
+              "Sie müssen möglicherweise eine lokale Betäubung erhalten, daher informieren Sie uns bitte, wenn Sie Allergien gegen Betäubungsmittel haben.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie die möglichen Risiken wie Infektionen, Blutungen, Schmerzen oder Verletzungen der Harnröhre oder Blase.",
+            third:
+              "Es besteht ein geringes Risiko für Infektionen oder leichte Blutungen nach dem Eingriff.",
+            fourth:
+              "Sie könnten nach der Untersuchung ein brennendes Gefühl beim Wasserlassen verspüren, aber das sollte bald abklingen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass die Zystoskopie eine direkte und genaue Diagnose ermöglicht und oft auch therapeutische Maßnahmen durchgeführt werden können.",
+            third:
+              "Ein großer Vorteil ist, dass wir direkt sehen können, was in Ihrer Blase vor sich geht, und gegebenenfalls sofort behandeln können.",
+            fourth:
+              "Dieses Verfahren ermöglicht uns, sehr präzise Diagnosen zu stellen und, falls nötig, sofort kleine Eingriffe durchzuführen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erläutern Sie, dass bildgebende Verfahren wie Ultraschall, MRT oder CT zur Verfügung stehen, diese jedoch nicht die gleiche Detailgenauigkeit bieten.",
+            third:
+              "Alternativ könnten wir einen Ultraschall durchführen, aber dieser zeigt uns nicht die gleichen Details wie die Zystoskopie.",
+            fourth:
+              "Eine MRT könnte ebenfalls hilfreich sein, aber sie kann nicht die direkte Sicht bieten, die wir durch eine Zystoskopie erhalten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass bestimmte Bedingungen wie schwere Harnwegsinfektionen oder Blutgerinnungsstörungen Kontraindikationen darstellen können.",
+            third:
+              "Wenn Sie aktuell eine schwere Harnwegsinfektion haben, müssen wir die Untersuchung möglicherweise verschieben.",
+            fourth:
+              "Bei Blutgerinnungsstörungen besteht ein höheres Risiko für Komplikationen, daher müssen wir dies vorher genau abklären.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche Befunde möglich sind, wie Tumore, Entzündungen, Steine oder anatomische Anomalien.",
+            third:
+              "Wir könnten Tumore, entzündliche Veränderungen, Blasensteine oder anatomische Anomalien finden.",
+            fourth:
+              "Mögliche Ergebnisse sind zum Beispiel Entzündungen der Blasenschleimhaut oder das Vorhandensein von Blasentumoren.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten vor der Durchführung der Untersuchung.",
+            third:
+              "Es ist wichtig, dass Sie alle Informationen verstehen und Ihr Einverständnis geben, bevor wir mit der Untersuchung beginnen.",
+            fourth:
+              "Ihr schriftliches Einverständnis ist notwendig, damit wir sicherstellen können, dass Sie die Untersuchung und die möglichen Risiken vollständig verstanden haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erläutern Sie, wie das Einverständnis eingeholt wird, durch eine ausführliche Aufklärung des Patienten über den Ablauf, die Risiken und Vorteile der Untersuchung.",
+            third:
+              "Wir werden Ihnen alle Details des Verfahrens erklären und Ihre Fragen beantworten, bevor Sie das Einverständnisformular unterschreiben.",
+            fourth:
+              "Nachdem wir das Verfahren, die Risiken und Vorteile ausführlich besprochen haben, bitten wir Sie, das Einverständnisformular zu unterzeichnen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Nachsorge und Verhalten nach der Untersuchung, wie beispielsweise das Trinken von viel Wasser zur Vermeidung von Infektionen.",
+            third:
+              "Trinken Sie bitte viel Wasser nach der Untersuchung, um das Risiko einer Infektion zu verringern.",
+            fourth:
+              "Vermeiden Sie körperliche Anstrengung für 24 Stunden nach der Untersuchung und trinken Sie reichlich Flüssigkeit.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die Ergebnisse der Zystoskopie im Anschluss an die Untersuchung mit ihm besprochen werden und weitere Schritte je nach Befund geplant werden.",
+            third:
+              "Wir werden die Ergebnisse sofort nach der Untersuchung mit Ihnen besprechen und die nächsten Schritte planen.",
+            fourth:
+              "Nach der Untersuchung werden wir Sie über die Befunde informieren und falls nötig, die nächsten diagnostischen oder therapeutischen Schritte besprechen.",
+          },
+        ],
+      },
+      // 3tab 201
+      {
+        id: 201,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie dem Kollegen, dass es sich bei der Zystoskopie um eine endoskopische Untersuchung der Harnblase und der Harnröhre handelt, bei der ein Zystoskop verwendet wird, um direkte visuelle Diagnostik und gegebenenfalls therapeutische Maßnahmen durchzuführen.",
+            third:
+              "Die Zystoskopie ist eine endoskopische Untersuchung der Blase und Harnröhre mittels eines Zystoskops, das es uns ermöglicht, diese Strukturen direkt zu inspizieren und bei Bedarf therapeutisch zu intervenieren.",
+            fourth:
+              "Es handelt sich um eine minimalinvasive Methode, bei der ein flexibles oder starres Endoskop durch die Harnröhre in die Blase eingeführt wird, um eine direkte Sicht auf die Schleimhäute zu ermöglichen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die Zystoskopie zur Untersuchung von Blasen- und Harnröhrenanomalien wie Tumoren, Steinen, Strikturen und Entzündungen dient.",
+            third:
+              "Mit der Zystoskopie können wir Anomalien wie Blasentumoren, Harnröhrenstrikturen, Blasensteine und entzündliche Prozesse identifizieren.",
+            fourth:
+              "Diese Untersuchung ermöglicht uns, sowohl strukturelle als auch entzündliche Veränderungen der Blase und Harnröhre zu diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die typischen Befunde wie Tumore, Blasensteine, Entzündungen, Divertikel und Harnröhrenstrikturen sowie deren diagnostische und therapeutische Konsequenzen.",
+            third:
+              "Typische Befunde können Blasentumore, die wir zur Biopsie entnehmen können, oder Harnröhrenstrikturen sein, die wir sofort dilatieren können.",
+            fourth:
+              "Wir können Blasensteine identifizieren und entfernen oder entzündliche Veränderungen diagnostizieren und gegebenenfalls Biopsien nehmen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erwähnen Sie, dass Indikationen für die Zystoskopie u.a. persistierende Hämaturie, wiederkehrende Harnwegsinfektionen, Verdacht auf Blasentumoren und Harnröhrenanomalien sind.",
+            third:
+              "Indikationen umfassen anhaltende Blutungen im Urin, wiederkehrende Infektionen, verdächtige Läsionen im Ultraschall und Symptome einer Harnröhrenobstruktion.",
+            fourth:
+              "Bei Patienten mit wiederholten Harnwegsinfektionen oder Verdacht auf Blasenkrebs wird eine Zystoskopie dringend empfohlen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, dass Kontraindikationen schwere Harnwegsinfektionen, akute Harnröhrenverletzungen und ausgeprägte Blutgerinnungsstörungen umfassen.",
+            third:
+              "Schwere Infektionen der Harnwege oder akute Verletzungen der Harnröhre stellen Kontraindikationen dar.",
+            fourth:
+              "Bei Patienten mit erheblichen Gerinnungsstörungen müssen wir besonders vorsichtig sein oder alternative diagnostische Methoden in Betracht ziehen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen bei den zu untersuchenden Symptomen, wie zum Beispiel Nephrolithiasis, interstitielle Zystitis und Prostatavergrößerung.",
+            third:
+              "Differenzialdiagnosen umfassen Nephrolithiasis, die durch Bildgebung bestätigt werden könnte, und interstitielle Zystitis, die durch Biopsie diagnostiziert werden kann.",
+            fourth:
+              "Neben Blasentumoren sollten wir auch an chronische Blasenentzündungen oder eine vergrößerte Prostata denken, die ähnliche Symptome hervorrufen können.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erläutern Sie, wie die Ergebnisse der Zystoskopie in die weiteren Behandlungspläne integriert werden können, einschließlich operativer Eingriffe oder medikamentöser Therapien.",
+            third:
+              "Die Ergebnisse der Zystoskopie helfen uns, die Notwendigkeit für operative Eingriffe wie die Resektion eines Tumors oder die Dilatation einer Striktur zu bestimmen.",
+            fourth:
+              "Basierend auf den Befunden können wir medikamentöse Therapien gegen Infektionen oder Entzündungen einleiten und weitere diagnostische Tests planen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Wichtigkeit der Zusammenarbeit mit Radiologen, Pathologen und Onkologen bei der Diagnose und Behandlung der durch Zystoskopie entdeckten Erkrankungen.",
+            third:
+              "Eine enge Zusammenarbeit mit Radiologen für die Bildgebung und Pathologen für die Histologie ist unerlässlich, um eine genaue Diagnose zu stellen.",
+            fourth:
+              "Bei der Behandlung von Blasentumoren arbeiten wir eng mit Onkologen zusammen, um eine umfassende Therapie zu gewährleisten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Diskutieren Sie, wie die Qualität der Zystoskopieprozeduren durch regelmäßige Schulungen, standardisierte Protokolle und Qualitätssicherungsmaßnahmen gewährleistet wird.",
+            third:
+              "Regelmäßige Schulungen des Personals und die Anwendung standardisierter Protokolle sind entscheidend für die Aufrechterhaltung hoher Qualitätsstandards.",
+            fourth:
+              "Qualitätssicherungsmaßnahmen wie regelmäßige Überprüfungen und Feedbackschleifen helfen, die Prozeduren stetig zu verbessern.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie, wie die Befunde der Zystoskopie detailliert dokumentiert werden sollten und welche Schritte zur Nachverfolgung und weiteren Betreuung der Patienten notwendig sind.",
+            third:
+              "Eine detaillierte Dokumentation der Befunde in der Patientenakte ist wichtig, und es sollten klare Nachverfolgungspläne erstellt werden, einschließlich Kontrollterminen.",
+            fourth:
+              "Wir müssen sicherstellen, dass alle Befunde dokumentiert und der Patient über die nächsten Schritte, wie Kontrolluntersuchungen oder weitere Behandlungen, informiert wird.",
+          },
+        ],
+      },
+      // 4tab 202
+      {
+        id: 202,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "60-jähriger Patient klagt über Blut im Urin und Schmerzen beim Wasserlassen. Keine relevante Vorgeschichte.",
+            fourth:
+              "45-jährige Patientin berichtet über wiederkehrende Harnwegsinfektionen und Schmerzen im Unterbauch.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Zystoskopie zeigt eine glatte, rosa Blasenschleimhaut ohne Anomalien.",
+            third:
+              "Zystoskopie zeigt eine 3 cm große, unregelmäßige, leicht blutende Masse an der Blasenwand.",
+            fourth:
+              "Zystoskopie zeigt mehrere kleine, harte, weißliche Blasensteine in der Blase.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss urologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf einen Blasentumor hin. Die Lokalisation und das Erscheinungsbild korrelieren mit den Symptomen des Patienten.",
+            fourth:
+              "Die Steine verursachen mechanische Reizung und könnten für die wiederkehrenden Infektionen verantwortlich sein.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer transurethralen Resektion und gegebenenfalls weiterer onkologischer Therapien.",
+            fourth:
+              "Wichtig für die Planung der Entfernung der Steine mittels Zystolitholapaxie und Vorbeugung weiterer Steinbildung.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Blase. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines Blasentumors basierend auf Zystoskopie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Blasensteinen aufgrund der Zystoskopie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogene Blasenschleimhaut ohne Auffälligkeiten in allen Bereichen.",
+            third:
+              "Zystoskopische Aufnahmen zeigen eine unregelmäßige, hypervaskularisierte Masse an der Blasenwand.",
+            fourth:
+              "Zystoskopische Aufnahmen zeigen mehrere kleine, harte Steine, die in der Blase verteilt sind.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige gesundheitliche Überprüfungen und jährliche Vorsorgeuntersuchungen. Es ist zu empfehlen, weiterhin auf Symptome zu achten und bei Veränderungen sofort einen Arzt zu konsultieren.",
+            third:
+              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+            fourth:
+              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+          },
+        ],
+      },
+      // 5tab 203
+      {
+        id: 203,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text_list: [
+          {
+            bold: "Zystoskop :",
+            other:
+              "Das Hauptinstrument der Zystoskopie, ein dünnes, flexibles oder starres Rohr, das mit einer Lichtquelle und einer Kamera ausgestattet ist. Das Zystoskop wird durch die Harnröhre in die Blase eingeführt.",
+          },
+          {
+            bold: "Lichtquelle :",
+            other:
+              "Eine starke Lichtquelle, die über Glasfasern oder LED-Technologie das Innere der Harnröhre und Blase beleuchtet, um eine klare Sicht zu gewährleisten.",
+          },
+          {
+            bold: "Kamera :",
+            other:
+              "Eine hochauflösende Kamera am Ende des Zystoskops, die Bilder des Harntrakts auf einen Monitor überträgt. Diese Bilder ermöglichen dem Arzt, die inneren Strukturen detailliert zu untersuchen.",
+          },
+          {
+            bold: "Monitor :",
+            other:
+              "Ein Bildschirm, auf dem die Live-Bilder der Kamera angezeigt werden. Der Arzt beobachtet den Monitor, um die Untersuchung durchzuführen und diagnostische Entscheidungen zu treffen.",
+          },
+          {
+            bold: "Arbeitskanal :",
+            other:
+              "Ein Kanal im Zystoskop, durch den kleine Instrumente eingeführt werden können, um Gewebeproben zu entnehmen (Biopsie) oder kleinere Eingriffe durchzuführen, wie z.B. das Entfernen von Blasensteinen.",
+          },
+          {
+            bold: "Spül- und Absaugsystem :",
+            other:
+              "Ein System zur Spülung der Blase mit steriler Flüssigkeit, um eine klare Sicht zu ermöglichen. Überschüssige Flüssigkeit und kleine Partikel werden abgesaugt, um die Sicht nicht zu behindern.",
+          },
+          {
+            bold: "Steuerkonsole :",
+            other:
+              "Eine Konsole, über die der Arzt das Zystoskop und die angeschlossenen Systeme steuert. Hier können Einstellungen vorgenommen und Funktionen wie Lichtintensität und Kamerafokus angepasst werden.",
+          },
+          {
+            bold: "Flüssigkeitsbehälter :",
+            other:
+              "Behälter für die sterile Spülflüssigkeit, die während der Zystoskopie in die Blase eingeführt wird.",
+          },
+          {
+            bold: "Biopsiezangen und andere Instrumente :",
+            other:
+              "Spezielle Werkzeuge, die durch den Arbeitskanal des Zystoskops eingeführt werden können, um Gewebeproben zu entnehmen oder therapeutische Eingriffe durchzuführen.",
+          },
+          {
+            bold: "Desinfektionssystem :",
+            other:
+              "Ein System zur gründlichen Reinigung und Sterilisation des Zystoskops nach jeder Verwendung, um Infektionen zu verhindern.",
+          },
+          {
+            bold: "Sprachkommunikationssystem :",
+            other:
+              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+          },
+        ],
+      },
+      // 6tab 204
+      {
+        id: 204,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Zystoskopie :",
+            other: "Endoskopische Untersuchung der Blase und Harnröhre.",
+          },
+          {
+            bold: "Zystoskop :",
+            other:
+              "Das Instrument, das zur Durchführung der Zystoskopie verwendet wird.",
+          },
+          {
+            bold: "Blasenschleimhaut :",
+            other: "Die innere Auskleidung der Blase.",
+          },
+          {
+            bold: "Harnröhre :",
+            other:
+              "Der Kanal, der den Urin von der Blase nach außen transportiert.",
+          },
+          {
+            bold: "Biopsie :",
+            other: "Entnahme von Gewebeproben zur weiteren Untersuchung.",
+          },
+          {
+            bold: "Blasentumor :",
+            other:
+              "Ein abnormales Wachstum von Zellen in der Blase, das bösartig oder gutartig sein kann.",
+          },
+          {
+            bold: "Blasensteine :",
+            other:
+              "Verhärtete Ablagerungen aus Mineralien, die sich in der Blase bilden.",
+          },
+          {
+            bold: "Harnröhrenstriktur :",
+            other: "Eine Verengung der Harnröhre, die den Urinfluss behindert.",
+          },
+          {
+            bold: "Anästhesie :",
+            other:
+              "Betäubung, um Schmerzen während der Untersuchung zu vermeiden.",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Eine Substanz, die verwendet wird, um Strukturen während der Bildgebung sichtbarer zu machen.",
+          },
+          {
+            bold: "Sterile Kochsalzlösung :",
+            other:
+              "Eine Lösung, die verwendet wird, um die Blase während der Zystoskopie zu füllen und die Sicht zu verbessern.",
+          },
+          {
+            bold: "Resektion :",
+            other: "Chirurgische Entfernung von Gewebe, z.B. eines Tumors.",
+          },
+          {
+            bold: "Dilatation :",
+            other: "Erweiterung einer verengten Harnröhre.",
+          },
+          {
+            bold: "Hämaturie :",
+            other: "Blut im Urin.",
+          },
+          {
+            bold: "Prozedur :",
+            other: "Ein medizinischer Eingriff oder eine Untersuchung.",
+          },
+          {
+            bold: "Komplikationen :",
+            other:
+              "Unerwünschte Ereignisse oder Nebenwirkungen während oder nach einem Eingriff.",
+          },
+          {
+            bold: "Urologie :",
+            other:
+              "Das medizinische Fachgebiet, das sich mit Erkrankungen des Harntrakts und des männlichen Genitaltrakts beschäftigt.",
+          },
+          {
+            bold: "Nephrolithiasis :",
+            other: "Nierensteine.",
+          },
+          {
+            bold: "Interstitielle Zystitis :",
+            other: "Chronische Entzündung der Blasenwand.",
+          },
+          {
+            bold: "Pathologischer Befund :",
+            other:
+              "Diagnose einer Krankheit basierend auf Untersuchungsergebnissen.",
+          },
+          {
+            bold: "Therapieoptionen :",
+            other: "Verschiedene Behandlungsmöglichkeiten.",
+          },
+          {
+            bold: "Nachsorge :",
+            other:
+              "Medizinische Betreuung und Überwachung nach einem Eingriff oder einer Behandlung.",
+          },
+          {
+            bold: "Prognose :",
+            other: "Vorhersage über den Verlauf und Ausgang einer Krankheit.",
+          },
+          {
+            bold: "Urinanalyse :",
+            other: "Untersuchung des Urins auf Anomalien.",
+          },
+          {
+            bold: "Hydronephrose :",
+            other: "Schwellung der Niere aufgrund von Harnstau.",
+          },
+          {
+            bold: "Blasendivertikel :",
+            other: "Ausstülpungen der Blasenwand.",
+          },
+          {
+            bold: "Endoskopische Chirurgie :",
+            other:
+              "Chirurgische Eingriffe, die mit einem Endoskop durchgeführt werden.",
+          },
+          {
+            bold: "Invasiv :",
+            other: "Ein medizinisches Verfahren, das in den Körper eingreift.",
+          },
+          {
+            bold: "Minimalinvasiv :",
+            other:
+              "Ein Verfahren, das so wenig wie möglich in den Körper eingreift.",
+          },
+          {
+            bold: "Blasenkatheter :",
+            other:
+              "Ein Schlauch, der in die Blase eingeführt wird, um den Urin abzuleiten.",
+          },
+          {
+            bold: "Blasenspiegelung :",
+            other: "Ein anderer Begriff für Zystoskopie.",
+          },
+          {
+            bold: "Prostatavergrößerung :",
+            other:
+              "Vergrößerung der Prostata, die den Harnfluss behindern kann.",
+          },
+        ],
+      },
+      // 7tab 205
+      {
+        id: 205,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 206
+      {
+        id: 206,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1fySNrY2yf3ULuwHllWan-m7ZE39wqzTN/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 24
 ];
