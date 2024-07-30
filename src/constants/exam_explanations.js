@@ -9557,7 +9557,9 @@ export const parentTabs = [
       },
     ],
   },
+
   // Endoskopischer Verfahren
+
   // start of parent tab 15 Arthroskopie
   {
     id: 15,
@@ -12905,7 +12907,7 @@ export const parentTabs = [
       },
       // 6tab 164
       {
-        id: 156,
+        id: 164,
         title: "Wortschatz",
         text: "Diese Begriffe und Phrasen sind wesentlich für die Kommunikation und das Verständnis im Bereich der ÖGD-Diagnostik und sollten für die Fachsprachenprüfung gut beherrscht werden.",
         text_list: [
@@ -13094,7 +13096,7 @@ export const parentTabs = [
     childTabs: [
       // 1tab 167
       {
-        id: 159,
+        id: 167,
         title: "Einleitung",
         list: [
           {
@@ -13205,7 +13207,7 @@ export const parentTabs = [
       },
       // 2tab 168
       {
-        id: 160,
+        id: 168,
         title: "Patient-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -13332,7 +13334,7 @@ export const parentTabs = [
       },
       // 3tab 169
       {
-        id: 161,
+        id: 169,
         title: "Arzt-Arzt Gespräch",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -13441,7 +13443,7 @@ export const parentTabs = [
       },
       // 4tab 170
       {
-        id: 162,
+        id: 170,
         title: "Die pathologische Befunden und Normalbefund",
         tableColumns: [
           { name: "first", visualText: "" },
@@ -13523,7 +13525,7 @@ export const parentTabs = [
       },
       // 5tab 171
       {
-        id: 163,
+        id: 171,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
         text: "Ein Bronchoskopie-Gerät ist ein spezialisiertes medizinisches Instrument, das zur direkten Untersuchung der Atemwege verwendet wird. Hier sind die wesentlichen Komponenten und Funktionen eines Bronchoskopie-Geräts:",
@@ -13587,7 +13589,7 @@ export const parentTabs = [
       },
       // 6tab 172
       {
-        id: 156,
+        id: 172,
         title: "Wortschatz",
         text: "Diese Begriffe und Phrasen sind wesentlich für die Kommunikation und das Verständnis im Bereich der Bronchoskopie-Diagnostik:",
         text_list: [
@@ -13690,7 +13692,7 @@ export const parentTabs = [
       },
       // 7tab 173
       {
-        id: 165,
+        id: 173,
         title: "Links",
         text: "",
         text_list: [
@@ -13742,9 +13744,687 @@ export const parentTabs = [
       },
       // 8tab 174
       {
-        id: 166,
+        id: 174,
         title: "PDF",
         link: "https://drive.google.com/file/d/1P7iLtZr_6HIZpHVdgTjwGvVKbmbWG7c5/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 20
+  // start of parent tab 21 Die bronchoalveoläre Lavage
+  {
+    id: 21,
+    title: "Bronchoalveoläre Lavage",
+    checked: false,
+    childTabs: [
+      // 1tab 175
+      {
+        id: 175,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die bronchoalveoläre Lavage dient dazu, Flüssigkeit aus den tieferen Atemwegen zu gewinnen, um diese auf zelluläre und mikrobiologische Befunde zu untersuchen. Sie wird vor allem zur Diagnose von Lungenerkrankungen und Infektionen eingesetzt.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die BAL ist besonders relevant bei der Diagnose von interstitiellen Lungenerkrankungen, alveolären Hämorrhagien, Pneumonien und anderen infektiösen Erkrankungen der Lunge. Sie wird auch genutzt, um die Reaktion auf therapeutische Maßnahmen zu überwachen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die BAL basiert auf der Einführung von steriler Kochsalzlösung in ein Lungensegment durch ein Bronchoskop. Diese Flüssigkeit wird anschließend wieder abgesaugt, um sie zu analysieren.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Ein flexibles Bronchoskop wird durch Mund oder Nase in die Lunge eingeführt. Nach Positionierung im Zielbereich wird sterile Kochsalzlösung injiziert und nach einer kurzen Einwirkzeit abgesaugt. Das gewonnene Material wird zur zytologischen, mikrobiologischen und immunologischen Analyse genutzt.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Analyse der BAL-Flüssigkeit umfasst die Untersuchung auf zelluläre Zusammensetzung, mikrobiologische Kulturen und molekulare Diagnostik. Differenzierung der Zelltypen kann Hinweise auf spezifische Erkrankungen geben.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde können eine erhöhte Anzahl von neutrophilen Granulozyten bei bakteriellen Infektionen oder eine erhöhte Anzahl von eosinophilen Granulozyten bei allergischen Reaktionen sein. Auch das Vorhandensein von atypischen Zellen kann auf Malignome hinweisen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die BAL ist ein minimalinvasives Verfahren, das wertvolle diagnostische Informationen liefert. Sie kann helfen, spezifische Lungenerkrankungen zu identifizieren und die Wirksamkeit von Therapien zu überwachen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Nachteile der BAL können die Unannehmlichkeiten für den Patienten und die Notwendigkeit von Sedierung oder Anästhesie sein. Zudem ist das Verfahren zeitaufwendig und erfordert spezielle Ausrüstung.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken zählen Blutungen, Infektionen und in seltenen Fällen eine Verschlechterung der Lungenfunktion. Auch allergische Reaktionen auf die verwendeten Lösungen sind möglich.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die BAL spielt eine zentrale Rolle in der Diagnose und Behandlung von Lungenerkrankungen. Sie ermöglicht eine gezielte Therapie durch spezifische Diagnose und trägt zur Überwachung des Krankheitsverlaufs bei.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Für das Patientenmanagement ist die BAL von großer Bedeutung, da sie eine genaue Diagnose ermöglicht und somit die Grundlage für eine effektive Therapie bildet. Sie trägt auch zur Früherkennung und Prävention bei.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur BAL zählen nicht-invasive Verfahren wie die hochauflösende Computertomographie (HRCT) der Lunge, serologische Tests und Lungenszintigraphien. Jedes dieser Verfahren hat spezifische Vor- und Nachteile, die je nach klinischem Bild berücksichtigt werden müssen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse zeigen, dass die BAL in Kombination mit molekularbiologischen Techniken wie der Polymerase-Kettenreaktion (PCR) eine noch präzisere Diagnose ermöglicht. Studien untersuchen auch die Anwendung neuer Biomarker in der BAL-Flüssigkeit.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven umfassen die Weiterentwicklung der BAL-Techniken und die Integration neuer diagnostischer Marker, um die Genauigkeit und Aussagekraft der Untersuchung weiter zu verbessern. Auch die Erforschung der genetischen und proteomischen Profile in der BAL-Flüssigkeit ist ein vielversprechendes Gebiet.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die bronchoalveoläre Lavage ist ein essenzielles diagnostisches Verfahren zur Untersuchung von Lungenerkrankungen. Sie liefert wertvolle Informationen zur zellulären und mikrobiologischen Zusammensetzung der unteren Atemwege.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt trägt die BAL entscheidend zur Diagnose und Behandlung von Lungenerkrankungen bei. Sie unterstützt Ärzte dabei, präzise Diagnosen zu stellen und maßgeschneiderte Therapien zu entwickeln, was letztlich die Patientenversorgung verbessert.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 176
+      {
+        id: 176,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der BAL darin besteht, Flüssigkeit aus den tiefen Atemwegen zu gewinnen, um sie auf zelluläre und mikrobiologische Befunde zu untersuchen.",
+            third:
+              "Wir möchten Flüssigkeit aus Ihren Atemwegen entnehmen, um mögliche Infektionen oder Entzündungen zu diagnostizieren.",
+            fourth:
+              "Mit dieser Untersuchung können wir genauer feststellen, ob eine spezifische Lungenerkrankung vorliegt.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erklären Sie den Ablauf des Verfahrens: Ein flexibles Bronchoskop wird durch Mund oder Nase in die Lunge eingeführt. Sterile Kochsalzlösung wird in einen Lungensegment injiziert und abgesaugt.",
+            third:
+              "Wir führen ein dünnes, flexibles Rohr durch Ihre Nase in die Lunge ein, spülen mit Kochsalzlösung und saugen diese ab.",
+            fourth:
+              "Sie werden leicht sediert, dann führen wir ein Bronchoskop ein, injizieren und saugen Flüssigkeit zur Analyse ab.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass der Patient vor der BAL nüchtern sein sollte. Erklären Sie die Notwendigkeit der Sedierung oder Anästhesie und informieren Sie über mögliche Voruntersuchungen.",
+            third:
+              "Bitte essen und trinken Sie sechs Stunden vor dem Eingriff nichts. Wir werden Ihnen auch ein Beruhigungsmittel geben.",
+            fourth:
+              "Vor dem Eingriff müssen Sie nüchtern sein. Eventuell führen wir vorher Bluttests und eine Lungenfunktionsprüfung durch.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erläutern Sie mögliche Risiken wie Blutungen, Infektionen, allergische Reaktionen auf die Lösungen und in seltenen Fällen eine Verschlechterung der Lungenfunktion.",
+            third:
+              "Es gibt ein geringes Risiko für Blutungen oder Infektionen. In seltenen Fällen kann sich die Lungenfunktion verschlechtern.",
+            fourth:
+              "Manche Patienten können eine allergische Reaktion auf die Kochsalzlösung haben, was sehr selten vorkommt.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie die Vorteile des Verfahrens: Es ist minimalinvasiv, liefert wertvolle diagnostische Informationen und hilft, spezifische Lungenerkrankungen zu identifizieren sowie die Wirksamkeit von Therapien zu überwachen.",
+            third:
+              "Das Verfahren ist minimalinvasiv und liefert präzise Diagnosen, die bei der Behandlung von Lungenerkrankungen helfen.",
+            fourth:
+              "Mit dieser Methode können wir gezielt Infektionen und Entzündungen in der Lunge diagnostizieren und behandeln.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erklären Sie, dass es Alternativen gibt, wie hochauflösende Computertomographie (HRCT), serologische Tests und Lungenszintigraphien.",
+            third:
+              "Alternativ könnten wir eine CT der Lunge machen, aber das gibt weniger spezifische Informationen als die BAL.",
+            fourth:
+              "Eine Blutuntersuchung könnte auch Hinweise geben, aber die BAL liefert detailliertere Ergebnisse.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie über Kontraindikationen, wie schwere Herz- oder Lungenkrankheiten, die das Risiko des Verfahrens erhöhen.",
+            third:
+              "Wenn Sie an schweren Herz- oder Lungenkrankheiten leiden, könnte das Verfahren riskanter sein.",
+            fourth:
+              "Bei bestimmten Vorerkrankungen, wie schwerer COPD, kann das Risiko des Eingriffs erhöht sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Analyse der BAL-Flüssigkeit Hinweise auf verschiedene Erkrankungen geben kann, wie bakterielle Infektionen, allergische Reaktionen oder Malignome.",
+            third:
+              "Wir könnten Hinweise auf bakterielle Infektionen oder allergische Reaktionen finden.",
+            fourth:
+              "Die Untersuchung kann auch atypische Zellen entdecken, die auf eine Krebserkrankung hinweisen könnten.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass das informierte Einverständnis des Patienten unerlässlich ist. Der Patient muss die Risiken, Vorteile und den Ablauf des Verfahrens verstehen.",
+            third:
+              "Es ist wichtig, dass Sie alle Informationen verstehen und zustimmen, bevor wir mit dem Verfahren beginnen.",
+            fourth:
+              "Wir benötigen Ihr schriftliches Einverständnis, nachdem Sie über alle Risiken und Vorteile informiert wurden.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erläutern Sie, dass der Patient alle notwendigen Informationen erhält und die Möglichkeit hat, Fragen zu stellen, und gibt anschließend schriftlich seine Zustimmung.",
+            third:
+              "Nach unserer Erklärung können Sie Fragen stellen und dann das Einverständnisformular unterschreiben.",
+            fourth:
+              "Wir werden alle Details besprechen und Sie bitten, das Einverständnisformular zu unterschreiben, wenn Sie bereit sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise, wie die Notwendigkeit, sich nach dem Eingriff auszuruhen, und informieren Sie über mögliche Nachwirkungen, wie Halsschmerzen oder Husten.",
+            third:
+              "Nach dem Eingriff sollten Sie sich ausruhen. Es kann sein, dass Sie leichte Halsschmerzen oder Husten haben.",
+            fourth:
+              "Bitte ruhen Sie sich nach der Untersuchung aus. Leichte Beschwerden im Hals oder Husten sind normal.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der BAL in der Regel einige Tage nach dem Eingriff vorliegen und der behandelnde Arzt die Befunde mit dem Patienten besprechen wird.",
+            third:
+              "Die Ergebnisse sind in ein paar Tagen verfügbar, und wir werden diese dann gemeinsam besprechen.",
+            fourth:
+              "Sobald die Ergebnisse vorliegen, wird Ihr behandelnder Arzt sie mit Ihnen durchgehen.",
+          },
+        ],
+      },
+      // 3tab 177
+      {
+        id: 177,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die bronchoalveoläre Lavage (BAL) ein diagnostisches Verfahren ist, bei dem sterile Kochsalzlösung in die Lunge eingebracht und anschließend abgesaugt wird, um Flüssigkeit aus den tiefen Atemwegen zu gewinnen.",
+            third:
+              "Die BAL ist ein Verfahren zur Gewinnung von Proben aus den tiefen Atemwegen durch Spülung mit Kochsalzlösung.",
+            fourth:
+              "Bei der BAL spülen wir die Bronchien mit steriler Kochsalzlösung und saugen die Flüssigkeit zur Analyse ab.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die BAL verwendet wird, um zelluläre und mikrobiologische Proben zu gewinnen, die bei der Diagnose von Lungenerkrankungen wie Infektionen, interstitiellen Lungenerkrankungen und malignen Erkrankungen hilfreich sind.",
+            third:
+              "Mit der BAL können wir zelluläre und mikrobiologische Analysen durchführen, um Infektionen oder Entzündungen zu diagnostizieren.",
+            fourth:
+              "Dieses Verfahren erlaubt uns, detaillierte Informationen über die Zusammensetzung und mögliche Pathogene in der Lunge zu erhalten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erklären Sie, dass die BAL-Flüssigkeit auf zelluläre Zusammensetzung, mikrobiologische Kulturen und molekulare Diagnostik untersucht wird. Ergebnisse können Hinweise auf Infektionen, allergische Reaktionen oder malignen Zellen geben.",
+            third:
+              "Die Analyse der BAL-Flüssigkeit zeigte eine hohe Anzahl von Neutrophilen, was auf eine bakterielle Infektion hindeutet.",
+            fourth:
+              "Wir fanden atypische Zellen in der BAL, die auf ein mögliches Malignom hinweisen könnten.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie Indikationen wie Verdacht auf Pneumonie, interstitielle Lungenerkrankungen, alveoläre Hämorrhagien, malignen Erkrankungen oder zur Überwachung der Therapieeffizienz bei bekannten Lungenerkrankungen.",
+            third:
+              "Die BAL ist indiziert bei Verdacht auf Pneumonie, insbesondere bei immunsupprimierten Patienten.",
+            fourth:
+              "Dieses Verfahren wird häufig bei interstitiellen Lungenerkrankungen eingesetzt, um die Diagnose zu bestätigen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie Kontraindikationen wie schwere Herz- oder Lungenkrankheiten, instabile Patienten, starke Blutungsneigung oder Patienten mit schwerer Hypoxämie.",
+            third:
+              "Patienten mit schwerer Herzinsuffizienz sollten keine BAL erhalten, da das Risiko zu hoch ist.",
+            fourth:
+              "Bei Patienten mit schwerer Hypoxämie kann die BAL kontraindiziert sein, da sie die Sauerstoffsättigung weiter verschlechtern könnte.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die durch die BAL geklärt werden können, wie infektiöse vs. nicht-infektiöse Lungenerkrankungen, die Pneumonitis oder Neoplasien.",
+            third:
+              "Durch die BAL konnten wir zwischen einer bakteriellen Pneumonie und einer Pilzinfektion differenzieren.",
+            fourth:
+              "Die BAL half uns, eine Eosinophile Pneumonie von einer allergischen Bronchopulmonalen Aspergillose zu unterscheiden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, dass die Ergebnisse der BAL die Erstellung von gezielten Behandlungsplänen ermöglichen, beispielsweise die spezifische Antibiotikatherapie bei bakterieller Infektion oder Maßnahmen bei malignen Befunden.",
+            third:
+              "Basierend auf den BAL-Ergebnissen haben wir eine gezielte Antibiotikatherapie für den Patienten eingeleitet.",
+            fourth:
+              "Die Detektion von malignen Zellen in der BAL führte zur Überweisung des Patienten zur weiteren onkologischen Abklärung und Behandlung.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachabteilungen wie Mikrobiologie, Pathologie und Onkologie, um eine umfassende Diagnostik und Therapieplanung zu gewährleisten.",
+            third:
+              "Wir arbeiten eng mit der Mikrobiologie zusammen, um die Ergebnisse der BAL schnell zu erhalten und die Behandlung entsprechend anzupassen.",
+            fourth:
+              "Die Zusammenarbeit mit der Onkologie ist entscheidend, wenn in der BAL maligne Zellen nachgewiesen werden.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie die Notwendigkeit von Standardprotokollen zur Durchführung der BAL, regelmäßige Schulungen für das Personal und die Überwachung der Ergebnisse.",
+            third:
+              "Wir haben Standardprotokolle für die BAL eingeführt, um die Konsistenz und Zuverlässigkeit der Ergebnisse zu gewährleisten.",
+            fourth:
+              "Regelmäßige Schulungen des Personals und Audits der BAL-Verfahren sind Teil unseres Qualitätsmanagements.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie, dass eine ausführliche Dokumentation der BAL-Ergebnisse und eine zeitnahe Kommunikation mit dem behandelnden Arzt notwendig sind, um die weitere Therapie sicherzustellen.",
+            third:
+              "Alle BAL-Ergebnisse werden umfassend dokumentiert und dem behandelnden Arzt umgehend mitgeteilt.",
+            fourth:
+              "Die Ergebnisse der BAL werden sorgfältig dokumentiert, um die weitere Behandlung und Nachsorge zu planen und zu überwachen.",
+          },
+        ],
+      },
+      // 4tab 178
+      {
+        id: 178,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Pneumonie)",
+          },
+          {
+            name: "fourth",
+            visualText:
+              "Pathologischer Befund 2 (z.B. Interstitielle Lungenerkrankung)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "30-jähriger Patient zur Routinekontrolle, keine Symptome und keine auffällige Anamnese.",
+            third:
+              "55-jähriger Patient mit Fieber, Husten und Atemnot. Vorgeschichte einer COPD.",
+            fourth:
+              "40-jährige Patientin mit chronischer Atemnot und Husten, keine Raucheranamnese.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "BAL zeigt eine normale Zellzusammensetzung ohne Nachweis von pathogenen Keimen.",
+            third:
+              "BAL zeigt eine erhöhte Anzahl von neutrophilen Granulozyten und Nachweis von Streptococcus pneumoniae.",
+            fourth:
+              "BAL zeigt eine erhöhte Anzahl von Lymphozyten und Makrophagen, keine pathogenen Keime nachweisbar.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; der BAL-Befund unterstützt den Ausschluss einer Lungenerkrankung.",
+            third:
+              "Der Befund deutet auf eine bakterielle Pneumonie hin, passend zur klinischen Symptomatik des Patienten.",
+            fourth:
+              "Die Befunde sind typisch für eine interstitielle Lungenerkrankung, was die chronische Symptomatik erklärt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Die Befunde beruhigen den Patienten und bestätigen die Gesundheit der Lunge, keine weiteren Eingriffe notwendig.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer gezielten Antibiotikatherapie.",
+            fourth:
+              "Die Ergebnisse unterstützen die Diagnose und die Einleitung einer immunsuppressiven Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Lunge, keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer bakteriellen Pneumonie basierend auf BAL-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer interstitiellen Lungenerkrankung aufgrund der BAL-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "BAL zeigt klare, normal aussehende Flüssigkeit ohne Auffälligkeiten.",
+            third: "BAL zeigt trübe Flüssigkeit mit deutlicher Eiterbildung.",
+            fourth:
+              "BAL zeigt klare Flüssigkeit mit erhöhter Zellzahl, insbesondere Lymphozyten.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen regelmäßige Gesundheitsüberprüfungen zur Vorsorge. Der Patient sollte weiterhin auf seine Lungenfunktion achten, aber derzeit sind keine weiteren Maßnahmen erforderlich.",
+            third:
+              "Es wird empfohlen, eine Antibiotikatherapie zu beginnen und den Patienten engmaschig zu überwachen, um die Wirksamkeit der Behandlung zu beurteilen. Weitere Kontrolluntersuchungen sind geplant.",
+            fourth:
+              "Es ist zu empfehlen, eine langfristige immunsuppressive Therapie zu beginnen und regelmäßige Kontrollen durchzuführen, um den Krankheitsverlauf zu beobachten und die Therapie anzupassen.",
+          },
+        ],
+      },
+      // 5tab 179
+      {
+        id: 179,
+        title: "Gerätbeschreibung",
+        img: child_tab_img_1,
+        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text_list: [
+          {
+            bold: "Bronchoskop :",
+            other:
+              "Ein flexibles, dünnes Instrument, das durch Mund oder Nase in die Atemwege eingeführt wird. Ermöglicht die Visualisierung der Bronchien und die gezielte Entnahme von Proben.",
+          },
+          {
+            bold: "Kochsalzlösung :",
+            other:
+              "Sterile Kochsalzlösung (0,9% NaCl), die zur Spülung der Atemwege verwendet wird. Wird in definierten Volumina in die Lungensegmente eingebracht und wieder abgesaugt.",
+          },
+          {
+            bold: "Absaugpumpe :",
+            other:
+              "Ein Gerät, das die injizierte Kochsalzlösung aus den Bronchien absaugt. Sammelt die Spülflüssigkeit in einem sterilen Behälter zur weiteren Analyse.",
+          },
+          {
+            bold: "Sterile Behälter :",
+            other:
+              "Sammelt die gewonnene Spülflüssigkeit. Werden für den Transport ins Labor verwendet.",
+          },
+          {
+            bold: "Video- und Beleuchtungssystem :",
+            other:
+              "In das Bronchoskop integriert, um eine klare Sicht auf die Atemwege zu gewährleisten. Erlaubt die Echtzeit-Visualisierung und Aufzeichnung des Verfahrens.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Computer und Monitore, auf denen die während der BAL aufgenommenen Bilder angezeigt werden. Ermöglicht die Dokumentation und Analyse der Untersuchungsergebnisse.",
+          },
+          {
+            bold: "Spül- und Absaugsystem :",
+            other:
+              "Integriert in das Bronchoskop, um die Kochsalzlösung zu injizieren und wieder abzusaugen. Ermöglicht die präzise Steuerung der Flüssigkeitsmengen.",
+          },
+          {
+            bold: "Patientenüberwachungssystem :",
+            other:
+              "Überwacht die Vitalzeichen des Patienten während der BAL. Stellt sicher, dass der Patient während des Eingriffs stabil bleibt.",
+          },
+          {
+            bold: "Sterile Einwegzubehörteile :",
+            other:
+              "Einwegspitzen und Schläuche, um das Risiko von Kreuzkontaminationen zu minimieren. Wird nach jedem Eingriff entsorgt.",
+          },
+          {
+            bold: "Sauerstoffversorgungssystem :",
+            other:
+              "Stellt sicher, dass der Patient während des Eingriffs ausreichend mit Sauerstoff versorgt wird. Kann bei Bedarf zusätzlichen Sauerstoff bereitstellen.",
+          },
+          {
+            bold: "Sedierungs- und Anästhesiemittel :",
+            other:
+              "Werden verwendet, um den Patienten während des Eingriffs zu beruhigen oder zu betäuben. Ermöglicht eine schmerzfreie und komfortable Durchführung der BAL.",
+          },
+          {
+            bold: "Sterilitätskontrolle :",
+            other:
+              "Verfahren und Materialien, um die Sterilität während des gesamten Eingriffs zu gewährleisten. Minimiert das Infektionsrisiko.",
+          },
+        ],
+      },
+      // 6tab 180
+      {
+        id: 180,
+        title: "Wortschatz",
+        text: "Dieser Wortschatz umfasst wesentliche Begriffe und Phrasen für die bronchoalveoläre Lavage und ist hilfreich für die Vorbereitung auf eine Fachsprachprüfung im Bereich der BAL-Diagnostik:",
+        text_list: [
+          {
+            bold: "Bronchoalveoläre Lavage (BAL) :",
+            other:
+              "Ein diagnostisches Verfahren zur Gewinnung von Flüssigkeitsproben aus den unteren Atemwegen.",
+          },
+          {
+            bold: "Bronchoskop :",
+            other:
+              "Ein flexibles Instrument zur visuellen Untersuchung der Bronchien und zur Durchführung der BAL.",
+          },
+          {
+            bold: "Kochsalzlösung :",
+            other:
+              "Sterile Salzlösung (0,9% NaCl), die zur Spülung der Bronchien verwendet wird.",
+          },
+          {
+            bold: "Absaugpumpe :",
+            other:
+              "Gerät zum Absaugen der injizierten Kochsalzlösung und der gewonnenen Probenflüssigkeit.",
+          },
+          {
+            bold: "Sterile Behälter :",
+            other:
+              "Behälter zur Sammlung und Lagerung der BAL-Flüssigkeit für die Analyse.",
+          },
+          {
+            bold: "Mikrobiologische Analyse :",
+            other:
+              "Untersuchung der BAL-Flüssigkeit auf Bakterien, Viren, Pilze und andere Mikroorganismen.",
+          },
+          {
+            bold: "Zytologische Untersuchung :",
+            other:
+              "Analyse der Zellen in der BAL-Flüssigkeit zur Erkennung von Entzündungen, Infektionen oder malignen Veränderungen.",
+          },
+          {
+            bold: "Lymphozyten :",
+            other:
+              "Eine Art weißer Blutkörperchen, die in erhöhten Mengen bei bestimmten Lungenerkrankungen vorkommen können.",
+          },
+          {
+            bold: "Neutrophile Granulozyten :",
+            other:
+              "Weiße Blutkörperchen, deren erhöhter Anteil auf bakterielle Infektionen hinweist.",
+          },
+          {
+            bold: "Sedierung :",
+            other:
+              "Die Verabreichung von Beruhigungsmitteln, um den Patienten während der BAL ruhig und komfortabel zu halten.",
+          },
+          {
+            bold: "Spülflüssigkeit :",
+            other:
+              "Die Kochsalzlösung, die in die Bronchien eingeführt und anschließend zur Analyse wieder abgesaugt wird.",
+          },
+          {
+            bold: "Eosinophile Granulozyten :",
+            other:
+              "Weiße Blutkörperchen, die in erhöhter Zahl bei allergischen Reaktionen oder bestimmten Infektionen auftreten können.",
+          },
+          {
+            bold: "Diagnose :",
+            other:
+              "Die Erkennung und Benennung einer Krankheit oder eines pathologischen Zustands basierend auf Untersuchungsergebnissen.",
+          },
+          {
+            bold: "Differenzialdiagnose :",
+            other:
+              "Die Unterscheidung zwischen zwei oder mehr Krankheiten, die ähnliche Symptome verursachen.",
+          },
+          {
+            bold: "Interstitielle Lungenerkrankung :",
+            other:
+              "Gruppe von Lungenerkrankungen, die durch Entzündungen und Narbenbildung im Lungengewebe gekennzeichnet sind.",
+          },
+          {
+            bold: "Maligne Zellen :",
+            other:
+              "Krebszellen, die in der BAL-Flüssigkeit nachgewiesen werden können.",
+          },
+          {
+            bold: "Probenentnahme :",
+            other:
+              "Der Vorgang des Sammelns von biologischem Material für diagnostische Zwecke.",
+          },
+          {
+            bold: "Sterilität :",
+            other:
+              "Der Zustand der Keimfreiheit, der während der BAL unbedingt eingehalten werden muss.",
+          },
+          {
+            bold: "Komplikationen :",
+            other:
+              "Unerwünschte Nebenwirkungen oder Probleme, die während oder nach der BAL auftreten können, wie Blutungen oder Infektionen.",
+          },
+          {
+            bold: "Postoperative Betreuung :",
+            other:
+              "Pflege und Überwachung des Patienten nach der BAL, um eine schnelle Erholung zu gewährleisten.",
+          },
+          {
+            bold: "BAL-Indikation :",
+            other:
+              "Medizinische Gründe oder Symptome, die die Durchführung einer BAL rechtfertigen.",
+          },
+        ],
+      },
+      // 7tab 181
+      {
+        id: 181,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 182
+      {
+        id: 182,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1In0E5V1zaubqC2lezB-htid_8xt1wRNU/view?usp=share_link",
       },
     ],
   },
