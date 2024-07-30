@@ -21,7 +21,7 @@ export const exam_categories = [
   {
     id: 4,
     title: "Labor Untersuchungen",
-    show_before_id: 15,
+    show_before_id: 23,
   },
   // Тут далі вставляй нові категорії по прикладу попередніх.
 ];
