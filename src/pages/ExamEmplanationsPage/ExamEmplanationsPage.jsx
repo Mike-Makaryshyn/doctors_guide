@@ -43,29 +43,45 @@ const ExamExplanationsPage = () => {
    };
 
    const renderTextWithLinks = (text) => {
-      if(typeof text !== 'string') return;
-
-      const urlRegex = /(https?:\/\/[^\s]+)/g;
-      const parts = text?.split(urlRegex);
-
-      return parts?.map((part, index) => {
-         if (part.match(urlRegex)) {
+      // Helper function to process a single string
+      const processText = (textString) => {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const parts = textString.split(urlRegex);
+    
+        return parts.map((part, index) => {
+          if (part.match(urlRegex)) {
             return (
-               <a
-                  className={"link"}
-                  key={index}
-                  href={part}
-                  target="_blank"
-                  rel="noopener noreferrer"
-               >
-                  {part}
-               </a>
+              <a
+                className="link"
+                key={index}
+                href={part}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {part}
+              </a>
             );
-         } else {
+          } else {
             return <span key={index}>{part}</span>;
-         }
-      });
-   };
+          }
+        });
+      };
+    
+      if (Array.isArray(text)) {
+        return text.map((item, itemIndex) => (
+          <p key={itemIndex}>
+            {processText(item)}
+            {itemIndex < text.length - 1 && ' '}
+          </p>
+        ));
+      }
+    
+      if (typeof text === 'string') {
+        return processText(text);
+      }
+    
+      return null;
+    };
 
    const clickActiveChildTab = (e, tab) => {
       e.stopPropagation();
