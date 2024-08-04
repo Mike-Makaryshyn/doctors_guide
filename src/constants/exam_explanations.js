@@ -15584,7 +15584,6 @@ export const parentTabs = [
       {
         id: 195,
         title: "Einheiten",
-        img: child_tab_img_1,
         text: "Diese Einheiten und Erklärungen geben Ihnen eine umfassende Übersicht über die wichtigsten Parameter eines Blutbildes und deren Bedeutung in der klinischen Diagnostik:",
         text_list: [
           {
