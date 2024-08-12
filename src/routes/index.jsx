@@ -29,6 +29,10 @@ const ExamEmplanationsPage = React.lazy(() =>
    import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
 
+const Trafatette = React.lazy(() =>
+   import("../pages/Trafatette/Trafatette")
+);
+
 export default function Routers() {
    return (
       <Suspense>
@@ -55,6 +59,10 @@ export default function Routers() {
             <Route
                path={pathList.exam_explanations.path}
                element={<ExamEmplanationsPage />}
+            />
+            <Route
+               path={pathList.trafarette.path}
+               element={<Trafatette />}
             />
 
             {/* NOT FOUND PAGE */}

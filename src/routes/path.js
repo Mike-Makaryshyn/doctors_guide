@@ -20,4 +20,7 @@ export const pathList = {
     exam_explanations: {
         path: '/exam_explanations'
     },
+    trafarette: {
+        path: '/trafarette'
+    },
 };
