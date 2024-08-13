@@ -162,7 +162,8 @@ const Trafarette = () => {
                               styles.parentTabTitle,
                               parentTabOpen?.id === parentTab?.id
                                  ? styles.activeTitle
-                                 : ""
+                                 : "",
+                              "noselect"
                            )}
                            key={`${parentTab?.id}pt`}
                         >
