@@ -71,7 +71,7 @@ export default {
                hidden_answer: `Kiev of course, you stupid creature.`,
             },
             {
-               name: `What is the capital of Ukraine?`,
+               title: `What is the capital of Ukraine?`,
                hidden_answer: `Man - it's Not New Your, for sure`,
             },
          ],

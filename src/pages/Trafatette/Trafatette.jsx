@@ -262,17 +262,6 @@ const Trafarette = () => {
                                           ))}
                                        </div>
 
-                                       {q?.hidden_answer &&
-                                          idx === 0 &&
-                                          !showAnswers && (
-                                             <button
-                                                onClick={() =>
-                                                   setShowAnswers(true)
-                                                }
-                                             >
-                                                Show answers
-                                             </button>
-                                          )}
                                        {q?.hidden_answer && (
                                           <div
                                              className={cn(
@@ -284,6 +273,19 @@ const Trafarette = () => {
                                              {q.hidden_answer}
                                           </div>
                                        )}
+
+                                       {q?.hidden_answer &&
+                                          idx ===
+                                             parentTab?.questions?.length - 1 &&
+                                          !showAnswers && (
+                                             <button
+                                                onClick={() =>
+                                                   setShowAnswers(true)
+                                                }
+                                             >
+                                                Show all answers
+                                             </button>
+                                          )}
                                     </div>
                                  ))}
 
