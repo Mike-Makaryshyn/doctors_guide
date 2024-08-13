@@ -4,7 +4,7 @@ export default {
    content: [
       {
          id: 1,
-         title: "Tab_1",
+         title: "Tab_1 page 2",
          childTabs: [
             //  Start of child tab 1
             {
@@ -40,7 +40,7 @@ export default {
       //  Start of parent tab 2
       {
          id: 2,
-         title: "Tab_2",
+         title: "Tab_2 page 2",
          questions: [
             {
                title: `What is the capital of Ukraine?`,
@@ -64,14 +64,14 @@ export default {
       //  Start of parent tab 3
       {
          id: 3,
-         title: "Tab_3",
+         title: "Tab_3 page 2",
          questions: [
             {
                title: `What is the capital of Ukraine?`,
                hidden_answer: `Kiev of course, you stupid creature.`,
             },
             {
-               title: `What is the capital of Ukraine?`,
+               title: `What is the capital of the USA`,
                hidden_answer: `Man - it's Not New Your, for sure`,
             },
          ],
