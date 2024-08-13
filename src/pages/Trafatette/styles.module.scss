@@ -1,19 +1,43 @@
-.table_wrapper {
-   margin-top: 20px;
-   padding: 0px 8px;
-}
-
 .parentTabsWrapper {
    color: black;
    overflow-y: auto;
-   display: flex;
-   justify-content: center;
 
    @media (max-width: 769px) {
       display: block;
       grid-template-columns: auto auto;
       font-size: 14px;
     }
+}
+
+.parentTabTitles {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+.parentTabTitle {
+   background-color: white;
+   padding: 10px 20px;
+   border-radius: 10px;
+   font-weight: 600;
+   cursor: pointer;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 14px;
+   border: 1px solid transparent;
+   transition: all 0.6s ease;
+
+   &:hover {
+      border: 1px solid rgb(134, 134, 134);
+   }
+}
+
+.activeTitle {
+   background-color: rgba(0, 0, 0, 0.248);
+   border: 1px solid rgb(255, 255, 255);
+   color: white;
 }
 
 .parentTabItem {
@@ -23,8 +47,12 @@
    border-radius: 10px;
    margin: 10px;
    position: relative;
-   transition: all 0.1s ease;
+   transition: all .6s ease-in-out;
    flex-grow: 1;
+   scale: 0;
+   opacity: 0;
+   position: absolute;
+   left: -200%;
 
    span {
       line-height: 18px;
@@ -41,6 +69,13 @@
    }
 }
 
+.activeTab {
+   scale: 1;
+   position: relative;
+   left: 0%;
+   opacity: 1;
+}
+
 .childTabsWrapper {
    display: none;
    margin-top: 20px;
@@ -49,7 +84,6 @@
 .childTabs {
    width: 100%;
    position: relative;
-   display: flex;
    gap: 10px;
 
    @media (max-width: 909px) {
@@ -73,6 +107,9 @@
    width: 100%;
    padding: 10px;
    cursor: pointer;
+   display: inline-block;
+   max-width: 60%;
+   margin-bottom: 24px;
 
    transition: all 0.2s ease;
 
@@ -109,14 +146,16 @@
 }
 
 .active_child_tab {
-   border-bottom: 1px solid black;
+   border-bottom: 1px solid rgb(128, 168, 255);
+   color: rgb(128, 168, 255);
+   font-weight: 600;
 
    @media (max-width: 769px) {
       box-shadow: rgba(128, 128, 240, 0.25) 0px 30px 60px -12px inset, rgba(208, 40, 40, 0.3) 0px 18px 36px -18px inset;
     }
 
    &:hover {
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid rgb(128, 168, 255);
    }
 }
 

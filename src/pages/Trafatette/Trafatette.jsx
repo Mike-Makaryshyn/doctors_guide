@@ -154,6 +154,23 @@ const Trafarette = () => {
             <div className="firstPageImageBlock"></div>
             <div className={"main_menu__content"}>
                <div className={styles.parentTabsWrapper}>
+                  <div className={styles.parentTabTitles}>
+                     {currentPageData?.map((parentTab, index) => (
+                        <div
+                           onClick={(e) => clickActiveParentTab(e, parentTab)}
+                           className={cn(
+                              styles.parentTabTitle,
+                              parentTabOpen?.id === parentTab?.id
+                                 ? styles.activeTitle
+                                 : ""
+                           )}
+                           key={`${parentTab?.id}pt`}
+                        >
+                           {parentTab?.title}
+                        </div>
+                     ))}
+                  </div>
+
                   {currentPageData?.map((parentTab, index) => {
                      return (
                         <div key={parentTab?.id}>
@@ -161,18 +178,13 @@ const Trafarette = () => {
                               onClick={(e) =>
                                  clickActiveParentTab(e, parentTab, index)
                               }
-                              className={styles.parentTabItem}
-                              ref={
+                              className={cn(
+                                 styles.parentTabItem,
                                  parentTabOpen?.id === parentTab?.id
-                                    ? activeTabRef
-                                    : null
-                              }
+                                    ? styles.activeTab
+                                    : ""
+                              )}
                            >
-                              <div className={cn(styles.pTab, "noselect")}>
-                                 <div className={styles.pTitle}>
-                                    {parentTab?.title}
-                                 </div>
-                              </div>
                               <div
                                  className={cn(
                                     styles.childTabsWrapper,
@@ -181,35 +193,6 @@ const Trafarette = () => {
                                        : ""
                                  )}
                               >
-                                 <div
-                                    onClick={(e) => e.stopPropagation()}
-                                    className={styles.childTabs}
-                                 >
-                                    {parentTab?.childTabs?.map(
-                                       (childTab, childIdx) => (
-                                          <div
-                                             className={cn(
-                                                styles.child_tab,
-                                                childTabOpen?.id ===
-                                                   childTab?.id
-                                                   ? styles.active_child_tab
-                                                   : "",
-                                                childTab?.link
-                                                   ? styles.lessWidth
-                                                   : "",
-                                                "noselect"
-                                             )}
-                                             onClick={(e) =>
-                                                clickActiveChildTab(e, childTab)
-                                             }
-                                             key={childTab?.id}
-                                          >
-                                             {childTab?.title}
-                                          </div>
-                                       )
-                                    )}
-                                 </div>
-
                                  {parentTab?.questions?.map((q, idx) => (
                                     <div
                                        onClick={(e) => e.stopPropagation()}
@@ -292,11 +275,28 @@ const Trafarette = () => {
                                  {parentTab?.childTabs?.map(
                                     (childTab, childIdx) => (
                                        <div
+                                          className={styles.childTabsWrapp}
                                           onClick={(e) =>
                                              clickActiveChildTab(e, childTab)
                                           }
                                           key={`child${childIdx}`}
                                        >
+                                          <div
+                                             className={cn(
+                                                styles.child_tab,
+                                                childTabOpen?.id ===
+                                                   childTab?.id
+                                                   ? styles.active_child_tab
+                                                   : "",
+                                                childTab?.link
+                                                   ? styles.lessWidth
+                                                   : "",
+                                                "noselect"
+                                             )}
+                                          >
+                                             {childTab?.title}
+                                          </div>
+
                                           <div
                                              onClick={(e) =>
                                                 e.stopPropagation()
