@@ -175,9 +175,6 @@ const Trafarette = () => {
                      return (
                         <div key={parentTab?.id}>
                            <div
-                              onClick={(e) =>
-                                 clickActiveParentTab(e, parentTab, index)
-                              }
                               className={cn(
                                  styles.parentTabItem,
                                  parentTabOpen?.id === parentTab?.id
