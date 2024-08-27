@@ -23,6 +23,12 @@ export const exam_categories = [
     title: "Labor Untersuchungen",
     show_before_id: 23,
   },
+  {
+    id: 4,
+    title: "Funktionstests",
+    show_before_id: 29,
+  },
+
   // Тут далі вставляй нові категорії по прикладу попередніх.
 ];
 
@@ -15986,11 +15992,11 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Ziel und Kontext:",
-                text: "Die Zystoskopie wird durchgeführt, um eine Vielzahl von urologischen Beschwerden und Erkrankungen zu diagnostizieren und zu behandeln. Dazu gehören Harnwegsinfektionen, Blasensteine, Tumoren, anatomische Anomalien und Blut im Urin.",
+                text: "Die Blutuntersuchung dient der Analyse verschiedener Blutparameter, um Rückschlüsse auf den Gesundheitszustand des Patienten zu ziehen. Sie hilft dabei, Krankheiten zu diagnostizieren, den Verlauf von Erkrankungen zu überwachen und die Wirksamkeit von Therapien zu beurteilen.",
               },
               {
                 bold_text: "Relevanz und Anwendungsbereiche:",
-                text: "Dieses Verfahren ist besonders relevant bei der Diagnose von Blasenkrebs, Harnröhrenstrikturen und chronischen Blasenentzündungen. Es wird sowohl in der ambulanten Praxis als auch im Krankenhaus angewendet und kann diagnostische sowie therapeutische Maßnahmen umfassen.",
+                text: "Blutuntersuchungen sind in der modernen Medizin unverzichtbar und werden in nahezu allen medizinischen Disziplinen eingesetzt. Sie sind besonders relevant in der Inneren Medizin, Endokrinologie, Kardiologie und Onkologie, um nur einige Beispiele zu nennen.",
               },
             ],
           },
@@ -15999,11 +16005,11 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Theoretische Grundlagen:",
-                text: "Die Zystoskopie basiert auf der Einführung eines Zystoskops durch die Harnröhre in die Blase, um diese unter direkter Sicht zu untersuchen. Es kann entweder ein starres oder flexibles Zystoskop verwendet werden, je nach Bedarf und Indikation.",
+                text: "Die klinische Chemie basiert auf der Analyse von Blutproben, um die Konzentration von Chemikalien, Enzymen, Elektrolyten und anderen Substanzen zu bestimmen. Diese Werte geben Aufschluss über die Funktion von Organen und den allgemeinen Gesundheitszustand des Patienten.",
               },
               {
                 bold_text: "Technische Aspekte:",
-                text: "Das Zystoskop ist ein spezielles Endoskop mit einer Lichtquelle und einer Kamera. Bei der Untersuchung kann sterile Kochsalzlösung verwendet werden, um die Blase zu füllen und die Sicht zu verbessern. Je nach Befund können zusätzliche Instrumente über den Arbeitskanal eingeführt werden, um Biopsien zu entnehmen oder kleinere operative Eingriffe durchzuführen.",
+                text: "Die Blutprobe wird in der Regel durch eine Venenpunktion entnommen und in speziellen Röhrchen gesammelt. Diese Proben werden dann mittels verschiedener Analyseverfahren, wie der Photometrie, der Elektrophorese oder der Massenspektrometrie, untersucht.",
               },
             ],
           },
@@ -16011,12 +16017,12 @@ export const parentTabs = [
             title: "Interpretation",
             items: [
               {
-                bold_text: "Auswertung und Interpretation:",
-                text: "Die Auswertung erfolgt durch die direkte Betrachtung der Blasenschleimhaut und der Harnröhre. Auffällige Befunde wie Tumore, Entzündungen, Blutungen oder anatomische Anomalien werden dokumentiert und gegebenenfalls weiter untersucht.",
+                bold_text: "• Auswertung und Interpretation:",
+                text: "Die Ergebnisse der Blutuntersuchung werden mit Normwerten verglichen, um Abweichungen zu erkennen. Ein erfahrener Arzt kann anhand dieser Werte Rückschlüsse auf mögliche Erkrankungen oder Dysfunktionen ziehen.",
               },
               {
                 bold_text: "Typische Befunde:",
-                text: "Typische Befunde bei einer Zystoskopie können Blasentumore, Harnsteine, Blasendivertikel, Harnröhrenstrikturen und entzündliche Veränderungen der Blasenschleimhaut sein.",
+                text: "Zu den typischen Befunden gehören erhöhte Leberwerte, veränderte Elektrolytspiegel oder erhöhte Entzündungsmarker. Diese Befunde können auf verschiedene Krankheitsbilder wie Hepatitis, Niereninsuffizienz oder Infektionen hinweisen.",
               },
             ],
           },
@@ -16025,15 +16031,15 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Vorteile:",
-                text: "Die Zystoskopie ermöglicht eine direkte und detaillierte Untersuchung der Blase und der Harnröhre. Sie kann sowohl diagnostische als auch therapeutische Maßnahmen in einem Verfahren vereinen.",
+                text: "Blutuntersuchungen sind nicht-invasiv und liefern schnell wertvolle Informationen über den Gesundheitszustand des Patienten. Sie sind vielseitig einsetzbar und können viele unterschiedliche Parameter abdecken.",
               },
               {
                 bold_text: "Nachteile:",
-                text: "Ein Nachteil ist die Invasivität des Verfahrens, die bei einigen Patienten Schmerzen oder Unwohlsein verursachen kann. Auch die Notwendigkeit einer lokalen oder allgemeinen Anästhesie kann als Nachteil angesehen werden.",
+                text: "Manche Blutuntersuchungen können teuer sein und es besteht das Risiko falsch-positiver oder falsch-negativer Ergebnisse, die zu unnötigen weiteren Untersuchungen oder Behandlungen führen können.",
               },
               {
                 bold_text: "Risiken:",
-                text: "Mögliche Risiken umfassen Harnwegsinfektionen, Blutungen, Verletzungen der Harnröhre oder Blase und selten allergische Reaktionen auf verwendete Materialien.",
+                text: "Die Risiken einer Blutuntersuchung sind minimal, umfassen jedoch mögliche Komplikationen bei der Blutentnahme wie Hämatome oder Infektionen.",
               },
             ],
           },
@@ -16042,11 +16048,11 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Rolle in der Diagnose und Behandlung:",
-                text: "Die Zystoskopie spielt eine zentrale Rolle in der Diagnose und Behandlung vieler urologischer Erkrankungen. Sie ermöglicht eine genaue Diagnosestellung und oft auch sofortige therapeutische Maßnahmen.",
+                text: "Blutuntersuchungen spielen eine zentrale Rolle bei der Diagnose vieler Krankheiten und sind ein wichtiges Instrument zur Überwachung des Therapieerfolgs und des Krankheitsverlaufs.",
               },
               {
                 bold_text: "Wichtigkeit für das Patientenmanagement:",
-                text: "Für das Patientenmanagement ist die Zystoskopie von großer Bedeutung, da sie präzise Informationen liefert, die für die weitere Therapieplanung unerlässlich sind.",
+                text: "Durch regelmäßige Blutuntersuchungen können Ärzte den Gesundheitszustand ihrer Patienten kontinuierlich überwachen und frühzeitig auf Veränderungen reagieren.",
               },
             ],
           },
@@ -16055,7 +16061,7 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "",
-                text: "Als Alternativen zur Zystoskopie stehen bildgebende Verfahren wie die Sonographie, die MRT und die CT zur Verfügung. Diese Methoden sind jedoch weniger invasiv, bieten aber nicht die gleiche Detailgenauigkeit und therapeutische Möglichkeiten wie die Zystoskopie.",
+                text: "Zu den Alternativen zur Blutuntersuchung zählen bildgebende Verfahren wie Ultraschall oder MRT sowie die Analyse anderer Körperflüssigkeiten wie Urin oder Liquor.",
               },
             ],
           },
@@ -16064,11 +16070,11 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Aktuelle Erkenntnisse:",
-                text: "Aktuelle Forschung konzentriert sich auf die Weiterentwicklung der Zystoskope, um die Bildqualität zu verbessern und die Invasivität zu reduzieren. Auch die Untersuchung von Biomarkern zur frühzeitigen Erkennung von Blasenkrebs ist ein wichtiger Forschungsbereich.",
+                text: "Aktuelle Forschungen konzentrieren sich auf die Entwicklung neuer Biomarker und die Verbesserung der Sensitivität und Spezifität bestehender Tests.",
               },
               {
                 bold_text: "Zukünftige Perspektiven:",
-                text: "Zukünftige Perspektiven umfassen die Integration von künstlicher Intelligenz zur automatisierten Befundung und die Entwicklung minimalinvasiver Techniken, um die Patientenbelastung weiter zu reduzieren.",
+                text: "Zukünftige Entwicklungen könnten die Einführung neuer, weniger invasiver Testmethoden und die Integration von künstlicher Intelligenz in die Auswertung von Blutuntersuchungen umfassen.",
               },
             ],
           },
@@ -16077,11 +16083,11 @@ export const parentTabs = [
             items: [
               {
                 bold_text: "Zusammenfassung der Kernbotschaften:",
-                text: "Die Zystoskopie ist ein essenzielles Verfahren in der Urologie, das detaillierte Einblicke in die Blase und die Harnröhre bietet. Sie ermöglicht sowohl die Diagnostik als auch die Therapie in einem Eingriff.",
+                text: "Blutuntersuchungen sind ein unverzichtbares diagnostisches Werkzeug in der modernen Medizin. Sie bieten wertvolle Informationen über den Gesundheitszustand des Patienten und unterstützen Ärzte bei der Diagnose und Behandlung.",
               },
               {
                 bold_text: "Gesamtbedeutung:",
-                text: "Insgesamt ist die Zystoskopie ein unverzichtbares Instrument in der urologischen Praxis, das eine präzise Diagnose und effiziente Behandlung vieler urologischer Erkrankungen ermöglicht.",
+                text: "Die klinische Chemie bleibt ein zentrales Element der medizinischen Diagnostik und wird durch kontinuierliche Forschung und technologische Fortschritte stetig weiterentwickelt.",
               },
             ],
           },
@@ -16107,110 +16113,110 @@ export const parentTabs = [
           {
             first: "Ziel der Untersuchung",
             second:
-              "Erklären Sie, dass die Zystoskopie durchgeführt wird, um die Blase und die Harnröhre zu untersuchen und mögliche Ursachen für Beschwerden wie Blut im Urin, Harnwegsinfektionen oder Schmerzen abzuklären.",
+              "Erklären Sie dem Patienten, dass die Blutuntersuchung durchgeführt wird, um verschiedene Blutparameter zu analysieren. Diese Parameter helfen, den Gesundheitszustand zu beurteilen und Krankheiten zu diagnostizieren oder den Verlauf von Erkrankungen zu überwachen.",
             third:
-              "Wir führen diese Untersuchung durch, um die Ursache für Ihr wiederkehrendes Blut im Urin zu finden und sicherzustellen, dass keine ernsthafte Erkrankung vorliegt.",
+              "Die Blutuntersuchung hilft uns, Ihre Organfunktionen zu überprüfen und mögliche Erkrankungen wie Diabetes oder Nierenprobleme zu erkennen.",
             fourth:
-              "Die Zystoskopie hilft uns, Ihre wiederkehrenden Harnwegsinfektionen zu untersuchen und mögliche anatomische Anomalien zu identifizieren.",
+              "Mit der Blutuntersuchung können wir feststellen, ob Sie eine Infektion haben oder ob Ihre Leberwerte normal sind.",
           },
           {
             first: "Ablauf",
             second:
-              "Erläutern Sie den Patienten, dass ein dünnes, flexibles Instrument (Zystoskop) durch die Harnröhre in die Blase eingeführt wird, um diese unter direkter Sicht zu untersuchen.",
+              "Erklären Sie dem Patienten den Ablauf der Blutentnahme: Eine Vene wird punktiert, meist am Arm, um eine Blutprobe zu entnehmen. Die Probe wird dann ins Labor geschickt, wo sie analysiert wird.",
             third:
-              "Wir führen ein dünnes, flexibles Instrument durch Ihre Harnröhre in die Blase ein, um diese genau zu betrachten.",
+              "Wir werden eine kleine Nadel in eine Vene in Ihrem Arm einführen, um etwas Blut zu entnehmen. Das Blut wird dann ins Labor geschickt, wo es analysiert wird.",
             fourth:
-              "Ein spezielles Endoskop wird durch die Harnröhre in die Blase eingeführt, damit wir die Blasenschleimhaut und andere Strukturen direkt untersuchen können.",
+              "Die Blutentnahme dauert nur wenige Minuten. Sie werden eine kurze Einstichstelle spüren, und danach wird die Probe zur Untersuchung an das Labor geschickt.",
           },
           {
             first: "Vorbereitung",
             second:
-              "Erwähnen Sie, dass der Patient vor der Untersuchung möglicherweise nüchtern bleiben und eine lokale oder allgemeine Anästhesie erhalten muss.",
+              "Informieren Sie den Patienten, dass eventuell Nüchternheit erforderlich ist, insbesondere für bestimmte Tests wie den Blutzuckerspiegel. Erläutern Sie, dass sie Anweisungen befolgen sollten, wie beispielsweise das Absetzen bestimmter Medikamente vor der Untersuchung.",
             third:
-              "Bitte bleiben Sie ab Mitternacht nüchtern, da Sie eine leichte Narkose erhalten werden.",
+              "Bitte kommen Sie nüchtern zur Blutentnahme, das bedeutet, dass Sie ab Mitternacht nichts essen oder trinken außer Wasser.",
             fourth:
-              "Sie müssen möglicherweise eine lokale Betäubung erhalten, daher informieren Sie uns bitte, wenn Sie Allergien gegen Betäubungsmittel haben.",
+              "Falls Sie regelmäßig Medikamente einnehmen, informieren Sie uns bitte, da einige Medikamente vor der Blutentnahme pausiert werden müssen.",
           },
           {
             first: "Risiken",
             second:
-              "Betonen Sie die möglichen Risiken wie Infektionen, Blutungen, Schmerzen oder Verletzungen der Harnröhre oder Blase.",
+              "Erwähnen Sie mögliche Risiken wie leichte Schmerzen oder Blutergüsse an der Einstichstelle, seltene Infektionen oder Schwindelgefühl während oder nach der Blutentnahme.",
             third:
-              "Es besteht ein geringes Risiko für Infektionen oder leichte Blutungen nach dem Eingriff.",
+              "Nach der Blutentnahme kann es zu einem kleinen Bluterguss kommen, und es ist normal, einen leichten Schmerz an der Einstichstelle zu verspüren.",
             fourth:
-              "Sie könnten nach der Untersuchung ein brennendes Gefühl beim Wasserlassen verspüren, aber das sollte bald abklingen.",
+              "In seltenen Fällen kann es zu einer Infektion an der Einstichstelle kommen. Sollten Sie Fieber oder Rötungen bemerken, informieren Sie uns bitte umgehend.",
           },
           {
             first: "Vorteile",
             second:
-              "Erklären Sie, dass die Zystoskopie eine direkte und genaue Diagnose ermöglicht und oft auch therapeutische Maßnahmen durchgeführt werden können.",
+              "Betonen Sie die Vorteile der Blutuntersuchung, wie die schnelle und nicht-invasive Möglichkeit, wertvolle Informationen über den Gesundheitszustand zu erhalten und viele verschiedene Erkrankungen zu diagnostizieren.",
             third:
-              "Ein großer Vorteil ist, dass wir direkt sehen können, was in Ihrer Blase vor sich geht, und gegebenenfalls sofort behandeln können.",
+              "Blutuntersuchungen sind sehr hilfreich, weil sie uns ermöglichen, schnell und ohne großen Aufwand viele wichtige Informationen über Ihre Gesundheit zu erhalten.",
             fourth:
-              "Dieses Verfahren ermöglicht uns, sehr präzise Diagnosen zu stellen und, falls nötig, sofort kleine Eingriffe durchzuführen.",
+              "Ein großer Vorteil der Blutuntersuchung ist, dass wir viele verschiedene Krankheiten frühzeitig erkennen und behandeln können.",
           },
           {
             first: "Alternativen",
             second:
-              "Erläutern Sie, dass bildgebende Verfahren wie Ultraschall, MRT oder CT zur Verfügung stehen, diese jedoch nicht die gleiche Detailgenauigkeit bieten.",
+              "Erläutern Sie mögliche Alternativen, wie Urin- oder Speicheltests, wenn zutreffend, oder bildgebende Verfahren, falls eine Blutuntersuchung nicht möglich ist.",
             third:
-              "Alternativ könnten wir einen Ultraschall durchführen, aber dieser zeigt uns nicht die gleichen Details wie die Zystoskopie.",
+              "Wenn eine Blutentnahme nicht möglich ist, könnten wir auch einen Urintest oder einen Speicheltest durchführen.",
             fourth:
-              "Eine MRT könnte ebenfalls hilfreich sein, aber sie kann nicht die direkte Sicht bieten, die wir durch eine Zystoskopie erhalten.",
+              "In einigen Fällen kann auch eine Ultraschalluntersuchung hilfreich sein, um zusätzliche Informationen zu erhalten.",
           },
           {
             first: "Kontraindikationen",
             second:
-              "Erwähnen Sie, dass bestimmte Bedingungen wie schwere Harnwegsinfektionen oder Blutgerinnungsstörungen Kontraindikationen darstellen können.",
+              "Informieren Sie über mögliche Kontraindikationen, wie schwere Hämophilie oder aktuelle Antikoagulanzientherapie, die das Risiko von Komplikationen erhöhen könnten.",
             third:
-              "Wenn Sie aktuell eine schwere Harnwegsinfektion haben, müssen wir die Untersuchung möglicherweise verschieben.",
+              "Wenn Sie eine Blutgerinnungsstörung wie Hämophilie haben, müssen wir besondere Vorsichtsmaßnahmen treffen.",
             fourth:
-              "Bei Blutgerinnungsstörungen besteht ein höheres Risiko für Komplikationen, daher müssen wir dies vorher genau abklären.",
+              "Bei der Einnahme von Blutverdünnern ist es wichtig, dass Sie uns informieren, da dies das Risiko von Blutungen erhöhen kann.",
           },
           {
             first: "Mögliche Ergebnisse",
             second:
-              "Erklären Sie, welche Befunde möglich sind, wie Tumore, Entzündungen, Steine oder anatomische Anomalien.",
+              "Erklären Sie, dass die Ergebnisse der Blutuntersuchung unterschiedliche Informationen liefern können, wie normale oder abnormale Werte, die auf verschiedene Gesundheitszustände hinweisen.",
             third:
-              "Wir könnten Tumore, entzündliche Veränderungen, Blasensteine oder anatomische Anomalien finden.",
+              "Die Blutuntersuchung kann normale Werte anzeigen oder Abweichungen, die auf bestimmte Gesundheitsprobleme hinweisen, wie hohe Cholesterinwerte oder eine Anämie.",
             fourth:
-              "Mögliche Ergebnisse sind zum Beispiel Entzündungen der Blasenschleimhaut oder das Vorhandensein von Blasentumoren.",
+              "Wenn wir abnormale Werte finden, könnte dies auf Erkrankungen wie Diabetes, Leberprobleme oder eine Infektion hindeuten, die wir dann weiter untersuchen müssen.",
           },
           {
             first: "Wichtigkeit des Einverständnisses",
             second:
-              "Betonen Sie die Notwendigkeit des informierten Einverständnisses des Patienten vor der Durchführung der Untersuchung.",
+              "Betonen Sie die Wichtigkeit des informierten Einverständnisses des Patienten vor der Durchführung der Untersuchung.",
             third:
-              "Es ist wichtig, dass Sie alle Informationen verstehen und Ihr Einverständnis geben, bevor wir mit der Untersuchung beginnen.",
+              "Es ist wichtig, dass Sie der Untersuchung zustimmen und verstehen, warum wir sie durchführen und welche Risiken damit verbunden sein können.",
             fourth:
-              "Ihr schriftliches Einverständnis ist notwendig, damit wir sicherstellen können, dass Sie die Untersuchung und die möglichen Risiken vollständig verstanden haben.",
+              "Bevor wir die Blutuntersuchung durchführen, müssen Sie uns Ihr Einverständnis geben. Wir möchten sicherstellen, dass Sie alle wichtigen Informationen erhalten haben.",
           },
           {
             first: "Erhalt des Einverständnisses",
             second:
-              "Erläutern Sie, wie das Einverständnis eingeholt wird, durch eine ausführliche Aufklärung des Patienten über den Ablauf, die Risiken und Vorteile der Untersuchung.",
+              "Erläutern Sie den Prozess des Einholung des Einverständnisses, inklusive der Erklärung des Verfahrens, der Beantwortung von Fragen und der schriftlichen Einwilligung des Patienten.",
             third:
-              "Wir werden Ihnen alle Details des Verfahrens erklären und Ihre Fragen beantworten, bevor Sie das Einverständnisformular unterschreiben.",
+              "Wir werden Ihnen das Verfahren genau erklären und alle Ihre Fragen beantworten. Danach bitten wir Sie, ein Einverständnisformular zu unterschreiben.",
             fourth:
-              "Nachdem wir das Verfahren, die Risiken und Vorteile ausführlich besprochen haben, bitten wir Sie, das Einverständnisformular zu unterzeichnen.",
+              "Sie erhalten alle Informationen zu der Untersuchung und haben die Möglichkeit, Fragen zu stellen. Anschließend unterschreiben Sie das Einverständnisformular.",
           },
           {
             first: "Abschließende Hinweise",
             second:
-              "Geben Sie dem Patienten abschließende Hinweise zur Nachsorge und Verhalten nach der Untersuchung, wie beispielsweise das Trinken von viel Wasser zur Vermeidung von Infektionen.",
+              "Geben Sie abschließende Hinweise, wie der Patient nach der Blutentnahme auf die Einstichstelle achten sollte, was sie bei auftretenden Komplikationen tun können und an wen sie sich bei Fragen wenden können.",
             third:
-              "Trinken Sie bitte viel Wasser nach der Untersuchung, um das Risiko einer Infektion zu verringern.",
+              "Nach der Blutentnahme sollten Sie die Einstichstelle sauber und trocken halten. Falls Sie ungewöhnliche Symptome bemerken, kontaktieren Sie uns bitte.",
             fourth:
-              "Vermeiden Sie körperliche Anstrengung für 24 Stunden nach der Untersuchung und trinken Sie reichlich Flüssigkeit.",
+              "Drücken Sie nach der Blutentnahme leicht auf die Einstichstelle und vermeiden Sie schwere körperliche Anstrengung für den Rest des Tages. Bei Fragen oder Problemen stehen wir Ihnen jederzeit zur Verfügung.",
           },
           {
             first: "Information über Ergebnisse",
             second:
-              "Informieren Sie den Patienten, dass die Ergebnisse der Zystoskopie im Anschluss an die Untersuchung mit ihm besprochen werden und weitere Schritte je nach Befund geplant werden.",
+              "Informieren Sie den Patienten darüber, wie und wann sie die Ergebnisse erhalten werden, ob telefonisch, schriftlich oder bei einem Folgetermin, und was die nächsten Schritte sein könnten, abhängig von den Ergebnissen.",
             third:
-              "Wir werden die Ergebnisse sofort nach der Untersuchung mit Ihnen besprechen und die nächsten Schritte planen.",
+              "Die Ergebnisse der Blutuntersuchung sind in der Regel innerhalb weniger Tage verfügbar. Wir werden Sie telefonisch informieren oder einen Termin zur Besprechung vereinbaren.",
             fourth:
-              "Nach der Untersuchung werden wir Sie über die Befunde informieren und falls nötig, die nächsten diagnostischen oder therapeutischen Schritte besprechen.",
+              "Sie erhalten die Ergebnisse schriftlich per Post oder E-Mail. Bei Auffälligkeiten melden wir uns sofort bei Ihnen, um die nächsten Schritte zu besprechen.",
           },
         ],
       },
@@ -16234,92 +16240,92 @@ export const parentTabs = [
           {
             first: "Was ist eigentlich die angegebene Untersuchung",
             second:
-              "Erklären Sie dem Kollegen, dass es sich bei der Zystoskopie um eine endoskopische Untersuchung der Harnblase und der Harnröhre handelt, bei der ein Zystoskop verwendet wird, um direkte visuelle Diagnostik und gegebenenfalls therapeutische Maßnahmen durchzuführen.",
+              "Erklären Sie Ihrem Kollegen, dass es sich um eine Blutuntersuchung in der klinischen Chemie handelt, die zur Analyse verschiedener Blutparameter durchgeführt wird.",
             third:
-              "Die Zystoskopie ist eine endoskopische Untersuchung der Blase und Harnröhre mittels eines Zystoskops, das es uns ermöglicht, diese Strukturen direkt zu inspizieren und bei Bedarf therapeutisch zu intervenieren.",
+              "Die angegebene Untersuchung ist eine Blutuntersuchung im Bereich der klinischen Chemie, bei der verschiedene Blutparameter analysiert werden.",
             fourth:
-              "Es handelt sich um eine minimalinvasive Methode, bei der ein flexibles oder starres Endoskop durch die Harnröhre in die Blase eingeführt wird, um eine direkte Sicht auf die Schleimhäute zu ermöglichen.",
+              "Es handelt sich um eine Blutuntersuchung, die wir in der klinischen Chemie durchführen, um unterschiedliche chemische Bestandteile im Blut zu analysieren.",
           },
           {
             first: "Was können wir damit untersuchen",
             second:
-              "Erläutern Sie, dass die Zystoskopie zur Untersuchung von Blasen- und Harnröhrenanomalien wie Tumoren, Steinen, Strikturen und Entzündungen dient.",
+              "Erläutern Sie, dass diese Untersuchung verschiedene Parameter wie Glukose, Kreatinin, Elektrolyte und Leberenzyme umfasst, die wichtige Informationen über den Gesundheitszustand des Patienten liefern.",
             third:
-              "Mit der Zystoskopie können wir Anomalien wie Blasentumoren, Harnröhrenstrikturen, Blasensteine und entzündliche Prozesse identifizieren.",
+              "Mit dieser Untersuchung können wir Parameter wie Blutzucker, Nierenwerte und Leberenzyme bestimmen, um den allgemeinen Gesundheitszustand des Patienten zu beurteilen.",
             fourth:
-              "Diese Untersuchung ermöglicht uns, sowohl strukturelle als auch entzündliche Veränderungen der Blase und Harnröhre zu diagnostizieren.",
+              "Wir untersuchen damit verschiedene Werte wie Glukose, Elektrolyte und Leberenzyme, um Informationen über die Organfunktionen und den Stoffwechsel des Patienten zu erhalten.",
           },
           {
             first: "Ergebnisse der Untersuchung",
             second:
-              "Besprechen Sie die typischen Befunde wie Tumore, Blasensteine, Entzündungen, Divertikel und Harnröhrenstrikturen sowie deren diagnostische und therapeutische Konsequenzen.",
+              "Besprechen Sie die spezifischen Ergebnisse der Blutuntersuchung, ob diese innerhalb der Normalwerte liegen oder Abweichungen zeigen, und welche Bedeutung diese Ergebnisse für die Diagnose und Behandlung haben könnten.",
             third:
-              "Typische Befunde können Blasentumore, die wir zur Biopsie entnehmen können, oder Harnröhrenstrikturen sein, die wir sofort dilatieren können.",
+              "Die Ergebnisse zeigen einen erhöhten Kreatininwert, was auf eine mögliche Nierenfunktionsstörung hinweist. Wir sollten weitere Untersuchungen in Betracht ziehen.",
             fourth:
-              "Wir können Blasensteine identifizieren und entfernen oder entzündliche Veränderungen diagnostizieren und gegebenenfalls Biopsien nehmen.",
+              "Die Leberwerte sind erhöht, was auf eine mögliche Hepatitis hinweisen könnte. Eine weitere Diagnostik und eine Überweisung zum Gastroenterologen wären sinnvoll.",
           },
           {
             first: "Indikationen",
             second:
-              "Erwähnen Sie, dass Indikationen für die Zystoskopie u.a. persistierende Hämaturie, wiederkehrende Harnwegsinfektionen, Verdacht auf Blasentumoren und Harnröhrenanomalien sind.",
+              "Nennen Sie die klinischen Indikationen für die Blutuntersuchung, wie Verdacht auf Diabetes, Niereninsuffizienz, Lebererkrankungen oder Elektrolytstörungen.",
             third:
-              "Indikationen umfassen anhaltende Blutungen im Urin, wiederkehrende Infektionen, verdächtige Läsionen im Ultraschall und Symptome einer Harnröhrenobstruktion.",
+              "Diese Untersuchung ist indiziert bei Verdacht auf Diabetes, um den Blutzuckerspiegel zu kontrollieren.",
             fourth:
-              "Bei Patienten mit wiederholten Harnwegsinfektionen oder Verdacht auf Blasenkrebs wird eine Zystoskopie dringend empfohlen.",
+              "Wir führen diese Blutuntersuchung durch bei Verdacht auf eine Niereninsuffizienz, um die Nierenfunktion zu überprüfen.",
           },
           {
             first: "Kontraindikationen",
             second:
-              "Erklären Sie, dass Kontraindikationen schwere Harnwegsinfektionen, akute Harnröhrenverletzungen und ausgeprägte Blutgerinnungsstörungen umfassen.",
+              "Erläutern Sie mögliche Kontraindikationen wie schwere Hämophilie oder laufende Antikoagulanzientherapie, die das Risiko der Blutentnahme erhöhen könnten.",
             third:
-              "Schwere Infektionen der Harnwege oder akute Verletzungen der Harnröhre stellen Kontraindikationen dar.",
+              "Bei Patienten mit schwerer Hämophilie ist eine Blutentnahme kontraindiziert, da das Blutungsrisiko zu hoch ist.",
             fourth:
-              "Bei Patienten mit erheblichen Gerinnungsstörungen müssen wir besonders vorsichtig sein oder alternative diagnostische Methoden in Betracht ziehen.",
+              "Patienten, die Antikoagulanzien einnehmen, müssen sorgfältig überwacht werden, da die Blutungsgefahr erhöht ist.",
           },
           {
             first: "Differenzialdiagnosen",
             second:
-              "Diskutieren Sie mögliche Differenzialdiagnosen bei den zu untersuchenden Symptomen, wie zum Beispiel Nephrolithiasis, interstitielle Zystitis und Prostatavergrößerung.",
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die aufgrund der Untersuchungsergebnisse in Betracht gezogen werden müssen, wie z.B. verschiedene Ursachen für erhöhte Leberwerte oder Elektrolytstörungen.",
             third:
-              "Differenzialdiagnosen umfassen Nephrolithiasis, die durch Bildgebung bestätigt werden könnte, und interstitielle Zystitis, die durch Biopsie diagnostiziert werden kann.",
+              "Bei erhöhten Leberwerten sollten wir Differenzialdiagnosen wie Virushepatitis, Alkoholmissbrauch oder Medikamente in Betracht ziehen.",
             fourth:
-              "Neben Blasentumoren sollten wir auch an chronische Blasenentzündungen oder eine vergrößerte Prostata denken, die ähnliche Symptome hervorrufen können.",
+              "Elektrolytstörungen können verschiedene Ursachen haben, wie Dehydration, Nierenprobleme oder endokrine Störungen, die wir differenzialdiagnostisch abklären müssen.",
           },
           {
             first: "Behandlungspläne",
             second:
-              "Erläutern Sie, wie die Ergebnisse der Zystoskopie in die weiteren Behandlungspläne integriert werden können, einschließlich operativer Eingriffe oder medikamentöser Therapien.",
+              "Entwickeln Sie auf Basis der Untersuchungsergebnisse Behandlungspläne und besprechen Sie mögliche therapeutische Maßnahmen, wie Änderungen der Medikation oder weitere diagnostische Tests.",
             third:
-              "Die Ergebnisse der Zystoskopie helfen uns, die Notwendigkeit für operative Eingriffe wie die Resektion eines Tumors oder die Dilatation einer Striktur zu bestimmen.",
+              "Aufgrund der erhöhten Glukosewerte sollten wir den Behandlungsplan anpassen und eine engmaschige Blutzuckerkontrolle einführen.",
             fourth:
-              "Basierend auf den Befunden können wir medikamentöse Therapien gegen Infektionen oder Entzündungen einleiten und weitere diagnostische Tests planen.",
+              "Angesichts der abnormalen Nierenwerte schlage ich vor, die Medikation anzupassen und den Patienten an einen Nephrologen zu überweisen.",
           },
           {
             first: "Interprofessionelle Zusammenarbeit",
             second:
-              "Betonen Sie die Wichtigkeit der Zusammenarbeit mit Radiologen, Pathologen und Onkologen bei der Diagnose und Behandlung der durch Zystoskopie entdeckten Erkrankungen.",
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen medizinischen Fachkräften, wie Diätassistenten, Physiotherapeuten oder Spezialisten, um eine umfassende Patientenversorgung zu gewährleisten.",
             third:
-              "Eine enge Zusammenarbeit mit Radiologen für die Bildgebung und Pathologen für die Histologie ist unerlässlich, um eine genaue Diagnose zu stellen.",
+              "Die Zusammenarbeit mit einem Diätassistenten wäre hilfreich, um den Blutzuckerspiegel des Patienten durch Ernährungsberatung zu stabilisieren.",
             fourth:
-              "Bei der Behandlung von Blasentumoren arbeiten wir eng mit Onkologen zusammen, um eine umfassende Therapie zu gewährleisten.",
+              "Für eine optimale Patientenversorgung sollten wir auch Physiotherapeuten einbeziehen, insbesondere bei Patienten mit eingeschränkter Mobilität durch Nierenerkrankungen.",
           },
           {
             first: "Qualitätsmanagement",
             second:
-              "Diskutieren Sie, wie die Qualität der Zystoskopieprozeduren durch regelmäßige Schulungen, standardisierte Protokolle und Qualitätssicherungsmaßnahmen gewährleistet wird.",
+              "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität der Blutuntersuchung, wie die Kalibrierung der Geräte, regelmäßige Schulungen des Personals und die Einhaltung von Protokollen.",
             third:
-              "Regelmäßige Schulungen des Personals und die Anwendung standardisierter Protokolle sind entscheidend für die Aufrechterhaltung hoher Qualitätsstandards.",
+              "Um die Qualität der Blutuntersuchungen sicherzustellen, kalibrieren wir regelmäßig unsere Geräte und schulen das Personal kontinuierlich.",
             fourth:
-              "Qualitätssicherungsmaßnahmen wie regelmäßige Überprüfungen und Feedbackschleifen helfen, die Prozeduren stetig zu verbessern.",
+              "Qualitätsmanagement erfordert die Einhaltung strenger Protokolle und regelmäßige Überprüfungen, um genaue und zuverlässige Ergebnisse zu gewährleisten.",
           },
           {
             first: "Dokumentation und Weiterverfolgung",
             second:
-              "Erklären Sie, wie die Befunde der Zystoskopie detailliert dokumentiert werden sollten und welche Schritte zur Nachverfolgung und weiteren Betreuung der Patienten notwendig sind.",
+              "Betonen Sie die Wichtigkeit einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der Kommunikation dieser Ergebnisse an den Patienten sowie die Notwendigkeit einer kontinuierlichen Überwachung und Nachsorge.",
             third:
-              "Eine detaillierte Dokumentation der Befunde in der Patientenakte ist wichtig, und es sollten klare Nachverfolgungspläne erstellt werden, einschließlich Kontrollterminen.",
+              "Die Ergebnisse der Blutuntersuchung sollten sorgfältig dokumentiert und mit dem Patienten besprochen werden, um die nächsten Schritte zu planen.",
             fourth:
-              "Wir müssen sicherstellen, dass alle Befunde dokumentiert und der Patient über die nächsten Schritte, wie Kontrolluntersuchungen oder weitere Behandlungen, informiert wird.",
+              "Eine gründliche Dokumentation und die Weiterverfolgung der Ergebnisse sind entscheidend, um eine effektive Nachsorge und gegebenenfalls weitere Behandlungen sicherzustellen.",
           },
         ],
       },
@@ -16345,63 +16351,63 @@ export const parentTabs = [
             second:
               "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
             third:
-              "60-jähriger Patient klagt über Blut im Urin und Schmerzen beim Wasserlassen. Keine relevante Vorgeschichte.",
+              "60-jähriger Patient klagt über Müdigkeit, Schwellungen der Beine und Bluthochdruck. Vorgeschichte mit Diabetes mellitus und Bluthochdruck.",
             fourth:
-              "45-jährige Patientin berichtet über wiederkehrende Harnwegsinfektionen und Schmerzen im Unterbauch.",
+              "40-jährige Patientin berichtet von Gelbfärbung der Haut, Übelkeit und Müdigkeit. Vorgeschichte mit Hepatitis-B-Infektion.",
           },
           {
             first: "Ergebnisse der Untersuchung",
             second:
-              "Zystoskopie zeigt eine glatte, rosa Blasenschleimhaut ohne Anomalien.",
+              "Blutuntersuchung zeigt alle Werte im Normbereich, einschließlich Glukose, Elektrolyte und Leberenzyme.",
             third:
-              "Zystoskopie zeigt eine 3 cm große, unregelmäßige, leicht blutende Masse an der Blasenwand.",
+              "Blutuntersuchung zeigt erhöhte Kreatinin- und Harnstoffwerte, sowie eine Hyperkaliämie.",
             fourth:
-              "Zystoskopie zeigt mehrere kleine, harte, weißliche Blasensteine in der Blase.",
+              "Blutuntersuchung zeigt erhöhte Leberenzyme (ALT, AST) und erhöhtes Bilirubin.",
           },
           {
             first: "Interpretation der Ergebnisse",
             second:
-              "Keine pathologischen Befunde; das Ergebnis unterstützt den Ausschluss urologischer Erkrankungen.",
+              "Keine pathologischen Befunde; die Blutuntersuchung unterstützt den Ausschluss von Erkrankungen und bestätigt den gesunden Zustand des Patienten.",
             third:
-              "Der Befund deutet auf einen Blasentumor hin. Die Lokalisation und das Erscheinungsbild korrelieren mit den Symptomen des Patienten.",
+              "Die erhöhten Kreatinin- und Harnstoffwerte deuten auf eine Niereninsuffizienz hin. Hyperkaliämie bestätigt eine eingeschränkte Nierenfunktion.",
             fourth:
-              "Die Steine verursachen mechanische Reizung und könnten für die wiederkehrenden Infektionen verantwortlich sein.",
+              "Die erhöhten Leberenzyme und das Bilirubin deuten auf eine aktive Hepatitis hin, möglicherweise eine Reaktivierung der Hepatitis-B-Infektion.",
           },
           {
             first: "Integration in die Patientenversorgung",
             second:
-              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe. Empfehlung für einen gesunden Lebensstil und regelmäßige Kontrollen.",
             third:
-              "Die Ergebnisse sind entscheidend für die Planung einer transurethralen Resektion und gegebenenfalls weiterer onkologischer Therapien.",
+              "Die Ergebnisse sind entscheidend für die Planung einer Dialyse oder einer anderen therapeutischen Intervention zur Behandlung der Niereninsuffizienz.",
             fourth:
-              "Wichtig für die Planung der Entfernung der Steine mittels Zystolitholapaxie und Vorbeugung weiterer Steinbildung.",
+              "Wichtig für die Bestätigung der Hepatitis-Diagnose und Einleitung einer antiviralen Therapie und Überwachung der Leberfunktion.",
           },
           {
             first: "Diagnose",
             second:
-              "Bestätigung des gesunden Zustandes der Blase. Keine Anzeichen für pathologische Veränderungen.",
+              "Bestätigung des gesunden Zustandes des Patienten. Keine Anzeichen für pathologische Veränderungen.",
             third:
-              "Diagnose eines Blasentumors basierend auf Zystoskopie-Befunden und klinischem Bild.",
+              "Diagnose einer Niereninsuffizienz basierend auf Blutuntersuchungsergebnissen und klinischem Bild.",
             fourth:
-              "Diagnose von Blasensteinen aufgrund der Zystoskopie-Ergebnisse und Symptomatik.",
+              "Diagnose einer akuten Hepatitis aufgrund der Blutuntersuchungsergebnisse und der Symptomatik.",
           },
           {
             first: "Visuelle Hilfsmittel",
             second:
-              "Homogene Blasenschleimhaut ohne Auffälligkeiten in allen Bereichen.",
+              "Blutuntersuchung zeigt alle Parameter im Normbereich ohne Auffälligkeiten.",
             third:
-              "Zystoskopische Aufnahmen zeigen eine unregelmäßige, hypervaskularisierte Masse an der Blasenwand.",
+              "Blutuntersuchung zeigt deutlich erhöhte Kreatinin- und Harnstoffwerte.",
             fourth:
-              "Zystoskopische Aufnahmen zeigen mehrere kleine, harte Steine, die in der Blase verteilt sind.",
+              "Blutuntersuchung zeigt signifikant erhöhte ALT- und AST-Werte sowie Bilirubin.",
           },
           {
             first: "Fallabschluss",
             second:
-              "Wir empfehlen regelmäßige gesundheitliche Überprüfungen und jährliche Vorsorgeuntersuchungen. Es ist zu empfehlen, weiterhin auf Symptome zu achten und bei Veränderungen sofort einen Arzt zu konsultieren.",
+              "Wir empfehlen, die Gesundheit des Patienten durch einen gesunden Lebensstil zu erhalten und regelmäßige Kontrollen zur Prävention durchzuführen.",
             third:
-              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+              "Wir empfehlen die Einleitung einer Dialysebehandlung und regelmäßige Kontrollen der Nierenfunktion. Zusätzlich sollten Lebensstiländerungen und eine angepasste Medikation in Erwägung gezogen werden.",
             fourth:
-              "Es ist zu empfehlen, die Blasensteine mittels Zystolitholapaxie zu entfernen. Zusätzlich sollten präventive Maßnahmen zur Vermeidung weiterer Steinbildung, wie ausreichende Flüssigkeitszufuhr und Ernährungsanpassungen, besprochen werden. Regelmäßige Kontrollen sind ebenfalls wichtig.",
+              "Wir empfehlen die sofortige Einleitung einer antiviralen Therapie und regelmäßige Überwachung der Leberfunktion. Eine Anpassung des Lebensstils zur Unterstützung der Lebergesundheit ist ebenfalls ratsam.",
           },
         ],
       },
@@ -16413,59 +16419,79 @@ export const parentTabs = [
         text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
         text_list: [
           {
-            bold: "Zystoskop :",
+            bold: "Glukose (mg/dL oder mmol/L) :",
             other:
-              "Das Hauptinstrument der Zystoskopie, ein dünnes, flexibles oder starres Rohr, das mit einer Lichtquelle und einer Kamera ausgestattet ist. Das Zystoskop wird durch die Harnröhre in die Blase eingeführt.",
+              "Misst den Blutzuckerspiegel, wichtig für die Diagnose und Überwachung von Diabetes mellitus.",
           },
           {
-            bold: "Lichtquelle :",
+            bold: "Kreatinin (mg/dL oder µmol/L) :",
             other:
-              "Eine starke Lichtquelle, die über Glasfasern oder LED-Technologie das Innere der Harnröhre und Blase beleuchtet, um eine klare Sicht zu gewährleisten.",
+              "Ein Indikator für die Nierenfunktion, da es von den Nieren aus dem Blut gefiltert wird.",
           },
           {
-            bold: "Kamera :",
+            bold: "Harnstoff (mg/dL oder mmol/L) :",
             other:
-              "Eine hochauflösende Kamera am Ende des Zystoskops, die Bilder des Harntrakts auf einen Monitor überträgt. Diese Bilder ermöglichen dem Arzt, die inneren Strukturen detailliert zu untersuchen.",
+              "Ebenfalls ein Marker für die Nierenfunktion und den Proteinabbau im Körper.",
           },
           {
-            bold: "Monitor :",
+            bold: "Harnsäure (mg/dL oder µmol/L) :",
             other:
-              "Ein Bildschirm, auf dem die Live-Bilder der Kamera angezeigt werden. Der Arzt beobachtet den Monitor, um die Untersuchung durchzuführen und diagnostische Entscheidungen zu treffen.",
+              "Misst die Konzentration von Harnsäure im Blut, wichtig für die Diagnose von Gicht und Nierensteinen.",
           },
           {
-            bold: "Arbeitskanal :",
+            bold: "Gesamtbilirubin (mg/dL oder µmol/L) :",
             other:
-              "Ein Kanal im Zystoskop, durch den kleine Instrumente eingeführt werden können, um Gewebeproben zu entnehmen (Biopsie) oder kleinere Eingriffe durchzuführen, wie z.B. das Entfernen von Blasensteinen.",
+              "Ein Abbauprodukt von Hämoglobin, dessen Konzentration bei Lebererkrankungen und Hämolyse erhöht sein kann.",
           },
           {
-            bold: "Spül- und Absaugsystem :",
+            bold: "ALT (Alanin-Aminotransferase) (U/L) :",
             other:
-              "Ein System zur Spülung der Blase mit steriler Flüssigkeit, um eine klare Sicht zu ermöglichen. Überschüssige Flüssigkeit und kleine Partikel werden abgesaugt, um die Sicht nicht zu behindern.",
+              "Ein Leberenzym, dessen erhöhte Werte auf Leberschäden oder -entzündungen hinweisen können.",
           },
           {
-            bold: "Steuerkonsole :",
+            bold: "AST (Aspartat-Aminotransferase) (U/L) :",
             other:
-              "Eine Konsole, über die der Arzt das Zystoskop und die angeschlossenen Systeme steuert. Hier können Einstellungen vorgenommen und Funktionen wie Lichtintensität und Kamerafokus angepasst werden.",
+              "Ein weiteres Leberenzym, das auch bei Herz- oder Muskelschäden erhöht sein kann.",
           },
           {
-            bold: "Flüssigkeitsbehälter :",
+            bold: "ALP (Alkalische Phosphatase) (U/L) :",
             other:
-              "Behälter für die sterile Spülflüssigkeit, die während der Zystoskopie in die Blase eingeführt wird.",
+              "Erhöhte Werte können auf Erkrankungen der Leber, Knochen oder Gallengänge hinweisen.",
           },
           {
-            bold: "Biopsiezangen und andere Instrumente :",
+            bold: "GGT (Gamma-Glutamyltransferase) (U/L) :",
             other:
-              "Spezielle Werkzeuge, die durch den Arbeitskanal des Zystoskops eingeführt werden können, um Gewebeproben zu entnehmen oder therapeutische Eingriffe durchzuführen.",
+              "Ein Enzym, das bei Leber- und Gallenerkrankungen erhöht sein kann.",
           },
           {
-            bold: "Desinfektionssystem :",
+            bold: "LDH (Laktatdehydrogenase) (U/L) :",
             other:
-              "Ein System zur gründlichen Reinigung und Sterilisation des Zystoskops nach jeder Verwendung, um Infektionen zu verhindern.",
+              "Ein Enzym, das bei Gewebeschäden erhöht ist und auf Herzinfarkt, Hämolyse oder Lebererkrankungen hinweisen kann.",
           },
           {
-            bold: "Sprachkommunikationssystem :",
+            bold: "Albumin (g/dL oder g/L) :",
             other:
-              "Ermöglicht es dem medizinischen Personal, während der Untersuchung mit dem Patienten zu sprechen und Anweisungen zu geben.",
+              "Ein wichtiges Protein im Blut, dessen Konzentration bei Leber- oder Nierenerkrankungen sowie bei Mangelernährung verändert sein kann.",
+          },
+          {
+            bold: "Elektrolyte (Natrium, Kalium, Chlorid, Calcium, Magnesium) (mmol/L) :",
+            other:
+              "Wichtige Mineralstoffe für die Funktion von Nerven, Muskeln und Herz; Ungleichgewichte können auf verschiedene Krankheiten hinweisen.",
+          },
+          {
+            bold: "CRP (C-reaktives Protein) (mg/dL oder mg/L) :",
+            other:
+              "Ein Entzündungsmarker, der bei akuten und chronischen Entzündungen, Infektionen und Gewebeschäden erhöht ist. Besonders wichtig zur Beurteilung von Entzündungsprozessen im Körper.",
+          },
+          {
+            bold: "Triglyceride (mg/dL oder mmol/L) :",
+            other:
+              "Ein Lipidwert, der bei der Beurteilung des Risikos für Herz-Kreislauf-Erkrankungen wichtig ist.",
+          },
+          {
+            bold: "Cholesterin (Gesamt-, HDL-, LDL-Cholesterin) (mg/dL oder mmol/L) :",
+            other:
+              "Wichtige Werte zur Beurteilung des Fettstoffwechsels und des Risikos für Herz-Kreislauf-Erkrankungen.",
           },
         ],
       },
@@ -16476,147 +16502,174 @@ export const parentTabs = [
         text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
         text_list: [
           {
-            bold: "Zystoskopie :",
-            other: "Endoskopische Untersuchung der Blase und Harnröhre.",
+            bold: "Blutuntersuchung :",
+            other: "Test zur Analyse verschiedener Komponenten im Blut.",
           },
           {
-            bold: "Zystoskop :",
+            bold: "Klinische Chemie :",
             other:
-              "Das Instrument, das zur Durchführung der Zystoskopie verwendet wird.",
+              "Bereich der Labormedizin, der sich mit der chemischen Analyse von Körperflüssigkeiten beschäftigt.",
           },
           {
-            bold: "Blasenschleimhaut :",
-            other: "Die innere Auskleidung der Blase.",
+            bold: "Parameter :",
+            other: "Spezifische Messgrößen, die im Blut getestet werden.",
           },
           {
-            bold: "Harnröhre :",
+            bold: "Blutprobe :",
+            other: "Eine kleine Menge Blut, die zur Analyse entnommen wird.",
+          },
+          {
+            bold: "Venenpunktion :",
+            other: "Verfahren zur Entnahme von Blut aus einer Vene.",
+          },
+          {
+            bold: "Analyse :",
+            other: "Prozess der Untersuchung der Blutprobe im Labor.",
+          },
+          {
+            bold: "Laboruntersuchung :",
             other:
-              "Der Kanal, der den Urin von der Blase nach außen transportiert.",
+              "Test, der im Labor durchgeführt wird, um Blutparameter zu messen.",
           },
           {
-            bold: "Biopsie :",
-            other: "Entnahme von Gewebeproben zur weiteren Untersuchung.",
+            bold: "Glukose :",
+            other: "Blutzucker, wichtig für die Diagnose von Diabetes.",
           },
           {
-            bold: "Blasentumor :",
+            bold: "Kreatinin :",
             other:
-              "Ein abnormales Wachstum von Zellen in der Blase, das bösartig oder gutartig sein kann.",
+              "Abfallprodukt des Muskelstoffwechsels, Marker für die Nierenfunktion.",
           },
           {
-            bold: "Blasensteine :",
+            bold: "Harnstoff :",
             other:
-              "Verhärtete Ablagerungen aus Mineralien, die sich in der Blase bilden.",
+              "Abbauprodukt von Proteinen, ebenfalls ein Indikator für die Nierenfunktion.",
           },
           {
-            bold: "Harnröhrenstriktur :",
-            other: "Eine Verengung der Harnröhre, die den Urinfluss behindert.",
-          },
-          {
-            bold: "Anästhesie :",
+            bold: "Harnsäure :",
             other:
-              "Betäubung, um Schmerzen während der Untersuchung zu vermeiden.",
+              "Produkt des Purinstoffwechsels, wichtig für die Diagnose von Gicht.",
           },
           {
-            bold: "Kontrastmittel :",
+            bold: "Gesamtbilirubin :",
             other:
-              "Eine Substanz, die verwendet wird, um Strukturen während der Bildgebung sichtbarer zu machen.",
+              "Abbauprodukt von Hämoglobin, wichtig für die Leberfunktion.",
           },
           {
-            bold: "Sterile Kochsalzlösung :",
+            bold: "Alanin-Aminotransferase (ALT) :",
+            other: "Leberenzym, erhöht bei Leberschäden.",
+          },
+          {
+            bold: "Aspartat-Aminotransferase (AST) :",
             other:
-              "Eine Lösung, die verwendet wird, um die Blase während der Zystoskopie zu füllen und die Sicht zu verbessern.",
+              "Ein weiteres Leberenzym, auch bei Herz- oder Muskelschäden erhöht.",
           },
           {
-            bold: "Resektion :",
-            other: "Chirurgische Entfernung von Gewebe, z.B. eines Tumors.",
-          },
-          {
-            bold: "Dilatation :",
-            other: "Erweiterung einer verengten Harnröhre.",
-          },
-          {
-            bold: "Hämaturie :",
-            other: "Blut im Urin.",
-          },
-          {
-            bold: "Prozedur :",
-            other: "Ein medizinischer Eingriff oder eine Untersuchung.",
-          },
-          {
-            bold: "Komplikationen :",
+            bold: "Alkalische Phosphatase (ALP) :",
             other:
-              "Unerwünschte Ereignisse oder Nebenwirkungen während oder nach einem Eingriff.",
+              "Enzym, das bei Leber- und Knochenerkrankungen erhöht sein kann.",
           },
           {
-            bold: "Urologie :",
+            bold: "Gamma-Glutamyltransferase (GGT) :",
+            other: "Enzym, erhöht bei Leber- und Gallenerkrankungen.",
+          },
+          {
+            bold: "Laktatdehydrogenase (LDH) :",
+            other: "Enzym, das bei Gewebeschäden erhöht ist.",
+          },
+          {
+            bold: "Albumin :",
             other:
-              "Das medizinische Fachgebiet, das sich mit Erkrankungen des Harntrakts und des männlichen Genitaltrakts beschäftigt.",
+              "Ein wichtiges Blutprotein, verändert bei Leber- oder Nierenerkrankungen.",
           },
           {
-            bold: "Nephrolithiasis :",
-            other: "Nierensteine.",
-          },
-          {
-            bold: "Interstitielle Zystitis :",
-            other: "Chronische Entzündung der Blasenwand.",
-          },
-          {
-            bold: "Pathologischer Befund :",
+            bold: "Elektrolyte :",
             other:
-              "Diagnose einer Krankheit basierend auf Untersuchungsergebnissen.",
+              "Mineralstoffe wie Natrium, Kalium, Chlorid, die für die Nerven- und Muskelfunktion wichtig sind.",
           },
           {
-            bold: "Therapieoptionen :",
-            other: "Verschiedene Behandlungsmöglichkeiten.",
-          },
-          {
-            bold: "Nachsorge :",
+            bold: "Natrium :",
             other:
-              "Medizinische Betreuung und Überwachung nach einem Eingriff oder einer Behandlung.",
+              "Elektrolyt, der für die Flüssigkeitsbalance im Körper wichtig ist.",
           },
           {
-            bold: "Prognose :",
-            other: "Vorhersage über den Verlauf und Ausgang einer Krankheit.",
+            bold: "Kalium :",
+            other: "Elektrolyt, entscheidend für die Herz- und Muskelfunktion.",
           },
           {
-            bold: "Urinanalyse :",
-            other: "Untersuchung des Urins auf Anomalien.",
-          },
-          {
-            bold: "Hydronephrose :",
-            other: "Schwellung der Niere aufgrund von Harnstau.",
-          },
-          {
-            bold: "Blasendivertikel :",
-            other: "Ausstülpungen der Blasenwand.",
-          },
-          {
-            bold: "Endoskopische Chirurgie :",
+            bold: "Chlorid :",
             other:
-              "Chirurgische Eingriffe, die mit einem Endoskop durchgeführt werden.",
+              "Elektrolyt, wichtig für die Aufrechterhaltung des Säure-Basen-Haushalts.",
           },
           {
-            bold: "Invasiv :",
-            other: "Ein medizinisches Verfahren, das in den Körper eingreift.",
+            bold: "Calcium :",
+            other: "Mineralstoff, wichtig für Knochen und Muskelkontraktion.",
           },
           {
-            bold: "Minimalinvasiv :",
+            bold: "Magnesium :",
             other:
-              "Ein Verfahren, das so wenig wie möglich in den Körper eingreift.",
+              "Mineralstoff, notwendig für viele biochemische Reaktionen im Körper.",
           },
           {
-            bold: "Blasenkatheter :",
+            bold: "C-reaktives Protein (CRP) :",
             other:
-              "Ein Schlauch, der in die Blase eingeführt wird, um den Urin abzuleiten.",
+              "Entzündungsmarker, erhöht bei Infektionen und Entzündungen.",
           },
           {
-            bold: "Blasenspiegelung :",
-            other: "Ein anderer Begriff für Zystoskopie.",
-          },
-          {
-            bold: "Prostatavergrößerung :",
+            bold: "Triglyceride :",
             other:
-              "Vergrößerung der Prostata, die den Harnfluss behindern kann.",
+              "Fette im Blut, deren Konzentration das Risiko für Herzkrankheiten beeinflusst.",
+          },
+          {
+            bold: "Cholesterin :",
+            other:
+              "Lipid im Blut, wichtig für die Beurteilung des Risikos für Herz-Kreislauf-Erkrankungen.",
+          },
+          {
+            bold: "HDL-Cholesterin :",
+            other:
+              '"Gutes" Cholesterin, das überschüssiges Cholesterin zur Leber transportiert.',
+          },
+          {
+            bold: "LDL-Cholesterin :",
+            other:
+              '"Schlechtes" Cholesterin, das sich in den Arterien ablagern kann.',
+          },
+          {
+            bold: "Normalwerte :",
+            other: "Referenzbereiche für Blutparameter, die als gesund gelten.",
+          },
+          {
+            bold: "Abweichung :",
+            other:
+              "Unterschied zwischen gemessenen Werten und den Normalwerten.",
+          },
+          {
+            bold: "Erhöht :",
+            other: "Ein Wert, der über dem Normalbereich liegt.",
+          },
+          {
+            bold: "Vermindert :",
+            other: "Ein Wert, der unter dem Normalbereich liegt.",
+          },
+          {
+            bold: "Kontrolluntersuchung :",
+            other:
+              "Folgetest, um den Verlauf einer Krankheit oder die Wirkung einer Therapie zu überwachen.",
+          },
+          {
+            bold: "Referenzbereich :",
+            other:
+              "Der Bereich von Werten, die als normal und gesund angesehen werden.",
+          },
+          {
+            bold: "Pathologisch :",
+            other: "Abnormale, krankhafte Befunde.",
+          },
+          {
+            bold: "Routinekontrolle :",
+            other:
+              "Regelmäßige Untersuchung ohne spezifischen Verdacht auf Krankheit.",
           },
         ],
       },
@@ -16676,9 +16729,3650 @@ export const parentTabs = [
       {
         id: 206,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1fySNrY2yf3ULuwHllWan-m7ZE39wqzTN/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1WnkDfJRUJVeqFkY7wvKtqc4P2HWpQ9Qr/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 24
+
+  // start of parent tab 25 Blutgerinnung
+  {
+    id: 25,
+    title: "Blutgerinnung",
+    checked: false,
+    childTabs: [
+      // 1tab 207
+      {
+        id: 207,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Untersuchung der Blutgerinnung im Labor ist es, die Funktionsfähigkeit des Gerinnungssystems des Körpers zu beurteilen. Dies hilft bei der Diagnose von Blutgerinnungsstörungen, der Überwachung von Patienten unter gerinnungshemmender Therapie und der Vorbereitung auf chirurgische Eingriffe.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Blutgerinnung ist ein komplexer Prozess, der in mehreren Schritten abläuft und sowohl zelluläre als auch plasmatische Komponenten umfasst. Die wesentlichen Schritte umfassen die Bildung eines Thrombozytenpfropfs, die Aktivierung der Gerinnungskaskade und die Stabilisierung des Fibrinnetzwerks.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Blutgerinnung ist ein komplexer Prozess, der in mehreren Schritten abläuft und sowohl zelluläre als auch plasmatische Komponenten umfasst. Die wesentlichen Schritte umfassen die Bildung eines Thrombozytenpfropfs, die Aktivierung der Gerinnungskaskade und die Stabilisierung des Fibrinnetzwerks.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Im Labor werden verschiedene Tests zur Beurteilung der Blutgerinnung verwendet, darunter die Bestimmung der Prothrombinzeit (PT), der aktivierten partiellen Thromboplastinzeit (aPTT) und die Thrombinzeit (TT). Diese Tests erfordern Blutproben, die mit speziellen Reagenzien behandelt werden, um die Gerinnungszeiten zu messen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Ergebnisse der Gerinnungstests werden in Sekunden angegeben und mit Normwerten verglichen. Abweichungen können auf verschiedene Störungen hinweisen, wie zum Beispiel Hämophilie, Vitamin-K-Mangel oder Lebererkrankungen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Die Untersuchung der Blutgerinnung liefert wichtige Informationen zur Diagnose und Behandlung von Gerinnungsstörungen und hilft, die Sicherheit von chirurgischen Eingriffen zu erhöhen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Untersuchung der Blutgerinnung liefert wichtige Informationen zur Diagnose und Behandlung von Gerinnungsstörungen und hilft, die Sicherheit von chirurgischen Eingriffen zu erhöhen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Einige Tests erfordern spezielle Laborbedingungen und können teuer sein. Falsch-positive oder falsch-negative Ergebnisse sind möglich und können zu unnötigen weiteren Untersuchungen führen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Untersuchung der Blutgerinnung ist entscheidend für die Diagnose und das Management von Blutgerinnungsstörungen und Thrombosen. Sie ermöglicht die Überwachung und Anpassung von Antikoagulanzientherapien.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Untersuchung der Blutgerinnung ist entscheidend für die Diagnose und das Management von Blutgerinnungsstörungen und Thrombosen. Sie ermöglicht die Überwachung und Anpassung von Antikoagulanzientherapien.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Eine genaue Bewertung der Gerinnungsfunktion ist unerlässlich für die präoperative Beurteilung und das Management von Patienten mit Gerinnungsstörungen, um Komplikationen zu vermeiden.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den alternativen Methoden zählen genetische Tests zur Identifikation von Gerinnungsstörungen und spezifische Tests für einzelne Gerinnungsfaktoren oder Inhibitoren.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung konzentriert sich auf die Entwicklung neuer Antikoagulanzien und die Verbesserung der diagnostischen Genauigkeit der Gerinnungstests durch innovative Technologien und Biomarker.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten eine personalisierte Medizin ermöglichen, bei der die Behandlung und Überwachung von Gerinnungsstörungen individuell auf den Patienten zugeschnitten wird.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die präzise Bewertung der Blutgerinnung ist von großer Bedeutung für die klinische Praxis und trägt maßgeblich zur Sicherheit und Effektivität von Behandlungen bei. Sie bleibt ein unverzichtbares Instrument in der modernen Medizin.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Die präzise Bewertung der Blutgerinnung ist von großer Bedeutung für die klinische Praxis und trägt maßgeblich zur Sicherheit und Effektivität von Behandlungen bei. Sie bleibt ein unverzichtbares Instrument in der modernen Medizin.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 208
+      {
+        id: 208,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Blutgerinnungsuntersuchung dazu dient, die Funktionsfähigkeit des Blutgerinnungssystems zu beurteilen, um Störungen zu diagnostizieren und Therapien zu überwachen.",
+            third:
+              "Diese Untersuchung hilft uns zu verstehen, ob Ihr Blut normal gerinnt oder ob es Probleme gibt, die behandelt werden müssen.",
+            fourth:
+              "Wir überprüfen, ob Ihr Blutgerinnungssystem richtig funktioniert, besonders wenn Sie Medikamente wie Blutverdünner einnehmen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den gesamten Ablauf der Untersuchung, einschließlich der Blutabnahme, der Analyse im Labor und der verschiedenen Tests wie PT, aPTT und TT.",
+            third:
+              "Wir nehmen Ihnen eine Blutprobe ab und schicken diese ins Labor, wo verschiedene Tests durchgeführt werden.",
+            fourth:
+              "Zuerst entnehmen wir Ihnen Blut, dann wird es im Labor analysiert, um die Gerinnungszeiten zu messen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass der Patient in der Regel keine spezielle Vorbereitung benötigt, außer eventuell nüchtern zu erscheinen, und erwähnen Sie, ob bestimmte Medikamente vorher abgesetzt werden müssen.",
+            third:
+              "Sie müssen nicht nüchtern sein, aber informieren Sie uns bitte über alle Medikamente, die Sie einnehmen.",
+            fourth:
+              "Es ist wichtig, dass Sie uns sagen, ob Sie blutverdünnende Medikamente einnehmen, damit wir dies bei der Auswertung berücksichtigen können.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie den Patienten über die minimalen Risiken, die mit der Blutabnahme verbunden sind, wie Schmerzen oder Blutergüsse an der Einstichstelle.",
+            third:
+              "Die Blutabnahme kann ein wenig schmerzhaft sein, und es könnte ein kleiner Bluterguss entstehen.",
+            fourth:
+              "In seltenen Fällen kann es an der Einstichstelle zu einer leichten Blutung oder Schwellung kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile der Untersuchung, wie die genaue Diagnose von Gerinnungsstörungen, die Überwachung der Wirksamkeit von Antikoagulanzien und die erhöhte Sicherheit vor chirurgischen Eingriffen.",
+            third:
+              "Diese Untersuchung gibt uns wertvolle Informationen über Ihr Gerinnungssystem, was besonders wichtig vor Operationen ist.",
+            fourth:
+              "Durch die Ergebnisse können wir Ihre Medikation besser anpassen, um Blutungen oder Thrombosen zu vermeiden.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie mögliche alternative Untersuchungsmethoden wie genetische Tests oder spezifische Tests für einzelne Gerinnungsfaktoren, und wann diese angewendet werden könnten.",
+            third:
+              "Es gibt auch genetische Tests, die spezifische Gerinnungsstörungen identifizieren können.",
+            fourth:
+              "Manchmal nutzen wir spezielle Tests für einzelne Gerinnungsfaktoren, wenn ein Verdacht auf eine spezifische Störung besteht.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie den Patienten über mögliche Kontraindikationen, z.B. bei Patienten mit bestimmten Blutgerinnungsstörungen oder Allergien gegen die verwendeten Reagenzien.",
+            third:
+              "Wenn Sie eine bekannte Allergie gegen die verwendeten Reagenzien haben, sollten wir das vorher wissen.",
+            fourth:
+              "Bei bestimmten Blutgerinnungsstörungen kann diese Untersuchung kontraindiziert sein, und wir müssen alternative Methoden in Betracht ziehen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Beschreiben Sie die möglichen Ergebnisse der Untersuchung, wie normale Gerinnungszeiten, verlängerte oder verkürzte Zeiten, und was diese Befunde bedeuten könnten.",
+            third:
+              "Ein normales Ergebnis zeigt, dass Ihre Blutgerinnung im normalen Bereich liegt.",
+            fourth:
+              "Verlängerte Gerinnungszeiten könnten auf eine Gerinnungsstörung oder die Wirkung von Blutverdünnern hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Bedeutung des informierten Einverständnisses des Patienten für die Durchführung der Untersuchung.",
+            third:
+              "Es ist wichtig, dass Sie verstehen, warum wir diese Untersuchung durchführen, und dass Sie uns Ihre Zustimmung geben.",
+            fourth:
+              "Ihre Zustimmung ist notwendig, damit wir die Untersuchung durchführen können.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, wie das Einverständnis eingeholt wird, z.B. durch ein Gespräch und schriftliche Zustimmung.",
+            third:
+              "Wir besprechen alle Details der Untersuchung mit Ihnen und bitten Sie dann, eine Einverständnis zu unterschreiben.",
+            fourth:
+              "Sie haben die Möglichkeit, Fragen zu stellen, bevor Sie das Einverständnisformular unterschreiben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise zur Untersuchung, wie etwa Verhalten nach der Blutabnahme, mögliche Nachwirkungen.",
+            third:
+              "Nach der Blutabnahme sollten Sie den Arm für einige Minuten drücken, um Blutungen zu vermeiden.",
+            fourth:
+              "Ergebnisse erhalten Sie in der Regel innerhalb von ein bis zwei Tagen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, wie und wann er über die Ergebnisse der Untersuchung informiert wird und welche nächsten Schritte je nach Ergebnis erforderlich sind.",
+            third:
+              "Wir werden Sie telefonisch oder per E-Mail über die Ergebnisse informieren und besprechen die nächsten Schritte mit Ihnen.",
+            fourth:
+              "Ihr Arzt wird die Ergebnisse mit Ihnen bei Ihrem nächsten Termin durchgehen und weitere Maßnahmen besprechen.",
+          },
+        ],
+      },
+      // 3tab 209
+      {
+        id: 209,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass es sich um die Untersuchung der Blutgerinnung handelt, bei der die Fähigkeit des Blutes, normal zu gerinnen, beurteilt wird.",
+            third:
+              "Die Blutgerinnungsuntersuchung umfasst Tests wie PT, aPTT und TT, um die Gerinnungsfunktion zu bewerten.",
+            fourth:
+              "Wir analysieren die Gerinnungszeiten des Patienten, um mögliche Störungen oder die Wirksamkeit einer Antikoagulation zu überprüfen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Besprechen Sie, dass diese Untersuchung verwendet wird, um Gerinnungsstörungen zu diagnostizieren, die Wirksamkeit von Antikoagulanzien zu überwachen und Patienten auf chirurgische Eingriffe vorzubereiten.",
+            third:
+              "Mit dieser Untersuchung können wir überprüfen, ob der Patient eine Hämophilie hat oder ob die eingenommenen Blutverdünner korrekt dosiert sind.",
+            fourth:
+              "Wir nutzen diese Tests, um festzustellen, ob der Patient ein Risiko für Thrombosen oder Blutungen hat, insbesondere vor einer geplanten Operation.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erläutern Sie die verschiedenen möglichen Ergebnisse, wie normale Gerinnungszeiten, verlängerte oder verkürzte Zeiten, und was diese spezifisch für den Patienten bedeuten können.",
+            third:
+              "Ein verlängertes aPTT könnte auf einen Mangel an Gerinnungsfaktoren hinweisen, was bei der Diagnose einer Hämophilie wichtig ist.",
+            fourth:
+              "Normale PT- und aPTT-Werte deuten darauf hin, dass die Blutgerinnung des Patienten im normalen Bereich liegt und keine akute Intervention erforderlich ist.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Indikationen für die Untersuchung, wie z.B. Verdacht auf Blutgerinnungsstörungen, Überwachung von Antikoagulanzientherapie, Vorbereitung auf Operationen oder Lebererkrankungen.",
+            third:
+              "Diese Tests sind indiziert bei Patienten mit unklaren Blutungsneigungen oder vor größeren chirurgischen Eingriffen.",
+            fourth:
+              "Wir führen die Gerinnungstests durch, um die Wirksamkeit der Antikoagulationstherapie bei Patienten mit Vorhofflimmern zu überwachen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie über mögliche Kontraindikationen, wie bekannte Allergien gegen Reagenzien oder bestimmte Blutgerinnungsstörungen, bei denen alternative Methoden in Betracht gezogen werden sollten.",
+            third:
+              "Bei Patienten mit bekannter Heparinallergie sollten alternative Gerinnungstests ohne Heparin verwendet werden.",
+            fourth:
+              "Wenn der Patient eine schwere Thrombozytopenie hat, könnten die Ergebnisse verfälscht sein, und alternative Untersuchungen sind zu erwägen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die bei abweichenden Ergebnissen in Betracht gezogen werden sollten, wie z.B. Hämophilie, von-Willebrand-Syndrom oder Vitamin-K-Mangel.",
+            third:
+              "Eine verlängerte PT könnte auf einen Vitamin-K-Mangel oder eine Lebererkrankung hinweisen, was bei der Differenzialdiagnose berücksichtigt werden muss.",
+            fourth:
+              "Verkürzte aPTT-Werte könnten auf eine präanalytische Fehlerquelle oder eine erhöhte Gerinnungsneigung hinweisen, z.B. bei Patienten mit Faktor-V-Leiden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie mögliche Behandlungspläne, die sich aus den Ergebnissen der Untersuchung ableiten, wie Anpassung der Medikation, spezifische Therapieansätze für diagnostizierte Störungen oder präoperative Maßnahmen.",
+            third:
+              "Bei einem verlängerten PT sollten wir die Warfarindosis des Patienten anpassen und engmaschig überwachen.",
+            fourth:
+              "Wenn die Gerinnungszeiten stark verlängert sind, könnte eine Substitutionstherapie mit fehlenden Gerinnungsfaktoren erforderlich sein.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen wie der Hämatologie, Chirurgie und Anästhesiologie, um eine umfassende Betreuung des Patienten sicherzustellen.",
+            third:
+              "Eine enge Zusammenarbeit mit der Hämatologie ist erforderlich, um die Ursache der verlängerten Gerinnungszeiten zu identifizieren und zu behandeln.",
+            fourth:
+              "Für die präoperative Vorbereitung eines Patienten mit bekannter Blutgerinnungsstörung ist die Abstimmung mit Chirurgen und Anästhesisten essenziell.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie die Bedeutung von Qualitätsmanagement in der Durchführung und Auswertung der Untersuchung, um genaue und zuverlässige Ergebnisse zu gewährleisten.",
+            third:
+              "Wir müssen sicherstellen, dass die Proben korrekt verarbeitet werden, um präzise Ergebnisse zu erhalten.",
+            fourth:
+              "Regelmäßige Kalibrierung der Geräte und Schulung des Personals sind entscheidend für die Qualität der Testergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Besprechen Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und der Weiterverfolgung der Patienten, um eine optimale Behandlung und Nachsorge sicherzustellen.",
+            third:
+              "Alle Ergebnisse müssen im Patientendossier dokumentiert und an den behandelnden Arzt weitergeleitet werden, um die Nachsorge zu planen.",
+            fourth:
+              "Eine lückenlose Dokumentation der Gerinnungswerte ist notwendig, um den Therapieverlauf und mögliche Anpassungen der Medikation nachvollziehen zu können.",
+          },
+        ],
+      },
+      // 4tab 210
+      {
+        id: 210,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über häufige spontane Blutungen und Hämatome. Familiengeschichte von Blutgerinnungsstörungen.",
+            fourth:
+              "30-jährige Patientin berichtet von wiederkehrenden Thrombosen und familiärer Thromboseneigung.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Blutgerinnungstests, einschließlich PT, aPTT und TT, liegen alle im normalen Bereich.",
+            third:
+              "Blutgerinnungstests zeigen eine stark verlängerte aktivierte partielle Thromboplastinzeit (aPTT) und einen Mangel an Faktor VIII.",
+            fourth:
+              "Blutgerinnungstests zeigen eine deutlich erhöhte Prothrombinzeit (PT) und einen erhöhten D-Dimer-Wert.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Testergebnisse unterstützen den Ausschluss von Blutgerinnungsstörungen.",
+            third:
+              "Der Befund deutet auf eine Hämophilie A hin. Der Mangel an Faktor VIII korreliert mit den klinischen Symptomen des Patienten.",
+            fourth:
+              "Die Befunde sind typisch für eine Thrombophilie, möglicherweise bedingt durch eine genetische Mutation wie den Faktor-V-Leiden. Zusammenhang mit den wiederkehrenden Thrombosen des Patienten.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung der Substitutionstherapie mit Faktor VIII und das Management von Blutungsepisoden.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer gerinnungshemmenden Therapie zur Vermeidung weiterer Thrombosen.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Gerinnungssystems. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer Hämophilie A basierend auf Blutgerinnungstests und klinischem Bild.",
+            fourth:
+              "Diagnose einer Thrombophilie aufgrund der Blutgerinnungstests und der Thromboseanamnese.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Diagramme und Tabellen der Blutgerinnungstests zeigen normale PT, aPTT und TT Werte.",
+            third:
+              "Diagramme und Tabellen der Blutgerinnungstests zeigen eine stark verlängerte aPTT und niedrige Faktor VIII-Werte.",
+            fourth:
+              "Diagramme und Tabellen der Blutgerinnungstests zeigen erhöhte PT-Werte und hohe D-Dimer-Werte.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, den Patienten über die positiven Ergebnisse zu informieren und regelmäßige Vorsorgeuntersuchungen zur Aufrechterhaltung der Gesundheit zu vereinbaren.",
+            third:
+              "Es ist zu empfehlen, die Diagnose und Behandlungsoptionen ausführlich mit dem Patienten zu besprechen. Regelmäßige Kontrolluntersuchungen und eine kontinuierliche Substitutionstherapie sind notwendig.",
+            fourth:
+              "Es ist zu empfehlen, die Patientin über die chronische Natur der Thrombophilie und die Notwendigkeit einer langfristigen gerinnungshemmenden Therapie zu informieren. Regelmäßige Überwachung ist unerlässlich.",
+          },
+        ],
+      },
+      // 5tab 211
+      {
+        id: 211,
+        title: "Einheiten",
+        img: child_tab_img_1,
+        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text_list: [
+          {
+            bold: "Prothrombinzeit (PT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um zu gerinnen. Wird zur Beurteilung des extrinsischen und gemeinsamen Weges der Gerinnungskaskade verwendet.",
+          },
+          {
+            bold: "Aktivierte partielle Thromboplastinzeit (aPTT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um zu gerinnen. Wird zur Beurteilung des intrinsischen und gemeinsamen Weges der Gerinnungskaskade verwendet.",
+          },
+          {
+            bold: "Thrombinzeit (TT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um nach Zugabe von Thrombin zu gerinnen. Hilft bei der Beurteilung der Fibrinogen-Funktion.",
+          },
+          {
+            bold: "Fibrinogen :",
+            other:
+              "Ein Protein, das in der Leber produziert wird und in Fibrin umgewandelt wird, um ein Blutgerinnsel zu bilden.",
+          },
+          {
+            bold: "D-Dimer :",
+            other:
+              "Ein Abbauprodukt von Fibrin, das bei der Fibrinolyse freigesetzt wird. Erhöhte Werte weisen auf eine aktive Gerinnung und Fibrinolyse hin.",
+          },
+          {
+            bold: "Antithrombin III :",
+            other:
+              "Ein Protein, das die Blutgerinnung hemmt. Wird verwendet, um Mängel in der natürlichen Antikoagulation zu identifizieren.",
+          },
+          {
+            bold: "Faktor VIII :",
+            other:
+              "Ein wesentlicher Faktor für die Blutgerinnung. Mangel führt zu Hämophilie A.",
+          },
+          {
+            bold: "Faktor IX :",
+            other:
+              "Ein wesentlicher Faktor für die Blutgerinnung. Mangel führt zu Hämophilie B.",
+          },
+          {
+            bold: "Protein C und S :",
+            other:
+              "Proteine, die helfen, die Blutgerinnung zu regulieren. Mängel können das Risiko von Thrombosen erhöhen.",
+          },
+          {
+            bold: "Lupus-Antikoagulans :",
+            other:
+              "Ein Autoantikörper, der mit erhöhter Thromboseneigung assoziiert ist. Wird zur Diagnose von Antiphospholipid-Syndrom verwendet.",
+          },
+          {
+            bold: "Von-Willebrand-Faktor :",
+            other:
+              "Ein Protein, das bei der Blutgerinnung eine Rolle spielt. Mangel oder Funktionsstörungen führen zum Von-Willebrand-Syndrom.",
+          },
+        ],
+      },
+      // 6tab 212
+      {
+        id: 212,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Blutgerinnung :",
+            other:
+              "Der Prozess, durch den Blut flüssig bleibt, aber bei einer Verletzung gerinnt, um Blutungen zu stoppen.",
+          },
+          {
+            bold: "Prothrombinzeit (PT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um zu gerinnen; wichtig für die Beurteilung des extrinsischen Gerinnungsweges.",
+          },
+          {
+            bold: "Aktivierte partielle Thromboplastinzeit (aPTT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um zu gerinnen; beurteilt den intrinsischen Gerinnungsweg.",
+          },
+          {
+            bold: "Thrombinzeit (TT) :",
+            other:
+              "Misst die Zeit, die das Blut benötigt, um nach Zugabe von Thrombin zu gerinnen; beurteilt die Fibrinogen-Funktion.",
+          },
+          {
+            bold: "Fibrinogen :",
+            other:
+              "Ein Protein, das in Fibrin umgewandelt wird, um ein Blutgerinnsel zu bilden.",
+          },
+          {
+            bold: "D-Dimer :",
+            other:
+              "Ein Abbauprodukt von Fibrin, das auf aktive Gerinnung und Fibrinolyse hinweist.",
+          },
+          {
+            bold: "Antithrombin III :",
+            other:
+              "Ein Protein, das die Blutgerinnung hemmt und Thrombosen verhindert.",
+          },
+          {
+            bold: "Faktor VIII :",
+            other:
+              "Ein wesentlicher Gerinnungsfaktor; Mangel führt zu Hämophilie A.",
+          },
+          {
+            bold: "Faktor IX :",
+            other:
+              "Ein wesentlicher Gerinnungsfaktor; Mangel führt zu Hämophilie B.",
+          },
+          {
+            bold: "Protein C und S :",
+            other:
+              "Regulatorische Proteine, die die Blutgerinnung kontrollieren; Mängel erhöhen das Thromboserisiko.",
+          },
+          {
+            bold: "Lupus-Antikoagulans :",
+            other:
+              "Autoantikörper, die die Gerinnung beeinflussen und Thrombosen fördern; relevant für das Antiphospholipid-Syndrom.",
+          },
+          {
+            bold: "Von-Willebrand-Faktor :",
+            other:
+              "Ein Protein, das für die Blutgerinnung wichtig ist; Mangel oder Defekt führt zum Von-Willebrand-Syndrom.",
+          },
+          {
+            bold: "Gerinnungsfaktoren :",
+            other: "Proteine im Blut, die an der Blutgerinnung beteiligt sind.",
+          },
+          {
+            bold: "Fibrinolyse :",
+            other: "Der Prozess, durch den Blutgerinnsel abgebaut werden.",
+          },
+          {
+            bold: "Thrombophilie :",
+            other: "Eine Neigung zur Bildung von Blutgerinnseln.",
+          },
+          {
+            bold: "Hämophilie :",
+            other: "Eine Erbkrankheit, bei der die Blutgerinnung gestört ist.",
+          },
+          {
+            bold: "Koagulopathie :",
+            other: "Eine Störung der Blutgerinnung.",
+          },
+          {
+            bold: "Antikoagulanzien :",
+            other: "Medikamente, die die Blutgerinnung hemmen.",
+          },
+          {
+            bold: "INR (International Normalized Ratio) :",
+            other:
+              "Ein standardisierter Wert zur Beurteilung der Gerinnungsneigung des Blutes bei Patienten unter Warfarin-Therapie.",
+          },
+          {
+            bold: "Blutungszeit :",
+            other:
+              "Die Zeit, die eine Blutung benötigt, um zu stoppen; gibt Aufschluss über die Thrombozytenfunktion.",
+          },
+          {
+            bold: "Gerinnungsstörung :",
+            other:
+              "Anomalien im Blutgerinnungsprozess, die zu übermäßigen Blutungen oder Thrombosen führen können.",
+          },
+          {
+            bold: "Plasmatische Gerinnung :",
+            other:
+              "Die Gerinnung, die durch Gerinnungsfaktoren im Plasma vermittelt wird.",
+          },
+          {
+            bold: "Thrombozytenfunktion :",
+            other: "Die Rolle der Blutplättchen bei der Blutgerinnung.",
+          },
+          {
+            bold: "Substitutionstherapie :",
+            other:
+              "Die Verabreichung fehlender Gerinnungsfaktoren bei Patienten mit Gerinnungsstörungen.",
+          },
+          {
+            bold: "Warfarin :",
+            other:
+              "Ein Antikoagulans, das zur Vorbeugung und Behandlung von Thrombosen verwendet wird.",
+          },
+          {
+            bold: "Heparin :",
+            other:
+              "Ein schnell wirkendes Antikoagulans zur Verhinderung von Blutgerinnseln.",
+          },
+        ],
+      },
+      // 7tab 213
+      {
+        id: 213,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 214
+      {
+        id: 214,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1ZRBT22raPdOGWovU0V8oYIQ0YIEQWkfI/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 25
+
+  // start of parent tab 25 Urinuntersuchung
+  {
+    id: 26,
+    title: "Urinuntersuchung",
+    checked: false,
+    childTabs: [
+      // 1tab 215
+      {
+        id: 215,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Urinuntersuchung ist die Diagnose und Überwachung von Krankheiten sowie die Bewertung der Nierenfunktion und des Stoffwechsels. Durch die Analyse verschiedener Parameter im Urin können Hinweise auf systemische Erkrankungen und spezifische Organprobleme gefunden werden.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Urinuntersuchung ist ein grundlegendes diagnostisches Werkzeug in der Medizin. Sie wird häufig in der Primärversorgung, in der Notfallmedizin und bei regelmäßigen Gesundheitschecks eingesetzt. Zu den spezifischen Anwendungsbereichen gehören die Diagnose von Harnwegsinfektionen, Nierenerkrankungen, Diabetes und Lebererkrankungen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Urinuntersuchung basiert auf der Analyse von physikalischen, chemischen und mikroskopischen Eigenschaften des Urins. Verschiedene Substanzen im Urin, wie Proteine, Glukose, Ketone und Zellen, geben Aufschluss über den Gesundheitszustand des Patienten.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Für die Urinuntersuchung wird eine frische Urinprobe benötigt. Die Probe wird zunächst makroskopisch auf Farbe, Klarheit und Geruch untersucht. Anschließend erfolgt eine chemische Analyse mittels Teststreifen, gefolgt von einer mikroskopischen Untersuchung des Urinsediments, um Zellen, Kristalle und Mikroorganismen zu identifizieren.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Ergebnisse der Urinuntersuchung müssen sorgfältig interpretiert werden, da sie Hinweise auf verschiedene pathologische Zustände geben können. Ein positives Ergebnis auf Nitrit weist beispielsweise auf eine bakterielle Infektion hin, während das Vorhandensein von Protein auf eine mögliche Nierenschädigung hinweist.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei der Urinuntersuchung umfassen Leukozyten, Erythrozyten, Bakterien, Proteine und Glukose. Jeder dieser Befunde hat eine spezifische klinische Bedeutung und erfordert möglicherweise weitere diagnostische Maßnahmen.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Urinuntersuchung ist nicht-invasiv, kostengünstig und schnell durchführbar. Sie bietet wertvolle Informationen über den Gesundheitszustand des Patienten und kann frühzeitig auf Krankheiten hinweisen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Urinuntersuchung kann durch verschiedene Faktoren, wie Ernährung, Flüssigkeitsaufnahme und Medikamente, beeinflusst werden. Falsch-positive oder falsch-negative Ergebnisse sind möglich.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Risiken der Urinuntersuchung sind minimal, da es sich um eine nicht-invasive Methode handelt. In seltenen Fällen kann die Probenahme unangenehm sein oder zu einer Kontamination der Probe führen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Urinuntersuchung spielt eine zentrale Rolle in der Diagnose und Überwachung vieler Krankheiten. Sie hilft Ärzten, schnell und effizient Entscheidungen über die Behandlung zu treffen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Regelmäßige Urinuntersuchungen sind wichtig für das Management chronischer Krankheiten und die Früherkennung potenzieller Gesundheitsprobleme. Sie tragen dazu bei, die Lebensqualität der Patienten zu verbessern und Komplikationen zu vermeiden.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur Urinuntersuchung umfassen Bluttests, bildgebende Verfahren und spezialisierte Diagnosetests. Diese Methoden können in bestimmten Fällen erforderlich sein, um eine genauere Diagnose zu stellen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschungsergebnisse zeigen, dass neue Biomarker im Urin identifiziert werden, die eine präzisere Diagnose und Überwachung von Krankheiten ermöglichen. Fortschritte in der Technologie verbessern die Empfindlichkeit und Spezifität der Urinuntersuchung.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die zukünftige Entwicklung der Urinuntersuchung umfasst die Integration von Point-of-Care-Geräten und die Nutzung von Künstlicher Intelligenz zur Datenanalyse. Diese Innovationen könnten die Diagnostik weiter revolutionieren und personalisierte Behandlungsansätze fördern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Urinuntersuchung ist ein wesentliches diagnostisches Werkzeug in der Medizin, das wichtige Informationen über den Gesundheitszustand eines Patienten liefert. Sie ist kostengünstig, nicht-invasiv und bietet eine schnelle und effektive Methode zur Früherkennung und Überwachung von Krankheiten.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt bleibt die Urinuntersuchung eine unverzichtbare Methode in der medizinischen Diagnostik und im Patientenmanagement. Ihre fortlaufende Weiterentwicklung und Integration in moderne medizinische Praktiken wird ihre Bedeutung in der Gesundheitsversorgung weiter stärken.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 216
+      {
+        id: 216,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Urinuntersuchung dazu dient, Krankheiten zu diagnostizieren, die Nierenfunktion zu überprüfen und den Stoffwechsel zu bewerten.",
+            third:
+              "Die Urinuntersuchung hilft uns, eine mögliche Harnwegsinfektion zu erkennen.",
+            fourth:
+              "Wir überprüfen auch Ihre Nierenfunktion, um sicherzustellen, dass keine Schädigung vorliegt.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den Ablauf der Urinuntersuchung: Sammeln einer Urinprobe, makroskopische Untersuchung, chemische Analyse mit Teststreifen und mikroskopische Untersuchung des Urinsediments.",
+            third:
+              "Sie werden gebeten, eine Urinprobe in einem sauberen Behälter zu sammeln.",
+            fourth:
+              "Die Probe wird dann mit einem Teststreifen auf verschiedene Substanzen untersucht.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten darüber, wie er sich auf die Untersuchung vorbereiten soll, z. B. Vermeidung bestimmter Nahrungsmittel oder Medikamente vor der Probennahme.",
+            third:
+              "Bitte vermeiden Sie koffeinhaltige Getränke vor der Untersuchung.",
+            fourth:
+              "Informieren Sie uns über alle Medikamente, die Sie derzeit einnehmen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass die Urinuntersuchung minimal invasive Risiken birgt, wie z. B. mögliche Unannehmlichkeiten oder Kontamination der Probe.",
+            third:
+              "Es gibt nur minimale Risiken, wie z. B. eine mögliche Kontamination der Probe.",
+            fourth:
+              "In seltenen Fällen kann es zu einer leichten Unannehmlichkeit beim Sammeln der Probe kommen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erwähnen Sie die Vorteile der Urinuntersuchung: sie ist nicht-invasiv, kostengünstig und liefert schnell wertvolle Informationen über den Gesundheitszustand.",
+            third:
+              "Die Untersuchung ist schnell und verursacht keine Schmerzen.",
+            fourth:
+              "Sie liefert uns schnell wichtige Informationen über Ihre Gesundheit.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie über mögliche Alternativen zur Urinuntersuchung, wie Bluttests oder bildgebende Verfahren, die je nach Situation erforderlich sein können.",
+            third:
+              "Eine Alternative könnte ein Bluttest sein, um genauere Ergebnisse zu erhalten.",
+            fourth:
+              "Manchmal verwenden wir auch bildgebende Verfahren wie Ultraschall zur weiteren Diagnose.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, ob es bestimmte Kontraindikationen gibt, z. B. wenn eine Kontamination der Probe vermutet wird oder der Patient bestimmte Medikamente einnimmt, die die Ergebnisse verfälschen könnten.",
+            third:
+              "Wenn Sie gerade eine Menstruation haben, könnte das die Ergebnisse verfälschen.",
+            fourth:
+              "Bestimmte Medikamente können die Testergebnisse beeinflussen, bitte informieren Sie uns darüber.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über mögliche Ergebnisse der Urinuntersuchung und deren Bedeutung, wie das Vorhandensein von Leukozyten, Proteinen oder Glukose.",
+            third:
+              "Ein hoher Gehalt an Leukozyten könnte auf eine Infektion hinweisen.",
+            fourth:
+              "Das Vorhandensein von Glukose könnte ein Hinweis auf Diabetes sein.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit des Einverständnisses des Patienten für die Durchführung der Untersuchung und die Weiterverarbeitung der Ergebnisse.",
+            third:
+              "Ihr Einverständnis ist wichtig, damit wir die Untersuchung durchführen können.",
+            fourth:
+              "Wir benötigen Ihr Einverständnis, um die Ergebnisse in Ihrer Patientenakte zu dokumentieren.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, wie Sie das Einverständnis des Patienten einholen, z. B. durch eine schriftliche Einwilligungserklärung.",
+            third:
+              "Bitte unterschreiben Sie hier, um Ihr Einverständnis zur Untersuchung zu geben.",
+            fourth:
+              "Wir werden Sie bitten, eine Einverständniserklärung zu unterschreiben, bevor wir beginnen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise, z. B. wie der Patient nach der Untersuchung weiter vorgehen soll oder an wen er sich bei Fragen wenden kann.",
+            third:
+              "Wenn Sie Fragen zu den Ergebnissen haben, wenden Sie sich bitte an Ihren behandelnden Arzt.",
+            fourth:
+              "Nach der Untersuchung können Sie Ihre normalen Aktivitäten wieder aufnehmen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, wie und wann er die Ergebnisse der Untersuchung erhält und welche weiteren Schritte gegebenenfalls notwendig sind.",
+            third:
+              "Die Ergebnisse werden in etwa zwei Tagen vorliegen, und wir werden Sie dann informieren.",
+            fourth:
+              "Sollten die Ergebnisse auffällig sein, werden wir weitere Tests oder eine Behandlung vorschlagen.",
+          },
+        ],
+      },
+      // 3tab 217
+      {
+        id: 217,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, was die Urinuntersuchung ist, ihre grundlegende Methodik und welche Aspekte des Urins analysiert werden, z. B. physikalische, chemische und mikroskopische Eigenschaften.",
+            third:
+              "Die Urinuntersuchung umfasst die Analyse des Urins auf Farbe, Klarheit, chemische Bestandteile und mikroskopische Elemente.",
+            fourth:
+              "Diese Untersuchung hilft uns, verschiedene Substanzen im Urin wie Proteine, Glukose und Bakterien zu identifizieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, welche Krankheiten oder Zustände durch die Urinuntersuchung diagnostiziert oder überwacht werden können, z. B. Harnwegsinfektionen, Nierenerkrankungen, Diabetes und Lebererkrankungen.",
+            third:
+              "Mit der Urinuntersuchung können wir Harnwegsinfektionen, Nierenerkrankungen und Diabetes frühzeitig erkennen.",
+            fourth:
+              "Wir können auch Lebererkrankungen und metabolische Störungen wie Ketoazidose diagnostizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Diskutieren Sie typische Ergebnisse der Urinuntersuchung und deren klinische Bedeutung, wie z. B. das Vorhandensein von Leukozyten, Proteinen oder Glukose im Urin und was diese Befunde bedeuten könnten.",
+            third:
+              "Ein positiver Nitrittest weist auf eine bakterielle Harnwegsinfektion hin.",
+            fourth:
+              "Proteinurie kann ein Anzeichen für eine Nierenschädigung sein.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie die Indikationen für die Durchführung einer Urinuntersuchung, z. B. Symptome wie Dysurie, Hämaturie, und routinemäßige Gesundheitschecks bei bestimmten Patientengruppen.",
+            third:
+              "Bei Symptomen wie Brennen beim Wasserlassen oder häufigem Harndrang ist eine Urinuntersuchung indiziert.",
+            fourth:
+              "Routineuntersuchungen bei Patienten mit Diabetes beinhalten regelmäßig eine Urinuntersuchung.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen für die Urinuntersuchung, z. B. bei Verdacht auf Probenkontamination oder bei Patienten, die Medikamente einnehmen, die die Testergebnisse beeinflussen könnten.",
+            third:
+              "Eine Menstruation kann die Urinprobe kontaminieren und die Ergebnisse verfälschen.",
+            fourth:
+              "Die Einnahme von Vitamin C kann zu falsch-negativen Ergebnissen bei einem Test auf Blut im Urin führen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen basierend auf den Ergebnissen der Urinuntersuchung, z. B. Unterscheidung zwischen verschiedenen Ursachen einer Proteinurie oder Hämaturie.",
+            third:
+              "Bei Hämaturie müssen wir zwischen einer Harnwegsinfektion, Nierensteinen und einer glomerulären Erkrankung unterscheiden.",
+            fourth:
+              "Proteinurie könnte durch ein nephrotisches Syndrom oder eine orthostatische Proteinurie verursacht werden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie mögliche Behandlungspläne basierend auf den Ergebnissen der Urinuntersuchung, z. B. Antibiotikatherapie bei Harnwegsinfektionen oder weitere diagnostische Maßnahmen.",
+            third:
+              "Bei Nachweis von Bakterien im Urin beginnen wir eine Antibiotikatherapie.",
+            fourth:
+              "Bei Proteinurie könnte eine Überweisung zum Nephrologen zur weiteren Abklärung notwendig sein.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erörtern Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachabteilungen und Gesundheitsdienstleistern, z. B. Nephrologen bei Nierenproblemen oder Endokrinologen bei auffälligen Stoffwechselwerten.",
+            third:
+              "Bei Verdacht auf eine chronische Nierenerkrankung sollte eine Konsultation mit einem Nephrologen erfolgen.",
+            fourth:
+              "Patienten mit auffälligen Blutzuckerwerten im Urin sollten an einen Endokrinologen überwiesen werden.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Betonen Sie die Bedeutung des Qualitätsmanagements bei der Urinuntersuchung, z. B. die Sicherstellung korrekter Probenahme und -handhabung sowie die regelmäßige Kalibrierung und Wartung der Analysegeräte.",
+            third:
+              "Die Proben sollten sofort nach der Entnahme ins Labor gebracht werden, um die Genauigkeit der Ergebnisse zu gewährleisten.",
+            fourth:
+              "Regelmäßige Wartung und Kalibrierung der Analysegeräte sind entscheidend für zuverlässige Testergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Wichtigkeit der Dokumentation der Untersuchungsergebnisse und der Weiterverfolgung der Patienten, einschließlich der Planung weiterer diagnostischer oder therapeutischer Maßnahmen.",
+            third:
+              "Dokumentieren Sie die Ergebnisse der Urinuntersuchung sorgfältig in der Patientenakte.",
+            fourth:
+              "Planen Sie Follow-up-Termine, um die Behandlungseffektivität zu überwachen und weitere Maßnahmen zu besprechen.",
+          },
+        ],
+      },
+      // 4tab 218
+      {
+        id: 218,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über häufiges Wasserlassen, Brennen beim Wasserlassen und Unterbauchschmerzen. Keine auffällige Vorgeschichte.",
+            fourth:
+              "30-jährige Patientin berichtet von vermehrtem Durst, häufigem Wasserlassen und Müdigkeit. Familiengeschichte von Diabetes mellitus.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Urinuntersuchung ohne Auffälligkeiten: negative Nitrit- und Leukozytenesterase-Tests, keine pathologischen Befunde im Urinsediment.",
+            third:
+              "Urinuntersuchung zeigt positive Nitrit- und Leukozytenesterase-Tests, zahlreiche Leukozyten und Bakterien im Urinsediment.",
+            fourth:
+              "Urinuntersuchung offenbart erhöhte Glukose- und Ketonkörperwerte, kein Hinweis auf Harnwegsinfektion.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das Ergebnis der Urinuntersuchung unterstützt den Ausschluss von Harnwegsinfektionen und Stoffwechselerkrankungen.",
+            third:
+              "Der Befund deutet auf eine bakterielle Harnwegsinfektion hin. Die positiven Nitrit- und Leukozytenesterase-Tests sowie das Vorhandensein von Bakterien korrelieren mit den Symptomen des Patienten.",
+            fourth:
+              "Die erhöhten Glukose- und Ketonkörperwerte im Urin sind typisch für einen Diabetes mellitus. Dies passt zu den berichteten Symptomen der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Bestätigung der Gesundheit des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer Antibiotikatherapie und weiterer Maßnahmen zur Infektionsbekämpfung.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose Diabetes mellitus und die Einleitung einer geeigneten antidiabetischen Therapie und Ernährungsberatung.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Harntrakts und des Stoffwechsels. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer bakteriellen Harnwegsinfektion basierend auf den Urinbefunden und klinischem Bild.",
+            fourth:
+              "Diagnose von Diabetes mellitus aufgrund der Urinbefunde und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Klare Urinproben, negative Teststreifen-Ergebnisse und mikroskopisch unauffälliges Sediment.",
+            third:
+              "Urinproben zeigen deutliche Trübung und mikroskopisch zahlreiche Leukozyten und Bakterien.",
+            fourth:
+              "Teststreifen zeigen eine deutliche Glukose- und Ketonpositivität. Mikroskopisch keine Auffälligkeiten im Sediment.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen die Bestätigung der Gesundheit des Patienten und es ist ratsam, regelmäßige Gesundheitschecks zur Früherkennung möglicher Erkrankungen durchzuführen.",
+            third:
+              "Wir empfehlen die Einleitung einer Antibiotikatherapie und Anpassung des Trinkverhaltens. Es ist ratsam, präventive Maßnahmen zur Vermeidung von Harnwegsinfektionen zu besprechen.",
+            fourth:
+              "Es ist ratsam, die chronische Natur von Diabetes zu diskutieren und langfristige Behandlungsstrategien einschließlich Insulintherapie oder oraler Antidiabetika, Ernährungsberatung und regelmäßige Blutzuckerkontrollen zu empfehlen.",
+          },
+        ],
+      },
+      // 5tab 219
+      {
+        id: 219,
+        title: "Einheiten",
+        img: child_tab_img_1,
+        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text_list: [
+          {
+            bold: "Farbe: ",
+            other:
+              "Beurteilung der Urinfarbe, die von klar bis dunkelgelb variieren kann. Abweichungen können auf Dehydratation, Lebererkrankungen oder Blut im Urin hinweisen.",
+          },
+          {
+            bold: "Klarheit: ",
+            other:
+              "Beurteilung der Transparenz des Urins, der klar bis trüb sein kann. Trübungen können durch Infektionen, Zellen oder Kristalle verursacht werden.",
+          },
+          {
+            bold: "Geruch: ",
+            other:
+              "Ungewöhnlicher Uringeruch kann auf Infektionen oder Stoffwechselstörungen hinweisen. Zum Beispiel kann ein süßlicher Geruch auf Diabetes hindeuten.",
+          },
+          {
+            bold: "spezifisches Gewicht: ",
+            other:
+              "Misst die Konzentration des Urins, normalerweise zwischen 1.005 und 1.030. Ein hoher Wert kann auf Dehydratation hinweisen, ein niedriger Wert auf eine Nierenfunktionsstörung.",
+          },
+          {
+            bold: "pH-Wert: ",
+            other:
+              "Misst den Säuregrad des Urins, normalerweise zwischen 4,5 und 8. Abweichungen können auf Stoffwechsel- oder Nierenerkrankungen hinweisen.",
+          },
+          {
+            bold: "Protein: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Protein (Proteinurie) kann auf Nierenerkrankungen hinweisen.",
+          },
+          {
+            bold: "Glukose: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Glukose (Glukosurie) kann auf Diabetes mellitus hinweisen.",
+          },
+          {
+            bold: "Ketone: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Ketonen (Ketonurie) kann auf eine unkontrollierte Diabetes, eine ketogene Diät oder eine Starvation hinweisen.",
+          },
+          {
+            bold: "Bilirubin: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Bilirubin kann auf Lebererkrankungen oder Gallengangsverschlüsse hinweisen.",
+          },
+          {
+            bold: "Urobilinogen: ",
+            other:
+              "Normalerweise in geringen Mengen vorhanden. Erhöhte Werte können auf Lebererkrankungen oder Hämolyse hinweisen.",
+          },
+          {
+            bold: "Nitrit: ",
+            other:
+              "Normalerweise negativ. Ein positives Ergebnis kann auf eine bakterielle Harnwegsinfektion hinweisen.",
+          },
+          {
+            bold: "Leukozytenesterase: ",
+            other:
+              "Normalerweise negativ. Ein positives Ergebnis kann auf eine Harnwegsinfektion hinweisen.",
+          },
+          {
+            bold: "Erythrozyten: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Erythrozyten (Hämaturie) kann auf Infektionen, Steine oder Tumoren im Harntrakt hinweisen.",
+          },
+          {
+            bold: "Leukozyten: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Leukozyten (Leukozyturie) kann auf Infektionen oder Entzündungen im Harntrakt hinweisen.",
+          },
+          {
+            bold: "Zylinder: ",
+            other:
+              "Werden im Urinsediment untersucht, ihre Präsenz kann auf Nierenerkrankungen hinweisen. Es gibt verschiedene Typen (hyalin, granulär, wachsartig, erythrozytär, leukozytär).",
+          },
+          {
+            bold: "Kristalle: ",
+            other:
+              "Werden im Urinsediment untersucht, ihre Präsenz kann auf bestimmte Stoffwechselerkrankungen oder Harnsteine hinweisen. Beispiele sind Oxalat-, Harnsäure- und Cystinkristalle.",
+          },
+          {
+            bold: "Bakterien: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Bakterien (Bakteriurie) kann auf eine Harnwegsinfektion hinweisen.",
+          },
+          {
+            bold: "Hefen und Pilze: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Hefen oder Pilzen kann auf eine Harnwegsinfektion hinweisen, besonders bei immungeschwächten Patienten.",
+          },
+          {
+            bold: "Parasiten: ",
+            other:
+              "Normalerweise negativ. Das Vorhandensein von Parasiten im Urin ist selten, kann aber auf parasitäre Infektionen des Harntrakts hinweisen.",
+          },
+          {
+            bold: "Epithelzellen: ",
+            other:
+              "Werden im Urinsediment untersucht, eine erhöhte Anzahl kann auf eine Kontamination der Probe oder auf Erkrankungen des Harntrakts hinweisen.",
+          },
+        ],
+      },
+      // 6tab 220
+      {
+        id: 220,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Urinprobe: ",
+            other:
+              "Eine kleine Menge Urin, die für die Analyse gesammelt wird.",
+          },
+          {
+            bold: "Miktion: ",
+            other: "Das Wasserlassen oder die Blasenentleerung.",
+          },
+          {
+            bold: "Makroskopische Untersuchung: ",
+            other:
+              "Visuelle Beurteilung von Farbe, Klarheit und Geruch des Urins.",
+          },
+          {
+            bold: "Teststreifen: ",
+            other:
+              "Ein Streifen mit chemischen Reagenzien, der in den Urin getaucht wird, um verschiedene Substanzen nachzuweisen.",
+          },
+          {
+            bold: "Urinanalyse: ",
+            other:
+              "Eine Serie von Tests zur Bestimmung der physikalischen, chemischen und mikroskopischen Eigenschaften des Urins.",
+          },
+          {
+            bold: "Urinmikroskopie: ",
+            other:
+              "Untersuchung des Urinsediments unter dem Mikroskop zur Identifizierung von Zellen, Kristallen und Mikroorganismen.",
+          },
+          {
+            bold: "Urinstatus: ",
+            other:
+              "Gesamtbewertung der physikalischen, chemischen und mikroskopischen Befunde des Urins.",
+          },
+          {
+            bold: "spezifisches Gewicht: ",
+            other:
+              "Messung der Konzentration des Urins, die auf die Nierenfunktion hinweist.",
+          },
+          {
+            bold: "pH-Wert: ",
+            other: "Maß für den Säuregrad des Urins.",
+          },
+          {
+            bold: "Leukozytenesterase: ",
+            other:
+              "Enzym, das auf das Vorhandensein von weißen Blutkörperchen hinweist und eine Harnwegsinfektion anzeigen kann.",
+          },
+          {
+            bold: "Nitrit: ",
+            other:
+              "Chemische Verbindung, deren Nachweis auf eine bakterielle Infektion im Urin hindeutet.",
+          },
+          {
+            bold: "Proteinurie: ",
+            other:
+              "Vorhandensein von Proteinen im Urin, Hinweis auf mögliche Nierenerkrankungen.",
+          },
+          {
+            bold: "Glukosurie: ",
+            other:
+              "Vorhandensein von Glukose im Urin, oft ein Hinweis auf Diabetes mellitus.",
+          },
+          {
+            bold: "Ketonurie: ",
+            other:
+              "Vorhandensein von Ketonkörpern im Urin, oft verbunden mit Diabetes oder Hungerzuständen.",
+          },
+          {
+            bold: "Bilirubinurie: ",
+            other:
+              "Vorhandensein von Bilirubin im Urin, kann auf Lebererkrankungen hinweisen.",
+          },
+          {
+            bold: "Urobilinogen: ",
+            other:
+              "Abbauprodukt des Bilirubins, das in geringen Mengen im Urin vorhanden sein sollte.",
+          },
+          {
+            bold: "Hämaturie: ",
+            other:
+              "Vorhandensein von roten Blutkörperchen im Urin, Hinweis auf Blutungen im Harntrakt.",
+          },
+          {
+            bold: "Leukozyturie: ",
+            other:
+              "Vorhandensein von weißen Blutkörperchen im Urin, häufig bei Infektionen.",
+          },
+          {
+            bold: "Bakteriurie: ",
+            other:
+              "Vorhandensein von Bakterien im Urin, Hinweis auf eine Harnwegsinfektion.",
+          },
+          {
+            bold: "Kristallurie: ",
+            other:
+              "Vorhandensein von Kristallen im Urin, kann auf Stoffwechselstörungen oder Nierensteine hinweisen.",
+          },
+          {
+            bold: "Zylinder: ",
+            other:
+              "Zellstrukturen im Urinsediment, die auf Nierenerkrankungen hinweisen können.",
+          },
+          {
+            bold: "Sediment: ",
+            other:
+              "Feste Bestandteile, die sich nach Zentrifugation des Urins absetzen und mikroskopisch untersucht werden.",
+          },
+          {
+            bold: "Kontamination: ",
+            other:
+              "Verunreinigung der Urinprobe, die die Testergebnisse verfälschen kann.",
+          },
+          {
+            bold: "Diurese: ",
+            other: "Produktion und Ausscheidung von Urin durch die Nieren.",
+          },
+          {
+            bold: "Polyurie: ",
+            other: "Erhöhte Urinproduktion, häufig bei Diabetes mellitus.",
+          },
+          {
+            bold: "Oligurie: ",
+            other:
+              "Verminderte Urinausscheidung, kann auf Nierenversagen hinweisen.",
+          },
+          {
+            bold: "Anurie: ",
+            other:
+              "Fehlende Urinausscheidung, Hinweis auf schwerwiegende Nierenfunktionsstörung.",
+          },
+          {
+            bold: "Dysurie: ",
+            other: "Schmerzhaftes Wasserlassen, oft bei Harnwegsinfektionen.",
+          },
+          {
+            bold: "Urinbecher: ",
+            other: "Behälter zur Sammlung der Urinprobe.",
+          },
+          {
+            bold: "Mittelstrahlurin: ",
+            other:
+              "Urinprobe, die aus dem mittleren Teil des Harnflusses gewonnen wird, um Kontamination zu vermeiden.",
+          },
+        ],
+      },
+      // 7tab 221
+      {
+        id: 221,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 222
+      {
+        id: 222,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1SjTlfHs2Vv0HgDkAIe61d6L9PTyz8mGT/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 25
+
+  // start of parent tab 26 Stuhluntersuchung
+  {
+    id: 27,
+    title: "Stuhluntersuchung",
+    checked: false,
+    childTabs: [
+      // 1tab 223
+      {
+        id: 223,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Stuhluntersuchung ist die Diagnose und Überwachung von gastrointestinalen Erkrankungen. Durch die Analyse von Stuhlproben können verschiedene Pathogene, Entzündungsmarker, Verdauungsrückstände und andere Abnormalitäten identifiziert werden.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Stuhluntersuchungen sind relevant bei Verdacht auf Infektionen, Entzündungskrankheiten, Malabsorption und Krebs. Sie finden Anwendung in der Diagnose von Erkrankungen wie Colitis ulcerosa, Morbus Crohn, Darmkrebs und parasitären Infektionen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Stuhluntersuchung basiert auf der Analyse physikalischer, chemischer und mikrobiologischer Eigenschaften von Stuhlproben. Verschiedene Tests können spezifische Pathogene, Blutspuren, Fettgehalt und andere relevante Indikatoren nachweisen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Für eine Stuhluntersuchung wird eine Stuhlprobe vom Patienten entnommen und im Labor analysiert. Die Techniken umfassen Makroskopie, Mikroskopie, chemische Tests und mikrobiologische Kulturen. Moderne Methoden beinhalten auch molekulare Diagnostik wie PCR.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Ergebnisse der Stuhluntersuchung müssen sorgfältig interpretiert werden. Positive Ergebnisse für Pathogene erfordern spezifische Behandlungsstrategien. Abnorme chemische Marker können auf verschiedene Erkrankungen hinweisen und müssen im klinischen Kontext bewertet werden.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen das Vorhandensein von Blut, Fett, Parasiten, Bakterien oder entzündlichen Markern. Jeder Befund hat spezifische klinische Implikationen und erfordert eine differenzierte Betrachtung.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Stuhluntersuchung ist nicht-invasiv, kostengünstig und kann wertvolle Informationen für die Diagnose und das Management von gastrointestinalen Erkrankungen liefern.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Probenentnahme kann für Patienten unangenehm sein. Die Interpretation der Ergebnisse kann komplex sein und erfordert fachliche Expertise.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Es gibt kaum direkte Risiken, jedoch können falsche Ergebnisse zu Fehlinterpretationen und damit zu suboptimalen Behandlungsentscheidungen führen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Stuhluntersuchung spielt eine zentrale Rolle in der Diagnose und Überwachung vieler gastrointestinaler Erkrankungen. Sie liefert entscheidende Informationen für die Auswahl der Therapie und die Beurteilung des Behandlungserfolgs.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Eine korrekte und umfassende Stuhluntersuchung unterstützt das Patientenmanagement erheblich, indem sie präzise Diagnosen ermöglicht und zur Überwachung des Krankheitsverlaufs beiträgt.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "Alternativen:",
+                text: "Alternativen zur Stuhluntersuchung umfassen Bluttests, bildgebende Verfahren wie Ultraschall oder Koloskopie, sowie Endoskopie. Diese Methoden bieten zusätzliche Informationen und können ergänzend eingesetzt werden.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Entwicklung von präziseren und schnelleren Diagnosemethoden, einschließlich molekularer Techniken und der Analyse des Mikrobioms.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten personalisierte Diagnostik und Therapien ermöglichen, basierend auf einer detaillierten Analyse des individuellen Mikrobioms und der genetischen Prädisposition.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Stuhluntersuchung ist ein wesentliches diagnostisches Werkzeug in der Gastroenterologie, das wertvolle Informationen über verschiedene Erkrankungen liefert. Sie ist nicht-invasiv und kosteneffektiv, erfordert jedoch eine sorgfältige Interpretation der Ergebnisse.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist die Stuhluntersuchung ein unverzichtbarer Bestandteil der medizinischen Diagnostik, der maßgeblich zur effektiven Diagnose und Behandlung von gastrointestinalen Erkrankungen beiträgt.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 224
+      {
+        id: 224,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel der Stuhluntersuchung die Diagnose und Überwachung von gastrointestinalen Erkrankungen ist.",
+            third:
+              "Wir möchten feststellen, ob bei Ihnen eine Infektion oder Entzündung im Darm vorliegt.",
+            fourth:
+              "Diese Untersuchung hilft uns, die Ursache Ihrer Beschwerden wie Durchfall oder Bauchschmerzen zu finden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie, wie die Stuhlprobe entnommen wird, wie sie im Labor untersucht wird und welche Techniken dabei zur Anwendung kommen.",
+            third:
+              "Sie sammeln eine kleine Menge Stuhl in einem speziellen Behälter, den Sie von uns erhalten.",
+            fourth:
+              "Die Probe wird dann im Labor analysiert, um nach Blut, Bakterien oder Parasiten zu suchen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über notwendige Vorbereitungen, wie z.B. eine spezielle Diät oder das Vermeiden bestimmter Medikamente.",
+            third:
+              "Bitte vermeiden Sie für 48 Stunden vor der Probenentnahme den Verzehr von rotem Fleisch und Vitamin C.",
+            fourth:
+              "Informieren Sie uns, wenn Sie Antibiotika einnehmen, da dies die Ergebnisse beeinflussen könnte.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass die Stuhluntersuchung kaum Risiken birgt, jedoch unangenehm sein kann. Falsche Ergebnisse können jedoch zu Fehlinterpretationen führen.",
+            third:
+              "Die Probenentnahme ist einfach und hat keine direkten gesundheitlichen Risiken.",
+            fourth:
+              "Es ist wichtig, die Probe korrekt zu sammeln, um falsche Ergebnisse zu vermeiden.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie, dass die Untersuchung nicht-invasiv, kostengünstig und sehr aufschlussreich für die Diagnose von Magen-Darm-Erkrankungen ist.",
+            third:
+              "Die Stuhluntersuchung ist nicht-invasiv, das heißt, es sind keine Eingriffe in den Körper nötig.",
+            fourth:
+              "Sie liefert wertvolle Informationen, ohne dass Sie einen teuren oder komplizierten Test machen müssen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie über mögliche Alternativen wie Bluttests, Ultraschall, Koloskopie oder Endoskopie.",
+            third:
+              "Eine Alternative könnte ein Bluttest sein, um Entzündungsmarker nachzuweisen.",
+            fourth:
+              "In einigen Fällen könnte eine Koloskopie sinnvoller sein, besonders wenn wir direkte Bilder des Darms brauchen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, ob es bestimmte Kontraindikationen gibt, die eine Stuhluntersuchung nicht empfehlenswert machen.",
+            third:
+              "Wenn Sie kürzlich bestimmte Medikamente eingenommen haben, könnte dies die Testergebnisse beeinflussen.",
+            fourth:
+              "Bei schweren Blutungen im Darm kann eine andere Untersuchungsmethode sicherer sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche möglichen Ergebnisse auftreten können, wie das Vorhandensein von Blut, Parasiten, Bakterien oder entzündlichen Markern.",
+            third:
+              "Wir könnten Bakterien finden, die auf eine Infektion hinweisen.",
+            fourth:
+              "Das Vorhandensein von Blut im Stuhl könnte auf eine innere Blutung oder Entzündung hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Wichtigkeit des informierten Einverständnisses des Patienten vor der Durchführung der Untersuchung.",
+            third:
+              "Es ist wichtig, dass Sie verstehen, warum wir diese Untersuchung durchführen und was sie beinhaltet.",
+            fourth:
+              "Ihr Einverständnis ist notwendig, damit wir die Stuhlprobe analysieren und die besten Behandlungsoptionen finden können.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erläutern Sie, wie der Prozess des Einverständnisses abläuft und dass der Patient alle notwendigen Informationen erhält.",
+            third:
+              "Wir werden Ihnen ein Formular geben, das Sie nach dem Durchlesen und Verstehen unterschreiben.",
+            fourth:
+              "Bitte stellen Sie alle Fragen, die Sie haben, bevor Sie Ihr Einverständnis geben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise, wie er sich nach der Probenentnahme verhalten soll und wann er mit Ergebnissen rechnen kann.",
+            third:
+              "Nach der Probenentnahme können Sie Ihren normalen Aktivitäten nachgehen.",
+            fourth:
+              "Die Ergebnisse werden in etwa einer Woche vorliegen, und wir werden Sie dann kontaktieren.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, wie er die Ergebnisse erhält und welche Schritte je nach Ergebnis folgen.",
+            third:
+              "Wir werden Sie telefonisch oder per Post über die Ergebnisse informieren.",
+            fourth:
+              "Falls das Ergebnis positiv ist, besprechen wir die nächsten Schritte und mögliche Behandlungsoptionen mit Ihnen.",
+          },
+        ],
+      },
+      // 3tab 225
+      {
+        id: 225,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie den genauen Ablauf, die Methodik und die theoretischen Grundlagen der Stuhluntersuchung.",
+            third:
+              "Die Stuhluntersuchung umfasst die Analyse von physikalischen, chemischen und mikrobiologischen Eigenschaften des Stuhls.",
+            fourth:
+              "Diese Untersuchung beinhaltet Tests wie Makroskopie, Mikroskopie, chemische Tests und mikrobiologische Kulturen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, welche spezifischen Krankheiten und Zustände durch die Stuhluntersuchung diagnostiziert oder überwacht werden können.",
+            third:
+              "Wir können damit Infektionen, entzündliche Darmerkrankungen und Malabsorptionssyndrome diagnostizieren.",
+            fourth:
+              "Es ist möglich, pathogene Bakterien, Viren, Parasiten sowie entzündliche Marker im Stuhl zu identifizieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erklären Sie, welche Ergebnisse typisch sind, wie diese interpretiert werden und welche klinischen Implikationen sie haben.",
+            third:
+              "Positive Ergebnisse für Blut können auf eine gastrointestinale Blutung hinweisen.",
+            fourth:
+              "Der Nachweis von bestimmten Bakterien wie Clostridium difficile kann eine antibiotische Behandlung erforderlich machen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die spezifischen Indikationen für eine Stuhluntersuchung, einschließlich der klinischen Szenarien, in denen sie angewendet wird.",
+            third:
+              "Indikationen umfassen anhaltenden Durchfall, ungeklärte Bauchschmerzen und Verdacht auf parasitäre Infektionen.",
+            fourth:
+              "Sie wird auch bei Verdacht auf entzündliche Darmerkrankungen wie Morbus Crohn oder Colitis ulcerosa durchgeführt.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, unter welchen Bedingungen eine Stuhluntersuchung nicht durchgeführt werden sollte und warum.",
+            third:
+              "Eine Kontraindikation könnte eine schwere akute gastrointestinale Blutung sein, da dies eine andere Notfallbehandlung erfordert.",
+            fourth:
+              "Bei kürzlicher Einnahme von Antibiotika könnte die Testgenauigkeit beeinträchtigt sein, was eine zeitliche Verschiebung erforderlich macht.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die anhand der Ergebnisse der Stuhluntersuchung in Betracht gezogen werden sollten.",
+            third:
+              "Bei Nachweis von Blut im Stuhl sollten Differenzialdiagnosen wie Hämorrhoiden, Magen-Darm-Tumore oder Divertikulitis erwogen werden.",
+            fourth:
+              "Bei positivem Befund auf Giardia lamblia müssen andere Ursachen für Durchfall wie bakterielle Infektionen ausgeschlossen werden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse der Stuhluntersuchung die Behandlungsplanung beeinflussen und welche Therapien erwogen werden können.",
+            third:
+              "Ein positiver Befund für Clostridium difficile würde eine spezifische antibiotische Therapie erfordern.",
+            fourth:
+              "Der Nachweis von Fett im Stuhl könnte eine fettarme Diät und die Gabe von Enzympräparaten bei Pankreasinsuffizienz notwendig machen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachrichtungen und medizinischen Fachkräften bei der Durchführung und Interpretation der Stuhluntersuchung.",
+            third:
+              "Die Zusammenarbeit mit Mikrobiologen ist entscheidend für die korrekte Identifikation von Erregern.",
+            fourth:
+              "Eine enge Abstimmung mit Gastroenterologen ist notwendig, um die richtigen therapeutischen Schritte zu planen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Beschreiben Sie Maßnahmen zur Qualitätssicherung bei der Durchführung und Auswertung der Stuhluntersuchung, um verlässliche Ergebnisse zu gewährleisten.",
+            third:
+              "Regelmäßige Kalibrierung der Laborausrüstung und interne Kontrollen sind notwendig, um die Genauigkeit der Ergebnisse sicherzustellen.",
+            fourth:
+              "Die Schulung des Personals zur korrekten Probenentnahme und -verarbeitung ist entscheidend für valide Ergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern Sie die Bedeutung einer sorgfältigen Dokumentation der Untersuchungsergebnisse und die notwendigen Schritte zur Weiterverfolgung der Patienten.",
+            third:
+              "Eine detaillierte Dokumentation der Befunde im Patientenakte ist notwendig, um den Krankheitsverlauf zu verfolgen.",
+            fourth:
+              "Nach Erhalt der Ergebnisse sollten wir einen Nachsorgetermin vereinbaren, um die Therapie anzupassen und den Patienten weiter zu betreuen.",
+          },
+        ],
+      },
+      // 4tab 226
+      {
+        id: 226,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient mit anhaltendem Durchfall, Bauchschmerzen und Fieber.",
+            fourth:
+              "30-jährige Patientin mit chronischer Diarrhö, Gewichtsverlust und Blähungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Stuhlprobe zeigt normale Flora, keine Anzeichen von Blut, Fett oder pathogenen Keimen.",
+            third:
+              "Stuhlprobe zeigt hohe Konzentrationen von Entzündungszellen und pathogenen Bakterien.",
+            fourth:
+              "Stuhlprobe weist auf erhöhten Fettgehalt und unzureichende Nährstoffabsorption hin.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Ergebnisse unterstützen den Ausschluss von gastrointestinalen Erkrankungen.",
+            third:
+              "Der Befund deutet auf eine infektiöse Kolitis hin, möglicherweise durch eine bakterielle Infektion verursacht.",
+            fourth:
+              "Der Befund ist typisch für ein Malabsorptionssyndrom, wie z.B. Zöliakie oder chronische Pankreatitis.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Einleitung einer antibiotischen Therapie und eventuell weiterer diagnostischer Maßnahmen wie eine Koloskopie.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer diätetischen oder enzymatischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Gastrointestinaltraktes. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer infektiösen Kolitis basierend auf Stuhlbefunden und klinischem Bild.",
+            fourth:
+              "Diagnose eines Malabsorptionssyndroms aufgrund der Stuhlanalyse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second: "Normale Stuhlanalyse ohne Auffälligkeiten.",
+            third:
+              "Mikroskopische Untersuchung zeigt entzündliche Zellen und pathogene Bakterien.",
+            fourth:
+              "Stuhlmikroskopie zeigt unverdautes Fett, Anzeichen von Malabsorption.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, die Routinekontrollen beizubehalten und eine ausgewogene Ernährung zu fördern. Es ist ratsam, bei neuen Symptomen erneut eine Untersuchung durchzuführen.",
+            third:
+              "Wir empfehlen eine sofortige antibiotische Therapie und eine Nachkontrolle in zwei Wochen. Es ist ratsam, mögliche Kontaminationsquellen im Haushalt zu identifizieren und zu vermeiden.",
+            fourth:
+              "Wir empfehlen eine detaillierte Ernährungsberatung und gegebenenfalls eine Supplementierung von Pankreasenzymen. Es ist ratsam, regelmäßige Kontrolluntersuchungen durchzuführen, um die Therapie anzupassen.",
+          },
+        ],
+      },
+      // 5tab 227
+      {
+        id: 227,
+        title: "Veränderung der Stuhlgewohnheiten",
+        img: child_tab_img_1,
+        text: "Diese detaillierten Informationen helfen, die Veränderungen der Stuhlgewohnheiten besser zu verstehen und mögliche Ursachen und diagnostische Ansätze zu identifizieren:",
+        text_list: [
+          {
+            bold: "Häufigkeit:",
+            other: [
+              "• Zunahme der Stuhlfrequenz:",
+              "  • Akut: Kann durch Infektionen wie Gastroenteritis verursacht werden.",
+              "  • Chronisch: Kann auf chronisch-entzündliche Darmerkrankungen wie Morbus Crohn oder Reizdarmsyndrom hinweisen.",
+              "• Abnahme der Stuhlfrequenz:",
+              "  • Akut: Kann durch akute Verstopfung oder Darmverschluss verursacht werden.",
+              "  • Chronisch: Kann auf chronische Verstopfung, Hypothyreose oder Darmträgheit hinweisen.",
+            ],
+          },
+          {
+            bold: "Konsistenz:",
+            other: [
+              "• Verflüssigung des Stuhls (Durchfall):",
+              "  • Ursachen: Infektionen, Lebensmittelvergiftungen, Malabsorption, chronisch-entzündliche Darmerkrankungen.",
+              "  • Begleiterscheinungen: Bauchschmerzen, Fieber, Dehydratation.",
+              "• Verhärtung des Stuhls (Verstopfung):",
+              "  • Ursachen: Ballaststoffarme Ernährung, Flüssigkeitsmangel, Bewegungsmangel, bestimmte Medikamente.",
+              "  • Begleiterscheinungen: Blähungen, Bauchschmerzen, Hämorrhoiden.",
+            ],
+          },
+          {
+            bold: "Farbe:",
+            other: [
+              "• Helle Stuhlfarbe (acholischer Stuhl):",
+              "  • Ursachen: Gallenwegsobstruktion, Lebererkrankungen wie Hepatitis oder Leberzirrhose.",
+              "• Dunkler/Schwarzer Stuhl (Meläna):",
+              "  • Ursachen: Gastrointestinale Blutungen, Eisenpräparate.",
+              "  • Begleiterscheinungen: Schwindel, Anämie, Müdigkeit.",
+              "• Roter Stuhl:",
+              "  • Ursachen: Frisches Blut aus unteren Darmabschnitten, Hämorrhoiden, Analfissuren, Kolitis.",
+              "• Grüner Stuhl:",
+              "  • Ursachen: Schnelle Darmpassage, grüne Lebensmittel oder Farbstoffe, Infektionen.",
+            ],
+          },
+          {
+            bold: "Geruch:",
+            other: [
+              "• Übelriechender Stuhl:",
+              "  • Ursachen: Malabsorption, Infektionen, fermentierte Nahrung, bakterielles Überwuchern.",
+              "• Milder Geruch:",
+              "  • Ursachen: Normalerweise unauffällig, kann bei ballaststoffreicher Ernährung auftreten.",
+            ],
+          },
+          {
+            bold: "Form:",
+            other: [
+              "• Veränderte Form (z.B. schmaler Stuhl, „Bleistiftform“):",
+              "  • Ursachen: Kolonkarzinom, Darmstrikturen, chronische Verstopfung.",
+              "• Weicher, unförmiger Stuhl:",
+              "  • Ursachen: Nahrungsmittelunverträglichkeiten, Reizdarmsyndrom, Infektionen.",
+            ],
+          },
+          {
+            bold: "Begleiterscheinungen:",
+            other: [
+              "• Bauchschmerzen:",
+              "  • Lokalisation und Intensität: Können Hinweise auf die Ursache geben (z.B. linker Unterbauch bei Divertikulitis).",
+              "• Blähungen:",
+              "  • Häufigkeit und Ausmaß: Können bei Nahrungsmittelunverträglichkeiten, Malabsorption oder Dysbiose auftreten.",
+              "• Tenesmen:",
+              "  • Schmerzhaftes Stuhldranggefühl: Kann bei entzündlichen Darmerkrankungen oder Infektionen vorkommen.",
+            ],
+          },
+          {
+            bold: "Weitere relevante Informationen:",
+            other: [
+              "• Diätveränderungen: Neue Ernährungsgewohnheiten oder diätetische Umstellungen können Einfluss auf die Stuhlgewohnheiten haben.",
+              "• Medikamenteneinnahme: Bestimmte Medikamente (z.B. Antibiotika, Laxantien) können Stuhlveränderungen verursachen.",
+              "• Psychische Faktoren: Stress und psychische Belastungen können zu Reizdarmsymptomen und Veränderungen der Stuhlgewohnheiten führen.",
+            ],
+          },
+        ],
+      },
+      // 6tab 228
+      {
+        id: 228,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Stuhluntersuchung :",
+            other:
+              "Analyse einer Stuhlprobe zur Diagnose von Magen-Darm-Erkrankungen.",
+          },
+          {
+            bold: "Stuhlprobe :",
+            other: "Eine entnommene Menge von Stuhl zur Untersuchung.",
+          },
+          {
+            bold: "Entzündungszellen :",
+            other:
+              "Zellen, die auf eine Entzündung im Körper hinweisen, z.B. Leukozyten.",
+          },
+          {
+            bold: "Pathogene Bakterien :",
+            other:
+              "Krankheitserregende Bakterien, die Infektionen verursachen können.",
+          },
+          {
+            bold: "Mikroskopie :",
+            other:
+              "Untersuchung der Stuhlprobe unter dem Mikroskop zur Identifikation von Zellen und Mikroorganismen.",
+          },
+          {
+            bold: "Makroskopie :",
+            other:
+              "Sichtbare Beurteilung der Stuhlprobe (Farbe, Konsistenz, Geruch).",
+          },
+          {
+            bold: "Chemische Tests :",
+            other: "Tests zur Bestimmung von Blut, Fett oder pH-Wert im Stuhl.",
+          },
+          {
+            bold: "Mikrobiologische Kulturen :",
+            other:
+              "Anzucht von Mikroorganismen aus der Stuhlprobe zur Identifizierung.",
+          },
+          {
+            bold: "PCR (Polymerase-Kettenreaktion) :",
+            other:
+              "Molekularbiologisches Verfahren zum Nachweis von Erreger-DNA im Stuhl.",
+          },
+          {
+            bold: "Okkultes Blut :",
+            other:
+              "Nicht sichtbares Blut im Stuhl, nachweisbar durch spezielle Tests (z.B. Hämoccult-Test).",
+          },
+          {
+            bold: "Fäkale Elastase :",
+            other:
+              "Enzym im Stuhl, das auf eine Pankreasinsuffizienz hinweisen kann.",
+          },
+          {
+            bold: "Calprotectin :",
+            other:
+              "Protein im Stuhl, das als Marker für entzündliche Darmerkrankungen verwendet wird.",
+          },
+          {
+            bold: "Helicobacter pylori :",
+            other:
+              "Bakterium, das Magengeschwüre und Magenkrebs verursachen kann, nachweisbar im Stuhl.",
+          },
+          {
+            bold: "Giardia lamblia :",
+            other:
+              "Parasit, der Durchfall und Magenkrämpfe verursachen kann, nachweisbar im Stuhl.",
+          },
+          {
+            bold: "Rotavirus :",
+            other:
+              "Virus, das akuten Durchfall, insbesondere bei Kindern, verursacht.",
+          },
+          {
+            bold: "C. difficile :",
+            other:
+              "Bakterium, das schwere Durchfälle und Kolitis verursachen kann, oft nach Antibiotikatherapie.",
+          },
+          {
+            bold: "Fettsäuren :",
+            other: "Erhöhte Mengen im Stuhl weisen auf Malabsorption hin.",
+          },
+          {
+            bold: "pH-Wert :",
+            other:
+              "Gibt den Säuregehalt des Stuhls an, abnorme Werte können auf Verdauungsprobleme hinweisen.",
+          },
+          {
+            bold: "Normalflora :",
+            other: "Die natürlichen, nicht pathogenen Bakterien im Darm.",
+          },
+          {
+            bold: "Diarrhö :",
+            other: "Häufige, flüssige Stuhlgänge.",
+          },
+          {
+            bold: "Obstipation :",
+            other: "Verstopfung, seltener oder schwieriger Stuhlgang.",
+          },
+          {
+            bold: "Tenesmus :",
+            other: "Schmerzhaftes Gefühl des unvollständigen Stuhlgangs.",
+          },
+          {
+            bold: "Steatorrhoe :",
+            other:
+              "Fettstuhl, glänzender und übel riechender Stuhl durch Malabsorption.",
+          },
+          {
+            bold: "Kolitis :",
+            other:
+              "Entzündung des Dickdarms, oft mit Durchfall und Bauchschmerzen verbunden.",
+          },
+          {
+            bold: "Morbus Crohn :",
+            other:
+              "Chronisch-entzündliche Darmerkrankung, die jeden Teil des Magen-Darm-Trakts betreffen kann.",
+          },
+          {
+            bold: "Colitis ulcerosa :",
+            other:
+              "Chronisch-entzündliche Darmerkrankung, die auf den Dickdarm beschränkt ist.",
+          },
+          {
+            bold: "Routinekontrolle :",
+            other:
+              "Regelmäßige Untersuchung zur Überwachung des Gesundheitszustands.",
+          },
+          {
+            bold: "Differenzialdiagnose :",
+            other:
+              "Abgrenzung ähnlicher Krankheitsbilder zur genauen Diagnosefindung.",
+          },
+          {
+            bold: "Malabsorption :",
+            other: "Unzureichende Nährstoffaufnahme im Dünndarm.",
+          },
+          {
+            bold: "Zöliakie :",
+            other:
+              "Glutenunverträglichkeit, die zu Entzündungen im Dünndarm führt.",
+          },
+          {
+            bold: "Enzymatische Therapie :",
+            other:
+              "Behandlung mit Enzymen, z.B. Pankreasenzymen bei Verdauungsstörungen.",
+          },
+          {
+            bold: "Antibiotikatherapie :",
+            other: "Behandlung von bakteriellen Infektionen mit Antibiotika.",
+          },
+          {
+            bold: "Probiotika :",
+            other:
+              "Präparate mit lebenden Mikroorganismen, die die Darmflora unterstützen sollen.",
+          },
+          {
+            bold: "Ernährungsberatung :",
+            other:
+              "Fachliche Beratung zur Ernährung, oft bei Malabsorption oder chronischen Darmerkrankungen.",
+          },
+          {
+            bold: "Koloskopie :",
+            other:
+              "Endoskopische Untersuchung des Dickdarms zur Diagnose von Darmerkrankungen.",
+          },
+          {
+            bold: "Radiologische Bildgebung :",
+            other:
+              "Einsatz von Röntgen, CT oder MRT zur Diagnostik von Erkrankungen.",
+          },
+          {
+            bold: "Patientenmanagement :",
+            other:
+              "Organisation und Koordination der Betreuung und Behandlung eines Patienten.",
+          },
+          {
+            bold: "Nachsorge :",
+            other:
+              "Kontinuierliche Betreuung und Überwachung nach einer Diagnosestellung oder Behandlung.",
+          },
+          {
+            bold: "Anamnese :",
+            other: "Erhebung der Krankengeschichte des Patienten.",
+          },
+          {
+            bold: "Symptomatik :",
+            other: "Gesamtheit der Symptome, die ein Patient zeigt.",
+          },
+          {
+            bold: "Therapieplanung :",
+            other:
+              "Festlegung eines Behandlungsplans basierend auf der Diagnose.",
+          },
+        ],
+      },
+      // 7tab 229
+      {
+        id: 229,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 230
+      {
+        id: 230,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1ihcd2NEBj9s1X_hvicuqeB-i8ljiEz0y/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 27
+
+  // start of parent tab 28 Biopsie
+  {
+    id: 28,
+    title: "Biopsie",
+    checked: false,
+    childTabs: [
+      // 1tab 231
+      {
+        id: 231,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Biopsie dient der Entnahme von Gewebeproben zur histologischen Untersuchung. Ziel ist es, diagnostische Klarheit über die Beschaffenheit von Gewebeveränderungen zu gewinnen, um entsprechende therapeutische Maßnahmen einleiten zu können.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Biopsie ist ein zentrales Verfahren in der Diagnostik von malignen und benignen Tumoren, entzündlichen Erkrankungen und infektiösen Prozessen. Sie findet Anwendung in nahezu allen medizinischen Fachbereichen, einschließlich der Onkologie, Gastroenterologie und Dermatologie.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Eine Biopsie basiert auf der Entnahme von Gewebeproben aus dem Körper, die anschließend mikroskopisch untersucht werden. Ziel ist es, zelluläre und strukturelle Anomalien zu identifizieren.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Es gibt verschiedene Techniken der Biopsie, darunter die Nadelbiopsie, die Inzisionsbiopsie und die Exzisionsbiopsie. Die Wahl der Technik hängt von der Lokalisation und der Art der untersuchenden Läsion ab. Die Prozedur wird in der Regel unter sterilen Bedingungen durchgeführt, häufig unter Zuhilfenahme bildgebender Verfahren zur genauen Lokalisation der Entnahmestelle.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Nach der Entnahme wird das Gewebe fixiert, gefärbt und mikroskopisch untersucht. Pathologen beurteilen die Proben hinsichtlich Zellstruktur, Morphologie und anderer histologischer Merkmale.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde einer Biopsie können Hinweise auf maligne Neoplasien, entzündliche Reaktionen, infektiöse Prozesse oder degenerative Veränderungen geben. Die genaue Interpretation erfordert fundierte histopathologische Kenntnisse.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Biopsie liefert präzise diagnostische Informationen und ermöglicht eine gezielte Therapieplanung. Sie ist oft minimal-invasiv und kann ambulant durchgeführt werden.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen zählen das Risiko von Schmerzen, Infektionen und Blutungen. Außerdem kann die Entnahme unzureichender Proben zu nicht-schlüssigen Ergebnissen führen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Mögliche Risiken einer Biopsie umfassen Blutungen, Infektionen, Verletzungen benachbarter Strukturen und selten allergische Reaktionen auf verwendete Materialien.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Biopsie spielt eine entscheidende Rolle in der Diagnose und Behandlung vieler Krankheiten. Sie ermöglicht eine genaue Charakterisierung von Läsionen und trägt wesentlich zur Planung und Überwachung der Therapie bei.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die präzisen diagnostischen Informationen, die eine Biopsie liefert, können individuell angepasste Behandlungsstrategien entwickelt und überwacht werden, was die Prognose und Lebensqualität der Patienten erheblich verbessert.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur Biopsie zählen nicht-invasive Bildgebungsverfahren wie Ultraschall, CT und MRT sowie serologische Tests. Diese Methoden können ergänzend eingesetzt werden, ersetzen aber in vielen Fällen nicht die diagnostische Genauigkeit einer Biopsie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf die Verbesserung der Biopsietechniken, die Minimierung von Komplikationen und die Integration molekularer Diagnostik zur präziseren Charakterisierung von Gewebeproben.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Einführung von Liquid Biopsies umfassen, die durch die Analyse von zirkulierenden Tumorzellen oder DNA im Blut weniger invasiv sind und dennoch wertvolle diagnostische Informationen liefern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Biopsie ist ein unverzichtbares diagnostisches Verfahren, das präzise Informationen über die Beschaffenheit von Gewebeveränderungen liefert. Sie ist von zentraler Bedeutung für die Diagnose, Therapieplanung und Überwachung vieler Krankheiten.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Durch ihre hohe diagnostische Genauigkeit und die Möglichkeit zur gezielten Therapieplanung trägt die Biopsie wesentlich zur Verbesserung der Patientenversorgung und -prognose bei.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 232
+      {
+        id: 232,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel der Biopsie darin besteht, Gewebeproben zur Diagnose von Erkrankungen zu entnehmen.",
+            third:
+              "Wir führen eine Biopsie durch, um herauszufinden, ob die Gewebeveränderung gutartig oder bösartig ist.",
+            fourth:
+              "Die Biopsie hilft uns, die Ursache Ihrer Beschwerden genau zu bestimmen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den genauen Ablauf der Biopsie, einschließlich der Entnahme der Gewebeprobe und der anschließenden Untersuchung im Labor.",
+            third:
+              "Zuerst wird die Haut lokal betäubt. Dann entnehmen wir mit einer Nadel eine kleine Gewebeprobe.",
+            fourth:
+              "Nach der Entnahme wird das Gewebe ins Labor geschickt, wo es unter dem Mikroskop untersucht wird.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über notwendige Vorbereitungen, wie das Fasten, das Absetzen bestimmter Medikamente und die Durchführung von Voruntersuchungen.",
+            third:
+              "Bitte essen Sie ab Mitternacht nichts mehr und trinken Sie nur klare Flüssigkeiten.",
+            fourth:
+              "Setzen Sie blutverdünnende Medikamente wie Aspirin drei Tage vor dem Eingriff ab.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie mögliche Risiken wie Schmerzen, Infektionen, Blutungen und seltene Komplikationen, und wie diese minimiert werden können.",
+            third:
+              "Es kann zu leichten Schmerzen oder Blutergüssen an der Entnahmestelle kommen.",
+            fourth:
+              "In seltenen Fällen kann eine Infektion auftreten, die wir jedoch mit Antibiotika behandeln können.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile der Biopsie, wie die genaue Diagnose und die Möglichkeit, gezielte Behandlungsstrategien zu entwickeln.",
+            third:
+              "Die Biopsie ermöglicht eine genaue Diagnose, sodass wir die beste Behandlung für Sie planen können.",
+            fourth:
+              "Durch die Biopsie erhalten wir präzise Informationen, die uns helfen, Ihre Beschwerden gezielt zu behandeln.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie den Patienten über mögliche Alternativen zur Biopsie, wie bildgebende Verfahren und serologische Tests, und deren Vor- und Nachteile.",
+            third:
+              "Eine Alternative wäre eine MRT, die aber nicht so präzise wie eine Biopsie ist.",
+            fourth:
+              "Ein Bluttest kann ebenfalls Hinweise geben, ersetzt aber die Gewebeuntersuchung nicht.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, unter welchen Umständen eine Biopsie nicht durchgeführt werden sollte, z.B. bei bestimmten Blutgerinnungsstörungen oder Allergien.",
+            third:
+              "Bei schweren Blutgerinnungsstörungen sollten wir keine Biopsie durchführen.",
+            fourth:
+              "Wenn Sie allergisch gegen das Betäubungsmittel sind, müssen wir eine Alternative finden.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die möglichen Ergebnisse der Biopsie und deren Bedeutung für die weitere Behandlung.",
+            third:
+              "Ein gutartiges Ergebnis bedeutet, dass keine bösartigen Zellen gefunden wurden.",
+            fourth:
+              "Falls bösartige Zellen gefunden werden, besprechen wir die nächsten Schritte zur Behandlung.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie die Notwendigkeit der schriftlichen Einwilligung des Patienten vor dem Eingriff.",
+            third:
+              "Vor der Biopsie benötigen wir Ihre schriftliche Zustimmung, um den Eingriff durchführen zu können.",
+            fourth:
+              "Ihre Einwilligung stellt sicher, dass Sie alle Informationen über den Eingriff und die Risiken verstanden haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Informieren Sie über den Prozess des Einholens der Einverständniserklärung und welche Informationen der Patient dafür erhalten muss.",
+            third:
+              "Sie erhalten ein Formular, das alle Details und Risiken der Biopsie erläutert.",
+            fourth:
+              "Bitte lesen Sie das Einverständnisformular sorgfältig durch und stellen Sie alle Fragen, die Sie haben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Hinweise zur Nachsorge, Verhaltensweisen nach der Biopsie und mögliche Symptome, auf die geachtet werden sollte.",
+            third:
+              "Vermeiden Sie schwere körperliche Anstrengungen für 24 Stunden nach dem Eingriff.",
+            fourth:
+              "Sollten Sie starke Schmerzen oder Fieber bekommen, kontaktieren Sie uns bitte sofort.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wie und wann die Ergebnisse der Biopsie mitgeteilt werden und welche Schritte je nach Befund unternommen werden können.",
+            third:
+              "Die Ergebnisse liegen in etwa einer Woche vor und wir besprechen sie dann in einem persönlichen Gespräch.",
+            fourth:
+              "Sobald die Ergebnisse vorliegen, werden wir Sie anrufen und einen Termin zur Besprechung vereinbaren.",
+          },
+        ],
+      },
+      // 3tab 233
+      {
+        id: 233,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie den Zweck und das Verfahren der Biopsie, einschließlich der Entnahme und Untersuchung von Gewebeproben zur Diagnostik.",
+            third:
+              "Die Biopsie ist ein Verfahren zur Entnahme von Gewebeproben, die histologisch untersucht werden, um pathologische Veränderungen festzustellen.",
+            fourth:
+              "Wir verwenden die Biopsie, um präzise Gewebeproben zu entnehmen, die dann mikroskopisch auf Anomalien untersucht werden.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass mit der Biopsie Zell- und Gewebestrukturen untersucht werden können, um pathologische Veränderungen zu identifizieren.",
+            third:
+              "Mit der Biopsie können wir Zellveränderungen und Gewebeanomalien identifizieren, die auf Krebs oder andere Erkrankungen hinweisen.",
+            fourth:
+              "Durch die Untersuchung der Gewebeproben können wir entzündliche Prozesse, Infektionen oder Tumore nachweisen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie, wie die Ergebnisse der Biopsie interpretiert werden, einschließlich typischer histologischer Befunde und deren Bedeutung für die Diagnose.",
+            third:
+              "Die histologische Analyse kann gutartige oder bösartige Zellen identifizieren, was entscheidend für die Diagnose und Behandlung ist.",
+            fourth:
+              "Ein positiver Befund auf maligne Zellen würde eine weiterführende onkologische Abklärung und Therapieplanung nach sich ziehen.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Hauptindikationen für eine Biopsie, wie Verdacht auf maligne Tumoren, unklare Gewebeveränderungen oder entzündliche Prozesse.",
+            third:
+              "Eine Biopsie ist indiziert bei Verdacht auf Krebs, wie bei einer auffälligen Mammographie oder einem verdächtigen Hautläsion.",
+            fourth:
+              "Bei persistierenden, unklaren Gewebeveränderungen oder chronischen Entzündungen kann eine Biopsie zur Abklärung erforderlich sein.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, unter welchen Umständen eine Biopsie nicht durchgeführt werden sollte, z.B. bei schweren Blutgerinnungsstörungen oder Infektionen an der Entnahmestelle.",
+            third:
+              "Bei Patienten mit schwerer Thrombozytopenie oder laufenden Antikoagulationen ist eine Biopsie kontraindiziert.",
+            fourth:
+              "Akute Infektionen oder Entzündungen an der geplanten Entnahmestelle stellen ebenfalls Kontraindikationen dar.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen, die aufgrund der Biopsieergebnisse in Betracht gezogen werden sollten.",
+            third:
+              "Bei einem Befund von entzündlichem Gewebe könnten Differenzialdiagnosen wie Autoimmunerkrankungen oder infektiöse Prozesse in Betracht gezogen werden.",
+            fourth:
+              "Ein gutartiger Tumor könnte als Lipom oder Fibrom diagnostiziert werden, wohingegen maligne Befunde auf ein Karzinom hinweisen könnten.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie, wie die Ergebnisse der Biopsie in die Entwicklung von Behandlungsplänen einfließen, einschließlich spezifischer Therapien und weiterer diagnostischer Schritte.",
+            third:
+              "Ein positiver Krebsbefund würde eine interdisziplinäre Tumorkonferenz und die Planung von Operation, Chemotherapie oder Strahlentherapie nach sich ziehen.",
+            fourth:
+              "Bei entzündlichen Erkrankungen könnte eine Anpassung der immunsuppressiven Therapie oder eine Antibiotikatherapie erforderlich werden.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erläutern Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachrichtungen wie Radiologie, Pathologie und Onkologie zur optimalen Patientenversorgung.",
+            third:
+              "Die enge Zusammenarbeit mit der Pathologie ist unerlässlich, um eine genaue Diagnose zu stellen und die Ergebnisse korrekt zu interpretieren.",
+            fourth:
+              "Eine interdisziplinäre Abstimmung mit Onkologie und Radiologie ermöglicht eine umfassende Behandlungsplanung und Nachsorge.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Beschreiben Sie Maßnahmen zur Sicherstellung der Qualität und Genauigkeit der Biopsie, einschließlich Sterilität, Probenhandhabung und Dokumentation.",
+            third:
+              "Durch die Einhaltung strenger Sterilitätsprotokolle und korrekte Probenlagerung sichern wir die Qualität der Biopsien.",
+            fourth:
+              "Die genaue Dokumentation und Nachverfolgung der Proben sind entscheidend, um Verwechslungen und Fehler zu vermeiden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie die Bedeutung der umfassenden Dokumentation der Biopsieergebnisse und die Nachverfolgung der Patienten, um die Kontinuität der Versorgung zu gewährleisten.",
+            third:
+              "Eine detaillierte Dokumentation der Biopsieergebnisse im Patientenakt ist unerlässlich für die weitere Behandlung und Nachsorge.",
+            fourth:
+              "Regelmäßige Nachuntersuchungen und die Kommunikation der Ergebnisse an den behandelnden Arzt gewährleisten eine lückenlose Patientenbetreuung.",
+          },
+        ],
+      },
+      // 4tab 234
+      {
+        id: 234,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
+            fourth:
+              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Hautbiopsie und endoskopische Biopsie ohne pathologische Befunde.",
+            third:
+              "Hautbiopsie zeigt atypische Zellen und Verdacht auf Melanom.",
+            fourth:
+              "Endoskopische Biopsie des Magens zeigt eine 2 cm große, ulzerierte Läsion mit histopathologischem Befund eines Adenokarzinoms.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Ergebnisse unterstützen den Ausschluss von Haut- und Magendarmtumoren.",
+            third:
+              "Der Befund deutet auf ein malignes Melanom hin. Die atypischen Zellen und die Morphologie korrelieren mit dem klinischen Bild des Patienten.",
+            fourth:
+              "Der histopathologische Befund zeigt ein Adenokarzinom im Magen. Die Lokalisation und das Erscheinungsbild der Läsion sind charakteristisch für einen malignen Tumor.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung der chirurgischen Exzision des Tumors und die anschließende onkologische Nachsorge.",
+            fourth:
+              "Die Befunde sind wichtig für die Planung einer chirurgischen Resektion des Tumors und eventuell adjuvanten Chemotherapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes der Haut und des Magendarmtrakts. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose eines malignen Melanoms basierend auf Hautbiopsie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose eines Adenokarzinoms des Magens aufgrund der endoskopischen Biopsie-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Homogenes Hautgewebe und normales Magendarmgewebe ohne Auffälligkeiten.",
+            third:
+              "Hautbiopsie zeigt atypische Zellen, charakteristisch für ein malignes Melanom.",
+            fourth:
+              "Endoskopische Biopsie zeigt eine ulzerierte, hyperintense Läsion, typisch für ein Adenokarzinom.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, dass der Patient seine gesunden Lebensgewohnheiten beibehält. Es ist ratsam, routinemäßige Kontrolluntersuchungen fortzusetzen, um die Gesundheit weiterhin zu überwachen.",
+            third:
+              "Wir empfehlen die chirurgische Entfernung des Tumors und eine anschließende onkologische Betreuung. Es ist ratsam, regelmäßige Nachuntersuchungen durchzuführen, um ein Rezidiv frühzeitig zu erkennen.",
+            fourth:
+              "Es ist ratsam, eine chirurgische Resektion des Tumors durchzuführen und gegebenenfalls eine Chemotherapie in Erwägung zu ziehen. Wir empfehlen eine engmaschige Überwachung und Nachsorge, um die Wirksamkeit der Therapie zu überprüfen.",
+          },
+        ],
+      },
+      // 5tab 235
+      {
+        id: 235,
+        title: "Biopsieverfahren: Eine Schritt-für-Schritt-Anleitung",
+        img: child_tab_img_1,
+        text: "Diese detaillierten Informationen helfen, die Veränderungen der Stuhlgewohnheiten besser zu verstehen und mögliche Ursachen und diagnostische Ansätze zu identifizieren:",
+        text_list: [
+          {
+            bold: "Einleitung:",
+            other: [
+              "Eine Biopsie ist ein medizinisches Verfahren, bei dem eine kleine Gewebeprobe aus dem Körper entnommen wird, um sie auf Anomalien, wie etwa Krebs, zu untersuchen. Dieses Verfahren kann an verschiedenen Stellen des Körpers durchgeführt werden und ist ein entscheidender Schritt zur Diagnose und Planung der Behandlung. Hier beschreiben wir den Ablauf einer Biopsie in detaillierten Schritten.",
+            ],
+          },
+          {
+            bold: "Schritt 1: Vorbereitung:",
+            other: [
+              "Vor der Biopsie bespricht der Arzt den Eingriff mit dem Patienten und klärt über den Ablauf, die Risiken und die notwendigen Vorbereitungen auf. Abhängig von der Art der Biopsie und der zu untersuchende Stelle kann der Patient gebeten werden, bestimmte Medikamente abzusetzen oder auf Nahrung und Getränke zu verzichten.",
+            ],
+          },
+          {
+            bold: "Schritt 2: Anästhesie:",
+            other: [
+              "Je nach Art der Biopsie und der individuellen Situation des Patienten kann der Eingriff unter lokaler Betäubung, Sedierung oder Vollnarkose durchgeführt werden. Eine lokale Betäubung wird in der Regel für kleinere, oberflächliche Biopsien verwendet, während eine Sedierung oder Vollnarkose bei größeren oder tiefen liegenden Gewebeproben notwendig sein kann.",
+            ],
+          },
+          {
+            bold: "Schritt 3: Entnahme der Gewebeprobe:",
+            other: [
+              "Es gibt verschiedene Techniken zur Entnahme einer Gewebeprobe, die je nach Zielgewebe und zu untersuchender Erkrankung ausgewählt werden:",
+              "• Nadelbiopsie (Feinnadel- oder Kernnadelbiopsie): Hierbei wird eine dünne oder etwas dickere Hohlnadel in die betroffene Stelle eingeführt, um eine kleine Gewebeprobe zu entnehmen. Diese Methode wird häufig für die Entnahme von Proben aus der Brust, der Leber oder der Schilddrüse verwendet.",
+              "• Inzisionsbiopsie: Bei dieser Methode wird ein kleiner Schnitt gemacht, um einen Teil des verdächtigen Gewebes zu entnehmen. Diese Technik wird häufig bei Hautläsionen oder oberflächlichen Tumoren angewendet.",
+              "• Exzisionsbiopsie: Hierbei wird das gesamte verdächtige Gewebe entfernt, was bei kleineren, gut zugänglichen Tumoren oder Läsionen durchgeführt wird.",
+              "• Endoskopische Biopsie: Ein Endoskop wird verwendet, um Gewebeproben aus inneren Organen wie Magen, Darm oder Lunge zu entnehmen. Dies erfolgt in der Regel unter Sedierung.",
+            ],
+          },
+          {
+            bold: "Schritt 4: Nach der Entnahme:",
+            other: [
+              "Nach der Entnahme wird die Gewebeprobe in eine spezielle Lösung gegeben, die das Gewebe konserviert. Die Probe wird dann an ein Labor geschickt, wo sie von einem Pathologen unter dem Mikroskop untersucht wird.",
+            ],
+          },
+          {
+            bold: "Schritt 5: Nachsorge und Überwachung:",
+            other: [
+              "Nach der Biopsie wird die Einstichstelle oder der Schnitt gereinigt und verbunden. Der Patient wird überwacht, um sicherzustellen, dass keine unmittelbaren Komplikationen wie Blutungen oder Infektionen auftreten. Bei einigen Biopsien kann es notwendig sein, dass der Patient für eine kurze Beobachtungszeit in der Klinik bleibt.",
+            ],
+          },
+          {
+            bold: "Schritt 6: Ergebnisse:",
+            other: [
+              "Die Untersuchung der Gewebeprobe im Labor kann einige Tage bis Wochen dauern, abhängig von der Komplexität der Analyse. Sobald die Ergebnisse vorliegen, bespricht der Arzt diese mit dem Patienten und erklärt die weiteren Schritte, die je nach Befund notwendig sind.",
+            ],
+          },
+          {
+            bold: "Fazit:",
+            other: [
+              "Eine Biopsie ist ein sicheres und effektives Verfahren zur Diagnose verschiedener Erkrankungen. Durch die Entnahme und Untersuchung von Gewebeproben können Ärzte präzise Diagnosen stellen und geeignete Behandlungspläne entwickeln. Es ist wichtig, dass Patienten alle Anweisungen vor und nach der Biopsie befolgen und bei Fragen oder Bedenken ihren Arzt konsultieren.",
+            ],
+          },
+        ],
+      },
+      // 6tab 236
+      {
+        id: 236,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Biopsie :",
+            other:
+              "Entnahme einer Gewebeprobe zur histologischen Untersuchung.",
+          },
+          {
+            bold: "Histologie :",
+            other:
+              "Wissenschaft von den Geweben des Körpers, Untersuchung von Gewebeproben unter dem Mikroskop.",
+          },
+          {
+            bold: "Pathologie :",
+            other:
+              "Medizinisches Fachgebiet, das sich mit der Untersuchung und Diagnose von Krankheiten anhand von Gewebeproben beschäftigt.",
+          },
+          {
+            bold: "Feinnadelbiopsie (FNB) :",
+            other:
+              "Biopsieverfahren, bei dem eine dünne Nadel zur Entnahme einer kleinen Gewebeprobe verwendet wird.",
+          },
+          {
+            bold: "Kernnadelbiopsie (KNB) :",
+            other:
+              "Biopsieverfahren, bei dem eine dickere Nadel verwendet wird, um eine größere Gewebeprobe zu entnehmen.",
+          },
+          {
+            bold: "Inzisionsbiopsie :",
+            other:
+              "Verfahren, bei dem ein kleiner Schnitt gemacht wird, um eine Gewebeprobe zu entnehmen.",
+          },
+          {
+            bold: "Exzisionsbiopsie :",
+            other:
+              "Verfahren, bei dem das gesamte verdächtige Gewebe entfernt wird.",
+          },
+          {
+            bold: "Endoskopische Biopsie :",
+            other:
+              "Biopsie, bei der ein Endoskop zur Entnahme von Gewebeproben aus inneren Organen verwendet wird.",
+          },
+          {
+            bold: "Stanzbiopsie :",
+            other:
+              "Biopsie, bei der eine spezielle Nadel verwendet wird, um eine zylindrische Gewebeprobe zu entnehmen.",
+          },
+          {
+            bold: "Punktion :",
+            other:
+              "Einstechen mit einer Nadel, oft zur Entnahme von Flüssigkeit oder Gewebe.",
+          },
+          {
+            bold: "Lokalisation :",
+            other:
+              "Bestimmung des genauen Ortes, an dem die Biopsie durchgeführt wird.",
+          },
+          {
+            bold: "Anästhesie :",
+            other:
+              "Betäubung, die zur Schmerzlinderung während der Biopsie verwendet wird (lokal, regional oder allgemein).",
+          },
+          {
+            bold: "Kontrastmittel :",
+            other:
+              "Substanz, die während bildgebender Verfahren verwendet wird, um Strukturen deutlicher sichtbar zu machen.",
+          },
+          {
+            bold: "Fixierung :",
+            other:
+              "Prozess der Konservierung von Gewebeproben, um ihre Struktur für die mikroskopische Untersuchung zu erhalten.",
+          },
+          {
+            bold: "Präparat :",
+            other:
+              "Aufbereitete Gewebeprobe, die unter dem Mikroskop untersucht wird.",
+          },
+          {
+            bold: "Histopathologischer Befund :",
+            other:
+              "Ergebnis der Untersuchung einer Gewebeprobe unter dem Mikroskop.",
+          },
+          {
+            bold: "Maligne :",
+            other: "Bösartig, bezieht sich auf Tumoren oder Krebs.",
+          },
+          {
+            bold: "Benigne :",
+            other:
+              "Gutartig, bezieht sich auf nicht krebsartige Tumoren oder Gewebeveränderungen.",
+          },
+          {
+            bold: "Dysplasie :",
+            other:
+              "Abnormale Zell- oder Gewebewachstum, oft ein Vorläufer von Krebs.",
+          },
+          {
+            bold: "Karzinom :",
+            other: "Bösartiger Tumor, der von Epithelzellen ausgeht.",
+          },
+          {
+            bold: "Läsion :",
+            other: "Verletzung oder abnormale Gewebeveränderung.",
+          },
+          {
+            bold: "Prognose :",
+            other:
+              "Vorhersage des Verlaufs und Ausgangs einer Krankheit basierend auf den Untersuchungsergebnissen.",
+          },
+          {
+            bold: "Immunmodulatorische Therapie :",
+            other:
+              "Behandlung, die das Immunsystem beeinflusst, oft bei Autoimmunerkrankungen eingesetzt.",
+          },
+        ],
+      },
+      // 7tab 237
+      {
+        id: 237,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 238
+      {
+        id: 238,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1v6Fk0wnLHJjJieFYFhB72V06b-bhLQ7M/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 28
+
+  // Funktionstests
+
+  // start of parent tab 29 Spirometrie
+  {
+    id: 29,
+    title: "Lungenfunktionstest (Spirometrie)",
+    checked: false,
+    childTabs: [
+      // 1tab 239
+      {
+        id: 239,
+        title: "Einleitung",
+        list: [
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Spirometrie dient der Messung der Lungenfunktion, insbesondere der Atemvolumina und -flüsse. Ziel ist es, Atemwegserkrankungen wie Asthma, COPD oder restriktive Lungenerkrankungen zu diagnostizieren, zu überwachen und deren Verlauf zu beurteilen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Spirometrie ist ein unverzichtbares diagnostisches Werkzeug in der Pneumologie. Sie wird sowohl in der Primärversorgung als auch in spezialisierten klinischen Einrichtungen eingesetzt, um Atemwegserkrankungen zu identifizieren, deren Schweregrad zu bestimmen und die Wirksamkeit therapeutischer Maßnahmen zu überwachen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Spirometrie basiert auf der Messung von Luftvolumen und -fluss während des Atemzyklus. Sie erfasst Parameter wie das forcierte exspiratorische Volumen in einer Sekunde (FEV1) und die forcierte Vitalkapazität (FVC), die wichtigen Indikatoren für die Lungenfunktion sind.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Die Untersuchung wird mit einem Spirometer durchgeführt, das aus einem Mundstück, einem Luftschlauch und einem Messgerät besteht. Der Patient atmet maximal ein und aus, während das Spirometer die Volumen- und Flussdaten aufzeichnet. Moderne Geräte sind meist computergestützt und liefern sofortige Ergebnisse.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der Spirometrie-Daten erfolgt durch Vergleich der gemessenen Werte mit Normwerten, die nach Geschlecht, Alter, Größe und Ethnie variieren. Abweichungen von den Normwerten können auf obstruktive oder restriktive Lungenerkrankungen hinweisen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde bei obstruktiven Erkrankungen sind ein vermindertes FEV1 und ein reduziertes FEV1/FVC-Verhältnis. Bei restriktiven Erkrankungen sind sowohl das FEV1 als auch die FVC reduziert, jedoch bleibt das Verhältnis meist normal oder erhöht.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Spirometrie ist ein nicht-invasives, schnell durchführbares und kostengünstiges Verfahren. Es liefert wertvolle Informationen über die Lungenfunktion und ist gut standardisiert.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Genauigkeit der Ergebnisse hängt von der Mitarbeit des Patienten ab. Zudem kann die Untersuchung bei bestimmten Patientengruppen, wie sehr jungen oder schwer kranken Patienten, schwierig durchzuführen sein.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Die Spirometrie ist weitgehend risikofrei. In seltenen Fällen kann es bei sehr kranken Patienten zu einem kurzfristigen Unwohlsein oder Hustenanfällen kommen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Spirometrie spielt eine zentrale Rolle bei der Diagnose und Überwachung von Atemwegserkrankungen. Sie hilft, die richtige Diagnose zu stellen, den Schweregrad der Erkrankung zu bestimmen und den Erfolg der Therapie zu beurteilen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch regelmäßige Spirometriemessungen kann der Krankheitsverlauf überwacht und frühzeitig auf Veränderungen reagiert werden. Dies ist besonders wichtig für das Langzeitmanagement von chronischen Lungenerkrankungen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur Spirometrie zählen die Bodyplethysmographie, die Diffusionskapazitätsmessung und die Peak-Flow-Messung. Jede dieser Methoden hat spezifische Anwendungsbereiche und bietet zusätzliche Informationen zur Lungenfunktion.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung fokussiert sich auf die Verbesserung der Sensitivität und Spezifität der Spirometrie sowie auf die Entwicklung neuer Biomarker zur genaueren Diagnose von Lungenerkrankungen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Integration von künstlicher Intelligenz in die Datenanalyse und die Nutzung tragbarer Spirometer zur kontinuierlichen Überwachung der Lungenfunktion umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Spirometrie ist ein essenzielles, nicht-invasives Diagnosewerkzeug zur Beurteilung der Lungenfunktion. Sie bietet wertvolle Informationen zur Diagnose, Überwachung und Therapie von Atemwegserkrankungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Angesichts ihrer Bedeutung für die Diagnose und das Management von Lungenerkrankungen bleibt die Spirometrie ein unverzichtbarer Bestandteil der klinischen Praxis und der medizinischen Ausbildung.",
+              },
+            ],
+          },
+        ],
+      },
+      // 2tab 240
+      {
+        id: 240,
+        title: "Patient-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erläutern Sie, dass die Spirometrie dazu dient, die Lungenfunktion zu messen, um Atemwegserkrankungen wie Asthma, COPD oder restriktive Lungenerkrankungen zu diagnostizieren und zu überwachen.",
+            third:
+              "Wir führen diese Untersuchung durch, um zu prüfen, wie gut Ihre Lungen funktionieren. Dies hilft uns, Krankheiten wie Asthma oder COPD zu erkennen und zu überwachen.",
+            fourth:
+              "Die Spirometrie misst, wie viel Luft Sie ein- und ausatmen können und wie schnell dies geschieht. Dies ist wichtig, um festzustellen, ob Sie an einer Lungenerkrankung leiden und wie schwer diese ist.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf: Der Patient atmet durch ein Mundstück in ein Spirometer ein und aus, wobei verschiedene Atemmanöver durchgeführt werden, um Luftvolumen und -fluss zu messen.",
+            third:
+              "Sie werden durch ein Mundstück in ein Gerät atmen. Zuerst atmen Sie normal, dann tief ein und kräftig aus. Wir wiederholen das mehrmals, um genaue Messungen zu erhalten.",
+            fourth:
+              "Während der Untersuchung werden Sie tief einatmen und dann so kräftig und schnell wie möglich ausatmen. Dies wird in ein Gerät namens Spirometer gemessen, das Ihre Lungenfunktion aufzeichnet.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass er sich keine spezielle Vorbereitung benötigt, aber es hilfreich sein kann, bequeme Kleidung zu tragen und kurz vor der Untersuchung auf Rauchen oder Mahlzeiten zu verzichten.",
+            third:
+              "Es ist keine spezielle Vorbereitung nötig, aber bitte tragen Sie bequeme Kleidung und vermeiden Sie Rauchen oder schwere Mahlzeiten kurz vor der Untersuchung.",
+            fourth:
+              "Für die Untersuchung müssen Sie nichts Besonderes tun. Es wäre jedoch hilfreich, wenn Sie in den letzten Stunden vor dem Termin nicht rauchen und keine schweren Mahlzeiten einnehmen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass die Spirometrie weitgehend risikofrei ist. In seltenen Fällen kann es zu leichtem Unwohlsein oder Husten kommen, besonders bei sehr Kranken.",
+            third:
+              "Die Spirometrie ist sicher und birgt kaum Risiken. Manchmal kann es zu leichtem Unwohlsein oder Husten kommen, aber das ist selten.",
+            fourth:
+              "Es gibt nur wenige Risiken bei dieser Untersuchung. Einige Menschen fühlen sich vielleicht kurzzeitig etwas unwohl oder müssen husten, aber das ist selten.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie die Vorteile der Spirometrie: Sie ist nicht-invasiv, schnell durchführbar und liefert wertvolle Informationen über die Lungenfunktion, die für die Diagnose und Behandlung wichtig sind.",
+            third:
+              "Der große Vorteil der Spirometrie ist, dass sie nicht-invasiv und schnell ist. Sie liefert uns wertvolle Informationen, die uns helfen, Ihre Atemwegserkrankung besser zu verstehen und zu behandeln.",
+            fourth:
+              "Diese Untersuchung ist schnell und nicht-invasiv, was bedeutet, dass keine Schmerzen oder unangenehmen Eingriffe notwendig sind. Sie gibt uns wichtige Informationen, um Ihre Lungenfunktion zu beurteilen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie mögliche Alternativen wie die Bodyplethysmographie, die Diffusionskapazitätsmessung und die Peak-Flow-Messung, und erklären Sie, wann diese Methoden verwendet werden könnten.",
+            third:
+              "Es gibt auch andere Tests wie die Bodyplethysmographie oder die Peak-Flow-Messung, die wir je nach Bedarf verwenden können, um noch genauere Informationen über Ihre Lungenfunktion zu erhalten.",
+            fourth:
+              "Neben der Spirometrie können wir auch die Bodyplethysmographie oder die Diffusionskapazitätsmessung durchführen. Diese Tests geben uns zusätzliche Details über Ihre Lungenfunktion, wenn nötig.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erläutern Sie, dass die Spirometrie bei bestimmten Patienten, wie z.B. bei instabiler Herz-Kreislauf-Erkrankung oder schwerer Atemnot, nicht durchgeführt werden sollte.",
+            third:
+              "Bei bestimmten Erkrankungen wie einer instabilen Herz-Kreislauf-Erkrankung oder schwerer Atemnot sollte die Spirometrie nicht durchgeführt werden. In solchen Fällen suchen wir nach Alternativen.",
+            fourth:
+              "Wenn Sie unter bestimmten Bedingungen wie instabilen Herzproblemen oder schwerer Atemnot leiden, führen wir diese Untersuchung nicht durch. Wir werden dann andere Methoden verwenden.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten über die möglichen Ergebnisse der Untersuchung und deren Bedeutung: z.B. obstruktive oder restriktive Atemwegserkrankungen.",
+            third:
+              "Die Ergebnisse können zeigen, ob Sie eine obstruktive Erkrankung wie Asthma oder COPD haben, oder eine restriktive Erkrankung, bei der das Lungenvolumen eingeschränkt ist.",
+            fourth:
+              "Die Untersuchung kann uns Hinweise darauf geben, ob Sie an einer Erkrankung leiden, die Ihre Atemwege blockiert, wie Asthma, oder ob Ihre Lungenkapazität verringert ist.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie die Notwendigkeit des Einverständnisses des Patienten zur Durchführung der Untersuchung.",
+            third:
+              "Es ist wichtig, dass Sie der Untersuchung zustimmen, damit wir sicherstellen können, dass Sie über den Ablauf und die möglichen Risiken informiert sind.",
+            fourth:
+              "Ihr Einverständnis ist notwendig, damit wir die Untersuchung durchführen können und sicherstellen, dass Sie alles verstanden haben und sich wohl fühlen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Beschreiben Sie den Prozess, wie das Einverständnis eingeholt wird, und stellen Sie sicher, dass der Patient alle Informationen verstanden hat und alle Fragen geklärt sind.",
+            third:
+              "Wir werden Ihnen ein Formular geben, das Sie bitte unterschreiben. Vorher haben Sie die Möglichkeit, alle Fragen zu stellen und wir werden alles genau erklären.",
+            fourth:
+              "Bevor wir beginnen, müssen Sie eine Einverständniserklärung unterschreiben. Wir gehen alle Informationen durch und beantworten Ihre Fragen, damit Sie sich sicher und gut informiert fühlen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise, z.B. was nach der Untersuchung zu erwarten ist und wie er sich verhalten sollte.",
+            third:
+              "Nach der Untersuchung können Sie sofort Ihren normalen Aktivitäten nachgehen. Wenn Sie Fragen oder Beschwerden haben, wenden Sie sich bitte an uns.",
+            fourth:
+              "Es gibt keine besonderen Maßnahmen, die Sie nach der Untersuchung ergreifen müssen. Wenn Sie ungewöhnliche Symptome bemerken, kontaktieren Sie uns.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erläutern Sie dem Patienten, was die Ergebnisse der Spirometrie bedeuten können und wie diese für die Diagnose und das Management seiner Atemwegserkrankung verwendet werden.",
+            third:
+              "Die Ergebnisse dieser Untersuchung werden uns zeigen, wie gut Ihre Lungen funktionieren. Sie helfen uns zu verstehen, ob Sie an einer Erkrankung wie Asthma oder COPD leiden und wie wir Ihre Behandlung am besten anpassen können.",
+            fourth:
+              "Wenn die Ergebnisse Ihrer Spirometrie normal sind, ist es unwahrscheinlich, dass eine schwere Lungenerkrankung vorliegt. Sollten die Werte jedoch auffällig sein, werden wir weitere Untersuchungen durchführen oder Ihre Behandlung anpassen.",
+          },
+        ],
+      },
+      // 3tab 241
+      {
+        id: 241,
+        title: "Arzt-Arzt Gespräch",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Was man machen soll" },
+          {
+            name: "third",
+            visualText: "Beispiel 1: Was man sagen kann",
+          },
+          {
+            name: "fourth",
+            visualText: "Beispiel 2: Was man sagen kann",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, dass die Spirometrie ein diagnostisches Verfahren zur Messung der Lungenfunktion ist, das Atemvolumen und -fluss misst, um die Atemwegsfunktion zu beurteilen.",
+            third:
+              "Die Spirometrie ist ein Test, der das Atemvolumen und den Atemfluss misst, um die Funktion der Atemwege zu beurteilen. Es ist eine grundlegende Untersuchung in der Pneumologie.",
+            fourth:
+              "Die Spirometrie misst, wie viel Luft der Patient ein- und ausatmen kann und wie schnell dies geschieht. Dies hilft uns, verschiedene Lungenerkrankungen zu diagnostizieren und zu überwachen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass die Spirometrie verwendet wird, um Asthma, COPD, und restriktive Lungenerkrankungen zu diagnostizieren, sowie um den Verlauf und die Wirksamkeit der Therapie zu überwachen.",
+            third:
+              "Mit der Spirometrie können wir Erkrankungen wie Asthma und COPD diagnostizieren und den Verlauf sowie die Wirksamkeit der Behandlung überwachen.",
+            fourth:
+              "Wir nutzen die Spirometrie, um sowohl obstruktive als auch restriktive Lungenerkrankungen zu erkennen. Sie hilft uns, den Schweregrad der Erkrankung zu bestimmen und die Therapie anzupassen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die möglichen Ergebnisse der Spirometrie, wie z.B. obstruktive Muster (vermindertes FEV1/FVC-Verhältnis) oder restriktive Muster (verminderte FVC), und was diese Ergebnisse für die Diagnose und das weitere Management bedeuten.",
+            third:
+              "Ein vermindertes FEV1/FVC-Verhältnis weist auf eine obstruktive Lungenerkrankung hin, während eine reduzierte FVC ein Hinweis auf eine restriktive Erkrankung sein kann. Diese Ergebnisse leiten unsere Diagnose.",
+            fourth:
+              "Ergebnisse wie ein reduziertes FEV1/FVC-Verhältnis sind typisch für COPD, während eine verminderte FVC auf eine restriktive Erkrankung wie eine interstitielle Lungenerkrankung hinweisen könnte.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die Hauptindikationen für die Spirometrie, darunter die Diagnose und Überwachung von Asthma, COPD, interstitiellen Lungenerkrankungen und die Beurteilung der Lungenfunktion.",
+            third:
+              "Indikationen für die Spirometrie sind unter anderem die Diagnose und Überwachung von Asthma und COPD sowie die Beurteilung der Lungenfunktion vor Operationen.",
+            fourth:
+              "Wir führen die Spirometrie bei Patienten mit Verdacht auf interstitielle Lungenerkrankungen durch, und sie ist auch wichtig für die präoperative Beurteilung der Lungenfunktion.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie die Kontraindikationen für die Spirometrie, wie z.B. instabile Herz-Kreislauf-Erkrankungen, schwere Atemnot oder kürzlich durchgeführte thorakale oder abdominale Operationen.",
+            third:
+              "Kontraindikationen schließen instabile Herz-Kreislauf-Erkrankungen und schwere Atemnot ein. In solchen Fällen sollten wir alternative Diagnosemethoden in Betracht ziehen.",
+            fourth:
+              "Bei Patienten, die kürzlich thorakale oder abdominale Operationen hatten, oder bei instabilen Herz-Kreislauf-Zuständen, sollten wir die Spirometrie vermeiden und alternative Tests nutzen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären Sie, dass die Spirometrie hilft, die Lungenerkrankungen zu differenzieren, z.B. obstruktive Lungenerkrankungen von restriktiven Lungenerkrankungen zu unterscheiden, und wie diese Info bei zu einer Diagnose verwendet werden können.",
+            third:
+              "Die Spirometrie kann helfen, obstruktive Erkrankungen wie Asthma von restriktiven Erkrankungen wie Lungenfibrose zu unterscheiden, was entscheidend für die richtige Diagnose und Therapie ist.",
+            fourth:
+              "Mit der Spirometrie können wir differenzieren, ob die Atemwegsobstruktion reversibel ist, wie bei Asthma, oder nicht, wie bei COPD. Dies beeinflusst maßgeblich die Behandlung.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse der Spirometrie zur Erstellung und Anpassung von Behandlungsplänen genutzt werden können, einschließlich der Auswahl geeigneter Medikamente und der Überwachung der Therapieeffektivität.",
+            third:
+              "Die Spirometrie-Ergebnisse helfen uns, Behandlungspläne zu erstellen und anzupassen, indem wir die Effektivität von Bronchodilatatoren und anderen Therapien überwachen.",
+            fourth:
+              "Anhand der Spirometrie können wir die Medikation, wie z.B. Inhalatoren, anpassen und sehen, ob die aktuellen Behandlungsstrategien wirksam sind oder geändert werden müssen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Gesundheitsfachkräften, wie Physiotherapeuten und Pflegekräften, um eine umfassende Betreuung des Patienten zu gewährleisten, und wie die Spirometrie-Daten ins Management integriert werden.",
+            third:
+              "Die Ergebnisse der Spirometrie sollten mit dem gesamten medizinischen Team, einschließlich Physiotherapeuten, besprochen werden, um eine umfassende Betreuung des Patienten sicherzustellen.",
+            fourth:
+              "Für eine optimale Patientenversorgung ist es wichtig, dass wir die Spirometrie-Daten mit Pflegekräften und anderen Fachkräften teilen, um eine koordinierte Behandlung zu gewährleisten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie die Qualitätssicherung bei der Durchführung der Spirometrie, einschließlich regelmäßiger Kalibrierung der Geräte, Schulung des Personals und der Einhaltung standardisierter Protokolle.",
+            third:
+              "Zur Sicherstellung der Qualität werden die Spirometer regelmäßig kalibriert und das Personal in der Durchführung und Auswertung der Tests geschult. Standardisierte Protokolle sind angehalten.",
+            fourth:
+              "Regelmäßige Kalibrierung der Spirometrie-Geräte und die Schulung des Personals sind entscheidend, um verlässliche Ergebnisse zu gewährleisten. Wir folgen dabei streng den standardisierten Protokollen.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Besprechen Sie die Bedeutung der Dokumentation und die Notwendigkeit der regelmäßigen Überprüfung und Anpassung der Behandlung auf Basis dieser Ergebnisse, sowie die Nachuntersuchungen zur langfristigen Überwachung.",
+            third:
+              "Eine präzise Dokumentation der Spirometrie-Ergebnisse ist unerlässlich, um den Behandlungsverlauf zu verfolgen und die Therapie entsprechend anzupassen. Regelmäßige Nachuntersuchungen sind wichtig.",
+            fourth:
+              "Die Ergebnisse der Spirometrie müssen sorgfältig dokumentiert werden, um eine effektive Weiterverfolgung zu ermöglichen. Dies hilft uns, die Therapie kontinuierlich zu überwachen und bei Bedarf anzupassen.",
+          },
+        ],
+      },
+      // 4tab 242
+      {
+        id: 242,
+        title: "Die pathologische Befunden und Normalbefund",
+        tableColumns: [
+          { name: "first", visualText: "" },
+          { name: "second", visualText: "Normaler Befund" },
+          {
+            name: "third",
+            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+          },
+          {
+            name: "fourth",
+            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+          },
+        ],
+        tableRows: [
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Atemnot und pfeifende Atmung, insbesondere nachts und bei körperlicher Anstrengung. Vorgeschichte von allergischem Asthma.",
+            fourth:
+              "60-jähriger Patient berichtet über chronischen Husten und vermehrten Auswurf, besonders am Morgen. Starke Raucheranamnese (30 Packungsjahre).",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Spirometrie zeigt normale Werte für FEV1, FVC und das FEV1/FVC-Verhältnis, keine Obstruktion oder Restriktion der Atemwege.",
+            third:
+              "Spirometrie zeigt ein vermindertes FEV1/FVC-Verhältnis, eine Verbesserung nach Bronchodilatationstest.",
+            fourth:
+              "Spirometrie zeigt ein vermindertes FEV1/FVC-Verhältnis, keine signifikante Verbesserung nach Bronchodilatationstest.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; die Spirometrie-Ergebnisse unterstützen den Ausschluss von Atemwegserkrankungen.",
+            third:
+              "Der Befund deutet auf eine obstruktive Atemwegserkrankung hin, mit reversibler Obstruktion typisch für Asthma.",
+            fourth:
+              "Die Ergebnisse sind typisch für eine chronisch-obstruktive Lungenerkrankung (COPD) mit irreversibler Obstruktion.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe. Empfohlene Maßnahmen beinhalten die Aufrechterhaltung eines gesunden Lebensstils und regelmäßige Kontrollen.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Bestätigung der Asthma-Diagnose und die Anpassung der Therapie, einschließlich inhalativer Kortikosteroide und Bronchodilatatoren.",
+            fourth:
+              "Wichtig für die Bestätigung der COPD-Diagnose und die Einleitung einer langfristigen Therapie mit Bronchodilatatoren und möglicherweise inhalativen Kortikosteroiden, sowie Raucherentwöhnungsprogramme.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung der normalen Lungenfunktion und des gesunden Zustands der Atemwege. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose von Asthma basierend auf Spirometrie-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose von COPD aufgrund der Spirometrie-Ergebnisse und der klinischen Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Spirometriekurven zeigen normale Atemwegsfunktionen ohne Auffälligkeiten.",
+            third:
+              "Spirometriekurven zeigen eine typische Verengung der Atemwege mit einer Verbesserung nach Bronchodilatation.",
+            fourth:
+              "Spirometriekurven zeigen eine dauerhafte Atemwegsobstruktion ohne signifikante Verbesserung nach Bronchodilatation.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, die gesunden Lebensgewohnheiten beizubehalten und regelmäßige Gesundheitschecks durchzuführen. Es ist zu empfehlen, auf Anzeichen von Atemwegserkrankungen zu achten. Es ist ratsam, bei Veränderungen der Symptome frühzeitig einen Arzt aufzusuchen.",
+            third:
+              "Wir empfehlen, die Asthma-Therapie entsprechend den Leitlinien anzupassen und regelmäßige Nachuntersuchungen durchzuführen. Es ist zu empfehlen, inhalative Kortikosteroide und Bronchodilatatoren zu verwenden. Es ist ratsam, eine langfristige Asthmakontrolle sicherzustellen.",
+            fourth:
+              "Wir empfehlen, eine langfristige Behandlung der COPD einzuleiten, einschließlich Bronchodilatatoren und Raucherentwöhnung. Es ist zu empfehlen, regelmäßige Kontrollen durchzuführen und die Therapie bei Bedarf anzupassen. Es ist ratsam, die Patienten über die chronische Natur der Erkrankung aufzuklären.",
+          },
+        ],
+      },
+      // 5tab 243
+      {
+        id: 243,
+        title: "Parameter",
+        img: child_tab_img_1,
+        text: "Diese Einheiten und Parameter sind entscheidend für die Diagnose, Überwachung und Behandlung von Atemwegserkrankungen und geben detaillierte Einblicke in die Lungenfunktion des Patienten:",
+        text_list: [
+          {
+            bold: "FEV1 (Forciertes Exspiratorisches Volumen in einer Sekunde):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das Volumen der Luft, das ein Patient in der ersten Sekunde einer forcierten Ausatmung nach einer maximalen Einatmung ausatmen kann. Es ist ein wichtiger Parameter zur Beurteilung der Atemwegsobstruktion.",
+            ],
+          },
+          {
+            bold: "FVC (Forcierte Vitalkapazität):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Die totale Luftmenge, die ein Patient nach einer maximalen Einatmung mit maximaler Anstrengung ausatmen kann. Sie wird verwendet, um das gesamte Lungenvolumen zu beurteilen.",
+            ],
+          },
+          {
+            bold: "FEV1/FVC (Verhältnis von FEV1 zur forcierten Vitalkapazität):",
+            other: [
+              "• Einheit: Prozent (%)",
+              "• Erklärung: Das Verhältnis des FEV1 zur FVC, ausgedrückt als Prozentsatz. Es hilft, obstruktive von restriktiven Lungenerkrankungen zu unterscheiden.",
+            ],
+          },
+          {
+            bold: "PEF (Peak Expiratory Flow):",
+            other: [
+              "• Einheit: Liter pro Sekunde (L/s) oder Liter pro Minute (L/min)",
+              "• Erklärung: Der maximale Atemfluss, der während einer forcierten Ausatmung erreicht wird. Es gibt Aufschluss über die maximale Atemflussrate.",
+            ],
+          },
+          {
+            bold: "MEF (Maximaler Exspiratorischer Fluss):",
+            other: [
+              "• Einheit: Liter pro Sekunde (L/s)",
+              "• Erklärung: Der maximale Atemfluss bei bestimmten Anteilen der FVC, z.B. MEF25, MEF50 und MEF75, welche den maximalen Fluss bei 25%, 50% und 75% der ausgeatmeten FVC darstellen. Diese Werte geben Aufschluss über den Zustand der kleineren Atemwege.",
+            ],
+          },
+          {
+            bold: "TV (Tidalvolumen):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das Volumen der Luft, das in einem normalen Atemzug ein- und ausgeatmet wird. Es gibt Aufschluss über das normale Atemvolumen in Ruhe.",
+            ],
+          },
+          {
+            bold: "IRV (Inspiratorisches Reservevolumen):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das zusätzliche Volumen, das nach einer normalen Einatmung noch maximal eingeatmet werden kann. Es misst die Reserven der Lunge für tieferes Einatmen.",
+            ],
+          },
+          {
+            bold: "ERV (Exspiratorisches Reservevolumen):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das zusätzliche Volumen, das nach einer normalen Ausatmung noch maximal ausgeatmet werden kann. Es misst die Reserven der Lunge für tieferes Ausatmen.",
+            ],
+          },
+          {
+            bold: "RV (Residualvolumen):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das Volumen der Luft, das nach maximaler Ausatmung in der Lunge verbleibt. Es kann mit der Spirometrie nicht direkt gemessen werden, ist aber wichtig für die Bestimmung des Gesamtlungenvolumens.",
+            ],
+          },
+          {
+            bold: "TLC (Totale Lungenkapazität):",
+            other: [
+              "• Einheit: Liter (L)",
+              "• Erklärung: Das gesamte Luftvolumen in der Lunge nach maximaler Einatmung, bestehend aus der Summe von FVC und RV.",
+            ],
+          },
+        ],
+      },
+      // 6tab 244
+      {
+        id: 244,
+        title: "Wortschatz",
+        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text_list: [
+          {
+            bold: "Spirometrie :",
+            other:
+              "Verfahren zur Messung der Lungenfunktion, insbesondere der Atemvolumina und -flüsse.",
+          },
+          {
+            bold: "Lungenfunktionsprüfung (Lufu) :",
+            other:
+              "Synonym für Spirometrie, umfassende Bewertung der Atemwege und der Lungenkapazität.",
+          },
+          {
+            bold: "FEV1 (Forciertes Exspiratorisches Volumen in einer Sekunde) :",
+            other:
+              "Das Volumen der Luft, das in der ersten Sekunde einer forcierten Ausatmung nach maximaler Einatmung ausgeatmet wird.",
+          },
+          {
+            bold: "FVC (Forcierte Vitalkapazität) :",
+            other:
+              "Die gesamte Luftmenge, die nach einer maximalen Einatmung mit maximaler Anstrengung ausgeatmet werden kann.",
+          },
+          {
+            bold: "PEF (Peak Expiratory Flow) :",
+            other: "Der maximale Atemfluss während einer forcierten Ausatmung.",
+          },
+          {
+            bold: "MEF (Maximaler Exspiratorischer Fluss) :",
+            other:
+              "Der maximale Atemfluss bei bestimmten Anteilen der FVC (z.B. MEF25, MEF50, MEF75).",
+          },
+          {
+            bold: "TV (Tidalvolumen) :",
+            other:
+              "Das Volumen der Luft, das in einem normalen Atemzug ein- und ausgeatmet wird.",
+          },
+          {
+            bold: "IRV (Inspiratorisches Reservevolumen) :",
+            other:
+              "Das zusätzliche Volumen, das nach einer normalen Einatmung noch maximal eingeatmet werden kann.",
+          },
+          {
+            bold: "ERV (Exspiratorisches Reservevolumen) :",
+            other:
+              "Das zusätzliche Volumen, das nach einer normalen Ausatmung noch maximal ausgeatmet werden kann.",
+          },
+          {
+            bold: "RV (Residualvolumen) :",
+            other:
+              "Das Volumen der Luft, das nach maximaler Ausatmung in der Lunge verbleibt.",
+          },
+          {
+            bold: "TLC (Totale Lungenkapazität) :",
+            other:
+              "Das gesamte Luftvolumen in der Lunge nach maximaler Einatmung.",
+          },
+          {
+            bold: "Bronchodilatationstest :",
+            other:
+              "Test zur Bewertung der Reversibilität einer Atemwegsobstruktion durch Verabreichung eines Bronchodilatators.",
+          },
+          {
+            bold: "Obstruktive Atemwegserkrankung :",
+            other:
+              "Erkrankung, bei der die Atemwege verengt sind, z.B. Asthma, COPD.",
+          },
+          {
+            bold: "Restriktive Atemwegserkrankung :",
+            other:
+              "Erkrankung, bei der die Lungenkapazität reduziert ist, z.B. Lungenfibrose.",
+          },
+          {
+            bold: "Kalibrierung :",
+            other:
+              "Prozess zur Sicherstellung der Genauigkeit der Messungen des Spirometers.",
+          },
+          {
+            bold: "Flow-Sensor :",
+            other:
+              "Sensor, der die Geschwindigkeit und das Volumen der Atemluft misst.",
+          },
+          {
+            bold: "Mundstück :",
+            other:
+              "Einwegartikel, durch den der Patient in das Spirometer atmet.",
+          },
+          {
+            bold: "Messbereich :",
+            other:
+              "Der Bereich des Spirometers, in dem die Atemluft gemessen wird.",
+          },
+          {
+            bold: "Drucksensor :",
+            other: "Sensor, der den Druck der Atemluft misst.",
+          },
+          {
+            bold: "Korrekturmechanismen :",
+            other:
+              "Mechanismen zur Anpassung der Messungen an Temperatur, Luftdruck und Feuchtigkeit.",
+          },
+          {
+            bold: "Atemwegsobstruktion :",
+            other: "Verengung oder Blockade der Atemwege.",
+          },
+          {
+            bold: "Bronchodilatator :",
+            other:
+              "Medikament, das die Atemwege erweitert und die Atmung erleichtert.",
+          },
+          {
+            bold: "Asthma :",
+            other:
+              "Chronische Entzündung der Atemwege, die zu Verengungen und Atembeschwerden führt.",
+          },
+          {
+            bold: "COPD (Chronisch obstruktive Lungenerkrankung) :",
+            other:
+              "Chronische Erkrankung, die durch eine dauerhafte Verengung der Atemwege gekennzeichnet ist.",
+          },
+          {
+            bold: "Patienten-Anzeigebildschirm :",
+            other:
+              "Bildschirm, der dem Patienten visuelle Rückmeldungen und Anweisungen während der Spirometrie gibt.",
+          },
+          {
+            bold: "Reinigungssystem :",
+            other:
+              "System oder Protokoll zur Reinigung und Desinfektion des Spirometers und der Mundstücke.",
+          },
+          {
+            bold: "Spirometriekurven :",
+            other:
+              "Grafische Darstellung der Atemvolumina und -flüsse während der Spirometrie.",
+          },
+          {
+            bold: "Spirometer-Software :",
+            other:
+              "Software, die die von den Sensoren erfassten Daten verarbeitet und die Ergebnisse anzeigt.",
+          },
+          {
+            bold: "Patiententisch :",
+            other:
+              "Motorisierter Tisch, auf dem der Patient während der Untersuchung liegt.",
+          },
+          {
+            bold: "Arbeitsstation :",
+            other:
+              "Computer und Monitore, auf denen die erfassten Bilder angezeigt und analysiert werden.",
+          },
+        ],
+      },
+      // 7tab 245
+      {
+        id: 245,
+        title: "Links",
+        text: "",
+        text_list: [
+          {
+            bold_link: "https://www.doccheck.com",
+            bold: "DocCheck",
+            other:
+              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+          },
+          {
+            bold_link: "https://www.amboss.com",
+            bold: "AMBOSS",
+            other:
+              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+          },
+          {
+            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
+            bold: "NetDoktor",
+            other:
+              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
+            bold: "Stiftung Gesundheitswissen",
+            other:
+              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+          },
+          {
+            bold_link: "https://www.medpertise.de/roentgen/",
+            bold: "Medpertise",
+            other:
+              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+          },
+          {
+            bold_link:
+              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
+            bold: "Lifeline",
+            other:
+              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/roentgen/",
+            bold: "PraktischArzt",
+            other:
+              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+          },
+        ],
+      },
+      // 8tab 246
+      {
+        id: 246,
+        title: "PDF",
+        link: "https://drive.google.com/file/d/1rz_rduIdwrAfy85k2n2gx7xcX-FEX2oJ/view?usp=share_link",
+      },
+    ],
+  },
+  // end of parent tab 29
 ];
