@@ -8240,7 +8240,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 12
-  // start of parent tab 13 Langzeit EKG
+  // start of parent tab 13 Langzeit EKG+
   {
     id: 13,
     title: "Langzeit-EKG",
@@ -8602,11 +8602,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Vorhofflimmern)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. ventrikuläre Tachykardie)",
           },
         ],
         tableRows: [
@@ -8938,7 +8938,7 @@ export const parentTabs = [
       {
         id: 118,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1eIQwPaAom8VCzIEneFSngyR395IEg8E7/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1MGAqIoTKJJKAYwZIa8qoKRLCS2rMREKQ/view?usp=share_link",
       },
     ],
   },
@@ -9305,11 +9305,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Koronare Herzkrankheit)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Herzklappenfehler)",
           },
         ],
         tableRows: [
@@ -9476,7 +9476,7 @@ export const parentTabs = [
       {
         id: 124,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text: "",
         text_list: [
           {
             bold: "Herzkatheteruntersuchung :",
@@ -9670,14 +9670,14 @@ export const parentTabs = [
       {
         id: 126,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1XBfLjU_kl2SF2LTDlGbxS1ZW6RqDumYg/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1s1J-LbLKOHjQQ1WPoEPRlbqc52_d_Fb_/view?usp=share_link",
       },
     ],
   },
 
   // Endoskopischer Verfahren
 
-  // start of parent tab 15 Arthroskopie
+  // start of parent tab 15 Arthroskopie+
   {
     id: 15,
     title: "Arthroskopie",
@@ -10039,11 +10039,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Meniskusriss)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Kreuzbandriss)",
           },
         ],
         tableRows: [
@@ -10169,7 +10169,7 @@ export const parentTabs = [
       {
         id: 132,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text: "Diese Begriffe und Phrasen sind entscheidend für das Verständnis und die Kommunikation im Bereich der Arthroskopie-Diagnostik und sollten für eine erfolgreiche Fachsprachenprüfung beherrscht werden.",
         text_list: [
           {
             bold: "Arthroskopie :",
@@ -10346,12 +10346,12 @@ export const parentTabs = [
       {
         id: 118,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1IRSz4kiJegr2ASO9uUSLkVH2QmbnDOYg/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1UksTqHggRJV0Mif04drAWZQQS0yCNFv5/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 15
-  // start of parent tab 16 Gastroskopie
+  // start of parent tab 16 Gastroskopie+
   {
     id: 16,
     title: "Gastroskopie ",
@@ -10713,11 +10713,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Magengeschwür)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Gastritis)",
           },
         ],
         tableRows: [
@@ -10791,7 +10791,7 @@ export const parentTabs = [
         id: 139,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
-        text: "Ein Arthroskopie-Gerät ist ein hochentwickeltes medizinisches Instrument zur Untersuchung und Behandlung von Gelenken. Es ermöglicht minimalinvasive Eingriffe und bietet direkte visuelle Inspektionen der Gelenkstrukturen. Hier sind die wesentlichen Komponenten und Funktionen eines Arthroskopie-Geräts:",
+        text: "",
         text_list: [
           {
             bold: "Endoskop :",
@@ -10869,7 +10869,7 @@ export const parentTabs = [
       {
         id: 140,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Langzeit-EKG-Diagnostik und werden häufig in Fachgesprächen und Prüfungen verwendet.",
+        text: "",
         text_list: [
           {
             bold: "Gastroskopie :",
@@ -11068,12 +11068,12 @@ export const parentTabs = [
       {
         id: 142,
         title: "PDF",
-        link: "https://drive.google.com/file/d/13mCwYgkvZVtOCtP4G9wHAP-nstNKSYZU/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1uUVmPlbT4xuP1hx6kiTqYKBd8Ghx0VtA/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 16
-  // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)
+  // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)+
   {
     id: 17,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
@@ -11436,11 +11436,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Lungentumor)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Lungenembolie)",
           },
         ],
         tableRows: [
@@ -11808,12 +11808,12 @@ export const parentTabs = [
       {
         id: 150,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1PqRkOW_XHA6f1_mxulrp3YX1hGNTV4uv/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1ztB4u5h8tXudg86WZdXYI6haybs00s3C/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 17
-  // start of parent tab 18 Koloskopie
+  // start of parent tab 18 Koloskopie+
   {
     id: 18,
     title: "Koloskopie  ",
@@ -12175,11 +12175,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Kolorektales Karzinom)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Colitis Ulcerosa)",
           },
         ],
         tableRows: [
@@ -12253,7 +12253,7 @@ export const parentTabs = [
         id: 155,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
-        text: "",
+        text: "Diese Komponenten arbeiten zusammen, um eine effektive und sichere Untersuchung des Dickdarms zu gewährleisten und ermöglichen dem Arzt eine genaue Diagnose und Behandlung von Darmerkrankungen.",
         text_list: [
           {
             bold: "Kolonoskop :",
@@ -12503,12 +12503,12 @@ export const parentTabs = [
       {
         id: 158,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1_LmuIoLyEXR2YtFS1FtCxw9c9lXQEP7a/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1FAtbWXPqGoXKnTGOGFXToAqQb3Itz-8h/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 18
-  // start of parent tab 19 Ösophagogastroduodenoskopie
+  // start of parent tab 19 Ösophagogastroduodenoskopie+
   {
     id: 19,
     title: "Ösophagogastroduodenoskopie",
@@ -12870,11 +12870,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Gastrisches Ulkus)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Barrett-Ösophagus)",
           },
         ],
         tableRows: [
@@ -13200,12 +13200,12 @@ export const parentTabs = [
       {
         id: 166,
         title: "PDF",
-        link: "https://drive.google.com/file/d/150LBxYO2FAWXMB7hyXLks0h5vnkeWGWk/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1w06EpzR-lYn2EGmrjC1W1oowrM9Cz4Ij/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 19
-  // start of parent tab 20 Bronchoskopie
+  // start of parent tab 20 Bronchoskopie+
   {
     id: 20,
     title: "Bronchoskopie",
@@ -13567,11 +13567,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund",
+            visualText: "Pathologischer Befund 1 (z.B. Lungenkrebs)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund",
+            visualText: "Pathologischer Befund 2 (z.B. Tuberkulose)",
           },
         ],
         tableRows: [
@@ -13863,12 +13863,12 @@ export const parentTabs = [
       {
         id: 174,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1P7iLtZr_6HIZpHVdgTjwGvVKbmbWG7c5/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1N-rm8VIjGf42aFcfyJnu5dYlpFbDPfYz/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 20
-  // start of parent tab 21 Die bronchoalveoläre Lavage
+  // start of parent tab 21 Die bronchoalveoläre Lavage+
   {
     id: 21,
     title: "Bronchoalveoläre Lavage",
@@ -14541,12 +14541,12 @@ export const parentTabs = [
       {
         id: 182,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1In0E5V1zaubqC2lezB-htid_8xt1wRNU/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1GpNm8rg0FoGKH7ge-EuUX20lQXaM8YS9/view?usp=sharing",
       },
     ],
   },
   // end of parent tab 21
-  // start of parent tab 22 Zystoskopie
+  // start of parent tab 22 Zystoskopie+
   {
     id: 22,
     title: "Zystoskopie",
@@ -14986,7 +14986,7 @@ export const parentTabs = [
         id: 187,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
-        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text: "Diese Komponenten und Funktionen sind essentiell für die Durchführung einer effektiven und sicheren Zystoskopie.",
         text_list: [
           {
             bold: "Zystoskop :",
@@ -15252,7 +15252,7 @@ export const parentTabs = [
       {
         id: 190,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1fySNrY2yf3ULuwHllWan-m7ZE39wqzTN/view?usp=share_link",
+        link: "https://drive.google.com/file/d/19WSocfreqyOiUkmnSyTGrjsIiWMfma7n/view?usp=share_link",
       },
     ],
   },
@@ -15260,7 +15260,7 @@ export const parentTabs = [
 
   // Labor Untersuchungen
 
-  // start of parent tab 23 Blutbild
+  // start of parent tab 23 Blutbild+
   {
     id: 23,
     title: "Blutbild",
@@ -15619,11 +15619,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Anämie)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Leukämie)",
           },
         ],
         tableRows: [
@@ -15802,7 +15802,7 @@ export const parentTabs = [
       {
         id: 196,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Diese Begriffe und Phrasen sind wesentlich für das Verständnis und die Kommunikation im Bereich der Blutuntersuchung-Diagnostik.",
         text_list: [
           {
             bold: "Hämoglobin (Hb) :",
@@ -16076,13 +16076,13 @@ export const parentTabs = [
       {
         id: 198,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1n-HXb96uL2bo7Ymzsc-9pvz5UJplubZk/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1NuZegL1ykxQ3Eee00hR0s4d6S4ZD_iRq/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 23
 
-  // start of parent tab 24 Blutuntersuchung
+  // start of parent tab 24 Blutuntersuchung+
   {
     id: 24,
     title: "Blutuntersuchung",
@@ -16444,11 +16444,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Niereninsuffizienz)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Hepatitis)",
           },
         ],
         tableRows: [
@@ -16522,7 +16522,7 @@ export const parentTabs = [
         id: 203,
         title: "Gerätbeschreibung",
         img: child_tab_img_1,
-        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text: "",
         text_list: [
           {
             bold: "Glukose (mg/dL oder mmol/L) :",
@@ -16605,7 +16605,7 @@ export const parentTabs = [
       {
         id: 204,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "",
         text_list: [
           {
             bold: "Blutuntersuchung :",
@@ -16835,13 +16835,13 @@ export const parentTabs = [
       {
         id: 206,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1WnkDfJRUJVeqFkY7wvKtqc4P2HWpQ9Qr/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1j4YidhjBpW4BdVP6WlGbGmC5ATCX4HDB/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 24
 
-  // start of parent tab 25 Blutgerinnung
+  // start of parent tab 25 Blutgerinnung+
   {
     id: 25,
     title: "Blutgerinnung",
@@ -17203,11 +17203,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Hämophilie)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Thrombophilie)",
           },
         ],
         tableRows: [
@@ -17281,7 +17281,7 @@ export const parentTabs = [
         id: 211,
         title: "Einheiten",
         img: child_tab_img_1,
-        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text: "Diese Liste fasst die zentralen Einheiten des Blutgerinnungslabors zusammen und bietet eine kurze Erklärung zu jeder Einheit.",
         text_list: [
           {
             bold: "Prothrombinzeit (PT) :",
@@ -17344,7 +17344,7 @@ export const parentTabs = [
       {
         id: 212,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Diese Liste bietet eine umfassende Übersicht über wesentliche Begriffe und Phrasen, die für eine Fachsprachenprüfung im Bereich der Blutgerinnungsdiagnostik wichtig sind.",
         text_list: [
           {
             bold: "Blutgerinnung :",
@@ -17527,13 +17527,13 @@ export const parentTabs = [
       {
         id: 214,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1ZRBT22raPdOGWovU0V8oYIQ0YIEQWkfI/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1fgV6a7qa5u2qC5w4yqvYQLhOgccqmfXy/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 25
 
-  // start of parent tab 25 Urinuntersuchung
+  // start of parent tab 25 Urinuntersuchung+
   {
     id: 26,
     title: "Urinuntersuchung",
@@ -17895,11 +17895,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Harnwegsinfektion)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Diabetes)",
           },
         ],
         tableRows: [
@@ -17973,7 +17973,7 @@ export const parentTabs = [
         id: 219,
         title: "Einheiten",
         img: child_tab_img_1,
-        text: "Diese Liste umfasst die Hauptkomponenten und Funktionen, die für die Durchführung einer bronchoalveolären Lavage erforderlich sind:",
+        text: "Hier ist die Liste der Einheiten der Urinuntersuchung mit kurzen Erklärungen:",
         text_list: [
           {
             bold: "Farbe: ",
@@ -18081,7 +18081,7 @@ export const parentTabs = [
       {
         id: 220,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Diese Begriffe und Phrasen sind essenziell für das Verständnis und die Kommunikation im Rahmen der Urinuntersuchung und können hilfreich bei der Fachsprachenprüfung im medizinischen Bereich sein.",
         text_list: [
           {
             bold: "Urinprobe: ",
@@ -18285,13 +18285,13 @@ export const parentTabs = [
       {
         id: 222,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1SjTlfHs2Vv0HgDkAIe61d6L9PTyz8mGT/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1urX-2YJug3HYggill-L8nW9BdfP1AgIh/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 25
 
-  // start of parent tab 26 Stuhluntersuchung
+  // start of parent tab 26 Stuhluntersuchung+
   {
     id: 27,
     title: "Stuhluntersuchung",
@@ -18653,11 +18653,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. infektiöse Kolitis)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Malabsorptionssyndrom)",
           },
         ],
         tableRows: [
@@ -18811,7 +18811,7 @@ export const parentTabs = [
       {
         id: 228,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Hier ist ein Wortschatz für die Stuhluntersuchung mit kurzen Erklärungen, speziell für eine Fachsprachenprüfung im Bereich der Diagnostik:",
         text_list: [
           {
             bold: "Stuhluntersuchung :",
@@ -19065,13 +19065,13 @@ export const parentTabs = [
       {
         id: 230,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1ihcd2NEBj9s1X_hvicuqeB-i8ljiEz0y/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1YR8CKT306EGUTGjoXRkmJEz8WGB2adUs/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 27
 
-  // start of parent tab 28 Biopsie
+  // start of parent tab 28 Biopsie+
   {
     id: 28,
     title: "Biopsie",
@@ -19433,11 +19433,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (Hauttumor)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (Magendarmtumor)",
           },
         ],
         tableRows: [
@@ -19509,9 +19509,9 @@ export const parentTabs = [
       // 5tab 235
       {
         id: 235,
-        title: "Biopsieverfahren: Eine Schritt-für-Schritt-Anleitung",
+        title: "Verfahren",
         img: child_tab_img_1,
-        text: "Diese detaillierten Informationen helfen, die Veränderungen der Stuhlgewohnheiten besser zu verstehen und mögliche Ursachen und diagnostische Ansätze zu identifizieren:",
+        text: "Biopsieverfahren: Eine Schritt-für-Schritt-Anleitung",
         text_list: [
           {
             bold: "Einleitung:",
@@ -19571,7 +19571,7 @@ export const parentTabs = [
       {
         id: 236,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Hier ist eine Liste wesentlicher Begriffe und Phrasen für die Fachsprachenprüfung im Bereich der Biopsie-Diagnostik, jeweils mit einer kurzen Erklärung:",
         text_list: [
           {
             bold: "Biopsie :",
@@ -19743,7 +19743,7 @@ export const parentTabs = [
       {
         id: 238,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1v6Fk0wnLHJjJieFYFhB72V06b-bhLQ7M/view?usp=share_link",
+        link: "https://drive.google.com/file/d/14MJyWphxks6KM4AyU6BGEFx9Q1amFPSi/view?usp=share_link",
       },
     ],
   },
@@ -19751,7 +19751,7 @@ export const parentTabs = [
 
   // Funktionstests
 
-  // start of parent tab 29 Spirometrie
+  // start of parent tab 29 Spirometrie+
   {
     id: 29,
     title: "Lungenfunktionstest (Spirometrie)",
@@ -20113,11 +20113,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Asthma)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. COPD)",
           },
         ],
         tableRows: [
@@ -20269,7 +20269,7 @@ export const parentTabs = [
       {
         id: 244,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Hier ist die Liste der wesentlichen Begriffe und Phrasen im Bereich der Spirometrie (Lufu-Diagnostik) für die Fachsprachenprüfung:",
         text_list: [
           {
             bold: "Spirometrie :",
@@ -20476,13 +20476,13 @@ export const parentTabs = [
       {
         id: 246,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1rz_rduIdwrAfy85k2n2gx7xcX-FEX2oJ/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1zBuEBusNef990mfuCvUQPA1otATnxVZs/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 29
 
-  // start of parent tab 30 Audiometrie
+  // start of parent tab 30 Audiometrie+
   {
     id: 30,
     title: "Audiometrie",
@@ -20844,11 +20844,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Schallleitungsschwerhörigkeit)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Sensorineurale Schwerhörigkeit)",
           },
         ],
         tableRows: [
@@ -20922,7 +20922,7 @@ export const parentTabs = [
         id: 251,
         title: "Verlauf",
         img: child_tab_img_1,
-        text: "Diese Einheiten und Parameter sind entscheidend für die Diagnose, Überwachung und Behandlung von Atemwegserkrankungen und geben detaillierte Einblicke in die Lungenfunktion des Patienten:",
+        text: "",
         text_list: [
           {
             bold: "Verfahren der Reintonaudiometrie:",
@@ -20952,7 +20952,7 @@ export const parentTabs = [
       {
         id: 252,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "Hier ist eine Liste von wesentlichen Begriffen und Phrasen im Bereich der Audiometrie-Diagnostik, die für eine Fachsprachenprüfung wichtig sein können:",
         text_list: [
           {
             bold: "Audiometrie:",
@@ -21139,13 +21139,13 @@ export const parentTabs = [
       {
         id: 254,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1zAwa1E7cRvOxWPmbxMbtHAsK468cSGH3/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1MuC7cuP33YTwKTwMwxQ6U2QJNZxB2GHB/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 30
 
-  // start of parent tab 31 Tympanometrie
+  // start of parent tab 31 Tympanometrie+
   {
     id: 31,
     title: "Tympanometrie",
@@ -21508,11 +21508,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Blasentumor)",
+            visualText: "Pathologischer Befund 1 (z.B. Mittelohrerguss)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Blasensteine)",
+            visualText: "Pathologischer Befund 2 (z.B. Tubenfunktionsstörung)",
           },
         ],
         tableRows: [
@@ -21586,7 +21586,7 @@ export const parentTabs = [
         id: 259,
         title: "Verlauf",
         img: child_tab_img_1,
-        text: "Diese Einheiten und Parameter sind entscheidend für die Diagnose, Überwachung und Behandlung von Atemwegserkrankungen und geben detaillierte Einblicke in die Lungenfunktion des Patienten:",
+        text: "Dieses Verfahren ist einfach durchzuführen und liefert wichtige Informationen über die Funktion des Mittelohrs, was bei der Diagnose und Behandlung von Mittelohrerkrankungen entscheidend sein kann.",
         text_list: [
           {
             bold: "Vorbereitung des Patienten:",
@@ -21637,7 +21637,7 @@ export const parentTabs = [
       {
         id: 260,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind wesentlich für die Fachsprachenprüfung im Bereich der Zystoskopie-Diagnostik und sollten gründlich verstanden und verwendet werden können.",
+        text: "",
         text_list: [
           {
             bold: "Tympanometrie :",
@@ -21797,7 +21797,7 @@ export const parentTabs = [
       {
         id: 262,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1ITIewS25IzaJqAcVYXEnehGSGOBFuIRA/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1iy2KyhMn_uiPzqvwG9ka7G_lA2Tza5Hb/view?usp=share_link",
       },
     ],
   },
@@ -21805,7 +21805,7 @@ export const parentTabs = [
 
   // Neurologische Untersuchungen
 
-  // start of parent tab 32 Nervenleitgeschwindigkeit
+  // start of parent tab 32 Nervenleitgeschwindigkeit+
   {
     id: 32,
     title: "Nervenleitgeschwindigkeit",
@@ -22488,7 +22488,7 @@ export const parentTabs = [
       {
         id: 270,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1VBUwWpDms-ETxBw-YtOcFDKoF11cR9bV/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1-NCN-ap4-QEIDQMEcqkbsVY2vBGMGcoG/view?usp=share_link",
       },
     ],
   },
@@ -22505,7 +22505,7 @@ export const parentTabs = [
         id: 271,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -22610,7 +22610,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 272
@@ -22630,7 +22630,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+        
             {
               first: "Ziel der Untersuchung",
               second:
@@ -22739,7 +22739,7 @@ export const parentTabs = [
               fourth:
                 "„Die detaillierten Ergebnisse und ihre Bedeutung werden wir beim nächsten Termin gemeinsam durchgehen.“",
             },
-          ],
+          
         ],
       },
       // 3tab 273
@@ -22759,7 +22759,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -22850,7 +22850,7 @@ export const parentTabs = [
               fourth:
                 "„Wir passen den Behandlungsplan regelmäßig an, basierend auf den kontinuierlich dokumentierten EEG-Ergebnissen.“",
             },
-          ],
+          
         ],
       },
       // 4tab 274
@@ -22862,15 +22862,15 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Periphere Neuropathie)",
+            visualText: "Pathologischer Befund 1 (z.B. Epilepsie)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Guillain-Barré-Syndrom)",
+            visualText: "Pathologischer Befund 2 (z.B. Enzephalopathie)",
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Einführung in den klinischen Fall",
               second:
@@ -22934,7 +22934,7 @@ export const parentTabs = [
               fourth:
                 "Es ist zu empfehlen, eine spezifische Therapie zur Behandlung der Enzephalopathie zu beginnen und die Patientenaufklärung über die Krankheit zu intensivieren. Wir empfehlen regelmäßige Kontrollen, um den Verlauf der Erkrankung zu überwachen.",
             },
-          ],
+          
         ],
       },
       // 5tab 275
@@ -23034,7 +23034,7 @@ export const parentTabs = [
       {
         id: 276,
         title: "Wortschatz",
-        text: "Diese Begriffe und Phrasen sind entscheidend für ein korrektes Verständnis und die fachsprachliche Kommunikation im Bereich der NLG-Diagnostik während der Fachsprachenprüfung.",
+        text: "",
         text_list: [
           {
             bold: "Elektroenzephalographie (EEG) :",
@@ -23218,7 +23218,7 @@ export const parentTabs = [
       {
         id: 278,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1M7px36hHgsRT9c2uTrDLOU-XdIqB8xMx/view?usp=share_link",
       },
     ],
   },
@@ -23235,7 +23235,7 @@ export const parentTabs = [
         id: 279,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -23340,7 +23340,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 280
@@ -23360,7 +23360,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Ziel der Untersuchung",
               second:
@@ -23469,7 +23469,7 @@ export const parentTabs = [
               fourth:
                 "„Sobald die Ergebnisse da sind, besprechen wir, ob weitere Untersuchungen oder Behandlungen notwendig sind.“",
             },
-          ],
+          
         ],
       },
       // 3tab 281
@@ -23489,7 +23489,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -23580,7 +23580,7 @@ export const parentTabs = [
               fourth:
                 "„Es ist wichtig, die klinischen Veränderungen des Patienten nach der Punktion genau zu überwachen und den Behandlungsplan entsprechend anzupassen.“",
             },
-          ],
+          
         ],
       },
       // 4tab 282
@@ -23600,7 +23600,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Einführung in den klinischen Fall",
               second:
@@ -23664,7 +23664,7 @@ export const parentTabs = [
               fourth:
                 "Es ist zu empfehlen, eine langfristige immunmodulatorische Therapie einzuleiten und regelmäßige neurologische Kontrollen durchzuführen, um die Progression der Krankheit zu überwachen.",
             },
-          ],
+          
         ],
       },
       // 5tab 283
@@ -23672,7 +23672,7 @@ export const parentTabs = [
         id: 283,
         title: "Methodebeschreibung",
         img: child_tab_img_1,
-        text: "Ein Nervenleitgeschwindigkeitstest (NLG) ist ein diagnostisches Verfahren, das die Geschwindigkeit misst, mit der elektrische Impulse durch die peripheren Nerven geleitet werden. Dies hilft bei der Beurteilung von Nervenschäden oder -erkrankungen. Hier sind die wesentlichen Komponenten und Funktionen, die bei der Durchführung einer NLG-Untersuchung eine Rolle spielen:",
+        text: "Diese Befunde bestätigen die Diagnose einer bakteriellen Meningitis und leiten die sofortige Einleitung einer antibiotischen Therapie ein.",
         text_list: [
           {
             bold: "Zellzahl (Leukozytenzahl im Liquor):",
@@ -23957,7 +23957,7 @@ export const parentTabs = [
       {
         id: 286,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1dixiRGyJbSN2u6OdwVEUJNsnb13TdJ3_/view?usp=share_link",
       },
     ],
   },
@@ -23974,7 +23974,7 @@ export const parentTabs = [
         id: 287,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -24079,7 +24079,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 288
@@ -24099,7 +24099,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -24190,7 +24190,7 @@ export const parentTabs = [
               fourth:
                 "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
             },
-          ],
+          
         ],
       },
       // 3tab 289
@@ -24210,7 +24210,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -24301,7 +24301,7 @@ export const parentTabs = [
               fourth:
                 "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
             },
-          ],
+          
         ],
       },
       // 4tab 290
@@ -24321,7 +24321,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Einführung in den klinischen Fall",
               second:
@@ -24385,7 +24385,7 @@ export const parentTabs = [
               fourth:
                 "Es ist zu empfehlen, mit einer immunmodulatorischen Therapie zu beginnen, um die neuromuskuläre Übertragung zu stabilisieren. Wir empfehlen, regelmäßige Kontrolluntersuchungen zur Überwachung des Krankheitsverlaufs.",
             },
-          ],
+          
         ],
       },
       // 5tab 291
@@ -24646,7 +24646,7 @@ export const parentTabs = [
       {
         id: 294,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1ne0NEFAcxvn1w4deS8i745q-2srUTf3m/view?usp=share_link",
       },
     ],
   },
@@ -24654,7 +24654,7 @@ export const parentTabs = [
 
   // Weitere spezialisierte Untersuchungen
 
-  // start of parent tab 36 Angiographie
+  // start of parent tab 36 Angiographie+
   {
     id: 36,
     title: "Angiographie",
@@ -24665,7 +24665,7 @@ export const parentTabs = [
         id: 295,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -24770,7 +24770,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 288
@@ -24790,7 +24790,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Ziel der Untersuchung",
               second:
@@ -24899,7 +24899,7 @@ export const parentTabs = [
               fourth:
                 "Sobald wir die Bilder analysiert haben, informieren wir Sie über die Befunde und die nächsten Schritte.",
             },
-          ],
+          
         ],
       },
       // 3tab 289
@@ -24919,7 +24919,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -25010,7 +25010,7 @@ export const parentTabs = [
               fourth:
                 "Wir haben alle Befunde im Arztbrief festgehalten und eine Überweisung zur Kardiologie initiiert.",
             },
-          ],
+          
         ],
       },
       // 4tab 298
@@ -25031,7 +25031,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Einführung in den klinischen Fall",
               second:
@@ -25095,7 +25095,7 @@ export const parentTabs = [
               fourth:
                 "Es ist zu empfehlen, eine Revaskularisation durchzuführen, entweder mittels Ballonangioplastie oder Bypass-Operation. Wir empfehlen zudem eine strikte Kontrolle des Blutzuckers und Blutdrucks.",
             },
-          ],
+          
         ],
       },
       // 5tab 299
@@ -25462,13 +25462,13 @@ export const parentTabs = [
       {
         id: 302,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1os40b1GbKcZIvvL29zzWBwphEx9BpJos/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 36
 
-  // start of parent tab 37 Doppler-Sonographie
+  // start of parent tab 37 Doppler-Sonographie+
   {
     id: 37,
     title: "Doppler-Sonographie",
@@ -25479,7 +25479,7 @@ export const parentTabs = [
         id: 303,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -25584,7 +25584,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 304
@@ -25604,7 +25604,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Ziel der Untersuchung",
               second:
@@ -25713,7 +25713,7 @@ export const parentTabs = [
               fourth:
                 "Sobald die Ergebnisse vorliegen, setzen wir uns mit Ihnen in Verbindung, um sie zu besprechen.",
             },
-          ],
+          
         ],
       },
       // 3tab 305
@@ -25733,7 +25733,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Was ist eigentlich die angegebene Untersuchung",
               second:
@@ -25824,7 +25824,7 @@ export const parentTabs = [
               fourth:
                 "Die Ergebnisse werden dokumentiert, und wir werden sie weiter verfolgen, um sicherzustellen, dass die beste Behandlungsoption gewählt wird.",
             },
-          ],
+          
         ],
       },
       // 4tab 306
@@ -25844,7 +25844,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
+          
             {
               first: "Einführung in den klinischen Fall",
               second:
@@ -25908,7 +25908,7 @@ export const parentTabs = [
               fourth:
                 "Es ist zu empfehlen, eine chirurgische Intervention oder eine interventionelle Behandlung wie eine Ballonangioplastie oder Stenteinlage durchzuführen. Langfristige Kontrollen sind wichtig.",
             },
-          ],
+          
         ],
       },
       // 5tab 307
@@ -26159,13 +26159,13 @@ export const parentTabs = [
       {
         id: 310,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1lNs-X-BUzLBG3NfCu9LMMyhwnJr2wMrj/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 37
 
-  // start of parent tab 38 Knochendichtemessung
+  // start of parent tab 38 Knochendichtemessung+
   {
     id: 38,
     title: "Knochendichtemessung ",
@@ -26176,7 +26176,7 @@ export const parentTabs = [
         id: 311,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -26281,7 +26281,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 312
@@ -26301,8 +26301,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -26411,8 +26411,8 @@ export const parentTabs = [
                 fourth:
                   "Ich werde die Ergebnisse mit Ihnen besprechen, sobald sie vorliegen, und Ihnen dann sagen, ob eine Therapie oder weitere Untersuchungen notwendig sind.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 3tab 313
@@ -26432,8 +26432,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -26524,8 +26524,8 @@ export const parentTabs = [
                 fourth:
                   "Die Messergebnisse müssen im Patientenbericht festgehalten und bei regelmäßigen Nachuntersuchungen verglichen werden, um den Fortschritt zu dokumentieren.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 4tab 314
@@ -26545,8 +26545,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -26610,8 +26610,8 @@ export const parentTabs = [
                 fourth:
                   "Es ist zu empfehlen, präventive Maßnahmen wie Kalzium- und Vitamin-D-Einnahme zu beginnen und in einem Jahr eine erneute Messung durchzuführen.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 5tab 315
@@ -26823,13 +26823,13 @@ export const parentTabs = [
       {
         id: 310,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1iuxwQX05gOGNLQ_P1qFthQqVD_HmHYJP/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 38
 
-  // start of parent tab 39 Knochendichtemessung
+  // start of parent tab 39 Knochenmarkbiopsie+
   {
     id: 39,
     title:
@@ -26841,7 +26841,7 @@ export const parentTabs = [
         id: 319,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -26946,7 +26946,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 320
@@ -26966,8 +26966,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -27076,8 +27076,8 @@ export const parentTabs = [
                 fourth:
                   "Wir werden uns in einigen Tagen bei Ihnen melden, um die Ergebnisse zu besprechen und den nächsten Schritt zu planen.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 3tab 321
@@ -27097,8 +27097,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -27189,8 +27188,8 @@ export const parentTabs = [
                 fourth:
                   "Die Fortschritte des Patienten werden regelmäßig überprüft, und alle Änderungen des Behandlungsplans werden dokumentiert und dem Team mitgeteilt.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 4tab 322
@@ -27202,16 +27201,16 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Osteoporose)",
+            visualText: "Pathologischer Befund 1 (z.B. akute myeloische Leukämie)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Osteopenie)",
+            visualText: "Pathologischer Befund 2 (z.B. aplastische Anämie)",
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -27273,8 +27272,8 @@ export const parentTabs = [
                 fourth:
                   "Der Patient sollte über die Diagnose und die weiteren Behandlungsmöglichkeiten informiert werden.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 5tab 323
@@ -27509,7 +27508,7 @@ export const parentTabs = [
       {
         id: 326,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1Gi3H7fN9sTa8kjJ8zV5nKWTod6G53d_c/view?usp=share_link",
       },
     ],
   },
@@ -27526,7 +27525,7 @@ export const parentTabs = [
         id: 327,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -27631,7 +27630,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 328
@@ -27651,8 +27650,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -27761,8 +27759,7 @@ export const parentTabs = [
                 fourth:
                   "Sobald die Ergebnisse vorliegen, wird Ihr behandelnder Arzt alles genau mit Ihnen durchgehen.",
               },
-            ],
-          ],
+           
         ],
       },
       // 3tab 329
@@ -27782,8 +27779,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -27874,8 +27870,7 @@ export const parentTabs = [
                 fourth:
                   "Wir haben die Punktionsergebnisse dokumentiert und regelmäßige Nachuntersuchungen zur Verlaufskontrolle geplant.",
               },
-            ],
-          ],
+            
         ],
       },
       // 4tab 330
@@ -27895,8 +27890,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -27960,8 +27954,7 @@ export const parentTabs = [
                 fourth:
                   "Es ist zu empfehlen, eine Langzeit-Antibiotikatherapie gegen Tuberkulose sofort einzuleiten. Regelmäßige Kontrollen des Behandlungsverlaufs und des Allgemeinzustandes des Patienten sind erforderlich. Eine enge Zusammenarbeit mit der Lungenheilkunde wird empfohlen.",
               },
-            ],
-          ],
+          
         ],
       },
       // 5tab 331
@@ -28186,7 +28179,7 @@ export const parentTabs = [
       {
         id: 334,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1z5gntGI32F5l9iSOlXrqYtrSeTnfuQUk/view?usp=share_link",
       },
     ],
   },
@@ -28194,7 +28187,7 @@ export const parentTabs = [
 
   //Körperliche Untersuchung
 
-  // start of parent tab 41 Abdomenpalpation
+  // start of parent tab 41 Abdomenpalpation+
   {
     id: 41,
     title: "Abdomenpalpation",
@@ -28205,7 +28198,7 @@ export const parentTabs = [
         id: 335,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -28310,7 +28303,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 336
@@ -28330,8 +28323,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -28440,8 +28433,8 @@ export const parentTabs = [
                 fourth:
                   "„Ich werde Ihnen sofort mitteilen, was ich gefunden habe, und falls notwendig, planen wir weitere Untersuchungen.“",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 3tab 337
@@ -28461,8 +28454,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -28553,8 +28546,8 @@ export const parentTabs = [
                 fourth:
                   "„Nach der Untersuchung werden die Ergebnisse dokumentiert, damit bei Bedarf weiterführende Maßnahmen eingeleitet werden können.“",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 4tab 338
@@ -28574,8 +28567,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+         
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -28639,8 +28631,7 @@ export const parentTabs = [
                 fourth:
                   "Wir empfehlen eine sofortige Überweisung zur Appendektomie, da eine akute Appendizitis vorliegt. Eine postoperative Betreuung und Kontrolle sind ebenfalls erforderlich.",
               },
-            ],
-          ],
+           
         ],
       },
       // 5tab 339
@@ -28867,7 +28858,7 @@ export const parentTabs = [
       {
         id: 342,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1G-gsKflLNzqedsUsBGdgIHKAT1i6OYSF/view?usp=share_link",
       },
     ],
   },
@@ -28884,7 +28875,7 @@ export const parentTabs = [
         id: 343,
         title: "Einleitung",
         list: [
-          [
+          
             {
               title: "Einleitung",
               items: [
@@ -28989,7 +28980,7 @@ export const parentTabs = [
                 },
               ],
             },
-          ],
+          
         ],
       },
       // 2tab 344
@@ -29009,8 +29000,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -29120,8 +29111,8 @@ export const parentTabs = [
                   "Sobald ich die Auskultation beendet habe, werde ich Ihnen sofort mitteilen, ob alles in Ordnung ist oder wir weiter untersuchen müssen.",
               },
             ],
-          ],
-        ],
+          
+        
       },
       // 3tab 345
       {
@@ -29140,8 +29131,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -29232,8 +29223,8 @@ export const parentTabs = [
                 fourth:
                   "Es ist wichtig, die Ergebnisse detailliert zu dokumentieren und bei auffälligen Befunden einen Plan für die weitere Diagnostik und Therapie festzulegen.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 4tab 346
@@ -29254,8 +29245,8 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
+            
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -29319,8 +29310,8 @@ export const parentTabs = [
                 fourth:
                   "Es ist zu empfehlen, eine medikamentöse Therapie zu beginnen und eine Operation in Erwägung zu ziehen, falls sich die Symptome verschlechtern. Regelmäßige kardiologische Kontrollen sind erforderlich.",
               },
-            ],
-          ],
+            
+          
         ],
       },
       // 5tab 347
@@ -29557,7 +29548,7 @@ export const parentTabs = [
       {
         id: 350,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1zzExaWCY1VCClMGDXih1-RXPX3Dyxr8d/view?usp=share_link",
       },
     ],
   },
@@ -29574,8 +29565,8 @@ export const parentTabs = [
         id: 351,
         title: "Einleitung",
         list: [
-          [
-            [
+          
+            
               {
                 title: "Einleitung",
                 items: [
@@ -29680,8 +29671,7 @@ export const parentTabs = [
                   },
                 ],
               },
-            ],
-          ],
+           
         ],
       },
       // 2tab 352
@@ -29701,8 +29691,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -29811,8 +29800,7 @@ export const parentTabs = [
                 fourth:
                   "Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und entscheide, ob weitere Untersuchungen notwendig sind.",
               },
-            ],
-          ],
+            
         ],
       },
       // 3tab 353
@@ -29832,8 +29820,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -29924,8 +29911,7 @@ export const parentTabs = [
                 fourth:
                   "Die Ergebnisse werden schriftlich festgehalten, und eine Kontrolle in einer Woche ist vorgesehen.",
               },
-            ],
-          ],
+           
         ],
       },
       // 4tab 354
@@ -29945,8 +29931,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -30010,8 +29995,7 @@ export const parentTabs = [
                 fourth:
                   "Es ist zu empfehlen, eine Langzeittherapie mit inhalativen Steroiden zu beginnen und regelmäßige Kontrolluntersuchungen durchzuführen.",
               },
-            ],
-          ],
+          
         ],
       },
       // 5tab 355
@@ -30262,7 +30246,7 @@ export const parentTabs = [
       {
         id: 358,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1CN1w93sxDqYPrjWFK3Di3FzyXMc5kacO/view?usp=share_link",
       },
     ],
   },
@@ -30279,8 +30263,7 @@ export const parentTabs = [
         id: 359,
         title: "Einleitung",
         list: [
-          [
-            [
+          
               {
                 title: "Einleitung",
                 items: [
@@ -30385,8 +30368,7 @@ export const parentTabs = [
                   },
                 ],
               },
-            ],
-          ],
+           
         ],
       },
       // 2tab 360
@@ -30406,8 +30388,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -30516,8 +30497,7 @@ export const parentTabs = [
                 fourth:
                   "Ich werde Ihnen nach der Untersuchung direkt sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen brauchen.",
               },
-            ],
-          ],
+          
         ],
       },
       // 3tab 361
@@ -30537,8 +30517,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Was ist eigentlich die angegebene Untersuchung",
                 second:
@@ -30629,8 +30608,7 @@ export const parentTabs = [
                 fourth:
                   "Eine genaue Dokumentation der Sensibilitätstests ist wichtig, um die Entwicklung der Symptome im Verlauf zu verfolgen.",
               },
-            ],
-          ],
+           
         ],
       },
       // 4tab 362
@@ -30650,8 +30628,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -30715,8 +30692,7 @@ export const parentTabs = [
                 fourth:
                   "Es ist zu empfehlen, eine MRT-Untersuchung durchzuführen, um die Diagnose zu sichern und eine immunmodulatorische Therapie zu beginnen.",
               },
-            ],
-          ],
+          
         ],
       },
       // 5tab 363
@@ -30975,7 +30951,7 @@ export const parentTabs = [
       {
         id: 366,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1pl7nro-9JRd9Ruyq60rtEb8aXKm3o0Xs/view?usp=share_link",
       },
     ],
   },
@@ -30992,9 +30968,7 @@ export const parentTabs = [
         id: 367,
         title: "Einleitung",
         list: [
-          [
-            [
-              [
+          
                 {
                   title: "Einleitung",
                   items: [
@@ -31099,9 +31073,7 @@ export const parentTabs = [
                     },
                   ],
                 },
-              ],
-            ],
-          ],
+            
         ],
       },
       // 2tab 368
@@ -31121,8 +31093,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Ziel der Untersuchung",
                 second:
@@ -31231,8 +31202,7 @@ export const parentTabs = [
                 fourth:
                   "Ich kann Ihnen sofort nach der Untersuchung sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen machen müssen.",
               },
-            ],
-          ],
+           
         ],
       },
       // 3tab 369
@@ -31252,9 +31222,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
-              [
+          
                 {
                   first: "Was ist eigentlich die angegebene Untersuchung",
                   second:
@@ -31345,9 +31313,7 @@ export const parentTabs = [
                   fourth:
                     "Nach der Perkussion dokumentieren wir die Ergebnisse und planen je nach Befund die weiteren Schritte, wie z. B. eine Bildgebung oder eine invasive Diagnostik.",
                 },
-              ],
-            ],
-          ],
+            
         ],
       },
       // 4tab 370
@@ -31367,8 +31333,7 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          [
-            [
+          
               {
                 first: "Einführung in den klinischen Fall",
                 second:
@@ -31432,8 +31397,7 @@ export const parentTabs = [
                 fourth:
                   "Wir empfehlen, eine Thoraxsonographie durchzuführen und eine Pleuraergussdrainage einzuleiten. Es ist zu empfehlen, die Ursache des Ergusses weiter zu klären und geeignete therapeutische Maßnahmen zu ergreifen.",
               },
-            ],
-          ],
+          
         ],
       },
       // 5tab 371
@@ -31661,7 +31625,7 @@ export const parentTabs = [
       {
         id: 374,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1N_EXtY5JCngD86PdK4kfUhS8YhqqxLPB/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1y1mjKy_bYT3h0j-NAdUO4RJAtiK01OPL/view?usp=share_link",
       },
     ],
   },
