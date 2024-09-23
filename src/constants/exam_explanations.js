@@ -675,27 +675,27 @@ export const parentTabs = [
           {
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de",
+              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-computertomographie-ct",
           },
           {
             bold: "Praktischarzt.de",
             other:
-              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de] https://www.praktischarzt.de",
+              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de] https://www.praktischarzt.de/untersuchungen/computertomographie/",
           },
           {
             bold: "Navigator Medizin",
             other:
-              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin] https://www.navigator-medizin.de",
+              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin] https://www.navigator-medizin.de/diagnostik-laborwerte/computertomographie.html",
           },
           {
             bold: "Gesundheit.de",
             other:
-              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de] https://www.gesundheit.de",
+              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de] https://www.gesundheit.de/medizin/diagnose/computertomografie-ct-id215324/",
           },
           {
             bold: "Onmeda",
             other:
-              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda] https://www.onmeda.de",
+              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda] https://www.onmeda.de/diagnose/ct-id200755/",
           },
         ],
       },
@@ -1329,32 +1329,32 @@ export const parentTabs = [
           {
             bold: "DocCheck Flexikon",
             other:
-              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen. [DocCheck Flexikon - MRT​] https://flexikon.doccheck.com/de/MRT​ [DocCheck Flexikon] https://flexikon.doccheck.com/de/MRT​ [DocCheck Flexikon] https://flexikon.doccheck.com/de/MRT​​",
+              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen. [DocCheck Flexikon - MRT​] https://flexikon.doccheck.com/de/Kernspintomographie",
           },
           {
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden. [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de",
+              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden. [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-magnetresonanztomographie-mrt",
           },
           {
             bold: "praktischArzt",
             other:
-              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge. [praktischArzt] https://www.praktischarzt.de",
+              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge. [praktischArzt] https://www.praktischarzt.de/untersuchungen/mrt/",
           },
           {
             bold: "NetDoktor",
             other:
-              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln. [NetDoktor] https://www.netdoktor.de",
+              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln. [NetDoktor] https://www.netdoktor.de/diagnostik/kernspintomografie/",
           },
           {
             bold: "Med 360°",
             other:
-              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT. [Med 360°] https://www.med360grad.de",
+              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT. [Med 360°] https://www.med360grad.de/leistungsangebot/radiologie/leistungen/kernspintomographie-mrt/",
           },
           {
             bold: "Lifeline",
             other:
-              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT. Es wird auch erläutert, welche Symptome und Krankheiten mit einer MRT abgeklärt werden können. [Lifeline] https://www.lifeline.de",
+              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT. Es wird auch erläutert, welche Symptome und Krankheiten mit einer MRT abgeklärt werden können. [Lifeline] https://www.lifeline.de/diagnose/mrt-kernspintomographie-id31498.html",
           },
         ],
       },
@@ -1991,27 +1991,27 @@ export const parentTabs = [
           {
             bold: "DocCheck Flexikon",
             other:
-              "Diese Seite bietet eine umfassende Erklärung der Röntgendiagnostik, einschließlich der Technik, wichtiger Verfahren wie der konventionellen Röntgendiagnostik, Computertomographie (CT) und Angiographie. Hier erfährst du auch, wie Röntgenstrahlen verwendet werden, um pathologische Veränderungen im Körper darzustellen. Mehr Informationen finden Sie auf [DocCheck Flexikon](https://flexikon.doccheck.com/de/Röntgendiagnostik)",
+              "Diese Seite bietet eine detaillierte Erklärung der Röntgendiagnostik. Sie beschreibt die Technik, wichtige Verfahren wie die konventionelle Röntgendiagnostik, die Computertomographie (CT) und die Angiographie. Außerdem erfährst du, wie Röntgenstrahlen genutzt werden, um krankhafte Veränderungen im Körper darzustellen. Mehr Informationen findest du auf https://flexikon.doccheck.com/de/Röntgendiagnostik",
           },
           {
             bold: "NetDoktor",
             other:
-              "Auf dieser Seite findest du detaillierte Informationen über die Gründe, den Ablauf und die Risiken von Röntgenuntersuchungen. Es wird auch auf spezielle Röntgenverfahren wie die Digitale Volumentomografie (DVT) und die Orthopantomografie (OPG) eingegangen. Mehr Informationen finden Sie auf [NetDoktor](https://www.netdoktor.de/diagnostik/roentgen/)",
+              "Auf dieser Seite erhältst du umfassende Informationen über die Gründe, den Ablauf und die Risiken von Röntgenuntersuchungen. Es wird zudem auf spezielle Röntgenverfahren wie die Digitale Volumentomographie (DVT) und die Orthopantomografie (OPG) eingegangen. Mehr Informationen findest du auf https://www.netdoktor.de/diagnostik/roentgen/",
           },
           {
             bold: "MSD Manual",
             other:
-              "Diese Seite erklärt die verschiedenen Anwendungen von Röntgenaufnahmen zur Diagnose von Störungen wie Frakturen, Lungenentzündung und Darmverschluss. Es wird auch die Verwendung von Kontrastmitteln und die Fluoroskopie beschrieben. Mehr Informationen finden Sie auf [MSD Manual](https://www.msdmanuals.com/de-de/heim/spezialthemen/übliche-bildgebende-verfahren/röntgenaufnahmen)",
+              "Diese Seite erklärt die verschiedenen Anwendungen von Röntgenaufnahmen zur Diagnose von Störungen wie Frakturen, Lungenentzündungen und Darmverschlüssen. Die Seite behandelt auch den Einsatz von Kontrastmitteln und Fluoroskopie. Mehr Informationen findest du auf https://www.msdmanuals.com/de-de/heim/spezialthemen/übliche-bildgebende-verfahren/röntgenaufnahmen",
           },
           {
             bold: "Gesundheitsportal",
             other:
-              "Hier findest du eine allgemeine Übersicht über Röntgenuntersuchungen, einschließlich der Verwendung von Kontrastmitteln zur Verbesserung der Darstellung von Weichgeweben, Gefäßen und Hohlorganen. Es wird auch auf das Strahlenrisiko und den Strahlenschutz eingegangen. Mehr Informationen finden Sie auf [Gesundheitsportal](https://www.gesundheit.gv.at/labor/untersuchungen/mrt-ct-roentgen/roentgen-untersuchung.html)",
+              "Hier findest du eine allgemeine Übersicht über Röntgenuntersuchungen, einschließlich der Verwendung von Kontrastmitteln zur besseren Darstellung von Weichgeweben, Gefäßen und Hohlorganen. Auch das Strahlenrisiko und der Strahlenschutz werden thematisiert. Mehr Informationen findest du auf https://www.gesundheit.gv.at/labor/untersuchungen/mrt-ct-roentgen/roentgen-untersuchung.html",
           },
           {
             bold: "Apotheken Umschau",
             other:
-              "Diese Seite bietet einen allgemeinen Überblick über Röntgenuntersuchungen und deren Einsatzgebiete, wie zum Beispiel zur Erkennung von Knochenbrüchen oder zur Diagnose von Lungenerkrankungen. Mehr Informationen finden Sie auf [Apotheken Umschau](https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html)",
+              "Diese Seite bietet einen allgemeinen Überblick über Röntgenuntersuchungen und deren Einsatzgebiete, wie etwa zur Erkennung von Knochenbrüchen oder zur Diagnose von Lungenerkrankungen. Mehr Informationen findest du auf https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html",
           },
         ],
       },
