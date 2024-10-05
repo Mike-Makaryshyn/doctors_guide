@@ -51,7 +51,7 @@ export const exam_categories = [
 export const parentTabs = [
   // Bildgebender Verfahren zum Herunterladen
 
-  // start of parent tab: 1 Computertomographie +
+  // start of parent tab: 1 Computertomographie
   {
     id: 1,
     title: "Computertomographie(CT)",
@@ -668,34 +668,44 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold: "DocCheck Flexikon",
+            bold_link: "https://flexikon.doccheck.com/de/Computertomographie",
+            bold: "DocCheck Flexikon Computertomographie",
             other:
-              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete. Mehr Informationen finden Sie auf [DocCheck Flexikon] https://flexikon.doccheck.com/de/Computertomographie",
+              "Eine umfassende medizinische Datenbank, die detaillierte Erklärungen zur Computertomographie bietet, einschließlich technischer Details und Anwendungsgebiete.",
           },
           {
-            bold: "Stiftung Gesundheitswissen",
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-computertomographie-ct",
+            bold: "Stiftung Gesundheitswissen Computertomographie",
             other:
-              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln. Mehr Informationen finden Sie auf [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-computertomographie-ct",
+              "Diese Seite bietet umfassende Informationen zur CT, einschließlich Ablauf, Strahlenbelastung und Nutzen von Kontrastmitteln.",
           },
           {
-            bold: "Praktischarzt.de",
+            bold_link:
+              "https://www.praktischarzt.de/untersuchungen/computertomographie/",
+            bold: "Praktischarzt.de Computertomographie",
             other:
-              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung. Mehr Informationen finden Sie auf [praktischarzt.de] https://www.praktischarzt.de/untersuchungen/computertomographie/",
+              "Diese Seite erklärt die Gründe für eine CT, den Ablauf, die Dauer und die Kosten der Untersuchung.",
           },
           {
-            bold: "Navigator Medizin",
+            bold_link:
+              "https://www.navigator-medizin.de/diagnostik-laborwerte/computertomographie.html",
+            bold: "Navigator Medizin Computertomographie",
             other:
-              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln. Mehr Informationen finden Sie auf [Navigator Medizin] https://www.navigator-medizin.de/diagnostik-laborwerte/computertomographie.html",
+              "Beschreibt den Ablauf, die Nebenwirkungen und die Risiken einer CT-Untersuchung und gibt Hinweise zu Kontrastmitteln.",
           },
           {
-            bold: "Gesundheit.de",
+            bold_link:
+              "https://www.gesundheit.de/medizin/diagnose/computertomografie-ct-id215324/",
+            bold: "Gesundheit.de Computertomographie",
             other:
-              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode. Mehr Informationen finden Sie auf [Gesundheit.de] https://www.gesundheit.de/medizin/diagnose/computertomografie-ct-id215324/",
+              "Erklärt den Ablauf und die Dauer einer CT, sowie die Vor- und Nachteile dieser Untersuchungsmethode.",
           },
           {
-            bold: "Onmeda",
+            bold_link: "https://www.onmeda.de/diagnose/ct-id200755/",
+            bold: "Onmeda Computertomographie",
             other:
-              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie. Mehr Informationen finden Sie auf [Onmeda] https://www.onmeda.de/diagnose/ct-id200755/",
+              "Diese Seite bietet eine Übersicht über die Anwendungsgebiete, Risiken und Komplikationen der Computertomographie.",
           },
         ],
       },
@@ -708,7 +718,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab: 1
-  // start of parent tab: 2 2MRT+
+  // start of parent tab: 2 2MRT
   {
     id: 2,
     title: "MRT",
@@ -1327,34 +1337,44 @@ export const parentTabs = [
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
           {
+            bold_link: " https://flexikon.doccheck.com/de/Kernspintomographie",
             bold: "DocCheck Flexikon",
             other:
-              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen. [DocCheck Flexikon - MRT​] https://flexikon.doccheck.com/de/Kernspintomographie",
+              "Diese Seite bietet umfangreiche Informationen zur MRT, einschließlich des Aufbaus und der Funktionsweise eines MRT-Geräts, der unterschiedlichen Sequenzen und der klinischen Anwendungen.",
           },
           {
+            bold_link:
+              "https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-magnetresonanztomographie-mrt",
             bold: "Stiftung Gesundheitswissen",
             other:
-              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden. [Stiftung Gesundheitswissen] https://www.stiftung-gesundheitswissen.de/gesundes-leben/koerper-wissen/was-ist-eine-magnetresonanztomographie-mrt",
+              "Auf dieser Seite finden Sie Informationen über den Ablauf einer MRT-Untersuchung, die Vorbereitung und mögliche Risiken sowie Tipps für Patienten, die unter Platzangst leiden.",
           },
           {
+            bold_link: "https://www.praktischarzt.de/untersuchungen/mrt/",
             bold: "praktischArzt",
             other:
-              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge. [praktischArzt] https://www.praktischarzt.de/untersuchungen/mrt/",
+              "Diese Seite beschreibt detailliert den Ablauf einer MRT-Untersuchung, die Vorbereitungen, die während der Untersuchung zu beachtenden Punkte und die Nachsorge.",
           },
           {
+            bold_link:
+              "https://www.netdoktor.de/diagnostik/kernspintomografie/",
             bold: "NetDoktor",
             other:
-              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln. [NetDoktor] https://www.netdoktor.de/diagnostik/kernspintomografie/",
+              "Diese Webseite erklärt die Gründe für eine MRT, den Ablauf der Untersuchung, die Unterschiede zwischen T1- und T2-Gewichtung und die Verwendung von Kontrastmitteln.",
           },
           {
+            bold_link:
+              "https://www.med360grad.de/leistungsangebot/radiologie/leistungen/kernspintomographie-mrt/",
             bold: "Med 360°",
             other:
-              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT. [Med 360°] https://www.med360grad.de/leistungsangebot/radiologie/leistungen/kernspintomographie-mrt/",
+              "Diese Seite bietet umfassende Informationen zur Kernspintomographie, einschließlich der Vorbereitung, des Ablaufs der Untersuchung und der Einsatzgebiete der MRT.",
           },
           {
+            bold_link:
+              "https://www.lifeline.de/diagnose/mrt-kernspintomographie-id31498.html",
             bold: "Lifeline",
             other:
-              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT. Es wird auch erläutert, welche Symptome und Krankheiten mit einer MRT abgeklärt werden können. [Lifeline] https://www.lifeline.de/diagnose/mrt-kernspintomographie-id31498.html",
+              "Auf dieser Seite erhalten Sie Informationen zum Ablauf, den Kosten und der Verwendung von Kontrastmitteln bei einer MRT.",
           },
         ],
       },
@@ -1367,7 +1387,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab: 2
-  // start of parent tab: 3 Röntgen+
+  // start of parent tab: 3 Röntgen
   {
     id: 3,
     title: "Röntgen",
@@ -1989,29 +2009,29 @@ export const parentTabs = [
         text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
         text_list: [
           {
-            bold: "DocCheck Flexikon",
+            bold_link: "https://flexikon.doccheck.com/de/Röntgendiagnostik",
+            bold: "DocCheck Flexikon - Röntgen",
             other:
-              "Diese Seite bietet eine detaillierte Erklärung der Röntgendiagnostik. Sie beschreibt die Technik, wichtige Verfahren wie die konventionelle Röntgendiagnostik, die Computertomographie (CT) und die Angiographie. Außerdem erfährst du, wie Röntgenstrahlen genutzt werden, um krankhafte Veränderungen im Körper darzustellen. Mehr Informationen findest du auf https://flexikon.doccheck.com/de/Röntgendiagnostik",
+              "Hier findest du eine umfassende Einführung in die Grundlagen des Röntgens, seiner Geschichte und der klinischen Anwendung in der Medizin.",
           },
           {
-            bold: "NetDoktor",
+            bold_link: "https://www.amboss.com/de/wissen/rontgen",
+            bold: "AMBOSS - Radiologie: Röntgendiagnostik",
             other:
-              "Auf dieser Seite erhältst du umfassende Informationen über die Gründe, den Ablauf und die Risiken von Röntgenuntersuchungen. Es wird zudem auf spezielle Röntgenverfahren wie die Digitale Volumentomographie (DVT) und die Orthopantomografie (OPG) eingegangen. Mehr Informationen findest du auf https://www.netdoktor.de/diagnostik/roentgen/",
+              "AMBOSS bietet detaillierte Artikel über Röntgenuntersuchungen, einschließlich technischer Aspekte und der Bedeutung für die Diagnose. Es ist eine ausgezeichnete Quelle für medizinisches Fachwissen.",
           },
           {
-            bold: "MSD Manual",
+            bold_link:
+              "https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html",
+            bold: "Apotheken-Umschau - Röntgenuntersuchung",
             other:
-              "Diese Seite erklärt die verschiedenen Anwendungen von Röntgenaufnahmen zur Diagnose von Störungen wie Frakturen, Lungenentzündungen und Darmverschlüssen. Die Seite behandelt auch den Einsatz von Kontrastmitteln und Fluoroskopie. Mehr Informationen findest du auf https://www.msdmanuals.com/de-de/heim/spezialthemen/übliche-bildgebende-verfahren/röntgenaufnahmen",
+              "Diese Plattform bietet eine verständliche Einführung in das Thema Röntgendiagnostik, erklärt, wie Röntgen funktioniert, und informiert über die verschiedenen Anwendungsbereiche und mögliche Risiken.",
           },
           {
-            bold: "Gesundheitsportal",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/roentgen/",
+            bold: "Praktischarzt",
             other:
-              "Hier findest du eine allgemeine Übersicht über Röntgenuntersuchungen, einschließlich der Verwendung von Kontrastmitteln zur besseren Darstellung von Weichgeweben, Gefäßen und Hohlorganen. Auch das Strahlenrisiko und der Strahlenschutz werden thematisiert. Mehr Informationen findest du auf https://www.gesundheit.gv.at/labor/untersuchungen/mrt-ct-roentgen/roentgen-untersuchung.html",
-          },
-          {
-            bold: "Apotheken Umschau",
-            other:
-              "Diese Seite bietet einen allgemeinen Überblick über Röntgenuntersuchungen und deren Einsatzgebiete, wie etwa zur Erkennung von Knochenbrüchen oder zur Diagnose von Lungenerkrankungen. Mehr Informationen findest du auf https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html",
+              "Der Artikel auf Praktischarzt bietet eine umfassende Übersicht zur Röntgenuntersuchung. Dabei wird erklärt, wie die Röntgentechnologie funktioniert, wann sie eingesetzt wird und welche Vor- und Nachteile sie hat.",
           },
         ],
       },
@@ -2707,44 +2727,29 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold: "Stiftung Gesundheitswissen :",
+            bold_link: "https://flexikon.doccheck.com/de/Röntgendiagnostik",
+            bold: "DocCheck Flexikon - Röntgen",
             other:
-              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links] https://www.stiftung-gesundheitswissen.de",
+              "Hier findest du eine umfassende Einführung in die Grundlagen des Röntgens, seiner Geschichte und der klinischen Anwendung in der Medizin.",
           },
           {
-            bold: "NetDoktor :",
+            bold_link: "https://www.amboss.com/de/wissen/rontgen",
+            bold: "AMBOSS - Radiologie: Röntgendiagnostik",
             other:
-              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links] https://www.netdoktor.de",
+              "AMBOSS bietet detaillierte Artikel über Röntgenuntersuchungen, einschließlich technischer Aspekte und der Bedeutung für die Diagnose. Es ist eine ausgezeichnete Quelle für medizinisches Fachwissen.",
           },
           {
-            bold: "Gesundheitsinformation.de :",
+            bold_link:
+              "https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html",
+            bold: "Apotheken-Umschau - Röntgenuntersuchung",
             other:
-              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links] https://www.gesundheitsinformation.de",
+              "Diese Plattform bietet eine verständliche Einführung in das Thema Röntgendiagnostik, erklärt, wie Röntgen funktioniert, und informiert über die verschiedenen Anwendungsbereiche und mögliche Risiken.",
           },
           {
-            bold: "BARMER :",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/roentgen/",
+            bold: "Praktischarzt",
             other:
-              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links] https://www.barmer.de",
-          },
-          {
-            bold: "PraktischArzt :",
-            other:
-              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links] https://www.praktischarzt.de",
-          },
-          {
-            bold: "Krebsinformationsdienst :",
-            other:
-              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links] https://www.krebsinformationsdienst.de",
-          },
-          {
-            bold: "DokCheck :",
-            other:
-              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links] https://www.doccheck.com)",
-          },
-          {
-            bold: "AMBOSS :",
-            other:
-              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links] https://www.amboss.com/de)",
+              "Der Artikel auf Praktischarzt bietet eine umfassende Übersicht zur Röntgenuntersuchung. Dabei wird erklärt, wie die Röntgentechnologie funktioniert, wann sie eingesetzt wird und welche Vor- und Nachteile sie hat.",
           },
         ],
       },
@@ -4451,7 +4456,8 @@ export const parentTabs = [
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Gastroösophagealer Reflux)",
+            visualText:
+              "Pathologischer Befund 2 (z.B. Gastroösophagealer Reflux)",
           },
         ],
         tableRows: [
@@ -7943,7 +7949,8 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Ischämische Herzkrankheit)",
+            visualText:
+              "Pathologischer Befund 1 (z.B. Ischämische Herzkrankheit)",
           },
           {
             name: "fourth",
@@ -8606,7 +8613,8 @@ export const parentTabs = [
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. ventrikuläre Tachykardie)",
+            visualText:
+              "Pathologischer Befund 2 (z.B. ventrikuläre Tachykardie)",
           },
         ],
         tableRows: [
@@ -20844,11 +20852,13 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Schallleitungsschwerhörigkeit)",
+            visualText:
+              "Pathologischer Befund 1 (z.B. Schallleitungsschwerhörigkeit)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Sensorineurale Schwerhörigkeit)",
+            visualText:
+              "Pathologischer Befund 2 (z.B. Sensorineurale Schwerhörigkeit)",
           },
         ],
         tableRows: [
@@ -22505,112 +22515,110 @@ export const parentTabs = [
         id: 271,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Die Elektroenzephalographie (EEG) ist eine nicht-invasive Methode zur Erfassung elektrischer Aktivitäten des Gehirns. Ziel der Untersuchung ist es, neuronale Muster und Anomalien zu erkennen, die auf verschiedene neurologische Erkrankungen hinweisen können.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "EEG wird häufig zur Diagnose von Epilepsie, Schlafstörungen, Enzephalopathien und anderen neurologischen Erkrankungen verwendet. Es spielt auch eine wichtige Rolle in der Intensivmedizin und der intraoperativen Überwachung.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "EEG basiert auf der Messung elektrischer Signale, die durch neuronale Aktivitäten im Gehirn erzeugt werden. Diese Signale werden durch Elektroden erfasst, die auf der Kopfhaut des Patienten platziert werden.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Die EEG-Ausrüstung umfasst Elektroden, die in einem bestimmten Schema auf der Kopfhaut angeordnet sind, einen Verstärker zur Signalverstärkung und ein Computersystem zur Aufzeichnung und Analyse der Daten. Die Platzierung der Elektroden erfolgt gemäß dem 10-20-System, einem international anerkannten Standard.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die Auswertung eines EEG erfolgt durch die Analyse der aufgezeichneten Wellenmuster. Verschiedene Frequenzbänder wie Alpha-, Beta-, Theta- und Delta-Wellen werden untersucht, um normale und pathologische Muster zu identifizieren.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Typische Befunde umfassen epileptiforme Aktivitäten, abnormale langsame Wellen und spezifische Muster, die auf verschiedene neurologische Zustände hinweisen können.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "EEG ist eine sichere, nicht-invasive und relativ kostengünstige Methode. Sie bietet wertvolle Informationen über die funktionelle Aktivität des Gehirns und ist in vielen klinischen Situationen anwendbar.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Zu den Nachteilen gehören die Empfindlichkeit gegenüber Bewegungsartefakten und die begrenzte räumliche Auflösung im Vergleich zu bildgebenden Verfahren wie MRI.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "EEG birgt nur minimale Risiken, hauptsächlich Hautreizungen an den Elektrodenstellen. Es gibt keine bekannten ernsthaften Nebenwirkungen.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "EEG spielt eine zentrale Rolle in der Diagnose von Epilepsie und anderen neurologischen Störungen. Es hilft auch bei der Überwachung der Hirnaktivität in der Intensivmedizin und während neurochirurgischer Eingriffe.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "EEG-Ergebnisse können entscheidend für die Wahl der Behandlung und das Management von Patienten mit neurologischen Erkrankungen sein. Sie ermöglichen eine präzise Diagnosestellung und die Überwachung des Krankheitsverlaufs.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Zu den Alternativen gehören bildgebende Verfahren wie Magnetresonanztomographie (MRI), Computertomographie (CT) und funktionelle MRT (fMRT), die unterschiedliche und komplementäre Informationen über die Gehirnaktivität liefern können.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neueste Forschung konzentriert sich auf die Verbesserung der EEG-Technologie und die Integration mit anderen bildgebenden Verfahren zur genaueren Diagnose und Überwachung.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Entwicklungen könnten eine bessere räumliche Auflösung und neue Anwendungen in der personalisierten Medizin und der neurotechnologischen Forschung umfassen.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Elektroenzephalographie ist ein wertvolles Werkzeug in der neurologischen Diagnostik und Patientenüberwachung. Ihre nicht-invasive Natur und die Fähigkeit, Echtzeit-Daten über die Gehirnaktivität zu liefern, machen sie zu einem unverzichtbaren Bestandteil der modernen Medizin.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "EEG trägt wesentlich zur Verbesserung der Diagnose, Behandlung und Überwachung von Patienten mit neurologischen Erkrankungen bei und hat somit eine große Bedeutung im klinischen Alltag.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Elektroenzephalographie (EEG) ist eine nicht-invasive Methode zur Erfassung elektrischer Aktivitäten des Gehirns. Ziel der Untersuchung ist es, neuronale Muster und Anomalien zu erkennen, die auf verschiedene neurologische Erkrankungen hinweisen können.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "EEG wird häufig zur Diagnose von Epilepsie, Schlafstörungen, Enzephalopathien und anderen neurologischen Erkrankungen verwendet. Es spielt auch eine wichtige Rolle in der Intensivmedizin und der intraoperativen Überwachung.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "EEG basiert auf der Messung elektrischer Signale, die durch neuronale Aktivitäten im Gehirn erzeugt werden. Diese Signale werden durch Elektroden erfasst, die auf der Kopfhaut des Patienten platziert werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Die EEG-Ausrüstung umfasst Elektroden, die in einem bestimmten Schema auf der Kopfhaut angeordnet sind, einen Verstärker zur Signalverstärkung und ein Computersystem zur Aufzeichnung und Analyse der Daten. Die Platzierung der Elektroden erfolgt gemäß dem 10-20-System, einem international anerkannten Standard.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung eines EEG erfolgt durch die Analyse der aufgezeichneten Wellenmuster. Verschiedene Frequenzbänder wie Alpha-, Beta-, Theta- und Delta-Wellen werden untersucht, um normale und pathologische Muster zu identifizieren.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde umfassen epileptiforme Aktivitäten, abnormale langsame Wellen und spezifische Muster, die auf verschiedene neurologische Zustände hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "EEG ist eine sichere, nicht-invasive und relativ kostengünstige Methode. Sie bietet wertvolle Informationen über die funktionelle Aktivität des Gehirns und ist in vielen klinischen Situationen anwendbar.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Zu den Nachteilen gehören die Empfindlichkeit gegenüber Bewegungsartefakten und die begrenzte räumliche Auflösung im Vergleich zu bildgebenden Verfahren wie MRI.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "EEG birgt nur minimale Risiken, hauptsächlich Hautreizungen an den Elektrodenstellen. Es gibt keine bekannten ernsthaften Nebenwirkungen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "EEG spielt eine zentrale Rolle in der Diagnose von Epilepsie und anderen neurologischen Störungen. Es hilft auch bei der Überwachung der Hirnaktivität in der Intensivmedizin und während neurochirurgischer Eingriffe.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "EEG-Ergebnisse können entscheidend für die Wahl der Behandlung und das Management von Patienten mit neurologischen Erkrankungen sein. Sie ermöglichen eine präzise Diagnosestellung und die Überwachung des Krankheitsverlaufs.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen gehören bildgebende Verfahren wie Magnetresonanztomographie (MRI), Computertomographie (CT) und funktionelle MRT (fMRT), die unterschiedliche und komplementäre Informationen über die Gehirnaktivität liefern können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neueste Forschung konzentriert sich auf die Verbesserung der EEG-Technologie und die Integration mit anderen bildgebenden Verfahren zur genaueren Diagnose und Überwachung.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten eine bessere räumliche Auflösung und neue Anwendungen in der personalisierten Medizin und der neurotechnologischen Forschung umfassen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Elektroenzephalographie ist ein wertvolles Werkzeug in der neurologischen Diagnostik und Patientenüberwachung. Ihre nicht-invasive Natur und die Fähigkeit, Echtzeit-Daten über die Gehirnaktivität zu liefern, machen sie zu einem unverzichtbaren Bestandteil der modernen Medizin.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "EEG trägt wesentlich zur Verbesserung der Diagnose, Behandlung und Überwachung von Patienten mit neurologischen Erkrankungen bei und hat somit eine große Bedeutung im klinischen Alltag.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 272
@@ -22630,116 +22638,113 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-        
-            {
-              first: "Ziel der Untersuchung",
-              second:
-                "Erklären Sie, dass die EEG-Untersuchung dazu dient, die elektrische Aktivität des Gehirns zu messen und zu analysieren, um neurologische Erkrankungen wie Epilepsie, Schlafstörungen und Enzephalopathien zu diagnostizieren.",
-              third:
-                "„Das EEG hilft uns zu verstehen, ob es Anomalien in den Gehirnwellen gibt, die auf eine Epilepsie hindeuten könnten.“",
-              fourth:
-                "„Wir verwenden das EEG, um festzustellen, ob Schlafstörungen durch abnormale Gehirnaktivitäten verursacht werden.“",
-            },
-            {
-              first: "Ablauf",
-              second:
-                "Erwähnen Sie, dass während der Untersuchung Elektroden auf der Kopfhaut angebracht werden, die elektrische Signale des Gehirns erfassen. Der Patient sitzt oder liegt entspannt, während die Messung durchgeführt wird, die etwa 20 bis 30 Minuten dauert.",
-              third:
-                "„Während der Untersuchung werden kleine Elektroden auf Ihrer Kopfhaut platziert, und Sie liegen dabei bequem auf einer Liege.“",
-              fourth:
-                "„Die Elektroden erfassen die elektrischen Signale Ihres Gehirns, während Sie entspannt sitzen oder liegen.“",
-            },
-            {
-              first: "Vorbereitung",
-              second:
-                "Informieren Sie den Patienten, dass er mit gewaschenen Haaren erscheinen sollte, ohne Haarspray oder Gel zu verwenden. Vor der Untersuchung sollten keine koffeinhaltigen Getränke konsumiert werden. Gegebenenfalls kann eine leichte Nahrungsaufnahme empfohlen werden.",
-              third:
-                "„Bitte waschen Sie Ihre Haare am Untersuchungstag und vermeiden Sie Haarspray oder Gel.“",
-              fourth:
-                "„Vermeiden Sie bitte koffeinhaltige Getränke vor der Untersuchung, da sie die Ergebnisse beeinflussen können.“",
-            },
-            {
-              first: "Risiken",
-              second:
-                "Erklären Sie, dass EEG ein sicheres und nicht-invasives Verfahren ist. Risiken sind minimal und beschränken sich meist auf Hautirritationen durch die Elektroden. Es sind keine ernsthaften Nebenwirkungen bekannt.",
-              third:
-                "„Es besteht ein geringes Risiko von Hautreizungen an den Stellen, wo die Elektroden angebracht werden.“",
-              fourth:
-                "„EEG ist ein sehr sicheres Verfahren und hat keine bekannten ernsthaften Nebenwirkungen.“",
-            },
-            {
-              first: "Vorteile",
-              second:
-                "Erwähnen Sie, dass EEG schmerzfrei, schnell durchführbar und wichtig für die Diagnose von Gehirnaktivitäten ist. Es kann auch in der Notfalldiagnostik eingesetzt werden und ist kostengünstig im Vergleich zu anderen bildgebenden Verfahren.",
-              third:
-                "„Das EEG ist schmerzfrei und dauert nur etwa 30 Minuten.“",
-              fourth:
-                "„Es ist eine kostengünstige Methode, die uns schnell wichtige Informationen über die Gehirnaktivität liefert.“",
-            },
-            {
-              first: "Alternativen",
-              second:
-                "Informieren Sie den Patienten, dass Alternativen zur EEG bildgebende Verfahren wie Magnetresonanztomographie (MRT), Computertomographie (CT) und funktionelle MRT (fMRT) sind. Diese bieten komplementäre Informationen zur Gehirnaktivität.",
-              third:
-                "„Eine Alternative zur EEG wäre eine MRT, die detaillierte Bilder des Gehirns liefert.“",
-              fourth:
-                "„Manchmal nutzen wir auch die CT, um strukturelle Veränderungen im Gehirn zu erkennen.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass es keine absoluten Kontraindikationen für die EEG gibt. Vorsicht ist geboten bei Patienten mit Hauterkrankungen oder Verletzungen an den Stellen, wo die Elektroden angebracht werden.",
-              third:
-                "„Wenn Sie Hautverletzungen an der Kopfhaut haben, informieren Sie uns bitte vor der Untersuchung.“",
-              fourth:
-                "„Bei schweren Hauterkrankungen an der Kopfhaut sollten wir eventuell eine alternative Methode in Betracht ziehen.“",
-            },
-            {
-              first: "Mögliche Ergebnisse",
-              second:
-                "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung verschiedene Frequenzbänder wie Alpha-, Beta-, Theta- und Delta-Wellen umfassen, die auf normale oder pathologische Muster hinweisen können, z.B. epileptiforme Aktivitäten oder abnormale langsame Wellen.",
-              third:
-                "„Das EEG kann Anzeichen für epileptische Anfälle zeigen, wie z.B. plötzliche und abnormale Spitzen in den Gehirnwellen.“",
-              fourth:
-                "„Langsame Wellen im EEG können auf Schlafstörungen oder eine Enzephalopathie hinweisen.“",
-            },
-            {
-              first: "Wichtigkeit des Einverständnisses",
-              second:
-                "Informieren Sie den Patienten über die Notwendigkeit des schriftlichen Einverständnisses vor der Durchführung der EEG-Untersuchung, um sicherzustellen, dass er die Untersuchung und die damit verbundenen Aspekte versteht.",
-              third:
-                "„Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung beginnen können.“",
-              fourth:
-                "„Das Einverständnisformular stellt sicher, dass Sie über alle Aspekte der Untersuchung informiert sind.“",
-            },
-            {
-              first: "Erhalt des Einverständnisses",
-              second:
-                "Erwähnen Sie, dass der Patient das Einverständnisformular unterzeichnen muss, nachdem er über den Zweck, den Ablauf, die Risiken und Vorteile der Untersuchung aufgeklärt wurde.",
-              third:
-                "„Bitte lesen Sie das Einverständnisformular sorgfältig durch und unterschreiben Sie es.“",
-              fourth:
-                "„Nachdem wir die Untersuchung besprochen haben, bitten wir Sie, das Einverständnisformular zu unterzeichnen.“",
-            },
-            {
-              first: "Abschließende Hinweise",
-              second:
-                "Informieren Sie den Patienten über eventuelle Verhaltensmaßnahmen nach der Untersuchung und darüber, dass er bei Fragen oder Unklarheiten jederzeit den behandelnden Arzt kontaktieren kann.",
-              third:
-                "„Nach der Untersuchung können Sie Ihren normalen Aktivitäten nachgehen. Wenn Sie Fragen haben, können Sie sich jederzeit an uns wenden.“",
-              fourth:
-                "„Sollten Sie nach der Untersuchung ungewöhnliche Symptome bemerken, kontaktieren Sie bitte umgehend Ihren Arzt.“",
-            },
-            {
-              first: "Information über Ergebnisse",
-              second:
-                "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung in einem späteren Termin ausführlich besprochen werden, bei dem die diagnostischen Befunde und gegebenenfalls notwendige weitere Schritte erläutert werden.",
-              third:
-                "„Wir werden die Ergebnisse in einem separaten Termin besprechen, um die nächsten Schritte festzulegen.“",
-              fourth:
-                "„Die detaillierten Ergebnisse und ihre Bedeutung werden wir beim nächsten Termin gemeinsam durchgehen.“",
-            },
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die EEG-Untersuchung dazu dient, die elektrische Aktivität des Gehirns zu messen und zu analysieren, um neurologische Erkrankungen wie Epilepsie, Schlafstörungen und Enzephalopathien zu diagnostizieren.",
+            third:
+              "„Das EEG hilft uns zu verstehen, ob es Anomalien in den Gehirnwellen gibt, die auf eine Epilepsie hindeuten könnten.“",
+            fourth:
+              "„Wir verwenden das EEG, um festzustellen, ob Schlafstörungen durch abnormale Gehirnaktivitäten verursacht werden.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erwähnen Sie, dass während der Untersuchung Elektroden auf der Kopfhaut angebracht werden, die elektrische Signale des Gehirns erfassen. Der Patient sitzt oder liegt entspannt, während die Messung durchgeführt wird, die etwa 20 bis 30 Minuten dauert.",
+            third:
+              "„Während der Untersuchung werden kleine Elektroden auf Ihrer Kopfhaut platziert, und Sie liegen dabei bequem auf einer Liege.“",
+            fourth:
+              "„Die Elektroden erfassen die elektrischen Signale Ihres Gehirns, während Sie entspannt sitzen oder liegen.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass er mit gewaschenen Haaren erscheinen sollte, ohne Haarspray oder Gel zu verwenden. Vor der Untersuchung sollten keine koffeinhaltigen Getränke konsumiert werden. Gegebenenfalls kann eine leichte Nahrungsaufnahme empfohlen werden.",
+            third:
+              "„Bitte waschen Sie Ihre Haare am Untersuchungstag und vermeiden Sie Haarspray oder Gel.“",
+            fourth:
+              "„Vermeiden Sie bitte koffeinhaltige Getränke vor der Untersuchung, da sie die Ergebnisse beeinflussen können.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie, dass EEG ein sicheres und nicht-invasives Verfahren ist. Risiken sind minimal und beschränken sich meist auf Hautirritationen durch die Elektroden. Es sind keine ernsthaften Nebenwirkungen bekannt.",
+            third:
+              "„Es besteht ein geringes Risiko von Hautreizungen an den Stellen, wo die Elektroden angebracht werden.“",
+            fourth:
+              "„EEG ist ein sehr sicheres Verfahren und hat keine bekannten ernsthaften Nebenwirkungen.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erwähnen Sie, dass EEG schmerzfrei, schnell durchführbar und wichtig für die Diagnose von Gehirnaktivitäten ist. Es kann auch in der Notfalldiagnostik eingesetzt werden und ist kostengünstig im Vergleich zu anderen bildgebenden Verfahren.",
+            third: "„Das EEG ist schmerzfrei und dauert nur etwa 30 Minuten.“",
+            fourth:
+              "„Es ist eine kostengünstige Methode, die uns schnell wichtige Informationen über die Gehirnaktivität liefert.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie den Patienten, dass Alternativen zur EEG bildgebende Verfahren wie Magnetresonanztomographie (MRT), Computertomographie (CT) und funktionelle MRT (fMRT) sind. Diese bieten komplementäre Informationen zur Gehirnaktivität.",
+            third:
+              "„Eine Alternative zur EEG wäre eine MRT, die detaillierte Bilder des Gehirns liefert.“",
+            fourth:
+              "„Manchmal nutzen wir auch die CT, um strukturelle Veränderungen im Gehirn zu erkennen.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass es keine absoluten Kontraindikationen für die EEG gibt. Vorsicht ist geboten bei Patienten mit Hauterkrankungen oder Verletzungen an den Stellen, wo die Elektroden angebracht werden.",
+            third:
+              "„Wenn Sie Hautverletzungen an der Kopfhaut haben, informieren Sie uns bitte vor der Untersuchung.“",
+            fourth:
+              "„Bei schweren Hauterkrankungen an der Kopfhaut sollten wir eventuell eine alternative Methode in Betracht ziehen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung verschiedene Frequenzbänder wie Alpha-, Beta-, Theta- und Delta-Wellen umfassen, die auf normale oder pathologische Muster hinweisen können, z.B. epileptiforme Aktivitäten oder abnormale langsame Wellen.",
+            third:
+              "„Das EEG kann Anzeichen für epileptische Anfälle zeigen, wie z.B. plötzliche und abnormale Spitzen in den Gehirnwellen.“",
+            fourth:
+              "„Langsame Wellen im EEG können auf Schlafstörungen oder eine Enzephalopathie hinweisen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Informieren Sie den Patienten über die Notwendigkeit des schriftlichen Einverständnisses vor der Durchführung der EEG-Untersuchung, um sicherzustellen, dass er die Untersuchung und die damit verbundenen Aspekte versteht.",
+            third:
+              "„Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung beginnen können.“",
+            fourth:
+              "„Das Einverständnisformular stellt sicher, dass Sie über alle Aspekte der Untersuchung informiert sind.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erwähnen Sie, dass der Patient das Einverständnisformular unterzeichnen muss, nachdem er über den Zweck, den Ablauf, die Risiken und Vorteile der Untersuchung aufgeklärt wurde.",
+            third:
+              "„Bitte lesen Sie das Einverständnisformular sorgfältig durch und unterschreiben Sie es.“",
+            fourth:
+              "„Nachdem wir die Untersuchung besprochen haben, bitten wir Sie, das Einverständnisformular zu unterzeichnen.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Informieren Sie den Patienten über eventuelle Verhaltensmaßnahmen nach der Untersuchung und darüber, dass er bei Fragen oder Unklarheiten jederzeit den behandelnden Arzt kontaktieren kann.",
+            third:
+              "„Nach der Untersuchung können Sie Ihren normalen Aktivitäten nachgehen. Wenn Sie Fragen haben, können Sie sich jederzeit an uns wenden.“",
+            fourth:
+              "„Sollten Sie nach der Untersuchung ungewöhnliche Symptome bemerken, kontaktieren Sie bitte umgehend Ihren Arzt.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung in einem späteren Termin ausführlich besprochen werden, bei dem die diagnostischen Befunde und gegebenenfalls notwendige weitere Schritte erläutert werden.",
+            third:
+              "„Wir werden die Ergebnisse in einem separaten Termin besprechen, um die nächsten Schritte festzulegen.“",
+            fourth:
+              "„Die detaillierten Ergebnisse und ihre Bedeutung werden wir beim nächsten Termin gemeinsam durchgehen.“",
+          },
         ],
       },
       // 3tab 273
@@ -22759,98 +22764,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erklären Sie, dass die Elektroenzephalographie (EEG) eine nicht-invasive Methode zur Erfassung und Analyse der elektrischen Aktivitäten des Gehirns ist.",
-              third:
-                "„Das EEG misst die elektrische Aktivität des Gehirns und hilft uns, verschiedene neuronale Muster zu analysieren.“",
-              fourth:
-                "„Durch das EEG können wir die elektrischen Signale des Gehirns über Elektroden, die auf der Kopfhaut platziert werden, aufzeichnen.“",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Erwähnen Sie, dass EEG verwendet wird, um neurologische Störungen wie Epilepsie, Schlafstörungen, Enzephalopathien und andere neuronale Dysfunktionen zu diagnostizieren.",
-              third:
-                "„Wir nutzen das EEG zur Diagnose von Epilepsie, indem wir epileptiforme Aktivitäten identifizieren.“",
-              fourth:
-                "„Das EEG hilft uns auch bei der Untersuchung von Schlafstörungen durch die Analyse von Schlafstadien und Anomalien.“",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Informieren Sie über die typischen Ergebnisse, die EEG liefern kann, wie normale und abnormale Wellenmuster, die Frequenzbänder (Alpha, Beta, Theta, Delta) und spezifische pathologische Muster wie epileptiforme Aktivitäten.",
-              third:
-                "„Das EEG zeigte bei diesem Patienten typische Alpha-Wellen im Ruhezustand und Beta-Wellen während mentaler Aktivität.“",
-              fourth:
-                "„Wir haben bei der Untersuchung abnormale langsame Wellen gefunden, die auf eine Enzephalopathie hinweisen könnten.“",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Erklären Sie, dass Indikationen für eine EEG-Untersuchung unter anderem Verdacht auf Epilepsie, Diagnose und Überwachung von Schlafstörungen, Untersuchung bei unklaren Bewusstseinsstörungen und die intraoperative Überwachung umfassen.",
-              third:
-                "„Bei Patienten mit unklaren Bewusstseinsstörungen ist das EEG eine wichtige diagnostische Maßnahme.“",
-              fourth:
-                "„Wir führen ein EEG durch, um Schlafstörungen zu diagnostizieren und deren genaue Ursache zu ermitteln.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass es keine absoluten Kontraindikationen für EEG gibt, jedoch Vorsicht bei Patienten mit Hauterkrankungen oder Verletzungen an den Elektrodenstellen geboten ist.",
-              third:
-                "„Bei Patienten mit schweren Hauterkrankungen an der Kopfhaut müssen wir alternative Untersuchungsmethoden in Betracht ziehen.“",
-              fourth:
-                "„Es gibt keine absoluten Kontraindikationen, aber Hautverletzungen könnten die Platzierung der Elektroden erschweren.“",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Informieren Sie, dass EEG hilft, Differenzialdiagnosen zu stellen, indem es zwischen verschiedenen Arten von Epilepsien, Schlafstörungen und anderen neurologischen Erkrankungen differenziert.",
-              third:
-                "„Das EEG half uns, zwischen fokalen und generalisierten Anfällen zu unterscheiden.“",
-              fourth:
-                "„Wir nutzen das EEG, um zwischen verschiedenen Schlafstörungen wie Schlafapnoe und Narkolepsie zu differenzieren.“",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung in die Erstellung und Anpassung von Behandlungsplänen einfließen, insbesondere bei der medikamentösen Einstellung von Epilepsiepatienten.",
-              third:
-                "„Basierend auf den EEG-Ergebnissen haben wir die antiepileptische Medikation des Patienten angepasst.“",
-              fourth:
-                "„Die EEG-Daten waren entscheidend für die Planung der nächsten diagnostischen Schritte und die Festlegung des Behandlungsplans.“",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Erwähnen Sie die Bedeutung der Zusammenarbeit zwischen Neurologen, Neurochirurgen, Psychiatern und anderen Fachkräften im Gesundheitswesen.",
-              third:
-                "„Für eine umfassende Behandlung des Patienten arbeiten wir eng mit Neurologen und Psychiatern zusammen.“",
-              fourth:
-                "„Die interprofessionelle Zusammenarbeit mit Neurochirurgen war entscheidend für die operative Planung.“",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Informieren Sie über die Notwendigkeit, standardisierte Protokolle und Verfahren zur Durchführung und Auswertung von EEGs zu implementieren, um die diagnostische Genauigkeit und Reproduzierbarkeit zu gewährleisten.",
-              third:
-                "„Wir haben standardisierte EEG-Protokolle eingeführt, um die Qualität und Genauigkeit der Diagnosen zu sichern.“",
-              fourth:
-                "„Regelmäßige Schulungen und Qualitätskontrollen sind Teil unseres EEG-Qualitätsmanagements.“",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Erklären Sie, dass eine sorgfältige Dokumentation der EEG-Ergebnisse und die kontinuierliche Überwachung und Anpassung des Behandlungsplans unerlässlich sind, um den Therapieerfolg zu gewährleisten und rechtzeitig auf Veränderungen im Krankheitsverlauf reagieren zu können.",
-              third:
-                "„Die Dokumentation der EEG-Ergebnisse ermöglicht es uns, den Krankheitsverlauf des Patienten genau zu verfolgen.“",
-              fourth:
-                "„Wir passen den Behandlungsplan regelmäßig an, basierend auf den kontinuierlich dokumentierten EEG-Ergebnissen.“",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Elektroenzephalographie (EEG) eine nicht-invasive Methode zur Erfassung und Analyse der elektrischen Aktivitäten des Gehirns ist.",
+            third:
+              "„Das EEG misst die elektrische Aktivität des Gehirns und hilft uns, verschiedene neuronale Muster zu analysieren.“",
+            fourth:
+              "„Durch das EEG können wir die elektrischen Signale des Gehirns über Elektroden, die auf der Kopfhaut platziert werden, aufzeichnen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erwähnen Sie, dass EEG verwendet wird, um neurologische Störungen wie Epilepsie, Schlafstörungen, Enzephalopathien und andere neuronale Dysfunktionen zu diagnostizieren.",
+            third:
+              "„Wir nutzen das EEG zur Diagnose von Epilepsie, indem wir epileptiforme Aktivitäten identifizieren.“",
+            fourth:
+              "„Das EEG hilft uns auch bei der Untersuchung von Schlafstörungen durch die Analyse von Schlafstadien und Anomalien.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Informieren Sie über die typischen Ergebnisse, die EEG liefern kann, wie normale und abnormale Wellenmuster, die Frequenzbänder (Alpha, Beta, Theta, Delta) und spezifische pathologische Muster wie epileptiforme Aktivitäten.",
+            third:
+              "„Das EEG zeigte bei diesem Patienten typische Alpha-Wellen im Ruhezustand und Beta-Wellen während mentaler Aktivität.“",
+            fourth:
+              "„Wir haben bei der Untersuchung abnormale langsame Wellen gefunden, die auf eine Enzephalopathie hinweisen könnten.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, dass Indikationen für eine EEG-Untersuchung unter anderem Verdacht auf Epilepsie, Diagnose und Überwachung von Schlafstörungen, Untersuchung bei unklaren Bewusstseinsstörungen und die intraoperative Überwachung umfassen.",
+            third:
+              "„Bei Patienten mit unklaren Bewusstseinsstörungen ist das EEG eine wichtige diagnostische Maßnahme.“",
+            fourth:
+              "„Wir führen ein EEG durch, um Schlafstörungen zu diagnostizieren und deren genaue Ursache zu ermitteln.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass es keine absoluten Kontraindikationen für EEG gibt, jedoch Vorsicht bei Patienten mit Hauterkrankungen oder Verletzungen an den Elektrodenstellen geboten ist.",
+            third:
+              "„Bei Patienten mit schweren Hauterkrankungen an der Kopfhaut müssen wir alternative Untersuchungsmethoden in Betracht ziehen.“",
+            fourth:
+              "„Es gibt keine absoluten Kontraindikationen, aber Hautverletzungen könnten die Platzierung der Elektroden erschweren.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Informieren Sie, dass EEG hilft, Differenzialdiagnosen zu stellen, indem es zwischen verschiedenen Arten von Epilepsien, Schlafstörungen und anderen neurologischen Erkrankungen differenziert.",
+            third:
+              "„Das EEG half uns, zwischen fokalen und generalisierten Anfällen zu unterscheiden.“",
+            fourth:
+              "„Wir nutzen das EEG, um zwischen verschiedenen Schlafstörungen wie Schlafapnoe und Narkolepsie zu differenzieren.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, dass die Ergebnisse der EEG-Untersuchung in die Erstellung und Anpassung von Behandlungsplänen einfließen, insbesondere bei der medikamentösen Einstellung von Epilepsiepatienten.",
+            third:
+              "„Basierend auf den EEG-Ergebnissen haben wir die antiepileptische Medikation des Patienten angepasst.“",
+            fourth:
+              "„Die EEG-Daten waren entscheidend für die Planung der nächsten diagnostischen Schritte und die Festlegung des Behandlungsplans.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erwähnen Sie die Bedeutung der Zusammenarbeit zwischen Neurologen, Neurochirurgen, Psychiatern und anderen Fachkräften im Gesundheitswesen.",
+            third:
+              "„Für eine umfassende Behandlung des Patienten arbeiten wir eng mit Neurologen und Psychiatern zusammen.“",
+            fourth:
+              "„Die interprofessionelle Zusammenarbeit mit Neurochirurgen war entscheidend für die operative Planung.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Informieren Sie über die Notwendigkeit, standardisierte Protokolle und Verfahren zur Durchführung und Auswertung von EEGs zu implementieren, um die diagnostische Genauigkeit und Reproduzierbarkeit zu gewährleisten.",
+            third:
+              "„Wir haben standardisierte EEG-Protokolle eingeführt, um die Qualität und Genauigkeit der Diagnosen zu sichern.“",
+            fourth:
+              "„Regelmäßige Schulungen und Qualitätskontrollen sind Teil unseres EEG-Qualitätsmanagements.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie, dass eine sorgfältige Dokumentation der EEG-Ergebnisse und die kontinuierliche Überwachung und Anpassung des Behandlungsplans unerlässlich sind, um den Therapieerfolg zu gewährleisten und rechtzeitig auf Veränderungen im Krankheitsverlauf reagieren zu können.",
+            third:
+              "„Die Dokumentation der EEG-Ergebnisse ermöglicht es uns, den Krankheitsverlauf des Patienten genau zu verfolgen.“",
+            fourth:
+              "„Wir passen den Behandlungsplan regelmäßig an, basierend auf den kontinuierlich dokumentierten EEG-Ergebnissen.“",
+          },
         ],
       },
       // 4tab 274
@@ -22870,71 +22873,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Einführung in den klinischen Fall",
-              second:
-                "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
-              third:
-                "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
-              fourth:
-                "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "EEG zeigt normale Hintergrundaktivität mit regelmäßigen Alpha-Wellen im Ruhezustand.",
-              third:
-                "EEG zeigt generalisierte epileptiforme Aktivitäten mit Spike-Wave-Komplexen.",
-              fourth:
-                "EEG zeigt diffuse langsame Wellen, die auf eine allgemeine Hirndysfunktion hinweisen.",
-            },
-            {
-              first: "Interpretation der Ergebnisse",
-              second:
-                "Keine pathologischen Befunde; das EEG-Ergebnis unterstützt den Ausschluss neurologischer Erkrankungen.",
-              third:
-                "Der Befund deutet auf eine generalisierte Epilepsie hin, was die Kopfschmerzen und Sehstörungen des Patienten erklären könnte.",
-              fourth:
-                "Die diffuse langsame Aktivität im EEG deutet auf eine Enzephalopathie hin, was mit den Symptomen der Taubheit und Ermüdung übereinstimmt.",
-            },
-            {
-              first: "Integration in die Patientenversorgung",
-              second:
-                "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
-              third:
-                "Die Ergebnisse sind entscheidend für die Anpassung der antiepileptischen Medikation und die Planung weiterer neurologischer Untersuchungen.",
-              fourth:
-                "Wichtig für die Bestätigung der Diagnose und Einleitung einer spezifischen Therapie zur Behandlung der Enzephalopathie.",
-            },
-            {
-              first: "Diagnose",
-              second:
-                "Bestätigung des gesunden Zustandes des Gehirns. Keine Anzeichen für pathologische Veränderungen.",
-              third:
-                "Diagnose einer generalisierten Epilepsie basierend auf EEG-Befunden und klinischem Bild.",
-              fourth:
-                "Diagnose einer Enzephalopathie aufgrund der EEG-Ergebnisse und Symptomatik.",
-            },
-            {
-              first: "Visuelle Hilfsmittel",
-              second:
-                "EEG zeigt regelmäßige Alpha-Wellen und normale Gehirnaktivität ohne Auffälligkeiten.",
-              third:
-                "EEG-Aufzeichnungen zeigen klare Spike-Wave-Komplexe, die für Epilepsie charakteristisch sind.",
-              fourth:
-                "EEG zeigt diffuse, langsame Wellen im Delta- und Theta-Bereich, die für Enzephalopathie typisch sind.",
-            },
-            {
-              first: "Fallabschluss",
-              second:
-                "Wir empfehlen eine Fortsetzung der Routinekontrollen, um die Gesundheit des Patienten zu überwachen. Es ist zu empfehlen, dass der Patient auf mögliche neurologische Symptome achtet und bei Veränderungen umgehend einen Arzt aufsucht.",
-              third:
-                "Wir empfehlen eine Anpassung der antiepileptischen Medikation und regelmäßige neurologische Kontrollen, um die Anfallskontrolle zu verbessern. Es ist zu empfehlen, dass der Patient ein Anfallstagebuch führt und seine Symptome dokumentiert.",
-              fourth:
-                "Es ist zu empfehlen, eine spezifische Therapie zur Behandlung der Enzephalopathie zu beginnen und die Patientenaufklärung über die Krankheit zu intensivieren. Wir empfehlen regelmäßige Kontrollen, um den Verlauf der Erkrankung zu überwachen.",
-            },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
+            fourth:
+              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "EEG zeigt normale Hintergrundaktivität mit regelmäßigen Alpha-Wellen im Ruhezustand.",
+            third:
+              "EEG zeigt generalisierte epileptiforme Aktivitäten mit Spike-Wave-Komplexen.",
+            fourth:
+              "EEG zeigt diffuse langsame Wellen, die auf eine allgemeine Hirndysfunktion hinweisen.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; das EEG-Ergebnis unterstützt den Ausschluss neurologischer Erkrankungen.",
+            third:
+              "Der Befund deutet auf eine generalisierte Epilepsie hin, was die Kopfschmerzen und Sehstörungen des Patienten erklären könnte.",
+            fourth:
+              "Die diffuse langsame Aktivität im EEG deutet auf eine Enzephalopathie hin, was mit den Symptomen der Taubheit und Ermüdung übereinstimmt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und vermeidet unnötige medizinische Eingriffe.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Anpassung der antiepileptischen Medikation und die Planung weiterer neurologischer Untersuchungen.",
+            fourth:
+              "Wichtig für die Bestätigung der Diagnose und Einleitung einer spezifischen Therapie zur Behandlung der Enzephalopathie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Gehirns. Keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer generalisierten Epilepsie basierend auf EEG-Befunden und klinischem Bild.",
+            fourth:
+              "Diagnose einer Enzephalopathie aufgrund der EEG-Ergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "EEG zeigt regelmäßige Alpha-Wellen und normale Gehirnaktivität ohne Auffälligkeiten.",
+            third:
+              "EEG-Aufzeichnungen zeigen klare Spike-Wave-Komplexe, die für Epilepsie charakteristisch sind.",
+            fourth:
+              "EEG zeigt diffuse, langsame Wellen im Delta- und Theta-Bereich, die für Enzephalopathie typisch sind.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine Fortsetzung der Routinekontrollen, um die Gesundheit des Patienten zu überwachen. Es ist zu empfehlen, dass der Patient auf mögliche neurologische Symptome achtet und bei Veränderungen umgehend einen Arzt aufsucht.",
+            third:
+              "Wir empfehlen eine Anpassung der antiepileptischen Medikation und regelmäßige neurologische Kontrollen, um die Anfallskontrolle zu verbessern. Es ist zu empfehlen, dass der Patient ein Anfallstagebuch führt und seine Symptome dokumentiert.",
+            fourth:
+              "Es ist zu empfehlen, eine spezifische Therapie zur Behandlung der Enzephalopathie zu beginnen und die Patientenaufklärung über die Krankheit zu intensivieren. Wir empfehlen regelmäßige Kontrollen, um den Verlauf der Erkrankung zu überwachen.",
+          },
         ],
       },
       // 5tab 275
@@ -23235,112 +23236,110 @@ export const parentTabs = [
         id: 279,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Die Lumbalpunktion dient primär der Gewinnung von Liquor zur Diagnose neurologischer Erkrankungen wie Meningitis, Multiple Sklerose oder Blutungen im Gehirn. Außerdem kann sie therapeutisch eingesetzt werden, etwa zur Druckentlastung bei Hydrozephalus.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Das Verfahren ist in der Neurologie und Notfallmedizin von zentraler Bedeutung, insbesondere bei Verdacht auf Infektionen des zentralen Nervensystems, entzündlichen Erkrankungen und bestimmten Krebsarten.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die Lumbalpunktion basiert auf der Entnahme von Liquor aus dem Subarachnoidalraum, der das Rückenmark umgibt. Sie wird typischerweise zwischen dem dritten und vierten Lendenwirbel durchgeführt, um eine Verletzung des Rückenmarks zu vermeiden.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Der Eingriff wird unter sterilen Bedingungen durchgeführt. Der Patient wird in Seitenlage oder sitzender Position vorbereitet. Eine spezielle Hohlnadel wird in den unteren Bereich der Wirbelsäule eingeführt, um den Liquor zu entnehmen. Die Entnahmestelle wird vorher lokal betäubt.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Der entnommene Liquor wird auf verschiedene Parameter untersucht, wie Zellzahl, Eiweiß- und Glukosegehalt sowie das Vorhandensein von Erregern oder Krebszellen.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Bei Meningitis sind oft erhöhte Zellzahlen und Eiweißkonzentrationen zu beobachten. Bei Multipler Sklerose können oligoklonale Banden nachgewiesen werden, und bei Subarachnoidalblutungen ist Blut im Liquor sichtbar.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Lumbalpunktion liefert direkte und zuverlässige Informationen über den Zustand des zentralen Nervensystems. Sie ist in vielen Fällen entscheidend für die Diagnose von Infektionen, entzündlichen Erkrankungen und Blutungen im Gehirn.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Die Lumbalpunktion ist ein invasiver Eingriff, der für den Patienten unangenehm sein kann. In einigen Fällen kann es zu Kopfschmerzen, Rückenschmerzen oder Blutungen an der Einstichstelle kommen.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Zu den Risiken gehören Infektionen, Blutungen, Nervenschädigungen und in seltenen Fällen Hirndruckabfälle, die zu starken Kopfschmerzen oder neurologischen Komplikationen führen können.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Lumbalpunktion ist ein unerlässliches Werkzeug zur Diagnose von Erkrankungen des zentralen Nervensystems und spielt eine wichtige Rolle bei der Therapieplanung.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Schnelle und präzise Ergebnisse der Lumbalpunktion können das Patientenmanagement erheblich beeinflussen, insbesondere in Notfällen oder bei Verdacht auf schwere Infektionen.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "Alternative Verfahren:",
-                  text: "Zur Lumbalpunktion umfassen bildgebende Methoden wie die Magnetresonanztomographie (MRT), die weniger invasiv, aber nicht immer so aussagekräftig sind.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neue Forschungen zielen darauf ab, die Genauigkeit und Sicherheit der Lumbalpunktion zu verbessern, etwa durch den Einsatz dünnerer Nadeln oder besserer Analysemethoden des Liquors.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "In der Zukunft könnten nicht-invasive oder minimal-invasive Verfahren die klassische Lumbalpunktion ergänzen oder ersetzen, ohne dabei an diagnostischer Genauigkeit einzubüßen.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Lumbalpunktion ist ein essentielles diagnostisches Verfahren in der Neurologie und kann lebenswichtige Informationen liefern. Sie ist jedoch mit gewissen Risiken verbunden.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Trotz der invasiven Natur bleibt die Lumbalpunktion ein unverzichtbares Instrument in der modernen Medizin zur Abklärung schwerer neurologischer Erkrankungen.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Lumbalpunktion dient primär der Gewinnung von Liquor zur Diagnose neurologischer Erkrankungen wie Meningitis, Multiple Sklerose oder Blutungen im Gehirn. Außerdem kann sie therapeutisch eingesetzt werden, etwa zur Druckentlastung bei Hydrozephalus.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Das Verfahren ist in der Neurologie und Notfallmedizin von zentraler Bedeutung, insbesondere bei Verdacht auf Infektionen des zentralen Nervensystems, entzündlichen Erkrankungen und bestimmten Krebsarten.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Lumbalpunktion basiert auf der Entnahme von Liquor aus dem Subarachnoidalraum, der das Rückenmark umgibt. Sie wird typischerweise zwischen dem dritten und vierten Lendenwirbel durchgeführt, um eine Verletzung des Rückenmarks zu vermeiden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Der Eingriff wird unter sterilen Bedingungen durchgeführt. Der Patient wird in Seitenlage oder sitzender Position vorbereitet. Eine spezielle Hohlnadel wird in den unteren Bereich der Wirbelsäule eingeführt, um den Liquor zu entnehmen. Die Entnahmestelle wird vorher lokal betäubt.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Der entnommene Liquor wird auf verschiedene Parameter untersucht, wie Zellzahl, Eiweiß- und Glukosegehalt sowie das Vorhandensein von Erregern oder Krebszellen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Bei Meningitis sind oft erhöhte Zellzahlen und Eiweißkonzentrationen zu beobachten. Bei Multipler Sklerose können oligoklonale Banden nachgewiesen werden, und bei Subarachnoidalblutungen ist Blut im Liquor sichtbar.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Lumbalpunktion liefert direkte und zuverlässige Informationen über den Zustand des zentralen Nervensystems. Sie ist in vielen Fällen entscheidend für die Diagnose von Infektionen, entzündlichen Erkrankungen und Blutungen im Gehirn.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Lumbalpunktion ist ein invasiver Eingriff, der für den Patienten unangenehm sein kann. In einigen Fällen kann es zu Kopfschmerzen, Rückenschmerzen oder Blutungen an der Einstichstelle kommen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören Infektionen, Blutungen, Nervenschädigungen und in seltenen Fällen Hirndruckabfälle, die zu starken Kopfschmerzen oder neurologischen Komplikationen führen können.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Lumbalpunktion ist ein unerlässliches Werkzeug zur Diagnose von Erkrankungen des zentralen Nervensystems und spielt eine wichtige Rolle bei der Therapieplanung.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Schnelle und präzise Ergebnisse der Lumbalpunktion können das Patientenmanagement erheblich beeinflussen, insbesondere in Notfällen oder bei Verdacht auf schwere Infektionen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "Alternative Verfahren:",
+                text: "Zur Lumbalpunktion umfassen bildgebende Methoden wie die Magnetresonanztomographie (MRT), die weniger invasiv, aber nicht immer so aussagekräftig sind.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Forschungen zielen darauf ab, die Genauigkeit und Sicherheit der Lumbalpunktion zu verbessern, etwa durch den Einsatz dünnerer Nadeln oder besserer Analysemethoden des Liquors.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "In der Zukunft könnten nicht-invasive oder minimal-invasive Verfahren die klassische Lumbalpunktion ergänzen oder ersetzen, ohne dabei an diagnostischer Genauigkeit einzubüßen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Lumbalpunktion ist ein essentielles diagnostisches Verfahren in der Neurologie und kann lebenswichtige Informationen liefern. Sie ist jedoch mit gewissen Risiken verbunden.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Trotz der invasiven Natur bleibt die Lumbalpunktion ein unverzichtbares Instrument in der modernen Medizin zur Abklärung schwerer neurologischer Erkrankungen.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 280
@@ -23360,116 +23359,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Ziel der Untersuchung",
-              second:
-                "Erklären Sie, dass die Lumbarpunktion durchgeführt wird, um Nervenflüssigkeit (Liquor) zu entnehmen, um neurologische Erkrankungen wie Meningitis, Multiple Sklerose oder Blutungen zu diagnostizieren.",
-              third:
-                "„Wir führen diese Untersuchung durch, um mögliche Entzündungen oder Infektionen des Nervensystems zu erkennen.“",
-              fourth:
-                "„Der Test hilft uns, Erkrankungen wie Meningitis oder Blutungen im Gehirn festzustellen.“",
-            },
-            {
-              first: "Ablauf",
-              second:
-                "Beschreiben Sie den genauen Ablauf: Die sterile Punktion erfolgt im unteren Rückenbereich, der Patient wird in Seitenlage oder sitzender Position vorbereitet, und eine Probe wird entnommen.",
-              third:
-                "„Sie werden seitlich liegen, und wir werden eine dünne Nadel in Ihren unteren Rücken einführen, um eine kleine Menge Flüssigkeit zu entnehmen.“",
-              fourth:
-                "„Die Punktion erfolgt im unteren Rückenbereich, Sie erhalten eine örtliche Betäubung, um den Eingriff möglichst schmerzfrei zu machen.“",
-            },
-            {
-              first: "Vorbereitung",
-              second:
-                "Informieren Sie den Patienten darüber, dass er möglicherweise nüchtern erscheinen muss und eine lokale Betäubung durchgeführt wird. Erklären Sie, dass der Bereich des Rückens sterilisiert wird.",
-              third:
-                "„Bitte kommen Sie nüchtern zur Untersuchung, damit wir den Eingriff ohne Komplikationen durchführen können.“",
-              fourth:
-                "„Vor der Punktion werden wir den Bereich gründlich desinfizieren und lokal betäuben.“",
-            },
-            {
-              first: "Risiken",
-              second:
-                "Betonen Sie die möglichen Risiken, wie Kopfschmerzen nach der Punktion, Infektionen, selten Blutungen oder Nervenschäden, und dass diese Risiken gering sind.",
-              third:
-                "„Es kann zu leichten Kopfschmerzen nach der Punktion kommen, diese lassen jedoch in der Regel innerhalb von ein paar Tagen nach.“",
-              fourth:
-                "„Es besteht ein sehr geringes Risiko für Infektionen oder Blutungen, aber wir treffen alle Vorsichtsmaßnahmen.“",
-            },
-            {
-              first: "Vorteile",
-              second:
-                "Erklären Sie, dass der Hauptvorteil die genaue Diagnose von schwerwiegenden neurologischen Erkrankungen ist, die ohne diese Untersuchung nicht so präzise diagnostiziert werden könnten.",
-              third:
-                "„Die Untersuchung ermöglicht es uns, wichtige Informationen zu gewinnen, die für die richtige Behandlung entscheidend sind.“",
-              fourth:
-                "„Mit dieser Methode können wir schnell herausfinden, ob eine ernste Infektion vorliegt.“",
-            },
-            {
-              first: "Alternativen",
-              second:
-                "Informieren Sie den Patienten, dass es bildgebende Alternativen wie MRT gibt, die jedoch nicht so aussagekräftig sind wie die Analyse des Liquors selbst.",
-              third:
-                "„Eine Alternative wäre eine MRT, aber diese gibt uns keine direkten Informationen über Ihre Nervenflüssigkeit.“",
-              fourth:
-                "„In manchen Fällen kann man auf bildgebende Verfahren zurückgreifen, aber die Punktion liefert uns die genauesten Ergebnisse.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass bei bestimmten Bedingungen wie erhöhtem Hirndruck oder Infektionen an der Punktionsstelle die Lumbarpunktion kontraindiziert ist.",
-              third:
-                "„Wenn ein erhöhter Hirndruck besteht, kann die Punktion nicht sicher durchgeführt werden.“",
-              fourth:
-                "„Bei Infektionen an der Einstichstelle vermeiden wir diesen Eingriff, um Komplikationen zu verhindern.“",
-            },
-            {
-              first: "Mögliche Ergebnisse",
-              second:
-                "Informieren Sie den Patienten, dass die Untersuchung Hinweise auf Entzündungen, Infektionen, Blutungen oder autoimmune Erkrankungen geben kann.",
-              third:
-                "„Wir erwarten, Hinweise auf eine mögliche Infektion oder Entzündung des Gehirns und Rückenmarks zu finden.“",
-              fourth:
-                "„Die Ergebnisse können uns zeigen, ob eine Blutung im Gehirn vorliegt oder eine Erkrankung wie Multiple Sklerose.“",
-            },
-            {
-              first: "Wichtigkeit des Einverständnisses",
-              second:
-                "Betonen Sie, dass der Eingriff nur nach ausdrücklicher Zustimmung durchgeführt wird und der Patient die Möglichkeit hat, alle Fragen zu stellen, bevor er seine Einwilligung gibt.",
-              third:
-                "„Wir werden den Eingriff erst durchführen, nachdem Sie uns Ihr schriftliches Einverständnis gegeben haben.“",
-              fourth:
-                "„Es ist wichtig, dass Sie alle Informationen verstehen, bevor Sie zustimmen. Haben Sie noch Fragen?“",
-            },
-            {
-              first: "Erhalt des Einverständnisses",
-              second:
-                "Erklären Sie, dass der Patient nach Aufklärung aller Punkte eine schriftliche Einwilligung geben muss, bevor die Lumbarpunktion durchgeführt werden kann.",
-              third:
-                "„Bitte unterschreiben Sie dieses Formular, um zu bestätigen, dass Sie der Untersuchung zustimmen.“",
-              fourth:
-                "„Nachdem Sie alle Details verstanden haben, benötigen wir Ihre schriftliche Einwilligung.“",
-            },
-            {
-              first: "Abschließende Hinweise",
-              second:
-                "Geben Sie abschließende Informationen über die Überwachung nach der Punktion und darüber, wie lange der Patient danach unter ärztlicher Aufsicht bleiben muss.",
-              third:
-                "„Nach dem Eingriff sollten Sie sich ausruhen, und wir werden Sie für ein paar Stunden beobachten.“",
-              fourth:
-                "„Es ist wichtig, dass Sie nach der Punktion ein wenig liegen bleiben, damit mögliche Kopfschmerzen reduziert werden.“",
-            },
-            {
-              first: "Information über Ergebnisse",
-              second:
-                "Informieren Sie den Patienten, dass die Ergebnisse in der Regel innerhalb weniger Tage vorliegen und je nach Befund weiterführende Untersuchungen oder Behandlungen notwendig sein können.",
-              third:
-                "„Die Laborergebnisse werden in ein paar Tagen vorliegen, und wir werden Sie dann über die weiteren Schritte informieren.“",
-              fourth:
-                "„Sobald die Ergebnisse da sind, besprechen wir, ob weitere Untersuchungen oder Behandlungen notwendig sind.“",
-            },
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Lumbarpunktion durchgeführt wird, um Nervenflüssigkeit (Liquor) zu entnehmen, um neurologische Erkrankungen wie Meningitis, Multiple Sklerose oder Blutungen zu diagnostizieren.",
+            third:
+              "„Wir führen diese Untersuchung durch, um mögliche Entzündungen oder Infektionen des Nervensystems zu erkennen.“",
+            fourth:
+              "„Der Test hilft uns, Erkrankungen wie Meningitis oder Blutungen im Gehirn festzustellen.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den genauen Ablauf: Die sterile Punktion erfolgt im unteren Rückenbereich, der Patient wird in Seitenlage oder sitzender Position vorbereitet, und eine Probe wird entnommen.",
+            third:
+              "„Sie werden seitlich liegen, und wir werden eine dünne Nadel in Ihren unteren Rücken einführen, um eine kleine Menge Flüssigkeit zu entnehmen.“",
+            fourth:
+              "„Die Punktion erfolgt im unteren Rückenbereich, Sie erhalten eine örtliche Betäubung, um den Eingriff möglichst schmerzfrei zu machen.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten darüber, dass er möglicherweise nüchtern erscheinen muss und eine lokale Betäubung durchgeführt wird. Erklären Sie, dass der Bereich des Rückens sterilisiert wird.",
+            third:
+              "„Bitte kommen Sie nüchtern zur Untersuchung, damit wir den Eingriff ohne Komplikationen durchführen können.“",
+            fourth:
+              "„Vor der Punktion werden wir den Bereich gründlich desinfizieren und lokal betäuben.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie die möglichen Risiken, wie Kopfschmerzen nach der Punktion, Infektionen, selten Blutungen oder Nervenschäden, und dass diese Risiken gering sind.",
+            third:
+              "„Es kann zu leichten Kopfschmerzen nach der Punktion kommen, diese lassen jedoch in der Regel innerhalb von ein paar Tagen nach.“",
+            fourth:
+              "„Es besteht ein sehr geringes Risiko für Infektionen oder Blutungen, aber wir treffen alle Vorsichtsmaßnahmen.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass der Hauptvorteil die genaue Diagnose von schwerwiegenden neurologischen Erkrankungen ist, die ohne diese Untersuchung nicht so präzise diagnostiziert werden könnten.",
+            third:
+              "„Die Untersuchung ermöglicht es uns, wichtige Informationen zu gewinnen, die für die richtige Behandlung entscheidend sind.“",
+            fourth:
+              "„Mit dieser Methode können wir schnell herausfinden, ob eine ernste Infektion vorliegt.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie den Patienten, dass es bildgebende Alternativen wie MRT gibt, die jedoch nicht so aussagekräftig sind wie die Analyse des Liquors selbst.",
+            third:
+              "„Eine Alternative wäre eine MRT, aber diese gibt uns keine direkten Informationen über Ihre Nervenflüssigkeit.“",
+            fourth:
+              "„In manchen Fällen kann man auf bildgebende Verfahren zurückgreifen, aber die Punktion liefert uns die genauesten Ergebnisse.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass bei bestimmten Bedingungen wie erhöhtem Hirndruck oder Infektionen an der Punktionsstelle die Lumbarpunktion kontraindiziert ist.",
+            third:
+              "„Wenn ein erhöhter Hirndruck besteht, kann die Punktion nicht sicher durchgeführt werden.“",
+            fourth:
+              "„Bei Infektionen an der Einstichstelle vermeiden wir diesen Eingriff, um Komplikationen zu verhindern.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die Untersuchung Hinweise auf Entzündungen, Infektionen, Blutungen oder autoimmune Erkrankungen geben kann.",
+            third:
+              "„Wir erwarten, Hinweise auf eine mögliche Infektion oder Entzündung des Gehirns und Rückenmarks zu finden.“",
+            fourth:
+              "„Die Ergebnisse können uns zeigen, ob eine Blutung im Gehirn vorliegt oder eine Erkrankung wie Multiple Sklerose.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass der Eingriff nur nach ausdrücklicher Zustimmung durchgeführt wird und der Patient die Möglichkeit hat, alle Fragen zu stellen, bevor er seine Einwilligung gibt.",
+            third:
+              "„Wir werden den Eingriff erst durchführen, nachdem Sie uns Ihr schriftliches Einverständnis gegeben haben.“",
+            fourth:
+              "„Es ist wichtig, dass Sie alle Informationen verstehen, bevor Sie zustimmen. Haben Sie noch Fragen?“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient nach Aufklärung aller Punkte eine schriftliche Einwilligung geben muss, bevor die Lumbarpunktion durchgeführt werden kann.",
+            third:
+              "„Bitte unterschreiben Sie dieses Formular, um zu bestätigen, dass Sie der Untersuchung zustimmen.“",
+            fourth:
+              "„Nachdem Sie alle Details verstanden haben, benötigen wir Ihre schriftliche Einwilligung.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie abschließende Informationen über die Überwachung nach der Punktion und darüber, wie lange der Patient danach unter ärztlicher Aufsicht bleiben muss.",
+            third:
+              "„Nach dem Eingriff sollten Sie sich ausruhen, und wir werden Sie für ein paar Stunden beobachten.“",
+            fourth:
+              "„Es ist wichtig, dass Sie nach der Punktion ein wenig liegen bleiben, damit mögliche Kopfschmerzen reduziert werden.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die Ergebnisse in der Regel innerhalb weniger Tage vorliegen und je nach Befund weiterführende Untersuchungen oder Behandlungen notwendig sein können.",
+            third:
+              "„Die Laborergebnisse werden in ein paar Tagen vorliegen, und wir werden Sie dann über die weiteren Schritte informieren.“",
+            fourth:
+              "„Sobald die Ergebnisse da sind, besprechen wir, ob weitere Untersuchungen oder Behandlungen notwendig sind.“",
+          },
         ],
       },
       // 3tab 281
@@ -23489,98 +23486,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erklären Sie die medizinische Basis der Untersuchung und beschreiben Sie kurz das Verfahren, wie es durchgeführt wird.",
-              third:
-                "„Die Lumbalpunktion ist ein diagnostisches Verfahren, bei dem Nervenflüssigkeit aus dem Spinalkanal entnommen wird.“",
-              fourth:
-                "„Dieses Verfahren ermöglicht uns den direkten Zugang zum Liquor, um neurologische Erkrankungen zu diagnostizieren.“",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Erläutern Sie, welche Parameter oder Krankheitsbilder mit der Untersuchung erfasst werden können und welche Informationen dadurch gewonnen werden.",
-              third:
-                "„Mit der Untersuchung können wir auf Infektionen wie Meningitis oder entzündliche Erkrankungen wie MS testen.“",
-              fourth:
-                "„Durch die Analyse des Liquors können wir Hinweise auf Blutungen oder Tumorzellen im zentralen Nervensystem finden.“",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Besprechen Sie die möglichen Befunde und deren Bedeutung, die auf verschiedene Krankheitsbilder hinweisen könnten.",
-              third:
-                "„Ein erhöhter Zellgehalt könnte auf eine bakterielle Meningitis hindeuten, während oligoklonale Banden ein Zeichen für MS sein könnten.“",
-              fourth:
-                "„Bei einer Subarachnoidalblutung wäre der Liquor blutig, während bei viraler Meningitis die Zellzahl moderat erhöht ist.“",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Erklären Sie die Indikationen, wann und bei welchen klinischen Verdachtsmomenten die Untersuchung sinnvoll und notwendig ist.",
-              third:
-                "„Bei Verdacht auf eine Meningitis oder eine Subarachnoidalblutung ist eine Lumbalpunktion indiziert.“",
-              fourth:
-                "„Eine Lumbalpunktion ist bei Verdacht auf neurologische Infektionen oder entzündliche Erkrankungen des zentralen Nervensystems indiziert.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Beschreiben Sie die Kontraindikationen, wann die Untersuchung nicht durchgeführt werden sollte, um Risiken zu minimieren.",
-              third:
-                "„Eine absolute Kontraindikation wäre ein erhöhter intrakranieller Druck, da das Risiko einer Einklemmung besteht.“",
-              fourth:
-                "„Bei lokalen Infektionen an der Punktionsstelle oder bei Gerinnungsstörungen sollte die Punktion vermieden werden.“",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Besprechen Sie mögliche Differenzialdiagnosen, die aufgrund der Untersuchungsergebnisse in Betracht gezogen werden sollten.",
-              third:
-                "„Differenzialdiagnosen könnten bei erhöhten Eiweißwerten auch Guillain-Barré-Syndrom oder andere entzündliche Erkrankungen sein.“",
-              fourth:
-                "„Neben einer infektiösen Meningitis sollten auch autoimmune Enzephalitiden in Betracht gezogen werden.“",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Skizzieren Sie, wie die Ergebnisse der Untersuchung in die Erstellung und Anpassung eines Behandlungsplans einfließen können.",
-              third:
-                "„Bei Nachweis einer bakteriellen Meningitis erfolgt die sofortige antibiotische Therapie, oft auch in Kombination mit Steroiden.“",
-              fourth:
-                "„Wenn die Lumbalpunktion eine Subarachnoidalblutung bestätigt, wird die weitere Behandlung in Zusammenarbeit mit der Neurochirurgie erfolgen.“",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen, um eine umfassende Diagnostik und Therapie sicherzustellen.",
-              third:
-                "„Die Liquorproben sollten schnellstmöglich mit dem Labor und der Mikrobiologie koordiniert werden, um eine präzise Diagnose zu gewährleisten.“",
-              fourth:
-                "„Eine enge Zusammenarbeit mit der Neurologie und Infektiologie ist wichtig, um bei Verdacht auf Meningitis schnell zu handeln.“",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Erklären Sie die Bedeutung von Qualitätsstandards und Richtlinien bei der Durchführung der Untersuchung, um Patientensicherheit und genaue Ergebnisse zu gewährleisten.",
-              third:
-                "„Es ist entscheidend, dass die Lumbalpunktion unter sterilen Bedingungen durchgeführt wird, um das Risiko einer Infektion zu minimieren.“",
-              fourth:
-                "„Die korrekte Entnahme und Lagerung des Liquors spielt eine große Rolle, um genaue Ergebnisse sicherzustellen.“",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Erläutern Sie, wie die Untersuchungsergebnisse korrekt dokumentiert und wie der Patient im Anschluss weiter überwacht wird.",
-              third:
-                "„Die Ergebnisse der Liquoruntersuchung sollten umgehend dokumentiert und mit dem behandelnden Team besprochen werden.“",
-              fourth:
-                "„Es ist wichtig, die klinischen Veränderungen des Patienten nach der Punktion genau zu überwachen und den Behandlungsplan entsprechend anzupassen.“",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie die medizinische Basis der Untersuchung und beschreiben Sie kurz das Verfahren, wie es durchgeführt wird.",
+            third:
+              "„Die Lumbalpunktion ist ein diagnostisches Verfahren, bei dem Nervenflüssigkeit aus dem Spinalkanal entnommen wird.“",
+            fourth:
+              "„Dieses Verfahren ermöglicht uns den direkten Zugang zum Liquor, um neurologische Erkrankungen zu diagnostizieren.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, welche Parameter oder Krankheitsbilder mit der Untersuchung erfasst werden können und welche Informationen dadurch gewonnen werden.",
+            third:
+              "„Mit der Untersuchung können wir auf Infektionen wie Meningitis oder entzündliche Erkrankungen wie MS testen.“",
+            fourth:
+              "„Durch die Analyse des Liquors können wir Hinweise auf Blutungen oder Tumorzellen im zentralen Nervensystem finden.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die möglichen Befunde und deren Bedeutung, die auf verschiedene Krankheitsbilder hinweisen könnten.",
+            third:
+              "„Ein erhöhter Zellgehalt könnte auf eine bakterielle Meningitis hindeuten, während oligoklonale Banden ein Zeichen für MS sein könnten.“",
+            fourth:
+              "„Bei einer Subarachnoidalblutung wäre der Liquor blutig, während bei viraler Meningitis die Zellzahl moderat erhöht ist.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie die Indikationen, wann und bei welchen klinischen Verdachtsmomenten die Untersuchung sinnvoll und notwendig ist.",
+            third:
+              "„Bei Verdacht auf eine Meningitis oder eine Subarachnoidalblutung ist eine Lumbalpunktion indiziert.“",
+            fourth:
+              "„Eine Lumbalpunktion ist bei Verdacht auf neurologische Infektionen oder entzündliche Erkrankungen des zentralen Nervensystems indiziert.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Beschreiben Sie die Kontraindikationen, wann die Untersuchung nicht durchgeführt werden sollte, um Risiken zu minimieren.",
+            third:
+              "„Eine absolute Kontraindikation wäre ein erhöhter intrakranieller Druck, da das Risiko einer Einklemmung besteht.“",
+            fourth:
+              "„Bei lokalen Infektionen an der Punktionsstelle oder bei Gerinnungsstörungen sollte die Punktion vermieden werden.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Besprechen Sie mögliche Differenzialdiagnosen, die aufgrund der Untersuchungsergebnisse in Betracht gezogen werden sollten.",
+            third:
+              "„Differenzialdiagnosen könnten bei erhöhten Eiweißwerten auch Guillain-Barré-Syndrom oder andere entzündliche Erkrankungen sein.“",
+            fourth:
+              "„Neben einer infektiösen Meningitis sollten auch autoimmune Enzephalitiden in Betracht gezogen werden.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Skizzieren Sie, wie die Ergebnisse der Untersuchung in die Erstellung und Anpassung eines Behandlungsplans einfließen können.",
+            third:
+              "„Bei Nachweis einer bakteriellen Meningitis erfolgt die sofortige antibiotische Therapie, oft auch in Kombination mit Steroiden.“",
+            fourth:
+              "„Wenn die Lumbalpunktion eine Subarachnoidalblutung bestätigt, wird die weitere Behandlung in Zusammenarbeit mit der Neurochirurgie erfolgen.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen, um eine umfassende Diagnostik und Therapie sicherzustellen.",
+            third:
+              "„Die Liquorproben sollten schnellstmöglich mit dem Labor und der Mikrobiologie koordiniert werden, um eine präzise Diagnose zu gewährleisten.“",
+            fourth:
+              "„Eine enge Zusammenarbeit mit der Neurologie und Infektiologie ist wichtig, um bei Verdacht auf Meningitis schnell zu handeln.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie die Bedeutung von Qualitätsstandards und Richtlinien bei der Durchführung der Untersuchung, um Patientensicherheit und genaue Ergebnisse zu gewährleisten.",
+            third:
+              "„Es ist entscheidend, dass die Lumbalpunktion unter sterilen Bedingungen durchgeführt wird, um das Risiko einer Infektion zu minimieren.“",
+            fourth:
+              "„Die korrekte Entnahme und Lagerung des Liquors spielt eine große Rolle, um genaue Ergebnisse sicherzustellen.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern Sie, wie die Untersuchungsergebnisse korrekt dokumentiert und wie der Patient im Anschluss weiter überwacht wird.",
+            third:
+              "„Die Ergebnisse der Liquoruntersuchung sollten umgehend dokumentiert und mit dem behandelnden Team besprochen werden.“",
+            fourth:
+              "„Es ist wichtig, die klinischen Veränderungen des Patienten nach der Punktion genau zu überwachen und den Behandlungsplan entsprechend anzupassen.“",
+          },
         ],
       },
       // 4tab 282
@@ -23600,71 +23595,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Einführung in den klinischen Fall",
-              second:
-                "40-jähriger Patient ohne Beschwerden, Routineuntersuchung bei anstehendem Check-up. Keine auffällige medizinische Vorgeschichte.",
-              third:
-                "50-jähriger Patient klagt über plötzlich aufgetretene, starke Kopfschmerzen, Fieber und Nackensteifigkeit. Verdacht auf Meningitis.",
-              fourth:
-                "30-jährige Patientin berichtet über Taubheit in den Extremitäten und Müdigkeit, Verdacht auf Multiple Sklerose. Familienanamnese mit neurologischen Erkrankungen.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Zellzahl, Eiweiß und Glukose im Liquor im Normbereich, keine Anzeichen von Entzündungen oder Infektionen.",
-              third:
-                "Erhöhter Zellgehalt (Pleocytose) im Liquor, erhöhtes Eiweiß und positiver Erregernachweis für bakterielle Meningitis.",
-              fourth:
-                "Nachweis oligoklonaler Banden im Liquor, mäßig erhöhte Zellzahl und Proteinwerte.",
-            },
-            {
-              first: "Interpretation der Ergebnisse",
-              second:
-                "Normale Liquorwerte bestätigen das Fehlen pathologischer Prozesse. Es gibt keine Hinweise auf neurologische Erkrankungen.",
-              third:
-                "Der Befund deutet auf eine bakterielle Meningitis hin. Die Kombination aus Fieber, Nackensteifigkeit und Liquor-Befunden bestätigt die Verdachtsdiagnose.",
-              fourth:
-                "Typische Liquor-Befunde für Multiple Sklerose mit dem Nachweis von oligoklonalen Banden. Die Ergebnisse korrelieren mit der klinischen Symptomatik der Patientin.",
-            },
-            {
-              first: "Integration in die Patientenversorgung",
-              second:
-                "Die Ergebnisse werden genutzt, um den Patienten zu beruhigen und sicherzustellen, dass keine neurologische Erkrankung vorliegt. Routineuntersuchungen weiterhin empfohlen.",
-              third:
-                "Sofortige Einleitung einer antibiotischen Therapie basierend auf den Liquor-Befunden. Patientenüberwachung auf Intensivstation, um die Infektion zu kontrollieren.",
-              fourth:
-                "Die Ergebnisse bestätigen die Diagnose der Multiplen Sklerose, woraufhin eine immunmodulatorische Therapie eingeleitet wird.",
-            },
-            {
-              first: "Diagnose",
-              second:
-                "Bestätigung eines normalen Liquors ohne Anzeichen für neurologische Erkrankungen.",
-              third:
-                "Diagnose einer bakteriellen Meningitis auf Basis der Liquor-Befunde und klinischen Symptome.",
-              fourth:
-                "Diagnose von Multipler Sklerose aufgrund des typischen Liquorbildes und der klinischen Präsentation.",
-            },
-            {
-              first: "Visuelle Hilfsmittel",
-              second:
-                "Klarer Liquor, normale Werte für Zellzahl, Eiweiß und Glukose ohne Auffälligkeiten.",
-              third:
-                "Liquor trüb, hoher Zellgehalt und positiver Erregernachweis im mikrobiologischen Test.",
-              fourth:
-                "Liquor klar, Nachweis oligoklonaler Banden im Isoelektrischen Fokussierungstest.",
-            },
-            {
-              first: "Fallabschluss",
-              second:
-                "Es ist zu empfehlen, die Therapie sofort mit Antibiotika zu beginnen und den Patienten intensivmedizinisch zu überwachen, um mögliche Komplikationen zu verhindern.",
-              third:
-                "Es ist zu empfehlen, die Therapie sofort mit Antibiotika zu beginnen und den Patienten intensivmedizinisch zu überwachen, um mögliche Komplikationen zu verhindern.",
-              fourth:
-                "Es ist zu empfehlen, eine langfristige immunmodulatorische Therapie einzuleiten und regelmäßige neurologische Kontrollen durchzuführen, um die Progression der Krankheit zu überwachen.",
-            },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung bei anstehendem Check-up. Keine auffällige medizinische Vorgeschichte.",
+            third:
+              "50-jähriger Patient klagt über plötzlich aufgetretene, starke Kopfschmerzen, Fieber und Nackensteifigkeit. Verdacht auf Meningitis.",
+            fourth:
+              "30-jährige Patientin berichtet über Taubheit in den Extremitäten und Müdigkeit, Verdacht auf Multiple Sklerose. Familienanamnese mit neurologischen Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Zellzahl, Eiweiß und Glukose im Liquor im Normbereich, keine Anzeichen von Entzündungen oder Infektionen.",
+            third:
+              "Erhöhter Zellgehalt (Pleocytose) im Liquor, erhöhtes Eiweiß und positiver Erregernachweis für bakterielle Meningitis.",
+            fourth:
+              "Nachweis oligoklonaler Banden im Liquor, mäßig erhöhte Zellzahl und Proteinwerte.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Normale Liquorwerte bestätigen das Fehlen pathologischer Prozesse. Es gibt keine Hinweise auf neurologische Erkrankungen.",
+            third:
+              "Der Befund deutet auf eine bakterielle Meningitis hin. Die Kombination aus Fieber, Nackensteifigkeit und Liquor-Befunden bestätigt die Verdachtsdiagnose.",
+            fourth:
+              "Typische Liquor-Befunde für Multiple Sklerose mit dem Nachweis von oligoklonalen Banden. Die Ergebnisse korrelieren mit der klinischen Symptomatik der Patientin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Die Ergebnisse werden genutzt, um den Patienten zu beruhigen und sicherzustellen, dass keine neurologische Erkrankung vorliegt. Routineuntersuchungen weiterhin empfohlen.",
+            third:
+              "Sofortige Einleitung einer antibiotischen Therapie basierend auf den Liquor-Befunden. Patientenüberwachung auf Intensivstation, um die Infektion zu kontrollieren.",
+            fourth:
+              "Die Ergebnisse bestätigen die Diagnose der Multiplen Sklerose, woraufhin eine immunmodulatorische Therapie eingeleitet wird.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung eines normalen Liquors ohne Anzeichen für neurologische Erkrankungen.",
+            third:
+              "Diagnose einer bakteriellen Meningitis auf Basis der Liquor-Befunde und klinischen Symptome.",
+            fourth:
+              "Diagnose von Multipler Sklerose aufgrund des typischen Liquorbildes und der klinischen Präsentation.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Klarer Liquor, normale Werte für Zellzahl, Eiweiß und Glukose ohne Auffälligkeiten.",
+            third:
+              "Liquor trüb, hoher Zellgehalt und positiver Erregernachweis im mikrobiologischen Test.",
+            fourth:
+              "Liquor klar, Nachweis oligoklonaler Banden im Isoelektrischen Fokussierungstest.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, die Therapie sofort mit Antibiotika zu beginnen und den Patienten intensivmedizinisch zu überwachen, um mögliche Komplikationen zu verhindern.",
+            third:
+              "Es ist zu empfehlen, die Therapie sofort mit Antibiotika zu beginnen und den Patienten intensivmedizinisch zu überwachen, um mögliche Komplikationen zu verhindern.",
+            fourth:
+              "Es ist zu empfehlen, eine langfristige immunmodulatorische Therapie einzuleiten und regelmäßige neurologische Kontrollen durchzuführen, um die Progression der Krankheit zu überwachen.",
+          },
         ],
       },
       // 5tab 283
@@ -23974,112 +23967,110 @@ export const parentTabs = [
         id: 287,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Die Elektromyographie (EMG) dient der Messung und Aufzeichnung der elektrischen Aktivität von Muskeln. Ziel der Untersuchung ist es, neuromuskuläre Erkrankungen zu diagnostizieren, die Funktion von Muskeln und Nerven zu bewerten und den Schweregrad sowie den Verlauf von Erkrankungen zu bestimmen.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die EMG ist von großer Relevanz in der neurologischen Diagnostik. Sie wird angewendet zur Diagnose von Erkrankungen wie Amyotrophe Lateralsklerose (ALS), Myasthenia gravis, peripheren Neuropathien und Muskeldystrophien. Sie hilft auch bei der Untersuchung von Muskelkrämpfen, Schwäche und Lähmungen.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die EMG basiert auf der Messung der elektrischen Aktivität, die durch Muskelkontraktionen erzeugt wird. Dies erfolgt durch die Platzierung von Elektroden auf der Haut über dem zu untersuchenden Muskel oder durch Nadelelektroden, die direkt in den Muskel eingeführt werden.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Es werden Oberflächenelektroden oder Nadelelektroden verwendet, um die elektrische Aktivität der Muskeln zu messen. Die Signale werden verstärkt und auf einem Oszilloskop dargestellt. Moderne EMG-Geräte ermöglichen eine detaillierte Analyse der Amplitude, Dauer und Frequenz der Muskelaktionspotenziale.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die Auswertung der EMG-Ergebnisse erfolgt durch Vergleich der gemessenen Muskelaktivität mit normalen Werten. Abnormale Muster können auf spezifische neuromuskuläre Störungen hinweisen. Zum Beispiel können erhöhte spontane Aktivitäten auf eine Neuropathie hinweisen, während reduzierte Amplituden auf eine Myopathie hinweisen können.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Typische EMG-Befunde beinhalten das Vorhandensein oder Fehlen von Spontanaktivitäten, Änderungen der Amplitude und Dauer der Muskelaktionspotenziale sowie das Muster der Rekrutierung von Muskelaktivität.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die EMG bietet eine direkte Möglichkeit, die Funktion von Muskeln und Nerven zu überprüfen. Sie ist nicht invasiv und kann in Echtzeit durchgeführt werden.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Die Untersuchung kann unangenehm oder schmerzhaft sein, insbesondere bei der Verwendung von Nadeln. Zudem ist eine spezielle Schulung notwendig, um die Ergebnisse korrekt zu interpretieren.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Zu den Risiken gehören vorübergehende Schmerzen oder Blutungen an der Einstichstelle der Nadel. Infektionen oder schwerwiegende Komplikationen sind selten.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die EMG spielt eine zentrale Rolle in der Diagnose und Behandlung von neuromuskulären Erkrankungen. Sie hilft bei der Bestimmung des Schweregrads der Erkrankung und kann den Verlauf der Behandlung überwachen.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "EMG-Ergebnisse sind entscheidend für die Planung und Anpassung von Therapien. Sie helfen, die Wirksamkeit von Behandlungen zu bewerten und die Notwendigkeit weiterer diagnostischer Tests zu bestimmen.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Zu den Alternativen zur EMG gehören bildgebende Verfahren wie MRT und CT, die strukturelle Anomalien aufzeigen können, sowie Nervenleitgeschwindigkeitstests, die die Funktion der peripheren Nerven beurteilen.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der EMG-Technologie und die Entwicklung neuer Methoden zur Analyse der elektrischen Muskelaktivität. Dies schließt die Nutzung von Computeralgorithmen zur Verbesserung der Diagnosegenauigkeit ein.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Perspektiven beinhalten die Integration von EMG-Daten mit anderen diagnostischen Modalitäten, um eine umfassendere Beurteilung neuromuskulärer Erkrankungen zu ermöglichen, sowie die Entwicklung tragbarer EMG-Geräte für die Langzeitüberwachung.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die EMG ist ein essenzielles diagnostisches Verfahren zur Beurteilung von Muskelfunktion und Nervenschäden. Sie liefert wichtige Informationen für die Diagnose und das Management neuromuskulärer Erkrankungen.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Aufgrund ihrer Relevanz in der Neurologie und der fortlaufenden Forschung bleibt die EMG ein unverzichtbares Werkzeug in der medizinischen Diagnostik.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Elektromyographie (EMG) dient der Messung und Aufzeichnung der elektrischen Aktivität von Muskeln. Ziel der Untersuchung ist es, neuromuskuläre Erkrankungen zu diagnostizieren, die Funktion von Muskeln und Nerven zu bewerten und den Schweregrad sowie den Verlauf von Erkrankungen zu bestimmen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die EMG ist von großer Relevanz in der neurologischen Diagnostik. Sie wird angewendet zur Diagnose von Erkrankungen wie Amyotrophe Lateralsklerose (ALS), Myasthenia gravis, peripheren Neuropathien und Muskeldystrophien. Sie hilft auch bei der Untersuchung von Muskelkrämpfen, Schwäche und Lähmungen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die EMG basiert auf der Messung der elektrischen Aktivität, die durch Muskelkontraktionen erzeugt wird. Dies erfolgt durch die Platzierung von Elektroden auf der Haut über dem zu untersuchenden Muskel oder durch Nadelelektroden, die direkt in den Muskel eingeführt werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Es werden Oberflächenelektroden oder Nadelelektroden verwendet, um die elektrische Aktivität der Muskeln zu messen. Die Signale werden verstärkt und auf einem Oszilloskop dargestellt. Moderne EMG-Geräte ermöglichen eine detaillierte Analyse der Amplitude, Dauer und Frequenz der Muskelaktionspotenziale.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Auswertung der EMG-Ergebnisse erfolgt durch Vergleich der gemessenen Muskelaktivität mit normalen Werten. Abnormale Muster können auf spezifische neuromuskuläre Störungen hinweisen. Zum Beispiel können erhöhte spontane Aktivitäten auf eine Neuropathie hinweisen, während reduzierte Amplituden auf eine Myopathie hinweisen können.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Typische EMG-Befunde beinhalten das Vorhandensein oder Fehlen von Spontanaktivitäten, Änderungen der Amplitude und Dauer der Muskelaktionspotenziale sowie das Muster der Rekrutierung von Muskelaktivität.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die EMG bietet eine direkte Möglichkeit, die Funktion von Muskeln und Nerven zu überprüfen. Sie ist nicht invasiv und kann in Echtzeit durchgeführt werden.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Untersuchung kann unangenehm oder schmerzhaft sein, insbesondere bei der Verwendung von Nadeln. Zudem ist eine spezielle Schulung notwendig, um die Ergebnisse korrekt zu interpretieren.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören vorübergehende Schmerzen oder Blutungen an der Einstichstelle der Nadel. Infektionen oder schwerwiegende Komplikationen sind selten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die EMG spielt eine zentrale Rolle in der Diagnose und Behandlung von neuromuskulären Erkrankungen. Sie hilft bei der Bestimmung des Schweregrads der Erkrankung und kann den Verlauf der Behandlung überwachen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "EMG-Ergebnisse sind entscheidend für die Planung und Anpassung von Therapien. Sie helfen, die Wirksamkeit von Behandlungen zu bewerten und die Notwendigkeit weiterer diagnostischer Tests zu bestimmen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Zu den Alternativen zur EMG gehören bildgebende Verfahren wie MRT und CT, die strukturelle Anomalien aufzeigen können, sowie Nervenleitgeschwindigkeitstests, die die Funktion der peripheren Nerven beurteilen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Die aktuelle Forschung konzentriert sich auf die Verbesserung der EMG-Technologie und die Entwicklung neuer Methoden zur Analyse der elektrischen Muskelaktivität. Dies schließt die Nutzung von Computeralgorithmen zur Verbesserung der Diagnosegenauigkeit ein.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Perspektiven beinhalten die Integration von EMG-Daten mit anderen diagnostischen Modalitäten, um eine umfassendere Beurteilung neuromuskulärer Erkrankungen zu ermöglichen, sowie die Entwicklung tragbarer EMG-Geräte für die Langzeitüberwachung.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die EMG ist ein essenzielles diagnostisches Verfahren zur Beurteilung von Muskelfunktion und Nervenschäden. Sie liefert wichtige Informationen für die Diagnose und das Management neuromuskulärer Erkrankungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Aufgrund ihrer Relevanz in der Neurologie und der fortlaufenden Forschung bleibt die EMG ein unverzichtbares Werkzeug in der medizinischen Diagnostik.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 288
@@ -24099,98 +24090,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erklären Sie ärztlichem Kollegen, dass es sich bei der Untersuchung um die EMG handelt, ein Verfahren, das die elektrische Aktivität der Muskeln misst, um neuromuskuläre Funktionsstörungen zu diagnostizieren.",
-              third:
-                "„Die EMG untersucht die Muskelaktivität, um eine Störung in der neuromuskulären Übertragung zu erkennen.“",
-              fourth:
-                "„Mit der EMG können wir elektrische Signale der Muskeln aufzeichnen, um den Zustand des peripheren Nervensystems zu beurteilen.“",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Erläutern Sie, dass die EMG es ermöglicht, die Funktion der peripheren Nerven und Muskeln zu bewerten, insbesondere bei Verdacht auf Neuropathien, Myopathie, neuromuskuläre Übertragungsstörungen.",
-              third:
-                "„Wir können mit der EMG feststellen, ob die Muskelschwäche durch eine Nervenschädigung oder eine Muskelstörung verursacht wird.“",
-              fourth:
-                "„Die EMG ist besonders hilfreich, um zwischen einer Myopathie und einer neuropathischen Erkrankung zu differenzieren.“",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Beschreiben Sie, dass die EMG pathologische Muskelaktivitäten, wie fibrilläre Potenziale oder motorische Einheiten mit abnormen Amplituden oder Dauer, aufzeigt.",
-              third:
-                "„Das Vorhandensein von fibrillären Potenzialen deutet auf eine neurogene Schädigung hin, wie zum Beispiel bei ALS.“",
-              fourth:
-                "„Verkürzte motorische Einheiten mit niedriger Amplitude können auf eine primäre Myopathie hinweisen.“",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Erläutern Sie, dass die EMG bei Verdacht auf periphere Nervenverletzungen, Muskeldystrophien, Amyotrophe Lateralsklerose (ALS) oder Myasthenia gravis indiziert ist.",
-              third:
-                "„Die EMG ist indiziert, wenn wir eine Muskeldystrophie ausschließen möchten, da dies klinisch nicht immer eindeutig ist.“",
-              fourth:
-                "„Bei Verdacht auf Myasthenia gravis hilft uns die EMG, um neuromuskuläre Übertragungsstörungen zu identifizieren.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass die Untersuchung bei Patienten mit Blutgerinnungsstörungen oder solchen, die Antikoagulantien einnehmen, sowie bei Patienten mit Herzschrittmachern vorsichtig durchgeführt werden sollte.",
-              third:
-                "„Wir sollten die EMG bei diesem Patienten mit Marcumar-Therapie nur mit besonderer Vorsicht anwenden.“",
-              fourth:
-                "„Da der Patient einen Herzschrittmacher trägt, wäre eine Oberflächen-EMG hier die sicherere Methode.“",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Diskutieren Sie, welche Differenzialdiagnosen in Betracht kommen, zum Beispiel periphere Neuropathien, motorische Neuronerkrankungen oder entzündliche Myopathien.",
-              third:
-                "„Bei den vorliegenden Befunden sollten wir auch an eine chronische inflammatorische demyelinisierende Polyneuropathie denken.“",
-              fourth:
-                "„Die EMG-Befunde passen zu einer peripheren Neuropathie, aber wir sollten auch eine Polyneuropathie ausschließen.“",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Besprechen Sie, wie die Ergebnisse der EMG in den Behandlungsplan integriert werden können, wie zum Beispiel die Anpassung einer medikamentösen Therapie bei Myasthenia gravis.",
-              third:
-                "„Aufgrund der EMG-Ergebnisse sollten wir die Medikation gegen Myasthenia gravis anpassen, um die Symptomatik zu verbessern.“",
-              fourth:
-                "„Die EMG deutet auf eine periphere Nervenverletzung hin; wir sollten eine operative Nervenrekonstruktion in Betracht ziehen.“",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen, um basierend auf den EMG-Ergebnissen ein umfassendes Behandlungskonzept zu entwickeln.",
-              third:
-                "„Wir sollten eng mit der Physiotherapie zusammenarbeiten, um den Muskelabbau zu verhindern.“",
-              fourth:
-                "„Die Neurologen könnten weitere Tests anordnen, um die Diagnose abzusichern und den Therapieplan zu verfeinern.“",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Erklären Sie, wie die Qualität der Untersuchung durch regelmäßige Kalibrierung der Geräte, die Schulung des Personals und die Standardisierung der Protokolle sichergestellt wird.",
-              third:
-                "„Die regelmäßige Kalibrierung der Geräte ist entscheidend, um die Genauigkeit der EMG-Daten zu gewährleisten.“",
-              fourth:
-                "„Alle Untersuchungen werden nach einem standardisierten Protokoll durchgeführt, um die Vergleichbarkeit zu erhöhen.“",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Heben Sie hervor, dass die Ergebnisse der EMG sorgfältig dokumentiert und mit den klinischen Befunden korreliert werden müssen. Eine Weiterverfolgung der Patienten ist wichtig, um den Verlauf zu beurteilen.",
-              third:
-                "„Wir müssen die Ergebnisse in der Patientenakte dokumentieren und die Korrelation mit den klinischen Symptomen überprüfen.“",
-              fourth:
-                "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie ärztlichem Kollegen, dass es sich bei der Untersuchung um die EMG handelt, ein Verfahren, das die elektrische Aktivität der Muskeln misst, um neuromuskuläre Funktionsstörungen zu diagnostizieren.",
+            third:
+              "„Die EMG untersucht die Muskelaktivität, um eine Störung in der neuromuskulären Übertragung zu erkennen.“",
+            fourth:
+              "„Mit der EMG können wir elektrische Signale der Muskeln aufzeichnen, um den Zustand des peripheren Nervensystems zu beurteilen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die EMG es ermöglicht, die Funktion der peripheren Nerven und Muskeln zu bewerten, insbesondere bei Verdacht auf Neuropathien, Myopathie, neuromuskuläre Übertragungsstörungen.",
+            third:
+              "„Wir können mit der EMG feststellen, ob die Muskelschwäche durch eine Nervenschädigung oder eine Muskelstörung verursacht wird.“",
+            fourth:
+              "„Die EMG ist besonders hilfreich, um zwischen einer Myopathie und einer neuropathischen Erkrankung zu differenzieren.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie, dass die EMG pathologische Muskelaktivitäten, wie fibrilläre Potenziale oder motorische Einheiten mit abnormen Amplituden oder Dauer, aufzeigt.",
+            third:
+              "„Das Vorhandensein von fibrillären Potenzialen deutet auf eine neurogene Schädigung hin, wie zum Beispiel bei ALS.“",
+            fourth:
+              "„Verkürzte motorische Einheiten mit niedriger Amplitude können auf eine primäre Myopathie hinweisen.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie, dass die EMG bei Verdacht auf periphere Nervenverletzungen, Muskeldystrophien, Amyotrophe Lateralsklerose (ALS) oder Myasthenia gravis indiziert ist.",
+            third:
+              "„Die EMG ist indiziert, wenn wir eine Muskeldystrophie ausschließen möchten, da dies klinisch nicht immer eindeutig ist.“",
+            fourth:
+              "„Bei Verdacht auf Myasthenia gravis hilft uns die EMG, um neuromuskuläre Übertragungsstörungen zu identifizieren.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass die Untersuchung bei Patienten mit Blutgerinnungsstörungen oder solchen, die Antikoagulantien einnehmen, sowie bei Patienten mit Herzschrittmachern vorsichtig durchgeführt werden sollte.",
+            third:
+              "„Wir sollten die EMG bei diesem Patienten mit Marcumar-Therapie nur mit besonderer Vorsicht anwenden.“",
+            fourth:
+              "„Da der Patient einen Herzschrittmacher trägt, wäre eine Oberflächen-EMG hier die sicherere Methode.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie, welche Differenzialdiagnosen in Betracht kommen, zum Beispiel periphere Neuropathien, motorische Neuronerkrankungen oder entzündliche Myopathien.",
+            third:
+              "„Bei den vorliegenden Befunden sollten wir auch an eine chronische inflammatorische demyelinisierende Polyneuropathie denken.“",
+            fourth:
+              "„Die EMG-Befunde passen zu einer peripheren Neuropathie, aber wir sollten auch eine Polyneuropathie ausschließen.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse der EMG in den Behandlungsplan integriert werden können, wie zum Beispiel die Anpassung einer medikamentösen Therapie bei Myasthenia gravis.",
+            third:
+              "„Aufgrund der EMG-Ergebnisse sollten wir die Medikation gegen Myasthenia gravis anpassen, um die Symptomatik zu verbessern.“",
+            fourth:
+              "„Die EMG deutet auf eine periphere Nervenverletzung hin; wir sollten eine operative Nervenrekonstruktion in Betracht ziehen.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen, um basierend auf den EMG-Ergebnissen ein umfassendes Behandlungskonzept zu entwickeln.",
+            third:
+              "„Wir sollten eng mit der Physiotherapie zusammenarbeiten, um den Muskelabbau zu verhindern.“",
+            fourth:
+              "„Die Neurologen könnten weitere Tests anordnen, um die Diagnose abzusichern und den Therapieplan zu verfeinern.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, wie die Qualität der Untersuchung durch regelmäßige Kalibrierung der Geräte, die Schulung des Personals und die Standardisierung der Protokolle sichergestellt wird.",
+            third:
+              "„Die regelmäßige Kalibrierung der Geräte ist entscheidend, um die Genauigkeit der EMG-Daten zu gewährleisten.“",
+            fourth:
+              "„Alle Untersuchungen werden nach einem standardisierten Protokoll durchgeführt, um die Vergleichbarkeit zu erhöhen.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Heben Sie hervor, dass die Ergebnisse der EMG sorgfältig dokumentiert und mit den klinischen Befunden korreliert werden müssen. Eine Weiterverfolgung der Patienten ist wichtig, um den Verlauf zu beurteilen.",
+            third:
+              "„Wir müssen die Ergebnisse in der Patientenakte dokumentieren und die Korrelation mit den klinischen Symptomen überprüfen.“",
+            fourth:
+              "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
+          },
         ],
       },
       // 3tab 289
@@ -24210,98 +24199,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erklären Sie ärztlichem Kollegen, dass es sich bei der Untersuchung um die EMG handelt, ein Verfahren, das die elektrische Aktivität der Muskeln misst, um neuromuskuläre Funktionsstörungen zu diagnostizieren.",
-              third:
-                "„Die EMG untersucht die Muskelaktivität, um eine Störung in der neuromuskulären Übertragung zu erkennen.“",
-              fourth:
-                "„Mit der EMG können wir elektrische Signale der Muskeln aufzeichnen, um den Zustand des peripheren Nervensystems zu beurteilen.“",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Erläutern Sie, dass die EMG es ermöglicht, die Funktion der peripheren Nerven und Muskeln zu bewerten, insbesondere bei Verdacht auf Neuropathien, Myopathie, neuromuskuläre Übertragungsstörungen.",
-              third:
-                "„Wir können mit der EMG feststellen, ob die Muskelschwäche durch eine Nervenschädigung oder eine Muskelstörung verursacht wird.“",
-              fourth:
-                "„Die EMG ist besonders hilfreich, um zwischen einer Myopathie und einer neuropathischen Erkrankung zu differenzieren.“",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Beschreiben Sie, dass die EMG pathologische Muskelaktivitäten, wie fibrilläre Potenziale oder motorische Einheiten mit abnormen Amplituden oder Dauer, aufzeigt.",
-              third:
-                "„Das Vorhandensein von fibrillären Potenzialen deutet auf eine neurogene Schädigung hin, wie zum Beispiel bei ALS.“",
-              fourth:
-                "„Verkürzte motorische Einheiten mit niedriger Amplitude können auf eine primäre Myopathie hinweisen.“",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Erläutern Sie, dass die EMG bei Verdacht auf periphere Nervenverletzungen, Muskeldystrophien, Amyotrophe Lateralsklerose (ALS) oder Myasthenia gravis indiziert ist.",
-              third:
-                "„Die EMG ist indiziert, wenn wir eine Muskeldystrophie ausschließen möchten, da dies klinisch nicht immer eindeutig ist.“",
-              fourth:
-                "„Bei Verdacht auf Myasthenia gravis hilft uns die EMG, um neuromuskuläre Übertragungsstörungen zu identifizieren.“",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass die Untersuchung bei Patienten mit Blutgerinnungsstörungen oder solchen, die Antikoagulantien einnehmen, sowie bei Patienten mit Herzschrittmachern vorsichtig durchgeführt werden sollte.",
-              third:
-                "„Wir sollten die EMG bei diesem Patienten mit Marcumar-Therapie nur mit besonderer Vorsicht anwenden.“",
-              fourth:
-                "„Da der Patient einen Herzschrittmacher trägt, wäre eine Oberflächen-EMG hier die sicherere Methode.“",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Diskutieren Sie, welche Differenzialdiagnosen in Betracht kommen, zum Beispiel periphere Neuropathien, motorische Neuronerkrankungen oder entzündliche Myopathien.",
-              third:
-                "„Bei den vorliegenden Befunden sollten wir auch an eine chronische inflammatorische demyelinisierende Polyneuropathie denken.“",
-              fourth:
-                "„Die EMG-Befunde passen zu einer peripheren Neuropathie, aber wir sollten auch eine Polyneuropathie ausschließen.“",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Besprechen Sie, wie die Ergebnisse der EMG in den Behandlungsplan integriert werden können, wie zum Beispiel die Anpassung einer medikamentösen Therapie bei Myasthenia gravis.",
-              third:
-                "„Aufgrund der EMG-Ergebnisse sollten wir die Medikation gegen Myasthenia gravis anpassen, um die Symptomatik zu verbessern.“",
-              fourth:
-                "„Die EMG deutet auf eine periphere Nervenverletzung hin; wir sollten eine operative Nervenrekonstruktion in Betracht ziehen.“",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen, um basierend auf den EMG-Ergebnissen ein umfassendes Behandlungskonzept zu entwickeln.",
-              third:
-                "„Wir sollten eng mit der Physiotherapie zusammenarbeiten, um den Muskelabbau zu verhindern.“",
-              fourth:
-                "„Die Neurologen könnten weitere Tests anordnen, um die Diagnose abzusichern und den Therapieplan zu verfeinern.“",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Erklären Sie, wie die Qualität der Untersuchung durch regelmäßige Kalibrierung der Geräte, die Schulung des Personals und die Standardisierung der Protokolle sichergestellt wird.",
-              third:
-                "„Die regelmäßige Kalibrierung der Geräte ist entscheidend, um die Genauigkeit der EMG-Daten zu gewährleisten.“",
-              fourth:
-                "„Alle Untersuchungen werden nach einem standardisierten Protokoll durchgeführt, um die Vergleichbarkeit zu erhöhen.“",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Heben Sie hervor, dass die Ergebnisse der EMG sorgfältig dokumentiert und mit den klinischen Befunden korreliert werden müssen. Eine Weiterverfolgung der Patienten ist wichtig, um den Verlauf zu beurteilen.",
-              third:
-                "„Wir müssen die Ergebnisse in der Patientenakte dokumentieren und die Korrelation mit den klinischen Symptomen überprüfen.“",
-              fourth:
-                "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie ärztlichem Kollegen, dass es sich bei der Untersuchung um die EMG handelt, ein Verfahren, das die elektrische Aktivität der Muskeln misst, um neuromuskuläre Funktionsstörungen zu diagnostizieren.",
+            third:
+              "„Die EMG untersucht die Muskelaktivität, um eine Störung in der neuromuskulären Übertragung zu erkennen.“",
+            fourth:
+              "„Mit der EMG können wir elektrische Signale der Muskeln aufzeichnen, um den Zustand des peripheren Nervensystems zu beurteilen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, dass die EMG es ermöglicht, die Funktion der peripheren Nerven und Muskeln zu bewerten, insbesondere bei Verdacht auf Neuropathien, Myopathie, neuromuskuläre Übertragungsstörungen.",
+            third:
+              "„Wir können mit der EMG feststellen, ob die Muskelschwäche durch eine Nervenschädigung oder eine Muskelstörung verursacht wird.“",
+            fourth:
+              "„Die EMG ist besonders hilfreich, um zwischen einer Myopathie und einer neuropathischen Erkrankung zu differenzieren.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie, dass die EMG pathologische Muskelaktivitäten, wie fibrilläre Potenziale oder motorische Einheiten mit abnormen Amplituden oder Dauer, aufzeigt.",
+            third:
+              "„Das Vorhandensein von fibrillären Potenzialen deutet auf eine neurogene Schädigung hin, wie zum Beispiel bei ALS.“",
+            fourth:
+              "„Verkürzte motorische Einheiten mit niedriger Amplitude können auf eine primäre Myopathie hinweisen.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie, dass die EMG bei Verdacht auf periphere Nervenverletzungen, Muskeldystrophien, Amyotrophe Lateralsklerose (ALS) oder Myasthenia gravis indiziert ist.",
+            third:
+              "„Die EMG ist indiziert, wenn wir eine Muskeldystrophie ausschließen möchten, da dies klinisch nicht immer eindeutig ist.“",
+            fourth:
+              "„Bei Verdacht auf Myasthenia gravis hilft uns die EMG, um neuromuskuläre Übertragungsstörungen zu identifizieren.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass die Untersuchung bei Patienten mit Blutgerinnungsstörungen oder solchen, die Antikoagulantien einnehmen, sowie bei Patienten mit Herzschrittmachern vorsichtig durchgeführt werden sollte.",
+            third:
+              "„Wir sollten die EMG bei diesem Patienten mit Marcumar-Therapie nur mit besonderer Vorsicht anwenden.“",
+            fourth:
+              "„Da der Patient einen Herzschrittmacher trägt, wäre eine Oberflächen-EMG hier die sicherere Methode.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie, welche Differenzialdiagnosen in Betracht kommen, zum Beispiel periphere Neuropathien, motorische Neuronerkrankungen oder entzündliche Myopathien.",
+            third:
+              "„Bei den vorliegenden Befunden sollten wir auch an eine chronische inflammatorische demyelinisierende Polyneuropathie denken.“",
+            fourth:
+              "„Die EMG-Befunde passen zu einer peripheren Neuropathie, aber wir sollten auch eine Polyneuropathie ausschließen.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, wie die Ergebnisse der EMG in den Behandlungsplan integriert werden können, wie zum Beispiel die Anpassung einer medikamentösen Therapie bei Myasthenia gravis.",
+            third:
+              "„Aufgrund der EMG-Ergebnisse sollten wir die Medikation gegen Myasthenia gravis anpassen, um die Symptomatik zu verbessern.“",
+            fourth:
+              "„Die EMG deutet auf eine periphere Nervenverletzung hin; wir sollten eine operative Nervenrekonstruktion in Betracht ziehen.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Bedeutung der Zusammenarbeit mit anderen Fachbereichen, um basierend auf den EMG-Ergebnissen ein umfassendes Behandlungskonzept zu entwickeln.",
+            third:
+              "„Wir sollten eng mit der Physiotherapie zusammenarbeiten, um den Muskelabbau zu verhindern.“",
+            fourth:
+              "„Die Neurologen könnten weitere Tests anordnen, um die Diagnose abzusichern und den Therapieplan zu verfeinern.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, wie die Qualität der Untersuchung durch regelmäßige Kalibrierung der Geräte, die Schulung des Personals und die Standardisierung der Protokolle sichergestellt wird.",
+            third:
+              "„Die regelmäßige Kalibrierung der Geräte ist entscheidend, um die Genauigkeit der EMG-Daten zu gewährleisten.“",
+            fourth:
+              "„Alle Untersuchungen werden nach einem standardisierten Protokoll durchgeführt, um die Vergleichbarkeit zu erhöhen.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Heben Sie hervor, dass die Ergebnisse der EMG sorgfältig dokumentiert und mit den klinischen Befunden korreliert werden müssen. Eine Weiterverfolgung der Patienten ist wichtig, um den Verlauf zu beurteilen.",
+            third:
+              "„Wir müssen die Ergebnisse in der Patientenakte dokumentieren und die Korrelation mit den klinischen Symptomen überprüfen.“",
+            fourth:
+              "„Eine zeitnahe Kontrolle ist wichtig, um den Erfolg der Behandlung basierend auf den EMG-Ergebnissen zu beurteilen.“",
+          },
         ],
       },
       // 4tab 290
@@ -24321,71 +24308,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Einführung in den klinischen Fall",
-              second:
-                "35-jähriger Patient ohne Beschwerden, kommt zur Routineuntersuchung. Keine relevanten Vorerkrankungen.",
-              third:
-                "65-jähriger Patient berichtet von Taubheitsgefühlen und Schwäche in den Beinen. Vorgeschichte von Diabetes mellitus.",
-              fourth:
-                "28-jährige Patientin klagt über starke Muskelschwäche, die sich im Laufe des Tages verschlechtert. Keine signifikante Vorgeschichte.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Normale Amplituden und Latenzen bei der EMG, keine Anzeichen für neuromuskuläre Funktionsstörungen.",
-              third:
-                "EMG zeigt eine deutlich reduzierte Amplitude der motorischen Aktionspotenziale, was auf eine axonale Schädigung hinweist.",
-              fourth:
-                "EMG zeigt eine deutliche Abnahme der Amplitude nach wiederholter Stimulation, typisch für eine neuromuskuläre Übertragungsstörung wie Myasthenia gravis.",
-            },
-            {
-              first: "Interpretation der Ergebnisse",
-              second:
-                "Keine pathologischen Veränderungen in der neuromuskulären Funktion. Der Patient zeigt keine Anzeichen für eine neuromuskuläre Erkrankung.",
-              third:
-                "Die EMG-Befunde deuten auf eine Polyneuropathie hin, wahrscheinlich infolge des langjährigen Diabetes mellitus.",
-              fourth:
-                "Der Befund bestätigt eine Myasthenia gravis, da die Abnahme der Amplitude nach repetitiver Stimulation charakteristisch ist.",
-            },
-            {
-              first: "Integration in die Patientenversorgung",
-              second:
-                "Der normale EMG-Befund bestätigt den guten Gesundheitszustand des Patienten und erfordert keine weiteren Untersuchungen.",
-              third:
-                "Die Ergebnisse unterstützen die Diagnose einer diabetischen Polyneuropathie, was zu einer Anpassung der medikamentösen Therapie führt.",
-              fourth:
-                "Die EMG-Ergebnisse bestätigen die Notwendigkeit einer immunmodulatorischen Therapie, um die Symptome der Myasthenia gravis zu lindern.",
-            },
-            {
-              first: "Diagnose",
-              second:
-                "Bestätigung eines normalen neuromuskulären Status ohne Auffälligkeiten. Keine pathologischen Veränderungen festgestellt.",
-              third:
-                "Diagnose einer diabetischen Polyneuropathie basierend auf EMG-Ergebnissen und klinischen Symptomen.",
-              fourth:
-                "Diagnose von Myasthenia gravis aufgrund der spezifischen Befunde bei der EMG und den klinischen Symptomen.",
-            },
-            {
-              first: "Visuelle Hilfsmittel",
-              second:
-                "EMG zeigt normale elektrische Aktivität in den untersuchten Muskeln ohne Auffälligkeiten.",
-              third:
-                "EMG zeigt deutlich reduzierte Aktionspotenziale und verzögerte Leitungszeiten, typisch für eine axonale Polyneuropathie.",
-              fourth:
-                "EMG zeigt eine signifikante Abnahme der Amplitude nach wiederholter Stimulation, was für eine Myasthenia gravis typisch ist.",
-            },
-            {
-              first: "Fallabschluss",
-              second:
-                "Es ist ratsam, den Patienten über die positiven Untersuchungsergebnisse zu informieren. Wir empfehlen, weiterhin regelmäßige gesundheitliche Überprüfungen, um den guten Zustand zu bestätigen und präventiv zu handeln.",
-              third:
-                "Wir empfehlen, die Blutzuckereinstellung des Patienten zu optimieren, da dies das Fortschreiten der Polyneuropathie verlangsamen könnte. Es ist ratsam, eine Schmerztherapie und physiotherapeutische Maßnahmen zur Linderung der Symptome in Erwägung zu ziehen.",
-              fourth:
-                "Es ist zu empfehlen, mit einer immunmodulatorischen Therapie zu beginnen, um die neuromuskuläre Übertragung zu stabilisieren. Wir empfehlen, regelmäßige Kontrolluntersuchungen zur Überwachung des Krankheitsverlaufs.",
-            },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, kommt zur Routineuntersuchung. Keine relevanten Vorerkrankungen.",
+            third:
+              "65-jähriger Patient berichtet von Taubheitsgefühlen und Schwäche in den Beinen. Vorgeschichte von Diabetes mellitus.",
+            fourth:
+              "28-jährige Patientin klagt über starke Muskelschwäche, die sich im Laufe des Tages verschlechtert. Keine signifikante Vorgeschichte.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Normale Amplituden und Latenzen bei der EMG, keine Anzeichen für neuromuskuläre Funktionsstörungen.",
+            third:
+              "EMG zeigt eine deutlich reduzierte Amplitude der motorischen Aktionspotenziale, was auf eine axonale Schädigung hinweist.",
+            fourth:
+              "EMG zeigt eine deutliche Abnahme der Amplitude nach wiederholter Stimulation, typisch für eine neuromuskuläre Übertragungsstörung wie Myasthenia gravis.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Veränderungen in der neuromuskulären Funktion. Der Patient zeigt keine Anzeichen für eine neuromuskuläre Erkrankung.",
+            third:
+              "Die EMG-Befunde deuten auf eine Polyneuropathie hin, wahrscheinlich infolge des langjährigen Diabetes mellitus.",
+            fourth:
+              "Der Befund bestätigt eine Myasthenia gravis, da die Abnahme der Amplitude nach repetitiver Stimulation charakteristisch ist.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der normale EMG-Befund bestätigt den guten Gesundheitszustand des Patienten und erfordert keine weiteren Untersuchungen.",
+            third:
+              "Die Ergebnisse unterstützen die Diagnose einer diabetischen Polyneuropathie, was zu einer Anpassung der medikamentösen Therapie führt.",
+            fourth:
+              "Die EMG-Ergebnisse bestätigen die Notwendigkeit einer immunmodulatorischen Therapie, um die Symptome der Myasthenia gravis zu lindern.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung eines normalen neuromuskulären Status ohne Auffälligkeiten. Keine pathologischen Veränderungen festgestellt.",
+            third:
+              "Diagnose einer diabetischen Polyneuropathie basierend auf EMG-Ergebnissen und klinischen Symptomen.",
+            fourth:
+              "Diagnose von Myasthenia gravis aufgrund der spezifischen Befunde bei der EMG und den klinischen Symptomen.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "EMG zeigt normale elektrische Aktivität in den untersuchten Muskeln ohne Auffälligkeiten.",
+            third:
+              "EMG zeigt deutlich reduzierte Aktionspotenziale und verzögerte Leitungszeiten, typisch für eine axonale Polyneuropathie.",
+            fourth:
+              "EMG zeigt eine signifikante Abnahme der Amplitude nach wiederholter Stimulation, was für eine Myasthenia gravis typisch ist.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist ratsam, den Patienten über die positiven Untersuchungsergebnisse zu informieren. Wir empfehlen, weiterhin regelmäßige gesundheitliche Überprüfungen, um den guten Zustand zu bestätigen und präventiv zu handeln.",
+            third:
+              "Wir empfehlen, die Blutzuckereinstellung des Patienten zu optimieren, da dies das Fortschreiten der Polyneuropathie verlangsamen könnte. Es ist ratsam, eine Schmerztherapie und physiotherapeutische Maßnahmen zur Linderung der Symptome in Erwägung zu ziehen.",
+            fourth:
+              "Es ist zu empfehlen, mit einer immunmodulatorischen Therapie zu beginnen, um die neuromuskuläre Übertragung zu stabilisieren. Wir empfehlen, regelmäßige Kontrolluntersuchungen zur Überwachung des Krankheitsverlaufs.",
+          },
         ],
       },
       // 5tab 291
@@ -24665,112 +24650,110 @@ export const parentTabs = [
         id: 295,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Das primäre Ziel der Angiografie ist es, Verengungen, Verschlüsse oder Fehlbildungen in den Blutgefäßen zu identifizieren, um entsprechende therapeutische Maßnahmen zu planen.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die Angiografie ist von großer Bedeutung in der Diagnostik von Herzinfarkten, Schlaganfällen, arteriellen Verschlusskrankheiten sowie bei der Erkennung von Aneurysmen. Sie ermöglicht eine präzise Diagnose und unterstützt die Planung minimal-invasiver Eingriffe.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die Angiografie basiert auf der Injektion eines Kontrastmittels in das Blutgefäßsystem, welches anschließend mittels Röntgenstrahlung, CT oder MRT sichtbar gemacht wird. Dadurch können Anomalien oder Pathologien wie Stenosen oder Aneurysmen sichtbar gemacht werden.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Für die Durchführung der Angiografie wird ein Katheter in das Gefäßsystem eingeführt, meist über die Leistenarterie. Nach der Injektion des Kontrastmittels werden Aufnahmen der Blutgefäße erstellt, die dann zur Auswertung verwendet werden.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die erhaltenen Bilder werden auf Auffälligkeiten wie Gefäßverengungen oder Verschlüsse untersucht. Die Befunde werden durch den Radiologen oder behandelnden Facharzt ausgewertet, um eine Diagnose zu stellen.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Zu den typischen Befunden gehören Stenosen (Gefäßverengungen), Aneurysmen (Gefäßausweitungen), Thrombosen (Blutgerinnsel) oder arterielle Verschlüsse.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Angiografie liefert präzise und detaillierte Bilder der Blutgefäße und ermöglicht eine gezielte Behandlung, oft im gleichen Eingriff (z.B. Stentimplantation).",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Es handelt sich um ein invasives Verfahren, das mit Strahlenbelastung und der Notwendigkeit eines Kontrastmittels verbunden ist.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Zu den Risiken gehören Blutungen, Infektionen, allergische Reaktionen auf das Kontrastmittel sowie seltene Komplikationen wie Nierenfunktionsstörungen oder Gefäßverletzungen.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Angiografie spielt eine zentrale Rolle in der Diagnostik von Gefäßerkrankungen und ist oft ein entscheidender Schritt in der Therapieplanung, insbesondere bei der interventionellen Kardiologie.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Eine genaue Darstellung der Gefäße ist unerlässlich für die Entscheidung, ob konservative, medikamentöse oder chirurgische Maßnahmen ergriffen werden sollten.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Nicht-invasive Alternativen zur Angiografie sind die CT-Angiografie oder die MR-Angiografie. Diese bieten jedoch nicht die Möglichkeit, therapeutische Maßnahmen unmittelbar durchzuführen.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Moderne Entwicklungen beinhalten die Verbesserung der Bildqualität bei reduzierter Strahlenbelastung sowie die Einführung neuer Kontrastmittel mit geringeren Nebenwirkungen.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Forschung konzentriert sich auf die Weiterentwicklung minimal-invasiver Verfahren und die Integration von Künstlicher Intelligenz zur schnelleren und präziseren Auswertung der Bilddaten.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Angiografie ist ein unverzichtbares diagnostisches Verfahren zur Beurteilung von Blutgefäßen und ermöglicht sowohl die exakte Diagnose als auch therapeutische Interventionen in einem Eingriff.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Angesichts der hohen Präzision und der therapeutischen Möglichkeiten bleibt die Angiografie ein unverzichtbarer Bestandteil der modernen Medizin, insbesondere in der Kardiologie und Gefäßchirurgie.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das primäre Ziel der Angiografie ist es, Verengungen, Verschlüsse oder Fehlbildungen in den Blutgefäßen zu identifizieren, um entsprechende therapeutische Maßnahmen zu planen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Angiografie ist von großer Bedeutung in der Diagnostik von Herzinfarkten, Schlaganfällen, arteriellen Verschlusskrankheiten sowie bei der Erkennung von Aneurysmen. Sie ermöglicht eine präzise Diagnose und unterstützt die Planung minimal-invasiver Eingriffe.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Angiografie basiert auf der Injektion eines Kontrastmittels in das Blutgefäßsystem, welches anschließend mittels Röntgenstrahlung, CT oder MRT sichtbar gemacht wird. Dadurch können Anomalien oder Pathologien wie Stenosen oder Aneurysmen sichtbar gemacht werden.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Für die Durchführung der Angiografie wird ein Katheter in das Gefäßsystem eingeführt, meist über die Leistenarterie. Nach der Injektion des Kontrastmittels werden Aufnahmen der Blutgefäße erstellt, die dann zur Auswertung verwendet werden.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die erhaltenen Bilder werden auf Auffälligkeiten wie Gefäßverengungen oder Verschlüsse untersucht. Die Befunde werden durch den Radiologen oder behandelnden Facharzt ausgewertet, um eine Diagnose zu stellen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden gehören Stenosen (Gefäßverengungen), Aneurysmen (Gefäßausweitungen), Thrombosen (Blutgerinnsel) oder arterielle Verschlüsse.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Angiografie liefert präzise und detaillierte Bilder der Blutgefäße und ermöglicht eine gezielte Behandlung, oft im gleichen Eingriff (z.B. Stentimplantation).",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Es handelt sich um ein invasives Verfahren, das mit Strahlenbelastung und der Notwendigkeit eines Kontrastmittels verbunden ist.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören Blutungen, Infektionen, allergische Reaktionen auf das Kontrastmittel sowie seltene Komplikationen wie Nierenfunktionsstörungen oder Gefäßverletzungen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Angiografie spielt eine zentrale Rolle in der Diagnostik von Gefäßerkrankungen und ist oft ein entscheidender Schritt in der Therapieplanung, insbesondere bei der interventionellen Kardiologie.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Eine genaue Darstellung der Gefäße ist unerlässlich für die Entscheidung, ob konservative, medikamentöse oder chirurgische Maßnahmen ergriffen werden sollten.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Nicht-invasive Alternativen zur Angiografie sind die CT-Angiografie oder die MR-Angiografie. Diese bieten jedoch nicht die Möglichkeit, therapeutische Maßnahmen unmittelbar durchzuführen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Moderne Entwicklungen beinhalten die Verbesserung der Bildqualität bei reduzierter Strahlenbelastung sowie die Einführung neuer Kontrastmittel mit geringeren Nebenwirkungen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Forschung konzentriert sich auf die Weiterentwicklung minimal-invasiver Verfahren und die Integration von Künstlicher Intelligenz zur schnelleren und präziseren Auswertung der Bilddaten.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Angiografie ist ein unverzichtbares diagnostisches Verfahren zur Beurteilung von Blutgefäßen und ermöglicht sowohl die exakte Diagnose als auch therapeutische Interventionen in einem Eingriff.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Angesichts der hohen Präzision und der therapeutischen Möglichkeiten bleibt die Angiografie ein unverzichtbarer Bestandteil der modernen Medizin, insbesondere in der Kardiologie und Gefäßchirurgie.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 288
@@ -24790,116 +24773,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Ziel der Untersuchung",
-              second:
-                "Erklären Sie dem Patienten, dass die Angiographie durchgeführt wird, um die Blutgefäße sichtbar zu machen und mögliche Verengungen oder Blockaden zu erkennen, um eine genaue Diagnose zu stellen.",
-              third:
-                "Wir möchten mit dieser Untersuchung Ihre Blutgefäße genauer anschauen, um mögliche Engstellen oder Verschlüsse zu entdecken.",
-              fourth:
-                "Das Ziel ist es, herauszufinden, ob Ihre Beschwerden durch Veränderungen in den Blutgefäßen verursacht werden.",
-            },
-            {
-              first: "Ablauf",
-              second:
-                "Erläutern Sie den genauen Ablauf der Untersuchung: wie ein Katheter in ein Blutgefäß eingeführt wird, die Injektion des Kontrastmittels und die Aufnahme von Bildern mittels Röntgen, CT oder MRT.",
-              third:
-                "Wir werden einen dünnen Schlauch in ein Gefäß in Ihrer Leiste einführen und darüber ein Kontrastmittel spritzen.",
-              fourth:
-                "Während der Untersuchung machen wir Röntgenaufnahmen, um die Kontrastmittelbewegung in Ihren Gefäßen zu verfolgen.",
-            },
-            {
-              first: "Vorbereitung",
-              second:
-                "Informieren Sie den Patienten über erforderliche Vorbereitungen, wie z.B. Nüchternheit vor der Untersuchung, Absetzen bestimmter Medikamente und das Tragen bequemer Kleidung.",
-              third:
-                "Bitte bleiben Sie ab Mitternacht nüchtern und trinken Sie keine Flüssigkeiten mehr.",
-              fourth:
-                "Falls Sie blutverdünnende Medikamente einnehmen, müssen wir diese eventuell vorher absetzen.",
-            },
-            {
-              first: "Risiken",
-              second:
-                "Erwähnen Sie mögliche Risiken wie Blutungen, Infektionen, allergische Reaktionen auf das Kontrastmittel, Strahlenbelastung und seltene Komplikationen wie Nierenfunktionsstörungen.",
-              third:
-                "Es kann zu kleinen Blutungen an der Einstichstelle kommen, die aber meist schnell wieder aufhören.",
-              fourth:
-                "In seltenen Fällen kann das Kontrastmittel die Nieren belasten oder allergische Reaktionen auslösen.",
-            },
-            {
-              first: "Vorteile",
-              second:
-                "Betonen Sie die Vorteile der Angiographie, einschließlich der genauen Diagnosemöglichkeiten und der Möglichkeit, therapeutische Maßnahmen während des Eingriffs durchzuführen.",
-              third:
-                "Der Vorteil ist, dass wir sehr präzise Bilder Ihrer Gefäße erhalten und direkt behandeln können, wenn nötig.",
-              fourth:
-                "Diese Untersuchung ermöglicht es uns, eventuelle Probleme frühzeitig zu erkennen und sofort zu handeln.",
-            },
-            {
-              first: "Alternativen",
-              second:
-                "Informieren Sie über alternative Untersuchungsmethoden wie die CT-Angiographie oder MR-Angiographie und erläutern Sie deren Vor- und Nachteile.",
-              third:
-                "Alternativ gibt es die CT-Angiografie, die weniger invasiv ist, aber manchmal nicht so detailliert.",
-              fourth:
-                "Eine MR-Angiografie kommt ohne Röntgenstrahlen aus, ist aber bei metallischen Implantaten nicht geeignet.",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie mögliche Kontraindikationen, wie Allergien gegen Kontrastmittel oder eingeschränkte Nierenfunktion, und prüfen Sie, ob diese beim Patienten vorliegen.",
-              third:
-                "Haben Sie bekannte Allergien gegen Jod oder Kontrastmittel?",
-              fourth:
-                "Leiden Sie unter Nierenproblemen, die durch das Kontrastmittel beeinflusst werden könnten?",
-            },
-            {
-              first: "Mögliche Ergebnisse",
-              second:
-                "Erklären Sie, welche Befunde die Untersuchung liefern kann, wie z.B. das Aufdecken von Gefäßverengungen, Aneurysmen oder Verschlüssen, und wie diese die Behandlung beeinflussen können.",
-              third:
-                "Wir können feststellen, ob Ihre Gefäße verengt sind, was eine medikamentöse oder operative Behandlung nach sich ziehen könnte.",
-              fourth:
-                "Sollten wir ein Aneurysma entdecken, besprechen wir die notwendigen Schritte für eine sichere Behandlung.",
-            },
-            {
-              first: "Wichtigkeit des Einverständnisses",
-              second:
-                "Betonen Sie die Bedeutung des informierten Einverständnisses und dass der Patient alle Informationen verstanden hat und mit der Untersuchung einverstanden ist.",
-              third:
-                "Es ist wichtig, dass Sie der Untersuchung zustimmen und alle Risiken und Vorteile verstehen.",
-              fourth:
-                "Bitte stellen Sie sicher, dass Sie alle Informationen erhalten haben und sich mit dem Verfahren wohlfühlen.",
-            },
-            {
-              first: "Erhalt des Einverständnisses",
-              second:
-                "Bitten Sie den Patienten um sein schriftliches Einverständnis und stellen Sie sicher, dass er alle Fragen stellen kann und diese zufriedenstellend beantwortet werden.",
-              third:
-                "Können Sie hier unterschreiben, um Ihr Einverständnis zur Untersuchung zu geben?",
-              fourth:
-                "Wenn Sie keine weiteren Fragen haben, bitte ich Sie um Ihre schriftliche Zustimmung.",
-            },
-            {
-              first: "Abschließende Hinweise",
-              second:
-                "Geben Sie dem Patienten abschließende Anweisungen, wie z.B. Verhaltensregeln nach der Untersuchung, und bieten Sie an, für weitere Fragen zur Verfügung zu stehen.",
-              third:
-                "Nach der Untersuchung sollten Sie viel trinken, um das Kontrastmittel aus dem Körper zu spülen.",
-              fourth:
-                "Bitte schonen Sie die Einstichstelle und melden Sie sich bei uns, wenn Sie ungewöhnliche Symptome bemerken.",
-            },
-            {
-              first: "Information über Ergebnisse",
-              second:
-                "Informieren Sie den Patienten darüber, wann die Ergebnisse vorliegen werden und wie sie mit ihm besprochen werden, sowie über mögliche nächste Schritte in der Behandlung.",
-              third:
-                "Wir werden die Ergebnisse noch heute auswerten und das weitere Vorgehen mit Ihnen besprechen.",
-              fourth:
-                "Sobald wir die Bilder analysiert haben, informieren wir Sie über die Befunde und die nächsten Schritte.",
-            },
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Angiographie durchgeführt wird, um die Blutgefäße sichtbar zu machen und mögliche Verengungen oder Blockaden zu erkennen, um eine genaue Diagnose zu stellen.",
+            third:
+              "Wir möchten mit dieser Untersuchung Ihre Blutgefäße genauer anschauen, um mögliche Engstellen oder Verschlüsse zu entdecken.",
+            fourth:
+              "Das Ziel ist es, herauszufinden, ob Ihre Beschwerden durch Veränderungen in den Blutgefäßen verursacht werden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den genauen Ablauf der Untersuchung: wie ein Katheter in ein Blutgefäß eingeführt wird, die Injektion des Kontrastmittels und die Aufnahme von Bildern mittels Röntgen, CT oder MRT.",
+            third:
+              "Wir werden einen dünnen Schlauch in ein Gefäß in Ihrer Leiste einführen und darüber ein Kontrastmittel spritzen.",
+            fourth:
+              "Während der Untersuchung machen wir Röntgenaufnahmen, um die Kontrastmittelbewegung in Ihren Gefäßen zu verfolgen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über erforderliche Vorbereitungen, wie z.B. Nüchternheit vor der Untersuchung, Absetzen bestimmter Medikamente und das Tragen bequemer Kleidung.",
+            third:
+              "Bitte bleiben Sie ab Mitternacht nüchtern und trinken Sie keine Flüssigkeiten mehr.",
+            fourth:
+              "Falls Sie blutverdünnende Medikamente einnehmen, müssen wir diese eventuell vorher absetzen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie mögliche Risiken wie Blutungen, Infektionen, allergische Reaktionen auf das Kontrastmittel, Strahlenbelastung und seltene Komplikationen wie Nierenfunktionsstörungen.",
+            third:
+              "Es kann zu kleinen Blutungen an der Einstichstelle kommen, die aber meist schnell wieder aufhören.",
+            fourth:
+              "In seltenen Fällen kann das Kontrastmittel die Nieren belasten oder allergische Reaktionen auslösen.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie die Vorteile der Angiographie, einschließlich der genauen Diagnosemöglichkeiten und der Möglichkeit, therapeutische Maßnahmen während des Eingriffs durchzuführen.",
+            third:
+              "Der Vorteil ist, dass wir sehr präzise Bilder Ihrer Gefäße erhalten und direkt behandeln können, wenn nötig.",
+            fourth:
+              "Diese Untersuchung ermöglicht es uns, eventuelle Probleme frühzeitig zu erkennen und sofort zu handeln.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie über alternative Untersuchungsmethoden wie die CT-Angiographie oder MR-Angiographie und erläutern Sie deren Vor- und Nachteile.",
+            third:
+              "Alternativ gibt es die CT-Angiografie, die weniger invasiv ist, aber manchmal nicht so detailliert.",
+            fourth:
+              "Eine MR-Angiografie kommt ohne Röntgenstrahlen aus, ist aber bei metallischen Implantaten nicht geeignet.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie mögliche Kontraindikationen, wie Allergien gegen Kontrastmittel oder eingeschränkte Nierenfunktion, und prüfen Sie, ob diese beim Patienten vorliegen.",
+            third:
+              "Haben Sie bekannte Allergien gegen Jod oder Kontrastmittel?",
+            fourth:
+              "Leiden Sie unter Nierenproblemen, die durch das Kontrastmittel beeinflusst werden könnten?",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, welche Befunde die Untersuchung liefern kann, wie z.B. das Aufdecken von Gefäßverengungen, Aneurysmen oder Verschlüssen, und wie diese die Behandlung beeinflussen können.",
+            third:
+              "Wir können feststellen, ob Ihre Gefäße verengt sind, was eine medikamentöse oder operative Behandlung nach sich ziehen könnte.",
+            fourth:
+              "Sollten wir ein Aneurysma entdecken, besprechen wir die notwendigen Schritte für eine sichere Behandlung.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie die Bedeutung des informierten Einverständnisses und dass der Patient alle Informationen verstanden hat und mit der Untersuchung einverstanden ist.",
+            third:
+              "Es ist wichtig, dass Sie der Untersuchung zustimmen und alle Risiken und Vorteile verstehen.",
+            fourth:
+              "Bitte stellen Sie sicher, dass Sie alle Informationen erhalten haben und sich mit dem Verfahren wohlfühlen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Bitten Sie den Patienten um sein schriftliches Einverständnis und stellen Sie sicher, dass er alle Fragen stellen kann und diese zufriedenstellend beantwortet werden.",
+            third:
+              "Können Sie hier unterschreiben, um Ihr Einverständnis zur Untersuchung zu geben?",
+            fourth:
+              "Wenn Sie keine weiteren Fragen haben, bitte ich Sie um Ihre schriftliche Zustimmung.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Anweisungen, wie z.B. Verhaltensregeln nach der Untersuchung, und bieten Sie an, für weitere Fragen zur Verfügung zu stehen.",
+            third:
+              "Nach der Untersuchung sollten Sie viel trinken, um das Kontrastmittel aus dem Körper zu spülen.",
+            fourth:
+              "Bitte schonen Sie die Einstichstelle und melden Sie sich bei uns, wenn Sie ungewöhnliche Symptome bemerken.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, wann die Ergebnisse vorliegen werden und wie sie mit ihm besprochen werden, sowie über mögliche nächste Schritte in der Behandlung.",
+            third:
+              "Wir werden die Ergebnisse noch heute auswerten und das weitere Vorgehen mit Ihnen besprechen.",
+            fourth:
+              "Sobald wir die Bilder analysiert haben, informieren wir Sie über die Befunde und die nächsten Schritte.",
+          },
         ],
       },
       // 3tab 289
@@ -24919,98 +24900,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erläutern Sie, was die Angiografie ist, ihre Funktionsweise und die zugrunde liegenden Prinzipien. Beschreiben Sie, dass es sich um ein bildgebendes Verfahren zur Darstellung der Blutgefäße mittels Kontrastmittel handelt.",
-              third:
-                "Die Angiografie ist ein bildgebendes Verfahren, bei dem wir mittels Kontrastmittel die Blutgefäße sichtbar machen.",
-              fourth:
-                "Es handelt sich um eine diagnostische Methode zur detaillierten Darstellung des Gefäßsystems durch Röntgenaufnahmen nach Kontrastmittelgabe.",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Erklären Sie, welche diagnostischen Informationen die Angiografie liefert, z.B. Identifikation von Gefäßverengungen, Verschlüssen, Aneurysmen oder Gefäßmissbildungen.",
-              third:
-                "Mit der Angiografie können wir Stenosen oder Okklusionen in den Arterien identifizieren.",
-              fourth:
-                "Sie ermöglicht uns, Aneurysmen oder arterio-venöse Malformationen genau zu lokalisieren.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Besprechen Sie mögliche Befunde und deren klinische Relevanz. Interpretieren Sie die Ergebnisse im Kontext der Symptomatik des Patienten und ziehen Sie Schlussfolgerungen für die weitere Therapie.",
-              third:
-                "Die Angiografie zeigte eine 70%ige Stenose der A. carotis interna rechts, was die Schlaganfallsymptome erklärt.",
-              fourth:
-                "Wir haben multiple periphere arterielle Verschlüsse festgestellt, was die Claudicatio intermittens des Patienten verursacht.",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Nennen Sie die medizinischen Gründe für die Durchführung einer Angiografie, wie z.B. Verdacht auf koronare Herzkrankheit, periphere arterielle Verschlusskrankheit oder zerebrale Gefäßerkrankungen.",
-              third:
-                "Aufgrund der Brustschmerzen und EKG-Veränderungen ist eine Koronarangiografie indiziert.",
-              fourth:
-                "Bei Verdacht auf eine Nierenarterienstenose ist die renale Angiografie das Mittel der Wahl.",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie absolute und relative Kontraindikationen, wie Allergien gegen Kontrastmittel, eingeschränkte Nierenfunktion, Schilddrüsenüberfunktion oder Schwangerschaft.",
-              third:
-                "Bei dem Patienten besteht eine Kontraindikation aufgrund einer bekannten Jodallergie.",
-              fourth:
-                "Angesichts der eingeschränkten Nierenfunktion müssen wir die Indikation zur Kontrastmittelgabe streng stellen.",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Diskutieren Sie andere Diagnosen, die in Betracht gezogen werden sollten, und wie die Angiografie bei der Abgrenzung zwischen diesen helfen kann.",
-              third:
-                "Differenzialdiagnostisch müssen wir auch eine Myokarditis in Betracht ziehen, die durch die Angiografie nicht erfasst wird.",
-              fourth:
-                "Es könnte sich auch um eine neurogene Claudicatio handeln; die Angiografie hilft, vaskuläre Ursachen zu bestätigen oder auszuschließen.",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Beschreiben Sie, wie die Ergebnisse der Angiografie die Therapie beeinflussen können, z.B. Indikation für eine Stentimplantation, Bypass-Operation oder medikamentöse Therapie.",
-              third:
-                "Aufgrund der signifikanten Stenose planen wir eine perkutane transluminale Angioplastie mit Stentimplantation.",
-              fourth:
-                "Die Befunde sprechen für eine operative Revaskularisation mittels Bypass-Chirurgie.",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Betonen Sie die Wichtigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie Kardiologie, Radiologie oder Gefäßchirurgie für eine ganzheitliche Patientenversorgung.",
-              third:
-                "Wir sollten die Gefäßchirurgen frühzeitig einbinden, um den optimalen Behandlungszeitpunkt zu bestimmen.",
-              fourth:
-                "Eine enge Abstimmung mit der Radiologie ist wichtig, um die bestmögliche Bildgebung zu gewährleisten.",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität, wie standardisierte Protokolle, regelmäßige Schulungen und Überprüfung der Strahlenschutzmaßnahmen.",
-              third:
-                "Wir verwenden standardisierte Angiografie-Protokolle, um die Vergleichbarkeit der Ergebnisse zu sichern.",
-              fourth:
-                "Regelmäßige Team-Trainings verbessern die Prozessqualität und minimieren Komplikationsraten.",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Beschreiben Sie die Bedeutung einer detaillierten Dokumentation der Befunde und die Planung weiterer Schritte, wie Kontrolluntersuchungen oder Überweisungen an Spezialisten.",
-              third:
-                "Die Ergebnisse wurden ausführlich dokumentiert und der Patient für eine Nachsorgeuntersuchung vorgemerkt.",
-              fourth:
-                "Wir haben alle Befunde im Arztbrief festgehalten und eine Überweisung zur Kardiologie initiiert.",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, was die Angiografie ist, ihre Funktionsweise und die zugrunde liegenden Prinzipien. Beschreiben Sie, dass es sich um ein bildgebendes Verfahren zur Darstellung der Blutgefäße mittels Kontrastmittel handelt.",
+            third:
+              "Die Angiografie ist ein bildgebendes Verfahren, bei dem wir mittels Kontrastmittel die Blutgefäße sichtbar machen.",
+            fourth:
+              "Es handelt sich um eine diagnostische Methode zur detaillierten Darstellung des Gefäßsystems durch Röntgenaufnahmen nach Kontrastmittelgabe.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, welche diagnostischen Informationen die Angiografie liefert, z.B. Identifikation von Gefäßverengungen, Verschlüssen, Aneurysmen oder Gefäßmissbildungen.",
+            third:
+              "Mit der Angiografie können wir Stenosen oder Okklusionen in den Arterien identifizieren.",
+            fourth:
+              "Sie ermöglicht uns, Aneurysmen oder arterio-venöse Malformationen genau zu lokalisieren.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie mögliche Befunde und deren klinische Relevanz. Interpretieren Sie die Ergebnisse im Kontext der Symptomatik des Patienten und ziehen Sie Schlussfolgerungen für die weitere Therapie.",
+            third:
+              "Die Angiografie zeigte eine 70%ige Stenose der A. carotis interna rechts, was die Schlaganfallsymptome erklärt.",
+            fourth:
+              "Wir haben multiple periphere arterielle Verschlüsse festgestellt, was die Claudicatio intermittens des Patienten verursacht.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die medizinischen Gründe für die Durchführung einer Angiografie, wie z.B. Verdacht auf koronare Herzkrankheit, periphere arterielle Verschlusskrankheit oder zerebrale Gefäßerkrankungen.",
+            third:
+              "Aufgrund der Brustschmerzen und EKG-Veränderungen ist eine Koronarangiografie indiziert.",
+            fourth:
+              "Bei Verdacht auf eine Nierenarterienstenose ist die renale Angiografie das Mittel der Wahl.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie absolute und relative Kontraindikationen, wie Allergien gegen Kontrastmittel, eingeschränkte Nierenfunktion, Schilddrüsenüberfunktion oder Schwangerschaft.",
+            third:
+              "Bei dem Patienten besteht eine Kontraindikation aufgrund einer bekannten Jodallergie.",
+            fourth:
+              "Angesichts der eingeschränkten Nierenfunktion müssen wir die Indikation zur Kontrastmittelgabe streng stellen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie andere Diagnosen, die in Betracht gezogen werden sollten, und wie die Angiografie bei der Abgrenzung zwischen diesen helfen kann.",
+            third:
+              "Differenzialdiagnostisch müssen wir auch eine Myokarditis in Betracht ziehen, die durch die Angiografie nicht erfasst wird.",
+            fourth:
+              "Es könnte sich auch um eine neurogene Claudicatio handeln; die Angiografie hilft, vaskuläre Ursachen zu bestätigen oder auszuschließen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie, wie die Ergebnisse der Angiografie die Therapie beeinflussen können, z.B. Indikation für eine Stentimplantation, Bypass-Operation oder medikamentöse Therapie.",
+            third:
+              "Aufgrund der signifikanten Stenose planen wir eine perkutane transluminale Angioplastie mit Stentimplantation.",
+            fourth:
+              "Die Befunde sprechen für eine operative Revaskularisation mittels Bypass-Chirurgie.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Wichtigkeit der Zusammenarbeit mit anderen Fachdisziplinen wie Kardiologie, Radiologie oder Gefäßchirurgie für eine ganzheitliche Patientenversorgung.",
+            third:
+              "Wir sollten die Gefäßchirurgen frühzeitig einbinden, um den optimalen Behandlungszeitpunkt zu bestimmen.",
+            fourth:
+              "Eine enge Abstimmung mit der Radiologie ist wichtig, um die bestmögliche Bildgebung zu gewährleisten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie Maßnahmen zur Sicherstellung der Qualität, wie standardisierte Protokolle, regelmäßige Schulungen und Überprüfung der Strahlenschutzmaßnahmen.",
+            third:
+              "Wir verwenden standardisierte Angiografie-Protokolle, um die Vergleichbarkeit der Ergebnisse zu sichern.",
+            fourth:
+              "Regelmäßige Team-Trainings verbessern die Prozessqualität und minimieren Komplikationsraten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie die Bedeutung einer detaillierten Dokumentation der Befunde und die Planung weiterer Schritte, wie Kontrolluntersuchungen oder Überweisungen an Spezialisten.",
+            third:
+              "Die Ergebnisse wurden ausführlich dokumentiert und der Patient für eine Nachsorgeuntersuchung vorgemerkt.",
+            fourth:
+              "Wir haben alle Befunde im Arztbrief festgehalten und eine Überweisung zur Kardiologie initiiert.",
+          },
         ],
       },
       // 4tab 298
@@ -25031,71 +25010,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Einführung in den klinischen Fall",
-              second:
-                "45-jähriger Patient ohne Beschwerden, kommt zur Vorsorgeuntersuchung. Keine bekannten Vorerkrankungen.",
-              third:
-                "58-jähriger Patient klagt über belastungsabhängige Brustschmerzen und Atemnot. Risikofaktoren: Raucher, Hypertonie, Hypercholesterinämie.",
-              fourth:
-                "70-jährige Patientin berichtet von Schmerzen in den Beinen beim Gehen, die nach kurzer Ruhepause nachlassen. Vorgeschichte von Diabetes mellitus Typ 2.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Angiographische Darstellung der Blutgefäße ohne Hinweise auf Stenosen oder andere pathologische Veränderungen.",
-              third:
-                "Koronarangiographie zeigt multiple signifikante Stenosen der linken und rechten Koronararterien.",
-              fourth:
-                "Angiographie der Beinarterien zeigt einen Verschluss der Arteria femoralis superficialis links mit vermindertem Blutfluss.",
-            },
-            {
-              first: "Interpretation der Ergebnisse",
-              second:
-                "Normalbefund bestätigt einen gesunden Zustand des Gefäßsystems; keine pathologischen Befunde vorhanden.",
-              third:
-                "Die signifikanten Verengungen erklären die Angina-pectoris-Symptomatik und deuten auf eine fortgeschrittene koronare Herzkrankheit hin.",
-              fourth:
-                "Der Verschluss ist verantwortlich für die Claudicatio intermittens und erhöht das Risiko für ischämische Schäden im betroffenen Bein.",
-            },
-            {
-              first: "Integration in die Patientenversorgung",
-              second:
-                "Beratung des Patienten über präventive Maßnahmen und Empfehlung für regelmäßige Kontrolluntersuchungen zur Früherkennung von Gefäßerkrankungen.",
-              third:
-                "Planung einer perkutanen koronaren Intervention (PCI) mit Stentimplantation oder einer aortokoronaren Bypass-Operation. Zusätzlich Anpassung der medikamentösen Therapie und Lebensstiländerungen.",
-              fourth:
-                "Entscheidung für eine Ballonangioplastie mit Stent oder eine Gefäßbypass-Operation. Wichtig ist auch die Kontrolle der Risikofaktoren wie Blutzucker und Blutdruck.",
-            },
-            {
-              first: "Diagnose",
-              second:
-                "Unauffälliger angiographischer Befund, keine Hinweise auf arterielle Verschlusskrankheiten.",
-              third:
-                "Fortgeschrittene koronare Herzkrankheit mit multiplen Koronarstenosen.",
-              fourth:
-                "Periphere arterielle Verschlusskrankheit (pAVK) Stadium II nach Fontaine.",
-            },
-            {
-              first: "Visuelle Hilfsmittel",
-              second:
-                "Angiogramme zeigen gleichmäßigen Kontrastmittelfluss ohne Engstellen oder Anomalien.",
-              third:
-                "Angiogramme zeigen mehrere Verengungen in den Koronararterien mit reduziertem Kontrastmittelfluss.",
-              fourth:
-                "Angiographische Bilder zeigen einen vollständigen Verschluss der Oberschenkelarterie und Umgehungskreisläufe (Kollateralen).",
-            },
-            {
-              first: "Fallabschluss",
-              second:
-                "Wir empfehlen, den gesunden Lebensstil beizubehalten und regelmäßige Vorsorgeuntersuchungen durchzuführen. Es ist zu empfehlen, weiterhin auf Risikofaktoren zu achten, um Gefäßerkrankungen vorzubeugen.",
-              third:
-                "Wir empfehlen eine zeitnahe Durchführung einer PCI oder Bypass-Operation, um die Durchblutung zu verbessern und das Risiko eines Herzinfarkts zu reduzieren. Es ist zu empfehlen, auch Lebensstiländerungen vorzunehmen, wie Rauchstopp und Ernährungsumstellung.",
-              fourth:
-                "Es ist zu empfehlen, eine Revaskularisation durchzuführen, entweder mittels Ballonangioplastie oder Bypass-Operation. Wir empfehlen zudem eine strikte Kontrolle des Blutzuckers und Blutdrucks.",
-            },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "45-jähriger Patient ohne Beschwerden, kommt zur Vorsorgeuntersuchung. Keine bekannten Vorerkrankungen.",
+            third:
+              "58-jähriger Patient klagt über belastungsabhängige Brustschmerzen und Atemnot. Risikofaktoren: Raucher, Hypertonie, Hypercholesterinämie.",
+            fourth:
+              "70-jährige Patientin berichtet von Schmerzen in den Beinen beim Gehen, die nach kurzer Ruhepause nachlassen. Vorgeschichte von Diabetes mellitus Typ 2.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Angiographische Darstellung der Blutgefäße ohne Hinweise auf Stenosen oder andere pathologische Veränderungen.",
+            third:
+              "Koronarangiographie zeigt multiple signifikante Stenosen der linken und rechten Koronararterien.",
+            fourth:
+              "Angiographie der Beinarterien zeigt einen Verschluss der Arteria femoralis superficialis links mit vermindertem Blutfluss.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Normalbefund bestätigt einen gesunden Zustand des Gefäßsystems; keine pathologischen Befunde vorhanden.",
+            third:
+              "Die signifikanten Verengungen erklären die Angina-pectoris-Symptomatik und deuten auf eine fortgeschrittene koronare Herzkrankheit hin.",
+            fourth:
+              "Der Verschluss ist verantwortlich für die Claudicatio intermittens und erhöht das Risiko für ischämische Schäden im betroffenen Bein.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Beratung des Patienten über präventive Maßnahmen und Empfehlung für regelmäßige Kontrolluntersuchungen zur Früherkennung von Gefäßerkrankungen.",
+            third:
+              "Planung einer perkutanen koronaren Intervention (PCI) mit Stentimplantation oder einer aortokoronaren Bypass-Operation. Zusätzlich Anpassung der medikamentösen Therapie und Lebensstiländerungen.",
+            fourth:
+              "Entscheidung für eine Ballonangioplastie mit Stent oder eine Gefäßbypass-Operation. Wichtig ist auch die Kontrolle der Risikofaktoren wie Blutzucker und Blutdruck.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Unauffälliger angiographischer Befund, keine Hinweise auf arterielle Verschlusskrankheiten.",
+            third:
+              "Fortgeschrittene koronare Herzkrankheit mit multiplen Koronarstenosen.",
+            fourth:
+              "Periphere arterielle Verschlusskrankheit (pAVK) Stadium II nach Fontaine.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Angiogramme zeigen gleichmäßigen Kontrastmittelfluss ohne Engstellen oder Anomalien.",
+            third:
+              "Angiogramme zeigen mehrere Verengungen in den Koronararterien mit reduziertem Kontrastmittelfluss.",
+            fourth:
+              "Angiographische Bilder zeigen einen vollständigen Verschluss der Oberschenkelarterie und Umgehungskreisläufe (Kollateralen).",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, den gesunden Lebensstil beizubehalten und regelmäßige Vorsorgeuntersuchungen durchzuführen. Es ist zu empfehlen, weiterhin auf Risikofaktoren zu achten, um Gefäßerkrankungen vorzubeugen.",
+            third:
+              "Wir empfehlen eine zeitnahe Durchführung einer PCI oder Bypass-Operation, um die Durchblutung zu verbessern und das Risiko eines Herzinfarkts zu reduzieren. Es ist zu empfehlen, auch Lebensstiländerungen vorzunehmen, wie Rauchstopp und Ernährungsumstellung.",
+            fourth:
+              "Es ist zu empfehlen, eine Revaskularisation durchzuführen, entweder mittels Ballonangioplastie oder Bypass-Operation. Wir empfehlen zudem eine strikte Kontrolle des Blutzuckers und Blutdrucks.",
+          },
         ],
       },
       // 5tab 299
@@ -25479,112 +25456,110 @@ export const parentTabs = [
         id: 303,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Das Hauptziel der Dopplersonographie ist es, den Blutfluss in Arterien und Venen zu beurteilen. Dadurch können Durchblutungsstörungen, Gefäßverengungen oder Verschlüsse erkannt werden, um beispielsweise Thrombosen, arterielle Verschlusskrankheiten oder Aneurysmen zu diagnostizieren.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die Dopplersonographie ist in der Diagnostik von Gefäßerkrankungen von großer Bedeutung. Sie wird bei der Untersuchung von Carotisstenosen, tiefen Venenthrombosen, arteriellen Verschlusskrankheiten sowie in der kardiologischen Diagnostik angewendet. Auch bei der Überwachung von Gefäßprothesen und Stents spielt sie eine zentrale Rolle.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Das Verfahren basiert auf dem Doppler-Effekt, bei dem die Frequenz von Schallwellen verändert wird, wenn sie auf bewegte Objekte, wie Blutkörperchen, treffen. Diese Frequenzänderungen werden vom Ultraschallgerät aufgezeichnet und in eine visuelle Darstellung des Blutflusses umgewandelt.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Ein Ultraschallkopf (Transducer) sendet hochfrequente Schallwellen aus, die von den Blutkörperchen reflektiert werden. Die zurückkehrenden Schallwellen werden vom Gerät empfangen und in Echtzeit analysiert, um Geschwindigkeit und Richtung des Blutflusses darzustellen. Farb-Doppler und Duplex-Sonographie sind erweiterte Formen des Verfahrens.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die Ergebnisse der Dopplersonographie werden als Farbkarten oder Spektralkurven dargestellt. Anhand der Geschwindigkeit und Richtung des Blutflusses können Ärzte Gefäßverengungen oder -verschlüsse erkennen. Die Interpretation erfordert Erfahrung, um normale von pathologischen Befunden zu unterscheiden.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Häufige pathologische Befunde umfassen arterielle Stenosen, Aneurysmen, Thrombosen und insuffiziente Venenklappen. Der Schweregrad dieser Veränderungen kann durch die Messung der Fließgeschwindigkeit und -richtung des Blutes genauer bestimmt werden.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Es gibt kaum Risiken, da es sich um eine nicht-invasive Untersuchung handelt. Sehr selten können Patienten über leichte Druckempfindlichkeit an der Untersuchungsstelle klagen.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Dopplersonographie spielt eine entscheidende Rolle in der Diagnose von Gefäßerkrankungen und ermöglicht eine präzise Beurteilung des Blutflusses. Sie ist oft der erste Schritt zur Identifikation von vaskulären Pathologien und leitet in vielen Fällen weitere invasive oder therapeutische Maßnahmen ein.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Die Ergebnisse der Dopplersonographie sind ausschlaggebend für die Planung therapeutischer Maßnahmen, wie z. B. chirurgische Eingriffe oder medikamentöse Therapien bei Gefäßerkrankungen. Sie ermöglicht eine genaue Risikobewertung und Verlaufskontrolle.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Als alternative Verfahren können die Angiographie (CT oder MRT) sowie die digitale Subtraktionsangiographie (DSA) eingesetzt werden, die jedoch invasiver sind und mit Strahlenbelastung oder Kontrastmittelgabe einhergehen.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neue Entwicklungen in der Dopplersonographie umfassen verbesserte Bildgebungsverfahren, wie z. B. 3D- und 4D-Doppler, die eine noch genauere Beurteilung des Blutflusses ermöglichen.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "In Zukunft könnte die Dopplersonographie durch die Integration künstlicher Intelligenz in die Auswertung und verbesserte Techniken zur Blutflussdarstellung noch präzisere und schnellere Diagnosen ermöglichen.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Dopplersonographie ist ein unverzichtbares diagnostisches Werkzeug zur Beurteilung des Blutflusses in den Gefäßen. Sie ermöglicht eine frühzeitige Erkennung von Gefäßerkrankungen und trägt entscheidend zur Planung der weiteren Behandlung bei.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Insgesamt ist die Dopplersonographie ein sicherer, schneller und effektiver Bestandteil der modernen Gefäßdiagnostik, der sowohl in der präventiven als auch in der akuten medizinischen Versorgung eine zentrale Rolle spielt.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Dopplersonographie ist es, den Blutfluss in Arterien und Venen zu beurteilen. Dadurch können Durchblutungsstörungen, Gefäßverengungen oder Verschlüsse erkannt werden, um beispielsweise Thrombosen, arterielle Verschlusskrankheiten oder Aneurysmen zu diagnostizieren.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Dopplersonographie ist in der Diagnostik von Gefäßerkrankungen von großer Bedeutung. Sie wird bei der Untersuchung von Carotisstenosen, tiefen Venenthrombosen, arteriellen Verschlusskrankheiten sowie in der kardiologischen Diagnostik angewendet. Auch bei der Überwachung von Gefäßprothesen und Stents spielt sie eine zentrale Rolle.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das Verfahren basiert auf dem Doppler-Effekt, bei dem die Frequenz von Schallwellen verändert wird, wenn sie auf bewegte Objekte, wie Blutkörperchen, treffen. Diese Frequenzänderungen werden vom Ultraschallgerät aufgezeichnet und in eine visuelle Darstellung des Blutflusses umgewandelt.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Ein Ultraschallkopf (Transducer) sendet hochfrequente Schallwellen aus, die von den Blutkörperchen reflektiert werden. Die zurückkehrenden Schallwellen werden vom Gerät empfangen und in Echtzeit analysiert, um Geschwindigkeit und Richtung des Blutflusses darzustellen. Farb-Doppler und Duplex-Sonographie sind erweiterte Formen des Verfahrens.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Ergebnisse der Dopplersonographie werden als Farbkarten oder Spektralkurven dargestellt. Anhand der Geschwindigkeit und Richtung des Blutflusses können Ärzte Gefäßverengungen oder -verschlüsse erkennen. Die Interpretation erfordert Erfahrung, um normale von pathologischen Befunden zu unterscheiden.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Häufige pathologische Befunde umfassen arterielle Stenosen, Aneurysmen, Thrombosen und insuffiziente Venenklappen. Der Schweregrad dieser Veränderungen kann durch die Messung der Fließgeschwindigkeit und -richtung des Blutes genauer bestimmt werden.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Es gibt kaum Risiken, da es sich um eine nicht-invasive Untersuchung handelt. Sehr selten können Patienten über leichte Druckempfindlichkeit an der Untersuchungsstelle klagen.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Dopplersonographie spielt eine entscheidende Rolle in der Diagnose von Gefäßerkrankungen und ermöglicht eine präzise Beurteilung des Blutflusses. Sie ist oft der erste Schritt zur Identifikation von vaskulären Pathologien und leitet in vielen Fällen weitere invasive oder therapeutische Maßnahmen ein.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Die Ergebnisse der Dopplersonographie sind ausschlaggebend für die Planung therapeutischer Maßnahmen, wie z. B. chirurgische Eingriffe oder medikamentöse Therapien bei Gefäßerkrankungen. Sie ermöglicht eine genaue Risikobewertung und Verlaufskontrolle.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Als alternative Verfahren können die Angiographie (CT oder MRT) sowie die digitale Subtraktionsangiographie (DSA) eingesetzt werden, die jedoch invasiver sind und mit Strahlenbelastung oder Kontrastmittelgabe einhergehen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Entwicklungen in der Dopplersonographie umfassen verbesserte Bildgebungsverfahren, wie z. B. 3D- und 4D-Doppler, die eine noch genauere Beurteilung des Blutflusses ermöglichen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "In Zukunft könnte die Dopplersonographie durch die Integration künstlicher Intelligenz in die Auswertung und verbesserte Techniken zur Blutflussdarstellung noch präzisere und schnellere Diagnosen ermöglichen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Dopplersonographie ist ein unverzichtbares diagnostisches Werkzeug zur Beurteilung des Blutflusses in den Gefäßen. Sie ermöglicht eine frühzeitige Erkennung von Gefäßerkrankungen und trägt entscheidend zur Planung der weiteren Behandlung bei.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt ist die Dopplersonographie ein sicherer, schneller und effektiver Bestandteil der modernen Gefäßdiagnostik, der sowohl in der präventiven als auch in der akuten medizinischen Versorgung eine zentrale Rolle spielt.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 304
@@ -25604,116 +25579,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Ziel der Untersuchung",
-              second:
-                "Erklären Sie, dass die Dopplersonographie den Blutfluss in den Gefäßen untersucht, um Verengungen oder Thrombosen festzustellen.",
-              third:
-                "Wir führen diese Untersuchung durch, um den Blutfluss in Ihren Gefäßen zu überprüfen. So können wir feststellen, ob Verengungen oder Thrombosen vorliegen.",
-              fourth:
-                "Die Untersuchung dient dazu, den Blutfluss zu beurteilen und mögliche Durchblutungsstörungen zu erkennen.",
-            },
-            {
-              first: "Ablauf",
-              second:
-                "Beschreiben Sie, dass ein Ultraschallkopf auf die Haut gesetzt wird, um den Blutfluss schmerzfrei und in Echtzeit darzustellen.",
-              third:
-                "Die Untersuchung ist schmerzfrei und wir setzen einen Ultraschallkopf auf Ihre Haut, um den Blutfluss in Echtzeit zu beobachten.",
-              fourth:
-                "Während der Untersuchung wird ein Ultraschallkopf auf Ihre Haut gelegt, um den Blutfluss sichtbar zu machen. Es dauert nur wenige Minuten.",
-            },
-            {
-              first: "Vorbereitung",
-              second:
-                "Informieren Sie, dass meist keine Vorbereitung nötig ist, außer es handelt sich um spezielle Gefäße.",
-              third:
-                "Sie brauchen sich nicht speziell vorbereiten, es sei denn, wir untersuchen ein bestimmtes Gefäß, für das Sie Anweisungen erhalten.",
-              fourth:
-                "In den meisten Fällen ist keine Vorbereitung notwendig. Wir werden Sie informieren, falls es spezielle Anweisungen gibt.",
-            },
-            {
-              first: "Risiken",
-              second:
-                "Erwähnen Sie, dass es ein sicheres Verfahren ohne Strahlenbelastung ist, selten treten leichte Hautreizungen auf.",
-              third:
-                "Es gibt kaum Risiken bei der Untersuchung, sie ist sehr sicher. Manchmal kann die Haut an der Stelle leicht gereizt sein.",
-              fourth:
-                "Es gibt nur sehr geringe Risiken. Manche Patienten berichten über ein leichtes Druckgefühl an der Untersuchungsstelle.",
-            },
-            {
-              first: "Vorteile",
-              second:
-                "Betonen Sie, dass es nicht-invasiv, schmerzfrei und schnell ist, und direkte Informationen über den Blutfluss liefert.",
-              third:
-                "Der Vorteil dieser Methode ist, dass sie schnell, schmerzlos und nicht-invasiv ist. Außerdem wird keine Strahlenbelastung verursacht.",
-              fourth:
-                "Die Untersuchung ist schnell und sicher. Ein großer Vorteil ist, dass keine Strahlenbelastung oder Kontrastmittel nötig sind.",
-            },
-            {
-              first: "Alternativen",
-              second:
-                "Nennen Sie CT- oder MRT-Angiographie als Alternativen, die invasiver sein können.",
-              third:
-                "Eine Alternative wäre die CT- oder MRT-Angiographie, die aber invasiver ist und Kontrastmittel verwendet.",
-              fourth:
-                "Alternativ kann eine CT- oder MRT-Angiographie durchgeführt werden, die jedoch invasiver ist.",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass stark verkalkte Gefäße oder Adipositas die Bildqualität beeinträchtigen können.",
-              third:
-                "Wenn stark verkalkte Gefäße oder starkes Übergewicht vorliegen, kann die Bildqualität eingeschränkt sein.",
-              fourth:
-                "Wenn Sie stark verkalkte Gefäße oder andere gesundheitliche Einschränkungen haben, könnte die Untersuchung erschwert sein.",
-            },
-            {
-              first: "Mögliche Ergebnisse",
-              second:
-                "Informieren Sie über mögliche Befunde wie normale Durchblutung, Verengungen oder Thrombosen.",
-              third:
-                "Wir können hier feststellen, ob eine normale Durchblutung vorliegt oder ob es Engstellen oder Thrombosen gibt.",
-              fourth:
-                "Wir werden sehen, ob die Blutgefäße normal funktionieren oder ob es Probleme wie Verengungen gibt.",
-            },
-            {
-              first: "Wichtigkeit des Einverständnisses",
-              second:
-                "Erklären Sie, dass die Untersuchung nur mit Zustimmung des Patienten durchgeführt wird.",
-              third:
-                "Es ist wichtig, dass Sie der Untersuchung zustimmen, nachdem Sie alle Informationen erhalten haben.",
-              fourth:
-                "Ihr Einverständnis ist erforderlich, damit wir die Untersuchung durchführen dürfen.",
-            },
-            {
-              first: "Erhalt des Einverständnisses",
-              second:
-                "Bitten Sie um schriftliches Einverständnis, nachdem alle Fragen geklärt wurden.",
-              third:
-                "Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung beginnen.",
-              fourth:
-                "Bevor wir starten, müssen Sie der Untersuchung schriftlich zustimmen.",
-            },
-            {
-              first: "Abschließende Hinweise",
-              second:
-                "Geben Sie Hinweise zum Verhalten nach der Untersuchung und bieten Sie an, für Fragen zur Verfügung zu stehen.",
-              third:
-                "Nach der Untersuchung sollten Sie sich normal verhalten können. Wenn Sie Fragen haben, stehe ich Ihnen zur Verfügung.",
-              fourth:
-                "Es gibt nichts Besonderes, worauf Sie nach der Untersuchung achten müssen. Fragen können Sie jederzeit stellen.",
-            },
-            {
-              first: "Information über Ergebnisse",
-              second:
-                "Erklären Sie, wann die Ergebnisse vorliegen und wie diese besprochen werden.",
-              third:
-                "Wir informieren Sie, sobald die Ergebnisse vorliegen, und besprechen dann die nächsten Schritte.",
-              fourth:
-                "Sobald die Ergebnisse vorliegen, setzen wir uns mit Ihnen in Verbindung, um sie zu besprechen.",
-            },
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Dopplersonographie den Blutfluss in den Gefäßen untersucht, um Verengungen oder Thrombosen festzustellen.",
+            third:
+              "Wir führen diese Untersuchung durch, um den Blutfluss in Ihren Gefäßen zu überprüfen. So können wir feststellen, ob Verengungen oder Thrombosen vorliegen.",
+            fourth:
+              "Die Untersuchung dient dazu, den Blutfluss zu beurteilen und mögliche Durchblutungsstörungen zu erkennen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, dass ein Ultraschallkopf auf die Haut gesetzt wird, um den Blutfluss schmerzfrei und in Echtzeit darzustellen.",
+            third:
+              "Die Untersuchung ist schmerzfrei und wir setzen einen Ultraschallkopf auf Ihre Haut, um den Blutfluss in Echtzeit zu beobachten.",
+            fourth:
+              "Während der Untersuchung wird ein Ultraschallkopf auf Ihre Haut gelegt, um den Blutfluss sichtbar zu machen. Es dauert nur wenige Minuten.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie, dass meist keine Vorbereitung nötig ist, außer es handelt sich um spezielle Gefäße.",
+            third:
+              "Sie brauchen sich nicht speziell vorbereiten, es sei denn, wir untersuchen ein bestimmtes Gefäß, für das Sie Anweisungen erhalten.",
+            fourth:
+              "In den meisten Fällen ist keine Vorbereitung notwendig. Wir werden Sie informieren, falls es spezielle Anweisungen gibt.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie, dass es ein sicheres Verfahren ohne Strahlenbelastung ist, selten treten leichte Hautreizungen auf.",
+            third:
+              "Es gibt kaum Risiken bei der Untersuchung, sie ist sehr sicher. Manchmal kann die Haut an der Stelle leicht gereizt sein.",
+            fourth:
+              "Es gibt nur sehr geringe Risiken. Manche Patienten berichten über ein leichtes Druckgefühl an der Untersuchungsstelle.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie, dass es nicht-invasiv, schmerzfrei und schnell ist, und direkte Informationen über den Blutfluss liefert.",
+            third:
+              "Der Vorteil dieser Methode ist, dass sie schnell, schmerzlos und nicht-invasiv ist. Außerdem wird keine Strahlenbelastung verursacht.",
+            fourth:
+              "Die Untersuchung ist schnell und sicher. Ein großer Vorteil ist, dass keine Strahlenbelastung oder Kontrastmittel nötig sind.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Nennen Sie CT- oder MRT-Angiographie als Alternativen, die invasiver sein können.",
+            third:
+              "Eine Alternative wäre die CT- oder MRT-Angiographie, die aber invasiver ist und Kontrastmittel verwendet.",
+            fourth:
+              "Alternativ kann eine CT- oder MRT-Angiographie durchgeführt werden, die jedoch invasiver ist.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass stark verkalkte Gefäße oder Adipositas die Bildqualität beeinträchtigen können.",
+            third:
+              "Wenn stark verkalkte Gefäße oder starkes Übergewicht vorliegen, kann die Bildqualität eingeschränkt sein.",
+            fourth:
+              "Wenn Sie stark verkalkte Gefäße oder andere gesundheitliche Einschränkungen haben, könnte die Untersuchung erschwert sein.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie über mögliche Befunde wie normale Durchblutung, Verengungen oder Thrombosen.",
+            third:
+              "Wir können hier feststellen, ob eine normale Durchblutung vorliegt oder ob es Engstellen oder Thrombosen gibt.",
+            fourth:
+              "Wir werden sehen, ob die Blutgefäße normal funktionieren oder ob es Probleme wie Verengungen gibt.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie, dass die Untersuchung nur mit Zustimmung des Patienten durchgeführt wird.",
+            third:
+              "Es ist wichtig, dass Sie der Untersuchung zustimmen, nachdem Sie alle Informationen erhalten haben.",
+            fourth:
+              "Ihr Einverständnis ist erforderlich, damit wir die Untersuchung durchführen dürfen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Bitten Sie um schriftliches Einverständnis, nachdem alle Fragen geklärt wurden.",
+            third:
+              "Wir benötigen Ihr schriftliches Einverständnis, bevor wir mit der Untersuchung beginnen.",
+            fourth:
+              "Bevor wir starten, müssen Sie der Untersuchung schriftlich zustimmen.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie Hinweise zum Verhalten nach der Untersuchung und bieten Sie an, für Fragen zur Verfügung zu stehen.",
+            third:
+              "Nach der Untersuchung sollten Sie sich normal verhalten können. Wenn Sie Fragen haben, stehe ich Ihnen zur Verfügung.",
+            fourth:
+              "Es gibt nichts Besonderes, worauf Sie nach der Untersuchung achten müssen. Fragen können Sie jederzeit stellen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, wann die Ergebnisse vorliegen und wie diese besprochen werden.",
+            third:
+              "Wir informieren Sie, sobald die Ergebnisse vorliegen, und besprechen dann die nächsten Schritte.",
+            fourth:
+              "Sobald die Ergebnisse vorliegen, setzen wir uns mit Ihnen in Verbindung, um sie zu besprechen.",
+          },
         ],
       },
       // 3tab 305
@@ -25733,98 +25706,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Was ist eigentlich die angegebene Untersuchung",
-              second:
-                "Erklären Sie, dass die Dopplersonographie den Blutfluss in den Gefäßen untersucht, um Verengungen oder Thrombosen festzustellen.",
-              third:
-                "Wir führen diese Untersuchung durch, um den Blutfluss in Ihren Gefäßen zu überprüfen. So können wir feststellen, ob Verengungen oder Thrombosen vorliegen.",
-              fourth:
-                "Die Untersuchung dient dazu, den Blutfluss zu beurteilen und mögliche Durchblutungsstörungen zu erkennen.",
-            },
-            {
-              first: "Was können wir damit untersuchen",
-              second:
-                "Beschreiben Sie, dass ein Ultraschallkopf auf die Haut gesetzt wird, um den Blutfluss schmerzfrei und in Echtzeit darzustellen.",
-              third:
-                "Die Untersuchung ist schmerzfrei und wir setzen einen Ultraschallkopf auf Ihre Haut, um den Blutfluss in Echtzeit zu beobachten.",
-              fourth:
-                "Während der Untersuchung wird ein Ultraschallkopf auf Ihre Haut gelegt, um den Blutfluss sichtbar zu machen. Es dauert nur wenige Minuten.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Informieren Sie über mögliche Befunde wie normale Durchblutung, Verengungen oder Thrombosen.",
-              third:
-                "Wir können hier feststellen, ob eine normale Durchblutung vorliegt oder ob es Engstellen oder Thrombosen gibt.",
-              fourth:
-                "Wir werden sehen, ob die Blutgefäße normal funktionieren oder ob es Probleme wie Verengungen gibt.",
-            },
-            {
-              first: "Indikationen",
-              second:
-                "Erklären Sie, dass die Dopplersonographie zur Beurteilung von Durchblutungsstörungen, Thrombosen und Gefäßverengungen angewendet wird.",
-              third:
-                "Diese Untersuchung ist indiziert, wenn wir vermuten, dass eine Verengung oder ein Verschluss der Gefäße vorliegt.",
-              fourth:
-                "Wir verwenden die Dopplersonographie bei Verdacht auf Gefäßerkrankungen wie Thrombosen oder Stenosen.",
-            },
-            {
-              first: "Kontraindikationen",
-              second:
-                "Erwähnen Sie, dass stark verkalkte Gefäße oder Adipositas die Bildqualität beeinträchtigen können.",
-              third:
-                "Wenn stark verkalkte Gefäße oder starkes Übergewicht vorliegen, kann die Bildqualität eingeschränkt sein.",
-              fourth:
-                "Wenn Sie stark verkalkte Gefäße oder andere gesundheitliche Einschränkungen haben, könnte die Untersuchung erschwert sein.",
-            },
-            {
-              first: "Differenzialdiagnosen",
-              second:
-                "Erwähnen Sie mögliche Differenzialdiagnosen wie Arteriosklerose, Thrombosen, Aneurysmen und andere Gefäßanomalien.",
-              third:
-                "Es könnte auch eine Arteriosklerose oder andere Gefäßerkrankungen vorliegen.",
-              fourth:
-                "Die Untersuchung hilft uns, zwischen verschiedenen Gefäßanomalien wie Aneurysmen und Verengungen zu unterscheiden.",
-            },
-            {
-              first: "Behandlungspläne",
-              second:
-                "Basierend auf den Ergebnissen der Untersuchung kann ein individueller Behandlungsplan erstellt werden.",
-              third:
-                "Wenn die Untersuchung eine Verengung zeigt, planen wir eventuell eine weitere Diagnostik oder eine Behandlung.",
-              fourth:
-                "Je nach Befund werden wir eine geeignete Therapie vorschlagen, wie eine medikamentöse Behandlung oder einen Eingriff.",
-            },
-            {
-              first: "Interprofessionelle Zusammenarbeit",
-              second:
-                "Erwähnen Sie, dass eine enge Zusammenarbeit mit Gefäßchirurgen oder Kardiologen erforderlich sein kann.",
-              third:
-                "Bei Bedarf werden wir andere Fachärzte wie Gefäßchirurgen hinzuziehen.",
-              fourth:
-                "In komplizierten Fällen arbeiten wir eng mit Kardiologen und Gefäßspezialisten zusammen.",
-            },
-            {
-              first: "Qualitätsmanagement",
-              second:
-                "Erklären Sie, dass die Durchführung und Dokumentation der Untersuchung nach festgelegten Standards erfolgt.",
-              third:
-                "Die Untersuchung wird nach aktuellen Qualitätsstandards durchgeführt, um genaue und zuverlässige Ergebnisse zu gewährleisten.",
-              fourth:
-                "Wir arbeiten nach strengen Qualitätsrichtlinien, um die Genauigkeit und Sicherheit der Untersuchung zu gewährleisten.",
-            },
-            {
-              first: "Dokumentation und Weiterverfolgung",
-              second:
-                "Erklären Sie, dass die Untersuchungsergebnisse dokumentiert und im weiteren Verlauf überwacht werden.",
-              third:
-                "Wir dokumentieren die Ergebnisse sorgfältig und besprechen mit Ihnen die nächsten Schritte.",
-              fourth:
-                "Die Ergebnisse werden dokumentiert, und wir werden sie weiter verfolgen, um sicherzustellen, dass die beste Behandlungsoption gewählt wird.",
-            },
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Dopplersonographie den Blutfluss in den Gefäßen untersucht, um Verengungen oder Thrombosen festzustellen.",
+            third:
+              "Wir führen diese Untersuchung durch, um den Blutfluss in Ihren Gefäßen zu überprüfen. So können wir feststellen, ob Verengungen oder Thrombosen vorliegen.",
+            fourth:
+              "Die Untersuchung dient dazu, den Blutfluss zu beurteilen und mögliche Durchblutungsstörungen zu erkennen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Beschreiben Sie, dass ein Ultraschallkopf auf die Haut gesetzt wird, um den Blutfluss schmerzfrei und in Echtzeit darzustellen.",
+            third:
+              "Die Untersuchung ist schmerzfrei und wir setzen einen Ultraschallkopf auf Ihre Haut, um den Blutfluss in Echtzeit zu beobachten.",
+            fourth:
+              "Während der Untersuchung wird ein Ultraschallkopf auf Ihre Haut gelegt, um den Blutfluss sichtbar zu machen. Es dauert nur wenige Minuten.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Informieren Sie über mögliche Befunde wie normale Durchblutung, Verengungen oder Thrombosen.",
+            third:
+              "Wir können hier feststellen, ob eine normale Durchblutung vorliegt oder ob es Engstellen oder Thrombosen gibt.",
+            fourth:
+              "Wir werden sehen, ob die Blutgefäße normal funktionieren oder ob es Probleme wie Verengungen gibt.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erklären Sie, dass die Dopplersonographie zur Beurteilung von Durchblutungsstörungen, Thrombosen und Gefäßverengungen angewendet wird.",
+            third:
+              "Diese Untersuchung ist indiziert, wenn wir vermuten, dass eine Verengung oder ein Verschluss der Gefäße vorliegt.",
+            fourth:
+              "Wir verwenden die Dopplersonographie bei Verdacht auf Gefäßerkrankungen wie Thrombosen oder Stenosen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass stark verkalkte Gefäße oder Adipositas die Bildqualität beeinträchtigen können.",
+            third:
+              "Wenn stark verkalkte Gefäße oder starkes Übergewicht vorliegen, kann die Bildqualität eingeschränkt sein.",
+            fourth:
+              "Wenn Sie stark verkalkte Gefäße oder andere gesundheitliche Einschränkungen haben, könnte die Untersuchung erschwert sein.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erwähnen Sie mögliche Differenzialdiagnosen wie Arteriosklerose, Thrombosen, Aneurysmen und andere Gefäßanomalien.",
+            third:
+              "Es könnte auch eine Arteriosklerose oder andere Gefäßerkrankungen vorliegen.",
+            fourth:
+              "Die Untersuchung hilft uns, zwischen verschiedenen Gefäßanomalien wie Aneurysmen und Verengungen zu unterscheiden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Basierend auf den Ergebnissen der Untersuchung kann ein individueller Behandlungsplan erstellt werden.",
+            third:
+              "Wenn die Untersuchung eine Verengung zeigt, planen wir eventuell eine weitere Diagnostik oder eine Behandlung.",
+            fourth:
+              "Je nach Befund werden wir eine geeignete Therapie vorschlagen, wie eine medikamentöse Behandlung oder einen Eingriff.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erwähnen Sie, dass eine enge Zusammenarbeit mit Gefäßchirurgen oder Kardiologen erforderlich sein kann.",
+            third:
+              "Bei Bedarf werden wir andere Fachärzte wie Gefäßchirurgen hinzuziehen.",
+            fourth:
+              "In komplizierten Fällen arbeiten wir eng mit Kardiologen und Gefäßspezialisten zusammen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, dass die Durchführung und Dokumentation der Untersuchung nach festgelegten Standards erfolgt.",
+            third:
+              "Die Untersuchung wird nach aktuellen Qualitätsstandards durchgeführt, um genaue und zuverlässige Ergebnisse zu gewährleisten.",
+            fourth:
+              "Wir arbeiten nach strengen Qualitätsrichtlinien, um die Genauigkeit und Sicherheit der Untersuchung zu gewährleisten.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erklären Sie, dass die Untersuchungsergebnisse dokumentiert und im weiteren Verlauf überwacht werden.",
+            third:
+              "Wir dokumentieren die Ergebnisse sorgfältig und besprechen mit Ihnen die nächsten Schritte.",
+            fourth:
+              "Die Ergebnisse werden dokumentiert, und wir werden sie weiter verfolgen, um sicherzustellen, dass die beste Behandlungsoption gewählt wird.",
+          },
         ],
       },
       // 4tab 306
@@ -25844,71 +25815,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            {
-              first: "Einführung in den klinischen Fall",
-              second:
-                "40-jähriger Patient ohne Beschwerden, untersucht im Rahmen einer Gefäß-Check-up-Routine. Keine relevante Vorgeschichte.",
-              third:
-                "65-jähriger Patient klagt über Schwellungen und Schmerzen im linken Bein. Vorgeschichte einer tiefen Venenthrombose (TVT).",
-              fourth:
-                "55-jähriger Patient berichtet über Schmerzen beim Gehen und Kältegefühl im rechten Bein. Vorgeschichte von Hypertonie und Diabetes.",
-            },
-            {
-              first: "Ergebnisse der Untersuchung",
-              second:
-                "Dopplersonographie zeigt einen gleichmäßigen Blutfluss in allen untersuchten Arterien und Venen ohne Anzeichen von Anomalien.",
-              third:
-                "Dopplersonographie zeigt eine nicht-kompressible Vene mit vermindertem Blutfluss im linken Bein, typisch für eine tiefe Venenthrombose.",
-              fourth:
-                "Dopplersonographie zeigt eine signifikante Verengung der A. femoralis mit erhöhten Flussgeschwindigkeiten proximal zur Verengung.",
-            },
-            {
-              first: "Interpretation der Ergebnisse",
-              second:
-                "Keine pathologischen Befunde; der gleichmäßige Fluss bestätigt den Ausschluss von Gefäßverengungen oder Thrombosen.",
-              third:
-                "Der Befund deutet auf eine tiefe Venenthrombose hin. Die eingeschränkte Kompressibilität und verminderte Flussgeschwindigkeit bestätigen dies.",
-              fourth:
-                "Die Verengung der Arterie korreliert mit den Symptomen und deutet auf eine arterielle Stenose hin. Die erhöhte Flussgeschwindigkeit ist typisch.",
-            },
-            {
-              first: "Integration in die Patientenversorgung",
-              second:
-                "Der Befund bestätigt die Gesundheit der Gefäße und gibt dem Patienten die Sicherheit, dass keine weiteren Maßnahmen nötig sind.",
-              third:
-                "Der Befund erfordert eine sofortige Antikoagulationstherapie, um das Risiko einer Lungenembolie zu reduzieren.",
-              fourth:
-                "Die Ergebnisse sind wichtig für die Planung einer operativen oder interventionellen Behandlung (z. B. Ballonangioplastie oder Stenteinlage).",
-            },
-            {
-              first: "Diagnose",
-              second:
-                "Bestätigung eines normalen Gefäßstatus ohne pathologische Veränderungen.",
-              third:
-                "Diagnose einer tiefen Venenthrombose basierend auf der Dopplersonographie und klinischem Bild.",
-              fourth:
-                "Diagnose einer signifikanten arteriellen Stenose aufgrund der Untersuchungsergebnisse und Symptomatik.",
-            },
-            {
-              first: "Visuelle Hilfsmittel",
-              second:
-                "Dopplersonographie zeigt ein homogenes Gefäßprofil ohne Auffälligkeiten oder Flussstörungen.",
-              third:
-                "Dopplersonographie zeigt eine nicht komprimierbare Vene und echogene Thrombusformation, typisch für eine tiefe Venenthrombose.",
-              fourth:
-                "Dopplersonographie zeigt eine Verengung mit turbulenter Flussmuster proximal der Verengung, typisch für eine arterielle Stenose.",
-            },
-            {
-              first: "Fallabschluss",
-              second:
-                "Wir empfehlen keine weiteren medizinischen Maßnahmen. Es ist jedoch zu empfehlen, regelmäßige Kontrollen zur Gesunderhaltung der Gefäße durchzuführen.",
-              third:
-                "Wir empfehlen eine sofortige Antikoagulationstherapie, um das Risiko einer Lungenembolie zu minimieren. Es ist zu empfehlen, regelmäßige Verlaufskontrollen durchzuführen.",
-              fourth:
-                "Es ist zu empfehlen, eine chirurgische Intervention oder eine interventionelle Behandlung wie eine Ballonangioplastie oder Stenteinlage durchzuführen. Langfristige Kontrollen sind wichtig.",
-            },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, untersucht im Rahmen einer Gefäß-Check-up-Routine. Keine relevante Vorgeschichte.",
+            third:
+              "65-jähriger Patient klagt über Schwellungen und Schmerzen im linken Bein. Vorgeschichte einer tiefen Venenthrombose (TVT).",
+            fourth:
+              "55-jähriger Patient berichtet über Schmerzen beim Gehen und Kältegefühl im rechten Bein. Vorgeschichte von Hypertonie und Diabetes.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Dopplersonographie zeigt einen gleichmäßigen Blutfluss in allen untersuchten Arterien und Venen ohne Anzeichen von Anomalien.",
+            third:
+              "Dopplersonographie zeigt eine nicht-kompressible Vene mit vermindertem Blutfluss im linken Bein, typisch für eine tiefe Venenthrombose.",
+            fourth:
+              "Dopplersonographie zeigt eine signifikante Verengung der A. femoralis mit erhöhten Flussgeschwindigkeiten proximal zur Verengung.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde; der gleichmäßige Fluss bestätigt den Ausschluss von Gefäßverengungen oder Thrombosen.",
+            third:
+              "Der Befund deutet auf eine tiefe Venenthrombose hin. Die eingeschränkte Kompressibilität und verminderte Flussgeschwindigkeit bestätigen dies.",
+            fourth:
+              "Die Verengung der Arterie korreliert mit den Symptomen und deutet auf eine arterielle Stenose hin. Die erhöhte Flussgeschwindigkeit ist typisch.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund bestätigt die Gesundheit der Gefäße und gibt dem Patienten die Sicherheit, dass keine weiteren Maßnahmen nötig sind.",
+            third:
+              "Der Befund erfordert eine sofortige Antikoagulationstherapie, um das Risiko einer Lungenembolie zu reduzieren.",
+            fourth:
+              "Die Ergebnisse sind wichtig für die Planung einer operativen oder interventionellen Behandlung (z. B. Ballonangioplastie oder Stenteinlage).",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung eines normalen Gefäßstatus ohne pathologische Veränderungen.",
+            third:
+              "Diagnose einer tiefen Venenthrombose basierend auf der Dopplersonographie und klinischem Bild.",
+            fourth:
+              "Diagnose einer signifikanten arteriellen Stenose aufgrund der Untersuchungsergebnisse und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Dopplersonographie zeigt ein homogenes Gefäßprofil ohne Auffälligkeiten oder Flussstörungen.",
+            third:
+              "Dopplersonographie zeigt eine nicht komprimierbare Vene und echogene Thrombusformation, typisch für eine tiefe Venenthrombose.",
+            fourth:
+              "Dopplersonographie zeigt eine Verengung mit turbulenter Flussmuster proximal der Verengung, typisch für eine arterielle Stenose.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen keine weiteren medizinischen Maßnahmen. Es ist jedoch zu empfehlen, regelmäßige Kontrollen zur Gesunderhaltung der Gefäße durchzuführen.",
+            third:
+              "Wir empfehlen eine sofortige Antikoagulationstherapie, um das Risiko einer Lungenembolie zu minimieren. Es ist zu empfehlen, regelmäßige Verlaufskontrollen durchzuführen.",
+            fourth:
+              "Es ist zu empfehlen, eine chirurgische Intervention oder eine interventionelle Behandlung wie eine Ballonangioplastie oder Stenteinlage durchzuführen. Langfristige Kontrollen sind wichtig.",
+          },
         ],
       },
       // 5tab 307
@@ -26176,112 +26145,110 @@ export const parentTabs = [
         id: 311,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Das Hauptziel der Knochendichtemessung ist die Ermittlung der Knochenmineraldichte (BMD), um das Risiko von Knochenbrüchen zu bewerten und Erkrankungen wie Osteoporose frühzeitig zu diagnostizieren.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die Knochendichtemessung findet vor allem Anwendung bei älteren Patienten, Frauen nach der Menopause und Menschen mit Risikofaktoren wie Langzeitsteroidtherapie oder familiärer Osteoporose. Sie ist auch relevant zur Überwachung des Therapieverlaufs bei Patienten mit Knochenstoffwechselstörungen.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die Knochendichte wird mittels Röntgenstrahlung gemessen. Das am häufigsten verwendete Verfahren ist die Dual-Röntgen-Absorptiometrie (DXA), bei der die Knochenmineraldichte in Gramm pro Quadratzentimeter (g/cm²) ermittelt wird.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Die DXA-Messung erfolgt meist an der Lendenwirbelsäule, den Hüften oder dem Unterarm. Der Patient liegt während der Untersuchung auf einem speziellen Tisch, während ein Scanner über den Körper fährt und die Knochenmineraldichte misst. Die Strahlenbelastung ist dabei sehr gering.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die Messergebnisse werden anhand von Vergleichswerten gesunder junger Erwachsener interpretiert, dem sogenannten T-Score. Ein T-Score zwischen -1 und -2,5 zeigt eine verringerte Knochenmasse (Osteopenie) an, ein Wert unter -2,5 deutet auf Osteoporose hin.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Zu den typischen Befunden gehören normale Knochendichte, Osteopenie (Vorstufe der Osteoporose) und Osteoporose. Diese Befunde helfen, das Frakturrisiko einzuschätzen und gegebenenfalls therapeutische Maßnahmen einzuleiten.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Knochendichtemessung ist eine schnelle, schmerzlose und wenig belastende Untersuchung mit niedriger Strahlenexposition. Sie liefert wichtige Informationen für die Diagnose und Behandlung von Knochenerkrankungen.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Die Messung kann in seltenen Fällen aufgrund von technischen Schwierigkeiten oder Artefakten ungenaue Ergebnisse liefern, insbesondere bei Patienten mit starkem Übergewicht oder Wirbelsäulendeformitäten.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Obwohl die Strahlenbelastung minimal ist, besteht bei häufiger Durchführung dennoch ein gewisses Risiko. Schwangere Frauen sollten vor der Durchführung der Untersuchung informiert werden.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Knochendichtemessung spielt eine zentrale Rolle bei der Diagnose von Osteoporose und der Vorbeugung von Frakturen. Sie ist auch wichtig für das Monitoring des Therapieerfolgs bei Patienten mit niedriger Knochendichte.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Durch die frühzeitige Erkennung einer niedrigen Knochendichte können präventive Maßnahmen wie medikamentöse Therapie und Lebensstiländerungen eingeleitet werden, um das Frakturrisiko zu senken.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Neben der DXA gibt es andere Verfahren zur Knochendichtemessung, wie die quantitative Computertomografie (QCT) oder die Ultraschallmessung des Fersenknochens, die jedoch seltener zum Einsatz kommen.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neue Studien fokussieren sich auf die Verbesserung der Messgenauigkeit und die Entwicklung noch strahlungsärmerer Verfahren.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Forschung könnte die Anwendung von künstlicher Intelligenz bei der Auswertung von Knochendichtemessungen erweitern, um personalisierte Behandlungsansätze zu fördern.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Knochendichtemessung ist ein unverzichtbares Werkzeug zur Diagnose und Überwachung von Knochenerkrankungen, insbesondere der Osteoporose.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Durch die einfache und schnelle Durchführung sowie die präzise Bewertung der Knochengesundheit leistet die Knochendichtemessung einen wesentlichen Beitrag zur präventiven und therapeutischen Patientenversorgung.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Hauptziel der Knochendichtemessung ist die Ermittlung der Knochenmineraldichte (BMD), um das Risiko von Knochenbrüchen zu bewerten und Erkrankungen wie Osteoporose frühzeitig zu diagnostizieren.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Knochendichtemessung findet vor allem Anwendung bei älteren Patienten, Frauen nach der Menopause und Menschen mit Risikofaktoren wie Langzeitsteroidtherapie oder familiärer Osteoporose. Sie ist auch relevant zur Überwachung des Therapieverlaufs bei Patienten mit Knochenstoffwechselstörungen.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Knochendichte wird mittels Röntgenstrahlung gemessen. Das am häufigsten verwendete Verfahren ist die Dual-Röntgen-Absorptiometrie (DXA), bei der die Knochenmineraldichte in Gramm pro Quadratzentimeter (g/cm²) ermittelt wird.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Die DXA-Messung erfolgt meist an der Lendenwirbelsäule, den Hüften oder dem Unterarm. Der Patient liegt während der Untersuchung auf einem speziellen Tisch, während ein Scanner über den Körper fährt und die Knochenmineraldichte misst. Die Strahlenbelastung ist dabei sehr gering.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Messergebnisse werden anhand von Vergleichswerten gesunder junger Erwachsener interpretiert, dem sogenannten T-Score. Ein T-Score zwischen -1 und -2,5 zeigt eine verringerte Knochenmasse (Osteopenie) an, ein Wert unter -2,5 deutet auf Osteoporose hin.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden gehören normale Knochendichte, Osteopenie (Vorstufe der Osteoporose) und Osteoporose. Diese Befunde helfen, das Frakturrisiko einzuschätzen und gegebenenfalls therapeutische Maßnahmen einzuleiten.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Knochendichtemessung ist eine schnelle, schmerzlose und wenig belastende Untersuchung mit niedriger Strahlenexposition. Sie liefert wichtige Informationen für die Diagnose und Behandlung von Knochenerkrankungen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Messung kann in seltenen Fällen aufgrund von technischen Schwierigkeiten oder Artefakten ungenaue Ergebnisse liefern, insbesondere bei Patienten mit starkem Übergewicht oder Wirbelsäulendeformitäten.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Obwohl die Strahlenbelastung minimal ist, besteht bei häufiger Durchführung dennoch ein gewisses Risiko. Schwangere Frauen sollten vor der Durchführung der Untersuchung informiert werden.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Knochendichtemessung spielt eine zentrale Rolle bei der Diagnose von Osteoporose und der Vorbeugung von Frakturen. Sie ist auch wichtig für das Monitoring des Therapieerfolgs bei Patienten mit niedriger Knochendichte.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die frühzeitige Erkennung einer niedrigen Knochendichte können präventive Maßnahmen wie medikamentöse Therapie und Lebensstiländerungen eingeleitet werden, um das Frakturrisiko zu senken.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Neben der DXA gibt es andere Verfahren zur Knochendichtemessung, wie die quantitative Computertomografie (QCT) oder die Ultraschallmessung des Fersenknochens, die jedoch seltener zum Einsatz kommen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Studien fokussieren sich auf die Verbesserung der Messgenauigkeit und die Entwicklung noch strahlungsärmerer Verfahren.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Forschung könnte die Anwendung von künstlicher Intelligenz bei der Auswertung von Knochendichtemessungen erweitern, um personalisierte Behandlungsansätze zu fördern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Knochendichtemessung ist ein unverzichtbares Werkzeug zur Diagnose und Überwachung von Knochenerkrankungen, insbesondere der Osteoporose.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Durch die einfache und schnelle Durchführung sowie die präzise Bewertung der Knochengesundheit leistet die Knochendichtemessung einen wesentlichen Beitrag zur präventiven und therapeutischen Patientenversorgung.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 312
@@ -26301,118 +26268,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie dem Patienten, dass die Knochendichtemessung dazu dient, die Knochenmineraldichte zu ermitteln und so das Risiko für Knochenbrüche sowie die Diagnose von Osteoporose oder Osteopenie zu ermöglichen.",
-                third:
-                  "Mit dieser Untersuchung können wir feststellen, ob Ihre Knochen an Dichte verlieren und somit anfälliger für Brüche sind, wie z.B. bei Osteoporose.",
-                fourth:
-                  "Das Ziel dieser Messung ist, festzustellen, ob Ihr Risiko für Knochenbrüche erhöht ist, besonders im Alter oder bei bestimmten Vorerkrankungen.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Beschreiben Sie den Ablauf: Der Patient legt sich auf eine Liege, und der Scanner misst an bestimmten Stellen (z.B. Lendenwirbelsäule, Hüfte) die Knochenmineraldichte mittels geringer Röntgenstrahlung.",
-                third:
-                  "Sie legen sich auf eine Liege, dann fährt der Scanner über Ihren unteren Rücken und Ihre Hüfte. Es ist schmerzfrei und dauert nur etwa 10 Minuten.",
-                fourth:
-                  "Für die Untersuchung müssen Sie still auf einer Liege liegen. Der Scanner wird Ihren Rücken und die Hüfte scannen. Die Untersuchung dauert nur einige Minuten.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie den Patienten darüber, dass keine spezielle Vorbereitung notwendig ist. Der Patient sollte jedoch bequeme Kleidung ohne Metallteile tragen und gegebenenfalls Schmuck ablegen.",
-                third:
-                  "Sie brauchen sich nicht speziell vorzubereiten. Es wäre aber gut, wenn Sie keine metallischen Gegenstände wie Schmuck oder einen Gürtel tragen.",
-                fourth:
-                  "Für die Untersuchung gibt es keine speziellen Vorbereitungen, aber bitte tragen Sie keine Kleidung mit Metallteilen wie Reißverschlüsse oder Knöpfe.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Betonen Sie, dass das Verfahren schmerzfrei und nicht-invasiv ist und die Strahlenbelastung sehr gering ist, weit unter der natürlichen Strahlenexposition.",
-                third:
-                  "Die Strahlenbelastung ist sehr gering, deutlich geringer als bei anderen Röntgenuntersuchungen. Es gibt keine ernsthaften Risiken.",
-                fourth:
-                  "Die Untersuchung ist komplett schmerzfrei und die Strahlenbelastung ist sehr gering, ähnlich wie bei einem Flug in großer Höhe.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erklären Sie, dass die Knochendichtemessung eine einfache, schnelle und genaue Methode zur Früherkennung von Osteoporose ist und eine wichtige Grundlage für präventive und therapeutische Maßnahmen bietet.",
-                third:
-                  "Diese Untersuchung hilft uns, frühzeitig Knochenschwund zu erkennen, sodass wir rechtzeitig mit der Therapie beginnen können, um Knochenbrüche zu verhindern.",
-                fourth:
-                  "Der Vorteil dieser Messung ist, dass wir mögliche Veränderungen in Ihrer Knochendichte schon früh erkennen und entsprechend behandeln können.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Erwähnen Sie alternative Verfahren wie die quantitative Computertomografie (QCT) oder Ultraschallmessungen, die aber weniger häufig eingesetzt werden und mit höherer Strahlenbelastung verbunden sind.",
-                third:
-                  "Es gibt auch alternative Untersuchungen wie die CT oder den Ultraschall, aber diese Methoden sind oft weniger genau oder mit höheren Risiken verbunden.",
-                fourth:
-                  "Eine Alternative wäre die Computertomografie, die aber mit einer höheren Strahlenbelastung einhergeht. Der Ultraschall ist weniger genau.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Informieren Sie den Patienten, dass es kaum Kontraindikationen gibt, jedoch sollte bei einer Schwangerschaft die Untersuchung vermieden werden.",
-                third:
-                  "Falls Sie schwanger sind oder eine Schwangerschaft vermuten, sollten wir die Untersuchung verschieben, da Strahlen Ihrem Baby schaden könnten.",
-                fourth:
-                  "Für Schwangere ist diese Untersuchung nicht geeignet, da die Strahlen das ungeborene Kind schädigen könnten.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Ergebnisse in Form eines T-Scores angegeben werden. Werte zwischen -1 und -2,5 deuten auf Osteopenie hin, unter -2,5 auf Osteoporose.",
-                third:
-                  "Nach der Untersuchung erhalten wir einen Wert, den sogenannten T-Score. Ein Wert unter -2,5 deutet auf Osteoporose hin, und wir können die Therapie anpassen.",
-                fourth:
-                  "Das Ergebnis zeigt, ob Ihre Knochendichte normal, vermindert oder stark vermindert ist. Das hilft uns, das Risiko für Knochenbrüche abzuschätzen.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, dass das Einverständnis des Patienten erforderlich ist, da es sich um eine diagnostische Maßnahme mit geringer Strahlenexposition handelt.",
-                third:
-                  "Da bei der Untersuchung Röntgenstrahlung verwendet wird, müssen Sie uns vor der Untersuchung Ihr schriftliches Einverständnis geben.",
-                fourth:
-                  "Es ist wichtig, dass Sie vor der Untersuchung zustimmen, da eine geringe Menge Röntgenstrahlung verwendet wird, auch wenn das Risiko sehr gering ist.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Stellen Sie sicher, dass der Patient alle Informationen erhalten hat, bevor Sie das schriftliche Einverständnis einholen.",
-                third:
-                  "Nachdem ich Ihnen alles erklärt habe, bitte ich Sie, dieses Formular zu unterschreiben, dass Sie mit der Untersuchung einverstanden sind.",
-                fourth:
-                  "Ich möchte sicherstellen, dass Sie alle Informationen verstanden haben. Bitte unterschreiben Sie das Formular, wenn Sie einverstanden sind.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Informieren Sie den Patienten, dass er sich nach der Untersuchung normal verhalten kann und keine besonderen Maßnahmen erforderlich sind.",
-                third:
-                  "Nach der Untersuchung können Sie Ihren normalen Tagesablauf fortsetzen. Es sind keine besonderen Vorkehrungen notwendig.",
-                fourth:
-                  "Sie können direkt nach der Untersuchung wieder nach Hause gehen oder Ihren normalen Tätigkeiten nachgehen. Es gibt keine Einschränkungen.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Ergebnisse der Untersuchung nach der Auswertung des T-Scores besprochen werden. Falls Auffälligkeiten vorliegen, wird eine Therapie oder weitere Diagnostik empfohlen.",
-                third:
-                  "Die Ergebnisse liegen in wenigen Tagen vor, und wir besprechen dann gemeinsam, ob eine Behandlung notwendig ist.",
-                fourth:
-                  "Ich werde die Ergebnisse mit Ihnen besprechen, sobald sie vorliegen, und Ihnen dann sagen, ob eine Therapie oder weitere Untersuchungen notwendig sind.",
-              },
-            
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Knochendichtemessung dazu dient, die Knochenmineraldichte zu ermitteln und so das Risiko für Knochenbrüche sowie die Diagnose von Osteoporose oder Osteopenie zu ermöglichen.",
+            third:
+              "Mit dieser Untersuchung können wir feststellen, ob Ihre Knochen an Dichte verlieren und somit anfälliger für Brüche sind, wie z.B. bei Osteoporose.",
+            fourth:
+              "Das Ziel dieser Messung ist, festzustellen, ob Ihr Risiko für Knochenbrüche erhöht ist, besonders im Alter oder bei bestimmten Vorerkrankungen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie den Ablauf: Der Patient legt sich auf eine Liege, und der Scanner misst an bestimmten Stellen (z.B. Lendenwirbelsäule, Hüfte) die Knochenmineraldichte mittels geringer Röntgenstrahlung.",
+            third:
+              "Sie legen sich auf eine Liege, dann fährt der Scanner über Ihren unteren Rücken und Ihre Hüfte. Es ist schmerzfrei und dauert nur etwa 10 Minuten.",
+            fourth:
+              "Für die Untersuchung müssen Sie still auf einer Liege liegen. Der Scanner wird Ihren Rücken und die Hüfte scannen. Die Untersuchung dauert nur einige Minuten.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten darüber, dass keine spezielle Vorbereitung notwendig ist. Der Patient sollte jedoch bequeme Kleidung ohne Metallteile tragen und gegebenenfalls Schmuck ablegen.",
+            third:
+              "Sie brauchen sich nicht speziell vorzubereiten. Es wäre aber gut, wenn Sie keine metallischen Gegenstände wie Schmuck oder einen Gürtel tragen.",
+            fourth:
+              "Für die Untersuchung gibt es keine speziellen Vorbereitungen, aber bitte tragen Sie keine Kleidung mit Metallteilen wie Reißverschlüsse oder Knöpfe.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass das Verfahren schmerzfrei und nicht-invasiv ist und die Strahlenbelastung sehr gering ist, weit unter der natürlichen Strahlenexposition.",
+            third:
+              "Die Strahlenbelastung ist sehr gering, deutlich geringer als bei anderen Röntgenuntersuchungen. Es gibt keine ernsthaften Risiken.",
+            fourth:
+              "Die Untersuchung ist komplett schmerzfrei und die Strahlenbelastung ist sehr gering, ähnlich wie bei einem Flug in großer Höhe.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass die Knochendichtemessung eine einfache, schnelle und genaue Methode zur Früherkennung von Osteoporose ist und eine wichtige Grundlage für präventive und therapeutische Maßnahmen bietet.",
+            third:
+              "Diese Untersuchung hilft uns, frühzeitig Knochenschwund zu erkennen, sodass wir rechtzeitig mit der Therapie beginnen können, um Knochenbrüche zu verhindern.",
+            fourth:
+              "Der Vorteil dieser Messung ist, dass wir mögliche Veränderungen in Ihrer Knochendichte schon früh erkennen und entsprechend behandeln können.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie alternative Verfahren wie die quantitative Computertomografie (QCT) oder Ultraschallmessungen, die aber weniger häufig eingesetzt werden und mit höherer Strahlenbelastung verbunden sind.",
+            third:
+              "Es gibt auch alternative Untersuchungen wie die CT oder den Ultraschall, aber diese Methoden sind oft weniger genau oder mit höheren Risiken verbunden.",
+            fourth:
+              "Eine Alternative wäre die Computertomografie, die aber mit einer höheren Strahlenbelastung einhergeht. Der Ultraschall ist weniger genau.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie den Patienten, dass es kaum Kontraindikationen gibt, jedoch sollte bei einer Schwangerschaft die Untersuchung vermieden werden.",
+            third:
+              "Falls Sie schwanger sind oder eine Schwangerschaft vermuten, sollten wir die Untersuchung verschieben, da Strahlen Ihrem Baby schaden könnten.",
+            fourth:
+              "Für Schwangere ist diese Untersuchung nicht geeignet, da die Strahlen das ungeborene Kind schädigen könnten.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse in Form eines T-Scores angegeben werden. Werte zwischen -1 und -2,5 deuten auf Osteopenie hin, unter -2,5 auf Osteoporose.",
+            third:
+              "Nach der Untersuchung erhalten wir einen Wert, den sogenannten T-Score. Ein Wert unter -2,5 deutet auf Osteoporose hin, und wir können die Therapie anpassen.",
+            fourth:
+              "Das Ergebnis zeigt, ob Ihre Knochendichte normal, vermindert oder stark vermindert ist. Das hilft uns, das Risiko für Knochenbrüche abzuschätzen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass das Einverständnis des Patienten erforderlich ist, da es sich um eine diagnostische Maßnahme mit geringer Strahlenexposition handelt.",
+            third:
+              "Da bei der Untersuchung Röntgenstrahlung verwendet wird, müssen Sie uns vor der Untersuchung Ihr schriftliches Einverständnis geben.",
+            fourth:
+              "Es ist wichtig, dass Sie vor der Untersuchung zustimmen, da eine geringe Menge Röntgenstrahlung verwendet wird, auch wenn das Risiko sehr gering ist.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Stellen Sie sicher, dass der Patient alle Informationen erhalten hat, bevor Sie das schriftliche Einverständnis einholen.",
+            third:
+              "Nachdem ich Ihnen alles erklärt habe, bitte ich Sie, dieses Formular zu unterschreiben, dass Sie mit der Untersuchung einverstanden sind.",
+            fourth:
+              "Ich möchte sicherstellen, dass Sie alle Informationen verstanden haben. Bitte unterschreiben Sie das Formular, wenn Sie einverstanden sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Informieren Sie den Patienten, dass er sich nach der Untersuchung normal verhalten kann und keine besonderen Maßnahmen erforderlich sind.",
+            third:
+              "Nach der Untersuchung können Sie Ihren normalen Tagesablauf fortsetzen. Es sind keine besonderen Vorkehrungen notwendig.",
+            fourth:
+              "Sie können direkt nach der Untersuchung wieder nach Hause gehen oder Ihren normalen Tätigkeiten nachgehen. Es gibt keine Einschränkungen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse der Untersuchung nach der Auswertung des T-Scores besprochen werden. Falls Auffälligkeiten vorliegen, wird eine Therapie oder weitere Diagnostik empfohlen.",
+            third:
+              "Die Ergebnisse liegen in wenigen Tagen vor, und wir besprechen dann gemeinsam, ob eine Behandlung notwendig ist.",
+            fourth:
+              "Ich werde die Ergebnisse mit Ihnen besprechen, sobald sie vorliegen, und Ihnen dann sagen, ob eine Therapie oder weitere Untersuchungen notwendig sind.",
+          },
         ],
       },
       // 3tab 313
@@ -26432,100 +26395,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Erklären Sie, dass es sich bei der Knochendichtemessung um ein bildgebendes Verfahren zur Bestimmung der Knochenmineraldichte handelt, das vor allem zur Früherkennung von Osteoporose verwendet wird.",
-                third:
-                  "Die Knochendichtemessung, oder Osteodensitometrie, ist ein bildgebendes Verfahren zur Bestimmung der Knochenmineraldichte, welches vor allem zur Diagnose von Osteoporose eingesetzt wird.",
-                fourth:
-                  "Es handelt sich bei der Knochendichtemessung um ein schnelles und nicht-invasives Verfahren, das uns ermöglicht, die Knochenmineraldichte zu bestimmen und Frakturrisiken abzuschätzen.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Informieren Sie, dass mit der Knochendichtemessung die Knochenmineraldichte gemessen wird, um das Risiko für Frakturen einzuschätzen und um Erkrankungen wie Osteoporose oder Osteopenie zu diagnostizieren.",
-                third:
-                  "Mit der Untersuchung können wir insbesondere das Risiko für Frakturen feststellen, indem wir die Knochenmineraldichte messen. Bei einer niedrigen Dichte besteht ein erhöhtes Frakturrisiko.",
-                fourth:
-                  "Wir nutzen die Knochendichtemessung, um die Dichte des Knochens zu überprüfen und frühzeitig Osteopenie oder Osteoporose zu diagnostizieren, was besonders im Alter wichtig ist.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Betonen Sie, dass die Ergebnisse als T-Score dargestellt werden. Ein T-Score zwischen -1 und -2,5 weist auf Osteopenie hin, während ein Wert unter -2,5 Osteoporose anzeigt.",
-                third:
-                  "Die Untersuchung liefert einen T-Score. Ein Wert unter -2,5 bedeutet, dass der Patient Osteoporose hat. Dies erhöht das Frakturrisiko erheblich, was therapeutische Maßnahmen erfordert.",
-                fourth:
-                  "Der T-Score zeigt uns die Knochenmineraldichte im Vergleich zu einem gesunden jungen Erwachsenen. Werte unter -2,5 sind ein Hinweis auf Osteoporose, was das Frakturrisiko erhöht.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Beschreiben Sie, dass die Indikationen für die Knochendichtemessung unter anderem ein erhöhtes Frakturrisiko, Frauen nach der Menopause, Langzeitsteroidtherapie und familiäre Belastung umfassen.",
-                third:
-                  "Indikationen für die Knochendichtemessung sind ein erhöhtes Frakturrisiko, wie es bei postmenopausalen Frauen oder Patienten mit Langzeitsteroidtherapie häufig vorkommt.",
-                fourth:
-                  "Patienten mit Risikofaktoren wie familiärer Osteoporose oder Personen über 65 Jahre sollten zur Früherkennung eine Knochendichtemessung erhalten.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erwähnen Sie, dass die Untersuchung während der Schwangerschaft aufgrund der Strahlenexposition vermieden werden sollte, obwohl die Strahlendosis gering ist.",
-                third:
-                  "Eine Kontraindikation besteht bei Schwangeren, da die Strahlenbelastung, obwohl gering, ein Risiko für den Fötus darstellen kann.",
-                fourth:
-                  "Während der Schwangerschaft sollte diese Untersuchung vermieden werden, da Strahlenpotenzial für Schäden beim Fötus besteht, obwohl die Strahlung niedrig ist.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Erklären Sie, dass Differenzialdiagnosen zur Osteoporose auch andere Knochenerkrankungen wie Osteomalazie oder Morbus Paget umfassen können, die eine Behandlung erfordern.",
-                third:
-                  "Neben Osteoporose sollten wir bei einer verringerten Knochenmasse auch an Osteomalazie oder metabolische Knochenerkrankungen denken.",
-                fourth:
-                  "Differenzialdiagnosen wie Osteomalazie oder Morbus Paget sollten berücksichtigt werden, besonders bei untypischen klinischen Befunden.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Betonen Sie, dass auf Basis der Knochendichtemessung präventive Maßnahmen oder therapeutische Interventionen, wie z.B. Bisphosphonate oder Kalzium/Vitamin-D-Supplementierung, geplant werden können.",
-                third:
-                  "Bei einem T-Score unter -2,5 würde ich eine Therapie mit Bisphosphonaten in Erwägung ziehen, ergänzt durch eine Kalzium- und Vitamin-D-Supplementierung.",
-                fourth:
-                  "Wenn der Patient Osteoporose hat, sollten wir zusätzlich zu Kalzium und Vitamin D auch über eine gezielte Therapie wie Bisphosphonate oder Hormonersatztherapie nachdenken.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Beschreiben Sie die Notwendigkeit der Zusammenarbeit mit Endokrinologen, Rheumatologen, Physiotherapeuten und Pflegekräften, um eine umfassende Behandlung der Patienten sicherzustellen.",
-                third:
-                  "Für die Therapie benötigen wir eine enge Zusammenarbeit mit Endokrinologen und Physiotherapeuten, um ein umfassendes Behandlungskonzept zu erstellen.",
-                fourth:
-                  "Die interprofessionelle Zusammenarbeit, insbesondere mit Rheumatologen und Physiotherapeuten, ist entscheidend, um die Patienten optimal zu betreuen.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Erwähnen Sie, dass die Durchführung der Knochendichtemessung im Rahmen der Qualitätsstandards erfolgt, um präzise und reproduzierbare Ergebnisse zu gewährleisten.",
-                third:
-                  "Um präzise und konsistente Ergebnisse zu gewährleisten, sollten die Geräte regelmäßig kalibriert werden und das Personal entsprechend geschult sein.",
-                fourth:
-                  "Für eine korrekte Durchführung der Knochendichtemessung ist es wichtig, dass wir die Geräte regelmäßig warten und sicherstellen, dass die Messungen standardisiert erfolgen.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Betonen Sie, dass die Untersuchungsergebnisse genau dokumentiert und im Patientendossier vermerkt werden sollten.",
-                third:
-                  "Die Ergebnisse der Untersuchung sollten genau dokumentiert und im weiteren Verlauf des Patienten regelmäßig überprüft werden, um den Therapieerfolg zu kontrollieren.",
-                fourth:
-                  "Die Messergebnisse müssen im Patientenbericht festgehalten und bei regelmäßigen Nachuntersuchungen verglichen werden, um den Fortschritt zu dokumentieren.",
-              },
-            
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass es sich bei der Knochendichtemessung um ein bildgebendes Verfahren zur Bestimmung der Knochenmineraldichte handelt, das vor allem zur Früherkennung von Osteoporose verwendet wird.",
+            third:
+              "Die Knochendichtemessung, oder Osteodensitometrie, ist ein bildgebendes Verfahren zur Bestimmung der Knochenmineraldichte, welches vor allem zur Diagnose von Osteoporose eingesetzt wird.",
+            fourth:
+              "Es handelt sich bei der Knochendichtemessung um ein schnelles und nicht-invasives Verfahren, das uns ermöglicht, die Knochenmineraldichte zu bestimmen und Frakturrisiken abzuschätzen.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Informieren Sie, dass mit der Knochendichtemessung die Knochenmineraldichte gemessen wird, um das Risiko für Frakturen einzuschätzen und um Erkrankungen wie Osteoporose oder Osteopenie zu diagnostizieren.",
+            third:
+              "Mit der Untersuchung können wir insbesondere das Risiko für Frakturen feststellen, indem wir die Knochenmineraldichte messen. Bei einer niedrigen Dichte besteht ein erhöhtes Frakturrisiko.",
+            fourth:
+              "Wir nutzen die Knochendichtemessung, um die Dichte des Knochens zu überprüfen und frühzeitig Osteopenie oder Osteoporose zu diagnostizieren, was besonders im Alter wichtig ist.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Betonen Sie, dass die Ergebnisse als T-Score dargestellt werden. Ein T-Score zwischen -1 und -2,5 weist auf Osteopenie hin, während ein Wert unter -2,5 Osteoporose anzeigt.",
+            third:
+              "Die Untersuchung liefert einen T-Score. Ein Wert unter -2,5 bedeutet, dass der Patient Osteoporose hat. Dies erhöht das Frakturrisiko erheblich, was therapeutische Maßnahmen erfordert.",
+            fourth:
+              "Der T-Score zeigt uns die Knochenmineraldichte im Vergleich zu einem gesunden jungen Erwachsenen. Werte unter -2,5 sind ein Hinweis auf Osteoporose, was das Frakturrisiko erhöht.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Beschreiben Sie, dass die Indikationen für die Knochendichtemessung unter anderem ein erhöhtes Frakturrisiko, Frauen nach der Menopause, Langzeitsteroidtherapie und familiäre Belastung umfassen.",
+            third:
+              "Indikationen für die Knochendichtemessung sind ein erhöhtes Frakturrisiko, wie es bei postmenopausalen Frauen oder Patienten mit Langzeitsteroidtherapie häufig vorkommt.",
+            fourth:
+              "Patienten mit Risikofaktoren wie familiärer Osteoporose oder Personen über 65 Jahre sollten zur Früherkennung eine Knochendichtemessung erhalten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass die Untersuchung während der Schwangerschaft aufgrund der Strahlenexposition vermieden werden sollte, obwohl die Strahlendosis gering ist.",
+            third:
+              "Eine Kontraindikation besteht bei Schwangeren, da die Strahlenbelastung, obwohl gering, ein Risiko für den Fötus darstellen kann.",
+            fourth:
+              "Während der Schwangerschaft sollte diese Untersuchung vermieden werden, da Strahlenpotenzial für Schäden beim Fötus besteht, obwohl die Strahlung niedrig ist.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erklären Sie, dass Differenzialdiagnosen zur Osteoporose auch andere Knochenerkrankungen wie Osteomalazie oder Morbus Paget umfassen können, die eine Behandlung erfordern.",
+            third:
+              "Neben Osteoporose sollten wir bei einer verringerten Knochenmasse auch an Osteomalazie oder metabolische Knochenerkrankungen denken.",
+            fourth:
+              "Differenzialdiagnosen wie Osteomalazie oder Morbus Paget sollten berücksichtigt werden, besonders bei untypischen klinischen Befunden.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Betonen Sie, dass auf Basis der Knochendichtemessung präventive Maßnahmen oder therapeutische Interventionen, wie z.B. Bisphosphonate oder Kalzium/Vitamin-D-Supplementierung, geplant werden können.",
+            third:
+              "Bei einem T-Score unter -2,5 würde ich eine Therapie mit Bisphosphonaten in Erwägung ziehen, ergänzt durch eine Kalzium- und Vitamin-D-Supplementierung.",
+            fourth:
+              "Wenn der Patient Osteoporose hat, sollten wir zusätzlich zu Kalzium und Vitamin D auch über eine gezielte Therapie wie Bisphosphonate oder Hormonersatztherapie nachdenken.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Beschreiben Sie die Notwendigkeit der Zusammenarbeit mit Endokrinologen, Rheumatologen, Physiotherapeuten und Pflegekräften, um eine umfassende Behandlung der Patienten sicherzustellen.",
+            third:
+              "Für die Therapie benötigen wir eine enge Zusammenarbeit mit Endokrinologen und Physiotherapeuten, um ein umfassendes Behandlungskonzept zu erstellen.",
+            fourth:
+              "Die interprofessionelle Zusammenarbeit, insbesondere mit Rheumatologen und Physiotherapeuten, ist entscheidend, um die Patienten optimal zu betreuen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erwähnen Sie, dass die Durchführung der Knochendichtemessung im Rahmen der Qualitätsstandards erfolgt, um präzise und reproduzierbare Ergebnisse zu gewährleisten.",
+            third:
+              "Um präzise und konsistente Ergebnisse zu gewährleisten, sollten die Geräte regelmäßig kalibriert werden und das Personal entsprechend geschult sein.",
+            fourth:
+              "Für eine korrekte Durchführung der Knochendichtemessung ist es wichtig, dass wir die Geräte regelmäßig warten und sicherstellen, dass die Messungen standardisiert erfolgen.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Betonen Sie, dass die Untersuchungsergebnisse genau dokumentiert und im Patientendossier vermerkt werden sollten.",
+            third:
+              "Die Ergebnisse der Untersuchung sollten genau dokumentiert und im weiteren Verlauf des Patienten regelmäßig überprüft werden, um den Therapieerfolg zu kontrollieren.",
+            fourth:
+              "Die Messergebnisse müssen im Patientenbericht festgehalten und bei regelmäßigen Nachuntersuchungen verglichen werden, um den Fortschritt zu dokumentieren.",
+          },
         ],
       },
       // 4tab 314
@@ -26545,73 +26504,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "40-jähriger Patient ohne Beschwerden, Routineuntersuchung zur Prävention ohne Vorerkrankungen.",
-                third:
-                  "70-jährige Patientin, postmenopausal, klagt über Rückenschmerzen und hat eine Fraktur des Handgelenks erlitten.",
-                fourth:
-                  "60-jähriger Patient mit Langzeitsteroidtherapie wegen einer chronischen Lungenerkrankung.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "DXA zeigt einen T-Score von 0,8, was auf eine normale Knochendichte hindeutet.",
-                third:
-                  "DXA zeigt einen T-Score von -3,0 an der Lendenwirbelsäule und der Hüfte, was auf eine stark reduzierte Knochendichte hindeutet.",
-                fourth:
-                  "DXA zeigt einen T-Score von -1,8, was auf eine moderate Verringerung der Knochendichte hindeutet.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Der T-Score liegt im Normalbereich, keine Anzeichen für Knochenschwund oder Frakturrisiko.",
-                third:
-                  "Der T-Score von -3,0 weist auf eine Osteoporose hin, was das erhöhte Risiko für Frakturen erklärt.",
-                fourth:
-                  "Ein T-Score von -1,8 deutet auf Osteopenie hin, was eine Vorstufe zur Osteoporose darstellt.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Regelmäßige Kontrollen alle 5 Jahre, Beratung über gesunde Ernährung und Bewegung zur Prävention.",
-                third:
-                  "Sofortige Therapieeinleitung mit Bisphosphonaten, Kalzium- und Vitamin-D-Supplementierung, sowie Physiotherapie.",
-                fourth:
-                  "Empfehlung einer präventiven Therapie mit Kalzium- und Vitamin-D-Supplementierung, Überwachung in 1 Jahr.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung eines gesunden Knochens ohne Anzeichen von Osteoporose oder Osteopenie.",
-                third:
-                  "Diagnose einer fortgeschrittenen Osteoporose basierend auf den DXA-Ergebnissen und klinischem Bild.",
-                fourth:
-                  "Diagnose von Osteopenie aufgrund der gemessenen Knochendichte und Risikofaktoren.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "DXA zeigt eine gleichmäßig normale Knochendichte in allen gemessenen Bereichen.",
-                third:
-                  "DXA zeigt deutliche Reduktion der Knochenmineraldichte in der Hüfte und Lendenwirbelsäule.",
-                fourth:
-                  "DXA zeigt eine moderate Verringerung der Knochendichte, besonders in der Lendenwirbelsäule.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Es ist zu empfehlen, weiterhin einen gesunden Lebensstil mit ausreichend Kalzium und Bewegung beizubehalten, regelmäßige Kontrollen sind alle 5 Jahre zu empfehlen.",
-                third:
-                  "Wir empfehlen eine sofortige medikamentöse Therapie mit Bisphosphonaten sowie regelmäßige Kontrolluntersuchungen.",
-                fourth:
-                  "Es ist zu empfehlen, präventive Maßnahmen wie Kalzium- und Vitamin-D-Einnahme zu beginnen und in einem Jahr eine erneute Messung durchzuführen.",
-              },
-            
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung zur Prävention ohne Vorerkrankungen.",
+            third:
+              "70-jährige Patientin, postmenopausal, klagt über Rückenschmerzen und hat eine Fraktur des Handgelenks erlitten.",
+            fourth:
+              "60-jähriger Patient mit Langzeitsteroidtherapie wegen einer chronischen Lungenerkrankung.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "DXA zeigt einen T-Score von 0,8, was auf eine normale Knochendichte hindeutet.",
+            third:
+              "DXA zeigt einen T-Score von -3,0 an der Lendenwirbelsäule und der Hüfte, was auf eine stark reduzierte Knochendichte hindeutet.",
+            fourth:
+              "DXA zeigt einen T-Score von -1,8, was auf eine moderate Verringerung der Knochendichte hindeutet.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Der T-Score liegt im Normalbereich, keine Anzeichen für Knochenschwund oder Frakturrisiko.",
+            third:
+              "Der T-Score von -3,0 weist auf eine Osteoporose hin, was das erhöhte Risiko für Frakturen erklärt.",
+            fourth:
+              "Ein T-Score von -1,8 deutet auf Osteopenie hin, was eine Vorstufe zur Osteoporose darstellt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Regelmäßige Kontrollen alle 5 Jahre, Beratung über gesunde Ernährung und Bewegung zur Prävention.",
+            third:
+              "Sofortige Therapieeinleitung mit Bisphosphonaten, Kalzium- und Vitamin-D-Supplementierung, sowie Physiotherapie.",
+            fourth:
+              "Empfehlung einer präventiven Therapie mit Kalzium- und Vitamin-D-Supplementierung, Überwachung in 1 Jahr.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung eines gesunden Knochens ohne Anzeichen von Osteoporose oder Osteopenie.",
+            third:
+              "Diagnose einer fortgeschrittenen Osteoporose basierend auf den DXA-Ergebnissen und klinischem Bild.",
+            fourth:
+              "Diagnose von Osteopenie aufgrund der gemessenen Knochendichte und Risikofaktoren.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "DXA zeigt eine gleichmäßig normale Knochendichte in allen gemessenen Bereichen.",
+            third:
+              "DXA zeigt deutliche Reduktion der Knochenmineraldichte in der Hüfte und Lendenwirbelsäule.",
+            fourth:
+              "DXA zeigt eine moderate Verringerung der Knochendichte, besonders in der Lendenwirbelsäule.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, weiterhin einen gesunden Lebensstil mit ausreichend Kalzium und Bewegung beizubehalten, regelmäßige Kontrollen sind alle 5 Jahre zu empfehlen.",
+            third:
+              "Wir empfehlen eine sofortige medikamentöse Therapie mit Bisphosphonaten sowie regelmäßige Kontrolluntersuchungen.",
+            fourth:
+              "Es ist zu empfehlen, präventive Maßnahmen wie Kalzium- und Vitamin-D-Einnahme zu beginnen und in einem Jahr eine erneute Messung durchzuführen.",
+          },
         ],
       },
       // 5tab 315
@@ -26841,112 +26796,110 @@ export const parentTabs = [
         id: 319,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Das Ziel der Knochenmarkbiopsie ist es, eine Gewebeprobe aus dem Knochenmark zu gewinnen, um bestimmte Erkrankungen des Blutsystems zu diagnostizieren, wie z.B. Leukämien, Anämien oder Myelome.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die Knochenmarkbiopsie wird in der Hämatologie und Onkologie angewendet, um Blutbildveränderungen oder unklare Laborbefunde weiter zu untersuchen. Sie dient zur Diagnostik, Überwachung des Krankheitsverlaufs und zur Therapieplanung.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Das Knochenmark ist das Gewebe, in dem die Blutbildung (Hämatopoese) stattfindet. Bei Verdacht auf hämatologische Erkrankungen kann eine Knochenmarkbiopsie Aufschluss über Zellzusammensetzung und -reifung geben.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Die Biopsie wird in der Regel am Beckenkamm durchgeführt. Nach einer örtlichen Betäubung wird eine Hohlnadel in den Knochen eingeführt, um eine kleine Probe des Knochenmarks zu entnehmen. Der Eingriff dauert in der Regel nur wenige Minuten.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die entnommene Probe wird unter dem Mikroskop untersucht, um Zellmorphologie, Zellverteilung und das Vorhandensein krankhafter Zellen zu beurteilen.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Zu den typischen Befunden gehören veränderte Zelllinien bei Leukämien, eine Überproduktion von Zellen bei Myeloproliferationen oder eine verminderte Zellbildung bei aplastischer Anämie.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Knochenmarkbiopsie bietet eine genaue Diagnostik von hämatologischen Erkrankungen und ermöglicht eine gezielte Therapie.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Der Eingriff kann schmerzhaft sein, und es besteht ein geringes Risiko von Komplikationen wie Infektionen oder Blutungen.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Zu den Risiken gehören Schmerzen an der Einstichstelle, Blutungen, Infektionen und in seltenen Fällen allergische Reaktionen auf die Betäubung.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Knochenmarkbiopsie spielt eine zentrale Rolle bei der Diagnose von Blutkrankheiten und hilft, die richtige Behandlung zu planen und den Therapieerfolg zu überwachen.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Dieses Verfahren ermöglicht es, den Krankheitsverlauf präzise zu überwachen und Therapieentscheidungen entsprechend anzupassen.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "Alternative Verfahren:",
-                  text: "Als alternative Verfahren zur Knochenmarkbiopsie kommen in bestimmten Fällen bildgebende Verfahren oder Bluttests infrage, jedoch bieten diese meist nicht die gleiche diagnostische Genauigkeit.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Aktuelle Forschung konzentriert sich auf weniger invasive Techniken und die Verbesserung der diagnostischen Genauigkeit durch molekulare Analysen der entnommenen Proben.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Entwicklungen könnten die Knochenmarkbiopsie durch fortschrittliche Bluttests oder nicht-invasive bildgebende Verfahren ersetzen.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Knochenmarkbiopsie ist ein unverzichtbares diagnostisches Verfahren in der Hämatologie und Onkologie. Trotz kleiner Risiken bietet sie präzise Einblicke in die Blutbildung und ermöglicht eine gezielte Therapieplanung.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "In der Diagnostik von Bluterkrankungen bleibt die Knochenmarkbiopsie ein zentrales Instrument, das wesentlich zur Verbesserung der Patientenversorgung beiträgt.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Ziel der Knochenmarkbiopsie ist es, eine Gewebeprobe aus dem Knochenmark zu gewinnen, um bestimmte Erkrankungen des Blutsystems zu diagnostizieren, wie z.B. Leukämien, Anämien oder Myelome.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Knochenmarkbiopsie wird in der Hämatologie und Onkologie angewendet, um Blutbildveränderungen oder unklare Laborbefunde weiter zu untersuchen. Sie dient zur Diagnostik, Überwachung des Krankheitsverlaufs und zur Therapieplanung.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Das Knochenmark ist das Gewebe, in dem die Blutbildung (Hämatopoese) stattfindet. Bei Verdacht auf hämatologische Erkrankungen kann eine Knochenmarkbiopsie Aufschluss über Zellzusammensetzung und -reifung geben.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Die Biopsie wird in der Regel am Beckenkamm durchgeführt. Nach einer örtlichen Betäubung wird eine Hohlnadel in den Knochen eingeführt, um eine kleine Probe des Knochenmarks zu entnehmen. Der Eingriff dauert in der Regel nur wenige Minuten.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die entnommene Probe wird unter dem Mikroskop untersucht, um Zellmorphologie, Zellverteilung und das Vorhandensein krankhafter Zellen zu beurteilen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den typischen Befunden gehören veränderte Zelllinien bei Leukämien, eine Überproduktion von Zellen bei Myeloproliferationen oder eine verminderte Zellbildung bei aplastischer Anämie.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Knochenmarkbiopsie bietet eine genaue Diagnostik von hämatologischen Erkrankungen und ermöglicht eine gezielte Therapie.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Der Eingriff kann schmerzhaft sein, und es besteht ein geringes Risiko von Komplikationen wie Infektionen oder Blutungen.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Zu den Risiken gehören Schmerzen an der Einstichstelle, Blutungen, Infektionen und in seltenen Fällen allergische Reaktionen auf die Betäubung.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Knochenmarkbiopsie spielt eine zentrale Rolle bei der Diagnose von Blutkrankheiten und hilft, die richtige Behandlung zu planen und den Therapieerfolg zu überwachen.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Dieses Verfahren ermöglicht es, den Krankheitsverlauf präzise zu überwachen und Therapieentscheidungen entsprechend anzupassen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "Alternative Verfahren:",
+                text: "Als alternative Verfahren zur Knochenmarkbiopsie kommen in bestimmten Fällen bildgebende Verfahren oder Bluttests infrage, jedoch bieten diese meist nicht die gleiche diagnostische Genauigkeit.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Forschung konzentriert sich auf weniger invasive Techniken und die Verbesserung der diagnostischen Genauigkeit durch molekulare Analysen der entnommenen Proben.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen könnten die Knochenmarkbiopsie durch fortschrittliche Bluttests oder nicht-invasive bildgebende Verfahren ersetzen.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Knochenmarkbiopsie ist ein unverzichtbares diagnostisches Verfahren in der Hämatologie und Onkologie. Trotz kleiner Risiken bietet sie präzise Einblicke in die Blutbildung und ermöglicht eine gezielte Therapieplanung.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "In der Diagnostik von Bluterkrankungen bleibt die Knochenmarkbiopsie ein zentrales Instrument, das wesentlich zur Verbesserung der Patientenversorgung beiträgt.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 320
@@ -26966,118 +26919,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie dem Patienten, dass das Ziel der Knochenmarkbiopsie darin besteht, eine Gewebeprobe aus dem Knochenmark zu entnehmen, um Leukämien, Anämien oder andere Blutkrankheiten zu diagnostizieren.",
-                third:
-                  "Wir möchten die Probe entnehmen, um die genaue Ursache für Ihre Blutarmut festzustellen.",
-                fourth:
-                  "Durch die Biopsie können wir herausfinden, ob eine bösartige Erkrankung, wie Leukämie, vorliegt.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Erläutern Sie den Ablauf: Zunächst wird eine örtliche Betäubung verabreicht. Anschließend wird mit einer speziellen Nadel eine kleine Probe des Knochenmarks aus dem Beckenkamm entnommen. Der Eingriff dauert nur wenige Minuten.",
-                third:
-                  "Zuerst erhalten Sie eine örtliche Betäubung, um den Bereich unempfindlich zu machen. Dann wird eine Nadel in Ihren Beckenknochen eingeführt, um eine Probe zu entnehmen.",
-                fourth:
-                  "Der Eingriff dauert nur etwa 10 Minuten, Sie können danach wieder nach Hause gehen und die Einstichstelle könnte sich für einige Tage empfindlich anfühlen.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie den Patienten, dass er eventuell auf blutverdünnende Medikamente verzichten sollte. Zudem sollte er nüchtern bleiben, wenn eine Vollnarkose geplant ist.",
-                third:
-                  "Wenn Sie blutverdünnende Medikamente einnehmen, müssen wir diese möglicherweise vorher absetzen.",
-                fourth:
-                  "Falls eine Vollnarkose nötig ist, dürfen Sie einige Stunden vor dem Eingriff nichts essen oder trinken.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Betonen Sie mögliche Risiken, wie Schmerzen an der Einstichstelle, Blutungen, Infektionen oder in seltenen Fällen allergische Reaktionen auf das Betäubungsmittel.",
-                third:
-                  "Es kann zu leichten Schmerzen oder Blutungen an der Einstichstelle kommen, das heilt aber meist schnell ab.",
-                fourth:
-                  "Es besteht ein geringes Risiko für eine Infektion, deshalb sollten Sie die Stelle sauber und trocken halten.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erklären Sie die Vorteile des Verfahrens: Die Knochenmarkbiopsie liefert genaue Informationen über Erkrankungen und ermöglicht gezielte Therapieplanung.",
-                third:
-                  "Die Biopsie ist der beste Weg, um genau festzustellen, welche Art von Blutkrankheit Sie haben.",
-                fourth:
-                  "Diese Untersuchung hilft uns, die richtige Therapie für Sie auszuwählen.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Informieren Sie den Patienten über mögliche Alternativen, wie etwa Bluttests oder bildgebende Verfahren, die jedoch oft nicht die gleiche Genauigkeit bieten.",
-                third:
-                  "Alternativ könnten wir Bluttests durchführen, aber diese liefern oft nicht so genaue Informationen wie die Biopsie.",
-                fourth:
-                  "In manchen Fällen kann auch ein MRT in Frage kommen, aber es ersetzt nicht die Genauigkeit der Biopsie.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erwähnen Sie, dass bestimmte Faktoren, wie schwere Blutgerinnungsstörungen, eine Kontraindikation für das Verfahren darstellen können.",
-                third:
-                  "Wenn Sie an schweren Blutgerinnungsstörungen leiden, sollten wir die Biopsie eventuell nicht durchführen.",
-                fourth:
-                  "Sollten Sie allergisch auf Betäubungsmittel reagieren, müssen wir das im Vorfeld berücksichtigen.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erläutern Sie dem Patienten, dass die Biopsie Aufschluss über verschiedene Blutkrankheiten geben kann, z.B. Leukämien, aplastische Anämie oder myeloproliferative Erkrankungen.",
-                third:
-                  "Mit der Biopsie können wir feststellen, ob bei Ihnen eine Leukämie vorliegt.",
-                fourth:
-                  "Die Untersuchung zeigt, ob Ihre Blutbildungsstörung auf eine aplastische Anämie zurückzuführen ist.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, wie wichtig das Einverständnis des Patienten für das Verfahren ist, und dass er über alle Risiken und Vorteile umfassend informiert wird.",
-                third:
-                  "Es ist wichtig, dass Sie alle Details verstehen, bevor Sie Ihr Einverständnis geben.",
-                fourth:
-                  "Wir benötigen Ihr schriftliches Einverständnis, nachdem wir alle Risiken und Vorteile besprochen haben.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Informieren Sie den Patienten, dass er vor dem Eingriff schriftlich sein Einverständnis geben muss und dass ihm alle offenen Fragen beantwortet werden sollten.",
-                third:
-                  "Sie müssen ein Formular unterschreiben, nachdem wir Ihre Fragen beantwortet haben.",
-                fourth:
-                  "Wir warten mit dem Eingriff, bis Sie Ihr schriftliches Einverständnis gegeben haben und alle Ihre Bedenken geklärt sind.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Geben Sie dem Patienten abschließende Hinweise, wie er sich nach der Biopsie verhalten soll, das Beobachten der Einstichstelle auf mögliche Infektionsanzeichen.",
-                third:
-                  "Vermeiden Sie körperliche Anstrengung für einige Tage und halten Sie die Einstichstelle sauber.",
-                fourth:
-                  "Wenn Sie nach der Biopsie Fieber oder starke Schmerzen haben, sollten Sie sofort einen Arzt aufsuchen.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Erklären Sie dem Patienten, dass die Ergebnisse der Biopsie einige Tage bis zu einer Woche dauern können.",
-                third:
-                  "Die Ergebnisse werden etwa eine Woche dauern, wir informieren Sie, sobald sie vorliegen.",
-                fourth:
-                  "Wir werden uns in einigen Tagen bei Ihnen melden, um die Ergebnisse zu besprechen und den nächsten Schritt zu planen.",
-              },
-            
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass das Ziel der Knochenmarkbiopsie darin besteht, eine Gewebeprobe aus dem Knochenmark zu entnehmen, um Leukämien, Anämien oder andere Blutkrankheiten zu diagnostizieren.",
+            third:
+              "Wir möchten die Probe entnehmen, um die genaue Ursache für Ihre Blutarmut festzustellen.",
+            fourth:
+              "Durch die Biopsie können wir herausfinden, ob eine bösartige Erkrankung, wie Leukämie, vorliegt.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie den Ablauf: Zunächst wird eine örtliche Betäubung verabreicht. Anschließend wird mit einer speziellen Nadel eine kleine Probe des Knochenmarks aus dem Beckenkamm entnommen. Der Eingriff dauert nur wenige Minuten.",
+            third:
+              "Zuerst erhalten Sie eine örtliche Betäubung, um den Bereich unempfindlich zu machen. Dann wird eine Nadel in Ihren Beckenknochen eingeführt, um eine Probe zu entnehmen.",
+            fourth:
+              "Der Eingriff dauert nur etwa 10 Minuten, Sie können danach wieder nach Hause gehen und die Einstichstelle könnte sich für einige Tage empfindlich anfühlen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass er eventuell auf blutverdünnende Medikamente verzichten sollte. Zudem sollte er nüchtern bleiben, wenn eine Vollnarkose geplant ist.",
+            third:
+              "Wenn Sie blutverdünnende Medikamente einnehmen, müssen wir diese möglicherweise vorher absetzen.",
+            fourth:
+              "Falls eine Vollnarkose nötig ist, dürfen Sie einige Stunden vor dem Eingriff nichts essen oder trinken.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie mögliche Risiken, wie Schmerzen an der Einstichstelle, Blutungen, Infektionen oder in seltenen Fällen allergische Reaktionen auf das Betäubungsmittel.",
+            third:
+              "Es kann zu leichten Schmerzen oder Blutungen an der Einstichstelle kommen, das heilt aber meist schnell ab.",
+            fourth:
+              "Es besteht ein geringes Risiko für eine Infektion, deshalb sollten Sie die Stelle sauber und trocken halten.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie die Vorteile des Verfahrens: Die Knochenmarkbiopsie liefert genaue Informationen über Erkrankungen und ermöglicht gezielte Therapieplanung.",
+            third:
+              "Die Biopsie ist der beste Weg, um genau festzustellen, welche Art von Blutkrankheit Sie haben.",
+            fourth:
+              "Diese Untersuchung hilft uns, die richtige Therapie für Sie auszuwählen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie den Patienten über mögliche Alternativen, wie etwa Bluttests oder bildgebende Verfahren, die jedoch oft nicht die gleiche Genauigkeit bieten.",
+            third:
+              "Alternativ könnten wir Bluttests durchführen, aber diese liefern oft nicht so genaue Informationen wie die Biopsie.",
+            fourth:
+              "In manchen Fällen kann auch ein MRT in Frage kommen, aber es ersetzt nicht die Genauigkeit der Biopsie.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass bestimmte Faktoren, wie schwere Blutgerinnungsstörungen, eine Kontraindikation für das Verfahren darstellen können.",
+            third:
+              "Wenn Sie an schweren Blutgerinnungsstörungen leiden, sollten wir die Biopsie eventuell nicht durchführen.",
+            fourth:
+              "Sollten Sie allergisch auf Betäubungsmittel reagieren, müssen wir das im Vorfeld berücksichtigen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erläutern Sie dem Patienten, dass die Biopsie Aufschluss über verschiedene Blutkrankheiten geben kann, z.B. Leukämien, aplastische Anämie oder myeloproliferative Erkrankungen.",
+            third:
+              "Mit der Biopsie können wir feststellen, ob bei Ihnen eine Leukämie vorliegt.",
+            fourth:
+              "Die Untersuchung zeigt, ob Ihre Blutbildungsstörung auf eine aplastische Anämie zurückzuführen ist.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, wie wichtig das Einverständnis des Patienten für das Verfahren ist, und dass er über alle Risiken und Vorteile umfassend informiert wird.",
+            third:
+              "Es ist wichtig, dass Sie alle Details verstehen, bevor Sie Ihr Einverständnis geben.",
+            fourth:
+              "Wir benötigen Ihr schriftliches Einverständnis, nachdem wir alle Risiken und Vorteile besprochen haben.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Informieren Sie den Patienten, dass er vor dem Eingriff schriftlich sein Einverständnis geben muss und dass ihm alle offenen Fragen beantwortet werden sollten.",
+            third:
+              "Sie müssen ein Formular unterschreiben, nachdem wir Ihre Fragen beantwortet haben.",
+            fourth:
+              "Wir warten mit dem Eingriff, bis Sie Ihr schriftliches Einverständnis gegeben haben und alle Ihre Bedenken geklärt sind.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Geben Sie dem Patienten abschließende Hinweise, wie er sich nach der Biopsie verhalten soll, das Beobachten der Einstichstelle auf mögliche Infektionsanzeichen.",
+            third:
+              "Vermeiden Sie körperliche Anstrengung für einige Tage und halten Sie die Einstichstelle sauber.",
+            fourth:
+              "Wenn Sie nach der Biopsie Fieber oder starke Schmerzen haben, sollten Sie sofort einen Arzt aufsuchen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie dem Patienten, dass die Ergebnisse der Biopsie einige Tage bis zu einer Woche dauern können.",
+            third:
+              "Die Ergebnisse werden etwa eine Woche dauern, wir informieren Sie, sobald sie vorliegen.",
+            fourth:
+              "Wir werden uns in einigen Tagen bei Ihnen melden, um die Ergebnisse zu besprechen und den nächsten Schritt zu planen.",
+          },
         ],
       },
       // 3tab 321
@@ -27097,99 +27046,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Erklären Sie, dass die Knochenmarkbiopsie ein diagnostisches Verfahren ist, bei dem eine Probe aus dem Knochenmark entnommen wird, um die Blutbildung und das Vorhandensein krankhafter Zellen zu beurteilen.",
-                third:
-                  "Die Knochenmarkbiopsie ist ein invasives Verfahren, bei dem wir eine Probe aus dem Knochenmark entnehmen, um hämatologische Erkrankungen zu diagnostizieren.",
-                fourth:
-                  "Mit der Biopsie erhalten wir detaillierte Informationen über die Zellzusammensetzung des Knochenmarks, um z.B. Leukämien oder Anämien abzuklären.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Betonen Sie, dass mit der Knochenmarkbiopsie verschiedene Blutkrankheiten, wie Leukämien, aplastische Anämien oder myeloproliferative Erkrankungen, sowie den Zustand der Hämatopoese untersucht werden können.",
-                third:
-                  "Die Biopsie hilft uns, Veränderungen in der Blutbildung zu erkennen, wie bei einer Leukämie oder aplastischen Anämie.",
-                fourth:
-                  "Wir können feststellen, ob es sich um eine primäre Knochenmarkserkrankung oder um eine reaktive Veränderung, etwa durch Infektionen, handelt.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Erklären Sie, dass die Ergebnisse der Biopsie Aufschluss über das Vorhandensein abnormaler Zellen, z.B. bei Leukämie, oder eine verminderte Zellbildung bei aplastischer Anämie geben können.",
-                third:
-                  "Das Ergebnis zeigt eine Hyperplasie der Blutzelllinien, was auf eine myeloproliferative Erkrankung hindeutet.",
-                fourth:
-                  "Es wurden blastäre Zellen nachgewiesen, was den Verdacht auf eine akute myeloische Leukämie bestätigt.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Erwähnen Sie, dass die Knochenmarkbiopsie indiziert ist bei Verdacht auf hämatologische Malignome, unklare Anämien, unerklärliche Panzytopenien oder Thrombozytopenien sowie im Rahmen des Monitorings nach einer Knochenmarktransplantation.",
-                third:
-                  "Bei unserem Patienten besteht der Verdacht auf eine aplastische Anämie, weshalb eine Biopsie indiziert ist.",
-                fourth:
-                  "Der Patient hat eine ungeklärte Panzytopenie, und wir müssen eine Knochenmarkbiopsie durchführen, um die Ursache zu klären.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Betonen Sie, dass Kontraindikationen wie schwere Blutgerinnungsstörungen, lokale Infektionen an der Einstichstelle oder Allergien gegen Lokalanästhetika berücksichtigt werden müssen.",
-                third:
-                  "Aufgrund der bekannten Koagulopathie des Patienten müssen wir den Eingriff mit besonderer Vorsicht durchführen.",
-                fourth:
-                  "Der Patient hat eine schwere Infektion an der geplanten Biopsiestelle, weshalb wir den Eingriff verschieben müssen.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Erläutern Sie, dass Differenzialdiagnosen wie aplastische Anämie, myelodysplastische Syndrome, Leukämien sowie reaktive Zustände wie Infektionen oder entzündliche Erkrankungen in Betracht kommen.",
-                third:
-                  "Differenzialdiagnostisch müssen wir bei der Panzytopenie auch an eine Myelodysplasie oder ein Knochenmarkversagen denken.",
-                fourth:
-                  "Neben der Leukämie könnte eine reaktive Knochenmarkveränderung, etwa durch eine Infektion, die Ursache sein.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Erklären Sie, dass der Behandlungsplan von den Ergebnissen der Biopsie abhängt und je nach Diagnose Chemotherapie, Knochenmarktransplantation oder supportive Maßnahmen umfassen kann.",
-                third:
-                  "Wenn sich der Verdacht auf Leukämie bestätigt, wird eine Chemotherapie notwendig sein.",
-                fourth:
-                  "Sollte sich eine aplastische Anämie bestätigen, planen wir eine Knochenmarktransplantation als Therapieoption.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Betonen Sie, dass die Zusammenarbeit zwischen Hämatologen, Onkologen, Radiologen, Labormedizinern und Pflegepersonal entscheidend für die Diagnose und Therapieplanung ist.",
-                third:
-                  "Wir werden den Fall in der interdisziplinären Tumorkonferenz besprechen, um den optimalen Therapieansatz zu bestimmen.",
-                fourth:
-                  "Die enge Abstimmung mit den Labormedizinern ist notwendig, um die Ergebnisse der Biopsie korrekt zu interpretieren und die Therapie entsprechend anzupassen.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Erklären Sie, dass standardisierte Protokolle für die Durchführung der Knochenmarkbiopsie, regelmäßige Schulungen und Audits notwendig sind.",
-                third:
-                  "Wir folgen dem standardisierten Protokoll für Knochenmarkbiopsien und stellen sicher, dass alle Mitarbeiter geschult sind.",
-                fourth:
-                  "Um die Qualität zu gewährleisten, führen wir regelmäßige Audits und Schulungen durch, um Komplikationen und Fehler bei der Durchführung zu vermeiden.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Erwähnen Sie, dass die genaue Dokumentation der Ergebnisse und die regelmäßige Weiterverfolgung des Krankheitsverlaufs notwendig sind, um den Behandlungsplan entsprechend anpassen zu können.",
-                third:
-                  "Die Biopsieergebnisse werden im System dokumentiert, und wir vereinbaren ein Follow-up zur Therapieanpassung.",
-                fourth:
-                  "Die Fortschritte des Patienten werden regelmäßig überprüft, und alle Änderungen des Behandlungsplans werden dokumentiert und dem Team mitgeteilt.",
-              },
-            
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die Knochenmarkbiopsie ein diagnostisches Verfahren ist, bei dem eine Probe aus dem Knochenmark entnommen wird, um die Blutbildung und das Vorhandensein krankhafter Zellen zu beurteilen.",
+            third:
+              "Die Knochenmarkbiopsie ist ein invasives Verfahren, bei dem wir eine Probe aus dem Knochenmark entnehmen, um hämatologische Erkrankungen zu diagnostizieren.",
+            fourth:
+              "Mit der Biopsie erhalten wir detaillierte Informationen über die Zellzusammensetzung des Knochenmarks, um z.B. Leukämien oder Anämien abzuklären.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass mit der Knochenmarkbiopsie verschiedene Blutkrankheiten, wie Leukämien, aplastische Anämien oder myeloproliferative Erkrankungen, sowie den Zustand der Hämatopoese untersucht werden können.",
+            third:
+              "Die Biopsie hilft uns, Veränderungen in der Blutbildung zu erkennen, wie bei einer Leukämie oder aplastischen Anämie.",
+            fourth:
+              "Wir können feststellen, ob es sich um eine primäre Knochenmarkserkrankung oder um eine reaktive Veränderung, etwa durch Infektionen, handelt.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erklären Sie, dass die Ergebnisse der Biopsie Aufschluss über das Vorhandensein abnormaler Zellen, z.B. bei Leukämie, oder eine verminderte Zellbildung bei aplastischer Anämie geben können.",
+            third:
+              "Das Ergebnis zeigt eine Hyperplasie der Blutzelllinien, was auf eine myeloproliferative Erkrankung hindeutet.",
+            fourth:
+              "Es wurden blastäre Zellen nachgewiesen, was den Verdacht auf eine akute myeloische Leukämie bestätigt.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erwähnen Sie, dass die Knochenmarkbiopsie indiziert ist bei Verdacht auf hämatologische Malignome, unklare Anämien, unerklärliche Panzytopenien oder Thrombozytopenien sowie im Rahmen des Monitorings nach einer Knochenmarktransplantation.",
+            third:
+              "Bei unserem Patienten besteht der Verdacht auf eine aplastische Anämie, weshalb eine Biopsie indiziert ist.",
+            fourth:
+              "Der Patient hat eine ungeklärte Panzytopenie, und wir müssen eine Knochenmarkbiopsie durchführen, um die Ursache zu klären.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass Kontraindikationen wie schwere Blutgerinnungsstörungen, lokale Infektionen an der Einstichstelle oder Allergien gegen Lokalanästhetika berücksichtigt werden müssen.",
+            third:
+              "Aufgrund der bekannten Koagulopathie des Patienten müssen wir den Eingriff mit besonderer Vorsicht durchführen.",
+            fourth:
+              "Der Patient hat eine schwere Infektion an der geplanten Biopsiestelle, weshalb wir den Eingriff verschieben müssen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Erläutern Sie, dass Differenzialdiagnosen wie aplastische Anämie, myelodysplastische Syndrome, Leukämien sowie reaktive Zustände wie Infektionen oder entzündliche Erkrankungen in Betracht kommen.",
+            third:
+              "Differenzialdiagnostisch müssen wir bei der Panzytopenie auch an eine Myelodysplasie oder ein Knochenmarkversagen denken.",
+            fourth:
+              "Neben der Leukämie könnte eine reaktive Knochenmarkveränderung, etwa durch eine Infektion, die Ursache sein.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erklären Sie, dass der Behandlungsplan von den Ergebnissen der Biopsie abhängt und je nach Diagnose Chemotherapie, Knochenmarktransplantation oder supportive Maßnahmen umfassen kann.",
+            third:
+              "Wenn sich der Verdacht auf Leukämie bestätigt, wird eine Chemotherapie notwendig sein.",
+            fourth:
+              "Sollte sich eine aplastische Anämie bestätigen, planen wir eine Knochenmarktransplantation als Therapieoption.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie, dass die Zusammenarbeit zwischen Hämatologen, Onkologen, Radiologen, Labormedizinern und Pflegepersonal entscheidend für die Diagnose und Therapieplanung ist.",
+            third:
+              "Wir werden den Fall in der interdisziplinären Tumorkonferenz besprechen, um den optimalen Therapieansatz zu bestimmen.",
+            fourth:
+              "Die enge Abstimmung mit den Labormedizinern ist notwendig, um die Ergebnisse der Biopsie korrekt zu interpretieren und die Therapie entsprechend anzupassen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erklären Sie, dass standardisierte Protokolle für die Durchführung der Knochenmarkbiopsie, regelmäßige Schulungen und Audits notwendig sind.",
+            third:
+              "Wir folgen dem standardisierten Protokoll für Knochenmarkbiopsien und stellen sicher, dass alle Mitarbeiter geschult sind.",
+            fourth:
+              "Um die Qualität zu gewährleisten, führen wir regelmäßige Audits und Schulungen durch, um Komplikationen und Fehler bei der Durchführung zu vermeiden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erwähnen Sie, dass die genaue Dokumentation der Ergebnisse und die regelmäßige Weiterverfolgung des Krankheitsverlaufs notwendig sind, um den Behandlungsplan entsprechend anpassen zu können.",
+            third:
+              "Die Biopsieergebnisse werden im System dokumentiert, und wir vereinbaren ein Follow-up zur Therapieanpassung.",
+            fourth:
+              "Die Fortschritte des Patienten werden regelmäßig überprüft, und alle Änderungen des Behandlungsplans werden dokumentiert und dem Team mitgeteilt.",
+          },
         ],
       },
       // 4tab 322
@@ -27201,7 +27147,8 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. akute myeloische Leukämie)",
+            visualText:
+              "Pathologischer Befund 1 (z.B. akute myeloische Leukämie)",
           },
           {
             name: "fourth",
@@ -27209,71 +27156,66 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "Erklären Sie, dass die Knochenmarkbiopsie ein diagnostisches Verfahren ist, bei dem eine Probe aus dem Knochenmark entnommen wird, um die Blutbildung und das Vorhandensein krankhafter Zellen zu beurteilen.",
-                third:
-                  "Die Knochenmarkbiopsie ist ein invasives Verfahren, bei dem wir eine Probe aus dem Knochenmark entnehmen, um hämatologische Erkrankungen zu diagnostizieren.",
-                fourth:
-                  "Mit der Biopsie erhalten wir detaillierte Informationen über die Zellzusammensetzung des Knochenmarks, um z.B. Leukämien oder Anämien abzuklären.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Erklären Sie, dass die Ergebnisse der Biopsie Aufschluss über das Vorhandensein abnormaler Zellen, z.B. bei Leukämie, oder eine verminderte Zellbildung bei aplastischer Anämie geben können.",
-                third:
-                  "Das Ergebnis zeigt eine Hyperplasie der Blutzelllinien, was auf eine myeloproliferative Erkrankung hindeutet.",
-                fourth:
-                  "Es wurden blastäre Zellen nachgewiesen, was den Verdacht auf eine akute myeloische Leukämie bestätigt.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Erläutern Sie die Bedeutung der Ergebnisse und wie sie zur Diagnose beitragen.",
-                third:
-                  "Die erhöhte Anzahl an unreifen Blutzellen weist auf eine Leukämie hin.",
-                fourth:
-                  "Die Verminderung aller Zellreihen im Knochenmark spricht für eine aplastische Anämie.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Diskutieren Sie, wie die Ergebnisse die weitere Behandlung des Patienten beeinflussen.",
-                third:
-                  "Basierend auf den Befunden werden wir eine Chemotherapie einleiten.",
-                fourth:
-                  "Wir sollten eine Knochenmarktransplantation in Erwägung ziehen.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Nennen Sie die Diagnose, die sich aus den Ergebnissen ergibt.",
-                third: "Die Diagnose lautet akute myeloische Leukämie.",
-                fourth: "Es handelt sich um eine aplastische Anämie.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Erwähnen Sie, dass Sie zur Veranschaulichung der Ergebnisse Diagramme oder Mikroskopieaufnahmen verwenden können.",
-                third:
-                  "Hier ist eine Mikroskopaufnahme, die die blastären Zellen zeigt.",
-                fourth:
-                  "Dieses Diagramm stellt die verminderten Zelllinien dar.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Fassen Sie den Fall zusammen und besprechen Sie die nächsten Schritte.",
-                third:
-                  "Zusammenfassend bestätigt die Biopsie unsere Verdachtsdiagnose. Wir werden nun die Therapie planen.",
-                fourth:
-                  "Der Patient sollte über die Diagnose und die weiteren Behandlungsmöglichkeiten informiert werden.",
-              },
-            
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "Erklären Sie, dass die Knochenmarkbiopsie ein diagnostisches Verfahren ist, bei dem eine Probe aus dem Knochenmark entnommen wird, um die Blutbildung und das Vorhandensein krankhafter Zellen zu beurteilen.",
+            third:
+              "Die Knochenmarkbiopsie ist ein invasives Verfahren, bei dem wir eine Probe aus dem Knochenmark entnehmen, um hämatologische Erkrankungen zu diagnostizieren.",
+            fourth:
+              "Mit der Biopsie erhalten wir detaillierte Informationen über die Zellzusammensetzung des Knochenmarks, um z.B. Leukämien oder Anämien abzuklären.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erklären Sie, dass die Ergebnisse der Biopsie Aufschluss über das Vorhandensein abnormaler Zellen, z.B. bei Leukämie, oder eine verminderte Zellbildung bei aplastischer Anämie geben können.",
+            third:
+              "Das Ergebnis zeigt eine Hyperplasie der Blutzelllinien, was auf eine myeloproliferative Erkrankung hindeutet.",
+            fourth:
+              "Es wurden blastäre Zellen nachgewiesen, was den Verdacht auf eine akute myeloische Leukämie bestätigt.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Erläutern Sie die Bedeutung der Ergebnisse und wie sie zur Diagnose beitragen.",
+            third:
+              "Die erhöhte Anzahl an unreifen Blutzellen weist auf eine Leukämie hin.",
+            fourth:
+              "Die Verminderung aller Zellreihen im Knochenmark spricht für eine aplastische Anämie.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse die weitere Behandlung des Patienten beeinflussen.",
+            third:
+              "Basierend auf den Befunden werden wir eine Chemotherapie einleiten.",
+            fourth:
+              "Wir sollten eine Knochenmarktransplantation in Erwägung ziehen.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Nennen Sie die Diagnose, die sich aus den Ergebnissen ergibt.",
+            third: "Die Diagnose lautet akute myeloische Leukämie.",
+            fourth: "Es handelt sich um eine aplastische Anämie.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Erwähnen Sie, dass Sie zur Veranschaulichung der Ergebnisse Diagramme oder Mikroskopieaufnahmen verwenden können.",
+            third:
+              "Hier ist eine Mikroskopaufnahme, die die blastären Zellen zeigt.",
+            fourth: "Dieses Diagramm stellt die verminderten Zelllinien dar.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Fassen Sie den Fall zusammen und besprechen Sie die nächsten Schritte.",
+            third:
+              "Zusammenfassend bestätigt die Biopsie unsere Verdachtsdiagnose. Wir werden nun die Therapie planen.",
+            fourth:
+              "Der Patient sollte über die Diagnose und die weiteren Behandlungsmöglichkeiten informiert werden.",
+          },
         ],
       },
       // 5tab 323
@@ -27525,112 +27467,110 @@ export const parentTabs = [
         id: 327,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Ziel der Pleurapunktion ist es, die Art der angesammelten Flüssigkeit zu bestimmen und festzustellen, ob es sich um eine entzündliche, infektiöse, maligne oder anderweitig pathologische Ansammlung handelt. Zudem dient sie zur Druckentlastung der Lunge bei größeren Ergüssen.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Das Verfahren findet Anwendung bei Verdacht auf pleurale Erkrankungen wie Infektionen (z.B. Pleuritis), malignen Prozessen (z.B. Lungenkrebs) oder systemischen Erkrankungen (z.B. Herzinsuffizienz). Es ist ein unverzichtbarer Bestandteil der Diagnostik in der Pneumologie und Onkologie.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Der Pleuraspalt enthält normalerweise nur eine geringe Menge Flüssigkeit, die das Gleiten der Lungen bei Atembewegungen unterstützt. Bei pathologischen Prozessen kann es zu einer vermehrten Flüssigkeitsansammlung kommen, die durch eine Pleurapunktion entnommen wird.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Unter sterilen Bedingungen und meist mittels Ultraschall wird eine Kanüle in den Pleuraspalt eingeführt, um die Flüssigkeit zu aspirieren. Der Eingriff kann unter Lokalanästhesie durchgeführt werden und erfolgt meist am Patientenbett.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "• Auswertung und Interpretation:",
-                  text: "Die entnommene Flüssigkeit wird in einem Labor auf Zellzahl, Proteingehalt, pH-Wert, Glukose sowie auf Bakterien und Tumorzellen untersucht. Die Ergebnisse liefern Hinweise auf die Ursache des Pleuraergusses.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Pleurapunktion ist ein minimal-invasives Verfahren, das sowohl diagnostische als auch therapeutische Vorteile bietet. Es ermöglicht eine schnelle Entlastung bei Pleuraergüssen und liefert wertvolle Informationen zur Ursache des Ergusses, was eine gezielte Behandlung erleichtert.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Trotz der Vorteile kann der Eingriff für den Patienten unangenehm sein, insbesondere durch Schmerzen oder Druckgefühle während der Punktion. Außerdem kann die Analyse der entnommenen Flüssigkeit zeitaufwendig sein, was die Diagnose verzögern kann.",
-                },
-                {
-                  bold_text: "Risiken::",
-                  text: "Zu den Risiken der Pleurapunktion zählen Pneumothorax (Lufteintritt in den Pleuraspalt), Infektionen und Blutungen. Diese Komplikationen treten jedoch selten auf und können durch eine erfahrene Durchführung weitgehend minimiert werden.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Pleurapunktion spielt eine zentrale Rolle in der Diagnostik und Therapie von pleuralen Erkrankungen. Sie hilft, gezielte Therapien einzuleiten und ermöglicht eine Entlastung der Lunge bei Atemnot.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Durch die Pleurapunktion können Differenzialdiagnosen präzise gestellt werden, was für eine optimale Patientenversorgung und für die Einleitung der entsprechenden Behandlungen von entscheidender Bedeutung ist.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Als Alternativen zur Pleurapunktion kommen die Bildgebung (CT, Ultraschall) oder die thorakoskopische Pleura-Biopsie infrage, je nach Indikation und Verdachtsdiagnose.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neue Ultraschalltechniken haben die Genauigkeit und Sicherheit der Pleurapunktion erhöht. Zudem gibt es verbesserte Analyseverfahren für die entnommene Flüssigkeit, die eine schnellere und präzisere Diagnose ermöglichen.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Zukünftige Entwicklungen zielen auf noch minimal-invasivere Techniken und genauere molekulare Diagnostikmethoden ab, um die therapeutischen Entscheidungen weiter zu optimieren.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Pleurapunktion ist ein wichtiges, minimal-invasives Verfahren zur Diagnostik und Therapie von Pleuraergüssen. Sie bietet schnelle diagnostische Informationen und kann gleichzeitig zur Linderung von Atembeschwerden beitragen.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Aufgrund ihrer breiten Anwendbarkeit und des diagnostischen Wertes ist die Pleurapunktion ein unverzichtbares Instrument in der modernen medizinischen Praxis, insbesondere in der Pneumologie und Onkologie.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Ziel der Pleurapunktion ist es, die Art der angesammelten Flüssigkeit zu bestimmen und festzustellen, ob es sich um eine entzündliche, infektiöse, maligne oder anderweitig pathologische Ansammlung handelt. Zudem dient sie zur Druckentlastung der Lunge bei größeren Ergüssen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Das Verfahren findet Anwendung bei Verdacht auf pleurale Erkrankungen wie Infektionen (z.B. Pleuritis), malignen Prozessen (z.B. Lungenkrebs) oder systemischen Erkrankungen (z.B. Herzinsuffizienz). Es ist ein unverzichtbarer Bestandteil der Diagnostik in der Pneumologie und Onkologie.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Der Pleuraspalt enthält normalerweise nur eine geringe Menge Flüssigkeit, die das Gleiten der Lungen bei Atembewegungen unterstützt. Bei pathologischen Prozessen kann es zu einer vermehrten Flüssigkeitsansammlung kommen, die durch eine Pleurapunktion entnommen wird.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Unter sterilen Bedingungen und meist mittels Ultraschall wird eine Kanüle in den Pleuraspalt eingeführt, um die Flüssigkeit zu aspirieren. Der Eingriff kann unter Lokalanästhesie durchgeführt werden und erfolgt meist am Patientenbett.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "• Auswertung und Interpretation:",
+                text: "Die entnommene Flüssigkeit wird in einem Labor auf Zellzahl, Proteingehalt, pH-Wert, Glukose sowie auf Bakterien und Tumorzellen untersucht. Die Ergebnisse liefern Hinweise auf die Ursache des Pleuraergusses.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Pleurapunktion ist ein minimal-invasives Verfahren, das sowohl diagnostische als auch therapeutische Vorteile bietet. Es ermöglicht eine schnelle Entlastung bei Pleuraergüssen und liefert wertvolle Informationen zur Ursache des Ergusses, was eine gezielte Behandlung erleichtert.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Trotz der Vorteile kann der Eingriff für den Patienten unangenehm sein, insbesondere durch Schmerzen oder Druckgefühle während der Punktion. Außerdem kann die Analyse der entnommenen Flüssigkeit zeitaufwendig sein, was die Diagnose verzögern kann.",
+              },
+              {
+                bold_text: "Risiken::",
+                text: "Zu den Risiken der Pleurapunktion zählen Pneumothorax (Lufteintritt in den Pleuraspalt), Infektionen und Blutungen. Diese Komplikationen treten jedoch selten auf und können durch eine erfahrene Durchführung weitgehend minimiert werden.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Pleurapunktion spielt eine zentrale Rolle in der Diagnostik und Therapie von pleuralen Erkrankungen. Sie hilft, gezielte Therapien einzuleiten und ermöglicht eine Entlastung der Lunge bei Atemnot.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Durch die Pleurapunktion können Differenzialdiagnosen präzise gestellt werden, was für eine optimale Patientenversorgung und für die Einleitung der entsprechenden Behandlungen von entscheidender Bedeutung ist.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Als Alternativen zur Pleurapunktion kommen die Bildgebung (CT, Ultraschall) oder die thorakoskopische Pleura-Biopsie infrage, je nach Indikation und Verdachtsdiagnose.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Ultraschalltechniken haben die Genauigkeit und Sicherheit der Pleurapunktion erhöht. Zudem gibt es verbesserte Analyseverfahren für die entnommene Flüssigkeit, die eine schnellere und präzisere Diagnose ermöglichen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftige Entwicklungen zielen auf noch minimal-invasivere Techniken und genauere molekulare Diagnostikmethoden ab, um die therapeutischen Entscheidungen weiter zu optimieren.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Pleurapunktion ist ein wichtiges, minimal-invasives Verfahren zur Diagnostik und Therapie von Pleuraergüssen. Sie bietet schnelle diagnostische Informationen und kann gleichzeitig zur Linderung von Atembeschwerden beitragen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Aufgrund ihrer breiten Anwendbarkeit und des diagnostischen Wertes ist die Pleurapunktion ein unverzichtbares Instrument in der modernen medizinischen Praxis, insbesondere in der Pneumologie und Onkologie.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 328
@@ -27650,116 +27590,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie dem Patienten, dass die Untersuchung dazu dient, Flüssigkeit aus dem Pleuraspalt zu entnehmen, um die Ursache des Pleuraergusses zu diagnostizieren.",
-                third:
-                  "Wir entnehmen Flüssigkeit, um herauszufinden, ob eine Entzündung, Infektion oder Tumorzellen vorliegen.",
-                fourth:
-                  "Mit dieser Untersuchung wollen wir verstehen, warum sich Flüssigkeit in Ihrem Brustraum angesammelt hat.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Beschreiben Sie, wie die Punktion unter sterilen Bedingungen erfolgt: Eine Nadel wird durch die Brustwand in den Pleuraspalt eingeführt, um Flüssigkeit zu entnehmen.",
-                third:
-                  "Wir werden Sie bitten, sich hinzusetzen und still zu atmen, während wir eine dünne Nadel vorsichtig einführen.",
-                fourth:
-                  "Während Sie sich in einer bequemen Position befinden, wird eine Nadel vorsichtig in den Brustbereich eingeführt.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie den Patienten über die Vorbereitung: Ruhige Atmung, Sitzposition oder liegende Position, eventuell Lokalanästhesie. Nennen Sie auch mögliche Voruntersuchungen.",
-                third:
-                  "Vor dem Eingriff werden wir Ihre Atmung und Position überprüfen, eventuell wird eine lokale Betäubung angewendet.",
-                fourth:
-                  "Wir werden Sie in eine Position bringen, die es uns ermöglicht, die Punktion sicher durchzuführen.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Erwähnen Sie die möglichen Risiken, wie Pneumothorax, Infektionen oder Blutungen, und betonen Sie, dass diese selten auftreten, aber überwacht werden.",
-                third:
-                  "Es besteht ein geringes Risiko für eine Lungenverletzung, die aber in der Regel gut behandelbar ist.",
-                fourth:
-                  "Manchmal kann es zu Infektionen oder kleinen Blutungen kommen, aber das Risiko ist insgesamt sehr gering.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Betonen Sie, dass die Pleurapunktion minimal-invasiv ist und rasche Linderung bei Atemnot bietet. Sie liefert auch wichtige diagnostische Informationen.",
-                third:
-                  "Die Punktion kann sofort Erleichterung verschaffen, wenn Sie Atemprobleme haben.",
-                fourth:
-                  "Durch diese Untersuchung bekommen wir schnelle Ergebnisse, die uns bei der Behandlung helfen.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Erklären Sie, dass alternative Methoden wie Bildgebung oder eine thorakoskopische Biopsie infrage kommen könnten, je nach Indikation.",
-                third:
-                  "Eine Alternative könnte eine genauere Bildgebung sein, wie ein CT-Scan.",
-                fourth:
-                  "In manchen Fällen kann auch eine Gewebeprobe notwendig sein, um sicherere Informationen zu bekommen.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Nennen Sie mögliche Gründe, die gegen die Pleurapunktion sprechen, z. B. unkontrollierte Blutgerinnungsstörungen oder schwere Infektionen im Punktionsbereich.",
-                third:
-                  "Sollten Sie Blutgerinnungsstörungen haben, könnte der Eingriff zu riskant sein.",
-                fourth:
-                  "Wenn sich an der Einstichstelle eine schwere Infektion befindet, müssen wir auf den Eingriff verzichten.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Informieren Sie den Patienten, dass die entnommene Flüssigkeit auf Zellzahl, Proteine, pH-Wert und mögliche Bakterien oder Tumorzellen untersucht wird, um die Ursache zu bestimmen.",
-                third:
-                  "Wir prüfen die Flüssigkeit auf Anzeichen von Infektionen oder Tumorzellen, um die Ursache zu klären.",
-                fourth:
-                  "Die Analyse wird uns zeigen, ob eine Entzündung, eine Infektion oder Krebs die Ursache für die Flüssigkeitsansammlung ist.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, wie wichtig das Einverständnis des Patienten ist, da es sich um einen invasiven Eingriff handelt.",
-                third:
-                  "Wir benötigen Ihre Zustimmung, bevor wir den Eingriff durchführen, da er als invasiv gilt.",
-                fourth:
-                  "Es ist wichtig, dass Sie uns Ihr Einverständnis geben, da es sich um einen direkten Eingriff in den Brustbereich handelt.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Erklären Sie, dass der Patient schriftlich zustimmen muss, bevor der Eingriff durchgeführt wird, und dass er über die Risiken und Vorteile informiert wird.",
-                third:
-                  "Bitte unterschreiben Sie dieses Formular, das Ihre Zustimmung zu dem Eingriff bestätigt.",
-                fourth:
-                  "Wir bitten Sie, das Einverständnis schriftlich zu geben, nachdem wir alle wichtigen Informationen erklärt haben.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Weisen Sie darauf hin, dass der Eingriff in der Regel gut verträglich ist und der Patient danach überwacht wird, um eventuelle Komplikationen frühzeitig zu erkennen.",
-                third:
-                  "Nach dem Eingriff bleiben Sie noch unter Beobachtung, um sicherzustellen, dass keine Komplikationen auftreten.",
-                fourth:
-                  "Sie werden nach der Punktion eine Weile überwacht, um sicherzugehen, dass es Ihnen gut geht.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Informieren Sie den Patienten, dass die Ergebnisse der Untersuchung einige Zeit in Anspruch nehmen können und der behandelnde Arzt diese ausführlich besprechen wird.",
-                third:
-                  "Es dauert ein paar Tage, bis wir die endgültigen Ergebnisse haben, und wir werden diese dann gemeinsam besprechen.",
-                fourth:
-                  "Sobald die Ergebnisse vorliegen, wird Ihr behandelnder Arzt alles genau mit Ihnen durchgehen.",
-              },
-           
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Untersuchung dazu dient, Flüssigkeit aus dem Pleuraspalt zu entnehmen, um die Ursache des Pleuraergusses zu diagnostizieren.",
+            third:
+              "Wir entnehmen Flüssigkeit, um herauszufinden, ob eine Entzündung, Infektion oder Tumorzellen vorliegen.",
+            fourth:
+              "Mit dieser Untersuchung wollen wir verstehen, warum sich Flüssigkeit in Ihrem Brustraum angesammelt hat.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Beschreiben Sie, wie die Punktion unter sterilen Bedingungen erfolgt: Eine Nadel wird durch die Brustwand in den Pleuraspalt eingeführt, um Flüssigkeit zu entnehmen.",
+            third:
+              "Wir werden Sie bitten, sich hinzusetzen und still zu atmen, während wir eine dünne Nadel vorsichtig einführen.",
+            fourth:
+              "Während Sie sich in einer bequemen Position befinden, wird eine Nadel vorsichtig in den Brustbereich eingeführt.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten über die Vorbereitung: Ruhige Atmung, Sitzposition oder liegende Position, eventuell Lokalanästhesie. Nennen Sie auch mögliche Voruntersuchungen.",
+            third:
+              "Vor dem Eingriff werden wir Ihre Atmung und Position überprüfen, eventuell wird eine lokale Betäubung angewendet.",
+            fourth:
+              "Wir werden Sie in eine Position bringen, die es uns ermöglicht, die Punktion sicher durchzuführen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erwähnen Sie die möglichen Risiken, wie Pneumothorax, Infektionen oder Blutungen, und betonen Sie, dass diese selten auftreten, aber überwacht werden.",
+            third:
+              "Es besteht ein geringes Risiko für eine Lungenverletzung, die aber in der Regel gut behandelbar ist.",
+            fourth:
+              "Manchmal kann es zu Infektionen oder kleinen Blutungen kommen, aber das Risiko ist insgesamt sehr gering.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Betonen Sie, dass die Pleurapunktion minimal-invasiv ist und rasche Linderung bei Atemnot bietet. Sie liefert auch wichtige diagnostische Informationen.",
+            third:
+              "Die Punktion kann sofort Erleichterung verschaffen, wenn Sie Atemprobleme haben.",
+            fourth:
+              "Durch diese Untersuchung bekommen wir schnelle Ergebnisse, die uns bei der Behandlung helfen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erklären Sie, dass alternative Methoden wie Bildgebung oder eine thorakoskopische Biopsie infrage kommen könnten, je nach Indikation.",
+            third:
+              "Eine Alternative könnte eine genauere Bildgebung sein, wie ein CT-Scan.",
+            fourth:
+              "In manchen Fällen kann auch eine Gewebeprobe notwendig sein, um sicherere Informationen zu bekommen.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Nennen Sie mögliche Gründe, die gegen die Pleurapunktion sprechen, z. B. unkontrollierte Blutgerinnungsstörungen oder schwere Infektionen im Punktionsbereich.",
+            third:
+              "Sollten Sie Blutgerinnungsstörungen haben, könnte der Eingriff zu riskant sein.",
+            fourth:
+              "Wenn sich an der Einstichstelle eine schwere Infektion befindet, müssen wir auf den Eingriff verzichten.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die entnommene Flüssigkeit auf Zellzahl, Proteine, pH-Wert und mögliche Bakterien oder Tumorzellen untersucht wird, um die Ursache zu bestimmen.",
+            third:
+              "Wir prüfen die Flüssigkeit auf Anzeichen von Infektionen oder Tumorzellen, um die Ursache zu klären.",
+            fourth:
+              "Die Analyse wird uns zeigen, ob eine Entzündung, eine Infektion oder Krebs die Ursache für die Flüssigkeitsansammlung ist.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, wie wichtig das Einverständnis des Patienten ist, da es sich um einen invasiven Eingriff handelt.",
+            third:
+              "Wir benötigen Ihre Zustimmung, bevor wir den Eingriff durchführen, da er als invasiv gilt.",
+            fourth:
+              "Es ist wichtig, dass Sie uns Ihr Einverständnis geben, da es sich um einen direkten Eingriff in den Brustbereich handelt.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient schriftlich zustimmen muss, bevor der Eingriff durchgeführt wird, und dass er über die Risiken und Vorteile informiert wird.",
+            third:
+              "Bitte unterschreiben Sie dieses Formular, das Ihre Zustimmung zu dem Eingriff bestätigt.",
+            fourth:
+              "Wir bitten Sie, das Einverständnis schriftlich zu geben, nachdem wir alle wichtigen Informationen erklärt haben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Weisen Sie darauf hin, dass der Eingriff in der Regel gut verträglich ist und der Patient danach überwacht wird, um eventuelle Komplikationen frühzeitig zu erkennen.",
+            third:
+              "Nach dem Eingriff bleiben Sie noch unter Beobachtung, um sicherzustellen, dass keine Komplikationen auftreten.",
+            fourth:
+              "Sie werden nach der Punktion eine Weile überwacht, um sicherzugehen, dass es Ihnen gut geht.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten, dass die Ergebnisse der Untersuchung einige Zeit in Anspruch nehmen können und der behandelnde Arzt diese ausführlich besprechen wird.",
+            third:
+              "Es dauert ein paar Tage, bis wir die endgültigen Ergebnisse haben, und wir werden diese dann gemeinsam besprechen.",
+            fourth:
+              "Sobald die Ergebnisse vorliegen, wird Ihr behandelnder Arzt alles genau mit Ihnen durchgehen.",
+          },
         ],
       },
       // 3tab 329
@@ -27779,98 +27717,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Erläutern Sie, um welches Verfahren es sich handelt, z. B. die Pleurapunktion, und beschreiben Sie die Grundlagen des Verfahrens, wie es durchgeführt wird und zu welchem Zweck.",
-                third:
-                  "Die Pleurapunktion ist ein minimal-invasives Verfahren, bei dem Flüssigkeit aus dem Pleuraspalt zur Diagnose oder Therapie entnommen wird.",
-                fourth:
-                  "Die Pleurapunktion ermöglicht uns, Flüssigkeit zwischen Lunge und Brustwand zu entnehmen, um eine Ursache für den Erguss zu finden.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Erklären Sie, welche diagnostischen Informationen durch die Untersuchung gewonnen werden können, z. B. Nachweis von Infektionen, Tumorzellen oder Klärung der Art des Pleuraergusses.",
-                third:
-                  "Wir können die Art des Ergusses bestimmen, ob es sich um ein Exsudat oder ein Transsudat handelt, um die Ursache einzugrenzen.",
-                fourth:
-                  "Mit der Pleurapunktion können wir Infektionen, Tumorzellen oder systemische Erkrankungen als Ursache für den Pleuraerguss feststellen.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Informieren Sie über die zu erwartenden Ergebnisse, wie z. B. Unterscheidung zwischen Exsudat und Transsudat, Bakteriennachweis, Tumorzellen oder entzündliche Marker in der Flüssigkeit.",
-                third:
-                  "In diesem Fall haben wir ein Exsudat mit erhöhtem Proteingehalt gefunden, was auf eine entzündliche Ursache hinweist.",
-                fourth:
-                  "Die Untersuchung ergab, dass es sich um ein Transsudat handelt, typisch für Herzinsuffizienz.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Erläutern Sie die Indikationen für die Untersuchung, z. B. Verdacht auf Pleuraerguss bei Herzinsuffizienz, Lungenentzündung, Lungenkrebs oder systemischen Erkrankungen wie Lupus.",
-                third:
-                  "Die Indikation zur Pleurapunktion bestand bei diesem Patienten aufgrund eines unklaren Pleuraergusses und Atemnot.",
-                fourth:
-                  "Der Patient wies einen großen Pleuraerguss auf, der nicht auf die Diuretikatherapie ansprach, was die Punktion notwendig machte.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Besprechen Sie mögliche Kontraindikationen, z. B. Gerinnungsstörungen, lokale Infektionen an der Punktionsstelle oder stark eingeschränkte Lungenfunktion.",
-                third:
-                  "Bei Gerinnungsstörungen oder einer aktiven Infektion an der Punktionsstelle hätten wir die Pleurapunktion nicht durchführen können.",
-                fourth:
-                  "Eine Kontraindikation in diesem Fall wäre eine schwere Blutgerinnungsstörung, die bei diesem Patienten jedoch ausgeschlossen wurde.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Nennen Sie die Differenzialdiagnosen, die durch die Untersuchung abgeklärt werden sollen, z. B. Herzinsuffizienz, maligne Erkrankungen, Tuberkulose oder Pleuritis.",
-                third:
-                  "Differenzialdiagnosen in diesem Fall waren eine Pneumonie, Lungenkrebs und eine Herzinsuffizienz, die durch die Untersuchung abgeklärt werden konnten.",
-                fourth:
-                  "Wir haben eine Tuberkulose oder maligne Erkrankung als mögliche Ursache vermutet und durch die Pleurapunktion weiter abgeklärt.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Diskutieren Sie, wie die Ergebnisse der Untersuchung den Behandlungsplan beeinflussen können, z. B. Drainage eines Ergusses, Einleitung einer Chemotherapie oder antibiotische Therapie.",
-                third:
-                  "Bei positivem Tumorzellnachweis würden wir eine onkologische Therapie einleiten; bei einer Infektion eine antibiotische Behandlung.",
-                fourth:
-                  "Nach der Bestätigung einer Herzinsuffizienz planen wir eine Optimierung der Herzmedikation und Flüssigkeitsreduktion.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen, z. B. Radiologie, Onkologie, Thoraxchirurgie oder Intensivmedizin, um eine umfassende Behandlung sicherzustellen.",
-                third:
-                  "Wir haben eng mit der Radiologie zusammengearbeitet, um die Punktionsstelle per Ultraschall zu bestimmen.",
-                fourth:
-                  "In diesem Fall war die enge Kooperation mit der Onkologie wichtig, um eine gezielte Tumortherapie vorzubereiten.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Erläutern Sie die Maßnahmen, die getroffen werden, um eine qualitativ hochwertige Durchführung der Untersuchung zu gewährleisten, z. B. Einsatz von Ultraschall, Hygieneprotokolle und Schulungen.",
-                third:
-                  "Zur Sicherstellung der Qualität wurden Ultraschall und sterile Techniken angewandt, um die Komplikationsrate zu minimieren.",
-                fourth:
-                  "Die regelmäßige Schulung des Personals und die Nutzung moderner Ultraschallgeräte sorgen für eine sichere Durchführung der Pleurapunktion.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Heben Sie die Bedeutung der genauen Dokumentation der Untersuchungsergebnisse hervor und besprechen Sie, wie diese im Patientendossier festgehalten werden und die weitere Therapieplanung beeinflussen.",
-                third:
-                  "Die Ergebnisse wurden im Patientendossier dokumentiert und der Patient wird weiter beobachtet, um mögliche Komplikationen früh zu erkennen.",
-                fourth:
-                  "Wir haben die Punktionsergebnisse dokumentiert und regelmäßige Nachuntersuchungen zur Verlaufskontrolle geplant.",
-              },
-            
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, um welches Verfahren es sich handelt, z. B. die Pleurapunktion, und beschreiben Sie die Grundlagen des Verfahrens, wie es durchgeführt wird und zu welchem Zweck.",
+            third:
+              "Die Pleurapunktion ist ein minimal-invasives Verfahren, bei dem Flüssigkeit aus dem Pleuraspalt zur Diagnose oder Therapie entnommen wird.",
+            fourth:
+              "Die Pleurapunktion ermöglicht uns, Flüssigkeit zwischen Lunge und Brustwand zu entnehmen, um eine Ursache für den Erguss zu finden.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, welche diagnostischen Informationen durch die Untersuchung gewonnen werden können, z. B. Nachweis von Infektionen, Tumorzellen oder Klärung der Art des Pleuraergusses.",
+            third:
+              "Wir können die Art des Ergusses bestimmen, ob es sich um ein Exsudat oder ein Transsudat handelt, um die Ursache einzugrenzen.",
+            fourth:
+              "Mit der Pleurapunktion können wir Infektionen, Tumorzellen oder systemische Erkrankungen als Ursache für den Pleuraerguss feststellen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Informieren Sie über die zu erwartenden Ergebnisse, wie z. B. Unterscheidung zwischen Exsudat und Transsudat, Bakteriennachweis, Tumorzellen oder entzündliche Marker in der Flüssigkeit.",
+            third:
+              "In diesem Fall haben wir ein Exsudat mit erhöhtem Proteingehalt gefunden, was auf eine entzündliche Ursache hinweist.",
+            fourth:
+              "Die Untersuchung ergab, dass es sich um ein Transsudat handelt, typisch für Herzinsuffizienz.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Erläutern Sie die Indikationen für die Untersuchung, z. B. Verdacht auf Pleuraerguss bei Herzinsuffizienz, Lungenentzündung, Lungenkrebs oder systemischen Erkrankungen wie Lupus.",
+            third:
+              "Die Indikation zur Pleurapunktion bestand bei diesem Patienten aufgrund eines unklaren Pleuraergusses und Atemnot.",
+            fourth:
+              "Der Patient wies einen großen Pleuraerguss auf, der nicht auf die Diuretikatherapie ansprach, was die Punktion notwendig machte.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Besprechen Sie mögliche Kontraindikationen, z. B. Gerinnungsstörungen, lokale Infektionen an der Punktionsstelle oder stark eingeschränkte Lungenfunktion.",
+            third:
+              "Bei Gerinnungsstörungen oder einer aktiven Infektion an der Punktionsstelle hätten wir die Pleurapunktion nicht durchführen können.",
+            fourth:
+              "Eine Kontraindikation in diesem Fall wäre eine schwere Blutgerinnungsstörung, die bei diesem Patienten jedoch ausgeschlossen wurde.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Nennen Sie die Differenzialdiagnosen, die durch die Untersuchung abgeklärt werden sollen, z. B. Herzinsuffizienz, maligne Erkrankungen, Tuberkulose oder Pleuritis.",
+            third:
+              "Differenzialdiagnosen in diesem Fall waren eine Pneumonie, Lungenkrebs und eine Herzinsuffizienz, die durch die Untersuchung abgeklärt werden konnten.",
+            fourth:
+              "Wir haben eine Tuberkulose oder maligne Erkrankung als mögliche Ursache vermutet und durch die Pleurapunktion weiter abgeklärt.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Diskutieren Sie, wie die Ergebnisse der Untersuchung den Behandlungsplan beeinflussen können, z. B. Drainage eines Ergusses, Einleitung einer Chemotherapie oder antibiotische Therapie.",
+            third:
+              "Bei positivem Tumorzellnachweis würden wir eine onkologische Therapie einleiten; bei einer Infektion eine antibiotische Behandlung.",
+            fourth:
+              "Nach der Bestätigung einer Herzinsuffizienz planen wir eine Optimierung der Herzmedikation und Flüssigkeitsreduktion.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Notwendigkeit der Zusammenarbeit mit anderen Fachbereichen, z. B. Radiologie, Onkologie, Thoraxchirurgie oder Intensivmedizin, um eine umfassende Behandlung sicherzustellen.",
+            third:
+              "Wir haben eng mit der Radiologie zusammengearbeitet, um die Punktionsstelle per Ultraschall zu bestimmen.",
+            fourth:
+              "In diesem Fall war die enge Kooperation mit der Onkologie wichtig, um eine gezielte Tumortherapie vorzubereiten.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erläutern Sie die Maßnahmen, die getroffen werden, um eine qualitativ hochwertige Durchführung der Untersuchung zu gewährleisten, z. B. Einsatz von Ultraschall, Hygieneprotokolle und Schulungen.",
+            third:
+              "Zur Sicherstellung der Qualität wurden Ultraschall und sterile Techniken angewandt, um die Komplikationsrate zu minimieren.",
+            fourth:
+              "Die regelmäßige Schulung des Personals und die Nutzung moderner Ultraschallgeräte sorgen für eine sichere Durchführung der Pleurapunktion.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Heben Sie die Bedeutung der genauen Dokumentation der Untersuchungsergebnisse hervor und besprechen Sie, wie diese im Patientendossier festgehalten werden und die weitere Therapieplanung beeinflussen.",
+            third:
+              "Die Ergebnisse wurden im Patientendossier dokumentiert und der Patient wird weiter beobachtet, um mögliche Komplikationen früh zu erkennen.",
+            fourth:
+              "Wir haben die Punktionsergebnisse dokumentiert und regelmäßige Nachuntersuchungen zur Verlaufskontrolle geplant.",
+          },
         ],
       },
       // 4tab 330
@@ -27890,71 +27826,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "35-jähriger Patient ohne Beschwerden, aber mit einem leicht vergrößerten Pleuraspalt im Röntgenbild, Routinekontrolle.",
-                third:
-                  "60-jährige Patientin mit Atemnot und ungewolltem Gewichtsverlust. Raucherin mit Verdacht auf Lungenkrebs.",
-                fourth:
-                  "45-jähriger Patient mit anhaltendem Husten, Nachtschweiß und Fieber. Vorgeschichte von Tuberkulose in der Familie.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Pleuraflüssigkeit normal, keine Anzeichen für Infektionen oder maligne Zellen, klare Flüssigkeit ohne Auffälligkeiten.",
-                third:
-                  "Die Pleurapunktion zeigt maligne Zellen im Pleuraerguss, was auf einen metastasierenden Tumor hinweist.",
-                fourth:
-                  "Pleurapunktion ergibt erhöhte Lymphozytenzahl, Nachweis von Mycobacterium tuberculosis im Erguss.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Kein pathologischer Befund, die entnommene Flüssigkeit ist physiologisch, keine weiteren Untersuchungen erforderlich.",
-                third:
-                  "Der Befund deutet auf einen malignen Pleuraerguss hin, höchstwahrscheinlich als Folge einer Metastasierung durch ein Lungenkarzinom.",
-                fourth:
-                  "Typische Befunde für Tuberkulose-Pleuritis, konsistent mit der klinischen Präsentation des Patienten.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Befund dient der Beruhigung des Patienten und bestätigt die Unauffälligkeit. Keine weiteren Maßnahmen notwendig.",
-                third:
-                  "Die Ergebnisse sind entscheidend für die Planung einer Chemotherapie oder palliativen Therapie zur Symptomlinderung.",
-                fourth:
-                  "Diagnose führt zur Einleitung einer Langzeit-Antibiotikatherapie gegen Tuberkulose, Überwachung des Therapieerfolgs durch regelmäßige Kontrollen.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung des normalen Zustands der Pleura, kein pathologischer Befund.",
-                third:
-                  "Diagnose eines malignen Pleuraergusses aufgrund der positiven Zytologie und klinischen Anamnese.",
-                fourth:
-                  "Diagnose von Tuberkulose-Pleuritis basierend auf den Pleuraflüssigkeitsbefunden und der kulturellen Untersuchung.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Klare, strohgelbe Flüssigkeit, ohne zelluläre Auffälligkeiten oder pathologische Veränderungen.",
-                third:
-                  "Zytologische Untersuchung zeigt Tumorzellen im Erguss. Flüssigkeit ist blutig und trüb.",
-                fourth:
-                  "Flüssigkeit ist trüb, erhöhte Lymphozytenzahl und positive Tuberkulose-Kultur.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Es ist zu empfehlen, den Patienten in regelmäßigen Abständen zur Kontrolle einzubestellen, auch wenn derzeit keine Behandlung erforderlich ist. Vorbeugende Maßnahmen zur Gesundheitserhaltung sollten besprochen werden, um den Zustand zu stabilisieren.",
-                third:
-                  "Es ist zu empfehlen, die Patientin schnellstmöglich in eine onkologische Betreuung zu überweisen, um eine Chemotherapie oder palliative Maßnahmen zu planen. Regelmäßige Nachuntersuchungen sind notwendig, um den Verlauf der Erkrankung zu überwachen.",
-                fourth:
-                  "Es ist zu empfehlen, eine Langzeit-Antibiotikatherapie gegen Tuberkulose sofort einzuleiten. Regelmäßige Kontrollen des Behandlungsverlaufs und des Allgemeinzustandes des Patienten sind erforderlich. Eine enge Zusammenarbeit mit der Lungenheilkunde wird empfohlen.",
-              },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, aber mit einem leicht vergrößerten Pleuraspalt im Röntgenbild, Routinekontrolle.",
+            third:
+              "60-jährige Patientin mit Atemnot und ungewolltem Gewichtsverlust. Raucherin mit Verdacht auf Lungenkrebs.",
+            fourth:
+              "45-jähriger Patient mit anhaltendem Husten, Nachtschweiß und Fieber. Vorgeschichte von Tuberkulose in der Familie.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Pleuraflüssigkeit normal, keine Anzeichen für Infektionen oder maligne Zellen, klare Flüssigkeit ohne Auffälligkeiten.",
+            third:
+              "Die Pleurapunktion zeigt maligne Zellen im Pleuraerguss, was auf einen metastasierenden Tumor hinweist.",
+            fourth:
+              "Pleurapunktion ergibt erhöhte Lymphozytenzahl, Nachweis von Mycobacterium tuberculosis im Erguss.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Kein pathologischer Befund, die entnommene Flüssigkeit ist physiologisch, keine weiteren Untersuchungen erforderlich.",
+            third:
+              "Der Befund deutet auf einen malignen Pleuraerguss hin, höchstwahrscheinlich als Folge einer Metastasierung durch ein Lungenkarzinom.",
+            fourth:
+              "Typische Befunde für Tuberkulose-Pleuritis, konsistent mit der klinischen Präsentation des Patienten.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten und bestätigt die Unauffälligkeit. Keine weiteren Maßnahmen notwendig.",
+            third:
+              "Die Ergebnisse sind entscheidend für die Planung einer Chemotherapie oder palliativen Therapie zur Symptomlinderung.",
+            fourth:
+              "Diagnose führt zur Einleitung einer Langzeit-Antibiotikatherapie gegen Tuberkulose, Überwachung des Therapieerfolgs durch regelmäßige Kontrollen.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des normalen Zustands der Pleura, kein pathologischer Befund.",
+            third:
+              "Diagnose eines malignen Pleuraergusses aufgrund der positiven Zytologie und klinischen Anamnese.",
+            fourth:
+              "Diagnose von Tuberkulose-Pleuritis basierend auf den Pleuraflüssigkeitsbefunden und der kulturellen Untersuchung.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Klare, strohgelbe Flüssigkeit, ohne zelluläre Auffälligkeiten oder pathologische Veränderungen.",
+            third:
+              "Zytologische Untersuchung zeigt Tumorzellen im Erguss. Flüssigkeit ist blutig und trüb.",
+            fourth:
+              "Flüssigkeit ist trüb, erhöhte Lymphozytenzahl und positive Tuberkulose-Kultur.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, den Patienten in regelmäßigen Abständen zur Kontrolle einzubestellen, auch wenn derzeit keine Behandlung erforderlich ist. Vorbeugende Maßnahmen zur Gesundheitserhaltung sollten besprochen werden, um den Zustand zu stabilisieren.",
+            third:
+              "Es ist zu empfehlen, die Patientin schnellstmöglich in eine onkologische Betreuung zu überweisen, um eine Chemotherapie oder palliative Maßnahmen zu planen. Regelmäßige Nachuntersuchungen sind notwendig, um den Verlauf der Erkrankung zu überwachen.",
+            fourth:
+              "Es ist zu empfehlen, eine Langzeit-Antibiotikatherapie gegen Tuberkulose sofort einzuleiten. Regelmäßige Kontrollen des Behandlungsverlaufs und des Allgemeinzustandes des Patienten sind erforderlich. Eine enge Zusammenarbeit mit der Lungenheilkunde wird empfohlen.",
+          },
         ],
       },
       // 5tab 331
@@ -28198,112 +28132,110 @@ export const parentTabs = [
         id: 335,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Die Abdomenpalpation dient der Untersuchung des Bauchraums durch Abtasten, um pathologische Veränderungen wie Vergrößerungen von Organen, Flüssigkeitsansammlungen, Tumore oder entzündliche Prozesse festzustellen.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Diese Untersuchung ist in der klinischen Praxis von großer Bedeutung, da sie eine erste Einschätzung von Bauchschmerzen, Magen-Darm-Beschwerden oder abdominellen Massen ermöglicht. Sie wird häufig in der Notaufnahme, auf Stationen und in der hausärztlichen Praxis durchgeführt.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die Abdomenpalpation basiert auf der Tastwahrnehmung, wobei der Arzt durch Druck und Verschiebung der Bauchdecke Informationen über die darunterliegenden Strukturen erhält. Das Ziel ist es, ungewöhnliche Konsistenzen, Druckschmerzhaftigkeit oder Schwellungen zu erkennen.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Der Patient wird in Rückenlage gelagert, wobei die Bauchmuskulatur entspannt sein sollte. Der Arzt tastet das Abdomen systematisch ab, beginnend im Bereich ohne Schmerzen und fortschreitend zu den empfindlicheren Zonen. Es gibt sowohl eine oberflächliche als auch eine tiefe Palpation.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Die Befunde der Abdomenpalpation müssen in Kombination mit der Anamnese und weiteren diagnostischen Verfahren interpretiert werden. Beispielsweise kann eine verhärtete Leber auf eine Hepatomegalie oder eine Aszitesansammlung hinweisen.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Zu den häufigen pathologischen Befunden gehören eine vergrößerte Leber (Hepatomegalie), ein erhöhter Druckschmerz im Bereich des Blinddarms (Hinweis auf Appendizitis) oder eine tastbare Masse, die auf einen Tumor hinweisen könnte.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Abdomenpalpation ist eine nicht-invasive, schnelle und kostengünstige Methode, die dem Arzt wertvolle erste Hinweise auf mögliche abdominelle Pathologien liefert.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Die Methode ist stark abhängig von der Erfahrung des Arztes und den körperlichen Gegebenheiten des Patienten, wie z.B. einer Adipositas, die die Palpation erschweren kann.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "In der Regel bestehen bei der Abdomenpalpation keine Risiken, außer einem leichten Unwohlsein für den Patienten.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Abdomenpalpation ist häufig der erste Schritt in der Diagnostik von Bauchbeschwerden und kann die Richtung für weiterführende Untersuchungen wie Sonographie oder CT vorgeben.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Eine korrekte Abdomenpalpation kann dazu beitragen, schnell Entscheidungen über die weitere Diagnostik und Therapie zu treffen, insbesondere in akuten Situationen wie einer Appendizitis.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Als Alternativen zur Abdomenpalpation kommen bildgebende Verfahren wie die Sonographie, das CT oder das MRT infrage, die eine genauere Darstellung der inneren Organe ermöglichen.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Aktuelle Studien untersuchen, wie die Abdomenpalpation mit modernen Bildgebungstechniken kombiniert werden kann, um die diagnostische Genauigkeit zu erhöhen.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Es wird erforscht, wie KI-basierte Systeme Ärzte bei der Auswertung der Ergebnisse unterstützen können, um subjektive Fehler zu minimieren.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Abdomenpalpation bleibt ein grundlegendes diagnostisches Verfahren, das schnell und einfach Hinweise auf abdominelle Erkrankungen liefern kann. Trotz der Abhängigkeit von der Erfahrung des Untersuchers ist sie unverzichtbar in der Erstdiagnostik.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Insgesamt bietet die Abdomenpalpation eine wertvolle Möglichkeit, frühzeitig krankhafte Veränderungen zu erkennen und die richtigen diagnostischen und therapeutischen Schritte einzuleiten.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Abdomenpalpation dient der Untersuchung des Bauchraums durch Abtasten, um pathologische Veränderungen wie Vergrößerungen von Organen, Flüssigkeitsansammlungen, Tumore oder entzündliche Prozesse festzustellen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Diese Untersuchung ist in der klinischen Praxis von großer Bedeutung, da sie eine erste Einschätzung von Bauchschmerzen, Magen-Darm-Beschwerden oder abdominellen Massen ermöglicht. Sie wird häufig in der Notaufnahme, auf Stationen und in der hausärztlichen Praxis durchgeführt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Abdomenpalpation basiert auf der Tastwahrnehmung, wobei der Arzt durch Druck und Verschiebung der Bauchdecke Informationen über die darunterliegenden Strukturen erhält. Das Ziel ist es, ungewöhnliche Konsistenzen, Druckschmerzhaftigkeit oder Schwellungen zu erkennen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Der Patient wird in Rückenlage gelagert, wobei die Bauchmuskulatur entspannt sein sollte. Der Arzt tastet das Abdomen systematisch ab, beginnend im Bereich ohne Schmerzen und fortschreitend zu den empfindlicheren Zonen. Es gibt sowohl eine oberflächliche als auch eine tiefe Palpation.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Befunde der Abdomenpalpation müssen in Kombination mit der Anamnese und weiteren diagnostischen Verfahren interpretiert werden. Beispielsweise kann eine verhärtete Leber auf eine Hepatomegalie oder eine Aszitesansammlung hinweisen.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Zu den häufigen pathologischen Befunden gehören eine vergrößerte Leber (Hepatomegalie), ein erhöhter Druckschmerz im Bereich des Blinddarms (Hinweis auf Appendizitis) oder eine tastbare Masse, die auf einen Tumor hinweisen könnte.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Abdomenpalpation ist eine nicht-invasive, schnelle und kostengünstige Methode, die dem Arzt wertvolle erste Hinweise auf mögliche abdominelle Pathologien liefert.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Methode ist stark abhängig von der Erfahrung des Arztes und den körperlichen Gegebenheiten des Patienten, wie z.B. einer Adipositas, die die Palpation erschweren kann.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "In der Regel bestehen bei der Abdomenpalpation keine Risiken, außer einem leichten Unwohlsein für den Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Abdomenpalpation ist häufig der erste Schritt in der Diagnostik von Bauchbeschwerden und kann die Richtung für weiterführende Untersuchungen wie Sonographie oder CT vorgeben.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Eine korrekte Abdomenpalpation kann dazu beitragen, schnell Entscheidungen über die weitere Diagnostik und Therapie zu treffen, insbesondere in akuten Situationen wie einer Appendizitis.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Als Alternativen zur Abdomenpalpation kommen bildgebende Verfahren wie die Sonographie, das CT oder das MRT infrage, die eine genauere Darstellung der inneren Organe ermöglichen.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Aktuelle Studien untersuchen, wie die Abdomenpalpation mit modernen Bildgebungstechniken kombiniert werden kann, um die diagnostische Genauigkeit zu erhöhen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Es wird erforscht, wie KI-basierte Systeme Ärzte bei der Auswertung der Ergebnisse unterstützen können, um subjektive Fehler zu minimieren.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Abdomenpalpation bleibt ein grundlegendes diagnostisches Verfahren, das schnell und einfach Hinweise auf abdominelle Erkrankungen liefern kann. Trotz der Abhängigkeit von der Erfahrung des Untersuchers ist sie unverzichtbar in der Erstdiagnostik.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Insgesamt bietet die Abdomenpalpation eine wertvolle Möglichkeit, frühzeitig krankhafte Veränderungen zu erkennen und die richtigen diagnostischen und therapeutischen Schritte einzuleiten.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 336
@@ -28323,118 +28255,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie, dass die Abdomenpalpation durchgeführt wird, um durch Abtasten des Bauchraums mögliche Auffälligkeiten wie Schwellungen, Druckempfindlichkeit oder Vergrößerungen der Organe zu erkennen.",
-                third:
-                  "„Wir wollen durch das Abtasten des Bauchs herausfinden, ob Organe vergrößert oder schmerzempfindlich sind.“",
-                fourth:
-                  "„Das Ziel ist es, Auffälligkeiten im Bauchbereich wie Schwellungen oder Flüssigkeitsansammlungen festzustellen.“",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Erläutern Sie, dass der Patient in Rückenlage liegt, während der Arzt den Bauch systematisch abtastet. Der Patient sollte dabei möglichst entspannt sein, um eine bessere Untersuchung zu ermöglichen.",
-                third:
-                  "„Sie liegen auf dem Rücken, und ich werde sanft mit den Händen Ihren Bauch abtasten.“",
-                fourth:
-                  "„Es ist wichtig, dass Sie entspannt bleiben, während ich verschiedene Bereiche Ihres Bauchs untersuche.“",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie, dass keine besondere Vorbereitung nötig ist, jedoch eine entspannte Bauchdecke hilfreich ist. Der Patient sollte vorher die Blase entleeren.",
-                third:
-                  "„Vor der Untersuchung wäre es gut, wenn Sie Ihre Blase entleeren könnten.“",
-                fourth:
-                  "„Es ist keine spezielle Vorbereitung notwendig, aber versuchen Sie, Ihre Bauchmuskeln zu entspannen.“",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Betonen Sie, dass es keine nennenswerten Risiken gibt. Es kann jedoch zu leichtem Unwohlsein kommen, wenn der Bauch gedrückt wird, insbesondere bei bestehenden Schmerzen.",
-                third:
-                  "„Es kann sein, dass Sie während der Untersuchung einen leichten Druck verspüren, aber das ist normal.“",
-                fourth:
-                  "„Die Untersuchung ist risikoarm. Sollten Sie Schmerzen verspüren, informieren Sie mich bitte sofort.“",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erklären Sie, dass die Abdomenpalpation eine einfache, schnelle und nicht-invasive Methode ist, um erste Hinweise auf Erkrankungen im Bauchraum zu gewinnen.",
-                third:
-                  "„Die Palpation ist eine schnelle Methode, um erste Hinweise auf mögliche Probleme im Bauchraum zu erhalten.“",
-                fourth:
-                  "„Ein Vorteil ist, dass diese Untersuchung schnell und ohne zusätzliche Technik durchgeführt werden kann.“",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Erwähnen Sie, dass bei unklaren Befunden oder zur genaueren Abklärung bildgebende Verfahren wie Ultraschall, CT oder MRT als Alternativen zur Verfügung stehen.",
-                third:
-                  "„Wenn die Ergebnisse nicht eindeutig sind, könnte ein Ultraschall oder eine Computertomographie sinnvoll sein.“",
-                fourth:
-                  "„Bei Bedarf können wir auch eine MRT durchführen, um genauere Bilder vom Bauchraum zu erhalten.“",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Betonen Sie, dass es keine Kontraindikationen für eine Abdomenpalpation gibt. Allerdings könnte bei starkem Schmerz oder Verletzungen die Untersuchung erschwert sein.",
-                third:
-                  "„Wenn der Schmerz im Bauch sehr stark ist, kann die Untersuchung schwierig sein, aber in der Regel gut durchführbar.“",
-                fourth:
-                  "„Bei frischen Verletzungen oder Operationen am Bauch sollten wir vorsichtiger vorgehen.“",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Palpation Hinweise auf Vergrößerungen von Organen, Ansammlungen von Flüssigkeit (Aszites) oder Tumoren geben kann.",
-                third:
-                  "„Ich könnte zum Beispiel eine vergrößerte Leber oder Schwellungen durch Flüssigkeitsansammlungen tasten.“",
-                fourth:
-                  "„Wenn ich eine abnormale Verhärtung im Bauchraum spüre, könnte das auf einen Tumor hinweisen.“",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Informieren Sie den Patienten, dass eine Einverständniserklärung erforderlich ist, bevor die Untersuchung durchgeführt wird, da dies ein Teil der medizinischen Routine ist.",
-                third:
-                  "„Bevor wir mit der Untersuchung beginnen, brauche ich Ihre Zustimmung, da dies Teil der medizinischen Routine ist.“",
-                fourth:
-                  "„Ich möchte sicherstellen, dass Sie der Untersuchung zustimmen, nachdem ich Ihnen alle wichtigen Informationen gegeben habe.“",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Erklären Sie, dass der Patient seine Zustimmung zur Untersuchung geben muss, nachdem er über den Ablauf, die Risiken und den Zweck informiert wurde.",
-                third:
-                  "„Nachdem ich Ihnen alles erklärt habe, ist es wichtig, dass Sie der Untersuchung zustimmen.“",
-                fourth:
-                  "„Ihre Einwilligung ist notwendig, bevor wir die Untersuchung durchführen können.“",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Informieren Sie den Patienten, dass die Untersuchung in der Regel keine Schmerzen verursacht und falls etwas auffällig ist, weitere Schritte, wie eine Sonographie, folgen können.",
-                third:
-                  "„In den meisten Fällen verursacht die Untersuchung keine Schmerzen. Wenn etwas Auffälliges ist, klären wir dies mit weiteren Untersuchungen.“",
-                fourth:
-                  "„Die Untersuchung ist meist schmerzfrei. Falls wir etwas finden, könnten weitere Tests wie ein Ultraschall nötig sein.“",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Ergebnisse unmittelbar mit dem Patienten besprochen werden und, falls notwendig, weitere Untersuchungen oder Behandlungen empfohlen werden.",
-                third:
-                  "„Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und erkläre, ob weitere Schritte nötig sind.“",
-                fourth:
-                  "„Ich werde Ihnen sofort mitteilen, was ich gefunden habe, und falls notwendig, planen wir weitere Untersuchungen.“",
-              },
-            
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass die Abdomenpalpation durchgeführt wird, um durch Abtasten des Bauchraums mögliche Auffälligkeiten wie Schwellungen, Druckempfindlichkeit oder Vergrößerungen der Organe zu erkennen.",
+            third:
+              "„Wir wollen durch das Abtasten des Bauchs herausfinden, ob Organe vergrößert oder schmerzempfindlich sind.“",
+            fourth:
+              "„Das Ziel ist es, Auffälligkeiten im Bauchbereich wie Schwellungen oder Flüssigkeitsansammlungen festzustellen.“",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie, dass der Patient in Rückenlage liegt, während der Arzt den Bauch systematisch abtastet. Der Patient sollte dabei möglichst entspannt sein, um eine bessere Untersuchung zu ermöglichen.",
+            third:
+              "„Sie liegen auf dem Rücken, und ich werde sanft mit den Händen Ihren Bauch abtasten.“",
+            fourth:
+              "„Es ist wichtig, dass Sie entspannt bleiben, während ich verschiedene Bereiche Ihres Bauchs untersuche.“",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie, dass keine besondere Vorbereitung nötig ist, jedoch eine entspannte Bauchdecke hilfreich ist. Der Patient sollte vorher die Blase entleeren.",
+            third:
+              "„Vor der Untersuchung wäre es gut, wenn Sie Ihre Blase entleeren könnten.“",
+            fourth:
+              "„Es ist keine spezielle Vorbereitung notwendig, aber versuchen Sie, Ihre Bauchmuskeln zu entspannen.“",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass es keine nennenswerten Risiken gibt. Es kann jedoch zu leichtem Unwohlsein kommen, wenn der Bauch gedrückt wird, insbesondere bei bestehenden Schmerzen.",
+            third:
+              "„Es kann sein, dass Sie während der Untersuchung einen leichten Druck verspüren, aber das ist normal.“",
+            fourth:
+              "„Die Untersuchung ist risikoarm. Sollten Sie Schmerzen verspüren, informieren Sie mich bitte sofort.“",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass die Abdomenpalpation eine einfache, schnelle und nicht-invasive Methode ist, um erste Hinweise auf Erkrankungen im Bauchraum zu gewinnen.",
+            third:
+              "„Die Palpation ist eine schnelle Methode, um erste Hinweise auf mögliche Probleme im Bauchraum zu erhalten.“",
+            fourth:
+              "„Ein Vorteil ist, dass diese Untersuchung schnell und ohne zusätzliche Technik durchgeführt werden kann.“",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie, dass bei unklaren Befunden oder zur genaueren Abklärung bildgebende Verfahren wie Ultraschall, CT oder MRT als Alternativen zur Verfügung stehen.",
+            third:
+              "„Wenn die Ergebnisse nicht eindeutig sind, könnte ein Ultraschall oder eine Computertomographie sinnvoll sein.“",
+            fourth:
+              "„Bei Bedarf können wir auch eine MRT durchführen, um genauere Bilder vom Bauchraum zu erhalten.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass es keine Kontraindikationen für eine Abdomenpalpation gibt. Allerdings könnte bei starkem Schmerz oder Verletzungen die Untersuchung erschwert sein.",
+            third:
+              "„Wenn der Schmerz im Bauch sehr stark ist, kann die Untersuchung schwierig sein, aber in der Regel gut durchführbar.“",
+            fourth:
+              "„Bei frischen Verletzungen oder Operationen am Bauch sollten wir vorsichtiger vorgehen.“",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Palpation Hinweise auf Vergrößerungen von Organen, Ansammlungen von Flüssigkeit (Aszites) oder Tumoren geben kann.",
+            third:
+              "„Ich könnte zum Beispiel eine vergrößerte Leber oder Schwellungen durch Flüssigkeitsansammlungen tasten.“",
+            fourth:
+              "„Wenn ich eine abnormale Verhärtung im Bauchraum spüre, könnte das auf einen Tumor hinweisen.“",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Informieren Sie den Patienten, dass eine Einverständniserklärung erforderlich ist, bevor die Untersuchung durchgeführt wird, da dies ein Teil der medizinischen Routine ist.",
+            third:
+              "„Bevor wir mit der Untersuchung beginnen, brauche ich Ihre Zustimmung, da dies Teil der medizinischen Routine ist.“",
+            fourth:
+              "„Ich möchte sicherstellen, dass Sie der Untersuchung zustimmen, nachdem ich Ihnen alle wichtigen Informationen gegeben habe.“",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Patient seine Zustimmung zur Untersuchung geben muss, nachdem er über den Ablauf, die Risiken und den Zweck informiert wurde.",
+            third:
+              "„Nachdem ich Ihnen alles erklärt habe, ist es wichtig, dass Sie der Untersuchung zustimmen.“",
+            fourth:
+              "„Ihre Einwilligung ist notwendig, bevor wir die Untersuchung durchführen können.“",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Informieren Sie den Patienten, dass die Untersuchung in der Regel keine Schmerzen verursacht und falls etwas auffällig ist, weitere Schritte, wie eine Sonographie, folgen können.",
+            third:
+              "„In den meisten Fällen verursacht die Untersuchung keine Schmerzen. Wenn etwas Auffälliges ist, klären wir dies mit weiteren Untersuchungen.“",
+            fourth:
+              "„Die Untersuchung ist meist schmerzfrei. Falls wir etwas finden, könnten weitere Tests wie ein Ultraschall nötig sein.“",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie, dass die Ergebnisse unmittelbar mit dem Patienten besprochen werden und, falls notwendig, weitere Untersuchungen oder Behandlungen empfohlen werden.",
+            third:
+              "„Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und erkläre, ob weitere Schritte nötig sind.“",
+            fourth:
+              "„Ich werde Ihnen sofort mitteilen, was ich gefunden habe, und falls notwendig, planen wir weitere Untersuchungen.“",
+          },
         ],
       },
       // 3tab 337
@@ -28454,100 +28382,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Die Abdomenpalpation ist eine klinische Untersuchungstechnik, bei der der Bauch durch Abtasten auf pathologische Veränderungen wie Druckschmerz, Verhärtungen oder Organvergrößerungen untersucht wird.",
-                third:
-                  "„Bei der Abdomenpalpation tasten wir systematisch den Bauch ab, um mögliche Auffälligkeiten wie Tumore oder Flüssigkeitsansammlungen zu erkennen.“",
-                fourth:
-                  "„Diese Untersuchung ermöglicht es uns, Entzündungen oder abnorme Schwellungen im Bauchraum zu erkennen.“",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Mit der Abdomenpalpation können wir Hinweise auf intraabdominale Erkrankungen wie Hepatomegalie, Aszites, entzündliche Prozesse (z.B. Appendizitis) oder Tumore erhalten.",
-                third:
-                  "„Mit der Palpation können wir Organvergrößerungen oder Flüssigkeitsansammlungen wie bei Aszites feststellen.“",
-                fourth:
-                  "„Durch diese Untersuchung können wir erste Hinweise auf eine mögliche Appendizitis oder andere Entzündungen bekommen.“",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Typische Ergebnisse können eine vergrößerte Leber, eine druckempfindliche Masse im Unterbauch (z.B. bei Appendizitis) oder Anzeichen für Flüssigkeitsansammlungen im Bauchraum (Aszites) sein.",
-                third:
-                  "„Bei der Palpation habe ich eine vergrößerte Leber tasten können, was auf eine Hepatomegalie hinweist.“",
-                fourth:
-                  "„Die Untersuchung zeigte einen deutlichen Druckschmerz im rechten Unterbauch, was für eine Appendizitis spricht.“",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Die Abdomenpalpation ist indiziert bei unklaren Bauchschmerzen, Verdacht auf Entzündungen, Organvergrößerungen, Tumore oder bei allgemeinen Beschwerden im Bauchraum.",
-                third:
-                  "„Bei diesem Patienten mit unspezifischen Bauchschmerzen ist die Abdomenpalpation eine wichtige erste Untersuchung.“",
-                fourth:
-                  "„Bei Verdacht auf entzündliche Prozesse, wie bei einer Appendizitis, ist die Palpation besonders indiziert.“",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Es gibt keine absoluten Kontraindikationen, jedoch könnte die Untersuchung bei Patienten mit akuten Verletzungen oder postoperativen Wunden im Bauchbereich schwierig oder unangenehm sein.",
-                third:
-                  "„Nach einem frischen abdominalen chirurgischen Eingriff sollte die Palpation vorsichtig durchgeführt werden.“",
-                fourth:
-                  "„Patienten mit schweren Bauchtraumata könnten die Untersuchung als sehr schmerzhaft empfinden, daher sollten wir vorsichtig sein.“",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Differenzialdiagnosen umfassen unter anderem gastrointestinale Infektionen, Lebererkrankungen, entzündliche Darmerkrankungen, Tumore oder Hernien.",
-                third:
-                  "„Bei der Untersuchung könnten Differenzialdiagnosen wie Leberzirrhose oder ein Magen-Darm-Infekt infrage kommen.“",
-                fourth:
-                  "„Neben einer Appendizitis müssen wir auch an eine Divertikulitis oder eine Hernie denken.“",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Abhängig von den Ergebnissen können weitere diagnostische Maßnahmen wie Ultraschall oder CT folgen, sowie spezifische Behandlungen, z.B. Antibiotika bei Entzündungen oder chirurgische Eingriffe.",
-                third:
-                  "„Bei dem Tastbefund empfehle ich eine Abdomensonographie, um die Palpationsergebnisse zu bestätigen.“",
-                fourth:
-                  "„Aufgrund des Tastbefunds planen wir eine weiterführende Diagnostik mittels CT und gegebenenfalls eine chirurgische Therapie.“",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Die Zusammenarbeit mit Radiologen für bildgebende Verfahren und Chirurgen bei Bedarf für operative Maßnahmen ist oft notwendig, ebenso wie die Einbindung von Gastroenterologen bei speziellen Befunden.",
-                third:
-                  "„Wir sollten die Radiologen hinzuziehen, um eine Sonographie des Abdomens zu veranlassen.“",
-                fourth:
-                  "„Bei Verdacht auf eine Entzündung des Bauchfells wird die Zusammenarbeit mit dem Chirurgen besonders wichtig sein.“",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Ein strukturiertes Vorgehen bei der Palpation sowie eine gründliche Dokumentation der Befunde sind wichtig, um eine hohe Qualität in der Diagnostik zu gewährleisten.",
-                third:
-                  "„Durch das standardisierte Vorgehen bei der Palpation und die sorgfältige Dokumentation können wir eine hohe Qualität sicherstellen.“",
-                fourth:
-                  "„Eine exakte Dokumentation der Befunde ist für die weitere Behandlungsplanung von entscheidender Bedeutung.“",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Die Befunde der Palpation sollten detailliert dokumentiert und in der Patientenakte festgehalten werden, um die weitere Diagnostik und Therapie zu planen. Eine regelmäßige Überprüfung ist notwendig.",
-                third:
-                  "„Die Ergebnisse der Palpation werden im System erfasst, um sie bei weiteren Untersuchungen und Verlaufskontrollen zu berücksichtigen.“",
-                fourth:
-                  "„Nach der Untersuchung werden die Ergebnisse dokumentiert, damit bei Bedarf weiterführende Maßnahmen eingeleitet werden können.“",
-              },
-            
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Die Abdomenpalpation ist eine klinische Untersuchungstechnik, bei der der Bauch durch Abtasten auf pathologische Veränderungen wie Druckschmerz, Verhärtungen oder Organvergrößerungen untersucht wird.",
+            third:
+              "„Bei der Abdomenpalpation tasten wir systematisch den Bauch ab, um mögliche Auffälligkeiten wie Tumore oder Flüssigkeitsansammlungen zu erkennen.“",
+            fourth:
+              "„Diese Untersuchung ermöglicht es uns, Entzündungen oder abnorme Schwellungen im Bauchraum zu erkennen.“",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Mit der Abdomenpalpation können wir Hinweise auf intraabdominale Erkrankungen wie Hepatomegalie, Aszites, entzündliche Prozesse (z.B. Appendizitis) oder Tumore erhalten.",
+            third:
+              "„Mit der Palpation können wir Organvergrößerungen oder Flüssigkeitsansammlungen wie bei Aszites feststellen.“",
+            fourth:
+              "„Durch diese Untersuchung können wir erste Hinweise auf eine mögliche Appendizitis oder andere Entzündungen bekommen.“",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Typische Ergebnisse können eine vergrößerte Leber, eine druckempfindliche Masse im Unterbauch (z.B. bei Appendizitis) oder Anzeichen für Flüssigkeitsansammlungen im Bauchraum (Aszites) sein.",
+            third:
+              "„Bei der Palpation habe ich eine vergrößerte Leber tasten können, was auf eine Hepatomegalie hinweist.“",
+            fourth:
+              "„Die Untersuchung zeigte einen deutlichen Druckschmerz im rechten Unterbauch, was für eine Appendizitis spricht.“",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Die Abdomenpalpation ist indiziert bei unklaren Bauchschmerzen, Verdacht auf Entzündungen, Organvergrößerungen, Tumore oder bei allgemeinen Beschwerden im Bauchraum.",
+            third:
+              "„Bei diesem Patienten mit unspezifischen Bauchschmerzen ist die Abdomenpalpation eine wichtige erste Untersuchung.“",
+            fourth:
+              "„Bei Verdacht auf entzündliche Prozesse, wie bei einer Appendizitis, ist die Palpation besonders indiziert.“",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Es gibt keine absoluten Kontraindikationen, jedoch könnte die Untersuchung bei Patienten mit akuten Verletzungen oder postoperativen Wunden im Bauchbereich schwierig oder unangenehm sein.",
+            third:
+              "„Nach einem frischen abdominalen chirurgischen Eingriff sollte die Palpation vorsichtig durchgeführt werden.“",
+            fourth:
+              "„Patienten mit schweren Bauchtraumata könnten die Untersuchung als sehr schmerzhaft empfinden, daher sollten wir vorsichtig sein.“",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Differenzialdiagnosen umfassen unter anderem gastrointestinale Infektionen, Lebererkrankungen, entzündliche Darmerkrankungen, Tumore oder Hernien.",
+            third:
+              "„Bei der Untersuchung könnten Differenzialdiagnosen wie Leberzirrhose oder ein Magen-Darm-Infekt infrage kommen.“",
+            fourth:
+              "„Neben einer Appendizitis müssen wir auch an eine Divertikulitis oder eine Hernie denken.“",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Abhängig von den Ergebnissen können weitere diagnostische Maßnahmen wie Ultraschall oder CT folgen, sowie spezifische Behandlungen, z.B. Antibiotika bei Entzündungen oder chirurgische Eingriffe.",
+            third:
+              "„Bei dem Tastbefund empfehle ich eine Abdomensonographie, um die Palpationsergebnisse zu bestätigen.“",
+            fourth:
+              "„Aufgrund des Tastbefunds planen wir eine weiterführende Diagnostik mittels CT und gegebenenfalls eine chirurgische Therapie.“",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Die Zusammenarbeit mit Radiologen für bildgebende Verfahren und Chirurgen bei Bedarf für operative Maßnahmen ist oft notwendig, ebenso wie die Einbindung von Gastroenterologen bei speziellen Befunden.",
+            third:
+              "„Wir sollten die Radiologen hinzuziehen, um eine Sonographie des Abdomens zu veranlassen.“",
+            fourth:
+              "„Bei Verdacht auf eine Entzündung des Bauchfells wird die Zusammenarbeit mit dem Chirurgen besonders wichtig sein.“",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Ein strukturiertes Vorgehen bei der Palpation sowie eine gründliche Dokumentation der Befunde sind wichtig, um eine hohe Qualität in der Diagnostik zu gewährleisten.",
+            third:
+              "„Durch das standardisierte Vorgehen bei der Palpation und die sorgfältige Dokumentation können wir eine hohe Qualität sicherstellen.“",
+            fourth:
+              "„Eine exakte Dokumentation der Befunde ist für die weitere Behandlungsplanung von entscheidender Bedeutung.“",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Die Befunde der Palpation sollten detailliert dokumentiert und in der Patientenakte festgehalten werden, um die weitere Diagnostik und Therapie zu planen. Eine regelmäßige Überprüfung ist notwendig.",
+            third:
+              "„Die Ergebnisse der Palpation werden im System erfasst, um sie bei weiteren Untersuchungen und Verlaufskontrollen zu berücksichtigen.“",
+            fourth:
+              "„Nach der Untersuchung werden die Ergebnisse dokumentiert, damit bei Bedarf weiterführende Maßnahmen eingeleitet werden können.“",
+          },
         ],
       },
       // 4tab 338
@@ -28567,71 +28491,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-         
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "40-jähriger Patient ohne Beschwerden, Routinekontrolle zur Vorsorge. Keine auffällige Anamnese.",
-                third:
-                  "55-jähriger Patient klagt über Müdigkeit, Gelbsucht und Schmerzen im rechten Oberbauch. Vorgeschichte von Alkoholmissbrauch.",
-                fourth:
-                  "25-jährige Patientin berichtet von plötzlichen Bauchschmerzen, die im rechten Unterbauch lokalisiert sind. Keine bekannte Vorerkrankung.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Keine auffälligen Befunde bei der Palpation. Die Bauchdecke ist weich, keine Druckempfindlichkeit.",
-                third:
-                  "Bei der Palpation tastet der Arzt eine vergrößerte Leber im rechten Oberbauch, die druckempfindlich ist.",
-                fourth:
-                  "Druckschmerz im rechten Unterbauch bei der Palpation, insbesondere am McBurney-Punkt, sowie Abwehrspannung bei tiefem Druck.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Normale Palpationsbefunde ohne pathologische Hinweise. Die Ergebnisse sprechen für einen gesunden Zustand des Bauchraums.",
-                third:
-                  "Der Befund deutet auf eine Hepatomegalie hin, möglicherweise aufgrund einer Leberzirrhose. Die Symptome korrelieren mit einer fortgeschrittenen Lebererkrankung.",
-                fourth:
-                  "Der Befund spricht für eine akute Appendizitis. Die Kombination aus Druckschmerz und Abwehrspannung weist auf eine Entzündung hin.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Der Befund dient der Beruhigung des Patienten und unterstützt eine vorsorgliche Gesundheitspflege ohne weitere Maßnahmen.",
-                third:
-                  "Die Ergebnisse sind entscheidend für die weitere Diagnostik (Bluttests, Ultraschall) und die Planung einer konservativen oder chirurgischen Therapie.",
-                fourth:
-                  "Sofortige Überweisung zur chirurgischen Behandlung (Appendektomie) notwendig, um Komplikationen zu verhindern.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung des gesunden Zustandes des Bauches, keine Anzeichen für pathologische Veränderungen.",
-                third:
-                  "Diagnose einer Leberzirrhose basierend auf der Palpation und den klinischen Symptomen.",
-                fourth:
-                  "Diagnose einer akuten Appendizitis aufgrund der Palpationsbefunde und Symptomatik.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Weiche und nicht druckempfindliche Bauchdecke, normale Organbegrenzungen.",
-                third:
-                  "Vergrößerte Leber tastbar im rechten Oberbauch, Druckempfindlichkeit.",
-                fourth:
-                  "Druckschmerz im rechten Unterbauch am McBurney-Punkt, deutliche Abwehrspannung.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Wir empfehlen eine routinemäßige Kontrolle in einem Jahr und geben dem Patienten den Hinweis, bei Beschwerden sofort einen Arzt aufzusuchen.",
-                third:
-                  "Wir empfehlen eine weiterführende Diagnostik mittels Ultraschall und Blutuntersuchungen sowie eine gezielte Therapie zur Behandlung der Leberzirrhose. Alkoholabstinenz und eine enge Überwachung sind notwendig.",
-                fourth:
-                  "Wir empfehlen eine sofortige Überweisung zur Appendektomie, da eine akute Appendizitis vorliegt. Eine postoperative Betreuung und Kontrolle sind ebenfalls erforderlich.",
-              },
-           
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routinekontrolle zur Vorsorge. Keine auffällige Anamnese.",
+            third:
+              "55-jähriger Patient klagt über Müdigkeit, Gelbsucht und Schmerzen im rechten Oberbauch. Vorgeschichte von Alkoholmissbrauch.",
+            fourth:
+              "25-jährige Patientin berichtet von plötzlichen Bauchschmerzen, die im rechten Unterbauch lokalisiert sind. Keine bekannte Vorerkrankung.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Keine auffälligen Befunde bei der Palpation. Die Bauchdecke ist weich, keine Druckempfindlichkeit.",
+            third:
+              "Bei der Palpation tastet der Arzt eine vergrößerte Leber im rechten Oberbauch, die druckempfindlich ist.",
+            fourth:
+              "Druckschmerz im rechten Unterbauch bei der Palpation, insbesondere am McBurney-Punkt, sowie Abwehrspannung bei tiefem Druck.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Normale Palpationsbefunde ohne pathologische Hinweise. Die Ergebnisse sprechen für einen gesunden Zustand des Bauchraums.",
+            third:
+              "Der Befund deutet auf eine Hepatomegalie hin, möglicherweise aufgrund einer Leberzirrhose. Die Symptome korrelieren mit einer fortgeschrittenen Lebererkrankung.",
+            fourth:
+              "Der Befund spricht für eine akute Appendizitis. Die Kombination aus Druckschmerz und Abwehrspannung weist auf eine Entzündung hin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund dient der Beruhigung des Patienten und unterstützt eine vorsorgliche Gesundheitspflege ohne weitere Maßnahmen.",
+            third:
+              "Die Ergebnisse sind entscheidend für die weitere Diagnostik (Bluttests, Ultraschall) und die Planung einer konservativen oder chirurgischen Therapie.",
+            fourth:
+              "Sofortige Überweisung zur chirurgischen Behandlung (Appendektomie) notwendig, um Komplikationen zu verhindern.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustandes des Bauches, keine Anzeichen für pathologische Veränderungen.",
+            third:
+              "Diagnose einer Leberzirrhose basierend auf der Palpation und den klinischen Symptomen.",
+            fourth:
+              "Diagnose einer akuten Appendizitis aufgrund der Palpationsbefunde und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Weiche und nicht druckempfindliche Bauchdecke, normale Organbegrenzungen.",
+            third:
+              "Vergrößerte Leber tastbar im rechten Oberbauch, Druckempfindlichkeit.",
+            fourth:
+              "Druckschmerz im rechten Unterbauch am McBurney-Punkt, deutliche Abwehrspannung.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen eine routinemäßige Kontrolle in einem Jahr und geben dem Patienten den Hinweis, bei Beschwerden sofort einen Arzt aufzusuchen.",
+            third:
+              "Wir empfehlen eine weiterführende Diagnostik mittels Ultraschall und Blutuntersuchungen sowie eine gezielte Therapie zur Behandlung der Leberzirrhose. Alkoholabstinenz und eine enge Überwachung sind notwendig.",
+            fourth:
+              "Wir empfehlen eine sofortige Überweisung zur Appendektomie, da eine akute Appendizitis vorliegt. Eine postoperative Betreuung und Kontrolle sind ebenfalls erforderlich.",
+          },
         ],
       },
       // 5tab 339
@@ -28875,112 +28797,110 @@ export const parentTabs = [
         id: 343,
         title: "Einleitung",
         list: [
-          
-            {
-              title: "Einleitung",
-              items: [
-                {
-                  bold_text: "Ziel und Kontext:",
-                  text: "Das Ziel der Herzauskultation ist es, pathologische Herztöne, Herzgeräusche oder Veränderungen in der Herzfunktion frühzeitig zu erkennen und entsprechende diagnostische Maßnahmen einzuleiten.",
-                },
-                {
-                  bold_text: "Relevanz und Anwendungsbereiche:",
-                  text: "Die Herzauskultation wird routinemäßig bei kardiologischen Untersuchungen, in der Notfallmedizin und zur Verlaufsbeurteilung bei bereits bekannten Herzerkrankungen angewendet. Sie bietet eine einfache und nicht-invasive Methode zur Erstbewertung der Herzgesundheit.",
-                },
-              ],
-            },
-            {
-              title: "Grundprinzipien",
-              items: [
-                {
-                  bold_text: "Theoretische Grundlagen:",
-                  text: "Die Herztöne entstehen durch das Öffnen und Schließen der Herzklappen während des Herzzyklus. Pathologische Geräusche können durch Turbulenzen im Blutfluss entstehen, wie sie bei Klappenerkrankungen, Septumdefekten oder anderen Herzfehlern vorkommen.",
-                },
-                {
-                  bold_text: "Technische Aspekte:",
-                  text: "Für die Auskultation wird ein Stethoskop verwendet, das an verschiedenen anatomischen Punkten auf dem Thorax platziert wird (Aortenklappe, Pulmonalklappe, Trikuspidalklappe und Mitralklappe). Es wird zwischen den Herztönen (S1 und S2) und zusätzlichen Geräuschen wie Herzgeräuschen, Klicks oder Reibegeräuschen unterschieden.",
-                },
-              ],
-            },
-            {
-              title: "Interpretation",
-              items: [
-                {
-                  bold_text: "Auswertung und Interpretation:",
-                  text: "Der Arzt hört auf die Intensität, den Rhythmus und die Frequenz der Herztöne sowie auf pathologische Geräusche wie Systolikum, Diastolikum oder Reibegeräusche, die auf strukturelle Herzerkrankungen hinweisen können.",
-                },
-                {
-                  bold_text: "Typische Befunde:",
-                  text: "Normale Herztöne umfassen den ersten und zweiten Herzton (S1 und S2). Pathologische Befunde können Herzgeräusche bei Aorten- oder Mitralklappenfehlern, zusätzliche Herztöne (S3, S4) oder Reibegeräusche bei Perikarditis sein.",
-                },
-              ],
-            },
-            {
-              title: "Risiken und Vorteile",
-              items: [
-                {
-                  bold_text: "Vorteile:",
-                  text: "Die Herzauskultation ist ein nicht-invasives, schnell durchführbares und kostengünstiges Verfahren, das wertvolle erste Hinweise auf kardiale Pathologien liefert.",
-                },
-                {
-                  bold_text: "Nachteile:",
-                  text: "Die Methode erfordert viel Erfahrung und ist von der subjektiven Wahrnehmung des Arztes abhängig. Kleine oder versteckte Herzerkrankungen können leicht überhört werden.",
-                },
-                {
-                  bold_text: "Risiken:",
-                  text: "Es gibt keine direkten Risiken, da es sich um ein nicht-invasives Verfahren handelt.",
-                },
-              ],
-            },
-            {
-              title: "Klinische Bedeutung",
-              items: [
-                {
-                  bold_text: "Rolle in der Diagnose und Behandlung:",
-                  text: "Die Herzauskultation spielt eine zentrale Rolle in der Primärdiagnose von Herzerkrankungen und gibt Anhaltspunkte für weiterführende diagnostische Untersuchungen wie Echokardiografie oder EKG.",
-                },
-                {
-                  bold_text: "Wichtigkeit für das Patientenmanagement:",
-                  text: "Sie hilft, rasch Entscheidungen zur weiteren Diagnostik oder Behandlung zu treffen und ist daher ein unverzichtbares Werkzeug in der kardiologischen Routine und der Notfallmedizin.",
-                },
-              ],
-            },
-            {
-              title: "Alternativen",
-              items: [
-                {
-                  bold_text: "",
-                  text: "Alternativen zur Herzauskultation sind bildgebende Verfahren wie die Echokardiografie, die eine detaillierte visuelle Darstellung der Herzstrukturen ermöglichen, oder das Elektrokardiogramm (EKG), das die elektrische Aktivität des Herzens aufzeichnet.",
-                },
-              ],
-            },
-            {
-              title: "Neueste Forschung",
-              items: [
-                {
-                  bold_text: "Aktuelle Erkenntnisse:",
-                  text: "Neue Technologien wie digitale Stethoskope und künstliche Intelligenz unterstützen Ärzte bei der Auswertung von Herzgeräuschen und erhöhen die diagnostische Genauigkeit.",
-                },
-                {
-                  bold_text: "Zukünftige Perspektiven:",
-                  text: "Es wird erwartet, dass sich durch den Einsatz von KI-gestützten Systemen die Diagnosesicherheit und Früherkennung von Herzerkrankungen weiter verbessern wird.",
-                },
-              ],
-            },
-            {
-              title: "Fazit",
-              items: [
-                {
-                  bold_text: "Zusammenfassung der Kernbotschaften:",
-                  text: "Die Herzauskultation ist ein unverzichtbares diagnostisches Werkzeug in der Kardiologie, das erste Hinweise auf strukturelle oder funktionelle Herzerkrankungen liefert.",
-                },
-                {
-                  bold_text: "Gesamtbedeutung:",
-                  text: "Trotz technischer Alternativen bleibt die Herzauskultation ein einfaches und effektives Mittel zur Beurteilung der Herzgesundheit und spielt eine zentrale Rolle in der klinischen Untersuchung von Patienten mit Herzbeschwerden.",
-                },
-              ],
-            },
-          
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Das Ziel der Herzauskultation ist es, pathologische Herztöne, Herzgeräusche oder Veränderungen in der Herzfunktion frühzeitig zu erkennen und entsprechende diagnostische Maßnahmen einzuleiten.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Herzauskultation wird routinemäßig bei kardiologischen Untersuchungen, in der Notfallmedizin und zur Verlaufsbeurteilung bei bereits bekannten Herzerkrankungen angewendet. Sie bietet eine einfache und nicht-invasive Methode zur Erstbewertung der Herzgesundheit.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Herztöne entstehen durch das Öffnen und Schließen der Herzklappen während des Herzzyklus. Pathologische Geräusche können durch Turbulenzen im Blutfluss entstehen, wie sie bei Klappenerkrankungen, Septumdefekten oder anderen Herzfehlern vorkommen.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Für die Auskultation wird ein Stethoskop verwendet, das an verschiedenen anatomischen Punkten auf dem Thorax platziert wird (Aortenklappe, Pulmonalklappe, Trikuspidalklappe und Mitralklappe). Es wird zwischen den Herztönen (S1 und S2) und zusätzlichen Geräuschen wie Herzgeräuschen, Klicks oder Reibegeräuschen unterschieden.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Der Arzt hört auf die Intensität, den Rhythmus und die Frequenz der Herztöne sowie auf pathologische Geräusche wie Systolikum, Diastolikum oder Reibegeräusche, die auf strukturelle Herzerkrankungen hinweisen können.",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Normale Herztöne umfassen den ersten und zweiten Herzton (S1 und S2). Pathologische Befunde können Herzgeräusche bei Aorten- oder Mitralklappenfehlern, zusätzliche Herztöne (S3, S4) oder Reibegeräusche bei Perikarditis sein.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Herzauskultation ist ein nicht-invasives, schnell durchführbares und kostengünstiges Verfahren, das wertvolle erste Hinweise auf kardiale Pathologien liefert.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Methode erfordert viel Erfahrung und ist von der subjektiven Wahrnehmung des Arztes abhängig. Kleine oder versteckte Herzerkrankungen können leicht überhört werden.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Es gibt keine direkten Risiken, da es sich um ein nicht-invasives Verfahren handelt.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Herzauskultation spielt eine zentrale Rolle in der Primärdiagnose von Herzerkrankungen und gibt Anhaltspunkte für weiterführende diagnostische Untersuchungen wie Echokardiografie oder EKG.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Sie hilft, rasch Entscheidungen zur weiteren Diagnostik oder Behandlung zu treffen und ist daher ein unverzichtbares Werkzeug in der kardiologischen Routine und der Notfallmedizin.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur Herzauskultation sind bildgebende Verfahren wie die Echokardiografie, die eine detaillierte visuelle Darstellung der Herzstrukturen ermöglichen, oder das Elektrokardiogramm (EKG), das die elektrische Aktivität des Herzens aufzeichnet.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Technologien wie digitale Stethoskope und künstliche Intelligenz unterstützen Ärzte bei der Auswertung von Herzgeräuschen und erhöhen die diagnostische Genauigkeit.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Es wird erwartet, dass sich durch den Einsatz von KI-gestützten Systemen die Diagnosesicherheit und Früherkennung von Herzerkrankungen weiter verbessern wird.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Herzauskultation ist ein unverzichtbares diagnostisches Werkzeug in der Kardiologie, das erste Hinweise auf strukturelle oder funktionelle Herzerkrankungen liefert.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Trotz technischer Alternativen bleibt die Herzauskultation ein einfaches und effektives Mittel zur Beurteilung der Herzgesundheit und spielt eine zentrale Rolle in der klinischen Untersuchung von Patienten mit Herzbeschwerden.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 344
@@ -29000,119 +28920,115 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie, dass das Ziel der Herzauskultation darin besteht, die Herzgeräusche und Herztöne zu beurteilen, um Hinweise auf mögliche Herzrhythmusstörungen, Herzklappenfehler oder andere Herzprobleme zu erhalten.",
-                third:
-                  "Wir führen die Auskultation durch, um zu überprüfen, ob Ihre Herzklappen richtig schließen und ob der Herzrhythmus regelmäßig ist.",
-                fourth:
-                  "Durch das Abhören des Herzens können wir erkennen, ob es Hinweise auf eine Herzinsuffizienz oder andere Herzprobleme gibt.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Erläutern Sie, dass der Arzt mit einem Stethoskop an verschiedenen Punkten auf der Brust abhört. Der Patient atmet dabei ruhig, während der Arzt die Herztöne in Ruhe und ggf. unter leichter Anstrengung bewertet.",
-                third:
-                  "Ich werde das Stethoskop an verschiedenen Stellen auf Ihrer Brust platzieren, und Sie atmen bitte ruhig weiter.",
-                fourth:
-                  "Sie können entspannt bleiben. Ich höre jetzt Ihre Herztöne ab, sowohl in Ruhe als auch unter leichtem Druck, wenn Sie ein paar tiefe Atemzüge nehmen.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie den Patienten, dass keine spezielle Vorbereitung erforderlich ist, aber der Oberkörper freigemacht werden sollte, damit der Arzt die Brust ungehindert abhören kann.",
-                third:
-                  "Es ist keine Vorbereitung notwendig, aber ich bitte Sie, den Oberkörper freizumachen.",
-                fourth:
-                  "Sie müssen sich nicht speziell vorbereiten. Ziehen Sie bitte nur Ihr Oberteil aus, damit ich die Untersuchung durchführen kann.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Betonen Sie, dass die Herzauskultation ein sicheres und nicht-invasives Verfahren ist, das keinerlei Risiken mit sich bringt.",
-                third:
-                  "Es gibt keine Risiken bei dieser Untersuchung, da wir nur Ihr Herz von außen abhören.",
-                fourth:
-                  "Die Herzauskultation ist vollkommen sicher und tut auch nicht weh.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erläutern Sie, dass die Herzauskultation eine einfache, schnelle und kostengünstige Methode ist, die wertvolle Hinweise auf mögliche Herzerkrankungen geben kann.",
-                third:
-                  "Ein großer Vorteil ist, dass wir ohne invasive Maßnahmen bereits wichtige Informationen über Ihr Herz erhalten können.",
-                fourth:
-                  "Diese Untersuchung ist schnell und unkompliziert, aber sehr hilfreich für eine erste Einschätzung Ihrer Herzgesundheit.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Informieren Sie über Alternativen wie die Echokardiografie oder das EKG, die detailliertere Informationen über die Herzfunktion und -strukturen liefern können.",
-                third:
-                  "Falls nötig, können wir zusätzlich eine Echokardiografie oder ein EKG durchführen, um genauere Informationen zu erhalten.",
-                fourth:
-                  "Wenn die Auskultation auffällig ist, führen wir eventuell ein EKG oder einen Ultraschall des Herzens durch.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erwähnen Sie, dass es keine direkten Kontraindikationen für die Herzauskultation gibt, da sie nicht-invasiv ist.",
-                third:
-                  "Es gibt keine Kontraindikationen für diese Untersuchung, sie ist für alle Patienten geeignet.",
-                fourth:
-                  "Da die Auskultation keine Risiken birgt, kann sie bei allen Patienten durchgeführt werden.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Herzauskultation normale Herztöne oder auffällige Befunde wie Herzgeräusche oder zusätzliche Herztöne ergeben kann, die auf Erkrankungen hinweisen.",
-                third:
-                  "Möglicherweise höre ich ein Herzgeräusch, das auf eine Klappenveränderung hinweisen könnte.",
-                fourth:
-                  "Bei der Auskultation können wir hören, ob Ihre Herztöne normal sind oder ob Auffälligkeiten wie zusätzliche Töne vorhanden sind.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, dass das Einverständnis des Patienten wichtig ist, auch wenn es sich um eine einfache Untersuchung handelt, um Transparenz und Vertrauen zu fördern.",
-                third:
-                  "Ich werde Ihnen vorher genau erklären, was ich mache. Ihre Zustimmung ist natürlich wichtig.",
-                fourth:
-                  "Es ist wichtig, dass Sie mit der Untersuchung einverstanden sind. Ich erkläre Ihnen gerne vorher, was passiert.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Informieren Sie den Patienten, dass der Arzt das Einverständnis vor Beginn der Untersuchung einholt und erklärt, wie die Auskultation durchgeführt wird.",
-                third:
-                  "Bevor ich beginne, werde ich Sie um Ihr Einverständnis bitten und den Ablauf kurz erklären.",
-                fourth:
-                  "Wir holen uns vorher Ihr Einverständnis ein und klären Sie über den genauen Ablauf auf.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Erwähnen Sie, dass die Untersuchung in der Regel schnell durchgeführt ist und in vielen Fällen keine weiteren Maßnahmen notwendig sind, außer bei auffälligen Befunden.",
-                third:
-                  "In der Regel ist die Untersuchung nach wenigen Minuten abgeschlossen, und Sie müssen sich keine Sorgen machen.",
-                fourth:
-                  "Die Auskultation dauert nur kurz. Wenn ich etwas Auffälliges höre, werde ich es Ihnen sofort mitteilen.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Informieren Sie den Patienten darüber, dass die Ergebnisse der Auskultation direkt im Anschluss an die Untersuchung besprochen werden können, und ob weitere diagnostische Schritte erforderlich sind.",
-                third:
-                  "Die Ergebnisse der Untersuchung bespreche ich direkt danach mit Ihnen, damit Sie wissen, ob weitere Maßnahmen notwendig sind.",
-                fourth:
-                  "Sobald ich die Auskultation beendet habe, werde ich Ihnen sofort mitteilen, ob alles in Ordnung ist oder wir weiter untersuchen müssen.",
-              },
-            ],
-          
-        
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel der Herzauskultation darin besteht, die Herzgeräusche und Herztöne zu beurteilen, um Hinweise auf mögliche Herzrhythmusstörungen, Herzklappenfehler oder andere Herzprobleme zu erhalten.",
+            third:
+              "Wir führen die Auskultation durch, um zu überprüfen, ob Ihre Herzklappen richtig schließen und ob der Herzrhythmus regelmäßig ist.",
+            fourth:
+              "Durch das Abhören des Herzens können wir erkennen, ob es Hinweise auf eine Herzinsuffizienz oder andere Herzprobleme gibt.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie, dass der Arzt mit einem Stethoskop an verschiedenen Punkten auf der Brust abhört. Der Patient atmet dabei ruhig, während der Arzt die Herztöne in Ruhe und ggf. unter leichter Anstrengung bewertet.",
+            third:
+              "Ich werde das Stethoskop an verschiedenen Stellen auf Ihrer Brust platzieren, und Sie atmen bitte ruhig weiter.",
+            fourth:
+              "Sie können entspannt bleiben. Ich höre jetzt Ihre Herztöne ab, sowohl in Ruhe als auch unter leichtem Druck, wenn Sie ein paar tiefe Atemzüge nehmen.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass keine spezielle Vorbereitung erforderlich ist, aber der Oberkörper freigemacht werden sollte, damit der Arzt die Brust ungehindert abhören kann.",
+            third:
+              "Es ist keine Vorbereitung notwendig, aber ich bitte Sie, den Oberkörper freizumachen.",
+            fourth:
+              "Sie müssen sich nicht speziell vorbereiten. Ziehen Sie bitte nur Ihr Oberteil aus, damit ich die Untersuchung durchführen kann.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass die Herzauskultation ein sicheres und nicht-invasives Verfahren ist, das keinerlei Risiken mit sich bringt.",
+            third:
+              "Es gibt keine Risiken bei dieser Untersuchung, da wir nur Ihr Herz von außen abhören.",
+            fourth:
+              "Die Herzauskultation ist vollkommen sicher und tut auch nicht weh.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie, dass die Herzauskultation eine einfache, schnelle und kostengünstige Methode ist, die wertvolle Hinweise auf mögliche Herzerkrankungen geben kann.",
+            third:
+              "Ein großer Vorteil ist, dass wir ohne invasive Maßnahmen bereits wichtige Informationen über Ihr Herz erhalten können.",
+            fourth:
+              "Diese Untersuchung ist schnell und unkompliziert, aber sehr hilfreich für eine erste Einschätzung Ihrer Herzgesundheit.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie über Alternativen wie die Echokardiografie oder das EKG, die detailliertere Informationen über die Herzfunktion und -strukturen liefern können.",
+            third:
+              "Falls nötig, können wir zusätzlich eine Echokardiografie oder ein EKG durchführen, um genauere Informationen zu erhalten.",
+            fourth:
+              "Wenn die Auskultation auffällig ist, führen wir eventuell ein EKG oder einen Ultraschall des Herzens durch.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass es keine direkten Kontraindikationen für die Herzauskultation gibt, da sie nicht-invasiv ist.",
+            third:
+              "Es gibt keine Kontraindikationen für diese Untersuchung, sie ist für alle Patienten geeignet.",
+            fourth:
+              "Da die Auskultation keine Risiken birgt, kann sie bei allen Patienten durchgeführt werden.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Herzauskultation normale Herztöne oder auffällige Befunde wie Herzgeräusche oder zusätzliche Herztöne ergeben kann, die auf Erkrankungen hinweisen.",
+            third:
+              "Möglicherweise höre ich ein Herzgeräusch, das auf eine Klappenveränderung hinweisen könnte.",
+            fourth:
+              "Bei der Auskultation können wir hören, ob Ihre Herztöne normal sind oder ob Auffälligkeiten wie zusätzliche Töne vorhanden sind.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass das Einverständnis des Patienten wichtig ist, auch wenn es sich um eine einfache Untersuchung handelt, um Transparenz und Vertrauen zu fördern.",
+            third:
+              "Ich werde Ihnen vorher genau erklären, was ich mache. Ihre Zustimmung ist natürlich wichtig.",
+            fourth:
+              "Es ist wichtig, dass Sie mit der Untersuchung einverstanden sind. Ich erkläre Ihnen gerne vorher, was passiert.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Informieren Sie den Patienten, dass der Arzt das Einverständnis vor Beginn der Untersuchung einholt und erklärt, wie die Auskultation durchgeführt wird.",
+            third:
+              "Bevor ich beginne, werde ich Sie um Ihr Einverständnis bitten und den Ablauf kurz erklären.",
+            fourth:
+              "Wir holen uns vorher Ihr Einverständnis ein und klären Sie über den genauen Ablauf auf.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Erwähnen Sie, dass die Untersuchung in der Regel schnell durchgeführt ist und in vielen Fällen keine weiteren Maßnahmen notwendig sind, außer bei auffälligen Befunden.",
+            third:
+              "In der Regel ist die Untersuchung nach wenigen Minuten abgeschlossen, und Sie müssen sich keine Sorgen machen.",
+            fourth:
+              "Die Auskultation dauert nur kurz. Wenn ich etwas Auffälliges höre, werde ich es Ihnen sofort mitteilen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, dass die Ergebnisse der Auskultation direkt im Anschluss an die Untersuchung besprochen werden können, und ob weitere diagnostische Schritte erforderlich sind.",
+            third:
+              "Die Ergebnisse der Untersuchung bespreche ich direkt danach mit Ihnen, damit Sie wissen, ob weitere Maßnahmen notwendig sind.",
+            fourth:
+              "Sobald ich die Auskultation beendet habe, werde ich Ihnen sofort mitteilen, ob alles in Ordnung ist oder wir weiter untersuchen müssen.",
+          },
+        ],
       },
       // 3tab 345
       {
@@ -29131,100 +29047,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Kurz erklären, worum es bei der Untersuchung geht, z.B. „Die Herzauskultation ist eine nicht-invasive Methode, bei der das Herz mit einem Stethoskop abgehört wird, um Herztöne und -geräusche zu beurteilen.“",
-                third:
-                  "Die Herzauskultation ist eine grundlegende klinische Untersuchung, bei der wir die Herzgeräusche und -töne mit einem Stethoskop beurteilen, um strukturelle oder funktionelle Anomalien zu erkennen.",
-                fourth:
-                  "Durch die Auskultation können wir die Funktion der Herzklappen sowie eventuelle Störungen im Blutfluss überprüfen. Sie ist eine einfache und schnelle Methode zur ersten Einschätzung.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Erläutern Sie, welche spezifischen Informationen gewonnen werden, z.B. „Wir können Herzgeräusche, den Rhythmus und eventuelle Veränderungen der Herzklappenfunktion beurteilen.“",
-                third:
-                  "Wir können damit Herzgeräusche, wie zum Beispiel ein Systolikum bei einer Aortenstenose, und Veränderungen der Herztöne, wie zusätzliche Töne, erfassen.",
-                fourth:
-                  "Die Untersuchung ermöglicht es uns, Herzklappenfehler, wie eine Mitralklappeninsuffizienz, oder Rhythmusstörungen, wie Vorhofflimmern, zu erkennen.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Beschreiben Sie typische normale und pathologische Befunde, z.B. „Normale Befunde sind klare S1- und S2-Töne. Auffällige Befunde könnten Herzgeräusche oder zusätzliche Töne wie S3 oder S4 sein.“",
-                third:
-                  "Ein normales Ergebnis wären regelmäßige S1- und S2-Töne ohne zusätzliche Geräusche. Bei einer Mitralklappeninsuffizienz könnten wir ein holosystolisches Geräusch hören.",
-                fourth:
-                  "Wenn wir ein diastolisches Geräusch hören, könnte das auf eine Aortenklappeninsuffizienz hindeuten. Normale Befunde wären klar voneinander abgrenzbare S1 und S2.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Nennen Sie die medizinischen Gründe für die Untersuchung, z.B. „Verdacht auf Herzklappenfehler, Herzinsuffizienz oder bei unklaren Herzgeräuschen.“",
-                third:
-                  "Eine Indikation wäre der Verdacht auf Herzklappenfehler, z.B. bei einem Patienten mit belastungsabhängiger Dyspnoe.",
-                fourth:
-                  "Indikationen umfassen Herzgeräusche, die bei der Routineuntersuchung festgestellt wurden, oder Symptome wie Schwindel und Synkopen, die auf Herzrhythmusstörungen hindeuten.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erklären Sie, wenn keine besonderen Einschränkungen bestehen, z.B. „Es gibt keine absoluten Kontraindikationen für diese nicht-invasive Untersuchung.“",
-                third:
-                  "Da die Herzauskultation nicht invasiv ist, gibt es keine absoluten Kontraindikationen.",
-                fourth:
-                  "Es gibt keine direkten Kontraindikationen, aber stark übergewichtige Patienten können aufgrund der eingeschränkten Hörbarkeit schwierig zu beurteilen sein.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Geben Sie mögliche Krankheitsbilder an, die in Betracht gezogen werden müssen, z.B. „Mögliche Differenzialdiagnosen bei Herzgeräuschen sind Aortenklappenstenose, Mitralklappeninsuffizienz oder Vorhofflimmern.“",
-                third:
-                  "Bei einem systolischen Geräusch denken wir an Differenzialdiagnosen wie Aortenklappenstenose oder Mitralklappeninsuffizienz.",
-                fourth:
-                  "Ein zusätzliches S3 könnte auf eine Herzinsuffizienz hindeuten, während ein S4 bei einer hypertrophen Kardiomyopathie typisch ist.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Beschreiben Sie die nächsten Schritte nach der Untersuchung, z.B. „Bei auffälligen Befunden wie Herzgeräuschen sollte eine Echokardiografie zur weiteren Abklärung erfolgen.“",
-                third:
-                  "Bei Verdacht auf eine Aortenstenose sollten wir eine Echokardiografie zur weiteren Abklärung durchführen und ggf. eine operative Behandlung in Erwägung ziehen.",
-                fourth:
-                  "Falls eine Mitralklappeninsuffizienz bestätigt wird, sollte zunächst eine medikamentöse Therapie begonnen werden, mit einer möglichen chirurgischen Intervention bei fortgeschrittener Erkrankung.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Erläutern Sie die Zusammenarbeit mit anderen Fachdisziplinen, z.B. „Die enge Abstimmung mit der Kardiologie ist wichtig, um die Ergebnisse weiter zu interpretieren und Behandlungspläne zu erstellen.“",
-                third:
-                  "Bei auffälligen Befunden ist die Zusammenarbeit mit der Kardiologie für weiterführende Diagnostik und Therapieplanung wichtig.",
-                fourth:
-                  "Wir sollten den Patienten zur weiteren Abklärung an die Kardiologie überweisen und das Pflegepersonal für die kontinuierliche Überwachung informieren.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Geben Sie an, wie die Untersuchung zur Qualitätssicherung beiträgt, z.B. „Regelmäßige Schulungen und die Verwendung moderner Geräte können die Genauigkeit der Diagnose verbessern.“",
-                third:
-                  "Durch regelmäßige Schulungen für die Auskultation und die Nutzung moderner Stethoskope kann die diagnostische Genauigkeit verbessert werden.",
-                fourth:
-                  "Im Rahmen des Qualitätsmanagements sollten regelmäßige Kontrolluntersuchungen bei Risikopatienten dokumentiert und nachverfolgt werden, um Fortschritte zu messen.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Betonen Sie die Bedeutung einer genauen Dokumentation, z.B. „Die Untersuchungsergebnisse sollten klar dokumentiert und bei auffälligen Befunden weiterverfolgt werden, um den Krankheitsverlauf zu überwachen.“",
-                third:
-                  "Die Befunde müssen im Patientendossier festgehalten werden, insbesondere bei auffälligen Geräuschen, um spätere Verlaufskontrollen zu erleichtern.",
-                fourth:
-                  "Es ist wichtig, die Ergebnisse detailliert zu dokumentieren und bei auffälligen Befunden einen Plan für die weitere Diagnostik und Therapie festzulegen.",
-              },
-            
-          
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Kurz erklären, worum es bei der Untersuchung geht, z.B. „Die Herzauskultation ist eine nicht-invasive Methode, bei der das Herz mit einem Stethoskop abgehört wird, um Herztöne und -geräusche zu beurteilen.“",
+            third:
+              "Die Herzauskultation ist eine grundlegende klinische Untersuchung, bei der wir die Herzgeräusche und -töne mit einem Stethoskop beurteilen, um strukturelle oder funktionelle Anomalien zu erkennen.",
+            fourth:
+              "Durch die Auskultation können wir die Funktion der Herzklappen sowie eventuelle Störungen im Blutfluss überprüfen. Sie ist eine einfache und schnelle Methode zur ersten Einschätzung.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erläutern Sie, welche spezifischen Informationen gewonnen werden, z.B. „Wir können Herzgeräusche, den Rhythmus und eventuelle Veränderungen der Herzklappenfunktion beurteilen.“",
+            third:
+              "Wir können damit Herzgeräusche, wie zum Beispiel ein Systolikum bei einer Aortenstenose, und Veränderungen der Herztöne, wie zusätzliche Töne, erfassen.",
+            fourth:
+              "Die Untersuchung ermöglicht es uns, Herzklappenfehler, wie eine Mitralklappeninsuffizienz, oder Rhythmusstörungen, wie Vorhofflimmern, zu erkennen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Beschreiben Sie typische normale und pathologische Befunde, z.B. „Normale Befunde sind klare S1- und S2-Töne. Auffällige Befunde könnten Herzgeräusche oder zusätzliche Töne wie S3 oder S4 sein.“",
+            third:
+              "Ein normales Ergebnis wären regelmäßige S1- und S2-Töne ohne zusätzliche Geräusche. Bei einer Mitralklappeninsuffizienz könnten wir ein holosystolisches Geräusch hören.",
+            fourth:
+              "Wenn wir ein diastolisches Geräusch hören, könnte das auf eine Aortenklappeninsuffizienz hindeuten. Normale Befunde wären klar voneinander abgrenzbare S1 und S2.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Nennen Sie die medizinischen Gründe für die Untersuchung, z.B. „Verdacht auf Herzklappenfehler, Herzinsuffizienz oder bei unklaren Herzgeräuschen.“",
+            third:
+              "Eine Indikation wäre der Verdacht auf Herzklappenfehler, z.B. bei einem Patienten mit belastungsabhängiger Dyspnoe.",
+            fourth:
+              "Indikationen umfassen Herzgeräusche, die bei der Routineuntersuchung festgestellt wurden, oder Symptome wie Schwindel und Synkopen, die auf Herzrhythmusstörungen hindeuten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, wenn keine besonderen Einschränkungen bestehen, z.B. „Es gibt keine absoluten Kontraindikationen für diese nicht-invasive Untersuchung.“",
+            third:
+              "Da die Herzauskultation nicht invasiv ist, gibt es keine absoluten Kontraindikationen.",
+            fourth:
+              "Es gibt keine direkten Kontraindikationen, aber stark übergewichtige Patienten können aufgrund der eingeschränkten Hörbarkeit schwierig zu beurteilen sein.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Geben Sie mögliche Krankheitsbilder an, die in Betracht gezogen werden müssen, z.B. „Mögliche Differenzialdiagnosen bei Herzgeräuschen sind Aortenklappenstenose, Mitralklappeninsuffizienz oder Vorhofflimmern.“",
+            third:
+              "Bei einem systolischen Geräusch denken wir an Differenzialdiagnosen wie Aortenklappenstenose oder Mitralklappeninsuffizienz.",
+            fourth:
+              "Ein zusätzliches S3 könnte auf eine Herzinsuffizienz hindeuten, während ein S4 bei einer hypertrophen Kardiomyopathie typisch ist.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Beschreiben Sie die nächsten Schritte nach der Untersuchung, z.B. „Bei auffälligen Befunden wie Herzgeräuschen sollte eine Echokardiografie zur weiteren Abklärung erfolgen.“",
+            third:
+              "Bei Verdacht auf eine Aortenstenose sollten wir eine Echokardiografie zur weiteren Abklärung durchführen und ggf. eine operative Behandlung in Erwägung ziehen.",
+            fourth:
+              "Falls eine Mitralklappeninsuffizienz bestätigt wird, sollte zunächst eine medikamentöse Therapie begonnen werden, mit einer möglichen chirurgischen Intervention bei fortgeschrittener Erkrankung.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Erläutern Sie die Zusammenarbeit mit anderen Fachdisziplinen, z.B. „Die enge Abstimmung mit der Kardiologie ist wichtig, um die Ergebnisse weiter zu interpretieren und Behandlungspläne zu erstellen.“",
+            third:
+              "Bei auffälligen Befunden ist die Zusammenarbeit mit der Kardiologie für weiterführende Diagnostik und Therapieplanung wichtig.",
+            fourth:
+              "Wir sollten den Patienten zur weiteren Abklärung an die Kardiologie überweisen und das Pflegepersonal für die kontinuierliche Überwachung informieren.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Geben Sie an, wie die Untersuchung zur Qualitätssicherung beiträgt, z.B. „Regelmäßige Schulungen und die Verwendung moderner Geräte können die Genauigkeit der Diagnose verbessern.“",
+            third:
+              "Durch regelmäßige Schulungen für die Auskultation und die Nutzung moderner Stethoskope kann die diagnostische Genauigkeit verbessert werden.",
+            fourth:
+              "Im Rahmen des Qualitätsmanagements sollten regelmäßige Kontrolluntersuchungen bei Risikopatienten dokumentiert und nachverfolgt werden, um Fortschritte zu messen.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Betonen Sie die Bedeutung einer genauen Dokumentation, z.B. „Die Untersuchungsergebnisse sollten klar dokumentiert und bei auffälligen Befunden weiterverfolgt werden, um den Krankheitsverlauf zu überwachen.“",
+            third:
+              "Die Befunde müssen im Patientendossier festgehalten werden, insbesondere bei auffälligen Geräuschen, um spätere Verlaufskontrollen zu erleichtern.",
+            fourth:
+              "Es ist wichtig, die Ergebnisse detailliert zu dokumentieren und bei auffälligen Befunden einen Plan für die weitere Diagnostik und Therapie festzulegen.",
+          },
         ],
       },
       // 4tab 346
@@ -29245,73 +29157,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-            
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "35-jähriger Patient ohne Beschwerden, keine auffällige Krankengeschichte, Routineuntersuchung.",
-                third:
-                  "68-jähriger Patient klagt über belastungsabhängige Atemnot und Brustschmerzen. Vorgeschichte einer koronaren Herzkrankheit.",
-                fourth:
-                  "52-jährige Patientin berichtet von zunehmender Müdigkeit und nächtlicher Atemnot. Vorgeschichte eines Herzinfarkts.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Normale S1- und S2-Töne, keine zusätzlichen Geräusche oder Herzgeräusche.",
-                third:
-                  "Deutlich hörbares systolisches Geräusch über dem Aortenareal, typischerweise ein raues Geräusch.",
-                fourth:
-                  "Holosystolisches Geräusch am Apex, das in die Axilla ausstrahlt.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Keine pathologischen Befunde, normale Herztöne und rhythmischer Herzschlag, ohne Anzeichen von Klappen- oder Rhythmusstörungen.",
-                third:
-                  "Der systolische Herzton deutet auf eine Aortenklappenstenose hin. Typischer Befund bei älteren Patienten mit Brustschmerzen und Dyspnoe.",
-                fourth:
-                  "Das holosystolische Geräusch ist typisch für eine Mitralklappeninsuffizienz, bei der Blut während der Systole in den linken Vorhof zurückfließt.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Der Patient sollte weiterhin regelmäßig zu Routineuntersuchungen erscheinen, da keine auffälligen Befunde vorliegen. Präventive Beratung zur kardiovaskulären Gesundheit.",
-                third:
-                  "Der Befund erfordert eine weiterführende Untersuchung, z.B. eine Echokardiografie, um das Ausmaß der Klappenverengung zu bestimmen. Eventuell operative Behandlung (z.B. Klappenersatz).",
-                fourth:
-                  "Der Befund rechtfertigt eine detaillierte Diagnostik, möglicherweise mit einer Echokardiografie, um die Schwere der Insuffizienz zu bestimmen. Mögliche medikamentöse oder chirurgische Behandlung.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung des gesunden Zustands des Herzens, keine Anzeichen für kardiologische Probleme.",
-                third:
-                  "Diagnose einer Aortenklappenstenose basierend auf den Auskultationsbefunden und den Symptomen des Patienten.",
-                fourth:
-                  "Diagnose einer Mitralklappeninsuffizienz aufgrund der charakteristischen Herzgeräusche und klinischen Anamnese.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Normale Echokardiografie mit unauffälligen Herztönen und Klappenbewegungen.",
-                third:
-                  "Echokardiografie zeigt eine verkalkte und verengte Aortenklappe mit reduziertem Klappenöffnungsbereich.",
-                fourth:
-                  "Echokardiografie zeigt einen Rückfluss des Blutes während der Systole in den linken Vorhof durch die insuffiziente Mitralklappe.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Es ist zu empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um den guten Gesundheitszustand des Herzens zu erhalten. Weitere präventive Maßnahmen sollten besprochen werden.",
-                third:
-                  "Wir empfehlen eine Operation, z.B. den Ersatz der Aortenklappe, da der Befund fortschreitend ist. Eine anschließende Nachsorge mit kardiologischer Überwachung wird dringend angeraten.",
-                fourth:
-                  "Es ist zu empfehlen, eine medikamentöse Therapie zu beginnen und eine Operation in Erwägung zu ziehen, falls sich die Symptome verschlechtern. Regelmäßige kardiologische Kontrollen sind erforderlich.",
-              },
-            
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, keine auffällige Krankengeschichte, Routineuntersuchung.",
+            third:
+              "68-jähriger Patient klagt über belastungsabhängige Atemnot und Brustschmerzen. Vorgeschichte einer koronaren Herzkrankheit.",
+            fourth:
+              "52-jährige Patientin berichtet von zunehmender Müdigkeit und nächtlicher Atemnot. Vorgeschichte eines Herzinfarkts.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Normale S1- und S2-Töne, keine zusätzlichen Geräusche oder Herzgeräusche.",
+            third:
+              "Deutlich hörbares systolisches Geräusch über dem Aortenareal, typischerweise ein raues Geräusch.",
+            fourth:
+              "Holosystolisches Geräusch am Apex, das in die Axilla ausstrahlt.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde, normale Herztöne und rhythmischer Herzschlag, ohne Anzeichen von Klappen- oder Rhythmusstörungen.",
+            third:
+              "Der systolische Herzton deutet auf eine Aortenklappenstenose hin. Typischer Befund bei älteren Patienten mit Brustschmerzen und Dyspnoe.",
+            fourth:
+              "Das holosystolische Geräusch ist typisch für eine Mitralklappeninsuffizienz, bei der Blut während der Systole in den linken Vorhof zurückfließt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Patient sollte weiterhin regelmäßig zu Routineuntersuchungen erscheinen, da keine auffälligen Befunde vorliegen. Präventive Beratung zur kardiovaskulären Gesundheit.",
+            third:
+              "Der Befund erfordert eine weiterführende Untersuchung, z.B. eine Echokardiografie, um das Ausmaß der Klappenverengung zu bestimmen. Eventuell operative Behandlung (z.B. Klappenersatz).",
+            fourth:
+              "Der Befund rechtfertigt eine detaillierte Diagnostik, möglicherweise mit einer Echokardiografie, um die Schwere der Insuffizienz zu bestimmen. Mögliche medikamentöse oder chirurgische Behandlung.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustands des Herzens, keine Anzeichen für kardiologische Probleme.",
+            third:
+              "Diagnose einer Aortenklappenstenose basierend auf den Auskultationsbefunden und den Symptomen des Patienten.",
+            fourth:
+              "Diagnose einer Mitralklappeninsuffizienz aufgrund der charakteristischen Herzgeräusche und klinischen Anamnese.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Normale Echokardiografie mit unauffälligen Herztönen und Klappenbewegungen.",
+            third:
+              "Echokardiografie zeigt eine verkalkte und verengte Aortenklappe mit reduziertem Klappenöffnungsbereich.",
+            fourth:
+              "Echokardiografie zeigt einen Rückfluss des Blutes während der Systole in den linken Vorhof durch die insuffiziente Mitralklappe.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Es ist zu empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um den guten Gesundheitszustand des Herzens zu erhalten. Weitere präventive Maßnahmen sollten besprochen werden.",
+            third:
+              "Wir empfehlen eine Operation, z.B. den Ersatz der Aortenklappe, da der Befund fortschreitend ist. Eine anschließende Nachsorge mit kardiologischer Überwachung wird dringend angeraten.",
+            fourth:
+              "Es ist zu empfehlen, eine medikamentöse Therapie zu beginnen und eine Operation in Erwägung zu ziehen, falls sich die Symptome verschlechtern. Regelmäßige kardiologische Kontrollen sind erforderlich.",
+          },
         ],
       },
       // 5tab 347
@@ -29565,113 +29473,110 @@ export const parentTabs = [
         id: 351,
         title: "Einleitung",
         list: [
-          
-            
+          {
+            title: "Einleitung",
+            items: [
               {
-                title: "Einleitung",
-                items: [
-                  {
-                    bold_text: "Ziel und Kontext:",
-                    text: "Das Ziel der Lungenauskultation besteht darin, durch das Abhören der Atemgeräusche mögliche pathologische Veränderungen in den Lungen zu erkennen, wie zum Beispiel Atemwegsobstruktionen, Infektionen oder Flüssigkeitsansammlungen.",
-                  },
-                  {
-                    bold_text: "Relevanz und Anwendungsbereiche:",
-                    text: "Die Lungenauskultation ist ein wesentlicher Bestandteil der körperlichen Untersuchung, insbesondere bei Patienten mit Atemwegsbeschwerden wie Husten, Kurzatmigkeit oder Brustschmerzen. Sie wird routinemäßig in der Notfallmedizin sowie in der allgemeinen ärztlichen Praxis angewendet.",
-                  },
-                ],
+                bold_text: "Ziel und Kontext:",
+                text: "Das Ziel der Lungenauskultation besteht darin, durch das Abhören der Atemgeräusche mögliche pathologische Veränderungen in den Lungen zu erkennen, wie zum Beispiel Atemwegsobstruktionen, Infektionen oder Flüssigkeitsansammlungen.",
               },
               {
-                title: "Grundprinzipien",
-                items: [
-                  {
-                    bold_text: "Theoretische Grundlagen:",
-                    text: "Die Lungenauskultation basiert auf der Schallübertragung durch den Thorax. Veränderte Atemgeräusche können auf Erkrankungen wie Pneumonie, Asthma oder Pleuraerguss hindeuten.",
-                  },
-                  {
-                    bold_text: "Technische Aspekte:",
-                    text: "Zur Durchführung der Auskultation wird ein Stethoskop verwendet. Der Arzt hört dabei an definierten Stellen auf der Brust und dem Rücken des Patienten die Atemgeräusche ab, während der Patient tief ein- und ausatmet.",
-                  },
-                ],
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Lungenauskultation ist ein wesentlicher Bestandteil der körperlichen Untersuchung, insbesondere bei Patienten mit Atemwegsbeschwerden wie Husten, Kurzatmigkeit oder Brustschmerzen. Sie wird routinemäßig in der Notfallmedizin sowie in der allgemeinen ärztlichen Praxis angewendet.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Lungenauskultation basiert auf der Schallübertragung durch den Thorax. Veränderte Atemgeräusche können auf Erkrankungen wie Pneumonie, Asthma oder Pleuraerguss hindeuten.",
               },
               {
-                title: "Interpretation",
-                items: [
-                  {
-                    bold_text: "Auswertung und Interpretation:",
-                    text: "Normale Atemgeräusche, wie vesikuläre Atmung, deuten auf gesunde Lungen hin. Pathologische Geräusche, wie Rasselgeräusche, Giemen oder Stridor, können auf spezifische Erkrankungen hinweisen.",
-                  },
-                  {
-                    bold_text: "Typische Befunde:",
-                    text: "Bei der Lungenauskultation sind feuchte Rasselgeräusche bei Lungenentzündung, trockene bei Bronchitis und Giemen bei Asthma oder COPD. Abgeschwächte Atemgeräusche deuten auf Pleuraerguss hin, und Stridor signalisiert eine Atemwegsobstruktion. Diese Befunde sind wichtig für die weitere Diagnostik.",
-                  },
-                ],
+                bold_text: "Technische Aspekte:",
+                text: "Zur Durchführung der Auskultation wird ein Stethoskop verwendet. Der Arzt hört dabei an definierten Stellen auf der Brust und dem Rücken des Patienten die Atemgeräusche ab, während der Patient tief ein- und ausatmet.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Normale Atemgeräusche, wie vesikuläre Atmung, deuten auf gesunde Lungen hin. Pathologische Geräusche, wie Rasselgeräusche, Giemen oder Stridor, können auf spezifische Erkrankungen hinweisen.",
               },
               {
-                title: "Risiken und Vorteile",
-                items: [
-                  {
-                    bold_text: "Vorteile:",
-                    text: "Die Lungenauskultation ist eine schnelle, nicht-invasive Methode, die in vielen klinischen Situationen wertvolle diagnostische Hinweise liefert.",
-                  },
-                  {
-                    bold_text: "Nachteile:",
-                    text: "Die Interpretation der Lungengeräusche erfordert Erfahrung und kann durch Umgebungsgeräusche oder ungünstige Bedingungen erschwert werden.",
-                  },
-                  {
-                    bold_text: "Risiken:",
-                    text: "Die Lungenauskultation selbst birgt keine direkten Risiken, kann jedoch in seltenen Fällen unangenehm sein, wenn der Patient tiefes Atmen als anstrengend empfindet.",
-                  },
-                ],
+                bold_text: "Typische Befunde:",
+                text: "Bei der Lungenauskultation sind feuchte Rasselgeräusche bei Lungenentzündung, trockene bei Bronchitis und Giemen bei Asthma oder COPD. Abgeschwächte Atemgeräusche deuten auf Pleuraerguss hin, und Stridor signalisiert eine Atemwegsobstruktion. Diese Befunde sind wichtig für die weitere Diagnostik.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die Lungenauskultation ist eine schnelle, nicht-invasive Methode, die in vielen klinischen Situationen wertvolle diagnostische Hinweise liefert.",
               },
               {
-                title: "Klinische Bedeutung",
-                items: [
-                  {
-                    bold_text: "Rolle in der Diagnose und Behandlung:",
-                    text: "Die Lungenauskultation spielt eine zentrale Rolle in der Erkennung von Atemwegserkrankungen und ermöglicht es dem Arzt, weitere diagnostische Schritte, wie Röntgenaufnahmen oder Blutuntersuchungen, gezielt einzuleiten.",
-                  },
-                  {
-                    bold_text: "Wichtigkeit für das Patientenmanagement:",
-                    text: "Basierend auf den Ergebnissen der Auskultation können Behandlungsentscheidungen getroffen werden, zum Beispiel die Verordnung von Medikamenten oder die Überweisung zu spezialisierten Untersuchungen.",
-                  },
-                ],
+                bold_text: "Nachteile:",
+                text: "Die Interpretation der Lungengeräusche erfordert Erfahrung und kann durch Umgebungsgeräusche oder ungünstige Bedingungen erschwert werden.",
               },
               {
-                title: "Alternativen",
-                items: [
-                  {
-                    bold_text: "",
-                    text: "Alternativen zur Lungenauskultation umfassen bildgebende Verfahren wie Röntgen-Thorax oder CT der Lunge, sowie funktionelle Tests wie die Spirometrie.",
-                  },
-                ],
+                bold_text: "Risiken:",
+                text: "Die Lungenauskultation selbst birgt keine direkten Risiken, kann jedoch in seltenen Fällen unangenehm sein, wenn der Patient tiefes Atmen als anstrengend empfindet.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Lungenauskultation spielt eine zentrale Rolle in der Erkennung von Atemwegserkrankungen und ermöglicht es dem Arzt, weitere diagnostische Schritte, wie Röntgenaufnahmen oder Blutuntersuchungen, gezielt einzuleiten.",
               },
               {
-                title: "Neueste Forschung",
-                items: [
-                  {
-                    bold_text: "Aktuelle Erkenntnisse:",
-                    text: "Neue Technologien, wie digitale Stethoskope und computergestützte Analyse der Lungengeräusche, verbessern die Genauigkeit der Diagnosen.",
-                  },
-                  {
-                    bold_text: "Zukünftige Perspektiven:",
-                    text: "Die Forschung konzentriert sich auf die Entwicklung von automatisierten Auswertungsprogrammen, die Ärzten in der Diagnose von Lungenerkrankungen helfen können.",
-                  },
-                ],
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Basierend auf den Ergebnissen der Auskultation können Behandlungsentscheidungen getroffen werden, zum Beispiel die Verordnung von Medikamenten oder die Überweisung zu spezialisierten Untersuchungen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur Lungenauskultation umfassen bildgebende Verfahren wie Röntgen-Thorax oder CT der Lunge, sowie funktionelle Tests wie die Spirometrie.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Technologien, wie digitale Stethoskope und computergestützte Analyse der Lungengeräusche, verbessern die Genauigkeit der Diagnosen.",
               },
               {
-                title: "Fazit",
-                items: [
-                  {
-                    bold_text: "Zusammenfassung der Kernbotschaften:",
-                    text: "Die Lungenauskultation ist ein unverzichtbares diagnostisches Werkzeug in der klinischen Praxis. Sie ist schnell, kostengünstig und liefert wichtige Hinweise auf potenzielle Lungenerkrankungen.",
-                  },
-                  {
-                    bold_text: "Gesamtbedeutung:",
-                    text: "Trotz neuer technologischer Entwicklungen bleibt die Lungenauskultation eine grundlegende Fertigkeit, die jeder Arzt beherrschen sollte. Sie ist einfach durchzuführen und kann wertvolle Informationen über den Gesundheitszustand der Lungen liefern.",
-                  },
-                ],
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Die Forschung konzentriert sich auf die Entwicklung von automatisierten Auswertungsprogrammen, die Ärzten in der Diagnose von Lungenerkrankungen helfen können.",
               },
-           
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Lungenauskultation ist ein unverzichtbares diagnostisches Werkzeug in der klinischen Praxis. Sie ist schnell, kostengünstig und liefert wichtige Hinweise auf potenzielle Lungenerkrankungen.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Trotz neuer technologischer Entwicklungen bleibt die Lungenauskultation eine grundlegende Fertigkeit, die jeder Arzt beherrschen sollte. Sie ist einfach durchzuführen und kann wertvolle Informationen über den Gesundheitszustand der Lungen liefern.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 352
@@ -29691,116 +29596,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie, dass das Ziel der Lungenauskultation darin besteht, abnormale Atemgeräusche zu erkennen, die auf Erkrankungen wie Infektionen oder Obstruktionen hinweisen könnten.",
-                third:
-                  "Mit der Lungenauskultation können wir frühzeitig Auffälligkeiten in der Lunge feststellen, wie etwa Atemwegsverengungen oder Flüssigkeitsansammlungen.",
-                fourth:
-                  "Wir hören die Atemgeräusche ab, um Hinweise auf Erkrankungen wie eine Lungenentzündung oder Asthma zu bekommen.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Erläutern Sie, dass die Untersuchung mit einem Stethoskop durchgeführt wird. Der Patient atmet tief ein und aus, während der Arzt die Atemgeräusche an verschiedenen Stellen des Thorax abhört.",
-                third:
-                  "Ich werde nun mit dem Stethoskop an verschiedenen Stellen Ihrer Brust und Ihres Rückens zuhören, während Sie tief ein- und ausatmen.",
-                fourth:
-                  "Sie werden tiefe Atemzüge machen, und ich werde mit dem Stethoskop zuhören, um zu sehen, ob die Atemgeräusche normal sind.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Betonen Sie, dass keine spezielle Vorbereitung notwendig ist. Der Patient sollte entspannt sitzen oder stehen und tief ein- und ausatmen.",
-                third:
-                  "Es ist keine spezielle Vorbereitung erforderlich. Setzen Sie sich bitte entspannt hin und atmen Sie tief ein und aus.",
-                fourth:
-                  "Sie müssen sich nicht speziell vorbereiten. Es reicht, wenn Sie ruhig sitzen und tief atmen.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Informieren Sie den Patienten, dass es keine Risiken gibt. Die Auskultation ist ein sicheres, nicht-invasives Verfahren.",
-                third:
-                  "Die Lungenauskultation birgt keinerlei Risiken und ist völlig schmerzfrei.",
-                fourth:
-                  "Es gibt keine Risiken bei dieser Untersuchung, sie ist einfach und sicher.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erwähnen Sie, dass die Untersuchung schnell, schmerzfrei und einfach durchzuführen ist und direkt Hinweise auf mögliche Lungenerkrankungen gibt.",
-                third:
-                  "Die Untersuchung ist schnell, schmerzfrei und liefert uns direkt Informationen über Ihren Lungenzustand.",
-                fourth:
-                  "Ein Vorteil dieser Methode ist, dass wir sofort feststellen können, ob es Auffälligkeiten gibt, ohne invasive Maßnahmen.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Informieren Sie, dass bildgebende Verfahren wie Röntgen oder CT-Scans als Alternativen genutzt werden könnten, falls die Auskultation nicht ausreicht.",
-                third:
-                  "Sollte es erforderlich sein, können wir zusätzlich ein Röntgenbild oder eine CT-Aufnahme machen.",
-                fourth:
-                  "Wenn wir nach der Auskultation noch mehr Informationen benötigen, wäre ein Röntgenbild eine mögliche Alternative.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erwähnen Sie, dass es keine spezifischen Kontraindikationen gibt, da die Untersuchung nicht invasiv ist.",
-                third:
-                  "Es gibt keine Kontraindikationen, die gegen diese Untersuchung sprechen.",
-                fourth:
-                  "Da die Auskultation nicht invasiv ist, gibt es keine Einschränkungen oder Kontraindikationen.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erklären Sie, dass normale Atemgeräusche auf gesunde Lungen hinweisen, während pathologische Geräusche wie Rasseln, Giemen oder abgeschwächte Atemgeräusche auf Erkrankungen hinweisen könnten.",
-                third:
-                  "Sollte ich Rasselgeräusche hören, könnte dies auf eine Infektion hinweisen.",
-                fourth:
-                  "Wenn ich während der Untersuchung pfeifende Atemgeräusche höre, könnte dies auf eine Atemwegsverengung hinweisen.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, dass es wichtig ist, das Einverständnis des Patienten einzuholen, auch wenn die Untersuchung harmlos ist.",
-                third:
-                  "Auch wenn die Untersuchung harmlos ist, benötige ich vorab Ihr Einverständnis.",
-                fourth:
-                  "Es ist wichtig, dass Sie der Untersuchung zustimmen, auch wenn sie unkompliziert ist.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Erklären Sie, dass der Arzt vor der Untersuchung den Patienten über den Ablauf informiert und um dessen Zustimmung bittet.",
-                third:
-                  "Ich werde Ihnen kurz den Ablauf der Untersuchung erklären, und bitte Sie danach um Ihre Zustimmung.",
-                fourth:
-                  "Bevor ich mit der Auskultation beginne, möchte ich sicherstellen, dass Sie dem Ablauf zugestimmt haben.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Informieren Sie den Patienten, dass die Untersuchung schnell abgeschlossen ist und er bei Unwohlsein jederzeit Bescheid geben kann.",
-                third:
-                  "Die Untersuchung dauert nur wenige Minuten. Falls Sie sich unwohl fühlen, sagen Sie mir bitte sofort Bescheid.",
-                fourth:
-                  "Die Auskultation ist schnell vorbei, und Sie können sich jederzeit melden, wenn Sie sich dabei unwohl fühlen.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Betonen Sie, dass die Ergebnisse der Untersuchung direkt mit dem Patienten besprochen werden und eventuelle weitere Untersuchungen geplant werden können.",
-                third:
-                  "Ich werde Ihnen die Ergebnisse gleich nach der Untersuchung mitteilen und erklären, was als nächstes zu tun ist.",
-                fourth:
-                  "Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und entscheide, ob weitere Untersuchungen notwendig sind.",
-              },
-            
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie, dass das Ziel der Lungenauskultation darin besteht, abnormale Atemgeräusche zu erkennen, die auf Erkrankungen wie Infektionen oder Obstruktionen hinweisen könnten.",
+            third:
+              "Mit der Lungenauskultation können wir frühzeitig Auffälligkeiten in der Lunge feststellen, wie etwa Atemwegsverengungen oder Flüssigkeitsansammlungen.",
+            fourth:
+              "Wir hören die Atemgeräusche ab, um Hinweise auf Erkrankungen wie eine Lungenentzündung oder Asthma zu bekommen.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie, dass die Untersuchung mit einem Stethoskop durchgeführt wird. Der Patient atmet tief ein und aus, während der Arzt die Atemgeräusche an verschiedenen Stellen des Thorax abhört.",
+            third:
+              "Ich werde nun mit dem Stethoskop an verschiedenen Stellen Ihrer Brust und Ihres Rückens zuhören, während Sie tief ein- und ausatmen.",
+            fourth:
+              "Sie werden tiefe Atemzüge machen, und ich werde mit dem Stethoskop zuhören, um zu sehen, ob die Atemgeräusche normal sind.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass keine spezielle Vorbereitung notwendig ist. Der Patient sollte entspannt sitzen oder stehen und tief ein- und ausatmen.",
+            third:
+              "Es ist keine spezielle Vorbereitung erforderlich. Setzen Sie sich bitte entspannt hin und atmen Sie tief ein und aus.",
+            fourth:
+              "Sie müssen sich nicht speziell vorbereiten. Es reicht, wenn Sie ruhig sitzen und tief atmen.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Informieren Sie den Patienten, dass es keine Risiken gibt. Die Auskultation ist ein sicheres, nicht-invasives Verfahren.",
+            third:
+              "Die Lungenauskultation birgt keinerlei Risiken und ist völlig schmerzfrei.",
+            fourth:
+              "Es gibt keine Risiken bei dieser Untersuchung, sie ist einfach und sicher.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erwähnen Sie, dass die Untersuchung schnell, schmerzfrei und einfach durchzuführen ist und direkt Hinweise auf mögliche Lungenerkrankungen gibt.",
+            third:
+              "Die Untersuchung ist schnell, schmerzfrei und liefert uns direkt Informationen über Ihren Lungenzustand.",
+            fourth:
+              "Ein Vorteil dieser Methode ist, dass wir sofort feststellen können, ob es Auffälligkeiten gibt, ohne invasive Maßnahmen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Informieren Sie, dass bildgebende Verfahren wie Röntgen oder CT-Scans als Alternativen genutzt werden könnten, falls die Auskultation nicht ausreicht.",
+            third:
+              "Sollte es erforderlich sein, können wir zusätzlich ein Röntgenbild oder eine CT-Aufnahme machen.",
+            fourth:
+              "Wenn wir nach der Auskultation noch mehr Informationen benötigen, wäre ein Röntgenbild eine mögliche Alternative.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass es keine spezifischen Kontraindikationen gibt, da die Untersuchung nicht invasiv ist.",
+            third:
+              "Es gibt keine Kontraindikationen, die gegen diese Untersuchung sprechen.",
+            fourth:
+              "Da die Auskultation nicht invasiv ist, gibt es keine Einschränkungen oder Kontraindikationen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass normale Atemgeräusche auf gesunde Lungen hinweisen, während pathologische Geräusche wie Rasseln, Giemen oder abgeschwächte Atemgeräusche auf Erkrankungen hinweisen könnten.",
+            third:
+              "Sollte ich Rasselgeräusche hören, könnte dies auf eine Infektion hinweisen.",
+            fourth:
+              "Wenn ich während der Untersuchung pfeifende Atemgeräusche höre, könnte dies auf eine Atemwegsverengung hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass es wichtig ist, das Einverständnis des Patienten einzuholen, auch wenn die Untersuchung harmlos ist.",
+            third:
+              "Auch wenn die Untersuchung harmlos ist, benötige ich vorab Ihr Einverständnis.",
+            fourth:
+              "Es ist wichtig, dass Sie der Untersuchung zustimmen, auch wenn sie unkompliziert ist.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erklären Sie, dass der Arzt vor der Untersuchung den Patienten über den Ablauf informiert und um dessen Zustimmung bittet.",
+            third:
+              "Ich werde Ihnen kurz den Ablauf der Untersuchung erklären, und bitte Sie danach um Ihre Zustimmung.",
+            fourth:
+              "Bevor ich mit der Auskultation beginne, möchte ich sicherstellen, dass Sie dem Ablauf zugestimmt haben.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Informieren Sie den Patienten, dass die Untersuchung schnell abgeschlossen ist und er bei Unwohlsein jederzeit Bescheid geben kann.",
+            third:
+              "Die Untersuchung dauert nur wenige Minuten. Falls Sie sich unwohl fühlen, sagen Sie mir bitte sofort Bescheid.",
+            fourth:
+              "Die Auskultation ist schnell vorbei, und Sie können sich jederzeit melden, wenn Sie sich dabei unwohl fühlen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Betonen Sie, dass die Ergebnisse der Untersuchung direkt mit dem Patienten besprochen werden und eventuelle weitere Untersuchungen geplant werden können.",
+            third:
+              "Ich werde Ihnen die Ergebnisse gleich nach der Untersuchung mitteilen und erklären, was als nächstes zu tun ist.",
+            fourth:
+              "Nach der Untersuchung bespreche ich die Ergebnisse mit Ihnen und entscheide, ob weitere Untersuchungen notwendig sind.",
+          },
         ],
       },
       // 3tab 353
@@ -29820,98 +29723,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Die Lungenauskultation ist eine Methode zur Untersuchung der Atemgeräusche mit einem Stethoskop, um pathologische Veränderungen in der Lunge zu erkennen.",
-                third:
-                  "Bei der Lungenauskultation höre ich mit dem Stethoskop die Atemgeräusche ab, um mögliche Auffälligkeiten in der Lunge zu erkennen.",
-                fourth:
-                  "Es handelt sich um eine einfache, nicht-invasive Untersuchung, bei der pathologische Geräusche in der Lunge festgestellt werden können.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Mit der Lungenauskultation können wir Atemwegserkrankungen wie Pneumonien, Asthma, COPD, und Pleuraergüsse identifizieren, indem wir Veränderungen der Atemgeräusche wahrnehmen.",
-                third:
-                  "Mit der Auskultation können wir Erkrankungen wie eine Lungenentzündung oder eine Verengung der Atemwege aufspüren.",
-                fourth:
-                  "Wir nutzen die Untersuchung, um Krankheitsbilder wie Asthma oder Flüssigkeitsansammlungen in der Lunge zu erkennen.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Zu den möglichen Ergebnissen gehören normale vesikuläre Atmung, pathologische Geräusche wie Rasseln, Giemen, Stridor oder abgeschwächte Atemgeräusche, die auf spezifische Erkrankungen hinweisen.",
-                third:
-                  "Ich konnte Rasselgeräusche feststellen, was auf eine Lungenentzündung hinweisen könnte.",
-                fourth:
-                  "Die Untersuchung ergab ein abgeschwächtes Atemgeräusch auf der rechten Seite, was auf einen Pleuraerguss hinweist.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Die Indikation zur Lungenauskultation besteht bei Patienten mit Symptomen wie Husten, Atemnot, Thoraxschmerzen oder Verdacht auf pulmonale Erkrankungen.",
-                third:
-                  "Die Patientin klagt über Atemnot und Husten, daher ist die Lungenauskultation indiziert.",
-                fourth:
-                  "Aufgrund der Brustschmerzen und der Anamnese führt die Atemauskultation zu weiteren diagnostischen Schritten.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Es gibt keine spezifischen Kontraindikationen, da die Untersuchung nicht invasiv ist.",
-                third:
-                  "Es gibt keine Kontraindikationen, da die Auskultation nicht invasiv ist.",
-                fourth:
-                  "Da die Lungenauskultation keine Risiken birgt, gibt es keine Gegenanzeigen.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Mögliche Differenzialdiagnosen beinhalten Pneumonie, Asthma bronchiale, chronisch obstruktive Lungenerkrankung (COPD), Herzinsuffizienz und Pleuraerguss.",
-                third:
-                  "Aufgrund der festgestellten Geräusche kommen Differenzialdiagnosen wie Pneumonie oder ein Pleuraerguss in Frage.",
-                fourth:
-                  "Ich denke an COPD oder eine Herzinsuffizienz, basierend auf den hörbaren Giemgeräuschen.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Die Auskultationsergebnisse helfen, den Behandlungsplan zu gestalten, wie zum Beispiel die Einleitung einer antibiotischen Therapie bei Pneumonie oder einer Bronchodilatator-Therapie bei Asthma.",
-                third:
-                  "Aufgrund der festgestellten Rasselgeräusche werden wir eine antibiotische Therapie bei Verdacht auf Pneumonie einleiten.",
-                fourth:
-                  "Nach der Diagnose von Asthma plane ich, eine Bronchodilatator-Therapie zu starten.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Die Zusammenarbeit mit anderen Fachdisziplinen, z.B. Radiologen für bildgebende Verfahren oder Pneumologen für weitere Lungenfunktionsprüfungen, kann erforderlich sein.",
-                third:
-                  "Bei Verdacht auf Pneumonie werde ich den Radiologen für eine Thoraxaufnahme hinzuziehen.",
-                fourth:
-                  "Ich werde den Pneumologen für eine erweiterte Lungenfunktionsprüfung in den Behandlungsplan einbeziehen.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Ein systematischer und standardisierter Ablauf der Auskultation, inklusive regelmäßiger Überprüfung der genutzten Geräte (z.B. Stethoskope), trägt zur Sicherstellung der Qualität der Untersuchung bei.",
-                third:
-                  "Die Geräte müssen regelmäßig überprüft werden, um die Qualität der Untersuchung zu gewährleisten.",
-                fourth:
-                  "Eine standardisierte Durchführung der Lungenauskultation ist entscheidend für konsistente Ergebnisse.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Die Befunde der Auskultation sollten genau dokumentiert und, falls erforderlich, durch weiterführende Untersuchungen ergänzt werden. Eine regelmäßige Nachkontrolle, insbesondere bei chronischen Erkrankungen, ist ebenfalls wichtig.",
-                third:
-                  "Die Auskultationsbefunde werden dokumentiert und bei Bedarf durch ein Röntgenbild ergänzt.",
-                fourth:
-                  "Die Ergebnisse werden schriftlich festgehalten, und eine Kontrolle in einer Woche ist vorgesehen.",
-              },
-           
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Die Lungenauskultation ist eine Methode zur Untersuchung der Atemgeräusche mit einem Stethoskop, um pathologische Veränderungen in der Lunge zu erkennen.",
+            third:
+              "Bei der Lungenauskultation höre ich mit dem Stethoskop die Atemgeräusche ab, um mögliche Auffälligkeiten in der Lunge zu erkennen.",
+            fourth:
+              "Es handelt sich um eine einfache, nicht-invasive Untersuchung, bei der pathologische Geräusche in der Lunge festgestellt werden können.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Mit der Lungenauskultation können wir Atemwegserkrankungen wie Pneumonien, Asthma, COPD, und Pleuraergüsse identifizieren, indem wir Veränderungen der Atemgeräusche wahrnehmen.",
+            third:
+              "Mit der Auskultation können wir Erkrankungen wie eine Lungenentzündung oder eine Verengung der Atemwege aufspüren.",
+            fourth:
+              "Wir nutzen die Untersuchung, um Krankheitsbilder wie Asthma oder Flüssigkeitsansammlungen in der Lunge zu erkennen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Zu den möglichen Ergebnissen gehören normale vesikuläre Atmung, pathologische Geräusche wie Rasseln, Giemen, Stridor oder abgeschwächte Atemgeräusche, die auf spezifische Erkrankungen hinweisen.",
+            third:
+              "Ich konnte Rasselgeräusche feststellen, was auf eine Lungenentzündung hinweisen könnte.",
+            fourth:
+              "Die Untersuchung ergab ein abgeschwächtes Atemgeräusch auf der rechten Seite, was auf einen Pleuraerguss hinweist.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Die Indikation zur Lungenauskultation besteht bei Patienten mit Symptomen wie Husten, Atemnot, Thoraxschmerzen oder Verdacht auf pulmonale Erkrankungen.",
+            third:
+              "Die Patientin klagt über Atemnot und Husten, daher ist die Lungenauskultation indiziert.",
+            fourth:
+              "Aufgrund der Brustschmerzen und der Anamnese führt die Atemauskultation zu weiteren diagnostischen Schritten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Es gibt keine spezifischen Kontraindikationen, da die Untersuchung nicht invasiv ist.",
+            third:
+              "Es gibt keine Kontraindikationen, da die Auskultation nicht invasiv ist.",
+            fourth:
+              "Da die Lungenauskultation keine Risiken birgt, gibt es keine Gegenanzeigen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Mögliche Differenzialdiagnosen beinhalten Pneumonie, Asthma bronchiale, chronisch obstruktive Lungenerkrankung (COPD), Herzinsuffizienz und Pleuraerguss.",
+            third:
+              "Aufgrund der festgestellten Geräusche kommen Differenzialdiagnosen wie Pneumonie oder ein Pleuraerguss in Frage.",
+            fourth:
+              "Ich denke an COPD oder eine Herzinsuffizienz, basierend auf den hörbaren Giemgeräuschen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Die Auskultationsergebnisse helfen, den Behandlungsplan zu gestalten, wie zum Beispiel die Einleitung einer antibiotischen Therapie bei Pneumonie oder einer Bronchodilatator-Therapie bei Asthma.",
+            third:
+              "Aufgrund der festgestellten Rasselgeräusche werden wir eine antibiotische Therapie bei Verdacht auf Pneumonie einleiten.",
+            fourth:
+              "Nach der Diagnose von Asthma plane ich, eine Bronchodilatator-Therapie zu starten.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Die Zusammenarbeit mit anderen Fachdisziplinen, z.B. Radiologen für bildgebende Verfahren oder Pneumologen für weitere Lungenfunktionsprüfungen, kann erforderlich sein.",
+            third:
+              "Bei Verdacht auf Pneumonie werde ich den Radiologen für eine Thoraxaufnahme hinzuziehen.",
+            fourth:
+              "Ich werde den Pneumologen für eine erweiterte Lungenfunktionsprüfung in den Behandlungsplan einbeziehen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Ein systematischer und standardisierter Ablauf der Auskultation, inklusive regelmäßiger Überprüfung der genutzten Geräte (z.B. Stethoskope), trägt zur Sicherstellung der Qualität der Untersuchung bei.",
+            third:
+              "Die Geräte müssen regelmäßig überprüft werden, um die Qualität der Untersuchung zu gewährleisten.",
+            fourth:
+              "Eine standardisierte Durchführung der Lungenauskultation ist entscheidend für konsistente Ergebnisse.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Die Befunde der Auskultation sollten genau dokumentiert und, falls erforderlich, durch weiterführende Untersuchungen ergänzt werden. Eine regelmäßige Nachkontrolle, insbesondere bei chronischen Erkrankungen, ist ebenfalls wichtig.",
+            third:
+              "Die Auskultationsbefunde werden dokumentiert und bei Bedarf durch ein Röntgenbild ergänzt.",
+            fourth:
+              "Die Ergebnisse werden schriftlich festgehalten, und eine Kontrolle in einer Woche ist vorgesehen.",
+          },
         ],
       },
       // 4tab 354
@@ -29931,71 +29832,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "30-jähriger Patient ohne Beschwerden, Routineuntersuchung bei einer allgemeinen Gesundheitsüberprüfung.",
-                third:
-                  "50-jähriger Patient klagt über Husten, Fieber und Kurzatmigkeit seit drei Tagen.",
-                fourth:
-                  "25-jährige Patientin berichtet von wiederkehrender Atemnot und pfeifenden Atemgeräuschen, besonders nachts.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Vesikuläre Atemgeräusche beidseits ohne pathologische Atemgeräusche.",
-                third:
-                  "Lungenauskultation zeigt feuchte Rasselgeräusche in den basalen Bereichen beider Lungen.",
-                fourth:
-                  "Giemen und verlängertes exspiratorisches Atemgeräusch in beiden Lungen, besonders ausgeprägt bei forcierter Ausatmung.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Keine Auffälligkeiten; die Lungenauskultation unterstützt das Fehlen von Atemwegserkrankungen.",
-                third:
-                  "Der Befund ist typisch für eine Pneumonie, was die Atemwegsinfektion und die begleitenden Symptome des Patienten bestätigt.",
-                fourth:
-                  "Die Untersuchungsergebnisse sind charakteristisch für ein Asthma bronchiale, was die Beschwerden der Patientin wie Atemnot und Giemen erklärt.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Der Befund dient der Bestätigung des gesunden Zustands der Atemwege. Keine weiteren Maßnahmen erforderlich.",
-                third:
-                  "Die Befunde führen zu einer Diagnosestellung und der Einleitung einer antibiotischen Therapie sowie weiterer symptomatischer Behandlung.",
-                fourth:
-                  "Die Ergebnisse bestätigen die Diagnose Asthma. Es wird ein Therapieplan mit inhalativen Bronchodilatatoren und Corticosteroiden erstellt.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung des Normalbefundes, keine Hinweise auf Lungenerkrankungen.",
-                third:
-                  "Diagnose einer Pneumonie basierend auf den Auskultationsbefunden und klinischen Symptomen.",
-                fourth:
-                  "Diagnose von Asthma bronchiale durch typische Auskultationsbefunde und Symptomatik.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Normale vesikuläre Atemgeräusche, die für gesunde Lungen charakteristisch sind.",
-                third:
-                  "Typische feuchte Rasselgeräusche, die durch die Ansammlung von Sekreten in den Atemwegen verursacht werden.",
-                fourth:
-                  "Giemende Geräusche, verursacht durch eine Verengung der Atemwege bei der Ausatmung.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Wir empfehlen, regelmäßige Vorsorgeuntersuchungen fortzusetzen, um die Gesundheit zu überwachen und mögliche zukünftige Erkrankungen frühzeitig zu erkennen.",
-                third:
-                  "Wir empfehlen, eine antibiotische Therapie einzuleiten und den Patienten engmaschig zu überwachen, insbesondere bei Verschlechterung der Atemfunktion.",
-                fourth:
-                  "Es ist zu empfehlen, eine Langzeittherapie mit inhalativen Steroiden zu beginnen und regelmäßige Kontrolluntersuchungen durchzuführen.",
-              },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "30-jähriger Patient ohne Beschwerden, Routineuntersuchung bei einer allgemeinen Gesundheitsüberprüfung.",
+            third:
+              "50-jähriger Patient klagt über Husten, Fieber und Kurzatmigkeit seit drei Tagen.",
+            fourth:
+              "25-jährige Patientin berichtet von wiederkehrender Atemnot und pfeifenden Atemgeräuschen, besonders nachts.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Vesikuläre Atemgeräusche beidseits ohne pathologische Atemgeräusche.",
+            third:
+              "Lungenauskultation zeigt feuchte Rasselgeräusche in den basalen Bereichen beider Lungen.",
+            fourth:
+              "Giemen und verlängertes exspiratorisches Atemgeräusch in beiden Lungen, besonders ausgeprägt bei forcierter Ausatmung.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine Auffälligkeiten; die Lungenauskultation unterstützt das Fehlen von Atemwegserkrankungen.",
+            third:
+              "Der Befund ist typisch für eine Pneumonie, was die Atemwegsinfektion und die begleitenden Symptome des Patienten bestätigt.",
+            fourth:
+              "Die Untersuchungsergebnisse sind charakteristisch für ein Asthma bronchiale, was die Beschwerden der Patientin wie Atemnot und Giemen erklärt.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der Befund dient der Bestätigung des gesunden Zustands der Atemwege. Keine weiteren Maßnahmen erforderlich.",
+            third:
+              "Die Befunde führen zu einer Diagnosestellung und der Einleitung einer antibiotischen Therapie sowie weiterer symptomatischer Behandlung.",
+            fourth:
+              "Die Ergebnisse bestätigen die Diagnose Asthma. Es wird ein Therapieplan mit inhalativen Bronchodilatatoren und Corticosteroiden erstellt.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des Normalbefundes, keine Hinweise auf Lungenerkrankungen.",
+            third:
+              "Diagnose einer Pneumonie basierend auf den Auskultationsbefunden und klinischen Symptomen.",
+            fourth:
+              "Diagnose von Asthma bronchiale durch typische Auskultationsbefunde und Symptomatik.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Normale vesikuläre Atemgeräusche, die für gesunde Lungen charakteristisch sind.",
+            third:
+              "Typische feuchte Rasselgeräusche, die durch die Ansammlung von Sekreten in den Atemwegen verursacht werden.",
+            fourth:
+              "Giemende Geräusche, verursacht durch eine Verengung der Atemwege bei der Ausatmung.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, regelmäßige Vorsorgeuntersuchungen fortzusetzen, um die Gesundheit zu überwachen und mögliche zukünftige Erkrankungen frühzeitig zu erkennen.",
+            third:
+              "Wir empfehlen, eine antibiotische Therapie einzuleiten und den Patienten engmaschig zu überwachen, insbesondere bei Verschlechterung der Atemfunktion.",
+            fourth:
+              "Es ist zu empfehlen, eine Langzeittherapie mit inhalativen Steroiden zu beginnen und regelmäßige Kontrolluntersuchungen durchzuführen.",
+          },
         ],
       },
       // 5tab 355
@@ -30263,112 +30162,110 @@ export const parentTabs = [
         id: 359,
         title: "Einleitung",
         list: [
-          
+          {
+            title: "Einleitung",
+            items: [
               {
-                title: "Einleitung",
-                items: [
-                  {
-                    bold_text: "Ziel und Kontext:",
-                    text: "Das Ziel der neurologischen Untersuchung ist es, mögliche Funktionsstörungen im zentralen und peripheren Nervensystem zu erkennen, um eine genaue Diagnose zu stellen.",
-                  },
-                  {
-                    bold_text: "Relevanz und Anwendungsbereiche:",
-                    text: "Die Untersuchung ist in vielen Bereichen der Medizin relevant, insbesondere bei Verdacht auf neurologische Erkrankungen wie Schlaganfall, Multiple Sklerose oder Nervenschäden. Sie wird in Notfällen, bei chronischen Beschwerden oder als Routineuntersuchung durchgeführt.",
-                  },
-                ],
+                bold_text: "Ziel und Kontext:",
+                text: "Das Ziel der neurologischen Untersuchung ist es, mögliche Funktionsstörungen im zentralen und peripheren Nervensystem zu erkennen, um eine genaue Diagnose zu stellen.",
               },
               {
-                title: "Grundprinzipien",
-                items: [
-                  {
-                    bold_text: "Theoretische Grundlagen:",
-                    text: "Die neurologische Untersuchung basiert auf der genauen Analyse der Funktionen des Gehirns, des Rückenmarks und der peripheren Nerven. Dabei werden Reflexe, Muskelkraft, Sensibilität, Koordination und das Bewusstsein geprüft.",
-                  },
-                  {
-                    bold_text: "Technische Aspekte:",
-                    text: "Die Untersuchung erfolgt meist ohne technologische Hilfsmittel und umfasst spezifische Tests wie die Prüfung von Reflexen, die Überprüfung der Augenbewegungen, die Beurteilung der Muskelkraft und das Abtasten der Nervenbahnen.",
-                  },
-                ],
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Untersuchung ist in vielen Bereichen der Medizin relevant, insbesondere bei Verdacht auf neurologische Erkrankungen wie Schlaganfall, Multiple Sklerose oder Nervenschäden. Sie wird in Notfällen, bei chronischen Beschwerden oder als Routineuntersuchung durchgeführt.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die neurologische Untersuchung basiert auf der genauen Analyse der Funktionen des Gehirns, des Rückenmarks und der peripheren Nerven. Dabei werden Reflexe, Muskelkraft, Sensibilität, Koordination und das Bewusstsein geprüft.",
               },
               {
-                title: "Interpretation",
-                items: [
-                  {
-                    bold_text: "Auswertung und Interpretation:",
-                    text: "Die Ergebnisse der neurologischen Untersuchung werden mit klinischen Befunden und bildgebenden Verfahren verglichen, um eine vollständige Diagnose zu erstellen. Abweichungen in Reflexen oder Bewegungen können auf spezifische neurologische Defizite hinweisen.",
-                  },
-                  {
-                    bold_text: "Typische Befunde:",
-                    text: "Typische Befunde sind abgeschwächte oder übersteigerte Reflexe, Lähmungen, Muskelschwäche oder Sensibilitätsstörungen, die auf spezifische Nervenschäden hinweisen können.",
-                  },
-                ],
+                bold_text: "Technische Aspekte:",
+                text: "Die Untersuchung erfolgt meist ohne technologische Hilfsmittel und umfasst spezifische Tests wie die Prüfung von Reflexen, die Überprüfung der Augenbewegungen, die Beurteilung der Muskelkraft und das Abtasten der Nervenbahnen.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Die Ergebnisse der neurologischen Untersuchung werden mit klinischen Befunden und bildgebenden Verfahren verglichen, um eine vollständige Diagnose zu erstellen. Abweichungen in Reflexen oder Bewegungen können auf spezifische neurologische Defizite hinweisen.",
               },
               {
-                title: "Risiken und Vorteile",
-                items: [
-                  {
-                    bold_text: "Vorteile:",
-                    text: "Die neurologische Untersuchung ist nicht-invasiv, schnell durchführbar und bietet wertvolle Informationen zur Funktionsfähigkeit des Nervensystems.",
-                  },
-                  {
-                    bold_text: "Nachteile:",
-                    text: "Ein Nachteil ist, dass die Ergebnisse manchmal unspezifisch sind und weiterführende Untersuchungen erfordern.",
-                  },
-                  {
-                    bold_text: "Risiken:",
-                    text: "Da die Untersuchung nicht-invasiv ist, bestehen keine direkten Risiken für den Patienten.",
-                  },
-                ],
+                bold_text: "Typische Befunde:",
+                text: "Typische Befunde sind abgeschwächte oder übersteigerte Reflexe, Lähmungen, Muskelschwäche oder Sensibilitätsstörungen, die auf spezifische Nervenschäden hinweisen können.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Die neurologische Untersuchung ist nicht-invasiv, schnell durchführbar und bietet wertvolle Informationen zur Funktionsfähigkeit des Nervensystems.",
               },
               {
-                title: "Klinische Bedeutung",
-                items: [
-                  {
-                    bold_text: "Rolle in der Diagnose und Behandlung:",
-                    text: "Die neurologische Untersuchung spielt eine zentrale Rolle bei der Diagnose von Erkrankungen des Nervensystems und dient als Grundlage für weiterführende Untersuchungen oder therapeutische Maßnahmen.",
-                  },
-                  {
-                    bold_text: "Wichtigkeit für das Patientenmanagement:",
-                    text: "Sie liefert entscheidende Informationen für das Management neurologischer Erkrankungen und hilft bei der Planung der Therapie.",
-                  },
-                ],
+                bold_text: "Nachteile:",
+                text: "Ein Nachteil ist, dass die Ergebnisse manchmal unspezifisch sind und weiterführende Untersuchungen erfordern.",
               },
               {
-                title: "Alternativen",
-                items: [
-                  {
-                    bold_text: "",
-                    text: "Alternativen zur neurologischen Untersuchung sind vor allem bildgebende Verfahren wie MRT oder CT, die zusätzliche Informationen über strukturelle Veränderungen liefern können.",
-                  },
-                ],
+                bold_text: "Risiken:",
+                text: "Da die Untersuchung nicht-invasiv ist, bestehen keine direkten Risiken für den Patienten.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die neurologische Untersuchung spielt eine zentrale Rolle bei der Diagnose von Erkrankungen des Nervensystems und dient als Grundlage für weiterführende Untersuchungen oder therapeutische Maßnahmen.",
               },
               {
-                title: "Neueste Forschung",
-                items: [
-                  {
-                    bold_text: "Aktuelle Erkenntnisse:",
-                    text: "Neue Forschungsergebnisse legen nahe, dass die Kombination von klinischen Untersuchungen mit modernen bildgebenden Verfahren die Genauigkeit der Diagnosestellung verbessert.",
-                  },
-                  {
-                    bold_text: "Zukünftige Perspektiven:",
-                    text: "Zukünftig könnten technologische Fortschritte, wie KI-gestützte Analysen und virtuelle Realität, die neurologische Untersuchung weiter optimieren.",
-                  },
-                ],
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Sie liefert entscheidende Informationen für das Management neurologischer Erkrankungen und hilft bei der Planung der Therapie.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Alternativen zur neurologischen Untersuchung sind vor allem bildgebende Verfahren wie MRT oder CT, die zusätzliche Informationen über strukturelle Veränderungen liefern können.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Forschungsergebnisse legen nahe, dass die Kombination von klinischen Untersuchungen mit modernen bildgebenden Verfahren die Genauigkeit der Diagnosestellung verbessert.",
               },
               {
-                title: "Fazit",
-                items: [
-                  {
-                    bold_text: "Zusammenfassung der Kernbotschaften:",
-                    text: "Die neurologische Untersuchung ist ein essenzielles, nicht-invasives Verfahren, das wertvolle Informationen über die Funktionsfähigkeit des Nervensystems liefert.",
-                  },
-                  {
-                    bold_text: "Gesamtbedeutung:",
-                    text: "Sie bleibt ein unverzichtbares Instrument in der klinischen Praxis, insbesondere in der Neurologie, und bildet die Grundlage für viele diagnostische und therapeutische Entscheidungen.",
-                  },
-                ],
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftig könnten technologische Fortschritte, wie KI-gestützte Analysen und virtuelle Realität, die neurologische Untersuchung weiter optimieren.",
               },
-           
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die neurologische Untersuchung ist ein essenzielles, nicht-invasives Verfahren, das wertvolle Informationen über die Funktionsfähigkeit des Nervensystems liefert.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Sie bleibt ein unverzichtbares Instrument in der klinischen Praxis, insbesondere in der Neurologie, und bildet die Grundlage für viele diagnostische und therapeutische Entscheidungen.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 360
@@ -30388,116 +30285,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie dem Patienten, dass die neurologische Untersuchung durchgeführt wird, um die Funktion des Nervensystems zu überprüfen und mögliche Störungen oder Erkrankungen wie Schlaganfälle oder Nervenschäden zu erkennen.",
-                third:
-                  "Wir führen diese Untersuchung durch, um Ihre Nervenfunktion zu prüfen und festzustellen, ob eine Erkrankung vorliegt.",
-                fourth:
-                  "Mit dieser Untersuchung können wir herausfinden, ob Ihre Beschwerden von einem Nervenproblem verursacht werden.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Informieren Sie den Patienten darüber, dass die Untersuchung verschiedene Tests umfasst, z.B. Reflexprüfung, Bewegungskoordination, Muskelkraft und Sensibilität. Der Arzt wird auch spezifische Fragen stellen.",
-                third:
-                  "Ich werde nun Ihre Reflexe testen, indem ich leicht mit einem Hammer auf bestimmte Stellen Ihres Körpers klopfe.",
-                fourth:
-                  "Ich werde Ihre Muskelkraft in verschiedenen Körperbereichen überprüfen, indem Sie gegen meine Hand drücken.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Betonen Sie, dass in der Regel keine spezielle Vorbereitung erforderlich ist, der Patient sollte jedoch bequeme Kleidung tragen und eventuelle neurologische Beschwerden oder Symptome genau beschreiben.",
-                third:
-                  "Sie müssen sich nicht speziell vorbereiten. Tragen Sie einfach bequeme Kleidung, damit wir die Bewegungen besser prüfen können.",
-                fourth:
-                  "Es ist hilfreich, wenn Sie mir vorab genau beschreiben, wann und wo die Symptome auftreten.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Erklären Sie, dass die neurologische Untersuchung nicht-invasiv ist und daher keine Risiken oder Nebenwirkungen birgt.",
-                third:
-                  "Da die Untersuchung nicht-invasiv ist, gibt es keine Risiken oder Komplikationen.",
-                fourth:
-                  "Die Tests sind schmerzfrei und bergen keinerlei Gefahren für Sie.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erläutern Sie die Vorteile der Untersuchung, wie die schnelle und schmerzfreie Durchführung sowie die Möglichkeit, wertvolle Informationen über die Funktion des Nervensystems zu erhalten.",
-                third:
-                  "Der Vorteil dieser Untersuchung ist, dass sie schnell durchgeführt werden kann und wertvolle Informationen liefert.",
-                fourth:
-                  "Diese Untersuchung gibt uns wichtige Hinweise, ohne dass Sie Beschwerden haben werden.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Erwähnen Sie, dass in bestimmten Fällen bildgebende Verfahren wie MRT oder CT eingesetzt werden können, um zusätzliche oder detailliertere Informationen zu erhalten.",
-                third:
-                  "Falls nötig, könnten wir später eine MRT-Untersuchung machen, um genauere Bilder des Gehirns zu bekommen.",
-                fourth:
-                  "Manchmal ergänzen wir die Untersuchung durch eine CT, um genauere Informationen zu erhalten.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Betonen Sie, dass es keine absoluten Kontraindikationen für die neurologische Untersuchung gibt, da sie nicht-invasiv ist.",
-                third:
-                  "Es gibt keine Kontraindikationen für diese Untersuchung, da sie völlig sicher ist.",
-                fourth:
-                  "Diese Untersuchung kann bei allen Patienten durchgeführt werden, es gibt keine Einschränkungen.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Informieren Sie den Patienten darüber, dass die Ergebnisse Hinweise auf mögliche Nervenschäden, Reflexstörungen, Muskelschwäche oder Sensibilitätsstörungen geben können.",
-                third:
-                  "Sollten die Reflexe schwach oder übermäßig stark sein, könnte das auf eine Nervenerkrankung hinweisen.",
-                fourth:
-                  "Falls wir eine Muskelschwäche feststellen, kann das auf eine Schädigung der Nerven hinweisen.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Erklären Sie dem Patienten, dass sein Einverständnis erforderlich ist, um sicherzustellen, dass er die Untersuchung und deren Bedeutung versteht und mit der Durchführung einverstanden ist.",
-                third:
-                  "Bevor wir beginnen, brauche ich Ihr Einverständnis, um die Untersuchung durchzuführen.",
-                fourth:
-                  "Es ist wichtig, dass Sie zustimmen, nachdem ich Ihnen alles erklärt habe.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Betonen Sie, dass der Arzt vor der Untersuchung eine formelle Einverständniserklärung vom Patienten einholen wird.",
-                third:
-                  "Ich werde Ihnen das Einverständnisformular vorlegen, das Sie bitte unterschreiben.",
-                fourth:
-                  "Nachdem ich alles erklärt habe, brauchen wir Ihre schriftliche Zustimmung.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Erwähnen Sie, dass nach der Untersuchung keine speziellen Nachsorgemaßnahmen erforderlich sind.",
-                third:
-                  "Nach der Untersuchung können Sie Ihren normalen Aktivitäten nachgehen.",
-                fourth:
-                  "Es sind keine weiteren Maßnahmen erforderlich, es sei denn, Sie bemerken ungewöhnliche Symptome.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Informieren Sie den Patienten darüber, dass die Ergebnisse der neurologischen Untersuchung sofort besprochen werden und ggf. weitere Untersuchungen oder Therapien vorgeschlagen werden.",
-                third:
-                  "Die Ergebnisse besprechen wir sofort nach der Untersuchung und planen die nächsten Schritte, falls notwendig.",
-                fourth:
-                  "Ich werde Ihnen nach der Untersuchung direkt sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen brauchen.",
-              },
-          
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die neurologische Untersuchung durchgeführt wird, um die Funktion des Nervensystems zu überprüfen und mögliche Störungen oder Erkrankungen wie Schlaganfälle oder Nervenschäden zu erkennen.",
+            third:
+              "Wir führen diese Untersuchung durch, um Ihre Nervenfunktion zu prüfen und festzustellen, ob eine Erkrankung vorliegt.",
+            fourth:
+              "Mit dieser Untersuchung können wir herausfinden, ob Ihre Beschwerden von einem Nervenproblem verursacht werden.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Informieren Sie den Patienten darüber, dass die Untersuchung verschiedene Tests umfasst, z.B. Reflexprüfung, Bewegungskoordination, Muskelkraft und Sensibilität. Der Arzt wird auch spezifische Fragen stellen.",
+            third:
+              "Ich werde nun Ihre Reflexe testen, indem ich leicht mit einem Hammer auf bestimmte Stellen Ihres Körpers klopfe.",
+            fourth:
+              "Ich werde Ihre Muskelkraft in verschiedenen Körperbereichen überprüfen, indem Sie gegen meine Hand drücken.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Betonen Sie, dass in der Regel keine spezielle Vorbereitung erforderlich ist, der Patient sollte jedoch bequeme Kleidung tragen und eventuelle neurologische Beschwerden oder Symptome genau beschreiben.",
+            third:
+              "Sie müssen sich nicht speziell vorbereiten. Tragen Sie einfach bequeme Kleidung, damit wir die Bewegungen besser prüfen können.",
+            fourth:
+              "Es ist hilfreich, wenn Sie mir vorab genau beschreiben, wann und wo die Symptome auftreten.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Erklären Sie, dass die neurologische Untersuchung nicht-invasiv ist und daher keine Risiken oder Nebenwirkungen birgt.",
+            third:
+              "Da die Untersuchung nicht-invasiv ist, gibt es keine Risiken oder Komplikationen.",
+            fourth:
+              "Die Tests sind schmerzfrei und bergen keinerlei Gefahren für Sie.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erläutern Sie die Vorteile der Untersuchung, wie die schnelle und schmerzfreie Durchführung sowie die Möglichkeit, wertvolle Informationen über die Funktion des Nervensystems zu erhalten.",
+            third:
+              "Der Vorteil dieser Untersuchung ist, dass sie schnell durchgeführt werden kann und wertvolle Informationen liefert.",
+            fourth:
+              "Diese Untersuchung gibt uns wichtige Hinweise, ohne dass Sie Beschwerden haben werden.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie, dass in bestimmten Fällen bildgebende Verfahren wie MRT oder CT eingesetzt werden können, um zusätzliche oder detailliertere Informationen zu erhalten.",
+            third:
+              "Falls nötig, könnten wir später eine MRT-Untersuchung machen, um genauere Bilder des Gehirns zu bekommen.",
+            fourth:
+              "Manchmal ergänzen wir die Untersuchung durch eine CT, um genauere Informationen zu erhalten.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Betonen Sie, dass es keine absoluten Kontraindikationen für die neurologische Untersuchung gibt, da sie nicht-invasiv ist.",
+            third:
+              "Es gibt keine Kontraindikationen für diese Untersuchung, da sie völlig sicher ist.",
+            fourth:
+              "Diese Untersuchung kann bei allen Patienten durchgeführt werden, es gibt keine Einschränkungen.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, dass die Ergebnisse Hinweise auf mögliche Nervenschäden, Reflexstörungen, Muskelschwäche oder Sensibilitätsstörungen geben können.",
+            third:
+              "Sollten die Reflexe schwach oder übermäßig stark sein, könnte das auf eine Nervenerkrankung hinweisen.",
+            fourth:
+              "Falls wir eine Muskelschwäche feststellen, kann das auf eine Schädigung der Nerven hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Erklären Sie dem Patienten, dass sein Einverständnis erforderlich ist, um sicherzustellen, dass er die Untersuchung und deren Bedeutung versteht und mit der Durchführung einverstanden ist.",
+            third:
+              "Bevor wir beginnen, brauche ich Ihr Einverständnis, um die Untersuchung durchzuführen.",
+            fourth:
+              "Es ist wichtig, dass Sie zustimmen, nachdem ich Ihnen alles erklärt habe.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Betonen Sie, dass der Arzt vor der Untersuchung eine formelle Einverständniserklärung vom Patienten einholen wird.",
+            third:
+              "Ich werde Ihnen das Einverständnisformular vorlegen, das Sie bitte unterschreiben.",
+            fourth:
+              "Nachdem ich alles erklärt habe, brauchen wir Ihre schriftliche Zustimmung.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Erwähnen Sie, dass nach der Untersuchung keine speziellen Nachsorgemaßnahmen erforderlich sind.",
+            third:
+              "Nach der Untersuchung können Sie Ihren normalen Aktivitäten nachgehen.",
+            fourth:
+              "Es sind keine weiteren Maßnahmen erforderlich, es sei denn, Sie bemerken ungewöhnliche Symptome.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Informieren Sie den Patienten darüber, dass die Ergebnisse der neurologischen Untersuchung sofort besprochen werden und ggf. weitere Untersuchungen oder Therapien vorgeschlagen werden.",
+            third:
+              "Die Ergebnisse besprechen wir sofort nach der Untersuchung und planen die nächsten Schritte, falls notwendig.",
+            fourth:
+              "Ich werde Ihnen nach der Untersuchung direkt sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen brauchen.",
+          },
         ],
       },
       // 3tab 361
@@ -30517,98 +30412,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Was ist eigentlich die angegebene Untersuchung",
-                second:
-                  "Erklären Sie, dass die neurologische Untersuchung eine klinische Methode ist, um die Funktionsfähigkeit des zentralen und peripheren Nervensystems zu bewerten. Sie umfasst verschiedene Tests wie Reflexe, Koordination und Sensibilität.",
-                third:
-                  "Die neurologische Untersuchung dient dazu, die Nervenfunktion zu überprüfen, einschließlich Reflexen, Muskelkraft und Sensibilität.",
-                fourth:
-                  "Es handelt sich um eine umfassende Untersuchung des Nervensystems, um eventuelle neurologische Störungen zu identifizieren.",
-              },
-              {
-                first: "Was können wir damit untersuchen",
-                second:
-                  "Betonen Sie, dass mit der neurologischen Untersuchung Störungen des Nervensystems wie Schlaganfälle, Polyneuropathien, Multiple Sklerose und andere neurologische Erkrankungen diagnostiziert werden können.",
-                third:
-                  "Mit dieser Untersuchung können wir einen Schlaganfall, eine Nervenschädigung oder eine Entzündung wie bei der Multiplen Sklerose diagnostizieren.",
-                fourth:
-                  "Wir können Funktionsstörungen der Nervenbahnen erkennen, zum Beispiel bei einer Polyneuropathie oder Myasthenia gravis.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Erläutern Sie, dass die Ergebnisse auf neurologische Defizite wie abgeschwächte Reflexe, Muskelschwäche, Sensibilitätsstörungen oder Bewegungsstörungen hinweisen können.",
-                third:
-                  "Die Patientin zeigt eine abgeschwächte Reflexantwort auf der linken Seite, was auf eine zentrale Nervenstörung hindeuten könnte.",
-                fourth:
-                  "Wir haben Sensibilitätsstörungen festgestellt, die mit einer peripheren Neuropathie vereinbar sein könnten.",
-              },
-              {
-                first: "Indikationen",
-                second:
-                  "Geben Sie an, dass die neurologische Untersuchung indiziert ist bei Symptomen wie Schwindel, Lähmungen, Sensibilitätsstörungen, Gangunsicherheit oder bei Verdacht auf neurologische Erkrankungen.",
-                third:
-                  "Die Untersuchung ist bei diesem Patienten indiziert aufgrund von Schwindel und Gangunsicherheit, was auf eine zerebelläre Dysfunktion hinweist.",
-                fourth:
-                  "Aufgrund der anhaltenden Kopfschmerzen und der Lähmungserscheinungen besteht der Verdacht auf einen akuten Schlaganfall.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Erwähnen Sie, dass es keine absoluten Kontraindikationen für die neurologische Untersuchung gibt, da sie nicht-invasiv ist.",
-                third:
-                  "Es gibt keine Kontraindikationen für diese Untersuchung, da sie nicht invasiv ist.",
-                fourth:
-                  "Da die neurologische Untersuchung risikolos ist, können wir sie auch bei Patienten mit chronischen Erkrankungen sicher durchführen.",
-              },
-              {
-                first: "Differenzialdiagnosen",
-                second:
-                  "Diskutieren Sie mögliche Differenzialdiagnosen wie Schlaganfall, Multiple Sklerose, periphere Neuropathien, Myasthenia gravis oder Tumore des zentralen Nervensystems, die durch die Untersuchung in Betracht gezogen werden.",
-                third:
-                  "Die Differenzialdiagnosen umfassen Multiple Sklerose oder einen Hirntumor, da die Patientin eine progrediente Muskelschwäche zeigt.",
-                fourth:
-                  "Eine Differenzialdiagnose wäre eine periphere Neuropathie, angesichts der Schmerzen und Sensibilitätsstörungen in den Extremitäten.",
-              },
-              {
-                first: "Behandlungspläne",
-                second:
-                  "Erläutern Sie, dass die Behandlungspläne auf den Ergebnissen der Untersuchung basieren und je nach Diagnose eine medikamentöse Therapie, Physiotherapie oder weitere diagnostische Maßnahmen wie MRT oder CT folgen können.",
-                third:
-                  "Bei einem positiven Befund planen wir eine MRT, um die Läsion zu bestätigen, gefolgt von einer Kortikosteroidbehandlung.",
-                fourth:
-                  "Nach der neurologischen Untersuchung wird eine gezielte Physiotherapie zur Rehabilitation der motorischen Funktionen empfohlen.",
-              },
-              {
-                first: "Interprofessionelle Zusammenarbeit",
-                second:
-                  "Betonen Sie, dass eine enge Zusammenarbeit mit Neurologen, Radiologen, Physiotherapeuten und weiteren Fachdisziplinen notwendig ist, um eine Behandlung des Patienten sicherzustellen.",
-                third:
-                  "In diesem Fall sollten wir den Neurologen und den Physiotherapeuten einbeziehen, um eine optimale Versorgung sicherzustellen.",
-                fourth:
-                  "Eine Rücksprache mit dem Radiologen ist wichtig, um die Ergebnisse der Bildgebung zu besprechen und weitere Schritte zu planen.",
-              },
-              {
-                first: "Qualitätsmanagement",
-                second:
-                  "Weisen Sie darauf hin, dass eine standardisierte Durchführung und Dokumentation der neurologischen Untersuchung wichtig ist, um die Qualität der Diagnose zu sichern und im Rahmen des Qualitätsmanagements nachvollziehbar zu machen.",
-                third:
-                  "Die neurologischen Befunde sollten nach dem Standardprotokoll dokumentiert werden, um eine lückenlose Nachverfolgung zu ermöglichen.",
-                fourth:
-                  "Um die Qualität der Untersuchung sicherzustellen, müssen die Testergebnisse und Auffälligkeiten präzise dokumentiert werden.",
-              },
-              {
-                first: "Dokumentation und Weiterverfolgung",
-                second:
-                  "Erläutern Sie, dass eine präzise Dokumentation der Untersuchungsergebnisse entscheidend ist, um den Verlauf der Erkrankung zu verfolgen und die Effektivität der Behandlungspläne zu überwachen.",
-                third:
-                  "Wir sollten die Reflexe und motorischen Tests dokumentieren und in einer Woche eine erneute Untersuchung planen.",
-                fourth:
-                  "Eine genaue Dokumentation der Sensibilitätstests ist wichtig, um die Entwicklung der Symptome im Verlauf zu verfolgen.",
-              },
-           
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erklären Sie, dass die neurologische Untersuchung eine klinische Methode ist, um die Funktionsfähigkeit des zentralen und peripheren Nervensystems zu bewerten. Sie umfasst verschiedene Tests wie Reflexe, Koordination und Sensibilität.",
+            third:
+              "Die neurologische Untersuchung dient dazu, die Nervenfunktion zu überprüfen, einschließlich Reflexen, Muskelkraft und Sensibilität.",
+            fourth:
+              "Es handelt sich um eine umfassende Untersuchung des Nervensystems, um eventuelle neurologische Störungen zu identifizieren.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Betonen Sie, dass mit der neurologischen Untersuchung Störungen des Nervensystems wie Schlaganfälle, Polyneuropathien, Multiple Sklerose und andere neurologische Erkrankungen diagnostiziert werden können.",
+            third:
+              "Mit dieser Untersuchung können wir einen Schlaganfall, eine Nervenschädigung oder eine Entzündung wie bei der Multiplen Sklerose diagnostizieren.",
+            fourth:
+              "Wir können Funktionsstörungen der Nervenbahnen erkennen, zum Beispiel bei einer Polyneuropathie oder Myasthenia gravis.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Erläutern Sie, dass die Ergebnisse auf neurologische Defizite wie abgeschwächte Reflexe, Muskelschwäche, Sensibilitätsstörungen oder Bewegungsstörungen hinweisen können.",
+            third:
+              "Die Patientin zeigt eine abgeschwächte Reflexantwort auf der linken Seite, was auf eine zentrale Nervenstörung hindeuten könnte.",
+            fourth:
+              "Wir haben Sensibilitätsstörungen festgestellt, die mit einer peripheren Neuropathie vereinbar sein könnten.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Geben Sie an, dass die neurologische Untersuchung indiziert ist bei Symptomen wie Schwindel, Lähmungen, Sensibilitätsstörungen, Gangunsicherheit oder bei Verdacht auf neurologische Erkrankungen.",
+            third:
+              "Die Untersuchung ist bei diesem Patienten indiziert aufgrund von Schwindel und Gangunsicherheit, was auf eine zerebelläre Dysfunktion hinweist.",
+            fourth:
+              "Aufgrund der anhaltenden Kopfschmerzen und der Lähmungserscheinungen besteht der Verdacht auf einen akuten Schlaganfall.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erwähnen Sie, dass es keine absoluten Kontraindikationen für die neurologische Untersuchung gibt, da sie nicht-invasiv ist.",
+            third:
+              "Es gibt keine Kontraindikationen für diese Untersuchung, da sie nicht invasiv ist.",
+            fourth:
+              "Da die neurologische Untersuchung risikolos ist, können wir sie auch bei Patienten mit chronischen Erkrankungen sicher durchführen.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie mögliche Differenzialdiagnosen wie Schlaganfall, Multiple Sklerose, periphere Neuropathien, Myasthenia gravis oder Tumore des zentralen Nervensystems, die durch die Untersuchung in Betracht gezogen werden.",
+            third:
+              "Die Differenzialdiagnosen umfassen Multiple Sklerose oder einen Hirntumor, da die Patientin eine progrediente Muskelschwäche zeigt.",
+            fourth:
+              "Eine Differenzialdiagnose wäre eine periphere Neuropathie, angesichts der Schmerzen und Sensibilitätsstörungen in den Extremitäten.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Erläutern Sie, dass die Behandlungspläne auf den Ergebnissen der Untersuchung basieren und je nach Diagnose eine medikamentöse Therapie, Physiotherapie oder weitere diagnostische Maßnahmen wie MRT oder CT folgen können.",
+            third:
+              "Bei einem positiven Befund planen wir eine MRT, um die Läsion zu bestätigen, gefolgt von einer Kortikosteroidbehandlung.",
+            fourth:
+              "Nach der neurologischen Untersuchung wird eine gezielte Physiotherapie zur Rehabilitation der motorischen Funktionen empfohlen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie, dass eine enge Zusammenarbeit mit Neurologen, Radiologen, Physiotherapeuten und weiteren Fachdisziplinen notwendig ist, um eine Behandlung des Patienten sicherzustellen.",
+            third:
+              "In diesem Fall sollten wir den Neurologen und den Physiotherapeuten einbeziehen, um eine optimale Versorgung sicherzustellen.",
+            fourth:
+              "Eine Rücksprache mit dem Radiologen ist wichtig, um die Ergebnisse der Bildgebung zu besprechen und weitere Schritte zu planen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Weisen Sie darauf hin, dass eine standardisierte Durchführung und Dokumentation der neurologischen Untersuchung wichtig ist, um die Qualität der Diagnose zu sichern und im Rahmen des Qualitätsmanagements nachvollziehbar zu machen.",
+            third:
+              "Die neurologischen Befunde sollten nach dem Standardprotokoll dokumentiert werden, um eine lückenlose Nachverfolgung zu ermöglichen.",
+            fourth:
+              "Um die Qualität der Untersuchung sicherzustellen, müssen die Testergebnisse und Auffälligkeiten präzise dokumentiert werden.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Erläutern Sie, dass eine präzise Dokumentation der Untersuchungsergebnisse entscheidend ist, um den Verlauf der Erkrankung zu verfolgen und die Effektivität der Behandlungspläne zu überwachen.",
+            third:
+              "Wir sollten die Reflexe und motorischen Tests dokumentieren und in einer Woche eine erneute Untersuchung planen.",
+            fourth:
+              "Eine genaue Dokumentation der Sensibilitätstests ist wichtig, um die Entwicklung der Symptome im Verlauf zu verfolgen.",
+          },
         ],
       },
       // 4tab 362
@@ -30628,71 +30521,69 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
-                third:
-                  "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
-                fourth:
-                  "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Normale Reflexe, normale Muskelkraft, keine Sensibilitätsstörungen oder Auffälligkeiten in der Koordination.",
-                third:
-                  "Manuelle neurologische Untersuchung zeigt Papillenödem, reduzierte Reflexe linksseitig und Hemiparese.",
-                fourth:
-                  "Manuelle Untersuchung zeigt Schwäche in den unteren Extremitäten, pathologische Reflexe und gestörtes Sensibilitätsmuster.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Kein Hinweis auf neurologische Erkrankungen, der Patient zeigt eine normale neurologische Funktion.",
-                third:
-                  "Der Befund deutet auf eine Raumforderung im Gehirn hin, möglicherweise ein Glioblastom.",
-                fourth:
-                  "Der klinische Befund weist auf eine zentrale Demyelinisierung hin, was für Multiple Sklerose typisch ist.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Der normale Befund wird zur Beruhigung des Patienten verwendet, und es werden keine weiteren diagnostischen Maßnahmen empfohlen.",
-                third:
-                  "Die Ergebnisse sind entscheidend für die sofortige Überweisung zur MRT und Planung der neurochirurgischen Behandlung.",
-                fourth:
-                  "Wichtig für die Einleitung einer MRT-Untersuchung und den Beginn einer immunmodulatorischen Therapie.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung eines gesunden neurologischen Zustands, keine weiteren Untersuchungen erforderlich.",
-                third:
-                  "Diagnose eines Hirntumors basierend auf klinischer Untersuchung und MRT-Anforderung zur Bestätigung.",
-                fourth:
-                  "Diagnose von Multipler Sklerose aufgrund der klinischen Symptome und der geplanten MRT-Bildgebung.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Klinische Untersuchung ohne Auffälligkeiten, Reflexe und Bewegungen sind symmetrisch und normal.",
-                third:
-                  "Klinische Untersuchung zeigt Augenbewegungsstörungen, linksseitige Schwäche und pathologische Reflexe.",
-                fourth:
-                  "Klinische Untersuchung zeigt Schwäche in den Beinen, verminderte Reflexe und sensorische Ausfälle.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Wir empfehlen, regelmäßige neurologische Kontrollen zur Früherkennung möglicher zukünftiger Auffälligkeiten durchzuführen.",
-                third:
-                  "Wir empfehlen eine MRT zur Bestätigung der Diagnose und die Einleitung einer neurochirurgischen Konsultation. Anschließend ist eine Radiotherapie zu erwägen.",
-                fourth:
-                  "Es ist zu empfehlen, eine MRT-Untersuchung durchzuführen, um die Diagnose zu sichern und eine immunmodulatorische Therapie zu beginnen.",
-              },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "35-jähriger Patient ohne Beschwerden, Routinekontrolle ohne auffällige Vorgeschichte.",
+            third:
+              "45-jähriger Patient klagt über anhaltende Kopfschmerzen und Sehstörungen. Vorgeschichte einer Epilepsie.",
+            fourth:
+              "30-jährige Patientin berichtet von periodischer Taubheit in den Extremitäten und Ermüdung. Familiengeschichte neurologischer Erkrankungen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Normale Reflexe, normale Muskelkraft, keine Sensibilitätsstörungen oder Auffälligkeiten in der Koordination.",
+            third:
+              "Manuelle neurologische Untersuchung zeigt Papillenödem, reduzierte Reflexe linksseitig und Hemiparese.",
+            fourth:
+              "Manuelle Untersuchung zeigt Schwäche in den unteren Extremitäten, pathologische Reflexe und gestörtes Sensibilitätsmuster.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Kein Hinweis auf neurologische Erkrankungen, der Patient zeigt eine normale neurologische Funktion.",
+            third:
+              "Der Befund deutet auf eine Raumforderung im Gehirn hin, möglicherweise ein Glioblastom.",
+            fourth:
+              "Der klinische Befund weist auf eine zentrale Demyelinisierung hin, was für Multiple Sklerose typisch ist.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Der normale Befund wird zur Beruhigung des Patienten verwendet, und es werden keine weiteren diagnostischen Maßnahmen empfohlen.",
+            third:
+              "Die Ergebnisse sind entscheidend für die sofortige Überweisung zur MRT und Planung der neurochirurgischen Behandlung.",
+            fourth:
+              "Wichtig für die Einleitung einer MRT-Untersuchung und den Beginn einer immunmodulatorischen Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung eines gesunden neurologischen Zustands, keine weiteren Untersuchungen erforderlich.",
+            third:
+              "Diagnose eines Hirntumors basierend auf klinischer Untersuchung und MRT-Anforderung zur Bestätigung.",
+            fourth:
+              "Diagnose von Multipler Sklerose aufgrund der klinischen Symptome und der geplanten MRT-Bildgebung.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second:
+              "Klinische Untersuchung ohne Auffälligkeiten, Reflexe und Bewegungen sind symmetrisch und normal.",
+            third:
+              "Klinische Untersuchung zeigt Augenbewegungsstörungen, linksseitige Schwäche und pathologische Reflexe.",
+            fourth:
+              "Klinische Untersuchung zeigt Schwäche in den Beinen, verminderte Reflexe und sensorische Ausfälle.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, regelmäßige neurologische Kontrollen zur Früherkennung möglicher zukünftiger Auffälligkeiten durchzuführen.",
+            third:
+              "Wir empfehlen eine MRT zur Bestätigung der Diagnose und die Einleitung einer neurochirurgischen Konsultation. Anschließend ist eine Radiotherapie zu erwägen.",
+            fourth:
+              "Es ist zu empfehlen, eine MRT-Untersuchung durchzuführen, um die Diagnose zu sichern und eine immunmodulatorische Therapie zu beginnen.",
+          },
         ],
       },
       // 5tab 363
@@ -30968,112 +30859,110 @@ export const parentTabs = [
         id: 367,
         title: "Einleitung",
         list: [
-          
-                {
-                  title: "Einleitung",
-                  items: [
-                    {
-                      bold_text: "Ziel und Kontext:",
-                      text: "Die Perkussion wird durchgeführt, um den Zustand von Organen oder Strukturen durch Abklopfen der Körperoberfläche zu beurteilen. Hauptziel ist es, Informationen über Luft, Flüssigkeiten oder feste Massen in Hohlräumen zu gewinnen.",
-                    },
-                    {
-                      bold_text: "Relevanz und Anwendungsbereiche:",
-                      text: "Die Perkussion ist besonders relevant bei der Untersuchung von Lunge und Bauchhöhle, um Anomalien wie Pleuraergüsse, Pneumothorax oder Vergrößerungen der Leber zu diagnostizieren.",
-                    },
-                  ],
-                },
-                {
-                  title: "Grundprinzipien",
-                  items: [
-                    {
-                      bold_text: "Theoretische Grundlagen:",
-                      text: "Die Perkussion basiert auf der unterschiedlichen Resonanz von Geweben. Luftgefüllte Strukturen erzeugen einen hohlen Klang, während flüssigkeits- oder massengefüllte Bereiche einen dumpfen Ton abgeben.",
-                    },
-                    {
-                      bold_text: "Technische Aspekte:",
-                      text: "Durch sanftes Abklopfen der Haut mit den Fingern oder speziellen Instrumenten wird die Resonanz analysiert. Es wird zwischen direkter und indirekter Perkussion unterschieden.",
-                    },
-                  ],
-                },
-                {
-                  title: "Interpretation",
-                  items: [
-                    {
-                      bold_text: "Auswertung und Interpretation:",
-                      text: "Der erzeugte Ton wird anhand seiner Resonanz, Lautstärke und Dauer interpretiert. Ein hohler Ton deutet auf Luft hin (z. B. Lunge), während ein dumpfer Ton auf Flüssigkeit oder feste Massen hindeutet (z. B. Pleuraerguss).",
-                    },
-                    {
-                      bold_text: "Typische Befunde:",
-                      text: "Ein hohler Ton wird typischerweise bei luftgefüllten Organen wie der Lunge oder dem Darm gehört. Dieser Klang deutet auf normale Verhältnisse in diesen Bereichen hin. Ein dumpfer Ton hingegen weist auf Flüssigkeitsansammlungen oder feste Massen wie Tumore hin, die auf pathologische Veränderungen hindeuten.",
-                    },
-                  ],
-                },
-                {
-                  title: "Risiken und Vorteile",
-                  items: [
-                    {
-                      bold_text: "Vorteile:",
-                      text: "Ein großer Vorteil der Perkussion ist, dass sie schnell, kostengünstig und nicht-invasiv durchgeführt werden kann. Sie ermöglicht eine unmittelbare Einschätzung des Zustands von Organen und Geweben, ohne den Patienten einer größeren Belastung auszusetzen.",
-                    },
-                    {
-                      bold_text: "Nachteile:",
-                      text: "Die Genauigkeit der Untersuchung hängt stark von der Erfahrung des Arztes ab, was sie subjektiv machen kann. Bei komplexen Befunden liefert sie oft keine ausreichenden Informationen, sodass ergänzende Untersuchungen erforderlich sind.",
-                    },
-                    {
-                      bold_text: "Risiken:",
-                      text: "Keine direkten Risiken, da es sich um eine nicht-invasive Technik handelt.",
-                    },
-                  ],
-                },
-                {
-                  title: "Klinische Bedeutung",
-                  items: [
-                    {
-                      bold_text: "Rolle in der Diagnose und Behandlung:",
-                      text: "Die Perkussion spielt eine wichtige Rolle in der Erstdiagnose von Lungen- und Abdominalerkrankungen und kann Hinweise für weiterführende Untersuchungen wie Röntgen oder Ultraschall geben.",
-                    },
-                    {
-                      bold_text: "Wichtigkeit für das Patientenmanagement:",
-                      text: "Sie hilft bei der Entscheidung, ob weiterführende bildgebende Verfahren notwendig sind, und unterstützt das Monitoring von Krankheitsverläufen.",
-                    },
-                  ],
-                },
-                {
-                  title: "Alternativen",
-                  items: [
-                    {
-                      bold_text: "",
-                      text: "Andere diagnostische Verfahren wie Auskultation, Sonographie oder Röntgen können zusätzliche oder detailliertere Informationen liefern.",
-                    },
-                  ],
-                },
-                {
-                  title: "Neueste Forschung",
-                  items: [
-                    {
-                      bold_text: "Aktuelle Erkenntnisse:",
-                      text: "Neue Studien untersuchen die Kombination von Perkussion mit bildgebenden Verfahren zur besseren Diagnose von Lungenerkrankungen.",
-                    },
-                    {
-                      bold_text: "Zukünftige Perspektiven:",
-                      text: "Zukünftig könnte die Integration mit KI-unterstützten Technologien die Genauigkeit der Perkussion verbessern.",
-                    },
-                  ],
-                },
-                {
-                  title: "Fazit",
-                  items: [
-                    {
-                      bold_text: "Zusammenfassung der Kernbotschaften:",
-                      text: "Die Perkussion ist ein einfaches, aber effektives diagnostisches Werkzeug, das schnelle und direkte Informationen über pathologische Veränderungen im Körper liefert.",
-                    },
-                    {
-                      bold_text: "Gesamtbedeutung:",
-                      text: "Trotz ihrer begrenzten Aussagekraft bleibt die Perkussion ein wichtiger Bestandteil der klinischen Untersuchung, vor allem in Kombination mit weiteren diagnostischen Methoden.",
-                    },
-                  ],
-                },
-            
+          {
+            title: "Einleitung",
+            items: [
+              {
+                bold_text: "Ziel und Kontext:",
+                text: "Die Perkussion wird durchgeführt, um den Zustand von Organen oder Strukturen durch Abklopfen der Körperoberfläche zu beurteilen. Hauptziel ist es, Informationen über Luft, Flüssigkeiten oder feste Massen in Hohlräumen zu gewinnen.",
+              },
+              {
+                bold_text: "Relevanz und Anwendungsbereiche:",
+                text: "Die Perkussion ist besonders relevant bei der Untersuchung von Lunge und Bauchhöhle, um Anomalien wie Pleuraergüsse, Pneumothorax oder Vergrößerungen der Leber zu diagnostizieren.",
+              },
+            ],
+          },
+          {
+            title: "Grundprinzipien",
+            items: [
+              {
+                bold_text: "Theoretische Grundlagen:",
+                text: "Die Perkussion basiert auf der unterschiedlichen Resonanz von Geweben. Luftgefüllte Strukturen erzeugen einen hohlen Klang, während flüssigkeits- oder massengefüllte Bereiche einen dumpfen Ton abgeben.",
+              },
+              {
+                bold_text: "Technische Aspekte:",
+                text: "Durch sanftes Abklopfen der Haut mit den Fingern oder speziellen Instrumenten wird die Resonanz analysiert. Es wird zwischen direkter und indirekter Perkussion unterschieden.",
+              },
+            ],
+          },
+          {
+            title: "Interpretation",
+            items: [
+              {
+                bold_text: "Auswertung und Interpretation:",
+                text: "Der erzeugte Ton wird anhand seiner Resonanz, Lautstärke und Dauer interpretiert. Ein hohler Ton deutet auf Luft hin (z. B. Lunge), während ein dumpfer Ton auf Flüssigkeit oder feste Massen hindeutet (z. B. Pleuraerguss).",
+              },
+              {
+                bold_text: "Typische Befunde:",
+                text: "Ein hohler Ton wird typischerweise bei luftgefüllten Organen wie der Lunge oder dem Darm gehört. Dieser Klang deutet auf normale Verhältnisse in diesen Bereichen hin. Ein dumpfer Ton hingegen weist auf Flüssigkeitsansammlungen oder feste Massen wie Tumore hin, die auf pathologische Veränderungen hindeuten.",
+              },
+            ],
+          },
+          {
+            title: "Risiken und Vorteile",
+            items: [
+              {
+                bold_text: "Vorteile:",
+                text: "Ein großer Vorteil der Perkussion ist, dass sie schnell, kostengünstig und nicht-invasiv durchgeführt werden kann. Sie ermöglicht eine unmittelbare Einschätzung des Zustands von Organen und Geweben, ohne den Patienten einer größeren Belastung auszusetzen.",
+              },
+              {
+                bold_text: "Nachteile:",
+                text: "Die Genauigkeit der Untersuchung hängt stark von der Erfahrung des Arztes ab, was sie subjektiv machen kann. Bei komplexen Befunden liefert sie oft keine ausreichenden Informationen, sodass ergänzende Untersuchungen erforderlich sind.",
+              },
+              {
+                bold_text: "Risiken:",
+                text: "Keine direkten Risiken, da es sich um eine nicht-invasive Technik handelt.",
+              },
+            ],
+          },
+          {
+            title: "Klinische Bedeutung",
+            items: [
+              {
+                bold_text: "Rolle in der Diagnose und Behandlung:",
+                text: "Die Perkussion spielt eine wichtige Rolle in der Erstdiagnose von Lungen- und Abdominalerkrankungen und kann Hinweise für weiterführende Untersuchungen wie Röntgen oder Ultraschall geben.",
+              },
+              {
+                bold_text: "Wichtigkeit für das Patientenmanagement:",
+                text: "Sie hilft bei der Entscheidung, ob weiterführende bildgebende Verfahren notwendig sind, und unterstützt das Monitoring von Krankheitsverläufen.",
+              },
+            ],
+          },
+          {
+            title: "Alternativen",
+            items: [
+              {
+                bold_text: "",
+                text: "Andere diagnostische Verfahren wie Auskultation, Sonographie oder Röntgen können zusätzliche oder detailliertere Informationen liefern.",
+              },
+            ],
+          },
+          {
+            title: "Neueste Forschung",
+            items: [
+              {
+                bold_text: "Aktuelle Erkenntnisse:",
+                text: "Neue Studien untersuchen die Kombination von Perkussion mit bildgebenden Verfahren zur besseren Diagnose von Lungenerkrankungen.",
+              },
+              {
+                bold_text: "Zukünftige Perspektiven:",
+                text: "Zukünftig könnte die Integration mit KI-unterstützten Technologien die Genauigkeit der Perkussion verbessern.",
+              },
+            ],
+          },
+          {
+            title: "Fazit",
+            items: [
+              {
+                bold_text: "Zusammenfassung der Kernbotschaften:",
+                text: "Die Perkussion ist ein einfaches, aber effektives diagnostisches Werkzeug, das schnelle und direkte Informationen über pathologische Veränderungen im Körper liefert.",
+              },
+              {
+                bold_text: "Gesamtbedeutung:",
+                text: "Trotz ihrer begrenzten Aussagekraft bleibt die Perkussion ein wichtiger Bestandteil der klinischen Untersuchung, vor allem in Kombination mit weiteren diagnostischen Methoden.",
+              },
+            ],
+          },
         ],
       },
       // 2tab 368
@@ -31093,116 +30982,114 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Ziel der Untersuchung",
-                second:
-                  "Erklären Sie dem Patienten, dass die Perkussion dazu dient, durch Abklopfen der Körperoberfläche Informationen über den Zustand von Organen, wie der Lunge oder Bauchhöhle, zu erhalten. Es hilft, Anomalien wie Flüssigkeitsansammlungen oder Luftansammlungen zu erkennen.",
-                third:
-                  "Wir führen diese Untersuchung durch, um zu prüfen, ob Ihre Lunge normal klingt oder ob es Anzeichen für Flüssigkeit oder Luftansammlungen gibt.",
-                fourth:
-                  "Mit der Perkussion wollen wir feststellen, ob sich in Ihrem Bauchbereich Flüssigkeit angesammelt hat, die auf eine Erkrankung hinweisen könnte.",
-              },
-              {
-                first: "Ablauf",
-                second:
-                  "Erläutern Sie, dass Sie sanft auf den Körper des Patienten klopfen werden, insbesondere im Brust- und Bauchbereich. Dabei hören Sie auf die verschiedenen Klänge, um Hinweise auf den Zustand der Organe zu bekommen.",
-                third:
-                  "Ich werde jetzt vorsichtig auf Ihren Brustkorb klopfen und auf die Klänge hören, um festzustellen, ob Ihre Lunge normal funktioniert.",
-                fourth:
-                  "Ich werde mit den Fingern sanft auf Ihren Bauch klopfen, um zu hören, ob es Bereiche mit Flüssigkeit oder Luftansammlung gibt.",
-              },
-              {
-                first: "Vorbereitung",
-                second:
-                  "Informieren Sie den Patienten, dass keine spezielle Vorbereitung erforderlich ist. Er sollte jedoch entspannt auf der Untersuchungsliege liegen, um eine optimale Untersuchung zu ermöglichen.",
-                third:
-                  "Für diese Untersuchung müssen Sie sich einfach entspannt hinlegen. Es sind keine besonderen Vorbereitungen nötig.",
-                fourth:
-                  "Sie brauchen sich nicht vorzubereiten. Legen Sie sich bitte flach hin, und atmen Sie ruhig.",
-              },
-              {
-                first: "Risiken",
-                second:
-                  "Betonen Sie, dass es bei der Perkussion keine nennenswerten Risiken gibt, da sie nicht-invasiv ist.",
-                third:
-                  "Diese Untersuchung ist völlig risikofrei, da wir nur äußerlich abklopfen.",
-                fourth:
-                  "Es gibt keine Risiken, da die Perkussion nicht-invasiv ist und keine Schmerzen verursacht.",
-              },
-              {
-                first: "Vorteile",
-                second:
-                  "Erklären Sie, dass die Perkussion eine einfache, schnelle und schmerzfreie Methode ist, um erste Hinweise auf gesundheitliche Probleme zu erhalten. Sie kann helfen, schnell Entscheidungen über weitere Untersuchungen zu treffen.",
-                third:
-                  "Die Perkussion ist eine einfache und schnelle Methode, um herauszufinden, ob etwas mit Ihren Organen nicht stimmt.",
-                fourth:
-                  "Mit der Perkussion können wir schnell eine erste Einschätzung Ihres Gesundheitszustands machen, ohne invasive Methoden einsetzen zu müssen.",
-              },
-              {
-                first: "Alternativen",
-                second:
-                  "Erwähnen Sie, dass Alternativen wie Ultraschall, Röntgen oder eine Computertomographie durchgeführt werden können, falls die Perkussion nicht ausreicht.",
-                third:
-                  "Falls die Perkussion keine eindeutigen Ergebnisse liefert, können wir als nächstes ein Röntgenbild oder eine Ultraschalluntersuchung machen.",
-                fourth:
-                  "Wenn die Ergebnisse nicht klar sind, könnte eine zusätzliche Untersuchung wie ein Ultraschall oder eine Röntgenaufnahme nötig sein.",
-              },
-              {
-                first: "Kontraindikationen",
-                second:
-                  "Informieren Sie den Patienten darüber, dass es keine wesentlichen Kontraindikationen für die Perkussion gibt. Sie kann bei fast allen Patienten sicher durchgeführt werden.",
-                third:
-                  "Es gibt keine besonderen Kontraindikationen für diese Untersuchung.",
-                fourth:
-                  "Bei dieser Untersuchung gibt es keine Einschränkungen, sie ist für fast jeden Patienten sicher durchführbar.",
-              },
-              {
-                first: "Mögliche Ergebnisse",
-                second:
-                  "Erklären Sie, dass die Untersuchung entweder normale Klänge ergeben kann oder abnormale Klänge wie dumpfe Töne, die auf Flüssigkeit oder Masseneffekte hinweisen.",
-                third:
-                  "Wenn der Klang hohl ist, deutet das auf Luft in der Lunge hin, was normal ist. Ein dumpfer Ton könnte auf eine Flüssigkeitsansammlung hinweisen.",
-                fourth:
-                  "Normale Klänge deuten auf gesunde Organe hin. Ein dumpfer Klang könnte auf Flüssigkeit, wie bei einem Pleuraerguss, hinweisen.",
-              },
-              {
-                first: "Wichtigkeit des Einverständnisses",
-                second:
-                  "Betonen Sie, dass Sie vor der Untersuchung das Einverständnis des Patienten benötigen, auch wenn die Perkussion ein risikofreies und routinemäßiges Verfahren ist.",
-                third:
-                  "Auch wenn diese Untersuchung einfach ist, benötige ich Ihr Einverständnis, um sie durchzuführen.",
-                fourth:
-                  "Es ist wichtig, dass Sie mir Ihr Einverständnis für die Perkussion geben, bevor wir beginnen.",
-              },
-              {
-                first: "Erhalt des Einverständnisses",
-                second:
-                  "Erwähnen Sie, dass Sie den Patienten vor Beginn der Untersuchung fragen werden, ob er der Durchführung der Perkussion zustimmt.",
-                third:
-                  "Ich werde Sie jetzt fragen, ob Sie mit der Untersuchung einverstanden sind. Ist das für Sie in Ordnung?",
-                fourth:
-                  "Darf ich mit der Perkussion beginnen? Ich benötige Ihr Einverständnis dafür.",
-              },
-              {
-                first: "Abschließende Hinweise",
-                second:
-                  "Informieren Sie den Patienten, dass die Untersuchung in wenigen Minuten abgeschlossen sein wird und es keinerlei Nachwirkungen gibt.",
-                third:
-                  "Die Untersuchung dauert nur ein paar Minuten, und Sie werden danach keine Beschwerden haben.",
-                fourth:
-                  "Nach der Perkussion gibt es keine weiteren Einschränkungen, und Sie können Ihren normalen Alltag fortsetzen.",
-              },
-              {
-                first: "Information über Ergebnisse",
-                second:
-                  "Erklären Sie dem Patienten, dass die Ergebnisse der Perkussion direkt während der Untersuchung besprochen werden und ggf. weitere Untersuchungen angeordnet werden können, je nach Befund.",
-                third:
-                  "Die Ergebnisse der Perkussion können wir direkt nach der Untersuchung besprechen. Je nach Ergebnis werden eventuell weitere Tests nötig sein.",
-                fourth:
-                  "Ich kann Ihnen sofort nach der Untersuchung sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen machen müssen.",
-              },
-           
+          {
+            first: "Ziel der Untersuchung",
+            second:
+              "Erklären Sie dem Patienten, dass die Perkussion dazu dient, durch Abklopfen der Körperoberfläche Informationen über den Zustand von Organen, wie der Lunge oder Bauchhöhle, zu erhalten. Es hilft, Anomalien wie Flüssigkeitsansammlungen oder Luftansammlungen zu erkennen.",
+            third:
+              "Wir führen diese Untersuchung durch, um zu prüfen, ob Ihre Lunge normal klingt oder ob es Anzeichen für Flüssigkeit oder Luftansammlungen gibt.",
+            fourth:
+              "Mit der Perkussion wollen wir feststellen, ob sich in Ihrem Bauchbereich Flüssigkeit angesammelt hat, die auf eine Erkrankung hinweisen könnte.",
+          },
+          {
+            first: "Ablauf",
+            second:
+              "Erläutern Sie, dass Sie sanft auf den Körper des Patienten klopfen werden, insbesondere im Brust- und Bauchbereich. Dabei hören Sie auf die verschiedenen Klänge, um Hinweise auf den Zustand der Organe zu bekommen.",
+            third:
+              "Ich werde jetzt vorsichtig auf Ihren Brustkorb klopfen und auf die Klänge hören, um festzustellen, ob Ihre Lunge normal funktioniert.",
+            fourth:
+              "Ich werde mit den Fingern sanft auf Ihren Bauch klopfen, um zu hören, ob es Bereiche mit Flüssigkeit oder Luftansammlung gibt.",
+          },
+          {
+            first: "Vorbereitung",
+            second:
+              "Informieren Sie den Patienten, dass keine spezielle Vorbereitung erforderlich ist. Er sollte jedoch entspannt auf der Untersuchungsliege liegen, um eine optimale Untersuchung zu ermöglichen.",
+            third:
+              "Für diese Untersuchung müssen Sie sich einfach entspannt hinlegen. Es sind keine besonderen Vorbereitungen nötig.",
+            fourth:
+              "Sie brauchen sich nicht vorzubereiten. Legen Sie sich bitte flach hin, und atmen Sie ruhig.",
+          },
+          {
+            first: "Risiken",
+            second:
+              "Betonen Sie, dass es bei der Perkussion keine nennenswerten Risiken gibt, da sie nicht-invasiv ist.",
+            third:
+              "Diese Untersuchung ist völlig risikofrei, da wir nur äußerlich abklopfen.",
+            fourth:
+              "Es gibt keine Risiken, da die Perkussion nicht-invasiv ist und keine Schmerzen verursacht.",
+          },
+          {
+            first: "Vorteile",
+            second:
+              "Erklären Sie, dass die Perkussion eine einfache, schnelle und schmerzfreie Methode ist, um erste Hinweise auf gesundheitliche Probleme zu erhalten. Sie kann helfen, schnell Entscheidungen über weitere Untersuchungen zu treffen.",
+            third:
+              "Die Perkussion ist eine einfache und schnelle Methode, um herauszufinden, ob etwas mit Ihren Organen nicht stimmt.",
+            fourth:
+              "Mit der Perkussion können wir schnell eine erste Einschätzung Ihres Gesundheitszustands machen, ohne invasive Methoden einsetzen zu müssen.",
+          },
+          {
+            first: "Alternativen",
+            second:
+              "Erwähnen Sie, dass Alternativen wie Ultraschall, Röntgen oder eine Computertomographie durchgeführt werden können, falls die Perkussion nicht ausreicht.",
+            third:
+              "Falls die Perkussion keine eindeutigen Ergebnisse liefert, können wir als nächstes ein Röntgenbild oder eine Ultraschalluntersuchung machen.",
+            fourth:
+              "Wenn die Ergebnisse nicht klar sind, könnte eine zusätzliche Untersuchung wie ein Ultraschall oder eine Röntgenaufnahme nötig sein.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Informieren Sie den Patienten darüber, dass es keine wesentlichen Kontraindikationen für die Perkussion gibt. Sie kann bei fast allen Patienten sicher durchgeführt werden.",
+            third:
+              "Es gibt keine besonderen Kontraindikationen für diese Untersuchung.",
+            fourth:
+              "Bei dieser Untersuchung gibt es keine Einschränkungen, sie ist für fast jeden Patienten sicher durchführbar.",
+          },
+          {
+            first: "Mögliche Ergebnisse",
+            second:
+              "Erklären Sie, dass die Untersuchung entweder normale Klänge ergeben kann oder abnormale Klänge wie dumpfe Töne, die auf Flüssigkeit oder Masseneffekte hinweisen.",
+            third:
+              "Wenn der Klang hohl ist, deutet das auf Luft in der Lunge hin, was normal ist. Ein dumpfer Ton könnte auf eine Flüssigkeitsansammlung hinweisen.",
+            fourth:
+              "Normale Klänge deuten auf gesunde Organe hin. Ein dumpfer Klang könnte auf Flüssigkeit, wie bei einem Pleuraerguss, hinweisen.",
+          },
+          {
+            first: "Wichtigkeit des Einverständnisses",
+            second:
+              "Betonen Sie, dass Sie vor der Untersuchung das Einverständnis des Patienten benötigen, auch wenn die Perkussion ein risikofreies und routinemäßiges Verfahren ist.",
+            third:
+              "Auch wenn diese Untersuchung einfach ist, benötige ich Ihr Einverständnis, um sie durchzuführen.",
+            fourth:
+              "Es ist wichtig, dass Sie mir Ihr Einverständnis für die Perkussion geben, bevor wir beginnen.",
+          },
+          {
+            first: "Erhalt des Einverständnisses",
+            second:
+              "Erwähnen Sie, dass Sie den Patienten vor Beginn der Untersuchung fragen werden, ob er der Durchführung der Perkussion zustimmt.",
+            third:
+              "Ich werde Sie jetzt fragen, ob Sie mit der Untersuchung einverstanden sind. Ist das für Sie in Ordnung?",
+            fourth:
+              "Darf ich mit der Perkussion beginnen? Ich benötige Ihr Einverständnis dafür.",
+          },
+          {
+            first: "Abschließende Hinweise",
+            second:
+              "Informieren Sie den Patienten, dass die Untersuchung in wenigen Minuten abgeschlossen sein wird und es keinerlei Nachwirkungen gibt.",
+            third:
+              "Die Untersuchung dauert nur ein paar Minuten, und Sie werden danach keine Beschwerden haben.",
+            fourth:
+              "Nach der Perkussion gibt es keine weiteren Einschränkungen, und Sie können Ihren normalen Alltag fortsetzen.",
+          },
+          {
+            first: "Information über Ergebnisse",
+            second:
+              "Erklären Sie dem Patienten, dass die Ergebnisse der Perkussion direkt während der Untersuchung besprochen werden und ggf. weitere Untersuchungen angeordnet werden können, je nach Befund.",
+            third:
+              "Die Ergebnisse der Perkussion können wir direkt nach der Untersuchung besprechen. Je nach Ergebnis werden eventuell weitere Tests nötig sein.",
+            fourth:
+              "Ich kann Ihnen sofort nach der Untersuchung sagen, ob alles in Ordnung ist oder ob wir weitere Untersuchungen machen müssen.",
+          },
         ],
       },
       // 3tab 369
@@ -31222,98 +31109,96 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-                {
-                  first: "Was ist eigentlich die angegebene Untersuchung",
-                  second:
-                    "Erläutern Sie, dass die Perkussion eine klinische Untersuchungstechnik ist, bei der durch Abklopfen der Körperoberfläche Resonanzen erzeugt werden, die Rückschlüsse auf die darunterliegenden Gewebe zulassen.",
-                  third:
-                    "Die Perkussion ist eine Methode, bei der durch Klopfen auf den Brustkorb der Zustand der Lunge beurteilt wird.",
-                  fourth:
-                    "Bei der Perkussion klopfen wir auf den Bauch, um festzustellen, ob Flüssigkeit vorhanden ist.",
-                },
-                {
-                  first: "Was können wir damit untersuchen",
-                  second:
-                    "Erklären Sie, dass man mit der Perkussion vor allem luft- oder flüssigkeitsgefüllte Organe wie die Lunge oder den Bauchraum untersuchen kann, um pathologische Veränderungen wie Pleuraergüsse, Pneumothorax oder vergrößerte Organe zu identifizieren.",
-                  third:
-                    "Mit der Perkussion prüfen wir, ob es im Brustkorb Anzeichen für Luft oder Flüssigkeitsansammlungen gibt, die auf ein Pleuraerguss oder Pneumothorax hinweisen könnten.",
-                  fourth:
-                    "Wir können mit der Perkussion beurteilen, ob sich Aszites oder andere Flüssigkeitsansammlungen im Bauchraum befinden.",
-                },
-                {
-                  first: "Ergebnisse der Untersuchung",
-                  second:
-                    "Besprechen Sie die möglichen Untersuchungsergebnisse, wie hohle Töne, die auf normale Luftansammlungen in der Lunge hinweisen, oder dumpfe Töne, die auf Flüssigkeit (z. B. Pleuraerguss) oder solide Massen (z. B. Tumor) hindeuten.",
-                  third:
-                    "Der hohle Klang im rechten Lungenfeld deutet auf ein Pneumothorax hin. Ein dumpfer Klang würde auf eine Flüssigkeitsansammlung hindeuten.",
-                  fourth:
-                    "Wir haben einen dumpfen Ton über der Leber festgestellt, was auf eine Vergrößerung oder Flüssigkeitsansammlung hinweisen könnte.",
-                },
-                {
-                  first: "Indikationen",
-                  second:
-                    "Führen Sie aus, dass die Perkussion indiziert ist bei Verdacht auf Lungenpathologien (z. B. Pneumothorax, Pleuraerguss) oder zur Beurteilung von Abdominalerkrankungen (z. B. Aszites).",
-                  third:
-                    "Die Perkussion ist indiziert bei Patienten mit Atemnot, bei denen ein Pneumothorax oder ein Pleuraerguss vermutet wird.",
-                  fourth:
-                    "Bei Patienten mit vergrößertem Bauchumfang und Verdacht auf Aszites ist die Perkussion eine geeignete Methode.",
-                },
-                {
-                  first: "Kontraindikationen",
-                  second:
-                    "Erklären Sie, dass es nur wenige Kontraindikationen gibt, wie z. B. bei starken Schmerzen im untersuchten Bereich oder schweren Hautinfektionen.",
-                  third:
-                    "Bei Patienten mit akuten Thoraxschmerzen sollten wir vorsichtig sein, da die Perkussion Schmerzen verstärken könnte.",
-                  fourth:
-                    "Patienten mit Hautinfektionen im Abdominalbereich sind möglicherweise keine guten Kandidaten für die Perkussion.",
-                },
-                {
-                  first: "Differenzialdiagnosen",
-                  second:
-                    "Diskutieren Sie, welche Differenzialdiagnosen anhand der Perkussion in Betracht gezogen werden können, wie z. B. Pneumothorax vs. Pleuraerguss oder Aszites vs. Abdominaltumor.",
-                  third:
-                    "Bei einem dumpfen Ton in der rechten Brusthälfte denken wir an einen Pleuraerguss. Ein hohler Ton würde eher für einen Pneumothorax sprechen.",
-                  fourth:
-                    "Ein dumpfer Ton im Abdomen könnte auf Aszites hindeuten, aber wir müssen auch einen Tumor in Betracht ziehen.",
-                },
-                {
-                  first: "Behandlungspläne",
-                  second:
-                    "Besprechen Sie, dass die Perkussion oft der erste Schritt in der diagnostischen Kette ist und je nach Befund weitere Untersuchungen wie Röntgen oder Ultraschall geplant werden, um die Diagnose zu verifizieren.",
-                  third:
-                    "Nach der Perkussion plane ich ein Thorax-Röntgen, um den Verdacht auf Pleuraerguss zu bestätigen und die geeignete Therapie einzuleiten.",
-                  fourth:
-                    "Bei Verdacht auf Aszites werden wir nach der Perkussion eine Sonographie durchführen und gegebenenfalls eine Punktion in Erwägung ziehen.",
-                },
-                {
-                  first: "Interprofessionelle Zusammenarbeit",
-                  second:
-                    "Betonen Sie die Zusammenarbeit mit Radiologen, die weiterführende Bildgebungstechniken (Röntgen, CT) anwenden, um die Perkussionsergebnisse zu bestätigen.",
-                  third:
-                    "Für die weitere Diagnostik kooperieren wir mit den Radiologen, die eine Thoraxaufnahme machen, um unsere Perkussionsergebnisse zu bestätigen.",
-                  fourth:
-                    "Die Zusammenarbeit mit den Pflegekräften ist entscheidend, da sie den Patienten auf die Untersuchung vorbereiten und ihn bei der Durchführung unterstützen.",
-                },
-                {
-                  first: "Qualitätsmanagement",
-                  second:
-                    "Erwähnen Sie, dass zur Sicherstellung der Qualität der Untersuchung die Perkussion standardisiert und korrekt durchgeführt werden muss.",
-                  third:
-                    "Regelmäßige Schulungen zur Perkussion sind wichtig, um sicherzustellen, dass die Technik richtig angewendet wird und die Ergebnisse korrekt interpretiert werden.",
-                  fourth:
-                    "Im Rahmen des Qualitätsmanagements sollten wir sicherstellen, dass die Perkussion standardisiert durchgeführt wird und die Dokumentation einheitlich erfolgt.",
-                },
-                {
-                  first: "Dokumentation und Weiterverfolgung",
-                  second:
-                    "Beschreiben Sie, dass die Ergebnisse der Perkussion präzise dokumentiert werden sollten, damit sie in die weiterführenden diagnostischen und therapeutischen Entscheidungen einfließen können.",
-                  third:
-                    "Die Befunde der Perkussion müssen in der Patientenakte festgehalten werden, damit wir im nächsten Schritt die geeigneten Untersuchungen und Behandlungen planen können.",
-                  fourth:
-                    "Nach der Perkussion dokumentieren wir die Ergebnisse und planen je nach Befund die weiteren Schritte, wie z. B. eine Bildgebung oder eine invasive Diagnostik.",
-                },
-            
+          {
+            first: "Was ist eigentlich die angegebene Untersuchung",
+            second:
+              "Erläutern Sie, dass die Perkussion eine klinische Untersuchungstechnik ist, bei der durch Abklopfen der Körperoberfläche Resonanzen erzeugt werden, die Rückschlüsse auf die darunterliegenden Gewebe zulassen.",
+            third:
+              "Die Perkussion ist eine Methode, bei der durch Klopfen auf den Brustkorb der Zustand der Lunge beurteilt wird.",
+            fourth:
+              "Bei der Perkussion klopfen wir auf den Bauch, um festzustellen, ob Flüssigkeit vorhanden ist.",
+          },
+          {
+            first: "Was können wir damit untersuchen",
+            second:
+              "Erklären Sie, dass man mit der Perkussion vor allem luft- oder flüssigkeitsgefüllte Organe wie die Lunge oder den Bauchraum untersuchen kann, um pathologische Veränderungen wie Pleuraergüsse, Pneumothorax oder vergrößerte Organe zu identifizieren.",
+            third:
+              "Mit der Perkussion prüfen wir, ob es im Brustkorb Anzeichen für Luft oder Flüssigkeitsansammlungen gibt, die auf ein Pleuraerguss oder Pneumothorax hinweisen könnten.",
+            fourth:
+              "Wir können mit der Perkussion beurteilen, ob sich Aszites oder andere Flüssigkeitsansammlungen im Bauchraum befinden.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Besprechen Sie die möglichen Untersuchungsergebnisse, wie hohle Töne, die auf normale Luftansammlungen in der Lunge hinweisen, oder dumpfe Töne, die auf Flüssigkeit (z. B. Pleuraerguss) oder solide Massen (z. B. Tumor) hindeuten.",
+            third:
+              "Der hohle Klang im rechten Lungenfeld deutet auf ein Pneumothorax hin. Ein dumpfer Klang würde auf eine Flüssigkeitsansammlung hindeuten.",
+            fourth:
+              "Wir haben einen dumpfen Ton über der Leber festgestellt, was auf eine Vergrößerung oder Flüssigkeitsansammlung hinweisen könnte.",
+          },
+          {
+            first: "Indikationen",
+            second:
+              "Führen Sie aus, dass die Perkussion indiziert ist bei Verdacht auf Lungenpathologien (z. B. Pneumothorax, Pleuraerguss) oder zur Beurteilung von Abdominalerkrankungen (z. B. Aszites).",
+            third:
+              "Die Perkussion ist indiziert bei Patienten mit Atemnot, bei denen ein Pneumothorax oder ein Pleuraerguss vermutet wird.",
+            fourth:
+              "Bei Patienten mit vergrößertem Bauchumfang und Verdacht auf Aszites ist die Perkussion eine geeignete Methode.",
+          },
+          {
+            first: "Kontraindikationen",
+            second:
+              "Erklären Sie, dass es nur wenige Kontraindikationen gibt, wie z. B. bei starken Schmerzen im untersuchten Bereich oder schweren Hautinfektionen.",
+            third:
+              "Bei Patienten mit akuten Thoraxschmerzen sollten wir vorsichtig sein, da die Perkussion Schmerzen verstärken könnte.",
+            fourth:
+              "Patienten mit Hautinfektionen im Abdominalbereich sind möglicherweise keine guten Kandidaten für die Perkussion.",
+          },
+          {
+            first: "Differenzialdiagnosen",
+            second:
+              "Diskutieren Sie, welche Differenzialdiagnosen anhand der Perkussion in Betracht gezogen werden können, wie z. B. Pneumothorax vs. Pleuraerguss oder Aszites vs. Abdominaltumor.",
+            third:
+              "Bei einem dumpfen Ton in der rechten Brusthälfte denken wir an einen Pleuraerguss. Ein hohler Ton würde eher für einen Pneumothorax sprechen.",
+            fourth:
+              "Ein dumpfer Ton im Abdomen könnte auf Aszites hindeuten, aber wir müssen auch einen Tumor in Betracht ziehen.",
+          },
+          {
+            first: "Behandlungspläne",
+            second:
+              "Besprechen Sie, dass die Perkussion oft der erste Schritt in der diagnostischen Kette ist und je nach Befund weitere Untersuchungen wie Röntgen oder Ultraschall geplant werden, um die Diagnose zu verifizieren.",
+            third:
+              "Nach der Perkussion plane ich ein Thorax-Röntgen, um den Verdacht auf Pleuraerguss zu bestätigen und die geeignete Therapie einzuleiten.",
+            fourth:
+              "Bei Verdacht auf Aszites werden wir nach der Perkussion eine Sonographie durchführen und gegebenenfalls eine Punktion in Erwägung ziehen.",
+          },
+          {
+            first: "Interprofessionelle Zusammenarbeit",
+            second:
+              "Betonen Sie die Zusammenarbeit mit Radiologen, die weiterführende Bildgebungstechniken (Röntgen, CT) anwenden, um die Perkussionsergebnisse zu bestätigen.",
+            third:
+              "Für die weitere Diagnostik kooperieren wir mit den Radiologen, die eine Thoraxaufnahme machen, um unsere Perkussionsergebnisse zu bestätigen.",
+            fourth:
+              "Die Zusammenarbeit mit den Pflegekräften ist entscheidend, da sie den Patienten auf die Untersuchung vorbereiten und ihn bei der Durchführung unterstützen.",
+          },
+          {
+            first: "Qualitätsmanagement",
+            second:
+              "Erwähnen Sie, dass zur Sicherstellung der Qualität der Untersuchung die Perkussion standardisiert und korrekt durchgeführt werden muss.",
+            third:
+              "Regelmäßige Schulungen zur Perkussion sind wichtig, um sicherzustellen, dass die Technik richtig angewendet wird und die Ergebnisse korrekt interpretiert werden.",
+            fourth:
+              "Im Rahmen des Qualitätsmanagements sollten wir sicherstellen, dass die Perkussion standardisiert durchgeführt wird und die Dokumentation einheitlich erfolgt.",
+          },
+          {
+            first: "Dokumentation und Weiterverfolgung",
+            second:
+              "Beschreiben Sie, dass die Ergebnisse der Perkussion präzise dokumentiert werden sollten, damit sie in die weiterführenden diagnostischen und therapeutischen Entscheidungen einfließen können.",
+            third:
+              "Die Befunde der Perkussion müssen in der Patientenakte festgehalten werden, damit wir im nächsten Schritt die geeigneten Untersuchungen und Behandlungen planen können.",
+            fourth:
+              "Nach der Perkussion dokumentieren wir die Ergebnisse und planen je nach Befund die weiteren Schritte, wie z. B. eine Bildgebung oder eine invasive Diagnostik.",
+          },
         ],
       },
       // 4tab 370
@@ -31333,71 +31218,68 @@ export const parentTabs = [
           },
         ],
         tableRows: [
-          
-              {
-                first: "Einführung in den klinischen Fall",
-                second:
-                  "40-jähriger Patient ohne Beschwerden, Routineuntersuchung aufgrund eines allgemeinen Gesundheitschecks.",
-                third:
-                  "35-jähriger Patient klagt über plötzliche Atemnot und einseitige Brustschmerzen nach einem Trauma.",
-                fourth:
-                  "60-jährige Patientin berichtet über zunehmende Atemnot und Husten mit leichtem Fieber in den letzten Wochen.",
-              },
-              {
-                first: "Ergebnisse der Untersuchung",
-                second:
-                  "Normale, resonante Klänge beidseits bei der Perkussion. Atemgeräusche gleichmäßig und unauffällig.",
-                third:
-                  "Hyperresonanz bei der Perkussion auf der rechten Brustseite, verminderte Atemgeräusche.",
-                fourth:
-                  "Dumpfer Perkussionston auf der linken Seite des Brustkorbs, verminderte Atemgeräusche auf derselben Seite.",
-              },
-              {
-                first: "Interpretation der Ergebnisse",
-                second:
-                  "Keine pathologischen Befunde, die Perkussionsergebnisse sind normal, kein Hinweis auf Pleura- oder Lungenpathologie.",
-                third:
-                  "Der Befund deutet auf einen Pneumothorax hin. Die Hyperresonanz ist typisch für eine Luftansammlung im Pleuraspalt.",
-                fourth:
-                  "Der dumpfe Ton ist charakteristisch für Flüssigkeitsansammlungen im Pleuraspalt und deutet auf einen Pleuraerguss hin.",
-              },
-              {
-                first: "Integration in die Patientenversorgung",
-                second:
-                  "Befund dient der Beruhigung des Patienten, keine weiteren diagnostischen Maßnahmen erforderlich.",
-                third:
-                  "Sofortige Planung einer Thoraxdrainage zur Entlastung des Pneumothorax. Notfallmäßige Versorgung notwendig.",
-                fourth:
-                  "Weitere Bildgebung und Planung einer Pleuraergussdrainage oder Thorakoskopie zur Ursachenklärung und Therapie.",
-              },
-              {
-                first: "Diagnose",
-                second:
-                  "Bestätigung des gesunden Zustands der Lungen und der Pleura, kein Hinweis auf Pathologie.",
-                third:
-                  "Diagnose eines Pneumothorax basierend auf Perkussionsergebnissen und klinischer Symptomatik.",
-                fourth:
-                  "Diagnose eines Pleuraergusses basierend auf dumpfer Perkussion und klinischen Symptomen.",
-              },
-              {
-                first: "Visuelle Hilfsmittel",
-                second:
-                  "Röntgenaufnahme der Lunge zeigt keine Auffälligkeiten.",
-                third:
-                  "Röntgenaufnahme zeigt eine kollabierte Lunge mit Luftansammlung im Pleuraspalt.",
-                fourth:
-                  "Sonographie des Thorax zeigt eine Flüssigkeitsansammlung im linken Pleuraspalt.",
-              },
-              {
-                first: "Fallabschluss",
-                second:
-                  "Wir empfehlen, keine weiteren Maßnahmen zu ergreifen, da keine Auffälligkeiten gefunden wurden. Es ist zu empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um den allgemeinen Gesundheitszustand zu überwachen.",
-                third:
-                  "Wir empfehlen, sofort eine Thoraxdrainage zu legen, um die Luftansammlung zu entlasten und die kollabierte Lunge wieder auszudehnen. Es ist zu empfehlen, die Notfallversorgung schnellstmöglich durchzuführen.",
-                fourth:
-                  "Wir empfehlen, eine Thoraxsonographie durchzuführen und eine Pleuraergussdrainage einzuleiten. Es ist zu empfehlen, die Ursache des Ergusses weiter zu klären und geeignete therapeutische Maßnahmen zu ergreifen.",
-              },
-          
+          {
+            first: "Einführung in den klinischen Fall",
+            second:
+              "40-jähriger Patient ohne Beschwerden, Routineuntersuchung aufgrund eines allgemeinen Gesundheitschecks.",
+            third:
+              "35-jähriger Patient klagt über plötzliche Atemnot und einseitige Brustschmerzen nach einem Trauma.",
+            fourth:
+              "60-jährige Patientin berichtet über zunehmende Atemnot und Husten mit leichtem Fieber in den letzten Wochen.",
+          },
+          {
+            first: "Ergebnisse der Untersuchung",
+            second:
+              "Normale, resonante Klänge beidseits bei der Perkussion. Atemgeräusche gleichmäßig und unauffällig.",
+            third:
+              "Hyperresonanz bei der Perkussion auf der rechten Brustseite, verminderte Atemgeräusche.",
+            fourth:
+              "Dumpfer Perkussionston auf der linken Seite des Brustkorbs, verminderte Atemgeräusche auf derselben Seite.",
+          },
+          {
+            first: "Interpretation der Ergebnisse",
+            second:
+              "Keine pathologischen Befunde, die Perkussionsergebnisse sind normal, kein Hinweis auf Pleura- oder Lungenpathologie.",
+            third:
+              "Der Befund deutet auf einen Pneumothorax hin. Die Hyperresonanz ist typisch für eine Luftansammlung im Pleuraspalt.",
+            fourth:
+              "Der dumpfe Ton ist charakteristisch für Flüssigkeitsansammlungen im Pleuraspalt und deutet auf einen Pleuraerguss hin.",
+          },
+          {
+            first: "Integration in die Patientenversorgung",
+            second:
+              "Befund dient der Beruhigung des Patienten, keine weiteren diagnostischen Maßnahmen erforderlich.",
+            third:
+              "Sofortige Planung einer Thoraxdrainage zur Entlastung des Pneumothorax. Notfallmäßige Versorgung notwendig.",
+            fourth:
+              "Weitere Bildgebung und Planung einer Pleuraergussdrainage oder Thorakoskopie zur Ursachenklärung und Therapie.",
+          },
+          {
+            first: "Diagnose",
+            second:
+              "Bestätigung des gesunden Zustands der Lungen und der Pleura, kein Hinweis auf Pathologie.",
+            third:
+              "Diagnose eines Pneumothorax basierend auf Perkussionsergebnissen und klinischer Symptomatik.",
+            fourth:
+              "Diagnose eines Pleuraergusses basierend auf dumpfer Perkussion und klinischen Symptomen.",
+          },
+          {
+            first: "Visuelle Hilfsmittel",
+            second: "Röntgenaufnahme der Lunge zeigt keine Auffälligkeiten.",
+            third:
+              "Röntgenaufnahme zeigt eine kollabierte Lunge mit Luftansammlung im Pleuraspalt.",
+            fourth:
+              "Sonographie des Thorax zeigt eine Flüssigkeitsansammlung im linken Pleuraspalt.",
+          },
+          {
+            first: "Fallabschluss",
+            second:
+              "Wir empfehlen, keine weiteren Maßnahmen zu ergreifen, da keine Auffälligkeiten gefunden wurden. Es ist zu empfehlen, regelmäßige Kontrolluntersuchungen durchzuführen, um den allgemeinen Gesundheitszustand zu überwachen.",
+            third:
+              "Wir empfehlen, sofort eine Thoraxdrainage zu legen, um die Luftansammlung zu entlasten und die kollabierte Lunge wieder auszudehnen. Es ist zu empfehlen, die Notfallversorgung schnellstmöglich durchzuführen.",
+            fourth:
+              "Wir empfehlen, eine Thoraxsonographie durchzuführen und eine Pleuraergussdrainage einzuleiten. Es ist zu empfehlen, die Ursache des Ergusses weiter zu klären und geeignete therapeutische Maßnahmen zu ergreifen.",
+          },
         ],
       },
       // 5tab 371
