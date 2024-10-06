@@ -4,6 +4,7 @@ import scc from "./subpages/scc";
 import kolorektaleskarzinom from "./subpages/kolorektaleskarzinom";
 import uicc from "./subpages/uicc";
 import tnm from "./subpages/tnm";
+import aorta from "./subpages/anatomie/aorta";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -11,7 +12,8 @@ const all_pages_data = [
    scc,
    kolorektaleskarzinom,
    uicc,
-   tnm
+   tnm,
+   aorta
 ];
 
 export default all_pages_data;

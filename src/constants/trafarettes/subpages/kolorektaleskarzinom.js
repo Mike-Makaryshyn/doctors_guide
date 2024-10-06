@@ -66,7 +66,7 @@ export default {
           id: 6,
           title: "4. Klassifikation",
           textWithFormatting: `<div>
-            <h2><a href="src/constants/trafarettes/subpages/tnm.js">TNM-Klassifikation</a> des kolorektalen Karzinoms (Stand 2017)</h2>
+            <h2><a href="/trafarette/tnm">TNM-Klassifikation</a> des kolorektalen Karzinoms (Stand 2017)</h2>
             <p>Die TNM-Klassifikation ist ein international anerkanntes System zur Beschreibung des Tumorstadiums bei verschiedenen Krebsarten, darunter auch das kolorektale Karzinom. Sie beschreibt die Ausdehnung des Tumors (T), den Befall der Lymphknoten (N) sowie das Vorhandensein von Fernmetastasen (M). Bei kolorektalen Karzinomen wird die TNM-Klassifikation wie folgt angewendet:</p>
             <table>
               <tr>
