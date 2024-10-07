@@ -1,3 +1,4 @@
+import test from '../../../../assets/Aorta.png'
 export default {
   path: "aorta",
   // http://localhost:5173/trafarette/aorta
@@ -19,7 +20,7 @@ export default {
           title: "2. Anatomie",
           textWithFormatting: `<div>
             <p>Die Aorta entspringt als zentrales Gefäß des Körperkreislaufs aus dem linken Ventrikel des Herzens und ist durch die <strong>Aortenklappe</strong> vom Herzen getrennt. Sie verläuft zunächst bogenförmig über die Luftröhre (<strong>Trachea</strong>) und wendet sich nach hinten (<strong>dorsal</strong>) und unten (<strong>kaudal</strong>).</p>
-            
+            <img src="../../assets/Aorta.png" alt="Aorta Diagram">
             <p><strong>Im Brustbereich (Thorax) gibt die Aorta mehrere wichtige Gefäßäste ab:</strong></p>
             <ul>
               <li><strong>• Koronararterien</strong>, die das Herz selbst versorgen</li>
