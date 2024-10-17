@@ -39,7 +39,7 @@ export default {
             <h4>3.1. Vasokonstriktion</h4>
             <p>Im ersten Schritt der primären Hämostase verengen sich die verletzten Gefäße. Prostaglandine und andere Stoffe sorgen für eine Reduktion des Blutflusses in der betroffenen Region, was die Grundlage für die nachfolgenden Prozesse schafft.</p>
             <h4>3.2. Thrombozytenadhäsion</h4>
-            <img src="${img2}" alt="kaskade">
+            <img src="${img2}" alt="kaskade" style="max-width: 100%; height: auto;">
             <p>Die Thrombozyten haften an Komponenten des verletzten Endothels, wie Kollagen und Fibronektin. Diese Adhäsion wird über Glykoprotein Ib (GPIb) vermittelt, das als wichtigster Rezeptor für den von-Willebrand-Faktor (vWF) fungiert, der wiederum eine Brücke zwischen Thrombozyten und dem subendothelialen Kollagen bildet.</p>
             <h4>3.3. Thrombozytenaggregation</h4>
           <img src="${img3}" alt="kaskade" style="max-width: 100%; height: auto;">
