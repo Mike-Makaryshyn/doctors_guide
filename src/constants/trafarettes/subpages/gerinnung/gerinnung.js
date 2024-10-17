@@ -1,157 +1,90 @@
-import img2 from '../../../../assets/Aorta.png';
-import img1 from '../../../../assets/Aortapräzies.png';
+import img1 from '../../../../assets/Blutgerinnung.png';
+import img2 from '../../../../assets/thrombozytenadhäsion.png';
+import img3 from '../../../../assets/thrombozytenaggregation.png';
+import img4 from '../../../../assets/anschlussreaktionen.png';
 export default {
-  path: "aorta",
-  // http://localhost:5173/trafarette/aorta
+  path: "gerinnung",
+  // http://localhost:5173/trafarette/gerinnung
   content: [
     {
       id: 1,
-      title: "Aorta",
+      title: "Gerinnung",
       childTabs: [
         //  Start of child tab 1
         {
           id: 1,
           title: "1. Definition",
           textWithFormatting: `<div>
-          <img src="${img2}" alt="Aorta Diagram">
-            <p><strong>Die Aorta</strong> ist die zentrale Arterie des menschlichen und tierischen Organismus. Sie transportiert das sauerstoffreiche Blut vom Herzen in die Körperperipherie. Seit Februar 2024 wird die Aorta offiziell als eigenständiges Organ anerkannt, basierend auf der Entscheidung der <strong>European Association for Cardio-Thoracic Surgery (EACTS)</strong> und der <strong>Society of Thoracic Surgeons (STS)</strong>.</p>
+            <p><strong>Als Hämostase</strong> bezeichnet man die Summe der physiologischen Prozesse, die den Stillstand einer Blutung herbeiführen.</p>
+            <p>Im erweiterten Sinn wird auch die ärztliche Blutstillung durch Gefäßnähte, Kompressionsverbände oder Hämostyptika als <strong>"Hämostase"</strong> bezeichnet.</p>
           </div>`,
         },
         {
           id: 2,
-          title: "2. Anatomie",
+          title: "2. Überblick",
           textWithFormatting: `<div>
-            <p>Die Aorta entspringt als zentrales Gefäß des Körperkreislaufs aus dem linken Ventrikel des Herzens und ist durch die <strong>Aortenklappe</strong> vom Herzen getrennt. Sie verläuft zunächst bogenförmig über die Luftröhre (<strong>Trachea</strong>) und wendet sich nach hinten (<strong>dorsal</strong>) und unten (<strong>kaudal</strong>).</p>
-            <img src="${img1}" alt="Aorta Diagram">
-            <p><strong>Im Brustbereich (Thorax) gibt die Aorta mehrere wichtige Gefäßäste ab:</strong></p>
+            <p>Die Hämostase ist eine lebenswichtige Funktion. Durch sie ist der Körper in der Lage, Schäden in Gefäßen abzudichten und somit einen Blutverlust zu reduzieren bzw. zu verhindern. Nach Verletzung kleinerer Gefäße wie Kapillaren kommt eine Blutung in der Regel bereits nach kurzer Zeit zum Stillstand. Die Hämostase kommt durch das Ineinandergreifen von drei Schritten zustande:</p>
             <ul>
-              <li><strong>• Koronararterien</strong>, die das Herz selbst versorgen</li>
-              <li><strong>• Truncus brachiocephalicus</strong></li>
-              <li><strong>• Arteria carotis communis sinistra</strong></li>
-              <li><strong>• Arteria subclavia sinistra</strong></li>
-              <li><strong>• Interkostalarterien</strong> sowie kleinere Äste zur Versorgung der Rippenmuskulatur</li>
+              <li><strong>Vasokonstriktion:</strong> Die Gefäße verengen sich durch die Wirkung von Substanzen wie Serotonin und Thromboxan, wodurch die Blutzirkulation verringert wird.</li>
+              <li><strong>Thrombozytenadhäsion und -aktivierung:</strong> Verlangsamter Blutfluss fördert die Anlagerung und Aktivierung von Thrombozyten.</li>
+              <li><strong>Fibrinbildung:</strong> Schließlich bildet sich durch die plasmatische Gerinnung ein Netzwerk aus Fibrin und Thrombozyten, das den verletzten Gefäßabschnitt verschließt.</li>
             </ul>
-            
-            <p><strong>Nachdem sie das Zwerchfell durch den Hiatus aortae passiert, gibt die Aorta folgende wichtige Gefäße ab:</strong></p>
-            <ul>
-              <li><strong>• Gefäße zum Zwerchfell</strong></li>
-              <li><strong>• Arteriae renales</strong> zu den Nieren</li>
-              <li><strong>• Arterien zu den Nebennieren, Hoden bzw. Ovarien</strong></li>
-              <li><strong>• Drei unpaare Bauchgefäße</strong> zur Versorgung der Bauchorgane</li>
-            </ul>
-            
-            <p><strong>Schließlich teilt sich die Aorta in die beiden Arteriae iliacae communes</strong>, die die untere Körperhälfte versorgen.</p>
           </div>`,
         },
         {
           id: 3,
-          title: "2. Dimensionen",
+          title: "3. Primäre Hämostase",
           textWithFormatting: `<div>
-            <p><strong>Die Aorta</strong> ist die größte Arterie des menschlichen Körpers. Sie hat beim Erwachsenen einen Durchmesser von etwa <strong>2,5 bis 3,5 cm</strong> und eine Länge von <strong>30 bis 40 cm</strong>. Ihre Form ähnelt der eines Spazierstocks.</p>
-        
-            <p><strong>Grobeinteilung der Aorta:</strong></p>
-            <ul>
-              <li><strong>• Aorta ascendens:</strong> Der aufsteigende Teil, direkt nach dem Herzen, aus dem die Koronararterien (im Bereich des Bulbus aortae) abzweigen.</li>
-              <li><strong>• Arcus aortae:</strong> Der Aortenbogen.</li>
-              <li><strong>• Aorta descendens:</strong> Der absteigende Teil, der in Richtung Becken verläuft.</li>
-              <li><strong>• Pars thoracica:</strong> Der Abschnitt der Aorta bis zum Durchtritt durch das Zwerchfell.</li>
-              <li><strong>• Pars abdominalis:</strong> Die Bauchaorta, unterteilt in:
-                <ul>
-                  <li>• suprarenal (oberhalb der Nierenarterien)</li>
-                  <li>• infrarenal (unterhalb der Nierenarterien)</li>
-                </ul>
-              </li>
-              <li><strong>• Bifurcatio aortae:</strong> Die Aufteilung der Aorta in die beiden Beckenarterien (Arteriae iliacae communes).</li>
-              <li><strong>• Isthmus aortae:</strong> Eine physiologische Engstelle, die sich distal des Abgangs der linken Arteria subclavia befindet und den Übergang vom Aortenbogen zur Pars thoracica markiert. Hier liegt das Ligamentum arteriosum.</li>
-            </ul>
-        
-            <p><strong>Übersicht der Abgänge der Aorta:</strong></p>
-            <ul>
-              <li><strong>• Koronararterien:</strong>
-                <ul>
-                  <li>• Arteria coronaria sinistra</li>
-                  <li>• Arteria coronaria dextra</li>
-                </ul>
-              </li>
-              <li><strong>• Äste des Aortenbogens:</strong>
-                <ul>
-                  <li>• Truncus brachiocephalicus</li>
-                  <li>• Arteria carotis communis sinistra</li>
-                  <li>• Arteria subclavia sinistra</li>
-                </ul>
-              </li>
-              <li><strong>• Äste der Pars thoracica:</strong>
-                <ul>
-                  <li>• Arteriae intercostales posteriores (Interkostalarterien)</li>
-                  <li>• Arteria subcostalis (paarig)</li>
-                  <li>• Arteriae phrenicae superiores</li>
-                  <li>• Rami bronchiales, oesophageales, pericardiaci, mediastinales</li>
-                </ul>
-              </li>
-              <li><strong>• Äste der Pars abdominalis:</strong>
-                <ul>
-                  <li>• Arteria phrenica inferior (paarig)</li>
-                  <li>• Truncus coeliacus</li>
-                  <li>• Arteria mesenterica superior</li>
-                  <li>• Arteria suprarenalis media (paarig)</li>
-                  <li>• Arteria renalis (paarig)</li>
-                  <li>• Arteria testicularis bzw. Arteria ovarica (paarig)</li>
-                  <li>• Arteriae lumbales (vier Paare zur Rumpfwand)</li>
-                  <li>• Arteria mesenterica inferior</li>
-                  <li>• Arteria iliaca communis dextra et sinistra</li>
-                  <li>• Arteria sacralis mediana</li>
-                </ul>
-              </li>
-            </ul>
+            <p>Die primäre Hämostase stoppt Blutungen innerhalb von 1 bis 3 Minuten. Dies lässt sich klinisch durch die Bestimmung der Blutungszeit überprüfen.</p>
+            <h4>3.1. Vasokonstriktion</h4>
+            <p>Im ersten Schritt der primären Hämostase verengen sich die verletzten Gefäße. Prostaglandine und andere Stoffe sorgen für eine Reduktion des Blutflusses in der betroffenen Region, was die Grundlage für die nachfolgenden Prozesse schafft.</p>
+            <h4>3.2. Thrombozytenadhäsion</h4>
+            <img src="${img2}" alt="kaskade">
+            <p>Die Thrombozyten haften an Komponenten des verletzten Endothels, wie Kollagen und Fibronektin. Diese Adhäsion wird über Glykoprotein Ib (GPIb) vermittelt, das als wichtigster Rezeptor für den von-Willebrand-Faktor (vWF) fungiert, der wiederum eine Brücke zwischen Thrombozyten und dem subendothelialen Kollagen bildet.</p>
+            <h4>3.3. Thrombozytenaggregation</h4>
+          <img src="${img3}" alt="kaskade" style="max-width: 100%; height: auto;">
+            <p>Nach Aktivierung der Thrombozyten exprimiert sich das Glykoprotein IIb/IIIa, das vWF, Fibronektin und Fibrinogen bindet und so die Thrombozytenaggregation fördert. Die Thrombozyten verändern dabei ihre Form und katalysieren die weitere Anlagerung von Thrombozyten und die Aktivierung von Faktor X. Dieser Prozess führt schließlich zur irreversiblen Aggregation und Bildung eines Abscheidungsthrombus, der durch Fibrinogen vernetzt wird.</p>
           </div>`,
         },
         {
           id: 4,
-          title: "3. Histologie",
+          title: "4. Sekundäre Hämostase",
           textWithFormatting: `<div>
-            <p>Die Aorta weist den klassischen dreischichtigen Aufbau großer Arterien auf:</p>
+            <p>Die sekundäre Hämostase beschreibt die eigentliche Blutgerinnung, die etwa 6 bis 10 Minuten dauert. Sie führt zur Bildung eines festen Fibrinnetzes, in das Thrombozyten und Erythrozyten eingebettet werden. Dieses Netzwerk stellt sich makroskopisch als Thrombus dar. Die sekundäre Hämostase kann nach Morawitz in drei Phasen unterteilt werden:</p>
             <ul>
-              <li><strong>• Tunica intima:</strong> Besteht aus Endothel, lockerem Bindegewebe und vereinzelt glatten Muskelzellen.</li>
-              <li><strong>• Tunica media:</strong> Die dickste Schicht, geprägt von elastischen Fasern und Kollagen Typ III, zwischen denen Myofibroblasten und glatte Muskelzellen liegen. Diese Fasern sind konzentrisch in Lamellen angeordnet, was der Aorta die Fähigkeit zur Dehnung bei raschen Volumenschwankungen verleiht (Windkesselfunktion).</li>
-              <li><strong>• Tunica externa (Adventitia):</strong> Die äußere Begrenzung der Aorta. Aufgrund der großen Wanddicke benötigt die Aorta die Vasa vasorum, welche die Tunica media und externa mit Nährstoffen versorgen.</li>
+              <li><strong>Aktivierungsphase</strong></li>
+              <li><strong>Koagulationsphase</strong></li>
+              <li><strong>Retraktionsphase</strong></li>
             </ul>
+            <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
+            <p>Es gibt zwei Gerinnungskaskaden: die <strong>intrinsische</strong> und die <strong>extrinsische</strong> Kaskade. Beide Systeme arbeiten über die Aktivierung von Gerinnungsfaktoren in einem stufenweisen Ablauf und führen letztlich zur Thrombinbildung, was die Fibrinpolymerisation anregt.</p>
+            <h4>4.1. Intrinsisches System</h4>
+            <p>Das intrinsische System bezieht sich auf die Reaktionen an der Oberfläche aktivierter Thrombozyten und fördert die Fibrinbildung. Dieser Weg der Blutgerinnung kann auch ohne Verletzung der Gefäßwand, wie bei liegenden zentralen Venenkathetern oder künstlichen Herzklappen, ausgelöst werden.</p>
+            <p>Der <strong>Hageman-Faktor</strong> (Faktor XII) aktiviert das intrinsische System, indem er an negativ geladene Oberflächen bindet. Durch die Aktivierung von Faktor XI durch Faktor XIIa und Thrombin wird schließlich Faktor IX aktiviert, welcher mit Faktor VIIIa den sogenannten <strong>intrinsischen Tenasekomplex</strong> bildet. Dieser Komplex aktiviert Faktor X, wodurch die gemeinsame Endstrecke der Gerinnungskaskade beginnt.</p>
+            <h4>4.2. Extrinsisches System</h4>
+            <p>Das extrinsische System wird durch geschädigtes Gewebe aktiviert. Der <strong>Tissue Factor</strong> (Gewebsthromboplastin) reagiert mit dem im Blut zirkulierenden Faktor VII, der zu Faktor VIIa aktiviert wird. In Kombination mit Kalzium aktiviert Faktor VIIa den Faktor X, was zur Thrombinbildung führt und somit das extrinsische System mit dem intrinsischen System in der gemeinsamen Endstrecke verbindet.</p>
+            <h4>4.3. Gemeinsame Endstrecke der plasmatischen Gerinnung</h4>
+            <p>Ab der Aktivierung von <strong>Faktor Xa</strong> verlaufen die intrinsische und extrinsische Kaskade gemeinsam. Faktor Xa bildet mit <strong>Faktor Va</strong> den <strong>Prothrombinase-Komplex</strong>, der Prothrombin zu Thrombin (Faktor IIa) spaltet. Thrombin sorgt für die Umwandlung von Fibrinogen zu Fibrinmonomeren. Durch die Aktivierung von Faktor XIII werden diese Monomere zu Fibrinpolymeren vernetzt, die den Thrombus stabilisieren.</p>
+            <h4>4.4. Anschlussreaktionen</h4>
+            <img src="${img4}" alt="kaskade" style="max-width: 100%; height: auto;">
+            <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong>Fibrinolyse</strong>.</p>
           </div>`,
         },
         {
           id: 5,
-          title: "4. Physiologie",
-          textWithFormatting: `<div>
-            <p>Im Aortenbogen befinden sich <strong>Chemozeptoren (Glomus aorticum)</strong>, die auf Veränderungen des Sauerstoffpartialdrucks (pO2), des Kohlendioxidpartialdrucks (pCO2) sowie des pH-Wertes des Blutes reagieren. Diese Informationen werden über das vegetative Nervensystem an das ZNS weitergeleitet.</p>
-        
-            <p>Zusätzlich sind <strong>Barorezeptoren</strong> in der Aortenwand eingebettet, die den Blutdruck und dessen Schwankungen, die Blutdruckamplitude und die Herzfrequenz registrieren. Diese Daten werden ebenfalls ans ZNS weitergegeben und lösen den <strong>Barorezeptorreflex</strong> aus, der der Regulation des Blutdrucks dient.</p>
-          </div>`,
-        },
-        {
-          id: 6,
           title: "5. Klinik",
           textWithFormatting: `<div>
-            <p>Erkrankungen der Aorta umfassen unter anderem:</p>
+            <p>Störungen der Hämostase können entweder zu übermäßiger oder unzureichender Blutstillung führen. Ursachen können in Defekten der Thrombozyten, der plasmatischen Gerinnung oder der Fibrinolyse liegen.</p>
             <ul>
-              <li><strong>• Arteriosklerose</strong></li>
-              <li><strong>• Aortendissektion</strong></li>
-              <li><strong>• Aortenisthmusstenose</strong></li>
-              <li><strong>• Aortenaneurysma</strong></li>
-              <li><strong>• Aortenverschluss</strong></li>
-              <li><strong>• Aortenbogensyndrom</strong></li>
+              <li><strong>Hämorrhagische Diathese</strong> beschreibt eine erhöhte Blutungsneigung.</li>
+              <li><strong>Thrombophilie</strong> steht für eine Neigung zur überschießenden Gerinnung.</li>
             </ul>
-        
-            <p><strong>Traumatische Verletzungen der Aorta:</strong></p>
+            <p>Zur Überprüfung der Blutgerinnung werden verschiedene Labortests eingesetzt, darunter:</p>
             <ul>
-              <li><strong>• Minimale Aortenverletzung (MAI)</strong></li>
-              <li><strong>• Intramurales Hämatom der Aorta (IMH)</strong></li>
-              <li><strong>• Aortales Pseudoaneurysma</strong></li>
-              <li><strong>• Aortenruptur</strong></li>
-            </ul>
-        
-            <p><strong>Seltene entzündliche Erkrankungen der Aorta (Aortitis) sind:</strong></p>
-            <ul>
-              <li><strong>• Mesaortitis luica</strong></li>
-              <li><strong>• Takayasu-Arteriitis</strong></li>
+              <li><strong>Prothrombinzeit</strong> (Quick-Wert)</li>
+              <li><strong>Partielle Thromboplastinzeit</strong> (PTT)</li>
+              <li><strong>Thrombinzeit</strong> (TZ)</li>
+              <li><strong>Plasmafibrinogen</strong></li>
             </ul>
           </div>`,
         },

@@ -1082,11 +1082,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Erster Pathologischer Befund (z.B. Lungentumor)",
+            visualText: "Erster Pathologischer Befund (z.B. Glioblastom)",
           },
           {
             name: "fourth",
-            visualText: "Zweiter Pathologischer Befund (z.B. Lungenembolie)",
+            visualText: "Zweiter Pathologischer Befund (z.B. Multiple Sklerose)",
           },
         ],
         tableRows: [
@@ -1334,7 +1334,7 @@ export const parentTabs = [
       {
         id: 25,
         title: "Links",
-        text: "Für eine Fachsprachenprüfung im medizinischen Bereich, speziell zum Thema Computertomographie (CT), ist ein spezifischer Wortschatz entscheidend. Hier ist eine Liste relevanter Begriffe und Konzepte, die häufig in diesem Kontext verwendet werden:",
+        text: "",
         text_list: [
           {
             bold_link: " https://flexikon.doccheck.com/de/Kernspintomographie",
@@ -1382,7 +1382,7 @@ export const parentTabs = [
       {
         id: 26,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1rgiwwYz82X1nrN1ir1ykeJ9AJcJ08EQI/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1vh4RzJri_0Et4GDNY-9fz25aqp2au3f2/view?usp=share_link",
       },
     ],
   },
@@ -2727,29 +2727,29 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://flexikon.doccheck.com/de/Röntgendiagnostik",
-            bold: "DocCheck Flexikon - Röntgen",
+            bold_link: "https://flexikon.doccheck.com/de/Sonografie",
+            bold: "DocCheck Flexikon: Sonografie",
             other:
-              "Hier findest du eine umfassende Einführung in die Grundlagen des Röntgens, seiner Geschichte und der klinischen Anwendung in der Medizin.",
+              "DocCheck bietet eine detaillierte Übersicht über die Grundlagen und Anwendungsmöglichkeiten des Ultraschalls. Themen wie die Darstellungsmethoden (B-Mode, Doppler-Sonographie) und die Unterschiede in der Echogenität verschiedener Gewebe werden verständlich erklärt. Die Seite ist kostenlos zugänglich und deckt viele relevante diagnostische Aspekte ab",
           },
           {
-            bold_link: "https://www.amboss.com/de/wissen/rontgen",
-            bold: "AMBOSS - Radiologie: Röntgendiagnostik",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/sonographie-ultraschall/",
+            bold: "Praktischer Arzt: Ultraschall (Sonographie)",
             other:
-              "AMBOSS bietet detaillierte Artikel über Röntgenuntersuchungen, einschließlich technischer Aspekte und der Bedeutung für die Diagnose. Es ist eine ausgezeichnete Quelle für medizinisches Fachwissen.",
+              "uf PraktischerArzt findest du praktische Erklärungen zu den verschiedenen Anwendungsgebieten des Ultraschalls, von der Untersuchung der Bauchorgane bis hin zur pränatalen Diagnostik. Es werden typische Einsatzgebiete und der Ablauf der Untersuchungen beschrieben, ideal für die Vorbereitung auf Prüfungen",
           },
           {
             bold_link:
-              "https://www.apotheken-umschau.de/diagnose/diagnoseverfahren/roentgenuntersuchung-blick-ins-innere-734801.html",
-            bold: "Apotheken-Umschau - Röntgenuntersuchung",
+              "https://www.netdoktor.de/diagnostik/ultraschall/",
+            bold: "Netdoktor: Ultraschall",
             other:
-              "Diese Plattform bietet eine verständliche Einführung in das Thema Röntgendiagnostik, erklärt, wie Röntgen funktioniert, und informiert über die verschiedenen Anwendungsbereiche und mögliche Risiken.",
+              "Netdoktor bietet eine leicht verständliche Einführung in den Ultraschall, einschließlich der Funktionsweise und der Vorbereitung auf die Untersuchung. Diese Quelle ist besonders nützlich für den allgemeinen Überblick und die Patientenaufklärung.",
           },
           {
-            bold_link: "https://www.praktischarzt.de/untersuchungen/roentgen/",
-            bold: "Praktischarzt",
+            bold_link: "https://www.gesundheitsinformation.de/wie-funktioniert-eine-ultraschalluntersuchung.html",
+            bold: "Gesundheitsinformation.de: Ultraschalluntersuchung",
             other:
-              "Der Artikel auf Praktischarzt bietet eine umfassende Übersicht zur Röntgenuntersuchung. Dabei wird erklärt, wie die Röntgentechnologie funktioniert, wann sie eingesetzt wird und welche Vor- und Nachteile sie hat.",
+              "Diese Seite erklärt, wie Ultraschalluntersuchungen funktionieren, welche Arten es gibt und bei welchen Beschwerden sie eingesetzt werden. Es ist eine gute Quelle für allgemeine Informationen und patientenfreundliche Erklärungen, ideal zur Vorbereitung auf Fachsprachprüfungen.",
           },
         ],
       },
@@ -3371,45 +3371,23 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold: "DocCheck Flexikon",
+            bold_link: "https://flexikon.doccheck.com/de/Positronenemissionstomographie",
+            bold: "DocCheck Flexikon: Positronenemissionstomographie",
             other:
-              "Diese Seite bietet umfassende Informationen zur Positronen-Emissions-Tomographie (PET) und PET-CT, einschließlich Funktionsprinzipien, Radionukliden und Anwendungsmöglichkeiten. URL: https://flexikon.doccheck.com/de/Positronenemissionstomographie",
+              "DocCheck erklärt die technische Funktionsweise der PET-Untersuchung, bei der radioaktive Stoffe zur Darstellung metabolischer Prozesse verwendet werden. Diese Seite beschreibt die Anwendung in der Onkologie, Kardiologie und Neurologie, die Radionuklide und die Strahlenbelastung. Ideal für ein tieferes Verständnis der PET/CT-Untersuchung.",
           },
           {
-            bold: "DocCheck Flexikon",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/pet-untersuchung/",
+            bold: "Praktischer Arzt: PET/CT Untersuchung",
             other:
-              "Informationen zu PSMA-PET/CT, einschließlich Definition, Hintergrund und Indikationen. URL: https://flexikon.doccheck.com/de/PSMA-PET/CT",
+              "Diese Seite beschreibt die Gründe, den Ablauf und die Anwendungsgebiete der PET/CT-Untersuchung. Besonders relevant für die Tumordiagnostik, erklärt der Artikel auch die Vorbereitung und die möglichen Risiken. Eine nützliche Quelle für die Vorbereitung auf medizinische Prüfungen.",
           },
           {
-            bold: "Amboss",
+            bold_link: "https://flexikon.doccheck.com/de/Emissionscomputertomographie",
+            bold: "DocCheck Flexikon: Emissionscomputertomographie",
             other:
-              "Amboss ist ein medizinisches Nachschlagewerk für Studenten und Ärzte. Es bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich PET-CT. URL: https://www.amboss.com/de",
-          },
-          {
-            bold: "PraktischArzt",
-            other:
-              "Auf dieser Seite wird der Ablauf einer PET-CT-Untersuchung sowie deren Vorbereitung und typische Anwendungsgebiete erläutert. URL: https://www.praktischarzt.de/untersuchung/pet-ct/",
-          },
-          {
-            bold: "Universitätsklinikum Freiburg",
-            other:
-              "Diese Seite bietet detaillierte Informationen zu den speziellen Aspekten und Anwendungen der PET-CT im klinischen Alltag. URL: https://ims.uniklinik-freiburg.de/de/leistungsangebot/nuklearmedizin/pet-ct.html",
-          },
-          {
-            bold: "Stärker gegen Krebs",
-            other:
-              "Diese Webseite erklärt die Vorteile und Risiken der PET-CT, insbesondere in der Krebsdiagnostik. URL: https://www.staerkergegenkrebs.de/pet-ct/",
-          },
-          {
-            bold: "Radiologie München",
-            other:
-              "Diese Seite bietet Informationen über die Durchführung von PET-CT-Untersuchungen und deren spezielle Anwendungen, wie z.B. beim Prostatakarzinom. URL: https://www.radiologie-muenchen.de/pet-ct/",
-          },
-          {
-            bold: "Helios Gesundheit",
-            other:
-              "Hier wird erklärt, wie PET-CT-Untersuchungen zur Diagnose und Therapiekontrolle verwendet werden und welche Vorbereitungen dafür notwendig sind. URL: https://www.helios-gesundheit.de/",
-          },
+              "Hier wird die Kombination der PET mit der CT in der Emissionscomputertomographie erklärt. Es beschreibt, wie Szintigraphiekameras die Radioaktivitätsverteilungen im Körper erfassen, und geht auf die Kombination von PET und SPECT ein.",
+          }
         ],
       },
       // 6tab 50
@@ -4050,34 +4028,16 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold: "NetDoktor: ",
+            bold_link: "https://flexikon.doccheck.com/de/Single-Photon-Emissions-Computertomografie",
+            bold: "DocCheck Flexikon: Single-Photon-Emissions-Computertomografie",
             other:
-              "Beschreibung der SPECT, ihrer Anwendung und der Durchführung der Untersuchung. [NetDoktor SPECT] https://www.netdoktor.de/diagnostik/spect/)",
+              "DocCheck bietet eine detaillierte Erklärung der SPECT-Untersuchung, bei der die Verteilung eines radioaktiven Stoffes in Organen dreidimensional dargestellt wird. Diese Seite erklärt den Ablauf der Untersuchung sowie die Funktionsweise der verwendeten Gammakameras.",
           },
           {
-            bold: "Apotheken Umschau: ",
+            bold_link: "https://www.netdoktor.de/diagnostik/spect/",
+            bold: "NetDoktor: SPECT",
             other:
-              "Informationen zur Funktionsweise und zu den Anwendungsgebieten der SPECT. [Apotheken Umschau SPECT] https://www.apotheken-umschau.de/diagnose/spect)",
-          },
-          {
-            bold: "Welt der Physik: ",
-            other:
-              "Überblick über die Diagnosemethoden PET und SPECT in der Nuklearmedizin. [Welt der Physik SPECT] https://www.weltderphysik.de/thema/hinter-den-dingen/pet-und-spect-diagnose-in-der-nuklearmedizin/)",
-          },
-          {
-            bold: "Universitätsklinikum Münster: ",
-            other:
-              "Details zu SPECT und SPECT-CT, einschließlich der Forschungsschwerpunkte und Weiterbildungsmöglichkeiten. [UKM SPECT] https://web.ukm.de/nuklearmedizin/spect-und-spect-ct/)",
-          },
-          {
-            bold: "Miomedi: ",
-            other:
-              "Erklärung der Funktionsweise, Anwendungsgebiete und Risiken der SPECT. [Miomedi SPECT] https://www.miomedi.de/diagnostik/spect/)",
-          },
-          {
-            bold: "MedLexi: ",
-            other:
-              "Beschreibung der Einzelphotonen-Emissionscomputertomographie, ihrer Funktion und ihrer Ziele. [MedLexi SPECT] https://www.medlexi.de/Einzelphotonen-Emissionscomputertomographie)",
+              "Auf dieser Seite wird das diagnostische Verfahren Single-Photonen-Emissions-Computertomografie (SPECT) erklärt. Sie beschreibt, wie die Untersuchung abläuft, wann sie angewendet wird und welche Risiken mit der Verwendung von radioaktiven Substanzen verbunden sind.",
           },
         ],
       },
@@ -4767,55 +4727,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link:
-              "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
-            bold: "DocCheck Flexikon:",
+            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagus-Breischluck",
+            bold: "DocCheck Flexikon: Ösophagus-Breischluck",
             other:
-              "Eine detaillierte Beschreibung des Breischluck-Verfahrens, einschließlich Definition, Durchführung, Indikationen und Beurteilung.",
+              "Dieser Artikel bietet eine umfassende Erklärung des Ösophagus-Breischlucks als röntgenologische Untersuchung zur Diagnose von Schluckstörungen, Reflux und Tumoren. Der Artikel deckt Indikationen, Kontraindikationen und den Ablauf der Untersuchung ab.",
           },
           {
-            bold_link:
-              "https://flexikon.doccheck.com/de/%C3%96sophagusachalasie",
-            bold: "DocCheck Flexikon:",
+            bold_link: "https://www.netdoktor.de/krankheiten/achalasie/",
+            bold: "NetDoktor: Breischluck",
             other:
-              "Informationen zur Achalasie, einer der möglichen Diagnosen, die durch einen Breischluck-Test gestellt werden können.",
+              "NetDoktor erklärt die Breischluck-Untersuchung als diagnostisches Verfahren, das Röntgenbilder verwendet, um Verengungen oder Probleme in der Speiseröhre sichtbar zu machen.",
           },
           {
-            bold_link:
-              "https://www.doccheck.com/de/detail/items/408743-barium-breischluck-untersuchung",
-            bold: "DocCheck Flexikon:",
+            bold_link: "https://www.gesundheitsinformation.de/sodbrennen-und-refluxkrankheit.html",
+            bold: "Gesundheitsinformation.de: Reflux und Breischluck",
             other:
-              "Ein Bildrätsel und Fallbeispiele zur Anwendung des Breischluck-Tests.",
-          },
-          {
-            bold_link: "https://www.amboss.com",
-            bold: "Amboss:",
-            other:
-              "Hier kannst du dich anmelden und detaillierte medizinische Informationen zu verschiedenen Untersuchungen und Erkrankungen finden, einschließlich des Breischluck-Tests.",
-          },
-          {
-            bold_link: "https://en.wikipedia.org/wiki/Barium_swallow",
-            bold: "Wikipedia:",
-            other:
-              "Eine umfassende Erklärung des Breischluck-Tests auf Englisch, einschließlich der klinischen Anwendung und Interpretation der Ergebnisse.",
-          },
-          {
-            bold_link: "https://radiopaedia.org",
-            bold: "Radiopaedia:",
-            other:
-              "Eine umfangreiche Ressource für radiologische Diagnostik, mit Fallstudien und Bildern zum Breischluck-Test und anderen radiologischen Untersuchungen.",
-          },
-          {
-            bold_link: "https://www.aerzteblatt.de",
-            bold: "Deutsches Ärzteblatt:",
-            other:
-              "Artikel und Studien über verschiedene diagnostische Verfahren, einschließlich des Breischluck-Tests, sowie aktuelle Forschungsergebnisse und klinische Leitlinien.",
-          },
-          {
-            bold_link: "https://www.klinikbewertungen.de",
-            bold: "Klinikbewertungen.de:",
-            other:
-              "Erfahrungsberichte und Bewertungen von Patienten zu verschiedenen medizinischen Untersuchungen und Behandlungen, einschließlich des Breischluck-Tests.",
+              "Diese Quelle beschreibt den Einsatz des Breischlucks bei der Diagnose von Refluxkrankheiten und erklärt, wie der Test Entzündungen oder Verengungen in der Speiseröhre aufdeckt.",
           },
         ],
       },
@@ -5460,57 +5387,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link:
-              "https://www.praktischarzt.de/diagnostik/knochenszintigraphie/",
-            bold: "practischArzt",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/knochenszintigraphie/",
+            bold: "Praktischer Arzt: Knochenszintigraphie",
             other:
-              " bietet detaillierte Informationen über die Durchführung der Knochenszintigraphie, einschließlich Vorbereitung, Dauer und mögliche Risiken.",
-          },
-          {
-            bold_link:
-              "https://www.apotheken-umschau.de/diagnostik/szintigrafie",
-            bold: "Apotheken Umschau",
-            other:
-              " beschreibt, wie eine Knochenszintigraphie durchgeführt wird, und bietet ein Video zur besseren Verständigung der Prozedur.",
-          },
-          {
-            bold_link:
-              "https://www.radiologie.de/leistungen/skelettszintigraphie",
-            bold: "Radiologie.de",
-            other:
-              " erklärt, wie mit der Skelettszintigraphie aktive Veränderungen im Knochen festgestellt werden können, besonders für die Diagnose von Entzündungen und Metastasen.",
-          },
-          {
-            bold_link:
-              "https://nuklearmedizin.mri.tum.de/leistungen/skelettszintigraphie",
-            bold: "Nuklearmedizin - Klinikum rechts der Isar",
-            other:
-              " beschreibt den Prozess der Skelettszintigraphie detailliert, einschließlich Vorbereitung, Durchführung und Dauer der Untersuchung.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/szintigrafie/",
-            bold: "NetDoktor.de",
-            other:
-              " bietet umfassende Informationen über verschiedene Formen der Szintigraphie, einschließlich der Skelettszintigraphie, und deren Indikationen, Risiken und Vorteile.",
-          },
-          {
-            bold_link:
-              "https://www.medizin.uni-tuebingen.de/kliniken/nuklearmedizin/leistungen/skelettszintigraphie",
-            bold: "Universitätsklinikum Tübingen",
-            other:
-              " liefert Informationen über die Durchführung der Skelettszintigraphie in der Klinik, die Vorbereitung der Patienten und die notwendigen Maßnahmen nach der Untersuchung.",
+              "Dieser Artikel erklärt den Ablauf, die Vorbereitung und die Auswertung der Knochenszintigraphie. Es wird beschrieben, wie diese Methode zur Diagnose von Knochentumoren, Metastasen und Entzündungen eingesetzt wird.",
           },
           {
             bold_link: "https://flexikon.doccheck.com/de/Skelettszintigraphie",
-            bold: "DocCheck Flexikon",
+            bold: "DocCheck Flexikon: Skelettszintigraphie",
             other:
-              " bietet eine umfassende Definition der Skelettszintigraphie, einschließlich Indikationen, Durchführung und Interpretation der Ergebnisse.",
+              "Hier wird die Knochenszintigraphie als nuklearmedizinisches Verfahren zur Darstellung des Knochenstoffwechsels beschrieben. Die Seite geht auf Indikationen wie Tumore, Osteomyelitis und Frakturen ein.",
           },
           {
-            bold_link: "https://www.amboss.com/de",
-            bold: "Amboss",
+            bold_link: "https://www.gesundheitsinformation.de/glossar/szintigrafie.html",
+            bold: "Gesundheitsinformation.de: Szintigraphie",
             other:
-              " beschreibt detailliert die Indikationen, Kontraindikationen, Durchführung und Interpretation der Skelettszintigraphie.",
+              "Die Seite bietet einen umfassenden Überblick über Szintigraphie-Verfahren, einschließlich der Knochenszintigraphie. Es werden die Gründe, der Ablauf und mögliche Risiken der Untersuchung beschrieben.",
+          },
+          {
+            bold_link: "https://www.praktischarzt.de/untersuchungen/szintigraphie/",
+            bold: "Praktischer Arzt: Szintigraphie",
+            other:
+              "Dieser Artikel bietet einen Überblick über verschiedene Szintigraphie-Verfahren, einschließlich der Knochenszintigraphie, und erklärt deren Anwendung zur Diagnose von Tumoren und Entzündungen.",
           },
         ],
       },
@@ -6125,48 +6023,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Schilddr%C3%BCsenszintigraphie",
+            bold: "DocCheck Flexikon: Schilddrüsenszintigraphie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Quelle bietet eine detaillierte Erklärung der Schilddrüsenszintigraphie, einschließlich der Prinzipien, verwendeten Radionuklide wie Technetium-99m und Iod-123, sowie typischer Befunde wie heiße und kalte Knoten.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/szintigraphie/",
+            bold: "Praktischer Arzt: Szintigraphie der Schilddrüse",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Seite erklärt die Szintigraphie als Verfahren zur Beurteilung des Funktionszustands der Schilddrüse. Anhand von Knotenuntersuchungen kann sie feststellen, ob eine Über- oder Unterfunktion der Schilddrüse vorliegt.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.gesundheitsinformation.de/schilddruesenszintigraphie.2747.de.html",
+            bold: "https://www.gesundheitsinformation.de/schilddruesenuntersuchungen-verstehen.html",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Dieser Artikel beschreibt die Schilddrüsenszintigraphie als nuklearmedizinisches Verfahren zur Untersuchung von Schilddrüsenknoten. Es wird auch erklärt, wie die Ergebnisse zusammen mit den Laborwerten interpretiert werden.",
           },
         ],
       },
@@ -6178,7 +6050,7 @@ export const parentTabs = [
       },
     ],
   },
-  // end of parent tab 9
+  // end of parent tab 9+++++
 
   //Kardiologische Untersuchungen
 
@@ -6842,49 +6714,29 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Elektrokardiogramm",
+            bold: "DocCheck Flexikon: Elektrokardiogramm",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Seite erklärt die Grundlagen des EKG, einschließlich der verschiedenen Wellenformen (P-Welle, QRS-Komplex, T-Welle) und der unterschiedlichen EKG-Ableitungen. Sie bietet eine systematische Übersicht der Interpretation.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/ekg/",
+            bold: "Praktischer Arzt: EKG – Gründe, Ablauf, Auswertung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf eines EKGs, von der Vorbereitung bis zur Auswertung. Sie geht auf die verschiedenen Arten von EKGs wie Ruhe-EKG, Belastungs-EKG und Langzeit-EKG ein.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/ekg/",
+            bold: "NetDoktor: EKG – Ablauf und Risiko",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "NetDoktor erklärt die Durchführung eines EKGs und was die verschiedenen Kurven und Zacken über den Herzrhythmus und mögliche Erkrankungen aussagen. Es wird auch erläutert, bei welchen Symptomen das EKG angewendet wird.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/glossar/elektrokardiogramm-ekg.html",
+            bold: "Gesundheitsinformation.de: Was passiert bei einer Elektrokardiografie?",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
-          },
+              "Diese Seite beschreibt die Funktionsweise des EKGs, wie die elektrische Aktivität des Herzens gemessen wird und welche Untersuchungsarten es gibt, z.B. Ruhe.",
+            },
         ],
       },
       // 8tab 94
@@ -7533,48 +7385,34 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Echokardiographie",
+            bold: "DocCheck Flexikon: Echokardiographie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Dieser Artikel erklärt die Echokardiographie als Ultraschalluntersuchung des Herzens und beschreibt verschiedene Techniken wie die transthorakale und transösophageale Echokardiographie. Zusätzlich wird die Dopplerechokardiographie zur Messung des Blutflusses beschrieben.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/echokardiographie/",
+            bold: "Praktischer Arzt: Echokardiographie – Durchführung, Dauer, Kosten",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt den Ablauf der Echokardiographie, die Gründe für ihre Anwendung und mögliche Ergebnisse. Sie beschreibt auch Unterschiede zwischen der transthorakalen und transösophagealen Echokardiographie.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Stress-Echokardiographie",
+            bold: "DocCheck Flexikon: Stress-Echokardiographie",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die Stress-Echokardiographie untersucht die Herzaktion unter Belastung, um Wandbewegungsstörungen zu identifizieren und die koronare Flussreserve zu bestimmen. Sie ist besonders nützlich zur Diagnose von ischämischen Herzerkrankungen.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/diagnostik/ultraschall/echokardiografie/",
+            bold: "NetDoktor: Echokardiografie (Herzecho)",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+              "Diese Seite erklärt die transthorakale und transösophageale Echokardiographie, deren Ablauf und mögliche Indikationen. Sie geht auch auf die Nutzung von Doppler-Ultraschall zur Analyse des Blutflusses im Herzen ein.",
           },
           {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
+            bold_link: "https://www.gesundheitsinformation.de/was-ist-eine-echokardiografie.html",
+            bold: "Gesundheitsinformation.de: Was ist eine Echokardiografie?",
             other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Gesundheitsinformation.de beschreibt die Echokardiographie als Routineuntersuchung des Herzens, die sowohl von außen (TTE) als auch durch die Speiseröhre (TEE) erfolgen kann. Besonders nützlich zur Untersuchung von Herzklappen und Blutfluss.",
           },
         ],
       },
@@ -8193,48 +8031,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/ekg/belastungs-ekg/",
+            bold: "Praktischer Arzt: Belastungs-EKG – Gründe, Ablauf, Dauer, Auswertung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Seite erklärt detailliert die Durchführung eines Belastungs-EKGs auf einem Fahrradergometer, die Anpassung der Belastung und die Überwachung von Herzfrequenz und Blutdruck. Es werden typische Abbruchkriterien sowie die Nachbeobachtung beschrieben.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Belastungs-EKG",
+            bold: "DocCheck Flexikon: Belastungs-EKG",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Hier wird das Belastungs-EKG als Verfahren zur Ischämiediagnostik beschrieben, bei dem Herzrhythmusstörungen und Endstreckenveränderungen unter Belastung untersucht werden. Die Seite behandelt auch Indikationen und Kontraindikationen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.gesundheitsinformation.de/was-passiert-bei-einer-elektrokardiografie-ekg.html",
+            bold: "Gesundheitsinformation.de: Was ist ein Belastungs-EKG?",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt den Ablauf eines Belastungs-EKGs und erklärt, wie der Test genutzt wird, um Herzerkrankungen wie koronare Herzkrankheit zu diagnostizieren. Auch die Risiken und Vorbereitungen für den Test werden erläutert.",
           },
         ],
       },
@@ -8897,48 +8709,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/ekg/langzeit-ekg/",
+            bold: "Praktischer Arzt: Langzeit-EKG – Indikationen, Ablauf, Auswertung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Seite beschreibt die Durchführung eines Langzeit-EKGs, das für die Analyse von Herzrhythmusstörungen über 24 Stunden oder mehr verwendet wird. Sie geht auf die Anbringung der Elektroden und die Protokollierung der Aktivitäten während der Aufzeichnung ein.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Langzeit-EKG",
+            bold: "DocCheck Flexikon: Langzeit-EKG",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Hier wird das Langzeit-EKG als Methode zur Dokumentation seltener Arrhythmien beschrieben, die im Rahmen von Ruhe- oder Belastungs-EKGs möglicherweise nicht erfasst werden. Der Artikel behandelt auch die technischen Grundlagen und häufige Anwendungsfälle.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.gesundheitsinformation.de/was-passiert-bei-einer-elektrokardiografie-ekg.html",
+            bold: "Gesundheitsinformation.de: Was ist ein Langzeit-EKG?",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt die Anwendung und die Interpretation eines Langzeit-EKGs, das oft genutzt wird, um Herzrhythmusstörungen im Alltag zu erkennen. Sie erläutert auch, wie die Ergebnisse im Zusammenhang mit protokollierten Aktivitäten des Patienten ausgewertet werden.",
           },
         ],
       },
@@ -9629,48 +9415,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Herzkatheteruntersuchung",
+            bold: "DocCheck Flexikon: Herzkatheteruntersuchung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Herzkatheteruntersuchung ist ein invasives Verfahren zur Diagnose und Behandlung von Herzerkrankungen. Dabei wird ein Katheter durch einen arteriellen oder venösen Zugang in das Herz eingeführt. Es gibt zwei Haupttypen: Linksherzkatheter für die Koronararterien und Rechtsherzkatheter zur Messung der Druckverhältnisse im rechten Herzen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/herzkatheteruntersuchung/",
+            bold: "Praktischer Arzt: Herzkatheteruntersuchung – Durchführung, Risiken, Indikationen",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Seite beschreibt den Ablauf der Herzkatheteruntersuchung, bei der das Herz und die Koronararterien mit einem Katheter und Kontrastmittel sichtbar gemacht werden. Das Verfahren wird häufig bei Koronarer Herzkrankheit, Herzklappenerkrankungen oder bei Verdacht auf Myokarditis angewendet.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Rechtsherzkatheteruntersuchung",
+            bold: "DocCheck Flexikon: Rechtsherzkatheteruntersuchung",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Der Rechtsherzkatheter wird über einen venösen Zugang eingeführt und dient zur Messung der Druckverhältnisse im rechten Herzen und in den Pulmonalarterien. Er wird oft bei Verdacht auf pulmonale Hypertonie oder Rechtsherzversagen angewendet.",
           },
         ],
       },
@@ -9683,7 +9443,7 @@ export const parentTabs = [
     ],
   },
 
-  // Endoskopischer Verfahren
+  // Endoskopischer Verfahren ++++++
 
   // start of parent tab 15 Arthroskopie+
   {
@@ -10305,48 +10065,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Arthroskopie",
+            bold: "DocCheck Flexikon: Arthroskopie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Arthroskopie ist ein minimal-invasives Verfahren zur Untersuchung und Behandlung von Gelenken, bei dem ein Arthroskop durch kleine Schnitte in das Gelenk eingeführt wird. Häufig angewendet bei Knie-, Schulter- und Hüftgelenksproblemen, ermöglicht die Arthroskopie sowohl diagnostische als auch therapeutische Eingriffe mit einer schnellen Genesung.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/arthroskopie/",
+            bold: "Praktischer Arzt: Arthroskopie – Gründe & Ablauf",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Seite beschreibt den Ablauf der Arthroskopie, die häufig zur Behandlung von Gelenkverletzungen wie Meniskusrissen oder Knorpeldefekten verwendet wird. Es werden die Vorteile der minimal-invasiven Methode hervorgehoben, einschließlich der geringeren Schmerzen und der schnelleren Genesung im Vergleich zu offenen Operationen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/arthroskopie/knie/",
+            bold: "Praktischer Arzt: Kniearthroskopie – Gründe & Kosten",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Hier wird die Kniearthroskopie, eine der häufigsten Anwendungen des Verfahrens, beschrieben. Der Eingriff erfolgt oft ambulant und behandelt Verletzungen wie Meniskusrisse oder Kreuzbandverletzungen. Die meisten Eingriffe werden von der Krankenkasse übernommen, außer bei bestimmten Fällen von Arthrosebehandlung.",
           },
         ],
       },
@@ -10359,7 +10093,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 15
-  // start of parent tab 16 Gastroskopie+
+  // start of parent tab 16 Gastroskopie++++++
   {
     id: 16,
     title: "Gastroskopie ",
@@ -11027,48 +10761,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Gastroskopie",
+            bold: "DocCheck Flexikon: Gastroskopie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Gastroskopie ist eine endoskopische Untersuchung zur Diagnostik von Erkrankungen des Magens, der Speiseröhre und des Zwölffingerdarms. Das Verfahren ermöglicht die Entnahme von Gewebeproben und die Beurteilung von Schleimhautveränderungen. Sie ist besonders nützlich bei der Diagnose von Geschwüren, Tumoren und Blutungen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/magenspiegelung/",
+            bold: "Praktischer Arzt: Magenspiegelung – Gründe, Vorbereitung, Ablauf",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf einer Gastroskopie, bei der ein flexibles Endoskop durch den Mund oder die Nase eingeführt wird, um den oberen Verdauungstrakt zu untersuchen. Es wird erklärt, dass die Untersuchung meist unter lokaler Betäubung oder leichter Sedierung erfolgt und etwa 10-30 Minuten dauert.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.aok.de/pk/magazin/koerper-psyche/organe/magenspiegelung-vorbereitung-und-ablauf-einer-gastroskopie/",
+            bold: "AOK: Magenspiegelung – Vorbereitung und Ablauf",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die AOK beschreibt die Gastroskopie als schmerzfreie, risikoarme Untersuchung. Sie erklärt die Vorbereitung, bei der Patienten nüchtern sein müssen, und den Ablauf, einschließlich möglicher Gewebeentnahmen und Behandlungen während des Eingriffs.",
           },
         ],
       },
@@ -11081,7 +10789,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 16
-  // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)+
+  // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)++++
   {
     id: 17,
     title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
@@ -11435,7 +11143,7 @@ export const parentTabs = [
           },
         ],
       },
-      // 4tab
+      // 4ta
       {
         id: 146,
         title: "Die pathologische Befunden und Normalbefund",
@@ -11444,11 +11152,11 @@ export const parentTabs = [
           { name: "second", visualText: "Normaler Befund" },
           {
             name: "third",
-            visualText: "Pathologischer Befund 1 (z.B. Lungentumor)",
+            visualText: "Pathologischer Befund 1(z.B. Choledocholithiasis)",
           },
           {
             name: "fourth",
-            visualText: "Pathologischer Befund 2 (z.B. Lungenembolie)",
+            visualText: "Pathologischer Befund 2(z.B. Pankreaskarzinom)",
           },
         ],
         tableRows: [
@@ -11765,63 +11473,48 @@ export const parentTabs = [
           },
         ],
       },
+
       {
         id: 149,
         title: "Links",
         text: "",
         text_list: [
           {
-            bold: "Stiftung Gesundheitswissen :",
-            other:
-              "Diese Seite bietet umfassende Informationen über die Funktionsweise, den Ablauf und die verschiedenen Formen der Ultraschalluntersuchung, einschließlich der Nutzung von Kontrastmitteln und möglichen Risiken. [Links] https://www.stiftung-gesundheitswissen.de",
-          },
-          {
-            bold: "NetDoktor :",
-            other:
-              "Auf NetDoktor kannst du mehr über die Gründe für eine Ultraschalluntersuchung, deren Ablauf und die damit verbundenen Risiken erfahren. Es werden auch spezielle Ultraschallverfahren wie Doppler- und Farbdoppler-Ultraschall beschrieben. [Links] https://www.netdoktor.de",
-          },
-          {
-            bold: "Gesundheitsinformation.de :",
-            other:
-              "Diese Seite erklärt, wie eine Ultraschalluntersuchung funktioniert und welche Körperbereiche damit untersucht werden können. Es gibt auch Informationen zur Anwendung in der Schwangerschaftsvorsorge und zur Diagnose verschiedener Erkrankungen. [Links] https://www.gesundheitsinformation.de",
-          },
-          {
-            bold: "BARMER :",
-            other:
-              "Die BARMER Webseite bietet eine gute Übersicht über die Funktionsweise, den Einsatz und die Grenzen von Ultraschall. Es wird auch die Anwendung in verschiedenen medizinischen Bereichen wie Herz- und Gefäßdiagnostik sowie Schwangerschaftsvorsorge erläutert. [Links] https://www.barmer.de",
-          },
-          {
-            bold: "PraktischArzt :",
-            other:
-              "Hier findest du Informationen zu verschiedenen Arten von Ultraschalluntersuchungen wie der Mammasonografie und Dopplersonografie. Der Ablauf einer typischen Sonographie wird ebenfalls detailliert beschrieben. [Links] https://www.praktischarzt.de",
-          },
-          {
-            bold: "Krebsinformationsdienst :",
-            other:
-              "Diese Seite bietet häufig gestellte Fragen zum Thema Ultraschall in der Krebsmedizin, einschließlich Informationen zur Technik, Anwendung und Vorbereitung auf die Untersuchung. [Links] https://www.krebsinformationsdienst.de",
-          },
-          {
-            bold: "DokCheck :",
-            other:
-              "Diese Seite bietet detaillierte Informationen zu verschiedenen medizinischen Themen, einschließlich Ultraschalluntersuchungen. Hier findest du Erklärungen zur Funktionsweise, den Einsatzbereichen und den verschiedenen Arten von Ultraschall. [Links] https://www.doccheck.com)",
-          },
-          {
-            bold: "AMBOSS :",
-            other:
-              "AMBOSS ist eine umfassende Ressource für medizinisches Wissen. Hier findest du detaillierte Informationen über Ultraschall, einschließlich der physikalischen Grundlagen, der klinischen Anwendungen und der technischen Aspekte. [Links] https://www.amboss.com/de)",
-          },
+  bold_link: "https://flexikon.doccheck.com/de/Endoskopische_retrograde_Cholangiopankreatikographie",
+  bold: "DocCheck Flexikon: ERCP",
+  other:
+    "Die ERCP ist eine endoskopische Methode zur Untersuchung und Behandlung der Gallen- und Pankreasgänge. Mithilfe von Kontrastmittel und Röntgen kann die Untersuchung Erkrankungen wie Gallensteine oder Tumore diagnostizieren und gleichzeitig therapeutische Maßnahmen wie Steinextraktionen oder Stenteinlagen durchführen.",
+},
+{
+  bold_link: "https://www.praktischarzt.de/untersuchungen/ercp/",
+  bold: "Praktischer Arzt: ERCP – Gründe, Ablauf, Risiken",
+  other:
+    "Diese Quelle beschreibt den Ablauf der ERCP-Untersuchung, die zur Diagnostik und Therapie von Erkrankungen der Gallenwege und Bauchspeicheldrüse genutzt wird. Es werden therapeutische Möglichkeiten wie Steinentfernung und Stenteinlagen erklärt, sowie potenzielle Risiken der Untersuchung.",
+},
+{
+  bold_link: "https://www.netdoktor.de/diagnostik/ercp/",
+  bold: "NetDoktor: ERCP – Definition, Gründe und Ablauf",
+  other:
+    "NetDoktor erklärt die ERCP als kombiniertes Verfahren aus Endoskopie und Radiologie, um Gallen- und Bauchspeicheldrüsengänge zu untersuchen. Sie beschreibt mögliche Anwendungsgebiete wie Gallensteine, Entzündungen oder Tumore und erklärt den Ablauf der Untersuchung im Detail.",
+},
+{
+  bold_link: "https://www.gesundheitsinformation.de/wie-wird-eine-akute-pankreatitis-behandelt.html",
+  bold: "Gesundheitsinformation.de: Was passiert bei einer ERCP?",
+  other:
+    "Diese Quelle beschreibt die ERCP als minimal-invasiven Eingriff, der unter Sedierung durchgeführt wird. Sie informiert über die Vorbereitung, den Ablauf und die Risiken der Untersuchung, einschließlich der Möglichkeit von Entzündungen der Gallenwege oder der Bauchspeicheldrüse.",
+},
         ],
       },
       // tab 150
       {
         id: 150,
         title: "PDF",
-        link: "https://drive.google.com/file/d/1ztB4u5h8tXudg86WZdXYI6haybs00s3C/view?usp=share_link",
+        link: "https://drive.google.com/file/d/1z4P8oBNmJX8NcpWicnSIhZfYiybmCRT2/view?usp=share_link",
       },
     ],
   },
   // end of parent tab 17
-  // start of parent tab 18 Koloskopie+
+  // start of parent tab 18 Koloskopie++++
   {
     id: 18,
     title: "Koloskopie  ",
@@ -12462,48 +12155,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Koloskopie",
+            bold: "DocCheck Flexikon: Koloskopie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Koloskopie ist eine endoskopische Untersuchung des Dickdarms. Sie dient der Diagnostik und Behandlung von Erkrankungen wie Polypen, Entzündungen oder Tumoren. Die Untersuchung erfolgt mit einem Endoskop, durch das Luft in den Darm eingeblasen wird, um ihn für eine bessere Sicht zu entfalten. Biopsien können ebenfalls entnommen werden.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/darmspiegelung/",
+            bold: "Praktischer Arzt: Darmspiegelung – Vorbereitung, Ablauf, Dauer",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt die Darmspiegelung, die zur Vorsorge und bei Beschwerden durchgeführt wird. Der Patient muss vorher eine Darmreinigung vornehmen. Die Untersuchung ist in der Regel schmerzfrei, kann aber mit einer Sedierung durchgeführt werden. Ergebnisse, insbesondere Gewebeproben, werden nach der Untersuchung analysiert.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.gesundheitsinformation.de/die-grosse-darmspiegelung-informationen-fuer-frauen.html",
+            bold: "Gesundheitsinformation.de: Was passiert bei einer Darmspiegelung?",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Gesundheitsinformation.de beschreibt den Ablauf der Koloskopie, die zur Diagnose von Darmerkrankungen und zur Krebsfrüherkennung genutzt wird. Sie erklärt die Vorbereitung, den Ablauf der Untersuchung und die möglichen Risiken, wie Blutungen oder Perforationen, die jedoch sehr selten sind.",
           },
         ],
       },
@@ -12516,7 +12183,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 18
-  // start of parent tab 19 Ösophagogastroduodenoskopie+
+  // start of parent tab 19 Ösophagogastroduodenoskopie+++++
   {
     id: 19,
     title: "Ösophagogastroduodenoskopie",
@@ -13159,48 +12826,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/magenspiegelung/",
+            bold: "Praktischer Arzt: Gastroskopie – Vorbereitung, Ablauf, Risiken",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Quelle erklärt den Ablauf der Gastroskopie, die oft als Teil einer ÖGD durchgeführt wird. Es wird beschrieben, wie die Untersuchung ambulant abläuft, welche Risiken und Nebenwirkungen bestehen und wie Gewebeproben entnommen werden können.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/%C3%96sophagogastroduodenoskopie",
+            bold: "DocCheck Flexikon: Ösophagogastroduodenoskopie",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Die ÖGD ist eine endoskopische Untersuchung der Speiseröhre, des Magens und des Zwölffingerdarms. Sie wird zur Diagnostik von Erkrankungen wie Geschwüren, Entzündungen und Tumoren eingesetzt. Gewebeproben können entnommen werden, um die Diagnose zu bestätigen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/magenspiegelung/",
+            bold: "NetDoktor: Magenspiegelung (Gastroskopie)",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Diese Seite beschreibt den Ablauf einer Gastroskopie im Rahmen der ÖGD. Sie wird zur Diagnose von Beschwerden wie Sodbrennen, Magenschmerzen oder Magen- und Zwölffingerdarmgeschwüren verwendet. Das Verfahren ist risikoarm und wird oft ambulant durchgeführt.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/was-passiert-bei-einer-magenspiegelung-gastroskopie.html",
+            bold: "Gesundheitsinformation.de: Magenspiegelung (Gastroskopie)",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle bietet einen umfassenden Überblick über die Durchführung und die Risiken einer ÖGD. Sie wird häufig bei anhaltendem Sodbrennen, unklarer Gewichtsabnahme oder Verdacht auf Geschwüre eingesetzt und erlaubt die Entnahme von Gewebeproben.",
           },
         ],
       },
@@ -13213,7 +12860,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 19
-  // start of parent tab 20 Bronchoskopie+
+  // start of parent tab 20 Bronchoskopie++++
   {
     id: 20,
     title: "Bronchoskopie",
@@ -13822,48 +13469,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Bronchoskopie",
+            bold: "DocCheck Flexikon: Bronchoskopie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Bronchoskopie ist eine endoskopische Untersuchung der Atemwege. Sie dient der Diagnose von Lungenerkrankungen, wie Tumoren, Entzündungen oder Fremdkörpern. Sowohl starre als auch flexible Bronchoskope werden verwendet, wobei flexible Geräte meist für weniger invasive Eingriffe eingesetzt werden.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/bronchoskopie/",
+            bold: "Praktischer Arzt: Bronchoskopie – Gründe, Ablauf, Risiken",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Bronchoskopie, die entweder mit einem flexiblen oder starren Bronchoskop durchgeführt wird. Die flexible Bronchoskopie ist in der Regel schonender und erfordert nur eine Sedierung. Es werden mögliche Risiken wie kleinere Blutungen und Atemwegsverkrampfungen beschrieben.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Transbronchiale_Nadelaspiration",
+            bold: "DocCheck Flexikon: Transbronchiale Nadelaspiration (TBNA)",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die transbronchiale Nadelaspiration (TBNA) ist eine Technik, bei der während der Bronchoskopie Gewebeproben von peribronchialen Lymphknoten entnommen werden. Sie wird häufig bei der Diagnose von Lungenerkrankungen wie Bronchialkarzinomen angewendet.",
           },
         ],
       },
@@ -13876,7 +13497,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 20
-  // start of parent tab 21 Die bronchoalveoläre Lavage+
+  // start of parent tab 21 Die bronchoalveoläre Lavage++++
   {
     id: 21,
     title: "Bronchoalveoläre Lavage",
@@ -14500,48 +14121,16 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Bronchoalveol%C3%A4re_Lavage",
+            bold: "DocCheck Flexikon: Bronchoalveoläre Lavage (BAL)",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die BAL ist ein diagnostisches Verfahren, bei dem sterile Kochsalzlösung in die Lunge eingebracht und wieder abgesaugt wird. Sie wird zur Diagnose von interstitiellen Lungenerkrankungen und Bronchialkarzinomen eingesetzt. Die entnommene Flüssigkeit wird mikrobiologisch, zytologisch oder immunologisch untersucht.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/lungenfunktionstest/",
+            bold: "Praktischer Arzt: Lungenfunktionstest und BAL",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
-            other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt die BAL als Teil einer umfassenden Lungenfunktionsdiagnostik. Sie wird verwendet, um Krankheiten wie Lungenfibrose oder Sarkoidose zu diagnostizieren. Die BAL ermöglicht die Entnahme von Zellen und Keimen aus den tiefen Atemwegen für mikrobiologische und zytologische Untersuchungen.",
           },
         ],
       },
@@ -14554,7 +14143,7 @@ export const parentTabs = [
     ],
   },
   // end of parent tab 21
-  // start of parent tab 22 Zystoskopie+
+  // start of parent tab 22 Zystoskopie++++++
   {
     id: 22,
     title: "Zystoskopie",
@@ -15211,48 +14800,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Zystoskopie",
+            bold: "DocCheck Flexikon: Zystoskopie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Zystoskopie ist eine endoskopische Untersuchung der Harnblase und der Harnröhre. Sie wird eingesetzt zur Diagnose von Erkrankungen wie Blasenkrebs, Harnwegsinfektionen oder Blasensteinen. Es werden starre oder flexible Zystoskope verwendet, und es können Gewebeproben entnommen werden.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/blasenspiegelung/",
+            bold: "Praktischer Arzt: Blasenspiegelung (Zystoskopie) – Ablauf und Risiken",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Zystoskopie, die normalerweise ambulant durchgeführt wird. Es wird erklärt, wie die Untersuchung abläuft, welche Risiken bestehen und welche Unterschiede es zwischen den Geschlechtern gibt. Außerdem wird auf mögliche Komplikationen wie Blutungen und Harnwegsinfektionen hingewiesen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Zystoskop",
+            bold: "DocCheck Flexikon: Zystoskop",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Das Zystoskop ist ein urologisches Endoskop zur Inspektion der Harnblase. Es gibt verschiedene Varianten, darunter starre und flexible Zystoskope. Es kann auch für minimalinvasive Eingriffe wie die Entfernung von Blasensteinen verwendet werden.",
           },
         ],
       },
@@ -15268,7 +14831,7 @@ export const parentTabs = [
 
   // Labor Untersuchungen
 
-  // start of parent tab 23 Blutbild+
+  // start of parent tab 23 Blutbild+++++++
   {
     id: 23,
     title: "Blutbild",
@@ -16035,48 +15598,34 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Blutbild",
+            bold: "DocCheck Flexikon: Blutbild",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Das Blutbild ist eine grundlegende diagnostische Methode zur Untersuchung der Blutzellen. Es gibt Auskunft über die Anzahl und Beschaffenheit von roten und weißen Blutkörperchen sowie Blutplättchen. Die Analyse hilft, verschiedene Erkrankungen wie Anämie, Infektionen oder Blutgerinnungsstörungen zu erkennen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/blutuntersuchung/blutwerte/",
+            bold: "Praktischer Arzt: Blutwerte – Bedeutungen und Normwerte",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Seite bietet eine umfassende Übersicht der Blutwerte und deren Normbereiche. Sowohl kleine als auch große Blutbilder werden erklärt, und es wird erläutert, wie Abweichungen in Werten auf verschiedene Erkrankungen hinweisen können, z.B. Eisenmangelanämie oder Infektionen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Kleines_Blutbild",
+            bold: "DocCheck Flexikon: Kleines Blutbild",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Das kleine Blutbild umfasst die Analyse von Erythrozyten, Leukozyten und Thrombozyten, um die grundlegende Zellzusammensetzung des Blutes zu bestimmen. Es wird häufig zur Diagnose von Entzündungen, Infektionen und Anämien genutzt.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/laborwerte/grosses-blutbild/",
+            bold: "NetDoktor: Großes Blutbild – Werte und Erklärungen",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+              "Diese Quelle erklärt die Unterschiede zwischen kleinem und großem Blutbild. Das große Blutbild umfasst die Differenzierung der Leukozyten und bietet detaillierte Informationen über verschiedene Blutzelltypen, was bei der Diagnose von Infektionen und chronischen Erkrankungen hilfreich ist.",
           },
           {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
+            bold_link: "https://www.netdoktor.de/diagnostik/blutuntersuchung/",
+            bold: "NetDoktor: Blutuntersuchung – Gründe und Methoden",
             other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt den Ablauf einer Blutuntersuchung, einschließlich der Analyse von Blutzellen, Enzymen und Hormonen. Sie erklärt auch, wann eine Blutuntersuchung notwendig ist und wie sie zur Diagnose und Überwachung von Krankheiten eingesetzt wird.",
           },
         ],
       },
@@ -16090,7 +15639,7 @@ export const parentTabs = [
   },
   // end of parent tab 23
 
-  // start of parent tab 24 Blutuntersuchung+
+  // start of parent tab 24 Blutuntersuchung+++++++
   {
     id: 24,
     title: "Blutuntersuchung",
@@ -16794,48 +16343,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Blutbild",
+            bold: "DocCheck Flexikon: Blutbild",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Das Blutbild ist eine grundlegende Methode zur Analyse der Blutzellen. Es gibt Informationen über die Anzahl und Morphologie der Erythrozyten, Leukozyten und Thrombozyten, um Erkrankungen wie Anämien oder Infektionen zu diagnostizieren.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/blutuntersuchung/",
+            bold: "Praktischer Arzt: Blutuntersuchung – Gründe und Ablauf",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt den Ablauf der Blutuntersuchung, bei der eine Blutprobe analysiert wird, um verschiedene Werte wie Blutzellen, Hormone und Enzyme zu bestimmen. Die Blutuntersuchung hilft bei der Diagnose von Infektionen und Stoffwechselerkrankungen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/blutuntersuchung/",
+            bold: "NetDoktor: Blutuntersuchung – Gründe und Methoden",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt die Durchführung einer Blutuntersuchung, bei der Blut auf Blutzellen, Hormone, Enzyme und Mineralstoffe untersucht wird. Sie dient zur Diagnose und Überwachung vieler Krankheiten, einschließlich Infektionen und Organdysfunktionen.",
           },
         ],
       },
@@ -16849,7 +16372,7 @@ export const parentTabs = [
   },
   // end of parent tab 24
 
-  // start of parent tab 25 Blutgerinnung+
+  // start of parent tab 25 Blutgerinnung+++++
   {
     id: 25,
     title: "Blutgerinnung",
@@ -17486,48 +17009,34 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Gerinnungsdiagnostik",
+            bold: "DocCheck Flexikon: Gerinnungsdiagnostik",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Gerinnungsdiagnostik umfasst verschiedene Tests zur Überprüfung der Blutgerinnung. Sie dient der Diagnose von Gerinnungsstörungen wie Hämophilie oder Vitamin-K-Mangel. Wichtige Parameter sind der Quick-Wert, die INR und die partielle Thromboplastinzeit (PTT).",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/blutuntersuchung/blutwerte/blutgerinnung/",
+            bold: "Praktischer Arzt: Blutgerinnung – Ablauf und Laborwerte",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Die Blutgerinnung erfolgt in einem mehrstufigen Prozess, bei dem sich Blutplättchen an der Gefäßwand anlagern und Gerinnungsfaktoren aktiviert werden. Normwerte wie der Quick-Wert und die INR helfen, Gerinnungsstörungen frühzeitig zu erkennen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/laborwerte/blutgerinnung/",
+            bold: "NetDoktor: Blutgerinnung – Normwerte und Ursachen",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Diese Quelle beschreibt die wichtigsten Parameter der Blutgerinnung, darunter den Quick-Wert und die PTT. Sie erklärt, wie Gerinnungsstörungen durch Faktoren wie Lebererkrankungen oder Vitamin-K-Mangel beeinflusst werden können.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/was-sind-blutgerinnsel-und-wie-entstehen-sie.html",
+            bold: "Gesundheitsinformation.de: Was sind Blutgerinnsel und wie entstehen sie?",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+              "Dieser Artikel erklärt die Entstehung von Blutgerinnseln und den Prozess der Blutgerinnung. Er geht auf die Rolle der Thrombozyten und Gerinnungsfaktoren ein, die zusammenarbeiten, um Blutungen zu stoppen und Wunden zu heilen.",
           },
           {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
+            bold_link: "https://www.gesundheitsinformation.de/glossar/gerinnung.html",
+            bold: "Gesundheitsinformation.de: Gerinnung",
             other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die Blutgerinnung dient dazu, Blutungen durch eine komplexe Reaktionskette von Gerinnungsfaktoren zu stoppen. Thrombozyten ballen sich an der Verletzungsstelle zusammen und Eiweiße aus der Leber fördern die Wundheilung.",
           },
         ],
       },
@@ -17541,7 +17050,7 @@ export const parentTabs = [
   },
   // end of parent tab 25
 
-  // start of parent tab 25 Urinuntersuchung+
+  // start of parent tab 25 Urinuntersuchung+++++
   {
     id: 26,
     title: "Urinuntersuchung",
@@ -18244,48 +17753,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Urindiagnostik",
+            bold: "DocCheck Flexikon: Urindiagnostik",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Urindiagnostik ist eine der häufigsten Laboruntersuchungen und dient zur Diagnose von Nierenerkrankungen, Harnwegsinfektionen und Stoffwechselstörungen wie Diabetes. Es gibt verschiedene Methoden wie den Urinstatus, Teststreifenanalysen und Urinsedimentuntersuchungen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/urintest/",
+            bold: "Praktischer Arzt: Urintest – Gründe, Ablauf, Auswertung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt die unterschiedlichen Urinproben (Erststrahl-, Mittelstrahl- und 24-Stunden-Sammelurin) und die damit verbundenen Testmethoden. Sie erklärt, wie Urinanalysen zur Diagnose von Infektionen, Blasenkrankheiten und Stoffwechselstörungen durchgeführt werden.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Urinstatus",
+            bold: "DocCheck Flexikon: Urinstatus",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Der Urinstatus kann schnell mittels Teststreifen oder durch detailliertere Laboruntersuchungen bestimmt werden. Es werden Parameter wie pH-Wert, Eiweiß, Glukose, Ketone und das Vorhandensein von Blut- oder Leukozyten im Urin überprüft, um Erkrankungen wie Harnwegsinfekte oder Nierenerkrankungen zu diagnostizieren.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/urintests-verstehen.html",
+            bold: "Gesundheitsinformation.de: Was sagt ein Urintest aus?",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erläutert, wie ein Urintest funktioniert und wie die Ergebnisse interpretiert werden. Urintests können Hinweise auf verschiedene Erkrankungen geben, z.B. Harnwegsinfekte oder Diabetes. Es werden auch die wichtigsten Parameter wie Leukozyten und Nitrit erklärt.",
           },
         ],
       },
@@ -18299,7 +17788,7 @@ export const parentTabs = [
   },
   // end of parent tab 25
 
-  // start of parent tab 26 Stuhluntersuchung+
+  // start of parent tab 26 Stuhluntersuchung++++++
   {
     id: 27,
     title: "Stuhluntersuchung",
@@ -19024,48 +18513,40 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Stuhluntersuchung",
+            bold: "DocCheck Flexikon: Stuhluntersuchung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Stuhluntersuchung umfasst mikrobiologische, makroskopische und mikroskopische Untersuchungen des Stuhls. Sie wird zur Diagnose von Infektionen, Entzündungen und Tumoren im Verdauungstrakt eingesetzt. Es können Erreger wie Bakterien, Viren und Parasiten nachgewiesen werden.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Stuhlprobe",
+            bold: "DocCheck Flexikon: Stuhlprobe",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Dieser Artikel beschreibt die Entnahme und Verarbeitung von Stuhlproben zur Diagnostik von Erkrankungen wie chronischen Darmentzündungen, Pankreasinsuffizienz und Harnwegsinfektionen. Stuhlproben werden für mikrobiologische Tests und zur Analyse von Blut im Stuhl verwendet.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/IFOBT",
+            bold: "DocCheck Flexikon: iFOBT",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Der immunologische fäkale Okkultbluttest (iFOBT) wird zur Früherkennung von Darmkrebs eingesetzt. Dieser Test weist nicht sichtbares Blut im Stuhl nach und ist genauer als frühere Tests, da er spezifisch für menschliches Hämoglobin ist.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/diagnostik/stuhluntersuchung/",
+            bold: "NetDoktor: Stuhluntersuchung – Gründe, Ablauf, Dauer",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
+              "Diese Quelle beschreibt die Gründe für eine Stuhluntersuchung, wie Verdauungsstörungen oder unklare Bauchbeschwerden. Sie erklärt den Ablauf der Untersuchung und die möglichen Ergebnisse, die Aufschluss über Infektionen, Blutungen oder Verdauungsprobleme geben können.",
           },
           {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
+            bold_link: "https://www.netdoktor.de/diagnostik/haemoccult-test/",
+            bold: "NetDoktor: Hämoccult-Test – Gründe, Durchführung, Auswertung",
             other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
+              "Der Hämoccult-Test ist ein Test auf okkultes Blut im Stuhl, der zur Früherkennung von Darmkrebs verwendet wird. Der Test weist kleine, nicht sichtbare Blutungen im Darm nach, die auf Tumoren oder andere Erkrankungen hinweisen können.",
           },
           {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
+            bold_link: "https://www.netdoktor.de/krankheiten/colitis-ulcerosa/",
+            bold: "NetDoktor: Colitis ulcerosa – Diagnose und Stuhluntersuchung",
             other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt, wie bei Colitis ulcerosa Stuhluntersuchungen durchgeführt werden, um bakterielle Infektionen auszuschließen. Stuhlproben helfen dabei, Entzündungen zu diagnostizieren und die Krankheit von anderen Darmerkrankungen zu unterscheiden.",
           },
         ],
       },
@@ -19079,7 +18560,7 @@ export const parentTabs = [
   },
   // end of parent tab 27
 
-  // start of parent tab 28 Biopsie+
+  // start of parent tab 28 Biopsie+++++
   {
     id: 28,
     title: "Biopsie",
@@ -19702,48 +19183,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Biopsie",
+            bold: "DocCheck Flexikon: Biopsie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Biopsie bezeichnet die Entnahme einer Gewebeprobe, die anschließend histologisch oder zytologisch untersucht wird. Es gibt verschiedene Biopsietechniken wie die Stanzbiopsie, Feinnadelbiopsie oder die Vakuumbiopsie. Diese Technik wird angewendet, um verdächtige Gewebeveränderungen, wie Tumore, genauer zu diagnostizieren.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/biopsie/",
+            bold: "Praktischer Arzt: Biopsie – Gründe, Ablauf, Risiken",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt die verschiedenen Indikationen für eine Biopsie, wie Knoten in der Brust, Prostataveränderungen oder auffällige Hautbefunde. Es wird erklärt, wie der Eingriff durchgeführt wird, je nach zu untersuchendem Organ, und welche Risiken und Komplikationen auftreten können.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/biopsie/leberbiopsie/",
+            bold: "Praktischer Arzt: Leberbiopsie – Gründe, Ablauf und Risiken",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die Leberbiopsie wird bei Verdacht auf diffuse Lebererkrankungen oder zur Stadieneinteilung einer Hepatitis durchgeführt. Sie erfolgt perkutan unter Ultraschallkontrolle, und die Risiken umfassen unter anderem Nachblutungen und seltene Organverletzungen.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/diagnostik/biopsie/",
+            bold: "NetDoktor: Biopsie – Definition, Gründe, Ablauf",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Dieser Artikel erklärt, was eine Biopsie ist und warum sie durchgeführt wird, z.B. bei Verdacht auf Krebs. Es werden die verschiedenen Biopsietechniken beschrieben, einschließlich der Feinnadelbiopsie und der Stanzbiopsie, sowie die Risiken wie Infektionen oder Blutungen.",
           },
         ],
       },
@@ -19759,7 +19220,7 @@ export const parentTabs = [
 
   // Funktionstests
 
-  // start of parent tab 29 Spirometrie+
+  // start of parent tab 29 Spirometrie+++++
   {
     id: 29,
     title: "Lungenfunktionstest (Spirometrie)",
@@ -20435,48 +19896,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Spirometrie",
+            bold: "DocCheck Flexikon: Spirometrie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Spirometrie ist eine häufig angewendete Methode zur Messung der Lungenfunktion. Sie erfasst das Lungenvolumen und die Atemstromstärke in Ruhe sowie unter Belastung und ist nützlich zur Diagnose von obstruktiven und restriktiven Lungenerkrankungen wie Asthma oder COPD.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/lungenfunktionstest/",
+            bold: "Praktischer Arzt: Lungenfunktionstest – Gründe, Ablauf, Auswertung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt den Ablauf und die verschiedenen Methoden eines Lungenfunktionstests, insbesondere die Spirometrie und Spiroergometrie. Sie misst das Luftvolumen und die Atemstromstärke und ist eine einfache, schmerzfreie Untersuchung zur Erkennung von Lungenkrankheiten.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Lungenfunktionsdiagnostik",
+            bold: "DocCheck Flexikon: Lungenfunktionsdiagnostik",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die Lungenfunktionsdiagnostik umfasst mehrere Verfahren, darunter Spirometrie, Bodyplethysmografie und Spiroergometrie. Diese Methoden werden verwendet, um die Lungenkapazität zu messen und Erkrankungen wie COPD, Asthma oder Lungenfibrose zu diagnostizieren.",
           },
         ],
       },
@@ -21100,48 +20535,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Audiometrie",
+            bold: "DocCheck Flexikon: Audiometrie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Audiometrie ist eine Untersuchungsmethode zur Überprüfung der Hörfunktion. Man unterscheidet zwischen subjektiven Testverfahren wie der Tonschwellenaudiometrie und objektiven Verfahren wie der Hirnstammaudiometrie. Diese Methoden dienen zur Diagnose von Schwerhörigkeit oder anderen Hörstörungen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Tonschwellenaudiogramm",
+            bold: "DocCheck Flexikon: Tonschwellenaudiogramm",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Das Tonschwellenaudiogramm überprüft die Hörschwelle des Patienten. Es misst die Luftleitung und Knochenleitung des Schalls über Kopfhörer und bestimmt so, wie gut der Patient leise Töne wahrnehmen kann. Diese Messungen helfen bei der Diagnose von Schalleitungsschwerhörigkeit oder Innenohrschwerhörigkeit.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Sprachaudiogramm",
+            bold: "DocCheck Flexikon: Sprachaudiogramm",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Das Sprachaudiogramm misst, wie gut der Patient Wörter und Zahlen verstehen kann, die ihm in verschiedenen Lautstärken über Kopfhörer vorgespielt werden. Es wird oft verwendet, um das Sprachverständnis zu bewerten, insbesondere bei der Einstellung von Hörgeräten.",
           },
         ],
       },
@@ -21155,7 +20564,7 @@ export const parentTabs = [
   },
   // end of parent tab 30
 
-  // start of parent tab 31 Tympanometrie+
+  // start of parent tab 31 Tympanometrie+++++
   {
     id: 31,
     title: "Tympanometrie",
@@ -21758,48 +21167,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Tympanometrie",
+            bold: "DocCheck Flexikon: Tympanometrie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Tympanometrie ist ein Verfahren zur Messung der Mittelohrfunktion. Sie wird eingesetzt, um Störungen wie Tubenbelüftungsstörungen oder Mittelohrergüsse zu diagnostizieren. Dabei wird der Luftdruck im äußeren Gehörgang verändert, um die Trommelfellbeweglichkeit zu überprüfen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Tympanogramm",
+            bold: "DocCheck Flexikon: Tympanogramm",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Das Tympanogramm ist die graphische Darstellung der Trommelfellbeweglichkeit, die während der Tympanometrie gemessen wird. Es hilft, den Zustand des Mittelohrs zu beurteilen und zeigt Auffälligkeiten wie Mittelohrergüsse oder Schallleitungsstörungen an.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Audiometrie",
+            bold: "DocCheck Flexikon: Audiometrie",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die Audiometrie umfasst verschiedene Verfahren zur Überprüfung der Hörfunktion. Es gibt subjektive Verfahren wie die Tonschwellenaudiometrie und Sprachaudiometrie sowie objektive Verfahren wie die Tympanometrie und die Hirnstammaudiometrie, um Hörstörungen zu diagnostizieren.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/diagnostik/hoertest/",
+            bold: "Netdoktor: Audiometrie – Ablauf und Durchführung",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Dieser Artikel beschreibt die Audiometrie, bei der das Gehör durch Tests wie die Tonschwellenaudiometrie und die Sprachaudiometrie überprüft wird. Die Audiometrie hilft bei der Diagnose von Schwerhörigkeit oder anderen Hörstörungen.",
           },
         ],
       },
@@ -21815,7 +21204,7 @@ export const parentTabs = [
 
   // Neurologische Untersuchungen
 
-  // start of parent tab 32 Nervenleitgeschwindigkeit+
+  // start of parent tab 32 Nervenleitgeschwindigkeit++++
   {
     id: 32,
     title: "Nervenleitgeschwindigkeit",
@@ -22449,48 +21838,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Nervenleitgeschwindigkeit",
+            bold: "DocCheck Flexikon: Nervenleitgeschwindigkeit",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Nervenleitgeschwindigkeit misst die Übertragungsgeschwindigkeit elektrischer Impulse entlang eines Nerven. Sie wird durch die Elektroneurografie (ENG) bestimmt und gibt Aufschluss über Schädigungen der Myelinscheiden oder Axone. Faktoren wie die Dicke des Nerven und die Temperatur können die Leitgeschwindigkeit beeinflussen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/elektroneurografie/",
+            bold: "Praktischer Arzt: Elektroneurografie (ENG) – Gründe und Ablauf",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Die Elektroneurografie misst die Nervenleitgeschwindigkeit und wird zur Diagnose von Nerven- und Muskelerkrankungen verwendet. Die Untersuchung erfolgt durch die Stimulation des Nervs mit Elektroden, wobei die Leitgeschwindigkeit zwischen Reiz- und Ableitpunkt gemessen wird. Sie wird bei Erkrankungen wie Polyneuropathien oder Engpass-Syndromen eingesetzt.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Elektroneurographie",
+            bold: "DocCheck Flexikon: Elektroneurographie",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die Elektroneurographie misst die Nervenleitgeschwindigkeit, indem Nerven an verschiedenen Stellen stimuliert und die Antwortaktivität erfasst wird. Es können motorische und sensible Nerven untersucht werden, um die Diagnose von peripheren Reizleitungsstörungen, Polyneuropathien und Nervenverletzungen zu unterstützen.",
           },
         ],
       },
@@ -22504,7 +21867,7 @@ export const parentTabs = [
   },
   // end of parent tab 32
 
-  // start of parent tab 33 Elektroenzephalographie
+  // start of parent tab 33 Elektroenzephalographie +++++
   {
     id: 33,
     title: "Elektroenzephalographie",
@@ -23170,48 +22533,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Elektroenzephalographie",
+            bold: "DocCheck Flexikon: Elektroenzephalographie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Das EEG misst die elektrische Aktivität der Hirnrinde und wird häufig zur Diagnose von Epilepsie, Enzephalitis und anderen neurologischen Erkrankungen eingesetzt. Es kann auch zur Feststellung des Hirntods und zur Überwachung der Hirnströme während des Schlafs verwendet werden.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/eeg/",
+            bold: "Praktischer Arzt: EEG – Ablauf, Messung, Auswertung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf eines EEGs, bei dem Elektroden auf der Kopfhaut platziert werden, um die Hirnströme zu messen. Die Untersuchung dauert 20-30 Minuten und wird zur Diagnose von Epilepsie, Hirnschäden und Stoffwechselstörungen verwendet.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/10-20-System",
+            bold: "DocCheck Flexikon: 10-20-System",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Das 10-20-System ist ein international anerkanntes System zur standardisierten Platzierung von Elektroden für EEGs. Es ermöglicht eine vergleichbare Messung der Hirnaktivität und wird in der Neurologie sowie in der Forschung häufig eingesetzt.",
           },
         ],
       },
@@ -23225,7 +22562,7 @@ export const parentTabs = [
   },
   // end of parent tab 33
 
-  // start of parent tab 34 Lumbalpunktion
+  // start of parent tab 34 Lumbalpunktion+++++
   {
     id: 34,
     title: "Lumbalpunktion",
@@ -23901,48 +23238,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/lumbalpunktion/",
+            bold: "Praktischer Arzt: Lumbalpunktion – Gründe, Ablauf, Risiken",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Lumbalpunktion ist ein diagnostisches Verfahren, bei dem Nervenwasser (Liquor) aus dem Wirbelkanal im Bereich der Lendenwirbelsäule entnommen wird. Sie dient der Diagnose von Erkrankungen wie Meningitis oder Multipler Sklerose. Es wird beschrieben, wie der Eingriff durchgeführt wird, die möglichen Nebenwirkungen und Kontraindikationen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Lumbalpunktion",
+            bold: "DocCheck Flexikon: Lumbalpunktion",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt die technischen Details der Lumbalpunktion. Dabei wird die Punktionsnadel in den Subarachnoidalraum eingeführt, um Liquor zu entnehmen. Sie erläutert auch die Durchführung mit oder ohne Lokalanästhesie sowie mögliche Komplikationen wie postpunktionelle Kopfschmerzen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Liquordruckmessung",
+            bold: "DocCheck Flexikon: Liquordruckmessung",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die Liquordruckmessung kann während einer Lumbalpunktion durchgeführt werden, um den Druck des Nervenwassers zu bestimmen. Diese Quelle beschreibt die Indikationen und Risiken der Druckmessung, besonders bei Verdacht auf erhöhten Hirndruck.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.doccheck.com/de/detail/articles/2735-lumbalpunktion",
+            bold: "DocCheck: Lumbalpunktion – Anleitung für Studierende und Ärzte",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle bietet eine detaillierte Anleitung zur Lumbalpunktion, von der Patientenaufklärung bis zur Durchführung und Nachsorge. Der Artikel richtet sich speziell an Studierende und Assistenzärzte, die den Eingriff lernen oder üben möchten.",
           },
         ],
       },
@@ -23956,7 +23273,7 @@ export const parentTabs = [
   },
   // end of parent tab 34
 
-  // start of parent tab 35 Elektromyographie
+  // start of parent tab 35 Elektromyographie++++++
   {
     id: 35,
     title: "Elektromyographie(EMG)",
@@ -24582,48 +23899,16 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Elektromyographie",
+            bold: "DocCheck Flexikon: Elektromyographie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Elektromyographie (EMG) ist ein neurophysiologisches Verfahren, bei dem die elektrische Aktivität in den Muskeln gemessen wird. Sie wird zur Diagnose von Muskel- und Nervenschäden, z.B. bei Myopathien oder Neuropathien, eingesetzt. Es gibt zwei Varianten: die Nadel-EMG und die Oberflächen-EMG.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/elektromyographie-emg/",
+            bold: "Praktischer Arzt: Elektromyographie (EMG) – Gründe, Messung, Auswertung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
-            other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt den Ablauf der EMG, bei der entweder Nadelelektroden oder Oberflächenelektroden verwendet werden. Das EMG hilft bei der Diagnose von Muskelschwächen, Nervenschäden und Entzündungen. Typische Indikationen sind z.B. Bandscheibenvorfälle oder Muskelentzündungen.",
           },
         ],
       },
@@ -24639,7 +23924,7 @@ export const parentTabs = [
 
   // Weitere spezialisierte Untersuchungen
 
-  // start of parent tab 36 Angiographie+
+  // start of parent tab 36 Angiographie+++++
   {
     id: 36,
     title: "Angiographie",
@@ -25390,48 +24675,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/angiographie/",
+            bold: "Praktischer Arzt: Angiographie – Gründe, Ablauf, Risiken",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Diese Quelle erklärt den Ablauf der Angiographie, bei der ein Kontrastmittel über einen Katheter in die Blutgefäße eingebracht wird, um mögliche Gefäßverengungen oder Blockaden zu visualisieren. Die Angiographie dient der Diagnose von Gefäßerkrankungen wie Arteriosklerose, Aneurysmen oder Thrombosen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Angiografie",
+            bold: "DocCheck Flexikon: Angiografie",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Die Angiographie ist ein bildgebendes Verfahren zur Darstellung von Blutgefäßen, oft unter Verwendung von Kontrastmitteln. Es gibt verschiedene Arten wie die CT-Angiographie, MR-Angiographie und die digitale Subtraktionsangiographie (DSA), die jeweils spezifische Einsatzgebiete haben, z.B. bei der Untersuchung von Herzkranzgefäßen oder Gehirnarterien.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Digitale_Subtraktionsangiographie",
+            bold: "DocCheck Flexikon: Digitale Subtraktionsangiographie (DSA)",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die DSA ist eine spezielle Form der Angiographie, bei der störende Strukturen digital entfernt werden, um eine genauere Darstellung der Blutgefäße zu ermöglichen. Sie wird häufig bei der Diagnose von arteriovenösen Missbildungen, Aneurysmen oder Tumoren eingesetzt.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.netdoktor.de/diagnostik/angiografie/",
+            bold: "NetDoktor: Angiographie – Gründe, Ablauf, Dauer",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt die Durchführung und mögliche Komplikationen der Angiographie. Das Verfahren wird häufig bei Durchblutungsstörungen und zur Planung chirurgischer Eingriffe eingesetzt. Neben der Darstellung von Herzkranzgefäßen kann es auch bei der Diagnose von Lungenembolien und Aneurysmen hilfreich sein.",
           },
         ],
       },
@@ -25445,7 +24710,7 @@ export const parentTabs = [
   },
   // end of parent tab 36
 
-  // start of parent tab 37 Doppler-Sonographie+
+  // start of parent tab 37 Doppler-Sonographie+++++
   {
     id: 37,
     title: "Doppler-Sonographie",
@@ -26079,48 +25344,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/sonographie-ultraschall/dopplersonographie/",
+            bold: "Praktischer Arzt: Dopplersonographie – Gründe, Ablauf, Werte, Kosten",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Doppler-Sonographie ist ein Ultraschallverfahren, das den Blutfluss in den Gefäßen untersucht. Sie wird vor allem in der Gefäßheilkunde, Neurologie und Gynäkologie zur Diagnose von Durchblutungsstörungen oder Gefäßverengungen eingesetzt. Es handelt sich um ein risikofreies und schmerzloses Verfahren.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://flexikon.doccheck.com/de/Doppler-Sonographie",
+            bold: "DocCheck Flexikon: Doppler-Sonographie",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Die Doppler-Sonographie nutzt den Doppler-Effekt, um den Blutfluss durch Blutgefäße sichtbar oder hörbar zu machen. Sie wird unter anderem zur Untersuchung von Gefäßerkrankungen eingesetzt und kann mit der B-Bild-Sonographie kombiniert werden, um den Blutfluss farbkodiert darzustellen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.doccheck.com/de/detail/articles/2735-doppler-sonographie",
+            bold: "DocCheck: Doppler-Sonographie",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt die technischen Grundlagen der Doppler-Sonographie, die insbesondere in der Diagnostik von Gefäßerkrankungen und Durchblutungsstörungen Anwendung findet. Es werden verschiedene Techniken wie Continuous Wave und Pulsed-wave Doppler beschrieben.",
           },
         ],
       },
@@ -26134,7 +25373,7 @@ export const parentTabs = [
   },
   // end of parent tab 37
 
-  // start of parent tab 38 Knochendichtemessung+
+  // start of parent tab 38 Knochendichtemessung+++++
   {
     id: 38,
     title: "Knochendichtemessung ",
@@ -26729,48 +25968,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Knochendichtemessung",
+            bold: "DocCheck Flexikon: Knochendichtemessung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Knochendichtemessung, auch Osteodensitometrie genannt, ist ein diagnostisches Verfahren zur Bestimmung der Knochendichte. Sie wird zur Diagnose von Osteoporose eingesetzt und gibt Aufschluss über das Risiko von Knochenbrüchen. Die gebräuchlichste Methode ist die DXA (Dual-Energy X-ray Absorptiometry).",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/knochendichtemessung/",
+            bold: "Praktischer Arzt: Knochendichtemessung – Gründe, Ablauf, Kosten",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt, wie die Knochendichtemessung durchgeführt wird, wann sie empfohlen wird und welche Personen ein erhöhtes Risiko für Osteoporose haben. Die Untersuchung ist schmerzfrei und dauert nur wenige Minuten.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/knochendichtemessung/",
+            bold: "NetDoktor: Knochendichtemessung – Was sie aussagt",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Die Knochendichtemessung wird verwendet, um Osteoporose und Knochenschwund zu diagnostizieren. Der Artikel beschreibt, wie die Untersuchung funktioniert, was sie aussagt und wann sie durchgeführt werden sollte. Es wird auch auf den T-Wert und Z-Wert eingegangen, die zur Auswertung der Ergebnisse dienen.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/knochenuntersuchungen-verstehen.html",
+            bold: "Gesundheitsinformation.de: Knochendichtemessung",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt die Knochendichtemessung als Methode zur Früherkennung von Osteoporose. Sie geht auf die Risiken der Untersuchung ein und erklärt, in welchen Fällen die Messung sinnvoll ist, z.B. nach den Wechseljahren oder bei bestimmten Risikofaktoren.",
           },
         ],
       },
@@ -26784,7 +26003,7 @@ export const parentTabs = [
   },
   // end of parent tab 38
 
-  // start of parent tab 39 Knochenmarkbiopsie+
+  // start of parent tab 39 Knochenmarkbiopsie++++++
   {
     id: 39,
     title:
@@ -27401,48 +26620,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Knochenmarkbiopsie",
+            bold: "DocCheck Flexikon: Knochenmarkbiopsie",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Knochenmarkbiopsie ist ein diagnostisches Verfahren zur Untersuchung von Knochenmark. Sie wird zur Diagnose von Blutkrankheiten wie Leukämie oder Anämie verwendet. Eine Nadel wird in den Beckenkamm eingeführt, um eine kleine Probe des Knochenmarks zu entnehmen, die anschließend histologisch untersucht wird.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/biopsie/knochenmarkbiopsie/",
+            bold: "Praktischer Arzt: Knochenmarkbiopsie – Ablauf, Gründe, Risiken",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Knochenmarkbiopsie, die oft zur Diagnose von Bluterkrankungen wie Leukämie oder Anämien durchgeführt wird. Der Artikel erklärt, welche Risiken und Nebenwirkungen mit dem Eingriff verbunden sind und wie der Patient sich darauf vorbereitet.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/knochenmarkpunktion/",
+            bold: "NetDoktor: Knochenmarkbiopsie – Gründe, Ablauf, Risiken",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "NetDoktor beschreibt die Knochenmarkbiopsie als ein wichtiges diagnostisches Verfahren zur Untersuchung des blutbildenden Systems. Die Untersuchung hilft bei der Diagnose von Krankheiten wie Leukämie oder Anämie und wird unter lokaler Betäubung durchgeführt.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/glossar/knochenmark.html",
+            bold: "Gesundheitsinformation.de: Knochenmarkbiopsie",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle bietet eine detaillierte Beschreibung der Knochenmarkbiopsie, einschließlich der Gründe für den Eingriff, wie z.B. bei Verdacht auf Leukämie oder Knochenerkrankungen. Es werden auch die Risiken, der Ablauf und die Nachsorge des Eingriffs erläutert.",
           },
         ],
       },
@@ -27456,7 +26655,7 @@ export const parentTabs = [
   },
   // end of parent tab 39
 
-  // start of parent tab 40 Pleurapunktion
+  // start of parent tab 40 Pleurapunktion+++++++
   {
     id: 40,
     title: "Pleurapunktion",
@@ -28064,48 +27263,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Pleurapunktion",
+            bold: "DocCheck Flexikon: Pleurapunktion",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Pleurapunktion ist ein diagnostisches und therapeutisches Verfahren, bei dem Flüssigkeit aus dem Pleuraspalt entnommen wird. Sie wird zur Untersuchung und Behandlung von Pleuraergüssen durchgeführt, die durch Erkrankungen wie Herzinsuffizienz, Infektionen oder Tumoren entstehen können.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.netdoktor.de/therapien/pleurapunktion/",
+            bold: "NetDoktor: Pleurapunktion – Gründe, Ablauf, Risiken",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Pleurapunktion, bei der eine Nadel in den Pleuraspalt eingeführt wird, um Flüssigkeit zu entnehmen. Es werden mögliche Gründe für die Punktion, wie Pleuraergüsse und Infektionen, sowie die Risiken des Verfahrens erläutert.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.gesundheit.gv.at/labor/untersuchungen/pleurapunktion.html",
+            bold: "Gesundheitsinformation.at: Was ist eine Pleurapunktion?",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "Diese Quelle erklärt die Durchführung der Pleurapunktion, um Flüssigkeit aus der Pleura zu entnehmen und zu analysieren. Der Eingriff wird bei Verdacht auf Infektionen oder Krebs durchgeführt, um die Ursache des Pleuraergusses festzustellen.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://flexikon.doccheck.com/de/Pleuraerguss",
+            bold: "DocCheck Flexikon: Pleuraerguss",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Der Pleuraerguss ist eine Ansammlung von Flüssigkeit im Pleuraspalt, die zu Atemnot und Schmerzen führen kann. Die Pleurapunktion wird eingesetzt, um die Art der Flüssigkeit zu untersuchen und gegebenenfalls eine therapeutische Entlastung zu erreichen.",
           },
         ],
       },
@@ -28121,7 +27300,7 @@ export const parentTabs = [
 
   //Körperliche Untersuchung
 
-  // start of parent tab 41 Abdomenpalpation+
+  // start of parent tab 41 Abdomenpalpation+++++
   {
     id: 41,
     title: "Abdomenpalpation",
@@ -28731,48 +27910,16 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Abdomenpalpation",
+            bold: "DocCheck Flexikon: Abdomenpalpation",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Abdomenpalpation ist eine klinische Untersuchung, bei der der Bauchraum durch Abtasten auf mögliche Auffälligkeiten wie Schmerzen, Verhärtungen oder Organvergrößerungen überprüft wird. Sie ist eine zentrale Methode in der klinischen Diagnostik von Erkrankungen des Bauchraums.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/palpation/",
+            bold: "Praktischer Arzt: Abdomenpalpation – Ablauf und Bedeutung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
-          },
-          {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
-            other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle beschreibt den Ablauf der Abdomenpalpation, bei der der Bauch systematisch abgetastet wird, um Vergrößerungen der Organe oder Flüssigkeitsansammlungen zu erkennen. Sie wird oft in Kombination mit anderen diagnostischen Verfahren wie der Ultraschalluntersuchung durchgeführt.",
           },
         ],
       },
@@ -28786,7 +27933,7 @@ export const parentTabs = [
   },
   // end of parent tab 41
 
-  // start of parent tab 42 Herzauskultation
+  // start of parent tab 42 Herzauskultation++++++
   {
     id: 42,
     title: "Herzauskultation",
@@ -29407,48 +28554,28 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Herzauskultation",
+            bold: "DocCheck Flexikon: Herzauskultation",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Herzauskultation ist eine klinische Untersuchungstechnik zur Beurteilung der Herzgeräusche mittels Stethoskop. Sie wird verwendet, um Herzgeräusche, Klappengeräusche und mögliche pathologische Befunde wie Herzklappenfehler oder Herzrhythmusstörungen zu erkennen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/auskultation/",
+            bold: "Praktischer Arzt: Herzauskultation – Ablauf, Befunde, Bedeutung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Herzauskultation und erklärt die verschiedenen Herzgeräusche wie Systolen und Diastolen, sowie typische Befunde wie Herzgeräusche bei Herzklappenfehlern oder perikardiale Reibegeräusche.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/auskultation/",
+            bold: "NetDoktor: Herzauskultation – Ursachen und Krankheitsbilder",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
+              "NetDoktor beschreibt die wichtigsten pathologischen Herzgeräusche, die bei der Herzauskultation diagnostiziert werden können. Diese beinhalten z.B. Herzklappenfehler und Herzgeräusche, die auf entzündliche oder strukturelle Erkrankungen des Herzens hinweisen können.",
           },
           {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
+            bold_link: "https://www.gesundheitsinformation.de/themengebiete/herz-und-kreislauf.html",
+            bold: "Gesundheitsinformation.de: Herzauskultation",
             other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt, wie die Herzauskultation als nicht-invasive Methode zur Überprüfung der Herzfunktion genutzt wird. Sie erläutert, wie normale Herzgeräusche von pathologischen Befunden unterschieden werden und welche Krankheitsbilder durch abnormale Herzgeräusche diagnostiziert werden können.",
           },
         ],
       },
@@ -29462,7 +28589,7 @@ export const parentTabs = [
   },
   // end of parent tab 42
 
-  // start of parent tab 43 Lungenauskultation
+  // start of parent tab 43 Lungenauskultation+++++
   {
     id: 43,
     title: "Lungenauskultation",
@@ -30096,48 +29223,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Auskultation",
+            bold: "DocCheck Flexikon: Lungenauskultation",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Lungenauskultation ist eine wichtige klinische Untersuchung zur Beurteilung der Atemgeräusche. Sie wird verwendet, um pathologische Geräusche wie Rasselgeräusche, Giemen oder Stridor zu identifizieren, die auf Erkrankungen wie Pneumonie, Bronchitis oder Asthma hinweisen können.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/auskultation/",
+            bold: "Praktischer Arzt: Lungenauskultation – Ablauf und Befunde",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der Lungenauskultation und die möglichen Befunde, wie normale vesikuläre Atemgeräusche und pathologische Geräusche. Die Untersuchung hilft bei der Diagnose von Erkrankungen wie Pneumonie, COPD oder Lungenödem.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/lungenfunktionstest/",
+            bold: "NetDoktor: Lungenauskultation – Gründe, Ablauf, Risiken",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Die Lungenauskultation wird verwendet, um Erkrankungen der Atemwege zu diagnostizieren. Sie hilft dabei, abnormale Atemgeräusche wie Rasselgeräusche, Stridor oder verminderte Atemgeräusche zu erkennen. Diese Befunde sind wichtig für die Diagnose von Asthma, Lungenentzündung oder anderen pulmonalen Erkrankungen.",
           },
         ],
       },
@@ -30793,48 +29894,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Neurologische_Untersuchung",
+            bold: "DocCheck Flexikon: Neurologische Untersuchung",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die neurologische Untersuchung ist eine umfassende Routineuntersuchung zur Beurteilung von zentralen und peripheren Funktionsstörungen. Sie umfasst die Überprüfung der Hirnnerven, Motorik, Reflexe, Sensibilität und Koordination. Auch kognitive Fähigkeiten und das vegetative Nervensystem werden untersucht.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/neurologische-untersuchung/",
+            bold: "Praktischer Arzt: Neurologische Untersuchung – Ablauf und Tests",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle beschreibt den Ablauf der neurologischen Untersuchung, bei der der Arzt systematisch die Funktionen des Nervensystems überprüft. Die Tests beinhalten die Prüfung der Hirnnerven, Reflexe, Koordination und Sensibilität. Auch kognitive Fähigkeiten wie Gedächtnis und Aufmerksamkeit werden getestet.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://www.netdoktor.de/diagnostik/neurologische-untersuchung/",
+            bold: "NetDoktor: Neurologische Erkrankungen – Ursachen und Symptome",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Diese Quelle erklärt häufige neurologische Erkrankungen wie Schlaganfall, Epilepsie, Multiple Sklerose und Parkinson. Sie beschreibt die typischen Symptome und wie neurologische Untersuchungen zur Diagnosestellung genutzt werden.",
           },
         ],
       },
@@ -31458,48 +30533,22 @@ export const parentTabs = [
         text: "",
         text_list: [
           {
-            bold_link: "https://www.doccheck.com",
-            bold: "DocCheck",
+            bold_link: "https://flexikon.doccheck.com/de/Perkussion",
+            bold: "DocCheck Flexikon: Perkussion",
             other:
-              "Bietet detaillierte medizinische Informationen, einschließlich Artikel und Community-Diskussionen zu verschiedenen radiologischen Techniken, einschließlich Röntgen.",
+              "Die Perkussion ist eine Untersuchungsmethode, bei der durch Abklopfen des Körpers Klopfschall erzeugt wird, um Rückschlüsse auf die darunterliegenden Gewebe und Organe zu ziehen. Sie wird zur Untersuchung von Lungen und Bauchorganen eingesetzt. Unterschiedliche Klopftöne können auf Erkrankungen wie Pleuraerguss oder Pneumothorax hinweisen.",
           },
           {
-            bold_link: "https://www.amboss.com",
-            bold: "AMBOSS",
+            bold_link: "https://www.praktischarzt.de/untersuchungen/perkussion/",
+            bold: "Praktischer Arzt: Perkussion – Bedeutung und Durchführung",
             other:
-              "Eine umfassende medizinische Referenzseite, die ausführliche Erklärungen zu medizinischen Verfahren, einschließlich Röntgendiagnostik, bietet.",
+              "Diese Quelle erklärt, wie die Perkussion als diagnostische Methode angewendet wird, um den Zustand der Lunge, des Herzens und des Bauches zu untersuchen. Die Methode hilft, Flüssigkeitsansammlungen oder Luftansammlungen im Brustkorb zu erkennen.",
           },
           {
-            bold_link: "https://www.netdoktor.de/diagnostik/roentgen/",
-            bold: "NetDoktor",
+            bold_link: "https://flexikon.doccheck.com/de/Klopfschall",
+            bold: "DocCheck Flexikon: Klopfschall",
             other:
-              "Bietet detaillierte Informationen über die Gründe, Verfahren und Risiken von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.stiftung-gesundheitswissen.de/gesundheitsthemen/diagnostik/roentgen/",
-            bold: "Stiftung Gesundheitswissen",
-            other:
-              "Erläutert, wie Röntgen funktioniert, die verschiedenen Formen und was während der Untersuchung zu erwarten ist.",
-          },
-          {
-            bold_link: "https://www.medpertise.de/roentgen/",
-            bold: "Medpertise",
-            other:
-              "Diskutiert verschiedene Anwendungen, Funktionsweisen und den Ablauf von Röntgenuntersuchungen.",
-          },
-          {
-            bold_link:
-              "https://www.lifeline.de/untersuchungen/roentgen-id166080.html",
-            bold: "Lifeline",
-            other:
-              "Bietet Informationen zu den Vorteilen, Risiken und Abläufen von Röntgenuntersuchungen, einschließlich spezifischer Formen wie Mammographie und CT-Scans.",
-          },
-          {
-            bold_link: "https://www.praktischarzt.de/roentgen/",
-            bold: "PraktischArzt",
-            other:
-              "Beschreibt den Prozess, die Vorbereitung und die Anwendungen von Röntgen in der medizinischen Diagnostik.",
+              "Klopfschall bezeichnet den Klang, der durch die Perkussion erzeugt wird. Abweichungen vom normalen Klopfschall, wie ein gedämpfter oder hohler Klang, können auf pathologische Veränderungen wie Ergüsse, Tumoren oder Luftansammlungen hinweisen.",
           },
         ],
       },

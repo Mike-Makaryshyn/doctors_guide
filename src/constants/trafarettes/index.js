@@ -5,6 +5,10 @@ import kolorektaleskarzinom from "./subpages/kolorektaleskarzinom";
 import uicc from "./subpages/uicc";
 import tnm from "./subpages/tnm";
 import aorta from "./subpages/anatomie/aorta";
+import koerperachsen from "./subpages/koerperachsen";
+import bewegungall from "./subpages/bewegungall";
+import richtungen from "./subpages/richtungen";
+import gerinnung from "./subpages/gerinnung/gerinnung";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -13,7 +17,11 @@ const all_pages_data = [
    kolorektaleskarzinom,
    uicc,
    tnm,
-   aorta
+   aorta,
+   koerperachsen,
+   bewegungall,
+   richtungen,
+   gerinnung
 ];
 
 export default all_pages_data;
