@@ -54,7 +54,7 @@ export const parentTabs = [
   // start of parent tab: 1 Computertomographie
   {
     id: 1,
-    title: "Computertomographie(CT)",
+    title: "Computertomographie(CT)/CT-Scan",
     checked: false,
     childTabs: [
       // 1tab id11
@@ -721,7 +721,7 @@ export const parentTabs = [
   // start of parent tab: 2 2MRT
   {
     id: 2,
-    title: "MRT",
+    title: "MRT/Kernspin",
 
     checked: false,
     childTabs: [
@@ -1390,7 +1390,7 @@ export const parentTabs = [
   // start of parent tab: 3 Röntgen
   {
     id: 3,
-    title: "Röntgen",
+    title: "Röntgen/Röntgenaufnahme",
     checked: false,
     childTabs: [
       // 1tab 27
@@ -2047,7 +2047,7 @@ export const parentTabs = [
   // start of parent tab 4 Ultraschall+
   {
     id: 4,
-    title: "Ultraschall",
+    title: "Sonographie/Ultraschall",
     checked: false,
     childTabs: [
       // 1tab 35
@@ -2766,7 +2766,7 @@ export const parentTabs = [
   {
     id: 5,
     title:
-      "PET-CT (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)",
+      "PET-CT (Positronen-Emissions-Tomographie kombiniert mit Computertomographie)/PET-Scan",
     checked: false,
     childTabs: [
       // 1tab 43
@@ -3402,7 +3402,7 @@ export const parentTabs = [
   // start of parent tab 6 Single-Photon-Emissions-Computertomographie (SPECT)+
   {
     id: 6,
-    title: "Single-Photon-Emissions-Computertomographie (SPECT)",
+    title: "Single-Photon-Emissions-Computertomographie (SPECT)/SPECT-Scan",
     checked: false,
     childTabs: [
       // 1tab 51
@@ -4053,7 +4053,7 @@ export const parentTabs = [
   // start of parent tab 7 Breischluck+
   {
     id: 7,
-    title: "Breischluck",
+    title: "Breischluck/Schlucktest",
     checked: false,
     childTabs: [
       // 1tab 59
@@ -4758,7 +4758,7 @@ export const parentTabs = [
   // start of parent tab 8 Skelettszintigraphie+
   {
     id: 8,
-    title: "Skelettszintigraphie",
+    title: "Skelettszintigraphie/Knochen-Szintigrafie",
     checked: false,
     childTabs: [
       // 1tab 67
@@ -5424,7 +5424,7 @@ export const parentTabs = [
   // start of parent tab 9 Schilddrüsen-Szintigraphie+
   {
     id: 9,
-    title: "Schilddrüsen-Szintigraphie",
+    title: "Schilddrüsen-Szintigraphie/Schilddrüsen-Untersuchung",
     checked: false,
     childTabs: [
       // 1tab 75
@@ -6751,7 +6751,7 @@ export const parentTabs = [
   // start of parent tab 11 echokardiographie+
   {
     id: 11,
-    title: "Echokardiographie",
+    title: "Echokardiographie/Herzultraschall/Echo",
     checked: false,
     childTabs: [
       // 1tab 95
@@ -7428,7 +7428,7 @@ export const parentTabs = [
   // start of parent tab 12 Belastung EKG+
   {
     id: 12,
-    title: "Belastung-EKG",
+    title: "Belastung-EKG/Stresstest-EKG",
     checked: false,
     childTabs: [
       // 1tab 103
@@ -8062,7 +8062,7 @@ export const parentTabs = [
   // start of parent tab 13 Langzeit EKG+
   {
     id: 13,
-    title: "Langzeit-EKG",
+    title: "Langzeit-EKG/24-Stunden-EKG",
     checked: false,
     childTabs: [
       // 1tab 111
@@ -8740,7 +8740,7 @@ export const parentTabs = [
   // start of parent tab 14 Herzkatheteruntersuchung
   {
     id: 14,
-    title: "Herzkatheteruntersuchung",
+    title: "Herzkatheteruntersuchung/Herzkatheter",
     checked: false,
     childTabs: [
       // 1tab 119
@@ -9448,7 +9448,7 @@ export const parentTabs = [
   // start of parent tab 15 Arthroskopie+
   {
     id: 15,
-    title: "Arthroskopie",
+    title: "Arthroskopie/Gelenksspiegelung",
     checked: false,
     childTabs: [
       // 1tab 127
@@ -10096,7 +10096,7 @@ export const parentTabs = [
   // start of parent tab 16 Gastroskopie++++++
   {
     id: 16,
-    title: "Gastroskopie ",
+    title: "Gastroskopie/Magenspiegelung",
     checked: false,
     childTabs: [
       // 1tab 135
@@ -10792,7 +10792,7 @@ export const parentTabs = [
   // start of parent tab 17 Endoskopische retrograde Cholangiopankreatikographie (ERCP)++++
   {
     id: 17,
-    title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)",
+    title: "Endoskopische retrograde Cholangiopankreatikographie (ERCP)/Gallen- und Bauchspeicheldrüsenuntersuchung",
     checked: false,
     childTabs: [
       // 1tab 143
@@ -11517,7 +11517,7 @@ export const parentTabs = [
   // start of parent tab 18 Koloskopie++++
   {
     id: 18,
-    title: "Koloskopie  ",
+    title: "Koloskopie/Darmspiegelung",
     checked: false,
     childTabs: [
       // 1tab 151
@@ -12186,7 +12186,7 @@ export const parentTabs = [
   // start of parent tab 19 Ösophagogastroduodenoskopie+++++
   {
     id: 19,
-    title: "Ösophagogastroduodenoskopie",
+    title: "Ösophagogastroduodenoskopie/Magenspiegelung mit Zwölffingerdarmuntersuchung",
     checked: false,
     childTabs: [
       // 1tab 159
@@ -12863,7 +12863,7 @@ export const parentTabs = [
   // start of parent tab 20 Bronchoskopie++++
   {
     id: 20,
-    title: "Bronchoskopie",
+    title: "Bronchoskopie/Lungenspiegelung",
     checked: false,
     childTabs: [
       // 1tab 167
@@ -13500,7 +13500,7 @@ export const parentTabs = [
   // start of parent tab 21 Die bronchoalveoläre Lavage++++
   {
     id: 21,
-    title: "Bronchoalveoläre Lavage",
+    title: "Bronchoalveoläre Lavage/Lungenwäsche",
     checked: false,
     childTabs: [
       // 1tab 175
@@ -14146,7 +14146,7 @@ export const parentTabs = [
   // start of parent tab 22 Zystoskopie++++++
   {
     id: 22,
-    title: "Zystoskopie",
+    title: "Zystoskopie/Blasenspiegelung",
     checked: false,
     childTabs: [
       // 1tab 183
@@ -14834,7 +14834,7 @@ export const parentTabs = [
   // start of parent tab 23 Blutbild+++++++
   {
     id: 23,
-    title: "Blutbild",
+    title: "Blutbild/Blutuntersuchung",
     checked: false,
     childTabs: [
       // 1tab 191
@@ -15642,7 +15642,7 @@ export const parentTabs = [
   // start of parent tab 24 Blutuntersuchung+++++++
   {
     id: 24,
-    title: "Blutuntersuchung",
+    title: "Blutuntersuchung/Bluttest",
     checked: false,
     childTabs: [
       // 1tab 199
@@ -16375,7 +16375,7 @@ export const parentTabs = [
   // start of parent tab 25 Blutgerinnung+++++
   {
     id: 25,
-    title: "Blutgerinnung",
+    title: "Blutgerinnung/Gerinnungstest",
     checked: false,
     childTabs: [
       // 1tab 207
@@ -17053,7 +17053,7 @@ export const parentTabs = [
   // start of parent tab 25 Urinuntersuchung+++++
   {
     id: 26,
-    title: "Urinuntersuchung",
+    title: "Urinuntersuchung/Urintest",
     checked: false,
     childTabs: [
       // 1tab 215
@@ -17791,7 +17791,7 @@ export const parentTabs = [
   // start of parent tab 26 Stuhluntersuchung++++++
   {
     id: 27,
-    title: "Stuhluntersuchung",
+    title: "Stuhluntersuchung/Stuhlprobe",
     checked: false,
     childTabs: [
       // 1tab 223
@@ -18563,7 +18563,7 @@ export const parentTabs = [
   // start of parent tab 28 Biopsie+++++
   {
     id: 28,
-    title: "Biopsie",
+    title: "Biopsie/Gewebeentnahme",
     checked: false,
     childTabs: [
       // 1tab 231
@@ -19223,7 +19223,7 @@ export const parentTabs = [
   // start of parent tab 29 Spirometrie+++++
   {
     id: 29,
-    title: "Lungenfunktionstest (Spirometrie)",
+    title: "Lungenfunktionstest (Spirometrie)/Lungenfunktionstest/LuFu",
     checked: false,
     childTabs: [
       // 1tab 239
@@ -19928,7 +19928,7 @@ export const parentTabs = [
   // start of parent tab 30 Audiometrie+
   {
     id: 30,
-    title: "Audiometrie",
+    title: "Audiometrie/Hörtest",
     checked: false,
     childTabs: [
       // 1tab 247
@@ -20567,7 +20567,7 @@ export const parentTabs = [
   // start of parent tab 31 Tympanometrie+++++
   {
     id: 31,
-    title: "Tympanometrie",
+    title: "Tympanometrie/Mittelohrfunktionstest",
     checked: false,
     childTabs: [
       // 1tab 255
@@ -21207,7 +21207,7 @@ export const parentTabs = [
   // start of parent tab 32 Nervenleitgeschwindigkeit++++
   {
     id: 32,
-    title: "Nervenleitgeschwindigkeit",
+    title: "Nervenleitgeschwindigkeit/Nerventest",
     checked: false,
     childTabs: [
       // 1tab 263
@@ -21870,7 +21870,7 @@ export const parentTabs = [
   // start of parent tab 33 Elektroenzephalographie +++++
   {
     id: 33,
-    title: "Elektroenzephalographie",
+    title: "Elektroenzephalographie/Gehirnströme messen",
     checked: false,
     childTabs: [
       // 1tab 271
@@ -22565,7 +22565,7 @@ export const parentTabs = [
   // start of parent tab 34 Lumbalpunktion+++++
   {
     id: 34,
-    title: "Lumbalpunktion",
+    title: "Lumbalpunktion/Rückenmarkswasserentnahme",
     checked: false,
     childTabs: [
       // 1tab 279
@@ -23276,7 +23276,7 @@ export const parentTabs = [
   // start of parent tab 35 Elektromyographie++++++
   {
     id: 35,
-    title: "Elektromyographie(EMG)",
+    title: "Elektromyographie(EMG)/Muskelfunktionstest",
     checked: false,
     childTabs: [
       // 1tab 287
@@ -23927,7 +23927,7 @@ export const parentTabs = [
   // start of parent tab 36 Angiographie+++++
   {
     id: 36,
-    title: "Angiographie",
+    title: "Angiographie/Gefäßdarstellung",
     checked: false,
     childTabs: [
       // 1tab 287
@@ -24713,7 +24713,7 @@ export const parentTabs = [
   // start of parent tab 37 Doppler-Sonographie+++++
   {
     id: 37,
-    title: "Doppler-Sonographie",
+    title: "Doppler-Sonographie/Doppler-Ultraschall",
     checked: false,
     childTabs: [
       // 1tab 303
@@ -25376,7 +25376,7 @@ export const parentTabs = [
   // start of parent tab 38 Knochendichtemessung+++++
   {
     id: 38,
-    title: "Knochendichtemessung ",
+    title: "Osteodensitometrie/Knochendichtemessung",
     checked: false,
     childTabs: [
       // 1tab 311
@@ -26007,7 +26007,7 @@ export const parentTabs = [
   {
     id: 39,
     title:
-      "Knochenmarkbiopsie (inklusive Feinnadelbiopsie und Lymphknotenpunktion)",
+      "Knochenmarkbiopsie/Knochenmarksentnahme (inklusive Feinnadelbiopsie und Lymphknotenpunktion)",
     checked: false,
     childTabs: [
       // 1tab 319
@@ -26658,7 +26658,7 @@ export const parentTabs = [
   // start of parent tab 40 Pleurapunktion+++++++
   {
     id: 40,
-    title: "Pleurapunktion",
+    title: "Pleurapunktion/Flüssigkeitsentnahme aus dem Brustraum",
     checked: false,
     childTabs: [
       // 1tab 327
@@ -27303,7 +27303,7 @@ export const parentTabs = [
   // start of parent tab 41 Abdomenpalpation+++++
   {
     id: 41,
-    title: "Abdomenpalpation",
+    title: "Abdomenpalpation/Bauch abtasten",
     checked: false,
     childTabs: [
       // 1tab 335
@@ -27936,7 +27936,7 @@ export const parentTabs = [
   // start of parent tab 42 Herzauskultation++++++
   {
     id: 42,
-    title: "Herzauskultation",
+    title: "Herzauskultation/Herz abhören",
     checked: false,
     childTabs: [
       // 1tab 343
@@ -28592,7 +28592,7 @@ export const parentTabs = [
   // start of parent tab 43 Lungenauskultation+++++
   {
     id: 43,
-    title: "Lungenauskultation",
+    title: "Lungenauskultation/Lunge abhören",
     checked: false,
     childTabs: [
       // 1tab 351
@@ -29255,7 +29255,7 @@ export const parentTabs = [
   // start of parent tab 44 Neurologische Untersuchung
   {
     id: 44,
-    title: "Neurologische Untersuchung",
+    title: "Neurologische Untersuchung/Nervenfunktionstests",
     checked: false,
     childTabs: [
       // 1tab 359
@@ -29926,7 +29926,7 @@ export const parentTabs = [
   // start of parent tab 45 Perkussion
   {
     id: 45,
-    title: "Perkussion",
+    title: "Perkussion/Abklopfen",
     checked: false,
     childTabs: [
       // 1tab 367

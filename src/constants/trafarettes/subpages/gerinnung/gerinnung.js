@@ -2,6 +2,7 @@ import img1 from '../../../../assets/Blutgerinnung.png';
 import img2 from '../../../../assets/thrombozytenadhäsion.png';
 import img3 from '../../../../assets/thrombozytenaggregation.png';
 import img4 from '../../../../assets/anschlussreaktionen.png';
+import img5 from '../../../../assets/Fibrinolyse.png';
 export default {
   path: "gerinnung",
   // http://localhost:5173/trafarette/gerinnung
@@ -68,7 +69,8 @@ export default {
             <h4>4.4. Anschlussreaktionen</h4>
             <img src="${img4}" alt="kaskade" style="max-width: 100%; height: auto;">
             <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong>Fibrinolyse</strong>.</p>
-          </div>`,
+          <img src="${img5}" alt="kaskade" style="max-width: 100%; height: auto;">
+            </div>`,
         },
         {
           id: 5,
