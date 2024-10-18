@@ -68,7 +68,7 @@ export default {
             <p>Ab der Aktivierung von <strong>Faktor Xa</strong> verlaufen die intrinsische und extrinsische Kaskade gemeinsam. Faktor Xa bildet mit <strong>Faktor Va</strong> den <strong>Prothrombinase-Komplex</strong>, der Prothrombin zu Thrombin (Faktor IIa) spaltet. Thrombin sorgt für die Umwandlung von Fibrinogen zu Fibrinmonomeren. Durch die Aktivierung von Faktor XIII werden diese Monomere zu Fibrinpolymeren vernetzt, die den Thrombus stabilisieren.</p>
             <h4>4.4. Anschlussreaktionen</h4>
             <img src="${img4}" alt="kaskade" style="max-width: 100%; height: auto;">
-            <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong>Fibrinolyse</strong>.</p>
+            <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong><a href="/subpages/gerinnung/fibrinolyse">Fibrinolyse</a></strong>.</p>
           <img src="${img5}" alt="kaskade" style="max-width: 100%; height: auto;">
             </div>`,
         },

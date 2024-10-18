@@ -9,6 +9,7 @@ import koerperachsen from "./subpages/koerperachsen";
 import bewegungall from "./subpages/bewegungall";
 import richtungen from "./subpages/richtungen";
 import gerinnung from "./subpages/gerinnung/gerinnung";
+import fibrinolyse from "./subpages/gerinnung/fibrinolyse";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -21,7 +22,8 @@ const all_pages_data = [
    koerperachsen,
    bewegungall,
    richtungen,
-   gerinnung
+   gerinnung,
+   fibrinolyse
 ];
 
 export default all_pages_data;
