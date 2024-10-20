@@ -82,10 +82,6 @@
    span {
       line-height: 18px;
    }
-
-   p {
-      line-height: 22px;
-   }
 }
 
 .activeTab {
@@ -133,9 +129,7 @@
    font-weight: 500;
    transition: all 0.2s ease;
 
-   &:hover {
-      border: 1px solid gray;
-   }
+   border: 1px solid gray;
 
    @media (max-width: 769px) {
       border: 1px solid gray;
@@ -177,7 +171,7 @@
    }
 
    &:hover {
-      border: 1px solid greeb;
+      border: 1px solid #2a7c6f;
    }
 }
 
@@ -206,7 +200,7 @@
 }
 
 .childTab_content {
-   max-width: 90%;
+   max-width: 80%;
    margin: 0 auto;
 }
 
