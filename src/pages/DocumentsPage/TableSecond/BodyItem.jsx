@@ -75,7 +75,7 @@ const BodyItem = ({
                         <div>{row?.[column?.name?.[selectedLanguage]]}</div>
                      )}
                   </div>
-               )}
+               )} 
 
                {column?.name === "links" && (
                   <div className={styles.cellContent}>
