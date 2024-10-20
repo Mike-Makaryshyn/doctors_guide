@@ -10,6 +10,26 @@ import bewegungall from "./subpages/bewegungall";
 import richtungen from "./subpages/richtungen";
 import gerinnung from "./subpages/gerinnung/gerinnung";
 import fibrinolyse from "./subpages/gerinnung/fibrinolyse";
+import antikoagulanzien from "./subpages/gerinnung/antikoagulanzien";
+import citratantikoagulation from "./subpages/gerinnung/citratantikoagulation";
+import citrat from "./subpages/gerinnung/citrat";
+import ass from "./subpages/gerinnung/ass";
+import vonwillebrant from "./subpages/gerinnung/vonwillebrant";
+import willebrandjürgenssyndrom from "./subpages/gerinnung/willebrandjürgenssyndrom";
+import vonicogalfa from "./subpages/gerinnung/vonicogalfa";
+import glykoproteinIIb from "./subpages/gerinnung/glykoproteinIIb";
+import faktorI from "./subpages/gerinnung/Faktoren/faktorI";
+import faktorII from "./subpages/gerinnung/Faktoren/faktorII";
+import faktorIII from "./subpages/gerinnung/Faktoren/faktorIII";
+import faktorIV from "./subpages/gerinnung/Faktoren/faktorIV";
+import faktorV from "./subpages/gerinnung/Faktoren/faktorV";
+import faktorVII from "./subpages/gerinnung/Faktoren/faktorVII";
+import faktorVIII from "./subpages/gerinnung/Faktoren/faktorVIII";
+import faktorIX from "./subpages/gerinnung/Faktoren/faktorIX";
+import faktorX from "./subpages/gerinnung/Faktoren/faktorX";
+import faktorXI from "./subpages/gerinnung/Faktoren/faktorXI";
+import faktorXII from "./subpages/gerinnung/Faktoren/faktorXII";
+import faktorXIII from "./subpages/gerinnung/Faktoren/faktorXIII";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -23,7 +43,27 @@ const all_pages_data = [
    bewegungall,
    richtungen,
    gerinnung,
-   fibrinolyse
+   fibrinolyse,
+   antikoagulanzien,
+   citratantikoagulation,
+   citrat,
+   ass,
+   vonwillebrant,
+   willebrandjürgenssyndrom,
+   vonicogalfa,
+   glykoproteinIIb,
+   faktorI,
+   faktorII,
+   faktorIII,
+   faktorIV,
+   faktorV,
+   faktorVII,
+   faktorVIII,
+   faktorIX,
+   faktorX,
+   faktorXI,
+   faktorXII,
+   faktorXIII
 ];
 
 export default all_pages_data;

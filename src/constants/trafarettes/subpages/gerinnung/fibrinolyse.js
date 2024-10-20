@@ -6,7 +6,7 @@ export default {
   content: [
     {
       id: 1,
-      title: "Gerinnung",
+      title: "Fibrinolyse (Fibrinspaltung)",
       childTabs: [
         //  Start of child tab 1
         {
@@ -14,7 +14,7 @@ export default {
           "title": "1. Definition",
           "textWithFormatting": `<div>
             <h2>1. Definition</h2>
-            <p>Die Fibrinolyse (Fibrinspaltung) beschreibt den körpereigenen Prozess der Auflösung eines Blutgerinnsels (Thrombus) durch das Enzym Plasmin. Plasmin spaltet dabei die Fibrinpolymere, die den Thrombus zusammenhalten, in kleine Fibrinabbauprodukte, wodurch der Thrombus zerfällt. Als wesentlicher Bestandteil der Hämostase unterliegt die Fibrinolyse einer strengen Regulierung durch biochemische Prozesse, um ein Gleichgewicht zwischen Blutung und Thrombose zu gewährleisten.</p>
+            <p>Die Fibrinolyse (Fibrinspaltung) beschreibt den körpereigenen Prozess der Auflösung eines Blutgerinnsels (Thrombus) durch das Enzym Plasmin. Plasmin spaltet dabei die Fibrinpolymere, die den Thrombus zusammenhalten, in kleine Fibrinabbauprodukte, wodurch der Thrombus zerfällt. Als wesentlicher Bestandteil der <a href="/trafarette/gerinnung">Hämostase</a> unterliegt die Fibrinolyse einer strengen Regulierung durch biochemische Prozesse, um ein Gleichgewicht zwischen Blutung und Thrombose zu gewährleisten.</p>
           </div>`
         },
         {
