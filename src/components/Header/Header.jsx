@@ -6,7 +6,8 @@ import {
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import "./header.css";
+import styles from "./header.scss";
+import cn from "classnames";
 
 const Header = () => {
    const selectedLanguage = localStorageGet(
@@ -35,8 +36,10 @@ const Header = () => {
          >
             Germanmove
          </h2>
-         <span className={'sRegion'}>{location?.pathname !== "/lands" &&selectedRegion}</span>
-         <div className="flexBt">
+         <span className={"sRegion"}>
+            {location?.pathname !== "/lands" && selectedRegion}
+         </span>
+         <div className={cn(styles.hide_mobile, "flexBt")}>
             <span style={{ marginRight: "20px" }}>
                {languages[selectedLanguage].language}
             </span>

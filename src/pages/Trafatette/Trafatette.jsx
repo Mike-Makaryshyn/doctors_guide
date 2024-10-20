@@ -10,13 +10,13 @@ const Trafarette = () => {
       all_pages_data?.[0]?.content?.[0] || null
    );
 
-   const [childTabOpen, setChildTabOpen] = useState(
-      all_pages_data?.[0]?.content?.[0]?.childTabs?.[0] || null
-   );
+   const params = useParams();
+   const page = all_pages_data?.find((p) => p?.path === params?.name)?.content;
+   const [childTabOpen, setChildTabOpen] = useState([page?.[0]?.childTabs[0]] || []);
+
    const [showAnswers, setShowAnswers] = useState(false);
    const [checkedParentIds, setCheckedParentIds] = useState([]);
    const activeTabRef = useRef(null);
-   const params = useParams();
 
    const [feedback, setFeedback] = useState({});
    const timeoutRef = useRef(null);
@@ -28,10 +28,10 @@ const Trafarette = () => {
 
       if (parentTabOpen?.id === tab?.id) {
          setParentTabOpen(null);
-         setChildTabOpen(null);
+         setChildTabOpen([]);
       } else {
          setParentTabOpen(tab);
-         setChildTabOpen(tab?.childTabs?.[0]);
+         setChildTabOpen([tab?.childTabs?.[0]]);
 
          if (activeTabRef.current) {
             activeTabRef.current.scrollIntoView({
@@ -100,11 +100,15 @@ const Trafarette = () => {
          return;
       }
 
-      if (childTabOpen?.id === tab?.id) {
-         setChildTabOpen(null);
-      } else {
-         setChildTabOpen(tab);
-      }
+      setChildTabOpen((prevTabs) => {
+         if (prevTabs.some((openTab) => openTab.id === tab.id)) {
+            // If the tab is already open, remove it from the array (close the tab)
+            return prevTabs.filter((openTab) => openTab.id !== tab.id);
+         } else {
+            // Otherwise, add the tab to the array (open the tab)
+            return [...prevTabs, tab];
+         }
+      });
    };
 
    const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -137,6 +141,7 @@ const Trafarette = () => {
    const renderChildTabContent = (childTab, childIdx) => {
       return (
          <div
+            className={styles.childTab_content}
             dangerouslySetInnerHTML={{ __html: childTab?.textWithFormatting }}
          ></div>
       );
@@ -282,8 +287,14 @@ const Trafarette = () => {
                                           <div
                                              className={cn(
                                                 styles.child_tab,
-                                                childTabOpen?.id ===
-                                                   childTab?.id
+                                                Array.isArray(childTabOpen) &&
+                                                   childTabOpen
+                                                      .filter(Boolean)
+                                                      .some(
+                                                         (openTab) =>
+                                                            openTab?.id ===
+                                                            childTab?.id
+                                                      )
                                                    ? styles.active_child_tab
                                                    : "",
                                                 childTab?.link
@@ -301,8 +312,11 @@ const Trafarette = () => {
                                              }
                                              className={cn(
                                                 styles.childTabContentWrapper,
-                                                childTabOpen?.id ===
-                                                   childTab?.id
+                                                childTabOpen.some(
+                                                   (openTab) =>
+                                                      openTab?.id ===
+                                                      childTab?.id
+                                                )
                                                    ? styles.showChildTab
                                                    : ""
                                              )}

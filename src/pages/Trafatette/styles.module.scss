@@ -121,18 +121,20 @@
 }
 
 .child_tab {
-   border-bottom: 2px transparent;
+   border: 1px transparent;
    width: 100%;
-   padding: 10px;
+   padding: 15px;
    cursor: pointer;
    display: inline-block;
-   max-width: 60%;
-   margin-bottom: 24px;
-
+   margin-bottom: 12px;
+   text-align: left;
+   width: 100%;
+   border-radius: 5px;
+   font-weight: 500;
    transition: all 0.2s ease;
 
    &:hover {
-      border-bottom: 1px solid gray;
+      border: 1px solid gray;
    }
 
    @media (max-width: 769px) {
@@ -164,8 +166,9 @@
 }
 
 .active_child_tab {
-   border-bottom: 1px solid rgb(128, 168, 255);
-   color: rgb(128, 168, 255);
+   border: 1px solid #2a7c6f;
+   border-radius: 5px;
+   color: #2a7c6f;
    font-weight: 600;
 
    @media (max-width: 769px) {
@@ -174,14 +177,21 @@
    }
 
    &:hover {
-      border-bottom: 1px solid rgb(128, 168, 255);
+      border: 1px solid greeb;
    }
 }
 
 .childTabContentWrapper {
    display: none;
    padding: 10px;
-   padding-top: 42px;
+   padding-top: 24px;
+   padding-bottom: 42px;
+   width: 100%;
+
+   p {
+      line-height: 26px;
+   }
+
    cursor: default;
 
    li {
@@ -190,7 +200,14 @@
 }
 
 .showChildTab {
-   display: block;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.childTab_content {
+   max-width: 90%;
+   margin: 0 auto;
 }
 
 .childTabContent {
@@ -348,10 +365,10 @@
    font-size: 16px;
    text-align: center;
    line-height: 1.5;
- }
- 
- .hidden_answer::before {
-   content: '???'; /* Placeholder text */
+}
+
+.hidden_answer::before {
+   content: "???"; /* Placeholder text */
    position: absolute;
    top: 50%;
    left: 50%;
@@ -359,10 +376,10 @@
    font-size: 18px;
    color: rgba(255, 255, 255, 0.6); /* Slightly visible placeholder text */
    z-index: 1;
- }
- 
- .hidden_answer::after {
-   content: 'Hidden Content'; /* Hidden text */
+}
+
+.hidden_answer::after {
+   content: "Hidden Content"; /* Hidden text */
    position: absolute;
    top: 50%;
    left: 50%;
@@ -372,13 +389,12 @@
    opacity: 0; /* Initially hidden */
    transition: opacity 0.5s ease;
    text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.6);
- }
- 
- .hidden_answer:hover::after {
+}
+
+.hidden_answer:hover::after {
    opacity: 1; /* Show text on hover */
- }
- 
- .hidden_answer:hover::before {
+}
+
+.hidden_answer:hover::before {
    opacity: 0; /* Hide placeholder text on hover */
- }
- 
+}
