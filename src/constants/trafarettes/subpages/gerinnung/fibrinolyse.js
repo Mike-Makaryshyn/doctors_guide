@@ -1,4 +1,4 @@
-import img1 from '../../../../assets/hämostase-fibrinolyse.png';
+import img1 from '../../../../assets/hamostase_fibrinolyse.png';
 
 export default {
   path: "fibrinolyse",
