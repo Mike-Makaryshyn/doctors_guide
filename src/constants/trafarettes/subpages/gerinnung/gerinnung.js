@@ -1,5 +1,5 @@
 import img1 from "../../../../assets/Blutgerinnung.png";
-import img2 from "../../../../assets/thrombozytenadhäsion.png";
+import img2 from "../../../../assets/vWF.png";
 import img3 from "../../../../assets/thrombozytenaggregation.png";
 import img4 from "../../../../assets/anschlussreaktionen.png";
 import img5 from "../../../../assets/Fibrinolyse.png";
@@ -28,9 +28,9 @@ export default {
             <section>
               <p>Die Hämostase ist eine lebenswichtige Funktion. Durch sie ist der Körper in der Lage, Schäden in Gefäßen abzudichten und somit einen Blutverlust zu reduzieren bzw. zu verhindern. Nach Verletzung kleinerer Gefäße wie Kapillaren kommt eine Blutung in der Regel bereits nach kurzer Zeit zum Stillstand. Die Hämostase kommt durch das Ineinandergreifen von drei Schritten zustande:</p>
               <ul>
-                <li><strong>Vasokonstriktion:</strong> Die Gefäße verengen sich durch die Wirkung von Substanzen wie Serotonin und Thromboxan, wodurch die Blutzirkulation verringert wird.</li>
-                <li><strong>Thrombozytenadhäsion und -aktivierung:</strong> Verlangsamter Blutfluss fördert die Anlagerung und Aktivierung von Thrombozyten.</li>
-                <li><strong>Fibrinbildung:</strong> Schließlich bildet sich durch die plasmatische Gerinnung ein Netzwerk aus Fibrin und Thrombozyten, das den verletzten Gefäßabschnitt verschließt.</li>
+                <li>• <strong>Vasokonstriktion:</strong> Die Gefäße verengen sich durch die Wirkung von Substanzen wie Serotonin und Thromboxan, wodurch die Blutzirkulation verringert wird.</li>
+                <li>• <strong>Thrombozytenadhäsion und -aktivierung:</strong> Verlangsamter Blutfluss fördert die Anlagerung und Aktivierung von Thrombozyten.</li>
+                <li>• <strong>Fibrinbildung:</strong> Schließlich bildet sich durch die plasmatische Gerinnung ein Netzwerk aus Fibrin und Thrombozyten, das den verletzten Gefäßabschnitt verschließt.</li>
               </ul>
             </section>`,
         },
@@ -42,77 +42,85 @@ export default {
               <h2>Vaskuläre Blutstillung</h2>
               <p>Bei einer Verletzung des Endothels wird eine sofortige <strong>Vasokonstriktion</strong> ausgelöst, um den Blutverlust zu minimieren. Diese Kontraktion der Blutgefäße erfolgt durch mehrere Mechanismen:</p>
               <ul>
-                <li><strong>Neuraler Stimulationsreflex</strong>: Angeborene Reaktion, bei der die glatte Muskulatur der Gefäßwand kontrahiert.</li>
-                <li><strong>Endothelin</strong>: Ein von den beschädigten Endothelzellen freigesetztes vasokonstriktives Peptid.</li>
-                <li><strong>Thromboxan A2</strong>: Von aktivierten Thrombozyten freigesetzter Vasokonstriktor.</li>
+                <li>• <strong>Neuraler Stimulationsreflex</strong>: Angeborene Reaktion, bei der die glatte Muskulatur der Gefäßwand kontrahiert.</li>
+                <li>• <strong>Endothelin</strong>: Ein von den beschädigten Endothelzellen freigesetztes vasokonstriktives Peptid.</li>
+                <li>• <strong>Thromboxan A2</strong>: Von aktivierten Thrombozyten freigesetzter Vasokonstriktor.</li>
               </ul>
               <p>Dieser Prozess ist eine kurzfristige Maßnahme und bereitet die Grundlage für die <strong>primäre Hämostase</strong>.</p>
         
               <h2>Primäre Hämostase</h2>
               <p>Die primäre Hämostase beginnt unmittelbar nach der Endothelverletzung und führt zur Bildung eines <strong>Thrombozyten-Pfropfs</strong> (weißer Thrombus). Sie besteht aus vier Phasen:</p>
+              <ul>
+                <li>• Thrombozytenadhäsion</li>
+                <li>• Thrombozytenaktivierung</li>
+                <li>• Thrombozytenaggregation</li>
+                <li>• Thrombozytensekretion</li>
+              </ul>
         
-              <h4>3.2. Thrombozytenadhäsion</h4>
+              <h3>Thrombozytenadhäsion</h3>
               <img src="${img2}" alt="kaskade" style="max-width: 100%; height: auto;">
               <ul>
-                <li><strong>GpIb-Rezeptoren</strong> auf der Oberfläche der Thrombozyten binden an den <strong><a href="/trafarette/vonwillebrant">von-Willebrand-Faktors (vWF)</a></strong> innerhalb der subendothelialen Matrix, was die Blutplättchen fest an der Verletzungsstelle hält.</li>
-                <li>Zusätzliche Faktoren wie <strong>Kollagen</strong> und andere Glykoproteinrezeptoren fördern die Bindung und Aktivierung der Thrombozyten.</li>
-              </ul>
-              <p>Die Bindung an <a href="/trafarette/vonwillebrant">vWF</a> und Kollagen aktiviert die Thrombozyten, welche dann Granula freisetzen, die weitere Thrombozyten zur Verletzungsstelle rekrutieren und den Aggregationsprozess verstärken.</p>
-              <ul>
-                <li><strong>Starke Thrombozytenaktivatoren:</strong>
-                  <ul>
-                    <li><strong>Thrombin</strong>: Produziert in der Gerinnungskaskade.</li>
-                    <li><strong>Kollagen</strong>: Direkt an der Verletzungsstelle vorhanden.</li>
-                  </ul>
-                </li>
-                <li><strong>Schwächere Thrombozytenaktivatoren:</strong>
-                  <ul>
-                    <li><strong>ADP</strong>: Freigesetzt von Thrombozyten, fördert die Aktivierung weiterer Thrombozyten.</li>
-                    <li><strong>Adrenalin</strong>: Wirkt als schwächerer Aktivator.</li>
-                  </ul>
-                </li>
-                <li>Aktivierte Thrombozyten verändern ihre Form, bilden <strong>Pseudopodien</strong> und aktivieren den <strong><a href="/trafarette/glykoproteinIIb">Glykoprotein IIb/IIIa</a></strong>, was die Bindung an Fibrinogen ermöglicht.</li>
+                <li>• <strong>GpIb-Rezeptoren</strong> auf der Oberfläche der Thrombozyten binden an den <strong><a href="/trafarette/vonwillebrant">von-Willebrand-Faktor (vWF)</a></strong> innerhalb der subendothelialen Matrix, was die Blutplättchen fest an der Verletzungsstelle hält.</li>
+                <li>• Zusätzliche Faktoren wie <strong>Kollagen</strong> und andere Glykoproteinrezeptoren fördern die Bindung und Aktivierung der Thrombozyten.</li>
               </ul>
         
-              <h4>3.3. Thrombozytenaggregation</h4>
+              <h3>Thrombozytenaktivierung</h3>
+              <p>Die Bindung an <a href="/trafarette/vonwillebrand">vWF</a> und Kollagen aktiviert die Thrombozyten, welche dann Granula freisetzen, die weitere Thrombozyten zur Verletzungsstelle rekrutieren und den Aggregationsprozess verstärken.</p>
+              <ul>
+                <li>• <strong>Starke Thrombozytenaktivatoren:</strong>
+                  <ul>
+                    <li>• <strong>Thrombin</strong>: Produziert in der Gerinnungskaskade.</li>
+                    <li>• <strong>Kollagen</strong>: Direkt an der Verletzungsstelle vorhanden.</li>
+                  </ul>
+                </li>
+                <li>• <strong>Schwächere Thrombozytenaktivatoren:</strong>
+                  <ul>
+                    <li>• <strong>ADP</strong>: Freigesetzt von Thrombozyten, fördert die Aktivierung weiterer Thrombozyten.</li>
+                    <li>• <strong>Adrenalin</strong>: Wirkt als schwächerer Aktivator.</li>
+                  </ul>
+                </li>
+                <li>• Aktivierte Thrombozyten verändern ihre Form, bilden <strong>Pseudopodien</strong> und aktivieren den <strong><a href="/trafarette/glykoproteinIIb">Glykoprotein IIb/IIIa</a></strong>, was die Bindung an Fibrinogen ermöglicht.</li>
+              </ul>
+        
+              <h3>Thrombozytenaggregation</h3>
               <img src="${img3}" alt="kaskade" style="max-width: 100%; height: auto;">
               <p>Die aktivierten Thrombozyten verbinden sich über <strong>Fibrinogen</strong>, das zwei Thrombozyten gleichzeitig binden kann, wodurch <strong>Fibrinogenbrücken</strong> zwischen den Thrombozyten entstehen. Dies führt zur Bildung eines <strong>weißen Thrombus</strong>.</p>
               
-              <h3>4. Thrombozytensekretion:</h3>
+              <h3>Thrombozytensekretion</h3>
               <p>Aktivierte Thrombozyten setzen zwei Arten von Granula frei:</p>
               <ul>
-                <li><strong>Alpha-Granula:</strong> Enthalten Fibrinogen, vWF, Faktor V, PDGF, Thrombozytenfaktor-4, Fibronektin und Thrombospondin.</li>
-                <li><strong>Dense-Granula:</strong> Enthalten ADP, Serotonin, Histamin und Kalzium.</li>
+                <li>• <strong>Alpha-Granula:</strong> Enthalten Fibrinogen, vWF, Faktor V, PDGF, Thrombozytenfaktor-4, Fibronektin und Thrombospondin.</li>
+                <li>• <strong>Dense-Granula:</strong> Enthalten ADP, Serotonin, Histamin und Kalzium.</li>
               </ul>
               <p>Die Freisetzung dieser Substanzen aktiviert weitere Thrombozyten, verstärkt die <strong>Vasokonstriktion</strong>, unterstützt die <strong>Gerinnungskaskade</strong> und fördert die Gefäßreparatur durch Rekrutierung von Fibroblasten und glatten Muskelzellen.</p>
             </section>`,
         },
         {
-          "id": 4,
-          "title": "4. Gerinnungsfaktoren",
-          "textWithFormatting": `<div>
-            <h5>Liste der Gerinnungsfaktoren</h5>
+          id: 4,
+          title: "4. Gerinnungsfaktoren",
+          textWithFormatting: `<div>
+            
             <ul>
-              <li><strong><a href="/trafarette/faktorI">Faktor I (Fibrinogen)</a></strong>: Fibrinogen ist ein lösliches Protein im Blutplasma. Es wird durch Thrombin zu Fibrin umgewandelt, das ein unlösliches Netz bildet und so das Blutgerinnsel stabilisiert.</li>
-              <li><strong><a href="/trafarette/faktorII">Faktor II (Prothrombin)</a></strong>: Prothrombin ist ein inaktives Vorläuferprotein (Proenzym), das durch den Aktivatorkomplex in Thrombin umgewandelt wird. Thrombin spielt eine Schlüsselrolle bei der Umwandlung von Fibrinogen zu Fibrin.</li>
-              <li><strong><a href="/trafarette/faktorIII">Faktor III (Gewebethromboplastin oder Tissue Factor)</a></strong>: Tissue Factor ist ein Protein, das nach Gewebeschädigung freigesetzt wird und den extrinsischen Weg der Blutgerinnung aktiviert, indem es mit Faktor VIIa interagiert.</li>
-              <li><strong><a href="/trafarette/faktorIV">Faktor IV (Kalzium-Ionen)</a></strong>: Kalzium-Ionen sind essentiell für mehrere Schritte der Gerinnungskaskade, insbesondere bei der Aktivierung von Prothrombin und der Bildung von Thrombin.</li>
-              <li><strong><a href="/trafarette/faktorV">Faktor V (Proakzelerin)</a></strong>: Faktor V bildet zusammen mit Faktor X den Prothrombinase-Komplex, der die Umwandlung von Prothrombin in Thrombin katalysiert. Es handelt sich um einen Cofaktor für die Thrombinbildung.</li>
-              <li><strong><a href="/trafarette/faktorVII">Faktor VII (Prokonvertin)</a></strong>: Faktor VII aktiviert den extrinsischen Gerinnungsweg durch Bindung an Tissue Factor und führt zur Aktivierung von Faktor X. Dies ist einer der schnellsten Wege zur Gerinnungsaktivierung.</li>
-              <li><strong><a href="/trafarette/faktorVIII">Faktor VIII (Antihämophiles Globulin A)</a></strong>: Faktor VIII ist ein Cofaktor, der im intrinsischen Gerinnungsweg Faktor IXa unterstützt. Er bildet mit diesem einen Komplex, der die Aktivierung von Faktor X katalysiert. Ein Mangel an Faktor VIII führt zu Hämophilie A.</li>
-              <li><strong><a href="/trafarette/faktorIX">Faktor IX (Antihämophiles Globulin B oder Christmas-Faktor)</a></strong>: Faktor IX aktiviert im Zusammenspiel mit Faktor VIII den Faktor X im intrinsischen Gerinnungsweg. Ein Mangel führt zur Hämophilie B.</li>
-              <li><strong><a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a></strong>: Faktor X ist ein Schlüsselfaktor sowohl im intrinsischen als auch im extrinsischen Weg der Gerinnung. Er wird durch Faktor IXa und VIIa aktiviert und bildet mit Faktor V den Prothrombinase-Komplex, der Prothrombin in Thrombin umwandelt.</li>
-              <li><strong><a href="/trafarette/faktorXI">Faktor XI (Plasmathromboplastin-Antecedent)</a></strong>: Faktor XI spielt eine Rolle im intrinsischen Gerinnungsweg, indem er durch Thrombin aktiviert wird und dann Faktor IX aktiviert. Ein Mangel führt zu einer milden Hämophilie (Hämophilie C).</li>
-              <li><strong><a href="/trafarette/faktorXII">Faktor XII (Hageman-Faktor)</a></strong>: Faktor XII initiiert den intrinsischen Gerinnungsweg durch seine Aktivierung bei Kontakt mit negativ geladenen Oberflächen (z.B. Kollagen). Es ist besonders wichtig für den Beginn der Gerinnung, hat aber klinisch eine geringere Bedeutung bei Blutungen.</li>
-              <li><strong><a href="/trafarette/faktorXIII">Faktor XIII (Fibrinstabilisierender Faktor)</a></strong>: Faktor XIII stabilisiert das Fibringerinnsel durch Quervernetzung der Fibrinfasern, was dem Gerinnsel zusätzliche Festigkeit verleiht.</li>
+              <li>• <strong><a href="/trafarette/faktorI">Faktor I (Fibrinogen)</a></strong>: Fibrinogen ist ein lösliches Protein im Blutplasma. Es wird durch Thrombin zu Fibrin umgewandelt, das ein unlösliches Netz bildet und so das Blutgerinnsel stabilisiert.</li>
+              <li>• <strong><a href="/trafarette/faktorII">Faktor II (Prothrombin)</a></strong>: Prothrombin ist ein inaktives Vorläuferprotein (Proenzym), das durch den Aktivatorkomplex in Thrombin umgewandelt wird. Thrombin spielt eine Schlüsselrolle bei der Umwandlung von Fibrinogen zu Fibrin.</li>
+              <li>• <strong><a href="/trafarette/faktorIII">Faktor III (Gewebethromboplastin oder Tissue Factor)</a></strong>: Tissue Factor ist ein Protein, das nach Gewebeschädigung freigesetzt wird und den extrinsischen Weg der Blutgerinnung aktiviert, indem es mit Faktor VIIa interagiert.</li>
+              <li>• <strong><a href="/trafarette/faktorIV">Faktor IV (Kalzium-Ionen)</a></strong>: Kalzium-Ionen sind essentiell für mehrere Schritte der Gerinnungskaskade, insbesondere bei der Aktivierung von Prothrombin und der Bildung von Thrombin.</li>
+              <li>• <strong><a href="/trafarette/faktorV">Faktor V (Proakzelerin)</a></strong>: Faktor V bildet zusammen mit Faktor X den Prothrombinase-Komplex, der die Umwandlung von Prothrombin in Thrombin katalysiert. Es handelt sich um einen Cofaktor für die Thrombinbildung.</li>
+              <li>• <strong><a href="/trafarette/faktorVII">Faktor VII (Prokonvertin)</a></strong>: Faktor VII aktiviert den extrinsischen Gerinnungsweg durch Bindung an Tissue Factor und führt zur Aktivierung von Faktor X. Dies ist einer der schnellsten Wege zur Gerinnungsaktivierung.</li>
+              <li>• <strong><a href="/trafarette/faktorVIII">Faktor VIII (Antihämophiles Globulin A)</a></strong>: Faktor VIII ist ein Cofaktor, der im intrinsischen Gerinnungsweg Faktor IXa unterstützt. Er bildet mit diesem einen Komplex, der die Aktivierung von Faktor X katalysiert. Ein Mangel an Faktor VIII führt zu Hämophilie A.</li>
+              <li>• <strong><a href="/trafarette/faktorIX">Faktor IX (Antihämophiles Globulin B oder Christmas-Faktor)</a></strong>: Faktor IX aktiviert im Zusammenspiel mit Faktor VIII den Faktor X im intrinsischen Gerinnungsweg. Ein Mangel führt zur Hämophilie B.</li>
+              <li>• <strong><a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a></strong>: Faktor X ist ein Schlüsselfaktor sowohl im intrinsischen als auch im extrinsischen Weg der Gerinnung. Er wird durch Faktor IXa und VIIa aktiviert und bildet mit Faktor V den Prothrombinase-Komplex, der Prothrombin in Thrombin umwandelt.</li>
+              <li>• <strong><a href="/trafarette/faktorXI">Faktor XI (Plasmathromboplastin-Antecedent)</a></strong>: Faktor XI spielt eine Rolle im intrinsischen Gerinnungsweg, indem er durch Thrombin aktiviert wird und dann Faktor IX aktiviert. Ein Mangel führt zu einer milden Hämophilie (Hämophilie C).</li>
+              <li>• <strong><a href="/trafarette/faktorXII">Faktor XII (Hageman-Faktor)</a></strong>: Faktor XII initiiert den intrinsischen Gerinnungsweg durch seine Aktivierung bei Kontakt mit negativ geladenen Oberflächen (z.B. Kollagen). Es ist besonders wichtig für den Beginn der Gerinnung, hat aber klinisch eine geringere Bedeutung bei Blutungen.</li>
+              <li>• <strong><a href="/trafarette/faktorXIII">Faktor XIII (Fibrinstabilisierender Faktor)</a></strong>: Faktor XIII stabilisiert das Fibringerinnsel durch Quervernetzung der Fibrinfasern, was dem Gerinnsel zusätzliche Festigkeit verleiht.</li>
             </ul>
             
             <h5>Weitere wichtige Faktoren und Proteine der Gerinnung</h5>
             <ul>
-              <li><strong><a href="/trafarette/vonwillebrant">Von-Willebrand-Faktor (vWF)</a></strong>: Dieser ist kein Gerinnungsfaktor im engeren Sinne, aber ein Glykoprotein, das die Thrombozytenadhäsion an die Gefäßwand fördert und den Faktor VIII schützt.</li>
-              <li><strong>Protein C und Protein S</strong>: Diese Proteine sind Antikoagulantien und wirken hemmend auf die Gerinnung, indem sie die Faktoren Va und VIIIa inaktivieren.</li>
-              <li><strong>Antithrombin III</strong>: Dieses Protein inaktiviert Thrombin und die Faktoren IXa, Xa, XIa und XIIa, um eine überschießende Gerinnung zu verhindern.</li>
-              <li><strong>Plasminogen/Plasmin</strong>: Plasminogen wird in Plasmin umgewandelt, welches Fibrin abbaut und somit den Abbau von Gerinnseln <a href="/trafarette/fibrinolyse">(Fibrinolyse)</a> einleitet.</li>
+              <li>• <strong><a href="/trafarette/vonwillebrand">Von-Willebrand-Faktor (vWF)</a></strong>: Dieser ist kein Gerinnungsfaktor im engeren Sinne, aber ein Glykoprotein, das die Thrombozytenadhäsion an die Gefäßwand fördert und den Faktor VIII schützt.</li>
+              <li>• <strong><a href="/trafarette/proteinc">Protein C</a> und <a href="/trafarette/proteins">Protein S</a></strong>: Diese Proteine sind Antikoagulantien und wirken hemmend auf die Gerinnung, indem sie die Faktoren Va und VIIIa inaktivieren.</li>
+              <li>• <strong><a href="/trafarette/antithrombin">Antithrombin III</a></strong>: Dieses Protein inaktiviert Thrombin und die Faktoren IXa, Xa, XIa und XIIa, um eine überschießende Gerinnung zu verhindern.</li>
+              <li>• <strong><a href="/trafarette/plasminogen">Plasminogen</a>/<a href="/trafarette/plasmin">Plasmin</a></strong>: Plasminogen wird in Plasmin umgewandelt, welches Fibrin abbaut und somit den Abbau von Gerinnseln <a href="/trafarette/fibrinolyse">(Fibrinolyse)</a> einleitet.</li>
             </ul>
           </div>`
         },
@@ -123,9 +131,9 @@ export default {
             <section>
               <p>Die sekundäre Hämostase beschreibt die eigentliche Blutgerinnung, die etwa 6 bis 10 Minuten dauert. Sie führt zur Bildung eines festen Fibrinnetzes, in das Thrombozyten und Erythrozyten eingebettet werden. Dieses Netzwerk stellt sich makroskopisch als Thrombus dar. Die sekundäre Hämostase kann nach Morawitz in drei Phasen unterteilt werden:</p>
               <ul>
-                <li><strong>Aktivierungsphase</strong></li>
-                <li><strong>Koagulationsphase</strong></li>
-                <li><strong>Retraktionsphase</strong></li>
+                <li>• <strong>Aktivierungsphase</strong></li>
+                <li>• <strong>Koagulationsphase</strong></li>
+                <li>• <strong>Retraktionsphase</strong></li>
               </ul>
               <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
               <p>Es gibt zwei Gerinnungskaskaden: die <strong>intrinsische</strong> und die <strong>extrinsische</strong> Kaskade. Beide Systeme arbeiten über die Aktivierung von Gerinnungsfaktoren in einem stufenweisen Ablauf und führen letztlich zur Thrombinbildung, was die Fibrinpolymerisation anregt.</p>
@@ -141,9 +149,8 @@ export default {
               <p>Ab der Aktivierung von <strong>Faktor Xa</strong> verlaufen die intrinsische und extrinsische Kaskade gemeinsam. Faktor Xa bildet mit <strong>Faktor Va</strong> den <strong>Prothrombinase-Komplex</strong>, der Prothrombin zu Thrombin (Faktor IIa) spaltet. Thrombin sorgt für die Umwandlung von Fibrinogen zu Fibrinmonomeren. Durch die Aktivierung von Faktor XIII werden diese Monomere zu Fibrinpolymeren vernetzt, die den Thrombus stabilisieren.</p>
         
               <h4>Anschlussreaktionen</h4>
-              <img src="${img4}" alt="kaskade" style="max-width: 100%; height: auto;">
-              <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong><a href="/trafarette/fibrinolyse">Fibrinolyse</a></strong>.</p>
               <img src="${img5}" alt="kaskade" style="max-width: 100%; height: auto;">
+              <p>Nach der Thrombusbildung ziehen sich die Wundränder im Rahmen der <strong>Retraktion</strong> zusammen, wobei Serum aus dem Blutkuchen gepresst wird. Der Abbau des Fibringerüsts erfolgt anschließend durch die <strong><a href="/trafarette/fibrinolyse">Fibrinolyse</a></strong>.</p>
             </section>`,
         },
         {
@@ -152,15 +159,15 @@ export default {
           textWithFormatting: `<div>
             <p>Störungen der Hämostase können entweder zu übermäßiger oder unzureichender Blutstillung führen. Ursachen können in Defekten der Thrombozyten, der plasmatischen Gerinnung oder der Fibrinolyse liegen.</p>
             <ul>
-              <li><strong>Hämorrhagische Diathese</strong> beschreibt eine erhöhte Blutungsneigung.</li>
-              <li><strong>Thrombophilie</strong> steht für eine Neigung zur überschießenden Gerinnung.</li>
+              <li>• <strong>Hämorrhagische Diathese</strong> beschreibt eine erhöhte Blutungsneigung.</li>
+              <li>• <strong>Thrombophilie</strong> steht für eine Neigung zur überschießenden Gerinnung.</li>
             </ul>
             <p>Zur Überprüfung der Blutgerinnung werden verschiedene Labortests eingesetzt, darunter:</p>
             <ul>
-              <li><strong>Prothrombinzeit</strong> (Quick-Wert)</li>
-              <li><strong>Partielle Thromboplastinzeit</strong> (PTT)</li>
-              <li><strong>Thrombinzeit</strong> (TZ)</li>
-              <li><strong>Plasmafibrinogen</strong></li>
+              <li>• <strong>Prothrombinzeit</strong> (Quick-Wert)</li>
+              <li>• <strong>Partielle Thromboplastinzeit</strong> (PTT)</li>
+              <li>• <strong>Thrombinzeit</strong> (TZ)</li>
+              <li>• <strong>Plasmafibrinogen</strong></li>
             </ul>
           </div>`,
         },

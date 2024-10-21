@@ -30,6 +30,12 @@ import faktorX from "./subpages/gerinnung/Faktoren/faktorX";
 import faktorXI from "./subpages/gerinnung/Faktoren/faktorXI";
 import faktorXII from "./subpages/gerinnung/Faktoren/faktorXII";
 import faktorXIII from "./subpages/gerinnung/Faktoren/faktorXIII";
+import proteinc from "./subpages/gerinnung/proteinc";
+import proteins from "./subpages/gerinnung/proteins";
+import antithrombin from "./subpages/gerinnung/antithrombin";
+import plasmin from "./subpages/gerinnung/plasmin";
+import plasminogen from "./subpages/gerinnung/plasminogen";
+import virchowtrias from "./subpages/gerinnung/virchowtrias";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -63,7 +69,13 @@ const all_pages_data = [
    faktorX,
    faktorXI,
    faktorXII,
-   faktorXIII
+   faktorXIII,
+   proteinc,
+   proteins,
+   antithrombin,
+   plasmin,
+   plasminogen,
+   virchowtrias
 ];
 
 export default all_pages_data;

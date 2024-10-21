@@ -1,3 +1,4 @@
+import img2 from "../../../../assets/vWF.png";
 export default {
   path: "vonwillebrant",
   // http://localhost:5173/trafarette/vonwillebrant
@@ -18,6 +19,7 @@ export default {
           "id": 2,
           "title": "2. Physiologie",
           "textWithFormatting": `<div>
+           <img src="${img2}" alt="kaskade" style="max-width: 100%; height: auto;">
             <p>Der von-Willebrand-Faktor wird von <b>Endothelzellen</b> und <b>Megakaryozyten</b> synthetisiert und zirkuliert im Blutplasma im Komplex mit dem Faktor VIII, der dadurch vor Proteolyse geschützt wird. Er kann sowohl an die Proteine der subendothelialen Matrix als auch an den von-Willebrand-Rezeptor (Glykoprotein Ib/IX) auf der Oberfläche der Thrombozyten binden. So schafft er als sogenanntes Adhäsivprotein eine Verbindung zwischen den Thrombozyten und der verletzten Gefäßwand und aktiviert die Thrombozyten (primäre Hämostase).</p>
             <p>Der von-Willebrand-Faktor gehört zu den <b>Akute-Phase-Proteinen</b>. Er bildet im Plasma spontan Multimere, d.h. immer länger werdende Ketten. Von der Multimergröße ist auch die Funktion abhängig; sie unterliegt der Regulation durch eine spezielle Protease, die <b>ADAMTS-13</b> heißt.</p>
           </div>`

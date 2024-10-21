@@ -13,7 +13,7 @@ export default {
           "id": 3,
           "title": "1. Definition",
           "textWithFormatting": `<div>
-            <h2>1. Definition</h2>
+            
             <p>Die Fibrinolyse (Fibrinspaltung) beschreibt den körpereigenen Prozess der Auflösung eines Blutgerinnsels (Thrombus) durch das Enzym Plasmin. Plasmin spaltet dabei die Fibrinpolymere, die den Thrombus zusammenhalten, in kleine Fibrinabbauprodukte, wodurch der Thrombus zerfällt. Als wesentlicher Bestandteil der <a href="/trafarette/gerinnung">Hämostase</a> unterliegt die Fibrinolyse einer strengen Regulierung durch biochemische Prozesse, um ein Gleichgewicht zwischen Blutung und Thrombose zu gewährleisten.</p>
           </div>`
         },
@@ -22,7 +22,7 @@ export default {
           "title": "2. Physiologie",
           "textWithFormatting": `<div>
            <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
-            <h2>2. Physiologie</h2>
+            
             <p>Die Aktivierung der Fibrinolyse erfolgt durch die Umwandlung des inaktiven Plasminogens in die aktive Serinprotease Plasmin. Dies geschieht parallel zur Blutgerinnung, jedoch setzt die Fibrinolyse zeitlich verzögert ein, um die Hämostase zu regulieren.</p>
         
             <h3>Aktivatoren</h3>
@@ -42,7 +42,7 @@ export default {
           "id": 5,
           "title": "3. Diagnostik",
           "textWithFormatting": `<div>
-            <h2>3. Diagnostik</h2>
+           
             <p>Die Fibrinabbauprodukte (FDP) verlangsamen die Gerinnselbildung, da sie Thrombin hemmen. Der Nachweis einer aktiven Fibrinolyse kann durch die Thrombin-Clotting-Time (TCT) erfolgen, jedoch kann eine Heparintherapie die Ergebnisse beeinflussen. Ein spezifisches FDP, das D-Dimer, kann immunologisch nachgewiesen werden, um eine Fibrinolyse zu diagnostizieren. Zudem wird die Thromboelastometrie (TEM) verwendet, um eine Hyperfibrinolyse schnell zu erkennen.</p>
           </div>`
         },
@@ -50,7 +50,7 @@ export default {
           "id": 6,
           "title": "4. Pathophysiologie",
           "textWithFormatting": `<div>
-            <h2>4. Pathophysiologie</h2>
+            
             <p>Ein Ungleichgewicht zwischen fibrinolytischen und antifibrinolytischen Faktoren kann zu Störungen wie Hyperfibrinolyse (übermäßige Fibrinolyse) oder Hypofibrinolyse (unzureichende Fibrinolyse) führen.</p>
           </div>`
         },
@@ -58,7 +58,7 @@ export default {
           "id": 7,
           "title": "5. Klinische Relevanz",
           "textWithFormatting": `<div>
-            <h2>5. Klinische Relevanz</h2>
+            
             <p>Die Fibrinolyse spielt eine zentrale Rolle bei der Behandlung thrombotischer Erkrankungen wie Herzinfarkten, Schlaganfällen und Lungenembolien. Therapeutische Eingriffe zielen oft darauf ab, Blutgerinnsel schnell aufzulösen, um Organschäden zu verhindern.</p>
           </div>`
         },
@@ -66,7 +66,7 @@ export default {
           "id": 8,
           "title": "6. Medikamentöse Hemmung",
           "textWithFormatting": `<div>
-            <h2>6. Medikamentöse Hemmung</h2>
+           
             <p>Antifibrinolytika wie Tranexamsäure werden in der Chirurgie eingesetzt, um Blutungen zu kontrollieren, indem sie die Auflösung von Blutgerinnseln hemmen.</p>
           </div>`
         },
@@ -74,7 +74,7 @@ export default {
           "id": 9,
           "title": "7. Krankheitsbilder",
           "textWithFormatting": `<div>
-            <h2>7. Krankheitsbilder</h2>
+            
             <p>Störungen der Fibrinolyse können zu schwerwiegenden Erkrankungen wie disseminierter intravasaler Gerinnung (DIC) führen, bei der eine unkontrollierte Gerinnung und Fibrinolyse gleichzeitig auftreten.</p>
           </div>`
         },

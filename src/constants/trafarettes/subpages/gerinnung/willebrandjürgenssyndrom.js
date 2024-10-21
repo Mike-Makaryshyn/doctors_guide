@@ -1,3 +1,4 @@
+import img2 from "../../../../assets/vWFtypen.png";
 export default {
   path: "willebrandjürgenssyndrom",
   // http://localhost:5173/trafarette/willebrandjürgenssyndrom
@@ -29,6 +30,7 @@ export default {
           id: 3,
           title: "3. Formen",
           textWithFormatting: `<div>
+<img src="${img2}" alt="kaskade" style="max-width: 100%; height: auto;">
             <p>Das Willebrand-Jürgens-Syndrom wird in drei Haupttypen unterteilt, die sich in der Schwere der Symptome und der zugrunde liegenden Pathophysiologie unterscheiden:</p>
             <h3>Typ 1</h3>
             <p>Beim Typ 1 liegt ein quantitativer Mangel des von-Willebrand-Faktors vor, was bedeutet, dass zu wenig vWF im Blut vorhanden ist. Dieser Typ macht 60-80 % der Fälle aus und ist die mildeste Form der Erkrankung. Betroffene zeigen meist nur milde Symptome, die es ihnen ermöglichen, ein weitgehend normales Leben zu führen.</p>
