@@ -36,6 +36,11 @@ import antithrombin from "./subpages/gerinnung/antithrombin";
 import plasmin from "./subpages/gerinnung/plasmin";
 import plasminogen from "./subpages/gerinnung/plasminogen";
 import virchowtrias from "./subpages/gerinnung/virchowtrias";
+import haemophiliaallgemein from "./subpages/Heamophiie/haemophiliaallgemein";
+import haemophiliaa from "./subpages/Heamophiie/haemophiliaa";
+import haemophiliab from "./subpages/Heamophiie/haemophiliab";
+import emicizumab from "./subpages/Heamophiie/emicizumab";
+import faktorxmangel from "./subpages/Heamophiie/faktorxmangel";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -75,7 +80,12 @@ const all_pages_data = [
    antithrombin,
    plasmin,
    plasminogen,
-   virchowtrias
+   virchowtrias,
+   haemophiliaallgemein,
+   haemophiliaa,
+   haemophiliab,
+   emicizumab,
+   faktorxmangel
 ];
 
 export default all_pages_data;
