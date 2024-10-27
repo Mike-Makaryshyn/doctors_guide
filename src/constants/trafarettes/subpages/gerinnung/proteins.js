@@ -18,7 +18,7 @@ export default {
           id: 2,
           title: "2. Physiologie",
           textWithFormatting: `<div>
-            <p>Protein S wird hauptsächlich in der Leber von Hepatozyten synthetisiert, wobei Vitamin K eine wichtige Rolle spielt. Zusätzlich wird es in verschiedenen Zelltypen produziert, darunter:</p>
+            <p>Protein S wird hauptsächlich in der Leber von Hepatozyten synthetisiert, wobei <a href="/trafarette/vitamink">Vitamin-K</a> eine wichtige Rolle spielt. Zusätzlich wird es in verschiedenen Zelltypen produziert, darunter:</p>
             <ul>
               <li>• Endothelzellen</li>
               <li>• Osteoklasten</li>

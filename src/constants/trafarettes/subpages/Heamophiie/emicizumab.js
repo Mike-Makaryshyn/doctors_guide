@@ -25,7 +25,7 @@ export default {
           "id": 3,
           "title": "3. Wirkmechanismus",
           "textWithFormatting": `<div>
-            <p>Emicizumab ist ein bispezifischer Antikörper. Es bindet an <a href="/trafarette/faktorIX">Faktor IXa (Antihämophiles Globulin B oder Christmas-Faktor)</a>und a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a> und simuliert so die Funktion von <a href="/trafarette/faktorVIII">Faktor VIIIa</a>, der in der Blutgerinnung die Aktivierung von <a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a> zu Xa durch <a href="/trafarette/faktorIX">Faktor IXa</a> katalysiert. Daher wird es als Faktor VIII-Mimetikum bezeichnet.</p>
+            <p>Emicizumab ist ein bispezifischer Antikörper. Es bindet an <a href="/trafarette/faktorIX">Faktor IXa (Antihämophiles Globulin B oder Christmas-Faktor)</a>und <a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a> und simuliert so die Funktion von <a href="/trafarette/faktorVIII">Faktor VIIIa</a>, der in der Blutgerinnung die Aktivierung von <a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a> zu Xa durch <a href="/trafarette/faktorIX">Faktor IXa</a> katalysiert. Daher wird es als Faktor VIII-Mimetikum bezeichnet.</p>
           </div>`
         },
         {

@@ -21,10 +21,10 @@ export default {
             <p>Es gibt verschiedene Formen der Hämophilie, die sich durch unterschiedliche Defekte der Gerinnungsfaktoren auszeichnen:</p>
             <ul>
               <li><strong><a href="/trafarette/haemophiliaa">Hämophilie A</a> und <a href="/trafarette/haemophiliab">Hämophilie B</a>:</strong> Beide Formen sind X-chromosomal-rezessiv vererbte Erkrankungen, wodurch vor allem Männer betroffen sind. Hämophilie A entsteht durch einen Mangel an <a href="/trafarette/faktorVIII">Faktor VIII</a>, während Hämophilie B auf einem Mangel an <a href="/trafarette/faktorIX">Faktor IX</a> beruht. Beide Faktoren sind essenziell für die Gerinnungskaskade. Hämophilie B ist seltener als Hämophilie A.</li>
-              <li><strong>Autosomal-rezessive Gerinnungsdefekte:</strong> Diese seltenen Formen betreffen Männer und Frauen gleichermaßen. Beispiele sind Mängel an Gerinnungsfaktoren wie dem <a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a>.</li>
-              <li><strong>Parahämophilie (Owren-Syndrom):</strong> Ein Mangel an <a href="/trafarette/faktorV">Faktor V (Proakzelerin)</a>, der autosomal-rezessiv vererbt wird.</li>
-              <li><strong>Angiohämophilie <a href="/trafarette/willebrandjürgenssyndrom">Willebrand-Jürgens-Syndrom (vWS)</a>:</strong> Die häufigste autosomal-dominant vererbte Blutungsneigung, die durch einen Mangel oder Defekt des <a href="/trafarette/vonwillebrant">von-Willebrand-Faktors</a> verursacht wird.</li>
-              <li><strong>Hämophilie C (Rosenthal-Syndrom):</strong> Hier fehlt <a href="/trafarette/faktorXI">Faktor XI</a>, was bei Kindern zu Blutungen in Gelenken oder nach kleineren Verletzungen führen kann.</li>
+              <li><strong><a href="/trafarette/faktorxmangel">Autosomal-rezessive Gerinnungsdefekte</a>:</strong> Diese seltenen Formen betreffen Männer und Frauen gleichermaßen. Beispiele sind Mängel an Gerinnungsfaktoren wie dem <a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a>.</li>
+              <li><strong><a href="/trafarette/faktorvmangel">Parahämophilie (Owren-Syndrom)</a>:</strong> Ein Mangel an <a href="/trafarette/faktorV">Faktor V (Proakzelerin)</a>, der autosomal-rezessiv vererbt wird.</li>
+              <li><strong><a href="/trafarette/willebrandjürgenssyndrom">Angiohämophilie Willebrand-Jürgens-Syndrom (vWS)</a>:</strong> Die häufigste autosomal-dominant vererbte Blutungsneigung, die durch einen Mangel oder Defekt des <a href="/trafarette/vonwillebrant">von-Willebrand-Faktors</a> verursacht wird.</li>
+              <li><strong><a href="/trafarette/rosenthalsyndrom">Hämophilie C (Rosenthal-Syndrom)</a>:</strong> Hier fehlt <a href="/trafarette/faktorXI">Faktor XI</a>, was bei Kindern zu Blutungen in Gelenken oder nach kleineren Verletzungen führen kann.</li>
             </ul>
           </div>`
         },
@@ -46,8 +46,8 @@ export default {
             <p>Die Therapie der Hämophilie richtet sich nach der jeweiligen Form und dem Schweregrad der Erkrankung. Im Mittelpunkt steht die Prophylaxe und Behandlung von Blutungen durch Substitution der fehlenden Gerinnungsfaktoren.</p>
             <p>Seit 2022 spielen auch Gentherapien eine zunehmende Rolle, bei denen intakte Gene zur Produktion der fehlenden Faktoren in die Körperzellen eingeschleust werden. Beispiele sind:</p>
             <ul>
-              <li><strong>Valoctocogen-Roxaparvovec (Roctavian®)</strong> für <a href="/trafarette/haemophiliaa">Hämophilie A</a></li>
-              <li><strong>Etranacogene-Dezaparvovec (Hemgenix®)</strong> für <a href="/trafarette/haemophiliab">Hämophilie B</a></li>
+              <li><strong><a href="/trafarette/valoctocogenroxaparvovec">Valoctocogen-Roxaparvovec (Roctavian®)</a></strong> für <a href="/trafarette/haemophiliaa">Hämophilie A</a></li>
+              <li><strong><a href="/trafarette/etranacogendezaparvovec">Etranacogene-Dezaparvovec (Hemgenix®)</a></strong> für <a href="/trafarette/haemophiliab">Hämophilie B</a></li>
             </ul>
             <p>Eine Herausforderung bei der Substitutionstherapie ist die mögliche Bildung von neutralisierenden Antikörpern, die die Wirkung der zugeführten Gerinnungsfaktoren hemmen, insbesondere bei Hämophilie A und Hämophilie B.</p>
           </div>`

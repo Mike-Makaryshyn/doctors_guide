@@ -36,11 +36,19 @@ import antithrombin from "./subpages/gerinnung/antithrombin";
 import plasmin from "./subpages/gerinnung/plasmin";
 import plasminogen from "./subpages/gerinnung/plasminogen";
 import virchowtrias from "./subpages/gerinnung/virchowtrias";
-import haemophiliaallgemein from "./subpages/Heamophiie/haemophiliaallgemein";
-import haemophiliaa from "./subpages/Heamophiie/haemophiliaa";
-import haemophiliab from "./subpages/Heamophiie/haemophiliab";
-import emicizumab from "./subpages/Heamophiie/emicizumab";
-import faktorxmangel from "./subpages/Heamophiie/faktorxmangel";
+import haemophiliaallgemein from "./subpages/heamophiie/haemophiliaallgemein";
+import haemophiliaa from "./subpages/heamophiie/haemophiliaa";
+import haemophiliab from "./subpages/heamophiie/haemophiliab";
+import emicizumab from "./subpages/heamophiie/emicizumab";
+import faktorxmangel from "./subpages/heamophiie/faktorxmangel";
+import faktorvmangel from "./subpages/heamophiie/faktorvmangel";
+import rosenthalsyndrom from "./subpages/heamophiie/rosenthalsyndrom";
+import vitaminall from "./subpages/vitamin/vitaminall";
+import vitamink from "./subpages/vitamin/vitamink";
+import vitaminkmangel from "./subpages/vitamin/vitaminkmangel";
+import proteinz from "./subpages/gerinnung/proteinz";
+import valoctocogenroxaparvovec from "./subpages/heamophiie/valoctocogenroxaparvovec";
+import etranacogendezaparvovec from "./subpages/heamophiie/etranacogendezaparvovec";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -85,7 +93,15 @@ const all_pages_data = [
    haemophiliaa,
    haemophiliab,
    emicizumab,
-   faktorxmangel
+   faktorxmangel,
+   faktorvmangel,
+   rosenthalsyndrom,
+   vitaminall,
+   vitamink,
+   vitaminkmangel,
+   proteinz,
+   valoctocogenroxaparvovec,
+   etranacogendezaparvovec
 ];
 
 export default all_pages_data;

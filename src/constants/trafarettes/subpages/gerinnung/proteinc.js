@@ -11,7 +11,7 @@ export default {
           id: 1,
           title: "1. Definition",
           textWithFormatting: `<div>
-            <p>Protein C ist eine Vitamin-K-abhängige Protease, die in der Leber synthetisiert wird. Nach Aktivierung durch Thrombin (mit Unterstützung von Protein S) inaktiviert Protein C die Gerinnungsfaktoren Va und VIIIa. Dadurch wird die Gerinnung gehemmt und die Fibrinolyse gefördert.</p>
+            <p>Protein C ist eine <a href="/trafarette/vitamink">Vitamin-K</a>-abhängige Protease, die in der Leber synthetisiert wird. Nach Aktivierung durch Thrombin (mit Unterstützung von Protein S) inaktiviert Protein C die Gerinnungsfaktoren Va und VIIIa. Dadurch wird die Gerinnung gehemmt und die Fibrinolyse gefördert.</p>
           </div>`,
         },
         {

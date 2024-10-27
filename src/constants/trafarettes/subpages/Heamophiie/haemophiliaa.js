@@ -101,7 +101,7 @@ export default {
             <p>Bei leichter Hämophilie kann <b>Desmopressin (DDAVP)</b> verwendet werden, um die Freisetzung von gespeichertem <a href="/trafarette/faktorVIII">Faktor VIII</a> und <a href="/trafarette/vonwillebrand">Von-Willebrand-Faktor (vWF)</a> zu fördern. Diese Therapie ist jedoch auf wenige Tage begrenzt, da sich die Speicher schnell erschöpfen.</p>
         
             <h4>Gentherapie</h4>
-            <p>Seit 2022 gibt es die Möglichkeit einer <b>Gentherapie</b> für schwere Hämophilie A. <b>Valoctocogen-Roxaparvovec</b> verwendet einen viralen Vektor, um funktionelle Kopien des <i>F8-Gens</i> in die Leberzellen zu transportieren, was zu einer langfristigen Produktion von <a href="/trafarette/faktorVIII">Faktor VIII</a> führen kann.</p>
+            <p>Seit 2022 gibt es die Möglichkeit einer <b>Gentherapie</b> für schwere Hämophilie A. <b><a href="/trafarette/valoctocogenroxaparvovec">Valoctocogen-Roxaparvovec (Roctavian®)</a></b> verwendet einen viralen Vektor, um funktionelle Kopien des <i>F8-Gens</i> in die Leberzellen zu transportieren, was zu einer langfristigen Produktion von <a href="/trafarette/faktorVIII">Faktor VIII</a> führen kann.</p>
         
             <h4>Weitere prophylaktische Maßnahmen</h4>
             <ul>
