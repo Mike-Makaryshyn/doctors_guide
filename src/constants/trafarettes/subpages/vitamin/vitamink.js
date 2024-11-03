@@ -18,7 +18,7 @@ export default {
           id: 2,
           title: "2. Struktur und Klassifikation",
           textWithFormatting: `<div>
-            <p>Die K-Vitamine (benannt nach „Koagulation“), gehören zu den fettlöslichen Vitaminen und umfassen verschiedene chemische Substanzen, die unter dem Sammelbegriff Vitamin K zusammengefasst werden. Sie teilen eine gemeinsame Grundstruktur, das 2-Methyl-1,4-Naphthochinon (Menadion), an das unterschiedlich lange Seitenketten gebunden sind. Diese Struktur ist entscheidend für ihre biologische Funktion. Vitamin K ist ein Kofaktor für das Enzym γ-Glutamylcarboxylase, das in vielen physiologischen Prozessen eine zentrale Rolle spielt, darunter die <a href="link_to_page_gerinnung">Blutgerinnung</a>, der Knochenstoffwechsel und die Regulation des Zellwachstums.</p>
+            <p>Die K-Vitamine (benannt nach „Koagulation“), gehören zu den fettlöslichen Vitaminen und umfassen verschiedene chemische Substanzen, die unter dem Sammelbegriff Vitamin K zusammengefasst werden. Sie teilen eine gemeinsame Grundstruktur, das 2-Methyl-1,4-Naphthochinon (Menadion), an das unterschiedlich lange Seitenketten gebunden sind. Diese Struktur ist entscheidend für ihre biologische Funktion. Vitamin K ist ein Kofaktor für das Enzym γ-Glutamylcarboxylase, das in vielen physiologischen Prozessen eine zentrale Rolle spielt, darunter die <a href="/trafarette/gerinnung">Blutgerinnung</a>, der Knochenstoffwechsel und die Regulation des Zellwachstums.</p>
           </div>`,
         },
         {

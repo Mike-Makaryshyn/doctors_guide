@@ -39,7 +39,7 @@ export default {
           id: 5,
           title: "5. Pathophysiologie",
           textWithFormatting: `<div>
-            <p>Ein angeborener Mangel oder eine Funktionsstörung von Faktor IX führt zur Hämophilie B. Erworbene Mängel treten bei Vitamin-K-Mangel oder bei der Bildung von Autoantikörpern (Hemmkörperhämophilie) gegen Faktor IX auf. Eine 1997 beschriebene Punktmutation der Aminosäure ALA-10 in der Propeptidregion reduziert die Affinität zu Vitamin K, was bei "marcumarisierter" Behandlung zu Blutungssymptomen führen kann.</p>
+            <p>Ein angeborener Mangel oder eine Funktionsstörung von Faktor IX führt zur <a href="/trafarette/haemophiliab">Hämophilie B</a>. Erworbene Mängel treten bei Vitamin-K-Mangel oder bei der Bildung von Autoantikörpern (Hemmkörperhämophilie) gegen Faktor IX auf. Eine 1997 beschriebene Punktmutation der Aminosäure ALA-10 in der Propeptidregion reduziert die Affinität zu Vitamin K, was bei "marcumarisierter" Behandlung zu Blutungssymptomen führen kann.</p>
           </div>`,
         },
         {

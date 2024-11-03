@@ -13,7 +13,7 @@ export default {
           title: "1. Definition",
           textWithFormatting: `<div>
           <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
-            <p>Faktor VIII, auch bekannt als antihämophiles Globulin A, ist ein essenzieller Bestandteil der Blutgerinnung. Er gehört zum intrinsischen Gerinnungssystem. Ein Mangel an Faktor VIII führt zu Hämophilie A, während ein Überschuss die Bildung von Thromben fördert, was das Risiko für Venenthrombosen und Lungenembolien erhöht.</p>
+            <p>Faktor VIII, auch bekannt als antihämophiles Globulin A, ist ein essenzieller Bestandteil der Blutgerinnung. Er gehört zum intrinsischen Gerinnungssystem. Ein Mangel an Faktor VIII führt zu <a href="/trafarette/haemophiliaa">Hämophilie A</a>, während ein Überschuss die Bildung von Thromben fördert, was das Risiko für Venenthrombosen und Lungenembolien erhöht.</p>
           </div>`
         },
         {
@@ -34,7 +34,7 @@ export default {
           id: 4,
           title: "4. Pharmakologie",
           textWithFormatting: `<div>
-            <p>Antihämophiles Globulin A wird zur Behandlung von Hämophilie A eingesetzt. Es kann entweder aus humanem Spenderplasma gewonnen oder gentechnisch hergestellt werden. Die Verabreichung erfolgt intravenös. Ein besonderes Problem stellt die Bildung von Antikörpern gegen Faktor VIII dar, die bei Patienten mit Hämophilie A auftreten kann. Diese sogenannte Hemmkörperhämophilie führt trotz Verabreichung von Faktor VIII weiterhin zu Blutungen. Patienten werden je nach Antikörperkonzentration in <strong>Low-Responder</strong> und <strong>High-Responder</strong> eingeteilt.</p>
+            <p>Antihämophiles Globulin A wird zur Behandlung von <a href="/trafarette/haemophiliaa">Hämophilie A</a> eingesetzt. Es kann entweder aus humanem Spenderplasma gewonnen oder gentechnisch hergestellt werden. Die Verabreichung erfolgt intravenös. Ein besonderes Problem stellt die Bildung von Antikörpern gegen Faktor VIII dar, die bei Patienten mit <a href="/trafarette/haemophiliaa">Hämophilie A</a> auftreten kann. Diese sogenannte Hemmkörperhämophilie führt trotz Verabreichung von Faktor VIII weiterhin zu Blutungen. Patienten werden je nach Antikörperkonzentration in <strong>Low-Responder</strong> und <strong>High-Responder</strong> eingeteilt.</p>
             <p>Zu den rekombinanten Faktor-VIII-Präparaten gehören unter anderem:</p>
             <ul>
               <li>Damoctocog alfa pegol</li>

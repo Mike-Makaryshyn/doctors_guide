@@ -49,6 +49,63 @@ import vitaminkmangel from "./subpages/vitamin/vitaminkmangel";
 import proteinz from "./subpages/gerinnung/proteinz";
 import valoctocogenroxaparvovec from "./subpages/heamophiie/valoctocogenroxaparvovec";
 import etranacogendezaparvovec from "./subpages/heamophiie/etranacogendezaparvovec";
+import gerinnungsdiagnostik from "./subpages/labor/gerinnungsdiagnostik";
+import gerinnungsanamnese from "./subpages/anamnese/gerinnungsanamnese";
+import edta from "./subpages/labor/edta";
+import kleinesblutbild from "./subpages/labor/kleinesblutbild";
+import anesthesia from "./subpages/anesthesia/anesthesia";
+import analgesie from "./subpages/anesthesia/analgesie";
+import hypnose from "./subpages/anesthesia/hypnose";
+import muskelrelaxation from "./subpages/anesthesia/muskelrelaxation";
+import oberflaechenanaesthesie from "./subpages/anesthesia/oberflaechenanaesthesie";
+import Infiltrationsanaesthesie from "./subpages/anesthesia/Infiltrationsanaesthesie";
+import lokalanaesthesie from "./subpages/anesthesia/lokalanaesthesie";
+import leitungsanaesthesie from "./subpages/anesthesia/leitungsanaesthesie";
+import plexusanaesthesie from "./subpages/anesthesia/plexusanaesthesie";
+import spinalanaesthesie from "./subpages/anesthesia/spinalanaesthesie";
+import periduralanaesthesie from "./subpages/anesthesia/periduralanaesthesie";
+import allgemeinanaesthesie from "./subpages/anesthesia/allgemeinanaesthesie";
+import tiva from "./subpages/anesthesia/tiva";
+import balancierteanaesthesie from "./subpages/anesthesia/balancierteanaesthesie";
+import intubationsnarkose from "./subpages/anesthesia/intubationsnarkose";
+import natriumkaliumatpase from "./subpages/physiologie/natriumkaliumatpase";
+import natriumkanaele from "./subpages/physiologie/natriumkanaele";
+import natriumkanalblocker from "./subpages/medikamente/natriumkanalblocker";
+import lidocain from "./subpages/medikamente/lidocain";
+import adrenozeptoren from "./subpages/physiologie/adrenozeptoren";
+import gproteine from "./subpages/physiologie/gproteine";
+import laxantien from "./subpages/medikamente/laxantien";
+import regionalanaesthesie from "./subpages/anesthesia/regionalanaesthesie";
+import periphereregionalanaesthesie from "./subpages/anesthesia/periphereregionalanaesthesie";
+import thorakaleepiduralanaesthesie from "./subpages/anesthesia/thorakaleepiduralanaesthesie";
+import kombiniertespinaleepiduraleanaesthesie from "./subpages/anesthesia/kombiniertespinaleepiduraleanaesthesie";
+import inhalationsnarkose from "./subpages/anesthesia/inhalationsnarkose";
+import maskennarkose from "./subpages/anesthesia/maskennarkose";
+import larynxmaskennarkose from "./subpages/anesthesia/larynxmaskennarkose";
+import lachgas from "./subpages/anesthesia/lachgas";
+import anamnese from "./subpages/anamnese/anamnese";
+import sevofluran from "./subpages/anesthesia/sevofluran";
+import isofluran from "./subpages/anesthesia/isofluran";
+import desfluran from "./subpages/anesthesia/desfluran";
+import schilddruese from "./subpages/anatomie/schilddruese";
+import schilddruesenhormone from "./subpages/schilddruese/schilddruesenhormone";
+import t3 from "./subpages/schilddruese/t3";
+import t4 from "./subpages/schilddruese/t4";
+import trh from "./subpages/schilddruese/trh";
+import tsh from "./subpages/schilddruese/tsh";
+import calcitonin from "./subpages/schilddruese/calcitonin";
+import czellen from "./subpages/anatomie/czellen";
+import nebenschilddruesen from "./subpages/anatomie/nebenschilddruesen";
+import trachea from "./subpages/anatomie/trachea";
+import hyperthyreose from "./subpages/schilddruese/hyperthyreose";
+import morbusbasedow from "./subpages/schilddruese/morbusbasedow";
+import trak from "./subpages/schilddruese/trak";
+import merseburgertrias from "./subpages/schilddruese/merseburgertrias";
+import struma from "./subpages/schilddruese/struma";
+import exophthalmus from "./subpages/schilddruese/exophthalmus";
+import tachykardie from "./subpages/physiologie/tachykardie";
+import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
+import hypothyreose from "./subpages/schilddruese/hypothyreose";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -101,7 +158,64 @@ const all_pages_data = [
    vitaminkmangel,
    proteinz,
    valoctocogenroxaparvovec,
-   etranacogendezaparvovec
+   etranacogendezaparvovec,
+   gerinnungsdiagnostik,
+   gerinnungsanamnese,
+   edta,
+   kleinesblutbild,
+   anesthesia,
+   analgesie,
+   hypnose,
+   muskelrelaxation,
+   oberflaechenanaesthesie,
+   Infiltrationsanaesthesie,
+   lokalanaesthesie,
+   leitungsanaesthesie,
+   plexusanaesthesie,
+   spinalanaesthesie,
+   periduralanaesthesie,
+   allgemeinanaesthesie,
+   tiva,
+   balancierteanaesthesie,
+   intubationsnarkose,
+   natriumkaliumatpase,
+   natriumkanaele,
+   lidocain,
+   natriumkanalblocker,
+   adrenozeptoren,
+   gproteine,
+   laxantien,
+   regionalanaesthesie,
+   periphereregionalanaesthesie,
+   thorakaleepiduralanaesthesie,
+   kombiniertespinaleepiduraleanaesthesie,
+   inhalationsnarkose,
+   maskennarkose,
+   larynxmaskennarkose,
+   lachgas,
+   anamnese,
+   sevofluran,
+   isofluran,
+   desfluran,
+   schilddruese,
+   schilddruesenhormone,
+   t3,
+   t4,
+   trh,
+   tsh,
+   calcitonin,
+   czellen,
+   nebenschilddruesen,
+   trachea,
+   hyperthyreose,
+   morbusbasedow,
+   trak,
+   merseburgertrias,
+   struma,
+   exophthalmus,
+   tachykardie,
+   thyreoiditis,
+   hypothyreose
 ];
 
 export default all_pages_data;

@@ -1,90 +1,106 @@
 export default {
-  path: "vitaminkmangel",
-  // http://localhost:5173/trafarette/vitaminkmangel
+  path: "gerinnungsdiagnostik",
+  // http://localhost:5173/trafarette/gerinnungsdiagnostik
   content: [
     {
       id: 1,
-      title: "Vitamin K-Mangel",
+      title: "Gerinnungsdiagnostik",
       childTabs: [
         {
             "id": 1,
             "title": "1. Definition",
             "textWithFormatting": `<div>
-                <p><strong>Vitamin-K-Mangel</strong> ist eine Hypovitaminose, die durch eine unzureichende Versorgung mit Vitamin K (Phyllochinon) charakterisiert ist. Ein zentrales Merkmal der Unterversorgung ist eine gestörte <a href="/trafarette/gerinnung">Blutgerinnung</a>.</p>
+                <p><b>Die Gerinnungsdiagnostik</b> (oder Gerinnungsstatus) umfasst eine Reihe von labormedizinischen Untersuchungsverfahren zur Überprüfung der <a href="/trafarette/gerinnung">Gerinnungsfaktor</a>. Sie dient dazu, angeborene oder erworbene Gerinnungsstörungen zu erkennen und zu diagnostizieren. Die gemessenen Laborparameter werden als <b>Gerinnungswerte</b> bezeichnet.</p>
             </div>`
         },
         {
             "id": 2,
-            "title": "2. Referenzbereich",
+            "title": "2. Material für die Analyse",
             "textWithFormatting": `<div>
-                <p>Bei Erwachsenen liegt die normale Plasmakonzentration von Vitamin K im Bereich von <strong>0,3 bis 1 ng/ml</strong>.</p>
+                <p>Zur Bestimmung der Gerinnungswerte sind folgende Materialien erforderlich:</p>
+                <ul>
+                    <li>• <a href="/trafarette/edta">EDTA-Blut</a></li>
+                    <li>• 5 ml <a href="/trafarette/citrat">Citratplasma</a> </li>
+                </ul>
             </div>`
         },
         {
             "id": 3,
-            "title": "3. Nahrungszufuhr",
+            "title": "3. Parameter der Gerinnungsdiagnostik",
             "textWithFormatting": `<div>
-                <p>Ein Vitamin-K-Mangel ist bei normaler Ernährung selten, da Vitamin K in ausreichender Menge in Lebensmitteln vorkommt und zusätzlich durch die Darmflora produziert wird. Die Deutsche Gesellschaft für Ernährung empfiehlt folgende tägliche Zufuhrmengen:</p>
+                <h3><b>Basisdiagnostik</b></h3>
+                <p>Die Basisdiagnostik umfasst folgende Untersuchungen:</p>
                 <ul>
-                    <li><strong>60 µg</strong> für Frauen</li>
-                    <li><strong>70 µg</strong> für Männer</li>
-                    <li><strong>10-50 µg</strong> für Kinder</li>
+                    <li>• <b><a href="/trafarette/gerinnungsanamnese">Gerinnungsanamnese</a>:</b> Erhebung der persönlichen und familiären Blutungsneigung.</li>
+                    <li>• <b><a href="/trafarette/kleinesblutbild">Kleines Blutbild:</a></b> Bestimmung der Hämoglobinkonzentration und der Thrombozytenzahl, um Anämien und grundlegende Blutzellveränderungen festzustellen.</li>
+                    <li>• <b><a href="/trafarette/quick">Quick-Wert:</a></b> (Prothrombinzeit, PTZ) bzw. INR: Diese Werte geben Auskunft über den extrinsischen Weg der <a href="/trafarette/gerinnung">Gerinnung</a>.</li>
+                    <li>• <b><a href="/trafarette/aptt">Aktivierte partielle Thromboplastinzeit (aPTT):</a></b> Dient zur Überprüfung des intrinsischen Gerinnungsweges.</li>
                 </ul>
-                <p>Diese Mengen decken den Bedarf zur Synthese der Gerinnungsfaktoren in der Leber. Studien weisen jedoch darauf hin, dass für zusätzliche Funktionen von Vitamin K eventuell ein höherer Bedarf besteht.</p>
-            </div>`
-        },
-        {
-            "id": 4,
-            "title": "4. Ätiologie",
-            "textWithFormatting": `<div>
-                <p>Obwohl Vitamin-K-Mangel selten ist, können verschiedene Faktoren ihn fördern:</p>
+                <p>Mit diesen Parametern können die meisten Ursachen einer Blutungsneigung erfasst werden. Thrombozytenfunktionsstörungen werden jedoch hier nicht erfasst und bedürfen einer spezifischen Thrombozytenfunktionsdiagnostik.</p>
+    
+                <h4><b>Wichtige Hinweise zur Basisdiagnostik:</b></h4>
                 <ul>
-                    <li><strong>Fehlernährung</strong> und Alkoholismus</li>
-                    <li>Chronische <strong>Lebererkrankungen</strong></li>
-                    <li>Chronische Magen-Darm-Erkrankungen (z. B. chronische Diarrhö, Morbus Crohn, Colitis ulcerosa)</li>
-                    <li>Zystische Fibrose</li>
-                    <li>Einnahme bestimmter Medikamente wie <strong>Cumarin-Derivate</strong>, Antibiotika, Antikonvulsiva oder Gallensäurebinder</li>
-                    <li>Adipositas</li>
+                    <li>• Die Globalteste (Quick und aPTT) erfassen den <a href="/trafarette/faktorVIII">Faktor VIII (Antihämophiles Globulin A)</a> nicht, da dessen Wirkung erst nach der Gerinnselbildung eintritt.</li>
+                    <li>• Ein normaler Hämoglobinwert schließt eine Blutung nicht aus, da diese durch gesteigerte Erythropoese kompensiert werden kann. Bei klinischem Verdacht sollte daher auch die Retikulozytenzahl bestimmt werden.</li>
+                    <li>• Die Diagnostik von Gerinnungsstörungen im Sinne einer Thrombophilie wird in einem gesonderten Schema <a href="/trafarette/thrombophilie">(Thrombophiliediagnostik)</a> durchgeführt.</li>
                 </ul>
-                <h4><strong>Magen-Darm-Erkrankungen</strong></h4>
-                <p>Bei chronischen Magen-Darm-Erkrankungen ist die Aufnahme von Vitamin K über den Darm gestört.</p>
-                <h4><strong>Lebererkrankungen</strong></h4>
-                <p>Reduzierte Leberfunktion beeinträchtigt die Speicherung von Vitamin K im Lebergewebe.</p>
-                <h4><strong>Medikamente</strong></h4>
-                <p><a href="/trafarette/cumarinder">Cumarin-Derivate</a> hemmen die Vitamin-K-Epoxid-Reduktase, was zu einem künstlichen Vitamin-K-Mangel führt. Auch andere Medikamente beeinflussen den Vitamin-K-Spiegel negativ:</p>
+    
+                <h4><b>Überblick über Globaltests und mögliche Ursachen</b></h4>
+                <p>Nachfolgend eine Übersicht möglicher Konstellationen in den Globaltests sowie deren mögliche Ursachen und diagnostische Hinweise:</p>
+                <table>
+                    <tr>
+                        <th><b>Quick-Wert</b></th>
+                        <th><b>aPTT</b></th>
+                        <th><b>Betroffener Abschnitt der Hämostase</b></th>
+                        <th><b>Mögliche Ursachen</b></th>
+                        <th><b>Weitere diagnostische Hinweise</b></th>
+                    </tr>
+                    <tr>
+                        <td>vermindert</td>
+                        <td>verlängert</td>
+                        <td>intrinsisch/extrinsisch oder gemeinsame Endstrecke</td>
+                        <td>Vitamin-K-Mangel, <a href="/trafarette/antikoagulanzien">Antikoagulation</a> (z.B. Cumarin-Derivate)</td>
+                        <td>pathologische Leberwerte bei Leberinsuffizienz, Thrombozytopenie bei Verbrauchskoagulopathie</td>
+                    </tr>
+                    <tr>
+                        <td>normal</td>
+                        <td>verlängert</td>
+                        <td>intrinsisch</td>
+                        <td>Antikoagulation mit unfraktioniertem Heparin</td>
+                        <td>Normale Blutungszeit bei <a href="/trafarette/haemophiliaa">Hämophilie A</a>/<a href="/trafarette/haemophiliab">Hämophilie B</a>, verlängerte Blutungszeit bei <a href="/trafarette/willebrandjürgenssyndrom">Willebrand-Jürgens-Syndrom (vWS)</a></td>
+                    </tr>
+                    <tr>
+                        <td>vermindert</td>
+                        <td>normal</td>
+                        <td>extrinsisch</td>
+                        <td><a href="/trafarette/faktorVII">Faktor-VII-Mangel</a></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>normal</td>
+                        <td>normal</td>
+                        <td>Quervernetzung von Fibrin</td>
+                        <td><a href="/trafarette/haemophiliaa">Faktor-XIII-Mangel</a></td>
+                        <td>Postoperative Nachblutungen, Wundheilungsstörungen</td>
+                    </tr>
+                </table>
+    
+                <h3><b>Erweiterte Diagnostik</b></h3>
+                <p>Bei Bedarf kann die Gerinnungsdiagnostik durch zusätzliche Laborparameter erweitert werden, um spezifischere Ursachen abzuklären:</p>
                 <ul>
-                    <li><strong>Antibiotika</strong> stören die Darmflora und verringern somit die körpereigene Vitamin-K-Synthese.</li>
-                    <li>Gallensäurebinder (z. B. Colestyramin, Colestipol) hemmen die Aufnahme fettlöslicher Nährstoffe, einschließlich Vitamin K.</li>
-                    <li>Antikonvulsiva wie Phenytoin und Phenobarbital steigern den Vitamin-K-Abbau in der Leber.</li>
-                    <li>Salicylate (z. B. <a href="/trafarette/ass">Aspirin</a>) senken den Vitamin-K-Spiegel.</li>
+                    <li>• <a href="/trafarette/faktorI">Faktor I (Fibrinogen)</a></li>
+                    <li>• <a href="/trafarette/antithrombin">Antithrombin</a></li>
+                    <li>• <a href="/trafarette/ddimerte">D-Dimere</a></li>
+                    <li>• <a href="/trafarette/thrombinzeit">Thrombinzeit (TZ)</a></li>
+                    <li>• <a href="/trafarette/reptilasezeit">Reptilasezeit (RZ)</a></li>
+                    <li>• <a href="/trafarette/ecarinclottingtime">Ecarin-Clotting-Time (ECT)</a></li>
+                    <li>• <a href="/trafarette/aktiviertegerinnungszeit">Aktivierte Gerinnungszeit (ACT)</a></li>
+                    <li>• <a href="/trafarette/antifaktorxa">Anti-Faktor Xa-Aktivität</a></li>
+                    <li>• <a href="/trafarette/lupusantikoagulans">Lupus-Antikoagulans (LA)</a></li>
+                    <li>• <a href="/trafarette/plasmamischversuch">Plasmamischversuch</a></li>
+                    <li>• <a href="/trafarette/einzelfaktorenanalyse">Einzelfaktorenanalyse</a></li>
                 </ul>
-                <h4><strong>Adipositas</strong></h4>
-                <p>Bei hohem Körperfettanteil kann es zur erhöhten Speicherung von Vitamin K im Fettgewebe kommen, was das Risiko eines funktionellen Mangels erhöht.</p>
-                <h4><strong>Morbus haemorrhagicus neonatorum bei Neugeborenen</strong></h4>
-                <p>Neugeborene haben in den ersten Lebenswochen aufgrund des geringen Vitamin-K-Gehalts in Kolostrum und Muttermilch sowie einer generell niedrigeren Vitamin-K-Konzentration ein erhöhtes Risiko für Vitamin-K-Mangel.</p>
-            </div>`
-        },
-        {
-            "id": 5,
-            "title": "5. Pathophysiologie",
-            "textWithFormatting": `<div>
-                <p>Vitamin K ist wesentlich für die <a href="/trafarette/gerinnung">Blutgerinnung</a> und die Synthese von Gerinnungsfaktoren in der Leber, darunter:</p>
-                <ul>
-                    <li><a href="/trafarette/faktorII">Faktor II (Prothrombin)</a></li>
-                    <li><a href="/trafarette/faktorVII">Faktor VII (Prokonvertin)</a></li>
-                    <li><a href="/trafarette/faktorIX">Faktor IX (Antihämophiles Globulin B oder Christmas-Faktor)</a></li>
-                    <li><a href="/trafarette/faktorX">Faktor X (Stuart-Prower-Faktor)</a></li>
-                    <li><a href="/trafarette/proteinc">Protein C</a>, <a href="/trafarette/proteins">Protein S</a> und <a href="/trafarette/proteinz">Protein Z</a></li>
-                </ul>
-                <p>Als Cofaktor ist Vitamin K an der <strong>γ-Carboxylierung</strong> dieser Gerinnungsfaktoren beteiligt. Ein schwerer Vitamin-K-Mangel verlängert die Gerinnungszeit, was zu erhöhtem Blutungsrisiko, Hämatomen, Wundheilungsstörungen und Anämie führen kann.</p>
-                <p>Zudem aktiviert Vitamin K Gla-Proteine, die gemeinsam mit Vitamin D den <strong>Calciumstoffwechsel</strong> regulieren. Ein Mangel fördert Erkrankungen wie Arteriosklerose, Osteoporose, Gelenkentzündungen und Insulinresistenz.</p>
-            </div>`
-        },
-        {
-            "id": 6,
-            "title": "6. Therapie",
-            "textWithFormatting": `<div>
-                <p>Die Therapie bei Vitamin-K-Mangel umfasst die ausreichende Substitution von <a href="/trafarette/vitamink">Vitamin K</a> sowie die Behandlung zugrunde liegender Erkrankungen. Zur Vorbeugung von Blutungsneigung bei Neugeborenen wird im Rahmen der Vorsorgeuntersuchungen <strong>U1</strong>, <strong>U2</strong> und <strong>U3</strong> eine Vitamin-K-Prophylaxe empfohlen.</p>
+                <p>Diese zusätzlichen Tests können detaillierte Informationen über spezifische <a href="/trafarette/gerinnung">Gerinnungsfaktoren</a> und Mechanismen liefern, insbesondere bei Verdacht auf komplexe oder seltene Gerinnungsstörungen.</p>
             </div>`
         }
     ],

@@ -6,167 +6,126 @@ export default {
       id: 1,
       title: "Vitamin",
       childTabs: [
-        //  Start of child tab 1
         {
-          "id": 1,
-          "title": "1. Definition",
-          "textWithFormatting": `<div>
-            <p>Vitamine sind essenzielle Nährstoffe unterschiedlicher chemischer Struktur, die über die Nahrung aufgenommen werden müssen, da der Körper sie nicht selbst herstellen kann. Ein Mangel an Vitaminen wird als Hypovitaminose, ein Überschuss als Hypervitaminose bezeichnet.</p>
-          </div>`
+            "id": 1,
+            "title": "Definition",
+            "textWithFormatting": `<div>
+                <p><b>Vitamine</b> sind lebenswichtige organische Verbindungen, die mit der Nahrung aufgenommen werden müssen, da der Körper sie nicht oder nur unzureichend selbst synthetisieren kann. Ein Mangel an Vitaminen führt zu Hypovitaminose, während ein Überschuss zu Hypervitaminose führen kann.</p>
+            </div>`
         },
         {
-          "id": 2,
-          "title": "2. Funktionen",
-          "textWithFormatting": `<div>
-            <p>Vitamine spielen im Stoffwechsel eine zentrale Rolle, da sie als Cofaktoren und Coenzyme an zahlreichen biochemischen Reaktionen beteiligt sind. Ein dauerhafter Entzug eines einzelnen Vitamins aus der Ernährung führt zu schwerwiegenden gesundheitlichen Problemen und ist letztlich nicht mit dem Leben vereinbar.</p>
-          </div>`
+            "id": 2,
+            "title": "Funktionen",
+            "textWithFormatting": `<div>
+                <p>Vitamine spielen eine zentrale Rolle im Stoffwechsel, indem sie als Cofaktoren oder Coenzyme in zahlreichen biochemischen Reaktionen wirken. Der Entzug eines essenziellen Vitamins aus der Ernährung hat langfristig schwerwiegende gesundheitliche Folgen und ist mit dem Leben nicht vereinbar.</p>
+            </div>`
         },
         {
-          "id": 3,
-          "title": "3. Klassifikation",
-          "textWithFormatting": `<div>
-            <p>Vitamine werden nach ihrer Löslichkeit in wasserlösliche und fettlösliche Vitamine unterteilt. Historisch wurden Vitamine mit Großbuchstaben benannt, heute jedoch häufig nach ihren biochemischen Namen. Beide Nomenklaturen sind parallel in Gebrauch.</p>
-            <p><strong>Fettlösliche Vitamine:</strong></p>
-            <ul>
-              <li>• Retinol (Vitamin A)</li>
-              <li>• Calciferol (Vitamin D)</li>
-              <li>• Tocopherol (Vitamin E)</li>
-              <li>• <a href="/trafarette/vitamink">Phyllochinon (Vitamin K)</a></li>
-            </ul>
-            <p><em>Hinweis: Calciferol kann vom menschlichen Körper synthetisiert werden, wird jedoch aus Gründen der Vollständigkeit hier aufgeführt.</em></p>
-            <p><strong>Wasserlösliche Vitamine:</strong></p>
-            <ul>
-              <li>• Thiamin (Vitamin B1)</li>
-              <li>• Riboflavin (Vitamin B2)</li>
-              <li>• Pyridoxin (Vitamin B6)</li>
-              <li>• Cobalamin (Vitamin B12)</li>
-              <li>• Ascorbinsäure (Vitamin C)</li>
-              <li>• Niacin</li>
-              <li>• Pantothensäure</li>
-              <li>• Biotin (Vitamin H)</li>
-              <li>• Folsäure</li>
-            </ul>
-          </div>`
+            "id": 3,
+            "title": "Klassifikation",
+            "textWithFormatting": `<div>
+                <p>Vitamine werden in zwei Hauptgruppen unterteilt:</p>
+                <p><b>3.1. Fettlösliche Vitamine</b></p>
+                <p>Diese Vitamine werden zusammen mit Fetten aufgenommen und im Körper gespeichert:</p>
+                <ul>
+                    <li>• <b>Retinol (Vitamin A)</b></li>
+                    <li>• <b>Calciferol (Vitamin D)</b> – kann teilweise durch Sonneneinstrahlung im Körper synthetisiert werden.</li>
+                    <li>• <b>Tocopherol (Vitamin E)</b></li>
+                    <li>• <b><a href="/trafarette/vitamink">Phyllochinon (Vitamin K)</a></b></li>
+                </ul>
+                <p><b>3.2. Wasserlösliche Vitamine</b></p>
+                <p>Diese Vitamine müssen regelmäßig zugeführt werden, da sie im Körper nicht gespeichert werden:</p>
+                <ul>
+                    <li>• <b>Thiamin (Vitamin B1)</b></li>
+                    <li>• <b>Riboflavin (Vitamin B2)</b></li>
+                    <li>• <b>Pyridoxin (Vitamin B6)</b></li>
+                    <li>• <b>Cobalamin (Vitamin B12)</b></li>
+                    <li>• <b>Ascorbinsäure (Vitamin C)</b></li>
+                    <li>• <b>Niacin</b></li>
+                    <li>• <b>Pantothensäure</b></li>
+                    <li>• <b>Biotin (Vitamin H)</b></li>
+                    <li>• <b>Folsäure</b></li>
+                </ul>
+            </div>`
         },
         {
-          "id": 4,
-          "title": "4. Historisches",
-          "textWithFormatting": `<div>
-            <p>Der Begriff „Vitamin“ wurde 1912 von dem polnischen Biochemiker Casimir Funk geprägt, als er das Vitamin Thiamin (B1) isolierte, während er die biochemische Ursache der Beriberi-Krankheit erforschte.</p>
-            <p>Die Tatsache, dass Vitamine nicht durchgängig nach Ziffern oder Buchstaben geordnet sind, hat historische Gründe. Früher wurden zahlreiche Stoffe fälschlicherweise als Vitamine bezeichnet, da man ihre Bedeutung für den Stoffwechsel überschätzte. Mit fortschreitendem biochemischen Wissen wurden diese Stoffe von der Liste der Vitamine gestrichen. Beispiele dafür sind:</p>
-            <ul>
-              <li>Orotsäure (Vitamin B13)</li>
-              <li>Coenzym Q (Vitamin Q)</li>
-              <li>Carnitin (Vitamin T oder BT)</li>
-              <li>Bioflavonoide (Vitamin P)</li>
-              <li>Adenin und Cholin (Vitamin B4)</li>
-              <li>Essentielle Fettsäuren (Vitamin F)</li>
-            </ul>
-          </div>`
+            "id": 4,
+            "title": "Historisches",
+            "textWithFormatting": `<div>
+                <p>Der Begriff “<b>Vitamin</b>” wurde 1912 von Casimir Funk geprägt, als er das Vitamin Thiamin (B1) isolierte, während er die Ursache der Beriberi-Krankheit untersuchte. Anfangs wurden viele Verbindungen als Vitamine betrachtet, später jedoch als nicht essentiell ausgeschlossen, wie z.B. Orotsäure (B13) und Coenzym Q (Vitamin Q).</p>
+            </div>`
         },
         {
-          "id": 5,
-          "title": "5. Klinik",
-          "textWithFormatting": `<div>
-            <p>Störungen im Vitaminmetabolismus können durch angeborene Stoffwechselerkrankungen verursacht werden, was zu spezifischen klinischen Symptomen führt.</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Vitamin</th>
-                  <th>Störung</th>
-                  <th>Klinik</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Retinol (Vitamin A)</td>
-                  <td>Apolipoproteins B</td>
-                  <td>Abetalipoproteinämie, erniedrigte Vitamin-A-Spiegel</td>
-                </tr>
-                <tr>
-                  <td>Calciferol (Vitamin D)</td>
-                  <td>Rezeptor</td>
-                  <td>Keine Reaktion auf Calciferol, Osteomalazie</td>
-                </tr>
-                <tr>
-                  <td>Tocopherol (Vitamin E)</td>
-                  <td>Apolipoproteins B</td>
-                  <td>Abetalipoproteinämie, erniedrigte Vitamin-E-Spiegel</td>
-                </tr>
-                <tr>
-                  <td>Thiamin (Vitamin B1)</td>
-                  <td>BCKDH-Komplex</td>
-                  <td>Ahornsirupkrankheit</td>
-                </tr>
-                <tr>
-                  <td>Pyruvatmetabolismus</td>
-                  <td></td>
-                  <td>Laktatazidose, neurologische Anomalien</td>
-                </tr>
-                <tr>
-                  <td>Riboflavin (Vitamin B2)</td>
-                  <td>Methämoglobin-Reduktase</td>
-                  <td>Methämoglobinämie</td>
-                </tr>
-                <tr>
-                  <td>Flavoproteine</td>
-                  <td></td>
-                  <td>Mangel an Acyl-CoA-Dehydrogenierung, metabolische Azidose</td>
-                </tr>
-                <tr>
-                  <td>Pyridoxin (Vitamin B6)</td>
-                  <td>Cystathionin-β-Synthase</td>
-                  <td>Homocystinurie</td>
-                </tr>
-                <tr>
-                  <td>Kynureninase</td>
-                  <td></td>
-                  <td>Xanthurenazidurie</td>
-                </tr>
-                <tr>
-                  <td>Vitamin B12 (Cobalamin)</td>
-                  <td>Intrinsic Factor</td>
-                  <td>Juvenile perniziöse Anämie</td>
-                </tr>
-                <tr>
-                  <td>Transcobalamin</td>
-                  <td></td>
-                  <td>Megaloblastäre Anämie, Wachstumsstörungen</td>
-                </tr>
-                <tr>
-                  <td>Folsäure</td>
-                  <td>Absorption</td>
-                  <td>Megaloblastäre Anämie, mentale Störungen</td>
-                </tr>
-                <tr>
-                  <td>Methylentetrahydrofolat-Reduktase</td>
-                  <td></td>
-                  <td>Homocystinurie, neurologische Störungen</td>
-                </tr>
-                <tr>
-                  <td>Biotin</td>
-                  <td>Biotinidase</td>
-                  <td>Alopezie, Krämpfe, Entwicklungsstörungen</td>
-                </tr>
-                <tr>
-                  <td>Pyruvatcarboxylase</td>
-                  <td></td>
-                  <td>Akkumulation von Laktat und Pyruvat</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>`
+            "id": 5,
+            "title": "Klinik",
+            "textWithFormatting": `<div>
+                <p>Störungen im Vitaminmetabolismus können zu ernsthaften klinischen Problemen führen. Eine Übersicht zeigt die Verknüpfungen zwischen spezifischen Vitaminen, Störungen und klinischen Symptomen:</p>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Vitamin</th>
+                            <th>Störung</th>
+                            <th>Klinische Symptome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Retinol (A)</b></td>
+                            <td>Apolipoprotein B</td>
+                            <td>Abetalipoproteinämie, niedrige Vitamin-A-Spiegel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Calciferol (D)</b></td>
+                            <td>Rezeptorfehler</td>
+                            <td>Osteomalazie</td>
+                        </tr>
+                        <tr>
+                            <td><b>Tocopherol (E)</b></td>
+                            <td>Apolipoprotein B</td>
+                            <td>Abetalipoproteinämie, niedrige Vitamin-E-Spiegel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Thiamin (B1)</b></td>
+                            <td>BCKDH-Komplex</td>
+                            <td>Ahornsirupkrankheit, Laktatazidose, neurologische Anomalien</td>
+                        </tr>
+                        <tr>
+                            <td><b>Riboflavin (B2)</b></td>
+                            <td>Methämoglobin-Reduktase</td>
+                            <td>Methämoglobinämie, metabolische Azidose</td>
+                        </tr>
+                        <tr>
+                            <td><b>Cobalamin (B12)</b></td>
+                            <td>Intrinsic-Faktor-Mangel</td>
+                            <td>Perniziöse Anämie, Wachstumsstörungen, megaloblastäre Anämie</td>
+                        </tr>
+                        <tr>
+                            <td><b>Folsäure</b></td>
+                            <td>Methylentetrahydrofolat-Reduktase</td>
+                            <td>Homocystinurie, neurologische Störungen</td>
+                        </tr>
+                        <tr>
+                            <td><b>Biotin</b></td>
+                            <td>Biotinidase</td>
+                            <td>Alopezie, Krämpfe, Entwicklungsstörungen</td>
+                        </tr>
+                        <tr>
+                            <td><b>Niacin</b></td>
+                            <td>Neurotransmission</td>
+                            <td>Psychiatrische Erkrankungen, Pellagra</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>`
         },
         {
-          "id": 6,
-          "title": "6. Merkhilfen",
-          "textWithFormatting": `<div>
-            <p>Eine einfache Eselsbrücke für die fettlöslichen Vitamine ist der Merkspruch: Auch der Esel kaut oder das Akronym EDEKA.</p>
-          </div>`
-        },
-
-        //  End of child tab 2 (можна далі ще таби добавити якшо треба)
-      ],
+            "id": 6,
+            "title": "Merkhilfen",
+            "textWithFormatting": `<div>
+                <p>Zur Erinnerung an die fettlöslichen Vitamine kann der Merkspruch “<b>Auch der Esel Kaut</b>” oder das Akronym <b>EDEKA</b> verwendet werden.</p>
+            </div>`
+        }
+    ],
     },
     //  End of parent tab 1
     //  Start of parent tab 2

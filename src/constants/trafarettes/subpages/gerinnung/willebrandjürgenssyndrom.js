@@ -88,7 +88,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Diagnose des Willebrand-Jürgens-Syndroms erfordert spezifische Laboruntersuchungen, da die Symptome häufig unspezifisch sind und leicht mit anderen Gerinnungsstörungen verwechselt werden können. Die wegweisende Diagnostik umfasst folgende Untersuchungen:</p>
             <ul>
-              <li>• Blutbild: Zur Überprüfung der Thrombozytenzahl</li>
+              <li>• <a href="/trafarette/kleinesblutbild">Kleines Blutbild:</a>: Zur Überprüfung der Thrombozytenzahl</li>
               <li>• PTT (partielle Thromboplastinzeit): Oft verlängert, insbesondere bei schwereren Formen</li>
               <li>• Quick-Wert (INR): Normal oder nur geringfügig verändert</li>
               <li>• Faktorenbestimmungen: Zur Messung der Aktivität von Faktor VIII und vWF</li>

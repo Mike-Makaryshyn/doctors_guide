@@ -61,7 +61,7 @@ export default {
                   <li>• Prophylaxe bei peripherer arterieller Verschlusskrankheit (pAVK) und nach gefäßchirurgischen Eingriffen</li>
                 </ul>
               </li>
-              <li><b>Analgesie:</b> Leichte bis mittelschwere Schmerzen, z.B. Kopfschmerzen, Gelenkschmerzen, Muskelschmerzen oder Regelschmerzen.</li>
+              <li><b><a href="/trafarette/analgesie">Analgesie</a>:</b> Leichte bis mittelschwere Schmerzen, z.B. Kopfschmerzen, Gelenkschmerzen, Muskelschmerzen oder Regelschmerzen.</li>
               <li><b>Weitere Anwendungen:</b> In Ausnahmefällen auch als fiebersenkendes Mittel oder bei entzündlichen Erkrankungen, wenn moderne Antiphlogistika nicht infrage kommen oder eine irreversible Thrombozytenaggregation gewünscht ist.</li>
             </ul>
           </div>`,
@@ -71,7 +71,7 @@ export default {
           title: "7. Dosierung",
           textWithFormatting: `<div>
             <p><b>Thrombozytenaggregationshemmung:</b> 100 mg/Tag oral.</p>
-            <p><b>Analgesie:</b> 500–1.000 mg oral, 2–3 mal täglich.</p>
+            <p><b><a href="/trafarette/analgesie">Analgesie</a>:</b> 500–1.000 mg oral, 2–3 mal täglich.</p>
             <p><i>Hinweis:</i> Die genaue Dosierung ist der jeweiligen Herstellerinformation zu entnehmen.</p>
           </div>`,
         },
