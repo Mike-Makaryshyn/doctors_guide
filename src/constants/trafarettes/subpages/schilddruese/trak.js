@@ -17,7 +17,7 @@ export default {
           "id": 2,
           "title": "Wirkung",
           "textWithFormatting": `<div>
-            <p>TRAKs spielen eine zentrale Rolle bei der Pathogenese des Morbus Basedow. Durch ihre Bindung an den TSH-Rezeptor der Schilddrüse kommt es zu einer unkontrollierten Aktivierung dieses Rezeptors. Diese dauerhafte Stimulation führt zur übermäßigen Produktion und Freisetzung der Schilddrüsenhormone T3 und T4, was eine Hyperthyreose zur Folge hat. Diese Antikörper sind also direkt verantwortlich für die Symptome der Schilddrüsenüberfunktion bei Morbus Basedow.</p>
+            <p>TRAKs spielen eine zentrale Rolle bei der Pathogenese des <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Durch ihre Bindung an den TSH-Rezeptor der Schilddrüse kommt es zu einer unkontrollierten Aktivierung dieses Rezeptors. Diese dauerhafte Stimulation führt zur übermäßigen Produktion und Freisetzung der Schilddrüsenhormone T3 und T4, was eine <a href="/trafarette/hyperthyreose">Hyperthyreose</a> zur Folge hat. Diese Antikörper sind also direkt verantwortlich für die Symptome der Schilddrüsenüberfunktion bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a>.</p>
           </div>`
         },
         {
@@ -26,10 +26,10 @@ export default {
           "textWithFormatting": `<div>
             <p>TRAKs können unterteilt werden in:</p>
             <ul>
-              <li>• <b>Stimulierende Antikörper (TSAb oder sTRAb)</b>: Diese sind hauptsächlich für die Überaktivität der Schilddrüse bei Morbus Basedow verantwortlich.</li>
+              <li>• <b>Stimulierende Antikörper (TSAb oder sTRAb)</b>: Diese sind hauptsächlich für die Überaktivität der Schilddrüse bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> verantwortlich.</li>
               <li>• <b>Blockierende Antikörper (TBAb oder iTRAb)</b>: Sie hemmen die TSH-Wirkung und sind in ihrer Bedeutung und ihrem Vorkommen weniger gut erforscht.</li>
             </ul>
-            <p>Stimulierende Antikörper sind in Mitteleuropa fast immer die Ursache für Morbus Basedow. Blockierende Antikörper spielen eine weniger zentrale Rolle und sind Gegenstand laufender Forschungen.</p>
+            <p>Stimulierende Antikörper sind in Mitteleuropa fast immer die Ursache für <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Blockierende Antikörper spielen eine weniger zentrale Rolle und sind Gegenstand laufender Forschungen.</p>
           </div>`
         },
         {
@@ -61,22 +61,22 @@ export default {
           "id": 7,
           "title": "Interpretation",
           "textWithFormatting": `<div>
-            <p>In 80–100 % der Fälle von Morbus Basedow sind TRAK nachweisbar. Das Vorhandensein dieser Antikörper ist ein eindeutiger Indikator für eine autoimmune Ursache der Hyperthyreose. TRAK können aber auch bei anderen Schilddrüsenerkrankungen gefunden werden, beispielsweise:</p>
+            <p>In 80–100 % der Fälle von <a href="/trafarette/morbusbasedow">Morbus Basedow</a> sind TRAK nachweisbar. Das Vorhandensein dieser Antikörper ist ein eindeutiger Indikator für eine autoimmune Ursache der <a href="/trafarette/hyperthyreose">Hyperthyreose</a>. TRAK können aber auch bei anderen Schilddrüsenerkrankungen gefunden werden, beispielsweise:</p>
             <ul>
               <li>• <b>Postpartale Thyreoiditis</b>: 50–70 % der Fälle</li>
-              <li>• <b>Hashimoto-Thyreoiditis</b>: bis zu 10 % der Fälle</li>
-              <li>• <b>Primäres Myxödem</b>: in 0–5 % der Fälle</li>
+              <li>• <b><a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a></b>: bis zu 10 % der Fälle</li>
+              <li>• <b>Primäres <a href="/trafarette/myxoedem">Myxödem</a></b>: in 0–5 % der Fälle</li>
               <li>• <b>Schilddrüsenautonomie</b>: etwa 5 % der Fälle</li>
             </ul>
-            <p>Fehlende TRAK bei einer Hyperthyreose deuten auf eine andere Ursache hin, wie beispielsweise Störungen im hypothalamisch-hypophysären Regelkreis.</p>
-            <p>Es ist wichtig zu beachten, dass die Höhe des TRAK-Spiegels nicht unbedingt mit dem Schweregrad der Hyperthyreose korreliert. Ein Abfall der TRAK-Konzentration unter einer thyreostatischen Therapie kann jedoch auf eine mögliche Remission hindeuten.</p>
+            <p>Fehlende TRAK bei einer <a href="/trafarette/hyperthyreose">Hyperthyreose</a> deuten auf eine andere Ursache hin, wie beispielsweise Störungen im hypothalamisch-hypophysären Regelkreis.</p>
+            <p>Es ist wichtig zu beachten, dass die Höhe des TRAK-Spiegels nicht unbedingt mit dem Schweregrad der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> korreliert. Ein Abfall der TRAK-Konzentration unter einer thyreostatischen Therapie kann jedoch auf eine mögliche Remission hindeuten.</p>
           </div>`
         },
         {
           "id": 8,
           "title": "Weitere TRAK-assoziierte Krankheitsbilder",
           "textWithFormatting": `<div>
-            <p>TRAKs sind nicht nur für Morbus Basedow verantwortlich, sondern auch stark mit der Entwicklung der endokrinen Orbitopathie verbunden. Diese Autoimmunerkrankung betrifft das Gewebe der Augenhöhle und tritt häufig zusammen mit Morbus Basedow auf, wenn auch nicht immer zeitgleich. Es wird angenommen, dass TSH-Rezeptoren in der Augenhöhle exprimiert werden, was die Bindung der TRAK und die daraus resultierenden entzündlichen Prozesse erklärt. Bei schweren Fällen der endokrinen Orbitopathie sind meist hohe TRAK-Werte im Blut nachweisbar.</p>
+            <p>TRAKs sind nicht nur für <a href="/trafarette/morbusbasedow">Morbus Basedow</a> verantwortlich, sondern auch stark mit der Entwicklung der endokrinen Orbitopathie verbunden. Diese Autoimmunerkrankung betrifft das Gewebe der Augenhöhle und tritt häufig zusammen mit Morbus Basedow auf, wenn auch nicht immer zeitgleich. Es wird angenommen, dass TSH-Rezeptoren in der Augenhöhle exprimiert werden, was die Bindung der TRAK und die daraus resultierenden entzündlichen Prozesse erklärt. Bei schweren Fällen der endokrinen Orbitopathie sind meist hohe TRAK-Werte im Blut nachweisbar.</p>
           </div>`
         }
       ],

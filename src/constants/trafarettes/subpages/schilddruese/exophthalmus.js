@@ -34,7 +34,7 @@ export default {
               <li>• <b>Entzündliche Erkrankungen der Orbita</b>: Beispiele sind Orbitaphlegmone, Sinus-cavernosus-Thrombose und Pseudotumore der Orbita.</li>
               <li>• <b>Gefäßanomalien</b>: Hierzu zählen ein pulsierender Exophthalmus oder Orbitahämatome.</li>
               <li>• <b>Orbitatumor</b>: Tumoren im Bereich der Augenhöhle können den Bulbus nach vorne drücken.</li>
-              <li>• <b>Endokrine Orbitopathie</b>: Diese tritt häufig im Zusammenhang mit Morbus Basedow oder anderen Autoimmunerkrankungen der Schilddrüse auf und wird nach der LEMO-Klassifikation bewertet.</li>
+              <li>• <b>Endokrine Orbitopathie</b>: Diese tritt häufig im Zusammenhang mit <a href="/trafarette/morbusbasedow">Morbus Basedow</a> oder anderen Autoimmunerkrankungen der Schilddrüse auf und wird nach der LEMO-Klassifikation bewertet.</li>
             </ul>
           </div>`
         },

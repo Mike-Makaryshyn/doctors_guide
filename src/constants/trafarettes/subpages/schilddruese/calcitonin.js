@@ -1,6 +1,6 @@
 export default {
   path: "calcitonin",
-  // http://localhost:5173/trafarette/calcitonin
+  // http://localhost:5173/trafarette/calcitonin,
   content: [
     {
       id: 1,
@@ -34,7 +34,7 @@ export default {
                 <h4>3.2. Stimulation und Sekretion</h4>
                 <p>Die Freisetzung von Calcitonin wird durch hohe Serumcalciumspiegel und gastrointestinale Peptide (z.B. Pentagastrin) stimuliert. Calcitonin besitzt zudem eine analgetische Wirkung im zentralen Nervensystem, vermutlich durch die Freisetzung von Endorphinen.</p>
                 <h4>3.3. Tumormarker</h4>
-                <p>Calcitonin dient als Tumormarker beim medullären Schilddrüsenkarzinom, da bei dieser Erkrankung eine übermäßige Produktion von Calcitonin auftritt. Dies kann diagnostisch genutzt werden, um die Krankheit zu überwachen und Rückfälle zu erkennen.</p>
+                <p>Calcitonin dient als Tumormarker beim <a href="/trafarette/medullaereschilddruesenkarzinom">medullären Schilddrüsenkarzinom</a>, da bei dieser Erkrankung eine übermäßige Produktion von Calcitonin auftritt. Dies kann diagnostisch genutzt werden, um die Krankheit zu überwachen und Rückfälle zu erkennen.</p>
             </div>`
         },
         {
@@ -67,7 +67,7 @@ export default {
                 <h4>5.4. Interpretation erhöhter Calcitonin-Werte</h4>
                 <p>Erhöhte Calcitonin-Spiegel können bei verschiedenen Erkrankungen auftreten, darunter:</p>
                 <ul>
-                    <li>• Medulläres Schilddrüsenkarzinom (wichtiger Tumormarker)</li>
+                    <li>• <a href="/trafarette/medullaereschilddruesenkarzinom">medulläres Schilddrüsenkarzinom</a> (wichtiger Tumormarker)</li>
                     <li>• Sipple-Syndrom (medulläres Schilddrüsenkarzinom mit Phäochromozytom)</li>
                     <li>• C-Zell-Hyperplasie</li>
                     <li>• Niereninsuffizienz</li>
@@ -75,7 +75,7 @@ export default {
                     <li>• Hypergastrinämie</li>
                     <li>• Neuroendokrine Neoplasien (NEN)</li>
                     <li>• Multiple Endokrine Neoplasien (MEN-Syndrom)</li>
-                    <li>• Selten bei Hyperthyreose</li>
+                    <li>• Selten bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a></li>
                 </ul>
                 <h4>5.5. Erweiterte Diagnostik</h4>
                 <p>Die Calcitonin-Sekretion kann durch Stimulationstests überprüft werden:</p>

@@ -31,7 +31,7 @@ export default {
                     </li>
                     <li><b>Peptidhormon:</b>
                         <ul>
-                            <li>• Calcitonin, das von den C-Zellen der Schilddrüse produziert wird und am Kalziumstoffwechsel beteiligt ist.</li>
+                            <li>• <a href="/trafarette/calcitonin">Calcitonin</a>, das von den C-Zellen der Schilddrüse produziert wird und am Kalziumstoffwechsel beteiligt ist.</li>
                         </ul>
                     </li>
                 </ul>
@@ -44,7 +44,7 @@ export default {
                 <p><b>3.1. Synthese</b></p>
                 <p>Die Synthese der Schilddrüsenhormone erfolgt an der Außenseite der Plasmamembran der Epithelzellen der Schilddrüsenfollikel und umfasst drei Hauptschritte:</p>
                 <ol>
-                    <li><b>Aufnahme von Iodid:</b> Iodid wird durch einen Na/I-Symporter aus dem Blutplasma in die Follikelzellen aufgenommen und durch den Cl/I-Austauscher (Pendrin) ins Lumen abgegeben. Dort wird es durch H<sub>2</sub>O<sub>2</sub> oxidiert, bevor es für die Iodierung verfügbar ist.</li>
+                    <li><b>Aufnahme von <a href="/trafarette/iod">Iodid</a>:</b> Iodid wird durch einen Na/I-Symporter aus dem Blutplasma in die Follikelzellen aufgenommen und durch den Cl/I-Austauscher (Pendrin) ins Lumen abgegeben. Dort wird es durch H<sub>2</sub>O<sub>2</sub> oxidiert, bevor es für die Iodierung verfügbar ist.</li>
                     <li><b>Iodierung:</b> Die Thyreoperoxidase (TPO) katalysiert die Übertragung der Iodionen auf Tyrosinreste des Thyreoglobulins, wodurch Monoiodtyrosin (MIT) und Diiodtyrosin (DIT) entstehen.</li>
                     <li><b>Konjugation:</b> MIT und DIT werden durch TPO zu T3 und T4 verknüpft. Zwei DIT-Moleküle bilden T4, während ein MIT und ein DIT zusammen T3 ergeben.</li>
                 </ol>
@@ -72,7 +72,7 @@ export default {
                     <li>• Förderung der Gehirn- und Skelettentwicklung</li>
                     <li>• Regulation der Verdauung und psychischen Gesundheit</li>
                 </ul>
-                <p>Calcitonin ist ein weniger bedeutendes Hormon, das den Kalziumspiegel im Blut senkt und die Osteoblastenaktivität stimuliert, um die Kalkeinlagerung im Knochen zu fördern.</p>
+                <p><a href="/trafarette/calcitonin">Calcitonin</a> ist ein weniger bedeutendes Hormon, das den Kalziumspiegel im Blut senkt und die Osteoblastenaktivität stimuliert, um die Kalkeinlagerung im Knochen zu fördern.</p>
             </div>`
         },
         {
@@ -144,21 +144,21 @@ export default {
             "id": 8,
             "title": "Klinik",
             "textWithFormatting": `<div>
-                <p><b>Hyperthyreose:</b></p>
+                <p><b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b></p>
                 <ul>
                     <li><b>Definition:</b> Überproduktion von T3 und T4 führt zu einer gesteigerten Stoffwechselrate.</li>
-                    <li><b>Ursachen:</b> Morbus Basedow, autonome Adenome, TSH-produzierende Tumoren.</li>
+                    <li><b>Ursachen:</b> <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, autonome Adenome, TSH-produzierende Tumoren.</li>
                     <li><b>Symptome:</b> Gewichtsverlust, Tachykardie, Unruhe, Wärmeempfindung.</li>
                     <li><b>Diagnose:</b> Erniedrigtes TSH, erhöhte T3/T4-Spiegel.</li>
                     <li><b>Therapie:</b> Medikamente, radioaktive Jodtherapie, Operation.</li>
                 </ul>
-                <p><b>Hypothyreose:</b></p>
+                <p><b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b></p>
                 <ul>
                     <li><b>Definition:</b> Unzureichende Produktion von Schilddrüsenhormonen.</li>
-                    <li><b>Ursachen:</b> Hashimoto-Thyreoiditis, Jodmangel, angeborene Agenesie.</li>
+                    <li><b>Ursachen:</b> <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a>, <a href="/trafarette/jodmangel">Jodmangel</a>, angeborene Agenesie.</li>
                     <li><b>Symptome:</b> Müdigkeit, Gewichtszunahme, Kälteempfindlichkeit, Verstopfung.</li>
                     <li><b>Diagnose:</b> Erhöhtes TSH, erniedrigtes T3/T4.</li>
-                    <li><b>Therapie:</b> Hormonersatztherapie mit Levothyroxin.</li>
+                    <li><b>Therapie:</b> Hormonersatztherapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a>.</li>
                 </ul>
             </div>`
         }

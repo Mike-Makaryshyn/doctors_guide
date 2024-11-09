@@ -316,12 +316,12 @@ export default {
                   <p><strong>Symptome:</strong> Tachykardie, Gewichtsverlust, Nervosität, Schwitzen.</p>
                   <p><strong>Laborbefunde:</strong> TSH↓, T₃/T₄↑.</p>
                   <p><strong>Sonderformen:</strong> Morbus Basedow, Schilddrüsenautonomie.</p>
-                  <h3>Hypothyreose (Schilddrüsenunterfunktion)</h3>
+                  <h3><a href="/trafarette/hypothyreose">Hypothyreose</a> (Schilddrüsenunterfunktion)</h3>
                   <p><strong>Definition:</strong> Unterproduktion von Schilddrüsenhormonen.</p>
                   <p><strong>Häufigkeit:</strong> 1–3 % der Bevölkerung; Frauen 4-mal häufiger betroffen.</p>
                   <p><strong>Symptome:</strong> Müdigkeit, Gewichtszunahme, Kälteempfindlichkeit.</p>
                   <p><strong>Laborbefunde:</strong> TSH↑, T₃/T₄↓.</p>
-                  <p><strong>Sonderformen:</strong> Hashimoto-Thyreoiditis, angeborene Hypothyreose.</p>
+                  <p><strong>Sonderformen:</strong> Hashimoto-Thyreoiditis, angeborene <a href="/trafarette/hypothyreose">Hypothyreose</a>.</p>
                </div>`,
         },
         {

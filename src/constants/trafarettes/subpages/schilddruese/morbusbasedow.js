@@ -1,16 +1,16 @@
 export default {
   path: "morbusbasedow",
-  // http://localhost:5173/trafarette/morbusbasedow
+  // http://localhost:5173/trafarette/morbusbasedow 
   content: [
     {
       id: 1,
-      title: "Hyperthyreose",
+      title: "Morbus Basedow",
       childTabs: [
         {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Morbus Basedow ist eine Autoimmunerkrankung der Schilddrüse, die eine Hyperthyreose verursacht. Diese Krankheit ist bekannt für ihre charakteristische Trias, auch als Merseburger Trias bezeichnet, die aus <a href="/trafarette/struma">Struma</a> (Schilddrüsenvergrößerung), Exophthalmus (hervortretende Augen) und Tachykardie (erhöhte Herzfrequenz) besteht.</p>
+            <p>Morbus Basedow ist eine Autoimmunerkrankung der Schilddrüse, die eine Hyperthyreose verursacht. Diese Krankheit ist bekannt für ihre charakteristische Trias, auch als <a href="/trafarette/merseburgertrias">Merseburger Trias</a> bezeichnet, die aus <a href="/trafarette/struma">Struma</a> (Schilddrüsenvergrößerung), <a href="/trafarette/exophthalmus">Exophthalmus</a> (hervortretende Augen) und Tachykardie (erhöhte Herzfrequenz) besteht.</p>
           </div>`
         },
         {
@@ -41,7 +41,7 @@ export default {
               <li>• <b>Dauerstimulation der Schilddrüse</b>: Die Antikörper bewirken eine kontinuierliche Stimulation der Schilddrüsenzellen, was zu einer Überproduktion von T3 und T4 führt.</li>
               <li>• <b><a href="/trafarette/struma">Struma</a></b>: Die chronische Stimulation führt zu einer Vergrößerung der Schilddrüse.</li>
               <li>• <b>Thyreotoxikose</b>: Der erhöhte Hormonspiegel führt zu den typischen Symptomen einer Überfunktion der Schilddrüse.</li>
-              <li>• <b>Extrathyreoidale Manifestationen</b>: Diese umfassen die endokrine Orbitopathie und das prätibiale Myxödem, die durch die Bindung der Antikörper an ähnliche Rezeptoren im orbitalen und subkutanen Gewebe verursacht werden.</li>
+              <li>• <b>Extrathyreoidale Manifestationen</b>: Diese umfassen die endokrine Orbitopathie und das prätibiale <a href="/trafarette/myxoedem">Myxödem</a>, die durch die Bindung der Antikörper an ähnliche Rezeptoren im orbitalen und subkutanen Gewebe verursacht werden.</li>
             </ul>
             <p>Im Unterschied zu anderen Formen der Hyperthyreose bleibt die TSH-Produktion supprimiert, da die TRAK die Feedbackschleife der Hypophyse beeinflussen. Dieser Mechanismus führt dazu, dass TSH als alleiniger Parameter zur Überwachung nicht ausreicht.</p>
           </div>`
@@ -50,7 +50,7 @@ export default {
           "id": 5,
           "title": "Merseburger Trias",
           "textWithFormatting": `<div>
-            <p>Die vollständige Ausprägung der Trias, bestehend aus <a href="/trafarette/struma">Struma</a>, Tachykardie und Exophthalmus, tritt bei etwa 50 % der Patienten auf. Der Exophthalmus resultiert aus der Autoimmunreaktion gegen die retroorbitalen Strukturen, die Schwellung und Fibrose verursachen.</p>
+            <p>Die vollständige Ausprägung der Trias, bestehend aus <a href="/trafarette/struma">Struma</a>, Tachykardie und <a href="/trafarette/exophthalmus">Exophthalmus</a>, tritt bei etwa 50 % der Patienten auf. Der Exophthalmus resultiert aus der Autoimmunreaktion gegen die retroorbitalen Strukturen, die Schwellung und Fibrose verursachen.</p>
           </div>`
         },
         {
@@ -62,7 +62,7 @@ export default {
               <li>• <b>Allgemeine Symptome</b>: Gewichtsverlust trotz erhöhtem Appetit, Schwitzen, Wärmeintoleranz und Durchfall.</li>
               <li>• <b>Herz-Kreislauf</b>: Tachykardie, Herzklopfen und Vorhofflimmern.</li>
               <li>• <b>Neurologische Symptome</b>: Nervosität, Zittern (feinschlägiger Tremor), Schlafstörungen und psychische Labilität.</li>
-              <li>• <b>Augenveränderungen</b>: Exophthalmus, Lidschwellung, Augenmuskeldysfunktion.</li>
+              <li>• <b>Augenveränderungen</b>: <a href="/trafarette/exophthalmus">Exophthalmus</a>, Lidschwellung, Augenmuskeldysfunktion.</li>
               <li>• <b>Muskuläre Beschwerden</b>: Muskelschwäche und Myopathie.</li>
               <li>• <b>Weitere</b>: Osteoporose, Zyklusstörungen bei Frauen und gestörte Glukosetoleranz.</li>
             </ul>
@@ -89,11 +89,11 @@ export default {
           "id": 8,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit Thyreostatika wie Thiamazol oder Carbimazol, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
+            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit Thyreostatika wie Thiamazol oder <a href="/trafarette/carbimazol">Carbimazol</a>, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
             <p><b>Definitive Therapiemöglichkeiten:</b></p>
             <ul>
-              <li>• <b>Radiojodtherapie</b>: Eine häufig gewählte Behandlung, die das Schilddrüsengewebe durch die Aufnahme von radioaktivem Jod gezielt zerstört.</li>
-              <li>• <b>Chirurgie</b>: Eine totale oder partielle Thyreoidektomie ist indiziert bei großen Strumen, Kinderwunsch oder bei Patienten, die nicht auf die medikamentöse Therapie ansprechen. Nach einer totalen Entfernung ist eine lebenslange Hormonersatztherapie mit Levothyroxin erforderlich.</li>
+              <li>• <b>Radiojodtherapie</b>: Eine häufig gewählte Behandlung, die das Schilddrüsengewebe durch die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> gezielt zerstört.</li>
+              <li>• <b>Chirurgie</b>: Eine totale oder partielle Thyreoidektomie ist indiziert bei großen Strumen, Kinderwunsch oder bei Patienten, die nicht auf die medikamentöse Therapie ansprechen. Nach einer totalen Entfernung ist eine lebenslange Hormonersatztherapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a> erforderlich.</li>
             </ul>
             <p>Vorbereitung auf definitive Therapien: Vor einer Operation oder Radiojodtherapie muss eine euthyreote Stoffwechsellage hergestellt werden, um Komplikationen wie eine thyreotoxische Krise zu vermeiden.</p>
           </div>`

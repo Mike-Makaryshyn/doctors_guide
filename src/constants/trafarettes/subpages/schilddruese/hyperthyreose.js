@@ -1,7 +1,7 @@
 import img1 from '../../../../assets/hypothalamusschilddruese.pdf';
 export default {
   path: "hyperthyreose",
-  // http://localhost:5173/trafarette/hyperthyreose
+  // http://localhost:5173/trafarette/hyperthyreose 
   content: [
     {
       id: 1,
@@ -20,7 +20,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Nach dem Ort der Störung unterscheidet man:</p>
             <ul>
-              <li>• <b>Primäre Hyperthyreose</b>: Hier liegt das Problem in der Schilddrüse selbst. Eine häufige Ursache ist Morbus Basedow, eine Autoimmunerkrankung, bei der Antikörper die Schilddrüse zu einer übermäßigen Hormonproduktion anregen. Auch autonome Adenome oder ein toxischer Kropf sind Beispiele.</li>
+              <li>• <b>Primäre Hyperthyreose</b>: Hier liegt das Problem in der Schilddrüse selbst. Eine häufige Ursache ist <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, eine Autoimmunerkrankung, bei der Antikörper die Schilddrüse zu einer übermäßigen Hormonproduktion anregen. Auch autonome Adenome oder ein toxischer Kropf sind Beispiele.</li>
               <li>• <b>Sekundäre Hyperthyreose</b>: Diese Form entsteht durch eine Überproduktion des Hormons TSH in der Hypophyse, was die Schilddrüse zur übermäßigen Hormonproduktion stimuliert.</li>
               <li>• <b>Tertiäre Hyperthyreose</b>: Diese seltene Form entsteht durch eine Überproduktion von TRH (Thyreotropin-Releasing-Hormon) im Hypothalamus.</li>
             </ul>
@@ -31,7 +31,7 @@ export default {
             </ul>
             <p>Nach der Ursache:</p>
             <ul>
-              <li>• <b>Autoimmunerkrankungen</b>: Der Morbus Basedow ist eine der bekanntesten Ursachen und betrifft meist Frauen zwischen 20 und 50 Jahren. Eine genetische Prädisposition kann die Wahrscheinlichkeit erhöhen.</li>
+              <li>• <b>Autoimmunerkrankungen</b>: Der <a href="/trafarette/morbusbasedow">Morbus Basedow</a> ist eine der bekanntesten Ursachen und betrifft meist Frauen zwischen 20 und 50 Jahren. Eine genetische Prädisposition kann die Wahrscheinlichkeit erhöhen.</li>
               <li>• <b>Schilddrüsenautonomie</b>: Hier arbeitet ein Teil der Schilddrüse unabhängig von der üblichen hormonellen Steuerung, z.B. bei toxischen Knoten.</li>
               <li>• <b>Medikamenten-induzierte Hyperthyreose</b>: Diese Form wird vor allem durch iodhaltige Medikamente wie Amiodaron ausgelöst.</li>
             </ul>
@@ -55,7 +55,7 @@ export default {
               <li>• <b>Gewichtsverlust</b>: Trotz gesteigertem Appetit verlieren Betroffene häufig an Gewicht.</li>
               <li>• <b>Kardiovaskuläre Probleme</b>: Herzklopfen, Tachykardie und ein erhöhter Blutdruck sind typische Beschwerden.</li>
               <li>• <b>Haut und Haare</b>: Die Haut kann warm und feucht sein, und Haarausfall sowie brüchige Nägel sind nicht selten.</li>
-              <li>• <b>Augenveränderungen</b>: Insbesondere beim Morbus Basedow können die Augen hervortreten (Exophthalmus) und zu Sehstörungen führen.</li>
+              <li>• <b>Augenveränderungen</b>: Insbesondere beim <a href="/trafarette/morbusbasedow">Morbus Basedow</a> können die Augen hervortreten (<a href="/trafarette/exophthalmus">Exophthalmus</a>) und zu Sehstörungen führen.</li>
               <li>• <b>Wärmeintoleranz</b>: Übermäßiges Schwitzen und eine Unverträglichkeit gegenüber Hitze sind häufige Beschwerden.</li>
             </ul>
           </div>`
@@ -64,7 +64,7 @@ export default {
           "id": 5,
           "title": "Diagnostik",
           "textWithFormatting": `<div>
-            <p>Die Diagnose basiert auf einer Kombination aus klinischer Untersuchung und Laborwerten. Typische Befunde zeigen einen erniedrigten TSH-Spiegel und erhöhte Werte von fT3 und fT4. Der Nachweis von TSH-Rezeptor-Antikörpern (TRAb) ist ein Indikator für Morbus Basedow. Zur weiteren Abklärung werden bildgebende Verfahren wie Ultraschall und Szintigraphie eingesetzt.</p>
+            <p>Die Diagnose basiert auf einer Kombination aus klinischer Untersuchung und Laborwerten. Typische Befunde zeigen einen erniedrigten TSH-Spiegel und erhöhte Werte von fT3 und fT4. Der Nachweis von TSH-Rezeptor-Antikörpern (TRAb) ist ein Indikator für <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Zur weiteren Abklärung werden bildgebende Verfahren wie Ultraschall und Szintigraphie eingesetzt.</p>
             <table>
               <thead>
                 <tr>
@@ -94,7 +94,7 @@ export default {
                   <td>↑</td>
                 </tr>
                 <tr>
-                  <td>Jod-induzierte Hyperthyreose</td>
+                  <td><a href="/trafarette/iod">Jod</a>-induzierte Hyperthyreose</td>
                   <td>↓</td>
                   <td>↑/n</td>
                   <td>↑/n</td>
@@ -110,15 +110,15 @@ export default {
           "title": "Therapie",
           "textWithFormatting": `<div>
             <p>Die Behandlung richtet sich nach der Ursache und Schwere der Hyperthyreose. Medikamentös werden häufig Thyreostatika wie Thiamazol oder Propylthiouracil eingesetzt, um die Hormonsynthese zu hemmen. Betablocker werden verabreicht, um Symptome wie Herzrasen zu lindern. In entzündlichen Fällen können Glukokortikoide eingesetzt werden, um die Hormonfreisetzung zu hemmen.</p>
-            <p>Eine alternative Therapieform ist die Radiojodtherapie, bei der radioaktives Jod verwendet wird, um die Schilddrüsenzellen zu zerstören. Diese Methode ist besonders wirksam bei autonomen Adenomen und Morbus Basedow, wird jedoch bei Schwangeren und Stillenden nicht angewendet.</p>
-            <p>In schweren oder therapieresistenten Fällen kann eine chirurgische Entfernung der Schilddrüse erforderlich sein. Nach einer vollständigen Entfernung ist eine lebenslange Hormonersatztherapie notwendig, um eine Hypothyreose zu vermeiden.</p>
+            <p>Eine alternative Therapieform ist die Radiojodtherapie, bei der radioaktives Jod verwendet wird, um die Schilddrüsenzellen zu zerstören. Diese Methode ist besonders wirksam bei autonomen Adenomen und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, wird jedoch bei Schwangeren und Stillenden nicht angewendet.</p>
+            <p>In schweren oder therapieresistenten Fällen kann eine chirurgische Entfernung der Schilddrüse erforderlich sein. Nach einer vollständigen Entfernung ist eine lebenslange Hormonersatztherapie notwendig, um eine <a href="/trafarette/hypothyreose">Hypothyreose</a> zu vermeiden.</p>
           </div>`
         },
         {
           "id": 7,
           "title": "Komplikationen und Langzeitfolgen",
           "textWithFormatting": `<div>
-            <p>Unbehandelt kann eine Hyperthyreose zu einer thyreotoxischen Krise führen, einem akuten und lebensbedrohlichen Zustand, der intensive medizinische Behandlung erfordert. Langfristig kann die Hyperthyreose zu Herz-Kreislauf-Erkrankungen, Osteoporose und Muskelschwäche führen.</p>
+            <p>Unbehandelt kann eine Hyperthyreose zu einer <a href="/trafarette/hypothyreotekoma">thyreotoxischen Krise</a> führen, einem akuten und lebensbedrohlichen Zustand, der intensive medizinische Behandlung erfordert. Langfristig kann die Hyperthyreose zu Herz-Kreislauf-Erkrankungen, Osteoporose und Muskelschwäche führen.</p>
           </div>`
         },
         {

@@ -128,7 +128,7 @@ export default {
                      <li><strong>C-Zellen:</strong>
                         <ul>
                            <li><em>Beschreibung:</em> Größere, helle Zellen zwischen den Follikeln, liegen an der Basalmembran ohne Anschluss an das Follikellumen.</li>
-                           <li><em>Funktion:</em> Produktion von Calcitonin, Regulierung des Kalziumspiegels im Blut.</li>
+                           <li><em>Funktion:</em> Produktion von <a href="/trafarette/calcitonin">Calcitonin</a>, Regulierung des Kalziumspiegels im Blut.</li>
                         </ul>
                      </li>
                   </ul>
@@ -150,7 +150,7 @@ export default {
                      <li><strong>Wirkung:</strong> Steuert Stoffwechselprozesse und Wachstum.</li>
                      <li><strong>Bildungsort:</strong> 20 % in der Schilddrüse, 80 % durch Umwandlung von T₄ in peripheren Geweben.</li>
                   </ul>
-                  <h3>Calcitonin</h3>
+                  <h3><a href="/trafarette/calcitonin">Calcitonin</a></h3>
                   <ul>
                      <li><strong>Eigenschaften:</strong> Peptidhormon.</li>
                      <li><strong>Wirkung:</strong> Senkung des Kalziumspiegels im Blut.</li>
@@ -233,17 +233,17 @@ export default {
                   <p><strong>Symptome:</strong> Tachykardie, Gewichtsverlust, Nervosität, Schwitzen.</p>
                   <p><strong>Laborbefunde:</strong> TSH↓, T₃/T₄↑.</p>
                   <p><strong>Sonderformen:</strong> Morbus Basedow, Schilddrüsenautonomie.</p>
-                  <h3>Hypothyreose (Schilddrüsenunterfunktion)</h3>
+                  <h3><a href="/trafarette/hypothyreose">Hypothyreose</a> (Schilddrüsenunterfunktion)</h3>
                   <p><strong>Definition:</strong> Unterproduktion von Schilddrüsenhormonen.</p>
                   <p><strong>Häufigkeit:</strong> 1–3 % der Bevölkerung; Frauen 4-mal häufiger betroffen.</p>
                   <p><strong>Symptome:</strong> Müdigkeit, Gewichtszunahme, Kälteempfindlichkeit.</p>
                   <p><strong>Laborbefunde:</strong> TSH↑, T₃/T₄↓.</p>
-                  <p><strong>Sonderformen:</strong> Hashimoto-Thyreoiditis, angeborene Hypothyreose.</p>
+                  <p><strong>Sonderformen:</strong> Hashimoto-Thyreoiditis, angeborene <a href="/trafarette/hypothyreose">Hypothyreose</a>.</p>
                </div>`,
             },
             {
                id: 13,
-               title: "13. Calcitonin",
+               title: "13. <a href="/trafarette/calcitonin">Calcitonin</a>",
                textWithFormatting: `<div>
                   <h3>Eigenschaften und Synthese</h3>
                   <ul>

@@ -12,7 +12,7 @@ export default {
             "id": 1,
             "title": "Definition und allgemeine Funktion",
             "textWithFormatting": `<div>
-                <p>Die <b>Schilddrüse (Glandula thyroidea)</b> ist die größte endokrine Drüse des menschlichen Körpers und hat eine fundamentale Bedeutung für die Regulation des Stoffwechsels, des Wachstums und der Kalziumhomöostase. Sie produziert die Hormone Trijodthyronin (T3), Thyroxin (T4) und Calcitonin, die essentielle Funktionen im Körper erfüllen. Diese Hormone regulieren den Energieverbrauch, die Herzfrequenz, die Körpertemperatur sowie Wachstums- und Entwicklungsprozesse.</p>
+                <p>Die <b>Schilddrüse (Glandula thyroidea)</b> ist die größte endokrine Drüse des menschlichen Körpers und hat eine fundamentale Bedeutung für die Regulation des Stoffwechsels, des Wachstums und der Kalziumhomöostase. Sie produziert die Hormone Trijodthyronin (T3), Thyroxin (T4) und <a href="/trafarette/calcitonin">Calcitonin</a>, die essentielle Funktionen im Körper erfüllen. Diese Hormone regulieren den Energieverbrauch, die Herzfrequenz, die Körpertemperatur sowie Wachstums- und Entwicklungsprozesse.</p>
             </div>`
         },
         {
@@ -93,15 +93,15 @@ export default {
             "id": 6,
             "title": "Mikroskopische Anatomie",
             "textWithFormatting": `<div>
-                <p>Das Schilddrüsengewebe besteht aus <b>sphärischen Follikeln</b>, die von einem einschichtigen Follikelepithel umgeben sind. Diese Follikel enthalten Kolloid, das Thyreoglobulin mit den Hormonen T3 und T4 speichert. Die Follikel sind die funktionellen Einheiten der Schilddrüse. Zwischen den Follikeln befinden sich die parafollikulären C-Zellen, die Calcitonin produzieren und so eine Rolle im Kalziumstoffwechsel spielen.</p>
+                <p>Das Schilddrüsengewebe besteht aus <b>sphärischen Follikeln</b>, die von einem einschichtigen Follikelepithel umgeben sind. Diese Follikel enthalten Kolloid, das Thyreoglobulin mit den Hormonen T3 und T4 speichert. Die Follikel sind die funktionellen Einheiten der Schilddrüse. Zwischen den Follikeln befinden sich die parafollikulären C-Zellen, die <a href="/trafarette/calcitonin">Calcitonin</a> produzieren und so eine Rolle im Kalziumstoffwechsel spielen.</p>
             </div>`
         },
         {
             "id": 7,
             "title": "Hormonproduktion und Funktion",
             "textWithFormatting": `<div>
-                <p>Die Schilddrüse synthetisiert und speichert die Hormone <b>Trijodthyronin (T3)</b> und <b>Thyroxin (T4)</b>, die Jod enthalten und den Energiestoffwechsel in fast allen Körperzellen anregen. Diese Hormone regulieren den Sauerstoffverbrauch, die Wärmeproduktion sowie die Herzfrequenz und sind entscheidend für das Wachstum und die neuronale Reifung.</p>
-                <p><b>Calcitonin</b>, das von den C-Zellen produziert wird, wirkt kalziumsenkend, indem es die Osteoklastenaktivität und die Knochenresorption hemmt.</p>
+                <p>Die Schilddrüse synthetisiert und speichert die Hormone <b>Trijodthyronin (T3)</b> und <b>Thyroxin (T4)</b>, die <a href="/trafarette/iod">Jod</a> enthalten und den Energiestoffwechsel in fast allen Körperzellen anregen. Diese Hormone regulieren den Sauerstoffverbrauch, die Wärmeproduktion sowie die Herzfrequenz und sind entscheidend für das Wachstum und die neuronale Reifung.</p>
+                <p><b><a href="/trafarette/calcitonin">Calcitonin</a></b>, das von den C-Zellen produziert wird, wirkt kalziumsenkend, indem es die Osteoklastenaktivität und die Knochenresorption hemmt.</p>
             </div>`
         },
         {
@@ -123,11 +123,11 @@ export default {
             "textWithFormatting": `<div>
                 <p><b>Häufige Erkrankungen:</b></p>
                 <ul>
-                    <li><b>Hypothyreose:</b> Reduzierte Hormonproduktion führt zu Symptomen wie Müdigkeit, Gewichtszunahme und trockener Haut. Eine häufige Ursache ist die Autoimmunerkrankung Hashimoto-Thyreoiditis.</li>
-                    <li><b>Hyperthyreose:</b> Überproduktion von Schilddrüsenhormonen, häufig verursacht durch Morbus Basedow, führt zu Tachykardie, Gewichtsverlust und anderen Symptomen.</li>
-                    <li><b><a href="/trafarette/struma">Struma(Kropf)</a> :</b> Vergrößerte Schilddrüse, meist durch Jodmangel bedingt, kann die Atmung und den Schluckvorgang beeinträchtigen.</li>
+                    <li><b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Reduzierte Hormonproduktion führt zu Symptomen wie Müdigkeit, Gewichtszunahme und trockener Haut. Eine häufige Ursache ist die Autoimmunerkrankung <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a>.</li>
+                    <li><b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Überproduktion von Schilddrüsenhormonen, häufig verursacht durch <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, führt zu Tachykardie, Gewichtsverlust und anderen Symptomen.</li>
+                    <li><b><a href="/trafarette/struma">Struma(Kropf)</a> :</b> Vergrößerte Schilddrüse, meist durch <a href="/trafarette/jodmangel">Jodmangel</a> bedingt, kann die Atmung und den Schluckvorgang beeinträchtigen.</li>
                     <li><b>Schilddrüsenknoten:</b> Kalte Knoten sind potenziell bösartig, während heiße Knoten auf autonome Adenome hinweisen können.</li>
-                    <li><b>Schilddrüsentumoren:</b> Zu den häufigsten Formen zählen papilläre, follikuläre und medulläre Karzinome, die unterschiedlich aggressiv sind.</li>
+                    <li><b>Schilddrüsentumoren:</b> Zu den häufigsten Formen zählen papilläre, follikuläre und <a href="/trafarette/medullaereschilddruesenkarzinom">medulläre Karzinome</a>, die unterschiedlich aggressiv sind.</li>
                     <li><b>Entzündungen:</b> Formen wie die Thyreoiditis de Quervain und die Riedel-Struma führen zu schmerzhaften oder fibrotischen Veränderungen.</li>
                 </ul>
                 <p><b>Diagnostische Verfahren:</b></p>

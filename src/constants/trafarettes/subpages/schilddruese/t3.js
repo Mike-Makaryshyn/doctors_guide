@@ -46,8 +46,8 @@ export default {
                 <h4>3.3. Interpretation der Ergebnisse</h4>
                 <p>Die Interpretation der T3-Werte erfolgt immer im Kontext mit den Ergebnissen für freies T4 (fT4) und TSH. Abweichungen von den Normwerten können auf verschiedene Schilddrüsenerkrankungen hinweisen, wie:</p>
                 <ul>
-                    <li>• <b>Hyperthyreose:</b> Erhöhte T3-Werte und verminderte TSH-Spiegel deuten auf eine Überfunktion der Schilddrüse hin.</li>
-                    <li>• <b>Hypothyreose:</b> Niedrige T3-Werte in Verbindung mit erhöhten TSH-Werten sprechen für eine Unterfunktion der Schilddrüse.</li>
+                    <li>• <b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Erhöhte T3-Werte und verminderte TSH-Spiegel deuten auf eine Überfunktion der Schilddrüse hin.</li>
+                    <li>• <b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Niedrige T3-Werte in Verbindung mit erhöhten TSH-Werten sprechen für eine Unterfunktion der Schilddrüse.</li>
                 </ul>
             </div>`
         },
@@ -62,7 +62,7 @@ export default {
             "id": 5,
             "title": "Klinik",
             "textWithFormatting": `<div>
-                <p>Die Bestimmung von T3 ist ein wichtiger Bestandteil der Diagnose von Schilddrüsenerkrankungen wie Hyperthyreose und Hypothyreose. Eine Störung der T3-Produktion oder -Umwandlung kann klinische Symptome hervorrufen, die den Stoffwechsel und das Wohlbefinden des Patienten stark beeinflussen.</p>
+                <p>Die Bestimmung von T3 ist ein wichtiger Bestandteil der Diagnose von Schilddrüsenerkrankungen wie <a href="/trafarette/hyperthyreose">Hyperthyreose</a> und <a href="/trafarette/hypothyreose">Hypothyreose</a>. Eine Störung der T3-Produktion oder -Umwandlung kann klinische Symptome hervorrufen, die den Stoffwechsel und das Wohlbefinden des Patienten stark beeinflussen.</p>
             </div>`
         }
     ],

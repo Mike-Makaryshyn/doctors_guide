@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Die Hypothyreose bezeichnet eine Unterfunktion der Schilddrüse, bei der diese nicht ausreichend Schilddrüsenhormone produziert. Dies führt zu einer Verlangsamung des Stoffwechsels und einer Vielzahl von Symptomen. Das Gegenteil der Hypothyreose ist die Hyperthyreose oder Thyreotoxikose, bei der eine Überfunktion vorliegt.</p>
+            <p>Die Hypothyreose bezeichnet eine Unterfunktion der Schilddrüse, bei der diese nicht ausreichend Schilddrüsenhormone produziert. Dies führt zu einer Verlangsamung des Stoffwechsels und einer Vielzahl von Symptomen. Das Gegenteil der Hypothyreose ist die <a href="/trafarette/hyperthyreose">Hyperthyreose</a> oder Thyreotoxikose, bei der eine Überfunktion vorliegt.</p>
           </div>`
         },
         {
@@ -39,13 +39,13 @@ export default {
           "id": 3,
           "title": "Ätiologie",
           "textWithFormatting": `<div>
-            <p>Die häufigste Ursache einer primären Hypothyreose ist die Autoimmunthyreopathie, insbesondere die Hashimoto-Thyreoiditis. Weitere Ursachen können sein:</p>
+            <p>Die häufigste Ursache einer primären Hypothyreose ist die Autoimmunthyreopathie, insbesondere die <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a>. Weitere Ursachen können sein:</p>
             <ul>
               <li>• <b>Polyzystische Schilddrüsenerkrankungen</b>.</li>
               <li>• <b>Thyreoprive Hypothyreose</b>: Nach operativer Entfernung der Schilddrüse oder einer Radiojodtherapie.</li>
-              <li>• <b>Iodmangel oder -exzess</b>: Bei unzureichender oder übermäßiger Jodzufuhr.</li>
+              <li>• <b>Iodmangel oder -exzess</b>: Bei unzureichender oder übermäßiger <a href="/trafarette/iod">Jod</a>zufuhr.</li>
               <li>• <b>Medikamenten-induzierte Hypothyreose</b>: Durch Arzneimittel wie Amiodaron, Lithium oder bestimmte Antithyreotika.</li>
-              <li>• <b>Seltene genetische Erkrankungen</b>: Dyshormonogenetische Struma und Schilddrüsenhormonresistenz.</li>
+              <li>• <b>Seltene genetische Erkrankungen</b>: Dyshormonogenetische <a href="/trafarette/struma">Struma</a> und Schilddrüsenhormonresistenz.</li>
             </ul>
             <p>Sekundäre und tertiäre Hypothyreosen können durch Erkrankungen der Hypophyse oder des Hypothalamus entstehen, z.B. durch:</p>
             <ul>
@@ -65,10 +65,10 @@ export default {
               <li>• <b>Haut und Haare</b>: Trockene, raue Haut; Haarausfall.</li>
               <li>• <b>Herz-Kreislauf-System</b>: Bradykardie, verminderte Herzfrequenz, eventuell Früharteriosklerose.</li>
               <li>• <b>Stoffwechsel</b>: Kälteintoleranz, Hypertriglyceridämie, Obstipation.</li>
-              <li>• <b>Muskel- und Skelettsystem</b>: Muskelschwäche, Myxödem (diffuse Schwellung von Haut und Gewebe).</li>
+              <li>• <b>Muskel- und Skelettsystem</b>: Muskelschwäche, <a href="/trafarette/myxoedem">Myxödem</a> (diffuse Schwellung von Haut und Gewebe).</li>
               <li>• <b>Psychische Symptome</b>: Konzentrationsstörungen, Depression.</li>
               <li>• <b>Endokrine Störungen</b>: Menstruationsstörungen, verminderte Libido.</li>
-              <li>• <b>Fortgeschrittene Hypothyreose</b>: Kann zu einer Herzinsuffizienz oder einem Myxödemkoma führen, einer potenziell lebensbedrohlichen Komplikation.</li>
+              <li>• <b>Fortgeschrittene Hypothyreose</b>: Kann zu einer Herzinsuffizienz oder einem <a href="/trafarette/hypothyreotekoma"><a href="/trafarette/hypothyreotekoma">Myxödemkoma</a> führen, einer potenziell lebensbedrohlichen Komplikation.</li>
             </ul>
           </div>`
         },
@@ -132,7 +132,7 @@ export default {
           "id": 6,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Die Behandlung der Hypothyreose besteht hauptsächlich in der lebenslangen Substitutionstherapie mit Levothyroxin. Die Dosierung sollte individuell auf den Patienten abgestimmt werden, um den TSH-Spiegel zu normalisieren.</p>
+            <p>Die Behandlung der Hypothyreose besteht hauptsächlich in der lebenslangen Substitutionstherapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a>. Die Dosierung sollte individuell auf den Patienten abgestimmt werden, um den TSH-Spiegel zu normalisieren.</p>
             <h4>Therapieziel:</h4>
             <ul>
               <li>• Normalisierung der Schilddrüsenfunktion.</li>
@@ -143,7 +143,7 @@ export default {
               <li>• Behandlung begleitender Stoffwechselstörungen, z.B. lipidsenkende Therapie bei Dyslipidämie.</li>
               <li>• Anpassung der Behandlung in speziellen Lebensphasen, z.B. bei Schwangerschaft.</li>
             </ul>
-            <p>Trotz optimaler Therapie mit Levothyroxin können etwa 10 % der Patienten unter anhaltenden Symptomen leiden. Ursachen hierfür können sein:</p>
+            <p>Trotz optimaler Therapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a> können etwa 10 % der Patienten unter anhaltenden Symptomen leiden. Ursachen hierfür können sein:</p>
             <ul>
               <li>• Individuelle Schwankungen des T3-Spiegels trotz T4-Substitution.</li>
               <li>• Immunologische und psychologische Faktoren.</li>

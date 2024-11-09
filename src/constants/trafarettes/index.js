@@ -106,6 +106,35 @@ import exophthalmus from "./subpages/schilddruese/exophthalmus";
 import tachykardie from "./subpages/physiologie/tachykardie";
 import thyreoiditis from "./subpages/schilddruese/thyreoiditis";
 import hypothyreose from "./subpages/schilddruese/hypothyreose";
+import hashimoto from "./subpages/schilddruese/hashimoto";
+import mensyndrom from "./subpages/endokrinilogie/mensyndrom";
+import thyreoperoxidase from "./subpages/schilddruese/thyreoperoxidase";
+import thyreoglobulin from "./subpages/schilddruese/thyreoglobulin";
+import hyperthyreosisfactitia from "./subpages/schilddruese/hyperthyreosisfactitia";
+import levothyroxin from "./subpages/schilddruese/levothyroxin";
+import hypothyreotekoma from "./subpages/schilddruese/hypothyreotekoma";
+import myxoedem from "./subpages/schilddruese/myxoedem";
+import schilddruesenautonomie from "./subpages/schilddruese/schilddruesenautonomie";
+import schilddruesenadenom from "./subpages/schilddruese/schilddruesenadenom";
+import schilddruesenkarzinome from "./subpages/schilddruese/schilddruesenkarzinome";
+import papillaereschilddruesenkarzinom from "./subpages/schilddruese/papillaereschilddruesenkarzinom";
+import folikulaereschilddruesenkarzinom from "./subpages/schilddruese/folikulaereschilddruesenkarzinom";
+import medullaereschilddruesenkarzinom from "./subpages/schilddruese/medullaereschilddruesenkarzinom";
+import anaplastischeschilddruesenkarzinom from "./subpages/schilddruese/anaplastischeschilddruesenkarzinom";
+import huerthlezellkarzinom from "./subpages/schilddruese/huerthlezellkarzinom";
+import schilddruesenresektionen from "./subpages/schilddruese/schilddruesenresektionen";
+import mitose from "./subpages/zellen/mitose";
+import zellzyklus from "./subpages/zellen/zellzyklus";
+import jodmangel from "./subpages/schilddruese/jodmangel";
+import iod from "./subpages/schilddruese/iod";
+import plummereffekt from "./subpages/schilddruese/plummereffekt";
+import wolffchaikoffeffekt from "./subpages/schilddruese/wolffchaikoffeffekt";
+import radiojodtherapie from "./subpages/schilddruese/radiojodtherapie";
+import schilddruesemedikamente from "./subpages/schilddruese/schilddruesemedikamente";
+import thyreostatika from "./subpages/schilddruese/thyreostatika";
+import perchlorate from "./subpages/schilddruese/perchlorate";
+import thiamazol from "./subpages/schilddruese/thiamazol";
+import carbimazol from "./subpages/schilddruese/carbimazol";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -215,7 +244,36 @@ const all_pages_data = [
    exophthalmus,
    tachykardie,
    thyreoiditis,
-   hypothyreose
+   hypothyreose,
+   hashimoto,
+   mensyndrom,
+   thyreoperoxidase,
+   thyreoglobulin,
+   hyperthyreosisfactitia,
+   levothyroxin,
+   hypothyreotekoma,
+   myxoedem,
+   schilddruesenautonomie,
+   schilddruesenadenom,
+   schilddruesenkarzinome,
+   papillaereschilddruesenkarzinom,
+   folikulaereschilddruesenkarzinom,
+   medullaereschilddruesenkarzinom,
+   anaplastischeschilddruesenkarzinom,
+   huerthlezellkarzinom,
+   schilddruesenresektionen,
+   mitose,
+   zellzyklus,
+   jodmangel,
+   iod,
+   plummereffekt,
+   wolffchaikoffeffekt,
+   radiojodtherapie,
+   schilddruesemedikamente,
+   thyreostatika,
+   perchlorate,
+   thiamazol,
+   carbimazol
 ];
 
 export default all_pages_data;

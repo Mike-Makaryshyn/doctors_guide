@@ -68,16 +68,16 @@ export default {
                     <li>• <b>Schwangerschaft:</b> Der TSH-Spiegel sinkt physiologisch durch die stimulierende Wirkung von hCG, insbesondere zwischen der 7. und 12. Schwangerschaftswoche.</li>
                 </ul>
                 <h3>4.3. Interpretation</h3>
-                <p>Ein normaler TSH-Spiegel schließt in der Regel eine manifeste Hyperthyreose oder Hypothyreose aus. Der TSH-Wert reagiert empfindlich auf Störungen der Schilddrüsenfunktion und zeigt eine logarithmisch-lineare Beziehung zum freien Thyroxin (fT4).</p>
+                <p>Ein normaler TSH-Spiegel schließt in der Regel eine manifeste <a href="/trafarette/hyperthyreose">Hyperthyreose</a> oder <a href="/trafarette/hypothyreose">Hypothyreose</a> aus. Der TSH-Wert reagiert empfindlich auf Störungen der Schilddrüsenfunktion und zeigt eine logarithmisch-lineare Beziehung zum freien Thyroxin (fT4).</p>
                 <p><b>Erhöhte TSH-Werte:</b></p>
                 <ul>
-                    <li>• Primäre Hypothyreose: Erhöhte TSH-Werte bei erniedrigtem fT4 und fT3.</li>
-                    <li>• Sekundäre Hyperthyreose: Selten, tritt bei TSH-produzierenden Tumoren oder Schilddrüsenhormonresistenz auf.</li>
+                    <li>• Primäre <a href="/trafarette/hypothyreose">Hypothyreose</a>: Erhöhte TSH-Werte bei erniedrigtem fT4 und fT3.</li>
+                    <li>• Sekundäre <a href="/trafarette/hyperthyreose">Hyperthyreose</a>: Selten, tritt bei TSH-produzierenden Tumoren oder Schilddrüsenhormonresistenz auf.</li>
                 </ul>
                 <p><b>Erniedrigte TSH-Werte:</b></p>
                 <ul>
-                    <li>• Primäre Hyperthyreose: TSH niedrig bei erhöhtem fT4 und fT3, z.B. bei Morbus Basedow oder Schilddrüsenautonomie.</li>
-                    <li>• Sekundäre Hypothyreose: Niedriges TSH bei erniedrigtem fT4 und fT3, häufig durch eine Hypophyseninsuffizienz bedingt.</li>
+                    <li>• Primäre <a href="/trafarette/hyperthyreose">Hyperthyreose</a>: TSH niedrig bei erhöhtem fT4 und fT3, z.B. bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> oder Schilddrüsenautonomie.</li>
+                    <li>• Sekundäre <a href="/trafarette/hypothyreose">Hypothyreose</a>: Niedriges TSH bei erniedrigtem fT4 und fT3, häufig durch eine Hypophyseninsuffizienz bedingt.</li>
                 </ul>
             </div>`
         },
@@ -92,7 +92,7 @@ export default {
                     <li>• Somatostatin und seine Analoga (z.B. Octreotide)</li>
                     <li>• Glucocorticoide</li>
                     <li>• Morphinderivate</li>
-                    <li>• L-Thyroxin</li>
+                    <li>• <a href="/trafarette/levothyroxin">L-Thyroxin</a></li>
                 </ul>
                 <h3>5.2. Erhöhung der TSH-Sekretion</h3>
                 <p>Zu den Medikamenten, die eine Erhöhung der TSH-Sekretion verursachen können, gehören:</p>
@@ -101,7 +101,7 @@ export default {
                     <li>• Lithium</li>
                     <li>• Carbamazepin</li>
                     <li>• Theophyllin</li>
-                    <li>• Hohe Dosen von Iodid</li>
+                    <li>• Hohe Dosen von <a href="/trafarette/iod">Iod</a>id</li>
                 </ul>
             </div>`
         }

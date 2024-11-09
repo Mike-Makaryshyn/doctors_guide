@@ -22,7 +22,7 @@ export default {
               <li>• <b>Pathologische Steigerung des Automatismus</b>: Schrittmacherzellen des Sinusknotens, die normalerweise etwa 70 Impulse pro Minute generieren, können durch ungeklärte Ursachen einen zu schnellen Rhythmus vorgeben.</li>
               <li>• <b>Instabilität der elektrischen Reizbildung</b>: Einzelne oder Gruppen von Herzmuskelzellen können sich unkoordiniert elektrisch entladen, was zu einem unregelmäßigen und schnellen Herzrhythmus führt.</li>
               <li>• <b>Reentry-Phänomene</b>: Pathologische Leitungsbahnen oder Kreisläufe der elektrischen Erregung führen zu wiederholten Depolarisationen während der Ruhephase, was eine zu häufige Kontraktion des Herzens zur Folge hat.</li>
-              <li>• <b>Reaktive Tachykardien</b>: Eine erhöhte Herzfrequenz kann durch hormonelle oder nervale Stimulationen wie bei einer Hyperthyreose entstehen.</li>
+              <li>• <b>Reaktive Tachykardien</b>: Eine erhöhte Herzfrequenz kann durch hormonelle oder nervale Stimulationen wie bei einer <a href="/trafarette/hyperthyreose">Hyperthyreose</a> entstehen.</li>
             </ul>
             <p>Neben diesen endogenen Faktoren gibt es zahlreiche exogene Auslöser für Tachykardien. Dazu gehören:</p>
             <ul>

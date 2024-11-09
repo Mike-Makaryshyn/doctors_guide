@@ -25,7 +25,7 @@ export default {
           "id": 3,
           "title": "Nomenklatur und spezielle Formen",
           "textWithFormatting": `<div>
-            <p>Neben der allgemeinen Vergrößerung gibt es spezifische Varianten wie die Struma ovarii, bei der Schilddrüsengewebe im Rahmen von Teratomen im Ovar auftritt. Diese seltene Form kann funktionell aktiv sein und zu einer Hyperthyreose führen.</p>
+            <p>Neben der allgemeinen Vergrößerung gibt es spezifische Varianten wie die Struma ovarii, bei der Schilddrüsengewebe im Rahmen von Teratomen im Ovar auftritt. Diese seltene Form kann funktionell aktiv sein und zu einer <a href="/trafarette/hyperthyreose">Hyperthyreose</a> führen.</p>
           </div>`
         },
         {
@@ -57,9 +57,9 @@ export default {
           "id": 6,
           "title": "Ätiologie",
           "textWithFormatting": `<div>
-            <p>Die Ursachen einer Struma sind vielfältig. Der häufigste Grund ist Jodmangel, da Jod für die Produktion der Schilddrüsenhormone essentiell ist. Weitere Ursachen können umfassen:</p>
+            <p>Die Ursachen einer Struma sind vielfältig. Der häufigste Grund ist <a href="/trafarette/jodmangel">Jodmangel</a>, da <a href="/trafarette/iod">Jod</a> für die Produktion der Schilddrüsenhormone essentiell ist. Weitere Ursachen können umfassen:</p>
             <ul>
-              <li>• <b>Autoimmunerkrankungen</b>: Hashimoto-Thyreoiditis und Morbus Basedow.</li>
+              <li>• <b>Autoimmunerkrankungen</b>: <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>.</li>
               <li>• <b>Genetische Faktoren</b>: Prädisposition zu gutartiger Knotenbildung.</li>
               <li>• <b>Medikamente und Toxine</b>: Substanzen wie Amiodaron oder Lithium können eine Struma begünstigen.</li>
               <li>• <b>Hormonelle Faktoren</b>: Schwankungen, wie sie in der Pubertät oder während der Schwangerschaft auftreten, können das Wachstum der Schilddrüse stimulieren.</li>
@@ -71,7 +71,7 @@ export default {
           "id": 7,
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
-            <p>Ein Mangel an Jod führt zu einer unzureichenden Produktion der Schilddrüsenhormone T3 und T4. Der Körper reagiert mit einer erhöhten Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon), das ein Wachstum der Schilddrüse anregt. Chronisch erhöhter TSH-Spiegel begünstigt die Hypertrophie und Hyperplasie der Schilddrüsenzellen. Auch Wachstumsfaktoren wie der epidermale Wachstumsfaktor (EGF) und der insulinähnliche Wachstumsfaktor (IGF-1) können eine Rolle spielen.</p>
+            <p>Ein Mangel an <a href="/trafarette/iod">Jod</a> führt zu einer unzureichenden Produktion der Schilddrüsenhormone T3 und T4. Der Körper reagiert mit einer erhöhten Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon), das ein Wachstum der Schilddrüse anregt. Chronisch erhöhter TSH-Spiegel begünstigt die Hypertrophie und Hyperplasie der Schilddrüsenzellen. Auch Wachstumsfaktoren wie der epidermale Wachstumsfaktor (EGF) und der insulinähnliche Wachstumsfaktor (IGF-1) können eine Rolle spielen.</p>
           </div>`
         },
         {
@@ -83,7 +83,7 @@ export default {
               <li>• <b>Klinische Untersuchung</b>: Palpation und Inspektion zur Feststellung der Strumagröße und -konsistenz.</li>
               <li>• <b>Sonographie</b>: Wichtig zur Beurteilung der Binnenstruktur, Volumenbestimmung und Detektion von Knoten oder Zysten.</li>
               <li>• <b>Laboruntersuchungen</b>: Bestimmung der Schilddrüsenhormone (fT3, fT4) und TSH, Nachweis von Autoantikörpern (TRAK, Anti-TPO, Anti-Tg).</li>
-              <li>• <b>Szintigraphie</b>: Zur Beurteilung der Funktionalität und des Jod-Uptakes, insbesondere bei Verdacht auf Schilddrüsenautonomie.</li>
+              <li>• <b>Szintigraphie</b>: Zur Beurteilung der Funktionalität und des <a href="/trafarette/iod">Jod</a>-Uptakes, insbesondere bei Verdacht auf Schilddrüsenautonomie.</li>
               <li>• <b>Feinnadelpunktion</b>: Gezielte Biopsie zur histologischen Abklärung bei Malignitätsverdacht.</li>
             </ul>
           </div>`
@@ -94,9 +94,9 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Behandlung richtet sich nach der Ursache und dem Schweregrad:</p>
             <ul>
-              <li>• <b>Medikamentöse Therapie</b>: Substitution mit Jod oder Kombinationspräparate aus Jod und Levothyroxin zur Volumenreduktion bei Jodmangelstruma.</li>
+              <li>• <b>Medikamentöse Therapie</b>: Substitution mit <a href="/trafarette/iod">Jod</a> oder Kombinationspräparate aus Jod und <a href="/trafarette/levothyroxin">Levothyroxin</a> zur Volumenreduktion bei <a href="/trafarette/jodmangel">Jodmangel</a>struma.</li>
               <li>• <b>Thyreostatika</b>: Bei hyperthyreoten Zuständen.</li>
-              <li>• <b>Radiojodtherapie</b>: Zur Behandlung von autonomen Knoten oder Hyperthyreose.</li>
+              <li>• <b>Radiojodtherapie</b>: Zur Behandlung von autonomen Knoten oder <a href="/trafarette/hyperthyreose">Hyperthyreose</a>.</li>
               <li>• <b>Chirurgische Intervention</b>: Indiziert bei großen Strumae, die lokale Komplikationen verursachen oder bei Verdacht auf Malignität. Die gängige Methode ist die (subtotale oder totale) Thyreoidektomie.</li>
               <li>• <b>Ernährungsanpassung</b>: In jodreichen Gebieten kann eine jodarme Diät indiziert sein, wenn die Struma durch Jodüberschuss bedingt ist.</li>
             </ul>

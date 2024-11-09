@@ -10,7 +10,7 @@ export default {
             "id": 1,
             "title": "Definition",
             "textWithFormatting": `<div>
-                <p><b>Thyroxin</b>, kurz T4, ist das wichtigste Schilddrüsenhormon und stellt eine der Hauptformen der von der Schilddrüse produzierten Iodothyronine dar. Die synthetische, pharmakologisch genutzte Form des Hormons ist als Levothyroxin bekannt und wird zur Behandlung verschiedener Schilddrüsenerkrankungen verwendet.</p>
+                <p><b>Thyroxin</b>, kurz T4, ist das wichtigste Schilddrüsenhormon und stellt eine der Hauptformen der von der Schilddrüse produzierten Iodothyronine dar. Die synthetische, pharmakologisch genutzte Form des Hormons ist als <a href="/trafarette/levothyroxin">Levothyroxin</a> bekannt und wird zur Behandlung verschiedener Schilddrüsenerkrankungen verwendet.</p>
             </div>`
         },
         {
@@ -24,10 +24,10 @@ export default {
             "id": 3,
             "title": "Biochemie",
             "textWithFormatting": `<div>
-                <p>Thyroxin gehört zur Klasse der Iodothyronine und fungiert primär als Prohormon. Es entfaltet seine hauptsächliche Aktivität über die Umwandlung in Trijodthyronin (T3) und 3,5-Dijodthyronin (3,5-T2). Diese Umwandlung geschieht peripher durch die Abspaltung eines Iodatoms (Deiodierung) durch Deiodinasen:</p>
+                <p>Thyroxin gehört zur Klasse der <a href="/trafarette/iod">Iod</a>othyronine und fungiert primär als Prohormon. Es entfaltet seine hauptsächliche Aktivität über die Umwandlung in Trijodthyronin (T3) und 3,5-Dijodthyronin (3,5-T2). Diese Umwandlung geschieht peripher durch die Abspaltung eines <a href="/trafarette/iod">Iod</a>atoms (Deiodierung) durch Deiodinasen:</p>
                 <ul>
-                    <li>• <b>Umwandlung in T3:</b> Durch Abspaltung eines Iodatoms an Position 5 des äußeren Ringsystems von T4 entsteht T3, das biologisch aktive Hormon.</li>
-                    <li>• <b>Umwandlung in rT3:</b> Wird das Iodatom an Position 5 des inneren Ringsystems abgespalten, entsteht reverses T3 (rT3), das eine inhibitorische Wirkung auf die T3-Aktivität hat.</li>
+                    <li>• <b>Umwandlung in T3:</b> Durch Abspaltung eines <a href="/trafarette/iod">Iod</a>atoms an Position 5 des äußeren Ringsystems von T4 entsteht T3, das biologisch aktive Hormon.</li>
+                    <li>• <b>Umwandlung in rT3:</b> Wird das <a href="/trafarette/iod">Iod</a>atom an Position 5 des inneren Ringsystems abgespalten, entsteht reverses T3 (rT3), das eine inhibitorische Wirkung auf die T3-Aktivität hat.</li>
                 </ul>
                 <p>Die periphere Konversion von T4 zu T3 ist essenziell für die Regulation des Zellstoffwechsels. Eine verminderte Umwandlung führt zu einer Konversionsstörung, auch als Low-T3-Syndrom bekannt.</p>
             </div>`
@@ -69,7 +69,7 @@ export default {
             "id": 7,
             "title": "Pharmakologie",
             "textWithFormatting": `<div>
-                <p>Die synthetische Form von T4, <b>Levothyroxin</b>, wird in der Therapie von Hypothyreose und zur Verkleinerung einer <a href="/trafarette/struma">Struma</a> eingesetzt. Es stellt eine lebenswichtige Behandlung dar, um den Hormonspiegel zu normalisieren und Symptome der Schilddrüsenunterfunktion zu lindern.</p>
+                <p>Die synthetische Form von T4, <b><a href="/trafarette/levothyroxin">Levothyroxin</a></b>, wird in der Therapie von <a href="/trafarette/hypothyreose">Hypothyreose</a> und zur Verkleinerung einer <a href="/trafarette/struma">Struma</a> eingesetzt. Es stellt eine lebenswichtige Behandlung dar, um den Hormonspiegel zu normalisieren und Symptome der Schilddrüsenunterfunktion zu lindern.</p>
             </div>`
         }
     ],

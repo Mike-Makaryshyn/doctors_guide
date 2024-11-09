@@ -68,7 +68,7 @@ export default {
             "title": "Klinische Bedeutung",
             "textWithFormatting": `<div>
                 <h3>4.1. Erkrankungen</h3>
-                <p>Eine gestörte TRH-Freisetzung kann zu endokrinen Störungen führen. Beim Pickardt-Syndrom kommt es beispielsweise zu einer tertiären Hypothyreose aufgrund unzureichender TRH-Produktion.</p>
+                <p>Eine gestörte TRH-Freisetzung kann zu endokrinen Störungen führen. Beim Pickardt-Syndrom kommt es beispielsweise zu einer tertiären <a href="/trafarette/hypothyreose">Hypothyreose</a> aufgrund unzureichender TRH-Produktion.</p>
                 <h3>4.2. Diagnostik</h3>
                 <p>TRH wird aufgrund seiner kurzen Halbwertszeit von 2 bis 6 Minuten und der niedrigen Konzentration im Blutplasma nicht direkt zur Diagnose gemessen. Stattdessen wird ein TRH-Test mit synthetischem TRH-Analogon (Protirelin) durchgeführt, um die Funktionsfähigkeit der Hypophyse und der hypothalamisch-hypophysären Achse zu prüfen. Dieser Test ist nützlich bei unklaren Funktionsstörungen des thyreotropen Regelkreises und im Rahmen von Hypophysenfunktionstests.</p>
                 <h3>4.3. Forschung</h3>
