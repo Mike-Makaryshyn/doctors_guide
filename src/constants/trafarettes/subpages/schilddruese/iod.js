@@ -28,10 +28,10 @@ export default {
           "id": 3,
           "title": "Physiologische Bedeutung",
           "textWithFormatting": `<div>
-            <p>Iod ist ein essenzielles Spurenelement, das zur Synthese der Schilddrüsenhormone Trijodthyronin (T3) und Thyroxin (T4) benötigt wird. Diese Hormone sind entscheidend für den Stoffwechsel und das Wachstum.</p>
+            <p>Iod ist ein essenzielles Spurenelement, das zur Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Trijodthyronin (T3)</a> und <a href="/trafarette/t4">Thyroxin (T4)</a> benötigt wird. Diese Hormone sind entscheidend für den Stoffwechsel und das Wachstum.</p>
             <ul>
-              <li>• <b>Speicherung in der Schilddrüse:</b> Etwa 70-80 % des aufgenommenen Iods werden in der Schilddrüse gespeichert. Dort wird Iod in Anwesenheit von Wasserstoffperoxid oxidiert und anschließend in Kombination mit der Aminosäure Tyrosin in die Schilddrüsenhormone umgewandelt.</li>
-              <li>• <b>Funktion der Schilddrüsenhormone:</b> T3 und T4 steigern den Grundumsatz, fördern die Fettverbrennung und steigern den Sauerstoffverbrauch der Zellen. Sie spielen auch eine Rolle bei der Sensibilisierung von Adrenalinrezeptoren und wirken wachstumsfördernd.</li>
+              <li>• <b>Speicherung in der Schilddrüse:</b> Etwa 70-80 % des aufgenommenen Iods werden in der Schilddrüse gespeichert. Dort wird Iod in Anwesenheit von Wasserstoffperoxid oxidiert und anschließend in Kombination mit der Aminosäure Tyrosin in die <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> umgewandelt.</li>
+              <li>• <b>Funktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>:</b> T3 und T4 steigern den Grundumsatz, fördern die Fettverbrennung und steigern den Sauerstoffverbrauch der Zellen. Sie spielen auch eine Rolle bei der Sensibilisierung von Adrenalinrezeptoren und wirken wachstumsfördernd.</li>
               <li>• <b>Iodvorkommen im Körper:</b> Neben der Schilddrüse befindet sich Iod auch in der Leber, im Gehirn und in den Speichel- und Brustdrüsen.</li>
             </ul>
           </div>`
@@ -91,7 +91,7 @@ export default {
           "id": 9,
           "title": "Klinische Bedeutung",
           "textWithFormatting": `<div>
-            <p>In <a href="/trafarette/jodmangel">Jodmangel</a>gebieten treten vermehrt Schilddrüsenerkrankungen auf, wie die euthyreote <a href="/trafarette/struma">Struma (Kropf)</a> . Langfristiger <a href="/trafarette/jodmangel">Jodmangel</a> kann zu einer vergrößerten Schilddrüse und Knotenbildung führen, während ein akuter Jodüberschuss kurzfristig die Hormonproduktion hemmt und therapeutisch vor Operationen an der Schilddrüse genutzt wird (Plummer-Effekt).</p>
+            <p>In <a href="/trafarette/jodmangel">Jodmangel</a>gebieten treten vermehrt Schilddrüsenerkrankungen auf, wie die euthyreote <a href="/trafarette/struma">Struma (Kropf)</a> . Langfristiger <a href="/trafarette/jodmangel">Jodmangel</a> kann zu einer vergrößerten Schilddrüse und Knotenbildung führen, während ein akuter Jodüberschuss kurzfristig die Hormonproduktion hemmt und therapeutisch vor Operationen an der Schilddrüse genutzt wird (<a href="/trafarette/plummereffekt">Plummer-Effekt</a>).</p>
           </div>`
         },
       ],

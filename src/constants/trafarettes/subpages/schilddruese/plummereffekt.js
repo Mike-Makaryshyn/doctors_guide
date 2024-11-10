@@ -1,6 +1,6 @@
 export default {
   path: "plummereffekt",
-  // http://localhost:5173/trafarette/plummereffekt
+  // http://localhost:5173/trafarette/plummereffekt 
   content: [
     {
       id: 1,
@@ -10,14 +10,14 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Der <b>Plummer-Effekt</b> beschreibt einen Mechanismus der <b>Schilddrüse</b>, durch den eine überschüssige Zufuhr von <b><a href="/trafarette/iod">Jod</a></b> (<b>Jodexzess</b>) die Freisetzung von Schilddrüsenhormonen hemmt, um einer <b>hyperthyreoten</b> Stoffwechsellage vorzubeugen. Dieser Schutzmechanismus setzt ein, wenn eine hohe <a href="/trafarette/iod">Jod</a>-Konzentration im Blut erreicht wird.</p>
+            <p>Der <b>Plummer-Effekt</b> beschreibt einen Mechanismus der <b>Schilddrüse</b>, durch den eine überschüssige Zufuhr von <b><a href="/trafarette/iod">Jod</a></b> (<b>Jodexzess</b>) die Freisetzung von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> hemmt, um einer <b>hyperthyreoten</b> Stoffwechsellage vorzubeugen. Dieser Schutzmechanismus setzt ein, wenn eine hohe <a href="/trafarette/iod">Jod</a>-Konzentration im Blut erreicht wird.</p>
           </div>`
         },
         {
           "id": 2,
           "title": "Ablauf",
           "textWithFormatting": `<div>
-            <p>Im Gegensatz zum <b>Wolff-Chaikoff-Effekt</b>, bei dem die <a href="/trafarette/iod">Jod</a>aufnahme und die Hormonsynthese selbst gehemmt werden, wirkt der <b>Plummer-Effekt</b> auf die <b>Freisetzung</b> der bereits gespeicherten Schilddrüsenhormone. Dabei führt eine hohe <b>Jodkonzentration</b> im Blut zur Hemmung der <b>Proteolyse</b> von <b>Thyreoglobulin</b>, wodurch die Hormone <b>Trijodthyronin (T3)</b> und <b>Thyroxin (T4)</b> nicht mehr aus den Follikeln der Schilddrüse in den Blutkreislauf gelangen.</p>
+            <p>Im Gegensatz zum <b>Wolff-Chaikoff-Effekt</b>, bei dem die <a href="/trafarette/iod">Jod</a>aufnahme und die Hormonsynthese selbst gehemmt werden, wirkt der <b>Plummer-Effekt</b> auf die <b>Freisetzung</b> der bereits gespeicherten <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>. Dabei führt eine hohe <b>Jodkonzentration</b> im Blut zur Hemmung der <b>Proteolyse</b> von <b><a href="/trafarette/thyreoglobulin">Thyreoglobulin</a></b>, wodurch die Hormone <b><a href="/trafarette/t3">Trijodthyronin (T3)</a></b> und <b><a href="/trafarette/t4">Thyroxin (T4)</a></b> nicht mehr aus den Follikeln der Schilddrüse in den Blutkreislauf gelangen.</p>
           </div>`
         },
         {

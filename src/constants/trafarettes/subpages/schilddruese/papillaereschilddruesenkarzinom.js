@@ -1,6 +1,6 @@
 export default {
   path: "papillaereschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/papillaereschilddruesenkarzinom
+  // http://localhost:5173/trafarette/papillaereschilddruesenkarzinom 
   content: [
     {
       id: 1,
@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Das papilläre Schilddrüsenkarzinom (PTC) ist die häufigste maligne Neoplasmie der Schilddrüse und macht etwa 60 % aller Fälle von Schilddrüsenkarzinomen aus. Es gehört zur Gruppe der differenzierten Schilddrüsenkarzinome und ist typischerweise durch eine langsame Wachstumsgeschwindigkeit sowie eine insgesamt gute Prognose gekennzeichnet.</p>
+            <p>Das papilläre Schilddrüsenkarzinom (PTC) ist die häufigste maligne Neoplasmie der Schilddrüse und macht etwa 60 % aller Fälle von <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a> aus. Es gehört zur Gruppe der differenzierten Schilddrüsenkarzinome und ist typischerweise durch eine langsame Wachstumsgeschwindigkeit sowie eine insgesamt gute Prognose gekennzeichnet.</p>
           </div>`
         },
         {
@@ -33,7 +33,7 @@ export default {
           "id": 4,
           "title": "Klinik",
           "textWithFormatting": `<div>
-            <p>Papilläre Schilddrüsenkarzinome sind in der Regel nonfunktionell, d.h., sie produzieren keine Hormone und erscheinen bei der Szintigraphie als kalte Knoten, da sie kein <a href="/trafarette/iod">Jod</a>-131 anreichern. Trotzdem ist die Fähigkeit zur Jodaufnahme erhalten, was die Radiojodtherapie ermöglicht.</p>
+            <p>Papilläre Schilddrüsenkarzinome sind in der Regel nonfunktionell, d.h., sie produzieren keine Hormone und erscheinen bei der Szintigraphie als kalte Knoten, da sie kein <a href="/trafarette/iod">Jod</a>-131 anreichern. Trotzdem ist die Fähigkeit zur Jodaufnahme erhalten, was die <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a> ermöglicht.</p>
             <p>Klinisch fällt meist eine knotige Vergrößerung der Schilddrüse oder tastbare Lymphknoten im Halsbereich auf, da das PTC häufig lymphogen metastasiert. Patienten sind oft zwischen 30 und 50 Jahre alt, und Frauen sind etwa dreimal häufiger betroffen als Männer.</p>
           </div>`
         },
@@ -54,9 +54,9 @@ export default {
           "id": 6,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Die primäre Behandlung des papillären Schilddrüsenkarzinoms besteht in der chirurgischen Resektion. Bei kleinen, gut abgegrenzten Tumoren (Durchmesser < 15 mm) ist eine Hemithyreoidektomie ausreichend. Größere oder multifokale Tumoren erfordern eine totale Thyreoidektomie mit Entfernung der regionalen Lymphknoten.</p>
+            <p>Die primäre Behandlung des papillären Schilddrüsenkarzinoms besteht in der chirurgischen Resektion. Bei kleinen, gut abgegrenzten Tumoren (Durchmesser < 15 mm) ist eine <a href="/trafarette/schilddruesenresektionen">Hemithyreoidektomie</a> ausreichend. Größere oder multifokale Tumoren erfordern eine totale <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> mit Entfernung der regionalen Lymphknoten.</p>
             <ul>
-              <li>• <b>Radiojodtherapie</b>: Wird durchgeführt, um residuelles Schilddrüsengewebe und potenzielle Mikrometastasen zu zerstören.</li>
+              <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Wird durchgeführt, um residuelles Schilddrüsengewebe und potenzielle Mikrometastasen zu zerstören.</li>
               <li>• <b>Postoperative Hormontherapie</b>: <a href="/trafarette/levothyroxin">L-Thyroxin</a> wird in einer Dosis verabreicht, die den TSH-Spiegel unterdrückt, um einen Stimulus für ein erneutes Tumorwachstum zu vermeiden. Diese Substitutionstherapie muss lebenslang erfolgen.</li>
             </ul>
           </div>`

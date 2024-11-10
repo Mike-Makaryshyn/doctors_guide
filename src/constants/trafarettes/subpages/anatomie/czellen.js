@@ -23,7 +23,7 @@ export default {
                     <li>• <b>Größe und Erscheinung:</b> C-Zellen sind im Vergleich zu den benachbarten Follikelepithelzellen größer und heller, da sie über mehr Zytoplasma verfügen.</li>
                     <li>• <b>Zytoplasma und Vesikelbildung:</b> Das <a href="/trafarette/calcitonin">Calcitonin</a> wird im Zytoplasma der C-Zellen synthetisiert und in Vesikeln gespeichert. Diese Vesikel transportieren das Hormon zur Zellmembran, wo es über Transportproteine in den Extrazellularraum abgegeben wird.</li>
                 </ul>
-                <p>Die genaue Lokalisation der C-Zellen innerhalb der Schilddrüse sowie ihre spezifische histologische Struktur helfen bei der Differenzierung von anderen Zelltypen und sind wichtig für die Diagnose bestimmter Schilddrüsenerkrankungen, wie z.B. <a href="/trafarette/medullaereschilddruesenkarzinom">des medullären Schilddrüsenkarzinoms</a>.</p>
+                <p>Die genaue Lokalisation der C-Zellen innerhalb der Schilddrüse sowie ihre spezifische histologische Struktur helfen bei der Differenzierung von anderen Zelltypen und sind wichtig für die Diagnose bestimmter Schilddrüsenerkrankungen, wie z.B.  <a href="/trafarette/medullaereschilddruesenkarzinom">des medullären Schilddrüsenkarzinoms</a>.</p>
             </div>`
         }
     ],

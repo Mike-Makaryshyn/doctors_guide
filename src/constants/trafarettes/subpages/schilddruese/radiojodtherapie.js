@@ -1,6 +1,6 @@
 export default {
   path: "radiojodtherapie",
-  // http://localhost:5173/trafarette/radiojodtherapie
+  // http://localhost:5173/trafarette/radiojodtherapie 
   content: [
     {
       id: 1,
@@ -21,13 +21,13 @@ export default {
             <ul>
               <li>• <b>Gutartige Schilddrüsenerkrankungen:</b>
                 <ul>
-                  <li>• <b>Manifeste <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Bei Schilddrüsenautonomie und <a href="/trafarette/morbusbasedow">Morbus Basedow</a> kann eine Radiojodtherapie zur Normalisierung der Schilddrüsenfunktion beitragen.</li>
+                  <li>• <b>Manifeste <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Bei <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a> und <a href="/trafarette/morbusbasedow">Morbus Basedow</a> kann eine Radiojodtherapie zur Normalisierung der Schilddrüsenfunktion beitragen.</li>
                   <li>• <b>Latente <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Auch bei milden Formen der Schilddrüsenüberfunktion in Kombination mit einer <a href="/trafarette/struma">Struma</a> wird die RJT eingesetzt, wenn diese Beschwerden verursacht.</li>
                 </ul>
               </li>
               <li>• <b>Bösartige Schilddrüsenerkrankungen:</b>
                 <ul>
-                  <li>• <b>Differenzierte Schilddrüsenkarzinome:</b> Insbesondere bei follikulären und papillären Karzinomen wird die RJT genutzt, um verbleibende Schilddrüsenzellen und eventuell vorhandene Metastasen zu eliminieren.</li>
+                  <li>• <b>Differenzierte <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinome</a>:</b> Insbesondere bei <a href="/trafarette/folikulaereschilddruesenkarzinom">follikulären Schilddrüsenkarzinomen</a> und <a href="/trafarette/papillaereschilddruesenkarzinom">Papillären Schilddrüsenkarzinomen</a> wird die RJT genutzt, um verbleibende Schilddrüsenzellen und eventuell vorhandene Metastasen zu eliminieren.</li>
                 </ul>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export default {
           "id": 7,
           "title": "Erfolgsquote und Langzeitprognose",
           "textWithFormatting": `<div>
-            <p>Die Radiojodtherapie ist besonders bei gutartigen Schilddrüsenerkrankungen und differenzierten Schilddrüsenkarzinomen äußerst wirksam und gut verträglich. Die Erfolgsquote ist hoch, insbesondere wenn die Therapie mit den geeigneten Dosisanpassungen und Schutzmaßnahmen durchgeführt wird.</p>
+            <p>Die Radiojodtherapie ist besonders bei gutartigen Schilddrüsenerkrankungen und differenzierten <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a> äußerst wirksam und gut verträglich. Die Erfolgsquote ist hoch, insbesondere wenn die Therapie mit den geeigneten Dosisanpassungen und Schutzmaßnahmen durchgeführt wird.</p>
           </div>`
         }
       ],

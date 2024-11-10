@@ -19,10 +19,10 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Indikationen für eine Schilddrüsenresektion sind vielfältig und umfassen:</p>
             <ul>
-              <li>• <b>Schilddrüsenkarzinome</b>: Die häufigste Indikation für eine totale Thyreoidektomie ist der Nachweis oder Verdacht auf ein Schilddrüsenkarzinom, einschließlich papillären, follikulären und medullären Karzinomen.</li>
+              <li>• <b><a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinome</a></b>: Die häufigste Indikation für eine totale Thyreoidektomie ist der Nachweis oder Verdacht auf ein Schilddrüsenkarzinom, einschließlich <a href="/trafarette/papillaereschilddruesenkarzinom">papillären Schilddrüsenkarzinoms</a>, <a href="/trafarette/folikulaereschilddruesenkarzinom">follikulären Schilddrüsenkarzinomen</a> und <a href="/trafarette/medullaereschilddruesenkarzinom">medullären Schilddrüsenkarzinomen</a>.</li>
               <li>• <b><a href="/trafarette/struma">Struma</a></b>: Eine vergrößerte Schilddrüse kann zu mechanischen Beschwerden führen, insbesondere zu Atem- oder Schluckbeschwerden durch Kompression der Trachea oder des Ösophagus. Eine Resektion kann notwendig werden, wenn eine konservative Therapie nicht ausreicht oder die Struma in den Brustkorb hineinwächst (retrosternale Struma).</li>
-              <li>• <b>Funktionelle Schilddrüsenautonomie</b>: Bei Patienten mit autonomen Adenomen oder multinodösen autonomen Strumen, die eine <a href="/trafarette/hyperthyreose">Hyperthyreose</a> verursachen.</li>
-              <li>• <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b>: Eine operative Entfernung kann indiziert sein, wenn eine medikamentöse oder radiojodbasierte Therapie versagt oder bei bestimmten Patientengruppen kontraindiziert ist.</li>
+              <li>• <b>Funktionelle <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a></b>: Bei Patienten mit autonomen Adenomen oder multinodösen autonomen Strumen, die eine <a href="/trafarette/hyperthyreose">Hyperthyreose</a> verursachen.</li>
+              <li>• <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b>: Eine operative Entfernung kann indiziert sein, wenn eine medikamentöse oder <a href="/trafarette/radiojodtherapie">radiojodbasierte Therapie</a> versagt oder bei bestimmten Patientengruppen kontraindiziert ist.</li>
             </ul>
             <p>Seltene Indikationen umfassen Notfalleingriffe bei einer thyreotoxischen Krise oder bei schweren entzündlichen Erkrankungen der Schilddrüse wie einer eitrigen Thyroiditis.</p>
           </div>`

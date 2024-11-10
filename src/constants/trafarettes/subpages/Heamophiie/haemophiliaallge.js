@@ -1,6 +1,6 @@
 export default {
-  path: "haemophiliaallgemein",
-  // http://localhost:5173/trafarette/haemophiliaallgemein
+  path: "haemophiliaallge",
+  // http://localhost:5173/trafarette/haemophiliaallge
   content: [
     {
       id: 1,

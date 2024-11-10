@@ -1,6 +1,6 @@
 export default {
   path: "folikulaereschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/folikulaereschilddruesenkarzinom
+  // http://localhost:5173/trafarette/folikulaereschilddruesenkarzinom <a href="/trafarette/folikulaereschilddruesenkarzinom">Follikuläres Schilddrüsenkarzinom</a>
   content: [
     {
       id: 1,
@@ -10,21 +10,21 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Das follikuläre Schilddrüsenkarzinom ist die zweithäufigste Form der malignen Schilddrüsentumoren und macht etwa 10-20 % der Fälle aus. Es ist ein epithelialer Tumor mit einer gut differenzierten, follikulären Struktur, jedoch ohne die charakteristischen Kernveränderungen, die bei papillären Karzinomen zu finden sind. Die Inzidenz des follikulären Karzinoms ist in Regionen mit <a href="/trafarette/jodmangel">Jodmangel</a> erhöht, da dieser Zustand die Entstehung von Schilddrüsenanomalien begünstigen kann.</p>
+            <p>Das follikuläre Schilddrüsenkarzinom ist die zweithäufigste Form der malignen Schilddrüsentumoren und macht etwa 10-20 % der Fälle aus. Es ist ein epithelialer Tumor mit einer gut differenzierten, follikulären Struktur, jedoch ohne die charakteristischen Kernveränderungen, die bei <a href="/trafarette/papillaereschilddruesenkarzinom">Papillären Schilddrüsenkarzinomen</a> zu finden sind. Die Inzidenz des follikulären Karzinoms ist in Regionen mit <a href="/trafarette/jodmangel">Jodmangel</a> erhöht, da dieser Zustand die Entstehung von Schilddrüsenanomalien begünstigen kann.</p>
           </div>`
         },
         {
           "id": 2,
           "title": "Pathologie",
           "textWithFormatting": `<div>
-            <p>Histologisch zeigt das follikuläre Schilddrüsenkarzinom ein Wachstumsmuster, das dem eines gutartigen Schilddrüsenadenoms ähnelt, was die Diagnose erschwert. Ein deutliches Merkmal eines malignen Prozesses ist die Invasion in die umgebenden Strukturen der Schilddrüse, wie die Gefäße und die Organkapsel. Diese Invasion kann makroskopisch sichtbar sein oder nur mikroskopisch nachweisbar sein, was eine sorgfältige histopathologische Untersuchung erforderlich macht, um verdächtige Infiltrationsbereiche zu identifizieren. Die Diagnose erfolgt häufig erst postoperativ anhand der histologischen Untersuchung des entfernten Gewebes.</p>
+            <p>Histologisch zeigt das follikuläre Schilddrüsenkarzinom ein Wachstumsmuster, das dem eines gutartigen <a href="/trafarette/schilddruesenadenom">Schilddrüsenadenoms</a> ähnelt, was die Diagnose erschwert. Ein deutliches Merkmal eines malignen Prozesses ist die Invasion in die umgebenden Strukturen der Schilddrüse, wie die Gefäße und die Organkapsel. Diese Invasion kann makroskopisch sichtbar sein oder nur mikroskopisch nachweisbar sein, was eine sorgfältige histopathologische Untersuchung erforderlich macht, um verdächtige Infiltrationsbereiche zu identifizieren. Die Diagnose erfolgt häufig erst postoperativ anhand der histologischen Untersuchung des entfernten Gewebes.</p>
           </div>`
         },
         {
           "id": 3,
           "title": "Metastasierung",
           "textWithFormatting": `<div>
-            <p>Im Gegensatz zu papillären Schilddrüsenkarzinomen, die vorwiegend lymphogen metastasieren, erfolgt die Metastasierung des follikulären Schilddrüsenkarzinoms überwiegend hämatogen. Dies bedeutet, dass es bevorzugt über den Blutkreislauf zu Fernmetastasen in Organe wie die Lungen, Knochen, das Gehirn und die Leber kommt. Lymphknotenmetastasen sind selten, was die Unterscheidung zu anderen Schilddrüsenkarzinomen erleichtert.</p>
+            <p>Im Gegensatz zu <a href="/trafarette/papillaereschilddruesenkarzinom">Papillären Schilddrüsenkarzinomen</a>, die vorwiegend lymphogen metastasieren, erfolgt die Metastasierung des follikulären Schilddrüsenkarzinoms überwiegend hämatogen. Dies bedeutet, dass es bevorzugt über den Blutkreislauf zu Fernmetastasen in Organe wie die Lungen, Knochen, das Gehirn und die Leber kommt. Lymphknotenmetastasen sind selten, was die Unterscheidung zu anderen <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a> erleichtert.</p>
           </div>`
         },
         {
@@ -49,7 +49,7 @@ export default {
           "id": 6,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Die Behandlung des follikulären Schilddrüsenkarzinoms beginnt in der Regel mit einer vollständigen Entfernung der Schilddrüse (Thyreoidektomie). Dies wird oft mit einer prophylaktischen Entfernung der Lymphknoten kombiniert, auch wenn Lymphknotenmetastasen selten sind. Eine Radioiodtherapie wird postoperativ durchgeführt, um potenzielle mikroskopische Reste des Tumors und eventuelle Metastasen zu erfassen und zu behandeln. Diese Methode nutzt die <a href="/trafarette/iod">Jod</a>aufnahmefähigkeit der Schilddrüsenzellen, um gezielt radioaktive Strahlung in das betroffene Gewebe zu bringen.</p>
+            <p>Die Behandlung des follikulären Schilddrüsenkarzinoms beginnt in der Regel mit einer vollständigen Entfernung der Schilddrüse (<a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a>). Dies wird oft mit einer prophylaktischen Entfernung der Lymphknoten kombiniert, auch wenn Lymphknotenmetastasen selten sind. Eine Radioiodtherapie wird postoperativ durchgeführt, um potenzielle mikroskopische Reste des Tumors und eventuelle Metastasen zu erfassen und zu behandeln. Diese Methode nutzt die <a href="/trafarette/iod">Jod</a>aufnahmefähigkeit der Schilddrüsenzellen, um gezielt radioaktive Strahlung in das betroffene Gewebe zu bringen.</p>
           </div>`
         },
         {

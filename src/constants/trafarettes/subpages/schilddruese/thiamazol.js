@@ -1,6 +1,6 @@
 export default {
   path: "thiamazol",
-  // http://localhost:5173/trafarette/thiamazol
+  // http://localhost:5173/trafarette/thiamazol 
   content: [
     {
       id: 1,
@@ -10,14 +10,14 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p><b>Thiamazol</b> ist ein Thyreostatikum aus der Gruppe der Thionamide und wird als Hemmstoff für die Schilddrüsenhormonsynthese eingesetzt. Es wirkt als sogenannter Iodisationshemmer und hemmt die <a href="/trafarette/iod">Jod</a>ierung von Thyreoglobulin, was die Synthese der aktiven Schilddrüsenhormone Triiodthyronin (T3) und Thyroxin (T4) reduziert. Ein Prodrug von Thiamazol ist das <a href="/trafarette/carbimazol">Carbimazol</a>, das im Körper zu Thiamazol umgewandelt wird und ähnliche therapeutische Effekte erzielt.</p>
+            <p><b>Thiamazol</b> ist ein Thyreostatikum aus der Gruppe der Thionamide und wird als Hemmstoff für die Schilddrüsenhormonsynthese eingesetzt. Es wirkt als sogenannter Iodisationshemmer und hemmt die <a href="/trafarette/iod">Jod</a>ierung von <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a>, was die Synthese der aktiven <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Triiodthyronin (T3)</a>  und <a href="/trafarette/t4">Thyroxin (T4)</a> reduziert. Ein Prodrug von Thiamazol ist das <a href="/trafarette/carbimazol">Carbimazol</a>, das im Körper zu Thiamazol umgewandelt wird und ähnliche therapeutische Effekte erzielt.</p>
           </div>`
         },
         {
           "id": 2,
           "title": "Wirkmechanismus",
           "textWithFormatting": `<div>
-            <p><b>Thiamazol</b> hemmt das Enzym Thyreoperoxidase, das für die Bindung von <a href="/trafarette/iod">Jod</a> an Tyrosin notwendig ist, um Schilddrüsenhormone zu synthetisieren. Durch diese Hemmung wird die Synthese von T3 und T4 in der Schilddrüse gestoppt. Bereits gespeicherte Hormone im Schilddrüsenkolloid werden jedoch nicht beeinflusst, was den verzögerten Wirkungseintritt von etwa 1–2 Wochen erklärt. Erst nach einem Verbrauch dieser gespeicherten Hormone kann die Schilddrüsenfunktion auf ein normales Niveau (euthyreot) eingestellt werden, was in der Regel nach 4–6 Wochen Therapie erreicht wird.</p>
+            <p><b>Thiamazol</b> hemmt das Enzym Thyreoperoxidase, das für die Bindung von <a href="/trafarette/iod">Jod</a> an Tyrosin notwendig ist, um <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu synthetisieren. Durch diese Hemmung wird die Synthese von T3 und T4 in der Schilddrüse gestoppt. Bereits gespeicherte Hormone im Schilddrüsenkolloid werden jedoch nicht beeinflusst, was den verzögerten Wirkungseintritt von etwa 1–2 Wochen erklärt. Erst nach einem Verbrauch dieser gespeicherten Hormone kann die Schilddrüsenfunktion auf ein normales Niveau (euthyreot) eingestellt werden, was in der Regel nach 4–6 Wochen Therapie erreicht wird.</p>
           </div>`
         },
         {
@@ -39,7 +39,7 @@ export default {
             <p><b>Thiamazol</b> wird meist in Form von Tabletten verabreicht. Die Behandlung sollte stets kurz- bis mittelfristig erfolgen, um eine dauerhafte Schilddrüsenfunktion zu erhalten und Risiken einer endogenen Hormonproduktionseinschränkung zu minimieren.</p>
             <ul>
               <li>• <b>Vor Operationen oder Radioiodtherapie:</b> In diesen Fällen wird eine euthyreote Stoffwechsellage angestrebt. Die Anwendung erfolgt über einige Monate, meist bis zu einem halben Jahr.</li>
-              <li>• <b>Kombination mit <a href="/trafarette/levothyroxin">L-Thyroxin</a>:</b> In bestimmten Fällen wird Thiamazol gemeinsam mit L-Thyroxin verabreicht, um die Regulation der Schilddrüsenfunktion besser kontrollieren zu können. Diese Kombination, oft als „Block-and-Replace-Therapie“ bezeichnet, erlaubt es, die Produktion von Schilddrüsenhormonen zu blockieren und den benötigten Hormonspiegel durch die Gabe von L-Thyroxin zu steuern.</li>
+              <li>• <b>Kombination mit <a href="/trafarette/levothyroxin">L-Thyroxin</a>:</b> In bestimmten Fällen wird Thiamazol gemeinsam mit L-Thyroxin verabreicht, um die Regulation der Schilddrüsenfunktion besser kontrollieren zu können. Diese Kombination, oft als „Block-and-Replace-Therapie“ bezeichnet, erlaubt es, die Produktion von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> zu blockieren und den benötigten Hormonspiegel durch die Gabe von L-Thyroxin zu steuern.</li>
             </ul>
           </div>`
         },
@@ -89,7 +89,7 @@ export default {
           "id": 7,
           "title": "Zusammenfassung",
           "textWithFormatting": `<div>
-            <p><b>Thiamazol</b> ist ein effektives Thyreostatikum zur Behandlung der <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, insbesondere vor Operationen oder einer Radiojodtherapie. Aufgrund der möglichen schweren Nebenwirkungen wie Agranulozytose und Hepatotoxizität sollte die Behandlung unter regelmäßiger ärztlicher Überwachung erfolgen. In der Schwangerschaft und Stillzeit ist Thiamazol kontraindiziert und wird bei Bedarf durch Propylthiouracil ersetzt.</p>
+            <p><b>Thiamazol</b> ist ein effektives Thyreostatikum zur Behandlung der <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, insbesondere vor Operationen oder einer <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a>. Aufgrund der möglichen schweren Nebenwirkungen wie Agranulozytose und Hepatotoxizität sollte die Behandlung unter regelmäßiger ärztlicher Überwachung erfolgen. In der Schwangerschaft und Stillzeit ist Thiamazol kontraindiziert und wird bei Bedarf durch Propylthiouracil ersetzt.</p>
           </div>`
         }
       ],

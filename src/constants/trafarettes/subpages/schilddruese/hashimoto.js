@@ -27,7 +27,7 @@ export default {
             <h4>Genetische Prädisposition:</h4>
             <p>Eine genetische Veranlagung ist wahrscheinlich, da familiäre Häufungen häufig beobachtet werden. Die Erkrankung ist mit den HLA-Typen DR3, DR4 und DR5 assoziiert. Mutationen in regulatorischen Genen wie dem CTLA-4-Gen, die die Aktivität von T-Lymphozyten beeinflussen, erhöhen das Risiko.</p>
             <h4>Immunologische Aspekte:</h4>
-            <p>Die Krankheit ist T-Zell-vermittelt und führt zu einer Zerstörung des Schilddrüsengewebes. Die Bildung von Autoantikörpern gegen Schilddrüsenperoxidase (TPO-Ak) und Thyreoglobulin (Tg-Ak) erfolgt als Reaktion auf die Entzündung, ist jedoch nicht ursächlich. Diese Antikörper sind bei etwa 90 % der Patienten vorhanden, schließen aber eine HT bei Fehlen nicht aus.</p>
+            <p>Die Krankheit ist T-Zell-vermittelt und führt zu einer Zerstörung des Schilddrüsengewebes. Die Bildung von Autoantikörpern gegen Schilddrüsenperoxidase (TPO-Ak) und <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> (Tg-Ak) erfolgt als Reaktion auf die Entzündung, ist jedoch nicht ursächlich. Diese Antikörper sind bei etwa 90 % der Patienten vorhanden, schließen aber eine HT bei Fehlen nicht aus.</p>
             <h4>Weitere Faktoren:</h4>
             <p>Östrogene scheinen eine Rolle zu spielen, was die höhere Prävalenz bei Frauen erklären könnte. Progesteron und Testosteron haben möglicherweise eine schützende Wirkung. Umweltfaktoren wie Virusinfektionen (z.B. Hepatitis C), Selenmangel, hoher Jodkonsum, Stress und Tabakrauchen können ebenfalls als Auslöser dienen.</p>
           </div>`
@@ -36,7 +36,7 @@ export default {
           "id": 4,
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
-            <p>Die Autoimmunreaktion bei der HT beginnt mit einer Aktivierung von T-Zellen, die eine Entzündungsreaktion in der Schilddrüse auslöst. Dadurch kommt es zu einer Zerstörung der Follikelepithelzellen, die für die Produktion der Schilddrüsenhormone verantwortlich sind. In der Folge kann eine <a href="/trafarette/hypothyreose">Hypothyreose</a> auftreten, da die Schilddrüse nicht mehr in der Lage ist, ausreichende Mengen an T3 und T4 zu produzieren.</p>
+            <p>Die Autoimmunreaktion bei der HT beginnt mit einer Aktivierung von T-Zellen, die eine Entzündungsreaktion in der Schilddrüse auslöst. Dadurch kommt es zu einer Zerstörung der Follikelepithelzellen, die für die Produktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> verantwortlich sind. In der Folge kann eine <a href="/trafarette/hypothyreose">Hypothyreose</a> auftreten, da die Schilddrüse nicht mehr in der Lage ist, ausreichende Mengen an <a href="/trafarette/t3">Trijodthyronin (T3)</a> und <a href="/trafarette/t4">T4</a> zu produzieren.</p>
           </div>`
         },
         {
@@ -79,7 +79,7 @@ export default {
             <p>TPO-Ak und Tg-Ak sind typische Marker. In 90 % der Fälle sind TPO-Ak positiv, während Tg-Ak bei etwa 50 % der Patienten nachgewiesen werden können.</p>
             <h4>Laborbefunde:</h4>
             <ul>
-              <li>• <b>Initiale Phase</b>: Möglicherweise vorübergehend niedriger TSH-Wert mit erhöhten fT3- und fT4-Werten.</li>
+              <li>• <b>Initiale Phase</b>: Möglicherweise vorübergehend niedriger TSH-Wert mit erhöhten <a href="/trafarette/t3">fT3</a>- und fT4-Werten.</li>
               <li>• <b>Latente <a href="/trafarette/hypothyreose">Hypothyreose</a></b>: Erhöhter TSH-Wert bei normalen fT3- und fT4-Werten.</li>
               <li>• <b>Manifeste <a href="/trafarette/hypothyreose">Hypothyreose</a></b>: Erhöhter TSH-Wert, erniedrigte fT3- und fT4-Werte.</li>
             </ul>

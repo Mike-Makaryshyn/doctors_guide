@@ -1,6 +1,6 @@
 export default {
   path: "levothyroxin",
-  // http://localhost:5173/trafarette/levothyroxin
+  // http://localhost:5173/trafarette/levothyroxin <a href="/trafarette/levothyroxin">L-Thyroxin</a>
   content: [
     {
       id: 1,
@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition und grundlegende Bedeutung",
           "textWithFormatting": `<div>
-            <p><b>Levothyroxin</b>, auch als <b>L-Thyroxin</b> bekannt, ist die synthetische Form des natürlichen Schilddrüsenhormons Thyroxin (T4), welches in der Schilddrüse produziert wird. Das Medikament wird häufig zur Behandlung der Schilddrüsenunterfunktion (Hypothyreose) verwendet und dient als Ersatz oder Ergänzung bei fehlender oder unzureichender Hormonproduktion. Da T4 ein lebenswichtiges Hormon ist, spielt Levothyroxin eine wesentliche Rolle bei der Regulation des Stoffwechsels, der Energieproduktion und der Organentwicklung.</p>
+            <p><b>Levothyroxin</b>, auch als <b>L-Thyroxin</b> bekannt, ist die synthetische Form des natürlichen Schilddrüsenhormons <a href="/trafarette/t4">Thyroxin (T4)</a>, welches in der Schilddrüse produziert wird. Das Medikament wird häufig zur Behandlung der Schilddrüsenunterfunktion (Hypothyreose) verwendet und dient als Ersatz oder Ergänzung bei fehlender oder unzureichender Hormonproduktion. Da T4 ein lebenswichtiges Hormon ist, spielt Levothyroxin eine wesentliche Rolle bei der Regulation des Stoffwechsels, der Energieproduktion und der Organentwicklung.</p>
           </div>`
         },
         {
@@ -24,7 +24,7 @@ export default {
           "id": 3,
           "title": "Biochemische Umwandlung und Wirkungsmechanismus",
           "textWithFormatting": `<div>
-            <p><b>Levothyroxin</b> wird nach oraler Aufnahme im Körper hauptsächlich in der Leber und in anderen Geweben durch Deiodierung zu <b>Trijodthyronin (T3)</b> umgewandelt, welches die biologisch aktivere Form des Hormons ist. Während der Umwandlung entsteht auch „reverses T3“ (rT3), eine inaktive Variante von T3, welche als Regulationsmechanismus dient, um bei hohem Energiebedarf den Stoffwechsel vor Überhitzung zu schützen. Der aktivierte T3 bindet an nukleäre Rezeptoren in den Zielzellen und beeinflusst die Genexpression. Dieser Prozess beeinflusst Wachstum, Entwicklung und nahezu alle wichtigen Stoffwechselfunktionen, einschließlich Energieverbrauch und Herz-Kreislauf-Funktion.</p>
+            <p><b>Levothyroxin</b> wird nach oraler Aufnahme im Körper hauptsächlich in der Leber und in anderen Geweben durch Deiodierung zu <b><a href="/trafarette/t3">Trijodthyronin (T3)</a></b> umgewandelt, welches die biologisch aktivere Form des Hormons ist. Während der Umwandlung entsteht auch „reverses T3“ (rT3), eine inaktive Variante von T3, welche als Regulationsmechanismus dient, um bei hohem Energiebedarf den Stoffwechsel vor Überhitzung zu schützen. Der aktivierte T3 bindet an nukleäre Rezeptoren in den Zielzellen und beeinflusst die Genexpression. Dieser Prozess beeinflusst Wachstum, Entwicklung und nahezu alle wichtigen Stoffwechselfunktionen, einschließlich Energieverbrauch und Herz-Kreislauf-Funktion.</p>
           </div>`
         },
         {
@@ -49,8 +49,8 @@ export default {
             <ul>
               <li>• <b>Primäre und sekundäre <a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Bei ausgeprägtem Hormonmangel, meist durch <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> oder nach Schilddrüsenoperation.</li>
               <li>• <b><a href="/trafarette/struma">Strumaprophylaxe</a>:</b> Besonders in Kombination mit Jod bei <a href="/trafarette/jodmangel">Jodmangel</a>strumen, um das Wachstum der Schilddrüse zu bremsen.</li>
-              <li>• <b>Suppressionstherapie bei Schilddrüsenkarzinomen:</b> Hier wird durch gezielte TSH-Senkung das Wachstum verbliebener Schilddrüsenzellen unterdrückt.</li>
-              <li>• <b>Begleittherapie bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Levothyroxin wird in Kombination mit Thyreostatika verabreicht, um eine optimale Balance der Schilddrüsenhormone zu erreichen.</li>
+              <li>• <b>Suppressionstherapie bei <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a>:</b> Hier wird durch gezielte TSH-Senkung das Wachstum verbliebener Schilddrüsenzellen unterdrückt.</li>
+              <li>• <b>Begleittherapie bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Levothyroxin wird in Kombination mit Thyreostatika verabreicht, um eine optimale Balance der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu erreichen.</li>
               <li>• <b>Diagnostischer Schilddrüsensuppressionstest:</b> Durch hochdosiertes Levothyroxin kann der funktionelle Status der Schilddrüse bestimmt werden.</li>
             </ul>
           </div>`
@@ -100,7 +100,7 @@ export default {
           "id": 12,
           "title": "Diagnostische Bedeutung und Monitoring",
           "textWithFormatting": `<div>
-            <p>Zur Therapiekontrolle und Dosierungseinstellung werden <b>TSH</b>, <b>freies T4 (fT4)</b> und gegebenenfalls <b>freies T3 (fT3)</b> gemessen. Falsch positive oder negative Ergebnisse können durch hohe Biotindosen beeinflusst werden.</p>
+            <p>Zur Therapiekontrolle und Dosierungseinstellung werden <b>TSH</b>, <b>freies T4 (<a href="/trafarette/t4">fT4</a>)</b> und gegebenenfalls <b>freies <a href="/trafarette/t3">T3</a> (fT3)</b> gemessen. Falsch positive oder negative Ergebnisse können durch hohe Biotindosen beeinflusst werden.</p>
           </div>`
         },
         {

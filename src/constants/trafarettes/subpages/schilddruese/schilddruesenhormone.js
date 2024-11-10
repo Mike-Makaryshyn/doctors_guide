@@ -2,7 +2,7 @@ import img1 from '../../../../assets/schilddrueseallg.png';
 import img2 from '../../../../assets/sd.png';
 export default {
   path: "schilddruesenhormone",
-  // http://localhost:5173/trafarette/schilddruesenhormone
+  // http://localhost:5173/trafarette/schilddruesenhormone 
   content: [
     {
       id: 1,
@@ -23,8 +23,8 @@ export default {
                 <ul>
                     <li><b>Echte Schilddrüsenhormone (Iodothyronine):</b>
                         <ul>
-                            <li>• Thyroxin (T4)</li>
-                            <li>• Trijodthyronin (T3)</li>
+                            <li>• <a href="/trafarette/t4">Thyroxin (T4)</a></li>
+                            <li>• Trijodthyronin <a href="/trafarette/t3">(T3)</a></li>
                             <li>• Reverse-T3 (rT3)</li>
                             <li>• Verschiedene Diiodthyronine und Monoiodthyronine</li>
                         </ul>
@@ -45,8 +45,8 @@ export default {
                 <p>Die Synthese der Schilddrüsenhormone erfolgt an der Außenseite der Plasmamembran der Epithelzellen der Schilddrüsenfollikel und umfasst drei Hauptschritte:</p>
                 <ol>
                     <li><b>Aufnahme von <a href="/trafarette/iod">Iodid</a>:</b> Iodid wird durch einen Na/I-Symporter aus dem Blutplasma in die Follikelzellen aufgenommen und durch den Cl/I-Austauscher (Pendrin) ins Lumen abgegeben. Dort wird es durch H<sub>2</sub>O<sub>2</sub> oxidiert, bevor es für die Iodierung verfügbar ist.</li>
-                    <li><b>Iodierung:</b> Die Thyreoperoxidase (TPO) katalysiert die Übertragung der Iodionen auf Tyrosinreste des Thyreoglobulins, wodurch Monoiodtyrosin (MIT) und Diiodtyrosin (DIT) entstehen.</li>
-                    <li><b>Konjugation:</b> MIT und DIT werden durch TPO zu T3 und T4 verknüpft. Zwei DIT-Moleküle bilden T4, während ein MIT und ein DIT zusammen T3 ergeben.</li>
+                    <li><b>Iodierung:</b> Die Thyreoperoxidase (TPO) katalysiert die Übertragung der Iodionen auf Tyrosinreste des <a href="/trafarette/thyreoglobulin">Thyreoglobulins</a>, wodurch Monoiodtyrosin (MIT) und Diiodtyrosin (DIT) entstehen.</li>
+                    <li><b>Konjugation:</b> MIT und DIT werden durch TPO zu <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> verknüpft. Zwei DIT-Moleküle bilden T4, während ein MIT und ein DIT zusammen T3 ergeben.</li>
                 </ol>
                 <p><b>3.2. Abbau</b></p>
                 <p>Die Halbwertszeit von T3 beträgt einige Stunden, während T4 mehrere Tage wirkt. Der Abbau erfolgt hauptsächlich in der Leber durch Glucuronidierung und Sulfatierung, wodurch die Hormone wasserlöslich werden. Sie werden dann renal oder über die Galle ausgeschieden und können im Darm hydrolysiert und reabsorbiert werden.</p>
@@ -57,7 +57,7 @@ export default {
             "title": "Physiologie der Schilddrüsenhormone",
             "textWithFormatting": `<div>
                 <p><b>4.1. Transport</b></p>
-                <p>T3 und T4 sind hydrophobe Moleküle, die zu über 99 % an Transportproteine gebunden im Blut zirkulieren, darunter:</p>
+                <p><a href="/trafarette/t3">T3</a> und T4 sind hydrophobe Moleküle, die zu über 99 % an Transportproteine gebunden im Blut zirkulieren, darunter:</p>
                 <ul>
                     <li>• Thyroxin-bindendes Globulin (TBG)</li>
                     <li>• Transthyretin (TTR)</li>
@@ -83,7 +83,7 @@ export default {
                 <table>
                     <tr>
                         <th>Merkmal</th>
-                        <th>Trijodthyronin (T3)</th>
+                        <th>Trijodthyronin (<a href="/trafarette/t3">T3</a>)</th>
                         <th>Thyroxin (T4)</th>
                         <th>Reverse-T3 (rT3)</th>
                     </tr>
@@ -126,7 +126,7 @@ export default {
             "textWithFormatting": `<div>
                 <p><b>4.4.1. Hypothalamischer Regelkreis:</b></p>
                 <p>Die Steuerung der Schilddrüsenhormonsekretion erfolgt über den Hypothalamus und die Hypophyse. Der Hypothalamus produziert TRH (Thyreotropin-Releasing-Hormon), welches die Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon) durch die Hypophyse anregt. TSH stimuliert dann die Schilddrüse zur Produktion von T3 und T4.</p>
-                <p><b>Feedbackmechanismus:</b> Ein hoher Spiegel an T3 und T4 hemmt die Freisetzung von TRH und TSH, was die Hormonproduktion reguliert. Dieser Regelkreis wird als thyreotroper Regelkreis bezeichnet.</p>
+                <p><b>Feedbackmechanismus:</b> Ein hoher Spiegel an <a href="/trafarette/t3">T3</a> und T4 hemmt die Freisetzung von TRH und TSH, was die Hormonproduktion reguliert. Dieser Regelkreis wird als thyreotroper Regelkreis bezeichnet.</p>
                 <p><b>4.4.2. Hypophysärer Regelkreis:</b></p>
                 <p>Ein zusätzlicher Regelkreis innerhalb des Hypophysenvorderlappens, bekannt als Brokken-Wiersinga-Prummel-Regelkreis, reguliert die TSH-Produktion durch ein Ultrashort-Feedback.</p>
                 <p><b>4.4.3. Peripher-zellulärer Regelkreis:</b></p>
@@ -146,7 +146,7 @@ export default {
             "textWithFormatting": `<div>
                 <p><b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b></p>
                 <ul>
-                    <li><b>Definition:</b> Überproduktion von T3 und T4 führt zu einer gesteigerten Stoffwechselrate.</li>
+                    <li><b>Definition:</b> Überproduktion von <a href="/trafarette/t3">T3</a> und T4 führt zu einer gesteigerten Stoffwechselrate.</li>
                     <li><b>Ursachen:</b> <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, autonome Adenome, TSH-produzierende Tumoren.</li>
                     <li><b>Symptome:</b> Gewichtsverlust, Tachykardie, Unruhe, Wärmeempfindung.</li>
                     <li><b>Diagnose:</b> Erniedrigtes TSH, erhöhte T3/T4-Spiegel.</li>

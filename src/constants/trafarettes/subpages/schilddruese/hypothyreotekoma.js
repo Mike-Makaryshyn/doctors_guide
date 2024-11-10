@@ -26,7 +26,7 @@ export default {
               <li>• Hypothermie aufgrund niedriger Umgebungstemperaturen</li>
               <li>• Bestimmte Medikamente wie Sedativa, Betablocker oder Anästhetika</li>
             </ul>
-            <p>Diese Auslöser führen zu einer verstärkten Hemmung des Stoffwechsels und einem erhöhten Bedarf an Schilddrüsenhormonen, den der Körper nicht decken kann.</p>
+            <p>Diese Auslöser führen zu einer verstärkten Hemmung des Stoffwechsels und einem erhöhten Bedarf an <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a>, den der Körper nicht decken kann.</p>
           </div>`
         },
         {
@@ -53,7 +53,7 @@ export default {
             <p>Die Diagnose basiert auf der klinischen Präsentation sowie auf spezifischen Laborwerten, die eine schwere <a href="/trafarette/hypothyreose">Hypothyreose</a> bestätigen:</p>
             <ul>
               <li>• <b>TSH-Erhöhung</b> bei primärer <a href="/trafarette/hypothyreose">Hypothyreose</a></li>
-              <li>• <b>Niedrige fT4- und fT3-Werte</b></li>
+              <li>• <b>Niedrige <a href="/trafarette/t4">fT4-</a> und <a href="/trafarette/t3">fT3</a>-Werte</b></li>
               <li>• <b>Hyponatriämie</b>, oft durch SIADH (Syndrom der inadäquaten ADH-Sekretion)</li>
               <li>• <b>Erhöhte CO₂-Werte</b> bei respiratorischer Globalinsuffizienz</li>
             </ul>

@@ -1,6 +1,6 @@
 export default {
   path: "thyreoiditis",
-  // http://localhost:5173/trafarette/thyreoiditis
+  // http://localhost:5173/trafarette/thyreoiditis <a href="/trafarette/thyreoiditis">Thyreoiditis</a>
   content: [
     {
       id: 1,

@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenadenom",
-  // http://localhost:5173/trafarette/schilddruesenadenom
+  // http://localhost:5173/trafarette/schilddruesenadenom 
   content: [
     {
       id: 1,
@@ -63,7 +63,7 @@ export default {
               <li>• <b>Ultraschall</b>: Bildgebung zur Beurteilung der Größe, Struktur und Echogenität des Knotens.</li>
               <li>• <b>Szintigraphie</b>: Darstellung der funktionellen Aktivität des Knotens mittels radioaktivem <a href="/trafarette/iod">Jod</a> oder Technetium-99m.</li>
               <li>• <b>Feinnadelaspiration</b>: Bei kalten Knoten zur histopathologischen Abklärung und Ausschluss eines Schilddrüsenkarzinoms.</li>
-              <li>• <b>Laboruntersuchungen</b>: Messung von TSH, fT3 und fT4 zur Beurteilung der Schilddrüsenfunktion.</li>
+              <li>• <b>Laboruntersuchungen</b>: Messung von TSH, <a href="/trafarette/t3">fT3</a> und <a href="/trafarette/t4">fT4</a> zur Beurteilung der Schilddrüsenfunktion.</li>
             </ul>
           </div>`
         },
@@ -74,8 +74,8 @@ export default {
             <p>Die Behandlung richtet sich nach der Art des Adenoms und der Symptomatik:</p>
             <ul>
               <li>• <b>Konservative Therapie</b>: Bei kleinen, hormonell inaktiven Knoten ohne Symptome ist oft eine engmaschige Überwachung ausreichend.</li>
-              <li>• <b>Radiojodtherapie</b>: Bei autonomen, hormonell aktiven Knoten zur Reduktion der Hormonproduktion.</li>
-              <li>• <b>Chirurgie</b>: Indiziert bei großen, symptomatischen Adenomen oder Verdacht auf Malignität. Eine partielle oder totale Thyreoidektomie kann erforderlich sein.</li>
+              <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Bei autonomen, hormonell aktiven Knoten zur Reduktion der Hormonproduktion.</li>
+              <li>• <b>Chirurgie</b>: Indiziert bei großen, symptomatischen Adenomen oder Verdacht auf Malignität. Eine partielle oder totale <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> kann erforderlich sein.</li>
             </ul>
           </div>`
         }

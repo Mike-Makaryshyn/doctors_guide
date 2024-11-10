@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Hyperthyreosis factitia bezeichnet eine Form der <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, die durch die übermäßige exogene Zufuhr von Schilddrüsenhormonen, insbesondere <a href="/trafarette/levothyroxin">Levothyroxin</a>, hervorgerufen wird. Diese Art der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> kann entweder durch ärztliche Überdosierung, versehentliche oder absichtliche Selbstmedikation der Patienten verursacht sein.</p>
+            <p>Hyperthyreosis factitia bezeichnet eine Form der <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, die durch die übermäßige exogene Zufuhr von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a>, insbesondere <a href="/trafarette/levothyroxin">Levothyroxin</a>, hervorgerufen wird. Diese Art der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> kann entweder durch ärztliche Überdosierung, versehentliche oder absichtliche Selbstmedikation der Patienten verursacht sein.</p>
           </div>`
         },
         {
@@ -22,7 +22,7 @@ export default {
               <li>• <b>Iatrogene Überdosierung</b>: Eine versehentliche Überdosierung durch den Arzt im Rahmen der Behandlung einer <a href="/trafarette/hypothyreose">Hypothyreose</a> oder einer <a href="/trafarette/struma">Struma</a>.</li>
               <li>• <b>Einnahmefehler durch den Patienten</b>: Unbewusste oder fahrlässige Überdosierung der Schilddrüsenmedikation.</li>
               <li>• <b>Absichtliche Überdosierung</b>: Dazu gehören Fälle im Rahmen des Münchhausen-Syndroms oder in suizidaler Absicht.</li>
-              <li>• <b>Unkontrollierte Supplementierung</b>: Häufig im Kontext des Bodybuildings oder zur Unterstützung von Gewichtsverlust, wobei höhere Dosen von Schilddrüsenhormonen zur Steigerung des Stoffwechsels eingenommen werden.</li>
+              <li>• <b>Unkontrollierte Supplementierung</b>: Häufig im Kontext des Bodybuildings oder zur Unterstützung von Gewichtsverlust, wobei höhere Dosen von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> zur Steigerung des Stoffwechsels eingenommen werden.</li>
             </ul>
           </div>`
         },
@@ -55,7 +55,7 @@ export default {
               <li>• <b>Laboruntersuchungen</b>:
                 <ul>
                   <li>• TSH-Spiegel: Deutlich erniedrigt.</li>
-                  <li>• Freies T3 und freies T4: Erhöhte Konzentrationen.</li>
+                  <li>• Freies <a href="/trafarette/t3">T3</a> und freies <a href="/trafarette/t4">T4</a>: Erhöhte Konzentrationen.</li>
                   <li>• EKG: Um mögliche kardiale Arrhythmien zu identifizieren.</li>
                 </ul>
               </li>
@@ -78,8 +78,8 @@ export default {
               </li>
               <li>• <b>Symptomatische Behandlung</b>:
                 <ul>
-                  <li>• Betablocker wie Propranolol: Hemmen die periphere Umwandlung von T4 zu T3 und lindern kardiovaskuläre Symptome.</li>
-                  <li>• Thyreostatika: Sind nicht wirksam, da sie die Freisetzung von Schilddrüsenhormonen blockieren, die bei der Hyperthyreosis factitia jedoch nicht endogen produziert werden.</li>
+                  <li>• Betablocker wie Propranolol: Hemmen die periphere Umwandlung von T4 zu <a href="/trafarette/t3">T3</a> und lindern kardiovaskuläre Symptome.</li>
+                  <li>• Thyreostatika: Sind nicht wirksam, da sie die Freisetzung von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> blockieren, die bei der Hyperthyreosis factitia jedoch nicht endogen produziert werden.</li>
                 </ul>
               </li>
               <li>• <b>Zusätzliche Maßnahmen</b>: Hämodialyse ist nicht effektiv, da <a href="/trafarette/levothyroxin">Levothyroxin</a> eine hohe Plasmaproteinbindung aufweist.</li>
@@ -90,7 +90,7 @@ export default {
           "id": 6,
           "title": "Zusammenfassung",
           "textWithFormatting": `<div>
-            <p>Hyperthyreosis factitia ist eine durch exzessive Einnahme von Schilddrüsenhormonen induzierte <a href="/trafarette/hyperthyreose">Hyperthyreose</a>. Sie zeigt sich durch klassische <a href="/trafarette/hyperthyreose">Hyperthyreose</a>-Symptome und kann bei unkontrollierter Medikation lebensgefährlich werden. Eine rasche Anpassung der Behandlung und symptomatische Maßnahmen sind entscheidend für die Prognose der Betroffenen.</p>
+            <p>Hyperthyreosis factitia ist eine durch exzessive Einnahme von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> induzierte <a href="/trafarette/hyperthyreose">Hyperthyreose</a>. Sie zeigt sich durch klassische <a href="/trafarette/hyperthyreose">Hyperthyreose</a>-Symptome und kann bei unkontrollierter Medikation lebensgefährlich werden. Eine rasche Anpassung der Behandlung und symptomatische Maßnahmen sind entscheidend für die Prognose der Betroffenen.</p>
           </div>`
         }
       ],

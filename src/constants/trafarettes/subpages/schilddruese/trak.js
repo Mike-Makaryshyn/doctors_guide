@@ -17,7 +17,7 @@ export default {
           "id": 2,
           "title": "Wirkung",
           "textWithFormatting": `<div>
-            <p>TRAKs spielen eine zentrale Rolle bei der Pathogenese des <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Durch ihre Bindung an den TSH-Rezeptor der Schilddrüse kommt es zu einer unkontrollierten Aktivierung dieses Rezeptors. Diese dauerhafte Stimulation führt zur übermäßigen Produktion und Freisetzung der Schilddrüsenhormone T3 und T4, was eine <a href="/trafarette/hyperthyreose">Hyperthyreose</a> zur Folge hat. Diese Antikörper sind also direkt verantwortlich für die Symptome der Schilddrüsenüberfunktion bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a>.</p>
+            <p>TRAKs spielen eine zentrale Rolle bei der Pathogenese des <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Durch ihre Bindung an den TSH-Rezeptor der Schilddrüse kommt es zu einer unkontrollierten Aktivierung dieses Rezeptors. Diese dauerhafte Stimulation führt zur übermäßigen Produktion und Freisetzung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a>, was eine <a href="/trafarette/hyperthyreose">Hyperthyreose</a> zur Folge hat. Diese Antikörper sind also direkt verantwortlich für die Symptome der Schilddrüsenüberfunktion bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a>.</p>
           </div>`
         },
         {
@@ -66,7 +66,7 @@ export default {
               <li>• <b>Postpartale Thyreoiditis</b>: 50–70 % der Fälle</li>
               <li>• <b><a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a></b>: bis zu 10 % der Fälle</li>
               <li>• <b>Primäres <a href="/trafarette/myxoedem">Myxödem</a></b>: in 0–5 % der Fälle</li>
-              <li>• <b>Schilddrüsenautonomie</b>: etwa 5 % der Fälle</li>
+              <li>• <b><a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a></b>: etwa 5 % der Fälle</li>
             </ul>
             <p>Fehlende TRAK bei einer <a href="/trafarette/hyperthyreose">Hyperthyreose</a> deuten auf eine andere Ursache hin, wie beispielsweise Störungen im hypothalamisch-hypophysären Regelkreis.</p>
             <p>Es ist wichtig zu beachten, dass die Höhe des TRAK-Spiegels nicht unbedingt mit dem Schweregrad der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> korreliert. Ein Abfall der TRAK-Konzentration unter einer thyreostatischen Therapie kann jedoch auf eine mögliche Remission hindeuten.</p>

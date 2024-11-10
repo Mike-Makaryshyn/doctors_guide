@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Die Hypothyreose bezeichnet eine Unterfunktion der Schilddrüse, bei der diese nicht ausreichend Schilddrüsenhormone produziert. Dies führt zu einer Verlangsamung des Stoffwechsels und einer Vielzahl von Symptomen. Das Gegenteil der Hypothyreose ist die <a href="/trafarette/hyperthyreose">Hyperthyreose</a> oder Thyreotoxikose, bei der eine Überfunktion vorliegt.</p>
+            <p>Die Hypothyreose bezeichnet eine Unterfunktion der Schilddrüse, bei der diese nicht ausreichend <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> produziert. Dies führt zu einer Verlangsamung des Stoffwechsels und einer Vielzahl von Symptomen. Das Gegenteil der Hypothyreose ist die <a href="/trafarette/hyperthyreose">Hyperthyreose</a> oder Thyreotoxikose, bei der eine Überfunktion vorliegt.</p>
           </div>`
         },
         {
@@ -21,8 +21,8 @@ export default {
             <ul>
               <li>• <b>Primäre Hypothyreose</b>: Hierbei ist die Schilddrüse selbst gestört. Man unterscheidet:
                 <ul>
-                  <li>• <b>Manifeste primäre Hypothyreose</b>: Erniedrigte Spiegel der peripheren Schilddrüsenhormone (T3, T4) und ein erhöhter TSH-Wert.</li>
-                  <li>• <b>Latente primäre Hypothyreose</b>: Erhöhter TSH-Wert bei noch normalen peripheren Schilddrüsenhormonen.</li>
+                  <li>• <b>Manifeste primäre Hypothyreose</b>: Erniedrigte Spiegel der peripheren <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> (<a href="/trafarette/t3">T3</a>, <a href="/trafarette/t4">T4</a>) und ein erhöhter TSH-Wert.</li>
+                  <li>• <b>Latente primäre Hypothyreose</b>: Erhöhter TSH-Wert bei noch normalen peripheren <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</li>
                 </ul>
               </li>
               <li>• <b>Sekundäre Hypothyreose</b>: Bedingt durch eine Störung der Hypophyse mit unzureichender TSH-Ausschüttung.</li>
@@ -42,7 +42,7 @@ export default {
             <p>Die häufigste Ursache einer primären Hypothyreose ist die Autoimmunthyreopathie, insbesondere die <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a>. Weitere Ursachen können sein:</p>
             <ul>
               <li>• <b>Polyzystische Schilddrüsenerkrankungen</b>.</li>
-              <li>• <b>Thyreoprive Hypothyreose</b>: Nach operativer Entfernung der Schilddrüse oder einer Radiojodtherapie.</li>
+              <li>• <b>Thyreoprive Hypothyreose</b>: Nach operativer Entfernung der Schilddrüse oder einer <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a>.</li>
               <li>• <b>Iodmangel oder -exzess</b>: Bei unzureichender oder übermäßiger <a href="/trafarette/iod">Jod</a>zufuhr.</li>
               <li>• <b>Medikamenten-induzierte Hypothyreose</b>: Durch Arzneimittel wie Amiodaron, Lithium oder bestimmte Antithyreotika.</li>
               <li>• <b>Seltene genetische Erkrankungen</b>: Dyshormonogenetische <a href="/trafarette/struma">Struma</a> und Schilddrüsenhormonresistenz.</li>
@@ -93,9 +93,9 @@ export default {
                 <tr>
                   <th>Diagnose</th>
                   <th>TSH</th>
-                  <th>T3</th>
+                  <th><a href="/trafarette/t3">T3</a></th>
                   <th>fT3</th>
-                  <th>T4</th>
+                  <th><a href="/trafarette/t4">T4</a></th>
                   <th>fT4</th>
                 </tr>
               </thead>
@@ -145,7 +145,7 @@ export default {
             </ul>
             <p>Trotz optimaler Therapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a> können etwa 10 % der Patienten unter anhaltenden Symptomen leiden. Ursachen hierfür können sein:</p>
             <ul>
-              <li>• Individuelle Schwankungen des T3-Spiegels trotz T4-Substitution.</li>
+              <li>• Individuelle Schwankungen des <a href="/trafarette/t3">T3</a>-Spiegels trotz <a href="/trafarette/t4">T4-</a>Substitution.</li>
               <li>• Immunologische und psychologische Faktoren.</li>
               <li>• Neuropathien (sensomotorisch oder autonom).</li>
             </ul>

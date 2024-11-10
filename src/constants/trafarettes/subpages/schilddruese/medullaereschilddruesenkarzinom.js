@@ -1,6 +1,6 @@
 export default {
   path: "medullaereschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/medullaereschilddruesenkarzinom
+  // http://localhost:5173/trafarette/medullaereschilddruesenkarzinom 
   content: [
     {
       id: 1,
@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Das medulläre Schilddrüsenkarzinom (MTC) ist eine maligne Neoplasie, die von den parafollikulären C-Zellen der Schilddrüse ausgeht. Diese Zellen produzieren das Hormon <a href="/trafarette/calcitonin">Calcitonin</a>, das als Tumormarker sowohl für die Diagnose als auch zur Verlaufskontrolle von Bedeutung ist. Das MTC macht etwa 5-10 % der Schilddrüsenkarzinome aus und ist durch seine besondere Herkunft und Hormonproduktion gekennzeichnet.</p>
+            <p>Das medulläre Schilddrüsenkarzinom (MTC) ist eine maligne Neoplasie, die von den parafollikulären C-Zellen der Schilddrüse ausgeht. Diese Zellen produzieren das Hormon <a href="/trafarette/calcitonin">Calcitonin</a>, das als Tumormarker sowohl für die Diagnose als auch zur Verlaufskontrolle von Bedeutung ist. Das MTC macht etwa 5-10 % der <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinome</a> aus und ist durch seine besondere Herkunft und Hormonproduktion gekennzeichnet.</p>
           
           </div>`
         },
@@ -61,7 +61,7 @@ export default {
           "id": 7,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Der Goldstandard in der Behandlung des medullären Schilddrüsenkarzinoms ist die vollständige Thyreoidektomie. Wegen der besonderen biologischen Eigenschaften des MTC ist eine Radiojodtherapie nicht wirksam, da C-Zellen kein <a href="/trafarette/iod">Jod</a> aufnehmen. Gegebenenfalls erfolgt eine begleitende Entfernung der Halslymphknoten, um die regionale Metastasierung zu kontrollieren.</p>
+            <p>Der Goldstandard in der Behandlung des medullären Schilddrüsenkarzinoms ist die vollständige <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a>. Wegen der besonderen biologischen Eigenschaften des MTC ist eine <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a> nicht wirksam, da C-Zellen kein <a href="/trafarette/iod">Jod</a> aufnehmen. Gegebenenfalls erfolgt eine begleitende Entfernung der Halslymphknoten, um die regionale Metastasierung zu kontrollieren.</p>
           </div>`
         },
         {

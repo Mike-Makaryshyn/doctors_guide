@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Das Hürthle-Zell-Karzinom ist eine seltene, maligne Variante des follikulären Schilddrüsenkarzinoms. Es ist durch das Vorkommen von Hürthle-Zellen, auch Onkozyten genannt, gekennzeichnet. Diese Zellen besitzen ein eosinophiles, granuläres Zytoplasma aufgrund der Anhäufung zahlreicher Mitochondrien. Der Tumor hat eine höhere Neigung zur aggressiven Ausbreitung und Metastasierung im Vergleich zu anderen gut differenzierten Schilddrüsenkarzinomen.</p>
+            <p>Das Hürthle-Zell-Karzinom ist eine seltene, maligne Variante des <a href="/trafarette/folikulaereschilddruesenkarzinom">follikulären Schilddrüsenkarzinoms</a>. Es ist durch das Vorkommen von Hürthle-Zellen, auch Onkozyten genannt, gekennzeichnet. Diese Zellen besitzen ein eosinophiles, granuläres Zytoplasma aufgrund der Anhäufung zahlreicher Mitochondrien. Der Tumor hat eine höhere Neigung zur aggressiven Ausbreitung und Metastasierung im Vergleich zu anderen gut differenzierten <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a>.</p>
           </div>`
         },
         {
@@ -64,9 +64,9 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Therapie besteht hauptsächlich aus einer chirurgischen Entfernung:</p>
             <ul>
-              <li>• <b>Thyreoidektomie</b>: Eine vollständige Entfernung der Schilddrüse ist Standard, da Hürthle-Zell-Karzinome zu multifokaler und invasiver Ausbreitung neigen.</li>
+              <li>• <b><a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a></b>: Eine vollständige Entfernung der Schilddrüse ist Standard, da Hürthle-Zell-Karzinome zu multifokaler und invasiver Ausbreitung neigen.</li>
               <li>• <b>Lymphadenektomie</b>: Bei Lymphknotenbeteiligung wird eine Entfernung der betroffenen Lymphknoten empfohlen.</li>
-              <li>• <b>Radiojodtherapie</b>: Kann zur Behandlung von residuellen Tumorzellen und Metastasen eingesetzt werden, ist jedoch bei <a href="/trafarette/huerthlezellkarzinom">Hürthle-Zell-Karzinomen</a> oft weniger wirksam, da sie seltener <a href="/trafarette/iod">Jod</a> aufnehmen.</li>
+              <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Kann zur Behandlung von residuellen Tumorzellen und Metastasen eingesetzt werden, ist jedoch bei <a href="/trafarette/huerthlezellkarzinom">Hürthle-Zell-Karzinomen</a> oft weniger wirksam, da sie seltener <a href="/trafarette/iod">Jod</a> aufnehmen.</li>
               <li>• <b>Postoperative Hormontherapie</b>: <a href="/trafarette/levothyroxin">L-Thyroxin</a> wird gegeben, um den TSH-Spiegel niedrig zu halten und das Wachstum verbliebener Tumorzellen zu unterdrücken.</li>
             </ul>
           </div>`
@@ -87,7 +87,7 @@ export default {
           "id": 8,
           "title": "Nachsorge",
           "textWithFormatting": `<div>
-            <p>Regelmäßige Kontrollen mittels Ultraschall und Messungen von Tumormarkern wie Thyreoglobulin (zur Überwachung von Rezidiven) sind essenziell. In manchen Fällen werden auch <a href="/trafarette/calcitonin">Calcitonin</a>-Spiegel gemessen, falls die Produktion im Tumor erhöht ist.</p>
+            <p>Regelmäßige Kontrollen mittels Ultraschall und Messungen von Tumormarkern wie <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> (zur Überwachung von Rezidiven) sind essenziell. In manchen Fällen werden auch <a href="/trafarette/calcitonin">Calcitonin</a>-Spiegel gemessen, falls die Produktion im Tumor erhöht ist.</p>
           </div>`
         }
       ],

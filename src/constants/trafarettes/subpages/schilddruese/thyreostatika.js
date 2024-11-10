@@ -10,7 +10,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p><b>Thyreostatika</b> sind Arzneimittel, die die Produktion und/oder die Freisetzung der Schilddrüsenhormone Trijodthyronin (T3) und Thyroxin (T4) hemmen. Sie werden hauptsächlich bei einer Überfunktion der Schilddrüse (<a href="/trafarette/hyperthyreose">Hyperthyreose</a>) eingesetzt, um die Schilddrüsenhormonproduktion zu regulieren und damit die Symptome zu lindern.</p>
+            <p><b>Thyreostatika</b> sind Arzneimittel, die die Produktion und/oder die Freisetzung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Trijodthyronin (T3)</a> und <a href="/trafarette/t4">Thyroxin (T4)</a> hemmen. Sie werden hauptsächlich bei einer Überfunktion der Schilddrüse (<a href="/trafarette/hyperthyreose">Hyperthyreose</a>) eingesetzt, um die Schilddrüsenhormonproduktion zu regulieren und damit die Symptome zu lindern.</p>
           </div>`
         },
         {
@@ -19,10 +19,10 @@ export default {
           "textWithFormatting": `<div>
             <p>Es gibt verschiedene Wirkstoffgruppen von <b>Thyreostatika</b>, die auf unterschiedliche Weise in den Stoffwechsel der Schilddrüse eingreifen:</p>
             <ul>
-              <li>• <b>Perchlorate:</b> Diese Stoffe, zu denen v.a. Perchlorat zählt, hemmen die Aufnahme von Jodid in die Schilddrüsenzellen (Thyreozyten). Da Jod für die Synthese der Schilddrüsenhormone essentiell ist, kann durch den <a href="/trafarette/jodmangel">Jodmangel</a> die Hormonproduktion verringert werden.</li>
-              <li>• <b>Thionamide:</b> Diese Gruppe umfasst Thiamazol, <a href="/trafarette/carbimazol">Carbimazol</a> und Propylthiouracil. Thionamide blockieren das Enzym <b>Thyreoperoxidase (TPO)</b>, welches notwendig ist, um Jod an die Aminosäure Tyrosin anzulagern. Ohne dieses Enzym kann die Schilddrüse keine wirksamen Hormone (T3 und T4) produzieren.</li>
+              <li>• <b><a href="/trafarette/perchlorate">Perchlorate</a>:</b> Diese Stoffe, zu denen v.a. Perchlorat zählt, hemmen die Aufnahme von Jodid in die Schilddrüsenzellen (Thyreozyten). Da Jod für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> essentiell ist, kann durch den <a href="/trafarette/jodmangel">Jodmangel</a> die Hormonproduktion verringert werden.</li>
+              <li>• <b>Thionamide:</b> Diese Gruppe umfasst <a href="/trafarette/thiamazol">Thiamazol</a>, <a href="/trafarette/carbimazol">Carbimazol</a> und Propylthiouracil. Thionamide blockieren das Enzym <b>Thyreoperoxidase (TPO)</b>, welches notwendig ist, um Jod an die Aminosäure Tyrosin anzulagern. Ohne dieses Enzym kann die Schilddrüse keine wirksamen Hormone (T3 und T4) produzieren.</li>
             </ul>
-            <p>Zusätzlich kann die Hormonfreisetzung über eine hohe Dosis an <a href="/trafarette/iod">Jod</a> (<b>Plummer-Effekt</b>) kurzfristig blockiert werden. In manchen Fällen wird auch <b>Lithium</b> (Off-Label-Use) zur Hemmung der Freisetzung der Schilddrüsenhormone eingesetzt.</p>
+            <p>Zusätzlich kann die Hormonfreisetzung über eine hohe Dosis an <a href="/trafarette/iod">Jod</a> (<b><a href="/trafarette/plummereffekt">Plummer-Effekt</a></b>) kurzfristig blockiert werden. In manchen Fällen wird auch <b>Lithium</b> (Off-Label-Use) zur Hemmung der Freisetzung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> eingesetzt.</p>
           </div>`
         },
         {
@@ -31,8 +31,8 @@ export default {
           "textWithFormatting": `<div>
             <p><b>Thyreostatika</b> sind besonders indiziert bei:</p>
             <ul>
-              <li>• <b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Sie dienen als primäre medikamentöse Behandlung, insbesondere bei <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b> und Schilddrüsenautonomie.</li>
-              <li>• <b>Thyreotoxische Krise:</b> Bei einer akuten, lebensbedrohlichen Überproduktion der Schilddrüsenhormone können Thyreostatika eingesetzt werden, um die Hormonsynthese schnell zu hemmen.</li>
+              <li>• <b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Sie dienen als primäre medikamentöse Behandlung, insbesondere bei <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b> und <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a>.</li>
+              <li>• <b>Thyreotoxische Krise:</b> Bei einer akuten, lebensbedrohlichen Überproduktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> können Thyreostatika eingesetzt werden, um die Hormonsynthese schnell zu hemmen.</li>
               <li>• <b>Operationsvorbereitung:</b> Vor einer Schilddrüsenoperation, insbesondere bei großen Strumen oder einer toxischen Schilddrüse, können Thyreostatika helfen, die Schilddrüse zu stabilisieren.</li>
               <li>• <b>Vor jodhaltigen Kontrastmitteln:</b> Bei Patienten mit bekannter Schilddrüsenüberfunktion kann Perchlorat vor der Gabe von jodhaltigen Kontrastmitteln eingesetzt werden, um eine überschießende Hormonproduktion (Jod-bedingte <a href="/trafarette/hyperthyreose">Hyperthyreose</a>) zu verhindern.</li>
             </ul>

@@ -36,7 +36,6 @@ import antithrombin from "./subpages/gerinnung/antithrombin";
 import plasmin from "./subpages/gerinnung/plasmin";
 import plasminogen from "./subpages/gerinnung/plasminogen";
 import virchowtrias from "./subpages/gerinnung/virchowtrias";
-import haemophiliaallgemein from "./subpages/heamophiie/haemophiliaallgemein";
 import haemophiliaa from "./subpages/heamophiie/haemophiliaa";
 import haemophiliab from "./subpages/heamophiie/haemophiliab";
 import emicizumab from "./subpages/heamophiie/emicizumab";
@@ -135,6 +134,7 @@ import thyreostatika from "./subpages/schilddruese/thyreostatika";
 import perchlorate from "./subpages/schilddruese/perchlorate";
 import thiamazol from "./subpages/schilddruese/thiamazol";
 import carbimazol from "./subpages/schilddruese/carbimazol";
+import haemophiliaallge from "./subpages/heamophiie/haemophiliaallge";
 
 const all_pages_data = [
    first_trafarette_page,
@@ -175,7 +175,6 @@ const all_pages_data = [
    plasmin,
    plasminogen,
    virchowtrias,
-   haemophiliaallgemein,
    haemophiliaa,
    haemophiliab,
    emicizumab,
@@ -273,7 +272,8 @@ const all_pages_data = [
    thyreostatika,
    perchlorate,
    thiamazol,
-   carbimazol
+   carbimazol,
+   haemophiliaallge
 ];
 
 export default all_pages_data;

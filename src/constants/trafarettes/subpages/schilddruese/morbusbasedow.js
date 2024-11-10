@@ -38,7 +38,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Im Zentrum der Pathophysiologie steht die Bildung von Autoantikörpern des Typs IgG, die als TSH-Rezeptor-Antikörper (TRAK) bekannt sind. Diese binden an die TSH-Rezeptoren der Follikelzellen der Schilddrüse und ahmen die Wirkung des natürlichen TSH nach:</p>
             <ul>
-              <li>• <b>Dauerstimulation der Schilddrüse</b>: Die Antikörper bewirken eine kontinuierliche Stimulation der Schilddrüsenzellen, was zu einer Überproduktion von T3 und T4 führt.</li>
+              <li>• <b>Dauerstimulation der Schilddrüse</b>: Die Antikörper bewirken eine kontinuierliche Stimulation der Schilddrüsenzellen, was zu einer Überproduktion von <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> führt.</li>
               <li>• <b><a href="/trafarette/struma">Struma</a></b>: Die chronische Stimulation führt zu einer Vergrößerung der Schilddrüse.</li>
               <li>• <b>Thyreotoxikose</b>: Der erhöhte Hormonspiegel führt zu den typischen Symptomen einer Überfunktion der Schilddrüse.</li>
               <li>• <b>Extrathyreoidale Manifestationen</b>: Diese umfassen die endokrine Orbitopathie und das prätibiale <a href="/trafarette/myxoedem">Myxödem</a>, die durch die Bindung der Antikörper an ähnliche Rezeptoren im orbitalen und subkutanen Gewebe verursacht werden.</li>
@@ -75,7 +75,7 @@ export default {
             <p>Die Diagnose basiert auf einer Kombination aus klinischen Untersuchungen, Laboruntersuchungen und bildgebenden Verfahren:</p>
             <ul>
               <li>• <b>Körperliche Untersuchung</b>: Das typische Schwirren oder Brummen bei der Auskultation der Halsregion durch erhöhte Durchblutung.</li>
-              <li>• <b>Laboruntersuchungen</b>: Erhöhte T3- und T4-Spiegel bei supprimiertem TSH. Nachweis von TRAK im Blut bestätigt die Autoimmunursache.</li>
+              <li>• <b>Laboruntersuchungen</b>: Erhöhte <a href="/trafarette/t3">T3-</a> und <a href="/trafarette/t4">T4-</a>Spiegel bei supprimiertem TSH. Nachweis von TRAK im Blut bestätigt die Autoimmunursache.</li>
               <li>• <b>Bildgebung</b>:
                 <ul>
                   <li>• <b>Sonographie</b>: Typischerweise echoarmes, stark durchblutetes Schilddrüsengewebe.</li>
@@ -89,13 +89,13 @@ export default {
           "id": 8,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit Thyreostatika wie Thiamazol oder <a href="/trafarette/carbimazol">Carbimazol</a>, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
+            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit Thyreostatika wie <a href="/trafarette/thiamazol">Thiamazol</a> oder <a href="/trafarette/carbimazol">Carbimazol</a>, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
             <p><b>Definitive Therapiemöglichkeiten:</b></p>
             <ul>
-              <li>• <b>Radiojodtherapie</b>: Eine häufig gewählte Behandlung, die das Schilddrüsengewebe durch die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> gezielt zerstört.</li>
-              <li>• <b>Chirurgie</b>: Eine totale oder partielle Thyreoidektomie ist indiziert bei großen Strumen, Kinderwunsch oder bei Patienten, die nicht auf die medikamentöse Therapie ansprechen. Nach einer totalen Entfernung ist eine lebenslange Hormonersatztherapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a> erforderlich.</li>
+              <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Eine häufig gewählte Behandlung, die das Schilddrüsengewebe durch die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> gezielt zerstört.</li>
+              <li>• <b>Chirurgie</b>: Eine totale oder partielle <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> ist indiziert bei großen Strumen, Kinderwunsch oder bei Patienten, die nicht auf die medikamentöse Therapie ansprechen. Nach einer totalen Entfernung ist eine lebenslange Hormonersatztherapie mit <a href="/trafarette/levothyroxin">Levothyroxin</a> erforderlich.</li>
             </ul>
-            <p>Vorbereitung auf definitive Therapien: Vor einer Operation oder Radiojodtherapie muss eine euthyreote Stoffwechsellage hergestellt werden, um Komplikationen wie eine thyreotoxische Krise zu vermeiden.</p>
+            <p>Vorbereitung auf definitive Therapien: Vor einer Operation oder <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a> muss eine euthyreote Stoffwechsellage hergestellt werden, um Komplikationen wie eine thyreotoxische Krise zu vermeiden.</p>
           </div>`
         },
         {

@@ -12,7 +12,7 @@ export default {
             "id": 1,
             "title": "Definition und allgemeine Funktion",
             "textWithFormatting": `<div>
-                <p>Die <b>Schilddrüse (Glandula thyroidea)</b> ist die größte endokrine Drüse des menschlichen Körpers und hat eine fundamentale Bedeutung für die Regulation des Stoffwechsels, des Wachstums und der Kalziumhomöostase. Sie produziert die Hormone Trijodthyronin (T3), Thyroxin (T4) und <a href="/trafarette/calcitonin">Calcitonin</a>, die essentielle Funktionen im Körper erfüllen. Diese Hormone regulieren den Energieverbrauch, die Herzfrequenz, die Körpertemperatur sowie Wachstums- und Entwicklungsprozesse.</p>
+                <p>Die <b>Schilddrüse (Glandula thyroidea)</b> ist die größte endokrine Drüse des menschlichen Körpers und hat eine fundamentale Bedeutung für die Regulation des Stoffwechsels, des Wachstums und der Kalziumhomöostase. Sie produziert die Hormone <a href="/trafarette/t3">Trijodthyronin (T3)</a>, <a href="/trafarette/t4">Thyroxin (T4)</a> und <a href="/trafarette/calcitonin">Calcitonin</a>, die essentielle Funktionen im Körper erfüllen. Diese Hormone regulieren den Energieverbrauch, die Herzfrequenz, die Körpertemperatur sowie Wachstums- und Entwicklungsprozesse.</p>
             </div>`
         },
         {
@@ -93,14 +93,14 @@ export default {
             "id": 6,
             "title": "Mikroskopische Anatomie",
             "textWithFormatting": `<div>
-                <p>Das Schilddrüsengewebe besteht aus <b>sphärischen Follikeln</b>, die von einem einschichtigen Follikelepithel umgeben sind. Diese Follikel enthalten Kolloid, das Thyreoglobulin mit den Hormonen T3 und T4 speichert. Die Follikel sind die funktionellen Einheiten der Schilddrüse. Zwischen den Follikeln befinden sich die parafollikulären C-Zellen, die <a href="/trafarette/calcitonin">Calcitonin</a> produzieren und so eine Rolle im Kalziumstoffwechsel spielen.</p>
+                <p>Das Schilddrüsengewebe besteht aus <b>sphärischen Follikeln</b>, die von einem einschichtigen Follikelepithel umgeben sind. Diese Follikel enthalten Kolloid, das <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> mit den Hormonen <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> speichert. Die Follikel sind die funktionellen Einheiten der Schilddrüse. Zwischen den Follikeln befinden sich die parafollikulären C-Zellen, die <a href="/trafarette/calcitonin">Calcitonin</a> produzieren und so eine Rolle im Kalziumstoffwechsel spielen.</p>
             </div>`
         },
         {
             "id": 7,
             "title": "Hormonproduktion und Funktion",
             "textWithFormatting": `<div>
-                <p>Die Schilddrüse synthetisiert und speichert die Hormone <b>Trijodthyronin (T3)</b> und <b>Thyroxin (T4)</b>, die <a href="/trafarette/iod">Jod</a> enthalten und den Energiestoffwechsel in fast allen Körperzellen anregen. Diese Hormone regulieren den Sauerstoffverbrauch, die Wärmeproduktion sowie die Herzfrequenz und sind entscheidend für das Wachstum und die neuronale Reifung.</p>
+                <p>Die Schilddrüse synthetisiert und speichert die Hormone <b><a href="/trafarette/t3">Trijodthyronin (T3)</a></b> und <b><a href="/trafarette/t4">Thyroxin (T4)</a></b>, die <a href="/trafarette/iod">Jod</a> enthalten und den Energiestoffwechsel in fast allen Körperzellen anregen. Diese Hormone regulieren den Sauerstoffverbrauch, die Wärmeproduktion sowie die Herzfrequenz und sind entscheidend für das Wachstum und die neuronale Reifung.</p>
                 <p><b><a href="/trafarette/calcitonin">Calcitonin</a></b>, das von den C-Zellen produziert wird, wirkt kalziumsenkend, indem es die Osteoklastenaktivität und die Knochenresorption hemmt.</p>
             </div>`
         },
@@ -108,11 +108,11 @@ export default {
             "id": 8,
             "title": "Hormonregulationsmechanismen",
             "textWithFormatting": `<div>
-                <p>Die Produktion von T3 und T4 wird über den sogenannten <b>thyreotropen Regelkreis</b> gesteuert:</p>
+                <p>Die Produktion von <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> wird über den sogenannten <b>thyreotropen Regelkreis</b> gesteuert:</p>
                 <ul>
                     <li><b>Hypothalamus:</b> Schüttet Thyreotropin-Releasing-Hormon (TRH) aus, das die Hypophyse stimuliert.</li>
                     <li><b>Hypophyse:</b> Gibt das schilddrüsenstimulierende Hormon (TSH) ab, welches die Schilddrüse zur Produktion und Freisetzung von T3 und T4 anregt.</li>
-                    <li><b>Negative Rückkopplung:</b> Hohe Konzentrationen von T3 und T4 hemmen die Freisetzung von TRH und TSH und halten so den Hormonspiegel im Gleichgewicht.</li>
+                    <li><b>Negative Rückkopplung:</b> Hohe Konzentrationen von <a href="/trafarette/t3">T3</a> und T4 hemmen die Freisetzung von TRH und TSH und halten so den Hormonspiegel im Gleichgewicht.</li>
                 </ul>
                 <p>Dieser Mechanismus sorgt für eine stabile Regulation der Schilddrüsenhormonspiegel und passt die Hormonproduktion an die Bedürfnisse des Körpers an.</p>
             </div>`
@@ -124,16 +124,16 @@ export default {
                 <p><b>Häufige Erkrankungen:</b></p>
                 <ul>
                     <li><b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Reduzierte Hormonproduktion führt zu Symptomen wie Müdigkeit, Gewichtszunahme und trockener Haut. Eine häufige Ursache ist die Autoimmunerkrankung <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a>.</li>
-                    <li><b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Überproduktion von Schilddrüsenhormonen, häufig verursacht durch <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, führt zu Tachykardie, Gewichtsverlust und anderen Symptomen.</li>
+                    <li><b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Überproduktion von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a>, häufig verursacht durch <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, führt zu Tachykardie, Gewichtsverlust und anderen Symptomen.</li>
                     <li><b><a href="/trafarette/struma">Struma(Kropf)</a> :</b> Vergrößerte Schilddrüse, meist durch <a href="/trafarette/jodmangel">Jodmangel</a> bedingt, kann die Atmung und den Schluckvorgang beeinträchtigen.</li>
                     <li><b>Schilddrüsenknoten:</b> Kalte Knoten sind potenziell bösartig, während heiße Knoten auf autonome Adenome hinweisen können.</li>
-                    <li><b>Schilddrüsentumoren:</b> Zu den häufigsten Formen zählen papilläre, follikuläre und <a href="/trafarette/medullaereschilddruesenkarzinom">medulläre Karzinome</a>, die unterschiedlich aggressiv sind.</li>
+                    <li><b>Schilddrüsentumoren:</b> Zu den häufigsten Formen zählen <a href="/trafarette/papillaereschilddruesenkarzinom">Papilläre Schilddrüsenkarzinome</a>, <a href="/trafarette/folikulaereschilddruesenkarzinom">Follikuläre Schilddrüsenkarzinome</a> und <a href="/trafarette/medullaereschilddruesenkarzinom">medulläre Karzinome</a>, die unterschiedlich aggressiv sind.</li>
                     <li><b>Entzündungen:</b> Formen wie die Thyreoiditis de Quervain und die Riedel-Struma führen zu schmerzhaften oder fibrotischen Veränderungen.</li>
                 </ul>
                 <p><b>Diagnostische Verfahren:</b></p>
                 <ul>
                     <li><b>Klinische Untersuchung:</b> Inspektion und Palpation des Halses zur Beurteilung von Vergrößerungen oder Knoten.</li>
-                    <li><b>Laboruntersuchungen:</b> Bestimmung der Hormonspiegel von T3, T4 und TSH, sowie Antikörpertests zur Abklärung autoimmuner Ursachen.</li>
+                    <li><b>Laboruntersuchungen:</b> Bestimmung der Hormonspiegel von <a href="/trafarette/t3">T3</a>, <a href="/trafarette/t4">T4</a> und TSH, sowie Antikörpertests zur Abklärung autoimmuner Ursachen.</li>
                     <li><b>Bildgebung:</b> Ultraschall (Sonographie) zur Strukturanalyse und Szintigraphie zur Funktionsbeurteilung.</li>
                     <li><b>Feinnadelpunktion und Biopsie:</b> Zur zytologischen und histologischen Untersuchung von Knoten oder verdächtigen Veränderungen.</li>
                 </ul>

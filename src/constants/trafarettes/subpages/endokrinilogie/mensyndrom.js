@@ -69,8 +69,8 @@ export default {
             <p>Die Behandlung variiert je nach betroffenem Organ und Tumortyp:</p>
             <ul>
               <li>• <b>Medikamentöse Therapie</b>: Symptomatische Behandlung hormonell aktiver Tumoren.</li>
-              <li>• <b>Operative Maßnahmen</b>: Entfernung von Tumoren oder betroffenen Drüsen (z.B. totale Thyreoidektomie bei <a href="/trafarette/medullaereschilddruesenkarzinom">medullärem Schilddrüsenkarzinom</a>).</li>
-              <li>• <b>Prophylaktische Eingriffe</b>: Bei genetisch bestätigtem MEN2 kann eine prophylaktische Thyreoidektomie in jungen Jahren empfohlen werden.</li>
+              <li>• <b>Operative Maßnahmen</b>: Entfernung von Tumoren oder betroffenen Drüsen (z.B. totale <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> bei <a href="/trafarette/medullaereschilddruesenkarzinom">medullärem Schilddrüsenkarzinom</a>).</li>
+              <li>• <b>Prophylaktische Eingriffe</b>: Bei genetisch bestätigtem MEN2 kann eine prophylaktische <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> in jungen Jahren empfohlen werden.</li>
               <li>• <b>Langfristiges Monitoring</b>: Regelmäßige Kontrollen zur Früherkennung von Rezidiven oder neuen Tumoren sind unerlässlich.</li>
             </ul>
           </div>`

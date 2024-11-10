@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenkarzinome",
-  // http://localhost:5173/trafarette/schilddruesenkarzinome
+  // http://localhost:5173/trafarette/schilddruesenkarzinome 
   content: [
     {
       id: 1,
@@ -25,9 +25,9 @@ export default {
           "title": "Ätiologie",
           "textWithFormatting": `<div>
             <ul>
-              <li>• <b>Bestrahlung</b>: Eine Strahlenexposition, insbesondere in der Kindheit, erhöht das Risiko für die Entwicklung eines papillären Karzinoms erheblich. Dies wurde besonders nach dem Reaktorunglück von Tschernobyl beobachtet, wo die Rate an Schilddrüsenkarzinomen in den betroffenen Regionen deutlich anstieg.</li>
-              <li>• <b>Genetische Prädisposition</b>: Eine familiäre Häufung ist insbesondere bei medullären Karzinomen bekannt, die mit Mutationen des RET-Protoonkogens assoziiert sind. Auch beim papillären Karzinom wurden Mutationen, beispielsweise in den Genen BRAF und RAS, sowie Rearrangements wie RET/PTC-Fusionen identifiziert.</li>
-              <li>• <b><a href="/trafarette/jodmangel">Jodmangel</a></b>: Regionen mit Jodmangel zeigen eine höhere Prävalenz von follikulären Karzinomen. Ein Mangel an Jod kann zur Hyperplasie der Schilddrüse und zur Entwicklung einer <a href="/trafarette/struma">Struma</a> führen, die ein Risikofaktor für maligne Entartungen ist.</li>
+              <li>• <b>Bestrahlung</b>: Eine Strahlenexposition, insbesondere in der Kindheit, erhöht das Risiko für die Entwicklung eines <a href="/trafarette/papillaereschilddruesenkarzinom">Papillären Schilddrüsenkarzinoms</a> erheblich. Dies wurde besonders nach dem Reaktorunglück von Tschernobyl beobachtet, wo die Rate an Schilddrüsenkarzinomen in den betroffenen Regionen deutlich anstieg.</li>
+              <li>• <b>Genetische Prädisposition</b>: Eine familiäre Häufung ist insbesondere bei medullären Karzinomen bekannt, die mit Mutationen des RET-Protoonkogens assoziiert sind. Auch beim <a href="/trafarette/papillaereschilddruesenkarzinom">papillären Schilddrüsenkarzinom</a> wurden Mutationen, beispielsweise in den Genen BRAF und RAS, sowie Rearrangements wie RET/PTC-Fusionen identifiziert.</li>
+              <li>• <b><a href="/trafarette/jodmangel">Jodmangel</a></b>: Regionen mit Jodmangel zeigen eine höhere Prävalenz von f<a href="/trafarette/folikulaereschilddruesenkarzinom">follikulären Schilddrüsenkarzinomen</a>. Ein Mangel an Jod kann zur Hyperplasie der Schilddrüse und zur Entwicklung einer <a href="/trafarette/struma">Struma</a> führen, die ein Risikofaktor für maligne Entartungen ist.</li>
               <li>• <b>Weitere Risikofaktoren</b>: Weibliches Geschlecht, <a href="/trafarette/struma">Struma</a>, vorher bestehende gutartige Schilddrüsenknoten und bestimmte Autoimmunerkrankungen der Schilddrüse können das Risiko erhöhen.</li>
             </ul>
           </div>`
@@ -37,7 +37,7 @@ export default {
           "title": "Einteilung und Histologie",
           "textWithFormatting": `<div>
             <ul>
-              <li>• <b>Papilläres Schilddrüsenkarzinom (PTC)</b>: Der häufigste Typ (ca. 65 %), oft multifokal und lymphogen metastasierend. Histologisch durch papilläre Strukturen und typische Kernveränderungen (Orphan-Annie-Eyes) charakterisiert.</li>
+              <li>• <b><a href="/trafarette/papillaereschilddruesenkarzinom">Papilläres Schilddrüsenkarzinom</a> (PTC)</b>: Der häufigste Typ (ca. 65 %), oft multifokal und lymphogen metastasierend. Histologisch durch papilläre Strukturen und typische Kernveränderungen (Orphan-Annie-Eyes) charakterisiert.</li>
               <li>• <b><a href="/trafarette/folikulaereschilddruesenkarzinom">Follikuläres Schilddrüsenkarzinom (FTC)</a></b>: Etwa 25 % der Fälle. Dieses Karzinom metastasiert meist hämatogen, häufig in die Knochen und Lungen. Es kann sich durch vaskuläre Invasion und Infiltration der Kapsel auszeichnen.</li>
               <li>• <b><a href="/trafarette/medullaereschilddruesenkarzinom">medulläres Schilddrüsenkarzinom (MTC)</a></b>: Entwickelt sich aus den C-Zellen der Schilddrüse und produziert <a href="/trafarette/calcitonin">Calcitonin</a>. Es tritt sporadisch oder familiär (im Rahmen von MEN-2-Syndromen) auf und ist für etwa 5 % der Schilddrüsenkarzinome verantwortlich.</li>
               <li>• <b><a href="/trafarette/anaplastischeschilddruesenkarzinom">Anaplastisches Schilddrüsenkarzinom (ATC)</a></b>: Sehr selten und hochaggressiv mit schlechter Prognose. Es tritt typischerweise bei älteren Patienten auf und wächst schnell invasiv in umliegende Strukturen.</li>
@@ -82,7 +82,7 @@ export default {
           "title": "Therapie",
           "textWithFormatting": `<div>
             <ul>
-              <li>• <b>Operation</b>: Primäre Therapieform ist die totale Thyreoidektomie. In frühen Stadien kann auch eine Hemithyreoidektomie ausreichen. Bei Lymphknotenbefall wird eine Halsdissektion durchgeführt.</li>
+              <li>• <b>Operation</b>: Primäre Therapieform ist die totale <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a>. In frühen Stadien kann auch eine Hemithyreoidektomie ausreichen. Bei Lymphknotenbefall wird eine Halsdissektion durchgeführt.</li>
               <li>• <b>Radioiodtherapie</b>: Wird zur Ablation von Restgewebe und zur Behandlung von Metastasen eingesetzt. Effektiv bei differenzierten Karzinomen (PTC und FTC).</li>
               <li>• <b>Externe Strahlentherapie</b>: Bei anaplastischen Karzinomen oder lokal fortgeschrittenen Tumoren, die nicht vollständig operativ entfernt werden können.</li>
               <li>• <b>Medikamentöse Therapie</b>: In bestimmten Fällen können Tyrosinkinaseinhibitoren bei fortgeschrittenen oder metastasierten Fällen eingesetzt werden.</li>
@@ -95,12 +95,12 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Prognose ist stark abhängig von Tumortyp, Tumorstadium und Alter des Patienten:</p>
             <ul>
-              <li>• <b>Papilläres Karzinom</b>: 5-Jahres-Überlebensrate bei 80-90 %.</li>
-              <li>• <b>Follikuläres Karzinom</b>: Überlebensrate bei ca. 80 %.</li>
+              <li>• <b><a href="/trafarette/papillaereschilddruesenkarzinom">Papilläres Schilddrüsenkarzinom</a></b>: 5-Jahres-Überlebensrate bei 80-90 %.</li>
+              <li>• <b><a href="/trafarette/folikulaereschilddruesenkarzinom">Follikuläres Schilddrüsenkarzinom</a></b>: Überlebensrate bei ca. 80 %.</li>
               <li>• <b><a href="/trafarette/medullaereschilddruesenkarzinom">medulläres Schilddrüsenkarzinom</a></b>: Überlebensrate von 60-70 %.</li>
               <li>• <b>Anaplastisches Karzinom</b>: Sehr schlechte Prognose mit Überlebensraten unter 10 %.</li>
             </ul>
-            <p>Langzeitüberwachung: Regelmäßige Nachuntersuchungen und Tumormarker (Thyreoglobulin) sind wichtig, um Rezidive frühzeitig zu erkennen.</p>
+            <p>Langzeitüberwachung: Regelmäßige Nachuntersuchungen und Tumormarker (<a href="/trafarette/thyreoglobulin">Thyreoglobulin</a>) sind wichtig, um Rezidive frühzeitig zu erkennen.</p>
           </div>`
         }
       ],

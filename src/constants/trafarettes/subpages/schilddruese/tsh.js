@@ -10,7 +10,7 @@ export default {
             "id": 1,
             "title": "Definition",
             "textWithFormatting": `<div>
-                <p><b>Thyrotropin</b>, kurz TSH, ist ein Peptidhormon, das von der Adenohypophyse (Hypophysenvorderlappen) ausgeschüttet wird. Es stimuliert die Schilddrüse zur Bildung und Freisetzung der Schilddrüsenhormone Trijodthyronin (T3) und Thyroxin (T4). Im Rahmen des thyreotropen Regelkreises hemmen erhöhte Konzentrationen dieser Hormone wiederum die TSH-Ausschüttung, wodurch ein negatives Feedback entsteht.</p>
+                <p><b>Thyrotropin</b>, kurz TSH, ist ein Peptidhormon, das von der Adenohypophyse (Hypophysenvorderlappen) ausgeschüttet wird. Es stimuliert die Schilddrüse zur Bildung und Freisetzung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Trijodthyronin (T3)</a> und <a href="/trafarette/t4">Thyroxin (T4)</a>. Im Rahmen des thyreotropen Regelkreises hemmen erhöhte Konzentrationen dieser Hormone wiederum die TSH-Ausschüttung, wodurch ein negatives Feedback entsteht.</p>
             </div>`
         },
         {
@@ -39,7 +39,7 @@ export default {
                 <h3>3.2. Hemmende Faktoren</h3>
                 <p>Verschiedene Einflüsse hemmen die TSH-Sekretion:</p>
                 <ul>
-                    <li>• Thyroxin (T4) und Trijodthyronin (T3) über negative Rückkopplung</li>
+                    <li>• <a href="/trafarette/t4">Thyroxin (T4)</a> und <a href="/trafarette/t3">Trijodthyronin (T3)</a> über negative Rückkopplung</li>
                     <li>• Somatostatin</li>
                     <li>• Dopamin</li>
                     <li>• Zytokine (mutmaßlich)</li>
@@ -76,7 +76,7 @@ export default {
                 </ul>
                 <p><b>Erniedrigte TSH-Werte:</b></p>
                 <ul>
-                    <li>• Primäre <a href="/trafarette/hyperthyreose">Hyperthyreose</a>: TSH niedrig bei erhöhtem fT4 und fT3, z.B. bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> oder Schilddrüsenautonomie.</li>
+                    <li>• Primäre <a href="/trafarette/hyperthyreose">Hyperthyreose</a>: TSH niedrig bei erhöhtem fT4 und fT3, z.B. bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> oder <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a>.</li>
                     <li>• Sekundäre <a href="/trafarette/hypothyreose">Hypothyreose</a>: Niedriges TSH bei erniedrigtem fT4 und fT3, häufig durch eine Hypophyseninsuffizienz bedingt.</li>
                 </ul>
             </div>`

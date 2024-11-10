@@ -1,7 +1,7 @@
 import img1 from '../../../../assets/hypothalamusschilddruese.pdf';
 export default {
   path: "struma",
-  // http://localhost:5173/trafarette/struma
+  // http://localhost:5173/trafarette/struma <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a>
   content: [
     {
       id: 1,
@@ -57,7 +57,7 @@ export default {
           "id": 6,
           "title": "Ätiologie",
           "textWithFormatting": `<div>
-            <p>Die Ursachen einer Struma sind vielfältig. Der häufigste Grund ist <a href="/trafarette/jodmangel">Jodmangel</a>, da <a href="/trafarette/iod">Jod</a> für die Produktion der Schilddrüsenhormone essentiell ist. Weitere Ursachen können umfassen:</p>
+            <p>Die Ursachen einer Struma sind vielfältig. Der häufigste Grund ist <a href="/trafarette/jodmangel">Jodmangel</a>, da <a href="/trafarette/iod">Jod</a> für die Produktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> essentiell ist. Weitere Ursachen können umfassen:</p>
             <ul>
               <li>• <b>Autoimmunerkrankungen</b>: <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>.</li>
               <li>• <b>Genetische Faktoren</b>: Prädisposition zu gutartiger Knotenbildung.</li>
@@ -71,7 +71,7 @@ export default {
           "id": 7,
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
-            <p>Ein Mangel an <a href="/trafarette/iod">Jod</a> führt zu einer unzureichenden Produktion der Schilddrüsenhormone T3 und T4. Der Körper reagiert mit einer erhöhten Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon), das ein Wachstum der Schilddrüse anregt. Chronisch erhöhter TSH-Spiegel begünstigt die Hypertrophie und Hyperplasie der Schilddrüsenzellen. Auch Wachstumsfaktoren wie der epidermale Wachstumsfaktor (EGF) und der insulinähnliche Wachstumsfaktor (IGF-1) können eine Rolle spielen.</p>
+            <p>Ein Mangel an <a href="/trafarette/iod">Jod</a> führt zu einer unzureichenden Produktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a>. Der Körper reagiert mit einer erhöhten Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon), das ein Wachstum der Schilddrüse anregt. Chronisch erhöhter TSH-Spiegel begünstigt die Hypertrophie und Hyperplasie der Schilddrüsenzellen. Auch Wachstumsfaktoren wie der epidermale Wachstumsfaktor (EGF) und der insulinähnliche Wachstumsfaktor (IGF-1) können eine Rolle spielen.</p>
           </div>`
         },
         {
@@ -82,8 +82,8 @@ export default {
             <ul>
               <li>• <b>Klinische Untersuchung</b>: Palpation und Inspektion zur Feststellung der Strumagröße und -konsistenz.</li>
               <li>• <b>Sonographie</b>: Wichtig zur Beurteilung der Binnenstruktur, Volumenbestimmung und Detektion von Knoten oder Zysten.</li>
-              <li>• <b>Laboruntersuchungen</b>: Bestimmung der Schilddrüsenhormone (fT3, fT4) und TSH, Nachweis von Autoantikörpern (TRAK, Anti-TPO, Anti-Tg).</li>
-              <li>• <b>Szintigraphie</b>: Zur Beurteilung der Funktionalität und des <a href="/trafarette/iod">Jod</a>-Uptakes, insbesondere bei Verdacht auf Schilddrüsenautonomie.</li>
+              <li>• <b>Laboruntersuchungen</b>: Bestimmung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> (<a href="/trafarette/t3">fT3</a>, <a href="/trafarette/t4">fT4</a>) und TSH, Nachweis von Autoantikörpern (TRAK, Anti-TPO, Anti-Tg).</li>
+              <li>• <b>Szintigraphie</b>: Zur Beurteilung der Funktionalität und des <a href="/trafarette/iod">Jod</a>-Uptakes, insbesondere bei Verdacht auf <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a>.</li>
               <li>• <b>Feinnadelpunktion</b>: Gezielte Biopsie zur histologischen Abklärung bei Malignitätsverdacht.</li>
             </ul>
           </div>`
@@ -96,8 +96,8 @@ export default {
             <ul>
               <li>• <b>Medikamentöse Therapie</b>: Substitution mit <a href="/trafarette/iod">Jod</a> oder Kombinationspräparate aus Jod und <a href="/trafarette/levothyroxin">Levothyroxin</a> zur Volumenreduktion bei <a href="/trafarette/jodmangel">Jodmangel</a>struma.</li>
               <li>• <b>Thyreostatika</b>: Bei hyperthyreoten Zuständen.</li>
-              <li>• <b>Radiojodtherapie</b>: Zur Behandlung von autonomen Knoten oder <a href="/trafarette/hyperthyreose">Hyperthyreose</a>.</li>
-              <li>• <b>Chirurgische Intervention</b>: Indiziert bei großen Strumae, die lokale Komplikationen verursachen oder bei Verdacht auf Malignität. Die gängige Methode ist die (subtotale oder totale) Thyreoidektomie.</li>
+              <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Zur Behandlung von autonomen Knoten oder <a href="/trafarette/hyperthyreose">Hyperthyreose</a>.</li>
+              <li>• <b>Chirurgische Intervention</b>: Indiziert bei großen Strumae, die lokale Komplikationen verursachen oder bei Verdacht auf Malignität. Die gängige Methode ist die (subtotale oder totale) <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a>.</li>
               <li>• <b>Ernährungsanpassung</b>: In jodreichen Gebieten kann eine jodarme Diät indiziert sein, wenn die Struma durch Jodüberschuss bedingt ist.</li>
             </ul>
           </div>`
@@ -106,7 +106,7 @@ export default {
           "id": 10,
           "title": "Prognose und Nachsorge",
           "textWithFormatting": `<div>
-            <p>In vielen Fällen lässt sich eine Struma durch frühzeitige Behandlung und Jodprophylaxe erfolgreich kontrollieren. Eine regelmäßige Nachsorge mit Ultraschall und Hormonbestimmung ist entscheidend, insbesondere nach operativen Eingriffen oder Radiojodtherapie, um ein Rezidiv oder eine Unterfunktion frühzeitig zu erkennen.</p>
+            <p>In vielen Fällen lässt sich eine Struma durch frühzeitige Behandlung und Jodprophylaxe erfolgreich kontrollieren. Eine regelmäßige Nachsorge mit Ultraschall und Hormonbestimmung ist entscheidend, insbesondere nach operativen Eingriffen oder <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a>, um ein Rezidiv oder eine Unterfunktion frühzeitig zu erkennen.</p>
           </div>`
         },
         {

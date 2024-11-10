@@ -1,6 +1,6 @@
 export default {
   path: "t3",
-  // http://localhost:5173/trafarette/t3
+  // http://localhost:5173/trafarette/t3 
   content: [
     {
       id: 1,
@@ -10,7 +10,7 @@ export default {
             "id": 1,
             "title": "Definition",
             "textWithFormatting": `<div>
-                <p><b>Triiodthyronin (T3)</b> ist eines der beiden wichtigsten Schilddrüsenhormone und gehört zur Gruppe der Iodothyronine. Es wird teilweise direkt in der Schilddrüse synthetisiert, entsteht jedoch überwiegend durch eine periphere, selenabhängige Deiodierung von Thyroxin (T4) durch 5’-Deiodinasen. T3 ist biologisch aktiver als T4 und spielt eine bedeutende Rolle bei der Regulation des Stoffwechsels und verschiedener physiologischer Prozesse im Körper.</p>
+                <p><b>Triiodthyronin (T3)</b> ist eines der beiden wichtigsten <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> und gehört zur Gruppe der Iodothyronine. Es wird teilweise direkt in der Schilddrüse synthetisiert, entsteht jedoch überwiegend durch eine periphere, selenabhängige Deiodierung von <a href="/trafarette/t4">Thyroxin (T4)</a> durch 5’-Deiodinasen. T3 ist biologisch aktiver als T4 und spielt eine bedeutende Rolle bei der Regulation des Stoffwechsels und verschiedener physiologischer Prozesse im Körper.</p>
             </div>`
         },
         {
@@ -20,7 +20,7 @@ export default {
                 <h4>2.1. Halbwertszeit und Bindung</h4>
                 <p>Triiodthyronin hat eine kurze Plasmahalbwertszeit von etwa 24 Stunden und wird relativ schnell vom Körper deaktiviert. Im Blutplasma ist T3 zu etwa 99 % an Plasmaproteine gebunden, insbesondere an das Thyroxin-bindende Globulin (TBG). Für diagnostische Zwecke ist die Messung des freien Triiodthyronins (fT3) meist aussagekräftiger als die des Gesamt-T3, da Letzteres von der Aktivität der Schilddrüse, der peripheren Deiodinasen und der Bindungseigenschaften der Plasmaproteine beeinflusst wird.</p>
                 <h4>2.2. Hormonelle Wirkungen</h4>
-                <p>T3 ist insgesamt drei- bis fünfmal wirksamer als Thyroxin (T4) und zeigt eine besondere Wirksamkeit an Rezeptoren des kardiovaskulären Systems. Im Gegensatz dazu wirkt T4 stärker auf das Zentralnervensystem (ZNS) und die Hypophyse.</p>
+                <p>T3 ist insgesamt drei- bis fünfmal wirksamer als Thyroxin (<a href="/trafarette/t4">T4</a>) und zeigt eine besondere Wirksamkeit an Rezeptoren des kardiovaskulären Systems. Im Gegensatz dazu wirkt T4 stärker auf das Zentralnervensystem (ZNS) und die Hypophyse.</p>
                 <p>Hauptwirkungen von Triiodthyronin:</p>
                 <ul>
                     <li>• Steigerung des zellulären Energiestoffwechsels: Erhöht den Sauerstoffverbrauch und die Wärmeproduktion in Zellen.</li>
@@ -44,7 +44,7 @@ export default {
                 </ul>
                 <p><i>Hinweis:</i> Referenzwerte können methodenabhängig variieren, daher sind die vom jeweiligen Labor angegebenen Werte maßgeblich.</p>
                 <h4>3.3. Interpretation der Ergebnisse</h4>
-                <p>Die Interpretation der T3-Werte erfolgt immer im Kontext mit den Ergebnissen für freies T4 (fT4) und TSH. Abweichungen von den Normwerten können auf verschiedene Schilddrüsenerkrankungen hinweisen, wie:</p>
+                <p>Die Interpretation der T3-Werte erfolgt immer im Kontext mit den Ergebnissen für freies <a href="/trafarette/t4">T4</a> (fT4) und TSH. Abweichungen von den Normwerten können auf verschiedene Schilddrüsenerkrankungen hinweisen, wie:</p>
                 <ul>
                     <li>• <b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Erhöhte T3-Werte und verminderte TSH-Spiegel deuten auf eine Überfunktion der Schilddrüse hin.</li>
                     <li>• <b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Niedrige T3-Werte in Verbindung mit erhöhten TSH-Werten sprechen für eine Unterfunktion der Schilddrüse.</li>

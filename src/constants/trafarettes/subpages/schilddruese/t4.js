@@ -26,7 +26,7 @@ export default {
             "textWithFormatting": `<div>
                 <p>Thyroxin gehört zur Klasse der <a href="/trafarette/iod">Iod</a>othyronine und fungiert primär als Prohormon. Es entfaltet seine hauptsächliche Aktivität über die Umwandlung in Trijodthyronin (T3) und 3,5-Dijodthyronin (3,5-T2). Diese Umwandlung geschieht peripher durch die Abspaltung eines <a href="/trafarette/iod">Iod</a>atoms (Deiodierung) durch Deiodinasen:</p>
                 <ul>
-                    <li>• <b>Umwandlung in T3:</b> Durch Abspaltung eines <a href="/trafarette/iod">Iod</a>atoms an Position 5 des äußeren Ringsystems von T4 entsteht T3, das biologisch aktive Hormon.</li>
+                    <li>• <b>Umwandlung in <a href="/trafarette/t3">T3</a>:</b> Durch Abspaltung eines <a href="/trafarette/iod">Iod</a>atoms an Position 5 des äußeren Ringsystems von T4 entsteht T3, das biologisch aktive Hormon.</li>
                     <li>• <b>Umwandlung in rT3:</b> Wird das <a href="/trafarette/iod">Iod</a>atom an Position 5 des inneren Ringsystems abgespalten, entsteht reverses T3 (rT3), das eine inhibitorische Wirkung auf die T3-Aktivität hat.</li>
                 </ul>
                 <p>Die periphere Konversion von T4 zu T3 ist essenziell für die Regulation des Zellstoffwechsels. Eine verminderte Umwandlung führt zu einer Konversionsstörung, auch als Low-T3-Syndrom bekannt.</p>
@@ -41,7 +41,7 @@ export default {
                     <li>• <b>Hypothalamus:</b> Produziert Thyreotropin-Releasing-Hormon (TRH), welches die Hypophyse stimuliert.</li>
                     <li>• <b>Hypophyse:</b> Schüttet Thyroidea-stimulierendes Hormon (TSH) aus, das die Schilddrüse zur Produktion von T4 und T3 anregt.</li>
                 </ul>
-                <p>T4 und T3 steuern Wachstumsprozesse, die Zelldifferenzierung sowie anabole und katabole Stoffwechselwege. Über eine negative Rückkopplung hemmen sie die Freisetzung von TRH und TSH und regulieren so ihre eigene Produktion.</p>
+                <p>T4 und <a href="/trafarette/t3">T3</a> steuern Wachstumsprozesse, die Zelldifferenzierung sowie anabole und katabole Stoffwechselwege. Über eine negative Rückkopplung hemmen sie die Freisetzung von TRH und TSH und regulieren so ihre eigene Produktion.</p>
             </div>`
         },
         {
@@ -62,7 +62,7 @@ export default {
             "title": "Labormedizin",
             "textWithFormatting": `<div>
                 <p>Die Bestimmung des T4-Spiegels erfolgt meist durch Enzymimmunoassay (ELISA) oder Radioimmunoassay (RIA). In der Regel wird das freie Thyroxin (fT4) gemessen, da es diagnostisch relevanter ist als das Gesamt-T4, das durch Plasmaproteine beeinflusst wird.</p>
-                <p><b>Interpretation:</b> Die Ergebnisse sollten in Zusammenschau mit den fT3- und TSH-Werten betrachtet werden, um eine genaue Diagnose zu ermöglichen.</p>
+                <p><b>Interpretation:</b> Die Ergebnisse sollten in Zusammenschau mit den <a href="/trafarette/t3">fT3-</a> und TSH-Werten betrachtet werden, um eine genaue Diagnose zu ermöglichen.</p>
             </div>`
         },
         {

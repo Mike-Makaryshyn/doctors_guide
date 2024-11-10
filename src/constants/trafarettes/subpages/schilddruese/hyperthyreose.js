@@ -11,7 +11,7 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p>Die Hyperthyreose ist eine Erkrankung, bei der die Schilddrüse, eine kleine, schmetterlingsförmige Drüse am Hals, mehr Hormone produziert als der Körper benötigt. Diese Hormone, Thyroxin (T4) und Triiodthyronin (T3), sind entscheidend für die Steuerung des Stoffwechsels. Eine Überproduktion führt dazu, dass der Körper „auf Hochtouren läuft“, was zu einer Vielzahl von körperlichen und psychischen Beschwerden führen kann. Der Begriff Thyreotoxikose beschreibt die Auswirkungen eines solchen hormonellen Überschusses im Körper.</p>
+            <p>Die Hyperthyreose ist eine Erkrankung, bei der die Schilddrüse, eine kleine, schmetterlingsförmige Drüse am Hals, mehr Hormone produziert als der Körper benötigt. Diese Hormone, <a href="/trafarette/t4">Thyroxin (T4)</a> und <a href="/trafarette/t3">Triiodthyronin (T3)</a> , sind entscheidend für die Steuerung des Stoffwechsels. Eine Überproduktion führt dazu, dass der Körper „auf Hochtouren läuft“, was zu einer Vielzahl von körperlichen und psychischen Beschwerden führen kann. Der Begriff Thyreotoxikose beschreibt die Auswirkungen eines solchen hormonellen Überschusses im Körper.</p>
           </div>`
         },
         {
@@ -26,13 +26,13 @@ export default {
             </ul>
             <p>Nach der Symptomatik:</p>
             <ul>
-              <li>• <b>Subklinische Hyperthyreose</b>: Betroffene haben oft kaum Beschwerden. Die Schilddrüsenwerte T3 und T4 sind normal, aber TSH ist bereits erniedrigt.</li>
+              <li>• <b>Subklinische Hyperthyreose</b>: Betroffene haben oft kaum Beschwerden. Die Schilddrüsenwerte <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> sind normal, aber TSH ist bereits erniedrigt.</li>
               <li>• <b>Klinische Hyperthyreose</b>: Deutliche Symptome treten auf, und die Laborwerte zeigen erhöhte Spiegel von T3 und T4 sowie erniedrigtes TSH.</li>
             </ul>
             <p>Nach der Ursache:</p>
             <ul>
               <li>• <b>Autoimmunerkrankungen</b>: Der <a href="/trafarette/morbusbasedow">Morbus Basedow</a> ist eine der bekanntesten Ursachen und betrifft meist Frauen zwischen 20 und 50 Jahren. Eine genetische Prädisposition kann die Wahrscheinlichkeit erhöhen.</li>
-              <li>• <b>Schilddrüsenautonomie</b>: Hier arbeitet ein Teil der Schilddrüse unabhängig von der üblichen hormonellen Steuerung, z.B. bei toxischen Knoten.</li>
+              <li>• <b><a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a></b>: Hier arbeitet ein Teil der Schilddrüse unabhängig von der üblichen hormonellen Steuerung, z.B. bei toxischen Knoten.</li>
               <li>• <b>Medikamenten-induzierte Hyperthyreose</b>: Diese Form wird vor allem durch iodhaltige Medikamente wie Amiodaron ausgelöst.</li>
             </ul>
           </div>`
@@ -42,7 +42,7 @@ export default {
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
           <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
-            <p>In einer gesunden Schilddrüse reguliert der thyreotrope Regelkreis die Hormonproduktion. Der Hypothalamus schüttet TRH aus, das die Hypophyse zur Ausschüttung von TSH anregt, welches wiederum die Schilddrüse stimuliert, T3 und T4 zu produzieren. Bei Hyperthyreose wird dieser Mechanismus gestört, wodurch die Schilddrüse kontinuierlich zu viel Hormon produziert. Diese überschüssigen Hormone steigern den Stoffwechsel, erhöhen die Herzfrequenz und verursachen eine gesteigerte Wärmeproduktion. Die Empfindlichkeit gegenüber Katecholaminen wie Adrenalin wird erhöht, was zu den typischen Symptomen wie Nervosität, Schlaflosigkeit und Herzklopfen führt.</p>
+            <p>In einer gesunden Schilddrüse reguliert der thyreotrope Regelkreis die Hormonproduktion. Der Hypothalamus schüttet TRH aus, das die Hypophyse zur Ausschüttung von TSH anregt, welches wiederum die Schilddrüse stimuliert, <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> zu produzieren. Bei Hyperthyreose wird dieser Mechanismus gestört, wodurch die Schilddrüse kontinuierlich zu viel Hormon produziert. Diese überschüssigen Hormone steigern den Stoffwechsel, erhöhen die Herzfrequenz und verursachen eine gesteigerte Wärmeproduktion. Die Empfindlichkeit gegenüber Katecholaminen wie Adrenalin wird erhöht, was zu den typischen Symptomen wie Nervosität, Schlaflosigkeit und Herzklopfen führt.</p>
           </div>`
         },
         {
@@ -64,15 +64,15 @@ export default {
           "id": 5,
           "title": "Diagnostik",
           "textWithFormatting": `<div>
-            <p>Die Diagnose basiert auf einer Kombination aus klinischer Untersuchung und Laborwerten. Typische Befunde zeigen einen erniedrigten TSH-Spiegel und erhöhte Werte von fT3 und fT4. Der Nachweis von TSH-Rezeptor-Antikörpern (TRAb) ist ein Indikator für <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Zur weiteren Abklärung werden bildgebende Verfahren wie Ultraschall und Szintigraphie eingesetzt.</p>
+            <p>Die Diagnose basiert auf einer Kombination aus klinischer Untersuchung und Laborwerten. Typische Befunde zeigen einen erniedrigten TSH-Spiegel und erhöhte Werte von <a href="/trafarette/t3">fT3</a> und fT4. Der Nachweis von TSH-Rezeptor-Antikörpern (TRAb) ist ein Indikator für <a href="/trafarette/morbusbasedow">Morbus Basedow</a>. Zur weiteren Abklärung werden bildgebende Verfahren wie Ultraschall und Szintigraphie eingesetzt.</p>
             <table>
               <thead>
                 <tr>
                   <th>Diagnose</th>
                   <th>TSH</th>
-                  <th>T3</th>
+                  <th><a href="/trafarette/t3">T3</a></th>
                   <th>fT3</th>
-                  <th>T4</th>
+                  <th><a href="/trafarette/t4">T4</a></th>
                   <th>fT4</th>
                 </tr>
               </thead>
@@ -109,8 +109,8 @@ export default {
           "id": 6,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Die Behandlung richtet sich nach der Ursache und Schwere der Hyperthyreose. Medikamentös werden häufig Thyreostatika wie Thiamazol oder Propylthiouracil eingesetzt, um die Hormonsynthese zu hemmen. Betablocker werden verabreicht, um Symptome wie Herzrasen zu lindern. In entzündlichen Fällen können Glukokortikoide eingesetzt werden, um die Hormonfreisetzung zu hemmen.</p>
-            <p>Eine alternative Therapieform ist die Radiojodtherapie, bei der radioaktives Jod verwendet wird, um die Schilddrüsenzellen zu zerstören. Diese Methode ist besonders wirksam bei autonomen Adenomen und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, wird jedoch bei Schwangeren und Stillenden nicht angewendet.</p>
+            <p>Die Behandlung richtet sich nach der Ursache und Schwere der Hyperthyreose. Medikamentös werden häufig Thyreostatika wie <a href="/trafarette/thiamazol">Thiamazol</a> oder Propylthiouracil eingesetzt, um die Hormonsynthese zu hemmen. Betablocker werden verabreicht, um Symptome wie Herzrasen zu lindern. In entzündlichen Fällen können Glukokortikoide eingesetzt werden, um die Hormonfreisetzung zu hemmen.</p>
+            <p>Eine alternative Therapieform ist die <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a>, bei der radioaktives Jod verwendet wird, um die Schilddrüsenzellen zu zerstören. Diese Methode ist besonders wirksam bei autonomen Adenomen und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, wird jedoch bei Schwangeren und Stillenden nicht angewendet.</p>
             <p>In schweren oder therapieresistenten Fällen kann eine chirurgische Entfernung der Schilddrüse erforderlich sein. Nach einer vollständigen Entfernung ist eine lebenslange Hormonersatztherapie notwendig, um eine <a href="/trafarette/hypothyreose">Hypothyreose</a> zu vermeiden.</p>
           </div>`
         },

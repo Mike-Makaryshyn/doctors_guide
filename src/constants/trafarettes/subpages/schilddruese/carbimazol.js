@@ -10,29 +10,29 @@ export default {
           "id": 1,
           "title": "Definition",
           "textWithFormatting": `<div>
-            <p><b>Carbimazol</b> ist ein Medikament aus der Gruppe der Thionamide, das zur Behandlung verschiedener Schilddrüsenerkrankungen eingesetzt wird, insbesondere zur Hemmung einer übermäßigen Produktion von Schilddrüsenhormonen bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>.</p>
+            <p><b>Carbimazol</b> ist ein Medikament aus der Gruppe der Thionamide, das zur Behandlung verschiedener Schilddrüsenerkrankungen eingesetzt wird, insbesondere zur Hemmung einer übermäßigen Produktion von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>.</p>
           </div>`
         },
         {
           "id": 2,
           "title": "Wirkmechanismus",
           "textWithFormatting": `<div>
-            <p><b>Carbimazol</b> ist ein sogenannter Iodisationshemmer, der die Funktion des Enzyms <b>Thyreoperoxidase (TPO)</b> hemmt. TPO ist essenziell für die Synthese der Schilddrüsenhormone Triiodthyronin (T3) und Thyroxin (T4), indem es Jodid zu elementarem <a href="/trafarette/iod">Jod</a> oxidiert. Durch die Hemmung von TPO verhindert Carbimazol die Jodierung von Thyreoglobulin und damit die Bildung neuer Schilddrüsenhormone.</p>
-            <p>Zusätzlich hemmt Carbimazol das Enzym <b>Dehalogenase</b>, das in der Schilddrüse für die Rückresorption nicht freigesetzten <a href="/trafarette/iod">Jods</a> sorgt. Dies führt zu einer reduzierten Jodaufnahme in die Schilddrüse, was eine sogenannte „Jodavidität“ bewirkt und die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> senkt – ein Effekt, der bei einer Radiojodtherapie nützlich sein kann.</p>
+            <p><b>Carbimazol</b> ist ein sogenannter Iodisationshemmer, der die Funktion des Enzyms <b>Thyreoperoxidase (TPO)</b> hemmt. TPO ist essenziell für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Triiodthyronin (T3)</a>  und <a href="/trafarette/t4">Thyroxin (T4)</a>, indem es Jodid zu elementarem <a href="/trafarette/iod">Jod</a> oxidiert. Durch die Hemmung von TPO verhindert Carbimazol die Jodierung von <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> und damit die Bildung neuer <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</p>
+            <p>Zusätzlich hemmt Carbimazol das Enzym <b>Dehalogenase</b>, das in der Schilddrüse für die Rückresorption nicht freigesetzten <a href="/trafarette/iod">Jods</a> sorgt. Dies führt zu einer reduzierten Jodaufnahme in die Schilddrüse, was eine sogenannte „Jodavidität“ bewirkt und die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> senkt – ein Effekt, der bei einer <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a> nützlich sein kann.</p>
           </div>`
         },
         {
           "id": 3,
           "title": "Pharmakokinetik",
           "textWithFormatting": `<div>
-            <p><b>Carbimazol</b> wird nach der Aufnahme im Körper in seinen aktiven Metaboliten <b>Thiamazol</b> umgewandelt. Es handelt sich also um ein <b>Prodrug</b>, das erst im Körper seine volle therapeutische Wirkung entfaltet. Der Umwandlungsprozess zu Thiamazol ist nicht vollständig im Verhältnis 1:1, sondern variiert leicht zwischen Patienten. Nach oraler Einnahme wird Carbimazol rasch resorbiert, wobei seine Wirksamkeit aufgrund der Umwandlung verzögert eintritt.</p>
+            <p><b>Carbimazol</b> wird nach der Aufnahme im Körper in seinen aktiven Metaboliten <b><a href="/trafarette/thiamazol">Thiamazol</a></b> umgewandelt. Es handelt sich also um ein <b>Prodrug</b>, das erst im Körper seine volle therapeutische Wirkung entfaltet. Der Umwandlungsprozess zu Thiamazol ist nicht vollständig im Verhältnis 1:1, sondern variiert leicht zwischen Patienten. Nach oraler Einnahme wird Carbimazol rasch resorbiert, wobei seine Wirksamkeit aufgrund der Umwandlung verzögert eintritt.</p>
           </div>`
         },
         {
           "id": 4,
           "title": "Indikationen",
           "textWithFormatting": `<div>
-            <p><b>Carbimazol</b> wird hauptsächlich zur Behandlung von <a href="/trafarette/hyperthyreose">Hyperthyreose</a> eingesetzt, die aufgrund verschiedener Erkrankungen wie Autoimmunthyreopathien (z.B. <a href="/trafarette/morbusbasedow">Morbus Basedow</a>) oder durch Schilddrüsenautonomie auftreten kann. Weitere Anwendungsgebiete sind:</p>
+            <p><b>Carbimazol</b> wird hauptsächlich zur Behandlung von <a href="/trafarette/hyperthyreose">Hyperthyreose</a> eingesetzt, die aufgrund verschiedener Erkrankungen wie Autoimmunthyreopathien (z.B. <a href="/trafarette/morbusbasedow">Morbus Basedow</a>) oder durch <a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a> auftreten kann. Weitere Anwendungsgebiete sind:</p>
             <ul>
               <li>• <b>Präoperative Strumatherapie:</b> Um die Schilddrüse vor einer Operation in eine euthyreote Stoffwechsellage zu bringen und das Operationsrisiko zu senken.</li>
               <li>• <b>Behandlung der thyreotoxischen Krise:</b> Carbimazol wird in diesen Fällen zur raschen Senkung der Schilddrüsenhormonspiegel eingesetzt.</li>
@@ -74,7 +74,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Anwendung von <b>Carbimazol</b> ist in bestimmten Fällen kontraindiziert, einschließlich:</p>
             <ul>
-              <li>• <b>Allergien oder Überempfindlichkeiten</b> gegenüber Carbimazol oder Thiamazol.</li>
+              <li>• <b>Allergien oder Überempfindlichkeiten</b> gegenüber Carbimazol oder <a href="/trafarette/thiamazol">Thiamazol</a>.</li>
               <li>• <b>Hämatopoetische Störungen</b> wie Agranulozytose oder Neutropenie, die bereits durch frühere Thionamid-Therapien ausgelöst wurden.</li>
               <li>• <b>Schilddrüsenkarzinom und retrosternale <a href="/trafarette/struma">Struma</a>:</b> Bei großen retrosternalen Strumen besteht das Risiko einer Atemnot durch die stimulierende Wirkung auf das Schilddrüsenwachstum (Asphyxiegefahr).</li>
               <li>• <b>Leberinsuffizienz und Cholestase:</b> Schwere Leberschäden sind eine absolute Kontraindikation.</li>

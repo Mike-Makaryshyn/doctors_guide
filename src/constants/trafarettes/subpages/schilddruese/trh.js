@@ -25,10 +25,10 @@ export default {
             "title": "Physiologie",
             "textWithFormatting": `<div>
                 <h3>3.1. Hypothalamus-Hypophysen-Achse</h3>
-                <p>TRH wird hauptsächlich im Nucleus paraventricularis des Hypothalamus gebildet und über das hypophysäre Pfortadersystem zur Hypophyse transportiert. Dort bindet es an TRH-Rezeptoren der thyreotropen Zellen und fördert die Freisetzung von TSH (Thyreoidea-stimulierendes Hormon). Dadurch wird die Produktion der Schilddrüsenhormone T3 und T4 angeregt (thyreotroper Regelkreis). Zusätzlich stimuliert TRH die Freisetzung von Prolaktin und kann unter bestimmten Bedingungen die Sekretion von Somatotropin beeinflussen.</p>
+                <p>TRH wird hauptsächlich im Nucleus paraventricularis des Hypothalamus gebildet und über das hypophysäre Pfortadersystem zur Hypophyse transportiert. Dort bindet es an TRH-Rezeptoren der thyreotropen Zellen und fördert die Freisetzung von TSH (Thyreoidea-stimulierendes Hormon). Dadurch wird die Produktion der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> angeregt (thyreotroper Regelkreis). Zusätzlich stimuliert TRH die Freisetzung von Prolaktin und kann unter bestimmten Bedingungen die Sekretion von Somatotropin beeinflussen.</p>
                 <h4>Regulation der Synthese und Sekretion:</h4>
                 <ul>
-                    <li>• Die Freisetzung von TRH wird vor allem durch noradrenerge Verbindungen gesteuert und unterliegt einer geringen Feedback-Kontrolle durch zirkulierende Schilddrüsenhormone (T3, T4).</li>
+                    <li>• Die Freisetzung von TRH wird vor allem durch noradrenerge Verbindungen gesteuert und unterliegt einer geringen Feedback-Kontrolle durch zirkulierende <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> (T3, T4).</li>
                 </ul>
                 <h3>3.2. Funktion als Neurotransmitter</h3>
                 <p>TRH ist im ZNS als Neurotransmitter aktiv, insbesondere in den Amygdalae und im Hirnstamm:</p>
