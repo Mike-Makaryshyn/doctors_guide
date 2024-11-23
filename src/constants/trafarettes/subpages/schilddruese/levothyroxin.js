@@ -31,7 +31,7 @@ export default {
           "id": 4,
           "title": "Physiologische Bedeutung und Regulation durch den Hypothalamus-Hypophysen-Schilddrüsen-Regelkreis",
           "textWithFormatting": `<div>
-            <p>Die Regulation der Schilddrüsenhormonproduktion erfolgt über den <b>hypothalamisch-hypophysären Regelkreis</b>: Der Hypothalamus setzt <b>Thyreotropin-Releasing-Hormon (TRH)</b> frei, das die Hypophyse anregt, <b>Thyroidea-stimulierendes Hormon (TSH)</b> auszuschütten. TSH wirkt direkt auf die Schilddrüse und stimuliert dort die Produktion von T3 und T4. Diese Hormone wiederum hemmen die Ausschüttung von TRH und TSH, um eine Überproduktion zu verhindern (negative Rückkopplung). Levothyroxin wirkt auf den gleichen Regelkreis und wird daher auch zur TSH-Suppression eingesetzt, um etwa bei Schilddrüsenkrebs ein Tumorwachstum zu verhindern.</p>
+            <p>Die Regulation der Schilddrüsenhormonproduktion erfolgt über den <b>hypothalamisch-hypophysären Regelkreis</b>: Der Hypothalamus setzt <b><a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a></b> frei, das die Hypophyse anregt, <b>Thyroidea-stimulierendes Hormon (<a href="/trafarette/tsh">(Thyrotropin (TSH))</a>)</b> auszuschütten. TSH wirkt direkt auf die Schilddrüse und stimuliert dort die Produktion von T3 und T4. Diese Hormone wiederum hemmen die Ausschüttung von TRH und TSH, um eine Überproduktion zu verhindern (negative Rückkopplung). Levothyroxin wirkt auf den gleichen Regelkreis und wird daher auch zur TSH-Suppression eingesetzt, um etwa bei Schilddrüsenkrebs ein Tumorwachstum zu verhindern.</p>
           </div>`
         },
         {
@@ -50,7 +50,7 @@ export default {
               <li>• <b>Primäre und sekundäre <a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Bei ausgeprägtem Hormonmangel, meist durch <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> oder nach Schilddrüsenoperation.</li>
               <li>• <b><a href="/trafarette/struma">Strumaprophylaxe</a>:</b> Besonders in Kombination mit Jod bei <a href="/trafarette/jodmangel">Jodmangel</a>strumen, um das Wachstum der Schilddrüse zu bremsen.</li>
               <li>• <b>Suppressionstherapie bei <a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinomen</a>:</b> Hier wird durch gezielte TSH-Senkung das Wachstum verbliebener Schilddrüsenzellen unterdrückt.</li>
-              <li>• <b>Begleittherapie bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Levothyroxin wird in Kombination mit Thyreostatika verabreicht, um eine optimale Balance der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu erreichen.</li>
+              <li>• <b>Begleittherapie bei <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Levothyroxin wird in Kombination mit <a href="/trafarette/thyreostatika">Thyreostatika</a> verabreicht, um eine optimale Balance der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu erreichen.</li>
               <li>• <b>Diagnostischer Schilddrüsensuppressionstest:</b> Durch hochdosiertes Levothyroxin kann der funktionelle Status der Schilddrüse bestimmt werden.</li>
             </ul>
           </div>`
@@ -59,7 +59,7 @@ export default {
           "id": 7,
           "title": "Dosierung und Anwendungshinweise",
           "textWithFormatting": `<div>
-            <p><b>Levothyroxin</b> wird in Tabletten- oder Kapselform eingenommen und die Dosierung individuell nach TSH-Werten angepasst. Patienten sollten das Medikament morgens, idealerweise auf nüchternen Magen und etwa 30 Minuten vor dem Frühstück, einnehmen, um die Resorption zu maximieren. Die Dosisanpassung erfolgt schrittweise und erfordert regelmäßige Kontrollen des TSH- und fT4-Spiegels. Bei älteren Menschen oder Herzpatienten erfolgt die Dosiserhöhung langsamer. Frauen in der Schwangerschaft benötigen oft eine Dosiserhöhung, die nach der Geburt schrittweise wieder angepasst wird.</p>
+            <p><b>Levothyroxin</b> wird in Tabletten- oder Kapselform eingenommen und die Dosierung individuell nach <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Werten angepasst. Patienten sollten das Medikament morgens, idealerweise auf nüchternen Magen und etwa 30 Minuten vor dem Frühstück, einnehmen, um die Resorption zu maximieren. Die Dosisanpassung erfolgt schrittweise und erfordert regelmäßige Kontrollen des TSH- und fT4-Spiegels. Bei älteren Menschen oder Herzpatienten erfolgt die Dosiserhöhung langsamer. Frauen in der Schwangerschaft benötigen oft eine Dosiserhöhung, die nach der Geburt schrittweise wieder angepasst wird.</p>
           </div>`
         },
         {
@@ -100,7 +100,7 @@ export default {
           "id": 12,
           "title": "Diagnostische Bedeutung und Monitoring",
           "textWithFormatting": `<div>
-            <p>Zur Therapiekontrolle und Dosierungseinstellung werden <b>TSH</b>, <b>freies T4 (<a href="/trafarette/t4">fT4</a>)</b> und gegebenenfalls <b>freies <a href="/trafarette/t3">T3</a> (fT3)</b> gemessen. Falsch positive oder negative Ergebnisse können durch hohe Biotindosen beeinflusst werden.</p>
+            <p>Zur Therapiekontrolle und Dosierungseinstellung werden <b><a href="/trafarette/tsh">Thyrotropin (TSH)</a></b>, <b>freies T4 (<a href="/trafarette/t4">fT4</a>)</b> und gegebenenfalls <b>freies <a href="/trafarette/t3">T3</a> (fT3)</b> gemessen. Falsch positive oder negative Ergebnisse können durch hohe Biotindosen beeinflusst werden.</p>
           </div>`
         },
         {

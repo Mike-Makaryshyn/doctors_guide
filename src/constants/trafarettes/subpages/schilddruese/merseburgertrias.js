@@ -1,6 +1,6 @@
 export default {
   path: "merseburgertrias",
-  // http://localhost:5173/trafarette/merseburgertrias 
+  // http://localhost:5173/trafarette/merseburgertrias,,<a href="/trafarette/merseburgertrias">Merseburger Trias</a>
   content: [
     {
       id: 1,

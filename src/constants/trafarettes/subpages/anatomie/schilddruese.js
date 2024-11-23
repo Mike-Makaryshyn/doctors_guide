@@ -2,7 +2,7 @@ import img1 from '../../../../assets/schilddrueseallg.png';
 import img2 from '../../../../assets/sd.png';
 export default {
   path: "schilddruese",
-  // http://localhost:5173/trafarette/schilddruese
+  // http://localhost:5173/trafarette/schilddruese,<a href="/trafarette/schilddruese">Schilddrüse</a>
   content: [
     {
       id: 1,
@@ -110,8 +110,8 @@ export default {
             "textWithFormatting": `<div>
                 <p>Die Produktion von <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> wird über den sogenannten <b>thyreotropen Regelkreis</b> gesteuert:</p>
                 <ul>
-                    <li><b>Hypothalamus:</b> Schüttet Thyreotropin-Releasing-Hormon (TRH) aus, das die Hypophyse stimuliert.</li>
-                    <li><b>Hypophyse:</b> Gibt das schilddrüsenstimulierende Hormon (TSH) ab, welches die Schilddrüse zur Produktion und Freisetzung von T3 und T4 anregt.</li>
+                    <li><b>Hypothalamus:</b> Schüttet <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a> aus, das die Hypophyse stimuliert.</li>
+                    <li><b>Hypophyse:</b> Gibt das schilddrüsenstimulierende Hormon (<a href="/trafarette/tsh">Thyrotropin (TSH)</a>) ab, welches die Schilddrüse zur Produktion und Freisetzung von T3 und T4 anregt.</li>
                     <li><b>Negative Rückkopplung:</b> Hohe Konzentrationen von <a href="/trafarette/t3">T3</a> und T4 hemmen die Freisetzung von TRH und TSH und halten so den Hormonspiegel im Gleichgewicht.</li>
                 </ul>
                 <p>Dieser Mechanismus sorgt für eine stabile Regulation der Schilddrüsenhormonspiegel und passt die Hormonproduktion an die Bedürfnisse des Körpers an.</p>
@@ -128,12 +128,12 @@ export default {
                     <li><b><a href="/trafarette/struma">Struma(Kropf)</a> :</b> Vergrößerte Schilddrüse, meist durch <a href="/trafarette/jodmangel">Jodmangel</a> bedingt, kann die Atmung und den Schluckvorgang beeinträchtigen.</li>
                     <li><b>Schilddrüsenknoten:</b> Kalte Knoten sind potenziell bösartig, während heiße Knoten auf autonome Adenome hinweisen können.</li>
                     <li><b>Schilddrüsentumoren:</b> Zu den häufigsten Formen zählen <a href="/trafarette/papillaereschilddruesenkarzinom">Papilläre Schilddrüsenkarzinome</a>, <a href="/trafarette/folikulaereschilddruesenkarzinom">Follikuläre Schilddrüsenkarzinome</a> und <a href="/trafarette/medullaereschilddruesenkarzinom">medulläre Karzinome</a>, die unterschiedlich aggressiv sind.</li>
-                    <li><b>Entzündungen:</b> Formen wie die Thyreoiditis de Quervain und die Riedel-Struma führen zu schmerzhaften oder fibrotischen Veränderungen.</li>
+                    <li><b>Entzündungen:</b> Formen wie die <a href="/trafarette/thyreoiditis">Thyreoiditis</a> de Quervain und die Riedel-Struma führen zu schmerzhaften oder fibrotischen Veränderungen.</li>
                 </ul>
                 <p><b>Diagnostische Verfahren:</b></p>
                 <ul>
                     <li><b>Klinische Untersuchung:</b> Inspektion und Palpation des Halses zur Beurteilung von Vergrößerungen oder Knoten.</li>
-                    <li><b>Laboruntersuchungen:</b> Bestimmung der Hormonspiegel von <a href="/trafarette/t3">T3</a>, <a href="/trafarette/t4">T4</a> und TSH, sowie Antikörpertests zur Abklärung autoimmuner Ursachen.</li>
+                    <li><b>Laboruntersuchungen:</b> Bestimmung der Hormonspiegel von <a href="/trafarette/t3">T3</a>, <a href="/trafarette/t4">T4</a> und <a href="/trafarette/tsh">Thyrotropin (TSH)</a>, sowie Antikörpertests zur Abklärung autoimmuner Ursachen.</li>
                     <li><b>Bildgebung:</b> Ultraschall (Sonographie) zur Strukturanalyse und Szintigraphie zur Funktionsbeurteilung.</li>
                     <li><b>Feinnadelpunktion und Biopsie:</b> Zur zytologischen und histologischen Untersuchung von Knoten oder verdächtigen Veränderungen.</li>
                 </ul>

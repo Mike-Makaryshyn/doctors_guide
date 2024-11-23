@@ -1,6 +1,6 @@
 export default {
   path: "calcitonin",
-  // http://localhost:5173/trafarette/calcitonin,
+  // http://localhost:5173/trafarette/calcitonin,<a href="/trafarette/calcitonin">calcitonin</a>
   content: [
     {
       id: 1,

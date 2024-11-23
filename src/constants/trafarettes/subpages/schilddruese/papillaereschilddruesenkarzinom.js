@@ -1,6 +1,6 @@
 export default {
   path: "papillaereschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/papillaereschilddruesenkarzinom 
+  // http://localhost:5173/trafarette/papillaereschilddruesenkarzinom,,<a href="/trafarette/papillaereschilddruesenkarzinom">Papilläres Schilddrüsenkarzinom</a>
   content: [
     {
       id: 1,

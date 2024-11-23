@@ -135,6 +135,24 @@ import perchlorate from "./subpages/schilddruese/perchlorate";
 import thiamazol from "./subpages/schilddruese/thiamazol";
 import carbimazol from "./subpages/schilddruese/carbimazol";
 import haemophiliaallge from "./subpages/heamophiie/haemophiliaallge";
+import antitpo from "./subpages/schilddruese/antitpo";
+import antitg from "./subpages/schilddruese/antitg";
+import feinnadelbiopsie from "./subpages/operation/feinnadelbiopsie";
+import whostufenschema from "./subpages/schmerzen/whostufenschema";
+import analgetika from "./subpages/schmerzen/analgetika";
+import schmerztherapie from "./subpages/schmerzen/schmerztherapie";
+import coanalgetika from "./subpages/schmerzen/coanalgetika";
+import nsar from "./subpages/schmerzen/nsar";
+import cox1 from "./subpages/schmerzen/cox1";
+import cox2 from "./subpages/schmerzen/cox2";
+import hereditäresangioödem from "./subpages/allergie/hereditäresangioödem";
+import allergien from "./subpages/allergie/allergien";
+import c1esteraseinhibitor from "./subpages/allergie/c1esteraseinhibitor";
+import immunantwort from "./subpages/allergie/immunantwort";
+import typiiiallergie from "./subpages/allergie/typiiiallergie";
+import typiiiiAllergie from "./subpages/allergie/typiiiiallergie";
+
+
 
 const all_pages_data = [
    first_trafarette_page,
@@ -273,7 +291,23 @@ const all_pages_data = [
    perchlorate,
    thiamazol,
    carbimazol,
-   haemophiliaallge
+   haemophiliaallge,
+   antitpo,
+   antitg,
+   feinnadelbiopsie,
+   whostufenschema,
+   analgetika,
+   schmerztherapie,
+   coanalgetika,
+   nsar,
+   cox1,
+   cox2,
+   hereditäresangioödem,
+   allergien,
+  c1esteraseinhibitor,
+  immunantwort,
+  typiiiallergie,
+  typiiiiAllergie
 ];
 
 export default all_pages_data;

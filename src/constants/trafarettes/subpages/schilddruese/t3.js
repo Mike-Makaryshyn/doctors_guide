@@ -1,6 +1,6 @@
 export default {
   path: "t3",
-  // http://localhost:5173/trafarette/t3 
+  // http://localhost:5173/trafarette/t3,,<a href="/trafarette/t3">Triiodthyronin (T3)</a>
   content: [
     {
       id: 1,
@@ -44,7 +44,7 @@ export default {
                 </ul>
                 <p><i>Hinweis:</i> Referenzwerte können methodenabhängig variieren, daher sind die vom jeweiligen Labor angegebenen Werte maßgeblich.</p>
                 <h4>3.3. Interpretation der Ergebnisse</h4>
-                <p>Die Interpretation der T3-Werte erfolgt immer im Kontext mit den Ergebnissen für freies <a href="/trafarette/t4">T4</a> (fT4) und TSH. Abweichungen von den Normwerten können auf verschiedene Schilddrüsenerkrankungen hinweisen, wie:</p>
+                <p>Die Interpretation der T3-Werte erfolgt immer im Kontext mit den Ergebnissen für freies <a href="/trafarette/t4">T4</a> (fT4) und <a href="/trafarette/tsh">Thyrotropin (TSH)</a>. Abweichungen von den Normwerten können auf verschiedene Schilddrüsenerkrankungen hinweisen, wie:</p>
                 <ul>
                     <li>• <b><a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Erhöhte T3-Werte und verminderte TSH-Spiegel deuten auf eine Überfunktion der Schilddrüse hin.</li>
                     <li>• <b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Niedrige T3-Werte in Verbindung mit erhöhten TSH-Werten sprechen für eine Unterfunktion der Schilddrüse.</li>

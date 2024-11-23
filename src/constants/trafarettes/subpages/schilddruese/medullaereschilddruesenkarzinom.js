@@ -1,6 +1,6 @@
 export default {
   path: "medullaereschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/medullaereschilddruesenkarzinom 
+  // http://localhost:5173/trafarette/medullaereschilddruesenkarzinom,,<a href="/trafarette/medullaereschilddruesenkarzinom">medulläres Schilddrüsenkarzinom (MTC)</a>
   content: [
     {
       id: 1,

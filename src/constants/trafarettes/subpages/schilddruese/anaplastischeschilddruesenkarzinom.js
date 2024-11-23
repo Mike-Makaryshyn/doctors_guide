@@ -1,6 +1,6 @@
 export default {
   path: "anaplastischeschilddruesenkarzinom",
-  // http://localhost:5173/trafarette/anaplastischeschilddruesenkarzinom
+  // http://localhost:5173/trafarette/anaplastischeschilddruesenkarzinom, <a href="/trafarette/anaplastischeschilddruesenkarzinom">Anaplastisches Schilddrüsenkarzinom (ATC)</a>
   content: [
     {
       id: 1,
@@ -65,7 +65,7 @@ export default {
                   <li>• <b>PET-CT</b>: Hilfreich für das Staging und den Nachweis von Fernmetastasen.</li>
                 </ul>
               </li>
-              <li>• <b>Pathohistologie</b>: Die Diagnose erfolgt durch Feinnadelbiopsie und histopathologische Untersuchung. Typische Merkmale sind:
+              <li>• <b>Pathohistologie</b>: Die Diagnose erfolgt durch <a href="/trafarette/feinnadelbiopsie">Feinnadelbiopsie (FNAB)</a> und histopathologische Untersuchung. Typische Merkmale sind:
                 <ul>
                   <li>• Hochgradig pleomorphe Zellen, riesige mehrkernige Zellen und spindelförmige Tumorzellen.</li>
                   <li>• Immunhistochemie: Positive Marker wie Keratin, PAX8 und p53; häufige Mutationen in den Genen BRAF und TERT-Promotoren.</li>

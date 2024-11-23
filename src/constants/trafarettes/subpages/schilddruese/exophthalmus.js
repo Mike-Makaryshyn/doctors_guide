@@ -1,6 +1,6 @@
 export default {
   path: "exophthalmus",
-  // http://localhost:5173/trafarette/exophthalmus
+  // http://localhost:5173/trafarette/exophthalmus,<a href="/trafarette/exophthalmus">Exophthalmus</a>
   content: [
     {
       id: 1,

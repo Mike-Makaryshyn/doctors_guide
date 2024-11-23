@@ -1,6 +1,6 @@
 export default {
   path: "thiamazol",
-  // http://localhost:5173/trafarette/thiamazol 
+  // http://localhost:5173/trafarette/thiamazol,<a href="/trafarette/thiamazol">Thiamazol</a>
   content: [
     {
       id: 1,
@@ -17,7 +17,7 @@ export default {
           "id": 2,
           "title": "Wirkmechanismus",
           "textWithFormatting": `<div>
-            <p><b>Thiamazol</b> hemmt das Enzym Thyreoperoxidase, das für die Bindung von <a href="/trafarette/iod">Jod</a> an Tyrosin notwendig ist, um <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu synthetisieren. Durch diese Hemmung wird die Synthese von T3 und T4 in der Schilddrüse gestoppt. Bereits gespeicherte Hormone im Schilddrüsenkolloid werden jedoch nicht beeinflusst, was den verzögerten Wirkungseintritt von etwa 1–2 Wochen erklärt. Erst nach einem Verbrauch dieser gespeicherten Hormone kann die Schilddrüsenfunktion auf ein normales Niveau (euthyreot) eingestellt werden, was in der Regel nach 4–6 Wochen Therapie erreicht wird.</p>
+            <p><b>Thiamazol</b> hemmt das Enzym <a href="/trafarette/thyreoperoxidase">Thyreoperoxidase (TPO)</a>, das für die Bindung von <a href="/trafarette/iod">Jod</a> an Tyrosin notwendig ist, um <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> zu synthetisieren. Durch diese Hemmung wird die Synthese von T3 und T4 in der Schilddrüse gestoppt. Bereits gespeicherte Hormone im Schilddrüsenkolloid werden jedoch nicht beeinflusst, was den verzögerten Wirkungseintritt von etwa 1–2 Wochen erklärt. Erst nach einem Verbrauch dieser gespeicherten Hormone kann die Schilddrüsenfunktion auf ein normales Niveau (euthyreot) eingestellt werden, was in der Regel nach 4–6 Wochen Therapie erreicht wird.</p>
           </div>`
         },
         {
@@ -78,7 +78,7 @@ export default {
           "textWithFormatting": `<div>
             <p><b>Thiamazol</b> ist in bestimmten Situationen kontraindiziert:</p>
             <ul>
-              <li>• <b>Schwangerschaft und Stillzeit:</b> Da Thiamazol plazentagängig ist und in die Muttermilch übergeht, kann es beim Fetus bzw. Säugling zu <a href="/trafarette/hypothyreose">Hypothyreose</a> und <a href="/trafarette/struma">Struma</a> führen. Propylthiouracil wird bei Schwangeren bevorzugt, wenn Thyreostatika zwingend notwendig sind.</li>
+              <li>• <b>Schwangerschaft und Stillzeit:</b> Da Thiamazol plazentagängig ist und in die Muttermilch übergeht, kann es beim Fetus bzw. Säugling zu <a href="/trafarette/hypothyreose">Hypothyreose</a> und <a href="/trafarette/struma">Struma</a> führen. Propylthiouracil wird bei Schwangeren bevorzugt, wenn <a href="/trafarette/thyreostatika">Thyreostatika</a> zwingend notwendig sind.</li>
               <li>• Vorangegangene Unverträglichkeit gegenüber Thiamazol oder schweren Reaktionen wie Agranulozytose oder aplastische Anämie.</li>
               <li>• <b>Pankreatitis in der Vorgeschichte unter Thionamiden:</b> da diese Nebenwirkung erneut auftreten könnte.</li>
               <li>• <b>Cholestase und Myelosuppression:</b> Eine gestörte Gallensekretion oder eine durch Thionamide hervorgerufene Unterdrückung des Knochenmarks stellen ebenfalls Kontraindikationen dar.</li>

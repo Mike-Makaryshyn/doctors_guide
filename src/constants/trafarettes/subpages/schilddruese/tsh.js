@@ -1,6 +1,6 @@
 export default {
   path: "tsh",
-  // http://localhost:5173/trafarette/tsh
+  // http://localhost:5173/trafarette/tsh,<a href="/trafarette/tsh">Thyrotropin (TSH)</a>
   content: [
     {
       id: 1,
@@ -32,7 +32,7 @@ export default {
                 <h3>3.1. Fördernde Faktoren</h3>
                 <p>Die Ausschüttung von TSH wird durch verschiedene Faktoren stimuliert, darunter:</p>
                 <ul>
-                    <li>• TRH (Thyreotropin-Releasing-Hormon) aus dem Hypothalamus</li>
+                    <li>• <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a> aus dem Hypothalamus</li>
                     <li>• Neurotensin</li>
                     <li>• Vasopressin (ADH), möglicherweise beteiligt</li>
                 </ul>

@@ -1,6 +1,6 @@
 export default {
   path: "huerthlezellkarzinom",
-  // http://localhost:5173/trafarette/huerthlezellkarzinom 
+  // http://localhost:5173/trafarette/huerthlezellkarzinom, <a href="/trafarette/huerthlezellkarzinom">Hürthle-Zell-Karzinom</a>
   content: [
     {
       id: 1,
@@ -67,7 +67,7 @@ export default {
               <li>• <b><a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a></b>: Eine vollständige Entfernung der Schilddrüse ist Standard, da Hürthle-Zell-Karzinome zu multifokaler und invasiver Ausbreitung neigen.</li>
               <li>• <b>Lymphadenektomie</b>: Bei Lymphknotenbeteiligung wird eine Entfernung der betroffenen Lymphknoten empfohlen.</li>
               <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Kann zur Behandlung von residuellen Tumorzellen und Metastasen eingesetzt werden, ist jedoch bei <a href="/trafarette/huerthlezellkarzinom">Hürthle-Zell-Karzinomen</a> oft weniger wirksam, da sie seltener <a href="/trafarette/iod">Jod</a> aufnehmen.</li>
-              <li>• <b>Postoperative Hormontherapie</b>: <a href="/trafarette/levothyroxin">L-Thyroxin</a> wird gegeben, um den TSH-Spiegel niedrig zu halten und das Wachstum verbliebener Tumorzellen zu unterdrücken.</li>
+              <li>• <b>Postoperative Hormontherapie</b>: <a href="/trafarette/levothyroxin">L-Thyroxin</a> wird gegeben, um den <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Spiegel niedrig zu halten und das Wachstum verbliebener Tumorzellen zu unterdrücken.</li>
             </ul>
           </div>`
         },

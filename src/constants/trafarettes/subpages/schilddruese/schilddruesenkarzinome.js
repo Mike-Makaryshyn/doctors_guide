@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenkarzinome",
-  // http://localhost:5173/trafarette/schilddruesenkarzinome 
+  // http://localhost:5173/trafarette/schilddruesenkarzinome,<a href="/trafarette/schilddruesenkarzinome">Schilddrüsenkarzinome</a>
   content: [
     {
       id: 1,

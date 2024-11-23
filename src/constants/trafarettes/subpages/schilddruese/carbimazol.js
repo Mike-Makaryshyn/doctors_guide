@@ -1,6 +1,6 @@
 export default {
   path: "carbimazol",
-  // http://localhost:5173/trafarette/carbimazol
+  // http://localhost:5173/trafarette/carbimazol,<a href="/trafarette/carbimazol">Carbimazol</a>
   content: [
     {
       id: 1,
@@ -17,7 +17,7 @@ export default {
           "id": 2,
           "title": "Wirkmechanismus",
           "textWithFormatting": `<div>
-            <p><b>Carbimazol</b> ist ein sogenannter Iodisationshemmer, der die Funktion des Enzyms <b>Thyreoperoxidase (TPO)</b> hemmt. TPO ist essenziell für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Triiodthyronin (T3)</a>  und <a href="/trafarette/t4">Thyroxin (T4)</a>, indem es Jodid zu elementarem <a href="/trafarette/iod">Jod</a> oxidiert. Durch die Hemmung von TPO verhindert Carbimazol die Jodierung von <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> und damit die Bildung neuer <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</p>
+            <p><b>Carbimazol</b> ist ein sogenannter Iodisationshemmer, der die Funktion des Enzyms <b><a href="/trafarette/thyreoperoxidase">Thyreoperoxidase (TPO)</a></b> hemmt. TPO ist essenziell für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">Triiodthyronin (T3)</a>  und <a href="/trafarette/t4">Thyroxin (T4)</a>, indem es Jodid zu elementarem <a href="/trafarette/iod">Jod</a> oxidiert. Durch die Hemmung von TPO verhindert Carbimazol die Jodierung von <a href="/trafarette/thyreoglobulin">Thyreoglobulin</a> und damit die Bildung neuer <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</p>
             <p>Zusätzlich hemmt Carbimazol das Enzym <b>Dehalogenase</b>, das in der Schilddrüse für die Rückresorption nicht freigesetzten <a href="/trafarette/iod">Jods</a> sorgt. Dies führt zu einer reduzierten Jodaufnahme in die Schilddrüse, was eine sogenannte „Jodavidität“ bewirkt und die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> senkt – ein Effekt, der bei einer <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a> nützlich sein kann.</p>
           </div>`
         },
@@ -46,7 +46,7 @@ export default {
             <p><b>Carbimazol</b> kann eine Reihe von Nebenwirkungen hervorrufen, die von milden Symptomen bis hin zu schwerwiegenden Komplikationen reichen. Zu den häufigsten und klinisch wichtigsten Nebenwirkungen gehören:</p>
             <ul>
               <li>• <b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b> Eine zu starke Hemmung der Schilddrüsenfunktion kann zu einer Unterfunktion führen.</li>
-              <li>• <b>Strumigenität:</b> Durch die Senkung des Schilddrüsenhormonspiegels kann die Hirnanhangsdrüse (Hypophyse) vermehrt TSH produzieren, was zu einer Schilddrüsenvergrößerung (<a href="/trafarette/struma">Struma</a>) führen kann.</li>
+              <li>• <b>Strumigenität:</b> Durch die Senkung des Schilddrüsenhormonspiegels kann die Hirnanhangsdrüse (Hypophyse) vermehrt <a href="/trafarette/tsh">Thyrotropin (TSH)</a> produzieren, was zu einer Schilddrüsenvergrößerung (<a href="/trafarette/struma">Struma</a>) führen kann.</li>
               <li>• <b>Muskuloskelettale Reaktionen:</b></li>
               <ul>
                 <li>• <b>Arthralgien und Myalgien:</b> Gelenk- und Muskelschmerzen treten häufig auf und können sogar nach Absetzen der Therapie bestehen bleiben.</li>

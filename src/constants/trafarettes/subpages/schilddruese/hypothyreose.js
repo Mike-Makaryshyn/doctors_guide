@@ -1,6 +1,6 @@
 export default {
   path: "hypothyreose",
-  // http://localhost:5173/trafarette/hypothyreose
+  // http://localhost:5173/trafarette/hypothyreose,<a href="/trafarette/hypothyreose">Hypothyreose</a>
   content: [
     {
       id: 1,
@@ -22,11 +22,11 @@ export default {
               <li>• <b>Primäre Hypothyreose</b>: Hierbei ist die Schilddrüse selbst gestört. Man unterscheidet:
                 <ul>
                   <li>• <b>Manifeste primäre Hypothyreose</b>: Erniedrigte Spiegel der peripheren <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> (<a href="/trafarette/t3">T3</a>, <a href="/trafarette/t4">T4</a>) und ein erhöhter TSH-Wert.</li>
-                  <li>• <b>Latente primäre Hypothyreose</b>: Erhöhter TSH-Wert bei noch normalen peripheren <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</li>
+                  <li>• <b>Latente primäre Hypothyreose</b>: Erhöhter <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Wert bei noch normalen peripheren <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>.</li>
                 </ul>
               </li>
               <li>• <b>Sekundäre Hypothyreose</b>: Bedingt durch eine Störung der Hypophyse mit unzureichender TSH-Ausschüttung.</li>
-              <li>• <b>Tertiäre Hypothyreose</b>: Eine seltene Form, bei der die Ursache im Hypothalamus liegt, was zu einer verminderten Freisetzung von TRH (Thyreotropin-Releasing-Hormon) führt.</li>
+              <li>• <b>Tertiäre Hypothyreose</b>: Eine seltene Form, bei der die Ursache im Hypothalamus liegt, was zu einer verminderten Freisetzung von <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a> führt.</li>
             </ul>
             <h4>Andere spezielle Formen:</h4>
             <ul>
@@ -81,8 +81,8 @@ export default {
               <li>• <b>Labordiagnostik</b>:
                 <ul>
                   <li>• Erniedrigte fT3- und fT4-Spiegel.</li>
-                  <li>• Erhöhter TSH-Wert bei primärer Hypothyreose.</li>
-                  <li>• Schilddrüsenantikörper (TPO-Ak, Tg-Ak) zur Abklärung einer Autoimmunthyreopathie.</li>
+                  <li>• Erhöhter <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Wert bei primärer Hypothyreose.</li>
+                  <li>• Schilddrüsenantikörper (<a href="/trafarette/antitpo">Anti-TPO</a>, <a href="/trafarette/antitg">Antithyreoglobulin (Anti-Tg)</a>) zur Abklärung einer Autoimmunthyreopathie.</li>
                   <li>• Bestimmung der Elektrolyte und des Blutzuckers zur Beurteilung einer Hypoglykämie.</li>
                 </ul>
               </li>
@@ -92,7 +92,7 @@ export default {
               <thead>
                 <tr>
                   <th>Diagnose</th>
-                  <th>TSH</th>
+                  <th><a href="/trafarette/tsh">Thyrotropin (TSH)</a></th>
                   <th><a href="/trafarette/t3">T3</a></th>
                   <th>fT3</th>
                   <th><a href="/trafarette/t4">T4</a></th>

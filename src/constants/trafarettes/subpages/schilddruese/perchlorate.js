@@ -1,6 +1,6 @@
 export default {
   path: "perchlorate",
-  // http://localhost:5173/trafarette/perchlorate 
+  // http://localhost:5173/trafarette/perchlorate,,<a href="/trafarette/perchlorate">Perchlorate</a>
   content: [
     {
       id: 1,
@@ -50,7 +50,7 @@ export default {
           "id": 5,
           "title": "Pharmakologische Anwendung in der Schilddrüsentherapie",
           "textWithFormatting": `<div>
-            <p>In der Medizin werden <b>Perchlorate</b> (insbesondere Natriumperchlorat) als Thyreostatika eingesetzt. Sie wirken als kompetitive Antagonisten des Natrium-Iodid-Symporters (NIS) in der Schilddrüse und blockieren die Aufnahme von <a href="/trafarette/iod">Jodid</a> in die Schilddrüsenzellen. Da Jodid ein essentielles Substrat für die Schilddrüsenhormonproduktion ist, hemmt Perchlorat indirekt die Synthese der Hormone <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a>.</p>
+            <p>In der Medizin werden <b>Perchlorate</b> (insbesondere Natriumperchlorat) als <a href="/trafarette/thyreostatika">Thyreostatika</a> eingesetzt. Sie wirken als kompetitive Antagonisten des Natrium-Iodid-Symporters (NIS) in der Schilddrüse und blockieren die Aufnahme von <a href="/trafarette/iod">Jodid</a> in die Schilddrüsenzellen. Da Jodid ein essentielles Substrat für die Schilddrüsenhormonproduktion ist, hemmt Perchlorat indirekt die Synthese der Hormone <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a>.</p>
             <p><b>Therapeutische Einsatzbereiche:</b></p>
             <ul>
               <li>• <b><a href="/trafarette/iod">Iod</a>induzierte <a href="/trafarette/hyperthyreose">Hyperthyreose</a>:</b> Perchlorat wird zur Prävention einer jodinduzierten Überfunktion der Schilddrüse eingesetzt, insbesondere bei Patienten mit autonomen <a href="/trafarette/schilddruesenadenom">Schilddrüsenadenomen</a>.</li>

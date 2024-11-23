@@ -1,6 +1,6 @@
 export default {
   path: "wolffchaikoffeffekt",
-  // http://localhost:5173/trafarette/wolffchaikoffeffekt
+  // http://localhost:5173/trafarette/wolffchaikoffeffekt,<a href="/trafarette/wolffchaikoffeffekt">Wolff-Chaikoff-Effekt</a>
   content: [
     {
       id: 1,

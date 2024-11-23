@@ -1,6 +1,6 @@
 export default {
   path: "hyperthyreosisfactitia",
-  // http://localhost:5173/trafarette/hyperthyreosisfactitia
+  // http://localhost:5173/trafarette/hyperthyreosisfactitia,<a href="/trafarette/hyperthyreosisfactitia">Hyperthyreosis factitia</a>
   content: [
     {
       id: 1,
@@ -54,7 +54,7 @@ export default {
             <ul>
               <li>• <b>Laboruntersuchungen</b>:
                 <ul>
-                  <li>• TSH-Spiegel: Deutlich erniedrigt.</li>
+                  <li>• <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Spiegel: Deutlich erniedrigt.</li>
                   <li>• Freies <a href="/trafarette/t3">T3</a> und freies <a href="/trafarette/t4">T4</a>: Erhöhte Konzentrationen.</li>
                   <li>• EKG: Um mögliche kardiale Arrhythmien zu identifizieren.</li>
                 </ul>
@@ -79,7 +79,7 @@ export default {
               <li>• <b>Symptomatische Behandlung</b>:
                 <ul>
                   <li>• Betablocker wie Propranolol: Hemmen die periphere Umwandlung von T4 zu <a href="/trafarette/t3">T3</a> und lindern kardiovaskuläre Symptome.</li>
-                  <li>• Thyreostatika: Sind nicht wirksam, da sie die Freisetzung von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> blockieren, die bei der Hyperthyreosis factitia jedoch nicht endogen produziert werden.</li>
+                  <li>• <a href="/trafarette/thyreostatika">Thyreostatika</a>: Sind nicht wirksam, da sie die Freisetzung von <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormonen</a> blockieren, die bei der Hyperthyreosis factitia jedoch nicht endogen produziert werden.</li>
                 </ul>
               </li>
               <li>• <b>Zusätzliche Maßnahmen</b>: Hämodialyse ist nicht effektiv, da <a href="/trafarette/levothyroxin">Levothyroxin</a> eine hohe Plasmaproteinbindung aufweist.</li>

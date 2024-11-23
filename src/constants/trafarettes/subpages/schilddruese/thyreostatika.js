@@ -1,6 +1,6 @@
 export default {
   path: "thyreostatika",
-  // http://localhost:5173/trafarette/thyreostatika
+  // http://localhost:5173/trafarette/thyreostatika,<a href="/trafarette/thyreostatika">Thyreostatika</a>
   content: [
     {
       id: 1,
@@ -20,7 +20,7 @@ export default {
             <p>Es gibt verschiedene Wirkstoffgruppen von <b>Thyreostatika</b>, die auf unterschiedliche Weise in den Stoffwechsel der Schilddrüse eingreifen:</p>
             <ul>
               <li>• <b><a href="/trafarette/perchlorate">Perchlorate</a>:</b> Diese Stoffe, zu denen v.a. Perchlorat zählt, hemmen die Aufnahme von Jodid in die Schilddrüsenzellen (Thyreozyten). Da Jod für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> essentiell ist, kann durch den <a href="/trafarette/jodmangel">Jodmangel</a> die Hormonproduktion verringert werden.</li>
-              <li>• <b>Thionamide:</b> Diese Gruppe umfasst <a href="/trafarette/thiamazol">Thiamazol</a>, <a href="/trafarette/carbimazol">Carbimazol</a> und Propylthiouracil. Thionamide blockieren das Enzym <b>Thyreoperoxidase (TPO)</b>, welches notwendig ist, um Jod an die Aminosäure Tyrosin anzulagern. Ohne dieses Enzym kann die Schilddrüse keine wirksamen Hormone (T3 und T4) produzieren.</li>
+              <li>• <b>Thionamide:</b> Diese Gruppe umfasst <a href="/trafarette/thiamazol">Thiamazol</a>, <a href="/trafarette/carbimazol">Carbimazol</a> und Propylthiouracil. Thionamide blockieren das Enzym <b><a href="/trafarette/thyreoperoxidase">Thyreoperoxidase (TPO)</a></b>, welches notwendig ist, um Jod an die Aminosäure Tyrosin anzulagern. Ohne dieses Enzym kann die Schilddrüse keine wirksamen Hormone (T3 und T4) produzieren.</li>
             </ul>
             <p>Zusätzlich kann die Hormonfreisetzung über eine hohe Dosis an <a href="/trafarette/iod">Jod</a> (<b><a href="/trafarette/plummereffekt">Plummer-Effekt</a></b>) kurzfristig blockiert werden. In manchen Fällen wird auch <b>Lithium</b> (Off-Label-Use) zur Hemmung der Freisetzung der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> eingesetzt.</p>
           </div>`
@@ -57,7 +57,7 @@ export default {
             <ul>
               <li>• <b>Granulozytopenie:</b> Eine Reduktion der Granulozyten im Blut kann zu erhöhter Infektanfälligkeit führen. Patienten sollten bei Fieber oder Halsschmerzen sofort ärztliche Hilfe in Anspruch nehmen, da dies auf eine Infektion hinweisen kann.</li>
               <li>• <b>Agranulozytose:</b> Diese schwerwiegende Nebenwirkung ist selten, kann aber lebensbedrohlich sein. Sie äußert sich in einem massiven Abfall der weißen Blutkörperchen und erfordert einen sofortigen Abbruch der Therapie sowie eine intensivmedizinische Behandlung.</li>
-              <li>• <b><a href="/trafarette/struma">Struma</a>:</b> Bei längerem Einsatz und unzureichender TSH-Suppression kann es zu einem Wachstum der Schilddrüse (Struma) kommen, insbesondere bei unzureichender Kontrolle der Dosis oder langfristiger Therapie.</li>
+              <li>• <b><a href="/trafarette/struma">Struma</a>:</b> Bei längerem Einsatz und unzureichender <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Suppression kann es zu einem Wachstum der Schilddrüse (Struma) kommen, insbesondere bei unzureichender Kontrolle der Dosis oder langfristiger Therapie.</li>
             </ul>
             <p>Zusätzlich können Symptome wie Hautausschläge, Gelenkschmerzen und selten hepatotoxische Effekte auftreten. Regelmäßige Blutuntersuchungen und eine engmaschige ärztliche Kontrolle sind daher während der Therapie wichtig, um potenzielle Nebenwirkungen frühzeitig zu erkennen und gegebenenfalls die Therapie anzupassen.</p>
           </div>`

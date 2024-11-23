@@ -1,6 +1,6 @@
 export default {
   path: "radiojodtherapie",
-  // http://localhost:5173/trafarette/radiojodtherapie 
+  // http://localhost:5173/trafarette/radiojodtherapie,<a href="/trafarette/radiojodtherapie">Radiojodtherapie (RJT)</a>
   content: [
     {
       id: 1,

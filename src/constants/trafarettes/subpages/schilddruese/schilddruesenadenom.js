@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenadenom",
-  // http://localhost:5173/trafarette/schilddruesenadenom 
+  // http://localhost:5173/trafarette/schilddruesenadenom,<a href="/trafarette/schilddruesenadenom">Schilddrüsenadenom</a>
   content: [
     {
       id: 1,
@@ -32,7 +32,7 @@ export default {
             <ul>
               <li>• <b>Kubisches Epithel</b>: Das Adenom ist häufig von kubischen, hormonproduzierenden Zellen ausgekleidet, was auf eine aktive Hormonproduktion hindeutet.</li>
               <li>• <b>Kolloidarme Follikel</b>: Die Follikel innerhalb des Adenoms enthalten weniger Kolloid als das umgebende Gewebe, was ein Zeichen für die aktive Hormonproduktion ist.</li>
-              <li>• <b>Atrophie des umgebenden Gewebes</b>: Durch den hypophysären Feedback-Mechanismus wird die TSH-Sekretion gehemmt, was zu einer reduzierten Stimulation des restlichen Schilddrüsengewebes und dessen Atrophie führt.</li>
+              <li>• <b>Atrophie des umgebenden Gewebes</b>: Durch den hypophysären Feedback-Mechanismus wird die <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Sekretion gehemmt, was zu einer reduzierten Stimulation des restlichen Schilddrüsengewebes und dessen Atrophie führt.</li>
             </ul>
           </div>`
         },

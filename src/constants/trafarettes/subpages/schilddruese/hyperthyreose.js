@@ -1,7 +1,7 @@
 import img1 from '../../../../assets/hypothalamusschilddruese.pdf';
 export default {
   path: "hyperthyreose",
-  // http://localhost:5173/trafarette/hyperthyreose 
+  // http://localhost:5173/trafarette/hyperthyreose,<a href="/trafarette/hyperthyreose">Hyperthyreose</a>
   content: [
     {
       id: 1,
@@ -21,8 +21,8 @@ export default {
             <p>Nach dem Ort der Störung unterscheidet man:</p>
             <ul>
               <li>• <b>Primäre Hyperthyreose</b>: Hier liegt das Problem in der Schilddrüse selbst. Eine häufige Ursache ist <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, eine Autoimmunerkrankung, bei der Antikörper die Schilddrüse zu einer übermäßigen Hormonproduktion anregen. Auch autonome Adenome oder ein toxischer Kropf sind Beispiele.</li>
-              <li>• <b>Sekundäre Hyperthyreose</b>: Diese Form entsteht durch eine Überproduktion des Hormons TSH in der Hypophyse, was die Schilddrüse zur übermäßigen Hormonproduktion stimuliert.</li>
-              <li>• <b>Tertiäre Hyperthyreose</b>: Diese seltene Form entsteht durch eine Überproduktion von TRH (Thyreotropin-Releasing-Hormon) im Hypothalamus.</li>
+              <li>• <b>Sekundäre Hyperthyreose</b>: Diese Form entsteht durch eine Überproduktion des Hormons <a href="/trafarette/tsh">Thyrotropin (TSH)</a> in der Hypophyse, was die Schilddrüse zur übermäßigen Hormonproduktion stimuliert.</li>
+              <li>• <b>Tertiäre Hyperthyreose</b>: Diese seltene Form entsteht durch eine Überproduktion von <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a> im Hypothalamus.</li>
             </ul>
             <p>Nach der Symptomatik:</p>
             <ul>
@@ -42,7 +42,7 @@ export default {
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
           <img src="${img1}" alt="kaskade" style="max-width: 100%; height: auto;">
-            <p>In einer gesunden Schilddrüse reguliert der thyreotrope Regelkreis die Hormonproduktion. Der Hypothalamus schüttet TRH aus, das die Hypophyse zur Ausschüttung von TSH anregt, welches wiederum die Schilddrüse stimuliert, <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> zu produzieren. Bei Hyperthyreose wird dieser Mechanismus gestört, wodurch die Schilddrüse kontinuierlich zu viel Hormon produziert. Diese überschüssigen Hormone steigern den Stoffwechsel, erhöhen die Herzfrequenz und verursachen eine gesteigerte Wärmeproduktion. Die Empfindlichkeit gegenüber Katecholaminen wie Adrenalin wird erhöht, was zu den typischen Symptomen wie Nervosität, Schlaflosigkeit und Herzklopfen führt.</p>
+            <p>In einer gesunden Schilddrüse reguliert der thyreotrope Regelkreis die Hormonproduktion. Der Hypothalamus schüttet <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a> aus, das die Hypophyse zur Ausschüttung von <a href="/trafarette/tsh">Thyrotropin (TSH)</a> anregt, welches wiederum die Schilddrüse stimuliert, <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> zu produzieren. Bei Hyperthyreose wird dieser Mechanismus gestört, wodurch die Schilddrüse kontinuierlich zu viel Hormon produziert. Diese überschüssigen Hormone steigern den Stoffwechsel, erhöhen die Herzfrequenz und verursachen eine gesteigerte Wärmeproduktion. Die Empfindlichkeit gegenüber Katecholaminen wie Adrenalin wird erhöht, was zu den typischen Symptomen wie Nervosität, Schlaflosigkeit und Herzklopfen führt.</p>
           </div>`
         },
         {
@@ -69,7 +69,7 @@ export default {
               <thead>
                 <tr>
                   <th>Diagnose</th>
-                  <th>TSH</th>
+                  <th><a href="/trafarette/tsh">Thyrotropin (TSH)</a></th>
                   <th><a href="/trafarette/t3">T3</a></th>
                   <th>fT3</th>
                   <th><a href="/trafarette/t4">T4</a></th>
@@ -109,7 +109,7 @@ export default {
           "id": 6,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Die Behandlung richtet sich nach der Ursache und Schwere der Hyperthyreose. Medikamentös werden häufig Thyreostatika wie <a href="/trafarette/thiamazol">Thiamazol</a> oder Propylthiouracil eingesetzt, um die Hormonsynthese zu hemmen. Betablocker werden verabreicht, um Symptome wie Herzrasen zu lindern. In entzündlichen Fällen können Glukokortikoide eingesetzt werden, um die Hormonfreisetzung zu hemmen.</p>
+            <p>Die Behandlung richtet sich nach der Ursache und Schwere der Hyperthyreose. Medikamentös werden häufig <a href="/trafarette/thyreostatika">Thyreostatika</a> wie <a href="/trafarette/thiamazol">Thiamazol</a> oder Propylthiouracil eingesetzt, um die Hormonsynthese zu hemmen. Betablocker werden verabreicht, um Symptome wie Herzrasen zu lindern. In entzündlichen Fällen können Glukokortikoide eingesetzt werden, um die Hormonfreisetzung zu hemmen.</p>
             <p>Eine alternative Therapieform ist die <a href="/trafarette/radiojodtherapie">Radiojodtherapie</a>, bei der radioaktives Jod verwendet wird, um die Schilddrüsenzellen zu zerstören. Diese Methode ist besonders wirksam bei autonomen Adenomen und <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, wird jedoch bei Schwangeren und Stillenden nicht angewendet.</p>
             <p>In schweren oder therapieresistenten Fällen kann eine chirurgische Entfernung der Schilddrüse erforderlich sein. Nach einer vollständigen Entfernung ist eine lebenslange Hormonersatztherapie notwendig, um eine <a href="/trafarette/hypothyreose">Hypothyreose</a> zu vermeiden.</p>
           </div>`

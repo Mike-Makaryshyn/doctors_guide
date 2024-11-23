@@ -1,6 +1,6 @@
 export default {
   path: "thyreoperoxidase",
-  // http://localhost:5173/trafarette/thyreoperoxidase
+  // http://localhost:5173/trafarette/thyreoperoxidase,<a href="/trafarette/thyreoperoxidase">Thyreoperoxidase (TPO)</a>
   content: [
     {
       id: 1,
@@ -32,7 +32,7 @@ export default {
             <p>Die TPO ist ein Ziel bei der Diagnostik und Therapie von Schilddrüsenerkrankungen:</p>
             <ul>
               <li>• <b>Autoimmunerkrankungen</b>: Die Thyreoperoxidase ist häufig Ziel von Autoantikörpern, den sogenannten TPO-Antikörpern (TPO-Ak), die bei Autoimmunthyreopathien wie der <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> oder dem Morbus Basedow nachweisbar sind. Ein hoher Titer von TPO-Antikörpern weist auf eine autoimmune Genese der Schilddrüsenerkrankung hin und kann zur Diagnose dieser Krankheiten beitragen.</li>
-              <li>• <b>Therapeutische Hemmung</b>: In Fällen von <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, wie beim <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, werden TPO-Hemmer (Thyreostatika) wie <a href="/trafarette/thiamazol">Thiamazol</a> und Propylthiouracil eingesetzt. Diese Medikamente hemmen die TPO und reduzieren so die Jodierung und Hormonsynthese, was zur Senkung der Schilddrüsenhormonspiegel führt und die klinischen Symptome einer Überfunktion kontrolliert.</li>
+              <li>• <b>Therapeutische Hemmung</b>: In Fällen von <a href="/trafarette/hyperthyreose">Hyperthyreose</a>, wie beim <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, werden TPO-Hemmer (<a href="/trafarette/thyreostatika">Thyreostatika</a>) wie <a href="/trafarette/thiamazol">Thiamazol</a> und Propylthiouracil eingesetzt. Diese Medikamente hemmen die TPO und reduzieren so die Jodierung und Hormonsynthese, was zur Senkung der Schilddrüsenhormonspiegel führt und die klinischen Symptome einer Überfunktion kontrolliert.</li>
             </ul>
           </div>`
         },
@@ -50,10 +50,10 @@ export default {
           "id": 5,
           "title": "Diagnostische Bedeutung von TPO-Antikörpern",
           "textWithFormatting": `<div>
-            <p>Ein Nachweis von TPO-Antikörpern im Blut ist ein Indikator für autoimmune Schilddrüsenerkrankungen. Hohe Titer von TPO-Ak sind charakteristisch für:</p>
+            <p>Ein Nachweis von <a href="/trafarette/antitpo">Anti-TPO</a> im Blut ist ein Indikator für autoimmune Schilddrüsenerkrankungen. Hohe Titer von TPO-Ak sind charakteristisch für:</p>
             <ul>
               <li>• <b><a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a></b>: Die häufigste Ursache einer <a href="/trafarette/hypothyreose">Hypothyreose</a>, bei der eine chronische Entzündung der Schilddrüse zu einer allmählichen Zerstörung des Schilddrüsengewebes führt.</li>
-              <li>• <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b>: Obwohl die Hauptdiagnose durch die Bestimmung von TSH-Rezeptor-Antikörpern (TRAK) erfolgt, können auch TPO-Ak erhöht sein.</li>
+              <li>• <b><a href="/trafarette/morbusbasedow">Morbus Basedow</a></b>: Obwohl die Hauptdiagnose durch die Bestimmung von <a href="/trafarette/trak">TRAK (TSH-Rezeptor-Autoantikörper)</a> erfolgt, können auch TPO-Ak erhöht sein.</li>
             </ul>
           </div>`
         }

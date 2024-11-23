@@ -1,6 +1,6 @@
 export default {
   path: "iod",
-  // http://localhost:5173/trafarette/iod 
+  // http://localhost:5173/trafarette/iod,<a href="/trafarette/iod">Iod</a>
   content: [
     {
       id: 1,

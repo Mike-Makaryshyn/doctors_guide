@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenautonomie",
-  // http://localhost:5173/trafarette/schilddruesenautonomie 
+  // http://localhost:5173/trafarette/schilddruesenautonomie,<a href="/trafarette/schilddruesenautonomie">Schilddrüsenautonomie</a>
   content: [
     {
       id: 1,
@@ -19,7 +19,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Schilddrüsenautonomie kann in verschiedenen Formen auftreten:</p>
             <ul>
-              <li>• <b>Unifokale Autonomie (autonomes Adenom)</b>: Ein einzelner, autonomer Knoten in der Schilddrüse, der unabhängig von TSH Hormone produziert.</li>
+              <li>• <b>Unifokale Autonomie (autonomes Adenom)</b>: Ein einzelner, autonomer Knoten in der Schilddrüse, der unabhängig von <a href="/trafarette/tsh">Thyrotropin (TSH)</a> Hormone produziert.</li>
               <li>• <b>Multifokale Autonomie</b>: Mehrere autonome Knoten in der Schilddrüse.</li>
               <li>• <b>Disseminierte Autonomie</b>: Weitverteilte autonome Areale ohne klar abgrenzbare Knoten.</li>
             </ul>
@@ -60,7 +60,7 @@ export default {
             <p>Die Diagnostik einer Schilddrüsenautonomie umfasst:</p>
             <ul>
               <li>• <b>Szintigraphie</b>: Die Schilddrüsenszintigraphie dient der Bildgebung und Lokalisierung des autonomen Gewebes. Der verwendete Tracer (Tc-99m-Pertechnetat oder <a href="/trafarette/iod">Jod</a>-131) wird unter TSH-Suppression nur in autonomen Bereichen angereichert und erscheint im Szintigramm als “heiße Knoten”.</li>
-              <li>• <b>Labordiagnostik</b>: Die Analyse von basalem TSH, freiem <a href="/trafarette/t3">T3</a> (fT3) und freiem <a href="/trafarette/t4">T4</a> (fT4) gibt Aufschluss über die Stoffwechsellage der Schilddrüse. Zusätzlich können Autoantikörpertests (TRAK, Anti-TPO) durchgeführt werden, um eine immunologische Ursache (z.B. <a href="/trafarette/morbusbasedow">Morbus Basedow</a>) auszuschließen.</li>
+              <li>• <b>Labordiagnostik</b>: Die Analyse von basalem <a href="/trafarette/tsh">Thyrotropin (TSH)</a>, freiem <a href="/trafarette/t3">T3</a> (fT3) und freiem <a href="/trafarette/t4">T4</a> (fT4) gibt Aufschluss über die Stoffwechsellage der Schilddrüse. Zusätzlich können Autoantikörpertests (<a href="/trafarette/trak">TRAK (TSH-Rezeptor-Autoantikörper)</a>, <a href="/trafarette/antitpo">Anti-TPO</a>) durchgeführt werden, um eine immunologische Ursache (z.B. <a href="/trafarette/morbusbasedow">Morbus Basedow</a>) auszuschließen.</li>
             </ul>
           </div>`
         },
@@ -72,7 +72,7 @@ export default {
               <li>• <b>Chirurgische Resektion</b>: Entfernung des autonomen Schilddrüsengewebes bei größeren Knoten oder symptomatischer <a href="/trafarette/struma">Struma</a>.</li>
               <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Einsatz radioaktiven <a href="/trafarette/iod">Jods</a> zur selektiven Zerstörung des autonomen Gewebes, ideal für kleinere, multifokale Autonomien.</li>
               <li>• <b>Sklerotherapie</b>: Minimalinvasive Methode mit Injektion von Ethanol zur Verödung autonomer Knoten.</li>
-              <li>• <b>Medikamentöse Behandlung</b>: Kurzzeitige Anwendung von Thyreostatika zur Kontrolle der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> vor definitiver Therapie. Eine Langzeitbehandlung mit Thyreostatika ist nicht kurativ und nur zur temporären Symptomkontrolle geeignet.</li>
+              <li>• <b>Medikamentöse Behandlung</b>: Kurzzeitige Anwendung von <a href="/trafarette/thyreostatika">Thyreostatika</a> zur Kontrolle der <a href="/trafarette/hyperthyreose">Hyperthyreose</a> vor definitiver Therapie. Eine Langzeitbehandlung mit Thyreostatika ist nicht kurativ und nur zur temporären Symptomkontrolle geeignet.</li>
             </ul>
             <p>Die Wahl der Therapie richtet sich nach Größe, Lage und Ausdehnung der autonomen Areale sowie dem Allgemeinzustand des Patienten.</p>
           </div>`

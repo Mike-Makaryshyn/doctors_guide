@@ -2,7 +2,7 @@ import img1 from '../../../../assets/schilddrueseallg.png';
 import img2 from '../../../../assets/sd.png';
 export default {
   path: "schilddruesenhormone",
-  // http://localhost:5173/trafarette/schilddruesenhormone 
+  // http://localhost:5173/trafarette/schilddruesenhormone,<a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a>
   content: [
     {
       id: 1,
@@ -45,7 +45,7 @@ export default {
                 <p>Die Synthese der Schilddrüsenhormone erfolgt an der Außenseite der Plasmamembran der Epithelzellen der Schilddrüsenfollikel und umfasst drei Hauptschritte:</p>
                 <ol>
                     <li><b>Aufnahme von <a href="/trafarette/iod">Iodid</a>:</b> Iodid wird durch einen Na/I-Symporter aus dem Blutplasma in die Follikelzellen aufgenommen und durch den Cl/I-Austauscher (Pendrin) ins Lumen abgegeben. Dort wird es durch H<sub>2</sub>O<sub>2</sub> oxidiert, bevor es für die Iodierung verfügbar ist.</li>
-                    <li><b>Iodierung:</b> Die Thyreoperoxidase (TPO) katalysiert die Übertragung der Iodionen auf Tyrosinreste des <a href="/trafarette/thyreoglobulin">Thyreoglobulins</a>, wodurch Monoiodtyrosin (MIT) und Diiodtyrosin (DIT) entstehen.</li>
+                    <li><b>Iodierung:</b><a href="/trafarette/thyreoperoxidase">Die Thyreoperoxidase (TPO)</a> katalysiert die Übertragung der Iodionen auf Tyrosinreste des <a href="/trafarette/thyreoglobulin">Thyreoglobulins</a>, wodurch Monoiodtyrosin (MIT) und Diiodtyrosin (DIT) entstehen.</li>
                     <li><b>Konjugation:</b> MIT und DIT werden durch TPO zu <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> verknüpft. Zwei DIT-Moleküle bilden T4, während ein MIT und ein DIT zusammen T3 ergeben.</li>
                 </ol>
                 <p><b>3.2. Abbau</b></p>
@@ -114,7 +114,7 @@ export default {
                     <tr>
                         <td>Regulation der Bildung</td>
                         <td>Abhängig von der Aktivität der 5’-Deiodase-Enzyme und dem Bedarf des Körpers</td>
-                        <td>Hängt von der Schilddrüsenaktivität und der TSH-Stimulation ab</td>
+                        <td>Hängt von der Schilddrüsenaktivität und der <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Stimulation ab</td>
                         <td>Bildung nimmt bei Stress und bestimmten Krankheiten zu, um die Stoffwechselaktivität zu drosseln</td>
                     </tr>
                 </table>
@@ -125,8 +125,8 @@ export default {
             "title": "Regulation der Schilddrüsenhormone",
             "textWithFormatting": `<div>
                 <p><b>4.4.1. Hypothalamischer Regelkreis:</b></p>
-                <p>Die Steuerung der Schilddrüsenhormonsekretion erfolgt über den Hypothalamus und die Hypophyse. Der Hypothalamus produziert TRH (Thyreotropin-Releasing-Hormon), welches die Ausschüttung von TSH (Thyreoidea-stimulierendes Hormon) durch die Hypophyse anregt. TSH stimuliert dann die Schilddrüse zur Produktion von T3 und T4.</p>
-                <p><b>Feedbackmechanismus:</b> Ein hoher Spiegel an <a href="/trafarette/t3">T3</a> und T4 hemmt die Freisetzung von TRH und TSH, was die Hormonproduktion reguliert. Dieser Regelkreis wird als thyreotroper Regelkreis bezeichnet.</p>
+                <p>Die Steuerung der Schilddrüsenhormonsekretion erfolgt über den Hypothalamus und die Hypophyse. Der Hypothalamus produziert <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a>, welches die Ausschüttung von <a href="/trafarette/tsh">Thyrotropin (TSH)</a> (Thyreoidea-stimulierendes Hormon) durch die Hypophyse anregt. TSH stimuliert dann die Schilddrüse zur Produktion von T3 und T4.</p>
+                <p><b>Feedbackmechanismus:</b> Ein hoher Spiegel an <a href="/trafarette/t3">T3</a> und T4 hemmt die Freisetzung von TRH und <a href="/trafarette/tsh">Thyrotropin (TSH)</a>, was die Hormonproduktion reguliert. Dieser Regelkreis wird als thyreotroper Regelkreis bezeichnet.</p>
                 <p><b>4.4.2. Hypophysärer Regelkreis:</b></p>
                 <p>Ein zusätzlicher Regelkreis innerhalb des Hypophysenvorderlappens, bekannt als Brokken-Wiersinga-Prummel-Regelkreis, reguliert die TSH-Produktion durch ein Ultrashort-Feedback.</p>
                 <p><b>4.4.3. Peripher-zellulärer Regelkreis:</b></p>
@@ -149,7 +149,7 @@ export default {
                     <li><b>Definition:</b> Überproduktion von <a href="/trafarette/t3">T3</a> und T4 führt zu einer gesteigerten Stoffwechselrate.</li>
                     <li><b>Ursachen:</b> <a href="/trafarette/morbusbasedow">Morbus Basedow</a>, autonome Adenome, TSH-produzierende Tumoren.</li>
                     <li><b>Symptome:</b> Gewichtsverlust, Tachykardie, Unruhe, Wärmeempfindung.</li>
-                    <li><b>Diagnose:</b> Erniedrigtes TSH, erhöhte T3/T4-Spiegel.</li>
+                    <li><b>Diagnose:</b> Erniedrigtes <a href="/trafarette/tsh">Thyrotropin (TSH)</a>, erhöhte T3/T4-Spiegel.</li>
                     <li><b>Therapie:</b> Medikamente, radioaktive Jodtherapie, Operation.</li>
                 </ul>
                 <p><b><a href="/trafarette/hypothyreose">Hypothyreose</a>:</b></p>

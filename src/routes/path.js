@@ -23,4 +23,7 @@ export const pathList = {
     trafarette: {
         path: '/trafarette/:name'
     },
+    language_study: { // Новий маршрут
+        path: '/language-study'
+    },
 };

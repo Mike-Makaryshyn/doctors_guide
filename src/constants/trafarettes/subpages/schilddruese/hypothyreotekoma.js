@@ -1,6 +1,6 @@
 export default {
   path: "hypothyreotekoma",
-  // http://localhost:5173/trafarette/hypothyreotekoma 
+  // http://localhost:5173/trafarette/hypothyreotekoma,<a href="/trafarette/hypothyreotekoma">Das hypothyreote Koma</a>
   content: [
     {
       id: 1,
@@ -52,7 +52,7 @@ export default {
           "textWithFormatting": `<div>
             <p>Die Diagnose basiert auf der klinischen Präsentation sowie auf spezifischen Laborwerten, die eine schwere <a href="/trafarette/hypothyreose">Hypothyreose</a> bestätigen:</p>
             <ul>
-              <li>• <b>TSH-Erhöhung</b> bei primärer <a href="/trafarette/hypothyreose">Hypothyreose</a></li>
+              <li>• <b><a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Erhöhung</b> bei primärer <a href="/trafarette/hypothyreose">Hypothyreose</a></li>
               <li>• <b>Niedrige <a href="/trafarette/t4">fT4-</a> und <a href="/trafarette/t3">fT3</a>-Werte</b></li>
               <li>• <b>Hyponatriämie</b>, oft durch SIADH (Syndrom der inadäquaten ADH-Sekretion)</li>
               <li>• <b>Erhöhte CO₂-Werte</b> bei respiratorischer Globalinsuffizienz</li>

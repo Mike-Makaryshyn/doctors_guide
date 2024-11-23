@@ -1,6 +1,6 @@
 export default {
   path: "t4",
-  // http://localhost:5173/trafarette/t4
+  // http://localhost:5173/trafarette/t4,<a href="/trafarette/t4">Thyroxin (T4)</a>
   content: [
     {
       id: 1,
@@ -38,8 +38,8 @@ export default {
             "textWithFormatting": `<div>
                 <p>Die Regulation der Synthese und Sekretion von T4 erfolgt über das hypothalamisch-hypophysäre System:</p>
                 <ul>
-                    <li>• <b>Hypothalamus:</b> Produziert Thyreotropin-Releasing-Hormon (TRH), welches die Hypophyse stimuliert.</li>
-                    <li>• <b>Hypophyse:</b> Schüttet Thyroidea-stimulierendes Hormon (TSH) aus, das die Schilddrüse zur Produktion von T4 und T3 anregt.</li>
+                    <li>• <b>Hypothalamus:</b> Produziert <a href="/trafarette/trh">Thyreotropin-Releasing-Hormon (TRH)</a>, welches die Hypophyse stimuliert.</li>
+                    <li>• <b>Hypophyse:</b> Schüttet Thyroidea-stimulierendes Hormon (<a href="/trafarette/tsh">TSH</a>) aus, das die Schilddrüse zur Produktion von T4 und T3 anregt.</li>
                 </ul>
                 <p>T4 und <a href="/trafarette/t3">T3</a> steuern Wachstumsprozesse, die Zelldifferenzierung sowie anabole und katabole Stoffwechselwege. Über eine negative Rückkopplung hemmen sie die Freisetzung von TRH und TSH und regulieren so ihre eigene Produktion.</p>
             </div>`

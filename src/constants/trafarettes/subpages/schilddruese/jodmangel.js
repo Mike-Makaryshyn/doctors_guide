@@ -1,6 +1,6 @@
 export default {
   path: "jodmangel",
-  // http://localhost:5173/trafarette/jodmangel 
+  // http://localhost:5173/trafarette/jodmangel,,<a href="/trafarette/jodmangel">Jodmangel</a>
   content: [
     {
       id: 1,
@@ -19,7 +19,7 @@ export default {
           "textWithFormatting": `<div>
             <p><a href="/trafarette/iod">Jod</a> ist essenziell für die Synthese der <a href="/trafarette/schilddruesenhormone">Schilddrüsenhormone</a> <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a>, die für Stoffwechsel, Wachstum und Hirnentwicklung wichtig sind:</p>
             <ul>
-              <li>• <b>Auswirkungen auf die Schilddrüse</b>: Jodmangel senkt die T3/T4-Produktion und erhöht TSH, was zu einer <a href="/trafarette/struma">Struma</a> führt.</li>
+              <li>• <b>Auswirkungen auf die Schilddrüse</b>: Jodmangel senkt die T3/T4-Produktion und erhöht <a href="/trafarette/tsh">Thyrotropin (TSH)</a>, was zu einer <a href="/trafarette/struma">Struma</a> führt.</li>
               <li>• <b><a href="/trafarette/hypothyreose">Hypothyreose</a> und Kretinismus</b>: Schwere Mängel verursachen Hypothyreose und Kretinismus, eine Entwicklungsstörung bei Kindern.</li>
               <li>• <b>Folgen bei Erwachsenen</b>: Chronischer Mangel führt zu <a href="/trafarette/struma">Struma</a>, knotiger Vergrößerung und kann <a href="/trafarette/hyperthyreose">Hyperthyreose</a> auslösen.</li>
             </ul>

@@ -1,6 +1,6 @@
 export default {
   path: "morbusbasedow",
-  // http://localhost:5173/trafarette/morbusbasedow 
+  // http://localhost:5173/trafarette/morbusbasedow,<a href="/trafarette/morbusbasedow">Morbus Basedow</a>
   content: [
     {
       id: 1,
@@ -36,14 +36,14 @@ export default {
           "id": 4,
           "title": "Pathophysiologie",
           "textWithFormatting": `<div>
-            <p>Im Zentrum der Pathophysiologie steht die Bildung von Autoantikörpern des Typs IgG, die als TSH-Rezeptor-Antikörper (TRAK) bekannt sind. Diese binden an die TSH-Rezeptoren der Follikelzellen der Schilddrüse und ahmen die Wirkung des natürlichen TSH nach:</p>
+            <p>Im Zentrum der Pathophysiologie steht die Bildung von Autoantikörpern des Typs IgG, die als <a href="/trafarette/trak">TRAK (TSH-Rezeptor-Autoantikörper)</a> bekannt sind. Diese binden an die <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Rezeptoren der Follikelzellen der Schilddrüse und ahmen die Wirkung des natürlichen TSH nach:</p>
             <ul>
               <li>• <b>Dauerstimulation der Schilddrüse</b>: Die Antikörper bewirken eine kontinuierliche Stimulation der Schilddrüsenzellen, was zu einer Überproduktion von <a href="/trafarette/t3">T3</a> und <a href="/trafarette/t4">T4</a> führt.</li>
               <li>• <b><a href="/trafarette/struma">Struma</a></b>: Die chronische Stimulation führt zu einer Vergrößerung der Schilddrüse.</li>
               <li>• <b>Thyreotoxikose</b>: Der erhöhte Hormonspiegel führt zu den typischen Symptomen einer Überfunktion der Schilddrüse.</li>
               <li>• <b>Extrathyreoidale Manifestationen</b>: Diese umfassen die endokrine Orbitopathie und das prätibiale <a href="/trafarette/myxoedem">Myxödem</a>, die durch die Bindung der Antikörper an ähnliche Rezeptoren im orbitalen und subkutanen Gewebe verursacht werden.</li>
             </ul>
-            <p>Im Unterschied zu anderen Formen der Hyperthyreose bleibt die TSH-Produktion supprimiert, da die TRAK die Feedbackschleife der Hypophyse beeinflussen. Dieser Mechanismus führt dazu, dass TSH als alleiniger Parameter zur Überwachung nicht ausreicht.</p>
+            <p>Im Unterschied zu anderen Formen der Hyperthyreose bleibt die <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Produktion supprimiert, da die TRAK die Feedbackschleife der Hypophyse beeinflussen. Dieser Mechanismus führt dazu, dass TSH als alleiniger Parameter zur Überwachung nicht ausreicht.</p>
           </div>`
         },
         {
@@ -75,7 +75,7 @@ export default {
             <p>Die Diagnose basiert auf einer Kombination aus klinischen Untersuchungen, Laboruntersuchungen und bildgebenden Verfahren:</p>
             <ul>
               <li>• <b>Körperliche Untersuchung</b>: Das typische Schwirren oder Brummen bei der Auskultation der Halsregion durch erhöhte Durchblutung.</li>
-              <li>• <b>Laboruntersuchungen</b>: Erhöhte <a href="/trafarette/t3">T3-</a> und <a href="/trafarette/t4">T4-</a>Spiegel bei supprimiertem TSH. Nachweis von TRAK im Blut bestätigt die Autoimmunursache.</li>
+              <li>• <b>Laboruntersuchungen</b>: Erhöhte <a href="/trafarette/t3">T3-</a> und <a href="/trafarette/t4">T4-</a>Spiegel bei supprimiertem TSH. Nachweis von <a href="/trafarette/trak">TRAK (<a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Rezeptor-Autoantikörper)</a> im Blut bestätigt die Autoimmunursache.</li>
               <li>• <b>Bildgebung</b>:
                 <ul>
                   <li>• <b>Sonographie</b>: Typischerweise echoarmes, stark durchblutetes Schilddrüsengewebe.</li>
@@ -89,7 +89,7 @@ export default {
           "id": 8,
           "title": "Therapie",
           "textWithFormatting": `<div>
-            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit Thyreostatika wie <a href="/trafarette/thiamazol">Thiamazol</a> oder <a href="/trafarette/carbimazol">Carbimazol</a>, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
+            <p>Medikamentöse Behandlung: Eine initiale Behandlung erfolgt mit <a href="/trafarette/thyreostatika">Thyreostatika</a> wie <a href="/trafarette/thiamazol">Thiamazol</a> oder <a href="/trafarette/carbimazol">Carbimazol</a>, die die Schilddrüsenhormonproduktion hemmen. Betablocker können ergänzend zur Kontrolle der Symptome eingesetzt werden.</p>
             <p><b>Definitive Therapiemöglichkeiten:</b></p>
             <ul>
               <li>• <b><a href="/trafarette/radiojodtherapie">Radiojodtherapie</a></b>: Eine häufig gewählte Behandlung, die das Schilddrüsengewebe durch die Aufnahme von radioaktivem <a href="/trafarette/iod">Jod</a> gezielt zerstört.</li>

@@ -307,7 +307,7 @@ export const main_menu_items = {
                pl: "Studia językowe",
                uk: "Вивчення мови",
                ru: "Изучение языка",
-               de: "Sprachstudium",
+               de: "Sprachlernen",
                link: "/language-study",
             },
             {

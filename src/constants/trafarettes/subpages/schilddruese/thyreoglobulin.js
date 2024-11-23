@@ -1,6 +1,6 @@
 export default {
   path: "thyreoglobulin",
-  // http://localhost:5173/trafarette/thyreoglobulin
+  // http://localhost:5173/trafarette/thyreoglobulin,<a href="/trafarette/thyreoglobulin">Thyreoglobulin (Tg)</a>
   content: [
     {
       id: 1,
@@ -18,7 +18,7 @@ export default {
           "title": "Physiologie",
           "textWithFormatting": `<div>
             <p>Thyreoglobulin ist essenziell für die Schilddrüsenhormonproduktion. Die Synthese und Speicherung erfolgt in den Follikeln der Schilddrüse, wobei Tg als Matrix für die Bildung der Hormone T3 und T4 fungiert. Unter der Stimulation durch das schilddrüsenstimulierende Hormon (TSH) aus der Hypophyse wird Thyreoglobulin jodiert, indem Jodid-Ionen in das Molekül eingebaut und Tyrosinreste zu MIT (Monojodtyrosin) und DIT (Dijodtyrosin) jodiert werden. Diese Reste koppeln dann zu T3 und T4, die bei Bedarf abgespalten und in die Blutbahn freigesetzt werden.</p>
-            <p>Die Regulation der Thyreoglobulinbildung und -freisetzung erfolgt über den TSH-Rezeptor, dessen Aktivierung die Synthese und Sekretion stimuliert.</p>
+            <p>Die Regulation der Thyreoglobulinbildung und -freisetzung erfolgt über den <a href="/trafarette/tsh">Thyrotropin (TSH)</a>-Rezeptor, dessen Aktivierung die Synthese und Sekretion stimuliert.</p>
           </div>`
         },
         {
@@ -35,7 +35,7 @@ export default {
             <p>Veränderungen der Thyreoglobulinsynthese können zu klinisch relevanten Störungen führen:</p>
             <ul>
               <li>• <b>Dyshormogene <a href="/trafarette/struma">Struma</a></b>: Eine angeborene Störung, bei der die Thyreoglobulinsynthese oder die hormonelle Jodierung defekt ist, was zu <a href="/trafarette/hypothyreose">Hypothyreose</a> führt.</li>
-              <li>• <b>Autoimmunthyreopathien</b>: Antikörper gegen Thyreoglobulin (Tg-AK) werden häufig bei Autoimmunerkrankungen wie der <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> und gelegentlich bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> nachgewiesen. Diese Antikörper können eine chronische Entzündung und letztlich eine <a href="/trafarette/hypothyreose">Hypothyreose</a> verursachen.</li>
+              <li>• <b>Autoimmunthyreopathien</b>: Antikörper gegen Thyreoglobulin (<a href="/trafarette/antitg">Antithyreoglobulin (Anti-Tg)</a>) werden häufig bei Autoimmunerkrankungen wie der <a href="/trafarette/hashimoto">Hashimoto-Thyreoiditis</a> und gelegentlich bei <a href="/trafarette/morbusbasedow">Morbus Basedow</a> nachgewiesen. Diese Antikörper können eine chronische Entzündung und letztlich eine <a href="/trafarette/hypothyreose">Hypothyreose</a> verursachen.</li>
             </ul>
           </div>`
         },
@@ -43,7 +43,7 @@ export default {
           "id": 5,
           "title": "Labordiagnostik",
           "textWithFormatting": `<div>
-            <p>Die Bestimmung des Thyreoglobulinspiegels im Serum ist besonders wichtig bei Patienten mit Schilddrüsenkarzinom, um die Nachsorge nach einer totalen <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> zu überwachen. Ein Anstieg des Tg-Spiegels kann ein Hinweis auf ein Rezidiv oder eine Metastasierung sein. Allerdings können Autoantikörper gegen Thyreoglobulin die gemessenen Werte verfälschen, was zu falsch niedrigen Ergebnissen führen kann. Daher ist es empfehlenswert, auch die Tg-AK-Spiegel zu bestimmen.</p>
+            <p>Die Bestimmung des Thyreoglobulinspiegels im Serum ist besonders wichtig bei Patienten mit Schilddrüsenkarzinom, um die Nachsorge nach einer totalen <a href="/trafarette/schilddruesenresektionen">Thyreoidektomie</a> zu überwachen. Ein Anstieg des Tg-Spiegels kann ein Hinweis auf ein Rezidiv oder eine Metastasierung sein. Allerdings können Autoantikörper gegen Thyreoglobulin die gemessenen Werte verfälschen, was zu falsch niedrigen Ergebnissen führen kann. Daher ist es empfehlenswert, auch die <a href="/trafarette/antitg">Antithyreoglobulin (Anti-Tg)</a>-Spiegel zu bestimmen.</p>
           </div>`
         },
         {

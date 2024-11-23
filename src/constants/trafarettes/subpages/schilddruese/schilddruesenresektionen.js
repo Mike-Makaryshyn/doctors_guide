@@ -1,6 +1,6 @@
 export default {
   path: "schilddruesenresektionen",
-  // http://localhost:5173/trafarette/schilddruesenresektionen
+  // http://localhost:5173/trafarette/schilddruesenresektionen,<a href="/trafarette/schilddruesenresektionen">Schilddrüsenresektionen</a>
   content: [
     {
       id: 1,
