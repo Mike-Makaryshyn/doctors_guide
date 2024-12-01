@@ -57,7 +57,7 @@ import analgesie from "./subpages/anesthesia/analgesie";
 import hypnose from "./subpages/anesthesia/hypnose";
 import muskelrelaxation from "./subpages/anesthesia/muskelrelaxation";
 import oberflaechenanaesthesie from "./subpages/anesthesia/oberflaechenanaesthesie";
-import Infiltrationsanaesthesie from "./subpages/anesthesia/Infiltrationsanaesthesie";
+import Infiltrationsanaesthesie from "./subpages/anesthesia/infiltrationsanaesthesie";
 import lokalanaesthesie from "./subpages/anesthesia/lokalanaesthesie";
 import leitungsanaesthesie from "./subpages/anesthesia/leitungsanaesthesie";
 import plexusanaesthesie from "./subpages/anesthesia/plexusanaesthesie";
