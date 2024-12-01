@@ -21,6 +21,10 @@ const DocumentsPage = React.lazy(() =>
   import("../pages/DocumentsPage/DocumentsPage")
 );
 
+const DocumentsPageEU = React.lazy(() =>
+  import("../pages/DocumentsPageEU/DocumentsPageEU")
+);
+
 const WhatIsFSPPage = React.lazy(() =>
   import("../pages/WhatIsFSPPage/WhatIsFSPPage")
 );
@@ -61,6 +65,7 @@ export default function Routers() {
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
+        <Route path={pathList.documentsEU.path} element={<DocumentsPageEU />} />
         <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
         <Route
           path={pathList.exam_explanations.path}

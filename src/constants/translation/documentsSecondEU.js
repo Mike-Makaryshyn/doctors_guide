@@ -6,7 +6,7 @@ const defaultPropsSecond = {
 };
 
 // Second table
-export const documentSecond = [
+export const documentSecondEU = [
    {
       id: 121323,
       ...defaultPropsSecond,

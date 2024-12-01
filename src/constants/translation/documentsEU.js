@@ -9,7 +9,7 @@ const defaultProps = {
    sent: "not_check",
 };
 
-export const messages = {
+export const messagesEU = {
    en: {
       lessThan20: "There is some job to do. Don't hesitate!",
       between20And50: "Let's keep going!",
@@ -78,7 +78,7 @@ const notNeededText = {
    de: "Nicht nötig",
 };
 
-export const columnsFirst = [
+export const columnsFirstEU = [
    {
       name: "category",
       label: {
@@ -179,7 +179,7 @@ export const columnsFirst = [
    },
 ];
 
-export const titles = {
+export const titlesEU = {
    main: {
       uk: "Подача заяв",
       en: "Submission of Applications",
@@ -205,7 +205,7 @@ export const titles = {
 };
 
 // Подача заяви
-export const documents = [
+export const documentsEU = [
    {
       id: 1,
       ...defaultProps,
@@ -218,7 +218,7 @@ export const documents = [
          ar: "التحقق من الهوية (جواز السفر الأجنبي أو جواز السفر)",
          tr: "Kimlik doğrulama (Yabancı pasaport veya pasaport)",
          pl: "Weryfikacja tożsamości (Paszport zagraniczny lub paszport)",
-         uk: "Підтвердження особистості (Закордонний паспорт або паспорт)",
+         uk: "Підтвердження особистості ІІІІ (Закордонний паспорт або паспорт)",
          ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
          de: "Identitätsüberprüfung (Reisepass oder Pass)",
       },
@@ -290,7 +290,7 @@ export const documents = [
    
 ];
 
-export const documentsOptional = [
+export const documentsOptionalEU = [
    {
       id: 14,
       ...defaultProps,
