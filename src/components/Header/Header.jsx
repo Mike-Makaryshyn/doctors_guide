@@ -6,8 +6,8 @@ import {
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import styles from "./header.scss";
 import cn from "classnames";
+import styles from "./header.module.scss";
 
 const Header = () => {
    const selectedLanguage = localStorageGet(

@@ -33,7 +33,14 @@ const ExamEmplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
 
+const ApprobationPage = React.lazy(() =>
+  import("../pages/ApprobationPage/ApprobationPage")
+);
 const Trafatette = React.lazy(() => import("../pages/Trafatette/Trafatette"));
+
+const LinksPage = React.lazy(() =>
+  import("../pages/LinksPage/LinksPage")
+);
 
 export default function Routers() {
   return (
@@ -64,7 +71,8 @@ export default function Routers() {
           path={pathList.language_study.path} // Вказуємо шлях до сторінки
           element={<LanguageStudyPage />} // Відображаємо компонент
         />
-
+<Route path={pathList.step_by_step.path} element={<ApprobationPage/>} />
+<Route path={pathList.links.path} element={<LinksPage/>} />
         {/* NOT FOUND PAGE */}
         <Route
           path="*"

@@ -26,4 +26,10 @@ export const pathList = {
     language_study: { // Новий маршрут
         path: '/language-study'
     },
+    links: {
+        path: '/links'
+    },
+    step_by_step: {
+        path: '/step-by-step'
+    },
 };

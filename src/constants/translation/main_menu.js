@@ -299,6 +299,18 @@ export const main_menu_items = {
          },
          items: [
             {
+               en: "Links Page",
+               fr: "Page des liens",
+               es: "Página de enlaces",
+               ar: "صفحة الروابط",
+               tr: "Bağlantı Sayfası",
+               pl: "Strona z linkami",
+               uk: "Сторінка з посиланнями",
+               ru: "Страница с ссылками",
+               de: "Link-Seite",
+               link: "/links", // маршрут до сторінки LinksPage
+           },
+            {
                en: "Language Study",
                fr: "Étude de la langue",
                es: "Estudio del idioma",

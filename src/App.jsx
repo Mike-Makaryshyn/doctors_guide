@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import MainMenu from "./pages/MainMenuPage/MainMenuPage";
 import IntroductionPage from "./pages/IntroductionPage/IntroductionPage";
 import Routers from "./routes";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ApprobationPage from "./pages/ApprobationPage/ApprobationPage";
 
 const GERMAN_MAP_PAGE = 3;
 const DEFAULT_LANGUAGE = "de";

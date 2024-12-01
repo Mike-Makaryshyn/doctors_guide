@@ -2,6 +2,7 @@ import img2 from '../../../../assets/Aorta.png';
 import img1 from '../../../../assets/Aortapräzies.png';
 export default {
   path: "aorta",
+  folder: "anatomie",
   // http://localhost:5173/trafarette/aorta
   content: [
     {
