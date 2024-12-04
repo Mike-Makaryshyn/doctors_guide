@@ -4,7 +4,7 @@ export default {
   plugins: [react()],
   build: {
    rollupOptions: {
-     external: ['jspdf', 'react-firebase-hooks'], // Exclude jsPDF from the bundle
+     external: ['jspdf', 'react-firebase-hooks', 'jspdf-autotable'], // Exclude jsPDF from the bundle
    },
  },
 };
