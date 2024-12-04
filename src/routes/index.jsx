@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { pathList } from "./path";
 import MainLayout from "../layouts/MainLayout/MainLayout";
@@ -8,47 +8,46 @@ import { localStorageGet } from "../utils/localStorage";
 const IntroductionPage = React.lazy(() =>
   import("../pages/IntroductionPage/IntroductionPage")
 );
-
 const GermanyLandsPage = React.lazy(() =>
   import("../pages/GermanyLandsPage/GermanyLandsPage")
 );
-
 const MainMenuPage = React.lazy(() =>
   import("../pages/MainMenuPage/MainMenuPage")
 );
-
 const DocumentsPage = React.lazy(() =>
   import("../pages/DocumentsPage/DocumentsPage")
 );
-
 const DocumentsPageEU = React.lazy(() =>
   import("../pages/DocumentsPageEU/DocumentsPageEU")
 );
-
 const WhatIsFSPPage = React.lazy(() =>
   import("../pages/WhatIsFSPPage/WhatIsFSPPage")
 );
-
 const LanguageStudyPage = React.lazy(() =>
   import("../pages/LanguageStudy/LanguageStudy")
 );
-
 const ExamEmplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
-
 const ApprobationPage = React.lazy(() =>
   import("../pages/ApprobationPage/ApprobationPage")
 );
-const Trafatette = React.lazy(() => import("../pages/Trafatette/Trafatette"));
-
+const Trafatette = React.lazy(() =>
+  import("../pages/Trafatette/Trafatette")
+);
 const LinksPage = React.lazy(() =>
   import("../pages/LinksPage/LinksPage")
+);
+const WhatIsApprobationPage = React.lazy(() =>
+  import("../pages/WhatIsApprobationPage/WhatIsApprobationPage")
+);
+const AllMedicalTerminologyPage = React.lazy(() =>
+  import("../pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage")
 );
 
 export default function Routers() {
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         {/* Dynamic rendering of initial page based on localStorage */}
         {localStorageGet("currentPage", "/") === "/lands" && (
@@ -72,12 +71,19 @@ export default function Routers() {
           element={<ExamEmplanationsPage />}
         />
         <Route path={pathList.trafarette.path} element={<Trafatette />} />
+        <Route path={pathList.language_study.path} element={<LanguageStudyPage />} />
+        <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
+        <Route path={pathList.links.path} element={<LinksPage />} />
+        <Route path={pathList.approbation.path} element={<WhatIsApprobationPage />} />
         <Route
-          path={pathList.language_study.path} // Вказуємо шлях до сторінки
-          element={<LanguageStudyPage />} // Відображаємо компонент
+          path="/all-medical-terminology"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AllMedicalTerminologyPage />
+            </Suspense>
+          }
         />
-<Route path={pathList.step_by_step.path} element={<ApprobationPage/>} />
-<Route path={pathList.links.path} element={<LinksPage/>} />
+
         {/* NOT FOUND PAGE */}
         <Route
           path="*"

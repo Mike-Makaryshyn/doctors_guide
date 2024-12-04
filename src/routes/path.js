@@ -35,4 +35,7 @@ export const pathList = {
     step_by_step: {
         path: '/step-by-step'
     },
+    approbation: {
+        path: '/approbation'
+    },
 };

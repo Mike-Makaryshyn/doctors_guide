@@ -1,63 +1,104 @@
-/* Глобальні стилі можна перенести в основний CSS-файл */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background: #104c05;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-  }
-  
-  .progress_bar {
-    display: flex;
-    justify-content: space-around;
-    background: #f4f4f4;
-    padding: 1em 0;
-    margin-bottom: 2em;
-  }
-  
-  .progress-bar div {
-    cursor: pointer;
-  }
-  
-  section {
-    padding: 2em;
-    border-bottom: 1px solid #ddd;
-  }
-  
+/* Загальний контейнер */
+.container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+}
 
-  
-  .resources {
-    list-style: none;
-    padding: 0;
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #2e3a46;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 16px;
+  color: #536471;
+}
+
+/* Контейнери кроків */
+.steps {
+  display: flex; /* Горизонтальне розташування */
+  flex-direction: row; /* Розташування в рядок */
+  gap: 15px; /* Відступи між контейнерами */
+  overflow-x: auto; /* Прокрутка, якщо не вистачає місця */
+  padding-bottom: 10px; /* Простір під контейнерами */
+}
+
+.stepContainer {
+  position: relative;
+  min-width: 200px; /* Мінімальна ширина контейнера */
+  flex: 1; /* Контейнери розтягуються рівномірно */
+}
+
+.step {
+  background: #00695c;
+  color: white;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+}
+
+.step.active {
+  background: #004d40;
+  transform: scale(1.02);
+}
+
+.stepContainer .step::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #00695c;
+  transform: translateY(-50%) rotate(45deg);
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.stepContainer .step.active::after {
+  background-color: #004d40;
+}
+
+/* Контент кроків */
+.stepContent {
+  background: #ffffff;
+  padding: 20px; /* Збільшений відступ */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+
+  /* Розміщення на ширину екрана */
+  position: absolute; /* Вміст поверх інших елементів */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%; /* Контент займає 90% ширини екрана */
+  z-index: 10; /* Підняти над іншими елементами */
+  display: block; /* Відображення контенту */
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .resources li {
-    background: #f4f4f4;
-    margin: 0.5em 0;
-    padding: 0.5em;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .button {
-    display: inline-block;
-    background: #6c7ae0;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    margin-top: 1em;
-  }
-  
-  footer {
-    background: #6c7ae0;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
+}
