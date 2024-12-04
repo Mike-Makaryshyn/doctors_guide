@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./AllMedicalTerminologyPage.module.scss";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable"; // Додано плагін для роботи з таблицями
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, db } from "../../firebase";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 
 const AllMedicalTerminologyPage = () => {
+  const [user] = useAuthState(auth); // Користувач
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDefinitions, setSelectedDefinitions] = useState([]);
   const [showDefinitions, setShowDefinitions] = useState(true);
   const [collapsedCategories, setCollapsedCategories] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
+  // Унікальні категорії
   const allCategories = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories))
   );
 
+  // Фільтр термінів
   const filteredTerms = medicalTerms.filter((term) => {
     const matchesSearch =
       term.latin.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,6 +43,7 @@ const AllMedicalTerminologyPage = () => {
     });
   });
 
+  // Обробка вибору категорій
   const handleCategoryToggle = (category) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -42,6 +52,7 @@ const AllMedicalTerminologyPage = () => {
     );
   };
 
+  // Обробка вибору термінів
   const handleDefinitionSelect = (id) => {
     setSelectedDefinitions((prev) =>
       prev.includes(id)
@@ -50,6 +61,7 @@ const AllMedicalTerminologyPage = () => {
     );
   };
 
+  // Обробка згортання таблиць
   const toggleCollapseCategory = (category) => {
     setCollapsedCategories((prev) => ({
       ...prev,
@@ -57,21 +69,102 @@ const AllMedicalTerminologyPage = () => {
     }));
   };
 
-  const saveDefinitions = () => {
-    console.log("Selected Definitions:", selectedDefinitions);
+  // Збереження у PDF з таблицею
+  const saveToPDF = () => {
+    const doc = new jsPDF();
+
+    // Заголовок
+    doc.setFont("Helvetica", "bold");
+    doc.setFontSize(16);
+    doc.text("Вибрані медичні терміни", 10, 10);
+
+    // Дані для таблиці
+    const tableData = selectedDefinitions.map((termId) => {
+      const term = medicalTerms.find((term) => term.id === termId);
+      return [term.latin, term.german, term.germanDefinition];
+    });
+
+    // Структура таблиці
+    doc.autoTable({
+      head: [["Латинська назва", "Німецька назва", "Означення"]],
+      body: tableData,
+      startY: 20,
+      styles: {
+        font: "Helvetica",
+        fontSize: 10,
+        cellPadding: 5,
+      },
+      headStyles: {
+        fillColor: [52, 152, 219],
+        textColor: 255,
+        halign: "center",
+      },
+      bodyStyles: {
+        textColor: [33, 33, 33],
+      },
+      alternateRowStyles: {
+        fillColor: [245, 245, 245],
+      },
+    });
+
+    // Завантаження PDF
+    doc.save("selected_terms.pdf");
+    setShowModal(false);
+  };
+
+  // Збереження в особистий кабінет
+  const saveToPersonalAccount = async () => {
+    if (!user) {
+      alert("Будь ласка, увійдіть у систему, щоб зберегти дані!");
+      return;
+    }
+
+    try {
+      const userDoc = doc(db, "users", user.uid);
+      const selectedTerms = selectedDefinitions.map((termId) => {
+        const term = medicalTerms.find((term) => term.id === termId);
+        return {
+          id: term.id,
+          latin: term.latin,
+          german: term.german,
+          germanDefinition: term.germanDefinition,
+        };
+      });
+
+      await updateDoc(userDoc, {
+        savedDefinitions: arrayUnion(...selectedTerms),
+      });
+      alert("Визначення успішно збережені у вашому особистому кабінеті!");
+    } catch (error) {
+      console.error("Помилка при збереженні визначень:", error);
+      alert("Сталася помилка при збереженні. Спробуйте пізніше.");
+    }
+
+    setShowModal(false);
+  };
+
+  // Показати модальне вікно
+  const handleSaveDefinitions = () => {
+    if (selectedDefinitions.length === 0) {
+      alert("Оберіть хоча б один термін!");
+      return;
+    }
+    setShowModal(true);
   };
 
   return (
     <div className={styles.allMedicalTerminologyPage}>
       <h1>Уся медична термінологія</h1>
 
+      {/* Кнопки дій */}
       <div className={styles.topButtons}>
-        {/* Кнопка збереження */}
-        <button onClick={saveDefinitions} className={styles.actionButton}>
+        <button
+          onClick={handleSaveDefinitions}
+          className={styles.actionButton}
+        >
           Зберегти вибрані визначення
         </button>
 
-        {/* Кнопка показу/приховування визначень */}
         <button
           onClick={() => setShowDefinitions((prev) => !prev)}
           className={styles.actionButton}
@@ -91,14 +184,6 @@ const AllMedicalTerminologyPage = () => {
 
       {/* Фільтри категорій */}
       <div className={styles.categoryFilter}>
-        <button
-          onClick={() =>
-            setSelectedCategories(selectedCategories.length ? [] : allCategories)
-          }
-          className={styles.filterButton}
-        >
-          {selectedCategories.length ? "Очистити всі" : "Обрати всі"}
-        </button>
         <div className={styles.categoryButtonContainer}>
           {allCategories.map((category) => (
             <button
@@ -134,29 +219,7 @@ const AllMedicalTerminologyPage = () => {
             <table className={styles.terminologyTable}>
               <thead>
                 <tr>
-                  <th>
-                    <input
-                      type="checkbox"
-                      onChange={(e) => {
-                        const termIds = termsByCategory[category].map(
-                          (term) => term.id
-                        );
-                        if (e.target.checked) {
-                          setSelectedDefinitions((prev) => [
-                            ...prev,
-                            ...termIds.filter((id) => !prev.includes(id)),
-                          ]);
-                        } else {
-                          setSelectedDefinitions((prev) =>
-                            prev.filter((id) => !termIds.includes(id))
-                          );
-                        }
-                      }}
-                      checked={termsByCategory[category].every((term) =>
-                        selectedDefinitions.includes(term.id)
-                      )}
-                    />
-                  </th>
+                  <th>Вибір</th>
                   <th>Латинська назва</th>
                   <th>Німецька назва</th>
                   {showDefinitions && <th>Означення</th>}
@@ -182,6 +245,33 @@ const AllMedicalTerminologyPage = () => {
           )}
         </div>
       ))}
+
+      {/* Модальне вікно */}
+      {showModal && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Куди зберегти?</h2>
+            <p>Оберіть, як зберегти вибрані терміни:</p>
+            <div className={styles.modalActions}>
+              <button
+                className={styles.actionButton}
+                onClick={saveToPersonalAccount}
+              >
+                Особистий кабінет
+              </button>
+              <button className={styles.actionButton} onClick={saveToPDF}>
+                Зберегти у PDF
+              </button>
+            </div>
+            <button
+              className={styles.closeButton}
+              onClick={() => setShowModal(false)}
+            >
+              Закрити
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -131,6 +131,17 @@ const DocumentsPage = () => {
       }
    };
 
+   const saveSelectedDocuments = () => {
+      const selectedDocuments = [
+         ...tableData,
+         ...tableDataSecond,
+         ...optionalTableData,
+      ].filter((doc) => doc.is_exist === "check");
+
+      localStorage.setItem("selected_documents", JSON.stringify(selectedDocuments));
+      alert("Вибрані документи успішно збережені!");
+   };
+
    const mainTitle = titles?.main?.[language];
    const optionalTitle = titles?.optional?.[language];
 
@@ -192,6 +203,12 @@ const DocumentsPage = () => {
                </button>
                <button className={styles.printBtn} onClick={handlePrint}>
                   Print
+               </button>
+               <button
+                  className={styles.saveBtn}
+                  onClick={saveSelectedDocuments}
+               >
+                  Зберегти вибрані документи
                </button>
             </div>
          </div>

@@ -1,15 +1,6 @@
 .allMedicalTerminologyPage {
   padding: 20px;
   font-family: "Arial", sans-serif;
-  background-color: inherit; /* Фон сторінки успадковується від платформи */
-  color: #333;
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #2c3e50;
-    text-align: center;
-  }
 }
 
 .topButtons {
@@ -21,7 +12,7 @@
 
 .actionButton {
   padding: 12px 25px;
-  background-color: #2ecc71; /* Зелений колір для дій */
+  background-color: #3498db; /* Синій колір для кнопок */
   color: white;
   border: none;
   border-radius: 8px; /* Заокруглені краї */
@@ -31,24 +22,58 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: #27ae60; /* Темніший відтінок зеленого */
-    transform: translateY(-2px);
+    background-color: #2980b9; /* Темніший синій при наведенні */
+    transform: translateY(-2px); /* Легка анімація */
   }
 
-  &:active {
-    transform: translateY(0);
+  &:disabled {
+    background-color: #bdc3c7; /* Сірий колір для неактивних кнопок */
+    cursor: not-allowed;
   }
 }
 
-.searchInput {
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 500px;
-  border: 1px solid #ddd;
-  border-radius: 8px; /* Заокруглені краї */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c0392b;
+  }
 }
 
 .categoryFilter {
@@ -61,12 +86,11 @@
 
 .categoryButtonContainer {
   display: flex;
-  flex-wrap: nowrap; /* Додає скролінг для категорій */
+  flex-wrap: nowrap; /* Забезпечує горизонтальний скролінг */
   gap: 10px;
-  overflow-x: auto; /* Горизонтальний скролінг */
+  overflow-x: auto; /* Додає горизонтальний скрол */
   padding-bottom: 10px;
-  width: 100%; /* Розтягується на всю ширину */
-  max-width: 100%;
+  max-width: 100%; /* Обмежує ширину для скролінгу */
 }
 
 .categoryButton {
@@ -128,7 +152,7 @@
 .terminologyTable {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .terminologyTable th,
@@ -141,22 +165,18 @@
 }
 
 .terminologyTable th {
-  background-color: #f1f1f1; /* Світлий фон для заголовків */
+  background-color: #f4f6f7; /* Світлий фон для заголовків */
   color: #555;
 }
 
 .terminologyTable tr:nth-child(odd) {
-  background-color: #ffffff; /* Білий */
+  background-color: #ffffff; /* Білий фон для непарних рядків */
 }
 
 .terminologyTable tr:nth-child(even) {
-  background-color: #f9f9f9; /* Світло-сірий */
+  background-color: #f9f9f9; /* Світло-сірий фон для парних рядків */
 }
 
 .terminologyTable tr:hover {
-  background-color: #eaf2f8; /* Світло-блакитний */
-}
-
-.terminologyTable tr td:first-child {
-  text-align: center;
+  background-color: #eaf2f8; /* Світло-блакитний фон при наведенні */
 }

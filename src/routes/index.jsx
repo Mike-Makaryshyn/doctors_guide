@@ -44,6 +44,21 @@ const WhatIsApprobationPage = React.lazy(() =>
 const AllMedicalTerminologyPage = React.lazy(() =>
   import("../pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage")
 );
+const EditProfilePage = React.lazy(() =>
+  import("../pages/EditProfilePage/EditProfilePage")
+);
+// Importing Auth and Dashboard pages
+const AuthPage = React.lazy(() =>
+  import("../pages/AuthPage/AuthPage")
+);
+const Dashboard = React.lazy(() =>
+  import("../pages/Dashboard/Dashboard")
+);
+
+// Protected Route (checks if user is authenticated)
+const ProtectedRoute = React.lazy(() =>
+  import("../components/ProtectedRoute/ProtectedRoute")
+);
 
 export default function Routers() {
   return (
@@ -83,6 +98,31 @@ export default function Routers() {
             </Suspense>
           }
         />
+        <Route
+  path="/edit-profile"
+  element={
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProtectedRoute>
+        <EditProfilePage />
+      </ProtectedRoute>
+    </Suspense>
+  }
+/>
+
+        {/* Auth Page */}
+        <Route path="/auth" element={<AuthPage />} />
+
+        {/* Protected Dashboard Route */}
+        <Route
+          path="/dashboard"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            </Suspense>
+          }
+        />
 
         {/* NOT FOUND PAGE */}
         <Route
@@ -95,7 +135,9 @@ export default function Routers() {
                   padding: "20px",
                   fontWeight: "bold",
                 }}
-              ></div>
+              >
+                Сторінка не знайдена
+              </div>
             </MainLayout>
           }
         />
