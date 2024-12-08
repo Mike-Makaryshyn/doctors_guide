@@ -6,8 +6,8 @@ import {
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
 import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import styles from "./styles.module.scss";
 import cn from "classnames";
-import styles from "./header.module.scss";
 
 const Header = () => {
    const selectedLanguage = localStorageGet(
@@ -27,24 +27,25 @@ const Header = () => {
    };
 
    return (
-      <header className="header flexBt">
+      <header className={cn(styles.header, "flexBt")}>
          <h2
             onClick={() => {
                navigate("/main_menu");
             }}
-            className="upcase mainLogo"
+            className={cn(styles.mainLogo, "upcase")}
          >
             Germanmove
          </h2>
-         <span className={"sRegion"}>
+         <span className={styles.sRegion}>
             {location?.pathname !== "/lands" && selectedRegion}
          </span>
-         <div className={cn(styles.hide_mobile, "flexBt")}>
+
+         <div className="flexBt">
             <span style={{ marginRight: "20px" }}>
                {languages[selectedLanguage].language}
             </span>
             <select
-               className="langSelect"
+               className={styles.langSelect}
                value={selectedLanguage}
                onChange={handleChangeLanguage}
             >
@@ -54,6 +55,8 @@ const Header = () => {
                   </option>
                ))}
             </select>
+
+            <a href={"/dashboard"}>DASHBOARD</a>
          </div>
       </header>
    );
