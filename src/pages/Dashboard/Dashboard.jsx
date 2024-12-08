@@ -1,198 +1,125 @@
+// Dashboard.jsx
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import { signOut } from "firebase/auth";
-import { db } from "../../firebase";
+import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
-import { jsPDF } from "jspdf";
-import "jspdf-autotable"; // Для створення таблиць у PDF
+import { signOut } from "firebase/auth";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import ProgressBar from "./ProgressBar.jsx";
+import { Link } from "react-router-dom";
+import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
+import AuthStatus from "../../components/AuthStatus/AuthStatus";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [userData, setUserData] = useState(null);
-  const [savedDefinitions, setSavedDefinitions] = useState([]);
-  const [savedDocuments, setSavedDocuments] = useState([]);
-  const [availableDocs, setAvailableDocs] = useState([]);
-  const [neededDocs, setNeededDocs] = useState([]);
-  const [verifiedDocs, setVerifiedDocs] = useState([]);
-  const [notSentDocs, setNotSentDocs] = useState([]);
-  const [definitionsExpanded, setDefinitionsExpanded] = useState(false);
-  const [documentsExpanded, setDocumentsExpanded] = useState(false);
-  const navigate = useNavigate();
+  const [progress, setProgress] = useState(0);
+  const { selectedRegion } = useGetGlobalInfo();
 
+  // Завантаження даних користувача
   useEffect(() => {
-    // Отримання даних користувача з Firestore
     const fetchUserData = async () => {
       if (user) {
-        const docRef = doc(db, "users", user.uid);
+        const docRef = doc(db, "users", user.uid, "data", "documents");
         const docSnap = await getDoc(docRef);
+
         if (docSnap.exists()) {
           const data = docSnap.data();
           setUserData(data);
-          setSavedDefinitions(data.savedDefinitions || []);
+
+          if (data.progress !== undefined) {
+            setProgress(data.progress);
+          } else {
+            console.error("Поле `progress` відсутнє у Firestore.");
+          }
+        } else {
+          console.log("Документ користувача не знайдено у Firestore");
         }
       }
     };
 
-    // Отримання вибраних документів із localStorage
-    const fetchSavedDocuments = () => {
-      const savedDocs = JSON.parse(localStorage.getItem("selected_documents"));
-      if (savedDocs) {
-        setSavedDocuments(savedDocs);
-
-        // Розподіл документів за статусами
-        const available = savedDocs.filter((doc) => doc.is_exist === "check");
-        const needed = savedDocs.filter((doc) => doc.is_exist !== "check");
-        const verified = savedDocs.filter((doc) => doc.is_verified === true);
-        const notSent = savedDocs.filter((doc) => doc.is_sent !== true);
-
-        setAvailableDocs(available);
-        setNeededDocs(needed);
-        setVerifiedDocs(verified);
-        setNotSentDocs(notSent);
-      }
-    };
-
     fetchUserData();
-    fetchSavedDocuments();
   }, [user]);
 
-  const handleLogout = async () => {
-    await signOut(auth);
-    alert("Ви вийшли з системи!");
-    navigate("/auth");
-  };
-
-  const downloadPDF = (data, title) => {
-    const doc = new jsPDF();
-
-    // Заголовок
-    doc.setFont("Helvetica", "bold");
-    doc.setFontSize(16);
-    doc.text(title, 10, 10);
-
-    // Таблиця
-    const tableData = data.map((item) => [
-      item.name,
-      item.is_exist ? "Наявний" : "Потрібний",
-      item.is_verified ? "Завірено" : "Не завірено",
-      item.is_sent ? "Надіслано" : "Не надіслано",
-    ]);
-
-    doc.autoTable({
-      head: [["Назва", "Статус", "Завірення", "Надсилання"]],
-      body: tableData,
-      startY: 20,
-      styles: {
-        font: "Helvetica",
-        fontSize: 10,
-        cellPadding: 5,
-      },
-      headStyles: {
-        fillColor: [52, 152, 219],
-        textColor: 255,
-      },
-      alternateRowStyles: {
-        fillColor: [245, 245, 245],
-      },
-    });
-
-    // Завантаження файлу
-    doc.save(`${title}.pdf`);
-  };
-
-  const updateDocumentStatus = (id, statusKey) => {
-    const updatedDocs = savedDocuments.map((doc) => {
-      if (doc.id === id) {
-        return { ...doc, [statusKey]: true };
-      }
-      return doc;
-    });
-
-    setSavedDocuments(updatedDocs);
-    localStorage.setItem("selected_documents", JSON.stringify(updatedDocs));
-
-    // Оновлення списків
-    const available = updatedDocs.filter((doc) => doc.is_exist === "check");
-    const needed = updatedDocs.filter((doc) => doc.is_exist !== "check");
-    const verified = updatedDocs.filter((doc) => doc.is_verified === true);
-    const notSent = updatedDocs.filter((doc) => doc.is_sent !== true);
-
-    setAvailableDocs(available);
-    setNeededDocs(needed);
-    setVerifiedDocs(verified);
-    setNotSentDocs(notSent);
+  // Вихід із профілю
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("Користувач успішно вийшов із системи.");
+    } catch (error) {
+      console.error("Помилка під час виходу з профілю:", error);
+    }
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Особистий кабінет</h1>
+    <ProtectedRoute>
+      <div style={{ padding: "20px" }}>
+        {/* Статус авторизації */}
+        <AuthStatus />
 
-      {/* Основна інформація */}
-      {userData && (
-        <section style={{ marginBottom: "20px" }}>
-          <h2>Основна інформація</h2>
-          <p>
-            <strong>Ім'я:</strong> {userData.firstName} {userData.lastName}
-          </p>
-          <p>
-            <strong>Спеціальність:</strong> {userData.specialty || "Не вказано"}
-          </p>
-          <p>
-            <strong>Статус визнання:</strong>{" "}
-            {userData.recognitionStatus || "Не вказано"}
-          </p>
-        </section>
-      )}
-
-      {/* Збережені визначення */}
-      <section>
-        <h2
-          onClick={() => setDefinitionsExpanded((prev) => !prev)}
+        {/* Кнопка виходу */}
+        <button
+          onClick={handleSignOut}
           style={{
+            padding: "10px 20px",
+            backgroundColor: "red",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
             cursor: "pointer",
-            display: "flex",
-            justifyContent: "space-between",
+            marginBottom: "20px",
           }}
         >
-          Збережені визначення
-          <span>{definitionsExpanded ? "▲" : "▼"}</span>
-        </h2>
-        {definitionsExpanded && (
-          <ul>
-            {savedDefinitions.map((definition, index) => (
-              <li key={index}>
-                <strong>{definition.latin}</strong>:{" "}
-                {definition.germanDefinition}
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+          Вийти з профілю
+        </button>
 
-      {/* Наявні документи */}
-      <section>
-        <h2>Наявні документи</h2>
-        <ul>
-          {availableDocs.map((doc, index) => (
-            <li key={index}>
-              <strong>{doc.name}</strong>
-              <button
-                onClick={() => updateDocumentStatus(doc.id, "is_verified")}
-              >
-                Завірено
-              </button>
-              <button
-                onClick={() => updateDocumentStatus(doc.id, "is_sent")}
-              >
-                Надіслано
-              </button>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </div>
+        <h1>Особистий кабінет</h1>
+
+        {/* Основна інформація */}
+        {userData && (
+          <section style={{ marginBottom: "20px" }}>
+            <h2>Основна інформація</h2>
+            <p>
+              <strong>Ім'я:</strong> {userData.firstName} {userData.lastName}
+            </p>
+            <p>
+              <strong>Спеціальність:</strong> {userData.specialty || "Не вказано"}
+            </p>
+            <p>
+              <strong>Статус визнання:</strong>{" "}
+              {userData.recognitionStatus || "Не вказано"}
+            </p>
+            <p>
+              <strong>Країна:</strong> {userData.country || "Не вказано"}
+            </p>
+            <p>
+              <strong>Локація:</strong> {userData.location || "Не вказано"}
+            </p>
+            <p>
+              <strong>Вибрана земля:</strong> {selectedRegion || "Не вказано"}
+            </p>
+          </section>
+        )}
+
+        <ProgressBar progress={progress} />
+
+        <div style={{ marginTop: "20px" }}>
+          <Link
+            to="/main-menu"
+            style={{
+              display: "inline-block",
+              padding: "10px 20px",
+              backgroundColor: "#007bff",
+              color: "#fff",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
+            До головного меню
+          </Link>
+        </div>
+      </div>
+    </ProtectedRoute>
   );
 };
 

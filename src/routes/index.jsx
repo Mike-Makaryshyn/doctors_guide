@@ -108,6 +108,16 @@ export default function Routers() {
     </Suspense>
   }
 />
+<Route
+  path="/dashboard"
+  element={
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    </Suspense>
+  }
+/>
 
         {/* Auth Page */}
         <Route path="/auth" element={<AuthPage />} />

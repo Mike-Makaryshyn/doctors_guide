@@ -5,7 +5,7 @@ import { jsPDF } from "jspdf";
 import "jspdf-autotable"; // Додано плагін для роботи з таблицями
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
-import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { collection, doc, setDoc, deleteDoc, getDocs } from "firebase/firestore";
 
 const AllMedicalTerminologyPage = () => {
   const [user] = useAuthState(auth); // Користувач
@@ -112,7 +112,7 @@ const AllMedicalTerminologyPage = () => {
     setShowModal(false);
   };
 
-  // Збереження в особистий кабінет
+  // Збереження лише `id` у Firestore
   const saveToPersonalAccount = async () => {
     if (!user) {
       alert("Будь ласка, увійдіть у систему, щоб зберегти дані!");
@@ -120,27 +120,37 @@ const AllMedicalTerminologyPage = () => {
     }
 
     try {
-      const userDoc = doc(db, "users", user.uid);
-      const selectedTerms = selectedDefinitions.map((termId) => {
-        const term = medicalTerms.find((term) => term.id === termId);
-        return {
-          id: term.id,
-          latin: term.latin,
-          german: term.german,
-          germanDefinition: term.germanDefinition,
-        };
-      });
+      const termsCollection = collection(db, `users/${user.uid}/savedTerms`);
 
-      await updateDoc(userDoc, {
-        savedDefinitions: arrayUnion(...selectedTerms),
-      });
-      alert("Визначення успішно збережені у вашому особистому кабінеті!");
+      // Додаємо кожен ID як окремий документ
+      for (const termId of selectedDefinitions) {
+        const termDoc = doc(termsCollection, termId.toString());
+        await setDoc(termDoc, { id: termId });
+      }
+
+      alert("Вибрані терміни успішно збережені у вашому особистому кабінеті!");
     } catch (error) {
       console.error("Помилка при збереженні визначень:", error);
       alert("Сталася помилка при збереженні. Спробуйте пізніше.");
     }
 
     setShowModal(false);
+  };
+
+  // Видалення збереженого терміна за `id`
+  const deleteTermById = async (termId) => {
+    if (!user) {
+      alert("Ви повинні бути авторизовані для видалення терміна.");
+      return;
+    }
+
+    try {
+      const termDoc = doc(db, `users/${user.uid}/savedTerms`, termId.toString());
+      await deleteDoc(termDoc);
+      alert(`Термін із ID ${termId} успішно видалено.`);
+    } catch (error) {
+      console.error("Помилка при видаленні терміна:", error);
+    }
   };
 
   // Показати модальне вікно

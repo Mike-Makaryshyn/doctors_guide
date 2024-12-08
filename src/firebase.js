@@ -1,4 +1,3 @@
-// firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
@@ -13,9 +12,12 @@ const firebaseConfig = {
   measurementId: "G-EMCZN5BH5E",
 };
 
-// Ініціалізація Firebase
+// Ініціалізуємо Firebase App
 const app = initializeApp(firebaseConfig);
 
-// Експортуйте Firebase Auth (для авторизації) та Firestore (для бази даних)
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+// Екземпляри Firebase Auth і Firestore
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Експортуємо auth і db
+export { auth, db };
