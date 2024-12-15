@@ -1,55 +1,53 @@
+/* TableMobile.module.scss */
+
 .tableMobileWrapper {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #f9f9f9;
+    overflow-x: auto;
 }
 
 .tableHeader {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: #e4d4d446;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
-    background-color: #e6f7ff;
-    padding: 8px;
 }
 
 .fixedColumn {
-    width: 50%;
-    padding: 8px;
+    flex: 1;
     font-weight: bold;
-    border-right: 1px solid #ccc;
 }
 
 .scrollableHeader {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-    gap: 8px;
 }
 
 .arrowButton {
-    background-color: #1890ff;
-    color: white;
+    background: none;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    color: #555;
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Додаємо плавний перехід */
+}
 
-    &:hover {
-        background-color: #40a9ff;
-    }
+.arrowButton:hover {
+    color: #007bff;
+    transform: translateX(-4px); /* Зсув для лівої стрілки */
+    opacity: 0.8; /* Зменшує прозорість при наведенні */
+}
+
+.arrowButton.right:hover {
+    transform: translateX(4px); /* Зсув для правої стрілки */
 }
 
 .columnLabel {
-    font-size: 16px;
+    flex: 1;
+    text-align: center;
     font-weight: bold;
-    color: #333;
 }
 
 .tableBody {
@@ -59,23 +57,25 @@
 
 .tableRow {
     display: flex;
-    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .scrollableColumn {
-    width: 50%;
-    padding: 8px;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-@media (max-width: 768px) { // Адаптив для мобільних пристроїв
-    .tableMobileWrapper {
-      color: #000; // Чорний колір для всього тексту
-    }
-  
-    .tableHeader,
-    .tableRow,
-    .fixedColumn,
-    .scrollableColumn {
-      color: #000; // Чорний колір для заголовків та колонок
-    }
-  }
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.checkbox {
+    transform: scale(1.2);
+}

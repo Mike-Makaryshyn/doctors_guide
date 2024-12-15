@@ -1,8 +1,82 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import styles from "./TableMobile.module.scss";
 
-const TableMobile = ({ data, columns, setTableData, selectedLanguage }) => {
-    const slideableColumns = columns.slice(1); // Колонки, що прокручуються
+// Мапа заголовків колонок
+const defaultHeaderLabels = {
+    document: { 
+        en: "Document", 
+        fr: "Document", 
+        es: "Documento", 
+        ar: "مستند", 
+        tr: "Belge", 
+        pl: "Dokument", 
+        uk: "Документ", 
+        ru: "Документ", 
+        de: "Dokument" 
+    },
+    name: { 
+        en: "Name", 
+        fr: "Nom", 
+        es: "Nombre", 
+        ar: "الاسم", 
+        tr: "İsim", 
+        pl: "Nazwa", 
+        uk: "Назва", 
+        ru: "Название", 
+        de: "Name" 
+    },
+    status: { 
+        en: "Status", 
+        fr: "Statut", 
+        es: "Estado", 
+        ar: "الحالة", 
+        tr: "Durum", 
+        pl: "Status", 
+        uk: "Статус", 
+        ru: "Статус", 
+        de: "Status" 
+    },
+    links: { 
+        en: "Links", 
+        fr: "Liens", 
+        es: "Enlaces", 
+        ar: "روابط", 
+        tr: "Bağlantılar", 
+        pl: "Linki", 
+        uk: "Посилання", 
+        ru: "Ссылки", 
+        de: "Links" 
+    },
+    sent: { 
+        en: "Sent", 
+        fr: "Envoyé", 
+        es: "Enviado", 
+        ar: "تم الإرسال", 
+        tr: "Gönderildi", 
+        pl: "Wysłano", 
+        uk: "Відправлено", 
+        ru: "Отправлено", 
+        de: "Gesendet" 
+    },
+    is_exist: { 
+        en: "Exists", 
+        fr: "Existe", 
+        es: "Existe", 
+        ar: "يوجد", 
+        tr: "Var", 
+        pl: "Istnieje", 
+        uk: "Існує", 
+        ru: "Существует", 
+        de: "Existiert" 
+    },
+    // Додайте інші колонки за потребою
+};
+
+const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRegion }) => {
+    // Відфільтровуємо колонку 'document' з прокручуваних колонок
+    const filteredColumns = columns.filter(column => column.name !== 'document');
+    const slideableColumns = filteredColumns.slice(1); // Колонки, що прокручуються
+
     const [currentColumnIndex, setCurrentColumnIndex] = useState(0);
 
     // Функції для прокрутки колонок
@@ -17,28 +91,46 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage }) => {
     };
 
     // Функція зміни чекбокса
-    const handleCheckboxChange = (index, key) => {
+    const handleCheckboxChange = useCallback((index, key) => {
         const updatedData = [...data];
         updatedData[index][key] =
             updatedData[index][key] === "check" ? "not_check" : "check";
         setTableData(updatedData);
+    }, [data, setTableData]);
+
+    // Визначаємо, чи показувати стрілки
+    const showArrows = slideableColumns.length > 1;
+
+    // Функція для отримання заголовка колонки
+    const getColumnLabel = (columnName) => {
+        const currentColumn = slideableColumns[currentColumnIndex];
+        if (currentColumn?.label?.[selectedLanguage]) {
+            return currentColumn.label[selectedLanguage];
+        }
+        return defaultHeaderLabels[columnName]?.[selectedLanguage] || columnName || "N/A";
     };
 
     return (
         <div className={styles.tableMobileWrapper}>
             {/* Заголовок таблиці */}
             <div className={styles.tableHeader}>
-                <div className={styles.fixedColumn}>Документ</div>
+                <div className={styles.fixedColumn}>
+                    {defaultHeaderLabels.document[selectedLanguage] || "Document"} {/* Локалізований заголовок */}
+                </div>
                 <div className={styles.scrollableHeader}>
-                    <button onClick={prevColumn} className={styles.arrowButton}>
-                        ⬅️
-                    </button>
+                    {showArrows && (
+                        <button onClick={prevColumn} className={styles.arrowButton}>
+                            ⬅️
+                        </button>
+                    )}
                     <span className={styles.columnLabel}>
-                        {slideableColumns[currentColumnIndex]?.label?.[selectedLanguage] || "N/A"}
+                        {getColumnLabel(slideableColumns[currentColumnIndex]?.name)}
                     </span>
-                    <button onClick={nextColumn} className={styles.arrowButton}>
-                        ➡️
-                    </button>
+                    {showArrows && (
+                        <button onClick={nextColumn} className={styles.arrowButton}>
+                            ➡️
+                        </button>
+                    )}
                 </div>
             </div>
 
@@ -56,16 +148,37 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage }) => {
                         {/* Прокручувана колонка */}
                         <div className={styles.scrollableColumn}>
                             {slideableColumns[currentColumnIndex]?.name === "links" ? (
-                                row?.links?.map((linkObj, idx) => (
+                                row?.singleLink?.link ? (
+                                    // Відображення singleLink, якщо він присутній
                                     <a
-                                        key={idx}
-                                        href={linkObj.link}
+                                        href={row.singleLink.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className={styles.link}
                                     >
-                                        {linkObj.text?.[selectedLanguage] || "Link"}
+                                        {row.singleLink.text[selectedLanguage] || "Link"}
                                     </a>
-                                ))
+                                ) : selectedRegion ? (
+                                    // Відображення посилання відповідно до вибраного регіону
+                                    row?.links
+                                        ?.filter(linkObj => linkObj.landName === selectedRegion)
+                                        .map((linkObj, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={linkObj.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={styles.link}
+                                            >
+                                                {linkObj.text?.[selectedLanguage] || "Link"}
+                                            </a>
+                                        ))
+                                ) : !row?.noLandCheckNeeded ? (
+                                    // Відображення посилання для вибору регіону
+                                    <a href="/lands" rel="noopener noreferrer" className={styles.link}>
+                                        Select a region
+                                    </a>
+                                ) : null
                             ) : (
                                 <input
                                     type="checkbox"
@@ -78,6 +191,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage }) => {
                                             slideableColumns[currentColumnIndex]?.name
                                         )
                                     }
+                                    className={styles.checkbox}
                                 />
                             )}
                         </div>
