@@ -1,72 +1,19 @@
+/* src/pages/ApprobationPage/styles.module.scss */
 .container {
   padding: 20px;
-  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  border-radius: 10px;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.stageBar {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.stage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.stage.active {
-  background-color: #4caf50;
-  color: white;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: #ddd;
-  margin-bottom: 5px;
-}
-
-.progressPercentage {
+.header {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .stageContent {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.descriptionField {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.completeStageButton {
   margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.completeStageButton:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

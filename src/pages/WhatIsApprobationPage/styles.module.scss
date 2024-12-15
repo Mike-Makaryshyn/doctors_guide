@@ -1,28 +1,35 @@
 .what_is_approbation__content {
-    padding: 20px;
-    font-family: Arial, sans-serif;
- }
- 
- .firstPageImageBlock {
-    background-image: url("/images/approbation.jpg");
-    height: 200px;
-    background-size: cover;
-    margin-bottom: 20px;
- }
- 
- h1 {
-    color: #2c3e50;
- }
- 
- h4 {
-    color: #34495e;
- }
- 
- ul {
-    list-style-type: disc;
-    margin-left: 20px;
- }
- 
- li {
-    margin: 5px 0;
- }
+   padding: 20px;
+
+   text-align: left;
+
+   section {
+      border-bottom: 1px solid white;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+   }
+
+   ul {
+      list-style-type: disc; /* Використання маркерів для списків */
+      margin-left: 30px;
+
+      li {
+         margin-bottom: 10px; /* Відступ між елементами списку */
+         line-height: 1.6; /* Покращення читабельності */
+      }
+   }
+
+   .white-space-pre-line {
+      white-space: pre-line; /* Підтримка нових рядків */
+      line-height: 1.6;
+      margin-bottom: 10px;
+   }
+
+   @media (max-width: 768px) {
+      padding: 10px;
+
+      ul {
+         margin-left: 20px;
+      }
+   }
+}

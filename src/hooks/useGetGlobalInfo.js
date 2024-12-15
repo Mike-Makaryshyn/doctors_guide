@@ -2,45 +2,95 @@ import { languages, DEFAULT_LANGUAGE } from "../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../utils/localStorage";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { auth } from "../firebase"; // Імпортуємо auth
+import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+import { db } from "../firebase"; // Ваш екземпляр Firestore
 
 const useGetGlobalInfo = () => {
    // Стан для авторизованого користувача
    const [user, setUser] = useState(null);
 
    // Робота з мовами, регіонами та сторінками
-   const selectedLanguage = localStorageGet(
-      "selectedLanguage",
-      DEFAULT_LANGUAGE
-   );
    const navigate = useNavigate();
-   const currentPage = localStorageGet("currentPage", "/main_menu");
-   const selectedRegion = localStorageGet("selectedRegion", "");
+   const selectedLanguage = user
+      ? localStorageGet("selectedLanguage", DEFAULT_LANGUAGE)
+      : DEFAULT_LANGUAGE;
+   const currentPage = user ? localStorageGet("currentPage", "/main_menu") : "/main_menu";
+   const selectedRegion = user ? localStorageGet("selectedRegion", "") : "";
 
+   // Функція для збереження `selectedRegion` у Firebase
+   const saveSelectedRegionToFirebase = async (region) => {
+      if (!user) return;
+
+      try {
+         await setDoc(
+            doc(db, "users", user.uid),
+            { selectedRegion: region },
+            { merge: true }
+         );
+         console.log("Selected region saved to Firebase.");
+      } catch (error) {
+         console.error("Error saving selected region to Firebase: ", error);
+      }
+   };
+
+   // Завантаження `selectedRegion` з Firebase під час ініціалізації
+   const fetchSelectedRegionFromFirebase = async () => {
+      if (!user) return;
+
+      try {
+         const docRef = doc(db, "users", user.uid);
+         const docSnap = await getDoc(docRef);
+         if (docSnap.exists()) {
+            const firebaseRegion = docSnap.data().selectedRegion;
+            if (firebaseRegion) {
+               localStorageSet("selectedRegion", firebaseRegion); // Синхронізуємо з localStorage
+            }
+         }
+      } catch (error) {
+         console.error("Error fetching selected region from Firebase: ", error);
+      }
+   };
+
+   // Функція для зміни `selectedRegion`
+   const handleChangeRegion = (newRegion) => {
+      if (user) {
+         localStorageSet("selectedRegion", newRegion);
+         saveSelectedRegionToFirebase(newRegion); // Зберігаємо у Firebase
+      } else {
+         console.warn("Unauthorized user cannot change region.");
+      }
+   };
+
+   // Зміна сторінки
    const handleChangePage = (page_name) => {
-      localStorageSet("currentPage", page_name);
-      window.scrollTo(0, 0);
-      navigate(page_name);
+      if (user) {
+         localStorageSet("currentPage", page_name);
+         window.scrollTo(0, 0);
+         navigate(page_name);
+      } else {
+         console.warn("Unauthorized user cannot change page.");
+      }
    };
 
+   // Редирект на сторінку регіонів
    const redirectToRegionPage = (e) => {
-      e.preventDefault();
-      localStorageSet("currentPage", "lands");
-      navigate("/lands");
+      if (user) {
+         e.preventDefault();
+         localStorageSet("currentPage", "lands");
+         navigate("/lands");
+      } else {
+         console.warn("Unauthorized user cannot access this page.");
+      }
    };
 
-   // Отримуємо авторизованого користувача через Firebase Auth
+   // Відстеження стану авторизації через Firebase Auth
    useEffect(() => {
-      console.log("Initializing Firebase Auth..."); // Додаємо логування для перевірки
-      console.log("Auth instance:", auth);
-
       const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-         console.log("Auth state changed:", currentUser); // Додаємо лог для перевірки currentUser
+         setUser(currentUser);
          if (currentUser) {
-            setUser(currentUser); // Якщо є користувач, зберігаємо його в стан
-         } else {
-            setUser(null); // Якщо користувача немає, очищуємо стан
+            fetchSelectedRegionFromFirebase(); // Завантаження `selectedRegion`
          }
       });
 
@@ -48,13 +98,14 @@ const useGetGlobalInfo = () => {
    }, []);
 
    return {
-      user, // Тепер повертаємо авторизованого користувача
+      user, // Авторизований користувач
       selectedLanguage,
       languages,
       currentPage,
+      selectedRegion,
+      handleChangeRegion,
       redirectToRegionPage,
       handleChangePage,
-      selectedRegion,
    };
 };
 

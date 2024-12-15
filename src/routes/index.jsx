@@ -47,15 +47,19 @@ const AllMedicalTerminologyPage = React.lazy(() =>
 const EditProfilePage = React.lazy(() =>
   import("../pages/EditProfilePage/EditProfilePage")
 );
-// Importing Auth and Dashboard pages
+
+// Auth and Dashboard
 const AuthPage = React.lazy(() =>
   import("../pages/AuthPage/AuthPage")
+);
+const RegistrationPage = React.lazy(() =>
+  import("../pages/AuthPage/RegistrationPage")
 );
 const Dashboard = React.lazy(() =>
   import("../pages/Dashboard/Dashboard")
 );
 
-// Protected Route (checks if user is authenticated)
+// Protected Route
 const ProtectedRoute = React.lazy(() =>
   import("../components/ProtectedRoute/ProtectedRoute")
 );
@@ -75,7 +79,7 @@ export default function Routers() {
           <Route path="/" element={<IntroductionPage />} />
         )}
 
-        {/* Main */}
+        {/* Основні сторінки */}
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
@@ -90,6 +94,7 @@ export default function Routers() {
         <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
         <Route path={pathList.links.path} element={<LinksPage />} />
         <Route path={pathList.approbation.path} element={<WhatIsApprobationPage />} />
+
         <Route
           path="/all-medical-terminology"
           element={
@@ -99,30 +104,15 @@ export default function Routers() {
           }
         />
         <Route
-  path="/edit-profile"
-  element={
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProtectedRoute>
-        <EditProfilePage />
-      </ProtectedRoute>
-    </Suspense>
-  }
-/>
-<Route
-  path="/dashboard"
-  element={
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProtectedRoute>
-        <Dashboard />
-      </ProtectedRoute>
-    </Suspense>
-  }
-/>
-
-        {/* Auth Page */}
-        <Route path="/auth" element={<AuthPage />} />
-
-        {/* Protected Dashboard Route */}
+          path="/edit-profile"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProtectedRoute>
+                <EditProfilePage />
+              </ProtectedRoute>
+            </Suspense>
+          }
+        />
         <Route
           path="/dashboard"
           element={
@@ -134,7 +124,11 @@ export default function Routers() {
           }
         />
 
-        {/* NOT FOUND PAGE */}
+        {/* Сторінки авторизації */}
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/auth/registration" element={<RegistrationPage />} />
+
+        {/* Сторінка не знайдена */}
         <Route
           path="*"
           element={

@@ -26,6 +26,35 @@ const Header = () => {
       window.location.reload();
    };
 
+   // Перевірка, чи це сторінка реєстрації
+   const isRegistrationPage = location?.pathname === "/auth/registration";
+
+   // Динамічні переклади
+   const translations = {
+      registration: {
+         en: "Registration",
+         de: "Registrierung",
+         ua: "Реєстрація",
+         ru: "Регистрация",
+         tr: "Kayıt",
+         ar: "التسجيل",
+         fr: "Inscription",
+         es: "Registro",
+         pl: "Rejestracja",
+      },
+      authRequired: {
+         en: "Authorization required",
+         de: "Autorisierung erforderlich",
+         ua: "Необхідна авторизація",
+         ru: "Требуется авторизация",
+         tr: "Yetki gerekli",
+         ar: "التفويض مطلوب",
+         fr: "Autorisation requise",
+         es: "Autorización requerida",
+         pl: "Wymagana autoryzacja",
+      },
+   };
+
    return (
       <header className={cn(styles.header, "flexBt")}>
          <h2
@@ -36,8 +65,12 @@ const Header = () => {
          >
             Germanmove
          </h2>
+         
+         {/* Динамічний переклад заголовка */}
          <span className={styles.sRegion}>
-            {location?.pathname !== "/lands" && selectedRegion}
+            {isRegistrationPage
+               ? translations.registration[selectedLanguage] || translations.registration.en
+               : selectedRegion || translations.authRequired[selectedLanguage] || translations.authRequired.en}
          </span>
 
          <div className="flexBt">

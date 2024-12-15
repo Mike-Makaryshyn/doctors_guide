@@ -1,0 +1,271 @@
+/* src/components/StageMenu/StageMenu.module.scss */
+
+.stageMenuContainer {
+    width: 100%;
+    padding: 40px 20px; // Збережено вертикальні відступи для уникнення обрізання
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .stagesWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 4px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+    // Додаємо сітковий вигляд
+    &.gridView {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // 3 колонки
+      gap: 20px;
+      justify-content: center;
+    }
+  
+  
+    &.swipeable {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+  
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  
+      padding-left: 40px; // Зменшено відступи для кращої адаптивності
+      padding-right: 40px; // Зменшено відступи для кращої адаптивності
+      scroll-behavior: smooth;
+      margin-top: 20px; // Відступ зверху для мобільних пристроїв
+    }
+  
+    /* Додавання відступів для крайніх етапів */
+    .stage:first-child {
+      margin-left: 10px; // Додано відступ для першого етапу
+    }
+  
+    .stage:last-child {
+      margin-right: 10px; // Додано відступ для останнього етапу
+    }
+  }
+  
+  .stageItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; // Забезпечує центроване вирівнювання
+  
+    @media (max-width: 600px) {
+      flex-direction: column-reverse; // Переміщує назву етапу зверху
+    }
+  }
+  
+  .stage {
+    background: #fff;
+    border-radius: 50%;
+    padding: 1vw !important;
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    transition: 
+      border 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin: 0 2px;
+  
+    &:hover {
+      border-color: #2a7c6f;
+      transform: translateY(-5px) scale(1.07); // Підйом та збільшення
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); // Більша тінь
+    }
+  
+    &.active {
+      border-color: #2a7c6f;
+      background-color: rgba(42, 124, 111, 0.1);
+      transform: translateY(-5px) scale(1.1); // Збільшення для активного етапу
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); // Глибший ефект тіні
+    }
+  
+    @media (max-width: 1200px) {
+      width: 11vw;
+      height: 11vw;
+      padding: 1.2vw !important;
+      margin: 0 3px;
+    }
+  
+    @media (max-width: 900px) {
+      width: 13vw;
+      height: 13vw;
+      padding: 1.8vw !important;
+      margin: 0 4px;
+    }
+  
+    @media (max-width: 600px) {
+      width: 18vw;
+      height: 18vw;
+      padding: 2.5vw !important;
+      margin: 0 3px;
+    }
+  }
+  
+  .progressCircle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progressSvg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .circleBg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 2.5; // Зменшено stroke-width для пропорційності
+  }
+  
+  .circle {
+    fill: none;
+    stroke: #2a7c6f;
+    stroke-width: 2.5; // Зменшено stroke-width для пропорційності
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease;
+    width: 100%; // Забезпечує заповнення всього контуру
+    height: 100%; // Забезпечує заповнення всього контуру
+  }
+  
+  .stageImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%; // Збільшено відносний розмір
+    height: 70%; // Збільшено відносний розмір
+    transform: translate(-50%, -50%);
+  
+    @media (max-width: 600px) {
+      width: 80%; // Збільшено розмір на мобільних
+      height: 80%;
+    }
+  }
+  
+  .stageTitle {
+    margin-top: 12px; // Зменшено відступ для ближчого розташування тексту
+    font-size: 18px; // Збільшено розмір шрифту для кращої читабельності
+    font-weight: bold;
+    color: #333;
+    text-align: center; // Вирівнювання тексту по центру
+    max-width: 100%; // Забезпечує, що текст не виходить за межі контейнера
+    word-wrap: break-word; // Дозволяє перенесення слів на новий рядок
+    word-break: break-word; // Додаткове правило для переносу слів
+    overflow: hidden; // Запобігання виходу тексту за межі контейнера
+    white-space: normal; // Дозволяє перенесення тексту на новий рядок
+  
+    @media (max-width: 600px) {
+      font-size: 16px; // Збільшено розмір шрифту на мобільних
+      margin-top: 10px; // Зменшено відступ для мобільних
+    }
+  }
+  
+  .description {
+    margin-top: 10px; // Зменшено відступ для кращого вирівнювання
+    font-size: 14px;
+    color: #555;
+  
+    @media (max-width: 600px) {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+  
+  .scrollButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(42, 124, 111, 0.8);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background: rgba(42, 124, 111, 1);
+    }
+  
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  
+    &.left {
+      left: 10px;
+    }
+  
+    &.right {
+      right: 10px;
+    }
+  
+    @media (max-width: 1200px) {
+      width: 28px;
+      height: 28px;
+  
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+  
+      left: 8px;
+      right: 8px;
+    }
+  
+    @media (max-width: 600px) {
+      width: 25px;
+      height: 25px;
+  
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+  
+      left: 5px;
+      right: 5px;
+  
+      /* Додаткові відступи для крайніх етапів */
+      &.left {
+        margin-left: 10px; // Додано відступ від краю екрану
+      }
+  
+      &.right {
+        margin-right: 10px; // Додано відступ від краю екрану
+      }
+  
+      /* Можна розглянути можливість приховування кнопок на дуже малих екранах */
+      /* @media (max-width: 400px) {
+        display: none;
+      } */
+    }
+    .gridView {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Сітка 3х3
+        gap: 20px;
+      }
+    
+  }
