@@ -1,0 +1,81 @@
+.tableMobileWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.tableHeader {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #e6f7ff;
+    padding: 8px;
+}
+
+.fixedColumn {
+    width: 50%;
+    padding: 8px;
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+}
+
+.scrollableHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 8px;
+}
+
+.arrowButton {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #40a9ff;
+    }
+}
+
+.columnLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.tableRow {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.scrollableColumn {
+    width: 50%;
+    padding: 8px;
+    text-align: center;
+}
+@media (max-width: 768px) { // Адаптив для мобільних пристроїв
+    .tableMobileWrapper {
+      color: #000; // Чорний колір для всього тексту
+    }
+  
+    .tableHeader,
+    .tableRow,
+    .fixedColumn,
+    .scrollableColumn {
+      color: #000; // Чорний колір для заголовків та колонок
+    }
+  }

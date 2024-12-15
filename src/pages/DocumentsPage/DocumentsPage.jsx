@@ -1,4 +1,5 @@
 import Table from "../../components/Table/Table";
+import TableMobile from "../../components/Table/TableMobile"; // Мобільна версія таблиці
 import {
     documents,
     messages,
@@ -14,14 +15,12 @@ import { useReactToPrint } from "react-to-print";
 import { documentSecond } from "../../constants/translation/documentsSecond";
 import TableSecond from "./TableSecond/Table";
 import { doc, getDoc, setDoc } from "firebase/firestore"; // Firestore імпорти
-import { db } from "../../firebase"; // Імпорт Firestore
+import { db } from "../../firebase";
+import useIsMobile from "../../hooks/useIsMobile"; // Хук для мобільних пристроїв
 
 const DocumentsPage = () => {
-    const {
-        selectedLanguage: language,
-        handleChangePage,
-        user,
-    } = useGetGlobalInfo();
+    const { selectedLanguage: language, selectedRegion, handleChangePage, user } =
+        useGetGlobalInfo();
 
     const firstRef = useRef();
     const secondRef = useRef();
@@ -33,7 +32,8 @@ const DocumentsPage = () => {
     const [optionalTableData, setOptionalTableData] = useState(documentsOptional);
     const [progress, setProgress] = useState(0);
 
-    // Локальна змінна для зберігання останніх збережених даних
+    const isMobile = useIsMobile(); // Перевірка мобільного пристрою
+
     let lastSavedData = {};
 
     const handlePrint = useReactToPrint({
@@ -42,30 +42,24 @@ const DocumentsPage = () => {
 
     // Завантаження даних із Firestore
     const fetchDataFromFirestore = async () => {
-        if (!user) {
-            console.log("Користувач не авторизований");
-            return;
-        }
+        if (!user) return;
 
         const userDocRef = doc(db, "users", user.uid, "data", "documents");
         const docSnap = await getDoc(userDocRef);
 
         if (docSnap.exists()) {
-            console.log("Документ знайдено в Firestore:", docSnap.data());
             const data = docSnap.data();
             setTableData(data.table1 || documents);
             setTableDataSecond(data.table2 || documentSecond);
             setOptionalTableData(data.table3 || documentsOptional);
-            setProgress(data.progress || 0); // Завантаження прогресу
+            setProgress(data.progress || 0);
         } else {
-            console.log("Документ не знайдено. Створюємо новий документ...");
             await setDoc(userDocRef, {
                 table1: documents,
                 table2: documentSecond,
                 table3: documentsOptional,
                 progress: 0,
             });
-            console.log("Новий документ створено в Firestore");
         }
     };
 
@@ -77,20 +71,11 @@ const DocumentsPage = () => {
     const updateFirestoreData = async (updatedData) => {
         if (!user) return;
 
-        // Перевіряємо, чи змінилися дані
-        if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) {
-            console.log("Дані не змінилися, запис у Firestore пропущено");
-            return;
-        }
+        if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) return;
 
         const userDocRef = doc(db, "users", user.uid, "data", "documents");
-        try {
-            await setDoc(userDocRef, updatedData, { merge: true });
-            lastSavedData = updatedData; // Оновлюємо останні збережені дані
-            console.log("Дані успішно оновлені у Firestore:", updatedData);
-        } catch (error) {
-            console.error("Помилка при оновленні Firestore:", error);
-        }
+        await setDoc(userDocRef, updatedData, { merge: true });
+        lastSavedData = updatedData;
     };
 
     // Обчислення прогресу
@@ -98,23 +83,16 @@ const DocumentsPage = () => {
         let totalCheckboxes = 0;
         let checkedCheckboxes = 0;
 
-        const filteredData = [
-            ...tableData,
-            ...tableDataSecond,
-            ...optionalTableData,
-        ]?.filter((item) => !item?.hide);
+        const filteredData = [...tableData, ...tableDataSecond, ...optionalTableData].filter(
+            (item) => !item?.hide
+        );
 
         filteredData.forEach((item) => {
             Object.keys(item).forEach((key) => {
                 if (
-                    [
-                        "is_exist",
-                        "apostile",
-                        "notary",
-                        "translation",
-                        "ready_copies",
-                        "sent",
-                    ].includes(key)
+                    ["is_exist", "apostile", "notary", "translation", "ready_copies", "sent"].includes(
+                        key
+                    )
                 ) {
                     totalCheckboxes++;
                     if (item[key] === "check") {
@@ -124,20 +102,13 @@ const DocumentsPage = () => {
             });
         });
 
-        let progress = 0;
-        if (totalCheckboxes > 0) {
-            progress = (checkedCheckboxes / totalCheckboxes) * 100;
-        }
-        console.log("Розрахований прогрес:", progress);
-        return progress.toFixed(0);
+        return ((checkedCheckboxes / totalCheckboxes) * 100).toFixed(0);
     };
 
-    // Оновлення прогресу при зміні даних
     useEffect(() => {
         setProgress(calculateProgress());
     }, [tableData, tableDataSecond, optionalTableData]);
 
-    // Автоматичне оновлення Firestore при зміні даних
     useEffect(() => {
         const updatedData = {
             table1: tableData,
@@ -149,15 +120,10 @@ const DocumentsPage = () => {
     }, [tableData, tableDataSecond, optionalTableData]);
 
     const getMessage = (progress) => {
-        if (progress < 20) {
-            return messages[language].lessThan20;
-        } else if (progress < 50) {
-            return messages[language].between20And50;
-        } else if (progress < 80) {
-            return messages[language].between50And80;
-        } else {
-            return messages[language].greaterThan80;
-        }
+        if (progress < 20) return messages[language].lessThan20;
+        if (progress < 50) return messages[language].between20And50;
+        if (progress < 80) return messages[language].between50And80;
+        return messages[language].greaterThan80;
     };
 
     const mainTitle = titles?.main?.[language];
@@ -166,42 +132,77 @@ const DocumentsPage = () => {
     return (
         <MainLayout>
             <div className="page page1 containerBigger mt-20">
-                <div className="firstPageImageBlock"></div>
-                <div className={"main_menu__content"}>
+                <div className="main_menu__content">
                     <div className={styles.table_wrapper}>
+                        {/* Прогрес-бар */}
                         <div className={styles.progress_wrapper}>
                             <div className={styles.progressBar}>
-                                <div
-                                    className={styles.progress}
-                                    style={{ width: `${progress}%` }}
-                                ></div>
+                                <div className={styles.progress} style={{ width: `${progress}%` }}></div>
                             </div>
                             <div className={styles.progressLabel}>
                                 {progress}% - {getMessage(progress)}
                             </div>
                         </div>
                         <div ref={combinedRef}>
-                            <Table
-                                title={mainTitle}
-                                columns={columnsFirst}
-                                tableRef={firstRef}
-                                data={tableData}
-                                setTableData={setTableData}
-                                selectedLanguage={language}
-                            />
-                            <TableSecond
-                                columns={[
-                                    { name: "name" },
-                                    { name: "is_exist" },
-                                    { name: "links" },
-                                    { name: "sent" },
-                                ]}
-                                tableRef={secondRef}
-                                setTableData={setTableDataSecond}
-                                data={tableDataSecond}
-                                noTitleAndColumns
-                            />
-                            <div className="page-break">
+                            {/* Основні документи */}
+                            {isMobile ? (
+                                <TableMobile
+                                    data={tableData}
+                                    columns={columnsFirst}
+                                    setTableData={setTableData}
+                                    selectedLanguage={language}
+                                    selectedRegion={selectedRegion} // Передача регіону
+                                />
+                            ) : (
+                                <Table
+                                    title={mainTitle}
+                                    columns={columnsFirst}
+                                    tableRef={firstRef}
+                                    data={tableData}
+                                    setTableData={setTableData}
+                                    selectedLanguage={language}
+                                />
+                            )}
+
+                            {/* Додаткові документи */}
+                            {isMobile ? (
+                                <TableMobile
+                                    data={tableDataSecond}
+                                    columns={[
+                                        { name: "name" },
+                                        { name: "is_exist" },
+                                        { name: "links" },
+                                        { name: "sent" },
+                                    ]}
+                                    setTableData={setTableDataSecond}
+                                    selectedLanguage={language}
+                                    selectedRegion={selectedRegion} // Передача регіону
+                                />
+                            ) : (
+                                <TableSecond
+                                    columns={[
+                                        { name: "name" },
+                                        { name: "is_exist" },
+                                        { name: "links" },
+                                        { name: "sent" },
+                                    ]}
+                                    tableRef={secondRef}
+                                    setTableData={setTableDataSecond}
+                                    data={tableDataSecond}
+                                    noTitleAndColumns
+                                />
+                            )}
+
+                            {/* Опціональні документи */}
+                            {isMobile ? (
+                                <TableMobile
+                                    data={optionalTableData}
+                                    columns={columnsFirst}
+                                    setTableData={setOptionalTableData}
+                                    selectedLanguage={language}
+                                    selectedRegion={selectedRegion} // Передача регіону
+                                />
+                            ) : (
                                 <Table
                                     title={optionalTitle}
                                     columns={columnsFirst}
@@ -210,13 +211,11 @@ const DocumentsPage = () => {
                                     setTableData={setOptionalTableData}
                                     selectedLanguage={language}
                                 />
-                            </div>
+                            )}
                         </div>
                     </div>
-                    <button
-                        className={"main_menu_back"}
-                        onClick={() => handleChangePage("/main_menu")}
-                    >
+
+                    <button className={"main_menu_back"} onClick={() => handleChangePage("/main_menu")}>
                         &#8592;
                     </button>
                     <button className={styles.printBtn} onClick={handlePrint}>
