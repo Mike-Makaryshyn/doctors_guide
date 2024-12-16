@@ -8,6 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import Avatar from "../../components/Avatar/Avatar";
 
 const Header = () => {
    const selectedLanguage = localStorageGet(
@@ -89,7 +90,10 @@ const Header = () => {
                ))}
             </select>
 
-            <a href={"/dashboard"}>DASHBOARD</a>
+            {/* Посилання з аватаркою */}
+            <a href={"/dashboard"} style={{ textDecoration: "none" }}>
+               <Avatar stageId={1} />
+            </a>
          </div>
       </header>
    );

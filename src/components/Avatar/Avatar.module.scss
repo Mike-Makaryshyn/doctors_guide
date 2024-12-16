@@ -23,3 +23,9 @@
   height: 100%;
   color: #757575;
 }
+.avatarImage {
+  width: 40px;  /* Фіксована ширина */
+  height: 40px; /* Фіксована висота */
+  border-radius: 50%; /* Кругла форма */
+  object-fit: cover;  /* Збереження пропорцій */
+}

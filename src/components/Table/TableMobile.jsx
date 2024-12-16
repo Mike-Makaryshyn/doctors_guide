@@ -73,10 +73,7 @@ const defaultHeaderLabels = {
 };
 
 const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRegion }) => {
-    // Відфільтровуємо колонку 'document' з прокручуваних колонок
-    const filteredColumns = columns.filter(column => column.name !== 'document');
-    const slideableColumns = filteredColumns.slice(1); // Колонки, що прокручуються
-
+    const slideableColumns = columns.slice(1); // Колонки, що прокручуються
     const [currentColumnIndex, setCurrentColumnIndex] = useState(0);
 
     // Функції для прокрутки колонок
@@ -103,9 +100,8 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
 
     // Функція для отримання заголовка колонки
     const getColumnLabel = (columnName) => {
-        const currentColumn = slideableColumns[currentColumnIndex];
-        if (currentColumn?.label?.[selectedLanguage]) {
-            return currentColumn.label[selectedLanguage];
+        if (columns[currentColumnIndex]?.label?.[selectedLanguage]) {
+            return columns[currentColumnIndex].label[selectedLanguage];
         }
         return defaultHeaderLabels[columnName]?.[selectedLanguage] || columnName || "N/A";
     };

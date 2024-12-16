@@ -9,6 +9,7 @@ import ProgressBar from "./ProgressBar.jsx";
 import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
+import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -52,74 +53,75 @@ const Dashboard = () => {
   };
 
   return (
-    <ProtectedRoute>
-      <div style={{ padding: "20px" }}>
-        {/* Статус авторизації */}
-        <AuthStatus />
+    <MainLayout><ProtectedRoute>
+    <div style={{ padding: "20px" }}>
+      {/* Статус авторизації */}
+      <AuthStatus />
 
-        {/* Кнопка виходу */}
-        <button
-          onClick={handleSignOut}
+      {/* Кнопка виходу */}
+      <button
+        onClick={handleSignOut}
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "red",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+          marginBottom: "20px",
+        }}
+      >
+        Вийти з профілю
+      </button>
+
+      <h1>Особистий кабінет</h1>
+
+      {/* Основна інформація */}
+      {userData && (
+        <section style={{ marginBottom: "20px" }}>
+          <h2>Основна інформація</h2>
+          <p>
+            <strong>Ім'я:</strong> {userData.firstName} {userData.lastName}
+          </p>
+          <p>
+            <strong>Спеціальність:</strong> {userData.specialty || "Не вказано"}
+          </p>
+          <p>
+            <strong>Статус визнання:</strong>{" "}
+            {userData.recognitionStatus || "Не вказано"}
+          </p>
+          <p>
+            <strong>Країна:</strong> {userData.country || "Не вказано"}
+          </p>
+          <p>
+            <strong>Локація:</strong> {userData.location || "Не вказано"}
+          </p>
+          <p>
+            <strong>Вибрана земля:</strong> {selectedRegion || "Не вказано"}
+          </p>
+        </section>
+      )}
+
+      <ProgressBar progress={progress} />
+
+      <div style={{ marginTop: "20px" }}>
+        <Link
+          to="/main-menu"
           style={{
+            display: "inline-block",
             padding: "10px 20px",
-            backgroundColor: "red",
-            color: "white",
-            border: "none",
+            backgroundColor: "#007bff",
+            color: "#fff",
             borderRadius: "5px",
-            cursor: "pointer",
-            marginBottom: "20px",
+            textDecoration: "none",
           }}
         >
-          Вийти з профілю
-        </button>
-
-        <h1>Особистий кабінет</h1>
-
-        {/* Основна інформація */}
-        {userData && (
-          <section style={{ marginBottom: "20px" }}>
-            <h2>Основна інформація</h2>
-            <p>
-              <strong>Ім'я:</strong> {userData.firstName} {userData.lastName}
-            </p>
-            <p>
-              <strong>Спеціальність:</strong> {userData.specialty || "Не вказано"}
-            </p>
-            <p>
-              <strong>Статус визнання:</strong>{" "}
-              {userData.recognitionStatus || "Не вказано"}
-            </p>
-            <p>
-              <strong>Країна:</strong> {userData.country || "Не вказано"}
-            </p>
-            <p>
-              <strong>Локація:</strong> {userData.location || "Не вказано"}
-            </p>
-            <p>
-              <strong>Вибрана земля:</strong> {selectedRegion || "Не вказано"}
-            </p>
-          </section>
-        )}
-
-        <ProgressBar progress={progress} />
-
-        <div style={{ marginTop: "20px" }}>
-          <Link
-            to="/main-menu"
-            style={{
-              display: "inline-block",
-              padding: "10px 20px",
-              backgroundColor: "#007bff",
-              color: "#fff",
-              borderRadius: "5px",
-              textDecoration: "none",
-            }}
-          >
-            До головного меню
-          </Link>
-        </div>
+          До головного меню
+        </Link>
       </div>
-    </ProtectedRoute>
+    </div>
+  </ProtectedRoute></MainLayout>
+    
   );
 };
 
