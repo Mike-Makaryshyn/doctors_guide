@@ -1,45 +1,77 @@
+// src/constants/translation/ResumeForm.js
+
 const resumeFormTexts = {
-    header: "Abschnitt Kopfzeile",
+    header: "Резюме",
     fields: {
-      vorname: "Vorname",
-      nachname: "Nachname",
-      address: "Adresse",
-      phone: "Telefonnummer",
-      email: "E-Mail",
-      dateOfBirth: "Geburtsdatum",
-      citizenship: "Staatsangehörigkeit",
-      fachrichtung: "Fachrichtung",
+      vorname: "Ім'я",
+      nachname: "Прізвище",
+      address: "Адреса",
+      phone: "Телефон",
+      email: "Електронна пошта",
+      dateOfBirth: "Дата народження",
+      citizenship: "Громадянство",
+      fachrichtung: "Спеціалізація",
     },
     suggestions: [
-      "Erlernen der deutschen Sprache bis Niveau C1 und Einleitung des Anerkennungsverfahrens als Arzt in Deutschland",
-      "Erfolgreich bestandene Fachsprachprüfung bei der Ärztekammer Nordrhein",
-      "Teilnahme am Vorbereitungskurs „Deutsch für Ärzte“ am Sprachinstitut München",
-      "Absolvierung der TELC Deutsch B2 Medizinprüfung",
-      "Teilnahme am Seminar „Qualifizierung für Klinik und Praxis“ am mibeg-Institut Medizin in Köln",
-      "Abgeschlossene Fachsprachprüfung für Ärzte bei der Ärztekammer Baden-Württemberg",
-      "Absolvierung des Vorbereitungskurses „Kenntnisprüfung Medizin“ am mibeg-Institut Medizin in Frankfurt",
-      "Erfolgreiches Bestehen der Deutschprüfung ÖSD Zertifikat B2 für Fachkräfte",
-      "Abschluss des Intensivsprachkurses „Medizinisches Deutsch“ am Goethe-Institut Köln",
-      "Teilnahme am Webinar „Schritte zum Anerkennungsverfahren als Arzt in Deutschland“ der Ärztekammer Nordrhein",
-      "Erfolgreiche Teilnahme an der Deutschprüfung DSH-2 zur Einleitung des Anerkennungsverfahrens als Arzt",
-      "Absolvierung des Online-Kurses „Vorbereitung auf das Anerkennungsverfahren für Ärzte“ der Ärztekammer Berlin",
-      "Teilnahme am Vorbereitungskurs „Fachsprachtraining für die Kenntnisprüfung“ am Sprachzentrum Stuttgart",
-      "Abschluss des Sprachkurses „Deutsch für den medizinischen Alltag“ am Bildungszentrum Düsseldorf",
-      "Erfolgreiches Bestehen der Fachsprachprüfung bei der Ärztekammer Hamburg",
-      "Teilnahme am Workshop „Integration ins deutsche Gesundheitssystem“ am Goethe-Institut Frankfurt",
-      "Abschluss des Online-Seminars „Anerkennung ausländischer Arztabschlüsse in Deutschland“",
-      "Teilnahme am Vorbereitungskurs „Deutsch als Fremdsprache für den medizinischen Bereich“ am Bildungszentrum München",
-      "Absolvierung des Sprachkurses „Deutsch für medizinische Fachkräfte“ am Sprachinstitut Hamburg",
-      "Teilnahme am interaktiven Seminar „Rechtliche Grundlagen des Arztberufs in Deutschland“ am Anerkennungszentrum Berlin",
-      "Erfolgreiche Teilnahme an der TELC Deutsch C1 Medizinprüfung"
+      "Підказка 1",
+      "Підказка 2",
+      // Інші підказки для Aktuell
     ],
     berufserfahrungenSuggestions: [
-        "Leiter der Abteilung",
-        "Facharzt für Kardiologie",
-        "Praktikant im Operationssaal",
-        "Forschung im Bereich Neurologie",
-        // Додайте інші підказки для Berufserfahrungen тут
-      ],
-    };
-    
-    export default resumeFormTexts;
+      "Підказка A",
+      "Підказка B",
+      // Інші підказки для Berufserfahrungen
+    ],
+    ausbildungSuggestions: [
+      "Підказка X",
+      "Підказка Y",
+      // Додайте підказки для Ausbildung
+    ],
+    languageSkillsSuggestions: [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Chinese",
+      "Russian",
+      "Ukrainian",
+      "Italian",
+      "Japanese",
+      "Korean",
+      // Додайте інші мови за потребою
+    ],
+    levelSuggestions: [
+      "Beginner",
+      "Elementary",
+      "Intermediate",
+      "Upper-Intermediate",
+      "Advanced",
+      "Proficient",
+      "Native",
+      // Додайте інші рівні за потребою
+    ],
+    technicalSkillsSuggestions: [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C#",
+      "C++",
+      "Ruby",
+      "Go",
+      "Swift",
+      "Kotlin",
+      "PHP",
+      "SQL",
+      // Додайте інші технічні навички за потребою
+    ],
+    technicalLevelSuggestions: [ // Змінено
+      "Basic",
+      "Intermediate",
+      "Advanced",
+      "Expert",
+      "Master",
+      // Додайте інші рівні за потребою
+    ],
+  };
+  
+  export default resumeFormTexts;
