@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./ResumePage.module.css"; // Імпортуємо стилі
 import ResumeSection from "/src/pages/ResumePage/ResumeSection";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
 
 const ResumePage = () => {
   // Стан для "Шапка"
@@ -317,7 +318,8 @@ const ResumePage = () => {
   }, [currentEntries, suggestionsState, berufEntries, berufSuggestionsState]);
 
   return (
-    <div className={styles.container}>
+    <MainLayout>
+<div className={styles.container}>
       {/* Заголовок */}
       <h2 className={styles.header}>{resumeFormTexts.header}</h2>
 
@@ -372,6 +374,9 @@ const ResumePage = () => {
         removeRow={removeBerufRow}
       />
     </div>
+
+    </MainLayout>
+    
   );
 };
 
