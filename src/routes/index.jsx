@@ -47,6 +47,9 @@ const AllMedicalTerminologyPage = React.lazy(() =>
 const EditProfilePage = React.lazy(() =>
   import("../pages/EditProfilePage/EditProfilePage")
 );
+const ResumePage = React.lazy(() =>
+  import("../pages/ResumePage/ResumePage")
+);
 
 // Auth and Dashboard
 const AuthPage = React.lazy(() =>
@@ -103,6 +106,14 @@ export default function Routers() {
             </Suspense>
           }
         />
+        <Route
+  path="/resume"
+  element={
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResumePage />
+    </Suspense>
+  }
+/>
         <Route
           path="/edit-profile"
           element={
