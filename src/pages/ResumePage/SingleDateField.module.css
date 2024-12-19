@@ -1,0 +1,46 @@
+/* SingleDateField.module.css */
+
+.dateFieldContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .inputWithIcon {
+    position: relative;
+  }
+  
+  .inputField {
+    width: 200px;
+    height: 35px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputField:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .inputFieldWithError {
+    border-color: red;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
