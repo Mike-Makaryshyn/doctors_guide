@@ -1,6 +1,6 @@
-// src/pages/ResumePage/ResumePage.jsx
-
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./ResumePage.module.css";
 import ResumeSection from "./ResumeSection";
@@ -11,9 +11,30 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import SingleDateField from "./SingleDateField";
-
 const MAX_DESCRIPTION_LENGTH = 500;
+
+// Тема для налаштування чорного кольору активного поля та мітки
+const theme = createTheme({
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-root": {
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "black", // Чорний колір рамки
+            },
+          },
+          "& .MuiInputLabel-root": {
+            color: "black", // Чорний колір мітки за замовчуванням
+          },
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "black", // Чорний колір мітки під час фокусу
+          },
+        },
+      },
+    },
+  },
+});
 
 const ResumePage = () => {
   const [header, setHeader] = useState({
@@ -61,8 +82,10 @@ const ResumePage = () => {
     filteredSuggestions: [],
   });
 
-  const handleHeaderChange = (e) => {
-    const { name, value } = e.target;
+  const languageSuggestionsRef = useRef(null);
+  const levelSuggestionsRef = useRef(null);
+
+  const handleHeaderChange = (name, value) => {
     setHeader((prevHeader) => ({ ...prevHeader, [name]: value }));
   };
 
@@ -113,113 +136,134 @@ const ResumePage = () => {
     } else {
       setSuggestionsState((prev) => ({
         ...prev,
-        description: { activeRow: index, filteredSuggestions: suggestionsList },
+        description: { activeRow: null, filteredSuggestions: suggestionsList },
       }));
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        (languageSuggestionsRef.current &&
+          !languageSuggestionsRef.current.contains(event.target)) &&
+        (levelSuggestionsRef.current &&
+          !levelSuggestionsRef.current.contains(event.target))
+      ) {
+        console.log("Clicked outside: Closing suggestions");
+        setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+        setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside, true);
+    };
+  }, [languageSuggestionsRef, levelSuggestionsRef]);
+
   return (
-    <MainLayout>
-      <div className={styles.container}>
-        <ToastContainer />
-        <h2 className={styles.header}>{resumeFormTexts.header}</h2>
+    <ThemeProvider theme={theme}>
+      <MainLayout>
+        <div className={styles.container}>
+          <ToastContainer />
+          <h2 className={styles.header}>{resumeFormTexts.header}</h2>
 
-        <section>
-          <h3 className={styles.subheader}>Kopfzeile</h3>
-          <form className={styles.form}>
-            {Object.entries(resumeFormTexts.fields).map(([key, label]) => (
-              <div key={key} className={styles.field}>
-                <label htmlFor={key} className={styles.label}>
-                  {label}:
-                </label>
-                <input
-                  type="text"
-                  id={key}
-                  name={key}
-                  value={header[key]}
-                  onChange={handleHeaderChange}
-                  className={styles.input}
-                />
-              </div>
-            ))}
-          </form>
-        </section>
+          {/* Kopfzeile */}
+          <section>
+            <h3 className={styles.subheader}>Kopfzeile</h3>
+            <form className={styles.form}>
+              {Object.entries(header).map(([key, value]) => (
+                <div key={key} className={styles.field}>
+                  <TextField
+                    label={key.charAt(0).toUpperCase() + key.slice(1)} // Форматування заголовків
+                    value={value}
+                    onChange={(e) => handleHeaderChange(key, e.target.value)}
+                    variant="outlined" // Сучасний стиль
+                    fullWidth
+                    margin="normal"
+                  />
+                </div>
+              ))}
+            </form>
+          </section>
 
-        <ResumeSection
-          title="Aktuell"
-          entries={aktuellEntries}
-          setEntries={setAktuellEntries}
-          suggestionsList={resumeFormTexts.suggestions}
-          suggestionsState={aktuellSuggestionsState}
-          setSuggestionsState={setAktuellSuggestionsState}
-          suggestionsRef={useRef(null)}
-          handleTableChange={(i, f, v) => handleFieldChange(aktuellEntries, setAktuellEntries, i, f, v)}
-          handleDescriptionChange={(i, v) =>
-            handleDescriptionChange(aktuellEntries, setAktuellEntries, resumeFormTexts.suggestions, aktuellSuggestionsState, setAktuellSuggestionsState, i, v)
-          }
-          addNewRow={() => addNewRow(aktuellEntries, setAktuellEntries)}
-          removeRow={(i) => removeRow(aktuellEntries, setAktuellEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-        />
+          {/* Інші секції */}
+          <ResumeSection
+            title="Aktuell"
+            entries={aktuellEntries}
+            setEntries={setAktuellEntries}
+            suggestionsList={resumeFormTexts.suggestions}
+            suggestionsState={aktuellSuggestionsState}
+            setSuggestionsState={setAktuellSuggestionsState}
+            suggestionsRef={useRef(null)}
+            handleTableChange={(i, f, v) => handleFieldChange(aktuellEntries, setAktuellEntries, i, f, v)}
+            handleDescriptionChange={(i, v) =>
+              handleDescriptionChange(aktuellEntries, setAktuellEntries, resumeFormTexts.suggestions, aktuellSuggestionsState, setAktuellSuggestionsState, i, v)
+            }
+            addNewRow={() => addNewRow(aktuellEntries, setAktuellEntries)}
+            removeRow={(i) => removeRow(aktuellEntries, setAktuellEntries, i, "Ви дійсно хочете видалити цей рядок?")}
+          />
 
-        <ResumeSection
-          title="Berufserfahrungen"
-          entries={berufEntries}
-          setEntries={setBerufEntries}
-          suggestionsList={resumeFormTexts.berufserfahrungenSuggestions}
-          suggestionsState={berufSuggestionsState}
-          setSuggestionsState={setBerufSuggestionsState}
-          suggestionsRef={useRef(null)}
-          handleTableChange={(i, f, v) => handleFieldChange(berufEntries, setBerufEntries, i, f, v)}
-          handleDescriptionChange={(i, v) =>
-            handleDescriptionChange(berufEntries, setBerufEntries, resumeFormTexts.berufserfahrungenSuggestions, berufSuggestionsState, setBerufSuggestionsState, i, v)
-          }
-          addNewRow={() => addNewRow(berufEntries, setBerufEntries)}
-          removeRow={(i) => removeRow(berufEntries, setBerufEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-        />
+          <ResumeSection
+            title="Berufserfahrungen"
+            entries={berufEntries}
+            setEntries={setBerufEntries}
+            suggestionsList={resumeFormTexts.berufserfahrungenSuggestions}
+            suggestionsState={berufSuggestionsState}
+            setSuggestionsState={setBerufSuggestionsState}
+            suggestionsRef={useRef(null)}
+            handleTableChange={(i, f, v) => handleFieldChange(berufEntries, setBerufEntries, i, f, v)}
+            handleDescriptionChange={(i, v) =>
+              handleDescriptionChange(berufEntries, setBerufEntries, resumeFormTexts.berufserfahrungenSuggestions, berufSuggestionsState, setBerufSuggestionsState, i, v)
+            }
+            addNewRow={() => addNewRow(berufEntries, setBerufEntries)}
+            removeRow={(i) => removeRow(berufEntries, setBerufEntries, i, "Ви дійсно хочете видалити цей рядок?")}
+          />
 
-        <ResumeSection
-          title="Ausbildung"
-          entries={ausbildungEntries}
-          setEntries={setAusbildungEntries}
-          suggestionsList={resumeFormTexts.ausbildungSuggestions}
-          suggestionsState={ausbildungSuggestionsState}
-          setSuggestionsState={setAusbildungSuggestionsState}
-          suggestionsRef={useRef(null)}
-          handleTableChange={(i, f, v) => handleFieldChange(ausbildungEntries, setAusbildungEntries, i, f, v)}
-          handleDescriptionChange={(i, v) =>
-            handleDescriptionChange(ausbildungEntries, setAusbildungEntries, resumeFormTexts.ausbildungSuggestions, ausbildungSuggestionsState, setAusbildungSuggestionsState, i, v)
-          }
-          addNewRow={() => addNewRow(ausbildungEntries, setAusbildungEntries)}
-          removeRow={(i) => removeRow(ausbildungEntries, setAusbildungEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-        />
+          <ResumeSection
+            title="Ausbildung"
+            entries={ausbildungEntries}
+            setEntries={setAusbildungEntries}
+            suggestionsList={resumeFormTexts.ausbildungSuggestions}
+            suggestionsState={ausbildungSuggestionsState}
+            setSuggestionsState={setAusbildungSuggestionsState}
+            suggestionsRef={useRef(null)}
+            handleTableChange={(i, f, v) => handleFieldChange(ausbildungEntries, setAusbildungEntries, i, f, v)}
+            handleDescriptionChange={(i, v) =>
+              handleDescriptionChange(ausbildungEntries, setAusbildungEntries, resumeFormTexts.ausbildungSuggestions, ausbildungSuggestionsState, setAusbildungSuggestionsState, i, v)
+            }
+            addNewRow={() => addNewRow(ausbildungEntries, setAusbildungEntries)}
+            removeRow={(i) => removeRow(ausbildungEntries, setAusbildungEntries, i, "Ви дійсно хочете видалити цей рядок?")}
+          />
 
-        <LanguageSkillsSection
-          entries={languageSkillsEntries}
-          setEntries={setLanguageSkillsEntries}
-          languageSuggestionsList={resumeFormTexts.languageSkillsSuggestions}
-          levelSuggestionsList={resumeFormTexts.levelSuggestions}
-          languageSuggestionsState={languageSuggestionsState}
-          setLanguageSuggestionsState={setLanguageSuggestionsState}
-          levelSuggestionsState={levelSuggestionsState}
-          setLevelSuggestionsState={setLevelSuggestionsState}
-          addNewRow={() => addNewRow(languageSkillsEntries, setLanguageSkillsEntries)}
-          removeRow={(i) => removeRow(languageSkillsEntries, setLanguageSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-        />
+          <LanguageSkillsSection
+            entries={languageSkillsEntries}
+            setEntries={setLanguageSkillsEntries}
+            languageSuggestionsList={resumeFormTexts.languageSkillsSuggestions}
+            levelSuggestionsList={resumeFormTexts.levelSuggestions}
+            languageSuggestionsState={languageSuggestionsState}
+            setLanguageSuggestionsState={setLanguageSuggestionsState}
+            levelSuggestionsState={levelSuggestionsState}
+            setLevelSuggestionsState={setLevelSuggestionsState}
+            addNewRow={() => addNewRow(languageSkillsEntries, setLanguageSkillsEntries)}
+            removeRow={(i) => removeRow(languageSkillsEntries, setLanguageSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
+          />
 
-        <TechnicalSkillsSection
-          entries={technicalSkillsEntries}
-          setEntries={setTechnicalSkillsEntries}
-          technicalSkillsSuggestionsList={resumeFormTexts.technicalSkillsSuggestions}
-          levelSuggestionsList={resumeFormTexts.technicalLevelSuggestions}
-          technicalSkillsSuggestionsState={technicalSkillsSuggestionsState}
-          setTechnicalSkillsSuggestionsState={setTechnicalSkillsSuggestionsState}
-          levelSuggestionsState={technicalLevelSuggestionsState}
-          setLevelSuggestionsState={setTechnicalLevelSuggestionsState}
-          addNewRow={() => addNewRow(technicalSkillsEntries, setTechnicalSkillsEntries)}
-          removeRow={(i) => removeRow(technicalSkillsEntries, setTechnicalSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-        />
-      </div>
-    </MainLayout>
+          <TechnicalSkillsSection
+            entries={technicalSkillsEntries}
+            setEntries={setTechnicalSkillsEntries}
+            technicalSkillsSuggestionsList={resumeFormTexts.technicalSkillsSuggestions}
+            levelSuggestionsList={resumeFormTexts.technicalLevelSuggestions}
+            technicalSkillsSuggestionsState={technicalSkillsSuggestionsState}
+            setTechnicalSkillsSuggestionsState={setTechnicalSkillsSuggestionsState}
+            levelSuggestionsState={technicalLevelSuggestionsState}
+            setLevelSuggestionsState={setTechnicalLevelSuggestionsState}
+            addNewRow={() => addNewRow(technicalSkillsEntries, setTechnicalSkillsEntries)}
+            removeRow={(i) => removeRow(technicalSkillsEntries, setTechnicalSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
+          />
+        </div>
+      </MainLayout>
+    </ThemeProvider>
   );
 };
 

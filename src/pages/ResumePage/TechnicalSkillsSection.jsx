@@ -1,6 +1,4 @@
-// src/pages/ResumePage/TechnicalSkillsSection.jsx
-
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./TechnicalSkillsSection.module.css";
 
 const TechnicalSkillsSection = ({
@@ -8,19 +6,51 @@ const TechnicalSkillsSection = ({
   setEntries,
   technicalSkillsSuggestionsList,
   levelSuggestionsList,
-  technicalSkillsSuggestionsState,
-  setTechnicalSkillsSuggestionsState,
-  levelSuggestionsState,
-  setLevelSuggestionsState,
-  technicalSkillsSuggestionsRef,
-  levelSuggestionsRef,
-  handleTechnicalSkillChange,
-  handleTechnicalLevelChange,
-  handleTechnicalSkillSuggestionClick,
-  handleTechnicalLevelSuggestionClick,
   addNewRow,
   removeRow,
 }) => {
+  const [activeField, setActiveField] = useState(null);
+  const [filteredSuggestions, setFilteredSuggestions] = useState([]); // Новий стан для списку підказок
+  const suggestionsRef = useRef(null);
+
+  // Обробка кліків поза підказками
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+        setActiveField(null); // Закрити всі підказки
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside, true);
+    };
+  }, []);
+
+  const handleSuggestionSelect = (index, field, suggestion) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index][field] = suggestion;
+    setEntries(updatedEntries);
+    setActiveField(null); // Закрити підказки після вибору
+  };
+
+  const toggleSuggestions = (index, field, value, suggestionsList) => {
+    setActiveField(`${field}-${index}`);
+    setFilteredSuggestions(
+      value
+        ? suggestionsList.filter((suggestion) =>
+            suggestion.toLowerCase().includes(value.toLowerCase())
+          )
+        : suggestionsList
+    );
+  };
+
+  const handleFieldChange = (index, field, value) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index][field] = value;
+    setEntries(updatedEntries);
+  };
+
   return (
     <section>
       <h3 className={styles.subheader}>Технічні навички</h3>
@@ -35,30 +65,26 @@ const TechnicalSkillsSection = ({
         <tbody>
           {entries.map((entry, index) => (
             <tr key={index}>
-              {/* Поле для навички */}
               <td className={styles.skillCell}>
                 <div className={styles.inputContainer}>
                   <input
                     type="text"
                     placeholder="Введіть навичку"
                     value={entry.skill}
-                    onChange={(e) => handleTechnicalSkillChange(index, e.target.value)}
+                    onChange={(e) =>
+                      handleFieldChange(index, "skill", e.target.value)
+                    }
                     className={styles.input}
                   />
                   <button
                     type="button"
                     onClick={() =>
-                      setTechnicalSkillsSuggestionsState({
-                        activeRow: index,
-                        filteredSuggestions:
-                          entry.skill.length > 0
-                            ? technicalSkillsSuggestionsList.filter((suggestion) =>
-                                suggestion
-                                  .toLowerCase()
-                                  .includes(entry.skill.toLowerCase())
-                              )
-                            : technicalSkillsSuggestionsList,
-                      })
+                      toggleSuggestions(
+                        index,
+                        "skill",
+                        entry.skill,
+                        technicalSkillsSuggestionsList
+                      )
                     }
                     className={styles.infoButton}
                     title="Показати підказки"
@@ -66,51 +92,47 @@ const TechnicalSkillsSection = ({
                     i
                   </button>
                 </div>
-                {technicalSkillsSuggestionsState.activeRow === index &&
-                  technicalSkillsSuggestionsState.filteredSuggestions.length > 0 && (
-                    <ul
-                      className={styles.suggestionsList}
-                      ref={technicalSkillsSuggestionsRef}
-                    >
-                      {technicalSkillsSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() =>
-                            handleTechnicalSkillSuggestionClick(index, suggestion)
-                          }
-                          className={styles.suggestionItem}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                {activeField === `skill-${index}` && (
+                  <ul
+                    className={styles.suggestionsList}
+                    ref={suggestionsRef}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {filteredSuggestions.map((suggestion, i) => (
+                      <li
+                        key={i}
+                        onClick={() =>
+                          handleSuggestionSelect(index, "skill", suggestion)
+                        }
+                        className={styles.suggestionItem}
+                      >
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </td>
 
-              {/* Поле для рівня */}
               <td className={styles.levelCell}>
                 <div className={styles.inputContainer}>
                   <input
                     type="text"
                     placeholder="Введіть рівень"
                     value={entry.technicalLevel}
-                    onChange={(e) => handleTechnicalLevelChange(index, e.target.value)}
+                    onChange={(e) =>
+                      handleFieldChange(index, "technicalLevel", e.target.value)
+                    }
                     className={styles.input}
                   />
                   <button
                     type="button"
                     onClick={() =>
-                      setLevelSuggestionsState({
-                        activeRow: index,
-                        filteredSuggestions:
-                          entry.technicalLevel.length > 0
-                            ? levelSuggestionsList.filter((suggestion) =>
-                                suggestion
-                                  .toLowerCase()
-                                  .includes(entry.technicalLevel.toLowerCase())
-                              )
-                            : levelSuggestionsList,
-                      })
+                      toggleSuggestions(
+                        index,
+                        "technicalLevel",
+                        entry.technicalLevel,
+                        levelSuggestionsList
+                      )
                     }
                     className={styles.infoButton}
                     title="Показати підказки"
@@ -118,28 +140,31 @@ const TechnicalSkillsSection = ({
                     i
                   </button>
                 </div>
-                {levelSuggestionsState.activeRow === index &&
-                  levelSuggestionsState.filteredSuggestions.length > 0 && (
-                    <ul
-                      className={styles.suggestionsList}
-                      ref={levelSuggestionsRef}
-                    >
-                      {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() =>
-                            handleTechnicalLevelSuggestionClick(index, suggestion)
-                          }
-                          className={styles.suggestionItem}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                {activeField === `technicalLevel-${index}` && (
+                  <ul
+                    className={styles.suggestionsList}
+                    ref={suggestionsRef}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {filteredSuggestions.map((suggestion, i) => (
+                      <li
+                        key={i}
+                        onClick={() =>
+                          handleSuggestionSelect(
+                            index,
+                            "technicalLevel",
+                            suggestion
+                          )
+                        }
+                        className={styles.suggestionItem}
+                      >
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </td>
 
-              {/* Дії */}
               <td>
                 <button
                   onClick={() => removeRow(index)}

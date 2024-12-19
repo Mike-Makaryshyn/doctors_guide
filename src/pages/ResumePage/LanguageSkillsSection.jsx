@@ -1,6 +1,4 @@
-// src/pages/ResumePage/LanguageSkillsSection.jsx
-
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./LanguageSkillsSection.module.css";
 
 const LanguageSkillsSection = ({
@@ -12,14 +10,57 @@ const LanguageSkillsSection = ({
   setLanguageSuggestionsState,
   levelSuggestionsState,
   setLevelSuggestionsState,
-  languageSuggestionsRef,
-  levelSuggestionsRef,
-  handleLanguageFieldChange, // Використовуємо загальний обробник
-  handleLanguageSuggestionClick,
-  handleLevelSuggestionClick,
   addNewRow,
   removeRow,
 }) => {
+  const [activeField, setActiveField] = useState(null); // Новий стан для активного поля
+  const suggestionsRef = useRef(null); // Єдиний ref для підказок
+
+  // Обробка кліків поза підказками
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+        setActiveField(null); // Закрити всі підказки
+        setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+        setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside, true);
+    };
+  }, [setLanguageSuggestionsState, setLevelSuggestionsState]);
+
+  const handleSuggestionSelect = (index, field, suggestion) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index][field] = suggestion;
+    setEntries(updatedEntries);
+
+    // Закрити підказки після вибору
+    setActiveField(null);
+    setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+    setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+  };
+
+  const toggleSuggestions = (index, field, value, suggestionsList, setSuggestionsState) => {
+    setActiveField(`${field}-${index}`); // Унікальний ідентифікатор для активного поля
+    setSuggestionsState({
+      activeRow: index,
+      filteredSuggestions: value
+        ? suggestionsList.filter((suggestion) =>
+            suggestion.toLowerCase().includes(value.toLowerCase())
+          )
+        : suggestionsList,
+    });
+  };
+
+  const handleFieldChange = (index, field, value) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index][field] = value;
+    setEntries(updatedEntries);
+  };
+
   return (
     <section>
       <h3 className={styles.subheader}>Мовні навички</h3>
@@ -34,32 +75,25 @@ const LanguageSkillsSection = ({
         <tbody>
           {entries.map((entry, index) => (
             <tr key={index}>
-              {/* Поле для мови */}
               <td className={styles.languageCell}>
                 <div className={styles.inputContainer}>
                   <input
                     type="text"
                     placeholder="Введіть мову"
                     value={entry.language}
-                    onChange={(e) =>
-                      handleLanguageFieldChange(index, "language", e.target.value)
-                    }
+                    onChange={(e) => handleFieldChange(index, "language", e.target.value)}
                     className={styles.input}
                   />
                   <button
                     type="button"
                     onClick={() =>
-                      setLanguageSuggestionsState({
-                        activeRow: index,
-                        filteredSuggestions:
-                          entry.language.length > 0
-                            ? languageSuggestionsList.filter((suggestion) =>
-                                suggestion
-                                  .toLowerCase()
-                                  .includes(entry.language.toLowerCase())
-                              )
-                            : languageSuggestionsList,
-                      })
+                      toggleSuggestions(
+                        index,
+                        "language",
+                        entry.language,
+                        languageSuggestionsList,
+                        setLanguageSuggestionsState
+                      )
                     }
                     className={styles.infoButton}
                     title="Показати підказки"
@@ -67,53 +101,44 @@ const LanguageSkillsSection = ({
                     i
                   </button>
                 </div>
-                {languageSuggestionsState.activeRow === index &&
-                  languageSuggestionsState.filteredSuggestions.length > 0 && (
-                    <ul
-                      className={styles.suggestionsList}
-                      ref={languageSuggestionsRef}
-                    >
-                      {languageSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() =>
-                            handleLanguageSuggestionClick(index, suggestion)
-                          }
-                          className={styles.suggestionItem}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                {activeField === `language-${index}` && (
+                  <ul
+                    className={styles.suggestionsList}
+                    ref={suggestionsRef}
+                    onClick={(e) => e.stopPropagation()} // Запобігання закриттю при кліку всередині
+                  >
+                    {languageSuggestionsState.filteredSuggestions.map((suggestion, i) => (
+                      <li
+                        key={i}
+                        onClick={() => handleSuggestionSelect(index, "language", suggestion)}
+                        className={styles.suggestionItem}
+                      >
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </td>
 
-              {/* Поле для рівня */}
               <td className={styles.levelCell}>
                 <div className={styles.inputContainer}>
                   <input
                     type="text"
                     placeholder="Введіть рівень"
                     value={entry.level}
-                    onChange={(e) =>
-                      handleLanguageFieldChange(index, "level", e.target.value)
-                    }
+                    onChange={(e) => handleFieldChange(index, "level", e.target.value)}
                     className={styles.input}
                   />
                   <button
                     type="button"
                     onClick={() =>
-                      setLevelSuggestionsState({
-                        activeRow: index,
-                        filteredSuggestions:
-                          entry.level.length > 0
-                            ? levelSuggestionsList.filter((suggestion) =>
-                                suggestion
-                                  .toLowerCase()
-                                  .includes(entry.level.toLowerCase())
-                              )
-                            : levelSuggestionsList,
-                      })
+                      toggleSuggestions(
+                        index,
+                        "level",
+                        entry.level,
+                        levelSuggestionsList,
+                        setLevelSuggestionsState
+                      )
                     }
                     className={styles.infoButton}
                     title="Показати підказки"
@@ -121,28 +146,25 @@ const LanguageSkillsSection = ({
                     i
                   </button>
                 </div>
-                {levelSuggestionsState.activeRow === index &&
-                  levelSuggestionsState.filteredSuggestions.length > 0 && (
-                    <ul
-                      className={styles.suggestionsList}
-                      ref={levelSuggestionsRef}
-                    >
-                      {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() =>
-                            handleLevelSuggestionClick(index, suggestion)
-                          }
-                          className={styles.suggestionItem}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                {activeField === `level-${index}` && (
+                  <ul
+                    className={styles.suggestionsList}
+                    ref={suggestionsRef}
+                    onClick={(e) => e.stopPropagation()} // Запобігання закриттю при кліку всередині
+                  >
+                    {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
+                      <li
+                        key={i}
+                        onClick={() => handleSuggestionSelect(index, "level", suggestion)}
+                        className={styles.suggestionItem}
+                      >
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </td>
 
-              {/* Дії */}
               <td>
                 <button
                   onClick={() => removeRow(index)}

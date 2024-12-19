@@ -1,12 +1,11 @@
-// src/components/ResumePage/ResumeSection.jsx
-
-import React from "react";
-import SingleDateField from "./SingleDateField"; // Імпортуємо компонент SingleDateField
-import styles from "./ResumeSection.module.css"; // Імпортуємо стилі
+import React, { useEffect } from "react";
+import TextField from "@mui/material/TextField"; // Імпорт TextField
+import SingleDateField from "./SingleDateField";
+import styles from "./ResumeSection.module.css";
 
 const ResumeSection = ({
   title,
-  entries = [], // Значення за замовчуванням — порожній масив
+  entries = [],
   setEntries,
   suggestionsList,
   suggestionsState,
@@ -17,18 +16,57 @@ const ResumeSection = ({
   handleSuggestionClick,
   addNewRow,
   removeRow,
-  handleDateBlur, // Додаємо обробник для onBlur
-  dateErrors = [], // Значення за замовчуванням — порожній масив
+  handleDateBlur,
+  dateErrors = [],
 }) => {
+  // Закривання підказок по кліку на порожнє місце
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(event.target)
+      ) {
+        setSuggestionsState({
+          ...suggestionsState,
+          description: {
+            activeRow: null,
+            filteredSuggestions: [],
+          },
+        });
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [suggestionsRef, suggestionsState, setSuggestionsState]);
+
+  // Вибір підказки
+  const handleSuggestionSelect = (index, suggestion) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index].description = suggestion; // Додати значення в поле
+    setEntries(updatedEntries);
+
+    // Закрити підказки після вибору
+    setSuggestionsState({
+      ...suggestionsState,
+      description: {
+        activeRow: null,
+        filteredSuggestions: [],
+      },
+    });
+  };
+
   return (
     <section>
       <h3 className={styles.subheader}>{title}</h3>
       <table className={styles.table}>
         <thead>
           <tr>
-            <th style={{ width: "25%" }}>Дата (Seit / Heute)</th>
+            <th style={{ width: "20%" }}>Дата (Seit / Heute)</th>
             <th>Опис</th>
-            <th>Дії</th>
+            {title !== "Aktuell" && <th style={{ width: "20%" }}>Ort (Місце)</th>}
           </tr>
         </thead>
         <tbody>
@@ -42,9 +80,7 @@ const ResumeSection = ({
                     onChange={(newValue) =>
                       handleTableChange(index, "date", newValue)
                     }
-                    onBlur={(newValue) =>
-                      handleDateBlur(index, newValue)
-                    }
+                    onBlur={(newValue) => handleDateBlur(index, newValue)}
                     error={dateErrors[index]}
                   />
                   {dateErrors[index] && (
@@ -54,27 +90,19 @@ const ResumeSection = ({
                   )}
                 </td>
 
-                {/* Поле для опису разом з кнопкою видалення та кнопкою для підказок */}
+                {/* Поле для опису */}
                 <td className={styles.descriptionCell}>
                   <div className={styles.descriptionContainer}>
-                    <textarea
+                    <TextField
+                      label="Опис"
+                      variant="outlined"
+                      placeholder="Введіть опис"
                       value={entry.description || ""}
                       onChange={(e) =>
                         handleDescriptionChange(index, e.target.value)
                       }
-                      className={styles.textArea}
-                      placeholder="Опис"
-                      onBlur={() => {
-                        // Використання setTimeout для дозволу натискання на підказку
-                        setTimeout(() =>
-                          setSuggestionsState({
-                            ...suggestionsState,
-                            description: {
-                              activeRow: null,
-                              filteredSuggestions: [],
-                            },
-                          }), 100);
-                      }}
+                      fullWidth
+                      margin="normal"
                     />
                     <button
                       type="button"
@@ -83,7 +111,7 @@ const ResumeSection = ({
                     >
                       −
                     </button>
-                    {/* Додаємо кнопку для показу підказок */}
+                    {/* Кнопка для підказок */}
                     <button
                       type="button"
                       onClick={() =>
@@ -92,7 +120,11 @@ const ResumeSection = ({
                           description: {
                             activeRow: index,
                             filteredSuggestions:
-                              entry.description.length > 0
+                              suggestionsList.filter((suggestion) =>
+                                suggestion
+                                  .toLowerCase()
+                                  .includes(entry.description.toLowerCase())
+                              ).length > 0
                                 ? suggestionsList.filter((suggestion) =>
                                     suggestion
                                       .toLowerCase()
@@ -122,11 +154,7 @@ const ResumeSection = ({
                             <li
                               key={i}
                               onClick={() =>
-                                handleSuggestionClick(
-                                  "description",
-                                  index,
-                                  suggestion
-                                )
+                                handleSuggestionSelect(index, suggestion)
                               }
                               className={styles.suggestionItem}
                             >
@@ -137,14 +165,28 @@ const ResumeSection = ({
                       </ul>
                     )}
                 </td>
-                <td>
-                  {/* Додайте кнопки або інші елементи для дій, якщо потрібно */}
-                </td>
+
+                {/* Поле для місця (Ort) */}
+                {title !== "Aktuell" && (
+                  <td>
+                    <TextField
+                      label="Ort (Місце)"
+                      variant="outlined"
+                      placeholder="Введіть місце"
+                      value={entry.place || ""}
+                      onChange={(e) =>
+                        handleTableChange(index, "place", e.target.value)
+                      }
+                      fullWidth
+                      margin="normal"
+                    />
+                  </td>
+                )}
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="3" className={styles.noDataMessage}>
+              <td colSpan={title !== "Aktuell" ? "3" : "2"} className={styles.noDataMessage}>
                 Немає даних для відображення
               </td>
             </tr>
