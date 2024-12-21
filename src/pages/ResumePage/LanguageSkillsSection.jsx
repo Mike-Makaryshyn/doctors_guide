@@ -1,185 +1,223 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Input from "@mui/material/Input";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from "@mui/icons-material/Add";
+import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
 import styles from "./LanguageSkillsSection.module.css";
 
-const LanguageSkillsSection = ({
-  entries,
-  setEntries,
-  languageSuggestionsList,
-  levelSuggestionsList,
-  languageSuggestionsState,
-  setLanguageSuggestionsState,
-  levelSuggestionsState,
-  setLevelSuggestionsState,
-  addNewRow,
-  removeRow,
-}) => {
-  const [activeField, setActiveField] = useState(null); // Новий стан для активного поля
-  const suggestionsRef = useRef(null); // Єдиний ref для підказок
+const LanguageSkillsSection = ({ title = "Language Skills" }) => {
+  const [entries, setEntries] = useState([{ language: "", level: "" }]);
+  const [languageSuggestionsState, setLanguageSuggestionsState] = useState({
+    activeRow: null,
+    filteredSuggestions: [],
+  });
+  const [levelSuggestionsState, setLevelSuggestionsState] = useState({
+    activeRow: null,
+    filteredSuggestions: [],
+  });
 
-  // Обробка кліків поза підказками
+  const languageSuggestionsRef = useRef(null);
+  const levelSuggestionsRef = useRef(null);
+
+  const languageSuggestionsList = resumeFormTexts.languageSkillsSuggestions;
+  const levelSuggestionsList = resumeFormTexts.levelSuggestions;
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
-        setActiveField(null); // Закрити всі підказки
-        setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-        setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+      if (
+        languageSuggestionsRef.current &&
+        !languageSuggestionsRef.current.contains(event.target) &&
+        levelSuggestionsRef.current &&
+        !levelSuggestionsRef.current.contains(event.target)
+      ) {
+        setLanguageSuggestionsState({
+          activeRow: null,
+          filteredSuggestions: [],
+        });
+        setLevelSuggestionsState({
+          activeRow: null,
+          filteredSuggestions: [],
+        });
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside, true);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside, true);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [setLanguageSuggestionsState, setLevelSuggestionsState]);
+  }, []);
 
-  const handleSuggestionSelect = (index, field, suggestion) => {
-    const updatedEntries = [...entries];
-    updatedEntries[index][field] = suggestion;
+  const addNewRow = () => {
+    setEntries([...entries, { language: "", level: "" }]);
+  };
+
+  const removeRow = (index) => {
+    const updatedEntries = entries.filter((_, i) => i !== index);
     setEntries(updatedEntries);
-
-    // Закрити підказки після вибору
-    setActiveField(null);
-    setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-    setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
   };
 
-  const toggleSuggestions = (index, field, value, suggestionsList, setSuggestionsState) => {
-    setActiveField(`${field}-${index}`); // Унікальний ідентифікатор для активного поля
-    setSuggestionsState({
-      activeRow: index,
-      filteredSuggestions: value
-        ? suggestionsList.filter((suggestion) =>
-            suggestion.toLowerCase().includes(value.toLowerCase())
-          )
-        : suggestionsList,
-    });
-  };
-
-  const handleFieldChange = (index, field, value) => {
+  const handleInputChange = (index, field, value) => {
     const updatedEntries = [...entries];
     updatedEntries[index][field] = value;
     setEntries(updatedEntries);
   };
 
+  const handleSuggestionSelect = (index, field, suggestion) => {
+    const updatedEntries = [...entries];
+    updatedEntries[index][field] = suggestion; // Оновлення відповідного поля
+    setEntries(updatedEntries);
+
+    // Скидання підказок
+    if (field === "language") {
+      setLanguageSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    } else if (field === "level") {
+      setLevelSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    }
+  };
+
+  const handleInfoClick = (index, field) => {
+    const isOpen =
+      (field === "language" && languageSuggestionsState.activeRow === index) ||
+      (field === "level" && levelSuggestionsState.activeRow === index);
+
+    if (field === "language") {
+      setLanguageSuggestionsState({
+        activeRow: isOpen ? null : index,
+        filteredSuggestions: isOpen
+          ? []
+          : languageSuggestionsList.filter((suggestion) =>
+              suggestion
+                .toLowerCase()
+                .includes(entries[index]?.language?.toLowerCase() || "")
+            ),
+      });
+    } else if (field === "level") {
+      setLevelSuggestionsState({
+        activeRow: isOpen ? null : index,
+        filteredSuggestions: isOpen
+          ? []
+          : levelSuggestionsList.filter((suggestion) =>
+              suggestion
+                .toLowerCase()
+                .includes(entries[index]?.level?.toLowerCase() || "")
+            ),
+      });
+    }
+  };
+
   return (
     <section>
-      <h3 className={styles.subheader}>Мовні навички</h3>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>Мова</th>
-            <th>Рівень</th>
-            <th>Дії</th>
-          </tr>
-        </thead>
-        <tbody>
-          {entries.map((entry, index) => (
-            <tr key={index}>
-              <td className={styles.languageCell}>
-                <div className={styles.inputContainer}>
-                  <input
-                    type="text"
-                    placeholder="Введіть мову"
-                    value={entry.language}
-                    onChange={(e) => handleFieldChange(index, "language", e.target.value)}
-                    className={styles.input}
-                  />
-                  <button
-                    type="button"
-                    onClick={() =>
-                      toggleSuggestions(
-                        index,
-                        "language",
-                        entry.language,
-                        languageSuggestionsList,
-                        setLanguageSuggestionsState
-                      )
-                    }
-                    className={styles.infoButton}
-                    title="Показати підказки"
-                  >
-                    i
-                  </button>
-                </div>
-                {activeField === `language-${index}` && (
-                  <ul
-                    className={styles.suggestionsList}
-                    ref={suggestionsRef}
-                    onClick={(e) => e.stopPropagation()} // Запобігання закриттю при кліку всередині
-                  >
-                    {languageSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                      <li
-                        key={i}
-                        onClick={() => handleSuggestionSelect(index, "language", suggestion)}
-                        className={styles.suggestionItem}
-                      >
-                        {suggestion}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </td>
+      <h3 className={styles.subheader}>{title}</h3>
+      <div className={styles.entriesContainer}>
+        {entries.map((entry, index) => (
+          <div key={index} className={styles.entryRow}>
+            {/* Поле для мови */}
+            <div className={styles.descriptionCell}>
+              <Input
+                placeholder="Enter language"
+                value={entry.language || ""}
+                onChange={(e) => handleInputChange(index, "language", e.target.value)}
+                disableUnderline
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="Show suggestions"
+                      onClick={() => handleInfoClick(index, "language")}
+                      size="small"
+                      className={styles.infoButton}
+                    >
+                      <InfoIcon fontSize="small" />
+                    </IconButton>
+                  </InputAdornment>
+                }
+                className={styles.inputField}
+              />
+              <div
+                className={`${styles.dropdown} ${
+                  languageSuggestionsState.activeRow === index ? styles.open : ""
+                }`}
+                ref={languageSuggestionsRef}
+              >
+                <ul className={styles.dropdown__items}>
+                  {languageSuggestionsState.filteredSuggestions.map((suggestion, i) => (
+                    <li
+                      key={i}
+                      onClick={() => handleSuggestionSelect(index, "language", suggestion)}
+                      className={styles.dropdown__item}
+                    >
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-              <td className={styles.levelCell}>
-                <div className={styles.inputContainer}>
-                  <input
-                    type="text"
-                    placeholder="Введіть рівень"
-                    value={entry.level}
-                    onChange={(e) => handleFieldChange(index, "level", e.target.value)}
-                    className={styles.input}
-                  />
-                  <button
-                    type="button"
-                    onClick={() =>
-                      toggleSuggestions(
-                        index,
-                        "level",
-                        entry.level,
-                        levelSuggestionsList,
-                        setLevelSuggestionsState
-                      )
-                    }
-                    className={styles.infoButton}
-                    title="Показати підказки"
-                  >
-                    i
-                  </button>
-                </div>
-                {activeField === `level-${index}` && (
-                  <ul
-                    className={styles.suggestionsList}
-                    ref={suggestionsRef}
-                    onClick={(e) => e.stopPropagation()} // Запобігання закриттю при кліку всередині
-                  >
-                    {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
-                      <li
-                        key={i}
-                        onClick={() => handleSuggestionSelect(index, "level", suggestion)}
-                        className={styles.suggestionItem}
-                      >
-                        {suggestion}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </td>
+            {/* Поле для рівня */}
+            <div className={styles.descriptionCell}>
+              <Input
+                placeholder="Enter level"
+                value={entry.level || ""}
+                onChange={(e) => handleInputChange(index, "level", e.target.value)}
+                disableUnderline
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="Show suggestions"
+                      onClick={() => handleInfoClick(index, "level")}
+                      size="small"
+                      className={styles.infoButton}
+                    >
+                      <InfoIcon fontSize="small" />
+                    </IconButton>
+                  </InputAdornment>
+                }
+                className={styles.inputField}
+              />
+              <div
+                className={`${styles.dropdown} ${
+                  levelSuggestionsState.activeRow === index ? styles.open : ""
+                }`}
+                ref={levelSuggestionsRef}
+              >
+                <ul className={styles.dropdown__items}>
+                  {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
+                    <li
+                      key={i}
+                      onClick={() => handleSuggestionSelect(index, "level", suggestion)}
+                      className={styles.dropdown__item}
+                    >
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-              <td>
-                <button
-                  onClick={() => removeRow(index)}
-                  className={styles.removeButton}
-                >
-                  Видалити
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <button onClick={addNewRow} className={styles.addButton}>
-        + Додати новий рядок
-      </button>
+            {/* Кнопка видалення */}
+            <div className={styles.buttonContainer}>
+              <IconButton onClick={() => removeRow(index)}>
+                <DeleteIcon />
+              </IconButton>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Кнопка "Додати" по центру під усіма рядками */}
+      <div className={styles.addButtonContainer}>
+        <IconButton onClick={addNewRow}>
+          <AddIcon />
+        </IconButton>
+      </div>
     </section>
   );
 };

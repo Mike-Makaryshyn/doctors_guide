@@ -1,19 +1,26 @@
-import React, { useState, useRef, useEffect } from "react";
+// ResumePage.jsx
+import React, { useState, useRef } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
-import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./ResumePage.module.css";
-import ResumeSection from "./ResumeSection";
-import LanguageSkillsSection from "./LanguageSkillsSection";
-import TechnicalSkillsSection from "./TechnicalSkillsSection";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const MAX_DESCRIPTION_LENGTH = 500;
+import HeaderSection from "./HeaderSection";
+import AktuellSection from "./AktuellSection";
+import BerufserfahrungenSection from "./BerufserfahrungenSection";
+import AusbildungSection from "./AusbildungSection";
+import LanguageSkillsSection from "./LanguageSkillsSection";
+import TechnicalSkillsSection from "./TechnicalSkillsSection";
 
-// Тема для налаштування чорного кольору активного поля та мітки
+// Імпортуємо іконки з бібліотеки Material Icons
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
+import LanguageIcon from "@mui/icons-material/Language";
+import BuildIcon from "@mui/icons-material/Build";
+
 const theme = createTheme({
   components: {
     MuiTextField: {
@@ -21,14 +28,14 @@ const theme = createTheme({
         root: {
           "& .MuiOutlinedInput-root": {
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "black", // Чорний колір рамки
+              borderColor: "black",
             },
           },
           "& .MuiInputLabel-root": {
-            color: "black", // Чорний колір мітки за замовчуванням
+            color: "black",
           },
           "& .MuiInputLabel-root.Mui-focused": {
-            color: "black", // Чорний колір мітки під час фокусу
+            color: "black",
           },
         },
       },
@@ -36,231 +43,145 @@ const theme = createTheme({
   },
 });
 
+const sections = [
+  {
+    id: 0,
+    title: "Persönliche Daten",
+    component: HeaderSection,
+    icon: <HomeIcon style={{ fontSize: 40 }} />, // Збільшений розмір іконки
+  },
+  {
+    id: 1,
+    title: "Aktuell",
+    component: AktuellSection,
+    icon: <InfoIcon style={{ fontSize: 40 }} />,
+  },
+  {
+    id: 2,
+    title: "Berufserfahrungen",
+    component: BerufserfahrungenSection,
+    icon: <WorkIcon style={{ fontSize: 40 }} />,
+  },
+  {
+    id: 3,
+    title: "Ausbildung",
+    component: AusbildungSection,
+    icon: <SchoolIcon style={{ fontSize: 40 }} />,
+  },
+  {
+    id: 4,
+    title: "Language Skills",
+    component: LanguageSkillsSection,
+    icon: <LanguageIcon style={{ fontSize: 40 }} />,
+  },
+  {
+    id: 5,
+    title: "Technical Skills",
+    component: TechnicalSkillsSection,
+    icon: <BuildIcon style={{ fontSize: 40 }} />,
+  },
+];
+
 const ResumePage = () => {
-  const [header, setHeader] = useState({
-    vorname: "",
-    nachname: "",
-    address: "",
-    phone: "",
-    email: "",
-    dateOfBirth: "",
-    citizenship: "",
-    fachrichtung: "",
-  });
+  const [currentSection, setCurrentSection] = useState(0);
 
-  const [aktuellEntries, setAktuellEntries] = useState([{ date: "", description: "" }]);
-  const [berufEntries, setBerufEntries] = useState([{ date: "", description: "" }]);
-  const [ausbildungEntries, setAusbildungEntries] = useState([{ date: "", description: "" }]);
+  // Створення рефів для кожної секції
+  const headerRef = useRef();
+  const aktuellRef = useRef();
+  const berufserfahrungenRef = useRef();
+  const ausbildungRef = useRef();
+  const languageSkillsRef = useRef();
+  const technicalSkillsRef = useRef();
 
-  const [aktuellSuggestionsState, setAktuellSuggestionsState] = useState({
-    description: { activeRow: null, filteredSuggestions: [] },
-  });
-  const [berufSuggestionsState, setBerufSuggestionsState] = useState({
-    description: { activeRow: null, filteredSuggestions: [] },
-  });
-  const [ausbildungSuggestionsState, setAusbildungSuggestionsState] = useState({
-    description: { activeRow: null, filteredSuggestions: [] },
-  });
-
-  const [languageSkillsEntries, setLanguageSkillsEntries] = useState([{ language: "", level: "" }]);
-  const [languageSuggestionsState, setLanguageSuggestionsState] = useState({
-    activeRow: null,
-    filteredSuggestions: [],
-  });
-  const [levelSuggestionsState, setLevelSuggestionsState] = useState({
-    activeRow: null,
-    filteredSuggestions: [],
-  });
-
-  const [technicalSkillsEntries, setTechnicalSkillsEntries] = useState([{ skill: "", technicalLevel: "" }]);
-  const [technicalSkillsSuggestionsState, setTechnicalSkillsSuggestionsState] = useState({
-    activeRow: null,
-    filteredSuggestions: [],
-  });
-  const [technicalLevelSuggestionsState, setTechnicalLevelSuggestionsState] = useState({
-    activeRow: null,
-    filteredSuggestions: [],
-  });
-
-  const languageSuggestionsRef = useRef(null);
-  const levelSuggestionsRef = useRef(null);
-
-  const handleHeaderChange = (name, value) => {
-    setHeader((prevHeader) => ({ ...prevHeader, [name]: value }));
+  // Мапування рефів за id секції
+  const sectionRefs = {
+    0: headerRef,
+    1: aktuellRef,
+    2: berufserfahrungenRef,
+    3: ausbildungRef,
+    4: languageSkillsRef,
+    5: technicalSkillsRef,
   };
 
-  const handleFieldChange = (entries, setEntries, index, field, value) => {
-    if (index < 0 || index >= entries.length) return;
+  const CurrentComponent = sections[currentSection].component;
 
-    let updatedValue = value;
-    if (field === "description" && value.length > MAX_DESCRIPTION_LENGTH) {
-      updatedValue = value.slice(0, MAX_DESCRIPTION_LENGTH);
-      toast.warn(`Опис не може перевищувати ${MAX_DESCRIPTION_LENGTH} символів.`);
-    }
-
-    const updatedEntries = [...entries];
-    updatedEntries[index][field] = updatedValue;
-    setEntries(updatedEntries);
-  };
-
-  const addNewRow = (entries, setEntries) => {
-    setEntries([...entries, { date: "", description: "" }]);
-  };
-
-  const removeRow = (entries, setEntries, index, confirmationMessage) => {
-    if (window.confirm(confirmationMessage)) {
-      const updatedEntries = entries.filter((_, i) => i !== index);
-      setEntries(updatedEntries);
+  // Функція для збереження даних поточної секції перед переходом
+  const saveCurrentSectionData = async () => {
+    const currentRef = sectionRefs[currentSection];
+    if (currentRef && currentRef.current && currentRef.current.saveData) {
+      await currentRef.current.saveData();
     }
   };
 
-  const handleDescriptionChange = (
-    entries,
-    setEntries,
-    suggestionsList,
-    suggestionsState,
-    setSuggestionsState,
-    index,
-    value
-  ) => {
-    handleFieldChange(entries, setEntries, index, "description", value);
+  const handleIconClick = async (id) => {
+    if (id === currentSection) return; // Вже на цій секції
 
-    if (value.length > 0) {
-      const filtered = suggestionsList.filter((suggestion) =>
-        suggestion.toLowerCase().includes(value.toLowerCase())
-      );
-      setSuggestionsState((prev) => ({
-        ...prev,
-        description: { activeRow: index, filteredSuggestions: filtered },
-      }));
-    } else {
-      setSuggestionsState((prev) => ({
-        ...prev,
-        description: { activeRow: null, filteredSuggestions: suggestionsList },
-      }));
+    await saveCurrentSectionData(); // Зберегти дані поточної секції
+    setCurrentSection(id); // Перейти до нової секції
+  };
+
+  const handleNext = async () => {
+    if (currentSection < sections.length - 1) {
+      await saveCurrentSectionData(); // Зберегти дані перед переходом
+      setCurrentSection((prev) => prev + 1);
     }
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        (languageSuggestionsRef.current &&
-          !languageSuggestionsRef.current.contains(event.target)) &&
-        (levelSuggestionsRef.current &&
-          !levelSuggestionsRef.current.contains(event.target))
-      ) {
-        console.log("Clicked outside: Closing suggestions");
-        setLanguageSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-        setLevelSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-      }
-    };
+  const handleBack = async () => {
+    if (currentSection > 0) {
+      await saveCurrentSectionData(); // Зберегти дані перед переходом
+      setCurrentSection((prev) => prev - 1);
+    }
+  };
 
-    document.addEventListener("mousedown", handleClickOutside, true);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside, true);
-    };
-  }, [languageSuggestionsRef, levelSuggestionsRef]);
+  // Функція для передавання handleNext до дочірніх компонентів
+  const handleSectionNext = async () => {
+    await handleNext();
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
-          <ToastContainer />
-          <h2 className={styles.header}>{resumeFormTexts.header}</h2>
+          <ToastContainer /> {/* Рендеринг ToastContainer у батьківському компоненті */}
 
-          {/* Kopfzeile */}
-          <section>
-            <h3 className={styles.subheader}>Kopfzeile</h3>
-            <form className={styles.form}>
-              {Object.entries(header).map(([key, value]) => (
-                <div key={key} className={styles.field}>
-                  <TextField
-                    label={key.charAt(0).toUpperCase() + key.slice(1)} // Форматування заголовків
-                    value={value}
-                    onChange={(e) => handleHeaderChange(key, e.target.value)}
-                    variant="outlined" // Сучасний стиль
-                    fullWidth
-                    margin="normal"
-                  />
+          {/* Навігаційні іконки */}
+          <div className={styles.iconBar}>
+            {sections.map((section) => (
+              <div
+                key={section.id}
+                className={`${styles.iconContainer} ${
+                  currentSection === section.id ? styles.active : styles.inactive
+                }`}
+                onClick={() => handleIconClick(section.id)}
+                aria-label={section.title}
+              >
+                <div
+                  className={`${styles.icon} ${
+                    currentSection === section.id ? styles.activeIcon : styles.inactiveIcon
+                  }`}
+                >
+                  {section.icon}
                 </div>
-              ))}
-            </form>
-          </section>
+                <span className={styles.iconLabel}>{section.title}</span>
+              </div>
+            ))}
+          </div>
 
-          {/* Інші секції */}
-          <ResumeSection
-            title="Aktuell"
-            entries={aktuellEntries}
-            setEntries={setAktuellEntries}
-            suggestionsList={resumeFormTexts.suggestions}
-            suggestionsState={aktuellSuggestionsState}
-            setSuggestionsState={setAktuellSuggestionsState}
-            suggestionsRef={useRef(null)}
-            handleTableChange={(i, f, v) => handleFieldChange(aktuellEntries, setAktuellEntries, i, f, v)}
-            handleDescriptionChange={(i, v) =>
-              handleDescriptionChange(aktuellEntries, setAktuellEntries, resumeFormTexts.suggestions, aktuellSuggestionsState, setAktuellSuggestionsState, i, v)
-            }
-            addNewRow={() => addNewRow(aktuellEntries, setAktuellEntries)}
-            removeRow={(i) => removeRow(aktuellEntries, setAktuellEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-          />
+          {/* Активна секція */}
+          <div className={styles.section}>
+            <CurrentComponent onNext={handleSectionNext} ref={sectionRefs[currentSection]} />
+          </div>
 
-          <ResumeSection
-            title="Berufserfahrungen"
-            entries={berufEntries}
-            setEntries={setBerufEntries}
-            suggestionsList={resumeFormTexts.berufserfahrungenSuggestions}
-            suggestionsState={berufSuggestionsState}
-            setSuggestionsState={setBerufSuggestionsState}
-            suggestionsRef={useRef(null)}
-            handleTableChange={(i, f, v) => handleFieldChange(berufEntries, setBerufEntries, i, f, v)}
-            handleDescriptionChange={(i, v) =>
-              handleDescriptionChange(berufEntries, setBerufEntries, resumeFormTexts.berufserfahrungenSuggestions, berufSuggestionsState, setBerufSuggestionsState, i, v)
-            }
-            addNewRow={() => addNewRow(berufEntries, setBerufEntries)}
-            removeRow={(i) => removeRow(berufEntries, setBerufEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-          />
-
-          <ResumeSection
-            title="Ausbildung"
-            entries={ausbildungEntries}
-            setEntries={setAusbildungEntries}
-            suggestionsList={resumeFormTexts.ausbildungSuggestions}
-            suggestionsState={ausbildungSuggestionsState}
-            setSuggestionsState={setAusbildungSuggestionsState}
-            suggestionsRef={useRef(null)}
-            handleTableChange={(i, f, v) => handleFieldChange(ausbildungEntries, setAusbildungEntries, i, f, v)}
-            handleDescriptionChange={(i, v) =>
-              handleDescriptionChange(ausbildungEntries, setAusbildungEntries, resumeFormTexts.ausbildungSuggestions, ausbildungSuggestionsState, setAusbildungSuggestionsState, i, v)
-            }
-            addNewRow={() => addNewRow(ausbildungEntries, setAusbildungEntries)}
-            removeRow={(i) => removeRow(ausbildungEntries, setAusbildungEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-          />
-
-          <LanguageSkillsSection
-            entries={languageSkillsEntries}
-            setEntries={setLanguageSkillsEntries}
-            languageSuggestionsList={resumeFormTexts.languageSkillsSuggestions}
-            levelSuggestionsList={resumeFormTexts.levelSuggestions}
-            languageSuggestionsState={languageSuggestionsState}
-            setLanguageSuggestionsState={setLanguageSuggestionsState}
-            levelSuggestionsState={levelSuggestionsState}
-            setLevelSuggestionsState={setLevelSuggestionsState}
-            addNewRow={() => addNewRow(languageSkillsEntries, setLanguageSkillsEntries)}
-            removeRow={(i) => removeRow(languageSkillsEntries, setLanguageSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-          />
-
-          <TechnicalSkillsSection
-            entries={technicalSkillsEntries}
-            setEntries={setTechnicalSkillsEntries}
-            technicalSkillsSuggestionsList={resumeFormTexts.technicalSkillsSuggestions}
-            levelSuggestionsList={resumeFormTexts.technicalLevelSuggestions}
-            technicalSkillsSuggestionsState={technicalSkillsSuggestionsState}
-            setTechnicalSkillsSuggestionsState={setTechnicalSkillsSuggestionsState}
-            levelSuggestionsState={technicalLevelSuggestionsState}
-            setLevelSuggestionsState={setTechnicalLevelSuggestionsState}
-            addNewRow={() => addNewRow(technicalSkillsEntries, setTechnicalSkillsEntries)}
-            removeRow={(i) => removeRow(technicalSkillsEntries, setTechnicalSkillsEntries, i, "Ви дійсно хочете видалити цей рядок?")}
-          />
+          {/* Кнопки "Назад" та "Далі" */}
+          <div className={styles.navigationButtons}>
+            <button onClick={handleBack} disabled={currentSection === 0}>
+              Назад
+            </button>
+            <button onClick={handleNext} disabled={currentSection === sections.length - 1}>
+              Далі
+            </button>
+          </div>
         </div>
       </MainLayout>
     </ThemeProvider>

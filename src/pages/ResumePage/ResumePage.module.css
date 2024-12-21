@@ -1,141 +1,122 @@
+/* ResumePage.module.css */
+
 /* Стилі для контейнера */
 .container {
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* Додаткові стилі за потребою */
+}
+
+/* Стилі для навігаційної панелі з іконками */
+.iconBar {
+  display: flex;
+  flex-direction: row; /* Горизонтальне розташування */
+  justify-content: center;
+  gap: 30px; /* Відстань між іконками */
+  margin-bottom: 30px;
+}
+
+/* Стилі для окремої іконки */
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Ефект при наведенні курсора */
+.iconContainer:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+}
+
+/* Активна іконка */
+.activeIcon {
+  background-color: #4caf50; /* Синій фон для активної іконки */
+  color: white;
+}
+
+/* Неактивна іконка */
+.inactiveIcon {
+  background-color: #f0f0f0; /* Світло-сірий фон для неактивної іконки */
+  color: black;
+}
+
+/* Стилі для іконок */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Розмір іконки */
+  height: 60px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Стилі для назв іконок */
+.iconLabel {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+/* Стилі для активної секції */
+.section {
+  width: 100%;
+  max-width: 800px;
+  /* Додаткові стилі, такі як фон, тіні тощо */
+}
+
+/* Стилі для кнопок навігації */
+.navigationButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.navigationButtons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.navigationButtons button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.navigationButtons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 600px) {
+  .iconBar {
+    flex-direction: column;
+    gap: 15px;
   }
-  
-  /* Стилі для заголовків */
-  .header {
-    font-size: 24px;
-    margin-bottom: 20px;
+
+  .iconLabel {
+    font-size: 12px;
   }
-  
-  .subheader {
-    font-size: 20px;
-    margin-bottom: 10px;
+
+  .icon {
+    width: 50px;
+    height: 50px;
   }
-  
-  /* Стилі для форм */
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .field {
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input {
-    padding: 8px;
-    width: 200px;
-  }
-  
-  /* Стилі для таблиці */
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .table th,
-  .table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .dateInput {
-    width: 100%;
-    padding: 8px;
-  }
-  
-  /* Стилі для опису */
-  .descriptionCell {
-    position: relative; /* Для позиціонування списку підказок */
-  }
-  
-  .descriptionContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .textArea {
-    width: 100%;
-    height: 60px;
-    padding: 8px;
-    resize: vertical;
-  }
-  
-  .removeButton {
-    margin-left: 5px;
-    padding: 5px 10px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .removeButton:hover {
-    background-color: #c82333;
-  }
-  
-  .infoButton {
-    margin-left: 5px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .infoButton:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Стилі для списку підказок */
-  .suggestionsList {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(83, 52, 52);
-    border: 1px solid #ccc;
-    width: 100%;
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-    margin-top: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .suggestionItem {
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  .suggestionItem:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Стилі для додавання нового рядка */
-  .addButton {
-    margin-top: 10px;
+
+  .navigationButtons button {
     padding: 8px 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    font-size: 14px;
   }
-  
-  .addButton:hover {
-    background-color: #218838;
-  }
+}
