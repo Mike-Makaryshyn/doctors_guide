@@ -1,14 +1,37 @@
-import React, { useState, useRef, useEffect } from "react";
+// TechnicalSkillsSection.jsx
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import PropTypes from "prop-types"; // Імпорт PropTypes
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-import resumeFormTexts from "../../constants/translation/ResumeForm";
+import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
 import styles from "./TechnicalSkillsSection.module.css";
+import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
+import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
+import "react-toastify/dist/ReactToastify.css";
 
-const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
+// Функція для перевірки валідності навички (можна додати власну логіку)
+const validateSkill = (skill) => {
+  if (!skill.trim()) {
+    throw new Error("Навичка не може бути порожньою.");
+  }
+  // Додайте додаткову валідацію за потребою
+};
+
+// Функція для перевірки валідності рівня (можна додати власну логіку)
+const validateTechnicalLevel = (level) => {
+  if (!level.trim()) {
+    throw new Error("Рівень не може бути порожнім.");
+  }
+  // Додайте додаткову валідацію за потребою
+};
+
+// Використання forwardRef для доступу до методів з батьківського компонента
+const TechnicalSkillsSection = forwardRef(({ title = "Technical Skills" }, ref) => {
   const [entries, setEntries] = useState([{ skill: "", technicalLevel: "" }]);
   const [skillSuggestionsState, setSkillSuggestionsState] = useState({
     activeRow: null,
@@ -24,6 +47,85 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
 
   const skillSuggestionsList = resumeFormTexts.technicalSkillsSuggestions; // Підказки для навичок
   const levelSuggestionsList = resumeFormTexts.levelSuggestions; // Підказки для рівнів
+
+  // Функція для отримання даних з Firestore
+  const fetchTechnicalSkillsData = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      console.error("Користувач не автентифікований");
+      toast.error("Користувач не автентифікований");
+      return;
+    }
+
+    try {
+      const technicalSkillsDocRef = doc(db, "users", user.uid, "resume", "technicalSkills");
+      const technicalSkillsDoc = await getDoc(technicalSkillsDocRef);
+      if (technicalSkillsDoc.exists()) {
+        const data = technicalSkillsDoc.data();
+        console.log("Отримані дані Technical Skills:", data);
+        if (data.technicalSkills && Array.isArray(data.technicalSkills)) {
+          setEntries(data.technicalSkills);
+        }
+      } else {
+        console.log("Документ Technical Skills не знайдено");
+      }
+    } catch (error) {
+      console.error("Помилка отримання даних Technical Skills:", error);
+      toast.error("Помилка отримання даних Technical Skills");
+    }
+  };
+
+  // Функція для збереження даних у Firestore
+  const saveTechnicalSkillsData = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      console.error("Користувач не автентифікований");
+      toast.error("Користувач не автентифікований");
+      return;
+    }
+
+    try {
+      // Фільтруємо записи, де обидва поля порожні
+      const nonEmptyEntries = entries.filter(
+        (entry) => entry.skill.trim() !== "" || entry.technicalLevel.trim() !== ""
+      );
+
+      if (nonEmptyEntries.length === 0) {
+        // Якщо немає записів, видаляємо документ
+        const technicalSkillsDocRef = doc(db, "users", user.uid, "resume", "technicalSkills");
+        await deleteDoc(technicalSkillsDocRef);
+        console.log("Документ Technical Skills видалено успішно");
+        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
+        // toast.success("Документ Technical Skills видалено успішно!");
+      } else {
+        // Валідація лише непорожніх записів
+        nonEmptyEntries.forEach((entry, index) => {
+          if (entry.skill.trim() !== "") validateSkill(entry.skill);
+          if (entry.technicalLevel.trim() !== "") validateTechnicalLevel(entry.technicalLevel);
+        });
+
+        const technicalSkillsDocRef = doc(db, "users", user.uid, "resume", "technicalSkills");
+        await setDoc(technicalSkillsDocRef, { technicalSkills: nonEmptyEntries }, { merge: true });
+        console.log("Дані Technical Skills успішно збережено");
+        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
+        // toast.success("Дані Technical Skills успішно збережено!");
+      }
+    } catch (error) {
+      console.error("Помилка збереження даних Technical Skills:", error);
+      toast.error(`Помилка збереження даних Technical Skills: ${error.message}`);
+    }
+  };
+
+  // Надання методу saveTechnicalSkillsData зовні через ref
+  useImperativeHandle(ref, () => ({
+    saveData: saveTechnicalSkillsData,
+  }));
+
+  // Завантаження даних при монтуванні компонента
+  useEffect(() => {
+    fetchTechnicalSkillsData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -70,6 +172,7 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
     updatedEntries[index][field] = suggestion;
     setEntries(updatedEntries);
 
+    // Скидання підказок
     if (field === "skill") {
       setSkillSuggestionsState({
         activeRow: null,
@@ -114,7 +217,7 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
   };
 
   return (
-    <section>
+    <section className={styles.technicalSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <div className={styles.entriesContainer}>
         {entries.map((entry, index) => (
@@ -139,6 +242,7 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
                   </InputAdornment>
                 }
                 className={styles.inputField}
+                onBlur={saveTechnicalSkillsData} // Збереження при покиданні поля
               />
               <div
                 className={`${styles.dropdown} ${
@@ -180,6 +284,7 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
                   </InputAdornment>
                 }
                 className={styles.inputField}
+                onBlur={saveTechnicalSkillsData} // Збереження при покиданні поля
               />
               <div
                 className={`${styles.dropdown} ${
@@ -221,6 +326,11 @@ const TechnicalSkillsSection = ({ title = "Technical Skills" }) => {
       </div>
     </section>
   );
+});
+
+TechnicalSkillsSection.propTypes = {
+  title: PropTypes.string,
+  onNext: PropTypes.func, // Пропс для функції переходу до наступної секції, якщо потрібен
 };
 
 export default TechnicalSkillsSection;

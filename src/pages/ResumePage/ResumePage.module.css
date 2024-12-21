@@ -1,122 +1,108 @@
-/* ResumePage.module.css */
-
-/* Стилі для контейнера */
+/* Загальні стилі для обох версій */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  /* Додаткові стилі за потребою */
+  width: 100%; /* Забезпечує адаптацію для мобільних */
+  box-sizing: border-box;
 }
 
 /* Стилі для навігаційної панелі з іконками */
 .iconBar {
   display: flex;
-  flex-direction: row; /* Горизонтальне розташування */
-  justify-content: center;
-  gap: 30px; /* Відстань між іконками */
-  margin-bottom: 30px;
+  gap: 10px;
+  justify-content: center; /* Центрування для десктопу */
+  padding: 10px 0;
+  max-width: 100%; /* Уникає виходу за межі екрану */
 }
 
-/* Стилі для окремої іконки */
 .iconContainer {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 5px;
+  min-width: 70px;
+  transition: transform 0.2s;
 }
 
-/* Ефект при наведенні курсора */
 .iconContainer:hover {
   transform: scale(1.1); /* Збільшення при наведенні */
 }
 
-/* Активна іконка */
 .activeIcon {
-  background-color: #4caf50; /* Синій фон для активної іконки */
+  background-color: #4caf50; /* Зелений фон для активної іконки */
   color: white;
 }
 
-/* Неактивна іконка */
 .inactiveIcon {
-  background-color: #f0f0f0; /* Світло-сірий фон для неактивної іконки */
+  background-color: #f0f0f0;
   color: black;
 }
 
-/* Стилі для іконок */
 .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px; /* Розмір іконки */
+  width: 60px;
   height: 60px;
-  border-radius: 50%;
-  transition: background-color 0.2s, color 0.2s;
+  border-radius: 50%; /* Круглі іконки */
 }
 
-/* Стилі для назв іконок */
 .iconLabel {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   color: #333;
-}
-
-/* Стилі для активної секції */
-.section {
-  width: 100%;
-  max-width: 800px;
-  /* Додаткові стилі, такі як фон, тіні тощо */
-}
-
-/* Стилі для кнопок навігації */
-.navigationButtons {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.navigationButtons button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #4caf50;
-  color: white;
-  transition: background-color 0.2s;
-}
-
-.navigationButtons button:hover:not(:disabled) {
-  background-color: #0056b3;
-}
-
-.navigationButtons button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 /* Адаптивні стилі для мобільних пристроїв */
 @media (max-width: 600px) {
   .iconBar {
-    flex-direction: column;
-    gap: 15px;
+    overflow-x: auto; /* Додає горизонтальну прокрутку */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start; /* Вирівнювання іконок зліва */
+    gap: 10px; /* Простір між іконками */
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconLabel {
+    font-size: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+}
+
+/* Стилі для десктопу */
+@media (min-width: 601px) {
+  .iconBar {
+    justify-content: center; /* Центрування для десктопу */
+    overflow-x: visible; /* Без горизонтальної прокрутки */
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
   }
 
   .iconLabel {
     font-size: 12px;
   }
 
-  .icon {
-    width: 50px;
-    height: 50px;
+  .container {
+    padding: 20px;
   }
 
-  .navigationButtons button {
-    padding: 8px 16px;
-    font-size: 14px;
+  .section {
+    padding: 20px;
   }
 }

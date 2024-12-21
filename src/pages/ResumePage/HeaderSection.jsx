@@ -90,20 +90,6 @@ const HeaderSection = forwardRef((props, ref) => { // Використання f
     saveHeaderData();
   };
 
-  // Функція для обробки переходу до наступної секції
-  const handleNext = () => {
-    // Перевірка, чи всі поля заповнені (можна покращити за потребою)
-    const allFieldsFilled = Object.values(header).every((value) => value.trim() !== "");
-    if (allFieldsFilled) {
-      saveHeaderData().then(() => {
-        if (props.onNext) props.onNext(); // Викликаємо функцію переходу, якщо вона передана через пропс
-      });
-    } else {
-      // Можливо, ви хочете показати повідомлення про помилку іншим способом
-      console.error("Будь ласка, заповніть всі поля перед переходом.");
-    }
-  };
-
   return (
     <section className={styles.headerSection}>
       <h3 className={styles.subheader}>Kopfzeile</h3>
@@ -208,10 +194,10 @@ const HeaderSection = forwardRef((props, ref) => { // Використання f
           </div>
         </div>
 
-        {/* Кнопка "Далі" для переходу до наступної секції */}
-        <button type="button" onClick={handleNext}>
+        {/* Видалена кнопка "Далі" */}
+        {/* <button type="button" onClick={handleNext}>
           Далі
-        </button>
+        </button> */}
       </form>
     </section>
   );

@@ -1,4 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+// LanguageSkillsSection.jsx
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import PropTypes from "prop-types"; // Імпорт PropTypes
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
@@ -7,8 +9,30 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
 import styles from "./LanguageSkillsSection.module.css";
+import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
+import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
+import "react-toastify/dist/ReactToastify.css";
+import debounce from "lodash.debounce"; // Імпорт debounce
 
-const LanguageSkillsSection = ({ title = "Language Skills" }) => {
+// Функція для перевірки валідності мови (можна додати власну логіку)
+const validateLanguage = (language) => {
+  if (!language.trim()) {
+    throw new Error("Мова не може бути порожньою.");
+  }
+  // Додайте додаткову валідацію за потребою
+};
+
+// Функція для перевірки валідності рівня (можна додати власну логіку)
+const validateLevel = (level) => {
+  if (!level.trim()) {
+    throw new Error("Рівень не може бути порожнім.");
+  }
+  // Додайте додаткову валідацію за потребою
+};
+
+// Використання forwardRef для доступу до методів з батьківського компонента
+const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) => {
   const [entries, setEntries] = useState([{ language: "", level: "" }]);
   const [languageSuggestionsState, setLanguageSuggestionsState] = useState({
     activeRow: null,
@@ -24,6 +48,98 @@ const LanguageSkillsSection = ({ title = "Language Skills" }) => {
 
   const languageSuggestionsList = resumeFormTexts.languageSkillsSuggestions;
   const levelSuggestionsList = resumeFormTexts.levelSuggestions;
+
+  const [isLoading, setIsLoading] = useState(false); // Стан для індикатора завантаження
+
+  // Функція для отримання даних з Firestore
+  const fetchLanguagesData = async () => {
+    const user = auth.currentUser;
+    if (!user) {
+      console.error("Користувач не автентифікований");
+      toast.error("Користувач не автентифікований");
+      return;
+    }
+
+    try {
+      const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
+      const languagesDoc = await getDoc(languagesDocRef);
+      if (languagesDoc.exists()) {
+        const data = languagesDoc.data();
+        console.log("Отримані дані Language Skills:", data);
+        if (data.languages && Array.isArray(data.languages)) {
+          setEntries(data.languages);
+        }
+      } else {
+        console.log("Документ Language Skills не знайдено");
+      }
+    } catch (error) {
+      console.error("Помилка отримання даних Language Skills:", error);
+      toast.error("Помилка отримання даних Language Skills");
+    }
+  };
+
+  // Функція для збереження даних у Firestore з дебаунсом
+  const saveLanguagesData = async () => {
+    setIsLoading(true); // Початок завантаження
+    const user = auth.currentUser;
+    if (!user) {
+      console.error("Користувач не автентифікований");
+      toast.error("Користувач не автентифікований");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      // Фільтруємо записи, де обидва поля порожні
+      const nonEmptyEntries = entries.filter(
+        (entry) => entry.language.trim() !== "" || entry.level.trim() !== ""
+      );
+
+      if (nonEmptyEntries.length === 0) {
+        // Якщо немає записів, видаляємо документ
+        const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
+        await deleteDoc(languagesDocRef);
+        console.log("Документ Language Skills видалено успішно");
+        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
+        // toast.success("Документ Language Skills видалено успішно!");
+      } else {
+        // Валідація лише непорожніх записів
+        nonEmptyEntries.forEach((entry, index) => {
+          if (entry.language.trim() !== "") validateLanguage(entry.language);
+          if (entry.level.trim() !== "") validateLevel(entry.level);
+        });
+
+        const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
+        await setDoc(languagesDocRef, { languages: nonEmptyEntries }, { merge: true });
+        console.log("Дані Language Skills успішно збережено");
+        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
+        // toast.success("Дані Language Skills успішно збережено!");
+      }
+    } catch (error) {
+      console.error("Помилка збереження даних Language Skills:", error);
+      toast.error(`Помилка збереження даних Language Skills: ${error.message}`);
+    } finally {
+      setIsLoading(false); // Завершення завантаження
+    }
+  };
+
+  // Дебаунс для збереження даних
+  const debouncedSave = useRef(
+    debounce(() => {
+      saveLanguagesData();
+    }, 500)
+  ).current;
+
+  // Надання методу saveLanguagesData зовні через ref
+  useImperativeHandle(ref, () => ({
+    saveData: saveLanguagesData,
+  }));
+
+  // Завантаження даних при монтуванні компонента
+  useEffect(() => {
+    fetchLanguagesData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -115,7 +231,7 @@ const LanguageSkillsSection = ({ title = "Language Skills" }) => {
   };
 
   return (
-    <section>
+    <section className={styles.languageSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <div className={styles.entriesContainer}>
         {entries.map((entry, index) => (
@@ -140,6 +256,7 @@ const LanguageSkillsSection = ({ title = "Language Skills" }) => {
                   </InputAdornment>
                 }
                 className={styles.inputField}
+                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               />
               <div
                 className={`${styles.dropdown} ${
@@ -181,6 +298,7 @@ const LanguageSkillsSection = ({ title = "Language Skills" }) => {
                   </InputAdornment>
                 }
                 className={styles.inputField}
+                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               />
               <div
                 className={`${styles.dropdown} ${
@@ -218,8 +336,16 @@ const LanguageSkillsSection = ({ title = "Language Skills" }) => {
           <AddIcon />
         </IconButton>
       </div>
+
+      {/* Відображення індикатора завантаження */}
+      {isLoading && <div className={styles.loading}>Завантаження...</div>}
     </section>
   );
+});
+
+LanguageSkillsSection.propTypes = {
+  title: PropTypes.string,
+  onNext: PropTypes.func, // Пропс для функції переходу до наступної секції, якщо потрібен
 };
 
 export default LanguageSkillsSection;

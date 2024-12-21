@@ -1,32 +1,38 @@
+/* General Styles */
 .subheader {
   font-size: 1.5em;
   margin-bottom: 20px;
-  font-weight: bold; /* Виділений заголовок */
-  color: #ffffff; /* Темний текст */
-  text-align: center; /* Вирівнювання заголовків по центру */
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
 }
 
-
-
 .entryRow {
-  margin-bottom: 20px;  /* Збільшуємо відступ між рядками */
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dateCell,
-.descriptionCell,
-.placeCell {
-  display: flex;
-  flex-direction: column;
+.descriptionCell {
+  position: relative;
+  flex: 1;
 }
 
 .dateCell {
   flex: 0 0 220px;
   font-size: 14px;
-  color: #555; /* Текст допоміжного кольору */
+  color: #555;
 }
 
 .descriptionCell {
@@ -34,62 +40,57 @@
   position: relative;
 }
 
-.placeCell {
-  flex: 0 0 200px;
-}
-
 .inputField {
   width: 100%;
-  height: 50px; /* Фіксована висота для рівномірності */
-  padding-bottom: 10px; /* Збільшуємо відступи в середині полів вводу */
-  border-radius: 25px; /* Згладжені кути */
-  border: 1px solid #ced4da; /* Колір рамки */
-  padding: 10px 15px; /* Відступи для тексту */
-  background-color: #fff; /* Білий фон */
-  font-size: 16px; /* Розмір шрифту */
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif; /* Узгодження зі стилем інших полів */
-  color: #495057; /* Колір тексту */
-  outline: none; /* Вимкнено синє обведення */
+  min-height: 50px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #495057;
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  box-sizing: border-box; /* Включає padding у розрахунок розміру */
 }
 
 .inputField:hover {
-  border-color: #007bff; /* Синій колір рамки при наведенні */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Легка тінь */
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
 }
 
 .inputField:focus {
-  border-color: #007bff; /* Синій колір рамки при фокусі */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Яскравіша тінь */
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .inputFieldWithError {
-  border-color: #dc3545; /* Червоний колір рамки для помилок */
-  background-color: #f8d7da; /* Легкий червоний фон */
-  color: #721c24; /* Темно-червоний текст */
+  border-color: #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 .inputFieldWithError:focus {
-  border-color: #dc3545; /* Червоний колір рамки при фокусі */
-  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Легка червона тінь */
+  border-color: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
 }
 
 .infoButton {
   margin-left: 5px;
-  color: #007bff; /* Синій колір кнопки */
+  color: #007bff;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .infoButton:hover {
-  color: #0056b3; /* Темно-синій при наведенні */
+  color: #0056b3;
 }
 
 .buttonContainer {
   display: flex;
-  gap: 10px;
-  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .removeButton {
@@ -102,13 +103,19 @@
   justify-content: center;
   height: 30px;
   width: 30px;
-  color: #dc3545; /* Червоний колір для кнопки */
+  color: #dc3545;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 5px;
 }
 
 .removeButton:hover {
   background-color: #f8d7da;
+}
+
+.addButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .addButtonSmall {
@@ -134,25 +141,21 @@
 
 .dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  margin-top: 8px;
-  transform-origin: top;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
 }
 
 .dropdown.open {
-  opacity: 1;
-  transform: scaleY(1);
-  display: block; /* Робимо список видимим */
+  display: block;
 }
 
 .dropdown__items {
@@ -184,59 +187,92 @@
 
 .errorMessage {
   margin-top: 5px;
-  color: #dc3545; /* Червоний для повідомлень про помилку */
+  color: #dc3545;
   font-size: 14px;
 }
 
-/* Адаптивність для мобільних пристроїв */
+.generalError {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nextButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nextButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
 @media (max-width: 600px) {
-  .dateCell,
-  .placeCell {
-      flex: 0 0 160px;
+  .entryRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 
-  .inputField {
-      height: 35px;
+  .dateCell {
+    width: 100%;
+    margin-bottom: 10px; /* Space between Date and Information */
   }
 
-  .removeButton,
-  .addButtonSmall {
-      height: 25px;
-      width: 25px;
-      font-size: 12px;
+  .descriptionCell {
+    width: 100%;
+  }
+
+  .descriptionCell .inputField {
+    min-height: auto;
+    resize: none; /* Disable vertical resizing for mobile */
   }
 
   .buttonContainer {
-      margin-left: 0;
-      margin-top: 10px;
-      justify-content: flex-start;
+    justify-content: flex-end;
+    width: 100%; /* Align delete button correctly */
   }
 
-  .removeButton,
-  .addButtonSmall {
-      margin-top: 5px;
-  }
-  .dropdown {
-    display: block !important; /* Примусово відображати */
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    z-index: 1000;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  .dropdown__item {
-    padding: 8px;
-    cursor: pointer;
-  }
-  
-  .dropdown__item:hover {
-    background-color: #f0f0f0;
-  }
   .addButtonContainer {
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
+  }
+
+  .nextButton {
+    width: 100%;
   }
 }

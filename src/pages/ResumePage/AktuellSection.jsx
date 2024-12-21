@@ -1,6 +1,6 @@
 // AktuellSection.jsx
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import PropTypes from 'prop-types'; // Доданий імпорт PropTypes
+import PropTypes from 'prop-types'; // Імпорт PropTypes
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
@@ -9,11 +9,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import MaskedInput from "react-text-mask";
 import { parse, isValid } from "date-fns";
-import resumeFormTexts from "../../constants/translation/ResumeForm"; // Import von Vorschlägen
+import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
 import styles from "./ResumeSection.module.css";
 import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
-import { doc, setDoc, getDoc } from "firebase/firestore";
-import { onAuthStateChanged } from "firebase/auth";
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
 import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
 import "react-toastify/dist/ReactToastify.css";
 
@@ -183,7 +182,6 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
   });
   const suggestionsRef = useRef(null);
 
-  // Відстеження кліків поза списком пропозицій
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -203,7 +201,6 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     };
   }, []);
 
-  // Функція для отримання даних з Firestore
   const fetchAktuellData = async () => {
     const user = auth.currentUser;
     if (!user) {
@@ -217,10 +214,12 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
       const aktuellDoc = await getDoc(aktuellDocRef);
       if (aktuellDoc.exists()) {
         const data = aktuellDoc.data();
+        console.log("Отримані дані Aktuell:", data); // Доданий лог
         if (data.entries && Array.isArray(data.entries)) {
           setEntries(data.entries);
-          // Якщо потрібно встановити інші стани, додайте їх тут
         }
+      } else {
+        console.log("Документ Aktuell не знайдено");
       }
     } catch (error) {
       console.error("Помилка отримання даних Aktuell:", error);
@@ -228,12 +227,10 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
   };
 
-  // Виклик функції завантаження даних при монтуванні компонента
   useEffect(() => {
     fetchAktuellData();
   }, []);
 
-  // Функція для збереження даних у Firestore
   const saveAktuellData = async () => {
     const user = auth.currentUser;
     if (!user) {
@@ -243,22 +240,33 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
 
     try {
-      const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
-      await setDoc(aktuellDocRef, { entries }, { merge: true });
-      console.log("Дані Aktuell успішно збережено");
-      // toast.success("Дані Aktuell успішно збережено!"); // Видаліть або закоментуйте цей рядок
+      const nonEmptyEntries = entries.filter(
+        (entry) => entry.date.trim() !== "" || entry.description.trim() !== ""
+      );
+
+      if (nonEmptyEntries.length === 0) {
+        const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
+        await deleteDoc(aktuellDocRef);
+        console.log("Документ Aktuell видалено успішно");
+      } else {
+        nonEmptyEntries.forEach((entry, index) => {
+          if (entry.date.trim() !== "") validateDateValue(entry.date);
+        });
+
+        const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
+        await setDoc(aktuellDocRef, { entries: nonEmptyEntries }, { merge: true });
+        console.log("Дані Aktuell успішно збережено");
+      }
     } catch (error) {
       console.error("Помилка збереження даних Aktuell:", error);
-      toast.error("Помилка збереження даних Aktuell");
+      toast.error(`Помилка збереження даних Aktuell: ${error.message}`);
     }
   };
 
-  // Надання методу saveAktuellData зовні через ref
   useImperativeHandle(ref, () => ({
     saveData: saveAktuellData,
   }));
 
-  // Обробка зміни дати
   const handleDateChange = (index, newValue) => {
     const updatedEntries = [...entries];
     updatedEntries[index].date = newValue;
@@ -270,7 +278,7 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
         validateDateValue(newValue);
         updatedErrors[index] = null;
       } else {
-        updatedErrors[index] = null; // Немає помилок при незавершеному введенні
+        updatedErrors[index] = null;
       }
     } catch (error) {
       updatedErrors[index] = error.message;
@@ -278,7 +286,6 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     setDateErrors(updatedErrors);
   };
 
-  // Обробка зміни опису
   const handleDescriptionChange = (index, value) => {
     const updatedEntries = [...entries];
     updatedEntries[index].description = value;
@@ -300,7 +307,6 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
   };
 
-  // Вибір пропозиції
   const handleSuggestionSelect = (index, suggestion) => {
     const updatedEntries = [...entries];
     updatedEntries[index].description = suggestion;
@@ -312,7 +318,6 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     });
   };
 
-  // Перемикання списку пропозицій
   const toggleSuggestions = (index) => {
     if (suggestionsState.activeRow === index) {
       setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
@@ -324,13 +329,11 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
   };
 
-  // Додавання нового рядка
   const addNewRow = () => {
     setEntries([...entries, { date: "", description: "", datePlaceholder: "Datum" }]);
     setDateErrors([...dateErrors, null]);
   };
 
-  // Видалення рядка
   const removeRow = (index) => {
     const updatedEntries = entries.filter((_, i) => i !== index);
     const updatedErrors = dateErrors.filter((_, i) => i !== index);
@@ -338,24 +341,10 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     setDateErrors(updatedErrors);
   };
 
-  // Обробка переходу до наступної секції
-  const handleNext = () => {
-    const allFieldsFilled = entries.every(
-      (entry) => entry.date.trim() !== "" && entry.description.trim() !== ""
-    );
-    if (allFieldsFilled) {
-      saveAktuellData().then(() => {
-        if (onNext) onNext(); // Виклик функції переходу, якщо вона передана через пропс
-      });
-    } else {
-      toast.error("Будь ласка, заповніть всі поля перед переходом.");
-    }
-  };
-
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
-      <form className={styles.entriesContainer}>
+      <form>
         {entries.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             <div className={styles.dateCell}>
@@ -367,13 +356,13 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
                 className={`${styles.inputField} ${
                   dateErrors[index] ? styles.inputFieldWithError : ""
                 }`}
-                onBlur={saveAktuellData} // Збереження при покиданні поля
+                onBlur={saveAktuellData}
               />
               {dateErrors[index] && (
                 <div className={styles.errorMessage}>{dateErrors[index]}</div>
               )}
             </div>
-
+  
             <div className={styles.descriptionCell}>
               <Input
                 value={entry.description || ""}
@@ -388,36 +377,29 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
                   </InputAdornment>
                 }
                 className={styles.inputField}
-                onBlur={saveAktuellData} // Збереження при покиданні поля
+                onBlur={saveAktuellData}
               />
-              {suggestionsState.activeRow === index && (
-                <div
-                  ref={suggestionsRef}
-                  className={`${styles.dropdown} ${
-                    suggestionsState.filteredSuggestions.length > 0
-                      ? styles.open
-                      : ""
-                  }`}
-                >
-                  <ul className={styles.dropdown__items}>
-                    {suggestionsState.filteredSuggestions.map(
-                      (suggestion, i) => (
+              {suggestionsState.activeRow === index &&
+                suggestionsState.filteredSuggestions.length > 0 && (
+                  <div
+                    ref={suggestionsRef}
+                    className={`${styles.dropdown} ${styles.open}`}
+                  >
+                    <ul className={styles.dropdown__items}>
+                      {suggestionsState.filteredSuggestions.map((suggestion, i) => (
                         <li
                           key={i}
-                          onClick={() =>
-                            handleSuggestionSelect(index, suggestion)
-                          }
+                          onClick={() => handleSuggestionSelect(index, suggestion)}
                           className={styles.dropdown__item}
                         >
                           {suggestion}
                         </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              )}
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
-
+  
             <div className={styles.buttonContainer}>
               <IconButton onClick={() => removeRow(index)}>
                 <DeleteIcon />
@@ -426,24 +408,19 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
           </div>
         ))}
       </form>
-
+  
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow}>
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Кнопка "Далі" */}
-      <button type="button" onClick={handleNext}>
-        Далі
-      </button>
     </section>
   );
 });
 
 AktuellSection.propTypes = {
   title: PropTypes.string,
-  onNext: PropTypes.func.isRequired,
+  onNext: PropTypes.func,
 };
 
 export default AktuellSection;
