@@ -14,13 +14,13 @@ import LanguageSkillsSection from "./LanguageSkillsSection";
 import TechnicalSkillsSection from "./TechnicalSkillsSection";
 import { addDownloadButton } from "./pdfresume";
 
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import WorkIcon from "@mui/icons-material/Work";
-import SchoolIcon from "@mui/icons-material/School";
+import { IoPersonSharp } from "react-icons/io5";
+import { FaRegNewspaper } from "react-icons/fa";
+import { MdOutlineWorkHistory } from "react-icons/md";
+import { PiStudentBold } from "react-icons/pi";
 import LanguageIcon from "@mui/icons-material/Language";
-import BuildIcon from "@mui/icons-material/Build";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import { RiPsychotherapyLine } from "react-icons/ri";
+import { FaRegFilePdf } from "react-icons/fa6";
 
 import useIsMobile from "../../hooks/useIsMobile";
 import { useSwipeable } from "react-swipeable";
@@ -52,25 +52,25 @@ const sections = [
     id: 0,
     title: "Persönliche Daten",
     component: HeaderSection,
-    icon: <HomeIcon style={{ fontSize: 40 }} />,
+    icon: <IoPersonSharp style={{ fontSize: 40 }} />,
   },
   {
     id: 1,
     title: "Aktuell",
     component: AktuellSection,
-    icon: <InfoIcon style={{ fontSize: 40 }} />,
+    icon: <FaRegNewspaper style={{ fontSize: 40 }} />,
   },
   {
     id: 2,
     title: "Berufserfahrungen",
     component: BerufserfahrungenSection,
-    icon: <WorkIcon style={{ fontSize: 40 }} />,
+    icon: <MdOutlineWorkHistory style={{ fontSize: 40 }} />,
   },
   {
     id: 3,
     title: "Ausbildung",
     component: AusbildungSection,
-    icon: <SchoolIcon style={{ fontSize: 40 }} />,
+    icon: <PiStudentBold style={{ fontSize: 40 }} />,
   },
   {
     id: 4,
@@ -82,7 +82,7 @@ const sections = [
     id: 5,
     title: "Technical Skills",
     component: TechnicalSkillsSection,
-    icon: <BuildIcon style={{ fontSize: 40 }} />,
+    icon: <RiPsychotherapyLine style={{ fontSize: 40 }} />,
   },
   {
     id: 6,
@@ -93,7 +93,7 @@ const sections = [
         <div id="download-resume-container"></div>
       </div>
     ),
-    icon: <PictureAsPdfIcon style={{ fontSize: 40, color: "red" }} />,
+    icon: <FaRegFilePdf style={{ fontSize: 40, color: "red" }} />,
   },
 ];
 

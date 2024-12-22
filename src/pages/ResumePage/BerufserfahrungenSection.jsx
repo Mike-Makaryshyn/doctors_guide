@@ -298,6 +298,16 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
     }, 500)
   ).current;
 
+
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+  
+    // Скидаємо висоту, щоб уникнути некоректних розрахунків
+    field.style.height = "auto";
+  
+    // Встановлюємо нову висоту на основі scrollHeight
+    field.style.height = `${field.scrollHeight}px`;
+  };
   // Надання методу saveExperiencesData зовні через ref
   useImperativeHandle(ref, () => ({
     saveData: saveExperiencesData,
@@ -395,7 +405,7 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
   return (
     <section className={styles.berufserfahrungenSection}>
       <h3 className={styles.subheader}>{title}</h3>
-
+  
       <div className={styles.entriesContainer}>
         {entries.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
@@ -415,62 +425,69 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
                 <div className={styles.errorMessage}>{dateErrors[index]}</div>
               )}
             </div>
-
+  
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
-              <Input
+              <textarea
                 value={entry.description || ""}
-                onChange={(e) => handleDescriptionChange(index, e.target.value)}
+                onChange={(e) => {
+                  handleDescriptionChange(index, e.target.value);
+                  handleAutoExpand(e); // Динамічне розширення висоти
+                }}
                 placeholder="Information"
-                disableUnderline
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton onClick={() => toggleSuggestions(index)}>
-                      <InfoIcon />
-                    </IconButton>
-                  </InputAdornment>
-                }
-                className={styles.inputField}
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
-              />
-              {suggestionsState.activeRow === index && (
-                <div
-                  ref={suggestionsRef}
-                  className={`${styles.dropdown} ${
-                    suggestionsState.filteredSuggestions.length > 0
-                      ? styles.open
-                      : ""
-                  }`}
-                >
-                  <ul className={styles.dropdown__items}>
-                    {suggestionsState.filteredSuggestions.map((suggestion, i) => (
-                      <li
-                        key={i}
-                        onClick={() => handleSuggestionSelect(index, suggestion)}
-                        className={styles.dropdown__item}
-                      >
-                        {suggestion}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+                className={`${styles.inputField} ${styles.textareaField}`}
+                rows={1} // Початкова висота
+                onBlur={debouncedSave}
+              ></textarea>
+              {suggestionsState.activeRow === index &&
+                suggestionsState.filteredSuggestions.length > 0 && (
+                  <div
+                    ref={suggestionsRef}
+                    className={`${styles.dropdown} ${
+                      suggestionsState.filteredSuggestions.length > 0
+                        ? styles.open
+                        : ""
+                    }`}
+                  >
+                    <ul className={styles.dropdown__items}>
+                      {suggestionsState.filteredSuggestions.map(
+                        (suggestion, i) => (
+                          <li
+                            key={i}
+                            onClick={() =>
+                              handleSuggestionSelect(index, suggestion)
+                            }
+                            className={styles.dropdown__item}
+                          >
+                            {suggestion}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
             </div>
-
+  
             {/* Поле місця роботи */}
             <div className={styles.placeCell}>
-              <Input
+              <textarea
                 value={entry.place || ""}
-                onChange={(e) => handlePlaceChange(index, e.target.value)}
+                onChange={(e) => {
+                  handlePlaceChange(index, e.target.value);
+                  handleAutoExpand(e); // Динамічне розширення висоти
+                }}
                 placeholder="Ort"
-                disableUnderline
-                className={styles.inputField}
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
-              />
+                className={`${styles.inputField} ${styles.textareaField}`}
+                rows={1} // Початкова висота
+                onBlur={debouncedSave}
+              ></textarea>
             </div>
-
-            {/* Кнопка видалення рядка */}
+  
+            {/* Кнопка підказок і видалення */}
             <div className={styles.buttonContainer}>
+              <IconButton onClick={() => toggleSuggestions(index)}>
+                <InfoIcon />
+              </IconButton>
               <IconButton onClick={() => removeRow(index)}>
                 <DeleteIcon />
               </IconButton>
@@ -478,19 +495,14 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
           </div>
         ))}
       </div>
-
+  
       {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow}>
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Видалено кнопку "Далі" */}
-      {/* <button type="button" onClick={handleNext}>
-        Далі
-      </button> */}
-
+  
       {/* Відображення індикатора завантаження */}
       {isLoading && <div className={styles.loading}>Завантаження...</div>}
     </section>

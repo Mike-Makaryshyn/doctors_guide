@@ -20,6 +20,7 @@
   to {
     opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -41,21 +42,21 @@
 }
 
 .inputField {
-  width: 100%;
-  min-height: 50px;
-  padding: 10px 15px;
-  border-radius: 25px;
+  width: 100%; /* Поле займає весь доступний простір */
+  max-width: 600px; /* Максимальна ширина */
+  min-width: 300px; /* Мінімальна ширина */
+  min-height: 50px; /* Початкова висота */
+  height: auto; /* Автоматичне налаштування висоти */
+  overflow: hidden; /* Забороняємо горизонтальну прокрутку */
+  resize: none; /* Забороняємо ручне змінення розміру */
+  padding: 10px;
+  border-radius: 10px;
   border: 1px solid #ced4da;
-  background-color: #fff;
   font-size: 16px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  color: #495057;
-  outline: none;
-  resize: vertical;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 .inputField:hover {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
@@ -75,6 +76,13 @@
 .inputFieldWithError:focus {
   border-color: #dc3545;
   box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+/* Новий стиль для контейнера вводу і кнопки */
+.inputWithInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Відстань між полем вводу і кнопкою */
 }
 
 .infoButton {
@@ -139,6 +147,7 @@
   color: #0056b3;
 }
 
+/* Випадаюче меню підказок */
 .dropdown {
   position: absolute;
   top: calc(100% + 5px);
@@ -250,8 +259,11 @@
   }
 
   .dateCell {
-    width: 100%;
-    margin-bottom: 10px; /* Space between Date and Information */
+    flex: none; /* Вимикаємо автоматичне розподілення простору */
+    width: 140px; /* Оптимальна ширина для формату MM/YYYY */
+    max-width: 150px; /* Забезпечує трохи більше місця */
+    font-size: 14px;
+    color: #555;
   }
 
   .descriptionCell {
@@ -259,8 +271,22 @@
   }
 
   .descriptionCell .inputField {
-    min-height: auto;
-    resize: none; /* Disable vertical resizing for mobile */
+    width: 80%; /* Текстове поле займає 80% ширини контейнера */
+    max-width: 600px; /* Максимальна ширина */
+    min-width: 400px; /* Мінімальна ширина */
+    min-height: 50px; /* Початкова висота, щоб виглядало коректно */
+    height: auto; /* Висота автоматично адаптується */
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #495057;
+    overflow: hidden; /* Прибирає прокрутку */
+    resize: none; /* Забороняємо ручне зміщення */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .buttonContainer {

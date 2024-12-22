@@ -391,6 +391,15 @@ const AusbildungSection = forwardRef(({ title = "Ausbildung", onNext }, ref) => 
     setEntries(updatedEntries);
     setDateErrors(updatedErrors);
   };
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+  
+    // Скидаємо висоту, щоб отримати точні розрахунки
+    field.style.height = "auto";
+  
+    // Встановлюємо висоту на основі scrollHeight
+    field.style.height = `${field.scrollHeight}px`;
+  };
 
   return (
     <section className={styles.ausbildungSection}>
@@ -415,66 +424,68 @@ const AusbildungSection = forwardRef(({ title = "Ausbildung", onNext }, ref) => 
                 <div className={styles.errorMessage}>{dateErrors[index]}</div>
               )}
             </div>
+{/* Поле опису */}
+<div className={styles.descriptionCell}>
+  <div className={styles.textareaWithButton}>
+    <textarea
+      value={entry.description || ""}
+      onChange={(e) => {
+        handleDescriptionChange(index, e.target.value);
+        handleAutoExpand(e); // Динамічне розширення висоти
+      }}
+      placeholder="Information"
+      className={`${styles.inputField} ${styles.textareaField}`} // Додайте новий клас для textarea
+      rows={1} // Початкова висота
+      onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
+    ></textarea>
+ 
+  </div>
 
-            {/* Поле опису */}
-            <div className={styles.descriptionCell}>
-              <Input
-                value={entry.description || ""}
-                onChange={(e) => handleDescriptionChange(index, e.target.value)}
-                placeholder="Information"
-                disableUnderline
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton onClick={() => toggleSuggestions(index)}>
-                      <InfoIcon />
-                    </IconButton>
-                  </InputAdornment>
-                }
-                className={styles.inputField}
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
-              />
-              {suggestionsState.activeRow === index && (
-                <div
-                  ref={suggestionsRef}
-                  className={`${styles.dropdown} ${
-                    suggestionsState.filteredSuggestions.length > 0
-                      ? styles.open
-                      : ""
-                  }`}
-                >
-                  <ul className={styles.dropdown__items}>
-                    {suggestionsState.filteredSuggestions.map((suggestion, i) => (
-                      <li
-                        key={i}
-                        onClick={() => handleSuggestionSelect(index, suggestion)}
-                        className={styles.dropdown__item}
-                      >
-                        {suggestion}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
+  {suggestionsState.activeRow === index && suggestionsState.filteredSuggestions.length > 0 && (
+    <div
+      ref={suggestionsRef}
+      className={`${styles.dropdown} ${styles.open}`}
+    >
+      <ul className={styles.dropdown__items}>
+        {suggestionsState.filteredSuggestions.map((suggestion, i) => (
+          <li
+            key={i}
+            onClick={() => handleSuggestionSelect(index, suggestion)}
+            className={styles.dropdown__item}
+          >
+            {suggestion}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
 
             {/* Поле місця навчання */}
-            <div className={styles.placeCell}>
-              <Input
-                value={entry.place || ""}
-                onChange={(e) => handlePlaceChange(index, e.target.value)}
-                placeholder="Ort"
-                disableUnderline
-                className={styles.inputField}
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
-              />
-            </div>
-
+<div className={styles.placeCell}>
+  <textarea
+    value={entry.place || ""}
+    onChange={(e) => {
+      handlePlaceChange(index, e.target.value);
+      handleAutoExpand(e); // Динамічне розширення висоти
+    }}
+    placeholder="Ort"
+    className={`${styles.inputField} ${styles.textareaField}`} // Додайте новий клас для textarea
+    rows={1} // Початкова висота
+    onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
+  ></textarea>
+</div>
             {/* Кнопка видалення рядка */}
-            <div className={styles.buttonContainer}>
-              <IconButton onClick={() => removeRow(index)}>
-                <DeleteIcon />
-              </IconButton>
-            </div>
+            {/* Кнопки: видалення та підказок */}
+<div className={styles.buttonContainer}>
+  
+  <IconButton onClick={() => toggleSuggestions(index)} className={styles.infoButton}>
+    <InfoIcon />
+  </IconButton>
+  <IconButton onClick={() => removeRow(index)} className={styles.deleteButton}>
+    <DeleteIcon />
+  </IconButton>
+</div>
           </div>
         ))}
       </div>

@@ -231,6 +231,14 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     fetchAktuellData();
   }, []);
 
+  useEffect(() => {
+    const fields = document.querySelectorAll(".inputField");
+    fields.forEach((field) => {
+      field.style.height = "auto"; // Скидаємо висоту
+      field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту
+    });
+  }, []);
+
   const saveAktuellData = async () => {
     const user = auth.currentUser;
     if (!user) {
@@ -340,6 +348,15 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     setEntries(updatedEntries);
     setDateErrors(updatedErrors);
   };
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+  
+    // Скидаємо висоту, щоб отримати точні розрахунки
+    field.style.height = "auto";
+  
+    // Встановлюємо висоту на основі scrollHeight
+    field.style.height = `${field.scrollHeight}px`;
+  };
 
   return (
     <section className={styles.aktuellSection}>
@@ -347,38 +364,44 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
       <form>
         {entries.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
-            <div className={styles.dateCell}>
-              <MaskedInput
-                mask={getMask}
-                value={entry.date || ""}
-                onChange={(e) => handleDateChange(index, e.target.value)}
-                placeholder={entry.datePlaceholder || "Datum"}
-                className={`${styles.inputField} ${
-                  dateErrors[index] ? styles.inputFieldWithError : ""
-                }`}
-                onBlur={saveAktuellData}
-              />
-              {dateErrors[index] && (
-                <div className={styles.errorMessage}>{dateErrors[index]}</div>
-              )}
-            </div>
+  {/* Поле для дати */}
+  <div className={styles.dateCell}>
+    <MaskedInput
+      mask={getMask}
+      value={entry.date || ""}
+      onChange={(e) => handleDateChange(index, e.target.value)}
+      placeholder={entry.datePlaceholder || "Datum"}
+      className={`${styles.inputField} ${
+        dateErrors[index] ? styles.inputFieldWithError : ""
+      }`}
+      onBlur={saveAktuellData}
+    />
+    {dateErrors[index] && (
+      <div className={styles.errorMessage}>{dateErrors[index]}</div>
+    )}
+  </div>
   
+            {/* Поле для опису з окремою кнопкою підказок */}
             <div className={styles.descriptionCell}>
-              <Input
-                value={entry.description || ""}
-                onChange={(e) => handleDescriptionChange(index, e.target.value)}
-                placeholder="Information"
-                disableUnderline
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton onClick={() => toggleSuggestions(index)}>
-                      <InfoIcon />
-                    </IconButton>
-                  </InputAdornment>
-                }
-                className={styles.inputField}
-                onBlur={saveAktuellData}
-              />
+              <div className={styles.inputWithInfo}>
+              <textarea
+    value={entry.description || ""}
+    onChange={(e) => {
+      handleDescriptionChange(index, e.target.value);
+      handleAutoExpand(e); // Динамічне розширення висоти
+    }}
+    placeholder="Information"
+    className={`${styles.inputField}`} // Залишаємо старий клас
+    rows={1}
+  ></textarea>
+                <IconButton
+                  onClick={() => toggleSuggestions(index)}
+                  className={styles.infoButton}
+                >
+                  <InfoIcon />
+                </IconButton>
+              </div>
+              {/* Список підказок */}
               {suggestionsState.activeRow === index &&
                 suggestionsState.filteredSuggestions.length > 0 && (
                   <div
@@ -400,6 +423,7 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
                 )}
             </div>
   
+            {/* Кнопка для видалення рядка */}
             <div className={styles.buttonContainer}>
               <IconButton onClick={() => removeRow(index)}>
                 <DeleteIcon />
@@ -409,6 +433,7 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
         ))}
       </form>
   
+      {/* Кнопка для додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow}>
           <AddIcon />
