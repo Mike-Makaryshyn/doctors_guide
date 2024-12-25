@@ -1,0 +1,59 @@
+/* Використання CSS-перемінних для кольорів */
+:root {
+    --color-primary: #f9f9f9;
+    --color-secondary: #ffcccc;
+    --color-border: #ddd;
+    --color-text: #000;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-shadow-hover: rgba(0, 0, 0, 0.2);
+    --border-radius: 10px;
+}
+
+/* Загальні стилі плитки */
+.tile {
+    padding: 0.2rem; /* Приблизно 3px */
+    margin: 0.625rem; /* Приблизно 10px */
+    border: 1px solid var(--color-border);
+    border-radius: 60px;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.25rem 0.5rem var(--color-shadow-hover);
+}
+
+/* Спеціальний стиль для Zusammenfassung */
+.zusammenfassung {
+    background-color: var(--color-secondary);
+    padding: 0.625rem; /* 10px */
+    margin: 0.625rem; /* 10px */
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    text-align: center;
+}
+
+/* Заголовок плитки */
+.tile-title {
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+/* Список у плитці */
+.tile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tile-list li {
+    margin-bottom: 0.3125rem; /* 5px */
+}

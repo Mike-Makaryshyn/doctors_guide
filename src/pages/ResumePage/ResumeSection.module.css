@@ -9,12 +9,15 @@
 
 .entryRow {
   margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
   animation: fadeIn 0.5s forwards;
 }
+
 
 @keyframes fadeIn {
   to {
@@ -301,4 +304,8 @@
   .nextButton {
     width: 100%;
   }
+  
+}
+.inputFieldsecond {
+  width: 10px !important;
 }

@@ -50,6 +50,9 @@ const EditProfilePage = React.lazy(() =>
 const ResumePage = React.lazy(() =>
   import("../pages/ResumePage/ResumePage")
 );
+const FSPFormularPage = React.lazy(() =>
+  import("../pages/FSPFormularPage/FSPFormularPage")
+);
 
 // Auth and Dashboard
 const AuthPage = React.lazy(() =>
@@ -97,7 +100,7 @@ export default function Routers() {
         <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
         <Route path={pathList.links.path} element={<LinksPage />} />
         <Route path={pathList.approbation.path} element={<WhatIsApprobationPage />} />
-
+        <Route path={pathList.informationSources.path} element={<FSPFormularPage />} />
         <Route
           path="/all-medical-terminology"
           element={

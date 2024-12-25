@@ -38,4 +38,7 @@ export const pathList = {
     approbation: {
         path: '/approbation'
     },
+    informationSources: {
+         path: '/information-sources'
+    },
 };

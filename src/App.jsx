@@ -8,6 +8,8 @@ import IntroductionPage from "./pages/IntroductionPage/IntroductionPage";
 import Routers from "./routes";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ApprobationPage from "./pages/ApprobationPage/ApprobationPage";
+import { ModalProvider } from "./pages/FSPFormularPage/components/ModalContext";
+import { DataSourceProvider } from "./contexts/DataSourceContext";
 
 const GERMAN_MAP_PAGE = 3;
 const DEFAULT_LANGUAGE = "de";
@@ -90,15 +92,18 @@ function App() {
 //    )}
 // </div> 
 
-   return (
-      <div className="App">
+return (
+   <DataSourceProvider>
+     <ModalProvider>
+       <div className="App">
          {/* Content */}
-          <div className="content">
-            <Routers />
-          </div>
-            
-      </div>
-   );
+         <div className="content">
+           <Routers />
+         </div>
+       </div>
+     </ModalProvider>
+   </DataSourceProvider>
+ );
 }
 
 export default App;
