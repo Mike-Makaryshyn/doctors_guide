@@ -1,79 +1,93 @@
-/* Використання CSS-перемінних для кольорів */
+/* Использование CSS-переменных для цветов и размеров */
 :root {
-    --color-primary: #f9f9f9;
-    --color-secondary: #ffcccc;
-    --color-border: #ddd;
-    --color-text: #000;
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --color-shadow-hover: rgba(0, 0, 0, 0.2);
-    --border-radius: 10px;
+    --color-primary: #f9f9f9; /* Основной цвет фона */
+    --color-secondary: #ffcccc; /* Цвет для специальных элементов */
+    --color-border: #ddd; /* Цвет границ */
+    --color-text: #000; /* Основной цвет текста */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
+    --color-shadow-hover: rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    --border-radius: 10px; /* Округление углов */
+    --icon-top: 10px; /* Отступ иконки сверху */
+    --icon-right: 10px; /* Отступ иконки справа */
 }
 
-/* Загальні стилі плитки */
+/* Основной стиль плитки */
 .tile {
-    position: relative; /* Батьківський контейнер має бути позиціонований */
+    position: relative; /* Для позиционирования дочерних элементов */
     padding: 1rem;
     margin: 0.625rem;
     border: 1px solid var(--color-border);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background-color: var(--color-primary);
     color: var(--color-text);
     box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    overflow: hidden;
-}
-
-.tile-icon {
-    position: absolute;
-    top: 10px; /* Відступ від верхнього краю */
-    right: 10px; /* Відступ від правого краю */
-    font-size: 1.5rem;
-    z-index: 10; /* Іконка повинна перекривати інші елементи */
-}
-
-.tile-icon.specific-data {
-    color: green; /* Колір для специфічних даних */
-}
-
-.tile-icon.general-data {
-    color: gray; /* Колір для загальних даних */
+    overflow: hidden; /* Обрезка содержимого */
 }
 
 .tile:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Эффект увеличения при наведении */
     box-shadow: 0 0.25rem 0.5rem var(--color-shadow-hover);
 }
+
+/* Контейнер для иконки */
+.tile-icon-container {
+    position: absolute; /* Позволяет задавать точное расположение */
+    top: var(--icon-top); /* Использование переменных для гибкости */
+    right: var(--icon-right);
+    z-index: 10; /* Иконка отображается выше содержимого */
+}
+
+/* Общий стиль иконки */
+.tile-icon {
+    font-size: 1.5rem; /* Размер иконки */
+    width: 24px;
+    height: 24px;
+}
+
+/* Модификаторы для иконки */
+.tile-icon--specific {
+    color: green; /* Цвет для специфических данных */
+}
+
+.tile-icon--general {
+    color: gray; /* Цвет для общих данных */
+}
+
+/* Заголовок плитки */
+.tile-title {
+    font-size: 1.125rem; /* Размер шрифта заголовка */
+    font-weight: bold; /* Жирное выделение */
+    margin-bottom: 10px;
+}
+
+/* Контейнер для текста плитки */
 .personal-data {
-    position: relative; /* Дозволяє позиціонувати дочірні елементи */
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    position: relative; /* Базовое позиционирование */
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
     padding: 15px;
     margin: 10px;
-    background-color: white;
+    background-color: white; /* Белый фон для текстовых элементов */
 }
 
-.tile-header {
-    position: relative; /* Для позиціонування іконки */
-    height: 20px;
+/* Стили для списков внутри плитки */
+.tile-list {
+    list-style: none; /* Удаление стандартных маркеров списка */
+    padding: 0;
+    margin: 0;
 }
 
-.tile-icon-container {
-    position: absolute;
-    top: 0;
-    right: 0; /* Іконка буде в правому верхньому куті */
-    padding: 5px; /* Невелике внутрішнє відступлення */
+.tile-list li {
+    margin-bottom: 5px; /* Отступ между элементами списка */
 }
 
-.tile-icon {
-    font-size: 1.5em; /* Налаштування розміру іконки */
-    color: #007bff; /* Колір іконки */
-}
-/* Спеціальний стиль для Zusammenfassung */
+/* Стиль для специальной плитки (Zusammenfassung) */
 .zusammenfassung {
-    background-color: var(--color-secondary);
-    padding: 0.625rem; /* 10px */
-    margin: 0.625rem; /* 10px */
+    background-color: var(--color-secondary); /* Цвет фона */
+    padding: 10px;
+    margin: 10px;
     border: none;
     border-radius: var(--border-radius);
     color: var(--color-text);
@@ -81,32 +95,27 @@
     text-align: center;
 }
 
-/* Заголовок плитки */
-.tile-title {
-    font-size: 1.125rem; /* 18px */
-    font-weight: bold;
-    margin-bottom: 0.625rem; /* 10px */
-}
-
-/* Список у плитці */
-.tile-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.tile-list li {
-    margin-bottom: 0.3125rem; /* 5px */
-}
-.zusammenfassung {
-    background-color: red; /* Ваш існуючий стиль */
-    width: 100%; /* Ширина для мобільних */
-    max-width: 800px; /* Максимальна ширина для десктопу */
-    margin: 0 auto; /* Центруємо елемент */
-}
-
+/* Адаптивность */
 @media (min-width: 768px) {
     .zusammenfassung {
-        width: 90%; /* Ширина для десктопу */
+        width: 90%; /* Ширина на больших экранах */
+    }
+}
+
+/* Дополнительная адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    .tile {
+        padding: 0.5rem; /* Меньшие отступы */
+        margin: 0.25rem; /* Меньшие отступы между плитками */
+        font-size: 0.9rem; /* Уменьшенный текст */
+    }
+
+    .tile-icon-container {
+        top: 5px; /* Меньшие отступы для иконки */
+        right: 5px;
+    }
+
+    .tile-title {
+        font-size: 1rem; /* Уменьшенный размер заголовка */
     }
 }

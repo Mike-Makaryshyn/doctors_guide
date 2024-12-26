@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
-
+import "./TileContainer.module.scss";
 const renderTileIcon = (parsedData) => {
-    if (parsedData?.fallType && parsedData.fallType === "cardiology") {
-        return <FaCheckCircle className="tile-icon specific-data" title="Специфічні дані доступні" />;
-    }
-    return <FaInfoCircle className="tile-icon general-data" title="Загальні дані" />;
+    return (
+        <FaInfoCircle
+            className="tile-icon general-data"
+            title="Загальні дані"
+        />
+    );
 };
 
 const PersonalData = ({ parsedData }) => {

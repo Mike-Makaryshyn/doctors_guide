@@ -1,5 +1,3 @@
-/* src/pages/FSPFormularPage/FSPFormularPage.scss */
-
 /* Основний контейнер сторінки */
 .fsp-container {
     display: flex;
@@ -16,61 +14,36 @@
 /* Контейнер для стовпців */
 .columns {
     display: flex;
-    flex-direction: row; /* Горизонтальне розташування */
-    gap: 20px; /* Відступ між стовпцями */
+    flex-wrap: wrap; /* Адаптивне відображення плиток */
+    gap: 10px; /* Зменшені відступи між колонками */
     width: 100%;
-    justify-content: flex-start;
-    overflow-x: hidden; /* Прибираємо горизонтальний скрол за замовчуванням */
+    justify-content: space-between; /* Розтягуємо плитки по ширині */
 }
 
-/* Кожен стовпець */
+/* Кожна колонка */
 .column {
-    flex: 1; /* Кожен стовпець займає рівну ширину */
+    flex: 1 1 calc(25% - 20px); /* Плитка займає 25% ширини з урахуванням відступів */
     max-width: 25%; /* Максимальна ширина стовпця */
+    min-width: 220px; /* Мінімальна ширина для маленьких екранів */
     display: flex;
     flex-direction: column; /* Вертикальне розташування плиток */
-    gap: 20px; /* Відступ між плитками */
-}
-
-.column.mobile {
-    flex: none; /* Фіксована ширина для мобільних */
-    width: 100%; /* Колонка займає всю ширину екрана */
-    scroll-snap-align: start; /* Починаємо з початку */
-}
-
-/* Кнопка для вибору джерела даних */
-.parse-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.parse-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    gap: 10px; /* Зменшені відступи між плитками */
 }
 
 /* Загальний стиль плитки */
 .tile {
     padding: 10px;
-    margin: -2px;
+    margin: 0; /* Забираємо негативний відступ */
     border: 1px solid #ddd;
-    border-radius: 14px;
+    border-radius: 10px; /* Зменшено округлення */
     background-color: #f9f9f9;
     color: #000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden;
-    position: relative; /* Для tooltip */
+    font-size: 14px; /* Менший розмір шрифту для економії простору */
+    text-align: left; /* Вирівнювання тексту */
 }
 
 .tile:hover {
@@ -78,248 +51,103 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Заголовок плитки */
 .tile-title {
-    font-size: 18px;
+    font-size: 16px; /* Зменшений заголовок */
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.tile-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.tile-list li {
     margin-bottom: 5px;
 }
 
-/* Tooltip для плиток */
-.tooltip {
-    position: absolute;
-    top: 100%; /* Розміщення під контейнером */
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-top: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    z-index: 100;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none; /* Уникайте взаємодії з tooltip */
-}
-
-.tile:hover .tooltip {
-    opacity: 1;
-}
-
-/* Модальне вікно */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Вміст модального вікна */
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-/* Кнопка закриття модального вікна */
-.close-button {
-    
-    padding: 5px 10px;
-    background-color: #ff5c5c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.close-button:hover {
-    background-color: #ff1c1c;
-    transform: scale(1.05);
-}
-
-/* Стилі для кнопки налаштувань */
+/* Кнопка налаштувань */
 .settings-button {
     position: fixed;
     bottom: 20px; /* Відступ від нижнього краю */
     left: 20px; /* Відступ від лівого краю */
-    background-color: #007bff;
+    background-color: #007bff; /* Синій колір кнопки */
     color: #fff;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border-radius: 50%; /* Кругла форма кнопки */
+    width: 40px; /* Фіксована ширина */
+    height: 40px; /* Фіксована висота */
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1001; /* Щоб кнопка була поверх інших елементів */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1001; /* Поверх інших елементів */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при взаємодії */
 }
 
 .settings-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+    background-color: #0056b3; /* Трохи темніший колір при наведенні */
+    transform: scale(1.1); /* Легке збільшення при наведенні */
 }
 
-/* Стилі для модального вікна налаштувань */
+/* Модальне вікно налаштувань */
 .settings-modal {
-    position: fixed;
-    bottom: 70px; /* Розташування над кнопкою налаштувань */
-    left: 22px; /* Вирівнювання по кнопці налаштувань */
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 40px; /* Зберігаємо прямокутну форму з округленими кутами */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкий ефект тіні */
+    position: fixed; /* Фіксоване положення відносно екрану */
+    bottom: 70px; /* Розташування над кнопкою */
+    left: 22px; /* Вирівнювання по кнопці */
+    background-color: #fff; /* Білий фон */
+    border: 1px solid #ddd; /* Тонка рамка */
+    border-radius: 10px; /* Округлені кути */
+    padding: 15px; /* Внутрішні відступи */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легка тінь */
     z-index: 1000; /* Поверх інших елементів */
-    width: 300px; /* Ширина вікна */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавна поява */
+    width: 250px; /* Невелика ширина */
+    animation: fadeIn 0.3s ease; /* Анімація появи */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Плавна поява */
 }
 
-.settings-content {
+/* Контент модального вікна */
+.settings-modal h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px; /* Розмір заголовка */
+    font-weight: bold;
+    color: #333; /* Темний текст */
+}
+
+.settings-modal .field {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; /* Відстань між елементами */
 }
 
-.settings-content h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-}
-
-.settings-content .field {
-    display: flex;
-    flex-direction: column;
-}
-
-.settings-content label {
-    margin-bottom: 5px;
+.settings-modal label {
+    font-size: 14px;
     font-weight: bold;
     color: #555;
 }
 
-.settings-content select {
-    padding: 5px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    background-color: #f8f9fa;
-    color: #000;
+.settings-modal select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* Стилі для статусів завантаження та помилок */
-.error {
-    color: red;
-    margin-top: 10px;
-}
-
-/* Додаткові стилі для модального вікна налаштувань */
-.settings-modal h3 {
-    margin: 0 0 10px 0;
-}
-
-.settings-modal .close-button {
-    margin-top: -5px;
-    align-self: flex-end;
-}
-
-/* Адаптивність для мобільних пристроїв */
-@media (max-width: 768px) {
-    .columns {
-        flex-direction: column; /* Вертикальне розташування колонок */
-        gap: 10px; /* Відступ між плитками */
-        overflow-x: hidden; /* Прибираємо горизонтальний скрол */
-        width: 100%; /* Колонки займають всю ширину */
+/* Анімація появи */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+/* Адаптивність */
+@media (max-width: 768px) {
     .column {
-        flex: none; /* Прибираємо гнучкість колонок */
-        width: 100%; /* Колонка займає всю ширину екрану */
-        max-width: 100%; /* Забезпечує, що колонка не перевищує ширину екрану */
-        padding: 0; /* Видаляємо можливі внутрішні відступи */
+        flex: 1 1 100%; /* На мобільних кожна плитка займає всю ширину */
+        max-width: 100%;
     }
 
     .tile {
-        
-        width: 100%; /* Плитка займає всю ширину колонки */
-        max-width: 100%; /* Плитка не перевищує ширину екрану */
-        box-sizing: border-box; /* Враховує padding і border у загальній ширині */
-        padding: 15px; /* Внутрішні відступи плитки */
-        font-size: 14px; /* Розмір шрифту для мобільних */
-    }
-    .tile-icon {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        font-size: 1.5rem;
-        z-index: 10;
-    }
-    
-    /* Специфічні дані */
-    .tile-icon.specific-data {
-        color: green;
-    }
-    
-    /* Загальні дані */
-    .tile-icon.general-data {
-        color: gray;
-    }
-
-    .fsp-container {
-        height: auto; /* Адаптуємо висоту під контент */
-        padding: 10px; /* Зменшені відступи */
-    }
-
-    .settings-modal {
-        width: 90%; /* Ширина модального вікна */
-    }
-
-    .settings-content {
-        width: 100%; /* Контент займає всю ширину */
-    }
-
-    .settings-button {
-        font-size: 24px; /* Розмір кнопки */
+        padding: 8px; /* Менші відступи всередині плитки */
+        font-size: 12px; /* Зменшений текст */
     }
 }
