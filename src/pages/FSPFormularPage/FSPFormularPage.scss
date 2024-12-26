@@ -162,8 +162,8 @@
 
 /* Кнопка закриття модального вікна */
 .close-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    
+    padding: 5px 10px;
     background-color: #ff5c5c;
     color: #fff;
     border: none;
@@ -205,16 +205,16 @@
 /* Стилі для модального вікна налаштувань */
 .settings-modal {
     position: fixed;
-    top: 60px; /* Під кнопкою налаштувань */
-    right: 20px;
+    bottom: 70px; /* Розташування над кнопкою налаштувань */
+    left: 22px; /* Вирівнювання по кнопці налаштувань */
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 40px; /* Зберігаємо прямокутну форму з округленими кутами */
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    width: 300px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкий ефект тіні */
+    z-index: 1000; /* Поверх інших елементів */
+    width: 300px; /* Ширина вікна */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавна поява */
 }
 
 .settings-content {
@@ -260,7 +260,7 @@
 }
 
 .settings-modal .close-button {
-    margin-top: 10px;
+    margin-top: -5px;
     align-self: flex-end;
 }
 
@@ -281,11 +281,29 @@
     }
 
     .tile {
+        
         width: 100%; /* Плитка займає всю ширину колонки */
         max-width: 100%; /* Плитка не перевищує ширину екрану */
         box-sizing: border-box; /* Враховує padding і border у загальній ширині */
         padding: 15px; /* Внутрішні відступи плитки */
         font-size: 14px; /* Розмір шрифту для мобільних */
+    }
+    .tile-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 1.5rem;
+        z-index: 10;
+    }
+    
+    /* Специфічні дані */
+    .tile-icon.specific-data {
+        color: green;
+    }
+    
+    /* Загальні дані */
+    .tile-icon.general-data {
+        color: gray;
     }
 
     .fsp-container {

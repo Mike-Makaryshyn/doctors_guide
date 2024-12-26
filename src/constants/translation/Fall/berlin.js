@@ -1,6 +1,7 @@
 const BERLIN_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
+        specialty: "cardiology",
         name: "Іван", // Ім'я
         surname: "Іваненко", // Прізвище
         birthdate: "01.01.1980", // Дата народження

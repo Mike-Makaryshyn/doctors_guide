@@ -20,11 +20,17 @@ import UserCasesModal from "./components/UserCasesModal";
 
 import { parseData } from "../../utils/dataParser";
 import useIsMobile from "../../hooks/useIsMobile";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 
 import { FaCog } from 'react-icons/fa'; // Імпорт іконок
+import { FaInfoCircle, FaCheckCircle } from "react-icons/fa"; // Стандартна та специфічна іконка
+
+// Імпорт хука useGetGlobalInfo
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+
+// Імпорт специфічних даних
+import FallSpecificData from "../../constants/translation/FallSpecificData";
 
 const FSPFormularPage = () => {
     const { 
@@ -33,10 +39,9 @@ const FSPFormularPage = () => {
         languages, 
         currentPage, 
         selectedRegion: globalSelectedRegion,
-        handleChangeRegion, 
         redirectToRegionPage, 
         handleChangePage 
-    } = useGetGlobalInfo();
+    } = useGetGlobalInfo(); // handleChangeRegion видалено з деструктуризації
 
     const { dataSources, firebaseData, fetchDataFromFirebase } = useContext(DataSourceContext);
     const [parseModal, setParseModal] = useState(false);
@@ -52,6 +57,31 @@ const FSPFormularPage = () => {
     const [selectedCase, setSelectedCase] = useState("");
     const [userCasesData, setUserCasesData] = useState([]);
 
+    // Стан для збереження типу Fall
+    const [fallType, setFallType] = useState(""); // Наприклад, 'cardiology' або 'thrombosis'
+    const renderTileIcon = (parsedData, type) => {
+        const hasSpecificData =
+            parsedData?.fallType &&
+            FallSpecificData[parsedData.fallType]?.[type]?.additionalInfo;
+    
+        if (hasSpecificData) {
+            return (
+                <FaCheckCircle
+                    className="tile-icon specific-data"
+                    title="Специфічні дані доступні"
+                />
+            );
+        }
+    
+        return (
+            <FaInfoCircle
+                className="tile-icon general-data"
+                title="Загальні дані"
+                
+            />
+        );
+    };
+    // Використання глобального вибору регіону, або локального стану
     const [currentRegion, setCurrentRegion] = useState(globalSelectedRegion || "");
     const columnsRef = useRef(null);
     const isMobile = useIsMobile();
@@ -78,53 +108,29 @@ const FSPFormularPage = () => {
         console.log("handleParseData called with:", sourceId, fileId);
         setIsLoading(true);
         setError(null);
+    
         try {
             const source = dataSources[sourceId];
             if (!source) {
                 throw new Error(`Source with id ${sourceId} not found.`);
             }
-
-            if (source.type === 'firebase') {
-                await handleOpenUserCasesModal(sourceId, fileId);
-            } else {
-                const data = await parseData(sourceId, source.type, source.collection);
-                console.log("Fetched Data:", data);
-                const selectedItem = data.find(item => item.id === parseInt(fileId, 10)) || {};
-                console.log("Selected Data Item:", selectedItem);
-
-                // Перевірка полів
-                const requiredFields = [
-                    "name",
-                    "surname",
-                    "birthdate",
-                    "age",
-                    "weight",
-                    "height",
-                    "gender",
-                    "visitReason",
-                    "painLocalization",
-                    "timeCourse",
-                    "symptomDescription",
-                    "painRadiation",
-                    "painProgression",
-                    "triggers",
-                    "painIntensity",
-                    "previousMedicalCare",
-                    // Додайте інші поля за потребою
-                ];
-                const hasAllFields = requiredFields.every(field => selectedItem.hasOwnProperty(field));
-                if (hasAllFields) {
-                    setParsedData(selectedItem);
-                } else {
-                    console.warn("Selected data item is missing some fields:", selectedItem);
-                    // Встановіть повідомлення про помилку
-                    setError("Вибраний файл даних не містить необхідних полів.");
-                    setParsedData({});
-                }
+    
+            const data = await parseData(sourceId, "local"); // Завантаження даних
+            console.log("Fetched Data:", data);
+    
+            const selectedItem = data.find(item => item.id === parseInt(fileId, 10)) || {};
+            console.log("Вибраний випадок:", selectedItem);
+    
+            if (selectedItem.specialty) {
+                setFallType(selectedItem.specialty.toLowerCase()); // Встановлення спеціалізації
+                console.log("Тип Fall (specialty):", selectedItem.specialty.toLowerCase());
             }
+    
+            setParsedData(selectedItem); // Збереження даних у стані
+            console.log("Parsed Data Set:", selectedItem);
         } catch (err) {
-            console.error("Error in handleParseData:", err);
-            setError("Сталася помилка при завантаженні даних.");
+            console.error("Помилка під час парсингу даних:", err);
+            setError("Сталася помилка під час завантаження даних.");
         } finally {
             setIsLoading(false);
         }
@@ -132,40 +138,45 @@ const FSPFormularPage = () => {
 
     const handleOpenInfoModal = (type) => {
         let infoText = "";
-        if (type === "personalData") {
-            infoText = FSPFormularPageData.personalData.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "currentAnamnesis") {
-            infoText = FSPFormularPageData.currentAnamnese.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "vegetativeAnamnese") {
-            infoText = FSPFormularPageData.vegetativeAnamnese.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "zusammenfassung") {
-            infoText = FSPFormularPageData.zusammenfassung.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "vorerkrankungen") {
-            infoText = FSPFormularPageData.vorerkrankungen.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "previousOperations") {
-            infoText = FSPFormularPageData.previousOperations.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "medications") {
-            infoText = FSPFormularPageData.medications.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "allergiesAndIntolerances") {
-            infoText = FSPFormularPageData.allergiesAndIntolerances.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "noxen") {
-            infoText = FSPFormularPageData.noxen.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "familienanamnese") {
-            infoText = FSPFormularPageData.familienanamnese.additionalInfo || "Немає додаткової інформації.";
-        } else if (type === "sozialanamnese") {
-            infoText = FSPFormularPageData.sozialanamnese.additionalInfo || "Немає додаткової інформації.";
+
+        if (fallType && FallSpecificData[fallType] && FallSpecificData[fallType][type]) {
+            infoText = FallSpecificData[fallType][type].additionalInfo || "Немає додаткової інформації.";
         } else {
-            console.warn(`Unknown type: ${type}`);
+            // Використовуємо загальну інформацію
+            if (type === "personalData") {
+                infoText = FSPFormularPageData.personalData.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "currentAnamnese") {
+                infoText = FSPFormularPageData.currentAnamnese.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "vegetativeAnamnese") {
+                infoText = FSPFormularPageData.vegetativeAnamnese.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "zusammenfassung") {
+                infoText = FSPFormularPageData.zusammenfassung.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "vorerkrankungen") {
+                infoText = FSPFormularPageData.vorerkrankungen.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "previousOperations") {
+                infoText = FSPFormularPageData.previousOperations.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "medications") {
+                infoText = FSPFormularPageData.medications.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "allergiesAndIntolerances") {
+                infoText = FSPFormularPageData.allergiesAndIntolerances.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "noxen") {
+                infoText = FSPFormularPageData.noxen.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "familienanamnese") {
+                infoText = FSPFormularPageData.familienanamnese.additionalInfo || "Немає додаткової інформації.";
+            } else if (type === "sozialanamnese") {
+                infoText = FSPFormularPageData.sozialanamnese.additionalInfo || "Немає додаткової інформації.";
+            } else {
+                console.warn(`Unknown type: ${type}`);
+            }
         }
+
         setAdditionalInfo({ text: infoText, type });
         setInfoModal(true);
+        console.log(`Тип модального вікна: ${type}`);
+        console.log(`Текст додаткової інформації: ${infoText}`);
     };
 
-    const handleRegionChangeLocal = (e) => {
-        setCurrentRegion(e.target.value);
-        setSelectedCase(""); // Скидання вибору випадку при зміні регіону
-        setParsedData({}); // Скидання даних
-    };
+    // Видалено функцію handleRegionChangeLocal та handleChangeRegion
 
     const handleCaseChange = (e) => {
         setSelectedCase(e.target.value);
@@ -245,13 +256,23 @@ const FSPFormularPage = () => {
 
             {/* Модальне вікно налаштувань */}
             {isSettingsOpen && (
-                <div className="settings-modal" ref={settingsRef} id="settings-modal" role="dialog" aria-modal="true">
+                <div className="settings-modal" ref={settingsRef}>
                     <div className="settings-content">
                         <h3>Налаштування</h3>
                         {/* Вибір області */}
                         <div className="field">
-                            <label htmlFor="region-select">Виберіть область:</label>
-                            <select id="region-select" value={currentRegion} onChange={handleRegionChangeLocal}>
+                            <label htmlFor="region-select">Оберіть Регіон:</label>
+                            <select
+                                id="region-select"
+                                value={currentRegion}
+                                onChange={(e) => {
+                                    const newRegion = e.target.value;
+                                    setCurrentRegion(newRegion);
+                                    setSelectedCase(""); // Скидання вибору випадку при зміні регіону
+                                    setParsedData({}); // Скидання даних
+                                    setFallType(""); // Скидання типу Fall при зміні регіону
+                                }}
+                            >
                                 <option value="">-- Оберіть Регіон --</option>
                                 {Object.keys(dataSources).map((sourceId) => (
                                     dataSources[sourceId].type === "local" && (
@@ -279,7 +300,7 @@ const FSPFormularPage = () => {
                         )}
                         {/* Кнопка закриття модального вікна */}
                         <button className="close-button" onClick={() => setIsSettingsOpen(false)}>
-                            Закрити
+                            ✕
                         </button>
                     </div>
                 </div>
@@ -287,9 +308,6 @@ const FSPFormularPage = () => {
 
             {/* Основний Контент */}
             <div className="fsp-container">
-                {/* Видалено горизонтальну панель з попереднього коду */}
-                {/* Видалено блок "additional-sources" */}
-
                 {/* Відображення статусів завантаження та помилок */}
                 {isLoading && <p>Завантаження даних...</p>}
                 {error && <p className="error">{error}</p>}
@@ -318,7 +336,7 @@ const FSPFormularPage = () => {
                         </div>
                         <div
                             className="tile"
-                            onClick={() => handleOpenInfoModal("currentAnamnesis")}
+                            onClick={() => handleOpenInfoModal("currentAnamnese")}
                         >
                             <h3 className="tile-title">Актуальний анамнез</h3>
                             <AktuelleAnamnese parsedData={parsedData} />

@@ -371,7 +371,7 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
       value={entry.date || ""}
       onChange={(e) => handleDateChange(index, e.target.value)}
       placeholder={entry.datePlaceholder || "Datum"}
-      className={`${styles.inputField} ${
+      className={`${styles.inputField} ${styles.inputFieldsecond} ${
         dateErrors[index] ? styles.inputFieldWithError : ""
       }`}
       onBlur={saveAktuellData}

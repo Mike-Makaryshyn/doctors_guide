@@ -1,6 +1,7 @@
 const THUERINGEN_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
+        specialty: "thrombosis",
         name: "Іван", // Ім'я
         surname: "Іваненко", // Прізвище
         birthdate: "01.01.1980", // Дата народження

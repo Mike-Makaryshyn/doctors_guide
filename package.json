@@ -53,6 +53,7 @@
     "react-text-mask": "^5.5.0",
     "react-to-print": "^2.15.1",
     "react-toastify": "^11.0.1",
+    "rehype-raw": "^7.0.0",
     "sass": "^1.83.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.9",

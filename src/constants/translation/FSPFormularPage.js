@@ -135,7 +135,7 @@ Das Geschlecht des Patienten ist wichtig für die Anpassung der medizinischen Be
 ---
         `,
   },
-  currentAnamnesis: {
+  currentAnamnese: {
     additionalInfo: `### **Anamnese: Aktueller Anamnese**
 
 #### **Aktueller Anamnese**
@@ -1086,27 +1086,27 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   },
   previousOperations: {
     additionalInfo: ` `,
-},
-medications: {
-      additionalInfo: ` `,
-    },
+  },
+  medications: {
+    additionalInfo: ` `,
+  },
 
-allergiesAndIntolerances: {
-      additionalInfo: ` `,
-    },
+  allergiesAndIntolerances: {
+    additionalInfo: ` `,
+  },
 
-    noxen: {
-      additionalInfo: ` `,
-    },
+  noxen: {
+    additionalInfo: ` `,
+  },
 
-    familienanamnese: {
-      additionalInfo: ` `,
-    },
+  familienanamnese: {
+    additionalInfo: ` `,
+  },
 
-    sozialanamnese: {
-      additionalInfo: ` `,
-    },
-  
+  sozialanamnese: {
+    additionalInfo: ` `,
+  },
+
   button: {
     selectDataSource: "Вибрати джерело даних",
   },

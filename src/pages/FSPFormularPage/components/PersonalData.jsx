@@ -1,9 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
+
+const renderTileIcon = (parsedData) => {
+    if (parsedData?.fallType && parsedData.fallType === "cardiology") {
+        return <FaCheckCircle className="tile-icon specific-data" title="Специфічні дані доступні" />;
+    }
+    return <FaInfoCircle className="tile-icon general-data" title="Загальні дані" />;
+};
 
 const PersonalData = ({ parsedData }) => {
     return (
         <div className="personal-data">
+            <div className="tile-header">
+                <div className="tile-icon-container">
+                    {renderTileIcon(parsedData)}
+                </div>
+            </div>
             <ul className="tile-list">
                 <li>
                     <strong>Vornamen:</strong> {parsedData?.name || ""}
@@ -32,13 +45,14 @@ const PersonalData = ({ parsedData }) => {
 
 PersonalData.propTypes = {
     parsedData: PropTypes.shape({
-        name: PropTypes.string, // Ім'я
-        surname: PropTypes.string, // Прізвище
-        birthdate: PropTypes.string, // Дата народження
-        age: PropTypes.string, // Вік
-        height: PropTypes.string, // Зріст
-        weight: PropTypes.string, // Вага
-        gender: PropTypes.string, // Стать
+        name: PropTypes.string,
+        surname: PropTypes.string,
+        birthdate: PropTypes.string,
+        age: PropTypes.string,
+        height: PropTypes.string,
+        weight: PropTypes.string,
+        gender: PropTypes.string,
+        fallType: PropTypes.string,
     }),
 };
 

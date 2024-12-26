@@ -10,20 +10,19 @@ const Zusammenfassung = ({ onInfoClick }) => {
     };
 
     return (
-        <div 
-            className={styles["zusammenfassung"]} 
-            onClick={handleTileClick} 
-            role="button" 
-            tabIndex={0}
-            onKeyPress={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    handleTileClick();
-                }
-            }}
-            style={{ backgroundColor: 'red' }} // Додаємо інлайн-стиль
-        >
-            {/* Видалили кнопку "Детальніше" */}
-        </div>
+        <div
+    className={styles["zusammenfassung"]}
+    onClick={handleTileClick}
+    role="button"
+    tabIndex={0}
+    onKeyPress={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            handleTileClick();
+        }
+    }}
+    style={{ backgroundColor: "red", width: "90%" }} // Додаємо ширину
+>
+</div>
     );
 };
 
