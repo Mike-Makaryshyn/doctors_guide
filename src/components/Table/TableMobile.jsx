@@ -209,7 +209,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                         </div>
 
 
-               {row?.optional && columns[currentColumnIndex]?.name === "category" && (
+               {row?.optional && columns[0]?.name === "category" && (
                   <div
                      className={cn(
                         styles.optional_cehckbox_wrapper,
