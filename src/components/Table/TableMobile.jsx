@@ -119,9 +119,6 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
         return defaultHeaderLabels[columnName]?.[selectedLanguage] || columnName || "N/A";
     };
 
-    console.log(columns[currentColumnIndex]);
-    
-
     return (
         <div className={styles.tableMobileWrapper}>
             {/* Заголовок таблиці */}

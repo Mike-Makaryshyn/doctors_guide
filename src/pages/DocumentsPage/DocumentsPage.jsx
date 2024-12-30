@@ -148,7 +148,7 @@ const DocumentsPage = () => {
                             {isMobile ? (
                                 <TableMobile
                                     data={tableData}
-                                    columns={columnsFirst}
+                                    columns={columnsFirst?.filter(item => item?.name !== 'category')}
                                     setTableData={setTableData}
                                     selectedLanguage={language}
                                     selectedRegion={selectedRegion} // Передача регіону
@@ -197,7 +197,7 @@ const DocumentsPage = () => {
                             {isMobile ? (
                                 <TableMobile
                                     data={optionalTableData}
-                                    columns={columnsFirst}
+                                    columns={columnsFirst?.filter(item => item?.name !== 'category')}
                                     setTableData={setOptionalTableData}
                                     selectedLanguage={language}
                                     selectedRegion={selectedRegion} // Передача регіону
