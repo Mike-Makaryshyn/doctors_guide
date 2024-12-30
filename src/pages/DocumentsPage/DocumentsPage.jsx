@@ -169,7 +169,7 @@ const DocumentsPage = () => {
                                 <TableMobile
                                     data={tableDataSecond}
                                     columns={[
-                                        { name: "name" },
+                                       //  { name: "name" },
                                         { name: "is_exist" },
                                         { name: "links" },
                                         { name: "sent" },

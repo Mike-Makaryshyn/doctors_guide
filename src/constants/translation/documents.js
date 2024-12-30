@@ -66,7 +66,7 @@ export const messages = {
    },
 };
 
-const notNeededText = {
+export const notNeededText = {
    uk: "Не потрібно",
    en: "Not needed",
    fr: "Pas nécessaire",

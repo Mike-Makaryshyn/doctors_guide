@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import styles from "./TableMobile.module.scss";
 import Checkbox from '../Checkbox/Checkbox';
 import cn from 'classnames';
+import { notNeededText } from "../../constants/translation/documents";
 
 // Мапа заголовків колонок
 const defaultHeaderLabels = {
@@ -119,7 +120,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
         }
         return defaultHeaderLabels[columnName]?.[selectedLanguage] || columnName || "N/A";
     };
-
+    
     return (
         <div className={styles.tableMobileWrapper}>
             {/* Заголовок таблиці */}
@@ -189,7 +190,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                                         Select a region
                                     </a>
                                 ) : null
-                            ) : (
+                            ) : typeof row?.[columns[currentColumnIndex]?.name] === 'string' && row?.[columns[currentColumnIndex]?.name]?.includes('check') ? (
                                 <input
                                     type="checkbox"
                                     checked={
@@ -203,6 +204,10 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                                     }
                                     className={styles.checkbox}
                                 />
+                            ) : (
+                              <div>
+                                 -
+                              </div>
                             )}
                         </div>
 
