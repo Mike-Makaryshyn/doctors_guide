@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from "react";
 import styles from "./TableMobile.module.scss";
+import Checkbox from '../Checkbox/Checkbox';
+import cn from 'classnames';
 
 // Мапа заголовків колонок
 const defaultHeaderLabels = {
@@ -86,6 +88,17 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
             (prev) => (prev - 1 + slideableColumns.length) % slideableColumns.length
         );
     };
+
+    const changeHiddenProp = (row) => {
+      setTableData((prevData) =>
+         prevData.map((item) => {
+            if (item.id === row.id) {
+               return { ...item, hide: !row.hide };
+            }
+            return item;
+         })
+      );
+   };
 
     // Функція зміни чекбокса
     const handleCheckboxChange = useCallback((index, key) => {
@@ -191,6 +204,23 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                                 />
                             )}
                         </div>
+
+
+               {row?.optional && (
+                  <div
+                     className={cn(
+                        styles.optional_cehckbox_wrapper,
+                        "optional_checkbox_wrapper"
+                     )}
+                  >
+                     <Checkbox
+                        label={row.hide ? "Виключено" : "Включено"}
+                        value={row.hide}
+                        defaultValue={row.optional}
+                        onChange={()=> changeHiddenProp(row)}
+                     />
+                  </div>
+               )}
                     </div>
                 ))}
             </div>
