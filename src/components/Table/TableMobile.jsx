@@ -151,9 +151,25 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                     <div key={index} className={styles.tableRow}>
                         {/* Фіксована колонка */}
                         <div className={styles.fixedColumn}>
+                        
                             {row?.category?.[selectedLanguage] ||
                                 row?.name?.[selectedLanguage] ||
                                 "N/A"}
+                                  {row?.optional && (
+                  <div
+                     className={cn(
+                        styles.optional_cehckbox_wrapper,
+                        "optional_checkbox_wrapper"
+                     )}
+                  >
+                     <Checkbox
+                        label={row.hide ? "Виключено" : "Включено"}
+                        value={row.hide}
+                        defaultValue={row.optional}
+                        onChange={()=> changeHiddenProp(row)}
+                     />
+                  </div>
+               )}
                         </div>
 
                         {/* Прокручувана колонка */}
@@ -190,7 +206,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                                         Select a region
                                     </a>
                                 ) : null
-                            ) : typeof row?.[columns[currentColumnIndex]?.name] === 'string' && row?.[columns[currentColumnIndex]?.name]?.includes('check') ? (
+                            ) : !row?.hide && typeof row?.[columns[currentColumnIndex]?.name] === 'string' && row?.[columns[currentColumnIndex]?.name]?.includes('check') ? (
                                 <input
                                     type="checkbox"
                                     checked={
@@ -212,21 +228,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                         </div>
 
 
-               {row?.optional && (
-                  <div
-                     className={cn(
-                        styles.optional_cehckbox_wrapper,
-                        "optional_checkbox_wrapper"
-                     )}
-                  >
-                     <Checkbox
-                        label={row.hide ? "Виключено" : "Включено"}
-                        value={row.hide}
-                        defaultValue={row.optional}
-                        onChange={()=> changeHiddenProp(row)}
-                     />
-                  </div>
-               )}
+             
                     </div>
                 ))}
             </div>

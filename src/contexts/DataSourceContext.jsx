@@ -29,7 +29,7 @@ export const DataSourceProvider = ({ children }) => {
   // name/region (праворуч) = “людська” назва з дефісами, умляутами.
   const [dataSources] = useState({
     // 1) Thüringen
-    Thüringen: {
+    "Thüringen": {
         key: "Thueringen",
       name: "Thüringen",
       type: "local",
