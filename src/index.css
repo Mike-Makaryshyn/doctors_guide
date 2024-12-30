@@ -155,3 +155,9 @@ button:hover {
    color: rgb(103, 103, 246);
    margin-left: 3px;
  }
+ 
+ .tile-header {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+ }

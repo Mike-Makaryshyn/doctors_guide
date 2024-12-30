@@ -39,6 +39,12 @@
     z-index: 10; /* Иконка отображается выше содержимого */
 }
 
+.tile-header {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+}
+
 /* Общий стиль иконки */
 .tile-icon {
     font-size: 1.5rem; /* Размер иконки */

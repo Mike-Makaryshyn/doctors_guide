@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
-import "./TileContainer.module.scss";
+import styles from "./TileContainer.module.scss";
 const renderTileIcon = (parsedData) => {
     return (
         <FaInfoCircle
@@ -14,7 +14,7 @@ const renderTileIcon = (parsedData) => {
 const PersonalData = ({ parsedData }) => {
     return (
         <div className="personal-data">
-            <div className="tile-header">
+            <div className={styles['tile-header']}>
                 <div className="tile-icon-container">
                     {renderTileIcon(parsedData)}
                 </div>

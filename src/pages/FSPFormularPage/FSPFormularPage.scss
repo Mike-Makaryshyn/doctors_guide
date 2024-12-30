@@ -34,6 +34,7 @@
 
 /* Загальний стиль плитки */
 .tile {
+    position: relative;
     padding: 10px;
     margin: 0; /* Забираємо негативний відступ */
     border: 1px solid #ddd;
