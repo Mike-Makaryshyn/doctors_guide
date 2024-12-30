@@ -75,7 +75,7 @@ const defaultHeaderLabels = {
 };
 
 const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRegion }) => {
-    const slideableColumns = columns.slice(1); // Колонки, що прокручуються
+    const slideableColumns = columns; // Колонки, що прокручуються
     const [currentColumnIndex, setCurrentColumnIndex] = useState(0);
 
     // Функції для прокрутки колонок
@@ -99,9 +99,10 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
          })
       );
    };
-
+   
     // Функція зміни чекбокса
     const handleCheckboxChange = useCallback((index, key) => {
+
         const updatedData = [...data];
         updatedData[index][key] =
             updatedData[index][key] === "check" ? "not_check" : "check";
@@ -206,7 +207,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                         </div>
 
 
-               {row?.optional && columns[0]?.name === "category" && (
+               {row?.optional && (
                   <div
                      className={cn(
                         styles.optional_cehckbox_wrapper,
