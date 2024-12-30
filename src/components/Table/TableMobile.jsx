@@ -119,6 +119,9 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
         return defaultHeaderLabels[columnName]?.[selectedLanguage] || columnName || "N/A";
     };
 
+    console.log(columns[currentColumnIndex]);
+    
+
     return (
         <div className={styles.tableMobileWrapper}>
             {/* Заголовок таблиці */}
@@ -206,7 +209,7 @@ const TableMobile = ({ data, columns, setTableData, selectedLanguage, selectedRe
                         </div>
 
 
-               {row?.optional && (
+               {row?.optional && columns[currentColumnIndex]?.name === "category" && (
                   <div
                      className={cn(
                         styles.optional_cehckbox_wrapper,
