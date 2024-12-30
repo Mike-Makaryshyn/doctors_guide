@@ -1,4 +1,4 @@
-const MECKLENBURG_DATA = [
+const NORDRHEIN_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
         name: "Іван", // Ім'я
@@ -67,5 +67,5 @@ const MECKLENBURG_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
-export default MECKLENBURG_DATA;
+NORDRHEIN_DATA.regionName = "Nordrhein-Westfalen";
+export default NORDRHEIN_DATA;

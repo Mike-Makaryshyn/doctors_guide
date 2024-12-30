@@ -1,4 +1,4 @@
-const NORDRHEIN_DATA = [
+const RHEINLAND_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
         name: "Іван", // Ім'я
@@ -67,5 +67,5 @@ const NORDRHEIN_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
-export default NORDRHEIN_DATA;
+RHEINLAND_DATA.regionName = "Rheinland-Pfalz";
+export default RHEINLAND_DATA;

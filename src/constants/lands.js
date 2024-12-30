@@ -2,6 +2,7 @@ export const LANDS_INFO = [
    {
       id: 1,
       name: "Baden-Württemberg",
+      key: "BadenWuerttemberg",
       desc: {
          en: "Baden-Württemberg is an economically strong state in the southwest of Germany, a hub for engineering and the automotive industry, home to global players like Mercedes-Benz and Porsche in Stuttgart. The region is also known for its diverse landscape, stretching from the Black Forest to Lake Constance, offering a high quality of life and numerous cultural and nature-related activities. Additionally, it is famous for its culinary diversity, especially wines and regional specialties.",
          fr: "Le Bade-Wurtemberg est un État économiquement fort situé dans le sud-ouest de l'Allemagne, un pôle d'ingénierie et de l'industrie automobile, abritant des acteurs mondiaux comme Mercedes-Benz et Porsche à Stuttgart. La région est également réputée pour son paysage diversifié, s'étendant de la Forêt-Noire au lac de Constance, offrant une haute qualité de vie et de nombreuses activités culturelles et naturelles. De plus, elle est célèbre pour sa diversité culinaire, en particulier ses vins et spécialités régionales.",
@@ -20,6 +21,7 @@ export const LANDS_INFO = [
    {
       id: 2,
       name: "Bayern",
+      key: "Bayern",
       desc: {
          en: "Bavaria is Germany's largest state, rich in cultural identity with strong traditions in lederhosen, dirndls, and festivals like Munich's Oktoberfest. Its economy is marked by technology, the automotive industry, and engineering, with cities like Munich and Nuremberg as key economic centers. The stunning Alpine landscape, historical castles, and clear lakes provide ample leisure and recreation opportunities.",
          fr: "La Bavière est le plus grand État d'Allemagne, riche en identité culturelle avec de fortes traditions en culottes de peau, dirndls et festivals comme l'Oktoberfest de Munich. Son économie est marquée par la technologie, l'industrie automobile et l'ingénierie, avec des villes comme Munich et Nuremberg comme principaux centres économiques. Le magnifique paysage alpin, les châteaux historiques et les lacs clairs offrent de nombreuses possibilités de loisirs et de détente.",
@@ -38,6 +40,7 @@ export const LANDS_INFO = [
    {
       id: 3,
       name: "Berlin",
+      key: "Berlin",
       desc: {
          de: "Berlin: Als Hauptstadt Deutschlands ist Berlin ein pulsierendes Zentrum für Politik, Kultur und Geschichte, das Besucher und Einwohner mit seiner dynamischen Atmosphäre anzieht. Die Stadt ist bekannt für ihre vielfältige Kunstszene, lebendige Nachtleben und zahlreichen Museen, die die bewegte Geschichte Berlins erzählen. Berlin ist auch ein bedeutendes Startup-Ökosystem und zieht Unternehmen aus den Bereichen Technologie, Medien und Kreativwirtschaft an.",
          en: "As Germany's capital, Berlin is a vibrant center for politics, culture, and history, attracting visitors and residents with its dynamic atmosphere. The city is renowned for its diverse art scene, lively nightlife, and numerous museums that narrate Berlin's turbulent history. It's also a significant startup ecosystem, drawing companies in technology, media, and creative industries.",
@@ -55,6 +58,7 @@ export const LANDS_INFO = [
    {
       id: 4,
       name: "Brandenburg",
+      key: "Brandenburg",
       desc: {
          de: "Brandenburg: Umschließt die Hauptstadt Berlin und ist geprägt von ausgedehnten Naturlandschaften, darunter zahlreiche Seen, Flüsse und Wälder, die es zu einem beliebten Erholungsgebiet machen. Historische Städte wie Potsdam, mit seinen preußischen Schlössern und Gärten, bieten kulturellen Reichtum. Brandenburgs Wirtschaft profitiert von der Nähe zu Berlin, mit einem Fokus auf Landwirtschaft, erneuerbare Energien und Tourismus.",
          en: "Brandenburg: Encircling the capital Berlin, Brandenburg is characterized by extensive natural landscapes, including numerous lakes, rivers, and forests, making it a popular recreational area. Historical cities like Potsdam, with its Prussian palaces and gardens, offer cultural richness. Brandenburg's economy benefits from its proximity to Berlin, with a focus on agriculture, renewable energies, and tourism.",
@@ -74,6 +78,7 @@ export const LANDS_INFO = [
    {
       id: 5,
       name: "Bremen",
+      key: "Bremen",
       desc: {
          de: "Bremen: Dieses kleine, aber geschichtsträchtige Bundesland besteht aus den zwei Städten Bremen und Bremerhaven und spielt eine wichtige Rolle in Deutschlands Handelsgeschichte. Bremen ist bekannt für sein gut erhaltenes mittelalterliches Stadtzentrum, den Bremer Stadtmusikanten und Weltraumforschungseinrichtungen. Bremerhaven ist ein wichtiger Seehafen mit einem maritimen Museumskomplex, der die Seefahrtsgeschichte der Region dokumentiert.",
          en: "Bremen: This small but historically rich federal state consists of two cities, Bremen and Bremerhaven, and plays an important role in Germany's trading history. Bremen is known for its well-preserved medieval city center, the Bremen Town Musicians, and space research facilities. Bremerhaven is a significant seaport with a maritime museum complex documenting the maritime history of the region.",
@@ -93,6 +98,7 @@ export const LANDS_INFO = [
    {
       id: 6,
       name: "Hamburg",
+      key: "Hamburg",
       desc: {
          de: "Hamburg: Als reiche Hafenstadt ist Hamburg für seine beeindruckende Architektur, zahlreiche Brücken und Wasserstraßen bekannt. Die Stadt hat eine starke Medien- und Musikindustrie, mit dem historischen Speicherstadtviertel und der neuen Elbphilharmonie als kulturelle Wahrzeichen. Hamburgs Hafen ist einer der größten in Europa und ein zentraler Handelsknotenpunkt.",
          en: "Hamburg: As a wealthy port city, Hamburg is known for its impressive architecture, numerous bridges, and waterways. The city has a strong media and music industry, with the historic Speicherstadt district and the new Elbphilharmonie as cultural landmarks. Hamburg's port is one of the largest in Europe and a central trading hub.",
@@ -111,6 +117,7 @@ export const LANDS_INFO = [
    {
       id: 7,
       name: "Hessen",
+      key: "Hessen",
       desc: {
          de: "Mecklenburg-Vorpommern: Bekannt für seine malerische Ostseeküste mit langen Sandstränden, Inseln wie Rügen und Usedom und die Mecklenburgische Seenplatte. Dieses Bundesland zieht Naturliebhaber und Wassersportler an. Die historischen Hansestädte Rostock und Stralsund bieten reiche Kulturerlebnisse und maritime Geschichte.",
          en: "Hessen: Located in the heart of Germany, Hessen combines historical cities like the Roman city of Mainz with the modern financial center of Frankfurt am Main. Frankfurt, the largest city in Hessen, is a global financial hub with an impressive skyline and serves as a key transportation hub in Europe. Hessen is also known for its diverse nature, from the low mountain ranges to the river landscapes.",
@@ -129,6 +136,7 @@ export const LANDS_INFO = [
    {
       id: 8,
       name: "Mecklenburg Vorpommern",
+      key: "MecklenburgVorpommern",
       desc: {
          de: "Mecklenburg-Vorpommern: Bekannt für seine malerische Ostseeküste mit langen Sandstränden, Inseln wie Rügen und Usedom und die Mecklenburgische Seenplatte. Dieses Bundesland zieht Naturliebhaber und Wassersportler an. Die historischen Hansestädte Rostock und Stralsund bieten reiche Kulturerlebnisse und maritime Geschichte.",
          en: "Mecklenburg-Vorpommern: Known for its picturesque Baltic Sea coast with long sandy beaches, islands like Rügen and Usedom, and the Mecklenburg Lake District. This state attracts nature lovers and water sports enthusiasts. The historic Hanseatic cities of Rostock and Stralsund offer rich cultural experiences and maritime history.",
@@ -146,6 +154,7 @@ export const LANDS_INFO = [
    {
       id: 9,
       name: "Niedersachsen",
+      key: "Niedersachsen",
       desc: {
          de: "Nordrhein-Westfalen: Das bevölkerungsreichste Bundesland und ein industrieller Schmelztiegel mit Städten wie Köln, Düsseldorf und dem Ruhrgebiet. Diese Region ist bekannt für ihre Industriekultur, moderne Kunst und lebhafte Festivals. Nordrhein-Westfalen hat eine starke Wirtschaft, unterstützt durch eine hohe Dichte an Universitäten und Forschungseinrichtungen.",
          en: "Niedersachsen: With a mix of large cities like Hannover and idyllic landscapes like the Harz Mountains and the North Sea, Niedersachsen offers a variety of habitats. Agriculture, especially in the Lüneburg Heath, plays a significant role in the state's economy, as does the automotive industry with Volkswagen in Wolfsburg.",
@@ -164,6 +173,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 10,
       name: "Nordrhein-Westfalen",
+      key: "NordrheinWestfalen",
       desc: {
          en: "Nordrhein-Westfalen: The most populous federal state and an industrial melting pot with cities like Cologne, Düsseldorf, and the Ruhr area. This region is known for its industrial culture, modern art, and vibrant festivals. Nordrhein-Westfalen has a strong economy, supported by a high density of universities and research institutions.",
          fr: "Rhénanie-du-Nord-Westphalie : Le Land le plus peuplé et un creuset industriel avec des villes comme Cologne, Düsseldorf et la région de la Ruhr. Cette région est connue pour sa culture industrielle, son art moderne et ses festivals animés. La Rhénanie-du-Nord-Westphalie dispose d'une économie forte, soutenue par une forte densité d'universités et d'institutions de recherche.",
@@ -182,6 +192,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 11,
       name: "Rheinland-Pfalz",
+      key: "RheinlandPfalz",
       desc: {
          en: "Rheinland-Pfalz: This federal state is known for its picturesque wine-growing regions along the Rhine and Moselle rivers, as well as historical cities like Trier and Mainz. Rheinland-Pfalz is rich in culture and history, with many castles, palaces, and Roman monuments.",
          fr: "Rheinland-Pfalz : Cet État fédéral est connu pour ses pittoresques régions viticoles le long du Rhin et de la Moselle, ainsi que pour des villes historiques comme Trèves et Mayence. Rheinland-Pfalz est riche en culture et en histoire, avec de nombreux châteaux, palais et monuments romains.",
@@ -200,6 +211,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 12,
       name: "Saarland",
+      key: "Saarland",
       desc: {
          en: "Saarland: Shaped by its industrial history and proximity to France, Saarland offers a unique blend of German and French culture. The region is known for its steel industry and culinary specialties, including the Saarland Lyoner.",
          fr: "Sarre : Façonné par son histoire industrielle et sa proximité avec la France, le Sarre offre un mélange unique de culture allemande et française. La région est connue pour son industrie sidérurgique et ses spécialités culinaires, notamment le Lyoner sarrois.",
@@ -218,6 +230,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 13,
       name: "Sachsen",
+      key: "Sachsen",
       desc: {
          en: "Saxony: With a strong cultural identity expressed in cities like Dresden and Leipzig with their rich art and music history, Saxony has a thriving creative industry and is known for its traditional Christmas markets and the Ore Mountains.",
          fr: "Saxe : Avec une forte identité culturelle exprimée dans des villes comme Dresde et Leipzig avec leur riche histoire de l'art et de la musique, la Saxe a une industrie créative florissante et est connue pour ses marchés de Noël traditionnels et les monts Métallifères.",
@@ -235,6 +248,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 14,
       name: "Sachsen-Anhalt",
+      key: "SachsenAnhalt",
       desc: {
          en: "Sachsen-Anhalt: Known for its UNESCO World Heritage sites such as Lutherstadt Wittenberg and the Naumburger Dom. This federal state offers a rich historical landscape ranging from prehistory to the Reformation and is a center for the chemical industry.",
          fr: "Saxe-Anhalt : Connu pour ses sites du patrimoine mondial de l'UNESCO comme la Lutherstadt Wittenberg et le Naumburger Dom. Cet État fédéral offre un paysage historique riche allant de la préhistoire à la Réforme et est un centre pour l'industrie chimique.",
@@ -253,6 +267,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 15,
       name: "Schleswig-Holstein",
+      key: "SchleswigHolstein",
       desc: {
          en: "Schleswig-Holstein: Located between the North Sea and the Baltic Sea, it offers a unique maritime culture, with important port cities such as Kiel and Lübeck. The region is known for its sailing events, the Wacken Open Air music festival, and the Holstein lake district.",
          fr: "Schleswig-Holstein : Situé entre la mer du Nord et la mer Baltique, il offre une culture maritime unique, avec des villes portuaires importantes telles que Kiel et Lübeck. La région est connue pour ses événements de voile, le festival de musique Wacken Open Air et le district des lacs de Holstein.",
@@ -272,6 +287,7 @@ doctor_palat:"http://www.aekn.de"
    {
       id: 16,
       name: "Thüringen",
+      key: "Thueringen",
       desc: {
          en: 'Thuringia: Known as the "green heart of Germany" with the Thuringian Forest and culturally significant cities such as Weimar, Erfurt, and Jena. Thuringia has a rich cultural history, associated with personalities like Goethe and Schiller, and is a center for optics and precision engineering.',
          fr: "Thuringe : Connu sous le nom de \"cœur vert de l'Allemagne\" avec la forêt de Thuringe et des villes culturellement importantes telles que Weimar, Erfurt et Jena. La Thuringe a une histoire culturelle riche, associée à des personnalités telles que Goethe et Schiller, et est un centre pour l'optique et la technique de précision.",

@@ -3,6 +3,7 @@
 import React, { useState, useRef, useContext, useEffect } from "react";
 import "./FSPFormularPage.scss";
 import FSPFormularPageData from "../../constants/translation/FSPFormularPage";
+
 import PersonalData from "./components/PersonalData";
 import AktuelleAnamnese from "./components/AktuelleAnamnese";
 import VegetativeAnamnese from "./components/VegetativeAnamnese";
@@ -26,74 +27,85 @@ import useIsMobile from "../../hooks/useIsMobile";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 
-import { FaCog } from "react-icons/fa"; // Імпорт іконок
-import { FaInfoCircle, FaCheckCircle } from "react-icons/fa"; // Стандартна та специфічна іконка
+import { FaCog } from "react-icons/fa";
+import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
 
-// Імпорт хука useGetGlobalInfo
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-
-// Імпорт специфічних даних
 import FallSpecificData from "../../constants/translation/FallSpecificData";
 
+
 const FSPFormularPage = () => {
+  // =========================================
+  // Глобальний хук (глобальна інфа)
+  // =========================================
   const {
     user,
     selectedLanguage,
     languages,
     currentPage,
+    /** 
+     * ВАЖЛИВО: 'selectedRegion' (глобальний вибір).
+     * Користувач може мати вибір однієї з 16 земель, який діє на весь сайт.
+     */
     selectedRegion: globalSelectedRegion,
     redirectToRegionPage,
     handleChangePage,
-  } = useGetGlobalInfo(); // handleChangeRegion видалено з деструктуризації
+  } = useGetGlobalInfo();
 
+  // =========================================
+  // Контекст із джерелами даних (dataSources)
+  // =========================================
   const { dataSources, firebaseData, fetchDataFromFirebase } =
     useContext(DataSourceContext);
+
+  // =========================================
+  // Локальні стани для різних модалок і даних
+  // =========================================
   const [parseModal, setParseModal] = useState(false);
   const [infoModal, setInfoModal] = useState(false);
   const [userCasesModal, setUserCasesModal] = useState(false);
   const [parsedData, setParsedData] = useState({});
   const [tooltipVisible, setTooltipVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [additionalInfo, setAdditionalInfo] = useState({
-    text: "",
-    type: "",
-  });
+  const [additionalInfo, setAdditionalInfo] = useState({ text: "", type: "" });
   const [selectedCase, setSelectedCase] = useState("");
   const [userCasesData, setUserCasesData] = useState([]);
+  const [fallType, setFallType] = useState("");
 
-  // Стан для збереження типу Fall
-  const [fallType, setFallType] = useState(""); // Наприклад, 'cardiology' або 'thrombosis'
-  const renderTileIcon = (parsedData, type) => {
-    const hasSpecificData =
-      parsedData?.fallType &&
-      FallSpecificData[parsedData.fallType]?.[type]?.additionalInfo;
+  // =========================================
+  // Локальна земля (регіон),
+  // ініціалізується глобальним 'selectedRegion',
+  // але зміна в цьому компоненті НЕ змінює глобальний хук.
+  // =========================================
+  const [localRegion, setLocalRegion] = useState(globalSelectedRegion || "");
 
-    if (hasSpecificData) {
-      return (
-        <FaCheckCircle
-          className="tile-icon specific-data"
-          title="Специфічні дані доступні"
-        />
-      );
+  // Якщо ви хочете, щоби при зміні globalSelectedRegion
+  // локальний теж оновлювався — ось цей useEffect:
+  useEffect(() => {
+    setLocalRegion(globalSelectedRegion || "");
+  }, [globalSelectedRegion]);
+
+  useEffect(() => {
+    if (localRegion && !dataSources[localRegion]) {
+      console.warn(`localRegion "${localRegion}" не знайдено в dataSources`);
     }
-
-    return (
-      <FaInfoCircle className="tile-icon general-data" title="Загальні дані" />
-    );
-  };
-  // Використання глобального вибору регіону, або локального стану
-  const [currentRegion, setCurrentRegion] = useState(
-    globalSelectedRegion || ""
-  );
+  }, [localRegion, dataSources]);
+  // Рефи для скролу
   const columnsRef = useRef(null);
   const isMobile = useIsMobile();
   let startX = 0;
   let scrollLeft = 0;
 
+  // Стан завантаження
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false); // Новий стан для модального вікна налаштувань
 
+  // Керування вікном налаштувань
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  // =========================================
+  // Горизонтальний скролл для мобільних
+  // =========================================
   const handleTouchStart = (e) => {
     if (!isMobile) return;
     startX = e.touches[0].pageX;
@@ -106,6 +118,9 @@ const FSPFormularPage = () => {
     columnsRef.current.scrollLeft = scrollLeft - moveX;
   };
 
+  // =========================================
+  // Парсинг даних (локальних чи Firebase)
+  // =========================================
   const handleParseData = async (sourceId, fileId) => {
     console.log("handleParseData called with:", sourceId, fileId);
     setIsLoading(true);
@@ -114,25 +129,24 @@ const FSPFormularPage = () => {
     try {
       const source = dataSources[sourceId];
       if (!source) {
-        throw new Error(`Source with id ${sourceId} not found.`);
+        throw new Error(`Source with id ${sourceId} not found in dataSources.`);
       }
 
-      const data = await parseData(sourceId, "local"); // Завантаження даних
+      // parseData - ваша функція, що зчитує або обробляє файли
+      const data = await parseData(sourceId, "local");
       console.log("Fetched Data:", data);
 
       const selectedItem =
         data.find((item) => item.id === parseInt(fileId, 10)) || {};
       console.log("Вибраний випадок:", selectedItem);
 
+      // Якщо в об’єкті є поле specialty => fallType
       if (selectedItem.specialty) {
-        setFallType(selectedItem.specialty.toLowerCase()); // Встановлення спеціалізації
-        console.log(
-          "Тип Fall (specialty):",
-          selectedItem.specialty.toLowerCase()
-        );
+        setFallType(selectedItem.specialty.toLowerCase());
+        console.log("Тип Fall (specialty):", selectedItem.specialty.toLowerCase());
       }
 
-      setParsedData(selectedItem); // Збереження даних у стані
+      setParsedData(selectedItem);
       console.log("Parsed Data Set:", selectedItem);
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
@@ -142,9 +156,13 @@ const FSPFormularPage = () => {
     }
   };
 
+  // =========================================
+  // Модальне вікно з додатковою інформацією
+  // =========================================
   const handleOpenInfoModal = (type) => {
     let infoText = "";
 
+    // Якщо є специфічні дані (FallSpecificData[fallType])
     if (
       fallType &&
       FallSpecificData[fallType] &&
@@ -154,7 +172,7 @@ const FSPFormularPage = () => {
         FallSpecificData[fallType][type].additionalInfo ||
         "Немає додаткової інформації.";
     } else {
-      // Використовуємо загальну інформацію
+      // Якщо специфічних даних немає, беремо загальні тексти з FSPFormularPageData
       if (type === "personalData") {
         infoText =
           FSPFormularPageData.personalData.additionalInfo ||
@@ -211,8 +229,7 @@ const FSPFormularPage = () => {
         infoText =
           FSPFormularPageData.proposedProcedures?.additionalInfo ||
           "Немає додаткової інформації.";
-      }
-      {
+      } else {
         console.warn(`Unknown type: ${type}`);
       }
     }
@@ -223,16 +240,20 @@ const FSPFormularPage = () => {
     console.log(`Текст додаткової інформації: ${infoText}`);
   };
 
-  // Видалено функцію handleRegionChangeLocal та handleChangeRegion
-
+  // =========================================
+  // Зміна кейса в межах ЛОКАЛЬНО обраного регіону
+  // =========================================
   const handleCaseChange = (e) => {
     setSelectedCase(e.target.value);
-    setParsedData({}); // Скидання даних
+    setParsedData({});
   };
 
+  // =========================================
+  // Завантаження випадків з Firebase (якщо треба)
+  // =========================================
   const handleOpenUserCasesModal = async (sourceId, fileId) => {
     const source = dataSources[sourceId];
-    if (source.type !== "firebase") return;
+    if (!source.type || source.type !== "firebase") return;
 
     try {
       const data = await fetchDataFromFirebase(source.collection, fileId);
@@ -244,29 +265,43 @@ const FSPFormularPage = () => {
     }
   };
 
-  // Автоматичне завантаження даних, коли всі вибори зроблені
+  // =========================================
+  // Коли змінюються localRegion або selectedCase => підвантажуємо дані
+  // =========================================
   useEffect(() => {
-    if (currentRegion && selectedCase) {
-      handleParseData(currentRegion, selectedCase);
+    if (localRegion && selectedCase) {
+      // викликаємо parseData
+      handleParseData(localRegion, selectedCase);
     }
-  }, [currentRegion, selectedCase]);
+  }, [localRegion, selectedCase]);
 
-  // Додано логування parsedData для дебагінгу
+  // Лог для відлагодження
   useEffect(() => {
     console.log("Parsed Data Updated:", parsedData);
   }, [parsedData]);
 
-  // Ефект для автоматичного розгортання меню при зміні табів
+  // =========================================
+  // Якщо змінюється сторінка (наприклад, currentPage), відкриваємо налаштування
+  // =========================================
   useEffect(() => {
     if (currentPage) {
-      // Налаштуйте умову відповідно до вашої логіки табів
       setIsSettingsOpen(true);
     } else {
       setIsSettingsOpen(false);
     }
   }, [currentPage]);
 
-  // Додавання обробника кліку поза панеллю для закриття меню
+  useEffect(() => {
+    console.log("=== FSPFormularPage re-rendered ===");
+    console.log("globalSelectedRegion =", globalSelectedRegion);
+    console.log("localRegion =", localRegion);
+    console.log("Object.keys(dataSources) =", Object.keys(dataSources));
+  }, [globalSelectedRegion, localRegion, dataSources]);
+  
+  // Закривання меню налаштувань кліком поза ним
+  const settingsRef = useRef(null);
+  const settingsButtonRef = useRef(null);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -283,18 +318,17 @@ const FSPFormularPage = () => {
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSettingsOpen]);
 
-  const settingsRef = useRef(null);
-  const settingsButtonRef = useRef(null);
-
+  // =========================================
+  // Рендер
+  // =========================================
   return (
     <MainLayout>
-      {/* Кнопка налаштувань */}
+      {/* Кнопка “налаштувань” (відкриття “settings-modal”) */}
       <button
         className="settings-button"
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
@@ -306,39 +340,46 @@ const FSPFormularPage = () => {
         <FaCog />
       </button>
 
-      {/* Модальне вікно налаштувань */}
       {isSettingsOpen && (
         <div className="settings-modal" ref={settingsRef}>
           <div className="settings-content">
             <h3>Налаштування</h3>
-            {/* Вибір області */}
+
+            {/* 
+              Селект для ВИБОРУ ЛОКАЛЬНОГО РЕГІОНУ 
+              (не змінює глобальний хук, лише локальний)
+            */}
             <div className="field">
-              <label htmlFor="region-select">Оберіть Регіон:</label>
+              <label htmlFor="region-select">Оберіть Регіон (локальний):</label>
               <select
                 id="region-select"
-                value={currentRegion}
+                value={localRegion}
                 onChange={(e) => {
                   const newRegion = e.target.value;
-                  setCurrentRegion(newRegion);
-                  setSelectedCase(""); // Скидання вибору випадку при зміні регіону
-                  setParsedData({}); // Скидання даних
-                  setFallType(""); // Скидання типу Fall при зміні регіону
+                  setLocalRegion(newRegion);
+                  setSelectedCase("");
+                  setParsedData({});
+                  setFallType("");
                 }}
               >
                 <option value="">-- Оберіть Регіон --</option>
-                {Object.keys(dataSources).map(
-                  (sourceId) =>
-                    dataSources[sourceId].type === "local" && (
+                {Object.keys(dataSources).map((sourceId) => {
+                  const sourceObj = dataSources[sourceId];
+                  // Якщо потрібно лише local-type
+                  if (sourceObj.type === "local") {
+                    return (
                       <option key={sourceId} value={sourceId}>
-                        {dataSources[sourceId].name}
+                        {sourceId}
                       </option>
-                    )
-                )}
+                    );
+                  }
+                  return null;
+                })}
               </select>
             </div>
 
-            {/* Вибір випадків до регіону */}
-            {currentRegion && (
+            {/* Селект для кейсів, які належать до конкретно обраного локального регіону */}
+            {localRegion && dataSources[localRegion]?.files && (
               <div className="field">
                 <label htmlFor="case-select">Виберіть випадок:</label>
                 <select
@@ -347,7 +388,7 @@ const FSPFormularPage = () => {
                   onChange={handleCaseChange}
                 >
                   <option value="">Виберіть випадок</option>
-                  {dataSources[currentRegion].files.map((file) => (
+                  {dataSources[localRegion].files.map((file) => (
                     <option key={file.id} value={file.id}>
                       {file.name}
                     </option>
@@ -355,7 +396,8 @@ const FSPFormularPage = () => {
                 </select>
               </div>
             )}
-            {/* Кнопка закриття модального вікна */}
+
+            {/* Кнопка закриття */}
             <button
               className="close-button"
               onClick={() => setIsSettingsOpen(false)}
@@ -368,17 +410,16 @@ const FSPFormularPage = () => {
 
       {/* Основний Контент */}
       <div className="fsp-container">
-        {/* Відображення статусів завантаження та помилок */}
         {isLoading && <p>Завантаження даних...</p>}
         {error && <p className="error">{error}</p>}
 
-        {/* Список колонок з даними */}
         <div
           className={`columns ${isMobile ? "mobile" : ""}`}
           ref={columnsRef}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
         >
+          {/* Колонка №1 */}
           <div className="column">
             <div
               className="tile"
@@ -394,6 +435,7 @@ const FSPFormularPage = () => {
               )}
               <PersonalData parsedData={parsedData} />
             </div>
+
             <div
               className="tile"
               onClick={() => handleOpenInfoModal("currentAnamnese")}
@@ -401,6 +443,7 @@ const FSPFormularPage = () => {
               <h3 className="tile-title">Актуальний анамнез</h3>
               <AktuelleAnamnese parsedData={parsedData} />
             </div>
+
             <div
               className="tile"
               onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
@@ -409,13 +452,14 @@ const FSPFormularPage = () => {
               <PreliminaryDiagnosis parsedData={parsedData} />
             </div>
           </div>
+
+          {/* Колонка №2 */}
           <div className="column" key="column-2">
             <div
               className="tile"
               onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
             >
               <h3 className="tile-title">Вегетативний анамнез</h3>
-
               <VegetativeAnamnese parsedData={parsedData} />
             </div>
             <div
@@ -433,6 +477,8 @@ const FSPFormularPage = () => {
               <Zusammenfassung parsedData={parsedData} />
             </div>
           </div>
+
+          {/* Колонка №3 */}
           <div className="column" key="column-3">
             <div
               className="tile"
@@ -455,7 +501,6 @@ const FSPFormularPage = () => {
               <h3 className="tile-title">Алергії та непереносимості</h3>
               <AllergiesAndIntolerances parsedData={parsedData} />
             </div>
-
             <div
               className="tile"
               onClick={() => handleOpenInfoModal("proposedProcedures")}
@@ -464,6 +509,8 @@ const FSPFormularPage = () => {
               <ProposedProcedures parsedData={parsedData} />
             </div>
           </div>
+
+          {/* Колонка №4 */}
           <div className="column" key="column-4">
             <div className="tile" onClick={() => handleOpenInfoModal("noxen")}>
               <h3 className="tile-title">Noxen</h3>
@@ -499,7 +546,7 @@ const FSPFormularPage = () => {
         isOpen={parseModal}
         onClose={() => setParseModal(false)}
         filteredSources={Object.values(dataSources).filter(
-          (source) => source.region === currentRegion
+          (source) => source.region === localRegion
         )}
         handleParseData={handleParseData}
         searchTerm={searchTerm}

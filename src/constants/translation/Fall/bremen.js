@@ -68,4 +68,5 @@ const BREMEN_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+BREMEN_DATA.regionName = "Bremen";
 export default BREMEN_DATA;

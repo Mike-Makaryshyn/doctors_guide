@@ -67,5 +67,5 @@ const SAARLAND_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
+SAARLAND_DATA.regionName = "Saarland";
 export default SAARLAND_DATA;

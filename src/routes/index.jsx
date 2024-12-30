@@ -32,12 +32,8 @@ const ExamEmplanationsPage = React.lazy(() =>
 const ApprobationPage = React.lazy(() =>
   import("../pages/ApprobationPage/ApprobationPage")
 );
-const Trafatette = React.lazy(() =>
-  import("../pages/Trafatette/Trafatette")
-);
-const LinksPage = React.lazy(() =>
-  import("../pages/LinksPage/LinksPage")
-);
+const Trafatette = React.lazy(() => import("../pages/Trafatette/Trafatette"));
+const LinksPage = React.lazy(() => import("../pages/LinksPage/LinksPage"));
 const WhatIsApprobationPage = React.lazy(() =>
   import("../pages/WhatIsApprobationPage/WhatIsApprobationPage")
 );
@@ -47,27 +43,24 @@ const AllMedicalTerminologyPage = React.lazy(() =>
 const EditProfilePage = React.lazy(() =>
   import("../pages/EditProfilePage/EditProfilePage")
 );
-const ResumePage = React.lazy(() =>
-  import("../pages/ResumePage/ResumePage")
-);
+const ResumePage = React.lazy(() => import("../pages/ResumePage/ResumePage"));
 const FSPFormularPage = React.lazy(() =>
   import("../pages/FSPFormularPage/FSPFormularPage")
 );
 
 // Auth and Dashboard
-const AuthPage = React.lazy(() =>
-  import("../pages/AuthPage/AuthPage")
-);
+const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
 const RegistrationPage = React.lazy(() =>
   import("../pages/AuthPage/RegistrationPage")
 );
-const Dashboard = React.lazy(() =>
-  import("../pages/Dashboard/Dashboard")
-);
+const Dashboard = React.lazy(() => import("../pages/Dashboard/Dashboard"));
 
 // Protected Route
 const ProtectedRoute = React.lazy(() =>
   import("../components/ProtectedRoute/ProtectedRoute")
+);
+const DataCollectionPage = React.lazy(() =>
+  import("../pages/DataCollectionPage/DataCollectionPage")
 );
 
 export default function Routers() {
@@ -96,11 +89,31 @@ export default function Routers() {
           element={<ExamEmplanationsPage />}
         />
         <Route path={pathList.trafarette.path} element={<Trafatette />} />
-        <Route path={pathList.language_study.path} element={<LanguageStudyPage />} />
-        <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
+        <Route
+          path={pathList.language_study.path}
+          element={<LanguageStudyPage />}
+        />
+        <Route
+          path={pathList.step_by_step.path}
+          element={<ApprobationPage />}
+        />
         <Route path={pathList.links.path} element={<LinksPage />} />
-        <Route path={pathList.approbation.path} element={<WhatIsApprobationPage />} />
-        <Route path={pathList.informationSources.path} element={<FSPFormularPage />} />
+        <Route
+          path={pathList.approbation.path}
+          element={<WhatIsApprobationPage />}
+        />
+        <Route
+          path="/data-collection"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <DataCollectionPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path={pathList.informationSources.path}
+          element={<FSPFormularPage />}
+        />
         <Route
           path="/all-medical-terminology"
           element={
@@ -110,13 +123,13 @@ export default function Routers() {
           }
         />
         <Route
-  path="/resume"
-  element={
-    <Suspense fallback={<div>Loading...</div>}>
-      <ResumePage />
-    </Suspense>
-  }
-/>
+          path="/resume"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ResumePage />
+            </Suspense>
+          }
+        />
         <Route
           path="/edit-profile"
           element={

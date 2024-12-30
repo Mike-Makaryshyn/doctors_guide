@@ -67,5 +67,5 @@ const NIEDERSACHSEN_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
+NIEDERSACHSEN_DATA.regionName = "Niedersachsen";
 export default NIEDERSACHSEN_DATA;

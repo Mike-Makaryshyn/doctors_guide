@@ -69,4 +69,6 @@ const BERLIN_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+BERLIN_DATA.regionName = "Berlin";
+
 export default BERLIN_DATA;

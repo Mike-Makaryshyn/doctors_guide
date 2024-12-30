@@ -68,4 +68,5 @@ const SACHSEN_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+SACHSEN_DATA.regionName = "Sachsen";
 export default SACHSEN_DATA;

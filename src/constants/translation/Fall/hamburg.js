@@ -68,4 +68,5 @@ const HAMBURG_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+HAMBURG_DATA.regionName = "Hamburg";
 export default HAMBURG_DATA;

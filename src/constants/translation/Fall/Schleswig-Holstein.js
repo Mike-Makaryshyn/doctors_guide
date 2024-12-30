@@ -1,4 +1,4 @@
-const RHEINLAND_DATA = [
+const SCHLESWIG_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
         name: "Іван", // Ім'я
@@ -68,4 +68,6 @@ const RHEINLAND_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
-export default RHEINLAND_DATA;
+
+SCHLESWIG_DATA.regionName = "Schleswig-Holstein";
+export default SCHLESWIG_DATA;

@@ -1,73 +1,63 @@
-// src/components/DataDisplay.jsx
-
-import React, { useContext, useState } from "react";
+import React, { useState, useContext } from "react";
 import { DataSourceContext } from "../contexts/DataSourceContext";
-import DataItemDetail from "./DataItemDetail";
 
-const DataDisplay = () => {
-    const { dataSources } = useContext(DataSourceContext);
-    const [selectedRegion, setSelectedRegion] = useState("");
-    const [selectedId, setSelectedId] = useState(null);
-    const [dataItem, setDataItem] = useState(null);
+const RegionSelector = () => {
+  const { dataSources } = useContext(DataSourceContext); // Отримуємо джерела даних
+  const [selectedRegion, setSelectedRegion] = useState("");
 
-    const handleRegionChange = (e) => {
-        setSelectedRegion(e.target.value);
-        setSelectedId(null);
-        setDataItem(null);
-    };
-
-    const handleIdChange = (e) => {
-        const id = parseInt(e.target.value, 10);
-        setSelectedId(id);
-        if (id) {
-            const regionData = dataSources[selectedRegion];
-            if (regionData) {
-                const item = regionData.find(entry => entry.id === id);
-                setDataItem(item || null);
-            }
-        } else {
-            setDataItem(null);
-        }
-    };
-
-    return (
-        <div>
-            <h2>Вибір Даних</h2>
-            
-            {/* Вибір Регіону */}
-            <div>
-                <label htmlFor="region-select">Виберіть регіон:</label>
-                <select id="region-select" value={selectedRegion} onChange={handleRegionChange}>
-                    <option value="">-- Оберіть Регіон --</option>
-                    {Object.keys(dataSources).map((regionKey) => (
-                        <option key={regionKey} value={regionKey}>
-                            {dataSources[regionKey].region}
-                        </option>
-                    ))}
-                </select>
-            </div>
-
-            {/* Вибір ID */}
-            {selectedRegion && (
-                <div>
-                    <label htmlFor="id-select">Виберіть ID:</label>
-                    <select id="id-select" value={selectedId || ""} onChange={handleIdChange}>
-                        <option value="">-- Оберіть ID --</option>
-                        {dataSources[selectedRegion].map(entry => (
-                            <option key={entry.id} value={entry.id}>
-                                ID {entry.id}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            )}
-
-            {/* Відображення Даних */}
-            {dataItem && (
-                <DataItemDetail data={dataItem} />
-            )}
-        </div>
+  // Функція для обробки вибору регіону
+  const handleRegionChange = (event) => {
+    const inputValue = event.target.value; // Отримуємо вибране значення
+    const matchedRegion = Object.values(dataSources).find(
+      (source) => source.key === inputValue || source.region === inputValue
     );
+
+    if (matchedRegion) {
+      setSelectedRegion(matchedRegion.key); // Зберігаємо `key` вибраного регіону
+      console.log(`Регіон обрано: ${matchedRegion.region} (${matchedRegion.key})`);
+    } else {
+      console.error(`Регіон із ключем або назвою "${inputValue}" не знайдено.`);
+    }
+  };
+
+  return (
+    <div>
+      <h2>Оберіть регіон</h2>
+      <select onChange={handleRegionChange} value={selectedRegion}>
+        <option value="">-- Оберіть Регіон --</option>
+        {Object.entries(dataSources).map(([regionKey, regionData]) => (
+          <option key={regionKey} value={regionKey}>
+            {regionData.region} ({regionKey})
+          </option>
+        ))}
+      </select>
+
+      {selectedRegion && dataSources[selectedRegion] && (
+        <div>
+          <h3>Деталі регіону</h3>
+          <p>
+            <strong>Назва:</strong> {dataSources[selectedRegion].region}
+          </p>
+          <p>
+            <strong>Ключ:</strong> {dataSources[selectedRegion].key}
+          </p>
+          <p>
+            <strong>Тип:</strong> {dataSources[selectedRegion].type}
+          </p>
+          {dataSources[selectedRegion].files && (
+            <div>
+              <h4>Список файлів:</h4>
+              <ul>
+                {dataSources[selectedRegion].files.map((file) => (
+                  <li key={file.id}>{file.name}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
 };
 
-export default DataDisplay;
+export default RegionSelector;

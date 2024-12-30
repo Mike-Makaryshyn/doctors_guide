@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.navButton {
+    border: none;
+    background: none; /* Повністю прибираємо фон */
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navButton img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease; /* Забезпечує плавне збільшення */
+    background: none; /* Видаляємо фон */
+    border: none; /* Видаляємо рамки */
+    box-shadow: none; /* Видаляємо тіні */
+    border-radius: 50%; /* Робимо іконки круглими */
+}
+
+.navButton:hover img {
+    transform: scale(1.4); /* Лише збільшення без підсвічування */
+}
+
+.active img {
+    transform: scale(2); /* Збільшення для активної іконки */
+    border: none; /* Забираємо рамки */
+    background: none; /* Видаляємо фон */
+    box-shadow: none; /* Видаляємо тіні */
+    border-radius: 50%; /* Робимо активні іконки круглими */
+}
+
+.section {
+    width: 100%;
+    padding: 20px;
+    background: none; /* Видаляємо фон */
+    box-shadow: none; /* Видаляємо тінь */
+    border-radius: 0; /* Прибираємо закруглення */
+    margin-bottom: 20px; /* Відступ */
+}
+
+input,
+select,
+textarea {
+    background: none; /* Видаляємо фон */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 5px; /* Невелике закруглення */
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.navigationButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+

@@ -67,5 +67,5 @@ const HESSEN_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
+HESSEN_DATA.regionName = "Hessen";
 export default HESSEN_DATA;

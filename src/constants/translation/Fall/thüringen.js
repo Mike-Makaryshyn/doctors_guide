@@ -135,4 +135,5 @@ const THUERINGEN_DATA = [
     },
 ];
 
+THUERINGEN_DATA.regionName = "Thüringen";
 export default THUERINGEN_DATA;

@@ -1,4 +1,4 @@
-const SCHLESWIG_DATA = [
+const MECKLENBURG_DATA = [
     {
         id: 1, // Унікальний ідентифікатор
         name: "Іван", // Ім'я
@@ -67,5 +67,5 @@ const SCHLESWIG_DATA = [
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
-
-export default SCHLESWIG_DATA;
+MECKLENBURG_DATA.regionName = "Mecklenburg Vorpommern";
+export default MECKLENBURG_DATA;

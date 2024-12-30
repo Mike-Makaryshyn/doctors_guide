@@ -67,4 +67,5 @@ const BAYERN_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+BAYERN_DATA.regionName = "Bayern";
 export default BAYERN_DATA;

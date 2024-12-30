@@ -68,4 +68,5 @@ const BRANDENBURG_DATA = [
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 
+BRANDENBURG_DATA.regionName = "Brandenburg";
 export default BRANDENBURG_DATA;
