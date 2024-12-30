@@ -1,0 +1,25 @@
+/* src/components/DeferredCases/DeferredCasesCard.scss */
+
+.deferred-case-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .deferred-case-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .deferred-case-card h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .deferred-case-card h4:hover {
+    text-decoration: underline;
+  }

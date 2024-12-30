@@ -28,18 +28,27 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 
 import { FaCog } from "react-icons/fa";
-import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
+// Імпорти Firebase
+import { db, auth } from "../../firebase"; // Переконайтесь, що шлях правильний
+import { doc, setDoc, getDoc, updateDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
+
+// Імпорт Toast
+import { toast } from "react-toastify";
+
+// Інші імпорти
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import FallSpecificData from "../../constants/translation/FallSpecificData";
-
 
 const FSPFormularPage = () => {
   // =========================================
   // Глобальний хук (глобальна інфа)
   // =========================================
   const {
-    user,
+    user: globalUser, // Відмінність імені, щоб уникнути конфліктів
     selectedLanguage,
     languages,
     currentPage,
@@ -73,6 +82,11 @@ const FSPFormularPage = () => {
   const [fallType, setFallType] = useState("");
 
   // =========================================
+  // Новий стан для зберігання даних користувача з Firestore
+  // =========================================
+  const [userData, setUserData] = useState(null);
+
+  // =========================================
   // Локальна земля (регіон),
   // ініціалізується глобальним 'selectedRegion',
   // але зміна в цьому компоненті НЕ змінює глобальний хук.
@@ -85,11 +99,118 @@ const FSPFormularPage = () => {
     setLocalRegion(globalSelectedRegion || "");
   }, [globalSelectedRegion]);
 
+  // =========================================
+  // Відстеження стану автентифікації користувача
+  // =========================================
+  const [user, setUser] = useState(globalUser);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) {
+        const userDocRef = doc(db, "users", currentUser.uid);
+        const userDocSnap = await getDoc(userDocRef);
+
+        if (userDocSnap.exists()) {
+          setUserData(userDocSnap.data());
+        } else {
+          // Якщо документ користувача не існує, створюємо його
+          await setDoc(userDocRef, {});
+          setUserData({});
+        }
+      } else {
+        // Якщо користувач вийшов, очистити відповідні стани
+        setSelectedCase("");
+        setParsedData({});
+        setFallType("");
+        setUserData(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // =========================================
+  // Завантаження selectedCase з Firestore при зміні localRegion
+  // =========================================
+  useEffect(() => {
+    const fetchSelectedCase = async () => {
+      if (localRegion && user) {
+        const userDocRef = doc(db, "users", user.uid);
+        const userDocSnap = await getDoc(userDocRef);
+
+        if (userDocSnap.exists()) {
+          const userDataFromFirestore = userDocSnap.data();
+          setUserData(userDataFromFirestore); // Оновлюємо стан userData
+          const savedCase = userDataFromFirestore[`selectedCase_${localRegion}`];
+          console.log(`Збережений випадок для ${localRegion}:`, savedCase);
+
+          if (
+            savedCase &&
+            dataSources[localRegion]?.files.some((file) => String(file.id) === savedCase)
+          ) {
+            setSelectedCase(savedCase);
+          } else {
+            setSelectedCase("");
+          }
+        } else {
+          // Якщо документ користувача не існує, створюємо його
+          await setDoc(userDocRef, {});
+          setSelectedCase("");
+          setUserData({});
+        }
+      } else {
+        setSelectedCase("");
+      }
+    };
+
+    fetchSelectedCase();
+  }, [localRegion, dataSources, user]);
+
+  // =========================================
+  // Збереження selectedCase у Firestore при його зміні
+  // =========================================
+  useEffect(() => {
+    const saveSelectedCase = async () => {
+      if (selectedCase && localRegion && user) {
+        const userDocRef = doc(db, "users", user.uid);
+        try {
+          await setDoc(
+            userDocRef,
+            { [`selectedCase_${localRegion}`]: selectedCase },
+            { merge: true }
+          );
+          // Видалено toast повідомлення про збереження
+          // toast.success("Випадок успішно збережено!");
+        } catch (error) {
+          console.error("Помилка при збереженні випадку:", error);
+          toast.error("Не вдалося зберегти випадок.");
+        }
+      } else if (!selectedCase && localRegion && user) {
+        const userDocRef = doc(db, "users", user.uid);
+        try {
+          await updateDoc(userDocRef, { [`selectedCase_${localRegion}`]: "" });
+          // Видалено toast повідомлення про очищення
+          // toast.info("Випадок очищено.");
+        } catch (error) {
+          console.error("Помилка при очищенні випадку:", error);
+          toast.error("Не вдалося очистити випадок.");
+        }
+      }
+    };
+
+    saveSelectedCase();
+  }, [selectedCase, localRegion, user]);
+
+  // =========================================
+  // Перевірка, чи існує localRegion у dataSources
+  // =========================================
   useEffect(() => {
     if (localRegion && !dataSources[localRegion]) {
       console.warn(`localRegion "${localRegion}" не знайдено в dataSources`);
     }
   }, [localRegion, dataSources]);
+
   // Рефи для скролу
   const columnsRef = useRef(null);
   const isMobile = useIsMobile();
@@ -137,7 +258,7 @@ const FSPFormularPage = () => {
       console.log("Fetched Data:", data);
 
       const selectedItem =
-        data.find((item) => item.id === parseInt(fileId, 10)) || {};
+        data.find((item) => String(item.id) === String(fileId)) || {};
       console.log("Вибраний випадок:", selectedItem);
 
       // Якщо в об’єкті є поле specialty => fallType
@@ -151,6 +272,7 @@ const FSPFormularPage = () => {
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
       setError("Сталася помилка під час завантаження даних.");
+      toast.error("Сталася помилка під час завантаження даних.");
     } finally {
       setIsLoading(false);
     }
@@ -262,6 +384,87 @@ const FSPFormularPage = () => {
     } catch (error) {
       console.error("Error fetching data from Firebase:", error);
       setError("Сталася помилка при завантаженні даних з Firebase.");
+      toast.error("Сталася помилка при завантаженні даних з Firebase.");
+    }
+  };
+
+  // =========================================
+  // Позначення пройдених випадків
+  // =========================================
+  const handleMarkAsCompleted = async () => {
+    if (user && localRegion && selectedCase) {
+      const userDocRef = doc(db, "users", user.uid);
+      try {
+        let completedCases = [];
+
+        if (userData && userData[`completedCases_${localRegion}`]) {
+          completedCases = userData[`completedCases_${localRegion}`];
+        }
+
+        if (!completedCases.includes(String(selectedCase))) { // Перетворюємо на рядок
+          const updatedCompletedCases = [...completedCases, String(selectedCase)];
+          await updateDoc(userDocRef, {
+            [`completedCases_${localRegion}`]: updatedCompletedCases,
+          });
+
+          // Оновлюємо локальний стан userData
+          setUserData((prevData) => ({
+            ...prevData,
+            [`completedCases_${localRegion}`]: updatedCompletedCases,
+          }));
+
+          toast.success("Випадок помічено як пройдений!");
+          console.log(`Випадок ${selectedCase} помічено як пройдений.`);
+        } else {
+          toast.info("Випадок вже позначений як пройдений.");
+          console.log(`Випадок ${selectedCase} вже позначений як пройдений.`);
+        }
+      } catch (error) {
+        console.error("Помилка при позначенні випадку:", error);
+        toast.error("Не вдалося позначити випадок як пройдений.");
+      }
+    } else {
+      toast.error("Будь ласка, виберіть випадок та регіон.");
+    }
+  };
+
+  // =========================================
+  // Позначення відкладених випадків
+  // =========================================
+  const handleDeferCase = async () => {
+    if (user && localRegion && selectedCase) {
+      const userDocRef = doc(db, "users", user.uid);
+      try {
+        let deferredCases = [];
+
+        if (userData && userData[`deferredCases_${localRegion}`]) {
+          deferredCases = userData[`deferredCases_${localRegion}`];
+        }
+
+        if (!deferredCases.includes(String(selectedCase))) { // Перетворюємо на рядок
+          const updatedDeferredCases = [...deferredCases, String(selectedCase)];
+          await updateDoc(userDocRef, {
+            [`deferredCases_${localRegion}`]: updatedDeferredCases,
+          });
+
+          // Оновлюємо локальний стан userData
+          setUserData((prevData) => ({
+            ...prevData,
+            [`deferredCases_${localRegion}`]: updatedDeferredCases,
+          }));
+
+          toast.success("Випадок відкладено на потім!");
+          console.log(`Випадок ${selectedCase} відкладено на потім.`);
+        } else {
+          toast.info("Випадок вже відкладений на потім.");
+          console.log(`Випадок ${selectedCase} вже відкладений на потім.`);
+        }
+      } catch (error) {
+        console.error("Помилка при відкладенні випадку:", error);
+        toast.error("Не вдалося відкласти випадок на потім.");
+      }
+    } else {
+      toast.error("Будь ласка, виберіть випадок та регіон.");
     }
   };
 
@@ -296,8 +499,9 @@ const FSPFormularPage = () => {
     console.log("globalSelectedRegion =", globalSelectedRegion);
     console.log("localRegion =", localRegion);
     console.log("Object.keys(dataSources) =", Object.keys(dataSources));
-  }, [globalSelectedRegion, localRegion, dataSources]);
-  
+    console.log("userData =", userData);
+  }, [globalSelectedRegion, localRegion, dataSources, userData]);
+
   // Закривання меню налаштувань кліком поза ним
   const settingsRef = useRef(null);
   const settingsButtonRef = useRef(null);
@@ -324,6 +528,23 @@ const FSPFormularPage = () => {
   }, [isSettingsOpen]);
 
   // =========================================
+  // Обробка вибору локального регіону через кнопочку
+  // =========================================
+  const [isRegionDropdownOpen, setIsRegionDropdownOpen] = useState(false);
+
+  const toggleRegionDropdown = () => {
+    setIsRegionDropdownOpen(!isRegionDropdownOpen);
+  };
+
+  const handleRegionSelect = (regionId) => {
+    setLocalRegion(regionId);
+    setIsRegionDropdownOpen(false);
+    setSelectedCase("");
+    setParsedData({});
+    setFallType("");
+  };
+
+  // =========================================
   // Рендер
   // =========================================
   return (
@@ -340,42 +561,45 @@ const FSPFormularPage = () => {
         <FaCog />
       </button>
 
+      {/* Відображення повідомлень */}
+      {/* Toast повідомлення вже відображаються глобально через ToastContainer */}
+
       {isSettingsOpen && (
         <div className="settings-modal" ref={settingsRef}>
           <div className="settings-content">
             <h3>Налаштування</h3>
 
-            {/* 
-              Селект для ВИБОРУ ЛОКАЛЬНОГО РЕГІОНУ 
-              (не змінює глобальний хук, лише локальний)
-            */}
+            {/* Кнопка для вибору локального регіону */}
             <div className="field">
-              <label htmlFor="region-select">Оберіть Регіон (локальний):</label>
-              <select
-                id="region-select"
-                value={localRegion}
-                onChange={(e) => {
-                  const newRegion = e.target.value;
-                  setLocalRegion(newRegion);
-                  setSelectedCase("");
-                  setParsedData({});
-                  setFallType("");
-                }}
-              >
-                <option value="">-- Оберіть Регіон --</option>
-                {Object.keys(dataSources).map((sourceId) => {
-                  const sourceObj = dataSources[sourceId];
-                  // Якщо потрібно лише local-type
-                  if (sourceObj.type === "local") {
-                    return (
-                      <option key={sourceId} value={sourceId}>
-                        {sourceId}
-                      </option>
-                    );
-                  }
-                  return null;
-                })}
-              </select>
+              <label>Оберіть Регіон (локальний):</label>
+              <div className="region-selector">
+                <button
+                  className="region-button"
+                  onClick={toggleRegionDropdown}
+                  aria-haspopup="true"
+                  aria-expanded={isRegionDropdownOpen}
+                >
+                  {localRegion
+                    ? dataSources[localRegion]?.region || "Виберіть регіон"
+                    : "Виберіть регіон"}
+                </button>
+                {isRegionDropdownOpen && (
+                  <ul className="region-dropdown">
+                    {Object.keys(dataSources)
+                      .filter((sourceId) => dataSources[sourceId].type === "local")
+                      .map((sourceId) => (
+                        <li key={sourceId}>
+                          <button
+                            className="region-option"
+                            onClick={() => handleRegionSelect(sourceId)}
+                          >
+                            {dataSources[sourceId].region}
+                          </button>
+                        </li>
+                      ))}
+                  </ul>
+                )}
+              </div>
             </div>
 
             {/* Селект для кейсів, які належать до конкретно обраного локального регіону */}
@@ -389,18 +613,51 @@ const FSPFormularPage = () => {
                 >
                   <option value="">Виберіть випадок</option>
                   {dataSources[localRegion].files.map((file) => (
-                    <option key={file.id} value={file.id}>
+                    <option key={file.id} value={String(file.id)}>
                       {file.name}
+                      {userData &&
+                        userData[`completedCases_${localRegion}`] &&
+                        userData[`completedCases_${localRegion}`].includes(String(file.id)) && (
+                          <span> ✔️</span>
+                        )}
                     </option>
                   ))}
                 </select>
               </div>
             )}
 
+            {/* Кнопки додавання нового випадку, позначення як пройдений та відкласти на потім */}
+            <div className="buttons-container">
+              <Link to="/data-collection">
+                <button className="add-case-button" aria-label="Додати новий випадок">
+                  Можливість додати випадок
+                </button>
+              </Link>
+
+              <button
+                className="mark-completed-button"
+                onClick={handleMarkAsCompleted}
+                disabled={!selectedCase}
+                aria-label="Позначити випадок як пройдений"
+              >
+                Позначити випадок як пройдений
+              </button>
+
+              <button
+                className="defer-case-button"
+                onClick={handleDeferCase}
+                disabled={!selectedCase}
+                aria-label="Відкласти випадок на потім"
+              >
+                Відкласти на потім
+              </button>
+            </div>
+
             {/* Кнопка закриття */}
             <button
               className="close-button"
               onClick={() => setIsSettingsOpen(false)}
+              aria-label="Закрити налаштування"
             >
               ✕
             </button>
@@ -411,7 +668,6 @@ const FSPFormularPage = () => {
       {/* Основний Контент */}
       <div className="fsp-container">
         {isLoading && <p>Завантаження даних...</p>}
-        {error && <p className="error">{error}</p>}
 
         <div
           className={`columns ${isMobile ? "mobile" : ""}`}
