@@ -5,10 +5,9 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { db, auth } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import DeferredCasesCard from "./DeferredCasesCard.jsx"; // Імпорт нового компонента
-import "./DeferredCases.scss"; // Стилі для компонента
+import styles from "./DeferredCases.module.scss"; // Імпорт стилів через CSS Modules
 
 const DeferredCases = () => {
   const { dataSources } = useContext(DataSourceContext);
@@ -53,16 +52,16 @@ const DeferredCases = () => {
     fetchDeferredCases();
   }, [user, loading, dataSources]);
 
-  if (loading) return <p>Завантаження...</p>;
-  if (error) return <p>Сталася помилка: {error.message}</p>;
+  if (loading) return <p className={styles.loading}>Завантаження...</p>;
+  if (error) return <p className={styles.error}>Сталася помилка: {error.message}</p>;
 
   return (
-    <div className="deferred-cases">
-      <h3>Відкладені Випадки</h3>
+    <div className={styles.deferredCasesContainer}>
+      <h3 className={styles.title}>Відкладені Випадки</h3>
       {deferredCases.length === 0 ? (
-        <p>У вас немає відкладених випадків.</p>
+        <p className={styles.noCases}>У вас немає відкладених випадків.</p>
       ) : (
-        <div className="deferred-cases-list">
+        <div className={styles.casesList}>
           {deferredCases.map((caseId) => {
             const caseData = dataSources[localRegion]?.files.find(
               (file) => String(file.id) === caseId
@@ -72,6 +71,7 @@ const DeferredCases = () => {
                 key={caseId}
                 caseId={caseId}
                 caseData={caseData}
+                regionId={localRegion} // Додано для передачі regionId до карточки
               />
             );
           })}

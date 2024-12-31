@@ -2,13 +2,20 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import "./DeferredCasesCard.scss";
+import { pathList } from "../../routes/path"; // Імпорт pathList
+import styles from "./DeferredCasesCard.module.scss"; // Імпорт стилів через CSS Modules
 
-const DeferredCasesCard = ({ caseId, caseData }) => {
+const DeferredCasesCard = ({ caseId, caseData, regionId }) => {
   return (
-    <div className="deferred-case-card">
-      <Link to={`/fsp-formular/${caseId}`}>
-        <h4>{caseData ? caseData.name : `Випадок ${caseId}`}</h4>
+    <div className={styles.card}>
+      <h4 className={styles.caseTitle}>
+        {caseData ? caseData.name : `Випадок ID: ${caseId}`}
+      </h4>
+      <Link
+        to={`${pathList.informationSources.path}/${caseId}`}
+        className={styles.viewButton}
+      >
+        Перейти до Випадку
       </Link>
     </div>
   );

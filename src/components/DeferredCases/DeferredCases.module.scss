@@ -1,0 +1,35 @@
+/* src/components/DeferredCases/DeferredCases.module.scss */
+
+.deferredCasesContainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.noCases {
+  color: #777;
+  font-style: italic;
+}
+
+.casesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.loading {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

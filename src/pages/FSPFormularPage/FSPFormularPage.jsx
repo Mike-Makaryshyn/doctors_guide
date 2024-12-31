@@ -1,7 +1,9 @@
 // src/pages/FSPFormularPage/FSPFormularPage.jsx
 
 import React, { useState, useRef, useContext, useEffect } from "react";
-import "./FSPFormularPage.scss";
+import { useParams, Link } from "react-router-dom";
+import { pathList } from "../../routes/path";
+import styles from "./FSPFormularPage.module.scss";
 import FSPFormularPageData from "../../constants/translation/FSPFormularPage";
 
 import PersonalData from "./components/PersonalData";
@@ -29,47 +31,31 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 
 import { FaCog } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-
-// Імпорти Firebase
-import { db, auth } from "../../firebase"; // Переконайтесь, що шлях правильний
-import { doc, setDoc, getDoc, updateDoc } from "firebase/firestore";
+import { db, auth } from "../../firebase";
+import { doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 
-// Імпорт Toast
 import { toast } from "react-toastify";
 
-// Інші імпорти
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import FallSpecificData from "../../constants/translation/FallSpecificData";
 
 const FSPFormularPage = () => {
-  // =========================================
-  // Глобальний хук (глобальна інфа)
-  // =========================================
+  // Глобальний Хук (Глобальна Інформація)
   const {
-    user: globalUser, // Відмінність імені, щоб уникнути конфліктів
+    user: globalUser,
     selectedLanguage,
     languages,
     currentPage,
-    /** 
-     * ВАЖЛИВО: 'selectedRegion' (глобальний вибір).
-     * Користувач може мати вибір однієї з 16 земель, який діє на весь сайт.
-     */
     selectedRegion: globalSelectedRegion,
     redirectToRegionPage,
     handleChangePage,
   } = useGetGlobalInfo();
 
-  // =========================================
-  // Контекст із джерелами даних (dataSources)
-  // =========================================
-  const { dataSources, firebaseData, fetchDataFromFirebase } =
-    useContext(DataSourceContext);
+  // Контекст Джерела Даних
+  const { dataSources } = useContext(DataSourceContext);
 
-  // =========================================
-  // Локальні стани для різних модалок і даних
-  // =========================================
+  // Локальні Стані для Різних Модалей та Даних
   const [parseModal, setParseModal] = useState(false);
   const [infoModal, setInfoModal] = useState(false);
   const [userCasesModal, setUserCasesModal] = useState(false);
@@ -81,32 +67,29 @@ const FSPFormularPage = () => {
   const [userCasesData, setUserCasesData] = useState([]);
   const [fallType, setFallType] = useState("");
 
-  // =========================================
-  // Новий стан для зберігання даних користувача з Firestore
-  // =========================================
+  // Новий Стан для Збереження Даних Користувача з Firestore
   const [userData, setUserData] = useState(null);
 
-  // =========================================
-  // Локальна земля (регіон),
-  // ініціалізується глобальним 'selectedRegion',
-  // але зміна в цьому компоненті НЕ змінює глобальний хук.
-  // =========================================
+  // Отримання caseId з URL
+  const { caseId } = useParams();
+  console.log("Отримано caseId:", caseId);
+
+  // Локальний Регіон
   const [localRegion, setLocalRegion] = useState(globalSelectedRegion || "");
 
-  // Якщо ви хочете, щоби при зміні globalSelectedRegion
-  // локальний теж оновлювався — ось цей useEffect:
+  // Оновлення локального регіону при зміні глобального
   useEffect(() => {
     setLocalRegion(globalSelectedRegion || "");
   }, [globalSelectedRegion]);
 
-  // =========================================
-  // Відстеження стану автентифікації користувача
-  // =========================================
+  // Відстеження Стану Аутентифікації Користувача
   const [user, setUser] = useState(globalUser);
+  const [authInitialized, setAuthInitialized] = useState(false); // Новий стан
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+      setAuthInitialized(true); // Встановлюємо, що аутентифікація завершена
       if (currentUser) {
         const userDocRef = doc(db, "users", currentUser.uid);
         const userDocSnap = await getDoc(userDocRef);
@@ -114,12 +97,12 @@ const FSPFormularPage = () => {
         if (userDocSnap.exists()) {
           setUserData(userDocSnap.data());
         } else {
-          // Якщо документ користувача не існує, створюємо його
+          // Якщо документ користувача не існує, створити його
           await setDoc(userDocRef, {});
           setUserData({});
         }
       } else {
-        // Якщо користувач вийшов, очистити відповідні стани
+        // Якщо користувач виходить, очистити відповідні стани
         setSelectedCase("");
         setParsedData({});
         setFallType("");
@@ -130,9 +113,23 @@ const FSPFormularPage = () => {
     return () => unsubscribe();
   }, []);
 
-  // =========================================
-  // Завантаження selectedCase з Firestore при зміні localRegion
-  // =========================================
+  // Визначення Функції fetchDataFromFirebase (Варіант A)
+  const fetchDataFromFirebase = async (collection, fileId) => {
+    try {
+      const docRef = doc(db, collection, fileId);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        return docSnap.data();
+      } else {
+        throw new Error("Документ не знайдено!");
+      }
+    } catch (error) {
+      console.error("Помилка завантаження даних з Firebase:", error);
+      throw error;
+    }
+  };
+
+  // Завантаження selectedCase з Firestore при зміні localRegion або caseId
   useEffect(() => {
     const fetchSelectedCase = async () => {
       if (localRegion && user) {
@@ -141,59 +138,70 @@ const FSPFormularPage = () => {
 
         if (userDocSnap.exists()) {
           const userDataFromFirestore = userDocSnap.data();
-          setUserData(userDataFromFirestore); // Оновлюємо стан userData
+          setUserData(userDataFromFirestore); // Оновлення стану userData
           const savedCase = userDataFromFirestore[`selectedCase_${localRegion}`];
           console.log(`Збережений випадок для ${localRegion}:`, savedCase);
 
           if (
+            caseId &&
+            dataSources[localRegion]?.files.some((file) => String(file.id) === String(caseId))
+          ) {
+            setSelectedCase(caseId); // Пріоритетний вибір caseId з URL
+          } else if (
             savedCase &&
-            dataSources[localRegion]?.files.some((file) => String(file.id) === savedCase)
+            dataSources[localRegion]?.files.some((file) => String(file.id) === String(savedCase))
           ) {
             setSelectedCase(savedCase);
           } else {
             setSelectedCase("");
           }
         } else {
-          // Якщо документ користувача не існує, створюємо його
+          // Якщо документ користувача не існує, створити його
           await setDoc(userDocRef, {});
-          setSelectedCase("");
+          if (
+            caseId &&
+            dataSources[localRegion]?.files.some((file) => String(file.id) === String(caseId))
+          ) {
+            setSelectedCase(caseId);
+          } else {
+            setSelectedCase("");
+          }
           setUserData({});
         }
+      } else if (caseId) {
+        // Якщо немає користувача або регіону, але є caseId, встановлюємо selectedCase
+        setSelectedCase(caseId);
       } else {
-        setSelectedCase("");
+        setSelectedCase(""); // Встановлюємо selectedCase з URL
       }
     };
 
     fetchSelectedCase();
-  }, [localRegion, dataSources, user]);
+  }, [localRegion, dataSources, user, caseId]);
 
-  // =========================================
-  // Збереження selectedCase у Firestore при його зміні
-  // =========================================
+  // Збереження selectedCase до Firestore при його зміні
   useEffect(() => {
     const saveSelectedCase = async () => {
       if (selectedCase && localRegion && user) {
         const userDocRef = doc(db, "users", user.uid);
         try {
-          await setDoc(
+          await updateDoc(
             userDocRef,
             { [`selectedCase_${localRegion}`]: selectedCase },
             { merge: true }
           );
-          // Видалено toast повідомлення про збереження
-          // toast.success("Випадок успішно збережено!");
+          // Видалено сповіщення toast про збереження
         } catch (error) {
-          console.error("Помилка при збереженні випадку:", error);
+          console.error("Помилка збереження випадку:", error);
           toast.error("Не вдалося зберегти випадок.");
         }
       } else if (!selectedCase && localRegion && user) {
         const userDocRef = doc(db, "users", user.uid);
         try {
           await updateDoc(userDocRef, { [`selectedCase_${localRegion}`]: "" });
-          // Видалено toast повідомлення про очищення
-          // toast.info("Випадок очищено.");
+          // Видалено сповіщення toast про очищення
         } catch (error) {
-          console.error("Помилка при очищенні випадку:", error);
+          console.error("Помилка очищення випадку:", error);
           toast.error("Не вдалося очистити випадок.");
         }
       }
@@ -202,16 +210,14 @@ const FSPFormularPage = () => {
     saveSelectedCase();
   }, [selectedCase, localRegion, user]);
 
-  // =========================================
-  // Перевірка, чи існує localRegion у dataSources
-  // =========================================
+  // Перевірка наявності localRegion у dataSources
   useEffect(() => {
     if (localRegion && !dataSources[localRegion]) {
-      console.warn(`localRegion "${localRegion}" не знайдено в dataSources`);
+      console.warn(`localRegion "${localRegion}" не знайдено у dataSources`);
     }
   }, [localRegion, dataSources]);
 
-  // Рефи для скролу
+  // Рефи для прокрутки
   const columnsRef = useRef(null);
   const isMobile = useIsMobile();
   let startX = 0;
@@ -221,12 +227,10 @@ const FSPFormularPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Керування вікном налаштувань
+  // Управління вікном налаштувань
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-  // =========================================
-  // Горизонтальний скролл для мобільних
-  // =========================================
+  // Горизонтальна Прокрутка для Мобільних Пристроїв
   const handleTouchStart = (e) => {
     if (!isMobile) return;
     startX = e.touches[0].pageX;
@@ -239,36 +243,28 @@ const FSPFormularPage = () => {
     columnsRef.current.scrollLeft = scrollLeft - moveX;
   };
 
-  // =========================================
-  // Парсинг даних (локальних чи Firebase)
-  // =========================================
+  // Парсинг Даних (Локальні або Firebase)
   const handleParseData = async (sourceId, fileId) => {
-    console.log("handleParseData called with:", sourceId, fileId);
+    console.log("handleParseData викликано з:", sourceId, fileId);
     setIsLoading(true);
     setError(null);
 
     try {
-      const source = dataSources[sourceId];
-      if (!source) {
-        throw new Error(`Source with id ${sourceId} not found in dataSources.`);
-      }
-
-      // parseData - ваша функція, що зчитує або обробляє файли
-      const data = await parseData(sourceId, "local");
-      console.log("Fetched Data:", data);
+      const data = await parseData(sourceId, "local", null, fileId, dataSources);
+      console.log("Отримані дані:", data);
 
       const selectedItem =
         data.find((item) => String(item.id) === String(fileId)) || {};
       console.log("Вибраний випадок:", selectedItem);
 
-      // Якщо в об’єкті є поле specialty => fallType
+      // Якщо об'єкт має поле 'specialty' => fallType
       if (selectedItem.specialty) {
         setFallType(selectedItem.specialty.toLowerCase());
-        console.log("Тип Fall (specialty):", selectedItem.specialty.toLowerCase());
+        console.log("Тип випадку (specialty):", selectedItem.specialty.toLowerCase());
       }
 
       setParsedData(selectedItem);
-      console.log("Parsed Data Set:", selectedItem);
+      console.log("Встановлено Parsed Data:", selectedItem);
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
       setError("Сталася помилка під час завантаження даних.");
@@ -278,9 +274,7 @@ const FSPFormularPage = () => {
     }
   };
 
-  // =========================================
-  // Модальне вікно з додатковою інформацією
-  // =========================================
+  // Модальне Вікно з Додатковою Інформацією
   const handleOpenInfoModal = (type) => {
     let infoText = "";
 
@@ -292,67 +286,67 @@ const FSPFormularPage = () => {
     ) {
       infoText =
         FallSpecificData[fallType][type].additionalInfo ||
-        "Немає додаткової інформації.";
+        "Додаткова інформація недоступна.";
     } else {
-      // Якщо специфічних даних немає, беремо загальні тексти з FSPFormularPageData
+      // Якщо специфічних даних немає, взяти загальні тексти з FSPFormularPageData
       if (type === "personalData") {
         infoText =
           FSPFormularPageData.personalData.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "currentAnamnese") {
         infoText =
           FSPFormularPageData.currentAnamnese.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "vegetativeAnamnese") {
         infoText =
           FSPFormularPageData.vegetativeAnamnese.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "zusammenfassung") {
         infoText =
           FSPFormularPageData.zusammenfassung.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "vorerkrankungen") {
         infoText =
           FSPFormularPageData.vorerkrankungen.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "previousOperations") {
         infoText =
           FSPFormularPageData.previousOperations.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "medications") {
         infoText =
           FSPFormularPageData.medications.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "allergiesAndIntolerances") {
         infoText =
           FSPFormularPageData.allergiesAndIntolerances.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "noxen") {
         infoText =
           FSPFormularPageData.noxen.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "familienanamnese") {
         infoText =
           FSPFormularPageData.familienanamnese.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "sozialanamnese") {
         infoText =
           FSPFormularPageData.sozialanamnese.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "preliminaryDiagnosis") {
         infoText =
           FSPFormularPageData.preliminaryDiagnosis?.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "differentialDiagnosis") {
         infoText =
           FSPFormularPageData.differentialDiagnosis?.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else if (type === "proposedProcedures") {
         infoText =
           FSPFormularPageData.proposedProcedures?.additionalInfo ||
-          "Немає додаткової інформації.";
+          "Додаткова інформація недоступна.";
       } else {
-        console.warn(`Unknown type: ${type}`);
+        console.warn(`Невідомий тип: ${type}`);
       }
     }
 
@@ -362,35 +356,34 @@ const FSPFormularPage = () => {
     console.log(`Текст додаткової інформації: ${infoText}`);
   };
 
-  // =========================================
-  // Зміна кейса в межах ЛОКАЛЬНО обраного регіону
-  // =========================================
+  // Зміна випадку у вибраному локальному регіоні
   const handleCaseChange = (e) => {
     setSelectedCase(e.target.value);
     setParsedData({});
   };
 
-  // =========================================
-  // Завантаження випадків з Firebase (якщо треба)
-  // =========================================
+  // Завантаження випадків користувача з Firebase (за потребою)
   const handleOpenUserCasesModal = async (sourceId, fileId) => {
+    console.log(`handleOpenUserCasesModal викликано з sourceId: ${sourceId}, fileId: ${fileId}`);
     const source = dataSources[sourceId];
-    if (!source.type || source.type !== "firebase") return;
+    if (!source.type || source.type !== "firebase") {
+      console.warn(`Джерело з id ${sourceId} не є Firebase.`);
+      return;
+    }
 
     try {
       const data = await fetchDataFromFirebase(source.collection, fileId);
+      console.log("Отримані дані з Firebase:", data);
       setUserCasesData(data);
       setUserCasesModal(true);
     } catch (error) {
-      console.error("Error fetching data from Firebase:", error);
-      setError("Сталася помилка при завантаженні даних з Firebase.");
-      toast.error("Сталася помилка при завантаженні даних з Firebase.");
+      console.error("Помилка завантаження даних з Firebase:", error);
+      setError("Сталася помилка під час завантаження даних з Firebase.");
+      toast.error("Сталася помилка під час завантаження даних з Firebase.");
     }
   };
 
-  // =========================================
-  // Позначення пройдених випадків
-  // =========================================
+  // Позначення випадків як Завершених
   const handleMarkAsCompleted = async () => {
     if (user && localRegion && selectedCase) {
       const userDocRef = doc(db, "users", user.uid);
@@ -401,91 +394,75 @@ const FSPFormularPage = () => {
           completedCases = userData[`completedCases_${localRegion}`];
         }
 
-        if (!completedCases.includes(String(selectedCase))) { // Перетворюємо на рядок
+        if (!completedCases.includes(String(selectedCase))) {
           const updatedCompletedCases = [...completedCases, String(selectedCase)];
           await updateDoc(userDocRef, {
             [`completedCases_${localRegion}`]: updatedCompletedCases,
           });
 
-          // Оновлюємо локальний стан userData
+          // Оновлення локального стану userData
           setUserData((prevData) => ({
             ...prevData,
             [`completedCases_${localRegion}`]: updatedCompletedCases,
           }));
 
-          toast.success("Випадок помічено як пройдений!");
-          console.log(`Випадок ${selectedCase} помічено як пройдений.`);
+          toast.success("Випадок позначено як завершений!");
+          console.log(`Випадок ${selectedCase} позначено як завершений.`);
         } else {
-          toast.info("Випадок вже позначений як пройдений.");
-          console.log(`Випадок ${selectedCase} вже позначений як пройдений.`);
+          toast.info("Випадок вже позначено як завершений.");
+          console.log(`Випадок ${selectedCase} вже позначено як завершений.`);
         }
       } catch (error) {
-        console.error("Помилка при позначенні випадку:", error);
-        toast.error("Не вдалося позначити випадок як пройдений.");
+        console.error("Помилка позначення випадку як завершеного:", error);
+        toast.error("Не вдалося позначити випадок як завершений.");
       }
     } else {
       toast.error("Будь ласка, виберіть випадок та регіон.");
     }
   };
 
-  // =========================================
-  // Позначення відкладених випадків
-  // =========================================
+  // Відкладання випадків на пізніше
   const handleDeferCase = async () => {
     if (user && localRegion && selectedCase) {
       const userDocRef = doc(db, "users", user.uid);
       try {
-        let deferredCases = [];
+        await updateDoc(userDocRef, {
+          [`deferredCases_${localRegion}`]: arrayUnion(String(selectedCase)),
+        });
 
-        if (userData && userData[`deferredCases_${localRegion}`]) {
-          deferredCases = userData[`deferredCases_${localRegion}`];
-        }
+        // Оновлення локального стану userData
+        setUserData((prevData) => ({
+          ...prevData,
+          [`deferredCases_${localRegion}`]: prevData[`deferredCases_${localRegion}`]
+            ? [...prevData[`deferredCases_${localRegion}`], String(selectedCase)]
+            : [String(selectedCase)],
+        }));
 
-        if (!deferredCases.includes(String(selectedCase))) { // Перетворюємо на рядок
-          const updatedDeferredCases = [...deferredCases, String(selectedCase)];
-          await updateDoc(userDocRef, {
-            [`deferredCases_${localRegion}`]: updatedDeferredCases,
-          });
-
-          // Оновлюємо локальний стан userData
-          setUserData((prevData) => ({
-            ...prevData,
-            [`deferredCases_${localRegion}`]: updatedDeferredCases,
-          }));
-
-          toast.success("Випадок відкладено на потім!");
-          console.log(`Випадок ${selectedCase} відкладено на потім.`);
-        } else {
-          toast.info("Випадок вже відкладений на потім.");
-          console.log(`Випадок ${selectedCase} вже відкладений на потім.`);
-        }
+        toast.success("Випадок відкладено на пізніше!");
+        console.log(`Випадок ${selectedCase} відкладено на пізніше.`);
       } catch (error) {
-        console.error("Помилка при відкладенні випадку:", error);
-        toast.error("Не вдалося відкласти випадок на потім.");
+        console.error("Помилка відкладення випадку:", error);
+        toast.error("Не вдалося відкласти випадок.");
       }
     } else {
       toast.error("Будь ласка, виберіть випадок та регіон.");
     }
   };
 
-  // =========================================
-  // Коли змінюються localRegion або selectedCase => підвантажуємо дані
-  // =========================================
+  // Завантаження даних випадку при зміні localRegion або selectedCase
   useEffect(() => {
     if (localRegion && selectedCase) {
-      // викликаємо parseData
+      // Виклик parseData
       handleParseData(localRegion, selectedCase);
     }
   }, [localRegion, selectedCase]);
 
-  // Лог для відлагодження
+  // Логування для відлагодження
   useEffect(() => {
     console.log("Parsed Data Updated:", parsedData);
   }, [parsedData]);
 
-  // =========================================
-  // Якщо змінюється сторінка (наприклад, currentPage), відкриваємо налаштування
-  // =========================================
+  // Відкриття Налаштувань при зміні сторінки (наприклад, currentPage)
   useEffect(() => {
     if (currentPage) {
       setIsSettingsOpen(true);
@@ -495,14 +472,14 @@ const FSPFormularPage = () => {
   }, [currentPage]);
 
   useEffect(() => {
-    console.log("=== FSPFormularPage re-rendered ===");
+    console.log("=== FSPFormularPage перерисовано ===");
     console.log("globalSelectedRegion =", globalSelectedRegion);
     console.log("localRegion =", localRegion);
     console.log("Object.keys(dataSources) =", Object.keys(dataSources));
     console.log("userData =", userData);
   }, [globalSelectedRegion, localRegion, dataSources, userData]);
 
-  // Закривання меню налаштувань кліком поза ним
+  // Закриття меню налаштувань при кліку поза межами
   const settingsRef = useRef(null);
   const settingsButtonRef = useRef(null);
 
@@ -527,9 +504,7 @@ const FSPFormularPage = () => {
     };
   }, [isSettingsOpen]);
 
-  // =========================================
-  // Обробка вибору локального регіону через кнопочку
-  // =========================================
+  // Обробка Вибору Локального Регіону через Кнопку
   const [isRegionDropdownOpen, setIsRegionDropdownOpen] = useState(false);
 
   const toggleRegionDropdown = () => {
@@ -544,56 +519,89 @@ const FSPFormularPage = () => {
     setFallType("");
   };
 
-  // =========================================
-  // Рендер
-  // =========================================
+  // Завантаження даних випадку на основі caseId
+  useEffect(() => {
+    const fetchCaseData = async () => {
+      if (!caseId) return;
+
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        // Знайти регіон за caseId
+        const regionId = Object.keys(dataSources).find((region) =>
+          dataSources[region].files.some((file) => String(file.id) === String(caseId))
+        );
+
+        if (!regionId) {
+          throw new Error(`Випадок з ID ${caseId} не знайдено у dataSources.`);
+        }
+
+        setLocalRegion(regionId);
+        console.log(`Регіон знайдено: ${regionId}`);
+
+        // Встановити selectedCase на caseId, щоб ініціювати завантаження даних
+        setSelectedCase(caseId);
+      } catch (err) {
+        console.error("Помилка завантаження даних випадку:", err);
+        setError(err.message);
+        toast.error("Не вдалося завантажити дані випадку.");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCaseData();
+  }, [caseId, dataSources, fetchDataFromFirebase]);
+
+  // Рендеринг
   return (
     <MainLayout>
-      {/* Кнопка “налаштувань” (відкриття “settings-modal”) */}
+      {/* Кнопка Налаштувань */}
       <button
-        className="settings-button"
+        className={styles["settings-button"]}
         onClick={() => setIsSettingsOpen(!isSettingsOpen)}
         ref={settingsButtonRef}
-        aria-label="Відкрити налаштування"
+        aria-label="Відкрити Налаштування"
         aria-expanded={isSettingsOpen}
         aria-controls="settings-modal"
       >
         <FaCog />
       </button>
 
-      {/* Відображення повідомлень */}
-      {/* Toast повідомлення вже відображаються глобально через ToastContainer */}
+      {/* Відображення Сповіщень */}
+      {/* Toast сповіщення вже відображаються глобально через ToastContainer */}
 
       {isSettingsOpen && (
-        <div className="settings-modal" ref={settingsRef}>
-          <div className="settings-content">
+        <div className={styles["settings-modal"]} ref={settingsRef}>
+          <div className={styles["settings-content"]}>
             <h3>Налаштування</h3>
 
-            {/* Кнопка для вибору локального регіону */}
-            <div className="field">
-              <label>Оберіть Регіон (локальний):</label>
-              <div className="region-selector">
+            {/* Вибір Локального Регіону */}
+            <div className={styles["field"]}>
+              <label>Виберіть Локальний Регіон:</label>
+              <div className={styles["region-selector"]}>
                 <button
-                  className="region-button"
+                  className={styles["region-button"]}
                   onClick={toggleRegionDropdown}
                   aria-haspopup="true"
                   aria-expanded={isRegionDropdownOpen}
                 >
                   {localRegion
-                    ? dataSources[localRegion]?.region || "Виберіть регіон"
-                    : "Виберіть регіон"}
+                    ? dataSources[localRegion]?.name || "Виберіть Регіон"
+                    : "Виберіть Регіон"}
                 </button>
                 {isRegionDropdownOpen && (
-                  <ul className="region-dropdown">
+                  <ul className={styles["region-dropdown"]}>
                     {Object.keys(dataSources)
                       .filter((sourceId) => dataSources[sourceId].type === "local")
                       .map((sourceId) => (
                         <li key={sourceId}>
                           <button
-                            className="region-option"
+                            className={styles["region-option"]}
                             onClick={() => handleRegionSelect(sourceId)}
                           >
-                            {dataSources[sourceId].region}
+                            {dataSources[sourceId].name}
                           </button>
                         </li>
                       ))}
@@ -602,62 +610,103 @@ const FSPFormularPage = () => {
               </div>
             </div>
 
-            {/* Селект для кейсів, які належать до конкретно обраного локального регіону */}
+            {/* Вибір Випадку для Обраного Локального Регіону */}
             {localRegion && dataSources[localRegion]?.files && (
-              <div className="field">
-                <label htmlFor="case-select">Виберіть випадок:</label>
+              <div className={styles["field"]}>
+                <label htmlFor="case-select">Виберіть Випадок:</label>
                 <select
                   id="case-select"
                   value={selectedCase}
                   onChange={handleCaseChange}
+                  className={styles["case-select"]}
                 >
-                  <option value="">Виберіть випадок</option>
+                  <option value="">Виберіть Випадок</option>
                   {dataSources[localRegion].files.map((file) => (
                     <option key={file.id} value={String(file.id)}>
                       {file.name}
                       {userData &&
                         userData[`completedCases_${localRegion}`] &&
-                        userData[`completedCases_${localRegion}`].includes(String(file.id)) && (
-                          <span> ✔️</span>
-                        )}
+                        userData[`completedCases_${localRegion}`].includes(
+                          String(file.id)
+                        ) && <span> ✔️</span>}
+                      {userData &&
+                        userData[`deferredCases_${localRegion}`] &&
+                        userData[`deferredCases_${localRegion}`].includes(
+                          String(file.id)
+                        ) && <span> ⏸️</span>}
                     </option>
                   ))}
                 </select>
               </div>
             )}
 
-            {/* Кнопки додавання нового випадку, позначення як пройдений та відкласти на потім */}
-            <div className="buttons-container">
+            {/* Відображення Відкладених Випадків */}
+            {localRegion &&
+              userData &&
+              userData[`deferredCases_${localRegion}`] &&
+              userData[`deferredCases_${localRegion}`].length > 0 && (
+                <div className={styles["field"]}>
+                  <label>Відкладені Випадки:</label>
+                  <ul className={styles["deferred-cases-list"]}>
+                    {userData[`deferredCases_${localRegion}`].map((caseId) => {
+                      const deferredCase = dataSources[localRegion]?.files.find(
+                        (file) => String(file.id) === String(caseId)
+                      );
+                      return (
+                        <li
+                          key={caseId}
+                          className={styles["deferred-case-item"]}
+                        >
+                          <Link
+                            to={`${pathList.informationSources.path}/${caseId}`}
+                            className={styles["deferred-case-link"]}
+                          >
+                            {deferredCase
+                              ? deferredCase.name
+                              : `ID Випадку: ${caseId}`}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+
+            {/* Кнопки для Додавання, Позначення як Завершених та Відкладення Випадків */}
+            <div className={styles["buttons-container"]}>
               <Link to="/data-collection">
-                <button className="add-case-button" aria-label="Додати новий випадок">
-                  Можливість додати випадок
+                <button
+                  className={styles["add-case-button"]}
+                  aria-label="Додати Новий Випадок"
+                >
+                  Додати Новий Випадок
                 </button>
               </Link>
 
               <button
-                className="mark-completed-button"
+                className={styles["mark-completed-button"]}
                 onClick={handleMarkAsCompleted}
                 disabled={!selectedCase}
-                aria-label="Позначити випадок як пройдений"
+                aria-label="Позначити Випадок як Завершений"
               >
-                Позначити випадок як пройдений
+                Позначити як Завершений
               </button>
 
               <button
-                className="defer-case-button"
+                className={styles["defer-case-button"]}
                 onClick={handleDeferCase}
                 disabled={!selectedCase}
-                aria-label="Відкласти випадок на потім"
+                aria-label="Відкласти Випадок на Пізніше"
               >
-                Відкласти на потім
+                Відкласти на Пізніше
               </button>
             </div>
 
-            {/* Кнопка закриття */}
+            {/* Кнопка Закриття */}
             <button
-              className="close-button"
+              className={styles["close-button"]}
               onClick={() => setIsSettingsOpen(false)}
-              aria-label="Закрити налаштування"
+              aria-label="Закрити Налаштування"
             >
               ✕
             </button>
@@ -666,138 +715,146 @@ const FSPFormularPage = () => {
       )}
 
       {/* Основний Контент */}
-      <div className="fsp-container">
-        {isLoading && <p>Завантаження даних...</p>}
+      <div className={styles["fsp-container"]}>
+        {isLoading && (
+          <p className={styles["loading-message"]}>Завантаження даних...</p>
+        )}
 
-        <div
-          className={`columns ${isMobile ? "mobile" : ""}`}
-          ref={columnsRef}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-        >
-          {/* Колонка №1 */}
-          <div className="column">
-            <div
-              className="tile"
-              onMouseEnter={() => setTooltipVisible(true)}
-              onMouseLeave={() => setTooltipVisible(false)}
-              onClick={() => handleOpenInfoModal("personalData")}
-            >
-              <h3 className="tile-title">Персональні дані</h3>
-              {tooltipVisible && (
-                <div className="tooltip">
-                  {FSPFormularPageData.modal.tooltip}
-                </div>
-              )}
-              <PersonalData parsedData={parsedData} />
+        {error && <p className={styles["error-message"]}>{error}</p>}
+
+        {!isLoading && !error && (
+          <div
+            className={`${styles["columns"]} ${
+              isMobile ? styles["mobile"] : ""
+            }`}
+            ref={columnsRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+          >
+            {/* Колонка 1 */}
+            <div className={styles["column"]}>
+              <div
+                className={styles["tile"]}
+                onMouseEnter={() => setTooltipVisible(true)}
+                onMouseLeave={() => setTooltipVisible(false)}
+                onClick={() => handleOpenInfoModal("personalData")}
+              >
+                <h3 className={styles["tile-title"]}>Особисті Дані</h3>
+                {tooltipVisible && (
+                  <div className={styles["tooltip"]}>
+                    {FSPFormularPageData.modal.tooltip}
+                  </div>
+                )}
+                <PersonalData parsedData={parsedData} />
+              </div>
+
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("currentAnamnese")}
+              >
+                <h3 className={styles["tile-title"]}>Поточна Анамнез</h3>
+                <AktuelleAnamnese parsedData={parsedData} />
+              </div>
+
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
+              >
+                <h3 className={styles["tile-title"]}>Попередній Діагноз</h3>
+                <PreliminaryDiagnosis parsedData={parsedData} />
+              </div>
             </div>
 
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("currentAnamnese")}
-            >
-              <h3 className="tile-title">Актуальний анамнез</h3>
-              <AktuelleAnamnese parsedData={parsedData} />
+            {/* Колонка 2 */}
+            <div className={styles["column"]} key="column-2">
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
+              >
+                <h3 className={styles["tile-title"]}>Вегетативна Анамнез</h3>
+                <VegetativeAnamnese parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("vorerkrankungen")}
+              >
+                <h3 className={styles["tile-title"]}>Попередні Хвороби</h3>
+                <Vorerkrankungen parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("zusammenfassung")}
+              >
+                <h3 className={styles["tile-title"]}>Підсумок</h3>
+                <Zusammenfassung parsedData={parsedData} />
+              </div>
             </div>
 
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
-            >
-              <h3 className="tile-title">Попередній діагноз</h3>
-              <PreliminaryDiagnosis parsedData={parsedData} />
+            {/* Колонка 3 */}
+            <div className={styles["column"]} key="column-3">
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("previousOperations")}
+              >
+                <h3 className={styles["tile-title"]}>Попередні Операції</h3>
+                <PreviousOperations parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("medications")}
+              >
+                <h3 className={styles["tile-title"]}>Медикаменти</h3>
+                <Medications parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}
+              >
+                <h3 className={styles["tile-title"]}>Алергії та Нетерпимості</h3>
+                <AllergiesAndIntolerances parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("proposedProcedures")}
+              >
+                <h3 className={styles["tile-title"]}>Пропоновані Процедури</h3>
+                <ProposedProcedures parsedData={parsedData} />
+              </div>
+            </div>
+
+            {/* Колонка 4 */}
+            <div className={styles["column"]} key="column-4">
+              <div className={styles["tile"]} onClick={() => handleOpenInfoModal("noxen")}>
+                <h3 className={styles["tile-title"]}>Ноксени</h3>
+                <Noxen parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("familienanamnese")}
+              >
+                <h3 className={styles["tile-title"]}>Релевантні Сімейні Хвороби</h3>
+                <Familienanamnese parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("sozialanamnese")}
+              >
+                <h3 className={styles["tile-title"]}>Соціальна Анамнез</h3>
+                <Sozialanamnese parsedData={parsedData} />
+              </div>
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("differentialDiagnosis")}
+              >
+                <h3 className={styles["tile-title"]}>Диференційний Діагноз</h3>
+                <DifferentialDiagnosis parsedData={parsedData} />
+              </div>
             </div>
           </div>
-
-          {/* Колонка №2 */}
-          <div className="column" key="column-2">
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
-            >
-              <h3 className="tile-title">Вегетативний анамнез</h3>
-              <VegetativeAnamnese parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("vorerkrankungen")}
-            >
-              <h3 className="tile-title">Попередні захворювання</h3>
-              <Vorerkrankungen parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("zusammenfassung")}
-            >
-              <h3 className="tile-title">Zusammenfassung</h3>
-              <Zusammenfassung parsedData={parsedData} />
-            </div>
-          </div>
-
-          {/* Колонка №3 */}
-          <div className="column" key="column-3">
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("previousOperations")}
-            >
-              <h3 className="tile-title">Попередні операції</h3>
-              <PreviousOperations parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("medications")}
-            >
-              <h3 className="tile-title">Медикаменти</h3>
-              <Medications parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}
-            >
-              <h3 className="tile-title">Алергії та непереносимості</h3>
-              <AllergiesAndIntolerances parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("proposedProcedures")}
-            >
-              <h3 className="tile-title">Запропоновані процедури</h3>
-              <ProposedProcedures parsedData={parsedData} />
-            </div>
-          </div>
-
-          {/* Колонка №4 */}
-          <div className="column" key="column-4">
-            <div className="tile" onClick={() => handleOpenInfoModal("noxen")}>
-              <h3 className="tile-title">Noxen</h3>
-              <Noxen parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("familienanamnese")}
-            >
-              <h3 className="tile-title">Relevante Familienerkrankungen</h3>
-              <Familienanamnese parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("sozialanamnese")}
-            >
-              <h3 className="tile-title">Sozialanamnese</h3>
-              <Sozialanamnese parsedData={parsedData} />
-            </div>
-            <div
-              className="tile"
-              onClick={() => handleOpenInfoModal("differentialDiagnosis")}
-            >
-              <h3 className="tile-title">Диференційний діагноз</h3>
-              <DifferentialDiagnosis parsedData={parsedData} />
-            </div>
-          </div>
-        </div>
+        )}
       </div>
 
-      {/* Модальне вікно вибору джерела даних */}
+      {/* Модальне Вікно для Вибору Джерела Даних */}
       <SelectDataSourceModal
         isOpen={parseModal}
         onClose={() => setParseModal(false)}
@@ -809,7 +866,7 @@ const FSPFormularPage = () => {
         setSearchTerm={setSearchTerm}
       />
 
-      {/* Модальне вікно додаткової інформації */}
+      {/* Модальне Вікно для Додаткової Інформації */}
       <AdditionalInfoModal
         isOpen={infoModal}
         onClose={() => setInfoModal(false)}
@@ -821,11 +878,11 @@ const FSPFormularPage = () => {
         }
       />
 
-      {/* Модальне вікно випадків користувачів */}
+      {/* Модальне Вікно для Випадків Користувача */}
       <UserCasesModal
         isOpen={userCasesModal}
         onClose={() => setUserCasesModal(false)}
-        title="Випадки користувачів"
+        title="Випадки Користувача"
         userCases={userCasesData}
       />
     </MainLayout>

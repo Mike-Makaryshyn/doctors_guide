@@ -1,3 +1,5 @@
+// src/routes/index.jsx
+
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { pathList } from "./path";
@@ -102,6 +104,19 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
+
+        {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
+        <Route
+          path={`${pathList.informationSources.path}/:caseId`}
+          element={<FSPFormularPage />}
+        />
+
+        {/* Статичний маршрут для FSPFormularPage */}
+        <Route
+          path={pathList.informationSources.path}
+          element={<FSPFormularPage />}
+        />
+
         <Route
           path="/data-collection"
           element={
@@ -109,10 +124,6 @@ export default function Routers() {
               <DataCollectionPage />
             </Suspense>
           }
-        />
-        <Route
-          path={pathList.informationSources.path}
-          element={<FSPFormularPage />}
         />
         <Route
           path="/all-medical-terminology"

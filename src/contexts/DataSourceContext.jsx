@@ -1,6 +1,6 @@
 // src/contexts/DataSourceContext.jsx
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 // Імпортуємо файли (імена файлів без дефісів/умляутів):
 import THUERINGEN_DATA from "../constants/translation/Fall/Thüringen.js";
@@ -30,7 +30,7 @@ export const DataSourceProvider = ({ children }) => {
   const [dataSources] = useState({
     // 1) Thüringen
     "Thüringen": {
-        key: "Thueringen",
+      key: "Thueringen",
       name: "Thüringen",
       type: "local",
       region: "Thüringen",
@@ -41,7 +41,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 2) Baden-Württemberg
     "Baden-Württemberg": {
-        key: "BadenWuerttemberg",
+      key: "BadenWuerttemberg",
       name: "Baden-Württemberg",
       type: "local",
       region: "Baden-Württemberg",
@@ -52,7 +52,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 3) Bayern
     Bayern: {
-        key: "Bayern",
+      key: "Bayern",
       name: "Bayern",
       type: "local",
       region: "Bayern",
@@ -63,7 +63,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 4) Berlin
     Berlin: {
-        key: "Berlin",
+      key: "Berlin",
       name: "Berlin",
       type: "local",
       region: "Berlin",
@@ -74,7 +74,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 5) Brandenburg
     Brandenburg: {
-        key: "Brandenburg",
+      key: "Brandenburg",
       name: "Brandenburg",
       type: "local",
       region: "Brandenburg",
@@ -85,7 +85,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 6) Bremen
     Bremen: {
-        key: "Bremen",
+      key: "Bremen",
       name: "Bremen",
       type: "local",
       region: "Bremen",
@@ -96,7 +96,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 7) Hamburg
     Hamburg: {
-        key: "Hamburg",
+      key: "Hamburg",
       name: "Hamburg",
       type: "local",
       region: "Hamburg",
@@ -107,7 +107,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 8) Hessen
     Hessen: {
-        key: "Hessen",
+      key: "Hessen",
       name: "Hessen",
       type: "local",
       region: "Hessen",
@@ -118,7 +118,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 9) Mecklenburg-Vorpommern
     "Mecklenburg Vorpommern": {
-        key: "MecklenburgVorpommern",
+      key: "MecklenburgVorpommern",
       name: "Mecklenburg Vorpommern",
       type: "local",
       region: "Mecklenburg Vorpommern",
@@ -129,7 +129,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 10) Niedersachsen
     Niedersachsen: {
-        key: "Niedersachsen",
+      key: "Niedersachsen",
       name: "Niedersachsen",
       type: "local",
       region: "Niedersachsen",
@@ -140,7 +140,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 11) Nordrhein-Westfalen
     "Nordrhein-Westfalen": {
-        key: "NordrheinWestfalen",
+      key: "NordrheinWestfalen",
       name: "Nordrhein-Westfalen",
       type: "local",
       region: "Nordrhein-Westfalen",
@@ -151,7 +151,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 12) Rheinland-Pfalz
     "Rheinland-Pfalz": {
-        key: "RheinlandPfalz",
+      key: "RheinlandPfalz",
       name: "Rheinland-Pfalz",
       type: "local",
       region: "Rheinland-Pfalz",
@@ -162,7 +162,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 13) Saarland
     Saarland: {
-        key: "Saarland",
+      key: "Saarland",
       name: "Saarland",
       type: "local",
       region: "Saarland",
@@ -173,7 +173,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 14) Sachsen
     Sachsen: {
-        key: "Sachsen",
+      key: "Sachsen",
       name: "Sachsen",
       type: "local",
       region: "Sachsen",
@@ -184,7 +184,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 15) Sachsen-Anhalt
     "Sachsen-Anhalt": {
-        key: "SachsenAnhalt",
+      key: "SachsenAnhalt",
       name: "Sachsen-Anhalt",
       type: "local",
       region: "Sachsen-Anhalt",
@@ -195,7 +195,7 @@ export const DataSourceProvider = ({ children }) => {
     },
     // 16) Schleswig-Holstein
     "Schleswig-Holstein": {
-        key: "SchleswigHolstein",
+      key: "SchleswigHolstein",
       name: "Schleswig-Holstein",
       type: "local",
       region: "Schleswig-Holstein",
