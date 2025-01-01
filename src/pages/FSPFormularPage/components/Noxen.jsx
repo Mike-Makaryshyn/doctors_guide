@@ -1,22 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
 
-const renderTileIcon = (parsedData) => {
-    if (parsedData?.fallType && parsedData.fallType === "cardiology") {
-        return <FaCheckCircle className="tile-icon specific-data" title="Специфічні дані доступні" />;
-    }
-    return <FaInfoCircle className="tile-icon general-data" title="Загальні дані" />;
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Noxen"
+        />
+    );
 };
 
 const Noxen = ({ parsedData }) => {
     return (
-        <div className="noxen">
-            <div className="tile-header">
-                {/* Видаляємо зайвий заголовок */}
-                {renderTileIcon(parsedData)}
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
             </div>
-            <ul className="tile-list">
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Rauchverhalten:</strong> {parsedData?.rauchverhalten || ""}
                 </li>
@@ -36,7 +40,6 @@ Noxen.propTypes = {
         rauchverhalten: PropTypes.string,
         alkoholkonsum: PropTypes.string,
         drogengebrauch: PropTypes.string,
-        fallType: PropTypes.string,
     }),
 };
 

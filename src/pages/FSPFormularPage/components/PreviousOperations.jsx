@@ -1,10 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
+
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Previous Operations"
+        />
+    );
+};
 
 const PreviousOperations = ({ parsedData = {} }) => {
     return (
-        <div className="previous-operations">
-            <ul className="tile-list">
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
+            </div>
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Frühere Operationen:</strong> {parsedData?.pastOperations || ""}
                 </li>

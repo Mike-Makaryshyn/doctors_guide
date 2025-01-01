@@ -1,25 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle, FaCheckCircle } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 import styles from "./TileContainer.module.scss";
-const renderTileIcon = (parsedData) => {
+
+const renderTileIcon = () => {
     return (
         <FaInfoCircle
-            className="tile-icon general-data"
-            title="Загальні дані"
+            className={styles["tile-icon"]}
+            title="Persönliche Daten"
         />
     );
 };
 
 const PersonalData = ({ parsedData }) => {
     return (
-        <div className="personal-data">
-            <div className={styles['tile-header']}>
-                <div className="tile-icon-container">
-                    {renderTileIcon(parsedData)}
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
                 </div>
             </div>
-            <ul className="tile-list">
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Vornamen:</strong> {parsedData?.name || ""}
                 </li>
@@ -27,8 +28,8 @@ const PersonalData = ({ parsedData }) => {
                     <strong>Namen:</strong> {parsedData?.surname || ""}
                 </li>
                 <li>
-                    <strong>Geburtsdatum/Alter:</strong>
-                    {parsedData?.birthdate || ""}
+                    <strong>Geburtsdatum/Alter:</strong> 
+                    {parsedData?.birthdate || ""} 
                     {parsedData?.age ? ` / ${parsedData.age}` : ""}
                 </li>
                 <li>

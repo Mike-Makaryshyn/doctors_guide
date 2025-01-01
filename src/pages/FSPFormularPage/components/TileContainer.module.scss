@@ -14,7 +14,7 @@
 /* Основной стиль плитки */
 .tile {
     position: relative; /* Для позиционирования дочерних элементов */
-    padding: 1rem;
+    padding: 3px;
     margin: 0.625rem;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
@@ -41,15 +41,25 @@
 
 .tile-header {
    position: absolute;
-   right: 10px;
-   top: 10px;
+   right: -6px;
+   top: -5px;
 }
 
 /* Общий стиль иконки */
 .tile-icon {
-    font-size: 1.5rem; /* Размер иконки */
-    width: 24px;
-    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease; /* Анімація для іконки */
+    cursor: pointer; /* Вказівник для іконки */
+}
+
+/* Анімація при наведенні на іконку */
+.tile-icon:hover {
+    transform: scale(1.2); /* Легке збільшення */
+    color: #1abc9c; /* Зміна кольору при наведенні */
 }
 
 /* Модификаторы для иконки */
@@ -58,7 +68,7 @@
 }
 
 .tile-icon--general {
-    color: gray; /* Цвет для общих данных */
+    color: rgb(209, 155, 155); /* Цвет для общих данных */
 }
 
 /* Заголовок плитки */
@@ -117,8 +127,8 @@
     }
 
     .tile-icon-container {
-        top: 5px; /* Меньшие отступы для иконки */
-        right: 5px;
+        top: 6px; /* Меньшие отступы для иконки */
+        right: 7px;
     }
 
     .tile-title {

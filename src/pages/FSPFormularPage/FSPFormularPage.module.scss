@@ -3,15 +3,15 @@
 /* Основний контейнер сторінки */
 .fsp-container {
     display: flex;
-    flex-direction: column; /* Основне розташування для всієї сторінки */
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100vh;
     padding: 20px;
-    background-color: #2e5957; /* Загальний фон */
+    background-color: #269794; /* Загальний фон */
     position: relative;
-    margin-top: 60px; /* Відступ для кнопки налаштувань */
-  }
+    margin-top: 60px;
+}
   
   /* Контейнер для стовпців */
   .columns {
@@ -33,33 +33,59 @@
   }
   
   /* Загальний стиль плитки */
-  .tile {
+  .tile-title:hover {
+    color: #1abc9c; /* Підсвічування заголовку при наведенні */
+}
+
+/* Загальний стиль плитки */
+.tile {
     position: relative;
-    padding: 10px;
-    margin: 0; /* Забираємо негативний відступ */
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Зменшено округлення */
-    background-color: #f9f9f9;
+    padding: 3px;
+    margin: 0;
+    border-radius: 10px;
+    background: rgba(251, 247, 247, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: #000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    overflow: hidden;
-    font-size: 14px; /* Менший розмір шрифту для економії простору */
-    text-align: left; /* Вирівнювання тексту */
-  }
-  
-  .tile:hover {
+}
+
+/* Ефект при наведенні */
+.tile:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    box-shadow: 0 12px 24px rgba(31, 38, 135, 0.5);
+    border-color: #1abc9c;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
   
   /* Заголовок плитки */
   .tile-title {
-    font-size: 16px; /* Зменшений заголовок */
+    font-size: 16px;
     font-weight: bold;
+    color: #2c3e50; /* Темно-синій для професійного вигляду */
+    text-align: left;
+    margin-top: 5px;
     margin-bottom: 5px;
-  }
+    padding-left: 8px;
+    font-family: 'Poppins', sans-serif; /* Сучасний шрифт */
+    /* Анімація для заголовка прибрана */
+}
+
   
   /* Кнопка налаштувань */
   .settings-button {

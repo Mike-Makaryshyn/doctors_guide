@@ -1,15 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
+
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Vegetative Anamnese"
+        />
+    );
+};
 
 const VegetativeAnamnese = ({ parsedData = {} }) => {
     return (
-        <div className="vegetative-anamnesis">
-            <ul className="tile-list">
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
+            </div>
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Appetit:</strong> {parsedData?.appetite || ""}
                 </li>
                 <li>
-                    <strong>Gewicht:</strong> {parsedData?.weightverlust || ""}
+                    <strong>Gewicht:</strong> {parsedData?.weight || ""}
+                </li>
+                <li>
+                    <strong>Durstgefühl (Спрага):</strong> {parsedData?.thirst || ""}
                 </li>
                 <li>
                     <strong>Übelkeit:</strong> {parsedData?.nausea || ""}
@@ -24,10 +43,25 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Wasserlassen:</strong> {parsedData?.urination || ""}
                 </li>
                 <li>
+                    <strong>Schwitzen (Пітливість):</strong> {parsedData?.sweating || ""}
+                </li>
+                <li>
                     <strong>Schwindel:</strong> {parsedData?.vertigo || ""}
                 </li>
                 <li>
                     <strong>Bewusstsein:</strong> {parsedData?.consciousness || ""}
+                </li>
+                <li>
+                    <strong>Herzklopfen (Серцебиття):</strong> {parsedData?.palpitations || ""}
+                </li>
+                <li>
+                    <strong>Atemnot (Задишка):</strong> {parsedData?.shortnessOfBreath || ""}
+                </li>
+                <li>
+                    <strong>Hitzewallungen (Припливи жару):</strong> {parsedData?.hotFlashes || ""}
+                </li>
+                <li>
+                    <strong>Kältegefühl (Відчуття холоду):</strong> {parsedData?.coldFeeling || ""}
                 </li>
                 <li>
                     <strong>Schlafen:</strong> {parsedData?.sleep || ""}
@@ -50,12 +84,18 @@ VegetativeAnamnese.propTypes = {
     parsedData: PropTypes.shape({
         appetite: PropTypes.string,
         weight: PropTypes.string,
+        thirst: PropTypes.string,
         nausea: PropTypes.string,
         vomiting: PropTypes.string,
         bowelMovement: PropTypes.string,
         urination: PropTypes.string,
+        sweating: PropTypes.string,
         vertigo: PropTypes.string,
         consciousness: PropTypes.string,
+        palpitations: PropTypes.string,
+        shortnessOfBreath: PropTypes.string,
+        hotFlashes: PropTypes.string,
+        coldFeeling: PropTypes.string,
         sleep: PropTypes.string,
         sexualHistory: PropTypes.string,
         others: PropTypes.string,

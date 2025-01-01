@@ -1,10 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
+
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Aktuelle Anamnese"
+        />
+    );
+};
 
 const AktuelleAnamnese = ({ parsedData }) => {
     return (
-        <div className="current-anamnesis"> {/* Головний контейнер */}
-            <ul className="tile-list"> {/* Список з полями */}
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
+            </div>
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Besuchsgrund:</strong> {parsedData?.visitReason || ""}
                 </li>
@@ -30,6 +46,12 @@ const AktuelleAnamnese = ({ parsedData }) => {
                     <strong>Schmerzintensität:</strong> {parsedData?.painIntensity || ""}
                 </li>
                 <li>
+                    <strong>Schmerzlinderung:</strong> {parsedData?.painRelief || ""}
+                </li>
+                <li>
+                    <strong>Schmerzverstärkung:</strong> {parsedData?.painAggravation || ""}
+                </li>
+                <li>
                     <strong>Vorherige medizinische Betreuung:</strong> {parsedData?.previousMedicalCare || ""}
                 </li>
             </ul>
@@ -47,6 +69,8 @@ AktuelleAnamnese.propTypes = {
         painProgression: PropTypes.string,
         triggers: PropTypes.string,
         painIntensity: PropTypes.string,
+        painRelief: PropTypes.string,
+        painAggravation: PropTypes.string,
         previousMedicalCare: PropTypes.string,
     }),
 };

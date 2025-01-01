@@ -1,11 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
+
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Medikamentenanamnese"
+        />
+    );
+};
 
 const Medications = ({ parsedData }) => {
     return (
-        <div className="medications">
-            <ul className="tile-list">
-              
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
+            </div>
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Allgemeine Medikamenteneinnahme:</strong> {parsedData?.allgemeineMedikamenteneinnahme || ""}
                 </li>
@@ -19,7 +34,6 @@ const Medications = ({ parsedData }) => {
 
 Medications.propTypes = {
     parsedData: PropTypes.shape({
-        gezielteMedikamentenfragen: PropTypes.string,
         allgemeineMedikamenteneinnahme: PropTypes.string,
         detaillierteMedikamenteninformationen: PropTypes.string,
     }),

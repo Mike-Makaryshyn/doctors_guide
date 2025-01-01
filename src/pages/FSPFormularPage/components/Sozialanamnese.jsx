@@ -1,10 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FaInfoCircle } from "react-icons/fa";
+import styles from "./TileContainer.module.scss";
+
+const renderTileIcon = () => {
+    return (
+        <FaInfoCircle
+            className={styles["tile-icon"]}
+            title="Sozialanamnese"
+        />
+    );
+};
 
 const Sozialanamnese = ({ parsedData = {} }) => {
     return (
-        <div className="social-history">
-            <ul className="tile-list">
+        <div className={styles["tile-container"]}>
+            <div className={styles["tile-header"]}>
+                <div className={styles["tile-icon-container"]}>
+                    {renderTileIcon()}
+                </div>
+            </div>
+            <ul className={styles["tile-list"]}>
                 <li>
                     <strong>Beruf:</strong> {parsedData?.profession || ""}
                 </li>
