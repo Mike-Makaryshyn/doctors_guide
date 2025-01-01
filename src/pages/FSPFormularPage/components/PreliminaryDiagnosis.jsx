@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import preliminaryDiagnosisIcon from "../../../assets/iconFSPtable/preliminary-diagnosis.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={preliminaryDiagnosisIcon}
+            alt="Vorläufige Diagnose Icon"
             className={styles["tile-icon"]}
-            title="Vorläufige Diagnose"
         />
     );
 };
@@ -30,7 +32,6 @@ const PreliminaryDiagnosis = ({ parsedData }) => {
                 <li>
                     <strong>Differenzialdiagnosen:</strong> {parsedData?.differentialDiagnoses || ""}
                 </li>
-              
             </ul>
         </div>
     );

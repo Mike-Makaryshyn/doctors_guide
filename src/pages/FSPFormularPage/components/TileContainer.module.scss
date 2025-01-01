@@ -48,8 +48,8 @@
 
 /* Общий стиль иконки */
 .tile-icon {
-    width: var(--icon-size);
-    height: var(--icon-size);
+    width: 20px; /* Встановіть потрібний розмір */
+    height: 20px;
     object-fit: contain; /* Забезпечує правильне масштабування іконки */
     position: absolute;
     top: var(--icon-top);

@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import noxenIcon from "../../../assets/iconFSPtable/noxen.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={noxenIcon}
+            alt="Noxen Icon"
             className={styles["tile-icon"]}
-            title="Noxen"
         />
     );
 };

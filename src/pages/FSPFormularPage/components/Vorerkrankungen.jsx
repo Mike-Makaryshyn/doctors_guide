@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпорт власної іконки
+import vorerkrankungenIcon from "../../../assets/iconFSPtable/vorerkrankungen.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
   return (
-    <FaInfoCircle className={styles["tile-icon"]} title="Vorerkrankungen" />
+    <img
+      src={vorerkrankungenIcon}
+      alt="Vorerkrankungen Icon"
+      className={styles["tile-icon"]}
+    />
   );
 };
 
@@ -42,7 +47,7 @@ Vorerkrankungen.propTypes = {
     medicalHistoryIntroduction: PropTypes.string,
     chronicDiseases: PropTypes.string,
     otherRelevantDiseases: PropTypes.string,
-    infectiousDiseases: PropTypes.string, // Додано нове поле
+    infectiousDiseases: PropTypes.string,
   }),
 };
 

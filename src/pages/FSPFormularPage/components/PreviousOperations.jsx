@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import previousOperationsIcon from "../../../assets/iconFSPtable/previous-operations.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={previousOperationsIcon}
+            alt="Previous Operations Icon"
             className={styles["tile-icon"]}
-            title="Previous Operations"
         />
     );
 };

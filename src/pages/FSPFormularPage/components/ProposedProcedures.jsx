@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо вашу власну іконку
+import proposedProceduresIcon from "../../../assets/iconFSPtable/proposed-procedures.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={proposedProceduresIcon}
+            alt="Diagnostische Empfehlungen Icon"
             className={styles["tile-icon"]}
-            title="Diagnostische Empfehlungen"
         />
     );
 };

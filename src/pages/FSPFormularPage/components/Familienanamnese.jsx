@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import familienanamneseIcon from "../../../assets/iconFSPtable/familienanamnese.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={familienanamneseIcon}
+            alt="Familienanamnese Icon"
             className={styles["tile-icon"]}
-            title="Familienanamnese"
         />
     );
 };
@@ -21,7 +23,7 @@ const Familienanamnese = ({ parsedData }) => {
                 </div>
             </div>
             <ul className={styles["tile-list"]}>
-            <li>
+                <li>
                     <strong>Генетичні хвороби:</strong> {parsedData?.geneticDiseases || ""}
                 </li>
                 <li>
@@ -30,7 +32,6 @@ const Familienanamnese = ({ parsedData }) => {
                 <li>
                     <strong>Geschwister:</strong> {parsedData?.siblings || ""}
                 </li>
-               
             </ul>
         </div>
     );

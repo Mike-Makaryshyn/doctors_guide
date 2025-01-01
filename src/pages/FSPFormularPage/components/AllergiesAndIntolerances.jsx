@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import allergiesIcon from "../../../assets/iconFSPtable/allergies.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={allergiesIcon}
+            alt="Allergien und Unverträglichkeiten Icon"
             className={styles["tile-icon"]}
-            title="Allergien und Unverträglichkeiten"
         />
     );
 };
@@ -46,7 +48,7 @@ AllergiesAndIntolerances.propTypes = {
         specificMedicationAllergies: PropTypes.string,
         allergicReactionSymptoms: PropTypes.string,
         allergyTriggers: PropTypes.string,
-        householdAllergens: PropTypes.string, // Додано нове поле
+        householdAllergens: PropTypes.string,
         specificIntolerances: PropTypes.string,
     }),
 };
