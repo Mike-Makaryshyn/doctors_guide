@@ -12,7 +12,6 @@ import styles from "./DeferredCases.module.scss"; // Імпорт стилів �
 const DeferredCases = () => {
   const { dataSources } = useContext(DataSourceContext);
   const [deferredCases, setDeferredCases] = useState([]);
-  const [localRegion, setLocalRegion] = useState("");
   const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
@@ -29,17 +28,16 @@ const DeferredCases = () => {
 
         if (userDocSnap.exists()) {
           const userData = userDocSnap.data();
-          // Вибір регіону користувача
-          const userRegion = Object.keys(dataSources).find((region) =>
-            dataSources[region].files.some(
-              (file) => String(file.id) === userData[`selectedCase_${region}`]
-            )
-          );
-          setLocalRegion(userRegion || "");
 
-          // Отримання відкладених випадків для регіону
-          const deferred = userData[`deferredCases_${userRegion}`] || [];
-          setDeferredCases(deferred);
+          // Отримання всіх відкладених випадків для всіх регіонів
+          const allDeferredCases = Object.keys(dataSources)
+            .filter((region) => dataSources[region].type === "local") // Виключаємо Firebase Source та інші типи, якщо є
+            .reduce((acc, region) => {
+              const deferred = userData[`deferredCases_${region}`] || [];
+              return acc.concat(deferred.map((caseId) => ({ caseId, region })));
+            }, []);
+
+          setDeferredCases(allDeferredCases);
         } else {
           toast.error("Дані користувача не знайдено.");
         }
@@ -56,22 +54,22 @@ const DeferredCases = () => {
   if (error) return <p className={styles.error}>Сталася помилка: {error.message}</p>;
 
   return (
-    <div className={styles.deferredCasesContainer}>
+    <div className={styles.deferredCasesWindow}>
       <h3 className={styles.title}>Відкладені Випадки</h3>
       {deferredCases.length === 0 ? (
         <p className={styles.noCases}>У вас немає відкладених випадків.</p>
       ) : (
         <div className={styles.casesList}>
-          {deferredCases.map((caseId) => {
-            const caseData = dataSources[localRegion]?.files.find(
-              (file) => String(file.id) === caseId
+          {deferredCases.map(({ caseId, region }) => {
+            const caseData = dataSources[region]?.files.find(
+              (file) => String(file.id) === String(caseId)
             );
             return (
               <DeferredCasesCard
-                key={caseId}
+                key={`${region}-${caseId}`} // Унікальний ключ
                 caseId={caseId}
                 caseData={caseData}
-                regionId={localRegion} // Додано для передачі regionId до карточки
+                regionId={region} // Передача правильного regionId
               />
             );
           })}

@@ -5,9 +5,7 @@ const Medications = ({ parsedData }) => {
     return (
         <div className="medications">
             <ul className="tile-list">
-                <li>
-                    <strong>Gezielte Medikamentenfragen:</strong> {parsedData?.gezielteMedikamentenfragen || ""}
-                </li>
+              
                 <li>
                     <strong>Allgemeine Medikamenteneinnahme:</strong> {parsedData?.allgemeineMedikamenteneinnahme || ""}
                 </li>

@@ -9,8 +9,9 @@ const DeferredCasesCard = ({ caseId, caseData, regionId }) => {
   return (
     <div className={styles.card}>
       <h4 className={styles.caseTitle}>
-        {caseData ? caseData.name : `Випадок ID: ${caseId}`}
+        {caseData ? `${caseData.name} ${caseData.surname}` : `Випадок ID: ${caseId}`}
       </h4>
+      <p className={styles.caseRegion}>Регіон: {regionId}</p>
       <Link
         to={`${pathList.informationSources.path}/${caseId}`}
         className={styles.viewButton}

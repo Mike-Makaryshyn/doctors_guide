@@ -11,29 +11,29 @@
     background-color: #2e5957; /* Загальний фон */
     position: relative;
     margin-top: 60px; /* Відступ для кнопки налаштувань */
-}
-
-/* Контейнер для стовпців */
-.columns {
+  }
+  
+  /* Контейнер для стовпців */
+  .columns {
     display: flex;
     flex-wrap: wrap; /* Адаптивне відображення плиток */
     gap: 10px; /* Зменшені відступи між колонками */
     width: 100%;
     justify-content: space-between; /* Розтягуємо плитки по ширині */
-}
-
-/* Кожна колонка */
-.column {
+  }
+  
+  /* Кожна колонка */
+  .column {
     flex: 1 1 calc(25% - 20px); /* Плитка займає 25% ширини з урахуванням відступів */
     max-width: 25%; /* Максимальна ширина стовпця */
     min-width: 220px; /* Мінімальна ширина для маленьких екранів */
     display: flex;
     flex-direction: column; /* Вертикальне розташування плиток */
     gap: 10px; /* Зменшені відступи між плитками */
-}
-
-/* Загальний стиль плитки */
-.tile {
+  }
+  
+  /* Загальний стиль плитки */
+  .tile {
     position: relative;
     padding: 10px;
     margin: 0; /* Забираємо негативний відступ */
@@ -47,22 +47,22 @@
     overflow: hidden;
     font-size: 14px; /* Менший розмір шрифту для економії простору */
     text-align: left; /* Вирівнювання тексту */
-}
-
-.tile:hover {
+  }
+  
+  .tile:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Заголовок плитки */
-.tile-title {
+  }
+  
+  /* Заголовок плитки */
+  .tile-title {
     font-size: 16px; /* Зменшений заголовок */
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-/* Кнопка налаштувань */
-.settings-button {
+  }
+  
+  /* Кнопка налаштувань */
+  .settings-button {
     position: fixed;
     bottom: 20px; /* Відступ від нижнього краю */
     left: 20px; /* Відступ від лівого краю */
@@ -78,15 +78,15 @@
     align-items: center;
     z-index: 1001; /* Поверх інших елементів */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при взаємодії */
-}
-
-.settings-button:hover {
+  }
+  
+  .settings-button:hover {
     background-color: #0056b3; /* Трохи темніший колір при наведенні */
     transform: scale(1.1); /* Легке збільшення при наведенні */
-}
-
-/* Модальне вікно налаштувань */
-.settings-modal {
+  }
+  
+  /* Модальне вікно налаштувань */
+  .settings-modal {
     position: fixed; /* Фіксоване положення відносно екрану */
     bottom: 70px; /* Розташування над кнопкою */
     left: 22px; /* Вирівнювання по кнопці */
@@ -99,39 +99,39 @@
     width: 250px; /* Невелика ширина */
     animation: fadeIn 0.3s ease; /* Анімація появи */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Плавна поява */
-}
-
-.settings-content {
+  }
+  
+  .settings-content {
     position: relative;
-}
-
-/* Контент модального вікна */
-.settings-modal h3 {
+  }
+  
+  /* Контент модального вікна */
+  .settings-modal h3 {
     margin: 0 0 10px 0;
     font-size: 16px; /* Розмір заголовка */
     font-weight: bold;
     color: #333; /* Темний текст */
-}
-
-.field {
+  }
+  
+  .field {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Відстань між елементами */
-}
-
-.settings-modal label {
+  }
+  
+  .settings-modal label {
     font-size: 14px;
     font-weight: bold;
     color: #555;
-}
-
-/* Кнопка вибору регіону */
-.region-selector {
+  }
+  
+  /* Кнопка вибору регіону */
+  .region-selector {
     position: relative;
     display: inline-block;
-}
-
-.region-button {
+  }
+  
+  .region-button {
     padding: 6px 12px;
     background-color: #007bff;
     color: #fff;
@@ -141,13 +141,13 @@
     font-size: 14px;
     width: 100%;
     text-align: left;
-}
-
-.region-button:hover {
+  }
+  
+  .region-button:hover {
     background-color: #0056b3;
-}
-
-.region-dropdown {
+  }
+  
+  .region-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -159,9 +159,9 @@
     overflow-y: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Поверх модального вікна */
-}
-
-.region-option {
+  }
+  
+  .region-option {
     width: 100%;
     padding: 8px 12px;
     background: none;
@@ -169,21 +169,21 @@
     text-align: left;
     cursor: pointer;
     font-size: 14px;
-}
-
-.region-option:hover {
+  }
+  
+  .region-option:hover {
     background-color: #f1f1f1;
-}
-
-/* Кнопки у модальному вікні */
-.buttons-container {
+  }
+  
+  /* Кнопки у модальному вікні */
+  .buttons-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
-}
-
-.add-case-button {
+  }
+  
+  .add-case-button {
     padding: 8px 16px;
     background-color: #2196f3;
     color: rgb(22, 20, 20);
@@ -191,13 +191,14 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-}
-
-.add-case-button:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-case-button:hover {
     background-color: #1976d2;
-}
-
-.mark-completed-button {
+  }
+  
+  .mark-completed-button {
     padding: 8px 16px;
     background-color: #ff9800;
     color: rgb(11, 9, 9);
@@ -205,19 +206,19 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-}
-
-.mark-completed-button:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  .mark-completed-button:hover {
     background-color: #fb8c00;
-}
-
-.mark-completed-button:disabled {
+  }
+  
+  .mark-completed-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
-}
-
-/* Кнопка відкласти на потім */
-.defer-case-button {
+  }
+  
+  .defer-case-button {
     padding: 8px 16px;
     background-color: #ffeb3b; /* Жовтий колір */
     color: #000;
@@ -225,135 +226,184 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-}
-
-.defer-case-button:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  .defer-case-button:hover {
     background-color: #fdd835; /* Трохи темніший жовтий при наведенні */
-}
-
-.defer-case-button:disabled {
+  }
+  
+  .defer-case-button:disabled {
     background-color: #fff176;
     color: #ccc;
     cursor: not-allowed;
-}
-
-/* Кнопка закриття модального вікна */
-.close-button {
+  }
+  
+  /* Кнопка закриття модального вікна */
+  .close-button {
     position: absolute;
     top: -21px;
     right: -14px;
     background: none;
     border: none;
-    font-size: 9px;
+    font-size: 16px;
     cursor: pointer;
-}
-
-/* Стилі для Toastify */
-.Toastify__toast-container {
+    color: #999;
+  }
+  
+  .close-button:hover {
+    color: #666;
+  }
+  
+  /* Стилі для React Select */
+  .react-select-container {
+    width: 100%;
+  }
+  
+  .react-select__control {
+    padding: 0;
+  }
+  
+  .react-select__menu {
+    z-index: 9999; /* Забезпечує, що меню буде поверх інших елементів */
+  }
+  
+  .react-select__option--is-disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Стилі для опцій у React Select */
+  .option-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .status-icon {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  /* Стилі для Toastify */
+  .Toastify__toast-container {
     z-index: 9999; /* Високий z-index, щоб Toast були поверх інших елементів */
-}
-
-.Toastify__toast--success {
+  }
+  
+  .Toastify__toast--success {
     background: #4caf50;
     color: white;
-}
-
-.Toastify__toast--error {
+  }
+  
+  .Toastify__toast--error {
     background: #f44336;
     color: white;
-}
-
-.Toastify__toast--info {
+  }
+  
+  .Toastify__toast--info {
     background: #2196f3;
     color: white;
-}
-
-/* Анімація появи */
-@keyframes fadeIn {
+  }
+  
+  /* Анімація появи */
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(10px);
+      opacity: 0;
+      transform: translateY(10px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-/* Адаптивність */
-@media (max-width: 768px) {
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 768px) {
     .column {
-        flex: 1 1 100%; /* На мобільних кожна плитка займає всю ширину */
-        max-width: 100%;
+      flex: 1 1 100%; /* На мобільних кожна плитка займає всю ширину */
+      max-width: 100%;
     }
-
+  
     .tile {
-        padding: 8px; /* Менші відступи всередині плитки */
-        font-size: 12px; /* Зменшений текст */
+      padding: 8px; /* Менші відступи всередині плитки */
+      font-size: 12px; /* Зменшений текст */
     }
-
+  
     .settings-modal {
-        left: 10px;
-        width: 90%;
+      left: 10px;
+      width: 90%;
     }
-
+  
     .buttons-container {
-        flex-direction: row;
+      flex-direction: row;
     }
-
+  
     .add-case-button,
     .mark-completed-button,
     .defer-case-button {
-        flex: 1;
+      flex: 1;
     }
-
+  
     .region-selector {
-        width: 100%;
+      width: 100%;
     }
-
+  
     .region-dropdown {
-        width: 100%;
+      width: 100%;
     }
-}
-
-/* Додаткові Стилі */
-.error-message {
+  
+    .react-select-container {
+      width: 100%;
+    }
+  
+    .deferredCasesWindow {
+      width: 90%; /* Зменшення ширини для мобільних пристроїв */
+      height: auto; /* Автоматична висота */
+    }
+  
+    .casesList {
+      max-height: 300px; /* Максимальна висота для мобільних пристроїв */
+    }
+  }
+  
+  /* Додаткові Стилі */
+  .error-message {
     color: #f44336;
     font-weight: bold;
     margin-top: 10px;
-}
-
-.loading-message {
+  }
+  
+  .loading-message {
     color: #2196f3;
     font-weight: bold;
     margin-top: 10px;
-}
-
-.deferred-cases-container {
+  }
+  
+  .deferred-cases-container {
     /* Ваші додаткові стилі для контейнера відкладених випадків */
-}
-
-.deferred-cases-list {
+  }
+  
+  .deferred-cases-list {
     list-style-type: none;
     padding: 0;
-}
-
-.deferred-case-item {
+  }
+  
+  .deferred-case-item {
     margin-bottom: 5px;
-}
-
-.deferred-case-link {
+  }
+  
+  .deferred-case-link {
     text-decoration: none;
     color: #007bff;
     cursor: pointer;
-}
-
-.deferred-case-link:hover {
+  }
+  
+  .deferred-case-link:hover {
     text-decoration: underline;
-}
-
-.case-select {
+  }
+  
+  .case-select {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
-}
+  }
