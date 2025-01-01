@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import aktuelleAnamneseIcon from "../../../assets/iconFSPtable/aktuelleanamnese.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={aktuelleAnamneseIcon}
+            alt="Aktuelle Anamnese Icon"
             className={styles["tile-icon"]}
-            title="Aktuelle Anamnese"
         />
     );
 };
@@ -54,6 +56,12 @@ const AktuelleAnamnese = ({ parsedData }) => {
                 <li>
                     <strong>Vorherige medizinische Betreuung:</strong> {parsedData?.previousMedicalCare || ""}
                 </li>
+                <li>
+                    <strong>Probleme mit Funktionalität:</strong> {parsedData?.functionalIssues || ""}
+                </li>
+                <li>
+                    <strong>Andere begleitende Symptome:</strong> {parsedData?.additionalSymptoms || ""}
+                </li>
             </ul>
         </div>
     );
@@ -72,6 +80,8 @@ AktuelleAnamnese.propTypes = {
         painRelief: PropTypes.string,
         painAggravation: PropTypes.string,
         previousMedicalCare: PropTypes.string,
+        functionalIssues: PropTypes.string,
+        additionalSymptoms: PropTypes.string,
     }),
 };
 

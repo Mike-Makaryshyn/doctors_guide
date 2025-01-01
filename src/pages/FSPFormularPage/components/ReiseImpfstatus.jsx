@@ -7,12 +7,12 @@ const renderTileIcon = () => {
     return (
         <FaInfoCircle
             className={styles["tile-icon"]}
-            title="Familienanamnese"
+            title="Reise- und Impfstatus"
         />
     );
 };
 
-const Familienanamnese = ({ parsedData }) => {
+const ReiseImpfstatus = ({ parsedData = {} }) => {
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -21,27 +21,22 @@ const Familienanamnese = ({ parsedData }) => {
                 </div>
             </div>
             <ul className={styles["tile-list"]}>
-            <li>
-                    <strong>Генетичні хвороби:</strong> {parsedData?.geneticDiseases || ""}
+                <li>
+                    <strong>Вакцинація:</strong> {parsedData?.vaccination || ""}
                 </li>
                 <li>
-                    <strong>Eltern:</strong> {parsedData?.parents || ""}
+                    <strong>Подорожі:</strong> {parsedData?.travelHistory || ""}
                 </li>
-                <li>
-                    <strong>Geschwister:</strong> {parsedData?.siblings || ""}
-                </li>
-               
             </ul>
         </div>
     );
 };
 
-Familienanamnese.propTypes = {
+ReiseImpfstatus.propTypes = {
     parsedData: PropTypes.shape({
-        parents: PropTypes.string,
-        siblings: PropTypes.string,
-        geneticDiseases: PropTypes.string, // Додано нове поле
+        vaccination: PropTypes.string, // Поле для інформації про вакцинацію
+        travelHistory: PropTypes.string, // Поле для інформації про подорожі
     }),
 };
 
-export default Familienanamnese;
+export default ReiseImpfstatus;

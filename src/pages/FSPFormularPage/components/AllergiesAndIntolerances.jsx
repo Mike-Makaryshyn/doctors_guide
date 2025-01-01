@@ -31,6 +31,9 @@ const AllergiesAndIntolerances = ({ parsedData }) => {
                     <strong>Allergieauslöser:</strong> {parsedData?.allergyTriggers || ""}
                 </li>
                 <li>
+                    <strong>Pobutovi alergeni (Побутові алергени):</strong> {parsedData?.householdAllergens || ""}
+                </li>
+                <li>
                     <strong>Spezifische Unverträglichkeiten:</strong> {parsedData?.specificIntolerances || ""}
                 </li>
             </ul>
@@ -43,6 +46,7 @@ AllergiesAndIntolerances.propTypes = {
         specificMedicationAllergies: PropTypes.string,
         allergicReactionSymptoms: PropTypes.string,
         allergyTriggers: PropTypes.string,
+        householdAllergens: PropTypes.string, // Додано нове поле
         specificIntolerances: PropTypes.string,
     }),
 };

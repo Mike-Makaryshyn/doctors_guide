@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо вашу іконку
+import aktuelleAnamneseIcon from "../../../assets/iconFSPtable/VegetativeAnamnese.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={aktuelleAnamneseIcon}
+            alt="Vegetative Anamnese Icon"
             className={styles["tile-icon"]}
-            title="Vegetative Anamnese"
         />
     );
 };
@@ -21,6 +23,9 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                 </div>
             </div>
             <ul className={styles["tile-list"]}>
+                <li>
+                    <strong>Загальний стан:</strong> {parsedData?.generalCondition || ""}
+                </li>
                 <li>
                     <strong>Appetit:</strong> {parsedData?.appetite || ""}
                 </li>
@@ -64,6 +69,9 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Kältegefühl (Відчуття холоду):</strong> {parsedData?.coldFeeling || ""}
                 </li>
                 <li>
+                    <strong>Терморегуляція:</strong> {parsedData?.thermoregulation || ""}
+                </li>
+                <li>
                     <strong>Schlafen:</strong> {parsedData?.sleep || ""}
                 </li>
                 <li>
@@ -82,6 +90,7 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
 
 VegetativeAnamnese.propTypes = {
     parsedData: PropTypes.shape({
+        generalCondition: PropTypes.string,
         appetite: PropTypes.string,
         weight: PropTypes.string,
         thirst: PropTypes.string,
@@ -96,6 +105,7 @@ VegetativeAnamnese.propTypes = {
         shortnessOfBreath: PropTypes.string,
         hotFlashes: PropTypes.string,
         coldFeeling: PropTypes.string,
+        thermoregulation: PropTypes.string,
         sleep: PropTypes.string,
         sexualHistory: PropTypes.string,
         others: PropTypes.string,

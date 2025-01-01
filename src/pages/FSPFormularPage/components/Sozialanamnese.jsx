@@ -34,7 +34,13 @@ const Sozialanamnese = ({ parsedData = {} }) => {
                     <strong>Wohnsituation:</strong> {parsedData?.livingConditions || ""}
                 </li>
                 <li>
-                    <strong>Psychosomatische Anamnese:</strong> {parsedData?.psychosomaticHistory || ""}
+                    <strong>Psychosomatische Anamnese/Stress:</strong> {parsedData?.psychosomaticHistory || ""}
+                </li>
+                <li>
+                    <strong>Фізична активність:</strong> {parsedData?.physicalActivity || ""}
+                </li>
+                <li>
+                    <strong>Харчові звички:</strong> {parsedData?.dietaryHabits || ""}
                 </li>
             </ul>
         </div>
@@ -48,6 +54,8 @@ Sozialanamnese.propTypes = {
         children: PropTypes.string,
         livingConditions: PropTypes.string,
         psychosomaticHistory: PropTypes.string,
+        physicalActivity: PropTypes.string, // Додано нове поле
+        dietaryHabits: PropTypes.string, // Додано нове поле
     }),
 };
 

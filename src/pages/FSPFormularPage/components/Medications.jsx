@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпортуємо власну іконку
+import medicationsIcon from "../../../assets/iconFSPtable/medications.png";
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={medicationsIcon}
+            alt="Medikamentenanamnese Icon"
             className={styles["tile-icon"]}
-            title="Medikamentenanamnese"
         />
     );
 };

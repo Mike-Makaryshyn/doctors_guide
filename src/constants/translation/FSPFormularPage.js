@@ -1085,10 +1085,191 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
     `,
   },
   previousOperations: {
-    additionalInfo: ` `,
+    additionalInfo: `
+  ### **Frühere Operationen**
+  
+  Fragen Sie den Patienten nach Operationen, die in der Vergangenheit durchgeführt wurden. Dies ist wichtig, um mögliche langfristige Auswirkungen oder Komplikationen zu erkennen, die die aktuelle Gesundheit beeinflussen könnten.
+  
+  **Anleitung:**
+  
+  • Erfragen Sie alle relevanten Operationen, unabhängig davon, ob sie kürzlich oder vor Jahren durchgeführt wurden.
+  
+  • Achten Sie darauf, den Patienten nicht zu drängen, sondern ihm die Möglichkeit zu geben, ausführlich zu antworten.
+  
+  **Beispiele:**
+  
+  • "Hatten Sie in der Vergangenheit irgendwelche Operationen?"
+  
+  • "Könnten Sie mir bitte eine Liste der wichtigsten Operationen geben, die Sie hatten?"
+  
+  • "Gab es in Ihrer medizinischen Vorgeschichte Eingriffe, die für Ihre aktuelle Gesundheit von Bedeutung sein könnten?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
+  
+  • Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
+  
+  ---
+  
+  ### **Operationsverlauf und Komplikationen**
+  
+  Fragen Sie nach dem Verlauf der Operationen und ob es nach den Eingriffen Komplikationen oder ungewöhnliche Reaktionen gab. Dies hilft, mögliche Risiken für zukünftige Behandlungen oder Operationen zu erkennen.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach möglichen Komplikationen während oder nach der Operation.
+  
+  • Fragen Sie, ob der Patient nach der Operation besondere Pflege benötigt oder hatte.
+  
+  **Beispiele:**
+  
+  • "Gab es nach den Operationen Komplikationen oder Probleme?"
+  
+  • "Wurde nach der Operation eine spezielle Nachbehandlung durchgeführt?"
+  
+  • "Konnte die Operation ohne Probleme abgeschlossen werden?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: "Nach der Operation hatte ich einige Infektionen, aber die Heilung verlief schließlich gut."
+  
+  • Arzt: "Welche Behandlung haben Sie nach der Operation erhalten, und gab es noch andere Auswirkungen?"
+  
+  ---
+  
+  ### **Dauer des Krankenhausaufenthalts**
+  
+  Ermitteln Sie, wie lange der Patient nach der Operation im Krankenhaus bleiben musste, da dies Aufschluss über die Schwere der Operation und die Genesung gibt.
+  
+  **Anleitung:**
+  
+  • Fragen Sie nach der Dauer des Krankenhausaufenthalts nach der Operation, um den Schweregrad und den Heilungsprozess abzuschätzen.
+  
+  • Achten Sie auf Hinweise zu postoperativen Komplikationen, die die Krankenhausaufenthaltsdauer verlängert haben könnten.
+  
+  **Beispiele:**
+  
+  • "Wie lange mussten Sie nach der Operation im Krankenhaus bleiben?"
+  
+  • "Gab es besondere Gründe für eine längere Krankenhausaufenthaltsdauer?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: "Ich war nach der Operation insgesamt zwei Wochen im Krankenhaus."
+  
+  • Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
+  
+  ---
+  
+  ### **Beispielgespräch für Frühere Operationen**
+  
+  Arzt: "Könnten Sie mir bitte von früheren Operationen berichten, die Sie hatten?"
+  
+  Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
+  
+  Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
+  
+  Patient: "Ich hatte starke Bauchschmerzen und es wurde eine Notoperation durchgeführt. Nach der Operation gab es einige Infektionen, aber sie haben mich behandelt, und die Heilung verlief schließlich gut."
+  
+  Arzt: "Gab es nach der Operation Komplikationen oder besondere Nachbehandlungen?"
+  
+  Patient: "Ja, ich musste noch einige Zeit Antibiotika nehmen, aber sonst verlief alles gut."
+  
+  Arzt: "Wie lange mussten Sie im Krankenhaus bleiben?"
+  
+  Patient: "Insgesamt war ich zwei Wochen dort."
+  
+  Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
+  
+  Patient: "Es war eher eine reguläre Erholungszeit, aber die Ärzte wollten sicherstellen, dass keine weiteren Probleme auftauchen."
+  
+  ---
+  
+  ### **Tipps zur Gesprächsführung**
+  
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis und Sensibilität für vergangene Operationen und eventuelle Komplikationen.
+     Beispiel: "Ich verstehe, dass Operationen eine große Belastung sein können. Wir werden dafür sorgen, dass alles gut verläuft."
+  
+  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache und bitten Sie den Patienten, Details zu nennen.
+     Beispiel: "Könnten Sie mir genau sagen, was bei dieser Operation passiert ist?"
+  
+  3. **Aktives Zuhören:** Bestätigen Sie, was der Patient gesagt hat, um Vertrauen aufzubauen.
+     Beispiel: "Verstehe, Sie hatten nach der Operation einige Infektionen. Lassen Sie uns sehen, wie wir Sie unterstützen können."
+  
+  4. **Offene Fragen stellen:** Stellen Sie Fragen, die dem Patienten die Möglichkeit geben, mehr zu erzählen.
+     Beispiel: "Gab es noch andere Herausforderungen oder Komplikationen nach der Operation?"
+  
+  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um seine Geschichte zu erzählen, ohne ihn zu unterbrechen.
+  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um Missverständnisse zu vermeiden.
+     Beispiel: "Also, nach der Operation mussten Sie zwei Wochen im Krankenhaus bleiben, und es gab einige Infektionen, die behandelt wurden, richtig?"
+    `,
   },
   medications: {
-    additionalInfo: ` `,
+    additionalInfo: `
+    ### **Medikamente**
+  
+    #### **Allgemeine Medikamenteneinnahme**
+    Fragen Sie den Patienten nach allen aktuell eingenommenen Medikamenten, um ein umfassendes Bild der medikamentösen Behandlung und möglicher Wechselwirkungen zu erhalten.
+  
+    **Anleitung:**
+    • Erfragen Sie, ob der Patient regelmäßig Medikamente einnimmt.
+    • Achten Sie darauf, sowohl rezeptpflichtige als auch frei verkäufliche Medikamente zu berücksichtigen.
+    • Fragen Sie nach der Häufigkeit der Einnahme und dem Zweck der Medikation.
+  
+    **Beispiele:**
+    • "Nehmen Sie derzeit regelmäßig Medikamente ein?"
+    • "Welche Medikamente nehmen Sie täglich?"
+    • "Gibt es Medikamente, die Sie gelegentlich einnehmen, wie zum Beispiel Schmerzmittel oder Nahrungsergänzungsmittel?"
+  
+    **Mögliche Antworten und Follow-ups:**
+    • Patient: "Ja, ich nehme täglich Blutdruckmedikamente."
+    • Arzt: "Welche Medikamente genau nehmen Sie zur Blutdrucksenkung, und in welcher Dosierung?"
+  
+    ---
+  
+    #### **Detaillierte Medikamenteninformationen**
+    Fragen Sie nach spezifischen Informationen zu den einzelnen Medikamenten, die der Patient einnimmt, um die korrekte Anwendung und mögliche Nebenwirkungen oder Wechselwirkungen zu verstehen.
+  
+    **Anleitung:**
+    • Erkundigen Sie sich nach den spezifischen Medikamenten, einschließlich Namen, Dosierung, Häufigkeit und Behandlungsdauer.
+    • Fragen Sie nach möglichen Nebenwirkungen oder früheren Reaktionen auf Medikamente.
+    • Achten Sie darauf, die Patienten zu fragen, ob sie neue Medikamente verschrieben bekommen haben oder ob es Änderungen in der Medikation gab.
+  
+    **Beispiele:**
+    • "Könnten Sie mir bitte die Namen der Medikamente nennen, die Sie aktuell einnehmen?"
+    • "Wie oft müssen Sie diese Medikamente einnehmen, und in welcher Dosis?"
+    • "Haben Sie irgendwelche Nebenwirkungen bemerkt, seitdem Sie diese Medikamente einnehmen?"
+    • "Gab es kürzlich Änderungen in Ihrer Medikation?"
+  
+    **Mögliche Antworten und Follow-ups:**
+    • Patient: "Ich nehme 5 mg Ramipril einmal täglich."
+    • Arzt: "Haben Sie in der letzten Zeit irgendwelche Nebenwirkungen wie Schwindel oder Husten bemerkt, die mit Ramipril in Verbindung stehen könnten?"
+    • Patient: "Nein, bisher hatte ich keine Beschwerden mit diesem Medikament."
+  
+    ---
+  
+    #### **Beispielgespräch für Medikamente**
+    Arzt: "Nehmen Sie derzeit regelmäßig Medikamente ein?"
+    Patient: "Ja, ich nehme jeden Tag Medikamente gegen Bluthochdruck und auch gelegentlich Schmerzmittel."
+    Arzt: "Welche Medikamente nehmen Sie zur Blutdrucksenkung?"
+    Patient: "Ich nehme 5 mg Ramipril täglich."
+    Arzt: "Haben Sie in letzter Zeit Nebenwirkungen bemerkt, wie Schwindel oder Husten?"
+    Patient: "Nein, alles ist gut."
+    Arzt: "Welche Schmerzmittel nehmen Sie gelegentlich?"
+    Patient: "Ich nehme Ibuprofen bei Kopf- oder Rückenschmerzen."
+    Arzt: "Wie häufig nehmen Sie Ibuprofen und in welcher Dosis?"
+    Patient: "Meistens einmal täglich bei Bedarf, 400 mg."
+  
+    #### **Tipps zur Gesprächsführung:**
+    1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die Medikamentengeschichte des Patienten. Beispiel: "Es ist gut, dass Sie Ihre Medikamente regelmäßig einnehmen. Wir müssen sicherstellen, dass alles gut zusammenpasst."
+    2. **Klarheit und Einfachheit:** Verwenden Sie einfache Sprache, um sicherzustellen, dass der Patient die Fragen versteht. Beispiel: "Nehmen Sie ein Medikament für Ihren Blutdruck? Wie heißt es?"
+    3. **Aktives Zuhören:** Bestätigen Sie die Informationen, die der Patient gibt, und stellen Sie gegebenenfalls Nachfragen. Beispiel: "Verstehe, Sie nehmen Ramipril. Wie geht es Ihnen damit?"
+    4. **Offene Fragen stellen:** Ermutigen Sie den Patienten, alle Medikamente zu nennen, die er einnimmt, auch Nahrungsergänzungsmittel. Beispiel: "Gibt es noch andere Medikamente oder Ergänzungsmittel, die Sie nehmen?"
+    5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um alle Medikamente zu nennen, die er einnimmt.
+    6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben. Beispiel: "Also, Sie nehmen Ramipril 5 mg täglich und gelegentlich Ibuprofen 400 mg, korrekt?"
+    `,
   },
 
   allergiesAndIntolerances: {
@@ -1100,14 +1281,83 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   },
 
   familienanamnese: {
-    additionalInfo: ` `,
+    additionalInfo: `
+  ### **Relevante familiäre Krankheiten**
+  
+  #### **Eltern**
+  Fragen Sie nach Erkrankungen, die bei den Eltern des Patienten bekannt sind, da viele gesundheitliche Probleme genetisch bedingt oder familiär gehäuft auftreten können. Dies hilft, mögliche Risikofaktoren für den Patienten zu erkennen.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach bekannten Erkrankungen bei den Eltern des Patienten.
+  • Achten Sie auf häufige Erkrankungen wie Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder neurodegenerative Erkrankungen.
+  
+  **Beispiele:**
+  • "Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?"
+  • "Leiden Ihre Eltern an chronischen Krankheiten wie Diabetes, Bluthochdruck oder Herzkrankheiten?"
+  • "Gab es in Ihrer Familie Fälle von Krebs oder anderen genetischen Erkrankungen?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  • Patient: "Mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes."
+  • Arzt: "Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?"
+  
+  #### **Geschwister**
+  Fragen Sie nach gesundheitlichen Problemen bei den Geschwistern des Patienten, da auch hier genetische Faktoren oder familiäre Gesundheitsmuster eine Rolle spielen können. Die Krankengeschichte der Geschwister kann Aufschluss über familiäre Häufungen von Erkrankungen geben.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach bekannten Erkrankungen oder gesundheitlichen Problemen bei den Geschwistern des Patienten.
+  • Achten Sie auf familiär gehäufte Erkrankungen, die möglicherweise auch den Patienten betreffen könnten.
+  
+  **Beispiele:**
+  • "Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?"
+  • "Gibt es bei Ihren Geschwistern ähnliche Erkrankungen wie bei Ihnen oder Ihren Eltern?"
+  • "Leiden Ihre Geschwister an chronischen Krankheiten wie Asthma, Arthritis oder Krebs?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  • Patient: "Mein Bruder hat Asthma, und meine Schwester leidet an Migräne."
+  • Arzt: "Gibt es in Ihrer Familie andere gesundheitliche Probleme, die auffällig sind, oder Krankheiten, die vererbt werden können?"
+  
+  #### **Genetische Erkrankungen**
+  Ermitteln Sie, ob es genetische Erkrankungen in der Familie gibt, die für den Patienten von Bedeutung sein könnten. Bestimmte Erkrankungen, wie etwa erbliche Krebsarten oder Stoffwechselstörungen, können familiär gehäuft auftreten.
+  
+  **Anleitung:**
+  • Fragen Sie nach bekannten genetischen Erkrankungen in der Familie, die beim Patienten ein erhöhtes Risiko für ähnliche Erkrankungen darstellen könnten.
+  • Achten Sie auf Hinweise auf erblich bedingte Krankheiten, die eine Rolle in der Krankheitsgeschichte des Patienten spielen könnten.
+  
+  **Beispiele:**
+  • "Gibt es in Ihrer Familie bekannte genetische Erkrankungen, wie zum Beispiel Huntington, Mukoviszidose oder Hämophilie?"
+  • "Haben andere Familienmitglieder in jüngeren Jahren schwere Erkrankungen wie Krebs oder Herzkrankheiten entwickelt?"
+  • "Leiden mehrere Familienmitglieder an den gleichen Erkrankungen, die genetische Ursachen haben könnten?"
+  
+  **Mögliche Antworten und Follow-ups:**
+  • Patient: "In meiner Familie gibt es Fälle von Brustkrebs, die bei mehreren Frauen aufgetreten sind."
+  • Arzt: "Wie alt waren die betroffenen Familienmitglieder, und gab es dabei spezielle Erbkrankheiten oder bekannte Risikofaktoren?"
+  
+  #### **Beispielgespräch für relevante familiäre Krankheiten**
+  Arzt: "Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?"
+  Patient: "Ja, mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes."
+  Arzt: "Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?"
+  Patient: "Mein Vater bekam mit 50 Jahren einen Herzinfarkt und starb mit 65 Jahren. Meine Mutter hat seit ihren 60ern Diabetes und nimmt Medikamente dagegen."
+  Arzt: "Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?"
+  Patient: "Ja, mein Bruder hat Asthma, und meine Schwester leidet an Migräne."
+  Arzt: "Gibt es in Ihrer Familie andere gesundheitliche Probleme oder Krankheiten, die vererbt werden können?"
+  Patient: "Ja, in der Familie meiner Mutter gab es Fälle von Brustkrebs bei mehreren Frauen."
+  Arzt: "Das ist wichtig zu wissen, wir können Ihre Risikofaktoren besser einschätzen und entsprechende Vorsorgemaßnahmen einleiten."
+  
+  #### **Tipps zur Gesprächsführung**
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die familiären gesundheitlichen Herausforderungen und sensibilisieren Sie den Patienten für die Bedeutung dieser Informationen. Beispiel: "Es ist wichtig, diese Informationen zu teilen, damit wir Ihre gesundheitlichen Risiken besser verstehen."
+  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache, um sicherzustellen, dass der Patient versteht, warum diese Informationen wichtig sind. Beispiel: "Könnten Sie mir erzählen, ob in Ihrer Familie Krankheiten auftreten, die vererbt werden könnten?"
+  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und stellen Sie gegebenenfalls gezielte Nachfragen. Beispiel: "Verstehe, Ihre Mutter hatte Diabetes. Gab es bei ihr auch andere gesundheitliche Probleme, die für uns relevant sein könnten?"
+  4. **Offene Fragen stellen:** Fördern Sie den Patienten, mehr über die gesundheitlichen Geschichten der Familienmitglieder zu erzählen. Beispiel: "Gab es noch andere ernsthafte Erkrankungen in Ihrer Familie, die wir kennen sollten?"
+  5. **Geduld haben:** Geben Sie dem Patienten ausreichend Zeit, um die relevanten familiären Gesundheitsinformationen zu teilen.
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben. Beispiel: "Also, Ihr Vater hatte Herzkrankheiten, und Ihre Mutter hat Diabetes. Ihre Geschwister haben Asthma und Migräne. Haben Sie noch weitere familiäre Gesundheitsinformationen?"
+    `,
   },
 
   sozialanamnese: {
     additionalInfo: ` `,
   },
+
   preliminaryDiagnosis: {
-    
     additionalInfo: ` Попередній діагноз `,
   },
   differentialDiagnosis: {
@@ -1131,10 +1381,8 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
 - Використовуйте послідовний підхід для виключення малоймовірних діагнозів.
 - Запишіть всі діагностичні результати.
     `,
-},
+  },
 
-
-  
   button: {
     selectDataSource: "Вибрати джерело даних",
   },

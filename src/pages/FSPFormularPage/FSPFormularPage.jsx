@@ -854,21 +854,22 @@ const FSPFormularPage = () => {
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("zusammenfassung")}
               >
-                <h3 className={styles["tile-title"]}>Підсумок</h3>
+                <h3 className={styles["tile-title"]}></h3>
                 <Zusammenfassung parsedData={parsedData} />{" "}
                 {/* Використовуємо компонент */}
               </div>
-            </div>
-
-            {/* Колонка 3 */}
-            <div className={styles["column"]} key="column-3">
-            <div
+              <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("vorerkrankungen")}
               >
                 <h3 className={styles["tile-title"]}>Попередні Хвороби</h3>
                 <Vorerkrankungen parsedData={parsedData} />
               </div>
+            </div>
+
+            {/* Колонка 3 */}
+            <div className={styles["column"]} key="column-3">
+      
              <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("previousOperations")}
@@ -900,11 +901,6 @@ const FSPFormularPage = () => {
                 <h3 className={styles["tile-title"]}>Ноксени</h3>
                 <Noxen parsedData={parsedData} />
               </div>
-            </div>
-
-            {/* Колонка 4 */}
-            <div className={styles["column"]} key="column-4">
-              
               <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("familienanamnese")}
@@ -914,6 +910,12 @@ const FSPFormularPage = () => {
                 </h3>
                 <Familienanamnese parsedData={parsedData} />
               </div>
+            </div>
+
+            {/* Колонка 4 */}
+            <div className={styles["column"]} key="column-4">
+              
+              
               <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("sozialanamnese")}

@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпорт вашої іконки
+import personalInformationIcon from "../../../assets/iconFSPtable/personal-information.png"; 
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={personalInformationIcon}
+            alt="Personal Information Icon"
             className={styles["tile-icon"]}
-            title="Persönliche Daten"
         />
     );
 };
@@ -28,7 +30,7 @@ const PersonalData = ({ parsedData }) => {
                     <strong>Namen:</strong> {parsedData?.surname || ""}
                 </li>
                 <li>
-                    <strong>Geburtsdatum/Alter:</strong> 
+                    <strong>Geburtsdatum/Alter:</strong>
                     {parsedData?.birthdate || ""} 
                     {parsedData?.age ? ` / ${parsedData.age}` : ""}
                 </li>
@@ -55,7 +57,6 @@ PersonalData.propTypes = {
         height: PropTypes.string,
         weight: PropTypes.string,
         gender: PropTypes.string,
-        fallType: PropTypes.string,
     }),
 };
 
