@@ -62,8 +62,8 @@ const HESSEN_DATA = [
             instrumentalExamination: "Sono-Abdomen, CT-Abdomen, Koloskopie", // Instrumentelle Untersuchungen
             possibleDiagnoses: "Divertikulitis, Volvulus, Colitis ulcerosa, Morbus Crohn", // Differenzialdiagnosen
             differentiation: "Appendizitis ausgeschlossen (Operation im Kindesalter)", // Ausschlussdiagnosen
-            summary: "Der 64-jährige Patient stellt sich mit postprandialen krampfartigen Bauchschmerzen im linken Unterbauch vor, begleitet von Flatulenz und wechselnden Stuhlgewohnheiten (Diarrhö/Obstipation seit 5 Jahren). Vorgeschichte umfasst Hypertonie, Diabetes mellitus, Meningoenzephalitis sowie eine Koloskopie mit Polypektomie vor 5 Jahren. Raucher (30 PY), moderater Alkoholkonsum. Verdacht auf Divertikulitis, CT-Abdomen und Koloskopie werden zur Diagnosesicherung empfohlen." // Zusammenfassung
-           // examinerquestions: "Appendizitis Kindesalter)", // Ausschlussdiagnosen
+            summary: "Der 64-jährige Patient stellt sich mit postprandialen krampfartigen Bauchschmerzen im linken Unterbauch vor, begleitet von Flatulenz und wechselnden Stuhlgewohnheiten (Diarrhö/Obstipation seit 5 Jahren). Vorgeschichte umfasst Hypertonie, Diabetes mellitus, Meningoenzephalitis sowie eine Koloskopie mit Polypektomie vor 5 Jahren. Raucher (30 PY), moderater Alkoholkonsum. Verdacht auf Divertikulitis, CT-Abdomen und Koloskopie werden zur Diagnosesicherung empfohlen.", // Zusammenfassung
+            examinerQuestions: "Appendizitis Kindesalter)", // Ausschlussdiagnosen
     },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];

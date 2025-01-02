@@ -77,6 +77,91 @@ Nach der Erfassung der persönlichen Daten, des aktuellen Anamnese und des veget
 
 
 `,
+
+      defaultExaminerQuestions: `
+### **E examiner's Questions: Allgemeine Hinweise und Vorbereitung**
+
+#### **Überblick der Fragen des Prüfers**
+
+Die Fragen des Prüfers in der Fachsprachprüfung sollen Ihr Wissen und Ihre Fähigkeit, medizinische Themen zu erklären, unter Beweis stellen. Diese Fragen decken eine breite Palette von Themen ab, die sowohl Ihre Fachkenntnisse als auch Ihre Sprachkompetenz prüfen.
+
+**Anleitung:**
+- Die Fragen können sich auf die Diagnose, Behandlung, Untersuchungsmethoden oder medizinische Verfahren beziehen.
+- Achten Sie darauf, klar und präzise zu antworten und komplexe medizinische Begriffe verständlich zu erklären.
+- In einigen Fällen werden Sie auch gebeten, das Gespräch mit dem Patienten zu simulieren, wobei der Fokus auf einer klaren Kommunikation und korrekten medizinischen Informationen liegt.
+
+**Beispiele für Fragen:**
+- "Könnten Sie mir bitte den Ablauf der Durchführung einer endoskopischen Untersuchung erklären?"
+- "Wie würden Sie einem Patienten erklären, was bei einer Chemotherapie passiert?"
+- "Was sind die Hauptsymptome bei einer chronischen Niereninsuffizienz?"
+- "Könnten Sie die wichtigsten Risiken einer bestimmten medizinischen Behandlung erläutern?"
+
+**Mögliche Antworten und Follow-ups:**
+- **Prüfer:** "Könnten Sie die genaue Vorgehensweise bei einer Herzkatheteruntersuchung beschreiben?"
+- **Prüfling:** "Die Herzkatheteruntersuchung beginnt mit einer lokalen Betäubung des Bereichs, in dem der Katheter eingeführt wird. Danach wird der Katheter über die Arterie in das Herz geführt, um Bilder zu machen und Informationen über den Zustand der Blutgefäße zu sammeln."
+- **Prüfer:** "Welche Risiken sind mit diesem Verfahren verbunden?"
+- **Prüfling:** "Zu den Risiken gehören Infektionen, Blutgerinnselbildung und seltene Komplikationen wie Herzrhythmusstörungen."
+
+---
+
+#### **Tipps für die Prüfung**
+
+1. **Verständlich und einfach bleiben:**
+   - Vermeiden Sie unnötige Fachbegriffe, wenn der Prüfer nicht danach fragt. Ihre Antwort sollte verständlich und klar sein.
+   - Beispiel: "Lassen Sie mich das für Sie in einfacheren Worten erklären."
+
+2. **Konzentration auf die Kernthemen:**
+   - Gehen Sie auf die zentralen Punkte der Frage ein, ohne sich in Details zu verlieren.
+   - Beispiel: "Die wichtigsten Punkte bei dieser Untersuchung sind..."
+
+3. **Vergewissern Sie sich, dass Sie alles verstanden haben:**
+   - Fragen Sie nach, wenn eine Frage unklar ist. Es ist besser, nachzufragen, als etwas ungenau zu beantworten.
+   - Beispiel: "Entschuldigung, könnten Sie die Frage noch einmal wiederholen?"
+
+4. **Offenheit und Bereitschaft zur Vertiefung:**
+   - Wenn Sie sicher sind, dass Ihre Antwort vollständig ist, bieten Sie zusätzliche Informationen an, um zu zeigen, dass Sie das Thema beherrschen.
+   - Beispiel: "Ich könnte noch mehr über die Behandlungsmöglichkeiten sagen, wenn Sie interessiert sind."
+
+---
+
+#### **Beispielgespräch für die Beantwortung der Prüfungsfragen**
+
+**Prüfer:** "Könnten Sie mir bitte erklären, wie eine Lungenfunktionstest durchgeführt wird?"
+**Prüfling:** "Ja, gerne. Ein Lungenfunktionstest wird durchgeführt, um die Atemkapazität des Patienten zu messen. Der Patient muss tief einatmen und dann so schnell wie möglich ausatmen. Dabei wird die Menge an Luft gemessen, die die Lungen in einer bestimmten Zeit ausstoßen können."
+**Prüfer:** "Und was wären die Hauptindikationen für einen solchen Test?"
+**Prüfling:** "Dieser Test wird oft bei Patienten mit Atemwegserkrankungen wie Asthma oder COPD durchgeführt, um den Schweregrad der Erkrankung zu beurteilen."
+
+---
+
+#### **Zusätzliche Fragen zur Vertiefung**
+
+**Zu spezifischen medizinischen Verfahren:**
+- "Könnten Sie den Ablauf einer Magnetresonanztomographie (MRT) erklären?"
+- "Was ist der Unterschied zwischen einer Ultraschalluntersuchung und einer Computertomographie (CT)?"
+
+**Zur Kommunikation mit dem Patienten:**
+- "Wie würden Sie einem Patienten, der Angst vor einer Operation hat, erklären, was während des Eingriffs passieren wird?"
+- "Wie gehen Sie mit einem Patienten um, der sich weigert, eine empfohlene Behandlung zu akzeptieren?"
+
+**Zur Diagnose und Behandlung:**
+- "Was sind die typischen Symptome einer Grippe, und wie unterscheiden sie sich von denen einer Erkältung?"
+- "Könnten Sie die Behandlungsmöglichkeiten für eine chronische Erkrankung wie Diabetes erläutern?"
+
+**Zur Prävention:**
+- "Welche Impfungen würden Sie einem Patienten empfehlen, der in tropische Gebiete reisen möchte?"
+- "Wie würden Sie einem Patienten raten, sein Risiko für Herzkrankheiten zu senken?"
+
+---
+### **Zusätzliche Hinweise für die Prüfung**
+
+1. **Geduld haben:** Wenn der Prüfer Ihnen eine Frage stellt, nehmen Sie sich Zeit, um Ihre Antwort zu formulieren. Eine gut überlegte Antwort ist besser als eine hastige.
+   
+2. **Verständnis zeigen:** Wenn der Prüfer eine detaillierte Frage stellt, stellen Sie sicher, dass Sie den Inhalt vollständig verstanden haben. Beispiel: "Lassen Sie mich die Frage noch einmal in meinen eigenen Worten wiederholen."
+
+3. **Beispielhafte Antworten geben:** Um Ihre Antwort zu untermauern, können Sie Beispiele oder Szenarien verwenden. Beispiel: "Angenommen, der Patient hat bereits Symptome einer Grippe, dann..."
+
+4. **Offen für weiterführende Fragen bleiben:** Sehen Sie die Prüfung als eine Gelegenheit, Ihr Wissen zu erweitern. Antworten Sie gerne ausführlich, wenn es der Prüfer verlangt.
+`,
     },
   },
   personalData: {

@@ -23,10 +23,8 @@ import DifferentialDiagnosis from "./components/DifferentialDiagnosis";
 import ProposedProcedures from "./components/ProposedProcedures";
 import AdditionalInfoModal from "./components/AdditionalInfoModal";
 import UserCasesModal from "./components/UserCasesModal";
-
-// Додані нові імпорти
-import ReiseImpfstatus from "./components/ReiseImpfstatus";
 import ExaminerQuestions from "./components/ExaminerQuestions";
+import ReiseImpfstatus from "./components/ReiseImpfstatus"; // Додано імпорт
 
 // Імпорт бібліотек для Markdown
 import ReactMarkdown from "react-markdown";
@@ -287,7 +285,7 @@ const FSPFormularPage = () => {
       console.log("Вибраний випадок:", selectedItem);
       console.log("Перед парсингом:", additionalInfo);
 
-      // Встановлення parsedData без summary
+      // Встановлення parsedData без summary та examinerQuestions
       setParsedData(selectedItem);
       console.log("Parsed Data після парсингу:", selectedItem);
 
@@ -313,6 +311,20 @@ const FSPFormularPage = () => {
       } else {
         console.warn("Parsed Data не містить summary:", selectedItem);
       }
+
+      // Встановлюємо examinerQuestions тільки якщо воно існує
+      if (selectedItem.examinerQuestions) {
+        setParsedData((prevData) => ({
+          ...prevData,
+          examinerQuestions: selectedItem.examinerQuestions,
+        }));
+        console.log("Parsed Data з examinerQuestions:", {
+          ...selectedItem,
+          examinerQuestions: selectedItem.examinerQuestions,
+        });
+      } else {
+        console.warn("Parsed Data не містить examinerQuestions:", selectedItem);
+      }
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
       setErrorState("Сталася помилка під час завантаження даних.");
@@ -333,47 +345,34 @@ const FSPFormularPage = () => {
 
     console.log("handleOpenInfoModal викликано з type:", type);
 
-    // Якщо тип - 'zusammenfassung', використовуємо parsedData.summary або defaultSummary
     if (type === "zusammenfassung") {
-      // Використовуємо лише parsedData.summary
       infoText =
         parsedData.summary ||
         FSPFormularPageData.modal.additionalInfo.defaultSummary ||
         "Підсумок не доступний.";
       console.log("Отримано summary для підсумку:", infoText);
-    }
-
-    // Якщо тип - 'examinerQuestions', використовуємо відповідний текст
-    else if (type === "examinerQuestions") {
+    } else if (type === "examinerQuestions") {
       infoText =
-        FSPFormularPageData.modal.additionalInfo.examinerQuestions ||
+        parsedData.examinerQuestions || // Використовуємо дані з parsedData
+        FSPFormularPageData.modal.additionalInfo.defaultExaminerQuestions || // Використовуємо дефолтний текст
         "Додаткова інформація для запитань екзаменаторів недоступна.";
       console.log("Отримано інформацію для ExaminerQuestions:", infoText);
-    }
-
-    // Пріоритет: специфічні дані (FallSpecificData)
-    else if (fallType && FallSpecificData[fallType]?.[type]?.additionalInfo) {
+    } else if (fallType && FallSpecificData[fallType]?.[type]?.additionalInfo) {
       infoText = FallSpecificData[fallType][type].additionalInfo;
       console.log("Отримано специфічну додаткову інформацію:", infoText);
-    }
-    // Загальні тексти з FSPFormularPageData
-    else if (FSPFormularPageData[type]?.additionalInfo) {
+    } else if (FSPFormularPageData[type]?.additionalInfo) {
       infoText = FSPFormularPageData[type].additionalInfo;
       console.log("Отримано загальну додаткову інформацію:", infoText);
-    }
-    // Текст за замовчуванням
-    else {
+    } else {
       infoText = "Додаткова інформація недоступна.";
       console.warn(`Невідомий тип: ${type}`);
     }
 
-    // Перевірка на порожні або некоректні дані
     if (!infoText || infoText.trim() === "") {
       console.warn("Некоректні дані для модального вікна:", infoText);
       infoText = "Інформація недоступна.";
     }
 
-    // Встановлення даних модального вікна
     setAdditionalInfo({ text: infoText, type });
     // setInfoModal(true); // Видалено для вирішення асинхронності
 
@@ -892,7 +891,7 @@ const FSPFormularPage = () => {
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("zusammenfassung")}
               >
-                <h3 className={styles["tile-title"]}>Zusammenfassung</h3>
+                <h3 className={styles["tile-title"]}></h3>
                 <Zusammenfassung parsedData={parsedData} />
               </div>
               <div
@@ -984,7 +983,7 @@ const FSPFormularPage = () => {
                 className={styles["tile"]}
                 onClick={handleExaminerQuestionsClick}
               >
-                <h3 className={styles["tile-title"]}>Запитання екзаменаторів</h3>
+                <h3 className={styles["tile-title"]}></h3>
                 <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
               </div>
             </div>
@@ -1009,8 +1008,10 @@ const FSPFormularPage = () => {
         isOpen={infoModal}
         onClose={() => setInfoModal(false)}
         title={
-          additionalInfo.type
-            ? FSPFormularPageData.modal.additionalInfo.title
+          additionalInfo.type === "zusammenfassung"
+            ? "Підсумок"
+            : additionalInfo.type === "examinerQuestions"
+            ? "Запитання екзаменатора"
             : "Додаткова інформація"
         }
         additionalInfo={additionalInfo}

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./TileContainer.module.scss"; // Універсальні стилі
+import styles from "./TileContainer.module.scss"; // Всі стилі через CSS модулі
 
 const ExaminerQuestions = ({ onQuestionClick }) => {
     const handleTileClick = () => {
@@ -9,7 +9,7 @@ const ExaminerQuestions = ({ onQuestionClick }) => {
 
     return (
         <div
-            className={styles["examiner-questions"]}
+            className={styles["examiner-questions"]} // Використовуємо клас зі стилями
             onClick={handleTileClick}
             role="button"
             tabIndex={0}
@@ -18,9 +18,8 @@ const ExaminerQuestions = ({ onQuestionClick }) => {
                     handleTileClick();
                 }
             }}
-            style={{ backgroundColor: "blue", width: "90%" }} // Додаємо ширину та фон
         >
-            <p>Запитання екзаменаторів</p>
+            <p className={styles["examiner-text"]}>Fragen</p> {/* Текст по центру */}
         </div>
     );
 };

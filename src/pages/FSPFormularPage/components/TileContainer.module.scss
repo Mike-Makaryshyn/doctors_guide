@@ -1,20 +1,20 @@
-/* Использование CSS-переменных для цветов и размеров */
+/* Загальні змінні */
 :root {
-    --color-primary: #f9f9f9; /* Основной цвет фона */
-    --color-secondary: #ffcccc; /* Цвет для специальных элементов */
-    --color-border: #ddd; /* Цвет границ */
-    --color-text: #000; /* Основной цвет текста */
-    --color-shadow: rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
-    --color-shadow-hover: rgba(0, 0, 0, 0.2); /* Тень при наведении */
-    --border-radius: 10px; /* Округление углов */
-    --icon-top: 10px; /* Отступ иконки сверху */
-    --icon-right: 10px; /* Отступ иконки справа */
+    --color-primary: #f9f9f9; /* Основний колір фону */
+    --color-secondary: #ffcccc; /* Спеціальний колір для елементів */
+    --color-border: #ddd; /* Колір для меж */
+    --color-text: #000; /* Основний колір тексту */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Тінь для всіх елементів */
+    --color-shadow-hover: rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
+    --border-radius: 10px; /* Заокруглені кути */
+    --icon-top: 10px; /* Відступ для іконки з верхнього боку */
+    --icon-right: 10px; /* Відступ для іконки з правого боку */
     --icon-size: 40px;
 }
 
-/* Основной стиль плитки */
+/* Основний стиль плитки */
 .tile {
-    position: relative; /* Для позиционирования дочерних элементов */
+    position: relative;
     padding: 3px;
     margin: 0.625rem;
     border: 1px solid var(--color-border);
@@ -24,33 +24,59 @@
     box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    overflow: hidden; /* Обрезка содержимого */
+    overflow: hidden;
 }
 
+/* Вібрація плиток для мобільних пристроїв */
+@media (max-width: 768px) {
+    .tile {
+        animation: vibrate 1s ease-out;
+    }
+
+    /* Анімація вібрації */
+    @keyframes vibrate {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(5px);
+        }
+        75% {
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Ефект плитки при наведенні */
 .tile:hover {
-    transform: scale(1.05); /* Эффект увеличения при наведении */
+    transform: scale(1.05);
     box-shadow: 0 0.25rem 0.5rem var(--color-shadow-hover);
 }
 
-/* Контейнер для иконки */
+/* Стиль для плиткової іконки */
 .tile-icon-container {
-    position: absolute; /* Позволяет задавать точное расположение */
-    top: var(--icon-top); /* Использование переменных для гибкости */
+    position: absolute;
+    top: var(--icon-top);
     right: var(--icon-right);
-    z-index: 10; /* Иконка отображается выше содержимого */
+    z-index: 10;
 }
 
 .tile-header {
-   position: absolute;
-   right: -6px;
-   top: -5px;
+    position: absolute;
+    right: -6px;
+    top: -5px;
 }
 
-/* Общий стиль иконки */
 .tile-icon {
-    width: 20px; /* Встановіть потрібний розмір */
+    width: 20px;
     height: 20px;
-    object-fit: contain; /* Забезпечує правильне масштабування іконки */
+    object-fit: contain;
     position: absolute;
     top: var(--icon-top);
     right: var(--icon-right);
@@ -60,50 +86,41 @@
 
 /* Анімація при наведенні на іконку */
 .tile-icon:hover {
-    transform: scale(1.2); /* Легке збільшення */
-    color: #1abc9c; /* Зміна кольору при наведенні */
-}
-
-/* Модификаторы для иконки */
-.tile-icon--specific {
-    color: green; /* Цвет для специфических данных */
-}
-
-.tile-icon--general {
-    color: rgb(209, 155, 155); /* Цвет для общих данных */
+    transform: scale(1.2);
+    color: #1abc9c;
 }
 
 /* Заголовок плитки */
 .tile-title {
-    font-size: 1.125rem; /* Размер шрифта заголовка */
-    font-weight: bold; /* Жирное выделение */
+    font-size: 1.125rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Контейнер для текста плитки */
+/* Контейнер для тексту плитки */
 .personal-data {
-    position: relative; /* Базовое позиционирование */
+    position: relative;
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     padding: 15px;
     margin: 10px;
-    background-color: white; /* Белый фон для текстовых элементов */
+    background-color: white;
 }
 
-/* Стили для списков внутри плитки */
+/* Список для плитки */
 .tile-list {
-    list-style: none; /* Удаление стандартных маркеров списка */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .tile-list li {
-    margin-bottom: 5px; /* Отступ между элементами списка */
+    margin-bottom: 5px;
 }
 
-/* Стиль для специальной плитки (Zusammenfassung) */
+/* Стиль для спеціальної плитки (Zusammenfassung) */
 .zusammenfassung {
-    background-color: var(--color-secondary); /* Цвет фона */
+    background-color: #bc1515;
     padding: 10px;
     margin: 10px;
     border: none;
@@ -113,27 +130,58 @@
     text-align: center;
 }
 
-/* Адаптивность */
+/* Стиль для блока examiner-questions */
+.examiner-questions {
+    background-color: #2289ce; /* Синій фон */
+    width: 90%; /* Ширина контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    margin: 0 auto; /* Центруємо */
+    transition: all 0.3s ease;
+}
+
+/* Текст всередині examiner-questions */
+.examiner-text {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Анімація при наведенні на examiner-text */
+.examiner-questions:hover {
+    background-color: #1e73c2;
+}
+
+/* Адаптивність для великих екранів */
 @media (min-width: 768px) {
     .zusammenfassung {
-        width: 90%; /* Ширина на больших экранах */
+        width: 90%;
     }
 }
 
-/* Дополнительная адаптивность для маленьких экранов */
+/* Адаптивність для маленьких екранів */
 @media (max-width: 768px) {
     .tile {
-        padding: 0.5rem; /* Меньшие отступы */
-        margin: 0.25rem; /* Меньшие отступы между плитками */
-        font-size: 0.9rem; /* Уменьшенный текст */
+        padding: 0.5rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
     }
 
     .tile-icon-container {
-        top: 6px; /* Меньшие отступы для иконки */
+        top: 6px;
         right: 7px;
     }
 
     .tile-title {
-        font-size: 1rem; /* Уменьшенный размер заголовка */
+        font-size: 1rem;
     }
 }
