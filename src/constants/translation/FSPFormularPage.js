@@ -488,7 +488,6 @@ Erfahren Sie, ob der Patient bereits medizinische Hilfe in Anspruch genommen hat
   - "Welche Behandlungen wurden bisher durchgeführt?"
 `,
   },
-
   vegetativeAnamnese: {
     additionalInfo: `
 ### **Anamnese: Vegetative Anamnese**
@@ -1086,300 +1085,875 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   },
   previousOperations: {
     additionalInfo: `
-  ### **Frühere Operationen**
-  
-  Fragen Sie den Patienten nach Operationen, die in der Vergangenheit durchgeführt wurden. Dies ist wichtig, um mögliche langfristige Auswirkungen oder Komplikationen zu erkennen, die die aktuelle Gesundheit beeinflussen könnten.
-  
-  **Anleitung:**
-  
-  • Erfragen Sie alle relevanten Operationen, unabhängig davon, ob sie kürzlich oder vor Jahren durchgeführt wurden.
-  
-  • Achten Sie darauf, den Patienten nicht zu drängen, sondern ihm die Möglichkeit zu geben, ausführlich zu antworten.
-  
-  **Beispiele:**
-  
-  • "Hatten Sie in der Vergangenheit irgendwelche Operationen?"
-  
-  • "Könnten Sie mir bitte eine Liste der wichtigsten Operationen geben, die Sie hatten?"
-  
-  • "Gab es in Ihrer medizinischen Vorgeschichte Eingriffe, die für Ihre aktuelle Gesundheit von Bedeutung sein könnten?"
-  
-  **Mögliche Antworten und Follow-ups:**
-  
-  • Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
-  
-  • Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
-  
-  ---
-  
-  ### **Operationsverlauf und Komplikationen**
-  
-  Fragen Sie nach dem Verlauf der Operationen und ob es nach den Eingriffen Komplikationen oder ungewöhnliche Reaktionen gab. Dies hilft, mögliche Risiken für zukünftige Behandlungen oder Operationen zu erkennen.
-  
-  **Anleitung:**
-  
-  • Erkundigen Sie sich nach möglichen Komplikationen während oder nach der Operation.
-  
-  • Fragen Sie, ob der Patient nach der Operation besondere Pflege benötigt oder hatte.
-  
-  **Beispiele:**
-  
-  • "Gab es nach den Operationen Komplikationen oder Probleme?"
-  
-  • "Wurde nach der Operation eine spezielle Nachbehandlung durchgeführt?"
-  
-  • "Konnte die Operation ohne Probleme abgeschlossen werden?"
-  
-  **Mögliche Antworten und Follow-ups:**
-  
-  • Patient: "Nach der Operation hatte ich einige Infektionen, aber die Heilung verlief schließlich gut."
-  
-  • Arzt: "Welche Behandlung haben Sie nach der Operation erhalten, und gab es noch andere Auswirkungen?"
-  
-  ---
-  
-  ### **Dauer des Krankenhausaufenthalts**
-  
-  Ermitteln Sie, wie lange der Patient nach der Operation im Krankenhaus bleiben musste, da dies Aufschluss über die Schwere der Operation und die Genesung gibt.
-  
-  **Anleitung:**
-  
-  • Fragen Sie nach der Dauer des Krankenhausaufenthalts nach der Operation, um den Schweregrad und den Heilungsprozess abzuschätzen.
-  
-  • Achten Sie auf Hinweise zu postoperativen Komplikationen, die die Krankenhausaufenthaltsdauer verlängert haben könnten.
-  
-  **Beispiele:**
-  
-  • "Wie lange mussten Sie nach der Operation im Krankenhaus bleiben?"
-  
-  • "Gab es besondere Gründe für eine längere Krankenhausaufenthaltsdauer?"
-  
-  **Mögliche Antworten und Follow-ups:**
-  
-  • Patient: "Ich war nach der Operation insgesamt zwei Wochen im Krankenhaus."
-  
-  • Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
-  
-  ---
-  
-  ### **Beispielgespräch für Frühere Operationen**
-  
-  Arzt: "Könnten Sie mir bitte von früheren Operationen berichten, die Sie hatten?"
-  
-  Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
-  
-  Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
-  
-  Patient: "Ich hatte starke Bauchschmerzen und es wurde eine Notoperation durchgeführt. Nach der Operation gab es einige Infektionen, aber sie haben mich behandelt, und die Heilung verlief schließlich gut."
-  
-  Arzt: "Gab es nach der Operation Komplikationen oder besondere Nachbehandlungen?"
-  
-  Patient: "Ja, ich musste noch einige Zeit Antibiotika nehmen, aber sonst verlief alles gut."
-  
-  Arzt: "Wie lange mussten Sie im Krankenhaus bleiben?"
-  
-  Patient: "Insgesamt war ich zwei Wochen dort."
-  
-  Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
-  
-  Patient: "Es war eher eine reguläre Erholungszeit, aber die Ärzte wollten sicherstellen, dass keine weiteren Probleme auftauchen."
-  
-  ---
-  
-  ### **Tipps zur Gesprächsführung**
-  
-  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis und Sensibilität für vergangene Operationen und eventuelle Komplikationen.
-     Beispiel: "Ich verstehe, dass Operationen eine große Belastung sein können. Wir werden dafür sorgen, dass alles gut verläuft."
-  
-  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache und bitten Sie den Patienten, Details zu nennen.
-     Beispiel: "Könnten Sie mir genau sagen, was bei dieser Operation passiert ist?"
-  
-  3. **Aktives Zuhören:** Bestätigen Sie, was der Patient gesagt hat, um Vertrauen aufzubauen.
-     Beispiel: "Verstehe, Sie hatten nach der Operation einige Infektionen. Lassen Sie uns sehen, wie wir Sie unterstützen können."
-  
-  4. **Offene Fragen stellen:** Stellen Sie Fragen, die dem Patienten die Möglichkeit geben, mehr zu erzählen.
-     Beispiel: "Gab es noch andere Herausforderungen oder Komplikationen nach der Operation?"
-  
-  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um seine Geschichte zu erzählen, ohne ihn zu unterbrechen.
-  
-  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um Missverständnisse zu vermeiden.
-     Beispiel: "Also, nach der Operation mussten Sie zwei Wochen im Krankenhaus bleiben, und es gab einige Infektionen, die behandelt wurden, richtig?"
-    `,
+   ### **Frühere Operationen**
+   
+   Fragen Sie den Patienten nach Operationen, die in der Vergangenheit durchgeführt wurden. Dies ist wichtig, um mögliche langfristige Auswirkungen oder Komplikationen zu erkennen, die die aktuelle Gesundheit beeinflussen könnten.
+   
+   **Anleitung:**
+   
+   • Erfragen Sie alle relevanten Operationen, unabhängig davon, ob sie kürzlich oder vor Jahren durchgeführt wurden.
+   
+   • Achten Sie darauf, den Patienten nicht zu drängen, sondern ihm die Möglichkeit zu geben, ausführlich zu antworten.
+   
+   **Beispiele:**
+   
+   • "Hatten Sie in der Vergangenheit irgendwelche Operationen?"
+   
+   • "Könnten Sie mir bitte eine Liste der wichtigsten Operationen geben, die Sie hatten?"
+   
+   • "Gab es in Ihrer medizinischen Vorgeschichte Eingriffe, die für Ihre aktuelle Gesundheit von Bedeutung sein könnten?"
+   
+   **Mögliche Antworten und Follow-ups:**
+   
+   • Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
+   
+   • Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
+   
+   ---
+   
+   ### **Operationsverlauf und Komplikationen**
+   
+   Fragen Sie nach dem Verlauf der Operationen und ob es nach den Eingriffen Komplikationen oder ungewöhnliche Reaktionen gab. Dies hilft, mögliche Risiken für zukünftige Behandlungen oder Operationen zu erkennen.
+   
+   **Anleitung:**
+   
+   • Erkundigen Sie sich nach möglichen Komplikationen während oder nach der Operation.
+   
+   • Fragen Sie, ob der Patient nach der Operation besondere Pflege benötigt oder hatte.
+   
+   **Beispiele:**
+   
+   • "Gab es nach den Operationen Komplikationen oder Probleme?"
+   
+   • "Wurde nach der Operation eine spezielle Nachbehandlung durchgeführt?"
+   
+   • "Konnte die Operation ohne Probleme abgeschlossen werden?"
+   
+   **Mögliche Antworten und Follow-ups:**
+   
+   • Patient: "Nach der Operation hatte ich einige Infektionen, aber die Heilung verlief schließlich gut."
+   
+   • Arzt: "Welche Behandlung haben Sie nach der Operation erhalten, und gab es noch andere Auswirkungen?"
+   
+   ---
+   
+   ### **Dauer des Krankenhausaufenthalts**
+   
+   Ermitteln Sie, wie lange der Patient nach der Operation im Krankenhaus bleiben musste, da dies Aufschluss über die Schwere der Operation und die Genesung gibt.
+   
+   **Anleitung:**
+   
+   • Fragen Sie nach der Dauer des Krankenhausaufenthalts nach der Operation, um den Schweregrad und den Heilungsprozess abzuschätzen.
+   
+   • Achten Sie auf Hinweise zu postoperativen Komplikationen, die die Krankenhausaufenthaltsdauer verlängert haben könnten.
+   
+   **Beispiele:**
+   
+   • "Wie lange mussten Sie nach der Operation im Krankenhaus bleiben?"
+   
+   • "Gab es besondere Gründe für eine längere Krankenhausaufenthaltsdauer?"
+   
+   **Mögliche Antworten und Follow-ups:**
+   
+   • Patient: "Ich war nach der Operation insgesamt zwei Wochen im Krankenhaus."
+   
+   • Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
+   
+   ---
+   
+   ### **Beispielgespräch für Frühere Operationen**
+   
+   Arzt: "Könnten Sie mir bitte von früheren Operationen berichten, die Sie hatten?"
+   
+   Patient: "Ich hatte vor einigen Jahren eine Gallenkolik-Operation."
+   
+   Arzt: "Was war der genaue Grund für diese Operation und wie ging es Ihnen danach?"
+   
+   Patient: "Ich hatte starke Bauchschmerzen und es wurde eine Notoperation durchgeführt. Nach der Operation gab es einige Infektionen, aber sie haben mich behandelt, und die Heilung verlief schließlich gut."
+   
+   Arzt: "Gab es nach der Operation Komplikationen oder besondere Nachbehandlungen?"
+   
+   Patient: "Ja, ich musste noch einige Zeit Antibiotika nehmen, aber sonst verlief alles gut."
+   
+   Arzt: "Wie lange mussten Sie im Krankenhaus bleiben?"
+   
+   Patient: "Insgesamt war ich zwei Wochen dort."
+   
+   Arzt: "War das aufgrund von Komplikationen oder war es eine reguläre Erholungszeit?"
+   
+   Patient: "Es war eher eine reguläre Erholungszeit, aber die Ärzte wollten sicherstellen, dass keine weiteren Probleme auftauchen."
+   
+   ---
+   
+   ### **Tipps zur Gesprächsführung**
+   
+   1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis und Sensibilität für vergangene Operationen und eventuelle Komplikationen.
+      Beispiel: "Ich verstehe, dass Operationen eine große Belastung sein können. Wir werden dafür sorgen, dass alles gut verläuft."
+   
+   2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache und bitten Sie den Patienten, Details zu nennen.
+      Beispiel: "Könnten Sie mir genau sagen, was bei dieser Operation passiert ist?"
+   
+   3. **Aktives Zuhören:** Bestätigen Sie, was der Patient gesagt hat, um Vertrauen aufzubauen.
+      Beispiel: "Verstehe, Sie hatten nach der Operation einige Infektionen. Lassen Sie uns sehen, wie wir Sie unterstützen können."
+   
+   4. **Offene Fragen stellen:** Stellen Sie Fragen, die dem Patienten die Möglichkeit geben, mehr zu erzählen.
+      Beispiel: "Gab es noch andere Herausforderungen oder Komplikationen nach der Operation?"
+   
+   5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um seine Geschichte zu erzählen, ohne ihn zu unterbrechen.
+   
+   6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um Missverständnisse zu vermeiden.
+      Beispiel: "Also, nach der Operation mussten Sie zwei Wochen im Krankenhaus bleiben, und es gab einige Infektionen, die behandelt wurden, richtig?"
+     `,
   },
   medications: {
     additionalInfo: `
-    ### **Medikamente**
+  ### **Medikamente**
   
-    #### **Allgemeine Medikamenteneinnahme**
-    Fragen Sie den Patienten nach allen aktuell eingenommenen Medikamenten, um ein umfassendes Bild der medikamentösen Behandlung und möglicher Wechselwirkungen zu erhalten.
+  #### **Allgemeine Medikamenteneinnahme:**
   
-    **Anleitung:**
-    • Erfragen Sie, ob der Patient regelmäßig Medikamente einnimmt.
-    • Achten Sie darauf, sowohl rezeptpflichtige als auch frei verkäufliche Medikamente zu berücksichtigen.
-    • Fragen Sie nach der Häufigkeit der Einnahme und dem Zweck der Medikation.
+  Fragen Sie den Patienten nach allen aktuell eingenommenen Medikamenten, um ein umfassendes Bild der medikamentösen Behandlung und möglicher Wechselwirkungen zu erhalten.
   
-    **Beispiele:**
-    • "Nehmen Sie derzeit regelmäßig Medikamente ein?"
-    • "Welche Medikamente nehmen Sie täglich?"
-    • "Gibt es Medikamente, die Sie gelegentlich einnehmen, wie zum Beispiel Schmerzmittel oder Nahrungsergänzungsmittel?"
+  **Anleitung:**
   
-    **Mögliche Antworten und Follow-ups:**
-    • Patient: "Ja, ich nehme täglich Blutdruckmedikamente."
-    • Arzt: "Welche Medikamente genau nehmen Sie zur Blutdrucksenkung, und in welcher Dosierung?"
+  • Erfragen Sie, ob der Patient regelmäßig Medikamente einnimmt.  
+  • Achten Sie darauf, sowohl rezeptpflichtige als auch frei verkäufliche Medikamente zu berücksichtigen.  
+  • Fragen Sie nach der Häufigkeit der Einnahme und dem Zweck der Medikation.
   
-    ---
+  **Beispiele:**
   
-    #### **Detaillierte Medikamenteninformationen**
-    Fragen Sie nach spezifischen Informationen zu den einzelnen Medikamenten, die der Patient einnimmt, um die korrekte Anwendung und mögliche Nebenwirkungen oder Wechselwirkungen zu verstehen.
+  • “Nehmen Sie derzeit regelmäßig Medikamente ein?”  
+  • “Welche Medikamente nehmen Sie täglich?”  
+  • “Gibt es Medikamente, die Sie gelegentlich einnehmen, wie zum Beispiel Schmerzmittel oder Nahrungsergänzungsmittel?”
   
-    **Anleitung:**
-    • Erkundigen Sie sich nach den spezifischen Medikamenten, einschließlich Namen, Dosierung, Häufigkeit und Behandlungsdauer.
-    • Fragen Sie nach möglichen Nebenwirkungen oder früheren Reaktionen auf Medikamente.
-    • Achten Sie darauf, die Patienten zu fragen, ob sie neue Medikamente verschrieben bekommen haben oder ob es Änderungen in der Medikation gab.
+  **Mögliche Antworten und Follow-ups:**
   
-    **Beispiele:**
-    • "Könnten Sie mir bitte die Namen der Medikamente nennen, die Sie aktuell einnehmen?"
-    • "Wie oft müssen Sie diese Medikamente einnehmen, und in welcher Dosis?"
-    • "Haben Sie irgendwelche Nebenwirkungen bemerkt, seitdem Sie diese Medikamente einnehmen?"
-    • "Gab es kürzlich Änderungen in Ihrer Medikation?"
+  • Patient: “Ja, ich nehme täglich Blutdruckmedikamente.”  
+  • Arzt: “Welche Medikamente genau nehmen Sie zur Blutdrucksenkung, und in welcher Dosierung?”
   
-    **Mögliche Antworten und Follow-ups:**
-    • Patient: "Ich nehme 5 mg Ramipril einmal täglich."
-    • Arzt: "Haben Sie in der letzten Zeit irgendwelche Nebenwirkungen wie Schwindel oder Husten bemerkt, die mit Ramipril in Verbindung stehen könnten?"
-    • Patient: "Nein, bisher hatte ich keine Beschwerden mit diesem Medikament."
+  #### **Detaillierte Medikamenteninformationen:**
   
-    ---
+  Fragen Sie nach spezifischen Informationen zu den einzelnen Medikamenten, die der Patient einnimmt, um die korrekte Anwendung und mögliche Nebenwirkungen oder Wechselwirkungen zu verstehen.
   
-    #### **Beispielgespräch für Medikamente**
-    Arzt: "Nehmen Sie derzeit regelmäßig Medikamente ein?"
-    Patient: "Ja, ich nehme jeden Tag Medikamente gegen Bluthochdruck und auch gelegentlich Schmerzmittel."
-    Arzt: "Welche Medikamente nehmen Sie zur Blutdrucksenkung?"
-    Patient: "Ich nehme 5 mg Ramipril täglich."
-    Arzt: "Haben Sie in letzter Zeit Nebenwirkungen bemerkt, wie Schwindel oder Husten?"
-    Patient: "Nein, alles ist gut."
-    Arzt: "Welche Schmerzmittel nehmen Sie gelegentlich?"
-    Patient: "Ich nehme Ibuprofen bei Kopf- oder Rückenschmerzen."
-    Arzt: "Wie häufig nehmen Sie Ibuprofen und in welcher Dosis?"
-    Patient: "Meistens einmal täglich bei Bedarf, 400 mg."
+  **Anleitung:**
   
-    #### **Tipps zur Gesprächsführung:**
-    1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die Medikamentengeschichte des Patienten. Beispiel: "Es ist gut, dass Sie Ihre Medikamente regelmäßig einnehmen. Wir müssen sicherstellen, dass alles gut zusammenpasst."
-    2. **Klarheit und Einfachheit:** Verwenden Sie einfache Sprache, um sicherzustellen, dass der Patient die Fragen versteht. Beispiel: "Nehmen Sie ein Medikament für Ihren Blutdruck? Wie heißt es?"
-    3. **Aktives Zuhören:** Bestätigen Sie die Informationen, die der Patient gibt, und stellen Sie gegebenenfalls Nachfragen. Beispiel: "Verstehe, Sie nehmen Ramipril. Wie geht es Ihnen damit?"
-    4. **Offene Fragen stellen:** Ermutigen Sie den Patienten, alle Medikamente zu nennen, die er einnimmt, auch Nahrungsergänzungsmittel. Beispiel: "Gibt es noch andere Medikamente oder Ergänzungsmittel, die Sie nehmen?"
-    5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um alle Medikamente zu nennen, die er einnimmt.
-    6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben. Beispiel: "Also, Sie nehmen Ramipril 5 mg täglich und gelegentlich Ibuprofen 400 mg, korrekt?"
+  • Erkundigen Sie sich nach den spezifischen Medikamenten, einschließlich Namen, Dosierung, Häufigkeit und Behandlungsdauer.  
+  • Fragen Sie nach möglichen Nebenwirkungen oder früheren Reaktionen auf Medikamente.  
+  • Achten Sie darauf, die Patienten zu fragen, ob sie neue Medikamente verschrieben bekommen haben oder ob es Änderungen in der Medikation gab.
+  
+  **Beispiele:**
+  
+  • “Könnten Sie mir bitte die Namen der Medikamente nennen, die Sie aktuell einnehmen?”  
+  • “Wie oft müssen Sie diese Medikamente einnehmen, und in welcher Dosis?”  
+  • “Haben Sie irgendwelche Nebenwirkungen bemerkt, seitdem Sie diese Medikamente einnehmen?”  
+  • “Gab es kürzlich Änderungen in Ihrer Medikation?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ich nehme 5 mg Ramipril einmal täglich.”  
+  • Arzt: “Haben Sie in der letzten Zeit irgendwelche Nebenwirkungen wie Schwindel oder Husten bemerkt, die mit Ramipril in Verbindung stehen könnten?”  
+  • Patient: “Nein, bisher hatte ich keine Beschwerden mit diesem Medikament.”
+  
+  #### **Beispielgespräch für Medikamente:**
+  
+  **Arzt:** “Nehmen Sie derzeit regelmäßig Medikamente ein?”  
+  **Patient:** “Ja, ich nehme jeden Tag Medikamente gegen Bluthochdruck und auch gelegentlich Schmerzmittel.”  
+  **Arzt:** “Welche Medikamente nehmen Sie zur Blutdrucksenkung?”  
+  **Patient:** “Ich nehme 5 mg Ramipril täglich.”  
+  **Arzt:** “Haben Sie in letzter Zeit Nebenwirkungen bemerkt, wie Schwindel oder Husten?”  
+  **Patient:** “Nein, alles ist gut.”  
+  **Arzt:** “Welche Schmerzmittel nehmen Sie gelegentlich?”  
+  **Patient:** “Ich nehme Ibuprofen bei Kopf- oder Rückenschmerzen.”  
+  **Arzt:** “Wie häufig nehmen Sie Ibuprofen und in welcher Dosis?”  
+  **Patient:** “Meistens einmal täglich bei Bedarf, 400 mg.”
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die Medikamentengeschichte des Patienten. Beispiel: “Es ist gut, dass Sie Ihre Medikamente regelmäßig einnehmen. Wir müssen sicherstellen, dass alles gut zusammenpasst.”  
+  2. **Klarheit und Einfachheit:** Verwenden Sie einfache Sprache, um sicherzustellen, dass der Patient die Fragen versteht. Beispiel: “Nehmen Sie ein Medikament für Ihren Blutdruck? Wie heißt es?”  
+  3. **Aktives Zuhören:** Bestätigen Sie die Informationen, die der Patient gibt, und stellen Sie gegebenenfalls Nachfragen. Beispiel: “Verstehe, Sie nehmen Ramipril. Wie geht es Ihnen damit?”  
+  4. **Offene Fragen stellen:** Ermutigen Sie den Patienten, alle Medikamente zu nennen, die er einnimmt, auch Nahrungsergänzungsmittel. Beispiel: “Gibt es noch andere Medikamente oder Ergänzungsmittel, die Sie nehmen?”  
+  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um alle Medikamente zu nennen, die er einnimmt.  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben. Beispiel: “Also, Sie nehmen Ramipril 5 mg täglich und gelegentlich Ibuprofen 400 mg, korrekt?”
+  `,
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+  ### **Allergien und Unverträglichkeiten**
+  
+  #### **Spezifische Medikamentenallergien:**
+  
+  Fragen Sie nach bekannten Allergien gegen Medikamente, um sicherzustellen, dass der Patient keine Arzneimittel einnimmt, die eine allergische Reaktion auslösen könnten.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich, ob der Patient in der Vergangenheit auf bestimmte Medikamente allergisch reagiert hat.  
+  • Achten Sie auf häufige Medikamente, wie Antibiotika, Schmerzmittel oder andere gängige Arzneimittel.
+  
+  **Beispiele:**
+  
+  • “Haben Sie eine bekannte Allergie gegen Medikamente?”  
+  • “Gab es Medikamente, auf die Sie allergisch reagiert haben?”  
+  • “Könnten Sie mir die Namen der Medikamente nennen, bei denen Sie allergische Reaktionen hatten?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ja, ich bin allergisch gegen Penicillin.”  
+  • Arzt: “Welche Symptome haben Sie bei der Einnahme von Penicillin bemerkt?”
+  
+  #### **Symptomatik allergischer Reaktionen:**
+  
+  Fragen Sie nach den spezifischen Symptomen, die bei einer allergischen Reaktion auftreten, um die Schwere und Art der Reaktion zu verstehen.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach den Symptomen einer allergischen Reaktion, um mögliche Gefahren wie anaphylaktische Reaktionen frühzeitig zu erkennen.  
+  • Achten Sie darauf, ob der Patient schwerwiegende Symptome wie Atemnot, Hautausschlag oder Schwellungen hatte.
+  
+  **Beispiele:**
+  
+  • “Welche Symptome hatten Sie bei einer allergischen Reaktion?”  
+  • “Hatten Sie Atemprobleme, Hautausschläge oder Schwellungen?”  
+  • “Waren die Reaktionen auf Medikamente, Nahrungsmittel oder andere Substanzen?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ich hatte einen Hautausschlag und Juckreiz nach der Einnahme von Penicillin.”  
+  • Arzt: “Hatten Sie auch Atembeschwerden oder Schwellungen im Gesicht oder an den Lippen?”
+  
+  #### **Allergieauslöser:**
+  
+  Fragen Sie nach bekannten Auslösern für allergische Reaktionen, wie bestimmte Nahrungsmittel, Insektenstiche, Pflanzen oder Tierhaare.
+  
+  **Anleitung:**
+  
+  • Ermitteln Sie, welche Substanzen oder Umstände die Allergien des Patienten auslösen.  
+  • Notieren Sie häufige Allergieauslöser, um zukünftige Reaktionen zu vermeiden.
+  
+  **Beispiele:**
+  
+  • “Gibt es bestimmte Nahrungsmittel oder Substanzen, die bei Ihnen allergische Reaktionen auslösen?”  
+  • “Haben Sie bekannte Auslöser wie Pollen, Tierhaare oder Insektenstiche?”  
+  • “Sind Sie gegen bestimmte Nahrungsmittel oder Umweltfaktoren allergisch?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ich bin allergisch gegen Nüsse und Pollen.”  
+  • Arzt: “Hatten Sie schon einmal eine schwere Reaktion, wie Atemnot, nach dem Kontakt mit Pollen oder Nüssen?”
+  
+  #### **Spezifische Unverträglichkeiten:**
+  
+  Erfragen Sie Unverträglichkeiten gegenüber bestimmten Lebensmitteln, Medikamenten oder anderen Substanzen, die keine Allergien sind, aber unangenehme Symptome hervorrufen können.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach Unverträglichkeiten, die zu Beschwerden führen, jedoch keine echten allergischen Reaktionen darstellen.  
+  • Achten Sie auf Nahrungsmittelunverträglichkeiten wie Laktoseintoleranz oder Glutenempfindlichkeit.
+  
+  **Beispiele:**
+  
+  • “Leiden Sie unter Unverträglichkeiten gegenüber bestimmten Nahrungsmitteln oder Medikamenten?”  
+  • “Haben Sie Schwierigkeiten, bestimmte Lebensmittel zu verdauen, wie Milchprodukte oder Weizen?”  
+  • “Haben Sie jemals Probleme mit der Verträglichkeit von Medikamenten gehabt?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ich vertrage keine Milchprodukte und habe oft Bauchschmerzen danach.”  
+  • Arzt: “Haben Sie diese Beschwerden auch bei anderen Lebensmitteln oder nur bei Milchprodukten?”
+  
+  #### **Beispielgespräch für Allergien und Unverträglichkeiten:**
+  
+  **Arzt:** “Haben Sie bekannte Allergien gegen Medikamente?”  
+  **Patient:** “Ja, ich bin allergisch gegen Penicillin.”  
+  **Arzt:** “Welche Symptome hatten Sie bei der Einnahme von Penicillin?”  
+  **Patient:** “Ich bekam einen Hautausschlag und Juckreiz.”  
+  **Arzt:** “Hatten Sie auch Atemprobleme oder Schwellungen?”  
+  **Patient:** “Nein, nur der Ausschlag und der Juckreiz.”  
+  **Arzt:** “Gibt es noch andere bekannte Auslöser für Ihre Allergien?”  
+  **Patient:** “Ja, ich bin auch allergisch gegen Nüsse und Pollen.”  
+  **Arzt:** “Hatten Sie jemals eine schwere Reaktion, wie Atemnot, nach dem Kontakt mit Pollen oder Nüssen?”  
+  **Patient:** “Ja, einmal hatte ich Schwierigkeiten beim Atmen nach dem Verzehr von Nüssen.”  
+  **Arzt:** “Das ist wichtig, wir werden sicherstellen, dass Sie keine Medikamente einnehmen, die diese Reaktionen auslösen können.”
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die Allergien und Unverträglichkeiten des Patienten. Beispiel: “Es tut mir leid zu hören, dass Sie auf Nüsse und Penicillin allergisch reagieren. Wir werden sicherstellen, dass wir dies bei Ihrer Behandlung berücksichtigen.”  
+  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache und erklären Sie die Bedeutung der Allergien und Unverträglichkeiten. Beispiel: “Haben Sie eine Allergie gegen bestimmte Medikamente, die wir wissen sollten?”  
+  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und zeigen Sie Interesse an ihren Erfahrungen. Beispiel: “Verstehe, Sie hatten Hautausschläge und Juckreiz nach Penicillin. Lassen Sie uns sicherstellen, dass wir Ihnen sicherere Medikamente verschreiben.”  
+  4. **Offene Fragen stellen:** Fördern Sie ausführliche Antworten durch offene Fragen. Beispiel: “Gibt es noch andere Nahrungsmittel oder Medikamente, auf die Sie reagieren?”  
+  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um alle Allergien und Unverträglichkeiten zu benennen.  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Punkte, um Missverständnisse zu vermeiden. Beispiel: “Also, Sie sind allergisch gegen Penicillin und Nüsse, und haben auf beides Reaktionen wie Hautausschlag oder Atembeschwerden gehabt, richtig?”
     `,
   },
-
-  allergiesAndIntolerances: {
-    additionalInfo: ` `,
-  },
-
   noxen: {
-    additionalInfo: ` `,
+    additionalInfo: `
+  ### **Noxen (Schädliche Substanzen)**
+  
+  #### **Rauchverhalten:**
+  
+  Fragen Sie den Patienten nach seinem Rauchverhalten, um mögliche gesundheitliche Risiken im Zusammenhang mit dem Rauchen zu erkennen. Rauchen kann verschiedene gesundheitliche Probleme verursachen, die den allgemeinen Gesundheitszustand beeinflussen.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach der Häufigkeit des Rauchens, der Anzahl der Zigaretten und der Dauer des Rauchens.  
+  • Achten Sie darauf, ob der Patient kürzlich mit dem Rauchen aufgehört hat oder nach wie vor raucht.
+  
+  **Beispiele:**
+  
+  • “Rauchen Sie regelmäßig?”  
+  • “Wie viele Zigaretten rauchen Sie pro Tag?”  
+  • “Wie lange haben Sie schon mit dem Rauchen angefangen?”  
+  • “Haben Sie in der Vergangenheit geraucht oder kürzlich aufgehört?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ja, ich rauche etwa zehn Zigaretten am Tag seit 15 Jahren.”  
+  • Arzt: “Haben Sie in letzter Zeit versucht, mit dem Rauchen aufzuhören, oder gibt es Pläne, damit aufzuhören?”
+  
+  **Berechnung des Pack-Jahre-Index (Pekers Index):**
+  
+  Für die Berechnung des Pack-Jahre-Index (Pekers Index) nutzen Sie folgende Formel:
+  
+  **Pack-Jahre (Pekers Index) = (Zigaretten pro Tag / 20) * Jahre des Rauchens**
+  
+  Beispiel: 
+  Wenn der Patient 10 Zigaretten pro Tag seit 15 Jahren raucht:
+  (10 / 20) * 15 = 7,5 Pack-Jahre
+  
+  #### **Alkoholkonsum:**
+  
+  Fragen Sie nach dem Alkoholkonsum, um mögliche Risiken für alkoholbedingte Erkrankungen oder Verhaltensweisen zu erkennen. Alkoholkonsum kann sich negativ auf viele Organsysteme auswirken, insbesondere auf die Leber und das Herz-Kreislaufsystem.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach der Häufigkeit und Menge des Alkoholkonsums.  
+  • Achten Sie darauf, ob der Patient regelmäßig Alkohol konsumiert und ob es zu übermäßigem Konsum oder Suchtverhalten kommt.
+  
+  **Beispiele:**
+  
+  • “Trinken Sie regelmäßig Alkohol?”  
+  • “Wie viele Gläser Alkohol trinken Sie durchschnittlich pro Woche?”  
+  • “Haben Sie jemals das Gefühl gehabt, dass Ihr Alkoholkonsum problematisch sein könnte?”  
+  • “Gab es in der Vergangenheit gesundheitliche Probleme aufgrund von Alkohol?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ja, ich trinke etwa fünf bis sechs Gläser Bier am Wochenende.”  
+  • Arzt: “Haben Sie in der Vergangenheit Probleme mit Ihrem Alkoholkonsum gehabt, wie Leberbeschwerden oder andere gesundheitliche Auswirkungen?”
+  
+  #### **Drogengebrauch:**
+  
+  Fragen Sie nach dem Gebrauch von illegalen Drogen oder Substanzen, die potenziell schädlich sind. Der Drogengebrauch kann sowohl akute als auch langfristige Gesundheitsprobleme verursachen und sollte daher im Rahmen der Anamnese erfasst werden.
+  
+  **Anleitung:**
+  
+  • Erkundigen Sie sich nach dem Gebrauch von Drogen, sowohl aktuellen als auch in der Vergangenheit.  
+  • Fragen Sie nach der Häufigkeit, Art und Dauer des Drogengebrauchs.
+  
+  **Beispiele:**
+  
+  • “Haben Sie jemals Drogen konsumiert oder tun Sie das noch?”  
+  • “Welche Art von Drogen haben Sie konsumiert?”  
+  • “Wie oft haben Sie in der Vergangenheit Drogen genommen?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • Patient: “Ja, ich habe in der Vergangenheit gelegentlich Cannabis geraucht.”  
+  • Arzt: “Haben Sie Cannabis regelmäßig konsumiert oder war es nur gelegentlich?”
+  
+  #### **Beispielgespräch für Noxen:**
+  
+  **Arzt:** “Rauchen Sie regelmäßig?”  
+  **Patient:** “Ja, ich rauche etwa zehn Zigaretten am Tag seit 15 Jahren.”  
+  **Arzt:** “Haben Sie in letzter Zeit versucht, mit dem Rauchen aufzuhören, oder gibt es Pläne, damit aufzuhören?”  
+  **Patient:** “Ich habe es vor einigen Jahren versucht, aber es war sehr schwer.”  
+  **Arzt:** “Trinken Sie regelmäßig Alkohol?”  
+  **Patient:** “Ja, ich trinke etwa fünf bis sechs Gläser Bier am Wochenende.”  
+  **Arzt:** “Haben Sie in der Vergangenheit Probleme mit Ihrem Alkoholkonsum gehabt, wie Leberbeschwerden oder andere gesundheitliche Auswirkungen?”  
+  **Patient:** “Nein, ich hatte keine großen Probleme, aber ich habe gehört, dass es nicht gut für die Gesundheit ist.”  
+  **Arzt:** “Haben Sie jemals Drogen konsumiert?”  
+  **Patient:** “Ja, ich habe in der Vergangenheit gelegentlich Cannabis geraucht.”  
+  **Arzt:** “Haben Sie Cannabis regelmäßig konsumiert oder war es nur gelegentlich?”  
+  **Patient:** “Es war nur ab und zu, vor ein paar Jahren, aber ich habe damit aufgehört.”
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für das Rauch-, Alkohol- und Drogenverhalten des Patienten, ohne zu urteilen. Beispiel: “Es ist gut, dass Sie uns darüber informieren, da es für Ihre Gesundheit wichtig ist.”  
+  2. **Klarheit und Einfachheit:** Verwenden Sie eine einfache Sprache, um sicherzustellen, dass der Patient versteht, welche Informationen benötigt werden. Beispiel: “Trinken Sie regelmäßig Alkohol, und wenn ja, wie viel?”  
+  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und stellen Sie weitere Fragen, um mehr Details zu erhalten. Beispiel: “Verstehe, Sie haben in der Vergangenheit Cannabis konsumiert. Haben Sie weiterhin Probleme damit oder ist es seitdem kein Thema mehr?”  
+  4. **Offene Fragen stellen:** Ermutigen Sie den Patienten, offen zu sprechen. Beispiel: “Gab es in der Vergangenheit gesundheitliche Probleme, die mit dem Rauchen oder Alkohol zu tun hatten?”  
+  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um offen über sein Verhalten zu sprechen, besonders bei sensiblen Themen wie Drogen oder Alkohol.  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Punkte, um sicherzustellen, dass Sie alles korrekt verstanden haben. Beispiel: “Also, Sie rauchen seit 15 Jahren zehn Zigaretten täglich und trinken am Wochenende Alkohol. Haben Sie noch andere Verhaltensweisen, die für Ihre Gesundheit relevant sein könnten?”  
+    `,
   },
-
   familienanamnese: {
     additionalInfo: `
-  ### **Relevante familiäre Krankheiten**
+  ### **Relevante familiäre Krankheiten (Familiäre Krankheitsgeschichte)**
   
-  #### **Eltern**
+  #### **Eltern:**
+  
   Fragen Sie nach Erkrankungen, die bei den Eltern des Patienten bekannt sind, da viele gesundheitliche Probleme genetisch bedingt oder familiär gehäuft auftreten können. Dies hilft, mögliche Risikofaktoren für den Patienten zu erkennen.
   
   **Anleitung:**
-  • Erkundigen Sie sich nach bekannten Erkrankungen bei den Eltern des Patienten.
+  
+  • Erkundigen Sie sich nach bekannten Erkrankungen bei den Eltern des Patienten.  
   • Achten Sie auf häufige Erkrankungen wie Herz-Kreislauf-Erkrankungen, Krebs, Diabetes oder neurodegenerative Erkrankungen.
   
   **Beispiele:**
-  • "Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?"
-  • "Leiden Ihre Eltern an chronischen Krankheiten wie Diabetes, Bluthochdruck oder Herzkrankheiten?"
-  • "Gab es in Ihrer Familie Fälle von Krebs oder anderen genetischen Erkrankungen?"
+  
+  • “Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?”  
+  • “Leiden Ihre Eltern an chronischen Krankheiten wie Diabetes, Bluthochdruck oder Herzkrankheiten?”  
+  • “Gab es in Ihrer Familie Fälle von Krebs oder anderen genetischen Erkrankungen?”
   
   **Mögliche Antworten und Follow-ups:**
-  • Patient: "Mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes."
-  • Arzt: "Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?"
   
-  #### **Geschwister**
+  • **Patient:** “Mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes.”  
+  • **Arzt:** “Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?”
+  
+  #### **Geschwister:**
+  
   Fragen Sie nach gesundheitlichen Problemen bei den Geschwistern des Patienten, da auch hier genetische Faktoren oder familiäre Gesundheitsmuster eine Rolle spielen können. Die Krankengeschichte der Geschwister kann Aufschluss über familiäre Häufungen von Erkrankungen geben.
   
   **Anleitung:**
-  • Erkundigen Sie sich nach bekannten Erkrankungen oder gesundheitlichen Problemen bei den Geschwistern des Patienten.
+  
+  • Erkundigen Sie sich nach bekannten Erkrankungen oder gesundheitlichen Problemen bei den Geschwistern des Patienten.  
   • Achten Sie auf familiär gehäufte Erkrankungen, die möglicherweise auch den Patienten betreffen könnten.
   
   **Beispiele:**
-  • "Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?"
-  • "Gibt es bei Ihren Geschwistern ähnliche Erkrankungen wie bei Ihnen oder Ihren Eltern?"
-  • "Leiden Ihre Geschwister an chronischen Krankheiten wie Asthma, Arthritis oder Krebs?"
+  
+  • “Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?”  
+  • “Gibt es bei Ihren Geschwistern ähnliche Erkrankungen wie bei Ihnen oder Ihren Eltern?”  
+  • “Leiden Ihre Geschwister an chronischen Krankheiten wie Asthma, Arthritis oder Krebs?”
   
   **Mögliche Antworten und Follow-ups:**
-  • Patient: "Mein Bruder hat Asthma, und meine Schwester leidet an Migräne."
-  • Arzt: "Gibt es in Ihrer Familie andere gesundheitliche Probleme, die auffällig sind, oder Krankheiten, die vererbt werden können?"
   
-  #### **Genetische Erkrankungen**
+  • **Patient:** “Mein Bruder hat Asthma, und meine Schwester leidet an Migräne.”  
+  • **Arzt:** “Gibt es in Ihrer Familie andere gesundheitliche Probleme, die auffällig sind, oder Krankheiten, die vererbt werden können?”
+  
+  #### **Genetische Erkrankungen:**
+  
   Ermitteln Sie, ob es genetische Erkrankungen in der Familie gibt, die für den Patienten von Bedeutung sein könnten. Bestimmte Erkrankungen, wie etwa erbliche Krebsarten oder Stoffwechselstörungen, können familiär gehäuft auftreten.
   
   **Anleitung:**
-  • Fragen Sie nach bekannten genetischen Erkrankungen in der Familie, die beim Patienten ein erhöhtes Risiko für ähnliche Erkrankungen darstellen könnten.
+  
+  • Fragen Sie nach bekannten genetischen Erkrankungen in der Familie, die beim Patienten ein erhöhtes Risiko für ähnliche Erkrankungen darstellen könnten.  
   • Achten Sie auf Hinweise auf erblich bedingte Krankheiten, die eine Rolle in der Krankheitsgeschichte des Patienten spielen könnten.
   
   **Beispiele:**
-  • "Gibt es in Ihrer Familie bekannte genetische Erkrankungen, wie zum Beispiel Huntington, Mukoviszidose oder Hämophilie?"
-  • "Haben andere Familienmitglieder in jüngeren Jahren schwere Erkrankungen wie Krebs oder Herzkrankheiten entwickelt?"
-  • "Leiden mehrere Familienmitglieder an den gleichen Erkrankungen, die genetische Ursachen haben könnten?"
+  
+  • “Gibt es in Ihrer Familie bekannte genetische Erkrankungen, wie zum Beispiel Huntington, Mukoviszidose oder Hämophilie?”  
+  • “Haben andere Familienmitglieder in jüngeren Jahren schwere Erkrankungen wie Krebs oder Herzkrankheiten entwickelt?”  
+  • “Leiden mehrere Familienmitglieder an den gleichen Erkrankungen, die genetische Ursachen haben könnten?”
   
   **Mögliche Antworten und Follow-ups:**
-  • Patient: "In meiner Familie gibt es Fälle von Brustkrebs, die bei mehreren Frauen aufgetreten sind."
-  • Arzt: "Wie alt waren die betroffenen Familienmitglieder, und gab es dabei spezielle Erbkrankheiten oder bekannte Risikofaktoren?"
   
-  #### **Beispielgespräch für relevante familiäre Krankheiten**
-  Arzt: "Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?"
-  Patient: "Ja, mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes."
-  Arzt: "Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?"
-  Patient: "Mein Vater bekam mit 50 Jahren einen Herzinfarkt und starb mit 65 Jahren. Meine Mutter hat seit ihren 60ern Diabetes und nimmt Medikamente dagegen."
-  Arzt: "Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?"
-  Patient: "Ja, mein Bruder hat Asthma, und meine Schwester leidet an Migräne."
-  Arzt: "Gibt es in Ihrer Familie andere gesundheitliche Probleme oder Krankheiten, die vererbt werden können?"
-  Patient: "Ja, in der Familie meiner Mutter gab es Fälle von Brustkrebs bei mehreren Frauen."
-  Arzt: "Das ist wichtig zu wissen, wir können Ihre Risikofaktoren besser einschätzen und entsprechende Vorsorgemaßnahmen einleiten."
+  • **Patient:** “In meiner Familie gibt es Fälle von Brustkrebs, die bei mehreren Frauen aufgetreten sind.”  
+  • **Arzt:** “Wie alt waren die betroffenen Familienmitglieder, und gab es dabei spezielle Erbkrankheiten oder bekannte Risikofaktoren?”
   
-  #### **Tipps zur Gesprächsführung**
-  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die familiären gesundheitlichen Herausforderungen und sensibilisieren Sie den Patienten für die Bedeutung dieser Informationen. Beispiel: "Es ist wichtig, diese Informationen zu teilen, damit wir Ihre gesundheitlichen Risiken besser verstehen."
-  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache, um sicherzustellen, dass der Patient versteht, warum diese Informationen wichtig sind. Beispiel: "Könnten Sie mir erzählen, ob in Ihrer Familie Krankheiten auftreten, die vererbt werden könnten?"
-  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und stellen Sie gegebenenfalls gezielte Nachfragen. Beispiel: "Verstehe, Ihre Mutter hatte Diabetes. Gab es bei ihr auch andere gesundheitliche Probleme, die für uns relevant sein könnten?"
-  4. **Offene Fragen stellen:** Fördern Sie den Patienten, mehr über die gesundheitlichen Geschichten der Familienmitglieder zu erzählen. Beispiel: "Gab es noch andere ernsthafte Erkrankungen in Ihrer Familie, die wir kennen sollten?"
+  #### **Beispielgespräch für relevante familiäre Krankheiten:**
+  
+  **Arzt:** “Hatten Ihre Eltern bekannte Erkrankungen, die für Ihre Gesundheit relevant sein könnten?”  
+  **Patient:** “Ja, mein Vater hatte Herzkrankheiten, und meine Mutter hatte Diabetes.”  
+  **Arzt:** “Wie alt waren Ihre Eltern, als sie an diesen Erkrankungen litten, und welche Behandlung haben sie erhalten?”  
+  **Patient:** “Mein Vater bekam mit 50 Jahren einen Herzinfarkt und starb mit 65 Jahren. Meine Mutter hat seit ihren 60ern Diabetes und nimmt Medikamente dagegen.”  
+  **Arzt:** “Haben Ihre Geschwister gesundheitliche Probleme oder bekannte Erkrankungen?”  
+  **Patient:** “Ja, mein Bruder hat Asthma, und meine Schwester leidet an Migräne.”  
+  **Arzt:** “Gibt es in Ihrer Familie andere gesundheitliche Probleme oder Krankheiten, die vererbt werden können?”  
+  **Patient:** “Ja, in der Familie meiner Mutter gab es Fälle von Brustkrebs bei mehreren Frauen.”  
+  **Arzt:** “Das ist wichtig zu wissen, wir können Ihre Risikofaktoren besser einschätzen und entsprechende Vorsorgemaßnahmen einleiten.”
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Freundlichkeit und Empathie:** Zeigen Sie Verständnis für die familiären gesundheitlichen Herausforderungen und sensibilisieren Sie den Patienten für die Bedeutung dieser Informationen.  
+     Beispiel: “Es ist wichtig, diese Informationen zu teilen, damit wir Ihre gesundheitlichen Risiken besser verstehen.”
+  
+  2. **Klarheit und Einfachheit:** Verwenden Sie eine klare Sprache, um sicherzustellen, dass der Patient versteht, warum diese Informationen wichtig sind.  
+     Beispiel: “Könnten Sie mir erzählen, ob in Ihrer Familie Krankheiten auftreten, die vererbt werden könnten?”
+  
+  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und stellen Sie gegebenenfalls gezielte Nachfragen.  
+     Beispiel: “Verstehe, Ihre Mutter hatte Diabetes. Gab es bei ihr auch andere gesundheitliche Probleme, die für uns relevant sein könnten?”
+  
+  4. **Offene Fragen stellen:** Fördern Sie den Patienten, mehr über die gesundheitlichen Geschichten der Familienmitglieder zu erzählen.  
+     Beispiel: “Gab es noch andere ernsthafte Erkrankungen in Ihrer Familie, die wir kennen sollten?”
+  
   5. **Geduld haben:** Geben Sie dem Patienten ausreichend Zeit, um die relevanten familiären Gesundheitsinformationen zu teilen.
-  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben. Beispiel: "Also, Ihr Vater hatte Herzkrankheiten, und Ihre Mutter hat Diabetes. Ihre Geschwister haben Asthma und Migräne. Haben Sie noch weitere familiäre Gesundheitsinformationen?"
+  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie die wichtigen Punkte, um sicherzustellen, dass Sie alles richtig verstanden haben.  
+     Beispiel: “Also, Ihr Vater hatte Herzkrankheiten, und Ihre Mutter hat Diabetes. Ihre Geschwister haben Asthma und Migräne. Haben Sie noch weitere familiäre Gesundheitsinformationen?”
     `,
   },
-
   sozialanamnese: {
-    additionalInfo: ` `,
-  },
-
-  preliminaryDiagnosis: {
-    additionalInfo: ` Попередній діагноз `,
-  },
+    additionalInfo: `
+  ### **Soziale Anamnese**
+  
+  #### **Beruf:**
+  Fragen Sie nach dem Beruf des Patienten, um mögliche gesundheitliche Auswirkungen durch berufliche Belastungen oder Arbeitsbedingungen zu erkennen.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach dem aktuellen Beruf des Patienten und den spezifischen Arbeitsanforderungen.  
+  • Achten Sie auf mögliche berufliche Risiken, wie körperliche Belastungen, Stress oder Gefahrstoffe.
+  
+  **Beispiele:**
+  • “Was ist Ihr Beruf?”  
+  • “Haben Sie in Ihrem Job körperliche Belastungen oder besonderen Stress?”  
+  • “Gibt es arbeitsbedingte Risiken, wie zum Beispiel den Umgang mit Chemikalien oder schweren Geräten?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ich arbeite als Büroangestellter, meistens sitze ich den ganzen Tag am Schreibtisch.”  
+  • **Arzt:** “Haben Sie Beschwerden wie Rückenschmerzen oder Augenprobleme durch das lange Sitzen?”
+  
+  #### **Familienstand:**
+  Erfragen Sie den Familienstand des Patienten, da familiäre Unterstützung eine wichtige Rolle für das allgemeine Wohlbefinden und die psychische Gesundheit spielen kann.
+  
+  **Anleitung:**
+  • Fragen Sie nach dem aktuellen Familienstand, um soziale Belastungen oder Unterstützungssysteme zu erkennen.  
+  • Achten Sie auf mögliche Herausforderungen wie Trennung oder Probleme innerhalb der Familie, die den Gesundheitszustand beeinflussen könnten.
+  
+  **Beispiele:**
+  • “Wie ist Ihr Familienstand?”  
+  • “Sind Sie verheiratet, in einer Partnerschaft oder leben Sie allein?”  
+  • “Haben Sie Kinder oder andere Familienmitglieder, die auf Ihre Unterstützung angewiesen sind?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ich bin verheiratet und habe zwei Kinder.”  
+  • **Arzt:** “Wie geht es Ihnen mit Ihrer Familie? Gibt es besondere Belastungen in der Familie, die Sie betreffen?”
+  
+  #### **Kinder:**
+  Erfragen Sie, ob der Patient Kinder hat, um mögliche familiäre Belastungen oder Verantwortlichkeiten zu verstehen, die das Leben des Patienten beeinflussen könnten.
+  
+  **Anleitung:**
+  • Fragen Sie nach der Anzahl und dem Alter der Kinder.  
+  • Erkundigen Sie sich nach der Unterstützung durch die Familie und ob es zusätzliche Belastungen durch die Kinder gibt.
+  
+  **Beispiele:**
+  • “Haben Sie Kinder?”  
+  • “Wie alt sind Ihre Kinder und wie geht es ihnen gesundheitlich?”  
+  • “Haben Sie Unterstützung in der Kinderbetreuung oder erleben Sie Stress aufgrund der Kinder?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ja, ich habe zwei Kinder im Alter von 3 und 5 Jahren.”  
+  • **Arzt:** “Wie gehen Sie mit den Anforderungen der Kinderbetreuung um? Gibt es Situationen, in denen Sie Unterstützung benötigen?”
+  
+  #### **Wohnsituation:**
+  Fragen Sie nach der Wohnsituation des Patienten, um mögliche psychosoziale Belastungen zu erkennen, die durch das Umfeld entstehen können.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach der Art der Wohnung (z. B. allein, mit Partner oder Familie) und den Wohnverhältnissen.  
+  • Achten Sie auf mögliche Belastungen durch die Wohnsituation, wie beispielsweise Lärm, Überfüllung oder finanzielle Probleme.
+  
+  **Beispiele:**
+  • “Wie wohnen Sie? Leben Sie alleine oder mit jemandem zusammen?”  
+  • “Haben Sie eine angenehme Wohnsituation, oder gibt es Probleme wie Lärm oder beengte Verhältnisse?”  
+  • “Könnte Ihre Wohnsituation Auswirkungen auf Ihre Gesundheit oder Ihr Wohlbefinden haben?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ich wohne mit meiner Frau und den Kindern in einer Wohnung in der Stadt.”  
+  • **Arzt:** “Gibt es Probleme wie Lärm oder enge Platzverhältnisse, die Sie belasten könnten?”
+  
+  #### **Psychosomatische Anamnese:**
+  Ermitteln Sie, ob der Patient psychosomatische Symptome hat, die mit Stress, Ängsten oder anderen psychischen Belastungen in Zusammenhang stehen.
+  
+  **Anleitung:**
+  • Erfragen Sie, ob der Patient körperliche Beschwerden hat, die auf psychische Ursachen zurückzuführen sein könnten, wie Schlafstörungen, Kopfschmerzen oder Magenprobleme.  
+  • Achten Sie auf Symptome, die häufig bei Stress oder psychischen Erkrankungen auftreten.
+  
+  **Beispiele:**
+  • “Haben Sie körperliche Beschwerden, die durch Stress oder andere psychische Belastungen ausgelöst werden könnten?”  
+  • “Leiden Sie unter Schlafstörungen, Kopfschmerzen oder Magenproblemen, besonders in stressigen Zeiten?”  
+  • “Haben Sie jemals das Gefühl, dass Ihre körperlichen Beschwerden mit emotionalem Stress zusammenhängen?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ja, ich habe oft Kopfschmerzen und Schlafprobleme, besonders nach stressigen Arbeitstagen.”  
+  • **Arzt:** “Haben Sie Stress in Ihrer Arbeit oder in anderen Bereichen Ihres Lebens, der diese Symptome verschärft?”
+  
+  #### **Sport:**
+  Fragen Sie nach der sportlichen Aktivität des Patienten, um die körperliche Fitness und mögliche Gesundheitsrisiken durch mangelnde Bewegung zu beurteilen.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach der Häufigkeit und Art der sportlichen Betätigung.  
+  • Achten Sie auf Hinweise darauf, dass der Patient entweder wenig Bewegung hat oder Sport als Ausgleich zu Stress betreibt.
+  
+  **Beispiele:**
+  • “Treiben Sie regelmäßig Sport?”  
+  • “Welche Art von sportlicher Aktivität üben Sie aus und wie oft?”  
+  • “Fühlen Sie sich durch Sport fitter oder hilft es Ihnen, Stress abzubauen?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ich gehe dreimal pro Woche joggen und versuche, mich fit zu halten.”  
+  • **Arzt:** “Haben Sie Beschwerden wie Gelenkschmerzen oder andere gesundheitliche Probleme durch das Training?”
+  
+  #### **Ernährungsgewohnheiten:**
+  Fragen Sie nach den Ernährungsgewohnheiten des Patienten, um potenzielle Risiken wie ungesunde Ernährung oder Mangelernährung zu identifizieren.
+  
+  **Anleitung:**
+  • Erkundigen Sie sich nach den Essgewohnheiten des Patienten, einschließlich der Häufigkeit von Mahlzeiten und der Nahrungsmittelwahl.  
+  • Achten Sie auf Hinweise auf ungesunde Ernährungsgewohnheiten, wie übermäßigen Konsum von Zucker oder Fetten.
+  
+  **Beispiele:**
+  • “Wie sieht Ihre typische Ernährung aus?”  
+  • “Essen Sie regelmäßig drei Mahlzeiten am Tag?”  
+  • “Haben Sie bestimmte Vorlieben oder vermeiden Sie bestimmte Nahrungsmittel?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ich esse meistens schnell und esse oft Fertiggerichte.”  
+  • **Arzt:** “Haben Sie in letzter Zeit Veränderungen in Ihrer Ernährung bemerkt oder möchten Sie Änderungen vornehmen?”
+  
+  #### **Stress:**
+  Fragen Sie nach den Stressfaktoren im Leben des Patienten, um deren Auswirkungen auf die Gesundheit zu erkennen.
+  
+  **Anleitung:**
+  • Erfragen Sie die Hauptursachen für Stress im Leben des Patienten.  
+  • Achten Sie auf Symptome wie Schlafstörungen, Reizbarkeit oder körperliche Beschwerden, die durch Stress verschärft werden können.
+  
+  **Beispiele:**
+  • “Haben Sie derzeit viel Stress in Ihrem Leben?”  
+  • “Was sind die Hauptursachen für Stress in Ihrem Alltag?”  
+  • “Leiden Sie unter Schlafstörungen oder körperlichen Beschwerden aufgrund von Stress?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  • **Patient:** “Ja, ich habe viel Stress bei der Arbeit und zu Hause.”  
+  • **Arzt:** “Haben Sie versucht, Entspannungstechniken zu nutzen, um den Stress zu bewältigen?”
+  
+  #### **Beispielgespräch für soziale Anamnese:**
+  
+  **Arzt:** “Was ist Ihr Beruf?”  
+  **Patient:** “Ich arbeite als Büroangestellter, meistens sitze ich den ganzen Tag am Schreibtisch.”  
+  **Arzt:** “Haben Sie gesundheitliche Beschwerden wie Rückenschmerzen oder Augenprobleme durch das lange Sitzen?”  
+  **Patient:** “Ja, ich habe oft Rückenschmerzen, besonders nach langen Arbeitstagen.”  
+  **Arzt:** “Wie ist Ihr Familienstand? Leben Sie alleine oder haben Sie eine Familie?”  
+  **Patient:** “Ich bin verheiratet und habe zwei Kinder.”  
+  **Arzt:** “Haben Sie Unterstützung in der Kinderbetreuung oder erleben Sie Stress aufgrund der Kinder?”  
+  **Patient:** “Ja, es ist oft stressig, aber meine Frau hilft mir dabei.”  
+  **Arzt:** “Treiben Sie regelmäßig Sport?”  
+  **Patient:** “Ja, ich gehe dreimal pro Woche joggen.”  
+  **Arzt:** “Wie sieht Ihre typische Ernährung aus?”  
+  **Patient:** “Ich esse meistens schnell und greife oft zu Fertiggerichten.”  
+  **Arzt:** “Haben Sie in letzter Zeit Veränderungen in Ihrer Ernährung bemerkt oder möchten Sie Änderungen vornehmen?”  
+  **Patient:** “Ja, ich habe beschlossen, mich gesünder zu ernähren und mehr Gemüse zu essen.”
+    `,
+  }
   differentialDiagnosis: {
     additionalInfo: `
-### **Диференційний діагноз**
-
-#### **Основна інформація**
-- Перелік можливих діагнозів.
-- Відмінності між ними.
-- Необхідні додаткові дослідження.
-- Ймовірність кожного діагнозу.
-
-**Приклади:**
-- **Можливі діагнози:** Грип, ангіна, COVID-19.
-- **Відмінності:** Симптоматика, дані лабораторних аналізів.
-- **Необхідні дослідження:** Тест ПЛР, загальний аналіз крові.
-- **Ймовірність:** Висока, середня, низька.
-
----
-**Рекомендації для клінічного аналізу:**
-- Використовуйте послідовний підхід для виключення малоймовірних діагнозів.
-- Запишіть всі діагностичні результати.
+  ### **Differentialdiagnose**
+  
+  #### **Differentiale Diagnosen:**
+  
+  Dieser Abschnitt fokussiert sich auf die möglichen Diagnosen, die für die Symptome des Patienten in Frage kommen. Ziel ist es, verschiedene Krankheiten oder Zustände zu berücksichtigen, die ähnliche Symptome hervorrufen können.
+  
+  **Anleitung:**
+  
+  • Erklären Sie die Bedeutung der Differentialdiagnose und warum es wichtig ist, verschiedene Möglichkeiten zu prüfen.  
+  • Nennen Sie die häufigsten Differenzialdiagnosen basierend auf den Symptomen des Patienten.
+  
+  **Beispiele:**
+  
+  • “Basierend auf den Symptomen des Patienten wie Bauchschmerzen und Übelkeit könnten wir an eine Gastritis oder an eine Appendizitis denken.”  
+  • “Ein weiteres mögliches Krankheitsbild, das wir in Betracht ziehen sollten, ist eine Lebensmittelvergiftung, da ähnliche Symptome wie Erbrechen und Durchfall auftreten können.”  
+  • “Die Symptome von Schwindel und Kopfschmerzen könnten sowohl auf eine Migräne als auch auf einen Bluthochdruck hinweisen.”
+  
+  **Wichtige Aspekte:**
+  
+  • **Symptomatische Überschneidungen:** Beachten Sie, dass viele Krankheiten ähnliche Symptome verursachen können.  
+  • **Wichtige Tests und Untersuchungen:** Die Differentialdiagnose wird durch spezifische Tests oder bildgebende Verfahren weiter eingegrenzt.  
+  • **Unterscheidung durch klinische Merkmale:** Einzigartige Merkmale der Symptome oder der körperlichen Untersuchung helfen, eine genauere Diagnose zu stellen.
+  
+  #### **Abgrenzung:**
+  
+  Die Abgrenzung bezieht sich auf den Prozess der Unterscheidung zwischen möglichen Diagnosen und der Identifikation des wahrscheinlichsten Krankheitsbildes.
+  
+  **Anleitung:**
+  
+  • Erklären Sie, wie Sie die Differentialdiagnosen voneinander abgrenzen können, basierend auf spezifischen Tests oder klinischen Zeichen.  
+  • Geben Sie klare Kriterien an, nach denen jede Diagnose unterstützt oder ausgeschlossen wird.
+  
+  **Beispiele:**
+  
+  • “Im Falle einer Appendizitis würde der Schmerz typischerweise im rechten Unterbauch lokalisiert sein, während bei einer Gastritis der Schmerz eher epigastrisch auftritt.”  
+  • “Wenn der Patient eine erhöhte Körpertemperatur und starke Bauchkrämpfe hat, ist eine Lebensmittelvergiftung wahrscheinlicher als eine Appendizitis.”  
+  • “Bei Migräne tritt der Kopfschmerz typischerweise einseitig und pulsatil auf, während bei einem Bluthochdruck eher diffuse Kopfschmerzen und Schwindel bestehen.”
+  
+  **Wichtige Aspekte:**
+  
+  • **Klinische Untersuchung:** Bestimmte körperliche Untersuchungsbefunde helfen, die wahrscheinliche Diagnose abzugrenzen.  
+  • **Anamnese:** Eine detaillierte Anamnese kann dabei helfen, typische Symptome von atypischen abzugrenzen (z. B. Verlauf, Auslöser).  
+  • **Labortests und bildgebende Verfahren:** Tests wie Blutuntersuchungen, Ultraschall oder Röntgenbilder können zur Differenzierung der Diagnosen eingesetzt werden.
+  
+  #### **Beispiel für die Erklärung an einen Prüfer:**
+  
+  • “Der Patient präsentiert sich mit starken Bauchschmerzen, Übelkeit und Erbrechen. Die Differentialdiagnosen umfassen eine Gastritis, eine Appendizitis und eine Lebensmittelvergiftung. Bei der Gastritis erwarten wir typischerweise einen Schmerz im Oberbauch, während die Appendizitis normalerweise mit Schmerzen im rechten Unterbauch einhergeht und beim Abklopfen eine Abwehrspannung zu spüren ist. Eine Lebensmittelvergiftung würde sich durch Übelkeit, Erbrechen und oft auch Durchfall auszeichnen. Um die genaue Diagnose zu stellen, benötigen wir weitere Untersuchungen, wie eine Ultraschalluntersuchung oder eine Blutuntersuchung, um Entzündungsmarker zu überprüfen.”
+  
+  • “Die Abgrenzung zwischen einer Migräne und einem Bluthochdruck ist ebenfalls entscheidend. Während Migränepatienten typischerweise unter pulsierenden, einseitigen Kopfschmerzen leiden, die mit Übelkeit und Lichtempfindlichkeit einhergehen, verursacht Bluthochdruck eher diffuse Kopfschmerzen und Schwindel, vor allem bei erhöhtem Druck. Ein Blutdruckmessung würde die Diagnose des Bluthochdrucks bestätigen und die Migräne diagnostisch ausschließen.”
+  
+  #### **Wichtige Hinweise zur Kommunikation mit dem Prüfer:**
+  
+  1. **Fokussierung auf den klinischen Kontext:** Betonen Sie, dass die Differentialdiagnose ein integraler Bestandteil der medizinischen Entscheidungsfindung ist.  
+  2. **Verweise auf Tests:** Wenn Sie mögliche Diagnosen ansprechen, erwähnen Sie, welche diagnostischen Tests oder klinischen Befunde zur weiteren Abklärung notwendig wären.  
+  3. **Logische Herangehensweise:** Erklären Sie dem Prüfer klar, wie Sie von den Symptomen zu den Differenzialdiagnosen gelangt sind und welche Merkmale helfen, diese abzugrenzen.  
+  4. **Kritische Einschätzung:** Stellen Sie sicher, dass Sie die Wahrscheinlichkeit der verschiedenen Diagnosen je nach den vorliegenden Befunden logisch abwägen und dem Prüfer Ihre Überlegungen nachvollziehbar erklären.
+    `,
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+  ### **Vermuteter Diagnose:**
+  
+  Die vermutete Diagnose ist die wahrscheinlichste Diagnose basierend auf den aktuellen Symptomen, der Anamnese und den ersten klinischen Befunden des Patienten.
+  
+  **Anleitung:**
+  
+  • Basierend auf den vorliegenden Informationen und der bisherigen Untersuchung formulieren Sie die vermutete Diagnose.  
+  • Achten Sie darauf, diese Diagnose vorläufig zu stellen und die Notwendigkeit für weiterführende Untersuchungen oder Tests zu betonen.
+  
+  **Beispiele:**
+  
+  • “Die vermutete Diagnose ist eine akute Appendizitis aufgrund der typischen Symptome wie rechtsseitige Unterbauchschmerzen, Übelkeit und Fieber.”  
+  • “Die vermutete Diagnose lautet Diabetes Typ 2, da der Patient über zunehmenden Durst, häufiges Wasserlassen und Müdigkeit klagt.”  
+  • “Wir vermuten eine Migräne, basierend auf den einseitigen, pulsierenden Kopfschmerzen und der Unempfindlichkeit gegenüber Licht und Geräuschen.”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • “Welche Tests oder Untersuchungen wären Ihrer Meinung nach notwendig, um diese Diagnose zu bestätigen?”  
+  • “Wie wahrscheinlich halten Sie diese Diagnose im Vergleich zu anderen möglichen Ursachen für die Symptome des Patienten?”
+  
+  #### **Begründung:**
+  
+  Die Begründung erklärt, warum die vermutete Diagnose aufgestellt wurde. Sie stützt sich auf die Symptome des Patienten, die Ergebnisse der körperlichen Untersuchung und alle anderen relevanten medizinischen Informationen.
+  
+  **Anleitung:**
+  
+  • Erklären Sie klar und nachvollziehbar, welche Symptome, Untersuchungsergebnisse und Anamnese die Entscheidung für die vermutete Diagnose unterstützen.  
+  • Heben Sie die Schlüsselmerkmale hervor, die Ihre Diagnose unterstützen und die Wahrscheinlichkeit erhöhen.
+  
+  **Beispiele:**
+  
+  • “Die Begründung für die vermutete Diagnose einer akuten Appendizitis ist die lokalisierte Schmerzlokalisation im rechten Unterbauch, die Abwehrspannung bei der palpatorischen Untersuchung sowie die Laborwerte, die auf eine Entzündung hinweisen (erhöhter CRP-Wert).”  
+  • “Die vermutete Diagnose Diabetes Typ 2 wird durch die häufig berichteten Symptome von Durst, häufigem Wasserlassen und Müdigkeit sowie die Vorgeschichte des Patienten mit Übergewicht gestützt. Bluttests bestätigen erhöhte Blutzuckerwerte.”  
+  • “Die Diagnose Migräne basiert auf der typischen Symptomatik der einseitigen, pulsierenden Kopfschmerzen, die mit Übelkeit und Lichtempfindlichkeit einhergehen.”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • “Welche anderen Symptome könnten bei diesem Patienten auftreten, die diese Diagnose weiter unterstützen oder widerlegen würden?”  
+  • “Welche weiteren Untersuchungen sollten durchgeführt werden, um die Diagnose zu bestätigen oder auszuschließen?”
+  
+  #### **Differenzialdiagnosen:**
+  
+  Differenzialdiagnosen sind alternative Diagnosen, die in Betracht gezogen werden müssen, da sie ähnliche Symptome wie die vermutete Diagnose hervorrufen können. Die Differenzierung zwischen diesen Diagnosen ist entscheidend, um die genaue Ursache der Symptome zu ermitteln.
+  
+  **Anleitung:**
+  
+  • Listen Sie mögliche Differenzialdiagnosen auf, die ähnliche Symptome hervorrufen können.  
+  • Erklären Sie, warum diese Differenzialdiagnosen ebenfalls in Betracht gezogen werden müssen, und wie sie sich von der vermuteten Diagnose unterscheiden.
+  
+  **Beispiele:**
+  
+  • “Zu den Differenzialdiagnosen einer akuten Appendizitis gehören eine divertikuläre Erkrankung, eine Kolitis oder ein Ovarialzystenruptur, da diese ebenfalls Schmerzen im Unterbauch verursachen können. Eine Abgrenzung erfolgt durch zusätzliche Symptome und spezifische Tests.”  
+  • “Für die vermutete Diagnose Diabetes Typ 2 müssen wir auch einen Diabetes Typ 1 sowie eine Hyperthyreose in Betracht ziehen, da diese ebenfalls Symptome wie häufiges Wasserlassen und Müdigkeit verursachen können.”  
+  • “Neben Migräne könnte auch eine Clusterkopfschmerz-Attacke in Frage kommen, da beide Kopfschmerzerkrankungen ähnliche Symptome aufweisen, jedoch mit unterschiedlichen Mustern und Intensitäten.”
+  
+  **Mögliche Antworten und Follow-ups:**
+  
+  • “Welche Tests oder Untersuchungen könnten durchgeführt werden, um die Differenzialdiagnosen weiter zu untersuchen?”  
+  • “Wie würden Sie zwischen einer Migräne und einem Clusterkopfschmerz unterscheiden, wenn beide Symptome ähnliche Merkmale aufweisen?”
+  
+  #### **Beispiel für die Erklärung an einen Prüfer:**
+  
+  **Vermutete Diagnose:**
+  
+  “Die vermutete Diagnose bei diesem Patienten ist eine akute Appendizitis, basierend auf der Symptomatik von rechten Unterbauchschmerzen, Übelkeit und leichtem Fieber.”
+  
+  **Begründung:**
+  
+  “Die Begründung für diese Diagnose ergibt sich aus der typischen Schmerzlokalisation im rechten Unterbauch, der positiven Rebound-Schmerzreaktion bei der palpatorischen Untersuchung und den erhöhten Entzündungsmarkern im Blut, insbesondere einem hohen CRP-Wert.”
+  
+  **Differenzialdiagnosen:**
+  
+  “Zu den Differenzialdiagnosen gehören eine akute Divertikulitis, die ebenfalls Schmerzen im Unterbauch verursacht, jedoch meist linksseitig lokalisiert ist. Auch eine Ovarialzystenruptur könnte ähnliche Symptome hervorrufen, jedoch ist der Schmerz dort typischerweise plötzlich und von starkem, stechendem Charakter. Eine Kolitis könnte ebenfalls in Betracht gezogen werden, da sie mit Bauchschmerzen und Stuhlunregelmäßigkeiten einhergeht. Wir würden die Appendizitis durch Ultraschall und CT-Scan weiter abklären.”
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Strukturierte Herangehensweise:** Erklären Sie die vermutete Diagnose klar und untermauern Sie diese mit den wichtigsten Symptomen und Untersuchungsergebnissen.
+  
+  2. **Fokussierung auf Differentialdiagnosen:** Stellen Sie sicher, dass Sie alle relevanten Differenzialdiagnosen nennen und die Gründe angeben, warum diese in Betracht gezogen werden.
+  
+  3. **Wissenschaftliche Begründung:** Erklären Sie, wie und warum die vermutete Diagnose unter den gegebenen Umständen am wahrscheinlichsten ist, und unterstützen Sie diese Argumentation mit wissenschaftlich fundierten Informationen.
+  
+  4. **Anpassung an den Patienten:** Heben Sie hervor, wie Sie die klinischen Informationen und das Verhalten des Patienten in die Entscheidungsfindung einbezogen haben.
+  `,
+  },
+  proposedProcedures: {
+    additionalInfo: `
+  ### **Vorgeschlagene Verfahren**
+  
+  #### **Körperliche Untersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Die körperliche Untersuchung dient dazu, mögliche physische Anomalien oder Symptome zu identifizieren, die zur Diagnose des Gesundheitsproblems beitragen können. Der Arzt wird dabei verschiedene Aspekte des Körpers durch Abtasten, Abhören und Beobachten beurteilen.
+  
+  **Erklärung für den Patienten:**
+  
+  „Um Ihre Symptome besser zu verstehen, werde ich nun eine körperliche Untersuchung durchführen. Diese Untersuchung wird uns helfen, mehr über mögliche körperliche Ursachen Ihrer Beschwerden zu erfahren. Ich werde verschiedene Bereiche Ihres Körpers abtasten, auf Ihre Reaktionen achten und auf bestimmte Signale lauschen, die uns mehr Informationen liefern können.“
+  
+  **Was wird überprüft:**
+  
+  • **Inspektion:** Sichtprüfung des Körpers auf offensichtliche Veränderungen oder Anomalien (z. B. Hautveränderungen, Schwellungen, Asymmetrien).  
+  • **Palpation:** Abtasten von Körperbereichen, um auf Schmerzen, Schwellungen oder andere Abnormalitäten zu prüfen.  
+  • **Auskultation:** Abhören von Körpergeräuschen (z. B. Herz- und Lungengeräusche).  
+  • **Perkussion:** Abklopfen von Körperbereichen, um akustische Hinweise auf zugrunde liegende Strukturen zu erhalten (z. B. für die Diagnose von Flüssigkeitsansammlungen in der Lunge).  
+  • **Messung von Vitalzeichen:** Blutdruck, Puls, Atemfrequenz und Temperatur, um den allgemeinen Zustand des Patienten zu beurteilen.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Ich werde jetzt eine gründliche körperliche Untersuchung durchführen. Dabei werde ich insbesondere auf die Inspektion und Palpation des Abdomens achten, um mögliche Entzündungen oder Verhärtungen festzustellen. Auch die Auskultation des Herzens und der Lunge ist wichtig, um relevante Geräusche wie Rasseln oder Herzgeräusche zu identifizieren. Der Schwerpunkt wird auf der Beurteilung von Vitalzeichen liegen, um eine umfassende Einschätzung des Kreislaufsystems und der generellen Gesundheit zu ermöglichen.“
+  
+  #### **Laboruntersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Die Laboruntersuchungen helfen uns, bestimmte chemische, zelluläre oder bakterielle Informationen zu gewinnen, die uns bei der Diagnose Ihrer Erkrankung unterstützen. Einige Blutwerte oder Urinproben können uns Hinweise auf Entzündungen, Infektionen oder Stoffwechselstörungen geben.
+  
+  **Erklärung für den Patienten:**
+  
+  „Wir werden einige Laboruntersuchungen durchführen, um mehr über Ihre Gesundheit zu erfahren. Das bedeutet, dass ich eine kleine Blutprobe und möglicherweise auch eine Urinprobe entnehmen werde. Diese Tests werden uns helfen, mehr über Ihr Blutbild, die Funktion Ihrer Organe und mögliche Infektionen herauszufinden.“
+  
+  **Was wird überprüft:**
+  
+  • **Blutuntersuchungen:** Untersuchung von Blutwerten, wie dem Hämoglobinspiegel, Leukozytenzahl, Blutzucker, Leber- und Nierenwerten, Entzündungsmarkern (z. B. CRP, BSG).  
+  • **Urinuntersuchung:** Überprüfung auf Eiweiße, Blutzellen oder Bakterien, die auf Erkrankungen wie Nierenprobleme oder Harnwegsinfektionen hinweisen können.  
+  • **Elektrolyte und Mineralien:** Bestimmung von Kalium, Natrium, Calcium und anderen Elektrolyten zur Beurteilung der Nierenfunktion und des Flüssigkeitshaushalts.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Ich werde zunächst eine Blutprobe entnehmen, um Entzündungsmarker wie CRP und eine vollständige Blutbildanalyse durchzuführen. Dies wird uns helfen, eine Infektion oder Entzündung festzustellen. Außerdem werde ich eine Urinprobe anfordern, um mögliche Anomalien wie Proteinurie oder Hämaturie zu untersuchen, die auf eine Nierenerkrankung oder eine Harnwegsinfektion hinweisen könnten. Die Laborergebnisse werden uns dann helfen, die Diagnose weiter einzugrenzen.“
+  
+  #### **Apparative Untersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Apparative Untersuchungen beinhalten den Einsatz von modernen Geräten, um tiefere Einblicke in die Funktionsweise von Organen und Systemen zu erhalten. Sie ermöglichen es, strukturelle oder funktionelle Probleme präzise zu identifizieren.
+  
+  **Erklärung für den Patienten:**
+  
+  „Wir möchten noch weitergehende Untersuchungen durchführen, um mehr Details zu Ihrer Erkrankung zu bekommen. Dazu werden wir spezielle Geräte verwenden, wie ein Ultraschallgerät oder ein Röntgenbild. Diese Untersuchungen sind schmerzfrei und helfen uns, genauere Informationen zu Ihrem Gesundheitszustand zu sammeln.“
+  
+  **Was wird überprüft:**
+  
+  • **Ultraschalluntersuchung:** Einsatz von Schallwellen zur Untersuchung von Organen wie Leber, Nieren, Herz oder auch der Gebärmutter, um Anomalien wie Tumore, Flüssigkeitsansammlungen oder Entzündungen zu erkennen.  
+  • **Röntgenuntersuchung:** Bildgebung zur Beurteilung von Knochenstrukturen, der Lunge oder des Bauchraums, um beispielsweise Knochenbrüche oder Lungenentzündungen zu erkennen.  
+  • **CT- oder MRT-Scan:** Mehrdimensionale Bildgebung für detaillierte Einblicke in Organe und Gewebe. Häufig verwendet bei komplexeren Fällen wie Tumordiagnostik oder neurologischen Beschwerden.  
+  • **EKG:** Elektrokardiogramm zur Überprüfung der Herzaktivität und des Herzrhythmus, besonders bei Verdacht auf Herz-Kreislauf-Erkrankungen.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Für die apparative Untersuchung plane ich einen Ultraschall des Abdomens, um die Leber und Nieren auf mögliche Anomalien zu überprüfen, insbesondere bei Verdacht auf Entzündungen oder Tumoren. Falls nötig, würde ich auch eine Röntgenaufnahme des Thorax anfordern, um die Lungen zu untersuchen und etwaige Flüssigkeitsansammlungen oder Anzeichen einer Pneumonie zu erkennen. Sollte sich das Bild weiter verdichten, könnten ein CT-Scan oder eine MRT-Untersuchung erforderlich sein, um eine präzisere Diagnose zu erhalten.“
+  
+  #### **Beispiel für die Erklärung an den Prüfer und Patienten:**
+  
+  **Für den Patienten:**
+  
+  „Zuerst werde ich eine körperliche Untersuchung durchführen, bei der ich auf verschiedene Körperbereiche drücke und horche, um zu sehen, ob es Anzeichen von Entzündungen oder anderen Problemen gibt. Wir werden auch eine Blutuntersuchung machen, um Ihre Leber- und Nierenwerte sowie Entzündungsmarker zu prüfen. Zusätzlich werde ich ein Ultraschallbild anfertigen, um Ihre Organe genauer zu betrachten und sicherzustellen, dass es keine Auffälligkeiten gibt.“
+  
+  **Für den Prüfer:**
+  
+  „Die körperliche Untersuchung wird sich auf den Abdominalbereich konzentrieren, da der Patient über Bauchschmerzen klagt. Ich werde die Inspektion, Palpation und Auskultation verwenden, um Anzeichen einer Entzündung oder Abwehrspannung zu finden. Die Blutuntersuchung ist entscheidend, um Entzündungsmarker wie CRP und die Nierenwerte zu überprüfen. Für die apparative Untersuchung werde ich einen Ultraschall des Abdomens anfordern, um strukturelle Veränderungen zu beurteilen und eine Appendizitis oder andere abdominale Erkrankungen auszuschließen.“
     `,
   },
 

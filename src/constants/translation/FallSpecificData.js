@@ -301,6 +301,28 @@ Veränderungen im Stuhlgang sind charakteristische Symptome für **CED** und **K
   - "Ihre Symptome deuten auf eine mögliche Entzündung oder Veränderung im Darm hin. Ich würde gerne weitere Tests vorschlagen."
     `,
         },
+        vorerkrankungen: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        previousOperations: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        medications: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        allergiesAndIntolerances: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        noxen: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        familienanamnese: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+        sozialanamnese: {
+            additionalInfo: "Кардіологічні персональні дані...",
+        },
+      
     },
 };
 
