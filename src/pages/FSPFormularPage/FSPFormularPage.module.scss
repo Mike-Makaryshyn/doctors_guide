@@ -209,6 +209,7 @@
   
 /* Оновлені стилі для кнопок */
 /* Оновлені стилі для кнопок */
+/* Оновлені стилі для кнопок */
 .add-case-button,
 .mark-completed-button,
 .defer-case-button {
@@ -221,8 +222,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px; /* Зменшений розмір іконок */
-    transition: background-color 0.3s ease;
+    font-size: 18px; /* Розмір іконок */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Зміна кольору і збільшення */
     width: 70%; /* Зменшена ширина кнопок */
     height: 40px; /* Зменшена висота кнопок */
     text-align: center;
@@ -243,14 +244,24 @@
 .mark-completed-button:hover,
 .defer-case-button:hover {
     background-color: #1976d2;
+    transform: scale(1.1); /* Легке збільшення іконки */
 }
 
 /* Стилі для іконок кнопок */
 .add-case-button::before,
 .mark-completed-button::before,
 .defer-case-button::before {
-    font-size: 20px; /* Можна зменшити розмір іконок для кнопок */
+    font-size: 20px; /* Розмір іконок */
     color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавне збільшення і зміна кольору */
+}
+
+/* Зміна кольору при наведенні на іконки */
+.add-case-button:hover::before,
+.mark-completed-button:hover::before,
+.defer-case-button:hover::before {
+    color: #fff;
+    transform: scale(1.2); /* Легке збільшення іконки */
 }
   
   /* Кнопка закриття модального вікна */
