@@ -19,7 +19,7 @@ const ExaminerQuestions = ({ onQuestionClick }) => {
                 }
             }}
         >
-            <p className={styles["examiner-text"]}>Fragen</p> {/* Текст по центру */}
+            <p className={styles["examiner-text"]}>Prüfungsfragen</p> {/* Текст по центру */}
         </div>
     );
 };

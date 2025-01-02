@@ -95,7 +95,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1001; /* Поверх інших елементів */
+    z-index: 1000; /* Поверх інших елементів */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при взаємодії */
   }
   
@@ -109,7 +109,7 @@
 .settings-modal {
     position: fixed;
     bottom: 70px;
-    left: 22px;
+    left: 28px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(8px);
     border: 1px solid #ddd;
@@ -197,6 +197,23 @@
   
   .region-option:hover {
     background-color: #f1f1f1;
+  }
+  .reset-case-button {
+    background-color: #ffc107; // Жовтий для виділення
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #e0a800;
+    }
+  
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
   
   /* Кнопки у модальному вікні */

@@ -39,16 +39,16 @@
 }
 
 .close-button {
-    position: fixed; /* Змінили на fixed, щоб кнопка була зафіксована */
-    top: 10px; /* Відступ від верхнього краю екрану */
-    right: 10px; /* Відступ від правого краю екрану */
+    position: fixed; /* Фіксована позиція */
+    top: 10px; /* Відступ зверху */
+    right: 10px; /* Відступ праворуч */
     background: #ff5c5c;
     border: none;
     color: #fff;
     padding: 6px;
-    border-radius: 50%; /* Кругла кнопка */
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 14px; /* Маленький хрестик */
+    font-size: 14px; 
     transition: background 0.3s ease;
     z-index: 1001; /* Забезпечує, що кнопка буде поверх контенту */
 }
@@ -93,19 +93,41 @@
 }
 
 /* Адаптивність для мобільних пристроїв */
+/* Оновлені стилі для мобільної версії */
+/* Модальне вікно на мобільних */
 @media (max-width: 768px) {
+    .modal-overlay {
+        position: fixed;
+        top: 10%;
+        bottom: 10%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6); /* Прозорий фон */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
     .modal-content {
-        width: 100%; /* Модальне вікно на мобільних займає всю ширину екрану */
+        width: 100%;
         max-width: 100%;
-        height: 80%; /* 80% висоти екрану */
-        top: 10%; /* 10% відступ зверху */
-        bottom: 10%; /* 10% відступ знизу */
-        padding: 15px; /* Менше відступів на мобільних */
+        height: 120%;
+        top: 0;
+        bottom: 0;
+        padding: 15px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.8); /* Прозорий білий фон */
+        backdrop-filter: blur(8px); /* Матовий ефект */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.3s ease;
+        z-index: 1001;
     }
 
     .close-button {
+        font-size: 12px; /* Маленький хрестик */
+        position: fixed;
         top: 5px;
         right: 5px;
-        font-size: 12px; /* Маленький хрестик на мобільних */
     }
 }

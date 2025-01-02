@@ -333,7 +333,12 @@ const FSPFormularPage = () => {
       setIsLoading(false);
     }
   };
-
+  const handleResetCase = () => {
+    setSelectedCase(""); // Очищення вибраного випадку
+    setParsedData({}); // Очищення парсованих даних
+    toast.info("Вибраний випадок очищено."); // Повідомлення про успіх
+    console.log("Стан вибраного випадку очищено."); // Лог для дебагу
+  };
   // Функція для відкриття модального вікна додаткової інформації
   const handleOpenInfoModal = (type) => {
     if (isLoading) {
@@ -604,9 +609,14 @@ const FSPFormularPage = () => {
     fetchCaseData();
   }, [caseId, dataSources]);
 
-  // Функція для отримання опцій для React Select з іконками
+  // Функція для обробки вибору опції в React Select
   const getCaseOptions = () => {
-    if (!localRegion || !dataSources[localRegion]?.files) return [];
+    if (!localRegion || !dataSources[localRegion]?.files) {
+      console.log("Файли для локального регіону відсутні:", localRegion);
+      return [];
+    }
+
+    console.log("Файли для локального регіону:", dataSources[localRegion].files);
 
     return dataSources[localRegion].files
       .filter((file) => file.id) // Додано фільтр наявності id
@@ -629,11 +639,14 @@ const FSPFormularPage = () => {
           }
         }
 
+        console.log(`Створюємо опцію для файлу:`, file);
+
         return {
           value: file.id,
           label: (
             <div className={styles["option-label"]}>
-              <span>{file.name}</span>
+              {/* Використовуємо fallname або id, якщо fallname відсутній */}
+              <span>{file.fallname || file.id}</span>
               {status === "completed" && (
                 <span className={styles["status-icon"]}>✔️</span>
               )}
@@ -750,7 +763,10 @@ const FSPFormularPage = () => {
                                 {dataSources[localRegion].files.find(
                                   (file) =>
                                     String(file.id) === String(selectedCase)
-                                )?.name || "Виберіть Випадок"}
+                                )?.fallname || dataSources[localRegion].files.find(
+                                  (file) =>
+                                    String(file.id) === String(selectedCase)
+                                )?.id || "Виберіть Випадок"}
                               </span>
                               {userData &&
                                 userData[`completedCases_${localRegion}`]?.includes(
@@ -811,6 +827,14 @@ const FSPFormularPage = () => {
               >
                 ⏸
               </button>
+             
+               <button
+                className={styles["reset-case-button"]}
+                onClick={handleResetCase}
+                disabled={!selectedCase}
+              >
+                🔄
+              </button>
             </div>
 
             {/* Кнопка Закриття */}
@@ -821,6 +845,7 @@ const FSPFormularPage = () => {
             >
               ✕
             </button>
+            
           </div>
         </div>
       )}
@@ -891,7 +916,7 @@ const FSPFormularPage = () => {
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("zusammenfassung")}
               >
-                <h3 className={styles["tile-title"]}></h3>
+                <h3 className={styles["tile-title"]}>Підсумок</h3>
                 <Zusammenfassung parsedData={parsedData} />
               </div>
               <div
@@ -983,7 +1008,7 @@ const FSPFormularPage = () => {
                 className={styles["tile"]}
                 onClick={handleExaminerQuestionsClick}
               >
-                <h3 className={styles["tile-title"]}></h3>
+                <h3 className={styles["tile-title"]}>Запитання Екзаменатора</h3>
                 <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
               </div>
             </div>
