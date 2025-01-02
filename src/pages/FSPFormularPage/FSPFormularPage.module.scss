@@ -71,13 +71,14 @@
   .tile-title {
     font-size: 16px;
     font-weight: bold;
-    color: #2c3e50; /* Темно-синій для професійного вигляду */
+    color: #2c3e50;
     text-align: left;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 8px;
-    font-family: "Poppins", sans-serif; /* Сучасний шрифт */
-  }
+    font-family: "Poppins", sans-serif;
+}
+
   
   /* Кнопка налаштувань */
   .settings-button {
@@ -109,8 +110,8 @@
     position: fixed;
     bottom: 70px;
     left: 22px;
-    background-color: rgba(255, 255, 255, 0.5); /* Прозорий білий фон */
-    backdrop-filter: blur(8px); /* Додаємо розмитість для фону позаду */
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
@@ -119,7 +120,7 @@
     width: 250px;
     animation: fadeIn 0.3s ease;
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+}
   
   .settings-content {
     position: relative;
@@ -206,30 +207,51 @@
     margin-top: 20px;
   }
   
-  .add-case-button,
-  .mark-completed-button,
-  .defer-case-button {
-    padding: 8px 16px;
+/* Оновлені стилі для кнопок */
+/* Оновлені стилі для кнопок */
+.add-case-button,
+.mark-completed-button,
+.defer-case-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     background-color: #2196f3;
     color: rgb(22, 20, 20);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px; /* Зменшений розмір іконок */
     transition: background-color 0.3s ease;
-  }
-  
-  .add-case-button:hover,
-  .mark-completed-button:hover,
-  .defer-case-button:hover {
-    background-color: #1976d2;
-  }
-  
-  .mark-completed-button:disabled,
-  .defer-case-button:disabled {
+    width: 70%; /* Зменшена ширина кнопок */
+    height: 40px; /* Зменшена висота кнопок */
+    text-align: center;
+    margin: 0 auto; /* Вирівнювання кнопки по центру */
+}
+
+/* Сірі кнопки при неактивному стані */
+.add-case-button:disabled,
+.mark-completed-button:disabled,
+.defer-case-button:disabled {
     background-color: #ccc;
-    cursor: not-allowed;
-  }
+    color: #888; /* Текст стає сірим */
+    cursor: not-allowed; /* Не можна натискати */
+}
+
+/* Кнопки при наведенні */
+.add-case-button:hover,
+.mark-completed-button:hover,
+.defer-case-button:hover {
+    background-color: #1976d2;
+}
+
+/* Стилі для іконок кнопок */
+.add-case-button::before,
+.mark-completed-button::before,
+.defer-case-button::before {
+    font-size: 20px; /* Можна зменшити розмір іконок для кнопок */
+    color: #fff;
+}
   
   /* Кнопка закриття модального вікна */
   .close-button {

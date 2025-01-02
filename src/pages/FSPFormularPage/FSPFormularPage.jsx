@@ -790,7 +790,7 @@ const FSPFormularPage = () => {
                   className={styles["add-case-button"]}
                   aria-label="Додати Новий Випадок"
                 >
-                  Додати Новий Випадок
+                  ➕
                 </button>
               </Link>
 
@@ -800,7 +800,7 @@ const FSPFormularPage = () => {
                 disabled={!selectedCase}
                 aria-label="Позначити Випадок як Завершений"
               >
-                Позначити як Завершений
+                ✓
               </button>
 
               <button
@@ -809,7 +809,7 @@ const FSPFormularPage = () => {
                 disabled={!selectedCase}
                 aria-label="Відкласти Випадок на Пізніше"
               >
-                Відкласти на Пізніше
+                ⏸
               </button>
             </div>
 

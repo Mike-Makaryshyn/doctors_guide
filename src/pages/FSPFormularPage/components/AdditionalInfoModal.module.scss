@@ -1,5 +1,7 @@
+/* src/pages/FSPFormularPage/components/AdditionalInfoModal.module.scss */
+
 .modal-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -36,8 +38,9 @@
     color: #555;
 }
 
+/* Фіксація кнопки всередині модального вікна */
 .close-button {
-    position: fixed; /* Фіксоване положення для кнопки */
+    position: absolute; /* Тепер кнопка залишається всередині вікна */
     top: 10px; /* Відступ від верхнього краю */
     right: 10px; /* Відступ від правого краю */
     background: #ff5c5c;
@@ -95,6 +98,9 @@
     .modal-content {
         width: 100%; /* Модальне вікно на мобільних займає всю ширину екрану */
         max-width: 100%;
+        height: 80%; /* 80% висоти екрану */
+        top: 10%; /* 10% відступ зверху */
+        bottom: 10%; /* 10% відступ знизу */
         padding: 15px; /* Менше відступів на мобільних */
     }
 
