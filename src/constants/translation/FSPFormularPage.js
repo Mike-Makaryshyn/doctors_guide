@@ -1,5 +1,7 @@
 // src/constants/translation/FSPFormularPage.js
 
+import ExaminerQuestions from "../../pages/FSPFormularPage/components/ExaminerQuestions";
+
 const FSPFormularPageData = {
   modal: {
     selectDataSource: {
@@ -9,6 +11,72 @@ const FSPFormularPageData = {
     },
     additionalInfo: {
       title: "Додаткова інформація",
+      defaultSummary: `
+### **Anamnese: Zusammenfassung**
+
+#### **Zusammenfassung der Anamnese**
+
+Nach der Erfassung der persönlichen Daten, des aktuellen Anamnese und des vegetativen Anamnese sollten Sie alle gesammelten Informationen zusammenfassen, um ein klares Bild des Patienten zu erhalten.
+
+**Anleitung:**
+- Fassen Sie die wesentlichen Punkte aus den vorherigen Abschnitten zusammen.
+- Benennen Sie den Patienten mit Namen und Alter.
+- Erläutern Sie den Hauptgrund des Besuchs und die wichtigsten Symptome.
+- Geben Sie die Dauer der Beschwerden an.
+- Verbinden Sie die vegetativen Symptome mit den aktuellen Beschwerden, falls relevant.
+
+**Beispiele:**
+- "Herr Schmidt, Sie sind 50 Jahre alt und haben sich wegen starker Rückenschmerzen vorgestellt. Diese Schmerzen bestehen seit drei Tagen und strahlen in Ihren Nacken aus."
+- "Frau Müller, Sie sind 30 Jahre alt und klagen über Übelkeit und Gewichtsverlust seit zwei Wochen. Zusätzlich berichten Sie über unruhigen Schlaf und gelegentliche Kopfschmerzen."
+
+**Mögliche Antworten und Follow-ups:**
+- **Arzt:** "Also, Herr Schmidt, Sie sind 50 Jahre alt und haben seit drei Tagen starke Rückenschmerzen, die in Ihren Nacken ausstrahlen. Haben Sie noch weitere Symptome, die wir berücksichtigen sollten?"
+- **Patient:** "Ja, ich fühle mich auch manchmal benommen."
+- **Arzt:** "Verstehe, das ist wichtig zu wissen. Danke für die Informationen."
+
+---
+### **Tipps zur Gesprächsführung**
+
+1. **Zusammenfassung einleiten:**
+- "Also, um sicherzustellen, dass ich alles richtig verstanden habe..."
+
+2. **Klar und präzise sein:**
+- Vermeiden Sie unnötige Details, konzentrieren Sie sich auf die wesentlichen Punkte.
+
+3. **Bestätigung einholen:**
+- "Haben Sie das so auch erlebt?"
+
+4. **Offen für Ergänzungen bleiben:**
+- "Gibt es noch etwas, das Sie hinzufügen möchten?"
+
+---
+### **Beispielgespräch für die Zusammenfassung**
+
+**Arzt:** "Also, Herr Schmidt, Sie sind 50 Jahre alt und haben sich wegen starker Rückenschmerzen vorgestellt. Diese Schmerzen bestehen seit drei Tagen und strahlen in Ihren Nacken aus. Haben Sie noch weitere Symptome, die wir berücksichtigen sollten?"
+
+**Patient:** "Ja, ich fühle mich auch manchmal benommen."
+
+**Arzt:** "Verstehe, das ist wichtig zu wissen. Danke für die Informationen. Lassen Sie uns nun eine genauere Untersuchung durchführen."
+
+---
+### **Zusätzliche Fragen zur Vertiefung**
+
+**Zur Zusammenfassung der Symptome:**
+- "Gibt es noch andere Beschwerden, die Sie erwähnen möchten?"
+- "Haben Sie etwas bemerkt, das Ihre Symptome verschlimmert oder verbessert?"
+
+**Zur Bestätigung:**
+- "Habe ich alles richtig zusammengefasst, oder gibt es noch Ergänzungen?"
+- "Gibt es etwas, das Sie noch hinzufügen möchten?"
+
+**Zur Weiterführung:**
+- "Basierend auf Ihren Angaben, lassen Sie uns die nächsten Schritte besprechen."
+- "Wir werden nun eine genauere Untersuchung durchführen, um die Ursachen Ihrer Beschwerden zu ermitteln."
+
+
+
+
+`,
     },
   },
   personalData: {
@@ -488,6 +556,96 @@ Erfahren Sie, ob der Patient bereits medizinische Hilfe in Anspruch genommen hat
   - "Welche Behandlungen wurden bisher durchgeführt?"
 `,
   },
+  reiseImpfstatus: {
+    additionalInfo: `
+  ### **Reiseimpfstatus**
+  
+  #### **Schritt 1: Reiseimpfungen erfragen**
+  
+  Fragen Sie den Patienten nach seinem Impfstatus, insbesondere im Hinblick auf Reisen in Länder mit besonderen Gesundheitsrisiken. Bestimmte Impfungen sind je nach Zielregion oder Reisedauer empfohlen oder sogar notwendig.
+  
+  **Anleitung:**
+  - Erkundigen Sie sich, ob der Patient in Länder reist, in denen bestimmte Impfungen empfohlen werden.
+  - Achten Sie darauf, welche Impfungen der Patient bereits erhalten hat und ob Auffrischungen oder zusätzliche Impfungen notwendig sind.
+  
+  **Beispiele:**
+  - “Haben Sie in letzter Zeit Länder mit besonderen Gesundheitsrisiken besucht?”
+  - “Haben Sie alle erforderlichen Impfungen für Ihre Reisen erhalten?”
+  - “Gibt es Impfungen, die Sie vor Ihrer nächsten Reise benötigen?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  - **Patient:** “Ich war vor ein paar Monaten in Südostasien, aber ich habe keine speziellen Impfungen erhalten.”
+  - **Arzt:** “Für Reisen in diese Region empfehlen wir Impfungen wie Hepatitis A und Typhus. Möchten Sie mehr darüber erfahren?”
+  
+  ---
+  
+  #### **Schritt 2: Impfstatus und Impfungen**
+  
+  Erfragen Sie, welche Impfungen der Patient in der Vergangenheit erhalten hat, um sicherzustellen, dass er vollständig und aktuell geimpft ist, insbesondere in Bezug auf Reiseimpfungen.
+  
+  **Anleitung:**
+  - Fragen Sie nach den Impfungen, die der Patient erhalten hat, und überprüfen Sie, ob Auffrischungsimpfungen erforderlich sind.
+  - Fragen Sie nach Impfdokumenten oder einem Impfpass, falls der Patient diese hat.
+  
+  **Beispiele:**
+  - “Welche Impfungen haben Sie in der Vergangenheit erhalten?”
+  - “Haben Sie einen Impfpass, den wir einsehen können?”
+  - “Gab es Impfungen, die Sie in der Vergangenheit verpasst haben?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  - **Patient:** “Ich habe vor zwei Jahren meine Tetanusimpfung erhalten.”
+  - **Arzt:** “Für Reisen in tropische Gebiete ist es ratsam, Ihre Hepatitis A- und B-Impfungen aufzufrischen.”
+  
+  ---
+  
+  #### **Schritt 3: Reisepläne erfragen**
+  
+  Fragen Sie nach den Reiseplänen des Patienten, um sicherzustellen, dass er über alle notwendigen Impfungen und Gesundheitsvorkehrungen für seine Reisen informiert ist.
+  
+  **Anleitung:**
+  - Erkundigen Sie sich nach dem Ziel und dem Zweck der geplanten Reise (z. B. langfristiger Aufenthalt, Geschäftsreise, Urlaub).
+  - Geben Sie Empfehlungen für Impfungen, die für bestimmte Länder oder Regionen erforderlich sind.
+  
+  **Beispiele:**
+  - “Haben Sie demnächst eine Reise geplant?”
+  - “In welche Länder werden Sie reisen?”
+  - “Sind Sie sich der Impfempfehlungen für Ihre Reiseziele bewusst?”
+  
+  **Mögliche Antworten und Follow-ups:**
+  - **Patient:** “Ja, ich plane eine Reise nach Indien in den nächsten drei Monaten.”
+  - **Arzt:** “Für Reisen nach Indien empfehlen wir Impfungen gegen Typhus, Hepatitis A und Malaria-Prophylaxe. Lassen Sie uns diese Optionen besprechen.”
+  
+  ---
+  
+  #### **Beispielgespräch für Reiseimpfstatus**
+  
+  **Arzt:** “Haben Sie in letzter Zeit Reisen in Länder mit besonderen Gesundheitsrisiken unternommen?”
+  **Patient:** “Ja, ich war vor einigen Monaten in Südostasien, aber ich habe keine speziellen Impfungen erhalten.”
+  **Arzt:** “Für Reisen in diese Region empfehlen wir Impfungen wie Hepatitis A und Typhus. Haben Sie diese Impfungen schon erhalten?”
+  **Patient:** “Ich habe keine Auffrischung für Hepatitis A erhalten.”
+  **Arzt:** “Das wäre eine gute Idee. Möchten Sie mehr darüber erfahren?”
+  **Patient:** “Ja, wie oft sollte ich diese Impfungen bekommen?”
+  **Arzt:** “Welche Impfungen haben Sie bisher erhalten?”
+  **Patient:** “Ich wurde immer regelmäßig gegen Grippe geimpft und habe meine Tetanusimpfung alle zehn Jahre aufgefrischt.”
+  **Arzt:** “Sehr gut. Wenn Sie in tropische Gebiete reisen, sollten Sie auch andere Impfungen wie Hepatitis A oder Malaria-Prophylaxe in Betracht ziehen.”
+  
+  ---
+  
+  #### **Tipps zur Gesprächsführung:**
+  
+  1. **Freundlichkeit und Empathie:** Seien Sie einfühlsam und bieten Sie dem Patienten umfassende Informationen zu den Impfungen. Beispiel: “Es ist großartig, dass Sie sich um Ihre Impfungen kümmern, bevor Sie reisen. Das schützt Ihre Gesundheit.”
+  
+  2. **Klarheit und Einfachheit:** Verwenden Sie klare, einfache Sprache, um Missverständnisse zu vermeiden. Beispiel: “Möchten Sie wissen, welche Impfungen Sie vor Ihrer Reise benötigen?”
+  
+  3. **Aktives Zuhören:** Bestätigen Sie die Antworten des Patienten und stellen Sie sicher, dass er alle notwendigen Informationen erhält. Beispiel: “Verstehe, Sie waren kürzlich in Südostasien. Wir sollten sicherstellen, dass Sie die richtigen Impfungen haben.”
+  
+  4. **Offene Fragen stellen:** Ermutigen Sie den Patienten, seine Reisepläne zu teilen. Beispiel: “Haben Sie demnächst eine Reise geplant und, wenn ja, in welche Region geht es?”
+  
+  5. **Geduld haben:** Geben Sie dem Patienten genügend Zeit, um seine Antworten zu formulieren und fragen Sie nach, wenn Unsicherheiten bestehen.
+  
+  6. **Zusammenfassen und Bestätigen:** Wiederholen Sie wichtige Informationen, um sicherzustellen, dass der Patient alle Impfempfehlungen versteht. Beispiel: “Also, Sie reisen bald nach Indien, und wir werden Hepatitis A und Typhus in Betracht ziehen.”
+  `,
+  },
   vegetativeAnamnese: {
     additionalInfo: `
 ### **Anamnese: Vegetative Anamnese**
@@ -864,74 +1022,6 @@ Erfahren Sie die gynäkologische Anamnese, um frauenspezifische Gesundheitsprobl
    - "Wie geht es Ihnen heute? Übrigens, bevor wir anfangen, könnten Sie mir bitte Ihren Appetit und Ihr Gewicht nennen?"
 
 10. **Zeit nehmen:** Geben Sie dem Patienten genügend Zeit, um auf Fragen zu antworten, besonders wenn es um persönliche Informationen geht.
-
-`,
-  },
-  zusammenfassung: {
-    additionalInfo: `
-### **Anamnese: Zusammenfassung**
-
-#### **Zusammenfassung der Anamnese**
-
-Nach der Erfassung der persönlichen Daten, des aktuellen Anamnese und des vegetativen Anamnese sollten Sie alle gesammelten Informationen zusammenfassen, um ein klares Bild des Patienten zu erhalten.
-
-**Anleitung:**
-- Fassen Sie die wesentlichen Punkte aus den vorherigen Abschnitten zusammen.
-- Benennen Sie den Patienten mit Namen und Alter.
-- Erläutern Sie den Hauptgrund des Besuchs und die wichtigsten Symptome.
-- Geben Sie die Dauer der Beschwerden an.
-- Verbinden Sie die vegetativen Symptome mit den aktuellen Beschwerden, falls relevant.
-
-**Beispiele:**
-- "Herr Schmidt, Sie sind 50 Jahre alt und haben sich wegen starker Rückenschmerzen vorgestellt. Diese Schmerzen bestehen seit drei Tagen und strahlen in Ihren Nacken aus."
-- "Frau Müller, Sie sind 30 Jahre alt und klagen über Übelkeit und Gewichtsverlust seit zwei Wochen. Zusätzlich berichten Sie über unruhigen Schlaf und gelegentliche Kopfschmerzen."
-
-**Mögliche Antworten und Follow-ups:**
-- **Arzt:** "Also, Herr Schmidt, Sie sind 50 Jahre alt und haben seit drei Tagen starke Rückenschmerzen, die in Ihren Nacken ausstrahlen. Haben Sie noch weitere Symptome, die wir berücksichtigen sollten?"
-- **Patient:** "Ja, ich fühle mich auch manchmal benommen."
-- **Arzt:** "Verstehe, das ist wichtig zu wissen. Danke für die Informationen."
-
----
-### **Tipps zur Gesprächsführung**
-
-1. **Zusammenfassung einleiten:**
-- "Also, um sicherzustellen, dass ich alles richtig verstanden habe..."
-
-2. **Klar und präzise sein:**
-- Vermeiden Sie unnötige Details, konzentrieren Sie sich auf die wesentlichen Punkte.
-
-3. **Bestätigung einholen:**
-- "Haben Sie das so auch erlebt?"
-
-4. **Offen für Ergänzungen bleiben:**
-- "Gibt es noch etwas, das Sie hinzufügen möchten?"
-
----
-### **Beispielgespräch für die Zusammenfassung**
-
-**Arzt:** "Also, Herr Schmidt, Sie sind 50 Jahre alt und haben sich wegen starker Rückenschmerzen vorgestellt. Diese Schmerzen bestehen seit drei Tagen und strahlen in Ihren Nacken aus. Haben Sie noch weitere Symptome, die wir berücksichtigen sollten?"
-
-**Patient:** "Ja, ich fühle mich auch manchmal benommen."
-
-**Arzt:** "Verstehe, das ist wichtig zu wissen. Danke für die Informationen. Lassen Sie uns nun eine genauere Untersuchung durchführen."
-
----
-### **Zusätzliche Fragen zur Vertiefung**
-
-**Zur Zusammenfassung der Symptome:**
-- "Gibt es noch andere Beschwerden, die Sie erwähnen möchten?"
-- "Haben Sie etwas bemerkt, das Ihre Symptome verschlimmert oder verbessert?"
-
-**Zur Bestätigung:**
-- "Habe ich alles richtig zusammengefasst, oder gibt es noch Ergänzungen?"
-- "Gibt es etwas, das Sie noch hinzufügen möchten?"
-
-**Zur Weiterführung:**
-- "Basierend auf Ihren Angaben, lassen Sie uns die nächsten Schritte besprechen."
-- "Wir werden nun eine genauere Untersuchung durchführen, um die Ursachen Ihrer Beschwerden zu ermitteln."
-
-
-
 
 `,
   },
@@ -1589,35 +1679,43 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   Fragen Sie nach dem Beruf des Patienten, um mögliche gesundheitliche Auswirkungen durch berufliche Belastungen oder Arbeitsbedingungen zu erkennen.
   
   **Anleitung:**
+
   • Erkundigen Sie sich nach dem aktuellen Beruf des Patienten und den spezifischen Arbeitsanforderungen.  
   • Achten Sie auf mögliche berufliche Risiken, wie körperliche Belastungen, Stress oder Gefahrstoffe.
   
   **Beispiele:**
+
   • “Was ist Ihr Beruf?”  
   • “Haben Sie in Ihrem Job körperliche Belastungen oder besonderen Stress?”  
   • “Gibt es arbeitsbedingte Risiken, wie zum Beispiel den Umgang mit Chemikalien oder schweren Geräten?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ich arbeite als Büroangestellter, meistens sitze ich den ganzen Tag am Schreibtisch.”  
   • **Arzt:** “Haben Sie Beschwerden wie Rückenschmerzen oder Augenprobleme durch das lange Sitzen?”
   
   #### **Familienstand:**
+
   Erfragen Sie den Familienstand des Patienten, da familiäre Unterstützung eine wichtige Rolle für das allgemeine Wohlbefinden und die psychische Gesundheit spielen kann.
   
   **Anleitung:**
+
   • Fragen Sie nach dem aktuellen Familienstand, um soziale Belastungen oder Unterstützungssysteme zu erkennen.  
   • Achten Sie auf mögliche Herausforderungen wie Trennung oder Probleme innerhalb der Familie, die den Gesundheitszustand beeinflussen könnten.
   
   **Beispiele:**
+
   • “Wie ist Ihr Familienstand?”  
   • “Sind Sie verheiratet, in einer Partnerschaft oder leben Sie allein?”  
   • “Haben Sie Kinder oder andere Familienmitglieder, die auf Ihre Unterstützung angewiesen sind?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ich bin verheiratet und habe zwei Kinder.”  
   • **Arzt:** “Wie geht es Ihnen mit Ihrer Familie? Gibt es besondere Belastungen in der Familie, die Sie betreffen?”
   
   #### **Kinder:**
+
   Erfragen Sie, ob der Patient Kinder hat, um mögliche familiäre Belastungen oder Verantwortlichkeiten zu verstehen, die das Leben des Patienten beeinflussen könnten.
   
   **Anleitung:**
@@ -1625,47 +1723,58 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   • Erkundigen Sie sich nach der Unterstützung durch die Familie und ob es zusätzliche Belastungen durch die Kinder gibt.
   
   **Beispiele:**
+
   • “Haben Sie Kinder?”  
   • “Wie alt sind Ihre Kinder und wie geht es ihnen gesundheitlich?”  
   • “Haben Sie Unterstützung in der Kinderbetreuung oder erleben Sie Stress aufgrund der Kinder?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ja, ich habe zwei Kinder im Alter von 3 und 5 Jahren.”  
   • **Arzt:** “Wie gehen Sie mit den Anforderungen der Kinderbetreuung um? Gibt es Situationen, in denen Sie Unterstützung benötigen?”
   
   #### **Wohnsituation:**
+
   Fragen Sie nach der Wohnsituation des Patienten, um mögliche psychosoziale Belastungen zu erkennen, die durch das Umfeld entstehen können.
   
   **Anleitung:**
+
   • Erkundigen Sie sich nach der Art der Wohnung (z. B. allein, mit Partner oder Familie) und den Wohnverhältnissen.  
   • Achten Sie auf mögliche Belastungen durch die Wohnsituation, wie beispielsweise Lärm, Überfüllung oder finanzielle Probleme.
   
   **Beispiele:**
+
   • “Wie wohnen Sie? Leben Sie alleine oder mit jemandem zusammen?”  
   • “Haben Sie eine angenehme Wohnsituation, oder gibt es Probleme wie Lärm oder beengte Verhältnisse?”  
   • “Könnte Ihre Wohnsituation Auswirkungen auf Ihre Gesundheit oder Ihr Wohlbefinden haben?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ich wohne mit meiner Frau und den Kindern in einer Wohnung in der Stadt.”  
   • **Arzt:** “Gibt es Probleme wie Lärm oder enge Platzverhältnisse, die Sie belasten könnten?”
   
   #### **Psychosomatische Anamnese:**
+
   Ermitteln Sie, ob der Patient psychosomatische Symptome hat, die mit Stress, Ängsten oder anderen psychischen Belastungen in Zusammenhang stehen.
   
   **Anleitung:**
+
   • Erfragen Sie, ob der Patient körperliche Beschwerden hat, die auf psychische Ursachen zurückzuführen sein könnten, wie Schlafstörungen, Kopfschmerzen oder Magenprobleme.  
   • Achten Sie auf Symptome, die häufig bei Stress oder psychischen Erkrankungen auftreten.
   
   **Beispiele:**
+
   • “Haben Sie körperliche Beschwerden, die durch Stress oder andere psychische Belastungen ausgelöst werden könnten?”  
   • “Leiden Sie unter Schlafstörungen, Kopfschmerzen oder Magenproblemen, besonders in stressigen Zeiten?”  
   • “Haben Sie jemals das Gefühl, dass Ihre körperlichen Beschwerden mit emotionalem Stress zusammenhängen?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ja, ich habe oft Kopfschmerzen und Schlafprobleme, besonders nach stressigen Arbeitstagen.”  
   • **Arzt:** “Haben Sie Stress in Ihrer Arbeit oder in anderen Bereichen Ihres Lebens, der diese Symptome verschärft?”
   
   #### **Sport:**
+
   Fragen Sie nach der sportlichen Aktivität des Patienten, um die körperliche Fitness und mögliche Gesundheitsrisiken durch mangelnde Bewegung zu beurteilen.
   
   **Anleitung:**
@@ -1673,43 +1782,53 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   • Achten Sie auf Hinweise darauf, dass der Patient entweder wenig Bewegung hat oder Sport als Ausgleich zu Stress betreibt.
   
   **Beispiele:**
+
   • “Treiben Sie regelmäßig Sport?”  
   • “Welche Art von sportlicher Aktivität üben Sie aus und wie oft?”  
   • “Fühlen Sie sich durch Sport fitter oder hilft es Ihnen, Stress abzubauen?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ich gehe dreimal pro Woche joggen und versuche, mich fit zu halten.”  
   • **Arzt:** “Haben Sie Beschwerden wie Gelenkschmerzen oder andere gesundheitliche Probleme durch das Training?”
   
   #### **Ernährungsgewohnheiten:**
+
   Fragen Sie nach den Ernährungsgewohnheiten des Patienten, um potenzielle Risiken wie ungesunde Ernährung oder Mangelernährung zu identifizieren.
   
   **Anleitung:**
+
   • Erkundigen Sie sich nach den Essgewohnheiten des Patienten, einschließlich der Häufigkeit von Mahlzeiten und der Nahrungsmittelwahl.  
   • Achten Sie auf Hinweise auf ungesunde Ernährungsgewohnheiten, wie übermäßigen Konsum von Zucker oder Fetten.
   
   **Beispiele:**
+
   • “Wie sieht Ihre typische Ernährung aus?”  
   • “Essen Sie regelmäßig drei Mahlzeiten am Tag?”  
   • “Haben Sie bestimmte Vorlieben oder vermeiden Sie bestimmte Nahrungsmittel?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ich esse meistens schnell und esse oft Fertiggerichte.”  
   • **Arzt:** “Haben Sie in letzter Zeit Veränderungen in Ihrer Ernährung bemerkt oder möchten Sie Änderungen vornehmen?”
   
   #### **Stress:**
+
   Fragen Sie nach den Stressfaktoren im Leben des Patienten, um deren Auswirkungen auf die Gesundheit zu erkennen.
   
   **Anleitung:**
+
   • Erfragen Sie die Hauptursachen für Stress im Leben des Patienten.  
   • Achten Sie auf Symptome wie Schlafstörungen, Reizbarkeit oder körperliche Beschwerden, die durch Stress verschärft werden können.
   
   **Beispiele:**
+
   • “Haben Sie derzeit viel Stress in Ihrem Leben?”  
   • “Was sind die Hauptursachen für Stress in Ihrem Alltag?”  
   • “Leiden Sie unter Schlafstörungen oder körperlichen Beschwerden aufgrund von Stress?”
   
   **Mögliche Antworten und Follow-ups:**
+
   • **Patient:** “Ja, ich habe viel Stress bei der Arbeit und zu Hause.”  
   • **Arzt:** “Haben Sie versucht, Entspannungstechniken zu nutzen, um den Stress zu bewältigen?”
   
@@ -1956,7 +2075,84 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   „Die körperliche Untersuchung wird sich auf den Abdominalbereich konzentrieren, da der Patient über Bauchschmerzen klagt. Ich werde die Inspektion, Palpation und Auskultation verwenden, um Anzeichen einer Entzündung oder Abwehrspannung zu finden. Die Blutuntersuchung ist entscheidend, um Entzündungsmarker wie CRP und die Nierenwerte zu überprüfen. Für die apparative Untersuchung werde ich einen Ultraschall des Abdomens anfordern, um strukturelle Veränderungen zu beurteilen und eine Appendizitis oder andere abdominale Erkrankungen auszuschließen.“
     `,
   },
-
+  ExaminerQuestions: {
+    additionalInfo: `
+  ### **Vorgeschlagene Verfahren**
+  
+  #### **Körperliche Untersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Die körperliche Untersuchung dient dazu, mögliche physische Anomalien oder Symptome zu identifizieren, die zur Diagnose des Gesundheitsproblems beitragen können. Der Arzt wird dabei verschiedene Aspekte des Körpers durch Abtasten, Abhören und Beobachten beurteilen.
+  
+  **Erklärung für den Patienten:**
+  
+  „Um Ihre Symptome besser zu verstehen, werde ich nun eine körperliche Untersuchung durchführen. Diese Untersuchung wird uns helfen, mehr über mögliche körperliche Ursachen Ihrer Beschwerden zu erfahren. Ich werde verschiedene Bereiche Ihres Körpers abtasten, auf Ihre Reaktionen achten und auf bestimmte Signale lauschen, die uns mehr Informationen liefern können.“
+  
+  **Was wird überprüft:**
+  
+  • **Inspektion:** Sichtprüfung des Körpers auf offensichtliche Veränderungen oder Anomalien (z. B. Hautveränderungen, Schwellungen, Asymmetrien).  
+  • **Palpation:** Abtasten von Körperbereichen, um auf Schmerzen, Schwellungen oder andere Abnormalitäten zu prüfen.  
+  • **Auskultation:** Abhören von Körpergeräuschen (z. B. Herz- und Lungengeräusche).  
+  • **Perkussion:** Abklopfen von Körperbereichen, um akustische Hinweise auf zugrunde liegende Strukturen zu erhalten (z. B. für die Diagnose von Flüssigkeitsansammlungen in der Lunge).  
+  • **Messung von Vitalzeichen:** Blutdruck, Puls, Atemfrequenz und Temperatur, um den allgemeinen Zustand des Patienten zu beurteilen.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Ich werde jetzt eine gründliche körperliche Untersuchung durchführen. Dabei werde ich insbesondere auf die Inspektion und Palpation des Abdomens achten, um mögliche Entzündungen oder Verhärtungen festzustellen. Auch die Auskultation des Herzens und der Lunge ist wichtig, um relevante Geräusche wie Rasseln oder Herzgeräusche zu identifizieren. Der Schwerpunkt wird auf der Beurteilung von Vitalzeichen liegen, um eine umfassende Einschätzung des Kreislaufsystems und der generellen Gesundheit zu ermöglichen.“
+  
+  #### **Laboruntersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Die Laboruntersuchungen helfen uns, bestimmte chemische, zelluläre oder bakterielle Informationen zu gewinnen, die uns bei der Diagnose Ihrer Erkrankung unterstützen. Einige Blutwerte oder Urinproben können uns Hinweise auf Entzündungen, Infektionen oder Stoffwechselstörungen geben.
+  
+  **Erklärung für den Patienten:**
+  
+  „Wir werden einige Laboruntersuchungen durchführen, um mehr über Ihre Gesundheit zu erfahren. Das bedeutet, dass ich eine kleine Blutprobe und möglicherweise auch eine Urinprobe entnehmen werde. Diese Tests werden uns helfen, mehr über Ihr Blutbild, die Funktion Ihrer Organe und mögliche Infektionen herauszufinden.“
+  
+  **Was wird überprüft:**
+  
+  • **Blutuntersuchungen:** Untersuchung von Blutwerten, wie dem Hämoglobinspiegel, Leukozytenzahl, Blutzucker, Leber- und Nierenwerten, Entzündungsmarkern (z. B. CRP, BSG).  
+  • **Urinuntersuchung:** Überprüfung auf Eiweiße, Blutzellen oder Bakterien, die auf Erkrankungen wie Nierenprobleme oder Harnwegsinfektionen hinweisen können.  
+  • **Elektrolyte und Mineralien:** Bestimmung von Kalium, Natrium, Calcium und anderen Elektrolyten zur Beurteilung der Nierenfunktion und des Flüssigkeitshaushalts.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Ich werde zunächst eine Blutprobe entnehmen, um Entzündungsmarker wie CRP und eine vollständige Blutbildanalyse durchzuführen. Dies wird uns helfen, eine Infektion oder Entzündung festzustellen. Außerdem werde ich eine Urinprobe anfordern, um mögliche Anomalien wie Proteinurie oder Hämaturie zu untersuchen, die auf eine Nierenerkrankung oder eine Harnwegsinfektion hinweisen könnten. Die Laborergebnisse werden uns dann helfen, die Diagnose weiter einzugrenzen.“
+  
+  #### **Apparative Untersuchung:**
+  
+  **Ziel für den Patienten:**
+  
+  Apparative Untersuchungen beinhalten den Einsatz von modernen Geräten, um tiefere Einblicke in die Funktionsweise von Organen und Systemen zu erhalten. Sie ermöglichen es, strukturelle oder funktionelle Probleme präzise zu identifizieren.
+  
+  **Erklärung für den Patienten:**
+  
+  „Wir möchten noch weitergehende Untersuchungen durchführen, um mehr Details zu Ihrer Erkrankung zu bekommen. Dazu werden wir spezielle Geräte verwenden, wie ein Ultraschallgerät oder ein Röntgenbild. Diese Untersuchungen sind schmerzfrei und helfen uns, genauere Informationen zu Ihrem Gesundheitszustand zu sammeln.“
+  
+  **Was wird überprüft:**
+  
+  • **Ultraschalluntersuchung:** Einsatz von Schallwellen zur Untersuchung von Organen wie Leber, Nieren, Herz oder auch der Gebärmutter, um Anomalien wie Tumore, Flüssigkeitsansammlungen oder Entzündungen zu erkennen.  
+  • **Röntgenuntersuchung:** Bildgebung zur Beurteilung von Knochenstrukturen, der Lunge oder des Bauchraums, um beispielsweise Knochenbrüche oder Lungenentzündungen zu erkennen.  
+  • **CT- oder MRT-Scan:** Mehrdimensionale Bildgebung für detaillierte Einblicke in Organe und Gewebe. Häufig verwendet bei komplexeren Fällen wie Tumordiagnostik oder neurologischen Beschwerden.  
+  • **EKG:** Elektrokardiogramm zur Überprüfung der Herzaktivität und des Herzrhythmus, besonders bei Verdacht auf Herz-Kreislauf-Erkrankungen.
+  
+  **Erklärung für den Prüfer:**
+  
+  „Für die apparative Untersuchung plane ich einen Ultraschall des Abdomens, um die Leber und Nieren auf mögliche Anomalien zu überprüfen, insbesondere bei Verdacht auf Entzündungen oder Tumoren. Falls nötig, würde ich auch eine Röntgenaufnahme des Thorax anfordern, um die Lungen zu untersuchen und etwaige Flüssigkeitsansammlungen oder Anzeichen einer Pneumonie zu erkennen. Sollte sich das Bild weiter verdichten, könnten ein CT-Scan oder eine MRT-Untersuchung erforderlich sein, um eine präzisere Diagnose zu erhalten.“
+  
+  #### **Beispiel für die Erklärung an den Prüfer und Patienten:**
+  
+  **Für den Patienten:**
+  
+  „Zuerst werde ich eine körperliche Untersuchung durchführen, bei der ich auf verschiedene Körperbereiche drücke und horche, um zu sehen, ob es Anzeichen von Entzündungen oder anderen Problemen gibt. Wir werden auch eine Blutuntersuchung machen, um Ihre Leber- und Nierenwerte sowie Entzündungsmarker zu prüfen. Zusätzlich werde ich ein Ultraschallbild anfertigen, um Ihre Organe genauer zu betrachten und sicherzustellen, dass es keine Auffälligkeiten gibt.“
+  
+  **Für den Prüfer:**
+  
+  „Die körperliche Untersuchung wird sich auf den Abdominalbereich konzentrieren, da der Patient über Bauchschmerzen klagt. Ich werde die Inspektion, Palpation und Auskultation verwenden, um Anzeichen einer Entzündung oder Abwehrspannung zu finden. Die Blutuntersuchung ist entscheidend, um Entzündungsmarker wie CRP und die Nierenwerte zu überprüfen. Für die apparative Untersuchung werde ich einen Ultraschall des Abdomens anfordern, um strukturelle Veränderungen zu beurteilen und eine Appendizitis oder andere abdominale Erkrankungen auszuschließen.“
+    `,
+  },
   button: {
     selectDataSource: "Вибрати джерело даних",
   },

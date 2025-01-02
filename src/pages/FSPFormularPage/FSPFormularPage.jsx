@@ -24,6 +24,10 @@ import ProposedProcedures from "./components/ProposedProcedures";
 import AdditionalInfoModal from "./components/AdditionalInfoModal";
 import UserCasesModal from "./components/UserCasesModal";
 
+// Додані нові імпорти
+import ReiseImpfstatus from "./components/ReiseImpfstatus";
+import ExaminerQuestions from "./components/ExaminerQuestions";
+
 // Імпорт бібліотек для Markdown
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -138,8 +142,7 @@ const FSPFormularPage = () => {
         if (userDocSnap.exists()) {
           const userDataFromFirestore = userDocSnap.data();
           setUserData(userDataFromFirestore);
-          const savedCase =
-            userDataFromFirestore[`selectedCase_${localRegion}`];
+          const savedCase = userDataFromFirestore[`selectedCase_${localRegion}`];
           console.log(`Збережений випадок для ${localRegion}:`, savedCase);
 
           if (
@@ -307,6 +310,8 @@ const FSPFormularPage = () => {
           ...selectedItem,
           summary: selectedItem.summary,
         });
+      } else {
+        console.warn("Parsed Data не містить summary:", selectedItem);
       }
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
@@ -319,18 +324,33 @@ const FSPFormularPage = () => {
 
   // Функція для відкриття модального вікна додаткової інформації
   const handleOpenInfoModal = (type) => {
+    if (isLoading) {
+      toast.info("Дані ще завантажуються. Будь ласка, зачекайте.");
+      return;
+    }
+
     let infoText = "";
 
     console.log("handleOpenInfoModal викликано з type:", type);
 
     // Якщо тип - 'zusammenfassung', використовуємо parsedData.summary або defaultSummary
     if (type === "zusammenfassung") {
+      // Використовуємо лише parsedData.summary
       infoText =
         parsedData.summary ||
         FSPFormularPageData.modal.additionalInfo.defaultSummary ||
         "Підсумок не доступний.";
       console.log("Отримано summary для підсумку:", infoText);
     }
+
+    // Якщо тип - 'examinerQuestions', використовуємо відповідний текст
+    else if (type === "examinerQuestions") {
+      infoText =
+        FSPFormularPageData.modal.additionalInfo.examinerQuestions ||
+        "Додаткова інформація для запитань екзаменаторів недоступна.";
+      console.log("Отримано інформацію для ExaminerQuestions:", infoText);
+    }
+
     // Пріоритет: специфічні дані (FallSpecificData)
     else if (fallType && FallSpecificData[fallType]?.[type]?.additionalInfo) {
       infoText = FallSpecificData[fallType][type].additionalInfo;
@@ -595,12 +615,16 @@ const FSPFormularPage = () => {
         let status = "";
         if (userData) {
           if (
-            userData[`completedCases_${localRegion}`]?.includes(String(file.id))
+            userData[`completedCases_${localRegion}`]?.includes(
+              String(file.id)
+            )
           ) {
             status = "completed";
           }
           if (
-            userData[`deferredCases_${localRegion}`]?.includes(String(file.id))
+            userData[`deferredCases_${localRegion}`]?.includes(
+              String(file.id)
+            )
           ) {
             status = "deferred";
           }
@@ -643,6 +667,11 @@ const FSPFormularPage = () => {
       display: "flex",
       alignItems: "center",
     }),
+  };
+
+  // Функція для обробки кліку на ExaminerQuestions
+  const handleExaminerQuestionsClick = () => {
+    handleOpenInfoModal("examinerQuestions");
   };
 
   // Рендеринг
@@ -725,17 +754,17 @@ const FSPFormularPage = () => {
                                 )?.name || "Виберіть Випадок"}
                               </span>
                               {userData &&
-                                userData[
-                                  `completedCases_${localRegion}`
-                                ]?.includes(String(selectedCase)) && (
+                                userData[`completedCases_${localRegion}`]?.includes(
+                                  String(selectedCase)
+                                ) && (
                                   <span className={styles["status-icon"]}>
                                     ✔️
                                   </span>
                                 )}
                               {userData &&
-                                userData[
-                                  `deferredCases_${localRegion}`
-                                ]?.includes(String(selectedCase)) && (
+                                userData[`deferredCases_${localRegion}`]?.includes(
+                                  String(selectedCase)
+                                ) && (
                                   <span className={styles["status-icon"]}>
                                     ⏸️
                                   </span>
@@ -838,6 +867,15 @@ const FSPFormularPage = () => {
                 <h3 className={styles["tile-title"]}>Поточна Анамнез</h3>
                 <AktuelleAnamnese parsedData={parsedData} />
               </div>
+
+              {/* Додана секція ReiseImpfstatus */}
+              <div
+                className={styles["tile"]}
+                onClick={() => handleOpenInfoModal("reiseImpfstatus")}
+              >
+                <h3 className={styles["tile-title"]}>Reise- та Impfstatus</h3>
+                <ReiseImpfstatus parsedData={parsedData} />
+              </div>
             </div>
 
             {/* Колонка 2 */}
@@ -849,14 +887,13 @@ const FSPFormularPage = () => {
                 <h3 className={styles["tile-title"]}>Вегетативна Анамнез</h3>
                 <VegetativeAnamnese parsedData={parsedData} />
               </div>
-              
+
               <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("zusammenfassung")}
               >
-                <h3 className={styles["tile-title"]}></h3>
-                <Zusammenfassung parsedData={parsedData} />{" "}
-                {/* Використовуємо компонент */}
+                <h3 className={styles["tile-title"]}>Zusammenfassung</h3>
+                <Zusammenfassung parsedData={parsedData} />
               </div>
               <div
                 className={styles["tile"]}
@@ -869,8 +906,7 @@ const FSPFormularPage = () => {
 
             {/* Колонка 3 */}
             <div className={styles["column"]} key="column-3">
-      
-             <div
+              <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("previousOperations")}
               >
@@ -893,7 +929,7 @@ const FSPFormularPage = () => {
                 </h3>
                 <AllergiesAndIntolerances parsedData={parsedData} />
               </div>
-              
+
               <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("noxen")}
@@ -914,8 +950,6 @@ const FSPFormularPage = () => {
 
             {/* Колонка 4 */}
             <div className={styles["column"]} key="column-4">
-              
-              
               <div
                 className={styles["tile"]}
                 onClick={() => handleOpenInfoModal("sozialanamnese")}
@@ -943,6 +977,15 @@ const FSPFormularPage = () => {
               >
                 <h3 className={styles["tile-title"]}>Пропоновані Процедури</h3>
                 <ProposedProcedures parsedData={parsedData} />
+              </div>
+
+              {/* Додана секція ExaminerQuestions */}
+              <div
+                className={styles["tile"]}
+                onClick={handleExaminerQuestionsClick}
+              >
+                <h3 className={styles["tile-title"]}>Запитання екзаменаторів</h3>
+                <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
               </div>
             </div>
           </div>

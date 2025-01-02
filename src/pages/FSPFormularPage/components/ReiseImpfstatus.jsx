@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaInfoCircle } from "react-icons/fa";
+// Імпорт вашої іконки
+import travelIcon from "../../../assets/iconFSPtable/travel-icon.png"; // змініть шлях на відповідний
 import styles from "./TileContainer.module.scss";
 
 const renderTileIcon = () => {
     return (
-        <FaInfoCircle
+        <img
+            src={travelIcon} // використовуємо іконку
+            alt="Reise- und Impfstatus Icon"
             className={styles["tile-icon"]}
-            title="Reise- und Impfstatus"
         />
     );
 };

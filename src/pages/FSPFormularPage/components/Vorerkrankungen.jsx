@@ -25,10 +25,7 @@ const Vorerkrankungen = ({ parsedData = {} }) => {
           <strong>Інфекційні хвороби:</strong>{" "}
           {parsedData?.infectiousDiseases || ""}
         </li>
-        <li>
-          <strong>Einleitung zur Krankengeschichte:</strong>{" "}
-          {parsedData?.medicalHistoryIntroduction || ""}
-        </li>
+       
         <li>
           <strong>Chronische Erkrankungen:</strong>{" "}
           {parsedData?.chronicDiseases || ""}
