@@ -1730,7 +1730,7 @@ Erweitern Sie die Krankengeschichte um weitere relevante Erkrankungen, die für 
   **Arzt:** “Haben Sie in letzter Zeit Veränderungen in Ihrer Ernährung bemerkt oder möchten Sie Änderungen vornehmen?”  
   **Patient:** “Ja, ich habe beschlossen, mich gesünder zu ernähren und mehr Gemüse zu essen.”
     `,
-  }
+  },
   differentialDiagnosis: {
     additionalInfo: `
   ### **Differentialdiagnose**
