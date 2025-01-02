@@ -1,11 +1,9 @@
-// src/pages/FSPFormularPage/components/AdditionalInfoModal.jsx
-
 import React from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw"; // Для рендерингу HTML всередині Markdown
 import remarkGfm from "remark-gfm"; // Для підтримки розширеного Markdown
-import "./AdditionalInfoModal.scss"; // Переконайтеся, що цей файл існує та містить необхідні стилі
+import styles from "./AdditionalInfoModal.module.scss"; // Імпортуємо стилі як модуль
 
 const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
   if (!isOpen) return null;
@@ -19,21 +17,21 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
 
   return (
     <div
-      className="modal-overlay"
+      className={styles["modal-overlay"]}
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="info-modal-title"
     >
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className={styles["modal-content"]} onClick={(e) => e.stopPropagation()}>
         {/* Заголовок модального вікна */}
-        <h2 id="info-modal-title" className="modal-title">
-          {additionalInfo.title || "Додаткова інформація"}
+        <h2 id="info-modal-title" className={styles["modal-title"]}>
+          {additionalInfo.title || ""}
         </h2>
 
         {/* Контент модального вікна з підтримкою Markdown */}
         <ReactMarkdown
-          className="modal-text"
+          className={styles["modal-text"]}
           remarkPlugins={[remarkGfm]} // Підтримка таблиць, чекбоксів тощо
           rehypePlugins={[rehypeRaw]} // Дозволяє використання HTML всередині Markdown
         >
@@ -42,11 +40,11 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
 
         {/* Кнопка закриття */}
         <button
-          className="close-button"
+          className={styles["close-button"]}
           onClick={onClose}
           aria-label="Закрити модальне вікно"
         >
-          Закрити
+          ✕
         </button>
       </div>
     </div>
