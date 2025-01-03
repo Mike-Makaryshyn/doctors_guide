@@ -30,7 +30,7 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Appetit:</strong> {parsedData?.appetite || ""}
                 </li>
                 <li>
-                    <strong>Gewicht:</strong> {parsedData?.weight || ""}
+                    <strong>Gewicht:</strong> {parsedData?.weightLoss || ""}
                 </li>
                 <li>
                     <strong>Durstgefühl:</strong> {parsedData?.thirst || ""}

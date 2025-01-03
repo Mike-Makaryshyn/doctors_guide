@@ -1,70 +1,109 @@
 const HESSEN_DATA = [
     {
-        id: 7, // Унікальний ідентифікатор
-        fullName: "ColonCA",
-            name: "Frederik", // Vorname
-            specialty: "colon",
-            surname: "zu Äusigler", // Nachname
-            birthdate: "30.05.1958", // Geburtsdatum
-            age: 64, // Alter
-            height: null, // Größe
-            weight: null, // Gewicht
-            gender: "Herr", // Geschlecht
-            visitReason: "Postprandiale krampfartige Abdominalschmerzen im linken Unterbauch seit gestern", // Grund für den Besuch
-            painLocalization: "Linker Unterbauch", // Schmerzlokalisation
-            timeCourse: "Seit gestern", // Zeitverlauf
-            symptomDescription: "Krampfartige Schmerzen, heute beschwerdefrei, jedoch laute Darmgeräusche und Flatulenz", // Beschreibung der Symptome
-            painRadiation: null, // Schmerzausstrahlung
-            painProgression: "Wechsel zwischen Diarrhö und Obstipation seit 5 Jahren", // Schmerzprogression
-            triggers: "Postprandial", // Auslösende Faktoren
-            painIntensity: "6-8/10", // Schmerzintensität
-            previousMedicalCare: "Koloskopie vor 5 Jahren mit Polypektomie (benigne), keine Nachkontrolle trotz ärztlicher Empfehlung", // Vorherige medizinische Versorgung
-            reiseImpfstatus: "5 kg innerhalb von 7 Wochen",
-            appetite: null, // Appetit
-            weightLoss: "5 kg innerhalb von 7 Wochen", // Gewichtsverlust
-            nausea: null, // Übelkeit
-            vomiting: null, // Erbrechen
-            bowelMovement: "Wechsel zwischen Diarrhö und Obstipation seit 5 Jahren", // Stuhlgang
-            urination: null, // Urinieren
-            vertigo: null, // Schwindel
-            consciousness: null, // Bewusstsein
-            sleep: "Insomnie aufgrund von Depression und Stress", // Schlaf
-            sexualHistory: null, // Sexualanamnese
-            others: "Nachtschweiß", // Sonstiges
-            gynecologicalHistory: null, // Gynäkologische Anamnese
-            medicalHistoryIntroduction: null, // Einführung in die Anamnese
-            chronicDiseases: "Hypertonie seit 5 Jahren, Diabetes mellitus seit 5 Jahren, Lumbago seit Langem, Meningoenzephalitis vor 8 Jahren", // Chronische Erkrankungen
-            otherRelevantDiseases: null, // Andere relevante Erkrankungen
-            pastOperations: "Appendektomie im Kindesalter, Leistenhernie vor 20 Jahren (laparoskopisch)", // Frühere Operationen
-            operationCourseComplications: null, // Operationsverlauf und Komplikationen
-            hospitalStayDuration: null, // Dauer des Krankenhausaufenthalts
-           
-            allgemeineMedikamenteneinnahme: null, // Allgemeine Medikamenteneinnahme
-            detaillierteMedikamenteninformationen: "Ramipril 5 mg 0-0-1, Amlodipin 5 mg 1-0-0, Celebrex 100 mg b.B., Jardiance 10 mg", // Detaillierte Informationen zu Medikamenten
-            specificMedicationAllergies: "Amoxicillin", // Allergien gegen spezifische Medikamente
-            allergicReactionSymptoms: "Exanthem", // Symptome bei Allergien
-            allergyTriggers: null, // Allergieauslöser
-            specificIntolerances: null, // Spezielle Unverträglichkeiten
-            smoking: "Aktiver Raucher, 30 PY (3/4 Schachtel pro Tag seit 16 Jahren)", // Rauchverhalten
-            alcoholConsumption: "1/2 Liter Apfelwein täglich", // Alkoholkonsum
-            drugUse: "Verneint", // Drogenkonsum
-            parents: "Vater an Dickdarmkrebs verstorben (75 Jahre), Mutter lebt, leidet an Demenz, wohnt im Pflegeheim", // Eltern
-            siblings: "Keine", // Geschwister
-            profession: "Gärtner, selbstständig", // Beruf
-            maritalStatus: "Verheiratet", // Familienstand
-            children: "3 (1 Sohn, 32 Jahre, leidet an Depression; 2 Töchter, Zwillinge, gesund)", // Kinder
-            livingConditions: "Wohnt mit Ehefrau", // Wohnsituation
-            psychosomaticHistory: "Stress aufgrund der Arbeit", // Psychosomatische Anamnese
-            suspectedDiagnosis: "Divertikulitis, Volvulus, Colitis ulcerosa, Morbus Crohn", // Verdachtsdiagnose
-            justification: "Beschwerden wie krampfartige Schmerzen, Flatulenz, Wechsel zwischen Diarrhö und Obstipation", // Begründung
-            physicalExamination: "Palpation (Abwehrspannung), Darmgeräusche", // Körperliche Untersuchung
-            laboratoryTests: "BB, CRP, BSG, Gerinnungsparameter, Tumormarker (CEA, CA 19-9)", // Labortests
-            instrumentalExamination: "Sono-Abdomen, CT-Abdomen, Koloskopie", // Instrumentelle Untersuchungen
-            possibleDiagnoses: "Divertikulitis, Volvulus, Colitis ulcerosa, Morbus Crohn", // Differenzialdiagnosen
-            differentiation: "Appendizitis ausgeschlossen (Operation im Kindesalter)", // Ausschlussdiagnosen
-            summary: "Der 64-jährige Patient stellt sich mit postprandialen krampfartigen Bauchschmerzen im linken Unterbauch vor, begleitet von Flatulenz und wechselnden Stuhlgewohnheiten (Diarrhö/Obstipation seit 5 Jahren). Vorgeschichte umfasst Hypertonie, Diabetes mellitus, Meningoenzephalitis sowie eine Koloskopie mit Polypektomie vor 5 Jahren. Raucher (30 PY), moderater Alkoholkonsum. Verdacht auf Divertikulitis, CT-Abdomen und Koloskopie werden zur Diagnosesicherung empfohlen.", // Zusammenfassung
-            examinerQuestions: "Appendizitis Kindesalter)", // Ausschlussdiagnosen
-    },
+        id: 7,
+        fullName: "64 Jahre alter Gärtnerarbeiter mit Bauchschmerzen, chronischen Erkrankungen und familiärer Krebsanamnese",
+        name: "Frederik",
+        surname: "zu Äusigler",
+        birthdate: "30.05.1958",
+        age: "64",
+        height: "Unbekannt",
+        weight: "Unbekannt",
+        gender: "Männlich",
+        
+        visitReason: "Krampfartige Abdominalschmerzen im Bereich der Regio hypogastrica links, postprandial",
+        painLocalization: "Regio hypogastrica links",
+        timeCourse: "Seit gestern",
+        symptomDescription: "Krampfartige Schmerzen nach dem Essen, begleitet von lauten Darmgeräuschen und Flatulenz.",
+        painRadiation: "Keine",
+        painProgression: "Besserung heute, keine Schmerzen mehr.",
+        triggers: "Postprandial",
+        painIntensity: "6-8/10",
+        painRelief: "Keine spezifische Linderung angegeben.",
+        painAggravation: "Keine spezifische Verschlimmerung angegeben.",
+        previousMedicalCare: "Koloskopie vor 5 Jahren mit Polypektomie (gutartig), keine Nachsorge.",
+        functionalIssues: "Wechsel zwischen Diarrhö und Obstipation seit 5 Jahren.",
+        additionalSymptoms: "Lautes Darmgeräusch, Flatulenz.",
+        
+        vaccination: "Vollständig geimpft",
+        travelHistory: "Keine relevanten Reisen angegeben",
+        
+        generalCondition: "Er sieht gesund aus, aber hat eine Reihe chronischer Erkrankungen.",
+        appetite: "Unverändert",
+        weightLoss: "Gewichtsabnahme von 5 kg innerhalb von 7 Wochen.",
+        thirst: "Keine Angaben",
+        nausea: "Keine Übelkeit",
+        vomiting: "Kein Erbrechen",
+        bowelMovement: "Wechsel zwischen Diarrhö und Obstipation seit 5 Jahren.",
+        urination: "Keine Angaben",
+        sweating: "Nachtschweiß",
+        vertigo: "Kein Schwindel",
+        consciousness: "Wach und orientiert",
+        palpitations: "Kein Herzklopfen",
+        shortnessOfBreath: "Keine Atemnot",
+        hotFlashes: "Keine Hitzewallungen",
+        coldFeeling: "Keine Kältegefühl",
+        sleep: "Insomnie aufgrund von Depression und Stress",
+        sexualHistory: "Keine Angaben",
+        others: "Stressbedingte Beschwerden",
+        gynecologicalHistory: "Nicht relevant",
+      
+        summary: "64 Jahre alter Gärtnerarbeiter mit Bauchschmerzen, seit gestern postprandial auftretend. Der Patient leidet an einer Chronifizierung seiner Symptome, einschließlich Wechsel zwischen Diarrhö und Obstipation. Vor 5 Jahren wurde eine Koloskopie mit Polypektomie durchgeführt, jedoch ohne Nachsorge. Weitere Beschwerden umfassen Insomnie aufgrund von Depression, Nachtschweiß und signifikanten Gewichtsverlust (5 kg in 7 Wochen). Der Patient hat eine familiäre Krebsanamnese, da sein Vater an Dickdarmkrebs starb.",
+        
+        infectiousDiseases: "Keine aktuellen Infektionen angegeben",
+        chronicDiseases: "Arterielle Hypertonie (aHT), Diabetes Mellitus (DM), Lumbago",
+        otherRelevantDiseases: "Meningoenzephalitis vor 8 Jahren",
+        
+        pastOperations: "Appendektomie als Kind, Hernie inguinalis vor 20 Jahren (laparoskopisch)",
+        operationCourseComplications: "Keine Komplikationen angegeben",
+        hospitalStayDuration: "Keine Krankenhausaufenthalte angegeben",
+        
+        allgemeineMedikamenteneinnahme: "Ramipril, Amlodipin, Celebrex, Jardiance",
+        detaillierteMedikamenteninformationen: "Ramipril 5mg 1x täglich, Amlodipin 5mg 1x täglich, Celebrex 100mg bei Bedarf, Jardiance 10mg täglich",
+        
+        specificMedicationAllergies: "Amoxicillin mit Exanthem",
+        allergicReactionSymptoms: "Exanthem",
+        allergyTriggers: "Amoxicillin",
+        householdAllergens: "Keine Angaben",
+        specificIntolerances: "Keine weiteren Unverträglichkeiten",
+        
+        smoking: "Aktiver Raucher mit 30 PY (3/4 Schachtel täglich seit 16 Jahren)",
+        alcoholConsumption: "Alkoholkonsum von 1/2 Liter Apfelwein täglich",
+        drugUse: "Drogenkonsum wurde verneint",
+        
+        geneticDiseases: "Keine genetischen Erkrankungen angegeben",
+        parents: "Vater starb an Dickdarmkrebs (75 Jahre), Mutter lebt mit Demenz im Pflegeheim",
+        siblings: "Keine Geschwister",
+        
+        profession: "Gärtnerarbeiter",
+        maritalStatus: "Verheiratet",
+        children: "3 Kinder, davon ein Sohn mit Depression und zwei gesunde Töchter",
+        livingConditions: "Lebt mit seiner Frau",
+        psychosomaticHistory: "Leidet unter Stress aufgrund der Arbeit",
+        physicalActivity: "Keine Angaben",
+        dietaryHabits: "Keine speziellen Ernährungsgewohnheiten angegeben",
+        
+        possibleDiagnoses: "Divertikulitis, Volvulus, Colitis ulcerosa, Morbus Crohn",
+        differentiation: "Appendizitis ausgeschlossen aufgrund der Anamnese",
+        
+        suspectedDiagnosis: "Divertikulitis",
+        justification: "Die Symptome, wie postprandiale krampfartige Bauchschmerzen, Flatulenz und Darmgeräusche, passen zu einer Divertikulitis. Weitere Differenzialdiagnosen werden durch zusätzliche Tests überprüft.",
+        
+        physicalExamination: "Palpation zeigt Abwehrspannung, Darmgeräusche im Sinne eines Ileus.",
+        laboratoryTests: "Blutentnahme für BB, CRP, BSG, Gerinnungsparameter, Tumormarker CEA, 19-9",
+        instrumentalExamination: "Sono-Abdomen, CT-Abdomen, Koloskopie",
+        
+      
+        examinerQuestions: `
+"Was können wir bei einem CT-Abdomen beurteilen?  
+**Antwort:** Beim CT-Abdomen können Entzündungszeichen, Volvulus, Divertikel und andere Strukturanomalien beurteilt werden.",
+        
+"Was sind die Risikofaktoren für Divertikulitis?  
+**Antwort:** Alter, Rauchen, Bewegungsmangel, Ernährung mit wenig Ballaststoffen und familiäre Häufung.",
+        
+"Was ist Radiotherapie?  
+**Antwort:** Radiotherapie ist eine Behandlung mit ionisierender Strahlung, um Tumoren zu verkleinern oder deren Wachstum zu verhindern."
+      `
+              },
     // Додаткові об'єкти для інших тестових даних (опціонально)
 ];
 HESSEN_DATA.regionName = "Hessen";
