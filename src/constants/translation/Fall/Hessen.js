@@ -66,9 +66,9 @@ const HESSEN_DATA = [
         householdAllergens: "Keine Angaben",
         specificIntolerances: "Keine weiteren Unverträglichkeiten",
         
-        smoking: "Aktiver Raucher mit 30 PY (3/4 Schachtel täglich seit 16 Jahren)",
-        alcoholConsumption: "Alkoholkonsum von 1/2 Liter Apfelwein täglich",
-        drugUse: "Drogenkonsum wurde verneint",
+        rauchverhalten: "Aktiver Raucher mit 30 PY (3/4 Schachtel täglich seit 16 Jahren)",
+        alkoholkonsum: "Alkoholkonsum von 1/2 Liter Apfelwein täglich",
+        drogengebrauch: "Drogenkonsum wurde verneint",
         
         geneticDiseases: "Keine genetischen Erkrankungen angegeben",
         parents: "Vater starb an Dickdarmkrebs (75 Jahre), Mutter lebt mit Demenz im Pflegeheim",
