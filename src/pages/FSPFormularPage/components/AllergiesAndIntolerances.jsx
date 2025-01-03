@@ -24,7 +24,7 @@ const AllergiesAndIntolerances = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Spezifische Medikamentenallergien:</strong> {parsedData?.specificMedicationAllergies || ""}
+                    <strong>Medikamentenallergien:</strong> {parsedData?.specificMedicationAllergies || ""}
                 </li>
                 <li>
                     <strong>Symptomatik allergischer Reaktionen:</strong> {parsedData?.allergicReactionSymptoms || ""}
@@ -33,10 +33,10 @@ const AllergiesAndIntolerances = ({ parsedData }) => {
                     <strong>Allergieauslöser:</strong> {parsedData?.allergyTriggers || ""}
                 </li>
                 <li>
-                    <strong>Pobutovi alergeni (Побутові алергени):</strong> {parsedData?.householdAllergens || ""}
+                    <strong>Haushaltsallergene:</strong> {parsedData?.householdAllergens || ""}
                 </li>
                 <li>
-                    <strong>Spezifische Unverträglichkeiten:</strong> {parsedData?.specificIntolerances || ""}
+                    <strong>Unverträglichkeiten:</strong> {parsedData?.specificIntolerances || ""}
                 </li>
             </ul>
         </div>

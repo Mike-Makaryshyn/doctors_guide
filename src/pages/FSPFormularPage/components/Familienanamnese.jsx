@@ -24,7 +24,7 @@ const Familienanamnese = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Генетичні хвороби:</strong> {parsedData?.geneticDiseases || ""}
+                    <strong>Genetische Erkrankungen:</strong> {parsedData?.geneticDiseases || ""}
                 </li>
                 <li>
                     <strong>Eltern:</strong> {parsedData?.parents || ""}

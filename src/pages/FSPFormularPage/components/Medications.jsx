@@ -24,10 +24,10 @@ const Medications = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Allgemeine Medikamenteneinnahme:</strong> {parsedData?.allgemeineMedikamenteneinnahme || ""}
+                    <strong>Medikamenteneinnahme:</strong> {parsedData?.allgemeineMedikamenteneinnahme || ""}
                 </li>
                 <li>
-                    <strong>Detaillierte Medikamenteninformationen:</strong> {parsedData?.detaillierteMedikamenteninformationen || ""}
+                    <strong>Medikamenteninformationen:</strong> {parsedData?.detaillierteMedikamenteninformationen || ""}
                 </li>
             </ul>
         </div>

@@ -24,7 +24,7 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Загальний стан:</strong> {parsedData?.generalCondition || ""}
+                    <strong>Allgemeiner Zustand:</strong> {parsedData?.generalCondition || ""}
                 </li>
                 <li>
                     <strong>Appetit:</strong> {parsedData?.appetite || ""}
@@ -33,7 +33,7 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Gewicht:</strong> {parsedData?.weight || ""}
                 </li>
                 <li>
-                    <strong>Durstgefühl (Спрага):</strong> {parsedData?.thirst || ""}
+                    <strong>Durstgefühl:</strong> {parsedData?.thirst || ""}
                 </li>
                 <li>
                     <strong>Übelkeit:</strong> {parsedData?.nausea || ""}
@@ -48,7 +48,7 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Wasserlassen:</strong> {parsedData?.urination || ""}
                 </li>
                 <li>
-                    <strong>Schwitzen (Пітливість):</strong> {parsedData?.sweating || ""}
+                    <strong>Schwitzen:</strong> {parsedData?.sweating || ""}
                 </li>
                 <li>
                     <strong>Schwindel:</strong> {parsedData?.vertigo || ""}
@@ -57,20 +57,18 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
                     <strong>Bewusstsein:</strong> {parsedData?.consciousness || ""}
                 </li>
                 <li>
-                    <strong>Herzklopfen (Серцебиття):</strong> {parsedData?.palpitations || ""}
+                    <strong>Herzklopfen:</strong> {parsedData?.palpitations || ""}
                 </li>
                 <li>
-                    <strong>Atemnot (Задишка):</strong> {parsedData?.shortnessOfBreath || ""}
+                    <strong>Atemnot:</strong> {parsedData?.shortnessOfBreath || ""}
                 </li>
                 <li>
-                    <strong>Hitzewallungen (Припливи жару):</strong> {parsedData?.hotFlashes || ""}
+                    <strong>Hitzewallungen:</strong> {parsedData?.hotFlashes || ""}
                 </li>
                 <li>
-                    <strong>Kältegefühl (Відчуття холоду):</strong> {parsedData?.coldFeeling || ""}
+                    <strong>Kältegefühl:</strong> {parsedData?.coldFeeling || ""}
                 </li>
-                <li>
-                    <strong>Терморегуляція:</strong> {parsedData?.thermoregulation || ""}
-                </li>
+                
                 <li>
                     <strong>Schlafen:</strong> {parsedData?.sleep || ""}
                 </li>

@@ -29,9 +29,7 @@ const PreliminaryDiagnosis = ({ parsedData }) => {
                 <li>
                     <strong>Begründung:</strong> {parsedData?.justification || ""}
                 </li>
-                <li>
-                    <strong>Differenzialdiagnosen:</strong> {parsedData?.differentialDiagnoses || ""}
-                </li>
+              
             </ul>
         </div>
     );

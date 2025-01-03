@@ -37,7 +37,7 @@
     position: relative;
     padding: 8px;
     margin: 0;
-    border-radius: 4px;
+    border-radius: 10px;
     background: rgba(251, 247, 247, 0.9);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -71,7 +71,7 @@
   .tile-title {
     font-size: 16px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #013b6e;
     text-align: left;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -234,7 +234,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #2196f3;
+    background-color: #013b6e;
     color: rgb(22, 20, 20);
     border: none;
     border-radius: 4px;
@@ -252,7 +252,7 @@
 .mark-completed-button:disabled,
 .defer-case-button:disabled {
     background-color: #ccc;
-    color: #888; /* Текст стає сірим */
+    color: #888888; /* Текст стає сірим */
     cursor: not-allowed; /* Не можна натискати */
 }
 
@@ -260,7 +260,7 @@
 .add-case-button:hover,
 .mark-completed-button:hover,
 .defer-case-button:hover {
-    background-color: #1976d2;
+    background-color: #2196f3;
     transform: scale(1.1); /* Легке збільшення іконки */
 }
 

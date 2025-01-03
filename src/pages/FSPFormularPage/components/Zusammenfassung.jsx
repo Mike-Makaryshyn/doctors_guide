@@ -7,6 +7,7 @@ const Zusammenfassung = ({ parsedData }) => {
     return (
         <div className={styles["zusammenfassung"]}>
             {/* Пустий контейнер або додайте візуальні індикатори, якщо необхідно */}
+            <p>Zusammenfassung</p> 
         </div>
     );
 };

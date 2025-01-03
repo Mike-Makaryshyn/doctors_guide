@@ -39,10 +39,10 @@ const Sozialanamnese = ({ parsedData = {} }) => {
                     <strong>Psychosomatische Anamnese/Stress:</strong> {parsedData?.psychosomaticHistory || ""}
                 </li>
                 <li>
-                    <strong>Фізична активність:</strong> {parsedData?.physicalActivity || ""}
+                    <strong>Körperliche Aktivität:</strong> {parsedData?.physicalActivity || ""}
                 </li>
                 <li>
-                    <strong>Харчові звички:</strong> {parsedData?.dietaryHabits || ""}
+                    <strong>Ernährungsgewohnheiten:</strong> {parsedData?.dietaryHabits || ""}
                 </li>
             </ul>
         </div>

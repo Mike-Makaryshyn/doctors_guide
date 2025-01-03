@@ -24,10 +24,10 @@ const ReiseImpfstatus = ({ parsedData = {} }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Вакцинація:</strong> {parsedData?.vaccination || ""}
+                    <strong>Impfung:</strong> {parsedData?.vaccination || ""}
                 </li>
                 <li>
-                    <strong>Подорожі:</strong> {parsedData?.travelHistory || ""}
+                    <strong>Reise:</strong> {parsedData?.travelHistory || ""}
                 </li>
             </ul>
         </div>

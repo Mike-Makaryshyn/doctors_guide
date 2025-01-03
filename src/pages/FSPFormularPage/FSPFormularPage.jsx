@@ -934,7 +934,7 @@ const FSPFormularPage = () => {
                     onMouseLeave={() => setTooltipVisible(false)}
                     onClick={() => handleOpenInfoModal("personalData")}
                   >
-                    <h3 className={styles["tile-title"]}>Особисті Дані</h3>
+                    <h3 className={styles["tile-title"]}>Persönliche Daten</h3>
                     {tooltipVisible && (
                       <div className={styles["tooltip"]}>
                         {FSPFormularPageData.modal.tooltip}
@@ -947,7 +947,7 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("currentAnamnese")}
                   >
-                    <h3 className={styles["tile-title"]}>Поточна Анамнез</h3>
+                    <h3 className={styles["tile-title"]}>Aktuelle Anamnese</h3>
                     <AktuelleAnamnese parsedData={parsedData} />
                   </div>
 
@@ -967,7 +967,7 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
                   >
-                    <h3 className={styles["tile-title"]}>Вегетативна Анамнез</h3>
+                    <h3 className={styles["tile-title"]}>Vegetative Anamnese</h3>
                     <VegetativeAnamnese parsedData={parsedData} />
                   </div>
 
@@ -975,14 +975,14 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("zusammenfassung")}
                   >
-                    <h3 className={styles["tile-title"]}>Підсумок</h3>
+                    <h3 className={styles["tile-title"]}></h3>
                     <Zusammenfassung parsedData={parsedData} />
                   </div>
                   <div
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("vorerkrankungen")}
                   >
-                    <h3 className={styles["tile-title"]}>Попередні Хвороби</h3>
+                    <h3 className={styles["tile-title"]}>Vorerkrankungen</h3>
                     <Vorerkrankungen parsedData={parsedData} />
                   </div>
                 </div>
@@ -993,14 +993,14 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("previousOperations")}
                   >
-                    <h3 className={styles["tile-title"]}>Попередні Операції</h3>
+                    <h3 className={styles["tile-title"]}>Frühere Operationen</h3>
                     <PreviousOperations parsedData={parsedData} />
                   </div>
                   <div
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("medications")}
                   >
-                    <h3 className={styles["tile-title"]}>Медикаменти</h3>
+                    <h3 className={styles["tile-title"]}>Medikamente</h3>
                     <Medications parsedData={parsedData} />
                   </div>
                   <div
@@ -1008,7 +1008,7 @@ const FSPFormularPage = () => {
                     onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}
                   >
                     <h3 className={styles["tile-title"]}>
-                      Алергії та Нетерпимості
+                    Unverträglichkeiten
                     </h3>
                     <AllergiesAndIntolerances parsedData={parsedData} />
                   </div>
@@ -1017,7 +1017,7 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("noxen")}
                   >
-                    <h3 className={styles["tile-title"]}>Ноксени</h3>
+                    <h3 className={styles["tile-title"]}>Noxen</h3>
                     <Noxen parsedData={parsedData} />
                   </div>
                   <div
@@ -1025,7 +1025,7 @@ const FSPFormularPage = () => {
                     onClick={() => handleOpenInfoModal("familienanamnese")}
                   >
                     <h3 className={styles["tile-title"]}>
-                      Релевантні Сімейні Хвороби
+                    Familiäre Erkrankungen
                     </h3>
                     <Familienanamnese parsedData={parsedData} />
                   </div>
@@ -1037,28 +1037,28 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("sozialanamnese")}
                   >
-                    <h3 className={styles["tile-title"]}>Соціальна Анамнез</h3>
+                    <h3 className={styles["tile-title"]}>Soziale Anamnese</h3>
                     <Sozialanamnese parsedData={parsedData} />
                   </div>
                   <div
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("differentialDiagnosis")}
                   >
-                    <h3 className={styles["tile-title"]}>Диференційний Діагноз</h3>
+                    <h3 className={styles["tile-title"]}>Differentialdiagnose</h3>
                     <DifferentialDiagnosis parsedData={parsedData} />
                   </div>
                   <div
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
                   >
-                    <h3 className={styles["tile-title"]}>Попередній Діагноз</h3>
+                    <h3 className={styles["tile-title"]}>Diagnose</h3>
                     <PreliminaryDiagnosis parsedData={parsedData} />
                   </div>
                   <div
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("proposedProcedures")}
                   >
-                    <h3 className={styles["tile-title"]}>Пропоновані Процедури</h3>
+                    <h3 className={styles["tile-title"]}>Untersuchungen</h3>
                     <ProposedProcedures parsedData={parsedData} />
                   </div>
 
@@ -1067,7 +1067,7 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={handleExaminerQuestionsClick}
                   >
-                    <h3 className={styles["tile-title"]}>Запитання Екзаменатора</h3>
+                    <h3 className={styles["tile-title"]}></h3>
                     <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
                   </div>
                 </div>

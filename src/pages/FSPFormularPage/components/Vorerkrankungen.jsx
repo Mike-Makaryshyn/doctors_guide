@@ -22,7 +22,7 @@ const Vorerkrankungen = ({ parsedData = {} }) => {
       </div>
       <ul className={styles["tile-list"]}>
         <li>
-          <strong>Інфекційні хвороби:</strong>{" "}
+          <strong>Infektionskrankheiten:</strong>{" "}
           {parsedData?.infectiousDiseases || ""}
         </li>
        
