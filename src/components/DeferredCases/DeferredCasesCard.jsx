@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { pathList } from "../../routes/path"; // Імпорт pathList
 import styles from "./DeferredCasesCard.module.scss"; // Імпорт стилів через CSS Modules
 
-const DeferredCasesCard = ({ caseId, caseData, regionId }) => {
+const DeferredCasesCard = ({ caseId, caseData, regionId, dataSources }) => { // Додано dataSources як пропс
   return (
     <div className={styles.card}>
       <h4 className={styles.caseTitle}>

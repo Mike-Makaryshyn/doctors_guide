@@ -34,7 +34,12 @@ const DeferredCases = () => {
             .filter((region) => dataSources[region].type === "local") // Виключаємо Firebase Source та інші типи, якщо є
             .reduce((acc, region) => {
               const deferred = userData[`deferredCases_${region}`] || [];
-              return acc.concat(deferred.map((caseId) => ({ caseId, region })));
+              // Переконайтесь, що всі caseId є рядками
+              const processedDeferred = deferred.map((caseId) => ({
+                caseId: String(caseId),
+                region,
+              }));
+              return acc.concat(processedDeferred);
             }, []);
 
           setDeferredCases(allDeferredCases);
@@ -62,14 +67,19 @@ const DeferredCases = () => {
         <div className={styles.casesList}>
           {deferredCases.map(({ caseId, region }) => {
             const caseData = dataSources[region]?.files.find(
-              (file) => String(file.id) === String(caseId)
+              (file) => String(file.id) === caseId
             );
+            if (!caseData) {
+              console.warn(`Випадок з ID ${caseId} у регіоні ${region} не знайдено у dataSources.`);
+              return null; // Або показати повідомлення про помилку
+            }
             return (
               <DeferredCasesCard
                 key={`${region}-${caseId}`} // Унікальний ключ
                 caseId={caseId}
                 caseData={caseData}
                 regionId={region} // Передача правильного regionId
+                dataSources={dataSources} // Передача dataSources як пропсу
               />
             );
           })}

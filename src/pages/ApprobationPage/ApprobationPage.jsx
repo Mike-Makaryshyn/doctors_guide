@@ -59,7 +59,7 @@ const ApprobationPage = () => {
 
     if (user) {
       try {
-        const docRef = doc(db, "users", user.uid);
+        const docRef = doc(db, "users", user.uid, "stages", `stage_${stageId}`);
         await setDoc(docRef, { activeStage: stageId }, { merge: true });
       } catch (error) {
         console.error("Помилка при оновленні активного етапу:", error);

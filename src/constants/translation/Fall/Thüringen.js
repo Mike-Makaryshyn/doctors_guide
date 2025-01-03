@@ -1,8 +1,9 @@
 const THUERINGEN_DATA = [
     {
         id: 17, // Унікальний ідентифікатор
+        fullName: "Іван Іваненко",
         specialty: "thrombosis",
-        name: "Іван", // Ім'я
+        name: "Peter", // Ім'я
         surname: "Іваненко", // Прізвище
         birthdate: "01.01.1980", // Дата народження
         age: "43", // Вік

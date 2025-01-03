@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ApprobationPage from "./pages/ApprobationPage/ApprobationPage";
 import { ModalProvider } from "./pages/FSPFormularPage/components/ModalContext";
 import { DataSourceProvider } from "./contexts/DataSourceContext";
+import { AuthProvider } from "./contexts/AuthContext"; // Імпорт AuthProvider
 
 // Імпорти для React Toastify
 import { ToastContainer } from "react-toastify";
@@ -25,36 +26,35 @@ function App() {
   const storedRegion = localStorage.getItem("selectedRegion");
   const initialPage = storedPage ? parseInt(storedPage, 10) : 2;
 
-  // Закоментований код, якщо він вам ще потрібен
-  // ... (Ваш закоментований код)
-
   return (
-    <DataSourceProvider>
-      <ModalProvider>
-        <div className="App">
-          {/* Заголовок або інші компоненти */}
-          {/* <Header /> */}
+    <AuthProvider> {/* Обгорніть додаток у AuthProvider */}
+      <DataSourceProvider>
+        <ModalProvider>
+          <div className="App">
+            {/* Заголовок або інші компоненти */}
+            {/* <Header /> */}
 
-          {/* Основний контент */}
-          <div className="content">
-            <Routers />
+            {/* Основний контент */}
+            <div className="content">
+              <Routers />
 
-            {/* Контейнер для Toast повідомлень */}
-            <ToastContainer
-              position="top-right"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-            />
+              {/* Контейнер для Toast повідомлень */}
+              <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+              />
+            </div>
           </div>
-        </div>
-      </ModalProvider>
-    </DataSourceProvider>
+        </ModalProvider>
+      </DataSourceProvider>
+    </AuthProvider>
   );
 }
 

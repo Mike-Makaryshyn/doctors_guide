@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+// src/pages/AuthPage/RegistrationPage.jsx
+
+import React, { useState } from "react";
 import { auth, db } from "../../firebase";
-import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import StageMenu from "../../components/StageMenu/StageMenu"; // Імпорт компонента StageMenu
+import StageMenu from "../../components/StageMenu/StageMenu";
 import styles from "./RegistrationPage.module.scss";
+import { useAuth } from "../../contexts/AuthContext"; // Імпорт useAuth
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -19,17 +22,10 @@ const RegistrationPage = () => {
   });
   const [selectedStage, setSelectedStage] = useState(
     localStorage.getItem("tempSelectedStage") || 1
-  ); // Завантаження етапу з localStorage
+  );
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        navigate("/dashboard");
-      }
-    });
-  }, [navigate]);
+  const { currentUser } = useAuth(); // Використання глобального контексту
 
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
@@ -41,8 +37,8 @@ const RegistrationPage = () => {
 
   const handleStageSelect = (stageId) => {
     console.log("Selected stage:", stageId);
-    setSelectedStage(stageId); // Оновлюємо обраний етап
-    localStorage.setItem("tempSelectedStage", stageId); // Зберігаємо у localStorage
+    setSelectedStage(stageId);
+    localStorage.setItem("tempSelectedStage", stageId);
   };
 
   const handleSubmit = async (e) => {
@@ -70,7 +66,7 @@ const RegistrationPage = () => {
         birthDate: formData.birthDate,
         specialty: formData.specialty,
         subscribe: formData.subscribe,
-        activeStage: selectedStage, // Зберігаємо обраний етап під ключем activeStage
+        activeStage: selectedStage,
       });
 
       // Очищення localStorage після успішної реєстрації
@@ -154,6 +150,13 @@ const RegistrationPage = () => {
                   Subscribe to our newsletter
                 </label>
               </div>
+              <button
+                type="submit"
+                className={styles.submitButton}
+                disabled={isLoading}
+              >
+                {isLoading ? "Registering..." : "Register"}
+              </button>
             </form>
           </div>
 
@@ -167,18 +170,6 @@ const RegistrationPage = () => {
               gridView={true}
             />
           </div>
-        </div>
-
-        {/* Кнопка реєстрації */}
-        <div className={styles.buttonWrapper}>
-          <button
-            type="submit"
-            className={styles.submitButton}
-            disabled={isLoading}
-            onClick={handleSubmit}
-          >
-            {isLoading ? "Registering..." : "Register"}
-          </button>
         </div>
       </div>
     </MainLayout>

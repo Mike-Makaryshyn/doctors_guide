@@ -36,7 +36,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Thüringen",
       files: THUERINGEN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 2) Baden-Württemberg
@@ -47,7 +47,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Baden-Württemberg",
       files: BADENWUERTTEMBERG_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 3) Bayern
@@ -58,7 +58,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Bayern",
       files: BAYERN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 4) Berlin
@@ -69,7 +69,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Berlin",
       files: BERLIN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 5) Brandenburg
@@ -80,7 +80,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Brandenburg",
       files: BRANDENBURG_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 6) Bremen
@@ -91,7 +91,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Bremen",
       files: BREMEN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 7) Hamburg
@@ -102,7 +102,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Hamburg",
       files: HAMBURG_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 8) Hessen
@@ -113,7 +113,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Hessen",
       files: HESSEN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 9) Mecklenburg-Vorpommern
@@ -124,7 +124,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Mecklenburg Vorpommern",
       files: MECKLENBURG_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 10) Niedersachsen
@@ -135,7 +135,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Niedersachsen",
       files: NIEDERSACHSEN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 11) Nordrhein-Westfalen
@@ -146,7 +146,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Nordrhein-Westfalen",
       files: NRW_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 12) Rheinland-Pfalz
@@ -157,7 +157,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Rheinland-Pfalz",
       files: RHEINLAND_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 13) Saarland
@@ -168,7 +168,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Saarland",
       files: SAARLAND_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 14) Sachsen
@@ -179,7 +179,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Sachsen",
       files: SACHSEN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 15) Sachsen-Anhalt
@@ -190,7 +190,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Sachsen-Anhalt",
       files: SACHSENANHALT_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
     // 16) Schleswig-Holstein
@@ -201,7 +201,7 @@ export const DataSourceProvider = ({ children }) => {
       region: "Schleswig-Holstein",
       files: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
         id: item.id,
-        name: `ID ${item.id}`,
+        name: item.fullName || "Без імені", // Використовуємо fullName замість name
       })),
     },
 

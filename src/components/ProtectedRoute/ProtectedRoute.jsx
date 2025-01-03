@@ -1,20 +1,17 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase"; // Шлях до Firebase залежить від вашого проєкту
+// src/components/ProtectedRoute.jsx
+
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
-  const [user, loading] = useAuthState(auth);
+  const { currentUser } = useAuth();
 
-  if (loading) {
-    return <div>Завантаження...</div>; // Індикація завантаження
+  if (!currentUser) {
+    return <Navigate to="/auth" replace />; // Зміна маршруту на /auth, якщо немає користувача
   }
 
-  if (!user) {
-    return <Navigate to="/auth" replace />; // Перенаправлення на сторінку авторизації
-  }
-
-  return children; // Відображення сторінки, якщо користувач авторизований
+  return children;
 };
 
 export default ProtectedRoute;

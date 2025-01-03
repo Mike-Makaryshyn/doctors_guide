@@ -1,7 +1,7 @@
 const HESSEN_DATA = [
     {
         id: 7, // Унікальний ідентифікатор
-        fallname: "Kolonka", // Vorname
+        fullName: "ColonCA",
             name: "Frederik", // Vorname
             specialty: "colon",
             surname: "zu Äusigler", // Nachname

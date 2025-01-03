@@ -117,48 +117,33 @@ export default function Routers() {
           element={<FSPFormularPage />}
         />
 
+        {/* Захищені маршрути */}
         <Route
           path="/data-collection"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <DataCollectionPage />
-            </Suspense>
-          }
+          element={<DataCollectionPage />}
         />
         <Route
           path="/all-medical-terminology"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <AllMedicalTerminologyPage />
-            </Suspense>
-          }
+          element={<AllMedicalTerminologyPage />}
         />
         <Route
           path="/resume"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <ResumePage />
-            </Suspense>
-          }
+          element={<ResumePage />}
         />
         <Route
           path="/edit-profile"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <ProtectedRoute>
-                <EditProfilePage />
-              </ProtectedRoute>
-            </Suspense>
+            <ProtectedRoute>
+              <EditProfilePage />
+            </ProtectedRoute>
           }
         />
         <Route
           path="/dashboard"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            </Suspense>
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
           }
         />
 
