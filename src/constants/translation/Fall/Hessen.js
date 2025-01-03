@@ -1,7 +1,7 @@
 const HESSEN_DATA = [
     {
         id: 7,
-        fullName: "64 Jahre alter Gärtnerarbeiter mit Bauchschmerzen, chronischen Erkrankungen und familiärer Krebsanamnese",
+        fullName: "V.a. Divertikulitis",
         name: "Frederik",
         surname: "zu Äusigler",
         birthdate: "30.05.1958",
