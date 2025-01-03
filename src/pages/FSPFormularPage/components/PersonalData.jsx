@@ -43,6 +43,10 @@ const PersonalData = ({ parsedData }) => {
                 <li>
                     <strong>Geschlecht:</strong> {parsedData?.gender || ""}
                 </li>
+                <li>
+                    <strong>Hausarzt:</strong> {parsedData?.hausarzt || ""}
+                </li>
+                
             </ul>
         </div>
     );
