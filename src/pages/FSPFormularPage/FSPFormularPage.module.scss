@@ -199,7 +199,7 @@
     background-color: #f1f1f1;
   }
   .reset-case-button {
-    background-color: #ffc107; // Жовтий для виділення
+    background-color: #4893fe; // Жовтий для виділення
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
@@ -207,7 +207,7 @@
     cursor: pointer;
   
     &:hover {
-      background-color: #e0a800;
+      background-color:  #4893fe;;
     }
   
     &:disabled {
@@ -234,12 +234,12 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #013b6e;
+    background-color: #4893fe;
     color: rgb(22, 20, 20);
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px; /* Розмір іконок */
+    font-size: 30px; /* Розмір іконок */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Зміна кольору і збільшення */
     width: 70%; /* Зменшена ширина кнопок */
     height: 40px; /* Зменшена висота кнопок */

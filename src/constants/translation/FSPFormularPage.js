@@ -162,6 +162,129 @@ Die Fragen des Prüfers in der Fachsprachprüfung sollen Ihr Wissen und Ihre Fä
 
 4. **Offen für weiterführende Fragen bleiben:** Sehen Sie die Prüfung als eine Gelegenheit, Ihr Wissen zu erweitern. Antworten Sie gerne ausführlich, wenn es der Prüfer verlangt.
 `,
+defaultPatientQuestions: `
+### **Patientenfragen: Allgemeine Hinweise und Vorbereitung**
+
+#### **Überblick der Patientenfragen**
+
+Die Patientenfragen während der Fachsprachprüfung ermöglichen es Ihnen, Ihre Fähigkeit zu demonstrieren, effektiv mit Patienten zu kommunizieren, ihre Bedürfnisse zu verstehen und klare sowie verständliche Informationen bereitzustellen. Diese Fragen können sich sowohl auf spezifische Patientenfälle als auch auf diagnostische Verfahren beziehen.
+
+#### **Anleitung:**
+
+- **Fragen können sich auf folgende Bereiche beziehen:**
+  - Diagnose und Behandlung von Erkrankungen.
+  - Beschreibung medizinischer Verfahren und deren Ablauf.
+  - Erklärung von Untersuchungsergebnissen und Tests.
+  - Empfehlungen zur Prävention und einem gesunden Lebensstil.
+
+- **Antworten Sie klar und verständlich:**
+  - Verwenden Sie einfache Begriffe, wenn möglich.
+  - Vermeiden Sie übermäßig fachspezifische Terminologie, sofern nicht erforderlich.
+  - Erklären Sie komplexe Konzepte mithilfe von Beispielen oder Analogien.
+
+- **Simulieren Sie die Kommunikation mit dem Patienten:**
+  - Seien Sie aufmerksam gegenüber dem emotionalen Zustand des Patienten.
+  - Antworten Sie auf Fragen mit Empathie und Professionalität.
+  - Stellen Sie sicher, dass der Patient Ihre Antwort verstanden hat, indem Sie klärende Fragen stellen oder zusätzliche Erklärungen anbieten.
+
+#### **Beispiele für Fragen:**
+
+1. **Zur Diagnose:**
+   - "Können Sie mir erklären, wie ein Ultraschall durchgeführt wird?"
+   - "Welche Symptome deuten auf eine Herzinsuffizienz hin?"
+
+2. **Zum Behandlung:**
+   - "Was beinhaltet ein chirurgischer Eingriff bei Blinddarmentzündung?"
+   - "Wie würden Sie einem Patienten die Vorteile der Physiotherapie erklären?"
+
+3. **Zu Verfahren:**
+   - "Was passiert während einer Arthroskopie des Knies?"
+   - "Welche Nebenwirkungen können nach einer Chemotherapie auftreten?"
+
+4. **Zur Prävention:**
+   - "Welche Impfungen empfehlen Sie einem Patienten, der in tropische Länder reist?"
+   - "Wie würden Sie einem Patienten raten, sein Risiko für Herzkrankheiten zu senken?"
+
+#### **Mögliche Antworten und Follow-ups:**
+
+**Patient:** "Können Sie mir erklären, wie ein Ultraschall durchgeführt wird?"
+
+**Arzt:** "Natürlich. Ein Ultraschall verwendet hochfrequente Schallwellen, um Bilder von inneren Organen zu erstellen. Sie liegen dazu auf dem Rücken, und wir tragen ein Gel auf die zu untersuchende Stelle auf. Mit einem Schallkopf bewegen wir das Gerät über die Haut, wodurch die Schallwellen in Bilder umgewandelt werden, die wir auf dem Bildschirm sehen können."
+
+**Patient:** "Welche Nebenwirkungen können nach einer Chemotherapie auftreten?"
+
+**Arzt:** "Die Chemotherapie kann verschiedene Nebenwirkungen haben, wie Müdigkeit, Übelkeit, Haarausfall und ein erhöhtes Infektionsrisiko aufgrund der verringerten Anzahl an weißen Blutkörperchen. Wir überwachen Ihren Zustand genau und bieten Unterstützung zur Linderung dieser Symptome."
+
+#### **Tipps für die Prüfung**
+
+1. **Seien Sie aufmerksam und einfühlsam:**
+   - Zeigen Sie Verständnis für den emotionalen Zustand des Patienten.
+   - Nutzen Sie unterstützende Formulierungen, z.B.: "Ich verstehe, dass dies belastend für Sie ist."
+
+2. **Erklären Sie komplexe Begriffe:**
+   - Wenn Sie fachspezifische Begriffe verwenden, erklären Sie deren Bedeutung.
+   - Beispiel: "Magnetresonanztomographie, oder MRT, verwendet Magnetfelder, um detaillierte Bilder der Organe zu erstellen."
+
+3. **Überprüfen Sie das Verständnis:**
+   - Fragen Sie den Patienten, ob alles klar ist oder ob weitere Erklärungen nötig sind.
+   - Beispiel: "Gibt es etwas, das Sie noch klären möchten?"
+
+4. **Nutzen Sie Beispiele und Analogien:**
+   - Helfen Sie dem Patienten, Prozesse oder Diagnosen besser zu verstehen, indem Sie vertraute Beispiele verwenden.
+   - Beispiel: "Das ist wie bei einer Wasserpumpe – wenn sie nicht richtig funktioniert, fließt das Wasser nicht wie es sollte."
+
+5. **Passen Sie sich dem Patienten an:**
+   - Berücksichtigen Sie den sprachlichen Hintergrund und das Verständnisniveau des Patienten. Verwenden Sie einfache Sprache, wenn nötig.
+
+6. **Zeit nehmen:**
+   - Geben Sie dem Patienten ausreichend Zeit, um auf Fragen zu antworten, besonders bei persönlichen Informationen.
+
+#### **Beispielgespräch für Patientenfragen**
+
+**Patient:** "Können Sie mir erklären, wie eine Arthroskopie des Knies durchgeführt wird?"
+
+**Arzt:** "Natürlich. Eine Arthroskopie ist ein minimal-invasives Verfahren, bei dem wir ein kleines Instrument namens Arthroskop in das Kniegelenk einführen. Zuerst machen wir kleine Einschnitte, durch die wir das Arthroskop und andere Werkzeuge einführen. Dadurch können wir den Zustand des Knies auf einem Bildschirm in Echtzeit sehen und notwendige Eingriffe durchführen."
+
+**Patient:** "Welche Vorteile hat diese Methode im Vergleich zur traditionellen Chirurgie?"
+
+**Arzt:** "Die Arthroskopie bietet mehrere Vorteile, darunter ein geringeres Infektionsrisiko, schnellere Genesung und weniger postoperative Schmerzen. Außerdem können wir präzise Diagnosen und Behandlungen durchführen, ohne größere Schnitte machen zu müssen."
+
+#### **Zusätzliche Fragen zur Vertiefung**
+
+1. **Zu spezifischen medizinischen Verfahren:**
+   - "Wie wird eine Leberbiopsie durchgeführt und welche möglichen Komplikationen gibt es?"
+   - "Was beinhaltet eine rheumatoide Therapie?"
+
+2. **Zur Kommunikation mit dem Patienten:**
+   - "Wie würden Sie einem Patienten, der Angst vor einer Operation hat, erklären, was während des Eingriffs passieren wird?"
+   - "Wie gehen Sie mit einem Patienten um, der sich weigert, eine empfohlene Behandlung zu akzeptieren?"
+
+3. **Zu Diagnose und Behandlung:**
+   - "Was sind die typischen Symptome einer Grippe und wie unterscheiden sie sich von einer Erkältung?"
+   - "Können Sie die Behandlungsmöglichkeiten für eine chronische Erkrankung wie Diabetes erläutern?"
+
+4. **Zur Prävention:**
+   - "Welche Impfungen empfehlen Sie einem Patienten, der in tropische Gebiete reisen möchte?"
+   - "Wie würden Sie einem Patienten raten, sein Risiko für Herzkrankheiten zu senken?"
+
+#### **Zusätzliche Hinweise für die Prüfung**
+
+1. **Geduld haben:**
+   - Wenn der Patient eine komplexe Frage stellt, nehmen Sie sich Zeit, um eine klare und verständliche Antwort zu formulieren.
+
+2. **Verständnis zeigen:**
+   - Wenn eine Frage nicht ganz klar ist, zögern Sie nicht, um Klarstellung zu bitten.
+   - Beispiel: "Könnten Sie Ihre Frage bitte etwas genauer erläutern?"
+
+3. **Beispielhafte Antworten geben:**
+   - Nutzen Sie Beispiele oder Szenarien, um Ihre Antwort zu untermauern.
+   - Beispiel: "Angenommen, der Patient hat bereits Symptome einer Grippe, dann würden wir..."
+
+4. **Offen für weiterführende Fragen bleiben:**
+   - Betrachten Sie die Prüfung als Gelegenheit, Ihr Wissen zu erweitern. Antworten Sie gerne ausführlich, wenn der Prüfer dies verlangt.
+   - Beispiel: "Wenn Sie möchten, kann ich noch mehr über die Behandlungsmöglichkeiten sprechen."
+
+`,
     },
   },
   personalData: {

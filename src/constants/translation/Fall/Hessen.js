@@ -116,6 +116,7 @@ const HESSEN_DATA = [
 "Was ist Radiotherapie?  
 **Antwort:** Radiotherapie ist eine Behandlung mit ionisierender Strahlung, um Tumoren zu verkleinern oder deren Wachstum zu verhindern."
       `,
+      patientQuestions: "Gärtnerarbeiter",
   },
 
   {

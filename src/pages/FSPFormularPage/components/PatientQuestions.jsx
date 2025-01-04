@@ -5,9 +5,9 @@ import styles from "./TileContainer.module.scss"; // Універсальні с
 
 const PatientQuestions = ({ parsedData }) => {
     return (
-        <div className={styles["patientQuestions"]}>
-            {/* Пустий контейнер або додайте візуальні індикатори, якщо необхідно */}
-            <p>Запитання пацієнта</p> 
+        <div className={styles["patient-questions"]}>
+            {/* Додайте ваш контент тут */}
+            <p>Arzt-Patient-Gespräch</p> 
         </div>
     );
 };

@@ -1,5 +1,4 @@
 // src/pages/FSPFormularPage/FSPFormularPage.jsx
-
 import React, { useState, useRef, useContext, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import styles from "./FSPFormularPage.module.scss";
@@ -25,6 +24,7 @@ import AdditionalInfoModal from "./components/AdditionalInfoModal";
 import UserCasesModal from "./components/UserCasesModal";
 import ExaminerQuestions from "./components/ExaminerQuestions";
 import ReiseImpfstatus from "./components/ReiseImpfstatus"; // Додано імпорт
+import PatientQuestions from "./components/PatientQuestions"; // Додано імпорт
 
 // Імпорт бібліотек для Markdown
 import ReactMarkdown from "react-markdown";
@@ -351,7 +351,7 @@ const FSPFormularPage = () => {
       console.log("Вибраний випадок:", selectedItem);
       console.log("Перед парсингом:", additionalInfo);
 
-      // Встановлення parsedData без summary та examinerQuestions
+      // Встановлення parsedData без summary, examinerQuestions та patientQuestions
       setParsedData(selectedItem);
       console.log("Parsed Data після парсингу:", selectedItem);
 
@@ -391,6 +391,20 @@ const FSPFormularPage = () => {
       } else {
         console.warn("Parsed Data не містить examinerQuestions:", selectedItem);
       }
+
+      // Встановлюємо patientQuestions тільки якщо воно існує
+      if (selectedItem.patientQuestions) {
+        setParsedData((prevData) => ({
+          ...prevData,
+          patientQuestions: selectedItem.patientQuestions,
+        }));
+        console.log("Parsed Data з patientQuestions:", {
+          ...selectedItem,
+          patientQuestions: selectedItem.patientQuestions,
+        });
+      } else {
+        console.warn("Parsed Data не містить patientQuestions:", selectedItem);
+      }
     } catch (err) {
       console.error("Помилка під час парсингу даних:", err);
       setErrorState("Сталася помилка під час завантаження даних.");
@@ -423,6 +437,12 @@ const FSPFormularPage = () => {
         FSPFormularPageData.modal.additionalInfo.defaultExaminerQuestions || // Використовуємо дефолтний текст
         "Додаткова інформація для запитань екзаменаторів недоступна.";
       console.log("Отримано інформацію для ExaminerQuestions:", infoText);
+    } else if (type === "patientQuestions") {
+      infoText =
+        parsedData.patientQuestions || // Використовуємо дані з parsedData
+        FSPFormularPageData.modal.additionalInfo.defaultPatientQuestions || // Використовуємо дефолтний текст
+        "Додаткова інформація для запитань пацієнта недоступна.";
+      console.log("Отримано інформацію для PatientQuestions:", infoText);
     } else if (fallType && FallSpecificData[fallType]?.[type]?.additionalInfo) {
       infoText = FallSpecificData[fallType][type].additionalInfo;
       console.log("Отримано специфічну додаткову інформацію:", infoText);
@@ -723,6 +743,11 @@ const FSPFormularPage = () => {
     handleOpenInfoModal("examinerQuestions");
   };
 
+  // Функція для обробки кліку на PatientQuestions
+  const handlePatientQuestionsClick = () => {
+    handleOpenInfoModal("patientQuestions");
+  };
+
   // Рендеринг
   return (
     <MainLayout>
@@ -893,7 +918,7 @@ const FSPFormularPage = () => {
                     disabled={!selectedCase}
                     aria-label="Скинути Вибір Випадку"
                   >
-                    🔄
+                    ⟳
                   </button>
                 </div>
 
@@ -1008,7 +1033,7 @@ const FSPFormularPage = () => {
                     onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}
                   >
                     <h3 className={styles["tile-title"]}>
-                    Unverträglichkeiten
+                      Unverträglichkeiten
                     </h3>
                     <AllergiesAndIntolerances parsedData={parsedData} />
                   </div>
@@ -1025,7 +1050,7 @@ const FSPFormularPage = () => {
                     onClick={() => handleOpenInfoModal("familienanamnese")}
                   >
                     <h3 className={styles["tile-title"]}>
-                    Familiäre Erkrankungen
+                      Familiäre Erkrankungen
                     </h3>
                     <Familienanamnese parsedData={parsedData} />
                   </div>
@@ -1061,7 +1086,14 @@ const FSPFormularPage = () => {
                     <h3 className={styles["tile-title"]}>Untersuchungen</h3>
                     <ProposedProcedures parsedData={parsedData} />
                   </div>
-
+   {/* Додана секція PatientQuestions */}
+   <div
+                    className={styles["tile"]}
+                    onClick={handlePatientQuestionsClick}
+                  >
+                    <h3 className={styles["tile-title"]}></h3>
+                    <PatientQuestions parsedData={parsedData} />
+                  </div>
                   {/* Додана секція ExaminerQuestions */}
                   <div
                     className={styles["tile"]}
@@ -1070,6 +1102,8 @@ const FSPFormularPage = () => {
                     <h3 className={styles["tile-title"]}></h3>
                     <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
                   </div>
+
+               
                 </div>
               </div>
             )}
@@ -1096,6 +1130,8 @@ const FSPFormularPage = () => {
                 ? "Підсумок"
                 : additionalInfo.type === "examinerQuestions"
                 ? "Запитання екзаменатора"
+                : additionalInfo.type === "patientQuestions"
+                ? "Запитання пацієнта"
                 : "Додаткова інформація"
             }
             additionalInfo={additionalInfo}

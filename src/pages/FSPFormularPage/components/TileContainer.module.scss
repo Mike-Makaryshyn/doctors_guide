@@ -157,6 +157,63 @@
     background-color: #9d1212; /* Темніший відтінок при наведенні */
 }
 
+/* src/pages/FSPFormularPage/components/TileContainer.module.scss */
+
+/* Інші стилі */
+
+/* Стиль для patient-questions */
+.patient-questions {
+    background-color: #007bff; /* Виберіть відповідний колір */
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    text-align: center;
+    width: 90%; /* Розширено для відповідності */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px; /* Регулюємо висоту, щоб відповідало вигляду */
+    transition: all 0.3s ease;
+}
+
+/* Текст всередині patient-questions */
+.patient-questions p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Встановлюємо відступи, щоб текст був по центру */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Анімація при наведенні на patient-questions */
+.patient-questions:hover {
+    background-color: #0056b3; /* Темніший відтінок при наведенні */
+}
+
+/* Інші стилі */
+.patientQuestions { /* Залишаємо для сумісності, якщо використовується в коді */
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+}
+
+.status-icon {
+    margin-left: 8px;
+}
+
 /* Стиль для блока examiner-questions */
 .examiner-questions {
     background-color: #013b6e; /* Синій фон */
