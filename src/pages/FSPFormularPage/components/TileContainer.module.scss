@@ -7,8 +7,8 @@
     --color-shadow: rgba(0, 0, 0, 0.1); /* Тінь для всіх елементів */
     --color-shadow-hover: rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
     --border-radius: 10px; /* Заокруглені кути */
-    --icon-top: 10px; /* Відступ для іконки з верхнього боку */
-    --icon-right: 10px; /* Відступ для іконки з правого боку */
+    --icon-top: 5px; /* Відступ для іконки з верхнього боку */
+    --icon-right: 7px; /* Відступ для іконки з правого боку */
     --icon-size: 40px;
 }
 
@@ -82,8 +82,8 @@
 }
 
 .tile-icon {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     object-fit: contain;
     position: absolute;
     top: var(--icon-top);

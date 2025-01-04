@@ -1,5 +1,5 @@
 /* src/pages/FSPFormularPage/FSPFormularPage.module.scss */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 /* Основний контейнер сторінки */
 .fsp-container {
     display: flex;
@@ -33,27 +33,30 @@
   }
   
   /* Загальний стиль плитки */
-  .tile {
+/* Стиль плитки */
+.tile {
     position: relative;
-    padding: 8px;
+    padding: 6px;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 20px; /* Збільшений радіус округлення */
     background: rgba(251, 247, 247, 0.9);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* М'яка тінь */
     border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #000;
+    color: #333; /* Темніший текст для кращої читабельності */
     overflow: hidden;
-    font-size: 12px;
+    font-size: 12px; /* Збільшений розмір шрифту */
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Плавні переходи */
     cursor: pointer;
-}
-
-.tile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(31, 38, 135, 0.5);
-    border-color: #1abc9c;
+    font-family: 'Poppins', sans-serif; /* Сучасний шрифт */
   }
+  
+  .tile:hover {
+    transform: translateY(-5px); /* Підняття плитки при наведенні */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Збільшена тінь при наведенні */
+    border-color: #1abc9c; /* Зміна кольору бордера при наведенні */
+  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -67,7 +70,7 @@
   
   /* Заголовок плитки */
   .tile-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #013b6e;
     text-align: left;
@@ -75,7 +78,7 @@
     margin-bottom: 5px;
     padding-left: 8px;
     font-family: "Poppins", sans-serif;
-}
+  }
   
   /* Кнопка налаштувань */
   .settings-button {
@@ -103,21 +106,21 @@
   
   /* Модальне вікно налаштувань */
   .settings-modal {
-      position: fixed;
-      bottom: 70px;
-      left: 45px;
-      background-color: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(8px);
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      width: 250px;
-      animation: fadeIn 0.3s ease;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+    position: fixed;
+    bottom: 70px;
+    left: 45px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 250px;
+    animation: fadeIn 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-    
+  
   .settings-content {
     position: relative;
   }
@@ -147,6 +150,7 @@
     position: relative;
     display: inline-block;
   }
+  
   .region-button {
     padding: 6px 12px;
     background-color: rgba(0, 123, 255, 0.8); /* Прозорий синій фон */
@@ -205,7 +209,7 @@
     cursor: pointer;
   
     &:hover {
-      background-color:  #4893fe;;
+      background-color: #4893fe;
     }
   
     &:disabled {
@@ -226,207 +230,218 @@
   
   /* Міксин для неоморфістичних кнопок */
   @mixin neu-button-style {
-      background-color: #e0e0e0;
-      border-radius: 50px;
-      box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-      color: #4d4d4d;
-      cursor: pointer;
-      font-size: 18px;
-      padding: 15px 40px;
-      transition: all 0.2s ease-in-out;
-      border: 2px solid rgb(206, 206, 206);
-    
-      &:hover {
-        box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 
-                    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-      }
-    
-      &:focus {
-        outline: none;
-        box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 
-                    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-      }
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 40px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+  
+    &:hover {
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+                  2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     }
-    
-    /* Оновлені стилі для конкретних кнопок */
+  
+    &:focus {
+      outline: none;
+      box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+                  2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+    }
+  }
+  
+  /* Оновлені стилі для конкретних кнопок */
+  .add-case-button,
+  .mark-completed-button,
+  .defer-case-button,
+  .reset-button { /* Додано reset-button */
+    @include neu-button-style; /* Використання міксина */
+  
+    /* Додаткові або перевизначені властивості, якщо необхідно */
+    font-size: 16px; /* Зменшений розмір шрифту для кращої читабельності */
+    padding: 10px 30px; /* Зменшені відступи для гармонійного вигляду */
+    width: auto; /* Автоматична ширина для гнучкості */
+    height: auto; /* Автоматична висота для гнучкості */
+    margin: 5px auto; /* Центрування кнопки з невеликим відступом */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Стан Disabled для кнопок */
+  .add-case-button:disabled,
+  .mark-completed-button:disabled,
+  .defer-case-button:disabled,
+  .reset-button:disabled { /* Додано reset-button */
+    background-color: #ccc;
+    color: #888888; /* Текст стає сірим */
+    cursor: not-allowed; /* Не можна натискати */
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  }
+  
+  /* Стилі для іконок кнопок, якщо використовуються псевдоелементи */
+  .add-case-button::before,
+  .mark-completed-button::before,
+  .defer-case-button::before,
+  .reset-case-button::before { /* Додано reset-button */
+    font-size: 20px; /* Розмір іконок */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавне збільшення і зміна кольору */
+  }
+  
+  .add-case-button:hover::before,
+  .mark-completed-button:hover::before,
+  .defer-case-button:hover::before,
+  .reset-case-button:hover::before { /* Додано reset-button */
+    color: #fff;
+    transform: scale(1.2); /* Легке збільшення іконки */
+  }
+  
+  /* Додаткові стилі для reset-button, якщо необхідно */
+  .reset-button {
+    /* Наприклад, специфічні кольори або відступи */
+  }
+  
+  /* Кнопка закриття модального вікна */
+  .close-button {
+    @include neu-button-style; /* Використання неоморфістичних стилів */
+    position: absolute;
+    top: -21px;
+    right: -14px;
+  
+    /* Перевизначення властивостей, якщо необхідно */
+    /* Наприклад, зменшення padding для компактного вигляду */
+    padding: 8px 12px;
+    font-size: 16px; /* Можна залишити або змінити відповідно до потреб */
+    border: none; /* Видалення бордера, якщо потрібно */
+    background-color: #e0e0e0; /* Переконайтеся, що фон відповідає neu-button */
+    color: #4d4d4d; /* Відповідність neu-button */
+  
+    /* Якщо потрібно, можна додати специфічні властивості */
+  }
+  
+  /* Стан Disabled для кнопки Закриття */
+  .close-button:disabled {
+    background-color: #ccc;
+    color: #888888; /* Текст стає сірим */
+    cursor: not-allowed; /* Не можна натискати */
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  }
+  
+  /* Стилі для іконки кнопки Закриття, якщо використовуються псевдоелементи */
+  .close-button::before {
+    font-size: 20px; /* Розмір іконки */
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .close-button:hover::before {
+    color: #fff;
+    transform: scale(1.2);
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 100%; /* На мобільних кожна плитка займає всю ширину */
+      max-width: 100%;
+    }
+  
+    .tile {
+      padding: 8px; /* Менші відступи всередині плитки */
+      font-size: 12px; /* Зменшений текст */
+    }
+  
+    .settings-modal {
+      left: 0; /* Вирівнювання по лівому краю */
+      right: 0; /* Вирівнювання по правому краю */
+      bottom: 0; /* Вирівнювання по нижньому краю */
+      width: 100%; /* Повна ширина екрану */
+      border-radius: 10px 10px 0 0; /* Округлення лише верхніх кутів */
+      padding: 20px; /* Можна збільшити внутрішні відступи для кращого вигляду */
+      height: 400px; /* Автоматична висота */
+    }
+  
+    .buttons-container {
+      flex-direction: row;
+    }
+  
     .add-case-button,
     .mark-completed-button,
-    .defer-case-button,
-    .reset-button { /* Додано reset-button */
-      @include neu-button-style; /* Використання міксина */
-    
-      /* Додаткові або перевизначені властивості, якщо необхідно */
-      font-size: 16px; /* Зменшений розмір шрифту для кращої читабельності */
-      padding: 10px 30px; /* Зменшені відступи для гармонійного вигляду */
-      width: auto; /* Автоматична ширина для гнучкості */
-      height: auto; /* Автоматична висота для гнучкості */
-      margin: 5px auto; /* Центрування кнопки з невеликим відступом */
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
+    .defer-case-button {
+      flex: 1;
     }
-    
-    /* Стан Disabled для кнопок */
-    .add-case-button:disabled,
-    .mark-completed-button:disabled,
-    .defer-case-button:disabled,
-    .reset-button:disabled { /* Додано reset-button */
-      background-color: #ccc;
-      color: #888888; /* Текст стає сірим */
-      cursor: not-allowed; /* Не можна натискати */
-      box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  
+    .region-selector {
+      width: 100%;
     }
-    
-    /* Стилі для іконок кнопок, якщо використовуються псевдоелементи */
-    .add-case-button::before,
-    .mark-completed-button::before,
-    .defer-case-button::before,
-    .reset-case-button::before { /* Додано reset-button */
-      font-size: 20px; /* Розмір іконок */
-      color: #fff;
-      transition: transform 0.3s ease, color 0.3s ease; /* Плавне збільшення і зміна кольору */
+  
+    .region-dropdown {
+      width: 100%;
     }
-    
-    .add-case-button:hover::before,
-    .mark-completed-button:hover::before,
-    .defer-case-button:hover::before,
-    .reset-case-button:hover::before { /* Додано reset-button */
-      color: #fff;
-      transform: scale(1.2); /* Легке збільшення іконки */
+  
+    .react-select-container {
+      width: 100%;
     }
-    
-    /* Додаткові стилі для reset-button, якщо необхідно */
-    .reset-button {
-      /* Наприклад, специфічні кольори або відступи */
+  
+    .deferredCasesWindow {
+      width: 90%; /* Зменшення ширини для мобільних пристроїв */
+      height: auto; /* Автоматична висота */
     }
-    
-    /* Кнопка закриття модального вікна */
+  
+    .casesList {
+      max-height: 300px; /* Максимальна висота для мобільних пристроїв */
+    }
+  
+    /* Коригування позиціонування кнопки закриття на мобільних */
     .close-button {
-      @include neu-button-style; /* Використання неоморфістичних стилів */
-      position: absolute;
-      top: -21px;
-      right: -14px;
-      
-      /* Перевизначення властивостей, якщо необхідно */
-      /* Наприклад, зменшення padding для компактного вигляду */
-      padding: 8px 12px;
-      font-size: 16px; /* Можна залишити або змінити відповідно до потреб */
-      border: none; /* Видалення бордера, якщо потрібно */
-      background-color: #e0e0e0; /* Переконайтеся, що фон відповідає neu-button */
-      color: #4d4d4d; /* Відповідність neu-button */
-      
-      /* Якщо потрібно, можна додати специфічні властивості */
+        top: -17px;
+        right: -18px; /* Відступ від правого краю модального вікна */
+      padding: 6px 10px; /* Зменшення padding для компактності */
+      font-size: 14px; /* Зменшення розміру шрифту */
     }
-    
-    /* Стан Disabled для кнопки Закриття */
-    .close-button:disabled {
-      background-color: #ccc;
-      color: #888888; /* Текст стає сірим */
-      cursor: not-allowed; /* Не можна натискати */
-      box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-    }
-    
-    /* Стилі для іконки кнопки Закриття, якщо використовуються псевдоелементи */
-    .close-button::before {
-      font-size: 20px; /* Розмір іконки */
-      color: #fff;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-    
-    .close-button:hover::before {
-      color: #fff;
-      transform: scale(1.2);
-    }
-    
-    /* Адаптивність */
-    @media (max-width: 768px) {
-      .column {
-        flex: 1 1 100%; /* На мобільних кожна плитка займає всю ширину */
-        max-width: 100%;
-      }
-    
-      .tile {
-        padding: 8px; /* Менші відступи всередині плитки */
-        font-size: 12px; /* Зменшений текст */
-      }
-    
-      .settings-modal {
-        left: 25px;
-        width: 90%;
-        max-width: 100%; /* Обмежуємо ширину модального вікна */
-        bottom: 75px; /* Залишаємо простір від нижнього краю */
-      }
-    
-      .buttons-container {
-        flex-direction: row;
-      }
-    
-      .add-case-button,
-      .mark-completed-button,
-      .defer-case-button {
-        flex: 1;
-      }
-    
-      .region-selector {
-        width: 100%;
-      }
-    
-      .region-dropdown {
-        width: 100%;
-      }
-    
-      .react-select-container {
-        width: 100%;
-      }
-    
-      .deferredCasesWindow {
-        width: 90%; /* Зменшення ширини для мобільних пристроїв */
-        height: auto; /* Автоматична висота */
-      }
-    
-      .casesList {
-        max-height: 300px; /* Максимальна висота для мобільних пристроїв */
-      }
-    }
-    
-    /* Додаткові стилі */
-    .error-message {
-      color: #f44336;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    
-    .loading-message {
-      color: #2196f3;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-    
-    .deferred-cases-container {
-      /* Ваші додаткові стилі для контейнера відкладених випадків */
-    }
-    
-    .deferred-cases-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .deferred-case-item {
-      margin-bottom: 5px;
-    }
-    
-    .deferred-case-link {
-      text-decoration: none;
-      color: #007bff;
-      cursor: pointer;
-    }
-    
-    .deferred-case-link:hover {
-      text-decoration: underline;
-    }
-    
-    .case-select {
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
+  }
+  
+  /* Додаткові стилі */
+  .error-message {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .loading-message {
+    color: #2196f3;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .deferred-cases-container {
+    /* Ваші додаткові стилі для контейнера відкладених випадків */
+  }
+  
+  .deferred-cases-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .deferred-case-item {
+    margin-bottom: 5px;
+  }
+  
+  .deferred-case-link {
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .deferred-case-link:hover {
+    text-decoration: underline;
+  }
+  
+  .case-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }

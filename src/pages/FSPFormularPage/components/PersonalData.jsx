@@ -1,17 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпорт вашої іконки
 import personalInformationIcon from "../../../assets/iconFSPtable/personal-information.png"; 
 import styles from "./TileContainer.module.scss";
 
-// Додана функція getFieldValue
-const getFieldValue = (value) => {
-    if (value === null || value === undefined || value === "") {
-        return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих полів
-    }
-    return value;
-};
-
+// Функція для відображення іконки плитки
 const renderTileIcon = () => {
     return (
         <img
@@ -22,7 +15,29 @@ const renderTileIcon = () => {
     );
 };
 
-const PersonalData = ({ parsedData }) => {
+const PersonalData = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false);
+
+    // Функція для отримання значення поля
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Порожнє значення до обробки даних
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих полів
+        }
+        return value;
+    };
+
+    // Відстеження зміни parsedData
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        } else {
+            setIsDataParsed(false);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
