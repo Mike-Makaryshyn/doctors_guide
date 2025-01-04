@@ -25,27 +25,34 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
     >
       <div className={styles["modal-content"]} onClick={(e) => e.stopPropagation()}>
         {/* Заголовок модального вікна */}
-        <h2 id="info-modal-title" className={styles["modal-title"]}>
-          {additionalInfo.title || ""}
-        </h2>
+        <div className={styles["modal-header"]}>
+          <h2 id="info-modal-title" className={styles["modal-title"]}>
+            {additionalInfo.title || ""}
+          </h2>
+          {/* Кнопка закриття */}
+          <button
+            className={styles["close-button"]}
+            onClick={onClose}
+            aria-label="Закрити модальне вікно"
+          >
+            {/* Використання SVG іконки замість текстового символу */}
+            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1" y1="1" x2="13" y2="13" stroke="#333" strokeWidth="2"/>
+              <line x1="13" y1="1" x2="1" y2="13" stroke="#333" strokeWidth="2"/>
+            </svg>
+          </button>
+        </div>
 
         {/* Контент модального вікна з підтримкою Markdown */}
-        <ReactMarkdown
-          className={styles["modal-text"]}
-          remarkPlugins={[remarkGfm]} // Підтримка таблиць, чекбоксів тощо
-          rehypePlugins={[rehypeRaw]} // Дозволяє використання HTML всередині Markdown
-        >
-          {markdownText}
-        </ReactMarkdown>
-
-        {/* Кнопка закриття */}
-        <button
-          className={styles["close-button"]}
-          onClick={onClose}
-          aria-label="Закрити модальне вікно"
-        >
-          ✕
-        </button>
+        <div className={styles["modal-body"]}>
+          <ReactMarkdown
+            className={styles["modal-text"]}
+            remarkPlugins={[remarkGfm]} // Підтримка таблиць, чекбоксів тощо
+            rehypePlugins={[rehypeRaw]} // Дозволяє використання HTML всередині Markdown
+          >
+            {markdownText}
+          </ReactMarkdown>
+        </div>
       </div>
     </div>
   );
