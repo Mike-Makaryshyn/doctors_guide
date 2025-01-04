@@ -4,6 +4,14 @@ import PropTypes from "prop-types";
 import personalInformationIcon from "../../../assets/iconFSPtable/personal-information.png"; 
 import styles from "./TileContainer.module.scss";
 
+// Додана функція getFieldValue
+const getFieldValue = (value) => {
+    if (value === null || value === undefined || value === "") {
+        return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих полів
+    }
+    return value;
+};
+
 const renderTileIcon = () => {
     return (
         <img
@@ -24,29 +32,28 @@ const PersonalData = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Vornamen:</strong> {parsedData?.name || ""}
+                    <strong>Vornamen:</strong> {getFieldValue(parsedData?.name)}
                 </li>
                 <li>
-                    <strong>Namen:</strong> {parsedData?.surname || ""}
+                    <strong>Namen:</strong> {getFieldValue(parsedData?.surname)}
                 </li>
                 <li>
                     <strong>Geburtsdatum/Alter:</strong>
-                    {parsedData?.birthdate || ""} 
+                    {getFieldValue(parsedData?.birthdate)} 
                     {parsedData?.age ? ` / ${parsedData.age}` : ""}
                 </li>
                 <li>
-                    <strong>Größe:</strong> {parsedData?.height || ""}
+                    <strong>Größe:</strong> {getFieldValue(parsedData?.height)}
                 </li>
                 <li>
-                    <strong>Gewicht:</strong> {parsedData?.weight || ""}
+                    <strong>Gewicht:</strong> {getFieldValue(parsedData?.weight)}
                 </li>
                 <li>
-                    <strong>Geschlecht:</strong> {parsedData?.gender || ""}
+                    <strong>Geschlecht:</strong> {getFieldValue(parsedData?.gender)}
                 </li>
                 <li>
-                    <strong>Hausarzt:</strong> {parsedData?.hausarzt || ""}
+                    <strong>Hausarzt:</strong> {getFieldValue(parsedData?.hausarzt)}
                 </li>
-                
             </ul>
         </div>
     );
@@ -61,6 +68,7 @@ PersonalData.propTypes = {
         height: PropTypes.string,
         weight: PropTypes.string,
         gender: PropTypes.string,
+        hausarzt: PropTypes.string, // Додано перевірку для hausarzt
     }),
 };
 

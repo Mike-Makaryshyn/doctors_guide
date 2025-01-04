@@ -787,7 +787,7 @@ const FSPFormularPage = () => {
           {isSettingsOpen && (
             <div className={styles["settings-modal"]} ref={settingsRef}>
               <div className={styles["settings-content"]}>
-                <h3>Налаштування</h3>
+                <h3>Einstellung</h3>
 
                 {/* Вибір Локального Регіону */}
                 <div className={styles["field"]}>
@@ -913,13 +913,13 @@ const FSPFormularPage = () => {
 
                   {/* Додано: Кнопка для Скидання Вибору Випадку */}
                   <button
-                    className={styles["reset-button"]}
-                    onClick={handleReset}
-                    disabled={!selectedCase}
-                    aria-label="Скинути Вибір Випадку"
-                  >
-                    ⟳
-                  </button>
+  className={styles["reset-button"]}
+  onClick={handleReset}
+  disabled={!selectedCase}
+  aria-label="Скинути Вибір Випадку"
+>
+  ⟳
+</button>
                 </div>
 
                 {/* Кнопка Закриття */}
