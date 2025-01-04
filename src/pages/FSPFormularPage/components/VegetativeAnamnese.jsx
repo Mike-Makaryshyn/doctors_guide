@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпортуємо вашу іконку
 import aktuelleAnamneseIcon from "../../../assets/iconFSPtable/VegetativeAnamnese.png";
@@ -15,6 +15,26 @@ const renderTileIcon = () => {
 };
 
 const VegetativeAnamnese = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відслідковуємо, чи дані вже запарсені
+
+    // Функція для перевірки значень
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до запарсення
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Якщо значення пусте, додаємо заблюрений текст
+        }
+        return value; // Якщо значення є, показуємо його
+    };
+
+    // Встановлюємо isDataParsed в true, коли дані запарсились
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,62 +44,61 @@ const VegetativeAnamnese = ({ parsedData = {} }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Allgemeiner Zustand:</strong> {parsedData?.generalCondition || ""}
+                    <strong>Allgemeiner Zustand:</strong> {getFieldValue(parsedData?.generalCondition)}
                 </li>
                 <li>
-                    <strong>Appetit:</strong> {parsedData?.appetite || ""}
+                    <strong>Appetit:</strong> {getFieldValue(parsedData?.appetite)}
                 </li>
                 <li>
-                    <strong>Gewicht:</strong> {parsedData?.weightLoss || ""}
+                    <strong>Gewicht:</strong> {getFieldValue(parsedData?.weightLoss)}
                 </li>
                 <li>
-                    <strong>Durstgefühl:</strong> {parsedData?.thirst || ""}
+                    <strong>Durstgefühl:</strong> {getFieldValue(parsedData?.thirst)}
                 </li>
                 <li>
-                    <strong>Übelkeit:</strong> {parsedData?.nausea || ""}
+                    <strong>Übelkeit:</strong> {getFieldValue(parsedData?.nausea)}
                 </li>
                 <li>
-                    <strong>Erbrechen:</strong> {parsedData?.vomiting || ""}
+                    <strong>Erbrechen:</strong> {getFieldValue(parsedData?.vomiting)}
                 </li>
                 <li>
-                    <strong>Stuhlgang:</strong> {parsedData?.bowelMovement || ""}
+                    <strong>Stuhlgang:</strong> {getFieldValue(parsedData?.bowelMovement)}
                 </li>
                 <li>
-                    <strong>Wasserlassen:</strong> {parsedData?.urination || ""}
+                    <strong>Wasserlassen:</strong> {getFieldValue(parsedData?.urination)}
                 </li>
                 <li>
-                    <strong>Schwitzen:</strong> {parsedData?.sweating || ""}
+                    <strong>Schwitzen:</strong> {getFieldValue(parsedData?.sweating)}
                 </li>
                 <li>
-                    <strong>Schwindel:</strong> {parsedData?.vertigo || ""}
+                    <strong>Schwindel:</strong> {getFieldValue(parsedData?.vertigo)}
                 </li>
                 <li>
-                    <strong>Bewusstsein:</strong> {parsedData?.consciousness || ""}
+                    <strong>Bewusstsein:</strong> {getFieldValue(parsedData?.consciousness)}
                 </li>
                 <li>
-                    <strong>Herzklopfen:</strong> {parsedData?.palpitations || ""}
+                    <strong>Herzklopfen:</strong> {getFieldValue(parsedData?.palpitations)}
                 </li>
                 <li>
-                    <strong>Atemnot:</strong> {parsedData?.shortnessOfBreath || ""}
+                    <strong>Atemnot:</strong> {getFieldValue(parsedData?.shortnessOfBreath)}
                 </li>
                 <li>
-                    <strong>Hitzewallungen:</strong> {parsedData?.hotFlashes || ""}
+                    <strong>Hitzewallungen:</strong> {getFieldValue(parsedData?.hotFlashes)}
                 </li>
                 <li>
-                    <strong>Kältegefühl:</strong> {parsedData?.coldFeeling || ""}
-                </li>
-                
-                <li>
-                    <strong>Schlafen:</strong> {parsedData?.sleep || ""}
+                    <strong>Kältegefühl:</strong> {getFieldValue(parsedData?.coldFeeling)}
                 </li>
                 <li>
-                    <strong>Sexualanamnese:</strong> {parsedData?.sexualHistory || ""}
+                    <strong>Schlafen:</strong> {getFieldValue(parsedData?.sleep)}
                 </li>
                 <li>
-                    <strong>Sonstiges:</strong> {parsedData?.others || ""}
+                    <strong>Sexualanamnese:</strong> {getFieldValue(parsedData?.sexualHistory)}
                 </li>
                 <li>
-                    <strong>Gynäkologische Anamnese:</strong> {parsedData?.gynecologicalHistory || ""}
+                    <strong>Sonstiges:</strong> {getFieldValue(parsedData?.others)}
+                </li>
+                <li>
+                    <strong>Gynäkologische Anamnese:</strong> {getFieldValue(parsedData?.gynecologicalHistory)}
                 </li>
             </ul>
         </div>

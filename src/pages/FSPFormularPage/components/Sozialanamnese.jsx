@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-// Імпортуємо вашу іконку
+// Імпортуємо іконку
 import sozialanamneseIcon from "../../../assets/iconFSPtable/sozialanamnese.png";
 import styles from "./TileContainer.module.scss";
 
@@ -15,6 +15,24 @@ const renderTileIcon = () => {
 };
 
 const Sozialanamnese = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відстежуємо стан даних
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до обробки даних
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих значень
+        }
+        return value; // Повертаємо значення, якщо воно є
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,25 +42,25 @@ const Sozialanamnese = ({ parsedData = {} }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Beruf:</strong> {parsedData?.profession || ""}
+                    <strong>Beruf:</strong> {getFieldValue(parsedData?.profession)}
                 </li>
                 <li>
-                    <strong>Familienstand:</strong> {parsedData?.maritalStatus || ""}
+                    <strong>Familienstand:</strong> {getFieldValue(parsedData?.maritalStatus)}
                 </li>
                 <li>
-                    <strong>Kinder:</strong> {parsedData?.children || ""}
+                    <strong>Kinder:</strong> {getFieldValue(parsedData?.children)}
                 </li>
                 <li>
-                    <strong>Wohnsituation:</strong> {parsedData?.livingConditions || ""}
+                    <strong>Wohnsituation:</strong> {getFieldValue(parsedData?.livingConditions)}
                 </li>
                 <li>
-                    <strong>Psychosomatische Anamnese/Stress:</strong> {parsedData?.psychosomaticHistory || ""}
+                    <strong>Psychosomatische Anamnese/Stress:</strong> {getFieldValue(parsedData?.psychosomaticHistory)}
                 </li>
                 <li>
-                    <strong>Körperliche Aktivität:</strong> {parsedData?.physicalActivity || ""}
+                    <strong>Körperliche Aktivität:</strong> {getFieldValue(parsedData?.physicalActivity)}
                 </li>
                 <li>
-                    <strong>Ernährungsgewohnheiten:</strong> {parsedData?.dietaryHabits || ""}
+                    <strong>Ernährungsgewohnheiten:</strong> {getFieldValue(parsedData?.dietaryHabits)}
                 </li>
             </ul>
         </div>
@@ -56,8 +74,8 @@ Sozialanamnese.propTypes = {
         children: PropTypes.string,
         livingConditions: PropTypes.string,
         psychosomaticHistory: PropTypes.string,
-        physicalActivity: PropTypes.string, // Додано нове поле
-        dietaryHabits: PropTypes.string, // Додано нове поле
+        physicalActivity: PropTypes.string,
+        dietaryHabits: PropTypes.string,
     }),
 };
 

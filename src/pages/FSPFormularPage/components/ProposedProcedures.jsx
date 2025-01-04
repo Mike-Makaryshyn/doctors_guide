@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-// Імпортуємо вашу власну іконку
+// Імпортуємо іконку
 import proposedProceduresIcon from "../../../assets/iconFSPtable/proposed-procedures.png";
 import styles from "./TileContainer.module.scss";
 
@@ -14,7 +14,25 @@ const renderTileIcon = () => {
     );
 };
 
-const DiagnostischeEmpfehlungen = ({ parsedData }) => {
+const DiagnostischeEmpfehlungen = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відстежуємо стан даних
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до обробки даних
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих значень
+        }
+        return value; // Повертаємо значення, якщо воно є
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,13 +42,13 @@ const DiagnostischeEmpfehlungen = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Körperliche Untersuchung:</strong> {parsedData?.physicalExamination || ""}
+                    <strong>Körperliche Untersuchung:</strong> {getFieldValue(parsedData?.physicalExamination)}
                 </li>
                 <li>
-                    <strong>Laboruntersuchung:</strong> {parsedData?.laboratoryTests || ""}
+                    <strong>Laboruntersuchung:</strong> {getFieldValue(parsedData?.laboratoryTests)}
                 </li>
                 <li>
-                    <strong>Apparative Untersuchung:</strong> {parsedData?.instrumentalExamination || ""}
+                    <strong>Apparative Untersuchung:</strong> {getFieldValue(parsedData?.instrumentalExamination)}
                 </li>
             </ul>
         </div>

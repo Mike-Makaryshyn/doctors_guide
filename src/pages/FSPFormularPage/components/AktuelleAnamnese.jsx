@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-// Імпортуємо власну іконку
 import aktuelleAnamneseIcon from "../../../assets/iconFSPtable/aktuelleanamnese.png";
 import styles from "./TileContainer.module.scss";
 
@@ -14,7 +13,25 @@ const renderTileIcon = () => {
     );
 };
 
-const AktuelleAnamnese = ({ parsedData }) => {
+const AktuelleAnamnese = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відслідковуємо, чи дані вже запарсені
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до запарсення
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Якщо значення пусте, додаємо заблюрений текст
+        }
+        return value; // Якщо значення є, показуємо його
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,43 +41,43 @@ const AktuelleAnamnese = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Besuchsgrund:</strong> {parsedData?.visitReason || ""}
+                    <strong>Besuchsgrund:</strong> {getFieldValue(parsedData?.visitReason)}
                 </li>
                 <li>
-                    <strong>Schmerzlokalisierung:</strong> {parsedData?.painLocalization || ""}
+                    <strong>Schmerzlokalisierung:</strong> {getFieldValue(parsedData?.painLocalization)}
                 </li>
                 <li>
-                    <strong>Zeitverlauf:</strong> {parsedData?.timeCourse || ""}
+                    <strong>Zeitverlauf:</strong> {getFieldValue(parsedData?.timeCourse)}
                 </li>
                 <li>
-                    <strong>Symptombeschreibung:</strong> {parsedData?.symptomDescription || ""}
+                    <strong>Symptombeschreibung:</strong> {getFieldValue(parsedData?.symptomDescription)}
                 </li>
                 <li>
-                    <strong>Schmerzausstrahlung:</strong> {parsedData?.painRadiation || ""}
+                    <strong>Schmerzausstrahlung:</strong> {getFieldValue(parsedData?.painRadiation)}
                 </li>
                 <li>
-                    <strong>Schmerzverlauf:</strong> {parsedData?.painProgression || ""}
+                    <strong>Schmerzverlauf:</strong> {getFieldValue(parsedData?.painProgression)}
                 </li>
                 <li>
-                    <strong>Auslöser:</strong> {parsedData?.triggers || ""}
+                    <strong>Auslöser:</strong> {getFieldValue(parsedData?.triggers)}
                 </li>
                 <li>
-                    <strong>Schmerzintensität:</strong> {parsedData?.painIntensity || ""}
+                    <strong>Schmerzintensität:</strong> {getFieldValue(parsedData?.painIntensity)}
                 </li>
                 <li>
-                    <strong>Schmerzlinderung:</strong> {parsedData?.painRelief || ""}
+                    <strong>Schmerzlinderung:</strong> {getFieldValue(parsedData?.painRelief)}
                 </li>
                 <li>
-                    <strong>Schmerzverstärkung:</strong> {parsedData?.painAggravation || ""}
+                    <strong>Schmerzverstärkung:</strong> {getFieldValue(parsedData?.painAggravation)}
                 </li>
                 <li>
-                    <strong>Vorherige medizinische Betreuung:</strong> {parsedData?.previousMedicalCare || ""}
+                    <strong>Vorherige medizinische Betreuung:</strong> {getFieldValue(parsedData?.previousMedicalCare)}
                 </li>
                 <li>
-                    <strong>Probleme mit Funktionalität:</strong> {parsedData?.functionalIssues || ""}
+                    <strong>Probleme mit Funktionalität:</strong> {getFieldValue(parsedData?.functionalIssues)}
                 </li>
                 <li>
-                    <strong>Andere begleitende Symptome:</strong> {parsedData?.additionalSymptoms || ""}
+                    <strong>Andere begleitende Symptome:</strong> {getFieldValue(parsedData?.additionalSymptoms)}
                 </li>
             </ul>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпортуємо власну іконку
 import noxenIcon from "../../../assets/iconFSPtable/noxen.png";
@@ -14,7 +14,25 @@ const renderTileIcon = () => {
     );
 };
 
-const Noxen = ({ parsedData }) => {
+const Noxen = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false);
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Порожнє значення до обробки даних
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих полів
+        }
+        return value;
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,13 +42,13 @@ const Noxen = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Rauchverhalten:</strong> {parsedData?.rauchverhalten || ""}
+                    <strong>Rauchverhalten:</strong> {getFieldValue(parsedData?.rauchverhalten)}
                 </li>
                 <li>
-                    <strong>Alkoholkonsum:</strong> {parsedData?.alkoholkonsum || ""}
+                    <strong>Alkoholkonsum:</strong> {getFieldValue(parsedData?.alkoholkonsum)}
                 </li>
                 <li>
-                    <strong>Drogengebrauch:</strong> {parsedData?.drogengebrauch || ""}
+                    <strong>Drogengebrauch:</strong> {getFieldValue(parsedData?.drogengebrauch)}
                 </li>
             </ul>
         </div>

@@ -135,7 +135,10 @@
     align-items: center;
     height: 25px; /* Регулюємо висоту, щоб відповідало вигляду */
 }
-
+.blurred-text {
+    color: #aaa; /* Сірий колір для менш помітного тексту */
+    font-style: italic; /* Курсив для виділення */
+}
 /* Текст всередині Zusammenfassung */
 .zusammenfassung p {
     font-weight: bold;

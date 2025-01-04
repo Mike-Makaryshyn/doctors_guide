@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпорт вашої іконки
 import travelIcon from "../../../assets/iconFSPtable/travel-icon.png"; // змініть шлях на відповідний
@@ -15,6 +15,24 @@ const renderTileIcon = () => {
 };
 
 const ReiseImpfstatus = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відслідковуємо, чи дані вже запарсені
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до запарсення
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Якщо значення пусте, додаємо заблюрений текст
+        }
+        return value; // Якщо значення є, показуємо його
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,10 +42,10 @@ const ReiseImpfstatus = ({ parsedData = {} }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Impfung:</strong> {parsedData?.vaccination || ""}
+                    <strong>Impfung:</strong> {getFieldValue(parsedData?.vaccination)}
                 </li>
                 <li>
-                    <strong>Reise:</strong> {parsedData?.travelHistory || ""}
+                    <strong>Reise:</strong> {getFieldValue(parsedData?.travelHistory)}
                 </li>
             </ul>
         </div>

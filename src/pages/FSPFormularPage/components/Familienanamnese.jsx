@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпортуємо власну іконку
 import familienanamneseIcon from "../../../assets/iconFSPtable/familienanamnese.png";
@@ -14,7 +14,25 @@ const renderTileIcon = () => {
     );
 };
 
-const Familienanamnese = ({ parsedData }) => {
+const Familienanamnese = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відслідковуємо стан даних
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Порожнє значення до запарсення
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих значень
+        }
+        return value; // Повертаємо значення, якщо воно є
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,13 +42,13 @@ const Familienanamnese = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Genetische Erkrankungen:</strong> {parsedData?.geneticDiseases || ""}
+                    <strong>Genetische Erkrankungen:</strong> {getFieldValue(parsedData?.geneticDiseases)}
                 </li>
                 <li>
-                    <strong>Eltern:</strong> {parsedData?.parents || ""}
+                    <strong>Eltern:</strong> {getFieldValue(parsedData?.parents)}
                 </li>
                 <li>
-                    <strong>Geschwister:</strong> {parsedData?.siblings || ""}
+                    <strong>Geschwister:</strong> {getFieldValue(parsedData?.siblings)}
                 </li>
             </ul>
         </div>
@@ -39,9 +57,9 @@ const Familienanamnese = ({ parsedData }) => {
 
 Familienanamnese.propTypes = {
     parsedData: PropTypes.shape({
+        geneticDiseases: PropTypes.string,
         parents: PropTypes.string,
         siblings: PropTypes.string,
-        geneticDiseases: PropTypes.string, // Додано нове поле
     }),
 };
 

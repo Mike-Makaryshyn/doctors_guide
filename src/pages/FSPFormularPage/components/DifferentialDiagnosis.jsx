@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // Імпортуємо вашу власну іконку
 import differentialDiagnosisIcon from "../../../assets/iconFSPtable/differential-diagnosis.png";
@@ -14,7 +14,25 @@ const renderTileIcon = () => {
     );
 };
 
-const DifferentialDiagnosis = ({ parsedData }) => {
+const DifferentialDiagnosis = ({ parsedData = {} }) => {
+    const [isDataParsed, setIsDataParsed] = useState(false); // Відслідковуємо стан даних
+
+    const getFieldValue = (value) => {
+        if (!isDataParsed) {
+            return ""; // Показуємо порожнє значення до обробки даних
+        }
+        if (value === null || value === undefined || value === "") {
+            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих значень
+        }
+        return value; // Повертаємо значення, якщо воно є
+    };
+
+    useEffect(() => {
+        if (parsedData && Object.keys(parsedData).length > 0) {
+            setIsDataParsed(true);
+        }
+    }, [parsedData]);
+
     return (
         <div className={styles["tile-container"]}>
             <div className={styles["tile-header"]}>
@@ -24,11 +42,12 @@ const DifferentialDiagnosis = ({ parsedData }) => {
             </div>
             <ul className={styles["tile-list"]}>
                 <li>
-                    <strong>Differentiale Diagnosen:</strong> {parsedData?.possibleDiagnoses || ""}
+                    <strong>Differentiale Diagnosen:</strong> {getFieldValue(parsedData?.possibleDiagnoses)}
                 </li>
                 <li>
-                    <strong>Abgrenzung:</strong> {parsedData?.differentiation || ""}
+                    <strong>Abgrenzung:</strong> {getFieldValue(parsedData?.differentiation)}
                 </li>
+               
             </ul>
         </div>
     );

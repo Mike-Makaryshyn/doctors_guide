@@ -18,7 +18,7 @@ const HESSEN_DATA = [
       "Krampfartige Schmerzen nach dem Essen, begleitet von lauten Darmgeräuschen und Flatulenz.",
     painRadiation: "Keine",
     painProgression: "Besserung heute, keine Schmerzen mehr.",
-    triggers: "Postprandial",
+    triggers: "",
     painIntensity: "6-8/10",
     painRelief: "Keine spezifische Linderung angegeben.",
     painAggravation: "Keine spezifische Verschlimmerung angegeben.",
@@ -28,15 +28,15 @@ const HESSEN_DATA = [
     additionalSymptoms: "Lautes Darmgeräusch, Flatulenz.",
 
     vaccination: "Vollständig geimpft",
-    travelHistory: "Keine relevanten Reisen angegeben",
+    travelHistory: "",
 
     generalCondition:
       "Er sieht gesund aus, aber hat eine Reihe chronischer Erkrankungen.",
     appetite: "Unverändert",
     weightLoss: "Gewichtsabnahme von 5 kg innerhalb von 7 Wochen.",
-    thirst: "Keine Angaben",
-    nausea: "Keine Übelkeit",
-    vomiting: "Kein Erbrechen",
+    thirst: "",
+    nausea: "",
+    vomiting: "",
     bowelMovement: "Wechsel zwischen Diarrhö und Obstipation seit 5 Jahren.",
     urination: "Keine Angaben",
     sweating: "Nachtschweiß",
@@ -53,35 +53,35 @@ const HESSEN_DATA = [
 
     summary:
       "Herr zu Äusigler, Sie haben seit gestern krampfartige Bauchschmerzen im linken Unterbauch nach dem Essen bemerkt. Zudem berichten Sie über einen Wechsel zwischen Durchfall und Verstopfung in den letzten 5 Jahren. Weitere Beschwerden umfassen Schlafstörungen aufgrund von Depression, Nachtschweiß und einen signifikanten Gewichtsverlust von 5 kg innerhalb von 7 Wochen. In Ihrer Familienanamnese liegt ein Dickdarmkrebs bei Ihrem Vater vor. Haben Sie noch weitere Symptome oder Beschwerden, die wir bisher nicht besprochen haben?",
-    infectiousDiseases: "Keine aktuellen Infektionen angegeben",
+    infectiousDiseases: "",
     chronicDiseases:
       "Arterielle Hypertonie (aHT), Diabetes Mellitus (DM), Lumbago",
     otherRelevantDiseases: "Meningoenzephalitis vor 8 Jahren",
 
     pastOperations:
       "Appendektomie als Kind, Hernie inguinalis vor 20 Jahren (laparoskopisch)",
-    operationCourseComplications: "Keine Komplikationen angegeben",
+    operationCourseComplications: "",
     hospitalStayDuration: "Keine Krankenhausaufenthalte angegeben",
 
-    allgemeineMedikamenteneinnahme: "Ramipril, Amlodipin, Celebrex, Jardiance",
+    allgemeineMedikamenteneinnahme: "",
     detaillierteMedikamenteninformationen:
       "Ramipril 5mg 1x täglich, Amlodipin 5mg 1x täglich, Celebrex 100mg bei Bedarf, Jardiance 10mg täglich",
 
     specificMedicationAllergies: "Amoxicillin mit Exanthem",
     allergicReactionSymptoms: "Exanthem",
     allergyTriggers: "Amoxicillin",
-    householdAllergens: "Keine Angaben",
+    householdAllergens: "",
     specificIntolerances: "Keine weiteren Unverträglichkeiten",
 
     rauchverhalten:
       "Aktiver Raucher mit 30 PY (3/4 Schachtel täglich seit 16 Jahren)",
     alkoholkonsum: "Alkoholkonsum von 1/2 Liter Apfelwein täglich",
-    drogengebrauch: "Drogenkonsum wurde verneint",
+    drogengebrauch: "",
 
     geneticDiseases: "Keine genetischen Erkrankungen angegeben",
     parents:
       "Vater starb an Dickdarmkrebs (75 Jahre), Mutter lebt mit Demenz im Pflegeheim",
-    siblings: "Keine Geschwister",
+    siblings: "",
 
     profession: "Gärtnerarbeiter",
     maritalStatus: "Verheiratet",
@@ -89,7 +89,7 @@ const HESSEN_DATA = [
       "3 Kinder, davon ein Sohn mit Depression und zwei gesunde Töchter",
     livingConditions: "Lebt mit seiner Frau",
     psychosomaticHistory: "Leidet unter Stress aufgrund der Arbeit",
-    physicalActivity: "Keine Angaben",
+    physicalActivity: "",
     dietaryHabits: "Keine speziellen Ernährungsgewohnheiten angegeben",
 
     possibleDiagnoses:
