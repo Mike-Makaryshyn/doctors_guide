@@ -183,7 +183,6 @@
   z-index: 1000;
 }
 
-/* Оформлення для кожної опції */
 .region-option {
   width: 100%;
   padding: 8px 12px;
@@ -225,6 +224,85 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+}
+
+/* Switch Styles */
+
+/* Контейнер для перемикача з мітками */
+.data-source-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  margin-top: 10px;
+
+  /* Додайте відступ справа, якщо потрібно більше зміщення вправо */
+  /* justify-content: flex-end; */
+}
+
+/* Мітки для перемикача */
+.label-left,
+.label-right {
+  margin: 0 0.5em;
+  font-size: 14px;
+  color: #555;
+  font-weight: normal; /* Базовий стан */
+  transition: font-weight 0.3s ease; /* Плавний перехід */
+}
+
+/* Активна мітка */
+.label-active {
+  font-weight: bold;
+}
+
+/* Перемикач */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Ховаємо стандартний HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Слайдер */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 0.1em;
+  border-radius: 0px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+}
+
+input:checked + .slider:before {
+  transform: translateX(2.8em) rotate(360deg);
 }
 
 /* Оновлені стилі для кнопок */
@@ -286,7 +364,7 @@
 .add-case-button::before,
 .mark-completed-button::before,
 .defer-case-button::before,
-.reset-case-button::before { /* Додано reset-button */
+.reset-button::before { /* Додано reset-button */
   font-size: 20px; /* Розмір іконок */
   color: #fff;
   transition: transform 0.3s ease, color 0.3s ease; /* Плавне збільшення і зміна кольору */
@@ -295,7 +373,7 @@
 .add-case-button:hover::before,
 .mark-completed-button:hover::before,
 .defer-case-button:hover::before,
-.reset-case-button:hover::before { /* Додано reset-button */
+.reset-button:hover::before { /* Додано reset-button */
   color: #fff;
   transform: scale(1.2); /* Легке збільшення іконки */
 }
@@ -445,4 +523,27 @@
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+/* Стилі для переключача з мітками */
+.data-source-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  margin-top: 10px;
+}
+
+/* Мітки для перемикача */
+.label-left,
+.label-right {
+  margin: 0 0.5em;
+  font-size: 14px;
+  color: #555;
+  font-weight: normal; /* Базовий стан */
+  transition: font-weight 0.3s ease; /* Плавний перехід */
+}
+
+/* Активна мітка */
+.label-active {
+  font-weight: bold;
 }

@@ -1,19 +1,40 @@
-import React from "react";
+// src/components/AdditionalInfoModal.jsx
+
+import React, { memo, useEffect } from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw"; // Для рендерингу HTML всередині Markdown
-import remarkGfm from "remark-gfm"; // Для підтримки розширеного Markdown
-import styles from "./AdditionalInfoModal.module.scss"; // Імпортуємо стилі як модуль
+import rehypeRaw from "rehype-raw"; 
+import remarkGfm from "remark-gfm"; 
+import styles from "./AdditionalInfoModal.module.scss"; 
+
+/**
+ * Додаткова функція порівняння пропсів (щоб не ререндеритись щоразу)
+ */
+function arePropsEqual(prevProps, nextProps) {
+  // Якщо isOpen змінилось – мусимо перемалювати
+  if (prevProps.isOpen !== nextProps.isOpen) return false;
+  // Якщо text/title/type змінились – також
+  if (prevProps.additionalInfo.text !== nextProps.additionalInfo.text) return false;
+  if (prevProps.additionalInfo.title !== nextProps.additionalInfo.title) return false;
+  if (prevProps.additionalInfo.type !== nextProps.additionalInfo.type) return false;
+
+  return true;
+}
 
 const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
   if (!isOpen) return null;
 
-  console.log("Modal Props:", { additionalInfo });
+  // Лог один раз при монтуванні
+  useEffect(() => {
+    console.log("[AdditionalInfoModal] Opened with:", additionalInfo);
+    return () => {
+      console.log("[AdditionalInfoModal] Closed.");
+    };
+  }, [additionalInfo]);
 
   // Перевірка, що additionalInfo.text є рядком
   const markdownText =
     typeof additionalInfo.text === "string" ? additionalInfo.text : "Інформація недоступна.";
-  console.log("Markdown Text:", markdownText);
 
   return (
     <div
@@ -35,7 +56,7 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
             onClick={onClose}
             aria-label="Закрити модальне вікно"
           >
-            {/* Використання SVG іконки замість текстового символу */}
+            {/* SVG іконка */}
             <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
               <line x1="1" y1="1" x2="13" y2="13" stroke="#333" strokeWidth="2"/>
               <line x1="13" y1="1" x2="1" y2="13" stroke="#333" strokeWidth="2"/>
@@ -47,8 +68,8 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
         <div className={styles["modal-body"]}>
           <ReactMarkdown
             className={styles["modal-text"]}
-            remarkPlugins={[remarkGfm]} // Підтримка таблиць, чекбоксів тощо
-            rehypePlugins={[rehypeRaw]} // Дозволяє використання HTML всередині Markdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
           >
             {markdownText}
           </ReactMarkdown>
@@ -59,13 +80,14 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
 };
 
 AdditionalInfoModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired, // Визначає, чи відкрите модальне вікно
-  onClose: PropTypes.func.isRequired, // Функція закриття модального вікна
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
   additionalInfo: PropTypes.shape({
-    text: PropTypes.string.isRequired, // Текст з Markdown
-    type: PropTypes.string.isRequired, // Тип додаткової інформації
-    title: PropTypes.string.isRequired, // Заголовок модального вікна
+    text: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }).isRequired,
 };
 
-export default AdditionalInfoModal;
+// Обгортаємо у React.memo + порівняння пропсів
+export default memo(AdditionalInfoModal, arePropsEqual);
