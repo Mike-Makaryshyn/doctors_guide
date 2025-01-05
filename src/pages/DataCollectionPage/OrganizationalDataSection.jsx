@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from "react";
+// src/components/DataCollectionPage/OrganizationalDataSection.jsx
+
+import React, { useState, useEffect, useContext } from "react";
 import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase"; // Шлях до firebase.js
+import { DataSourceContext } from "../../contexts/DataSourceContext";
 import styles from "./OrganizationalDataSection.module.scss"; // Імпорт оновлених стилів
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
 
-const OrganizationalDataSection = React.forwardRef((props, ref) => {
+const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => {
+  const { dataSources } = useContext(DataSourceContext);
   const [data, setData] = useState({
     examLocation: "",
     examinerNames: "",
     examDate: "",
     examResult: "",
-    subject: "",         // <-- НОВЕ ПОЛЕ: "Тема"
+    subject: "", // НОВЕ ПОЛЕ: "Тема"
   });
+  const [user, loading, error] = useAuthState(auth);
 
   const examLocations = [
     "Ärztekammer Baden-Württemberg",
@@ -26,38 +33,48 @@ const OrganizationalDataSection = React.forwardRef((props, ref) => {
   };
 
   const fetchOrganizationalData = async () => {
-    const docRef = doc(db, "sections", "organizationalData");
+    if (!selectedRegion || !user) return; // Не завантажуємо дані, якщо регіон не обрано або користувач не автентифікований
+
+    const docRef = doc(db, "users", user.uid, "cases", "organizationalData");
     const snapshot = await getDoc(docRef);
     if (snapshot.exists()) {
-      setData(snapshot.data());
+      const fetchedData = snapshot.data();
+      setData(fetchedData);
     }
   };
 
   // Зберігаємо документ, якщо принаймні одне з полів заповнене.
   // Якщо ж усі поля порожні, видаляємо документ.
   const saveData = async () => {
-    const docRef = doc(db, "sections", "organizationalData");
+    if (!selectedRegion || !user) {
+      console.warn("Регіон не обрано або користувач не автентифікований. Дані не збережені.");
+      return;
+    }
+
+    const docRef = doc(db, "users", user.uid, "cases", "organizationalData");
     const { examLocation, examinerNames, examDate, examResult, subject } = data;
     const isAnyFieldFilled = [
       examLocation, examinerNames, examDate, examResult, subject,
     ].some((val) => val.trim() !== "");
 
     if (isAnyFieldFilled) {
-      await setDoc(docRef, data);
+      await setDoc(docRef, { ...data, region: selectedRegion }, { merge: true });
+      console.log("Організаційні дані успішно збережено.");
     } else {
       await deleteDoc(docRef);
+      console.log("Організаційні дані видалено через відсутність заповнених полів.");
     }
   };
 
   useEffect(() => {
     fetchOrganizationalData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [selectedRegion, user]);
 
   React.useImperativeHandle(ref, () => ({ saveData }));
 
   return (
-    <div>
+    <div className={styles.organizationalDataSection}>
       <h2 className={styles.subheader}>Організаційні дані</h2>
 
       {/* Місце проведення екзамену */}

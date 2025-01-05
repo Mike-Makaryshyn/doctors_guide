@@ -1,10 +1,12 @@
 // src/contexts/DataSourceContext.jsx
 
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
-// Імпортуємо файли (імена файлів без дефісів/умляутів):
+// Імпорт локальних файлів (імена файлів без дефісів/умляутів)
 import THUERINGEN_DATA from "../constants/translation/Fall/Thüringen.js";
-import BADENWUERTTEMBERG_DATA from "../constants/translation/Fall/Baden-Württemberg.js";
+import BADENWUERTTEMB_DATA from "../constants/translation/Fall/Baden-Württemberg.js";
 import BAYERN_DATA from "../constants/translation/Fall/Bayern.js";
 import BERLIN_DATA from "../constants/translation/Fall/Berlin.js";
 import BRANDENBURG_DATA from "../constants/translation/Fall/Brandenburg.js";
@@ -20,201 +22,276 @@ import SACHSEN_DATA from "../constants/translation/Fall/Sachsen.js";
 import SACHSENANHALT_DATA from "../constants/translation/Fall/Sachsen-Anhalt.js";
 import SCHLESWIGHOLSTEIN_DATA from "../constants/translation/Fall/Schleswig-Holstein.js";
 
-// Створюємо контекст
 export const DataSourceContext = createContext();
 
-// Експортуємо провайдер
+/**
+ * DataSourceProvider:
+ * - Зберігає локальні дані (sources.local) для кожного регіону.
+ * - Підвантажує з Firebase (sources.firebase) при необхідності.
+ *
+ * Документ у колекції "cases" в Firestore має ім'я, що збігається з ключем (наприклад, "Thüringen").
+ */
 export const DataSourceProvider = ({ children }) => {
-  // Ключі (ліворуч) = назви файлів (без дефісів/умляутів).
-  // name/region (праворуч) = “людська” назва з дефісами, умляутами.
-  const [dataSources] = useState({
-    // 1) Thüringen
+  const [dataSources, setDataSources] = useState({
+    // === ТЮРИНГІЯ (у Firestore документ теж має назву "Thüringen") ===
     "Thüringen": {
-      key: "Thueringen",
-      name: "Thüringen",
-      type: "local",
-      region: "Thüringen",
-      files: THUERINGEN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      key: "Thueringen", // суто технічний ключ, можете залишити так
+      name: "Thüringen", // назва для відображення
+      region: "Thüringen", // важливо, щоб збігалося з назвою документа у Firestore
+      type: "dynamic",
+      sources: {
+        local: THUERINGEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 2) Baden-Württemberg
+
+    // === Далі інші регіони (вони або не мають документа у Firestore, або ви створите) ===
     "Baden-Württemberg": {
       key: "BadenWuerttemberg",
       name: "Baden-Württemberg",
-      type: "local",
       region: "Baden-Württemberg",
-      files: BADENWUERTTEMBERG_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: BADENWUERTTEMB_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 3) Bayern
     Bayern: {
       key: "Bayern",
       name: "Bayern",
-      type: "local",
       region: "Bayern",
-      files: BAYERN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: BAYERN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 4) Berlin
     Berlin: {
       key: "Berlin",
       name: "Berlin",
-      type: "local",
       region: "Berlin",
-      files: BERLIN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: BERLIN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 5) Brandenburg
     Brandenburg: {
       key: "Brandenburg",
       name: "Brandenburg",
-      type: "local",
       region: "Brandenburg",
-      files: BRANDENBURG_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: BRANDENBURG_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 6) Bremen
     Bremen: {
       key: "Bremen",
       name: "Bremen",
-      type: "local",
       region: "Bremen",
-      files: BREMEN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: BREMEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 7) Hamburg
     Hamburg: {
       key: "Hamburg",
       name: "Hamburg",
-      type: "local",
       region: "Hamburg",
-      files: HAMBURG_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: HAMBURG_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 8) Hessen
     Hessen: {
       key: "Hessen",
       name: "Hessen",
-      type: "local",
       region: "Hessen",
-      files: HESSEN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: HESSEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 9) Mecklenburg-Vorpommern
     "Mecklenburg Vorpommern": {
       key: "MecklenburgVorpommern",
       name: "Mecklenburg Vorpommern",
-      type: "local",
       region: "Mecklenburg Vorpommern",
-      files: MECKLENBURG_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: MECKLENBURG_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 10) Niedersachsen
     Niedersachsen: {
       key: "Niedersachsen",
       name: "Niedersachsen",
-      type: "local",
       region: "Niedersachsen",
-      files: NIEDERSACHSEN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: NIEDERSACHSEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 11) Nordrhein-Westfalen
     "Nordrhein-Westfalen": {
       key: "NordrheinWestfalen",
       name: "Nordrhein-Westfalen",
-      type: "local",
       region: "Nordrhein-Westfalen",
-      files: NRW_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: NRW_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 12) Rheinland-Pfalz
     "Rheinland-Pfalz": {
       key: "RheinlandPfalz",
       name: "Rheinland-Pfalz",
-      type: "local",
       region: "Rheinland-Pfalz",
-      files: RHEINLAND_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: RHEINLAND_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 13) Saarland
     Saarland: {
       key: "Saarland",
       name: "Saarland",
-      type: "local",
       region: "Saarland",
-      files: SAARLAND_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: SAARLAND_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 14) Sachsen
     Sachsen: {
       key: "Sachsen",
       name: "Sachsen",
-      type: "local",
       region: "Sachsen",
-      files: SACHSEN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: SACHSEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 15) Sachsen-Anhalt
     "Sachsen-Anhalt": {
       key: "SachsenAnhalt",
       name: "Sachsen-Anhalt",
-      type: "local",
       region: "Sachsen-Anhalt",
-      files: SACHSENANHALT_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
+      type: "dynamic",
+      sources: {
+        local: SACHSENANHALT_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
-    // 16) Schleswig-Holstein
     "Schleswig-Holstein": {
       key: "SchleswigHolstein",
       name: "Schleswig-Holstein",
-      type: "local",
       region: "Schleswig-Holstein",
-      files: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
-        id: item.id,
-        name: item.fullName || "Без імені", // Використовуємо fullName замість name
-      })),
-    },
-
-    // Firebase (не змінюємо)
-    firebaseSource: {
-      name: "Firebase Source",
-      type: "firebase",
-      collection: "userCases",
+      type: "dynamic",
+      sources: {
+        local: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+        })),
+        firebase: [],
+      },
     },
   });
 
+  /**
+   * Підвантаження кейсів з Firestore для обраного регіону (regionKey),
+   * потім зберігання у sources.firebase.
+   *
+   * Назва документа у Firestore збігається з ключем (наприклад, "Thüringen").
+   */
+  const fetchFirebaseCases = async (regionKey) => {
+    try {
+      const docRef = doc(db, "cases", regionKey); // назва документа = regionKey
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        console.error(`Документ "${regionKey}" не знайдено в Firestore.`);
+        return;
+      }
+
+      const docData = docSnap.data();
+      // Вважаємо, що docData має поле "cases" (масив)
+      const fetchedCases = docData.cases || [];
+
+      setDataSources((prev) => ({
+        ...prev,
+        [regionKey]: {
+          ...prev[regionKey],
+          sources: {
+            ...prev[regionKey].sources,
+            firebase: fetchedCases,
+          },
+        },
+      }));
+    } catch (error) {
+      console.error(`Помилка підвантаження Firebase для регіону ${regionKey}:`, error);
+    }
+  };
+
+  /**
+   * Повертає масив випадків (local чи firebase)
+   * залежно від обраного sourceType ("local" / "firebase").
+   */
+  const getCurrentCases = (regionKey, sourceType) => {
+    if (!dataSources[regionKey]?.sources) return [];
+    return dataSources[regionKey].sources[sourceType] || [];
+  };
+
   return (
-    <DataSourceContext.Provider value={{ dataSources }}>
+    <DataSourceContext.Provider value={{ dataSources, fetchFirebaseCases, getCurrentCases }}>
       {children}
     </DataSourceContext.Provider>
   );
