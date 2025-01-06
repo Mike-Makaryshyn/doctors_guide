@@ -394,6 +394,18 @@ export const main_menu_items = {
                de: "Regionale Chats",
                link: "/regional-chats",
             },
+            {
+               en: "Cases",
+               fr: "Cas",
+               es: "Casos",
+               ar: "حالات",
+               tr: "Vakalar",
+               pl: "Przypadki",
+               uk: "Випадки",
+               ru: "Случаи",
+               de: "Fälle",
+               link: "/cases", // Встановлено правильний маршрут
+             },
             // Add other items in this section as needed
          ],
       },

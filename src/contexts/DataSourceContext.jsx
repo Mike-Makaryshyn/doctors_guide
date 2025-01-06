@@ -4,7 +4,7 @@ import React, { createContext, useState, useCallback, useMemo } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
-// Import local files (file names without hyphens/umlauts)
+// Імпортуємо локальні файли (імена файлів без дефісів/умляутів)
 import THUERINGEN_DATA from "../constants/translation/Fall/Thüringen.js";
 import BADENWUERTTEMB_DATA from "../constants/translation/Fall/Baden-Württemberg.js";
 import BAYERN_DATA from "../constants/translation/Fall/Bayern.js";
@@ -26,18 +26,18 @@ export const DataSourceContext = createContext();
 
 /**
  * DataSourceProvider:
- * - Stores local data (sources.local) for each region.
- * - Loads from Firebase (sources.firebase) when necessary.
+ * - Зберігає локальні дані (sources.local) для кожного регіону.
+ * - Завантажує дані з Firebase (sources.firebase) при необхідності.
  *
- * The document in the "cases" collection in Firestore has a name matching the key (e.g., "Thüringen").
+ * Документ у колекції "cases" в Firestore має ім'я, що відповідає ключу (наприклад, "Thüringen").
  */
 export const DataSourceProvider = ({ children }) => {
   const [dataSources, setDataSources] = useState({
-    // === THÜRINGEN (the Firestore document is also named "Thüringen") ===
+    // === THÜRINGEN (документ Firestore також названий "Thüringen") ===
     "Thüringen": {
-      key: "Thueringen", // purely technical key, you can leave it as is
-      name: "Thüringen", // display name
-      region: "Thüringen", // must match the Firestore document name
+      key: "Thueringen",
+      name: "Thüringen",
+      region: "Thüringen",
       type: "dynamic",
       sources: {
         local: THUERINGEN_DATA.map((item) => ({
@@ -48,7 +48,7 @@ export const DataSourceProvider = ({ children }) => {
       },
     },
 
-    // === Other regions (either don't have a Firestore document or you will create them) ===
+    // === Інші регіони (або не мають документа Firestore, або ви їх створите) ===
     "Baden-Württemberg": {
       key: "BadenWuerttemberg",
       name: "Baden-Württemberg",
@@ -247,24 +247,32 @@ export const DataSourceProvider = ({ children }) => {
   });
 
   /**
-   * Loads cases from Firestore for the selected region (regionKey),
-   * then stores them in sources.firebase.
+   * Завантажує випадки з Firebase для вибраного регіону (regionKey),
+   * а потім зберігає їх у sources.firebase.
    *
-   * The document name in Firestore matches the key (e.g., "Thüringen").
+   * Ім'я документа в Firestore відповідає ключу (наприклад, "Thüringen").
    */
   const fetchFirebaseCases = useCallback(async (regionKey) => {
     try {
-      const docRef = doc(db, "cases", regionKey); // document name = regionKey
+      const docRef = doc(db, "cases", regionKey); // ім'я документа = regionKey
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
-        console.error(`Document "${regionKey}" not found in Firestore.`);
+        console.error(`Документ "${regionKey}" не знайдено в Firestore.`);
         return;
       }
 
       const docData = docSnap.data();
-      // Assume docData has a field "cases" (array)
       const fetchedCases = docData.cases || [];
+
+      // Логування для перевірки структури даних
+      console.log("Отримані випадки з Firebase:", fetchedCases);
+
+      // Маппінг поля fullName до name
+      const mappedCases = fetchedCases.map((caseItem) => ({
+        id: caseItem.id,
+        name: caseItem.fullName || "Без імені", // Маппінг поля fullName до name
+      }));
 
       setDataSources((prev) => ({
         ...prev,
@@ -272,18 +280,18 @@ export const DataSourceProvider = ({ children }) => {
           ...prev[regionKey],
           sources: {
             ...prev[regionKey].sources,
-            firebase: fetchedCases,
+            firebase: mappedCases,
           },
         },
       }));
     } catch (error) {
-      console.error(`Error fetching Firebase for region ${regionKey}:`, error);
+      console.error(`Помилка при завантаженні Firebase для регіону ${regionKey}:`, error);
     }
   }, []);
 
   /**
-   * Returns an array of cases (local or firebase)
-   * depending on the selected sourceType ("local" / "firebase").
+   * Повертає масив випадків (локальних або Firebase)
+   * залежно від вибраного типу джерела ("local" / "firebase").
    */
   const getCurrentCases = useCallback(
     (regionKey, sourceType) => {
@@ -293,7 +301,7 @@ export const DataSourceProvider = ({ children }) => {
     [dataSources]
   );
 
-  // Memoize the context value to prevent unnecessary re-renders
+  // Мемоізація значення контексту для запобігання непотрібним перерендеренням
   const contextValue = useMemo(
     () => ({
       dataSources,

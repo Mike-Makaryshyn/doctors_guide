@@ -50,6 +50,11 @@ const FSPFormularPage = React.lazy(() =>
   import("../pages/FSPFormularPage/FSPFormularPage")
 );
 
+// Новий імпорт для CasesListPage
+const CasesListPage = React.lazy(() =>
+  import("../pages/CasesListPage/CasesListPage")
+);
+
 // Auth and Dashboard
 const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
 const RegistrationPage = React.lazy(() =>
@@ -69,7 +74,7 @@ export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        {/* Dynamic rendering of initial page based on localStorage */}
+        {/* Динамічне рендеринг початкової сторінки на основі localStorage */}
         {localStorageGet("currentPage", "/") === "/lands" && (
           <Route path="/" element={<GermanyLandsPage />} />
         )}
@@ -104,6 +109,9 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
+
+        {/* Новий маршрут для CasesListPage */}
+        <Route path="/cases" element={<CasesListPage />} />
 
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
         <Route

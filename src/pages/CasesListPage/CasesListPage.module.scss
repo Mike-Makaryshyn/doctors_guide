@@ -1,0 +1,334 @@
+/* src/pages/CasesListPage/CasesListPage.module.scss */
+
+/* Встановлення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Глобальне застосування шрифту до всіх елементів сторінки */
+:global(body) {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Основний контейнер сторінки */
+.cases-list-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  position: relative;
+  margin-top: 55px;
+  min-height: 100vh;
+}
+
+/* Відображення випадків */
+section {
+  width: 100%;
+}
+
+section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.case-tile {
+  padding: 15px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-tile:hover {
+  transform: translateY(-5px);
+}
+
+.bottom-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  /* Neomorphic styling */
+  background: #e0e0e0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: calc(100% - 40px); /* Відступи зліва та справа */
+  max-width: 600px; /* Максимальна ширина для великих екранів */
+  box-sizing: border-box;
+}
+
+/* Поле пошуку */
+.search-container {
+  flex: 1;
+}
+
+.search-input {
+  width: 100%; /* Розтягується на всю доступну ширину */
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #e0e0e0;
+  font-size: 14px;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+
+  ::placeholder {
+    color: #999;
+  }
+
+  &:focus {
+    /* Можна додати інші стилі при фокусі, якщо потрібно */
+  }
+}
+
+/* Кнопка Налаштувань */
+.settings-button {
+  background-color: rgba(125, 199, 34, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.settings-button:hover {
+  background-color: #7dc722;
+  transform: scale(1.1);
+}
+
+/* Модальне вікно Налаштувань */
+.settings-modal {
+  position: fixed;
+  bottom: 90px; /* над bottom-controls */
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  width: 300px;
+  animation: fadeIn 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.settings-content {
+  position: relative;
+}
+
+/* Заголовок модального вікна */
+.settings-modal h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Поля у модальному вікні */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.settings-modal label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Перемикач Джерела Даних */
+.data-source-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.label-left,
+.label-right {
+  margin: 0 0.5em;
+  font-size: 14px;
+  color: #555;
+  font-weight: normal;
+  transition: font-weight 0.3s ease;
+}
+
+.label-active {
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #171717;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px) rotate(360deg);
+}
+
+/* Селектор Регіону */
+.region-select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  color: #333;
+}
+
+.region-select:focus {
+  outline: none;
+}
+
+/* Кнопка Закриття Модального Вікна */
+.close-button {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.close-button:disabled {
+  background-color: #ccc;
+  color: #888888;
+  cursor: not-allowed;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .cases-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .settings-modal {
+    left: 10px;
+    right: 10px;
+    bottom: 90px; /* adjusted to account for bottom-controls */
+    width: auto;
+    padding: 15px;
+  }
+
+  .settings-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .close-button {
+    top: -8px;
+    right: -8px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .search-input {
+    width: 100%; /* Розтягується на всю ширину контейнера */
+  }
+
+  .bottom-controls {
+    padding: 8px 16px;
+    gap: 10px;
+    width: calc(100% - 32px); /* Відступи зліва та справа */
+  }
+}
+
+/* Додаткові стилі */
+.error {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.loading-message {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
