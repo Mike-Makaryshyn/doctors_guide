@@ -9,6 +9,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { toast, ToastContainer } from "react-toastify";
 import { FaCog } from "react-icons/fa";
+import { pathList } from "../../routes/path";
 
 const CasesListPage = () => {
   const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
@@ -103,7 +104,8 @@ const CasesListPage = () => {
   };
 
   // Завантаження онлайн випадків з Firebase через DataSourceContext
-  useEffect(() => {
+// Завантаження онлайн випадків з Firebase через DataSourceContext
+useEffect(() => {
     const loadFirebaseCases = async () => {
       if (sourceType === "firebase" && localRegion) {
         setLoading(true);
@@ -120,10 +122,14 @@ const CasesListPage = () => {
         }
       }
     };
-
+  
     loadFirebaseCases();
   }, [sourceType, localRegion, fetchFirebaseCases]);
-
+  
+  // Логування даних з Firebase для обраного регіону
+  useEffect(() => {
+    console.log("Дані з Firebase:", dataSources[localRegion]?.sources.firebase);
+  }, [dataSources, localRegion]);
   // Отримання випадків відповідно до типу та регіону
   const getCases = () => {
     if (!sourceType || !localRegion) return [];
@@ -157,8 +163,15 @@ const CasesListPage = () => {
   );
 
   const handleCaseClick = (caseId) => {
-    console.log("Клік на випадок з ID:", caseId);
-    navigate(`/fsp-formular/${caseId}`);
+    if (!caseId) {
+      console.warn("caseId не визначений");
+      return;
+    }
+    if (sourceType === "firebase" && !dataSources[localRegion]?.sources.firebase.some(file => file.id === caseId)) {
+      console.error("Випадок з таким caseId не знайдено у Firebase.");
+      return;
+    }
+    navigate(`${pathList.informationSources.path}/${caseId}`);
   };
 
   // Додаткові перевірки для дебагу
@@ -202,7 +215,8 @@ const CasesListPage = () => {
         {localRegion && (
           <section>
             <h2>
-              {sourceType === "local" ? "Локальні" : "Онлайн"} Випадки для {dataSources[localRegion]?.name || "Не вибрано"}
+              {sourceType === "local" ? "Локальні" : "Онлайн"} Випадки для{" "}
+              {dataSources[localRegion]?.name || "Не вибрано"}
             </h2>
             {loading && <p className={styles["loading-message"]}>Завантаження даних...</p>}
             {error && <p className={styles["error"]}>{error}</p>}

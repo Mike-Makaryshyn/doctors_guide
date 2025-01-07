@@ -268,10 +268,9 @@ export const DataSourceProvider = ({ children }) => {
       // Логування для перевірки структури даних
       console.log("Отримані випадки з Firebase:", fetchedCases);
 
-      // Маппінг поля fullName до name
       const mappedCases = fetchedCases.map((caseItem) => ({
-        id: caseItem.id,
-        name: caseItem.fullName || "Без імені", // Маппінг поля fullName до name
+        ...caseItem, // Залишаємо всі ключі без змін
+        fileDisplayName: caseItem.fullName || "Без імені", // Для відображення у випадаючому списку
       }));
 
       setDataSources((prev) => ({

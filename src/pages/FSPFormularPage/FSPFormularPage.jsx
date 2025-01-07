@@ -769,38 +769,29 @@ const FSPFormularPage = () => {
                 </div>
 
                 {/* Case Selector */}
-                {localRegion && dataSources[localRegion]?.sources && (
-                  <div className={styles["field"]}>
-                    <label htmlFor="case-select">Виберіть Випадок:</label>
-                    <Select
-                      id="case-select"
-                      value={
-                        selectedCase
-                          ? {
-                              value: selectedCase,
-                              label: (() => {
-                                const regionData = dataSources[localRegion];
-                                const foundLocal = regionData.sources.local.find(
-                                  (f) => String(f.id) === String(selectedCase)
-                                );
-                                const foundFirebase = regionData.sources.firebase.find(
-                                  (f) => String(f.id) === String(selectedCase)
-                                );
-                                const file = foundLocal || foundFirebase;
-                                return file ? file.name || "Без Імені" : "Виберіть Випадок";
-                              })(),
-                            }
-                          : null
-                      }
-                      onChange={handleCaseChange}
-                      options={getCaseOptions()}
-                      className={styles["react-select-container"]}
-                      classNamePrefix="react-select"
-                      placeholder="Виберіть Випадок"
-                      styles={customSelectStyles}
-                    />
-                  </div>
-                )}
+                <div className={styles["field"]}>
+  <label htmlFor="case-select">Виберіть Випадок:</label>
+  <select
+    id="case-select"
+    className={styles["case-select"]}
+    onChange={(e) => setSelectedCase(e.target.value)}
+    value={selectedCase || ""}
+  >
+    <option value="">-- Виберіть Випадок --</option>
+    {dataSourceType === "local" &&
+      dataSources[localRegion]?.sources?.local.map((file) => (
+        <option key={file.id} value={file.id}>
+          {file.fileDisplayName || file.name || "Без Імені"}
+        </option>
+      ))}
+    {dataSourceType === "firebase" &&
+      dataSources[localRegion]?.sources?.firebase.map((file) => (
+        <option key={file.id} value={file.id}>
+          {file.fileDisplayName || file.name || "Без Імені"}
+        </option>
+      ))}
+  </select>
+</div>
 
                 {/* Buttons: Add, Complete, Defer, Reset */}
                 <div className={styles["buttons-container"]}>

@@ -78,6 +78,38 @@
   /* font-family: 'Poppins', sans-serif; */ /* Видалено для успадкування з body */
 }
 
+.case-select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: #f0f8ff;
+      border-color: #007bff;
+    }
+  
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+      outline: none;
+    }
+  }
+  
+  .case-select option {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .case-select option:hover {
+    background-color: #f0f8ff;
+  }
 /* Кнопка налаштувань */
 .settings-button {
   position: fixed;
@@ -378,10 +410,7 @@ input:checked + .slider:before {
   transform: scale(1.2); /* Легке збільшення іконки */
 }
 
-/* Додаткові стилі для reset-button, якщо необхідно */
-.reset-button {
-  /* Наприклад, специфічні кольори або відступи */
-}
+
 
 /* Кнопка закриття модального вікна */
 .close-button {
@@ -496,9 +525,7 @@ input:checked + .slider:before {
   margin-top: 10px;
 }
 
-.deferred-cases-container {
-  /* Ваші додаткові стилі для контейнера відкладених випадків */
-}
+
 
 .deferred-cases-list {
   list-style-type: none;
