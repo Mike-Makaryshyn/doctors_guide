@@ -43,12 +43,18 @@ export const DataSourceProvider = ({ children }) => {
         local: THUERINGEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local", // Додаємо sourceType
         })),
         firebase: [],
       },
+      files: THUERINGEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local", // Додаємо sourceType
+      })),
     },
 
-    // === Інші регіони (або не мають документа Firestore, або ви їх створите) ===
+    // === Інші регіони ===
     "Baden-Württemberg": {
       key: "BadenWuerttemberg",
       name: "Baden-Württemberg",
@@ -58,9 +64,15 @@ export const DataSourceProvider = ({ children }) => {
         local: BADENWUERTTEMB_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: BADENWUERTTEMB_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Bayern: {
       key: "Bayern",
@@ -71,9 +83,15 @@ export const DataSourceProvider = ({ children }) => {
         local: BAYERN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: BAYERN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Berlin: {
       key: "Berlin",
@@ -84,9 +102,15 @@ export const DataSourceProvider = ({ children }) => {
         local: BERLIN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: BERLIN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Brandenburg: {
       key: "Brandenburg",
@@ -97,9 +121,15 @@ export const DataSourceProvider = ({ children }) => {
         local: BRANDENBURG_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: BRANDENBURG_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Bremen: {
       key: "Bremen",
@@ -110,9 +140,15 @@ export const DataSourceProvider = ({ children }) => {
         local: BREMEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: BREMEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Hamburg: {
       key: "Hamburg",
@@ -123,9 +159,15 @@ export const DataSourceProvider = ({ children }) => {
         local: HAMBURG_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: HAMBURG_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Hessen: {
       key: "Hessen",
@@ -136,9 +178,15 @@ export const DataSourceProvider = ({ children }) => {
         local: HESSEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: HESSEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     "Mecklenburg Vorpommern": {
       key: "MecklenburgVorpommern",
@@ -149,9 +197,15 @@ export const DataSourceProvider = ({ children }) => {
         local: MECKLENBURG_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: MECKLENBURG_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Niedersachsen: {
       key: "Niedersachsen",
@@ -162,9 +216,15 @@ export const DataSourceProvider = ({ children }) => {
         local: NIEDERSACHSEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: NIEDERSACHSEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     "Nordrhein-Westfalen": {
       key: "NordrheinWestfalen",
@@ -175,9 +235,15 @@ export const DataSourceProvider = ({ children }) => {
         local: NRW_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: NRW_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     "Rheinland-Pfalz": {
       key: "RheinlandPfalz",
@@ -188,9 +254,15 @@ export const DataSourceProvider = ({ children }) => {
         local: RHEINLAND_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: RHEINLAND_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Saarland: {
       key: "Saarland",
@@ -201,9 +273,15 @@ export const DataSourceProvider = ({ children }) => {
         local: SAARLAND_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: SAARLAND_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     Sachsen: {
       key: "Sachsen",
@@ -214,9 +292,15 @@ export const DataSourceProvider = ({ children }) => {
         local: SACHSEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: SACHSEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     "Sachsen-Anhalt": {
       key: "SachsenAnhalt",
@@ -227,9 +311,15 @@ export const DataSourceProvider = ({ children }) => {
         local: SACHSENANHALT_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: SACHSENANHALT_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
     "Schleswig-Holstein": {
       key: "SchleswigHolstein",
@@ -240,15 +330,21 @@ export const DataSourceProvider = ({ children }) => {
         local: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
+          sourceType: "local",
         })),
         firebase: [],
       },
+      files: SCHLESWIGHOLSTEIN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
     },
   });
 
   /**
    * Завантажує випадки з Firebase для вибраного регіону (regionKey),
-   * а потім зберігає їх у sources.firebase.
+   * а потім зберігає їх у sources.firebase та оновлює files.
    *
    * Ім'я документа в Firestore відповідає ключу (наприклад, "Thüringen").
    */
@@ -270,19 +366,26 @@ export const DataSourceProvider = ({ children }) => {
 
       const mappedCases = fetchedCases.map((caseItem) => ({
         ...caseItem, // Залишаємо всі ключі без змін
-        fileDisplayName: caseItem.fullName || "Без імені", // Для відображення у випадаючому списку
+        fileDisplayName: caseItem.fullName || "Без Імені", // Для відображення у випадаючому списку
+        sourceType: "firebase", // Додаємо sourceType
       }));
 
-      setDataSources((prev) => ({
-        ...prev,
-        [regionKey]: {
-          ...prev[regionKey],
-          sources: {
-            ...prev[regionKey].sources,
-            firebase: mappedCases,
+      setDataSources((prev) => {
+        // Отримуємо локальні випадки
+        const localCases = prev[regionKey]?.sources?.local || [];
+
+        return {
+          ...prev,
+          [regionKey]: {
+            ...prev[regionKey],
+            sources: {
+              ...prev[regionKey].sources,
+              firebase: mappedCases,
+            },
+            files: [...localCases, ...mappedCases], // Оновлюємо files як комбінацію локальних та firebase випадків
           },
-        },
-      }));
+        };
+      });
     } catch (error) {
       console.error(`Помилка при завантаженні Firebase для регіону ${regionKey}:`, error);
     }
@@ -291,6 +394,10 @@ export const DataSourceProvider = ({ children }) => {
   /**
    * Повертає масив випадків (локальних або Firebase)
    * залежно від вибраного типу джерела ("local" / "firebase").
+   *
+   * @param {string} regionKey - Ключ регіону.
+   * @param {string} sourceType - Тип джерела даних ("local" або "firebase").
+   * @returns {Array} - Масив випадків.
    */
   const getCurrentCases = useCallback(
     (regionKey, sourceType) => {
@@ -316,3 +423,5 @@ export const DataSourceProvider = ({ children }) => {
     </DataSourceContext.Provider>
   );
 };
+
+export default DataSourceProvider;

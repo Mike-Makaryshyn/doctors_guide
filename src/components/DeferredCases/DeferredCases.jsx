@@ -6,11 +6,11 @@ import { db, auth } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
-import DeferredCasesCard from "./DeferredCasesCard.jsx"; // Імпорт нового компонента
-import styles from "./DeferredCases.module.scss"; // Імпорт стилів через CSS Modules
+import DeferredCasesCard from "./DeferredCasesCard.jsx";
+import styles from "./DeferredCases.module.scss";
 
 const DeferredCases = () => {
-  const { dataSources } = useContext(DataSourceContext);
+  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
   const [deferredCases, setDeferredCases] = useState([]);
   const [user, loading, error] = useAuthState(auth);
 
@@ -31,7 +31,7 @@ const DeferredCases = () => {
 
           // Отримання всіх відкладених випадків для всіх регіонів
           const allDeferredCases = Object.keys(dataSources)
-            .filter((region) => dataSources[region].type === "local") // Виключаємо Firebase Source та інші типи, якщо є
+            .filter((region) => dataSources[region].type === "dynamic")
             .reduce((acc, region) => {
               const deferred = userData[`deferredCases_${region}`] || [];
               // Переконайтесь, що всі caseId є рядками
@@ -43,6 +43,14 @@ const DeferredCases = () => {
             }, []);
 
           setDeferredCases(allDeferredCases);
+
+          // Завантажуємо Firebase дані для регіонів, які мають відкладені випадки
+          const regionsToFetch = [...new Set(allDeferredCases.map((item) => item.region))];
+          regionsToFetch.forEach((region) => {
+            if (dataSources[region]?.sources?.firebase.length === 0) {
+              fetchFirebaseCases(region);
+            }
+          });
         } else {
           toast.error("Дані користувача не знайдено.");
         }
@@ -53,7 +61,7 @@ const DeferredCases = () => {
     };
 
     fetchDeferredCases();
-  }, [user, loading, dataSources]);
+  }, [user, loading, dataSources, fetchFirebaseCases]);
 
   if (loading) return <p className={styles.loading}>Завантаження...</p>;
   if (error) return <p className={styles.error}>Сталася помилка: {error.message}</p>;
@@ -79,7 +87,6 @@ const DeferredCases = () => {
                 caseId={caseId}
                 caseData={caseData}
                 regionId={region} // Передача правильного regionId
-                dataSources={dataSources} // Передача dataSources як пропсу
               />
             );
           })}

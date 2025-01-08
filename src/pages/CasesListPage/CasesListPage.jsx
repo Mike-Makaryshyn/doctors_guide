@@ -1,5 +1,4 @@
 // src/pages/CasesListPage/CasesListPage.jsx
-
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./CasesListPage.module.scss";
@@ -7,32 +6,35 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { useAuth } from "../../contexts/AuthContext";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useRegionData from "../../hooks/useRegionData"; // Імпорт кастомного хука
 import { toast, ToastContainer } from "react-toastify";
 import { FaCog } from "react-icons/fa";
 import { pathList } from "../../routes/path";
 
 const CasesListPage = () => {
-  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
-  const { currentUser } = useAuth();
+  const { dataSources, fetchFirebaseCases, getCurrentCases } = useContext(DataSourceContext);
+  const { currentUser, handleChangeRegion } = useAuth(); // Припустимо, що handleChangeRegion доступний через useAuth
   const navigate = useNavigate();
 
   // Отримуємо глобальну інформацію
   const { selectedRegion: globalSelectedRegion } = useGetGlobalInfo() || {};
 
-  // Локальний стан для вибору регіону та відстеження змін
-  const [localRegion, setLocalRegion] = useState(globalSelectedRegion || "");
-  const [isLocalRegionModified, setIsLocalRegionModified] = useState(false);
-  const [sourceType, setSourceType] = useState("local"); // Встановлюємо 'local' за замовчуванням
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState(""); // Додано стан для пошуку
+  // Використання кастомного хука
+  const {
+    localRegion,
+    setLocalRegion,
+    sourceType,
+    setSourceType,
+    loading,
+    error,
+  } = useRegionData(globalSelectedRegion || "", "local", handleChangeRegion); // Передача handleChangeRegion
 
-  // Стан для модального вікна налаштувань
+  // Інші локальні стани
+  const [searchTerm, setSearchTerm] = useState("");
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-
-  // Посилання для закриття модального вікна при кліку поза ним
   const settingsRef = useRef(null);
   const settingsButtonRef = useRef(null);
+  const [navigating, setNavigating] = useState(false);
 
   // Перевірка автентифікації
   useEffect(() => {
@@ -40,54 +42,6 @@ const CasesListPage = () => {
       navigate("/login");
     }
   }, [currentUser, navigate]);
-
-  // Синхронізація локального регіону з глобальним вибором, якщо локальний не модифікований
-  useEffect(() => {
-    if (globalSelectedRegion && !isLocalRegionModified) {
-      setLocalRegion(globalSelectedRegion);
-    }
-  }, [globalSelectedRegion, isLocalRegionModified]);
-
-  // Обробка вибору регіону
-  const handleRegionChange = (event) => {
-    const regionValue = event.target.value;
-    console.log("Вибраний регіон:", regionValue);
-    setLocalRegion(regionValue);
-    setIsLocalRegionModified(true); // Вказуємо, що локальний регіон був змінений користувачем
-    setError(null);
-
-    // Якщо тип джерела даних Firebase, завантажуємо випадки для вибраного регіону
-    if (sourceType === "firebase") {
-      fetchFirebaseCases(regionValue)
-        .then(() => {
-          console.log(`Випадки для регіону ${regionValue} завантажено через DataSourceContext.`);
-        })
-        .catch((err) => {
-          console.error("Error fetching firebase cases:", err);
-          setError("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-          toast.error("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-        });
-    }
-  };
-
-  // Обробка вибору типу випадків
-  const handleSourceTypeChange = (type) => {
-    console.log("Вибраний тип випадків:", type);
-    setSourceType(type);
-    setError(null);
-    // Якщо тип змінився на "firebase" та вибрано регіон, завантажити випадки
-    if (type === "firebase" && localRegion) {
-      fetchFirebaseCases(localRegion)
-        .then(() => {
-          console.log(`Випадки для регіону ${localRegion} завантажено через DataSourceContext.`);
-        })
-        .catch((err) => {
-          console.error("Error fetching firebase cases:", err);
-          setError("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-          toast.error("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-        });
-    }
-  };
 
   // Обробка введення в поле пошуку
   const handleSearch = (event) => {
@@ -103,82 +57,73 @@ const CasesListPage = () => {
     return regions;
   };
 
-  // Завантаження онлайн випадків з Firebase через DataSourceContext
-// Завантаження онлайн випадків з Firebase через DataSourceContext
-useEffect(() => {
-    const loadFirebaseCases = async () => {
-      if (sourceType === "firebase" && localRegion) {
-        setLoading(true);
-        setError(null);
-        try {
-          await fetchFirebaseCases(localRegion);
-          console.log(`Випадки для регіону ${localRegion} завантажено через DataSourceContext.`);
-        } catch (err) {
-          console.error("Error fetching firebase cases:", err);
-          setError("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-          toast.error("Не вдалося завантажити онлайн випадки. Перевірте права доступу.");
-        } finally {
-          setLoading(false);
-        }
-      }
-    };
-  
-    loadFirebaseCases();
-  }, [sourceType, localRegion, fetchFirebaseCases]);
-  
-  // Логування даних з Firebase для обраного регіону
-  useEffect(() => {
-    console.log("Дані з Firebase:", dataSources[localRegion]?.sources.firebase);
-  }, [dataSources, localRegion]);
   // Отримання випадків відповідно до типу та регіону
   const getCases = () => {
     if (!sourceType || !localRegion) return [];
 
-    const regionData = dataSources[localRegion];
-    if (!regionData) {
-      console.warn(`Регіон "${localRegion}" не знайдено в dataSources.`);
-      return [];
-    }
+    const casesList = getCurrentCases(localRegion, sourceType).map((file) => ({
+      ...file,
+      region: dataSources[localRegion]?.name || "Не вибрано",
+    }));
 
-    if (sourceType === "local") {
-      return regionData.sources.local.map((file) => ({
-        ...file,
-        region: regionData.name,
-      }));
-    } else if (sourceType === "firebase") {
-      return regionData.sources.firebase.map((file) => ({
-        ...file,
-        region: regionData.name,
-      }));
-    } else {
-      return [];
-    }
+    return casesList;
   };
 
   const cases = getCases();
 
   // Фільтрація випадків на основі пошуку
-  const filteredCases = cases.filter((caseItem) =>
-    caseItem.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCases = cases.filter((caseItem) => {
+    if (sourceType === "local") {
+      if (typeof caseItem.name !== "string") {
+        console.warn("Case item missing 'name' або 'name' не є рядком:", caseItem);
+        return false;
+      }
+      return caseItem.name.toLowerCase().includes(searchTerm.toLowerCase());
+    } else if (sourceType === "firebase") {
+      if (typeof caseItem.fileDisplayName !== "string") {
+        console.warn("Case item missing 'fileDisplayName' або 'fileDisplayName' не є рядком:", caseItem);
+        return false;
+      }
+      return caseItem.fileDisplayName.toLowerCase().includes(searchTerm.toLowerCase());
+    }
+    return false;
+  });
 
-  const handleCaseClick = (caseId) => {
-    if (!caseId) {
-      console.warn("caseId не визначений");
-      return;
+  // Асинхронна функція для обробки кліку на випадок
+  const handleCaseClick = async (caseId) => {
+    try {
+      console.log(`Клік на випадок: ${caseId}`);
+      if (sourceType === "firebase") {
+        const firebaseCases = dataSources[localRegion]?.sources?.firebase;
+        if (!firebaseCases || firebaseCases.length === 0) {
+          console.log(`Завантаження випадків з Firebase для регіону: ${localRegion}`);
+          setNavigating(true);
+          await fetchFirebaseCases(localRegion);
+        }
+
+        const caseExists = dataSources[localRegion]?.sources?.firebase.some(
+          (file) => String(file.id) === String(caseId)
+        );
+
+        if (!caseExists) {
+          console.log(`Випадок ${caseId} не знайдено у Firebase для регіону: ${localRegion}`);
+          toast.error("Випадок не знайдено у Firebase.");
+          setNavigating(false);
+          return;
+        }
+      }
+
+      // Додаємо sourceType до шляху маршруту
+      const targetPath = `${pathList.informationSources.path}/${sourceType}/${caseId}`;
+      console.log("Шлях для навігації:", targetPath);
+      navigate(targetPath);
+    } catch (error) {
+      console.error("Error handling case click:", error);
+      toast.error("Сталася помилка при обробці випадку.");
+    } finally {
+      setNavigating(false);
     }
-    if (sourceType === "firebase" && !dataSources[localRegion]?.sources.firebase.some(file => file.id === caseId)) {
-      console.error("Випадок з таким caseId не знайдено у Firebase.");
-      return;
-    }
-    navigate(`${pathList.informationSources.path}/${caseId}`);
   };
-
-  // Додаткові перевірки для дебагу
-  useEffect(() => {
-    console.log("Вибраний регіон:", localRegion);
-    console.log("dataSources[localRegion]:", dataSources[localRegion]);
-  }, [localRegion, dataSources]);
 
   // Закриття модального вікна при кліку поза ним
   useEffect(() => {
@@ -209,7 +154,7 @@ useEffect(() => {
   return (
     <MainLayout>
       <div className={styles["cases-list-page"]}>
-        <h1></h1>
+        <h1>Список Випадків</h1>
 
         {/* Відображення випадків після вибору типу та регіону */}
         {localRegion && (
@@ -218,7 +163,7 @@ useEffect(() => {
               {sourceType === "local" ? "Локальні" : "Онлайн"} Випадки для{" "}
               {dataSources[localRegion]?.name || "Не вибрано"}
             </h2>
-            {loading && <p className={styles["loading-message"]}>Завантаження даних...</p>}
+            {(loading || navigating) && <p className={styles["loading-message"]}>Завантаження даних...</p>}
             {error && <p className={styles["error"]}>{error}</p>}
             {!loading && !error && (
               filteredCases.length > 0 ? (
@@ -228,8 +173,11 @@ useEffect(() => {
                       key={caseItem.id}
                       className={styles["case-tile"]}
                       onClick={() => handleCaseClick(caseItem.id)}
+                      style={{ pointerEvents: navigating ? "none" : "auto", opacity: navigating ? 0.5 : 1 }}
                     >
-                      <p>{caseItem.name}</p>
+                      <p>
+                        {sourceType === "local" ? caseItem.name : caseItem.fileDisplayName}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -288,7 +236,7 @@ useEffect(() => {
                       type="checkbox"
                       checked={sourceType === "firebase"}
                       onChange={() =>
-                        setSourceType((prev) => (prev === "local" ? "firebase" : "local"))
+                        setSourceType(sourceType === "local" ? "firebase" : "local")
                       }
                       aria-label="Перемикач для вибору джерела даних"
                     />
@@ -310,7 +258,7 @@ useEffect(() => {
                 <select
                   id="region-select"
                   value={localRegion}
-                  onChange={handleRegionChange}
+                  onChange={(e) => setLocalRegion(e.target.value)}
                   className={styles["region-select"]}
                 >
                   <option value="">-- Оберіть Регіон --</option>
@@ -333,6 +281,8 @@ useEffect(() => {
             </div>
           </div>
         )}
+
+        {/* Інші елементи сторінки можуть бути додані тут */}
 
         <ToastContainer />
       </div>

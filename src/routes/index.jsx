@@ -114,10 +114,7 @@ export default function Routers() {
         <Route path="/cases" element={<CasesListPage />} />
 
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
-        <Route
-          path={`${pathList.informationSources.path}/:caseId`}
-          element={<FSPFormularPage />}
-        />
+        <Route path="/information-sources/:sourceType/:caseId" element={<FSPFormularPage />} />
 
         {/* Статичний маршрут для FSPFormularPage */}
         <Route
