@@ -1,31 +1,42 @@
-// src/components/DataCollectionPage/OrganizationalDataSection.jsx
-
 import React, { useState, useEffect, useContext } from "react";
 import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
-import { db } from "../../firebase"; // Шлях до firebase.js
+import { db } from "../../firebase";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
-import styles from "./OrganizationalDataSection.module.scss"; // Імпорт оновлених стилів
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
+import useRegionData from "../../hooks/useRegionData"; // Кастомний хук для роботи з регіонами
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // Для отримання глобального регіону
+import styles from "./OrganizationalDataSection.module.scss"; 
 
-const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => {
+const regionDisplayNames = {
+  Thueringen: "Тюрінгія",
+  Bayern: "Баварія",
+  "Baden-Württemberg": "Баден-Вюртемберг",
+  Berlin: "Берлін",
+  Brandenburg: "Бранденбург",
+  Hamburg: "Гамбург",
+  Hessen: "Гессен",
+  Saarland: "Саар",
+  "Schleswig-Holstein": "Шлезвіг-Гольштейн",
+  "Nordrhein-Westfalen": "Північний Рейн-Вестфалія",
+};
+
+const OrganizationalDataSection = React.forwardRef((_, ref) => {
   const { dataSources } = useContext(DataSourceContext);
   const [data, setData] = useState({
     examLocation: "",
     examinerNames: "",
     examDate: "",
     examResult: "",
-    subject: "", // НОВЕ ПОЛЕ: "Тема"
+    subject: "",
   });
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
-  const examLocations = [
-    "Ärztekammer Baden-Württemberg",
-    "Ärztekammer Bayern",
-    "Ärztekammer Berlin",
-    "Ärztekammer Hamburg",
-    "Ärztekammer Nordrhein",
-  ];
+  // Отримуємо глобальний регіон
+  const { selectedRegion: globalSelectedRegion } = useGetGlobalInfo();
+  
+  // Використовуємо кастомний хук для роботи з регіонами
+  const { localRegion, setLocalRegion } = useRegionData(globalSelectedRegion || "", "local");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,7 +44,8 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
   };
 
   const fetchOrganizationalData = async () => {
-    if (!selectedRegion || !user) return; // Не завантажуємо дані, якщо регіон не обрано або користувач не автентифікований
+    console.log("Fetching organizational data for region:", localRegion);
+    if (!localRegion || !user) return;
 
     const docRef = doc(db, "users", user.uid, "cases", "organizationalData");
     const snapshot = await getDoc(docRef);
@@ -43,10 +55,8 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
     }
   };
 
-  // Зберігаємо документ, якщо принаймні одне з полів заповнене.
-  // Якщо ж усі поля порожні, видаляємо документ.
   const saveData = async () => {
-    if (!selectedRegion || !user) {
+    if (!localRegion || !user) {
       console.warn("Регіон не обрано або користувач не автентифікований. Дані не збережені.");
       return;
     }
@@ -58,7 +68,7 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
     ].some((val) => val.trim() !== "");
 
     if (isAnyFieldFilled) {
-      await setDoc(docRef, { ...data, region: selectedRegion }, { merge: true });
+      await setDoc(docRef, { ...data, region: localRegion }, { merge: true });
       console.log("Організаційні дані успішно збережено.");
     } else {
       await deleteDoc(docRef);
@@ -68,8 +78,17 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
 
   useEffect(() => {
     fetchOrganizationalData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedRegion, user]);
+  }, [localRegion, user]);
+
+  // Ініціалізація локального регіону з глобального
+  useEffect(() => {
+    console.log("Глобальний регіон:", globalSelectedRegion);
+    console.log("Локальний регіон перед оновленням:", localRegion);
+    if (!localRegion && globalSelectedRegion) {
+      setLocalRegion(globalSelectedRegion, false);
+      console.log("Локальний регіон встановлено з глобального:", globalSelectedRegion);
+    }
+  }, [localRegion, globalSelectedRegion, setLocalRegion]);
 
   React.useImperativeHandle(ref, () => ({ saveData }));
 
@@ -87,15 +106,32 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
           className={styles.selectField}
         >
           <option value="">Оберіть місце</option>
-          {examLocations.map((location) => (
-            <option key={location} value={location}>
-              {location}
+          {Object.keys(dataSources).map((region) => (
+            <option key={region} value={region}>
+              {regionDisplayNames[region] || region}
             </option>
           ))}
         </select>
       </div>
 
-      {/* Імена екзаменаторів */}
+      {/* Вибір регіону */}
+      <div className={styles.entryRow}>
+        <label className={styles.label}>Вибір регіону:</label>
+        <select
+          value={localRegion}
+          onChange={(e) => setLocalRegion(e.target.value, false)}
+          className={styles.selectField}
+        >
+          <option value="">-- Оберіть регіон --</option>
+          {Object.keys(dataSources).map((region) => (
+            <option key={region} value={region}>
+              {regionDisplayNames[region] || region}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Інші поля... */}
       <div className={styles.entryRow}>
         <label className={styles.label}>Імена екзаменаторів:</label>
         <input
@@ -108,7 +144,6 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
         />
       </div>
 
-      {/* Дата екзамену */}
       <div className={styles.entryRow}>
         <label className={styles.label}>Дата екзамену:</label>
         <input
@@ -120,7 +155,6 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
         />
       </div>
 
-      {/* Результат екзамену */}
       <div className={styles.entryRow}>
         <label className={styles.label}>Результат екзамену:</label>
         <select
@@ -135,7 +169,6 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
         </select>
       </div>
 
-      {/* Тема (Нове поле) */}
       <div className={styles.entryRow}>
         <label className={styles.label}>Тема:</label>
         <input
@@ -148,7 +181,6 @@ const OrganizationalDataSection = React.forwardRef(({ selectedRegion }, ref) => 
         />
       </div>
 
-      {/* Кнопка для збереження */}
       <div className={styles.buttonContainer}>
         <button className={styles.saveButton} onClick={saveData}>
           Зберегти

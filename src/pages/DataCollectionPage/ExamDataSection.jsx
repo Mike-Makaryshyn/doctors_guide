@@ -1,9 +1,9 @@
 import React, { useState, useEffect, forwardRef } from "react";
-import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
-import { db } from "../../firebase";
 import styles from "./ExamDataSection.module.scss";
 
 const ExamDataSection = forwardRef((props, ref) => {
+  const { selectedRegion, caseId, onLocalSave } = props; // Пропс onLocalSave для збереження в локальний стан
+
   const initialData = {
     name: "",
     surname: "",
@@ -14,157 +14,8 @@ const ExamDataSection = forwardRef((props, ref) => {
     gender: "",
     visitReason: "",
     painLocalization: "",
-    timeCourse: "",
-    symptomDescription: "",
-    painRadiation: "",
-    painProgression: "",
-    triggers: "",
-    painIntensity: "",
-    previousMedicalCare: "",
-    appetite: "",
-    weightverlust: "",
-    nausea: "",
-    vomiting: "",
-    bowelMovement: "",
-    urination: "",
-    vertigo: "",
-    consciousness: "",
-    sleep: "",
-    sexualHistory: "",
-    others: "",
-    gynecologicalHistory: "",
-    medicalHistoryIntroduction: "",
-    chronicDiseases: "",
-    otherRelevantDiseases: "",
-    pastOperations: "",
-    operationCourseComplications: "",
-    hospitalStayDuration: "",
-    gezielteMedikamentenfragen: "",
-    allgemeineMedikamenteneinnahme: "",
-    detaillierteMedikamenteninformationen: "",
-    specificMedicationAllergies: "",
-    allergicReactionSymptoms: "",
-    allergyTriggers: "",
-    specificIntolerances: "",
-    rauchverhalten: "",
-    alkoholkonsum: "",
-    drogengebrauch: "",
-    parents: "",
-    siblings: "",
-    profession: "",
-    maritalStatus: "",
-    children: "",
-    livingConditions: "",
-    psychosomaticHistory: "",
-    suspectedDiagnosis: "",
-    justification: "",
-    physicalExamination: "",
-    laboratoryTests: "",
-    instrumentalExamination: "",
-    differentiale: "",
-    differentiation: "",
+    // ... інші поля
   };
-
-  const fieldSections = [
-    {
-      title: "Персональні дані",
-      fields: ["name", "surname", "birthdate", "age", "height", "weight", "gender"],
-    },
-    {
-      title: "Актуальний анамнез",
-      fields: [
-        "visitReason",
-        "painLocalization",
-        "timeCourse",
-        "symptomDescription",
-        "painRadiation",
-        "painProgression",
-        "triggers",
-        "painIntensity",
-        "previousMedicalCare",
-      ],
-    },
-    {
-      title: "Вегетативний анамнез",
-      fields: [
-        "appetite",
-        "weightverlust",
-        "nausea",
-        "vomiting",
-        "bowelMovement",
-        "urination",
-        "vertigo",
-        "consciousness",
-        "sleep",
-        "sexualHistory",
-        "others",
-        "gynecologicalHistory",
-      ],
-    },
-    {
-      title: "Попередні захворювання",
-      fields: [
-        "medicalHistoryIntroduction",
-        "chronicDiseases",
-        "otherRelevantDiseases",
-      ],
-    },
-    {
-      title: "Попередні операції",
-      fields: [
-        "pastOperations",
-        "operationCourseComplications",
-        "hospitalStayDuration",
-      ],
-    },
-    {
-      title: "Медикаменти",
-      fields: [
-        "gezielteMedikamentenfragen",
-        "allgemeineMedikamenteneinnahme",
-        "detaillierteMedikamenteninformationen",
-      ],
-    },
-    {
-      title: "Алергії та непереносимості",
-      fields: [
-        "specificMedicationAllergies",
-        "allergicReactionSymptoms",
-        "allergyTriggers",
-        "specificIntolerances",
-      ],
-    },
-    {
-      title: "Noxen",
-      fields: ["rauchverhalten", "alkoholkonsum", "drogengebrauch"],
-    },
-    {
-      title: "Relevante Familienerkrankungen",
-      fields: ["parents", "siblings"],
-    },
-    {
-      title: "Соціальний анамнез",
-      fields: [
-        "profession",
-        "maritalStatus",
-        "children",
-        "livingConditions",
-        "psychosomaticHistory",
-      ],
-    },
-    {
-      title: "Попередній діагноз",
-      fields: ["suspectedDiagnosis", "justification"],
-    },
-    {
-      title: "Запропоновані процедури",
-      fields: ["physicalExamination", "laboratoryTests", "instrumentalExamination"],
-    },
-    {
-      title: "Диференційний діагноз",
-      fields: ["differentiale", "differentiation"],
-    },
-  ];
 
   const [data, setData] = useState(initialData);
 
@@ -174,65 +25,70 @@ const ExamDataSection = forwardRef((props, ref) => {
     setData((prev) => ({ ...prev, [name]: value }));
   };
 
-  /* Завантаження даних з Firebase */
-  const fetchExamData = async () => {
-    const docRef = doc(db, "sections", "examData");
-    const snapshot = await getDoc(docRef);
-    if (snapshot.exists()) {
-      setData(snapshot.data());
-    }
-  };
-
-  /* Збереження даних у Firebase */
-  const saveData = async () => {
-    const docRef = doc(db, "sections", "examData");
-    // Якщо всі поля порожні — видаляємо документ
-    if (Object.values(data).every((field) => !field.trim())) {
-      await deleteDoc(docRef);
-    } else {
-      await setDoc(docRef, data);
+  /* Збереження в локальний стан при виході із секції */
+  const saveToLocal = () => {
+    if (onLocalSave) {
+      onLocalSave(caseId, data); // Передаємо дані батьківському компоненту
     }
   };
 
   useEffect(() => {
-    fetchExamData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return () => {
+      saveToLocal(); // Зберігаємо дані в локальний стан при розмонтаженні компонента
+    };
+  }, [data]); // Викликається при зміні даних
 
-  React.useImperativeHandle(ref, () => ({ saveData }));
+  React.useImperativeHandle(ref, () => ({ saveToLocal }));
 
   return (
-    <div className={styles.sectionContainer} ref={ref}>
+    <div className={styles.sectionContainer}>
       <h2 className={styles.subheader}>Exam Data</h2>
-      {/* Рендер кожного блоку полів */}
-      {fieldSections.map((section, index) => (
-        <div key={index} className={styles.section}>
-          <h3 className={styles.sectionTitle}>{section.title}</h3>
 
-          {/* Рендер кожного поля вводу */}
-          {section.fields.map((key) => (
-            <div key={key} className={styles.entryRow}>
-              {/*
-                Якщо хочете позбутися лейблів, можна просто НЕ рендерити <label>:
-                <input
-                  type="text"
-                  name={key}
-                  placeholder={key} // або свій переклад
-                  ...
-                />
-              */}
-              <label className={styles.label}>{key}:</label>
-              <input
-                type="text"
-                name={key}
-                value={data[key]}
-                onChange={handleChange}
-                className={styles.inputField}
-              />
-            </div>
-          ))}
-        </div>
-      ))}
+      <div className={styles.entryRow}>
+        <label className={styles.label}>Name:</label>
+        <input
+          type="text"
+          name="name"
+          value={data.name}
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+      </div>
+
+      <div className={styles.entryRow}>
+        <label className={styles.label}>Surname:</label>
+        <input
+          type="text"
+          name="surname"
+          value={data.surname}
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+      </div>
+
+      <div className={styles.entryRow}>
+        <label className={styles.label}>Birthdate:</label>
+        <input
+          type="date"
+          name="birthdate"
+          value={data.birthdate}
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+      </div>
+
+      <div className={styles.entryRow}>
+        <label className={styles.label}>Age:</label>
+        <input
+          type="number"
+          name="age"
+          value={data.age}
+          onChange={handleChange}
+          className={styles.inputField}
+        />
+      </div>
+
+      {/* Додай інші поля за потреби */}
     </div>
   );
 });

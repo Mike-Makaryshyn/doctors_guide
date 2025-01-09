@@ -1,6 +1,6 @@
 // src/pages/CasesListPage/CasesListPage.jsx
 
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./CasesListPage.module.scss";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
@@ -19,7 +19,7 @@ const CasesListPage = () => {
   const { dataSources, fetchFirebaseCases, getCurrentCases } = useContext(DataSourceContext);
   const { currentUser, handleChangeRegion } = useAuth();
   const navigate = useNavigate();
-
+  const [dataNeedsUpdate, setDataNeedsUpdate] = useState(false); // Додано новий стан для відстеження оновлень
   // Отримуємо глобальну інформацію
   const { selectedRegion: globalSelectedRegion } = useGetGlobalInfo() || {};
 
@@ -44,7 +44,8 @@ const CasesListPage = () => {
   const [completedCases, setCompletedCases] = useState([]);
   const [statusFilter, setStatusFilter] = useState("all"); // Новий стан для фільтра
   const [selectedAuthor, setSelectedAuthor] = useState(""); // Новий стан для вибраного автора
-
+  const stableFetchFirebaseCases = useCallback(fetchFirebaseCases, []);
+  const [loadedRegions, setLoadedRegions] = useState([]);
   // Перевірка автентифікації
   useEffect(() => {
     if (!currentUser) {
@@ -52,59 +53,96 @@ const CasesListPage = () => {
     }
   }, [currentUser, navigate]);
 
+  
   // Отримання статусів випадків
   useEffect(() => {
     const fetchUserCaseStatuses = async () => {
       if (!currentUser) return;
+  
       try {
         const userDocRef = doc(db, "users", currentUser.uid);
         const userDocSnap = await getDoc(userDocRef);
-
-        if (userDocSnap.exists()) {
-          const userData = userDocSnap.data();
-          const allDeferred = Object.keys(dataSources)
-            .filter(region => dataSources[region].type === "dynamic")
-            .reduce((acc, region) => {
-              const deferred = userData[`deferredCases_${region}`] || [];
-              return acc.concat(deferred.map(caseId => ({ caseId: String(caseId), region })));
-            }, []);
-
-          const allCompleted = Object.keys(dataSources)
-            .filter(region => dataSources[region].type === "dynamic")
-            .reduce((acc, region) => {
-              const completed = userData[`completedCases_${region}`] || [];
-              return acc.concat(completed.map(caseId => ({ caseId: String(caseId), region })));
-            }, []);
-
-          setDeferredCases(allDeferred);
-          setCompletedCases(allCompleted);
-        } else {
+  
+        if (!userDocSnap.exists()) {
           toast.error("Дані користувача не знайдено.");
+          return;
         }
-      } catch (err) {
-        console.error("Error fetching user case statuses:", err);
+  
+        const userData = userDocSnap.data();
+        const allDeferred = [];
+        const allCompleted = [];
+  
+        Object.keys(dataSources)
+          .filter(region => dataSources[region]?.type === "dynamic")
+          .forEach(region => {
+            const deferred = userData[`deferredCases_${region}`] || [];
+            const completed = userData[`completedCases_${region}`] || [];
+  
+            deferred.forEach(caseId => allDeferred.push({ caseId: String(caseId), region }));
+            completed.forEach(caseId => allCompleted.push({ caseId: String(caseId), region }));
+          });
+  
+        setDeferredCases(allDeferred);
+        setCompletedCases(allCompleted);
+      } catch (error) {
+        console.error("Error fetching user case statuses:", error);
         toast.error("Сталася помилка при завантаженні статусів випадків.");
       }
     };
-
+  
     fetchUserCaseStatuses();
   }, [currentUser, dataSources]);
 
-  // Завантаження всіх Firebase випадків при завантаженні компонента
-  useEffect(() => {
-    const fetchAllFirebaseCases = async () => {
-      const dynamicRegions = Object.keys(dataSources).filter(region => dataSources[region].type === "dynamic");
-      try {
-        await Promise.all(dynamicRegions.map(region => fetchFirebaseCases(region)));
-      } catch (error) {
-        console.error("Error fetching all firebase cases:", error);
-        toast.error("Сталася помилка при завантаженні випадків з Firebase.");
-      }
-    };
+// Завантаження всіх Firebase випадків при завантаженні компонента
+useEffect(() => {
+  const fetchAllFirebaseCases = async () => {
+    const dynamicRegions = Object.keys(dataSources).filter(
+      region => dataSources[region]?.type === "dynamic" && !loadedRegions.includes(region)
+    );
+  
+    // Виключаємо регіони без випадків
+    const nonEmptyRegions = dynamicRegions.filter(region => {
+      const cases = dataSources[region]?.sources?.firebase || [];
+      return cases.length > 0; // Запитуємо лише регіони з випадками
+    });
+  
+    if (nonEmptyRegions.length === 0) return;
+  
+    console.log("Fetching cases for new regions:", nonEmptyRegions);
+  
+    try {
+      await Promise.all(nonEmptyRegions.map(region => stableFetchFirebaseCases(region)));
+      setLoadedRegions(prev => [...prev, ...nonEmptyRegions]);
+    } catch (error) {
+      console.error("Error fetching all firebase cases:", error);
+      toast.error("Сталася помилка при завантаженні випадків з Firebase.");
+    }
+  };
 
-    fetchAllFirebaseCases();
-  }, [dataSources, fetchFirebaseCases]);
+  fetchAllFirebaseCases();
+}, [dataSources, stableFetchFirebaseCases, loadedRegions]);
 
+// Оновлений useEffect для dataNeedsUpdate
+useEffect(() => {
+  if (!loading && !error && dataNeedsUpdate) {
+    fetchData();
+  }
+}, [loading, error, dataNeedsUpdate]);
+
+const fetchData = async () => {
+  console.log('Fetching data...');
+
+  try {
+    const dynamicRegions = Object.keys(dataSources).filter(
+      (region) => dataSources[region].type === "dynamic"
+    );
+    await Promise.all(dynamicRegions.map(region => fetchFirebaseCases(region)));
+
+    setDataNeedsUpdate(false); // Зупиняємо повторне оновлення
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
   // Скидаємо selectedAuthor при зміні sourceType або localRegion (Варіант 2)
   useEffect(() => {
     // Логування для перевірки
