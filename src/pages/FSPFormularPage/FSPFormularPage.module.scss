@@ -636,3 +636,10 @@ $time: 0.6s;
 .label-active {
   font-weight: bold;
 }
+
+/* Додані стилі для активних кнопок */
+.mark-completed-button.active,
+.defer-case-button.active {
+  background-color: #007bff; /* Змінити на потрібний колір */
+  color: #fff; /* Білий текст при активному стані */
+}

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
-import DeferredCases from "../../components/DeferredCases/DeferredCases.jsx"; // Імпорт компонента
+// Видалено імпорт DeferredCases
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -127,10 +127,7 @@ const Dashboard = () => {
               </Link>
             </div>
 
-            {/* Відкладені Випадки - займає приблизно 15% ширини */}
-            <div style={{ flex: "0 0 15%" }}>
-              <DeferredCases />
-            </div>
+            {/* Видалено DeferredCases */}
           </div>
         </div>
       </ProtectedRoute>

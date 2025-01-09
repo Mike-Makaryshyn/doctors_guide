@@ -36,7 +36,7 @@ import { FaCog } from "react-icons/fa";
 
 // Firebase
 import { db, auth } from "../../firebase";
-import { doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 
 // Toast
@@ -465,19 +465,32 @@ const FSPFormularPage = () => {
     }
     const userDocRef = doc(db, "users", user.uid);
     try {
-      let completedCases = userData?.[`completedCases_${localRegion}`] || [];
-      if (!completedCases.includes(String(selectedCase))) {
-        const updated = [...completedCases, String(selectedCase)];
+      const completedCasesKey = `completedCases_${localRegion}`;
+      const deferredCasesKey = `deferredCases_${localRegion}`;
+      const isCompleted = userData?.[completedCasesKey]?.includes(String(selectedCase));
+
+      if (isCompleted) {
+        // Видалити з completedCases
         await updateDoc(userDocRef, {
-          [`completedCases_${localRegion}`]: updated,
+          [completedCasesKey]: arrayRemove(String(selectedCase)),
         });
         setUserData((prev) => ({
           ...prev,
-          [`completedCases_${localRegion}`]: updated,
+          [completedCasesKey]: prev[completedCasesKey].filter((id) => id !== String(selectedCase)),
         }));
-        toast.success("Case marked as completed!");
+        toast.success("Статус виконано видалено.");
       } else {
-        toast.info("Case is already marked as completed.");
+        // Додати до completedCases і видалити з deferredCases (якщо є)
+        await updateDoc(userDocRef, {
+          [completedCasesKey]: arrayUnion(String(selectedCase)),
+          [deferredCasesKey]: arrayRemove(String(selectedCase)),
+        });
+        setUserData((prev) => ({
+          ...prev,
+          [completedCasesKey]: [...(prev[completedCasesKey] || []), String(selectedCase)],
+          [deferredCasesKey]: prev[deferredCasesKey]?.filter((id) => id !== String(selectedCase)),
+        }));
+        toast.success("Статус виконано додано.");
       }
     } catch (error) {
       console.error("Error marking case as completed:", error);
@@ -497,16 +510,33 @@ const FSPFormularPage = () => {
     }
     const userDocRef = doc(db, "users", user.uid);
     try {
-      await updateDoc(userDocRef, {
-        [`deferredCases_${localRegion}`]: arrayUnion(String(selectedCase)),
-      });
-      setUserData((prev) => ({
-        ...prev,
-        [`deferredCases_${localRegion}`]: prev[`deferredCases_${localRegion}`]
-          ? [...prev[`deferredCases_${localRegion}`], String(selectedCase)]
-          : [String(selectedCase)],
-      }));
-      toast.success("Case deferred for later!");
+      const deferredCasesKey = `deferredCases_${localRegion}`;
+      const completedCasesKey = `completedCases_${localRegion}`;
+      const isDeferred = userData?.[deferredCasesKey]?.includes(String(selectedCase));
+
+      if (isDeferred) {
+        // Видалити з deferredCases
+        await updateDoc(userDocRef, {
+          [deferredCasesKey]: arrayRemove(String(selectedCase)),
+        });
+        setUserData((prev) => ({
+          ...prev,
+          [deferredCasesKey]: prev[deferredCasesKey].filter((id) => id !== String(selectedCase)),
+        }));
+        toast.success("Статус відкладено видалено.");
+      } else {
+        // Додати до deferredCases і видалити з completedCases (якщо є)
+        await updateDoc(userDocRef, {
+          [deferredCasesKey]: arrayUnion(String(selectedCase)),
+          [completedCasesKey]: arrayRemove(String(selectedCase)),
+        });
+        setUserData((prev) => ({
+          ...prev,
+          [deferredCasesKey]: [...(prev[deferredCasesKey] || []), String(selectedCase)],
+          [completedCasesKey]: prev[completedCasesKey]?.filter((id) => id !== String(selectedCase)),
+        }));
+        toast.success("Статус відкладено додано.");
+      }
     } catch (error) {
       console.error("Error deferring case:", error);
       toast.error("Failed to defer case.");
@@ -759,18 +789,28 @@ const FSPFormularPage = () => {
                   </Link>
 
                   <button
-                    className={styles["mark-completed-button"]}
+                    className={`${styles["mark-completed-button"]} ${
+                      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
+                        ? styles["active"]
+                        : ""
+                    }`}
                     onClick={handleMarkAsCompleted}
                     disabled={!selectedCase}
+                    aria-pressed={userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))}
                     aria-label="Позначити Випадок як Завершений"
                   >
                     ✓
                   </button>
 
                   <button
-                    className={styles["defer-case-button"]}
+                    className={`${styles["defer-case-button"]} ${
+                      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
+                        ? styles["active"]
+                        : ""
+                    }`}
                     onClick={handleDeferCase}
                     disabled={!selectedCase}
+                    aria-pressed={userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))}
                     aria-label="Відкласти Випадок на Пізніше"
                   >
                     ⏸
