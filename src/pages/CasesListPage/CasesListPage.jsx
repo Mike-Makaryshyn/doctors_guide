@@ -15,6 +15,7 @@ import { db } from "../../firebase";
 import { doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 
 const CasesListPage = () => {
+  const [expandedSection, setExpandedSection] = useState('cases');
   const { dataSources, fetchFirebaseCases, getCurrentCases } = useContext(DataSourceContext);
   const { currentUser, handleChangeRegion } = useAuth();
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const CasesListPage = () => {
   // Інші локальні стани
   const [searchTerm, setSearchTerm] = useState("");
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(null); // 'cases' або 'collections'
+  const [activeSection, setActiveSection] = useState('cases');
   const settingsRef = useRef(null);
   const settingsButtonRef = useRef(null);
   const [navigating, setNavigating] = useState(false);
@@ -143,13 +144,10 @@ const CasesListPage = () => {
   // Функція для переключення між розділами з скиданням selectedAuthor при переході на 'cases' (Варіант 1)
   const toggleSection = (section) => {
     setActiveSection((prevSection) => {
-      const newSection = prevSection === section ? null : section;
-      console.log(`Перемикаємося на розділ: ${newSection}`);
-      if (newSection === 'cases') {
-        console.log("Скидаємо selectedAuthor при переході на 'cases'");
-        setSelectedAuthor("");
+      if (section === 'cases') {
+        return 'cases'; // "Випадки" завжди відкриті
       }
-      return newSection;
+      return prevSection === section ? 'cases' : section; // Повертаємось до "Випадків" за замовчуванням
     });
   };
 
@@ -353,12 +351,11 @@ const CasesListPage = () => {
         !settingsButtonRef.current.contains(event.target)
       ) {
         setIsSettingsOpen(false);
-        // Додайте перевірку, щоб активний розділ не змінювався
-        if (activeSection === "collections" && selectedAuthor) {
-          console.log("Закриваємо модальне вікно, але залишаємо вибраного автора");
-          return; // Уникаємо скидання стану
+        // Перевірка, щоб не змінювати активну секцію, якщо вона "collections"
+        if (activeSection === 'collections') {
+          return; // Залишаємо "collections" активною
         }
-        setActiveSection(null); // Залишаємо загальний стан без змін
+        setActiveSection('cases'); // За замовчуванням повертаємо до "cases"
       }
     };
   
@@ -371,7 +368,7 @@ const CasesListPage = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isSettingsOpen, activeSection, selectedAuthor]);
+  }, [isSettingsOpen, activeSection]);
 
   // Функції для зміни статусу випадку
   const handleMarkAsCompleted = async (caseId, region) => {
