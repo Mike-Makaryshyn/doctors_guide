@@ -1,94 +1,192 @@
+/* src/pages/DataCollectionPage/DataCollectionPage.module.scss */
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-.navigation {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px 0;
-    max-width: 100%;
-    flex-wrap: wrap;
-}
-
-.navButton {
-    border: none;
-    background: none; /* Повністю прибираємо фон */
-    cursor: pointer;
-    padding: 10px;
+.entryRow {
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
-.navButton img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.5s ease; /* Забезпечує плавне збільшення */
-    background: none; /* Видаляємо фон */
-    border: none; /* Видаляємо рамки */
-    box-shadow: none; /* Видаляємо тіні */
-    border-radius: 50%; /* Робимо іконки круглими */
+.label {
+    margin-right: 10px;
+    font-weight: bold;
+    width: 200px;
 }
 
-.navButton:hover img {
-    transform: scale(1.4); /* Лише збільшення без підсвічування */
-}
-
-.active img {
-    transform: scale(2); /* Збільшення для активної іконки */
-    border: none; /* Забираємо рамки */
-    background: none; /* Видаляємо фон */
-    box-shadow: none; /* Видаляємо тіні */
-    border-radius: 50%; /* Робимо активні іконки круглими */
-}
-
-.section {
-    width: 100%;
-    padding: 20px;
-    background: none; /* Видаляємо фон */
-    box-shadow: none; /* Видаляємо тінь */
-    border-radius: 0; /* Прибираємо закруглення */
-    margin-bottom: 20px; /* Відступ */
-}
-
-input,
-select,
-textarea {
-    background: none; /* Видаляємо фон */
-    border: 1px solid #ccc; /* Рамка */
-    border-radius: 5px; /* Невелике закруглення */
+.inputField,
+.textAreaField,
+.selectField {
     padding: 8px;
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
 }
 
-.navigationButtons {
+.textAreaField {
+    resize: vertical;
+    height: 100px;
+}
+
+.selectField {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.tabs {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center; /* Центрування вкладок */
+}
+
+.tabButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    margin-right: 5px;
+    background-color: transparent; /* Видалення фону */
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s, border-bottom 0.3s;
+    flex: 0 0 auto; /* Запобігає розтягуванню кнопок */
+
+    &:hover {
+        background-color: transparent; /* Видалення фону при ховері */
+    }
+
+    img {
+        width: 32px; /* Збільшення розміру іконок */
+        height: 32px;
+        margin-bottom: 5px;
+        transition: transform 0.3s;
+    }
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.active {
+    border-bottom: 2px solid #007bff; /* Підкреслення вибраної вкладки */
+    
+    img {
+        transform: scale(1.2); /* Збільшення іконки вибраної вкладки */
+    }
+}
+
+.tabContent {
+    padding: 20px;
+    /* Видаляємо обведення */
+    border: none;
+    /* Центрування вмісту */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.saveButtonContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.saveButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+    background-color: #0056b3;
+}
+
+.regionField {
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
-button {
-    padding: 10px 20px;
+.toggleButton {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #6c757d;
+    color: #fff;
     border: none;
-    background-color: #007bff;
-    color: white;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-button:disabled {
-    background-color: #cccccc;
+.toggleButton:hover {
+    background-color: #5a6268;
+}
+
+/* Стилі для кнопок включення/виключення у вкладці 2 */
+.toggleFieldButton {
+    margin-left: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+    background-color: #28a745; /* Зелений для включених */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggleFieldButton:hover {
+    background-color: #218838;
+}
+
+.toggleFieldButton.disabledToggle {
+    background-color: #dc3545; /* Червоний для виключених */
+}
+
+.toggleFieldButton.disabledToggle:hover {
+    background-color: #c82333;
+}
+
+.disabledInput {
+    background-color: #e9ecef;
     cursor: not-allowed;
 }
 
+/* Додаткові стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .tabs {
+        justify-content: center; /* Центрування вкладок */
+    }
 
+    .tabButton {
+        padding: 10px;
+    }
+
+    .tabButton img {
+        width: 28px; /* Збільшення розміру іконок на мобільних */
+        height: 28px;
+    }
+
+    .tabButton span {
+        display: none; /* Сховати текст на мобільних, якщо бажаєте тільки іконки */
+    }
+
+    .tabContent {
+        padding: 10px;
+    }
+}

@@ -1,46 +1,48 @@
 // src/routes/path.js
 
 export const pathList = {
-    signup: {
-      path: "/signup",
-    },
-    login: {
-      path: "/login",
-    },
-    main_menu: {
-      path: "/main_menu",
-    },
-    lands: {
-      path: "/lands",
-    },
-    documents: {
-      path: "/documents",
-    },
-    documentsEU: {
-      path: "/documentsEU",
-    },
-    what_is_fsp: {
-      path: "/what_is_fsp",
-    },
-    exam_explanations: {
-      path: "/exam_explanations",
-    },
-    trafarette: {
-      path: "/trafarette/:name",
-    },
-    language_study: {
-      path: "/language-study",
-    },
-    links: {
-      path: "/links",
-    },
-    step_by_step: {
-      path: "/step-by-step",
-    },
-    approbation: {
-      path: "/approbation",
-    },
-    informationSources: {
-      path: "/information-sources",
-    },
-  };
+  // ... ваші інші шляхи
+  lands: {
+    path: "/lands",
+  },
+  main_menu: {
+    path: "/main_menu",
+  },
+  documents: {
+    path: "/documents",
+  },
+  documentsEU: {
+    path: "/documents-eu",
+  },
+  what_is_fsp: {
+    path: "/what-is-fsp",
+  },
+  exam_explanations: {
+    path: "/exam-explanations",
+  },
+  trafarette: {
+    path: "/trafarette",
+  },
+  language_study: {
+    path: "/language-study",
+  },
+  step_by_step: {
+    path: "/step-by-step",
+  },
+  links: {
+    path: "/links",
+  },
+  approbation: {
+    path: "/approbation",
+  },
+  informationSources: {
+    path: "/information-sources",
+  },
+  // Нові шляхи
+  my_cases: {
+    path: "/my-cases",
+  },
+  edit_case: {
+    path: "/edit-case",
+  },
+};

@@ -414,11 +414,11 @@ const FSPFormularPage = () => {
       type,
       title:
         type === "zusammenfassung"
-          ? "Zusammenfassung"
+          ? ""
           : type === "examinerQuestions"
-          ? "Examiner Questions"
+          ? ""
           : type === "patientQuestions"
-          ? "Patient Questions"
+          ? ""
           : "",
     };
     setAdditionalInfo(newInfo);
@@ -891,7 +891,7 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("zusammenfassung")}
                   >
-                    <h3 className={styles["tile-title"]}>Zusammenfassung</h3>
+                    <h3 className={styles["tile-title"]}></h3>
                     <Zusammenfassung parsedData={parsedData} />
                   </div>
 
@@ -983,11 +983,11 @@ const FSPFormularPage = () => {
 
                   {/* Examiner & Patient Questions */}
                   <div className={styles["tile"]} onClick={handlePatientQuestionsClick}>
-                    <h3 className={styles["tile-title"]}>Patient Questions</h3>
+                    <h3 className={styles["tile-title"]}></h3>
                     <PatientQuestions parsedData={parsedData} />
                   </div>
                   <div className={styles["tile"]} onClick={handleExaminerQuestionsClick}>
-                    <h3 className={styles["tile-title"]}>Examiner Questions</h3>
+                    <h3 className={styles["tile-title"]}></h3>
                     <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
                   </div>
                 </div>

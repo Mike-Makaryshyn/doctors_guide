@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
-// Видалено імпорт DeferredCases
+import SavedCasesWidget from "../../components/SavedCasesWidget.jsx"; // Імпорт SavedCasesWidget
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -108,6 +108,9 @@ const Dashboard = () => {
           {/* Компонент ProgressBar */}
           <ProgressBar progress={progress} />
 
+          {/* Віджет збережених випадків */}
+          <SavedCasesWidget /> {/* Додавання SavedCasesWidget */}
+
           {/* Додатковий Контент */}
           <div style={{ marginTop: "20px", display: "flex", gap: "20px" }}>
             {/* Основний контент Dashboard */}
@@ -127,7 +130,7 @@ const Dashboard = () => {
               </Link>
             </div>
 
-            {/* Видалено DeferredCases */}
+            {/* Інші компоненти можуть бути додані тут */}
           </div>
         </div>
       </ProtectedRoute>

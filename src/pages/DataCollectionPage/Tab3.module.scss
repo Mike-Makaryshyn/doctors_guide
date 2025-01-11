@@ -1,0 +1,92 @@
+/* src/pages/DataCollectionPage/Tab3.module.scss */
+
+.tabContainer {
+    padding: 20px;
+  }
+  
+  .entryRow {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fafafa;
+  }
+  
+  .fieldGroup {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold; /* Жирне форматування */
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none; /* Відключаємо ручне зміщення */
+  
+    &:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+    }
+  
+    &:disabled {
+      background-color: #e0e0e0;
+      border-color: #bdbdbd;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  .autoExpand {
+    overflow: hidden;
+  }
+  
+  .addButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  
+    &:hover {
+      background-color: #038c5a;
+    }
+  }
+  
+  .removeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #f44336;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  
+    &:hover {
+      color: #d32f2f;
+    }
+  }

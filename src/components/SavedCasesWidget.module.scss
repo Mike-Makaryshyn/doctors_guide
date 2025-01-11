@@ -1,0 +1,103 @@
+.widgetContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Займає всю ширину на мобільних */
+    max-width: 25%; /* 25% ширини на десктопі */
+    margin: 0 auto; /* Центрування для маленьких екранів */
+  }
+  
+  .casesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Відстань між плитками */
+    justify-content: flex-start; /* Вирівнювання плиток по лівому краю */
+  }
+  
+  .caseTile {
+    position: relative; /* Для позиціонування кнопок */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%; /* Плитка займає всю ширину контейнера */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .caseTile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .caseTile h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px 0; /* Відступ між назвою і кнопками */
+    word-wrap: break-word; /* Перенос слів, якщо текст занадто довгий */
+    text-align: center;
+  }
+  
+  .tileActions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    flex-direction: column; /* Вертикальне розташування кнопок */
+    gap: 5px; /* Відстань між кнопками */
+  }
+  
+  .editButton,
+  .deleteButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Кнопка редагування */
+  .editButton {
+    background-color: #4caf50;
+  }
+  
+  .editButton:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+  }
+  
+  /* Кнопка видалення */
+  .deleteButton {
+    background-color: #f44336;
+  }
+  
+  .deleteButton:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+  }
+  
+  .loading {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Адаптивність для мобільних */
+  @media (max-width: 768px) {
+    .widgetContainer {
+      max-width: 100%; /* На мобільних контейнер займає всю ширину */
+    }
+  
+    .caseTile {
+      width: 100%; /* Плитки займають всю ширину контейнера */
+    }
+  }
