@@ -1,77 +1,164 @@
-// src/components/SavedCasesWidget.module.scss
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .widgetContainer {
     padding: 20px;
-    background-color: #f1f1f1;
+    background: none; /* Фон видалений */
+    width: 400px; /* Фіксована ширина на десктопі */
+    margin: 0 ; /* Центрування */
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
     border-radius: 8px;
-    margin: 20px 0;
-  }
-  
-  .casesSection {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.chevron {
+    font-size: 16px;
+}
+
+.casesSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.caseTile {
+    position: relative;
+    background: #ffffff;
+    color: #013b6e; /* Колір тексту плиток */
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 360px; /* Фіксована ширина плиток */
+    padding-right: 60px; /* Додано простір для кнопок */
+    font-family: 'Poppins', sans-serif;
+}
+
+.caseTile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tileActions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-
-  
-  .casesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-  }
-  
-  .caseTile {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    position: relative;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .caseTile h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
-  }
-  
-  .caseTile p {
-    margin: 0 0 10px 0;
-    color: #555;
-  }
-  
-  .tileActions {
-    display: flex;
     gap: 5px;
-    justify-content: flex-end;
-  }
-  
-  .actionButton {
-    background: none;
+}
+
+.actionButton {
+    width: 28px;
+    height: 28px;
     border: none;
-    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
     font-size: 16px;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-  
-  .markCompletedButton {
-    color: #28a745;
-  }
-  
-  .markDeferredButton {
-    color: #ffc107;
-  }
-  
-  .editButton {
-    color: #007bff;
-  }
-  
-  .deleteButton {
-    color: #dc3545;
-  }
-  
-  .actionButton:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.editButton {
+    background-color: #28a745;
+}
+
+.editButton:hover {
+    background-color: #218838;
+}
+
+.deleteButton {
+    background-color: #e74c3c;
+}
+
+.deleteButton:hover {
+    background-color: #d62c1a;
+}
+
+.tileHeader {
+    font-size: 16px;
+    color: #013b6e; /* Колір заголовку плитки */
+    font-weight: 600; /* Напівжирний текст */
+    margin-bottom: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.addNewTile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 135px; /* Відповідає розміру інших плиток */
+    border: 2px dashed #999; /* Рамка для порожньої плитки */
+    background-color: rgba(255, 255, 255, 0.05); /* Легкий фоновий колір */
+    border-radius: 12px; /* Ті ж закруглені кути, що й у інших */
+    cursor: pointer;
+    width: 360px; /* Така ж ширина, як у плиток */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при наведенні */
+}
+
+.addNewTile:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Трохи яскравіший фон при наведенні */
+    transform: translateY(-5px); /* Підйом плитки при наведенні */
+}
+
+.addNewTile p {
+    font-size: 40px; /* Розмір плюса */
+    font-weight: bold;
+    color: #013b6e; /* Колір плюса */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        font-size: 16px; /* Менший розмір тексту хедера */
+        padding: 8px 10px; /* Зменшені відступи */
+        background-color: #4caf50; /* Колір фону залишається незмінним */
+    }
+    .widgetContainer {
+        width: 440px; /* Ширина шапки */
+        margin: 0 auto; /* Центрування */
+      }
+
+    .casesSection {
+        justify-content: center; /* Центруємо плитки */
+    }
+
+    .caseTile, .addNewTile {
+        width: 400px; /* Плитки займають 90% ширини на мобільних пристроях */
+        margin: 0 auto; /* Центрування плитки */
+    }
+
+    .tileActions {
+        gap: 8px; /* Проміжок між кнопками */
+    }
+
+    .actionButton {
+        width: 32px; /* Збільшений розмір кнопок */
+        height: 32px;
+        font-size: 18px; /* Більший розмір іконок */
+    }
+
+    .tileHeader {
+        font-size: 14px; /* Трохи менший текст для плиток */
+    }
+}
