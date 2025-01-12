@@ -1,7 +1,6 @@
 // src/pages/DataCollectionPage/Tab1.jsx
 
 import React, { useState } from "react";
-import sharedStyles from "./DataCollectionPage.module.scss";
 import styles from "./Tab1.module.scss";
 
 const Tab1 = ({
@@ -28,14 +27,14 @@ const Tab1 = ({
   };
 
   return (
-    <div className={`${sharedStyles.tabContent} ${styles.tabContainer}`}>
+    <div className={styles.tabContainer}>
       <div className={styles.entryRow}>
         <label className={styles.label}>Місце екзамену:</label>
         <div className={styles.regionField}>
           <select
             value={selectedRegion}
             onChange={handleRegionChange}
-            className={`${styles.selectField} ${inputState}`}
+            className={`${styles.selectField} ${styles[inputState]}`}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
             disabled={inputState === "disabled"}
@@ -60,7 +59,7 @@ const Tab1 = ({
           type="text"
           value={localData.name_tab1 || ""}
           onChange={(e) => updateLocalData({ name_tab1: e.target.value })}
-          className={`${styles.inputField} ${inputState}`}
+          className={`${styles.inputField} ${styles[inputState]}`}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
@@ -74,7 +73,7 @@ const Tab1 = ({
           type="text"
           value={localData.theme || ""}
           onChange={(e) => updateLocalData({ theme: e.target.value })}
-          className={`${styles.inputField} ${inputState}`}
+          className={`${styles.inputField} ${styles[inputState]}`}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
