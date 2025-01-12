@@ -54,14 +54,11 @@ const FSPFormularPage = React.lazy(() =>
 const CasesListPage = React.lazy(() =>
   import("../pages/CasesListPage/CasesListPage")
 );
-
-// Новий імпорт для MyCasesPage
-const MyCasesPage = React.lazy(() =>
-  import("../pages/MyCasesPage/MyCasesPage")
-);
+// Імпорт сторінки редагування
 const EditCasePage = React.lazy(() =>
   import("../pages/EditCasePage/EditCasePage")
 );
+
 // Auth and Dashboard
 const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
 const RegistrationPage = React.lazy(() =>
@@ -107,19 +104,17 @@ export default function Routers() {
           path={pathList.language_study.path}
           element={<LanguageStudyPage />}
         />
-        <Route
-          path={pathList.step_by_step.path}
-          element={<ApprobationPage />}
-        />
+        <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
         <Route path={pathList.links.path} element={<LinksPage />} />
         <Route
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
 
-        {/* Нові маршрути */}
+        {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />
-        <Route path="/my-cases" element={<MyCasesPage />} />
+
+        {/* Сторінка редагування кейсу */}
         <Route path={pathList.edit_case.path} element={<EditCasePage />} />
 
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}

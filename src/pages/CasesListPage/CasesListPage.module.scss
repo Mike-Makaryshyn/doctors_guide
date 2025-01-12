@@ -1,523 +1,416 @@
-/* src/pages/CasesListPage/CasesListPage.module.scss */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 .container {
   padding: 20px;
   font-family: 'Poppins', sans-serif;
 }
 
-.loading {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 50px;
-  color: #555;
+/* Button "Einstellungen" (links unten) */
+.bottomControls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
-/* Стилі для плиток випадків */
-.tilesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between; /* Рівномірно розподіляємо плитки */
-}
-
-/* Оновлені стилі плитки */
-.tile {
-  flex: 1 1 calc(33.33% - 20px); /* Плитки займають рівно третину ширини */
-  max-width: calc(33.33% - 20px);
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px 20px 20px 20px; /* Додано верхній відступ для кнопок */
-  position: relative;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Розподіляємо простір між елементами */
-  height: 100%; /* Забезпечуємо однакову висоту */
-  min-height: 250px; /* Мінімальна висота плитки */
-}
-
-.tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Зміна кольору плитки на основі статусу */
-.tile.completed {
-  background-color: #4caf50; /* Зелений для виконаних випадків */
-  color: #fff;
-}
-
-.tile.deferred {
-  background-color: #ff9800; /* Оранжевий для відкладених випадків */
-  color: #fff;
-}
-
-/* Контейнер для кнопок редагування та видалення */
-.actions {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 6px;
-  z-index: 10; /* Забезпечуємо, що кнопки завжди поверх */
-}
-
-/* Стилі для кнопок */
-.button {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button:hover {
-  background-color: #039e5d;
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.editButton {
-  background-color: #04AA6D;
-}
-
-.deleteButton {
-  background-color: #e74c3c;
-}
-
-.deleteButton:hover {
-  background-color: #d62c1a;
-}
-
-/* Нові кнопки для "Позначити як завершений" та "Відкласти" */
-.markCompletedButton {
-  background-color: #28a745; /* Зелені кнопки */
-}
-
-.markCompletedButton.active {
-  background-color: #218838;
-}
-
-.markCompletedButton:hover:not(.active) {
-  background-color: #1e7e34;
-}
-
-.deferButton {
-  background-color: #ffc107; /* Жовті кнопки */
-}
-
-.deferButton.active {
-  background-color: #e0a800;
-}
-
-.deferButton:hover:not(.active) {
-  background-color: #d39e00;
-}
-
-/* Заголовок плитки */
-.tileHeader {
-  font-size: 20px;
-  color: #013b6e;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  text-align: left;
-  flex-grow: 1; /* Забезпечує, що заголовок займає доступний простір */
-  word-wrap: break-word; /* Перенос слів для довгих заголовків */
-}
-
-/* Контент плитки */
-.tileContent {
-  font-size: 14px;
-  color: #333;
-  margin: 5px 0;
-  word-wrap: break-word; /* Перенос слів для довгого тексту */
-}
-
-/* Додаткові стилі для автора */
-.author {
-  margin-top: 10px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/* Додаткові стилі для регіону */
-.region {
-  margin-top: 5px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/* Додаткові стилі для назви випадку */
-.case-name {
-  margin-top: 10px;
-  font-weight: bold;
-  color: inherit;
-}
-
-/* Додаткові стилі для додаткової інформації */
-.additional-info {
-  margin-top: 10px;
-  text-align: left;
-  width: 100%;
-}
-
-/* Bottom Controls */
-.bottom-controls {
-  position: fixed; /* Фіксуємо позицію */
-  bottom: 20px; /* Відступ від нижнього краю */
-  left: 20px; /* Відступ від лівого краю */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Вирівнювання кнопки налаштувань вліво */
-  margin-top: 20px;
-  z-index: 1000; /* Забезпечуємо, що кнопка поверх інших елементів */
-}
-
-/* Кнопка Налаштувань */
-.settings-button {
-  background-color: rgba(125, 199, 34, 0.8);
+.settingsButton {
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-.settings-button:hover {
-  background-color: #7dc722;
+.settingsButton:hover {
+  background-color: #4caf50;
   transform: scale(1.1);
 }
 
-/* Модальне вікно Налаштувань */
-.settings-modal {
+/* Button "Share" (rechts unten) */
+.bottomRightShare {
   position: fixed;
-  bottom: 90px; /* над bottom-controls */
-  left: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
-  width: 300px;
-  animation: fadeIn 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.settings-content {
-  position: relative;
-}
-
-/* Заголовок модального вікна */
-.settings-modal h3 {
-  margin: 0 0 15px 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Поля у модальному вікні */
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.settings-modal label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #555;
-}
-
-/* Перемикач Джерела Даних */
-.data-source-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.label-left,
-.label-right {
-  margin: 0 0.5em;
-  font-size: 14px;
-  color: #555;
-  font-weight: normal;
-  transition: font-weight 0.3s ease;
-}
-
-.label-active {
-  font-weight: bold;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
+.shareRoundButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.shareRoundButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
 }
 
-.slider:before {
-  position: absolute;
+/* Spinner */
+.spinnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  --size-of-spinner: 50px;
+  --spinner-border-width: 4px;
+  --spinner-color: #08c18a;
+  --circle-color: #8bc34a24;
+  --speed-of-animation: 2s;
+  --scale: 1.3;
+  width: var(--size-of-spinner);
+  height: var(--size-of-spinner);
+  background: var(--circle-color);
+  border-radius: 50%;
+  position: relative;
+}
+.spinner::after {
   content: "";
-  height: 18px;
-  width: 18px;
+  display: block;
+  position: absolute;
   border-radius: 50%;
-  left: 3px;
-  bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
+  inset: 0;
+  border: var(--spinner-border-width) solid var(--spinner-color);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: spinny var(--speed-of-animation) linear infinite;
 }
 
-input:checked + .slider {
-  background-color: #171717;
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(var(--scale));
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px) rotate(360deg);
-}
-
-/* Селектор Регіону */
-.region-select {
-  padding: 8px;
-  border-radius: 4px;
+/* Modal "Einstellungen" */
+.settingsModal {
+  position: fixed;
+  bottom: 80px;
+  left: 65px;
+  width: 260px;
+  background-color: rgba(255,255,255,0.95);
   border: 1px solid #ccc;
-  background-color: #e0e0e0;
-  font-size: 14px;
-  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.region-select:focus {
-  outline: none;
-}
+/* Schließen-Button bleibt rot */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 
-/* Кнопка Закриття Модального Вікна */
-.close-button {
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  color: #4d4d4d;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #da1818; /* Rot */
+  color: #f9f9f9;
   cursor: pointer;
   font-size: 16px;
-  padding: 8px 12px;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  position: absolute;
-  top: -10px;
-  right: -10px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.close-button:hover {
-  background-color: #ccc;
+/* Keine Farbänderung auf Hover (bleibt rot) */
+.closeButton:hover {
+  background-color: #da1818;
 }
 
-.close-button:focus {
-  outline: none;
+/* Inhalt des Modals */
+.settingsContent {
+  position: relative;
+  margin-top: 40px;
 }
 
-.close-button:disabled {
-  background-color: #ccc;
-  color: #888888;
-  cursor: not-allowed;
-}
-
-/* Стилі для автора */
-.author {
-  margin-top: 10px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/* Стилі для регіону */
-.region {
-  margin-top: 5px;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/* Стилі для назви випадку */
-.case-name {
-  margin-top: 10px;
-  font-weight: bold;
-  color: inherit;
-}
-
-/* Додаткові стилі для додаткової інформації */
-.additional-info {
-  margin-top: 10px;
-  text-align: left;
-  width: 100%;
-}
-
-/* Стилі для акордеону */
-.accordion-section {
+/* Akkordeon */
+.accordionSection {
   margin-bottom: 10px;
 }
 
-.accordion-header {
-  width: 100%;
-  background-color: #1a3d6d;
+.accordionHeader {
+  background-color: #4caf50;
   border: none;
-  padding: 10px 15px;
+  width: 100%;
   text-align: left;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 10px;
   border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
   transition: background-color 0.3s ease;
+
+  /* Neu: Weißer Text für "Local / Online Fälle", "Sammlungen", "Meine Fälle" */
+  color: #fff;
 }
 
-.accordion-header:hover {
-  background-color: #e2e2e2;
+.accordionHeader:hover {
+  background-color: #4caf50;
 }
 
-.accordion-content {
+.accordionContent {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
   opacity: 0;
+  margin-bottom: 8px;
 }
-
-.accordion-content.expanded {
-  max-height: 500px; /* Достатньо велике значення, щоб вміст вміщався */
+.accordionContent.expanded {
+  max-height: 500px;
   opacity: 1;
 }
 
-.accordion-content.collapsed {
-  max-height: 0;
-  opacity: 0;
+/* Select "Region" */
+.regionSelect {
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-/* Адаптивність */
-@media (max-width: 768px) {
-  .tilesContainer {
-    flex-direction: column;
-    align-items: stretch; /* Замість center, щоб плитки займали всю ширину */
-  }
+/* Toggle Local/Online bleibt unverändert */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.toggleSwitch {
+  position: relative;
+  width: 40px;
+  height: 24px;
+}
+.toggleInput {
+  display: none;
+}
+.toggleLabel {
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 24px;
+  background-color: #999;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.toggleLabel::before {
+  content: "";
+  position: absolute;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  top: 2px; left: 2px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.toggleInput:checked + .toggleLabel {
+  background-color: #4caf50;
+}
+.toggleInput:checked + .toggleLabel::before {
+  transform: translateX(16px);
+}
 
+/* Tiles (Kacheln) */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  /* Hier anpassen, um z.B. mittig auszurichten:
+     Wenn du "flex-start" willst, nimm: justify-content: flex-start;
+     Wenn du lieber zentriert willst, nimm: justify-content: center; */
+  justify-content: center; 
+}
+
+.tile {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 250px;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Erledigt / Verschoben */
+.completed {
+  background-color: #4caf50;
+  color: #fff;
+}
+.deferred {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Buttons rechts oben */
+.actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #04AA6D;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bei Hover nicht ins Grüne wechseln, sondern je nach Button-Farbe */
+.button:hover {
+  /* Standard-Hover für alle Buttons (z.B. #039E5D) */
+  background-color: #039E5D;
+}
+
+/* "Erledigt"-Button: Grün */
+.markCompletedButton {
+  background-color: #28a745;
+}
+.markCompletedButton.active {
+  background-color: #218838;
+}
+
+/* "Später"-Button: Orange */
+.deferButton {
+  background-color: #ffc107;
+}
+
+/* HIER: Hover für deferButton => Orange bleiben */
+.deferButton:hover {
+  background-color: #ffb000; /* oder was du als orange möchtest */
+}
+.deferButton.active {
+  background-color: #e0a800;
+}
+.deferButton.active:hover {
+  background-color: #d19400; /* etwas dunkler, optional */
+}
+
+/* Edit / Delete */
+.editButton,
+.deleteButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+}
+.deleteButton:hover {
+  background-color: #d62c1a;
+}
+
+/* Überschrift in der Kachel */
+.tileHeader {
+  font-size: 20px;
+  color: #013b6e;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  text-align: left;
+  word-wrap: break-word;
+  flex-grow: 1;
+}
+
+/* Autor-Kacheln */
+.authorTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px;
+}
+
+/* “+” Tile */
+.addNewTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* "Zurück"-Button */
+.arrowButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: #fffbfb;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.arrowButton:hover {
+  background-color: #4caf50;
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
   .tile {
     flex: 1 1 100%;
     max-width: 100%;
-    align-items: flex-start; /* Вирівнювання вмісту вліво */
-    min-height: 200px; /* Зменшена мінімальна висота для мобільних */
-    display: flex;
-    flex-direction: column;
-    padding: 40px 15px 15px 15px; /* Зменшено відступи по боках */
   }
-
-  .button {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
+  .settingsModal {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    border-radius: 12px 12px 0 0;
+    overflow-y: auto;
   }
-
-  .settings-modal {
-    left: 10px;
-    right: 10px;
-    bottom: 90px; /* adjusted to account for bottom-controls */
-    width: auto;
-    padding: 15px;
-  }
-
-  .settings-button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .close-button {
-    top: -8px;
-    right: -8px;
-    padding: 6px 10px;
-    font-size: 14px;
-  }
-
-  /* Забезпечуємо однакову висоту плиток */
-  .tile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* Додаткові стилі для плиток авторів */
-  .author-tile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 200px; /* Однакова мінімальна висота */
-  }
-
-  /* Вирівнювання тексту плитки, щоб уникнути перекриття */
-  .tileHeader,
-  .tileContent,
-  .additional-info {
-    padding-right: 40px; /* Відступ справа для кнопок */
-  }
-}
-
-/* Додаткові стилі */
-.error {
-  color: #f44336;
-  font-weight: bold;
-}
-
-.loading-message {
-  color: #2196f3;
-  font-weight: bold;
-}
-
-/* Анімації */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .bottomRightShare {
+    right: 20px;
+    bottom: 80px;
   }
 }

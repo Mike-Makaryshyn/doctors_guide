@@ -350,7 +350,7 @@ export const DataSourceProvider = ({ children }) => {
    */
   const fetchFirebaseCases = useCallback(async (regionKey) => {
     try {
-      const docRef = doc(db, "cases", regionKey); // ім'я документа = regionKey
+      const docRef = doc(db, "cases", regionKey);
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
@@ -361,28 +361,25 @@ export const DataSourceProvider = ({ children }) => {
       const docData = docSnap.data();
       const fetchedCases = docData.cases || [];
 
-      // Логування для перевірки структури даних
-      console.log("Отримані випадки з Firebase:", fetchedCases);
+      console.log(`Отримані випадки з Firebase [${regionKey}]:`, fetchedCases);
 
-      const mappedCases = fetchedCases.map((caseItem) => ({
-        ...caseItem, // Залишаємо всі ключі без змін
-        fileDisplayName: caseItem.fullName || "Без Імені", // Для відображення у випадаючому списку
-        sourceType: "firebase", // Додаємо sourceType
+      const mapped = fetchedCases.map((caseItem) => ({
+        ...caseItem,
+        fileDisplayName: caseItem.fullName || "Без Імені",
+        sourceType: "firebase",
       }));
 
       setDataSources((prev) => {
-        // Отримуємо локальні випадки
         const localCases = prev[regionKey]?.sources?.local || [];
-
         return {
           ...prev,
           [regionKey]: {
             ...prev[regionKey],
             sources: {
               ...prev[regionKey].sources,
-              firebase: mappedCases,
+              firebase: mapped,
             },
-            files: [...localCases, ...mappedCases], // Оновлюємо files як комбінацію локальних та firebase випадків
+            files: [...localCases, ...mapped],
           },
         };
       });
@@ -392,30 +389,21 @@ export const DataSourceProvider = ({ children }) => {
   }, []);
 
   /**
-   * Повертає масив випадків (локальних або Firebase)
-   * залежно від вибраного типу джерела ("local" / "firebase").
-   *
-   * @param {string} regionKey - Ключ регіону.
-   * @param {string} sourceType - Тип джерела даних ("local" або "firebase").
-   * @returns {Array} - Масив випадків.
+   * Повертає масив кейсів для (regionKey, source)
    */
   const getCurrentCases = useCallback(
-    (regionKey, sourceType) => {
+    (regionKey, source) => {
       if (!dataSources[regionKey]?.sources) return [];
-      return dataSources[regionKey].sources[sourceType] || [];
+      return dataSources[regionKey].sources[source] || [];
     },
     [dataSources]
   );
 
-  // Мемоізація значення контексту для запобігання непотрібним перерендеренням
-  const contextValue = useMemo(
-    () => ({
-      dataSources,
-      fetchFirebaseCases,
-      getCurrentCases,
-    }),
-    [dataSources, fetchFirebaseCases, getCurrentCases]
-  );
+  const contextValue = useMemo(() => ({
+    dataSources,
+    fetchFirebaseCases,
+    getCurrentCases,
+  }), [dataSources, fetchFirebaseCases, getCurrentCases]);
 
   return (
     <DataSourceContext.Provider value={contextValue}>
