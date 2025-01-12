@@ -1,134 +1,121 @@
 // src/components/SavedCasesWidget.jsx
 
-import React, { useEffect, useState } from "react";
-import { db, auth } from "../firebase";
-import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify"; // Додано для повідомлень
+import React from "react";
 import styles from "./SavedCasesWidget.module.scss";
+import { FaCog, FaTimes, FaCheck, FaPause } from "react-icons/fa";
 
-const SavedCasesWidget = () => {
-  const [myCases, setMyCases] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchMyCases = async () => {
-      setLoading(true);
-      const user = auth.currentUser;
-      if (!user) {
-        setLoading(false);
-        return;
-      }
-
-      try {
-        const casesCollection = collection(db, "cases");
-        const casesSnapshot = await getDocs(casesCollection);
-        const userCases = [];
-
-        casesSnapshot.forEach((docSnap) => {
-          const region = docSnap.id;
-          const data = docSnap.data();
-          if (data.cases && Array.isArray(data.cases)) {
-            data.cases.forEach((caseItem, index) => {
-              if (caseItem.authorId === user.uid) {
-                userCases.push({
-                  ...caseItem,
-                  region,
-                  caseIndex: index,
-                });
-              }
-            });
-          }
-        });
-
-        setMyCases(userCases);
-      } catch (error) {
-        console.error("Error fetching user cases:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMyCases();
-  }, []);
-
-  const handleEdit = (myCase) => {
-    navigate(`/edit-case`, { state: { myCase } });
-  };
-
-  const handleDelete = async (myCase) => {
-    const confirmDelete = window.confirm(
-      `Ви дійсно хочете видалити випадок "${myCase.fullName}"?`
-    );
-    if (!confirmDelete) return;
-
-    try {
-      const regionDocRef = doc(db, "cases", myCase.region);
-      const regionDocSnap = await getDoc(regionDocRef);
-      if (!regionDocSnap.exists()) {
-        throw new Error("Регіон не знайдено.");
-      }
-
-      const regionData = regionDocSnap.data();
-      if (!regionData.cases || !Array.isArray(regionData.cases)) {
-        throw new Error("Невірна структура даних.");
-      }
-
-      // Видалення випадку з масиву
-      const updatedCases = regionData.cases.filter(
-        (caseItem) => caseItem.id !== myCase.id
-      );
-
-      // Оновлення документа Firestore
-      await updateDoc(regionDocRef, {
-        cases: updatedCases,
-      });
-
-      // Оновлення стану компонента
-      setMyCases((prevCases) =>
-        prevCases.filter((caseItem) => caseItem.id !== myCase.id)
-      );
-
-      toast.success("Випадок успішно видалено!");
-    } catch (error) {
-      console.error("Error deleting case:", error);
-      toast.error(error.message || "Помилка при видаленні випадку.");
-    }
-  };
-
-  if (loading) {
-    return <div className={styles.loading}>Завантаження...</div>;
-  }
-
+const SavedCasesWidget = ({
+  userCases,
+  regionalCases,
+  onEdit,
+  onDelete,
+  onMarkCompleted,
+  onMarkDeferred,
+}) => {
   return (
     <div className={styles.widgetContainer}>
-      <h2>Додані випадки</h2>
-      {myCases.length === 0 ? (
+      <h2>Збережені Випадки</h2>
+      {userCases.length === 0 && regionalCases.length === 0 ? (
         <p>Немає збережених випадків.</p>
       ) : (
-        <div className={styles.casesGrid}>
-          {myCases.slice(0, 4).map((myCase) => ( // Відображаємо максимум 4 випадки
-            <div key={myCase.id} className={styles.caseTile}>
-              <h3>{myCase.fullName}</h3> {/* Відображаємо FullName */}
-              <div className={styles.tileActions}>
-                <button
-                  className={styles.editButton}
-                  onClick={() => handleEdit(myCase)}
-                  title="Редагувати"
-                >
-                  ⚙
-                </button>
-                <button
-                  className={styles.deleteButton}
-                  onClick={() => handleDelete(myCase)}
-                  title="Видалити"
-                >
-                  ✖
-                </button>
+        <div className={styles.casesSection}>
+          {/* Ваші Випадки */}
+          {userCases.length > 0 && (
+            <div className={styles.casesGroup}>
+              <h3>Ваші Випадки</h3>
+              <div className={styles.casesGrid}>
+                {userCases.map((myCase) => (
+                  <div key={myCase.id} className={styles.caseTile}>
+                    <h3>{myCase.fullName || myCase.name || "Без Назви"}</h3>
+                    <p style={{ color: "#555" }}>{myCase.region}</p>
+                    <div className={styles.tileActions}>
+                      {/* Позначити як Виконаний */}
+                      <button
+                        className={`${styles.actionButton} ${styles.markCompletedButton}`}
+                        onClick={() => onMarkCompleted(myCase.id, myCase.region)}
+                        title="Виконаний"
+                      >
+                        <FaCheck />
+                      </button>
+                      {/* Позначити як Відкладений */}
+                      <button
+                        className={`${styles.actionButton} ${styles.markDeferredButton}`}
+                        onClick={() => onMarkDeferred(myCase.id, myCase.region)}
+                        title="Відкладений"
+                      >
+                        <FaPause />
+                      </button>
+                      {/* Редагувати */}
+                      <button
+                        className={`${styles.actionButton} ${styles.editButton}`}
+                        onClick={() => onEdit(myCase)}
+                        title="Редагувати"
+                      >
+                        <FaCog />
+                      </button>
+                      {/* Видалити */}
+                      <button
+                        className={`${styles.actionButton} ${styles.deleteButton}`}
+                        onClick={() => onDelete(myCase)}
+                        title="Видалити"
+                      >
+                        <FaTimes />
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+          )}
+
+          {/* Випадки Регіону */}
+          {regionalCases.length > 0 && (
+            <div className={styles.casesGroup}>
+              <h3>Випадки Регіону</h3>
+              <div className={styles.casesGrid}>
+                {regionalCases.map((regionCase) => (
+                  <div key={regionCase.id} className={styles.caseTile}>
+                    <h3>{regionCase.fullName || regionCase.name || "Без Назви"}</h3>
+                    <p style={{ color: "#555" }}>{regionCase.region}</p>
+                    <div className={styles.tileActions}>
+                      {/* Позначити як Виконаний */}
+                      <button
+                        className={`${styles.actionButton} ${styles.markCompletedButton}`}
+                        onClick={() => onMarkCompleted(regionCase.id, regionCase.region)}
+                        title="Виконаний"
+                      >
+                        <FaCheck />
+                      </button>
+                      {/* Позначити як Відкладений */}
+                      <button
+                        className={`${styles.actionButton} ${styles.markDeferredButton}`}
+                        onClick={() => onMarkDeferred(regionCase.id, regionCase.region)}
+                        title="Відкладений"
+                      >
+                        <FaPause />
+                      </button>
+                      {/* Редагувати */}
+                      <button
+                        className={`${styles.actionButton} ${styles.editButton}`}
+                        onClick={() => onEdit(regionCase)}
+                        title="Редагувати"
+                      >
+                        <FaCog />
+                      </button>
+                      {/* Видалити */}
+                      <button
+                        className={`${styles.actionButton} ${styles.deleteButton}`}
+                        onClick={() => onDelete(regionCase)}
+                        title="Видалити"
+                      >
+                        <FaTimes />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

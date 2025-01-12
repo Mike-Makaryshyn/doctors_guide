@@ -1,12 +1,6 @@
 // src/pages/CasesListPage/CasesListPage.jsx
 
-import React, {
-  useContext,
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-} from "react";
+import React, { useContext, useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./CasesListPage.module.scss";
 
@@ -40,13 +34,18 @@ import {
   query,
   where,
   documentId,
-  deleteDoc,
 } from "firebase/firestore";
+import SavedCasesWidget from "../../components/SavedCasesWidget"; // Імпорт компонента
 
 /**
  * Хелпер для завантаження deferred/completed статусів (для кожного регіону).
  */
-async function fetchUserCaseStatuses(currentUser, dataSources, setDeferredCases, setCompletedCases) {
+async function fetchUserCaseStatuses(
+  currentUser,
+  dataSources,
+  setDeferredCases,
+  setCompletedCases
+) {
   if (!currentUser) return;
   try {
     const userDocRef = doc(db, "users", currentUser.uid);
@@ -57,6 +56,7 @@ async function fetchUserCaseStatuses(currentUser, dataSources, setDeferredCases,
     const allDeferred = [];
     const allCompleted = [];
 
+    // Для всіх регіонів типу "dynamic" – беремо масиви deferred/completed
     Object.keys(dataSources)
       .filter((r) => dataSources[r]?.type === "dynamic")
       .forEach((region) => {
@@ -170,7 +170,12 @@ const CasesListPage = () => {
   // 5) Завантаження deferred/completed
   // ----------------------------------
   const reloadStatuses = useCallback(async () => {
-    await fetchUserCaseStatuses(currentUser, dataSources, setDeferredCases, setCompletedCases);
+    await fetchUserCaseStatuses(
+      currentUser,
+      dataSources,
+      setDeferredCases,
+      setCompletedCases
+    );
   }, [currentUser, dataSources]);
 
   useEffect(() => {
@@ -255,7 +260,7 @@ const CasesListPage = () => {
         setCollectionsLoading(false);
       }
     })();
-  }, [activeMenu, dataSources, db, sharingColId]);
+  }, [activeMenu, dataSources, sharingColId]);
 
   // ----------------------------------
   // 7) Завантаження "Моїх випадків" (myCases)
@@ -297,8 +302,7 @@ const CasesListPage = () => {
   }, [activeMenu, currentUser, dataSources]);
 
   // ----------------------------------
-  // 8) Хелпер для сортування
-  //  "deferred" -> перші, "null" (без статусу) -> далі, "completed" -> останні
+  // 8) Хелпер для сортування: "deferred" -> перші, "null" -> далі, "completed" -> останні
   // ----------------------------------
   const statusOrder = (st) => {
     if (st === "deferred") return 1;
@@ -324,8 +328,7 @@ const CasesListPage = () => {
   };
 
   // ----------------------------------
-  // 10) Відкрити детальну сторінку кейсу (FSP)
-  // ----------------------------------
+  // 10) Перейти на сторінку кейсу (FSPFormular)
   const handleCaseClick = async (caseId, source, region) => {
     try {
       setNavigating(true);
@@ -342,7 +345,6 @@ const CasesListPage = () => {
 
   // ----------------------------------
   // 11) Позначити кейс як "Erledigt" / "Später"
-  // ----------------------------------
   const handleMarkAsCompleted = async (caseId, region) => {
     if (!currentUser) return;
 
@@ -375,7 +377,6 @@ const CasesListPage = () => {
         );
       }
 
-      // Перезавантажуємо, аби мати точний стан
       await reloadStatuses();
     } catch (err) {
       console.error("Fehler beim Aktualisieren des Erledigt-Status:", err);
@@ -421,8 +422,7 @@ const CasesListPage = () => {
   };
 
   // ----------------------------------
-  // Видалення кейсу (у блоці Мої кейси)
-  // ----------------------------------
+  // Видалення кейсу (блок "myCases")
   const handleDelete = async (caseItem) => {
     if (!currentUser) return;
 
@@ -449,14 +449,14 @@ const CasesListPage = () => {
       const updated = regionData.cases.filter(
         (c) => String(c.id) !== String(caseItem.id)
       );
-
       await updateDoc(regionDocRef, { cases: updated });
 
       // Локально видаляємо
       setMyCases((prev) =>
         prev.filter((c) => String(c.id) !== String(caseItem.id))
       );
-      // Також видаляємо з completed/deferred (якщо він там був)
+
+      // Видаляємо його зі списку completed/deferred (якщо він там був)
       setCompletedCases((prev) =>
         prev.filter((x) => !(x.caseId === String(caseItem.id)))
       );
@@ -473,7 +473,6 @@ const CasesListPage = () => {
 
   // ----------------------------------
   // Поділитися колекцією
-  // ----------------------------------
   const handleShareCollection = () => {
     if (!selectedAuthor) return;
     const newUrl = `${window.location.origin}${location.pathname}?colId=${selectedAuthor}`;
@@ -491,18 +490,17 @@ const CasesListPage = () => {
   };
 
   // ----------------------------------
-  // 13) Аккордеон
-  // ----------------------------------
+  // Аккордеон
   const toggleAccordion = (section) => {
     setOpenAccordion((prev) => (prev === section ? "" : section));
   };
 
   // ----------------------------------
-  // 14) Перемикання меню
-  // ----------------------------------
+  // Перемикання меню
   const toggleMenuSection = (section) => {
     setActiveMenu(section);
     localStorage.setItem("activeMenu", section);
+    // Якщо переходимо на колекції чи "myCases", переконуємось, що sourceType = "firebase"
     if (section === "collections" || section === "myCases") {
       if (sourceType !== "firebase") {
         setSourceType("firebase");
@@ -511,8 +509,7 @@ const CasesListPage = () => {
   };
 
   // ----------------------------------
-  // 15) Налаштування (Modal)
-  // ----------------------------------
+  // Налаштування (Modal)
   const toggleSettingsModal = () => {
     setIsSettingsOpen((p) => !p);
   };
@@ -525,6 +522,7 @@ const CasesListPage = () => {
       setIsSettingsOpen(false);
     }
   };
+
   useEffect(() => {
     if (isSettingsOpen) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -537,14 +535,20 @@ const CasesListPage = () => {
   }, [isSettingsOpen]);
 
   // ----------------------------------
-  // 16) Сортування кейсів за статусом
-  // ----------------------------------
+  // Сортування кейсів за статусом
   const sortedCases = (list, region) => {
-    return list.sort((a, b) => {
+    return [...list].sort((a, b) => {
       const stA = getCaseStatus(a.id, region);
       const stB = getCaseStatus(b.id, region);
       return statusOrder(stA) - statusOrder(stB);
     });
+  };
+
+  // ----------------------------------
+  // Додаткова функція для редагування кейсу
+  const handleEditCase = (e, mc) => {
+    e.stopPropagation();
+    navigate("/edit-case", { state: { myCase: mc } });
   };
 
   // ----------------------------------
@@ -555,7 +559,10 @@ const CasesListPage = () => {
       <div className={styles.container}>
         {/* Кнопка налаштувань (зліва внизу) */}
         <div className={styles.bottomControls}>
-          <button className={styles.settingsButton} onClick={toggleSettingsModal}>
+          <button
+            className={styles.settingsButton}
+            onClick={toggleSettingsModal}
+          >
             <FaCog />
           </button>
         </div>
@@ -563,13 +570,16 @@ const CasesListPage = () => {
         {/* Кнопка Share (справа внизу), якщо ми в колекціях і обрано автора */}
         {activeMenu === "collections" && selectedAuthor && (
           <div className={styles.bottomRightShare}>
-            <button className={styles.shareRoundButton} onClick={handleShareCollection}>
+            <button
+              className={styles.shareRoundButton}
+              onClick={handleShareCollection}
+            >
               <FaShareSquare />
             </button>
           </div>
         )}
 
-        {/* Якщо loading / navigating - показуємо spinner */}
+        {/* Якщо loading / navigating - показуємо спінер */}
         {(loading || navigating) && (
           <div className={styles.spinnerWrapper}>
             <div className={styles.spinner}></div>
@@ -697,7 +707,6 @@ const CasesListPage = () => {
                 if (!authorItem) {
                   return <p style={{ color: "#555" }}>Autor nicht gefunden.</p>;
                 }
-                // сортуємо за статусом
                 const sortedList = sortedCases(authorItem.cases, authorItem.region);
 
                 return (
@@ -741,7 +750,7 @@ const CasesListPage = () => {
                                 <FaCheck />
                               </button>
                               <button
-                                className={`${styles.button} ${styles.deferButton} ${
+                                className={`${styles.button} ${styles.markDeferredButton} ${
                                   st === "deferred" ? styles.active : ""
                                 }`}
                                 onClick={(e) => {
@@ -798,11 +807,7 @@ const CasesListPage = () => {
                         {/* Редагувати */}
                         <button
                           className={`${styles.button} ${styles.editButton}`}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            // перехід на сторінку EditCasePage
-                            navigate("/edit-case", { state: { myCase: mc } });
-                          }}
+                          onClick={(e) => handleEditCase(e, mc)}
                         >
                           <FaCog />
                         </button>
@@ -875,7 +880,7 @@ const CasesListPage = () => {
                     openAccordion === "cases" ? styles.expanded : ""
                   }`}
                 >
-                  {/* Regions */}
+                  {/* Вибір регіону */}
                   <select
                     value={localRegion}
                     onChange={(e) => setLocalRegion(e.target.value)}
@@ -895,7 +900,8 @@ const CasesListPage = () => {
                     <span
                       style={{
                         color: sourceType === "local" ? "#013b6e" : "#999",
-                        fontWeight: sourceType === "local" ? "bold" : "normal",
+                        fontWeight:
+                          sourceType === "local" ? "bold" : "normal",
                       }}
                     >
                       Local
@@ -944,7 +950,7 @@ const CasesListPage = () => {
                     openAccordion === "collections" ? styles.expanded : ""
                   }`}
                 >
-                  {/* Порожньо; кнопка Share праворуч внизу */}
+                  {/* Порожньо; кнопка Share (справа внизу) */}
                 </div>
               </div>
 
@@ -972,6 +978,17 @@ const CasesListPage = () => {
             </div>
           </div>
         )}
+
+        {/* Додати SavedCasesWidget на сторінку, якщо потрібно */}
+        {/* Наприклад: */}
+        {/* <SavedCasesWidget
+          userCases={myCases}
+          regionalCases={regionalCases.filter((caseItem) => caseItem.region === globalSelectedRegion)}
+          onEdit={handleEdit}
+          onDelete={handleDelete}
+          onMarkCompleted={handleMarkAsCompleted}
+          onMarkDeferred={handleMarkDeferred}
+        /> */}
       </div>
     </MainLayout>
   );

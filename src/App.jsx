@@ -14,7 +14,7 @@ import ApprobationPage from "./pages/ApprobationPage/ApprobationPage";
 import { ModalProvider } from "./pages/FSPFormularPage/components/ModalContext";
 import { DataSourceProvider } from "./contexts/DataSourceContext";
 import { AuthProvider } from "./contexts/AuthContext"; // Імпорт AuthProvider
-
+import { CasesProvider } from "./contexts/CasesContext";
 // Імпорти для React Toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,12 +36,15 @@ function App() {
   return (
     // Обгортаємо весь додаток у QueryClientProvider
     <QueryClientProvider client={queryClient}>
+
       {/* Обгортаємо додаток у AuthProvider */}
       <AuthProvider>
         {/* Обгортаємо додаток у DataSourceProvider */}
         <DataSourceProvider>
+        <CasesProvider>
           {/* Обгортаємо додаток у ModalProvider */}
           <ModalProvider>
+            
             <div className="App">
               {/* Ви можете розмістити Header тут, якщо він потрібен */}
               {/* <Header /> */}
@@ -65,6 +68,7 @@ function App() {
               </div>
             </div>
           </ModalProvider>
+          </CasesProvider>
         </DataSourceProvider>
       </AuthProvider>
     </QueryClientProvider>

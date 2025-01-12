@@ -5,46 +5,48 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { signOut } from "firebase/auth";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import ProgressBar from "./ProgressBar.jsx";
 import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
-import SavedCasesWidget from "../../components/SavedCasesWidget.jsx"; // Імпорт SavedCasesWidget
+import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
+import { useCases } from "../../contexts/CasesContext"; // Імпорт CasesContext
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
-  const [userData, setUserData] = useState(null);
   const [progress, setProgress] = useState(0);
-  const { selectedRegion } = useGetGlobalInfo();
 
-  // Завантаження даних користувача
+  // Використання CasesContext
+  const {
+    userCases,
+    regionalCases,
+    handleEdit,
+    handleDelete,
+    handleMarkCompleted,
+    handleMarkDeferred,
+    globalRegion,
+  } = useCases();
+
   useEffect(() => {
-    const fetchUserData = async () => {
-      if (user) {
+    const fetchProgress = async () => {
+      if (!user) return;
+
+      try {
         const docRef = doc(db, "users", user.uid, "data", "documents");
         const docSnap = await getDoc(docRef);
-
         if (docSnap.exists()) {
-          const data = docSnap.data();
-          setUserData(data);
-
-          if (data.progress !== undefined) {
-            setProgress(data.progress);
-          } else {
-            console.error("Поле `progress` відсутнє у Firestore.");
-          }
-        } else {
-          console.log("Документ користувача не знайдено у Firestore");
+          const userData = docSnap.data();
+          setProgress(userData.progress || 0);
         }
+      } catch (error) {
+        console.error("Помилка завантаження прогресу:", error);
       }
     };
 
-    fetchUserData();
+    fetchProgress();
   }, [user]);
 
-  // Вихід із профілю
   const handleSignOut = async () => {
     try {
       await signOut(auth);
@@ -80,40 +82,34 @@ const Dashboard = () => {
           <h1>Особистий кабінет</h1>
 
           {/* Основна інформація */}
-          {userData && (
-            <section style={{ marginBottom: "20px" }}>
-              <h2>Основна інформація</h2>
-              <p>
-                <strong>Ім'я:</strong> {userData.firstName} {userData.lastName}
-              </p>
-              <p>
-                <strong>Спеціальність:</strong> {userData.specialty || "Не вказано"}
-              </p>
-              <p>
-                <strong>Статус визнання:</strong>{" "}
-                {userData.recognitionStatus || "Не вказано"}
-              </p>
-              <p>
-                <strong>Країна:</strong> {userData.country || "Не вказано"}
-              </p>
-              <p>
-                <strong>Локація:</strong> {userData.location || "Не вказано"}
-              </p>
-              <p>
-                <strong>Вибрана земля:</strong> {selectedRegion || "Не вказано"}
-              </p>
-            </section>
-          )}
+          <section style={{ marginBottom: "20px" }}>
+            <h2>Основна інформація</h2>
+            <p>
+              <strong>Ім'я:</strong> {user?.displayName || "Не вказано"}
+            </p>
+            <p>
+              <strong>Email:</strong> {user?.email || "Не вказано"}
+            </p>
+            <p>
+              <strong>Вибрана земля:</strong> {globalRegion || "Не вказано"}
+            </p>
+          </section>
 
           {/* Компонент ProgressBar */}
           <ProgressBar progress={progress} />
 
           {/* Віджет збережених випадків */}
-          <SavedCasesWidget /> {/* Додавання SavedCasesWidget */}
+          <SavedCasesWidget
+            userCases={userCases}
+            regionalCases={regionalCases}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+            onMarkCompleted={handleMarkCompleted}
+            onMarkDeferred={handleMarkDeferred}
+          />
 
           {/* Додатковий Контент */}
           <div style={{ marginTop: "20px", display: "flex", gap: "20px" }}>
-            {/* Основний контент Dashboard */}
             <div style={{ flex: 1 }}>
               <Link
                 to="/main-menu"
@@ -129,8 +125,6 @@ const Dashboard = () => {
                 До головного меню
               </Link>
             </div>
-
-            {/* Інші компоненти можуть бути додані тут */}
           </div>
         </div>
       </ProtectedRoute>

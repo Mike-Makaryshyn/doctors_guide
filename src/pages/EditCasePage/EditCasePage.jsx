@@ -16,26 +16,21 @@ const EditCasePage = () => {
 
   const [caseData, setCaseData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [myCaseInfo, setMyCaseInfo] = useState(null);
+  const [caseIndex, setCaseIndex] = useState(null);
 
   useEffect(() => {
     const fetchCaseData = async () => {
       const { myCase } = location.state || {};
+      console.log("Отримані дані myCase:", myCase);
+      
       if (!myCase || !user) {
         toast.error("Немає даних для редагування.");
-        // Якщо немає даних, переходимо на CasesListPage
         navigate("/cases");
         return;
       }
 
-      // Якщо у вас була логіка caseIndex, можна лишити; інакше беремо id
-      setMyCaseInfo({
-        region: myCase.region,
-        caseIndex: myCase.caseIndex,
-      });
-
       try {
-        // Беремо актуальні дані кейсу з Firestore (щоби не було конфліктів)
+        // Отримуємо документ регіону
         const regionDocRef = doc(db, "cases", myCase.region);
         const regionDocSnap = await getDoc(regionDocRef);
         if (!regionDocSnap.exists()) {
@@ -50,13 +45,17 @@ const EditCasePage = () => {
           return;
         }
 
-        const existingCase = regionData.cases[myCase.caseIndex];
-        if (!existingCase) {
+        // Шукаємо кейс за його id
+        const existingCaseIndex = regionData.cases.findIndex(c => c.id === myCase.id);
+        console.log("Індекс знайденого кейсу:", existingCaseIndex);
+
+        if (existingCaseIndex === -1) {
           toast.error("Випадок не знайдено у цьому регіоні.");
           navigate("/cases");
           return;
         }
 
+        const existingCase = regionData.cases[existingCaseIndex];
         if (existingCase.authorId !== user.uid) {
           toast.error("Ви не маєте доступу до цього випадку.");
           navigate("/cases");
@@ -64,6 +63,7 @@ const EditCasePage = () => {
         }
 
         setCaseData(existingCase);
+        setCaseIndex(existingCaseIndex);
       } catch (err) {
         console.error("Error fetching case data:", err);
         toast.error("Помилка при завантаженні даних випадку.");
@@ -89,12 +89,12 @@ const EditCasePage = () => {
       toast.error("Користувач не автентифікований.");
       return;
     }
-    if (!myCaseInfo) {
+    if (caseIndex === null) {
       toast.error("Відсутня інформація про кейс.");
       return;
     }
     try {
-      const { region, caseIndex } = myCaseInfo;
+      const { region } = location.state.myCase;
       const regionDocRef = doc(db, "cases", region);
       const regionDocSnap = await getDoc(regionDocRef);
       if (!regionDocSnap.exists()) {
@@ -104,23 +104,18 @@ const EditCasePage = () => {
       if (!regionData.cases || !Array.isArray(regionData.cases)) {
         throw new Error("Невірна структура даних у regionData.");
       }
-      if (!regionData.cases[caseIndex]) {
+      if (regionData.cases[caseIndex].id !== caseData.id) {
         throw new Error("Випадок не знайдено за вказаним індексом.");
       }
-      const oldCase = regionData.cases[caseIndex];
-      if (oldCase.authorId !== user.uid) {
-        throw new Error("Випадок належить іншому користувачу.");
-      }
 
-      // Оновлюємо
+      // Оновлюємо кейс
       const updatedCases = [...regionData.cases];
       updatedCases[caseIndex] = { ...caseData };
 
       await updateDoc(regionDocRef, { cases: updatedCases });
       toast.success("Випадок успішно оновлено!");
 
-      // Тут важливо: вертаємось на `/cases` і активуємо вкладку "myCases"
-      // Робимо це через localStorage і navigate:
+      // Встановлюємо activeMenu у localStorage та повертаємось на /cases
       localStorage.setItem("activeMenu", "myCases");
       navigate("/cases");
     } catch (err) {

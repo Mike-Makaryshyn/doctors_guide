@@ -1,100 +1,79 @@
-/* src/components/SavedCasesWidget.module.scss */
+// src/components/SavedCasesWidget.module.scss
 
 .widgetContainer {
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .casesSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .casesGroup {
+    /* Стилі для групи випадків */
   }
   
   .casesGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
   }
   
   .caseTile {
-    flex: 1 1 calc(50% - 20px); /* Відображаємо 2 плитки в ряд */
-    max-width: calc(50% - 20px);
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
     position: relative;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 150px; /* Фіксована висота для уніфікації */
-    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .caseTile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  .caseTile h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+  }
+  
+  .caseTile p {
+    margin: 0 0 10px 0;
+    color: #555;
   }
   
   .tileActions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     display: flex;
-    gap: 6px;
+    gap: 5px;
+    justify-content: flex-end;
   }
   
-  .button {
-    background-color: #04AA6D;
+  .actionButton {
+    background: none;
     border: none;
-    color: white;
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #039e5d;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
   }
   
   .markCompletedButton {
-    background-color: #28a745; /* Зелені кнопки */
+    color: #28a745;
   }
   
-  .markCompletedButton.active {
-    background-color: #218838;
+  .markDeferredButton {
+    color: #ffc107;
   }
   
-  .markCompletedButton:hover:not(.active) {
-    background-color: #1e7e34;
+  .editButton {
+    color: #007bff;
   }
   
-  .deferButton {
-    background-color: #ffc107; /* Жовті кнопки */
+  .deleteButton {
+    color: #dc3545;
   }
   
-  .deferButton.active {
-    background-color: #e0a800;
-  }
-  
-  .deferButton:hover:not(.active) {
-    background-color: #d39e00;
-  }
-  
-  .loading {
-    font-size: 18px;
-    text-align: center;
-    margin-top: 50px;
-    color: #555;
+  .actionButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }

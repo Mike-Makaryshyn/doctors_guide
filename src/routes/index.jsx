@@ -115,7 +115,7 @@ export default function Routers() {
         <Route path="/cases" element={<CasesListPage />} />
 
         {/* Сторінка редагування кейсу */}
-        <Route path={pathList.edit_case.path} element={<EditCasePage />} />
+        <Route path="/edit-case" element={<EditCasePage />} />
 
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
         <Route
