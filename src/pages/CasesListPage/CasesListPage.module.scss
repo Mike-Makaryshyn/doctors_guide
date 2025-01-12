@@ -1,206 +1,171 @@
 /* src/pages/CasesListPage/CasesListPage.module.scss */
 
-/* Інші стилі залишаються без змін */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.cases-list-page {
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
   padding: 20px;
-  position: relative;
+  font-family: 'Poppins', sans-serif;
 }
 
-.cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.filter-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.status-filter {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  color: #333;
-
-  transition: box-shadow 0.3s ease;
-}
-
-.status-filter:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Стилі для кнопки "Колекції" */
-.collections-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.collections-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-/* Стилі для випадаючого списку авторів */
-.collections-dropdown {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.author-select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  color: #333;
-
-  transition: box-shadow 0.3s ease;
-}
-
-.author-select:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+.loading {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
 }
 
 /* Стилі для плиток випадків */
-.case-tile {
-  position: relative; /* Для позиціонування кнопок всередині плитки */
-  padding: 15px;
-  border-radius: 10px;
-  background: #e0e0e0;
-  border: none;
-  color: #333;
-  font-size: 14px;
-  text-align: center;
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; /* Рівномірно розподіляємо плитки */
+}
+
+/* Оновлені стилі плитки */
+.tile {
+  flex: 1 1 calc(33.33% - 20px); /* Плитки займають рівно третину ширини */
+  max-width: calc(33.33% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px 20px 20px; /* Додано верхній відступ для кнопок */
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Розподіляємо простір між елементами */
+  height: 100%; /* Забезпечуємо однакову висоту */
+  min-height: 250px; /* Мінімальна висота плитки */
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Зміна кольору плитки на основі статусу */
-.case-tile.completed {
+.tile.completed {
   background-color: #4caf50; /* Зелений для виконаних випадків */
   color: #fff;
 }
 
-.case-tile.deferred {
+.tile.deferred {
   background-color: #ff9800; /* Оранжевий для відкладених випадків */
   color: #fff;
 }
 
-.case-tile:hover {
-  transform: translateY(-5px);
-}
-
-/* Контейнер для кнопок статусу */
-.status-buttons {
+/* Контейнер для кнопок редагування та видалення */
+.actions {
   position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
-  gap: 5px;
+  gap: 6px;
+  z-index: 10; /* Забезпечуємо, що кнопки завжди поверх */
 }
 
-/* Стилі для кнопок позначення статусу */
-.mark-completed-button,
-.defer-case-button {
-  background-color: #e0e0e0;
+/* Стилі для кнопок */
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
   border-radius: 50%;
-  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-  color: #4d4d4d;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 6px;
-  transition: all 0.2s ease-in-out;
-  border: 2px solid rgb(206, 206, 206);
-
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  width: 30px;
-  height: 30px;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mark-completed-button.active,
-.defer-case-button.active {
-  background-color: #007bff; /* Синій фон для активних кнопок */
-  color: #fff; /* Білий текст при активному стані */
-  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
-              2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
-  transform: scale(0.95); /* Легке зменшення розміру для ефекту зажаття */
+.button:hover {
+  background-color: #039e5d;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.mark-completed-button:hover:not(.active),
-.defer-case-button:hover:not(.active) {
-  background-color: #0056b3; /* Темніший синій при наведенні */
-  color: #fff;
+.editButton {
+  background-color: #04AA6D;
 }
 
-.mark-completed-button.active:hover,
-.defer-case-button.active:hover {
-  background-color: #0056b3; /* Темніший синій при наведенні активних кнопок */
+.deleteButton {
+  background-color: #e74c3c;
 }
 
-.mark-completed-button:disabled,
-.defer-case-button:disabled {
-  background-color: #ccc;
-  color: #888888;
-  cursor: not-allowed;
-  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+.deleteButton:hover {
+  background-color: #d62c1a;
 }
 
-.mark-completed-button::before,
-.defer-case-button::before {
-  font-size: 14px; /* Розмір іконок */
-  color: inherit; /* Спадкування кольору тексту */
-  transition: transform 0.3s ease, color 0.3s ease;
+/* Нові кнопки для "Позначити як завершений" та "Відкласти" */
+.markCompletedButton {
+  background-color: #28a745; /* Зелені кнопки */
 }
 
-.mark-completed-button:hover::before,
-.defer-case-button:hover::before {
-  transform: scale(1.2); /* Легке збільшення іконки */
+.markCompletedButton.active {
+  background-color: #218838;
 }
 
-/* Стилі для автора */
+.markCompletedButton:hover:not(.active) {
+  background-color: #1e7e34;
+}
+
+.deferButton {
+  background-color: #ffc107; /* Жовті кнопки */
+}
+
+.deferButton.active {
+  background-color: #e0a800;
+}
+
+.deferButton:hover:not(.active) {
+  background-color: #d39e00;
+}
+
+/* Заголовок плитки */
+.tileHeader {
+  font-size: 20px;
+  color: #013b6e;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  text-align: left;
+  flex-grow: 1; /* Забезпечує, що заголовок займає доступний простір */
+  word-wrap: break-word; /* Перенос слів для довгих заголовків */
+}
+
+/* Контент плитки */
+.tileContent {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+  word-wrap: break-word; /* Перенос слів для довгого тексту */
+}
+
+/* Додаткові стилі для автора */
 .author {
   margin-top: 10px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* Стилі для регіону */
+/* Додаткові стилі для регіону */
 .region {
   margin-top: 5px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* Стилі для назви випадку */
+/* Додаткові стилі для назви випадку */
 .case-name {
   margin-top: 10px;
   font-weight: bold;
@@ -216,40 +181,14 @@
 
 /* Bottom Controls */
 .bottom-controls {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  position: fixed; /* Фіксуємо позицію */
+  bottom: 20px; /* Відступ від нижнього краю */
+  left: 20px; /* Відступ від лівого краю */
   display: flex;
-  gap: 15px;
   align-items: center;
-  /* Neomorphic styling */
-  background: #e0e0e0;
-  border-radius: 30px;
-  padding: 10px 20px;
-  width: calc(100% - 40px); /* Відступи зліва та справа */
-  max-width: 600px; /* Максимальна ширина для великих екранів */
-  box-sizing: border-box;
-}
-
-/* Поле пошуку */
-.search-container {
-  flex: 1;
-}
-
-.search-input {
-  width: 100%; /* Розтягується на всю доступну ширину */
-  padding: 10px 15px;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  background: #e0e0e0;
-  font-size: 14px;
-  color: #333;
-  transition: box-shadow 0.3s ease;
-
-  ::placeholder {
-    color: #999;
-  }
+  justify-content: flex-start; /* Вирівнювання кнопки налаштувань вліво */
+  margin-top: 20px;
+  z-index: 1000; /* Забезпечуємо, що кнопка поверх інших елементів */
 }
 
 /* Кнопка Налаштувань */
@@ -495,9 +434,25 @@ input:checked + .slider:before {
 
 /* Адаптивність */
 @media (max-width: 768px) {
-  .cases-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+  .tilesContainer {
+    flex-direction: column;
+    align-items: stretch; /* Замість center, щоб плитки займали всю ширину */
+  }
+
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+    align-items: flex-start; /* Вирівнювання вмісту вліво */
+    min-height: 200px; /* Зменшена мінімальна висота для мобільних */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 15px 15px 15px; /* Зменшено відступи по боках */
+  }
+
+  .button {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
   }
 
   .settings-modal {
@@ -520,58 +475,27 @@ input:checked + .slider:before {
     font-size: 14px;
   }
 
-  .search-input {
-    width: 100%; /* Розтягується на всю ширину контейнера */
+  /* Забезпечуємо однакову висоту плиток */
+  .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .bottom-controls {
-    padding: 8px 16px;
-    gap: 10px;
-    width: calc(100% - 32px); /* Відступи зліва та справа */
-  }
-
-  .mark-completed-button,
-  .defer-case-button {
-    font-size: 12px;
-    padding: 5px;
-    width: 25px;
-    height: 25px;
-  }
-
-  .author {
-    font-size: 10px;
-  }
-
-  .region {
-    font-size: 10px;
-  }
-
-  .case-name {
-    font-size: 14px;
-  }
-
-  .additional-info {
-    font-size: 10px;
-  }
-
-  .author-filter {
-    margin-left: 10px;
-    padding: 6px;
-    font-size: 12px;
-  }
-
-  /* Стилі для кнопки "Колекції" та випадаючого списку */
-  .collections-button {
-    width: 100%;
+  /* Додаткові стилі для плиток авторів */
+  .author-tile {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    min-height: 200px; /* Однакова мінімальна висота */
   }
 
-  .collections-dropdown {
-    width: 100%;
-  }
-
-  .author-select {
-    width: 100%;
+  /* Вирівнювання тексту плитки, щоб уникнути перекриття */
+  .tileHeader,
+  .tileContent,
+  .additional-info {
+    padding-right: 40px; /* Відступ справа для кнопок */
   }
 }
 

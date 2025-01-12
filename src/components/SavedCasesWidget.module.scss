@@ -1,103 +1,100 @@
+/* src/components/SavedCasesWidget.module.scss */
+
 .widgetContainer {
     padding: 20px;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Займає всю ширину на мобільних */
-    max-width: 25%; /* 25% ширини на десктопі */
-    margin: 0 auto; /* Центрування для маленьких екранів */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
   }
   
   .casesGrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Відстань між плитками */
-    justify-content: flex-start; /* Вирівнювання плиток по лівому краю */
+    gap: 20px;
+    justify-content: space-between;
   }
   
   .caseTile {
-    position: relative; /* Для позиціонування кнопок */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    width: 100%; /* Плитка займає всю ширину контейнера */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    flex: 1 1 calc(50% - 20px); /* Відображаємо 2 плитки в ряд */
+    max-width: calc(50% - 20px);
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Фіксована висота для уніфікації */
+    box-sizing: border-box;
   }
   
   .caseTile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  .caseTile h3 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin: 0 0 10px 0; /* Відступ між назвою і кнопками */
-    word-wrap: break-word; /* Перенос слів, якщо текст занадто довгий */
-    text-align: center;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
   }
   
   .tileActions {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
     display: flex;
-    flex-direction: column; /* Вертикальне розташування кнопок */
-    gap: 5px; /* Відстань між кнопками */
+    gap: 6px;
   }
   
-  .editButton,
-  .deleteButton {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  .button {
+    background-color: #04AA6D;
     border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     cursor: pointer;
-    color: white;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Кнопка редагування */
-  .editButton {
-    background-color: #4caf50;
+  .button:hover {
+    background-color: #039e5d;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
   }
   
-  .editButton:hover {
-    background-color: #45a049;
-    transform: scale(1.1); /* Легке збільшення при наведенні */
+  .markCompletedButton {
+    background-color: #28a745; /* Зелені кнопки */
   }
   
-  /* Кнопка видалення */
-  .deleteButton {
-    background-color: #f44336;
+  .markCompletedButton.active {
+    background-color: #218838;
   }
   
-  .deleteButton:hover {
-    background-color: #d32f2f;
-    transform: scale(1.1); /* Легке збільшення при наведенні */
+  .markCompletedButton:hover:not(.active) {
+    background-color: #1e7e34;
+  }
+  
+  .deferButton {
+    background-color: #ffc107; /* Жовті кнопки */
+  }
+  
+  .deferButton.active {
+    background-color: #e0a800;
+  }
+  
+  .deferButton:hover:not(.active) {
+    background-color: #d39e00;
   }
   
   .loading {
     font-size: 18px;
     text-align: center;
-  }
-  
-  /* Адаптивність для мобільних */
-  @media (max-width: 768px) {
-    .widgetContainer {
-      max-width: 100%; /* На мобільних контейнер займає всю ширину */
-    }
-  
-    .caseTile {
-      width: 100%; /* Плитки займають всю ширину контейнера */
-    }
+    margin-top: 50px;
+    color: #555;
   }

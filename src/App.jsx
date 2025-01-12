@@ -1,5 +1,6 @@
 // src/App.jsx
 
+import React from "react";
 import { useState, useEffect } from "react";
 import { languages } from "./constants/translation/global";
 import "./App.css";
@@ -18,6 +19,12 @@ import { AuthProvider } from "./contexts/AuthContext"; // Імпорт AuthProvi
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Імпорти для React Query
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+// Створення екземпляру QueryClient
+const queryClient = new QueryClient();
+
 const GERMAN_MAP_PAGE = 3;
 const DEFAULT_LANGUAGE = "de";
 
@@ -27,34 +34,40 @@ function App() {
   const initialPage = storedPage ? parseInt(storedPage, 10) : 2;
 
   return (
-    <AuthProvider> {/* Обгорніть додаток у AuthProvider */}
-      <DataSourceProvider>
-        <ModalProvider>
-          <div className="App">
-            {/* Заголовок або інші компоненти */}
-            {/* <Header /> */}
+    // Обгортаємо весь додаток у QueryClientProvider
+    <QueryClientProvider client={queryClient}>
+      {/* Обгортаємо додаток у AuthProvider */}
+      <AuthProvider>
+        {/* Обгортаємо додаток у DataSourceProvider */}
+        <DataSourceProvider>
+          {/* Обгортаємо додаток у ModalProvider */}
+          <ModalProvider>
+            <div className="App">
+              {/* Ви можете розмістити Header тут, якщо він потрібен */}
+              {/* <Header /> */}
 
-            {/* Основний контент */}
-            <div className="content">
-              <Routers />
+              {/* Основний контент */}
+              <div className="content">
+                <Routers />
 
-              {/* Контейнер для Toast повідомлень */}
-              <ToastContainer
-                position="top-right"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-              />
+                {/* Контейнер для Toast повідомлень */}
+                <ToastContainer
+                  position="top-right"
+                  autoClose={3000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
+              </div>
             </div>
-          </div>
-        </ModalProvider>
-      </DataSourceProvider>
-    </AuthProvider>
+          </ModalProvider>
+        </DataSourceProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 

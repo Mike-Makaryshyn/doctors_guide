@@ -324,6 +324,147 @@ Veränderungen im Stuhlgang sind charakteristische Symptome für **CED** und **K
         },
       
     },
+    hwi: {
+
+      currentAnamnese: {
+          additionalInfo: "Специфічна тромбозна анамнеза...",
+      },
+
+    vegetativeAnamnese: {
+      additionalInfo: `
+  ### **Anamnese bei Harnwegsinfektion (HWI)**
+  
+  ---
+  
+  ### **Allgemeines Ziel:**
+  Die Anamnese bei HWI zielt darauf ab, typische Symptome wie **Dysurie**, **Pollakisurie** und **Hämaturie** zu erfassen, um die Diagnose und Behandlung optimal zu steuern. Dabei sollten potenzielle Risikofaktoren und Begleitsymptome berücksichtigt werden, um eine Ausbreitung der Infektion oder Komplikationen wie Pyelonephritis frühzeitig zu erkennen.
+  
+  - **Besondere Warnhinweise (Red Flags):**
+    - **Fieber** oder **Schüttelfrost** (Hinweis auf systemische Infektion).
+    - **Flankenschmerzen** (Verdacht auf Nierenbeteiligung).
+    - **Blut im Urin** oder Verfärbung.
+    - Häufiges, schmerzhaftes **nächtliches Wasserlassen**.
+  
+  ---
+  
+  ### **1. Wasserlassen (Miktion) erfragen**
+  #### **Ziel:**
+  Fokus auf HWI-typische Symptome, um die Diagnose zu sichern und den Schweregrad zu beurteilen.
+  
+  #### **Anleitung:**
+  - Erfragen Sie die Häufigkeit, Schmerzen und Auffälligkeiten beim Wasserlassen.
+  - Achten Sie auf Beschwerden wie Brennen, Harndrang und eine unvollständige Entleerung der Blase.
+  
+  #### **Beispiele für Fragen:**
+  - Arzt: "Haben Sie Schmerzen oder ein Brennen beim Wasserlassen?"
+  - Arzt: "Wie oft müssen Sie aktuell zur Toilette, und ist die Menge normal?"
+  - Arzt: "Ist Ihnen aufgefallen, dass Ihr Urin rötlich oder trüb aussieht?"
+  
+  #### **Typische Antworten von Patienten:**
+  - Patient: "Es brennt jedes Mal, wenn ich auf die Toilette gehe."
+  - Patient: "Ich muss ständig zur Toilette, aber es kommt nur wenig."
+  
+  #### **Follow-ups:**
+  - Arzt: "Seit wann haben Sie diese Beschwerden?"
+  - Arzt: "Fühlen Sie sich nach dem Wasserlassen erleichtert, oder bleibt das Gefühl, dass noch etwas in der Blase ist?"
+  
+  #### **Worauf zu achten ist:**
+  - **Schmerzen (Dysurie)** als Hauptsymptom.
+  - Häufiges Wasserlassen in kleinen Mengen (**Pollakisurie**).
+  - Auffällige Urinverfärbungen wie **Hämaturie**.
+  
+  ---
+  
+  ### **2. Sexualanamnese erfragen**
+  #### **Ziel:**
+  Ermittlung möglicher Auslöser wie Geschlechtsverkehr, der eine HWI begünstigen könnte (z. B. „Honeymoon-Zystitis“).
+  
+  #### **Anleitung:**
+  - Sprechen Sie sensibel das Thema Sexualverhalten an, um den Zusammenhang zwischen Symptomen und Geschlechtsverkehr zu erfassen.
+  - Fragen Sie nach Verhütungsmethoden, die das Risiko erhöhen könnten.
+  
+  #### **Beispiele für Fragen:**
+  - Arzt: "Hatten Sie in letzter Zeit Geschlechtsverkehr?"
+  - Arzt: "Sind die Beschwerden nach dem Geschlechtsverkehr aufgetreten?"
+  - Arzt: "Verwenden Sie Verhütungsmittel wie Diaphragma oder Spermizide?"
+  
+  #### **Typische Antworten von Patienten:**
+  - Patient: "Ja, die Beschwerden kamen nach dem letzten Geschlechtsverkehr."
+  - Patient: "Ich benutze ein Diaphragma, und danach habe ich öfter Probleme."
+  
+  #### **Follow-ups:**
+  - Arzt: "War der Geschlechtsverkehr schmerzhaft?"
+  - Arzt: "Haben Sie solche Beschwerden schon einmal nach dem Geschlechtsverkehr gehabt?"
+  
+  #### **Worauf zu achten ist:**
+  - Häufiger oder kürzlich stattgefundener Geschlechtsverkehr als potenzieller Auslöser.
+  - Verwendung von **Spermiziden** oder **Diaphragmen**, die das Risiko erhöhen.
+  
+  ---
+  
+  ### **3. Gynäkologische Anamnese (nur für weibliche Patienten)**
+  #### **Ziel:**
+  Abklärung möglicher gynäkologischer Faktoren oder Infektionen, die zur HWI beitragen könnten.
+  
+  #### **Anleitung:**
+  - Fragen Sie nach vaginalem Ausfluss, Zyklusanomalien und früheren Infektionen.
+  - Sensible Kommunikation, um Vertrauen zu schaffen.
+  
+  #### **Beispiele für Fragen:**
+  - Arzt: "Gab es Veränderungen beim vaginalen Ausfluss, wie Farbe oder Geruch?"
+  - Arzt: "Haben Sie in letzter Zeit Schmerzen im Unterleib bemerkt?"
+  - Arzt: "Gab es in der Vergangenheit Infektionen im vaginalen Bereich?"
+  
+  #### **Typische Antworten von Patienten:**
+  - Patient: "Ja, ich habe stärkeren Ausfluss bemerkt."
+  - Patient: "Ich habe Unterleibsschmerzen, die vor ein paar Tagen angefangen haben."
+  
+  #### **Follow-ups:**
+  - Arzt: "Seit wann bemerken Sie diese Veränderungen?"
+  - Arzt: "Hat der Ausfluss einen unangenehmen Geruch oder eine andere Farbe?"
+  
+  #### **Worauf zu achten ist:**
+  - **Veränderter Ausfluss** als Hinweis auf Begleitinfektionen.
+  - **Zyklusveränderungen** oder **Unterbauchschmerzen**.
+  
+  ---
+  
+  ### **4. Begleitsymptome erfragen**
+  #### **Ziel:**
+  Erkennung systemischer Symptome wie Fieber oder Rückenschmerzen, die auf eine Ausbreitung der Infektion hindeuten.
+  
+  #### **Anleitung:**
+  - Fragen Sie gezielt nach Allgemeinsymptomen, die auf eine Nierenbeteiligung oder systemische Infektion hinweisen könnten.
+  - Erheben Sie Symptome wie Flankenschmerzen oder allgemeines Krankheitsgefühl.
+  
+  #### **Beispiele für Fragen:**
+  - Arzt: "Haben Sie Fieber oder Schüttelfrost bemerkt?"
+  - Arzt: "Haben Sie Schmerzen im unteren Rücken- oder Flankenbereich?"
+  - Arzt: "Fühlen Sie sich insgesamt krank oder abgeschlagen?"
+  
+  #### **Typische Antworten von Patienten:**
+  - Patient: "Ja, ich hatte gestern leichtes Fieber."
+  - Patient: "Ich habe Rückenschmerzen, die in die Seite ausstrahlen."
+  
+  #### **Follow-ups:**
+  - Arzt: "Wie hoch war das Fieber, und wie lange hat es angehalten?"
+  - Arzt: "Sind die Schmerzen konstant, oder treten sie nur bei bestimmten Bewegungen auf?"
+  
+  #### **Worauf zu achten ist:**
+  - **Fieber** oder **Schüttelfrost** als Hinweis auf Pyelonephritis.
+  - **Flankenschmerzen**, die eine Nierenbeteiligung vermuten lassen.
+  - **Allgemeines Krankheitsgefühl** als Zeichen einer systemischen Infektion.
+  
+  ---
+  
+  ### **Zusammenfassung für den Arzt:**
+  - **Hauptsymptome:** Dysurie, Pollakisurie, Hämaturie.
+  - **Begleitsymptome:** Fieber, Flankenschmerzen, allgemeines Krankheitsgefühl.
+  - **Spezielle Aspekte:** Sexualanamnese und gynäkologische Faktoren bei Frauen berücksichtigen.
+  - **Warnhinweise:** Systemische Symptome wie Fieber und Rückenschmerzen ernst nehmen, um Komplikationen frühzeitig zu erkennen.
+      `,
+  }
+  },
 };
 
 export default FallSpecificData;

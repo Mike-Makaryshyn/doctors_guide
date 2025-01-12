@@ -363,15 +363,22 @@ const FSPFormularPage = () => {
     },
     [sourceType, dataSources]
   );
-
+  useEffect(() => {
+    if (localRegion && selectedCase && dataSources[localRegion]) {
+      const timeout = setTimeout(() => {
+        handleParseData(localRegion, selectedCase);
+      }, 500); // Затримка 500 мс для синхронізації даних
+      return () => clearTimeout(timeout);
+    }
+  }, [localRegion, selectedCase, sourceType, dataSources, handleParseData]);
   // Call handleParseData when localRegion / selectedCase / sourceType changes
   useEffect(() => {
-    if (localRegion && selectedCase) {
+    if (localRegion && selectedCase && dataSources[localRegion]) {
       handleParseData(localRegion, selectedCase);
-    } else {
-      setParsedData({});
+    } else if (!dataSources[localRegion]) {
+      console.warn(`Дані для регіону ${localRegion} ще не завантажені.`);
     }
-  }, [localRegion, selectedCase, sourceType, handleParseData]);
+  }, [localRegion, selectedCase, sourceType, dataSources, handleParseData]);
 
   // ---- Open additional info modal ----
   const handleOpenInfoModal = (type) => {
@@ -430,7 +437,13 @@ const FSPFormularPage = () => {
       setInfoModal(true);
     }
   }, [additionalInfo]);
-
+  useEffect(() => {
+    if (!selectedCase || Object.keys(parsedData).length === 0) {
+      console.warn("Дані для вибраного випадку ще не завантажені.");
+    } else {
+      console.log("Дані для вибраного випадку успішно завантажені:", parsedData);
+    }
+  }, [selectedCase, parsedData]);
   // ---- Change case in Select ----
   const handleCaseChange = (option) => {
     setSelectedCase(option.value);
@@ -651,12 +664,21 @@ const FSPFormularPage = () => {
   useEffect(() => {
     console.log("DataSources updated:", dataSources);
   }, [dataSources]);
-
+  
   useEffect(() => {
     console.log("Selected Case:", selectedCase);
     console.log("Parsed Data:", parsedData);
   }, [selectedCase, parsedData]);
-
+  useEffect(() => {
+    if (selectedCase && localRegion && dataSources[localRegion]) {
+      const caseExists = dataSources[localRegion]?.files?.some(
+        (file) => String(file.id) === String(selectedCase)
+      );
+      if (!caseExists) {
+        console.warn(`Випадок ${selectedCase} не знайдено в регіоні ${localRegion}`);
+      }
+    }
+  }, [selectedCase, localRegion, dataSources]);
   return (
     <MainLayout>
       {!user ? (
