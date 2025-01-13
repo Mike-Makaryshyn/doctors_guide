@@ -33,6 +33,8 @@ const Dashboard = () => {
     handleMarkDeferred,
     setSourceType,
     setSelectedRegion,
+    handleCaseClick,
+    handleEdit,
   } = useCases();
 
   // Стан спінера
@@ -68,36 +70,27 @@ const Dashboard = () => {
     }
   };
 
-  // Обробники навігації
-  const handleCaseClick = async (caseId, source, region) => {
-    try {
-      setNavigating(true);
-      if (source === "firebase") {
-        await fetchFirebaseCases(region);
-      }
-      navigate(`/information-sources/${source}/${caseId}`);
-    } catch (err) {
-      console.error("Fehler beim Öffnen des Falls:", err);
-      toast.error("Fehler beim Öffnen des Falls.");
-    } finally {
-      setNavigating(false);
-    }
+  // Нова функція для редагування кейсу
+  const handleEditCase = (myCase) => {
+    handleEdit && handleEdit(myCase);
   };
 
-  const handleRegionalCaseClick = async (caseId, source, region) => {
-    try {
-      setNavigating(true);
-      if (source === "firebase") {
-        await fetchFirebaseCases(region);
-      }
-      navigate(`/information-sources/${source}/${caseId}`);
-    } catch (err) {
-      console.error("Fehler beim Öffnen des Falls:", err);
-      toast.error("Fehler beim Öffnen des Falls.");
-    } finally {
-      setNavigating(false);
-    }
-  };
+  // Функція сортування кейсів
+  const sortedCases = useCallback(
+    (list, region) => {
+      return [...list].sort((a, b) => {
+        const stA = a.status;
+        const stB = b.status;
+        const statusOrder = (st) => {
+          if (st === "deferred") return 1;
+          if (st === "completed") return 3;
+          return 2;
+        };
+        return statusOrder(stA) - statusOrder(stB);
+      });
+    },
+    []
+  );
 
   // Встановлюємо sourceType на "local" при завантаженні Dashboard
   useEffect(() => {
@@ -118,40 +111,6 @@ const Dashboard = () => {
     console.log("Dashboard - Selected Region:", selectedRegion);
     console.log("Dashboard - Source Type:", sourceType);
   }, [userCases, regionalCases, selectedRegion, sourceType]);
-
-  // Функція для отримання статусу кейсу
-  const getCaseStatus = (caseId, region) => {
-    const isDef = regionalCases.some(
-      (x) => x.caseId === String(caseId) && x.region === region && x.status === "deferred"
-    );
-    if (isDef) return "deferred";
-
-    const isComp = regionalCases.some(
-      (x) => x.caseId === String(caseId) && x.region === region && x.status === "completed"
-    );
-    if (isComp) return "completed";
-
-    return null;
-  };
-
-  // Функція сортування кейсів
-  const sortedCases = useCallback((list, region) => {
-    return [...list].sort((a, b) => {
-      const stA = getCaseStatus(a.id, region);
-      const stB = getCaseStatus(b.id, region);
-      const statusOrder = (st) => {
-        if (st === "deferred") return 1;
-        if (st === "completed") return 3;
-        return 2;
-      };
-      return statusOrder(stA) - statusOrder(stB);
-    });
-  }, [getCaseStatus]);
-
-  // Нова функція для редагування кейсу
-  const handleEditCase = (myCase) => {
-    navigate("/edit-case", { state: { myCase } });
-  };
 
   return (
     <MainLayout>
@@ -192,15 +151,7 @@ const Dashboard = () => {
 
           {/* Saved Cases Widget */}
           <SavedCasesWidget
-            userCases={userCases}
-            regionalCases={sortedCases(regionalCases, selectedRegion)}
-            onEdit={handleEditCase} // Новий обробник редагування
-            onDelete={handleDelete}
-            onMarkCompleted={handleMarkCompleted}
-            onMarkDeferred={handleMarkDeferred}
-            onCaseClick={handleCaseClick} // Навігація для власних випадків
-            onRegionalCaseClick={handleRegionalCaseClick} // Навігація для регіональних випадків
-            onAddNewCase={() => navigate("/data-collection")} // Додати новий випадок
+            // Видаляємо передавання пропсів, бо SavedCasesWidget використовує контекст
           />
 
           {/* Додатковий контент */}

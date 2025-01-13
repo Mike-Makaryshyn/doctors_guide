@@ -1,0 +1,82 @@
+.progressContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание к левому краю */
+    margin: 0; /* Убираем отступы сверху и снизу */
+  }
+  
+  .circularWrapper {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Легкий эффект рельефа */
+    margin: 0 auto; /* Центрирование на мобильных устройствах */
+  
+    &:hover {
+      transform: translateY(-5px); /* Эффект "парения" */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Подсвеченная тень */
+    }
+  
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+  
+  .iconWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: transform 0.2s ease, rotate 0.5s ease; /* Легкая анимация вращения */
+  
+    .documentIcon {
+      font-size: 50px;
+      color: #4caf50;
+      margin-bottom: 5px;
+      transition: transform 0.5s ease-in-out; /* Колебание иконки */
+    }
+  
+    .percentageText {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+  
+  .circularWrapper:hover .iconWrapper .documentIcon {
+    transform: rotate(5deg); /* Легкое покачивание при наведении */
+  }
+  
+  .circularWrapper:active .iconWrapper .documentIcon {
+    transform: scale(0.95); /* Легкое сжатие при клике */
+  }
+  
+  /* Анимация блика для заполненного прогресса */
+  @keyframes shimmer {
+    0% {
+      stroke-dasharray: 0, 100;
+    }
+    100% {
+      stroke-dasharray: 100, 0;
+    }
+  }
+  
+  .circularWrapper .CircularProgressbar-path {
+    stroke: #4caf50;
+    animation: shimmer 2s infinite ease-in-out;
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
+    .circularWrapper {
+      width: 50%; /* 50% ширины экрана на мобильных устройствах */
+      height: auto;
+    }
+  }

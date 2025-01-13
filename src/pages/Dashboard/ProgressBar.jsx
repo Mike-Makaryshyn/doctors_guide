@@ -1,50 +1,40 @@
-// src/components/ProgressBar/ProgressBar.jsx
 import React from "react";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import { useNavigate } from "react-router-dom";
+import { FaFileAlt } from "react-icons/fa";
+import styles from "./ProgressBar.module.scss";
 
 const ProgressBar = ({ progress }) => {
   const navigate = useNavigate();
 
   const handleNavigateToDocuments = () => {
-    navigate("/documents"); // Замініть на шлях до вашої сторінки документів
+    navigate("/documents"); // Замініть на ваш шлях до сторінки документів
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div className={styles.progressContainer}>
       <h2>Прогрес заповнення документів</h2>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div
-          style={{
-            flex: 1,
-            height: "20px",
-            backgroundColor: "#e0e0e0",
-            borderRadius: "10px",
-            overflow: "hidden",
-            marginRight: "10px",
-          }}
-        >
-          <div
-            style={{
-              width: `${progress}%`,
-              height: "100%",
-              backgroundColor: "#4CAF50",
-            }}
-          ></div>
+      <div className={styles.circularWrapper} onClick={handleNavigateToDocuments}>
+        <CircularProgressbar
+          value={progress}
+          styles={buildStyles({
+            pathColor: "#4CAF50",
+            trailColor: "#e0e0e0",
+            textColor: "transparent",
+          })}
+        />
+        <div className={styles.iconWrapper}>
+          <FaFileAlt className={styles.documentIcon} />
+          <div className={styles.percentageText}>{progress}%</div>
         </div>
-        <span style={{ marginRight: "10px" }}>{progress}%</span>
-        <button
-          onClick={handleNavigateToDocuments}
-          style={{
-            padding: "5px 10px",
-            backgroundColor: "#007BFF",
-            color: "#FFF",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
-        >
-          До документів
-        </button>
+      </div>
+
+      {/* Додаємо плитку під прогрес-баром */}
+      <div className={styles.tileWrapper}>
+        <div className={styles.tile} onClick={handleNavigateToDocuments}>
+          <span>До документів</span>
+        </div>
       </div>
     </div>
   );

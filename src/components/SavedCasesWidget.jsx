@@ -13,16 +13,17 @@ import {
 } from "react-icons/fa";
 import { useCases } from "../contexts/CasesContext"; // Імпорт хука контексту
 
-const SavedCasesWidget = ({
-  userCases = [],
-  regionalCases = [],
-  onEdit,
-  onDelete,
-  onCaseClick, // Навігація для власних випадків
-  onRegionalCaseClick, // Навігація для регіональних випадків
-  onAddNewCase,
-}) => {
-  const { handleMarkCompleted, handleMarkDeferred } = useCases(); // Використання функцій з контексту
+const SavedCasesWidget = () => {
+  const {
+    userCases,
+    regionalCases,
+    handleMarkCompleted,
+    handleMarkDeferred,
+    handleCaseClick,
+    handleEdit,
+    handleDelete,
+    // handleAddNewCase, // Якщо потрібна
+  } = useCases(); // Використання функцій та даних з контексту
 
   const [isUserCasesExpanded, setIsUserCasesExpanded] = useState(true);
   const [isRegionalCasesExpanded, setIsRegionalCasesExpanded] = useState(true);
@@ -33,7 +34,18 @@ const SavedCasesWidget = ({
     console.log("SavedCasesWidget - Regional Cases:", regionalCases);
     console.log("SavedCasesWidget - handleMarkCompleted:", handleMarkCompleted);
     console.log("SavedCasesWidget - handleMarkDeferred:", handleMarkDeferred);
-  }, [userCases, regionalCases, handleMarkCompleted, handleMarkDeferred]);
+    console.log("SavedCasesWidget - handleCaseClick:", handleCaseClick);
+    console.log("SavedCasesWidget - handleEdit:", handleEdit);
+    console.log("SavedCasesWidget - handleDelete:", handleDelete);
+  }, [
+    userCases,
+    regionalCases,
+    handleMarkCompleted,
+    handleMarkDeferred,
+    handleCaseClick,
+    handleEdit,
+    handleDelete,
+  ]);
 
   return (
     <div className={styles.widgetContainer}>
@@ -75,8 +87,8 @@ const SavedCasesWidget = ({
                             : ""
                         }`}
                         onClick={() =>
-                          onCaseClick &&
-                          onCaseClick(myCase.id, myCase.source || "firebase", myCase.region)
+                          handleCaseClick &&
+                          handleCaseClick(myCase.id, myCase.source || "firebase", myCase.region)
                         }
                       >
                         <div className={styles.actions}>
@@ -85,7 +97,7 @@ const SavedCasesWidget = ({
                             className={`${styles.actionButton} ${styles.editButton}`}
                             onClick={(e) => {
                               e.stopPropagation();
-                              onEdit && onEdit(myCase);
+                              handleEdit && handleEdit(myCase);
                               console.log(`Edit clicked for caseId: ${myCase.id}`);
                             }}
                             title="Bearbeiten"
@@ -97,7 +109,7 @@ const SavedCasesWidget = ({
                             className={`${styles.actionButton} ${styles.deleteButton}`}
                             onClick={(e) => {
                               e.stopPropagation();
-                              onDelete && onDelete(myCase);
+                              handleDelete && handleDelete(myCase);
                               console.log(`Delete clicked for caseId: ${myCase.id}`);
                             }}
                             title="Löschen"
@@ -118,7 +130,7 @@ const SavedCasesWidget = ({
                 className={styles.addNewTile}
                 onClick={(e) => {
                   e.stopPropagation();
-                  onAddNewCase && onAddNewCase();
+                  // Додайте логіку для додавання нового випадку, якщо потрібно
                   console.log("Add new case clicked.");
                 }}
               >
@@ -165,8 +177,8 @@ const SavedCasesWidget = ({
                             : ""
                         }`}
                         onClick={() =>
-                          onRegionalCaseClick &&
-                          onRegionalCaseClick(myCase.id, myCase.source || "firebase", myCase.region)
+                          handleCaseClick &&
+                          handleCaseClick(myCase.id, myCase.source || "firebase", myCase.region)
                         }
                       >
                         <div className={styles.actions}>

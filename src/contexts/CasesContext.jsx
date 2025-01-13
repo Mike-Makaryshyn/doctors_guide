@@ -1,6 +1,7 @@
 // src/contexts/CasesContext.jsx
 
 import React, { createContext, useState, useEffect, useContext, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import {
   doc,
@@ -10,6 +11,7 @@ import {
   arrayRemove,
   collection,
   getDocs,
+  onSnapshot,
 } from "firebase/firestore";
 import { useAuth } from "./AuthContext";
 import { DataSourceContext } from "./DataSourceContext";
@@ -17,13 +19,19 @@ import { DataSourceContext } from "./DataSourceContext";
 const CasesContext = createContext();
 
 export const CasesProvider = ({ children }) => {
-  const { dataSources } = useContext(DataSourceContext);
+  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
   const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   const [userCases, setUserCases] = useState([]);
   const [regionalCases, setRegionalCases] = useState([]);
-  const [selectedRegion, setSelectedRegion] = useState(""); // Читання з localStorage
-  const [sourceType, setSourceType] = useState("local"); // Додавання sourceType
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [sourceType, setSourceType] = useState("local");
+  const [deferredCases, setDeferredCases] = useState([]);
+  const [completedCases, setCompletedCases] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [navigating, setNavigating] = useState(false);
+  const [error, setError] = useState(null);
 
   // Читання вибраного регіону та типу джерела з localStorage при монтуванні
   useEffect(() => {
@@ -54,7 +62,11 @@ export const CasesProvider = ({ children }) => {
   // Фетчинг "Моїх випадків"
   useEffect(() => {
     const fetchMyCases = async () => {
-      if (!currentUser) return;
+      if (!currentUser) {
+        setUserCases([]);
+        return;
+      }
+      setLoading(true);
       try {
         console.log("Fetching user cases for user:", currentUser.uid);
         const casesSnapshot = await getDocs(collection(db, "cases"));
@@ -74,7 +86,9 @@ export const CasesProvider = ({ children }) => {
         setUserCases(myCases);
       } catch (err) {
         console.error("Fehler beim Laden Ihrer Fälle:", err);
-        // toast.error("Fehler beim Laden Ihrer Fälle."); // Видаляємо toast.error
+        setError("Fehler beim Laden Ihrer Fälle.");
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -89,14 +103,15 @@ export const CasesProvider = ({ children }) => {
       return;
     }
 
-    if (sourceType === "local") {
-      // Завантажуємо з dataSources.local
-      const localCases = dataSources[selectedRegion]?.sources?.local || [];
-      console.log("Регiональні випадки з dataSources.local:", localCases);
-      setRegionalCases(localCases);
-    } else if (sourceType === "firebase") {
-      // Фетчимо з Firebase
-      try {
+    setLoading(true);
+    try {
+      if (sourceType === "local") {
+        // Завантажуємо з dataSources.local
+        const localCases = dataSources[selectedRegion]?.sources?.local || [];
+        console.log("Регiональні випадки з dataSources.local:", localCases);
+        setRegionalCases(localCases);
+      } else if (sourceType === "firebase") {
+        // Фетчимо з Firebase
         console.log("Fetching regional cases for region:", selectedRegion);
         const regionDocRef = doc(db, "cases", selectedRegion);
         const regionDocSnap = await getDoc(regionDocRef);
@@ -109,11 +124,13 @@ export const CasesProvider = ({ children }) => {
         const { cases = [] } = regionDocSnap.data();
         console.log("Регiональні випадки з Firebase:", cases);
         setRegionalCases(cases);
-      } catch (error) {
-        console.error("Error fetching regional cases:", error);
-        // toast.error("Fehler beim Laden der regionalen Fälle."); // Видаляємо toast.error
-        setRegionalCases([]);
       }
+    } catch (error) {
+      console.error("Error fetching regional cases:", error);
+      setError("Fehler beim Laden der regionalen Fälle.");
+      setRegionalCases([]);
+    } finally {
+      setLoading(false);
     }
   }, [selectedRegion, sourceType, dataSources]);
 
@@ -121,14 +138,88 @@ export const CasesProvider = ({ children }) => {
     fetchRegionalCases();
   }, [fetchRegionalCases]);
 
-  // Функція для оновлення регіональних випадків у localStorage (не потрібна для локальних випадків)
+  // Оновлення регіональних випадків для локального джерела
   const updateLocalRegionalCases = (updatedCases) => {
-    // Якщо потрібно, реалізуйте збереження у localStorage
     console.log("Updating local regional cases:", updatedCases);
     setRegionalCases(updatedCases);
   };
 
-  // Generic handler to toggle case status (completed/deferred)
+  // Завантаження статусів (deferred/completed)
+  const reloadStatuses = useCallback(async () => {
+    if (!currentUser || !sourceType || !selectedRegion) return;
+
+    try {
+      const userDocRef = doc(db, "users", currentUser.uid);
+      const userDocSnap = await getDoc(userDocRef);
+      if (!userDocSnap.exists()) {
+        console.log("User document does not exist.");
+        setDeferredCases([]);
+        setCompletedCases([]);
+        return;
+      }
+
+      const userData = userDocSnap.data();
+      const allDeferred = [];
+      const allCompleted = [];
+
+      // Для всіх регіонів типу "dynamic" – беремо масиви deferred/completed
+      Object.keys(dataSources)
+        .filter((r) => dataSources[r]?.type === "dynamic")
+        .forEach((region) => {
+          const defArr = userData[`deferredCases_${region}`] || [];
+          const compArr = userData[`completedCases_${region}`] || [];
+          defArr.forEach((cid) => allDeferred.push({ caseId: String(cid), region }));
+          compArr.forEach((cid) => allCompleted.push({ caseId: String(cid), region }));
+        });
+
+      setDeferredCases(allDeferred);
+      setCompletedCases(allCompleted);
+    } catch (err) {
+      console.error("Error reloading deferred/completed statuses:", err);
+      setError("Error reloading statuses.");
+    }
+  }, [currentUser, dataSources, selectedRegion, sourceType]);
+
+  useEffect(() => {
+    reloadStatuses();
+  }, [reloadStatuses]);
+  useEffect(() => {
+    if (!currentUser) return;
+  
+    const userDocRef = doc(db, "users", currentUser.uid);
+    const unsubscribe = onSnapshot(
+      userDocRef,
+      (docSnap) => {
+        if (docSnap.exists()) {
+          const userData = docSnap.data();
+          const allDeferred = [];
+          const allCompleted = [];
+  
+          Object.keys(dataSources)
+            .filter((r) => dataSources[r]?.type === "dynamic")
+            .forEach((region) => {
+              const defArr = userData[`deferredCases_${region}`] || [];
+              const compArr = userData[`completedCases_${region}`] || [];
+              defArr.forEach((cid) => allDeferred.push({ caseId: String(cid), region }));
+              compArr.forEach((cid) => allCompleted.push({ caseId: String(cid), region }));
+            });
+  
+          setDeferredCases(allDeferred);
+          setCompletedCases(allCompleted);
+        } else {
+          setDeferredCases([]);
+          setCompletedCases([]);
+        }
+      },
+      (error) => {
+        console.error("Error listening to user document:", error);
+        setError("Error listening to user document.");
+      }
+    );
+  
+    return () => unsubscribe();
+  }, [currentUser, dataSources]);
+  // Toggle case status (completed/deferred)
   const toggleCaseStatus = useCallback(
     async (caseId, region, statusType) => {
       console.log(`toggleCaseStatus called with caseId: ${caseId}, region: ${region}, statusType: ${statusType}`);
@@ -138,7 +229,7 @@ export const CasesProvider = ({ children }) => {
       }
 
       try {
-        let newStatus = null;
+        let updates = {};
 
         if (sourceType === "firebase") {
           const userDocRef = doc(db, "users", currentUser.uid);
@@ -148,42 +239,29 @@ export const CasesProvider = ({ children }) => {
           const completedKey = `completedCases_${region}`;
           const deferredKey = `deferredCases_${region}`;
 
-          let updates = {};
-
           if (statusType === "completed") {
             if (userData?.[completedKey]?.includes(String(caseId))) {
               updates[completedKey] = arrayRemove(String(caseId));
-              newStatus = "deferred";
-              console.log(`Case ${caseId} marked as deferred.`);
+              console.log(`Case ${caseId} removed from completed.`);
             } else {
               updates[completedKey] = arrayUnion(String(caseId));
               updates[deferredKey] = arrayRemove(String(caseId));
-              newStatus = "completed";
-              console.log(`Case ${caseId} marked as completed.`);
+              console.log(`Case ${caseId} added to completed and removed from deferred.`);
             }
           } else if (statusType === "deferred") {
             if (userData?.[deferredKey]?.includes(String(caseId))) {
               updates[deferredKey] = arrayRemove(String(caseId));
-              newStatus = null;
-              console.log(`Case ${caseId} status cleared.`);
+              console.log(`Case ${caseId} removed from deferred.`);
             } else {
               updates[deferredKey] = arrayUnion(String(caseId));
               updates[completedKey] = arrayRemove(String(caseId));
-              newStatus = "deferred";
-              console.log(`Case ${caseId} marked as deferred.`);
+              console.log(`Case ${caseId} added to deferred and removed from completed.`);
             }
           }
 
           console.log("Updating Firestore with:", updates);
           await updateDoc(userDocRef, updates);
-
-          const updateStatus = (c) =>
-            c.id === caseId ? { ...c, status: newStatus } : c;
-
-          setUserCases((prev) => prev.map(updateStatus));
-          setRegionalCases((prev) => prev.map(updateStatus));
-
-          // toast.success(...) // Видаляємо toast.success
+          await reloadStatuses(); // Reload statuses to update local state
         } else if (sourceType === "local") {
           // Для локальних випадків
           const updatedCases = regionalCases.map((c) =>
@@ -191,18 +269,15 @@ export const CasesProvider = ({ children }) => {
               ? { ...c, status: statusType === "completed" ? "completed" : "deferred" }
               : c
           );
-
           console.log("Updating local regional cases:", updatedCases);
           updateLocalRegionalCases(updatedCases);
-
-          // toast.success(...) // Видаляємо toast.success
         }
       } catch (err) {
-        console.error(`Fehler beim Aktualisieren des ${statusType} Status:`, err);
-        // toast.error(...) // Видаляємо toast.error
+        console.error(`Error updating ${statusType} status:`, err);
+        setError(`Error updating ${statusType} status.`);
       }
     },
-    [currentUser, sourceType, regionalCases]
+    [currentUser, sourceType, regionalCases, reloadStatuses]
   );
 
   // Handlers using the generic toggle function
@@ -223,12 +298,13 @@ export const CasesProvider = ({ children }) => {
   );
 
   // Handler for editing a case
-  const handleEdit = useCallback((myCase) => {
-    // Реалізуйте навігацію або іншу логіку редагування
-    // Наприклад:
-    // navigate(`/edit-case/${myCase.id}`);
-    console.log("Редагувати випадок:", myCase);
-  }, []);
+  const handleEdit = useCallback(
+    (myCase) => {
+      console.log("Editing case:", myCase);
+      navigate("/edit-case", { state: { myCase } });
+    },
+    [navigate]
+  );
 
   // Handler for deleting a case
   const handleDelete = useCallback(
@@ -246,8 +322,8 @@ export const CasesProvider = ({ children }) => {
         const regionDocRef = doc(db, "cases", caseItem.region);
         const regionSnap = await getDoc(regionDocRef);
         if (!regionSnap.exists()) {
-          console.error("Region nicht gefunden:", caseItem.region);
-          // toast.error("Region не знайдено."); // Видаляємо toast.error
+          console.error("Region not found:", caseItem.region);
+          setError("Region not found.");
           return;
         }
 
@@ -256,27 +332,47 @@ export const CasesProvider = ({ children }) => {
 
         if (sourceType === "firebase") {
           await updateDoc(regionDocRef, { cases: updatedCases });
-
           setUserCases((prev) => prev.filter((c) => String(c.id) !== String(caseItem.id)));
           setRegionalCases((prev) => prev.filter((c) => String(c.id) !== String(caseItem.id)));
-
           console.log(`Case ${caseItem.id} successfully deleted from Firebase.`);
-          // toast.success("Випадок успішно видалено!"); // Видаляємо toast.success
         } else if (sourceType === "local") {
           // Оновлюємо локальні випадки
           const updatedLocalCases =
             dataSources[selectedRegion]?.sources.local?.filter((c) => String(c.id) !== String(caseItem.id)) || [];
           setRegionalCases(updatedLocalCases);
           console.log(`Case ${caseItem.id} successfully deleted from local data.`);
-          // toast.success("Випадок успішно видалено з локальних даних!"); // Видаляємо toast.success
         }
       } catch (err) {
-        console.error("Fehler beim Löschen des Falls:", err);
-        // toast.error("Fehler beim Löschen des Falls."); // Видаляємо toast.error
+        console.error("Error deleting case:", err);
+        setError("Error deleting case.");
       }
     },
     [currentUser, dataSources, selectedRegion, sourceType]
   );
+
+  // Handler for navigating to case details
+  const handleCaseClick = useCallback(
+    async (caseId, source, region) => {
+      try {
+        setNavigating(true);
+        if (source === "firebase") {
+          await fetchFirebaseCases(region);
+        }
+        navigate(`/information-sources/${source}/${caseId}`);
+      } catch (err) {
+        console.error("Error navigating to case details:", err);
+        setError("Error navigating to case details.");
+      } finally {
+        setNavigating(false);
+      }
+    },
+    [fetchFirebaseCases, navigate]
+  );
+
+  // Handler for sharing collections (можливо, потрібно реалізувати)
+  const handleShareCollection = useCallback(() => {
+    // Ваша логіка для поділу колекцією, якщо необхідно
+  }, []);
 
   return (
     <CasesContext.Provider
@@ -289,8 +385,11 @@ export const CasesProvider = ({ children }) => {
         handleDelete,
         handleMarkCompleted,
         handleMarkDeferred,
-        setSourceType, // Додаємо setSourceType для можливості зміни типу джерела
-        setSelectedRegion, // Додаємо setSelectedRegion для можливості зміни регіону
+        handleCaseClick,
+        setSourceType,
+        setSelectedRegion,
+        loading,
+        error,
       }}
     >
       {children}
