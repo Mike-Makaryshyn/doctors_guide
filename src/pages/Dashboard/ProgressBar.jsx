@@ -9,12 +9,12 @@ const ProgressBar = ({ progress }) => {
   const navigate = useNavigate();
 
   const handleNavigateToDocuments = () => {
-    navigate("/documents"); // Замініть на ваш шлях до сторінки документів
+    navigate("/documents");
   };
 
   return (
     <div className={styles.progressContainer}>
-      <h2>Прогрес заповнення документів</h2>
+      <h2></h2>
       <div className={styles.circularWrapper} onClick={handleNavigateToDocuments}>
         <CircularProgressbar
           value={progress}
@@ -27,13 +27,6 @@ const ProgressBar = ({ progress }) => {
         <div className={styles.iconWrapper}>
           <FaFileAlt className={styles.documentIcon} />
           <div className={styles.percentageText}>{progress}%</div>
-        </div>
-      </div>
-
-      {/* Додаємо плитку під прогрес-баром */}
-      <div className={styles.tileWrapper}>
-        <div className={styles.tile} onClick={handleNavigateToDocuments}>
-          <span>До документів</span>
         </div>
       </div>
     </div>
