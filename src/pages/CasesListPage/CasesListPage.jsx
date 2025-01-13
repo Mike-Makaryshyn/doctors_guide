@@ -500,12 +500,7 @@ const CasesListPage = () => {
   const toggleMenuSection = (section) => {
     setActiveMenu(section);
     localStorage.setItem("activeMenu", section);
-    // Якщо переходимо на колекції чи "myCases", переконуємось, що sourceType = "firebase"
-    if (section === "collections" || section === "myCases") {
-      if (sourceType !== "firebase") {
-        setSourceType("firebase");
-      }
-    }
+    // Видаляємо автоматичне встановлення sourceType
   };
 
   // ----------------------------------
@@ -533,6 +528,15 @@ const CasesListPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSettingsOpen]);
+
+  // ----------------------------------
+  // 12) Автоматичне завантаження випадків з Firebase при встановленому sourceType = "firebase"
+  // ----------------------------------
+  useEffect(() => {
+    if (activeMenu === "cases" && sourceType === "firebase" && localRegion) {
+      fetchFirebaseCases(localRegion);
+    }
+  }, [activeMenu, sourceType, localRegion, fetchFirebaseCases]);
 
   // ----------------------------------
   // Сортування кейсів за статусом

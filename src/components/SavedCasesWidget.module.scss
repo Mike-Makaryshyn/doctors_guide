@@ -1,164 +1,368 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .widgetContainer {
-    padding: 20px;
-    background: none; /* Фон видалений */
-    width: 400px; /* Фіксована ширина на десктопі */
-    margin: 0 ; /* Центрування */
-    font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background: none; /* Фон видалений */
+  width: 100%; /* Ширина налаштована на 100% контейнера */
+  margin: 0; /* Вирівнювання по лівому краю */
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Контейнер для секцій */
+.sectionsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start; /* Вирівнювання по лівому краю */
+  width: 50%; /* Разом секції займають 50% ширини контейнера */
+  /* Залишаємо праву частину порожньою для майбутніх вікон */
+}
+
+/* Кожна секція займає 50% ширини секційного контейнера (25% екрану) */
+.section {
+  flex: 0 0 50%; /* Фіксована ширина на 50% секційного контейнера */
+  min-width: 200px; /* Мінімальна ширина для плиток */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Заголовки секцій */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  overflow: hidden; /* Обмежує вихід анімації за межі заголовка */
 }
 
+/* Проблеск при розгортанні секції */
+.header.expanded {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.7); /* Проблеск при відкритті */
+}
+
+.header.expanded::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(76, 175, 80, 0.7);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+/* Додатковий псевдоелемент для анімації проблеску */
+@keyframes glimmer {
+  0% {
+    transform: translate(-100%, 100%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0%, 0%) rotate(45deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(100%, -100%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.header.expanded::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: translate(-100%, 100%) rotate(45deg);
+  animation: glimmer 2s infinite;
+  pointer-events: none;
+}
+
+/* Додавання різних анімацій для заголовків */
+.header.userHeader {
+  animation: shakeHeaderLeft 10s infinite;
+}
+
+.header.regionalHeader {
+  animation: shakeHeaderRight 10s infinite;
+}
+
+/* Анімації похитування заголовків */
+@keyframes shakeHeaderLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes shakeHeaderRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Іконки */
 .chevron {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .casesSection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.userCases,
+.regionalCases {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.casesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .caseTile {
-    position: relative;
-    background: #ffffff;
-    color: #013b6e; /* Колір тексту плиток */
-    border-radius: 12px;
-    padding: 15px 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    width: 360px; /* Фіксована ширина плиток */
-    padding-right: 60px; /* Додано простір для кнопок */
-    font-family: 'Poppins', sans-serif;
+  position: relative;
+  background: #ffffff;
+  color: #013b6e; /* Колір тексту плиток */
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* Відповідає батьківському контейнеру */
+  padding-right: 60px; /* Додано простір для кнопок */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100px; /* Мінімальна висота плитки */
+  overflow: hidden; /* Обмежує вихід внутрішніх елементів */
+  
+  /* Відміна анімації похитування */
+  animation: none;
 }
 
+/* При наведенні на плитку */
 .caseTile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) rotate(0.2deg); /* Легкий поворот для об'єму */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .tileActions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .actionButton {
-    width: 28px;
-    height: 28px;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .editButton {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
 .editButton:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .deleteButton {
-    background-color: #e74c3c;
+  background-color: #e74c3c;
 }
 
 .deleteButton:hover {
-    background-color: #d62c1a;
+  background-color: #d62c1a;
+}
+
+.markCompletedButton {
+  background-color: #007bff;
+}
+
+.markCompletedButton:hover {
+  background-color: #0056b3;
+}
+
+.deferButton {
+  background-color: #ffc107;
+}
+
+.deferButton:hover {
+  background-color: #e0a800;
 }
 
 .tileHeader {
-    font-size: 16px;
-    color: #013b6e; /* Колір заголовку плитки */
-    font-weight: 600; /* Напівжирний текст */
-    margin-bottom: 5px;
-    text-align: left;
-    word-wrap: break-word;
+  font-size: 16px;
+  color: #013b6e; /* Колір заголовку плитки */
+  font-weight: 600; /* Напівжирний текст */
+  margin-bottom: 5px;
+  text-align: left;
+  word-wrap: break-word;
 }
 
+/* Кнопка додавання нового випадку */
 .addNewTile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 135px; /* Відповідає розміру інших плиток */
-    border: 2px dashed #999; /* Рамка для порожньої плитки */
-    background-color: rgba(255, 255, 255, 0.05); /* Легкий фоновий колір */
-    border-radius: 12px; /* Ті ж закруглені кути, що й у інших */
-    cursor: pointer;
-    width: 360px; /* Така ж ширина, як у плиток */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при наведенні */
+  background: transparent; /* Прозорий фон */
+  color: #4caf50; /* Колір плюса */
+  border: 2px dashed #999; /* Рамка для порожньої плитки */
+  border-radius: 12px; /* Закруглені кути */
+  cursor: pointer;
+  width: 100%; /* Відповідає батьківському контейнеру */
+  height: 100px; /* Фіксована висота для відповідності плиткам */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Анімація при наведенні */
+  position: relative;
+  overflow: hidden; /* Обмежує вихід анімації */
 }
 
 .addNewTile:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Трохи яскравіший фон при наведенні */
-    transform: translateY(-5px); /* Підйом плитки при наведенні */
+  background-color: rgba(255, 255, 255, 0.1); /* Трохи яскравіший фон при наведенні */
+  transform: translateY(-5px); /* Підйом плитки при наведенні */
 }
 
-.addNewTile p {
-    font-size: 40px; /* Розмір плюса */
-    font-weight: bold;
-    color: #013b6e; /* Колір плюса */
-    margin: 0;
+/* Додатковий псевдоелемент для анімації проблеску на кнопці додавання */
+@keyframes glimmerPlus {
+  0% {
+    transform: translate(-100%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(100%, 0%) rotate(0deg);
+    opacity: 0;
+  }
 }
 
+.addNewTile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: translate(-100%, 0%) rotate(0deg);
+  animation: glimmerPlus 3s infinite;
+  pointer-events: none;
+}
+
+.plusIcon {
+  font-size: 24px; /* Розмір плюса */
+  color: #4caf50; /* Колір плюса */
+}
+/* SavedCasesWidget.module.scss */
+
+.completed {
+    background-color: #d4edda; /* Світло-зелений фон */
+  }
+  
+  .deferred {
+    background-color: #fff3cd; /* Світло-жовтий фон */
+  }
+
+/* Зміни для мобільних пристроїв */
 @media (max-width: 768px) {
+  .sectionsContainer {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* На мобільних секції займають 100% ширини */
+  }
 
-    .header {
-        font-size: 16px; /* Менший розмір тексту хедера */
-        padding: 8px 10px; /* Зменшені відступи */
-        background-color: #4caf50; /* Колір фону залишається незмінним */
-    }
-    .widgetContainer {
-        width: 440px; /* Ширина шапки */
-        margin: 0 auto; /* Центрування */
-      }
+  .section {
+    flex: 0 0 100%; /* Секції займають 100% ширини */
+  }
 
-    .casesSection {
-        justify-content: center; /* Центруємо плитки */
-    }
+  .header {
+    font-size: 20px; /* Збільшений розмір тексту хедера на мобільних */
+    padding: 12px 15px; /* Збільшені відступи */
+    background-color: #4caf50; /* Колір фону залишається незмінним */
+    /* Збереження анімації похитування */
+  }
 
-    .caseTile, .addNewTile {
-        width: 400px; /* Плитки займають 90% ширини на мобільних пристроях */
-        margin: 0 auto; /* Центрування плитки */
-    }
+  .header.expanded::after {
+    border: 2px solid rgba(76, 175, 80, 0.7);
+  }
 
-    .tileActions {
-        gap: 8px; /* Проміжок між кнопками */
-    }
+  .header.expanded::before {
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    animation: glimmer 1.5s infinite;
+  }
 
-    .actionButton {
-        width: 32px; /* Збільшений розмір кнопок */
-        height: 32px;
-        font-size: 18px; /* Більший розмір іконок */
-    }
+  .casesSection {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .tileHeader {
-        font-size: 14px; /* Трохи менший текст для плиток */
-    }
+  .caseTile,
+  .addNewTile {
+    width: 100%; /* Плитки займають 100% ширини на мобільних пристроях */
+    min-height: 100px; /* Мінімальна висота плитки */
+  }
+
+  .tileActions {
+    gap: 8px; /* Проміжок між кнопками */
+  }
+
+  .actionButton {
+    width: 32px; /* Збільшений розмір кнопок */
+    height: 32px;
+    font-size: 18px; /* Більший розмір іконок */
+  }
+
+  .tileHeader {
+    font-size: 14px; /* Трохи менший текст для плиток */
+  }
+
+  .addNewTile {
+    height: 100px; /* Мінімальна висота для відповідності іншим плиткам */
+  }
+
+  .plusIcon {
+    font-size: 24px; /* Розмір плюса */
+  }
 }
