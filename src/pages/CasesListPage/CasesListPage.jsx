@@ -6,10 +6,8 @@ import styles from "./CasesListPage.module.scss";
 
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { useAuth } from "../../contexts/AuthContext";
+import { useCases } from "../../contexts/CasesContext"; // Імпорт useCases
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import useRegionData from "../../hooks/useRegionData";
-
 import {
   FaCog,
   FaMapMarkerAlt,
@@ -36,55 +34,13 @@ import {
   documentId,
 } from "firebase/firestore";
 import SavedCasesWidget from "../../components/SavedCasesWidget"; // Імпорт компонента
-
-/**
- * Хелпер для завантаження deferred/completed статусів (для кожного регіону).
- */
-async function fetchUserCaseStatuses(
-  currentUser,
-  dataSources,
-  setDeferredCases,
-  setCompletedCases
-) {
-  if (!currentUser) return;
-  try {
-    const userDocRef = doc(db, "users", currentUser.uid);
-    const snap = await getDoc(userDocRef);
-    if (!snap.exists()) return;
-
-    const userData = snap.data();
-    const allDeferred = [];
-    const allCompleted = [];
-
-    // Для всіх регіонів типу "dynamic" – беремо масиви deferred/completed
-    Object.keys(dataSources)
-      .filter((r) => dataSources[r]?.type === "dynamic")
-      .forEach((region) => {
-        const defArr = userData[`deferredCases_${region}`] || [];
-        const compArr = userData[`completedCases_${region}`] || [];
-        defArr.forEach((cid) =>
-          allDeferred.push({ caseId: String(cid), region })
-        );
-        compArr.forEach((cid) =>
-          allCompleted.push({ caseId: String(cid), region })
-        );
-      });
-
-    setDeferredCases(allDeferred);
-    setCompletedCases(allCompleted);
-  } catch (err) {
-    console.error("Fehler beim Neu-Laden von deferred/completed:", err);
-  }
-}
+import { toast, ToastContainer } from "react-toastify"; // Імпорт ToastContainer та toast
 
 const CasesListPage = () => {
   // ----------------------------------
-  // 1) Стан (зокрема localStorage)
+  // Стан
   // ----------------------------------
   const savedActiveMenu = localStorage.getItem("activeMenu") || "cases";
-  const savedLocalRegion = localStorage.getItem("savedLocalRegion") || "";
-  const savedSourceType = localStorage.getItem("savedSourceType") || "local";
-
   const [activeMenu, setActiveMenu] = useState(savedActiveMenu);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
@@ -103,60 +59,51 @@ const CasesListPage = () => {
   const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
   const { currentUser } = useAuth();
 
-  // Глобальна інформація
-  const { selectedRegion: globalSelectedRegion } = useGetGlobalInfo() || {};
+  // Використання CasesContext
   const {
-    localRegion,
-    setLocalRegion,
+    userCases,
+    regionalCases,
+    selectedRegion,
     sourceType,
+    handleDelete,
+    handleMarkAsCompleted, // Змінено назву
+    handleDeferCase, // Змінено назву
+    handleCaseClick,
+    handleEdit,
     setSourceType,
+    setSelectedRegion,
     loading,
     error,
-  } = useRegionData(globalSelectedRegion || "", savedSourceType);
-
-  // Deferred / completed
-  const [deferredCases, setDeferredCases] = useState([]);
-  const [completedCases, setCompletedCases] = useState([]);
-  const [navigating, setNavigating] = useState(false);
+    handleShareCollection,
+    deferredCases, // Деструктуризація deferredCases
+    completedCases, // Деструктуризація completedCases
+  } = useCases();
 
   // Sammlungen
   const [collectionsData, setCollectionsData] = useState([]);
   const [collectionsLoading, setCollectionsLoading] = useState(false);
 
-  // МОЇ випадки
-  const [myCases, setMyCases] = useState([]);
-  const [myCasesLoading, setMyCasesLoading] = useState(true);
-
   // Реф на модальне вікно (для кліку поза ним)
   const settingsModalRef = useRef(null);
 
+  // Додано оголошення стану navigating
+  const [navigating, setNavigating] = useState(false);
+
   // ----------------------------------
-  // 2) localStorage update
+  // localStorage update
   // ----------------------------------
   useEffect(() => {
     localStorage.setItem("activeMenu", activeMenu);
   }, [activeMenu]);
 
-  useEffect(() => {
-    localStorage.setItem("savedLocalRegion", localRegion);
-  }, [localRegion]);
-
-  useEffect(() => {
-    localStorage.setItem("savedSourceType", sourceType);
-  }, [sourceType]);
-
-  // ----------------------------------
-  // 3) Перевірка Auth
-  // ----------------------------------
+  // Перевірка Auth
   useEffect(() => {
     if (!currentUser) {
       navigate("/login");
     }
   }, [currentUser, navigate]);
 
-  // ----------------------------------
-  // 4) Читаємо ?colId=... (share collections)
-  // ----------------------------------
+  // Читаємо ?colId=... (share collections)
   useEffect(() => {
     const q = new URLSearchParams(location.search);
     const colId = q.get("colId");
@@ -166,25 +113,7 @@ const CasesListPage = () => {
     }
   }, [location.search, currentUser]);
 
-  // ----------------------------------
-  // 5) Завантаження deferred/completed
-  // ----------------------------------
-  const reloadStatuses = useCallback(async () => {
-    await fetchUserCaseStatuses(
-      currentUser,
-      dataSources,
-      setDeferredCases,
-      setCompletedCases
-    );
-  }, [currentUser, dataSources]);
-
-  useEffect(() => {
-    reloadStatuses();
-  }, [reloadStatuses]);
-
-  // ----------------------------------
-  // 6) Завантаження колекцій (collections)
-  // ----------------------------------
+  // Завантаження колекцій (collections)
   useEffect(() => {
     if (activeMenu !== "collections") return;
     setCollectionsLoading(true);
@@ -262,57 +191,13 @@ const CasesListPage = () => {
     })();
   }, [activeMenu, dataSources, sharingColId]);
 
-  // ----------------------------------
-  // 7) Завантаження "Моїх випадків" (myCases)
-  // ----------------------------------
-  useEffect(() => {
-    if (activeMenu !== "myCases") return;
-    setMyCasesLoading(true);
-
-    (async () => {
-      try {
-        if (!currentUser) {
-          setMyCasesLoading(false);
-          return;
-        }
-        // Завантажуємо всі regions "cases"
-        const rootColl = collection(db, "cases");
-        const allDocs = await getDocs(rootColl);
-
-        const userCases = [];
-        allDocs.forEach((snapDoc) => {
-          const regionKey = snapDoc.id;
-          const docData = snapDoc.data();
-          if (docData.cases && Array.isArray(docData.cases)) {
-            docData.cases.forEach((c) => {
-              if (c.authorId === currentUser.uid) {
-                userCases.push({ ...c, region: regionKey });
-              }
-            });
-          }
-        });
-
-        setMyCases(userCases);
-      } catch (err) {
-        console.error("Fehler beim Laden Ihrer Fälle:", err);
-      } finally {
-        setMyCasesLoading(false);
-      }
-    })();
-  }, [activeMenu, currentUser, dataSources]);
-
-  // ----------------------------------
-  // 8) Хелпер для сортування: "deferred" -> перші, "null" -> далі, "completed" -> останні
-  // ----------------------------------
+  // Функція сортування кейсів
   const statusOrder = (st) => {
     if (st === "deferred") return 1;
     if (st === "completed") return 3;
     return 2;
   };
 
-  // ----------------------------------
-  // 9) getCaseStatus
-  // ----------------------------------
   const getCaseStatus = (caseId, region) => {
     const isDef = deferredCases.some(
       (x) => x.caseId === String(caseId) && x.region === region
@@ -327,175 +212,29 @@ const CasesListPage = () => {
     return null;
   };
 
-  // ----------------------------------
-  // 10) Перейти на сторінку кейсу (FSPFormular)
-  const handleCaseClick = async (caseId, source, region) => {
-    try {
-      setNavigating(true);
-      if (source === "firebase") {
-        await fetchFirebaseCases(region);
-      }
-      navigate(`${pathList.informationSources.path}/${source}/${caseId}`);
-    } catch (err) {
-      console.error("Fehler beim Öffnen des Falls:", err);
-    } finally {
-      setNavigating(false);
-    }
+  // Сортування кейсів за статусом
+  const sortedCases = (list, region) => {
+    return [...list].sort((a, b) => {
+      const stA = getCaseStatus(a.id, region);
+      const stB = getCaseStatus(b.id, region);
+      return statusOrder(stA) - statusOrder(stB);
+    });
   };
 
-  // ----------------------------------
-  // 11) Позначити кейс як "Erledigt" / "Später"
-  const handleMarkAsCompleted = async (caseId, region) => {
-    if (!currentUser) return;
-
-    try {
-      const userDocRef = doc(db, "users", currentUser.uid);
-      const userDocSnap = await getDoc(userDocRef);
-      const userData = userDocSnap.data() || {};
-
-      const cKey = `completedCases_${region}`;
-      const dKey = `deferredCases_${region}`;
-
-      const isCompleted = userData?.[cKey]?.includes(String(caseId));
-      if (isCompleted) {
-        // видаляємо з completed
-        await updateDoc(userDocRef, {
-          [cKey]: arrayRemove(String(caseId)),
-        });
-        setCompletedCases((prev) =>
-          prev.filter((x) => !(x.caseId === caseId && x.region === region))
-        );
-      } else {
-        // додаємо в completed, видаляємо з deferred
-        await updateDoc(userDocRef, {
-          [cKey]: arrayUnion(String(caseId)),
-          [dKey]: arrayRemove(String(caseId)),
-        });
-        setCompletedCases((prev) => [...prev, { caseId, region }]);
-        setDeferredCases((prev) =>
-          prev.filter((x) => !(x.caseId === caseId && x.region === region))
-        );
-      }
-
-      await reloadStatuses();
-    } catch (err) {
-      console.error("Fehler beim Aktualisieren des Erledigt-Status:", err);
-    }
+  // Додаткова функція для редагування кейсу
+  const handleEditCase = (e, mc) => {
+    e.stopPropagation();
+    navigate("/edit-case", { state: { myCase: mc } });
   };
 
-  const handleDeferCase = async (caseId, region) => {
-    if (!currentUser) return;
+  // Поділитися колекцією (використовуйте функцію з контексту)
+  // handleShareCollection вже доступна через контекст
 
-    try {
-      const userDocRef = doc(db, "users", currentUser.uid);
-      const userDocSnap = await getDoc(userDocRef);
-      const userData = userDocSnap.data() || {};
-
-      const cKey = `completedCases_${region}`;
-      const dKey = `deferredCases_${region}`;
-
-      const isDeferred = userData?.[dKey]?.includes(String(caseId));
-      if (isDeferred) {
-        // видаляємо з deferred
-        await updateDoc(userDocRef, {
-          [dKey]: arrayRemove(String(caseId)),
-        });
-        setDeferredCases((prev) =>
-          prev.filter((x) => !(x.caseId === caseId && x.region === region))
-        );
-      } else {
-        // додаємо в deferred, видаляємо з completed
-        await updateDoc(userDocRef, {
-          [dKey]: arrayUnion(String(caseId)),
-          [cKey]: arrayRemove(String(caseId)),
-        });
-        setDeferredCases((prev) => [...prev, { caseId, region }]);
-        setCompletedCases((prev) =>
-          prev.filter((x) => !(x.caseId === caseId && x.region === region))
-        );
-      }
-
-      await reloadStatuses();
-    } catch (err) {
-      console.error("Fehler beim Aktualisieren des Später-Status:", err);
-    }
-  };
-
-  // ----------------------------------
-  // Видалення кейсу (блок "myCases")
-  const handleDelete = async (caseItem) => {
-    if (!currentUser) return;
-
-    const confirmDel = window.confirm(
-      `Möchten Sie den Fall löschen: ${caseItem.fullName}?`
-    );
-    if (!confirmDel) return;
-
-    try {
-      const regionDocRef = doc(db, "cases", caseItem.region);
-      const regionSnap = await getDoc(regionDocRef);
-      if (!regionSnap.exists()) {
-        console.error("Region nicht gefunden:", caseItem.region);
-        return;
-      }
-
-      const regionData = regionSnap.data();
-      if (!regionData.cases || !Array.isArray(regionData.cases)) {
-        console.error("Keine 'cases'-Array in den Regionsdaten gefunden.");
-        return;
-      }
-
-      // Видаляємо конкретний кейс
-      const updated = regionData.cases.filter(
-        (c) => String(c.id) !== String(caseItem.id)
-      );
-      await updateDoc(regionDocRef, { cases: updated });
-
-      // Локально видаляємо
-      setMyCases((prev) =>
-        prev.filter((c) => String(c.id) !== String(caseItem.id))
-      );
-
-      // Видаляємо його зі списку completed/deferred (якщо він там був)
-      setCompletedCases((prev) =>
-        prev.filter((x) => !(x.caseId === String(caseItem.id)))
-      );
-      setDeferredCases((prev) =>
-        prev.filter((x) => !(x.caseId === String(caseItem.id)))
-      );
-
-      alert("Der Fall wurde erfolgreich gelöscht!");
-    } catch (err) {
-      console.error("Fehler beim Löschen des Falls:", err);
-      alert("Fehler beim Löschen des Falls.");
-    }
-  };
-
-  // ----------------------------------
-  // Поділитися колекцією
-  const handleShareCollection = () => {
-    if (!selectedAuthor) return;
-    const newUrl = `${window.location.origin}${location.pathname}?colId=${selectedAuthor}`;
-    if (navigator.share) {
-      navigator
-        .share({
-          title: "Teile die Sammlung",
-          text: "Sieh dir meine Sammlung an:",
-          url: newUrl,
-        })
-        .catch((err) => console.warn("Freigabe abgebrochen/Fehler:", err));
-    } else {
-      alert("Ihr Browser unterstützt kein Web Share API.");
-    }
-  };
-
-  // ----------------------------------
   // Аккордеон
   const toggleAccordion = (section) => {
     setOpenAccordion((prev) => (prev === section ? "" : section));
   };
 
-  // ----------------------------------
   // Перемикання меню
   const toggleMenuSection = (section) => {
     setActiveMenu(section);
@@ -503,7 +242,6 @@ const CasesListPage = () => {
     // Видаляємо автоматичне встановлення sourceType
   };
 
-  // ----------------------------------
   // Налаштування (Modal)
   const toggleSettingsModal = () => {
     setIsSettingsOpen((p) => !p);
@@ -529,35 +267,14 @@ const CasesListPage = () => {
     };
   }, [isSettingsOpen]);
 
-  // ----------------------------------
-  // 12) Автоматичне завантаження випадків з Firebase при встановленому sourceType = "firebase"
-  // ----------------------------------
+  // Автоматичне завантаження випадків з Firebase при встановленому sourceType = "firebase"
   useEffect(() => {
-    if (activeMenu === "cases" && sourceType === "firebase" && localRegion) {
-      fetchFirebaseCases(localRegion);
+    if (activeMenu === "cases" && sourceType === "firebase" && selectedRegion) {
+      fetchFirebaseCases(selectedRegion);
     }
-  }, [activeMenu, sourceType, localRegion, fetchFirebaseCases]);
+  }, [activeMenu, sourceType, selectedRegion, fetchFirebaseCases]);
 
-  // ----------------------------------
-  // Сортування кейсів за статусом
-  const sortedCases = (list, region) => {
-    return [...list].sort((a, b) => {
-      const stA = getCaseStatus(a.id, region);
-      const stB = getCaseStatus(b.id, region);
-      return statusOrder(stA) - statusOrder(stB);
-    });
-  };
-
-  // ----------------------------------
-  // Додаткова функція для редагування кейсу
-  const handleEditCase = (e, mc) => {
-    e.stopPropagation();
-    navigate("/edit-case", { state: { myCase: mc } });
-  };
-
-  // ----------------------------------
   // Рендер
-  // ----------------------------------
   return (
     <MainLayout>
       <div className={styles.container}>
@@ -594,15 +311,15 @@ const CasesListPage = () => {
         {activeMenu === "cases" && !loading && !navigating && (
           <section>
             {error && <p style={{ color: "red" }}>{error}</p>}
-            {!localRegion && (
+            {!selectedRegion && (
               <p style={{ color: "#555" }}>
                 Bitte wählen Sie eine Region in den Einstellungen.
               </p>
             )}
 
-            {localRegion ? (
+            {selectedRegion ? (
               (() => {
-                const regionObj = dataSources[localRegion];
+                const regionObj = dataSources[selectedRegion];
                 if (!regionObj) {
                   return <p>Unbekannte Region.</p>;
                 }
@@ -611,7 +328,7 @@ const CasesListPage = () => {
                     ? regionObj.sources?.local || []
                     : regionObj.sources?.firebase || [];
 
-                arr = sortedCases(arr, localRegion);
+                arr = sortedCases(arr, selectedRegion);
 
                 if (!arr.length) {
                   return <p>Keine Fälle in dieser Quelle.</p>;
@@ -619,7 +336,7 @@ const CasesListPage = () => {
                 return (
                   <div className={styles.tilesContainer}>
                     {arr.map((cItem) => {
-                      const st = getCaseStatus(cItem.id, localRegion);
+                      const st = getCaseStatus(cItem.id, selectedRegion);
                       return (
                         <div
                           key={cItem.id}
@@ -631,7 +348,7 @@ const CasesListPage = () => {
                               : ""
                           }`}
                           onClick={() =>
-                            handleCaseClick(cItem.id, sourceType, localRegion)
+                            handleCaseClick(cItem.id, sourceType, selectedRegion)
                           }
                         >
                           <div className={styles.actions}>
@@ -642,7 +359,7 @@ const CasesListPage = () => {
                               }`}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                handleMarkAsCompleted(cItem.id, localRegion);
+                                handleMarkAsCompleted(cItem.id, selectedRegion); // Змінено назву функції
                               }}
                             >
                               <FaCheck />
@@ -654,7 +371,7 @@ const CasesListPage = () => {
                               }`}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                handleDeferCase(cItem.id, localRegion);
+                                handleDeferCase(cItem.id, selectedRegion); // Змінено назву функції
                               }}
                             >
                               <FaPause />
@@ -745,10 +462,7 @@ const CasesListPage = () => {
                                 }`}
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  handleMarkAsCompleted(
-                                    cItem.id,
-                                    cItem.region
-                                  );
+                                  handleMarkAsCompleted(cItem.id, cItem.region); // Змінено назву функції
                                 }}
                               >
                                 <FaCheck />
@@ -759,7 +473,7 @@ const CasesListPage = () => {
                                 }`}
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  handleDeferCase(cItem.id, cItem.region);
+                                  handleDeferCase(cItem.id, cItem.region); // Змінено назву функції
                                 }}
                               >
                                 <FaPause />
@@ -789,11 +503,11 @@ const CasesListPage = () => {
         )}
 
         {/* ========== MY CASES ========== */}
-        {activeMenu === "myCases" && !myCasesLoading && (
+        {activeMenu === "myCases" && !loading && (
           <section>
-            {myCases.length ? (
+            {userCases.length ? (
               <div className={styles.tilesContainer}>
-                {myCases.map((mc) => {
+                {userCases.map((mc) => {
                   const st = getCaseStatus(mc.id, mc.region);
                   return (
                     <div
@@ -849,7 +563,7 @@ const CasesListPage = () => {
             )}
           </section>
         )}
-        {activeMenu === "myCases" && myCasesLoading && (
+        {activeMenu === "myCases" && loading && (
           <p style={{ color: "#555", marginTop: "20px" }}>
             Ihre Fälle werden geladen...
           </p>
@@ -886,8 +600,8 @@ const CasesListPage = () => {
                 >
                   {/* Вибір регіону */}
                   <select
-                    value={localRegion}
-                    onChange={(e) => setLocalRegion(e.target.value)}
+                    value={selectedRegion}
+                    onChange={(e) => setSelectedRegion(e.target.value)} // Використання функції з контексту
                     className={styles.regionSelect}
                   >
                     <option value="">-- Region --</option>
@@ -983,17 +697,8 @@ const CasesListPage = () => {
           </div>
         )}
 
-        {/* Додати SavedCasesWidget на сторінку, якщо потрібно */}
-        {/* Наприклад: */}
-        {/* <SavedCasesWidget
-          userCases={myCases}
-          regionalCases={regionalCases.filter((caseItem) => caseItem.region === globalSelectedRegion)}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-          onMarkCompleted={handleMarkAsCompleted}
-          onMarkDeferred={handleMarkDeferred}
-        /> */}
       </div>
+      <ToastContainer /> {/* Додано контейнер для toast повідомлень */}
     </MainLayout>
   );
 };

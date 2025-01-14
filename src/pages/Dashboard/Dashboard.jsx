@@ -1,6 +1,6 @@
 // src/pages/Dashboard/Dashboard.jsx
 
-import React, { useEffect, useState, useContext, useCallback } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -11,7 +11,6 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
-import { useCases } from "../../contexts/CasesContext"; // Імпорт CasesContext
 import { DataSourceContext } from "../../contexts/DataSourceContext"; // Імпорт DataSourceContext
 import styles from "./Dashboard.module.scss"; // Імпорт стилів
 import { toast } from "react-toastify";
@@ -21,21 +20,6 @@ const Dashboard = () => {
   const [progress, setProgress] = useState(0);
   const navigate = useNavigate(); // Ініціалізація useNavigate
   const { fetchFirebaseCases } = useContext(DataSourceContext); // Отримання fetchFirebaseCases з DataSourceContext
-
-  // Використання CasesContext
-  const {
-    userCases,
-    regionalCases,
-    selectedRegion,
-    sourceType,
-    handleDelete,
-    handleMarkCompleted,
-    handleMarkDeferred,
-    setSourceType,
-    setSelectedRegion,
-    handleCaseClick,
-    handleEdit,
-  } = useCases();
 
   // Стан спінера
   const [navigating, setNavigating] = useState(false);
@@ -70,48 +54,6 @@ const Dashboard = () => {
     }
   };
 
-  // Нова функція для редагування кейсу
-  const handleEditCase = (myCase) => {
-    handleEdit && handleEdit(myCase);
-  };
-
-  // Функція сортування кейсів
-  const sortedCases = useCallback(
-    (list, region) => {
-      return [...list].sort((a, b) => {
-        const stA = a.status;
-        const stB = b.status;
-        const statusOrder = (st) => {
-          if (st === "deferred") return 1;
-          if (st === "completed") return 3;
-          return 2;
-        };
-        return statusOrder(stA) - statusOrder(stB);
-      });
-    },
-    []
-  );
-
-  // Встановлюємо sourceType на "local" при завантаженні Dashboard
-  useEffect(() => {
-    setSourceType("local");
-  }, [setSourceType]);
-
-  // Встановлюємо дефолтний регіон, якщо він не встановлений
-  useEffect(() => {
-    if (!selectedRegion) {
-      setSelectedRegion("Thüringen"); // Встановіть ваш дефолтний регіон
-    }
-  }, [selectedRegion, setSelectedRegion]);
-
-  // Debugging: Логування отриманих випадків
-  useEffect(() => {
-    console.log("Dashboard - User Cases:", userCases);
-    console.log("Dashboard - Regional Cases:", regionalCases);
-    console.log("Dashboard - Selected Region:", selectedRegion);
-    console.log("Dashboard - Source Type:", sourceType);
-  }, [userCases, regionalCases, selectedRegion, sourceType]);
-
   return (
     <MainLayout>
       <ProtectedRoute>
@@ -138,21 +80,14 @@ const Dashboard = () => {
             <p>
               <strong>Email:</strong> {user?.email || "Не вказано"}
             </p>
-            <p>
-              <strong>Вибрана земля:</strong> {selectedRegion || "Не вказано"}
-            </p>
-            <p>
-              <strong>Тип джерела:</strong> {sourceType === "local" ? "Local" : "Firebase"}
-            </p>
+            {/* Можливо, інші елементи */}
           </section>
 
           {/* Прогрес-бар */}
           <ProgressBar progress={progress} />
 
           {/* Saved Cases Widget */}
-          <SavedCasesWidget
-            // Видаляємо передавання пропсів, бо SavedCasesWidget використовує контекст
-          />
+          <SavedCasesWidget />
 
           {/* Додатковий контент */}
           <div className={styles.additionalContent}>
