@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
   const { currentUser } = useAuth();
 
   if (!currentUser) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/auth" replace />;
   }
 
   return children;
