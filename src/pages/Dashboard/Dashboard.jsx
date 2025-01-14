@@ -11,6 +11,7 @@ import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
+import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx"; // Імпорт RegistrationTile
 import { DataSourceContext } from "../../contexts/DataSourceContext"; // Імпорт DataSourceContext
 import styles from "./Dashboard.module.scss"; // Імпорт стилів
 import { toast } from "react-toastify";
@@ -18,6 +19,7 @@ import { toast } from "react-toastify";
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [progress, setProgress] = useState(0);
+  const [userData, setUserData] = useState(null); // Стан для даних користувача
   const navigate = useNavigate(); // Ініціалізація useNavigate
   const { fetchFirebaseCases } = useContext(DataSourceContext); // Отримання fetchFirebaseCases з DataSourceContext
 
@@ -41,7 +43,25 @@ const Dashboard = () => {
       }
     };
 
+    const fetchUserData = async () => {
+      if (!user) return;
+
+      try {
+        const docRef = doc(db, "users", user.uid, "userData", "data");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserData(docSnap.data());
+        } else {
+          console.log("Дані користувача не знайдено.");
+        }
+      } catch (error) {
+        console.error("Помилка завантаження даних користувача:", error);
+        toast.error("Fehler beim Laden der Benutzerdaten.");
+      }
+    };
+
     fetchProgress();
+    fetchUserData();
   }, [user]);
 
   const handleSignOut = async () => {
@@ -80,7 +100,9 @@ const Dashboard = () => {
             <p>
               <strong>Email:</strong> {user?.email || "Не вказано"}
             </p>
-            {/* Можливо, інші елементи */}
+
+            {/* Плитка з даними користувача */}
+            {userData && <RegistrationTile data={userData} />}
           </section>
 
           {/* Прогрес-бар */}

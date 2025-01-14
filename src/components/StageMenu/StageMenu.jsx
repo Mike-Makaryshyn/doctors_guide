@@ -1,69 +1,46 @@
 // src/components/StageMenu/StageMenu.jsx
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { APPROBATION_STAGES } from "../../constants/translation/stagesTranslation";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import styles from "./StageMenu.module.scss";
 import classNames from "classnames";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Іконки для стрілок
 
-const StageMenu = ({ onStageSelect, isRegistration, stagesProgress, enableSwipe, gridView }) => {
+const StageMenu = ({
+  onStageSelect,
+  isRegistration,
+  stagesProgress,
+  activeStage,
+  enableSwipe,
+  gridView,
+}) => {
   const { selectedLanguage: language, user } = useGetGlobalInfo();
   const stages = APPROBATION_STAGES[language].slice(0, 9);
   const [hoveredStage, setHoveredStage] = useState(null);
-  const [activeStage, setActiveStage] = useState(null);
   const stagesWrapperRef = useRef(null);
-
-  // Завантаження активного етапу з Firestore
-  const fetchActiveStage = async () => {
-    if (!user) return;
-  
-    try {
-      const docRef = doc(db, "users", user.uid);
-      const docSnap = await getDoc(docRef);
-  
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        // Використовуємо activeStage замість selectedStageId
-        setActiveStage(data.activeStage || 1);
-        onStageSelect(data.activeStage || 1);
-      } else {
-        console.log("Документ не знайдено. Створюємо новий...");
-        await setDoc(docRef, { activeStage: 1 });
-        setActiveStage(1);
-        onStageSelect(1);
-      }
-    } catch (error) {
-      console.error("Помилка при отриманні даних з Firestore:", error);
-    }
-  };
 
   // Оновлення активного етапу в Firestore
   const updateActiveStage = async (stageId) => {
     if (!user) return;
-  
+
     try {
       const docRef = doc(db, "users", user.uid);
-      await setDoc(docRef, { activeStage: stageId }, { merge: true }); // Зберігаємо під ключем activeStage
+      await setDoc(docRef, { activeStage: stageId }, { merge: true });
       console.log("Активний етап оновлено:", stageId);
     } catch (error) {
       console.error("Помилка при оновленні активного етапу:", error);
     }
   };
 
-  useEffect(() => {
-    if (user) {
-      fetchActiveStage();
-    }
-  }, [user]);
-
   const handleStageClick = (stageId) => {
-    setActiveStage(stageId); // Оновлюємо локальний стан активного етапу
-    onStageSelect(stageId);
-    if (user || isRegistration) {
+    onStageSelect(stageId); // Викликаємо функцію з батьківського компонента
+
+    // Записуємо activeStage у Firestore тільки якщо не реєструємося
+    if (!isRegistration && user) {
       updateActiveStage(stageId);
     }
 
@@ -101,23 +78,26 @@ const StageMenu = ({ onStageSelect, isRegistration, stagesProgress, enableSwipe,
     <div className={styles.stageMenuContainer}>
       {!gridView && enableSwipe && (
         <>
-          <button className={classNames(styles.scrollButton, styles.left)} onClick={handleScrollLeft}>
+          <button
+            className={classNames(styles.scrollButton, styles.left)}
+            onClick={handleScrollLeft}
+          >
             <FaChevronLeft />
           </button>
-          <button className={classNames(styles.scrollButton, styles.right)} onClick={handleScrollRight}>
+          <button
+            className={classNames(styles.scrollButton, styles.right)}
+            onClick={handleScrollRight}
+          >
             <FaChevronRight />
           </button>
         </>
       )}
       <div
         ref={!gridView ? stagesWrapperRef : null}
-        className={classNames(
-          styles.stagesWrapper,
-          {
-            [styles.swipeable]: enableSwipe && !gridView,
-            [styles.gridView]: gridView, // Додаємо новий стиль для сітки
-          }
-        )}
+        className={classNames(styles.stagesWrapper, {
+          [styles.swipeable]: enableSwipe && !gridView,
+          [styles.gridView]: gridView, // Додаємо новий стиль для сітки
+        })}
       >
         {stages.map((stage, index) => (
           <div
@@ -174,12 +154,14 @@ StageMenu.propTypes = {
   onStageSelect: PropTypes.func.isRequired,
   isRegistration: PropTypes.bool,
   stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired, // Масив прогресів по етапах
+  activeStage: PropTypes.number, // Додано для контролю activeStage
   enableSwipe: PropTypes.bool, // Проп для включення свайпу
   gridView: PropTypes.bool, // Новий проп для включення сітки
 };
 
 StageMenu.defaultProps = {
   isRegistration: false,
+  activeStage: null, // Дефолтне значення
   enableSwipe: false, // За замовчуванням свайп вимкнений
   gridView: false, // За замовчуванням режим сітки вимкнений
 };

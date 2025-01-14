@@ -1,12 +1,24 @@
-// src/routes/path.js
-
 export const pathList = {
-  // ... ваші інші шляхи
-  lands: {
-    path: "/lands",
+  // Маршрути Авторизації
+  auth: {
+    path: "/auth",
   },
+  registration: {
+    path: "/auth/registration",
+  },
+  // Нові маршрути
+  signup: {
+    path: "/signup",
+  },
+  login: {
+    path: "/login",
+  },
+  // Існуючі маршрути
   main_menu: {
     path: "/main_menu",
+  },
+  lands: {
+    path: "/lands",
   },
   documents: {
     path: "/documents",
@@ -21,7 +33,7 @@ export const pathList = {
     path: "/exam-explanations",
   },
   trafarette: {
-    path: "/trafarette",
+    path: "/trafarette/:name",
   },
   language_study: {
     path: "/language-study",
@@ -38,9 +50,12 @@ export const pathList = {
   informationSources: {
     path: "/information-sources",
   },
-  // Нові шляхи
+  informationSourcesDetail: {
+    path: "/information-sources/:sourceType/:caseId",
+  },
+  // Додаткові нові маршрути
   my_cases: {
-    path: "/my-cases",
+    path: "/cases", // Оновлено з "/my-cases" до "/cases"
   },
   edit_case: {
     path: "/edit-case",
