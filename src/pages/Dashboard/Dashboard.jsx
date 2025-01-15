@@ -1,30 +1,24 @@
-// src/pages/Dashboard/Dashboard.jsx
-
 import React, { useEffect, useState, useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { signOut } from "firebase/auth";
 import ProgressBar from "./ProgressBar.jsx";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
-import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx"; // Імпорт RegistrationTile
-import { DataSourceContext } from "../../contexts/DataSourceContext"; // Імпорт DataSourceContext
-import styles from "./Dashboard.module.scss"; // Імпорт стилів
+import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
+import { DataSourceContext } from "../../contexts/DataSourceContext";
+import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [progress, setProgress] = useState(0);
-  const [userData, setUserData] = useState(null); // Стан для даних користувача
-  const navigate = useNavigate(); // Ініціалізація useNavigate
-  const { fetchFirebaseCases } = useContext(DataSourceContext); // Отримання fetchFirebaseCases з DataSourceContext
-
-  // Стан спінера
-  const [navigating, setNavigating] = useState(false);
+  const [userData, setUserData] = useState(null);
+  const { fetchFirebaseCases } = useContext(DataSourceContext);
 
   useEffect(() => {
     const fetchProgress = async () => {
@@ -78,52 +72,49 @@ const Dashboard = () => {
     <MainLayout>
       <ProtectedRoute>
         <div className={styles.container}>
-          {/* Статус аутентифікації */}
-          <AuthStatus />
+          <div className={styles.dashboardContent}>
+            {/* Плитка з особистими даними */}
+            {userData && (
+              <div className={styles.userTile}>
+                <RegistrationTile data={userData} />
+              </div>
+            )}
 
-          {/* Кнопка виходу */}
-          <button
-            onClick={handleSignOut}
-            className={styles.signOutButton} // Використання CSS класу для стилізації
-          >
-            Вийти з профілю
-          </button>
+            {/* Прогрес-бар */}
+            <div className={styles.progressBar}>
+              <ProgressBar progress={progress} />
+            </div>
 
-          <h1>Особистий кабінет</h1>
+            {/* Кнопка у вигляді кружка */}
+            <div className={styles.circularButtonWrapper}>
+              <div
+                className={styles.circularButton}
+                onClick={() => (window.location.href = "/custom-map")}
+              >
+                <span>Germany Lands</span>
+              </div>
+            </div>
 
-          {/* Основна інформація */}
-          <section className={styles.mainInfo}>
-            <h2>Основна інформація</h2>
-            <p>
-              <strong>Ім'я:</strong> {user?.displayName || "Не вказано"}
-            </p>
-            <p>
-              <strong>Email:</strong> {user?.email || "Не вказано"}
-            </p>
-
-            {/* Плитка з даними користувача */}
-            {userData && <RegistrationTile data={userData} />}
-          </section>
-
-          {/* Прогрес-бар */}
-          <ProgressBar progress={progress} />
-
-          {/* Saved Cases Widget */}
-          <SavedCasesWidget />
+            {/* Saved Cases Widget */}
+            <SavedCasesWidget />
+          </div>
 
           {/* Додатковий контент */}
           <div className={styles.additionalContent}>
-            <Link to="/main-menu" className={styles.mainMenuLink}>
+            <Link to="/main_menu" className={styles.mainMenuLink}>
               До головного меню
             </Link>
           </div>
 
-          {/* Спінер під час навігації */}
-          {navigating && (
-            <div className={styles.spinnerWrapper}>
-              <div className={styles.spinner}></div>
-            </div>
-          )}
+          {/* Кнопка виходу */}
+          <div className={styles.bottomControls}>
+            <button
+              onClick={handleSignOut}
+              className={styles.signOutButton}
+            >
+              Вийти з профілю
+            </button>
+          </div>
         </div>
       </ProtectedRoute>
     </MainLayout>

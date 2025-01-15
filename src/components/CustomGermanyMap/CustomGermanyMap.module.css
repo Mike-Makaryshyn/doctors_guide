@@ -1,0 +1,131 @@
+/* src/components/CustomGermanyMap/CustomGermanyMap.module.css */
+
+.selectedRegionText {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+/* Забезпечує адаптивність карти */
+.rsmComposableMap {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Базовий клас для географій */
+.geography {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, stroke 0.3s ease, fill-opacity 0.3s ease;
+  /* Додаємо об'єм до кожного регіону */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  stroke: #ffffff; /* Білий контур для контрасту */
+  stroke-width: 1;
+  cursor: pointer;
+  shape-rendering: geometricPrecision; /* Згладжує краї регіонів */
+}
+
+/* Підняття вибраного регіону */
+.geographySelected {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Піднятий регіон завжди поверх інших */
+  z-index: 10;
+  stroke: #000000; /* Чорний контур для виділення */
+  stroke-width: 2;
+  /* Глянцевий ефект */
+  fill-opacity: 0.9;
+  position: relative;
+}
+
+/* Глянцевий ефект для вибраного регіону */
+.geographySelected::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  border-radius: 5px; /* Додаємо округлення для глянцевого ефекту */
+}
+
+/* Класи для регіонів з градієнтними заливками */
+.DE-BW {
+  fill: url(#gradient-DE-BW);
+}
+
+.DE-BY {
+  fill: url(#gradient-DE-BY);
+}
+
+.DE-BE {
+  fill: url(#gradient-DE-BE);
+}
+
+.DE-BB {
+  fill: url(#gradient-DE-BB);
+}
+
+.DE-HB {
+  fill: url(#gradient-DE-HB);
+}
+
+.DE-HE {
+  fill: url(#gradient-DE-HE);
+}
+
+.DE-MV {
+  fill: url(#gradient-DE-MV);
+}
+
+.DE-NI {
+  fill: url(#gradient-DE-NI);
+}
+
+.DE-NW {
+  fill: url(#gradient-DE-NW);
+}
+
+.DE-RP {
+  fill: url(#gradient-DE-RP);
+}
+
+.DE-SL {
+  fill: url(#gradient-DE-SL);
+}
+
+.DE-SN {
+  fill: url(#gradient-DE-SN);
+}
+
+.DE-ST {
+  fill: url(#gradient-DE-ST);
+}
+
+.DE-TH {
+  fill: url(#gradient-DE-TH);
+}
+
+/* Медійні запити для мобільних пристроїв */
+@media (max-width: 768px) {
+  .selectedRegionText {
+    font-size: 16px;
+  }
+
+  /* Зменшення масштабу карти для мобільних пристроїв */
+  .rsmComposableMap {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .selectedRegionText {
+    font-size: 14px;
+  }
+}

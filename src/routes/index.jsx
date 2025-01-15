@@ -13,6 +13,7 @@ const IntroductionPage = React.lazy(() =>
 const GermanyLandsPage = React.lazy(() =>
   import("../pages/GermanyLandsPage/GermanyLandsPage")
 );
+
 const MainMenuPage = React.lazy(() =>
   import("../pages/MainMenuPage/MainMenuPage")
 );
@@ -24,6 +25,9 @@ const DocumentsPageEU = React.lazy(() =>
 );
 const WhatIsFSPPage = React.lazy(() =>
   import("../pages/WhatIsFSPPage/WhatIsFSPPage")
+);
+const CustomGermanyMap = React.lazy(() =>
+  import("../components/CustomGermanyMap/CustomGermanyMap")
 );
 const LanguageStudyPage = React.lazy(() =>
   import("../pages/LanguageStudy/LanguageStudy")
@@ -104,7 +108,10 @@ export default function Routers() {
           path={pathList.language_study.path}
           element={<LanguageStudyPage />}
         />
-        <Route path={pathList.step_by_step.path} element={<ApprobationPage />} />
+        <Route
+          path={pathList.step_by_step.path}
+          element={<ApprobationPage />}
+        />
         <Route path={pathList.links.path} element={<LinksPage />} />
         <Route
           path={pathList.approbation.path}
@@ -122,7 +129,7 @@ export default function Routers() {
           path="/information-sources/:sourceType/:caseId"
           element={<FSPFormularPage />}
         />
-
+        <Route path="/custom-map" element={<CustomGermanyMap />} />
         {/* Статичний маршрут для FSPFormularPage */}
         <Route
           path={pathList.informationSources.path}

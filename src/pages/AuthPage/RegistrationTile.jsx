@@ -1,14 +1,12 @@
-// src/components/RegistrationTile/RegistrationTile.jsx
-
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./RegistrationTile.module.scss";
 
-const RegistrationTile = ({ data }) => {
+const RegistrationTile = ({ data, style }) => {
   const { firstName, lastName, email, birthDate, educationRegion, specialty, germanLevel, procedureType } = data;
 
   return (
-    <div className={styles.tile}>
+    <div className={styles.tile} style={style}>
       <h3 className={styles.tileHeader}>{`${firstName} ${lastName}`}</h3>
       <p><strong>Email:</strong> {email}</p>
       <p><strong>Birth Date:</strong> {birthDate}</p>
@@ -31,6 +29,7 @@ RegistrationTile.propTypes = {
     germanLevel: PropTypes.string,
     procedureType: PropTypes.string,
   }).isRequired,
+  style: PropTypes.object, // Додано підтримку стилів
 };
 
 export default RegistrationTile;

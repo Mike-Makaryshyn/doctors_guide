@@ -60,4 +60,7 @@ export const pathList = {
   edit_case: {
     path: "/edit-case",
   },
+  custom_map: {
+    path: "/custom-map",
+  },
 };
