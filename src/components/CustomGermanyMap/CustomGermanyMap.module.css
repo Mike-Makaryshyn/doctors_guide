@@ -26,13 +26,16 @@
 .container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+ 
+  height: calc(100vh - 10px); /* Враховується відступ зверху */
   width: 100vw;
-  overflow: hidden; /* Запобігає прокручуванню сторінки */
+  overflow: hidden; /* Забороняє скролінг */
   font-family: 'Poppins', sans-serif; /* Використання шрифту Poppins */
 }
 
 .mapContainer {
+  height: calc(100vh - 20px); /* Забезпечує, що карта займає весь доступний простір */
+
   flex: 1;
   display: flex;
   justify-content: center;
@@ -62,9 +65,10 @@
 }
 
 .rsmComposableMap {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
+  width: 100%; /* Повна ширина */
+  height: 100%; /* Займає всю висоту контейнера */
+  transform: none; /* Забирає зсув, якщо такий є */
+  margin-top: 130px;
 }
 
 .geography {
@@ -264,9 +268,85 @@
     width: 100vw;
   }
 
+  .mobileHeader {
+    position: fixed;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .mobileButtonContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .mobileDashboardButton {
+    background-color: #28a745; /* Зелений колір кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Робимо прямокутною з легким заокругленням */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px; /* Розмір стрілки */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+    position: fixed; /* Закріплюємо у правому нижньому куті */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .mobileDashboardButton:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+    transform: scale(1.1); /* Легка анімація збільшення */
+  }
+  
+  @media (min-width: 768px) {
+    .mobileButtonContainer {
+      display: none; /* Ховаємо мобільну кнопку на десктопах */
+    }
+  }
+  
+  .buttonText {
+    margin-left: 8px; /* Відступ для тексту "Weiter" */
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .mobileRegionName {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+  }
+  
+  .mobileCoatOfArms {
+    width: 40px;
+    height: auto;
+  }
+ 
   .mapContainer {
-    height: 85vh; /* Збільшено з 80vh до 85vh */
-    width: 100%;
+    height: calc(100vh - 70px); /* Займає майже весь екран, враховуючи відступ для заголовка */
+    width: 100%; /* Повна ширина */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Запобігає прокручуванню */
   }
 
   .infoContainer {

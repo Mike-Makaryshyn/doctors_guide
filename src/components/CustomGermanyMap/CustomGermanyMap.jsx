@@ -1,5 +1,5 @@
 // CustomGermanyMap.jsx
-
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { geoCentroid } from "d3-geo";
@@ -14,19 +14,37 @@ import { FaArrowRight } from "react-icons/fa"; // Іконка стрілочк�
 const CustomGermanyMap = () => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
-  const [centroid, setCentroid] = useState(null);
+  const [hoveredRegion, setHoveredRegion] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   const isMobile = useIsMobile();
   const navigate = useNavigate();
 
-  const handleRegionClick = (geo, projection) => {
+  const handleRegionHover = (geo) => {
     const regionName = geo.properties.name;
-    setPendingRegion(regionName);
-    const c = geoCentroid(geo);
-    const [x, y] = projection(c);
-    setCentroid([x, y]);
+    setHoveredRegion(regionName); // Встановлюємо тимчасовий регіон при наведенні
+  };
+
+  const handleRegionLeave = () => {
+    setHoveredRegion(null); // Очищаємо тимчасовий регіон при відведенні
+  };
+
+  const handleRegionClick = (geo) => {
+    const regionName = geo.properties.name;
+    setPendingRegion(regionName); // Вибираємо регіон
     if (isMobile) setIsModalOpen(true);
+  };
+
+  const handleDashboardClick = () => {
+    if (pendingRegion) {
+      const confirmChange = window.confirm(
+        `Möchten Sie die Region auf "${pendingRegion}" wirklich ändern?`
+      );
+      if (confirmChange) {
+        handleChangeRegion(pendingRegion);
+        navigate("/dashboard");
+      }
+    }
   };
 
   const regionColors = {
@@ -89,25 +107,7 @@ const CustomGermanyMap = () => {
     Thüringen: "/coats/Thüringen.svg",
   };
 
-  const handleCloseModal = (e) => {
-    if (e.target.className === styles.modalOverlay) {
-      setIsModalOpen(false);
-      setPendingRegion(null);
-      setCentroid(null);
-    }
-  };
-
-  const handleDashboardClick = () => {
-    if (pendingRegion) {
-      const confirmChange = window.confirm(
-        `Möchten Sie die Region auf "${pendingRegion}" wirklich ändern?`
-      );
-      if (confirmChange) {
-        handleChangeRegion(pendingRegion);
-        navigate("/dashboard");
-      }
-    }
-  };
+  const displayedRegion = hoveredRegion || pendingRegion || selectedRegion;
 
   useEffect(() => {
     if (isModalOpen && isMobile) {
@@ -123,15 +123,34 @@ const CustomGermanyMap = () => {
 
   return (
     <MainLayout>
+       {isMobile && (
+  <div className={styles.mobileButtonContainer}>
+    <button
+  className={isMobile ? styles.mobileDashboardButton : styles.desktopDashboardButton}
+  onClick={handleDashboardClick}
+  aria-label="Zum Dashboard wechseln"
+>
+  <FaArrowRight />
+</button>
+  </div>
+)}
       <div className={styles.container}>
+      {isMobile && displayedRegion && (
+  <div className={styles.mobileHeader}>
+    <h2 className={styles.mobileRegionName}>{displayedRegion}</h2>
+  </div>
+)}
         <div className={styles.mapContainer}>
-          <ComposableMap
-            projection="geoMercator"
-            projectionConfig={{ scale: 2200, center: [10, 51] }}
-            className={styles.rsmComposableMap}
-          >
+        <ComposableMap
+  projection="geoMercator"
+  projectionConfig={{
+    scale: isMobile ? 3500 : 2500, /* Збільшуємо масштаб для мобільних */
+    center: [10, 51],
+  }}
+  className={styles.rsmComposableMap}
+>
             <Geographies geography={germanyGeo}>
-              {({ geographies, projection }) =>
+              {({ geographies }) =>
                 geographies.map((geo) => {
                   const regionName = geo.properties.name;
                   const isSelected = selectedRegion === regionName;
@@ -140,7 +159,9 @@ const CustomGermanyMap = () => {
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      onClick={() => handleRegionClick(geo, projection)}
+                      onMouseEnter={() => handleRegionHover(geo)}
+                      onMouseLeave={handleRegionLeave}
+                      onClick={() => handleRegionClick(geo)}
                       className={`${styles.geography} ${
                         isSelected ? styles.geographySelected : ""
                       }`}
@@ -165,78 +186,39 @@ const CustomGermanyMap = () => {
             </Geographies>
           </ComposableMap>
         </div>
-        {/* Інформаційна панель для десктопу */}
-        {!isMobile && (
-          <div className={styles.infoContainer}>
-            {pendingRegion ? (
-              <>
-                {pendingRegion === selectedRegion && (
-                  <p className={styles.currentRegionLabel}>Aktuell ausgewählte Region:</p>
-                )}
-                <h2 className={styles.regionName}>{pendingRegion}</h2>
-                <p className={styles.greeting}>
-                  {regionGreetings[pendingRegion]}
+        <div className={styles.infoContainer}>
+          {displayedRegion ? (
+            <>
+              {displayedRegion === selectedRegion && (
+                <p className={styles.currentRegionLabel}>
+                  Aktuell ausgewählte Region:
                 </p>
-                <img
-                  src={regionCoatsOfArms[pendingRegion]}
-                  alt={`${pendingRegion} Wappen`}
-                  className={styles.coatOfArms}
-                />
-                <button
-                  className={styles.dashboardButton}
-                  onClick={handleDashboardClick}
-                  aria-label="Zum Dashboard wechseln"
-                >
-                  <FaArrowRight /> {/* Використання тієї ж іконки */}
-                </button>
-              </>
-            ) : (
-              <p className={styles.greeting}>Wählen Sie eine Region</p>
-            )}
-          </div>
-        )}
-        {/* Модальне вікно для мобільних */}
-        {isMobile && isModalOpen && pendingRegion && (
-          <div
-            className={styles.modalOverlay}
-            onClick={handleCloseModal}
-          >
-            <div className={styles.modalContent}>
-              <button
-                className={styles.closeModalButton}
-                onClick={() => setIsModalOpen(false)}
-                aria-label="Schließen"
-              >
-                &times;
-              </button>
-              <div className={styles.modalInnerContent}>
-                <div className={styles.modalLeft}>
-                  {pendingRegion === selectedRegion && (
-                    <p className={styles.currentRegionLabel}>Aktuell ausgewählte Region:</p>
-                  )}
-                  <h2 className={styles.regionName}>{pendingRegion}</h2>
-                  <p className={styles.greeting}>
-                    {regionGreetings[pendingRegion]}
-                  </p>
-                </div>
-                <div className={styles.modalRight}>
-                  <img
-                    src={regionCoatsOfArms[pendingRegion]}
-                    alt={`${pendingRegion} Wappen`}
-                    className={styles.coatOfArmsMobile}
-                  />
-                  <button
-                    className={styles.dashboardButton}
-                    onClick={handleDashboardClick}
-                    aria-label="Zum Dashboard wechseln"
-                  >
-                    <FaArrowRight /> {/* Використання тієї ж іконки */}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+              )}
+              <h2 className={styles.regionName}>{displayedRegion}</h2>
+              <p className={styles.greeting}>
+                {regionGreetings[displayedRegion]}
+              </p>
+              <img
+                src={regionCoatsOfArms[displayedRegion]}
+                alt={`${displayedRegion} Wappen`}
+                className={styles.coatOfArms}
+              />
+              {!isMobile && (
+               <button
+               className={styles.mobileDashboardButton}
+               onClick={handleDashboardClick}
+               aria-label="Zum Dashboard wechseln"
+             >
+               <FaArrowRight />
+               
+             </button>
+              )}
+             
+            </>
+          ) : (
+            <p className={styles.greeting}>Wählen Sie eine Region</p>
+          )}
+        </div>
       </div>
     </MainLayout>
   );
