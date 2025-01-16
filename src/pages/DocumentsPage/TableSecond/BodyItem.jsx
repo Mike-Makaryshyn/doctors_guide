@@ -79,6 +79,8 @@ const BodyItem = ({
 
                {column?.name === "links" && (
                   <div className={styles.cellContent}>
+                     {console.log("Selected Region:", selectedRegion)}
+                     {console.log("Row Links:", row.links)}
                      {row?.links?.map(
                         (linkObj, index) =>
                            linkObj?.landName === selectedRegion && (

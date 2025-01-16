@@ -149,6 +149,13 @@ const germanyStates = [
     x: -45,
     y: 58,
   },
+  {
+    id: "WestfalenLippe",
+    name: "Westfalen-Lippe",
+    img: state13,
+    x: -45,
+    y: 58,
+  },
   { id: "Bayern", name: "Bayern", img: state13, x: 0, y: 40 },
   { id: "Berlin", name: "Berlin", img: state14, x: 0, y: 40 },
   { id: "Bremen", name: "Bremen", img: state15, x: 0, y: 40 },

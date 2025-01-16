@@ -304,5 +304,23 @@ doctor_palat:"http://www.aekn.de"
   doctor_palat:
  "http://www.laek-thueringen.de"
    },
+   {
+      id: 17,
+      name: "Westfalen-Lippe",
+      key: "WestfalenLippe",
+      desc: {
+         en: "Westphalian-Lippe is part of the federal state of Nordrhein-Westfalen, known for its vibrant industrial culture, modern art, and research-driven economy. This region, like the rest of Nordrhein-Westfalen, offers robust educational and professional opportunities for healthcare professionals. Both the Westphalian-Lippe Medical Chamber and the North Rhine Medical Chamber provide support and organize language and recognition exams for foreign doctors.",
+         fr: "Westphalian-Lippe fait partie de l'État fédéral de Rhénanie-du-Nord-Westphalie, connu pour sa culture industrielle dynamique, son art moderne et son économie axée sur la recherche. Cette région, comme le reste de la Rhénanie-du-Nord-Westphalie, offre de solides opportunités éducatives et professionnelles pour les professionnels de santé. La chambre médicale de Westphalian-Lippe et celle de Rhénanie-du-Nord organisent des examens de langue et de reconnaissance pour les médecins étrangers.",
+         es: "Westphalian-Lippe forma parte del estado federal de Renania del Norte-Westfalia, conocido por su vibrante cultura industrial, arte moderno y economía basada en la investigación. Esta región, al igual que el resto de Renania del Norte-Westfalia, ofrece sólidas oportunidades educativas y profesionales para los profesionales de la salud. Tanto la Cámara Médica de Westphalian-Lippe como la de Renania del Norte organizan exámenes de idioma y reconocimiento para médicos extranjeros.",
+         ar: "وستفاليا-ليب هي جزء من ولاية شمال الراين - وستفاليا الفيدرالية، والمعروفة بثقافتها الصناعية الديناميكية، والفن الحديث، واقتصادها القائم على البحث. يوفر هذا الإقليم، مثل باقي شمال الراين - وستفاليا، فرصًا تعليمية ومهنية قوية للعاملين في المجال الطبي. تقدم غرفتا الطب في وستفاليا-ليب وشمال الراين الدعم وتنظم اختبارات اللغة والاعتراف للأطباء الأجانب.",
+         tr: "Westfalen-Lippe, Almanya'nın Kuzey Ren-Vestfalya federal eyaletinin bir parçasıdır ve dinamik sanayi kültürü, modern sanat ve araştırma odaklı ekonomisiyle tanınır. Kuzey Ren-Vestfalya'nın geri kalanında olduğu gibi bu bölge, sağlık çalışanları için sağlam eğitim ve profesyonel fırsatlar sunar. Westfalen-Lippe Tıp Odası ve Kuzey Ren Tıp Odası, yabancı doktorlara destek sağlar ve dil ile tanıma sınavlarını düzenler.",
+         pl: "Westfalia-Lippe jest częścią landu Nadrenia Północna-Westfalia, znanego z dynamicznej kultury przemysłowej, nowoczesnej sztuki i gospodarki opartej na badaniach. Region ten, podobnie jak reszta Nadrenii Północnej-Westfalii, oferuje solidne możliwości edukacyjne i zawodowe dla pracowników służby zdrowia. Izby lekarskie Westfalii-Lippe i Nadrenii Północnej organizują egzaminy językowe i uznaniowe dla zagranicznych lekarzy.",
+         uk: "Вестфалія-Ліппе є частиною федеральної землі Північний Рейн-Вестфалія, відомої своєю динамічною промисловою культурою, сучасним мистецтвом і економікою, орієнтованою на дослідження. Як і решта Північного Рейну-Вестфалії, цей регіон пропонує потужні освітні та професійні можливості для медичних працівників. Медичні палати Вестфалії-Ліппе та Північного Рейну організовують мовні іспити та визнання для іноземних лікарів.",
+         ru: "Вестфалия-Липпе является частью федеральной земли Северный Рейн-Вестфалия, известной своей динамичной промышленной культурой, современным искусством и экономикой, ориентированной на исследования. Как и остальные части Северного Рейна-Вестфалии, этот регион предлагает мощные образовательные и профессиональные возможности для медицинских работников. Медицинские палаты Вестфалии-Липпе и Северного Рейна организуют языковые экзамены и признание для иностранных врачей.",
+         de: "Westfalen-Lippe ist Teil des Bundeslandes Nordrhein-Westfalen, das für seine lebendige Industriekultur, moderne Kunst und forschungsorientierte Wirtschaft bekannt ist. Wie der Rest Nordrhein-Westfalens bietet die Region hervorragende Bildungs- und Berufsmöglichkeiten für medizinisches Fachpersonal. Sowohl die Ärztekammer Westfalen-Lippe als auch die Ärztekammer Nordrhein organisieren Sprach- und Anerkennungsprüfungen für ausländische Ärzte."
+      },
+      main_link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/muenster/arzt/index.html",
+      doctor_palat: "https://www.aekwl.de"
+   },
    
 ];

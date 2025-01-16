@@ -21,7 +21,7 @@ import SAARLAND_DATA from "../constants/translation/Fall/Saarland.js";
 import SACHSEN_DATA from "../constants/translation/Fall/Sachsen.js";
 import SACHSENANHALT_DATA from "../constants/translation/Fall/Sachsen-Anhalt.js";
 import SCHLESWIGHOLSTEIN_DATA from "../constants/translation/Fall/Schleswig-Holstein.js";
-
+import WESTFALEN_DATA from "../constants/translation/Fall/Westfalen-Lippe.js";
 export const DataSourceContext = createContext();
 
 /**
@@ -245,6 +245,25 @@ export const DataSourceProvider = ({ children }) => {
         sourceType: "local",
       })),
     },
+    "Westfalen-Lippe": {
+  key: "WestfalenLippe",
+  name: "Westfalen-Lippe",
+  region: "Westfalen-Lippe",
+  type: "dynamic",
+  sources: {
+    local: WESTFALEN_DATA.map((item) => ({
+      id: item.id,
+      name: item.fullName || "Без імені",
+      sourceType: "local", // Indicates local data
+    })),
+    firebase: [], // Placeholder for Firebase data
+  },
+  files: WESTFALEN_DATA.map((item) => ({
+    id: item.id,
+    name: item.fullName || "Без імені",
+    sourceType: "local", // Indicates the source type
+  })),
+},
     "Rheinland-Pfalz": {
       key: "RheinlandPfalz",
       name: "Rheinland-Pfalz",
