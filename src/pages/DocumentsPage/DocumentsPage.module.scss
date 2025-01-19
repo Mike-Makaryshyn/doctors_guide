@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Загальні стилі для таблиці */
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px; /* Максимальна ширина */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif; /* Застосування шрифту Poppins */
+}
+
+/* Заголовки та рядки таблиці */
+.tableHeader,
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* Ширина колонок */
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.tableHeader {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: 600; /* Жирний шрифт для заголовків */
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #013b6e; /* Зміна кольору нижньої межі заголовка */
+}
+
+.tableRow {
+  font-size: 14px;
+  color: #333; /* Стандартний колір тексту для інших таблиць */
+  font-weight: 400; /* Стандартна жирність */
+  transition: background-color 0.3s ease;
+}
+
+.tableRow:last-child {
+  /* Видалено нижню межу останнього рядка */
+}
+
+.tableRow:hover {
+  background-color: rgba(76, 175, 80, 0.1); /* При наведенні */
+}
+
+.tableCell {
+  padding: 10px;
+  text-align: left;
+  border-right: 1px solid #ccc; /* Вертикальні межі між колонками */
+  color: #333; /* Стандартний колір тексту */
+  font-weight: 400; /* Стандартна жирність */
+}
+
+.tableCell:last-child {
+  border-right: none; /* У останньої колонки немає межі */
+}
+
+/* Стилі для першої таблиці (mainTable) */
+.mainTable {
+  /* Застосування специфічних стилів для mainTable */
+  & .tableHeader,
+  & .tableRow,
+  & .tableCell {
+    color: #013b6e !important; /* Синій колір тексту */
+    font-weight: 600;
+  }
+
+  & .tableHeader {
+    border-bottom: 2px solid #013b6e;
+  }
+
+  & .tableRow {
+    /* Видалено border-bottom */
+  }
+
+  & .tableCell {
+    border-right: 1px solid #013b6e;
+    color: #013b6e !important;
+    font-weight: 600;
+  }
+
+  & .tableCell:last-child {
+    border-right: none;
+  }
+}
+
+/* Стилі для третьої таблиці (optionalTable) */
+.optionalTable {
+  /* Застосування специфічних стилів для optionalTable */
+  & .tableHeader,
+  & .tableRow,
+  & .tableCell {
+    color: #013b6e !important; /* Синій колір тексту */
+    font-weight: 600;
+  }
+
+  & .tableHeader {
+    border-bottom: 2px solid #013b6e;
+  }
+
+  & .tableRow {
+    /* Видалено border-bottom */
+  }
+
+  & .tableCell {
+    border-right: 1px solid #013b6e;
+    color: #013b6e !important;
+    font-weight: 600;
+  }
+
+  & .tableCell:last-child {
+    border-right: none;
+  }
+
+  /* Мобільні стилі для optionalTable */
+  @media (max-width: 768px) {
+    .tileContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 10px;
+    }
+
+    .tile {
+      background-color: #fff;
+      border: 1px solid #013b6e;
+      border-radius: 12px;
+      padding: 16px;
+      width: 100%;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tileTitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: #013b6e;
+      margin-bottom: 12px;
+    }
+
+    /* Мобільні стилі для optionalTable's checkboxGroup */
+    .optionalCheckboxGroup {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+    }
+
+    .checkboxItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 45%; /* Розташування двох чекбоксів в ряд */
+    }
+
+    .checkboxLabel {
+      margin-top: 4px;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}
+
+/* Інші ваші стилі */
+.table_wrapper {
+  margin-top: 45px;
+  padding: 0px 8px;
+}
+
+.printBtn {
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  font-size: 12px;
+  min-width: 70px;
+  background-color: gray;
+  font-weight: 500;
+}
+
+.progress_wrapper {
+  margin: 10px;
+  max-width: 97%;
+  margin-left: auto;
+  color: rgb(233, 233, 233);
+}
+
+.progressBar {
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  background-color: #d7d7d7;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressLabel {
+  font-weight: 500;
+  text-align: right;
+}
+
+.rowOdd {
+  background-color: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkbox_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.req_img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.cellContent {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.optionalCheckboxWrapper {
+  margin-top: 5px;
+}
+
+.nameField {
+  font-weight: 600; /* Жирний текст */
+  color: #013b6e; /* Зміна кольору тексту */
+}

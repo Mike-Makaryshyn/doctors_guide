@@ -1,0 +1,86 @@
+/* src/components/Checkbox/Checkbox.module.scss */
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative; /* Для правильного позиціонування */
+  }
+  
+  .checkboxInput {
+    display: none; /* Сховати стандартний чекбокс */
+  }
+  
+  .checkboxCustom {
+    width: 1.2em;
+    height: 1.2em;
+    background: #e6e6e6;
+    border: 1px solid #757575;
+    border-radius: 50%; /* Кругла форма */
+    margin-right: 0.5em; /* Відступ справа */
+    position: relative;
+    transition: background 0.3s, border-color 0.3s;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  
+    /* Стан чекбокса: checked */
+    .checkboxInput:checked + &::after {
+      display: block;
+      top: 0.3em;
+      left: 0.35em;
+      width: 0.3em;
+      height: 0.6em;
+      border: solid #263238;
+      border-width: 0 0.2em 0.2em 0;
+      transform: rotate(45deg);
+      animation: rotate 0.3s forwards;
+    }
+  
+    /* Стан чекбокса: hover */
+    .checkboxInput:not(:disabled):hover + & {
+      background: #ccc;
+    }
+  
+    /* Прапорець */
+    .checkboxInput:checked + &::after {
+      display: block;
+      top: 0.3em;
+      left: 0.35em;
+      width: 0.3em;
+      height: 0.6em;
+      border: solid #263238;
+      border-width: 0 0.2em 0.2em 0;
+      transform: rotate(45deg);
+      animation: rotate 0.3s forwards;
+    }
+  
+    /* Додаткові стилі для мобільних */
+    @media (max-width: 768px) {
+      width: 1.6em;
+      height: 1.6em;
+  
+      .checkboxInput:checked + &::after {
+        top: 0.4em;
+        left: 0.5em;
+        width: 0.4em;
+        height: 0.8em;
+        border-width: 0 0.3em 0.3em 0;
+      }
+    }
+  }
+  
+  .checkboxText {
+    font-size: 16px;
+    color: inherit; /* Спадкує колір від Label */
+  }
+  
+  /* Додаткові стилі для мобільних */
+  @media (max-width: 768px) {
+    .checkboxText {
+      font-size: 14px;
+    }
+  }
