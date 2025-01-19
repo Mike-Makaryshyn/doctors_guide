@@ -23,9 +23,6 @@ export const pathList = {
   documents: {
     path: "/documents",
   },
-  documentsEU: {
-    path: "/documents-eu",
-  },
   what_is_fsp: {
     path: "/what-is-fsp",
   },
