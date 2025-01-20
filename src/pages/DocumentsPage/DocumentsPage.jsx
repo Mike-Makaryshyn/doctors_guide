@@ -7,7 +7,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./DocumentsPage.module.scss";
 
-// Імпортуємо columnsFirst та columnsSecond
+// Імпортуємо колонки (приклад)
 import { columnsFirst } from "../../constants/translation/columnsFirst";
 import { columnsSecond } from "../../constants/translation/columnsSecond";
 
@@ -20,8 +20,6 @@ import {
   titles,
 } from "../../constants/translation/documents";
 import { documentsSecond } from "../../constants/translation/documentsSecond";
-
-console.log("Imported documentsSecond:", documentsSecond);
 
 import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
@@ -36,16 +34,11 @@ const DocumentsPage = () => {
   } = useGetGlobalInfo();
 
   const combinedRef = useRef();
-
-  // Вибір категорії: "EU" або "Non-EU"
   const [category, setCategory] = useState("Non-EU"); // Початкове значення
-
-  // Стан для динамічних даних
   const [dynamicData, setDynamicData] = useState({
     checkboxes: {},
     progress: 0,
   });
-
   const [progress, setProgress] = useState(0);
   const isMobile = useIsMobile();
 
@@ -54,9 +47,7 @@ const DocumentsPage = () => {
     progress: 0,
   };
 
-  // Видалено useReactToPrint та handlePrint
-
-  // Завантаження динамічних даних із Firestore
+  // Завантажуємо дані з Firestore
   const fetchDynamicDataFromFirestore = async () => {
     if (!user) return;
 
@@ -81,8 +72,7 @@ const DocumentsPage = () => {
       } else {
         // Ініціалізуємо опціональні документи як виключені
         const initialCheckboxes = {};
-
-        documentsOptional.forEach(doc => {
+        documentsOptional.forEach((doc) => {
           initialCheckboxes[doc.id.toString()] = { hide: true };
         });
 
@@ -100,10 +90,9 @@ const DocumentsPage = () => {
     }
   };
 
-  // Збереження динамічних даних у Firestore
+  // Оновлюємо Firestore
   const updateFirestoreData = async (updatedData) => {
     if (!user) return;
-
     if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) return;
 
     const selectionDocRef = doc(
@@ -119,35 +108,26 @@ const DocumentsPage = () => {
     }
   };
 
-  // Обчислення прогресу
-  const calculateProgress = (checkboxes, allData) => {
+  // Рахуємо прогрес
+  const calculateProgress = (checkboxes) => {
     let totalCheckboxes = 0;
     let checkedCheckboxes = 0;
 
     const combinedData = [
       ...(category === "Non-EU" ? documentsNonEU : documentsEU),
       ...documentsOptional,
-      ...documentsSecond, // Додаємо documentsSecond до обчислення прогресу
+      ...documentsSecond,
     ].filter((item) => !checkboxes[item.id.toString()]?.hide);
 
     combinedData.forEach((item) => {
       const documentId = item.id.toString();
-      const documentCheckboxes = checkboxes[documentId] || {};
+      const docState = checkboxes[documentId] || {};
 
-      [
-        "is_exist",
-        "apostile",
-        "notary",
-        "translation",
-        "ready_copies",
-        "sent",
-      ].forEach((field) => {
-        // Для EU, поле 'apostile' не потрібно рахувати
+      ["is_exist", "apostile", "notary", "translation", "ready_copies", "sent"].forEach((field) => {
         if (field === "apostile" && category === "EU") return;
-
         if (item[field] !== undefined) {
           totalCheckboxes++;
-          if (documentCheckboxes[field]) {
+          if (docState[field]) {
             checkedCheckboxes++;
           }
         }
@@ -165,12 +145,7 @@ const DocumentsPage = () => {
   }, [user]);
 
   useEffect(() => {
-    const newProgress = calculateProgress(dynamicData.checkboxes, {
-      documentsNonEU,
-      documentsEU,
-      documentsOptional,
-      documentsSecond, // Додаємо documentsSecond до обчислення прогресу
-    });
+    const newProgress = calculateProgress(dynamicData.checkboxes);
     setProgress(newProgress);
   }, [dynamicData.checkboxes, category]);
 
@@ -183,43 +158,33 @@ const DocumentsPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dynamicData.checkboxes, progress]);
 
-  // Логування змін категорії та регіону
-  useEffect(() => {
-    console.log(`Selected Category: ${category}`);
-    console.log(`Selected Region: ${selectedRegion}`);
-  }, [category, selectedRegion]);
-
-  const getMessage = (progress) => {
-    if (progress < 20) return messages[language].lessThan20;
-    if (progress < 50) return messages[language].between20And50;
-    if (progress < 80) return messages[language].between50And80;
+  const getMessage = (progressValue) => {
+    if (progressValue < 20) return messages[language].lessThan20;
+    if (progressValue < 50) return messages[language].between20And50;
+    if (progressValue < 80) return messages[language].between50And80;
     return messages[language].greaterThan80;
   };
 
-  const mainTitle = titles?.main?.[language];
-  const optionalTitle = titles?.optional?.[language];
+  const mainTitle = titles?.main?.[language] || "Main Documents";
+  const optionalTitle = titles?.optional?.[language] || "Optional Documents";
 
-  // Функція для обробки зміни чекбоксу
+  // При кліку на чекбокс
   const handleCheckboxChange = (documentId, fieldName) => {
     console.log(`Checkbox clicked: documentId=${documentId}, fieldName=${fieldName}`);
     setDynamicData((prevData) => {
       const currentDoc = prevData.checkboxes[documentId] || {};
       let newDoc;
-
       if (fieldName === "hide") {
-        // Toggle hide
         newDoc = {
           ...currentDoc,
           [fieldName]: !currentDoc[fieldName],
         };
       } else {
-        // Toggle other fields
         newDoc = {
           ...currentDoc,
           [fieldName]: !currentDoc[fieldName],
         };
       }
-
       const updatedCheckboxes = {
         ...prevData.checkboxes,
         [documentId]: newDoc,
@@ -232,19 +197,18 @@ const DocumentsPage = () => {
     });
   };
 
-  // Ініціалізація опціональних документів як виключених при завантаженні
+  // Ініціалізація опціональних документів як виключених
   useEffect(() => {
     if (documentsOptional.length > 0 && user) {
       const initialCheckboxes = {};
-
-      documentsOptional.forEach(doc => {
+      documentsOptional.forEach((doc) => {
         if (!(doc.id.toString() in dynamicData.checkboxes)) {
           initialCheckboxes[doc.id.toString()] = { hide: true };
         }
       });
 
       if (Object.keys(initialCheckboxes).length > 0) {
-        setDynamicData(prevData => ({
+        setDynamicData((prevData) => ({
           ...prevData,
           checkboxes: {
             ...prevData.checkboxes,
@@ -278,41 +242,40 @@ const DocumentsPage = () => {
             </div>
 
             <div ref={combinedRef}>
-              {/* Перевірка, чи встановлено selectedRegion */}
               {selectedRegion ? (
                 <>
-                  {/* Основні документи для Non-EU або EU */}
+                  {/* Основні документи */}
                   <ResponsiveTable
                     title={mainTitle}
                     columns={columnsFirst}
                     data={category === "Non-EU" ? documentsNonEU : documentsEU}
-                    setTableData={() => {}} // Не потрібен, оскільки статичні дані не змінюються
+                    setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
                     category={category}
-                    tableFor="main" // Вказуємо тип таблиці
-                    disableCheckboxBasedOnName={false} // Чекбокси завжди активні
+                    tableFor="main"
+                    disableCheckboxBasedOnName={false}
                     checkboxes={dynamicData.checkboxes}
                     handleCheckboxChange={handleCheckboxChange}
                     customClass={
                       category === "Non-EU" ? styles.mainTable : styles.euTable
-                    } // Додаємо кастомний клас
+                    }
                   />
 
-                  {/* ДокументиSecond Таблиця */}
+                  {/* Друга таблиця */}
                   <ResponsiveTable
-                    title={null} // Якщо потрібен заголовок, додайте його
-                    columns={columnsSecond} // Переконайтесь, що columnsSecond визначені
-                    data={documentsSecond} // Переконайтесь, що documentsSecond визначені
-                    setTableData={() => {}} // Не потрібен
+                    title={null}
+                    columns={columnsSecond}
+                    data={documentsSecond}
+                    setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
                     category={category}
-                    tableFor="second" // Вказуємо, що це друга таблиця
+                    tableFor="second"
                     disableCheckboxBasedOnName={false}
                     checkboxes={dynamicData.checkboxes}
                     handleCheckboxChange={handleCheckboxChange}
-                    customClass={styles.secondTable} // Додаємо кастомний клас для другої таблиці
+                    customClass={styles.secondTable}
                   />
 
                   {/* Опціональні документи */}
@@ -320,35 +283,29 @@ const DocumentsPage = () => {
                     title={optionalTitle}
                     columns={columnsFirst}
                     data={documentsOptional}
-                    setTableData={() => {}} // Не потрібен, оскільки статичні дані не змінюються
+                    setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
                     category={category}
-                    tableFor="optional" // Вказуємо, що це опціональна таблиця
-                    disableCheckboxBasedOnName={false} // Чекбокси завжди активні для опціональної таблиці
+                    tableFor="optional"
+                    disableCheckboxBasedOnName={false}
                     checkboxes={dynamicData.checkboxes}
                     handleCheckboxChange={handleCheckboxChange}
-                    customClass={styles.optionalTable} // Додаємо кастомний клас для опціональної таблиці
+                    customClass={styles.optionalTable}
                   />
                 </>
               ) : (
-                <div className={styles.loadingMessage}>
-                  Завантаження регіону...
-                </div>
+                <div className={styles.loadingMessage}>Завантаження регіону...</div>
               )}
             </div>
           </div>
 
           <button
-            className={"main_menu_back"}
+            className="main_menu_back"
             onClick={() => handleChangePage("/main_menu")}
           >
             &#8592;
           </button>
-          {/* Видалено кнопку Print */}
-          {/* <button className={styles.printBtn} onClick={handlePrint}>
-            Print
-          </button> */}
         </div>
       </div>
     </MainLayout>
