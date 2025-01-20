@@ -6,6 +6,10 @@ import cn from "classnames";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import docIcon from "../../assets/mark.svg";
 
+/**
+ * Це компонент для відображення одного рядка (row) у таблиці (десктопний режим).
+ * Для мобільного tile-режиму логіка відмалювання знаходиться у ResponsiveTable.jsx.
+ */
 const BodyItem = React.memo(
   ({
     row,
@@ -24,18 +28,26 @@ const BodyItem = React.memo(
     checkboxes,
     isMobile,
   }) => {
+    /** Вмикає/вимикає поле (наприклад, "hide") або будь-яке інше */
     const onCheckboxChange = (fieldName) => {
       console.log(`Checkbox changed: documentId=${row.id}, fieldName=${fieldName}`);
       handleCheckboxChange(row.id.toString(), fieldName);
     };
 
+    /** Приховує опціональний документ (hide = true/false) */
     const onHiddenChange = () => {
       console.log(`Hidden checkbox changed: documentId=${row.id}`);
       handleCheckboxChange(row.id.toString(), "hide");
     };
 
+    /**
+     * Головна функція для відмалювання посилань у десктоп-режимі.
+     * На мобільному (tile) вона не викликається безпосередньо –
+     * там викликається в самому ResponsiveTable (через getLinkElement).
+     */
     const getLink = () => {
       if (row.links) {
+        // Якщо користувач не обрав регіон
         if (!selectedRegion) {
           console.warn("No region selected.");
           return (
@@ -46,7 +58,7 @@ const BodyItem = React.memo(
         }
 
         console.log(
-          `Processing document ID ${row.id} for region "${selectedRegion}" and category "${category}"`
+          `Processing doc ID ${row.id}, region "${selectedRegion}", category "${category}"`
         );
 
         const requiredFor = Array.isArray(row.requiredFor)
@@ -55,36 +67,20 @@ const BodyItem = React.memo(
         const categoryLower = category.trim().toLowerCase();
         const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
 
-        console.log(
-          `Document ID ${row.id} requiredFor (after trim and toLowerCase):`,
-          requiredFor
-        );
-        console.log(`Category (trimmed and lowercased): "${categoryLower}"`);
-        console.log(
-          `Cleaned selectedRegion: "${cleanedSelectedRegion}"`
-        );
-
+        // Якщо цей документ потрібен або "both", малюємо
         if (
           requiredFor.includes("both") ||
           requiredFor.includes(categoryLower)
         ) {
+          // Чи існує взагалі row.links[category]
           if (row.links[category]) {
-            console.log(`Links exist for category "${category}"`);
-
-            // Шукаємо посилання для конкретного регіону
+            // Шукаємо лінк для конкретного регіону
             const regionalLink = row.links[category].find((link) => {
               const cleanedLandName = link.landName.trim().toLowerCase();
-              console.log(
-                `Comparing landName "${cleanedLandName}" with selectedRegion "${cleanedSelectedRegion}"`
-              );
               return cleanedLandName === cleanedSelectedRegion;
             });
 
             if (regionalLink) {
-              console.log(
-                `Found link for region "${selectedRegion}":`,
-                regionalLink
-              );
               return (
                 <a
                   href={regionalLink.link}
@@ -96,20 +92,12 @@ const BodyItem = React.memo(
                 </a>
               );
             } else {
-              console.warn(
-                `No link found for region "${selectedRegion}" in category "${category}" for document ID ${row.id}. Attempting to use 'General' link.`
-              );
-
-              // Шукаємо 'General' посилання
+              // Якщо немає лінка для конкретного регіону – шукаємо "General"
               const generalLink = row.links[category].find(
                 (link) => link.landName.trim().toLowerCase() === "general"
               );
 
               if (generalLink) {
-                console.log(
-                  `Found 'General' link for category "${category}" in document ID ${row.id}:`,
-                  generalLink
-                );
                 return (
                   <a
                     href={generalLink.link}
@@ -121,20 +109,15 @@ const BodyItem = React.memo(
                   </a>
                 );
               } else {
-                console.warn(
-                  `No 'General' link found for category "${category}" in document ID ${row.id}.`
-                );
                 return (
                   <span className={styles.warning}>
-                    No links available for this category.
+                    No 'General' link found.
                   </span>
                 );
               }
             }
           } else {
-            console.warn(
-              `No links defined for category "${category}" in document ID ${row.id}`
-            );
+            // Немає links[category]
             return (
               <span className={styles.warning}>
                 No links available for this category.
@@ -142,9 +125,7 @@ const BodyItem = React.memo(
             );
           }
         } else {
-          console.warn(
-            `Document ID ${row.id} is not required for category "${category}"`
-          );
+          // Document не вимагається для цього category
           return (
             <span className={styles.info}>
               Not required for this category.
@@ -152,7 +133,7 @@ const BodyItem = React.memo(
           );
         }
       } else if (row.singleLink) {
-        console.log(`Handling singleLink for document ID ${row.id}`);
+        // Якщо документ має singleLink
         return (
           <a
             href={row.singleLink.link}
@@ -164,21 +145,25 @@ const BodyItem = React.memo(
           </a>
         );
       } else {
-        console.warn(`No links found for document ID ${row.id}`);
-        return (
-          <span className={styles.warning}>No links available.</span>
-        );
+        // Немає links
+        return <span className={styles.warning}>No links found.</span>;
       }
     };
 
-    // Функція для перевірки, чи всі необхідні чекбокси відмічені
+    /**
+     * Чи всі чекбокси по цьому документу відмічені.
+     * (Не враховуємо поле "hide" і "links".)
+     */
     const areAllCheckedLocal = () => {
-      const rowCheckboxes = columns.filter(col => {
+      const rowCheckboxes = columns.filter((col) => {
         if (tableFor === "optional" && col.name === "hide") return false;
+        // Не враховуємо links
         return typeof row[col.name] !== "undefined" && col.name !== "links";
       });
 
-      return rowCheckboxes.every(col => checkboxes[row.id.toString()]?.[col.name]);
+      return rowCheckboxes.every(
+        (col) => checkboxes[row.id.toString()]?.[col.name]
+      );
     };
 
     const allChecked = areAllCheckedLocal();
@@ -193,18 +178,24 @@ const BodyItem = React.memo(
         )}
       >
         {columns.map((column, columnIndex) => {
-          // Для EU, приховати 'apostile'
+          // Для категорії EU приховуємо колонку "apostile"
           if (category === "EU" && column.name === "apostile") return null;
 
           return (
-            <td key={`cell-${row.id}-${columnIndex}`} className={styles.tableCell}>
+            <td
+              key={`cell-${row.id}-${columnIndex}`}
+              className={styles.tableCell}
+              data-column={column.name} // Додаємо атрибут для SCSS
+            >
+              {/* Якщо це колонка LINKS -> викликаємо getLink() */}
               {column.name === "links" ? (
                 getLink()
               ) : column.name === "name" ? (
                 <div className={styles.nameField}>
                   {row.name?.[language] || "N/A"}
                 </div>
-              ) : typeof row?.[column?.name] === "string" &&
+              ) : // Якщо значення поля містить "check", значить це чекбокс
+              typeof row?.[column?.name] === "string" &&
                 row?.[column?.name]?.includes("check") ? (
                 !checkboxes[row.id.toString()]?.hide && (
                   <div className={styles.checkbox_wrapper}>
@@ -216,62 +207,32 @@ const BodyItem = React.memo(
                       />
                     )}
 
-                    {/* Групування чекбоксів для мобільної версії */}
+                    {/* Мобільний vs десктопний рендер чекбоксу */}
                     {isMobile ? (
-                      // Для мобільних: чекбокс з лейблом або лінк
                       <div className={styles.checkboxGroup}>
                         <div className={styles.checkboxItem}>
-                          {!(
-                            tableFor === "second" && column.name === "links"
-                          ) && (
-                            <span className={styles.checkboxLabel}>
-                              {column.label[language] || column.name}
-                            </span>
-                          )}
-                          {tableFor === "second" && column.name === "links" ? (
-                            // Для лінків у другій таблиці: рендеримо лінк як кнопку
-                            <a
-                              href={
-                                row.links[category]?.find(
-                                  (link) =>
-                                    link.landName.trim().toLowerCase() ===
-                                    selectedRegion.trim().toLowerCase()
-                                )?.link || "#"
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={cn(styles.link, styles.linkCheckbox)}
-                            >
-                              {row.links[category]?.find(
-                                (link) =>
-                                  link.landName.trim().toLowerCase() ===
-                                  selectedRegion.trim().toLowerCase()
-                              )?.text[language] || "Link"}
-                            </a>
-                          ) : (
-                            <Checkbox
-                              id={`checkbox-${row.id}-${column.name}`} // Унікальний id
-                              checked={
-                                checkboxes[row.id.toString()]?.[column.name] ||
-                                false
-                              }
-                              onChange={() => onCheckboxChange(column.name)}
-                              disabled={
-                                disableCheckboxBasedOnName &&
-                                hasNameColumn &&
-                                row.name !== "Included"
-                              }
-                            />
-                          )}
+                          <span className={styles.checkboxLabel}>
+                            {column.label?.[language] || column.name}
+                          </span>
+                          <Checkbox
+                            id={`checkbox-${row.id}-${column.name}`}
+                            checked={
+                              checkboxes[row.id.toString()]?.[column.name] || false
+                            }
+                            onChange={() => onCheckboxChange(column.name)}
+                            disabled={
+                              disableCheckboxBasedOnName &&
+                              hasNameColumn &&
+                              row.name !== "Included"
+                            }
+                          />
                         </div>
                       </div>
                     ) : (
-                      // Десктопна версія: просто чекбокс без лейблу
                       <Checkbox
-                        id={`checkbox-${row.id}-${column.name}`} // Унікальний id
+                        id={`checkbox-${row.id}-${column.name}`}
                         checked={
-                          checkboxes[row.id.toString()]?.[column.name] ||
-                          false
+                          checkboxes[row.id.toString()]?.[column.name] || false
                         }
                         onChange={() => onCheckboxChange(column.name)}
                         disabled={
@@ -283,19 +244,22 @@ const BodyItem = React.memo(
                     )}
                   </div>
                 )
-              ) : typeof row?.[column?.name] === "string" ? (
+              ) : // Звичайний текст (string)
+              typeof row?.[column?.name] === "string" ? (
                 <div className={styles.cellContent}>
                   <div>
                     {row?.[column?.name]?.substring(0, 20)}
                     {row?.[column?.name]?.length > 20 ? "..." : ""}
                   </div>
                 </div>
-              ) : typeof row?.[column?.name] === "object" ? (
+              ) : // Якщо поле це об'єкт, що зберігає текст мовами
+              typeof row?.[column?.name] === "object" ? (
                 <div className={styles.cellContent}>
                   <div>{row?.[column?.name]?.[language] || "N/A"}</div>
                 </div>
               ) : null}
 
+              {/* Приклад додаткового посилання для row.id=13/14 і apostile */}
               {(row?.id === 13 || row?.id === 14) &&
                 column.name === "apostile" &&
                 !checkboxes[row.id.toString()]?.hide && (
@@ -307,10 +271,11 @@ const BodyItem = React.memo(
                   >
                     {row.id === 13
                       ? "Вивчення мови"
-                      : "Оригінал надсилається прямо по місцю вимоги при подачі заяви вказується відомство куди повиннен надіслатися документ"}
+                      : "Оригінал надсилається прямо..."}
                   </a>
                 )}
 
+              {/* Якщо документ опціональний - відображати "Included/Excluded" */}
               {row?.optional && column?.name === "category" && (
                 <div
                   className={cn(
@@ -319,7 +284,7 @@ const BodyItem = React.memo(
                   )}
                 >
                   <Checkbox
-                    id={`optional-checkbox-${row.id}`} // Унікальний id
+                    id={`optional-checkbox-${row.id}`}
                     label={
                       checkboxes[row.id.toString()]?.hide
                         ? "Excluded"
