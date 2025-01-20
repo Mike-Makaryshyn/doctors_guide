@@ -1,112 +1,84 @@
-/* src/components/Table/BodyItem.module.scss */
-
-/* Визначення змінних кольорів */
-$primary-color: #013b6e; /* Синій */
-$secondary-color: #4caf50; /* Зелений */
-$text-color: #333;
-$border-color: #ccc;
-
-/* Імпортуємо шрифти */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Загальні стилі */
-.rowOdd {
-  background-color: #f9f9f9;
+$primary-color: #013b6e;
+$border-color: #ccc;
+$bg-complete: rgba(#4caf50, 0.1);
+$bg-incomplete: rgba(#ff9800, 0.1);
+
+.tableRow {
+  // Кожен документ
 }
 
-.hidden {
-  display: none;
+.rowEven {
+  // background-color: #f9f9f9;
+}
+
+.rowOdd {
+  // background-color: #ffffff;
+}
+
+.rowCompleted {
+  background-color: $bg-complete;
+}
+
+.rowIncomplete {
+  background-color: $bg-incomplete;
+}
+
+.tableCell {
+  padding: 8px;
+  border: none; // Вилучено межі
+  text-align: center;
+  vertical-align: middle;
+  color: $primary-color; // Встановлено колір тексту
+}
+
+.nameField {
+  font-weight: 600;
+  color: $primary-color; // Встановлено колір тексту
 }
 
 .checkbox_wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
+  gap: 5px;
 }
 
 .req_img {
   width: 16px;
   height: 16px;
-  margin-right: 5px;
-}
-
-.cellContent {
-  display: flex;
-  align-items: center;
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
-}
-
-.link {
-  color: #007bff !important; /* Зміна кольору тексту на синій */
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
 }
 
 .optionalCheckboxWrapper {
-  margin-top: 5px;
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
+  margin: 4px 0;
+  text-align: center;
 }
 
-.nameField {
-  font-weight: 600;
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
+.link {
+  color: #007bff;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-/* Додаткові стилі для специфічних елементів */
 .warning {
-  color: #ff0000 !important; /* Червоний для попереджень */
+  color: red;
 }
 
 .info {
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
+  color: #777;
 }
 
-.checkboxLabel {
-  color: $primary-color !important; /* Зміна кольору тексту на синій */
-  font-size: 12px;
-}
-
-/* Стилі для мобільної версії */
+/* Адаптивні стилі для мобільної версії */
 @media (max-width: 768px) {
+  .tableRow {
+    // Стилі для рядків таблиці, якщо необхідно
+  }
+
   .checkboxGroup {
     display: flex;
     flex-direction: row;
-    gap: 16px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .checkboxItem {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    min-width: 80px;
-  }
-
-  .checkboxLabel {
-    margin-bottom: 4px;
-    text-align: center;
-    font-size: 12px;
-    color: $primary-color !important; /* Зміна кольору тексту на синій */
-  }
-
-  .linkCheckbox {
-    /* Стилі для лінків як чекбоксів у мобільній версії */
-    color: $primary-color !important;
-    font-size: 14px;
-    text-decoration: none;
-    padding: 8px 12px;
-    border: 1px solid $primary-color;
-    border-radius: 4px;
-    display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-
-    &:hover {
-      background-color: $primary-color;
-      color: #fff;
-    }
+    gap: 10px;
   }
 }
