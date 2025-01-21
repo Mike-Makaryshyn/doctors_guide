@@ -1,4 +1,5 @@
 // src/components/Table/ResponsiveTable.jsx
+
 import React, { useEffect, useState } from "react";
 import styles from "./ResponsiveTable.module.scss";
 import cn from "classnames";
@@ -6,8 +7,8 @@ import BodyItem from "./BodyItem";
 import useIsMobile from "../../hooks/useIsMobile";
 import CloseIcon from "../../assets/close-icon.svg";
 // Якщо ви встановили FontAwesome, розкоментуйте наступні рядки
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Tile компонент
@@ -25,13 +26,16 @@ const Tile = ({
 }) => {
   const isOptional = tableFor === "optional";
   const hidden = isOptional ? checkboxes[row.id]?.hide : false;
-  const allChecked = columns
-    .filter((col) => {
-      if (tableFor === "optional" && col.name === "hide") return false;
-      if (category === "EU" && col.name === "apostile") return false;
-      return row[col.name] !== undefined;
-    })
-    .every((col) => checkboxes[row.id]?.[col.name]);
+
+  // Фільтрація колонок, які мають чекбокси та не є виключеними
+  const relevantColumns = columns.filter((col) => {
+    if (col.name === "category" || col.name === "name") return false;
+    if (category === "EU" && col.name === "apostile") return false;
+    if (tableFor === "optional" && col.name === "hide") return false;
+    return typeof row[col.name] === "string" && row[col.name].includes("check");
+  });
+
+  const allChecked = relevantColumns.every((col) => checkboxes[row.id]?.[col.name]);
 
   // Локальний стан для анімації завершення
   const [showCompletion, setShowCompletion] = useState(false);
@@ -164,51 +168,44 @@ const Tile = ({
 
       {!hidden && (
         <div className={styles.checkboxGrid}>
-          {columns
-            .filter((col) => {
-              if (col.name === "category" || col.name === "name") return false;
-              if (category === "EU" && col.name === "apostile") return false;
-              if (tableFor === "optional" && col.name === "hide") return false;
-              return true;
-            })
-            .map((col) => {
-              if (col.name === "links") {
-                return (
-                  <div key={`col-${row.id}-${col.name}`} className={styles.checkboxBox}>
-                    <div className={styles.linkContainer}>
-                      <span className={styles.linkLabel}>
-                        {col.label?.[selectedLanguage] || "Links"}
-                      </span>
-                      {getLinkElement(row, selectedRegion, category, selectedLanguage)}
-                    </div>
-                  </div>
-                );
-              }
-
+          {relevantColumns.map((col) => {
+            if (col.name === "links") {
               return (
-                <div
-                  key={`col-${row.id}-${col.name}`}
-                  className={cn(styles.checkboxBox, {
-                    [styles.optional]: tableFor === "optional",
-                  })}
-                >
-                  <input
-                    type="checkbox"
-                    id={`checkbox-${row.id}-${col.name}`}
-                    checked={checkboxes[row.id]?.[col.name] || false}
-                    onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
-                    disabled={
-                      disableCheckboxBasedOnName &&
-                      columns.some((c) => c.name === "name") &&
-                      row.name !== "Included"
-                    }
-                  />
-                  <label htmlFor={`checkbox-${row.id}-${col.name}`}>
-                    {col.label?.[selectedLanguage] || col.name}
-                  </label>
+                <div key={`col-${row.id}-${col.name}`} className={styles.checkboxBox}>
+                  <div className={styles.linkContainer}>
+                    <span className={styles.linkLabel}>
+                      {col.label?.[selectedLanguage] || "Links"}
+                    </span>
+                    {getLinkElement(row, selectedRegion, category, selectedLanguage)}
+                  </div>
                 </div>
               );
-            })}
+            }
+
+            return (
+              <div
+                key={`col-${row.id}-${col.name}`}
+                className={cn(styles.checkboxBox, {
+                  [styles.optional]: tableFor === "optional",
+                })}
+              >
+                <input
+                  type="checkbox"
+                  id={`checkbox-${row.id}-${col.name}`}
+                  checked={checkboxes[row.id]?.[col.name] || false}
+                  onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
+                  disabled={
+                    disableCheckboxBasedOnName &&
+                    columns.some((c) => c.name === "name") &&
+                    row.name !== "Included"
+                  }
+                />
+                <label htmlFor={`checkbox-${row.id}-${col.name}`}>
+                  {col.label?.[selectedLanguage] || col.name}
+                </label>
+              </div>
+            );
+          })}
         </div>
       )}
 
