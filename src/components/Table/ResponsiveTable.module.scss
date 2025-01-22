@@ -2,10 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+// Змінні
+$primary-color: #013b6e;
+$secondary-color: #4caf50;
+$border-color: #ccc;
+$warning-color: #ff9800;
+$danger-color: #f44336;
+
+// Головний контейнер сторінки
 .tableContainer {
   width: 100%;
   margin-bottom: 20px;
-  color: #013b6e; // Встановлено колір тексту
+  color: $primary-color; // Встановлено колір тексту
   font-family: 'Poppins', sans-serif; // Додано шрифт
 }
 
@@ -269,10 +277,10 @@
   font-weight: 500;
   word-break: break-word; // Перенесення довгих слів
   overflow-wrap: break-word;
-}
 
-.link:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .warning {
@@ -309,32 +317,31 @@
     text-align: left; // Вирівнювання тексту по лівому краю
   }
 
-  /* Розміщення чекбоксів горизонтально з лейблами над ними */
+  /* Розміщення чекбоксів горизонтально з лейблами поруч */
   .checkboxGrid {
     flex-direction: row; /* Горизонтальне розташування */
-    justify-content: center;
+    justify-content: flex-start; /* Змінили з center на flex-start для кращого розміщення */
     align-items: center; /* Центрування по вертикалі */
     gap: 15px; /* Зменшена відстань між чекбоксами */
-    flex-wrap: nowrap; /* Запобігає переносу чекбоксів на нові рядки */
+    flex-wrap: wrap; /* Дозволяє перенесення чекбоксів на нові рядки */
   }
 
   .checkboxBox {
-    flex-direction: column; /* Іконка над чекбоксом */
+    flex-direction: row; /* Змінили з column на row */
     align-items: center;
-    text-align: center;
-    gap: 5px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    gap: 10px; /* Збільшений відступ між чекбоксом та міткою */
     flex: 1 1 auto; /* Дозволяє чекбоксам зменшуватись */
-    width: 60px; /* Фіксована ширина для уніфікації */
-    height: auto; /* Автоматична висота */
-    max-width: 80px; /* Максимальна ширина для адаптивності */
+    width: auto; /* Автоматична ширина */
+    max-width: none; /* Видалення максимального обмеження */
   }
 
   .iconLabel {
-    font-size: 0.6rem; // Зменшений розмір шрифту для адаптивності
+    font-size: 0.8rem; // Збільшений розмір для кращої читабельності
   }
 
   .checkboxBox.optional .iconLabel {
-    font-size: 0.6rem; // Зменшений розмір шрифту для опціональних документів
+    font-size: 0.8rem; // Збільшений розмір для опціональних документів
   }
 
   .checkboxBox label:hover {
@@ -342,9 +349,25 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); // Посилена тінь при наведенні
   }
 
-  /* Зменшення розміру тексту лейблів на мобільних */
-  .iconLabel {
-    font-size: 0.6rem;
+  /* Забезпечення видимості linkContainer на мобільних */
+  .linkContainer {
+    max-width: 100%; // Розширюємо до повної ширини
+    margin-top: 8px; // Додаємо відступ зверху для кращого розділення
+  }
+
+  .linkLabel {
+    font-size: 0.8rem; // Збільшений розмір для кращої читабельності
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  /* Додаткові стилі для покращення вигляду лінків на мобільних */
+  .linkContainer a.link {
+    display: block; // Забезпечуємо блочне відображення
+    width: 100%; // Забезпечуємо повну ширину
+    text-align: left; // Вирівнювання тексту по лівому краю
   }
 }
 
@@ -364,5 +387,84 @@
   }
   100% {
     transform: translate(0px, 0px);
+  }
+}
+
+/* Класи для різних таблиць */
+.mainTable,
+.euTable,
+.secondTable,
+.optionalTable {
+  @extend .table;
+  
+  thead {
+    background-color: #e0e0e0; // Темно-сірий фон для всіх таблиць
+    font-size: 1.3rem; // Збільшено розмір тексту заголовка
+    font-weight: 600;
+    color: $primary-color; // Забезпечуємо контрастність тексту
+  }
+
+  tbody tr:not(:last-child) td {
+    border-bottom: 2px solid $primary-color; // Синя лінія між рядками
+  }
+}
+
+.optionalTable thead {
+  background-color: #d5d5d5; // Трохи світліший сірий для опціональних таблиць, якщо потрібно
+}
+
+/* Додаткові стилі для покращення вигляду заголовків та категорій */
+.tableHeader {
+  font-size: 1.3rem; // Збільшено розмір тексту заголовків
+  font-weight: 600;
+  color: $primary-color;
+}
+
+/* Специфічні стилі для secondTable */
+.secondTable {
+  @extend .table;
+
+  thead {
+    background-color: #e0e0e0; // Темно-сірий фон для заголовків
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 35%; // Збільшено ширину першої колонки
+    text-align: left;
+  }
+
+  // Видалення жирного шрифту у другій колонці
+  th:nth-child(2),
+  td:nth-child(2) {
+    font-weight: normal; // Видаляємо жирність
+  }
+
+  th[data-column="specificColumn"],
+  td[data-column="specificColumn"] {
+    width: 20%; // Приклад для додаткової колонки
+  }
+}
+
+/* Специфічні стилі для optionalTable */
+.optionalTable {
+  @extend .table;
+
+  thead {
+    background-color: #d5d5d5; // Трохи світліший сірий для опціональних таблиць
+  }
+
+  tbody tr {
+    cursor: pointer; // Курсор у вигляді руки для клікабельних рядків
+    background-color: #f5f5f5; // Світло-сірий фон для неактивних рядків
+    transition: background-color 0.3s;
+  }
+
+  tbody tr.active {
+    background-color: #ffffff; // Білий фон для активних рядків
+  }
+
+  tbody tr:hover {
+    background-color: #e0e0e0; // Зміна фону при наведенні
   }
 }

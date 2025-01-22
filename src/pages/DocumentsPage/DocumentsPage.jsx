@@ -42,10 +42,10 @@ const DocumentsPage = () => {
   const [progress, setProgress] = useState(0);
   const isMobile = useIsMobile();
 
-  let lastSavedData = {
+  const [lastSavedData, setLastSavedData] = useState({
     checkboxes: {},
     progress: 0,
-  };
+  });
 
   // Завантажуємо дані з Firestore
   const fetchDynamicDataFromFirestore = async () => {
@@ -101,7 +101,7 @@ const DocumentsPage = () => {
     );
     try {
       await setDoc(selectionDocRef, updatedData, { merge: true });
-      lastSavedData = updatedData;
+      setLastSavedData(updatedData);
       console.log("Firestore dynamic data updated:", updatedData);
     } catch (error) {
       console.error("Error updating dynamic data in Firestore:", error);
@@ -301,15 +301,20 @@ const DocumentsPage = () => {
           </div>
 
           <button
-            className="main_menu_back"
+            className={styles.backButton}
             onClick={() => handleChangePage("/main_menu")}
           >
-            &#8592;
+            &#8592; Назад
           </button>
         </div>
       </div>
     </MainLayout>
   );
+};
+
+// Додавання PropTypes для валідації пропсів
+DocumentsPage.propTypes = {
+  // Якщо DocumentsPage має пропси, додайте їх тут
 };
 
 export default DocumentsPage;

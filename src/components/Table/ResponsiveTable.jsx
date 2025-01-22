@@ -1,14 +1,13 @@
 // src/components/Table/ResponsiveTable.jsx
 
 import React, { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import styles from "./ResponsiveTable.module.scss";
 import cn from "classnames";
 import BodyItem from "./BodyItem";
 import useIsMobile from "../../hooks/useIsMobile";
 import CloseIcon from "../../assets/close-icon.svg";
-// Якщо ви встановили FontAwesome, розкоментуйте наступні рядки
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import MobileCheckbox from "../Checkbox/MobileCheckbox"; // Імпорт без іконок
 
 /**
  * Tile компонент
@@ -32,7 +31,8 @@ const Tile = ({
     if (col.name === "category" || col.name === "name") return false;
     if (category === "EU" && col.name === "apostile") return false;
     if (tableFor === "optional" && col.name === "hide") return false;
-    return typeof row[col.name] === "string" && row[col.name].includes("check");
+    if (col.name === "links") return true; // Завжди включаємо 'links' колонку
+    return typeof row[col.name] === "string" && row[col.name]?.includes("check");
   });
 
   const allChecked = relevantColumns.every((col) => checkboxes[row.id]?.[col.name]);
@@ -189,8 +189,7 @@ const Tile = ({
                   [styles.optional]: tableFor === "optional",
                 })}
               >
-                <input
-                  type="checkbox"
+                <MobileCheckbox
                   id={`checkbox-${row.id}-${col.name}`}
                   checked={checkboxes[row.id]?.[col.name] || false}
                   onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
@@ -199,10 +198,8 @@ const Tile = ({
                     columns.some((c) => c.name === "name") &&
                     row.name !== "Included"
                   }
+                  label={col.label?.[selectedLanguage] || col.name}
                 />
-                <label htmlFor={`checkbox-${row.id}-${col.name}`}>
-                  {col.label?.[selectedLanguage] || col.name}
-                </label>
               </div>
             );
           })}
@@ -212,14 +209,25 @@ const Tile = ({
       {/* Оверлей завершення */}
       {allChecked && !hidden && showCompletion && (
         <div className={styles.completionOverlay}>
-          {/* Якщо використовуєте FontAwesome, розкоментуйте наступний рядок */}
-          {/* <FontAwesomeIcon icon={faCheckCircle} size="3x" color="#4caf50" /> */}
-          {/* Альтернативний варіант без FontAwesome */}
+          {/* Простий символ галочки */}
           <span style={{ fontSize: "3rem", color: "#4caf50" }}>✔️</span>
         </div>
       )}
     </div>
   );
+};
+
+// Додавання PropTypes для валідації пропсів
+Tile.propTypes = {
+  row: PropTypes.object.isRequired,
+  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+  category: PropTypes.string.isRequired,
+  selectedLanguage: PropTypes.string.isRequired,
+  selectedRegion: PropTypes.string.isRequired,
+  tableFor: PropTypes.string.isRequired,
+  checkboxes: PropTypes.object.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+  disableCheckboxBasedOnName: PropTypes.bool.isRequired,
 };
 
 /**
@@ -312,6 +320,29 @@ const ResponsiveTable = ({
       )}
     </div>
   );
+};
+
+// Додавання PropTypes для валідації пропсів
+ResponsiveTable.propTypes = {
+  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setTableData: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  selectedLanguage: PropTypes.string.isRequired,
+  selectedRegion: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  tableFor: PropTypes.string,
+  disableCheckboxBasedOnName: PropTypes.bool,
+  checkboxes: PropTypes.object.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+  customClass: PropTypes.string,
+};
+
+ResponsiveTable.defaultProps = {
+  title: null,
+  tableFor: "main",
+  disableCheckboxBasedOnName: false,
+  customClass: "",
 };
 
 export default ResponsiveTable;

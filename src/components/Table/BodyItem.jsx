@@ -1,9 +1,11 @@
 // src/components/Table/BodyItem.jsx
 
 import React from "react";
+import PropTypes from 'prop-types';
 import styles from "./BodyItem.module.scss";
 import cn from "classnames";
-import Checkbox from "../../components/Checkbox/Checkbox";
+import CustomCheckbox from "../Checkbox/Checkbox";
+import MobileCheckbox from "../Checkbox/MobileCheckbox";
 import docIcon from "../../assets/mark.svg";
 
 /**
@@ -214,7 +216,7 @@ const BodyItem = React.memo(
                           <span className={styles.checkboxLabel}>
                             {column.label?.[language] || column.name}
                           </span>
-                          <Checkbox
+                          <MobileCheckbox
                             id={`checkbox-${row.id}-${column.name}`}
                             checked={
                               checkboxes[row.id.toString()]?.[column.name] || false
@@ -225,11 +227,12 @@ const BodyItem = React.memo(
                               hasNameColumn &&
                               row.name !== "Included"
                             }
+                            label=""
                           />
                         </div>
                       </div>
                     ) : (
-                      <Checkbox
+                      <CustomCheckbox
                         id={`checkbox-${row.id}-${column.name}`}
                         checked={
                           checkboxes[row.id.toString()]?.[column.name] || false
@@ -240,6 +243,7 @@ const BodyItem = React.memo(
                           hasNameColumn &&
                           row.name !== "Included"
                         }
+                        label=""
                       />
                     )}
                   </div>
@@ -283,7 +287,7 @@ const BodyItem = React.memo(
                     "optional_checkbox_wrapper"
                   )}
                 >
-                  <Checkbox
+                  <CustomCheckbox
                     id={`optional-checkbox-${row.id}`}
                     label={
                       checkboxes[row.id.toString()]?.hide
@@ -302,5 +306,28 @@ const BodyItem = React.memo(
     );
   }
 );
+
+// Додавання PropTypes для валідації пропсів
+BodyItem.propTypes = {
+  row: PropTypes.object.isRequired,
+  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+  index: PropTypes.number.isRequired,
+  tableFor: PropTypes.string.isRequired,
+  setTableData: PropTypes.func.isRequired,
+  tableData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  category: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+  handleCheckboxChange: PropTypes.func.isRequired,
+  changeHiddenProp: PropTypes.func,
+  hasNameColumn: PropTypes.bool.isRequired,
+  disableCheckboxBasedOnName: PropTypes.bool.isRequired,
+  selectedRegion: PropTypes.string.isRequired,
+  checkboxes: PropTypes.object.isRequired,
+  isMobile: PropTypes.bool.isRequired,
+};
+
+BodyItem.defaultProps = {
+  changeHiddenProp: () => {},
+};
 
 export default BodyItem;

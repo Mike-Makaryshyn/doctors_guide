@@ -1,106 +1,10 @@
 // src/components/Checkbox/Checkbox.jsx
 
 import React from "react";
-import styled, { keyframes } from "styled-components";
-
-const Input = styled.input`
-  height: 0;
-  width: 0;
-  opacity: 0;
-  z-index: -1;
-`;
-
-const rotate = keyframes`
-  from {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(45deg);
-  }
-`;
-
-const Indicator = styled.div`
-  width: 1.2em;
-  height: 1.2em;
-  background: #e6e6e6;
-  border: 1px solid #757575;
-  border-radius: 50%; /* Кругла форма */
-  margin-right: 0.5em; /* Відступ справа */
-  position: relative;
-  transition: background 0.3s, border-color 0.3s;
-
-  ${Input}:not(:disabled):checked + & {
-    background: #4caf50; /* Зелений фон при відміченому чекбоксі */
-    border-color: #4caf50;
-  }
-
-  ${Input}:not(:disabled):hover + & {
-    background: #ccc;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  ${Input}:checked + &::after {
-    display: block;
-    top: 0.3em;
-    left: 0.45em;
-    width: 0.3em;
-    height: 0.6em;
-    border: solid #fff;
-    border-width: 0 0.2em 0.2em 0;
-    transform: rotate(45deg);
-    animation: ${rotate} 0.3s forwards;
-  }
-
-  /* Додаткові стилі для мобільних */
-  @media (max-width: 768px) {
-    width: 1.6em;
-    height: 1.6em;
-
-    ${Input}:not(:disabled):checked + & {
-      background: #4caf50; /* Зелений фон при відміченому чекбоксі */
-      border-color: #4caf50;
-    }
-
-    ${Input}:not(:disabled):hover + & {
-      background: #ccc;
-    }
-
-    ${Input}:checked + &::after {
-      top: 0.4em;
-      left: 0.6em;
-      width: 0.4em;
-      height: 0.8em;
-      border-width: 0 0.3em 0.3em 0;
-    }
-  }
-`;
-
-const Label = styled.label`
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  padding-left: 1.6em; /* Збільшено для кращого відображення */
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  user-select: none; 
-  color: ${(props) => (props.disabled ? "#757575" : "#013b6e")};
-  font-size: 16px;
-
-  /* Додаткові стилі для мобільних */
-  @media (max-width: 768px) {
-    padding-left: 2em; /* Збільшено відступ для більших чекбоксів */
-    font-size: 14px;
-  }
-`;
+import styles from "./Checkbox.module.scss";
 
 export default function Checkbox({
-  checked,      // Використовується для контролю стану
+  checked,
   onChange,
   name,
   id,
@@ -109,21 +13,32 @@ export default function Checkbox({
   labelRight
 }) {
   return (
-    <Label htmlFor={id} disabled={disabled}>
-      {!labelRight && label}
+    <label
+      htmlFor={id}
+      className={`${styles.checkboxLabel} ${labelRight ? styles.labelRight : ''}`}
+      style={{ opacity: disabled ? 0.6 : 1 }}
+    >
+      {/* Відображення тексту зліва або справа */}
+      {!labelRight && <span className={styles.checkboxText}>{label}</span>}
 
-      <Input
-        id={id}
+      <input
         type="checkbox"
+        id={id}
         name={name}
-        disabled={disabled}
-        checked={checked}    // Правильне використання пропса checked
+        checked={checked}
         onChange={onChange}
+        disabled={disabled}
+        className={styles.checkboxInput}
         aria-checked={checked}
         aria-disabled={disabled}
       />
-      <Indicator />
-      {labelRight && label}
-    </Label>
+      <div className={styles.checkboxCustom}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20.285,6.708l-11.57,11.57l-5.285-5.285l1.414-1.414l3.871,3.871l10.157-10.157L20.285,6.708z"/>
+        </svg>
+      </div>
+
+      {labelRight && <span className={styles.checkboxText}>{label}</span>}
+    </label>
   );
 }
