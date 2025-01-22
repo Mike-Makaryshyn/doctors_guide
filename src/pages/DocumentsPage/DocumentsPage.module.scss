@@ -67,7 +67,7 @@ $danger-color: #f44336;
 
 // Контейнер з таблицями
 .table_wrapper {
-  margin-top: 45px;
+  margin-top: 0px;
   padding: 0 8px;
 }
 
@@ -110,14 +110,14 @@ $danger-color: #f44336;
 
   th:first-child,
   td:first-child {
-    width: 35%; // Збільшено ширину першої колонки
+    width: 31% !important; // Збільшено ширину першої колонки
     text-align: left;
   }
 
   th:not(:first-child),
   td:not(:first-child) {
     width: auto;
-    min-width: 60px;
+    min-width: unset !important;
   }
 
   th:first-child {
@@ -449,7 +449,7 @@ $danger-color: #f44336;
   @extend .tableBase;
 
   thead {
-    background-color: #e0e0e0; // Темно-сірий фон для всіх таблиць
+    background-color: #ab9494; // Темно-сірий фон для всіх таблиць
     font-size: 1.3rem; // Збільшено розмір тексту заголовка
     font-weight: 600;
     color: $primary-color; // Забезпечуємо контрастність тексту
@@ -461,7 +461,7 @@ $danger-color: #f44336;
 }
 
 .optionalTable thead {
-  background-color: #d5d5d5; // Трохи світліший сірий для опціональних таблиць, якщо потрібно
+  background-color: #917878; // Трохи світліший сірий для опціональних таблиць, якщо потрібно
 }
 
 /* Додаткові стилі для покращення вигляду заголовків та категорій */
