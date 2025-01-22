@@ -1,13 +1,14 @@
 // src/components/Table/ResponsiveTable.jsx
 
 import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import styles from "./ResponsiveTable.module.scss";
 import cn from "classnames";
 import BodyItem from "./BodyItem";
 import useIsMobile from "../../hooks/useIsMobile";
 import CloseIcon from "../../assets/close-icon.svg";
 import MobileCheckbox from "../Checkbox/MobileCheckbox"; // Імпорт без іконок
+import { columnsFirst } from "../../constants/translation/columnsFirst";
 
 /**
  * Tile компонент
@@ -32,10 +33,14 @@ const Tile = ({
     if (category === "EU" && col.name === "apostile") return false;
     if (tableFor === "optional" && col.name === "hide") return false;
     if (col.name === "links") return true; // Завжди включаємо 'links' колонку
-    return typeof row[col.name] === "string" && row[col.name]?.includes("check");
+    return (
+      typeof row[col.name] === "string" && row[col.name]?.includes("check")
+    );
   });
 
-  const allChecked = relevantColumns.every((col) => checkboxes[row.id]?.[col.name]);
+  const allChecked = relevantColumns.every(
+    (col) => checkboxes[row.id]?.[col.name]
+  );
 
   // Локальний стан для анімації завершення
   const [showCompletion, setShowCompletion] = useState(false);
@@ -52,10 +57,9 @@ const Tile = ({
   }, [allChecked, hidden]);
 
   const tileClass = cn(styles.tile, {
-    [styles.tileCompleted]: allChecked && !hidden,
+    [styles.tileCompleted]: allChecked && !hidden, // Постійний зелений фон при вибраних чекбоксах
     [styles.tileIncomplete]: !allChecked && !hidden,
     [styles.tileExcluded]: hidden,
-    [styles.completed]: showCompletion && !hidden, // Додаємо клас для анімації завершення
   });
 
   const onTileClick = () => {
@@ -115,14 +119,22 @@ const Tile = ({
                 </a>
               );
             } else {
-              return <span className={styles.warning}>No 'General' link found.</span>;
+              return (
+                <span className={styles.warning}>No 'General' link found.</span>
+              );
             }
           }
         } else {
-          return <span className={styles.warning}>No links available for this category.</span>;
+          return (
+            <span className={styles.warning}>
+              No links available for this category.
+            </span>
+          );
         }
       } else {
-        return <span className={styles.info}>Not required for this category.</span>;
+        return (
+          <span className={styles.info}>Not required for this category.</span>
+        );
       }
     } else if (row.singleLink) {
       return (
@@ -171,12 +183,20 @@ const Tile = ({
           {relevantColumns.map((col) => {
             if (col.name === "links") {
               return (
-                <div key={`col-${row.id}-${col.name}`} className={styles.checkboxBox}>
+                <div
+                  key={`col-${row.id}-${col.name}`}
+                  className={styles.checkboxBox}
+                >
                   <div className={styles.linkContainer}>
                     <span className={styles.linkLabel}>
                       {col.label?.[selectedLanguage] || "Links"}
                     </span>
-                    {getLinkElement(row, selectedRegion, category, selectedLanguage)}
+                    {getLinkElement(
+                      row,
+                      selectedRegion,
+                      category,
+                      selectedLanguage
+                    )}
                   </div>
                 </div>
               );
@@ -189,17 +209,12 @@ const Tile = ({
                   [styles.optional]: tableFor === "optional",
                 })}
               >
-                <MobileCheckbox
-                  id={`checkbox-${row.id}-${col.name}`}
-                  checked={checkboxes[row.id]?.[col.name] || false}
-                  onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
-                  disabled={
-                    disableCheckboxBasedOnName &&
-                    columns.some((c) => c.name === "name") &&
-                    row.name !== "Included"
-                  }
-                  label={col.label?.[selectedLanguage] || col.name}
-                />
+             <MobileCheckbox
+  id={`checkbox-${row.id}-${col.name}`}
+  checked={checkboxes[row.id]?.[col.name] || false}
+  onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
+  label={columnsFirst.find(item => item.name === col.name)?.shortLabel[selectedLanguage] || col.name}
+/>
               </div>
             );
           })}
@@ -304,17 +319,17 @@ const ResponsiveTable = ({
         <div className={styles.tileContainer}>
           {data.map((row) => (
             <Tile
-              key={`tile-${row.id}`}
-              row={row}
-              columns={columns}
-              category={category}
-              selectedLanguage={selectedLanguage}
-              selectedRegion={selectedRegion}
-              tableFor={tableFor}
-              checkboxes={checkboxes}
-              handleCheckboxChange={handleCheckboxChange}
-              disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-            />
+            key={`tile-${row.id}`}
+            row={row}
+            columns={columns}
+            category={category}
+            selectedLanguage={selectedLanguage}
+            selectedRegion={selectedRegion}
+            tableFor={tableFor}
+            checkboxes={checkboxes}
+            handleCheckboxChange={handleCheckboxChange}  // Переконайся, що функція передається сюди
+            disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+          />
           ))}
         </div>
       )}

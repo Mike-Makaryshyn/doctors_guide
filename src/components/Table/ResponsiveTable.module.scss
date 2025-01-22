@@ -182,9 +182,10 @@ $danger-color: #f44336;
 .checkboxGrid {
   display: flex;
   justify-content: center; /* Центрування елементів */
-  gap: 15px; /* Зменшена відстань між чекбоксами */
+  gap: 5px; /* Зменшена відстань між чекбоксами */
   align-items: center; /* Центрування по вертикалі */
   flex-wrap: nowrap; /* Запобігає переносу чекбоксів на нові рядки */
+  max-width: 100%; /* Або встановіть ширину вручну */
 }
 
 .checkboxBox {
@@ -200,6 +201,18 @@ $danger-color: #f44336;
   max-width: 80px; /* Максимальна ширина для адаптивності */
 }
 
+.tileCompleted {
+  background-color: #28a745;  /* Постійний зелений колір */
+  color: #fff;  /* Зміна кольору тексту для контрасту */
+  box-shadow: inset 24px 24px 9px #1f8236, inset -24px -24px 9px #31cc54;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Зміна стилю тексту плитки при завершенні */
+.tileCompleted .tileTitle {
+  color: #ffffff;
+  font-weight: bold;
+}
 /* Стилізація іконок */
 .icon {
   width: 40px;
@@ -322,7 +335,7 @@ $danger-color: #f44336;
     flex-direction: row; /* Горизонтальне розташування */
     justify-content: flex-start; /* Змінили з center на flex-start для кращого розміщення */
     align-items: center; /* Центрування по вертикалі */
-    gap: 15px; /* Зменшена відстань між чекбоксами */
+    gap: 3px; /* Зменшена відстань між чекбоксами */
     flex-wrap: wrap; /* Дозволяє перенесення чекбоксів на нові рядки */
   }
 

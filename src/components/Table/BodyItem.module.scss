@@ -5,17 +5,7 @@ $border-color: #ccc;
 $bg-complete: rgba(#4caf50, 0.1);
 $bg-incomplete: rgba(#ff9800, 0.1);
 
-.tableRow {
-  // Кожен документ
-}
 
-.rowEven {
-  // background-color: #f9f9f9;
-}
-
-.rowOdd {
-  // background-color: #ffffff;
-}
 
 .rowCompleted {
   background-color: $bg-complete;
@@ -71,9 +61,7 @@ $bg-incomplete: rgba(#ff9800, 0.1);
 
 /* Адаптивні стилі для мобільної версії */
 @media (max-width: 768px) {
-  .tableRow {
-    // Стилі для рядків таблиці, якщо необхідно
-  }
+ 
 
   .checkboxGroup {
     display: flex;
