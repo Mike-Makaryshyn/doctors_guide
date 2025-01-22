@@ -18,7 +18,6 @@ $danger-color: #f44336;
 }
 .tileExcluded {
   background: rgba(150, 150, 150, 0.2);  /* Постійний напівпрозорий сірий фон */
-
   border: 1px solid rgba(150, 150, 150, 0.4);  /* Сіра межа */
   box-shadow: inset -3px 3px 8px rgba(0, 0, 0, 0.1),
               inset 3px -3px 8px rgba(255, 255, 255, 0.1);
@@ -38,10 +37,7 @@ $danger-color: #f44336;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
-  /* Відключення будь-яких змін при наведенні */
-
-}
+}  /* Додана відсутня закриваюча дужка */
 .closeButton {
   width: 35px;
   height: 35px;
@@ -52,8 +48,8 @@ $danger-color: #f44336;
   cursor: pointer;
   display: flex;
   position: absolute;
-  top: 5px;   /* Розташування ближче до верхнього краю */
-  right: 5px; /* Розташування ближче до правого краю */
+  top: 5px;  /* Розташування ближче до верхнього краю */
+  right: 5px;  /* Розташування ближче до правого краю */
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-in-out;
@@ -65,7 +61,7 @@ $danger-color: #f44336;
   &:focus {
     outline: none;
   }
-}
+}  /* Додана відсутня закриваюча дужка */
 
 .closeIcon {
   width: 20px;
@@ -282,12 +278,11 @@ $danger-color: #f44336;
   border-radius: 50px !important;
   background: #2a7c6f !important;
   box-shadow: 
-    inset -20px 20px 60px #24695e !important,  
+    inset -20px 20px 60px #24695e !important,
     inset 20px -20px 60px #308f80 !important;  
   color: #fff !important;
   border: none !important;
-  animation: none !important; /* Удаляем анимацию */
- 
+  animation: none !important; 
 
   .tileTitle {
     color: #ffffff;
@@ -517,8 +512,6 @@ $danger-color: #f44336;
 
 /* Специфічні стилі для secondTable */
 .secondTable {
-  @extend .table;
-
   thead {
     background-color: #e0e0e0; // Темно-сірий фон для заголовків
   }
