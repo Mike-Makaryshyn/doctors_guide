@@ -8,7 +8,17 @@ const defaultProps = {
    ready_copies: "not_check",
    sent: "not_check",
 };
-
+export const sendOriginalText = {
+   uk: "Оригінал надсилається за місцем вимоги",
+   en: "The original is sent to the place of requirement",
+   fr: "L'original est envoyé à l'endroit requis",
+   es: "El original se envía al lugar requerido",
+   ar: "يتم إرسال الأصل إلى المكان المطلوب",
+   tr: "Orijinal, talep edilen yere gönderilir",
+   pl: "Oryginał jest wysyłany na miejsce wymagań",
+   ru: "Оригинал отправляется по месту требования",
+   de: "Das Original wird an den erforderlichen Ort gesendet",
+};
 export const messages = {
    en: {
       lessThan20: "There is some job to do. Don't hesitate!",

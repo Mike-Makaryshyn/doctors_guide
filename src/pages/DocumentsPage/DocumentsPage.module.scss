@@ -474,6 +474,7 @@ $danger-color: #f44336;
 /* Специфічні стилі для secondTable */
 .secondTable {
   @extend .tableBase;
+  
 
   thead {
     background-color: #e0e0e0; // Темно-сірий фон для заголовків

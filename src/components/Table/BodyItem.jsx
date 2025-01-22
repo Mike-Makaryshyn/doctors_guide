@@ -1,12 +1,13 @@
 // src/components/Table/BodyItem.jsx
 
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import styles from "./BodyItem.module.scss";
 import cn from "classnames";
 import CustomCheckbox from "../Checkbox/Checkbox";
 import MobileCheckbox from "../Checkbox/MobileCheckbox";
 import docIcon from "../../assets/mark.svg";
+import { sendOriginalText } from "../../constants/translation/documents";
 
 /**
  * Це компонент для відображення одного рядка (row) у таблиці (десктопний режим).
@@ -32,7 +33,9 @@ const BodyItem = React.memo(
   }) => {
     /** Вмикає/вимикає поле (наприклад, "hide") або будь-яке інше */
     const onCheckboxChange = (fieldName) => {
-      console.log(`Checkbox changed: documentId=${row.id}, fieldName=${fieldName}`);
+      console.log(
+        `Checkbox changed: documentId=${row.id}, fieldName=${fieldName}`
+      );
       handleCheckboxChange(row.id.toString(), fieldName);
     };
 
@@ -129,9 +132,7 @@ const BodyItem = React.memo(
         } else {
           // Document не вимагається для цього category
           return (
-            <span className={styles.info}>
-              Not required for this category.
-            </span>
+            <span className={styles.info}>Not required for this category.</span>
           );
         }
       } else if (row.singleLink) {
@@ -219,7 +220,8 @@ const BodyItem = React.memo(
                           <MobileCheckbox
                             id={`checkbox-${row.id}-${column.name}`}
                             checked={
-                              checkboxes[row.id.toString()]?.[column.name] || false
+                              checkboxes[row.id.toString()]?.[column.name] ||
+                              false
                             }
                             onChange={() => onCheckboxChange(column.name)}
                             disabled={
@@ -263,21 +265,18 @@ const BodyItem = React.memo(
                 </div>
               ) : null}
 
-              {/* Приклад додаткового посилання для row.id=13/14 і apostile */}
-              {(row?.id === 13 || row?.id === 14) &&
-                column.name === "apostile" &&
-                !checkboxes[row.id.toString()]?.hide && (
-                  <a
-                    className={styles.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={row?.link}
-                  >
-                    {row.id === 13
-                      ? "Вивчення мови"
-                      : "Оригінал надсилається прямо..."}
-                  </a>
-                )}
+{row?.id === 17 &&
+  column.name === "notary" &&
+  !checkboxes[row.id.toString()]?.hide && (
+    <a
+      className={styles.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      href={row?.link}
+    >
+      {sendOriginalText[language] || sendOriginalText["en"]}
+    </a>
+  )}
 
               {/* Якщо документ опціональний - відображати "Included/Excluded" */}
               {row?.optional && column?.name === "category" && (

@@ -9,6 +9,7 @@ import useIsMobile from "../../hooks/useIsMobile";
 import CloseIcon from "../../assets/close-icon.svg";
 import MobileCheckbox from "../Checkbox/MobileCheckbox"; // Імпорт без іконок
 import { columnsFirst } from "../../constants/translation/columnsFirst";
+import { sendOriginalText } from "../../constants/translation/documents";
 
 /**
  * Tile компонент
@@ -209,15 +210,34 @@ const Tile = ({
                   [styles.optional]: tableFor === "optional",
                 })}
               >
-             <MobileCheckbox
-  id={`checkbox-${row.id}-${col.name}`}
-  checked={checkboxes[row.id]?.[col.name] || false}
-  onChange={() => handleCheckboxChange(row.id.toString(), col.name)}
-  label={columnsFirst.find(item => item.name === col.name)?.shortLabel[selectedLanguage] || col.name}
-/>
+                <MobileCheckbox
+                  id={`checkbox-${row.id}-${col.name}`}
+                  checked={checkboxes[row.id]?.[col.name] || false}
+                  onChange={() =>
+                    handleCheckboxChange(row.id.toString(), col.name)
+                  }
+                  label={
+                    columnsFirst.find((item) => item.name === col.name)
+                      ?.shortLabel[selectedLanguage] || col.name
+                  }
+                />
               </div>
             );
           })}
+          {/* Додати відображення посилання тільки під колонкою 'notary' */}
+          {row?.id === 17 &&
+  !checkboxes[row.id.toString()]?.hide && (
+    <div className={styles.linkContainer}>
+      <a
+        className={styles.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={row?.link}
+      >
+        {sendOriginalText[selectedLanguage] || sendOriginalText["en"]}
+      </a>
+    </div>
+  )}
         </div>
       )}
 
@@ -319,17 +339,17 @@ const ResponsiveTable = ({
         <div className={styles.tileContainer}>
           {data.map((row) => (
             <Tile
-            key={`tile-${row.id}`}
-            row={row}
-            columns={columns}
-            category={category}
-            selectedLanguage={selectedLanguage}
-            selectedRegion={selectedRegion}
-            tableFor={tableFor}
-            checkboxes={checkboxes}
-            handleCheckboxChange={handleCheckboxChange}  // Переконайся, що функція передається сюди
-            disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-          />
+              key={`tile-${row.id}`}
+              row={row}
+              columns={columns}
+              category={category}
+              selectedLanguage={selectedLanguage}
+              selectedRegion={selectedRegion}
+              tableFor={tableFor}
+              checkboxes={checkboxes}
+              handleCheckboxChange={handleCheckboxChange} // Переконайся, що функція передається сюди
+              disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+            />
           ))}
         </div>
       )}
