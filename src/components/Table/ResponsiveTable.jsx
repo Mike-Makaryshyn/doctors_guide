@@ -58,7 +58,7 @@ const Tile = ({
   }, [allChecked, hidden]);
 
   const tileClass = cn(styles.tile, {
-    [styles.tileCompleted]: allChecked && !hidden, // Постійний зелений фон при вибраних чекбоксах
+    [styles.tileCompleted]: allChecked && !hidden,  // Додає клас для завершеної плитки
     [styles.tileIncomplete]: !allChecked && !hidden,
     [styles.tileExcluded]: hidden,
   });
@@ -71,112 +71,95 @@ const Tile = ({
 
   // Функція для генерації елементів посилань
   const getLinkElement = (row, selectedRegion, category, language) => {
+    // Словник мов для тексту посилання
+    const linkTranslations = {
+      de: "Links",
+      en: "Links",
+      uk: "Посилання",
+      ru: "Ссылка",
+      tr: "Bağlantı",
+      ar: "رابط",
+      fr: "Lien",
+      es: "Enlace",
+      pl: "Link",
+    };
+  
+    // Вибір відповідного тексту за мовою або дефолтне значення
+    const linkText = linkTranslations[language] || "Link";
+  
+    let linkToOpen = null;
+  
     if (row.links) {
       if (!selectedRegion) {
-        return (
-          <div className={styles.linkContainer} onClick={() => window.location.href = "/lands"}>
-            <span className={styles.linkLabel}>
-              {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
-            </span>
-          </div>
-        );
-      }
+        linkToOpen = "/lands";
+      } else {
+        const requiredFor = Array.isArray(row.requiredFor)
+          ? row.requiredFor.map((item) => item.trim().toLowerCase())
+          : ["both"];
+        const categoryLower = category.trim().toLowerCase();
+        const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
   
-      const requiredFor = Array.isArray(row.requiredFor)
-        ? row.requiredFor.map((item) => item.trim().toLowerCase())
-        : ["both"];
-      const categoryLower = category.trim().toLowerCase();
-      const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
-  
-      if (requiredFor.includes("both") || requiredFor.includes(categoryLower)) {
-        if (row.links[category]) {
-          const regionalLink = row.links[category].find((link) => {
-            return link.landName.trim().toLowerCase() === cleanedSelectedRegion;
-          });
-  
-          const linkToOpen = regionalLink ? regionalLink.link : 
-            row.links[category].find(link => link.landName.trim().toLowerCase() === "general")?.link;
-  
-          if (linkToOpen) {
-            return (
-              <div 
-                className={styles.linkContainer} 
-                onClick={() => window.open(linkToOpen, "_blank")}
-              >
-                <span className={styles.linkLabel}>
-                  {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
-                </span>
-              </div>
+        if (requiredFor.includes("both") || requiredFor.includes(categoryLower)) {
+          if (row.links[category]) {
+            const regionalLink = row.links[category].find(
+              (link) => link.landName.trim().toLowerCase() === cleanedSelectedRegion
             );
+  
+            linkToOpen = regionalLink
+              ? regionalLink.link
+              : row.links[category].find((link) =>
+                  link.landName.trim().toLowerCase() === "general"
+                )?.link;
           }
         }
-        return <span className={styles.warning}>No links available.</span>;
-      } else {
-        return <span className={styles.info}>Not required for this category.</span>;
       }
     } else if (row.singleLink) {
+      linkToOpen = row.singleLink.link;
+    }
+  
+    if (linkToOpen) {
       return (
-        <div 
-          className={styles.linkContainer} 
-          onClick={() => window.open(row.singleLink.link, "_blank")}
+        <div
+          className={styles.linkContainer}
+          onClick={() => window.open(linkToOpen, "_blank")}
         >
-          <span className={styles.linkLabel}>
-            {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
-          </span>
+          <span className={styles.linkLabel}>{linkText}</span>
         </div>
       );
     } else {
-      return <span className={styles.warning}>No links found.</span>;
+      return <div className={styles.warning}>{linkText} unavailable</div>;
     }
   };
 
   return (
-    <div
-      className={tileClass}
-      onClick={() => {
-        if (hidden) onTileClick();
-      }}
-    >
-      <div className={styles.tileHeader}>
-        <div className={styles.tileTitle}>
-          {row.category?.[selectedLanguage] ||
-            row.name?.[selectedLanguage] ||
-            "N/A"}
-        </div>
-        {isOptional && !hidden && (
-         <button
-         className={styles.closeButton}
-         onClick={(e) => {
-           e.stopPropagation();
-           onTileClick();
-         }}
-       >
-         <img src={CloseIcon} alt="Close" className={styles.closeIcon} />
-       </button>
-        )}
+    <div className={tileClass} onClick={() => hidden && onTileClick()}>
+    <div className={styles.tileHeader}>
+      <div className={styles.tileTitle}>
+        {row.category?.[selectedLanguage] || row.name?.[selectedLanguage] || "N/A"}
       </div>
+      {isOptional && !hidden && (
+        <button
+          className={cn(styles.closeButton, {
+            [styles.tileCompleted]: allChecked,  // Додано клас tileCompleted
+          })}
+          onClick={(e) => {
+            e.stopPropagation();
+            onTileClick();
+          }}
+        >
+          <img src={CloseIcon} alt="Close" className={styles.closeIcon} />
+        </button>
+      )}
+    </div>
 
       {!hidden && (
         <div className={styles.checkboxGrid}>
           {relevantColumns.map((col) => {
             if (col.name === "links") {
               return (
-                <div
-                  key={`col-${row.id}-${col.name}`}
-                  className={styles.checkboxBox}
-                >
-                  <div className={styles.linkContainer}>
-                    <span className={styles.linkLabel}>
-                      {col.label?.[selectedLanguage] || "Links"}
-                    </span>
-                    {getLinkElement(
-                      row,
-                      selectedRegion,
-                      category,
-                      selectedLanguage
-                    )}
-                  </div>
-                </div>
+                <div className={styles.checkboxBox}>
+                {getLinkElement(row, selectedRegion, category, selectedLanguage)}
+              </div>
               );
             }
 
@@ -202,19 +185,18 @@ const Tile = ({
             );
           })}
           {/* Додати відображення посилання тільки під колонкою 'notary' */}
-          {row?.id === 17 &&
-  !checkboxes[row.id.toString()]?.hide && (
-    <div className={styles.linkContainer}>
-      <a
-        className={styles.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        href={row?.link}
-      >
-        {sendOriginalText[selectedLanguage] || sendOriginalText["en"]}
-      </a>
-    </div>
-  )}
+          {row?.id === 17 && !checkboxes[row.id.toString()]?.hide && (
+            <div className={styles.linkContainer}>
+              <a
+                className={styles.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={row?.link}
+              >
+                {sendOriginalText[selectedLanguage] || sendOriginalText["en"]}
+              </a>
+            </div>
+          )}
         </div>
       )}
 

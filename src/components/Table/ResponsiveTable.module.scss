@@ -261,12 +261,41 @@ $danger-color: #f44336;
   height: auto; /* Автоматична висота */
   max-width: 80px; /* Максимальна ширина для адаптивності */
 }
+// Стилі для кнопки закриття в завершеному стані
+.tileCompleted .closeButton {
+  border-radius: 50px;  // Закруглені кути
+  background: #2a7c6f;  // Основний фон
+  box-shadow: 
+    -20px 20px 60px #24695e,  // Тінь зверху зліва
+    20px -20px 60px #308f80;  // Тінь знизу справа
+  color: #fff;  // Білий колір іконки
+  transition: all 0.3s ease-in-out;  // Плавний перехід
+  cursor: default;  // Видалення ефекту курсора
 
+  &:hover {
+    box-shadow: 
+      -15px 15px 50px #24695e, 
+      15px -15px 50px #308f80;
+  }
+}
 .tileCompleted {
-  background-color: #28a745;  /* Постійний зелений колір */
-  color: #fff;  /* Зміна кольору тексту для контрасту */
-  box-shadow: inset 24px 24px 9px #1f8236, inset -24px -24px 9px #31cc54;
-  transition: background-color 0.3s ease-in-out;
+  border-radius: 50px !important;
+  background: #2a7c6f !important;
+  box-shadow: 
+    inset -20px 20px 60px #24695e !important,  
+    inset 20px -20px 60px #308f80 !important;  
+  color: #fff !important;
+  border: none !important;
+  animation: none !important; /* Удаляем анимацию */
+  cursor: default;
+
+  .tileTitle {
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
+.tile:not(.tileCompleted) {
+  animation: float 6s ease-in-out infinite;
 }
 
 /* Зміна стилю тексту плитки при завершенні */
@@ -346,25 +375,10 @@ $danger-color: #f44336;
   color: #013b6e;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  &:hover {
-    background: #f3f3f3;
-  }
 }
 
-.linkLabel {
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: center;
-  width: 100%;
+.linkContainer:hover {
+  background: #f3f3f3;
 }
 
 .info {
@@ -392,8 +406,11 @@ $danger-color: #f44336;
   }
 
   .tileTitle {
-    font-size: 0.9rem; // Зменшений розмір шрифту для мобільних
+    font-weight: 600;
+    color: #013b6e; // Встановлено колір тексту
+    font-size: 1.1rem; // Додано розмір шрифту
     text-align: left; // Вирівнювання тексту по лівому краю
+    padding-right: 50px; // Додано внутрішній відступ справа
   }
 
   /* Розміщення чекбоксів горизонтально з лейблами поруч */

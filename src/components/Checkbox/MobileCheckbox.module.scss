@@ -32,17 +32,17 @@
     position: relative;
   }
 
-  /* Стан після натискання */
+  /* Стан після натискання (оновлені кольори) */
   &.active .checkboxIcon {
-    background: #28a745;
-    box-shadow: inset 24px 24px 9px #1f8236, inset -24px -24px 9px #31cc54;
+    background: #2a7c6f;  /* Новий фон */
+    box-shadow: inset -20px 20px 60px #24695e, inset 20px -20px 60px #308f80;  /* Нові тіні */
+    color: #ffffff; /* Білий колір тексту після активації */
   }
 
-  /* Прозора галочка */
   &.active .checkboxIcon::after {
     content: '\2714';  /* Unicode галочки ✓ */
-    font-size: 50px;
-    color: rgba(0, 0, 0, 0.05); /* Дуже прозора галочка */
+    font-size: 35px; /* Зменшений розмір галочки */
+    color: rgba(255, 255, 255, 0.1); /* Зробити ще більш прозорою */
     position: absolute;
     top: 50%;
     left: 50%;
