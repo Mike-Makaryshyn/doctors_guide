@@ -74,79 +74,56 @@ const Tile = ({
     if (row.links) {
       if (!selectedRegion) {
         return (
-          <a href="/lands" rel="noopener noreferrer" className={styles.link}>
-            Select a region
-          </a>
+          <div className={styles.linkContainer} onClick={() => window.location.href = "/lands"}>
+            <span className={styles.linkLabel}>
+              {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
+            </span>
+          </div>
         );
       }
-
+  
       const requiredFor = Array.isArray(row.requiredFor)
         ? row.requiredFor.map((item) => item.trim().toLowerCase())
         : ["both"];
       const categoryLower = category.trim().toLowerCase();
       const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
-
+  
       if (requiredFor.includes("both") || requiredFor.includes(categoryLower)) {
         if (row.links[category]) {
           const regionalLink = row.links[category].find((link) => {
-            const cleanedLandName = link.landName.trim().toLowerCase();
-            return cleanedLandName === cleanedSelectedRegion;
+            return link.landName.trim().toLowerCase() === cleanedSelectedRegion;
           });
-
-          if (regionalLink) {
+  
+          const linkToOpen = regionalLink ? regionalLink.link : 
+            row.links[category].find(link => link.landName.trim().toLowerCase() === "general")?.link;
+  
+          if (linkToOpen) {
             return (
-              <a
-                href={regionalLink.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
+              <div 
+                className={styles.linkContainer} 
+                onClick={() => window.open(linkToOpen, "_blank")}
               >
-                {regionalLink.text?.[language] || "Link"}
-              </a>
+                <span className={styles.linkLabel}>
+                  {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
+                </span>
+              </div>
             );
-          } else {
-            const generalLink = row.links[category].find(
-              (link) => link.landName.trim().toLowerCase() === "general"
-            );
-            if (generalLink) {
-              return (
-                <a
-                  href={generalLink.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.link}
-                >
-                  {generalLink.text?.[language] || "Link"}
-                </a>
-              );
-            } else {
-              return (
-                <span className={styles.warning}>No 'General' link found.</span>
-              );
-            }
           }
-        } else {
-          return (
-            <span className={styles.warning}>
-              No links available for this category.
-            </span>
-          );
         }
+        return <span className={styles.warning}>No links available.</span>;
       } else {
-        return (
-          <span className={styles.info}>Not required for this category.</span>
-        );
+        return <span className={styles.info}>Not required for this category.</span>;
       }
     } else if (row.singleLink) {
       return (
-        <a
-          href={row.singleLink.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
+        <div 
+          className={styles.linkContainer} 
+          onClick={() => window.open(row.singleLink.link, "_blank")}
         >
-          {row.singleLink.text[language] || "Link"}
-        </a>
+          <span className={styles.linkLabel}>
+            {language === "ua" ? "Посилання" : language === "de" ? "Links" : "Links"}
+          </span>
+        </div>
       );
     } else {
       return <span className={styles.warning}>No links found.</span>;

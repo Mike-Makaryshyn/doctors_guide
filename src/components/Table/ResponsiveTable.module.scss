@@ -315,40 +315,56 @@ $danger-color: #f44336;
 }
 
 /* Стилізація опціональних документів */
-
-
-/* Контейнер для лінків */
-.linkContainer {
+.linkWrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  max-width: 150px; // Встановлена максимальна ширина для запобігання розтягуванню
+  align-items: center;
+  gap: 5px; /* Відстань між лейблом та посиланням */
 }
 
 .linkLabel {
   font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 0.8rem;
-  white-space: nowrap;
+  font-size: 0.9rem;
+  color: #013b6e;
+  text-align: center;
 }
 
-/* Додаткові стилі для лінків */
-.link {
-  color: #0288d1; // Встановлено синій колір для посилань
-  text-decoration: none;
-  font-weight: 500;
-  word-break: break-word; // Перенесення довгих слів
-  overflow-wrap: break-word;
+/* Контейнер для лінків */
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  height: 60px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #013b6e;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
 
   &:hover {
-    text-decoration: underline;
+    background: #f3f3f3;
   }
 }
 
-.warning {
-  color: #e53935; // Червоний колір для попереджень
-  font-weight: 500;
+.linkLabel {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
 }
 
 .info {
