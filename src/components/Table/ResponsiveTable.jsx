@@ -167,15 +167,15 @@ const Tile = ({
             "N/A"}
         </div>
         {isOptional && !hidden && (
-          <button
-            className={styles.closeButton}
-            onClick={(e) => {
-              e.stopPropagation();
-              onTileClick();
-            }}
-          >
-            <img src={CloseIcon} alt="Close" className={styles.closeIcon} />
-          </button>
+         <button
+         className={styles.closeButton}
+         onClick={(e) => {
+           e.stopPropagation();
+           onTileClick();
+         }}
+       >
+         <img src={CloseIcon} alt="Close" className={styles.closeIcon} />
+       </button>
         )}
       </div>
 

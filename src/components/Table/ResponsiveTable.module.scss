@@ -16,13 +16,74 @@ $danger-color: #f44336;
   color: $primary-color; // Встановлено колір тексту
   font-family: 'Poppins', sans-serif; // Додано шрифт
 }
+.tileExcluded {
+  background: rgba(150, 150, 150, 0.2);  /* Постійний напівпрозорий сірий фон */
+  backdrop-filter: blur(10px);  /* Розмиття для скляного ефекту */
+  border: 1px solid rgba(150, 150, 150, 0.4);  /* Сіра межа */
+  box-shadow: inset -3px 3px 8px rgba(0, 0, 0, 0.1),
+              inset 3px -3px 8px rgba(255, 255, 255, 0.1);
+  color: rgba(50, 50, 50, 0.6);  /* Приглушений сірий колір тексту */
+  position: relative;  /* Для позиціонування елементів */
+  cursor: pointer;  /* Вказівник миші (щоб дати зрозуміти, що можна натиснути) */
+  opacity: 0.6;  /* Фіксована прозорість */
+  transition: none;  /* Вимкнення ефектів при наведенні */
 
+  &::after {
+    content: "+";  /* Знак плюса */
+    font-size: 3rem;  /* Великий розмір */
+    color: rgba(80, 80, 80, 0.7);  /* Темно-сірий відтінок значка */
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Відключення будь-яких змін при наведенні */
+
+}
+.closeButton {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: -5px 5px 15px #d9d9d9, 5px -5px 15px #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top: 5px;   /* Розташування ближче до верхнього краю */
+  right: 5px; /* Розташування ближче до правого краю */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: -3px 3px 10px #d9d9d9, 3px -3px 10px #ffffff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.closeIcon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(23%) sepia(91%) saturate(3313%) hue-rotate(356deg) brightness(97%) contrast(96%);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(32%) sepia(59%) saturate(2461%) hue-rotate(356deg) brightness(91%) contrast(95%);
+  }
+}
 .table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: #ffffff; // Встановлено білий фон
-  border-radius: 5px; // Заокруглені кути
+// Встановлено білий фон
+  border-radius: 10px; // Заокруглені кути
   overflow: hidden; // Для забезпечення заокруглення кутів
 
   th, td {
@@ -254,18 +315,7 @@ $danger-color: #f44336;
 }
 
 /* Стилізація опціональних документів */
-.checkboxBox.optional {
-  opacity: 0.6; // Зменшена непрозорість
-  cursor: not-allowed; // Зміна курсора на неактивний
-}
 
-.checkboxBox.optional .icon {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(7500%) hue-rotate(75deg);
-}
-
-.checkboxBox.optional .iconLabel {
-  color: #9e9e9e; // Сірий текст
-}
 
 /* Контейнер для лінків */
 .linkContainer {
@@ -411,7 +461,7 @@ $danger-color: #f44336;
   @extend .table;
   
   thead {
-    background-color: #e0e0e0; // Темно-сірий фон для всіх таблиць
+     // Темно-сірий фон для всіх таблиць
     font-size: 1.3rem; // Збільшено розмір тексту заголовка
     font-weight: 600;
     color: $primary-color; // Забезпечуємо контрастність тексту
@@ -422,9 +472,7 @@ $danger-color: #f44336;
   }
 }
 
-.optionalTable thead {
-  background-color: #d5d5d5; // Трохи світліший сірий для опціональних таблиць, якщо потрібно
-}
+
 
 /* Додаткові стилі для покращення вигляду заголовків та категорій */
 .tableHeader {

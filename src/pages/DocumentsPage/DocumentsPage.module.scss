@@ -85,7 +85,7 @@ $danger-color: #f44336;
   border-collapse: separate; // Використовуємо border-spacing для відступів між рядками
   border-spacing: 0 25px; // Збільшено відступи між рядками з 20px до 25px
   table-layout: fixed; // Фіксована розкладка таблиці для кращого контролю над ширинами колонок
-  background-color: #ffffff;
+
   border-radius: 5px;
   overflow: hidden;
 
@@ -449,7 +449,7 @@ $danger-color: #f44336;
   @extend .tableBase;
 
   thead {
-    background-color: #ab9494; // Темно-сірий фон для всіх таблиць
+  
     font-size: 1.3rem; // Збільшено розмір тексту заголовка
     font-weight: 600;
     color: $primary-color; // Забезпечуємо контрастність тексту
