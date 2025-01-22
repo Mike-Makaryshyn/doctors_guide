@@ -34,37 +34,59 @@ $danger-color: #f44336;
 }
 
 // Прогрес-бар
-.progress_wrapper {
-  margin: 10px 0;
+// Прогрес-бар (оновлений стиль)
+// Прогрес-бар (оновлений стиль)
+// Контейнер з неоморфним ефектом
+// Контейнер з неоморфним ефектом
+// Контейнер з неоморфним ефектом
+.progressContainer {
+  margin: 20px auto;
   max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #24695e, -20px -20px 60px #308f80;
+  padding: 7px;
+  text-align: center;
 }
 
+// Прогрес-бар
 .progressBar {
   overflow: hidden;
   width: 100%;
-  height: 20px;
-  background-color: #d7d7d7;
-  border-radius: 10px;
-  margin: 10px 0;
-  border: 1px solid white;
-
-  .progress {
-    height: 100%;
-    border-radius: 10px;
-    background-color: $secondary-color;
-    width: 0;
-    transition: width 0.5s ease-in-out;
-  }
+  height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  position: relative;
 }
 
-.progressLabel {
-  font-weight: 500;
-  text-align: right;
-  color: $primary-color;
+.progress {
+  height: 100%;
+  border-radius: 50px;
+  background-color: #4CAF50;  // Зелений колір прогресу
+  width: 0;
+  transition: width 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.progressText {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+// Текст під прогрес-баром
+.progressMessage {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
 // Контейнер з таблицями
 .table_wrapper {
   margin-top: 0px;
@@ -220,8 +242,8 @@ $danger-color: #f44336;
 
 .tileTitle {
   font-weight: 600;
-  color: #013b6e; // Встановлено колір тексту
-  font-size: 1.1rem; // Додано розмір шрифту
+  color: #ffffff; // Встановлено колір тексту
+  font-size: 2rem; // Додано розмір шрифту
   text-align: left; // Вирівнювання тексту по лівому краю
 }
 

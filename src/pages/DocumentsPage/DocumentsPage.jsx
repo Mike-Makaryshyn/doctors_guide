@@ -229,17 +229,17 @@ const DocumentsPage = () => {
             <CategoryToggle category={category} setCategory={setCategory} />
 
             {/* Прогрес-бар */}
-            <div className={styles.progress_wrapper}>
-              <div className={styles.progressBar}>
-                <div
-                  className={styles.progress}
-                  style={{ width: `${progress}%` }}
-                ></div>
-              </div>
-              <div className={styles.progressLabel}>
-                {progress}% - {getMessage(progress)}
-              </div>
-            </div>
+            <div className={styles.progressContainer}>
+  <div className={styles.progressBar}>
+    <div className={styles.progress} style={{ width: `${progress}%` }}>
+      <span className={styles.progressText}>{progress}%</span>
+    </div>
+  </div>
+</div>
+<div className={styles.progressMessage}>
+  {getMessage(progress)}
+
+</div>
 
             <div ref={combinedRef}>
               {selectedRegion ? (
