@@ -275,14 +275,14 @@ $danger-color: #f44336;
   }
 }
 .tileCompleted {
-  border-radius: 50px !important;
-  background: #2a7c6f !important;
+  border-radius: 50px;
+  background: #2a7c6f ;
   box-shadow: 
-    inset -20px 20px 60px #24695e !important,
-    inset 20px -20px 60px #308f80 !important;  
-  color: #fff !important;
-  border: none !important;
-  animation: none !important; 
+    inset -20px 20px 60px #24695e ,
+    inset 20px -20px 60px #308f80 ;
+  color: #fff ;
+  border: none ;
+  animation: none ;
 
   .tileTitle {
     color: #ffffff;
