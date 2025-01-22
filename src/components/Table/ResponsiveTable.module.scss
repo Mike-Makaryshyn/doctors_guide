@@ -18,7 +18,7 @@ $danger-color: #f44336;
 }
 .tileExcluded {
   background: rgba(150, 150, 150, 0.2);  /* Постійний напівпрозорий сірий фон */
-  backdrop-filter: blur(10px);  /* Розмиття для скляного ефекту */
+
   border: 1px solid rgba(150, 150, 150, 0.4);  /* Сіра межа */
   box-shadow: inset -3px 3px 8px rgba(0, 0, 0, 0.1),
               inset 3px -3px 8px rgba(255, 255, 255, 0.1);
@@ -287,13 +287,14 @@ $danger-color: #f44336;
   color: #fff !important;
   border: none !important;
   animation: none !important; /* Удаляем анимацию */
-  cursor: default;
+ 
 
   .tileTitle {
     color: #ffffff;
     font-weight: bold;
   }
 }
+
 .tile:not(.tileCompleted) {
   animation: float 6s ease-in-out infinite;
 }
