@@ -20,12 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;    /* Змінюй це значення для ширини */
-    height: 45px;   /* Змінюй це значення для висоти */
+    width: 40px;    /* Змінюй це значення для ширини */
+    height: 40px;   /* Змінюй це значення для висоти */
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 8px 8px 10px #dbdbdb, -8px -8px 10px #ffffff;
-    font-size: 8px;  /* Це розмір тексту всередині */
+    box-shadow: 8px 8px 10px #dbdbdb, -8px -8px 10px #ffffff00;
+    font-size: 7px;  /* Це розмір тексту всередині */
     font-weight: bold;
     text-align: center;
     transition: all 0.3s ease-in-out;
