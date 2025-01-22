@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
- 
   position: relative;
   font-size: 1rem;
   color: #013b6e;
@@ -39,15 +38,18 @@
     color: #ffffff; /* Білий колір тексту після активації */
   }
 
+  /* Галочка з правильним позиціонуванням і прозорістю */
   &.active .checkboxIcon::after {
-    content: '\2714';  /* Unicode галочки ✓ */
-    font-size: 35px; /* Зменшений розмір галочки */
-    color: rgba(255, 255, 255, 0.1); /* Зробити ще більш прозорою */
+    content: '\2714'; /* Unicode галочки ✓ */
+    font-size: 22px; /* Збільшений розмір галочки */
+    color: rgba(0, 0, 0, 0.2); /* Збільшена видимість галочки */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     pointer-events: none;
+    opacity: 0.5; /* Зроблено галочку трохи яскравішою */
+    z-index: 0; /* Забезпечуємо правильне розташування позаду тексту */
   }
 }
