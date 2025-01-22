@@ -24,7 +24,22 @@ import { documentsSecond } from "../../constants/translation/documentsSecond";
 import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
 import CategoryToggle from "../../components/CategoryToggle/CategoryToggle";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
+const ProgressBarWithTooltip = ({ progress, getMessage }) => {
+  return (
+    <div className={styles.progressContainer}>
+      <Tippy content={getMessage(progress)} placement="top">
+        <div className={styles.progressBar}>
+          <div className={styles.progress} style={{ width: `${progress}%` }}>
+            <span className={styles.progressText}>{progress}%</span>
+          </div>
+        </div>
+      </Tippy>
+    </div>
+  );
+};
 const DocumentsPage = () => {
   const {
     selectedLanguage: language,
@@ -229,17 +244,7 @@ const DocumentsPage = () => {
             <CategoryToggle category={category} setCategory={setCategory} />
 
             {/* Прогрес-бар */}
-            <div className={styles.progressContainer}>
-  <div className={styles.progressBar}>
-    <div className={styles.progress} style={{ width: `${progress}%` }}>
-      <span className={styles.progressText}>{progress}%</span>
-    </div>
-  </div>
-</div>
-<div className={styles.progressMessage}>
-  {getMessage(progress)}
-
-</div>
+            <ProgressBarWithTooltip progress={progress} getMessage={getMessage} />
 
             <div ref={combinedRef}>
               {selectedRegion ? (

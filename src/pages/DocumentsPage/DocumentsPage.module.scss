@@ -39,17 +39,20 @@ $danger-color: #f44336;
 // Контейнер з неоморфним ефектом
 // Контейнер з неоморфним ефектом
 // Контейнер з неоморфним ефектом
+
+
+// Прогрес-бар
 .progressContainer {
   margin: 20px auto;
   max-width: 95%;
   border-radius: 50px;
   background: #ffffff;
   box-shadow: 20px 20px 60px #24695e, -20px -20px 60px #308f80;
-  padding: 7px;
+  padding: 15px;
   text-align: center;
 }
 
-// Прогрес-бар
+
 .progressBar {
   overflow: hidden;
   width: 100%;
@@ -62,8 +65,7 @@ $danger-color: #f44336;
 .progress {
   height: 100%;
   border-radius: 50px;
-  background-color: #4CAF50;  // Зелений колір прогресу
-  width: 0;
+  background-color: #4CAF50;
   transition: width 0.5s ease-in-out;
   display: flex;
   align-items: center;
@@ -79,12 +81,10 @@ $danger-color: #f44336;
   text-align: center;
 }
 
-// Текст під прогрес-баром
 .progressMessage {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
   color: #fff;
 }
 // Контейнер з таблицями
