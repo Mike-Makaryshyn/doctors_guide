@@ -24,19 +24,45 @@ import { documentsSecond } from "../../constants/translation/documentsSecond";
 import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
 import CategoryToggle from "../../components/CategoryToggle/CategoryToggle";
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
   return (
     <div className={styles.progressContainer}>
-      <Tippy content={getMessage(progress)} placement="top">
-        <div className={styles.progressBar}>
-          <div className={styles.progress} style={{ width: `${progress}%` }}>
-            <span className={styles.progressText}>{progress}%</span>
-          </div>
-        </div>
-      </Tippy>
+<Tippy
+  content={getMessage(progress)}
+  animation="scale"
+  arrow={true}
+  theme="custom"
+  trigger="click"
+  interactive={true}
+  hideOnClick={true}
+  placement="top"
+  flip={true} // Автоматичне розміщення при обмеженому просторі
+  popperOptions={{
+    modifiers: [
+      {
+        name: 'preventOverflow',
+        options: {
+          boundary: 'window', // Не виходити за межі вікна
+        },
+      },
+      {
+        name: 'flip',
+        options: {
+          fallbackPlacements: ['bottom', 'right', 'left'], // Позиції для заміни
+        },
+      },
+    ],
+  }}
+>
+  <div className={styles.progressBar}>
+    <div className={styles.progress} style={{ width: `${progress}%` }}>
+      <span className={styles.progressText}>{progress}%</span>
+    </div>
+  </div>
+</Tippy>
     </div>
   );
 };
@@ -138,7 +164,14 @@ const DocumentsPage = () => {
       const documentId = item.id.toString();
       const docState = checkboxes[documentId] || {};
 
-      ["is_exist", "apostile", "notary", "translation", "ready_copies", "sent"].forEach((field) => {
+      [
+        "is_exist",
+        "apostile",
+        "notary",
+        "translation",
+        "ready_copies",
+        "sent",
+      ].forEach((field) => {
         if (field === "apostile" && category === "EU") return;
         if (item[field] !== undefined) {
           totalCheckboxes++;
@@ -185,7 +218,9 @@ const DocumentsPage = () => {
 
   // При кліку на чекбокс
   const handleCheckboxChange = (documentId, fieldName) => {
-    console.log(`Checkbox clicked: documentId=${documentId}, fieldName=${fieldName}`);
+    console.log(
+      `Checkbox clicked: documentId=${documentId}, fieldName=${fieldName}`
+    );
     setDynamicData((prevData) => {
       const currentDoc = prevData.checkboxes[documentId] || {};
       let newDoc;
@@ -244,7 +279,10 @@ const DocumentsPage = () => {
             <CategoryToggle category={category} setCategory={setCategory} />
 
             {/* Прогрес-бар */}
-            <ProgressBarWithTooltip progress={progress} getMessage={getMessage} />
+            <ProgressBarWithTooltip
+              progress={progress}
+              getMessage={getMessage}
+            />
 
             <div ref={combinedRef}>
               {selectedRegion ? (
@@ -300,7 +338,9 @@ const DocumentsPage = () => {
                   />
                 </>
               ) : (
-                <div className={styles.loadingMessage}>Завантаження регіону...</div>
+                <div className={styles.loadingMessage}>
+                  Завантаження регіону...
+                </div>
               )}
             </div>
           </div>
