@@ -1,4 +1,4 @@
-// src/pages/DocumentsPage/DocumentsPage.jsx
+// DocumentsPage.jsx
 
 import React, { useState, useEffect, useRef } from "react";
 import { collection, doc, getDoc, setDoc } from "firebase/firestore";
@@ -154,77 +154,75 @@ const DocumentsPage = () => {
   };
 
   // Рахуємо прогрес
-// Рахуємо прогрес
-// Рахуємо прогрес
-const calculateProgress = (checkboxes, language) => {
-  let totalCheckboxes = 0;
-  let checkedCheckboxes = 0;
+  const calculateProgress = (checkboxes, language) => {
+    let totalCheckboxes = 0;
+    let checkedCheckboxes = 0;
 
-  // Отримуємо список документів та виключаємо приховані з розрахунку
-  const combinedData = [
-    ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-    ...documentsSecond,
-    ...documentsOptional,
-  ].filter((item) => {
-    const docState = checkboxes[item.id.toString()];
-    return !(docState && docState.hide);
-  });
-
-  combinedData.forEach((item) => {
-    const documentId = item.id.toString();
-    const docState = checkboxes[documentId] || {};
-
-    let fieldsToCheck = [
-      "is_exist",
-      "notary",
-      "translation",
-      "ready_copies",
-      "sent",
-      ...(category === "EU" ? [] : ["apostile"]),
+    // Отримуємо список документів, включаючи включені опціональні
+    const combinedData = [
+      ...(category === "Non-EU" ? documentsNonEU : documentsEU),
+      ...documentsSecond,
+      ...documentsOptional.filter(doc => {
+        const docState = checkboxes[doc.id.toString()];
+        return !(docState && docState.hide);
+      }),
     ];
 
-    // Якщо документ має особливі умови (наприклад, два чекбокси), визначте це тут
-    const isSpecialDocument = item.id === 17; // ROV-17 має id 17
-    if (isSpecialDocument) {
-      // Визначаємо окремі поля для ROV-17
-      fieldsToCheck = ["is_exist", "sent"]; // Замініть на реальні назви полів для ROV-17
-    }
+    combinedData.forEach((item) => {
+      const documentId = item.id.toString();
+      const docState = checkboxes[documentId] || {};
 
-    fieldsToCheck.forEach((field) => {
-      let fieldValue = item[field];
+      let fieldsToCheck = [
+        "is_exist",
+        "notary",
+        "translation",
+        "ready_copies",
+        "sent",
+        ...(category === "EU" ? [] : ["apostile"]),
+      ];
 
-      // Якщо fieldValue є об'єктом, витягуємо значення для поточної мови
-      if (typeof fieldValue === "object" && fieldValue !== null) {
-        fieldValue = fieldValue[language] || fieldValue["en"] || "";
+      // Якщо документ має особливі умови (наприклад, два чекбокси), визначте це тут
+      const isSpecialDocument = item.id === 17; // ROV-17 має id 17
+      if (isSpecialDocument) {
+        // Визначаємо окремі поля для ROV-17
+        fieldsToCheck = ["is_exist", "sent"]; // Замініть на реальні назви полів для ROV-17
       }
 
-      // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
-      const notNeeded = notNeededText[language] || notNeededText["en"] || "";
+      fieldsToCheck.forEach((field) => {
+        let fieldValue = item[field];
 
-      if (fieldValue !== undefined && fieldValue !== notNeeded) {
-        totalCheckboxes++;
-        if (docState[field] === true) {
-          // Якщо поле потрібно і чекбокс відмічений
-          checkedCheckboxes++;
-          console.log(`Field ${field} is needed and checked.`);
-        } else {
-          console.log(`Field ${field} is needed but not checked.`);
+        // Якщо fieldValue є об'єктом, витягуємо значення для поточної мови
+        if (typeof fieldValue === "object" && fieldValue !== null) {
+          fieldValue = fieldValue[language] || fieldValue["en"] || "";
         }
-      } else if (fieldValue === notNeeded) {
-        console.log(`Field ${field} is marked as not needed and excluded from progress.`);
+
+        // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
+        const notNeeded = notNeededText[language] || notNeededText["en"] || "";
+
+        if (fieldValue !== undefined && fieldValue !== notNeeded) {
+          totalCheckboxes++;
+          if (docState[field] === true) {
+            // Якщо поле потрібно і чекбокс відмічений
+            checkedCheckboxes++;
+            console.log(`Field ${field} is needed and checked.`);
+          } else {
+            console.log(`Field ${field} is needed but not checked.`);
+          }
+        } else if (fieldValue === notNeeded) {
+          console.log(`Field ${field} is marked as not needed and excluded from progress.`);
+        }
+      });
+
+      // Якщо документ має спеціальні умови для прогресу
+      if (isSpecialDocument) {
+        // Немає додаткових полів для ROV-17, тому можна залишити порожнім або додати специфічну логіку
       }
     });
 
-    // Якщо документ має спеціальні умови для прогресу
-    if (isSpecialDocument) {
-      // Немає додаткових полів для ROV-17, тому можна залишити порожнім або додати специфічну логіку
-    }
-  });
+    console.log(`Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`);
 
-  console.log(`Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`);
-
-  return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
-};
+    return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+  };
 
   useEffect(() => {
     fetchDynamicDataFromFirestore();
@@ -271,6 +269,22 @@ const calculateProgress = (checkboxes, language) => {
 
   const mainTitle = titles?.main?.[language] || "Main Documents";
   const optionalTitle = titles?.optional?.[language] || "Optional Documents";
+
+  // Функція для отримання включених опціональних документів
+  const getIncludedOptionalDocuments = () => {
+    return documentsOptional.filter(doc => {
+      const docState = dynamicData.checkboxes[doc.id.toString()];
+      return docState && !docState.hide;
+    });
+  };
+
+  // Функція для отримання виключених опціональних документів
+  const getExcludedOptionalDocuments = () => {
+    return documentsOptional.filter(doc => {
+      const docState = dynamicData.checkboxes[doc.id.toString()];
+      return docState && docState.hide;
+    });
+  };
 
   // При кліку на чекбокс
   const handleCheckboxChange = (documentId, fieldName) => {
@@ -346,11 +360,14 @@ const calculateProgress = (checkboxes, language) => {
             <div ref={combinedRef}>
               {selectedRegion ? (
                 <>
-                  {/* Основні документи */}
+                  {/* Основні документи + Включені опціональні документи */}
                   <ResponsiveTable
                     title={mainTitle}
                     columns={columnsFirst}
-                    data={category === "Non-EU" ? documentsNonEU : documentsEU}
+                    data={[
+                      ...(category === "Non-EU" ? documentsNonEU : documentsEU),
+                      ...getIncludedOptionalDocuments(), // Додаємо включені опціональні документи
+                    ]}
                     setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
@@ -380,11 +397,11 @@ const calculateProgress = (checkboxes, language) => {
                     customClass={styles.secondTable}
                   />
 
-                  {/* Опціональні документи */}
+                  {/* Опціональні документи (виключені) */}
                   <ResponsiveTable
                     title={optionalTitle}
                     columns={columnsFirst}
-                    data={documentsOptional}
+                    data={getExcludedOptionalDocuments()} // Передаємо лише виключені опціональні документи
                     setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
