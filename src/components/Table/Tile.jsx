@@ -7,7 +7,7 @@ import cn from "classnames";
 import MobileCheckbox from "../Checkbox/MobileCheckbox";
 import CloseIcon from "../../assets/close-icon.svg";
 import { sendOriginalText } from "../../constants/translation/documents";
-
+import { columnsFirst } from "../../constants/translation/columnsFirst";
 /**
  * Tile компонент
  */
@@ -59,6 +59,7 @@ const Tile = ({
     [styles.tileCompleted]: allChecked && !hidden, // Додає клас для завершеної плитки
     [styles.tileIncomplete]: !allChecked && !hidden,
     [styles.tileExcluded]: hidden,
+    [styles.tileOptional]: isOptional, // Додаємо новий клас для опціональних документів
   });
 
   const onTileClick = () => {

@@ -10,221 +10,12 @@ import CloseIcon from "../../assets/close-icon.svg";
 import MobileCheckbox from "../Checkbox/MobileCheckbox";
 import { columnsFirst } from "../../constants/translation/columnsFirst";
 import { sendOriginalText } from "../../constants/translation/documents";
+import Tile from "./Tile";
 
 /**
  * Tile компонент
  */
-const Tile = ({
-  row,
-  columns,
-  category,
-  selectedLanguage,
-  selectedRegion,
-  tableFor,
-  checkboxes,
-  handleCheckboxChange,
-  disableCheckboxBasedOnName,
-}) => {
-  const isOptional = tableFor === "optional";
-  const hidden = isOptional ? checkboxes[row.id]?.hide : false;
 
-  // Фільтрація колонок, які мають чекбокси та не є виключеними
-  const relevantColumns = columns.filter((col) => {
-    if (col.name === "category" || col.name === "name") return false;
-    if (category === "EU" && col.name === "apostile") return false;
-    if (tableFor === "optional" && col.name === "hide") return false;
-    if (col.name === "links") return true; // Завжди включаємо 'links' колонку
-    return (
-      typeof row[col.name] === "string" && row[col.name]?.includes("check")
-    );
-  });
-
-  const allChecked =
-    tableFor === "second"
-      ? checkboxes[row.id]?.is_exist && checkboxes[row.id]?.sent
-      : relevantColumns.every((col) => checkboxes[row.id]?.[col.name]);
-
-  // Локальний стан для анімації завершення
-  const [showCompletion, setShowCompletion] = useState(false);
-
-  useEffect(() => {
-    if (allChecked && !hidden) {
-      setShowCompletion(true);
-      // Приховати завершення після 1 секунди
-      const timer = setTimeout(() => {
-        setShowCompletion(false);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [allChecked, hidden]);
-
-  const tileClass = cn(styles.tile, {
-    [styles.tileCompleted]: allChecked && !hidden, // Додає клас для завершеної плитки
-    [styles.tileIncomplete]: !allChecked && !hidden,
-    [styles.tileExcluded]: hidden,
-  });
-
-  const onTileClick = () => {
-    if (isOptional) {
-      handleCheckboxChange(row.id.toString(), "hide");
-    }
-  };
-
-  // Функція для генерації елементів посилань
-  const getLinkElement = (row, selectedRegion, category, language) => {
-    // Словник мов для тексту посилання
-    const linkTranslations = {
-      de: "Links",
-      en: "Links",
-      uk: "Посилання",
-      ru: "Ссылка",
-      tr: "Bağlantı",
-      ar: "رابط",
-      fr: "Lien",
-      es: "Enlace",
-      pl: "Link",
-    };
-
-    // Вибір відповідного тексту за мовою або дефолтне значення
-    const linkText = linkTranslations[language] || "Link";
-
-    let linkToOpen = null;
-
-    if (row.links) {
-      if (!selectedRegion) {
-        linkToOpen = "/lands";
-      } else {
-        const requiredFor = Array.isArray(row.requiredFor)
-          ? row.requiredFor.map((item) => item.trim().toLowerCase())
-          : ["both"];
-        const categoryLower = category.trim().toLowerCase();
-        const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
-
-        if (
-          requiredFor.includes("both") ||
-          requiredFor.includes(categoryLower)
-        ) {
-          if (row.links[category]) {
-            const regionalLink = row.links[category].find(
-              (link) =>
-                link.landName.trim().toLowerCase() ===
-                cleanedSelectedRegion
-            );
-
-            linkToOpen = regionalLink
-              ? regionalLink.link
-              : row.links[category].find(
-                  (link) =>
-                    link.landName.trim().toLowerCase() === "general"
-                )?.link;
-          }
-        }
-      }
-    } else if (row.singleLink) {
-      linkToOpen = row.singleLink.link;
-    }
-
-    if (linkToOpen) {
-      return (
-        <div
-          className={styles.linkContainer}
-          onClick={() => window.open(linkToOpen, "_blank")}
-        >
-          <span className={styles.linkLabel}>{linkText}</span>
-        </div>
-      );
-    } else {
-      return <div className={styles.warning}>{linkText} unavailable</div>;
-    }
-  };
-
-  return (
-    <div className={tileClass} onClick={() => hidden && onTileClick()}>
-      <div className={styles.tileHeader}>
-        <div className={styles.tileTitle}>
-          {row.category?.[selectedLanguage] ||
-            row.name?.[selectedLanguage] ||
-            "N/A"}
-        </div>
-        {isOptional && !hidden && (
-          <button
-            className={cn(styles.closeButton, {
-              [styles.tileCompleted]: allChecked, // Додає клас tileCompleted
-            })}
-            onClick={(e) => {
-              e.stopPropagation();
-              onTileClick();
-            }}
-          >
-            <img src={CloseIcon} alt="Close" className={styles.closeIcon} />
-          </button>
-        )}
-      </div>
-
-      {!hidden && (
-        <div className={styles.checkboxGrid}>
-          {relevantColumns.map((col) => {
-            if (col.name === "links") {
-              return (
-                <div className={styles.checkboxBox}>
-                  {getLinkElement(
-                    row,
-                    selectedRegion,
-                    category,
-                    selectedLanguage
-                  )}
-                </div>
-              );
-            }
-
-            return (
-              <div
-                key={`col-${row.id}-${col.name}`}
-                className={cn(styles.checkboxBox, {
-                  [styles.optional]: tableFor === "optional",
-                })}
-              >
-                <MobileCheckbox
-                  id={`checkbox-${row.id}-${col.name}`}
-                  checked={checkboxes[row.id]?.[col.name] || false}
-                  onChange={() =>
-                    handleCheckboxChange(row.id.toString(), col.name)
-                  }
-                  label={
-                    columnsFirst.find((item) => item.name === col.name)
-                      ?.shortLabel[selectedLanguage] || col.name
-                  }
-                />
-              </div>
-            );
-          })}
-          {/* Додати відображення посилання тільки під колонкою 'notary' */}
-          {row?.id === 17 && !checkboxes[row.id.toString()]?.hide && (
-            <div className={styles.linkContainer}>
-              <a
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={row?.link}
-              >
-                {sendOriginalText[selectedLanguage] ||
-                  sendOriginalText["en"]}
-              </a>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Оверлей завершення */}
-      {allChecked && !hidden && showCompletion && (
-        <div className={styles.completionOverlay}>
-          {/* Простий символ галочки */}
-          <span style={{ fontSize: "3rem", color: "#4caf50" }}>✔️</span>
-        </div>
-      )}
-    </div>
-  );
-};
 
 // Оновлення PropTypes для додавання isOptional
 Tile.propTypes = {
@@ -253,6 +44,7 @@ const ResponsiveTable = ({
   checkboxes,
   handleCheckboxChange,
   customClass,
+  hideHeader, 
 }) => {
   const isMobile = useIsMobile();
   const shouldRenderAsTiles = isMobile;
@@ -268,68 +60,86 @@ const ResponsiveTable = ({
       {title && <h2 className={styles.title}>{title}</h2>}
 
       {/* Якщо не мобільний -> показуємо звичайну таблицю (BodyItem) */}
-      {!shouldRenderAsTiles ? (
-        <table
-          className={cn(styles.table, {
-            [styles.optionalTable]: tableFor === "optional",
+      {tableFor === "optional" || shouldRenderAsTiles ? (
+  <div className={styles.tileContainer}>
+    {data.map((row) => (
+      <Tile
+      key={`tile-${row.id}`}
+      row={row}
+      columns={columns}
+      category={category}
+      selectedLanguage={selectedLanguage}
+      selectedRegion={selectedRegion}
+      tableFor={tableFor}
+      checkboxes={checkboxes}
+      handleCheckboxChange={handleCheckboxChange}
+      disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+      />
+    ))}
+  </div>
+) : !shouldRenderAsTiles ? (
+  <table
+    className={cn(styles.table, {
+      [styles.optionalTable]: tableFor === "optional",
+    })}
+  >
+    {!hideHeader && (
+      <thead>
+        <tr className={styles.tableHeader}>
+          {columns.map((col) => {
+            if (category === "EU" && col.name === "apostile") return null;
+            if (tableFor === "optional" && col.name === "hide") return null;
+            return (
+              <th key={`header-${col.name}`} data-column={col.name}>
+                {col.label?.[selectedLanguage] || col.name}
+              </th>
+            );
           })}
-        >
-          <thead>
-            <tr className={styles.tableHeader}>
-              {columns.map((col) => {
-                if (category === "EU" && col.name === "apostile") return null;
-                if (tableFor === "optional" && col.name === "hide") return null;
-                return (
-                  <th key={`header-${col.name}`} data-column={col.name}>
-                    {col.label?.[selectedLanguage] || col.name}
-                  </th>
-                );
-              })}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, index) => (
-              <BodyItem
-                key={`body-item-${row.id}`}
-                row={row}
-                columns={columns}
-                index={index}
-                tableFor={tableFor}
-                setTableData={setTableData}
-                tableData={data}
-                category={category}
-                language={selectedLanguage}
-                handleCheckboxChange={handleCheckboxChange}
-                changeHiddenProp={() => {}}
-                hasNameColumn={columns.some((c) => c.name === "name")}
-                disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-                selectedRegion={selectedRegion}
-                checkboxes={checkboxes}
-                isMobile={isMobile}
-                isOptional={tableFor === "optional"} // Передаємо isOptional проп
-              />
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        /* Інакше => tile-режим (мобільний) */
-        <div className={styles.tileContainer}>
-          {data.map((row) => (
-            <Tile
-              key={`tile-${row.id}`}
-              row={row}
-              columns={columns}
-              category={category}
-              selectedLanguage={selectedLanguage}
-              selectedRegion={selectedRegion}
-              tableFor={tableFor}
-              checkboxes={checkboxes}
-              handleCheckboxChange={handleCheckboxChange} // Переконайся, що функція передається сюди
-              disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-            />
-          ))}
-        </div>
-      )}
+        </tr>
+      </thead>
+    )}
+    <tbody>
+      {data.map((row, index) => (
+        <BodyItem
+          key={`body-item-${row.id}`}
+          row={row}
+          columns={columns}
+          index={index}
+          tableFor={tableFor}
+          setTableData={setTableData}
+          tableData={data}
+          category={category}
+          language={selectedLanguage}
+          handleCheckboxChange={handleCheckboxChange}
+          changeHiddenProp={() => {}}
+          hasNameColumn={columns.some((c) => c.name === "name")}
+          disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+          selectedRegion={selectedRegion}
+          checkboxes={checkboxes}
+          isMobile={isMobile}
+          isOptional={tableFor === "optional"} // Передаємо проп для умовного рендерингу
+        />
+      ))}
+    </tbody>
+  </table>
+) : (
+  <div className={styles.tileContainer}>
+    {data.map((row) => (
+      <Tile
+        key={`tile-${row.id}`}
+        row={row}
+        columns={columns}
+        category={category}
+        selectedLanguage={selectedLanguage}
+        selectedRegion={selectedRegion}
+        tableFor={tableFor}
+        checkboxes={checkboxes}
+        handleCheckboxChange={handleCheckboxChange}
+        disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+      />
+    ))}
+  </div>
+)}
     </div>
   );
 };

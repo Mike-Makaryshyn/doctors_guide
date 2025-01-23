@@ -33,6 +33,44 @@ $danger-color: #f44336;
   }
 }
 
+.tileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центруємо плитки по горизонталі */
+  gap: 20px; /* Відстань між плитками */
+  align-items: stretch; /* Вирівнюємо плитки по висоті */
+  margin-top: 20px; /* Додаємо відступ зверху */
+}
+
+.tile {
+  flex: 1 1 calc(33.33% - 40px); /* 3 плитки в ряд із врахуванням відступів */
+  max-width: calc(33.33% - 40px); /* Фіксуємо максимальну ширину */
+  height: 250px; /* Фіксована висота плитки */
+  background: #ffffff; /* Білий фон */
+  border-radius: 20px; /* Закруглені кути */
+  padding: 20px; /* Внутрішні відступи */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Розділяємо вміст всередині */
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+.tileHeader {
+  font-size: 18px;
+  font-weight: bold;
+  color: #013b6e;
+  margin-bottom: 10px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
 // Прогрес-бар
 .progressContainer {
   margin: 20px auto;

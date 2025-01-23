@@ -202,7 +202,7 @@ export const titles = {
       de: "Einreichung von Anträgen",
    },
    optional: {
-      uk: "ОПЦІОНАЛЬНІ ДОКУМЕНТИ",
+      uk: "Опціональні документи",
       en: "Optional Documents",
       fr: "Documents Optionnels",
       es: "Documentos Opcionales",

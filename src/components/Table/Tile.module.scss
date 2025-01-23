@@ -35,6 +35,28 @@ $danger-color: #f44336;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.tileOptional {
+  background: rgba(150, 150, 150, 0.2); /* Напівпрозорий сірий фон */
+  border: 1px solid rgba(150, 150, 150, 0.4); /* Сіра межа */
+  box-shadow: inset -3px 3px 8px rgba(0, 0, 0, 0.1),
+              inset 3px -3px 8px rgba(255, 255, 255, 0.1);
+  color: rgba(50, 50, 50, 0.6); /* Приглушений сірий колір тексту */
+  position: relative; /* Для позиціонування знаку "+" */
+  cursor: pointer; /* Вказівник миші */
+  opacity: 0.6; /* Фіксована прозорість */
+  transition: none; /* Вимкнення ефектів при наведенні */
+
+  &::after {
+    content: "+"; /* Знак плюса */
+    font-size: 5rem; /* Великий розмір */
+    color: rgba(80, 80, 80, 0.7); /* Темно-сірий відтінок значка */
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 /* Оверлей завершення */
 .completionOverlay {
   position: absolute;
@@ -142,7 +164,14 @@ $danger-color: #f44336;
     transform: translate(0px, 0px);
   }
 }
-
+@media (max-width: 768px) {
+  .tileOptional {
+    opacity: 0.8; /* Менша прозорість на мобільних */
+    &::after {
+      font-size: 4rem; /* Трохи менший плюс на мобільних */
+    }
+  }
+}
 /* Стилізація кнопки закриття */
 .closeButton {
   width: 35px;

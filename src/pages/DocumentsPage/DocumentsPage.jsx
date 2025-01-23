@@ -10,7 +10,7 @@ import styles from "./DocumentsPage.module.scss";
 // Імпортуємо колонки (приклад)
 import { columnsFirst } from "../../constants/translation/columnsFirst";
 import { columnsSecond } from "../../constants/translation/columnsSecond";
-
+import Tile from "../../components/Table/Tile";
 // Імпортуємо документи
 import {
   documentsNonEU,
@@ -414,20 +414,23 @@ const DocumentsPage = () => {
                   />
 
                   {/* Опціональні документи (виключені) */}
-                  <ResponsiveTable
-                    title={optionalTitle}
-                    columns={getOptionalColumns()} // Використовуйте відфільтровані колонки
-                    data={getExcludedOptionalDocuments()} // Передаємо лише виключені опціональні документи
-                    setTableData={() => {}}
-                    selectedLanguage={language}
-                    selectedRegion={selectedRegion}
-                    category={category}
-                    tableFor="optional"
-                    disableCheckboxBasedOnName={false}
-                    checkboxes={dynamicData.checkboxes}
-                    handleCheckboxChange={handleCheckboxChange}
-                    customClass={styles.optionalTable}
-                  />
+                  <div className={styles.tileContainer}>
+  <h2>{optionalTitle}</h2>
+  {getExcludedOptionalDocuments().map((row) => (
+    <Tile
+      key={`tile-${row.id}`}
+      row={row}
+      columns={getOptionalColumns()}
+      category={category}
+      selectedLanguage={language}
+      selectedRegion={selectedRegion}
+      tableFor="optional"
+      checkboxes={dynamicData.checkboxes}
+      handleCheckboxChange={handleCheckboxChange}
+      disableCheckboxBasedOnName={false}
+    />
+  ))}
+</div>
                 </>
               ) : (
                 <div className={styles.loadingMessage}>
