@@ -20,7 +20,7 @@ import {
   titles,
 } from "../../constants/translation/documents";
 import { documentsSecond } from "../../constants/translation/documentsSecond";
-
+import { notNeededText } from "../../constants/translation/documents";
 import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
 import CategoryToggle from "../../components/CategoryToggle/CategoryToggle";
@@ -30,39 +30,39 @@ import "tippy.js/dist/tippy.css";
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
   return (
     <div className={styles.progressContainer}>
-<Tippy
-  content={getMessage(progress)}
-  animation="scale"
-  arrow={true}
-  theme="custom"
-  trigger="click"
-  interactive={true}
-  hideOnClick={true}
-  placement="top"
-  flip={true} // Автоматичне розміщення при обмеженому просторі
-  popperOptions={{
-    modifiers: [
-      {
-        name: 'preventOverflow',
-        options: {
-          boundary: 'window', // Не виходити за межі вікна
-        },
-      },
-      {
-        name: 'flip',
-        options: {
-          fallbackPlacements: ['bottom', 'right', 'left'], // Позиції для заміни
-        },
-      },
-    ],
-  }}
->
-  <div className={styles.progressBar}>
-    <div className={styles.progress} style={{ width: `${progress}%` }}>
-      <span className={styles.progressText}>{progress}%</span>
-    </div>
-  </div>
-</Tippy>
+      <Tippy
+        content={getMessage(progress)}
+        animation="scale"
+        arrow={true}
+        theme="custom"
+        trigger="click"
+        interactive={true}
+        hideOnClick={true}
+        placement="top"
+        flip={true} // Автоматичне розміщення при обмеженому просторі
+        popperOptions={{
+          modifiers: [
+            {
+              name: "preventOverflow",
+              options: {
+                boundary: "window", // Не виходити за межі вікна
+              },
+            },
+            {
+              name: "flip",
+              options: {
+                fallbackPlacements: ["bottom", "right", "left"], // Позиції для заміни
+              },
+            },
+          ],
+        }}
+      >
+        <div className={styles.progressBar}>
+          <div className={styles.progress} style={{ width: `${progress}%` }}>
+            <span className={styles.progressText}>{progress}%</span>
+          </div>
+        </div>
+      </Tippy>
     </div>
   );
 };
@@ -150,41 +150,50 @@ const DocumentsPage = () => {
   };
 
   // Рахуємо прогрес
-  const calculateProgress = (checkboxes) => {
+  const calculateProgress = (checkboxes, language) => {
     let totalCheckboxes = 0;
     let checkedCheckboxes = 0;
-
+  
+    // Отримуємо список документів та виключаємо приховані з розрахунку
     const combinedData = [
       ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-      ...documentsOptional,
       ...documentsSecond,
-    ].filter((item) => !checkboxes[item.id.toString()]?.hide);
-
+      ...documentsOptional,
+    ].filter((item) => {
+      const docState = checkboxes[item.id.toString()];
+      return !(docState && docState.hide); // Враховуємо лише видимі документи
+    });
+  
     combinedData.forEach((item) => {
       const documentId = item.id.toString();
       const docState = checkboxes[documentId] || {};
-
-      [
+  
+      // Поля для перевірки
+      const fieldsToCheck = [
         "is_exist",
-        "apostile",
         "notary",
         "translation",
         "ready_copies",
         "sent",
-      ].forEach((field) => {
-        if (field === "apostile" && category === "EU") return;
-        if (item[field] !== undefined) {
+        ...(category === "EU" ? [] : ["apostile"]),
+      ];
+  
+      fieldsToCheck.forEach((field) => {
+        const fieldValue = item[field];
+  
+        // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
+        const notNeeded = notNeededText[language] || notNeededText["en"];
+  
+        if (fieldValue !== undefined && fieldValue !== notNeeded) {
           totalCheckboxes++;
-          if (docState[field]) {
+          if (docState[field] === true) {
             checkedCheckboxes++;
           }
         }
       });
     });
-
-    return totalCheckboxes === 0
-      ? 0
-      : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+  
+    return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
   };
 
   useEffect(() => {

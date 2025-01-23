@@ -39,9 +39,9 @@ const Tile = ({
     );
   });
 
-  const allChecked = relevantColumns.every(
-    (col) => checkboxes[row.id]?.[col.name]
-  );
+  const allChecked = tableFor === "second"
+  ? checkboxes[row.id]?.is_exist && checkboxes[row.id]?.sent
+  : relevantColumns.every((col) => checkboxes[row.id]?.[col.name]);
 
   // Локальний стан для анімації завершення
   const [showCompletion, setShowCompletion] = useState(false);
