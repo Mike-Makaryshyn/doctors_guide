@@ -1,4 +1,4 @@
-// DocumentsPage.jsx
+// src/pages/DocumentsPage/DocumentsPage.jsx
 
 import React, { useState, useEffect, useRef } from "react";
 import { collection, doc, getDoc, setDoc } from "firebase/firestore";
@@ -162,7 +162,7 @@ const DocumentsPage = () => {
     const combinedData = [
       ...(category === "Non-EU" ? documentsNonEU : documentsEU),
       ...documentsSecond,
-      ...documentsOptional.filter(doc => {
+      ...documentsOptional.filter((doc) => {
         const docState = checkboxes[doc.id.toString()];
         return !(docState && docState.hide);
       }),
@@ -209,7 +209,9 @@ const DocumentsPage = () => {
             console.log(`Field ${field} is needed but not checked.`);
           }
         } else if (fieldValue === notNeeded) {
-          console.log(`Field ${field} is marked as not needed and excluded from progress.`);
+          console.log(
+            `Field ${field} is marked as not needed and excluded from progress.`
+          );
         }
       });
 
@@ -219,9 +221,13 @@ const DocumentsPage = () => {
       }
     });
 
-    console.log(`Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`);
+    console.log(
+      `Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`
+    );
 
-    return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+    return totalCheckboxes === 0
+      ? 0
+      : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
   };
 
   useEffect(() => {
@@ -272,7 +278,7 @@ const DocumentsPage = () => {
 
   // Функція для отримання включених опціональних документів
   const getIncludedOptionalDocuments = () => {
-    return documentsOptional.filter(doc => {
+    return documentsOptional.filter((doc) => {
       const docState = dynamicData.checkboxes[doc.id.toString()];
       return docState && !docState.hide;
     });
@@ -280,7 +286,7 @@ const DocumentsPage = () => {
 
   // Функція для отримання виключених опціональних документів
   const getExcludedOptionalDocuments = () => {
-    return documentsOptional.filter(doc => {
+    return documentsOptional.filter((doc) => {
       const docState = dynamicData.checkboxes[doc.id.toString()];
       return docState && docState.hide;
     });
@@ -343,6 +349,16 @@ const DocumentsPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [documentsOptional, user]);
 
+  // Фільтрація колонок для опціональної таблиці
+  const getOptionalColumns = () => {
+    // Визначте список колонок, які не повинні відображатися в опціональній таблиці
+    const excludedColumns = ["is_exist", "apostile"]; // Додайте інші, якщо потрібно
+
+    return columnsFirst.filter(
+      (col) => !excludedColumns.includes(col.name)
+    );
+  };
+
   return (
     <MainLayout>
       <div className="page page1 containerBigger mt-20">
@@ -400,7 +416,7 @@ const DocumentsPage = () => {
                   {/* Опціональні документи (виключені) */}
                   <ResponsiveTable
                     title={optionalTitle}
-                    columns={columnsFirst}
+                    columns={getOptionalColumns()} // Використовуйте відфільтровані колонки
                     data={getExcludedOptionalDocuments()} // Передаємо лише виключені опціональні документи
                     setTableData={() => {}}
                     selectedLanguage={language}

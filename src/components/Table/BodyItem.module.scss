@@ -1,18 +1,44 @@
+// src/components/Table/BodyItem.module.scss
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+// Змінні
 $primary-color: #013b6e;
 $border-color: #ccc;
 $bg-complete: rgba(#4caf50, 0.1);
 $bg-incomplete: rgba(#ff9800, 0.1);
 
-
-
+// Основні стилі
 .rowCompleted {
   background-color: $bg-complete;
 }
 
 .rowIncomplete {
   background-color: $bg-incomplete;
+}
+
+.rowExcluded {
+  background-color: rgba(150, 150, 150, 0.2); /* Напівпрозорий сірий фон */
+  color: rgba(50, 50, 50, 0.6); /* Приглушений сірий колір тексту */
+  position: relative;
+  cursor: default;
+
+  /* Додаємо плюс-значок поверх рядка */
+  &::after {
+    content: "+";
+    font-size: 2rem;
+    color: rgba(80, 80, 80, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Дозволяє клікам проходити через елемент */
+  }
+
+  /* Запобігаємо змінам фону при наведенні */
+  &:hover {
+    background-color: rgba(150, 150, 150, 0.2);
+  }
 }
 
 .tableCell {
@@ -32,6 +58,7 @@ $bg-incomplete: rgba(#ff9800, 0.1);
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  cursor: default; // Відміна курсора для чекбоксів
 }
 
 .req_img {
@@ -61,12 +88,15 @@ $bg-incomplete: rgba(#ff9800, 0.1);
 
 /* Адаптивні стилі для мобільної версії */
 @media (max-width: 768px) {
- 
-
   .checkboxGroup {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
   }
+}
+
+
+.row {
+  cursor: pointer; // Додає курсор "рука" для рядків, які можна натискати
 }

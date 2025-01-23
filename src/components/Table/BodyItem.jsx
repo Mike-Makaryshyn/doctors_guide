@@ -30,6 +30,7 @@ const BodyItem = React.memo(
     selectedRegion,
     checkboxes,
     isMobile,
+    isOptional, // Новий проп для визначення опціональних документів
   }) => {
     /** Вмикає/вимикає поле (наприклад, "hide") або будь-яке інше */
     const onCheckboxChange = (fieldName) => {
@@ -171,14 +172,25 @@ const BodyItem = React.memo(
 
     const allChecked = areAllCheckedLocal();
 
+    /** Обробник кліку по рядку */
+    const handleRowClick = () => {
+      if (isOptional && checkboxes[row.id.toString()]?.hide) {
+        onHiddenChange(); // Включає рядок
+      }
+    };
+
     return (
       <tr
         key={row.id}
         className={cn(
           styles.row,
           index % 2 === 0 ? styles.rowOdd : "",
-          allChecked ? styles.rowCompleted : styles.rowIncomplete
+          allChecked ? styles.rowCompleted : styles.rowIncomplete,
+          isOptional && checkboxes[row.id.toString()]?.hide
+            ? styles.rowExcluded
+            : ""
         )}
+        onClick={handleRowClick} // Додаємо обробник події
       >
         {columns.map((column, columnIndex) => {
           // Для категорії EU приховуємо колонку "apostile"
@@ -201,7 +213,10 @@ const BodyItem = React.memo(
               typeof row?.[column?.name] === "string" &&
                 row?.[column?.name]?.includes("check") ? (
                 !checkboxes[row.id.toString()]?.hide && (
-                  <div className={styles.checkbox_wrapper}>
+                  <div
+                    className={styles.checkbox_wrapper}
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {row?.[`${column.name}_showIcon`] && (
                       <img
                         className={styles.req_img}
@@ -224,6 +239,7 @@ const BodyItem = React.memo(
                               false
                             }
                             onChange={() => onCheckboxChange(column.name)}
+                            onClick={(e) => e.stopPropagation()} // Зупинка поширення
                             disabled={
                               disableCheckboxBasedOnName &&
                               hasNameColumn &&
@@ -240,6 +256,7 @@ const BodyItem = React.memo(
                           checkboxes[row.id.toString()]?.[column.name] || false
                         }
                         onChange={() => onCheckboxChange(column.name)}
+                        onClick={(e) => e.stopPropagation()} // Зупинка поширення
                         disabled={
                           disableCheckboxBasedOnName &&
                           hasNameColumn &&
@@ -265,21 +282,21 @@ const BodyItem = React.memo(
                 </div>
               ) : null}
 
-{row?.id === 17 &&
-  column.name === "notary" &&
-  !checkboxes[row.id.toString()]?.hide && (
-    <a
-      className={styles.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      href={row?.link}
-    >
-      {sendOriginalText[language] || sendOriginalText["en"]}
-    </a>
-  )}
+              {row?.id === 17 &&
+                column.name === "notary" &&
+                !checkboxes[row.id.toString()]?.hide && (
+                  <a
+                    className={styles.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={row?.link}
+                  >
+                    {sendOriginalText[language] || sendOriginalText["en"]}
+                  </a>
+                )}
 
               {/* Якщо документ опціональний - відображати "Included/Excluded" */}
-              {row?.optional && column?.name === "category" && (
+              {row?.optional && column?.name === "category" && !checkboxes[row.id.toString()]?.hide && (
                 <div
                   className={cn(
                     styles.optionalCheckboxWrapper,
@@ -295,6 +312,7 @@ const BodyItem = React.memo(
                     }
                     checked={checkboxes[row.id.toString()]?.hide || false}
                     onChange={() => onHiddenChange()}
+                    onClick={(e) => e.stopPropagation()} // Зупинка поширення
                   />
                 </div>
               )}
@@ -306,7 +324,7 @@ const BodyItem = React.memo(
   }
 );
 
-// Додавання PropTypes для валідації пропсів
+// Оновлення PropTypes для додавання isOptional
 BodyItem.propTypes = {
   row: PropTypes.object.isRequired,
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -323,10 +341,12 @@ BodyItem.propTypes = {
   selectedRegion: PropTypes.string.isRequired,
   checkboxes: PropTypes.object.isRequired,
   isMobile: PropTypes.bool.isRequired,
+  isOptional: PropTypes.bool, // Новий PropType
 };
 
 BodyItem.defaultProps = {
   changeHiddenProp: () => {},
+  isOptional: false, // Значення за замовчуванням
 };
 
 export default BodyItem;
