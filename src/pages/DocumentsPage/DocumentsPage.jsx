@@ -66,6 +66,7 @@ const ProgressBarWithTooltip = ({ progress, getMessage }) => {
     </div>
   );
 };
+
 const DocumentsPage = () => {
   const {
     selectedLanguage: language,
@@ -81,12 +82,15 @@ const DocumentsPage = () => {
     progress: 0,
   });
   const [progress, setProgress] = useState(0);
+  const [displayedProgress, setDisplayedProgress] = useState(0); // Новий стан
   const isMobile = useIsMobile();
 
   const [lastSavedData, setLastSavedData] = useState({
     checkboxes: {},
     progress: 0,
   });
+
+  const isInitialLoad = useRef(true); // Додано флаг
 
   // Завантажуємо дані з Firestore
   const fetchDynamicDataFromFirestore = async () => {
@@ -150,51 +154,77 @@ const DocumentsPage = () => {
   };
 
   // Рахуємо прогрес
-  const calculateProgress = (checkboxes, language) => {
-    let totalCheckboxes = 0;
-    let checkedCheckboxes = 0;
-  
-    // Отримуємо список документів та виключаємо приховані з розрахунку
-    const combinedData = [
-      ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-      ...documentsSecond,
-      ...documentsOptional,
-    ].filter((item) => {
-      const docState = checkboxes[item.id.toString()];
-      return !(docState && docState.hide); // Враховуємо лише видимі документи
-    });
-  
-    combinedData.forEach((item) => {
-      const documentId = item.id.toString();
-      const docState = checkboxes[documentId] || {};
-  
-      // Поля для перевірки
-      const fieldsToCheck = [
-        "is_exist",
-        "notary",
-        "translation",
-        "ready_copies",
-        "sent",
-        ...(category === "EU" ? [] : ["apostile"]),
-      ];
-  
-      fieldsToCheck.forEach((field) => {
-        const fieldValue = item[field];
-  
-        // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
-        const notNeeded = notNeededText[language] || notNeededText["en"];
-  
-        if (fieldValue !== undefined && fieldValue !== notNeeded) {
-          totalCheckboxes++;
-          if (docState[field] === true) {
-            checkedCheckboxes++;
-          }
+// Рахуємо прогрес
+// Рахуємо прогрес
+const calculateProgress = (checkboxes, language) => {
+  let totalCheckboxes = 0;
+  let checkedCheckboxes = 0;
+
+  // Отримуємо список документів та виключаємо приховані з розрахунку
+  const combinedData = [
+    ...(category === "Non-EU" ? documentsNonEU : documentsEU),
+    ...documentsSecond,
+    ...documentsOptional,
+  ].filter((item) => {
+    const docState = checkboxes[item.id.toString()];
+    return !(docState && docState.hide);
+  });
+
+  combinedData.forEach((item) => {
+    const documentId = item.id.toString();
+    const docState = checkboxes[documentId] || {};
+
+    let fieldsToCheck = [
+      "is_exist",
+      "notary",
+      "translation",
+      "ready_copies",
+      "sent",
+      ...(category === "EU" ? [] : ["apostile"]),
+    ];
+
+    // Якщо документ має особливі умови (наприклад, два чекбокси), визначте це тут
+    const isSpecialDocument = item.id === 17; // ROV-17 має id 17
+    if (isSpecialDocument) {
+      // Визначаємо окремі поля для ROV-17
+      fieldsToCheck = ["is_exist", "sent"]; // Замініть на реальні назви полів для ROV-17
+    }
+
+    fieldsToCheck.forEach((field) => {
+      let fieldValue = item[field];
+
+      // Якщо fieldValue є об'єктом, витягуємо значення для поточної мови
+      if (typeof fieldValue === "object" && fieldValue !== null) {
+        fieldValue = fieldValue[language] || fieldValue["en"] || "";
+      }
+
+      // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
+      const notNeeded = notNeededText[language] || notNeededText["en"] || "";
+
+      if (fieldValue !== undefined && fieldValue !== notNeeded) {
+        totalCheckboxes++;
+        if (docState[field] === true) {
+          // Якщо поле потрібно і чекбокс відмічений
+          checkedCheckboxes++;
+          console.log(`Field ${field} is needed and checked.`);
+        } else {
+          console.log(`Field ${field} is needed but not checked.`);
         }
-      });
+      } else if (fieldValue === notNeeded) {
+        console.log(`Field ${field} is marked as not needed and excluded from progress.`);
+      }
     });
-  
-    return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
-  };
+
+    // Якщо документ має спеціальні умови для прогресу
+    if (isSpecialDocument) {
+      // Немає додаткових полів для ROV-17, тому можна залишити порожнім або додати специфічну логіку
+    }
+  });
+
+  console.log(`Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`);
+
+  return totalCheckboxes === 0 ? 0 : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+};
 
   useEffect(() => {
     fetchDynamicDataFromFirestore();
@@ -202,9 +232,9 @@ const DocumentsPage = () => {
   }, [user]);
 
   useEffect(() => {
-    const newProgress = calculateProgress(dynamicData.checkboxes);
+    const newProgress = calculateProgress(dynamicData.checkboxes, language);
     setProgress(newProgress);
-  }, [dynamicData.checkboxes, category]);
+  }, [dynamicData.checkboxes, category, language]);
 
   useEffect(() => {
     const updatedData = {
@@ -214,6 +244,23 @@ const DocumentsPage = () => {
     updateFirestoreData(updatedData);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dynamicData.checkboxes, progress]);
+
+  // Новий useEffect для управління displayedProgress з флагом
+  useEffect(() => {
+    if (isInitialLoad.current) {
+      // Початкове завантаження: анімуємо від 0 до фактичного прогресу
+      setDisplayedProgress(0);
+      const timer = setTimeout(() => {
+        setDisplayedProgress(progress);
+        isInitialLoad.current = false; // Встановлюємо флаг після першої анімації
+      }, 500); // Затримка 500 мс, можна змінити за потребою
+
+      return () => clearTimeout(timer);
+    } else {
+      // Після початкового завантаження: анімуємо від попереднього до нового значення
+      setDisplayedProgress(progress);
+    }
+  }, [progress]);
 
   const getMessage = (progressValue) => {
     if (progressValue < 20) return messages[language].lessThan20;
@@ -263,6 +310,9 @@ const DocumentsPage = () => {
       documentsOptional.forEach((doc) => {
         if (!(doc.id.toString() in dynamicData.checkboxes)) {
           initialCheckboxes[doc.id.toString()] = { hide: true };
+          // Якщо потрібно встановити всі поля як "not needed", встановіть відповідні значення
+          // Наприклад:
+          // initialCheckboxes[doc.id.toString()] = { is_exist: false, notary: false, ... };
         }
       });
 
@@ -289,7 +339,7 @@ const DocumentsPage = () => {
 
             {/* Прогрес-бар */}
             <ProgressBarWithTooltip
-              progress={progress}
+              progress={displayedProgress} // Використовуйте displayedProgress
               getMessage={getMessage}
             />
 
