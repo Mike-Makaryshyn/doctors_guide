@@ -16,7 +16,7 @@ const createLinks = (linkText, linkUrl) => ({
       link: linkUrl,
     },
   ],
-  NonEU: [
+  "Non-EU": [
     {
       landName: "General",
       text: linkText,
@@ -106,7 +106,7 @@ export const documentsSecond = [
       de: "Schriftlicher, persönlich unterschriebener Antrag in deutscher Sprache auf Erteilung der Approbation und ggf. einer Berufserlaubnis",
     },
     links: {
-      NonEU: [
+      "Non-EU": [
         {
           landName: "Bayern",
           link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi/regierungen/regierungen/rob/approbationen/index?caller=8995476647409",
@@ -625,7 +625,7 @@ export const documentsSecond = [
       de: " Schriftliche, formlose, persönlich unterschriebene Erklärung, dass Sie in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt haben",
     },
     links: {
-      NonEU: [
+      "Non-EU": [
         {
           landName: "Bayern",
           link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi/regierungen/regierungen/rob/approbationen/index?caller=8995476647409",
@@ -1144,7 +1144,7 @@ export const documentsSecond = [
       de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
     },
     links: {
-      NonEU: [
+      "Non-EU": [
         {
           landName: "Bayern",
           link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi/regierungen/regierungen/rob/approbationen/index?caller=8995476647409",
@@ -1662,7 +1662,7 @@ export const documentsSecond = [
       de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
     },
     links: {
-      NonEU: [
+      "Non-EU": [
         {
           landName: "Bayern",
           link: "https://formularserver.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
