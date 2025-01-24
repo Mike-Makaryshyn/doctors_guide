@@ -1,36 +1,17 @@
 // src/components/Table/ResponsiveTable.jsx
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styles from "./ResponsiveTable.module.scss";
 import cn from "classnames";
 import BodyItem from "./BodyItem";
 import useIsMobile from "../../hooks/useIsMobile";
-import CloseIcon from "../../assets/close-icon.svg";
-import MobileCheckbox from "../Checkbox/MobileCheckbox";
-import { columnsFirst } from "../../constants/translation/columnsFirst";
-import { sendOriginalText } from "../../constants/translation/documents";
 import Tile from "./Tile";
 
 /**
- * Tile компонент
+ * ResponsiveTable компонент
  */
 
-
-// Оновлення PropTypes для додавання isOptional
-Tile.propTypes = {
-  row: PropTypes.object.isRequired,
-  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  category: PropTypes.string.isRequired,
-  selectedLanguage: PropTypes.string.isRequired,
-  selectedRegion: PropTypes.string.isRequired,
-  tableFor: PropTypes.string.isRequired,
-  checkboxes: PropTypes.object.isRequired,
-  handleCheckboxChange: PropTypes.func.isRequired,
-  disableCheckboxBasedOnName: PropTypes.bool.isRequired,
-};
-
-// ResponsiveTable компонент
 const ResponsiveTable = ({
   columns,
   data,
@@ -59,87 +40,74 @@ const ResponsiveTable = ({
     <div className={cn(styles.tableContainer, customClass)}>
       {title && <h2 className={styles.title}>{title}</h2>}
 
-      {/* Якщо не мобільний -> показуємо звичайну таблицю (BodyItem) */}
-      {tableFor === "optional" || shouldRenderAsTiles ? (
-  <div className={styles.tileContainer}>
-    {data.map((row) => (
-      <Tile
-      key={`tile-${row.id}`}
-      row={row}
-      columns={columns}
-      category={category}
-      selectedLanguage={selectedLanguage}
-      selectedRegion={selectedRegion}
-      tableFor={tableFor}
-      checkboxes={checkboxes}
-      handleCheckboxChange={handleCheckboxChange}
-      disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-      />
-    ))}
-  </div>
-) : !shouldRenderAsTiles ? (
-  <table
-    className={cn(styles.table, {
-      [styles.optionalTable]: tableFor === "optional",
-    })}
-  >
-    {!hideHeader && (
-      <thead>
-        <tr className={styles.tableHeader}>
-          {columns.map((col) => {
-            if (category === "EU" && col.name === "apostile") return null;
-            if (tableFor === "optional" && col.name === "hide") return null;
-            return (
-              <th key={`header-${col.name}`} data-column={col.name}>
-                {col.label?.[selectedLanguage] || col.name}
-              </th>
-            );
+      {/* Рендер таблиці або плиток залежно від пристрою */}
+      {shouldRenderAsTiles ? (
+        <div className={styles.tileContainer}>
+          {data.map((row) => (
+           <Tile
+           key={`tile-${row.id}`}
+           row={row}
+           columns={columns}
+           category={category}
+           selectedLanguage={selectedLanguage}
+           selectedRegion={selectedRegion}
+           tableFor={tableFor}
+           checkboxes={checkboxes}
+           handleCheckboxChange={handleCheckboxChange}
+           disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+           isMobile={isMobile} // Передаємо isMobile
+         />
+          ))}
+        </div>
+      ) : (
+        <table
+          className={cn(styles.table, {
+            [styles.optionalTable]: tableFor === "optional",
+            [styles.mainTable]: tableFor === "main",
+            [styles.euTable]: tableFor === "EU",
+            [styles.secondTable]: tableFor === "second",
           })}
-        </tr>
-      </thead>
-    )}
-    <tbody>
-      {data.map((row, index) => (
-        <BodyItem
-          key={`body-item-${row.id}`}
-          row={row}
-          columns={columns}
-          index={index}
-          tableFor={tableFor}
-          setTableData={setTableData}
-          tableData={data}
-          category={category}
-          language={selectedLanguage}
-          handleCheckboxChange={handleCheckboxChange}
-          changeHiddenProp={() => {}}
-          hasNameColumn={columns.some((c) => c.name === "name")}
-          disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-          selectedRegion={selectedRegion}
-          checkboxes={checkboxes}
-          isMobile={isMobile}
-          isOptional={tableFor === "optional"} // Передаємо проп для умовного рендерингу
-        />
-      ))}
-    </tbody>
-  </table>
-) : (
-  <div className={styles.tileContainer}>
-    {data.map((row) => (
-      <Tile
-        key={`tile-${row.id}`}
-        row={row}
-        columns={columns}
-        category={category}
-        selectedLanguage={selectedLanguage}
-        selectedRegion={selectedRegion}
-        tableFor={tableFor}
-        checkboxes={checkboxes}
-        handleCheckboxChange={handleCheckboxChange}
-        disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-      />
-    ))}
-  </div>
-)}
+        >
+          {!hideHeader && (
+            <thead>
+              <tr className={styles.tableHeader}>
+                {columns.map((col) => {
+                  if (category === "EU" && col.name === "apostile") return null;
+                  if (tableFor === "optional" && col.name === "hide") return null;
+                  return (
+                    <th key={`header-${col.name}`} data-column={col.name}>
+                      {col.label?.[selectedLanguage] || col.name}
+                    </th>
+                  );
+                })}
+              </tr>
+            </thead>
+          )}
+          <tbody>
+            {data.map((row, index) => (
+              <BodyItem
+                key={`body-item-${row.id}`}
+                row={row}
+                columns={columns}
+                index={index}
+                tableFor={tableFor}
+                setTableData={setTableData}
+                tableData={data}
+                category={category}
+                language={selectedLanguage}
+                handleCheckboxChange={handleCheckboxChange}
+                changeHiddenProp={() => {}}
+                hasNameColumn={columns.some((c) => c.name === "name")}
+                disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+                selectedRegion={selectedRegion}
+                checkboxes={checkboxes}
+                isMobile={isMobile}
+                isOptional={tableFor === "optional"}
+              />
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

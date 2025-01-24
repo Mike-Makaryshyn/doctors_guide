@@ -1,12 +1,13 @@
 // src/components/CategoryToggle/CategoryToggle.jsx
 
 import React from "react";
+import PropTypes from "prop-types"; // Додайте PropTypes для кращої валідації
 import styles from "./CategoryToggle.module.scss";
 
 const CategoryToggle = ({ category, setCategory }) => {
   const toggleCategory = () => {
-    setCategory((prev) => (prev === "EU" ? "NonEU" : "EU"));
-    console.log(`Category toggled to: ${category === "EU" ? "NonEU" : "EU"}`);
+    setCategory((prev) => (prev === "EU" ? "Non-EU" : "EU"));
+    console.log(`Category toggled to: ${category === "EU" ? "Non-EU" : "EU"}`);
   };
 
   return (
@@ -19,6 +20,11 @@ const CategoryToggle = ({ category, setCategory }) => {
       </span>
     </div>
   );
+};
+
+CategoryToggle.propTypes = {
+  category: PropTypes.string.isRequired,
+  setCategory: PropTypes.func.isRequired,
 };
 
 export default CategoryToggle;

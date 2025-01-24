@@ -32,6 +32,9 @@ const LanguageStudyPage = React.lazy(() =>
 const ExamEmplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
+const ExamExplanationsPage = React.lazy(() =>
+  import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
+);
 const ApprobationPage = React.lazy(() =>
   import("../pages/ApprobationPage/ApprobationPage")
 );
@@ -91,6 +94,7 @@ export default function Routers() {
         )}
 
         {/* Основні сторінки */}
+        <Route path={pathList.exam_explanations.path} element={<ExamExplanationsPage />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />

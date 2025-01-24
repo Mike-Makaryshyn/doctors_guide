@@ -36,15 +36,20 @@ $danger-color: #f44336;
 }
 
 .tileOptional {
-  background: rgba(150, 150, 150, 0.2); /* Напівпрозорий сірий фон */
-  border: 1px solid rgba(150, 150, 150, 0.4); /* Сіра межа */
-  box-shadow: inset -3px 3px 8px rgba(0, 0, 0, 0.1),
-              inset 3px -3px 8px rgba(255, 255, 255, 0.1);
-  color: rgba(50, 50, 50, 0.6); /* Приглушений сірий колір тексту */
+  background: rgba(255, 255, 255, 0.2); /* Прозорий білий фон для скляного ефекту */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонка біла рамка */
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.06); /* Легка тінь для глибини */
+  color: rgba(50, 50, 50, 0.8); /* Приглушений сірий колір тексту */
   position: relative; /* Для позиціонування знаку "+" */
   cursor: pointer; /* Вказівник миші */
-  opacity: 0.6; /* Фіксована прозорість */
-  transition: none; /* Вимкнення ефектів при наведенні */
+  opacity: 0.9; /* Збільшена прозорість */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+
+  /* Скляний ефект */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Для підтримки Safari */
 
   &::after {
     content: "+"; /* Знак плюса */
@@ -55,6 +60,45 @@ $danger-color: #f44336;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25); /* Збільшення прозорості при наведенні */
+    box-shadow: 
+      0 6px 10px rgba(0, 0, 0, 0.15),
+      0 2px 4px rgba(0, 0, 0, 0.1); /* Посилення тіні при наведенні */
+    transform: scale(1.05); /* Легке збільшення при наведенні */
+  }
+
+  /* Анімація плаваючого ефекту */
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .tileOptional {
+    background: rgba(255, 255, 255, 0.3); /* Збільшена прозорість для кращої видимості */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Трохи темніша рамка */
+    opacity: 1; /* Повна непрозорість на мобільних */
+    &::after {
+      font-size: 4rem; /* Зменшений розмір знаку на мобільних */
+    }
+    min-height: 250px; /* Зменшена мінімальна висота для мобільних */
+  }
+
+  .tileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* Забезпечення того, щоб опціональні плитки відповідали розмірам звичайних плиток */
+  .tileOptional {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 20px; /* Зменшені внутрішні відступи для мобільних */
   }
 }
 /* Оверлей завершення */
@@ -104,26 +148,23 @@ $danger-color: #f44336;
 }
 
 .checkboxGrid {
-  display: flex;
-  justify-content: center; /* Центрування елементів */
-  gap: 5px; /* Зменшена відстань між чекбоксами */
-  align-items: center; /* Центрування по вертикалі */
-  flex-wrap: nowrap; /* Запобігає переносу чекбоксів на нові рядки */
-  max-width: 100%; /* Або встановіть ширину вручну */
-}
+  flex-direction: row; /* Горизонтальне розташування */
+    justify-content: flex-start; /* Вирівнювання по лівому краю */
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Перенос на новий рядок, якщо потрібно */
+  }
 
-.checkboxBox {
-  display: flex;
-  flex-direction: column; /* Іконка над чекбоксом */
-  align-items: center; /* Центрування вмісту */
-  justify-content: center; /* Центрування вмісту */
-  gap: 5px; /* Відстань між іконкою та лейблом */
-  flex: 1 1 auto; /* Дозволяє чекбоксам зменшуватись */
-  width: auto; /* Автоматична ширина */
-  position: relative;
-  height: auto; /* Автоматична висота */
-  max-width: 80px; /* Максимальна ширина для адаптивності */
-}
+
+  .checkboxBox {
+    flex-direction: row; /* Горизонтальне розташування */
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+  }
 
 /* Стилізація завершеної плитки */
 .tileCompleted {

@@ -279,16 +279,14 @@ const DocumentsPage = () => {
   // Функція для отримання включених опціональних документів
   const getIncludedOptionalDocuments = () => {
     return documentsOptional.filter((doc) => {
-      const docState = dynamicData.checkboxes[doc.id.toString()];
-      return docState && !docState.hide;
+      return !dynamicData.checkboxes[doc.id.toString()]?.hide;
     });
   };
 
   // Функція для отримання виключених опціональних документів
   const getExcludedOptionalDocuments = () => {
     return documentsOptional.filter((doc) => {
-      const docState = dynamicData.checkboxes[doc.id.toString()];
-      return docState && docState.hide;
+      return dynamicData.checkboxes[doc.id.toString()]?.hide;
     });
   };
 
@@ -354,9 +352,7 @@ const DocumentsPage = () => {
     // Визначте список колонок, які не повинні відображатися в опціональній таблиці
     const excludedColumns = ["is_exist", "apostile"]; // Додайте інші, якщо потрібно
 
-    return columnsFirst.filter(
-      (col) => !excludedColumns.includes(col.name)
-    );
+    return columnsFirst.filter((col) => !excludedColumns.includes(col.name));
   };
 
   return (
@@ -395,6 +391,7 @@ const DocumentsPage = () => {
                     customClass={
                       category === "Non-EU" ? styles.mainTable : styles.euTable
                     }
+                    isMobile={isMobile} // Передаємо isMobile
                   />
 
                   {/* Друга таблиця */}
@@ -411,26 +408,32 @@ const DocumentsPage = () => {
                     checkboxes={dynamicData.checkboxes}
                     handleCheckboxChange={handleCheckboxChange}
                     customClass={styles.secondTable}
+                    isMobile={isMobile} // Передаємо isMobile
                   />
 
-                  {/* Опціональні документи (виключені) */}
-                  <div className={styles.tileContainer}>
-  <h2>{optionalTitle}</h2>
-  {getExcludedOptionalDocuments().map((row) => (
-    <Tile
-      key={`tile-${row.id}`}
-      row={row}
-      columns={getOptionalColumns()}
-      category={category}
-      selectedLanguage={language}
-      selectedRegion={selectedRegion}
-      tableFor="optional"
-      checkboxes={dynamicData.checkboxes}
-      handleCheckboxChange={handleCheckboxChange}
-      disableCheckboxBasedOnName={false}
-    />
-  ))}
-</div>
+                  {/* Відображення виключених опціональних документів як плиток */}
+                  <div className={styles.tileSection}>
+                    <h2 className={styles.optionalTitleHeader}>
+                      {optionalTitle}
+                    </h2>
+                    <div className={styles.tileContainer}>
+                      {getExcludedOptionalDocuments().map((row) => (
+                        <Tile
+                          key={`tile-${row.id}`}
+                          row={row}
+                          columns={getOptionalColumns()}
+                          category={category}
+                          selectedLanguage={language}
+                          selectedRegion={selectedRegion}
+                          tableFor="optional"
+                          checkboxes={dynamicData.checkboxes}
+                          handleCheckboxChange={handleCheckboxChange}
+                          disableCheckboxBasedOnName={false}
+                          isMobile={isMobile} // Передаємо isMobile
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </>
               ) : (
                 <div className={styles.loadingMessage}>

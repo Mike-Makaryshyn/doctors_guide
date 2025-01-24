@@ -319,6 +319,22 @@ const BodyItem = React.memo(
             </td>
           );
         })}
+
+        {/* Додамо кнопку закриття для мобільних пристроїв */}
+        {isMobile && tableFor === "main" && checkboxes[row.id.toString()]?.hide === false && (
+          <td className={styles.tableCell}>
+            <button
+              className={styles.closeButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                onHiddenChange(); // Виключає документ
+              }}
+              aria-label="Виключити документ"
+            >
+              ×
+            </button>
+          </td>
+        )}
       </tr>
     );
   }

@@ -188,7 +188,7 @@ export const main_menu_items = {
                uk: "Пояснення процедур",
                ru: "Пояснение процедур",
                de: "Verfahrenserklärung",
-               link: "/exam_explanations", 
+               link: "/exam-explanations", 
             },
             {
                en: "Chat in Region",
@@ -380,7 +380,7 @@ export const main_menu_items = {
                uk: "Пояснення процедур",
                ru: "Пояснения процедур",
                de: "Verfahrenserklärungen",
-               link: "/procedure-explanations",
+               link: "/exam-explanations",
             },
             {
                en: "Regional Chats",
