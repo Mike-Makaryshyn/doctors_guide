@@ -391,17 +391,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); // Трохи темніше для кращого фокусу на модальному вікні
+  background-color: rgba(0, 0, 0, 0.6); // Темний фон для фокусу на модальному вікні
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; // Забезпечує, що модальне вікно буде поверх інших елементів
-  transition: opacity 0.3s ease; // Анімація появи
+  z-index: 1000; // Забезпечує поверховість
+  transition: opacity 0.3s ease; // Плавна анімація
 }
 
 .modal {
   background: #fff;
-  padding: 30px;
+  padding: 30px 20px 20px 20px; // Зменшено верхній відступ для місця під хрестик
   max-width: 500px;
   width: 90%;
   border-radius: 10px;
@@ -425,37 +425,54 @@
 .modal h2 {
   margin-top: 0;
   font-size: 24px;
-  color: #333;
+  text-align: left;
+  color: #013b6e; // Зелений колір для заголовка
 }
 
 .modal p {
   font-size: 16px;
-  color: #555;
+  color: #000000; // Зелений колір для тексту
   margin: 20px 0;
 }
 
-.modal button {
+/* Стиль для кнопки "Anmelden" */
+.authorizeButton {
   padding: 10px 20px;
-  margin: 10px;
-  background-color: #4caf50;
+  margin-top: 20px;
+  background-color: #4caf50; /* Зелений фон */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.2s ease;
+
+ 
 }
 
-.modal button:hover {
-  background-color: #45a049;
-}
+/* Стиль для кнопки закриття модального вікна */
+.modalCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a; // Світло-сірий колір
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.modal button:last-child {
-  background-color: #f44336; // Червоний для кнопки "Закрити"
-}
+  &:hover {
+    color: #e80404; // Чорний колір при наведенні
+  }
 
-.modal button:last-child:hover {
-  background-color: #d32f2f;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
   // Базові стилі для таблиць (desktop)
   .tableBase {
