@@ -488,26 +488,15 @@
   /* Специфічні стилі для secondTable */
   .secondTable {
     @extend .tableBase;
-
-    thead {
-      background-color: #e0e0e0; // Темно-сірий фон для заголовків
-    }
-
+  
     th:first-child,
     td:first-child {
-      width: 35%; // Збільшено ширину першої колонки
-      text-align: left;
+      width: 20%;  /* Наприклад, зміна ширини для першого стовпця */
     }
-
-    // Видалення жирного шрифту у другій колонці
+    
     th:nth-child(2),
     td:nth-child(2) {
-      font-weight: normal; // Видаляємо жирність
-    }
-
-    th[data-column="specificColumn"],
-    td[data-column="specificColumn"] {
-      width: 20%; // Приклад для додаткової колонки
+      font-weight: normal;
     }
   }
 

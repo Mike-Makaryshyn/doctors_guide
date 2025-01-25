@@ -53,104 +53,107 @@ const BodyItem = React.memo(
      */
     const getLink = () => {
       if (row.links) {
-        // Якщо користувач не обрав регіон
         if (!selectedRegion) {
           console.warn("No region selected.");
           return (
-            <a href="/lands" rel="noopener noreferrer" className={styles.link}>
-              Select a region
-            </a>
+            <div className={styles.linkWrapper}>
+              <a href="/lands" rel="noopener noreferrer" className={styles.link}>
+                Select a region
+              </a>
+            </div>
           );
         }
-
+    
         console.log(
           `Processing doc ID ${row.id}, region "${selectedRegion}", category "${category}"`
         );
-
+    
         const requiredFor = Array.isArray(row.requiredFor)
           ? row.requiredFor.map((item) => item.trim().toLowerCase())
           : ["both"];
         const categoryLower = category.trim().toLowerCase();
         const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
-
-        // Якщо цей документ потрібен або "both", малюємо
-        if (
-          requiredFor.includes("both") ||
-          requiredFor.includes(categoryLower)
-        ) {
-          // Чи існує взагалі row.links[category]
+    
+        if (requiredFor.includes("both") || requiredFor.includes(categoryLower)) {
           if (row.links[category]) {
-            // Шукаємо лінк для конкретного регіону
-            const regionalLink = row.links[category].find((link) => {
-              const cleanedLandName = link.landName.trim().toLowerCase();
-              return cleanedLandName === cleanedSelectedRegion;
-            });
-
+            const regionalLink = row.links[category].find(
+              (link) => link.landName.trim().toLowerCase() === cleanedSelectedRegion
+            );
+    
             if (regionalLink) {
               return (
-                <a
-                  href={regionalLink.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.link}
-                >
-                  {regionalLink.text?.[language] || "Link"}
-                </a>
-              );
-            } else {
-              // Якщо немає лінка для конкретного регіону – шукаємо "General"
-              const generalLink = row.links[category].find(
-                (link) => link.landName.trim().toLowerCase() === "general"
-              );
-
-              if (generalLink) {
-                return (
+                <div className={styles.linkWrapper}>
                   <a
-                    href={generalLink.link}
+                    href={regionalLink.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.link}
                   >
-                    {generalLink.text?.[language] || "Link"}
+                    {regionalLink.text?.[language] || "Link"}
                   </a>
+                </div>
+              );
+            } else {
+              const generalLink = row.links[category].find(
+                (link) => link.landName.trim().toLowerCase() === "general"
+              );
+    
+              if (generalLink) {
+                return (
+                  <div className={styles.linkWrapper}>
+                    <a
+                      href={generalLink.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.link}
+                    >
+                      {generalLink.text?.[language] || "Link"}
+                    </a>
+                  </div>
                 );
               } else {
                 return (
-                  <span className={styles.warning}>
-                    No 'General' link found.
-                  </span>
+                  <div className={styles.linkWrapper}>
+                    <span className={styles.warning}>No 'General' link found.</span>
+                  </div>
                 );
               }
             }
           } else {
-            // Немає links[category]
             return (
-              <span className={styles.warning}>
-                No links available for this category.
-              </span>
+              <div className={styles.linkWrapper}>
+                <span className={styles.warning}>
+                  No links available for this category.
+                </span>
+              </div>
             );
           }
         } else {
-          // Document не вимагається для цього category
           return (
-            <span className={styles.info}>Not required for this category.</span>
+            <div className={styles.linkWrapper}>
+              <span className={styles.info}>Not required for this category.</span>
+            </div>
           );
         }
       } else if (row.singleLink) {
-        // Якщо документ має singleLink
         return (
-          <a
-            href={row.singleLink.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            {row.singleLink.text[language] || "Link"}
-          </a>
+          <div className={styles.linkWrapper}>
+            <a
+              href={row.singleLink.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {row.singleLink.text[language] || "Link"}
+            </a>
+          </div>
         );
       } else {
-        // Немає links
-        return <span className={styles.warning}>No links found.</span>;
+        return (
+          <div className={styles.linkWrapper}>
+            <span className={styles.warning}>No links found.</span>
+          </div>
+        );
       }
     };
 

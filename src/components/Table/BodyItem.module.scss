@@ -42,15 +42,15 @@ $bg-incomplete: rgba(#ff9800, 0.1);
 }
 
 .tableCell {
-  padding: 8px;
-  border: none; // Вилучено межі
+  width: 100%; /* Дозволяємо займати всю доступну ширину */
+  max-width: 1000px; /* Обмежуємо максимальну ширину */
   text-align: center;
-  vertical-align: middle;
-  color: $primary-color; // Встановлено колір тексту
+  word-wrap: break-word;
+  white-space: normal; /* Запобігає надмірному розтягненню рядка */
 }
 
 .nameField {
-  font-weight: 600;
+  font-weight: 400;
   color: $primary-color; // Встановлено колір тексту
 }
 
@@ -71,19 +71,50 @@ $bg-incomplete: rgba(#ff9800, 0.1);
   text-align: center;
 }
 
-.link {
-  color: #007bff;
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 7px;
+  width: 100%; /* Займає всю ширину */
+  max-width: 1000px; /* Максимальна ширина */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px #8c8c8c, -10px -10px 20px #ffffff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  /* Додаємо ефект світіння по контуру */
   &:hover {
-    text-decoration: underline;
+    box-shadow: 0 0 20px rgba(1, 59, 110, 0.6), 0 0 40px rgba(1, 59, 110, 0.4);
+    transform: translateY(-3px);
+  }
+
+  /* Адаптивність для менших екранів */
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 12px 20px; /* Зменшення відступів для мобільних пристроїв */
   }
 }
 
-.warning {
-  color: red;
-}
+/* Стилізація тексту */
+.link {
+  color: #013b6e;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4; /* Поліпшення читабельності */
+  text-decoration: none;
+  position: relative;
+  z-index: 1; /* Щоб текст був поверх фону */
+  transition: all 0.3s ease-in-out;
 
-.info {
-  color: #777;
+  &:hover {
+    text-decoration: none;
+    color: #013b6e; /* Не змінюємо колір */
+  }
 }
 
 /* Адаптивні стилі для мобільної версії */
