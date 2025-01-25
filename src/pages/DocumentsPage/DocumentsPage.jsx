@@ -1,12 +1,13 @@
 // src/pages/DocumentsPage/DocumentsPage.jsx
 
-import React, { useState, useEffect, useRef } from "react";
-import { collection, doc, getDoc, setDoc } from "firebase/firestore";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { collection, doc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./DocumentsPage.module.scss";
-
+import { AiOutlineClose } from "react-icons/ai"; // Імпортуємо іконку хрестика
+import { useNavigate } from "react-router-dom";
 // Імпортуємо колонки (приклад)
 import { columnsFirst } from "../../constants/translation/columnsFirst";
 import { columnsSecond } from "../../constants/translation/columnsSecond";
@@ -23,9 +24,12 @@ import { documentsSecond } from "../../constants/translation/documentsSecond";
 import { notNeededText } from "../../constants/translation/documents";
 import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
-import CategoryToggle from "../../components/CategoryToggle/CategoryToggle";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import Modal from "react-modal"; // Додано
+
+// Ініціалізуємо модальне вікно
+Modal.setAppElement("#root");
 
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
   return (
@@ -69,14 +73,14 @@ const ProgressBarWithTooltip = ({ progress, getMessage }) => {
 
 const DocumentsPage = () => {
   const {
-    selectedLanguage: language,
+    selectedLanguage: language = 'de', // Встановлюємо мову на німецьку за замовчуванням
     selectedRegion,
     handleChangePage,
     user,
   } = useGetGlobalInfo();
 
   const combinedRef = useRef();
-  const [category, setCategory] = useState("Non-EU"); // Початкове значення
+  const [category, setCategory] = useState(null); // Ініціалізуємо як null
   const [dynamicData, setDynamicData] = useState({
     checkboxes: {},
     progress: 0,
@@ -92,20 +96,52 @@ const DocumentsPage = () => {
 
   const isInitialLoad = useRef(true); // Додано флаг
 
-  // Завантажуємо дані з Firestore
-  const fetchDynamicDataFromFirestore = async () => {
+  // Таймер для дебаунсингу
+  const debounceTimer = useRef(null);
+
+  // Стан для модального вікна
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  // Функції для відкриття та закриття модального вікна
+  const handleShowAuthModal = () => setShowAuthModal(true);
+  const handleCloseAuthModal = () => setShowAuthModal(false);
+
+  // Прикладання функції handleCheckboxChange з useCallback
+  const handleCheckboxChange = useCallback((documentId, fieldName) => {
+    setDynamicData((prevData) => {
+      const updatedCheckboxes = {
+        ...prevData.checkboxes,
+        [documentId]: {
+          ...prevData.checkboxes[documentId],
+          [fieldName]: !prevData.checkboxes[documentId]?.[fieldName],
+        },
+      };
+
+      console.log(
+        `Тогл документа ${documentId}, поле: ${fieldName}, новий стан:`,
+        updatedCheckboxes[documentId]
+      );
+
+      return {
+        ...prevData,
+        checkboxes: updatedCheckboxes,
+      };
+    });
+  }, []);
+
+  // Завантажуємо дані з Firestore за допомогою onSnapshot для selectionData
+  const fetchSelectionDataFromFirestore = useCallback(() => {
     if (!user) return;
 
     const selectionDocRef = doc(
       collection(doc(collection(db, "users"), user.uid), "userData"),
       "selectionData"
     );
-    try {
-      const docSnap = await getDoc(selectionDocRef);
 
+    const unsubscribe = onSnapshot(selectionDocRef, (docSnap) => {
       if (docSnap.exists()) {
         const data = docSnap.data();
-        console.log("Fetched dynamic data from Firestore:", data);
+        console.log("Fetched selectionData from Firestore:", data);
 
         setDynamicData({
           checkboxes: data.checkboxes || {},
@@ -115,141 +151,255 @@ const DocumentsPage = () => {
               : data.progress || 0,
         });
       } else {
-        // Ініціалізуємо опціональні документи як виключені
+        // Ініціалізація selectionData документу, якщо він відсутній
         const initialCheckboxes = {};
         documentsOptional.forEach((doc) => {
           initialCheckboxes[doc.id.toString()] = { hide: true };
         });
 
-        await setDoc(selectionDocRef, {
+        setDoc(selectionDocRef, {
           checkboxes: initialCheckboxes,
           progress: 0,
-        });
-        setDynamicData({
-          checkboxes: initialCheckboxes,
-          progress: 0,
-        });
-      }
-    } catch (error) {
-      console.error("Error fetching dynamic data from Firestore:", error);
-    }
-  };
-
-  // Оновлюємо Firestore
-  const updateFirestoreData = async (updatedData) => {
-    if (!user) return;
-    if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) return;
-
-    const selectionDocRef = doc(
-      collection(doc(collection(db, "users"), user.uid), "userData"),
-      "selectionData"
-    );
-    try {
-      await setDoc(selectionDocRef, updatedData, { merge: true });
-      setLastSavedData(updatedData);
-      console.log("Firestore dynamic data updated:", updatedData);
-    } catch (error) {
-      console.error("Error updating dynamic data in Firestore:", error);
-    }
-  };
-
-  // Рахуємо прогрес
-  const calculateProgress = (checkboxes, language) => {
-    let totalCheckboxes = 0;
-    let checkedCheckboxes = 0;
-
-    // Отримуємо список документів, включаючи включені опціональні
-    const combinedData = [
-      ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-      ...documentsSecond,
-      ...documentsOptional.filter((doc) => {
-        const docState = checkboxes[doc.id.toString()];
-        return !(docState && docState.hide);
-      }),
-    ];
-
-    combinedData.forEach((item) => {
-      const documentId = item.id.toString();
-      const docState = checkboxes[documentId] || {};
-
-      let fieldsToCheck = [
-        "is_exist",
-        "notary",
-        "translation",
-        "ready_copies",
-        "sent",
-        ...(category === "EU" ? [] : ["apostile"]),
-      ];
-
-      // Якщо документ має особливі умови (наприклад, два чекбокси), визначте це тут
-      const isSpecialDocument = item.id === 17; // ROV-17 має id 17
-      if (isSpecialDocument) {
-        // Визначаємо окремі поля для ROV-17
-        fieldsToCheck = ["is_exist", "sent"]; // Замініть на реальні назви полів для ROV-17
-      }
-
-      fieldsToCheck.forEach((field) => {
-        let fieldValue = item[field];
-
-        // Якщо fieldValue є об'єктом, витягуємо значення для поточної мови
-        if (typeof fieldValue === "object" && fieldValue !== null) {
-          fieldValue = fieldValue[language] || fieldValue["en"] || "";
-        }
-
-        // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
-        const notNeeded = notNeededText[language] || notNeededText["en"] || "";
-
-        if (fieldValue !== undefined && fieldValue !== notNeeded) {
-          totalCheckboxes++;
-          if (docState[field] === true) {
-            // Якщо поле потрібно і чекбокс відмічений
-            checkedCheckboxes++;
-            console.log(`Field ${field} is needed and checked.`);
-          } else {
-            console.log(`Field ${field} is needed but not checked.`);
-          }
-        } else if (fieldValue === notNeeded) {
-          console.log(
-            `Field ${field} is marked as not needed and excluded from progress.`
-          );
-        }
-      });
-
-      // Якщо документ має спеціальні умови для прогресу
-      if (isSpecialDocument) {
-        // Немає додаткових полів для ROV-17, тому можна залишити порожнім або додати специфічну логіку
+        })
+          .then(() => {
+            setDynamicData({
+              checkboxes: initialCheckboxes,
+              progress: 0,
+            });
+          })
+          .catch((error) => {
+            console.error("Error initializing selectionData:", error);
+          });
       }
     });
 
-    console.log(
-      `Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`
+    return unsubscribe; // Повертаємо функцію відписки
+  }, [user]);
+
+  // Завантажуємо educationRegion з Firestore за допомогою onSnapshot для data
+  const fetchEducationRegionFromFirestore = useCallback(() => {
+    if (!user) return;
+
+    const dataDocRef = doc(
+      collection(doc(collection(db, "users"), user.uid), "userData"),
+      "data"
     );
 
-    return totalCheckboxes === 0
-      ? 0
-      : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
-  };
+    const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        console.log("Fetched educationRegion from Firestore:", data);
 
-  useEffect(() => {
-    fetchDynamicDataFromFirestore();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        const fetchedCategory = data.educationRegion;
+        console.log("Fetched educationRegion:", fetchedCategory);
+        if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
+          setCategory(fetchedCategory);
+        } else {
+          // Обробка випадку, коли educationRegion відсутній або некоректний
+          console.warn(
+            "Invalid or missing educationRegion. Defaulting to Non-EU."
+          );
+          setCategory("Non-EU"); // Встановлюємо значення за замовчуванням
+        }
+      } else {
+        // Ініціалізація data документу, якщо він відсутній
+        setDoc(dataDocRef, {
+          educationRegion: "Non-EU", // Встановлюємо значення за замовчуванням
+        })
+          .then(() => {
+            setCategory("Non-EU");
+          })
+          .catch((error) => {
+            console.error("Error initializing data document:", error);
+          });
+      }
+    });
+
+    return unsubscribe; // Повертаємо функцію відписки
   }, [user]);
 
   useEffect(() => {
-    const newProgress = calculateProgress(dynamicData.checkboxes, language);
-    setProgress(newProgress);
-  }, [dynamicData.checkboxes, category, language]);
+    const unsubscribeSelection = fetchSelectionDataFromFirestore();
+    const unsubscribeData = fetchEducationRegionFromFirestore();
+
+    return () => {
+      if (typeof unsubscribeSelection === "function") {
+        unsubscribeSelection();
+      }
+      if (typeof unsubscribeData === "function") {
+        unsubscribeData();
+      }
+    };
+  }, [fetchSelectionDataFromFirestore, fetchEducationRegionFromFirestore]);
+
+  // Рахуємо прогрес
+  const calculateProgress = useCallback(
+    (checkboxes, language) => {
+      let totalCheckboxes = 0;
+      let checkedCheckboxes = 0;
+
+      // Отримуємо список документів, включаючи включені опціональні
+      const combinedData = [
+        ...(category === "Non-EU" ? documentsNonEU : documentsEU),
+        ...documentsSecond,
+        ...documentsOptional.filter((doc) => {
+          const docState = checkboxes[doc.id.toString()];
+          return !(docState && docState.hide);
+        }),
+      ];
+
+      combinedData.forEach((item) => {
+        const documentId = item.id.toString();
+        const docState = checkboxes[documentId] || {};
+
+        let fieldsToCheck = [
+          "is_exist",
+          "notary",
+          "translation",
+          "ready_copies",
+          "sent",
+          ...(category === "EU" ? [] : ["apostile"]),
+        ];
+
+        // Якщо документ має особливі умови (наприклад, два чекбокси), визначте це тут
+        const isSpecialDocument = item.id === 17; // ROV-17 має id 17
+        if (isSpecialDocument) {
+          // Визначаємо окремі поля для ROV-17
+          fieldsToCheck = ["is_exist", "sent"]; // Замініть на реальні назви полів для ROV-17
+        }
+
+        fieldsToCheck.forEach((field) => {
+          let fieldValue = item[field];
+
+          // Якщо fieldValue є об'єктом, витягуємо значення для поточної мови
+          if (typeof fieldValue === "object" && fieldValue !== null) {
+            fieldValue = fieldValue[language] || fieldValue["de"] || "";
+          }
+
+          // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
+          const notNeeded = notNeededText[language] || notNeededText["de"] || "";
+
+          if (fieldValue !== undefined && fieldValue !== notNeeded) {
+            totalCheckboxes++;
+            if (docState[field] === true) {
+              // Якщо поле потрібно і чекбокс відмічений
+              checkedCheckboxes++;
+              console.log(`Field ${field} is needed and checked.`);
+            } else {
+              console.log(`Field ${field} is needed but not checked.`);
+            }
+          } else if (fieldValue === notNeeded) {
+            console.log(
+              `Field ${field} is marked as not needed and excluded from progress.`
+            );
+          }
+        });
+
+        // Якщо документ має спеціальні умови для прогресу
+        if (isSpecialDocument) {
+          // Немає додаткових полів для ROV-17, тому можна залишити порожнім або додати специфічну логіку
+        }
+      });
+
+      console.log(
+        `Total Checkboxes: ${totalCheckboxes}, Checked Checkboxes: ${checkedCheckboxes}`
+      );
+
+      return totalCheckboxes === 0
+        ? 0
+        : Math.round((checkedCheckboxes / totalCheckboxes) * 100);
+    },
+    [category]
+  );
 
   useEffect(() => {
-    const updatedData = {
-      checkboxes: dynamicData.checkboxes,
-      progress: progress,
-    };
-    updateFirestoreData(updatedData);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dynamicData.checkboxes, progress]);
+    if (category) {
+      const newProgress = calculateProgress(dynamicData.checkboxes, language);
+      setProgress(newProgress);
+    }
+  }, [dynamicData.checkboxes, category, language, calculateProgress]);
 
-  // Новий useEffect для управління displayedProgress з флагом
+  // Оновлюємо Firestore з checkboxes та progress, не чіпаючи educationRegion
+  const updateFirestoreData = useCallback(
+    async (updatedData) => {
+      if (!user) return;
+      if (JSON.stringify(lastSavedData) === JSON.stringify(updatedData)) return;
+
+      const selectionDocRef = doc(
+        collection(doc(collection(db, "users"), user.uid), "userData"),
+        "selectionData"
+      );
+      try {
+        await setDoc(selectionDocRef, updatedData, { merge: true });
+        setLastSavedData(updatedData);
+        console.log("Firestore dynamic data updated:", updatedData);
+      } catch (error) {
+        console.error("Error updating dynamic data in Firestore:", error);
+      }
+    },
+    [user, lastSavedData]
+  );
+
+  // Дебаунсинг оновлень до Firebase
+  useEffect(() => {
+    // Очистити попередній таймер
+    if (debounceTimer.current) {
+      clearTimeout(debounceTimer.current);
+    }
+
+    // Встановити новий таймер
+    debounceTimer.current = setTimeout(() => {
+      const updatedData = {
+        checkboxes: dynamicData.checkboxes,
+        progress: progress,
+        // educationRegion: category, // Видалено: не записуємо educationRegion назад до Firestore
+      };
+      updateFirestoreData(updatedData);
+    }, 1000); // 1000 мс = 1 секунда
+
+    return () => {
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current);
+      }
+    };
+  }, [dynamicData.checkboxes, progress, updateFirestoreData]);
+
+  // Додати обробник beforeunload для збереження даних при виході
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      const hasUnsavedChanges = Object.keys(dynamicData.checkboxes).some(
+        (docId) => {
+          return JSON.stringify(dynamicData.checkboxes[docId]) !== JSON.stringify(lastSavedData.checkboxes[docId]);
+        }
+      );
+
+      if (hasUnsavedChanges) {
+        // Очистити таймер та зберегти дані негайно
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current);
+        }
+
+        const updatedData = {
+          checkboxes: dynamicData.checkboxes,
+          progress: progress,
+          // educationRegion: category, // Видалено: не записуємо educationRegion назад до Firestore
+        };
+        updateFirestoreData(updatedData);
+
+        // Стандартний попереджувальний вміст
+        event.preventDefault();
+        event.returnValue = ""; // Для деяких браузерів
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [dynamicData.checkboxes, progress, updateFirestoreData, category, lastSavedData.checkboxes]);
+
+  // Управління displayedProgress з флагом
   useEffect(() => {
     if (isInitialLoad.current) {
       // Початкове завантаження: анімуємо від 0 до фактичного прогресу
@@ -267,102 +417,54 @@ const DocumentsPage = () => {
   }, [progress]);
 
   const getMessage = (progressValue) => {
-    if (progressValue < 20) return messages[language].lessThan20;
-    if (progressValue < 50) return messages[language].between20And50;
-    if (progressValue < 80) return messages[language].between50And80;
-    return messages[language].greaterThan80;
+    if (progressValue < 20) return messages.de.authRequiredMessage;
+    if (progressValue < 50) return messages.de.authRequiredMessage; // Оновіть за потребою
+    if (progressValue < 80) return messages.de.authRequiredMessage; // Оновіть за потребою
+    return messages.de.authRequiredMessage; // Оновіть за потребою
   };
 
   const mainTitle = titles?.main?.[language] || "Main Documents";
   const optionalTitle = titles?.optional?.[language] || "Optional Documents";
 
-  // Функція для отримання включених опціональних документів
-  const getIncludedOptionalDocuments = () => {
-    return documentsOptional.filter((doc) => {
-      return !dynamicData.checkboxes[doc.id.toString()]?.hide;
-    });
-  };
-
-  // Функція для отримання виключених опціональних документів
-  const getExcludedOptionalDocuments = () => {
-    return documentsOptional.filter((doc) => {
-      return dynamicData.checkboxes[doc.id.toString()]?.hide;
-    });
-  };
-
-  // При кліку на чекбокс
-  const updateCheckboxState = (checkboxes, documentId, fieldName) => {
-    const currentDoc = checkboxes[documentId] || {};
-    return {
-      ...checkboxes,
-      [documentId]: {
-        ...currentDoc,
-        [fieldName]: !currentDoc[fieldName],
-      },
-    };
-  };
-  
-  const handleCheckboxChange = (documentId, fieldName) => {
-    setDynamicData((prevData) => {
-      const updatedCheckboxes = {
-        ...prevData.checkboxes,
-        [documentId]: {
-          ...prevData.checkboxes[documentId],
-          [fieldName]: !prevData.checkboxes[documentId]?.[fieldName],
-        },
-      };
-  
-      console.log(`Тогл документа ${documentId}, поле: ${fieldName}, новий стан:`, updatedCheckboxes[documentId]);
-  
-      return {
-        ...prevData,
-        checkboxes: updatedCheckboxes,
-      };
-    });
-  };
-
-  // Ініціалізація опціональних документів як виключених
-  useEffect(() => {
-    if (documentsOptional.length > 0 && user) {
-      const initialCheckboxes = {};
-      documentsOptional.forEach((doc) => {
-        if (!(doc.id.toString() in dynamicData.checkboxes)) {
-          initialCheckboxes[doc.id.toString()] = { hide: true };
-          // Якщо потрібно встановити всі поля як "not needed", встановіть відповідні значення
-          // Наприклад:
-          // initialCheckboxes[doc.id.toString()] = { is_exist: false, notary: false, ... };
-        }
-      });
-
-      if (Object.keys(initialCheckboxes).length > 0) {
-        setDynamicData((prevData) => ({
-          ...prevData,
-          checkboxes: {
-            ...prevData.checkboxes,
-            ...initialCheckboxes,
-          },
-        }));
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [documentsOptional, user]);
-
   // Фільтрація колонок для опціональної таблиці
-  const getOptionalColumns = () => {
+  const getOptionalColumns = useCallback(() => {
     // Визначте список колонок, які не повинні відображатися в опціональній таблиці
     const excludedColumns = ["is_exist", "apostile"]; // Додайте інші, якщо потрібно
 
     return columnsFirst.filter((col) => !excludedColumns.includes(col.name));
-  };
+  }, [columnsFirst]);
+
+  // Функція для отримання включених опціональних документів
+  const includedOptionalDocuments = useMemo(() => {
+    return documentsOptional.filter((doc) => {
+      return !dynamicData.checkboxes[doc.id.toString()]?.hide;
+    });
+  }, [documentsOptional, dynamicData.checkboxes]);
+
+  // Функція для отримання виключених опціональних документів
+  const excludedOptionalDocuments = useMemo(() => {
+    return documentsOptional.filter((doc) => {
+      return dynamicData.checkboxes[doc.id.toString()]?.hide;
+    });
+  }, [documentsOptional, dynamicData.checkboxes]);
+
+  // Обгортка для handleCheckboxChange
+  const handleCheckboxChangeWrapper = useCallback(
+    (documentId, fieldName) => {
+      if (!user) {
+        handleShowAuthModal();
+      } else {
+        handleCheckboxChange(documentId, fieldName);
+      }
+    },
+    [user, handleCheckboxChange]
+  );
 
   return (
     <MainLayout>
       <div className="page page1 containerBigger mt-20">
         <div className="main_menu__content">
           <div className={styles.table_wrapper}>
-            {/* Переключатель категорії */}
-            <CategoryToggle category={category} setCategory={setCategory} />
-
             {/* Прогрес-бар */}
             <ProgressBarWithTooltip
               progress={displayedProgress} // Використовуйте displayedProgress
@@ -370,7 +472,7 @@ const DocumentsPage = () => {
             />
 
             <div ref={combinedRef}>
-              {selectedRegion ? (
+              {selectedRegion && category ? (
                 <>
                   {/* Основні документи + Включені опціональні документи */}
                   <ResponsiveTable
@@ -378,16 +480,16 @@ const DocumentsPage = () => {
                     columns={columnsFirst}
                     data={[
                       ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-                      ...getIncludedOptionalDocuments(), // Додаємо включені опціональні документи
+                      ...includedOptionalDocuments, // Додаємо включені опціональні документи
                     ]}
                     setTableData={() => {}}
                     selectedLanguage={language}
                     selectedRegion={selectedRegion}
                     category={category}
                     tableFor="main"
-                    disableCheckboxBasedOnName={false}
+                    disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
                     checkboxes={dynamicData.checkboxes}
-                    handleCheckboxChange={handleCheckboxChange}
+                    handleCheckboxChange={handleCheckboxChangeWrapper}
                     customClass={
                       category === "Non-EU" ? styles.mainTable : styles.euTable
                     }
@@ -395,62 +497,132 @@ const DocumentsPage = () => {
                   />
 
                   {/* Друга таблиця */}
-                  <ResponsiveTable
-                    title={null}
-                    columns={columnsSecond}
-                    data={documentsSecond}
-                    setTableData={() => {}}
-                    selectedLanguage={language}
-                    selectedRegion={selectedRegion}
-                    category={category}
-                    tableFor="second"
-                    disableCheckboxBasedOnName={false}
-                    checkboxes={dynamicData.checkboxes}
-                    handleCheckboxChange={handleCheckboxChange}
-                    customClass={styles.secondTable}
-                    isMobile={isMobile} // Передаємо isMobile
-                  />
+                  {user && ( // Рендеримо другу таблицю лише для авторизованих користувачів
+                    <ResponsiveTable
+                      title={null}
+                      columns={columnsSecond}
+                      data={documentsSecond}
+                      setTableData={() => {}}
+                      selectedLanguage={language}
+                      selectedRegion={selectedRegion}
+                      category={category}
+                      tableFor="second"
+                      disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
+                      checkboxes={dynamicData.checkboxes}
+                      handleCheckboxChange={handleCheckboxChangeWrapper}
+                      customClass={styles.secondTable}
+                      isMobile={isMobile} // Передаємо isMobile
+                    />
+                  )}
 
                   {/* Відображення виключених опціональних документів як плиток */}
-                  <div className={styles.tileSection}>
-                    <h2 className={styles.optionalTitleHeader}>
-                      {optionalTitle}
-                    </h2>
-                    <div className={styles.tileContainer}>
-                      {getExcludedOptionalDocuments().map((row) => (
-                        <Tile
-                        key={`tile-${row.id}`}
-                        row={row}
-                        columns={getOptionalColumns()}
-                        category={category}
-                        selectedLanguage={language}
-                        selectedRegion={selectedRegion}
-                        tableFor="optional"
-                        checkboxes={dynamicData.checkboxes}
-                        handleCheckboxChange={handleCheckboxChange}
-                        disableCheckboxBasedOnName={false}
-                        isMobile={isMobile}
-                      />
-                      ))}
+                  {user && ( // Рендеримо плитки лише для авторизованих користувачів
+                    <div className={styles.tileSection}>
+                      <h2 className={styles.optionalTitleHeader}>
+                        {optionalTitle}
+                      </h2>
+                      <div className={styles.tileContainer}>
+                        {excludedOptionalDocuments.map((row) => (
+                          <Tile
+                            key={`tile-${row.id}`}
+                            row={row}
+                            columns={getOptionalColumns()}
+                            category={category}
+                            selectedLanguage={language}
+                            selectedRegion={selectedRegion}
+                            tableFor="optional"
+                            checkboxes={dynamicData.checkboxes}
+                            handleCheckboxChange={handleCheckboxChangeWrapper}
+                            disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
+                            isMobile={isMobile}
+                            showCheckboxOnMobile={
+                              isMobile &&
+                              row.optional &&
+                              !dynamicData.checkboxes[row.id.toString()]?.hide
+                            }
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </>
               ) : (
-                <div className={styles.loadingMessage}>
-                  Завантаження регіону...
-                </div>
+                // Перевірка, чи користувач авторизований, для відображення відповідного повідомлення
+                !user ? (
+                  <>
+                    {/* Проста таблиця для неавторизованих користувачів */}
+                    <ResponsiveTable
+                      title={mainTitle}
+                      columns={columnsFirst}
+                      data={documentsNonEU} 
+                      // Використовуємо documentsNonEU для неавторизованих
+                      setTableData={() => {}}
+                      selectedLanguage={language}
+                      selectedRegion={selectedRegion}
+                      category={"Non-EU"} 
+                      // Встановлюємо категорію на Non-EU
+                      tableFor="main"
+                      disableCheckboxBasedOnName={!user}
+                      checkboxes={dynamicData.checkboxes}
+                      handleCheckboxChange={handleCheckboxChangeWrapper}
+                      customClass={styles.mainTable}
+                      isMobile={isMobile}
+                    />
+
+                    {/* Повідомлення для неавторизованих користувачів */}
+                    <div className={styles.noAccessMessage}>
+                      <p>Bitte melden Sie sich an oder registrieren Sie sich, um mit den Dokumenten zu interagieren.</p>
+                    </div>
+                  </>
+                ) : (
+                  <div className={styles.loadingMessage}>
+                    Daten werden geladen...
+                  </div>
+                )
               )}
             </div>
           </div>
 
-          <button
-            className={styles.backButton}
-            onClick={() => handleChangePage("/main_menu")}
-          >
-            &#8592; 
-          </button>
+          {/* Приховані або відключені лінки для неавторизованих користувачів */}
+          {user && (
+            <button
+              className={styles.backButton}
+              onClick={() => handleChangePage("/main_menu")}
+            >
+              &#8592;
+            </button>
+          )}
         </div>
       </div>
+
+      {/* Модальне вікно для авторизації */}
+      <Modal
+        isOpen={showAuthModal}
+        onRequestClose={handleCloseAuthModal}
+        contentLabel="Authentifizierung erforderlich"
+        className={styles.modal}
+        overlayClassName={styles.modalOverlay}
+      >
+        {/* Хрестик для закриття модального вікна */}
+        <button
+          className={styles.modalCloseButton}
+          onClick={handleCloseAuthModal}
+          aria-label="Close modal"
+        >
+          <AiOutlineClose />
+        </button>
+        <h2>Authentifizierung erforderlich</h2>
+        <p>Bitte melden Sie sich an oder registrieren Sie sich, um mit den Dokumenten zu interagieren.</p>
+        <button
+          className={styles.authorizeButton}
+          onClick={() => {
+            handleCloseAuthModal();
+            navigate(pathList.auth.path); // Використання navigate для перенаправлення
+          }}
+        >
+          Anmelden
+        </button>
+      </Modal>
     </MainLayout>
   );
 };

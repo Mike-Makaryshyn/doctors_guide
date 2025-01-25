@@ -9,6 +9,7 @@ $danger-color: #f44336;
 
 // Головний контейнер таблиці
 .tableContainer {
+  position: relative;
   width: 100%;
   margin-bottom: 0px;
   color: #ffffff;
@@ -24,13 +25,14 @@ $danger-color: #f44336;
 // Стилі для таблиці
 .table {
   width: 100%;
+  border-radius: 20px 20px 0 0;
   border-collapse: separate; // Використовуємо border-spacing для відступів між рядками
   border-spacing: 0; // Відсутність відступів між клітинками
   table-layout: fixed; // Фіксована розкладка таблиці
-  border-radius: 10px; // Заокруглення кутів таблиці
+ 
   overflow: hidden;
   border-spacing: 0; /* Убираем промежутки между строками */
-  margin-bottom: 0; /* Убираем нижний отступ */
+  margin-bottom: 1px; /* Убираем нижний отступ */
 
   thead {
     background-color: #e0e0e0; // Темно-сірий фон для заголовка
@@ -107,6 +109,9 @@ $danger-color: #f44336;
 }
 
 .secondTable {
+  position: relative; 
+  z-index: 5;
+  margin-top: -1px;
   thead {
     display: none;
     background-color: #e0e0e0; // Темно-сірий фон для заголовків
@@ -114,6 +119,7 @@ $danger-color: #f44336;
 
   th:first-child,
   td:first-child {
+    
     width: 37%;  /* Поточна ширина */
     text-align: left;
   }
