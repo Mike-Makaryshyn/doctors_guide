@@ -57,29 +57,37 @@ const BodyItem = React.memo(
           console.warn("No region selected.");
           return (
             <div className={styles.linkWrapper}>
-              <a href="/lands" rel="noopener noreferrer" className={styles.link}>
+              <a
+                href="/lands"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
                 Select a region
               </a>
             </div>
           );
         }
-    
+
         console.log(
           `Processing doc ID ${row.id}, region "${selectedRegion}", category "${category}"`
         );
-    
+
         const requiredFor = Array.isArray(row.requiredFor)
           ? row.requiredFor.map((item) => item.trim().toLowerCase())
           : ["both"];
         const categoryLower = category.trim().toLowerCase();
         const cleanedSelectedRegion = selectedRegion.trim().toLowerCase();
-    
-        if (requiredFor.includes("both") || requiredFor.includes(categoryLower)) {
+
+        if (
+          requiredFor.includes("both") ||
+          requiredFor.includes(categoryLower)
+        ) {
           if (row.links[category]) {
             const regionalLink = row.links[category].find(
-              (link) => link.landName.trim().toLowerCase() === cleanedSelectedRegion
+              (link) =>
+                link.landName.trim().toLowerCase() === cleanedSelectedRegion
             );
-    
+
             if (regionalLink) {
               return (
                 <div className={styles.linkWrapper}>
@@ -97,7 +105,7 @@ const BodyItem = React.memo(
               const generalLink = row.links[category].find(
                 (link) => link.landName.trim().toLowerCase() === "general"
               );
-    
+
               if (generalLink) {
                 return (
                   <div className={styles.linkWrapper}>
@@ -114,7 +122,9 @@ const BodyItem = React.memo(
               } else {
                 return (
                   <div className={styles.linkWrapper}>
-                    <span className={styles.warning}>No 'General' link found.</span>
+                    <span className={styles.warning}>
+                      No 'General' link found.
+                    </span>
                   </div>
                 );
               }
@@ -131,7 +141,9 @@ const BodyItem = React.memo(
         } else {
           return (
             <div className={styles.linkWrapper}>
-              <span className={styles.info}>Not required for this category.</span>
+              <span className={styles.info}>
+                Not required for this category.
+              </span>
             </div>
           );
         }
@@ -299,36 +311,45 @@ const BodyItem = React.memo(
                 )}
 
               {/* Якщо документ опціональний - відображати "Included/Excluded" */}
-              {row?.optional && column?.name === "category" && !checkboxes[row.id.toString()]?.hide && (
-  <div className={cn(styles.optionalCheckboxWrapper, "optional_checkbox_wrapper")}>
-    <button
-      className={styles.crossButton}
-      onClick={() => onHiddenChange()}
-      aria-label="Видалити документ"
-    >
-      ×
-    </button>
-  </div>
-)}
+              {row?.optional &&
+                column?.name === "category" &&
+                !checkboxes[row.id.toString()]?.hide && (
+                  <div
+                    className={cn(
+                      styles.optionalCheckboxWrapper,
+                      "optional_checkbox_wrapper"
+                    )}
+                  >
+                    <button
+                      className={styles.crossButtonbody}
+                      onClick={() => onHiddenChange()}
+                      aria-label="Видалити документ"
+                    >
+                      ×
+                    </button>
+                  </div>
+                )}
             </td>
           );
         })}
 
         {/* Додамо кнопку закриття для мобільних пристроїв */}
-        {isMobile && tableFor === "main" && checkboxes[row.id.toString()]?.hide === false && (
-          <td className={styles.tableCell}>
-            <button
-              className={styles.closeButton}
-              onClick={(e) => {
-                e.stopPropagation();
-                onHiddenChange(); // Виключає документ
-              }}
-              aria-label="Виключити документ"
-            >
-              ×
-            </button>
-          </td>
-        )}
+        {isMobile &&
+          tableFor === "main" &&
+          checkboxes[row.id.toString()]?.hide === false && (
+            <td className={styles.tableCell}>
+              <button
+                className={styles.closeButton}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onHiddenChange(); // Виключає документ
+                }}
+                aria-label="Виключити документ"
+              >
+                ×
+              </button>
+            </td>
+          )}
       </tr>
     );
   }
