@@ -74,14 +74,9 @@
     cursor: pointer; /* Зміна курсора на pointer */
     transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 
-    &:hover {
-      transform: scale(1.2); /* Збільшення при наведенні */
-      color: darkred; /* Зміна кольору при наведенні */
-    }
+  
 
-    &:focus {
-      outline: none; /* Видалення обводки при фокусуванні */
-    }
+    
   }
   .checkboxBox {
     display: flex;
