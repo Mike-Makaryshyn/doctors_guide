@@ -291,29 +291,29 @@ const DocumentsPage = () => {
   };
 
   // При кліку на чекбокс
+  const updateCheckboxState = (checkboxes, documentId, fieldName) => {
+    const currentDoc = checkboxes[documentId] || {};
+    return {
+      ...checkboxes,
+      [documentId]: {
+        ...currentDoc,
+        [fieldName]: !currentDoc[fieldName],
+      },
+    };
+  };
+  
   const handleCheckboxChange = (documentId, fieldName) => {
-    console.log(
-      `Checkbox clicked: documentId=${documentId}, fieldName=${fieldName}`
-    );
     setDynamicData((prevData) => {
-      const currentDoc = prevData.checkboxes[documentId] || {};
-      let newDoc;
-      if (fieldName === "hide") {
-        newDoc = {
-          ...currentDoc,
-          [fieldName]: !currentDoc[fieldName],
-        };
-      } else {
-        newDoc = {
-          ...currentDoc,
-          [fieldName]: !currentDoc[fieldName],
-        };
-      }
       const updatedCheckboxes = {
         ...prevData.checkboxes,
-        [documentId]: newDoc,
+        [documentId]: {
+          ...prevData.checkboxes[documentId],
+          [fieldName]: !prevData.checkboxes[documentId]?.[fieldName],
+        },
       };
-      console.log("Updated checkboxes:", updatedCheckboxes);
+  
+      console.log(`Тогл документа ${documentId}, поле: ${fieldName}, новий стан:`, updatedCheckboxes[documentId]);
+  
       return {
         ...prevData,
         checkboxes: updatedCheckboxes,
@@ -419,18 +419,18 @@ const DocumentsPage = () => {
                     <div className={styles.tileContainer}>
                       {getExcludedOptionalDocuments().map((row) => (
                         <Tile
-                          key={`tile-${row.id}`}
-                          row={row}
-                          columns={getOptionalColumns()}
-                          category={category}
-                          selectedLanguage={language}
-                          selectedRegion={selectedRegion}
-                          tableFor="optional"
-                          checkboxes={dynamicData.checkboxes}
-                          handleCheckboxChange={handleCheckboxChange}
-                          disableCheckboxBasedOnName={false}
-                          isMobile={isMobile} // Передаємо isMobile
-                        />
+                        key={`tile-${row.id}`}
+                        row={row}
+                        columns={getOptionalColumns()}
+                        category={category}
+                        selectedLanguage={language}
+                        selectedRegion={selectedRegion}
+                        tableFor="optional"
+                        checkboxes={dynamicData.checkboxes}
+                        handleCheckboxChange={handleCheckboxChange}
+                        disableCheckboxBasedOnName={false}
+                        isMobile={isMobile}
+                      />
                       ))}
                     </div>
                   </div>

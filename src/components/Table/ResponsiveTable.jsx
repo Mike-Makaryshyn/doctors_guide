@@ -43,21 +43,26 @@ const ResponsiveTable = ({
       {/* Рендер таблиці або плиток залежно від пристрою */}
       {shouldRenderAsTiles ? (
         <div className={styles.tileContainer}>
-          {data.map((row) => (
-           <Tile
-           key={`tile-${row.id}`}
-           row={row}
-           columns={columns}
-           category={category}
-           selectedLanguage={selectedLanguage}
-           selectedRegion={selectedRegion}
-           tableFor={tableFor}
-           checkboxes={checkboxes}
-           handleCheckboxChange={handleCheckboxChange}
-           disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-           isMobile={isMobile} // Передаємо isMobile
-         />
-          ))}
+          {data.map((row) => {
+  const isIncluded = !checkboxes[row.id]?.hide;
+  return (
+    <Tile
+    key={`tile-${row.id}`}
+    row={row}
+    columns={columns}
+    category={category}
+    selectedLanguage={selectedLanguage}
+    selectedRegion={selectedRegion}
+    tableFor={tableFor}
+    checkboxes={checkboxes}
+    handleCheckboxChange={handleCheckboxChange}
+    disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+    isMobile={isMobile}
+    isIncluded={!checkboxes[row.id]?.hide}
+    showCheckboxOnMobile={isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide}
+  />
+  );
+})}
         </div>
       ) : (
         <table

@@ -175,7 +175,7 @@ const BodyItem = React.memo(
     /** Обробник кліку по рядку */
     const handleRowClick = () => {
       if (isOptional && checkboxes[row.id.toString()]?.hide) {
-        onHiddenChange(); // Включає рядок
+        handleCheckboxChange(row.id.toString(), "hide"); // Включаємо документ
       }
     };
 

@@ -18,13 +18,16 @@ const Tile = ({
   checkboxes,
   handleCheckboxChange,
   disableCheckboxBasedOnName,
+  showCheckboxOnMobile, // Додано новий пропс
   isMobile, // Новий проп
 }) => {
   const isOptional = tableFor === "optional";
   const hidden = isOptional ? checkboxes[row.id]?.hide : false;
 
   useEffect(() => {
-    console.log(`Tile ID: ${row.id}, isOptional: ${isOptional}, hidden: ${hidden}, isMobile: ${isMobile}`);
+    console.log(
+      `Tile ID: ${row.id}, isOptional: ${isOptional}, hidden: ${hidden}, isMobile: ${isMobile}`
+    );
   }, [isOptional, hidden, row.id, isMobile]);
 
   const relevantColumns = columns.filter((col) => {
@@ -44,6 +47,10 @@ const Tile = ({
 
   const [showCompletion, setShowCompletion] = useState(false);
 
+  useEffect(() => {
+    console.log("Mode switched, isMobile:", isMobile);
+    // Переперевірка стану даних
+ }, [isMobile]);
   useEffect(() => {
     if (allChecked && !hidden) {
       setShowCompletion(true);
@@ -68,6 +75,7 @@ const Tile = ({
   };
 
   const onHiddenChange = () => {
+    console.log(`Toggling hide for document ${row.id}`);
     handleCheckboxChange(row.id.toString(), "hide");
   };
 
@@ -105,15 +113,13 @@ const Tile = ({
           if (row.links[category]) {
             const regionalLink = row.links[category].find(
               (link) =>
-                link.landName.trim().toLowerCase() ===
-                cleanedSelectedRegion
+                link.landName.trim().toLowerCase() === cleanedSelectedRegion
             );
 
             linkToOpen = regionalLink
               ? regionalLink.link
               : row.links[category].find(
-                  (link) =>
-                    link.landName.trim().toLowerCase() === "general"
+                  (link) => link.landName.trim().toLowerCase() === "general"
                 )?.link;
           }
         }
@@ -128,7 +134,10 @@ const Tile = ({
           className={cn(styles.linkContainer, {
             [styles.linkContainerActive]: allChecked,
           })}
-          onClick={() => window.open(linkToOpen, "_blank")}
+          onClick={(e) => {
+            e.stopPropagation();
+            window.open(linkToOpen, "_blank");
+          }}
         >
           <span className={styles.linkLabel}>{linkText}</span>
         </div>
@@ -146,18 +155,22 @@ const Tile = ({
             row.name?.[selectedLanguage] ||
             "N/A"}
         </div>
-        {/* Рендеримо хрестик для виключення на мобільних, якщо він працює */}
-        {/* Тимчасово повертаємо чекбокс */}
-        {isMobile && isOptional && !hidden && (
-          <div className={styles.checkboxBox}>
-            <MobileCheckbox
-              id={`checkbox-exclude-${row.id}`}
-              checked={checkboxes[row.id]?.hide || false}
-              onChange={onHiddenChange}
-              label="Excluded" // Можна локалізувати
-            />
-          </div>
-        )}
+        {showCheckboxOnMobile && (
+  <div className={styles.mobileCheckboxWrapper}>
+    <button
+      className={styles.crossButton}
+      onClick={(e) => {
+        e.stopPropagation();
+        handleCheckboxChange(row.id.toString(), "hide");
+      }}
+      aria-label={checkboxes[row.id]?.hide ? "Додати документ" : "Видалити документ"}
+    >
+      {checkboxes[row.id]?.hide ? "➕" : "❌"}
+    </button>
+  </div>
+)}
+     
+
         {/* Після вирішення проблеми з хрестиком, можна замінити чекбокс на хрестик */}
         {/* 
         {isMobile && isOptional && !hidden && (
@@ -180,8 +193,16 @@ const Tile = ({
           {relevantColumns.map((col) => {
             if (col.name === "links") {
               return (
-                <div className={styles.checkboxBox} key={`link-${row.id}-${col.name}`}>
-                  {getLinkElement(row, selectedRegion, category, selectedLanguage)}
+                <div
+                  className={styles.checkboxBox}
+                  key={`link-${row.id}-${col.name}`}
+                >
+                  {getLinkElement(
+                    row,
+                    selectedRegion,
+                    category,
+                    selectedLanguage
+                  )}
                 </div>
               );
             }
@@ -214,9 +235,11 @@ const Tile = ({
           })}
           {/* Додати відображення посилання тільки під колонкою 'notary' */}
           {row?.id === 17 && !checkboxes[row.id.toString()]?.hide && (
-            <div className={cn(styles.linkContainer, {
-              [styles.linkContainerActive]: allChecked,
-            })}>
+            <div
+              className={cn(styles.linkContainer, {
+                [styles.linkContainerActive]: allChecked,
+              })}
+            >
               <a
                 className={styles.link}
                 target="_blank"
@@ -253,6 +276,7 @@ Tile.propTypes = {
   handleCheckboxChange: PropTypes.func.isRequired,
   disableCheckboxBasedOnName: PropTypes.bool.isRequired,
   isMobile: PropTypes.bool.isRequired, // Новий PropType
+  showCheckboxOnMobile: PropTypes.bool.isRequired, // Додаємо новий PropType
 };
 
 export default Tile;
