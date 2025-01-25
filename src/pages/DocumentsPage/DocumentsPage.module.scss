@@ -25,16 +25,56 @@
 
   // Кнопка «Назад»
   .backButton {
-    background-color: #fff;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 4px;
-    padding: 8px 16px;
+    margin-top: auto;
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 20px;
+    bottom: 0;
+    
+    background-color: #4dae50; /* Установленный цвет фона */
+    border: none;
+    color: white; /* Белый цвет текста */
     cursor: pointer;
-    transition: background-color 0.3s;
-
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    padding: 10px; /* Внутренний отступ */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  
     &:hover {
-      background-color: #f1f1f1;
+      background-color: darken(#4dae50, 10%); /* Затемнение при наведении */
+    }
+  
+    &:active {
+      background-color: lighten(#4dae50, 10%); /* Осветление при нажатии */
+    }
+  }
+  
+  /* Медиа-запрос для адаптации на мобильных устройствах */
+  @media (max-width: 768px) {
+    .backButton {
+      width: 30px;
+      height: 24px;
+      left: 10px;
+      bottom: 5px;
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .backButton {
+      width: 28px;
+      height: 22px;
+      left: 5px;
+      bottom: 5px;
+      font-size: 12px;
+      padding: 6px;
     }
   }
 
@@ -105,7 +145,7 @@
   .optionalTitleHeader {
     margin-bottom: 20px; /* Відступ між заголовком і плитками */
     font-size: 1.5rem; /* Розмір шрифту заголовка */
-    color: $primary-color; /* Змінено на primary color для кращої видимості */
+    color: #ffffff; /* Змінено на primary color для кращої видимості */
   }
 
   // Загальний стиль для плиток

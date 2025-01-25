@@ -11,7 +11,7 @@ $danger-color: #f44336;
 .tableContainer {
   width: 100%;
   margin-bottom: 20px;
-  color: $primary-color;
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
   border-radius: 10px;
   overflow: hidden;
@@ -30,7 +30,7 @@ $danger-color: #f44336;
   thead {
     background-color: #e0e0e0; // Темно-сірий фон для заголовка
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 400;
     color: $primary-color;
   }
 

@@ -447,7 +447,7 @@ const DocumentsPage = () => {
             className={styles.backButton}
             onClick={() => handleChangePage("/main_menu")}
           >
-            &#8592; Назад
+            &#8592; 
           </button>
         </div>
       </div>
