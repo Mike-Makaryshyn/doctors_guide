@@ -66,9 +66,30 @@ $bg-incomplete: rgba(#ff9800, 0.1);
   height: 16px;
 }
 
-.optionalCheckboxWrapper {
-  margin: 4px 0;
-  text-align: center;
+.optional_checkbox_wrapper {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.crossButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #f44336;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.crossButton:hover,
+.crossButton:focus {
+  color: #f44336; /* Колір не змінюється при наведенні чи фокусі */
+  transform: none; /* Відсутність анімацій */
 }
 
 .linkWrapper {

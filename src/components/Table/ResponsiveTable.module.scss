@@ -10,7 +10,7 @@ $danger-color: #f44336;
 // Головний контейнер таблиці
 .tableContainer {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   border-radius: 10px;
@@ -18,6 +18,9 @@ $danger-color: #f44336;
  
 }
 
+.table + .table {
+  margin-top: 0; /* Убираем верхний отступ у следующей таблицы */
+}
 // Стилі для таблиці
 .table {
   width: 100%;
@@ -26,13 +29,16 @@ $danger-color: #f44336;
   table-layout: fixed; // Фіксована розкладка таблиці
   border-radius: 10px; // Заокруглення кутів таблиці
   overflow: hidden;
+  border-spacing: 0; /* Убираем промежутки между строками */
+  margin-bottom: 0; /* Убираем нижний отступ */
 
   thead {
     background-color: #e0e0e0; // Темно-сірий фон для заголовка
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 0,2 rem;
+    font-weight: 200;
     color: $primary-color;
   }
+  
 
   th,
   td {
@@ -48,7 +54,7 @@ $danger-color: #f44336;
 
   th:first-child,
   td:first-child {
-    width: 40% !important; // Збільшена ширина першої колонки
+    width: 35%; // Збільшена ширина першої колонки
     text-align: left;
   }
 
@@ -59,19 +65,19 @@ $danger-color: #f44336;
   }
 
   th:first-child {
-    border-top-left-radius: 10px; // Заокруглення першого верхнього кута
+    border-top-left-radius: 13px; // Заокруглення першого верхнього кута
   }
 
   th:last-child {
-    border-top-right-radius: 10px; // Заокруглення останнього верхнього кута
+    border-top-right-radius: 13px; // Заокруглення останнього верхнього кута
   }
 
   tr:last-child td:first-child {
-    border-bottom-left-radius: 10px; // Заокруглення першого нижнього кута
+    border-bottom-left-radius: 13px; // Заокруглення першого нижнього кута
   }
 
   tr:last-child td:last-child {
-    border-bottom-right-radius: 10px; // Заокруглення останнього нижнього кута
+    border-bottom-right-radius: 13px; // Заокруглення останнього нижнього кута
   }
 
   tbody tr {
@@ -102,24 +108,38 @@ $danger-color: #f44336;
 
 .secondTable {
   thead {
-    background-color: #e0e0e0; // Темно-сірий фон для secondTable
+    display: none;
+    background-color: #e0e0e0; // Темно-сірий фон для заголовків
   }
 
   th:first-child,
   td:first-child {
-    width: 35%; // Збільшено ширину першої колонки
+    width: 37%;  /* Поточна ширина */
     text-align: left;
   }
 
   th:nth-child(2),
   td:nth-child(2) {
     font-weight: normal; // Видалення жирного шрифту у другій колонці
+    padding-right: 100px;
   }
 
   th[data-column="specificColumn"],
   td[data-column="specificColumn"] {
-    width: 20%; // Приклад для додаткової колонки
+    width: 40%; // Приклад для додаткової колонки
   }
+
+  td[data-column="links"] {
+    width: 35%; /* Збільшення ширини */
+    max-width: 600px; /* Обмеження максимальної ширини */
+    text-align: center; /* Вирівнювання контенту */
+    
+  }
+  td[data-column="sent"] {
+    text-align: right;
+    padding-right: 40px;
+  }
+  
 }
 
 // Стилі для плиток

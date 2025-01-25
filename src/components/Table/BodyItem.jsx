@@ -300,25 +300,16 @@ const BodyItem = React.memo(
 
               {/* Якщо документ опціональний - відображати "Included/Excluded" */}
               {row?.optional && column?.name === "category" && !checkboxes[row.id.toString()]?.hide && (
-                <div
-                  className={cn(
-                    styles.optionalCheckboxWrapper,
-                    "optional_checkbox_wrapper"
-                  )}
-                >
-                  <CustomCheckbox
-                    id={`optional-checkbox-${row.id}`}
-                    label={
-                      checkboxes[row.id.toString()]?.hide
-                        ? "Excluded"
-                        : "Included"
-                    }
-                    checked={checkboxes[row.id.toString()]?.hide || false}
-                    onChange={() => onHiddenChange()}
-                    onClick={(e) => e.stopPropagation()} // Зупинка поширення
-                  />
-                </div>
-              )}
+  <div className={cn(styles.optionalCheckboxWrapper, "optional_checkbox_wrapper")}>
+    <button
+      className={styles.crossButton}
+      onClick={() => onHiddenChange()}
+      aria-label="Видалити документ"
+    >
+      ×
+    </button>
+  </div>
+)}
             </td>
           );
         })}
