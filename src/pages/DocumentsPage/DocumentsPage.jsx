@@ -610,12 +610,12 @@ const DocumentsPage = () => {
               </button>
               {/* Додати кнопку друку */}
               <button
-                className={styles.printButton}
-                onClick={handleOpenPDFModal}
-                title="Друкувати PDF"
-              >
-                <FaPrint />
-              </button>
+  className={styles.printButton}
+  onClick={handleOpenPDFModal}
+  title="Друкувати PDF"
+>
+  <FaPrint />
+</button>
             </>
           )}
         </div>

@@ -112,7 +112,7 @@
     right: -27px;
     background: none; /* Відсутність фону */
     border: none; /* Видалення рамки */
-    font-size: 1rem; /* Розмір іконки */
+    font-size: 0,5rem; /* Розмір іконки */
     color: #f44336; /* Червоний колір */
     cursor: pointer; /* Зміна курсора на pointer */
     transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -721,4 +721,10 @@
     100% {
       transform: translate(0px, 0px);
     }
+  }
+  .printButton {
+    @extend .backButton;  // Наслідуємо всі властивості з .backButton
+  
+    left: auto;      // Знімаємо "left", щоб не перекривалася позиція
+    right: 0px;     // Закріплюємо по правому краю
   }

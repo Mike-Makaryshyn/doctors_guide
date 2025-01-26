@@ -83,7 +83,7 @@ const PDFTable = ({
   onClose,
   // Глобальна мова сторінки
   language: globalLanguage,
-  category,          // "EU" або "Non-EU"
+  category, // "EU" або "Non-EU"
   checkboxes,
   documents,
 }) => {
@@ -111,7 +111,7 @@ const PDFTable = ({
           }
         });
         // Оновлюємо creationDate (тільки один раз, або при кожній авторизації)
-        const dateOnly = new Date().toLocaleDateString(); 
+        const dateOnly = new Date().toLocaleDateString();
         setCreationDate(dateOnly);
 
         return () => unsubData();
@@ -126,15 +126,15 @@ const PDFTable = ({
 
   // ------------------ 5) Опишемо варіанти для випадаючого списку ------------------
   const availablePdfLangs = [
-    { value: "de", label: `${languageFlags.de} Deutsch` },
-    { value: "en", label: `${languageFlags.en} English` },
-    { value: "uk", label: `${languageFlags.uk} Українська` },
-    { value: "ru", label: `${languageFlags.ru} Русский` },
-    { value: "fr", label: `${languageFlags.fr} Français` },
-    { value: "es", label: `${languageFlags.es} Español` },
-    { value: "ar", label: `${languageFlags.ar} العربية` },
-    { value: "tr", label: `${languageFlags.tr} Türkçe` },
-    { value: "pl", label: `${languageFlags.pl} Polski` },
+    { value: "de", shortLabel: "DE", fullLabel: "Deutsch", flag: "🇩🇪" },
+    { value: "en", shortLabel: "EN", fullLabel: "English", flag: "🇬🇧" },
+    { value: "uk", shortLabel: "UKR", fullLabel: "Українська", flag: "🇺🇦" },
+    { value: "ru", shortLabel: "RU", fullLabel: "Русский", flag: "💩" },
+    { value: "fr", shortLabel: "FR", fullLabel: "Français", flag: "🇫🇷" },
+    { value: "es", shortLabel: "ES", fullLabel: "Español", flag: "🇪🇸" },
+    { value: "ar", shortLabel: "AR", fullLabel: "العربية", flag: "🇸🇦" },
+    { value: "tr", shortLabel: "TR", fullLabel: "Türkçe", flag: "🇹🇷" },
+    { value: "pl", shortLabel: "PL", fullLabel: "Polski", flag: "🇵🇱" },
   ];
 
   // ------------------ 6) Колонки першої таблиці ------------------
@@ -176,7 +176,9 @@ const PDFTable = ({
   }, [category, documents]);
 
   const optionalIncluded = useMemo(() => {
-    return documents.optional.filter(doc => !checkboxes[String(doc.id)]?.hide);
+    return documents.optional.filter(
+      (doc) => !checkboxes[String(doc.id)]?.hide
+    );
   }, [documents.optional, checkboxes]);
 
   const firstTableDocs = useMemo(() => {
@@ -184,33 +186,33 @@ const PDFTable = ({
   }, [mainDocs, optionalIncluded]);
 
   const secondTableDocs = useMemo(() => {
-    return documents.second.filter(doc => !checkboxes[String(doc.id)]?.hide);
+    return documents.second.filter((doc) => !checkboxes[String(doc.id)]?.hide);
   }, [documents.second, checkboxes]);
 
   // ------------------ 9) Тіла таблиць для обраної локальної pdfLanguage ------------------
   const firstTableBody_userLang = useMemo(() => {
     return firstTableDocs
-      .map(doc => makeRowObject(doc, checkboxes, pdfLanguage))
-      .filter(row => row.title.trim() !== "");
+      .map((doc) => makeRowObject(doc, checkboxes, pdfLanguage))
+      .filter((row) => row.title.trim() !== "");
   }, [firstTableDocs, checkboxes, pdfLanguage]);
 
   const secondTableBody_userLang = useMemo(() => {
     return secondTableDocs
-      .map(doc => makeRowObject(doc, checkboxes, pdfLanguage))
-      .filter(row => row.title.trim() !== "");
+      .map((doc) => makeRowObject(doc, checkboxes, pdfLanguage))
+      .filter((row) => row.title.trim() !== "");
   }, [secondTableDocs, checkboxes, pdfLanguage]);
 
   // ------------------ 10) Тіла таблиць для німецької ------------------
   const firstTableBody_german = useMemo(() => {
     return firstTableDocs
-      .map(doc => makeRowObject(doc, checkboxes, "de"))
-      .filter(row => row.title.trim() !== "");
+      .map((doc) => makeRowObject(doc, checkboxes, "de"))
+      .filter((row) => row.title.trim() !== "");
   }, [firstTableDocs, checkboxes]);
 
   const secondTableBody_german = useMemo(() => {
     return secondTableDocs
-      .map(doc => makeRowObject(doc, checkboxes, "de"))
-      .filter(row => row.title.trim() !== "");
+      .map((doc) => makeRowObject(doc, checkboxes, "de"))
+      .filter((row) => row.title.trim() !== "");
   }, [secondTableDocs, checkboxes]);
 
   // ------------------ 11) Функція заголовка (ім’я, прізвище, дата) ------------------
@@ -327,39 +329,50 @@ const PDFTable = ({
 
   // ------------------ Рендер модального вікна ------------------
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.pdfModal}>
       <div className={styles.modalContent}>
         {/* Кнопка закрити */}
         <button className={styles.closeButton} onClick={onClose}>
           <FaTimes />
         </button>
 
-        <h2>PDF Export</h2>
-        <p>Перша сторінка — обрана мова. Друга сторінка — завжди німецька.</p>
-
-        <div className={styles.selectContainer}>
-          <label htmlFor="pdfLangSelect">Оберіть мову PDF:</label>
-          <select
-            id="pdfLangSelect"
-            value={pdfLanguage}
-            onChange={(e) => setPdfLanguage(e.target.value)}
-          >
-            {availablePdfLangs.map((langOption) => (
-              <option key={langOption.value} value={langOption.value}>
-                {langOption.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
+        <div className={styles.modalTitle}>PDF Table</div>
         <div className={styles.buttons}>
-          <button className={styles.roundButton} onClick={handleGeneratePDF}>
-            <FaDownload /> Download PDF
-          </button>
-          <button className={styles.roundButton} onClick={handleViewPDF}>
-            <FaEye /> View PDF
-          </button>
-        </div>
+    {/* Вибір мови без тексту */}
+    <div className={styles.languageSelect}>
+  <div className={styles.languageContainer}>
+    <span>
+      {availablePdfLangs.find(lang => lang.value === pdfLanguage)?.flag}
+      {availablePdfLangs.find(lang => lang.value === pdfLanguage)?.shortLabel}
+    </span>
+    <select
+      id="pdfLangSelect"
+      value={pdfLanguage}
+      onChange={(e) => setPdfLanguage(e.target.value)}
+    >
+      {availablePdfLangs.map((langOption) => (
+        <option key={langOption.value} value={langOption.value}>
+          {langOption.flag} {langOption.fullLabel}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+
+    {/* Кнопка перегляду PDF */}
+    <div className={styles.buttonContainer}>
+    <button className={styles.roundButton} onClick={handleViewPDF}>
+        <FaEye className={styles.viewIcon} />
+    </button>
+</div>
+
+    {/* Кнопка завантаження PDF */}
+    <div className={styles.buttonContainer}>
+        <button className={styles.roundButton} onClick={handleGeneratePDF}>
+            <FaDownload className={styles.pdfIcon} />
+        </button>
+    </div>
+</div>
       </div>
     </div>
   );
