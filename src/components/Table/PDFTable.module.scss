@@ -1,0 +1,94 @@
+/* src/components/Table/PDFTable.module.scss */
+
+/* Модальне тло */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* затемнення */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    /* Фон білий, або можна #f0f0f0, залежно від потреб */
+    background-color: #fff;
+    /* Якщо треба текст білим, змініть color: #fff */
+    color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: red; /* червоний хрестик */
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; 
+  }
+  
+  /* Стиль для обох кнопок */
+  .roundButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;   /* круглі кути */
+    background: #ffffff;  /* білий фон */
+    box-shadow: 20px -20px 60px #d9d9d9,
+                -20px 20px 60px #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333; 
+    transition: transform 0.2s ease;
+  }
+  
+  .roundButton:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Якщо хочете різні відтінки при ховері, можна додати:
+  .roundButton:hover {
+    background: #eee; 
+  } */
+  
+  .selectContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .selectContainer label {
+    margin-bottom: 8px;
+  }
+  
+  /* При бажанні відшліфуйте селект:
+  #pdfLangSelect {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  */

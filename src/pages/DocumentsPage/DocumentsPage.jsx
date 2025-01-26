@@ -7,6 +7,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./DocumentsPage.module.scss";
 import { AiOutlineClose } from "react-icons/ai"; // Імпортуємо іконку хрестика
+import { FaPrint } from "react-icons/fa"; // Іконка друку
 import { useNavigate } from "react-router-dom";
 // Імпортуємо колонки (приклад)
 import { columnsFirst } from "../../constants/translation/columnsFirst";
@@ -27,6 +28,7 @@ import useIsMobile from "../../hooks/useIsMobile";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Modal from "react-modal"; // Додано
+import PDFTable from "../../components/Table/PDFTable"; // Імпорт нового компонента
 
 // Ініціалізуємо модальне вікно
 Modal.setAppElement("#root");
@@ -79,7 +81,12 @@ const DocumentsPage = () => {
     user,
   } = useGetGlobalInfo();
 
+  const navigate = useNavigate(); // Додано useNavigate
+
   const combinedRef = useRef();
+  const mainTableRef = useRef(); // Реф для першої таблиці
+  const secondTableRef = useRef(); // Реф для другої таблиці
+
   const [category, setCategory] = useState(null); // Ініціалізуємо як null
   const [dynamicData, setDynamicData] = useState({
     checkboxes: {},
@@ -99,12 +106,18 @@ const DocumentsPage = () => {
   // Таймер для дебаунсингу
   const debounceTimer = useRef(null);
 
-  // Стан для модального вікна
+  // Стан для модального вікна авторизації
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Функції для відкриття та закриття модального вікна
+  // Стан для модального вікна PDF генерації
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
+
+  // Функції для відкриття та закриття модальних вікон
   const handleShowAuthModal = () => setShowAuthModal(true);
   const handleCloseAuthModal = () => setShowAuthModal(false);
+
+  const handleOpenPDFModal = () => setIsPDFModalOpen(true);
+  const handleClosePDFModal = () => setIsPDFModalOpen(false);
 
   // Прикладання функції handleCheckboxChange з useCallback
   const handleCheckboxChange = useCallback((documentId, fieldName) => {
@@ -476,6 +489,7 @@ const DocumentsPage = () => {
                 <>
                   {/* Основні документи + Включені опціональні документи */}
                   <ResponsiveTable
+                    ref={mainTableRef} // Додаємо реф
                     title={mainTitle}
                     columns={columnsFirst}
                     data={[
@@ -497,8 +511,9 @@ const DocumentsPage = () => {
                   />
 
                   {/* Друга таблиця */}
-                  {user && ( // Рендеримо другу таблицю лише для авторизованих користувачів
+                  {user && (
                     <ResponsiveTable
+                      ref={secondTableRef} // Додаємо реф
                       title={null}
                       columns={columnsSecond}
                       data={documentsSecond}
@@ -516,7 +531,7 @@ const DocumentsPage = () => {
                   )}
 
                   {/* Відображення виключених опціональних документів як плиток */}
-                  {user && ( // Рендеримо плитки лише для авторизованих користувачів
+                  {user && (
                     <div className={styles.tileSection}>
                       <h2 className={styles.optionalTitleHeader}>
                         {optionalTitle}
@@ -552,6 +567,7 @@ const DocumentsPage = () => {
                   <>
                     {/* Проста таблиця для неавторизованих користувачів */}
                     <ResponsiveTable
+                      ref={mainTableRef} // Додаємо реф, якщо хочете захопити цю таблицю для PDF
                       title={mainTitle}
                       columns={columnsFirst}
                       data={documentsNonEU} 
@@ -585,12 +601,22 @@ const DocumentsPage = () => {
 
           {/* Приховані або відключені лінки для неавторизованих користувачів */}
           {user && (
-            <button
-              className={styles.backButton}
-              onClick={() => handleChangePage("/main_menu")}
-            >
-              &#8592;
-            </button>
+            <>
+              <button
+                className={styles.backButton}
+                onClick={() => handleChangePage("/main_menu")}
+              >
+                &#8592;
+              </button>
+              {/* Додати кнопку друку */}
+              <button
+                className={styles.printButton}
+                onClick={handleOpenPDFModal}
+                title="Друкувати PDF"
+              >
+                <FaPrint />
+              </button>
+            </>
           )}
         </div>
       </div>
@@ -623,6 +649,22 @@ const DocumentsPage = () => {
           Anmelden
         </button>
       </Modal>
+
+      {/* Модальне вікно для генерації PDF */}
+      {isPDFModalOpen && (
+  <PDFTable
+    onClose={handleClosePDFModal}
+    language={language}
+    category={category}
+    checkboxes={dynamicData.checkboxes}
+    documents={{
+      mainEU: documentsEU,
+      mainNonEU: documentsNonEU,
+      second: documentsSecond,
+      optional: documentsOptional,
+    }}
+  />
+      )}
     </MainLayout>
   );
 };

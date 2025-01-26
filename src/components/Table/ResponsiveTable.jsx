@@ -1,6 +1,6 @@
 // src/components/Table/ResponsiveTable.jsx
 
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./ResponsiveTable.module.scss";
 import cn from "classnames";
@@ -12,7 +12,7 @@ import Tile from "./Tile";
  * ResponsiveTable компонент
  */
 
-const ResponsiveTable = ({
+const ResponsiveTable = forwardRef(({
   columns,
   data,
   setTableData,
@@ -26,43 +26,38 @@ const ResponsiveTable = ({
   handleCheckboxChange,
   customClass,
   hideHeader, 
-}) => {
+}, ref) => {
   const isMobile = useIsMobile();
   const shouldRenderAsTiles = isMobile;
 
-  // Додайте для відлагодження
-  console.log("isMobile:", isMobile);
-  console.log("data:", data);
-  console.log("columns:", columns);
-  console.log("selectedRegion:", selectedRegion);
-
+  // Додайте реф до контейнера таблиці
   return (
-    <div className={cn(styles.tableContainer, customClass)}>
+    <div className={cn(styles.tableContainer, customClass)} ref={ref}>
       {title && <h2 className={styles.title}>{title}</h2>}
 
       {/* Рендер таблиці або плиток залежно від пристрою */}
       {shouldRenderAsTiles ? (
         <div className={styles.tileContainer}>
           {data.map((row) => {
-  const isIncluded = !checkboxes[row.id]?.hide;
-  return (
-    <Tile
-    key={`tile-${row.id}`}
-    row={row}
-    columns={columns}
-    category={category}
-    selectedLanguage={selectedLanguage}
-    selectedRegion={selectedRegion}
-    tableFor={tableFor}
-    checkboxes={checkboxes}
-    handleCheckboxChange={handleCheckboxChange}
-    disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-    isMobile={isMobile}
-    isIncluded={!checkboxes[row.id]?.hide}
-    showCheckboxOnMobile={isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide}
-  />
-  );
-})}
+            const isIncluded = !checkboxes[row.id]?.hide;
+            return (
+              <Tile
+                key={`tile-${row.id}`}
+                row={row}
+                columns={columns}
+                category={category}
+                selectedLanguage={selectedLanguage}
+                selectedRegion={selectedRegion}
+                tableFor={tableFor}
+                checkboxes={checkboxes}
+                handleCheckboxChange={handleCheckboxChange}
+                disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+                isMobile={isMobile}
+                isIncluded={!checkboxes[row.id]?.hide}
+                showCheckboxOnMobile={isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide}
+              />
+            );
+          })}
         </div>
       ) : (
         <table
@@ -115,7 +110,7 @@ const ResponsiveTable = ({
       )}
     </div>
   );
-};
+});
 
 // Оновлення PropTypes
 ResponsiveTable.propTypes = {
@@ -131,6 +126,7 @@ ResponsiveTable.propTypes = {
   checkboxes: PropTypes.object.isRequired,
   handleCheckboxChange: PropTypes.func.isRequired,
   customClass: PropTypes.string,
+  hideHeader: PropTypes.bool,
 };
 
 ResponsiveTable.defaultProps = {
@@ -138,6 +134,7 @@ ResponsiveTable.defaultProps = {
   tableFor: "main",
   disableCheckboxBasedOnName: false,
   customClass: "",
+  hideHeader: false,
 };
 
 export default ResponsiveTable;
