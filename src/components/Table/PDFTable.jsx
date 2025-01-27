@@ -587,7 +587,8 @@ const didDrawPageFooter = (doc) => (data) => {
     });
 
     // Відкрити у новому вікні
-    doc.output("dataurlnewwindow");
+    const pdfBlob = doc.output("bloburl");
+window.location.href = pdfBlob;
     onClose();
   };
 
