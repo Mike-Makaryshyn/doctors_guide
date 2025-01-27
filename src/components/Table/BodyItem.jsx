@@ -253,7 +253,7 @@ const BodyItem = React.memo(
                           row.name !== "Included"
                         }
                         label=""
-                        data-tutorial={`checkbox-${column.name}-desktop`}
+                        data-tutorial={`checkbox-${column.name}-desktop`} 
                       />
                     )}
 

@@ -54,6 +54,30 @@ const DocumentTutorial = ({ category }) => {
       },
     },
     {
+      target: "[data-tutorial='progressBar']",
+      content:
+        tutorialTranslations[language]?.steps.progressBar ||
+        "This is the progress bar showing your completion status.",
+      placement: "bottom",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "center",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='header-is_exist']",
+      content: tutorialTranslations[language]?.steps.is_exist || "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
       target: "[data-tutorial='header-apostile']",
       content:
         tutorialTranslations[language]?.steps.header_apostile ||
@@ -199,6 +223,19 @@ const DocumentTutorial = ({ category }) => {
         tooltip: {
           maxWidth: "300px",
           textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='progressBar']",
+      content:
+        tutorialTranslations[language]?.steps.progressBar ||
+        "This is the progress bar showing your completion status.",
+      placement: "bottom",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "center",
         },
       },
     },
