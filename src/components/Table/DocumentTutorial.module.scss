@@ -3,7 +3,7 @@
 /* Глобальні стилі для react-joyride */
 :global(.react-joyride__tooltip) {
   background-color: #f0f0f0;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 300px;
   padding: 16px;
@@ -24,7 +24,7 @@
 :global(.react-joyride__tooltip-container .react-joyride__button--next) {
   background-color: #4caf50;
   color: #fff;
-  border: none;
+  border: 25px;
   border-radius: 4px;
   padding: 8px 16px;
   cursor: pointer;
@@ -41,13 +41,18 @@
   font-size: 14px;
 }
 
-:global(.react-joyride__close) {
-  display: none; /* Приховуємо кнопку закриття */
-}
 
 /* Локальні стилі */
 
-
+:global(.react-joyride__spotlight) {
+  background: rgba(211, 211, 211, 0.3); /* LightGray */
+  border: 2px solid rgba(169, 169, 169, 0.8); /* DarkGray */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(169, 169, 169, 0.6);
+  transition: box-shadow 0.3s ease; /* Анімація появи тіні */
+  padding: 2px;
+  transition: border-radius 0.3s ease; 
+}
 .tutorialButton {
   position: fixed;
   bottom: 580px;

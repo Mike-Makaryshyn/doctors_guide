@@ -43,7 +43,7 @@ const DocumentTutorial = ({ category }) => {
       content:
         tutorialTranslations[language]?.steps.mainTable ||
         "Default content",
-      placement: "auto",
+      placement: "bottom",
       disableBeacon: true,
       spotlightClicks: true,
       styles: {
@@ -217,12 +217,13 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.firstTile ||
         "Default content",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
       spotlightClicks: true,
       styles: {
         tooltip: {
           maxWidth: "300px",
-          textAlign: "left",
+          textAlign: "center",
         },
       },
     },
@@ -232,6 +233,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.progressBar ||
         "This is the progress bar showing your completion status.",
       placement: "bottom",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -239,25 +241,14 @@ const DocumentTutorial = ({ category }) => {
         },
       },
     },
-    {
-      target: "[data-tutorial='secondTile-checkboxes']", // Другий тайл з чекбоксами
-      content:
-        tutorialTranslations[language]?.steps.mobile.secondTileCheckboxes ||
-        "Default content",
-      placement: "bottom",
-      styles: {
-        tooltip: {
-          maxWidth: "300px",
-          textAlign: "left",
-        },
-      },
-    },
+
     {
       target: "[data-tutorial='is_exist']",
       content:
         tutorialTranslations[language]?.steps.mobile.is_exist ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -271,6 +262,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.apostile ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -284,6 +276,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.notary ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -297,6 +290,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.translation ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -310,6 +304,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.ready_copies ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -323,6 +318,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.sent ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -336,6 +332,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.documentSecondTile_3 ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -349,6 +346,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.mobile.optionalDocumentsSection ||
         "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -399,19 +397,20 @@ const DocumentTutorial = ({ category }) => {
         steps={steps}
         run={run}
         continuous={true}
-        scrollToFirstStep={false} // Відключаємо автоматичне прокручування до першого кроку
-        scrollOffset={100} // Враховує висоту хедера
+        scrollToFirstStep={true} // Відключаємо автоматичне прокручування до першого кроку
+        scrollOffset={isMobile ? 70 : 250} // 50 для мобільних, 100 для десктопу
         showSkipButton={true}
-        showProgress={true}
+        showProgress={false} 
         styles={{
           options: {
-            primaryColor: "#4caf50",
+            primaryColor: "#023c6f",
             zIndex: 10000,
             tooltipOffset: 20, // Відступ для уникнення перекриття
-            arrowColor: "#4caf50",
+            arrowColor: "#ffffff",
             overlayColor: "rgba(0, 0, 0, 0.5)",
             spotlightPadding: 20, // Додає відступи для уникнення виходу за екран
             transition: "opacity 0.3s ease, transform 0.3s ease", // Плавніша анімація
+            
           },
           // Видаляємо всі класові імена, щоб уникнути помилок
         }}

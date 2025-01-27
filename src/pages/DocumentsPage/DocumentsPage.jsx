@@ -516,6 +516,7 @@ const DocumentsPage = () => {
                   <>
                     {/* Основні документи + Включені опціональні документи */}
                     <ResponsiveTable
+                    
                       columns={columnsFirst}
                       data={[
                         ...(category === "Non-EU"

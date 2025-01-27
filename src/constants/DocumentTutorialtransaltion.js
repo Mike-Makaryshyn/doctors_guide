@@ -29,29 +29,30 @@ const tutorialTranslations = {
         printButton:
           "Натисніть цю кнопку, щоб отримати PDF-версію списку документів. Це зручно для перевірки інформації або консультації у відповідних структурах.",
       
-      mobile: {
-        firstTile:
-          "У цьому розділі представлений список документів, які необхідно підготувати для подачі заяви. Ви можете позначати виконані етапи.",
-        progressBar:
-          "Індикатор показує ваш поточний прогрес у процесі збору документів.",
-        is_exist:
-          "Позначте цей пункт, якщо документ у вас є і не потребує додаткової підготовки чи замовлення.",
-        apostile:
-          "Позначає, чи необхідний апостиль для документа. Якщо так, він має бути отриманий до подачі.",
-        notary:
-          "Позначає, чи потрібно завірення документа у нотаріуса перед подачею до відповідних органів.",
-        translation:
-          "Це поле вказує, чи документ вже перекладений або ще потребує перекладу для використання в подальшій подачі.",
-        ready_copies:
-          "Позначає, чи були підготовлені завірені копії документів, які необхідні для подання.",
-        sent: "Позначає, чи документ вже відправлено, що допомагає стежити за поточним статусом.",
-        documentSecondTile_3:
-          "Містить посилання на документи, необхідні для подачі заяви у вибраному регіоні.",
-        optionalDocumentsSection:
-          "Цей розділ містить додаткові документи, які можуть бути корисними, але не є обов’язковими.",
-        printButton:
-          "Створіть PDF-версію списку документів для зручного перегляду та використання під час консультацій.",
-      },
+          mobile: {
+            firstTile:
+              "Цей розділ містить список документів, які потрібно підготувати для подачі заяви. Ви можете відмічати виконані етапи для зручності.",
+            progressBar:
+              "Індикатор прогресу допомагає відстежувати, наскільки ви наблизилися до завершення збору документів.",
+            is_exist:
+              "Позначте цей пункт, якщо документ вже є у вас і не потребує додаткової підготовки чи замовлення.",
+            apostile:
+              "Позначте, якщо ви вже отримали апостиль для документа. Якщо ще ні, подбайте про це перед подачею.",
+            notary:
+              "Позначте, якщо ви вже завірили документ у нотаріуса. Це важливий етап перед подачею до відповідних органів.",
+            translation:
+              "Позначте, якщо ви вже переклали документ. Якщо переклад ще не зроблено, слід подбати про це заздалегідь.",
+            ready_copies:
+              "Позначте, якщо ви підготували нотаріально завірені копії документа, які необхідні для подачі.",
+            sent:
+              "Позначте, якщо ви вже відправили документ. Це допоможе контролювати етапи подачі.",
+            documentSecondTile_3:
+              "Цей розділ містить посилання на документи, необхідні для подачі заяви у вибраному регіоні.",
+            optionalDocumentsSection:
+              "Цей розділ містить додаткові документи, які можуть бути корисними, але не є обов’язковими.",
+            printButton:
+              "Створіть PDF-версію списку документів для зручного перегляду та використання під час консультацій.",
+          },
     },
   },
 de: {
@@ -82,29 +83,31 @@ de: {
         printButton:
           "Klicken Sie auf diese Schaltfläche, um eine PDF-Version der Dokumentenliste zu erstellen. Dies ist praktisch für Überprüfungen oder Konsultationen mit den zuständigen Stellen.",
       
-      mobile: {
-        firstTile:
-          "In diesem Bereich finden Sie eine Liste aller erforderlichen Dokumente für die Antragstellung. Sie können erledigte Schritte markieren.",
-        progressBar:
-          "Die Fortschrittsanzeige zeigt den aktuellen Stand der Dokumentenvorbereitung.",
-        is_exist:
-          "Markieren Sie dieses Feld, wenn Sie das Dokument bereits besitzen und keine weitere Vorbereitung oder Bestellung erforderlich ist.",
-        apostile:
-          "Dieses Feld zeigt an, ob für das Dokument eine Apostille erforderlich ist. Falls ja, muss sie vor der Einreichung beschafft werden.",
-        notary:
-          "Zeigt an, ob das Dokument vor der Einreichung notariell beglaubigt werden muss.",
-        translation:
-          "Hier können Sie angeben, ob das Dokument bereits übersetzt wurde oder noch übersetzt werden muss.",
-        ready_copies:
-          "Hier können Sie angeben, ob beglaubigte Kopien des Dokuments erstellt wurden und bereit für die Einreichung sind.",
-        sent: "Hier wird markiert, ob das Dokument bereits gesendet wurde, um den Fortschritt nachzuverfolgen.",
-        documentSecondTile_3:
-          "Hier finden Sie Links zu den erforderlichen Dokumenten für die Antragstellung in Ihrer Region.",
-        optionalDocumentsSection:
-          "Dieser Bereich enthält zusätzliche Dokumente, die den Bewerbungsprozess unterstützen können, aber nicht obligatorisch sind.",
-        printButton:
-          "Erstellen Sie eine PDF-Version der Dokumentenliste für eine bequeme Überprüfung oder Beratung.",
-      },
+     
+mobile: {
+  firstTile:
+    "Dieser Abschnitt enthält eine Liste der Dokumente, die für die Antragstellung vorbereitet werden müssen. Sie können erledigte Schritte zur besseren Übersicht markieren.",
+  progressBar:
+    "Die Fortschrittsanzeige hilft Ihnen, den Stand Ihrer Dokumentenvorbereitung zu verfolgen.",
+  is_exist:
+    "Markieren Sie dieses Feld, wenn Sie das Dokument bereits haben und keine weitere Vorbereitung oder Bestellung erforderlich ist.",
+  apostile:
+    "Markieren Sie, wenn Sie die Apostille für das Dokument bereits erhalten haben. Falls nicht, kümmern Sie sich darum vor der Einreichung.",
+  notary:
+    "Markieren Sie, wenn Sie das Dokument bereits notariell beglaubigt haben. Dies ist ein wichtiger Schritt vor der Übersetzung.",
+  translation:
+    "Markieren Sie, wenn Sie das Dokument bereits übersetzt haben. Falls nicht, organisieren Sie dies rechtzeitig.",
+  ready_copies:
+    "Markieren Sie, wenn Sie die notariell beglaubigten Kopien des Dokuments vorbereitet haben, die für die Einreichung erforderlich sind.",
+  sent:
+    "Markieren Sie, wenn Sie das Dokument bereits gesendet haben. Dies hilft, den Fortschritt der Einreichung zu verfolgen.",
+  documentSecondTile_3:
+    "Dieser Abschnitt enthält Links zu den für die Antragstellung in der ausgewählten Region erforderlichen Dokumenten.",
+  optionalDocumentsSection:
+    "Dieser Abschnitt enthält zusätzliche Dokumente, die hilfreich sein können, aber nicht zwingend erforderlich sind.",
+  printButton:
+    "Erstellen Sie eine PDF-Version der Dokumentenliste für eine bequeme Überprüfung und Nutzung während der Konsultationen.",
+},
     },
   },
   en: {
@@ -135,29 +138,30 @@ de: {
         printButton:
           "Click this button to generate a PDF version of the document list. This is convenient for verification or consultation with the relevant authorities.",
       
-      mobile: {
-        firstTile:
-          "This section contains a list of all the required documents for the application. You can mark completed steps.",
-        progressBar:
-          "The progress bar shows your current progress in gathering the necessary documents.",
-        is_exist:
-          "Check this box if you already have the document and no further preparation or ordering is required.",
-        apostile:
-          "This field indicates whether an apostille is required for the document. If so, it must be obtained before submission.",
-        notary:
-          "Indicates whether the document needs to be notarized before submission to the relevant authorities.",
-        translation:
-          "This field indicates whether the document has been translated or still needs translation.",
-        ready_copies:
-          "This field marks whether notarized copies of the document have been prepared and are ready for submission.",
-        sent: "Marks whether the document has already been sent, helping to track your progress.",
-        documentSecondTile_3:
-          "This section provides links to the necessary documents required for submission in your selected region.",
-        optionalDocumentsSection:
-          "This section contains optional documents that can be beneficial but are not mandatory for submission.",
-        printButton:
-          "Generate a PDF version of the document list for convenient review or consultation.",
-      },
+          mobile: {
+            firstTile:
+              "This section contains a list of documents that need to be prepared for submission. You can mark completed steps for convenience.",
+            progressBar:
+              "The progress indicator helps track how close you are to completing the document collection.",
+            is_exist:
+              "Mark this item if you already have the document and no further preparation or ordering is needed.",
+            apostile:
+              "Mark if you have already obtained the apostille for the document. If not, make sure to do so before submission.",
+            notary:
+              "Mark if you have already notarized the document. This is an important step before translation.",
+            translation:
+              "Mark if you have already translated the document. If not, make sure to arrange it in advance.",
+            ready_copies:
+              "Mark if you have prepared notarized copies of the document, which are required for submission.",
+            sent:
+              "Mark if you have already sent the document. This helps to track the submission progress.",
+            documentSecondTile_3:
+              "This section contains links to documents required for submission in the selected region.",
+            optionalDocumentsSection:
+              "This section contains additional documents that may be useful but are not mandatory.",
+            printButton:
+              "Create a PDF version of the document list for convenient review and use during consultations.",
+          },
     },
   },
   fr: {
@@ -188,29 +192,30 @@ de: {
         printButton:
           "Cliquez sur ce bouton pour générer une version PDF de la liste des documents. Utile pour vérification ou consultation avec les autorités compétentes.",
       
-      mobile: {
-        firstTile:
-          "Cette section contient la liste des documents requis pour la soumission de la demande. Vous pouvez marquer les étapes complétées.",
-        progressBar:
-          "La barre de progression montre votre avancement dans la collecte des documents nécessaires.",
-        is_exist:
-          "Cochez cette case si vous possédez déjà le document et qu'aucune préparation supplémentaire n'est nécessaire.",
-        apostile:
-          "Ce champ indique si une apostille est requise pour le document. Si nécessaire, elle doit être obtenue avant la soumission.",
-        notary:
-          "Indique si le document doit être certifié par un notaire avant sa soumission aux autorités compétentes.",
-        translation:
-          "Ce champ indique si le document a été traduit ou s'il nécessite encore une traduction.",
-        ready_copies:
-          "Indique si des copies certifiées du document ont été préparées et sont prêtes à être soumises.",
-        sent: "Indique si le document a déjà été envoyé, facilitant le suivi de votre progression.",
-        documentSecondTile_3:
-          "Cette section fournit des liens vers les documents requis pour votre région sélectionnée.",
-        optionalDocumentsSection:
-          "Cette section contient des documents supplémentaires pouvant être utiles, mais non obligatoires.",
-        printButton:
-          "Générez une version PDF de la liste des documents pour un examen pratique ou une consultation.",
-      },
+          mobile: {
+            firstTile:
+              "Cette section contient une liste des documents à préparer pour la soumission. Vous pouvez marquer les étapes complétées pour plus de commodité.",
+            progressBar:
+              "L'indicateur de progression permet de suivre votre avancement dans la collecte des documents.",
+            is_exist:
+              "Cochez cette case si vous avez déjà le document et qu'aucune préparation ou commande supplémentaire n'est nécessaire.",
+            apostile:
+              "Cochez si vous avez déjà obtenu l'apostille pour le document. Si ce n'est pas encore fait, veillez à le faire avant la soumission.",
+            notary:
+              "Cochez si vous avez déjà fait certifier le document par un notaire. C'est une étape importante avant la traduction.",
+            translation:
+              "Cochez si vous avez déjà traduit le document. Si ce n'est pas encore fait, assurez-vous de le faire à l'avance.",
+            ready_copies:
+              "Cochez si vous avez préparé les copies notariées du document, nécessaires à la soumission.",
+            sent:
+              "Cochez si vous avez déjà envoyé le document. Cela vous aide à suivre le progrès de la soumission.",
+            documentSecondTile_3:
+              "Cette section contient des liens vers les documents requis pour la soumission dans la région sélectionnée.",
+            optionalDocumentsSection:
+              "Cette section contient des documents supplémentaires qui peuvent être utiles mais ne sont pas obligatoires.",
+            printButton:
+              "Créez une version PDF de la liste des documents pour une consultation pratique.",
+          },
     },
   },
   es: {
@@ -241,29 +246,30 @@ de: {
         printButton:
           "Haga clic en este botón para generar una versión en PDF de la lista de documentos. Útil para revisión o consulta con las autoridades correspondientes.",
       
-      mobile: {
-        firstTile:
-          "Esta sección contiene la lista de documentos necesarios para la solicitud. Puede marcar los pasos completados.",
-        progressBar:
-          "La barra de progreso muestra su avance en la recolección de los documentos necesarios.",
-        is_exist:
-          "Marque esta casilla si ya tiene el documento y no requiere preparación adicional.",
-        apostile:
-          "Este campo indica si el documento necesita apostilla. Si es así, debe obtenerse antes de la presentación.",
-        notary:
-          "Indica si el documento debe ser notariado antes de su presentación a las autoridades competentes.",
-        translation:
-          "Este campo indica si el documento ha sido traducido o aún necesita traducción.",
-        ready_copies:
-          "Indica si las copias notariadas del documento han sido preparadas y están listas para su presentación.",
-        sent: "Indica si el documento ya ha sido enviado, lo que ayuda a realizar un seguimiento del progreso.",
-        documentSecondTile_3:
-          "Esta sección proporciona enlaces a los documentos necesarios según su región seleccionada.",
-        optionalDocumentsSection:
-          "Esta sección contiene documentos opcionales que pueden ser útiles pero no son obligatorios.",
-        printButton:
-          "Genere una versión en PDF de la lista de documentos para revisión o consulta conveniente.",
-      },
+          mobile: {
+            firstTile:
+              "Esta sección contiene una lista de documentos que deben prepararse para la presentación. Puede marcar los pasos completados para mayor comodidad.",
+            progressBar:
+              "El indicador de progreso ayuda a realizar un seguimiento de qué tan cerca está de completar la recopilación de documentos.",
+            is_exist:
+              "Marque esta opción si ya tiene el documento y no necesita más preparación ni pedido.",
+            apostile:
+              "Marque si ya ha obtenido la apostilla para el documento. Si no, asegúrese de hacerlo antes de la presentación.",
+            notary:
+              "Marque si ya ha notariado el documento. Este es un paso importante antes de la traducción.",
+            translation:
+              "Marque si ya ha traducido el documento. Si aún no lo ha hecho, organícelo con anticipación.",
+            ready_copies:
+              "Marque si ha preparado copias notariadas del documento, que son necesarias para la presentación.",
+            sent:
+              "Marque si ya ha enviado el documento. Esto ayuda a realizar un seguimiento del progreso de la presentación.",
+            documentSecondTile_3:
+              "Esta sección contiene enlaces a documentos requeridos para la presentación en la región seleccionada.",
+            optionalDocumentsSection:
+              "Esta sección contiene documentos adicionales que pueden ser útiles pero no obligatorios.",
+            printButton:
+              "Cree una versión en PDF de la lista de documentos para una revisión y uso conveniente durante las consultas.",
+          },
     },
   },
   tr: {
@@ -294,29 +300,30 @@ de: {
         printButton:
           "Belge listesinin PDF sürümünü oluşturmak için bu düğmeye tıklayın. Bu, doğrulama veya ilgili makamlarla görüşmeler için kullanışlıdır.",
       
-      mobile: {
-        firstTile:
-          "Bu bölüm, başvuru için gerekli tüm belgelerin listesini içerir. Tamamlanan adımları işaretleyebilirsiniz.",
-        progressBar:
-          "İlerleme çubuğu, belgelerin toplanmasındaki mevcut durumunuzu gösterir.",
-        is_exist:
-          "Bu belgeye sahipseniz ve ek bir hazırlık gerekmiyorsa kutuyu işaretleyin.",
-        apostile:
-          "Bu alan, belgenin apostil gerektirip gerektirmediğini gösterir. Gerekliyse, başvuru öncesinde alınmalıdır.",
-        notary:
-          "Belgenin ilgili makamlara sunulmadan önce noter tasdiki gerektirip gerektirmediğini belirtir.",
-        translation:
-          "Bu alan, belgenin çevirisinin tamamlanıp tamamlanmadığını gösterir.",
-        ready_copies:
-          "Belgenin noter tasdikli kopyalarının hazırlanıp hazırlanmadığını belirtir.",
-        sent: "Belgenin gönderilip gönderilmediğini takip etmek için bu alanı işaretleyin.",
-        documentSecondTile_3:
-          "Seçilen bölgeye uygun gerekli belgelere ait bağlantılar burada bulunmaktadır.",
-        optionalDocumentsSection:
-          "Bu bölüm, isteğe bağlı belgeleri içerir ve zorunlu olmamakla birlikte başvuru sürecine yardımcı olabilir.",
-        printButton:
-          "Belgelerinizi gözden geçirmek veya danışmak için PDF sürümünü oluşturun.",
-      },
+          mobile: {
+            firstTile:
+              "Bu bölüm, başvuru için hazırlanması gereken belgelerin bir listesini içerir. Tamamlanan adımları işaretleyerek ilerlemenizi takip edebilirsiniz.",
+            progressBar:
+              "İlerleme göstergesi, belge toplama sürecinin ne kadarını tamamladığınızı takip etmenize yardımcı olur.",
+            is_exist:
+              "Bu belgeyi zaten elinizde bulunduruyorsanız ve ek bir hazırlık gerekmiyorsa işaretleyin.",
+            apostile:
+              "Belge için apostil aldıysanız işaretleyin. Henüz almadıysanız, başvurudan önce bunu yapmanız gerekmektedir.",
+            notary:
+              "Belgeyi noter onayına sunduysanız işaretleyin. Bu, tercümeden önce önemli bir adımdır.",
+            translation:
+              "Belgeyi çevirdiyseniz işaretleyin. Henüz çevrilmediyse, önceden organize edilmesi gerekmektedir.",
+            ready_copies:
+              "Belgenin noter tasdikli kopyalarını hazırladıysanız işaretleyin. Bunlar başvuru için gereklidir.",
+            sent:
+              "Belgeyi zaten gönderdiyseniz işaretleyin. Bu, başvuru sürecini takip etmeye yardımcı olur.",
+            documentSecondTile_3:
+              "Bu bölüm, seçilen bölgede başvuru için gerekli belgelerle ilgili bağlantıları içerir.",
+            optionalDocumentsSection:
+              "Bu bölüm, zorunlu olmayan ancak başvurunuza olumlu katkı sağlayabilecek ek belgeleri içerir.",
+            printButton:
+              "Belgelerin PDF versiyonunu oluşturarak inceleme ve danışma sırasında kullanabilirsiniz.",
+          },
     },
   },
   ar: {
@@ -347,28 +354,30 @@ de: {
         printButton:
           "انقر على هذا الزر لإنشاء نسخة PDF من قائمة المستندات. هذا مفيد للمراجعة أو الاستشارة مع الجهات المختصة.",
       
-      mobile: {
-        firstTile:
-          "تحتوي هذه القسم على قائمة بجميع المستندات المطلوبة لتقديم الطلب. يمكنك وضع علامة على الخطوات المكتملة.",
-        progressBar: "يعرض شريط التقدم مستوى تقدمك في جمع المستندات المطلوبة.",
-        is_exist:
-          "حدد هذا الخيار إذا كان لديك المستند بالفعل ولا يتطلب أي تحضير إضافي.",
-        apostile:
-          "يشير هذا الحقل إلى ما إذا كان المستند يحتاج إلى تصديق الأبوستيل. إذا لزم الأمر، يجب الحصول عليه قبل التقديم.",
-        notary:
-          "يحدد ما إذا كان يجب توثيق المستند قبل تقديمه إلى السلطات المختصة.",
-        translation:
-          "يشير هذا الحقل إلى ما إذا كان المستند قد تمت ترجمته أو لا يزال بحاجة إلى ترجمة.",
-        ready_copies:
-          "يشير إلى ما إذا كانت النسخ الموثقة للمستند جاهزة للتقديم.",
-        sent: "يشير إلى ما إذا كان المستند قد تم إرساله بالفعل، مما يساعدك في تتبع تقدمك.",
-        documentSecondTile_3:
-          "تقدم هذه القسم روابط إلى المستندات المطلوبة حسب المنطقة التي اخترتها.",
-        optionalDocumentsSection:
-          "تتضمن هذه القسم المستندات الاختيارية التي يمكن أن تكون مفيدة ولكنها ليست إلزامية.",
-        printButton:
-          "قم بإنشاء نسخة PDF من قائمة المستندات للمراجعة أو الاستشارة بسهولة.",
-      },
+          mobile: {
+            firstTile:
+              "يتضمن هذا القسم قائمة بالوثائق التي يجب تحضيرها لتقديم الطلب. يمكنك تحديد الخطوات المكتملة لراحتك.",
+            progressBar:
+              "يساعدك مؤشر التقدم في تتبع مدى اقترابك من إكمال جمع المستندات.",
+            is_exist:
+              "حدد هذا الخيار إذا كان لديك المستند بالفعل ولا تحتاج إلى إعداد أو طلب إضافي.",
+            apostile:
+              "حدد إذا كنت قد حصلت على أبوستيل للمستند. إذا لم يكن كذلك، فتأكد من القيام بذلك قبل التقديم.",
+            notary:
+              "حدد إذا كنت قد قمت بتوثيق المستند لدى كاتب العدل. هذه خطوة مهمة قبل الترجمة.",
+            translation:
+              "حدد إذا كنت قد ترجمت المستند. إذا لم يتم ترجمته بعد، تأكد من القيام بذلك مسبقًا.",
+            ready_copies:
+              "حدد إذا كنت قد أعددت النسخ الموثقة من المستند المطلوبة للتقديم.",
+            sent:
+              "حدد إذا كنت قد أرسلت المستند بالفعل. يساعد ذلك في تتبع تقدم الطلب.",
+            documentSecondTile_3:
+              "يحتوي هذا القسم على روابط للوثائق المطلوبة للتقديم في المنطقة المختارة.",
+            optionalDocumentsSection:
+              "يحتوي هذا القسم على مستندات إضافية قد تكون مفيدة ولكنها ليست إلزامية.",
+            printButton:
+              "قم بإنشاء نسخة PDF من قائمة المستندات لسهولة المراجعة والاستخدام أثناء الاستشارات.",
+          },
     },
   },
   pl: {
@@ -399,29 +408,30 @@ de: {
         printButton:
           "Kliknij ten przycisk, aby wygenerować wersję PDF listy dokumentów. Jest to wygodne do przeglądu lub konsultacji z odpowiednimi organami.",
       
-      mobile: {
-        firstTile:
-          "Ta sekcja zawiera listę wszystkich wymaganych dokumentów do złożenia wniosku. Możesz oznaczyć ukończone etapy.",
-        progressBar:
-          "Pasek postępu pokazuje Twój aktualny postęp w zbieraniu wymaganych dokumentów.",
-        is_exist:
-          "Zaznacz to pole, jeśli dokument już posiadasz i nie wymaga dalszego przygotowania ani zamówienia.",
-        apostile:
-          "To pole wskazuje, czy dokument wymaga apostille. Jeśli tak, należy go uzyskać przed złożeniem.",
-        notary:
-          "Informuje, czy dokument wymaga notarialnego poświadczenia przed złożeniem do odpowiednich organów.",
-        translation:
-          "To pole wskazuje, czy dokument został już przetłumaczony lub wymaga tłumaczenia.",
-        ready_copies:
-          "Wskazuje, czy przygotowano poświadczone kopie dokumentu przed jego złożeniem.",
-        sent: "Oznacza, czy dokument został już wysłany, co pomaga śledzić postępy.",
-        documentSecondTile_3:
-          "Tutaj znajdziesz linki do wymaganych dokumentów zgodnie z wybranym regionem.",
-        optionalDocumentsSection:
-          "Ta sekcja zawiera opcjonalne dokumenty, które mogą być przydatne, ale nie są obowiązkowe.",
-        printButton:
-          "Wygeneruj wersję PDF listy dokumentów w celu przeglądu lub konsultacji.",
-      },
+          mobile: {
+            firstTile:
+              "Ta sekcja zawiera listę dokumentów, które należy przygotować do złożenia wniosku. Możesz zaznaczyć ukończone kroki dla wygody.",
+            progressBar:
+              "Pasek postępu pomaga śledzić, jak blisko jesteś do zakończenia zbierania dokumentów.",
+            is_exist:
+              "Zaznacz, jeśli już masz ten dokument i nie wymaga on dalszego przygotowania.",
+            apostile:
+              "Zaznacz, jeśli uzyskałeś już apostille dla dokumentu. Jeśli nie, zrób to przed złożeniem wniosku.",
+            notary:
+              "Zaznacz, jeśli dokument został już poświadczony notarialnie. Jest to ważny krok przed tłumaczeniem.",
+            translation:
+              "Zaznacz, jeśli dokument został już przetłumaczony. Jeśli nie, upewnij się, że zostanie to zrobione wcześniej.",
+            ready_copies:
+              "Zaznacz, jeśli przygotowałeś notarialnie poświadczone kopie dokumentu wymagane do złożenia.",
+            sent:
+              "Zaznacz, jeśli dokument został już wysłany. To pomoże śledzić postęp składania wniosku.",
+            documentSecondTile_3:
+              "Ta sekcja zawiera linki do dokumentów wymaganych w wybranym regionie.",
+            optionalDocumentsSection:
+              "Ta sekcja zawiera dodatkowe dokumenty, które mogą być przydatne, ale nie są obowiązkowe.",
+            printButton:
+              "Utwórz wersję PDF listy dokumentów do wygodnego przeglądania i wykorzystania podczas konsultacji.",
+          },
     },
   },
   ru: {
@@ -452,29 +462,30 @@ de: {
         printButton:
           "Нажмите эту кнопку, чтобы создать PDF-версию списка документов. Это удобно для проверки или консультации с соответствующими органами.",
       
-      mobile: {
-        firstTile:
-          "В этом разделе представлен список всех необходимых документов для подачи заявки. Вы можете отметить выполненные этапы.",
-        progressBar:
-          "Индикатор показывает ваш текущий прогресс в процессе сбора документов.",
-        is_exist:
-          "Отметьте этот пункт, если документ у вас уже есть и не требует дополнительной подготовки или заказа.",
-        apostile:
-          "Это поле указывает, требуется ли апостиль для документа. Если да, он должен быть получен до подачи.",
-        notary:
-          "Показывает, необходимо ли нотариальное заверение документа перед подачей в соответствующие органы.",
-        translation:
-          "Это поле показывает, был ли документ переведен или еще требует перевода.",
-        ready_copies:
-          "Отмечает, были ли подготовлены заверенные копии документа перед подачей.",
-        sent: "Указывает, был ли документ уже отправлен, что помогает отслеживать статус подачи.",
-        documentSecondTile_3:
-          "Этот раздел содержит ссылки на документы, необходимые для подачи заявки в выбранном регионе.",
-        optionalDocumentsSection:
-          "Этот раздел содержит дополнительные документы, которые могут быть полезны, но не являются обязательными.",
-        printButton:
-          "Создайте PDF-версию списка документов для удобного просмотра или консультации.",
-      },
+          mobile: {
+            firstTile:
+              "Этот раздел содержит список документов, которые необходимо подготовить для подачи заявки. Вы можете отмечать выполненные этапы для удобства.",
+            progressBar:
+              "Индикатор прогресса помогает отслеживать, насколько близко вы к завершению сбора документов.",
+            is_exist:
+              "Отметьте этот пункт, если у вас уже есть документ, и дополнительная подготовка не требуется.",
+            apostile:
+              "Отметьте, если вы уже получили апостиль для документа. Если нет, позаботьтесь об этом перед подачей.",
+            notary:
+              "Отметьте, если документ уже заверен нотариусом. Это важный этап перед переводом.",
+            translation:
+              "Отметьте, если документ уже переведен. Если еще нет, организуйте это заранее.",
+            ready_copies:
+              "Отметьте, если вы подготовили нотариально заверенные копии документа, необходимые для подачи.",
+            sent:
+              "Отметьте, если документ уже был отправлен. Это поможет контролировать процесс подачи.",
+            documentSecondTile_3:
+              "Этот раздел содержит ссылки на документы, необходимые для подачи заявки в выбранном регионе.",
+            optionalDocumentsSection:
+              "Этот раздел содержит дополнительные документы, которые могут быть полезны, но не являются обязательными.",
+            printButton:
+              "Создайте PDF-версию списка документов для удобного просмотра и использования во время консультаций.",
+          },
     },
   }
 };
