@@ -55,15 +55,39 @@
 }
 .tutorialButton {
   position: fixed;
-  bottom: 580px;
-  right: 20px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  bottom: 605px;
+  right: -9px;
+  background-color: transparent; /* Прозорий фон */
+  border: 2px solid #013b6e; /* Зелений обвід */
+  color: #013b6e; /* Колір тексту/іконки */
+  border-radius: 50%; /* Робить кнопку круглою */
+  width: 40px; /* Зменшений розмір */
+  height: 40px; /* Зменшений розмір */
+  font-size: 18px; /* Розмір іконки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  z-index: 10001;
+  z-index: 200;
+
+  /* Додамо тінь для більш сучасного вигляду */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #013b6e; /* Фон при наведенні */
+    color: #fff; /* Білий текст/іконка при наведенні */
+  }
+}
+
+/* Медіа-запит для мобільних екранів */
+@media (max-width: 768px) {
+  .tutorialButton {
+    position: absolute;
+    bottom: 410px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    right: 37px;
+  }
 }

@@ -419,12 +419,26 @@ const DocumentTutorial = ({ category }) => {
 
       {/* Кнопка запуску туторіалу */}
       <button
-        className={styles.tutorialButton}
-        onClick={startTutorial}
-        data-tutorial="tutorialStartButton"
-      >
-        ❓
-      </button>
+  className={styles.tutorialButton}
+  onClick={startTutorial}
+  data-tutorial="tutorialStartButton"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="30"
+    height="30"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" stroke="black" fill="none" />
+    <line x1="12" y1="10" x2="12" y2="16" stroke="black" strokeWidth="2" />
+    <circle cx="12" cy="8" r="1" fill="black" />
+  </svg>
+</button>
     </>
   );
 };
