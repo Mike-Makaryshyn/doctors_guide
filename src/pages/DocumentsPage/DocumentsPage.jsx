@@ -657,12 +657,16 @@ const DocumentsPage = () => {
     language={language}
     category={category}
     checkboxes={dynamicData.checkboxes}
+    columnsFirst={columnsFirst}
+    columnsSecond={columnsSecond}
     documents={{
       mainEU: documentsEU,
       mainNonEU: documentsNonEU,
       second: documentsSecond,
       optional: documentsOptional,
     }}
+
+    
   />
       )}
     </MainLayout>
