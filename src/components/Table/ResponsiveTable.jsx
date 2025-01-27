@@ -30,34 +30,42 @@ const ResponsiveTable = forwardRef(({
   const isMobile = useIsMobile();
   const shouldRenderAsTiles = isMobile;
 
-  // Додайте реф до контейнера таблиці
   return (
-    <div className={cn(styles.tableContainer, customClass)} ref={ref}>
-      {title && <h2 className={styles.title}>{title}</h2>}
+    <div
+      className={cn(styles.tableContainer, customClass)}
+      ref={ref}
+      data-tutorial={title === "Подача заяв" ? "mainTable" : "secondTable"}
+    >
+      {title && (
+        <h2
+          className={styles.title}
+          data-tutorial={title === "Подача заяв" ? "mainTableTitle" : "secondTableTitle"}
+        >
+          {title}
+        </h2>
+      )}
 
-      {/* Рендер таблиці або плиток залежно від пристрою */}
       {shouldRenderAsTiles ? (
         <div className={styles.tileContainer}>
-          {data.map((row) => {
-            const isIncluded = !checkboxes[row.id]?.hide;
-            return (
-              <Tile
-                key={`tile-${row.id}`}
-                row={row}
-                columns={columns}
-                category={category}
-                selectedLanguage={selectedLanguage}
-                selectedRegion={selectedRegion}
-                tableFor={tableFor}
-                checkboxes={checkboxes}
-                handleCheckboxChange={handleCheckboxChange}
-                disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-                isMobile={isMobile}
-                isIncluded={!checkboxes[row.id]?.hide}
-                showCheckboxOnMobile={isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide}
-              />
-            );
-          })}
+          {data.map((row) => (
+            <Tile
+              key={`tile-${row.id}`}
+              row={row}
+              columns={columns}
+              category={category}
+              selectedLanguage={selectedLanguage}
+              selectedRegion={selectedRegion}
+              tableFor={tableFor}
+              checkboxes={checkboxes}
+              handleCheckboxChange={handleCheckboxChange}
+              disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+              isMobile={isMobile}
+              isIncluded={!checkboxes[row.id]?.hide}
+              showCheckboxOnMobile={
+                isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide
+              }
+            />
+          ))}
         </div>
       ) : (
         <table
@@ -70,12 +78,16 @@ const ResponsiveTable = forwardRef(({
         >
           {!hideHeader && (
             <thead>
-              <tr className={styles.tableHeader}>
+              <tr className={styles.tableHeader} data-tutorial="tableHeader">
                 {columns.map((col) => {
                   if (category === "EU" && col.name === "apostile") return null;
                   if (tableFor === "optional" && col.name === "hide") return null;
                   return (
-                    <th key={`header-${col.name}`} data-column={col.name}>
+                    <th
+                      key={`header-${col.name}`}
+                      data-column={col.name}
+                      data-tutorial={col.name === "links" ? "header-links" : `header-${col.name}`}
+                    >
                       {col.label?.[selectedLanguage] || col.name}
                     </th>
                   );

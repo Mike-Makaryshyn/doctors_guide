@@ -1,6 +1,12 @@
 // src/pages/DocumentsPage/DocumentsPage.jsx
 
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import { collection, doc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -13,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { columnsFirst } from "../../constants/translation/columnsFirst";
 import { columnsSecond } from "../../constants/translation/columnsSecond";
 import Tile from "../../components/Table/Tile";
+import DocumentTutorial from "../../components/Table/DocumentTutorial";
 // Імпортуємо документи
 import {
   documentsNonEU,
@@ -35,9 +42,9 @@ Modal.setAppElement("#root");
 
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
   const displayProgress = progress === 0 ? 5 : progress; // Мінімальна ширина при 0%
-  
+
   return (
-    <div className={styles.progressContainer}>
+    <div className={styles.progressContainer} data-tutorial="progressBar">
       <Tippy
         content={getMessage(progress)}
         animation="scale"
@@ -66,12 +73,13 @@ const ProgressBarWithTooltip = ({ progress, getMessage }) => {
         }}
       >
         <div className={styles.progressBar}>
-          <div 
-            className={styles.progress} 
+          <div
+            className={styles.progress}
             style={{ width: `${displayProgress}%` }}
+            data-tutorial="progressFill"
           >
             <span className={styles.progressText}>
-              {progress === 0 ? '0%' : `${progress}%`}
+              {progress === 0 ? "0%" : `${progress}%`}
             </span>
           </div>
         </div>
@@ -82,7 +90,7 @@ const ProgressBarWithTooltip = ({ progress, getMessage }) => {
 
 const DocumentsPage = () => {
   const {
-    selectedLanguage: language = 'de', // Встановлюємо мову на німецьку за замовчуванням
+    selectedLanguage: language = "de", // Встановлюємо мову на німецьку за замовчуванням
     selectedRegion,
     handleChangePage,
     user,
@@ -297,7 +305,8 @@ const DocumentsPage = () => {
           }
 
           // Перевіряємо, чи поле має значення "не потрібно" для поточної мови
-          const notNeeded = notNeededText[language] || notNeededText["de"] || "";
+          const notNeeded =
+            notNeededText[language] || notNeededText["de"] || "";
 
           if (fieldValue !== undefined && fieldValue !== notNeeded) {
             totalCheckboxes++;
@@ -389,7 +398,10 @@ const DocumentsPage = () => {
     const handleBeforeUnload = (event) => {
       const hasUnsavedChanges = Object.keys(dynamicData.checkboxes).some(
         (docId) => {
-          return JSON.stringify(dynamicData.checkboxes[docId]) !== JSON.stringify(lastSavedData.checkboxes[docId]);
+          return (
+            JSON.stringify(dynamicData.checkboxes[docId]) !==
+            JSON.stringify(lastSavedData.checkboxes[docId])
+          );
         }
       );
 
@@ -417,7 +429,13 @@ const DocumentsPage = () => {
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
-  }, [dynamicData.checkboxes, progress, updateFirestoreData, category, lastSavedData.checkboxes]);
+  }, [
+    dynamicData.checkboxes,
+    progress,
+    updateFirestoreData,
+    category,
+    lastSavedData.checkboxes,
+  ]);
 
   // Управління displayedProgress з флагом
   useEffect(() => {
@@ -482,200 +500,213 @@ const DocumentsPage = () => {
 
   return (
     <MainLayout>
+      <DocumentTutorial category={category} />
       <div className="page page1 containerBigger mt-20">
-        <div className="main_menu__content">
-          <div className={styles.table_wrapper}>
-            {/* Прогрес-бар */}
-            <ProgressBarWithTooltip
-              progress={displayedProgress} // Використовуйте displayedProgress
-              getMessage={getMessage}
-            />
+        <div className="page page1 containerBigger mt-20">
+          <div className="main_menu__content">
+            <div className={styles.table_wrapper}>
+              {/* Прогрес-бар */}
+              <ProgressBarWithTooltip
+                progress={displayedProgress} // Використовуйте displayedProgress
+                getMessage={getMessage}
+              />
 
-            <div ref={combinedRef}>
-              {selectedRegion && category ? (
-                <>
-                  {/* Основні документи + Включені опціональні документи */}
-                  <ResponsiveTable
-                    ref={mainTableRef} // Додаємо реф
-                    title={mainTitle}
-                    columns={columnsFirst}
-                    data={[
-                      ...(category === "Non-EU" ? documentsNonEU : documentsEU),
-                      ...includedOptionalDocuments, // Додаємо включені опціональні документи
-                    ]}
-                    setTableData={() => {}}
-                    selectedLanguage={language}
-                    selectedRegion={selectedRegion}
-                    category={category}
-                    tableFor="main"
-                    disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
-                    checkboxes={dynamicData.checkboxes}
-                    handleCheckboxChange={handleCheckboxChangeWrapper}
-                    customClass={
-                      category === "Non-EU" ? styles.mainTable : styles.euTable
-                    }
-                    isMobile={isMobile} // Передаємо isMobile
-                  />
-
-                  {/* Друга таблиця */}
-                  {user && (
+              <div ref={combinedRef}>
+                {selectedRegion && category ? (
+                  <>
+                    {/* Основні документи + Включені опціональні документи */}
                     <ResponsiveTable
-                      ref={secondTableRef} // Додаємо реф
-                      title={null}
-                      columns={columnsSecond}
-                      data={documentsSecond}
+                      columns={columnsFirst}
+                      data={[
+                        ...(category === "Non-EU"
+                          ? documentsNonEU
+                          : documentsEU),
+                        ...includedOptionalDocuments, // Додаємо включені опціональні документи
+                      ]}
                       setTableData={() => {}}
                       selectedLanguage={language}
                       selectedRegion={selectedRegion}
                       category={category}
-                      tableFor="second"
+                      tableFor="main"
                       disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
                       checkboxes={dynamicData.checkboxes}
                       handleCheckboxChange={handleCheckboxChangeWrapper}
-                      customClass={styles.secondTable}
+                      customClass={
+                        category === "Non-EU"
+                          ? styles.mainTable
+                          : styles.euTable
+                      }
                       isMobile={isMobile} // Передаємо isMobile
+                      title="Подача заяв" // Встановлюємо заголовок
+                      data-tutorial="mainTable" // Додаємо атрибут туторіалу
                     />
-                  )}
 
-                  {/* Відображення виключених опціональних документів як плиток */}
-                  {user && (
-                    <div className={styles.tileSection}>
-                      <h2 className={styles.optionalTitleHeader}>
-                        {optionalTitle}
-                      </h2>
-                      <div className={styles.tileContainer}>
-                        {excludedOptionalDocuments.map((row) => (
-                          <Tile
-                            key={`tile-${row.id}`}
-                            row={row}
-                            columns={getOptionalColumns()}
-                            category={category}
-                            selectedLanguage={language}
-                            selectedRegion={selectedRegion}
-                            tableFor="optional"
-                            checkboxes={dynamicData.checkboxes}
-                            handleCheckboxChange={handleCheckboxChangeWrapper}
-                            disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
-                            isMobile={isMobile}
-                            showCheckboxOnMobile={
-                              isMobile &&
-                              row.optional &&
-                              !dynamicData.checkboxes[row.id.toString()]?.hide
-                            }
-                          />
-                        ))}
+                    {/* Друга таблиця */}
+                    {user && (
+                      <ResponsiveTable
+                        columns={columnsSecond}
+                        data={documentsSecond}
+                        setTableData={() => {}}
+                        selectedLanguage={language}
+                        selectedRegion={selectedRegion}
+                        category={category}
+                        tableFor="second"
+                        disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
+                        checkboxes={dynamicData.checkboxes}
+                        handleCheckboxChange={handleCheckboxChangeWrapper}
+                        customClass={styles.secondTable}
+                        isMobile={isMobile} // Передаємо isMobile
+                        title="Second Documents" // Встановлюємо заголовок, якщо потрібно
+                        data-tutorial="secondTable" // Додаємо атрибут туторіалу
+                      />
+                    )}
+
+                    {/* Відображення виключених опціональних документів як плиток */}
+                    {user && (
+                      <div className={styles.tileSection} data-tutorial="optionalDocumentsSection">
+                        <h2 className={styles.optionalTitleHeader} data-tutorial="optionalDocumentsTitle">
+                          {optionalTitle}
+                        </h2>
+                        <div className={styles.tileContainer}>
+                          {excludedOptionalDocuments.map((row) => (
+                            <Tile
+                              key={`tile-${row.id}`}
+                              row={row}
+                              columns={getOptionalColumns()}
+                              category={category}
+                              selectedLanguage={language}
+                              selectedRegion={selectedRegion}
+                              tableFor="optional"
+                              checkboxes={dynamicData.checkboxes}
+                              handleCheckboxChange={handleCheckboxChangeWrapper}
+                              disableCheckboxBasedOnName={!user} // Відключаємо чекбокси для неавторизованих
+                              isMobile={isMobile}
+                              showCheckboxOnMobile={
+                                isMobile &&
+                                row.optional &&
+                                !dynamicData.checkboxes[row.id.toString()]?.hide
+                              }
+                            />
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </>
-              ) : (
-                // Перевірка, чи користувач авторизований, для відображення відповідного повідомлення
+                    )}
+                  </>
+                ) : // Перевірка, чи користувач авторизований, для відображення відповідного повідомлення
                 !user ? (
                   <>
                     {/* Проста таблиця для неавторизованих користувачів */}
                     <ResponsiveTable
-                      ref={mainTableRef} // Додаємо реф, якщо хочете захопити цю таблицю для PDF
-                      title={mainTitle}
                       columns={columnsFirst}
-                      data={documentsNonEU} 
-                      // Використовуємо documentsNonEU для неавторизованих
+                      data={documentsNonEU}
                       setTableData={() => {}}
                       selectedLanguage={language}
                       selectedRegion={selectedRegion}
-                      category={"Non-EU"} 
-                      // Встановлюємо категорію на Non-EU
+                      category={"Non-EU"}
                       tableFor="main"
                       disableCheckboxBasedOnName={!user}
                       checkboxes={dynamicData.checkboxes}
                       handleCheckboxChange={handleCheckboxChangeWrapper}
                       customClass={styles.mainTable}
                       isMobile={isMobile}
+                      title="Подача заяв" // Встановлюємо заголовок
+                      data-tutorial="mainTable" // Додаємо атрибут туторіалу
                     />
 
                     {/* Повідомлення для неавторизованих користувачів */}
-                    <div className={styles.noAccessMessage}>
-                      <p>Bitte melden Sie sich an oder registrieren Sie sich, um mit den Dokumenten zu interagieren.</p>
+                    <div className={styles.noAccessMessage} data-tutorial="noAccessMessage">
+                      <p>
+                        Bitte melden Sie sich an oder registrieren Sie sich, um
+                        mit den Dokumenten zu interagieren.
+                      </p>
                     </div>
                   </>
                 ) : (
-                  <div className={styles.loadingMessage}>
+                  <div className={styles.loadingMessage} data-tutorial="loadingMessage">
                     Daten werden geladen...
                   </div>
-                )
-              )}
+                )}
+              </div>
             </div>
+
+            {/* Приховані або відключені лінки для неавторизованих користувачів */}
+            {user && (
+              <>
+                <button
+                  className={styles.backButton}
+                  onClick={() => handleChangePage("/main_menu")}
+                  data-tutorial="backButton"
+                >
+                  &#8592;
+                </button>
+                {/* Додати кнопку друку */}
+                <button
+                  className={styles.printButton}
+                  onClick={handleOpenPDFModal}
+                  title="Друкувати PDF"
+                  data-tutorial="printButton"
+                >
+                  <FaPrint />
+                </button>
+              </>
+            )}
           </div>
-
-          {/* Приховані або відключені лінки для неавторизованих користувачів */}
-          {user && (
-            <>
-              <button
-                className={styles.backButton}
-                onClick={() => handleChangePage("/main_menu")}
-              >
-                &#8592;
-              </button>
-              {/* Додати кнопку друку */}
-              <button
-  className={styles.printButton}
-  onClick={handleOpenPDFModal}
-  title="Друкувати PDF"
->
-  <FaPrint />
-</button>
-            </>
-          )}
         </div>
+
+        {/* Модальне вікно для авторизації */}
+        <Modal
+          isOpen={showAuthModal}
+          onRequestClose={handleCloseAuthModal}
+          contentLabel="Authentifizierung erforderlich"
+          className={styles.modal}
+          overlayClassName={styles.modalOverlay}
+          data-tutorial="authModal" // Додаємо атрибут туторіалу
+        >
+          {/* Хрестик для закриття модального вікна */}
+          <button
+            className={styles.modalCloseButton}
+            onClick={handleCloseAuthModal}
+            aria-label="Close modal"
+            data-tutorial="authModalCloseButton" // Додаємо атрибут туторіалу
+          >
+            <AiOutlineClose />
+          </button>
+          <h2 data-tutorial="authModalTitle">Authentifizierung erforderlich</h2>
+          <p data-tutorial="authModalContent">
+            Bitte melden Sie sich an oder registrieren Sie sich, um mit den
+            Dokumenten zu interagieren.
+          </p>
+          <button
+            className={styles.authorizeButton}
+            onClick={() => {
+              handleCloseAuthModal();
+              navigate("/auth"); // Використання navigate для перенаправлення
+            }}
+            data-tutorial="authModalAuthorizeButton" // Додаємо атрибут туторіалу
+          >
+            Anmelden
+          </button>
+        </Modal>
+
+        {/* Модальне вікно для генерації PDF */}
+        {isPDFModalOpen && (
+          <PDFTable
+            onClose={handleClosePDFModal}
+            language={language}
+            category={category}
+            checkboxes={dynamicData.checkboxes}
+            columnsFirst={columnsFirst}
+            columnsSecond={columnsSecond}
+            documents={{
+              mainEU: documentsEU,
+              mainNonEU: documentsNonEU,
+              second: documentsSecond,
+              optional: documentsOptional,
+            }}
+            data-tutorial="pdfModal" // Додаємо атрибут туторіалу
+          />
+        )}
       </div>
-
-      {/* Модальне вікно для авторизації */}
-      <Modal
-        isOpen={showAuthModal}
-        onRequestClose={handleCloseAuthModal}
-        contentLabel="Authentifizierung erforderlich"
-        className={styles.modal}
-        overlayClassName={styles.modalOverlay}
-      >
-        {/* Хрестик для закриття модального вікна */}
-        <button
-          className={styles.modalCloseButton}
-          onClick={handleCloseAuthModal}
-          aria-label="Close modal"
-        >
-          <AiOutlineClose />
-        </button>
-        <h2>Authentifizierung erforderlich</h2>
-        <p>Bitte melden Sie sich an oder registrieren Sie sich, um mit den Dokumenten zu interagieren.</p>
-        <button
-          className={styles.authorizeButton}
-          onClick={() => {
-            handleCloseAuthModal();
-            navigate(pathList.auth.path); // Використання navigate для перенаправлення
-          }}
-        >
-          Anmelden
-        </button>
-      </Modal>
-
-      {/* Модальне вікно для генерації PDF */}
-      {isPDFModalOpen && (
-  <PDFTable
-    onClose={handleClosePDFModal}
-    language={language}
-    category={category}
-    checkboxes={dynamicData.checkboxes}
-    columnsFirst={columnsFirst}
-    columnsSecond={columnsSecond}
-    documents={{
-      mainEU: documentsEU,
-      mainNonEU: documentsNonEU,
-      second: documentsSecond,
-      optional: documentsOptional,
-    }}
-
-    
-  />
-      )}
     </MainLayout>
   );
 };

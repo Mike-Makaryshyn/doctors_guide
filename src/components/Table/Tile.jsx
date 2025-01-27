@@ -139,6 +139,7 @@ const Tile = ({
             e.stopPropagation();
             window.open(linkToOpen, "_blank");
           }}
+          data-tutorial="linkElement" // Додаємо атрибут туторіалу
         >
           <span className={styles.linkLabel}>{linkText}</span>
         </div>
@@ -149,7 +150,7 @@ const Tile = ({
   };
 
   return (
-    <div className={tileClass} onClick={() => hidden && onTileClick()}>
+    <div className={tileClass} onClick={() => hidden && onTileClick()} data-tutorial={`tile-${row.id}`}>
       <div className={styles.tileHeader}>
         <div
           className={styles.tileTitle}
@@ -160,6 +161,7 @@ const Tile = ({
                 ? "#013b6e"
                 : "",
           }}
+          data-tutorial="tileTitle" // Додаємо атрибут туторіалу
         >
           {row.category?.[selectedLanguage] ||
             row.name?.[selectedLanguage] ||
@@ -178,6 +180,7 @@ const Tile = ({
                   ? "Додати документ"
                   : "Видалити документ"
               }
+              data-tutorial="optionalDocumentToggle" // Додаємо атрибут туторіалу
             >
               {checkboxes[row.id]?.hide ? "➕" : "❌"}
             </button>
@@ -193,6 +196,7 @@ const Tile = ({
                 <div
                   className={styles.checkboxBox}
                   key={`link-${row.id}-${col.name}`}
+                  data-tutorial="header-links" // Додаємо атрибут туторіалу
                 >
                   {getLinkElement(
                     row,
@@ -214,6 +218,7 @@ const Tile = ({
                 className={cn(styles.checkboxBox, {
                   [styles.optional]: tableFor === "optional",
                 })}
+                data-tutorial={`checkboxBox-${col.name}`} // Додаємо атрибут туторіалу
               >
                 <MobileCheckbox
                   id={`checkbox-${row.id}-${col.name}`}
@@ -225,6 +230,7 @@ const Tile = ({
                     columnsFirst.find((item) => item.name === col.name)
                       ?.shortLabel[selectedLanguage] || col.name
                   }
+                  data-tutorial={`mobileCheckbox-${col.name}`} // Додаємо атрибут туторіалу
                 />
               </div>
             );
@@ -234,6 +240,7 @@ const Tile = ({
               className={cn(styles.linkContainer, {
                 [styles.linkContainerActive]: allChecked,
               })}
+              data-tutorial="rov17NotaryLink" // Додаємо атрибут туторіалу
             >
               <a
                 className={cn(styles.link, styles.linkLabel)} // Додаємо клас linkLabel
@@ -249,7 +256,7 @@ const Tile = ({
       )}
 
       {allChecked && !hidden && showCompletion && (
-        <div className={styles.completionOverlay}>
+        <div className={styles.completionOverlay} data-tutorial="completionOverlay">
           <span style={{ fontSize: "3rem", color: "#4caf50" }}>✔️</span>
         </div>
       )}

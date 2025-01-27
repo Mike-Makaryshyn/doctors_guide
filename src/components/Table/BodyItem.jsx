@@ -9,10 +9,6 @@ import MobileCheckbox from "../Checkbox/MobileCheckbox";
 import docIcon from "../../assets/mark.svg";
 import { sendOriginalText } from "../../constants/translation/documents";
 
-/**
- * Це компонент для відображення одного рядка (row) у таблиці (десктопний режим).
- * Для мобільного tile-режиму логіка відмалювання знаходиться у ResponsiveTable.jsx.
- */
 const BodyItem = React.memo(
   ({
     row,
@@ -30,29 +26,21 @@ const BodyItem = React.memo(
     selectedRegion,
     checkboxes,
     isMobile,
-    isOptional, // Новий проп для визначення опціональних документів
+    isOptional,
   }) => {
-    /** Вмикає/вимикає поле (наприклад, "hide") або будь-яке інше */
     const onCheckboxChange = (fieldName) => {
-      console.log(
-        `Checkbox changed: documentId=${row.id}, fieldName=${fieldName}`
-      );
       handleCheckboxChange(row.id.toString(), fieldName);
     };
 
-    /** Приховує опціональний документ (hide = true/false) */
     const onHiddenChange = () => {
-      console.log(`Hidden checkbox changed: documentId=${row.id}`);
       handleCheckboxChange(row.id.toString(), "hide");
     };
 
-    /** Головна функція для відмалювання посилань у десктоп-режимі. */
     const getLink = () => {
       if (row.links) {
         if (!selectedRegion) {
-          console.warn("No region selected.");
           return (
-            <div className={styles.linkWrapper}>
+            <div className={styles.linkWrapper} data-tutorial="selectRegionLink">
               <a
                 href="/lands"
                 rel="noopener noreferrer"
@@ -63,10 +51,6 @@ const BodyItem = React.memo(
             </div>
           );
         }
-
-        console.log(
-          `Processing doc ID ${row.id}, region "${selectedRegion}", category "${category}"`
-        );
 
         const requiredFor = Array.isArray(row.requiredFor)
           ? row.requiredFor.map((item) => item.trim().toLowerCase())
@@ -86,7 +70,7 @@ const BodyItem = React.memo(
 
             if (regionalLink) {
               return (
-                <div className={styles.linkWrapper}>
+                <div className={styles.linkWrapper} data-tutorial="regionalLink">
                   <a
                     href={regionalLink.link}
                     target="_blank"
@@ -104,7 +88,7 @@ const BodyItem = React.memo(
 
               if (generalLink) {
                 return (
-                  <div className={styles.linkWrapper}>
+                  <div className={styles.linkWrapper} data-tutorial="generalLink">
                     <a
                       href={generalLink.link}
                       target="_blank"
@@ -117,7 +101,7 @@ const BodyItem = React.memo(
                 );
               } else {
                 return (
-                  <div className={styles.linkWrapper}>
+                  <div className={styles.linkWrapper} data-tutorial="noGeneralLink">
                     <span className={styles.warning}>
                       No 'General' link found.
                     </span>
@@ -127,7 +111,7 @@ const BodyItem = React.memo(
             }
           } else {
             return (
-              <div className={styles.linkWrapper}>
+              <div className={styles.linkWrapper} data-tutorial="noCategoryLinks">
                 <span className={styles.warning}>
                   No links available for this category.
                 </span>
@@ -136,7 +120,7 @@ const BodyItem = React.memo(
           }
         } else {
           return (
-            <div className={styles.linkWrapper}>
+            <div className={styles.linkWrapper} data-tutorial="notRequiredForCategory">
               <span className={styles.info}>
                 Not required for this category.
               </span>
@@ -145,7 +129,7 @@ const BodyItem = React.memo(
         }
       } else if (row.singleLink) {
         return (
-          <div className={styles.linkWrapper}>
+          <div className={styles.linkWrapper} data-tutorial="singleLink">
             <a
               href={row.singleLink.link}
               target="_blank"
@@ -158,21 +142,16 @@ const BodyItem = React.memo(
         );
       } else {
         return (
-          <div className={styles.linkWrapper}>
+          <div className={styles.linkWrapper} data-tutorial="noLinks">
             <span className={styles.warning}>No links found.</span>
           </div>
         );
       }
     };
 
-    /**
-     * Чи всі чекбокси по цьому документу відмічені.
-     * (Не враховуємо поле "hide" і "links".)
-     */
     const areAllCheckedLocal = () => {
       const rowCheckboxes = columns.filter((col) => {
         if (tableFor === "optional" && col.name === "hide") return false;
-        // Не враховуємо links
         return typeof row[col.name] !== "undefined" && col.name !== "links";
       });
 
@@ -183,10 +162,9 @@ const BodyItem = React.memo(
 
     const allChecked = areAllCheckedLocal();
 
-    /** Обробник кліку по рядку */
     const handleRowClick = () => {
       if (isOptional && checkboxes[row.id.toString()]?.hide) {
-        handleCheckboxChange(row.id.toString(), "hide"); // Включаємо документ
+        handleCheckboxChange(row.id.toString(), "hide");
       }
     };
 
@@ -201,36 +179,34 @@ const BodyItem = React.memo(
             ? styles.rowExcluded
             : ""
         )}
-        onClick={handleRowClick} // Додаємо обробник події
+        onClick={handleRowClick}
       >
         {columns.map((column, columnIndex) => {
-          // Для категорії EU приховуємо колонку "apostile"
           if (category === "EU" && column.name === "apostile") return null;
 
-          // Повертаємо стандартну <td> + логіку
           return (
             <td
               key={`cell-${row.id}-${columnIndex}`}
               className={styles.tableCell}
-              data-column={column.name} // Додаємо атрибут для SCSS
+              data-column={column.name}
+              data-tutorial={
+                column.name === "links" ? "linksColumn" : undefined
+              }
             >
-              {/* Якщо це колонка LINKS -> викликаємо getLink() */}
               {column.name === "links" ? (
                 getLink()
               ) : column.name === "name" ? (
-                <div className={styles.nameField}>
+                <div className={styles.nameField} data-tutorial="nameColumn">
                   {row.name?.[language] || "N/A"}
                 </div>
-              ) : // Якщо значення поля містить "check", значить це чекбокс
-              // (Але більше не вимагаємо це для "notary" колонки!)
-              typeof row?.[column?.name] === "string" &&
-              row?.[column?.name]?.includes("check") ? (
+              ) : typeof row?.[column?.name] === "string" &&
+                row?.[column?.name]?.includes("check") ? (
                 !checkboxes[row.id.toString()]?.hide && (
                   <div
                     className={styles.checkbox_wrapper}
                     onClick={(e) => e.stopPropagation()}
+                    data-tutorial={`checkbox-${column.name}`}
                   >
-                    {/* Якщо треба іконка */}
                     {row?.[`${column.name}_showIcon`] && (
                       <img
                         className={styles.req_img}
@@ -239,7 +215,6 @@ const BodyItem = React.memo(
                       />
                     )}
 
-                    {/* Мобільний vs десктопний рендер чекбоксу */}
                     {isMobile ? (
                       <div className={styles.checkboxGroup}>
                         <div className={styles.checkboxItem}>
@@ -253,7 +228,7 @@ const BodyItem = React.memo(
                               false
                             }
                             onChange={() => onCheckboxChange(column.name)}
-                            onClick={(e) => e.stopPropagation()} // Зупинка поширення
+                            onClick={(e) => e.stopPropagation()}
                             disabled={
                               disableCheckboxBasedOnName &&
                               hasNameColumn &&
@@ -270,26 +245,27 @@ const BodyItem = React.memo(
                           checkboxes[row.id.toString()]?.[column.name] || false
                         }
                         onChange={() => onCheckboxChange(column.name)}
-                        onClick={(e) => e.stopPropagation()} // Зупинка поширення
+                        onClick={(e) => e.stopPropagation()}
                         disabled={
                           disableCheckboxBasedOnName &&
                           hasNameColumn &&
                           row.name !== "Included"
                         }
                         label=""
+                        data-tutorial={`checkbox-${column.name}-desktop`}
                       />
                     )}
 
-                    {/* Якщо row.id===17 і column.name=== 'notary', 
-                        то навіть якщо значення поля НЕ містить 'check',
-                        ми все одно покажемо посилання (або текст). */}
                     {row?.id === 17 && column.name === "notary" && (
-                      <div className={styles.checkbox_link_container}>
+                      <div
+                        className={styles.checkbox_link_container}
+                        data-tutorial="rov17NotaryLink"
+                      >
                         <a
                           className={styles.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          href={row?.link || "#"}
+                          href={row?.link}
                         >
                           {sendOriginalText[language] || sendOriginalText["en"]}
                         </a>
@@ -297,15 +273,12 @@ const BodyItem = React.memo(
                     )}
                   </div>
                 )
-              ) : // Якщо поле — просто string (і не містить "check")
-              row?.id === 17 && column.name === "notary" ? (
-                // Тут альтернативний випадок: якщо це саме notary-колонка для row=17, 
-                // але значення не містить 'check'. Все одно показуємо посилання.
+              ) : row?.id === 17 && column.name === "notary" ? (
                 <div
                   className={styles.checkbox_link_container}
                   onClick={(e) => e.stopPropagation()}
+                  data-tutorial="notaryLinkAlternative"
                 >
-                  {/* Якщо треба, можна вставити іконку, якщо бажаєте */}
                   <a
                     className={styles.link}
                     target="_blank"
@@ -315,22 +288,19 @@ const BodyItem = React.memo(
                     {sendOriginalText[language] || sendOriginalText["en"]}
                   </a>
                 </div>
-              ) : // Інакше — звичайний текст
-              typeof row?.[column?.name] === "string" ? (
-                <div className={styles.cellContent}>
+              ) : typeof row?.[column?.name] === "string" ? (
+                <div className={styles.cellContent} data-tutorial="textContent">
                   <div>
                     {row?.[column?.name]?.substring(0, 20)}
                     {row?.[column?.name]?.length > 20 ? "..." : ""}
                   </div>
                 </div>
-              ) : // Якщо поле — об'єкт (текст для різних мов)
-              typeof row?.[column?.name] === "object" ? (
-                <div className={styles.cellContent}>
+              ) : typeof row?.[column?.name] === "object" ? (
+                <div className={styles.cellContent} data-tutorial="objectContent">
                   <div>{row?.[column?.name]?.[language] || "N/A"}</div>
                 </div>
               ) : null}
 
-              {/* Якщо документ опціональний - відображати "Included/Excluded" */}
               {row?.optional &&
                 column?.name === "category" &&
                 !checkboxes[row.id.toString()]?.hide && (
@@ -339,6 +309,7 @@ const BodyItem = React.memo(
                       styles.optionalCheckboxWrapper,
                       "optional_checkbox_wrapper"
                     )}
+                    data-tutorial="optionalDocument"
                   >
                     <button
                       className={styles.crossButtonbody}
@@ -353,16 +324,15 @@ const BodyItem = React.memo(
           );
         })}
 
-        {/* Додамо кнопку закриття для мобільних пристроїв (як було) */}
         {isMobile &&
           tableFor === "main" &&
           checkboxes[row.id.toString()]?.hide === false && (
-            <td className={styles.tableCell}>
+            <td className={styles.tableCell} data-tutorial="closeButton">
               <button
                 className={styles.closeButton}
                 onClick={(e) => {
                   e.stopPropagation();
-                  onHiddenChange(); // Виключаємо документ
+                  onHiddenChange();
                 }}
                 aria-label="Виключити документ"
               >
