@@ -1,46 +1,64 @@
+/* src/components/Table/DocumentTutorial.module.scss */
+
+/* Глобальні стилі для react-joyride */
+:global(.react-joyride__tooltip) {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  padding: 16px;
+  transition: all 0.3s ease-in-out; /* Плавніша анімація */
+}
+
+:global(.react-joyride__tooltip h3) {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+:global(.react-joyride__tooltip p) {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--next) {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+:global(.react-joyride__close) {
+  display: none; /* Приховуємо кнопку закриття */
+}
+
+/* Локальні стилі */
+
+
 .tutorialButton {
-    position: fixed;
-    top: 85px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #388e3c;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #388e3c;
-    }
-  }
-  /* Додаткові стилі для підказок, якщо потрібно */
-.joyride-tooltip {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .joyride-tooltip__content {
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .joyride-tooltip__controls {
-    display: flex;
-    justify-content: space-between;
-  }
-  .react-joyride__tooltip {
-    position: fixed !important;
-  }
-  .react-joyride__tooltip {
-    position: absolute !important;
-    top: 80px !important; /* Встановлюємо відступ від верхнього краю */
-    left: 50% !important;
-    transform: translateX(-50%);
-    z-index: 1050 !important;
-    max-width: 400px;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+}

@@ -47,25 +47,39 @@ const ResponsiveTable = forwardRef(({
 
       {shouldRenderAsTiles ? (
         <div className={styles.tileContainer}>
-          {data.map((row) => (
-            <Tile
-              key={`tile-${row.id}`}
-              row={row}
-              columns={columns}
-              category={category}
-              selectedLanguage={selectedLanguage}
-              selectedRegion={selectedRegion}
-              tableFor={tableFor}
-              checkboxes={checkboxes}
-              handleCheckboxChange={handleCheckboxChange}
-              disableCheckboxBasedOnName={disableCheckboxBasedOnName}
-              isMobile={isMobile}
-              isIncluded={!checkboxes[row.id]?.hide}
-              showCheckboxOnMobile={
-                isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide
-              }
-            />
-          ))}
+          {data.map((row, index) => {
+            // Визначаємо, чи це перший або другий тайл
+            let dataTutorialTarget = `tile-${index + 1}`;
+            if (tableFor === "main" && index === 0) {
+              dataTutorialTarget = "firstTile";
+            }
+            if (tableFor === "main" && index === 1) {
+              dataTutorialTarget = "secondTile-checkboxes";
+            }
+            // Визначаємо, чи це третя плитка в `SecondTable`
+            const isSecondTableThirdTile = tableFor === "second" && index === 2;
+
+            return (
+              <Tile
+                key={`tile-${row.id}`}
+                row={row}
+                columns={columns}
+                category={category}
+                selectedLanguage={selectedLanguage}
+                selectedRegion={selectedRegion}
+                tableFor={tableFor}
+                checkboxes={checkboxes}
+                handleCheckboxChange={handleCheckboxChange}
+                disableCheckboxBasedOnName={disableCheckboxBasedOnName}
+                isMobile={isMobile}
+                showCheckboxOnMobile={
+                  isMobile && tableFor === "main" && row.optional && !checkboxes[row.id]?.hide
+                }
+                dataIndex={index + 1} // Додаємо індекс для унікальності таргетів
+                isSecondTableThirdTile={isSecondTableThirdTile} // Передаємо прапорець
+              />
+            );
+          })}
         </div>
       ) : (
         <table

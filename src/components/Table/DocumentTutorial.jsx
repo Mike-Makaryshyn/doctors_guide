@@ -5,11 +5,13 @@ import Joyride, { STATUS } from "react-joyride";
 import styles from "./DocumentTutorial.module.scss";
 import tutorialTranslations from "../../constants/DocumentTutorialtransaltion"; // Імпорт перекладів
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // Імпорт хука для глобальної інформації
+import useIsMobile from "../../hooks/useIsMobile"; // Імпорт хука для визначення мобільного пристрою
 
 const DocumentTutorial = ({ category }) => {
   const [run, setRun] = useState(false);
-  const { selectedLanguage: language = "de" } = useGetGlobalInfo(); // Отримання поточної мови
+  const { selectedLanguage: language = "en" } = useGetGlobalInfo(); // Отримання поточної мови
   const topRef = useRef(null); // Створення ref до верхнього елемента
+  const isMobile = useIsMobile(); // Визначення типу пристрою
 
   // Функція для ручного запуску туторіалу
   const startTutorial = () => {
@@ -24,6 +26,7 @@ const DocumentTutorial = ({ category }) => {
 
   useEffect(() => {
     const hasSeenTutorial = localStorage.getItem("hasSeenTutorial");
+
     if (!hasSeenTutorial) {
       // Додати невелике затримку, щоб гарантувати завершення прокручування
       setTimeout(() => {
@@ -34,11 +37,12 @@ const DocumentTutorial = ({ category }) => {
   }, []);
 
   // Створення кроків на основі перекладів
-  const steps = [
-  
+  const desktopSteps = [
     {
       target: "[data-tutorial='mainTable']",
-      content: tutorialTranslations[language]?.steps.mainTable || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.mainTable ||
+        "Default content",
       placement: "auto",
       disableBeacon: true,
       spotlightClicks: true,
@@ -50,19 +54,10 @@ const DocumentTutorial = ({ category }) => {
       },
     },
     {
-      target: "[data-tutorial='header-is_exist']",
-      content: tutorialTranslations[language]?.steps.header_is_exist || "Default content",
-      placement: "auto",
-      styles: {
-        tooltip: {
-          maxWidth: "300px",
-          textAlign: "auto",
-        },
-      },
-    },
-    {
       target: "[data-tutorial='header-apostile']",
-      content: tutorialTranslations[language]?.steps.header_apostile || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_apostile ||
+        "Default content",
       placement: "auto",
       disableScrolling: false,
       styles: {
@@ -74,7 +69,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-notary']",
-      content: tutorialTranslations[language]?.steps.header_notary || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_notary ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -85,7 +82,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-translation']",
-      content: tutorialTranslations[language]?.steps.header_translation || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_translation ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -96,7 +95,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-ready_copies']",
-      content: tutorialTranslations[language]?.steps.header_ready_copies || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_ready_copies ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -107,7 +108,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-sent']",
-      content: tutorialTranslations[language]?.steps.header_sent || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_sent ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -118,7 +121,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-links']",
-      content: tutorialTranslations[language]?.steps.header_links || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.header_links ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -129,7 +134,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='secondTable']",
-      content: tutorialTranslations[language]?.steps.secondTable || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.secondTable ||
+        "Default content",
       placement: "top",
       styles: {
         tooltip: {
@@ -140,7 +147,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='regionalLink']",
-      content: tutorialTranslations[language]?.steps.regionalLink || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.regionalLink ||
+        "Default content",
       placement: "bottom",
       styles: {
         tooltip: {
@@ -151,7 +160,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='optionalDocumentsSection']",
-      content: tutorialTranslations[language]?.steps.optionalDocumentsSection || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.optionalDocumentsSection ||
+        "Default content",
       placement: "auto",
       styles: {
         tooltip: {
@@ -162,7 +173,9 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='printButton']",
-      content: tutorialTranslations[language]?.steps.printButton || "Default content",
+      content:
+        tutorialTranslations[language]?.steps.printButton ||
+        "Default content",
       placement: "top",
       styles: {
         tooltip: {
@@ -173,84 +186,197 @@ const DocumentTutorial = ({ category }) => {
     },
   ];
 
-  // Функція для коригування позиції підказки
-  const adjustTooltipPosition = () => {
-    const tooltips = document.querySelectorAll(".react-joyride__tooltip");
-    tooltips.forEach((tooltip) => {
-      const rect = tooltip.getBoundingClientRect();
-      if (rect.top < 50) { // Зменшено до 50px для більш гнучкого відступу
-        tooltip.style.top = "70px";  // Встановити мінімальний відступ
-      }
-      if (rect.bottom > window.innerHeight) {
-        tooltip.style.bottom = "70px"; // Встановити відступ зверху, якщо підказка виходить вниз
-      }
-    });
-  };
+  const mobileSteps = [
+    {
+      target: "[data-tutorial='firstTile']", // Перший тайл
+      content:
+        tutorialTranslations[language]?.steps.mobile.firstTile ||
+        "Default content",
+      placement: "bottom",
+      disableBeacon: true,
+      spotlightClicks: true,
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='secondTile-checkboxes']", // Другий тайл з чекбоксами
+      content:
+        tutorialTranslations[language]?.steps.mobile.secondTileCheckboxes ||
+        "Default content",
+      placement: "bottom",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='is_exist']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.is_exist ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='apostile']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.apostile ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='notary']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.notary ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='translation']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.translation ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='ready_copies']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.ready_copies ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='sent']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.sent ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "250px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='documentSecondTile-3']", // Tile в DocumentSecond
+      content:
+        tutorialTranslations[language]?.steps.mobile.documentSecondTile_3 ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='optionalDocumentsSection']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.optionalDocumentsSection ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "left",
+        },
+      },
+    },
+    {
+      target: "[data-tutorial='printButton']",
+      content:
+        tutorialTranslations[language]?.steps.mobile.printButton ||
+        "Default content",
+      placement: "top",
+      styles: {
+        tooltip: {
+          maxWidth: "300px",
+          textAlign: "center",
+        },
+      },
+      disableScroll: true,
+      offset: 20,
+    },
+  ];
+
+  const steps = isMobile ? mobileSteps : desktopSteps;
 
   // Колбек для обробки подій туторіалу
   const handleJoyrideCallback = (data) => {
-    const { status, action, index } = data;
+    const { status } = data;
 
-    // Зупиняємо туторіал лише після завершення або пропуску
     if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
       setRun(false);
-    }
 
-    if (action === "start" || action === "next") {
-      if (index === 0) {
-        // Прокрутка до верху сторінки для першого кроку
-        if (topRef.current) {
-          topRef.current.scrollIntoView({ behavior: "auto" });
-        } else {
-          window.scrollTo({
-            top: 0,
-            behavior: "auto",
-          });
-        }
-      } else {
-        const stepElement = document.querySelector(steps[index]?.target);
-        if (stepElement) {
-          const rect = stepElement.getBoundingClientRect();
-          const offsetTop =
-            window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
-          window.scrollTo({
-            top: offsetTop > 0 ? offsetTop : 0,
-            behavior: "smooth",
-          });
-        }
-      }
+      // Прокрутка до верху сторінки після завершення туторіалу
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
-
-    // Логування для налагодження
-    console.log("Joyride event:", data);
   };
-
-  useEffect(() => {
-    adjustTooltipPosition();
-  }, [run]);
 
   return (
     <>
       {/* Невидимий елемент на верху сторінки */}
       <div ref={topRef} data-tutorial="topRef"></div>
-      
+
       <Joyride
         steps={steps}
         run={run}
         continuous={true}
         scrollToFirstStep={false} // Відключаємо автоматичне прокручування до першого кроку
-        scrollOffset={100}        // Враховує висоту хедера
+        scrollOffset={100} // Враховує висоту хедера
         showSkipButton={true}
         showProgress={true}
         styles={{
           options: {
             primaryColor: "#4caf50",
             zIndex: 10000,
-            tooltipOffset: 20,  // Відступ для уникнення перекриття
+            tooltipOffset: 20, // Відступ для уникнення перекриття
             arrowColor: "#4caf50",
             overlayColor: "rgba(0, 0, 0, 0.5)",
-            spotlightPadding: 20,  // Додає відступи для уникнення виходу за екран
+            spotlightPadding: 20, // Додає відступи для уникнення виходу за екран
+            transition: "opacity 0.3s ease, transform 0.3s ease", // Плавніша анімація
           },
+          // Видаляємо всі класові імена, щоб уникнути помилок
         }}
         callback={handleJoyrideCallback}
       />

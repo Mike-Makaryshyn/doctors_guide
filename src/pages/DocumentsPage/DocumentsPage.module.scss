@@ -326,7 +326,7 @@
       .linkLabel {
         font-weight: bold;
         font-size: 0.9rem;
-        color: #ffffff;
+        color: #013b6e;
         text-align: center;
       }
 
@@ -743,7 +743,16 @@
   }
   .printButton {
     @extend .backButton;  // Наслідуємо всі властивості з .backButton
-  
+    z-index: 10001; 
     left: auto;      // Знімаємо "left", щоб не перекривалася позиція
-    right: 0px;     // Закріплюємо по правому краю
+    right: 0px;  
+       // Закріплюємо по правому краю
   }
+  @media (max-width: 768px) {
+  .printButton {
+    right: 10px;
+    bottom: 10px;
+    width: 28px;
+    height: 22px;
+  }
+}

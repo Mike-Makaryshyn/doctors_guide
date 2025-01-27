@@ -20,6 +20,8 @@ const Tile = ({
   disableCheckboxBasedOnName,
   showCheckboxOnMobile,
   isMobile,
+  dataIndex, // Новий пропс для індексу плитки
+  isSecondTableThirdTile, // Новий пропс для третьої плитки в SecondTable
 }) => {
   const isOptional = tableFor === "optional";
   const hidden = isOptional ? checkboxes[row.id]?.hide : false;
@@ -149,8 +151,22 @@ const Tile = ({
     }
   };
 
+  // Визначення унікального таргета для тайлів
+  let dataTutorialTarget = `tile-${dataIndex}`;
+  if (isSecondTableThirdTile) {
+    dataTutorialTarget = `documentSecondTile-3`;
+  } else if (tableFor === "main" && dataIndex === 1) {
+    dataTutorialTarget = `firstTile`;
+  } else if (tableFor === "main" && dataIndex === 2) {
+    dataTutorialTarget = `secondTile-checkboxes`;
+  }
+
   return (
-    <div className={tileClass} onClick={() => hidden && onTileClick()} data-tutorial={`tile-${row.id}`}>
+    <div
+      className={tileClass}
+      onClick={() => hidden && onTileClick()}
+      data-tutorial={dataTutorialTarget} // Унікальний атрибут
+    >
       <div className={styles.tileHeader}>
         <div
           className={styles.tileTitle}
@@ -218,7 +234,7 @@ const Tile = ({
                 className={cn(styles.checkboxBox, {
                   [styles.optional]: tableFor === "optional",
                 })}
-                data-tutorial={`checkboxBox-${col.name}`} // Додаємо атрибут туторіалу
+                data-tutorial={`${col.name}`} // Додаємо атрибут туторіалу
               >
                 <MobileCheckbox
                   id={`checkbox-${row.id}-${col.name}`}
@@ -277,6 +293,13 @@ Tile.propTypes = {
   disableCheckboxBasedOnName: PropTypes.bool.isRequired,
   isMobile: PropTypes.bool.isRequired,
   showCheckboxOnMobile: PropTypes.bool.isRequired,
+  dataIndex: PropTypes.number, // Новий пропс
+  isSecondTableThirdTile: PropTypes.bool, // Новий пропс
+};
+
+Tile.defaultProps = {
+  dataIndex: 1, // Значення за замовчуванням
+  isSecondTableThirdTile: false, // Значення за замовчуванням
 };
 
 export default Tile;

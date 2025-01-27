@@ -235,6 +235,7 @@ const BodyItem = React.memo(
                               row.name !== "Included"
                             }
                             label=""
+                            data-tutorial={`mobileCheckbox-${column.name}`} // Додаємо атрибут туторіалу
                           />
                         </div>
                       </div>

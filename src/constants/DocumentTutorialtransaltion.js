@@ -1,39 +1,120 @@
-// src/constants/Autorealtranslation.js
+// src/constants/DocumentTutorialtransaltion.js
 
 const tutorialTranslations = {
-    en: {
-      steps: {
-        mainTable: "This is the first table with the required documents for submitting an application.",
-        header_is_exist: "This header indicates the presence of the document. It is necessary for submitting an application.",
-        header_apostile: "This header refers to the apostille of the document. It depends on the region.",
-        header_notary: "This header refers to the notarization of the document.",
-        header_translation: "This header refers to the translation of the document.",
-        header_ready_copies: "This header refers to the ready copies of the document.",
-        header_sent: "This header refers to the sending of the document.",
-        header_links: "These headers refer to links to additional resources.",
-        secondTable: "This is the second table with additional documents.",
-        regionalLink: "This link corresponds to the selected region.",
-        optionalDocumentsSection: "This is the section for optional documents. You can add them, but they are not mandatory.",
-        printButton: "Click here to print the list of documents."
-      }
+  en: {
+    steps: {
+      mainTable: "This is the first table with the required documents for submitting an application.",
+      header_apostile: "Apostille Header",
+      header_notary: "Notary Header",
+      header_translation: "Translation Header",
+      header_ready_copies: "Ready Copies Header",
+      header_sent: "Sent Header",
+      header_links: "Links Header",
+      secondTable: "Second Table",
+      regionalLink: "Regional Link",
+      optionalDocumentsSection: "Optional Documents Section",
+      printButton: "Click here to print the list of documents.",
+      // Мобільні кроки
+      mobile: {
+        firstTile: "Each document is contained in a separate tile, each has its own checkboxes.",
+        secondTileCheckboxes: "These checkboxes indicate the status of the documents.",
+        is_exist: "This checkbox indicates whether the document exists.",
+        apostile: "This checkbox indicates whether the document has an apostille.",
+        notary: "This checkbox indicates whether the document is notarized.",
+        translation: "This checkbox indicates whether the document is translated.",
+        ready_copies: "This checkbox indicates whether the document copies are ready.",
+        sent: "This checkbox indicates whether the document has been sent.",
+        documentSecondTile_3: "These links lead to documents according to the selected region.",
+        optionalDocumentsSection: "These are optional documents that can be added to improve the approval.",
+        printButton: "Click here to print the list of documents.",
+      },
     },
-    de: {
-      steps: {
-        mainTable: "Dies ist die erste Tabelle mit den erforderlichen Dokumenten zur Einreichung eines Antrags.",
-        header_is_exist: "Dieser Header zeigt das Vorhandensein des Dokuments an. Es ist für die Einreichung eines Antrags erforderlich.",
-        header_apostile: "Dieser Header bezieht sich auf die Apostille des Dokuments. Es hängt von der Region ab.",
-        header_notary: "Dieser Header bezieht sich auf die Notarisierung des Dokuments.",
-        header_translation: "Dieser Header bezieht sich auf die Übersetzung des Dokuments.",
-        header_ready_copies: "Dieser Header bezieht sich auf die fertigen Kopien des Dokuments.",
-        header_sent: "Dieser Header bezieht sich auf das Versenden des Dokuments.",
-        header_links: "Diese Header beziehen sich auf Links zu zusätzlichen Ressourcen.",
-        secondTable: "Dies ist die zweite Tabelle mit zusätzlichen Dokumenten.",
-        regionalLink: "Dieser Link entspricht der ausgewählten Region.",
-        optionalDocumentsSection: "Dies ist der Abschnitt für optionale Dokumente. Sie können sie hinzufügen, sind jedoch nicht verpflichtend.",
-        printButton: "Klicken Sie hier, um die Dokumentenliste zu drucken."
-      }
+  },
+  uk: {
+    steps: {
+      mainTable: "Це перша таблиця з необхідними документами для подання заявки.",
+      header_apostile: "Апостиль",
+      header_notary: "Нотаріальне засвідчення",
+      header_translation: "Переклад",
+      header_ready_copies: "Готові копії",
+      header_sent: "Надіслано",
+      header_links: "Посилання",
+      secondTable: "Друга таблиця",
+      regionalLink: "Регіональні вимоги",
+      optionalDocumentsSection: "Опціональні документи",
+      printButton: "Натисніть тут, щоб надрукувати список документів.",
+      mobile: {
+        firstTile: "Кожен документ міститься в окремій плитці, кожен має свої чекбокси.",
+        secondTileCheckboxes: "Ці чекбокси позначають статус документів.",
+        is_exist: "Цей чекбокс позначає, чи документ наявний.",
+        apostile: "Цей чекбокс позначає, чи документ має апостиль.",
+        notary: "Цей чекбокс позначає, чи документ нотаріально завірений.",
+        translation: "Цей чекбокс позначає, чи документ перекладено.",
+        ready_copies: "Цей чекбокс позначає, чи готові копії документів.",
+        sent: "Цей чекбокс позначає, чи документ відправлено.",
+        documentSecondTile_3: "Ці лінки ведуть до документів відповідно до вибраного регіону.",
+        optionalDocumentsSection: "Це опціональні документи для покращення апробації.",
+        printButton: "Натисніть тут, щоб надрукувати список документів.",
+      },
     },
-    // Додайте інші мови за потребою
-  };
-  
-  export default tutorialTranslations;
+  },
+  ru: {
+    steps: {
+      mainTable: "Это первая таблица с необходимыми документами для подачи заявки.",
+      header_apostile: "Апостиль",
+      header_notary: "Нотариальное заверение",
+      header_translation: "Перевод",
+      header_ready_copies: "Готовые копии",
+      header_sent: "Отправлено",
+      header_links: "Ссылки",
+      secondTable: "Вторая таблица",
+      regionalLink: "Региональные требования",
+      optionalDocumentsSection: "Дополнительные документы",
+      printButton: "Нажмите здесь, чтобы распечатать список документов.",
+      mobile: {
+        firstTile: "Каждый документ содержится в отдельной плитке, у каждого есть свои чекбоксы.",
+        secondTileCheckboxes: "Эти чекбоксы обозначают статус документов.",
+        is_exist: "Этот чекбокс обозначает, есть ли документ.",
+        apostile: "Этот чекбокс обозначает, есть ли апостиль на документе.",
+        notary: "Этот чекбокс обозначает, нотариально ли заверен документ.",
+        translation: "Этот чекбокс обозначает, переведен ли документ.",
+        ready_copies: "Этот чекбокс обозначает, готовы ли копии документов.",
+        sent: "Этот чекбокс обозначает, отправлен ли документ.",
+        documentSecondTile_3: "Эти ссылки ведут к документам в соответствии с выбранным регионом.",
+        optionalDocumentsSection: "Это дополнительные документы, которые можно приложить для улучшения апробации.",
+        printButton: "Нажмите здесь, чтобы распечатать список документов.",
+      },
+    },
+  },
+  de: {
+    steps: {
+      mainTable: "Dies ist die erste Tabelle mit den erforderlichen Dokumenten für die Antragstellung.",
+      header_apostile: "Apostille",
+      header_notary: "Notarielle Beglaubigung",
+      header_translation: "Übersetzung",
+      header_ready_copies: "Fertige Kopien",
+      header_sent: "Gesendet",
+      header_links: "Links",
+      secondTable: "Zweite Tabelle",
+      regionalLink: "Regionale Anforderungen",
+      optionalDocumentsSection: "Optionale Dokumente",
+      printButton: "Klicken Sie hier, um die Dokumentenliste auszudrucken.",
+      mobile: {
+        firstTile: "Jedes Dokument befindet sich in einer separaten Kachel, jede hat eigene Checkboxen.",
+        secondTileCheckboxes: "Diese Checkboxen zeigen den Status der Dokumente an.",
+        is_exist: "Dieses Kontrollkästchen zeigt an, ob das Dokument vorhanden ist.",
+        apostile: "Dieses Kontrollkästchen zeigt an, ob das Dokument eine Apostille hat.",
+        notary: "Dieses Kontrollkästchen zeigt an, ob das Dokument notariell beglaubigt ist.",
+        translation: "Dieses Kontrollkästchen zeigt an, ob das Dokument übersetzt ist.",
+        ready_copies: "Dieses Kontrollkästchen zeigt an, ob Kopien des Dokuments bereit sind.",
+        sent: "Dieses Kontrollkästchen zeigt an, ob das Dokument gesendet wurde.",
+        documentSecondTile_3: "Diese Links führen zu Dokumenten gemäß der ausgewählten Region.",
+        optionalDocumentsSection: "Dies sind optionale Dokumente, die zur Verbesserung der Anerkennung hinzugefügt werden können.",
+        printButton: "Klicken Sie hier, um die Dokumentenliste auszudrucken.",
+      },
+    },
+  },
+};
+  // Додайте інші мови за потребою
+
+export default tutorialTranslations;
