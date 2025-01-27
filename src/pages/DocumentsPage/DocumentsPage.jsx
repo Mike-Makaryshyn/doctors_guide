@@ -34,6 +34,8 @@ import PDFTable from "../../components/Table/PDFTable"; // Імпорт ново
 Modal.setAppElement("#root");
 
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
+  const displayProgress = progress === 0 ? 5 : progress; // Мінімальна ширина при 0%
+  
   return (
     <div className={styles.progressContainer}>
       <Tippy
@@ -45,27 +47,32 @@ const ProgressBarWithTooltip = ({ progress, getMessage }) => {
         interactive={true}
         hideOnClick={true}
         placement="top"
-        flip={true} // Автоматичне розміщення при обмеженому просторі
+        flip={true}
         popperOptions={{
           modifiers: [
             {
               name: "preventOverflow",
               options: {
-                boundary: "window", // Не виходити за межі вікна
+                boundary: "window",
               },
             },
             {
               name: "flip",
               options: {
-                fallbackPlacements: ["bottom", "right", "left"], // Позиції для заміни
+                fallbackPlacements: ["bottom", "right", "left"],
               },
             },
           ],
         }}
       >
         <div className={styles.progressBar}>
-          <div className={styles.progress} style={{ width: `${progress}%` }}>
-            <span className={styles.progressText}>{progress}%</span>
+          <div 
+            className={styles.progress} 
+            style={{ width: `${displayProgress}%` }}
+          >
+            <span className={styles.progressText}>
+              {progress === 0 ? '0%' : `${progress}%`}
+            </span>
           </div>
         </div>
       </Tippy>
