@@ -417,7 +417,7 @@ const didDrawPageFooter = (doc) => (data) => {
       theme: "grid",
       styles: {
         font: doc.getFont().fontName, // використовує поточний
-        fontSize: 20,
+        fontSize: 10,
         cellPadding: 3,
         lineWidth: 0.5,
         
