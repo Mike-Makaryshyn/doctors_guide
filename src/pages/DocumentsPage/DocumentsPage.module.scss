@@ -26,8 +26,8 @@
   // Кнопка «Назад»
   .backButton {
     margin-top: auto;
-    width: 35px;
-    height: 28px;
+    width: 33px;
+    height: 27px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -58,8 +58,8 @@
   /* Медиа-запрос для адаптации на мобильных устройствах */
   @media (max-width: 768px) {
     .backButton {
-      width: 30px;
-      height: 24px;
+      width: 35px;
+        height: 30px;
       left: 10px;
       bottom: 5px;
       font-size: 14px;
@@ -69,11 +69,11 @@
   
   @media (max-width: 480px) {
     .backButton {
-      width: 28px;
-      height: 22px;
+      width: 35px;
+      height: 30px;
       left: 5px;
       bottom: 5px;
-      font-size: 12px;
+      font-size: 14px;
       padding: 6px;
     }
   }
@@ -177,7 +177,7 @@
     }
 
     &.tileCompleted {
-      border-radius: 50px;
+      border-radius: 22px;
       background: #2a7c6f;
       box-shadow:
         inset -20px 20px 60px #24695e,
@@ -608,7 +608,7 @@
     .tile {
       flex: 1 1 100%;
       max-width: 100%;
-      padding: 24px; /* Збільшені відступи для кращого розділення */
+      padding: 12px; /* Збільшені відступи для кращого розділення */
       min-height: 260px; /* Забезпечуємо однакову мінімальну висоту */
       display: flex;
       flex-direction: column;
@@ -750,9 +750,9 @@
   }
   @media (max-width: 768px) {
   .printButton {
-    right: 10px;
+    right: 15px;
     bottom: 10px;
-    width: 28px;
-    height: 22px;
+    width: 35px;
+    height: 30px;
   }
 }
