@@ -1,31 +1,45 @@
 // src/components/Table/DocumentTutorial.jsx
 
-import React, { useState, useEffect } from "react";
-import Joyride, { EVENTS, STATUS } from "react-joyride";
+import React, { useState, useEffect, useRef } from "react";
+import Joyride, { STATUS } from "react-joyride";
 import styles from "./DocumentTutorial.module.scss";
+import tutorialTranslations from "../../constants/DocumentTutorialtransaltion"; // Імпорт перекладів
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // Імпорт хука для глобальної інформації
 
 const DocumentTutorial = ({ category }) => {
   const [run, setRun] = useState(false);
+  const { selectedLanguage: language = "de" } = useGetGlobalInfo(); // Отримання поточної мови
+  const topRef = useRef(null); // Створення ref до верхнього елемента
 
   // Функція для ручного запуску туторіалу
   const startTutorial = () => {
+    // Прокручування до верхнього елемента з використанням 'auto' для миттєвого прокручування
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "auto" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "auto" }); // Альтернативне прокручування до верху
+    }
     setRun(true);
   };
 
   useEffect(() => {
     const hasSeenTutorial = localStorage.getItem("hasSeenTutorial");
     if (!hasSeenTutorial) {
-      setRun(true);
+      // Додати невелике затримку, щоб гарантувати завершення прокручування
+      setTimeout(() => {
+        startTutorial();
+      }, 100); // Затримка 100 мс, можна змінити за потребою
       localStorage.setItem("hasSeenTutorial", "true");
     }
   }, []);
 
-  // Список кроків для туторіалу
+  // Створення кроків на основі перекладів
   const steps = [
+  
     {
       target: "[data-tutorial='mainTable']",
-      content: "Це перша таблиця з обов’язковими документами для подачі заяви.",
-      placement: "bottom", // Замість "center"
+      content: tutorialTranslations[language]?.steps.mainTable || "Default content",
+      placement: "auto",
       disableBeacon: true,
       spotlightClicks: true,
       styles: {
@@ -37,8 +51,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-is_exist']",
-      content: "Цей хедер відповідає за наявність документу. Він необхідний для подачі заяви.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_is_exist || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -48,8 +62,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-apostile']",
-      content: "Цей хедер відповідає за апостиль документу. Залежить від регіону.",
-      placement: "auto-center",  // Автоматично розташовує підказку по центру
+      content: tutorialTranslations[language]?.steps.header_apostile || "Default content",
+      placement: "auto",
       disableScrolling: false,
       styles: {
         tooltip: {
@@ -60,8 +74,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-notary']",
-      content: "Цей хедер відповідає за нотаріальне завірення документу.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_notary || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -71,8 +85,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-translation']",
-      content: "Цей хедер відповідає за переклад документу.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_translation || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -82,8 +96,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-ready_copies']",
-      content: "Цей хедер відповідає за готові копії документу.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_ready_copies || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -93,8 +107,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-sent']",
-      content: "Цей хедер відповідає за відправку документу.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_sent || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -104,8 +118,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='header-links']",
-      content: "Ці хедери відповідають за посилання на додаткові ресурси.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.header_links || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -115,8 +129,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='secondTable']",
-      content: "Це друга таблиця з додатковими документами.",
-      placement: "top", // Можна використовувати "top" для кращого розміщення
+      content: tutorialTranslations[language]?.steps.secondTable || "Default content",
+      placement: "top",
       styles: {
         tooltip: {
           marginTop: "10px",
@@ -126,7 +140,7 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='regionalLink']",
-      content: "Це посилання відповідно до вибраного регіону.",
+      content: tutorialTranslations[language]?.steps.regionalLink || "Default content",
       placement: "bottom",
       styles: {
         tooltip: {
@@ -137,8 +151,8 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='optionalDocumentsSection']",
-      content: "Це секція з опціональними документами. Ви можете додати їх, але вони не є обов’язковими.",
-      placement: "auto", // Змінено на "auto"
+      content: tutorialTranslations[language]?.steps.optionalDocumentsSection || "Default content",
+      placement: "auto",
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -148,24 +162,12 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='printButton']",
-      content: "Натисніть тут, щоб роздрукувати список документів.",
-      placement: "top", // Замість "right" для уникнення перекриття
+      content: tutorialTranslations[language]?.steps.printButton || "Default content",
+      placement: "top",
       styles: {
         tooltip: {
           marginLeft: "10px",
           maxWidth: "300px",
-        },
-      },
-    },
-    {
-      target: "[data-tutorial='printModal']",
-      content: "Це модальне вікно для друку документів. Воно завжди відображається по центру екрану.",
-      placement: "center",
-      disableBeacon: true,
-      hideCloseButton: true,
-      styles: {
-        tooltip: {
-          display: "none",
         },
       },
     },
@@ -176,8 +178,11 @@ const DocumentTutorial = ({ category }) => {
     const tooltips = document.querySelectorAll(".react-joyride__tooltip");
     tooltips.forEach((tooltip) => {
       const rect = tooltip.getBoundingClientRect();
-      if (rect.top < 100) {
-        tooltip.style.top = "120px";  // Встановити мінімальний відступ
+      if (rect.top < 50) { // Зменшено до 50px для більш гнучкого відступу
+        tooltip.style.top = "70px";  // Встановити мінімальний відступ
+      }
+      if (rect.bottom > window.innerHeight) {
+        tooltip.style.bottom = "70px"; // Встановити відступ зверху, якщо підказка виходить вниз
       }
     });
   };
@@ -192,14 +197,27 @@ const DocumentTutorial = ({ category }) => {
     }
 
     if (action === "start" || action === "next") {
-      const stepElement = document.querySelector(steps[index].target);
-      if (stepElement) {
-        const rect = stepElement.getBoundingClientRect();
-        const offsetTop = window.scrollY + rect.top - (window.innerHeight / 2) + (rect.height / 2);
-        window.scrollTo({
-          top: offsetTop > 0 ? offsetTop : 0,
-          behavior: "smooth",
-        });
+      if (index === 0) {
+        // Прокрутка до верху сторінки для першого кроку
+        if (topRef.current) {
+          topRef.current.scrollIntoView({ behavior: "auto" });
+        } else {
+          window.scrollTo({
+            top: 0,
+            behavior: "auto",
+          });
+        }
+      } else {
+        const stepElement = document.querySelector(steps[index]?.target);
+        if (stepElement) {
+          const rect = stepElement.getBoundingClientRect();
+          const offsetTop =
+            window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+          window.scrollTo({
+            top: offsetTop > 0 ? offsetTop : 0,
+            behavior: "smooth",
+          });
+        }
       }
     }
 
@@ -213,12 +231,15 @@ const DocumentTutorial = ({ category }) => {
 
   return (
     <>
+      {/* Невидимий елемент на верху сторінки */}
+      <div ref={topRef} data-tutorial="topRef"></div>
+      
       <Joyride
         steps={steps}
         run={run}
         continuous={true}
-        scrollToFirstStep={true}
-        scrollOffset={100}  // Враховує висоту хедера
+        scrollToFirstStep={false} // Відключаємо автоматичне прокручування до першого кроку
+        scrollOffset={100}        // Враховує висоту хедера
         showSkipButton={true}
         showProgress={true}
         styles={{
