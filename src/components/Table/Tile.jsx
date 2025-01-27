@@ -18,8 +18,8 @@ const Tile = ({
   checkboxes,
   handleCheckboxChange,
   disableCheckboxBasedOnName,
-  showCheckboxOnMobile, // Додано новий пропс
-  isMobile, // Новий проп
+  showCheckboxOnMobile,
+  isMobile,
 }) => {
   const isOptional = tableFor === "optional";
   const hidden = isOptional ? checkboxes[row.id]?.hide : false;
@@ -50,7 +50,8 @@ const Tile = ({
   useEffect(() => {
     console.log("Mode switched, isMobile:", isMobile);
     // Переперевірка стану даних
- }, [isMobile]);
+  }, [isMobile]);
+
   useEffect(() => {
     if (allChecked && !hidden) {
       setShowCompletion(true);
@@ -150,42 +151,38 @@ const Tile = ({
   return (
     <div className={tileClass} onClick={() => hidden && onTileClick()}>
       <div className={styles.tileHeader}>
-        <div className={styles.tileTitle}>
+        <div
+          className={styles.tileTitle}
+          data-id={row.id} // Додаємо data-id
+          style={{
+            color:
+              row?.id === 17 && !checkboxes[row.id]?.is_exist
+                ? "#013b6e"
+                : "",
+          }}
+        >
           {row.category?.[selectedLanguage] ||
             row.name?.[selectedLanguage] ||
             "N/A"}
         </div>
         {showCheckboxOnMobile && (
-  <div className={styles.mobileCheckboxWrapper}>
-    <button
-      className={styles.crossButton}
-      onClick={(e) => {
-        e.stopPropagation();
-        handleCheckboxChange(row.id.toString(), "hide");
-      }}
-      aria-label={checkboxes[row.id]?.hide ? "Додати документ" : "Видалити документ"}
-    >
-      {checkboxes[row.id]?.hide ? "➕" : "❌"}
-    </button>
-  </div>
-)}
-     
-
-        {/* Після вирішення проблеми з хрестиком, можна замінити чекбокс на хрестик */}
-        {/* 
-        {isMobile && isOptional && !hidden && (
-          <button
-            className={styles.closeButton}
-            onClick={(e) => {
-              e.stopPropagation();
-              onHiddenChange(); // Виключає документ
-            }}
-            aria-label="Виключити документ"
-          >
-            ×
-          </button>
+          <div className={styles.mobileCheckboxWrapper}>
+            <button
+              className={styles.crossButton}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCheckboxChange(row.id.toString(), "hide");
+              }}
+              aria-label={
+                checkboxes[row.id]?.hide
+                  ? "Додати документ"
+                  : "Видалити документ"
+              }
+            >
+              {checkboxes[row.id]?.hide ? "➕" : "❌"}
+            </button>
+          </div>
         )}
-        */}
       </div>
 
       {!hidden && (
@@ -207,7 +204,6 @@ const Tile = ({
               );
             }
 
-            // Видалення чекбоксу для опціональних документів на мобільних
             if (isMobile && isOptional) {
               return null;
             }
@@ -233,7 +229,6 @@ const Tile = ({
               </div>
             );
           })}
-          {/* Додати відображення посилання тільки під колонкою 'notary' */}
           {row?.id === 17 && !checkboxes[row.id.toString()]?.hide && (
             <div
               className={cn(styles.linkContainer, {
@@ -241,7 +236,7 @@ const Tile = ({
               })}
             >
               <a
-                className={styles.link}
+                className={cn(styles.link, styles.linkLabel)} // Додаємо клас linkLabel
                 target="_blank"
                 rel="noopener noreferrer"
                 href={row?.link}
@@ -253,10 +248,8 @@ const Tile = ({
         </div>
       )}
 
-      {/* Оверлей завершення */}
       {allChecked && !hidden && showCompletion && (
         <div className={styles.completionOverlay}>
-          {/* Простий символ галочки */}
           <span style={{ fontSize: "3rem", color: "#4caf50" }}>✔️</span>
         </div>
       )}
@@ -275,8 +268,8 @@ Tile.propTypes = {
   checkboxes: PropTypes.object.isRequired,
   handleCheckboxChange: PropTypes.func.isRequired,
   disableCheckboxBasedOnName: PropTypes.bool.isRequired,
-  isMobile: PropTypes.bool.isRequired, // Новий PropType
-  showCheckboxOnMobile: PropTypes.bool.isRequired, // Додаємо новий PropType
+  isMobile: PropTypes.bool.isRequired,
+  showCheckboxOnMobile: PropTypes.bool.isRequired,
 };
 
 export default Tile;
