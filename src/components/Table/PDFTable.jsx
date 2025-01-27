@@ -5,13 +5,16 @@ import PropTypes from "prop-types";
 import { FaDownload, FaEye, FaTimes } from "react-icons/fa";
 import styles from "./PDFTable.module.scss";
 
-// Firebase
+// Імпорт Firebase
 import { auth, db } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
 
 // Імпортуємо notNeededText
 import { notNeededText } from "../../constants/translation/documents";
+
+// Імпортуємо шрифти (Base64)
+import { notoSansFont, notoSansArabicFont, openSansFont } from "../../fonts/fonts";
 
 // Прапорці для мов (можете змінити “💩” на щось інше для російської)
 const languageFlags = {
@@ -40,7 +43,7 @@ function makeRowObject(doc, checkboxes, language) {
   const notNeededValue =
     notNeededText[language] || notNeededText["de"] || "Not needed";
 
-  // 3. Чи це документ з id=17 (ROV-17)?
+  // 3. Чи це документ із id=17 (ROV-17)?
   const isRov17 = docId === "17";
 
   function getFieldValue(fieldName) {
@@ -90,7 +93,7 @@ const PDFTable = ({
   // ------------------ 1) Локальний стан для PDF-мови ------------------
   const [pdfLanguage, setPdfLanguage] = useState(globalLanguage);
 
-  // ------------------ 2) Стани для firstName, lastName (завантадення з Firebase) ------------------
+  // ------------------ 2) Стани для firstName, lastName (завантаження з Firebase) ------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -101,7 +104,6 @@ const PDFTable = ({
   useEffect(() => {
     const unsubAuth = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // Наприклад, дані лежать у "users/{uid}/userData/data"
         const dataDocRef = doc(db, "users", user.uid, "userData", "data");
         const unsubData = onSnapshot(dataDocRef, (docSnap) => {
           if (docSnap.exists()) {
@@ -110,7 +112,7 @@ const PDFTable = ({
             setLastName(data.lastName || "");
           }
         });
-        // Оновлюємо creationDate (тільки один раз, або при кожній авторизації)
+        // Оновлюємо creationDate при авторизації
         const dateOnly = new Date().toLocaleDateString();
         setCreationDate(dateOnly);
 
@@ -230,46 +232,83 @@ const PDFTable = ({
   const handleGeneratePDF = () => {
     const doc = new jsPDF("l", "pt", "a4");
 
-    // Перша сторінка: локальна мова
+    // *** Підключаємо наші шрифти ***
+    doc.addFileToVFS("NotoSans.ttf", notoSansFont);
+    doc.addFont("NotoSans.ttf", "NotoSans", "normal");
+
+    doc.addFileToVFS("NotoSansArabic.ttf", notoSansArabicFont);
+    doc.addFont("NotoSansArabic.ttf", "NotoSansArabic", "normal");
+
+    doc.addFileToVFS("OpenSans.ttf", openSansFont);
+    doc.addFont("OpenSans.ttf", "OpenSans", "normal");
+
+    // Обираємо NotoSans як основний (за бажання можна перевіряти language === "ar")
+    doc.setFont("NotoSans");
+
+    // Перша сторінка (мова, вибрана користувачем)
     addPageHeader(doc, firstName, lastName, creationDate);
+
     doc.autoTable({
       columns: firstTableColumns,
       body: firstTableBody_userLang,
       startY: 50,
       margin: { left: 40, right: 40 },
       theme: "grid",
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
+
     doc.autoTable({
       columns: secondTableColumns,
       body: secondTableBody_userLang,
       startY: doc.lastAutoTable.finalY + 20,
       margin: { left: 40, right: 40 },
       theme: "grid",
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
 
-    // Друга сторінка: німецька
+    // Друга сторінка (німецька версія)
     doc.addPage("l");
     addPageHeader(doc, firstName, lastName, creationDate);
+
     doc.autoTable({
       columns: firstTableColumns,
       body: firstTableBody_german,
       startY: 50,
       margin: { left: 40, right: 40 },
       theme: "grid",
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
+
     doc.autoTable({
       columns: secondTableColumns,
       body: secondTableBody_german,
       startY: doc.lastAutoTable.finalY + 20,
       margin: { left: 40, right: 40 },
       theme: "grid",
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
 
@@ -281,45 +320,82 @@ const PDFTable = ({
   const handleViewPDF = () => {
     const doc = new jsPDF("l", "pt", "a4");
 
+    // *** Додаємо шрифти, як і в handleGeneratePDF ***
+    doc.addFileToVFS("NotoSans.ttf", notoSansFont);
+    doc.addFont("NotoSans.ttf", "NotoSans", "normal");
+
+    doc.addFileToVFS("NotoSansArabic.ttf", notoSansArabicFont);
+    doc.addFont("NotoSansArabic.ttf", "NotoSansArabic", "normal");
+
+    doc.addFileToVFS("OpenSans.ttf", openSansFont);
+    doc.addFont("OpenSans.ttf", "OpenSans", "normal");
+
+    // Обираємо NotoSans як основний
+    doc.setFont("NotoSans");
+
     addPageHeader(doc, firstName, lastName, creationDate);
+
     doc.autoTable({
       columns: firstTableColumns,
       body: firstTableBody_userLang,
       startY: 50,
       theme: "grid",
       margin: { left: 40, right: 40 },
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
+
     doc.autoTable({
       columns: secondTableColumns,
       body: secondTableBody_userLang,
       startY: doc.lastAutoTable.finalY + 20,
       theme: "grid",
       margin: { left: 40, right: 40 },
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
 
     // Сторінка 2: німецька
     doc.addPage("l");
     addPageHeader(doc, firstName, lastName, creationDate);
+
     doc.autoTable({
       columns: firstTableColumns,
       body: firstTableBody_german,
       startY: 50,
       theme: "grid",
       margin: { left: 40, right: 40 },
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
+
     doc.autoTable({
       columns: secondTableColumns,
       body: secondTableBody_german,
       startY: doc.lastAutoTable.finalY + 20,
       theme: "grid",
       margin: { left: 40, right: 40 },
-      styles: { fontSize: 10, cellPadding: 3, lineWidth: 0.5 },
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
       headStyles: { fillColor: [220, 220, 220] },
     });
 
@@ -338,41 +414,47 @@ const PDFTable = ({
 
         <div className={styles.modalTitle}>PDF Table</div>
         <div className={styles.buttons}>
-    {/* Вибір мови без тексту */}
-    <div className={styles.languageSelect}>
-  <div className={styles.languageContainer}>
-    <span>
-      {availablePdfLangs.find(lang => lang.value === pdfLanguage)?.flag}
-      {availablePdfLangs.find(lang => lang.value === pdfLanguage)?.shortLabel}
-    </span>
-    <select
-      id="pdfLangSelect"
-      value={pdfLanguage}
-      onChange={(e) => setPdfLanguage(e.target.value)}
-    >
-      {availablePdfLangs.map((langOption) => (
-        <option key={langOption.value} value={langOption.value}>
-          {langOption.flag} {langOption.fullLabel}
-        </option>
-      ))}
-    </select>
-  </div>
-</div>
+          {/* Вибір мови без тексту */}
+          <div className={styles.languageSelect}>
+            <div className={styles.languageContainer}>
+              <span>
+                {
+                  availablePdfLangs.find((lang) => lang.value === pdfLanguage)
+                    ?.flag
+                }
+                {
+                  availablePdfLangs.find((lang) => lang.value === pdfLanguage)
+                    ?.shortLabel
+                }
+              </span>
+              <select
+                id="pdfLangSelect"
+                value={pdfLanguage}
+                onChange={(e) => setPdfLanguage(e.target.value)}
+              >
+                {availablePdfLangs.map((langOption) => (
+                  <option key={langOption.value} value={langOption.value}>
+                    {langOption.flag} {langOption.fullLabel}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
 
-    {/* Кнопка перегляду PDF */}
-    <div className={styles.buttonContainer}>
-    <button className={styles.roundButton} onClick={handleViewPDF}>
-        <FaEye className={styles.viewIcon} />
-    </button>
-</div>
+          {/* Кнопка перегляду PDF */}
+          <div className={styles.buttonContainer}>
+            <button className={styles.roundButton} onClick={handleViewPDF}>
+              <FaEye className={styles.viewIcon} />
+            </button>
+          </div>
 
-    {/* Кнопка завантаження PDF */}
-    <div className={styles.buttonContainer}>
-        <button className={styles.roundButton} onClick={handleGeneratePDF}>
-            <FaDownload className={styles.pdfIcon} />
-        </button>
-    </div>
-</div>
+          {/* Кнопка завантаження PDF */}
+          <div className={styles.buttonContainer}>
+            <button className={styles.roundButton} onClick={handleGeneratePDF}>
+              <FaDownload className={styles.pdfIcon} />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
