@@ -7,16 +7,19 @@
   padding: 12px;
   font-size: 14px; /* Менший шрифт */
   border-radius: 20px !important;
+  text-align: left;
 }
 :global(.react-joyride__tooltip-container) {
   max-height: 120px; /* Обмежуємо висоту */
-  overflow-y: auto; /* Додаємо прокручування, якщо контент занадто великий */
+  overflow-y: auto;
+  text-align: left; /* Додаємо прокручування, якщо контент занадто великий */
 }
 
 :global(.react-joyride__tooltip h3) {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: left;
 }
 
 :global(.react-joyride__tooltip p) {
