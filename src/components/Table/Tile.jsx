@@ -76,7 +76,9 @@ const Tile = ({
       handleCheckboxChange(row.id.toString(), "hide");
     }
   };
-
+  const getCategoryText = (text, region) => {
+    return text.replace("{region}", region || "ваш регіон");
+  };
   const onHiddenChange = () => {
     console.log(`Toggling hide for document ${row.id}`);
     handleCheckboxChange(row.id.toString(), "hide");
@@ -130,12 +132,14 @@ const Tile = ({
     } else if (row.singleLink) {
       linkToOpen = row.singleLink.link;
     }
+    const isActive =
+    checkboxes[row.id]?.is_exist && checkboxes[row.id]?.sent;
 
     if (linkToOpen) {
       return (
         <div
           className={cn(styles.linkContainer, {
-            [styles.linkContainerActive]: allChecked,
+            [styles.linkContainerActive]: isActive,
           })}
           onClick={(e) => {
             e.stopPropagation();
@@ -168,21 +172,18 @@ const Tile = ({
       data-tutorial={dataTutorialTarget} // Унікальний атрибут
     >
       <div className={styles.tileHeader}>
-        <div
-          className={styles.tileTitle}
-          data-id={row.id} // Додаємо data-id
-          style={{
-            color:
-              row?.id === 17 && !checkboxes[row.id]?.is_exist
-                ? "#013b6e"
-                : "",
-          }}
-          data-tutorial="tileTitle" // Додаємо атрибут туторіалу
-        >
-          {row.category?.[selectedLanguage] ||
-            row.name?.[selectedLanguage] ||
-            "N/A"}
-        </div>
+      <div
+  className={styles.tileTitle}
+  data-id={row.id} // Додаємо data-id
+  style={{
+    color: row?.id === 17 && !checkboxes[row.id]?.is_exist ? "#013b6e" : "",
+  }}
+  data-tutorial="tileTitle" // Додаємо атрибут туторіалу
+>
+  {row.category?.[selectedLanguage]
+    ? row.category[selectedLanguage].replace("{region}", selectedRegion || "ваш регіон")
+    : row.name?.[selectedLanguage] || "N/A"}
+</div>
         {showCheckboxOnMobile && (
           <div className={styles.mobileCheckboxWrapper}>
             <button

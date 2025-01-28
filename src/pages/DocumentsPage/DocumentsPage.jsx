@@ -455,10 +455,18 @@ const DocumentsPage = () => {
   }, [progress]);
 
   const getMessage = (progressValue) => {
-    if (progressValue < 20) return messages.de.authRequiredMessage;
-    if (progressValue < 50) return messages.de.authRequiredMessage; // Оновіть за потребою
-    if (progressValue < 80) return messages.de.authRequiredMessage; // Оновіть за потребою
-    return messages.de.authRequiredMessage; // Оновіть за потребою
+    let message = "";
+    if (progressValue < 20) {
+      message = messages[language]?.lessThan20 || "Progress is less than 20%";
+    } else if (progressValue < 50) {
+      message = messages[language]?.between20And50 || "Progress is between 20% and 50%";
+    } else if (progressValue < 80) {
+      message = messages[language]?.between50And80 || "Progress is between 50% and 80%";
+    } else {
+      message = messages[language]?.greaterThan80 || "Progress is greater than 80%";
+    }
+    console.log(`Progress Value: ${progressValue}, Message: ${message}`);
+    return <div>{message}</div>;
   };
 
   const mainTitle = titles?.main?.[language] || "Main Documents";
@@ -642,13 +650,13 @@ const DocumentsPage = () => {
                 </button>
                 {/* Додати кнопку друку */}
                 <button
-                  className={styles.printButton}
-                  onClick={handleOpenPDFModal}
-                  title="Друкувати PDF"
-                  data-tutorial="printButton"
-                >
-                  <FaPrint />
-                </button>
+  className={styles.printButton}
+  onClick={handleOpenPDFModal}
+  title="Друкувати PDF"
+  data-tutorial="printButton"
+>
+  <FaPrint />
+</button>
               </>
             )}
           </div>

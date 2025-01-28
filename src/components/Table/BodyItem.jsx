@@ -298,8 +298,12 @@ const BodyItem = React.memo(
                 </div>
               ) : typeof row?.[column?.name] === "object" ? (
                 <div className={styles.cellContent} data-tutorial="objectContent">
-                  <div>{row?.[column?.name]?.[language] || "N/A"}</div>
+                <div>
+                  {row?.[column?.name]?.[language]
+                    ? row[column.name][language].replace("{region}", selectedRegion || "ваш регіон")
+                    : "N/A"}
                 </div>
+              </div>
               ) : null}
 
               {row?.optional &&

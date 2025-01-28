@@ -7,19 +7,19 @@
   padding: 12px;
   font-size: 14px; /* Менший шрифт */
   border-radius: 20px !important;
-  text-align: left;
+  text-align: justify;
 }
 :global(.react-joyride__tooltip-container) {
   max-height: 120px; /* Обмежуємо висоту */
   overflow-y: auto;
-  text-align: left; /* Додаємо прокручування, якщо контент занадто великий */
+  text-align: justify;; /* Додаємо прокручування, якщо контент занадто великий */
 }
 
 :global(.react-joyride__tooltip h3) {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
-  text-align: left;
+  text-align: justify;
 }
 
 :global(.react-joyride__tooltip p) {
@@ -108,8 +108,30 @@
     }
   }
 }
-button[aria-label="Закрити"],
-button[title="Закрити"] {
+
+button[aria-label*="Закрити"],
+button[aria-label*="Close"],
+button[aria-label*="Schließen"],
+button[aria-label*="Fermer"],
+button[aria-label*="Cerrar"],
+button[aria-label*="Chiudi"],
+button[aria-label*="Fechar"],
+button[aria-label*="Zamknij"],
+button[aria-label*="Kapat"], /* Турецька */
+button[aria-label*="إغلاق"], /* Арабська */
+button[title*="Закрити"],
+button[aria-label*="Закрыть"], /* Російська (нижній регістр) */
+button[title*="Close"],
+button[title*="Schließen"],
+button[title*="Fermer"],
+button[title*="Cerrar"],
+button[title*="Chiudi"],
+button[title*="Fechar"],
+button[title*="Zamknij"],
+button[title*="Kapat"], /* Турецька */
+button[title*="إغلاق"] /* Арабська */
+button[title*="Закрыть"] /* Російська (нижній регістр) */
+{
   display: none !important;
 }
 .tutorialHeader {

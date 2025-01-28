@@ -319,7 +319,7 @@
 
       &.linkContainerActive {
         background-color: #2a7c6f; /* Зелений фон при активності */
-        color: #ffffff; /* Білий текст при активності */
+        color: white !important; /* Білий текст при активності */
         box-shadow: none; /* Вимикаємо тіні */
       }
 
@@ -658,9 +658,11 @@
 
     .checkboxBox label:hover {
       transform: scale(1.05); /* Легкий масштаб при наведенні */
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Посилена тінь при наведенні */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0); /* Посилена тінь при наведенні */
     }
-
+    div.linkContainer.linkContainerActive .linkLabel {
+      color: white !important;
+  }
     /* Забезпечення видимості linkContainer на мобільних */
     .linkContainer {
       flex: 1; /* Займає доступний простір між чекбоксами */
@@ -688,7 +690,7 @@
 
       &.linkContainerActive {
         background-color: #2a7c6f; /* Зелений фон при активності */
-        color: #ffffff; /* Білий текст при активності */
+        color: white !important; /* Білий текст при активності */
         box-shadow: none; /* Вимикаємо тіні */
       }
 
@@ -743,16 +745,18 @@
   }
   .printButton {
     @extend .backButton;  // Наслідуємо всі властивості з .backButton
-    z-index: 10001; 
+    z-index: 100010; 
     left: auto;      // Знімаємо "left", щоб не перекривалася позиція
     right: 0px;  
+    pointer-events: auto !important;
        // Закріплюємо по правому краю
   }
   @media (max-width: 768px) {
   .printButton {
-    right: 15px;
+    right: 3px;
     bottom: 10px;
     width: 35px;
     height: 30px;
+    pointer-events: auto !important;
   }
 }

@@ -50,7 +50,7 @@ const stepsContent = tutorialTranslations?.[language]?.steps || {};
       spotlightClicks: true,
       styles: {
         tooltip: {
-          maxWidth: "300px",
+          maxWidth: "500px",
           textAlign: "auto",
         },
       },

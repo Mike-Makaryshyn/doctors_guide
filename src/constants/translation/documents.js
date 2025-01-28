@@ -624,4 +624,25 @@ export const documentsOptional = [
       de: "Wohnsitzanmeldung in Deutschland",
     },
   },
+  {
+    id: 30, // Присвой унікальний ID
+    ...defaultProps,
+    optional: true,
+    hide: true,
+    apostile: notNeededText,
+    notary: notNeededText,
+    translation: notNeededText,
+    ready_copies: notNeededText,
+    category: {
+      en: "Employment Offer in {region}",
+      de: "Stellenzusage in {region}",
+      fr: "Offre d'emploi à {region}",
+      es: "Oferta de empleo en {region}",
+      ar: "عرض عمل في {region}",
+      tr: "İş Teklifi {region}",
+      pl: "Oferta pracy w {region}",
+      uk: "Пропозиція про роботу в {region}",
+      ru: "Предложение о работе в {region}",
+    },
+  },
 ];
