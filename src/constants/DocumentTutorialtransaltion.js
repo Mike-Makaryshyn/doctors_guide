@@ -2,6 +2,14 @@
 
 const tutorialTranslations = {
   uk: {
+    titles: {
+      is_exist: "Наявність",
+      apostile: "Апостиль",
+      notary: "Нотаріальне завірення",
+      translation: "Переклад",
+      ready_copies: "Готові копії",
+      sent: "Відправлено",
+    },
     steps: {
       
         mainTable:
@@ -28,7 +36,7 @@ const tutorialTranslations = {
           "Цей розділ містить додаткові документи, які не є обов'язковими, але можуть позитивно вплинути на розгляд вашої заяви.",
         printButton:
           "Натисніть цю кнопку, щоб отримати PDF-версію списку документів. Це зручно для перевірки інформації або консультації у відповідних структурах.",
-      
+         
           mobile: {
             firstTile:
               "Цей розділ містить список документів, які потрібно підготувати для подачі заяви. Ви можете відмічати виконані етапи для зручності.",
@@ -54,8 +62,24 @@ const tutorialTranslations = {
               "Створіть PDF-версію списку документів для зручного перегляду та використання під час консультацій.",
           },
     },
+      // ДОДАНО ПЕРЕКЛАД КНОПОК
+      buttons: {
+        next: "Далі",
+        back: "Назад",
+        last: "Завершити",
+        skip: "Пропустити",
+        close: "Закрити",
+      },
   },
 de: {
+  titles: {
+    is_exist: "Verfügbarkeit",
+    apostile: "Apostille",
+    notary: "Notarielle Beglaubigung",
+    translation: "Übersetzung",
+    ready_copies: "Beglaubigte Kopien",
+    sent: "Gesendet",
+  },
     steps: {
       
         mainTable:
@@ -83,7 +107,7 @@ de: {
         printButton:
           "Klicken Sie auf diese Schaltfläche, um eine PDF-Version der Dokumentenliste zu erstellen. Dies ist praktisch für Überprüfungen oder Konsultationen mit den zuständigen Stellen.",
       
-     
+          
 mobile: {
   firstTile:
     "Dieser Abschnitt enthält eine Liste der Dokumente, die für die Antragstellung vorbereitet werden müssen. Sie können erledigte Schritte zur besseren Übersicht markieren.",
@@ -109,8 +133,23 @@ mobile: {
     "Erstellen Sie eine PDF-Version der Dokumentenliste für eine bequeme Überprüfung und Nutzung während der Konsultationen.",
 },
     },
+    buttons: {
+      next: "Weiter",
+      back: "Zurück",
+      last: "Beenden",
+      skip: "Überspringen",
+      close: "Schließen",
+    },
   },
   en: {
+    titles: {
+      is_exist: "Availability",
+      apostile: "Apostille",
+      notary: "Notarization",
+      translation: "Translation",
+      ready_copies: "Certified Copies",
+      sent: "Sent",
+    },
     steps: {
       
         mainTable:
@@ -137,7 +176,7 @@ mobile: {
           "This section contains optional documents that are not mandatory but can positively influence the approval process.",
         printButton:
           "Click this button to generate a PDF version of the document list. This is convenient for verification or consultation with the relevant authorities.",
-      
+         
           mobile: {
             firstTile:
               "This section contains a list of documents that need to be prepared for submission. You can mark completed steps for convenience.",
@@ -163,8 +202,24 @@ mobile: {
               "Create a PDF version of the document list for convenient review and use during consultations.",
           },
     },
+    // Англійська (en)
+buttons: {
+  next: "Next",
+  back: "Back",
+  last: "Finish",
+  skip: "Skip",
+  close: "Close",
+},
   },
   fr: {
+    titles: {
+      is_exist: "Disponibilité",
+      apostile: "Apostille",
+      notary: "Certification notariale",
+      translation: "Traduction",
+      ready_copies: "Copies certifiées",
+      sent: "Envoyé",
+    },
     steps: {
      
         mainTable:
@@ -191,7 +246,7 @@ mobile: {
           "Cette section contient des documents optionnels qui ne sont pas obligatoires mais peuvent favoriser le processus d'approbation.",
         printButton:
           "Cliquez sur ce bouton pour générer une version PDF de la liste des documents. Utile pour vérification ou consultation avec les autorités compétentes.",
-      
+         
           mobile: {
             firstTile:
               "Cette section contient une liste des documents à préparer pour la soumission. Vous pouvez marquer les étapes complétées pour plus de commodité.",
@@ -217,8 +272,23 @@ mobile: {
               "Créez une version PDF de la liste des documents pour une consultation pratique.",
           },
     },
+    buttons: {
+      next: "Suivant",
+      back: "Précédent",
+      last: "Terminer",
+      skip: "Ignorer",
+      close: "Fermer",
+    },
   },
   es: {
+    titles: {
+      is_exist: "Disponibilidad",
+      apostile: "Apostilla",
+      notary: "Legalización notarial",
+      translation: "Traducción",
+      ready_copies: "Copias certificadas",
+      sent: "Enviado",
+    },
     steps: {
      
         mainTable:
@@ -245,7 +315,7 @@ mobile: {
           "Esta sección contiene documentos opcionales que no son obligatorios pero pueden facilitar el proceso de aprobación.",
         printButton:
           "Haga clic en este botón para generar una versión en PDF de la lista de documentos. Útil para revisión o consulta con las autoridades correspondientes.",
-      
+         
           mobile: {
             firstTile:
               "Esta sección contiene una lista de documentos que deben prepararse para la presentación. Puede marcar los pasos completados para mayor comodidad.",
@@ -271,8 +341,23 @@ mobile: {
               "Cree una versión en PDF de la lista de documentos para una revisión y uso conveniente durante las consultas.",
           },
     },
+    buttons: {
+      next: "Siguiente",
+      back: "Atrás",
+      last: "Finalizar",
+      skip: "Omitir",
+      close: "Cerrar",
+    },
   },
   tr: {
+    titles: {
+      is_exist: "Mevcut",
+      apostile: "Apostil",
+      notary: "Noter Onayı",
+      translation: "Çeviri",
+      ready_copies: "Tasdikli Kopyalar",
+      sent: "Gönderildi",
+    },
     steps: {
      
         mainTable:
@@ -299,7 +384,7 @@ mobile: {
           "Bu bölüm, zorunlu olmayan ancak onay sürecini olumlu yönde etkileyebilecek isteğe bağlı belgeleri içerir.",
         printButton:
           "Belge listesinin PDF sürümünü oluşturmak için bu düğmeye tıklayın. Bu, doğrulama veya ilgili makamlarla görüşmeler için kullanışlıdır.",
-      
+          
           mobile: {
             firstTile:
               "Bu bölüm, başvuru için hazırlanması gereken belgelerin bir listesini içerir. Tamamlanan adımları işaretleyerek ilerlemenizi takip edebilirsiniz.",
@@ -325,8 +410,23 @@ mobile: {
               "Belgelerin PDF versiyonunu oluşturarak inceleme ve danışma sırasında kullanabilirsiniz.",
           },
     },
+    buttons: {
+      next: "İleri",
+      back: "Geri",
+      last: "Bitir",
+      skip: "Atla",
+      close: "Kapat",
+    },
   },
   ar: {
+    titles: {
+      is_exist: "التوفر",
+      apostile: "الأبوستيل",
+      notary: "التوثيق",
+      translation: "الترجمة",
+      ready_copies: "نسخ موثقة",
+      sent: "تم الإرسال",
+    },
     steps: {
      
         mainTable:
@@ -353,7 +453,7 @@ mobile: {
           "تتضمن هذه القسم المستندات الاختيارية التي ليست إلزامية ولكن يمكن أن تساعد في تسهيل عملية الموافقة.",
         printButton:
           "انقر على هذا الزر لإنشاء نسخة PDF من قائمة المستندات. هذا مفيد للمراجعة أو الاستشارة مع الجهات المختصة.",
-      
+         
           mobile: {
             firstTile:
               "يتضمن هذا القسم قائمة بالوثائق التي يجب تحضيرها لتقديم الطلب. يمكنك تحديد الخطوات المكتملة لراحتك.",
@@ -379,8 +479,23 @@ mobile: {
               "قم بإنشاء نسخة PDF من قائمة المستندات لسهولة المراجعة والاستخدام أثناء الاستشارات.",
           },
     },
+    buttons: {
+      next: "التالي",
+      back: "السابق",
+      last: "إنهاء",
+      skip: "تخطى",
+      close: "إغلاق",
+    },
   },
   pl: {
+    titles: {
+      is_exist: "Dostępność",
+      apostile: "Apostille",
+      notary: "Notarialne poświadczenie",
+      translation: "Tłumaczenie",
+      ready_copies: "Poświadczone kopie",
+      sent: "Wysłano",
+    },
     steps: {
       
         mainTable:
@@ -407,7 +522,7 @@ mobile: {
           "Ta sekcja zawiera opcjonalne dokumenty, które nie są obowiązkowe, ale mogą pozytywnie wpłynąć na proces zatwierdzania.",
         printButton:
           "Kliknij ten przycisk, aby wygenerować wersję PDF listy dokumentów. Jest to wygodne do przeglądu lub konsultacji z odpowiednimi organami.",
-      
+         
           mobile: {
             firstTile:
               "Ta sekcja zawiera listę dokumentów, które należy przygotować do złożenia wniosku. Możesz zaznaczyć ukończone kroki dla wygody.",
@@ -433,8 +548,24 @@ mobile: {
               "Utwórz wersję PDF listy dokumentów do wygodnego przeglądania i wykorzystania podczas konsultacji.",
           },
     },
+    // Польська (pl)
+buttons: {
+  next: "Dalej",
+  back: "Wstecz",
+  last: "Zakończ",
+  skip: "Pomiń",
+  close: "Zamknij",
+},
   },
   ru: {
+    titles: {
+      is_exist: "Наличие",
+      apostile: "Апостиль",
+      notary: "Нотариальное заверение",
+      translation: "Перевод",
+      ready_copies: "Заверенные копии",
+      sent: "Отправлено",
+    },
     steps: {
      
         mainTable:
@@ -461,7 +592,7 @@ mobile: {
           "Этот раздел содержит дополнительные документы, которые не являются обязательными, но могут положительно повлиять на процесс одобрения.",
         printButton:
           "Нажмите эту кнопку, чтобы создать PDF-версию списка документов. Это удобно для проверки или консультации с соответствующими органами.",
-      
+         
           mobile: {
             firstTile:
               "Этот раздел содержит список документов, которые необходимо подготовить для подачи заявки. Вы можете отмечать выполненные этапы для удобства.",
@@ -487,8 +618,17 @@ mobile: {
               "Создайте PDF-версию списка документов для удобного просмотра и использования во время консультаций.",
           },
     },
+    buttons: {
+      next: "Далее",
+      back: "Назад",
+      last: "Завершить",
+      skip: "Пропустить",
+      close: "Закрыть",
+    },
   }
 };
 // Додайте інші мови за потребою
 
 export default tutorialTranslations;
+
+

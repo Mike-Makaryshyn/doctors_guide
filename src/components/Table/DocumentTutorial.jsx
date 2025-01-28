@@ -10,6 +10,8 @@ import useIsMobile from "../../hooks/useIsMobile"; // Імпорт хука дл
 const DocumentTutorial = ({ category }) => {
   const [run, setRun] = useState(false);
   const { selectedLanguage: language = "en" } = useGetGlobalInfo(); // Отримання поточної мови
+  const titles = tutorialTranslations?.[language]?.titles || {};
+const stepsContent = tutorialTranslations?.[language]?.steps || {};
   const topRef = useRef(null); // Створення ref до верхнього елемента
   const isMobile = useIsMobile(); // Визначення типу пристрою
 
@@ -70,6 +72,7 @@ const DocumentTutorial = ({ category }) => {
       target: "[data-tutorial='header-is_exist']",
       content: tutorialTranslations[language]?.steps.is_exist || "Default content",
       placement: "top",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "250px",
@@ -83,6 +86,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.header_apostile ||
         "Default content",
       placement: "auto",
+      spotlightPadding: 0,
       disableScrolling: false,
       styles: {
         tooltip: {
@@ -96,7 +100,9 @@ const DocumentTutorial = ({ category }) => {
       content:
         tutorialTranslations[language]?.steps.header_notary ||
         "Default content",
+        
       placement: "auto",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -110,6 +116,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.header_translation ||
         "Default content",
       placement: "auto",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -123,6 +130,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.header_ready_copies ||
         "Default content",
       placement: "auto",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -136,6 +144,7 @@ const DocumentTutorial = ({ category }) => {
         tutorialTranslations[language]?.steps.header_sent ||
         "Default content",
       placement: "auto",
+      spotlightPadding: 0,
       styles: {
         tooltip: {
           maxWidth: "300px",
@@ -216,8 +225,8 @@ const DocumentTutorial = ({ category }) => {
       content:
         tutorialTranslations[language]?.steps.mobile.firstTile ||
         "Default content",
-      placement: "bottom",
-      spotlightPadding: 0,
+      placement: "auto-start",
+      
       disableBeacon: true,
       spotlightClicks: true,
       styles: {
@@ -244,9 +253,15 @@ const DocumentTutorial = ({ category }) => {
 
     {
       target: "[data-tutorial='is_exist']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.is_exist ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.is_exist || "Наявність"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.is_exist || "Позначте цей пункт, якщо документ вже є у вас."}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -258,9 +273,15 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='apostile']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.apostile ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.apostile || "Default content"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.apostile || "Default content"}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -272,9 +293,15 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='notary']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.notary ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.notary || "Default content"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.notary || "Default content"}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -286,9 +313,15 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='translation']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.translation ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.translation || "Default content"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.translation || "Default content"}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -300,9 +333,15 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='ready_copies']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.ready_copies ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.ready_copies || "Default content"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.ready_copies || "Default content"}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -314,9 +353,15 @@ const DocumentTutorial = ({ category }) => {
     },
     {
       target: "[data-tutorial='sent']",
-      content:
-        tutorialTranslations[language]?.steps.mobile.sent ||
-        "Default content",
+      content: (
+        <>
+          <strong className={styles.tutorialHeader}>
+            {titles.sent || "Default content"}
+          </strong>
+          <br />
+          {stepsContent?.mobile?.sent || "Default content"}
+        </>
+      ),
       placement: "top",
       spotlightPadding: 0,
       styles: {
@@ -394,28 +439,39 @@ const DocumentTutorial = ({ category }) => {
       <div ref={topRef} data-tutorial="topRef"></div>
 
       <Joyride
-        steps={steps}
-        run={run}
-        continuous={true}
-        scrollToFirstStep={true} // Відключаємо автоматичне прокручування до першого кроку
-        scrollOffset={isMobile ? 70 : 250} // 50 для мобільних, 100 для десктопу
-        showSkipButton={true}
-        showProgress={false} 
-        styles={{
-          options: {
-            primaryColor: "#023c6f",
-            zIndex: 10000,
-            tooltipOffset: 20, // Відступ для уникнення перекриття
-            arrowColor: "#ffffff",
-            overlayColor: "rgba(0, 0, 0, 0.5)",
-            spotlightPadding: 20, // Додає відступи для уникнення виходу за екран
-            transition: "opacity 0.3s ease, transform 0.3s ease", // Плавніша анімація
-            
-          },
-          // Видаляємо всі класові імена, щоб уникнути помилок
-        }}
-        callback={handleJoyrideCallback}
-      />
+  steps={steps}
+  run={run}
+  continuous={true}
+  scrollToFirstStep={true}
+  scrollOffset={isMobile ? 70 : 250}
+  showSkipButton={true}
+  showProgress={false}
+  locale={{
+    back: tutorialTranslations[language]?.buttons?.back || "Back",
+    close: tutorialTranslations[language]?.buttons?.close || "Close",
+    last: tutorialTranslations[language]?.buttons?.last || "Finish",
+    next: tutorialTranslations[language]?.buttons?.next || "Next",
+    skip: tutorialTranslations[language]?.buttons?.skip || "Skip",
+  }}
+  styles={{
+    options: {
+      primaryColor: "#023c6f",
+      zIndex: 10000,
+      tooltipOffset: 20,
+      arrowColor: "#ffffff",
+      overlayColor: "rgba(0, 0, 0, 0.5)",
+      spotlightPadding: 20,
+      transition: "opacity 0.3s ease, transform 0.3s ease",
+      hideCloseButton: true, // Повністю прибирає хрестик
+    },
+    buttonSkip: {
+      fontSize: "10px", // Менший розмір шрифту
+      padding: "2px 6px", // Менший внутрішній відступ
+      minWidth: "50px", // Мінімальна ширина, щоб не вилазило за рамки
+    },
+  }}
+  callback={handleJoyrideCallback}
+/>
 
       {/* Кнопка запуску туторіалу */}
       <button

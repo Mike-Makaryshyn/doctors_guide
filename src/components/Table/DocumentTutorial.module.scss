@@ -2,12 +2,15 @@
 
 /* Глобальні стилі для react-joyride */
 :global(.react-joyride__tooltip) {
-  background-color: #f0f0f0;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  padding: 16px;
-  transition: all 0.3s ease-in-out; /* Плавніша анімація */
+  max-width: 250px !important; /* Було 300px */
+  min-width: 200px;
+  padding: 12px;
+  font-size: 14px; /* Менший шрифт */
+  border-radius: 20px !important;
+}
+:global(.react-joyride__tooltip-container) {
+  max-height: 120px; /* Обмежуємо висоту */
+  overflow-y: auto; /* Додаємо прокручування, якщо контент занадто великий */
 }
 
 :global(.react-joyride__tooltip h3) {
@@ -90,4 +93,14 @@
     font-size: 14px;
     right: 37px;
   }
+}
+button[aria-label="Закрити"],
+button[title="Закрити"] {
+  display: none !important;
+}
+.tutorialHeader {
+  color: #013b6e; // Колір заголовків
+  font-weight: bold;
+  font-size: 22px; // Розмір шрифту (опціонально)
+  margin-bottom: 10px; // Відступ між заголовком і текстом
 }
