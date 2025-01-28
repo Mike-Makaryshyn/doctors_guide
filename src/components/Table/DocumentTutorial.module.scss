@@ -57,41 +57,52 @@
   transition: border-radius 0.3s ease; 
 }
 .tutorialButton {
-  position: fixed;
-  bottom: 605px;
-  right: -9px;
-  background-color: transparent; /* Прозорий фон */
-  border: 2px solid #013b6e; /* Зелений обвід */
-  color: #013b6e; /* Колір тексту/іконки */
-  border-radius: 50%; /* Робить кнопку круглою */
-  width: 40px; /* Зменшений розмір */
-  height: 40px; /* Зменшений розмір */
-  font-size: 18px; /* Розмір іконки */
+  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+  top: 60px; /* Відступ від верхнього краю */
+  right: 15px; /* Відступ від правого краю */
+  width: 45px; /* Трохи більша кнопка */
+  height: 45px;
+  background: none; /* Видаляємо фон у звичайному стані */
+  border-radius: 50%; /* Робимо кнопку круглою */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 200;
+  border: none; /* Прибираємо рамку */
+  box-shadow: none; /* Прибираємо тіні */
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out; /* Додаємо анімацію */
 
-  /* Додамо тінь для більш сучасного вигляду */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  /* Стилі для SVG */
+  svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ededed; /* Сірий контур */
+    transition: transform 0.2s ease-in-out;
+  }
 
+  /* Коли наводимо мишку */
   &:hover {
-    background-color: #013b6e; /* Фон при наведенні */
-    color: #fff; /* Білий текст/іконка при наведенні */
+    transform: scale(1.1); /* Легке збільшення */
+    background: #4caf4f00; /* Зелений фон */
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
-/* Медіа-запит для мобільних екранів */
+/* Медіа-запит для мобільних пристроїв */
 @media (max-width: 768px) {
   .tutorialButton {
-    position: absolute;
-    bottom: 410px;
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    right: 37px;
+    width: 42px; /* Збільшена кнопка */
+    height: 38px;
+    right: -8px;
+    top: 50px; /* Трохи нижче на мобільних */
+    
+    svg {
+      width: 32px; /* Трохи більший розмір іконки */
+      height: 32px;
+    }
   }
 }
 button[aria-label="Закрити"],

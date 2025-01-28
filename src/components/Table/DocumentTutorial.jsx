@@ -485,14 +485,14 @@ const stepsContent = tutorialTranslations?.[language]?.steps || {};
     width="30"
     height="30"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
+    stroke="#ededed"
+    strokeWidth="2.5"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <circle cx="12" cy="12" r="10" stroke="black" fill="none" />
-    <line x1="12" y1="10" x2="12" y2="16" stroke="black" strokeWidth="2" />
-    <circle cx="12" cy="8" r="1" fill="black" />
+    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+    <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
   </svg>
 </button>
     </>
