@@ -167,6 +167,7 @@ export const documentsSecond = [
             de: "Füllen Sie den Antrag hier aus",
           },
         },
+        
 
         {
           landName: "Brandenburg",
@@ -423,6 +424,21 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут.",
             ru: "Заполните заявление здесь.",
             de: "Füllen Sie den Antrag hier aus.",
+          },
+        },
+        {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
           },
         },
         {
@@ -941,6 +957,21 @@ export const documentsSecond = [
             uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
             de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję.",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію.",
+            ru: " Соответствующий формуляр включен в заявку на лицензию.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten.",
           },
         },
         {
@@ -1463,6 +1494,21 @@ export const documentsSecond = [
           },
         },
         {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
           landName: "Brandenburg",
           link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-3_EU_Vordruck_Versicherungen_zum_Antrag.pdf",
           text: {
@@ -1978,6 +2024,21 @@ export const documentsSecond = [
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
             uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
             de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
           },
         },

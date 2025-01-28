@@ -538,7 +538,7 @@ const DocumentsPage = () => {
                           : styles.euTable
                       }
                       isMobile={isMobile} // Передаємо isMobile
-                      title="Подача заяв" // Встановлюємо заголовок
+                      title={titles.main[language] || "Main Documents"}
                       data-tutorial="mainTable" // Додаємо атрибут туторіалу
                     />
 
@@ -557,7 +557,7 @@ const DocumentsPage = () => {
                         handleCheckboxChange={handleCheckboxChangeWrapper}
                         customClass={styles.secondTable}
                         isMobile={isMobile} // Передаємо isMobile
-                        title="Second Documents" // Встановлюємо заголовок, якщо потрібно
+                        // Встановлюємо заголовок, якщо потрібно
                         data-tutorial="secondTable" // Додаємо атрибут туторіалу
                       />
                     )}

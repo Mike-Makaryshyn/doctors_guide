@@ -11,7 +11,7 @@ import Tile from "./Tile";
 /**
  * ResponsiveTable компонент
  */
-
+import { titles } from "../../constants/translation/documents"; 
 const ResponsiveTable = forwardRef(({
   columns,
   data,
@@ -34,12 +34,14 @@ const ResponsiveTable = forwardRef(({
     <div
       className={cn(styles.tableContainer, customClass)}
       ref={ref}
-      data-tutorial={title === "Подача заяв" ? "mainTable" : "secondTable"}
+      data-tutorial={title === titles.main[selectedLanguage] ? "mainTable" : "secondTable"}
     >
       {title && (
         <h2
           className={styles.title}
-          data-tutorial={title === "Подача заяв" ? "mainTableTitle" : "secondTableTitle"}
+          data-tutorial={
+            title === titles.main[selectedLanguage] ? "mainTableTitle" : "secondTableTitle"
+          }
         >
           {title}
         </h2>

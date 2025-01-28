@@ -331,7 +331,7 @@ export const documentsNonEU = [
       pl: "Zaświadczenie o niekaralności (Certificate of Good Standing) wydawane jest przez odpowiednie władze zdrowotne, gdzie pracowałeś zawodowo",
       uk: "Довідка допропорядочності (Certificate of good Standing) видається відповідними структурами охорони здоровя де ви працювали по професії",
       ru: "Справка о благонадежности (Certificate of Good Standing) выдается соответствующими структурами здравоохранения, где вы работали по профессии",
-      de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren",
+      de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren (Certificate of good Standing)",
     },
     English: "Certificate of Good Standing",
     German: "Dovídka допропорядочності (Certificate of good Standing)",
@@ -407,7 +407,7 @@ export const documentsEU = [
       pl: "Zaświadczenie o niekaralności (Certificate of Good Standing) wydawane jest przez odpowiednie władze zdrowotne, gdzie pracowałeś zawodowo",
       uk: "Довідка допропорядочності (Certificate of good Standing) видається відповідними структурами охорони здоровя де ви працювали по професії",
       ru: "Справка о благонадежности (Certificate of Good Standing) выдается соответствующими структурами здравоохранения, где вы работали по профессии",
-      de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren",
+      de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren (Certificate of good Standing)",
     },
   },
   {

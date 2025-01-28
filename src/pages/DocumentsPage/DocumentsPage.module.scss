@@ -297,8 +297,8 @@
       flex: 1; /* Займає доступний простір між чекбоксами */
       max-width: 150px; /* Обмежує максимальну ширину для квадратності */
       min-width: 150px; /* Мінімальна ширина для квадратності */
-      height: 60px; /* Встановлює фіксовану висоту */
-      border-radius: 20px; /* Закруглені кути */
+      height: 40px;
+      border-radius: 10px;/* Закруглені кути */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -666,8 +666,8 @@
       flex: 1; /* Займає доступний простір між чекбоксами */
       max-width: 150px; /* Обмежує максимальну ширину для квадратності */
       min-width: 150px; /* Мінімальна ширина для квадратності */
-      height: 60px; /* Встановлює фіксовану висоту */
-      border-radius: 20px; /* Закруглені кути */
+      height: 40px;
+      border-radius: 10px;/* Закруглені кути */
       display: flex;
       align-items: center;
       justify-content: center;
