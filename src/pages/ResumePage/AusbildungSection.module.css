@@ -204,7 +204,7 @@ textarea.inputField {
     background-color: #f0f0f0;
 }
 
-/* Показати роздільник на мобільних */
+/* Показати роздільник та кнопки видалення на мобільних */
 @media (max-width: 768px) {
     /* Переструктурування запису */
     .entryRow {
@@ -256,7 +256,7 @@ textarea.inputField {
 @media (max-width: 1024px) and (min-width: 769px) {
     .descriptionCell {
         min-width: 300px; /* Зменшено мінімальну ширину */
-        flex: 3; /* Збільшено з 6.75 до 3 */
+        flex: 3; /* Збільшено з 4 до 3 */
     }
 
     .dateCell {
