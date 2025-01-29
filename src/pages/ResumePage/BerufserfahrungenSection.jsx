@@ -5,64 +5,28 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-import MaskedInput from "react-text-mask";
-import { parse, isValid } from "date-fns";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
-import styles from "./ResumeSection.module.css";
-import debounce from "lodash.debounce";
+import styles from "./BerufserfahrungenSection.module.css";
+// Видалити або закоментувати імпорт MaskedInput, оскільки він більше не потрібен
+// import MaskedInput from "react-text-mask";
+// Видалити або закоментувати імпорт debounce, якщо він більше не використовується
+// import debounce from "lodash.debounce";
 
-// Функція для перевірки валідності місяця
-const isValidMonth = (month) => {
-  const num = parseInt(month, 10);
-  return num >= 1 && num <= 12;
-};
+/*
+    Видалення функцій валідації, якщо вони більше не потрібні
+    // const isValidMonth = (month) => { ... };
+    // const checkMMYYYY = (str) => { ... };
+    // const validateDateValue = (val) => { ... };
+    // const validateDescription = (description) => { ... };
+*/
 
-// Функція для перевірки формату MM/yyyy
-const checkMMYYYY = (str) => {
-  const [m, y] = str.split("/");
-  if (!m || !y || m.length !== 2 || y.length !== 4)
-    throw new Error("Ungültiges Datumsformat. Erlaubt ist: MM/yyyy.");
-  if (!isValidMonth(m)) throw new Error("Der Monat muss zwischen 01 und 12 liegen.");
-  const date = parse(`${m}/01/${y}`, "MM/dd/yyyy", new Date());
-  if (!isValid(date)) throw new Error("Ungültiges Datumsformat.");
-};
-
-// Функція для перевірки значення дати
-const validateDateValue = (val) => {
-  const lowered = val.toLowerCase().trim();
-
-  if (!lowered || lowered.endsWith("/") || lowered.includes("_")) {
-    // Не перевіряємо, якщо введення ще триває
-    return;
-  }
-
-  if (lowered.startsWith("seit ")) {
-    const parts = lowered.split(" ").filter(Boolean);
-    if (parts.length !== 2) throw new Error("Das Format 'seit MM/yyyy' ist ungültig.");
-    checkMMYYYY(parts[1]);
-    return;
-  }
-
-  if (lowered.includes(" - ")) {
-    const parts = lowered.split(" - ").map((p) => p.trim());
-    if (parts.length === 2) {
-      checkMMYYYY(parts[0]);
-      if (parts[1].toLowerCase() !== "heute") checkMMYYYY(parts[1]);
-      return;
-    }
-  }
-
-  throw new Error("Ungültiges Datumsformat.");
-};
-
-// Функція для перевірки валідності опису
-const validateDescription = (description) => {
-  if (description.trim().length < 5) {
-    throw new Error("Опис повинен містити принаймні 5 символів.");
-  }
-  // Додайте інші перевірки за потребою
-};
-
+// Функція для отримання маски вводу (можливо, не потрібна, якщо ви використовуєте стандартний input)
 const getMask = (rawValue) => {
   const val = rawValue.toLowerCase().trim();
 
@@ -175,13 +139,17 @@ const getMask = (rawValue) => {
 
 const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate }) => {
   const suggestionsList = resumeFormTexts.berufserfahrungenSuggestions;
-  const [dateErrors, setDateErrors] = useState([]);
-  const [descriptionErrors, setDescriptionErrors] = useState([]);
+  // Видалити або закоментувати стан для помилок
+  // const [dateErrors, setDateErrors] = useState([]);
+  // const [descriptionErrors, setDescriptionErrors] = useState([]);
   const [suggestionsState, setSuggestionsState] = useState({
     activeRow: null,
     filteredSuggestions: [],
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
   const suggestionsRef = useRef(null);
+  const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
 
   // Відстеження кліків поза списком пропозицій
   useEffect(() => {
@@ -199,7 +167,8 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
 
   // Валідація даних перед оновленням
   const handleUpdate = (updatedEntries) => {
-    // Валідація
+    // Видалити або закоментувати блок валідації
+    /*
     const newDateErrors = [];
     const newDescriptionErrors = [];
 
@@ -231,9 +200,13 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     } else {
       console.error("Є помилки у введених даних");
     }
+    */
+
+    // Якщо валідація видалена, просто оновлюємо
+    onUpdate(updatedEntries);
   };
 
-  // Обробка зміни дати
+  // Обробка зміни дати без валідації
   const handleDateChange = (index, newValue) => {
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
@@ -247,11 +220,13 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
         activeRow: index,
         filteredSuggestions: filtered,
       });
+      setActiveDescriptionIndex(index);
     } else {
       setSuggestionsState({
         activeRow: null,
         filteredSuggestions: [],
       });
+      setActiveDescriptionIndex(null);
     }
   };
 
@@ -269,11 +244,13 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
         activeRow: index,
         filteredSuggestions: filtered,
       });
+      setActiveDescriptionIndex(index);
     } else {
       setSuggestionsState({
         activeRow: null,
         filteredSuggestions: [],
       });
+      setActiveDescriptionIndex(null);
     }
   };
 
@@ -285,28 +262,23 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
   };
 
   // Вибір пропозиції
-  const handleSuggestionSelect = (index, suggestion) => {
+  const handleSuggestionSelect = (suggestion) => {
+    if (activeDescriptionIndex === null) return;
+
     const updatedEntries = [...data];
-    updatedEntries[index].description = suggestion;
+    updatedEntries[activeDescriptionIndex].description = suggestion;
     handleUpdate(updatedEntries);
     setSuggestionsState({
       activeRow: null,
       filteredSuggestions: [],
     });
+    setActiveDescriptionIndex(null);
   };
 
   // Перемикання списку пропозицій
-  const toggleSuggestions = (index) => {
-    if (suggestionsState.activeRow === index) {
-      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-    } else {
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: suggestionsList.filter((suggestion) =>
-          suggestion.toLowerCase().includes(data[index]?.description?.toLowerCase() || "")
-        ),
-      });
-    }
+  const toggleSuggestions = () => {
+    setIsModalOpen(true);
+    isModalOpenRef.current = true;
   };
 
   // Додавання нового рядка
@@ -316,18 +288,22 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
     ];
     handleUpdate(updatedEntries);
-    setDateErrors([...dateErrors, null]);
-    setDescriptionErrors([...descriptionErrors, null]);
+    // Видалити або закоментувати додавання помилки
+    // setDateErrors([...dateErrors, null]);
+    // setDescriptionErrors([...descriptionErrors, null]);
   };
 
   // Видалення рядка
   const removeRow = (index) => {
     const updatedEntries = data.filter((_, i) => i !== index);
     handleUpdate(updatedEntries);
+    // Видалити або закоментувати видалення помилки
+    /*
     const updatedDateErrors = dateErrors.filter((_, i) => i !== index);
     const updatedDescriptionErrors = descriptionErrors.filter((_, i) => i !== index);
     setDateErrors(updatedDateErrors);
     setDescriptionErrors(updatedDescriptionErrors);
+    */
   };
 
   // Динамічне розширення висоти textarea
@@ -341,14 +317,19 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     field.style.height = `${field.scrollHeight}px`;
   };
 
-  // Дебаунсоване збереження
-  const debouncedSave = useRef(
-    debounce(() => {
-      // Збереження даних відбувається у батьківському компоненті
-      // Тому тут може бути лише лог або виклик додаткової функції, якщо потрібно
-      console.log("Debounced save called in BerufserfahrungenSection");
-    }, 500)
-  ).current;
+  // Відкриття модального вікна
+  const openModal = (index) => {
+    setIsModalOpen(true);
+    isModalOpenRef.current = true;
+    setActiveDescriptionIndex(index);
+  };
+
+  // Закриття модального вікна
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    isModalOpenRef.current = false;
+    setActiveDescriptionIndex(null);
+  };
 
   return (
     <section className={styles.berufserfahrungenSection}>
@@ -359,62 +340,85 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
           <div key={index} className={styles.entryRow}>
             {/* Поле дати */}
             <div className={styles.dateCell}>
-              <MaskedInput
-                mask={getMask}
+              {/* Використовуємо стандартний input замість MaskedInput */}
+              <input
+                type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}
                 placeholder={entry.datePlaceholder}
-                className={`${styles.inputField} ${
-                  dateErrors[index] ? styles.inputFieldWithError : ""
-                }`}
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
+                className={styles.inputField}
+                onBlur={() => {
+                  // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж активний рядок буде скинуто
+                  setTimeout(() => {
+                    if (!isModalOpenRef.current) {
+                      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+                      setActiveDescriptionIndex(null);
+                    }
+                  }, 100);
+                }}
               />
+              {/* Видалити або закоментувати блок з errorMessage */}
+              {/*
               {dateErrors[index] && (
                 <div className={styles.errorMessage}>{dateErrors[index]}</div>
               )}
+              */}
             </div>
 
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
-              <textarea
-                value={entry.description || ""}
-                onChange={(e) => {
-                  handleDescriptionChange(index, e.target.value);
-                  handleAutoExpand(e); // Динамічне розширення висоти
-                }}
-                placeholder="Information"
-                className={`${styles.inputField} ${styles.textareaField}`}
-                rows={1} // Початкова висота
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
-              ></textarea>
+              <div className={styles.inputWithInfo}>
+                {/* Контейнер кнопок для десктопу */}
+                <div className={styles.buttonContainer}>
+                  
+                  <IconButton
+                    onClick={() => removeRow(index)}
+                    className={styles.deleteButton}
+                    aria-label="Видалити"
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                </div>
+
+                {/* Поле опису */}
+                <textarea
+                  value={entry.description || ""}
+                  onChange={(e) => {
+                    handleDescriptionChange(index, e.target.value);
+                    handleAutoExpand(e);
+                  }}
+                  onFocus={() => setActiveDescriptionIndex(index)}
+                  onBlur={() => {
+                    // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
+                    setTimeout(() => {
+                      if (!isModalOpenRef.current) {
+                        setActiveDescriptionIndex(null);
+                      }
+                    }, 100);
+                  }}
+                  placeholder="Information"
+                  className={`${styles.inputField} ${styles.textareaField}`}
+                  rows={1}
+                ></textarea>
+              </div>
+
+              {/* Контейнер кнопки видалення для мобільних */}
+              <div className={styles.deleteButtonContainer}>
+                <IconButton
+                  onClick={() => removeRow(index)}
+                  className={styles.deleteButton}
+                  aria-label="Видалити"
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </div>
+
+              {/* Видалити або закоментувати блок з errorMessage */}
+              {/*
               {descriptionErrors[index] && (
                 <div className={styles.errorMessage}>{descriptionErrors[index]}</div>
               )}
-              {suggestionsState.activeRow === index &&
-                suggestionsState.filteredSuggestions.length > 0 && (
-                  <div
-                    ref={suggestionsRef}
-                    className={`${styles.dropdown} ${
-                      suggestionsState.filteredSuggestions.length > 0
-                        ? styles.open
-                        : ""
-                    }`}
-                  >
-                    <ul className={styles.dropdown__items}>
-                      {suggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() =>
-                            handleSuggestionSelect(index, suggestion)
-                          }
-                          className={styles.dropdown__item}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              */}
             </div>
 
             {/* Поле місця роботи */}
@@ -423,37 +427,60 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 value={entry.place || ""}
                 onChange={(e) => {
                   handlePlaceChange(index, e.target.value);
-                  handleAutoExpand(e); // Динамічне розширення висоти
+                  handleAutoExpand(e);
                 }}
                 placeholder="Ort"
                 className={`${styles.inputField} ${styles.textareaField}`}
-                rows={1} // Початкова висота
-                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
+                rows={1}
+                onBlur={() => {
+                  // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
+                  setTimeout(() => {
+                    if (!isModalOpenRef.current) {
+                      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+                      setActiveDescriptionIndex(null);
+                    }
+                  }, 100);
+                }}
               ></textarea>
             </div>
 
-            {/* Кнопка підказок і видалення */}
-            <div className={styles.buttonContainer}>
-              <IconButton onClick={() => toggleSuggestions(index)}>
-                <InfoIcon />
-              </IconButton>
-              <IconButton onClick={() => removeRow(index)}>
-                <DeleteIcon />
-              </IconButton>
-            </div>
+            {/* Роздільник між рядками на мобільних */}
+            <div className={styles.mobileDivider}></div>
           </div>
         ))}
       </div>
 
       {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
-        <IconButton onClick={addNewRow}>
+        <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
 
-      {/* Видалено: Відображення індикатора завантаження */}
-      {/* {isLoading && <div className={styles.loading}>Завантаження...</div>} */}
+      {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
+      {activeDescriptionIndex !== null && (
+        <IconButton
+          onClick={toggleSuggestions}
+          className={styles.fixedInfoButton}
+          aria-label="Інформація"
+        >
+          <InfoIcon />
+        </IconButton>
+      )}
+
+      {/* Модальне вікно з підказками */}
+      <Dialog open={isModalOpen} onClose={handleCloseModal}>
+        <DialogTitle>Виберіть підказку</DialogTitle>
+        <List>
+          {suggestionsList.map((hint, idx) => (
+            <ListItem key={idx} disablePadding>
+              <ListItemButton onClick={() => handleSuggestionSelect(hint)}>
+                <ListItemText primary={hint} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Dialog>
     </section>
   );
 };
