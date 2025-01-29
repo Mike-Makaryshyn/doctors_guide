@@ -5,11 +5,16 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-
-import { parse, isValid } from "date-fns";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./AktuellSection.module.css";
-import debounce from "lodash.debounce";
+
+import { parse, isValid } from "date-fns";
 
 const isValidMonth = (month) => {
   const num = parseInt(month, 10);
@@ -54,79 +59,27 @@ const validateDateValue = (val) => {
   throw new Error("Ungültiges Datumsformat.");
 };
 
-const validateDescription = (description) => {
-  if (description.trim().length < 5) {
-    throw new Error("Опис повинен містити принаймні 5 символів.");
-  }
-  // Додайте інші перевірки за потребою
-};
-
 const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
-  const suggestionsList = resumeFormTexts.suggestions;
+  const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
 
-  const [visibleFields, setVisibleFields] = useState(data.map(() => false));
-  const [hasCompletedFirstDate, setHasCompletedFirstDate] = useState(
-    data.map(() => false)
-  );
-  const [hasStartedSecondDate, setHasStartedSecondDate] = useState(
-    data.map(() => false)
-  );
-  const [suggestionsState, setSuggestionsState] = useState({
-    activeRow: null,
-    filteredSuggestions: [],
-  });
-  const suggestionsRef = useRef(null);
-
-  // Відстеження кліків поза списком пропозицій
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        suggestionsRef.current &&
-        !suggestionsRef.current.contains(event.target)
-      ) {
-        setSuggestionsState({
-          activeRow: null,
-          filteredSuggestions: [],
-        });
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // Використовуємо підказки з ResumeForm.js
+  const descriptionHints = resumeFormTexts.suggestions;
 
   // Обробка зміни дати
   const handleDateChange = (index, newValue) => {
+    try {
+      validateDateValue(newValue);
+      // Додаткова логіка при валідації (якщо необхідно)
+    } catch (error) {
+      console.error(error.message);
+      // Можливо, додати повідомлення користувачу
+    }
+
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
     onUpdate(updatedEntries);
-
-    // Динамічна логіка підказок
-    if (newValue.toLowerCase().startsWith("seit")) {
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: ["seit MM/YYYY"],
-      });
-    } else if (newValue.includes(" - ") && newValue.endsWith(" - ")) {
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: ["heute"],
-      });
-    } else if (newValue.length === 0) {
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: ["MM/YYYY", "MM/YYYY - MM/YYYY", "seit MM/YYYY"],
-      });
-    } else {
-      setSuggestionsState({ activeRow: index, filteredSuggestions: [] });
-    }
-
-    // Автоматично сховати підказки через 3 секунди
-    setTimeout(() => {
-      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-    }, 3000);
   };
 
   // Обробка зміни опису
@@ -134,21 +87,6 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
-
-    if (value.trim().length > 0) {
-      const filtered = suggestionsList.filter((suggestion) =>
-        suggestion.toLowerCase().includes(value.toLowerCase())
-      );
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: filtered,
-      });
-    } else {
-      setSuggestionsState({
-        activeRow: null,
-        filteredSuggestions: [],
-      });
-    }
   };
 
   // Додавання нового рядка
@@ -158,46 +96,42 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
       { date: "", description: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-
-    setVisibleFields([...visibleFields, false]);
-    setHasStartedSecondDate([...hasStartedSecondDate, false]); // Новий рядок починається без другого поля
   };
 
   // Видалення рядка
   const removeRow = (index) => {
     const updatedEntries = data.filter((_, i) => i !== index);
     onUpdate(updatedEntries);
-
-    const updatedVisibility = visibleFields.filter((_, i) => i !== index);
-    setVisibleFields(updatedVisibility);
-
-    const updatedSecondDateState = hasStartedSecondDate.filter(
-      (_, i) => i !== index
-    );
-    setHasStartedSecondDate(updatedSecondDateState);
   };
 
-  // Вибір пропозиції
-  const handleSuggestionSelect = (index, suggestion) => {
+  // Відкриття модального вікна
+  const toggleSuggestions = () => {
+    setIsModalOpen(true);
+    isModalOpenRef.current = true;
+  };
+
+  // Закриття модального вікна
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    isModalOpenRef.current = false;
+    setActiveDescriptionIndex(null); // Скидаємо активний індекс при закритті модалки
+  };
+
+  // Вставка підказки у поле опису
+  const handleSelectHint = (hint) => {
+    if (activeDescriptionIndex === null) return;
+
     const updatedEntries = [...data];
-    updatedEntries[index].description = suggestion;
+    const currentDescription = updatedEntries[activeDescriptionIndex].description;
+    const newDescription = currentDescription
+      ? `${currentDescription}\n${hint}`
+      : hint;
+    updatedEntries[activeDescriptionIndex].description = newDescription;
     onUpdate(updatedEntries);
-    setSuggestionsState({
-      activeRow: null,
-      filteredSuggestions: [],
-    });
-  };
 
-  // Перемикання списку пропозицій
-  const toggleSuggestions = (index) => {
-    if (suggestionsState.activeRow === index) {
-      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-    } else {
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: suggestionsList,
-      });
-    }
+    setIsModalOpen(false);
+    isModalOpenRef.current = false;
+    setActiveDescriptionIndex(null); // Скидаємо активний індекс після вставки підказки
   };
 
   // Динамічне розширення висоти textarea
@@ -210,6 +144,7 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     // Встановлюємо висоту на основі scrollHeight
     field.style.height = `${field.scrollHeight}px`;
   };
+
   const dateHints = [
     "MM/YYYY",
     "seit MM/YYYY",
@@ -227,97 +162,121 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
       return () => clearInterval(interval);
     }
   }, [isFocused, data]);
+
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
-      <form>
+      <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле для дати */}
-            
             <div className={styles.dateCell}>
-  <input
-    type="text"
-    value={entry.date || ""}
-    onChange={(e) => handleDateChange(index, e.target.value)}
-    onFocus={() => {
-      setIsFocused(true);
-      setHintIndex(-1);
-    }}
-    onBlur={() => {
-      setIsFocused(false);
-      if (!entry.date) setHintIndex(0);
-    }}
-    placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
-    className={`${styles.dateInput}`}
-  />
-</div>
-            {/* Поле для опису з окремою кнопкою підказок */}
+              <input
+                type="text"
+                value={entry.date || ""}
+                onChange={(e) => handleDateChange(index, e.target.value)}
+                onFocus={() => {
+                  setIsFocused(true);
+                  setHintIndex(-1);
+                  setActiveDescriptionIndex(null); // Не активний опис
+                }}
+                onBlur={() => {
+                  // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
+                  setTimeout(() => {
+                    if (!isModalOpenRef.current) {
+                      setIsFocused(false);
+                      if (!entry.date) setHintIndex(0);
+                      setActiveDescriptionIndex(null);
+                    }
+                  }, 100);
+                }}
+                placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
+                className={styles.dateInput}
+              />
+            </div>
+            {/* Поле опису */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
+                {/* Контейнер кнопок для десктопу */}
+                <div className={styles.buttonContainer}>
+                  <IconButton
+                    onClick={() => removeRow(index)}
+                    className={styles.deleteButton}
+                    aria-label="Видалити"
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                </div>
+
+                {/* Поле опису */}
                 <textarea
                   value={entry.description || ""}
                   onChange={(e) => {
                     handleDescriptionChange(index, e.target.value);
                     handleAutoExpand(e);
                   }}
+                  onFocus={() => setActiveDescriptionIndex(index)}
+                  onBlur={() => {
+                    // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
+                    setTimeout(() => {
+                      if (!isModalOpenRef.current) {
+                        setActiveDescriptionIndex(null);
+                      }
+                    }, 100);
+                  }}
                   placeholder="Information"
-                  className={`${styles.inputField}`}
+                  className={styles.inputField}
                   rows={1}
                 ></textarea>
-              
               </div>
-              {/* Список підказок */}
-              {suggestionsState.activeRow === index &&
-                suggestionsState.filteredSuggestions.length > 0 && (
-                  <div
-                    ref={suggestionsRef}
-                    className={`${styles.dropdown} ${styles.open}`}
-                  >
-                    <ul className={styles.dropdown__items}>
-                      {suggestionsState.filteredSuggestions.map(
-                        (suggestion, i) => (
-                          <li
-                            key={i}
-                            onClick={() =>
-                              handleSuggestionSelect(index, suggestion)
-                            }
-                            className={styles.dropdown__item}
-                          >
-                            {suggestion}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
+              {/* Контейнер кнопки видалення для мобільних */}
+              <div className={styles.deleteButtonContainer}>
+                <IconButton
+                  onClick={() => removeRow(index)}
+                  className={styles.deleteButton}
+                  aria-label="Видалити"
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </div>
             </div>
-
-            {/* Кнопка для видалення рядка */}
-            <div className={styles.buttonContainer}>
-              <IconButton
-                onClick={() => toggleSuggestions(index)}
-                className={styles.infoButton}
-              >
-                <InfoIcon />
-              </IconButton>
-              <IconButton
-                onClick={() => removeRow(index)}
-                className={styles.deleteButton}
-              >
-                <DeleteIcon />
-              </IconButton>
-            </div>
+            {/* Роздільник для мобільних */}
+            <div className={styles.mobileDivider}></div>
           </div>
         ))}
       </form>
 
       {/* Кнопка для додавання нового рядка */}
       <div className={styles.addButtonContainer}>
-        <IconButton onClick={addNewRow}>
+        <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
+
+      {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
+      {activeDescriptionIndex !== null && (
+        <IconButton
+          onClick={toggleSuggestions}
+          className={styles.fixedInfoButton}
+          aria-label="Інформація"
+        >
+          <InfoIcon />
+        </IconButton>
+      )}
+
+      {/* Модальне вікно з підказками */}
+      <Dialog open={isModalOpen} onClose={handleCloseModal}>
+        <DialogTitle>Виберіть підказку</DialogTitle>
+        <List>
+          {descriptionHints.map((hint, idx) => (
+            <ListItem key={idx} disablePadding>
+              <ListItemButton onClick={() => handleSelectHint(hint)}>
+                <ListItemText primary={hint} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Dialog>
     </section>
   );
 };

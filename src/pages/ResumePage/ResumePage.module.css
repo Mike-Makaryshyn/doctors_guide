@@ -154,12 +154,7 @@
 
 /* Додані стилі для AktuellSection */
 
-.aktuellSection {
-  width: 100%;
-    max-width: 100%;
-  
-  margin: 0;
-}
+
 
 .subheader {
   font-size: 1.5rem;
