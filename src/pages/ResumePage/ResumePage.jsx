@@ -267,24 +267,26 @@ const ResumePage = () => {
           </div>
 
           {/* Кнопки навігації */}
-          {currentSection > 0 && (
-            <button
-              onClick={handleBack}
-              disabled={currentSection === 0}
-              className={`${styles.navButton} ${styles.backButton}`}
-            >
-              Назад
-            </button>
-          )}
-          {currentSection < sections.length - 1 && (
-            <button
-              onClick={handleNext}
-              disabled={currentSection === sections.length - 1}
-              className={`${styles.navButton} ${styles.nextButton}`}
-            >
-              Далі
-            </button>
-          )}
+          <div className={styles.navButtonContainer}>
+  {currentSection > 0 && (
+    <button
+      onClick={handleBack}
+      disabled={currentSection === 0}
+      className={`${styles.navButton} ${styles.backButton}`}
+    >
+      Назад
+    </button>
+  )}
+  {currentSection < sections.length - 1 && (
+    <button
+      onClick={handleNext}
+      disabled={currentSection === sections.length - 1}
+      className={`${styles.navButton} ${styles.nextButton}`}
+    >
+      Далі
+    </button>
+  )}
+</div>
 
           {/* Відображення індикатора завантаження */}
           {isLoading && <div className={styles.loading}>Завантаження...</div>}

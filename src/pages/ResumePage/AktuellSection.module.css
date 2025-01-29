@@ -1,77 +1,79 @@
-/* Заголовок */
-.subheader {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-}
-
+/* Загальний контейнер */
 .entriesContainer {
-    max-width: none; /* Знімаємо будь-які обмеження */
     width: 100%;
+    max-width: 1200px; /* Запобігає надмірному розширенню */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Контейнер для одной записи */
+/* Контейнер одного запису */
 .entryRow {
     display: flex;
     gap: 15px;
-    flex-wrap: nowrap; /* Забороняє перехід на новий рядок */
+    flex-wrap: wrap; /* Дозволяє переносити елементи вниз при нестачі місця */
     align-items: center;
-    justify-content: flex-start; /* Вирівнює по лівому краю */
+    justify-content: space-between;
     width: 100%;
 }
 
-/* Поле ввода даты */
+/* Поле дати */
 .dateCell {
-    flex: 0 0 220px;
-    font-size: 14px;
-    color: #555;
+    flex: 1; /* Автоматично змінює розмір */
+    min-width: 180px; /* Мінімальний розмір */
+    max-width: 100%;
 }
 
-/* Контейнер для описания */
-.descriptionCell {
-    flex: 1;
-}
-
-/* Контейнер для полной ширины */
-.fullWidthCell {
-    flex: 1;
-    width: 100%;
-}
-
-/* Общие стили для всех полей ввода */
-.inputField, 
-textarea.inputField {
+/* Поле вводу дати */
+.dateInput {
     width: 100%;
     height: 50px;
-    min-height: 50px;
     border-radius: 12px;
     background: #ffffff;
     box-shadow:
-        6px 6px 12px #133933,
-        -6px -6px 12px #41bfab;
+        6px 6px 12px rgba(19, 57, 51, 0.5),
+        -6px -6px 12px rgba(65, 191, 171, 0.5);
     padding: 15px 20px;
     border: none;
     outline: none;
     font-size: 16px;
-    transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+    transition: box-shadow 0.3s ease;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    resize: none; /* Отключаем изменение размера у textarea */
 }
 
-/* Стили при фокусе */
+/* Поле опису */
+.descriptionCell {
+    flex: 2;
+    min-width: 250px;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Поле вводу (універсальне) */
+.inputField, 
+textarea.inputField {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow:
+        6px 6px 12px rgba(19, 57, 51, 0.5),
+        -6px -6px 12px rgba(65, 191, 171, 0.5);
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+/* Стилі при фокусі */
 .inputField:focus {
     box-shadow:
-        inset 3px 3px 5px #133933,
-        inset -3px -3px 5px #41bfab;
-}
-
-/* Стили для плейсхолдера */
-.inputField::placeholder {
-    color: #a9a9a9;
-    font-style: normal;
+        inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.7);
 }
 
 /* Контейнер кнопок */
@@ -81,8 +83,8 @@ textarea.inputField {
     gap: 10px;
 }
 
-/* Кнопки удаления и информации */
-.removeButton, 
+/* Кнопки видалення та інформації */
+.removeButton,
 .infoButton {
     background: none;
     border: none;
@@ -105,43 +107,22 @@ textarea.inputField {
     background-color: #f8d7da;
 }
 
-/* Кнопка добавления нового ряда */
+/* Кнопка додавання нового рядка */
 .addButtonContainer {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.addButtonSmall {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    color: #007bff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-}
-
-.addButtonSmall:hover {
-    background-color: #e6f0ff;
-    color: #0056b3;
-}
-
-/* Адаптивные стили для мобильных устройств */
+/* 🔹 Адаптивність для мобільних пристроїв */
 @media (max-width: 768px) {
     .entryRow {
         flex-direction: column;
+        width: 100%;
         align-items: stretch;
-        gap: 10px;
     }
 
-    .dateCell, 
+    .dateCell,
     .descriptionCell {
         flex: none;
         width: 100%;
@@ -151,7 +132,35 @@ textarea.inputField {
         font-size: 14px;
     }
 
+    textarea.inputField {
+        width: 100%;
+        min-width: 100%;
+    }
+
     .buttonContainer {
         justify-content: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .descriptionCell {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entryRow {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .descriptionCell {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .inputField {
+        width: 100%;
     }
 }

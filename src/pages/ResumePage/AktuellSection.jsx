@@ -235,28 +235,23 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
           <div key={index} className={styles.entryRow}>
             {/* Поле для дати */}
             
-            <div
-              className={styles.dateCell}
-              style={{ position: "relative", overflow: "hidden" }}
-            >
-              <div className={styles.floatingContainer}>
-              <input
-  type="text"
-  value={entry.date || ""}
-  onChange={(e) => handleDateChange(index, e.target.value)}
-  onFocus={() => {
-    setIsFocused(true);
-    setHintIndex(-1); // Очищаємо підказку при фокусі
-  }}
-  onBlur={() => {
-    setIsFocused(false);
-    if (!entry.date) setHintIndex(0); // Повертаємо підказку, якщо поле порожнє
-  }}
-  placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
-  className={`${styles.inputField}`}
-/>
-              </div>
-            </div>
+            <div className={styles.dateCell}>
+  <input
+    type="text"
+    value={entry.date || ""}
+    onChange={(e) => handleDateChange(index, e.target.value)}
+    onFocus={() => {
+      setIsFocused(true);
+      setHintIndex(-1);
+    }}
+    onBlur={() => {
+      setIsFocused(false);
+      if (!entry.date) setHintIndex(0);
+    }}
+    placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
+    className={`${styles.dateInput}`}
+  />
+</div>
             {/* Поле для опису з окремою кнопкою підказок */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
