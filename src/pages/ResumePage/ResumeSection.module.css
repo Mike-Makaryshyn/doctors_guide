@@ -309,3 +309,26 @@
 .inputFieldsecond {
   width: 10px !important;
 }
+.animatedHintContainer {
+  position: absolute;
+  left: 12px;
+  bottom: 5px;
+  overflow: hidden;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.floatingHint {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.activeHint {
+  opacity: 1;
+  transform: translateY(0);
+}

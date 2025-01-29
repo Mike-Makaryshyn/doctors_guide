@@ -1,0 +1,157 @@
+/* Заголовок */
+.subheader {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.entriesContainer {
+    max-width: none; /* Знімаємо будь-які обмеження */
+    width: 100%;
+}
+
+/* Контейнер для одной записи */
+.entryRow {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap; /* Забороняє перехід на новий рядок */
+    align-items: center;
+    justify-content: flex-start; /* Вирівнює по лівому краю */
+    width: 100%;
+}
+
+/* Поле ввода даты */
+.dateCell {
+    flex: 0 0 220px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Контейнер для описания */
+.descriptionCell {
+    flex: 1;
+}
+
+/* Контейнер для полной ширины */
+.fullWidthCell {
+    flex: 1;
+    width: 100%;
+}
+
+/* Общие стили для всех полей ввода */
+.inputField, 
+textarea.inputField {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow:
+        6px 6px 12px #133933,
+        -6px -6px 12px #41bfab;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    resize: none; /* Отключаем изменение размера у textarea */
+}
+
+/* Стили при фокусе */
+.inputField:focus {
+    box-shadow:
+        inset 3px 3px 5px #133933,
+        inset -3px -3px 5px #41bfab;
+}
+
+/* Стили для плейсхолдера */
+.inputField::placeholder {
+    color: #a9a9a9;
+    font-style: normal;
+}
+
+/* Контейнер кнопок */
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Кнопки удаления и информации */
+.removeButton, 
+.infoButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+}
+
+.removeButton {
+    color: #dc3545;
+}
+
+.removeButton:hover {
+    background-color: #f8d7da;
+}
+
+/* Кнопка добавления нового ряда */
+.addButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.addButtonSmall {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    color: #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.addButtonSmall:hover {
+    background-color: #e6f0ff;
+    color: #0056b3;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .entryRow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .dateCell, 
+    .descriptionCell {
+        flex: none;
+        width: 100%;
+    }
+
+    .inputField {
+        font-size: 14px;
+    }
+
+    .buttonContainer {
+        justify-content: center;
+    }
+}

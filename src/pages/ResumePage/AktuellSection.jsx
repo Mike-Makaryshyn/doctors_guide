@@ -1,39 +1,31 @@
 // src/pages/ResumePage/AktuellSection.jsx
-
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import PropTypes from "prop-types"; // Імпорт PropTypes
-import Input from "@mui/material/Input";
-import InputAdornment from "@mui/material/InputAdornment";
+import React, { useEffect, useState, useRef } from "react";
+import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-import MaskedInput from "react-text-mask";
-import { parse, isValid } from "date-fns";
-import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
-import styles from "./ResumeSection.module.css";
-import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
-import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
-import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
-import "react-toastify/dist/ReactToastify.css";
 
-// Функція для перевірки валідності місяця
+import { parse, isValid } from "date-fns";
+import resumeFormTexts from "../../constants/translation/ResumeForm";
+import styles from "./AktuellSection.module.css";
+import debounce from "lodash.debounce";
+
 const isValidMonth = (month) => {
   const num = parseInt(month, 10);
   return num >= 1 && num <= 12;
 };
 
-// Функція для перевірки формату MM/yyyy
 const checkMMYYYY = (str) => {
   const [m, y] = str.split("/");
   if (!m || !y || m.length !== 2 || y.length !== 4)
     throw new Error("Ungültiges Datumsformat. Erlaubt ist: MM/yyyy.");
-  if (!isValidMonth(m)) throw new Error("Der Monat muss zwischen 01 und 12 liegen.");
+  if (!isValidMonth(m))
+    throw new Error("Der Monat muss zwischen 01 und 12 liegen.");
   const date = parse(`${m}/01/${y}`, "MM/dd/yyyy", new Date());
   if (!isValid(date)) throw new Error("Ungültiges Datumsformat.");
 };
 
-// Функція для перевірки значення дати
 const validateDateValue = (val) => {
   const lowered = val.toLowerCase().trim();
 
@@ -44,7 +36,8 @@ const validateDateValue = (val) => {
 
   if (lowered.startsWith("seit ")) {
     const parts = lowered.split(" ").filter(Boolean);
-    if (parts.length !== 2) throw new Error("Das Format 'seit MM/yyyy' ist ungültig.");
+    if (parts.length !== 2)
+      throw new Error("Das Format 'seit MM/yyyy' ist ungültig.");
     checkMMYYYY(parts[1]);
     return;
   }
@@ -53,7 +46,7 @@ const validateDateValue = (val) => {
     const parts = lowered.split(" - ").map((p) => p.trim());
     if (parts.length === 2) {
       checkMMYYYY(parts[0]);
-      if (parts[1] !== "heute") checkMMYYYY(parts[1]);
+      if (parts[1].toLowerCase() !== "heute") checkMMYYYY(parts[1]);
       return;
     }
   }
@@ -61,128 +54,30 @@ const validateDateValue = (val) => {
   throw new Error("Ungültiges Datumsformat.");
 };
 
-// Функція для створення маски вводу
-const getMask = (rawValue) => {
-  const val = rawValue.toLowerCase().trim();
-
-  if (val.startsWith("seit")) {
-    return [
-      "s",
-      "e",
-      "i",
-      "t",
-      " ",
-      /\d/,
-      /\d/,
-      "/",
-      /\d/,
-      /\d/,
-      /\d/,
-      /\d/,
-    ];
+const validateDescription = (description) => {
+  if (description.trim().length < 5) {
+    throw new Error("Опис повинен містити принаймні 5 символів.");
   }
-
-  if (/^\d/.test(val)) {
-    const parts = val.split(" - ");
-    if (parts.length === 1) {
-      return [
-        /\d/,
-        /\d/,
-        "/",
-        /\d/,
-        /\d/,
-        /\d/,
-        /\d/,
-        " ",
-        "-",
-        " ",
-        /[hHtT\d]/,
-        /[eEuU\d]/,
-        /[uUtT\d]/,
-        /[tT\d]/,
-        /[eE\d]/,
-      ];
-    }
-
-    if (parts.length === 2) {
-      const secondPart = parts[1].trim();
-      if (secondPart.startsWith("h")) {
-        return [
-          /\d/,
-          /\d/,
-          "/",
-          /\d/,
-          /\d/,
-          /\d/,
-          /\d/,
-          " ",
-          "-",
-          " ",
-          "h",
-          "e",
-          "u",
-          "t",
-          "e",
-        ];
-      } else {
-        return [
-          /\d/,
-          /\d/,
-          "/",
-          /\d/,
-          /\d/,
-          /\d/,
-          /\d/,
-          " ",
-          "-",
-          " ",
-          /\d/,
-          /\d/,
-          "/",
-          /\d/,
-          /\d/,
-          /\d/,
-          /\d/,
-        ];
-      }
-    }
-  }
-
-  return [
-    /[sSmM]/,
-    /[eEM\d]/,
-    /[iIM\d]/,
-    /[tT\/\d]/,
-    /[\d ]/,
-    /\d/,
-    /\d/,
-    "/",
-    /\d/,
-    /\d/,
-    /\d/,
-    /\d/,
-    " ",
-    "-",
-    " ",
-    /[hHtT\d]/,
-    /[eEuU\d]/,
-    /[uUtT\d]/,
-    /[tT\d]/,
-    /[eE\d]/,
-  ];
+  // Додайте інші перевірки за потребою
 };
 
-// Використання forwardRef для доступу до методів з батьківського компонента
-const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
-  const suggestionsList = resumeFormTexts.suggestions; // Використання пропозицій з ResumeForm
-  const [entries, setEntries] = useState([{ date: "", description: "", datePlaceholder: "Datum" }]);
-  const [dateErrors, setDateErrors] = useState([null]);
+const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
+  const suggestionsList = resumeFormTexts.suggestions;
+
+  const [visibleFields, setVisibleFields] = useState(data.map(() => false));
+  const [hasCompletedFirstDate, setHasCompletedFirstDate] = useState(
+    data.map(() => false)
+  );
+  const [hasStartedSecondDate, setHasStartedSecondDate] = useState(
+    data.map(() => false)
+  );
   const [suggestionsState, setSuggestionsState] = useState({
     activeRow: null,
     filteredSuggestions: [],
   });
   const suggestionsRef = useRef(null);
 
+  // Відстеження кліків поза списком пропозицій
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -202,105 +97,43 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     };
   }, []);
 
-  // Завантаження даних Aktuell з Firestore
-  const fetchAktuellData = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      return;
-    }
-
-    try {
-      const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
-      const aktuellDoc = await getDoc(aktuellDocRef);
-      if (aktuellDoc.exists()) {
-        const data = aktuellDoc.data();
-        console.log("Отримані дані Aktuell:", data); // Доданий лог
-        if (data.entries && Array.isArray(data.entries)) {
-          setEntries(data.entries);
-        }
-      } else {
-        console.log("Документ Aktuell не знайдено");
-      }
-    } catch (error) {
-      console.error("Помилка отримання даних Aktuell:", error);
-      toast.error("Помилка отримання даних Aktuell");
-    }
-  };
-
-  useEffect(() => {
-    fetchAktuellData();
-  }, []);
-
-  useEffect(() => {
-    const fields = document.querySelectorAll(".inputField");
-    fields.forEach((field) => {
-      field.style.height = "auto"; // Скидаємо висоту
-      field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту
-    });
-  }, []);
-
-  // Збереження даних Aktuell у Firestore
-  const saveAktuellData = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      return;
-    }
-
-    try {
-      const nonEmptyEntries = entries.filter(
-        (entry) => entry.date.trim() !== "" || entry.description.trim() !== ""
-      );
-
-      if (nonEmptyEntries.length === 0) {
-        const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
-        await deleteDoc(aktuellDocRef);
-        console.log("Документ Aktuell видалено успішно");
-      } else {
-        nonEmptyEntries.forEach((entry, index) => {
-          if (entry.date.trim() !== "") validateDateValue(entry.date);
-        });
-
-        const aktuellDocRef = doc(db, "users", user.uid, "resume", "aktuell");
-        await setDoc(aktuellDocRef, { entries: nonEmptyEntries }, { merge: true });
-        console.log("Дані Aktuell успішно збережено");
-      }
-    } catch (error) {
-      console.error("Помилка збереження даних Aktuell:", error);
-      toast.error(`Помилка збереження даних Aktuell: ${error.message}`);
-    }
-  };
-
-  useImperativeHandle(ref, () => ({
-    saveData: saveAktuellData,
-  }));
-
+  // Обробка зміни дати
   const handleDateChange = (index, newValue) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
-    setEntries(updatedEntries);
+    onUpdate(updatedEntries);
 
-    const updatedErrors = [...dateErrors];
-    try {
-      if (newValue.trim() && !newValue.includes("_")) {
-        validateDateValue(newValue);
-        updatedErrors[index] = null;
-      } else {
-        updatedErrors[index] = null;
-      }
-    } catch (error) {
-      updatedErrors[index] = error.message;
+    // Динамічна логіка підказок
+    if (newValue.toLowerCase().startsWith("seit")) {
+      setSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: ["seit MM/YYYY"],
+      });
+    } else if (newValue.includes(" - ") && newValue.endsWith(" - ")) {
+      setSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: ["heute"],
+      });
+    } else if (newValue.length === 0) {
+      setSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: ["MM/YYYY", "MM/YYYY - MM/YYYY", "seit MM/YYYY"],
+      });
+    } else {
+      setSuggestionsState({ activeRow: index, filteredSuggestions: [] });
     }
-    setDateErrors(updatedErrors);
+
+    // Автоматично сховати підказки через 3 секунди
+    setTimeout(() => {
+      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
+    }, 3000);
   };
 
+  // Обробка зміни опису
   const handleDescriptionChange = (index, value) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].description = value;
-    setEntries(updatedEntries);
+    onUpdate(updatedEntries);
 
     if (value.trim().length > 0) {
       const filtered = suggestionsList.filter((suggestion) =>
@@ -318,17 +151,44 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
   };
 
-  const handleSuggestionSelect = (index, suggestion) => {
-    const updatedEntries = [...entries];
-    updatedEntries[index].description = suggestion;
-    setEntries(updatedEntries);
+  // Додавання нового рядка
+  const addNewRow = () => {
+    const updatedEntries = [
+      ...data,
+      { date: "", description: "", datePlaceholder: "Datum" },
+    ];
+    onUpdate(updatedEntries);
 
+    setVisibleFields([...visibleFields, false]);
+    setHasStartedSecondDate([...hasStartedSecondDate, false]); // Новий рядок починається без другого поля
+  };
+
+  // Видалення рядка
+  const removeRow = (index) => {
+    const updatedEntries = data.filter((_, i) => i !== index);
+    onUpdate(updatedEntries);
+
+    const updatedVisibility = visibleFields.filter((_, i) => i !== index);
+    setVisibleFields(updatedVisibility);
+
+    const updatedSecondDateState = hasStartedSecondDate.filter(
+      (_, i) => i !== index
+    );
+    setHasStartedSecondDate(updatedSecondDateState);
+  };
+
+  // Вибір пропозиції
+  const handleSuggestionSelect = (index, suggestion) => {
+    const updatedEntries = [...data];
+    updatedEntries[index].description = suggestion;
+    onUpdate(updatedEntries);
     setSuggestionsState({
       activeRow: null,
       filteredSuggestions: [],
     });
   };
 
+  // Перемикання списку пропозицій
   const toggleSuggestions = (index) => {
     if (suggestionsState.activeRow === index) {
       setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
@@ -340,18 +200,7 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     }
   };
 
-  const addNewRow = () => {
-    setEntries([...entries, { date: "", description: "", datePlaceholder: "Datum" }]);
-    setDateErrors([...dateErrors, null]);
-  };
-
-  const removeRow = (index) => {
-    const updatedEntries = entries.filter((_, i) => i !== index);
-    const updatedErrors = dateErrors.filter((_, i) => i !== index);
-    setEntries(updatedEntries);
-    setDateErrors(updatedErrors);
-  };
-
+  // Динамічне розширення висоти textarea
   const handleAutoExpand = (e) => {
     const field = e.target;
 
@@ -361,30 +210,53 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
     // Встановлюємо висоту на основі scrollHeight
     field.style.height = `${field.scrollHeight}px`;
   };
+  const dateHints = [
+    "MM/YYYY",
+    "seit MM/YYYY",
+    "MM/YYYY - MM/YYYY",
+    "MM/YYYY - heute",
+  ];
+  const [hintIndex, setHintIndex] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
 
+  useEffect(() => {
+    if (!isFocused && data.every((item) => !item.date)) {
+      const interval = setInterval(() => {
+        setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
+      }, 1500); // Швидше переключення підказок
+      return () => clearInterval(interval);
+    }
+  }, [isFocused, data]);
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <form>
-        {entries.map((entry, index) => (
+        {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле для дати */}
-            <div className={styles.dateCell}>
-              <MaskedInput
-                mask={getMask}
-                value={entry.date || ""}
-                onChange={(e) => handleDateChange(index, e.target.value)}
-                placeholder={entry.datePlaceholder || "Datum"}
-                className={`${styles.inputField} ${styles.inputFieldsecond} ${
-                  dateErrors[index] ? styles.inputFieldWithError : ""
-                }`}
-                onBlur={saveAktuellData}
-              />
-              {dateErrors[index] && (
-                <div className={styles.errorMessage}>{dateErrors[index]}</div>
-              )}
+            
+            <div
+              className={styles.dateCell}
+              style={{ position: "relative", overflow: "hidden" }}
+            >
+              <div className={styles.floatingContainer}>
+              <input
+  type="text"
+  value={entry.date || ""}
+  onChange={(e) => handleDateChange(index, e.target.value)}
+  onFocus={() => {
+    setIsFocused(true);
+    setHintIndex(-1); // Очищаємо підказку при фокусі
+  }}
+  onBlur={() => {
+    setIsFocused(false);
+    if (!entry.date) setHintIndex(0); // Повертаємо підказку, якщо поле порожнє
+  }}
+  placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
+  className={`${styles.inputField}`}
+/>
+              </div>
             </div>
-
             {/* Поле для опису з окремою кнопкою підказок */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
@@ -392,18 +264,13 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
                   value={entry.description || ""}
                   onChange={(e) => {
                     handleDescriptionChange(index, e.target.value);
-                    handleAutoExpand(e); // Динамічне розширення висоти
+                    handleAutoExpand(e);
                   }}
                   placeholder="Information"
-                  className={`${styles.inputField}`} // Залишаємо старий клас
+                  className={`${styles.inputField}`}
                   rows={1}
                 ></textarea>
-                <IconButton
-                  onClick={() => toggleSuggestions(index)}
-                  className={styles.infoButton}
-                >
-                  <InfoIcon />
-                </IconButton>
+              
               </div>
               {/* Список підказок */}
               {suggestionsState.activeRow === index &&
@@ -413,15 +280,19 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
                     className={`${styles.dropdown} ${styles.open}`}
                   >
                     <ul className={styles.dropdown__items}>
-                      {suggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() => handleSuggestionSelect(index, suggestion)}
-                          className={styles.dropdown__item}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
+                      {suggestionsState.filteredSuggestions.map(
+                        (suggestion, i) => (
+                          <li
+                            key={i}
+                            onClick={() =>
+                              handleSuggestionSelect(index, suggestion)
+                            }
+                            className={styles.dropdown__item}
+                          >
+                            {suggestion}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                 )}
@@ -429,7 +300,16 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
 
             {/* Кнопка для видалення рядка */}
             <div className={styles.buttonContainer}>
-              <IconButton onClick={() => removeRow(index)}>
+              <IconButton
+                onClick={() => toggleSuggestions(index)}
+                className={styles.infoButton}
+              >
+                <InfoIcon />
+              </IconButton>
+              <IconButton
+                onClick={() => removeRow(index)}
+                className={styles.deleteButton}
+              >
                 <DeleteIcon />
               </IconButton>
             </div>
@@ -445,11 +325,18 @@ const AktuellSection = forwardRef(({ title = "Aktuell", onNext }, ref) => {
       </div>
     </section>
   );
-});
+};
 
 AktuellSection.propTypes = {
   title: PropTypes.string,
-  onNext: PropTypes.func,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string,
+      description: PropTypes.string,
+      datePlaceholder: PropTypes.string,
+    })
+  ).isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default AktuellSection;

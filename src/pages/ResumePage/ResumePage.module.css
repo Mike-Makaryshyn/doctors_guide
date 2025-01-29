@@ -1,5 +1,10 @@
+/* src/pages/ResumePage/ResumeSection.module.css */
+
 /* Загальні стилі для обох версій */
 .container {
+  position: relative; /* Встановлюємо контейнер як відносно позиціонований */
+  padding-bottom: 60px; /* Додаємо відступ внизу, щоб кнопки не перекривали контент */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,4 +110,187 @@
   .section {
     padding: 20px;
   }
+}
+
+/* Кнопка навігації */
+.navButton {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.navButton:hover {
+  opacity: 1;
+}
+
+.backButton {
+  bottom: 20px;
+  left: 20px;
+}
+
+.nextButton {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Додані стилі для AktuellSection */
+
+.aktuellSection {
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.entryRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.dateCell {
+  position: relative;
+  width: 100%;
+}
+
+.descriptionCell {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: hidden; /* Важливо для обмеження руху підказки */
+}
+
+.inputField {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  z-index: 1; /* Поверх підказки */
+}
+
+.placeholder {
+  position: absolute;
+  font-size: 16px;
+  color: rgba(150, 150, 150, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0; /* Під текстом */
+  display: flex;
+}
+
+.placeholder span {
+  display: inline-block;
+  animation: slideText 4s linear infinite;
+}
+
+/* Анімація руху підказки */
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.inputFieldWithError {
+  border-bottom: 2px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.inputWithInfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.infoButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown__item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown__item:hover {
+  background-color: #f0f0f0;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.deleteButton {
+  color: red;
+}
+
+.addButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

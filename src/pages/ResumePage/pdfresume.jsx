@@ -14,37 +14,22 @@ const getUserResume = async () => {
     }
 
     try {
-        const headerRef = doc(db, "users", user.uid, "resume", "header");
-        const headerSnapshot = await getDoc(headerRef);
-        const headerData = headerSnapshot.exists() ? headerSnapshot.data() : null;
+        const profileRef = doc(db, "users", user.uid, "resume", "profile");
+        const profileSnapshot = await getDoc(profileRef);
+        const profileData = profileSnapshot.exists() ? profileSnapshot.data() : null;
 
-        const aktuellRef = doc(db, "users", user.uid, "resume", "aktuell");
-        const aktuellSnapshot = await getDoc(aktuellRef);
-        const aktuellData = aktuellSnapshot.exists() ? aktuellSnapshot.data() : null;
-
-        const berufserfahrungenRef = doc(db, "users", user.uid, "resume", "berufserfahrungen");
-        const berufserfahrungenSnapshot = await getDoc(berufserfahrungenRef);
-        const berufserfahrungenData = berufserfahrungenSnapshot.exists() ? berufserfahrungenSnapshot.data() : null;
-
-        const ausbildungRef = doc(db, "users", user.uid, "resume", "ausbildung");
-        const ausbildungSnapshot = await getDoc(ausbildungRef);
-        const ausbildungData = ausbildungSnapshot.exists() ? ausbildungSnapshot.data() : null;
-
-        const languagesRef = doc(db, "users", user.uid, "resume", "languages");
-        const languagesSnapshot = await getDoc(languagesRef);
-        const languagesData = languagesSnapshot.exists() ? languagesSnapshot.data() : null;
-
-        const technicalSkillsRef = doc(db, "users", user.uid, "resume", "technicalSkills");
-        const technicalSkillsSnapshot = await getDoc(technicalSkillsRef);
-        const technicalSkillsData = technicalSkillsSnapshot.exists() ? technicalSkillsSnapshot.data() : null;
+        if (!profileData) {
+            console.warn("Es gibt keine Profildaten für diesen Benutzer.");
+            return null;
+        }
 
         return {
-            header: headerData,
-            aktuell: aktuellData,
-            berufserfahrungen: berufserfahrungenData,
-            ausbildung: ausbildungData,
-            languages: languagesData,
-            technicalSkills: technicalSkillsData,
+            header: profileData.header || {},
+            aktuell: profileData.aktuell || [],
+            berufserfahrungen: profileData.berufserfahrungen || [],
+            ausbildung: profileData.ausbildung || [],
+            languages: profileData.languageSkills || [],
+            technicalSkills: profileData.technicalSkills || [],
         };
     } catch (error) {
         console.error("Fehler beim Abrufen der Daten aus Firestore:", error);
@@ -65,7 +50,7 @@ const addTable = (title, data, columns, doc, startY) => {
             body: data,
             theme: "grid",
             pageBreak: 'auto',
-            styles: { font: "Roboto", fontSize: 8, lineHeight: 1 },
+            styles: { font: "Roboto", fontSize: 10, lineHeight: 1.2 },
             headStyles: { 
                 fillColor: [240, 240, 240],
                 fontStyle: "bold",
@@ -94,10 +79,16 @@ const generatePDF = (resume) => {
     doc.addFont(robotoBold, "Roboto", "bold");
     doc.setFont("Roboto");
 
-    let yPosition = 5;
+    let yPosition = 10;
 
     // Відображення особистих даних
-    doc.setFontSize(8);
+    doc.setFontSize(14);
+    doc.setFont("Roboto", "bold");
+    doc.text("Persönliche Daten", 10, yPosition);
+    yPosition += 10;
+
+    doc.setFontSize(10);
+    doc.setFont("Roboto", "normal");
     const headerOrder = [
         "vorname",
         "nachname",
@@ -109,57 +100,60 @@ const generatePDF = (resume) => {
         "fachrichtung",
     ];
 
-    if (resume.header) {
-        headerOrder.forEach((key) => {
-            if (resume.header[key]) {
-                const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
-                doc.text(`${formattedKey}: ${resume.header[key]}`, 10, yPosition);
-                yPosition += 4;
-            }
-        });
-    }
+    headerOrder.forEach((key) => {
+        if (resume.header[key]) {
+            const formattedKey = key.charAt(0).toUpperCase() + key.slice(1);
+            doc.text(`${formattedKey}: ${resume.header[key]}`, 10, yPosition);
+            yPosition += 7;
+        }
+    });
     yPosition += 10;
 
     // Таблиця "Aktuell"
-    const aktuellData = resume.aktuell?.entries
-        ?.sort((a, b) => new Date(a.date) - new Date(b.date))
+    const aktuellData = resume.aktuell
+        .filter(entry => entry.date && entry.description) // Фільтруємо порожні записи
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
         .map((entry) => [entry.date, entry.description]);
 
-    if (aktuellData && aktuellData.length > 0) {
+    if (aktuellData.length > 0) {
         yPosition = addTable("Aktuell", aktuellData, ["Datum", "Beschreibung"], doc, yPosition);
     }
 
     // Таблиця "Berufserfahrungen"
-    const berufserfahrungenData = resume.berufserfahrungen?.entries
-        ?.sort((a, b) => new Date(a.date) - new Date(b.date))
+    const berufserfahrungenData = resume.berufserfahrungen
+        .filter(entry => entry.date && entry.description && entry.place)
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
         .map((entry) => [entry.date, `${entry.description}, ${entry.place}`]);
 
-    if (berufserfahrungenData && berufserfahrungenData.length > 0) {
+    if (berufserfahrungenData.length > 0) {
         yPosition = addTable("Berufserfahrungen", berufserfahrungenData, ["Datum", "Beschreibung"], doc, yPosition);
     }
 
     // Таблиця "Ausbildung"
-    const ausbildungData = resume.ausbildung?.entries
-        ?.sort((a, b) => new Date(a.date) - new Date(b.date))
+    const ausbildungData = resume.ausbildung
+        .filter(entry => entry.date && entry.description && entry.place)
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
         .map((entry) => [entry.date, `${entry.description}, ${entry.place}`]);
 
-    if (ausbildungData && ausbildungData.length > 0) {
+    if (ausbildungData.length > 0) {
         yPosition = addTable("Ausbildung", ausbildungData, ["Datum", "Beschreibung"], doc, yPosition);
     }
 
     // Таблиця "Sprachen"
-    const languagesData = resume.languages?.languages
-        ?.map((entry) => [entry.language, entry.level]);
+    const languagesData = resume.languages
+        .filter(entry => entry.language && entry.level)
+        .map((entry) => [entry.language, entry.level]);
 
-    if (languagesData && languagesData.length > 0) {
+    if (languagesData.length > 0) {
         yPosition = addTable("Sprachen", languagesData, ["Sprache", "Niveau"], doc, yPosition);
     }
 
     // Таблиця "Technische Fähigkeiten"
-    const technicalSkillsData = resume.technicalSkills?.technicalSkills
-        ?.map((entry) => [entry.skill, entry.technicalLevel]);
+    const technicalSkillsData = resume.technicalSkills
+        .filter(entry => entry.skill && entry.technicalLevel)
+        .map((entry) => [entry.skill, entry.technicalLevel]);
 
-    if (technicalSkillsData && technicalSkillsData.length > 0) {
+    if (technicalSkillsData.length > 0) {
         yPosition = addTable("Technische Fähigkeiten", technicalSkillsData, ["Fähigkeit", "Niveau"], doc, yPosition);
     }
 

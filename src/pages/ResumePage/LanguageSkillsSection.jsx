@@ -1,21 +1,17 @@
-// LanguageSkillsSection.jsx
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import PropTypes from "prop-types"; // Імпорт PropTypes
+// src/pages/ResumePage/LanguageSkillsSection.jsx
+import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
-import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт підказок
+import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./LanguageSkillsSection.module.css";
-import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
-import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
-import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
-import "react-toastify/dist/ReactToastify.css";
-import debounce from "lodash.debounce"; // Імпорт debounce
+import debounce from "lodash.debounce";
 
-// Функція для перевірки валідності мови (можна додати власну логіку)
+// Функція для перевірки валідності мови
 const validateLanguage = (language) => {
   if (!language.trim()) {
     throw new Error("Мова не може бути порожньою.");
@@ -23,7 +19,7 @@ const validateLanguage = (language) => {
   // Додайте додаткову валідацію за потребою
 };
 
-// Функція для перевірки валідності рівня (можна додати власну логіку)
+// Функція для перевірки валідності рівня
 const validateLevel = (level) => {
   if (!level.trim()) {
     throw new Error("Рівень не може бути порожнім.");
@@ -31,9 +27,9 @@ const validateLevel = (level) => {
   // Додайте додаткову валідацію за потребою
 };
 
-// Використання forwardRef для доступу до методів з батьківського компонента
-const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) => {
-  const [entries, setEntries] = useState([{ language: "", level: "" }]);
+const LanguageSkillsSection = ({ title = "Language Skills", data, onUpdate }) => {
+  const [languageErrors, setLanguageErrors] = useState([]);
+  const [levelErrors, setLevelErrors] = useState([]);
   const [languageSuggestionsState, setLanguageSuggestionsState] = useState({
     activeRow: null,
     filteredSuggestions: [],
@@ -49,98 +45,7 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
   const languageSuggestionsList = resumeFormTexts.languageSkillsSuggestions;
   const levelSuggestionsList = resumeFormTexts.levelSuggestions;
 
-  const [isLoading, setIsLoading] = useState(false); // Стан для індикатора завантаження
-
-  // Функція для отримання даних з Firestore
-  const fetchLanguagesData = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      return;
-    }
-
-    try {
-      const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
-      const languagesDoc = await getDoc(languagesDocRef);
-      if (languagesDoc.exists()) {
-        const data = languagesDoc.data();
-        console.log("Отримані дані Language Skills:", data);
-        if (data.languages && Array.isArray(data.languages)) {
-          setEntries(data.languages);
-        }
-      } else {
-        console.log("Документ Language Skills не знайдено");
-      }
-    } catch (error) {
-      console.error("Помилка отримання даних Language Skills:", error);
-      toast.error("Помилка отримання даних Language Skills");
-    }
-  };
-
-  // Функція для збереження даних у Firestore з дебаунсом
-  const saveLanguagesData = async () => {
-    setIsLoading(true); // Початок завантаження
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      setIsLoading(false);
-      return;
-    }
-
-    try {
-      // Фільтруємо записи, де обидва поля порожні
-      const nonEmptyEntries = entries.filter(
-        (entry) => entry.language.trim() !== "" || entry.level.trim() !== ""
-      );
-
-      if (nonEmptyEntries.length === 0) {
-        // Якщо немає записів, видаляємо документ
-        const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
-        await deleteDoc(languagesDocRef);
-        console.log("Документ Language Skills видалено успішно");
-        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
-        // toast.success("Документ Language Skills видалено успішно!");
-      } else {
-        // Валідація лише непорожніх записів
-        nonEmptyEntries.forEach((entry, index) => {
-          if (entry.language.trim() !== "") validateLanguage(entry.language);
-          if (entry.level.trim() !== "") validateLevel(entry.level);
-        });
-
-        const languagesDocRef = doc(db, "users", user.uid, "resume", "languages");
-        await setDoc(languagesDocRef, { languages: nonEmptyEntries }, { merge: true });
-        console.log("Дані Language Skills успішно збережено");
-        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
-        // toast.success("Дані Language Skills успішно збережено!");
-      }
-    } catch (error) {
-      console.error("Помилка збереження даних Language Skills:", error);
-      toast.error(`Помилка збереження даних Language Skills: ${error.message}`);
-    } finally {
-      setIsLoading(false); // Завершення завантаження
-    }
-  };
-
-  // Дебаунс для збереження даних
-  const debouncedSave = useRef(
-    debounce(() => {
-      saveLanguagesData();
-    }, 500)
-  ).current;
-
-  // Надання методу saveLanguagesData зовні через ref
-  useImperativeHandle(ref, () => ({
-    saveData: saveLanguagesData,
-  }));
-
-  // Завантаження даних при монтуванні компонента
-  useEffect(() => {
-    fetchLanguagesData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  // Відстеження кліків поза списком пропозицій
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -166,88 +71,198 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
     };
   }, []);
 
+  // Валідація даних перед оновленням
+  const handleUpdate = (updatedEntries) => {
+    // Валідація
+    const newLanguageErrors = [];
+    const newLevelErrors = [];
+
+    updatedEntries.forEach((entry) => {
+      try {
+        if (entry.language.trim() !== "") validateLanguage(entry.language);
+        newLanguageErrors.push(null);
+      } catch (error) {
+        newLanguageErrors.push(error.message);
+      }
+
+      try {
+        if (entry.level.trim() !== "") validateLevel(entry.level);
+        newLevelErrors.push(null);
+      } catch (error) {
+        newLevelErrors.push(error.message);
+      }
+    });
+
+    setLanguageErrors(newLanguageErrors);
+    setLevelErrors(newLevelErrors);
+
+    // Перевірка наявності помилок перед оновленням
+    const hasErrors =
+      newLanguageErrors.some((err) => err !== null) ||
+      newLevelErrors.some((err) => err !== null);
+    if (!hasErrors) {
+      onUpdate(updatedEntries);
+    } else {
+      console.error("Є помилки у введених даних");
+    }
+  };
+
+  // Обробка зміни мови
+  const handleLanguageChange = (index, value) => {
+    const updatedEntries = [...data];
+    updatedEntries[index].language = value;
+    handleUpdate(updatedEntries);
+
+    if (value.trim().length > 0) {
+      const filtered = languageSuggestionsList.filter((suggestion) =>
+        suggestion.toLowerCase().includes(value.toLowerCase())
+      );
+      setLanguageSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: filtered,
+      });
+    } else {
+      setLanguageSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    }
+  };
+
+  // Обробка зміни рівня
+  const handleLevelChange = (index, value) => {
+    const updatedEntries = [...data];
+    updatedEntries[index].level = value;
+    handleUpdate(updatedEntries);
+
+    if (value.trim().length > 0) {
+      const filtered = levelSuggestionsList.filter((suggestion) =>
+        suggestion.toLowerCase().includes(value.toLowerCase())
+      );
+      setLevelSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: filtered,
+      });
+    } else {
+      setLevelSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    }
+  };
+
+  // Вибір пропозиції для мови
+  const handleLanguageSuggestionSelect = (index, suggestion) => {
+    const updatedEntries = [...data];
+    updatedEntries[index].language = suggestion;
+    handleUpdate(updatedEntries);
+    setLanguageSuggestionsState({
+      activeRow: null,
+      filteredSuggestions: [],
+    });
+  };
+
+  // Вибір пропозиції для рівня
+  const handleLevelSuggestionSelect = (index, suggestion) => {
+    const updatedEntries = [...data];
+    updatedEntries[index].level = suggestion;
+    handleUpdate(updatedEntries);
+    setLevelSuggestionsState({
+      activeRow: null,
+      filteredSuggestions: [],
+    });
+  };
+
+  // Перемикання списку пропозицій для мови
+  const toggleLanguageSuggestions = (index) => {
+    if (languageSuggestionsState.activeRow === index) {
+      setLanguageSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    } else {
+      setLanguageSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: languageSuggestionsList.filter((suggestion) =>
+          suggestion.toLowerCase().includes(data[index]?.language?.toLowerCase() || "")
+        ),
+      });
+    }
+  };
+
+  // Перемикання списку пропозицій для рівня
+  const toggleLevelSuggestions = (index) => {
+    if (levelSuggestionsState.activeRow === index) {
+      setLevelSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
+    } else {
+      setLevelSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: levelSuggestionsList.filter((suggestion) =>
+          suggestion.toLowerCase().includes(data[index]?.level?.toLowerCase() || "")
+        ),
+      });
+    }
+  };
+
+  // Додавання нового рядка
   const addNewRow = () => {
-    setEntries([...entries, { language: "", level: "" }]);
+    const updatedEntries = [...data, { language: "", level: "" }];
+    handleUpdate(updatedEntries);
+    setLanguageErrors([...languageErrors, null]);
+    setLevelErrors([...levelErrors, null]);
   };
 
+  // Видалення рядка
   const removeRow = (index) => {
-    const updatedEntries = entries.filter((_, i) => i !== index);
-    setEntries(updatedEntries);
+    const updatedEntries = data.filter((_, i) => i !== index);
+    handleUpdate(updatedEntries);
+    const updatedLanguageErrors = languageErrors.filter((_, i) => i !== index);
+    const updatedLevelErrors = levelErrors.filter((_, i) => i !== index);
+    setLanguageErrors(updatedLanguageErrors);
+    setLevelErrors(updatedLevelErrors);
   };
 
-  const handleInputChange = (index, field, value) => {
-    const updatedEntries = [...entries];
-    updatedEntries[index][field] = value;
-    setEntries(updatedEntries);
+  // Динамічне розширення висоти textarea
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+
+    // Скидаємо висоту, щоб уникнути некоректних розрахунків
+    field.style.height = "auto";
+
+    // Встановлюємо нову висоту на основі scrollHeight
+    field.style.height = `${field.scrollHeight}px`;
   };
 
-  const handleSuggestionSelect = (index, field, suggestion) => {
-    const updatedEntries = [...entries];
-    updatedEntries[index][field] = suggestion; // Оновлення відповідного поля
-    setEntries(updatedEntries);
-
-    // Скидання підказок
-    if (field === "language") {
-      setLanguageSuggestionsState({
-        activeRow: null,
-        filteredSuggestions: [],
-      });
-    } else if (field === "level") {
-      setLevelSuggestionsState({
-        activeRow: null,
-        filteredSuggestions: [],
-      });
-    }
-  };
-
-  const handleInfoClick = (index, field) => {
-    const isOpen =
-      (field === "language" && languageSuggestionsState.activeRow === index) ||
-      (field === "level" && levelSuggestionsState.activeRow === index);
-
-    if (field === "language") {
-      setLanguageSuggestionsState({
-        activeRow: isOpen ? null : index,
-        filteredSuggestions: isOpen
-          ? []
-          : languageSuggestionsList.filter((suggestion) =>
-              suggestion
-                .toLowerCase()
-                .includes(entries[index]?.language?.toLowerCase() || "")
-            ),
-      });
-    } else if (field === "level") {
-      setLevelSuggestionsState({
-        activeRow: isOpen ? null : index,
-        filteredSuggestions: isOpen
-          ? []
-          : levelSuggestionsList.filter((suggestion) =>
-              suggestion
-                .toLowerCase()
-                .includes(entries[index]?.level?.toLowerCase() || "")
-            ),
-      });
-    }
-  };
+  // Дебаунсоване збереження
+  const debouncedSave = useRef(
+    debounce(() => {
+      // Збереження даних відбувається у батьківському компоненті
+      // Тому тут може бути лише лог або виклик додаткової функції, якщо потрібно
+      console.log("Debounced save called in LanguageSkillsSection");
+    }, 500)
+  ).current;
 
   return (
     <section className={styles.languageSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <div className={styles.entriesContainer}>
-        {entries.map((entry, index) => (
+        {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле для мови */}
             <div className={styles.descriptionCell}>
               <Input
                 placeholder="Enter language"
                 value={entry.language || ""}
-                onChange={(e) => handleInputChange(index, "language", e.target.value)}
+                onChange={(e) => handleLanguageChange(index, e.target.value)}
                 disableUnderline
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
                       aria-label="Show suggestions"
-                      onClick={() => handleInfoClick(index, "language")}
+                      onClick={() => toggleLanguageSuggestions(index)}
                       size="small"
                       className={styles.infoButton}
                     >
@@ -255,9 +270,14 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
                     </IconButton>
                   </InputAdornment>
                 }
-                className={styles.inputField}
+                className={`${styles.inputField} ${
+                  languageErrors[index] ? styles.inputFieldWithError : ""
+                }`}
                 onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               />
+              {languageErrors[index] && (
+                <div className={styles.errorMessage}>{languageErrors[index]}</div>
+              )}
               <div
                 className={`${styles.dropdown} ${
                   languageSuggestionsState.activeRow === index ? styles.open : ""
@@ -268,7 +288,7 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
                   {languageSuggestionsState.filteredSuggestions.map((suggestion, i) => (
                     <li
                       key={i}
-                      onClick={() => handleSuggestionSelect(index, "language", suggestion)}
+                      onClick={() => handleLanguageSuggestionSelect(index, suggestion)}
                       className={styles.dropdown__item}
                     >
                       {suggestion}
@@ -283,13 +303,13 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
               <Input
                 placeholder="Enter level"
                 value={entry.level || ""}
-                onChange={(e) => handleInputChange(index, "level", e.target.value)}
+                onChange={(e) => handleLevelChange(index, e.target.value)}
                 disableUnderline
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
                       aria-label="Show suggestions"
-                      onClick={() => handleInfoClick(index, "level")}
+                      onClick={() => toggleLevelSuggestions(index)}
                       size="small"
                       className={styles.infoButton}
                     >
@@ -297,9 +317,14 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
                     </IconButton>
                   </InputAdornment>
                 }
-                className={styles.inputField}
+                className={`${styles.inputField} ${
+                  levelErrors[index] ? styles.inputFieldWithError : ""
+                }`}
                 onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               />
+              {levelErrors[index] && (
+                <div className={styles.errorMessage}>{levelErrors[index]}</div>
+              )}
               <div
                 className={`${styles.dropdown} ${
                   levelSuggestionsState.activeRow === index ? styles.open : ""
@@ -310,7 +335,7 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
                   {levelSuggestionsState.filteredSuggestions.map((suggestion, i) => (
                     <li
                       key={i}
-                      onClick={() => handleSuggestionSelect(index, "level", suggestion)}
+                      onClick={() => handleLevelSuggestionSelect(index, suggestion)}
                       className={styles.dropdown__item}
                     >
                       {suggestion}
@@ -330,22 +355,28 @@ const LanguageSkillsSection = forwardRef(({ title = "Language Skills" }, ref) =>
         ))}
       </div>
 
-      {/* Кнопка "Додати" по центру під усіма рядками */}
+      {/* Кнопка "Додати" по центру під усіма введеннями */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow}>
           <AddIcon />
         </IconButton>
       </div>
 
-      {/* Відображення індикатора завантаження */}
-      {isLoading && <div className={styles.loading}>Завантаження...</div>}
+      {/* Видалено: Відображення індикатора завантаження */}
+      {/* {isLoading && <div className={styles.loading}>Завантаження...</div>} */}
     </section>
   );
-});
+};
 
 LanguageSkillsSection.propTypes = {
   title: PropTypes.string,
-  onNext: PropTypes.func, // Пропс для функції переходу до наступної секції, якщо потрібен
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      language: PropTypes.string,
+      level: PropTypes.string,
+    })
+  ).isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default LanguageSkillsSection;

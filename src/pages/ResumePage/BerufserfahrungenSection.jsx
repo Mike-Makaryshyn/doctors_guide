@@ -1,21 +1,15 @@
-// BerufserfahrungenSection.jsx
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import PropTypes from "prop-types"; // Імпорт PropTypes
-import Input from "@mui/material/Input";
-import InputAdornment from "@mui/material/InputAdornment";
+// src/pages/ResumePage/BerufserfahrungenSection.jsx
+import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import MaskedInput from "react-text-mask";
 import { parse, isValid } from "date-fns";
-import resumeFormTexts from "../../constants/translation/ResumeForm"; // Імпорт пропозицій
+import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./ResumeSection.module.css";
-import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
-import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore"; // Додано deleteDoc
-import { toast } from "react-toastify"; // Імпорт react-toastify для сповіщень
-import "react-toastify/dist/ReactToastify.css";
-import debounce from "lodash.debounce"; // Імпорт debounce
+import debounce from "lodash.debounce";
 
 // Функція для перевірки валідності місяця
 const isValidMonth = (month) => {
@@ -69,7 +63,6 @@ const validateDescription = (description) => {
   // Додайте інші перевірки за потребою
 };
 
-// Маска вводу
 const getMask = (rawValue) => {
   const val = rawValue.toLowerCase().trim();
 
@@ -180,27 +173,20 @@ const getMask = (rawValue) => {
   ];
 };
 
-// Використання forwardRef для доступу до методів з батьківського компонента
-const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNext }, ref) => {
+const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate }) => {
   const suggestionsList = resumeFormTexts.berufserfahrungenSuggestions;
-  const [entries, setEntries] = useState([
-    { date: "", description: "", place: "", datePlaceholder: "Datum" },
-  ]);
   const [dateErrors, setDateErrors] = useState([]);
+  const [descriptionErrors, setDescriptionErrors] = useState([]);
   const [suggestionsState, setSuggestionsState] = useState({
     activeRow: null,
     filteredSuggestions: [],
   });
   const suggestionsRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(false); // Додано стан для індикатора завантаження
 
   // Відстеження кліків поза списком пропозицій
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        suggestionsRef.current &&
-        !suggestionsRef.current.contains(event.target)
-      ) {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
         setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
       }
     };
@@ -211,133 +197,69 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
     };
   }, []);
 
-  // Функція для отримання даних з Firestore
-  const fetchExperiencesData = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      return;
-    }
+  // Валідація даних перед оновленням
+  const handleUpdate = (updatedEntries) => {
+    // Валідація
+    const newDateErrors = [];
+    const newDescriptionErrors = [];
 
-    try {
-      const experiencesDocRef = doc(db, "users", user.uid, "resume", "berufserfahrungen");
-      const experiencesDoc = await getDoc(experiencesDocRef);
-      if (experiencesDoc.exists()) {
-        const data = experiencesDoc.data();
-        console.log("Отримані дані Berufserfahrungen:", data); // Доданий лог
-        if (data.entries && Array.isArray(data.entries)) {
-          setEntries(data.entries);
-        }
-      } else {
-        console.log("Документ Berufserfahrungen не знайдено");
+    updatedEntries.forEach((entry) => {
+      try {
+        if (entry.date.trim() !== "") validateDateValue(entry.date);
+        newDateErrors.push(null);
+      } catch (error) {
+        newDateErrors.push(error.message);
       }
-    } catch (error) {
-      console.error("Помилка отримання даних Berufserfahrungen:", error);
-      toast.error("Помилка отримання даних Berufserfahrungen");
-    }
-  };
 
-  // Виклик функції завантаження даних при монтуванні компонента
-  useEffect(() => {
-    fetchExperiencesData();
-  }, []);
-
-  // Функція для збереження даних у Firestore з debounce
-  const saveExperiencesData = async () => {
-    setIsLoading(true); // Початок завантаження
-    const user = auth.currentUser;
-    if (!user) {
-      console.error("Користувач не автентифікований");
-      toast.error("Користувач не автентифікований");
-      setIsLoading(false);
-      return;
-    }
-
-    try {
-      // Фільтруємо записи, де обидва поля порожні
-      const nonEmptyEntries = entries.filter(
-        (entry) => entry.date.trim() !== "" || entry.description.trim() !== ""
-      );
-
-      if (nonEmptyEntries.length === 0) {
-        // Якщо немає записів, видаляємо документ
-        const experiencesDocRef = doc(db, "users", user.uid, "resume", "berufserfahrungen");
-        await deleteDoc(experiencesDocRef);
-        console.log("Документ Berufserfahrungen видалено успішно");
-        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
-        // toast.success("Документ Berufserfahrungen видалено успішно!");
-      } else {
-        // Валідація лише непорожніх записів
-        nonEmptyEntries.forEach((entry, index) => {
-          if (entry.date.trim() !== "") validateDateValue(entry.date);
-          if (entry.description.trim() !== "") {
-            validateDescription(entry.description);
-          }
-          // Ви можете додати додаткову валідацію для поля "place", якщо необхідно
-        });
-
-        const experiencesDocRef = doc(db, "users", user.uid, "resume", "berufserfahrungen");
-        await setDoc(experiencesDocRef, { entries: nonEmptyEntries }, { merge: true });
-        console.log("Дані Berufserfahrungen успішно збережено");
-        // Якщо не хочете відображати повідомлення, видаліть наступний рядок:
-        // toast.success("Дані Berufserfahrungen успішно збережено!");
+      try {
+        if (entry.description.trim() !== "") validateDescription(entry.description);
+        newDescriptionErrors.push(null);
+      } catch (error) {
+        newDescriptionErrors.push(error.message);
       }
-    } catch (error) {
-      console.error("Помилка збереження даних Berufserfahrungen:", error);
-      toast.error(`Помилка збереження даних Berufserfahrungen: ${error.message}`);
-    } finally {
-      setIsLoading(false); // Завершення завантаження
+    });
+
+    setDateErrors(newDateErrors);
+    setDescriptionErrors(newDescriptionErrors);
+
+    // Перевірка наявності помилок перед оновленням
+    const hasErrors =
+      newDateErrors.some((err) => err !== null) ||
+      newDescriptionErrors.some((err) => err !== null);
+    if (!hasErrors) {
+      onUpdate(updatedEntries);
+    } else {
+      console.error("Є помилки у введених даних");
     }
   };
-
-  // Дебаунс для збереження даних
-  const debouncedSave = useRef(
-    debounce(() => {
-      saveExperiencesData();
-    }, 500)
-  ).current;
-
-
-  const handleAutoExpand = (e) => {
-    const field = e.target;
-  
-    // Скидаємо висоту, щоб уникнути некоректних розрахунків
-    field.style.height = "auto";
-  
-    // Встановлюємо нову висоту на основі scrollHeight
-    field.style.height = `${field.scrollHeight}px`;
-  };
-  // Надання методу saveExperiencesData зовні через ref
-  useImperativeHandle(ref, () => ({
-    saveData: saveExperiencesData,
-  }));
 
   // Обробка зміни дати
   const handleDateChange = (index, newValue) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
-    setEntries(updatedEntries);
+    handleUpdate(updatedEntries);
 
-    const updatedErrors = [...dateErrors];
-    try {
-      if (newValue.trim() && !newValue.includes("_")) {
-        validateDateValue(newValue);
-        updatedErrors[index] = null;
-      } else {
-        updatedErrors[index] = null; // Немає помилок при незавершеному введенні
-      }
-    } catch (error) {
-      updatedErrors[index] = error.message;
+    if (newValue.trim().length > 0) {
+      const filtered = suggestionsList.filter((suggestion) =>
+        suggestion.toLowerCase().includes(newValue.toLowerCase())
+      );
+      setSuggestionsState({
+        activeRow: index,
+        filteredSuggestions: filtered,
+      });
+    } else {
+      setSuggestionsState({
+        activeRow: null,
+        filteredSuggestions: [],
+      });
     }
-    setDateErrors(updatedErrors);
   };
 
   // Обробка зміни опису
   const handleDescriptionChange = (index, value) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].description = value;
-    setEntries(updatedEntries);
+    handleUpdate(updatedEntries);
 
     if (value.trim().length > 0) {
       const filtered = suggestionsList.filter((suggestion) =>
@@ -357,16 +279,16 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
 
   // Обробка зміни місця роботи
   const handlePlaceChange = (index, value) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].place = value;
-    setEntries(updatedEntries);
+    handleUpdate(updatedEntries);
   };
 
   // Вибір пропозиції
   const handleSuggestionSelect = (index, suggestion) => {
-    const updatedEntries = [...entries];
+    const updatedEntries = [...data];
     updatedEntries[index].description = suggestion;
-    setEntries(updatedEntries);
+    handleUpdate(updatedEntries);
     setSuggestionsState({
       activeRow: null,
       filteredSuggestions: [],
@@ -380,34 +302,60 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
     } else {
       setSuggestionsState({
         activeRow: index,
-        filteredSuggestions: suggestionsList,
+        filteredSuggestions: suggestionsList.filter((suggestion) =>
+          suggestion.toLowerCase().includes(data[index]?.description?.toLowerCase() || "")
+        ),
       });
     }
   };
 
   // Додавання нового рядка
   const addNewRow = () => {
-    setEntries([
-      ...entries,
+    const updatedEntries = [
+      ...data,
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
-    ]);
+    ];
+    handleUpdate(updatedEntries);
     setDateErrors([...dateErrors, null]);
+    setDescriptionErrors([...descriptionErrors, null]);
   };
 
   // Видалення рядка
   const removeRow = (index) => {
-    const updatedEntries = entries.filter((_, i) => i !== index);
-    const updatedErrors = dateErrors.filter((_, i) => i !== index);
-    setEntries(updatedEntries);
-    setDateErrors(updatedErrors);
+    const updatedEntries = data.filter((_, i) => i !== index);
+    handleUpdate(updatedEntries);
+    const updatedDateErrors = dateErrors.filter((_, i) => i !== index);
+    const updatedDescriptionErrors = descriptionErrors.filter((_, i) => i !== index);
+    setDateErrors(updatedDateErrors);
+    setDescriptionErrors(updatedDescriptionErrors);
   };
+
+  // Динамічне розширення висоти textarea
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+
+    // Скидаємо висоту, щоб уникнути некоректних розрахунків
+    field.style.height = "auto";
+
+    // Встановлюємо нову висоту на основі scrollHeight
+    field.style.height = `${field.scrollHeight}px`;
+  };
+
+  // Дебаунсоване збереження
+  const debouncedSave = useRef(
+    debounce(() => {
+      // Збереження даних відбувається у батьківському компоненті
+      // Тому тут може бути лише лог або виклик додаткової функції, якщо потрібно
+      console.log("Debounced save called in BerufserfahrungenSection");
+    }, 500)
+  ).current;
 
   return (
     <section className={styles.berufserfahrungenSection}>
       <h3 className={styles.subheader}>{title}</h3>
-  
+
       <div className={styles.entriesContainer}>
-        {entries.map((entry, index) => (
+        {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле дати */}
             <div className={styles.dateCell}>
@@ -425,7 +373,7 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
                 <div className={styles.errorMessage}>{dateErrors[index]}</div>
               )}
             </div>
-  
+
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
               <textarea
@@ -437,8 +385,11 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
                 placeholder="Information"
                 className={`${styles.inputField} ${styles.textareaField}`}
                 rows={1} // Початкова висота
-                onBlur={debouncedSave}
+                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               ></textarea>
+              {descriptionErrors[index] && (
+                <div className={styles.errorMessage}>{descriptionErrors[index]}</div>
+              )}
               {suggestionsState.activeRow === index &&
                 suggestionsState.filteredSuggestions.length > 0 && (
                   <div
@@ -450,24 +401,22 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
                     }`}
                   >
                     <ul className={styles.dropdown__items}>
-                      {suggestionsState.filteredSuggestions.map(
-                        (suggestion, i) => (
-                          <li
-                            key={i}
-                            onClick={() =>
-                              handleSuggestionSelect(index, suggestion)
-                            }
-                            className={styles.dropdown__item}
-                          >
-                            {suggestion}
-                          </li>
-                        )
-                      )}
+                      {suggestionsState.filteredSuggestions.map((suggestion, i) => (
+                        <li
+                          key={i}
+                          onClick={() =>
+                            handleSuggestionSelect(index, suggestion)
+                          }
+                          className={styles.dropdown__item}
+                        >
+                          {suggestion}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}
             </div>
-  
+
             {/* Поле місця роботи */}
             <div className={styles.placeCell}>
               <textarea
@@ -479,10 +428,10 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
                 placeholder="Ort"
                 className={`${styles.inputField} ${styles.textareaField}`}
                 rows={1} // Початкова висота
-                onBlur={debouncedSave}
+                onBlur={debouncedSave} // Збереження при покиданні поля з дебаунсом
               ></textarea>
             </div>
-  
+
             {/* Кнопка підказок і видалення */}
             <div className={styles.buttonContainer}>
               <IconButton onClick={() => toggleSuggestions(index)}>
@@ -495,23 +444,31 @@ const BerufserfahrungenSection = forwardRef(({ title = "Berufserfahrungen", onNe
           </div>
         ))}
       </div>
-  
+
       {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow}>
           <AddIcon />
         </IconButton>
       </div>
-  
-      {/* Відображення індикатора завантаження */}
-      {isLoading && <div className={styles.loading}>Завантаження...</div>}
+
+      {/* Видалено: Відображення індикатора завантаження */}
+      {/* {isLoading && <div className={styles.loading}>Завантаження...</div>} */}
     </section>
   );
-});
+};
 
 BerufserfahrungenSection.propTypes = {
   title: PropTypes.string,
-  onNext: PropTypes.func.isRequired, // Пропс для функції переходу до наступної секції
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string,
+      description: PropTypes.string,
+      place: PropTypes.string,
+      datePlaceholder: PropTypes.string,
+    })
+  ).isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default BerufserfahrungenSection;
