@@ -268,7 +268,7 @@ textarea.inputField {
 .suggestionButtonContainer {
     position: fixed; /* Фіксуємо кнопку на екрані */
     top: 30%; /* Відступ від верху */
-    right: 220px; /* Фіксуємо в правому верхньому кутку */
+    right: 160px; /* Фіксуємо в правому верхньому кутку */
     z-index: 1000; /* Впевнюємося, що вона поверх всіх елементів */
 }
 
@@ -287,8 +287,31 @@ textarea.inputField {
 @media (max-width: 768px) {
     .suggestionButtonContainer {
        
-        top: 200px; /* Менший відступ для мобільних */
-        right: 60px; /* Щоб кнопка не перекривала елементи */
+        top: 180px; /* Менший відступ для мобільних */
+        right: 10px; /* Щоб кнопка не перекривала елементи */
         position: fixed;
     }
+}
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+}
+
+.glowingLightbulb {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+    color: #FFD700; /* Жовте світіння */
+    font-size: 2rem; /* Збільшений розмір */
 }

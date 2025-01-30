@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Dialog from "@mui/material/Dialog";
@@ -306,7 +306,7 @@ useEffect(() => {
       className={styles.suggestionButton}
       aria-label="Інформація"
     >
-      <InfoIcon />
+     <LightbulbIcon className={styles.glowingLightbulb} />
     </IconButton>
   </div>
 )}
