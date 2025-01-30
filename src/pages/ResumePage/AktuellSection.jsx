@@ -135,22 +135,38 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
 
   // Вставка підказки у поле опису
   const handleSelectHint = (hint) => {
-    if (activeDescriptionIndex === null || activeDescriptionIndex < 0) return;
+    console.log("handleSelectHint called with hint:", hint);
+    console.log("activeDescriptionIndex:", activeDescriptionIndex);
+  
+    if (activeDescriptionIndex === null || activeDescriptionIndex < 0) {
+      console.error("Error: activeDescriptionIndex is invalid.");
+      return;
+    }
   
     const updatedEntries = [...data];
+    console.log("Before update:", updatedEntries);
+  
+    if (!updatedEntries[activeDescriptionIndex]) {
+      console.error("Error: No entry found for index", activeDescriptionIndex);
+      return;
+    }
+  
     const currentDescription = updatedEntries[activeDescriptionIndex].description || "";
     const newDescription = currentDescription ? `${currentDescription}\n${hint}` : hint;
     
     updatedEntries[activeDescriptionIndex].description = newDescription;
+    console.log("After update:", updatedEntries);
+  
     onUpdate(updatedEntries);
   
-    // Додаємо невелику затримку, щоб React встиг оновити DOM
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
       if (textarea) {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
-        textarea.focus(); // Повертаємо фокус у поле
+        textarea.focus();
+      } else {
+        console.error("Error: Textarea not found for index", activeDescriptionIndex);
       }
     }, 100);
   
@@ -237,23 +253,18 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     }
   }, [activeDescriptionIndex, data]);
   const handleFocus = (index) => {
+    console.log("handleFocus called with index:", index);
     setActiveDescriptionIndex(index);
+  
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[index];
       if (textarea) {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
+      } else {
+        console.error("Error: No textarea found for index", index);
       }
     }, 50);
-  };
-  const handleBlur = (event) => {
-    setTimeout(() => {
-      const activeElement = document.activeElement;
-      if (activeElement && activeElement.tagName === "TEXTAREA") {
-        return; // Якщо курсор все ще в полі, лампочку не ховаємо
-      }
-      setActiveDescriptionIndex(null);
-    }, 200); // Коротка затримка, щоб дозволити клікнути по лампочці
   };
   return (
     <section className={styles.aktuellSection}>
@@ -301,25 +312,25 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
                   rows={1}
                 />
 
-{activeDescriptionIndex === index && (
-  <div
-    className={styles.suggestionButtonContainer}
-    style={{
-      position: "absolute",
-      top: "38%",
-      right: "-40px", // Десктоп: Відступ справа
-      transform: "translateY(-50%)", // Вирівнювання по центру
-    }}
-  >
-  <LightbulbIcon
-  className={`${styles.glowingLightbulb} ${styles.mobileLightbulb}`}
-  onClick={() => {
-    setActiveDescriptionIndex(index); // Гарантуємо, що підказка відкриється для правильного поля
-    toggleSuggestions();
-  }}
-/>
-  </div>
-)}
+                {activeDescriptionIndex === index && (
+                  <div
+                    className={styles.suggestionButtonContainer}
+                    style={{
+                      position: "absolute",
+                      top: "38%",
+                      right: "-40px", // Десктоп: Відступ справа
+                      transform: "translateY(-50%)", // Вирівнювання по центру
+                    }}
+                  >
+                    <LightbulbIcon
+                      className={`${styles.glowingLightbulb} ${styles.mobileLightbulb}`}
+                      onClick={() => {
+                        setActiveDescriptionIndex(index); // Гарантуємо, що підказка відкриється для правильного поля
+                        toggleSuggestions();
+                      }}
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Контейнер кнопки видалення для мобільних */}
@@ -345,8 +356,6 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
           <AddIcon />
         </IconButton>
       </div>
-
-     
 
       {/* Модальне вікно з підказками */}
       <Dialog open={isModalOpen} onClose={handleCloseModal}>
