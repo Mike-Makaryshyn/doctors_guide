@@ -61,6 +61,7 @@ const validateDateValue = (val) => {
 
 const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
 
@@ -150,19 +151,40 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     "seit MM/YYYY",
     "MM/YYYY - MM/YYYY",
     "MM/YYYY - heute",
-  ];
-  const [hintIndex, setHintIndex] = useState(0);
-  const [isFocused, setIsFocused] = useState(false);
+];
 
-  useEffect(() => {
-    if (!isFocused && data.every((item) => !item.date)) {
-      const interval = setInterval(() => {
+const [hintIndex, setHintIndex] = useState(0);
+const [focusedIndex, setFocusedIndex] = useState(null);
+
+// Ротація підказок для всіх порожніх полів дати
+useEffect(() => {
+    const interval = setInterval(() => {
         setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
-      }, 1500); // Швидше переключення підказок
-      return () => clearInterval(interval);
-    }
-  }, [isFocused, data]);
+    }, 1500);
 
+    return () => clearInterval(interval);
+}, []); // Завжди крутити підказки незалежно від фокусу
+
+// Функція для визначення, яку підказку показувати
+const getPlaceholder = (index, value) => {
+  if (value) return ""; // Якщо поле заповнене, підказка не потрібна
+  if (document.activeElement && document.activeElement.tagName === "INPUT") {
+    return index === focusedIndex ? "" : dateHints[hintIndex]; // Якщо курсор у полі, підказку не показувати
+  }
+  return dateHints[hintIndex]; // У всіх інших випадках показувати підказку
+};
+  useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
@@ -171,28 +193,24 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
           <div key={index} className={styles.entryRow}>
             {/* Поле для дати */}
             <div className={styles.dateCell}>
-              <input
-                type="text"
-                value={entry.date || ""}
-                onChange={(e) => handleDateChange(index, e.target.value)}
-                onFocus={() => {
-                  setIsFocused(true);
-                  setHintIndex(-1);
-                  setActiveDescriptionIndex(null); // Не активний опис
-                }}
-                onBlur={() => {
-                  // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
-                  setTimeout(() => {
-                    if (!isModalOpenRef.current) {
-                      setIsFocused(false);
-                      if (!entry.date) setHintIndex(0);
-                      setActiveDescriptionIndex(null);
-                    }
-                  }, 100);
-                }}
-                placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
-                className={styles.dateInput}
-              />
+            <input
+  type="text"
+  value={entry.date || ""}
+  onChange={(e) => handleDateChange(index, e.target.value)}
+  onFocus={() => {
+    setFocusedIndex(index); // Запам'ятовуємо, що це поле в фокусі
+  }}
+  onBlur={(e) => {
+    setTimeout(() => {
+      // Якщо фокус НЕ перейшов в textarea, повертаємо підказку
+      if (!document.querySelector("textarea:focus")) {
+        if (!entry.date) setFocusedIndex(null);
+      }
+    }, 50);
+  }}
+  placeholder={getPlaceholder(index, entry.date)}
+  className={styles.dateInput}
+/>
             </div>
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
@@ -210,24 +228,26 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
 
                 {/* Поле опису */}
                 <textarea
-                  value={entry.description || ""}
-                  onChange={(e) => {
-                    handleDescriptionChange(index, e.target.value);
-                    handleAutoExpand(e);
-                  }}
-                  onFocus={() => setActiveDescriptionIndex(index)}
-                  onBlur={() => {
-                    // Використовуємо setTimeout, щоб дозволити обробнику кліку на Info Button виконатися перш ніж activeDescriptionIndex буде скинуто
-                    setTimeout(() => {
-                      if (!isModalOpenRef.current) {
-                        setActiveDescriptionIndex(null);
-                      }
-                    }, 100);
-                  }}
-                  placeholder="Information"
-                  className={styles.inputField}
-                  rows={1}
-                ></textarea>
+  value={entry.description || ""}
+  onChange={(e) => {
+    handleDescriptionChange(index, e.target.value);
+    handleAutoExpand(e);
+  }}
+  onFocus={() => {
+    setActiveDescriptionIndex(index);
+  }}
+  onBlur={(e) => {
+    setTimeout(() => {
+      // Якщо активне інше поле textarea, то кнопку не ховаємо
+      if (!isModalOpenRef.current && !document.querySelector("textarea:focus")) {
+        setActiveDescriptionIndex(null);
+      }
+    }, 100);
+  }}
+  placeholder="Information"
+  className={styles.inputField}
+  rows={1}
+/>
               </div>
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
@@ -255,14 +275,14 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
 
       {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
       {activeDescriptionIndex !== null && (
-        <IconButton
-          onClick={toggleSuggestions}
-          className={styles.fixedInfoButton}
-          aria-label="Інформація"
-        >
-          <InfoIcon />
-        </IconButton>
-      )}
+   <IconButton
+       onClick={toggleSuggestions}
+       className={`${styles.fixedInfoButton} ${isScrolled ? styles.fixed : ""}`}
+       aria-label="Інформація"
+   >
+       <InfoIcon />
+   </IconButton>
+)}
 
       {/* Модальне вікно з підказками */}
       <Dialog open={isModalOpen} onClose={handleCloseModal}>

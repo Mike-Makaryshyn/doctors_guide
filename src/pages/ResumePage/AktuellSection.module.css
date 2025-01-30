@@ -130,20 +130,7 @@ textarea.inputField {
 }
 
 /* Кнопки видалення та інформації */
-.infoButton,
-.deleteButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 35px;
-    width: 35px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 8px;
-}
+
 
 .infoButton:hover {
     background-color: #e0f7fa; /* Світлий блакитний фон при наведенні */
@@ -167,19 +154,44 @@ textarea.inputField {
 }
 
 /* Фіксована кнопка Інформації в правому нижньому кутку екрану */
+/* Фіксована кнопка Інформації */
+/* Звичайне положення кнопки */
 .fixedInfoButton {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     background-color: #ffffff;
-    box-shadow:
-      6px 6px 12px rgba(19, 57, 51, 0.5),
-      -6px -6px 12px rgba(65, 191, 171, 0.5);
+    box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+                -6px -6px 12px rgba(65, 191, 171, 0.5);
     border-radius: 50%;
-    z-index: 20000;
+    z-index: 9999; /* Щоб завжди була поверх усього */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    .fixedInfoButton {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Коли прокрутили сторінку – кнопка стає фіксованою */
+.fixedInfoButton.fixed {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 3000; /* Щоб вона залишалася поверх усіх елементів */
+}
+
+
+
+/* Ефект при наведенні */
 .fixedInfoButton:hover {
     background-color: #e0f7fa;
 }
