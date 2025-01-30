@@ -96,6 +96,12 @@ textarea.inputField {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+textarea {
+    overflow: hidden; /* Щоб текстова область не мала скролу */
+    resize: none; /* Відключаємо ручне розширення */
+    min-height: 50px; /* Мінімальна висота */
+    max-height: 300px; /* Опціонально: обмеження максимальної висоти */
+}
 
 /* Стилі при фокусі (аналогічні HeaderSection.module.css) */
 .inputField:focus,

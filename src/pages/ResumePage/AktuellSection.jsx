@@ -154,12 +154,9 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
   // Динамічне розширення висоти textarea
   const handleAutoExpand = (e) => {
     const field = e.target;
-
-    // Скидаємо висоту, щоб отримати точні розрахунки
-    field.style.height = "auto";
-
-    // Встановлюємо висоту на основі scrollHeight
-    field.style.height = `${field.scrollHeight}px`;
+    
+    field.style.height = "auto"; // Скидаємо висоту, щоб отримати точні розрахунки
+    field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту на основі вмісту
   };
 
   const dateHints = [
@@ -274,8 +271,9 @@ useEffect(() => {
     handleDescriptionChange(index, e.target.value);
     handleAutoExpand(e);
   }}
-  onFocus={() => {
+  onFocus={(e) => {
     setActiveDescriptionIndex(index);
+    handleAutoExpand(e); // Запускаємо автозбільшення при фокусі
   }}
   onBlur={(e) => {
     setTimeout(() => {
