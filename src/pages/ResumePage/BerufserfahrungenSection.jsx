@@ -16,22 +16,33 @@ import styles from "./BerufserfahrungenSection.module.css";
 
 const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate }) => {
   const suggestionsList = resumeFormTexts.berufserfahrungenSuggestions;
+  const dateHints = ["MM/YYYY", "seit MM/YYYY", "MM/YYYY - MM/YYYY", "MM/YYYY - heute"];
+  
   const [suggestionsState, setSuggestionsState] = useState({
     activeRow: null,
     filteredSuggestions: [],
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
+  const [hintIndex, setHintIndex] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
+  
   const suggestionsRef = useRef(null);
-  const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
+  const isModalOpenRef = useRef(false);
 
-  // Відстеження кліків поза списком пропозицій
+  // Оновлення підказок для поля дати
+  useEffect(() => {
+    if (!isFocused && data.every((item) => !item.date)) {
+      const interval = setInterval(() => {
+        setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [isFocused, data]);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        suggestionsRef.current &&
-        !suggestionsRef.current.contains(event.target)
-      ) {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
         setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
       }
     };
@@ -52,23 +63,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
     handleUpdate(updatedEntries);
-
-    if (newValue.trim().length > 0) {
-      const filtered = suggestionsList.filter((suggestion) =>
-        suggestion.toLowerCase().includes(newValue.toLowerCase())
-      );
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: filtered,
-      });
-      setActiveDescriptionIndex(index);
-    } else {
-      setSuggestionsState({
-        activeRow: null,
-        filteredSuggestions: [],
-      });
-      setActiveDescriptionIndex(null);
-    }
   };
 
   // Обробка зміни опису
@@ -76,23 +70,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     handleUpdate(updatedEntries);
-
-    if (value.trim().length > 0) {
-      const filtered = suggestionsList.filter((suggestion) =>
-        suggestion.toLowerCase().includes(value.toLowerCase())
-      );
-      setSuggestionsState({
-        activeRow: index,
-        filteredSuggestions: filtered,
-      });
-      setActiveDescriptionIndex(index);
-    } else {
-      setSuggestionsState({
-        activeRow: null,
-        filteredSuggestions: [],
-      });
-      setActiveDescriptionIndex(null);
-    }
   };
 
   // Обробка зміни місця роботи
@@ -102,32 +79,9 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     handleUpdate(updatedEntries);
   };
 
-  // Вибір пропозиції
-  const handleSuggestionSelect = (suggestion) => {
-    if (activeDescriptionIndex === null) return;
-
-    const updatedEntries = [...data];
-    updatedEntries[activeDescriptionIndex].description = suggestion;
-    handleUpdate(updatedEntries);
-    setSuggestionsState({
-      activeRow: null,
-      filteredSuggestions: [],
-    });
-    setActiveDescriptionIndex(null);
-  };
-
-  // Перемикання списку пропозицій
-  const toggleSuggestions = () => {
-    setIsModalOpen(true);
-    isModalOpenRef.current = true;
-  };
-
   // Додавання нового рядка
   const addNewRow = () => {
-    const updatedEntries = [
-      ...data,
-      { date: "", description: "", place: "", datePlaceholder: "Datum" },
-    ];
+    const updatedEntries = [...data, { date: "", description: "", place: "", datePlaceholder: "Datum" }];
     handleUpdate(updatedEntries);
   };
 
@@ -135,24 +89,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
   const removeRow = (index) => {
     const updatedEntries = data.filter((_, i) => i !== index);
     handleUpdate(updatedEntries);
-  };
-
-  // Динамічне розширення висоти textarea
-  const handleAutoExpand = (e) => {
-    const field = e.target;
-
-    // Скидаємо висоту, щоб уникнути некоректних розрахунків
-    field.style.height = "auto";
-
-    // Встановлюємо нову висоту на основі scrollHeight
-    field.style.height = `${field.scrollHeight}px`;
-  };
-
-  // Закриття модального вікна
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    isModalOpenRef.current = false;
-    setActiveDescriptionIndex(null);
   };
 
   return (
@@ -168,110 +104,60 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}
+                onFocus={() => {
+                  setIsFocused(true);
+                  setHintIndex(-1);
+                }}
                 onBlur={() => {
                   setTimeout(() => {
                     if (!isModalOpenRef.current) {
-                      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-                      setActiveDescriptionIndex(null);
+                      setIsFocused(false);
+                      if (!entry.date) setHintIndex(0);
                     }
                   }, 100);
                 }}
-                placeholder={entry.datePlaceholder}
+                placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
                 className={styles.inputField}
               />
             </div>
 
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
-              <div className={styles.inputWithInfo}>
-                {/* Контейнер кнопок для десктопу */}
-                <div className={styles.buttonContainer}>
-                  <IconButton
-                    onClick={() => removeRow(index)}
-                    className={styles.deleteButton}
-                    aria-label="Видалити"
-                  >
-                    <DeleteIcon />
-                  </IconButton>
-                </div>
-
-                {/* Поле опису */}
-                <textarea
-                  value={entry.description || ""}
-                  onChange={(e) => {
-                    handleDescriptionChange(index, e.target.value);
-                    handleAutoExpand(e);
-                  }}
-                  onFocus={() => setActiveDescriptionIndex(index)}
-                  onBlur={() => {
-                    setTimeout(() => {
-                      if (!isModalOpenRef.current) {
-                        setActiveDescriptionIndex(null);
-                      }
-                    }, 100);
-                  }}
-                  placeholder="Information"
-                  className={styles.inputField}
-                  rows={1}
-                ></textarea>
-              </div>
-
-              {/* Список підказок */}
-              {suggestionsState.activeRow === index &&
-                suggestionsState.filteredSuggestions.length > 0 && (
-                  <div
-                    ref={suggestionsRef}
-                    className={`${styles.dropdown} ${styles.open}`}
-                  >
-                    <ul className={styles.dropdown__items}>
-                      {suggestionsState.filteredSuggestions.map((suggestion, i) => (
-                        <li
-                          key={i}
-                          onClick={() => handleSuggestionSelect(suggestion)}
-                          className={styles.dropdown__item}
-                        >
-                          {suggestion}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              <textarea
+                value={entry.description || ""}
+                onChange={(e) => handleDescriptionChange(index, e.target.value)}
+                placeholder="Information"
+                className={styles.inputField}
+                rows={1}
+              ></textarea>
             </div>
 
             {/* Поле місця роботи */}
             <div className={styles.placeCell}>
               <textarea
                 value={entry.place || ""}
-                onChange={(e) => {
-                  handlePlaceChange(index, e.target.value);
-                  handleAutoExpand(e);
-                }}
-                onBlur={() => {
-                  setTimeout(() => {
-                    if (!isModalOpenRef.current) {
-                      setSuggestionsState({ activeRow: null, filteredSuggestions: [] });
-                      setActiveDescriptionIndex(null);
-                    }
-                  }, 100);
-                }}
+                onChange={(e) => handlePlaceChange(index, e.target.value)}
                 placeholder="Ort"
-                className={`${styles.inputField} ${styles.textareaField}`}
+                className={styles.inputField}
                 rows={1}
               ></textarea>
             </div>
 
-            {/* Контейнер кнопки видалення для мобільних */}
-            <div className={styles.deleteButtonContainer}>
-              <IconButton
-                onClick={() => removeRow(index)}
-                className={styles.deleteButton}
-                aria-label="Видалити"
-              >
+            {/* Кнопка видалення для десктопа */}
+            <div className={styles.deleteButtonContainerDesktop}>
+              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Видалити">
                 <DeleteIcon />
               </IconButton>
             </div>
 
-            {/* Роздільник між рядками на мобільних */}
+            {/* Кнопка видалення для мобільних */}
+            <div className={styles.deleteButtonContainer}>
+              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Видалити">
+                <DeleteIcon />
+              </IconButton>
+            </div>
+
+            {/* Роздільник між записами */}
             <div className={styles.mobileDivider}></div>
           </div>
         ))}
@@ -283,31 +169,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
-      {activeDescriptionIndex !== null && (
-        <IconButton
-          onClick={toggleSuggestions}
-          className={styles.fixedInfoButton}
-          aria-label="Інформація"
-        >
-          <InfoIcon />
-        </IconButton>
-      )}
-
-      {/* Модальне вікно з підказками */}
-      <Dialog open={isModalOpen} onClose={handleCloseModal}>
-        <DialogTitle>Виберіть підказку</DialogTitle>
-        <List>
-          {suggestionsList.map((hint, idx) => (
-            <ListItem key={idx} disablePadding>
-              <ListItemButton onClick={() => handleSuggestionSelect(hint)}>
-                <ListItemText primary={hint} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Dialog>
     </section>
   );
 };
