@@ -274,7 +274,7 @@ textarea.inputField {
 }
 /* Якщо клавіатура відкрита, піднімаємо кнопку вище */
 .suggestionButtonContainer.keyboardOpen {
-    bottom: 30px; /* Опускаємо кнопку нижче, щоб залишалася видимою */
+    bottom: 100px; /* Опускаємо кнопку нижче, щоб залишалася видимою */
 }
 .suggestionButton {
     background-color: white;
