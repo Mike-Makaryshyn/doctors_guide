@@ -215,7 +215,12 @@ useEffect(() => {
   const checkForKeyboard = () => {
     const viewportHeight = window.innerHeight;
     const docHeight = document.documentElement.clientHeight;
-    setIsKeyboardOpen(viewportHeight < docHeight * 0.85); // Якщо висота екрану менша за 85% від початкової — вважаємо, що клавіатура відкрита
+    
+    if (viewportHeight < docHeight * 0.85) {
+      setIsKeyboardOpen(true);
+    } else {
+      setIsKeyboardOpen(false);
+    }
   };
 
   window.addEventListener("resize", checkForKeyboard);
