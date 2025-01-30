@@ -271,7 +271,10 @@ textarea.inputField {
     right: 160px; /* Фіксуємо в правому верхньому кутку */
     z-index: 1000; /* Впевнюємося, що вона поверх всіх елементів */
 }
-
+/* Якщо клавіатура відкрита, піднімаємо кнопку вище */
+.suggestionButtonContainer.keyboardOpen {
+    bottom: 60px; /* Щоб кнопку не перекривала клавіатура */
+}
 .suggestionButton {
     background-color: white;
     border-radius: 50%;

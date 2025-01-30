@@ -64,7 +64,7 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
-
+  const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
   // Використовуємо підказки з ResumeForm.js
   const descriptionHints = resumeFormTexts.suggestions;
 
@@ -210,6 +210,17 @@ useEffect(() => {
     });
   }, 50); // Додаємо затримку для стабільності
 }, [data]); // Виконується при оновленні data
+
+useEffect(() => {
+  const checkForKeyboard = () => {
+    const viewportHeight = window.innerHeight;
+    const docHeight = document.documentElement.clientHeight;
+    setIsKeyboardOpen(viewportHeight < docHeight * 0.85); // Якщо висота екрану менша за 85% від початкової — вважаємо, що клавіатура відкрита
+  };
+
+  window.addEventListener("resize", checkForKeyboard);
+  return () => window.removeEventListener("resize", checkForKeyboard);
+}, []);
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
@@ -300,14 +311,8 @@ useEffect(() => {
 
       {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
       {activeDescriptionIndex !== null && (
-  <div className={styles.suggestionButtonContainer}>
-    <IconButton
-      onClick={toggleSuggestions}
-      className={styles.suggestionButton}
-      aria-label="Інформація"
-    >
-     <LightbulbIcon className={styles.glowingLightbulb} />
-    </IconButton>
+  <div className={`${styles.suggestionButtonContainer} ${isKeyboardOpen ? styles.keyboardOpen : ""}`}>
+    <LightbulbIcon className={styles.glowingLightbulb} onClick={toggleSuggestions} />
   </div>
 )}
 
