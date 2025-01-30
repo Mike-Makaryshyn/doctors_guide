@@ -206,12 +206,7 @@ textarea.inputField {
 
 /* Показати роздільник на мобільних */
 @media (max-width: 768px) {
-    /* Переструктурування запису */
-    .entryRow {
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
+    
 
     /* Показати кнопку видалення на мобільних */
     .deleteButtonContainer {

@@ -63,6 +63,14 @@
     bottom: -40px; /* Розташування під полем місця навчання */
     right: 0;
 }
+.deleteButtonContainer {
+    position: absolute;
+    top: 61%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    z-index: 10;
+}
 
 /* Контейнер для кнопок видалення на десктопі */
 .buttonContainer {
@@ -154,6 +162,7 @@ textarea.inputField {
     border-radius: 50%;
     z-index: 20000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block !important;
 }
 
 .fixedInfoButton:hover {
@@ -206,35 +215,41 @@ textarea.inputField {
 
 /* Показати роздільник та кнопки видалення на мобільних */
 @media (max-width: 768px) {
-    /* Переструктурування запису */
-    .entryRow {
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
-
-    /* Показати кнопку видалення на мобільних */
     .deleteButtonContainer {
-        display: flex;
-        margin-top: 10px; /* Відступ між описом та кнопкою видалення */
+        display: flex !important;
+        position: absolute;
+        top: 61%;
+        right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
-    /* Приховати кнопку видалення в десктопній версії */
+    .deleteButton {
+        color: #dc3545;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Додати роздільник між записами */
+    .mobileDivider {
+        display: block;
+        height: 1px;
+        background-color: #ccc;
+        margin: 15px 0;
+    }
+
+    /* ❗ Приховати кнопку видалення в десктопній версії */
     .descriptionCell .buttonContainer {
         display: none;
     }
 
-    /* Показати кнопку видалення для мобільної версії */
+    /* ❗ Показати кнопку видалення для мобільної версії */
     .deleteButtonContainer .deleteButton {
         color: #dc3545;
     }
 
-    /* Відображення роздільника */
-    .mobileDivider {
-        display: block;
-    }
-
-    /* Зміна flex для dateCell, descriptionCell та placeCell */
+    /* ❗ Вирівнювання блоку на всю ширину */
     .dateCell,
     .descriptionCell,
     .placeCell {
@@ -246,8 +261,11 @@ textarea.inputField {
         margin-top: 10px;
     }
 
-    /* Приховати Info Button в описі на мобільних */
-    .buttonContainer {
+ 
+}
+/* ❗❗❗ Приховати кнопку видалення на десктопі ❗❗❗ */
+@media (min-width: 769px) {
+    .deleteButtonContainer {
         display: none;
     }
 }
@@ -282,3 +300,4 @@ textarea.inputField {
         flex: 3;
     }
 }
+

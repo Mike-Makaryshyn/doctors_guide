@@ -195,16 +195,16 @@ textarea.inputField {
 /* Показати роздільник на мобільних */
 @media (max-width: 768px) {
     /* Переструктурування запису */
-    .entryRow {
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-    }
+  
 
     /* Показати кнопку видалення на мобільних */
     .deleteButtonContainer {
-        display: flex;
-        margin-top: 10px; /* Відступ між описом та кнопкою видалення */
+        display: flex !important;
+        position: absolute;
+        top: 61%;
+        right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
     /* Приховати кнопку видалення в десктопній версії */
