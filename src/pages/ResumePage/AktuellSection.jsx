@@ -88,6 +88,14 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
+  
+    setTimeout(() => {
+      const textarea = document.querySelectorAll("textarea")[index];
+      if (textarea) {
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+    }, 50);
   };
 
   // Додавання нового рядка
@@ -130,10 +138,18 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     updatedEntries[activeDescriptionIndex].description = newDescription;
     onUpdate(updatedEntries);
 
+    setTimeout(() => {
+        const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
+        if (textarea) {
+            textarea.style.height = "auto";
+            textarea.style.height = `${textarea.scrollHeight}px`;
+        }
+    }, 50); // Додаємо таймаут, щоб дочекатися оновлення DOM
+
     setIsModalOpen(false);
     isModalOpenRef.current = false;
-    setActiveDescriptionIndex(null); // Скидаємо активний індекс після вставки підказки
-  };
+    setActiveDescriptionIndex(null);
+};
 
   // Динамічне розширення висоти textarea
   const handleAutoExpand = (e) => {
@@ -185,6 +201,15 @@ const getPlaceholder = (index, value) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
 }, []);
+
+useEffect(() => {
+  setTimeout(() => {
+    document.querySelectorAll("textarea").forEach((field) => {
+      field.style.height = "auto";
+      field.style.height = `${field.scrollHeight}px`;
+    });
+  }, 50); // Додаємо затримку для стабільності
+}, [data]); // Виконується при оновленні data
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
@@ -275,13 +300,15 @@ const getPlaceholder = (index, value) => {
 
       {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
       {activeDescriptionIndex !== null && (
-   <IconButton
-       onClick={toggleSuggestions}
-       className={`${styles.fixedInfoButton} ${isScrolled ? styles.fixed : ""}`}
-       aria-label="Інформація"
-   >
-       <InfoIcon />
-   </IconButton>
+  <div className={styles.suggestionButtonContainer}>
+    <IconButton
+      onClick={toggleSuggestions}
+      className={styles.suggestionButton}
+      aria-label="Інформація"
+    >
+      <InfoIcon />
+    </IconButton>
+  </div>
 )}
 
       {/* Модальне вікно з підказками */}

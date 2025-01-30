@@ -304,7 +304,7 @@ textarea.inputField {
     }
 
     .descriptionCell {
-        min-width: 300px; /* Зменшено мінімальну ширину */
+        min-width: 500px; /* Зменшено мінімальну ширину */
         flex: 5.2; /* Збільшено на 30% */
     }
 
