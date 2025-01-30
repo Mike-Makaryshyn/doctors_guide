@@ -9,10 +9,10 @@
 
 /* Заголовок */
 .subheader {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1em;
+    margin-bottom: 35px;
     font-weight: 600;
-    color: #333;
+    color: #ffffff;
 }
 
 /* Контейнер форми */
@@ -80,7 +80,7 @@
     transform: translateY(-50%);
     display: flex;
     gap: 5px;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* Поле вводу дати та опису */
@@ -216,7 +216,9 @@ textarea.inputField {
 /* Показати роздільник та кнопки видалення на мобільних */
 @media (max-width: 768px) {
     .deleteButtonContainer {
-        display: flex !important;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
         position: absolute;
         top: 61%;
         right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
@@ -224,6 +226,23 @@ textarea.inputField {
         z-index: 10;
     }
 
+    .deleteButtonContainerDesktop {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        right: -50px; /* Відсунемо трохи праворуч від останнього поля */
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    .deleteButtonContainerDesktop {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+   
     .deleteButton {
         color: #dc3545;
         background: none;
@@ -240,9 +259,7 @@ textarea.inputField {
     }
 
     /* ❗ Приховати кнопку видалення в десктопній версії */
-    .descriptionCell .buttonContainer {
-        display: none;
-    }
+   
 
     /* ❗ Показати кнопку видалення для мобільної версії */
     .deleteButtonContainer .deleteButton {
@@ -264,11 +281,7 @@ textarea.inputField {
  
 }
 /* ❗❗❗ Приховати кнопку видалення на десктопі ❗❗❗ */
-@media (min-width: 769px) {
-    .deleteButtonContainer {
-        display: none;
-    }
-}
+
 
 /* Адаптивність для планшетів */
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -301,3 +314,8 @@ textarea.inputField {
     }
 }
 
+@media (min-width: 769px) {
+    .deleteButtonContainer {
+        display: none !important;
+    }
+}

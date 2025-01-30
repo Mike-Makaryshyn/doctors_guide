@@ -24,8 +24,21 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
   const suggestionsRef = useRef(null);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
-
+  const dateHints = ["MM/YYYY", "seit MM/YYYY", "MM/YYYY - MM/YYYY", "MM/YYYY - heute"];
+  const [hintIndex, setHintIndex] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
   // Відстеження кліків поза списком пропозицій
+ 
+  useEffect(() => {
+    if (!isFocused && data.every((item) => !item.date)) {
+      const interval = setInterval(() => {
+        setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
+      }, 1500); // Підказка змінюється кожні 1.5 секунди
+      return () => clearInterval(interval);
+    }
+  }, [isFocused, data]);
+  
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -165,14 +178,26 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
          <div key={index} className={styles.entryRow}>
   {/* Поле дати */}
   <div className={styles.dateCell}>
-    <input
-      type="text"
-      value={entry.date || ""}
-      onChange={(e) => handleDateChange(index, e.target.value)}
-      placeholder={entry.datePlaceholder}
-      className={styles.inputField}
-    />
-  </div>
+  <input
+    type="text"
+    value={entry.date || ""}
+    onChange={(e) => handleDateChange(index, e.target.value)}
+    onFocus={() => {
+      setIsFocused(true);
+      setHintIndex(-1); // При фокусі підказка зникає
+    }}
+    onBlur={() => {
+      setTimeout(() => {
+        if (!isModalOpenRef.current) {
+          setIsFocused(false);
+          if (!entry.date) setHintIndex(0);
+        }
+      }, 100);
+    }}
+    placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
+    className={styles.inputField}
+  />
+</div>
 
   {/* Поле опису */}
   <div className={styles.descriptionCell}>
@@ -202,7 +227,18 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
     ></textarea>
   </div>
 
-  {/* ❗ Кнопка видалення (мобільна та десктопна версія в одному місці) */}
+  {/* ❗ Кнопка видалення на десктопі */}
+  <div className={styles.deleteButtonContainerDesktop}>
+    <IconButton
+      onClick={() => removeRow(index)}
+      className={styles.deleteButton}
+      aria-label="Видалити"
+    >
+      <DeleteIcon />
+    </IconButton>
+  </div>
+
+  {/* Кнопка видалення для мобільної версії */}
   <div className={styles.deleteButtonContainer}>
     <IconButton
       onClick={() => removeRow(index)}
