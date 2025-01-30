@@ -266,14 +266,15 @@ textarea.inputField {
     }
 }
 .suggestionButtonContainer {
-    position: fixed; /* Фіксуємо кнопку на екрані */
-    top: 30%; /* Відступ від верху */
-    right: 160px; /* Фіксуємо в правому верхньому кутку */
-    z-index: 1000; /* Впевнюємося, що вона поверх всіх елементів */
+    position: fixed;
+    top: 30%;
+    right: 160px; /* За замовчуванням кнопка справа */
+    z-index: 1000;
+    transition: right 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 /* Якщо клавіатура відкрита, піднімаємо кнопку вище */
 .suggestionButtonContainer.keyboardOpen {
-    bottom: 60px; /* Щоб кнопку не перекривала клавіатура */
+    bottom: 30px; /* Опускаємо кнопку нижче, щоб залишалася видимою */
 }
 .suggestionButton {
     background-color: white;
@@ -287,12 +288,12 @@ textarea.inputField {
     background-color: #f0f0f0;
 }
 /* Адаптація для мобільних пристроїв */
+/* Адаптація для мобільних пристроїв */
 @media (max-width: 768px) {
     .suggestionButtonContainer {
-       
-        top: 180px; /* Менший відступ для мобільних */
-        right: 10px; /* Щоб кнопка не перекривала елементи */
-        position: fixed;
+        right: auto;  /* Забираємо правий відступ */
+        left: 10px;   /* Переміщуємо кнопку в лівий край */
+        top: 180px;   /* Щоб вона не перекривала текстові поля */
     }
 }
 @keyframes pulseGlow {
