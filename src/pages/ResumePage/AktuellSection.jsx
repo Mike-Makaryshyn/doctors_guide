@@ -65,6 +65,7 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
   const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
+
   // Використовуємо підказки з ResumeForm.js
   const descriptionHints = resumeFormTexts.suggestions;
 
@@ -88,7 +89,7 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
-  
+
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[index];
       if (textarea) {
@@ -99,12 +100,18 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
   };
 
   // Додавання нового рядка
+  // Додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
       { date: "", description: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
+
+    setTimeout(() => {
+      const lastIndex = updatedEntries.length - 1;
+      handleFocus(lastIndex);
+    }, 100); // Даємо час DOM оновитися
   };
 
   // Видалення рядка
@@ -128,33 +135,33 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
 
   // Вставка підказки у поле опису
   const handleSelectHint = (hint) => {
-    if (activeDescriptionIndex === null) return;
-
+    if (activeDescriptionIndex === null || activeDescriptionIndex < 0) return;
+  
     const updatedEntries = [...data];
-    const currentDescription = updatedEntries[activeDescriptionIndex].description;
-    const newDescription = currentDescription
-      ? `${currentDescription}\n${hint}`
-      : hint;
+    const currentDescription = updatedEntries[activeDescriptionIndex].description || "";
+    const newDescription = currentDescription ? `${currentDescription}\n${hint}` : hint;
+    
     updatedEntries[activeDescriptionIndex].description = newDescription;
     onUpdate(updatedEntries);
-
+  
+    // Додаємо невелику затримку, щоб React встиг оновити DOM
     setTimeout(() => {
-        const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
-        if (textarea) {
-            textarea.style.height = "auto";
-            textarea.style.height = `${textarea.scrollHeight}px`;
-        }
-    }, 50); // Додаємо таймаут, щоб дочекатися оновлення DOM
-
+      const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
+      if (textarea) {
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight}px`;
+        textarea.focus(); // Повертаємо фокус у поле
+      }
+    }, 100);
+  
     setIsModalOpen(false);
     isModalOpenRef.current = false;
-    setActiveDescriptionIndex(null);
-};
+  };
 
   // Динамічне розширення висоти textarea
   const handleAutoExpand = (e) => {
     const field = e.target;
-    
+
     field.style.height = "auto"; // Скидаємо висоту, щоб отримати точні розрахунки
     field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту на основі вмісту
   };
@@ -164,65 +171,90 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
     "seit MM/YYYY",
     "MM/YYYY - MM/YYYY",
     "MM/YYYY - heute",
-];
+  ];
 
-const [hintIndex, setHintIndex] = useState(0);
-const [focusedIndex, setFocusedIndex] = useState(null);
+  const [hintIndex, setHintIndex] = useState(0);
+  const [focusedIndex, setFocusedIndex] = useState(null);
 
-// Ротація підказок для всіх порожніх полів дати
-useEffect(() => {
+  // Ротація підказок для всіх порожніх полів дати
+  useEffect(() => {
     const interval = setInterval(() => {
-        setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
+      setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
     }, 1500);
 
     return () => clearInterval(interval);
-}, []); // Завжди крутити підказки незалежно від фокусу
+  }, []); // Завжди крутити підказки незалежно від фокусу
 
-// Функція для визначення, яку підказку показувати
-const getPlaceholder = (index, value) => {
-  if (value) return ""; // Якщо поле заповнене, підказка не потрібна
-  if (document.activeElement && document.activeElement.tagName === "INPUT") {
-    return index === focusedIndex ? "" : dateHints[hintIndex]; // Якщо курсор у полі, підказку не показувати
-  }
-  return dateHints[hintIndex]; // У всіх інших випадках показувати підказку
-};
+  // Функція для визначення, яку підказку показувати
+  const getPlaceholder = (index, value) => {
+    if (value) return ""; // Якщо поле заповнене, підказка не потрібна
+    if (document.activeElement && document.activeElement.tagName === "INPUT") {
+      return index === focusedIndex ? "" : dateHints[hintIndex]; // Якщо курсор у полі, підказку не показувати
+    }
+    return dateHints[hintIndex]; // У всіх інших випадках показувати підказку
+  };
   useEffect(() => {
     const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  }, []);
 
-useEffect(() => {
-  setTimeout(() => {
-    document.querySelectorAll("textarea").forEach((field) => {
-      field.style.height = "auto";
-      field.style.height = `${field.scrollHeight}px`;
-    });
-  }, 50); // Додаємо затримку для стабільності
-}, [data]); // Виконується при оновленні data
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelectorAll("textarea").forEach((field) => {
+        field.style.height = "auto";
+        field.style.height = `${field.scrollHeight}px`;
+      });
+    }, 50); // Додаємо затримку для стабільності
+  }, [data]); // Виконується при оновленні data
 
-useEffect(() => {
-  const checkForKeyboard = () => {
-    const viewportHeight = window.innerHeight;
-    const docHeight = document.documentElement.clientHeight;
-    
-    if (viewportHeight < docHeight * 0.85) {
-      setIsKeyboardOpen(true);
-    } else {
-      setIsKeyboardOpen(false);
+  useEffect(() => {
+    const checkForKeyboard = () => {
+      const viewportHeight = window.innerHeight;
+      const docHeight = document.documentElement.clientHeight;
+
+      if (viewportHeight < docHeight * 0.85) {
+        setIsKeyboardOpen(true);
+      } else {
+        setIsKeyboardOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", checkForKeyboard);
+
+    return () => window.removeEventListener("resize", checkForKeyboard);
+  }, []);
+
+  useEffect(() => {
+    if (activeDescriptionIndex !== null) {
     }
+  }, [activeDescriptionIndex, data]);
+  const handleFocus = (index) => {
+    setActiveDescriptionIndex(index);
+    setTimeout(() => {
+      const textarea = document.querySelectorAll("textarea")[index];
+      if (textarea) {
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+    }, 50);
   };
-
-  window.addEventListener("resize", checkForKeyboard);
-  return () => window.removeEventListener("resize", checkForKeyboard);
-}, []);
+  const handleBlur = (event) => {
+    setTimeout(() => {
+      const activeElement = document.activeElement;
+      if (activeElement && activeElement.tagName === "TEXTAREA") {
+        return; // Якщо курсор все ще в полі, лампочку не ховаємо
+      }
+      setActiveDescriptionIndex(null);
+    }, 200); // Коротка затримка, щоб дозволити клікнути по лампочці
+  };
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
@@ -231,24 +263,15 @@ useEffect(() => {
           <div key={index} className={styles.entryRow}>
             {/* Поле для дати */}
             <div className={styles.dateCell}>
-            <input
-  type="text"
-  value={entry.date || ""}
-  onChange={(e) => handleDateChange(index, e.target.value)}
-  onFocus={() => {
-    setFocusedIndex(index); // Запам'ятовуємо, що це поле в фокусі
-  }}
-  onBlur={(e) => {
-    setTimeout(() => {
-      // Якщо фокус НЕ перейшов в textarea, повертаємо підказку
-      if (!document.querySelector("textarea:focus")) {
-        if (!entry.date) setFocusedIndex(null);
-      }
-    }, 50);
-  }}
-  placeholder={getPlaceholder(index, entry.date)}
-  className={styles.dateInput}
-/>
+              <input
+                type="text"
+                value={entry.date || ""}
+                onChange={(e) => handleDateChange(index, e.target.value)}
+                onFocus={() => handleFocus(index)}
+                onBlur={() => handleBlur(index)}
+                placeholder={getPlaceholder(index, entry.date)}
+                className={styles.dateInput}
+              />
             </div>
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
@@ -266,28 +289,39 @@ useEffect(() => {
 
                 {/* Поле опису */}
                 <textarea
-  value={entry.description || ""}
-  onChange={(e) => {
-    handleDescriptionChange(index, e.target.value);
-    handleAutoExpand(e);
+                  value={entry.description || ""}
+                  onChange={(e) => {
+                    handleDescriptionChange(index, e.target.value);
+                    handleAutoExpand(e);
+                  }}
+                  onFocus={() => handleFocus(index)}
+                  onBlur={() => handleBlur(index)}
+                  placeholder="Information"
+                  className={styles.inputField}
+                  rows={1}
+                />
+
+{activeDescriptionIndex === index && (
+  <div
+    className={styles.suggestionButtonContainer}
+    style={{
+      position: "absolute",
+      top: "38%",
+      right: "-40px", // Десктоп: Відступ справа
+      transform: "translateY(-50%)", // Вирівнювання по центру
+    }}
+  >
+  <LightbulbIcon
+  className={`${styles.glowingLightbulb} ${styles.mobileLightbulb}`}
+  onClick={() => {
+    setActiveDescriptionIndex(index); // Гарантуємо, що підказка відкриється для правильного поля
+    toggleSuggestions();
   }}
-  onFocus={(e) => {
-    setActiveDescriptionIndex(index);
-    handleAutoExpand(e); // Запускаємо автозбільшення при фокусі
-  }}
-  onBlur={(e) => {
-    setTimeout(() => {
-      // Якщо активне інше поле textarea, то кнопку не ховаємо
-      if (!isModalOpenRef.current && !document.querySelector("textarea:focus")) {
-        setActiveDescriptionIndex(null);
-      }
-    }, 100);
-  }}
-  placeholder="Information"
-  className={styles.inputField}
-  rows={1}
 />
+  </div>
+)}
               </div>
+
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
@@ -312,12 +346,7 @@ useEffect(() => {
         </IconButton>
       </div>
 
-      {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
-      {activeDescriptionIndex !== null && (
-  <div className={`${styles.suggestionButtonContainer} ${isKeyboardOpen ? styles.keyboardOpen : ""}`}>
-    <LightbulbIcon className={styles.glowingLightbulb} onClick={toggleSuggestions} />
-  </div>
-)}
+     
 
       {/* Модальне вікно з підказками */}
       <Dialog open={isModalOpen} onClose={handleCloseModal}>
