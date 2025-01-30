@@ -343,3 +343,72 @@ textarea {
     color: #FFD700; /* Жовте світіння */
     font-size: 2rem; /* Збільшений розмір */
 }
+/* Загальний стиль модального вікна */
+.customDialog {
+    max-width: 400px;  /* Максимальна ширина */
+    width: 90%;  /* Ширина 90% від екрану */
+    border-radius: 40px;  /* Закруглені кути */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+}
+
+/* Заголовок модального вікна */
+.dialogTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #013b6e;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Контейнер списку */
+.dialogList {
+    padding: 10px;
+}
+
+/* Текст підказки */
+.dialogText {
+    font-size: 1rem;
+    padding: 10px;
+    color: #013b6e;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Ефект при наведенні на підказку */
+.dialogText:hover {
+    color: #013b6e; /* Синій відтінок */
+    font-weight: bold;
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    .customDialog {
+        width: 95%;  /* Розтягуємо більше на мобільних */
+        max-width: 350px;
+    }
+
+    .dialogTitle {
+        font-size: 1rem;
+    }
+
+    .dialogText {
+        font-size: 0.9rem;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Застосовуємо анімацію */
+.customDialog {
+    animation: fadeIn 0.3s ease-in-out;
+}

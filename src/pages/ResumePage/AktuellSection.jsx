@@ -358,18 +358,22 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
       </div>
 
       {/* Модальне вікно з підказками */}
-      <Dialog open={isModalOpen} onClose={handleCloseModal}>
-        <DialogTitle>Виберіть підказку</DialogTitle>
-        <List>
-          {descriptionHints.map((hint, idx) => (
-            <ListItem key={idx} disablePadding>
-              <ListItemButton onClick={() => handleSelectHint(hint)}>
-                <ListItemText primary={hint} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Dialog>
+      <Dialog
+  open={isModalOpen}
+  onClose={handleCloseModal}
+  classes={{ paper: styles.customDialog }} // Додаємо кастомний клас
+>
+  <DialogTitle className={styles.dialogTitle}>Beispiele</DialogTitle>
+  <List className={styles.dialogList}>
+    {descriptionHints.map((hint, idx) => (
+      <ListItem key={idx} disablePadding>
+        <ListItemButton onClick={() => handleSelectHint(hint)}>
+          <ListItemText primary={hint} className={styles.dialogText} />
+        </ListItemButton>
+      </ListItem>
+    ))}
+  </List>
+</Dialog>
     </section>
   );
 };
