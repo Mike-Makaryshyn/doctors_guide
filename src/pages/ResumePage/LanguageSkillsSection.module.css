@@ -39,7 +39,7 @@
 /* Поле для мови */
 .languageCell {
   flex: 1;
-  min-width: 300px;
+  min-width: 500px;
   position: relative; /* Для розміщення кнопок */
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@
 /* Поле для рівня */
 .levelCell {
   flex: 1;
-  min-width: 300px;
+  min-width: 500px;
   position: relative; /* Для розміщення кнопок */
   display: flex;
   align-items: center;
@@ -91,8 +91,8 @@
   display: flex;
   gap: 5px;
   position: absolute;
-  top: 50%;
-  right: 10px;
+  top: 78%;
+  right:0px;
   transform: translateY(-50%);
   z-index: 1; /* Забезпечує, що кнопки знаходяться над іншими елементами */
 }
@@ -102,7 +102,7 @@
   display: none; /* Приховати на десктопах */
   position: absolute;
   top: 50%;
-  right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
+  right: -40px; /* Відсунемо трохи праворуч, щоб не заважала */
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -123,7 +123,7 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  right: -40px; /* Відступ справа поза інпутом */
+  right: -49px; /* Відступ справа поза інпутом */
   top: 50%;
   transform: translateY(-50%);
   z-index: 2; /* Щоб була поверх input */
@@ -285,7 +285,7 @@
   /* Позиціонування кнопки підказки на мобільних */
   .suggestionButtonContainer {
     position: absolute;
-    top: -85%; /* Нижче полів */
+    top: -15%; /* Нижче полів */
     right: -50px; /* Відступ справа */
     transform: translateY(10px); /* Відступ від полів */
   }
