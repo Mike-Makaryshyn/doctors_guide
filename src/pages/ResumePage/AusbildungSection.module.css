@@ -3,8 +3,8 @@
 /* Загальний контейнер */
 .ausbildungSection {
     margin-bottom: 30px;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    position: relative; /* Для позиціонування фіксованої кнопки */
+    overflow: visible; /* Для десктопа */
+    position: relative;
 }
 
 /* Заголовок */
@@ -28,45 +28,40 @@
 /* Контейнер одного запису */
 .entryRow {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap; /* Дозволяє перенос рядків на вузьких екранах */
     align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
     width: 100%;
-    position: relative; /* Для абсолютного позиціонування мобільних кнопок */
+    position: relative; /* Для абсолютного позиціювання мобільних кнопок */
 }
 
 /* Поле дати */
 .dateCell {
-    flex: 2.25;
-    min-width: 300px;
+    flex: 2.25; /* Збільшено з 1.5 до 2.25 */
+    min-width: 300px; /* Збільшено з 225px до 337.5px */
     position: relative; /* Для розміщення помилок */
-}
-
-/* Підказка для дати */
-.dateHint {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    font-size: 0.875em;
-    color: #888;
-    margin-top: 5px;
 }
 
 /* Поле опису */
 .descriptionCell {
-    flex: 4;
-    min-width: 500px;
-    position: relative; /* Для розміщення підказок та кнопок */
+    flex: 6.75; /* Збільшено з 4.5 до 6.75 */
+    min-width: 600px; /* Збільшено з 600px до 900px */
+    position: relative; /* Для розміщення кнопок */
+}
+
+.inputWithInfo {
+    position: relative;
 }
 
 /* Поле місця навчання */
 .placeCell {
-    flex: 3;
-    min-width: 300px;
-    position: relative; /* Для можливих додаткових стилів */
+    flex: 3; /* Збільшено з 2 до 3 */
+    min-width: 300px; /* Задано мінімальну ширину */
+    position: relative; /* Для розміщення кнопок */
 }
 
-/* Поля вводу дати та опису */
+/* Поля вводу дати, опису та місця */
+.dateInput,
 .inputField,
 textarea.inputField {
     width: 100%;
@@ -105,7 +100,7 @@ textarea {
     box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
 }
 
-/* Контейнер кнопок видалення (десктоп) */
+/* Контейнер кнопок (десктоп) */
 .buttonContainer {
     display: flex;
     gap: 5px;
@@ -135,13 +130,32 @@ textarea {
     background-color: #f8d7da;
 }
 
-/* Кнопка підказки */
-.suggestionButton {
+/* Кнопка додавання нового рядка */
+.addButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px; /* Відстань між кнопками */
+}
+
+/* Контейнер для лампочки після трьох полів */
+.suggestionButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px; /* Відстань від полів */
+    cursor: pointer;
     position: absolute;
-    top: 50%;
-    right: -40px; /* Відступ справа від поля опису */
-    transform: translateY(-50%);
-    background-color: #ffffff;
+    top: -18px;
+    right: -370px; /* Відступ справа після трьох полів */
+    transform: translateY(50%);
+    z-index: 2;
+}
+
+/* Lightbulb Suggestion Button */
+.suggestionButton {
+    background-color: white;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -153,25 +167,19 @@ textarea {
     background-color: #f0f0f0;
 }
 
-.glowingInfoIcon {
+/* Glowing Lightbulb Icon */
+.glowingLightbulb {
     animation: pulseGlow 1.5s infinite ease-in-out;
     color: #FFD700; /* Жовте світіння */
-    font-size: 1.5rem; /* Збільшений розмір */
+    font-size: 2rem; /* Збільшений розмір */
 }
 
-/* Роздільник між записами на мобільних */
+/* Роздільник між рядками на мобільних */
 .mobileDivider {
-    display: none;
+    display: none; /* Приховати на десктопах */
     height: 1px;
     background-color: #ccc;
-    margin: 15px 0;
-}
-
-/* Стилі помилок */
-.errorMessage {
-    color: #dc3545;
-    font-size: 0.875em;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 /* Модальне вікно з підказками */
@@ -285,14 +293,15 @@ textarea {
         margin-top: 10px;
     }
 
-    /* Позиціонування кнопки підказки на мобільних */
-    .suggestionButton {
+    /* Відображення Lightbulb Icon для мобільних */
+    .suggestionButtonContainer {
         position: absolute;
-        top: 100%; /* Нижче поля опису */
-        right: 10px; /* Відступ справа */
-        transform: translateY(10px); /* Відступ від поля */
+        top: -85%; /* Нижче трьох полів */
+        right: -50px; /* Відступ справа */
+        transform: translateY(10px); /* Відступ від полів */
     }
 }
+
 
 /* Адаптивність для планшетів */
 @media (max-width: 1024px) and (min-width: 769px) {

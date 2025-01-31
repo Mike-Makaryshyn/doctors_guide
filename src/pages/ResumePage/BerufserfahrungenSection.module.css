@@ -296,7 +296,7 @@ textarea {
     /* Відображення Lightbulb Icon для мобільних */
     .suggestionButtonContainer {
         position: absolute;
-        top: 8%; /* Нижче трьох полів */
+        top: -85%; /* Нижче трьох полів */
         right: -50px; /* Відступ справа */
         transform: translateY(10px); /* Відступ від полів */
     }
