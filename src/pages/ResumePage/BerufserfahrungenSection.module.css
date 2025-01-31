@@ -1,18 +1,18 @@
-/* src/pages/ResumePage/AusbildungSection.module.css */
+/* src/pages/ResumePage/BerufserfahrungenSection.module.css */
 
 /* Загальний контейнер */
-.ausbildungSection {
+.berufserfahrungenSection {
     margin-bottom: 30px;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    position: relative; /* Для позиціонування фіксованої кнопки */
+    overflow: visible; /* Для десктопа */
+    position: relative;
 }
 
 /* Заголовок */
 .subheader {
-    font-size: 1em;
-    margin-bottom: 35px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
     font-weight: 600;
-    color: #ffffff;
+    color: #333;
 }
 
 /* Контейнер форми */
@@ -28,62 +28,40 @@
 /* Контейнер одного запису */
 .entryRow {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap; /* Дозволяє перенос рядків на вузьких екранах */
     align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
     width: 100%;
-    position: relative; /* Для абсолютного позиціонування мобільних кнопок */
+    position: relative; /* Для абсолютного позиціювання мобільних кнопок */
 }
 
 /* Поле дати */
 .dateCell {
-    flex: 2.25;
-    min-width: 337.5px;
+    flex: 2.25; /* Збільшено з 1.5 до 2.25 */
+    min-width: 300px; /* Збільшено з 225px до 337.5px */
     position: relative; /* Для розміщення помилок */
 }
 
 /* Поле опису */
 .descriptionCell {
-    flex: 4; /* Збільшено з 6.75 до 4 */
-    min-width: 300px; /* Зменшено з 900px до 300px */
-    position: relative; /* Для розміщення підказок та кнопок */
+    flex: 6.75; /* Збільшено з 4.5 до 6.75 */
+    min-width: 600px; /* Збільшено з 600px до 900px */
+    position: relative; /* Для розміщення кнопок */
 }
 
-/* Поле місця навчання */
+.inputWithInfo {
+    position: relative;
+}
+
+/* Поле місця */
 .placeCell {
-    flex: 3; /* Встановлено відповідний коефіцієнт */
-    min-width: 300px; /* Встановлено мінімальну ширину */
-    position: relative; /* Для можливих додаткових стилів */
+    flex: 3; /* Збільшено з 2 до 3 */
+    min-width: 300px; /* Задано мінімальну ширину */
+    position: relative; /* Для розміщення кнопок */
 }
 
-/* Контейнер для кнопок видалення */
-.deleteButtonContainer {
-    display: none; /* Приховати на десктопах */
-    position: absolute;
-    bottom: -40px; /* Розташування під полем місця навчання */
-    right: 0;
-}
-.deleteButtonContainer {
-    position: absolute;
-    top: 61%;
-    right: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    z-index: 10;
-}
-
-/* Контейнер для кнопок видалення на десктопі */
-.buttonContainer {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 5px;
-    z-index: 10;
-}
-
-/* Поле вводу дати та опису */
+/* Поля вводу дати, опису та місця */
+.dateInput,
 .inputField,
 textarea.inputField {
     width: 100%;
@@ -106,33 +84,44 @@ textarea.inputField {
     font-family: 'Poppins', sans-serif;
 }
 
+textarea {
+    overflow: hidden; /* Щоб текстова область не мала скролу */
+    resize: none; /* Відключаємо ручне розширення */
+    min-height: 50px; /* Мінімальна висота */
+    max-height: 300px; /* Опціонально: обмеження максимальної висоти */
+}
+
+/* Стилі при фокусі */
 .inputField:focus,
-.dateInput:focus {
+.dateInput:focus,
+.placeInput:focus {
     border-radius: 12px;
     background: #ffffff;
     box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
 }
 
-/* Кнопки видалення та інформації */
-.infoButton,
-.deleteButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
+/* Контейнер кнопок (десктоп) */
+.buttonContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 35px;
-    width: 35px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 8px;
+    gap: 5px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1; /* Забезпечує, що кнопки знаходяться над іншими елементами */
 }
 
-.infoButton:hover {
-    background-color: #e0f7fa; /* Світлий блакитний фон при наведенні */
+/* Контейнер кнопки видалення для мобільних */
+.deleteButtonContainer {
+    display: none; /* Приховати на десктопах */
+    position: absolute;
+    top: 50%;
+    right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
+/* Кнопки видалення */
 .deleteButton {
     color: #dc3545;
 }
@@ -150,123 +139,149 @@ textarea.inputField {
     gap: 10px; /* Відстань між кнопками */
 }
 
-/* Фіксована кнопка Інформації в правому нижньому кутку екрану */
-.fixedInfoButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ffffff;
-    box-shadow:
-      6px 6px 12px rgba(19, 57, 51, 0.5),
-      -6px -6px 12px rgba(65, 191, 171, 0.5);
-    border-radius: 50%;
-    z-index: 20000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: block !important;
+/* Контейнер для лампочки після трьох полів */
+.suggestionButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px; /* Відстань від полів */
+    cursor: pointer;
+    position: absolute;
+    top: -18px;
+    right: -370px; /* Відступ справа після трьох полів */
+    transform: translateY(50%);
+    z-index: 2;
 }
 
-.fixedInfoButton:hover {
-    background-color: #e0f7fa;
+/* Lightbulb Suggestion Button */
+.suggestionButton {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    z-index: 2; /* Щоб була поверх textarea */
+}
+
+.suggestionButton:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+/* Glowing Lightbulb Icon */
+.glowingLightbulb {
+    animation: pulseGlow 1.5s infinite ease-in-out;
+    color: #FFD700; /* Жовте світіння */
+    font-size: 2rem; /* Збільшений розмір */
 }
 
 /* Роздільник між рядками на мобільних */
 .mobileDivider {
-    display: none;
+    display: none; /* Приховати на десктопах */
     height: 1px;
     background-color: #ccc;
     margin-top: 10px;
 }
 
-/* Стилі помилок */
-.errorMessage {
-    color: #dc3545;
-    font-size: 0.875em;
-    margin-top: 5px;
+/* Модальне вікно з підказками */
+.customDialog {
+    max-width: 400px;  /* Максимальна ширина */
+    width: 90%;  /* 90% від екрану */
+    border-radius: 50px;  /* Закруглені кути */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    position: relative;
 }
 
-/* Dropdown Styles */
-.dropdown {
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-height: 150px;
-    overflow-y: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    z-index: 1000;
-    margin-top: 5px;
+/* Заголовок модального вікна */
+.dialogTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #013b6e;
+    border-bottom: 1px solid #ddd;
+    position: relative;
 }
 
-.dropdown__items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown__item {
-    padding: 10px;
+/* Кнопка закриття модального вікна */
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff0000; /* Червоний хрестик */
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Щоб вона була поверх усіх інших елементів */
+    transition: transform 0.2s ease-in-out;
 }
 
-.dropdown__item:hover {
-    background-color: #f0f0f0;
+.closeButton:hover {
+    transform: scale(1.2);
 }
 
-/* Показати роздільник та кнопки видалення на мобільних */
-@media (max-width: 768px) {
-    .deleteButtonContainer {
-        visibility: visible;
+/* Контейнер списку */
+.dialogList {
+    padding: 10px;
+}
+
+/* Текст підказки */
+.dialogText {
+    font-size: 1rem;
+    padding: 10px;
+    color: #013b6e;
+    transition: color 0.2s ease-in-out;
+}
+
+.dialogText:hover {
+    color: #013b6e; /* Синій відтінок */
+    font-weight: bold;
+}
+
+/* Анімація пульсу */
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+    50% {
         opacity: 1;
-        display: flex;
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    /* Контейнер кнопки видалення для мобільних */
+    .deleteButtonContainer {
+        display: flex !important;
         position: absolute;
-        top: 61%;
+        top: 50%; /* Центруємо вертикально */
         right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
         transform: translateY(-50%);
         z-index: 10;
     }
 
-    .deleteButtonContainerDesktop {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-        position: absolute;
-        top: 50%;
-        right: -50px; /* Відсунемо трохи праворуч від останнього поля */
-        transform: translateY(-50%);
-        z-index: 10;
-    }
-    .deleteButtonContainerDesktop {
-        visibility: hidden;
-        opacity: 0;
-        pointer-events: none;
+    /* Приховати кнопку видалення в десктопній версії */
+    .buttonContainer {
+        display: none;
     }
 
-   
-    .deleteButton {
-        color: #dc3545;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* Додати роздільник між записами */
+    /* Показати роздільник */
     .mobileDivider {
         display: block;
-        height: 1px;
-        background-color: #ccc;
-        margin: 15px 0;
     }
 
-    /* ❗ Приховати кнопку видалення в десктопній версії */
-   
-
-    /* ❗ Показати кнопку видалення для мобільної версії */
-    .deleteButtonContainer .deleteButton {
-        color: #dc3545;
-    }
-
-    /* ❗ Вирівнювання блоку на всю ширину */
+    /* Зміна flex для dateCell, descriptionCell та placeCell */
     .dateCell,
     .descriptionCell,
     .placeCell {
@@ -278,44 +293,11 @@ textarea.inputField {
         margin-top: 10px;
     }
 
- 
-}
-/* ❗❗❗ Приховати кнопку видалення на десктопі ❗❗❗ */
-
-
-/* Адаптивність для планшетів */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .descriptionCell {
-        min-width: 300px; /* Зменшено мінімальну ширину */
-        flex: 3; /* Збільшено з 4 до 3 */
-    }
-
-    .dateCell {
-        min-width: 337.5px; /* Збільшено з 225px до 337.5px */
-        flex: 2.25; /* Збільшено з 2.25 до 2.25 */
-    }
-}
-
-/* Медіа-запит для десктопу (відповідний розмір, наприклад, більше 1024px) */
-@media (min-width: 1025px) {
-    .dateCell {
-        min-width: 200px; /* Зменшено мінімальну ширину */
-        flex: 2; /* Зменшено коефіцієнт гнучкості */
-    }
-
-    .descriptionCell {
-        min-width: 500px; /* Зменшено мінімальну ширину */
-        flex: 5.2; /* Збільшено на 30% */
-    }
-
-    .placeCell {
-        min-width: 200px; /* Встановлено мінімальну ширину */
-        flex: 3;
-    }
-}
-
-@media (min-width: 769px) {
-    .deleteButtonContainer {
-        display: none !important;
+    /* Відображення Lightbulb Icon для мобільних */
+    .suggestionButtonContainer {
+        position: absolute;
+        top: 8%; /* Нижче трьох полів */
+        right: -50px; /* Відступ справа */
+        transform: translateY(10px); /* Відступ від полів */
     }
 }

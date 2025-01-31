@@ -147,7 +147,7 @@ textarea {
 
 
 .infoButton:hover {
-    background-color: #e0f7fa; /* Світлий блакитний фон при наведенні */
+    background-color: #dc3545; /* Світлий блакитний фон при наведенні */
 }
 
 .deleteButton {
@@ -155,7 +155,7 @@ textarea {
 }
 
 .deleteButton:hover {
-    background-color: #f8d7da;
+    background-color: #dc3545;
 }
 
 /* Кнопка додавання нового рядка */
@@ -347,7 +347,7 @@ textarea {
 .customDialog {
     max-width: 400px;  /* Максимальна ширина */
     width: 90%;  /* Ширина 90% від екрану */
-    border-radius: 40px;  /* Закруглені кути */
+    border-radius: 50px;  /* Закруглені кути */
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     background: #ffffff;
@@ -381,7 +381,36 @@ textarea {
     color: #013b6e; /* Синій відтінок */
     font-weight: bold;
 }
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff0000; /* Червоний хрестик */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10; /* Щоб залишався поверх усього */
+    transition: transform 0.2s ease-in-out;
+}
 
+.closeButton:hover {
+    transform: scale(1.2);
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    .closeButton {
+        top: 5px;
+        right: 5px;
+        font-size: 1.2rem; /* Трішки менший хрестик на мобільних */
+    }
+
+    .customDialog {
+        width: 95%;  /* Більше місця на мобільних */
+        max-width: 350px;
+    }
+}
 /* Адаптація для мобільних */
 @media (max-width: 768px) {
     .customDialog {
@@ -409,6 +438,3 @@ textarea {
 }
 
 /* Застосовуємо анімацію */
-.customDialog {
-    animation: fadeIn 0.3s ease-in-out;
-}

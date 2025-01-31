@@ -27,8 +27,10 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
   const dateHints = ["MM/YYYY", "seit MM/YYYY", "MM/YYYY - MM/YYYY", "MM/YYYY - heute"];
   const [hintIndex, setHintIndex] = useState(0);
   const [isFocused, setIsFocused] = useState(false);
-  // Відстеження кліків поза списком пропозицій
- 
+  const textareaRefs = useRef([]); // Реф для textarea
+  const [errors, setErrors] = useState({}); // Стан для помилок
+
+  // Ротація підказок для полів дати
   useEffect(() => {
     if (!isFocused && data.every((item) => !item.date)) {
       const interval = setInterval(() => {
@@ -36,9 +38,9 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
       }, 1500); // Підказка змінюється кожні 1.5 секунди
       return () => clearInterval(interval);
     }
-  }, [isFocused, data]);
-  
+  }, [isFocused, data, dateHints.length]);
 
+  // Закриття модалки при кліку поза її межами
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -60,8 +62,62 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
     onUpdate(updatedEntries);
   };
 
+  // Валідація дати
+  const validateDateValue = (val) => {
+    const lowered = val.toLowerCase().trim();
+
+    if (!lowered || lowered.endsWith("/") || lowered.includes("_")) {
+      // Якщо введення ще не завершене, не показувати помилки
+      return;
+    }
+
+    if (lowered.startsWith("seit ")) {
+      const parts = lowered.split(" ").filter(Boolean);
+      if (parts.length !== 2)
+        throw new Error("Das Format 'seit MM/yyyy' ist ungültig.");
+      checkMMYYYY(parts[1]);
+      return;
+    }
+
+    if (lowered.includes(" - ")) {
+      const parts = lowered.split(" - ").map((p) => p.trim());
+      if (parts.length === 2) {
+        checkMMYYYY(parts[0]);
+        if (parts[1].toLowerCase() !== "heute") checkMMYYYY(parts[1]);
+        return;
+      }
+    }
+
+    throw new Error("Ungültiges Datumsformat.");
+  };
+
+  const isValidMonth = (month) => {
+    const num = parseInt(month, 10);
+    return num >= 1 && num <= 12;
+  };
+
+  const checkMMYYYY = (str) => {
+    const [m, y] = str.split("/");
+    if (!m || !y || m.length !== 2 || y.length !== 4)
+      throw new Error("Ungültiges Datumsformat. Erlaubt ist: MM/yyyy.");
+    if (!isValidMonth(m))
+      throw new Error("Der Monat muss zwischen 01 und 12 liegen.");
+    const date = new Date(`${y}-${m}-01`);
+    if (isNaN(date.getTime())) throw new Error("Ungültiges Datumsformat.");
+  };
+
   // Обробка зміни дати
   const handleDateChange = (index, newValue) => {
+    try {
+      validateDateValue(newValue);
+      // Очистити помилки для цього поля
+      setErrors((prevErrors) => ({ ...prevErrors, [index]: null }));
+    } catch (error) {
+      console.error(error.message);
+      // Встановити повідомлення про помилку для цього поля
+      setErrors((prevErrors) => ({ ...prevErrors, [index]: error.message }));
+    }
+
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
     handleUpdate(updatedEntries);
@@ -142,6 +198,11 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
     ];
     handleUpdate(updatedEntries);
+
+    setTimeout(() => {
+      const lastIndex = updatedEntries.length - 1;
+      handleFocus(lastIndex, "description"); // Фокус на description за замовчуванням
+    }, 100); // Даємо час DOM оновитися
   };
 
   // Видалення рядка
@@ -151,14 +212,18 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
   };
 
   // Динамічне розширення висоти textarea
-  const handleAutoExpand = (e) => {
-    const field = e.target;
+  const handleAutoExpand = (e, index) => {
+    const field = textareaRefs.current[index];
+    if (field) {
+      field.style.height = "auto"; // Скидаємо висоту, щоб уникнути некоректних розрахунків
+      field.style.height = `${field.scrollHeight}px`; // Встановлюємо нову висоту
+    }
+  };
 
-    // Скидаємо висоту, щоб уникнути некоректних розрахунків
-    field.style.height = "auto";
-
-    // Встановлюємо нову висоту на основі scrollHeight
-    field.style.height = `${field.scrollHeight}px`;
+  // Фокусування на рядку
+  const handleFocus = (index, fieldType) => {
+    setActiveDescriptionIndex(index);
+    setFocusedField(fieldType);
   };
 
   // Закриття модального вікна
@@ -171,116 +236,130 @@ const AusbildungSection = ({ title = "Ausbildung", data, onUpdate }) => {
   return (
     <section className={styles.ausbildungSection}>
       <h3 className={styles.subheader}>{title}</h3>
-  
+
       <div className={styles.entriesContainer}>
         {data.map((entry, index) => (
-          
-         <div key={index} className={styles.entryRow}>
-  {/* Поле дати */}
-  <div className={styles.dateCell}>
-  <input
-    type="text"
-    value={entry.date || ""}
-    onChange={(e) => handleDateChange(index, e.target.value)}
-    onFocus={() => {
-      setIsFocused(true);
-      setHintIndex(-1); // При фокусі підказка зникає
-    }}
-    onBlur={() => {
-      setTimeout(() => {
-        if (!isModalOpenRef.current) {
-          setIsFocused(false);
-          if (!entry.date) setHintIndex(0);
-        }
-      }, 100);
-    }}
-    placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
-    className={styles.inputField}
-  />
-</div>
+          <div key={index} className={styles.entryRow}>
+            {/* Поле дати */}
+            <div className={styles.dateCell}>
+              <input
+                type="text"
+                value={entry.date || ""}
+                onChange={(e) => handleDateChange(index, e.target.value)}
+                onFocus={() => {
+                  setIsFocused(true);
+                  setHintIndex(-1); // При фокусі підказка зникає
+                }}
+                onBlur={() => {
+                  setTimeout(() => {
+                    if (!isModalOpenRef.current) {
+                      setIsFocused(false);
+                      if (!entry.date) setHintIndex(0);
+                    }
+                  }, 100);
+                }}
+                placeholder={isFocused || entry.date ? "" : dateHints[hintIndex]}
+                className={styles.inputField}
+              />
+              {/* Підказка для дати */}
+              {!isFocused && !entry.date && (
+                <div className={styles.dateHint}>{dateHints[hintIndex]}</div>
+              )}
+              {errors[index] && <div className={styles.errorMessage}>{errors[index]}</div>}
+            </div>
 
-  {/* Поле опису */}
-  <div className={styles.descriptionCell}>
-    <textarea
-      value={entry.description || ""}
-      onChange={(e) => {
-        handleDescriptionChange(index, e.target.value);
-        handleAutoExpand(e);
-      }}
-      placeholder="Information"
-      className={styles.inputField}
-      rows={1}
-    ></textarea>
-  </div>
+            {/* Поле опису */}
+            <div className={styles.descriptionCell}>
+              <textarea
+                ref={(el) => (textareaRefs.current[index] = el)}
+                value={entry.description || ""}
+                onChange={(e) => {
+                  handleDescriptionChange(index, e.target.value);
+                  handleAutoExpand(e, index);
+                }}
+                onFocus={() => handleFocus(index, "description")}
+                onBlur={() => handleFocus(null, null)}
+                placeholder="Information"
+                className={styles.inputField}
+                rows={1}
+              ></textarea>
 
-  {/* Поле місця навчання */}
-  <div className={styles.placeCell}>
-    <textarea
-      value={entry.place || ""}
-      onChange={(e) => {
-        handlePlaceChange(index, e.target.value);
-        handleAutoExpand(e);
-      }}
-      placeholder="Ort"
-      className={`${styles.inputField} ${styles.textareaField}`}
-      rows={1}
-    ></textarea>
-  </div>
+              {/* Контейнер кнопок для десктопу */}
+              <div className={styles.buttonContainer}>
+                <IconButton
+                  onClick={() => removeRow(index)}
+                  className={styles.deleteButton}
+                  aria-label={`Видалити рядок ${index + 1}`}
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </div>
 
-  {/* ❗ Кнопка видалення на десктопі */}
-  <div className={styles.deleteButtonContainerDesktop}>
-    <IconButton
-      onClick={() => removeRow(index)}
-      className={styles.deleteButton}
-      aria-label="Видалити"
-    >
-      <DeleteIcon />
-    </IconButton>
-  </div>
+              {/* Контейнер кнопки видалення для мобільних */}
+              <div className={styles.deleteButtonContainer}>
+                <IconButton
+                  onClick={() => removeRow(index)}
+                  className={styles.deleteButton}
+                  aria-label={`Видалити рядок ${index + 1}`}
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </div>
 
-  {/* Кнопка видалення для мобільної версії */}
-  <div className={styles.deleteButtonContainer}>
-    <IconButton
-      onClick={() => removeRow(index)}
-      className={styles.deleteButton}
-      aria-label="Видалити"
-    >
-      <DeleteIcon />
-    </IconButton>
-  </div>
+              {/* Кнопка підказки */}
+              {activeDescriptionIndex === index && (
+                <IconButton
+                  onClick={toggleSuggestions}
+                  className={styles.suggestionButton}
+                  aria-label={`Підказки для рядка ${index + 1}`}
+                >
+                  <InfoIcon className={styles.glowingInfoIcon} />
+                </IconButton>
+              )}
+            </div>
 
-  {/* Роздільник між записами */}
-  <div className={styles.mobileDivider}></div>
-</div>
+            {/* Поле місця навчання */}
+            <div className={styles.placeCell}>
+              <textarea
+                value={entry.place || ""}
+                onChange={(e) => {
+                  handlePlaceChange(index, e.target.value);
+                  handleAutoExpand(e, index);
+                }}
+                onFocus={() => handleFocus(index, "place")}
+                onBlur={() => handleFocus(null, null)}
+                placeholder="Ort"
+                className={`${styles.inputField} ${styles.textareaField}`}
+                rows={1}
+              ></textarea>
+            </div>
+
+            {/* Роздільник між записами */}
+            <div className={styles.mobileDivider}></div>
+          </div>
         ))}
       </div>
-  
+
       {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
-  
-      {/* Фіксована кнопка Інформації в правому нижньому кутку екрану */}
-      {activeDescriptionIndex !== null && (
-        <IconButton
-          onClick={toggleSuggestions}
-          className={styles.fixedInfoButton}
-          aria-label="Інформація"
-        >
-          <InfoIcon />
-        </IconButton>
-      )}
-  
+
       {/* Модальне вікно з підказками */}
-      <Dialog open={isModalOpen} onClose={handleCloseModal}>
-        <DialogTitle>Виберіть підказку</DialogTitle>
-        <List>
+      <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
+        <DialogTitle className={styles.dialogTitle}>
+          Виберіть підказку
+          <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+            &times;
+          </IconButton>
+        </DialogTitle>
+        <List className={styles.dialogList} ref={suggestionsRef}>
           {suggestionsList.map((hint, idx) => (
             <ListItem key={idx} disablePadding>
               <ListItemButton onClick={() => handleSuggestionSelect(hint)}>
-                <ListItemText primary={hint} />
+                <ListItemText primary={hint} className={styles.dialogText} />
               </ListItemButton>
             </ListItem>
           ))}

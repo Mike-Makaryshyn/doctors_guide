@@ -358,12 +358,13 @@ const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
       </div>
 
       {/* Модальне вікно з підказками */}
-      <Dialog
-  open={isModalOpen}
-  onClose={handleCloseModal}
-  classes={{ paper: styles.customDialog }} // Додаємо кастомний клас
->
-  <DialogTitle className={styles.dialogTitle}>Beispiele</DialogTitle>
+      <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
+  <DialogTitle className={styles.dialogTitle}>
+    Виберіть підказку
+    <IconButton className={styles.closseButton} onClick={handleCloseModal}>
+      &times;
+    </IconButton>
+  </DialogTitle>
   <List className={styles.dialogList}>
     {descriptionHints.map((hint, idx) => (
       <ListItem key={idx} disablePadding>
