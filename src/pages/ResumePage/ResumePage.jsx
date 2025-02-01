@@ -1,10 +1,8 @@
-// src/pages/ResumePage/ResumePage.jsx
-
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "./ResumePage.module.css";
-import pdfStyles from "./pdfresume.module.css"; // Імпортуємо стиль модального вікна для PDF
+import pdfStyles from "./pdfresume.module.css"; // Стилі для модального вікна PDF
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import HeaderSection from "./HeaderSection";
 import AktuellSection from "./AktuellSection";
@@ -107,10 +105,31 @@ const allSections = [
 // Для меню використовуємо лише основні секції (без PDF Export)
 const mainSections = allSections.filter((section) => section.id !== 6);
 
-/**
- * InfiniteIconBar – обчислює порядок елементів так, щоб активна секція завжди була по центру.
- * Використовуємо mainSections (6 елементів).
- */
+// Компонент плаваючого заголовку (sticky header)
+const StickyHeader = ({ title }) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return visible ? (
+    <div className={styles.stickyHeader}>
+      <h2>{title}</h2>
+    </div>
+  ) : null;
+};
+
+// InfiniteIconBar – обчислює порядок елементів так, щоб активна секція завжди була по центру.
 const InfiniteIconBar = ({ sections, currentSection, onIconClick }) => {
   const n = sections.length; // має бути 6
   const mid = Math.floor(n / 2);
@@ -125,9 +144,7 @@ const InfiniteIconBar = ({ sections, currentSection, onIconClick }) => {
         return (
           <div
             key={section.id}
-            className={`${styles.iconContainer} ${
-              isActive ? styles.active : styles.inactive
-            }`}
+            className={`${styles.iconContainer} ${isActive ? styles.active : styles.inactive}`}
             onClick={() => {
               const originalIndex = (currentSection - mid + index + n) % n;
               onIconClick(originalIndex);
@@ -230,11 +247,13 @@ const ResumePage = () => {
 
   const handleIconClick = (id) => {
     if (id === currentSection) return;
-    console.log(`Перемикання на секцію ${id} (${mainSections.find((s) => s.id === id)?.title})`);
+    console.log(
+      `Перемикання на секцію ${id} (${mainSections.find((s) => s.id === id)?.title})`
+    );
     setCurrentSection(id);
   };
 
-  // Оновлені функції для генерації PDF, які спочатку синхронізують дані з Firebase
+  // Функції для генерації PDF
   const handlePreviewPDF = async () => {
     await syncToFirestore();
     previewResumePDF();
@@ -294,15 +313,18 @@ const ResumePage = () => {
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
-          {/* Циклічне меню секцій (mainSections) */}
+          {/* Плаваючий заголовок, який з’являється при скролі */}
+          <StickyHeader title={allSections[currentSection].title} />
+
+          {/* Меню секцій з безкінечною прокруткою */}
           <InfiniteIconBar
             sections={mainSections}
             currentSection={currentSection}
             onIconClick={handleIconClick}
           />
 
-          {/* Відображення поточної секції */}
-          <div className={styles.section}>
+          {/* Відображення поточної секції з ефектом плавного появлення */}
+          <div className={`${styles.section} ${styles.fadeIn}`}>
             <CurrentComponent
               data={resumeData[allSections[currentSection].dataKey]}
               onUpdate={(newData) =>
@@ -313,7 +335,11 @@ const ResumePage = () => {
 
           {/* Кнопка для відкриття модального вікна PDF */}
           <div className={styles.navButtonContainer}>
-            <button className={styles.printButton} onClick={handleOpenPDFModal} title="Друкувати PDF">
+            <button
+              className={styles.printButton}
+              onClick={handleOpenPDFModal}
+              title="Друкувати PDF"
+            >
               <FaPrint />
             </button>
           </div>
@@ -327,10 +353,14 @@ const ResumePage = () => {
           onRequestClose={handleClosePDFModal}
           contentLabel="PDF Export"
           className={pdfStyles.pdfModal}
-          overlayClassName={pdfStyles.modalOverlay}  // Якщо є стиль для оверлею (можна додати в CSS)
+          overlayClassName={pdfStyles.modalOverlay}
         >
           <div className={pdfStyles.modalContent}>
-            <button onClick={handleClosePDFModal} className={pdfStyles.closeButton} title="Закрити">
+            <button
+              onClick={handleClosePDFModal}
+              className={pdfStyles.closeButton}
+              title="Закрити"
+            >
               &times;
             </button>
             <h2>PDF Export</h2>

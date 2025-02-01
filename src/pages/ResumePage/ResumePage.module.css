@@ -20,10 +20,10 @@
   width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+ 
   white-space: nowrap;
   position: relative;
-  scrollbar-width: none;
+
 }
 
 .iconBar::-webkit-scrollbar {
@@ -41,7 +41,7 @@
   transform-origin: center center;
   position: relative;
   scroll-snap-align: center;
-  user-select: none;
+  
 }
 
 /* Неактивний елемент має стандартний розмір */

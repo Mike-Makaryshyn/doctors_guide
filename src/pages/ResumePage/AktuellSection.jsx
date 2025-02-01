@@ -59,7 +59,7 @@ const validateDateValue = (val) => {
   throw new Error("Ungültiges Datumsformat.");
 };
 
-const AktuellSection = ({ title = "Aktuell", data, onUpdate }) => {
+const AktuellSection = ({ title = "", data, onUpdate }) => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

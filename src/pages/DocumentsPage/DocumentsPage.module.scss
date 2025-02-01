@@ -202,8 +202,8 @@
       cursor: pointer; /* Вказівник миші */
       opacity: 0.9; /* Збільшена прозорість */
       transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px); /* Для підтримки Safari */
+     
+     
       animation: float 6s ease-in-out infinite;
 
       &::after {
