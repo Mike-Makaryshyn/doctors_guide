@@ -10,6 +10,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
 import { notNeededText } from "../../constants/translation/documents";
 
+// Додаємо імпорт шрифтів із src/assets
+import notoSansFont from "../../assets/fonts/NotoSans-VariableFont.ttf";
+import notoNaskhArabicFont from "../../assets/fonts/NotoNaskhArabic.ttf";
+import openSansFont from "../../assets/fonts/OpenSans-VariableFont.ttf";
+
 // ---------- 1) Словничок для колонок ----------
 const tableHeaders = {
   en: {
@@ -94,7 +99,6 @@ const tableHeaders = {
     sent: "Wysłane",
   },
 };
-
 
 // ---------- 2) Функція завантаження локального шрифту ----------
 const loadFont = async (url, fontName) => {
@@ -352,31 +356,30 @@ const PDFTable = ({
   }
 
   // ---------------------------------------------------------------------
-  // 8) Футер-слоган (зробимо "GermanMove" більшим)
+  // 8) Футер-слоган (оновлений)
   // ---------------------------------------------------------------------
-// 8) Футер-слоган (оновлений)
-const didDrawPageFooter = (doc) => (data) => {
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const sloganX = data.settings.margin.left;
-  const sloganY = pageHeight - 20;
+  const didDrawPageFooter = (doc) => (data) => {
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const sloganX = data.settings.margin.left;
+    const sloganY = pageHeight - 20;
 
-  // Робимо "GermanMove" 14pt жирним
-  doc.setFontSize(16);
-  doc.setFont("NotoSans", "bold");
-  doc.text("GermanMove ", sloganX, sloganY); 
-  // зверніть увагу: додаємо пробіл у кінці рядка
-  
-  // А решту тексту 10pt normal
-  doc.setFont("NotoSans", "normal");
-  doc.setFontSize(10);
+    // Робимо "GermanMove" 14pt жирним
+    doc.setFontSize(16);
+    doc.setFont("NotoSans", "bold");
+    doc.text("GermanMove ", sloganX, sloganY); 
+    // зверніть увагу: додаємо пробіл у кінці рядка
 
-  const offset = doc.getTextWidth("GermanMove ");
-  doc.text(
-    "            makes your journey to German approbation easier",
-    sloganX + offset,
-    sloganY
-  );
-};
+    // А решту тексту 10pt normal
+    doc.setFont("NotoSans", "normal");
+    doc.setFontSize(10);
+
+    const offset = doc.getTextWidth("GermanMove ");
+    doc.text(
+      "            makes your journey to German approbation easier",
+      sloganX + offset,
+      sloganY
+    );
+  };
 
   // ---------------------------------------------------------------------
   // 9) Генеруємо PDF (ЗАВАНТАЖЕННЯ)
@@ -384,10 +387,10 @@ const didDrawPageFooter = (doc) => (data) => {
   const handleGeneratePDF = async () => {
     const doc = new jsPDF("l", "pt", "a4");
 
-    // Завантажуємо шрифти
-    const notoSans = await loadFont("../../assets/fonts/NotoSans-VariableFont.ttf", "NotoSans");
-    const notoNaskhArabic = await loadFont("../../assets/fonts/NotoNaskhArabic.ttf", "NotoNaskhArabic");
-    const openSans = await loadFont("../../assets/fonts/OpenSans-VariableFont.ttf", "OpenSans");
+    // Завантажуємо шрифти з імпортованих модулів
+    const notoSans = await loadFont(notoSansFont, "NotoSans");
+    const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
+    const openSans = await loadFont(openSansFont, "OpenSans");
 
     // Додаємо у pdf
     doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
@@ -420,7 +423,6 @@ const didDrawPageFooter = (doc) => (data) => {
         fontSize: 10,
         cellPadding: 3,
         lineWidth: 0.5,
-        
       },
       headStyles: { fillColor: [220, 220, 220] },
       didDrawPage: didDrawPageFooter(doc),
@@ -492,10 +494,10 @@ const didDrawPageFooter = (doc) => (data) => {
   const handleViewPDF = async () => {
     const doc = new jsPDF("l", "pt", "a4");
 
-    // Шрифти
-    const notoSans = await loadFont("/fonts/NotoSans-VariableFont.ttf", "NotoSans");
-    const notoNaskhArabic = await loadFont("/fonts/NotoNaskhArabic.ttf", "NotoNaskhArabic");
-    const openSans = await loadFont("/fonts/OpenSans-VariableFont.ttf", "OpenSans");
+    // Завантажуємо шрифти з імпортованих модулів
+    const notoSans = await loadFont(notoSansFont, "NotoSans");
+    const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
+    const openSans = await loadFont(openSansFont, "OpenSans");
 
     doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
     doc.addFont("NotoSans.ttf", "NotoSans", "normal");
@@ -588,7 +590,7 @@ const didDrawPageFooter = (doc) => (data) => {
 
     // Відкрити у новому вікні
     const pdfBlob = doc.output("bloburl");
-window.location.href = pdfBlob;
+    window.location.href = pdfBlob;
     onClose();
   };
 
