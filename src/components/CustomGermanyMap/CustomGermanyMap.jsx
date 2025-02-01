@@ -115,7 +115,6 @@ const CustomGermanyMap = () => {
     "Mecklenburg-Vorpommern": MecklenburgVorpommernCoat,
     Niedersachsen: NiedersachsenCoat,
     "Nordrhein-Westfalen": NordrheinWestfalenCoat,
-    "Nordrhein-Westfalen-Westfalen": WestfalenLippeCoat,
     "Westfalen-Lippe": WestfalenLippeCoat,  // ДОДАНО ЦЕЙ РЯДОК
     "Rheinland-Pfalz": RheinlandPfalzCoat,
     Saarland: SaarlandCoat,
