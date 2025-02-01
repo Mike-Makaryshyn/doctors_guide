@@ -1,126 +1,92 @@
-/* src/pages/ResumePage/ResumeSection.module.css */
-
-/* Загальні стилі для обох версій */
+/* Загальні стилі контейнера */
 .container {
-  position: relative; /* Встановлюємо контейнер як відносно позиціонований */
-  padding-bottom: 60px; /* Додаємо відступ внизу, щоб кнопки не перекривали контент */
+  position: relative;
+  padding-bottom: 60px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 100%; /* Забезпечує адаптацію для мобільних */
   box-sizing: border-box;
 }
 
-/* Стилі для навігаційної панелі з іконками */
+/* Горизонтальний контейнер для меню секцій */
 .iconBar {
   display: flex;
-  gap: 10px;
-  justify-content: center; /* Центрування для десктопу */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0;
-  max-width: 100%; /* Уникає виходу за межі екрану */
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  position: relative;
+  scrollbar-width: none;
 }
 
+.iconBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Стилі для кожного елемента меню */
 .iconContainer {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
-  min-width: 70px;
-  transition: transform 0.2s;
+  min-width: 80px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transform-origin: center center;
+  position: relative;
+  scroll-snap-align: center;
+  user-select: none;
 }
 
-.iconContainer:hover {
-  transform: scale(1.1); /* Збільшення при наведенні */
+/* Неактивний елемент має стандартний розмір */
+.inactive {
+  opacity: 0.6;
+  transform: scale(1);
 }
 
-.activeIcon {
-  background-color: #4caf50; /* Зелений фон для активної іконки */
-  color: white;
+/* Активний елемент (в центрі) збільшується та має менший шрифт для підпису */
+.active {
+  transform: scale(1.5) translateY(-10px);
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+  opacity: 1;
+  z-index: 10;
 }
 
-.inactiveIcon {
-  background-color: #f0f0f0;
-  color: black;
-}
-
+/* Стилі для самої іконки */
 .icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%; /* Круглі іконки */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Підпис під іконкою */
 .iconLabel {
   margin-top: 5px;
   font-size: 12px;
   text-align: center;
-  color: #333;
+  white-space: nowrap;
 }
 
-/* Адаптивні стилі для мобільних пристроїв */
-@media (max-width: 600px) {
-  .iconBar {
-    overflow-x: auto; /* Додає горизонтальну прокрутку */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    justify-content: flex-start; /* Вирівнювання іконок зліва */
-    gap: 10px; /* Простір між іконками */
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .iconLabel {
-    font-size: 10px;
-  }
-
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .section {
-    padding: 10px;
-  }
+/* Для активного елемента зменшуємо розмір шрифту підпису, щоб текст вміщувався */
+.iconContainer.active .iconLabel {
+  font-size: 10px;
 }
 
-/* Стилі для десктопу */
-@media (min-width: 601px) {
-  .iconBar {
-    justify-content: center; /* Центрування для десктопу */
-    overflow-x: visible; /* Без горизонтальної прокрутки */
-  }
-
-  .icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .iconLabel {
-    font-size: 12px;
-  }
-
-  .container {
-    max-width: 100%;
-    padding: 20px;
-  }
-
-  .section {
-    padding: 20px;
-  }
-}
-
-/* Кнопка навігації */
+/* Стилі для навігаційних кнопок */
 .navButtonContainer {
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: flex;
-  gap: 10px; /* Відстань між кнопками */
+  gap: 10px;
 }
 
 .navButton {
@@ -138,180 +104,27 @@
   opacity: 1;
 }
 
-.navButton:hover {
-  opacity: 1;
-}
-
-.backButton {
-  bottom: 20px;
-  left: 1270px;
-}
-
-.nextButton {
-  bottom: 20px;
-  right: 20px;
-}
-
-/* Додані стилі для AktuellSection */
-
-
-
-.subheader {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+/* Стилі для завантаження */
+.loading {
   text-align: center;
+  font-size: 18px;
+  padding: 20px;
 }
 
-.entryRow {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.dateCell {
-  position: relative;
-  width: 100%;
-}
-
-.descriptionCell {
-  flex-grow: 1;
-  width: 100%;
-  min-width: unset;
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .descriptionCell {
-      min-width: unset;
-      width: 100%;
+/* Додаткові стилі для адаптації на мобільних пристроях */
+@media (max-width: 600px) {
+  .iconBar {
+    gap: 10px;
+    justify-content: center;
   }
-  
-  .inputField {
-      width: 100%;
+  .iconContainer {
+    min-width: 60px;
   }
-}
-.inputWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  overflow: hidden; /* Важливо для обмеження руху підказки */
-}
-
-.inputField {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background: transparent;
-  flex: 1;
-  z-index: 1; /* Поверх підказки */
-}
-
-.placeholder {
-  position: absolute;
-  font-size: 16px;
-  color: rgba(150, 150, 150, 0.6);
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  z-index: 0; /* Під текстом */
-  display: flex;
-}
-
-.placeholder span {
-  display: inline-block;
-  animation: slideText 4s linear infinite;
-}
-
-/* Анімація руху підказки */
-@keyframes slideText {
-  0% {
-    transform: translateX(100%);
+  .icon {
+    width: 40px;
+    height: 40px;
   }
-  100% {
-    transform: translateX(-100%);
+  .iconLabel {
+    font-size: 10px;
   }
-}
-
-.inputFieldWithError {
-  border-bottom: 2px solid red;
-}
-
-.errorMessage {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.inputWithInfo {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.infoButton {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.dropdown.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown__items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.dropdown__item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.dropdown__item:hover {
-  background-color: #f0f0f0;
-}
-
-.buttonContainer {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.deleteButton {
-  color: red;
-}
-
-.addButtonContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }

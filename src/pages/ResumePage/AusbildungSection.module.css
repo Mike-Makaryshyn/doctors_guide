@@ -1,7 +1,7 @@
-/* src/pages/ResumePage/AusbildungSection.module.css */
+/* src/pages/ResumePage/BerufserfahrungenSection.module.css */
 
 /* Загальний контейнер */
-.ausbildungSection {
+.berufserfahrungenSection {
     margin-bottom: 30px;
     overflow: visible; /* Для десктопа */
     position: relative;
@@ -53,7 +53,7 @@
     position: relative;
 }
 
-/* Поле місця навчання */
+/* Поле місця */
 .placeCell {
     flex: 3; /* Збільшено з 2 до 3 */
     min-width: 300px; /* Задано мінімальну ширину */
@@ -299,37 +299,5 @@ textarea {
         top: -85%; /* Нижче трьох полів */
         right: -50px; /* Відступ справа */
         transform: translateY(10px); /* Відступ від полів */
-    }
-}
-
-
-/* Адаптивність для планшетів */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .descriptionCell {
-        min-width: 300px; /* Зменшено мінімальну ширину */
-        flex: 3; /* Збільшено з 4 до 3 */
-    }
-
-    .dateCell {
-        min-width: 337.5px; /* Збільшено з 225px до 337.5px */
-        flex: 2.25; /* Збільшено з 2.25 до 2.25 */
-    }
-}
-
-/* Адаптивність для десктопу */
-@media (min-width: 1025px) {
-    .dateCell {
-        min-width: 200px; /* Зменшено мінімальну ширину */
-        flex: 2; /* Зменшено коефіцієнт гнучкості */
-    }
-
-    .descriptionCell {
-        min-width: 500px; /* Зменшено мінімальну ширину */
-        flex: 5.2; /* Збільшено на 30% */
-    }
-
-    .placeCell {
-        min-width: 200px; /* Встановлено мінімальну ширину */
-        flex: 3;
     }
 }

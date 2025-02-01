@@ -1,0 +1,137 @@
+/* src/pages/ResumePage/pdfresume.module.css */
+
+/* Модальне вікно */
+.pdfModal {
+    position: fixed;
+    bottom: 35px;
+    right: 45px;
+    width: 330px; /* Ширина для десктопу */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 9999;
+    transition: all 0.3s ease;
+  }
+  
+  /* Для мобільних пристроїв */
+  @media (max-width: 768px) {
+    .pdfModal {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  
+  /* Якщо потрібно, можна визначити стиль для оверлею */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+  }
+  
+  /* Контейнер вмісту модального вікна */
+  .modalContent {
+    background-color: #fff;
+    color: #013b6e;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Кнопка закриття модалки */
+  .closeButton {
+    position: absolute;
+    top: -29px;
+    right: -29px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fb0000;
+    transition: transform 0.2s ease;
+  }
+  .closeButton:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Контейнер для кнопок PDF */
+  .pdfButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Кнопки PDF (Preview, Download) */
+  .pdfButton {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .pdfButton:hover {
+    background-color: #43a047;
+  }
+  
+  /* Контейнер для вибору мови (якщо потрібен) */
+  .languageSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .languageContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 8px 8px 16px rgba(105, 105, 105, 0.4), -8px -8px 16px #ffffff;
+    cursor: pointer;
+    position: relative;
+  }
+  .languageContainer select {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Анімації для іконок (якщо використовуємо) */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes colorShift {
+    0% { color: #ff0000; }
+    50% { color: #ff6666; }
+    100% { color: #ff0000; }
+  }
+  
+  .pdfIcon {
+    animation: colorShift 1.5s infinite ease-in-out;
+  }
+  
+  .viewIcon {
+    animation: pulse 1.5s infinite ease-in-out;
+  }

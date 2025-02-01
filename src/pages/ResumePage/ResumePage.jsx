@@ -1,7 +1,10 @@
 // src/pages/ResumePage/ResumePage.jsx
-import React, { useState, useEffect, useRef } from "react";
+
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "./ResumePage.module.css";
+import pdfStyles from "./pdfresume.module.css"; // Імпортуємо стиль модального вікна для PDF
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import HeaderSection from "./HeaderSection";
 import AktuellSection from "./AktuellSection";
@@ -9,13 +12,18 @@ import BerufserfahrungenSection from "./BerufserfahrungenSection";
 import AusbildungSection from "./AusbildungSection";
 import LanguageSkillsSection from "./LanguageSkillsSection";
 import TechnicalSkillsSection from "./TechnicalSkillsSection";
-import { addDownloadButton } from "./pdfresume";
-import { FaUser, FaNewspaper, FaBriefcase, FaGraduationCap, FaLanguage, FaTools, FaFilePdf } from "react-icons/fa";
+import { db, auth } from "../../firebase";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+import { FaUser, FaNewspaper, FaBriefcase, FaGraduationCap, FaLanguage, FaTools, FaFilePdf, FaPrint } from "react-icons/fa";
 import useIsMobile from "../../hooks/useIsMobile";
-import debounce from "lodash.debounce";
-import { db, auth } from "../../firebase"; // Імпорт Firebase конфігурації
-import { doc, setDoc, getDoc } from "firebase/firestore"; // Імпорт Firestore функцій
+import { previewResumePDF, downloadResumePDF } from "./pdfresume";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
+// Ініціалізація react-modal (переконайтеся, що елемент з id="root" існує)
+Modal.setAppElement("#root");
+
+// Створення теми для MUI
 const theme = createTheme({
   components: {
     MuiTextField: {
@@ -38,7 +46,8 @@ const theme = createTheme({
   },
 });
 
-const sections = [
+// Повний масив секцій (остання – PDF Export)
+const allSections = [
   {
     id: 0,
     title: "Persönliche Daten",
@@ -84,9 +93,10 @@ const sections = [
   {
     id: 6,
     title: "PDF Export",
+    // Цю секцію не використовуємо у меню – вона викликається окремою кнопкою
     component: () => (
       <div className={styles.pdfExportContainer}>
-        <h2>Завантажити PDF</h2>
+        <h2>PDF Export</h2>
         <div id="download-resume-container"></div>
       </div>
     ),
@@ -94,10 +104,48 @@ const sections = [
   },
 ];
 
+// Для меню використовуємо лише основні секції (без PDF Export)
+const mainSections = allSections.filter((section) => section.id !== 6);
+
+/**
+ * InfiniteIconBar – обчислює порядок елементів так, щоб активна секція завжди була по центру.
+ * Використовуємо mainSections (6 елементів).
+ */
+const InfiniteIconBar = ({ sections, currentSection, onIconClick }) => {
+  const n = sections.length; // має бути 6
+  const mid = Math.floor(n / 2);
+  const rotatedSections = [];
+  for (let i = 0; i < n; i++) {
+    rotatedSections.push(sections[(currentSection - mid + i + n) % n]);
+  }
+  return (
+    <div className={styles.iconBar}>
+      {rotatedSections.map((section, index) => {
+        const isActive = index === mid;
+        return (
+          <div
+            key={section.id}
+            className={`${styles.iconContainer} ${
+              isActive ? styles.active : styles.inactive
+            }`}
+            onClick={() => {
+              const originalIndex = (currentSection - mid + index + n) % n;
+              onIconClick(originalIndex);
+            }}
+          >
+            <div className={styles.icon}>{section.icon}</div>
+            <span className={styles.iconLabel}>{section.title}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 const ResumePage = () => {
   const isMobile = useIsMobile(600);
+  // currentSection – індекс від 0 до 5 для mainSections
   const [currentSection, setCurrentSection] = useState(0);
-
   const [resumeData, setResumeData] = useState({
     header: {},
     aktuell: [],
@@ -105,192 +153,197 @@ const ResumePage = () => {
     ausbildung: [],
     languageSkills: [],
     technicalSkills: [],
-    // Додайте інші секції, якщо потрібно
+    lastModified: new Date().toISOString(),
   });
-
   const [isLoading, setIsLoading] = useState(false);
-  const [isFetching, setIsFetching] = useState(true); // Новий стан для відстеження завантаження даних
+  const [isFetching, setIsFetching] = useState(true);
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
-  // Дебаунс функції збереження
-  const debouncedSave = useRef(
-    debounce(async (data) => {
-      setIsLoading(true);
-      const user = auth.currentUser;
-      if (!user) {
-        console.error("Користувач не автентифікований");
-        setIsLoading(false);
-        return;
+  // Завантаження даних з Firestore або localStorage
+  const fetchResumeData = async () => {
+    const user = auth.currentUser;
+    if (!user) return null;
+    const localDataStr = localStorage.getItem("resumeData");
+    let localData = localDataStr ? JSON.parse(localDataStr) : null;
+    console.log("Завантажено дані з localStorage");
+    try {
+      const docRef = doc(db, "users", user.uid, "resume", "profile");
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        const firestoreData = docSnap.data();
+        if (
+          firestoreData.lastModified &&
+          (!localData || firestoreData.lastModified > localData.lastModified)
+        ) {
+          console.log("Дані у Firestore новіші. Оновлюємо localStorage та стан.");
+          localStorage.setItem("resumeData", JSON.stringify(firestoreData));
+          return firestoreData;
+        }
+        return localData || firestoreData;
+      } else {
+        console.log("Firestore: дані відсутні. Використовуємо початкову структуру.");
+        const defaultData = {
+          header: {},
+          aktuell: [],
+          berufserfahrungen: [],
+          ausbildung: [],
+          languageSkills: [],
+          technicalSkills: [],
+          lastModified: new Date().toISOString(),
+        };
+        return defaultData;
       }
+    } catch (error) {
+      console.error("Помилка завантаження даних з Firestore:", error);
+      return localData;
+    }
+  };
 
-      try {
-        const docRef = doc(db, "users", user.uid, "resume", "profile");
-        await setDoc(docRef, data, { merge: true });
-        console.log("Дані резюме успішно збережено");
-      } catch (error) {
-        console.error("Помилка збереження резюме:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    }, 1000)
-  ).current;
+  const syncToFirestore = async () => {
+    const user = auth.currentUser;
+    if (!user) return;
+    const localDataStr = localStorage.getItem("resumeData");
+    if (!localDataStr) return;
+    const data = JSON.parse(localDataStr);
+    console.log("Синхронізація localStorage з Firestore. Дані:", data);
+    try {
+      const docRef = doc(db, "users", user.uid, "resume", "profile");
+      await setDoc(docRef, data, { merge: true });
+      console.log("Синхронізація завершена – дані збережено у Firestore");
+    } catch (error) {
+      console.error("Помилка синхронізації:", error);
+    }
+  };
 
-  // Функція для оновлення даних секції
   const updateSectionData = (sectionKey, newData) => {
     setResumeData((prevData) => {
-      const updatedData = { ...prevData, [sectionKey]: newData };
-      debouncedSave(updatedData); // Викликаємо збереження з дебаунсом
+      const updatedData = {
+        ...prevData,
+        [sectionKey]: newData,
+        lastModified: new Date().toISOString(),
+      };
+      localStorage.setItem("resumeData", JSON.stringify(updatedData));
+      console.log(`Оновлено секцію "${sectionKey}". Нові дані:`, newData);
       return updatedData;
     });
   };
 
-  // Функція для збереження усіх даних при навігації або завершенні
-  const saveAllSectionsData = async () => {
-    debouncedSave.flush(); // Викликаємо негайне збереження
-  };
-
-  const handleIconClick = async (id) => {
+  const handleIconClick = (id) => {
     if (id === currentSection) return;
-    await saveAllSectionsData();
+    console.log(`Перемикання на секцію ${id} (${mainSections.find((s) => s.id === id)?.title})`);
     setCurrentSection(id);
-
-    if (id === 6) {
-      setTimeout(() => {
-        addDownloadButton("download-resume-container");
-      }, 300);
-    }
   };
 
-  const handleNext = async () => {
-    if (currentSection < sections.length - 1) {
-      await saveAllSectionsData();
-      setCurrentSection((prev) => prev + 1);
-
-      if (currentSection + 1 === 6) {
-        setTimeout(() => {
-          addDownloadButton("download-resume-container");
-        }, 300);
-      }
-    }
+  // Оновлені функції для генерації PDF, які спочатку синхронізують дані з Firebase
+  const handlePreviewPDF = async () => {
+    await syncToFirestore();
+    previewResumePDF();
   };
 
-  const handleBack = async () => {
-    if (currentSection > 0) {
-      await saveAllSectionsData();
-      setCurrentSection((prev) => prev - 1);
-    }
+  const handleDownloadPDF = async () => {
+    await syncToFirestore();
+    downloadResumePDF();
   };
 
-  const CurrentComponent = sections[currentSection].component;
+  const handleOpenPDFModal = () => {
+    setIsPDFModalOpen(true);
+  };
 
-  // Додавання useEffect для завантаження даних з Firebase при монтуванні
+  const handleClosePDFModal = () => {
+    setIsPDFModalOpen(false);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
+    const loadData = async () => {
       setIsFetching(true);
-      const user = auth.currentUser;
-      if (!user) {
-        console.error("Користувач не автентифікований");
-        setIsFetching(false);
-        return;
+      const data = await fetchResumeData();
+      if (data) {
+        setResumeData(data);
       }
-
-      try {
-        const docRef = doc(db, "users", user.uid, "resume", "profile");
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          setResumeData(docSnap.data());
-          console.log("Дані резюме завантажено з Firebase");
-        } else {
-          console.log("Немає даних резюме для цього користувача");
-        }
-      } catch (error) {
-        console.error("Помилка завантаження резюме:", error);
-      } finally {
-        setIsFetching(false);
-      }
+      setIsFetching(false);
     };
+    loadData();
+  }, []);
 
-    fetchData();
+  useEffect(() => {
+    const saveOnUnload = async () => {
+      await syncToFirestore();
+    };
+    window.addEventListener("beforeunload", saveOnUnload);
+    window.addEventListener("afterprint", saveOnUnload);
+    return () => {
+      window.removeEventListener("beforeunload", saveOnUnload);
+      window.removeEventListener("afterprint", saveOnUnload);
+    };
   }, []);
 
   if (isFetching) {
     return (
       <ThemeProvider theme={theme}>
         <MainLayout>
-          <div className={styles.loadingContainer}>
-            <div className={styles.loading}>Завантаження даних...</div>
-          </div>
+          <div className={styles.loading}>Завантаження даних...</div>
         </MainLayout>
       </ThemeProvider>
     );
   }
 
+  // Для відображення поточної секції використовуємо повний масив (allSections)
+  const CurrentComponent = allSections[currentSection]?.component || HeaderSection;
+
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
-          {/* Навігація */}
-          <div
-            className={styles.iconBar}
-            style={{
-              display: "flex",
-              overflowX: "auto",
-              scrollSnapType: "x mandatory",
-              WebkitOverflowScrolling: "touch",
-            }}
-          >
-            {sections.map((section) => (
-              <div
-                key={section.id}
-                className={`${styles.iconContainer} ${
-                  currentSection === section.id ? styles.active : styles.inactive
-                }`}
-                onClick={() => handleIconClick(section.id)}
-                style={{
-                  flex: "0 0 auto",
-                  scrollSnapAlign: "center",
-                }}
-              >
-                <div className={styles.icon}>{section.icon}</div>
-                <span className={styles.iconLabel}>{section.title}</span>
-              </div>
-            ))}
-          </div>
+          {/* Циклічне меню секцій (mainSections) */}
+          <InfiniteIconBar
+            sections={mainSections}
+            currentSection={currentSection}
+            onIconClick={handleIconClick}
+          />
 
-          {/* Поточна секція */}
+          {/* Відображення поточної секції */}
           <div className={styles.section}>
             <CurrentComponent
-              data={resumeData[sections[currentSection].dataKey]}
+              data={resumeData[allSections[currentSection].dataKey]}
               onUpdate={(newData) =>
-                updateSectionData(sections[currentSection].dataKey, newData)
+                updateSectionData(allSections[currentSection].dataKey, newData)
               }
             />
           </div>
 
-          {/* Кнопки навігації */}
+          {/* Кнопка для відкриття модального вікна PDF */}
           <div className={styles.navButtonContainer}>
-  {currentSection > 0 && (
-    <button
-      onClick={handleBack}
-      disabled={currentSection === 0}
-      className={`${styles.navButton} ${styles.backButton}`}
-    >
-      Назад
-    </button>
-  )}
-  {currentSection < sections.length - 1 && (
-    <button
-      onClick={handleNext}
-      disabled={currentSection === sections.length - 1}
-      className={`${styles.navButton} ${styles.nextButton}`}
-    >
-      Далі
-    </button>
-  )}
-</div>
+            <button className={styles.printButton} onClick={handleOpenPDFModal} title="Друкувати PDF">
+              <FaPrint />
+            </button>
+          </div>
 
-          {/* Відображення індикатора завантаження */}
           {isLoading && <div className={styles.loading}>Завантаження...</div>}
         </div>
+
+        {/* Модальне вікно для PDF експорту */}
+        <Modal
+          isOpen={isPDFModalOpen}
+          onRequestClose={handleClosePDFModal}
+          contentLabel="PDF Export"
+          className={pdfStyles.pdfModal}
+          overlayClassName={pdfStyles.modalOverlay}  // Якщо є стиль для оверлею (можна додати в CSS)
+        >
+          <div className={pdfStyles.modalContent}>
+            <button onClick={handleClosePDFModal} className={pdfStyles.closeButton} title="Закрити">
+              &times;
+            </button>
+            <h2>PDF Export</h2>
+            <div className={pdfStyles.pdfButtonContainer}>
+              <button className={pdfStyles.pdfButton} onClick={handlePreviewPDF}>
+                Preview PDF
+              </button>
+              <button className={pdfStyles.pdfButton} onClick={handleDownloadPDF}>
+                Download PDF
+              </button>
+            </div>
+          </div>
+        </Modal>
       </MainLayout>
     </ThemeProvider>
   );
