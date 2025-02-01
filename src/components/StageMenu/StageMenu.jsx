@@ -1,5 +1,3 @@
-// src/components/StageMenu/StageMenu.jsx
-
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { APPROBATION_STAGES } from "../../constants/translation/stagesTranslation";
@@ -8,7 +6,30 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import styles from "./StageMenu.module.scss";
 import classNames from "classnames";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Іконки для стрілок
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// Статичні імпорти зображень
+import Stage1Img from "../../assets/stages/man-stage-1.png";
+import Stage2Img from "../../assets/stages/man-stage-2.png";
+import Stage3Img from "../../assets/stages/man-stage-3.png";
+import Stage4Img from "../../assets/stages/man-stage-4.png";
+import Stage5Img from "../../assets/stages/man-stage-5.png";
+import Stage6Img from "../../assets/stages/man-stage-6.png";
+import Stage7Img from "../../assets/stages/man-stage-7.png";
+import Stage8Img from "../../assets/stages/man-stage-8.png";
+import Stage9Img from "../../assets/stages/man-stage-9.png";
+
+const stageImages = [
+  Stage1Img,
+  Stage2Img,
+  Stage3Img,
+  Stage4Img,
+  Stage5Img,
+  Stage6Img,
+  Stage7Img,
+  Stage8Img,
+  Stage9Img,
+];
 
 const StageMenu = ({
   onStageSelect,
@@ -37,14 +58,10 @@ const StageMenu = ({
   };
 
   const handleStageClick = (stageId) => {
-    onStageSelect(stageId); // Викликаємо функцію з батьківського компонента
-
-    // Записуємо activeStage у Firestore тільки якщо не реєструємося
+    onStageSelect(stageId);
     if (!isRegistration && user) {
       updateActiveStage(stageId);
     }
-
-    // Якщо на мобільному, показати опис при кліку
     if (window.innerWidth <= 480) {
       setHoveredStage(stageId);
     }
@@ -96,7 +113,7 @@ const StageMenu = ({
         ref={!gridView ? stagesWrapperRef : null}
         className={classNames(styles.stagesWrapper, {
           [styles.swipeable]: enableSwipe && !gridView,
-          [styles.gridView]: gridView, // Додаємо новий стиль для сітки
+          [styles.gridView]: gridView,
         })}
       >
         {stages.map((stage, index) => (
@@ -109,17 +126,14 @@ const StageMenu = ({
             onMouseEnter={() => handleStageMouseEnter(stage.id)}
             onMouseLeave={handleStageMouseLeave}
           >
-            {/* Радіальна діаграма прогресу */}
             <div className={styles.progressCircle}>
               <svg className={styles.progressSvg} viewBox="0 0 36 36">
-                {/* Фонове кільце */}
                 <path
                   className={styles.circleBg}
                   d="M18 2.0845
                     a 15.9155 15.9155 0 0 1 0 31.831
                     a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
-                {/* Прогрес */}
                 <path
                   className={styles.circle}
                   strokeDasharray={`${stagesProgress[index]}, 100`}
@@ -128,19 +142,16 @@ const StageMenu = ({
                     a 15.9155 15.9155 0 0 1 0 -31.831"
                 />
               </svg>
-              {/* Картинка етапу */}
               <img
-                src={`/assets/man-stage-${index + 1}.png`} // Переконайтеся, що шлях до зображення правильний
+                src={stageImages[index]}
                 alt={`Stage ${index + 1}`}
                 className={styles.stageImage}
               />
             </div>
-            {/* Назва етапу */}
             <div className={styles.stageTitle}>{stage.title}</div>
           </div>
         ))}
       </div>
-      {/* Опис етапу */}
       {hoveredStage && (
         <div className={styles.description}>
           {stages.find((stage) => stage.id === hoveredStage)?.description}
@@ -153,17 +164,17 @@ const StageMenu = ({
 StageMenu.propTypes = {
   onStageSelect: PropTypes.func.isRequired,
   isRegistration: PropTypes.bool,
-  stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired, // Масив прогресів по етапах
-  activeStage: PropTypes.number, // Додано для контролю activeStage
-  enableSwipe: PropTypes.bool, // Проп для включення свайпу
-  gridView: PropTypes.bool, // Новий проп для включення сітки
+  stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired,
+  activeStage: PropTypes.number,
+  enableSwipe: PropTypes.bool,
+  gridView: PropTypes.bool,
 };
 
 StageMenu.defaultProps = {
   isRegistration: false,
-  activeStage: null, // Дефолтне значення
-  enableSwipe: false, // За замовчуванням свайп вимкнений
-  gridView: false, // За замовчуванням режим сітки вимкнений
+  activeStage: null,
+  enableSwipe: false,
+  gridView: false,
 };
 
 export default StageMenu;

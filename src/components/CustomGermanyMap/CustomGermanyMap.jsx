@@ -1,5 +1,5 @@
 // CustomGermanyMap.jsx
-<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>;
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { geoCentroid } from "d3-geo";
@@ -10,6 +10,23 @@ import useIsMobile from "../../hooks/useIsMobile";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa"; // Іконка стрілочки
+import BadenWuerttembergCoat from "../../assets/coats/Baden-Württember.svg";
+import BayernCoat from "../../assets/coats/Bayer.svg";
+import BerlinCoat from "../../assets/coats/Berlin.svg";
+import BrandenburgCoat from "../../assets/coats/Brandenburg.svg";
+import BremenCoat from "../../assets/coats/Bremen.svg";
+import HamburgCoat from "../../assets/coats/Hamburg.svg";
+import HessenCoat from "../../assets/coats/Hessen.svg";
+import MecklenburgVorpommernCoat from "../../assets/coats/Mecklenburg-Vorpommern.svg";
+import NiedersachsenCoat from "../../assets/coats/Niedersachsen.svg";
+import NordrheinWestfalenCoat from "../../assets/coats/Nordrhein-Westfalen.svg";
+import WestfalenLippeCoat from "../../assets/coats/Nordrhein-Westfalen.svg";
+import RheinlandPfalzCoat from "../../assets/coats/Rheinland-Pfalz.svg";
+import SaarlandCoat from "../../assets/coats/Saarland.svg";
+import SachsenCoat from "../../assets/coats/Sachsen.svg";
+import SachsenAnhaltCoat from "../../assets/coats/Sachsen-Anhalt.svg";
+import SchleswigHolsteinCoat from "../../assets/coats/Schleswig-Holstein.svg";
+import ThueringenCoat from "../../assets/coats/Thüringen.svg";
 
 const CustomGermanyMap = () => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
@@ -88,23 +105,24 @@ const CustomGermanyMap = () => {
   };
 
   const regionCoatsOfArms = {
-    "Baden-Württemberg": "/coats/Baden-Württember.svg",
-    Bayern: "/coats/Bayer.svg",
-    Berlin: "/coats/Berlin.svg",
-    Brandenburg: "/coats/Brandenburg.svg",
-    Bremen: "/coats/Bremen.svg",
-    Hamburg: "/coats/Hamburg.svg",
-    Hessen: "/coats/Hessen.svg",
-    "Mecklenburg-Vorpommern": "/coats/Mecklenburg-Vorpommern.svg",
-    Niedersachsen: "/coats/Niedersachsen.svg",
-    "Westfalen-Lippe": "/coats/Nordrhein-Westfalen.svg",
-    "Nordrhein-Westfalen": "/coats/Nordrhein-Westfalen.svg",
-    "Rheinland-Pfalz": "/coats/Rheinland-Pfalz.svg",
-    Saarland: "/coats/Saarland.svg",
-    Sachsen: "/coats/Sachsen.svg",
-    "Sachsen-Anhalt": "/coats/Sachsen-Anhalt.svg",
-    "Schleswig-Holstein": "/coats/Schleswig-Holstein.svg",
-    Thüringen: "/coats/Thüringen.svg",
+    "Baden-Württemberg": BadenWuerttembergCoat,
+    Bayern: BayernCoat,
+    Berlin: BerlinCoat,
+    Brandenburg: BrandenburgCoat,
+    Bremen: BremenCoat,
+    Hamburg: HamburgCoat,
+    Hessen: HessenCoat,
+    "Mecklenburg-Vorpommern": MecklenburgVorpommernCoat,
+    Niedersachsen: NiedersachsenCoat,
+    "Nordrhein-Westfalen": NordrheinWestfalenCoat,
+    "Nordrhein-Westfalen-Westfalen": WestfalenLippeCoat,
+    "Westfalen-Lippe": WestfalenLippeCoat,  // ДОДАНО ЦЕЙ РЯДОК
+    "Rheinland-Pfalz": RheinlandPfalzCoat,
+    Saarland: SaarlandCoat,
+    Sachsen: SachsenCoat,
+    "Sachsen-Anhalt": SachsenAnhaltCoat,
+    "Schleswig-Holstein": SchleswigHolsteinCoat,
+    Thüringen: ThueringenCoat,
   };
 
   const displayedRegion = hoveredRegion || pendingRegion || selectedRegion;
@@ -123,32 +141,38 @@ const CustomGermanyMap = () => {
 
   return (
     <MainLayout>
-       {isMobile && (
-  <div className={styles.mobileButtonContainer}>
-    <button
-  className={isMobile ? styles.mobileDashboardButton : styles.desktopDashboardButton}
-  onClick={handleDashboardClick}
-  aria-label="Zum Dashboard wechseln"
->
-  <FaArrowRight />
-</button>
-  </div>
-)}
+      {isMobile && (
+        <div className={styles.mobileButtonContainer}>
+          <button
+            className={
+              isMobile
+                ? styles.mobileDashboardButton
+                : styles.desktopDashboardButton
+            }
+            onClick={handleDashboardClick}
+            aria-label="Zum Dashboard wechseln"
+          >
+            <FaArrowRight />
+          </button>
+        </div>
+      )}
       <div className={styles.container}>
-      {isMobile && displayedRegion && (
-  <div className={styles.mobileHeader}>
-    <h2 className={styles.mobileRegionName}>{displayedRegion}</h2>
-  </div>
-)}
+        {isMobile && displayedRegion && (
+          <div className={styles.mobileHeader}>
+            <h2 className={styles.mobileRegionName}>{displayedRegion}</h2>
+          </div>
+        )}
         <div className={styles.mapContainer}>
-        <ComposableMap
-  projection="geoMercator"
-  projectionConfig={{
-    scale: isMobile ? 3500 : 2500, /* Збільшуємо масштаб для мобільних */
-    center: [10, 51],
-  }}
-  className={styles.rsmComposableMap}
->
+          <ComposableMap
+            projection="geoMercator"
+            projectionConfig={{
+              scale: isMobile
+                ? 3500
+                : 2500 /* Збільшуємо масштаб для мобільних */,
+              center: [10, 51],
+            }}
+            className={styles.rsmComposableMap}
+          >
             <Geographies geography={germanyGeo}>
               {({ geographies }) =>
                 geographies.map((geo) => {
@@ -204,16 +228,14 @@ const CustomGermanyMap = () => {
                 className={styles.coatOfArms}
               />
               {!isMobile && (
-               <button
-               className={styles.mobileDashboardButton}
-               onClick={handleDashboardClick}
-               aria-label="Zum Dashboard wechseln"
-             >
-               <FaArrowRight />
-               
-             </button>
+                <button
+                  className={styles.mobileDashboardButton}
+                  onClick={handleDashboardClick}
+                  aria-label="Zum Dashboard wechseln"
+                >
+                  <FaArrowRight />
+                </button>
               )}
-             
             </>
           ) : (
             <p className={styles.greeting}>Wählen Sie eine Region</p>

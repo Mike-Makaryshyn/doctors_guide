@@ -1,5 +1,3 @@
-// src/pages/ApprobationPage/ApprobationPage.jsx
-
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "../../components/StageMenu/StageMenu";
@@ -46,7 +44,7 @@ const ApprobationPage = () => {
   const handleProgressUpdate = (stageId, newProgress) => {
     setStagesProgress((prev) => {
       const updatedProgress = [...prev];
-      updatedProgress[stageId - 1] = newProgress || 0; // Використовуйте 0 як початкове значення
+      updatedProgress[stageId - 1] = newProgress || 0;
       return updatedProgress;
     });
   };
@@ -71,7 +69,7 @@ const ApprobationPage = () => {
   const calculateOverallProgress = () => {
     if (stagesProgress.length === 0) return 0;
     const totalProgress = stagesProgress.reduce((acc, progress) => acc + progress, 0);
-    return Math.round(totalProgress / stagesProgress.length); // Середній відсоток
+    return Math.round(totalProgress / stagesProgress.length);
   };
 
   return (
@@ -97,7 +95,7 @@ const ApprobationPage = () => {
             {language === "en" && "Overall Progress"}
             {language === "de" && "Gesamtfortschritt"}
             {language === "uk" && "Загальний прогрес"}
-            {language === "ru" && "Общий прогресс"}
+            {language === "ru" && "Общий прогрес"}
             {language === "tr" && "Genel İlerleme"}
             {language === "ar" && "التقدم الكلي"}
             {language === "fr" && "Progrès global"}
@@ -111,7 +109,7 @@ const ApprobationPage = () => {
         <StageMenu 
           onStageSelect={handleStageSelect} 
           stagesProgress={stagesProgress} 
-          enableSwipe={true} // Включаємо свайпування на цій сторінці
+          enableSwipe={true}
         />
 
         {/* Завдання для активного етапу */}
