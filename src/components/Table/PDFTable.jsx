@@ -385,9 +385,9 @@ const didDrawPageFooter = (doc) => (data) => {
     const doc = new jsPDF("l", "pt", "a4");
 
     // Завантажуємо шрифти
-    const notoSans = await loadFont("/fonts/NotoSans-VariableFont.ttf", "NotoSans");
-    const notoNaskhArabic = await loadFont("/fonts/NotoNaskhArabic.ttf", "NotoNaskhArabic");
-    const openSans = await loadFont("/fonts/OpenSans-VariableFont.ttf", "OpenSans");
+    const notoSans = await loadFont("../../assets/fonts/NotoSans-VariableFont.ttf", "NotoSans");
+    const notoNaskhArabic = await loadFont("../../assets/fonts/NotoNaskhArabic.ttf", "NotoNaskhArabic");
+    const openSans = await loadFont("../../assets/fonts/OpenSans-VariableFont.ttf", "OpenSans");
 
     // Додаємо у pdf
     doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
