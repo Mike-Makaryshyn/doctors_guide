@@ -6,7 +6,6 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -60,38 +59,32 @@ const validateDateValue = (val) => {
   throw new Error("Ungültiges Datumsformat.");
 };
 
-const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate }) => {
+const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const isModalOpenRef = useRef(false); // Додано реф
-  const suggestionsRef = useRef(null); // Реф для списку підказок
-  const isClickingSuggestionButtonRef = useRef(false); // Новий реф для відстеження натискання на лампочку
+  const isModalOpenRef = useRef(false);
+  const suggestionsRef = useRef(null);
+  const isClickingSuggestionButtonRef = useRef(false);
 
-  // Реф для кожного textarea
   const textareaRefs = useRef([]);
 
-  // Використовуємо підказки з ResumeForm.js
   const descriptionHints = resumeFormTexts.berufserfahrungenSuggestions;
   const dateHints = ["MM/YYYY", "seit MM/YYYY", "MM/YYYY - MM/YYYY", "MM/YYYY - heute"];
 
   const [hintIndex, setHintIndex] = useState(0);
-  const [focusedField, setFocusedField] = useState(null); // Тип поля, яке має фокус
+  const [focusedField, setFocusedField] = useState(null);
 
-  // Логування підказок
   useEffect(() => {
     console.log("descriptionHints:", descriptionHints);
   }, [descriptionHints]);
 
-  // Ротація підказок для полів дати
   useEffect(() => {
     const interval = setInterval(() => {
       setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
     }, 1500);
-
     return () => clearInterval(interval);
   }, [dateHints.length]);
 
-  // Автоматичне розширення textarea при оновленні даних
   useEffect(() => {
     setTimeout(() => {
       textareaRefs.current.forEach((field) => {
@@ -100,38 +93,31 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
           field.style.height = `${field.scrollHeight}px`;
         }
       });
-    }, 50); // Додаємо затримку для стабільності
-  }, [data]); // Виконується при оновленні data
+    }, 50);
+  }, [data]);
 
-  // Фокусування на рядку
   const handleFocus = (index, fieldType) => {
     console.log("handleFocus called with index:", index, "fieldType:", fieldType);
     setActiveRowIndex(index);
     setFocusedField(fieldType);
   };
 
-  // Обробка зміни дати з валідацією
   const handleDateChange = (index, newValue) => {
     try {
       validateDateValue(newValue);
-      // Можливо, очистити помилки тут
       console.log("Date validated successfully");
     } catch (error) {
       console.error("Date validation error:", error.message);
-      // Можливо, додати повідомлення користувачу
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
     onUpdate(updatedEntries);
   };
 
-  // Обробка зміни опису
   const handleDescriptionChange = (index, value) => {
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
-
     setTimeout(() => {
       const field = textareaRefs.current[index];
       if (field) {
@@ -141,12 +127,10 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     }, 50);
   };
 
-  // Обробка зміни місця
   const handlePlaceChange = (index, value) => {
     const updatedEntries = [...data];
     updatedEntries[index].place = value;
     onUpdate(updatedEntries);
-
     setTimeout(() => {
       const field = textareaRefs.current[index + data.length];
       if (field) {
@@ -156,52 +140,45 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
     }, 50);
   };
 
-  // Додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-
     setTimeout(() => {
       const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "description"); // Фокус на description за замовчуванням
+      handleFocus(lastIndex, "description");
       if (textareaRefs.current[lastIndex]) {
         textareaRefs.current[lastIndex].style.height = "auto";
         textareaRefs.current[lastIndex].style.height = `${textareaRefs.current[lastIndex].scrollHeight}px`;
         textareaRefs.current[lastIndex].focus();
       }
-    }, 100); // Даємо час DOM оновитися
+    }, 100);
   };
 
-  // Видалення рядка
   const removeRow = (index) => {
     const updatedEntries = data.filter((_, i) => i !== index);
     onUpdate(updatedEntries);
   };
 
-  // Відкриття модального вікна
   const toggleSuggestions = () => {
     console.log("toggleSuggestions called");
     setIsModalOpen(true);
-    isModalOpenRef.current = true; // Оновлюємо реф
+    isModalOpenRef.current = true;
   };
 
-  // Закриття модального вікна
   const handleCloseModal = () => {
     console.log("handleCloseModal called");
     setIsModalOpen(false);
-    isModalOpenRef.current = false; // Оновлюємо реф
+    isModalOpenRef.current = false;
     setActiveRowIndex(null);
     setFocusedField(null);
   };
 
-  // Вставка підказки у відповідне поле
   const handleSelectHint = (hint) => {
     console.log("handleSelectHint called with hint:", hint);
     console.log("activeRowIndex:", activeRowIndex);
-
     if (activeRowIndex !== null) {
       const updatedEntries = [...data];
       const currentDescription = updatedEntries[activeRowIndex].description || "";
@@ -210,7 +187,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
         : hint;
       updatedEntries[activeRowIndex].description = newDescription;
       onUpdate(updatedEntries);
-
       setTimeout(() => {
         const field = textareaRefs.current[activeRowIndex];
         if (field) {
@@ -221,38 +197,29 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
           console.error("Error: Textarea not found for index", activeRowIndex);
         }
       }, 100);
-
       setIsModalOpen(false);
-      isModalOpenRef.current = false; // Оновлюємо реф
+      isModalOpenRef.current = false;
       setActiveRowIndex(null);
       setFocusedField(null);
     }
   };
 
-  // Автоматичне розширення textarea
   const handleAutoExpand = (e, index) => {
     const field = textareaRefs.current[index];
     if (field) {
-      field.style.height = "auto"; // Скидаємо висоту, щоб отримати точні розрахунки
-      field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту на основі вмісту
+      field.style.height = "auto";
+      field.style.height = `${field.scrollHeight}px`;
     }
   };
 
-  // Функція для визначення, яку підказку показувати
   const getDatePlaceholder = (value) => {
-    if (value) return ""; // Якщо поле заповнене, підказка не потрібна
+    if (value) return "";
     return dateHints[hintIndex];
   };
-
-  // Додаткове логування стану
-  useEffect(() => {
-    console.log("isModalOpen:", isModalOpen);
-  }, [isModalOpen]);
 
   return (
     <section className={styles.berufserfahrungenSection}>
       <h3 className={styles.subheader}>{title}</h3>
-
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
@@ -264,7 +231,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 onChange={(e) => handleDateChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "date")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setFocusedField(null);
@@ -274,7 +240,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 className={styles.dateInput}
               />
             </div>
-
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
@@ -288,8 +253,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                     <DeleteIcon />
                   </IconButton>
                 </div>
-
-                {/* Поле опису */}
                 <textarea
                   ref={(el) => (textareaRefs.current[index] = el)}
                   value={entry.description || ""}
@@ -299,7 +262,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                   }}
                   onFocus={() => handleFocus(index, "description")}
                   onBlur={() => {
-                    // Скидаємо фокус тільки якщо модальне вікно не відкрито
                     if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                       setActiveRowIndex(null);
                       setFocusedField(null);
@@ -309,20 +271,17 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                   className={styles.inputField}
                   rows={1}
                 />
-
-                {/* Лампочка для підказок тільки при фокусі на описі */}
                 {focusedField === "description" && activeRowIndex === index && (
                   <div className={styles.suggestionButtonContainer}>
                     <IconButton
                       className={styles.suggestionButton}
                       onMouseDown={() => {
-                        isClickingSuggestionButtonRef.current = true; // Встановлюємо флаг перед натисканням
+                        isClickingSuggestionButtonRef.current = true;
                       }}
                       onClick={() => {
-                        console.log(`Lightbulb clicked for index ${index}`); // Додано для перевірки
-                        setActiveRowIndex(index); // Встановлюємо активний рядок
+                        console.log(`Lightbulb clicked for index ${index}`);
+                        setActiveRowIndex(index);
                         toggleSuggestions();
-                        // Скидаємо флаг після натискання
                         setTimeout(() => {
                           isClickingSuggestionButtonRef.current = false;
                         }, 0);
@@ -334,7 +293,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                   </div>
                 )}
               </div>
-
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
@@ -346,11 +304,10 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 </IconButton>
               </div>
             </div>
-
             {/* Поле місця */}
             <div className={styles.placeCell}>
               <textarea
-                ref={(el) => (textareaRefs.current[index + data.length] = el)} // Унікальний реф для місця
+                ref={(el) => (textareaRefs.current[index + data.length] = el)}
                 value={entry.place || ""}
                 onChange={(e) => {
                   handlePlaceChange(index, e.target.value);
@@ -358,7 +315,6 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 }}
                 onFocus={() => handleFocus(index, "place")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setFocusedField(null);
@@ -369,32 +325,24 @@ const BerufserfahrungenSection = ({ title = "Berufserfahrungen", data, onUpdate 
                 rows={1}
               />
             </div>
-
-            {/* Роздільник для мобільних */}
             <div className={styles.mobileDivider}></div>
           </div>
         ))}
       </form>
-
-      {/* Кнопка для додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Модальне вікно з підказками */}
+      {/* Модальне вікно з підказками – без хедера */}
       <Dialog
         open={isModalOpen}
         onClose={handleCloseModal}
         classes={{ paper: styles.customDialog }}
       >
-        <DialogTitle className={styles.dialogTitle}>
-          Виберіть підказку
-          <IconButton className={styles.closeButton} onClick={handleCloseModal}>
-            &times;
-          </IconButton>
-        </DialogTitle>
+        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+          &times;
+        </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>
           {descriptionHints.map((hint, idx) => (
             <ListItem key={idx} disablePadding>
