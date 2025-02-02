@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import styles from "./ResumePage.module.css";
-import pdfStyles from "./pdfresume.module.css"; // Стилі для модального вікна PDF
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import HeaderSection from "./HeaderSection";
 import AktuellSection from "./AktuellSection";
@@ -17,10 +16,10 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { FaFilePdf, FaPrint } from "react-icons/fa";
 import useIsMobile from "../../hooks/useIsMobile";
 import { previewResumePDF, downloadResumePDF } from "./pdfresume";
-import Lottie from "lottie-react";
 import PDFResumeModal from "./pdfresume";
 
 // Імпорт JSON-анімацій (іконок)
+import Lottie from "lottie-react";
 import aktuellIcon from "../../assets/ResumeIcon/aktuell.json";
 import ausbildungIcon from "../../assets/ResumeIcon/ausbildungicon.json";
 import personalIcon from "../../assets/ResumeIcon/personalicon.json";
@@ -132,7 +131,8 @@ const allSections = [
         <div id="download-resume-container"></div>
       </div>
     ),
-    icon: () => <FaFilePdf style={{ fontSize: 40, color: "red" }} />,
+    // Колір іконки PDF на зелений (#4caf50)
+    icon: () => <FaFilePdf style={{ fontSize: 40, color: "#4caf50" }} />,
   },
 ];
 
@@ -206,11 +206,13 @@ const ResumePage = () => {
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
   // ======================
-  // 1) ФУНКЦІЯ FETCH
+  // 1) ФУНКЦІЯ FETCH (читаємо один раз при монтуванні)
   // ======================
   const fetchResumeData = async () => {
     const user = auth.currentUser;
-    if (!user) return null;
+    if (!user) {
+      return null;
+    }
 
     // 1) Зчитуємо локальні дані
     const localDataStr = localStorage.getItem("resumeData");
@@ -225,7 +227,7 @@ const ResumePage = () => {
         const firestoreData = docSnap.data();
         console.log("Firestore data:", firestoreData);
 
-        // Порівняння lastModified
+        // Якщо Firestore новіший за локальний — використовуємо його
         if (
           firestoreData.lastModified &&
           (!localData || firestoreData.lastModified > localData.lastModified)
@@ -234,11 +236,12 @@ const ResumePage = () => {
           localStorage.setItem("resumeData", JSON.stringify(firestoreData));
           return firestoreData;
         } else {
+          // Інакше — залишаємо локальний варіант
           console.log("Using local data as it is newer (or no lastModified).");
           return localData || firestoreData;
         }
       } else {
-        // Немає даних у Firestore - створюємо дефолт
+        // Якщо у Firestore ще немає даних — створюємо порожній об’єкт
         console.log("No data in Firestore, using default empty object.");
         const defaultData = {
           header: {},
@@ -254,13 +257,13 @@ const ResumePage = () => {
       }
     } catch (error) {
       console.error("Firebase error:", error);
-      // Якщо помилка, повертаємо localData
+      // Якщо помилка — повертаємо localData (якщо є)
       return localData;
     }
   };
 
   // ======================
-  // 2) ФУНКЦІЯ SYNC
+  // 2) ФУНКЦІЯ SYNC (запис у Firestore)
   // ======================
   const syncToFirestore = async () => {
     const user = auth.currentUser;
@@ -284,7 +287,7 @@ const ResumePage = () => {
   };
 
   // ======================
-  // 3) ОНОВЛЕННЯ СЕКЦІЙ
+  // 3) ОНОВЛЕННЯ СЕКЦІЙ (лише localStorage)
   // ======================
   const updateSectionData = (sectionKey, newData) => {
     setResumeData((prev) => {
@@ -310,11 +313,12 @@ const ResumePage = () => {
   // 5) ПЕРЕД ДРУКОМ PDF
   // ======================
   const handlePreviewPDF = async () => {
-    await syncToFirestore();
+    await syncToFirestore(); // запис в Firestore перед попереднім переглядом
     previewResumePDF();
   };
+
   const handleDownloadPDF = async () => {
-    await syncToFirestore();
+    await syncToFirestore(); // запис в Firestore перед завантаженням
     downloadResumePDF();
   };
 
@@ -325,7 +329,7 @@ const ResumePage = () => {
   const handleClosePDFModal = () => setIsPDFModalOpen(false);
 
   // ======================
-  // 7) ПІД ЧАС МОНТУ
+  // 7) Завантаження даних при монтуванні
   // ======================
   useEffect(() => {
     const load = async () => {
@@ -338,7 +342,7 @@ const ResumePage = () => {
   }, []);
 
   // ======================
-  // 8) ПІД ЧАС ВИХОДУ
+  // 8) Вихід зі сторінки
   // ======================
   useEffect(() => {
     const handleUnload = async () => {
@@ -346,6 +350,7 @@ const ResumePage = () => {
     };
     window.addEventListener("beforeunload", handleUnload);
     window.addEventListener("afterprint", handleUnload);
+
     return () => {
       window.removeEventListener("beforeunload", handleUnload);
       window.removeEventListener("afterprint", handleUnload);
@@ -369,14 +374,17 @@ const ResumePage = () => {
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
+          {/* Фіксований заголовок при прокрутці */}
           <StickyHeader title={allSections[currentSection].title} />
 
+          {/* Бічна панель іконок */}
           <StaticIconBar
             sections={mainSections}
             currentSection={currentSection}
             onIconClick={handleIconClick}
           />
 
+          {/* Поточна активна секція */}
           <div className={styles.section}>
             <CurrentSectionComponent
               data={resumeData[allSections[currentSection].dataKey]}
@@ -386,6 +394,7 @@ const ResumePage = () => {
             />
           </div>
 
+          {/* Кнопка друку PDF */}
           <div className={styles.navButtonContainer}>
             <button
               className={styles.printButton}
@@ -399,7 +408,7 @@ const ResumePage = () => {
           {isLoading && <div className={styles.loading}>Loading...</div>}
         </div>
 
-        {/* PDF Modal */}
+        {/* Модальне вікно PDF */}
         <PDFResumeModal isOpen={isPDFModalOpen} onClose={handleClosePDFModal} />
       </MainLayout>
     </ThemeProvider>
