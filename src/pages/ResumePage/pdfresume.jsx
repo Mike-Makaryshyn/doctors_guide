@@ -4,58 +4,34 @@ import React from "react";
 import Modal from "react-modal";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+// Тут Firebase НЕ обов'язково потрібен, якщо беремо з LocalStorage
+// але лишаємо для декорацій:
 import { auth, db } from "../../firebase";
 import { getDoc, doc } from "firebase/firestore";
+
 import { FaEye, FaDownload, FaTimes } from "react-icons/fa";
 import styles from "./pdfresume.module.css";
 
 Modal.setAppElement("#root");
 
-/* 
-  Функція отримання даних резюме (наприклад, 
-  можна брати з localStorage, але залишаємось із firebase)
-*/
-const getUserResume = async () => {
-  // Можна брати тільки з localStorage, ось так:
-  /*
-  const localDataStr = localStorage.getItem("resumeData");
-  if (localDataStr) {
-    return JSON.parse(localDataStr);
-  } else {
-    alert("No local resume data found.");
+// =====================
+// (A) ФУНКЦІЯ ОТРИМАННЯ ДАНИХ ДЛЯ PDF
+// =====================
+//
+// ВАРІАНТ 1: Використовуємо LocalStorage
+//
+async function getResumeDataFromLocal() {
+  const dataStr = localStorage.getItem("resumeData");
+  if (!dataStr) {
+    console.warn("No resumeData in localStorage!");
     return null;
   }
-  */
-  // Або залишити варіант з Firebase, 
-  // якщо хочемо щоразу підтягувати з сервера.
-  const user = auth.currentUser;
-  if (!user) {
-    console.error("User is not logged in.");
-    return null;
-  }
-  try {
-    const profileRef = doc(db, "users", user.uid, "resume", "profile");
-    const profileSnapshot = await getDoc(profileRef);
-    const profileData = profileSnapshot.exists() ? profileSnapshot.data() : null;
-    if (!profileData) {
-      console.warn("No resume data found.");
-      return null;
-    }
-    return {
-      header: profileData.header || {},
-      aktuell: profileData.aktuell || [],
-      berufserfahrungen: profileData.berufserfahrungen || [],
-      ausbildung: profileData.ausbildung || [],
-      languages: profileData.languageSkills || [],
-      technicalSkills: profileData.technicalSkills || [],
-    };
-  } catch (error) {
-    console.error("Error fetching resume data:", error);
-    return null;
-  }
-};
+  return JSON.parse(dataStr);
+}
 
-/* Футер на кожній сторінці */
+// =====================
+// Допоміжна ф-я створення футеру
+// =====================
 function drawFooter(doc, data) {
   const pageHeight = doc.internal.pageSize.getHeight();
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -77,59 +53,62 @@ function drawFooter(doc, data) {
   );
 }
 
-/* Допоміжна функція для невеликих таблиць */
+// =====================
+// Допоміжна ф-я для таблиць
+// =====================
 function addTable(title, data, columns, doc, startY) {
-  if (data && data.length > 0) {
-    doc.setFontSize(13);
-    doc.setFont(undefined, "bold");
-    doc.text(title, 10, startY);
+  if (!data || data.length === 0) return startY;
 
-    doc.setFontSize(9);
-    doc.setFont(undefined, "normal");
-
-    doc.autoTable({
-      startY: startY + 10,
-      head: [columns],
-      body: data,
-      theme: "grid",
-      styles: { fontSize: 9, lineHeight: 1.2 },
-      headStyles: {
-        fillColor: [240, 240, 240],
-        fontStyle: "bold",
-        lineWidth: 0.2,
-        lineColor: [200, 200, 200],
-        textColor: [0, 0, 0],
-      },
-      columnStyles: {
-        0: { cellWidth: 35, halign: "center" },
-        1: { cellWidth: "auto", halign: "left" },
-      },
-      margin: { left: 10, right: 10 },
-      bodyStyles: { cellPadding: 2 },
-      didDrawPage: (data) => drawFooter(doc, data),
-    });
-
-    return doc.previousAutoTable.finalY + 10;
-  }
-  return startY;
-}
-
-/* Основна функція створення PDF */
-const createPDFDocument = (resume) => {
-  const doc = new jsPDF();
-
-  let yPosition = 10;
-
-  // "Persönliche Daten"
   doc.setFontSize(13);
   doc.setFont(undefined, "bold");
-  doc.text("Persönliche Daten", 10, yPosition);
-  yPosition += 10;
+  doc.text(title, 10, startY);
 
   doc.setFontSize(9);
   doc.setFont(undefined, "normal");
 
-  const headerOrder = [
+  doc.autoTable({
+    startY: startY + 10,
+    head: [columns],
+    body: data,
+    theme: "grid",
+    styles: { fontSize: 9, lineHeight: 1.2 },
+    headStyles: {
+      fillColor: [240, 240, 240],
+      fontStyle: "bold",
+      lineWidth: 0.2,
+      lineColor: [200, 200, 200],
+      textColor: [0, 0, 0],
+    },
+    columnStyles: {
+      0: { cellWidth: 35, halign: "center" },
+      1: { cellWidth: "auto", halign: "left" },
+    },
+    margin: { left: 10, right: 10 },
+    bodyStyles: { cellPadding: 2 },
+    didDrawPage: (data) => drawFooter(doc, data),
+  });
+
+  return doc.previousAutoTable.finalY + 10;
+}
+
+// =====================
+// (B) СТВОРЕННЯ PDF
+// =====================
+function createPDFDocument(resume) {
+  const doc = new jsPDF();
+
+  let yPos = 10;
+
+  // "Persönliche Daten"
+  doc.setFontSize(13);
+  doc.setFont(undefined, "bold");
+  doc.text("Persönliche Daten", 10, yPos);
+  yPos += 10;
+
+  doc.setFontSize(9);
+  doc.setFont(undefined, "normal");
+
+  const headerFields = [
     "vorname",
     "nachname",
     "geburtsdatum",
@@ -139,65 +118,48 @@ const createPDFDocument = (resume) => {
     "handynummer",
     "fachrichtung",
   ];
-  headerOrder.forEach((key) => {
+  headerFields.forEach((key) => {
     if (resume.header[key]) {
       const label = key.charAt(0).toUpperCase() + key.slice(1);
-      doc.text(`${label}: ${resume.header[key]}`, 10, yPosition);
-      yPosition += 5;
+      doc.text(`${label}: ${resume.header[key]}`, 10, yPos);
+      yPos += 5;
     }
   });
-  yPosition += 5;
+  yPos += 5;
 
   // "Aktuell"
-  const aktuellData = resume.aktuell
+  const aktuellData = (resume.aktuell || [])
     .filter((e) => e.date && e.description)
     .map((e) => [e.date, e.description]);
-  if (aktuellData.length) {
-    yPosition = addTable("Aktuell", aktuellData, ["Datum", "Beschreibung"], doc, yPosition);
-  }
+  yPos = addTable("Aktuell", aktuellData, ["Datum", "Beschreibung"], doc, yPos);
 
   // "Berufserfahrungen"
-  const berufData = resume.berufserfahrungen
+  const berufData = (resume.berufserfahrungen || [])
     .filter((e) => e.date && e.description && e.place)
     .map((e) => [e.date, `${e.description}, ${e.place}`]);
-  if (berufData.length) {
-    yPosition = addTable(
-      "Berufserfahrungen",
-      berufData,
-      ["Datum", "Beschreibung"],
-      doc,
-      yPosition
-    );
-  }
+  yPos = addTable("Berufserfahrungen", berufData, ["Datum", "Beschreibung"], doc, yPos);
 
   // "Ausbildung"
-  const ausbildungData = resume.ausbildung
+  const ausbildungData = (resume.ausbildung || [])
     .filter((e) => e.date && e.description && e.place)
     .map((e) => [e.date, `${e.description}, ${e.place}`]);
-  if (ausbildungData.length) {
-    yPosition = addTable(
-      "Ausbildung",
-      ausbildungData,
-      ["Datum", "Beschreibung"],
-      doc,
-      yPosition
-    );
-  }
+  yPos = addTable("Ausbildung", ausbildungData, ["Datum", "Beschreibung"], doc, yPos);
 
   // "Sprachen" (50/50)
-  const languagesData = resume.languages
+  const languagesData = (resume.languages || [])
     .filter((e) => e.language && e.level)
     .map((e) => [e.language, e.level]);
-  if (languagesData.length) {
+  if (languagesData.length > 0) {
     doc.setFontSize(13);
     doc.setFont(undefined, "bold");
-    doc.text("Sprachen", 10, yPosition);
+    doc.text("Sprachen", 10, yPos);
+    yPos += 10;
 
     doc.setFontSize(9);
     doc.setFont(undefined, "normal");
 
     doc.autoTable({
-      startY: yPosition + 10,
+      startY: yPos,
       head: [["Sprache", "Niveau"]],
       body: languagesData,
       theme: "grid",
@@ -217,23 +179,24 @@ const createPDFDocument = (resume) => {
       bodyStyles: { cellPadding: 2 },
       didDrawPage: (data) => drawFooter(doc, data),
     });
-    yPosition = doc.previousAutoTable.finalY + 10;
+    yPos = doc.previousAutoTable.finalY + 10;
   }
 
-  // "Technische Fähigkeiten"
-  const techData = resume.technicalSkills
+  // "Technische Fähigkeiten" (110/80)
+  const techData = (resume.technicalSkills || [])
     .filter((e) => e.skill && e.technicalLevel)
     .map((e) => [e.skill, e.technicalLevel]);
-  if (techData.length) {
+  if (techData.length > 0) {
     doc.setFontSize(13);
     doc.setFont(undefined, "bold");
-    doc.text("Technische Fähigkeiten", 10, yPosition);
+    doc.text("Technische Fähigkeiten", 10, yPos);
+    yPos += 10;
 
     doc.setFontSize(9);
     doc.setFont(undefined, "normal");
 
     doc.autoTable({
-      startY: yPosition + 10,
+      startY: yPos,
       head: [["Fähigkeit", "Niveau"]],
       body: techData,
       theme: "grid",
@@ -253,45 +216,44 @@ const createPDFDocument = (resume) => {
       bodyStyles: { cellPadding: 2 },
       didDrawPage: (data) => drawFooter(doc, data),
     });
-    yPosition = doc.previousAutoTable.finalY + 10;
+    yPos = doc.previousAutoTable.finalY + 10;
   }
 
   return doc;
-};
+}
 
-/* Функція завантаження PDF */
+// =====================
+// (C) EXPORT ФУНКЦІЙ
+// =====================
 export const downloadResumePDF = async () => {
-  // За бажанням можна брати резюме лише з localStorage:
-  // const localDataStr = localStorage.getItem("resumeData");
-  // if (!localDataStr) {
-  //   alert("No local data found.");
-  //   return;
-  // }
-  // const resume = JSON.parse(localDataStr);
-
-  // Але за замовчуванням залишаємо поточний механізм (Firebase)
-  const resume = await getUserResume();
-  if (resume) {
-    const doc = createPDFDocument(resume);
-    doc.save("lebenslauf.pdf");
-  } else {
-    alert("Die Daten des Lebenslaufs konnten nicht abgerufen werden.");
+  // Беремо дані лише з Local Storage
+  const localDataStr = localStorage.getItem("resumeData");
+  if (!localDataStr) {
+    alert("No local resume data found.");
+    return;
   }
+  const resume = JSON.parse(localDataStr);
+
+  const doc = createPDFDocument(resume);
+  doc.save("lebenslauf.pdf");
 };
 
-/* Функція перегляду PDF */
 export const previewResumePDF = async () => {
-  const resume = await getUserResume();
-  if (resume) {
-    const doc = createPDFDocument(resume);
-    const pdfBlobUrl = doc.output("bloburl");
-    window.open(pdfBlobUrl, "_blank");
-  } else {
-    alert("Die Daten des Lebenslaufs konnten nicht abgerufen werden.");
+  const localDataStr = localStorage.getItem("resumeData");
+  if (!localDataStr) {
+    alert("No local resume data found.");
+    return;
   }
+  const resume = JSON.parse(localDataStr);
+
+  const doc = createPDFDocument(resume);
+  const pdfBlobUrl = doc.output("bloburl");
+  window.open(pdfBlobUrl, "_blank");
 };
 
-/* Компонент модального вікна */
+// =====================
+// (D) Модальне вікно PDF
+// =====================
 const PDFResumeModal = ({ isOpen, onClose }) => {
   return (
     <Modal
@@ -302,6 +264,7 @@ const PDFResumeModal = ({ isOpen, onClose }) => {
       overlayClassName={styles.modalOverlay}
     >
       <div className={styles.modalContent}>
+        {/* Кнопка закриття */}
         <button className={styles.closeButton} onClick={onClose}>
           <FaTimes />
         </button>
@@ -309,14 +272,14 @@ const PDFResumeModal = ({ isOpen, onClose }) => {
         <h2 className={styles.modalTitle}>PDF Export</h2>
 
         <div className={styles.buttonsArea}>
-          {/* Перегляд */}
+          {/* Кнопка Preview */}
           <div className={styles.buttonContainer}>
             <button className={styles.roundButton} onClick={previewResumePDF}>
               <FaEye className={styles.viewIcon} />
             </button>
           </div>
 
-          {/* Збереження */}
+          {/* Кнопка Download */}
           <div className={styles.buttonContainer}>
             <button className={styles.roundButton} onClick={downloadResumePDF}>
               <FaDownload className={styles.pdfIcon} />

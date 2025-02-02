@@ -28,33 +28,15 @@ import spracheIcon from "../../assets/ResumeIcon/spracheicon.json";
 import technikalIcon from "../../assets/ResumeIcon/technikalicon.json";
 import berufsIcon from "../../assets/ResumeIcon/berufs.json";
 
-// Ініціалізація react-modal (переконайтеся, що елемент із id="root" існує)
+// Ініціалізація react-modal
 Modal.setAppElement("#root");
 
-// Створення теми для MUI
-const theme = createTheme({
-  components: {
-    MuiTextField: {
-      styleOverrides: {
-        root: {
-          "& .MuiOutlinedInput-root": {
-            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "black",
-            },
-          },
-          "& .MuiInputLabel-root": {
-            color: "black",
-          },
-          "& .MuiInputLabel-root.Mui-focused": {
-            color: "black",
-          },
-        },
-      },
-    },
-  },
-});
+// Тема для MUI
+const theme = createTheme({});
 
-// Повний масив секцій (остання – PDF Export)
+////////////////////////////////////////////////////////////////////////////////
+// Опис усіх можливих секцій резюме
+////////////////////////////////////////////////////////////////////////////////
 const allSections = [
   {
     id: 0,
@@ -64,13 +46,7 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={personalIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
@@ -84,13 +60,7 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={aktuellIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
@@ -104,13 +74,7 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={berufsIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
@@ -124,13 +88,7 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={ausbildungIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
@@ -144,13 +102,7 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={spracheIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
@@ -164,18 +116,13 @@ const allSections = [
     icon: (isActive) => (
       <Lottie
         animationData={technikalIcon}
-        style={{
-          width: 25,
-          height: 25,
-          filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
-            : "invert(100%)",
-        }}
+        style={{ width: 25, height: 25 }}
         autoplay={isActive}
         loop={isActive}
       />
     ),
   },
+  // PDF Export (не відображаємо в меню)
   {
     id: 6,
     title: "PDF Export",
@@ -189,21 +136,18 @@ const allSections = [
   },
 ];
 
-// Для меню використовуємо лише основні секції (без PDF Export)
-const mainSections = allSections.filter((section) => section.id !== 6);
+const mainSections = allSections.filter((s) => s.id !== 6);
 
-/* Компонент плаваючого заголовку (sticky header) */
+////////////////////////////////////////////////////////////////////////////////
+// Sticky заголовок при прокрутці
+////////////////////////////////////////////////////////////////////////////////
 const StickyHeader = ({ title }) => {
   const [visible, setVisible] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setVisible(window.scrollY > 100);
-    };
+    const handleScroll = () => setVisible(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return visible ? (
     <div className={styles.stickyHeader}>
       <h2>{title}</h2>
@@ -211,36 +155,38 @@ const StickyHeader = ({ title }) => {
   ) : null;
 };
 
-/* StaticIconBar – завжди показує всі секції у фіксованому порядку */
-const StaticIconBar = ({ sections, currentSection, onIconClick }) => {
-  return (
-    <div className={styles.iconBar}>
-      {sections.map((section) => {
-        const isActive = section.id === currentSection;
-        return (
-          <div
-            key={section.id}
-            className={`${styles.iconContainer} ${
-              isActive ? styles.active : styles.inactive
-            }`}
-            onClick={() => onIconClick(section.id)}
-          >
-            <div className={styles.icon}>
-              {section.icon ? section.icon(isActive) : null}
-            </div>
-            <span className={styles.iconLabel}>{section.title}</span>
+////////////////////////////////////////////////////////////////////////////////
+// Панель іконок
+////////////////////////////////////////////////////////////////////////////////
+const StaticIconBar = ({ sections, currentSection, onIconClick }) => (
+  <div className={styles.iconBar}>
+    {sections.map((section) => {
+      const isActive = section.id === currentSection;
+      return (
+        <div
+          key={section.id}
+          className={`${styles.iconContainer} ${
+            isActive ? styles.active : styles.inactive
+          }`}
+          onClick={() => onIconClick(section.id)}
+        >
+          <div className={styles.icon}>
+            {section.icon ? section.icon(isActive) : null}
           </div>
-        );
-      })}
-    </div>
-  );
-};
+          <span className={styles.iconLabel}>{section.title}</span>
+        </div>
+      );
+    })}
+  </div>
+);
 
-/* Головний компонент сторінки резюме */
+////////////////////////////////////////////////////////////////////////////////
+// Основний компонент ResumePage
+////////////////////////////////////////////////////////////////////////////////
 const ResumePage = () => {
   const isMobile = useIsMobile(600);
 
-  // Управління активною секцією
+  // Активна секція
   const [currentSection, setCurrentSection] = useState(0);
 
   // Дані резюме
@@ -254,49 +200,46 @@ const ResumePage = () => {
     lastModified: new Date().toISOString(),
   });
 
-  // Стан завантаження
+  // Стан
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(true);
-
-  // Стан модального вікна PDF
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
-  // 1) Функція fetchResumeData:
-  //    - Читає з localStorage
-  //    - Читає з Firestore
-  //    - Порівнює lastModified
-  //    - Повертає найактуальніші дані
+  // ======================
+  // 1) ФУНКЦІЯ FETCH
+  // ======================
   const fetchResumeData = async () => {
     const user = auth.currentUser;
     if (!user) return null;
 
+    // 1) Зчитуємо локальні дані
     const localDataStr = localStorage.getItem("resumeData");
-    let localData = localDataStr ? JSON.parse(localDataStr) : null;
-    console.log("Завантажено дані з localStorage:", localData);
+    const localData = localDataStr ? JSON.parse(localDataStr) : null;
+    console.log("LocalStorage data:", localData);
 
+    // 2) Пробуємо зчитати з Firestore
     try {
       const docRef = doc(db, "users", user.uid, "resume", "profile");
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         const firestoreData = docSnap.data();
-        console.log("Завантажено дані з Firestore:", firestoreData);
+        console.log("Firestore data:", firestoreData);
 
-        // Порівнюємо lastModified:
+        // Порівняння lastModified
         if (
           firestoreData.lastModified &&
           (!localData || firestoreData.lastModified > localData.lastModified)
         ) {
-          // Firestore новіші
-          console.log("Дані у Firestore новіші. Оновлюємо localStorage та стан.");
+          console.log("Using Firestore data as it is newer.");
           localStorage.setItem("resumeData", JSON.stringify(firestoreData));
           return firestoreData;
         } else {
-          // localStorage новіші або немає lastModified у Firestore
+          console.log("Using local data as it is newer (or no lastModified).");
           return localData || firestoreData;
         }
       } else {
-        // Якщо в Firestore нічого немає
-        console.log("Firestore: дані відсутні. Використовуємо початкову структуру.");
+        // Немає даних у Firestore - створюємо дефолт
+        console.log("No data in Firestore, using default empty object.");
         const defaultData = {
           header: {},
           aktuell: [],
@@ -310,126 +253,132 @@ const ResumePage = () => {
         return defaultData;
       }
     } catch (error) {
-      console.error("Помилка завантаження даних з Firestore:", error);
-      // У разі помилки повертаємо localData, якщо вона є:
+      console.error("Firebase error:", error);
+      // Якщо помилка, повертаємо localData
       return localData;
     }
   };
 
-  // 2) Функція syncToFirestore:
-  //    - Зберігає поточні дані з localStorage до Firestore
+  // ======================
+  // 2) ФУНКЦІЯ SYNC
+  // ======================
   const syncToFirestore = async () => {
     const user = auth.currentUser;
-    if (!user) return;
+    if (!user) {
+      console.log("User not logged in, skip sync.");
+      return;
+    }
     const localDataStr = localStorage.getItem("resumeData");
     if (!localDataStr) return;
-    const data = JSON.parse(localDataStr);
-    console.log("Синхронізація localStorage з Firestore. Дані:", data);
+
+    const localData = JSON.parse(localDataStr);
+    console.log("Sync localData => Firestore:", localData);
 
     try {
       const docRef = doc(db, "users", user.uid, "resume", "profile");
-      await setDoc(docRef, data, { merge: true });
-      console.log("Синхронізація завершена – дані збережено у Firestore");
-    } catch (error) {
-      console.error("Помилка синхронізації:", error);
+      await setDoc(docRef, localData, { merge: true });
+      console.log("Data synced to Firestore successfully.");
+    } catch (err) {
+      console.error("syncToFirestore error:", err);
     }
   };
 
-  // 3) Оновлення певної секції резюме
+  // ======================
+  // 3) ОНОВЛЕННЯ СЕКЦІЙ
+  // ======================
   const updateSectionData = (sectionKey, newData) => {
-    setResumeData((prevData) => {
-      const updatedData = {
-        ...prevData,
+    setResumeData((prev) => {
+      const updated = {
+        ...prev,
         [sectionKey]: newData,
         lastModified: new Date().toISOString(),
       };
-      // Зберігаємо в localStorage
-      localStorage.setItem("resumeData", JSON.stringify(updatedData));
-      console.log(`Оновлено секцію "${sectionKey}". Нові дані:`, newData);
-      return updatedData;
+      localStorage.setItem("resumeData", JSON.stringify(updated));
+      console.log(`Updated ${sectionKey}`, updated);
+      return updated;
     });
   };
 
-  // 4) При зміні секції
+  // ======================
+  // 4) ЗМІНА СЕКЦІЇ
+  // ======================
   const handleIconClick = (id) => {
-    if (id === currentSection) return;
-    console.log(`Перемикання на секцію ${id}`);
     setCurrentSection(id);
   };
 
-  // 5) Функції для генерації PDF (Preview / Download)
-  //    - Викликають syncToFirestore, щоб спочатку зберегти зміни
+  // ======================
+  // 5) ПЕРЕД ДРУКОМ PDF
+  // ======================
   const handlePreviewPDF = async () => {
     await syncToFirestore();
     previewResumePDF();
   };
-
   const handleDownloadPDF = async () => {
     await syncToFirestore();
     downloadResumePDF();
   };
 
-  // 6) Відкриття/закриття PDF-модального вікна
+  // ======================
+  // 6) PDF Modal
+  // ======================
   const handleOpenPDFModal = () => setIsPDFModalOpen(true);
   const handleClosePDFModal = () => setIsPDFModalOpen(false);
 
-  // 7) При першому рендері завантажуємо дані
+  // ======================
+  // 7) ПІД ЧАС МОНТУ
+  // ======================
   useEffect(() => {
-    const loadData = async () => {
+    const load = async () => {
       setIsFetching(true);
       const data = await fetchResumeData();
-      if (data) {
-        setResumeData(data);
-      }
+      if (data) setResumeData(data);
       setIsFetching(false);
     };
-    loadData();
+    load();
   }, []);
 
-  // 8) При роздруковуванні сторінки або закритті – синхронізуємо
+  // ======================
+  // 8) ПІД ЧАС ВИХОДУ
+  // ======================
   useEffect(() => {
-    const saveOnUnload = async () => {
+    const handleUnload = async () => {
       await syncToFirestore();
     };
-    window.addEventListener("beforeunload", saveOnUnload);
-    window.addEventListener("afterprint", saveOnUnload);
+    window.addEventListener("beforeunload", handleUnload);
+    window.addEventListener("afterprint", handleUnload);
     return () => {
-      window.removeEventListener("beforeunload", saveOnUnload);
-      window.removeEventListener("afterprint", saveOnUnload);
+      window.removeEventListener("beforeunload", handleUnload);
+      window.removeEventListener("afterprint", handleUnload);
     };
   }, []);
 
-  // Якщо ще триває fetch
   if (isFetching) {
     return (
       <ThemeProvider theme={theme}>
         <MainLayout>
-          <div className={styles.loading}>Завантаження даних...</div>
+          <div className={styles.loading}>Loading...</div>
         </MainLayout>
       </ThemeProvider>
     );
   }
 
-  // Визначаємо, яку секцію зараз рендерити
-  const CurrentComponent = allSections[currentSection]?.component || HeaderSection;
+  const CurrentSectionComponent =
+    allSections[currentSection]?.component || HeaderSection;
 
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
-          {/* Плаваючий заголовок */}
           <StickyHeader title={allSections[currentSection].title} />
 
-          {/* Статичне меню секцій */}
           <StaticIconBar
             sections={mainSections}
             currentSection={currentSection}
             onIconClick={handleIconClick}
           />
 
-          {/* Поточна секція */}
-          <div className={`${styles.section} ${styles.fadeIn}`}>
-            <CurrentComponent
+          <div className={styles.section}>
+            <CurrentSectionComponent
               data={resumeData[allSections[currentSection].dataKey]}
               onUpdate={(newData) =>
                 updateSectionData(allSections[currentSection].dataKey, newData)
@@ -437,21 +386,20 @@ const ResumePage = () => {
             />
           </div>
 
-          {/* Кнопка для відкриття PDF-модального вікна */}
           <div className={styles.navButtonContainer}>
             <button
               className={styles.printButton}
               onClick={handleOpenPDFModal}
-              title="Друкувати PDF"
+              title="Print PDF"
             >
               <FaPrint />
             </button>
           </div>
 
-          {isLoading && <div className={styles.loading}>Завантаження...</div>}
+          {isLoading && <div className={styles.loading}>Loading...</div>}
         </div>
 
-        {/* Модальне вікно PDF */}
+        {/* PDF Modal */}
         <PDFResumeModal isOpen={isPDFModalOpen} onClose={handleClosePDFModal} />
       </MainLayout>
     </ThemeProvider>
