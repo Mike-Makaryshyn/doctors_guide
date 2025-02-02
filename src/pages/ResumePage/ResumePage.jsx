@@ -18,6 +18,7 @@ import { previewResumePDF, downloadResumePDF } from "./pdfresume";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import Lottie from "lottie-react";
+import PDFResumeModal from "./pdfresume"; 
 
 // Імпорт JSON-анімацій (іконок)
 import aktuellIcon from "../../assets/ResumeIcon/aktuell.json";
@@ -421,34 +422,9 @@ const ResumePage = () => {
 
           {isLoading && <div className={styles.loading}>Завантаження...</div>}
         </div>
-
+        <PDFResumeModal isOpen={isPDFModalOpen} onClose={handleClosePDFModal} />
         {/* Модальне вікно для PDF */}
-        <Modal
-  isOpen={isPDFModalOpen}
-  onRequestClose={handleClosePDFModal}
-  contentLabel="PDF Export"
-  className={pdfStyles.pdfModal}
-  overlayClassName={pdfStyles.modalOverlay}
->
-  <div className={pdfStyles.modalContent}>
-    <button
-      onClick={handleClosePDFModal}
-      className={pdfStyles.closeButton}
-      title="Закрити"
-    >
-      &times;
-    </button>
-    <h2>PDF Export</h2>
-    <div className={pdfStyles.pdfButtonContainer}>
-      <button className={pdfStyles.pdfButton} onClick={handlePreviewPDF}>
-        Preview PDF
-      </button>
-      <button className={pdfStyles.pdfButton} onClick={handleDownloadPDF}>
-        Download PDF
-      </button>
-    </div>
-  </div>
-</Modal>
+       
       </MainLayout>
     </ThemeProvider>
   );

@@ -1,4 +1,20 @@
-/* Модальне вікно */
+/* src/pages/ResumePage/pdfresume.module.css */
+
+/* Напівпрозорий фон (оверлей) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Головний контейнер модалки (на десктопі - внизу праворуч) */
 .pdfModal {
   position: fixed;
   bottom: 35px;
@@ -13,16 +29,18 @@
   transition: all 0.3s ease;
 }
 
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9998;
+/* На мобільних робимо на всю ширину знизу */
+@media (max-width: 768px) {
+  .pdfModal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
 }
 
+/* Внутрішній блок */
 .modalContent {
   background-color: #fff;
   color: #013b6e;
@@ -35,15 +53,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-
-.modalTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #013b6e;
-  text-align: left;
-  margin-bottom: 25px;
-}
-
+/* Кнопка закриття (хрестик) */
 .closeButton {
   position: absolute;
   top: -29px;
@@ -53,48 +63,62 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: #fb0000;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
-
 .closeButton:hover {
   transform: scale(1.1);
+  color: #e50000;
 }
 
-.pdfButtonContainer {
+/* Заголовок */
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #013b6e;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* Контейнер для двох кнопок */
+.buttonsArea {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* відстань між кнопками */
 }
 
-.pdfButton {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Кожна кнопка-контейнер з тінню і круглим фоном */
+.buttonContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #696969, -8px -8px 16px #ffffff;
+  width: 60px;
+  height: 60px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.pdfButton:hover {
-  background-color: #43a047;
+.buttonContainer:hover {
+  box-shadow: 4px 4px 8px #696969, -4px -4px 8px #ffffff;
+  transform: translateY(-2px);
 }
 
-.viewIcon {
-  animation: pulse 1.5s infinite ease-in-out;
-  font-size: 20px;
+/* Власне кнопка */
+.roundButton {
+  border: none;
+  background: transparent;
+  color: #013b6e;
+  cursor: pointer;
+  font-size: 1.2rem; /* розмір, якщо потрібен текст */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pdfIcon {
-  animation: colorShift 1.5s infinite ease-in-out;
-  font-size: 20px;
-}
-
+/* Анімовані іконки */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.2); }
@@ -102,17 +126,19 @@
 }
 
 @keyframes colorShift {
-  0% { color: #ff0000; }
-  50% { color: #ff6666; }
+  0%   { color: #ff0000; }
+  50%  { color: #ff6666; }
   100% { color: #ff0000; }
 }
 
-@media (max-width: 768px) {
-  .pdfModal {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-  }
+/* Око пульсує */
+.viewIcon {
+  font-size: 25px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Іконка PDF змінює колір */
+.pdfIcon {
+  font-size: 25px;
+  animation: colorShift 1.5s infinite ease-in-out;
 }
