@@ -38,6 +38,7 @@
     "jspdf-autotable": "^3.8.4",
     "leaflet": "^1.9.4",
     "lodash.debounce": "^4.0.8",
+    "lottie-react": "^2.4.1",
     "mdb-react-ui-kit": "^9.0.0",
     "package-name": "^0.1.0",
     "react": "^18.3.1",
