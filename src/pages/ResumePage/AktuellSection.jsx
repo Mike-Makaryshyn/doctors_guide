@@ -74,10 +74,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
   const handleDateChange = (index, newValue) => {
     try {
       validateDateValue(newValue);
-      // Додаткова логіка при валідації (якщо необхідно)
     } catch (error) {
       console.error(error.message);
-      // Можна додати повідомлення для користувача
     }
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
@@ -105,8 +103,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       { date: "", description: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-    // НЕ викликаємо автоматичний фокус поля "description".
-    // Таким чином, користувач сам встановлюватиме фокус і тоді лампочка з’явиться.
   };
 
   // Видалення рядка
@@ -115,13 +111,12 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     onUpdate(updatedEntries);
   };
 
-  // Відкриття модального вікна
+  // Відкриття/закриття модального вікна з підказками
   const toggleSuggestions = () => {
     setIsModalOpen(true);
     isModalOpenRef.current = true;
   };
 
-  // Закриття модального вікна
   const handleCloseModal = () => {
     setIsModalOpen(false);
     isModalOpenRef.current = false;
@@ -129,7 +124,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     setFocusedField(null);
   };
 
-  // Вставка підказки у поле опису
+  // Додавання підказки в опис
   const handleSelectHint = (hint) => {
     if (activeDescriptionIndex === null || activeDescriptionIndex < 0) {
       console.error("Error: activeDescriptionIndex is invalid.");
@@ -146,8 +141,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
         textarea.focus();
-      } else {
-        console.error("Error: Textarea not found for index", activeDescriptionIndex);
       }
     }, 100);
     setIsModalOpen(false);
@@ -161,17 +154,16 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     field.style.height = `${field.scrollHeight}px`;
   };
 
+  // Підказки для дати (автоматична ротація)
   const dateHints = [
     "MM/YYYY",
     "seit MM/YYYY",
     "MM/YYYY - MM/YYYY",
     "MM/YYYY - heute",
   ];
-
   const [hintIndex, setHintIndex] = useState(0);
   const [focusedIndex, setFocusedIndex] = useState(null);
 
-  // Ротація підказок для всіх порожніх полів дати
   useEffect(() => {
     const interval = setInterval(() => {
       setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
@@ -179,27 +171,27 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // Функція для визначення, яку підказку показувати для поля дати
   const getPlaceholder = (index, value) => {
     if (value) return "";
-    if (document.activeElement && document.activeElement.tagName === "INPUT") {
+    if (
+      document.activeElement &&
+      document.activeElement.tagName === "INPUT"
+    ) {
       return index === focusedIndex ? "" : dateHints[hintIndex];
     }
     return dateHints[hintIndex];
   };
 
+  // Стежимо за прокруткою
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Автоматичне розширення textarea після оновлення `data`
   useEffect(() => {
     setTimeout(() => {
       document.querySelectorAll("textarea").forEach((field) => {
@@ -209,6 +201,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     }, 50);
   }, [data]);
 
+  // Перевірка на «відкриту клавіатуру» (мобільні)
   useEffect(() => {
     const checkForKeyboard = () => {
       const viewportHeight = window.innerHeight;
@@ -223,13 +216,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     return () => window.removeEventListener("resize", checkForKeyboard);
   }, []);
 
-  useEffect(() => {
-    if (activeDescriptionIndex !== null) {
-      // Додаткова логіка, якщо потрібно
-    }
-  }, [activeDescriptionIndex, data]);
-
-  // Функція фокуса приймає тип поля ("date" або "description")
+  // Фокус/blur
   const handleFocus = (index, fieldType) => {
     setActiveDescriptionIndex(index);
     setFocusedField(fieldType);
@@ -246,7 +233,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     }
   };
 
-  // Функція blur – якщо новий фокус не на полі опису, скидаємо активний стан
   const handleBlur = (index, event) => {
     setTimeout(() => {
       if (!isModalOpenRef.current) {
@@ -256,7 +242,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
           activeEl.tagName === "TEXTAREA" &&
           activeEl.classList.contains(styles.inputField)
         ) {
-          // Якщо фокус перейшов до поля опису, залишаємо активний стан
           return;
         }
         setActiveDescriptionIndex(null);
@@ -271,7 +256,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
-            {/* Поле для дати */}
+            {/* Поле дати */}
             <div className={styles.dateCell}>
               <input
                 type="text"
@@ -283,10 +268,11 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                 className={styles.dateInput}
               />
             </div>
+
             {/* Поле опису */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
-                {/* Контейнер кнопок для десктопу */}
+                {/* Кнопка видалення (десктоп) */}
                 <div className={styles.buttonContainer}>
                   <IconButton
                     onClick={() => removeRow(index)}
@@ -296,6 +282,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                     <DeleteIcon />
                   </IconButton>
                 </div>
+
                 <textarea
                   value={entry.description || ""}
                   onChange={(e) => {
@@ -308,26 +295,25 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                   className={styles.inputField}
                   rows={1}
                 />
-                {activeDescriptionIndex === index && focusedField === "description" && (
-                  <div
-                    className={styles.suggestionButtonContainer}
-                    style={{
-                      position: "absolute",
-                      top: "38%",
-                      right: "-40px",
-                      transform: "translateY(-50%)",
-                    }}
-                  >
-                    <LightbulbIcon
-                      className={`${styles.glowingLightbulb} ${styles.mobileLightbulb}`}
-                      onClick={() => {
-                        setActiveDescriptionIndex(index);
-                        toggleSuggestions();
-                      }}
-                    />
-                  </div>
-                )}
+
+                {/* ЛАМПОЧКА в контейнері IconButton */}
+                {activeDescriptionIndex === index &&
+                  focusedField === "description" && (
+                    <div className={styles.suggestionButtonContainer}>
+                      <IconButton
+                        className={styles.suggestionButton}
+                        onClick={() => {
+                          setActiveDescriptionIndex(index);
+                          toggleSuggestions();
+                        }}
+                      >
+                        <LightbulbIcon className={styles.glowingLightbulb} />
+                      </IconButton>
+                    </div>
+                  )}
               </div>
+
+              {/* Кнопка видалення (мобільна) */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
                   onClick={() => removeRow(index)}
@@ -338,15 +324,20 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                 </IconButton>
               </div>
             </div>
+
             <div className={styles.mobileDivider}></div>
           </div>
         ))}
       </form>
+
+      {/* Кнопка "Додати" */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
+
+      {/* Модальне вікно з підказками */}
       <Dialog
         open={isModalOpen}
         onClose={handleCloseModal}

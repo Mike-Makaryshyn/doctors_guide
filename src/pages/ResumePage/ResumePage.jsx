@@ -64,8 +64,8 @@ const allSections = [
       <Lottie
         animationData={personalIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
             : "invert(100%)", // #FFFFFF
@@ -84,8 +84,8 @@ const allSections = [
       <Lottie
         animationData={aktuellIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
             : "invert(100%)", // #FFFFFF
@@ -104,8 +104,8 @@ const allSections = [
       <Lottie
         animationData={berufsIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
             : "invert(100%)",
@@ -124,8 +124,8 @@ const allSections = [
       <Lottie
         animationData={ausbildungIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
             : "invert(100%)",
@@ -144,8 +144,8 @@ const allSections = [
       <Lottie
         animationData={spracheIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
             : "invert(100%)",
@@ -164,8 +164,8 @@ const allSections = [
       <Lottie
         animationData={technikalIcon}
         style={{
-          width: 30,
-          height: 30,
+          width: 25,
+          height: 25,
           filter: isActive
             ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
             : "invert(100%)",
