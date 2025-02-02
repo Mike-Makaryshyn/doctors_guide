@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9998; 
+  z-index: 9998;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
   position: fixed;
   bottom: 35px;
   right: 45px;
-  width: 330px;
+  width: 330px; /* Маленьке віконце */
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -53,20 +53,35 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Кнопка закриття (хрестик) */
+/* Кнопка закриття (хрестик) 
+   Тепер теж з легким hover-ефектом, як «кнопка-контейнер». */
 .closeButton {
   position: absolute;
   top: -29px;
   right: -29px;
-  background: none;
+
+  width: 36px;
+  height: 36px;
   border: none;
-  font-size: 1.5rem;
+  background: #ffffff00;
+
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 1.2rem; /* розмір іконки */
   cursor: pointer;
   color: #fb0000;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
+
+/* Hover для кнопки закриття */
 .closeButton:hover {
-  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0); /* легкий сірий фон */
+  box-shadow: 2px 2px 4px #69696900, -2px -2px 4px #ffffff00;
+  transform: scale(1.07);
   color: #e50000;
 }
 
@@ -88,7 +103,7 @@
   gap: 30px; /* відстань між кнопками */
 }
 
-/* Кожна кнопка-контейнер з тінню і круглим фоном */
+/* Кнопка-контейнер (60×60), круглий фон і тінь */
 .buttonContainer {
   display: flex;
   align-items: center;
@@ -106,18 +121,37 @@
   transform: translateY(-2px);
 }
 
-/* Власне кнопка */
+/* Кнопка всередині контейнера */
 .roundButton {
   border: none;
   background: transparent;
   color: #013b6e;
   cursor: pointer;
-  font-size: 1.2rem; /* розмір, якщо потрібен текст */
+
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+
+  transition: background-color 0.2s ease;
 }
 
+/* При наведенні на саму кнопку (а не на container) */
+.roundButton:hover {
+  background-color: rgba(0, 0, 0, 0); /* Легкий сірий фон, щоб не було «зелені» */
+}
+
+/* Якщо треба зміщувати іконку вправо/вліво всередині кнопки:
+   .roundButton > svg {
+     margin-left: auto; // штовхає іконку праворуч
+   }
+   Або justify-content: flex-end; 
+*/
+ .roundButton > svg {
+     margin-left: auto; 
+   }
 /* Анімовані іконки */
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -131,14 +165,14 @@
   100% { color: #ff0000; }
 }
 
-/* Око пульсує */
+/* Око (трохи зменшене), пульсує */
 .viewIcon {
-  font-size: 25px;
+  font-size: 22px; 
   animation: pulse 1.5s infinite ease-in-out;
 }
 
-/* Іконка PDF змінює колір */
+/* Іконка PDF (зміна кольору) */
 .pdfIcon {
-  font-size: 25px;
+  font-size: 22px;
   animation: colorShift 1.5s infinite ease-in-out;
 }

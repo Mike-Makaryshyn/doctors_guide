@@ -1,3 +1,5 @@
+// src/pages/ResumePage/ResumePage.jsx
+
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -15,10 +17,8 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import { FaFilePdf, FaPrint } from "react-icons/fa";
 import useIsMobile from "../../hooks/useIsMobile";
 import { previewResumePDF, downloadResumePDF } from "./pdfresume";
-import jsPDF from "jspdf";
-import "jspdf-autotable";
 import Lottie from "lottie-react";
-import PDFResumeModal from "./pdfresume"; 
+import PDFResumeModal from "./pdfresume";
 
 // Імпорт JSON-анімацій (іконок)
 import aktuellIcon from "../../assets/ResumeIcon/aktuell.json";
@@ -28,7 +28,7 @@ import spracheIcon from "../../assets/ResumeIcon/spracheicon.json";
 import technikalIcon from "../../assets/ResumeIcon/technikalicon.json";
 import berufsIcon from "../../assets/ResumeIcon/berufs.json";
 
-// Ініціалізація react-modal (переконайтеся, що елемент з id="root" існує)
+// Ініціалізація react-modal (переконайтеся, що елемент із id="root" існує)
 Modal.setAppElement("#root");
 
 // Створення теми для MUI
@@ -68,8 +68,8 @@ const allSections = [
           width: 25,
           height: 25,
           filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
-            : "invert(100%)", // #FFFFFF
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
         }}
         autoplay={isActive}
         loop={isActive}
@@ -88,8 +88,8 @@ const allSections = [
           width: 25,
           height: 25,
           filter: isActive
-            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
-            : "invert(100%)", // #FFFFFF
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
         }}
         autoplay={isActive}
         loop={isActive}
@@ -192,7 +192,7 @@ const allSections = [
 // Для меню використовуємо лише основні секції (без PDF Export)
 const mainSections = allSections.filter((section) => section.id !== 6);
 
-// Компонент плаваючого заголовку (sticky header)
+/* Компонент плаваючого заголовку (sticky header) */
 const StickyHeader = ({ title }) => {
   const [visible, setVisible] = useState(false);
 
@@ -200,7 +200,6 @@ const StickyHeader = ({ title }) => {
     const handleScroll = () => {
       setVisible(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -212,7 +211,7 @@ const StickyHeader = ({ title }) => {
   ) : null;
 };
 
-// StaticIconBar – завжди показує всі секції у фіксованому порядку
+/* StaticIconBar – завжди показує всі секції у фіксованому порядку */
 const StaticIconBar = ({ sections, currentSection, onIconClick }) => {
   return (
     <div className={styles.iconBar}>
@@ -237,9 +236,14 @@ const StaticIconBar = ({ sections, currentSection, onIconClick }) => {
   );
 };
 
+/* Головний компонент сторінки резюме */
 const ResumePage = () => {
   const isMobile = useIsMobile(600);
+
+  // Управління активною секцією
   const [currentSection, setCurrentSection] = useState(0);
+
+  // Дані резюме
   const [resumeData, setResumeData] = useState({
     header: {},
     aktuell: [],
@@ -249,32 +253,49 @@ const ResumePage = () => {
     technicalSkills: [],
     lastModified: new Date().toISOString(),
   });
+
+  // Стан завантаження
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(true);
+
+  // Стан модального вікна PDF
   const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
-  // Завантаження даних з Firestore або localStorage
+  // 1) Функція fetchResumeData:
+  //    - Читає з localStorage
+  //    - Читає з Firestore
+  //    - Порівнює lastModified
+  //    - Повертає найактуальніші дані
   const fetchResumeData = async () => {
     const user = auth.currentUser;
     if (!user) return null;
+
     const localDataStr = localStorage.getItem("resumeData");
     let localData = localDataStr ? JSON.parse(localDataStr) : null;
-    console.log("Завантажено дані з localStorage");
+    console.log("Завантажено дані з localStorage:", localData);
+
     try {
       const docRef = doc(db, "users", user.uid, "resume", "profile");
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         const firestoreData = docSnap.data();
+        console.log("Завантажено дані з Firestore:", firestoreData);
+
+        // Порівнюємо lastModified:
         if (
           firestoreData.lastModified &&
           (!localData || firestoreData.lastModified > localData.lastModified)
         ) {
+          // Firestore новіші
           console.log("Дані у Firestore новіші. Оновлюємо localStorage та стан.");
           localStorage.setItem("resumeData", JSON.stringify(firestoreData));
           return firestoreData;
+        } else {
+          // localStorage новіші або немає lastModified у Firestore
+          return localData || firestoreData;
         }
-        return localData || firestoreData;
       } else {
+        // Якщо в Firestore нічого немає
         console.log("Firestore: дані відсутні. Використовуємо початкову структуру.");
         const defaultData = {
           header: {},
@@ -285,14 +306,18 @@ const ResumePage = () => {
           technicalSkills: [],
           lastModified: new Date().toISOString(),
         };
+        localStorage.setItem("resumeData", JSON.stringify(defaultData));
         return defaultData;
       }
     } catch (error) {
       console.error("Помилка завантаження даних з Firestore:", error);
+      // У разі помилки повертаємо localData, якщо вона є:
       return localData;
     }
   };
 
+  // 2) Функція syncToFirestore:
+  //    - Зберігає поточні дані з localStorage до Firestore
   const syncToFirestore = async () => {
     const user = auth.currentUser;
     if (!user) return;
@@ -300,6 +325,7 @@ const ResumePage = () => {
     if (!localDataStr) return;
     const data = JSON.parse(localDataStr);
     console.log("Синхронізація localStorage з Firestore. Дані:", data);
+
     try {
       const docRef = doc(db, "users", user.uid, "resume", "profile");
       await setDoc(docRef, data, { merge: true });
@@ -309,6 +335,7 @@ const ResumePage = () => {
     }
   };
 
+  // 3) Оновлення певної секції резюме
   const updateSectionData = (sectionKey, newData) => {
     setResumeData((prevData) => {
       const updatedData = {
@@ -316,21 +343,22 @@ const ResumePage = () => {
         [sectionKey]: newData,
         lastModified: new Date().toISOString(),
       };
+      // Зберігаємо в localStorage
       localStorage.setItem("resumeData", JSON.stringify(updatedData));
       console.log(`Оновлено секцію "${sectionKey}". Нові дані:`, newData);
       return updatedData;
     });
   };
 
+  // 4) При зміні секції
   const handleIconClick = (id) => {
     if (id === currentSection) return;
-    console.log(
-      `Перемикання на секцію ${id} (${mainSections.find((s) => s.id === id)?.title})`
-    );
+    console.log(`Перемикання на секцію ${id}`);
     setCurrentSection(id);
   };
 
-  // Функції для генерації PDF
+  // 5) Функції для генерації PDF (Preview / Download)
+  //    - Викликають syncToFirestore, щоб спочатку зберегти зміни
   const handlePreviewPDF = async () => {
     await syncToFirestore();
     previewResumePDF();
@@ -341,14 +369,11 @@ const ResumePage = () => {
     downloadResumePDF();
   };
 
-  const handleOpenPDFModal = () => {
-    setIsPDFModalOpen(true);
-  };
+  // 6) Відкриття/закриття PDF-модального вікна
+  const handleOpenPDFModal = () => setIsPDFModalOpen(true);
+  const handleClosePDFModal = () => setIsPDFModalOpen(false);
 
-  const handleClosePDFModal = () => {
-    setIsPDFModalOpen(false);
-  };
-
+  // 7) При першому рендері завантажуємо дані
   useEffect(() => {
     const loadData = async () => {
       setIsFetching(true);
@@ -361,6 +386,7 @@ const ResumePage = () => {
     loadData();
   }, []);
 
+  // 8) При роздруковуванні сторінки або закритті – синхронізуємо
   useEffect(() => {
     const saveOnUnload = async () => {
       await syncToFirestore();
@@ -373,6 +399,7 @@ const ResumePage = () => {
     };
   }, []);
 
+  // Якщо ще триває fetch
   if (isFetching) {
     return (
       <ThemeProvider theme={theme}>
@@ -383,6 +410,7 @@ const ResumePage = () => {
     );
   }
 
+  // Визначаємо, яку секцію зараз рендерити
   const CurrentComponent = allSections[currentSection]?.component || HeaderSection;
 
   return (
@@ -422,9 +450,9 @@ const ResumePage = () => {
 
           {isLoading && <div className={styles.loading}>Завантаження...</div>}
         </div>
+
+        {/* Модальне вікно PDF */}
         <PDFResumeModal isOpen={isPDFModalOpen} onClose={handleClosePDFModal} />
-        {/* Модальне вікно для PDF */}
-       
       </MainLayout>
     </ThemeProvider>
   );
