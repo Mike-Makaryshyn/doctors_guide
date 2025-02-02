@@ -292,6 +292,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                   <IconButton
                     onClick={() => removeRow(index)}
                     className={styles.deleteButton}
+                    
                     aria-label="Видалити"
                   >
                     <DeleteIcon />
@@ -335,13 +336,13 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
 
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
-                <IconButton
-                  onClick={() => removeRow(index)}
-                  className={styles.deleteButton}
-                  aria-label="Видалити"
-                >
-                  <DeleteIcon />
-                </IconButton>
+              <IconButton
+  onClick={() => removeRow(index)}
+  className={styles.deleteButton}
+  aria-label="Видалити"
+>
+  <DeleteIcon className={styles.deleteIcon} /> {/* Додали клас deleteIcon */}
+</IconButton>
               </div>
             </div>
             {/* Роздільник для мобільних */}
@@ -358,13 +359,20 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       </div>
 
       {/* Модальне вікно з підказками */}
-      <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
-  <DialogTitle className={styles.dialogTitle}>
-    Виберіть підказку
-    <IconButton className={styles.closseButton} onClick={handleCloseModal}>
-      &times;
-    </IconButton>
-  </DialogTitle>
+      <Dialog
+  open={isModalOpen}
+  onClose={handleCloseModal}
+  classes={{ paper: styles.customDialog }}
+  BackdropProps={{
+    classes: {
+      root: styles.noBackdrop,  // Додаємо клас для прозорості бекдропу
+    },
+  }}
+>
+  <IconButton className={styles.closseButton} onClick={handleCloseModal}>
+    &times;
+  </IconButton>
+
   <List className={styles.dialogList}>
     {descriptionHints.map((hint, idx) => (
       <ListItem key={idx} disablePadding>

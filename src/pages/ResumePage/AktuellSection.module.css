@@ -5,6 +5,7 @@
     margin-bottom: 30px;
     overflow: visible; /* Для десктопа */
     position: relative;
+    padding: 20px;  /* Додає відступи всередині секції */
 }
 
 /* Адаптація для мобільних */
@@ -18,9 +19,11 @@
 /* Заголовок */
 .subheader {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-weight: 600;
     color: #333;
+    padding-left: 20px; /* Додає відступ зліва */
+    padding-top: 10px;   /* Додає відступ зверху */
 }
 
 /* Контейнер форми */
@@ -218,7 +221,11 @@ textarea {
     background-color: #ccc;
     margin-top: 10px;
 }
-
+@media (min-width: 769px) {
+    .deleteButton svg {
+        color: #ff0000 !important; /* Червоний колір іконки */
+    }
+}
 /* Показати роздільник на мобільних */
 @media (max-width: 768px) {
     /* Переструктурування запису */
@@ -232,6 +239,7 @@ textarea {
         right: -50px; /* Відсунемо трохи праворуч, щоб не заважала */
         transform: translateY(-50%);
         z-index: 10;
+        color: #ff0000 !important; 
     }
 
     /* Приховати кнопку видалення в десктопній версії */
@@ -242,6 +250,7 @@ textarea {
     /* Показати кнопку видалення для мобільної версії */
     .deleteButtonContainer .deleteButton {
         color: #dc3545;
+        color: #ff0000 !important; 
     }
 
     /* Відображення роздільника */
@@ -345,27 +354,23 @@ textarea {
 }
 /* Загальний стиль модального вікна */
 .customDialog {
-    max-width: 400px;  /* Максимальна ширина */
-    width: 90%;  /* Ширина 90% від екрану */
-    border-radius: 50px;  /* Закруглені кути */
-    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 50px;
+    padding: 0;             /* Видаляємо внутрішній відступ */
+    margin: 0;              /* Видаляємо зовнішній відступ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     background: #ffffff;
 }
 
 /* Заголовок модального вікна */
-.dialogTitle {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 10px;
-    color: #013b6e;
-    border-bottom: 1px solid #ddd;
-}
+
 
 /* Контейнер списку */
 .dialogList {
-    padding: 10px;
+    padding: 10px;          /* Трохи внутрішнього відступу */
+    margin: 0;              /* Видаляємо зовнішній відступ */
+    list-style: none;       /* Видаляємо стандартні маркери */
 }
 
 /* Текст підказки */
@@ -381,30 +386,52 @@ textarea {
     color: #013b6e; /* Синій відтінок */
     font-weight: bold;
 }
-.closeButton {
-    background: none;
+.closseButton {
+    position: absolute;
+    top: -2px;
+    right: -280px;
+    background: none !important;
     border: none;
     font-size: 1.5rem;
-    color: #ff0000; /* Червоний хрестик */
+    color: #ff0000 !important; /* Червоний колір завжди */
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10; /* Щоб залишався поверх усього */
-    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease, color 0.3s ease; /* Анімація для ефекту наведення */
 }
 
-.closeButton:hover {
-    transform: scale(1.2);
+/* Ефект при наведенні */
+.closseButton:hover {
+    transform: scale(1.2);          /* Легке збільшення */
+    color: #c30000 !important;      /* Темніший відтінок червоного при наведенні */
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.MuiDialog-container {
+    display: flex;
+    align-items: center;     /* Вирівнювання по вертикалі */
+    justify-content: center; /* Вирівнювання по горизонталі */
+    padding: 0 !important;
 }
 
-/* Адаптація для мобільних */
+/* Ефект при наведенні */
+.closseButton:hover {
+    transform: scale(1.2);          /* Легке збільшення */
+    color: #c30000;                 /* Темніший відтінок червоного */
+    background: transparent !important; /* Повністю прозорий фон */
+    box-shadow: none !important;    /* Видалення тіні */
+}
+
+/* 📱 Адаптація для мобільних */
 @media (max-width: 768px) {
-    .closeButton {
-        top: 5px;
-        right: 5px;
-        font-size: 1.2rem; /* Трішки менший хрестик на мобільних */
+    .closseButton {
+        top: 5px;                   /* Зменшений відступ зверху */
+        right: 5px;                 /* Зменшений відступ справа */
+        font-size: 1.5rem;          /* Менший розмір для мобільних */
     }
+
+
 
     .customDialog {
         width: 95%;  /* Більше місця на мобільних */
@@ -418,9 +445,7 @@ textarea {
         max-width: 350px;
     }
 
-    .dialogTitle {
-        font-size: 1rem;
-    }
+ 
 
     .dialogText {
         font-size: 0.9rem;
@@ -438,3 +463,22 @@ textarea {
 }
 
 /* Застосовуємо анімацію */
+.MuiIconButton-root.closseButton {
+    background: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 5px !important;
+}
+
+.MuiIconButton-root.closseButton:hover {
+    background: transparent !important;
+    transform: scale(1.2) !important;
+    color: #c30000 !important;
+    box-shadow: none !important;
+}
+.noBackdrop .MuiBackdrop-root {
+    background-color: transparent !important;
+  }
+  .closseButton .MuiTouchRipple-root {
+    display: none !important;
+}

@@ -20,10 +20,8 @@
   width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
- 
-  white-space: nowrap;
+  /* Видаляємо white-space: nowrap – flex-контейнер і так не переносить елементи */
   position: relative;
-
 }
 
 .iconBar::-webkit-scrollbar {
@@ -41,7 +39,6 @@
   transform-origin: center center;
   position: relative;
   scroll-snap-align: center;
-  
 }
 
 /* Неактивний елемент має стандартний розмір */
@@ -114,17 +111,30 @@
 /* Додаткові стилі для адаптації на мобільних пристроях */
 @media (max-width: 600px) {
   .iconBar {
-    gap: 10px;
-    justify-content: center;
+    gap: 30px; /* Збільшений інтервал між іконками */
+    justify-content: flex-start; /* Вирівнювання іконок зліва */
+    overflow-x: auto; /* Увімкнення горизонтального скролінгу */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Додаємо плавний скрол */
   }
+
+  .iconBar::-webkit-scrollbar {
+    display: none; /* Приховування скролбару для естетичності */
+  }
+
   .iconContainer {
-    min-width: 60px;
+    flex: 0 0 auto; /* Вимикаємо автоматичне розтягування елементів */
+    min-width: 100px; /* Фіксована мінімальна ширина для кращої видимості */
+    scroll-snap-align: center; /* Автоматичне вирівнювання по центру при скролінгу */
   }
+
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 50px; /* Збільшений розмір іконок */
+    height: 50px;
   }
+
   .iconLabel {
-    font-size: 10px;
+    font-size: 12px; /* Трохи більший шрифт для підписів */
+    margin-top: 8px;  /* Більший відступ між іконкою та підписом */
   }
 }

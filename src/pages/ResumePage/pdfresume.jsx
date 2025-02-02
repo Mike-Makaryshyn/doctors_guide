@@ -1,31 +1,32 @@
-// src/pages/ResumePage/pdfresume.jsx
-
+import React from "react";
+import Modal from "react-modal";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import { auth, db } from "../../firebase"; // Імпорт Firebase конфігурації
+import { auth, db } from "../../firebase";
 import { getDoc, doc } from "firebase/firestore";
-import roboto from "./Roboto-Regular.ttf"; // Імпорт звичайного стилю шрифту
-import robotoBold from "./Roboto-Bold.ttf"; // Імпорт жирного стилю шрифту
+import { FaEye, FaDownload, FaTimes } from "react-icons/fa";
+import roboto from "./Roboto-Regular.ttf";
+import robotoBold from "./Roboto-Bold.ttf";
 import styles from "./pdfresume.module.css";
 
-// Функція для отримання даних користувача з Firestore
+// Встановлюємо app element для react-modal
+Modal.setAppElement("#root");
+
+// Функція отримання даних резюме з Firestore
 const getUserResume = async () => {
   const user = auth.currentUser;
   if (!user) {
-    console.error("Der Benutzer ist nicht angemeldet.");
+    console.error("User is not logged in.");
     return null;
   }
-
   try {
     const profileRef = doc(db, "users", user.uid, "resume", "profile");
     const profileSnapshot = await getDoc(profileRef);
     const profileData = profileSnapshot.exists() ? profileSnapshot.data() : null;
-
     if (!profileData) {
-      console.warn("Es gibt keine Profildaten für diesen Benutzer.");
+      console.warn("No resume data found.");
       return null;
     }
-
     return {
       header: profileData.header || {},
       aktuell: profileData.aktuell || [],
@@ -35,12 +36,12 @@ const getUserResume = async () => {
       technicalSkills: profileData.technicalSkills || [],
     };
   } catch (error) {
-    console.error("Fehler beim Abrufen der Daten aus Firestore:", error);
+    console.error("Error fetching resume data:", error);
     return null;
   }
 };
 
-// Функція для додавання таблиць у PDF
+// Допоміжна функція для додавання таблиць у PDF
 const addTable = (title, data, columns, doc, startY) => {
   if (data && data.length > 0) {
     doc.setFont("Roboto", "bold");
@@ -52,7 +53,7 @@ const addTable = (title, data, columns, doc, startY) => {
       head: [columns],
       body: data,
       theme: "grid",
-      pageBreak: 'auto',
+      pageBreak: "auto",
       styles: { font: "Roboto", fontSize: 10, lineHeight: 1.2 },
       headStyles: { 
         fillColor: [240, 240, 240],
@@ -73,11 +74,9 @@ const addTable = (title, data, columns, doc, startY) => {
   return startY;
 };
 
-// Функція, що створює PDF-документ на основі даних резюме
+// Функція створення PDF документу на основі даних резюме
 const createPDFDocument = (resume) => {
   const doc = new jsPDF();
-
-  // Додавання шрифтів
   doc.addFont(roboto, "Roboto", "normal");
   doc.addFont(robotoBold, "Roboto", "bold");
   doc.setFont("Roboto");
@@ -113,7 +112,7 @@ const createPDFDocument = (resume) => {
 
   // Таблиця "Aktuell"
   const aktuellData = resume.aktuell
-    .filter(entry => entry.date && entry.description)
+    .filter((entry) => entry.date && entry.description)
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .map((entry) => [entry.date, entry.description]);
   if (aktuellData.length > 0) {
@@ -121,17 +120,17 @@ const createPDFDocument = (resume) => {
   }
 
   // Таблиця "Berufserfahrungen"
-  const berufserfahrungenData = resume.berufserfahrungen
-    .filter(entry => entry.date && entry.description && entry.place)
+  const berufData = resume.berufserfahrungen
+    .filter((entry) => entry.date && entry.description && entry.place)
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .map((entry) => [entry.date, `${entry.description}, ${entry.place}`]);
-  if (berufserfahrungenData.length > 0) {
-    yPosition = addTable("Berufserfahrungen", berufserfahrungenData, ["Datum", "Beschreibung"], doc, yPosition);
+  if (berufData.length > 0) {
+    yPosition = addTable("Berufserfahrungen", berufData, ["Datum", "Beschreibung"], doc, yPosition);
   }
 
   // Таблиця "Ausbildung"
   const ausbildungData = resume.ausbildung
-    .filter(entry => entry.date && entry.description && entry.place)
+    .filter((entry) => entry.date && entry.description && entry.place)
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .map((entry) => [entry.date, `${entry.description}, ${entry.place}`]);
   if (ausbildungData.length > 0) {
@@ -140,25 +139,25 @@ const createPDFDocument = (resume) => {
 
   // Таблиця "Sprachen"
   const languagesData = resume.languages
-    .filter(entry => entry.language && entry.level)
+    .filter((entry) => entry.language && entry.level)
     .map((entry) => [entry.language, entry.level]);
   if (languagesData.length > 0) {
     yPosition = addTable("Sprachen", languagesData, ["Sprache", "Niveau"], doc, yPosition);
   }
 
   // Таблиця "Technische Fähigkeiten"
-  const technicalSkillsData = resume.technicalSkills
-    .filter(entry => entry.skill && entry.technicalLevel)
+  const techData = resume.technicalSkills
+    .filter((entry) => entry.skill && entry.technicalLevel)
     .map((entry) => [entry.skill, entry.technicalLevel]);
-  if (technicalSkillsData.length > 0) {
-    yPosition = addTable("Technische Fähigkeiten", technicalSkillsData, ["Fähigkeit", "Niveau"], doc, yPosition);
+  if (techData.length > 0) {
+    yPosition = addTable("Technische Fähigkeiten", techData, ["Fähigkeit", "Niveau"], doc, yPosition);
   }
 
   return doc;
 };
 
-// Функція для завантаження PDF (завантаження файлу)
-export const downloadResumePDF = async () => {
+// Функція для завантаження PDF (збереження файлу)
+const downloadResumePDF = async () => {
   const resume = await getUserResume();
   if (resume) {
     const doc = createPDFDocument(resume);
@@ -168,8 +167,8 @@ export const downloadResumePDF = async () => {
   }
 };
 
-// Функція для попереднього перегляду PDF (відкриває у новій вкладці)
-export const previewResumePDF = async () => {
+// Функція для перегляду PDF (відкриває у новій вкладці)
+const previewResumePDF = async () => {
   const resume = await getUserResume();
   if (resume) {
     const doc = createPDFDocument(resume);
@@ -180,22 +179,35 @@ export const previewResumePDF = async () => {
   }
 };
 
-// Функція для додавання кнопки завантаження (якщо потрібно вставити її у DOM)
-export const addDownloadButton = (containerId) => {
-  const container = document.getElementById(containerId);
-  if (!container) {
-    console.error(`Der Container mit der ID "${containerId}" wurde nicht gefunden!`);
-    return;
-  }
-
-  container.innerHTML = "";
-
-  const button = document.createElement("button");
-  button.textContent = "Lebenslauf herunterladen";
-  button.style.padding = "10px 20px";
-  button.style.fontSize = "16px";
-
-  button.addEventListener("click", downloadResumePDF);
-
-  container.appendChild(button);
+// Компонент модального вікна для PDF резюме
+const PDFResumeModal = ({ isOpen, onClose }) => {
+  return (
+    <Modal 
+      isOpen={isOpen} 
+      onRequestClose={onClose} 
+      contentLabel="PDF Resume"
+      className={styles.pdfModal}
+      overlayClassName={styles.modalOverlay}
+    >
+      <div className={styles.modalContent}>
+        <button className={styles.closeButton} onClick={onClose}>
+          <FaTimes />
+        </button>
+        <h2 className={styles.modalTitle}>PDF Resume</h2>
+        <div className={styles.pdfButtonContainer}>
+          <button className={styles.pdfButton} onClick={previewResumePDF}>
+            <FaEye className={styles.viewIcon} />
+            Preview PDF
+          </button>
+          <button className={styles.pdfButton} onClick={downloadResumePDF}>
+            <FaDownload className={styles.pdfIcon} />
+            Download PDF
+          </button>
+        </div>
+      </div>
+    </Modal>
+  );
 };
+
+export { downloadResumePDF, previewResumePDF };
+export default PDFResumeModal;

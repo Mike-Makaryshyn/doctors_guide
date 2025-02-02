@@ -12,11 +12,20 @@ import LanguageSkillsSection from "./LanguageSkillsSection";
 import TechnicalSkillsSection from "./TechnicalSkillsSection";
 import { db, auth } from "../../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
-import { FaUser, FaNewspaper, FaBriefcase, FaGraduationCap, FaLanguage, FaTools, FaFilePdf, FaPrint } from "react-icons/fa";
+import { FaFilePdf, FaPrint } from "react-icons/fa";
 import useIsMobile from "../../hooks/useIsMobile";
 import { previewResumePDF, downloadResumePDF } from "./pdfresume";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import Lottie from "lottie-react";
+
+// Імпорт JSON-анімацій (іконок)
+import aktuellIcon from "../../assets/ResumeIcon/aktuell.json";
+import ausbildungIcon from "../../assets/ResumeIcon/ausbildungicon.json";
+import personalIcon from "../../assets/ResumeIcon/personalicon.json";
+import spracheIcon from "../../assets/ResumeIcon/spracheicon.json";
+import technikalIcon from "../../assets/ResumeIcon/technikalicon.json";
+import berufsIcon from "../../assets/ResumeIcon/berufs.json";
 
 // Ініціалізація react-modal (переконайтеся, що елемент з id="root" існує)
 Modal.setAppElement("#root");
@@ -51,54 +60,131 @@ const allSections = [
     title: "Persönliche Daten",
     component: HeaderSection,
     dataKey: "header",
-    icon: <FaUser style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={personalIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
+            : "invert(100%)", // #FFFFFF
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 1,
     title: "Aktuell",
     component: AktuellSection,
     dataKey: "aktuell",
-    icon: <FaNewspaper style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={aktuellIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)" // #013b6e
+            : "invert(100%)", // #FFFFFF
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 2,
     title: "Berufserfahrungen",
     component: BerufserfahrungenSection,
     dataKey: "berufserfahrungen",
-    icon: <FaBriefcase style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={berufsIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 3,
     title: "Ausbildung",
     component: AusbildungSection,
     dataKey: "ausbildung",
-    icon: <FaGraduationCap style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={ausbildungIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 4,
     title: "Language Skills",
     component: LanguageSkillsSection,
     dataKey: "languageSkills",
-    icon: <FaLanguage style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={spracheIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 5,
     title: "Technical Skills",
     component: TechnicalSkillsSection,
     dataKey: "technicalSkills",
-    icon: <FaTools style={{ fontSize: 40 }} />,
+    icon: (isActive) => (
+      <Lottie
+        animationData={technikalIcon}
+        style={{
+          width: 30,
+          height: 30,
+          filter: isActive
+            ? "invert(13%) sepia(95%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%)"
+            : "invert(100%)",
+        }}
+        autoplay={isActive}
+        loop={isActive}
+      />
+    ),
   },
   {
     id: 6,
     title: "PDF Export",
-    // Цю секцію не використовуємо у меню – вона викликається окремою кнопкою
     component: () => (
       <div className={styles.pdfExportContainer}>
         <h2>PDF Export</h2>
         <div id="download-resume-container"></div>
       </div>
     ),
-    icon: <FaFilePdf style={{ fontSize: 40, color: "red" }} />,
+    icon: () => <FaFilePdf style={{ fontSize: 40, color: "red" }} />,
   },
 ];
 
@@ -111,11 +197,7 @@ const StickyHeader = ({ title }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+      setVisible(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -129,28 +211,23 @@ const StickyHeader = ({ title }) => {
   ) : null;
 };
 
-// InfiniteIconBar – обчислює порядок елементів так, щоб активна секція завжди була по центру.
-const InfiniteIconBar = ({ sections, currentSection, onIconClick }) => {
-  const n = sections.length; // має бути 6
-  const mid = Math.floor(n / 2);
-  const rotatedSections = [];
-  for (let i = 0; i < n; i++) {
-    rotatedSections.push(sections[(currentSection - mid + i + n) % n]);
-  }
+// StaticIconBar – завжди показує всі секції у фіксованому порядку
+const StaticIconBar = ({ sections, currentSection, onIconClick }) => {
   return (
     <div className={styles.iconBar}>
-      {rotatedSections.map((section, index) => {
-        const isActive = index === mid;
+      {sections.map((section) => {
+        const isActive = section.id === currentSection;
         return (
           <div
             key={section.id}
-            className={`${styles.iconContainer} ${isActive ? styles.active : styles.inactive}`}
-            onClick={() => {
-              const originalIndex = (currentSection - mid + index + n) % n;
-              onIconClick(originalIndex);
-            }}
+            className={`${styles.iconContainer} ${
+              isActive ? styles.active : styles.inactive
+            }`}
+            onClick={() => onIconClick(section.id)}
           >
-            <div className={styles.icon}>{section.icon}</div>
+            <div className={styles.icon}>
+              {section.icon ? section.icon(isActive) : null}
+            </div>
             <span className={styles.iconLabel}>{section.title}</span>
           </div>
         );
@@ -161,7 +238,6 @@ const InfiniteIconBar = ({ sections, currentSection, onIconClick }) => {
 
 const ResumePage = () => {
   const isMobile = useIsMobile(600);
-  // currentSection – індекс від 0 до 5 для mainSections
   const [currentSection, setCurrentSection] = useState(0);
   const [resumeData, setResumeData] = useState({
     header: {},
@@ -306,24 +382,23 @@ const ResumePage = () => {
     );
   }
 
-  // Для відображення поточної секції використовуємо повний масив (allSections)
   const CurrentComponent = allSections[currentSection]?.component || HeaderSection;
 
   return (
     <ThemeProvider theme={theme}>
       <MainLayout>
         <div className={styles.container}>
-          {/* Плаваючий заголовок, який з’являється при скролі */}
+          {/* Плаваючий заголовок */}
           <StickyHeader title={allSections[currentSection].title} />
 
-          {/* Меню секцій з безкінечною прокруткою */}
-          <InfiniteIconBar
+          {/* Статичне меню секцій */}
+          <StaticIconBar
             sections={mainSections}
             currentSection={currentSection}
             onIconClick={handleIconClick}
           />
 
-          {/* Відображення поточної секції з ефектом плавного появлення */}
+          {/* Поточна секція */}
           <div className={`${styles.section} ${styles.fadeIn}`}>
             <CurrentComponent
               data={resumeData[allSections[currentSection].dataKey]}
@@ -333,7 +408,7 @@ const ResumePage = () => {
             />
           </div>
 
-          {/* Кнопка для відкриття модального вікна PDF */}
+          {/* Кнопка для відкриття PDF-модального вікна */}
           <div className={styles.navButtonContainer}>
             <button
               className={styles.printButton}
@@ -347,33 +422,33 @@ const ResumePage = () => {
           {isLoading && <div className={styles.loading}>Завантаження...</div>}
         </div>
 
-        {/* Модальне вікно для PDF експорту */}
+        {/* Модальне вікно для PDF */}
         <Modal
-          isOpen={isPDFModalOpen}
-          onRequestClose={handleClosePDFModal}
-          contentLabel="PDF Export"
-          className={pdfStyles.pdfModal}
-          overlayClassName={pdfStyles.modalOverlay}
-        >
-          <div className={pdfStyles.modalContent}>
-            <button
-              onClick={handleClosePDFModal}
-              className={pdfStyles.closeButton}
-              title="Закрити"
-            >
-              &times;
-            </button>
-            <h2>PDF Export</h2>
-            <div className={pdfStyles.pdfButtonContainer}>
-              <button className={pdfStyles.pdfButton} onClick={handlePreviewPDF}>
-                Preview PDF
-              </button>
-              <button className={pdfStyles.pdfButton} onClick={handleDownloadPDF}>
-                Download PDF
-              </button>
-            </div>
-          </div>
-        </Modal>
+  isOpen={isPDFModalOpen}
+  onRequestClose={handleClosePDFModal}
+  contentLabel="PDF Export"
+  className={pdfStyles.pdfModal}
+  overlayClassName={pdfStyles.modalOverlay}
+>
+  <div className={pdfStyles.modalContent}>
+    <button
+      onClick={handleClosePDFModal}
+      className={pdfStyles.closeButton}
+      title="Закрити"
+    >
+      &times;
+    </button>
+    <h2>PDF Export</h2>
+    <div className={pdfStyles.pdfButtonContainer}>
+      <button className={pdfStyles.pdfButton} onClick={handlePreviewPDF}>
+        Preview PDF
+      </button>
+      <button className={pdfStyles.pdfButton} onClick={handleDownloadPDF}>
+        Download PDF
+      </button>
+    </div>
+  </div>
+</Modal>
       </MainLayout>
     </ThemeProvider>
   );
