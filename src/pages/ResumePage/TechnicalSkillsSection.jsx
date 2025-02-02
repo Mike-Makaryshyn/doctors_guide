@@ -1,4 +1,3 @@
-// src/pages/ResumePage/TechnicalSkillsSection.jsx
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
@@ -6,7 +5,6 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb"; // Використо
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -14,18 +12,18 @@ import ListItemText from "@mui/material/ListItemText";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./TechnicalSkillsSection.module.css";
 
-const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) => {
+const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
-  const [activeField, setActiveField] = useState(null); // 'skill' або 'technicalLevel'
+  const [activeField, setActiveField] = useState(null); // "skill" або "technicalLevel"
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
   const isClickingSuggestionButtonRef = useRef(false); // Реф для відстеження натискання на лампочку
   const suggestionsRef = useRef(null); // Реф для списку підказок
 
-  // Реф для кожного input
-  const inputRefs = useRef([]);
+  // Використовуємо textarea для автозбільшення
+  const textareaRefs = useRef([]);
 
-  // Використовуємо підказки з ResumeForm.js
+  // Підказки з ResumeForm.js
   const skillHints = resumeFormTexts.technicalSkillsSuggestions;
   const levelHints = resumeFormTexts.levelSuggestions;
 
@@ -39,44 +37,52 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
     if (!skill.trim()) {
       throw new Error("Навичка не може бути порожньою.");
     }
-    // Додайте додаткову валідацію за потребою
+    // Додаткову валідацію можна додати за потребою
   };
 
   const validateTechnicalLevel = (level) => {
     if (!level.trim()) {
       throw new Error("Рівень не може бути порожнім.");
     }
-    // Додайте додаткову валідацію за потребою
+    // Додаткову валідацію можна додати за потребою
   };
 
-  // Обробка зміни навички з валідацією
+  // Автоматичне розширення textarea
+  const autoResizeTextarea = (refIndex) => {
+    const el = textareaRefs.current[refIndex];
+    if (el) {
+      el.style.height = "auto";
+      el.style.height = el.scrollHeight + "px";
+    }
+  };
+
+  // Обробка зміни навички
   const handleSkillChange = (index, newValue) => {
     try {
       validateSkill(newValue);
       console.log("Навичка успішно валідована");
     } catch (error) {
       console.error("Помилка валідації навички:", error.message);
-      // Можливо, додати повідомлення користувачу
+      // За потребою можна додати повідомлення користувачу
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].skill = newValue;
     onUpdate(updatedEntries);
+    autoResizeTextarea(index * 2);
   };
 
-  // Обробка зміни рівня з валідацією
+  // Обробка зміни рівня
   const handleLevelChange = (index, newValue) => {
     try {
       validateTechnicalLevel(newValue);
       console.log("Рівень успішно валідований");
     } catch (error) {
       console.error("Помилка валідації рівня:", error.message);
-      // Можливо, додати повідомлення користувачу
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].technicalLevel = newValue;
     onUpdate(updatedEntries);
+    autoResizeTextarea(index * 2 + 1);
   };
 
   // Додавання нового рядка
@@ -87,10 +93,11 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
     setTimeout(() => {
       const lastIndex = updatedEntries.length - 1;
       handleFocus(lastIndex, "skill"); // Фокус на skill за замовчуванням
-      if (inputRefs.current[lastIndex * 2]) { // Множимо на 2 для розділення Skill і Level
-        inputRefs.current[lastIndex * 2].focus();
+      if (textareaRefs.current[lastIndex * 2]) {
+        autoResizeTextarea(lastIndex * 2);
+        textareaRefs.current[lastIndex * 2].focus();
       }
-    }, 100); // Даємо час DOM оновитися
+    }, 100);
   };
 
   // Видалення рядка
@@ -99,16 +106,16 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
     onUpdate(updatedEntries);
   };
 
-  // Відкриття модального вікна
+  // Відкриття модального вікна з підказками
   const toggleSuggestions = () => {
     setIsModalOpen(true);
-    isModalOpenRef.current = true; // Оновлюємо реф
+    isModalOpenRef.current = true;
   };
 
   // Закриття модального вікна
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    isModalOpenRef.current = false; // Оновлюємо реф
+    isModalOpenRef.current = false;
     setActiveRowIndex(null);
     setActiveField(null);
   };
@@ -118,21 +125,19 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
     if (activeRowIndex !== null && activeField) {
       const updatedEntries = [...data];
       const currentValue = updatedEntries[activeRowIndex][activeField] || "";
-      const newValue = currentValue
-        ? `${currentValue}\n${hint}`
-        : hint;
+      const newValue = currentValue ? `${currentValue}\n${hint}` : hint;
       updatedEntries[activeRowIndex][activeField] = newValue;
       onUpdate(updatedEntries);
 
       setTimeout(() => {
         const fieldIndex = activeField === "technicalLevel" ? 1 : 0;
-        const field = inputRefs.current[activeRowIndex * 2 + fieldIndex];
-        if (field) {
-          field.style.height = "auto";
-          field.style.height = `${field.scrollHeight}px`;
-          field.focus();
+        const el = textareaRefs.current[activeRowIndex * 2 + fieldIndex];
+        if (el) {
+          el.style.height = "auto";
+          el.style.height = el.scrollHeight + "px";
+          el.focus();
         } else {
-          console.error("Error: Input not found for index", activeRowIndex);
+          console.error("Error: Textarea not found for index", activeRowIndex);
         }
       }, 100);
 
@@ -143,10 +148,7 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
   // Закриття модалки при кліку поза її межами
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        suggestionsRef.current &&
-        !suggestionsRef.current.contains(event.target)
-      ) {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
         setActiveRowIndex(null);
         setActiveField(null);
         setIsModalOpen(false);
@@ -154,27 +156,22 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <section className={styles.technicalSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
-
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле для навички */}
             <div className={styles.skillCell}>
-              <input
-                type="text"
+              <textarea
                 value={entry.skill || ""}
                 onChange={(e) => handleSkillChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "skill")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setActiveField(null);
@@ -182,22 +179,20 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
                 }}
                 placeholder="Навичка"
                 className={styles.inputField}
-                ref={(el) => (inputRefs.current[index * 2] = el)} // Множимо на 2 для розділення Skill і Level
+                rows={1}
+                ref={(el) => (textareaRefs.current[index * 2] = el)}
               />
-
-              {/* Кнопка підказки для навички */}
               {activeField === "skill" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
                   <IconButton
                     className={styles.suggestionButton}
                     onMouseDown={() => {
-                      isClickingSuggestionButtonRef.current = true; // Встановлюємо флаг перед натисканням
+                      isClickingSuggestionButtonRef.current = true;
                     }}
                     onClick={() => {
-                      setActiveRowIndex(index); // Встановлюємо активний рядок
-                      setActiveField("skill"); // Встановлюємо активне поле
+                      setActiveRowIndex(index);
+                      setActiveField("skill");
                       toggleSuggestions();
-                      // Скидаємо флаг після натискання
                       setTimeout(() => {
                         isClickingSuggestionButtonRef.current = false;
                       }, 0);
@@ -209,16 +204,13 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
                 </div>
               )}
             </div>
-
             {/* Поле для рівня */}
             <div className={styles.levelCell}>
-              <input
-                type="text"
+              <textarea
                 value={entry.technicalLevel || ""}
                 onChange={(e) => handleLevelChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "technicalLevel")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setActiveField(null);
@@ -226,22 +218,20 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
                 }}
                 placeholder="Рівень"
                 className={styles.inputField}
-                ref={(el) => (inputRefs.current[index * 2 + 1] = el)} // Множимо на 2 і додаємо 1 для рівня
+                rows={1}
+                ref={(el) => (textareaRefs.current[index * 2 + 1] = el)}
               />
-
-              {/* Кнопка підказки для рівня */}
               {activeField === "technicalLevel" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
                   <IconButton
                     className={styles.suggestionButton}
                     onMouseDown={() => {
-                      isClickingSuggestionButtonRef.current = true; // Встановлюємо флаг перед натисканням
+                      isClickingSuggestionButtonRef.current = true;
                     }}
                     onClick={() => {
-                      setActiveRowIndex(index); // Встановлюємо активний рядок
-                      setActiveField("technicalLevel"); // Встановлюємо активне поле
+                      setActiveRowIndex(index);
+                      setActiveField("technicalLevel");
                       toggleSuggestions();
-                      // Скидаємо флаг після натискання
                       setTimeout(() => {
                         isClickingSuggestionButtonRef.current = false;
                       }, 0);
@@ -253,43 +243,30 @@ const TechnicalSkillsSection = ({ title = "Technical Skills", data, onUpdate }) 
                 </div>
               )}
             </div>
-
             {/* Кнопка видалення */}
             <div className={styles.buttonContainer}>
               <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Видалити">
                 <DeleteIcon />
               </IconButton>
             </div>
-
             {/* Контейнер кнопки видалення для мобільних */}
             <div className={styles.deleteButtonContainer}>
-              <IconButton
-                onClick={() => removeRow(index)}
-                className={styles.deleteButton}
-                aria-label="Видалити"
-              >
+              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Видалити">
                 <DeleteIcon />
               </IconButton>
             </div>
           </div>
         ))}
       </form>
-
-      {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Модальне вікно з підказками */}
       <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
-        <DialogTitle className={styles.dialogTitle}>
-          Виберіть підказку
-          <IconButton className={styles.closeButton} onClick={handleCloseModal}>
-            &times;
-          </IconButton>
-        </DialogTitle>
+        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+          &times;
+        </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>
           {(activeField === "skill" ? skillHints : levelHints).map((hint, idx) => (
             <ListItem key={idx} disablePadding>
@@ -310,7 +287,7 @@ TechnicalSkillsSection.propTypes = {
     PropTypes.shape({
       skill: PropTypes.string,
       technicalLevel: PropTypes.string,
-      id: PropTypes.string, // Додайте поле id для Firebase документів, якщо потрібно
+      id: PropTypes.string, // За потреби додайте поле id
     })
   ).isRequired,
   onUpdate: PropTypes.func.isRequired,

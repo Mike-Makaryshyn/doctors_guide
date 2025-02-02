@@ -28,12 +28,21 @@
 /* Контейнер одного запису */
 .entryRow {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column; /* Стекання полів вертикально (desktop) */
   gap: 10px;
-  flex-wrap: wrap;
   width: 100%;
-  position: relative; /* Для абсолютного позиціювання кнопок */
-  flex-direction: column; /* Стекання полів вертикально на десктопі */
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .entryRow {
+    flex-direction: row; /* або можна просто прибрати flex-direction, якщо не потрібен */
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
 }
 
 /* Поле для мови */

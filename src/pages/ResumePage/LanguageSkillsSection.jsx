@@ -14,7 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./LanguageSkillsSection.module.css";
 
-const LanguageSkillsSection = ({ title = "Language Skills", data, onUpdate }) => {
+const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
   const [activeField, setActiveField] = useState(null); // 'language' або 'level'
   const [isModalOpen, setIsModalOpen] = useState(false);
