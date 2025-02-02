@@ -27,15 +27,23 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   const languageHints = resumeFormTexts.languageSkillsSuggestions;
   const levelHints = resumeFormTexts.levelSuggestions;
 
+  // *** NEW ***
+  // Функція-утиліта для авто-розширення textarea
+  const autoExpand = (el) => {
+    if (el) {
+      el.style.height = "auto";
+      el.style.height = el.scrollHeight + "px";
+    }
+  };
+
   const handleFocus = (index, fieldType) => {
     setActiveRowIndex(index);
     setActiveField(fieldType);
-    // Автоматичне розширення: скинемо висоту і встановимо її з scrollHeight
+
+    // *** UPDATED ***
+    // Використовуємо autoExpand при фокусі:
     const field = inputRefs.current[index * 2 + (fieldType === "level" ? 1 : 0)];
-    if (field) {
-      field.style.height = "auto";
-      field.style.height = `${field.scrollHeight}px`;
-    }
+    autoExpand(field);
   };
 
   // Функції для валідації
@@ -63,12 +71,10 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     updatedEntries[index].language = newValue;
     onUpdate(updatedEntries);
 
+    // *** UPDATED ***
     // Авто-розширення textarea
     const field = inputRefs.current[index * 2];
-    if (field) {
-      field.style.height = "auto";
-      field.style.height = `${field.scrollHeight}px`;
-    }
+    autoExpand(field);
   };
 
   // Обробка зміни рівня з валідацією
@@ -83,19 +89,16 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     updatedEntries[index].level = newValue;
     onUpdate(updatedEntries);
 
+    // *** UPDATED ***
     // Авто-розширення textarea
     const field = inputRefs.current[index * 2 + 1];
-    if (field) {
-      field.style.height = "auto";
-      field.style.height = `${field.scrollHeight}px`;
-    }
+    autoExpand(field);
   };
 
-  // Додавання нового рядка — тут більше не встановлюємо фокус
+  // Додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [...data, { language: "", level: "" }];
     onUpdate(updatedEntries);
-    // Не викликаємо автоматичний фокус, тому лампочка з'явиться тільки при реальному фокусі користувача.
   };
 
   // Видалення рядка
@@ -131,8 +134,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
         const fieldIndex = activeField === "level" ? 1 : 0;
         const field = inputRefs.current[activeRowIndex * 2 + fieldIndex];
         if (field) {
-          field.style.height = "auto";
-          field.style.height = `${field.scrollHeight}px`;
+          autoExpand(field);
           field.focus();
         } else {
           console.error("Error: Textarea not found for index", activeRowIndex);
@@ -158,6 +160,15 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // *** NEW ***
+  // Хук, щоб після оновлення/завантаження data зробити авто-розширення для кожного textarea
+  useEffect(() => {
+    data.forEach((_, index) => {
+      autoExpand(inputRefs.current[index * 2]);     // language field
+      autoExpand(inputRefs.current[index * 2 + 1]); // level field
+    });
+  }, [data]);
 
   return (
     <section className={styles.languageSkillsSection}>
