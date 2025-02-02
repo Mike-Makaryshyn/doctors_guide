@@ -319,3 +319,36 @@ textarea {
         transform: translateY(10px); /* Відступ від полів */
     }
 }
+@media (max-width: 768px) {
+    .closseButton {
+      top: -1px;
+      right: -190px; /* Зменшений відступ справа */
+      font-size: 1.5rem; /* Менший розмір для мобільних */
+    }
+  
+    .customDialog {
+      width: 95%; /* Більше місця на мобільних */
+      max-width: 350px;
+    }
+  }
+  /* Адаптація для мобільних */
+  @media (max-width: 768px) {
+    .customDialog {
+      width: 95%; /* Розтягуємо більше на мобільних */
+      max-width: 350px;
+    }
+  
+    .dialogText {
+      font-size: 0.9rem;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
