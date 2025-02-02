@@ -79,7 +79,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       console.error(error.message);
       // Можна додати повідомлення для користувача
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].date = newValue;
     onUpdate(updatedEntries);
@@ -90,7 +89,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
-
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[index];
       if (textarea) {
@@ -107,11 +105,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       { date: "", description: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-
-    setTimeout(() => {
-      const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "description");
-    }, 100); // Даємо час DOM оновитися
+    // НЕ викликаємо автоматичний фокус поля "description".
+    // Таким чином, користувач сам встановлюватиме фокус і тоді лампочка з’явиться.
   };
 
   // Видалення рядка
@@ -140,14 +135,11 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       console.error("Error: activeDescriptionIndex is invalid.");
       return;
     }
-
     const updatedEntries = [...data];
     const currentDescription = updatedEntries[activeDescriptionIndex].description || "";
     const newDescription = currentDescription ? `${currentDescription}\n${hint}` : hint;
-    
     updatedEntries[activeDescriptionIndex].description = newDescription;
     onUpdate(updatedEntries);
-
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
       if (textarea) {
@@ -158,7 +150,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
         console.error("Error: Textarea not found for index", activeDescriptionIndex);
       }
     }, 100);
-
     setIsModalOpen(false);
     isModalOpenRef.current = false;
   };
@@ -185,7 +176,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     const interval = setInterval(() => {
       setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
     }, 1500);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -206,7 +196,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -224,14 +213,12 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     const checkForKeyboard = () => {
       const viewportHeight = window.innerHeight;
       const docHeight = document.documentElement.clientHeight;
-
       if (viewportHeight < docHeight * 0.85) {
         setIsKeyboardOpen(true);
       } else {
         setIsKeyboardOpen(false);
       }
     };
-
     window.addEventListener("resize", checkForKeyboard);
     return () => window.removeEventListener("resize", checkForKeyboard);
   }, []);
@@ -259,7 +246,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     }
   };
 
-  // Оновлена функція blur, яка не скидає активний стан, якщо фокус перейшов до textarea з класом inputField
+  // Функція blur – якщо новий фокус не на полі опису, скидаємо активний стан
   const handleBlur = (index, event) => {
     setTimeout(() => {
       if (!isModalOpenRef.current) {

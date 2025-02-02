@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import styles from "./HeaderSection.module.css";
 import debounce from "lodash.debounce";
 
-const HeaderSection = ({ title = "Kopfzeile", data, onUpdate }) => {
+const HeaderSection = ({ title = "", data, onUpdate }) => {
   const handleChange = (field, value) => {
     const updatedHeader = {
       ...data,
@@ -16,8 +16,6 @@ const HeaderSection = ({ title = "Kopfzeile", data, onUpdate }) => {
 
   const debouncedSave = useRef(
     debounce((updatedData) => {
-      // Збереження може відбуватись централізовано у ResumePage
-      // Тому тут може бути лише лог або виклик додаткової функції, якщо потрібно
       console.log("Debounced save for HeaderSection:", updatedData);
     }, 1000)
   ).current;

@@ -91,18 +91,11 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     }
   };
 
-  // Додавання нового рядка
+  // Додавання нового рядка — тут більше не встановлюємо фокус
   const addNewRow = () => {
     const updatedEntries = [...data, { language: "", level: "" }];
     onUpdate(updatedEntries);
-
-    setTimeout(() => {
-      const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "language"); // Фокус на language за замовчуванням
-      if (inputRefs.current[lastIndex * 2]) {
-        inputRefs.current[lastIndex * 2].focus();
-      }
-    }, 100);
+    // Не викликаємо автоматичний фокус, тому лампочка з'явиться тільки при реальному фокусі користувача.
   };
 
   // Видалення рядка
@@ -256,22 +249,14 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
 
             {/* Кнопка видалення */}
             <div className={styles.buttonContainer}>
-              <IconButton
-                onClick={() => removeRow(index)}
-                className={styles.deleteButton}
-                aria-label="Delete"
-              >
+              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Delete">
                 <DeleteIcon />
               </IconButton>
             </div>
 
             {/* Контейнер кнопки видалення для мобільних */}
             <div className={styles.deleteButtonContainer}>
-              <IconButton
-                onClick={() => removeRow(index)}
-                className={styles.deleteButton}
-                aria-label="Delete"
-              >
+              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Delete">
                 <DeleteIcon />
               </IconButton>
             </div>
@@ -287,12 +272,8 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
       </div>
 
       {/* Модальне вікно з підказками – без хедера */}
-      <Dialog
-        open={isModalOpen}
-        onClose={handleCloseModal}
-        classes={{ paper: styles.customDialog }}
-      >
-        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+      <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
+        <IconButton className={styles.closseButton} onClick={handleCloseModal}>
           &times;
         </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>

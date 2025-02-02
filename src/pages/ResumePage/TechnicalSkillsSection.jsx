@@ -274,7 +274,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
         </IconButton>
       </div>
       <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
-        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+        <IconButton className={styles.closseButton} onClick={handleCloseModal}>
           &times;
         </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>

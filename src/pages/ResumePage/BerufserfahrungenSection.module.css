@@ -3,14 +3,17 @@
     margin-bottom: 30px;
     overflow: visible; /* Для десктопа */
     position: relative;
+    padding: 20px; /* Відступ зверху, як в ActualSection */
 }
 
 /* Заголовок */
 .subheader {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-weight: 600;
     color: #333;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 
 /* Контейнер форми */
@@ -55,7 +58,7 @@
 .placeCell {
     flex: 3; /* Збільшено з 2 до 3 */
     min-width: 300px; /* Задано мінімальну ширину */
-    position: relative; /* Для розміщення кнопок */
+    position: relative;
 }
 
 /* Поля вводу дати, опису та місця */
@@ -211,27 +214,40 @@ textarea {
     display: none;
 }
 
-/* Кнопка закриття модального вікна */
-.closeButton {
-    background: none;
+/* Хрестик для закриття модального вікна, як в ActualSection */
+.closseButton {
+    position: absolute;
+    top: -2px;
+    right: -280px;
+    background: none !important;
     border: none;
     font-size: 1.5rem;
-    color: #ff0000; /* Червоний хрестик */
+    color: #ff0000 !important;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10; /* Щоб вона була поверх усіх інших елементів */
-    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease, color 0.3s ease;
 }
 
-.closeButton:hover {
+.closseButton:hover {
     transform: scale(1.2);
+}
+.customDialog {
+    max-width: 400px;
+    width: 90%;
+    border-radius: 50px;
+    padding: 0;             /* Видаляємо внутрішній відступ */
+    margin: 0;              /* Видаляємо зовнішній відступ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
 }
 
 /* Контейнер списку */
 .dialogList {
-    padding: 10px;
+    padding: 10px;          /* Трохи внутрішнього відступу */
+    margin: 0;              /* Видаляємо зовнішній відступ */
+    list-style: none;       /* Видаляємо стандартні маркери */
 }
 
 /* Текст підказки */

@@ -4,14 +4,17 @@
   margin-bottom: 30px;
   overflow: visible; /* Для десктопа */
   position: relative;
+  padding: 20px; /* Відступ зверху, як в ActualSection */
 }
 
 /* Заголовок */
 .subheader {
   font-size: 1.5em;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-weight: 600;
   color: #333;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 /* Контейнер форми */
@@ -35,7 +38,7 @@
 
 @media (max-width: 768px) {
   .entryRow {
-    flex-direction: row; /* або можна просто прибрати flex-direction, якщо не потрібен */
+    flex-direction: row;
     align-items: flex-start;
     gap: 10px;
     flex-wrap: wrap;
@@ -99,9 +102,8 @@
   display: flex;
   gap: 5px;
   position: absolute;
-  top: 78%;
-  right: 0px;
-  transform: translateY(-50%);
+  top: 10px;  /* Фіксовано: завжди у верхньому правому куті рядка */
+  right: 10px;
   z-index: 1;
 }
 
@@ -127,7 +129,29 @@
   transform: none;
 }
 
-/* Контейнер кнопки підказки */
+/* Для мобільної версії: змінюємо колір іконки */
+@media (max-width: 768px) {
+  .deleteButtonContainer .deleteButton svg {
+    fill: #dc3545;
+  }
+  .buttonContainer {
+    display: none;
+  }
+  .deleteButtonContainer {
+    display: flex !important;
+  }
+}
+
+/* Кнопка додавання нового рядка */
+.addButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Контейнер для лампочки (підказок) */
 .suggestionButtonContainer {
   display: flex;
   align-items: center;
@@ -161,15 +185,6 @@
   font-size: 2rem;
 }
 
-/* Кнопка додавання нового рядка */
-.addButtonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 10px;
-}
-
 /* Роздільник для мобільних */
 .mobileDivider {
   display: none;
@@ -183,7 +198,8 @@
   max-width: 400px;
   width: 90%;
   border-radius: 50px;
-  padding: 30px;
+  padding: 0;             /* Видаляємо внутрішній відступ */
+  margin: 0;              /* Видаляємо зовнішній відступ */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   background: #ffffff;
   position: relative;
@@ -194,27 +210,30 @@
   display: none;
 }
 
-/* Кнопка закриття модального вікна */
-.closeButton {
-  background: none;
+.closseButton {
+  position: absolute;
+  top: -2px;
+  right: -280px;
+  background: none !important;
   border: none;
   font-size: 1.5rem;
-  color: #ff0000;
+  color: #ff0000 !important;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-.closeButton:hover {
+.closseButton:hover {
   transform: scale(1.2);
 }
 
 /* Контейнер списку */
 .dialogList {
   padding: 10px;
+  margin: 0;
+  list-style: none;
 }
 
 /* Текст підказки */
@@ -251,19 +270,13 @@
 
 /* Адаптація для мобільних */
 @media (max-width: 768px) {
-  .deleteButtonContainer {
-    display: flex !important;
-    position: absolute;
-    top: 50%;
-    right: -50px;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  .buttonContainer {
-    display: none;
-  }
-  .mobileDivider {
-    display: block;
+  .entryRow {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
   }
   .skillCell,
   .levelCell {

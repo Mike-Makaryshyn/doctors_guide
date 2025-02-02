@@ -133,21 +133,13 @@ const AusbildungSection = ({ title = "", data, onUpdate }) => {
     }, 50);
   };
 
+  // Видаляємо автоматичний фокус при додаванні нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-    setTimeout(() => {
-      const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "description");
-      if (textareaRefs.current[lastIndex]) {
-        textareaRefs.current[lastIndex].style.height = "auto";
-        textareaRefs.current[lastIndex].style.height = `${textareaRefs.current[lastIndex].scrollHeight}px`;
-        textareaRefs.current[lastIndex].focus();
-      }
-    }, 100);
   };
 
   const removeRow = (index) => {
@@ -326,7 +318,7 @@ const AusbildungSection = ({ title = "", data, onUpdate }) => {
         onClose={handleCloseModal}
         classes={{ paper: styles.customDialog }}
       >
-        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+        <IconButton className={styles.closseButton} onClick={handleCloseModal}>
           &times;
         </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>

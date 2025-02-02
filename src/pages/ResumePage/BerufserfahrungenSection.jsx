@@ -75,10 +75,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   const [focusedField, setFocusedField] = useState(null);
 
   useEffect(() => {
-    console.log("descriptionHints:", descriptionHints);
-  }, [descriptionHints]);
-
-  useEffect(() => {
     const interval = setInterval(() => {
       setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
     }, 1500);
@@ -97,7 +93,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   }, [data]);
 
   const handleFocus = (index, fieldType) => {
-    console.log("handleFocus called with index:", index, "fieldType:", fieldType);
     setActiveRowIndex(index);
     setFocusedField(fieldType);
   };
@@ -105,7 +100,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   const handleDateChange = (index, newValue) => {
     try {
       validateDateValue(newValue);
-      console.log("Date validated successfully");
     } catch (error) {
       console.error("Date validation error:", error.message);
     }
@@ -140,21 +134,13 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
     }, 50);
   };
 
+  // Не встановлюємо автоматичний фокус після додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
       { date: "", description: "", place: "", datePlaceholder: "Datum" },
     ];
     onUpdate(updatedEntries);
-    setTimeout(() => {
-      const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "description");
-      if (textareaRefs.current[lastIndex]) {
-        textareaRefs.current[lastIndex].style.height = "auto";
-        textareaRefs.current[lastIndex].style.height = `${textareaRefs.current[lastIndex].scrollHeight}px`;
-        textareaRefs.current[lastIndex].focus();
-      }
-    }, 100);
   };
 
   const removeRow = (index) => {
@@ -163,13 +149,11 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   };
 
   const toggleSuggestions = () => {
-    console.log("toggleSuggestions called");
     setIsModalOpen(true);
     isModalOpenRef.current = true;
   };
 
   const handleCloseModal = () => {
-    console.log("handleCloseModal called");
     setIsModalOpen(false);
     isModalOpenRef.current = false;
     setActiveRowIndex(null);
@@ -177,8 +161,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
   };
 
   const handleSelectHint = (hint) => {
-    console.log("handleSelectHint called with hint:", hint);
-    console.log("activeRowIndex:", activeRowIndex);
     if (activeRowIndex !== null) {
       const updatedEntries = [...data];
       const currentDescription = updatedEntries[activeRowIndex].description || "";
@@ -193,8 +175,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
           field.style.height = "auto";
           field.style.height = `${field.scrollHeight}px`;
           field.focus();
-        } else {
-          console.error("Error: Textarea not found for index", activeRowIndex);
         }
       }, 100);
       setIsModalOpen(false);
@@ -279,7 +259,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                         isClickingSuggestionButtonRef.current = true;
                       }}
                       onClick={() => {
-                        console.log(`Lightbulb clicked for index ${index}`);
                         setActiveRowIndex(index);
                         toggleSuggestions();
                         setTimeout(() => {
@@ -340,7 +319,7 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
         onClose={handleCloseModal}
         classes={{ paper: styles.customDialog }}
       >
-        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+        <IconButton className={styles.closseButton} onClick={handleCloseModal}>
           &times;
         </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>

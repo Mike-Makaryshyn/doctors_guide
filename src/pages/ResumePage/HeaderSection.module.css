@@ -1,16 +1,17 @@
-/* HeaderSection.module.css */
-
 /* Загальний контейнер для секції */
 .headerSection {
   margin-bottom: 30px;
+  padding: 20px; /* Додано відступ, як в інших секціях */
 }
 
 /* Заголовок */
 .subheader {
   font-size: 1.5em;
-  margin-bottom: 20px;
-  font-weight: 600; /* Використання важкого шрифту */
-  color: #333; /* Темний колір тексту */
+  margin-bottom: 50px; /* Збільшено margin-bottom */
+  font-weight: 600;
+  color: #333;
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 /* Форма */
@@ -37,7 +38,6 @@
   width: 100%;
 }
 
-/* Стилі для Input Полів */
 /* Стилі для Input Полів */
 .inputField {
   width: 100%;
