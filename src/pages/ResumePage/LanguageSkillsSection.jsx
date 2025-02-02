@@ -1,4 +1,3 @@
-// src/pages/ResumePage/LanguageSkillsSection.jsx
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
@@ -6,7 +5,6 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb"; // Використо
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -16,13 +14,13 @@ import styles from "./LanguageSkillsSection.module.css";
 
 const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
-  const [activeField, setActiveField] = useState(null); // 'language' або 'level'
+  const [activeField, setActiveField] = useState(null); // "language" або "level"
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
   const isClickingSuggestionButtonRef = useRef(false); // Реф для відстеження натискання на лампочку
   const suggestionsRef = useRef(null); // Реф для списку підказок
 
-  // Реф для кожного input
+  // Реф для кожного textarea
   const inputRefs = useRef([]);
 
   // Використовуємо підказки з ResumeForm.js
@@ -32,6 +30,12 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   const handleFocus = (index, fieldType) => {
     setActiveRowIndex(index);
     setActiveField(fieldType);
+    // Автоматичне розширення: скинемо висоту і встановимо її з scrollHeight
+    const field = inputRefs.current[index * 2 + (fieldType === "level" ? 1 : 0)];
+    if (field) {
+      field.style.height = "auto";
+      field.style.height = `${field.scrollHeight}px`;
+    }
   };
 
   // Функції для валідації
@@ -39,14 +43,12 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     if (!language.trim()) {
       throw new Error("Language cannot be empty.");
     }
-    // Додайте додаткову валідацію за потребою
   };
 
   const validateLevel = (level) => {
     if (!level.trim()) {
       throw new Error("Level cannot be empty.");
     }
-    // Додайте додаткову валідацію за потребою
   };
 
   // Обробка зміни мови з валідацією
@@ -56,12 +58,17 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
       console.log("Language validated successfully");
     } catch (error) {
       console.error("Language validation error:", error.message);
-      // Можливо, додати повідомлення користувачу
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].language = newValue;
     onUpdate(updatedEntries);
+
+    // Авто-розширення textarea
+    const field = inputRefs.current[index * 2];
+    if (field) {
+      field.style.height = "auto";
+      field.style.height = `${field.scrollHeight}px`;
+    }
   };
 
   // Обробка зміни рівня з валідацією
@@ -71,12 +78,17 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
       console.log("Level validated successfully");
     } catch (error) {
       console.error("Level validation error:", error.message);
-      // Можливо, додати повідомлення користувачу
     }
-
     const updatedEntries = [...data];
     updatedEntries[index].level = newValue;
     onUpdate(updatedEntries);
+
+    // Авто-розширення textarea
+    const field = inputRefs.current[index * 2 + 1];
+    if (field) {
+      field.style.height = "auto";
+      field.style.height = `${field.scrollHeight}px`;
+    }
   };
 
   // Додавання нового рядка
@@ -87,10 +99,10 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     setTimeout(() => {
       const lastIndex = updatedEntries.length - 1;
       handleFocus(lastIndex, "language"); // Фокус на language за замовчуванням
-      if (inputRefs.current[lastIndex * 2]) { // Множимо на 2 для Language
+      if (inputRefs.current[lastIndex * 2]) {
         inputRefs.current[lastIndex * 2].focus();
       }
-    }, 100); // Даємо час DOM оновитися
+    }, 100);
   };
 
   // Видалення рядка
@@ -102,13 +114,13 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   // Відкриття модального вікна
   const toggleSuggestions = () => {
     setIsModalOpen(true);
-    isModalOpenRef.current = true; // Оновлюємо реф
+    isModalOpenRef.current = true;
   };
 
   // Закриття модального вікна
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    isModalOpenRef.current = false; // Оновлюємо реф
+    isModalOpenRef.current = false;
     setActiveRowIndex(null);
     setActiveField(null);
   };
@@ -118,9 +130,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
     if (activeRowIndex !== null && activeField) {
       const updatedEntries = [...data];
       const currentValue = updatedEntries[activeRowIndex][activeField] || "";
-      const newValue = currentValue
-        ? `${currentValue}\n${hint}`
-        : hint;
+      const newValue = currentValue ? `${currentValue}\n${hint}` : hint;
       updatedEntries[activeRowIndex][activeField] = newValue;
       onUpdate(updatedEntries);
 
@@ -132,7 +142,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
           field.style.height = `${field.scrollHeight}px`;
           field.focus();
         } else {
-          console.error("Error: Input not found for index", activeRowIndex);
+          console.error("Error: Textarea not found for index", activeRowIndex);
         }
       }, 100);
 
@@ -143,10 +153,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   // Закриття модалки при кліку поза її межами
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        suggestionsRef.current &&
-        !suggestionsRef.current.contains(event.target)
-      ) {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
         setActiveRowIndex(null);
         setActiveField(null);
         setIsModalOpen(false);
@@ -162,19 +169,16 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
   return (
     <section className={styles.languageSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
-
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
           <div key={index} className={styles.entryRow}>
             {/* Поле для мови */}
             <div className={styles.languageCell}>
-              <input
-                type="text"
+              <textarea
                 value={entry.language || ""}
                 onChange={(e) => handleLanguageChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "language")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setActiveField(null);
@@ -182,27 +186,26 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
                 }}
                 placeholder="Language"
                 className={styles.inputField}
-                ref={(el) => (inputRefs.current[index * 2] = el)} // Множимо на 2 для розділення Language і Level
+                ref={(el) => (inputRefs.current[index * 2] = el)}
+                rows={1}
               />
-
               {/* Кнопка підказки для мови */}
               {activeField === "language" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
                   <IconButton
                     className={styles.suggestionButton}
                     onMouseDown={() => {
-                      isClickingSuggestionButtonRef.current = true; // Встановлюємо флаг перед натисканням
+                      isClickingSuggestionButtonRef.current = true;
                     }}
                     onClick={() => {
-                      setActiveRowIndex(index); // Встановлюємо активний рядок
-                      setActiveField("language"); // Встановлюємо активне поле
+                      setActiveRowIndex(index);
+                      setActiveField("language");
                       toggleSuggestions();
-                      // Скидаємо флаг після натискання
                       setTimeout(() => {
                         isClickingSuggestionButtonRef.current = false;
                       }, 0);
                     }}
-                    aria-label="Підказки для мови"
+                    aria-label="Language suggestions"
                   >
                     <LightbulbIcon className={styles.glowingLightbulb} />
                   </IconButton>
@@ -212,13 +215,11 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
 
             {/* Поле для рівня */}
             <div className={styles.levelCell}>
-              <input
-                type="text"
+              <textarea
                 value={entry.level || ""}
                 onChange={(e) => handleLevelChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "level")}
                 onBlur={() => {
-                  // Скидаємо фокус тільки якщо модальне вікно не відкрито
                   if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
                     setActiveRowIndex(null);
                     setActiveField(null);
@@ -226,27 +227,26 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
                 }}
                 placeholder="Level"
                 className={styles.inputField}
-                ref={(el) => (inputRefs.current[index * 2 + 1] = el)} // Множимо на 2 і додаємо 1 для рівня
+                ref={(el) => (inputRefs.current[index * 2 + 1] = el)}
+                rows={1}
               />
-
               {/* Кнопка підказки для рівня */}
               {activeField === "level" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
                   <IconButton
                     className={styles.suggestionButton}
                     onMouseDown={() => {
-                      isClickingSuggestionButtonRef.current = true; // Встановлюємо флаг перед натисканням
+                      isClickingSuggestionButtonRef.current = true;
                     }}
                     onClick={() => {
-                      setActiveRowIndex(index); // Встановлюємо активний рядок
-                      setActiveField("level"); // Встановлюємо активне поле
+                      setActiveRowIndex(index);
+                      setActiveField("level");
                       toggleSuggestions();
-                      // Скидаємо флаг після натискання
                       setTimeout(() => {
                         isClickingSuggestionButtonRef.current = false;
                       }, 0);
                     }}
-                    aria-label="Підказки для рівня"
+                    aria-label="Level suggestions"
                   >
                     <LightbulbIcon className={styles.glowingLightbulb} />
                   </IconButton>
@@ -256,7 +256,11 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
 
             {/* Кнопка видалення */}
             <div className={styles.buttonContainer}>
-              <IconButton onClick={() => removeRow(index)} className={styles.deleteButton} aria-label="Видалити">
+              <IconButton
+                onClick={() => removeRow(index)}
+                className={styles.deleteButton}
+                aria-label="Delete"
+              >
                 <DeleteIcon />
               </IconButton>
             </div>
@@ -266,7 +270,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
               <IconButton
                 onClick={() => removeRow(index)}
                 className={styles.deleteButton}
-                aria-label="Видалити"
+                aria-label="Delete"
               >
                 <DeleteIcon />
               </IconButton>
@@ -277,19 +281,20 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
 
       {/* Кнопка додавання нового рядка */}
       <div className={styles.addButtonContainer}>
-        <IconButton onClick={addNewRow} aria-label="Додати">
+        <IconButton onClick={addNewRow} aria-label="Add">
           <AddIcon />
         </IconButton>
       </div>
 
-      {/* Модальне вікно з підказками */}
-      <Dialog open={isModalOpen} onClose={handleCloseModal} classes={{ paper: styles.customDialog }}>
-        <DialogTitle className={styles.dialogTitle}>
-          Виберіть підказку
-          <IconButton className={styles.closeButton} onClick={handleCloseModal}>
-            &times;
-          </IconButton>
-        </DialogTitle>
+      {/* Модальне вікно з підказками – без хедера */}
+      <Dialog
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        classes={{ paper: styles.customDialog }}
+      >
+        <IconButton className={styles.closeButton} onClick={handleCloseModal}>
+          &times;
+        </IconButton>
         <List className={styles.dialogList} ref={suggestionsRef}>
           {(activeField === "language" ? languageHints : levelHints).map((hint, idx) => (
             <ListItem key={idx} disablePadding>
@@ -310,7 +315,7 @@ LanguageSkillsSection.propTypes = {
     PropTypes.shape({
       language: PropTypes.string,
       level: PropTypes.string,
-      id: PropTypes.string, // Додайте поле id для Firebase документів, якщо потрібно
+      id: PropTypes.string,
     })
   ).isRequired,
   onUpdate: PropTypes.func.isRequired,

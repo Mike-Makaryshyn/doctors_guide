@@ -61,6 +61,7 @@ const validateDateValue = (val) => {
 
 const AktuellSection = ({ title = "", data, onUpdate }) => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
+  const [focusedField, setFocusedField] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
@@ -76,7 +77,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
       // Додаткова логіка при валідації (якщо необхідно)
     } catch (error) {
       console.error(error.message);
-      // Можливо, додати повідомлення користувачу
+      // Можна додати повідомлення для користувача
     }
 
     const updatedEntries = [...data];
@@ -100,7 +101,6 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
   };
 
   // Додавання нового рядка
-  // Додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
@@ -110,7 +110,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
 
     setTimeout(() => {
       const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex);
+      handleFocus(lastIndex, "description");
     }, 100); // Даємо час DOM оновитися
   };
 
@@ -130,35 +130,24 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     isModalOpenRef.current = false;
-    setActiveDescriptionIndex(null); // Скидаємо активний індекс при закритті модалки
+    setActiveDescriptionIndex(null);
+    setFocusedField(null);
   };
 
   // Вставка підказки у поле опису
   const handleSelectHint = (hint) => {
-    console.log("handleSelectHint called with hint:", hint);
-    console.log("activeDescriptionIndex:", activeDescriptionIndex);
-  
     if (activeDescriptionIndex === null || activeDescriptionIndex < 0) {
       console.error("Error: activeDescriptionIndex is invalid.");
       return;
     }
-  
+
     const updatedEntries = [...data];
-    console.log("Before update:", updatedEntries);
-  
-    if (!updatedEntries[activeDescriptionIndex]) {
-      console.error("Error: No entry found for index", activeDescriptionIndex);
-      return;
-    }
-  
     const currentDescription = updatedEntries[activeDescriptionIndex].description || "";
     const newDescription = currentDescription ? `${currentDescription}\n${hint}` : hint;
     
     updatedEntries[activeDescriptionIndex].description = newDescription;
-    console.log("After update:", updatedEntries);
-  
     onUpdate(updatedEntries);
-  
+
     setTimeout(() => {
       const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
       if (textarea) {
@@ -169,7 +158,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
         console.error("Error: Textarea not found for index", activeDescriptionIndex);
       }
     }, 100);
-  
+
     setIsModalOpen(false);
     isModalOpenRef.current = false;
   };
@@ -177,9 +166,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
   // Динамічне розширення висоти textarea
   const handleAutoExpand = (e) => {
     const field = e.target;
-
-    field.style.height = "auto"; // Скидаємо висоту, щоб отримати точні розрахунки
-    field.style.height = `${field.scrollHeight}px`; // Встановлюємо висоту на основі вмісту
+    field.style.height = "auto";
+    field.style.height = `${field.scrollHeight}px`;
   };
 
   const dateHints = [
@@ -199,16 +187,17 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     }, 1500);
 
     return () => clearInterval(interval);
-  }, []); // Завжди крутити підказки незалежно від фокусу
+  }, []);
 
-  // Функція для визначення, яку підказку показувати
+  // Функція для визначення, яку підказку показувати для поля дати
   const getPlaceholder = (index, value) => {
-    if (value) return ""; // Якщо поле заповнене, підказка не потрібна
+    if (value) return "";
     if (document.activeElement && document.activeElement.tagName === "INPUT") {
-      return index === focusedIndex ? "" : dateHints[hintIndex]; // Якщо курсор у полі, підказку не показувати
+      return index === focusedIndex ? "" : dateHints[hintIndex];
     }
-    return dateHints[hintIndex]; // У всіх інших випадках показувати підказку
+    return dateHints[hintIndex];
   };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -228,8 +217,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
         field.style.height = "auto";
         field.style.height = `${field.scrollHeight}px`;
       });
-    }, 50); // Додаємо затримку для стабільності
-  }, [data]); // Виконується при оновленні data
+    }, 50);
+  }, [data]);
 
   useEffect(() => {
     const checkForKeyboard = () => {
@@ -244,28 +233,51 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     };
 
     window.addEventListener("resize", checkForKeyboard);
-
     return () => window.removeEventListener("resize", checkForKeyboard);
   }, []);
 
   useEffect(() => {
     if (activeDescriptionIndex !== null) {
+      // Додаткова логіка, якщо потрібно
     }
   }, [activeDescriptionIndex, data]);
-  const handleFocus = (index) => {
-    console.log("handleFocus called with index:", index);
+
+  // Функція фокуса приймає тип поля ("date" або "description")
+  const handleFocus = (index, fieldType) => {
     setActiveDescriptionIndex(index);
-  
-    setTimeout(() => {
-      const textarea = document.querySelectorAll("textarea")[index];
-      if (textarea) {
-        textarea.style.height = "auto";
-        textarea.style.height = `${textarea.scrollHeight}px`;
-      } else {
-        console.error("Error: No textarea found for index", index);
-      }
-    }, 50);
+    setFocusedField(fieldType);
+    setFocusedIndex(index);
+    // Якщо це поле опису, оновлюємо розмір textarea
+    if (fieldType === "description") {
+      setTimeout(() => {
+        const textarea = document.querySelectorAll("textarea")[index];
+        if (textarea) {
+          textarea.style.height = "auto";
+          textarea.style.height = `${textarea.scrollHeight}px`;
+        }
+      }, 50);
+    }
   };
+
+  // Оновлена функція blur, яка не скидає активний стан, якщо фокус перейшов до textarea з класом inputField
+  const handleBlur = (index, event) => {
+    setTimeout(() => {
+      if (!isModalOpenRef.current) {
+        const activeEl = document.activeElement;
+        if (
+          activeEl &&
+          activeEl.tagName === "TEXTAREA" &&
+          activeEl.classList.contains(styles.inputField)
+        ) {
+          // Якщо фокус перейшов до поля опису, залишаємо активний стан
+          return;
+        }
+        setActiveDescriptionIndex(null);
+        setFocusedField(null);
+      }
+    }, 100);
+  };
+
   return (
     <section className={styles.aktuellSection}>
       <h3 className={styles.subheader}>{title}</h3>
@@ -278,8 +290,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                 type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}
-                onFocus={() => handleFocus(index)}
-                onBlur={() => handleBlur(index)}
+                onFocus={() => handleFocus(index, "date")}
+                onBlur={(e) => handleBlur(index, e)}
                 placeholder={getPlaceholder(index, entry.date)}
                 className={styles.dateInput}
               />
@@ -292,97 +304,85 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                   <IconButton
                     onClick={() => removeRow(index)}
                     className={styles.deleteButton}
-                    
                     aria-label="Видалити"
                   >
                     <DeleteIcon />
                   </IconButton>
                 </div>
-
-                {/* Поле опису */}
                 <textarea
                   value={entry.description || ""}
                   onChange={(e) => {
                     handleDescriptionChange(index, e.target.value);
                     handleAutoExpand(e);
                   }}
-                  onFocus={() => handleFocus(index)}
-                  onBlur={() => handleBlur(index)}
+                  onFocus={() => handleFocus(index, "description")}
+                  onBlur={(e) => handleBlur(index, e)}
                   placeholder="Information"
                   className={styles.inputField}
                   rows={1}
                 />
-
-                {activeDescriptionIndex === index && (
+                {activeDescriptionIndex === index && focusedField === "description" && (
                   <div
                     className={styles.suggestionButtonContainer}
                     style={{
                       position: "absolute",
                       top: "38%",
-                      right: "-40px", // Десктоп: Відступ справа
-                      transform: "translateY(-50%)", // Вирівнювання по центру
+                      right: "-40px",
+                      transform: "translateY(-50%)",
                     }}
                   >
                     <LightbulbIcon
                       className={`${styles.glowingLightbulb} ${styles.mobileLightbulb}`}
                       onClick={() => {
-                        setActiveDescriptionIndex(index); // Гарантуємо, що підказка відкриється для правильного поля
+                        setActiveDescriptionIndex(index);
                         toggleSuggestions();
                       }}
                     />
                   </div>
                 )}
               </div>
-
-              {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
-              <IconButton
-  onClick={() => removeRow(index)}
-  className={styles.deleteButton}
-  aria-label="Видалити"
->
-  <DeleteIcon className={styles.deleteIcon} /> {/* Додали клас deleteIcon */}
-</IconButton>
+                <IconButton
+                  onClick={() => removeRow(index)}
+                  className={styles.deleteButton}
+                  aria-label="Видалити"
+                >
+                  <DeleteIcon className={styles.deleteIcon} />
+                </IconButton>
               </div>
             </div>
-            {/* Роздільник для мобільних */}
             <div className={styles.mobileDivider}></div>
           </div>
         ))}
       </form>
-
-      {/* Кнопка для додавання нового рядка */}
       <div className={styles.addButtonContainer}>
         <IconButton onClick={addNewRow} aria-label="Додати">
           <AddIcon />
         </IconButton>
       </div>
-
-      {/* Модальне вікно з підказками */}
       <Dialog
-  open={isModalOpen}
-  onClose={handleCloseModal}
-  classes={{ paper: styles.customDialog }}
-  BackdropProps={{
-    classes: {
-      root: styles.noBackdrop,  // Додаємо клас для прозорості бекдропу
-    },
-  }}
->
-  <IconButton className={styles.closseButton} onClick={handleCloseModal}>
-    &times;
-  </IconButton>
-
-  <List className={styles.dialogList}>
-    {descriptionHints.map((hint, idx) => (
-      <ListItem key={idx} disablePadding>
-        <ListItemButton onClick={() => handleSelectHint(hint)}>
-          <ListItemText primary={hint} className={styles.dialogText} />
-        </ListItemButton>
-      </ListItem>
-    ))}
-  </List>
-</Dialog>
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        classes={{ paper: styles.customDialog }}
+        BackdropProps={{
+          classes: {
+            root: styles.noBackdrop,
+          },
+        }}
+      >
+        <IconButton className={styles.closseButton} onClick={handleCloseModal}>
+          &times;
+        </IconButton>
+        <List className={styles.dialogList}>
+          {descriptionHints.map((hint, idx) => (
+            <ListItem key={idx} disablePadding>
+              <ListItemButton onClick={() => handleSelectHint(hint)}>
+                <ListItemText primary={hint} className={styles.dialogText} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Dialog>
     </section>
   );
 };

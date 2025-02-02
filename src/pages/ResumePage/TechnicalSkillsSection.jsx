@@ -20,10 +20,10 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
   const isClickingSuggestionButtonRef = useRef(false); // Реф для відстеження натискання на лампочку
   const suggestionsRef = useRef(null); // Реф для списку підказок
 
-  // Використовуємо textarea для автозбільшення
-  const textareaRefs = useRef([]);
+  // Реф для кожного textarea
+  const textAreaRefs = useRef([]);
 
-  // Підказки з ResumeForm.js
+  // Використовуємо підказки з ResumeForm.js
   const skillHints = resumeFormTexts.technicalSkillsSuggestions;
   const levelHints = resumeFormTexts.levelSuggestions;
 
@@ -47,16 +47,15 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     // Додаткову валідацію можна додати за потребою
   };
 
-  // Автоматичне розширення textarea
-  const autoResizeTextarea = (refIndex) => {
-    const el = textareaRefs.current[refIndex];
+  // Функція для автоматичного розширення textarea
+  const autoExpand = (el) => {
     if (el) {
       el.style.height = "auto";
       el.style.height = el.scrollHeight + "px";
     }
   };
 
-  // Обробка зміни навички
+  // Обробка зміни навички з валідацією
   const handleSkillChange = (index, newValue) => {
     try {
       validateSkill(newValue);
@@ -68,10 +67,10 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].skill = newValue;
     onUpdate(updatedEntries);
-    autoResizeTextarea(index * 2);
+    autoExpand(textAreaRefs.current[index * 2]);
   };
 
-  // Обробка зміни рівня
+  // Обробка зміни рівня з валідацією
   const handleLevelChange = (index, newValue) => {
     try {
       validateTechnicalLevel(newValue);
@@ -82,7 +81,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     const updatedEntries = [...data];
     updatedEntries[index].technicalLevel = newValue;
     onUpdate(updatedEntries);
-    autoResizeTextarea(index * 2 + 1);
+    autoExpand(textAreaRefs.current[index * 2 + 1]);
   };
 
   // Додавання нового рядка
@@ -93,11 +92,11 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     setTimeout(() => {
       const lastIndex = updatedEntries.length - 1;
       handleFocus(lastIndex, "skill"); // Фокус на skill за замовчуванням
-      if (textareaRefs.current[lastIndex * 2]) {
-        autoResizeTextarea(lastIndex * 2);
-        textareaRefs.current[lastIndex * 2].focus();
+      if (textAreaRefs.current[lastIndex * 2]) {
+        textAreaRefs.current[lastIndex * 2].focus();
+        autoExpand(textAreaRefs.current[lastIndex * 2]);
       }
-    }, 100);
+    }, 100); // Даємо час DOM оновитися
   };
 
   // Видалення рядка
@@ -106,7 +105,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     onUpdate(updatedEntries);
   };
 
-  // Відкриття модального вікна з підказками
+  // Відкриття модального вікна
   const toggleSuggestions = () => {
     setIsModalOpen(true);
     isModalOpenRef.current = true;
@@ -131,11 +130,10 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
 
       setTimeout(() => {
         const fieldIndex = activeField === "technicalLevel" ? 1 : 0;
-        const el = textareaRefs.current[activeRowIndex * 2 + fieldIndex];
-        if (el) {
-          el.style.height = "auto";
-          el.style.height = el.scrollHeight + "px";
-          el.focus();
+        const field = textAreaRefs.current[activeRowIndex * 2 + fieldIndex];
+        if (field) {
+          autoExpand(field);
+          field.focus();
         } else {
           console.error("Error: Textarea not found for index", activeRowIndex);
         }
@@ -156,8 +154,20 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
+
+  // Автоматичне встановлення висоти textarea після завантаження даних
+  useEffect(() => {
+    data.forEach((_, index) => {
+      const skillField = textAreaRefs.current[index * 2];
+      const levelField = textAreaRefs.current[index * 2 + 1];
+      autoExpand(skillField);
+      autoExpand(levelField);
+    });
+  }, [data]);
 
   return (
     <section className={styles.technicalSkillsSection}>
@@ -179,8 +189,8 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
                 }}
                 placeholder="Навичка"
                 className={styles.inputField}
+                ref={(el) => (textAreaRefs.current[index * 2] = el)}
                 rows={1}
-                ref={(el) => (textareaRefs.current[index * 2] = el)}
               />
               {activeField === "skill" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
@@ -218,8 +228,8 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
                 }}
                 placeholder="Рівень"
                 className={styles.inputField}
+                ref={(el) => (textAreaRefs.current[index * 2 + 1] = el)}
                 rows={1}
-                ref={(el) => (textareaRefs.current[index * 2 + 1] = el)}
               />
               {activeField === "technicalLevel" && activeRowIndex === index && (
                 <div className={styles.suggestionButtonContainer}>
