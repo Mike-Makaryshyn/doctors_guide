@@ -167,7 +167,7 @@ const downloadResumePDF = async () => {
   }
 };
 
-// Функція для перегляду PDF (відкриває у новій вкладці)
+
 const previewResumePDF = async () => {
   const resume = await getUserResume();
   if (resume) {
