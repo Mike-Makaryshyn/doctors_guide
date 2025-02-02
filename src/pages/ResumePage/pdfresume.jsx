@@ -146,7 +146,7 @@ function createPDFDocument(resume) {
   yPos = addTable("Ausbildung", ausbildungData, ["Datum", "Beschreibung"], doc, yPos);
 
   // "Sprachen" (50/50)
-  const languagesData = (resume.languages || [])
+  const languagesData = (resume.languageSkills || []) 
     .filter((e) => e.language && e.level)
     .map((e) => [e.language, e.level]);
   if (languagesData.length > 0) {
