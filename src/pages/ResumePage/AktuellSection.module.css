@@ -285,6 +285,8 @@ textarea {
 .customDialog {
   max-width: 400px;
   width: 90%;
+  overflow-x: hidden; /* забороняємо горизонтальний скрол */
+  overflow-y: auto;
   border-radius: 50px;
   padding: 0; 
   margin: 0; 

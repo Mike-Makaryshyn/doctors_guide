@@ -102,7 +102,7 @@ function createPDFDocument(resume) {
   // "Persönliche Daten"
   doc.setFontSize(13);
   doc.setFont(undefined, "bold");
-  doc.text("Persönliche Daten", 10, yPos);
+
   yPos += 10;
 
   doc.setFontSize(9);
