@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Joyride, { STATUS } from "react-joyride";
+// Імпортуємо глобальні та локальні стилі, визначені в DocumentTutorial.module.scss
+import styles from "./DocumentTutorial.module.scss";
 
 const allSteps = [
   {
@@ -58,7 +60,6 @@ const allSteps = [
     placement: "bottom",
     disableBeacon: true,
   },
-  
 ];
 
 const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
@@ -99,15 +100,22 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
       continuous={true}
       scrollToFirstStep={true}
       showSkipButton={true}
-      showProgress={true}
+      
+      showProgress={false}
       callback={handleJoyrideCallback}
+      // Мінімальні inline-налаштування; більшість стилів беруться із глобальних стилів DocumentTutorial.module.scss
       styles={{
         options: {
           zIndex: 10000,
           primaryColor: "#023c6f",
           overlayColor: "rgba(0, 0, 0, 0.4)",
         },
-        tooltipContainer: { textAlign: "left" },
+        // Збільшуємо ширину тултіпів до 350px
+        tooltip: {
+          maxWidth: "500px",
+          textAlign: "justify",
+        },
+        tooltipContainer: { textAlign: "justify" },
       }}
       locale={{
         back: "Назад",
