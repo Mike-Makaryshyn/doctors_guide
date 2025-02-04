@@ -11,8 +11,10 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import resumeFormTexts from "../../constants/translation/ResumeForm";
 import styles from "./BerufserfahrungenSection.module.css";
-
 import { parse, isValid } from "date-fns";
+
+// Імпортуємо хук для визначення мобільного пристрою
+import useIsMobile from "../../hooks/useIsMobile";
 
 // Функції для валідації дати
 const isValidMonth = (month) => {
@@ -75,6 +77,9 @@ const BerufserfahrungenSection = ({
   const [hintIndex, setHintIndex] = useState(0);
   const [focusedField, setFocusedField] = useState(null);
 
+  // Використовуємо хук для визначення мобільного пристрою
+  const isMobile = useIsMobile(600);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setHintIndex((prevIndex) => (prevIndex + 1) % dateHints.length);
@@ -98,12 +103,15 @@ const BerufserfahrungenSection = ({
     if (isTutorialActive && data.length > 0 && activeRowIndex === null) {
       const field = textareaRefs.current[0];
       if (field && typeof field.focus === "function") {
-        field.focus();
+        // На мобільних не викликаємо focus(), щоб уникнути появи клавіатури
+        if (!isMobile) {
+          field.focus();
+        }
         setActiveRowIndex(0);
         setFocusedField("description");
       }
     }
-  }, [isTutorialActive, data, activeRowIndex]);
+  }, [isTutorialActive, data, activeRowIndex, isMobile]);
 
   // При зміні isTutorialActive (тобто, після завершення туторіалу) скидаємо стан і забезпечуємо, що поля стають доступними
   useEffect(() => {
@@ -230,7 +238,10 @@ const BerufserfahrungenSection = ({
         if (field) {
           field.style.height = "auto";
           field.style.height = `${field.scrollHeight}px`;
-          field.focus();
+          // Застосовуємо focus тільки на десктопі
+          if (!isMobile) {
+            field.focus();
+          }
         }
       }, 100);
       setIsModalOpen(false);

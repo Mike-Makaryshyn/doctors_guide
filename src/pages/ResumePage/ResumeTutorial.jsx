@@ -51,8 +51,14 @@ const allSteps = [
     placement: "bottom",
     disableBeacon: true,
   },
-
-
+  {
+    target: '[data-tutorial="openModalButton"]',
+    content:
+      "Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
+    placement: "bottom",
+    disableBeacon: true,
+  },
+  
 ];
 
 const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
