@@ -1,4 +1,3 @@
-// src/pages/ResumePage/AktuellSection.jsx
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
@@ -6,7 +5,6 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -33,12 +31,10 @@ const checkMMYYYY = (str) => {
 
 const validateDateValue = (val) => {
   const lowered = val.toLowerCase().trim();
-
   if (!lowered || lowered.endsWith("/") || lowered.includes("_")) {
     // Якщо введення ще не завершене, не показувати помилки
     return;
   }
-
   if (lowered.startsWith("seit ")) {
     const parts = lowered.split(" ").filter(Boolean);
     if (parts.length !== 2)
@@ -46,7 +42,6 @@ const validateDateValue = (val) => {
     checkMMYYYY(parts[1]);
     return;
   }
-
   if (lowered.includes(" - ")) {
     const parts = lowered.split(" - ").map((p) => p.trim());
     if (parts.length === 2) {
@@ -55,11 +50,14 @@ const validateDateValue = (val) => {
       return;
     }
   }
-
   throw new Error("Ungültiges Datumsformat.");
 };
 
-const AktuellSection = ({ title = "", data, onUpdate }) => {
+/**
+ * Проп isTutorialActive: якщо true, то під час проходження туторіалу
+ * курсор буде примусово встановлюватися у полі для опису, що дозволяє відобразити кнопку підказок.
+ */
+const AktuellSection = ({ title = "", data, onUpdate, isTutorialActive = false }) => {
   const [activeDescriptionIndex, setActiveDescriptionIndex] = useState(null);
   const [focusedField, setFocusedField] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,7 +65,10 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
   const isModalOpenRef = useRef(false); // Реф для відстеження стану модалки
   const [isKeyboardOpen, setIsKeyboardOpen] = useState(false);
 
-  // Використовуємо підказки з ResumeForm.js
+  // Використовуємо ref для поля опису; це дозволяє програмно встановлювати фокус
+  const descriptionRef = useRef([]);
+
+  // Підказки з ResumeForm.js
   const descriptionHints = resumeFormTexts.suggestions;
 
   // Обробка зміни дати
@@ -88,7 +89,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     updatedEntries[index].description = value;
     onUpdate(updatedEntries);
     setTimeout(() => {
-      const textarea = document.querySelectorAll("textarea")[index];
+      const textarea = descriptionRef.current[index];
       if (textarea) {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
@@ -136,7 +137,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     updatedEntries[activeDescriptionIndex].description = newDescription;
     onUpdate(updatedEntries);
     setTimeout(() => {
-      const textarea = document.querySelectorAll("textarea")[activeDescriptionIndex];
+      const textarea = descriptionRef.current[activeDescriptionIndex];
       if (textarea) {
         textarea.style.height = "auto";
         textarea.style.height = `${textarea.scrollHeight}px`;
@@ -147,7 +148,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     isModalOpenRef.current = false;
   };
 
-  // Динамічне розширення висоти textarea
+  // Динамічне розширення висоти textarea для інших подій
   const handleAutoExpand = (e) => {
     const field = e.target;
     field.style.height = "auto";
@@ -191,12 +192,14 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Автоматичне розширення textarea після оновлення `data`
+  // Автоматичне розширення textarea після оновлення даних
   useEffect(() => {
     setTimeout(() => {
-      document.querySelectorAll("textarea").forEach((field) => {
-        field.style.height = "auto";
-        field.style.height = `${field.scrollHeight}px`;
+      descriptionRef.current.forEach((field) => {
+        if (field) {
+          field.style.height = "auto";
+          field.style.height = `${field.scrollHeight}px`;
+        }
       });
     }, 50);
   }, [data]);
@@ -216,16 +219,27 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
     return () => window.removeEventListener("resize", checkForKeyboard);
   }, []);
 
+  // Якщо туторіал активний, примусово встановлюємо фокус у полі опису
+  useEffect(() => {
+    if (isTutorialActive && activeDescriptionIndex !== null) {
+      const textarea = descriptionRef.current[activeDescriptionIndex];
+      if (textarea) {
+        textarea.focus();
+      }
+    }
+  }, [isTutorialActive, activeDescriptionIndex]);
+
   // Фокус/blur
   const handleFocus = (index, fieldType) => {
     setActiveDescriptionIndex(index);
     setFocusedField(fieldType);
     setFocusedIndex(index);
-    // Якщо це поле опису, оновлюємо розмір textarea
-    if (fieldType === "description") {
+    // Якщо це поле опису і туторіал активний, примусово встановлюємо фокус
+    if (fieldType === "description" && isTutorialActive) {
       setTimeout(() => {
-        const textarea = document.querySelectorAll("textarea")[index];
+        const textarea = descriptionRef.current[index];
         if (textarea) {
+          textarea.focus();
           textarea.style.height = "auto";
           textarea.style.height = `${textarea.scrollHeight}px`;
         }
@@ -259,6 +273,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
             {/* Поле дати */}
             <div className={styles.dateCell}>
               <input
+                data-tutorial="dateField"
                 type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}
@@ -275,6 +290,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                 {/* Кнопка видалення (десктоп) */}
                 <div className={styles.buttonContainer}>
                   <IconButton
+                    data-tutorial="deleteRowButton"
                     onClick={() => removeRow(index)}
                     className={styles.deleteButton}
                     aria-label="Видалити"
@@ -284,6 +300,8 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                 </div>
 
                 <textarea
+                  data-tutorial="descriptionField"
+                  ref={(el) => (descriptionRef.current[index] = el)}
                   value={entry.description || ""}
                   onChange={(e) => {
                     handleDescriptionChange(index, e.target.value);
@@ -296,11 +314,12 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
                   rows={1}
                 />
 
-                {/* ЛАМПОЧКА в контейнері IconButton */}
+                {/* ЛАМПОЧКА */}
                 {activeDescriptionIndex === index &&
                   focusedField === "description" && (
                     <div className={styles.suggestionButtonContainer}>
                       <IconButton
+                        data-tutorial="hintButton"
                         className={styles.suggestionButton}
                         onClick={() => {
                           setActiveDescriptionIndex(index);
@@ -316,6 +335,7 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
               {/* Кнопка видалення (мобільна) */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
+                  data-tutorial="deleteRowButton"
                   onClick={() => removeRow(index)}
                   className={styles.deleteButton}
                   aria-label="Видалити"
@@ -332,7 +352,11 @@ const AktuellSection = ({ title = "", data, onUpdate }) => {
 
       {/* Кнопка "Додати" */}
       <div className={styles.addButtonContainer}>
-        <IconButton onClick={addNewRow} aria-label="Додати">
+        <IconButton
+          data-tutorial="addRowButton"
+          onClick={addNewRow}
+          aria-label="Додати"
+        >
           <AddIcon />
         </IconButton>
       </div>
@@ -375,6 +399,7 @@ AktuellSection.propTypes = {
     })
   ).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  isTutorialActive: PropTypes.bool,
 };
 
 export default AktuellSection;

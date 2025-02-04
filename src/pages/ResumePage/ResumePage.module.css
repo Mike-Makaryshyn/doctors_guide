@@ -27,7 +27,40 @@
 .iconBar::-webkit-scrollbar {
   display: none;
 }
+.tutorialButton {
+  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+  top: 60px; /* Відступ від верхнього краю */
+  right: 15px; /* Відступ від правого краю */
+  width: 45px; /* Трохи більша кнопка */
+  height: 45px;
+  background: none; /* Видаляємо фон у звичайному стані */
+  border-radius: 50%; /* Робимо кнопку круглою */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none; /* Прибираємо рамку */
+  box-shadow: none; /* Прибираємо тіні */
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out; /* Додаємо анімацію */
 
+  /* Стилі для SVG */
+  svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ededed; /* Сірий контур */
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* Коли наводимо мишку */
+  &:hover {
+    transform: scale(1.1); /* Легке збільшення */
+    background: #4caf4f00; /* Зелений фон */
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
 /* Стилі для кожного елемента меню */
 .iconContainer {
   flex: 0 0 auto;

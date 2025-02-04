@@ -197,7 +197,7 @@ const AusbildungSection = ({ title = "", data, onUpdate }) => {
   };
 
   return (
-    <section className={styles.ausbildungSection}>
+<section data-tutorial="ausbildungSection" className={styles.ausbildungSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
@@ -205,6 +205,7 @@ const AusbildungSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для дати */}
             <div className={styles.dateCell}>
               <input
+              data-tutorial="locationField"
                 type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}

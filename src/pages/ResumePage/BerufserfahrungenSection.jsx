@@ -1,4 +1,3 @@
-// src/pages/ResumePage/BerufserfahrungenSection.jsx
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@mui/material/IconButton";
@@ -33,12 +32,10 @@ const checkMMYYYY = (str) => {
 
 const validateDateValue = (val) => {
   const lowered = val.toLowerCase().trim();
-
   if (!lowered || lowered.endsWith("/") || lowered.includes("_")) {
     // Якщо введення ще не завершене, не показувати помилки
     return;
   }
-
   if (lowered.startsWith("seit ")) {
     const parts = lowered.split(" ").filter(Boolean);
     if (parts.length !== 2)
@@ -46,7 +43,6 @@ const validateDateValue = (val) => {
     checkMMYYYY(parts[1]);
     return;
   }
-
   if (lowered.includes(" - ")) {
     const parts = lowered.split(" - ").map((p) => p.trim());
     if (parts.length === 2) {
@@ -55,17 +51,22 @@ const validateDateValue = (val) => {
       return;
     }
   }
-
   throw new Error("Ungültiges Datumsformat.");
 };
 
-const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
+const BerufserfahrungenSection = ({
+  title = "",
+  data,
+  onUpdate,
+  isTutorialActive = false,
+}) => {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isModalOpenRef = useRef(false);
   const suggestionsRef = useRef(null);
   const isClickingSuggestionButtonRef = useRef(false);
 
+  // Один ref для текстових полів; перші data.length елементів – поле опису, наступні – поле місця.
   const textareaRefs = useRef([]);
 
   const descriptionHints = resumeFormTexts.berufserfahrungenSuggestions;
@@ -91,6 +92,62 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
       });
     }, 50);
   }, [data]);
+
+  // Якщо туторіал увімкнено і ще не вибрано активний рядок – примусово фокусуємо перше поле опису
+  useEffect(() => {
+    if (isTutorialActive && data.length > 0 && activeRowIndex === null) {
+      const field = textareaRefs.current[0];
+      if (field && typeof field.focus === "function") {
+        field.focus();
+        setActiveRowIndex(0);
+        setFocusedField("description");
+      }
+    }
+  }, [isTutorialActive, data, activeRowIndex]);
+
+  // При зміні isTutorialActive (тобто, після завершення туторіалу) скидаємо стан і забезпечуємо, що поля стають доступними
+  useEffect(() => {
+    if (!isTutorialActive) {
+      // Проходимо по всім полям і викликаємо blur, скидаємо висоту та ін.
+      textareaRefs.current.forEach((field) => {
+        if (field) {
+          field.blur();
+          field.style.height = "auto";
+        }
+      });
+      setActiveRowIndex(null);
+      setFocusedField(null);
+    }
+  }, [isTutorialActive]);
+
+  // Прослуховування події "resetMandatoryInput" для очищення обов’язкового інпуту (наприклад, після кроку 5)
+  useEffect(() => {
+    const handleResetMandatoryInput = () => {
+      if (activeRowIndex !== null) {
+        const updatedEntries = [...data];
+        updatedEntries[activeRowIndex].description = "";
+        onUpdate(updatedEntries);
+        const field = textareaRefs.current[activeRowIndex];
+        if (field) {
+          field.value = "";
+          field.style.height = "auto";
+        }
+      }
+    };
+
+    window.addEventListener("resetMandatoryInput", handleResetMandatoryInput);
+    return () => window.removeEventListener("resetMandatoryInput", handleResetMandatoryInput);
+  }, [activeRowIndex, data, onUpdate]);
+
+  // Прослуховування події "tutorialFinished" для скидання локального стану
+  useEffect(() => {
+    const handleTutorialFinished = () => {
+      setActiveRowIndex(null);
+      setFocusedField(null);
+    };
+    window.addEventListener("tutorialFinished", handleTutorialFinished);
+    return () => window.removeEventListener("tutorialFinished", handleTutorialFinished);
+  }, []);
 
   const handleFocus = (index, fieldType) => {
     setActiveRowIndex(index);
@@ -134,7 +191,6 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
     }, 50);
   };
 
-  // Не встановлюємо автоматичний фокус після додавання нового рядка
   const addNewRow = () => {
     const updatedEntries = [
       ...data,
@@ -206,26 +262,26 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для дати */}
             <div className={styles.dateCell}>
               <input
+                data-tutorial="dateField"
                 type="text"
                 value={entry.date || ""}
                 onChange={(e) => handleDateChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "date")}
                 onBlur={() => {
-                  if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
-                    setActiveRowIndex(null);
-                    setFocusedField(null);
-                  }
+                  setActiveRowIndex(null);
+                  setFocusedField(null);
                 }}
                 placeholder={getDatePlaceholder(entry.date)}
                 className={styles.dateInput}
               />
             </div>
-            {/* Поле опису */}
+            {/* Поле для опису */}
             <div className={styles.descriptionCell}>
               <div className={styles.inputWithInfo}>
-                {/* Контейнер кнопок для десктопу */}
+                {/* Кнопка видалення для десктопу */}
                 <div className={styles.buttonContainer}>
                   <IconButton
+                    data-tutorial="deleteRowButton"
                     onClick={() => removeRow(index)}
                     className={styles.deleteButton}
                     aria-label="Видалити"
@@ -234,6 +290,7 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                   </IconButton>
                 </div>
                 <textarea
+                  data-tutorial="descriptionField"
                   ref={(el) => (textareaRefs.current[index] = el)}
                   value={entry.description || ""}
                   onChange={(e) => {
@@ -242,10 +299,8 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                   }}
                   onFocus={() => handleFocus(index, "description")}
                   onBlur={() => {
-                    if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
-                      setActiveRowIndex(null);
-                      setFocusedField(null);
-                    }
+                    setActiveRowIndex(null);
+                    setFocusedField(null);
                   }}
                   placeholder="Information"
                   className={styles.inputField}
@@ -254,6 +309,7 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                 {focusedField === "description" && activeRowIndex === index && (
                   <div className={styles.suggestionButtonContainer}>
                     <IconButton
+                      data-tutorial="hintButton"
                       className={styles.suggestionButton}
                       onMouseDown={() => {
                         isClickingSuggestionButtonRef.current = true;
@@ -275,6 +331,7 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
+                  data-tutorial="deleteRowButton"
                   onClick={() => removeRow(index)}
                   className={styles.deleteButton}
                   aria-label="Видалити"
@@ -283,9 +340,10 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                 </IconButton>
               </div>
             </div>
-            {/* Поле місця */}
+            {/* Поле для місця */}
             <div className={styles.placeCell}>
               <textarea
+                data-tutorial="placeField"
                 ref={(el) => (textareaRefs.current[index + data.length] = el)}
                 value={entry.place || ""}
                 onChange={(e) => {
@@ -294,10 +352,8 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
                 }}
                 onFocus={() => handleFocus(index, "place")}
                 onBlur={() => {
-                  if (!isModalOpenRef.current && !isClickingSuggestionButtonRef.current) {
-                    setActiveRowIndex(null);
-                    setFocusedField(null);
-                  }
+                  setActiveRowIndex(null);
+                  setFocusedField(null);
                 }}
                 placeholder="Ort"
                 className={styles.inputField}
@@ -309,11 +365,15 @@ const BerufserfahrungenSection = ({ title = "", data, onUpdate }) => {
         ))}
       </form>
       <div className={styles.addButtonContainer}>
-        <IconButton onClick={addNewRow} aria-label="Додати">
+        <IconButton
+          data-tutorial="addRowButton"
+          onClick={addNewRow}
+          aria-label="Додати"
+        >
           <AddIcon />
         </IconButton>
       </div>
-      {/* Модальне вікно з підказками – без хедера */}
+      {/* Модальне вікно з підказками */}
       <Dialog
         open={isModalOpen}
         onClose={handleCloseModal}
@@ -347,6 +407,7 @@ BerufserfahrungenSection.propTypes = {
     })
   ).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  isTutorialActive: PropTypes.bool,
 };
 
 export default BerufserfahrungenSection;

@@ -170,7 +170,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
   }, [data]);
 
   return (
-    <section className={styles.technicalSkillsSection}>
+    <section data-tutorial="technicalSkillsSection" className={styles.technicalSkillsSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <form className={styles.entriesContainer}>
         {data.map((entry, index) => (
@@ -178,6 +178,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для навички */}
             <div className={styles.skillCell}>
               <textarea
+              data-tutorial="skillField"
                 value={entry.skill || ""}
                 onChange={(e) => handleSkillChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "skill")}
@@ -187,7 +188,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
                     setActiveField(null);
                   }
                 }}
-                placeholder="Навичка"
+                placeholder="Skills"
                 className={styles.inputField}
                 ref={(el) => (textAreaRefs.current[index * 2] = el)}
                 rows={1}
@@ -217,6 +218,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для рівня */}
             <div className={styles.levelCell}>
               <textarea
+              data-tutorial="levelField"
                 value={entry.technicalLevel || ""}
                 onChange={(e) => handleLevelChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "technicalLevel")}
@@ -226,7 +228,7 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
                     setActiveField(null);
                   }
                 }}
-                placeholder="Рівень"
+                placeholder="Level"
                 className={styles.inputField}
                 ref={(el) => (textAreaRefs.current[index * 2 + 1] = el)}
                 rows={1}

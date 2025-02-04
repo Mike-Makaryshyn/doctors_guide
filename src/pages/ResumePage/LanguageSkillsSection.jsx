@@ -179,6 +179,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для мови */}
             <div className={styles.languageCell}>
               <textarea
+              data-tutorial="languageField"
                 value={entry.language || ""}
                 onChange={(e) => handleLanguageChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "language")}
@@ -220,6 +221,7 @@ const LanguageSkillsSection = ({ title = "", data, onUpdate }) => {
             {/* Поле для рівня */}
             <div className={styles.levelCell}>
               <textarea
+              data-tutorial="levelField"
                 value={entry.level || ""}
                 onChange={(e) => handleLevelChange(index, e.target.value)}
                 onFocus={() => handleFocus(index, "level")}

@@ -1,4 +1,3 @@
-// src/pages/ResumePage/HeaderSection.jsx
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./HeaderSection.module.css";
@@ -21,7 +20,7 @@ const HeaderSection = ({ title = "", data, onUpdate }) => {
   ).current;
 
   return (
-    <section className={styles.headerSection}>
+    <section data-tutorial="headerData" className={styles.headerSection}>
       <h3 className={styles.subheader}>{title}</h3>
       <form className={styles.entriesContainer}>
         {/* Ряд 1: Vorname, Nachname */}

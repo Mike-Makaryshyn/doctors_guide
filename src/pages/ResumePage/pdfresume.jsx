@@ -254,6 +254,7 @@ export const previewResumePDF = async () => {
 // =====================
 // (D) Модальне вікно PDF
 // =====================
+// ...
 const PDFResumeModal = ({ isOpen, onClose }) => {
   return (
     <Modal
@@ -274,14 +275,22 @@ const PDFResumeModal = ({ isOpen, onClose }) => {
         <div className={styles.buttonsArea}>
           {/* Кнопка Preview */}
           <div className={styles.buttonContainer}>
-            <button className={styles.roundButton} onClick={previewResumePDF}>
+            <button
+              data-tutorial="previewButton"
+              className={styles.roundButton}
+              onClick={previewResumePDF}
+            >
               <FaEye className={styles.viewIcon} />
             </button>
           </div>
 
           {/* Кнопка Download */}
           <div className={styles.buttonContainer}>
-            <button className={styles.roundButton} onClick={downloadResumePDF}>
+            <button
+              data-tutorial="downloadPDFButton"
+              className={styles.roundButton}
+              onClick={downloadResumePDF}
+            >
               <FaDownload className={styles.pdfIcon} />
             </button>
           </div>
