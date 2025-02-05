@@ -159,14 +159,14 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
       disableBeacon: true,
     },
     {
-      target: '[data-tutorial="deleteRowButton"]',
-      content:
-        stepsContent.deleteRowButton ||
-        "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
-      placement: "top",
-      spotlightPadding: 0,
-      disableBeacon: true,
-    },
+        target: '[data-tutorial="deleteRowButtonMobile"]',  // Оновлено для мобільної версії
+        content:
+          stepsContent.deleteRowButton ||
+          "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
+        placement: "top",
+        spotlightPadding: 0,
+        disableBeacon: true,
+      },
     {
       target: '[data-tutorial="openModalButton"]',
       content:
@@ -233,6 +233,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
       continuous={true}
       scrollToFirstStep={true}
       showSkipButton={true}
+      showCloseButton={false}
       showProgress={false}
       disableOverlay={false}
       callback={handleJoyrideCallback}

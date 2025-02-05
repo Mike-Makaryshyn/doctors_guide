@@ -342,7 +342,7 @@ const BerufserfahrungenSection = ({
               {/* Контейнер кнопки видалення для мобільних */}
               <div className={styles.deleteButtonContainer}>
                 <IconButton
-                  data-tutorial="deleteRowButton"
+                  data-tutorial="deleteRowButtonMobile"
                   onClick={() => removeRow(index)}
                   className={styles.deleteButton}
                   aria-label="Видалити"
