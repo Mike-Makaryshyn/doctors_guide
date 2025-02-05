@@ -8,14 +8,13 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
   const [run, setRun] = useState(false);
   const joyrideRef = useRef(null);
   
-  // Використовуємо глобальний стан для отримання вибраної мови
+  // Отримання вибраної мови
   const { selectedLanguage } = useGetGlobalInfo();
   const language = selectedLanguage || tutorialTranslations.currentLanguage || "en";
-  
   const stepsContent = tutorialTranslations[language]?.steps || {};
 
-  // Визначення кроків туторіалу із використанням перекладів з stepsContent
-  const allSteps = [
+  // Визначення кроків для десктопної версії
+  const desktopSteps = [
     {
       target: '[data-tutorial="iconBar"]',
       content:
@@ -85,6 +84,81 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
     },
   ];
 
+  // Визначення кроків для мобільної версії (дублювання з можливістю налаштування)
+  const mobileSteps = [
+    {
+      target: '[data-tutorial="iconBar"]',
+      content:
+        stepsContent.iconBar ||
+        "Мобільна: Це панель секцій резюме. Тут ви можете обрати: персональні дані, актуальний стан, професійний досвід, освіту, мовні навички та технічні навички.",
+      placement: "top", // Наприклад, можна змінити розташування
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="dateField"]',
+      content:
+        stepsContent.dateField ||
+        "Мобільна: Це поле для вводу дат. Введіть дату у форматі MM/YYYY, або 'seit MM/YYYY', або 'MM/YYYY - MM/YYYY', або 'MM/YYYY - heute'.",
+      placement: "top",
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="descriptionField"]',
+      content:
+        stepsContent.descriptionField ||
+        "Мобільна: Це поле для вводу опису. Фокус встановлюється автоматично, щоб ви могли ввести основну інформацію.",
+      placement: "top",
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="placeField"]',
+      content:
+        stepsContent.placeField ||
+        "Мобільна: Тут необхідно вказати місце та країну для коректного відображення в резюме.",
+      placement: "top",
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="hintButton"]',
+      content:
+        stepsContent.hintButton ||
+        "Мобільна: Натисніть на лампочку для отримання підказок, як краще заповнити резюме.",
+      placement: "left",
+      disableBeacon: true,
+      disableScrolling: false,
+      spotlightClicks: true,
+      isFixedPosition: true,
+    },
+    {
+      target: '[data-tutorial="addRowButton"]',
+      content:
+        stepsContent.addRowButton ||
+        "Мобільна: Цією кнопкою ви можете додати новий рядок до списку досвіду.",
+      placement: "top",
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="deleteRowButton"]',
+      content:
+        stepsContent.deleteRowButton ||
+        "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
+      placement: "top",
+      disableBeacon: true,
+    },
+    {
+      target: '[data-tutorial="openModalButton"]',
+      content:
+        stepsContent.openModalButton ||
+        "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
+      placement: "top",
+      disableBeacon: true,
+    },
+  ];
+
+  // Визначення, чи пристрій мобільний (можна налаштовувати поріг)
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+  const stepsToUse = isMobile ? mobileSteps : desktopSteps;
+
   // Запуск туторіалу за умовою
   useEffect(() => {
     const tutorialCompleted = localStorage.getItem("tutorialCompleted");
@@ -123,7 +197,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
   return (
     <Joyride
       ref={joyrideRef}
-      steps={allSteps}
+      steps={stepsToUse}
       run={run}
       continuous={true}
       scrollToFirstStep={true}
