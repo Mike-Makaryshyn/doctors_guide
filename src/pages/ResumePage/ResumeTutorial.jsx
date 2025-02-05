@@ -21,6 +21,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.iconBar ||
         "Це панель секцій резюме. Тут ви можете обрати: персональні дані, актуальний стан, професійний досвід, освіту, мовні навички та технічні навички.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -29,6 +30,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.dateField ||
         "Це поле для вводу дат. Введіть дату у форматі MM/YYYY, або 'seit MM/YYYY', або 'MM/YYYY - MM/YYYY', або 'MM/YYYY - heute'.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -37,6 +39,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.descriptionField ||
         "Це поле для вводу опису. Фокус встановлюється автоматично, щоб ви могли ввести основну інформацію.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -45,25 +48,35 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.placeField ||
         "Тут необхідно вказати місце та країну для коректного відображення в резюме.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
-      target: '[data-tutorial="hintButton"]',
-      content:
-        stepsContent.hintButton ||
-        "Натисніть на лампочку для отримання підказок, як краще заповнити резюме.",
-      placement: "left",
-      disableBeacon: true,
-      disableScrolling: false,
-      spotlightClicks: true,
-      isFixedPosition: true,
-    },
+        target: '[data-tutorial="hintButton"]',
+        content: stepsContent.hintButton || "Натисніть на лампочку для отримання підказок.",
+        placement: "left", 
+        disableBeacon: true,
+        spotlightPadding: 0,
+        disableScrolling: true, // Заборона прокрутки, щоб уникнути зміщення
+        spotlightClicks: true,  // Дозвіл натискати на елемент
+        offset: 20,             // Додаємо невеликий відступ від елемента
+        styles: {
+          tooltip: {
+            maxWidth: '300px',
+            whiteSpace: 'normal',
+          },
+          options: {
+            arrowColor: '#fff',
+          }
+        }
+      },
     {
       target: '[data-tutorial="addRowButton"]',
       content:
         stepsContent.addRowButton ||
         "Цією кнопкою ви можете додати новий рядок до списку досвіду.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -72,6 +85,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.deleteRowButton ||
         "Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -80,6 +94,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.openModalButton ||
         "Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
       placement: "bottom",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
   ];
@@ -92,6 +107,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.iconBar ||
         "Мобільна: Це панель секцій резюме. Тут ви можете обрати: персональні дані, актуальний стан, професійний досвід, освіту, мовні навички та технічні навички.",
       placement: "top", // Наприклад, можна змінити розташування
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -100,6 +116,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.dateField ||
         "Мобільна: Це поле для вводу дат. Введіть дату у форматі MM/YYYY, або 'seit MM/YYYY', або 'MM/YYYY - MM/YYYY', або 'MM/YYYY - heute'.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -108,6 +125,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.descriptionField ||
         "Мобільна: Це поле для вводу опису. Фокус встановлюється автоматично, щоб ви могли ввести основну інформацію.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -116,6 +134,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.placeField ||
         "Мобільна: Тут необхідно вказати місце та країну для коректного відображення в резюме.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -127,6 +146,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
       disableBeacon: true,
       disableScrolling: false,
       spotlightClicks: true,
+      spotlightPadding: 0,
       isFixedPosition: true,
     },
     {
@@ -135,6 +155,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.addRowButton ||
         "Мобільна: Цією кнопкою ви можете додати новий рядок до списку досвіду.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -143,6 +164,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.deleteRowButton ||
         "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
     {
@@ -151,6 +173,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
         stepsContent.openModalButton ||
         "Мобільна: Цією кнопкою ви можете видалити рядок, якщо він більше не потрібен. Після цього кроку поле для опису має втратити фокус.",
       placement: "top",
+      spotlightPadding: 0,
       disableBeacon: true,
     },
   ];
@@ -172,20 +195,28 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
   // Callback для Joyride: повторне оновлення позиції тултіпа для стабільності
   const handleJoyrideCallback = (data) => {
     const { status, index, type } = data;
-
+    console.log("[Joyride]", { status, index, type, data });
+  
     if (type === EVENTS.STEP_AFTER || type === EVENTS.TOOLTIP) {
+      // Логування перед оновленням позиції
+      console.log("[Joyride] Updating tooltip position, current step:", index);
       for (let i = 0; i < 3; i++) {
         setTimeout(() => {
-          joyrideRef.current?.helper?.update();
-          window.dispatchEvent(new Event("resize"));
+          if (joyrideRef.current) {
+            // Спробуємо логувати доступну інформацію перед оновленням
+            console.log("[Joyride] Before update, helper:", joyrideRef.current.helper);
+            joyrideRef.current?.helper?.update();
+            window.dispatchEvent(new Event("resize"));
+            console.log("[Joyride] Update call executed");
+          }
         }, i * 300);
       }
     }
-
+  
     if (index === 4 && type === "step:after") {
       window.dispatchEvent(new CustomEvent("resetMandatoryInput"));
     }
-
+  
     if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
       setRun(false);
       localStorage.setItem("tutorialCompleted", "true");
@@ -212,7 +243,7 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
           overlayColor: "rgba(0, 0, 0, 0.4)",
         },
         tooltip: {
-          maxWidth: "500px",
+          maxWidth: "1000px",
           textAlign: "justify",
         },
         tooltipContainer: { textAlign: "justify" },

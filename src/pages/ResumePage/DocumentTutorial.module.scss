@@ -2,7 +2,7 @@
 
 /* Глобальні стилі для react-joyride */
 :global(.react-joyride__tooltip) {
-  max-width: 250px !important; /* Було 300px */
+  max-width: 400px !important; /* Було 300px */
   min-width: 200px;
   padding: 12px;
   font-size: 14px; /* Менший шрифт */
@@ -120,7 +120,7 @@ button[aria-label*="Zamknij"],
 button[aria-label*="Kapat"], /* Турецька */
 button[aria-label*="إغلاق"], /* Арабська */
 button[title*="Закрити"],
-button[aria-label*="Закрыть"], /* Російська (нижній регістр) */
+button[aria-label*="close"], /* Російська (нижній регістр) */
 button[title*="Close"],
 button[title*="Schließen"],
 button[title*="Fermer"],
@@ -139,4 +139,24 @@ button[title*="Закрыть"] /* Російська (нижній регіст
   font-weight: bold;
   font-size: 22px; // Розмір шрифту (опціонально)
   margin-bottom: 10px; // Відступ між заголовком і текстом
+}
+:global(.react-joyride__tooltip-close) {
+  display: none !important;
+}
+:global(.react-joyride__tooltip button.react-joyride__tooltip-close) {
+  display: none !important;
+}
+:global(.react-joyride__tooltip-container .react-joyride__button--next) {
+  font-size: 12px !important;
+  padding: 4px 8px !important;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+  font-size: 12px !important;
+  padding: 4px 8px !important;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--back) {
+  font-size: 12px !important;
+  padding: 4px 8px !important;
 }
