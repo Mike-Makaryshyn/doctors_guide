@@ -310,6 +310,10 @@ const BerufserfahrungenSection = ({
                   }}
                   onFocus={() => handleFocus(index, "description")}
                   onBlur={() => {
+                    // Якщо відбувається клік по кнопці підказки, не скидаємо стан
+                    if (isClickingSuggestionButtonRef.current) {
+                      return;
+                    }
                     setActiveRowIndex(null);
                     setFocusedField(null);
                   }}

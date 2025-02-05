@@ -36,6 +36,12 @@
   cursor: pointer;
   font-size: 14px;
 }
+:global(.react-joyride__tooltip-close) {
+  display: none !important;
+}
+:global(.react-joyride__tooltip button.react-joyride__tooltip-close) {
+  display: none !important;
+}
 
 :global(.react-joyride__tooltip-container .react-joyride__button--skip) {
   background-color: #ccc;

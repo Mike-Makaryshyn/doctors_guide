@@ -67,7 +67,7 @@ function addTable(title, data, columns, doc, startY) {
   doc.setFont(undefined, "normal");
 
   doc.autoTable({
-    startY: startY + 10,
+    startY: startY + 4,
     head: [columns],
     body: data,
     theme: "grid",
@@ -97,13 +97,13 @@ function addTable(title, data, columns, doc, startY) {
 function createPDFDocument(resume) {
   const doc = new jsPDF();
 
-  let yPos = 10;
+  let yPos = 5;
 
   // "Persönliche Daten"
   doc.setFontSize(13);
   doc.setFont(undefined, "bold");
 
-  yPos += 10;
+  yPos += 5;
 
   doc.setFontSize(9);
   doc.setFont(undefined, "normal");
@@ -121,7 +121,22 @@ function createPDFDocument(resume) {
   headerFields.forEach((key) => {
     if (resume.header[key]) {
       const label = key.charAt(0).toUpperCase() + key.slice(1);
-      doc.text(`${label}: ${resume.header[key]}`, 10, yPos);
+  
+      doc.setFont("helvetica", "normal"); // Уніфікація шрифту
+      doc.setFontSize(9);                 // Уніфікація розміру шрифту
+  
+      // Спеціальна обробка для номера телефону
+      if (key === "handynummer") {
+        const cleanPhone = resume.header[key]
+          .replace(/[^0-9+ ]/g, "") // Видаляє всі символи, крім цифр, плюса та пробілів
+          .replace(/\s+/g, " ")     // Замінює кілька пробілів на один
+          .trim();                  // Видаляє пробіли на початку та в кінці
+      
+        doc.text(`${label}: ${cleanPhone}`, 10, yPos);
+      } else {
+        doc.text(`${label}: ${resume.header[key]}`, 10, yPos);
+      }
+      
       yPos += 5;
     }
   });
