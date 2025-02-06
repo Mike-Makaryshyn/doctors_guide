@@ -227,36 +227,42 @@ const ResumeTutorial = ({ currentSection, onSectionChange, resetTutorial }) => {
 
   return (
     <Joyride
-      ref={joyrideRef}
-      steps={stepsToUse}
-      run={run}
-      continuous={true}
-      scrollToFirstStep={true}
-      showSkipButton={true}
-      showCloseButton={false}
-      showProgress={false}
-      disableOverlay={false}
-      callback={handleJoyrideCallback}
-      styles={{
-        options: {
-          zIndex: 10000,
-          primaryColor: "#023c6f",
-          overlayColor: "rgba(0, 0, 0, 0.4)",
-        },
-        tooltip: {
-          maxWidth: "1000px",
-          textAlign: "justify",
-        },
-        tooltipContainer: { textAlign: "justify" },
-      }}
-      locale={{
-        back: tutorialTranslations[language]?.buttons?.back || "Назад",
-        close: tutorialTranslations[language]?.buttons?.close || "Закрити",
-        last: tutorialTranslations[language]?.buttons?.last || "Завершити",
-        next: tutorialTranslations[language]?.buttons?.next || "Далі",
-        skip: tutorialTranslations[language]?.buttons?.skip || "Пропустити",
-      }}
-    />
+  ref={joyrideRef}
+  steps={stepsToUse}
+  run={run}
+  continuous={true}
+  scrollToFirstStep={true}
+  showSkipButton={true}
+  showCloseButton={false} // Задаємо false
+  showProgress={false}
+  disableOverlay={false}
+  callback={handleJoyrideCallback}
+  styles={{
+    options: {
+      zIndex: 10000,
+      primaryColor: "#023c6f",
+      overlayColor: "rgba(0, 0, 0, 0.4)",
+    },
+    tooltip: {
+      maxWidth: "1000px",
+      textAlign: "justify",
+    },
+    tooltipContainer: {
+      textAlign: "justify",
+    },
+    // Додаємо стилізацію для кнопки закриття, щоб явно приховати її
+    buttonClose: {
+      display: "none",
+    },
+  }}
+  locale={{
+    back: tutorialTranslations[language]?.buttons?.back || "Назад",
+    close: tutorialTranslations[language]?.buttons?.close || "Закрити",
+    last: tutorialTranslations[language]?.buttons?.last || "Завершити",
+    next: tutorialTranslations[language]?.buttons?.next || "Далі",
+    skip: tutorialTranslations[language]?.buttons?.skip || "Пропустити",
+  }}
+/>
   );
 };
 

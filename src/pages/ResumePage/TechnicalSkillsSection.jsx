@@ -85,19 +85,11 @@ const TechnicalSkillsSection = ({ title = "", data, onUpdate }) => {
   };
 
   // Додавання нового рядка
-  const addNewRow = () => {
-    const updatedEntries = [...data, { skill: "", technicalLevel: "" }];
-    onUpdate(updatedEntries);
-
-    setTimeout(() => {
-      const lastIndex = updatedEntries.length - 1;
-      handleFocus(lastIndex, "skill"); // Фокус на skill за замовчуванням
-      if (textAreaRefs.current[lastIndex * 2]) {
-        textAreaRefs.current[lastIndex * 2].focus();
-        autoExpand(textAreaRefs.current[lastIndex * 2]);
-      }
-    }, 100); // Даємо час DOM оновитися
-  };
+// Додавання нового рядка (без автоматичного фокусу)
+const addNewRow = () => {
+  const updatedEntries = [...data, { skill: "", technicalLevel: "" }];
+  onUpdate(updatedEntries);
+};
 
   // Видалення рядка
   const removeRow = (index) => {
