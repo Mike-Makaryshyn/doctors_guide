@@ -1,8 +1,13 @@
 .container {
-  padding: 20px;
+  padding: 0;  /* За замовчуванням – для мобільних */
   border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;  /* Для десктопів */
+  }
+}
 /* Секція для стейджів */
 .stagesSection {
   margin-bottom: 20px;
@@ -36,7 +41,7 @@
 .printButton {
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 50px;
   z-index: 1000;
   /* Зроблено прозорим, адже всередині SVG відображається бублик */
   background: transparent;

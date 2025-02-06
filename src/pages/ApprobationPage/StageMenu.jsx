@@ -9,8 +9,6 @@ import styles from "./StageMenu.module.scss";
 import classNames from "classnames";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-
-// Імпортуємо хук для роботи зі свайпами
 import { useSwipeable } from "react-swipeable";
 
 import Stage1Img from "../../assets/stages/man-stage-1.png";
@@ -37,7 +35,7 @@ const stageImages = [
 
 const StageMenu = ({
   onStageSelect,
-  onStageVisible, // Callback для повідомлення про видимий етап (для відображення завдань)
+  onStageVisible,
   isRegistration,
   stagesProgress,
   activeStage,
@@ -49,15 +47,12 @@ const StageMenu = ({
   
   const stagesWrapperRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-  // visibleIndex – індекс етапу, який наразі займає екран (для свайпової навігації)
   const [visibleIndex, setVisibleIndex] = useState(0);
 
-  // Визначаємо, чи мобільний режим (ширина менше 768px)
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
   }, []);
 
-  // Отримуємо список стадій за категорією
   const stages =
     normalizedCategory === "EU"
       ? APPROBATION_STAGES_EU[language]
@@ -71,8 +66,6 @@ const StageMenu = ({
     );
   }, [effectiveCategory, normalizedCategory, language]);
 
-  // Якщо activeStage (вибраний по кліку) встановлено, ініціалізуємо visibleIndex відповідно,
-  // інакше починаємо з 0 (перший етап)
   useEffect(() => {
     if (isMobile) {
       const index =
@@ -83,7 +76,6 @@ const StageMenu = ({
     }
   }, [activeStage, stages, isMobile]);
 
-  // Функція для прокрутки до елементу за visibleIndex
   const scrollToVisibleIndex = () => {
     if (isMobile && stagesWrapperRef.current) {
       const targetElement = stagesWrapperRef.current.querySelector(
@@ -95,16 +87,13 @@ const StageMenu = ({
     }
   };
 
-  // Викликаємо прокрутку щоразу, коли visibleIndex змінюється
   useEffect(() => {
     scrollToVisibleIndex();
     if (typeof onStageVisible === "function") {
-      // Повідомляємо про видимий етап за visibleIndex
       onStageVisible(stages[visibleIndex]?.id);
     }
   }, [visibleIndex, stages, onStageVisible, isMobile]);
 
-  // Обробка кліку – activeStage змінюється лише при кліку
   const handleStageClick = (stageId) => {
     onStageSelect(stageId);
     if (!isRegistration && user) {
@@ -112,25 +101,22 @@ const StageMenu = ({
         try {
           const docRef = doc(db, "users", user.uid);
           await setDoc(docRef, { activeStage: stageId }, { merge: true });
-          console.log("Активний етап оновлено:", stageId);
+          console.log("Активный этап обновлён:", stageId);
         } catch (error) {
-          console.error("Помилка при оновленні активного етапу:", error);
+          console.error("Ошибка при обновлении активного этапа:", error);
         }
       };
       update();
     }
   };
 
-  // Обробники свайпів за допомогою react-swipeable
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
-      console.log("Swiped left, visibleIndex:", visibleIndex);
       if (visibleIndex < stages.length - 1) {
         setVisibleIndex((prev) => prev + 1);
       }
     },
     onSwipedRight: () => {
-      console.log("Swiped right, visibleIndex:", visibleIndex);
       if (visibleIndex > 0) {
         setVisibleIndex((prev) => prev - 1);
       }
@@ -153,7 +139,6 @@ const StageMenu = ({
             placement="top"
             arrow={true}
             theme="custom"
-            // На мобільних підказки показуємо по кліку
             trigger={isMobile ? "click" : "mouseenter focus"}
             hideOnClick={true}
           >
@@ -198,7 +183,7 @@ const StageMenu = ({
 
 StageMenu.propTypes = {
   onStageSelect: PropTypes.func.isRequired,
-  onStageVisible: PropTypes.func, // Callback для видимого етапу
+  onStageVisible: PropTypes.func,
   isRegistration: PropTypes.bool,
   stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired,
   activeStage: PropTypes.number,

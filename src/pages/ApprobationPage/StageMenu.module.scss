@@ -1,6 +1,6 @@
 .stageMenuContainer {
   width: 100%;
-  padding: 10px; /* Менше padding для більш компактного розташування */
+  padding: 10px; /* Для десктопу, на мобільних переопреділяємо */
   box-sizing: border-box;
   background-color: transparent;
 }
@@ -8,15 +8,14 @@
 /* Контейнер для стадій */
 .stagesWrapper {
   display: flex;
-  flex-direction: row; /* Горизонтальний список */
+  flex-direction: row; /* Горизонтальне розташування */
   gap: 10px;
-  /* На мобільних дозволяємо нативну прокрутку */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  /* Для десктопу */
 }
 
+/* Стандартний стиль стадії */
 .stage {
   position: relative;
   border-radius: 50%;
@@ -29,7 +28,7 @@
   width: 12vw;
   max-width: 120px;
   margin: 5px;
-  scroll-snap-align: center; /* буде змінено для мобільних */
+  scroll-snap-align: center;
   
   &:hover {
     transform: translateY(-5px) scale(1.05);
@@ -39,8 +38,8 @@
     color: #409a73;
   }
 
+  /* Десктопний варіант активної стадії з ефектами */
   &.active {
-    /* Для десктопу – анімація, як і раніше */
     transform: scale(1.15);
     animation: magicGlow 2s infinite, activeMovement 2s infinite;
 
@@ -59,7 +58,7 @@
   }
 }
 
-/* Правило для того, щоб текст активного стадію залишався білим */
+/* Текст активної стадії залишається білим */
 .stage.active .stageTitle {
   color: #fff;
 }
@@ -119,21 +118,19 @@
 
 .circleBg {
   fill: none;
-  /* Змінити колір/товщину фону прогрес-бару тут, якщо потрібно */
   stroke: #eee;
   stroke-width: 2.5;
 }
 
 .circle {
   fill: none;
-  /* Змінити колір прогрес-бару тут */
   stroke: #2a7c6f;
   stroke-width: 2.5;
   stroke-linecap: round;
   transition: stroke-dasharray 0.3s ease;
 }
 
-/* Картинка всередині плашки */
+/* Зображення всередині стадії */
 .stageImage {
   position: absolute;
   top: 49%;
@@ -160,7 +157,7 @@
   text-overflow: ellipsis;
 }
 
-/* Десктопна версія (від 768px) */
+/* Десктоп (від 768px) */
 @media (min-width: 768px) {
   .stagesWrapper {
     overflow-x: visible;
@@ -169,44 +166,54 @@
   }
 }
 
-/* Мобільна версія: */
+/* Мобільна версія (до 767px) */
 @media (max-width: 767px) {
+  /* Контейнер займає всю ширину, без відступів */
+  .stageMenuContainer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .stagesWrapper {
-    /* Для мобільних вирівнюємо вміст зліва, щоб починалося з першого етапу */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    justify-content: flex-start; /* Замість center */
+    justify-content: flex-start; /* Елементи вирівнюються від самого краю */
+    padding: 0;
+    margin: 0;
+    gap: 0; /* Прибираємо проміжки між елементами */
+    -ms-overflow-style: none;  /* IE та Edge */
+    scrollbar-width: none;     /* Firefox */
   }
+  .stagesWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
   .stage {
-    /* Зменшуємо розміри контейнерів стадій приблизно в два рази */
-    flex: 0 0 40vw;
-    max-width: 40vw;
-    margin: 5px 0;
-    scroll-snap-align: start; /* Початок елемента */
+    /* Кожна стадія займає третину ширини екрану */
+    flex: 0 0 calc(33.33vw);
+    max-width: calc(33.33vw);
+    margin: 5px 0; /* Залишаємо тільки вертикальні відступи */
+    scroll-snap-align: center;
   }
-  /* На мобільних активний стейдж отримує додатковий ефект сонця */
+  
+  /* Для першої та останньої стадії прибираємо додаткові відступи зліва/справа */
+  .stage:first-child {
+    margin-left: 0;
+  }
+  
+  .stage:last-child {
+    margin-right: 0;
+  }
+  
+  /* Мобільне оформлення активної стадії */
+  .stage.active {
+    transform: scale(1.1);
+    border: 2px solid #2a7c6f;
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.5);
+  }
   .stage.active::after {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px 5px rgba(255, 223, 0, 0.7);
-    animation: sunPulse 3s infinite;
-    pointer-events: none;
-  }
-  @keyframes sunPulse {
-    0% {
-      box-shadow: 0 0 10px 3px rgba(255, 223, 0, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 20px 5px rgba(255, 223, 0, 1);
-    }
-    100% {
-      box-shadow: 0 0 10px 3px rgba(255, 223, 0, 0.7);
-    }
+    content: none;
   }
 }
 
