@@ -1,89 +1,109 @@
 .stageMenuContainer {
   width: 100%;
-  padding: 20px 10px;
+  padding: 10px; /* Менше padding для більш компактного розташування */
   box-sizing: border-box;
-  position: static;
   background-color: transparent;
 }
 
+/* Контейнер для стадій */
 .stagesWrapper {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  flex-direction: row; /* За замовчуванням горизонтальний список */
+  justify-content: center;
   gap: 10px;
-  overflow-x: auto;
-  overflow-y: visible;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  padding: 10px 0;
-
-  &.swipeable {
-   
-   
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-  }
-
-  &.gridView {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-  }
+  overflow-x: auto;            /* Горизонтальний скрол */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
+/* Кожна плашка (стейдж) */
 .stage {
-  border-radius: 78px;
-  background: #ffffff;
-  box-shadow: 11px 11px 22px #205f55, -11px -11px 22px #349989;
-  padding: 1vw !important;
-  border: 2px solid transparent;
+  position: relative; /* для позиціонування заголовку і псевдоелементів */
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 0;
+  transition: transform 0.3s ease;
   cursor: pointer;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  flex-shrink: 0;
-  white-space: normal;
-  overflow: visible;
-  margin: 0 2px;
-  min-width: 10vw;
-  min-height: 10vw;
-
-  @media (min-width: 900px) {
-    width: 10vw;
-    height: 10vw;
-  }
-
-  @media (min-width: 1200px) {
-    width: 7vw;
-    height: 7vw;
-  }
-  @media (max-width: 600px) {
-    .stageMenuContainer {
-      border-radius: 70px;
-    }
-  }
-  @media (max-width: 600px) {
-    /* На мобільних – кожен етап займає весь екран */
-    width: 75vw;
-    height: auto;
-    margin: 0;
-    scroll-snap-align: center;
-  }
+  flex: 0 0 auto;
+  width: 12vw;                /* Розмір зберігаємо, як вам подобається */
+  max-width: 120px;
+  margin: 5px;
+  scroll-snap-align: center;
 
   &:hover {
-    transform: translateY(-5px) scale(1.07);
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  /* Початковий стан неактивного стейджу */
+  .stageTitle {
+    color: #409a73;
   }
 
   &.active {
-    transform: scale(1.1);
-    box-shadow: 11px 11px 22px #205f55, -11px -11px 22px #349989;
+    /* Базовий масштаб активного стейджу */
+    transform: scale(1.15);
+    /* Поєднуємо вже існуючі анімації */
+    animation: magicGlow 2s infinite, activeMovement 2s infinite;
+    /* Додатковий псевдоелемент для ефекту «магії» */
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border: 2px dashed rgba(42, 124, 111, 0.6);
+      border-radius: 50%;
+      animation: floatingMagic 3s linear infinite;
+      pointer-events: none;
+    }
   }
 }
 
+/* Анімація магії – зміна тіні */
+@keyframes magicGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(42, 124, 111, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
+  }
+}
+
+/* Анімація легкого переміщення активного стейджу */
+@keyframes activeMovement {
+  0% {
+    transform: scale(1.15) translateY(0);
+  }
+  50% {
+    transform: scale(1.15) translateY(-5px);
+  }
+  100% {
+    transform: scale(1.15) translateY(0);
+  }
+}
+
+/* Додаткова анімація для плаваючого ефекту навколо активного стейджу */
+@keyframes floatingMagic {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* Прогрес-коло навколо плашки */
 .progressCircle {
   position: relative;
   width: 100%;
@@ -110,85 +130,67 @@
   transition: stroke-dasharray 0.3s ease;
 }
 
+/* Картинка всередині плашки */
 .stageImage {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%; // зменшено з 70%
-  height: 60%;
+  top: 49%;
+  left: 51%;
+  width: 88%;
+  height: 62%;
   transform: translate(-50%, -50%);
-
-  @media (max-width: 600px) {
-    width: 45%;
-    height: auto;
-  }
+  border-radius: 32%;
+  object-fit: cover;
 }
 
+/* Заголовок (назва стадії) – розташовується над контейнером */
 .stageTitle {
-  margin-top: 12px;
-  font-size: 18px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 4px;
+  font-size: 12px;
   font-weight: bold;
-  color: #fff;
-  text-align: center;
+  color: #409a73;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
 
-  @media (max-width: 600px) {
-    font-size: 14px;
-    margin-top: 8px;
+/* Для активного стейджу заголовок робимо білим */
+.stage.active .stageTitle {
+  color: #fff;
+}
+
+/* Десктопна версія (від 768px) */
+@media (min-width: 768px) {
+  .stagesWrapper {
+    overflow-x: visible;
+    scroll-snap-type: none;
   }
 }
 
-.scrollButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(42, 124, 111, 0.8);
-  border: none;
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: rgba(42, 124, 111, 1);
+/* Мобільна версія: кожен стейдж займає весь перегляд */
+@media (max-width: 767px) {
+  .stagesWrapper {
+    /* Залишаємо горизонтальний скрол, щоб було видно лише один етап за раз */
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
   }
-
-  svg {
-    width: 16px;
-    height: 16px;
+  .stage {
+    flex: 0 0 100%; /* Кожен етап займає 100% ширини перегляду */
+    max-width: 100%;
+    margin: 0 auto;
+    scroll-snap-align: center;
   }
-
-  &.left {
-    left: 10px;
-  }
-
-  &.right {
-    right: 10px;
-  }
-
-  @media (max-width: 600px) {
-    width: 25px;
-    height: 25px;
-
-    svg {
-      width: 12px;
-      height: 12px;
-    }
-
-    &.left {
-      margin-left: 10px;
-    }
-
-    &.right {
-      margin-right: 10px;
-    }
-  }
+}
+  
+/* Кастомізація Tippy tooltip */
+.tippy-box[data-theme~="custom"] {
+  font-size: 12px;
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
 }

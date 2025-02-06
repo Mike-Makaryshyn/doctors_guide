@@ -7,9 +7,6 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import styles from "./StageMenu.module.scss";
 import classNames from "classnames";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-// Імпорт Tippy з @tippyjs/react
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
@@ -40,8 +37,6 @@ const StageMenu = ({
   isRegistration,
   stagesProgress,
   activeStage,
-  enableSwipe,
-  gridView,
   debugCategory,
 }) => {
   const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
@@ -57,15 +52,13 @@ const StageMenu = ({
     }
   }, [effectiveCategory, normalizedCategory, language]);
 
-  // Якщо потрібно відображати усі етапи, не застосовуємо slice()
+  // Отримуємо всі стадії
   const stages =
     normalizedCategory === "EU"
       ? APPROBATION_STAGES_EU[language]
       : APPROBATION_STAGES_NON_EU[language];
 
-  // Для мобільних перемикань за допомогою свайпу – виключаємо вибір через клік
-  const stagesWrapperRef = useRef(null);
-
+  // Оновлення активного етапу в базі даних
   const updateActiveStage = async (stageId) => {
     if (!user) return;
     try {
@@ -77,88 +70,27 @@ const StageMenu = ({
     }
   };
 
-  // Обробка кліку лише для десктопу
+  // Обробка кліку по етапу
   const handleStageClick = (stageId) => {
-    if (window.innerWidth > 600) {
-      onStageSelect(stageId);
-      if (!isRegistration && user) {
-        updateActiveStage(stageId);
-      }
+    onStageSelect(stageId);
+    if (!isRegistration && user) {
+      updateActiveStage(stageId);
     }
   };
 
-  // Обробка свайпу: для мобільних пристроїв відслідковуємо scroll і визначаємо індекс активного етапу
-  useEffect(() => {
-    if (window.innerWidth <= 600 && stagesWrapperRef.current) {
-      const handleScroll = () => {
-        const container = stagesWrapperRef.current;
-        const scrollLeft = container.scrollLeft;
-        const containerWidth = container.clientWidth;
-        const newIndex = Math.round(scrollLeft / containerWidth);
-        const newActiveId = stages[newIndex]?.id;
-        if (newActiveId && newActiveId !== activeStage) {
-          onStageSelect(newActiveId);
-          if (!isRegistration && user) {
-            updateActiveStage(newActiveId);
-          }
-        }
-      };
-      const container = stagesWrapperRef.current;
-      container.addEventListener("scroll", handleScroll);
-      return () => container.removeEventListener("scroll", handleScroll);
-    }
-  }, [activeStage, onStageSelect, stages, isRegistration, user]);
-
-  // При завантаженні сторінки (на мобільних) прокручуємо до активного етапу
-  useEffect(() => {
-    if (window.innerWidth <= 600 && stagesWrapperRef.current) {
-      const activeElem = document.querySelector(`.${styles.stage}.${styles.active}`);
-      if (activeElem) {
-        activeElem.scrollIntoView({ behavior: "smooth", inline: "center" });
-      }
-    }
-  }, [activeStage]);
+  // ref для контейнера (для нативного скролу)
+  const stagesWrapperRef = useRef(null);
 
   return (
     <div className={styles.stageMenuContainer}>
-      {/* Кнопки для прокрутки (тільки для десктопу) */}
-      {!gridView && enableSwipe && window.innerWidth > 600 && (
-        <>
-          <button
-            className={classNames(styles.scrollButton, styles.left)}
-            onClick={() => {
-              if (stagesWrapperRef.current) {
-                stagesWrapperRef.current.scrollBy({ left: -200, behavior: "smooth" });
-              }
-            }}
-          >
-            <FaChevronLeft />
-          </button>
-          <button
-            className={classNames(styles.scrollButton, styles.right)}
-            onClick={() => {
-              if (stagesWrapperRef.current) {
-                stagesWrapperRef.current.scrollBy({ left: 200, behavior: "smooth" });
-              }
-            }}
-          >
-            <FaChevronRight />
-          </button>
-        </>
-      )}
-      <div
-        ref={!gridView ? stagesWrapperRef : null}
-        className={classNames(styles.stagesWrapper, {
-          [styles.swipeable]: enableSwipe && !gridView,
-          [styles.gridView]: gridView,
-        })}
-      >
+      <div ref={stagesWrapperRef} className={styles.stagesWrapper}>
         {stages.map((stage, index) => (
           <Tippy
             key={stage.id}
             content={stage.description}
             placement="top"
             arrow={true}
+            theme="custom"
           >
             <div
               className={classNames(styles.stage, {
@@ -193,7 +125,6 @@ const StageMenu = ({
           </Tippy>
         ))}
       </div>
-      {/* Опис відображається лише через Tippy – додатковий блок прибрано */}
     </div>
   );
 };
@@ -203,16 +134,12 @@ StageMenu.propTypes = {
   isRegistration: PropTypes.bool,
   stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired,
   activeStage: PropTypes.number,
-  enableSwipe: PropTypes.bool,
-  gridView: PropTypes.bool,
   debugCategory: PropTypes.string,
 };
 
 StageMenu.defaultProps = {
   isRegistration: false,
   activeStage: null,
-  enableSwipe: false,
-  gridView: false,
   debugCategory: "",
 };
 

@@ -10,46 +10,133 @@
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+  }
+}
+
+.task-item {
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px; // Прямокутні з заокругленими кутами
+  background: #ffffff;
+  box-shadow: 11px 11px 22px #205f55,
+              -11px -11px 22px #349989;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Щоб label і infoIcon були з протилежних боків
+  
+  &:hover {
+    transform: scale(1.02);
   }
   
-  .task-item {
-    margin-bottom: 10px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    transition: background-color 0.3s, transform 0.2s;
-    cursor: pointer;
+  label {
     display: flex;
     align-items: center;
-    gap: 15px;
+    font-size: 16px;
+    color: #013b6e; /* Змінено колір тексту завдання */
+  }
+  
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #2a7c6f;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.completed {
+  background: #2a7c6f;
+  box-shadow: inset 11px 11px 22px #205f55,
+              inset -11px -11px 22px #349989;
+  
+  label {
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.infoIcon {
+  font-size: 18px;
+  color: #2a7c6f;
+  cursor: pointer;
+  margin-left: 10px;
+  
+  &:hover {
+    color: #205f55;
+  }
+}
+
+/* Стилі для модального вікна */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modalBody {
+  margin-top: 20px;
+  
+  p {
+    margin-bottom: 20px;
+    color: #013b6e; /* Синій колір для тексту модального вікна */
+  }
+  
+  a {
+    color: #013b6e; /* Синій колір для посилання */
+    text-decoration: none;
+    font-weight: bold;
     
     &:hover {
-      background-color: #e9f5ec;
-      transform: scale(1.02);
+      text-decoration: underline;
     }
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 600px) {
+  .task-item {
+    padding: 12px;
     
-    &.completed {
-      background-color: #d4edda;
-      border-color: #2a7c6f;
-      label {
-        font-weight: bold;
-      }
+    label {
+      font-size: 14px;
     }
     
     input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      accent-color: #2a7c6f;
-      border-radius: 5px;
-      cursor: pointer;
+      width: 18px;
+      height: 18px;
     }
     
-    label {
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      color: #333;
+    &:active {
+      transform: scale(1.02);
     }
   }
 }
