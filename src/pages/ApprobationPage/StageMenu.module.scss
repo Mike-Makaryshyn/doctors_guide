@@ -12,7 +12,7 @@
   justify-content: center;
   gap: 10px;
   overflow-x: auto;            /* Горизонтальний скрол */
-  -webkit-overflow-scrolling: touch;
+ 
   scroll-snap-type: x mandatory;
 }
 
