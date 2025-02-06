@@ -13,7 +13,7 @@
   flex-direction: row; /* Горизонтальне розташування */
   gap: 10px;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+
   scroll-snap-type: x mandatory;
 }
 
@@ -185,7 +185,7 @@
     margin: 0;
     gap: 0; /* Прибираємо проміжки між елементами */
     -ms-overflow-style: none;  /* IE та Edge */
-    scrollbar-width: none;     /* Firefox */
+ 
   }
   .stagesWrapper::-webkit-scrollbar {
     display: none;
