@@ -8,13 +8,7 @@
   padding: 20px; /* Додає відступи всередині секції */
 }
 
-/* Адаптація для мобільних */
-@media (max-width: 768px) {
-  .aktuellSection {
-    overflow-x: hidden; /* На мобільних обмежуємо горизонтальний вихід */
-    overflow-y: visible; /* Але дозволяємо вертикальне виходження */
-  }
-}
+
 
 /* Заголовок */
 .subheader {
@@ -353,7 +347,7 @@ textarea {
 @media (max-width: 768px) {
   .closseButton {
       top: -7px;
-      right: -168px;
+      right: -149px;
       font-size: 1.4rem;
     }
 
