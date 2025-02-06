@@ -8,17 +8,17 @@
 /* Контейнер для стадій */
 .stagesWrapper {
   display: flex;
-  flex-direction: row; /* За замовчуванням горизонтальний список */
-  justify-content: center;
+  flex-direction: row; /* Горизонтальний список */
   gap: 10px;
-  overflow-x: auto;            /* Горизонтальний скрол */
- 
+  /* На мобільних дозволяємо нативну прокрутку */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
+  /* Для десктопу */
 }
 
-/* Кожна плашка (стейдж) */
 .stage {
-  position: relative; /* для позиціонування заголовку і псевдоелементів */
+  position: relative;
   border-radius: 50%;
   background: transparent;
   box-shadow: 0 0 0 0;
@@ -26,26 +26,24 @@
   cursor: pointer;
   text-align: center;
   flex: 0 0 auto;
-  width: 12vw;                /* Розмір зберігаємо, як вам подобається */
+  width: 12vw;
   max-width: 120px;
   margin: 5px;
-  scroll-snap-align: center;
-
+  scroll-snap-align: center; /* буде змінено для мобільних */
+  
   &:hover {
     transform: translateY(-5px) scale(1.05);
   }
 
-  /* Початковий стан неактивного стейджу */
   .stageTitle {
     color: #409a73;
   }
 
   &.active {
-    /* Базовий масштаб активного стейджу */
+    /* Для десктопу – анімація, як і раніше */
     transform: scale(1.15);
-    /* Поєднуємо вже існуючі анімації */
     animation: magicGlow 2s infinite, activeMovement 2s infinite;
-    /* Додатковий псевдоелемент для ефекту «магії» */
+
     &::after {
       content: "";
       position: absolute;
@@ -61,7 +59,12 @@
   }
 }
 
-/* Анімація магії – зміна тіні */
+/* Правило для того, щоб текст активного стадію залишався білим */
+.stage.active .stageTitle {
+  color: #fff;
+}
+
+/* Анімації для десктопу */
 @keyframes magicGlow {
   0% {
     box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
@@ -74,7 +77,6 @@
   }
 }
 
-/* Анімація легкого переміщення активного стейджу */
 @keyframes activeMovement {
   0% {
     transform: scale(1.15) translateY(0);
@@ -87,7 +89,6 @@
   }
 }
 
-/* Додаткова анімація для плаваючого ефекту навколо активного стейджу */
 @keyframes floatingMagic {
   0% {
     transform: rotate(0deg);
@@ -118,12 +119,14 @@
 
 .circleBg {
   fill: none;
+  /* Змінити колір/товщину фону прогрес-бару тут, якщо потрібно */
   stroke: #eee;
   stroke-width: 2.5;
 }
 
 .circle {
   fill: none;
+  /* Змінити колір прогрес-бару тут */
   stroke: #2a7c6f;
   stroke-width: 2.5;
   stroke-linecap: round;
@@ -142,7 +145,7 @@
   object-fit: cover;
 }
 
-/* Заголовок (назва стадії) – розташовується над контейнером */
+/* Заголовок (назва стадії) */
 .stageTitle {
   position: absolute;
   bottom: 100%;
@@ -157,35 +160,56 @@
   text-overflow: ellipsis;
 }
 
-/* Для активного стейджу заголовок робимо білим */
-.stage.active .stageTitle {
-  color: #fff;
-}
-
 /* Десктопна версія (від 768px) */
 @media (min-width: 768px) {
   .stagesWrapper {
     overflow-x: visible;
     scroll-snap-type: none;
+    justify-content: center;
   }
 }
 
-/* Мобільна версія: кожен стейдж займає весь перегляд */
+/* Мобільна версія: */
 @media (max-width: 767px) {
   .stagesWrapper {
-    /* Залишаємо горизонтальний скрол, щоб було видно лише один етап за раз */
-    flex-direction: row;
+    /* Для мобільних вирівнюємо вміст зліва, щоб починалося з першого етапу */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    justify-content: flex-start; /* Замість center */
   }
   .stage {
-    flex: 0 0 100%; /* Кожен етап займає 100% ширини перегляду */
-    max-width: 100%;
-    margin: 0 auto;
-    scroll-snap-align: center;
+    /* Зменшуємо розміри контейнерів стадій приблизно в два рази */
+    flex: 0 0 40vw;
+    max-width: 40vw;
+    margin: 5px 0;
+    scroll-snap-align: start; /* Початок елемента */
+  }
+  /* На мобільних активний стейдж отримує додатковий ефект сонця */
+  .stage.active::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(255, 223, 0, 0.7);
+    animation: sunPulse 3s infinite;
+    pointer-events: none;
+  }
+  @keyframes sunPulse {
+    0% {
+      box-shadow: 0 0 10px 3px rgba(255, 223, 0, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 20px 5px rgba(255, 223, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 10px 3px rgba(255, 223, 0, 0.7);
+    }
   }
 }
-  
+
 /* Кастомізація Tippy tooltip */
 .tippy-box[data-theme~="custom"] {
   font-size: 12px;

@@ -3,8 +3,8 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "./StageMenu";
 import StageTasks from "./StageTasks";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { db } from "../../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 import styles from "./styles.module.scss";
 
 const ApprobationPage = () => {
@@ -12,19 +12,13 @@ const ApprobationPage = () => {
   const [activeStage, setActiveStage] = useState(1);
   const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0));
 
-  // Локальний стан для перемикача (для тестування)
+  // Локальний стан для перемикача категорій
   const [debugCategory, setDebugCategory] = useState(globalCategory || "Non-EU");
-  // Якщо debugCategory встановлено, використовуємо його, інакше globalCategory
   const effectiveCategory = debugCategory || globalCategory;
 
-  const handleCategorySwitch = (newCategory) => {
-    setDebugCategory(newCategory);
-  };
-
-  // Завантаження збереженого activeStage з Firebase
+  // Завантаження активного етапу з Firebase
   useEffect(() => {
     if (!user) return;
-
     const fetchActiveStage = async () => {
       try {
         const docRef = doc(db, "users", user.uid);
@@ -39,11 +33,10 @@ const ApprobationPage = () => {
         console.error("Помилка при зчитуванні activeStage:", error);
       }
     };
-
     fetchActiveStage();
   }, [user]);
 
-  // Завантаження прогресу для всіх етапів
+  // Завантаження прогресу всіх етапів
   useEffect(() => {
     const fetchStagesProgress = async () => {
       if (!user) return;
@@ -70,9 +63,9 @@ const ApprobationPage = () => {
 
   const handleProgressUpdate = (stageId, newProgress) => {
     setStagesProgress((prev) => {
-      const updatedProgress = [...prev];
-      updatedProgress[stageId - 1] = newProgress || 0;
-      return updatedProgress;
+      const updated = [...prev];
+      updated[stageId - 1] = newProgress || 0;
+      return updated;
     });
   };
 
@@ -89,27 +82,30 @@ const ApprobationPage = () => {
     }
   };
 
+  // Розрахунок загального прогресу (середнє значення)
   const calculateOverallProgress = () => {
     if (stagesProgress.length === 0) return 0;
-    const totalProgress = stagesProgress.reduce((acc, progress) => acc + progress, 0);
-    return Math.round(totalProgress / stagesProgress.length);
+    const total = stagesProgress.reduce((acc, cur) => acc + cur, 0);
+    return Math.round(total / stagesProgress.length);
   };
+
+  const overallProgress = calculateOverallProgress();
 
   return (
     <MainLayout>
       <div className={styles.container}>
-        {/* Верхня частина – стейджі */}
+        {/* Секція стейджів */}
         <div className={styles.stagesSection}>
-          <StageMenu 
-            onStageSelect={handleStageSelect} 
-            stagesProgress={stagesProgress} 
+          <StageMenu
+            onStageSelect={handleStageSelect}
+            stagesProgress={stagesProgress}
             enableSwipe={true}
             debugCategory={effectiveCategory}
             activeStage={activeStage}
           />
         </div>
 
-        {/* Завдання для вибраного стейджу */}
+        {/* Секція завдань */}
         <div className={styles.tasksSection}>
           <StageTasks
             selectedStageId={activeStage}
@@ -120,23 +116,41 @@ const ApprobationPage = () => {
           />
         </div>
 
-        {/* Прогрес-бар */}
-        <div className={styles.progressSection}>
-          <div className={styles.progressBar}>
-            <div
-              className={styles.progressFill}
-              style={{ width: `${calculateOverallProgress()}%` }}
-            ></div>
-          </div>
-          <p className={styles.progressText}>{calculateOverallProgress()}%</p>
-        </div>
-
-        {/* Кнопки для перемикання категорії – розташовано внизу */}
+        {/* Секція перемикання категорій */}
         <div className={styles.categorySection}>
-          <button onClick={() => handleCategorySwitch("EU")}>EU</button>
-          <button onClick={() => handleCategorySwitch("Non-EU")}>Non-EU</button>
+          <button onClick={() => setDebugCategory("EU")}>EU</button>
+          <button onClick={() => setDebugCategory("Non-EU")}>Non-EU</button>
           <p>Поточна категорія: {effectiveCategory}</p>
         </div>
+      </div>
+
+      {/* Фіксований круговий прогрес-бар у правому нижньому куті */}
+      <div className={styles.printButton}>
+        <svg viewBox="0 0 36 36" className={styles.circularProgress}>
+          <path
+            className={styles.circleBg}
+            d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="#eee"
+            strokeWidth="2"
+          />
+          <path
+            className={styles.circle}
+            strokeDasharray={`${overallProgress}, 100`}
+            d="M18 2.0845
+               a 15.9155 15.9155 0 0 1 0 31.831
+               a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="#4caf50"
+            strokeWidth="2"
+          />
+          {/* Текст у центрі кола */}
+          <text x="18" y="21" textAnchor="middle" className={styles.progressText}>
+            {overallProgress}%
+          </text>
+        </svg>
       </div>
     </MainLayout>
   );

@@ -8,7 +8,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import StageMenu from "../../components/StageMenu/StageMenu";
+import StageMenu from "../ApprobationPage/StageMenu";
 import styles from "./RegistrationPage.module.scss";
 import { useAuth } from "../../contexts/AuthContext"; // Імпорт useAuth
 
