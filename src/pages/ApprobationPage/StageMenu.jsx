@@ -101,9 +101,9 @@ const StageMenu = ({
         try {
           const docRef = doc(db, "users", user.uid);
           await setDoc(docRef, { activeStage: stageId }, { merge: true });
-          console.log("Активный этап обновлён:", stageId);
+          console.log("Активний етап оновлено:", stageId);
         } catch (error) {
-          console.error("Ошибка при обновлении активного этапа:", error);
+          console.error("Помилка при оновленні активного етапу:", error);
         }
       };
       update();
@@ -125,59 +125,71 @@ const StageMenu = ({
     preventDefaultTouchmoveEvent: true,
   });
 
+  // Знаходимо активну стадію для відображення її назви (якщо activeStage не заданий, використовується перший)
+  const activeStageObj = stages.find((s) => s.id === activeStage) || stages[0] || {};
+
   return (
-    <div className={styles.stageMenuContainer}>
-      <div
-        {...(isMobile ? swipeHandlers : {})}
-        ref={stagesWrapperRef}
-        className={styles.stagesWrapper}
-      >
-        {stages.map((stage, index) => (
-          <Tippy
-            key={stage.id}
-            content={stage.description}
-            placement="top"
-            arrow={true}
-            theme="custom"
-            trigger={isMobile ? "click" : "mouseenter focus"}
-            hideOnClick={true}
-          >
-            <div
-              data-stage-id={stage.id}
-              data-stage-index={index}
-              className={classNames(styles.stage, {
-                [styles.active]: activeStage === stage.id,
-              })}
-              onClick={() => handleStageClick(stage.id)}
+    <>
+      <div className={styles.stageMenuContainer}>
+        <div
+          {...(isMobile ? swipeHandlers : {})}
+          ref={stagesWrapperRef}
+          className={styles.stagesWrapper}
+        >
+          {stages.map((stage, index) => (
+            <Tippy
+              key={stage.id}
+              content={stage.description}
+              placement="top"
+              arrow={true}
+              theme="custom"
+              trigger={isMobile ? "click" : "mouseenter focus"}
+              hideOnClick={true}
             >
-              <div className={styles.progressCircle}>
-                <svg className={styles.progressSvg} viewBox="0 0 36 36">
-                  <path
-                    className={styles.circleBg}
-                    d="M18 2.0845
-                       a 15.9155 15.9155 0 0 1 0 31.831
-                       a 15.9155 15.9155 0 0 1 0 -31.831"
+              <div
+                data-stage-id={stage.id}
+                data-stage-index={index}
+                className={classNames(styles.stage, {
+                  [styles.active]: activeStage === stage.id,
+                })}
+                onClick={() => handleStageClick(stage.id)}
+              >
+                <div className={styles.progressCircle}>
+                  <svg className={styles.progressSvg} viewBox="0 0 36 36">
+                    <path
+                      className={styles.circleBg}
+                      d="M18 2.0845
+                         a 15.9155 15.9155 0 0 1 0 31.831
+                         a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path
+                      className={styles.circle}
+                      strokeDasharray={`${stagesProgress[index]}, 100`}
+                      d="M18 2.0845
+                         a 15.9155 15.9155 0 0 1 0 31.831
+                         a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                  </svg>
+                  <img
+                    src={stageImages[index]}
+                    alt={`Stage ${index + 1}`}
+                    className={styles.stageImage}
                   />
-                  <path
-                    className={styles.circle}
-                    strokeDasharray={`${stagesProgress[index]}, 100`}
-                    d="M18 2.0845
-                       a 15.9155 15.9155 0 0 1 0 31.831
-                       a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                </svg>
-                <img
-                  src={stageImages[index]}
-                  alt={`Stage ${index + 1}`}
-                  className={styles.stageImage}
-                />
+                </div>
+                {/* На десктопі назва відображається над кожною стадією */}
+                <div className={styles.stageTitle}>{stage.title}</div>
               </div>
-              <div className={styles.stageTitle}>{stage.title}</div>
-            </div>
-          </Tippy>
-        ))}
+            </Tippy>
+          ))}
+        </div>
       </div>
-    </div>
+      {/* На мобільних пристроях виводимо один блок з назвою активної стадії */}
+      {isMobile && (
+        <div className={styles.activeStageTitle}>
+          {activeStageObj.title}
+        </div>
+      )}
+    </>
   );
 };
 
