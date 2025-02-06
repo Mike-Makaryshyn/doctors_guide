@@ -1,32 +1,61 @@
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import StageMenu from "../../components/StageMenu/StageMenu";
-import StageTasks from "../../components/StageTasks/StageTasks";
+import StageMenu from "./StageMenu";
+import StageTasks from "./StageTasks";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { db } from "../../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import styles from "./styles.module.scss";
 
 const ApprobationPage = () => {
-  const { selectedLanguage: language, user } = useGetGlobalInfo();
-  const [activeStage, setActiveStage] = useState(1); // Поточний етап
-  const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0)); // Масив прогресів
+  const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
+  const [activeStage, setActiveStage] = useState(1);
+  const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0));
+
+  // Локальний стан для перемикача (для тестування)
+  const [debugCategory, setDebugCategory] = useState(globalCategory || "Non-EU");
+  // Якщо debugCategory встановлено, використовуємо його, інакше globalCategory
+  const effectiveCategory = debugCategory || globalCategory;
+
+  const handleCategorySwitch = (newCategory) => {
+    setDebugCategory(newCategory);
+  };
+
+  // Завантаження збереженого activeStage з Firebase
+  useEffect(() => {
+    if (!user) return;
+
+    const fetchActiveStage = async () => {
+      try {
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          if (data.activeStage) {
+            setActiveStage(data.activeStage);
+          }
+        }
+      } catch (error) {
+        console.error("Помилка при зчитуванні activeStage:", error);
+      }
+    };
+
+    fetchActiveStage();
+  }, [user]);
 
   // Завантаження прогресу для всіх етапів
   useEffect(() => {
     const fetchStagesProgress = async () => {
       if (!user) return;
-
       try {
         const progressArray = [];
         for (let i = 1; i <= 9; i++) {
           const docRef = doc(db, "users", user.uid, "stages", `stage_${i}`);
           const docSnap = await getDoc(docRef);
-
           if (docSnap.exists()) {
             const stageData = docSnap.data();
             const progress = stageData?.progress || 0;
-            progressArray.push(Math.min(progress, 100)); // Обмеження до 100%
+            progressArray.push(Math.min(progress, 100));
           } else {
             progressArray.push(0);
           }
@@ -36,11 +65,9 @@ const ApprobationPage = () => {
         console.error("Помилка при завантаженні прогресу етапів:", error);
       }
     };
-
     fetchStagesProgress();
   }, [user]);
 
-  // Оновлення прогресу для конкретного етапу
   const handleProgressUpdate = (stageId, newProgress) => {
     setStagesProgress((prev) => {
       const updatedProgress = [...prev];
@@ -49,12 +76,9 @@ const ApprobationPage = () => {
     });
   };
 
-  // Оновлення активного етапу
   const handleStageSelect = async (stageId) => {
     if (stageId === activeStage) return;
-
     setActiveStage(stageId);
-
     if (user) {
       try {
         const docRef = doc(db, "users", user.uid, "stages", `stage_${stageId}`);
@@ -65,7 +89,6 @@ const ApprobationPage = () => {
     }
   };
 
-  // Обчислення загального прогресу
   const calculateOverallProgress = () => {
     if (stagesProgress.length === 0) return 0;
     const totalProgress = stagesProgress.reduce((acc, progress) => acc + progress, 0);
@@ -75,50 +98,45 @@ const ApprobationPage = () => {
   return (
     <MainLayout>
       <div className={styles.container}>
-        <header className={styles.header}>
-          <h1>
-            {language === "en" && "Path to Approbation"}
-            {language === "de" && "Weg zur Approbation"}
-            {language === "uk" && "Шлях до апробації"}
-            {language === "ru" && "Путь к апробации"}
-            {language === "tr" && "Aprobasyo Yolu"}
-            {language === "ar" && "طريق التصديق"}
-            {language === "fr" && "Chemin vers l'approbation"}
-            {language === "es" && "Camino a la Aprobación"}
-            {language === "pl" && "Droga do Aprobaty"}
-          </h1>
-        </header>
-
-        {/* Загальний прогрес */}
-        <div className={styles.overallProgress}>
-          <h2>
-            {language === "en" && "Overall Progress"}
-            {language === "de" && "Gesamtfortschritt"}
-            {language === "uk" && "Загальний прогрес"}
-            {language === "ru" && "Общий прогрес"}
-            {language === "tr" && "Genel İlerleme"}
-            {language === "ar" && "التقدم الكلي"}
-            {language === "fr" && "Progrès global"}
-            {language === "es" && "Progreso general"}
-            {language === "pl" && "Ogólny postęp"}
-            : {calculateOverallProgress()}%
-          </h2>
+        {/* Верхня частина – стейджі */}
+        <div className={styles.stagesSection}>
+          <StageMenu 
+            onStageSelect={handleStageSelect} 
+            stagesProgress={stagesProgress} 
+            enableSwipe={true}
+            debugCategory={effectiveCategory}
+            activeStage={activeStage}
+          />
         </div>
 
-        {/* Меню етапів */}
-        <StageMenu 
-          onStageSelect={handleStageSelect} 
-          stagesProgress={stagesProgress} 
-          enableSwipe={true}
-        />
+        {/* Завдання для вибраного стейджу */}
+        <div className={styles.tasksSection}>
+          <StageTasks
+            selectedStageId={activeStage}
+            language={language}
+            user={user}
+            onProgressUpdate={handleProgressUpdate}
+            debugCategory={effectiveCategory}
+          />
+        </div>
 
-        {/* Завдання для активного етапу */}
-        <StageTasks
-          selectedStageId={activeStage}
-          language={language}
-          user={user}
-          onProgressUpdate={handleProgressUpdate}
-        />
+        {/* Прогрес-бар */}
+        <div className={styles.progressSection}>
+          <div className={styles.progressBar}>
+            <div
+              className={styles.progressFill}
+              style={{ width: `${calculateOverallProgress()}%` }}
+            ></div>
+          </div>
+          <p className={styles.progressText}>{calculateOverallProgress()}%</p>
+        </div>
+
+        {/* Кнопки для перемикання категорії – розташовано внизу */}
+        <div className={styles.categorySection}>
+          <button onClick={() => handleCategorySwitch("EU")}>EU</button>
+          <button onClick={() => handleCategorySwitch("Non-EU")}>Non-EU</button>
+          <p>Поточна категорія: {effectiveCategory}</p>
+        </div>
       </div>
     </MainLayout>
   );

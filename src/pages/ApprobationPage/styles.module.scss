@@ -1,19 +1,59 @@
-/* src/pages/ApprobationPage/styles.module.scss */
 .container {
   padding: 20px;
-  background-color: #f1f1f1;
   border-radius: 10px;
 }
 
-.header {
-  text-align: center;
+/* Секція для стейджів */
+.stagesSection {
   margin-bottom: 20px;
 }
 
-.stageContent {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: white;
+/* Секція для завдань */
+.tasksSection {
+  margin-bottom: 20px;
+}
+
+/* Прогрес-бар */
+.progressSection {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 20px;
+  background: #eee;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #2a7c6f;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.progressText {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Секція для перемикання категорії */
+.categorySection {
+  text-align: center;
+  margin-top: 20px;
+  button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #2a7c6f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover {
+      background-color: #205f55;
+    }
+  }
 }
