@@ -90,6 +90,18 @@ export const main_menu_items = {
                link: "/approbation", // Link for the item
             },
             {
+               en: "What is Berufserlaubnis?",
+               fr: "Qu'est-ce que la Berufserlaubnis?",
+               es: "¿Qué es la Berufserlaubnis?",
+               ar: "ما هو تصريح العمل؟",
+               tr: "Berufserlaubnis Nedir?",
+               pl: "Co to jest Berufserlaubnis?",
+               uk: "Що таке Berufserlaubnis?",
+               ru: "Что такое Berufserlaubnis?",
+               de: "Was ist Berufserlaubnis?",
+               link: "/berufserlaubnis", // Посилання на нову сторінку
+            },
+            {
                en: "Step-by-Step Instructions",
                fr: "Instructions étape par étape",
                es: "Instrucciones paso a paso",
@@ -113,6 +125,7 @@ export const main_menu_items = {
                de: "Erforderliche Dokumente",
                link: "/documents",
             },
+            
          ],
       },
       {
@@ -140,7 +153,7 @@ export const main_menu_items = {
                uk: "Що таке FSP?",
                ru: "Что такое FSP?",
                de: "Was ist FSP?",
-               link: "/what_is_fsp",
+               link: "/what-is-fsp",
             },
             {
                en: "Participation in FSP",

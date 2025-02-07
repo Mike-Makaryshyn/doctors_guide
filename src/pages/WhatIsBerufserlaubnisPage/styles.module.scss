@@ -1,0 +1,22 @@
+.what_is_fsp__content {
+   padding: 20px;
+
+   text-align: left;
+
+   section {
+      border-bottom: 1px solid white;
+   }
+
+   ul {
+      list-style-type: disc;
+      margin-left: 30px;
+   }
+
+   @media (max-width: 768px) {
+      padding: 10px;
+
+      ul {
+         margin-left: 20px;
+      }
+   }
+}

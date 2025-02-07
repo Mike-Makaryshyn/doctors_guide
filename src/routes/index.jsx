@@ -43,6 +43,9 @@ const LinksPage = React.lazy(() => import("../pages/LinksPage/LinksPage"));
 const WhatIsApprobationPage = React.lazy(() =>
   import("../pages/WhatIsApprobationPage/WhatIsApprobationPage")
 );
+const WhatIsBerufserlaubnisPage = React.lazy(() =>
+  import("../pages/WhatIsBerufserlaubnisPage/WhatIsBerufserlaubnisPage")
+);
 const AllMedicalTerminologyPage = React.lazy(() =>
   import("../pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage")
 );
@@ -94,7 +97,10 @@ export default function Routers() {
         )}
 
         {/* Основні сторінки */}
-        <Route path={pathList.exam_explanations.path} element={<ExamExplanationsPage />} />
+        <Route
+          path={pathList.exam_explanations.path}
+          element={<ExamExplanationsPage />}
+        />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
@@ -117,7 +123,7 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
-
+      
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />
 
@@ -135,7 +141,10 @@ export default function Routers() {
           path={pathList.informationSources.path}
           element={<FSPFormularPage />}
         />
-
+        <Route
+          path={pathList.berufserlaubnis.path}
+          element={<WhatIsBerufserlaubnisPage />}
+        />
         {/* Захищені маршрути */}
         <Route path="/data-collection" element={<DataCollectionPage />} />
         <Route

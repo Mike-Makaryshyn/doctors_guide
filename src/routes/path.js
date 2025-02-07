@@ -60,4 +60,7 @@ export const pathList = {
   custom_map: {
     path: "/custom-map",
   },
+  berufserlaubnis: {
+    path: "/berufserlaubnis",
+  },
 };
