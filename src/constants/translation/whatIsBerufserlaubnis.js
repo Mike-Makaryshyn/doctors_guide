@@ -490,5 +490,145 @@ export const BERUFSERLAUBNIS_INFO = {
       detailedReviewTitle: "Szczegółowy przegląd procesu uzyskania pozwolenia na wykonywanie zawodu",
       detailedReview:
         "Proces uzyskania pozwolenia na wykonywanie zawodu składa się z kilku kluczowych etapów. Na początku lekarz musi ukończyć studia medyczne i zdobyć odpowiednie doświadczenie kliniczne, co jest potwierdzane przez szczegółową dokumentację i listy rekomendacyjne. Następnie odbywa się ocena znajomości języka niemieckiego poprzez specjalistyczny egzamin. Na koniec wszystkie wymagane dokumenty są zbierane, tłumaczone i oficjalnie zatwierdzane. Taki uporządkowany proces gwarantuje, że lekarz będzie w pełni przygotowany do samodzielnej praktyki w Niemczech."
-    }
+    },en: {
+        title: "Temporary Medical License (Berufserlaubnis) in Germany",
+        intro:
+          "The Berufserlaubnis is a temporary authorization that allows qualified, but not yet fully licensed foreign doctors to work in Germany. It acts as a transitional solution, enabling them to gain valuable practical experience and gradually integrate into the German healthcare system.",
+        definition:
+          "This regulation specifically applies to doctors from non-EU countries who have completed their medical education abroad and are preparing for the Knowledge Examination or Equivalence Examination. It represents an important step to facilitate access to regular licensure and deepen professional competencies in clinical practice.",
+        requirements: {
+          title: "Requirements for obtaining the Berufserlaubnis:",
+          points: [
+            "Medical Education:\n• Completion of a medical degree in the home country, and if applicable, postgraduate training.\n• Proof of sufficient medical qualification through diplomas, certificates, and training records.\n• Evaluation of professional competencies by the relevant examination authority.",
+            "Language Requirements:\n• Proof of German language skills at a minimum B2 level, ideally with a focus on medical terminology.\n• Successful completion of the specialized medical language exam (FSP) at the C1 level to ensure effective communication in clinical settings.",
+            "Required Documents:\n• Comprehensive, certified, and up-to-date documentation of medical education and previous work experience.\n• A current police clearance certificate or an equivalent document.\n• Certified translations and apostilles of relevant documents to meet international standards."
+          ]
+        },
+        process: {
+          title: "Steps to obtain the Berufserlaubnis:",
+          steps: [
+            {
+              title: "Language Preparation",
+              description: [
+                "Obtain a recognized language certificate (minimum B2) and pass the specialized medical language exam (FSP) at the C1 level. Preparation courses and practice tests support success in this step."
+              ]
+            },
+            {
+              title: "Preparation and Submission of Documents",
+              description: [
+                "All required documents must be complete, certified, and in the required languages. A checklist helps ensure that no critical document is overlooked."
+              ]
+            },
+            {
+              title: "Application Submission to the Competent Authority",
+              description: [
+                "The application is submitted to the relevant state authority or medical chamber. Individual consultation can help simplify the process."
+              ]
+            },
+            {
+              title: "Issuance of the Temporary Work Permit",
+              description: [
+                "After successful review of the application, the permit is issued, allowing supervised work in clinics or private practices."
+              ]
+            },
+            {
+              title: "Duration and Validity of the Permit",
+              description: [
+                "The permit is usually issued for up to two years and serves as a bridge until full licensure is obtained."
+              ]
+            },
+            {
+              title: "Preparation for the Final Examination",
+              description: [
+                "During the validity period, doctors should take preparation courses, mock exams, and mentoring programs to transition successfully to full licensure."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "What are the benefits of this permit?",
+          points: [
+            "First Professional Experience in Germany: Enables gaining valuable practical experience in the German healthcare system.",
+            "Gradual Integration: Supports adaptation to local medical standards and fosters interdisciplinary exchange.",
+            "Financial Stability: Provides an opportunity to earn a regular salary during the transitional phase.",
+            "Practice-Oriented Training: Work under supervision enhances the practical application and deepening of medical knowledge."
+          ]
+        },
+        additionalCourses:
+          "Additional training and preparation courses—such as language courses, specialty-specific seminars, and practice-oriented workshops—can significantly improve success in transitioning to full licensure.",
+        detailedReviewTitle: "Detailed Overview of the Berufserlaubnis Process",
+        detailedReview:
+          "The Berufserlaubnis process is divided into several carefully planned stages. First, candidates must complete their medical education and clinical training, documented through extensive records and recommendation letters. This is followed by a review of linguistic competence through a specialized exam to ensure effective communication. Finally, all required documents are collected, officially translated, and certified. This structured approach ensures a smooth transition to full licensure."
+      },
+      
+      ar: {
+        title: "تصريح ممارسة المهنة الطبية (Berufserlaubnis) في ألمانيا",
+        intro:
+          "تصريح Berufserlaubnis هو تصريح مؤقت يسمح للأطباء الأجانب المؤهلين، ولكن لم يحصلوا بعد على الترخيص الكامل، بالعمل في ألمانيا. يعمل كحل انتقالي يمكّنهم من اكتساب الخبرة العملية القيمة والاندماج تدريجيًا في نظام الرعاية الصحية الألماني.",
+        definition:
+          "ينطبق هذا التنظيم بشكل خاص على الأطباء من دول خارج الاتحاد الأوروبي الذين أكملوا دراستهم الطبية في الخارج ويستعدون لاجتياز اختبار المعرفة أو معادلة الشهادات. يمثل هذا التصريح خطوة مهمة لتسهيل الوصول إلى الترخيص الكامل وتعزيز الكفاءات المهنية في العمل السريري.",
+        requirements: {
+          title: "متطلبات الحصول على تصريح Berufserlaubnis:",
+          points: [
+            "التعليم الطبي:\n• إتمام دراسة الطب في البلد الأصلي، وإذا لزم الأمر، تدريب ما بعد التخرج.\n• تقديم دليل على الكفاءة الطبية من خلال الشهادات والدبلومات وسجلات التدريب.\n• تقييم الكفاءات المهنية من قبل الجهة المختصة.",
+            "متطلبات اللغة:\n• تقديم دليل على إتقان اللغة الألمانية بمستوى لا يقل عن B2، ويفضل مع التركيز على المصطلحات الطبية.\n• اجتياز اختبار اللغة الطبي التخصصي (FSP) بمستوى C1 لضمان التواصل الفعال في البيئات السريرية.",
+            "الوثائق المطلوبة:\n• تقديم وثائق شاملة، مصدقة ومحدثة، تثبت التعليم الطبي والخبرة العملية السابقة.\n• شهادة عدم وجود سوابق جنائية أو وثيقة معادلة.\n• ترجمات موثقة وأبوستيل للوثائق ذات الصلة لتلبية المعايير الدولية."
+          ]
+        },
+        process: {
+          title: "خطوات الحصول على تصريح Berufserlaubnis:",
+          steps: [
+            {
+              title: "التحضير اللغوي",
+              description: [
+                "الحصول على شهادة لغة معترف بها (بحد أدنى B2) واجتياز اختبار اللغة الطبي التخصصي (FSP) بمستوى C1. تساعد الدورات التحضيرية والاختبارات التجريبية في ضمان النجاح."
+              ]
+            },
+            {
+              title: "تحضير وتقديم الوثائق",
+              description: [
+                "يجب أن تكون جميع الوثائق المطلوبة كاملة ومصدقة ومترجمة إلى اللغات المطلوبة. تساعد قائمة المراجعة في ضمان عدم فقدان أي وثيقة هامة."
+              ]
+            },
+            {
+              title: "تقديم الطلب إلى الجهة المختصة",
+              description: [
+                "يُقدم الطلب إلى الجهة الحكومية أو غرفة الأطباء المختصة. يمكن أن تسهل الاستشارة الفردية هذه العملية."
+              ]
+            },
+            {
+              title: "إصدار تصريح العمل المؤقت",
+              description: [
+                "بعد مراجعة الطلب بنجاح، يتم إصدار التصريح الذي يسمح بالعمل تحت الإشراف في العيادات أو الممارسات الخاصة."
+              ]
+            },
+            {
+              title: "مدة وصلاحية التصريح",
+              description: [
+                "يُصدر التصريح عادةً لمدة تصل إلى سنتين ويعمل كجسر حتى يتم الحصول على الترخيص الكامل."
+              ]
+            },
+            {
+              title: "التحضير للامتحان النهائي",
+              description: [
+                "خلال فترة الصلاحية، يجب على الأطباء الانضمام إلى دورات تحضيرية، اختبارات تجريبية، وبرامج إرشاد لضمان الانتقال الناجح إلى الترخيص الكامل."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "ما هي فوائد هذا التصريح؟",
+          points: [
+            "أول تجربة مهنية في ألمانيا: يتيح اكتساب خبرة عملية قيمة في نظام الرعاية الصحية الألماني.",
+            "الاندماج التدريجي: يدعم التكيف مع المعايير الطبية المحلية ويعزز التبادل بين التخصصات.",
+            "الاستقرار المالي: يتيح فرصة الحصول على راتب منتظم خلال المرحلة الانتقالية.",
+            "التدريب العملي: العمل تحت الإشراف يعزز تطبيق المعرفة الطبية عمليًا وتطويرها."
+          ]
+        },
+        additionalCourses:
+          "يمكن أن تعزز الدورات التدريبية الإضافية، مثل دورات اللغة وورش العمل التخصصية العملية، فرص النجاح في الانتقال إلى الترخيص الكامل بشكل كبير.",
+        detailedReviewTitle: "نظرة تفصيلية على عملية تصريح Berufserlaubnis",
+        detailedReview:
+          "عملية الحصول على تصريح Berufserlaubnis مقسمة إلى عدة مراحل مخططة بعناية. يجب على المرشحين أولاً إكمال تعليمهم الطبي وتدريبهم السريري، مع توثيق ذلك من خلال سجلات مفصلة ورسائل توصية. يتبع ذلك مراجعة الكفاءة اللغوية من خلال اختبار متخصص لضمان التواصل الفعال. أخيرًا، يتم جمع جميع الوثائق المطلوبة وترجمتها رسميًا وتصديقها. يضمن هذا النهج المنظم انتقالًا سلسًا إلى الترخيص الكامل."
+      }
   };

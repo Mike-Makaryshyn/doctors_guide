@@ -299,6 +299,106 @@ export const GLEICHWERTIGKEIT_INFO = {
       detailedReview:
         "El proceso de reconocimiento comienza con la presentación de todos los documentos que acrediten la formación y la experiencia clínica del médico. A continuación, un panel de expertos evalúa minuciosamente esta documentación y elabora un informe de evaluación. Si el informe es favorable, generalmente se prescinde de rendir el examen de conocimientos, lo que permite una transición directa hacia la obtención de la licencia completa. Este enfoque estructurado garantiza una valoración exhaustiva de las cualificaciones del médico."
     },
+    ar: {
+        title: "معادلة التعليم الطبي في ألمانيا",
+        intro:
+          "إجراء الاعتراف بالمعادلة هو عملية تمكن الأطباء من الحصول على اعتراف رسمي بأن مؤهلاتهم الطبية التي تم الحصول عليها في الخارج معادلة للتعليم الطبي الألماني. يمثل هذا الإجراء بديلاً مهماً لامتحان المعرفة إذا تم اعتبار المؤهلات متكافئة، مما يسهل الوصول إلى الترخيص الكامل.",
+        definition:
+          "المعادلة تعني أن التعليم الطبي الذي تم الحصول عليه في الخارج يتوافق في المحتوى والجودة مع المناهج الألمانية. عند الاعتراف بها، تلغي المعادلة الحاجة إلى اجتياز امتحانات إضافية، مما يتيح الانتقال السريع للحصول على الترخيص.",
+        requirements: {
+          title: "متطلبات الاعتراف بالمعادلة",
+          points: [
+            "التعليم الطبي:\n• إتمام شهادة طبية ناجحة في الخارج تثبت المعرفة النظرية والعملية المطابقة للمعايير الألمانية.\n• إثبات التدريب السريري والتعليم المتقدم من خلال الدبلومات والشهادات وسجلات التعليم المستمر.",
+            "الوثائق المطلوبة:\n• شهادات الدبلومات الأكاديمية المصدقة.\n• الترجمات الرسمية والتصديقات الدولية (الأبوستيل) للوثائق.\n• إثبات الخبرة العملية والتدريب الإضافي.",
+            "متطلبات اللغة:\n• إثبات إجادة اللغة الألمانية، عادةً بمستوى لا يقل عن B2 وغالباً C1 في السياق الطبي."
+          ]
+        },
+        process: {
+          title: "إجراءات الاعتراف",
+          steps: [
+            {
+              title: "تقديم المستندات",
+              description: [
+                "يجب على المتقدم تقديم جميع الوثائق المطلوبة للسلطة المختصة، بما في ذلك السجلات الأكاديمية وشهادات الخبرة العملية والترجمات الرسمية."
+              ]
+            },
+            {
+              title: "إعداد تقرير التقييم",
+              description: [
+                "يقوم فريق الخبراء بمراجعة الوثائق المقدمة وإعداد تقرير تقييم تفصيلي لتحديد ما إذا كان التعليم الطبي يلبي المعايير الألمانية."
+              ]
+            },
+            {
+              title: "القرار بشأن الإجراءات الإضافية",
+              description: [
+                "إذا تم الاعتراف بالمعادلة، يتم التخلي عن الحاجة إلى امتحان المعرفة مما يسمح بالتقدم المباشر نحو الترخيص الكامل. في حالة عدم الاعتراف، يجب اجتياز امتحان المعرفة."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "فوائد الاعتراف بالمعادلة",
+          points: [
+            "توفير الوقت: يلغي التقييم الإيجابي الحاجة إلى امتحانات إضافية، مما يسرع عملية الحصول على الترخيص.",
+            "الوصول المباشر للممارسة: يتيح الاعتراف بالمعادلة البدء في ممارسة الطب بشكل مستقل دون اختبارات إضافية.",
+            "تقييم فردي: يقدم تقرير التقييم تحليلاً مفصلاً وشخصياً لتعليمك وخبرتك المهنية."
+          ]
+        },
+        additionalCourses: "",
+        detailedReviewTitle: "نظرة شاملة على إجراءات الاعتراف",
+        detailedReview:
+          "تبدأ إجراءات الاعتراف بجمع وتقديم جميع المستندات المطلوبة التي توضح الخلفية التعليمية والمهنية. بعد ذلك، يقوم فريق من الخبراء بمراجعة الوثائق وإعداد تقرير تقييم شامل. إذا تم الاعتراف بالمؤهلات على أنها معادلة للمعايير الألمانية، يتم التخلي عن امتحان المعرفة، مما يسمح بالتقدم المباشر للحصول على الترخيص الكامل. يضمن هذا النهج الهيكلي تقييمًا شاملاً ودقيقًا لجميع جوانب تدريبك."
+      },
+      tr: {
+        title: "Almanya'da Tıbbi Eğitim Eşdeğerliği",
+        intro:
+          "Eşdeğerlik tanınması, hekimlerin yurt dışında aldıkları tıbbi yeterliliklerin Almanya’daki tıbbi eğitime eşdeğer olarak resmi olarak tanınmasını sağlayan bir prosedürdür. Bu süreç, yeterlilikler karşılaştırılabilir olarak değerlendirildiğinde Bilgi Sınavına önemli bir alternatif sunar ve tam lisansa geçişi kolaylaştırır.",
+        definition:
+          "Eşdeğerlik, yurt dışında alınan tıbbi eğitimin içerik ve kalite açısından Alman müfredatına eşdeğer olduğu anlamına gelir. Tanındığında, bu eşdeğerlik ek sınavlara duyulan ihtiyacı ortadan kaldırır ve tam lisansa hızlı bir geçiş sağlar.",
+        requirements: {
+          title: "Eşdeğerlik Tanınması için Gereksinimler",
+          points: [
+            "Tıbbi Eğitim:\n• Yurtdışında başarıyla tamamlanmış bir tıp derecesi.\n• Alman standartlarına uygun teorik ve pratik bilginin diploması, sertifikaları ve ileri eğitim kayıtları ile kanıtlanması.",
+            "Gerekli Belgeler:\n• Sertifikalı diplomalar, sertifikalar ve akademik transkriptler.\n• Resmi belgelerin tercümeleri ve apostilleri.\n• Pratik deneyim ve ileri eğitim kanıtları.",
+            "Dil Gereklilikleri:\n• Genellikle en az B2 seviyesinde, tıbbi bağlamda ise C1 seviyesinde Almanca dil yeterliliği kanıtı."
+          ]
+        },
+        process: {
+          title: "Tanınma Prosedürü",
+          steps: [
+            {
+              title: "Belgelerin Teslimi",
+              description: [
+                "Başvuru sahibi, tüm gerekli belgeleri ilgili otoriteye sunmalıdır. Buna akademik kayıtlar, sertifikalar ve resmi tercümeler dahildir."
+              ]
+            },
+            {
+              title: "Değerlendirme Raporunun Hazırlanması",
+              description: [
+                "Uzmanlardan oluşan bir kurul, sunulan belgeleri inceler ve yabancı eğitimin Alman standartlarına uygun olup olmadığını belirlemek için ayrıntılı bir değerlendirme raporu hazırlar."
+              ]
+            },
+            {
+              title: "İlerleme Adımlarına Karar",
+              description: [
+                "Eşdeğerlik tanınırsa, Bilgi Sınavına gerek kalmaz ve tam lisansa doğru doğrudan ilerleme sağlanır. Aksi takdirde, adayın Bilgi Sınavını geçmesi gerekir."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "Eşdeğerlik Tanınmasının Avantajları",
+          points: [
+            "Zaman Tasarrufu: Olumlu bir değerlendirme ek sınavlara duyulan ihtiyacı ortadan kaldırır, lisans alma sürecini önemli ölçüde hızlandırır.",
+            "Doğrudan Uygulamaya Erişim: Tanınmış eşdeğerlik, doktorların bağımsız bir şekilde çalışmaya başlamalarına olanak tanır.",
+            "Bireyselleştirilmiş Değerlendirme: Değerlendirme raporu, eğitiminiz ve mesleki deneyiminiz hakkında ayrıntılı ve kişiselleştirilmiş bir analiz sunar."
+          ]
+        },
+        additionalCourses: "",
+        detailedReviewTitle: "Tanınma Prosedürünün Ayrıntılı Genel Görünümü",
+        detailedReview:
+          "Tanınma prosedürü, eğitim ve mesleki geçmişinizi belgeleyen tüm gerekli belgelerin toplanması ve teslimiyle başlar. Bir uzman paneli daha sonra bu belgeleri inceler ve kapsamlı bir değerlendirme raporu hazırlar. Eğer nitelikleriniz Alman standartlarına eşdeğer olarak kabul edilirse, Bilgi Sınavı genellikle iptal edilir ve tam lisansa doğrudan ilerleme sağlanır. Bu yapılandırılmış süreç, eğitiminizin her yönünün titizlikle değerlendirilmesini ve doğrulanmasını sağlar."
+      },
     pl: {
       title: "Równoważność kształcenia medycznego w Niemczech",
       intro:

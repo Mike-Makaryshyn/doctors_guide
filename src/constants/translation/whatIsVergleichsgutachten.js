@@ -251,6 +251,90 @@ export const VERGLEICHSGUTACHTEN_INFO = {
       detailedReview:
         "El procedimiento de reconocimiento comienza con la recopilación y presentación de todos los documentos que acrediten tu formación y experiencia profesional. A continuación, un panel de expertos analiza minuciosamente estos documentos y elabora un informe detallado para determinar si tu formación es equivalente a los estándares alemanes. Si se reconoce la equivalencia, normalmente no es necesario rendir un examen adicional, lo que acelera el proceso de obtención de la licencia completa. Este enfoque estructurado garantiza una evaluación completa e individualizada de tus cualificaciones."
     },
+    ar: {
+        title: "تقرير Vergleichsgutachten: الطرق الرسمية وغير الرسمية",
+        intro:
+          "تقرير Vergleichsgutachten هو تقرير خبرة مقارنة يُستخدم لتقييم ما إذا كانت المؤهلات الطبية المكتسبة في الخارج تعادل المعايير الألمانية. يمكن الحصول على هذا التقييم بشكل رسمي من السلطات المختصة أو بشكل غير رسمي من زملاء سبق لهم خوض هذه العملية.",
+        definition:
+          "ما هو تقرير Vergleichsgutachten؟ إنه تقرير تفصيلي يقارن التعليم الطبي المكتسب في الخارج بالنظام الألماني لتحديد ما إذا كان يمكن اعتباره معادلاً.",
+        requirements: {
+          title: "تقرير Vergleichsgutachten الرسمي",
+          points: [
+            "مكاتب التقييم المركزية في الولايات الفيدرالية المختلفة",
+            "غرف الأطباء (Ärztekammern) التي تقوم بتقييم التكافؤ",
+            "الخبراء المستقلون الذين يقدمون تحليلات مقارنة للبرامج الدراسية عند الطلب",
+            "للتعليم المكتسب خارج الاتحاد الأوروبي، يمكن طلب تحليل مقارن مدفوع"
+          ]
+        },
+        process: {
+          title: "تقرير Vergleichsgutachten غير الرسمي من الزملاء",
+          steps: [
+            {
+              title: "تقرير Vergleichsgutachten من الزملاء",
+              description: [
+                "إذا كنت تعرف شخصًا تخرج من نفس الجامعة قبل حوالي ثلاث سنوات أو بعدك وحصل بالفعل على الاعتراف في ألمانيا، يمكنك استخدام تقريره كمرجع.",
+                "يمكنك طلب تقييم مقارن واستخدامه كدليل لإعداد مستنداتك.",
+                "إذا كانت البرامج الدراسية متطابقة تقريبًا، يمكن أن يكون ذلك حجة قوية في عملية الاعتراف.",
+                "بعض غرف الأطباء قد تقبل مثل هذا المستند كوثيقة داعمة، حتى لو لم يحل محل التقييم الرسمي."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "الاستنتاج",
+          points: [
+            "يمكن الحصول على تقرير Vergleichsgutachten رسميًا من المؤسسات الألمانية.",
+            "المدخل غير الرسمي عبر الزملاء الذين خاضوا هذه العملية يمكن أن يكون مفيدًا للغاية.",
+            "يساعدك على فهم الوثائق المهمة والجوانب التي يركز عليها الخبراء."
+          ]
+        },
+        additionalCourses: "",
+        detailedReviewTitle: "نظرة عامة مفصلة على إجراءات الاعتراف",
+        detailedReview:
+          "تبدأ إجراءات الاعتراف بجمع وتقديم جميع الوثائق اللازمة التي توضح خلفيتك التعليمية والمهنية. ثم يقوم فريق من الخبراء بمراجعة هذه الوثائق وإعداد تقرير شامل لتحديد ما إذا كان التعليم المكتسب في الخارج يتوافق مع المعايير الألمانية. إذا تم الاعتراف بمؤهلاتك على أنها مكافئة، يتم عادةً إلغاء الحاجة إلى امتحان المعرفة، مما يسرع بشكل كبير عملية الحصول على الترخيص. يضمن هذا النهج المنظم تقييمًا كاملاً وفرديًا لمؤهلاتك."
+      },
+      tr: {
+        title: "Vergleichsgutachten Raporu: Resmi ve Gayri Resmi Yollar",
+        intro:
+          "Vergleichsgutachten raporu, yurtdışında alınan tıbbi eğitimin Alman standartlarına eşdeğer olup olmadığını değerlendirmek için kullanılan karşılaştırmalı bir uzman raporudur. Bu değerlendirme, ilgili resmi otoritelerden veya bu süreci daha önce yaşamış meslektaşlardan gayri resmi olarak alınabilir.",
+        definition:
+          "Vergleichsgutachten nedir? Yurt dışında alınan tıbbi eğitimi Alman sistemiyle karşılaştırarak eşdeğer olup olmadığını belirleyen detaylı bir rapordur.",
+        requirements: {
+          title: "Resmi Vergleichsgutachten",
+          points: [
+            "İlgili federal eyaletlerin merkezi değerlendirme ofisleri",
+            "Eşdeğerlik değerlendirmesi yapan Tabip Odaları (Ärztekammern)",
+            "Talep üzerine çalışma programlarının karşılaştırmalı analizini yapan bağımsız uzmanlar",
+            "AB dışındaki eğitim için ücretli bir karşılaştırma analizi talep edilebilir"
+          ]
+        },
+        process: {
+          title: "Meslektaşlardan Gayri Resmi Vergleichsgutachten",
+          steps: [
+            {
+              title: "Meslektaşlardan Vergleichsgutachten",
+              description: [
+                "Aynı üniversiteden sizden yaklaşık üç yıl önce veya sonra mezun olan ve Almanya'da tanınma almış birini tanıyorsanız, raporunu referans olarak kullanabilirsiniz.",
+                "Karşılaştırmalı bir değerlendirme talep edebilir ve belgelerinizi hazırlamak için rehber olarak kullanabilirsiniz.",
+                "Eğitim programları neredeyse aynıysa, bu tanınma sürecinde güçlü bir argüman olabilir.",
+                "Bazı Tabip Odaları, resmi bir değerlendirme yerine geçmese de bu tür belgeleri destekleyici doküman olarak kabul edebilir."
+              ]
+            }
+          ]
+        },
+        preparation: {
+          title: "Sonuç",
+          points: [
+            "Vergleichsgutachten raporu Alman kurumlarından resmi olarak alınabilir.",
+            "Bu süreci daha önce yaşamış meslektaşlardan gayri resmi bilgiler almak oldukça faydalı olabilir.",
+            "Hangi belgelerin önemli olduğunu ve değerlendiricilerin hangi konulara odaklandığını anlamanıza yardımcı olur."
+          ]
+        },
+        additionalCourses: "",
+        detailedReviewTitle: "Tanınma Prosedürünün Ayrıntılı Genel Görünümü",
+        detailedReview:
+          "Tanınma prosedürü, eğitim ve mesleki geçmişinizi belgeleyen tüm gerekli dokümanların toplanması ve sunulmasıyla başlar. Uzman bir panel daha sonra bu belgeleri inceler ve yabancı eğitimin Alman standartlarına uygun olup olmadığını belirlemek için kapsamlı bir rapor hazırlar. Nitelikleriniz eşdeğer olarak tanınırsa, genellikle ek bir bilgi sınavına gerek kalmaz ve lisans süreci önemli ölçüde hızlanır. Bu yapılandırılmış yaklaşım, niteliklerinizin tam ve bireysel bir değerlendirmesini garanti eder."
+      },
     pl: {
       title: "Vergleichsgutachten: Oficjalne i nieoficjalne podejścia",
       intro:
