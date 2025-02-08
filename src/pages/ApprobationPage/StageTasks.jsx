@@ -7,28 +7,6 @@ import styles from "./StageTasks.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { FaInfoCircle } from "react-icons/fa";
 
-// Компонент модального вікна для відображення додаткової інформації
-const InfoModal = ({ visible, onClose, infoText, link }) => {
-  if (!visible) return null;
-  return (
-    <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.modalClose} onClick={onClose}>
-          ×
-        </button>
-        <div className={styles.modalBody}>
-          <p>{infoText}</p>
-          {link && (
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              Дізнатись більше
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const StageTasks = ({
   selectedStageId,
   user,
@@ -40,11 +18,6 @@ const StageTasks = ({
   const [selectedTasks, setSelectedTasks] = useState([]);
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-
-  // Стан для модального вікна
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalInfoText, setModalInfoText] = useState("");
-  const [modalLink, setModalLink] = useState("");
 
   const { category: globalCategory } = useGetGlobalInfo();
   const effectiveCategory = debugCategory || globalCategory;
@@ -117,12 +90,12 @@ const StageTasks = ({
     }
   };
 
-  // Функція для відкриття модального вікна з інформацією по завданню
-  const openInfoModal = (task) => {
-    // Перевіряємо, чи завдання має додаткову інформацію (infoText або link)
-    setModalInfoText(task.infoText || "Додаткова інформація по завданню.");
-    setModalLink(task.link || "");
-    setModalVisible(true);
+  // Нова функція для обробки кліку на іконку додаткової інформації:
+  const handleInfoClick = (e, task) => {
+    e.stopPropagation();
+    if (task.link) {
+      window.open(task.link, "_blank");
+    }
   };
 
   // Сортуємо завдання: невиконані спочатку, виконані в кінці
@@ -154,26 +127,18 @@ const StageTasks = ({
                 />
                 {task.title}
               </label>
-              {/* Рендеримо іконку додаткової інформації, якщо у завдання є infoText або link */}
+              {/* Якщо завдання має додаткову інформацію (infoText або link),
+                  клікаючи на іконку одразу відкривається посилання у новій вкладці */}
               {(task.infoText || task.link) && (
                 <FaInfoCircle
                   className={styles.infoIcon}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    openInfoModal(task);
-                  }}
+                  onClick={(e) => handleInfoClick(e, task)}
                 />
               )}
             </li>
           ))}
         </ul>
       )}
-      <InfoModal
-        visible={modalVisible}
-        onClose={() => setModalVisible(false)}
-        infoText={modalInfoText}
-        link={modalLink}
-      />
     </div>
   );
 };
