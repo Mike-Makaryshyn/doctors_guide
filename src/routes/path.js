@@ -63,4 +63,7 @@ export const pathList = {
   berufserlaubnis: {
     path: "/berufserlaubnis",
   },
+  kenntnispruefung: {
+    path: "/kenntnispruefung",
+  },
 };

@@ -102,6 +102,18 @@ export const main_menu_items = {
                link: "/berufserlaubnis", // Посилання на нову сторінку
             },
             {
+               en: "What is Kenntnisprüfung?",
+               fr: "Qu'est-ce que la Kenntnisprüfung?",
+               es: "¿Qué es la Kenntnisprüfung?",
+               ar: "ما هو امتحان المعرفة؟",
+               tr: "Kenntnisprüfung Nedir?",
+               pl: "Co to jest Kenntnisprüfung?",
+               uk: "Що таке Kenntnisprüfung?",
+               ru: "Что такое Kenntnisprüfung?",
+               de: "Was ist Kenntnisprüfung?",
+               link: "/kenntnispruefung", // Посилання на сторінку для Kenntnisprüfung
+             },
+            {
                en: "Step-by-Step Instructions",
                fr: "Instructions étape par étape",
                es: "Instrucciones paso a paso",

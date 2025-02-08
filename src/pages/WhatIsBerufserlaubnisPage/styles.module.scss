@@ -1,15 +1,27 @@
-.what_is_fsp__content {
+.what_is_approbation__content {
    padding: 20px;
-
    text-align: left;
 
    section {
       border-bottom: 1px solid white;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
    }
 
    ul {
       list-style-type: disc;
       margin-left: 30px;
+
+      li {
+         margin-bottom: 10px;
+         line-height: 1.6;
+      }
+   }
+
+   .white-space-pre-line {
+      white-space: pre-line;
+      line-height: 1.6;
+      margin-bottom: 10px;
    }
 
    @media (max-width: 768px) {

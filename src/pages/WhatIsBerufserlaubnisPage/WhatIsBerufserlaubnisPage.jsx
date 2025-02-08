@@ -61,7 +61,10 @@ const WhatIsBerufserlaubnisPage = () => {
           </section>
 
           <section>
-            <h2>{content.preparation?.title || "Advantages title not available"}</h2>
+            <h2>{content.preparation?.title || "Preparation title not available"}</h2>
+            {content.preparation?.desc && (
+              <p className="white-space-pre-line">{content.preparation.desc}</p>
+            )}
             {content.preparation?.points && (
               <ul>
                 {content.preparation.points.map((point, index) => (

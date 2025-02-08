@@ -46,6 +46,10 @@ const WhatIsApprobationPage = React.lazy(() =>
 const WhatIsBerufserlaubnisPage = React.lazy(() =>
   import("../pages/WhatIsBerufserlaubnisPage/WhatIsBerufserlaubnisPage")
 );
+const KenntnisPruefungPage = React.lazy(() =>
+  import("../pages/KenntnisPruefungPage/KenntnisPruefungPage")
+);
+
 const AllMedicalTerminologyPage = React.lazy(() =>
   import("../pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage")
 );
@@ -105,6 +109,7 @@ export default function Routers() {
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
         <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
+        <Route path={pathList.kenntnispruefung.path} element={<KenntnisPruefungPage />} />
         <Route
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
