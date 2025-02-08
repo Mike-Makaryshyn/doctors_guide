@@ -1,9 +1,24 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import { BERUFSERLAUBNIS_INFO } from "../../constants/translation/whatIsBerufserlaubnis";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+
+// Компонент для рендерингу абзаців із підтримкою переносів рядків
+const RenderParagraphs = ({ text }) => {
+  return text.split("\n\n").map((para, index) => (
+    <p key={index} className="white-space-pre-line">
+      {para.split("\n").map((line, i, arr) => (
+        <React.Fragment key={i}>
+          {line}
+          {i !== arr.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </p>
+  ));
+};
 
 const WhatIsBerufserlaubnisPage = () => {
   const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
@@ -38,6 +53,7 @@ const WhatIsBerufserlaubnisPage = () => {
             &#8592;
           </button>
 
+          {/* Заголовок, вступ та (опційне) визначення */}
           <section>
             <h1>{content.title || "Title not available"}</h1>
             <h4>{content.intro || "Intro not available"}</h4>
@@ -46,6 +62,7 @@ const WhatIsBerufserlaubnisPage = () => {
             )}
           </section>
 
+          {/* Секція з процесом отримання */}
           <section>
             <h2>{content.process?.title || "Process title not available"}</h2>
             {content.process?.steps?.map((step, index) => (
@@ -60,10 +77,11 @@ const WhatIsBerufserlaubnisPage = () => {
             )) || <p>No steps available</p>}
           </section>
 
+          {/* Секція з підготовкою */}
           <section>
             <h2>{content.preparation?.title || "Preparation title not available"}</h2>
             {content.preparation?.desc && (
-              <p className="white-space-pre-line">{content.preparation.desc}</p>
+              <RenderParagraphs text={content.preparation.desc} />
             )}
             {content.preparation?.points && (
               <ul>
@@ -74,6 +92,7 @@ const WhatIsBerufserlaubnisPage = () => {
             )}
           </section>
 
+          {/* Секція з вимогами */}
           <section>
             <h2>{content.requirements?.title || "Requirements title not available"}</h2>
             {content.requirements?.points && (
@@ -85,9 +104,18 @@ const WhatIsBerufserlaubnisPage = () => {
             )}
           </section>
 
+          {/* Секція з додатковою інформацією */}
           {content.additionalCourses && (
             <section>
               <p className="white-space-pre-line">{content.additionalCourses}</p>
+            </section>
+          )}
+
+          {/* Секція з детальним оглядом процесу */}
+          {content.detailedReview && (
+            <section>
+              <h2>{content.detailedReviewTitle || "Detailed Process Overview"}</h2>
+              <RenderParagraphs text={content.detailedReview} />
             </section>
           )}
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { KENNTNISPRUEFUNG_INFO } from "../../constants/translation/kenntnisPruefung";
+import { GLEICHWERTIGKEIT_INFO } from "../../constants/translation/whatIsGleichwertigkeit";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
@@ -20,11 +20,10 @@ const RenderParagraphs = ({ text }) => {
   ));
 };
 
-const KenntnisPruefungPage = () => {
+const GleichwertigkeitPage = () => {
   const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
+  const content = GLEICHWERTIGKEIT_INFO[language];
 
-  // Отримання контенту відповідно до вибраної мови
-  const content = KENNTNISPRUEFUNG_INFO[language];
   if (!content) {
     console.error(`Content for language '${language}' is undefined.`);
     return <div>Content not available for this language.</div>;
@@ -33,15 +32,15 @@ const KenntnisPruefungPage = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>{content.title || "Kenntnisprüfung"}</title>
+        <title>{content.title || "Gleichwertigkeit der medizinischen Ausbildung"}</title>
         <meta
           name="description"
-          content={content.intro || "Information about the Knowledge Examination for Physicians in Germany."}
+          content={content.intro || "Information about the recognition of the equivalence of foreign medical education in Germany."}
         />
       </Helmet>
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
-        <div className={cn("main_menu__content", styles.knowledge_examination_content)}>
+        <div className={cn("main_menu__content", styles.gleichwertigkeit_content)}>
           <button className="main_menu_back" onClick={() => handleChangePage("/main_menu")}>
             &#8592;
           </button>
@@ -78,7 +77,7 @@ const KenntnisPruefungPage = () => {
           </section>
 
           <section>
-            <h2>{content.preparation?.title || "Preparation not available"}</h2>
+            <h2>{content.preparation?.title || "Advantages not available"}</h2>
             {content.preparation?.points && (
               <ul>
                 {content.preparation.points.map((point, index) => (
@@ -93,10 +92,17 @@ const KenntnisPruefungPage = () => {
               <p className="white-space-pre-line">{content.additionalCourses}</p>
             </section>
           )}
+
+          {content.detailedReview && (
+            <section>
+              <h2>{content.detailedReviewTitle || "Detailed Overview"}</h2>
+              <RenderParagraphs text={content.detailedReview} />
+            </section>
+          )}
         </div>
       </div>
     </MainLayout>
   );
 };
 
-export default KenntnisPruefungPage;
+export default GleichwertigkeitPage;

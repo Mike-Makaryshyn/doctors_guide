@@ -43,6 +43,12 @@ const LinksPage = React.lazy(() => import("../pages/LinksPage/LinksPage"));
 const WhatIsApprobationPage = React.lazy(() =>
   import("../pages/WhatIsApprobationPage/WhatIsApprobationPage")
 );
+const GleichwertigkeitPage = React.lazy(() =>
+  import("../pages/GleichwertigkeitPage/GleichwertigkeitPage")
+);
+const VergleichsgutachtenPage = React.lazy(() =>
+  import("../pages/VergleichsgutachtenPage/VergleichsgutachtenPage")
+);
 const WhatIsBerufserlaubnisPage = React.lazy(() =>
   import("../pages/WhatIsBerufserlaubnisPage/WhatIsBerufserlaubnisPage")
 );
@@ -109,7 +115,14 @@ export default function Routers() {
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
         <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
-        <Route path={pathList.kenntnispruefung.path} element={<KenntnisPruefungPage />} />
+        <Route
+  path={pathList.gleichwertigkeit.path}
+  element={<GleichwertigkeitPage />}
+/>
+        <Route
+          path={pathList.kenntnispruefung.path}
+          element={<KenntnisPruefungPage />}
+        />
         <Route
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
@@ -128,7 +141,7 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
-      
+
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />
 
@@ -150,6 +163,10 @@ export default function Routers() {
           path={pathList.berufserlaubnis.path}
           element={<WhatIsBerufserlaubnisPage />}
         />
+        <Route
+  path={pathList.vergleichsgutachten.path}
+  element={<VergleichsgutachtenPage />}
+/>
         {/* Захищені маршрути */}
         <Route path="/data-collection" element={<DataCollectionPage />} />
         <Route

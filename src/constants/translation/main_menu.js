@@ -90,6 +90,30 @@ export const main_menu_items = {
                link: "/approbation", // Link for the item
             },
             {
+               en: "What is Gleichwertigkeit?",
+               fr: "Qu'est-ce que l'équivalence?",
+               es: "¿Qué es la Equivalencia?",
+               ar: "ما هي المعادلة؟",
+               tr: "Gleichwertigkeit Nedir?",
+               pl: "Co to jest równoważność?",
+               uk: "Що таке визнання рівноцінності?",
+               ru: "Что такое равнозначность?",
+               de: "Was ist Gleichwertigkeit?",
+               link: "/gleichwertigkeit",
+             },
+             {
+               en: "What is the Comparative Expert Report (Vergleichsgutachten)?",
+               fr: "Qu'est-ce que le rapport d'expertise comparatif (Vergleichsgutachten)?",
+               es: "¿Qué es el informe pericial comparativo (Vergleichsgutachten)?",
+               ar: "ما هو التقرير الخبرائي المقارن (Vergleichsgutachten)؟",
+               tr: "Karşılaştırmalı Uzmanlık Raporu (Vergleichsgutachten) Nedir?",
+               pl: "Co to jest raport ekspercki porównawczy (Vergleichsgutachten)?",
+               uk: "Що таке порівняльний експертний висновок (Vergleichsgutachten)?",
+               ru: "Что такое сравнительное экспертное заключение (Vergleichsgutachten)?",
+               de: "Was ist ein Vergleichsgutachten?",
+               link: "/vergleichsgutachten",
+             },
+            {
                en: "What is Berufserlaubnis?",
                fr: "Qu'est-ce que la Berufserlaubnis?",
                es: "¿Qué es la Berufserlaubnis?",
@@ -100,6 +124,18 @@ export const main_menu_items = {
                ru: "Что такое Berufserlaubnis?",
                de: "Was ist Berufserlaubnis?",
                link: "/berufserlaubnis", // Посилання на нову сторінку
+            },
+            {
+               en: "What is the Medical Specialist Language Exam?",
+               fr: "Qu'est-ce que l'examen linguistique spécialisé médical?",
+               es: "¿Qué es el examen de idioma especializado en medicina?",
+               ar: "ما هو امتحان اللغة الطبية التخصصية؟",
+               tr: "Tıbbi Uzmanlık Dil Sınavı Nedir?",
+               pl: "Co to jest Egzamin Języka Specjalistycznego Medycznego?",
+               uk: "Що таке медичний іспит зі спеціалізованої мови?",
+               ru: "Что такое экзамен на знание медицинского специализированного языка?",
+               de: "Was ist die Fachsprachprüfung (FSP)?",
+               link: "/what-is-fsp",
             },
             {
                en: "What is Kenntnisprüfung?",
@@ -155,18 +191,7 @@ export const main_menu_items = {
             de: "Sprachprüfung",
          },
          items: [
-            {
-               en: "What is FSP?",
-               fr: "Qu'est-ce que la FSP?",
-               es: "¿Qué es el FSP?",
-               ar: "ما هو الـ FSP؟",
-               tr: "FSP Nedir?",
-               pl: "Co to jest FSP?",
-               uk: "Що таке FSP?",
-               ru: "Что такое FSP?",
-               de: "Was ist FSP?",
-               link: "/what-is-fsp",
-            },
+           
             {
                en: "Participation in FSP",
                fr: "Participation à la FSP",

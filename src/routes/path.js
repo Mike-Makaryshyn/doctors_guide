@@ -66,4 +66,10 @@ export const pathList = {
   kenntnispruefung: {
     path: "/kenntnispruefung",
   },
+  gleichwertigkeit: {
+    path: "/gleichwertigkeit",
+  },
+  vergleichsgutachten: {
+    path: "/vergleichsgutachten",
+  },
 };

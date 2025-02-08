@@ -1,34 +1,45 @@
-// src/pages/KenntnisPruefungPage/styles.module.scss
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .knowledge_examination_content {
-    padding: 20px;
-    text-align: left;
-  
-    section {
-      border-bottom: 1px solid white;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-    }
-  
+  padding: 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+
+  @media (min-width: 1024px) {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+
     ul {
-      list-style-type: disc;
-      margin-left: 30px;
-  
-      li {
-        margin-bottom: 10px;
-        line-height: 1.6;
-      }
-    }
-  
-    .white-space-pre-line {
-      white-space: pre-line;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-  
-    @media (max-width: 768px) {
-      padding: 10px;
-      ul {
-        margin-left: 20px;
-      }
+      margin-left: 20px;
     }
   }
+
+  section {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  }
+}
+
+.white-space-pre-line {
+  white-space: pre-line;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
