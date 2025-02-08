@@ -1,481 +1,502 @@
+// src/constants/translation/whatIsApprobation.js
+
 export const APPROBATION_INFO = {
-   de: {
-       title: "Was ist die Approbation für Ärzte in Deutschland?",
-       intro: "Die Approbation ist die offizielle Erlaubnis, die Ärzten das uneingeschränkte Recht verleiht, in Deutschland medizinisch tätig zu sein. Sie ist notwendig für alle Ärzte, die ihre medizinische Ausbildung außerhalb der Europäischen Union abgeschlossen haben, und stellt einen wesentlichen Schritt zur Legalisierung der medizinischen Berufsausübung dar.",
-       definition: null, // Можна видалити, якщо не потрібне окреме визначення
-       process: {
-           title: "Voraussetzungen für die Erlangung der Approbation:",
-           desc: null, // Опис не додано
-           steps: [
-            {
-                title: "1. Medizinische Ausbildung:",
-                description: [
-                    "Abschluss eines Medizinstudiums.",
-                    "Erfolgreicher Abschluss der Facharztausbildung (Internatur) im Heimatland."
-                ],
-            },
-            {
-                title: "2. Sprachliche Anforderungen:",
-                description: [
-                    "Zertifikat über Deutschkenntnisse auf dem Niveau B2.",
-                    "Bestehen der Fachsprachprüfung (FSP) auf dem Niveau C1 Medizin."
-                ],
-            },
-            {
-                title: "3. Erforderliche Dokumente:",
-                description: [
-                    "Nachweise über Ausbildung, Berufserfahrung und strafrechtliche Unbescholtenheit.",
-                    "Beglaubigte Übersetzungen und Apostillen der Dokumente."
-                ],
-            },
-        ],
-       },
-       preparation: {
-           title: "Schritte zur Erlangung der Approbation:",
-           desc: null,
-           points: [
-               "Sprachliche Vorbereitung: Erwerb eines Sprachzertifikats (mindestens B2) und Vorbereitung auf die Fachsprachprüfung (FSP).",
-               "Zusammenstellung und Einreichung der Dokumente: Alle Unterlagen müssen ordnungsgemäß beglaubigt, übersetzt und eingereicht werden.",
-               "Fachsprachprüfung (FSP): Nachweis der medizinischen Fachsprache und Kommunikationsfähigkeiten im Arzt-Patienten-Kontext.",
-               "Vorläufige Berufserlaubnis (Berufserlaubnis): Diese wird für maximal zwei Jahre ausgestellt und erlaubt das Arbeiten unter Aufsicht.",
-               "Gutachten oder Kenntnisprüfung (KP): Überprüfung der Gleichwertigkeit der medizinischen Ausbildung oder Ablegen der Kenntnisprüfung.",
-               "Erhalt der Approbation: Nach erfolgreicher Überprüfung der Qualifikationen wird die Approbation erteilt.",
-           ],
-       },
-       requirements: {
-           title: "Welche Vorteile bietet die Approbation?",
-           desc: null,
-           points: [
-               "Freie Berufsausübung in allen Bundesländern Deutschlands.",
-               "Karrierechancen mit Zugang zu spezialisierten Weiterbildungen.",
-               "Stabilität und Sicherheit im beruflichen Umfeld.",
-           ],
-       },
-       additionalCourses: "Die Erlangung der Approbation ist ein anspruchsvoller, aber erreichbarer Prozess, der Ärzten aus Drittstaaten die Möglichkeit bietet, eine erfolgreiche Karriere im deutschen Gesundheitssystem zu starten. Mit sorgfältiger Vorbereitung und Einhaltung der Anforderungen kann dieser Weg erfolgreich gemeistert werden.",
-   },
-   // Інші мови
-   en: {
-      title: "What is Approbation for Doctors in Germany?",
-      intro: "Approbation is the official license that grants doctors the unrestricted right to practice medicine in Germany. It is required for all physicians who completed their medical education outside the European Union and represents a crucial step in legalizing medical practice in the country.",
+    de: {
+      title: "Was ist die Approbation für Ärzte in Deutschland?",
+      intro:
+        "Die Approbation ist die offizielle Zulassung, die es Ärzten ermöglicht, in Deutschland eigenständig tätig zu sein. Sie ist weit mehr als nur ein formaler Akt – sie dokumentiert umfassend, dass ein Arzt über ein fundiertes medizinisches Wissen, weitreichende klinische Erfahrung und ausreichende Deutschkenntnisse verfügt. Diese Zertifizierung ist die Basis für eine hochwertige und sichere medizinische Versorgung im Land.",
       process: {
-          title: "Requirements for Obtaining Approbation:",
-          desc: null, // Optional additional description
-          steps: [
-            {
-                title: "1. Medical Education:",
-                description: [
-                    "Completion of a medical degree.",
-                    "Successful completion of postgraduate training (internship) in the home country."
-                ],
-            },
-            {
-                title: "2. Language Proficiency:",
-                description: [
-                    "A certificate proving German language proficiency at the B2 level.",
-                    "Passing the Fachsprachprüfung (FSP), a C1-level medical language examination."
-                ],
-            },
-            {
-                title: "3. Documentation:",
-                description: [
-                    "Proof of education, professional experience, and good standing.",
-                    "Certified translations and apostilled documents."
-                ],
-            },
-        ],
+        title: "Umfassende Voraussetzungen für die Approbation:",
+        desc:
+          "Der Approbationsprozess ist darauf ausgerichtet, sicherzustellen, dass alle praktizierenden Ärzte den hohen Qualitätsstandards des deutschen Gesundheitssystems entsprechen. Dazu gehört eine gründliche Überprüfung der akademischen Ausbildung, der klinischen Praxis und der sprachlichen Fähigkeiten.",
+        steps: [
+          {
+            title: "1. Akademische und medizinische Ausbildung:",
+            description: [
+              "Abschluss eines akkreditierten Medizinstudiums an einer anerkannten Hochschule – dies beinhaltet theoretischen Unterricht, praktische Labor- und Klinikübungen sowie begleitende Seminare.",
+              "Nachweis einer vertieften postgradualen Ausbildung, wie beispielsweise einer Facharztausbildung oder einem klinischen Referendariat, unterstützt durch detaillierte Zeugnisse, Prüfungsunterlagen und klinische Berichte.",
+              "Einreichung von Empfehlungsschreiben von Dozenten, Mentoren oder Klinikleitern, die die fachliche und persönliche Eignung des Arztes bestätigen."
+            ]
+          },
+          {
+            title: "2. Sprachliche und kommunikative Kompetenzen:",
+            description: [
+              "Nachweis ausreichender Deutschkenntnisse, in der Regel durch Zertifikate wie TestDaF oder DSH, welche mindestens ein B2-Niveau belegen – dies ist essenziell für den klinischen Alltag.",
+              "Erfolgreicher Abschluss der Fachsprachprüfung (FSP) auf C1-Niveau, um sicherzustellen, dass der Arzt in der Lage ist, komplexe medizinische Sachverhalte präzise und patientenorientiert zu kommunizieren. Der Test beinhaltet praxisnahe Simulationen und Rollenspiele."
+            ]
+          },
+          {
+            title: "3. Vollständige und beglaubigte Dokumentation:",
+            description: [
+              "Einreichung aller relevanten Unterlagen, darunter Originaldiplome, beglaubigte Kopien, detaillierte Transkripte und Zertifikate, die die Ausbildung und klinische Erfahrung belegen.",
+              "Offizielle Übersetzung aller nicht-deutschen Dokumente und deren notarielle Beglaubigung – häufig ist auch eine Apostille erforderlich, um die Echtheit international zu bestätigen.",
+              "Zusätzliche Nachweise, wie Arbeitszeugnisse, Bestätigungen über Fortbildungen und Teilnahmezertifikate, die den beruflichen Werdegang weiter untermauern."
+            ]
+          }
+        ]
       },
       preparation: {
-          title: "Steps to Obtain Approbation:",
-          desc: null,
-          points: [
-              "Language Preparation: Obtain a B2-level language certificate and prepare for the Fachsprachprüfung (FSP).",
-              "Document Collection and Submission: Ensure all documents are properly certified, translated, and submitted.",
-              "Fachsprachprüfung (FSP): Demonstrate proficiency in medical terminology and communication with patients.",
-              "Temporary Work Permit (Berufserlaubnis): Issued for up to two years, allowing doctors to work under supervision.",
-              "Document Review or Medical Licensing Exam (Kenntnisprüfung): Assessment of the equivalence of your medical education or passing the licensing exam.",
-              "Issuance of Approbation: Approbation is granted upon successful completion of all requirements.",
-          ],
+        title: "Detaillierte Vorbereitungsschritte zur Erlangung der Approbation:",
+        desc:
+          "Die Vorbereitung auf die Approbation erfordert eine systematische und gründliche Planung. Ärzte sollten sowohl ihre sprachlichen als auch fachlichen Kompetenzen gezielt verbessern und alle notwendigen Unterlagen sorgfältig zusammenstellen.",
+        points: [
+          "Frühzeitige Teilnahme an intensiven Deutschkursen, die speziell auf medizinische Fachsprache ausgerichtet sind, um den Wortschatz und die Ausdrucksweise zu optimieren.",
+          "Sorgfältige Zusammenstellung aller erforderlichen Dokumente – von Diplomen über Transkripte bis zu klinischen Zertifikaten – inklusive deren Übersetzung und Beglaubigung.",
+          "Gezielte Vorbereitung auf die Fachsprachprüfung (FSP) durch Simulationen, Rollenspiele und regelmäßiges Üben typischer Arzt-Patienten-Szenarien.",
+          "Planung und Beantragung einer vorläufigen Berufserlaubnis (Berufserlaubnis), um bereits während der Evaluation unter ärztlicher Aufsicht arbeiten zu können.",
+          "Vorbereitung auf weitere Prüfungen oder Gutachten (z. B. Kenntnisprüfung), die zur abschließenden Bewertung der medizinischen Ausbildung herangezogen werden können."
+        ]
       },
       requirements: {
-          title: "Benefits of Approbation:",
-          desc: null,
-          points: [
-              "Unrestricted Practice in any federal state in Germany.",
-              "Career Opportunities with access to specialized training programs.",
-              "Stability and Security in a professional environment.",
-          ],
+        title: "Umfangreiche Vorteile der Approbation:",
+        desc:
+          "Der Erhalt der Approbation bietet Ärzten nicht nur die Möglichkeit, in Deutschland selbstständig zu arbeiten, sondern eröffnet auch langfristige berufliche Perspektiven und zahlreiche Zusatzvorteile.",
+        points: [
+          "Uneingeschränkte Ausübung des Arztberufs in allen Bundesländern – dies ermöglicht eine hohe berufliche Flexibilität.",
+          "Zugang zu spezialisierten Fortbildungs- und Weiterbildungsprogrammen, die eine kontinuierliche fachliche Entwicklung unterstützen.",
+          "Langfristige berufliche Stabilität und Sicherheit in einem hochregulierten Gesundheitssystem.",
+          "Die Approbation gilt als international anerkanntes Qualitätsmerkmal, das zusätzliche Karrieremöglichkeiten im In- und Ausland eröffnet."
+        ]
       },
-      additionalCourses: "Obtaining Approbation is a challenging yet achievable process that allows doctors from non-EU countries to build a successful career in Germany’s healthcare system. With careful preparation and adherence to the requirements, this goal is within reach.",
-  },
-  uk: {
-   title: "Що таке апробація для лікарів у Німеччині?",
-   intro: "Апробація — це офіційний дозвіл, який надає лікарю право без обмежень працювати за фахом у Німеччині. Вона є обов’язковою для всіх лікарів, які здобули медичну освіту за межами Європейського Союзу, і є ключовим етапом легалізації медичної діяльності в країні.",
-   process: {
-       title: "Вимоги для отримання апробації:",
-       desc: null, // Можна додати додатковий опис за потреби
-       steps: [
-         {
-             title: "1. Медична освіта:",
-             description: [
-                 "Закінчення медичного факультету.",
-                 "Успішне завершення інтернатури у країні походження."
-             ],
-         },
-         {
-             title: "2. Володіння мовою:",
-             description: [
-                 "Сертифікат рівня B2 з німецької мови.",
-                 "Складання іспиту з медичної німецької мови (Fachsprachprüfung, FSP) рівня C1."
-             ],
-         },
-         {
-             title: "3. Документи:",
-             description: [
-                 "Підтвердження освіти, професійного досвіду та добропорядності.",
-                 "Завірені переклади та апостилі документів."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Етапи отримання апробації:",
-       desc: null,
-       points: [
-           "Підготовка до вивчення мови: Отримання сертифіката рівня B2 та підготовка до іспиту FSP.",
-           "Збір та подача документів: Усі документи мають бути належним чином завірені, перекладені та подані.",
-           "Іспит з медичної мови (FSP): Перевіряє знання медичної термінології та вміння спілкуватися з пацієнтами.",
-           "Тимчасова ліцензія (Berufserlaubnis): Видається терміном до двох років і дозволяє працювати під наглядом.",
-           "Експертиза документів або іспит з медицини (Kenntnisprüfung): Оцінка відповідності вашої освіти німецьким стандартам або складання медичного іспиту.",
-           "Отримання апробації: Апробація надається після успішного виконання всіх умов.",
-       ],
-   },
-   requirements: {
-       title: "Переваги апробації:",
-       desc: null,
-       points: [
-           "Право на необмежену практику у будь-якій федеральній землі Німеччини.",
-           "Кар’єрні можливості з доступом до спеціалізованих програм навчання.",
-           "Стабільність та безпека у професійному середовищі.",
-       ],
-   },
-   additionalCourses: "Отримання апробації — це складний, але досяжний процес, який відкриває широкі можливості для побудови успішної кар’єри лікаря в Німеччині. Завдяки ретельній підготовці та дотриманню всіх вимог, цей шлях можна пройти успішно.",
-},
-ru: {
-   title: "Что такое апробация для врачей в Германии?",
-   intro: "Апробация — это официальное разрешение, предоставляющее врачу право работать по своей специальности в Германии без ограничений по времени или месту работы. Она обязательна для всех врачей, которые получили медицинское образование за пределами Европейского Союза, и является ключевым этапом легализации медицинской деятельности в стране.",
-   process: {
-       title: "Требования для получения апробации:",
-       desc: null,
-       steps: [
-         {
-             title: "1. Медицинское образование:",
-             description: [
-                 "Окончание медицинского факультета.",
-                 "Успешное завершение интернатуры в своей стране.",
-             ],
-         },
-         {
-             title: "2. Владение языком:",
-             description: [
-                 "Сертификат уровня B2 по немецкому языку.",
-                 "Сдача экзамена по медицинскому немецкому языку (Fachsprachprüfung, FSP) уровня C1.",
-             ],
-         },
-         {
-             title: "3. Документы:",
-             description: [
-                 "Подтверждение образования, профессионального опыта и репутации.",
-                 "Заверенные переводы и апостили документов.",
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Этапы получения апробации:",
-       desc: null,
-       points: [
-           "Подготовка к изучению языка: Получение сертификата уровня B2 и подготовка к экзамену FSP.",
-           "Сбор и подача документов: Все документы должны быть должным образом заверены, переведены и поданы.",
-           "Экзамен по медицинскому языку (FSP): Проверяет знания медицинской терминологии и навыки общения с пациентами.",
-           "Временная лицензия (Berufserlaubnis): Выдается сроком до двух лет и позволяет работать под наблюдением.",
-           "Экспертиза документов или медицинский экзамен (Kenntnisprüfung): Оценка соответствия вашего образования немецким стандартам или сдача медицинского экзамена.",
-           "Получение апробации: Апробация предоставляется после успешного выполнения всех условий.",
-       ],
-   },
-   requirements: {
-       title: "Преимущества апробации:",
-       desc: null,
-       points: [
-           "Право на неограниченную практику в любом федеральном округе Германии.",
-           "Карьерные возможности с доступом к специализированным программам обучения.",
-           "Стабильность и безопасность в профессиональной среде.",
-       ],
-   },
-   additionalCourses: "Получение апробации — это сложный, но достижимый процесс, который открывает широкие возможности для построения успешной карьеры врача в Германии. С тщательной подготовкой и соблюдением всех требований этот путь может быть успешно пройден.",
-},
-tr: {
-   title: "Almanya’da Doktorlar için Approbation Nedir?",
-   intro: "Approbation, doktorlara Almanya’da zaman veya yer kısıtlaması olmaksızın mesleklerini icra etme hakkı veren resmi bir lisanstır. Avrupa Birliği dışında tıp eğitimi almış tüm doktorlar için zorunludur ve ülkede tıbbi uygulamaları yasallaştırmanın ana adımıdır.",
-   process: {
-       title: "Approbation Almak için Gereksinimler:",
-       desc: null,
-       steps: [
-         {
-             title: "1. Tıp Eğitimi:",
-             description: [
-                 "Tıp fakültesi mezuniyeti.",
-                 "Kendi ülkenizde internlik sürecinin tamamlanmış olması."
-             ],
-         },
-         {
-             title: "2. Dil Yeterliliği:",
-             description: [
-                 "B2 seviyesinde Almanca dil sertifikası.",
-                 "C1 seviyesinde tıbbi Almanca dil sınavını (Fachsprachprüfung, FSP) geçmek."
-             ],
-         },
-         {
-             title: "3. Belgeler:",
-             description: [
-                 "Eğitim, mesleki deneyim ve sicil kaydının doğrulanması.",
-                 "Belgelerin yeminli tercümanlarca çevrilmiş ve noter onaylı olması."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Approbation Süreci:",
-       desc: null,
-       points: [
-           "Dil Hazırlığı: B2 dil sertifikası alınması ve FSP sınavına hazırlanılması.",
-           "Belge Toplama ve Sunma: Tüm belgelerin uygun şekilde noter onaylı, tercüme edilmiş ve sunulmuş olması.",
-           "Tıbbi Dil Sınavı (FSP): Tıbbi terminoloji bilgisi ve hasta iletişim becerilerinin kanıtlanması.",
-           "Geçici Çalışma İzni (Berufserlaubnis): İki yıla kadar geçerli olan ve gözetim altında çalışmaya izin veren lisans.",
-           "Belge İncelemesi veya Tıp Sınavı (Kenntnisprüfung): Tıp eğitiminizin Almanya standartlarına uygunluğunun değerlendirilmesi veya tıp sınavını geçmek.",
-           "Approbation Belgesinin Alınması: Tüm şartların başarıyla tamamlanmasının ardından Approbation verilir.",
-       ],
-   },
-   requirements: {
-       title: "Approbation’un Avantajları:",
-       desc: null,
-       points: [
-           "Sınırsız Mesleki Uygulama Hakkı: Almanya’nın herhangi bir eyaletinde çalışma özgürlüğü.",
-           "Kariyer Fırsatları: Uzmanlık eğitim programlarına erişim.",
-           "Profesyonel İstikrar ve Güvenlik: Sağlam bir çalışma ortamı.",
-       ],
-   },
-   additionalCourses: "Approbation almak, Avrupa Birliği dışından gelen doktorlar için zorlu ancak ulaşılabilir bir süreçtir. Almanya’nın sağlık sisteminde başarılı bir kariyer inşa etmenin kapılarını açar. Doğru hazırlık ve gerekliliklere uygunluk ile bu hedefe kolayca ulaşabilirsiniz.",
-},
-ar: {
-   title: "ما هي الموافقة للأطباء في ألمانيا؟",
-   intro: "الموافقة (Approbation) هي الترخيص الرسمي الذي يمنح الأطباء الحق في ممارسة الطب في ألمانيا دون قيود زمنية أو مكانية. وهو شرط إلزامي لجميع الأطباء الذين أكملوا تعليمهم الطبي خارج الاتحاد الأوروبي، ويعد خطوة أساسية لتقنين الممارسة الطبية في البلاد.",
-   process: {
-       title: "متطلبات الحصول على الموافقة:",
-       desc: null,
-       steps: [
-         {
-             title: "1. التعليم الطبي:",
-             description: [
-                 "الحصول على شهادة في الطب.",
-                 "إتمام فترة التدريب (الامتياز) في بلد المنشأ."
-             ],
-         },
-         {
-             title: "2. إجادة اللغة:",
-             description: [
-                 "شهادة مستوى B2 في اللغة الألمانية.",
-                 "اجتياز اختبار اللغة الطبية Fachsprachprüfung (FSP) بمستوى C1."
-             ],
-         },
-         {
-             title: "3. الوثائق المطلوبة:",
-             description: [
-                 "إثبات التعليم والخبرة المهنية وحسن السيرة.",
-                 "ترجمة الوثائق إلى اللغة الألمانية بواسطة مترجم معتمد وتصديقها رسميًا."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "خطوات الحصول على الموافقة:",
-       desc: null,
-       points: [
-           "التحضير اللغوي: الحصول على شهادة B2 والاستعداد لاختبار Fachsprachprüfung.",
-           "تجهيز وتقديم الوثائق: يجب أن تكون جميع الوثائق مترجمة ومصدقة بشكل صحيح.",
-           "اختبار اللغة الطبية (FSP): إثبات القدرة على استخدام المصطلحات الطبية والتواصل مع المرضى.",
-           "رخصة العمل المؤقتة (Berufserlaubnis): تصدر لمدة تصل إلى عامين وتسمح بالعمل تحت الإشراف.",
-           "مراجعة الوثائق أو اختبار المعرفة الطبية (Kenntnisprüfung): تقييم مدى توافق التعليم الطبي مع المعايير الألمانية أو اجتياز اختبار طبي.",
-           "الحصول على الموافقة: تصدر الموافقة بعد استيفاء جميع المتطلبات بنجاح.",
-       ],
-   },
-   requirements: {
-       title: "مزايا الموافقة:",
-       desc: null,
-       points: [
-           "الحق في ممارسة الطب بدون قيود: في أي ولاية فيدرالية داخل ألمانيا.",
-           "فرص مهنية: الوصول إلى برامج التدريب التخصصي.",
-           "الاستقرار والأمان المهني: بيئة عمل موثوقة.",
-       ],
-   },
-   additionalCourses: "الحصول على الموافقة هو عملية معقدة ولكنها قابلة للتحقيق، حيث تفتح الأبواب أمام بناء مسيرة مهنية ناجحة للأطباء في ألمانيا. مع الإعداد الدقيق والالتزام بالمتطلبات، يمكن تحقيق هذا الهدف بسهولة.",
-},
-fr: {
-   title: "Qu’est-ce que l’Approbation pour les médecins en Allemagne ?",
-   intro: "L’Approbation est une autorisation officielle qui donne aux médecins le droit de pratiquer la médecine en Allemagne sans restrictions de temps ou de lieu. Elle est obligatoire pour tous les médecins ayant obtenu leur diplôme en dehors de l’Union européenne et constitue une étape clé pour légaliser l’exercice médical dans le pays.",
-   process: {
-       title: "Conditions pour obtenir l’Approbation :",
-       desc: null,
-       steps: [
-         {
-             title: "1. Formation médicale :",
-             description: [
-                 "Diplôme de médecine.",
-                 "Achèvement du stage ou de l’internat dans le pays d’origine."
-             ],
-         },
-         {
-             title: "2. Compétences linguistiques :",
-             description: [
-                 "Certificat prouvant la maîtrise de la langue allemande au niveau B2.",
-                 "Réussite de l’examen de langue médicale Fachsprachprüfung (FSP) au niveau C1."
-             ],
-         },
-         {
-             title: "3. Documents requis :",
-             description: [
-                 "Preuve de formation, d’expérience professionnelle et de bonne conduite.",
-                 "Traductions certifiées et apostilles des documents."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Étapes pour obtenir l’Approbation :",
-       desc: null,
-       points: [
-           "Préparation linguistique : Obtenir un certificat de niveau B2 et se préparer pour l’examen Fachsprachprüfung.",
-           "Collecte et soumission des documents : Les documents doivent être traduits, certifiés et soumis correctement.",
-           "Examen de langue médicale (FSP) : Vérifie la maîtrise de la terminologie médicale et les compétences en communication avec les patients.",
-           "Autorisation de travail temporaire (Berufserlaubnis) : Valable jusqu’à deux ans, permettant de travailler sous supervision.",
-           "Évaluation des documents ou examen de connaissances médicales (Kenntnisprüfung) : Évaluation de l’équivalence de la formation médicale ou réussite à l’examen médical.",
-           "Obtention de l’Approbation : L’Approbation est accordée après avoir rempli toutes les conditions.",
-       ],
-   },
-   requirements: {
-       title: "Avantages de l’Approbation :",
-       desc: null,
-       points: [
-           "Droit de pratique sans restriction : dans n’importe quel État fédéral d’Allemagne.",
-           "Opportunités de carrière : accès aux programmes de spécialisation.",
-           "Stabilité et sécurité professionnelle : dans un environnement de travail fiable.",
-       ],
-   },
-   additionalCourses: "L’obtention de l’Approbation est un processus exigeant mais réalisable, qui ouvre la voie à une carrière médicale réussie en Allemagne. Avec une préparation minutieuse et le respect des exigences, cet objectif peut être atteint.",
-},
-es: {
-   title: "¿Qué es la Approbation para médicos en Alemania?",
-   intro: "La Approbation es una licencia oficial que otorga a los médicos el derecho de ejercer la medicina en Alemania sin restricciones de tiempo o lugar. Es obligatoria para todos los médicos que hayan obtenido su formación fuera de la Unión Europea y representa un paso clave para legalizar la práctica médica en el país.",
-   process: {
-       title: "Requisitos para obtener la Approbation:",
-       desc: null,
-       steps: [
-         {
-             title: "1. Formación médica:",
-             description: [
-                 "Título de médico.",
-                 "Finalización del internado o prácticas médicas en el país de origen."
-             ],
-         },
-         {
-             title: "2. Dominio del idioma:",
-             description: [
-                 "Certificado de nivel B2 en alemán.",
-                 "Aprobar el examen de idioma médico Fachsprachprüfung (FSP) en nivel C1."
-             ],
-         },
-         {
-             title: "3. Documentación requerida:",
-             description: [
-                 "Pruebas de formación, experiencia profesional y buena conducta.",
-                 "Traducciones certificadas y apostillas de los documentos."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Pasos para obtener la Approbation:",
-       desc: null,
-       points: [
-           "Preparación lingüística: Obtener un certificado de nivel B2 y prepararse para el examen Fachsprachprüfung.",
-           "Recolección y presentación de documentos: Todos los documentos deben estar correctamente traducidos, certificados y presentados.",
-           "Examen de idioma médico (FSP): Verifica el dominio de la terminología médica y las habilidades de comunicación con los pacientes.",
-           "Licencia temporal de trabajo (Berufserlaubnis): Se emite por un período máximo de dos años y permite trabajar bajo supervisión.",
-           "Evaluación de documentos o examen de conocimientos médicos (Kenntnisprüfung): Evaluación de la equivalencia de la formación médica o la aprobación del examen médico.",
-           "Obtención de la Approbation: La Approbation se otorga tras cumplir con todos los requisitos.",
-       ],
-   },
-   requirements: {
-       title: "Ventajas de la Approbation:",
-       desc: null,
-       points: [
-           "Derecho a ejercer sin restricciones: en cualquier estado federal de Alemania.",
-           "Oportunidades profesionales: acceso a programas de especialización.",
-           "Estabilidad y seguridad profesional: en un entorno laboral confiable.",
-       ],
-   },
-   additionalCourses: "Obtener la Approbation es un proceso exigente pero alcanzable, que abre la puerta a una carrera médica exitosa en Alemania. Con una preparación adecuada y el cumplimiento de los requisitos, este objetivo puede lograrse con éxito.",
-},
-pl: {
-   title: "Czym jest Approbation dla lekarzy w Niemczech?",
-   intro: "Approbation to oficjalne pozwolenie, które daje lekarzom prawo do wykonywania zawodu w Niemczech bez ograniczeń czasowych i lokalizacyjnych. Jest wymagane od wszystkich lekarzy, którzy zdobyli wykształcenie poza Unią Europejską, i stanowi kluczowy krok w procesie legalizacji praktyki lekarskiej w Niemczech.",
-   process: {
-       title: "Wymagania do uzyskania Approbation:",
-       desc: null,
-       steps: [
-         {
-             title: "1. Wykształcenie medyczne:",
-             description: [
-                 "Ukończenie studiów medycznych.",
-                 "Zakończenie stażu podyplomowego (internatury) w kraju pochodzenia."
-             ],
-         },
-         {
-             title: "2. Znajomość języka:",
-             description: [
-                 "Certyfikat znajomości języka niemieckiego na poziomie B2.",
-                 "Zdanie egzaminu językowego Fachsprachprüfung (FSP) na poziomie C1."
-             ],
-         },
-         {
-             title: "3. Dokumentacja:",
-             description: [
-                 "Potwierdzenie wykształcenia, doświadczenia zawodowego i nienagannej opinii.",
-                 "Przetłumaczone i uwierzytelnione dokumenty z apostille."
-             ],
-         },
-     ],
-   },
-   preparation: {
-       title: "Kroki do uzyskania Approbation:",
-       desc: null,
-       points: [
-           "Przygotowanie językowe: Uzyskanie certyfikatu językowego na poziomie B2 i przygotowanie do egzaminu Fachsprachprüfung.",
-           "Zbieranie i składanie dokumentów: Wszystkie dokumenty muszą być odpowiednio przetłumaczone, uwierzytelnione i złożone.",
-           "Egzamin językowy dla lekarzy (FSP): Potwierdzenie znajomości terminologii medycznej oraz umiejętności komunikacji z pacjentami.",
-           "Tymczasowe pozwolenie na pracę (Berufserlaubnis): Wydawane na okres maksymalnie dwóch lat i pozwalające na pracę pod nadzorem.",
-           "Ocena dokumentów lub egzamin z wiedzy medycznej (Kenntnisprüfung): Ocena równoważności wykształcenia medycznego lub zdanie egzaminu medycznego.",
-           "Uzyskanie Approbation: Approbation jest przyznawana po spełnieniu wszystkich wymagań.",
-       ],
-   },
-   requirements: {
-       title: "Zalety Approbation:",
-       desc: null,
-       points: [
-           "Prawo do wykonywania zawodu bez ograniczeń: w dowolnym kraju związkowym Niemiec.",
-           "Możliwości kariery: dostęp do programów specjalistycznych.",
-           "Stabilność i bezpieczeństwo zawodowe: w pewnym środowisku pracy.",
-       ],
-   },
-   additionalCourses: "Uzyskanie Approbation to wymagający, ale osiągalny proces, który otwiera drzwi do udanej kariery medycznej w Niemczech. Dzięki odpowiedniemu przygotowaniu i spełnieniu wymagań ten cel można z powodzeniem osiągnąć.",
-},
-};
+      additionalCourses:
+        "Der Approbationsprozess ist vielschichtig und umfasst nicht nur die formale Dokumentenprüfung, sondern auch die Bewertung praktischer und sprachlicher Kompetenzen. Es wird empfohlen, professionelle Beratung in Anspruch zu nehmen und an speziellen Vorbereitungskursen teilzunehmen, um den gesamten Prozess reibungslos und erfolgreich zu durchlaufen.",
+      detailedReviewTitle: "Detaillierte Übersicht des Approbationsprozesses",
+      detailedReview:
+        "Der Approbationsprozess gliedert sich in mehrere sorgfältig definierte Stufen. Zunächst müssen Kandidaten ihre akademische und klinische Ausbildung abschließen, was durch umfangreiche Dokumentationen und Empfehlungsschreiben belegt wird. Anschließend erfolgt eine gründliche Überprüfung der sprachlichen Fähigkeiten mittels spezialisierter Prüfungen, die sicherstellen, dass der Arzt komplexe medizinische Sachverhalte klar kommunizieren kann. Abschließend werden alle erforderlichen Unterlagen gesammelt, offiziell übersetzt und beglaubigt. Dieser strukturierte Ansatz garantiert, dass nur voll qualifizierte Ärzte in Deutschland praktizieren dürfen."
+    },
+    en: {
+      title: "What is Approbation for Doctors in Germany?",
+      intro:
+        "Approbation is the official license that permits doctors to practice medicine independently in Germany. It is far more than a mere formality – it is a comprehensive certification that verifies a doctor’s recognized medical education, extensive clinical training, and proficient command of the German language. This certification forms the cornerstone of high-quality and safe healthcare delivery.",
+      process: {
+        title: "Comprehensive Requirements for Approbation:",
+        desc:
+          "The Approbation process is designed to ensure that every practicing doctor meets the rigorous standards of the German healthcare system. This involves a thorough assessment of academic achievements, clinical experience, and language proficiency.",
+        steps: [
+          {
+            title: "1. Academic and Medical Education:",
+            description: [
+              "Completion of a recognized medical degree from an accredited institution – this includes not only theoretical coursework but also practical clinical training, lab work, and relevant internships.",
+              "Demonstration of advanced postgraduate training, such as residency or specialist training, supported by detailed transcripts, certificates, and clinical reports.",
+              "Submission of recommendation letters from professors or clinical supervisors that attest to the candidate’s professional competence and suitability for independent practice."
+            ]
+          },
+          {
+            title: "2. Language and Communication Skills:",
+            description: [
+              "Proof of adequate German language skills, typically evidenced by certificates such as TestDaF or DSH at a minimum level of B2 – essential for daily clinical communication.",
+              "Successful completion of a specialized medical language exam (FSP) at the C1 level to ensure the ability to articulate complex medical information clearly and accurately in a patient-centered manner."
+            ]
+          },
+          {
+            title: "3. Complete and Certified Documentation:",
+            description: [
+              "Submission of all necessary documents, including original diplomas, certified copies, detailed transcripts, and certificates that verify the doctor’s education and clinical experience.",
+              "Official translation of all non-German documents, accompanied by proper certification or apostille where required to confirm their authenticity.",
+              "Additional supporting documents, such as employment references, certificates of further training, and participation in professional development programs, may also be required."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Detailed Preparation Steps for Approbation:",
+        desc:
+          "Successful preparation for Approbation requires meticulous planning and organization. It is essential to address both language proficiency and professional qualifications in a systematic manner.",
+        points: [
+          "Enroll in intensive German language courses tailored specifically for medical professionals to enhance both general and technical vocabulary.",
+          "Collect, organize, and certify all educational and clinical documents, ensuring that translations and official certifications are in order.",
+          "Prepare rigorously for the medical language exam (FSP) using practice simulations, role-playing exercises, and collaborative study groups to build confidence in clinical communication.",
+          "Apply for a temporary work permit (Berufserlaubnis) if necessary, which allows you to work under supervision while your qualifications are being thoroughly evaluated.",
+          "Schedule and complete any additional assessments or examinations, such as the Kenntnisprüfung, to verify the equivalence of your medical education to German standards."
+        ]
+      },
+      requirements: {
+        title: "Extensive Benefits of Approbation:",
+        desc:
+          "Obtaining Approbation not only allows you to practice medicine independently in Germany but also offers a host of long-term professional benefits that foster career growth and stability.",
+        points: [
+          "Unrestricted practice rights across all federal states, providing significant professional flexibility.",
+          "Access to advanced training programs and specialization opportunities that promote continuous professional development.",
+          "Enhanced job security and long-term career stability within a rigorously regulated healthcare system.",
+          "The Approbation serves as an internationally recognized mark of quality and competence, opening doors to global career opportunities."
+        ]
+      },
+      additionalCourses:
+        "The Approbation process is multifaceted and involves more than merely submitting documents; it also encompasses the evaluation of practical clinical skills and language proficiency. It is highly recommended to seek professional guidance and participate in specialized preparatory courses to ensure a smooth and successful process.",
+      detailedReviewTitle: "Detailed Overview of the Approbation Process",
+      detailedReview:
+        "The Approbation process is structured into several distinct stages. Initially, candidates must complete their academic and clinical training, which is documented through comprehensive records and recommendation letters. Next, their language proficiency is rigorously evaluated through a specialized exam designed to ensure effective communication in clinical settings. Finally, all required documents are collected, officially translated, and certified. This methodical approach guarantees that only fully qualified doctors are permitted to practice independently in Germany."
+    },
+    uk: {
+      title: "Що таке апробація для лікарів у Німеччині?",
+      intro:
+        "Апробація – це офіційний дозвіл, який дозволяє лікарям самостійно надавати медичну допомогу в Німеччині. Вона є комплексним підтвердженням кваліфікації лікаря, що охоплює його академічну освіту, значний клінічний досвід та володіння німецькою мовою на високому рівні, що є необхідним для надання високоякісної медичної допомоги.",
+      process: {
+        title: "Повні вимоги для отримання апробації:",
+        desc:
+          "Процес отримання апробації включає ретельну перевірку всіх аспектів професійної підготовки лікаря. Це стосується як освіти, так і набутого клінічного досвіду та володіння мовою, що дозволяє забезпечити високий рівень медичних послуг.",
+        steps: [
+          {
+            title: "1. Медична освіта:",
+            description: [
+              "Закінчення визнаного медичного факультету, підтверджене дипломом та супровідною документацією, що відображає як теоретичні знання, так і практичні навички.",
+              "Отримання додаткового клінічного досвіду через інтернатуру або стажування, що підтверджується виписками, звітами та рекомендаційними листами.",
+              "Участь у додаткових освітніх програмах, семінарах і тренінгах, що сприяють поглибленню професійних знань."
+            ]
+          },
+          {
+            title: "2. Володіння мовою:",
+            description: [
+              "Підтвердження знань німецької мови за допомогою офіційних сертифікатів (не нижче B2), що є обов’язковим для роботи у клінічному середовищі.",
+              "Успішне складання іспиту з медичної німецької мови (FSP) для забезпечення здатності ефективно спілкуватися з пацієнтами та колегами."
+            ]
+          },
+          {
+            title: "3. Документація:",
+            description: [
+              "Подача повного комплекту документів, що включає дипломи, виписки, сертифікати та інші підтвердження кваліфікації.",
+              "Офіційний переклад та завірення документів, що забезпечує їх юридичну силу та міжнародне визнання."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Детальні етапи підготовки до отримання апробації:",
+        desc:
+          "Отримання апробації вимагає систематичної підготовки, яка охоплює як удосконалення мовних навичок, так і ретельне оформлення всіх необхідних документів. Це допомагає забезпечити успішне проходження процедури оцінки.",
+        points: [
+          "Інтенсивне навчання німецької мови через спеціалізовані курси для медиків, що дозволяють засвоїти як загальну, так і медичну термінологію.",
+          "Систематичне збирання, перевірка та офіційне завірення всіх документів, включаючи дипломи, виписки та сертифікати.",
+          "Підготовка до іспиту з медичної німецької мови шляхом участі у симуляціях та практичних тренуваннях.",
+          "За потреби – отримання тимчасового дозволу на роботу (Berufserlaubnis) для роботи під наглядом у період оцінки.",
+          "Своєчасне проходження додаткових перевірок для підтвердження рівня підготовки."
+        ]
+      },
+      requirements: {
+        title: "Переваги отримання апробації:",
+        desc:
+          "Отримання апробації відкриває перед лікарями широкі професійні можливості, забезпечуючи їм стабільний розвиток кар’єри та доступ до численних ресурсів для професійного зростання.",
+        points: [
+          "Право на самостійну практику в усіх регіонах Німеччини, що дозволяє обирати місце роботи за власним бажанням.",
+          "Доступ до спеціалізованих курсів, програм підвищення кваліфікації та стажувань, що сприяють професійному розвитку.",
+          "Гарантія стабільності та безпеки у професійній діяльності завдяки високим стандартам німецької медицини.",
+          "Можливість міжнародного визнання кваліфікації, що відкриває двері до глобальних кар’єрних перспектив."
+        ]
+      },
+      additionalCourses:
+        "Процес отримання апробації є багатогранним і вимагає не лише формального подання документів, але й підтвердження практичних навичок та мовної компетентності. Рекомендується звертатися за професійною допомогою та брати участь у спеціалізованих курсах, що допоможуть максимально підготуватися до всіх етапів процедури.",
+      detailedReviewTitle: "Детальний огляд процесу отримання апробації",
+      detailedReview:
+        "Процес отримання апробації складається з декількох послідовних етапів. Спершу лікар повинен завершити свою академічну та клінічну підготовку, що підтверджується широким пакетом документів і рекомендацій. Далі здійснюється ретельна перевірка володіння німецькою мовою через спеціалізований іспит. Нарешті, всі необхідні документи збираються, перекладаються та завіряються офіційно. Цей структурований підхід гарантує, що кожен лікар буде повністю готовим до самостійної медичної практики в Німеччині."
+    },
+    ru: {
+      title: "Что такое апробация для врачей в Германии?",
+      intro:
+        "Апробация – это официальный документ, который предоставляет врачу право самостоятельно осуществлять медицинскую практику в Германии. Она подтверждает, что врач получил признанное медицинское образование, обладает значительным клиническим опытом и владеет немецким языком на уровне, достаточном для оказания качественной медицинской помощи.",
+      process: {
+        title: "Полные требования для получения апробации:",
+        desc:
+          "Процесс получения апробации включает всестороннюю проверку профессиональной подготовки врача. Он направлен на то, чтобы удостовериться, что врач соответствует высоким стандартам немецкой медицины, независимо от страны его происхождения.",
+        steps: [
+          {
+            title: "1. Медицинское образование:",
+            description: [
+              "Окончание аккредитованного медицинского факультета с получением диплома, что подтверждает как теоретические знания, так и практические навыки.",
+              "Наличие подтвержденного клинического опыта, который документируется посредством выписок, сертификатов и подробных отчетов о прохождении стажировок или интернатуры.",
+              "Предоставление рекомендательных писем от преподавателей или руководителей клиник, подтверждающих профессиональную компетентность врача."
+            ]
+          },
+          {
+            title: "2. Владение языком:",
+            description: [
+              "Наличие сертификата, подтверждающего знание немецкого языка на уровне не ниже B2, что необходимо для ежедневного общения в медицинской среде.",
+              "Успешная сдача экзамена по медицинскому немецкому языку, подтверждающая способность четко и точно излагать сложные медицинские концепции."
+            ]
+          },
+          {
+            title: "3. Документация:",
+            description: [
+              "Предоставление полного комплекта документов, включая дипломы, выписки, сертификаты и другие подтверждения квалификации.",
+              "Официальный перевод и заверение всех документов, если это требуется, для подтверждения их подлинности и соответствия международным стандартам."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Детальные этапы подготовки к получению апробации:",
+        desc:
+          "Подготовка к получению апробации требует тщательного и систематического подхода. Важно заранее начать языковую подготовку, собрать все необходимые документы и внимательно изучить процесс оценки квалификации.",
+        points: [
+          "Интенсивное изучение немецкого языка через специализированные курсы для медицинских специалистов.",
+          "Сбор, проверка и официальное заверение всех образовательных и клинических документов.",
+          "Подготовка к экзамену по медицинскому немецкому языку посредством практических занятий и симуляций общения с пациентами.",
+          "При необходимости – оформление временного разрешения на работу (Berufserlaubnis) для работы под наблюдением во время оценки.",
+          "Своевременное прохождение всех дополнительных проверок и тестов, подтверждающих квалификацию."
+        ]
+      },
+      requirements: {
+        title: "Преимущества апробации:",
+        desc:
+          "Получение апробации открывает перед врачами широкие профессиональные возможности, обеспечивая стабильность и перспективы для дальнейшего развития в медицинской сфере.",
+        points: [
+          "Право на самостоятельное и неограниченное ведение медицинской практики по всей Германии.",
+          "Доступ к программам повышения квалификации, специализированным курсам и дополнительным стажировкам.",
+          "Повышенная профессиональная стабильность и безопасность в условиях строгой регуляции здравоохранения.",
+          "Международное признание квалификации, что способствует расширению карьерных возможностей за рубежом."
+        ]
+      },
+      additionalCourses:
+        "Процесс получения апробации является многоаспектным и включает не только подачу документов, но и оценку практических навыков и владения языком. Рекомендуется обращаться за профессиональными консультациями и участвовать в подготовительных курсах для повышения шансов на успешное прохождение всех этапов.",
+      detailedReviewTitle: "Детальный обзор процесса получения апробации",
+      detailedReview:
+        "Процесс получения апробации состоит из нескольких ключевых этапов. Сначала врач должен завершить свое образование и набрать необходимый клинический опыт, что подтверждается обширной документацией и рекомендациями. Затем проводится тщательная проверка владения немецким языком посредством специализированного экзамена. В завершении все требуемые документы собираются, переводятся и заверяются официально. Такой структурированный подход обеспечивает полную готовность врача к самостоятельной медицинской практике."
+    },
+    tr: {
+      title: "Almanya’da Doktorlar için Approbation Nedir?",
+      intro:
+        "Approbation, doktorların Almanya’da bağımsız olarak çalışabilmelerini sağlayan resmi bir lisans belgesidir. Bu belge, doktorun tanınmış bir tıp eğitiminden geçtiğini, yeterli klinik deneyime sahip olduğunu ve yeterli Almanca bilgisine sahip olduğunu belgeleyerek, yüksek kaliteli sağlık hizmetlerinin sunulmasını garanti eder.",
+      process: {
+        title: "Approbation Almak için Kapsamlı Gereksinimler:",
+        desc:
+          "Approbation süreci, doktorların gerekli tüm niteliklere sahip olduğunu doğrulamak amacıyla titiz kriterler içerir. Bu süreç, doktorun eğitim, klinik deneyim ve dil yeterliliği gibi temel unsurlarını kapsamlı bir şekilde değerlendirir.",
+        steps: [
+          {
+            title: "1. Tıp Eğitimi:",
+            description: [
+              "Akkredite edilmiş bir tıp fakültesinden mezun olmak; bu, teorik bilgilerin yanı sıra uygulamalı klinik eğitim ve stajları da içerir.",
+              "Klinik deneyimi belgeleyen transkriptler, sertifikalar ve raporlar sunmak.",
+              "Akademik veya klinik referans mektupları ile mesleki yeterliliğinizi kanıtlamak."
+            ]
+          },
+          {
+            title: "2. Dil Yeterliliği:",
+            description: [
+              "En az B2 seviyesinde Almanca bilgisi belgesi sunmak.",
+              "Tıbbi dil sınavını (FSP) başarıyla geçmek; böylece, doktorun klinik ortamda etkili iletişim kurabildiği doğrulanır."
+            ]
+          },
+          {
+            title: "3. Belgeler:",
+            description: [
+              "Gerekli tüm belgeleri – diploma, transkript, sertifika ve benzeri evrakları – eksiksiz sunmak.",
+              "Belgelerin resmi tercümesi ve gerekiyorsa noter onayı ile desteklenmesi."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Approbation Süreci İçin Detaylı Hazırlık Adımları:",
+        desc:
+          "Approbation almak için hazırlık süreci, titiz planlama ve erken hazırlık gerektirir. Dil becerilerinizi geliştirmek ve tüm gerekli belgeleri eksiksiz hazırlamak, sürecin sorunsuz ilerlemesi açısından hayati öneme sahiptir.",
+        points: [
+          "Medikal terminolojiye hakim olmak için yoğun Almanca kurslarına katılın.",
+          "Tüm eğitim ve klinik belgelerinizi toplayın, noter onaylı kopyalarını edinin ve resmi tercümelerini tamamlayın.",
+          "Tıbbi dil sınavına (FSP) yönelik pratikler yaparak, gerçek klinik senaryoları canlandırın ve iletişim becerilerinizi geliştirin.",
+          "Gerekirse, değerlendirme sürecinde çalışabilmek için geçici çalışma izni (Berufserlaubnis) başvurusunda bulunun.",
+          "Ek kontrollerin ve değerlendirmelerin zamanında tamamlanmasını sağlayın."
+        ]
+      },
+      requirements: {
+        title: "Approbation’un Sağladığı Avantajlar:",
+        desc:
+          "Approbation almak, doktorlara mesleki alanda geniş fırsatlar sunar; bu, kariyerlerinin uzun vadeli istikrarını ve gelişimini destekler.",
+        points: [
+          "Almanya’nın herhangi bir eyaletinde sınırsız çalışma hakkı.",
+          "Uzmanlık eğitimi, sürekli mesleki gelişim ve ileri düzey eğitim fırsatlarına erişim.",
+          "Mesleki istikrar ve güvenli bir çalışma ortamı.",
+          "Uluslararası arenada tanınan bir belge, kariyer mobilitesine katkı sağlar."
+        ]
+      },
+      additionalCourses:
+        "Approbation süreci, yalnızca belgelerin sunulmasıyla sınırlı kalmayıp, aynı zamanda klinik becerilerin ve dil yeterliliğinin değerlendirilmesini de içerir. Profesyonel danışmanlık almak ve hazırlık kurslarına katılmak, sürecin sorunsuz ilerlemesi açısından büyük önem taşır.",
+      detailedReviewTitle: "Approbation Sürecinin Ayrıntılı Genel Bakışı",
+      detailedReview:
+        "Approbation süreci, doktorun tıp eğitimini tamamlaması ve klinik deneyimini belgeleyen ayrıntılı dokümanların sunulmasıyla başlar. Ardından, doktorun Almanca dil yeterliliği, özel bir sınav aracılığıyla titizlikle değerlendirilir. Son aşamada, tüm gerekli belgeler toplanır, resmi tercüme edilir ve noter onayları alınır. Bu düzenli yaklaşım, doktorun bağımsız olarak yüksek kalitede sağlık hizmeti sunmaya hazır olduğunu garanti eder."
+    },
+    fr: {
+      title: "Qu’est-ce que l’Approbation pour les médecins en Allemagne ?",
+      intro:
+        "L’Approbation est la licence officielle qui permet aux médecins d’exercer en toute autonomie en Allemagne. Elle atteste qu’un médecin a suivi une formation médicale reconnue, a acquis une solide expérience clinique et maîtrise la langue allemande, garantissant ainsi la qualité des soins prodigués.",
+      process: {
+        title: "Conditions Générales pour l’Approbation :",
+        desc:
+          "Le processus d’Approbation vise à vérifier que le médecin répond à l’ensemble des critères rigoureux imposés par le système de santé allemand. Cela inclut une formation académique approfondie, une expérience clinique vérifiée et une maîtrise suffisante de l’allemand.",
+        steps: [
+          {
+            title: "1. Formation Médicale :",
+            description: [
+              "Obtention d’un diplôme de médecine dans une institution accréditée, ce qui implique un enseignement théorique approfondi ainsi que des stages cliniques pratiques.",
+              "Validation d’une formation postuniversitaire, telle qu’un internat ou une spécialisation, appuyée par des relevés de notes détaillés, des certificats et des rapports cliniques.",
+              "Présentation de lettres de recommandation qui attestent de la compétence professionnelle et de l’aptitude à exercer en toute autonomie."
+            ]
+          },
+          {
+            title: "2. Compétences Linguistiques :",
+            description: [
+              "Fourniture d’un certificat de maîtrise de l’allemand attestant un niveau minimum de B2, indispensable pour la communication quotidienne dans le milieu médical.",
+              "Réussite d’un examen de langue médicale (FSP) au niveau C1, garantissant la capacité de transmettre des informations médicales complexes de manière claire et précise."
+            ]
+          },
+          {
+            title: "3. Documentation :",
+            description: [
+              "Soumission de l’ensemble des documents requis, tels que diplômes, relevés de notes et certificats, qui confirment la formation et l’expérience clinique du médecin.",
+              "Traduction officielle et certification des documents, le cas échéant, pour assurer leur validité et leur reconnaissance internationale."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Étapes Détaillées de Préparation pour l’Approbation :",
+        desc:
+          "La préparation à l’Approbation nécessite une planification minutieuse. Il est essentiel de renforcer sa maîtrise de l’allemand, de rassembler tous les documents nécessaires et de se préparer aux examens spécifiques qui évaluent la compétence professionnelle.",
+        points: [
+          "Suivre des cours intensifs d’allemand spécialement conçus pour les professionnels de la santé.",
+          "Rassembler, certifier et, si nécessaire, faire traduire tous les documents académiques et cliniques.",
+          "Se préparer activement à l’examen de langue médicale (FSP) en participant à des simulations et des exercices pratiques.",
+          "Obtenir une autorisation de travail temporaire (Berufserlaubnis) si besoin, afin de pouvoir exercer sous supervision pendant l’évaluation.",
+          "Veiller à ce que toutes les vérifications complémentaires soient effectuées dans les délais impartis."
+        ]
+      },
+      requirements: {
+        title: "Avantages de l’Approbation :",
+        desc:
+          "L’Approbation offre de nombreux avantages, assurant non seulement l’autonomie d’exercice mais aussi une stabilité professionnelle et des opportunités de développement continu.",
+        points: [
+          "Exercice illimité de la médecine dans tous les États fédéraux d’Allemagne.",
+          "Accès à des programmes de formation continue et de spécialisation.",
+          "Sécurité professionnelle et stabilité dans un environnement hautement réglementé.",
+          "Reconnaissance internationale de la qualification, favorisant la mobilité professionnelle."
+        ]
+      },
+      additionalCourses:
+        "Le processus d’Approbation est complexe et va au-delà de la simple soumission de documents. Il inclut l’évaluation des compétences cliniques et linguistiques. Il est fortement recommandé de bénéficier de conseils professionnels et de suivre des cours préparatoires pour optimiser votre dossier et garantir le succès du processus.",
+      detailedReviewTitle: "Vue d’ensemble Détaillée du Processus d’Approbation",
+      detailedReview:
+        "Le processus d’Approbation se décompose en plusieurs étapes clés. Tout d’abord, le médecin doit compléter sa formation académique et clinique, appuyée par des documents détaillés et des lettres de recommandation. Ensuite, une évaluation rigoureuse de sa maîtrise de l’allemand est réalisée via un examen spécialisé. Enfin, tous les documents requis sont rassemblés, traduits et certifiés. Cette approche méthodique garantit que le médecin est parfaitement préparé pour exercer de manière autonome en Allemagne."
+    },
+    es: {
+      title: "¿Qué es la Approbation para médicos en Alemania?",
+      intro:
+        "La Approbation es la licencia oficial que permite a los médicos ejercer de forma independiente en Alemania. Este proceso certifica que el médico ha completado una formación médica reconocida, ha adquirido una experiencia clínica sólida y posee la competencia lingüística necesaria para ofrecer atención médica de alta calidad.",
+      process: {
+        title: "Requisitos Generales para Obtener la Approbation:",
+        desc:
+          "El proceso de obtención de la Approbation verifica que el médico cumple con todos los criterios exigidos por el sistema sanitario alemán, abarcando tanto la formación académica como la experiencia clínica y las habilidades lingüísticas.",
+        steps: [
+          {
+            title: "1. Formación Médica:",
+            description: [
+              "Obtención de un título médico de una institución acreditada, lo cual implica una formación teórica profunda y experiencia práctica en entornos clínicos.",
+              "Demostración de una formación postgraduada, como residencias o especializaciones, respaldada por expedientes, certificados y reportes clínicos detallados.",
+              "Presentación de cartas de recomendación de profesores o supervisores que avalen la competencia profesional del médico."
+            ]
+          },
+          {
+            title: "2. Dominio del Idioma:",
+            description: [
+              "Presentación de un certificado que demuestre un nivel mínimo de B2 en alemán, indispensable para la comunicación en el entorno sanitario.",
+              "Aprobación de un examen de idioma médico (FSP) a nivel C1, que garantice la capacidad de transmitir información médica compleja de forma clara y precisa."
+            ]
+          },
+          {
+            title: "3. Documentación:",
+            description: [
+              "Entrega de todos los documentos necesarios, incluyendo diplomas, expedientes académicos y certificados que acrediten la formación y experiencia clínica.",
+              "Traducción oficial y certificación de los documentos, de acuerdo con los requisitos legales y de reconocimiento internacional."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Pasos Detallados para Prepararse para la Approbation:",
+        desc:
+          "La preparación para obtener la Approbation requiere una planificación cuidadosa. Es fundamental mejorar la competencia en alemán, recopilar todos los documentos necesarios y prepararse para los exámenes que evalúan la capacidad profesional.",
+        points: [
+          "Realizar cursos intensivos de alemán, especialmente dirigidos a profesionales de la salud.",
+          "Recopilar, certificar y, de ser necesario, traducir oficialmente todos los documentos académicos y clínicos.",
+          "Prepararse a fondo para el examen de idioma médico (FSP) mediante prácticas, simulaciones y ejercicios en grupo.",
+          "Solicitar un permiso de trabajo temporal, si es necesario, para poder ejercer bajo supervisión durante la evaluación.",
+          "Asegurarse de que todas las revisiones y evaluaciones adicionales se realicen en los plazos establecidos."
+        ]
+      },
+      requirements: {
+        title: "Beneficios de la Approbation:",
+        desc:
+          "Obtener la Approbation ofrece numerosos beneficios que impulsan el desarrollo profesional y garantizan una carrera estable y prometedora en el ámbito médico.",
+        points: [
+          "Derecho a ejercer la medicina sin restricciones en todo el territorio alemán.",
+          "Acceso a programas de formación continua y especialización.",
+          "Mayor estabilidad y seguridad profesional en un entorno regulado.",
+          "Reconocimiento internacional de la cualificación, lo que favorece la movilidad profesional."
+        ]
+      },
+      additionalCourses:
+        "El proceso de obtención de la Approbation es complejo e involucra no solo la presentación de documentos, sino también la evaluación de competencias clínicas y lingüísticas. Se recomienda buscar asesoramiento profesional y participar en cursos preparatorios para asegurar un proceso exitoso.",
+      detailedReviewTitle: "Descripción Detallada del Proceso de Approbation",
+      detailedReview:
+        "El proceso para obtener la Approbation se estructura en varias etapas. Inicialmente, el médico debe completar su formación académica y clínica, respaldada por una documentación detallada y cartas de recomendación. Posteriormente, se evalúa rigurosamente la competencia en alemán a través de un examen especializado. Finalmente, se recopilan, traducen y certifican todos los documentos requeridos. Este enfoque metódico garantiza que el médico esté plenamente preparado para ejercer de manera independiente en Alemania."
+    },
+    pl: {
+      title: "Czym jest Approbation dla lekarzy w Niemczech?",
+      intro:
+        "Approbation to oficjalne pozwolenie, które umożliwia lekarzom samodzielne wykonywanie zawodu w Niemczech. Jest to kompleksowe potwierdzenie kwalifikacji, które obejmuje ukończenie uznanego kierunku medycznego, zdobycie niezbędnego doświadczenia klinicznego oraz opanowanie języka niemieckiego na wysokim poziomie – wszystko to niezbędne do świadczenia usług medycznych na najwyższym poziomie.",
+      process: {
+        title: "Kompleksowe Wymagania do Uzyskania Approbation:",
+        desc:
+          "Proces uzyskania Approbation polega na szczegółowej weryfikacji kwalifikacji lekarza, aby zapewnić, że spełnia on wszystkie wymagania niemieckiego systemu opieki zdrowotnej. Obejmuje to zarówno formalne wykształcenie, jak i praktyczne doświadczenie oraz umiejętności komunikacyjne.",
+        steps: [
+          {
+            title: "1. Wykształcenie Medyczne:",
+            description: [
+              "Ukończenie akredytowanego kierunku medycznego, potwierdzone dyplomem oraz szczegółowymi dokumentami, które opisują zakres teoretycznej i praktycznej wiedzy.",
+              "Zdobycie doświadczenia klinicznego poprzez odbycie stażu podyplomowego, co dokumentowane jest wypisami, certyfikatami i raportami z praktyk.",
+              "Przedłożenie listów rekomendacyjnych od wykładowców lub przełożonych, które potwierdzają kompetencje zawodowe oraz gotowość do samodzielnej pracy."
+            ]
+          },
+          {
+            title: "2. Znajomość Języka:",
+            description: [
+              "Posiadanie certyfikatu potwierdzającego znajomość języka niemieckiego na poziomie nie niższym niż B2, co jest niezbędne do codziennej komunikacji.",
+              "Zdanie egzaminu językowego z zakresu medycznej terminologii (FSP) na poziomie C1, co umożliwia jasne i precyzyjne przekazywanie informacji zarówno pacjentom, jak i współpracownikom."
+            ]
+          },
+          {
+            title: "3. Dokumentacja:",
+            description: [
+              "Przedłożenie pełnego zestawu dokumentów, takich jak dyplomy, wypisy, certyfikaty oraz inne potwierdzenia kwalifikacji.",
+              "Dokumenty muszą być oficjalnie przetłumaczone na język niemiecki i, jeśli to wymagane, opatrzone apostille, aby potwierdzić ich autentyczność."
+            ]
+          }
+        ]
+      },
+      preparation: {
+        title: "Szczegółowe Kroki Przygotowania do Approbation:",
+        desc:
+          "Uzyskanie Approbation wymaga skrupulatnego przygotowania, obejmującego zarówno rozwijanie umiejętności językowych, jak i staranne zebranie dokumentacji. Proces ten należy realizować etapami, aby zapewnić pełną gotowość do samodzielnej praktyki.",
+        points: [
+          "Uczęszczanie na intensywne kursy języka niemieckiego, ze szczególnym naciskiem na medyczną terminologię i komunikację.",
+          "Skrupulatne zebranie, weryfikacja oraz oficjalne uwierzytelnienie wszystkich niezbędnych dokumentów, w tym dyplomów, wypisów i certyfikatów.",
+          "Przygotowanie się do egzaminu językowego z zakresu medycznej terminologii poprzez udział w symulacjach i praktycznych ćwiczeniach.",
+          "W razie potrzeby – uzyskanie tymczasowego pozwolenia na pracę (Berufserlaubnis), umożliwiającego pracę pod nadzorem w okresie oceny.",
+          "Terminowe przeprowadzenie wszystkich dodatkowych weryfikacji, aby dokumenty były zgodne z wymaganiami formalnymi."
+        ]
+      },
+      requirements: {
+        title: "Korzyści z Uzyskania Approbation:",
+        desc:
+          "Uzyskanie Approbation otwiera przed lekarzami szerokie możliwości zawodowe, zapewniając nie tylko prawo do samodzielnego wykonywania zawodu, ale także dostęp do specjalistycznych programów rozwojowych i stabilność kariery.",
+        points: [
+          "Prawo do samodzielnego wykonywania zawodu w całych Niemczech, co daje dużą swobodę wyboru miejsca pracy.",
+          "Dostęp do specjalistycznych kursów, staży i programów doskonalenia zawodowego, które wspierają ciągły rozwój.",
+          "Zapewnienie stabilności zawodowej i bezpieczeństwa dzięki rygorystycznym standardom opieki zdrowotnej.",
+          "Międzynarodowe uznanie kwalifikacji, które otwiera dodatkowe perspektywy kariery na arenie globalnej."
+        ]
+      },
+      additionalCourses:
+        "Proces uzyskania Approbation jest wieloaspektowy i obejmuje nie tylko formalną dokumentację, ale także ocenę praktycznych umiejętności i biegłości językowej. Zaleca się korzystanie z profesjonalnych konsultacji oraz uczestnictwo w dedykowanych kursach przygotowawczych, aby zwiększyć szanse na pomyślne przejście przez cały proces.",
+      detailedReviewTitle: "Szczegółowy Przegląd Procesu Uzyskania Approbation",
+      detailedReview:
+        "Proces uzyskania Approbation składa się z kilku kluczowych etapów. Na początku lekarz musi ukończyć formalne wykształcenie medyczne i zdobyć odpowiedni doświadczenie kliniczne, co jest potwierdzane przez szczegółową dokumentację i listy rekomendacyjne. Następnie przeprowadza się ocenę znajomości języka niemieckiego poprzez specjalistyczny egzamin. W ostatniej fazie wszystkie niezbędne dokumenty są zbierane, tłumaczone i oficjalnie zatwierdzane. Taki kompleksowy i uporządkowany proces gwarantuje, że lekarz jest w pełni przygotowany do samodzielnego świadczenia usług medycznych w Niemczech."
+    }
+  };

@@ -1,425 +1,661 @@
+// src/constants/translation/whatIsFSP.js
+
 export const FSP_INFO = {
+   de: {
+     title: "Was ist die Fachsprachenprüfung?",
+     intro:
+       "Die Fachsprachenprüfung (Prüfung der fachsprachlichen Kompetenz) ist ein obligatorischer Schritt für Ärzte, die ihre medizinische Ausbildung außerhalb Deutschlands absolviert haben, um eine Approbation zu erhalten. Ziel der Prüfung ist es, die Fähigkeit eines Arztes zu überprüfen, effektiv über medizinische Fachthemen mit Patienten und Kollegen zu kommunizieren sowie die erforderliche Dokumentation korrekt zu erstellen. Der Test prüft nicht nur die Kenntnisse der medizinischen Fachsprache, sondern auch das Verständnis der in Deutschland geltenden Verfahren, Regelungen und Standards. Er gilt als wesentlicher Schritt für die Integration ausländischer Ärzte in das deutsche Gesundheitssystem.",
+     definition: {
+       intro: "Wozu dient die Fachsprachenprüfung?",
+       points: [
+         "Mit Patienten zu kommunizieren: Anamnese erheben und diagnostische sowie therapeutische Verfahren verständlich zu erklären.",
+         "Mit Kollegen zu kommunizieren: Fälle präsentieren und Informationen über Patienten im Team weitergeben.",
+         "Informationen zu dokumentieren: Medizinische Dokumentationen klar und standardgerecht anzufertigen.",
+         "Medizinische Terminologie zu verstehen: Diese korrekt im Alltag anzuwenden."
+       ]
+     },
+     examStructure: {
+       title: "Wie verläuft die Fachsprachenprüfung?",
+       desc: "Die Prüfung besteht in der Regel aus drei Hauptteilen:",
+       parts: [
+         {
+           title: "Anamneseerhebung",
+           description:
+             "Was beinhaltet es: Eine Simulation eines 20-minütigen Gesprächs mit einem Patienten.\nZweck: Die Erhebung der medizinischen Anamnese, Feststellung einer Verdachtsdiagnose und Bestimmung weiterer Maßnahmen.\nBeispielfragen:\n• „Was führt Sie zu uns?“\n• „Wie lange bestehen die Symptome bereits?“\n• „Hatten Sie ähnliche Beschwerden schon einmal?“\nWeshalb es wichtig ist: Dieser Teil zeigt Ihre Fähigkeit, einen guten Kontakt zum Patienten aufzubauen, klare Fragen zu formulieren und Informationen logisch zu analysieren."
+         },
+         {
+           title: "Schriftlicher Teil",
+           description:
+             "Was beinhaltet es: Die Erstellung einer strukturierten medizinischen Dokumentation auf Basis der erhobenen Anamnese.\nTypische Abschnitte:\n• Hauptbeschwerden\n• Krankengeschichte\n• Verdachtsdiagnose\n• Plan für weitere Untersuchungen oder Behandlungen\nBeispiel: Ein 45-jähriger Patient klagt über anhaltende Kopfschmerzen, die seit zwei Wochen bestehen. Die Schmerzen befinden sich im Stirnbereich und gehen mit Übelkeit einher."
+         },
+         {
+           title: "Mündlicher Teil",
+           description:
+             "Was beinhaltet es: Die Präsentation des Patienten vor der Prüfungskommission.\nZweck: Die Ergebnisse zu erläutern, Ihre Entscheidungen zu begründen und Fragen der Prüfer zu beantworten.\nBeispielfragen:\n• „Welche weiteren Untersuchungen würden Sie anordnen?“\n• „Warum halten Sie diese Diagnose für die wahrscheinlichste?“"
+         }
+       ]
+     },
+     preparation: {
+       title: "Wie bereitet man sich auf die Fachsprachenprüfung vor?",
+       desc: "Es wird empfohlen, folgende Schritte zu befolgen:",
+       points: [
+         "Studium der medizinischen Terminologie: Machen Sie sich mit den in Ihrer Fachrichtung verwendeten Schlüsselbegriffen vertraut. Es wird empfohlen, Lehrbücher wie 'Medizinische Fachsprache für ausländische Ärzte' zu verwenden.",
+         "Übung der Anamneseerhebung: Trainieren Sie Gespräche mit simulierten Patienten, um zu lernen, wie man Fragen richtig stellt und Antworten strukturiert. Nutzen Sie Szenarien, wie z. B. einen Patienten mit Brustschmerzen oder Fieber.",
+         "Dokumentation medizinischer Informationen: Üben Sie das Schreiben medizinischer Berichte in einer logischen Struktur. Nutzen Sie Musterberichte oder Vorlagen, die in Online-Kursen verfügbar sind.",
+         "Besuch von Vorbereitungskursen: Spezialisierte Kurse, beispielsweise des mibeg-Instituts, helfen dabei, Sprachkenntnisse zu verbessern und sich mit typischen Fehlern vertraut zu machen."
+       ]
+     },
+     requirements: {
+       title: "Anforderungen an die Kandidaten",
+       desc: "Zur Teilnahme an der Prüfung müssen folgende Voraussetzungen erfüllt sein:",
+       points: [
+         "Deutschkenntnisse: Es wird ein Mindestniveau von B2 vorausgesetzt (C1 ist wünschenswert), um eine effektive Kommunikation zu gewährleisten.",
+         "Medizinische Ausbildung: Die Kandidaten müssen einen medizinischen Abschluss vorweisen, da die Prüfung die fachlichen Kenntnisse überprüft."
+       ]
+     },
+     faq: {
+       title: "Häufig gestellte Fragen",
+       questions: [
+         {
+           question: "Wie lange dauert die Prüfung?",
+           answer: "Im Durchschnitt dauert sie 60 Minuten (20 Minuten pro Teil)."
+         },
+         {
+           question: "Wie hoch sind die Prüfungsgebühren?",
+           answer:
+             "Die Gebühr variiert je nach Bundesland, liegt aber in der Regel zwischen 350 und 500 Euro."
+         },
+         {
+           question: "Was, wenn ich die Prüfung nicht bestehe?",
+           answer:
+             "Sie können sich erneut anmelden und die Prüfung nach zusätzlicher Vorbereitung wieder ablegen."
+         }
+       ]
+     },
+     conclusion:
+       "Die Fachsprachenprüfung ist ein entscheidender Schritt für Ärzte, die in Deutschland arbeiten möchten. Das erfolgreiche Bestehen der Prüfung bestätigt Ihre Fähigkeit zur professionellen Kommunikation und öffnet die Tür zur medizinischen Karriere. Eine gründliche Vorbereitung ist der Schlüssel zum Erfolg. Beginnen Sie mit dem Studium der Terminologie, üben Sie Gespräche und verbessern Sie Ihre Dokumentationsfähigkeiten. Wenn Sie Unterstützung benötigen, nehmen Sie an spezialisierten Kursen teil oder suchen Sie nach Tutoren, die mit medizinischem Personal arbeiten."
+   },
    uk: {
-      title: "Що таке Fachsprachenprüfung?",
-      intro: "Fachsprachenprüfung є важливим кроком для інтеграції медичних фахівців з іншої країни в німецьку медичну систему. Цей іспит вимагає від кандидатів не лише знання медичних тем, а й здатності ефективно спілкуватися на німецькій мові в професійному контексті.",
-      definition:
-         "Fachsprachenprüfung (мовний іспит) відображає особливості професійної комунікації у конкретній галузі. У випадку медичних працівників, Fachsprachenprüfung перевіряє їхні знання та навички спілкування на медичні теми, такі як збір анамнезу, обговорення методів діагностики, лікування та результатів обстежень.",
-      examStructure: {
-         title: "Перебіг іспиту Fachsprachenprüfung",
-         desc: "Під час іспиту Fachsprachenprüfung зазвичай проводяться три основні частини:",
-         parts: [
-            {
-               title: "Збір анамнезу",
-               description:
-                  "Ця частина іспиту передбачає діалог протягом 20 хвилин з пацієнтом. Мета - зібрати повний анамнез та визначити напрямок подальшої діагностики, терапії та попередній діагноз.",
-            },
-            {
-               title: "Письмова частина",
-               description:
-                  "У цій частині кандидат повинен створити структуровану медичну документацію на основі зібраного анамнезу під час першої частини іспиту.",
-            },
-            {
-               title: "Усна частина",
-               description:
-                  "Кандидат повинен представити пацієнта екзаменаторам та спілкуватися з ними на медичні теми. Це вимагає демонстрації вміння ефективно спілкуватися в медичному контексті.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Підготовка до іспиту Fachsprachenprüfung",
-         desc: "Підготовка до іспиту Fachsprachenprüfung включає в себе:",
-         points: [
-            "Вивчення медичної термінології: Кандидати повинні ознайомитися з основними медичними термінами та визначеннями, щоб впевнено володіти медичною мовою під час іспиту.",
-            "Ознайомлення з методами обстеження: Важливо ознайомитися з різними методами обстеження та діагностики, які будуть використовуватися під час медичної практики.",
-            "Практичне тренування спілкування на німецькій мові: Кандидатам слід активно вдосконалювати свої мовні навички, проводячи практичні вправи зі спілкування на німецькій мові в медичному контексті.",
-            "Крім того, кандидати можуть відвідувати спеціальні курси підготовки до іспиту або працювати з репетиторами, які допоможуть їм покращити мовні навички та підготуватися до всіх аспектів іспиту.",
-         ],
-      },
-      requirements: {
-         title: "Вимоги до кандидатів для Fachsprachenprüfung",
-         desc: "Для підготовки та складання іспиту Fachsprachenprüfung необхідно відповідати наступним вимогам:",
-         points: [
-            "Базовий рівень німецької мови (мінімум Б2): Кандидати повинні мати базові знання німецької мови, щоб ефективно спілкуватися в медичному середовищі та розуміти інструкції та завдання іспиту.",
-            "Вища медична освіта: Кандидати повинні мати вищу медичну освіту, оскільки іспит спрямований на перевірку їхніх медичних знань та навичок.",
-         ],
-      },
-      additionalCourses:
-         "Для підготовки до іспиту кандидати можуть скористатися додатковими курсами з медичної німецької мови, які допоможуть покращити їхні мовні навички та підготуватися до вимог іспиту.",
+     title: "Що таке Fachsprachenprüfung?",
+     intro:
+       "Fachsprachenprüfung (іспит на знання професійної мови) є обов’язковим кроком для лікарів, які отримали медичну освіту за межами Німеччини, щоб отримати дозвіл на медичну практику. Метою іспиту є перевірка здатності лікаря ефективно спілкуватися на професійні медичні теми з пацієнтами та колегами, а також оформлювати необхідну документацію. Іспит перевіряє не лише знання медичної німецької мови, а й розуміння процедур, правил та стандартів, що застосовуються у Німеччині. Він вважається важливим етапом для інтеграції лікарів-мігрантів у німецьку систему охорони здоров’я.",
+     definition: {
+       intro: "Для чого потрібен Fachsprachenprüfung?",
+       points: [
+         "Спілкуватися з пацієнтами: збирати анамнез, пояснювати діагностичні та терапевтичні процедури зрозумілою мовою.",
+         "Спілкуватися з колегами: представляти випадки, передавати інформацію про пацієнта в команді.",
+         "Документувати інформацію: оформлювати медичну документацію чітко та відповідно до стандартів.",
+         "Розуміти медичну термінологію: використовувати її правильно у повсякденній практиці."
+       ]
+     },
+     examStructure: {
+       title: "Як проходить Fachsprachenprüfung?",
+       desc: "Іспит зазвичай складається з трьох основних частин:",
+       parts: [
+         {
+           title: "Збір анамнезу",
+           description:
+             "Що включає: симуляція діалогу з пацієнтом протягом 20 хвилин.\nМета: зібрати медичний анамнез, встановити попередній діагноз та визначити подальші дії.\nПриклад питань:\n• «Що вас турбує?»\n• «Як давно з’явилися ці симптоми?»\n• «Чи були у вас подібні скарги раніше?»\nЧому це важливо: ця частина демонструє вашу здатність встановлювати контакт із пацієнтом, формулювати зрозумілі питання та логічно аналізувати інформацію."
+         },
+         {
+           title: "Письмова частина",
+           description:
+             "Що включає: створення структурованої медичної документації на основі зібраного анамнезу.\nТипові розділи:\n• Основні скарги\n• Анамнез хвороби\n• Попередній діагноз\n• План подальших обстежень чи лікування\nПриклад: Пацієнт, 45 років, звернувся зі скаргами на постійний головний біль, що триває протягом двох тижнів. Біль локалізована у лобовій частині і супроводжується нудотою."
+         },
+         {
+           title: "Усна частина",
+           description:
+             "Що включає: презентація пацієнта перед комісією.\nМета: пояснити результати, обґрунтувати свої рішення та відповісти на питання екзаменаторів.\nПриклад питань:\n• «Які ще обстеження ви б призначили?»\n• «Чому ви вважаєте цей діагноз найбільш імовірним?»"
+         }
+       ]
+     },
+     preparation: {
+       title: "Як підготуватися до Fachsprachenprüfung?",
+       desc: "Рекомендується дотримуватися наступних кроків:",
+       points: [
+         "Вивчення медичної термінології: ознайомтеся з ключовими термінами, що використовуються у вашій спеціалізації. Рекомендується використовувати підручники, наприклад, “Medizinische Fachsprache für ausländische Ärzte”.",
+         "Практика збору анамнезу: тренуйте діалоги з симульованими пацієнтами, щоб навчитися правильно ставити питання та структурувати відповіді. Використовуйте сценарії, наприклад, пацієнта зі скаргами на біль у грудях або із підвищеною температурою.",
+         "Документування медичної інформації: практикуйте написання медичних звітів, дотримуючись логічної структури. Використовуйте приклади звітів або зразки, доступні в онлайн-курсах.",
+         "Відвідування підготовчих курсів: спеціалізовані курси, такі як програми mibeg-Institut, допомагають покращити мовні навички та ознайомитися з типовими помилками."
+       ]
+     },
+     requirements: {
+       title: "Вимоги до кандидатів",
+       desc: "Для участі в іспиті потрібно відповідати наступним вимогам:",
+       points: [
+         "Рівень німецької мови: необхідно володіти мовою на рівні B2 або вище (рівень C1 бажаний).",
+         "Вища медична освіта: кандидати повинні мати диплом лікаря, оскільки іспит спрямований на перевірку професійних знань."
+       ]
+     },
+     faq: {
+       title: "Часті запитання",
+       questions: [
+         {
+           question: "Скільки триває іспит?",
+           answer: "У середньому — 60 хвилин (20 хвилин на кожну частину)."
+         },
+         {
+           question: "Скільки коштує складання іспиту?",
+           answer: "Ціна варіюється залежно від федеральної землі, але зазвичай становить 350–500 євро."
+         },
+         {
+           question: "Що робити, якщо не склав іспит?",
+           answer: "Можна повторно зареєструватися та скласти іспит після додаткової підготовки."
+         }
+       ]
+     },
+     conclusion:
+       "Fachsprachenprüfung — це важливий етап для лікарів, які бажають працювати в Німеччині. Успішне складання цього іспиту підтверджує вашу здатність до професійного спілкування та відкриває двері до медичної кар’єри. Якісна підготовка — ключ до успіху. Почніть із вивчення термінології, практикуйте діалог та вдосконалюйте свої навички оформлення документації. Якщо вам потрібна допомога, звертайтеся до спеціалізованих курсів або шукайте репетиторів, які працюють із медичними працівниками."
    },
    en: {
-      title: "What is Fachsprachenprüfung?",
-      intro: "Fachsprachenprüfung is an important step for integrating medical professionals from another country into the German medical system. This exam requires candidates not only to have knowledge of medical topics but also to effectively communicate in German in a professional context.",
-      definition:
-         "Fachsprachenprüfung (language exam) reflects the specifics of professional communication in a particular field. For medical professionals, Fachsprachenprüfung tests their knowledge and communication skills on medical topics, such as taking medical histories, discussing diagnostic methods, treatments, and examination results.",
-      examStructure: {
-         title: "Structure of the Fachsprachenprüfung Exam",
-         desc: "The Fachsprachenprüfung exam usually consists of three main parts:",
-         parts: [
-            {
-               title: "Medical History Taking",
-               description:
-                  "This part of the exam involves a 20-minute dialogue with a patient. The goal is to gather a complete medical history and determine the direction for further diagnosis, therapy, and preliminary diagnosis.",
-            },
-            {
-               title: "Written Part",
-               description:
-                  "In this part, the candidate must create a structured medical documentation based on the medical history gathered during the first part of the exam.",
-            },
-            {
-               title: "Oral Part",
-               description:
-                  "The candidate must present the patient to the examiners and discuss medical topics with them. This requires demonstrating the ability to effectively communicate in a medical context.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Preparation for the Fachsprachenprüfung Exam",
-         desc: "Preparation for the Fachsprachenprüfung exam includes:",
-         points: [
-            "Studying medical terminology: Candidates should familiarize themselves with basic medical terms and definitions to confidently use medical language during the exam.",
-            "Familiarizing with examination methods: It's important to get to know different examination and diagnostic methods that will be used during medical practice.",
-            "Practical training in German communication: Candidates should actively improve their language skills by practicing German communication in a medical context.",
-            "Additionally, candidates can attend special preparation courses for the exam or work with tutors to enhance their language skills and prepare for all aspects of the exam.",
-         ],
-      },
-      requirements: {
-         title: "Requirements for Candidates for Fachsprachenprüfung",
-         desc: "To prepare and take the Fachsprachenprüfung exam, candidates must meet the following requirements:",
-         points: [
-            "Basic level of German language (at least B2): Candidates must have basic knowledge of the German language to effectively communicate in a medical environment and understand the instructions and tasks of the exam.",
-            "Higher medical education: Candidates must have higher medical education, as the exam is aimed at testing their medical knowledge and skills.",
-         ],
-      },
-      additionalCourses:
-         "To prepare for the exam, candidates can take additional courses in medical German, which will help improve their language skills and prepare for the exam requirements.",
+     title: "What is Fachsprachenprüfung?",
+     intro:
+       "Fachsprachenprüfung (the professional language proficiency exam) is a mandatory step for doctors who received their medical education outside Germany to obtain a license to practice medicine. The exam aims to assess a doctor’s ability to effectively communicate on professional medical topics with patients and colleagues, as well as to properly document necessary information. It tests not only your knowledge of medical German but also your understanding of the procedures, regulations, and standards applied in Germany. It is considered an essential step for integrating migrant doctors into the German healthcare system.",
+     definition: {
+       intro: "Why is Fachsprachenprüfung needed?",
+       points: [
+         "Communicating with patients: gathering medical history and explaining diagnostic and therapeutic procedures in understandable language.",
+         "Communicating with colleagues: presenting cases and conveying patient information within a team.",
+         "Documenting information: preparing medical documentation clearly and according to standards.",
+         "Understanding medical terminology: using it correctly in everyday practice."
+       ]
+     },
+     examStructure: {
+       title: "How is the Fachsprachenprüfung conducted?",
+       desc: "The exam usually consists of three main parts:",
+       parts: [
+         {
+           title: "Medical History Taking",
+           description:
+             "What it includes: a simulated dialogue with a patient for 20 minutes.\nPurpose: to collect the medical history, establish a preliminary diagnosis, and determine further actions.\nExample questions:\n• 'What brings you here?'\n• 'How long have you had these symptoms?'\n• 'Have you experienced similar issues before?'\nWhy it’s important: this section demonstrates your ability to establish rapport, ask clear questions, and logically analyze information."
+         },
+         {
+           title: "Written Part",
+           description:
+             "What it includes: creating structured medical documentation based on the gathered history.\nTypical sections:\n• Chief complaints\n• Medical history\n• Preliminary diagnosis\n• Plan for further examinations or treatment\nExample: A 45-year-old patient presents with complaints of a persistent headache lasting for two weeks. The pain is located in the frontal area and is accompanied by nausea."
+         },
+         {
+           title: "Oral Part",
+           description:
+             "What it includes: presenting the patient to the examination board.\nPurpose: to explain the findings, justify your decisions, and answer the examiners’ questions.\nExample questions from the board:\n• 'What additional examinations would you order?'\n• 'Why do you consider this diagnosis the most likely?'"
+         }
+       ]
+     },
+     preparation: {
+       title: "How to prepare for Fachsprachenprüfung?",
+       desc: "It is recommended to follow these steps:",
+       points: [
+         "Studying medical terminology: familiarize yourself with key terms used in your specialization. It is recommended to use textbooks such as 'Medizinische Fachsprache für ausländische Ärzte'.",
+         "Practice taking medical histories: rehearse dialogues with simulated patients to learn how to ask questions correctly and structure your responses. Use scenarios like a patient with chest pain or with a fever.",
+         "Documenting medical information: practice writing medical reports in a logical structure. Use sample reports or templates available in online courses.",
+         "Attending preparatory courses: specialized courses, such as those offered by mibeg-Institut, help improve language skills and familiarize you with common mistakes."
+       ]
+     },
+     requirements: {
+       title: "Candidate Requirements",
+       desc: "To participate in the exam, candidates must meet the following requirements:",
+       points: [
+         "German language proficiency: a minimum of B2 level is required (C1 is preferable) to ensure effective communication.",
+         "Medical education: candidates must have a medical degree, as the exam is designed to test professional knowledge."
+       ]
+     },
+     faq: {
+       title: "Frequently Asked Questions",
+       questions: [
+         {
+           question: "How long does the exam last?",
+           answer: "On average — 60 minutes (20 minutes for each part)."
+         },
+         {
+           question: "What is the exam fee?",
+           answer: "The fee varies by federal state, but usually ranges between 350–500 euros."
+         },
+         {
+           question: "What if I fail the exam?",
+           answer: "You can re-register and retake the exam after additional preparation."
+         }
+       ]
+     },
+     conclusion:
+       "Fachsprachenprüfung is a crucial step for doctors aiming to work in Germany. Successfully passing the exam confirms your ability to communicate professionally and opens the door to a medical career. Quality preparation is key to success. Start by studying the terminology, practice dialogues, and improve your documentation skills. If you need assistance, consider specialized courses or seek tutors experienced with medical professionals."
    },
-   de: {
-      title: "Was ist die Fachsprachenprüfung?",
-      intro: "Die Fachsprachenprüfung ist ein wichtiger Schritt zur Integration ausländischer medizinischer Fachkräfte in das deutsche Gesundheitssystem. Diese Prüfung verlangt von den Kandidaten nicht nur medizinisches Fachwissen, sondern auch die Fähigkeit, sich im beruflichen Kontext auf Deutsch effektiv zu verständigen.",
-      definition:
-         "Die Fachsprachenprüfung spiegelt die Besonderheiten der beruflichen Kommunikation in einem bestimmten Bereich wider. Für medizinisches Personal prüft die Fachsprachenprüfung deren Kenntnisse und Kommunikationsfähigkeiten zu medizinischen Themen, wie das Erheben von Anamnesen, die Diskussion von Diagnosemethoden, Behandlungen und Untersuchungsergebnissen.",
-      examStructure: {
-         title: "Ablauf der Fachsprachenprüfung",
-         desc: "Die Fachsprachenprüfung besteht in der Regel aus drei Hauptteilen:",
-         parts: [
-            {
-               title: "Anamneseerhebung",
-               description:
-                  "Dieser Teil der Prüfung umfasst einen 20-minütigen Dialog mit einem Patienten. Das Ziel ist es, eine vollständige Anamnese zu erheben und die Richtung für die weitere Diagnose, Therapie und vorläufige Diagnose zu bestimmen.",
-            },
-            {
-               title: "Schriftlicher Teil",
-               description:
-                  "In diesem Teil muss der Kandidat eine strukturierte medizinische Dokumentation basierend auf der während des ersten Teils erhobenen Anamnese erstellen.",
-            },
-            {
-               title: "Mündlicher Teil",
-               description:
-                  "Der Kandidat muss den Patienten den Prüfern vorstellen und mit ihnen über medizinische Themen sprechen. Dies erfordert die Fähigkeit, im medizinischen Kontext effektiv zu kommunizieren.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Vorbereitung auf die Fachsprachenprüfung",
-         desc: "Die Vorbereitung auf die Fachsprachenprüfung umfasst:",
-         points: [
-            "Studium der medizinischen Terminologie: Die Kandidaten sollten sich mit den grundlegenden medizinischen Begriffen und Definitionen vertraut machen, um während der Prüfung sicher mit der medizinischen Sprache umgehen zu können.",
-            "Vertrautheit mit Untersuchungsmethoden: Es ist wichtig, verschiedene Untersuchungs- und Diagnosemethoden kennenzulernen, die in der medizinischen Praxis verwendet werden.",
-            "Praktisches Training der Kommunikation auf Deutsch: Die Kandidaten sollten aktiv ihre Sprachkenntnisse verbessern, indem sie praktische Übungen zur Kommunikation auf Deutsch im medizinischen Kontext durchführen.",
-            "Zusätzlich können die Kandidaten spezielle Vorbereitungskurse für die Prüfung besuchen oder mit Tutoren arbeiten, um ihre Sprachkenntnisse zu verbessern und sich auf alle Aspekte der Prüfung vorzubereiten.",
-         ],
-      },
-      requirements: {
-         title: "Anforderungen an die Kandidaten für die Fachsprachenprüfung",
-         desc: "Um sich auf die Fachsprachenprüfung vorzubereiten und sie abzulegen, müssen die Kandidaten die folgenden Anforderungen erfüllen:",
-         points: [
-            "Grundlegende Deutschkenntnisse (mindestens B2): Die Kandidaten müssen über grundlegende Deutschkenntnisse verfügen, um sich im medizinischen Umfeld effektiv verständigen zu können und die Anweisungen und Aufgaben der Prüfung zu verstehen.",
-            "Hochschulabschluss in Medizin: Die Kandidaten müssen einen Hochschulabschluss in Medizin haben, da die Prüfung darauf abzielt, ihre medizinischen Kenntnisse und Fähigkeiten zu überprüfen.",
-         ],
-      },
-      additionalCourses:
-         "Zur Vorbereitung auf die Prüfung können die Kandidaten zusätzliche Kurse in medizinischem Deutsch belegen, die ihnen helfen, ihre Sprachkenntnisse zu verbessern und sich auf die Anforderungen der Prüfung vorzubereiten.",
+   // Для інших мов (ru, tr, fr, es, ar, pl) дані структуровано аналогічно.
+   ru: {
+     title: "Что такое Fachsprachenprüfung?",
+     intro:
+       "Fachsprachenprüfung (экзамен на знание профессионального языка) является обязательным этапом для врачей, получивших медицинское образование за пределами Германии, для получения лицензии на медицинскую практику. Цель экзамена – оценить способность врача эффективно общаться на профессиональные медицинские темы с пациентами и коллегами, а также правильно оформлять необходимую документацию. Экзамен проверяет не только знание медицинского немецкого языка, но и понимание процедур, правил и стандартов, действующих в Германии.",
+     definition: {
+       intro: "Для чего нужен Fachsprachenprüfung?",
+       points: [
+         "Общаться с пациентами: собирать анамнез и понятно объяснять диагностические и терапевтические процедуры.",
+         "Общаться с коллегами: представлять случаи и передавать информацию о пациенте в команде.",
+         "Документировать информацию: оформлять медицинскую документацию чётко и в соответствии со стандартами.",
+         "Понимать медицинскую терминологию: правильно использовать её в повседневной практике."
+       ]
+     },
+     examStructure: {
+       title: "Как проходит Fachsprachenprüfung?",
+       desc: "Экзамен обычно состоит из трёх основных частей:",
+       parts: [
+         {
+           title: "Сбор анамнеза",
+           description:
+             "Что включает: симуляция диалога с пациентом в течение 20 минут.\nЦель: собрать медицинский анамнез, установить предварительный диагноз и определить дальнейшие действия.\nПримеры вопросов:\n• «Что вас беспокоит?»\n• «Как давно появились эти симптомы?»\n• «Были ли у вас подобные жалобы ранее?»\nЗначимость: эта часть демонстрирует вашу способность устанавливать контакт с пациентом, формулировать понятные вопросы и логически анализировать информацию."
+         },
+         {
+           title: "Письменная часть",
+           description:
+             "Что включает: составление структурированной медицинской документации на основе собранного анамнеза.\nТипичные разделы:\n• Основные жалобы\n• Анамнез болезни\n• Предварительный диагноз\n• План дальнейших обследований или лечения\nПример: Пациент, 45 лет, обратился с жалобами на постоянную головную боль, продолжающуюся в течение двух недель. Боль локализована в лобной области, сопровождается тошнотой."
+         },
+         {
+           title: "Устная часть",
+           description:
+             "Что включает: представление пациента комиссии.\nЦель: объяснить результаты, обосновать свои решения и ответить на вопросы экзаменаторов.\nПримеры вопросов:\n• «Какие дополнительные обследования вы бы назначили?»\n• «Почему вы считаете этот диагноз наиболее вероятным?»"
+         }
+       ]
+     },
+     preparation: {
+       title: "Как подготовиться к Fachsprachenprüfung?",
+       desc: "Рекомендуется выполнить следующие шаги:",
+       points: [
+         "Изучение медицинской терминологии: ознакомьтесь с ключевыми терминами, используемыми в вашей специализации. Рекомендуется использовать учебники, например, «Medizinische Fachsprache für ausländische Ärzte».",
+         "Практика сбора анамнеза: тренируйте диалоги с имитацией общения с пациентом, чтобы научиться правильно задавать вопросы и структурировать ответы. Используйте сценарии, например, пациент с болью в груди или с повышенной температурой.",
+         "Документирование медицинской информации: практикуйтесь в написании медицинских отчётов с соблюдением логической структуры. Используйте примеры отчётов или образцы, доступные в онлайн-курсах.",
+         "Посещение подготовительных курсов: специализированные курсы, такие как программы mibeg-Institut, помогут улучшить языковые навыки и ознакомиться с типичными ошибками."
+       ]
+     },
+     requirements: {
+       title: "Требования к кандидатам",
+       desc: "Для сдачи экзамена кандидаты должны соответствовать следующим требованиям:",
+       points: [
+         "Базовый уровень немецкого языка: необходимо владеть языком на уровне B2 или выше (предпочтителен уровень C1) для эффективного общения.",
+         "Высшее медицинское образование: кандидаты должны иметь диплом врача, так как экзамен направлен на проверку профессиональных знаний."
+       ]
+     },
+     faq: {
+       title: "Часто задаваемые вопросы",
+       questions: [
+         {
+           question: "Сколько длится экзамен?",
+           answer: "В среднем — 60 минут (20 минут на каждую часть)."
+         },
+         {
+           question: "Сколько стоит экзамен?",
+           answer: "Стоимость варьируется в зависимости от федеральной земли, обычно составляет 350–500 евро."
+         },
+         {
+           question: "Что делать, если не сдал экзамен?",
+           answer: "Можно повторно зарегистрироваться и сдать экзамен после дополнительной подготовки."
+         }
+       ]
+     },
+     conclusion:
+       "Fachsprachenprüfung — это важный этап для врачей, желающих работать в Германии. Успешная сдача экзамена подтверждает вашу способность к профессиональному общению и открывает двери в медицинскую карьеру. Качественная подготовка — залог успеха. Начните с изучения терминологии, практикуйте диалоги и совершенствуйте навыки оформления документации. Если вам нужна помощь, обратитесь к специализированным курсам или найдите репетиторів, работающих с медицинским персоналом."
+   },
+   // Аналогічну структуру мають і інші мови:
+   tr: {
+     title: "Fachsprachenprüfung Nedir?",
+     intro:
+       "Fachsprachenprüfung (mesleki dil yeterlilik sınavı) Almanya dışındaki ülkelerde tıp eğitimi almış doktorlar için tıp uygulama izni almak amacıyla zorunlu bir adımdır. Bu sınav, doktorun hastalar ve meslektaşlarıyla mesleki tıbbi konularda etkili iletişim kurabilme ve gerekli belgeleri doğru şekilde düzenleyebilme yeteneğini değerlendirmeyi amaçlar. Sınav, sadece tıbbi Almanca bilginizi değil, aynı zamanda Almanya’da uygulanan prosedürler, kurallar ve standartlar hakkındaki bilginizi de ölçer. Göçmen doktorların Alman sağlık sistemine entegrasyonu için önemli bir adımdır.",
+     definition: {
+       intro: "Fachsprachenprüfung’a neden ihtiyaç duyulur?",
+       points: [
+         "Hastalarla iletişim kurmak: Hasta öyküsü almak ve tanı ile tedavi prosedürlerini anlaşılır şekilde açıklamak.",
+         "Meslektaşlarla iletişim kurmak: Vakaları sunmak ve hasta bilgilerini ekip içinde aktarmak.",
+         "Bilgi belgelerini düzenlemek: Tıbbi belgeleri açık ve standartlara uygun şekilde hazırlamak.",
+         "Tıbbi terminolojiyi anlamak: Günlük uygulamada doğru şekilde kullanmak."
+       ]
+     },
+     examStructure: {
+       title: "Fachsprachenprüfung Nasıl Gerçekleştirilir?",
+       desc: "Sınav genellikle üç ana bölümden oluşur:",
+       parts: [
+         {
+           title: "Hasta Öyküsü Toplama",
+           description:
+             "İçeriği: 20 dakika süren, hasta ile simülasyon diyaloğu.\nAmaç: Tıbbi öyküyü toplamak, ön tanı koymak ve sonraki adımları belirlemek.\nÖrnek sorular:\n• 'Sizi ne rahatsız ediyor?'\n• 'Bu belirtiler ne zamandır devam ediyor?'\n• 'Daha önce benzer şikayetleriniz oldu mu?'\nÖnemi: Bu bölüm, hastayla etkili iletişim kurma, net sorular sorma ve bilgiyi mantıklı şekilde analiz etme yeteneğinizi gösterir."
+         },
+         {
+           title: "Yazılı Bölüm",
+           description:
+             "İçeriği: Toplanan hasta öyküsüne dayalı olarak yapılandırılmış tıbbi belgeler hazırlamak.\nTipik bölümler:\n• Ana şikayetler\n• Hastalık öyküsü\n• Ön tanı\n• Sonraki muayene veya tedavi planı\nÖrnek: 45 yaşındaki bir hasta, iki haftadır devam eden sürekli baş ağrısı şikayetiyle başvurur. Baş ağrısı alın bölgesinde olup, bulantı eşlik eder."
+         },
+         {
+           title: "Sözlü Bölüm",
+           description:
+             "İçeriği: Hastanın sınav komisyonuna sunulması.\nAmaç: Sonuçları açıklamak, kararlarınızı gerekçelendirmek ve sınav görevlilerinin sorularını yanıtlamak.\nÖrnek sorular:\n• 'Hangi ek tetkikleri önerirsiniz?'\n• 'Neden bu tanıyı en olası görüyor sunuz?'"
+         }
+       ]
+     },
+     preparation: {
+       title: "Fachsprachenprüfung’a Nasıl Hazırlanılır?",
+       desc: "Aşağıdaki adımları takip etmeniz önerilir:",
+       points: [
+         "Tıbbi terminolojiyi öğrenmek: Uzmanlık alanınızda kullanılan anahtar terimlere aşina olun. 'Medizinische Fachsprache für ausländische Ärzte' gibi kaynakları kullanmanız tavsiye edilir.",
+         "Hasta öyküsü toplamayı pratik yapmak: Simülasyon hasta ile diyaloğu çalışarak doğru soruları sorma ve cevapları yapılandırma becerinizi geliştirin.",
+         "Tıbbi bilgiyi belgelemek: Mantıklı bir yapı izleyerek tıbbi raporlar yazma pratiği yapın. Çevrimiçi kurslarda bulunan örnek raporları veya şablonları kullanın.",
+         "Hazırlık kurslarına katılmak: mibeg-Institut gibi özel kurslar, dil becerilerinizi geliştirmenize ve yaygın hataları öğrenmenize yardımcı olur."
+       ]
+     },
+     requirements: {
+       title: "Aday Gereksinimleri",
+       desc: "Sınava katılmak için adayların aşağıdaki gereksinimleri karşılaması gerekir:",
+       points: [
+         "Almanca dil seviyesi: Etkili iletişim için en az B2 seviyesi gereklidir (C1 tercih edilir).",
+         "Tıp eğitimi: Adaylar, sınavın mesleki bilgileri ölçtüğü için tıp diplomasına sahip olmalıdır."
+       ]
+     },
+     faq: {
+       title: "Sıkça Sorulan Sorular",
+       questions: [
+         {
+           question: "Sınav ne kadar sürer?",
+           answer: "Ortalama olarak, 60 dakika sürer (her bölüm için 20 dakika)."
+         },
+         {
+           question: "Sınav ücreti nedir?",
+           answer: "Ücret, federal eyalete göre değişiklik gösterir, genellikle 350–500 euro arasındadır."
+         },
+         {
+           question: "Sınavı geçemezsem ne yapmalıyım?",
+           answer: "Ek hazırlıktan sonra yeniden kayıt olup sınava girebilirsiniz."
+         }
+       ]
+     },
+     conclusion:
+       "Fachsprachenprüfung, Almanya'da çalışmak isteyen doktorlar için önemli bir aşamadır. Bu sınavı başarıyla geçmek, profesyonel iletişim yeteneğinizi onaylar ve tıp kariyerine kapı açar. Kaliteli bir hazırlık başarı için anahtardır. Terminolojiyi öğrenmeye başlayın, diyaloglar yapın ve belge düzenleme becerilerinizi geliştirin. Yardıma ihtiyacınız varsa, özel kurslara katılın veya tıbbi alanda çalışan eğitmenlerden destek alın."
    },
    fr: {
-      title: "Qu'est-ce que la Fachsprachenprüfung?",
-      intro: "La Fachsprachenprüfung est une étape importante pour l'intégration des professionnels de la santé étrangers dans le système médical allemand. Cet examen exige des candidats non seulement des connaissances en matière de sujets médicaux, mais aussi la capacité de communiquer efficacement en allemand dans un contexte professionnel.",
-      definition:
-         "La Fachsprachenprüfung (examen linguistique) reflète les spécificités de la communication professionnelle dans un domaine particulier. Pour les professionnels de la santé, la Fachsprachenprüfung évalue leurs connaissances et compétences en communication sur des sujets médicaux, tels que la prise d'antécédents médicaux, la discussion des méthodes de diagnostic, des traitements et des résultats d'examen.",
-      examStructure: {
-         title: "Structure de l'examen de Fachsprachenprüfung",
-         desc: "L'examen de Fachsprachenprüfung se compose généralement de trois parties principales :",
-         parts: [
-            {
-               title: "Prise d'antécédents médicaux",
-               description:
-                  "Cette partie de l'examen implique un dialogue de 20 minutes avec un patient. L'objectif est de recueillir des antécédents médicaux complets et de déterminer l'orientation pour un diagnostic, une thérapie et un diagnostic préliminaire ultérieurs.",
-            },
-            {
-               title: "Partie écrite",
-               description:
-                  "Dans cette partie, le candidat doit créer une documentation médicale structurée basée sur les antécédents médicaux recueillis lors de la première partie de l'examen.",
-            },
-            {
-               title: "Partie orale",
-               description:
-                  "Le candidat doit présenter le patient aux examinateurs et discuter avec eux des sujets médicaux. Cela nécessite de démontrer la capacité à communiquer efficacement dans un contexte médical.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Préparation à l'examen de Fachsprachenprüfung",
-         desc: "La préparation à l'examen de Fachsprachenprüfung comprend :",
-         points: [
-            "Étudier la terminologie médicale : Les candidats doivent se familiariser avec les termes et définitions médicaux de base afin de maîtriser la langue médicale lors de l'examen.",
-            "Se familiariser avec les méthodes d'examen : Il est important de connaître les différentes méthodes d'examen et de diagnostic utilisées en pratique médicale.",
-            "Entraînement pratique à la communication en allemand : Les candidats doivent améliorer activement leurs compétences linguistiques en réalisant des exercices pratiques de communication en allemand dans un contexte médical.",
-            "De plus, les candidats peuvent suivre des cours de préparation spécialisés à l'examen ou travailler avec des tuteurs pour améliorer leurs compétences linguistiques et se préparer à tous les aspects de l'examen.",
-         ],
-      },
-      requirements: {
-         title: "Exigences pour les candidats à la Fachsprachenprüfung",
-         desc: "Pour se préparer et passer l'examen de Fachsprachenprüfung, les candidats doivent répondre aux exigences suivantes :",
-         points: [
-            "Niveau de base en allemand (minimum B2) : Les candidats doivent avoir des connaissances de base en allemand pour communiquer efficacement dans un environnement médical et comprendre les instructions et les tâches de l'examen.",
-            "Diplôme de médecine : Les candidats doivent avoir un diplôme de médecine, car l'examen vise à évaluer leurs connaissances et compétences médicales.",
-         ],
-      },
-      additionalCourses:
-         "Pour se préparer à l'examen, les candidats peuvent suivre des cours supplémentaires en allemand médical, ce qui les aidera à améliorer leurs compétences linguistiques et à se préparer aux exigences de l'examen.",
+     title: "Qu'est-ce que la Fachsprachenprüfung ?",
+     intro:
+       "La Fachsprachenprüfung (examen de compétence en langue professionnelle) est une étape obligatoire pour les médecins ayant reçu leur formation médicale en dehors de l'Allemagne afin d'obtenir l'autorisation d'exercer. L'examen vise à évaluer la capacité du médecin à communiquer efficacement sur des sujets médicaux professionnels avec les patients et les collègues, ainsi qu'à établir la documentation nécessaire de manière appropriée. Il ne teste pas seulement la connaissance de l'allemand médical, mais aussi la compréhension des procédures, des règles et des normes appliquées en Allemagne. Il est considéré comme une étape essentielle pour l'intégration des médecins étrangers dans le système de santé allemand.",
+     definition: {
+       intro: "À quoi sert la Fachsprachenprüfung ?",
+       points: [
+         "Communiquer avec les patients : recueillir l'anamnèse et expliquer clairement les procédures diagnostiques et thérapeutiques.",
+         "Communiquer avec les collègues : présenter des cas et transmettre les informations relatives aux patients au sein d'une équipe.",
+         "Documenter les informations : établir une documentation médicale de manière claire et conforme aux normes.",
+         "Comprendre la terminologie médicale : l'utiliser correctement dans la pratique quotidienne."
+       ]
+     },
+     examStructure: {
+       title: "Comment se déroule la Fachsprachenprüfung ?",
+       desc: "L'examen se compose généralement de trois parties principales :",
+       parts: [
+         {
+           title: "Recueil de l'anamnèse",
+           description:
+             "Ce que cela inclut : une simulation de dialogue avec un patient pendant 20 minutes.\nObjectif : recueillir l'anamnèse médicale, établir un diagnostic préliminaire et déterminer les actions à suivre.\nExemples de questions :\n• « Qu'est-ce qui vous amène ? »\n• « Depuis combien de temps présentez-vous ces symptômes ? »\n• « Avez-vous déjà eu des plaintes similaires ? »\nPourquoi c'est important : cette partie démontre votre capacité à établir un contact avec le patient, à formuler des questions claires et à analyser logiquement les informations."
+         },
+         {
+           title: "Partie écrite",
+           description:
+             "Ce que cela inclut : la création d'une documentation médicale structurée basée sur l'anamnèse recueillie.\nSections typiques :\n• Plaintes principales\n• Anamnèse\n• Diagnostic préliminaire\n• Plan pour des examens ou traitements supplémentaires\nExemple : Un patient de 45 ans se présente avec des plaintes de maux de tête persistants depuis deux semaines. La douleur est localisée dans la région frontale et est accompagnée de nausées."
+         },
+         {
+           title: "Partie orale",
+           description:
+             "Ce que cela inclut : la présentation du patient devant le jury d'examen.\nObjectif : expliquer les résultats, justifier vos décisions et répondre aux questions des examinateurs.\nExemples de questions du jury :\n• « Quelles autres examens recommanderiez-vous ? »\n• « Pourquoi considérez-vous ce diagnostic comme le plus probable ? »"
+         }
+       ]
+     },
+     preparation: {
+       title: "Comment se préparer à la Fachsprachenprüfung ?",
+       desc: "Il est recommandé de suivre les étapes suivantes :",
+       points: [
+         "Étudier la terminologie médicale : familiarisez-vous avec les termes clés utilisés dans votre spécialité. Il est recommandé d'utiliser des manuels tels que 'Medizinische Fachsprache für ausländische Ärzte'.",
+         "Pratiquer le recueil de l'anamnèse : répétez des dialogues avec des patients simulés pour apprendre à poser les bonnes questions et structurer vos réponses. Utilisez des scénarios, par exemple, un patient se plaignant de douleurs thoraciques ou ayant de la fièvre.",
+         "Documenter les informations médicales : entraînez-vous à rédiger des rapports médicaux en respectant une structure logique. Utilisez des exemples ou des modèles disponibles dans des cours en ligne.",
+         "Suivre des cours préparatoires : des cours spécialisés, comme ceux proposés par le mibeg-Institut, aident à améliorer vos compétences linguistiques et à vous familiariser avec les erreurs courantes."
+       ]
+     },
+     requirements: {
+       title: "Exigences pour les candidats",
+       desc: "Pour passer l'examen, les candidats doivent répondre aux critères suivants :",
+       points: [
+         "Niveau d'allemand : Il est nécessaire de maîtriser la langue à un niveau minimum B2 (le niveau C1 est souhaitable) pour assurer une communication efficace.",
+         "Formation médicale : Les candidats doivent être titulaires d'un diplôme de médecine, l'examen étant conçu pour vérifier leurs connaissances professionnelles."
+       ]
+     },
+     faq: {
+       title: "Questions fréquentes",
+       questions: [
+         {
+           question: "Combien de temps dure l'examen ?",
+           answer:
+             "En moyenne, il dure 60 minutes (20 minutes pour chaque partie)."
+         },
+         {
+           question: "Quel est le coût de l'examen ?",
+           answer:
+             "Le tarif varie selon l'état fédéral, mais se situe généralement entre 350 et 500 euros."
+         },
+         {
+           question: "Que faire en cas d'échec ?",
+           answer:
+             "Vous pouvez vous réinscrire et repasser l'examen après une préparation supplémentaire."
+         }
+       ]
+     },
+     conclusion:
+       "La Fachsprachenprüfung est une étape cruciale pour les médecins souhaitant exercer en Allemagne. Réussir cet examen confirme votre capacité à communiquer de manière professionnelle et ouvre la voie à une carrière médicale. Une préparation de qualité est la clé du succès. Commencez par étudier la terminologie, pratiquez les dialogues et améliorez vos compétences en documentation. Si vous avez besoin d'aide, n'hésitez pas à suivre des cours spécialisés ou à faire appel à des tuteurs expérimentés avec le personnel médical."
    },
    es: {
-      title: "Qué es el Fachsprachenprüfung?",
-      intro: "El Fachsprachenprüfung es un paso importante para la integración de profesionales médicos de otro país en el sistema médico alemán. Este examen requiere que los candidatos no solo tengan conocimientos sobre temas médicos, sino también que se comuniquen efectivamente en alemán en un contexto profesional.",
-      definition:
-         "El Fachsprachenprüfung (examen de idioma) refleja las especificidades de la comunicación profesional en un campo particular. Para los profesionales médicos, el Fachsprachenprüfung prueba sus conocimientos y habilidades de comunicación en temas médicos, como la toma de historias clínicas, discusión de métodos de diagnóstico, tratamientos y resultados de exámenes.",
-      examStructure: {
-         title: "Estructura del examen Fachsprachenprüfung",
-         desc: "El examen Fachsprachenprüfung generalmente consta de tres partes principales:",
-         parts: [
-            {
-               title: "Toma de historial médico",
-               description:
-                  "Esta parte del examen implica un diálogo de 20 minutos con un paciente. El objetivo es recopilar un historial médico completo y determinar la dirección para un diagnóstico, terapia y diagnóstico preliminar adicionales.",
-            },
-            {
-               title: "Parte escrita",
-               description:
-                  "En esta parte, el candidato debe crear una documentación médica estructurada basada en el historial médico recopilado durante la primera parte del examen.",
-            },
-            {
-               title: "Parte oral",
-               description:
-                  "El candidato debe presentar al paciente a los examinadores y discutir temas médicos con ellos. Esto requiere demostrar la capacidad de comunicarse efectivamente en un contexto médico.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Preparación para el examen Fachsprachenprüfung",
-         desc: "La preparación para el examen Fachsprachenprüfung incluye:",
-         points: [
-            "Estudiar terminología médica: Los candidatos deben familiarizarse con los términos médicos básicos y las definiciones para utilizar el lenguaje médico de manera segura durante el examen.",
-            "Familiarizarse con los métodos de examen: Es importante conocer los diferentes métodos de examen y diagnóstico utilizados en la práctica médica.",
-            "Entrenamiento práctico en comunicación en alemán: Los candidatos deben mejorar activamente sus habilidades lingüísticas realizando ejercicios prácticos de comunicación en alemán en un contexto médico.",
-            "Además, los candidatos pueden tomar cursos de preparación especializados para el examen o trabajar con tutores para mejorar sus habilidades lingüísticas y prepararse para todos los aspectos del examen.",
-         ],
-      },
-      requirements: {
-         title: "Requisitos para los candidatos del Fachsprachenprüfung",
-         desc: "Para prepararse y aprobar el examen Fachsprachenprüfung, los candidatos deben cumplir con los siguientes requisitos:",
-         points: [
-            "Nivel básico de alemán (mínimo B2): Los candidatos deben tener conocimientos básicos de alemán para comunicarse efectivamente en un entorno médico y comprender las instrucciones y tareas del examen.",
-            "Grado en medicina: Los candidatos deben tener un título en medicina, ya que el examen tiene como objetivo evaluar sus conocimientos y habilidades médicas.",
-         ],
-      },
-      additionalCourses:
-         "Para prepararse para el examen, los candidatos pueden tomar cursos adicionales de alemán médico, lo que les ayudará a mejorar sus habilidades lingüísticas y prepararse para los requisitos del examen.",
+     title: "¿Qué es el Fachsprachenprüfung?",
+     intro:
+       "El Fachsprachenprüfung (examen de competencia en el idioma profesional) es un paso obligatorio para los médicos que han recibido su educación médica fuera de Alemania, para obtener la licencia para ejercer la medicina. El examen tiene como objetivo evaluar la capacidad del médico para comunicarse eficazmente sobre temas médicos profesionales con pacientes y colegas, así como para documentar la información necesaria de manera adecuada. Se considera un paso esencial para la integración de los médicos migrantes en el sistema de salud alemán.",
+     definition: {
+       intro: "¿Para qué se necesita el Fachsprachenprüfung?",
+       points: [
+         "Comunicarse con los pacientes: recopilar la historia clínica y explicar los procedimientos diagnósticos y terapéuticos de manera comprensible.",
+         "Comunicarse con los colegas: presentar casos y transmitir la información del paciente dentro del equipo.",
+         "Documentar la información: elaborar documentación médica de manera clara y conforme a los estándares.",
+         "Comprender la terminología médica: utilizarla correctamente en la práctica diaria."
+       ]
+     },
+     examStructure: {
+       title: "¿Cómo se lleva a cabo el Fachsprachenprüfung?",
+       desc: "El examen generalmente consta de tres partes principales:",
+       parts: [
+         {
+           title: "Recopilación de la historia clínica",
+           description:
+             "Lo que incluye: una simulación de diálogo con un paciente durante 20 minutos.\nObjetivo: recopilar la historia médica, establecer un diagnóstico preliminar y determinar las acciones a seguir.\nPreguntas de ejemplo:\n• '¿Qué le preocupa?'\n• '¿Desde cuándo presenta estos síntomas?'\n• '¿Ha tenido molestias similares anteriormente?'\nPor qué es importante: esta sección demuestra su capacidad para establecer una conexión con el paciente, formular preguntas claras y analizar la información de manera lógica."
+         },
+         {
+           title: "Parte escrita",
+           description:
+             "Lo que incluye: la creación de una documentación médica estructurada basada en la historia clínica recopilada.\nSecciones típicas:\n• Quejas principales\n• Historia clínica\n• Diagnóstico preliminar\n• Plan para exámenes o tratamientos adicionales\nEjemplo: Un paciente de 45 años se presenta con quejas de dolor de cabeza persistente durante dos semanas. El dolor se localiza en la zona frontal y va acompañado de náuseas."
+         },
+         {
+           title: "Parte oral",
+           description:
+             "Lo que incluye: la presentación del paciente ante el jurado del examen.\nObjetivo: explicar los hallazgos, justificar sus decisiones y responder a las preguntas de los examinadores.\nPreguntas de ejemplo:\n• '¿Qué exámenes adicionales solicitaría?'\n• '¿Por qué considera que este es el diagnóstico más probable?'"
+         }
+       ]
+     },
+     preparation: {
+       title: "¿Cómo prepararse para el Fachsprachenprüfung?",
+       desc: "Se recomienda seguir los siguientes pasos:",
+       points: [
+         "Estudiar la terminología médica: familiarícese con los términos clave utilizados en su especialidad. Se recomienda utilizar libros de texto como 'Medizinische Fachsprache für ausländische Ärzte'.",
+         "Practicar la recopilación de la historia clínica: ensaye diálogos con pacientes simulados para aprender a formular correctamente las preguntas y estructurar sus respuestas. Utilice escenarios, por ejemplo, un paciente con dolor en el pecho o con fiebre.",
+         "Documentar la información médica: practique la redacción de informes médicos siguiendo una estructura lógica. Utilice ejemplos o plantillas disponibles en cursos en línea.",
+         "Asistir a cursos preparatorios: cursos especializados, como los del mibeg-Institut, ayudan a mejorar las habilidades lingüísticas y a familiarizarse con errores comunes."
+       ]
+     },
+     requirements: {
+       title: "Requisitos para los candidatos",
+       desc: "Para participar en el examen, los candidatos deben cumplir los siguientes requisitos:",
+       points: [
+         "Dominio del alemán: se requiere un nivel mínimo de B2 (se prefiere C1) para garantizar una comunicación efectiva.",
+         "Formación médica: los candidatos deben tener un título en medicina, ya que el examen evalúa sus conocimientos profesionales."
+       ]
+     },
+     faq: {
+       title: "Preguntas Frecuentes",
+       questions: [
+         {
+           question: "¿Cuánto tiempo dura el examen?",
+           answer: "En promedio, dura 60 minutos (20 minutos por cada parte)."
+         },
+         {
+           question: "¿Cuál es el costo del examen?",
+           answer: "La tarifa varía según el estado federal, pero generalmente oscila entre 350 y 500 euros."
+         },
+         {
+           question: "¿Qué hacer si no apruebo el examen?",
+           answer: "Puede volver a inscribirse y repetir el examen después de una preparación adicional."
+         }
+       ]
+     },
+     conclusion:
+       "El Fachsprachenprüfung es un paso crucial para los médicos que desean trabajar en Alemania. Aprobar el examen confirma su capacidad para comunicarse profesionalmente y abre la puerta a una carrera médica. Una buena preparación es la clave del éxito. Comience estudiando la terminología, practique diálogos y mejore sus habilidades de documentación. Si necesita ayuda, considere cursos especializados o busque tutores con experiencia en el ámbito médico."
    },
    ar: {
-      title: "ما هو اختبار فاخشبارشينبروفونج؟",
-      intro: "يعد اختبار فاخشبارشينبروفونج خطوة مهمة لدمج المتخصصين الطبيين من بلد آخر في النظام الطبي الألماني. يتطلب هذا الامتحان من المرشحين ليس فقط معرفة المواضيع الطبية، ولكن أيضًا القدرة على التواصل بفعالية باللغة الألمانية في سياق مهني.",
-      definition:
-         "يعكس اختبار فاخشبارشينبروفونج (اختبار اللغة) خصوصيات التواصل المهني في مجال معين. بالنسبة للمحترفين الطبيين، يختبر اختبار فاخشبارشينبروفونج معرفتهم ومهاراتهم في التواصل حول المواضيع الطبية، مثل جمع السجلات الطبية، ومناقشة طرق التشخيص، والعلاج، ونتائج الفحوصات.",
-      examStructure: {
-         title: "هيكل اختبار فاخشبارشينبروفونج",
-         desc: "يتكون اختبار فاخشبارشينبروفونج عادة من ثلاثة أجزاء رئيسية:",
-         parts: [
-            {
-               title: "جمع السجلات الطبية",
-               description:
-                  "تتضمن هذه الجزء من الامتحان حوارًا لمدة 20 دقيقة مع مريض. الهدف هو جمع سجل طبي كامل وتحديد الاتجاه للتشخيص والعلاج والتشخيص الأولي الإضافي.",
-            },
-            {
-               title: "الجزء الكتابي",
-               description:
-                  "في هذا الجزء، يجب على المرشح إنشاء وثائق طبية منظمة استنادًا إلى السجل الطبي المجمع خلال الجزء الأول من الامتحان.",
-            },
-            {
-               title: "الجزء الشفوي",
-               description:
-                  "يجب على المرشح تقديم المريض للفحص ومناقشة المواضيع الطبية مع الفحص. يتطلب ذلك إظهار القدرة على التواصل بفعالية في السياق الطبي.",
-            },
-         ],
-      },
-      preparation: {
-         title: "الاستعداد لاختبار فاخشبارشينبروفونج",
-         desc: "يشمل الاستعداد لاختبار فاخشبارشينبروفونج ما يلي:",
-         points: [
-            "دراسة المصطلحات الطبية: يجب على المرشحين التعرف على المصطلحات الطبية الأساسية والتعاريف لاستخدام اللغة الطبية بثقة خلال الامتحان.",
-            "التعرف على طرق الفحص: من المهم معرفة الطرق المختلفة للفحص والتشخيص المستخدمة في الممارسة الطبية.",
-            "التدريب العملي على التواصل باللغة الألمانية: يجب على المرشحين تحسين مهاراتهم اللغوية بنشاط من خلال إجراء تمارين عملية في التواصل باللغة الألمانية في سياق طبي.",
-            "بالإضافة إلى ذلك، يمكن للمرشحين أن يتخذوا دورات تحضيرية متخصصة للاختبار أو يعملوا مع معلمين لتحسين مهاراتهم اللغوية والاستعداد لجميع جوانب الامتحان.",
-         ],
-      },
-      requirements: {
-         title: "متطلبات المرشحين لاختبار فاخشبارشينبروفونج",
-         desc: "للتحضير واجتياز اختبار فاخشبارشينبروفونج، يجب أن يستوفي المرشحون الشروط التالية:",
-         points: [
-            "مستوى أساسي في اللغة الألمانية (الحد الأدنى B2): يجب أن يكون لدى المرشحين معرفة أساسية باللغة الألمانية للتواصل بفعالية في بيئة طبية وفهم التعليمات والمهام الخاصة بالامتحان.",
-            "درجة الطب: يجب أن يكون لدى المرشحين درجة في الطب، حيث يهدف الامتحان إلى تقييم معرفتهم ومهاراتهم الطبية.",
-         ],
-      },
-      additionalCourses:
-         "للتحضير للامتحان، يمكن للمرشحين حضور دورات إضافية في اللغة الطبية الألمانية، مما سيساعدهم على تحسين مهاراتهم اللغوية والاستعداد لمتطلبات الامتحان.",
-   },
-   tr: {
-      title: "Fachsprachenprüfung Nedir?",
-      intro: "Fachsprachenprüfung, tıbbi uzmanların başka bir ülkeden Alman tıp sistemine entegrasyonu için önemli bir adımdır. Bu sınav adaylardan tıbbi konuları bilmelerinin yanı sıra profesyonel bir bağlamda Almanca ile etkili iletişim kurma yeteneği de bekler.",
-      definition:
-         "Fachsprachenprüfung (dil sınavı), belirli bir alandaki mesleki iletişim özelliklerini yansıtır. Tıbbi çalışanlar için, Fachsprachenprüfung, hastalarla tıbbi konularda iletişim kurma bilgi ve becerilerini test eder; örneğin, tıbbi özgeçmiş toplama, tanı yöntemlerini tartışma, tedavi ve test sonuçlarını ele alma.",
-      examStructure: {
-         title: "Fachsprachenprüfung Sınav Yapısı",
-         desc: "Fachsprachenprüfung sınavı genellikle üç temel bölümden oluşur:",
-         parts: [
-            {
-               title: "Hasta Geçmişi Toplama",
-               description:
-                  "Bu bölüm, hastayla 20 dakikalık bir diyalog içerir. Amaç, tam bir hastalık öyküsü toplamak ve sonraki tanı, tedavi ve ön tanıyı belirlemektir.",
-            },
-            {
-               title: "Yazılı Bölüm",
-               description:
-                  "Bu bölümde adayın, sınavın ilk bölümünde toplanan hastalık öyküsüne dayanarak yapılandırılmış tıbbi belgeler oluşturması gerekir.",
-            },
-            {
-               title: "Sözlü Bölüm",
-               description:
-                  "Adayın hastayı sınav gözetmenlerine tanıtması ve tıbbi konularda onlarla iletişim kurması gerekir. Bu, tıbbi bir bağlamda etkili iletişim becerisini göstermeyi gerektirir.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Fachsprachenprüfung'a Hazırlık",
-         desc: "Fachsprachenprüfung'a hazırlık şunları içerir:",
-         points: [
-            "Tıbbi Terimlerin Öğrenilmesi: Adayların sınav sırasında tıbbi dilde güvenle iletişim kurabilmek için temel tıbbi terimleri ve tanımları öğrenmeleri gerekir.",
-            "Muayene Yöntemlerinin Tanınması: Farklı muayene ve tanı yöntemleriyle ilgili bilgi sahibi olmak önemlidir.",
-            "Almanca İletişim Becerilerinin Uygulanması: Adaylar, tıbbi bir bağlamda Almanca iletişim becerilerini geliştirmek için pratik alıştırmalar yapmalıdır.",
-            "Ayrıca, adaylar sınava özel hazırlık kurslarına katılabilir veya dil becerilerini geliştirmelerine ve sınavın tüm yönlerine hazırlanmalarına yardımcı olacak özel öğretmenlerle çalışabilirler.",
-         ],
-      },
-      requirements: {
-         title: "Fachsprachenprüfung İçin Aday Gereksinimleri",
-         desc: "Fachsprachenprüfung'a hazırlık ve sınavı geçmek için adayların şu gereksinimleri karşılamaları gerekir:",
-         points: [
-            "Almanca'da Temel Düzey (en az B2): Adayların, tıbbi ortamda etkili iletişim kurabilmeleri ve sınavın talimatlarını ve görevlerini anlayabilmeleri için Almanca'da temel bilgiye sahip olmaları gerekir.",
-            "Tıp Eğitimi: Adayların, sınavın tıbbi bilgi ve becerilerini değerlendirdiği için tıp derecesine sahip olmaları gerekir.",
-         ],
-      },
-      additionalCourses:
-         "Sınav için hazırlık için adaylar, Alman tıbbi dilinde ek kurslar alabilirler; bu da dil becerilerini geliştirmelerine ve sınavın gereksinimlerine hazırlanmalarına yardımcı olur.",
+     title: "ما هو Fachsprachenprüfung؟",
+     intro:
+       "اختبار Fachsprachenprüfung (امتحان إتقان اللغة المهنية) هو خطوة إلزامية للأطباء الذين حصلوا على تعليمهم الطبي خارج ألمانيا للحصول على رخصة ممارسة الطب. يهدف الاختبار إلى تقييم قدرة الطبيب على التواصل بفعالية حول المواضيع الطبية المهنية مع المرضى والزملاء، بالإضافة إلى إعداد الوثائق اللازمة بشكل صحيح. لا يختبر الاختبار معرفتك باللغة الألمانية الطبية فحسب، بل وفهمك للإجراءات والقواعد والمعايير المعمول بها في ألمانيا. ويُعتبر خطوة أساسية لدمج الأطباء المهاجرين في النظام الصحي الألماني.",
+     definition: {
+       intro: "ما الغرض من اختبار Fachsprachenprüfung؟",
+       points: [
+         "التواصل مع المرضى: جمع التاريخ المرضي وشرح الإجراءات التشخيصية والعلاجية بلغة مفهومة.",
+         "التواصل مع الزملاء: تقديم الحالات ونقل معلومات المريض داخل الفريق.",
+         "توثيق المعلومات: إعداد وثائق طبية بوضوح ووفقًا للمعايير.",
+         "فهم المصطلحات الطبية: استخدامها بشكل صحيح في الممارسة اليومية."
+       ]
+     },
+     examStructure: {
+       title: "كيف يتم إجراء اختبار Fachsprachenprüfung؟",
+       desc: "عادةً ما يتكون الاختبار من ثلاثة أجزاء رئيسية:",
+       parts: [
+         {
+           title: "جمع التاريخ المرضي",
+           description:
+             "ما يتضمنه: محاكاة حوار مع المريض لمدة 20 دقيقة.\nالهدف: جمع التاريخ الطبي، وتحديد التشخيص الأولي، وتحديد الإجراءات التالية.\nأمثلة على الأسئلة:\n• «ما الذي يزعجك؟»\n• «منذ متى تعاني من هذه الأعراض؟»\n• «هل عانيت من أعراض مشابهة من قبل؟»\nلماذا هذا مهم: يظهر هذا الجزء قدرتك على بناء تواصل مع المريض، صياغة أسئلة واضحة وتحليل المعلومات بشكل منطقي."
+         },
+         {
+           title: "الجزء الكتابي",
+           description:
+             "ما يتضمنه: إنشاء وثائق طبية منظمة بناءً على التاريخ المرضي المُجمع.\nالأقسام النموذجية:\n• الشكاوى الرئيسية\n• التاريخ المرضي\n• التشخيص الأولي\n• خطة للفحوصات أو العلاج الإضافي\nمثال: مريض يبلغ من العمر 45 عامًا يعاني من صداع مستمر لمدة أسبوعين. يتمركز الألم في منطقة الجبهة ويرافقه غثيان."
+         },
+         {
+           title: "الجزء الشفهي",
+           description:
+             "ما يتضمنه: تقديم المريض أمام لجنة الامتحان.\nالهدف: شرح النتائج، تبرير قراراتك والرد على أسئلة الفاحصين.\nأمثلة على الأسئلة:\n• «ما الفحوصات الإضافية التي ستوصي بها؟»\n• «لماذا تعتقد أن هذا التشخيص هو الأكثر احتمالاً؟»"
+         }
+       ]
+     },
+     preparation: {
+       title: "كيف تستعد لاختبار Fachsprachenprüfung؟",
+       desc: "يوصى باتباع الخطوات التالية:",
+       points: [
+         "دراسة المصطلحات الطبية: تعرف على المصطلحات الرئيسية المستخدمة في تخصصك. يُنصح باستخدام الكتب الدراسية مثل 'Medizinische Fachsprache für ausländische Ärzte'.",
+         "ممارسة جمع التاريخ المرضي: تدرب على حوارات مع مرضى محاكين لتتعلم كيفية طرح الأسئلة بشكل صحيح وتنظيم إجاباتك. استخدم سيناريوهات مثل مريض يعاني من ألم في الصدر أو حمى.",
+         "توثيق المعلومات الطبية: تمرن على كتابة التقارير الطبية مع اتباع بنية منطقية. استخدم أمثلة أو نماذج متوفرة في الدورات عبر الإنترنت.",
+         "حضور الدورات التحضيرية: تساعد الدورات المتخصصة، مثل برامج معهد mibeg، على تحسين مهاراتك اللغوية والتعرف على الأخطاء الشائعة."
+       ]
+     },
+     requirements: {
+       title: "متطلبات المرشحين",
+       desc: "للمشاركة في الاختبار، يجب أن تستوفي المتطلبات التالية:",
+       points: [
+         "مستوى اللغة الألمانية: يجب أن تكون على مستوى B2 على الأقل (ويُفضل C1) لضمان تواصل فعال.",
+         "التعليم الطبي: يجب أن يكون لديك شهادة طبية، حيث يهدف الاختبار إلى تقييم معرفتك المهنية."
+       ]
+     },
+     faq: {
+       title: "الأسئلة الشائعة",
+       questions: [
+         {
+           question: "كم تستغرق مدة الاختبار؟",
+           answer: "في المتوسط، تستغرق 60 دقيقة (20 دقيقة لكل جزء)."
+         },
+         {
+           question: "ما تكلفة الاختبار؟",
+           answer: "تختلف التكلفة حسب الولاية الفيدرالية، ولكنها عادة تتراوح بين 350 و500 يورو."
+         },
+         {
+           question: "ماذا أفعل إذا لم أنجح في الاختبار؟",
+           answer: "يمكنك إعادة التسجيل وأداء الاختبار مرة أخرى بعد تحضير إضافي."
+         }
+       ]
+     },
+     conclusion:
+       "يُعد اختبار Fachsprachenprüfung خطوة مهمة للأطباء الراغبين في العمل بألمانيا. إن النجاح في هذا الاختبار يؤكد قدرتك على التواصل المهني ويفتح لك أبواب مسيرة طبية مميزة. التحضير الجيد هو مفتاح النجاح. ابدأ بدراسة المصطلحات، وممارسة الحوارات، وتحسين مهارات توثيق المعلومات. إذا كنت بحاجة إلى مساعدة، فكر في الالتحاق بالدورات المتخصصة أو البحث عن مدرسين متخصصين في المجال الطبي."
    },
    pl: {
-      title: "Czym jest Fachsprachenprüfung?",
-      intro: "Fachsprachenprüfung to ważny krok w integrowaniu specjalistów medycznych z innych krajów w niemiecki system medyczny. Ten egzamin wymaga od kandydatów nie tylko znajomości tematów medycznych, ale także umiejętności skutecznego komunikowania się w języku niemieckim w kontekście zawodowym.",
-      definition:
-         "Fachsprachenprüfung (egzamin językowy) odzwierciedla specyfikę komunikacji zawodowej w określonej dziedzinie. W przypadku pracowników medycznych Fachsprachenprüfung sprawdza ich wiedzę i umiejętności komunikacji na tematy medyczne, takie jak zbieranie wywiadu, omawianie metod diagnostycznych, leczenia i wyników badań.",
-      examStructure: {
-         title: "Struktura egzaminu Fachsprachenprüfung",
-         desc: "Podczas egzaminu Fachsprachenprüfung zazwyczaj przeprowadza się trzy główne części:",
-         parts: [
-            {
-               title: "Zbieranie wywiadu",
-               description:
-                  "Ta część egzaminu obejmuje dialog trwający 20 minut z pacjentem. Celem jest zebranie pełnego wywiadu i określenie kierunku dalszej diagnostyki, terapii i wstępnego rozpoznania.",
-            },
-            {
-               title: "Część pisemna",
-               description:
-                  "W tej części kandydat musi opracować uporządkowaną dokumentację medyczną na podstawie zebranego wywiadu w pierwszej części egzaminu.",
-            },
-            {
-               title: "Część ustna",
-               description:
-                  "Kandydat musi przedstawić pacjenta egzaminatorom i rozmawiać z nimi na tematy medyczne. Wymaga to demonstracji umiejętności skutecznego komunikowania się w kontekście medycznym.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Przygotowanie do egzaminu Fachsprachenprüfung",
-         desc: "Przygotowanie do egzaminu Fachsprachenprüfung obejmuje:",
-         points: [
-            "Uczenie się terminologii medycznej: Kandydaci powinni zapoznać się z podstawowymi terminami medycznymi i definicjami, aby pewnie posługiwać się językiem medycznym podczas egzaminu.",
-            "Zapoznanie się z metodami badań: Ważne jest zapoznanie się z różnymi metodami badań i diagnostyki, które będą wykorzystywane w praktyce medycznej.",
-            "Ćwiczenie praktyczne komunikacji w języku niemieckim: Kandydaci powinni aktywnie doskonalić swoje umiejętności językowe, wykonując praktyczne ćwiczenia komunikacyjne w języku niemieckim w kontekście medycznym.",
-            "Ponadto kandydaci mogą uczęszczać na specjalistyczne kursy przygotowujące do egzaminu lub pracować z korepetytorami, którzy pomogą im poprawić umiejętności językowe i przygotować się do wszystkich aspektów egzaminu.",
-         ],
-      },
-      requirements: {
-         title: "Wymagania dla kandydatów na egzamin Fachsprachenprüfung",
-         desc: "Aby przygotować się i zdać egzamin Fachsprachenprüfung, kandydaci muszą spełnić następujące wymagania:",
-         points: [
-            "Podstawowy poziom języka niemieckiego (minimum B2): Kandydaci muszą mieć podstawową znajomość języka niemieckiego, aby skutecznie komunikować się w środowisku medycznym i rozumieć instrukcje i zadania egzaminu.",
-            "Wykształcenie medyczne: Kandydaci muszą mieć wykształcenie medyczne, ponieważ egzamin ma na celu sprawdzenie ich wiedzy i umiejętności medycznych.",
-         ],
-      },
-      additionalCourses:
-         "Dla przygotowania do egzaminu kandydaci mogą uczęszczać na dodatkowe kursy z języka niemieckiego medycznego, które pomogą poprawić ich umiejętności językowe i przygotować się do wymagań egzaminu.",
-   },
-   ru: {
-      title: "Что такое Fachsprachenprüfung?",
-      intro: "Fachsprachenprüfung - это важный этап интеграции медицинских специалистов из других стран в немецкую медицинскую систему. Этот экзамен требует от кандидатов не только знания медицинских тем, но и умения эффективно общаться на немецком языке в профессиональном контексте.",
-      definition:
-         "Fachsprachenprüfung (языковой экзамен) отражает особенности профессионального общения в конкретной области. Для медицинских работников Fachsprachenprüfung проверяет их знания и навыки общения по медицинским темам, таким как сбор анамнеза, обсуждение методов диагностики, лечения и результатов обследований.",
-      examStructure: {
-         title: "Структура экзамена Fachsprachenprüfung",
-         desc: "Во время экзамена Fachsprachenprüfung обычно проводятся три основные части:",
-         parts: [
-            {
-               title: "Сбор анамнеза",
-               description:
-                  "Эта часть экзамена включает диалог продолжительностью 20 минут с пациентом. Цель - собрать полный анамнез и определить направление дальнейшей диагностики, терапии и предварительного диагноза.",
-            },
-            {
-               title: "Письменная часть",
-               description:
-                  "В этой части кандидат должен составить структурированную медицинскую документацию на основе собранного анамнеза в первой части экзамена.",
-            },
-            {
-               title: "Устная часть",
-               description:
-                  "Кандидат должен представить пациента экзаменаторам и общаться с ними по медицинским темам. Это требует демонстрации умения эффективного общения в медицинском контексте.",
-            },
-         ],
-      },
-      preparation: {
-         title: "Подготовка к экзамену Fachsprachenprüfung",
-         desc: "Подготовка к экзамену Fachsprachenprüfung включает в себя:",
-         points: [
-            "Изучение медицинской терминологии: Кандидаты должны ознакомиться с основными медицинскими терминами и определениями, чтобы уверенно владеть медицинским языком во время экзамена.",
-            "Ознакомление с методами обследования: Важно ознакомиться с различными методами обследования и диагностики, которые будут использоваться в медицинской практике.",
-            "Практическая тренировка общения на немецком языке: Кандидатам следует активно совершенствовать свои языковые навыки, проводя практические упражнения по общению на немецком языке в медицинском контексте.",
-            "Кроме того, кандидаты могут посещать специализированные курсы подготовки к экзамену или работать с репетиторами, которые помогут им улучшить языковые навыки и подготовиться ко всем аспектам экзамена.",
-         ],
-      },
-      requirements: {
-         title: "Требования к кандидатам для сдачи экзамена Fachsprachenprüfung",
-         desc: "Для подготовки и сдачи экзамена Fachsprachenprüfung кандидаты должны соответствовать следующим требованиям:",
-         points: [
-            "Базовый уровень немецкого языка (минимум B2): Кандидаты должны иметь базовые знания немецкого языка, чтобы эффективно общаться в медицинской среде и понимать инструкции и задания экзамена.",
-            "Высшее медицинское образование: Кандидаты должны иметь высшее медицинское образование, поскольку экзамен направлен на проверку их медицинских знаний и навыков.",
-         ],
-      },
-      additionalCourses:
-         "Для подготовки к экзамену кандидаты могут посещать дополнительные курсы по немецкому языку в медицине, что поможет им улучшить языковые навыки и подготовиться к требованиям экзамена.",
-   },
-};
+     title: "Czym jest Fachsprachenprüfung?",
+     intro:
+       "Fachsprachenprüfung (egzamin z kompetencji językowych w zakresie zawodowym) to obowiązkowy krok dla lekarzy, którzy uzyskali wykształcenie medyczne poza Niemcami, aby otrzymać pozwolenie na wykonywanie zawodu. Egzamin ten ma na celu ocenę zdolności lekarza do efektywnej komunikacji na tematy medyczne z pacjentami i kolegami oraz poprawnego sporządzenia niezbędnej dokumentacji. Sprawdza on nie tylko znajomość medycznego języka niemieckiego, ale także zrozumienie procedur, zasad i standardów obowiązujących w Niemczech.",
+     definition: {
+       intro: "Do czego służy Fachsprachenprüfung?",
+       points: [
+         "Komunikować się z pacjentami: zbierać wywiad medyczny i w przystępny sposób wyjaśniać procedury diagnostyczne oraz terapeutyczne.",
+         "Komunikować się z kolegami: przedstawiać przypadki i przekazywać informacje o pacjencie w zespole.",
+         "Dokumentować informacje: sporządzać dokumentację medyczną w sposób jasny i zgodny ze standardami.",
+         "Rozumieć terminologię medyczną: poprawnie ją stosować w codziennej praktyce."
+       ]
+     },
+     examStructure: {
+       title: "Jak przebiega Fachsprachenprüfung?",
+       desc: "Egzamin zazwyczaj składa się z trzech głównych części:",
+       parts: [
+         {
+           title: "Zbieranie wywiadu",
+           description:
+             "Co to obejmuje: symulację dialogu z pacjentem trwającego 20 minut.\nCel: zebranie historii medycznej, ustalenie wstępnej diagnozy oraz określenie dalszych działań.\nPrzykładowe pytania:\n• „Co Pana/Panią niepokoi?”\n• „Od jak dawna występują te objawy?”\n• „Czy miał(a) Pan/Pani podobne dolegliwości wcześniej?”\nDlaczego to jest ważne: ta część pokazuje Twoją zdolność do nawiązania kontaktu z pacjentem, zadawania jasnych pytań oraz logicznej analizy informacji."
+         },
+         {
+           title: "Część pisemna",
+           description:
+             "Co to obejmuje: tworzenie uporządkowanej dokumentacji medycznej na podstawie zebranego wywiadu.\nTypowe sekcje:\n• Główne skargi\n• Wywiad medyczny\n• Wstępna diagnoza\n• Plan dalszych badań lub leczenia\nPrzykład: Pacjent, 45 lat, zgłasza się z dolegliwościami przewlekłego bólu głowy trwającego dwa tygodnie. Ból zlokalizowany jest w okolicy czoła i towarzyszy mu nudności."
+         },
+         {
+           title: "Część ustna",
+           description:
+             "Co to obejmuje: przedstawienie pacjenta komisji egzaminacyjnej.\nCel: wyjaśnienie wyników, uzasadnienie swoich decyzji oraz odpowiedź na pytania egzaminatorów.\nPrzykładowe pytania:\n• „Jakie dodatkowe badania by Pan/Pani zalecił(a)?”\n• „Dlaczego uważa Pan/Pani, że ta diagnoza jest najbardziej prawdopodobna?”"
+         }
+       ]
+     },
+     preparation: {
+       title: "Jak przygotować się do Fachsprachenprüfung?",
+       desc: "Zaleca się przestrzeganie następujących kroków:",
+       points: [
+         "Nauka terminologii medycznej: zapoznaj się z kluczowymi terminami używanymi w Twojej specjalizacji. Zaleca się korzystanie z podręczników, takich jak 'Medizinische Fachsprache für ausländische Ärzte'.",
+         "Ćwiczenie zbierania wywiadu: trenuj dialogi z symulowanymi pacjentami, aby nauczyć się zadawać odpowiednie pytania i strukturyzować odpowiedzi. Wykorzystaj scenariusze, np. pacjenta z bólem w klatce piersiowej lub z gorączką.",
+         "Dokumentowanie informacji medycznych: ćwicz pisanie raportów medycznych, zachowując logiczną strukturę. Korzystaj z przykładowych raportów lub wzorów dostępnych w kursach online.",
+         "Uczestnictwo w kursach przygotowawczych: specjalistyczne kursy, takie jak oferty mibeg-Institut, pomagają poprawić umiejętności językowe i zapoznać się z typowymi błędami."
+       ]
+     },
+     requirements: {
+       title: "Wymagania dla kandydatów",
+       desc: "Aby przystąpić do egzaminu, kandydaci muszą spełnić następujące wymagania:",
+       points: [
+         "Znajomość języka niemieckiego: wymagana jest znajomość na poziomie co najmniej B2 (preferowany poziom C1), aby zapewnić efektywną komunikację.",
+         "Wykształcenie medyczne: kandydaci muszą posiadać dyplom lekarza, ponieważ egzamin sprawdza ich wiedzę zawodową."
+       ]
+     },
+     faq: {
+       title: "Często zadawane pytania",
+       questions: [
+         {
+           question: "Jak długo trwa egzamin?",
+           answer: "Średnio trwa 60 minut (20 minut na każdą część)."
+         },
+         {
+           question: "Ile kosztuje egzamin?",
+           answer:
+             "Opłata różni się w zależności od landu, ale zazwyczaj wynosi od 350 do 500 euro."
+         },
+         {
+           question: "Co zrobić, jeśli nie zdałem egzaminu?",
+           answer:
+             "Można ponownie zarejestrować się i przystąpić do egzaminu po dodatkowym przygotowaniu."
+         }
+       ]
+     },
+     conclusion:
+       "Fachsprachenprüfung to kluczowy etap dla lekarzy pragnących pracować w Niemczech. Pomyślne zdanie egzaminu potwierdza Twoją zdolność do profesjonalnej komunikacji i otwiera drzwi do kariery medycznej. Solidne przygotowanie to klucz do sukcesu. Zacznij od nauki terminologii, ćwicz dialogi oraz doskonal umiejętności dokumentowania informacji. Jeśli potrzebujesz pomocy, rozważ specjalistyczne kursy lub poszukaj korepetytorów pracujących z personelem medycznym."
+   }
+ };
