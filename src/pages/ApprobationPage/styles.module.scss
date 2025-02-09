@@ -80,3 +80,31 @@
   font-size: 0.4rem;     // Зменшено приблизно вдвічі від початкових 0.8rem (можна скоригувати, якщо потрібно)
   font-weight: bold;
 }
+.tutorialButton {
+  position: absolute;
+  top: 50px;
+  right: -9px; /* Відступ від правого краю */
+  width: 45px;
+  height: 45px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.tutorialButton svg {
+  width: 26px;
+  height: 26px;
+  stroke: #ededed;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: transparent;
+}
