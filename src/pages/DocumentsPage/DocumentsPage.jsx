@@ -34,10 +34,12 @@ import ResponsiveTable from "../../components/Table/ResponsiveTable";
 import useIsMobile from "../../hooks/useIsMobile";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import Modal from "react-modal"; // Додано
-import PDFTable from "../../components/Table/PDFTable"; // Імпорт нового компонента
+import Modal from "react-modal"; // Для PDF модального вікна залишаємо
+import PDFTable from "../../components/Table/PDFTable"; // Імпорт нового компонента PDFTable
+// Імпортуємо оновлений AuthModal
+import AuthModal from "../../pages/AuthPage/AuthModal";
 
-// Ініціалізуємо модальне вікно
+// Ініціалізуємо модальне вікно (для тих компонентів, де використовується react-modal, наприклад PDFTable)
 Modal.setAppElement("#root");
 
 const ProgressBarWithTooltip = ({ progress, getMessage }) => {
@@ -96,7 +98,7 @@ const DocumentsPage = () => {
     user,
   } = useGetGlobalInfo();
 
-  const navigate = useNavigate(); // Додано useNavigate
+  const navigate = useNavigate(); // Використовуємо useNavigate
 
   const combinedRef = useRef();
   const mainTableRef = useRef(); // Реф для першої таблиці
@@ -524,7 +526,6 @@ const DocumentsPage = () => {
                   <>
                     {/* Основні документи + Включені опціональні документи */}
                     <ResponsiveTable
-                    
                       columns={columnsFirst}
                       data={[
                         ...(category === "Non-EU"
@@ -565,7 +566,6 @@ const DocumentsPage = () => {
                         handleCheckboxChange={handleCheckboxChangeWrapper}
                         customClass={styles.secondTable}
                         isMobile={isMobile} // Передаємо isMobile
-                        // Встановлюємо заголовок, якщо потрібно
                         data-tutorial="secondTable" // Додаємо атрибут туторіалу
                       />
                     )}
@@ -601,8 +601,7 @@ const DocumentsPage = () => {
                       </div>
                     )}
                   </>
-                ) : // Перевірка, чи користувач авторизований, для відображення відповідного повідомлення
-                !user ? (
+                ) : !user ? (
                   <>
                     {/* Проста таблиця для неавторизованих користувачів */}
                     <ResponsiveTable
@@ -650,52 +649,20 @@ const DocumentsPage = () => {
                 </button>
                 {/* Додати кнопку друку */}
                 <button
-  className={styles.printButton}
-  onClick={handleOpenPDFModal}
-  title="Друкувати PDF"
-  data-tutorial="printButton"
->
-  <FaPrint />
-</button>
+                  className={styles.printButton}
+                  onClick={handleOpenPDFModal}
+                  title="Друкувати PDF"
+                  data-tutorial="printButton"
+                >
+                  <FaPrint />
+                </button>
               </>
             )}
           </div>
         </div>
 
-        {/* Модальне вікно для авторизації */}
-        <Modal
-          isOpen={showAuthModal}
-          onRequestClose={handleCloseAuthModal}
-          contentLabel="Authentifizierung erforderlich"
-          className={styles.modal}
-          overlayClassName={styles.modalOverlay}
-          data-tutorial="authModal" // Додаємо атрибут туторіалу
-        >
-          {/* Хрестик для закриття модального вікна */}
-          <button
-            className={styles.modalCloseButton}
-            onClick={handleCloseAuthModal}
-            aria-label="Close modal"
-            data-tutorial="authModalCloseButton" // Додаємо атрибут туторіалу
-          >
-            <AiOutlineClose />
-          </button>
-          <h2 data-tutorial="authModalTitle">Authentifizierung erforderlich</h2>
-          <p data-tutorial="authModalContent">
-            Bitte melden Sie sich an oder registrieren Sie sich, um mit den
-            Dokumenten zu interagieren.
-          </p>
-          <button
-            className={styles.authorizeButton}
-            onClick={() => {
-              handleCloseAuthModal();
-              navigate("/auth"); // Використання navigate для перенаправлення
-            }}
-            data-tutorial="authModalAuthorizeButton" // Додаємо атрибут туторіалу
-          >
-            Anmelden
-          </button>
-        </Modal>
+        {/* Заміна вбудованого модального вікна авторизації на компонент AuthModal */}
+        <AuthModal isOpen={showAuthModal} onClose={handleCloseAuthModal} />
 
         {/* Модальне вікно для генерації PDF */}
         {isPDFModalOpen && (
@@ -720,7 +687,6 @@ const DocumentsPage = () => {
   );
 };
 
-// Додавання PropTypes для валідації пропсів
 DocumentsPage.propTypes = {
   // Якщо DocumentsPage має пропси, додайте їх тут
 };
