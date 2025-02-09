@@ -210,10 +210,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title:
-            "Create phrase templates for explaining procedures to patients",
+          title: "Create phrase templates for explaining procedures to patients",
         },
-        { id: "4.8", title: "Take mock exams or consult with an instructor" },
+        {
+          id: "4.8",
+          title: "Take mock exams or consult with an instructor",
+        },
+        {
+          id: "4.9",
+          title: "Register for FSP",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Congratulations! You have completed the 'Language Fighter' stage. One more step towards success!",
@@ -574,8 +581,7 @@ export const APPROBATION_STAGES_NON_EU = {
       tasks: [
         {
           id: "4.1",
-          title:
-            "Lernen Sie medizinische Terminologie mithilfe von Wörterbüchern und Apps",
+          title: "Lernen Sie medizinische Terminologie mithilfe von Wörterbüchern und Apps",
           link: "/all-medical-terminology",
         },
         {
@@ -585,8 +591,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.3",
-          title:
-            "Üben Sie medizinische Fälle, die für Ihre Region relevant sind",
+          title: "Üben Sie medizinische Fälle, die für Ihre Region relevant sind",
           link: "/cases",
         },
         {
@@ -596,8 +601,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.7",
-          title:
-            "Üben oder wiederholen Sie einen grundlegenden Medikamentensatz in deutscher Sprache",
+          title: "Üben oder wiederholen Sie einen grundlegenden Medikamentensatz in deutscher Sprache",
         },
         {
           id: "4.4",
@@ -606,14 +610,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title:
-            "Erstellen Sie Satzvorlagen, um Patienten Verfahren zu erklären",
+          title: "Erstellen Sie Satzvorlagen, um Patienten Verfahren zu erklären",
         },
         {
           id: "4.8",
-          title:
-            "Nehmen Sie an Probeprüfungen oder Konsultationen mit einem Dozenten teil",
+          title: "Nehmen Sie an Probeprüfungen oder Konsultationen mit einem Dozenten teil",
         },
+        {
+          id: "4.9",
+          title: "Melden Sie sich für die Fachsprachprüfung an",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Herzlichen Glückwunsch! Sie haben die Stufe 'Sprachkämpfer' abgeschlossen. Noch ein Schritt zum Erfolg!",
@@ -994,8 +1001,7 @@ export const APPROBATION_STAGES_NON_EU = {
       tasks: [
         {
           id: "4.1",
-          title:
-            "Вивчити медичну термінологію за допомогою словників і додатків",
+          title: "Вивчати медичну термінологію за допомогою словників та додатків",
           link: "/all-medical-terminology",
         },
         {
@@ -1005,7 +1011,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.3",
-          title: "Практикувати медичні випадки відповідно до вашої землі",
+          title: "Практикувати медичні випадки, актуальні для вашого регіону",
           link: "/cases",
         },
         {
@@ -1015,8 +1021,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.7",
-          title:
-            "Практикувати або повторити базовий набір медикаментів на німецькій мові",
+          title: "Практикувати або повторити базовий набір медикаментів німецькою",
         },
         {
           id: "4.4",
@@ -1025,13 +1030,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title: "Скласти шаблони фраз для пояснення процедур пацієнтам",
+          title: "Створити шаблони фраз для пояснення процедур пацієнтам",
         },
-
         {
           id: "4.8",
-          title: "Проходити пробні іспити або консультації з викладачем",
+          title: "Пройти пробні іспити або консультації з викладачем",
         },
+        {
+          id: "4.9",
+          title: "Зареєструватися на FSP",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Вітаємо! Ви завершили етап 'Борець за мову'. Ще один крок до успіху!",
@@ -1388,8 +1397,7 @@ export const APPROBATION_STAGES_NON_EU = {
       tasks: [
         {
           id: "4.1",
-          title:
-            "Изучить медицинскую терминологию с помощью словарей и приложений",
+          title: "Изучать медицинскую терминологию с помощью словарей и приложений",
           link: "/all-medical-terminology",
         },
         {
@@ -1399,8 +1407,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.3",
-          title:
-            "Практиковать медицинские случаи, актуальные для вашего региона",
+          title: "Практиковать медицинские случаи, актуальные для вашего региона",
           link: "/cases",
         },
         {
@@ -1410,8 +1417,7 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.7",
-          title:
-            "Практиковать или повторять базовый набор медикаментов на немецком языке",
+          title: "Практиковать или повторять базовый набор медикаментов на немецком",
         },
         {
           id: "4.4",
@@ -1420,12 +1426,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title: "Составить шаблоны фраз для объяснения процедур пациентам",
+          title: "Создавать шаблоны фраз для объяснения процедур пациентам",
         },
         {
           id: "4.8",
-          title: "Проходить пробные экзамены или консультации с преподавателем",
+          title: "Проходить пробные тесты или консультироваться с инструктором",
         },
+        {
+          id: "4.9",
+          title: "Зарегистрироваться на FSP",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Поздравляем! Вы завершили этап 'Боец за язык'. Еще один шаг к успеху!",
@@ -1766,8 +1777,7 @@ export const APPROBATION_STAGES_NON_EU = {
       tasks: [
         {
           id: "4.1",
-          title:
-            "Sözlükler ve uygulamalar kullanarak tıbbi terminoloji öğrenin",
+          title: "Sözlükler ve uygulamalar kullanarak tıbbi terminoloji öğrenin",
           link: "/all-medical-terminology",
         },
         {
@@ -1796,13 +1806,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title:
-            "Hastalara prosedürleri açıklamak için kalıp ifadeler oluşturun",
+          title: "Hastalara prosedürleri açıklamak için kalıp ifadeler oluşturun",
         },
         {
           id: "4.8",
           title: "Deneme sınavlarına girin veya bir eğitmene danışın",
         },
+        {
+          id: "4.9",
+          title: "FSP'ye kaydolun",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Tebrikler! 'Dil Savaşçısı' aşamasını tamamladınız. Başarıya bir adım daha yaklaştınız!",
@@ -2180,8 +2194,19 @@ export const APPROBATION_STAGES_NON_EU = {
           title: "ممارسة الاستشارات الطبية مع شريك",
           link: "/simulation-partner",
         },
-        { id: "4.5", title: "إعداد قوالب عبارات لشرح الإجراءات للمرضى" },
-        { id: "4.8", title: "اجتياز اختبارات تجريبية أو التشاور مع مدرس" },
+        {
+          id: "4.5",
+          title: "إعداد قوالب عبارات لشرح الإجراءات للمرضى",
+        },
+        {
+          id: "4.8",
+          title: "اجتياز اختبارات تجريبية أو التشاور مع مدرس",
+        },
+        {
+          id: "4.9",
+          title: "التسجيل لامتحان FSP",
+          link: "/fsp-registration",
+        },
       ],
       congratsMessage:
         "تهانينا! لقد أكملت مرحلة 'مقاتل اللغة'. خطوة أخرى نحو النجاح!",
@@ -2507,8 +2532,7 @@ export const APPROBATION_STAGES_NON_EU = {
       tasks: [
         {
           id: "4.1",
-          title:
-            "Naucz się terminologii medycznej przy pomocy słowników i aplikacji",
+          title: "Naucz się terminologii medycznej przy pomocy słowników i aplikacji",
           link: "/all-medical-terminology",
         },
         {
@@ -2537,13 +2561,17 @@ export const APPROBATION_STAGES_NON_EU = {
         },
         {
           id: "4.5",
-          title: "Przygotuj szablony fraz do wyjaśniania procedur pacjentom",
+          title: "Twórz szablony fraz do wyjaśniania procedur pacjentom",
         },
         {
           id: "4.8",
-          title:
-            "Przystąp do próbnych egzaminów lub konsultacji z instruktorem",
+          title: "Przystąp do próbnych egzaminów lub skonsultuj się z instruktorem",
         },
+        {
+          id: "4.9",
+          title: "Zarejestruj się na FSP",
+          link: "/fsp-registration"
+        }
       ],
       congratsMessage:
         "Gratulacje! Ukończyłeś etap 'Wojownik języka'. Jeszcze jeden krok do sukcesu!",
@@ -2905,52 +2933,53 @@ export const APPROBATION_STAGES_NON_EU = {
       id: 4,
       title: "Luchador del idioma",
       description:
-        "Esta es una persona que se está preparando para el FSP, aprendiendo terminología médica, practicando consultas médicas y preparándose para el examen.",
+        "Esta es una persona que se está preparando para el FSP estudiando terminología médica, practicando consultas médicas y preparándose para el examen.",
       tasks: [
         {
           id: "4.1",
-          title:
-            "Estudiar la terminología médica utilizando diccionarios y aplicaciones",
+          title: "Estudie la terminología médica utilizando diccionarios y aplicaciones",
           link: "/all-medical-terminology",
         },
         {
           id: "4.2",
-          title: "Aprender todas las abreviaturas médicas",
+          title: "Aprenda todas las abreviaturas médicas",
           link: "/all-abbreviations",
         },
         {
           id: "4.3",
-          title: "Practicar casos médicos relevantes para tu región",
+          title: "Practique casos médicos relevantes para su región",
           link: "/cases",
         },
         {
           id: "4.6",
-          title: "Practicar explicar los exámenes médicos",
+          title: "Practique explicar exámenes médicos",
           link: "/exam-explanations",
         },
         {
           id: "4.7",
-          title:
-            "Practicar o repasar un conjunto básico de medicamentos en alemán",
+          title: "Revise un conjunto básico de medicamentos en alemán",
         },
         {
           id: "4.4",
-          title: "Practicar consultas médicas con un compañero",
+          title: "Practique consultas médicas con un compañero",
           link: "/simulation-partner",
         },
         {
           id: "4.5",
-          title:
-            "Crear plantillas de frases para explicar procedimientos a los pacientes",
+          title: "Cree plantillas de frases para explicar procedimientos a los pacientes",
         },
         {
           id: "4.8",
-          title: "Realizar exámenes simulados o consultar con un instructor",
-          link: "/exam-explanations",
+          title: "Realice exámenes simulados o consulte a un instructor",
+        },
+        {
+          id: "4.9",
+          title: "Regístrese para el FSP",
+          link: "/fsp-registration",
         },
       ],
       congratsMessage:
-        "¡Felicidades! Has completado la etapa 'Luchador del idioma'. ¡Un paso más cerca del éxito!",
+        "¡Felicidades! Has completado la etapa 'Luchador del idioma'. ¡Un paso más hacia el éxito!",
     },
     {
       id: 5,
@@ -3344,54 +3373,55 @@ export const APPROBATION_STAGES_NON_EU = {
     },
     {
       id: 4,
-      title: "Combattant de la langue",
+      title: "Guerrier de la langue",
       description:
-        "C'est une personne qui se prépare pour le FSP, apprend la terminologie médicale, pratique des consultations médicales et se prépare à l'examen.",
+        "C'est une personne qui se prépare au FSP en étudiant la terminologie médicale, en pratiquant des consultations médicales et en se préparant à l'examen.",
       tasks: [
         {
           id: "4.1",
-          title:
-            "Étudier la terminologie médicale en utilisant des dictionnaires et des applications",
+          title: "Étudiez la terminologie médicale à l'aide de dictionnaires et d'applications",
           link: "/all-medical-terminology",
         },
         {
           id: "4.2",
-          title: "Apprendre toutes les abréviations médicales",
+          title: "Apprenez toutes les abréviations médicales",
           link: "/all-abbreviations",
         },
         {
           id: "4.3",
-          title: "Pratiquer des cas médicaux pertinents pour votre région",
+          title: "Pratiquez des cas médicaux pertinents pour votre région",
           link: "/cases",
         },
         {
           id: "4.6",
-          title: "Pratiquer l'explication des examens médicaux",
+          title: "Entraînez-vous à expliquer des examens médicaux",
           link: "/exam-explanations",
         },
         {
           id: "4.7",
-          title:
-            "Pratiquer ou revoir un ensemble de médicaments de base en allemand",
+          title: "Révisez un ensemble de médicaments de base en allemand",
         },
         {
           id: "4.4",
-          title: "Pratiquer des consultations médicales avec un partenaire",
+          title: "Pratiquez des consultations médicales avec un partenaire",
           link: "/simulation-partner",
         },
         {
           id: "4.5",
-          title:
-            "Créer des modèles de phrases pour expliquer les procédures aux patients",
+          title: "Créez des modèles de phrases pour expliquer des procédures aux patients",
         },
         {
           id: "4.8",
-          title: "Passer des examens blancs ou consulter un instructeur",
-          link: "/exam-explanations",
+          title: "Passez des examens blancs ou consultez un instructeur",
+        },
+        {
+          id: "4.9",
+          title: "Inscrivez-vous au FSP",
+          link: "/fsp-registration",
         },
       ],
       congratsMessage:
-        "Félicitations ! Vous avez terminé l'étape 'Combattant de la langue'. Un pas de plus vers le succès !",
+        "Félicitations ! Vous avez terminé l'étape 'Guerrier de la langue'. Un pas de plus vers la réussite !",
     },
     {
       id: 5,

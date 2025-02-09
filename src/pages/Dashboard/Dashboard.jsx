@@ -14,22 +14,25 @@ import { DataSourceContext } from "../../contexts/DataSourceContext";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
 
+// Тут імпортуємо тільки StageTasksWidget – без прямого імпорту StageTasks!
+import StageTasksWidget from "../../components/StageTasksWidget.jsx";
+
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [progress, setProgress] = useState(0);
   const [userData, setUserData] = useState(null);
+  const [activeStage, setActiveStage] = useState(null);
   const { fetchFirebaseCases } = useContext(DataSourceContext);
 
   useEffect(() => {
     const fetchProgress = async () => {
       if (!user) return;
-
       try {
         const docRef = doc(db, "users", user.uid, "data", "documents");
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-          const userData = docSnap.data();
-          setProgress(userData.progress || 0);
+          const data = docSnap.data();
+          setProgress(data.progress || 0);
         }
       } catch (error) {
         console.error("Помилка завантаження прогресу:", error);
@@ -39,7 +42,6 @@ const Dashboard = () => {
 
     const fetchUserData = async () => {
       if (!user) return;
-
       try {
         const docRef = doc(db, "users", user.uid, "userData", "data");
         const docSnap = await getDoc(docRef);
@@ -54,8 +56,26 @@ const Dashboard = () => {
       }
     };
 
+    const fetchActiveStage = async () => {
+      if (!user) return;
+      try {
+        // Активний етап зберігається в головному документі користувача
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          if (data.activeStage) {
+            setActiveStage(data.activeStage);
+          }
+        }
+      } catch (error) {
+        console.error("Помилка при зчитуванні activeStage:", error);
+      }
+    };
+
     fetchProgress();
     fetchUserData();
+    fetchActiveStage();
   }, [user]);
 
   const handleSignOut = async () => {
@@ -97,6 +117,18 @@ const Dashboard = () => {
 
             {/* Saved Cases Widget */}
             <SavedCasesWidget />
+
+            {/* Віджет із завданнями активного етапу */}
+            {activeStage && (
+              <div className={styles.stageTasksWidget}>
+                <StageTasksWidget
+                  selectedStageId={activeStage}
+                  user={user}
+                  language="de" // або змініть за потреби
+                  activeStageTitle={`Активний етап: ${activeStage}`}
+                />
+              </div>
+            )}
           </div>
 
           {/* Додатковий контент */}
@@ -108,10 +140,7 @@ const Dashboard = () => {
 
           {/* Кнопка виходу */}
           <div className={styles.bottomControls}>
-            <button
-              onClick={handleSignOut}
-              className={styles.signOutButton}
-            >
+            <button onClick={handleSignOut} className={styles.signOutButton}>
               Вийти з профілю
             </button>
           </div>

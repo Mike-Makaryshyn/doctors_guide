@@ -39,12 +39,12 @@ const StageMenu = ({
   isRegistration,
   stagesProgress,
   activeStage,
-  debugCategory,
 }) => {
   const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
-  const effectiveCategory = debugCategory || globalCategory;
-  const normalizedCategory = effectiveCategory ? effectiveCategory.trim().toUpperCase() : "";
-  
+  // Отримуємо категорію з Firebase; за замовчуванням "Non-EU", якщо не завантажено
+  const effectiveCategory = globalCategory || "Non-EU";
+  const normalizedCategory = effectiveCategory.trim().toUpperCase();
+
   const stagesWrapperRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const [visibleIndex, setVisibleIndex] = useState(0);
@@ -125,7 +125,6 @@ const StageMenu = ({
     preventDefaultTouchmoveEvent: true,
   });
 
-  // Знаходимо активну стадію для відображення її назви (якщо activeStage не заданий, використовується перший)
   const activeStageObj = stages.find((s) => s.id === activeStage) || stages[0] || {};
 
   return (
@@ -176,14 +175,12 @@ const StageMenu = ({
                     className={styles.stageImage}
                   />
                 </div>
-                {/* На десктопі назва відображається над кожною стадією */}
                 <div className={styles.stageTitle}>{stage.title}</div>
               </div>
             </Tippy>
           ))}
         </div>
       </div>
-      {/* На мобільних пристроях виводимо один блок з назвою активної стадії */}
       {isMobile && (
         <div className={styles.activeStageTitle}>
           {activeStageObj.title}
@@ -199,14 +196,12 @@ StageMenu.propTypes = {
   isRegistration: PropTypes.bool,
   stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired,
   activeStage: PropTypes.number,
-  debugCategory: PropTypes.string,
 };
 
 StageMenu.defaultProps = {
   onStageVisible: null,
   isRegistration: false,
   activeStage: null,
-  debugCategory: "",
 };
 
 export default StageMenu;

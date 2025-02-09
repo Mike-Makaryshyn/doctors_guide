@@ -9,12 +9,11 @@ import styles from "./styles.module.scss";
 
 const ApprobationPage = () => {
   const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
+  // Використовуємо категорію, отриману з Firebase; якщо не завантажена – за замовчуванням "Non-EU"
+  const effectiveCategory = globalCategory || "Non-EU";
+
   const [activeStage, setActiveStage] = useState(1);
   const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0));
-
-  // Локальний стан для перемикача категорій
-  const [debugCategory, setDebugCategory] = useState(globalCategory || "Non-EU");
-  const effectiveCategory = debugCategory || globalCategory;
 
   // Завантаження активного етапу з Firebase
   useEffect(() => {
@@ -36,7 +35,7 @@ const ApprobationPage = () => {
     fetchActiveStage();
   }, [user]);
 
-  // Завантаження прогресу всіх етапів
+  // Завантаження прогресу всіх етапів з Firebase
   useEffect(() => {
     const fetchStagesProgress = async () => {
       if (!user) return;
@@ -100,7 +99,6 @@ const ApprobationPage = () => {
             onStageSelect={handleStageSelect}
             stagesProgress={stagesProgress}
             enableSwipe={true}
-            debugCategory={effectiveCategory}
             activeStage={activeStage}
           />
         </div>
@@ -112,15 +110,7 @@ const ApprobationPage = () => {
             language={language}
             user={user}
             onProgressUpdate={handleProgressUpdate}
-            debugCategory={effectiveCategory}
           />
-        </div>
-
-        {/* Секція перемикання категорій */}
-        <div className={styles.categorySection}>
-          <button onClick={() => setDebugCategory("EU")}>EU</button>
-          <button onClick={() => setDebugCategory("Non-EU")}>Non-EU</button>
-          <p>Поточна категорія: {effectiveCategory}</p>
         </div>
       </div>
 
@@ -146,7 +136,6 @@ const ApprobationPage = () => {
             stroke="#4caf50"
             strokeWidth="2"
           />
-          {/* Текст у центрі кола */}
           <text x="18" y="21" textAnchor="middle" className={styles.progressText}>
             {overallProgress}%
           </text>

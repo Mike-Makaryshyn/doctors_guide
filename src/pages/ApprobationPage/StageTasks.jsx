@@ -1,39 +1,70 @@
-// StageTasks.jsx
+// src/pages/ApprobationPage/StageTasks.jsx
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc, onSnapshot } from "firebase/firestore";
 import { APPROBATION_STAGES_NON_EU } from "../../constants/translation/stagesTranslationNonEU";
 import { APPROBATION_STAGES_EU } from "../../constants/translation/stagesTranslationEU";
 import { LANDS_INFO } from "../../constants/lands";
 import styles from "./StageTasks.module.scss";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // використовується для selectedRegion та redirectToRegionPage
 import { FaInfoCircle } from "react-icons/fa";
-import AuthModal from "../AuthPage/AuthModal"; // універсальний модальний компонент
+import AuthModal from "../AuthPage/AuthModal";
 
 const StageTasks = ({
   selectedStageId,
   user,
   onProgressUpdate,
   language = "en",
-  debugCategory,
 }) => {
   const [tasks, setTasks] = useState([]);
   const [selectedTasks, setSelectedTasks] = useState([]);
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  // Стан для відображення модального вікна авторизації
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [localCategory, setLocalCategory] = useState(null); // локальний стан для категорії з Firebase
 
-  const { category: globalCategory, selectedRegion, redirectToRegionPage } = useGetGlobalInfo();
-  const effectiveCategory = debugCategory || globalCategory;
-  const normalizedCategory = effectiveCategory ? effectiveCategory.trim().toUpperCase() : "";
+  // Використовуємо useGetGlobalInfo лише для selectedRegion та redirectToRegionPage
+  const { selectedRegion, redirectToRegionPage } = useGetGlobalInfo();
 
+  // Читаємо educationRegion безпосередньо з Firebase (як у DocumentsPage)
+  useEffect(() => {
+    if (!user) {
+      setLocalCategory("Non-EU");
+      return;
+    }
+    const dataDocRef = doc(db, "users", user.uid, "userData", "data");
+    const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        const fetchedCategory = data.educationRegion;
+        if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
+          setLocalCategory(fetchedCategory);
+        } else {
+          console.warn("Invalid or missing educationRegion. Defaulting to Non-EU.");
+          setLocalCategory("Non-EU");
+        }
+      } else {
+        // Ініціалізація документа, якщо він відсутній
+        setDoc(dataDocRef, { educationRegion: "Non-EU" })
+          .then(() => setLocalCategory("Non-EU"))
+          .catch((error) => console.error("Error initializing educationRegion:", error));
+      }
+    });
+    return () => unsubscribe();
+  }, [user]);
+
+  // Використовуємо локальну категорію; якщо вона не завантажена – "Non-EU" за замовчуванням
+  const effectiveCategory = localCategory || "Non-EU";
+  // Нормалізуємо для порівняння (великі літери)
+  const normalizedCategory = effectiveCategory.trim().toUpperCase();
+
+  // Завантаження завдань та даних етапу
   useEffect(() => {
     const loadStageData = async () => {
       if (!selectedStageId) return;
       setIsLoading(true);
       try {
-        // Завантажуємо завдання із статичних даних, незалежно від авторизації
+        // Вибір завдань із статичних даних залежно від категорії (EU чи Non‑EU)
         const stages =
           normalizedCategory === "EU"
             ? APPROBATION_STAGES_EU[language]
@@ -41,7 +72,6 @@ const StageTasks = ({
         const currentStage = stages.find((stage) => stage.id === selectedStageId);
         setTasks(currentStage?.tasks || []);
 
-        // Якщо користувач авторизований, завантажуємо дані з Firestore
         if (user) {
           const docRef = doc(db, "users", user.uid, "stages", `stage_${selectedStageId}`);
           const docSnap = await getDoc(docRef);
@@ -55,7 +85,6 @@ const StageTasks = ({
             setProgress(0);
           }
         } else {
-          // Якщо користувача немає, просто встановлюємо порожній список виконаних завдань та прогрес 0
           setSelectedTasks([]);
           setProgress(0);
         }
@@ -75,7 +104,6 @@ const StageTasks = ({
   };
 
   const toggleTaskSelection = async (taskId) => {
-    // Якщо користувач не авторизований, показуємо модальне вікно
     if (!user) {
       setShowAuthModal(true);
       return;
@@ -99,12 +127,10 @@ const StageTasks = ({
 
   const handleInfoClick = (e, task) => {
     e.stopPropagation();
-    // Якщо користувач не авторизований, показуємо модальне вікно
     if (!user) {
       setShowAuthModal(true);
       return;
     }
-    // Якщо завдання має посилання, що залежить від регіону, але регіон не вибрано
     if ((task.link === "/approbation-authorities" || task.link === "/medical-chambers") && !selectedRegion) {
       if (redirectToRegionPage) {
         redirectToRegionPage();
@@ -130,7 +156,6 @@ const StageTasks = ({
     }
   };
 
-  // Сортуємо завдання: невиконані спочатку, виконані в кінці
   const sortedTasks = [...tasks].sort((a, b) => {
     const aCompleted = selectedTasks.includes(a.id) ? 1 : 0;
     const bCompleted = selectedTasks.includes(b.id) ? 1 : 0;
@@ -154,7 +179,6 @@ const StageTasks = ({
                   type="checkbox"
                   checked={selectedTasks.includes(task.id)}
                   readOnly
-                  // Забороняємо взаємодію з input, якщо користувач не авторизований
                   disabled={!user}
                 />
                 {task.title}
