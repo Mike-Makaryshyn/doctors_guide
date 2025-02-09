@@ -207,7 +207,7 @@ export const stagesTranslation = {
             ],
           },
         ],
-            uk: [
+   uk: [
               {
                 id: 1,
                 title: "Дослідник",
