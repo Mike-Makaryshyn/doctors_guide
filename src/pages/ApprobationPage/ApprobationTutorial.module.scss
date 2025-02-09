@@ -1,0 +1,102 @@
+/* Global styles for react-joyride used in ApprobationTutorial */
+
+:global(.react-joyride__tooltip) {
+    max-width: 400px !important; /* Було 300px */
+    min-width: 200px;
+    padding: 12px;
+    font-size: 14px; /* Менший шрифт */
+    border-radius: 20px !important;
+    text-align: justify;
+  }
+  
+  :global(.react-joyride__tooltip-container) {
+    max-height: 120px; /* Обмежуємо висоту */
+    overflow-y: auto;
+    text-align: justify;
+  }
+  
+  @media (max-width: 768px) {
+    :global(.react-joyride__tooltip-close),
+    :global(button.react-joyride__tooltip-close) {
+      display: none !important;
+    }
+  }
+  
+  :global(.react-joyride__tooltip h3) {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: justify;
+  }
+  
+  :global(.react-joyride__tooltip p) {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+  :global(.react-joyride__tooltip-container .react-joyride__button--next) {
+    background-color: #4caf50;
+    color: #fff;
+    border: 25px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  :global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Local styles for the ApprobationTutorial trigger button */
+  .tutorialButton {
+    position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+    top: 60px; /* Відступ від верхнього краю */
+    right: 15px; /* Відступ від правого краю */
+    width: 45px; /* Розмір кнопки */
+    height: 45px;
+    background: none; /* Без фону */
+    border-radius: 50%; /* Кругла кнопка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none; /* Без рамки */
+    box-shadow: none; /* Без тіні */
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  }
+  
+  .tutorialButton svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ededed; /* Сірий контур */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tutorialButton:hover {
+    transform: scale(1.1); /* Легке збільшення */
+    background: transparent; /* Без змін фону */
+  }
+  
+  .tutorialButton:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .tutorialButton {
+      width: 42px;
+      height: 38px;
+      right: -8px;
+      top: 50px;
+    }
+    .tutorialButton svg {
+      width: 32px;
+      height: 32px;
+    }
+  }

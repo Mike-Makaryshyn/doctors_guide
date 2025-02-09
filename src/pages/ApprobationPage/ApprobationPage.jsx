@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "./StageMenu";
 import StageTasks from "./StageTasks";
+import ApprobationTutorial from "./ApprobationTutorial";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
@@ -9,11 +10,12 @@ import styles from "./styles.module.scss";
 
 const ApprobationPage = () => {
   const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
-  // Використовуємо категорію, отриману з Firebase; якщо не завантажена – за замовчуванням "Non-EU"
   const effectiveCategory = globalCategory || "Non-EU";
 
   const [activeStage, setActiveStage] = useState(1);
   const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0));
+  const [overallProgress, setOverallProgress] = useState(0);
+  const [tutorialActive, setTutorialActive] = useState(false);
 
   // Завантаження активного етапу з Firebase
   useEffect(() => {
@@ -60,6 +62,15 @@ const ApprobationPage = () => {
     fetchStagesProgress();
   }, [user]);
 
+  // Розрахунок загального прогресу (середнє значення)
+  useEffect(() => {
+    if (stagesProgress.length > 0) {
+      const total = stagesProgress.reduce((acc, cur) => acc + cur, 0);
+      const overall = Math.round(total / stagesProgress.length);
+      setOverallProgress(overall);
+    }
+  }, [stagesProgress]);
+
   const handleProgressUpdate = (stageId, newProgress) => {
     setStagesProgress((prev) => {
       const updated = [...prev];
@@ -81,20 +92,24 @@ const ApprobationPage = () => {
     }
   };
 
-  // Розрахунок загального прогресу (середнє значення)
-  const calculateOverallProgress = () => {
-    if (stagesProgress.length === 0) return 0;
-    const total = stagesProgress.reduce((acc, cur) => acc + cur, 0);
-    return Math.round(total / stagesProgress.length);
-  };
-
-  const overallProgress = calculateOverallProgress();
+  // Обробка події для старту туторіалу (якщо користувач натисне кнопку "i")
+  useEffect(() => {
+    const handleStartTutorial = () => {
+      // Для повторного запуску видаляємо прапорець туторіалу
+      localStorage.removeItem("tutorialCompleted");
+      // Якщо потрібно, можна перейти до певного етапу
+      setActiveStage(1);
+      setTutorialActive(true);
+    };
+    window.addEventListener("startTutorial", handleStartTutorial);
+    return () => window.removeEventListener("startTutorial", handleStartTutorial);
+  }, []);
 
   return (
     <MainLayout>
       <div className={styles.container}>
-        {/* Секція стейджів */}
-        <div className={styles.stagesSection}>
+        {/* Секція стейджів з data-тегом для туторіалу */}
+        <div className={styles.stagesSection} data-tutorial="stageMenuContainer">
           <StageMenu
             onStageSelect={handleStageSelect}
             stagesProgress={stagesProgress}
@@ -103,8 +118,8 @@ const ApprobationPage = () => {
           />
         </div>
 
-        {/* Секція завдань */}
-        <div className={styles.tasksSection}>
+        {/* Секція завдань з data-тегом для туторіалу */}
+        <div className={styles.tasksSection} data-tutorial="stageTaskContainer">
           <StageTasks
             selectedStageId={activeStage}
             language={language}
@@ -114,8 +129,8 @@ const ApprobationPage = () => {
         </div>
       </div>
 
-      {/* Фіксований круговий прогрес-бар у правому нижньому куті */}
-      <div className={styles.printButton}>
+      {/* Фіксований круговий прогрес-бар (PrintButton) з data-тегом для туторіалу */}
+      <div className={styles.printButton} data-tutorial="printButton">
         <svg viewBox="0 0 36 36" className={styles.circularProgress}>
           <path
             className={styles.circleBg}
@@ -141,6 +156,34 @@ const ApprobationPage = () => {
           </text>
         </svg>
       </div>
+
+      {/* Кнопка для виклику туторіалу (аналогічна до тієї в резюме) */}
+      <button
+        data-tutorial="tutorialStartButton"
+        className={styles.tutorialButton}
+        onClick={() =>
+          window.dispatchEvent(new CustomEvent("startTutorial"))
+        }
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+          fill="none"
+          stroke="#ededed"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+          <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+          <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+        </svg>
+      </button>
+
+      {/* Підключення компоненту туторіалу */}
+      <ApprobationTutorial run={tutorialActive} onFinish={() => setTutorialActive(false)} />
     </MainLayout>
   );
 };

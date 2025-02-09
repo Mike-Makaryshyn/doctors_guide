@@ -4,13 +4,9 @@ import StageTasks from "../pages/ApprobationPage/StageTasks";
 import useGetGlobalInfo from "../hooks/useGetGlobalInfo";
 import styles from "./StageTasksWidget.module.scss";
 
-// Функція для отримання перекладу заголовку відповідно до мови
-const getHeaderText = (selectedStageId, language, activeStageTitle) => {
-  if (activeStageTitle) return activeStageTitle;
-
-  // Примусово переводимо мову в нижній регістр, щоб ключі співпадали
+// Funkcija za dobivanje prijevoda zaglavlja na temelju jezika i id-ea staga
+const getHeaderText = (selectedStageId, language) => {
   const langKey = language ? language.toLowerCase() : "en";
-
   const headerTranslations = {
     de: (id) => `Aufgaben für Stufe ${id}`,
     en: (id) => `Tasks for Stage ${id}`,
@@ -22,19 +18,18 @@ const getHeaderText = (selectedStageId, language, activeStageTitle) => {
     fr: (id) => `Tâches pour l'étape ${id}`,
     es: (id) => `Tareas para la etapa ${id}`,
   };
-
   const translator = headerTranslations[langKey] || headerTranslations.en;
   return translator(selectedStageId);
 };
 
-const StageTasksWidget = ({ selectedStageId, user, language, activeStageTitle }) => {
-  // Отримуємо мову з useGetGlobalInfo, якщо language не передано через пропси
+const StageTasksWidget = ({ selectedStageId, user, language }) => {
+  // Dohvaćamo globalni jezik iz useGetGlobalInfo; ako nije proslijeđen preko props, koristimo globalni
   const { selectedLanguage } = useGetGlobalInfo();
   const lang = (language || selectedLanguage).toLowerCase();
 
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const headerText = getHeaderText(selectedStageId, lang, activeStageTitle);
+  const headerText = getHeaderText(selectedStageId, lang);
 
   return (
     <div className={styles.widgetContainer}>

@@ -13,6 +13,7 @@ import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo.js";
 
 // Тут імпортуємо тільки StageTasksWidget – без прямого імпорту StageTasks!
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";

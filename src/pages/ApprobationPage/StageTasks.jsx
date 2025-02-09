@@ -1,4 +1,3 @@
-// src/pages/ApprobationPage/StageTasks.jsx
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import { doc, setDoc, getDoc, onSnapshot } from "firebase/firestore";
@@ -10,12 +9,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo"; // використ
 import { FaInfoCircle } from "react-icons/fa";
 import AuthModal from "../AuthPage/AuthModal";
 
-const StageTasks = ({
-  selectedStageId,
-  user,
-  onProgressUpdate,
-  language = "en",
-}) => {
+const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }) => {
   const [tasks, setTasks] = useState([]);
   const [selectedTasks, setSelectedTasks] = useState([]);
   const [progress, setProgress] = useState(0);
@@ -23,10 +17,8 @@ const StageTasks = ({
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [localCategory, setLocalCategory] = useState(null); // локальний стан для категорії з Firebase
 
-  // Використовуємо useGetGlobalInfo лише для selectedRegion та redirectToRegionPage
   const { selectedRegion, redirectToRegionPage } = useGetGlobalInfo();
 
-  // Читаємо educationRegion безпосередньо з Firebase (як у DocumentsPage)
   useEffect(() => {
     if (!user) {
       setLocalCategory("Non-EU");
@@ -44,7 +36,6 @@ const StageTasks = ({
           setLocalCategory("Non-EU");
         }
       } else {
-        // Ініціалізація документа, якщо він відсутній
         setDoc(dataDocRef, { educationRegion: "Non-EU" })
           .then(() => setLocalCategory("Non-EU"))
           .catch((error) => console.error("Error initializing educationRegion:", error));
@@ -53,18 +44,14 @@ const StageTasks = ({
     return () => unsubscribe();
   }, [user]);
 
-  // Використовуємо локальну категорію; якщо вона не завантажена – "Non-EU" за замовчуванням
   const effectiveCategory = localCategory || "Non-EU";
-  // Нормалізуємо для порівняння (великі літери)
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
-  // Завантаження завдань та даних етапу
   useEffect(() => {
     const loadStageData = async () => {
       if (!selectedStageId) return;
       setIsLoading(true);
       try {
-        // Вибір завдань із статичних даних залежно від категорії (EU чи Non‑EU)
         const stages =
           normalizedCategory === "EU"
             ? APPROBATION_STAGES_EU[language]
@@ -171,7 +158,9 @@ const StageTasks = ({
           {sortedTasks.map((task) => (
             <li
               key={task.id}
-              className={`${styles["task-item"]} ${selectedTasks.includes(task.id) ? styles["completed"] : ""}`}
+              className={`${styles["task-item"]} ${
+                selectedTasks.includes(task.id) ? styles["completed"] : ""
+              }`}
               onClick={() => toggleTaskSelection(task.id)}
             >
               <label>
@@ -186,6 +175,7 @@ const StageTasks = ({
               {(task.infoText || task.link) && (
                 <FaInfoCircle
                   className={styles.infoIcon}
+                  data-tutorial="svgInfoIcon"
                   onClick={(e) => handleInfoClick(e, task)}
                 />
               )}

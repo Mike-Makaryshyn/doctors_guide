@@ -41,7 +41,6 @@ const StageMenu = ({
   activeStage,
 }) => {
   const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
-  // Отримуємо категорію з Firebase; за замовчуванням "Non-EU", якщо не завантажено
   const effectiveCategory = globalCategory || "Non-EU";
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
@@ -154,7 +153,11 @@ const StageMenu = ({
                 onClick={() => handleStageClick(stage.id)}
               >
                 <div className={styles.progressCircle}>
-                  <svg className={styles.progressSvg} viewBox="0 0 36 36">
+                  <svg
+                    className={styles.progressSvg}
+                    viewBox="0 0 36 36"
+                    {...(stage.id === 1 ? { "data-tutorial": "stageProgressBar" } : {})}
+                  >
                     <path
                       className={styles.circleBg}
                       d="M18 2.0845
