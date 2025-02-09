@@ -21,7 +21,11 @@
       display: none !important;
     }
   }
-  
+  :global(.react-joyride__tooltip),
+:global(.react-joyride__tooltip div),
+:global(.react-joyride__tooltip span) {
+  text-align: justify !important;
+}
   :global(.react-joyride__tooltip h3) {
     font-size: 18px;
     font-weight: bold;
