@@ -1,10 +1,9 @@
 // src/hooks/useGetGlobalInfo.js
-
 import { languages, DEFAULT_LANGUAGE } from "../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../utils/localStorage";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { auth, db } from "../firebase"; // Об'єднано імпорти Firebase
+import { auth, db } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -12,17 +11,13 @@ const useGetGlobalInfo = () => {
   // Стан для авторизованого користувача
   const [user, setUser] = useState(null);
 
-  // Робота з мовами, регіонами та сторінками
   const navigate = useNavigate();
-  const selectedLanguage = user
-    ? localStorageGet("selectedLanguage", DEFAULT_LANGUAGE)
-    : DEFAULT_LANGUAGE;
-  const currentPage = user
-    ? localStorageGet("currentPage", "/main_menu")
-    : "/main_menu";
+  // Змінено: завжди читаємо мову з localStorage, незалежно від авторизації
+  const selectedLanguage = localStorageGet("selectedLanguage", DEFAULT_LANGUAGE);
+  const currentPage = user ? localStorageGet("currentPage", "/main_menu") : "/main_menu";
   const selectedRegion = user ? localStorageGet("selectedRegion", "") : "";
 
-  // Функція для збереження `selectedRegion` у Firebase
+  // Функція для збереження selectedRegion у Firebase
   const saveSelectedRegionToFirebase = async (region) => {
     if (!user) return;
 
@@ -38,7 +33,7 @@ const useGetGlobalInfo = () => {
     }
   };
 
-  // Завантаження `selectedRegion` з Firebase під час ініціалізації
+  // Завантаження selectedRegion з Firebase під час ініціалізації
   const fetchSelectedRegionFromFirebase = async () => {
     if (!user) return;
 
@@ -56,7 +51,7 @@ const useGetGlobalInfo = () => {
     }
   };
 
-  // Функція для зміни `selectedRegion`
+  // Функція для зміни selectedRegion
   const handleChangeRegion = (newRegion) => {
     if (user) {
       localStorageSet("selectedRegion", newRegion);
@@ -93,7 +88,7 @@ const useGetGlobalInfo = () => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
-        fetchSelectedRegionFromFirebase(); // Завантаження `selectedRegion`
+        fetchSelectedRegionFromFirebase(); // Завантаження selectedRegion
       }
     });
 
