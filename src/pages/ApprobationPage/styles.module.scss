@@ -82,7 +82,7 @@
 }
 .tutorialButton {
   position: absolute;
-  top: 50px;
+  top: 55px;
   right: -9px; /* Відступ від правого краю */
   width: 45px;
   height: 45px;
@@ -107,4 +107,18 @@
 .tutorialButton:hover {
   transform: scale(1.1);
   background: transparent;
+}
+
+@media (max-width: 768px) {
+  .tutorialButton {
+    top: 43px;
+    right: -11px; /* Інший відступ для мобільних пристроїв */
+    width: 40px; /* Трохи менший розмір кнопки */
+    height: 40px;
+  }
+
+  .tutorialButton svg {
+    width: 22px; /* Трохи менший розмір іконки */
+    height: 22px;
+  }
 }
