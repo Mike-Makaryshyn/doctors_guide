@@ -30,8 +30,9 @@
   }
   
   :global(.react-joyride__tooltip p) {
+    text-align: justify; /* Застосовує Blocksatz */
     font-size: 14px;
-    font-weight: normal;
+    line-height: 1.5; /* Додатково для покращення читабельності */
   }
   
   :global(.react-joyride__tooltip-container .react-joyride__button--next) {
