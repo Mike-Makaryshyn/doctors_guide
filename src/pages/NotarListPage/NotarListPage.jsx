@@ -1,44 +1,46 @@
 // src/pages/NotarListPage/NotarListPage.jsx
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./NotarListPage.module.scss";
 import { notarData } from "./notarData";
-import { FaCog, FaTimes } from "react-icons/fa";
-
-// Layout (falls vorhanden)
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-
-// Hier statt DataSourceContext nun useGetGlobalInfo
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { FaCog, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
+
+/**
+ * Якщо обрано "Westfalen-Lippe" – повертаємо "Nordrhein-Westfalen",
+ * інакше повертаємо оригінальний рядок.
+ */
+const unifyRegion = (regionName) => {
+  if (regionName === "Westfalen-Lippe") {
+    return "Nordrhein-Westfalen";
+  }
+  return regionName;
+};
 
 const NotarListPage = () => {
-  // ---------------------------------------------------------
-  // 1) Globalen Region-Wert aus dem Hook auslesen,
-  //    z. B. "Bayern" oder was immer gerade global eingestellt ist.
-  // ---------------------------------------------------------
-  const { selectedRegion: globalRegion } = useGetGlobalInfo();
+  // Глобальний вибір регіону, локальний стан
+  const { selectedRegion } = useGetGlobalInfo();
+  const [region, setRegion] = useState(selectedRegion || "Bayern"); // fallback: Bayern
 
-  // ---------------------------------------------------------
-  // 2) Lokaler State. Wir nutzen den globalRegion-Wert nur
-  //    EINMAL als Startwert, fallen sonst auf "Berlin" zurück.
-  // ---------------------------------------------------------
-  const [localRegion, setLocalRegion] = useState(globalRegion || "Berlin");
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-
-  const settingsModalRef = useRef(null);
-
-  // Klick außerhalb => Modal schließen
-  const handleClickOutside = (evt) => {
-    if (
-      settingsModalRef.current &&
-      !settingsModalRef.current.contains(evt.target)
-    ) {
-      setIsSettingsOpen(false);
-    }
-  };
-
+  // Коли змінюється глобальний reg, підхоплюємо
   useEffect(() => {
-    if (isSettingsOpen) {
+    setRegion(selectedRegion || "Bayern");
+  }, [selectedRegion]);
+
+  // Стан модального вікна
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  // Клік поза межами модалки => закрити
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+    if (isModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -46,82 +48,89 @@ const NotarListPage = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isSettingsOpen]);
+  }, [isModalOpen]);
 
-  // ---------------------------------------------------------
-  // 3) Notare aus notarData für die aktuell gewählte (lokale) Region
-  // ---------------------------------------------------------
-  const notareInRegion = notarData[localRegion] || [];
+  // Якщо обрали Westfalen-Lippe => зберігаємо NRW
+  const handleRegionChange = (e) => {
+    const newVal = e.target.value;
+    if (newVal === "Westfalen-Lippe") {
+      setRegion("Nordrhein-Westfalen");
+    } else {
+      setRegion(newVal);
+    }
+  };
+
+  // Об’єднуємо
+  const regionKey = unifyRegion(region);
+  const notareList = notarData[regionKey] || [];
 
   return (
     <MainLayout>
       <div className={styles.container}>
-        <h2>Liste der Notar:innen</h2>
-
-        {/* Kurze Info, welcher lokale Region-State gerade aktiv ist */}
-        <p>
-          <strong>Globaler Wert:</strong> {globalRegion || "–"} <br />
-          <strong>Lokale Auswahl:</strong> {localRegion}
-        </p>
-        <p style={{ color: "#999", fontSize: "0.9rem" }}>
-          (Die Änderung hier beeinflusst NICHT den globalen Wert.)
-        </p>
-
-        {/* Button, um das Modal zu öffnen (z. B. unten rechts) */}
-        <div className={styles.settingsWrapper}>
+        {/* Кнопка (правий нижній кут) */}
+        <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
-            onClick={() => setIsSettingsOpen(true)}
+            onClick={() => setIsModalOpen(true)}
           >
             <FaCog />
           </button>
         </div>
 
-        {/* Kacheln */}
+        {/* Плитки з нотаріусами */}
         <div className={styles.tilesContainer}>
-          {notareInRegion.length > 0 ? (
-            notareInRegion.map((notar) => (
-              <div key={notar.id} className={styles.tile}>
-                {/* Optional: Logo */}
-                {notar.logoUrl && (
-                  <img
-                    src={notar.logoUrl}
-                    alt={`Logo von ${notar.name}`}
-                    style={{ width: "80px", marginBottom: "10px" }}
-                  />
+          {notareList.map((notar) => (
+            <div key={notar.id} className={styles.tile}>
+              <h3 className={styles.tileHeader}>{notar.name}</h3>
+              <p className={styles.tileDescription}>{notar.description}</p>
+              {notar.city && <p className={styles.tileCity}>{notar.city}</p>}
+              <div className={styles.contactRow}>
+                {notar.phone && (
+                  <p className={styles.contactItem}>
+                    <FaPhoneAlt style={{ marginRight: "5px" }} />
+                    {notar.phone}
+                  </p>
                 )}
-                <h3 className={styles.tileHeader}>{notar.name}</h3>
-                <p style={{ color: "#555" }}>{notar.description}</p>
+                {notar.email && (
+                  <p className={styles.contactItem}>
+                    <FaEnvelope style={{ marginRight: "5px" }} />
+                    {notar.email}
+                  </p>
+                )}
               </div>
-            ))
-          ) : (
-            <p style={{ color: "#555" }}>
-              In <strong>{localRegion}</strong> haben wir derzeit keine Notar-Einträge.
-            </p>
-          )}
+            </div>
+          ))}
         </div>
 
-        {/* Modal für Regionseinstellungen */}
-        {isSettingsOpen && (
-          <div className={styles.settingsModal} ref={settingsModalRef}>
-            <button
-              className={styles.closeButton}
-              onClick={() => setIsSettingsOpen(false)}
-            >
-              <FaTimes />
-            </button>
-            <div className={styles.settingsContent}>
-              <label htmlFor="regionSelect">Region auswählen (lokal):</label>
-              <select
-                id="regionSelect"
-                className={styles.regionSelect}
-                value={localRegion}
-                onChange={(e) => setLocalRegion(e.target.value)}
+        {/* Модальне вікно (popup) */}
+        {isModalOpen && (
+          <div
+            className={
+              window.innerWidth > 768
+                ? styles.popupContainerDesktop
+                : styles.popupContainerMobile
+            }
+          >
+            <div className={styles.popup} ref={modalRef}>
+              {/* Кнопка закриття */}
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setIsModalOpen(false)}
               >
-                {/* Alle Keys aus notarData => Deutschland-Bundesländer */}
-                {Object.keys(notarData).map((regionKey) => (
-                  <option key={regionKey} value={regionKey}>
-                    {regionKey}
+                <AiOutlineClose />
+              </button>
+
+              {/* Текст німецькою */}
+              <h2 className={styles.modalTitle}>Region auswählen</h2>
+            
+              <select
+                value={region}
+                onChange={handleRegionChange}
+                className={styles.modalSelect}
+              >
+                {Object.keys(notarData).map((r) => (
+                  <option key={r} value={r}>
+                    {r}
                   </option>
                 ))}
               </select>

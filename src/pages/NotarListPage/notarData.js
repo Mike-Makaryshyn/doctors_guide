@@ -1,11 +1,25 @@
 // src/pages/NotarListPage/notarData.js
 
+// Список нотаріусів по кожному регіону
+// Додані поля: city, phone, email, description
 export const notarData = {
+    "Thüringen": [
+      {
+        id: "n-th-1",
+        name: "Notariat Erfurt",
+        city: "Erfurt",
+        phone: "0361 / 123456",
+        email: "info@notariat-erfurt.de",
+        description: "Allgemeine notarielle Tätigkeiten im Zivilrecht.",
+      },
+    ],
     "Baden-Württemberg": [
       {
         id: "n-bw-1",
         name: "Notariat Stuttgart-Mitte",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Stuttgart",
+        phone: "0711 / 987654",
+        email: "kanzlei@stuttgart-notar.de",
         description: "Spezialisiert auf Grundstücksrecht, Ehe- und Familienrecht.",
       },
     ],
@@ -13,7 +27,9 @@ export const notarData = {
       {
         id: "n-by-1",
         name: "Notar München City",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "München",
+        phone: "089 / 123456",
+        email: "kontakt@muenchen-notar.de",
         description: "Umfassende Beratung in Gesellschafts- und Immobilienrecht.",
       },
     ],
@@ -21,7 +37,9 @@ export const notarData = {
       {
         id: "n-be-1",
         name: "Notar Müller & Kollegen",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Berlin",
+        phone: "030 / 987654",
+        email: "info@berlin-notar.de",
         description: "Tätig in allen notariellen Fachbereichen.",
       },
     ],
@@ -29,7 +47,9 @@ export const notarData = {
       {
         id: "n-bb-1",
         name: "Notariat Potsdam",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Potsdam",
+        phone: "0331 / 555666",
+        email: "office@notariat-potsdam.de",
         description: "Spezialisiert auf Landwirtschaftsrecht und Erbrechtsfragen.",
       },
     ],
@@ -37,7 +57,9 @@ export const notarData = {
       {
         id: "n-hb-1",
         name: "Notar Kanzlei Bremen Hafen",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Bremen",
+        phone: "0421 / 777888",
+        email: "kontakt@bremen-hafen-notar.de",
         description: "Beratung und Beglaubigungen im Seehandelsrecht.",
       },
     ],
@@ -45,7 +67,9 @@ export const notarData = {
       {
         id: "n-hh-1",
         name: "Notariat Alsterufer",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Hamburg",
+        phone: "040 / 123987",
+        email: "info@alster-notar.de",
         description: "Berät Start-ups und Private Equity.",
       },
     ],
@@ -53,15 +77,19 @@ export const notarData = {
       {
         id: "n-he-1",
         name: "Notar Wiesbaden",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Wiesbaden",
+        phone: "0611 / 112233",
+        email: "kanzlei@wiesbaden-notar.de",
         description: "Fokus auf Grundstückskaufverträge und Vorsorgevollmachten.",
       },
     ],
-    "Mecklenburg-Vorpommern": [
+    "Mecklenburg Vorpommern": [
       {
         id: "n-mv-1",
         name: "Notariat Rostock",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Rostock",
+        phone: "0381 / 999111",
+        email: "info@rostock-notariat.de",
         description: "Spezialisiert auf Gesellschaftsgründungen in Küstenregionen.",
       },
     ],
@@ -69,7 +97,9 @@ export const notarData = {
       {
         id: "n-ni-1",
         name: "Notar Hannover Zentrum",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Hannover",
+        phone: "0511 / 665544",
+        email: "kanzlei@hannover-zentrum-notar.de",
         description: "Langjährige Erfahrung in Erbverträgen und Testamenten.",
       },
     ],
@@ -77,15 +107,29 @@ export const notarData = {
       {
         id: "n-nrw-1",
         name: "Notar Köln Rheinseite",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Köln",
+        phone: "0221 / 778899",
+        email: "info@koeln-rhein-notar.de",
         description: "Experte für GmbH-Gründungen und Baurecht.",
+      },
+    ],
+    "Westfalen-Lippe": [
+      {
+        id: "n-wf-1",
+        name: "Notariat Westfalen-Lippe",
+        city: "Dortmund",
+        phone: "0231 / 424242",
+        email: "service@westfalen-notar.de",
+        description: "Umfangreiche notarielle Dienstleistungen in Westfalen-Lippe.",
       },
     ],
     "Rheinland-Pfalz": [
       {
         id: "n-rp-1",
         name: "Notariat Mainz",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Mainz",
+        phone: "06131 / 990011",
+        email: "office@mainz-notariat.de",
         description: "Spezialisiert auf Weinbaubetriebe und landwirtschaftliche Betriebe.",
       },
     ],
@@ -93,7 +137,9 @@ export const notarData = {
       {
         id: "n-sl-1",
         name: "Notar Saarbrücken Mitte",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Saarbrücken",
+        phone: "0681 / 223344",
+        email: "info@saarbruecken-notariat.de",
         description: "Schwerpunkt auf Erbrecht und Immobilienrecht.",
       },
     ],
@@ -101,7 +147,9 @@ export const notarData = {
       {
         id: "n-sn-1",
         name: "Notariat Dresden Altstadt",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Dresden",
+        phone: "0351 / 445566",
+        email: "kanzlei@dresden-notar.de",
         description: "Erfahrung im Bereich Handelsregisteranmeldungen.",
       },
     ],
@@ -109,7 +157,9 @@ export const notarData = {
       {
         id: "n-st-1",
         name: "Notariat Magdeburg",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Magdeburg",
+        phone: "0391 / 887766",
+        email: "info@magdeburg-notar.de",
         description: "Bietet Beglaubigungen und Beurkundungen für Start-ups.",
       },
     ],
@@ -117,16 +167,10 @@ export const notarData = {
       {
         id: "n-sh-1",
         name: "Notar Kiel Strandpromenade",
-        logoUrl: "https://via.placeholder.com/120",
+        city: "Kiel",
+        phone: "0431 / 554433",
+        email: "kontakt@kiel-notar.de",
         description: "Fokus auf Schiffskaufverträge und maritime Belange.",
-      },
-    ],
-    Thüringen: [
-      {
-        id: "n-th-1",
-        name: "Notariat Erfurt",
-        logoUrl: "https://via.placeholder.com/120",
-        description: "Allgemeine notarielle Tätigkeiten im Zivilrecht.",
       },
     ],
   };
