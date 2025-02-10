@@ -1,7 +1,7 @@
 // src/pages/NotarListPage/notarData.js
 
 // Список нотаріусів по кожному регіону
-// Додані поля: city, phone, email, description
+// (ВИЛУЧЕНО ключ "Westfalen-Lippe", щоб все було в "Nordrhein-Westfalen")
 export const notarData = {
     "Thüringen": [
       {
@@ -112,8 +112,8 @@ export const notarData = {
         email: "info@koeln-rhein-notar.de",
         description: "Experte für GmbH-Gründungen und Baurecht.",
       },
-    ],
-    "Westfalen-Lippe": [
+      // Сюди можна додати й інші нотаріуси з Westfalen-Lippe, 
+      // якщо ви хочете їх "злити" разом
       {
         id: "n-wf-1",
         name: "Notariat Westfalen-Lippe",

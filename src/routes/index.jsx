@@ -77,6 +77,9 @@ const CasesListPage = React.lazy(() =>
 const EditCasePage = React.lazy(() =>
   import("../pages/EditCasePage/EditCasePage")
 );
+const TranslatorListPage = React.lazy(() =>
+  import("../pages/TranslatorListPage/TranslatorListPage")
+);
 
 // Auth and Dashboard
 const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
@@ -147,6 +150,10 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
+          <Route
+    path={pathList.translation.path}
+    element={<TranslatorListPage />}
+  />
 
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />

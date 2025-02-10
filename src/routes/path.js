@@ -75,4 +75,7 @@ export const pathList = {
   notar_list: {
     path: "/notar",
   },
+  translation: {
+    path: "/translation",
+  },
 };

@@ -1,5 +1,3 @@
-// src/pages/NotarListPage/NotarListPage.jsx
-
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./NotarListPage.module.scss";
@@ -8,32 +6,29 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { FaCog, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
-/**
- * Якщо обрано "Westfalen-Lippe" – повертаємо "Nordrhein-Westfalen",
- * інакше повертаємо оригінальний рядок.
- */
-const unifyRegion = (regionName) => {
-  if (regionName === "Westfalen-Lippe") {
-    return "Nordrhein-Westfalen";
-  }
-  return regionName;
+// Якщо глобально вибрано "Westfalen-Lippe", перетворюємо на "Nordrhein-Westfalen"
+const unifyRegion = (r) => {
+  if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
+  return r;
 };
 
 const NotarListPage = () => {
-  // Глобальний вибір регіону, локальний стан
+  // 1) Забираємо глобальний регіон
   const { selectedRegion } = useGetGlobalInfo();
-  const [region, setRegion] = useState(selectedRegion || "Bayern"); // fallback: Bayern
 
-  // Коли змінюється глобальний reg, підхоплюємо
+  // 2) Локальний стан
+  // При першому рендері уніфікуємо
+  const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
+
+  // 3) Коли globalRegion змінюється, уніфікуємо
   useEffect(() => {
-    setRegion(selectedRegion || "Bayern");
+    setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Стан модального вікна
+  // 4) Модалка
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
-  // Клік поза межами модалки => закрити
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -50,24 +45,22 @@ const NotarListPage = () => {
     };
   }, [isModalOpen]);
 
-  // Якщо обрали Westfalen-Lippe => зберігаємо NRW
+  // 5) Зміна регіону в селекті
+  // Якщо користувач випадково вибрав "Westfalen-Lippe" (якщо десь залишився цей ключ) 
+  // – уніфікуємо в "Nordrhein-Westfalen"
   const handleRegionChange = (e) => {
-    const newVal = e.target.value;
-    if (newVal === "Westfalen-Lippe") {
-      setRegion("Nordrhein-Westfalen");
-    } else {
-      setRegion(newVal);
-    }
+    const val = e.target.value;
+    setRegion(unifyRegion(val));
   };
 
-  // Об’єднуємо
-  const regionKey = unifyRegion(region);
-  const notareList = notarData[regionKey] || [];
+  // 6) Отримуємо список нотаріусів
+  const notareList = notarData[region] || [];
 
+  // 7) Рендер
   return (
     <MainLayout>
       <div className={styles.container}>
-        {/* Кнопка (правий нижній кут) */}
+        
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
@@ -77,7 +70,6 @@ const NotarListPage = () => {
           </button>
         </div>
 
-        {/* Плитки з нотаріусами */}
         <div className={styles.tilesContainer}>
           {notareList.map((notar) => (
             <div key={notar.id} className={styles.tile}>
@@ -102,7 +94,6 @@ const NotarListPage = () => {
           ))}
         </div>
 
-        {/* Модальне вікно (popup) */}
         {isModalOpen && (
           <div
             className={
@@ -112,17 +103,18 @@ const NotarListPage = () => {
             }
           >
             <div className={styles.popup} ref={modalRef}>
-              {/* Кнопка закриття */}
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
               >
                 <AiOutlineClose />
               </button>
-
-              {/* Текст німецькою */}
+              
+              {/* Все німецькою */}
               <h2 className={styles.modalTitle}>Region auswählen</h2>
-            
+              <p className={styles.modalSubtitle}>
+                Bitte wählen Sie Ihren gewünschten Region:
+              </p>
               <select
                 value={region}
                 onChange={handleRegionChange}
