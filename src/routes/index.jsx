@@ -66,7 +66,9 @@ const ResumePage = React.lazy(() => import("../pages/ResumePage/ResumePage"));
 const FSPFormularPage = React.lazy(() =>
   import("../pages/FSPFormularPage/FSPFormularPage")
 );
-
+const NotarListPage = React.lazy(() =>
+  import("../pages/NotarListPage/NotarListPage") // Імпорт сторінки
+);
 // Новий імпорт для CasesListPage
 const CasesListPage = React.lazy(() =>
   import("../pages/CasesListPage/CasesListPage")
@@ -118,6 +120,10 @@ export default function Routers() {
         <Route
   path={pathList.gleichwertigkeit.path}
   element={<GleichwertigkeitPage />}
+/>
+<Route
+  path={pathList.notar_list.path}
+  element={<NotarListPage />}
 />
         <Route
           path={pathList.kenntnispruefung.path}

@@ -72,4 +72,7 @@ export const pathList = {
   vergleichsgutachten: {
     path: "/vergleichsgutachten",
   },
+  notar_list: {
+    path: "/notar",
+  },
 };

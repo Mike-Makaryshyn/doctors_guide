@@ -304,7 +304,7 @@ export const main_menu_items = {
                uk: "Нотаріальна завірка документів",
                ru: "Нотариальное заверение документов",
                de: "Notarielle Beglaubigung von Dokumenten",
-               link: "/notarization",
+               link: "/notar",
             },
             {
                en: "Translation of Documents",
