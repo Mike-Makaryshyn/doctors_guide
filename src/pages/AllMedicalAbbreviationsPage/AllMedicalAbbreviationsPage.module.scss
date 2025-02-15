@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.allMedicalAbbreviationsPage {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Пошук */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Відображення плиток */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+.tile {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.tileHeader {
+  font-size: 18px;
+  color: #013b6e;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tileDescription {
+  font-size: 16px;
+  color: #013b6e;
+  margin-bottom: 8px;
+}
+.tileExplanation {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Для клікабельних елементів */
+.clickableCell {
+  cursor: pointer;
+}
+
+/* Таблиця для десктопу */
+.terminologyTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #ffffff;
+}
+.terminologyTable th,
+.terminologyTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+.terminologyTable th {
+  background-color: #f4f6f7;
+  color: #555;
+}
+/* Задаємо ширину колонок:
+   - Перша колонка (Скорочення): 15%
+   - Друга колонка (Назва): 15%
+   - Третя колонка (Пояснення): 70% */
+.terminologyTable th:nth-child(1),
+.terminologyTable td:nth-child(1) {
+  width: 15%;
+}
+.terminologyTable th:nth-child(2),
+.terminologyTable td:nth-child(2) {
+  width: 15%;
+}
+.terminologyTable th:nth-child(3),
+.terminologyTable td:nth-child(3) {
+  width: 70%;
+}
+
+.terminologyTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.terminologyTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.terminologyTable tr:hover {
+  background-color: #eaf2f8;
+}
+
+/* Кнопка налаштувань */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Модальне вікно */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalContent {
+  background: white;
+  padding: 25px 20px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  width: 300px;
+}
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.closeButton:hover {
+  background-color: #c0392b;
+}
+
+/* Модальне вікно налаштувань (popup) */
+/* Десктоп */
+.popupContainerDesktop {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 2000;
+}
+/* Мобільні пристрої */
+.popupContainerMobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+}
+.popup {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .popup {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+}
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  background-color: rgba(237, 10, 10, 0);
+  transform: scale(0.9);
+}
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+.modalLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin: 6px 0 4px;
+  display: block;
+}
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Налаштування для Tippy */
+:global(.tippy-box) {
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 768px) {
+  :global(.tippy-box) {
+    max-width: 90% !important;
+    font-size: 14px;
+  }
+}

@@ -66,8 +66,8 @@ const ResumePage = React.lazy(() => import("../pages/ResumePage/ResumePage"));
 const FSPFormularPage = React.lazy(() =>
   import("../pages/FSPFormularPage/FSPFormularPage")
 );
-const NotarListPage = React.lazy(() =>
-  import("../pages/NotarListPage/NotarListPage") // Імпорт сторінки
+const NotarListPage = React.lazy(
+  () => import("../pages/NotarListPage/NotarListPage") // Імпорт сторінки
 );
 // Новий імпорт для CasesListPage
 const CasesListPage = React.lazy(() =>
@@ -80,7 +80,9 @@ const EditCasePage = React.lazy(() =>
 const TranslatorListPage = React.lazy(() =>
   import("../pages/TranslatorListPage/TranslatorListPage")
 );
-
+const AllMedicalAbbreviationsPage = React.lazy(() =>
+  import("../pages/AllMedicalAbbreviationsPage/AllMedicalAbbreviationsPage")
+);
 // Auth and Dashboard
 const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
 const RegistrationPage = React.lazy(() =>
@@ -116,18 +118,16 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
         />
+        
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
         <Route path={pathList.what_is_fsp.path} element={<WhatIsFSPPage />} />
         <Route
-  path={pathList.gleichwertigkeit.path}
-  element={<GleichwertigkeitPage />}
-/>
-<Route
-  path={pathList.notar_list.path}
-  element={<NotarListPage />}
-/>
+          path={pathList.gleichwertigkeit.path}
+          element={<GleichwertigkeitPage />}
+        />
+        <Route path={pathList.notar_list.path} element={<NotarListPage />} />
         <Route
           path={pathList.kenntnispruefung.path}
           element={<KenntnisPruefungPage />}
@@ -136,6 +136,7 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
         />
+        <Route path={pathList.abbreviations.path} element={<AllMedicalAbbreviationsPage />} />
         <Route path={pathList.trafarette.path} element={<Trafatette />} />
         <Route
           path={pathList.language_study.path}
@@ -150,10 +151,10 @@ export default function Routers() {
           path={pathList.approbation.path}
           element={<WhatIsApprobationPage />}
         />
-          <Route
-    path={pathList.translation.path}
-    element={<TranslatorListPage />}
-  />
+        <Route
+          path={pathList.translation.path}
+          element={<TranslatorListPage />}
+        />
 
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />
@@ -177,9 +178,9 @@ export default function Routers() {
           element={<WhatIsBerufserlaubnisPage />}
         />
         <Route
-  path={pathList.vergleichsgutachten.path}
-  element={<VergleichsgutachtenPage />}
-/>
+          path={pathList.vergleichsgutachten.path}
+          element={<VergleichsgutachtenPage />}
+        />
         {/* Захищені маршрути */}
         <Route path="/data-collection" element={<DataCollectionPage />} />
         <Route

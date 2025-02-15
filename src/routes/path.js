@@ -78,4 +78,7 @@ export const pathList = {
   translation: {
     path: "/translation",
   },
+  abbreviations: {
+    path: "/abbreviations",
+  },
 };
