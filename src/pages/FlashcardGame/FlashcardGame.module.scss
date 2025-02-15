@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.flashcardGame {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Кнопка-шестерня для відкриття налаштувань (знизу праворуч) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3000;
+}
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Модальне вікно налаштувань */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2500;
+}
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: left;
+}
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.modalField label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.startButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.startButton:hover {
+  background-color: #013b6e;
+}
+
+/* Прогрес */
+.progress {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Флешкартка */
+.card {
+  width: 350px; /* На десктопі */
+  height: 210px;
+  margin: 0 auto;
+  perspective: 1000px;
+  position: relative;
+}
+@media (max-width: 600px) {
+    .card {
+      width: 90%;
+      min-height: 250px; /* встановлюємо мінімальну висоту */
+      margin: 0 auto;
+    }
+  }
+
+/* Контейнер внутрішнього обертання */
+.cardInner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Обличчя картки */
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cardFront h3, .cardBack p {
+  color: #013b6e;
+  font-size: 24px;
+  margin: 0;
+  word-wrap: break-word;
+}
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+/* Контейнер для іконок, що перевертаються разом із карткою */
+.iconsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.iconsContainer > * {
+  pointer-events: auto;
+}
+.infoIcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  color: #9099a2;
+  cursor: pointer;
+}
+.statusIcons {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  gap: 5px;
+}
+.checkIcon,
+.pauseIcon {
+  font-size: 18px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Контейнер для обличчя картки (з текстом) */
+.face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Кнопка "Далі" */
+.nextButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nextButton:hover {
+  background-color: #0056b3;
+}
+
+/* Прогрес для поточної картки */
+.cardProgress {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}

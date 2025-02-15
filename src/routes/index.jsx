@@ -35,6 +35,9 @@ const ExamEmplanationsPage = React.lazy(() =>
 const ExamExplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
+const FlashcardGame = React.lazy(() =>
+  import("../pages/FlashcardGame/FlashcardGame")
+);
 const ApprobationPage = React.lazy(() =>
   import("../pages/ApprobationPage/ApprobationPage")
 );
@@ -132,6 +135,7 @@ export default function Routers() {
           path={pathList.kenntnispruefung.path}
           element={<KenntnisPruefungPage />}
         />
+        <Route path="/flashcard-game" element={<FlashcardGame />} />
         <Route
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}

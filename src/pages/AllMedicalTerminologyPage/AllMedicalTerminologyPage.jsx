@@ -6,7 +6,7 @@ import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
-import { collection, doc, setDoc, deleteDoc } from "firebase/firestore";
+import { collection, doc, setDoc } from "firebase/firestore";
 import { FaCog, FaCheck, FaPause } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -36,7 +36,7 @@ const AllMedicalTerminologyPage = () => {
   const [showSaveModal, setShowSaveModal] = useState(false);
   const [collapsedCategories, setCollapsedCategories] = useState({});
 
-  // Додаємо новий стан для режиму фільтрації
+  // Стан для режиму фільтрації (аналог абревіатур)
   const [filterMode, setFilterMode] = useState("all");
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
@@ -108,7 +108,6 @@ const AllMedicalTerminologyPage = () => {
       selectedCategory === "Всі" || (term.categories || []).includes(selectedCategory);
     const matchesRegion =
       region === "Усі" || (term.regions || []).some((r) => unifyRegion(r) === region);
-    // Базова умова для фільтрації
     let base = matchesSearch && matchesCategory && matchesRegion;
     if (filterMode === "learned") return base && learned.includes(term.id);
     if (filterMode === "paused") return base && paused.includes(term.id);
@@ -172,6 +171,16 @@ const AllMedicalTerminologyPage = () => {
       alert("Сталася помилка. Спробуйте пізніше.");
     }
     setShowSaveModal(false);
+  };
+
+  // Функція переходу до гри з флешкартками. Передаємо параметри фільтрації через query-параметри.
+  const goToFlashcardGame = () => {
+    const queryParams = new URLSearchParams({
+      filterMode,
+      region,
+      category: selectedCategory,
+    }).toString();
+    window.location.href = `/flashcard-game?${queryParams}`;
   };
 
   return (
@@ -406,7 +415,7 @@ const AllMedicalTerminologyPage = () => {
               </button>
               <h2 className={styles.modalTitle}>Налаштування</h2>
               <p className={styles.modalSubtitle}>
-                Оберіть регіон, мову, категорію та режим фільтрації:
+                Оберіть регіон, категорію та режим фільтрації:
               </p>
               <div>
                 <label className={styles.modalLabel}>Регіон:</label>
@@ -468,13 +477,11 @@ const AllMedicalTerminologyPage = () => {
                   <option value="paused">Пауза</option>
                 </select>
               </div>
-              <div>
-                <label className={styles.modalLabel}>Показувати означення:</label>
-                <input
-                  type="checkbox"
-                  checked={showDefinitions}
-                  onChange={() => setShowDefinitions((prev) => !prev)}
-                />
+              {/* Кнопка для переходу до гри з флешкартками */}
+              <div style={{ marginTop: "20px" }}>
+                <button className={styles.actionButton} onClick={goToFlashcardGame}>
+                  Перейти до гри з флешкартками
+                </button>
               </div>
             </div>
           </div>
