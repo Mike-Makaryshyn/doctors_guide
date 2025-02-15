@@ -4,45 +4,34 @@ import { medicalAbbreviations } from "./medicalAbbreviations";
 import styles from "./AllMedicalAbbreviationsPage.module.scss";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
-import { FaCog, FaCheck } from "react-icons/fa";
+import { FaCog, FaCheck, FaPause } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
-// Функція для уніфікації регіону – замінюємо "Westfalen-Lippe" на "Nordrhein-Westfalen"
-const unifyRegion = (r) => {
-  if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
-  return r;
-};
+// Уніфікація регіону
+const unifyRegion = (r) => (r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r);
 
 const AllMedicalAbbreviationsPage = () => {
-  // Отримуємо глобальні параметри
   const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
 
-  // Стан регіону (за замовчуванням із global або "Bayern")
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Стан мови перекладу (за замовчуванням із global або "de")
   const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
 
-  // Стан для показу пояснень – true означає, що пояснення відображаються постійно
+  // Якщо true – пояснення показані, інакше не показуємо (inline-показ не реалізовано)
   const [showDefinitions, setShowDefinitions] = useState(true);
-
-  // Стан пошукового запиту
   const [searchTerm, setSearchTerm] = useState("");
-
-  // Стан для збереження вибраних елементів (якщо знадобиться)
   const [selectedDefinitions, setSelectedDefinitions] = useState([]);
   const [showSaveModal, setShowSaveModal] = useState(false);
 
-  // Стан модального вікна налаштувань
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const settingsModalRef = useRef(null);
   useEffect(() => {
@@ -61,49 +50,38 @@ const AllMedicalAbbreviationsPage = () => {
     };
   }, [isSettingsModalOpen]);
 
-  // Визначення, чи мобільний пристрій (ширина <= 768px)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Стан для збереження "вивчених" термінів (масив id)
+  // Один термін може бути лише або "Gelernt" (learned) або "Pausiert" (paused)
   const [learned, setLearned] = useState([]);
-
+  const [paused, setPaused] = useState([]);
   const toggleLearned = (id) => {
     setLearned((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
+    setPaused((prev) => prev.filter((item) => item !== id));
+  };
+  const togglePaused = (id) => {
+    setPaused((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+    setLearned((prev) => prev.filter((item) => item !== id));
   };
 
-  // Стан для окремо відкритих пояснень (для рядків, де showDefinitions === false)
-  const [explanationOpen, setExplanationOpen] = useState({});
-
-  const toggleExplanation = (id) => {
-    setExplanationOpen((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
-
-  // Отримуємо унікальні регіони із даних
   const uniqueRegions = Array.from(
-    new Set(
-      medicalAbbreviations.flatMap((abbr) =>
-        (abbr.regions || []).map((r) => unifyRegion(r))
-      )
-    )
+    new Set(medicalAbbreviations.flatMap((abbr) => (abbr.regions || []).map(unifyRegion)))
   );
   const regionOptions = ["Усі", ...uniqueRegions];
 
-  // Опції для мов із глобального стану
   const localLangOptions = (languages[selectedLanguage]?.options) || languages["de"].options;
 
-  // Фільтрація скорочень за пошуком та регіоном
+  // Фільтрація визначень
+  const [filterMode, setFilterMode] = useState("all");
   const filteredAbbreviations = medicalAbbreviations.filter((abbr) => {
     const matchesSearch =
       abbr.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -113,10 +91,14 @@ const AllMedicalAbbreviationsPage = () => {
       region === "Усі" ||
       !(abbr.regions && abbr.regions.length) ||
       (abbr.regions || []).some((r) => unifyRegion(r) === region);
-    return matchesSearch && matchesRegion;
+    let base = matchesSearch && matchesRegion;
+    if (filterMode === "learned") return base && learned.includes(abbr.id);
+    if (filterMode === "paused") return base && paused.includes(abbr.id);
+    if (filterMode === "unlearned")
+      return base && !learned.includes(abbr.id) && !paused.includes(abbr.id);
+    return base;
   });
 
-  // Функція збереження у PDF
   const saveToPDF = () => {
     const doc = new jsPDF();
     doc.setFont("Helvetica", "bold");
@@ -137,32 +119,24 @@ const AllMedicalAbbreviationsPage = () => {
       styles: { font: "Helvetica", fontSize: 10, cellPadding: 5 },
       headStyles: { fillColor: [52, 152, 219], textColor: 255, halign: "center" },
       bodyStyles: { textColor: [33, 33, 33] },
-      alternateRowStyles: { fillColor: [245, 245, 245] },
+      alternateRowStyles: {},
     });
     doc.save("selected_abbreviations.pdf");
     setShowSaveModal(false);
   };
 
-  // Функція збереження у особистий кабінет (поки що не реалізована)
   const saveToPersonalAccount = async () => {
-    alert("Funktion zum Speichern im persönlichen Konto ist noch nicht implementiert");
+    alert("Definitionen wurden gespeichert!");
     setShowSaveModal(false);
   };
 
-  // Обробники для зміни регіону та мови у налаштуваннях
-  const handleRegionChange = (e) => {
-    setRegion(unifyRegion(e.target.value));
-  };
-
-  const handleTranslationChange = (e) => {
-    setTranslationLanguage(e.target.value);
-  };
+  const handleRegionChange = (e) => setRegion(unifyRegion(e.target.value));
+  const handleTranslationChange = (e) => setTranslationLanguage(e.target.value);
 
   return (
     <MainLayout>
       <div className={styles.allMedicalAbbreviationsPage}>
         <h1>Medizinische Abkürzungen</h1>
-        {/* Пошук */}
         <input
           type="text"
           placeholder="Suche..."
@@ -171,31 +145,25 @@ const AllMedicalAbbreviationsPage = () => {
           className={styles.searchInput}
         />
 
-        {/* Відображення скорочень */}
         {isMobile ? (
           <div className={styles.tilesContainer}>
             {filteredAbbreviations.map((abbr) => (
               <div
                 key={abbr.id}
-                className={`${styles.tile} ${learned.includes(abbr.id) ? styles.learned : ""}`}
+                className={`${styles.tile} ${
+                  learned.includes(abbr.id) ? styles.learned : ""
+                } ${paused.includes(abbr.id) ? styles.paused : ""}`}
               >
-                {/* Галочка у правому верхньому кутку */}
-                <div className={styles.checkIcon} onClick={() => toggleLearned(abbr.id)}>
+                {/* Für mobile Tiles: Icons oben links, inline vor Inhalt */}
+                <span className={styles.checkIcon} onClick={() => toggleLearned(abbr.id)} title="Als erledigt markieren">
                   <FaCheck />
-                </div>
-                <h3 className={styles.tileHeader}>
-                  {/* Для мобільних – просто виводимо текст без Tippy */}
-                  {abbr.abbreviation}
-                </h3>
-                <p
-                  className={styles.tileDescription}
-                  onClick={() => {
-                    if (!showDefinitions) toggleExplanation(abbr.id);
-                  }}
-                >
-                  {abbr.name}
-                </p>
-                {showDefinitions ? (
+                </span>
+                <span className={styles.pauseIcon} onClick={() => togglePaused(abbr.id)} title="Pause">
+                  <FaPause />
+                </span>
+                <h3 className={styles.tileHeader}>{abbr.abbreviation}</h3>
+                <p className={styles.tileDescription}>{abbr.name}</p>
+                {showDefinitions && (
                   <p className={styles.tileExplanation}>
                     <Tippy
                       content={abbr.explanation[translationLanguage] || abbr.explanation.de}
@@ -206,12 +174,6 @@ const AllMedicalAbbreviationsPage = () => {
                       <span className={styles.clickableCell}>{abbr.explanation.de}</span>
                     </Tippy>
                   </p>
-                ) : (
-                  explanationOpen[abbr.id] && (
-                    <p className={styles.tileExplanation}>
-                      {abbr.explanation.de}
-                    </p>
-                  )
                 )}
               </div>
             ))}
@@ -229,27 +191,22 @@ const AllMedicalAbbreviationsPage = () => {
               {filteredAbbreviations.map((abbr) => (
                 <tr
                   key={abbr.id}
-                  className={learned.includes(abbr.id) ? styles.learned : ""}
+                  className={`
+                    ${learned.includes(abbr.id) ? styles.learned : ""} 
+                    ${paused.includes(abbr.id) ? styles.paused : ""}
+                  `}
                 >
                   <td className={styles.abbreviationCell}>
-                    {abbr.abbreviation}
-                    <div className={styles.checkIconDesktop} onClick={() => toggleLearned(abbr.id)}>
+                    {/* Icons inline vor dem Text */}
+                    <span className={styles.checkIconDesktop} onClick={() => toggleLearned(abbr.id)} title="Als erledigt markieren">
                       <FaCheck />
-                    </div>
+                    </span>
+                    <span className={styles.pauseIconDesktop} onClick={() => togglePaused(abbr.id)} title="Pause">
+                      <FaPause />
+                    </span>
+                    {abbr.abbreviation}
                   </td>
-                  <td
-                    className={styles.nameCell}
-                    onClick={() => {
-                      if (!showDefinitions) toggleExplanation(abbr.id);
-                    }}
-                  >
-                    {abbr.name}
-                    {!showDefinitions && explanationOpen[abbr.id] && (
-                      <div className={styles.inlineExplanation}>
-                        {abbr.explanation.de}
-                      </div>
-                    )}
-                  </td>
+                  <td className={styles.nameCell}>{abbr.name}</td>
                   {showDefinitions && (
                     <td className={styles.explanationCell}>
                       <Tippy
@@ -268,7 +225,6 @@ const AllMedicalAbbreviationsPage = () => {
           </table>
         )}
 
-        {/* Модальне вікно збереження */}
         {showSaveModal && (
           <div className={styles.modal}>
             <div className={styles.modalContent}>
@@ -289,14 +245,12 @@ const AllMedicalAbbreviationsPage = () => {
           </div>
         )}
 
-        {/* Кнопка налаштувань */}
         <div className={styles.bottomRightSettings}>
           <button className={styles.settingsButton} onClick={() => setIsSettingsModalOpen(true)}>
             <FaCog />
           </button>
         </div>
 
-        {/* Модальне вікно налаштувань */}
         {isSettingsModalOpen && (
           <div className={window.innerWidth > 768 ? styles.popupContainerDesktop : styles.popupContainerMobile}>
             <div className={styles.popup} ref={settingsModalRef}>
@@ -305,7 +259,7 @@ const AllMedicalAbbreviationsPage = () => {
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <p className={styles.modalSubtitle}>
-                Wählen Sie Region und Sprache (Kategorie wird derzeit nicht verwendet):
+                Wählen Sie Region, Sprache und weitere Optionen:
               </p>
               <div>
                 <label className={styles.modalLabel}>Region:</label>
@@ -342,6 +296,15 @@ const AllMedicalAbbreviationsPage = () => {
                   checked={showDefinitions}
                   onChange={() => setShowDefinitions((prev) => !prev)}
                 />
+              </div>
+              <div>
+                <label className={styles.modalLabel}>Filtermodus:</label>
+                <select className={styles.modalSelect} value={filterMode} onChange={(e) => setFilterMode(e.target.value)}>
+                  <option value="all">Alle Definitionen</option>
+                  <option value="learned">Gelernt</option>
+                  <option value="unlearned">Nicht gelernt</option>
+                  <option value="paused">Pausiert</option>
+                </select>
               </div>
             </div>
           </div>

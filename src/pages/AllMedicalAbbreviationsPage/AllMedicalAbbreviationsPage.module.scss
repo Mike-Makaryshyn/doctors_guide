@@ -14,7 +14,7 @@
   font-size: 16px;
 }
 
-/* Plattenanzeige (Tiles) */
+/* Plattenanzeige (Tiles) für mobile */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
@@ -27,8 +27,9 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
+  /* Standardbox-shadow */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -62,31 +63,68 @@
   line-height: 1.4;
 }
 
-/* Check Icon in Tiles */
-.checkIcon {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 16px;
+/* Inline Icons */
+.inlineIcons {
+  display: inline-flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.inlineIcon {
+  font-size: 14px;
   color: #4caf50;
   cursor: pointer;
 }
 
-/* Für klickbare Elemente */
-.clickableCell {
+/* Für mobile Tiles: Icons – immer oben links, inline vor dem Inhalt */
+.checkIcon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 16px;
+  color: #4caf50;
   cursor: pointer;
+}
+.pauseIcon {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  font-size: 16px;
+  color: #f0ad4e;
+  cursor: pointer;
+}
+
+/* Standard-Styling für mobile Tiles bleibt unverändert */
+
+/* Wenn Tile als "gelernt" oder "pausiert" markiert wird, ändert sich nur das Styling.
+   Die Tile behält ihre ursprünglichen Maße. */
+.learned {
+  border-radius: 20px !important;
+  background: #2a7c6f !important;
+  box-shadow: inset 20px 20px 36px #194941, inset -20px -20px 36px #3baf9d !important;
+  color: #fff !important;
+}
+.paused {
+  border-radius: 20px !important;
+  background: #ff9800 !important;
+  box-shadow: inset 8px 8px 16px #854f00, inset -8px -8px 16px #ffe100 !important;
+  color: #fff !important;
 }
 
 /* Tabelle für Desktop */
 .terminologyTable {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-top: 20px;
   background: #ffffff;
+  border-radius: 12px; /* abgerundeter Container */
+  overflow: hidden;
+  /* Keine Rahmen oder Schachmuster */
 }
 .terminologyTable th,
 .terminologyTable td {
-  border: 1px solid #ddd;
+  /* Rahmen entfernen */
+  border: none;
   padding: 10px;
   text-align: left;
   font-size: 14px;
@@ -111,29 +149,68 @@
   width: 70%;
 }
 
-.terminologyTable tr:nth-child(odd) {
-  background-color: #ffffff;
+/* In der ersten Spalte der Desktop-Tabelle: Icons inline vor dem Text */
+.abbreviationCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.terminologyTable tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.terminologyTable tr:hover {
-  background-color: #eaf2f8;
-}
-
-/* Check Icon in Table (in the Abkürzung cell) */
 .checkIconDesktop {
-  position: absolute;
-  top: 4px;
-  right: 4px;
   font-size: 14px;
   color: #4caf50;
   cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.checkIconDesktop:hover {
+  color: #388e3c;
+  transform: scale(1.1);
+}
+.pauseIconDesktop {
+  font-size: 14px;
+  color: #f0ad4e;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.pauseIconDesktop:hover {
+  color: #d48806;
+  transform: scale(1.1);
 }
 
-/* Learned - verändere Hintergrundfarbe (z. B. ein helles Grün) */
+/* Für Zeilen mit "gelernten" bzw. "pausierten" Definitionen: Ganze Zeile als Block */
 .learned {
-  background-color: #d4edda !important;
+  border-radius: 20px !important;
+  background: #2a7c6f !important;
+  box-shadow: inset 20px 20px 36px #194941, inset -20px -20px 36px #3baf9d !important;
+  color: #fff !important;
+}
+.learned td {
+  border: none !important;
+}
+.paused {
+  border-radius: 20px !important;
+  background: #ff9800 !important;
+  box-shadow: inset 8px 8px 16px #854f00, inset -8px -8px 16px #ffe100 !important;
+  color: #fff !important;
+}
+.paused td {
+  border: none !important;
+}
+
+/* Filter-Select in den Einstellungen */
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
 /* Einstellungen-Button */
@@ -168,7 +245,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +255,7 @@
   background: white;
   padding: 25px 20px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: relative;
   text-align: center;
   width: 300px;
@@ -224,7 +301,7 @@
   padding: 25px 20px 20px;
   width: 300px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: relative;
   text-align: center;
 }
@@ -248,7 +325,7 @@
   border-radius: 50%;
 }
 .modalCloseButton:hover {
-  background-color: rgba(237, 10, 10, 0);
+  background-color: rgba(237,10,10,0);
   transform: scale(0.9);
 }
 .modalTitle {
@@ -268,20 +345,6 @@
   color: #444;
   margin: 6px 0 4px;
   display: block;
-}
-.modalSelect {
-  width: 100%;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.2s ease;
-  margin-bottom: 12px;
-}
-.modalSelect:focus {
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Tippy */
