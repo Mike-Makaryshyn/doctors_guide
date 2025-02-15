@@ -7,51 +7,38 @@ import "jspdf-autotable";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { collection, doc, setDoc, deleteDoc } from "firebase/firestore";
-import { FaCog } from "react-icons/fa";
+import { FaCog, FaCheck, FaPause } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-// Функція для уніфікації регіону – замінюємо "Westfalen-Lippe" на "Nordrhein-Westfalen"
-const unifyRegion = (r) => {
-  if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
-  return r;
-};
+// Функція для уніфікації регіону
+const unifyRegion = (r) => (r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r);
 
 const AllMedicalTerminologyPage = () => {
-  // Отримуємо глобальні параметри
   const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
 
-  // Стан регіону (за замовчуванням із global або "Bayern")
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Стан мови перекладу (за замовчуванням із global або "de")
   const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
 
-  // Стан для вибору категорії через випадаючий список (початкове значення – "Всі")
   const [selectedCategory, setSelectedCategory] = useState("Всі");
-
-  // Стан для показу означень (керується через модальне вікно)
   const [showDefinitions, setShowDefinitions] = useState(true);
-
-  // Стан пошукового запиту
   const [searchTerm, setSearchTerm] = useState("");
-
-  // Стан для збереження визначень (збереження залишено, хоча чекбокси видалені)
   const [selectedDefinitions, setSelectedDefinitions] = useState([]);
   const [showSaveModal, setShowSaveModal] = useState(false);
-
-  // Стан для керування згортанням категорій
   const [collapsedCategories, setCollapsedCategories] = useState({});
 
-  // Стан модального вікна налаштувань (фільтри)
+  // Додаємо новий стан для режиму фільтрації
+  const [filterMode, setFilterMode] = useState("all");
+
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const settingsModalRef = useRef(null);
   useEffect(() => {
@@ -70,7 +57,6 @@ const AllMedicalTerminologyPage = () => {
     };
   }, [isSettingsModalOpen]);
 
-  // Визначення, чи мобільний пристрій (ширина <= 768px)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => {
@@ -80,7 +66,23 @@ const AllMedicalTerminologyPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Унікальні регіони з даних
+  // Стан для "вивчені" та "паузовані"
+  const [learned, setLearned] = useState([]);
+  const [paused, setPaused] = useState([]);
+
+  const toggleLearned = (id) => {
+    setLearned((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+    setPaused((prev) => prev.filter((item) => item !== id));
+  };
+  const togglePaused = (id) => {
+    setPaused((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+    setLearned((prev) => prev.filter((item) => item !== id));
+  };
+
   const uniqueRegions = Array.from(
     new Set(
       medicalTerms.flatMap((term) =>
@@ -90,27 +92,28 @@ const AllMedicalTerminologyPage = () => {
   );
   const regionOptions = ["Усі", ...uniqueRegions];
 
-  // Унікальні категорії з даних
   const uniqueCategories = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories || []))
   );
 
-  // Опції для мов із глобального стану
   const localLangOptions = (languages[selectedLanguage]?.options) || languages["de"].options;
 
-  // Фільтрація термінів: за пошуком, вибраною категорією та регіоном
+  // Фільтрація термінів
   const filteredTerms = medicalTerms.filter((term) => {
     const matchesSearch =
       term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
-      selectedCategory === "Всі" ||
-      (term.categories || []).includes(selectedCategory);
+      selectedCategory === "Всі" || (term.categories || []).includes(selectedCategory);
     const matchesRegion =
-      region === "Усі" ||
-      (term.regions || []).some((r) => unifyRegion(r) === region);
-    return matchesSearch && matchesCategory && matchesRegion;
+      region === "Усі" || (term.regions || []).some((r) => unifyRegion(r) === region);
+    // Базова умова для фільтрації
+    let base = matchesSearch && matchesCategory && matchesRegion;
+    if (filterMode === "learned") return base && learned.includes(term.id);
+    if (filterMode === "paused") return base && paused.includes(term.id);
+    if (filterMode === "unlearned") return base && !learned.includes(term.id) && !paused.includes(term.id);
+    return base;
   });
 
   // Групування термінів за категоріями
@@ -124,18 +127,12 @@ const AllMedicalTerminologyPage = () => {
     });
   });
 
-  // Обробники у модальному вікні
-  const handleRegionChange = (e) => {
-    setRegion(unifyRegion(e.target.value));
-  };
-  const handleTranslationChange = (e) => {
-    setTranslationLanguage(e.target.value);
-  };
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
-  };
+  const handleRegionChange = (e) => setRegion(unifyRegion(e.target.value));
+  const handleTranslationChange = (e) => setTranslationLanguage(e.target.value);
+  const handleCategoryChange = (e) => setSelectedCategory(e.target.value);
+  const handleFilterModeChange = (e) => setFilterMode(e.target.value);
 
-  // Функції збереження (якщо знадобиться)
+  // Функції збереження
   const saveToPDF = () => {
     const doc = new jsPDF();
     doc.setFont("Helvetica", "bold");
@@ -191,9 +188,8 @@ const AllMedicalTerminologyPage = () => {
           className={styles.searchInput}
         />
 
-        {/* Відображення визначень за категоріями */}
+        {/* Відображення термінів за категоріями */}
         {isMobile ? (
-          // Мобільний режим – плитки (карточки)
           <div className={styles.tilesContainer}>
             {Object.keys(termsByCategory).map((category) => (
               <div key={category} className={styles.categorySection}>
@@ -213,7 +209,27 @@ const AllMedicalTerminologyPage = () => {
                 </h2>
                 {!collapsedCategories[category] &&
                   termsByCategory[category].map((term) => (
-                    <div key={term.id} className={styles.tile}>
+                    <div
+                      key={term.id}
+                      className={`${styles.tile} ${
+                        learned.includes(term.id) ? styles.learned : ""
+                      } ${paused.includes(term.id) ? styles.paused : ""}`}
+                    >
+                      {/* Іконки для вивчених/паузованих */}
+                      <span
+                        className={styles.checkIcon}
+                        onClick={() => toggleLearned(term.id)}
+                        title="Вивчене"
+                      >
+                        <FaCheck />
+                      </span>
+                      <span
+                        className={styles.pauseIcon}
+                        onClick={() => togglePaused(term.id)}
+                        title="Пауза"
+                      >
+                        <FaPause />
+                      </span>
                       <h3 className={styles.tileHeader}>{term.lat}</h3>
                       <p className={styles.tileDescription}>
                         {translationLanguage !== "de" ? (
@@ -233,7 +249,10 @@ const AllMedicalTerminologyPage = () => {
                         <p className={styles.tileExplanation}>
                           {translationLanguage !== "de" ? (
                             <Tippy
-                              content={term[translationLanguage + "Explanation"] || "Немає перекладу"}
+                              content={
+                                term[translationLanguage + "Explanation"] ||
+                                "Немає перекладу"
+                              }
                               trigger="click"
                               interactive={true}
                               placement="bottom"
@@ -251,7 +270,6 @@ const AllMedicalTerminologyPage = () => {
             ))}
           </div>
         ) : (
-          // Десктопний режим – таблиця
           Object.keys(termsByCategory).map((category) => (
             <div key={category} className={styles.categorySection}>
               <h2
@@ -279,8 +297,30 @@ const AllMedicalTerminologyPage = () => {
                   </thead>
                   <tbody>
                     {termsByCategory[category].map((term) => (
-                      <tr key={term.id}>
-                        <td>{term.lat}</td>
+                      <tr
+                        key={term.id}
+                        className={`
+                          ${learned.includes(term.id) ? styles.learned : ""}
+                          ${paused.includes(term.id) ? styles.paused : ""}
+                        `}
+                      >
+                        <td className={styles.termCell}>
+                          <span
+                            className={styles.checkIconDesktop}
+                            onClick={() => toggleLearned(term.id)}
+                            title="Вивчене"
+                          >
+                            <FaCheck />
+                          </span>
+                          <span
+                            className={styles.pauseIconDesktop}
+                            onClick={() => togglePaused(term.id)}
+                            title="Пауза"
+                          >
+                            <FaPause />
+                          </span>
+                          {term.lat}
+                        </td>
                         <td>
                           {translationLanguage !== "de" ? (
                             <Tippy
@@ -299,7 +339,10 @@ const AllMedicalTerminologyPage = () => {
                           <td>
                             {translationLanguage !== "de" ? (
                               <Tippy
-                                content={term[translationLanguage + "Explanation"] || "Немає перекладу"}
+                                content={
+                                  term[translationLanguage + "Explanation"] ||
+                                  "Немає перекладу"
+                                }
                                 trigger="click"
                                 interactive={true}
                                 placement="right"
@@ -320,12 +363,12 @@ const AllMedicalTerminologyPage = () => {
           ))
         )}
 
-        {/* Модальне вікно для збереження (якщо потрібно) */}
+        {/* Модальне вікно для збереження */}
         {showSaveModal && (
           <div className={styles.modal}>
             <div className={styles.modalContent}>
               <h2>Куди зберегти?</h2>
-              <p>Оберіть, як зберегти визначення:</p>
+              <p>Оберіть спосіб збереження:</p>
               <div className={styles.modalActions}>
                 <button className={styles.actionButton} onClick={saveToPersonalAccount}>
                   Особистий кабінет
@@ -341,14 +384,14 @@ const AllMedicalTerminologyPage = () => {
           </div>
         )}
 
-        {/* Кнопка шестерні для відкриття модального вікна фільтрів */}
+        {/* Кнопка для відкриття налаштувань */}
         <div className={styles.bottomRightSettings}>
           <button className={styles.settingsButton} onClick={() => setIsSettingsModalOpen(true)}>
             <FaCog />
           </button>
         </div>
 
-        {/* Модальне вікно фільтрів */}
+        {/* Модальне вікно налаштувань */}
         {isSettingsModalOpen && (
           <div
             className={
@@ -363,7 +406,7 @@ const AllMedicalTerminologyPage = () => {
               </button>
               <h2 className={styles.modalTitle}>Налаштування</h2>
               <p className={styles.modalSubtitle}>
-                Оберіть регіон, мову та категорію, а також налаштуйте показ означень:
+                Оберіть регіон, мову, категорію та режим фільтрації:
               </p>
               <div>
                 <label className={styles.modalLabel}>Регіон:</label>
@@ -410,6 +453,19 @@ const AllMedicalTerminologyPage = () => {
                       {cat}
                     </option>
                   ))}
+                </select>
+              </div>
+              <div>
+                <label className={styles.modalLabel}>Режим фільтрації:</label>
+                <select
+                  value={filterMode}
+                  onChange={handleFilterModeChange}
+                  className={styles.modalSelect}
+                >
+                  <option value="all">Всі</option>
+                  <option value="learned">Вивчені</option>
+                  <option value="unlearned">Не вивчені</option>
+                  <option value="paused">Пауза</option>
                 </select>
               </div>
               <div>

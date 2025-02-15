@@ -3,11 +3,10 @@
 .allMedicalTerminologyPage {
   padding: 20px;
   font-family: "Poppins", sans-serif;
-  /* Блокуємо горизонтальну прокрутку */
   overflow-x: hidden;
 }
 
-/* Пошук */
+/* Suchfeld */
 .searchInput {
   width: 100%;
   padding: 10px;
@@ -15,7 +14,7 @@
   font-size: 16px;
 }
 
-/* Групування за категоріями */
+/* Gruppierung nach Kategorien */
 .categorySection {
   margin-bottom: 40px;
 }
@@ -37,24 +36,22 @@
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
-.collapsed {
-  transform: rotate(180deg);
-}
 
-/* Плиткове відображення */
+/* Tiles/Karten (Mobile) */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: flex-start;
-  overflow-x: hidden; /* блокування горизонтальної прокрутки */
+  overflow-x: hidden;
 }
 .tile {
+  position: relative;
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -88,12 +85,140 @@
   line-height: 1.4;
 }
 
-/* Для клікабельних елементів */
+/* Clickable Elemente */
 .clickableCell {
   cursor: pointer;
 }
 
-/* Кнопка шестерні */
+/* Learned & Paused States */
+.learned {
+  border-radius: 20px !important;
+  background: #2a7c6f !important;
+  box-shadow: inset 20px 20px 36px #194941, inset -20px -20px 36px #3baf9d !important;
+  color: #fff !important;
+}
+.paused {
+  border-radius: 20px !important;
+  background: #ff9800 !important;
+  box-shadow: inset 8px 8px 16px #854f00, inset -8px -8px 16px #ffe100 !important;
+  color: #fff !important;
+}
+
+/* Icons in Tiles (Mobile) */
+.checkIcon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 16px;
+  color: #4caf50;
+  cursor: pointer;
+}
+.pauseIcon {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  font-size: 16px;
+  color: #f0ad4e;
+  cursor: pointer;
+}
+
+/* Tabelle (Desktop) */
+.terminologyTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #ffffff;
+}
+.terminologyTable th,
+.terminologyTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+.terminologyTable th {
+  background-color: #f4f6f7;
+  color: #555;
+}
+.terminologyTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.terminologyTable tr:hover {
+  background-color: #eaf2f8;
+}
+
+/* Icons in der Tabelle (Desktop) */
+.termCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkIconDesktop {
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.checkIconDesktop:hover {
+  color: #388e3c;
+  transform: scale(1.1);
+}
+.pauseIconDesktop {
+  font-size: 14px;
+  color: #f0ad4e;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.pauseIconDesktop:hover {
+  color: #d48806;
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalContent {
+  background: white;
+  padding: 25px 20px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  width: 300px;
+}
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.closeButton:hover {
+  background-color: #c0392b;
+}
+
+/* Settings Button */
 .bottomRightSettings {
   position: fixed;
   bottom: 20px;
@@ -118,58 +243,13 @@
   transform: scale(1.1);
 }
 
-/* Модальне вікно (універсальне) */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.modalContent {
-  background: white;
-  padding: 25px 20px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  position: relative;
-  text-align: center;
-  width: 300px;
-  font-family: "Poppins", sans-serif;
-}
-.modalActions {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-.closeButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  &:hover {
-    background-color: #c0392b;
-  }
-}
-
-/* Модальне вікно налаштувань (popup) */
-/* Для десктопа */
+/* Popup Einstellungen */
 .popupContainerDesktop {
   position: fixed;
   bottom: 70px;
   right: 20px;
   z-index: 2000;
 }
-/* Для мобільних: на всю ширину знизу */
 .popupContainerMobile {
   position: fixed;
   left: 0;
@@ -187,7 +267,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: relative;
   text-align: center;
-  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 768px) {
   .popup {
@@ -195,8 +274,6 @@
     border-radius: 12px 12px 0 0;
   }
 }
-
-/* Кнопка закриття модальних вікон */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -214,20 +291,17 @@
   background-color: rgba(237,10,10,0);
   transform: scale(0.9);
 }
-
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
   color: #013b6e;
   margin-bottom: 12px;
 }
-
 .modalSubtitle {
   font-size: 14px;
   color: #333;
   margin-bottom: 16px;
 }
-
 .modalLabel {
   font-size: 14px;
   font-weight: 500;
@@ -235,7 +309,6 @@
   margin: 6px 0 4px;
   display: block;
 }
-
 .modalSelect {
   width: 100%;
   font-size: 14px;
@@ -251,36 +324,7 @@
   box-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 
-/* Для таблиці на десктопах */
-.terminologyTable {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background: #ffffff; /* Білий фон для таблиці */
-}
-.terminologyTable th,
-.terminologyTable td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-  font-size: 14px;
-  color: #333;
-}
-.terminologyTable th {
-  background-color: #f4f6f7;
-  color: #555;
-}
-.terminologyTable tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-.terminologyTable tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.terminologyTable tr:hover {
-  background-color: #eaf2f8;
-}
-
-/* Налаштування для Tippy */
+/* Tippy */
 :global(.tippy-box) {
   font-family: "Poppins", sans-serif;
 }
