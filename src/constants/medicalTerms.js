@@ -26,9 +26,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -58,9 +62,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -90,9 +105,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -122,9 +141,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -154,9 +177,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -186,9 +213,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -218,9 +249,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -250,9 +292,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -282,9 +328,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -314,9 +364,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -346,9 +400,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -378,9 +436,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -410,9 +472,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -442,9 +514,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -474,9 +552,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -506,9 +592,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -538,9 +631,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -570,9 +668,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -602,9 +704,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -634,9 +740,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -666,9 +784,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -697,7 +825,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -727,9 +863,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -755,6 +895,10 @@ export const medicalTerms = [
     "arExplanation": "العضلات الثينارية، تشمل العضلات المثنية القصيرة للإبهام وهي حاسمة لوظيفة الإمساك باليد.",
     "categories": [
       "Anatomie - Weichteile"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -780,6 +924,9 @@ export const medicalTerms = [
     "arExplanation": "الهايبوثينار، مماثلًا للثينار، يشكل مجموعة العضلات على الجانب الإنسي لراحة اليد، والتي تتيح الحركات الصغيرة للخنصر.",
     "categories": [
       "Anatomie - Weichteile"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -809,9 +956,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -841,9 +994,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -873,9 +1038,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -905,9 +1078,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -937,9 +1118,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -969,9 +1158,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1001,9 +1197,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1033,9 +1234,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1065,9 +1270,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1097,9 +1306,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1129,9 +1342,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1161,9 +1384,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1193,9 +1420,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1225,9 +1456,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1257,9 +1493,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1289,9 +1529,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1321,9 +1566,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1353,9 +1605,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1385,9 +1646,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1417,9 +1689,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1449,9 +1729,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1481,9 +1765,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1513,9 +1805,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1545,9 +1841,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1577,9 +1882,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1609,9 +1918,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1641,9 +1954,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1673,9 +1990,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1705,9 +2026,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1737,9 +2062,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1769,9 +2098,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1801,9 +2137,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1833,9 +2179,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1865,9 +2216,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1897,9 +2256,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1929,9 +2292,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1961,9 +2331,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -1993,9 +2373,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2025,9 +2409,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2057,9 +2445,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2089,9 +2481,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2121,9 +2517,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2153,9 +2555,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2185,9 +2591,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2217,9 +2627,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2249,9 +2666,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2281,9 +2705,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2313,9 +2741,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2345,9 +2777,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2377,9 +2813,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2409,9 +2849,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2441,9 +2886,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2473,9 +2923,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2505,9 +2962,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2537,9 +2998,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2569,9 +3042,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2601,9 +3086,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2633,9 +3130,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2665,9 +3169,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2697,9 +3205,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2729,9 +3241,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2761,9 +3284,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2793,9 +3320,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2825,9 +3360,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2857,9 +3397,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2889,9 +3440,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2921,9 +3476,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2953,9 +3512,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -2985,9 +3553,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3017,9 +3594,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3049,9 +3637,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3081,9 +3674,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3113,9 +3716,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3145,9 +3753,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3177,9 +3789,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3209,9 +3827,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3241,9 +3865,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3273,9 +3907,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3305,9 +3945,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3337,9 +3981,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3369,9 +4017,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3401,9 +4060,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3433,9 +4096,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3465,9 +4132,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3497,9 +4168,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3529,9 +4204,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3561,9 +4240,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3593,9 +4276,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3625,9 +4320,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3657,9 +4356,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3689,9 +4392,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3721,9 +4428,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3753,9 +4464,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3785,9 +4500,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3817,9 +4536,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3849,9 +4579,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3881,9 +4615,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3913,9 +4651,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3945,9 +4688,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -3977,9 +4724,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4009,9 +4760,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4041,9 +4796,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4069,6 +4828,9 @@ export const medicalTerms = [
     "arExplanation": "الشق؛ شق أو تجويف تشريحي في عضو أو عظم، يلعب دورًا مهمًا في تحديد الحدود ودعم الهياكل.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -4098,9 +4860,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4130,9 +4900,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4162,9 +4940,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4194,9 +4980,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4222,6 +5020,10 @@ export const medicalTerms = [
     "arExplanation": "الخزعة؛ أخذ عينة من النسيج للفحص المجهري، يستخدم لتشخيص الأمراض أو تحديد شدتها.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -4247,6 +5049,10 @@ export const medicalTerms = [
     "arExplanation": "الزوائد اللحمية؛ نمو حميد في الأعضاء الجوفية مثل الأمعاء أو الجيوب الأنفية، يبرز من سطح الغشاء المخاطي وعادة ما يكون بلا أعراض.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -4272,6 +5078,9 @@ export const medicalTerms = [
     "arExplanation": "استئصال الزوائد اللحمية؛ إزالة الزوائد اللحمية، عادة في الجهاز الهضمي، باستخدام تقنيات منظارية، غالبًا للوقاية من سرطان القولون والمستقيم.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -4301,9 +5110,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4329,6 +5150,9 @@ export const medicalTerms = [
     "arExplanation": "مسمار القدم؛ مناطق متصلبة من الجلد، شائعة في اليدين أو القدمين، تنتج عن الضغط المتكرر أو الاحتكاك، عادةً غير مؤلمة.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -4358,9 +5182,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4390,8 +5222,10 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -4421,7 +5255,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4450,9 +5292,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4482,9 +5329,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4512,7 +5366,15 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4541,9 +5403,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4572,7 +5439,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4601,9 +5476,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4633,9 +5517,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4665,9 +5556,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4695,9 +5595,14 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4725,7 +5630,14 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4754,9 +5666,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4782,6 +5700,10 @@ export const medicalTerms = [
     "arExplanation": "الداء الرتجي؛ حالة تشكيل الرتج في جدار الأمعاء، عادةً في القولون، غالبًا دون أعراض، ولكن مع خطر الالتهاب والنزيف.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -4811,9 +5733,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4843,8 +5777,8 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -4874,9 +5808,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4906,9 +5848,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4938,9 +5888,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -4966,6 +5924,12 @@ export const medicalTerms = [
     "arExplanation": "البتر؛ الإزالة الجراحية لجزء من الجسم، يتم إجراؤها عادة في حالات العدوى الشديدة، اضطرابات الدورة الدموية أو الإصابات الصدمية.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -4995,9 +5959,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5026,8 +5995,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5057,9 +6026,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5089,9 +6062,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5121,9 +6106,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5153,9 +6150,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5184,8 +6193,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -5211,6 +6220,9 @@ export const medicalTerms = [
     "arExplanation": "صديدي؛ يصف حالة أو طبيعة مادة أو جرح يحتوي على صديد أو يميل إلى تكوين الصديد، غالبًا ما يرتبط بالعدوى.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5240,9 +6252,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5270,9 +6294,15 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5301,8 +6331,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5332,9 +6361,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5362,8 +6399,8 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5391,7 +6428,8 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5422,7 +6460,13 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -5451,9 +6495,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5481,7 +6530,14 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5510,9 +6566,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5541,9 +6608,19 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5573,9 +6650,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5604,7 +6686,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5634,9 +6725,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5662,6 +6759,10 @@ export const medicalTerms = [
     "arExplanation": "انبثاث؛ انتشار الخلايا السرطانية من الورم الأولي إلى أماكن بعيدة في الجسم حيث تشكل أورامًا ثانوية.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -5687,6 +6788,9 @@ export const medicalTerms = [
     "arExplanation": "الباثولوجيا؛ دراسة الأمراض وأسبابها وتأثيراتها. تحلل عينات الأنسجة والخلايا لتشخيص الأمراض وفهم مسبباتها.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5714,9 +6818,15 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5742,6 +6852,9 @@ export const medicalTerms = [
     "arExplanation": "العلاج الإشعاعي؛ شكل من أشكال العلاج يستخدم الأشعة عالية الطاقة لتدمير الخلايا السرطانية أو تثبيط نموها. يستخدم غالبًا في أنواع مختلفة من السرطان.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5767,6 +6880,9 @@ export const medicalTerms = [
     "arExplanation": "الأورام؛ فرع طبي مخصص لتشخيص وعلاج وبحث السرطان. يعمل الأطباء الأوراميون على تطوير علاجات فعالة ضد السرطان.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5794,7 +6910,8 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5824,9 +6941,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5852,6 +6981,9 @@ export const medicalTerms = [
     "arExplanation": "التطور؛ العملية البيولوجية لتطور التدريجي للكائنات الحية عبر الأجيال، مما يؤدي إلى تغيرات في الصفات الجينية وظهور أنواع جديدة.",
     "categories": [
       "Chirurgie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5880,8 +7012,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -5911,9 +7042,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5943,9 +7085,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -5975,9 +7126,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6005,7 +7164,14 @@ export const medicalTerms = [
       "Chirurgie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6035,9 +7201,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6067,9 +7244,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6097,7 +7286,9 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -6127,9 +7318,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6157,7 +7359,11 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -6187,7 +7393,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6215,8 +7428,10 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -6246,9 +7461,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6278,9 +7505,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6310,9 +7547,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6341,7 +7582,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -6371,9 +7619,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6403,9 +7655,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6435,9 +7692,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6467,9 +7728,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6499,9 +7764,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6531,9 +7800,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6559,6 +7839,9 @@ export const medicalTerms = [
     "arExplanation": "الألبينية؛ اضطراب جيني مع إنتاج غير كافٍ للميلانين، يؤدي إلى بشرة وشعر وعيون فاتحة.",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -6588,9 +7871,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6616,6 +7909,10 @@ export const medicalTerms = [
     "arExplanation": "النحت؛ فقدان الأنسجة بفعل القوى الفيزيائية أو العمليات المرضية، مما يؤدي إلى فقدان سطحي للمادة.",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -6645,9 +7942,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6675,7 +7979,13 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6705,9 +8015,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6737,7 +8057,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6765,8 +8094,11 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -6796,7 +8128,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6822,6 +8164,9 @@ export const medicalTerms = [
     "arExplanation": "",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -6849,8 +8194,8 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -6878,7 +8223,8 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -6906,9 +8252,16 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -6934,6 +8287,11 @@ export const medicalTerms = [
     "arExplanation": "",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -6961,8 +8319,10 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
+      "Bayern",
       "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -6991,7 +8351,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -7020,7 +8383,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7050,9 +8420,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7078,6 +8460,10 @@ export const medicalTerms = [
     "arExplanation": "",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -7105,7 +8491,8 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7135,9 +8522,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7163,6 +8562,9 @@ export const medicalTerms = [
     "arExplanation": "",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7192,9 +8594,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7224,9 +8638,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7255,8 +8673,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7282,6 +8699,9 @@ export const medicalTerms = [
     "arExplanation": "",
     "categories": [
       "Dermatologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7311,9 +8731,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7342,9 +8774,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7372,8 +8815,8 @@ export const medicalTerms = [
       "Dermatologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7404,7 +8847,12 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -7434,9 +8882,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7466,9 +8926,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7498,9 +8970,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7530,9 +9014,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7562,9 +9058,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7593,7 +9101,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7623,9 +9135,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7655,9 +9176,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7686,9 +9215,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7718,9 +9253,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7750,9 +9297,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7782,9 +9337,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7814,9 +9376,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7845,8 +9411,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -7876,9 +9441,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7908,9 +9485,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7940,9 +9529,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -7972,9 +9573,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8004,9 +9617,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8036,9 +9661,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8068,9 +9705,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8100,9 +9749,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8131,9 +9789,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8162,9 +9824,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8194,9 +9860,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8222,6 +9892,10 @@ export const medicalTerms = [
     "arExplanation": "البرزخ؛ اتصال ضيق بين هيكلين أو منطقتين أكبر في الجسم، يشير غالبًا إلى الهياكل التشريحية.",
     "categories": [
       "Endokrinologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -8251,9 +9925,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8279,6 +9958,10 @@ export const medicalTerms = [
     "arExplanation": "التسيل؛ عملية تكوين اللعاب في الفم، يتحفز بوجود الطعام أو محفزات أخرى.",
     "categories": [
       "Endokrinologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8304,6 +9987,9 @@ export const medicalTerms = [
     "arExplanation": "حصوات الغدد اللعابية؛ تكون حصوات اللعاب داخل قنوات الغدد اللعابية، قد تسبب الألم وانسداد تدفق اللعاب.",
     "categories": [
       "Endokrinologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8333,9 +10019,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8365,9 +10063,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8397,9 +10102,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8427,7 +10143,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8453,6 +10170,9 @@ export const medicalTerms = [
     "arExplanation": "شق الشفة والفك والحنك؛ تشوه خلقي يكون فيه الشفة والفك والحنك غير مغلقة بشكل صحيح.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8478,6 +10198,9 @@ export const medicalTerms = [
     "arExplanation": "شق الشفة؛ تشقق خلقي للشفة.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8503,6 +10226,9 @@ export const medicalTerms = [
     "arExplanation": "شق الحنك؛ تشقق خلقي للحنك.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8532,9 +10258,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8562,8 +10293,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8589,6 +10320,12 @@ export const medicalTerms = [
     "arExplanation": "حرقة المعدة؛ شعور بالحرقان في الجزء العلوي من المعدة أو المريء، غالبًا ما يكون بسبب ارتجاع الحمض المعدي.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -8617,8 +10354,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -8648,9 +10387,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8680,9 +10431,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8712,9 +10470,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8744,9 +10507,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8774,7 +10546,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -8804,9 +10577,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8836,9 +10616,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8868,9 +10660,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8900,9 +10704,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8931,7 +10747,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -8961,8 +10786,10 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -8992,9 +10819,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9024,9 +10863,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9056,9 +10906,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9088,9 +10947,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9120,9 +10991,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9152,9 +11034,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9184,9 +11073,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9216,9 +11117,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9248,9 +11161,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9280,9 +11205,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9308,6 +11241,9 @@ export const medicalTerms = [
     "arExplanation": "بلع الهواء؛ استهلاك الهواء الزائد أثناء الأكل أو الشرب، غالبًا ما يؤدي إلى الانتفاخ والاضطرابات المعوية.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -9337,7 +11273,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9368,7 +11315,12 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -9396,9 +11348,14 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9428,9 +11385,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9460,9 +11429,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9490,9 +11468,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9521,8 +11503,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -9552,9 +11540,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9582,8 +11582,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -9609,6 +11609,10 @@ export const medicalTerms = [
     "arExplanation": "تشحم الكبد؛ تراكم مرضي للدهون في الخلايا الكبدية، يمكن أن يؤدي إلى التهاب الكبد الدهني وتقدم المرض الكبدي.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -9637,9 +11641,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9668,8 +11681,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -9697,8 +11714,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -9726,8 +11743,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -9757,9 +11774,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9787,7 +11810,11 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -9816,9 +11843,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9848,9 +11879,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9880,9 +11919,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9911,9 +11955,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9941,7 +11989,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -9969,7 +12018,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -9998,9 +12053,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10029,9 +12090,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10060,9 +12125,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10091,9 +12160,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10123,9 +12196,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10155,9 +12240,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10183,6 +12280,10 @@ export const medicalTerms = [
     "arExplanation": "سرطان القنوات الصفراوية؛ سرطان في القنوات الصفراوية، يتميز بطبيعته العدوانية وميله للتشخيص المتأخر.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -10210,7 +12311,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10238,7 +12345,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10266,8 +12379,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -10293,6 +12406,10 @@ export const medicalTerms = [
     "arExplanation": "استئصال المرارة؛ الاستئصال الجراحي للمرارة، يتم غالبًا في حالات حصوات المرارة أو التهاب المرارة الأعراضي.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -10322,9 +12439,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10354,9 +12476,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10385,9 +12511,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10417,9 +12551,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10447,7 +12593,12 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -10476,7 +12627,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10506,9 +12666,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10538,7 +12706,11 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -10566,8 +12738,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -10597,7 +12769,11 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -10627,9 +12803,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10659,9 +12840,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10689,7 +12881,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10719,9 +12917,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10751,9 +12959,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10783,9 +12996,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10815,9 +13035,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10846,7 +13078,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -10876,9 +13113,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10906,7 +13155,9 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -10934,7 +13185,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10962,7 +13219,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -10992,9 +13255,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11024,9 +13295,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11054,7 +13331,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11083,9 +13366,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11111,6 +13401,9 @@ export const medicalTerms = [
     "arExplanation": "الناسور الشرجي؛ قناة غير طبيعية تتشكل بين المستقيم أو منطقة الشرج والجلد.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11136,6 +13429,10 @@ export const medicalTerms = [
     "arExplanation": "الشق الشرجي؛ تمزق صغير أو جرح في القناة الشرجية يمكن أن يسبب الألم والنزيف.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -11164,9 +13461,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11196,9 +13499,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11228,9 +13536,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11259,8 +13579,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -11290,9 +13614,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11322,9 +13657,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11354,9 +13701,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11386,9 +13741,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11414,6 +13777,11 @@ export const medicalTerms = [
     "arExplanation": "الزائدة الدودية؛ ملحق صغير للأعور يمكن أن يلتهب ويؤدي إلى التهاب الزائدة الدودية.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -11443,9 +13811,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11475,9 +13855,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11503,6 +13887,9 @@ export const medicalTerms = [
     "arExplanation": "العجان؛ المنطقة بين الأعضاء التناسلية والشرج عند البشر.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11531,9 +13918,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11563,9 +13958,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11595,9 +14002,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11627,9 +14045,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11659,9 +14089,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11689,7 +14124,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11717,7 +14153,9 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11747,7 +14185,10 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -11776,9 +14217,21 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11804,6 +14257,9 @@ export const medicalTerms = [
     "arExplanation": "التحلل الغذائي؛ العملية الأيضية التي يتم فيها تفكيك الجزيئات المعقدة إلى أبسط وتحرير الطاقة لدعم الوظائف الجسدية.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11829,6 +14285,9 @@ export const medicalTerms = [
     "arExplanation": "سوء الامتصاص؛ عدم القدرة المرضية للجهاز الهضمي على امتصاص العناصر الغذائية بفعالية، مما يؤدي إلى نقص غذائي متنوع.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11858,9 +14317,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11890,9 +14361,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11922,9 +14405,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -11950,6 +14445,9 @@ export const medicalTerms = [
     "arExplanation": "الدوسنتاريا؛ مرض بكتيري معدي في الأمعاء يؤدي إلى إسهال دموي وألم في البطن.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -11978,9 +14476,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12009,7 +14515,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12037,7 +14554,9 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12067,9 +14586,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12098,9 +14627,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12129,9 +14664,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12161,9 +14702,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12193,9 +14742,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12226,7 +14784,10 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -12255,9 +14816,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12287,9 +14859,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12317,7 +14901,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12347,9 +14937,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12375,6 +14973,11 @@ export const medicalTerms = [
     "arExplanation": "البوليميا؛ اضطراب الأكل حيث يأكل الشخص بانتظام كميات كبيرة من الطعام ثم يتقيأها للتخلص من السعرات الحرارية.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -12404,9 +15007,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12436,9 +15050,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12466,7 +15091,10 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -12496,7 +15124,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12524,7 +15161,13 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12554,9 +15197,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12582,6 +15232,9 @@ export const medicalTerms = [
     "arExplanation": "تصوير المرارة / تصوير القنوات الصفراوية؛ إجراءات التصوير لتمثيل المرارة (تصوير المرارة) أو القنوات الصفراوية (تصوير القنوات الصفراوية) باستخدام وسائط التباين والأشعة السينية.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12611,9 +15264,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12643,9 +15308,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12671,6 +15340,9 @@ export const medicalTerms = [
     "arExplanation": "قصور الكبد؛ وظيفة الكبد غير الكافية حيث لا يمكن للكبد القيام بمهامه الطبيعية، مما يؤدي إلى مشاكل صحية متنوعة.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12696,6 +15368,9 @@ export const medicalTerms = [
     "arExplanation": "تمزق الطحال؛ تمزق أو انفجار الطحال، وهو عضو في البطن يمكن أن يؤدي إلى النزيف الداخلي.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12721,6 +15396,9 @@ export const medicalTerms = [
     "arExplanation": "البيليروبين؛ صبغة صفراء تتكون أثناء تحلل كريات الدم الحمراء وتعالجها الكبد.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12750,9 +15428,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12781,9 +15471,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12813,9 +15507,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12843,7 +15541,8 @@ export const medicalTerms = [
       "Gastroenterologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12873,9 +15572,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12904,9 +15610,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12932,6 +15644,9 @@ export const medicalTerms = [
     "arExplanation": "داء الدُّهاليز؛ حالة وجود الدُّهاليز في عضو مجوف، عادةً في الأمعاء.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -12961,9 +15676,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -12989,6 +15716,10 @@ export const medicalTerms = [
     "arExplanation": "الزوائد اللحمية؛ نمو غير طبيعي في الأعضاء مثل الأمعاء أو الرحم.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -13014,6 +15745,9 @@ export const medicalTerms = [
     "arExplanation": "الزوائد؛ مرض يظهر فيه العديد من الزوائد اللحمية في عضو، مثل الأمعاء.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -13039,6 +15773,10 @@ export const medicalTerms = [
     "arExplanation": "الناسور؛ اتصال غير طبيعي بين عضوين أو بين عضو وسطح الجسم.",
     "categories": [
       "Gastroenterologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -13068,9 +15806,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13100,9 +15844,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13132,9 +15888,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13164,9 +15926,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13196,9 +15965,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13228,9 +16001,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13260,9 +16037,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13292,9 +16073,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13324,9 +16116,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13356,9 +16153,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13388,9 +16191,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13420,9 +16235,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13452,9 +16272,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13484,9 +16309,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13516,9 +16345,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13548,9 +16381,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13578,7 +16415,8 @@ export const medicalTerms = [
       "Grundlage Anatomie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -13608,9 +16446,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13640,9 +16482,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13672,9 +16518,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13704,9 +16554,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13736,9 +16590,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13768,9 +16626,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13800,9 +16667,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13832,9 +16706,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13864,9 +16743,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13896,9 +16779,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13928,9 +16815,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13960,9 +16851,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -13992,9 +16890,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14024,9 +16928,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14056,9 +16970,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14088,9 +17010,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14120,9 +17050,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14152,9 +17088,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14184,9 +17127,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14216,9 +17163,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14248,9 +17200,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14280,9 +17236,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14312,9 +17273,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14344,9 +17315,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14376,9 +17352,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14408,9 +17394,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14440,9 +17438,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14472,9 +17475,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14504,9 +17511,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14536,9 +17550,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14564,6 +17590,10 @@ export const medicalTerms = [
     "arExplanation": "استئصال جراحي لأحد المبيضين أو كليهما، غالبًا ما يكون مشارًا في الأمراض الخبيثة، العمليات الالتهابية الشديدة، أو للتأثير الهرموني.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -14592,7 +17622,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -14622,9 +17654,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14654,9 +17693,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14684,8 +17735,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -14715,9 +17766,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14747,9 +17810,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14779,9 +17850,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14811,9 +17893,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14843,9 +17936,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14875,9 +17980,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14907,9 +18023,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14939,9 +18064,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -14971,9 +18107,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15003,9 +18150,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15035,9 +18193,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15067,9 +18236,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15099,8 +18279,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -15130,9 +18311,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15162,9 +18349,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15194,9 +18387,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15222,6 +18427,9 @@ export const medicalTerms = [
     "arExplanation": "مجموع الأعضاء التناسلية الخارجية الأنثوية، بما في ذلك الشفرين الكبيرين والصغيرين والبظر والحوض.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15251,9 +18459,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15283,9 +18503,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15315,9 +18539,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15345,7 +18580,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15371,6 +18607,10 @@ export const medicalTerms = [
     "arExplanation": "غشاء رقيق يغطي جزئيًا فتحة المهبل، يختلف كثيرًا في الشكل والحجم، وقد يتمزق أثناء أول جماع أو أنشطة أخرى.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -15400,9 +18640,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15431,7 +18678,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15461,9 +18716,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15493,9 +18760,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15525,9 +18797,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15556,8 +18837,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15583,6 +18865,9 @@ export const medicalTerms = [
     "arExplanation": "الغشاء الخارجي الذي يحيط بالسلى ويتصل ببطانة الرحم لتشكيل المشيمة.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15612,7 +18897,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15642,7 +18936,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15672,9 +18975,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15704,9 +19013,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15734,8 +19053,9 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15763,7 +19083,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15793,9 +19114,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15825,9 +19150,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15857,9 +19186,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -15888,8 +19228,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15915,6 +19254,9 @@ export const medicalTerms = [
     "arExplanation": "المنطقة التشريحية بين الفرج والشرج، ذات أهمية حاسمة أثناء الولادة وعرضة للإصابات والتمزقات.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -15943,7 +19285,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -15972,8 +19318,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16001,7 +19346,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16031,9 +19377,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16061,9 +19419,13 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16089,6 +19451,11 @@ export const medicalTerms = [
     "arExplanation": "الحلمة، عضو معقد يحتوي على قنوات الحليب ويلعب دورًا رئيسيًا في وظيفة الرضاعة.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -16114,6 +19481,9 @@ export const medicalTerms = [
     "arExplanation": "إفراز غير طبيعي للحليب من الثدي، مستقل عن فترة الرضاعة، قد يكون مؤشرًا على اضطرابات هرمونية.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16143,9 +19513,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16174,9 +19553,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16205,9 +19591,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16236,8 +19629,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -16267,9 +19663,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16299,9 +19701,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16329,7 +19735,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16359,9 +19766,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16391,9 +19805,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16419,6 +19837,10 @@ export const medicalTerms = [
     "arExplanation": "الفترة بعد الولادة التي تغطي الأسابيع الستة الأولى، حيث يتعافى جسم المرأة من الحمل والولادة.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16446,7 +19868,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16475,8 +19898,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -16506,9 +19932,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16536,7 +19967,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16564,7 +19996,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16590,6 +20023,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء لغسل تجويف الجسم (مثل المعدة) أو عضو بسائل، غالبًا لأغراض تشخيصية أو علاجية.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16617,7 +20053,10 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -16646,7 +20085,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -16675,7 +20118,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16705,9 +20150,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -16735,7 +20192,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16764,8 +20222,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -16793,7 +20254,10 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -16819,6 +20283,9 @@ export const medicalTerms = [
     "arExplanation": "تمزق جدار المهبل، قد يحدث أثناء الولادة أو بسبب صدمة، غالبًا ما يتطلب إصلاح جراحي.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16844,6 +20311,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء جراحي لإصلاح أو إعادة بناء جدار المهبل، غالبًا ما يتم إجراؤه لعلاج الهبوط أو بعد إصابات الولادة.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16869,6 +20339,9 @@ export const medicalTerms = [
     "arExplanation": "فحص بصري لعنق الرحم والمهبل باستخدام منظار الفرج لتحديد المناطق غير الطبيعية أو ما قبل السرطانية.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16897,8 +20370,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -16926,7 +20403,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -16955,8 +20433,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -16982,6 +20464,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء طبي لتنظيف تجويف الجسم أو عضو عن طريق الغسيل بسائل خاص، غالبًا لأغراض تشخيصية أو علاجية.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -17009,7 +20494,10 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -17038,7 +20526,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -17068,9 +20560,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17100,9 +20597,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17130,7 +20639,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -17158,8 +20668,8 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -17188,9 +20698,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17219,9 +20737,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17249,7 +20771,9 @@ export const medicalTerms = [
       "Gynaekologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -17275,6 +20799,9 @@ export const medicalTerms = [
     "arExplanation": "نزيف ناتج عن سحب الهرمونات الخارجية، خاصة في تنظيم النسل الهرموني أو العلاج البديل بالهرمونات.",
     "categories": [
       "Gynaekologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -17303,9 +20830,21 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17335,9 +20874,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17367,9 +20916,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17399,9 +20958,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17431,9 +21001,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17463,9 +21044,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17495,9 +21087,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17527,9 +21127,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17559,9 +21167,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17589,7 +21205,13 @@ export const medicalTerms = [
       "Haematologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17619,9 +21241,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17651,9 +21278,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17683,9 +21314,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17715,9 +21358,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17747,9 +21397,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17778,9 +21434,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17810,9 +21472,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17842,9 +21510,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17874,9 +21546,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17906,9 +21585,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17937,9 +21627,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17968,9 +21663,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -17999,9 +21700,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18027,6 +21736,9 @@ export const medicalTerms = [
     "arExplanation": "الهيبارين هو مضاد تخثر طبيعي يستخدم في الطب لمنع أو علاج تكون الجلطات الدموية.",
     "categories": [
       "Haematologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18056,9 +21768,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18086,8 +21809,8 @@ export const medicalTerms = [
       "Haematologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18116,9 +21839,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18144,6 +21876,9 @@ export const medicalTerms = [
     "arExplanation": "تسمية لفتحة الأنف، فتحة تسمح بالوصول إلى تجويف الأنف ودخول الهواء التنفسي.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18173,9 +21908,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18203,7 +21942,9 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -18232,7 +21973,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18260,7 +22010,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18286,6 +22037,9 @@ export const medicalTerms = [
     "arExplanation": "فحص تشخيصي للهياكل الداخلية للأنف باستخدام منظار الأنف لتحديد الشذوذات أو الأمراض.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18314,8 +22068,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -18344,7 +22099,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -18374,8 +22131,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -18405,9 +22167,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18437,9 +22211,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18469,9 +22248,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18500,7 +22284,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -18530,9 +22317,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18558,6 +22357,10 @@ export const medicalTerms = [
     "arExplanation": "ثقب في طبلة الأذن، ينتج عادةً عن العدوى، الإصابة، أو الصوت العالي، يؤثر على السمع ويزيد من خطر العدوى.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -18587,9 +22390,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18619,9 +22426,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18651,9 +22469,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18683,9 +22506,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18715,9 +22550,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18746,9 +22590,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18778,9 +22626,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18810,9 +22670,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18842,9 +22706,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18872,7 +22748,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18900,7 +22777,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -18926,6 +22804,10 @@ export const medicalTerms = [
     "arExplanation": "الجزء المركزي من الجهاز الدهليزي في الأذن الداخلية، مسؤول عن تصور الحركات الخطية والجاذبية.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -18954,9 +22836,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -18982,6 +22868,9 @@ export const medicalTerms = [
     "arExplanation": "النظام الكامل في الأذن الداخلية، بما في ذلك القنوات نصف الدائرية والدهليز، المسؤول عن التوازن والتوجيه المكاني.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19007,6 +22896,11 @@ export const medicalTerms = [
     "arExplanation": "واحد من عظام السمع الثلاثة في الأذن الوسطى، ينقل الموجات الصوتية من السندان إلى النافذة البيضاوية للأذن الداخلية.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -19032,6 +22926,9 @@ export const medicalTerms = [
     "arExplanation": "العظمة على شكل سندان في الأذن الوسطى، تقود الموجات الصوتية من المطرقة إلى الركاب.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19059,7 +22956,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19087,8 +22985,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19116,8 +23014,11 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
+      "Bayern",
       "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -19146,9 +23047,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19177,7 +23085,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19207,9 +23124,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19239,9 +23167,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19271,9 +23210,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19299,6 +23242,9 @@ export const medicalTerms = [
     "arExplanation": "طبيب متخصص في تشخيص وعلاج أمراض الأذن، بما في ذلك اضطرابات السمع والتوازن.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19324,6 +23270,9 @@ export const medicalTerms = [
     "arExplanation": "تخصص طبي يعنى بدراسة وتشخيص وعلاج أمراض الأذن وأنظمة السمع والتوازن.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19353,9 +23302,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19384,9 +23341,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19416,9 +23379,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19448,9 +23422,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19476,6 +23460,9 @@ export const medicalTerms = [
     "arExplanation": "اللوزة اللسانية، نسيج لمفاوي في قاعدة اللسان، مشارك في الدفاع المناعي والدفاع ضد العوامل الممرضة في منطقة البلعوم.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19503,7 +23490,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19532,8 +23520,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19559,6 +23546,9 @@ export const medicalTerms = [
     "arExplanation": "اللوزة الأنبوبية، نسيج لمفاوي بالقرب من قناة استاكيوس، مشاركة في الدفاع المناعي في الفضاء البلعومي.",
     "categories": [
       "hno"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19588,9 +23578,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19618,8 +23620,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19649,9 +23651,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19680,7 +23686,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19708,7 +23721,8 @@ export const medicalTerms = [
       "hno"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19737,9 +23751,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19765,6 +23786,11 @@ export const medicalTerms = [
     "arExplanation": "النكاف هو مرض فيروسي معدي يسببه فيروس النكاف. يؤدي إلى تورم مؤلم في الغدد اللعابية، خاصة الغدة النكفية، بالإضافة إلى الحمى والصداع. قد تشمل المضاعفات الالتهاب السحائي والخصية عند الرجال.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19790,6 +23816,11 @@ export const medicalTerms = [
     "arExplanation": "الحصبة هي مرض فيروسي معدي للغاية يسببه فيروس الحصبة. تشمل الأعراض النموذجية الحمى والسعال والتهاب الملتحمة وطفح جلدي مميز. قد تشمل المضاعفات الشديدة الالتهاب الرئوي والتهاب الدماغ.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19819,9 +23850,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19847,6 +23890,10 @@ export const medicalTerms = [
     "arExplanation": "الدفتيريا هي مرض بكتيري معدي خطير يسببه بكتيريا الدفتيريا. تشمل الأعراض التهاب الحلق والحمى وغشاء كاذب مميز في الحلق. قد تشمل المضاعفات تلف القلب والأعصاب.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -19875,8 +23922,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19905,9 +23953,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19936,9 +23992,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -19964,6 +24028,9 @@ export const medicalTerms = [
     "arExplanation": "الزهري هو مرض ينتقل عن طريق الاتصال الجنسي يسببه بكتيريا تريبونيما باليدوم. يمر المرض بعدة مراحل، بدءاً من قروح غير مؤلمة، تليها طفح جلدي، وفي المراحل الأخيرة، تلف جهازي خطير.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -19993,9 +24060,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20021,6 +24100,9 @@ export const medicalTerms = [
     "arExplanation": "الثآليل التناسلية، المعروفة أيضاً بالثآليل الحليمية، هي نموات تسببها فيروس الورم الحليمي البشري (HPV) في المنطقة التناسلية. هي معدية للغاية ويمكن أن تنتقل عن طريق الاتصال الجنسي.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20046,6 +24128,11 @@ export const medicalTerms = [
     "arExplanation": "السل هو مرض بكتيري معدي يسببه بشكل رئيسي بكتيريا المتفطرة السلية. يصيب بشكل أساسي الرئتين، لكن يمكن أن يصيب أيضاً أعضاء أخرى. الأعراض تشمل السعال المستمر والحمى وفقدان الوزن.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -20073,7 +24160,8 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20099,6 +24187,9 @@ export const medicalTerms = [
     "arExplanation": "الطاعون هو مرض بكتيري خطير يسببه يرسينيا بيستيس. يمكن أن يظهر في ثلاثة أشكال: الطاعون الدبلي والطاعون الرئوي والطاعون الإنتاني. الأعراض النموذجية تشمل الحمى العالية وتورم الغدد اللمفاوية وردود فعل جهازية شديدة.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20127,9 +24218,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20158,7 +24253,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20184,6 +24281,9 @@ export const medicalTerms = [
     "arExplanation": "الملاريا هي مرض معدي يسببه طفيليات بلازموديوم، ينتقل عن طريق لسعات البعوض المصابة من جنس الأنوفيليس. تتسبب في حمى دورية وقشعريرة ويمكن أن تؤدي إلى مضاعفات تهدد الحياة.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20209,6 +24309,9 @@ export const medicalTerms = [
     "arExplanation": "البروسيلات (الحمى المالطية) هي زونوز بكتيري تسببه بكتيريا بروسيلا. تصيب بشكل رئيسي الحيوانات لكن يمكن أن تنتقل إلى البشر، مما يؤدي إلى أعراض شبيهة بالإنفلونزا ومسارات مرضية طويلة الأمد.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20236,7 +24339,10 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20266,9 +24372,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20298,9 +24414,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20329,8 +24452,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -20360,9 +24487,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20392,9 +24531,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20424,9 +24569,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20454,7 +24604,10 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -20484,9 +24637,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20512,6 +24673,9 @@ export const medicalTerms = [
     "arExplanation": "الشخص المصاب أو الكائن الحي الذي امتص مسببات الأمراض التي تسبب عدوى نشطة.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20541,9 +24705,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20573,9 +24742,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20601,6 +24775,9 @@ export const medicalTerms = [
     "arExplanation": "إيديوباثي يشير إلى مرض أو حالة ذات سبب مجهول أو غير قابل للتحديد.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20628,8 +24805,8 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20657,8 +24834,8 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20684,6 +24861,9 @@ export const medicalTerms = [
     "arExplanation": "الماكروبات هي كائنات حية أكبر يمكن رؤيتها بدون تكبير، مثل البشر والحيوانات والنباتات.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20712,9 +24892,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20740,6 +24928,9 @@ export const medicalTerms = [
     "arExplanation": "الضيق يصف شعورًا بعدم الراحة العامة أو الإزعاج المستمر، غالبًا بدون أعراض محددة أو معرفة بوضوح.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20765,6 +24956,11 @@ export const medicalTerms = [
     "arExplanation": "التعب هو شعور مستمر بالإرهاق أو التعب أو الضعف الذي قد يؤثر على القدرة على النشاط والأداء الطبيعي.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20792,8 +24988,9 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -20821,7 +25018,8 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20851,9 +25049,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20879,6 +25082,9 @@ export const medicalTerms = [
     "arExplanation": "أفبريل يصف الحالة بدون حمى، أي درجة حرارة الجسم الطبيعية، ويدل على عدم وجود ظروف تسبب الحمى.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -20906,7 +25112,13 @@ export const medicalTerms = [
       "Infektiologie und Paediatrie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20936,9 +25148,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -20967,7 +25184,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -20993,6 +25214,9 @@ export const medicalTerms = [
     "arExplanation": "البيلوس هو نتوء شبيه بالشعر على سطح البكتيريا، مهم للالتصاق بالأسطح أو الخلايا الأخرى ويلعب دورًا في الالتحام البكتيري.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21021,8 +25245,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -21048,6 +25273,9 @@ export const medicalTerms = [
     "arExplanation": "مطهر يشير إلى المواد أو الإجراءات التي تقتل أو تعطل الجراثيم لمنع العدوى، وغالباً ما تستخدم لتعقيم الجلد أو الجروح أو الأسطح.",
     "categories": [
       "Infektiologie und Paediatrie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21076,7 +25304,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21105,7 +25340,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21135,9 +25376,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21163,6 +25411,10 @@ export const medicalTerms = [
     "arExplanation": "الأذين: إحدى الغرفتين العلويتين للقلب، تستقبل الدم الوريدي وتقوده عبر الصمامات الأذينية البطينية إلى البطينين. يلعب دورًا رئيسيًا في جمع الدم ومروره.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21190,7 +25442,13 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21219,8 +25477,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21249,8 +25506,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21278,8 +25535,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21308,8 +25565,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21339,9 +25597,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21371,9 +25641,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21401,7 +25683,14 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -21431,9 +25720,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21461,9 +25762,16 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21493,9 +25801,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21521,6 +25839,9 @@ export const medicalTerms = [
     "arExplanation": "اعتلال عضلة القلب، مرض يصيب عضلة القلب يمكن أن يظهر بأشكال متعددة (توسعية، تضخمية، قيدية) ويؤدي إلى تعطيل وظيفة القلب الانقباضية و/أو الانبساطية.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21549,9 +25870,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21577,6 +25907,13 @@ export const medicalTerms = [
     "arExplanation": "تسرع القلب، حالة تتميز بارتفاع معدل ضربات القلب (>100 ضربة/دقيقة) ويمكن أن تحدث لأسباب متعددة مثل الإجهاد، تلف القلب، أو الخلل في التوازن الكهرلي.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -21604,7 +25941,13 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21634,9 +25977,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21662,6 +26016,11 @@ export const medicalTerms = [
     "arExplanation": "الخفقان، الإحساس الذاتي بضربات القلب التي يمكن أن تكون قوية، سريعة أو غير منتظمة، وغالباً ما تكون علامة على الإجهاد، القلق، أو اضطرابات نظم القلب.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -21687,6 +26046,10 @@ export const medicalTerms = [
     "arExplanation": "الانقباض، المرحلة في دورة القلب حيث تنقبض البطينات، مما يدفع الدم إلى الشريان الأورطي والشريان الرئوي، أمر ضروري للدورة الدموية.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21715,9 +26078,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21743,6 +26112,11 @@ export const medicalTerms = [
     "arExplanation": "خارج النظم القلبي، نبضة قلبية إضافية تنشأ بسبب نشاط كهربائي غير طبيعي خارج إيقاع العقدة الجيبية العادي.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21771,7 +26145,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21799,7 +26182,9 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -21829,9 +26214,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21859,7 +26256,11 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -21889,9 +26290,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21921,9 +26334,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21953,9 +26373,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -21981,6 +26413,9 @@ export const medicalTerms = [
     "arExplanation": "الفلبكتوميا هي عملية جراحية لإزالة الأوردة المرضية، غالبًا ما تُجرى في حالات الدوالي أو قصور الأوردة.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -22006,6 +26441,10 @@ export const medicalTerms = [
     "arExplanation": "الشعيرات الدموية هي أصغر الأوعية الدموية في الجسم وتكون مسؤولة عن تبادل الأكسجين، العناصر الغذائية، ومنتجات الأيض بين الدم والأنسجة.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -22035,8 +26474,8 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -22066,9 +26505,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22096,9 +26547,13 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22127,9 +26582,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22158,8 +26621,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -22188,9 +26650,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22220,9 +26686,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22251,9 +26724,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22282,9 +26759,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22313,9 +26794,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22345,9 +26830,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22376,9 +26872,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22408,9 +26908,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22439,9 +26950,19 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22470,9 +26991,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22502,9 +27027,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22532,9 +27069,15 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22563,9 +27106,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22593,9 +27140,15 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22625,9 +27178,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22657,9 +27221,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22689,9 +27265,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22720,7 +27305,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22750,9 +27346,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22782,9 +27382,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22813,9 +27418,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22844,7 +27454,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22870,6 +27488,9 @@ export const medicalTerms = [
     "arExplanation": "النبض الباردوكسي هو انخفاض غير طبيعي في ضغط الدم الانقباضي أثناء الشهيق، وغالبًا ما يشير إلى حالات مثل تضيق التامور أو نوبات الربو الشديدة.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -22897,7 +27518,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -22927,9 +27549,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22959,9 +27585,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -22991,8 +27621,8 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23018,6 +27648,10 @@ export const medicalTerms = [
     "arExplanation": "القلب الرئوي يشير إلى مرض القلب الأيمن الناجم عن أمراض الرئة أو ارتفاع ضغط الدم الرئوي، مما يؤدي إلى تضخم وخلل في البطين الأيمن.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -23048,7 +27682,11 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -23079,7 +27717,11 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -23109,9 +27751,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23141,9 +27792,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23173,9 +27836,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23203,7 +27870,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23231,7 +27899,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23260,8 +27929,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -23291,9 +27960,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23321,7 +27999,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23347,6 +28026,9 @@ export const medicalTerms = [
     "arExplanation": "طب القلب هو تخصص طبي يركز على دراسة وتشخيص وعلاج أمراض القلب والحالات المرتبطة بها.",
     "categories": [
       "Kardiologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23374,7 +28056,8 @@ export const medicalTerms = [
       "Kardiologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23404,9 +28087,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23435,8 +28129,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -23465,9 +28159,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23496,9 +28198,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23528,9 +28234,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23558,7 +28271,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23587,9 +28301,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23619,9 +28339,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23651,9 +28378,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23683,9 +28418,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23711,6 +28455,9 @@ export const medicalTerms = [
     "arExplanation": "الهيبارين هو مضاد تخثر طبيعي يستخدم للوقاية وعلاج جلطات الدم، ويعمل على تثبيط نشاط عوامل التخثر.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23740,9 +28487,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23771,9 +28527,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23802,9 +28563,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23830,6 +28596,9 @@ export const medicalTerms = [
     "arExplanation": "مثبطات الإنزيم المحول للأنجيوتنسين هي فئة من الأدوية التي تثبط إنزيم تحويل الأنجيوتنسين، وبالتالي تمنع تضييق الأوعية الدموية لعلاج ارتفاع ضغط الدم وقصور القلب.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23859,9 +28628,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23887,6 +28664,9 @@ export const medicalTerms = [
     "arExplanation": "مخفضات الدهون هي أدوية تقلل مستويات الدهون في الدم، وخاصة الكوليسترول، لتقليل خطر الإصابة بأمراض القلب والأوعية الدموية مثل تصلب الشرايين.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -23916,9 +28696,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23947,9 +28731,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -23979,9 +28770,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24011,9 +28806,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24043,9 +28850,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24073,8 +28887,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24100,6 +28914,9 @@ export const medicalTerms = [
     "arExplanation": "الطاردات للبلغم هي أدوية تعزز طرد البلغم من المجاري التنفسية. تسهل التنفس عن طريق إذابة المخاط ودعم إخراجه.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24129,9 +28946,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24161,9 +28988,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24192,9 +29027,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24224,9 +29068,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24255,9 +29107,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24287,9 +29146,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24319,9 +29188,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24349,7 +29226,14 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24379,9 +29263,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24407,6 +29300,9 @@ export const medicalTerms = [
     "arExplanation": "الأدوية الجلدية هي أدوية أو مواد تُستخدم خصيصًا لعلاج أمراض الجلد أو مشاكله. تحسن صحة الجلد ومظهره.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24435,9 +29331,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24465,8 +29365,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24496,9 +29396,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24528,9 +29436,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24559,7 +29472,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -24585,6 +29501,9 @@ export const medicalTerms = [
     "arExplanation": "الوقاية تشمل التدابير أو العلاجات المستخدمة للوقاية من الأمراض أو المشكلات الصحية. الهدف هو منع ظهور هذه الأمراض أو تقليل خطرها.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24612,7 +29531,13 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24640,7 +29565,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24670,9 +29596,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24700,7 +29638,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24728,7 +29667,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24758,7 +29698,8 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24788,9 +29729,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24818,7 +29767,8 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24846,7 +29796,9 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24872,6 +29824,9 @@ export const medicalTerms = [
     "arExplanation": "مبيد الفطريات هو مادة أو وسيلة تُستخدم لمكافحة وقتل الفطريات أو تثبيط نموها، خاصة في الزراعة والطب.",
     "categories": [
       "Medikamente"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24899,7 +29854,9 @@ export const medicalTerms = [
       "Medikamente"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -24929,9 +29886,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24961,9 +29923,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -24992,8 +29966,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -25022,9 +29997,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25052,7 +30031,9 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -25078,6 +30059,9 @@ export const medicalTerms = [
     "arExplanation": "النفروبتوز؛ حالة تنزلق فيها الكلى من موضعها الطبيعي، تعرف أيضًا بـ \"الكلى الطافية\".",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25106,7 +30090,11 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -25136,9 +30124,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25168,9 +30160,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25200,9 +30204,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25230,7 +30243,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25256,6 +30270,9 @@ export const medicalTerms = [
     "arExplanation": "ميغا حالب؛ توسع غير طبيعي في الحالب يمكن أن يؤثر على تدفق البول.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25284,8 +30301,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25315,9 +30332,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25343,6 +30372,10 @@ export const medicalTerms = [
     "arExplanation": "سلس البول؛ فقدان لا إرادي للبول، يؤدي إلى التبول اللاإرادي.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -25368,6 +30401,9 @@ export const medicalTerms = [
     "arExplanation": "سلس الإلحاح؛ رغبة قوية في التبول قد تؤدي إلى التبول اللاإرادي.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25393,6 +30429,9 @@ export const medicalTerms = [
     "arExplanation": "سلس الجهد؛ فقدان لا إرادي للبول أثناء الجهد البدني، مثل السعال أو العطس.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25422,7 +30461,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25448,6 +30494,9 @@ export const medicalTerms = [
     "arExplanation": "استئصال المثانة؛ عملية جراحية لإزالة المثانة البولية.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25477,9 +30526,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25509,9 +30569,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25541,9 +30613,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25571,9 +30652,13 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25602,9 +30687,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25634,9 +30727,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25666,9 +30770,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25697,9 +30813,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25728,9 +30855,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25760,9 +30898,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25792,9 +30942,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25823,9 +30985,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25855,9 +31028,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25887,9 +31064,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25917,8 +31103,9 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -25948,9 +31135,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -25979,9 +31176,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26011,9 +31212,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26042,7 +31255,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26071,7 +31291,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26099,7 +31326,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26129,9 +31357,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26161,9 +31401,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26191,7 +31439,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26220,9 +31469,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26252,9 +31505,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26280,6 +31545,9 @@ export const medicalTerms = [
     "arExplanation": "الحبل المنوي؛ يربط الخصيتين بأعضاء التكاثر الأخرى.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26307,7 +31575,10 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -26337,8 +31608,12 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -26368,9 +31643,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26398,8 +31678,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26429,9 +31709,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26461,9 +31745,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26492,7 +31781,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26522,9 +31812,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26554,9 +31856,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26585,9 +31892,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26617,9 +31931,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26649,9 +31975,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26681,9 +32019,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26712,9 +32060,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26742,7 +32097,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26772,9 +32128,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26804,9 +32172,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26832,6 +32212,9 @@ export const medicalTerms = [
     "arExplanation": "أمراض الكلى؛ التخصص الطبي المركز على دراسة وتشخيص وعلاج اضطرابات وأمراض الكلى.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26861,7 +32244,8 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -26891,9 +32275,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -26919,6 +32314,9 @@ export const medicalTerms = [
     "arExplanation": "احتباس البول؛ عدم القدرة على تفريغ المثانة بشكل كامل، مما قد يؤدي إلى تراكم البول والعدوى المحتملة.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26944,6 +32342,10 @@ export const medicalTerms = [
     "arExplanation": "القساح؛ انتصاب مطول ومؤلم للقضيب لا يتعلق بالتحفيز الجنسي ويتطلب تدخلًا طبيًا فوريًا.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -26969,6 +32371,10 @@ export const medicalTerms = [
     "arExplanation": "العجز الجنسي؛ عدم القدرة على تحقيق أو الحفاظ على انتصاب كافٍ، المعروف باسم الضعف الجنسي، يمكن أن يكون بسبب عوامل نفسية أو عصبية أو وعائية.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -26997,8 +32403,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27024,6 +32429,9 @@ export const medicalTerms = [
     "arExplanation": "الانتصاب؛ تصلب وزيادة حجم القضيب، يحدث بسبب زيادة تدفق الدم والتحفيز الجنسي، يسمح بالجماع.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27051,7 +32459,8 @@ export const medicalTerms = [
       "Nephrologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27077,6 +32486,9 @@ export const medicalTerms = [
     "arExplanation": "الخصي؛ إزالة جراحية للغدد التناسلية (الخصيتين أو المبيضين)، تؤدي إلى العقم وانخفاض في إنتاج الهرمونات، قد تكون مشار إليها لأسباب متعددة.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27102,6 +32514,9 @@ export const medicalTerms = [
     "arExplanation": "تثبيت الخصية؛ إجراء جراحي لتثبيت الخصية غير المنزلقة في الصفن، يتم غالبًا عند الأطفال لمنع المشاكل المستقبلية.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27127,6 +32542,9 @@ export const medicalTerms = [
     "arExplanation": "سرطان الخصية؛ نوع من سرطان الخصية ينشأ من الخلايا الجرثومية، غالبًا ما يكون قابلًا للعلاج، يتميز بنمو الأورام الخبيثة في الخصيتين.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27152,6 +32570,9 @@ export const medicalTerms = [
     "arExplanation": "الكبيبة؛ شبكة الشعيرات الدموية في الكلى التي تلعب دورًا أساسيًا في تصفية الدم لإنتاج البول الأولي، ضروري لوظيفة الكلى.",
     "categories": [
       "Nephrologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27181,9 +32602,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27213,9 +32639,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27245,9 +32682,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27276,9 +32718,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27308,7 +32756,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27338,9 +32797,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27368,7 +32839,10 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -27398,9 +32872,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27428,7 +32914,10 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -27458,9 +32947,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27491,7 +32992,9 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -27521,9 +33024,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27553,9 +33068,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27583,7 +33103,9 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -27609,6 +33131,9 @@ export const medicalTerms = [
     "arExplanation": "الحد القرني: منطقة الانتقال حيث تلتقي القرنية بالصلبة، مهمة للحفاظ على زاوية الغرفة والضغط داخل العين.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27638,9 +33163,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27668,7 +33197,8 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27698,9 +33228,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27730,9 +33271,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27760,7 +33310,13 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27786,6 +33342,9 @@ export const medicalTerms = [
     "arExplanation": "القزحية: الطبقة الوسطى من مقلة العين تشمل القزحية والجسم الهدبي والشبكية الوعائية، مسؤولة عن تزويد الدم والمغذيات.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27815,9 +33374,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27846,9 +33414,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -27874,6 +33446,11 @@ export const medicalTerms = [
     "arExplanation": "الشحاذ: التهاب أو عدوى مؤلمة في جريب الغدة الدهنية في الجفن، يُعرف أيضًا بالحبيب.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -27899,6 +33476,10 @@ export const medicalTerms = [
     "arExplanation": "الكيس الدهني: تورم غير مؤلم في الجفن ناتج عن انسداد في الغدة الدهنية، يمكن أن يتطور إلى كتلة صغيرة وصلبة.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -27927,8 +33508,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27957,8 +33538,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -27987,9 +33568,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28018,9 +33604,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28049,7 +33640,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28075,6 +33673,9 @@ export const medicalTerms = [
     "arExplanation": "البصر الطبيعي: يشير إلى حالة الرؤية الطبيعية، حيث يكون العين قادرة على رؤية صور واضحة للأشياء على مسافة لا نهائية بدون تصحيح بصري.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28100,6 +33701,9 @@ export const medicalTerms = [
     "arExplanation": "البصر غير الطبيعي: يشير إلى حالة الرؤية غير الطبيعية، حيث يواجه العين صعوبة في رؤية صور واضحة للأشياء وعادة ما يحتاج إلى تصحيح بصري.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28125,6 +33729,9 @@ export const medicalTerms = [
     "arExplanation": "الغمش: اضطراب في الرؤية حيث لا يتطور أحد العيون بشكل صحيح ويعاني من ضعف في الرؤية على الرغم من عدم وجود أمراض عضوية بالعين.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28153,8 +33760,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28185,7 +33791,10 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28211,6 +33820,10 @@ export const medicalTerms = [
     "arExplanation": "طول النظر المرتبط بالعمر: يشير إلى ضعف القدرة على تركيز الأشياء القريبة المرتبطة بالتقدم في العمر.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28236,6 +33849,11 @@ export const medicalTerms = [
     "arExplanation": "اللابؤرية: خلل في الإبصار يتميز بأن العين تحتوي على قوى انكسارية مختلفة في مسارات مختلفة، مما يؤدي إلى رؤية مشوشة أو مشوهة.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28266,7 +33884,10 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28292,6 +33913,9 @@ export const medicalTerms = [
     "arExplanation": "الرؤية الليلية: اضطراب في الرؤية يصعب معه رؤية الأشياء بوضوح في الظلام بينما تكون الرؤية النهارية طبيعية.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28317,6 +33941,9 @@ export const medicalTerms = [
     "arExplanation": "ضعف الرؤية النهارية: اضطراب في الرؤية يصعب معه رؤية الأشياء بوضوح خلال النهار بينما تكون الرؤية الليلية طبيعية.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28342,6 +33969,9 @@ export const medicalTerms = [
     "arExplanation": "الإعورة: تشوه خلقي نادر حيث يتطور عين واحدة فقط أو تكون مرئية.",
     "categories": [
       "Ophthalmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28369,7 +33999,10 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -28398,8 +34031,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28429,9 +34061,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28459,9 +34100,13 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28490,8 +34135,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28519,8 +34165,9 @@ export const medicalTerms = [
       "Ophthalmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28549,8 +34196,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -28580,9 +34228,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28613,7 +34266,15 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -28644,7 +34305,15 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -28674,9 +34343,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28706,9 +34386,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28734,6 +34424,9 @@ export const medicalTerms = [
     "arExplanation": "الطب الصدمي، مجال الطب الذي يعنى بدراسة وتشخيص وعلاج الإصابات الحادة والتي غالباً ما تكون مهددة للحياة.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28761,7 +34454,9 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28787,6 +34482,9 @@ export const medicalTerms = [
     "arExplanation": "شخص مصاب بإصابات متعددة، شخص تعرض في نفس الوقت لعدة إصابات خطيرة، مما يتطلب رعاية طبية شاملة ومتعددة التخصصات.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28815,8 +34513,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -28846,9 +34543,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28878,9 +34583,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28910,9 +34623,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28941,9 +34659,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -28973,9 +34697,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29004,9 +34732,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29036,9 +34768,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29066,7 +34802,10 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -29094,7 +34833,10 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -29124,9 +34866,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29156,9 +34903,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29186,8 +34943,9 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -29217,9 +34975,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29245,6 +35015,9 @@ export const medicalTerms = [
     "arExplanation": "النواة اللبية، الجزء الداخلي الشبيه بالجل للقرص الفقري، والذي يمتص القوى على العمود الفقري ويسمح بتوزيع متساوٍ للضغط.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -29272,7 +35045,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -29302,7 +35076,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29332,9 +35114,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29364,9 +35150,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29396,9 +35186,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29428,9 +35226,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29460,9 +35269,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29492,9 +35312,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29524,9 +35348,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29556,9 +35384,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29588,9 +35420,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29620,9 +35456,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29652,9 +35492,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29683,9 +35527,19 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29714,9 +35568,19 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29744,7 +35608,10 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -29773,9 +35640,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29801,6 +35673,9 @@ export const medicalTerms = [
     "arExplanation": "التضييق، يشير إلى تأثير المواد التي تضيق مسام الجلد أو الأغشية المخاطية وبالتالي تشكل حاجزًا واقيًا.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -29829,8 +35704,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -29859,9 +35735,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29891,9 +35773,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29919,6 +35809,9 @@ export const medicalTerms = [
     "arExplanation": "كسر مع خلع، يحدث عندما يكون الكسر مرتبطًا بخلع كامل لمفصل، مما يمثل إصابة معقدة تؤثر على كل من بنية العظام ووظيفة المفصل.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -29947,7 +35840,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -29977,9 +35878,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30007,7 +35920,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30035,7 +35949,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30065,9 +35980,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30097,9 +36022,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30129,9 +36066,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30157,6 +36098,10 @@ export const medicalTerms = [
     "arExplanation": "وتر أخيل، هو أقوى وتر في الجسم البشري، يربط عضلات الساق بعظم الكعب.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30185,7 +36130,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30215,9 +36166,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30247,9 +36210,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30279,9 +36254,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30311,9 +36291,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30341,7 +36333,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30369,8 +36362,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30400,8 +36393,11 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -30430,8 +36426,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30457,6 +36454,9 @@ export const medicalTerms = [
     "arExplanation": "سرطان العظم، هو ورم خبيث عدواني ينشأ من نسيج العظام ويصيب بشكل رئيسي المراهقين والبالغين الشبان.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30482,6 +36482,9 @@ export const medicalTerms = [
     "arExplanation": "ورم عظمي، هو ورم حميد ينشأ من النسيج العظمي وعادة لا يسبب أعراضًا، ما لم يؤثر على الهياكل المجاورة.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30510,7 +36513,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30540,9 +36550,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30572,9 +36594,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30604,9 +36630,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30632,6 +36662,11 @@ export const medicalTerms = [
     "arExplanation": "الكسر الكاذب، يشير إلى حالة لا تلتئم فيها الكسور بعد علاج أو شفاء غير كافٍ، مما يؤدي إلى حركة غير طبيعية في موقع الكسر.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -30661,8 +36696,11 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -30690,8 +36728,9 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -30719,7 +36758,8 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30749,9 +36789,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30781,9 +36833,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30812,8 +36876,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -30839,6 +36905,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء يتم فيه سحب السائل من فراغ المفصل باستخدام إبرة، غالبًا لتشخيص أو تخفيف تورم المفصل.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30867,7 +36936,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30896,9 +36966,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -30926,8 +37002,9 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30953,6 +37030,10 @@ export const medicalTerms = [
     "arExplanation": "مرض أيضي في العظام يتميز بعدم كفاية تمعدن الأنسجة العظمية، يؤدي إلى زيادة ليونة وتشوه العظام.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -30980,7 +37061,9 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -31010,9 +37093,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31038,6 +37133,11 @@ export const medicalTerms = [
     "arExplanation": "الحركة الأمامية أو الميل لجزء من الجسم، غالباً في سياق العمود الفقري أو المفاصل.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -31067,9 +37167,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31099,9 +37211,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31127,6 +37251,10 @@ export const medicalTerms = [
     "arExplanation": "مصطلح عام لأمراض العضلات التي يحدث فيها خلل أولي في النسيج العضلي بدون وجود مرض عصبي.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -31154,9 +37282,13 @@ export const medicalTerms = [
       "Orthopadie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31182,6 +37314,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء جراحي يتم فيه قطع الوتر جزئياً أو كلياً لتقليل التوتر أو تحسين الحركة.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -31211,9 +37346,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31239,6 +37386,10 @@ export const medicalTerms = [
     "arExplanation": "التمزق الكامل أو الجزئي لنسيج أو هيكل، مثل وتر، عضلة أو عضو، غالباً ما ينتج عن الصدمة أو الإفراط في الاستخدام.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -31267,9 +37418,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31299,9 +37458,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31327,6 +37494,9 @@ export const medicalTerms = [
     "arExplanation": "عملية كسر عظم أو هيكل صلب آخر، إما بواسطة تأثير عنيف مفاجئ أو بسبب ضعف مرضي.",
     "categories": [
       "Orthopadie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -31355,9 +37525,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31387,9 +37564,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31419,9 +37600,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31451,9 +37640,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31479,6 +37674,9 @@ export const medicalTerms = [
     "arExplanation": "فتحات الأنف التي تعمل كمداخل لتجويف الأنف وتسمح بتدفق الهواء إلى الممرات الأنفية.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -31508,8 +37706,10 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -31539,9 +37739,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31571,9 +37775,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31603,9 +37819,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31635,9 +37856,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31665,7 +37898,14 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31691,6 +37931,10 @@ export const medicalTerms = [
     "arExplanation": "جراحة يتم فيها إزالة جزء أو كل الحنجرة، غالبًا كعلاج لأنواع متقدمة من سرطان الحنجرة.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -31719,7 +37963,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31747,7 +37997,10 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -31776,8 +38029,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -31806,9 +38058,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31838,9 +38094,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31870,9 +38137,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31902,9 +38181,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31934,9 +38222,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31966,9 +38262,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -31996,8 +38297,8 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32027,9 +38328,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32059,9 +38368,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32091,9 +38408,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32122,7 +38447,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32152,8 +38484,12 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -32182,9 +38518,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32214,9 +38559,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32246,9 +38603,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32278,9 +38639,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32309,8 +38675,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -32340,8 +38708,11 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -32372,7 +38743,11 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -32402,9 +38777,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32434,9 +38813,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32464,8 +38852,9 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -32493,9 +38882,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32523,9 +38919,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32553,7 +38956,9 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32579,6 +38984,12 @@ export const medicalTerms = [
     "arExplanation": "التنفس الزائد الذي يمكن أن يؤدي إلى خلل في توازن الأكسجين وثاني أكسيد الكربون / التنفس الغير كافي الذي يمكن أن يؤدي إلى تبادل غازي منخفض.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -32608,9 +39019,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32636,6 +39058,9 @@ export const medicalTerms = [
     "arExplanation": "فقدان كامل للصوت أو عدم القدرة على إنتاج أصوات صوتية طبيعية، غالبًا بسبب تلف أو أمراض في الحنجرة.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32661,6 +39086,12 @@ export const medicalTerms = [
     "arExplanation": "صوت تنفسي عالٍ وصفير يشير إلى تضيق أو انسداد في المجاري التنفسية العلوية، عرض مهم لأمراض الجهاز التنفسي.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -32686,6 +39117,9 @@ export const medicalTerms = [
     "arExplanation": "مرض رئوي مزمن يتليف فيه نسيج الرئة ويصلب، مما يحد من وظيفة الرئة ويصعب التنفس.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32715,9 +39149,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32746,9 +39188,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32777,9 +39224,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32807,7 +39265,10 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -32836,8 +39297,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32865,8 +39327,8 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32894,8 +39356,8 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -32925,9 +39387,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32957,9 +39427,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -32989,9 +39467,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33020,7 +39506,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33050,8 +39544,12 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -33080,9 +39578,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33112,9 +39619,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33144,9 +39663,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33176,9 +39700,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33207,8 +39736,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33238,8 +39769,11 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -33270,7 +39804,11 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -33300,9 +39838,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33330,7 +39872,13 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33360,9 +39908,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33390,8 +39947,9 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33419,9 +39977,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33449,9 +40014,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33479,7 +40051,9 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33508,9 +40082,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33540,9 +40123,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33568,6 +40162,9 @@ export const medicalTerms = [
     "arExplanation": "فقدان كامل للقدرة على الكلام، مما يؤدي إلى عدم القدرة على إنتاج أصوات صوتية طبيعية، غالبًا ما يكون بسبب التهابات شديدة في الحنجرة أو تلف الأعصاب.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33593,6 +40190,12 @@ export const medicalTerms = [
     "arExplanation": "صوت تنفسي متقطع أو صفير يشير إلى تضيق أو انسداد في المجاري التنفسية ويتطلب عناية طبية فورية.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33618,6 +40221,9 @@ export const medicalTerms = [
     "arExplanation": "مرض رئوي مزمن يتليف فيه نسيج الرئة ويتصلب، مما يؤدي إلى تحديد وظيفة الرئة وصعوبات في التنفس.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33647,9 +40253,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33677,8 +40291,9 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33706,7 +40321,10 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33734,7 +40352,10 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -33763,8 +40384,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33794,7 +40416,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33824,9 +40456,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33856,9 +40496,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33884,6 +40534,9 @@ export const medicalTerms = [
     "arExplanation": "حالة يحتوي فيها القشع على كل من المخاط والقيح، وغالبًا ما تحدث في العدوى البكتيرية للمجاري التنفسية.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33909,6 +40562,9 @@ export const medicalTerms = [
     "arExplanation": "حالة يحتوي فيها القشع أو سوائل الجسم الأخرى على القيح، والتي قد تشير إلى عدوى.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -33938,9 +40594,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -33970,9 +40634,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34002,9 +40674,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34032,7 +40716,13 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34062,9 +40752,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34092,9 +40790,13 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34124,9 +40826,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34156,9 +40870,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34188,9 +40914,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34218,7 +40955,12 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -34248,9 +40990,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34276,6 +41022,9 @@ export const medicalTerms = [
     "arExplanation": "بروز في الحنجرة، يُعرف بتفاحة آدم، يكون عادةً أكثر وضوحًا عند الرجال ويتعلق بتكوين الصوت.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34301,6 +41050,10 @@ export const medicalTerms = [
     "arExplanation": "مرض تنفسي فيروسي عند الأطفال يتميز بالتهاب المجاري التنفسية العليا ويسبب سعالًا نباحيًا وبحة في الصوت وصعوبة في التنفس.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -34330,9 +41083,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34362,9 +41123,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34394,9 +41164,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34426,9 +41201,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34456,9 +41243,13 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34484,6 +41275,11 @@ export const medicalTerms = [
     "arExplanation": "مرض بكتيري معدي ناتج عن Mycobacterium tuberculosis، يصيب بشكل أساسي الرئتين ويسبب أعراضًا مثل السعال المزمن والحمى وفقدان الوزن.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -34512,8 +41308,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -34542,9 +41342,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34572,8 +41379,8 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34599,6 +41406,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء يُدخل فيه السائل إلى القصبات الهوائية ثم يُسحب مرة أخرى لجمع العينات أو تنظيف المجاري التنفسية.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34627,9 +41437,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34658,9 +41474,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34688,9 +41511,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34718,9 +41548,16 @@ export const medicalTerms = [
       "Pulmologie"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34750,9 +41587,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34782,9 +41627,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34810,6 +41667,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء طبي يتم فيه لصق الأغشية الجنبية عمدًا لمنع تكرار الانصباب الجنبي.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34835,6 +41695,9 @@ export const medicalTerms = [
     "arExplanation": "رد فعل العطس، حيث يتم طرد الهواء والإفرازات بقوة من الأنف لإزالة المهيجات من المجاري التنفسية.",
     "categories": [
       "Pulmologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34864,9 +41727,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34896,9 +41763,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -34926,8 +41799,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34955,8 +41828,9 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -34985,9 +41859,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35016,7 +41901,18 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35046,9 +41942,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35077,9 +41985,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35109,9 +42022,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35139,7 +42064,15 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35168,9 +42101,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35199,9 +42137,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35231,9 +42174,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35259,6 +42207,10 @@ export const medicalTerms = [
     "arExplanation": "\"عميق\" يشير إلى موقع أو هيكل يكون في العمق داخل الجسم أو عضو، بعيدًا عن السطح.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35288,9 +42240,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35318,7 +42274,14 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35347,9 +42310,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35378,9 +42346,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35410,9 +42385,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35441,7 +42424,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35467,6 +42457,9 @@ export const medicalTerms = [
     "arExplanation": "\"العضلة المثنية\" هي عضلة تسبب الثني في مفصل بتقريب عظمتين من بعضهما، مثل عضلة البايسبس في الذراع.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35496,9 +42489,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35528,7 +42525,8 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -35554,6 +42552,9 @@ export const medicalTerms = [
     "arExplanation": "\"التفاف للداخل\" هو دوران اليد أو الساعد بحيث تواجه راحة اليد أو باطن القدم لأسفل أو بعيدًا عن الجسم.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35583,9 +42584,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35611,6 +42620,9 @@ export const medicalTerms = [
     "arExplanation": "\"الدوران الداخلي\" يشير إلى دوران جزء من الجسم إلى الداخل، نحو وسط الجسم.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35636,6 +42648,9 @@ export const medicalTerms = [
     "arExplanation": "\"الدوران الوسطي\" يشير إلى دوران جزء من الجسم نحو وسط الجسم، مثل دوران الفخذ أو الساعد للداخل.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35661,6 +42676,9 @@ export const medicalTerms = [
     "arExplanation": "\"الدوران الجانبي\" يشير إلى دوران جزء من الجسم بعيداً عن وسط الجسم، مثل دوران الفخذ أو الساعد للخارج.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35688,7 +42706,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35714,6 +42733,9 @@ export const medicalTerms = [
     "arExplanation": "\"رفع\" هي الكلمة اللاتينية التي تعني \"رفع\" أو \"ارتفاع\"، وتُستخدم في الطب لوصف حركة رفع جزء من الجسم لأعلى.",
     "categories": [
       "Richtung und Bewegung"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35743,7 +42765,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35771,7 +42801,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35801,9 +42832,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35833,9 +42868,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35863,7 +42902,14 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35892,7 +42938,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -35921,7 +42973,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35949,7 +43003,9 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -35977,7 +43033,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36005,8 +43062,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36036,9 +43093,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36068,9 +43133,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36098,7 +43171,8 @@ export const medicalTerms = [
       "Richtung und Bewegung"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36128,9 +43202,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36158,7 +43243,9 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36188,8 +43275,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -36218,7 +43311,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36244,6 +43346,9 @@ export const medicalTerms = [
     "arExplanation": "جذع الدماغ يربط الدماغ بالحبل الشوكي وهو مسؤول عن الوظائف الحيوية الأساسية مثل التنفس، ضربات القلب والانعكاسات.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36273,9 +43378,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36303,7 +43412,8 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36333,9 +43443,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36364,8 +43478,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -36395,9 +43511,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36426,7 +43547,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36456,9 +43579,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36484,6 +43612,9 @@ export const medicalTerms = [
     "arExplanation": "السحايا العنكبوتية هي غشاء شبه شفاف تحت السحايا الصلبة، ممتلئ بالأوعية الدموية والسائل الدماغي الشوكي، يحيط بالجهاز العصبي المركزي ويدعمه.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36513,9 +43644,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36545,9 +43681,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36577,9 +43725,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36605,6 +43765,9 @@ export const medicalTerms = [
     "arExplanation": "الاعتلال الدماغي هو مصطلح عام للأمراض التي تؤدي إلى خلل في وظائف الدماغ، يمكن أن تكون ناجمة عن عدة عوامل، من الاضطرابات الأيضية إلى العدوى.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36633,9 +43796,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36664,8 +43835,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -36695,9 +43867,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36727,9 +43903,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36757,7 +43945,9 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36783,6 +43973,9 @@ export const medicalTerms = [
     "arExplanation": "التعصيب يشير إلى تزويد الأنسجة أو الأعضاء بالألياف العصبية وهو مهم للتحكم في الوظائف في الجسم.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36810,8 +44003,9 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36841,7 +44035,7 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36871,9 +44065,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36902,7 +44108,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -36932,9 +44140,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36964,9 +44184,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -36992,6 +44216,9 @@ export const medicalTerms = [
     "arExplanation": "الضفيرة العصبية هي شبكة معقدة من الألياف العصبية تعمل كوسيط في نقل الإشارات بين الجهاز العصبي المركزي والمناطق الطرفية.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -37021,9 +44248,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37053,9 +44285,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37085,9 +44323,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37117,9 +44359,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37149,9 +44403,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37181,9 +44439,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37212,8 +44481,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -37242,9 +44510,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37273,9 +44552,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37304,9 +44587,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37336,9 +44623,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37364,6 +44662,9 @@ export const medicalTerms = [
     "arExplanation": "عجز في التعرف أو تحديد الانطباعات الحسية على الرغم من سلامة الوظائف الحسية، غالباً نتيجة للإصابات الدماغية.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -37393,9 +44694,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37425,9 +44738,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37455,7 +44772,9 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -37485,9 +44804,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37517,9 +44847,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37549,9 +44890,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37581,9 +44933,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37613,9 +44976,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37644,9 +45018,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37674,8 +45056,8 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -37705,9 +45087,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37736,9 +45125,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37767,9 +45164,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37798,9 +45201,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37830,9 +45239,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37862,9 +45282,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37892,8 +45316,8 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -37923,9 +45347,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37955,9 +45391,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -37987,9 +45435,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38019,9 +45479,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38051,9 +45523,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38083,9 +45567,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38114,7 +45610,14 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38140,6 +45643,9 @@ export const medicalTerms = [
     "arExplanation": "مرحلة الأعراض التي تسبق ظهور أعراض المرض الكاملة، مما يشير إلى وشك ظهور المرض.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38168,9 +45674,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38200,9 +45714,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38232,9 +45758,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38260,6 +45795,9 @@ export const medicalTerms = [
     "arExplanation": "الميننجوسيل: تشوه خلقي نادر حيث تنفتق السحايا من خلال فتحة في العمود الفقري.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38289,9 +45827,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38320,9 +45870,17 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38350,7 +45908,8 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38379,9 +45938,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38409,7 +45972,16 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38435,6 +46007,9 @@ export const medicalTerms = [
     "arExplanation": "الغيبوبة: حالة عميقة من فقدان الوعي مع عدم الاستجابة للمؤثرات الخارجية وغالبًا ما يفقد التنفس التلقائي.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38462,8 +46037,8 @@ export const medicalTerms = [
       "Nerologie"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38494,7 +46069,12 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -38524,9 +46104,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38552,6 +46143,9 @@ export const medicalTerms = [
     "arExplanation": "الخيمة: غشاء داخل الجمجمة يعمل كحاجز بين المخ والمخيخ.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38577,6 +46171,9 @@ export const medicalTerms = [
     "arExplanation": "الخلية العصبية: الوحدة الوظيفية الأساسية للجهاز العصبي، تعالج وتنقل النبضات الكهربائية.",
     "categories": [
       "Nerologie"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38604,7 +46201,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38633,7 +46231,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38659,6 +46266,9 @@ export const medicalTerms = [
     "arExplanation": "إنعاش يشمل تنفيذ إجراءات الإحياء للأشخاص الذين عانوا من توقف القلب. يتضمن ذلك تقنيات مثل التدليك القلبي والتنفس الاصطناعي.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38687,7 +46297,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38716,7 +46332,16 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38742,6 +46367,9 @@ export const medicalTerms = [
     "arExplanation": "الماراسموس هو شكل شديد من سوء التغذية، يتميز بنقص شديد في العناصر الغذائية الأساسية، مما يؤدي إلى فقدان وزن حاد وضمور العضلات.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38769,7 +46397,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38797,7 +46426,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38825,7 +46455,9 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Baden-Württemberg",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38854,7 +46486,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38882,7 +46522,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38912,9 +46553,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -38942,7 +46587,9 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -38968,6 +46615,9 @@ export const medicalTerms = [
     "arExplanation": "جيرون هو مصطلح يشير إلى كبار السن، يُستخدم عادة في الطب الشيخوخي أو الجرياتريا.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -38997,9 +46647,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39029,9 +46683,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39060,9 +46722,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39090,8 +46763,9 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39121,7 +46795,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39151,9 +46832,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39179,6 +46864,9 @@ export const medicalTerms = [
     "arExplanation": "الاكتئاب هو اضطراب نفسي يتميز بالحزن المستمر، فقدان الاهتمام، نقص الطاقة وأعراض أخرى.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39208,9 +46896,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39236,6 +46928,9 @@ export const medicalTerms = [
     "arExplanation": "حالة من الحزن العميق والكآبة، غالبًا ما تكون مصحوبة بالتفكير التأملي أو التشاؤمي.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39265,9 +46960,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39297,9 +46998,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39328,9 +47033,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39356,6 +47067,9 @@ export const medicalTerms = [
     "arExplanation": "حالة مع ألم حارق مستمر قد يحدث بعد إصابة عصبية أو جراحة.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39384,8 +47098,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern"
     ]
   },
   {
@@ -39413,7 +47127,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39439,6 +47154,9 @@ export const medicalTerms = [
     "arExplanation": "مصطلح يعني \"حقيقي\" أو \"واقعي\"، يستخدم غالبًا للدلالة على أصالة الملاحظة الطبية أو النتيجة.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39468,9 +47186,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39499,8 +47221,7 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39530,9 +47251,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39560,7 +47292,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39589,7 +47322,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39617,7 +47356,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39647,7 +47387,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39675,7 +47423,13 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39704,8 +47458,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39734,8 +47488,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Schleswig-Holstein"
     ]
   },
   {
@@ -39761,6 +47520,9 @@ export const medicalTerms = [
     "arExplanation": "تقنية فحص يقوم فيها الطبيب بطرق سطح الجسم لاستنتاج الهياكل الداخلية من خلال الصوت.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39788,8 +47550,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39815,6 +47577,9 @@ export const medicalTerms = [
     "arExplanation": "علم الوراثة والجينات، يدرس كيفية نقل الصفات والخصائص للكائنات الحية.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -39842,7 +47607,14 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39870,7 +47642,13 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39900,9 +47678,19 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39932,9 +47720,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39964,9 +47757,17 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -39992,6 +47793,9 @@ export const medicalTerms = [
     "arExplanation": "يشير إلى الأنسجة، وخاصة العضلات، التي يمكن أن تنقبض، ويصف قدرتها على الانقباض.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40019,7 +47823,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40045,6 +47850,9 @@ export const medicalTerms = [
     "arExplanation": "مركب كيميائي يعرف بملح الطعام، يستخدم في الطب لتنظيم السوائل واستبدال الإلكتروليتات.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40074,9 +47882,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40104,9 +47916,13 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40134,7 +47950,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40164,9 +47981,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40196,9 +48024,15 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40226,7 +48060,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Hessen"
+      "Hessen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40252,6 +48087,9 @@ export const medicalTerms = [
     "arExplanation": "رد فعل الجسم على المحفزات الخارجية أو الداخلية التي قد تسبب الالتهاب أو الألم أو عدم الراحة.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40277,6 +48115,9 @@ export const medicalTerms = [
     "arExplanation": "حالة يتأثر فيها النسيج أو الرفاهية النفسية بالمحفزات، مما قد يسبب الالتهاب أو عدم الراحة.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40306,9 +48147,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40336,8 +48184,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40365,7 +48213,14 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40391,6 +48246,9 @@ export const medicalTerms = [
     "arExplanation": "إجراء أو تدخل يخترق الجسم، غالبًا عبر شقوق جراحية أو إدخال أدوات، لإجراء التشخيصات أو العلاجات الطبية.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40419,9 +48277,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40451,9 +48313,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40482,7 +48351,10 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40511,7 +48383,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Westfalen-Lippe"
+      "Westfalen-Lippe",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40540,7 +48418,12 @@ export const medicalTerms = [
     ],
     "regions": [
       "Hessen",
-      "Nordrhein-Westfalen"
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg"
     ]
   },
   {
@@ -40570,9 +48453,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40602,9 +48497,20 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40634,9 +48540,14 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40664,8 +48575,9 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40691,6 +48603,9 @@ export const medicalTerms = [
     "arExplanation": "انتشار أو توزيع شيء ما، مثل مسببات الأمراض أو الخلايا السرطانية في الجسم أو المعلومات في مجتمع.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40720,9 +48635,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40752,9 +48671,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40783,9 +48714,20 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40815,9 +48757,18 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Rheinland-Pfalz",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40846,9 +48797,15 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40877,8 +48834,8 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern"
+      "Niedersachsen",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40906,8 +48863,9 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
+      "Bayern",
       "Baden-Württemberg",
-      "Bayern"
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -40936,9 +48894,19 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40968,9 +48936,16 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -40999,9 +48974,13 @@ export const medicalTerms = [
     ],
     "regions": [
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -41029,8 +49008,8 @@ export const medicalTerms = [
       "Zusätzlich"
     ],
     "regions": [
-      "Baden-Württemberg",
-      "Bayern"
+      "Bayern",
+      "Rheinland-Pfalz"
     ]
   },
   {
@@ -41060,9 +49039,13 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Rheinland-Pfalz",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -41092,9 +49075,21 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Nordrhein-Westfalen",
-      "Baden-Württemberg",
       "Westfalen-Lippe",
-      "Bayern"
+      "Baden-Württemberg",
+      "Bayern",
+      "Berlin",
+      "Niedersachsen",
+      "Rheinland-Pfalz",
+      "Hamburg",
+      "Sachsen",
+      "Mecklenburg Vorpommern",
+      "Sachsen-Anhalt",
+      "Brandenburg",
+      "Bremen",
+      "Saarland",
+      "Schleswig-Holstein",
+      "Thüringen"
     ]
   },
   {
@@ -41120,6 +49115,9 @@ export const medicalTerms = [
     "arExplanation": "ظاهرة أو خاصية في الصور الطبية أو العينات لا تنتج عن طبيعة النسيج أو العضو المفحوص، بل تنشأ عن عوامل خارجية مثل إعدادات الجهاز أو الحركة أو الأخطاء التقنية.",
     "categories": [
       "Zusätzlich"
+    ],
+    "regions": [
+      "Rheinland-Pfalz"
     ]
   }
 ];
