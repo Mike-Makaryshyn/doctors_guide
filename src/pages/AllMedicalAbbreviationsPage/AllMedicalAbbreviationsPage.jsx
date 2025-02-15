@@ -4,7 +4,7 @@ import { medicalAbbreviations } from "./medicalAbbreviations";
 import styles from "./AllMedicalAbbreviationsPage.module.scss";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
-import { FaCog } from "react-icons/fa";
+import { FaCog, FaCheck } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
@@ -32,7 +32,7 @@ const AllMedicalAbbreviationsPage = () => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
 
-  // Стан для показу пояснень – true означає, що пояснення відображаються
+  // Стан для показу пояснень – true означає, що пояснення відображаються постійно
   const [showDefinitions, setShowDefinitions] = useState(true);
 
   // Стан пошукового запиту
@@ -71,6 +71,25 @@ const AllMedicalAbbreviationsPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Стан для збереження "вивчених" термінів (масив id)
+  const [learned, setLearned] = useState([]);
+
+  const toggleLearned = (id) => {
+    setLearned((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
+  // Стан для окремо відкритих пояснень (для рядків, де showDefinitions === false)
+  const [explanationOpen, setExplanationOpen] = useState({});
+
+  const toggleExplanation = (id) => {
+    setExplanationOpen((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   // Отримуємо унікальні регіони із даних
   const uniqueRegions = Array.from(
     new Set(
@@ -102,17 +121,17 @@ const AllMedicalAbbreviationsPage = () => {
     const doc = new jsPDF();
     doc.setFont("Helvetica", "bold");
     doc.setFontSize(16);
-    doc.text("Вибрані медичні скорочення", 10, 10);
+    doc.text("Ausgewählte medizinische Abkürzungen", 10, 10);
     const tableData = selectedDefinitions.map((abbrId) => {
       const abbr = medicalAbbreviations.find((item) => item.id === abbrId);
       const explanation =
         translationLanguage !== "de"
-          ? abbr.explanation[translationLanguage] || "Немає перекладу"
+          ? abbr.explanation[translationLanguage] || abbr.explanation.de
           : abbr.explanation.de;
       return [abbr.abbreviation, abbr.name, explanation];
     });
     doc.autoTable({
-      head: [["Скорочення", "Назва", "Пояснення"]],
+      head: [["Abkürzung", "Name", "Erklärung"]],
       body: tableData,
       startY: 20,
       styles: { font: "Helvetica", fontSize: 10, cellPadding: 5 },
@@ -126,7 +145,7 @@ const AllMedicalAbbreviationsPage = () => {
 
   // Функція збереження у особистий кабінет (поки що не реалізована)
   const saveToPersonalAccount = async () => {
-    alert("Функція збереження поки що не реалізована");
+    alert("Funktion zum Speichern im persönlichen Konto ist noch nicht implementiert");
     setShowSaveModal(false);
   };
 
@@ -142,12 +161,11 @@ const AllMedicalAbbreviationsPage = () => {
   return (
     <MainLayout>
       <div className={styles.allMedicalAbbreviationsPage}>
-        <h1>Медичні скорочення</h1>
-
+        <h1>Medizinische Abkürzungen</h1>
         {/* Пошук */}
         <input
           type="text"
-          placeholder="Пошук..."
+          placeholder="Suche..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className={styles.searchInput}
@@ -157,50 +175,43 @@ const AllMedicalAbbreviationsPage = () => {
         {isMobile ? (
           <div className={styles.tilesContainer}>
             {filteredAbbreviations.map((abbr) => (
-              <div key={abbr.id} className={styles.tile}>
+              <div
+                key={abbr.id}
+                className={`${styles.tile} ${learned.includes(abbr.id) ? styles.learned : ""}`}
+              >
+                {/* Галочка у правому верхньому кутку */}
+                <div className={styles.checkIcon} onClick={() => toggleLearned(abbr.id)}>
+                  <FaCheck />
+                </div>
                 <h3 className={styles.tileHeader}>
-                  {translationLanguage !== "de" ? (
-                    <Tippy
-                      content={abbr[translationLanguage] || "Немає перекладу"}
-                      trigger="click"
-                      interactive={true}
-                      placement="bottom"
-                    >
-                      <span className={styles.clickableCell}>{abbr.abbreviation}</span>
-                    </Tippy>
-                  ) : (
-                    abbr.abbreviation
-                  )}
+                  {/* Для мобільних – просто виводимо текст без Tippy */}
+                  {abbr.abbreviation}
                 </h3>
-                <p className={styles.tileDescription}>
-                  {translationLanguage !== "de" ? (
+                <p
+                  className={styles.tileDescription}
+                  onClick={() => {
+                    if (!showDefinitions) toggleExplanation(abbr.id);
+                  }}
+                >
+                  {abbr.name}
+                </p>
+                {showDefinitions ? (
+                  <p className={styles.tileExplanation}>
                     <Tippy
-                      content={abbr.name || "Немає перекладу"}
+                      content={abbr.explanation[translationLanguage] || abbr.explanation.de}
                       trigger="click"
                       interactive={true}
                       placement="bottom"
                     >
-                      <span className={styles.clickableCell}>{abbr.name}</span>
+                      <span className={styles.clickableCell}>{abbr.explanation.de}</span>
                     </Tippy>
-                  ) : (
-                    abbr.name
-                  )}
-                </p>
-                {showDefinitions && (
-                  <p className={styles.tileExplanation}>
-                    {translationLanguage !== "de" ? (
-                      <Tippy
-                        content={abbr.explanation[translationLanguage] || "Немає перекладу"}
-                        trigger="click"
-                        interactive={true}
-                        placement="bottom"
-                      >
-                        <span className={styles.clickableCell}>{abbr.explanation.de}</span>
-                      </Tippy>
-                    ) : (
-                      abbr.explanation.de
-                    )}
                   </p>
+                ) : (
+                  explanationOpen[abbr.id] && (
+                    <p className={styles.tileExplanation}>
+                      {abbr.explanation.de}
+                    </p>
+                  )
                 )}
               </div>
             ))}
@@ -209,56 +220,46 @@ const AllMedicalAbbreviationsPage = () => {
           <table className={styles.terminologyTable}>
             <thead>
               <tr>
-                <th style={{ width: "30%" }}>Скорочення</th>
-                <th style={{ width: "30%" }}>Назва</th>
-                {showDefinitions && <th>Пояснення</th>}
+                <th>Abkürzung</th>
+                <th>Name</th>
+                {showDefinitions && <th>Erklärung</th>}
               </tr>
             </thead>
             <tbody>
               {filteredAbbreviations.map((abbr) => (
-                <tr key={abbr.id}>
-                  <td>
-                    {translationLanguage !== "de" ? (
-                      <Tippy
-                        content={abbr[translationLanguage] || "Немає перекладу"}
-                        trigger="click"
-                        interactive={true}
-                        placement="right"
-                      >
-                        <span className={styles.clickableCell}>{abbr.abbreviation}</span>
-                      </Tippy>
-                    ) : (
-                      abbr.abbreviation
-                    )}
+                <tr
+                  key={abbr.id}
+                  className={learned.includes(abbr.id) ? styles.learned : ""}
+                >
+                  <td className={styles.abbreviationCell}>
+                    {abbr.abbreviation}
+                    <div className={styles.checkIconDesktop} onClick={() => toggleLearned(abbr.id)}>
+                      <FaCheck />
+                    </div>
                   </td>
-                  <td>
-                    {translationLanguage !== "de" ? (
-                      <Tippy
-                        content={abbr.name || "Немає перекладу"}
-                        trigger="click"
-                        interactive={true}
-                        placement="right"
-                      >
-                        <span className={styles.clickableCell}>{abbr.name}</span>
-                      </Tippy>
-                    ) : (
-                      abbr.name
+                  <td
+                    className={styles.nameCell}
+                    onClick={() => {
+                      if (!showDefinitions) toggleExplanation(abbr.id);
+                    }}
+                  >
+                    {abbr.name}
+                    {!showDefinitions && explanationOpen[abbr.id] && (
+                      <div className={styles.inlineExplanation}>
+                        {abbr.explanation.de}
+                      </div>
                     )}
                   </td>
                   {showDefinitions && (
-                    <td>
-                      {translationLanguage !== "de" ? (
-                        <Tippy
-                          content={abbr.explanation[translationLanguage] || "Немає перекладу"}
-                          trigger="click"
-                          interactive={true}
-                          placement="right"
-                        >
-                          <span className={styles.clickableCell}>{abbr.explanation.de}</span>
-                        </Tippy>
-                      ) : (
-                        abbr.explanation.de
-                      )}
+                    <td className={styles.explanationCell}>
+                      <Tippy
+                        content={abbr.explanation[translationLanguage] || abbr.explanation.de}
+                        trigger="click"
+                        interactive={true}
+                        placement="right"
+                      >
+                        <span className={styles.clickableCell}>{abbr.explanation.de}</span>
+                      </Tippy>
                     </td>
                   )}
                 </tr>
@@ -271,18 +272,18 @@ const AllMedicalAbbreviationsPage = () => {
         {showSaveModal && (
           <div className={styles.modal}>
             <div className={styles.modalContent}>
-              <h2>Куди зберегти?</h2>
-              <p>Оберіть, як зберегти скорочення:</p>
+              <h2>Wohin speichern?</h2>
+              <p>Wählen Sie, wie Sie die Abkürzungen speichern möchten:</p>
               <div className={styles.modalActions}>
                 <button className={styles.actionButton} onClick={saveToPersonalAccount}>
-                  Особистий кабінет
+                  Persönliches Konto
                 </button>
                 <button className={styles.actionButton} onClick={saveToPDF}>
-                  Зберегти у PDF
+                  Als PDF speichern
                 </button>
               </div>
               <button className={styles.closeButton} onClick={() => setShowSaveModal(false)}>
-                Закрити
+                Schließen
               </button>
             </div>
           </div>
@@ -302,12 +303,12 @@ const AllMedicalAbbreviationsPage = () => {
               <button className={styles.modalCloseButton} onClick={() => setIsSettingsModalOpen(false)}>
                 <AiOutlineClose />
               </button>
-              <h2 className={styles.modalTitle}>Налаштування</h2>
+              <h2 className={styles.modalTitle}>Einstellungen</h2>
               <p className={styles.modalSubtitle}>
-                Оберіть регіон та мову (наразі категорії не використовуються):
+                Wählen Sie Region und Sprache (Kategorie wird derzeit nicht verwendet):
               </p>
               <div>
-                <label className={styles.modalLabel}>Регіон:</label>
+                <label className={styles.modalLabel}>Region:</label>
                 <select value={region} onChange={handleRegionChange} className={styles.modalSelect}>
                   {Object.keys(
                     medicalAbbreviations.reduce((acc, abbr) => {
@@ -325,7 +326,7 @@ const AllMedicalAbbreviationsPage = () => {
                 </select>
               </div>
               <div>
-                <label className={styles.modalLabel}>Мова:</label>
+                <label className={styles.modalLabel}>Sprache:</label>
                 <select value={translationLanguage} onChange={handleTranslationChange} className={styles.modalSelect}>
                   {localLangOptions.map((opt) => (
                     <option key={opt.value} value={opt.value}>
@@ -335,7 +336,7 @@ const AllMedicalAbbreviationsPage = () => {
                 </select>
               </div>
               <div>
-                <label className={styles.modalLabel}>Показувати пояснення:</label>
+                <label className={styles.modalLabel}>Erklärung anzeigen:</label>
                 <input
                   type="checkbox"
                   checked={showDefinitions}

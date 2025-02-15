@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 
-/* Пошук */
+/* Suche */
 .searchInput {
   width: 100%;
   padding: 10px;
@@ -14,7 +14,7 @@
   font-size: 16px;
 }
 
-/* Відображення плиток */
+/* Plattenanzeige (Tiles) */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +23,7 @@
   overflow-x: hidden;
 }
 .tile {
+  position: relative;
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
@@ -61,12 +62,22 @@
   line-height: 1.4;
 }
 
-/* Для клікабельних елементів */
+/* Check Icon in Tiles */
+.checkIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 16px;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+/* Für klickbare Elemente */
 .clickableCell {
   cursor: pointer;
 }
 
-/* Таблиця для десктопу */
+/* Tabelle für Desktop */
 .terminologyTable {
   width: 100%;
   border-collapse: collapse;
@@ -80,15 +91,13 @@
   text-align: left;
   font-size: 14px;
   color: #333;
+  position: relative;
 }
 .terminologyTable th {
   background-color: #f4f6f7;
   color: #555;
 }
-/* Задаємо ширину колонок:
-   - Перша колонка (Скорочення): 15%
-   - Друга колонка (Назва): 15%
-   - Третя колонка (Пояснення): 70% */
+/* Spaltenbreiten: 15% für Abkürzung, 15% für Name, 70% für Erklärung */
 .terminologyTable th:nth-child(1),
 .terminologyTable td:nth-child(1) {
   width: 15%;
@@ -112,7 +121,22 @@
   background-color: #eaf2f8;
 }
 
-/* Кнопка налаштувань */
+/* Check Icon in Table (in the Abkürzung cell) */
+.checkIconDesktop {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+/* Learned - verändere Hintergrundfarbe (z. B. ein helles Grün) */
+.learned {
+  background-color: #d4edda !important;
+}
+
+/* Einstellungen-Button */
 .bottomRightSettings {
   position: fixed;
   bottom: 20px;
@@ -137,7 +161,7 @@
   transform: scale(1.1);
 }
 
-/* Модальне вікно */
+/* Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -179,15 +203,13 @@
   background-color: #c0392b;
 }
 
-/* Модальне вікно налаштувань (popup) */
-/* Десктоп */
+/* Popup Einstellungen (Desktop und Mobile) */
 .popupContainerDesktop {
   position: fixed;
   bottom: 70px;
   right: 20px;
   z-index: 2000;
 }
-/* Мобільні пристрої */
 .popupContainerMobile {
   position: fixed;
   left: 0;
@@ -262,7 +284,7 @@
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Налаштування для Tippy */
+/* Tippy */
 :global(.tippy-box) {
   font-family: "Poppins", sans-serif;
 }
