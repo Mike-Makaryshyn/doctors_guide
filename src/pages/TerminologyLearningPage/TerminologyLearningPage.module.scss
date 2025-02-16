@@ -12,43 +12,34 @@
   margin-top: 20px;
 }
 
-/* Зовнішня плитка залишається як раніше */
-/* Зовнішня плитка залишається як раніше */
+/* Центрування плиток на мобільних пристроях */
+@media (max-width: 768px) {
+  .gamesGrid {
+    justify-content: center;
+  }
+}
+
+/* Зовнішня плитка */
 .gameTile {
-    position: relative;
-    background-color: #f7f7f7;
-    border: 2px solid #dddddd00;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  position: relative;
+  background-color: #f7f7f7;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  background-size: cover; /* щоб фон займав всю плитку */
+  background-position: center;
+  
+  &:hover {
     text-decoration: none;
-  
-    /* Забороняємо підкреслення при наведенні */
-    &:hover {
-      text-decoration: none;
-    }
   }
-  
-  /* Заголовок плитки */
-  .tileHeader {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #023c6f; /* синій колір */
-    text-align: center;
-    margin-bottom: 10px;
-    text-decoration: none; /* Забороняємо підкреслення */
-  
-    /* При наведенні також не підкреслюється */
-    &:hover {
-      text-decoration: none;
-    }
-  }
+}
 
 /* Заголовок плитки */
 .tileHeader {
@@ -58,9 +49,14 @@
   color: #023c6f; /* синій колір */
   text-align: center;
   margin-bottom: 10px;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-/* Всередині плитки — перевертальна картка */
+/* Перевертальна картка всередині плитки */
 .innerTile {
   position: absolute;
   top: 50%;
@@ -68,7 +64,7 @@
   transform: translate(-50%, -50%);
   width: 120px;  /* трохи ширше */
   height: 80px;
-  perspective: 1000px; /* забезпечує 3D ефект */
+  perspective: 1000px;
 }
 
 .cardInner {
@@ -91,7 +87,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #023c6f; /* потрібний колір тексту */
+  color: #023c6f;
   border: 2px solid #ddd;
   border-radius: 8px;
   background-color: #ccc;
@@ -101,7 +97,6 @@
   transform: rotateY(180deg);
 }
 
-/* Ключові кадри анімації перевороту */
 @keyframes flipAnimation {
   0% {
     transform: rotateY(0deg);

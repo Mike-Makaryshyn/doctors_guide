@@ -15,15 +15,13 @@ const useQuery = () => new URLSearchParams(useLocation().search);
 const FlashcardGame = () => {
   const query = useQuery();
 
-  // Приводимо query-параметри до наших дефолтних значень:
-  // Якщо в query значення "all" для region або category, використовуємо "Alle".
+  // Змінено: встановлюємо за замовчуванням значення "Alle" для region та category
   const rawRegion = query.get("region");
   const initialRegion = (!rawRegion || rawRegion.toLowerCase() === "all") ? "Alle" : rawRegion;
   
   const rawCategory = query.get("category");
-  const initialCategory = (!rawCategory || rawCategory.toLowerCase() === "all") ? "All" : rawCategory;
+  const initialCategory = (!rawCategory || rawCategory.toLowerCase() === "all") ? "Alle" : rawCategory;
   
-  // Для filterMode, якщо query має "all", встановлюємо "unlearned"
   const rawFilterMode = query.get("filterMode");
   const initialFilterMode = (!rawFilterMode || rawFilterMode.toLowerCase() === "all") ? "unlearned" : rawFilterMode;
 
@@ -39,7 +37,6 @@ const FlashcardGame = () => {
   // false = front, true = back
   const [flipped, setFlipped] = useState(false);
 
-  // Перевірка на мобільний пристрій (ширина <= 768px)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -65,7 +62,6 @@ const FlashcardGame = () => {
         (term.categories || []).includes(category);
       const status = termStatuses[term.id] || "unlearned";
 
-      // Додаткове логування для кожного терміну:
       console.log(`Перевіряємо термін ${term.id}:`, {
         matchesRegion,
         matchesCategory,
@@ -89,7 +85,6 @@ const FlashcardGame = () => {
     setFlipped(false);
   };
 
-  // Спочатку закриваємо налаштування, а потім завантажуємо картки
   const handleStart = () => {
     setSettingsOpen(false);
     setTimeout(() => {
@@ -97,7 +92,6 @@ const FlashcardGame = () => {
     }, 0);
   };
 
-  // Переворот не впливає на покази
   const handleFlip = () => {
     setFlipped((prev) => !prev);
   };
@@ -133,7 +127,7 @@ const FlashcardGame = () => {
     }
   };
 
-  // useEffect для оновлення карт при зміні фільтрів
+  // Оновлення карт при зміні фільтрів
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const newCards = medicalTerms.filter((term) => {
@@ -172,7 +166,6 @@ const FlashcardGame = () => {
     new Set(medicalTerms.flatMap((term) => term.categories || []))
   );
 
-  // useEffect для підрахунку показів – коли картка відображається
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const currentCard = cards[currentIndex];
@@ -215,7 +208,6 @@ const FlashcardGame = () => {
       <div className={styles.flashcardGame}>
         <h1>Flashcard Game</h1>
 
-        {/* На десктопах завжди показуємо кнопку; на мобільних – лише коли налаштування закриті */}
         {(!isMobile || !settingsOpen) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -308,7 +300,6 @@ const FlashcardGame = () => {
                   ${currentStatus === "learned" ? styles.learned : currentStatus === "paused" ? styles.paused : ""}
                 `}
               >
-                {/* Vorderseite: pointer events вимкнено, якщо карта перевернута */}
                 <div
                   className={styles.cardFront}
                   style={{ pointerEvents: flipped ? "none" : "auto" }}
@@ -358,7 +349,6 @@ const FlashcardGame = () => {
                   </div>
                   <h3>{currentCard.lat}</h3>
                 </div>
-                {/* Rückseite: pointer events увімкнено, якщо карта перевернута */}
                 <div
                   className={styles.cardBack}
                   style={{ pointerEvents: flipped ? "auto" : "none" }}
