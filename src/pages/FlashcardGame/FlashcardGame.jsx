@@ -1,3 +1,4 @@
+// src/pages/FlashcardGame/FlashcardGame.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -6,8 +7,8 @@ import styles from "./FlashcardGame.module.scss";
 import { FaCog, FaInfoCircle, FaCheck, FaPause } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import { useTermStatus } from "../../contexts/TermStatusContext";
 
-// Хук для зчитування query-параметрів
 const useQuery = () => new URLSearchParams(useLocation().search);
 
 const FlashcardGame = () => {
@@ -16,31 +17,21 @@ const FlashcardGame = () => {
   const initialRegion = query.get("region") || "Усі";
   const initialCategory = query.get("category") || "Всі";
 
-  // Фільтри, які можна змінювати в грі
+  const { termStatuses, toggleStatus } = useTermStatus();
+
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [region, setRegion] = useState(initialRegion);
   const [category, setCategory] = useState(initialCategory);
-
-  // Стан модального вікна налаштувань (відкрите при завантаженні)
   const [settingsOpen, setSettingsOpen] = useState(true);
-
-  // Список карток та поточний індекс
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState({});
-
-  // Стан перевертання плитки (всі елементи перевертаються)
   const [flipped, setFlipped] = useState(false);
 
-  // Стан статусів: "learned" та "paused"
-  const [learned, setLearned] = useState([]);
-  const [paused, setPaused] = useState([]);
-
-  // Функція уніфікації регіону
   const unifyRegion = (r) =>
     r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r;
 
-  // Функція завантаження та перемішування карток за фільтрами
+  // Функція для первинного завантаження карток
   const loadCards = () => {
     const filtered = medicalTerms.filter((term) => {
       const matchesRegion =
@@ -48,49 +39,51 @@ const FlashcardGame = () => {
         (term.regions || []).some((r) => unifyRegion(r) === region);
       const matchesCategory =
         category === "Всі" || (term.categories || []).includes(category);
+      const status = termStatuses[term.id] || "unlearned";
+      if (filterMode === "learned" && status !== "learned") return false;
+      if (filterMode === "paused" && status !== "paused") return false;
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+        return false;
       return matchesRegion && matchesCategory;
     });
+    // При старті перемішуємо картки
     const shuffled = filtered.sort(() => Math.random() - 0.5);
     setCards(shuffled);
     setCurrentIndex(0);
     setProgress({});
-    setLearned([]);
-    setPaused([]);
   };
 
-  // При натисканні кнопки "Start" завантажуємо картки та закриваємо налаштування
+  // Виклик при старті гри
   const handleStart = () => {
     loadCards();
     setSettingsOpen(false);
     setFlipped(false);
   };
 
-  // Обробка перевертання плитки
   const handleFlip = () => {
     setFlipped((prev) => !prev);
     const currentCardId = cards[currentIndex]?.id;
-    setProgress((prev) => ({
-      ...prev,
-      [currentCardId]: (prev[currentCardId] || 0) + 1,
-    }));
+    if (currentCardId) {
+      setProgress((prev) => ({
+        ...prev,
+        [currentCardId]: (prev[currentCardId] || 0) + 1,
+      }));
+    }
   };
 
-  // Позначення картки як "вивчене" або "паузовано"
   const toggleLearned = (id) => {
-    setLearned((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-    setPaused((prev) => prev.filter((item) => item !== id));
+    toggleStatus(id, "learned");
   };
 
   const togglePaused = (id) => {
-    setPaused((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-    setLearned((prev) => prev.filter((item) => item !== id));
+    toggleStatus(id, "paused");
+    // Якщо поточний режим – "paused", після натискання перемикаємо режим на "all", 
+    // щоб картка залишалася видимою після зміни статусу:
+    if(filterMode === "paused"){
+      setFilterMode("all");
+    }
   };
 
-  // Перехід до наступної картки
   const handleNext = () => {
     setFlipped(false);
     if (currentIndex < cards.length - 1) {
@@ -100,7 +93,38 @@ const FlashcardGame = () => {
     }
   };
 
-  // Списки регіонів та категорій з даних
+  // Динамічне оновлення списку карток при зміні фільтрів чи статусів
+  useEffect(() => {
+    if (!settingsOpen && cards.length > 0) {
+      // Перераховуємо картки з самого початку (без перемішування)
+      const newCards = medicalTerms.filter((term) => {
+        const matchesRegion =
+          region === "Усі" ||
+          (term.regions || []).some((r) => unifyRegion(r) === region);
+        const matchesCategory =
+          category === "Всі" || (term.categories || []).includes(category);
+        const status = termStatuses[term.id] || "unlearned";
+        if (filterMode === "learned" && status !== "learned") return false;
+        if (filterMode === "paused" && status !== "paused") return false;
+        if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+          return false;
+        return matchesRegion && matchesCategory;
+      });
+      // Зберігаємо поточний порядок, залишаючи тільки ті картки, які відповідають критеріям
+      const newCardsOrdered = cards.filter((card) =>
+        newCards.find((nc) => nc.id === card.id)
+      );
+      // Якщо поточна картка більше не входить у список, скидаємо currentIndex
+      if (!newCardsOrdered.find((card) => card.id === cards[currentIndex]?.id)) {
+        setCurrentIndex(0);
+      }
+      // Якщо список карток змінився – оновлюємо його
+      if (newCardsOrdered.length !== cards.length) {
+        setCards(newCardsOrdered);
+      }
+    }
+  }, [termStatuses, region, category, filterMode]);
+
   const regionsList = Array.from(
     new Set(medicalTerms.flatMap((term) => (term.regions || []).map(unifyRegion)))
   );
@@ -115,7 +139,10 @@ const FlashcardGame = () => {
           <h1>Гра з флешкартками</h1>
           <p>Немає термінів за поточними фільтрами.</p>
           <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => setSettingsOpen(true)}
+            >
               <FaCog />
             </button>
           </div>
@@ -124,21 +151,23 @@ const FlashcardGame = () => {
     );
   }
 
-  const currentCard = cards[currentIndex];
+  const currentCard =
+    !settingsOpen && cards.length > 0 ? cards[currentIndex] : null;
+  const currentStatus = currentCard
+    ? termStatuses[currentCard.id] || "unlearned"
+    : "unlearned";
 
   return (
     <MainLayout>
       <div className={styles.flashcardGame}>
         <h1>Гра з флешкартками</h1>
 
-        {/* Кнопка-шестерня для відкриття налаштувань (знизу праворуч) */}
         <div className={styles.bottomRightSettings}>
           <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
             <FaCog />
           </button>
         </div>
 
-        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
@@ -157,7 +186,7 @@ const FlashcardGame = () => {
               <div className={styles.modalField}>
                 <label>Категорія:</label>
                 <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                  <option value="Всі">Всі</option>
+                  <option value="Усі">Усі</option>
                   {categoriesList.map((c) => (
                     <option key={c} value={c}>
                       {c}
@@ -181,16 +210,23 @@ const FlashcardGame = () => {
           </div>
         )}
 
-        {/* Якщо гра запущена */}
-        {!settingsOpen && (
+        {!settingsOpen && currentCard && (
           <>
             <div className={styles.progress}>
               Картка {currentIndex + 1} з {cards.length}
             </div>
 
-            <div className={styles.card} onClick={handleFlip}>
+            <div
+              className={`${styles.card} ${
+                currentStatus === "learned"
+                  ? styles.learned
+                  : currentStatus === "paused"
+                  ? styles.paused
+                  : ""
+              }`}
+              onClick={handleFlip}
+            >
               <div className={`${styles.cardInner} ${flipped ? styles.flipped : ""}`}>
-                {/* Передня сторона картки */}
                 <div className={styles.cardFront}>
                   <div className={styles.iconsContainer}>
                     <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
@@ -201,13 +237,21 @@ const FlashcardGame = () => {
                     <div className={styles.statusIcons}>
                       <span
                         className={styles.checkIcon}
-                        onClick={(e) => { e.stopPropagation(); toggleLearned(currentCard.id); }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleLearned(currentCard.id);
+                        }}
+                        title="Вивчене"
                       >
                         <FaCheck />
                       </span>
                       <span
                         className={styles.pauseIcon}
-                        onClick={(e) => { e.stopPropagation(); togglePaused(currentCard.id); }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          togglePaused(currentCard.id);
+                        }}
+                        title="Пауза"
                       >
                         <FaPause />
                       </span>
@@ -215,7 +259,6 @@ const FlashcardGame = () => {
                   </div>
                   <h3>{currentCard.lat}</h3>
                 </div>
-                {/* Задня сторона картки */}
                 <div className={styles.cardBack}>
                   <div className={styles.iconsContainer}>
                     <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
@@ -226,13 +269,21 @@ const FlashcardGame = () => {
                     <div className={styles.statusIcons}>
                       <span
                         className={styles.checkIcon}
-                        onClick={(e) => { e.stopPropagation(); toggleLearned(currentCard.id); }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleLearned(currentCard.id);
+                        }}
+                        title="Вивчене"
                       >
                         <FaCheck />
                       </span>
                       <span
                         className={styles.pauseIcon}
-                        onClick={(e) => { e.stopPropagation(); togglePaused(currentCard.id); }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          togglePaused(currentCard.id);
+                        }}
+                        title="Пауза"
                       >
                         <FaPause />
                       </span>

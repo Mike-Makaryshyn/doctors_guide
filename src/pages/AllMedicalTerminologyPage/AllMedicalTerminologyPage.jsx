@@ -1,3 +1,4 @@
+// AllMedicalTerminologyPage.js
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
@@ -12,11 +13,14 @@ import { AiOutlineClose } from "react-icons/ai";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import { useTermStatus } from "../../contexts/TermStatusContext"; // шлях до контексту
 
 // Функція для уніфікації регіону
 const unifyRegion = (r) => (r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r);
 
 const AllMedicalTerminologyPage = () => {
+  const { termStatuses, toggleStatus } = useTermStatus();
+
   const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
 
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
@@ -36,7 +40,7 @@ const AllMedicalTerminologyPage = () => {
   const [showSaveModal, setShowSaveModal] = useState(false);
   const [collapsedCategories, setCollapsedCategories] = useState({});
 
-  // Стан для режиму фільтрації (аналог абревіатур)
+  // Стан для режиму фільтрації
   const [filterMode, setFilterMode] = useState("all");
 
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
@@ -66,21 +70,13 @@ const AllMedicalTerminologyPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Стан для "вивчені" та "паузовані"
-  const [learned, setLearned] = useState([]);
-  const [paused, setPaused] = useState([]);
-
+  // Функції для перемикання статусу
   const toggleLearned = (id) => {
-    setLearned((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-    setPaused((prev) => prev.filter((item) => item !== id));
+    toggleStatus(id, "learned");
   };
+
   const togglePaused = (id) => {
-    setPaused((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-    setLearned((prev) => prev.filter((item) => item !== id));
+    toggleStatus(id, "paused");
   };
 
   const uniqueRegions = Array.from(
@@ -109,9 +105,12 @@ const AllMedicalTerminologyPage = () => {
     const matchesRegion =
       region === "Усі" || (term.regions || []).some((r) => unifyRegion(r) === region);
     let base = matchesSearch && matchesCategory && matchesRegion;
-    if (filterMode === "learned") return base && learned.includes(term.id);
-    if (filterMode === "paused") return base && paused.includes(term.id);
-    if (filterMode === "unlearned") return base && !learned.includes(term.id) && !paused.includes(term.id);
+
+    // Отримуємо статус терміну з контексту
+    const status = termStatuses[term.id] || "unlearned";
+    if (filterMode === "learned" && status !== "learned") return false;
+    if (filterMode === "paused" && status !== "paused") return false;
+    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
     return base;
   });
 
@@ -221,8 +220,14 @@ const AllMedicalTerminologyPage = () => {
                     <div
                       key={term.id}
                       className={`${styles.tile} ${
-                        learned.includes(term.id) ? styles.learned : ""
-                      } ${paused.includes(term.id) ? styles.paused : ""}`}
+                        (termStatuses[term.id] || "unlearned") === "learned"
+                          ? styles.learned
+                          : ""
+                      } ${
+                        (termStatuses[term.id] || "unlearned") === "paused"
+                          ? styles.paused
+                          : ""
+                      }`}
                     >
                       {/* Іконки для вивчених/паузованих */}
                       <span
@@ -309,8 +314,16 @@ const AllMedicalTerminologyPage = () => {
                       <tr
                         key={term.id}
                         className={`
-                          ${learned.includes(term.id) ? styles.learned : ""}
-                          ${paused.includes(term.id) ? styles.paused : ""}
+                          ${
+                            (termStatuses[term.id] || "unlearned") === "learned"
+                              ? styles.learned
+                              : ""
+                          }
+                          ${
+                            (termStatuses[term.id] || "unlearned") === "paused"
+                              ? styles.paused
+                              : ""
+                          }
                         `}
                       >
                         <td className={styles.termCell}>
