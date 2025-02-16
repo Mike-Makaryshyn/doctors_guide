@@ -30,6 +30,14 @@ const FlashcardGame = () => {
   // Стан для перевороту: false = front, true = back
   const [flipped, setFlipped] = useState(false);
 
+  // Визначення мобільного пристрою (ширина <= 768px)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const unifyRegion = (r) =>
     r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r;
 
@@ -153,10 +161,7 @@ const FlashcardGame = () => {
           <h1>Гра з флешкартками</h1>
           <p>Немає термінів за поточними фільтрами.</p>
           <div className={styles.bottomRightSettings}>
-            <button
-              className={styles.settingsButton}
-              onClick={() => setSettingsOpen(true)}
-            >
+            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
               <FaCog />
             </button>
           </div>
@@ -176,14 +181,20 @@ const FlashcardGame = () => {
       <div className={styles.flashcardGame}>
         <h1>Гра з флешкартками</h1>
 
-        <div className={styles.bottomRightSettings}>
-          <button
-            className={styles.settingsButton}
-            onClick={() => setSettingsOpen(true)}
-          >
-            <FaCog />
-          </button>
-        </div>
+        {/* 
+          На десктопах (isMobile === false) кнопка завжди показується.
+          На мобільних (isMobile === true) – показуємо тільки, коли settingsOpen === false.
+        */}
+        {(!isMobile || !settingsOpen) && (
+          <div className={styles.bottomRightSettings}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => setSettingsOpen(true)}
+            >
+              <FaCog />
+            </button>
+          </div>
+        )}
 
         {settingsOpen && (
           <div className={styles.modalOverlay}>
