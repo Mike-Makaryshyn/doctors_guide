@@ -35,6 +35,7 @@
 
 /* Модальне вікно */
 .modalOverlay {
+  font-family: "Poppins", sans-serif; 
   position: fixed;
   top: 0;
   left: 0;
@@ -49,6 +50,7 @@
 
 /* Для десктопу – модалка поруч із кнопкою */
 .popupDesktop {
+  font-family: "Poppins", sans-serif;
   background: #fff;
   padding: 25px 20px 20px;
   width: 300px;
@@ -63,6 +65,7 @@
 
 /* Для мобільних – модалка внизу з анімацією bounce */
 .popupMobile {
+  font-family: "Poppins", sans-serif;
   background: #fff;
   padding: 25px 20px 20px;
   width: 100%;
@@ -98,6 +101,7 @@
 }
 .modalCloseButton:hover {
   transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0); /* Задаємо напівпрозорий червоний фон */
 }
 .modalField {
   margin-bottom: 15px;
@@ -105,8 +109,10 @@
   flex-direction: column;
 }
 .modalField label {
+  font-weight: 600; /* Робимо текст трохи жирнішим */
+  font-size: 16px; /* Збільшуємо розмір тексту */
+  color: #013b6e; /* Той самий синій, що використовується в заголовку */
   margin-bottom: 5px;
-  font-weight: bold;
 }
 .modalTitle {
   margin-top: 0;
@@ -133,18 +139,51 @@
   box-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 .startButton {
+  display: inline-block;
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px 16px;
   color: #fff;
-  border: none;
-  border-radius: 4px;
   font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #4caf50, #008000); /* Градієнт */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* М'яка тінь */
   cursor: pointer;
-  transition: background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
 .startButton:hover {
-  background-color: #013b6e;
+  background: linear-gradient(135deg, #66bb6a, #009900); /* Зміна градієнта */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Глибша тінь при наведенні */
+  transform: translateY(-2px); /* Легке підняття */
+}
+
+.startButton:active {
+  transform: translateY(1px); /* Ефект натискання */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Псевдоелемент для легкого “спалаху” при кліці */
+.startButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0); /* Світлий ефект */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.startButton:active::before {
+  width: 200%;
+  height: 200%;
 }
 
 /* Прогрес */
@@ -163,7 +202,7 @@
 }
 .navButton {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #4caf50;
   border: none;
   border-radius: 6px;
   color: #fff;
@@ -235,6 +274,10 @@
 }
 .cardBack {
   transform: rotateY(180deg);
+}
+.cardBack .infoButton {
+  left: 5px;
+  right: auto;
 }
 
 /* Контейнер для іконок (для front-сторони) */
@@ -339,4 +382,5 @@
 }
 .infoButton:hover {
   transform: scale(1.1);
+  background-color: rgba(76, 175, 79, 0); /* Додаємо напівпрозорий зелений фон */
 }
