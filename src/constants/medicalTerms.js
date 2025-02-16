@@ -21875,7 +21875,7 @@ export const medicalTerms = [
     "trExplanation": "Naris, cavité nasalelere erişimi sağlayan ve solunum havasının girişine izin veren bir açıklıktır.",
     "arExplanation": "تسمية لفتحة الأنف، فتحة تسمح بالوصول إلى تجويف الأنف ودخول الهواء التنفسي.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -21903,7 +21903,7 @@ export const medicalTerms = [
     "trExplanation": "Concha/e nasalis, cavités nasales appelées cornets nasaux, qui filtrent, humidifient et réchauffent l'air.",
     "arExplanation": "الهياكل العظمية في تجويف الأنف، المعروفة بالقرنيات الأنفية، التي تنقي الهواء وترطبه وتسخنه.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -21939,7 +21939,7 @@ export const medicalTerms = [
     "trExplanation": "Septum nasi, burun boşluğunu iki ayrı alan halinde bölen kemik ve kıkırdak bir yapıdır.",
     "arExplanation": "الحاجز الأنفي، هيكل عظمي وغضروفي يقسم تجويف الأنف إلى فضاءين منفصلين.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -21969,7 +21969,7 @@ export const medicalTerms = [
     "trExplanation": "Rhinit, burun mukozasının iltihaplanmasıdır ve sıklıkla alerjiler veya enfeksiyonlar nedeniyle burun tıkanıklığı, hapşırma ve burun akıntısı gibi semptomlara neden olur.",
     "arExplanation": "التهاب الغشاء المخاطي للأنف يسبب أعراضًا مثل احتقان الأنف والعطاس وسيلان الأنف، غالبًا بسبب الحساسية أو العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Nordrhein-Westfalen",
@@ -22007,7 +22007,7 @@ export const medicalTerms = [
     "trExplanation": "Rinoplasti, burun şeklini düzeltmek veya iyileştirmek için yapılan cerrahi bir işlemdir ve estetik veya fonksiyonel nedenlerle yapılabilir.",
     "arExplanation": "جراحة لتصحيح أو تحسين شكل الأنف، يمكن إجراؤها لأسباب تجميلية أو وظيفية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22036,7 +22036,7 @@ export const medicalTerms = [
     "trExplanation": "Rinuskopi, iç burun yapılarının tanısal bir muayenesidir ve anormallikleri veya hastalıkları belirlemek için bir rinaskop kullanılarak yapılır.",
     "arExplanation": "فحص تشخيصي للهياكل الداخلية للأنف باستخدام منظار الأنف لتحديد الشذوذات أو الأمراض.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -22064,7 +22064,7 @@ export const medicalTerms = [
     "trExplanation": "Anozmi, tam bir koku kaybını ifade eder ve geçici veya kalıcı olabilir ve enfeksiyonlar veya travmatik yaralanmalar gibi çeşitli nedenlere sahip olabilir.",
     "arExplanation": "فقدان كامل لحاسة الشم، يمكن أن يكون مؤقتًا أو دائمًا وله أسباب متعددة، بما في ذلك العدوى أو الإصابات الرضية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Nordrhein-Westfalen",
@@ -22095,7 +22095,7 @@ export const medicalTerms = [
     "trExplanation": "Hipozmi, kokuları tanıma yeteneğinin azaldığı bir durumu ifade eder ve genellikle nörolojik hastalıkların erken bir belirtisi veya kronik sinüs sorunlarından kaynaklanır.",
     "arExplanation": "قدرة مخفضة للكشف عن الروائح، غالبًا علامة مبكرة للأمراض العصبية أو نتيجة لمشاكل مزمنة في الجيوب الأنفية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22126,7 +22126,7 @@ export const medicalTerms = [
     "trExplanation": "Epistaksis, burun kanamasını ifade eder ve kendiliğinden meydana gelebilir veya travma, enfeksiyonlar veya diğer tıbbi durumlar nedeniyle olabilir.",
     "arExplanation": "نزيف من الأنف، يمكن أن يحدث بشكل تلقائي أو بسبب الصدمات، العدوى، أو الحالات الطبية الأخرى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22162,7 +22162,7 @@ export const medicalTerms = [
     "trExplanation": "Meatus acusticus internus, ses dalgalarını orta ve iç kulaklara iletmek için kullanılan iç kulak kanalıdır; Meatus acusticus eksternus ise sesin timpana yönlendirildiği dış kulak kanalıdır.",
     "arExplanation": "القناة السمعية الداخلية، التي توجه الموجات الصوتية إلى الأذن الوسطى والداخلية، والقناة السمعية الخارجية، التي تقود الصوت إلى طبلة الأذن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22206,7 +22206,7 @@ export const medicalTerms = [
     "trExplanation": "Tuba auditiva (Tuba Eustachii), orta kulağı nazofarinkse bağlayan, orta kulak içi basıncını dengelemeye yardımcı olan ve sekresyonların dışarı akışını kolaylaştıran bir kanaldır.",
     "arExplanation": "قناة تربط الأذن الوسطى بالبلعوم الأنفي، تساعد في توازن الضغط في الأذن الوسطى وتسهل تصريف الإفرازات.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22243,7 +22243,7 @@ export const medicalTerms = [
     "trExplanation": "Zerumen (Cerumen), dış kulak yolundaki bezler tarafından üretilen ve kulağı tozdan, bakterilerden ve diğer yabancı maddelerden koruyan bir maddeidir.",
     "arExplanation": "مادة تنتجها الغدد في القناة السمعية الخارجية، تحمي الأذن من الغبار والبكتيريا والأجسام الغريبة الأخرى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22280,7 +22280,7 @@ export const medicalTerms = [
     "trExplanation": "Membrana tympani, ses dalgaları üzerine geldiğinde titreşen ve ses enerjisini orta kulağa ileten bir zar olan timpanı ifade eder.",
     "arExplanation": "طبلة الأذن، غشاء يهتز عندما تصطدم به الموجات الصوتية، ينقل طاقة الصوت إلى الأذن الوسطى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22312,7 +22312,7 @@ export const medicalTerms = [
     "trExplanation": "Myringite, souvent causée par des infections ou des traumatismes, provoquant des douleurs à l'oreille et une perte auditive, tympanın iltihaplanmasıdır.",
     "arExplanation": "التهاب طبلة الأذن، غالبًا ما يكون بسبب العدوى أو الصدمات، يمكن أن يؤدي إلى ألم الأذن وفقدان السمع.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22356,7 +22356,7 @@ export const medicalTerms = [
     "trExplanation": "Timpan zarının genellikle enfeksiyon, yaralanma veya yüksek sesle neden olduğu bir delinme, işitme yeteneğini etkiler ve enfeksiyon riskini artırır.",
     "arExplanation": "ثقب في طبلة الأذن، ينتج عادةً عن العدوى، الإصابة، أو الصوت العالي، يؤثر على السمع ويزيد من خطر العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz",
@@ -22385,7 +22385,7 @@ export const medicalTerms = [
     "trExplanation": "Parazentez (Myringotomi), orta kulağı boşaltmak veya ilaç vermek için timpanın açıldığı bir işlemdir ve genellikle orta kulak iltihabında kullanılır.",
     "arExplanation": "إجراء يتم فيه فتح طبلة الأذن لتصريف السوائل من الأذن الوسطى أو إدخال الأدوية، غالبًا ما يستخدم في حالات التهاب الأذن الوسطى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22421,7 +22421,7 @@ export const medicalTerms = [
     "trExplanation": "Tympanum (Cavitas tympanica), işitme kemiklerini içeren ve ses dalgalarını timpan dan iç kulağa ileten orta kulak boşluğunu ifade eder.",
     "arExplanation": "تجويف الأذن الوسطى الذي يحتوي على عظام السمع وينقل الموجات الصوتية من طبلة الأذن إلى الأذن الداخلية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22464,7 +22464,7 @@ export const medicalTerms = [
     "trExplanation": "Auris (Ous), ses algılamadan ve dengeyi sağlamaktan sorumlu karmaşık bir duyu organı olan kulak anlamına gelir.",
     "arExplanation": "الأذن، عضو حسي معقد مسؤول عن تصور الصوت والحفاظ على التوازن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22501,7 +22501,7 @@ export const medicalTerms = [
     "trExplanation": "Otitis, bir kulak iltihabıdır, dış, orta veya iç kulakları etkileyebilir ve sıklıkla enfeksiyonlar veya alerjik reaksiyonlar nedeniyle olur.",
     "arExplanation": "التهاب الأذن، قد يؤثر على الأذن الخارجية أو الوسطى أو الداخلية، غالبًا ما يكون بسبب العدوى أو ردود الفعل التحسسية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22545,7 +22545,7 @@ export const medicalTerms = [
     "trExplanation": "Auris externa, dış kulakla ilgilidir ve kulak kabuğu ve dış kulak yolunu içerir, sesin alınması ve timpana iletilmesi işlevini görür.",
     "arExplanation": "الأذن الخارجية، تتكون من الصيوان والقناة السمعية الخارجية، تعمل على التقاط الصوت وتوجيهه إلى طبلة الأذن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22586,7 +22586,7 @@ export const medicalTerms = [
     "trExplanation": "Auris media, timpanın arkasında hava dolu bir boşluk olan orta kulağı ifade eder ve işitme kemiklerini içerir, ses dalgalarını iç kulağa ileten yapıları içerir.",
     "arExplanation": "الأذن الوسطى، فراغ مملوء بالهواء خلف طبلة الأذن، يحتوي على عظام السمع التي تنقل الموجات الصوتية إلى الأذن الداخلية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22621,7 +22621,7 @@ export const medicalTerms = [
     "trExplanation": "Otitis media, sıklıkla bakteriyel veya viral enfeksiyonlar nedeniyle oluşan orta kulak iltihabıdır ve genellikle ağrı, işitme kaybı ve bazen irin oluşumuna neden olabilir.",
     "arExplanation": "التهاب الأذن الوسطى، غالبًا ما يكون بسبب العدوى البكتيرية أو الفيروسية، يمكن أن يؤدي إلى الألم وفقدان السمع وأحيانًا تكوين الصديد.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22665,7 +22665,7 @@ export const medicalTerms = [
     "trExplanation": "Auris interna (Labyrinthe), işitme için koklea ve denge için vestibüler aparat içeren iç kulak anlamına gelir ve kafatasının derinlerinde bulunur.",
     "arExplanation": "الأذن الداخلية، تتكون من القوقعة للسمع والجهاز الدهليزي للتوازن، تقع في أعماق الجمجمة.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22701,7 +22701,7 @@ export const medicalTerms = [
     "trExplanation": "Labyrinthite, iç kulak iltihabıdır ve genellikle enfeksiyonlar veya otoimmün süreçler tarafından tetiklenir, baş dönmesi, işitme kaybı ve mide bulantısına neden olabilir.",
     "arExplanation": "التهاب الأذن الداخلية، يمكن أن يسبب الدوار وفقدان السمع والغثيان، غالبًا ما يكون بسبب العدوى أو العمليات المناعية الذاتية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22745,7 +22745,7 @@ export const medicalTerms = [
     "trExplanation": "Fenestra ovalis, iç kulağın içindeki oval pencerenin açıklığıdır ve orta kulaktan iç kulağa ses iletimini sağlar ve öküzgözü ile bitişiktir.",
     "arExplanation": "النافذة البيضاوية في الأذن الداخلية، المتاخمة للركاب، تنقل الصوت من الأذن الوسطى إلى الداخلية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22774,7 +22774,7 @@ export const medicalTerms = [
     "trExplanation": "Fenestra rotunda, iç kulağın içindeki yuvarlak pencereyi ifade eder ve orta kulak ile iç kulak arasındaki basınç farklarını dengeleyen ve titreşimlere izin veren bir membrandır.",
     "arExplanation": "النافذة الدائرية في الأذن الداخلية، غشاء يوازن الضغط بين الأذن الوسطى والداخلية ويسمح بالاهتزازات.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22803,7 +22803,7 @@ export const medicalTerms = [
     "trExplanation": "Vestibulum, iç kulaktaki vestibüler aparatın merkezi bölümüdür ve lineer hareketlerin ve yerçekiminin algılanmasından sorumludur.",
     "arExplanation": "الجزء المركزي من الجهاز الدهليزي في الأذن الداخلية، مسؤول عن تصور الحركات الخطية والجاذبية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz",
@@ -22832,7 +22832,7 @@ export const medicalTerms = [
     "trExplanation": "Ductus semicircularis, iç kulaktaki başın dönme hareketlerini algılayan ve dengeyi korumaya yardımcı olan üç yarı dairesel kanalı ifade eder.",
     "arExplanation": "القنوات نصف الدائرية الثلاث في الأذن الداخلية، التي تتصور حركات دوران الرأس وتساهم في الحفاظ على التوازن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22867,7 +22867,7 @@ export const medicalTerms = [
     "trExplanation": "Vestibüler aparat, iç kulaktaki yarı dairesel kanallar ve vestibülü içeren, denge ve uzamsal yönlendirmenin sorumlu olduğu kompleks bir sistemdir.",
     "arExplanation": "النظام الكامل في الأذن الداخلية، بما في ذلك القنوات نصف الدائرية والدهليز، المسؤول عن التوازن والتوجيه المكاني.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -22895,7 +22895,7 @@ export const medicalTerms = [
     "trExplanation": "Stapes, orta kulaktaki işitme kemiklerinden biridir ve ses dalgalarını çekiçten iç kulak oval penceresine ileterek sesin iletimini sağlar.",
     "arExplanation": "واحد من عظام السمع الثلاثة في الأذن الوسطى، ينقل الموجات الصوتية من السندان إلى النافذة البيضاوية للأذن الداخلية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Bayern",
@@ -22925,7 +22925,7 @@ export const medicalTerms = [
     "trExplanation": "Incus, orta kulaktaki örs şeklindeki işitme kemiklerinden biridir ve ses dalgalarını çekiçten öküzgözlüğe ileterek sesin iletimini sağlar.",
     "arExplanation": "العظمة على شكل سندان في الأذن الوسطى، تقود الموجات الصوتية من المطرقة إلى الركاب.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -22953,7 +22953,7 @@ export const medicalTerms = [
     "trExplanation": "Malleus, orta kulaktaki çekiç şeklindeki işitme kemiklerinden biridir ve ses dalgalarını timpana ileterek sesin iletimini sağlar.",
     "arExplanation": "العظمة على شكل مطرقة في الأذن الوسطى، مرتبطة بطبلة الأذن، تنقل الموجات الصوتية إلى السندان.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -22982,7 +22982,7 @@ export const medicalTerms = [
     "trExplanation": "Cochlea, iç kulaktaki salyangoz şeklindeki organdır ve ses dalgalarını işitme algısı için sinir sinyallerine dönüştürür ve bunları beyne ileter.",
     "arExplanation": "العضو على شكل حلزون في الأذن الداخلية، يحول الموجات الصوتية إلى إشارات عصبية ترسل إلى الدماغ لتصور السمع.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Bayern",
@@ -23011,7 +23011,7 @@ export const medicalTerms = [
     "trExplanation": "Tinnitus, insanların kulaklarında dışsal bir kaynaktan gelmeyen çınlama, uğultu veya ıslık gibi sesler duyduğu bir durumu ifade eder. Gürültüye maruz kalma, işitme kaybı veya kulak hastalıkları dahil çeşitli nedenlerle tetiklenebilir.",
     "arExplanation": "حالة يسمع فيها الأفراد أصواتًا مثل الطنين أو الصفير أو الرنين في الأذنين، لا تأتي من مصدر خارجي. يمكن أن تسببها أسباب متنوعة، بما في ذلك التعرض للضوضاء، فقدان السمع، أو أمراض الأذن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Bayern",
@@ -23043,7 +23043,7 @@ export const medicalTerms = [
     "trExplanation": "Presbyacousie, iç kulaktaki işitme yapılarının dejenerasyonu tarafından tetiklenen yaşa bağlı doğal bir işitme kaybıdır. Genellikle işitmenin özellikle yüksek frekansta kademeli bir şekilde kötüleşmesine yol açar.",
     "arExplanation": "فقدان السمع المرتبط بالعمر، يسببه تدهور هياكل السمع في الأذن الداخلية. غالبًا ما يؤدي إلى تناقص تدريجي في القدرة على السمع، خاصةً في الترددات العالية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23081,7 +23081,7 @@ export const medicalTerms = [
     "trExplanation": "Vertigo, kişinin hareket etmediği halde hareket veya dönme hissettiği bir durumdur. İç kulaktaki vestibüler aparatın veya denge sisteminin bozuklukları tarafından tetiklenebilir.",
     "arExplanation": "حالة يشعر فيها الشخص بالحركة أو الدوران، على الرغم من عدم تحركه. يمكن أن تكون بسبب اضطرابات في الجهاز الدهليزي أو نظام التوازن في الأذن الداخلية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23119,7 +23119,7 @@ export const medicalTerms = [
     "trExplanation": "Otomikoz (Otitis externa mycotica), dış kulak yolunda mantar enfeksiyonunu ifade eder ve kaşıntı, ağrı ve iltihaplanmaya neden olur. Sıkça nemli ortamlar tarafından teşvik edilir ve antifungal ilaçlarla tedavi edilebilir.",
     "arExplanation": "عدوى فطرية في القناة السمعية الخارجية تسبب الحكة والألم والالتهاب. غالبًا ما يتم تشجيعها بالبيئات الرطبة ويمكن علاجها بالأدوية المضادة للفطريات.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23162,7 +23162,7 @@ export const medicalTerms = [
     "trExplanation": "Kolesteatom (kemik tahribatıyla), orta kulaktaki çevresel kemik dokuları yok edebilen cilt hücrelerinden oluşan anormal, kanser olmayan bir büyümedir. İşitme kaybına ve kronik enfeksiyonlara yol açabilir.",
     "arExplanation": "نمو غير سرطاني غير طبيعي في الأذن الوسطى يتكون من خلايا الجلد يمكن أن يدمر الأنسجة العظمية المحيطة. يمكن أن يؤدي إلى فقدان السمع والعدوى المزمنة.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23205,7 +23205,7 @@ export const medicalTerms = [
     "trExplanation": "Otalji (Otodini), kulak ağrısını ifade eden bir tıbbi terimdir ve kulak enfeksiyonları, iltihaplar veya yaralanmalar dahil birçok durumdan kaynaklanabilir.",
     "arExplanation": "المصطلح الطبي لألم الأذن، يمكن أن يسببه مجموعة متنوعة من الحالات، بما في ذلك العدوى، الالتهابات أو إصابات الأذن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23241,7 +23241,7 @@ export const medicalTerms = [
     "trExplanation": "Otolog, işitme ve denge sorunları da dahil olmak üzere kulak hastalıklarının teşhisi ve tedavisi konusunda uzmanlaşmış bir doktordur.",
     "arExplanation": "طبيب متخصص في تشخيص وعلاج أمراض الأذن، بما في ذلك اضطرابات السمع والتوازن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -23269,7 +23269,7 @@ export const medicalTerms = [
     "trExplanation": "Otoloji, kulak hastalıkları ve işitme ile denge sorunlarının araştırılması, teşhisi ve tedavisi ile ilgilenen bir tıp dalıdır.",
     "arExplanation": "تخصص طبي يعنى بدراسة وتشخيص وعلاج أمراض الأذن وأنظمة السمع والتوازن.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -23297,7 +23297,7 @@ export const medicalTerms = [
     "trExplanation": "Sella turcica (Sella), insan kafatasının tabanında hipofizi içeren ve bir türk seddine benzeyen kemik bir yapıdır. Hipofiz hastalıklarının teşhisi için önemlidir.",
     "arExplanation": "هيكل عظمي في قاعدة جمجمة الإنسان يحتوي على الغدة النخامية ويشبه سرجًا تركيًا. مهم لتشخيص أمراض الغدة النخامية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23337,7 +23337,7 @@ export const medicalTerms = [
     "trExplanation": "Sinus frontaux, frontal bölgede bulunan paranasal sinüslerden biridir. İltihap veya enfeksiyon durumunda ağrı ve rahatsızlığa neden olabilir.",
     "arExplanation": "أحد الجيوب الأنفية، يقع في منطقة الجبهة. يمكن أن يسبب الألم وعدم الراحة أثناء الالتهابات أو العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23374,7 +23374,7 @@ export const medicalTerms = [
     "trExplanation": "Sinus maksillaris, üst çene kemiklerinde bulunan paranasal sinüslerden biridir. İltihap veya enfeksiyon durumunda ağrı ve basınç hissine neden olabilir.",
     "arExplanation": "أحد الجيوب الأنفية، يقع في عظام الفك العلوي. يمكن أن يسبب الألم والشعور بالضغط أثناء الالتهابات أو العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23417,7 +23417,7 @@ export const medicalTerms = [
     "trExplanation": "Paranasal sinüsler, kafa kemiklerindeki hava dolu boşluklardır ve burun boşluğuna komşu olan ve hava nemlendirme, rezonans ve mukus drenajı gibi işlevleri yerine getiren yapıları içerir.",
     "arExplanation": "تجاويف مملوءة بالهواء في عظام الجمجمة، بجوار تجويف الأنف، تؤدي وظائف مثل ترطيب الهواء والرنين وتصريف المخاط.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23459,7 +23459,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsilla lingualis, dilin tabanında bulunan lenfatik dokular olan dil bademcikleridir ve boğaz bölgesinde bağışıklık savunması ve patojenlere karşı mücadelede rol oynar.",
     "arExplanation": "اللوزة اللسانية، نسيج لمفاوي في قاعدة اللسان، مشارك في الدفاع المناعي والدفاع ضد العوامل الممرضة في منطقة البلعوم.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -23487,7 +23487,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsilla palatina, boğazın arka tarafının her iki tarafında bulunan lenfatik dokulardır ve bağışıklık sistemi ve enfeksiyonlara karşı mücadelede önemli bir rol oynar.",
     "arExplanation": "اللوزتان الحنكيتان، نسيج لمفاوي على جانبي الفراغ البلعومي، يلعبان دورًا مهمًا في الجهاز المناعي والدفاع ضد العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23516,7 +23516,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsilla pharyngea, boğazın üst kısmında bulunan lenfatik doku olan farengeal bademciklerdir ve bağışıklık savunmasına katılır, çocuklarda büyümüş olabilirler.",
     "arExplanation": "اللوزة البلعومية، تقع في الجزء العلوي من الفضاء البلعومي، مشاركة في الدفاع المناعي، قد تكون متضخمة في الأطفال.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Nordrhein-Westfalen",
@@ -23545,7 +23545,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsilla Tubaria, östaki tüpüne yakın bulunan lenfatik dokular olan tüp bademcikleridir ve boğaz bölgesinde bağışıklık savunmasına katılır.",
     "arExplanation": "اللوزة الأنبوبية، نسيج لمفاوي بالقرب من قناة استاكيوس، مشاركة في الدفاع المناعي في الفضاء البلعومي.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Rheinland-Pfalz"
@@ -23573,7 +23573,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsillit, genellikle bakteriyel veya viral enfeksiyonlar tarafından tetiklenen bademcik iltihabıdır ve boğaz ağrısı, ateş ve yutma güçlüğü ile karakterizedir.",
     "arExplanation": "التهاب اللوزتين، غالبًا ما يكون بسبب العدوى البكتيرية أو الفيروسية، يتميز بألم في الحلق، حمى، وصعوبة في البلع.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23617,7 +23617,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsillektomi, bademciklerin cerrahi olarak çıkarılması işlemidir ve tekrarlayan bademcik iltihabı, uyku apnesi veya diğer kronik bademcik sorunları durumunda yapılır.",
     "arExplanation": "استئصال اللوزتين الجراحي، يتم إجراؤه في حالات التهاب اللوزتين المتكرر، توقف التنفس أثناء النوم، أو مشاكل أخرى مزمنة في اللوزتين.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Bayern",
@@ -23646,7 +23646,7 @@ export const medicalTerms = [
     "trExplanation": "Tonsillotomi (Adenotomi), sadece bademciklerin bir kısmının çıkarıldığı bir cerrahi işlemdir ve genellikle çocuklarda solunumu iyileştirmek veya enfeksiyonları azaltmak için yapılır.",
     "arExplanation": "جراحة يتم فيها إزالة جزء فقط من اللوزتين الحنكيتين، غالبًا ما يتم إجراؤها عند الأطفال لتحسين التنفس أو تقليل العدوى.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23682,7 +23682,7 @@ export const medicalTerms = [
     "trExplanation": "Pediatrik, çocuklar ve gençlerde hastalıkların teşhisi, tedavisi ve önlenmesine uzmanlaşmış bir doktordur.",
     "arExplanation": "طبيب متخصص في تشخيص وعلاج والوقاية من الأمراض عند الأطفال والمراهقين.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23718,7 +23718,7 @@ export const medicalTerms = [
     "trExplanation": "Neonatolog, özellikle prematüre veya tıbbi sorunları olan bebeklerin bakımı ve tedavisine uzmanlaşmış bir doktordur.",
     "arExplanation": "طبيب متخصص في رعاية وعلاج الأطفال حديثي الولادة، خاصةً الخدج أو الأطفال الذين يعانون من مشاكل طبية.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -23747,7 +23747,7 @@ export const medicalTerms = [
     "trExplanation": "Oto-Rhino-Laryngoloji, kulak, burun ve boğaz hastalıklarını tedavi eden tıbbi bir uzmanlık dalıdır.",
     "arExplanation": "تخصص طبي يعنى بأمراض الأذن والأنف والحنجرة.",
     "categories": [
-      "hno"
+      "HNO"
     ],
     "regions": [
       "Hessen",
@@ -29581,7 +29581,7 @@ export const medicalTerms = [
     "fr": "Artificiel",
     "tr": "Sentetik",
     "ar": "صناعي",
-    "deExplanation": "Der Begriff 'künstlich' bezieht sich auf etwas, das vom Menschen gemacht oder nachgebildet ist, im Gegensatz zu natürlich vorkommenden Dingen. In der Medizin kann dies beispielsweise auf Ersatzmaterialien für Körperteile oder Organe zutreffen, die durch Technologien hergestellt werden, um natürliche Funktionen zu übernehmen oder zu unterstützen.",
+    "deExplanation": "Der Begriff 'künstlich' bezieht sich auf etwas, das vom Menschen gemacht oder nachgebildet ist, im Gegensatz zu natürlich vorkommenden Dingen. In der Medizin kann dies beispielsweise auf Ersatzmaterialien für Körperteile oder Organe zutreffen, die durch TecHNOlogien hergestellt werden, um natürliche Funktionen zu übernehmen oder zu unterstützen.",
     "enExplanation": "Synthetic (artificial) refers to substances or products made through chemical processes rather than occurring naturally. In medicine, they are often used for manufacturing medications or replacement materials.",
     "ukExplanation": "Синтетичний (штучний) відноситься до речовин або продуктів, які виробляються за допомогою хімічних процесів, а не виникають природним шляхом. У медицині вони часто використовуються для виготовлення ліків або замінних матеріалів.",
     "ruExplanation": "Синтетический (искусственный) относится к веществам или продуктам, которые производятся посредством химических процессов, а не возникают естественным образом. В медицине они часто используются для производства лекарств или заменяющих материалов.",
@@ -43533,12 +43533,12 @@ export const medicalTerms = [
     "fr": "Méninges",
     "tr": "Beyin zarları",
     "ar": "الأغشية الدماغية",
-    "deExplanation": "Die Hirnhäute sind schützende Gewebeschichten, die das Gehirn und das Rückenmark umschließen. Sie bestehen aus drei Schichten: der harten Hirnhaut (Dura mater), der Spinngewebshaut (Arachnoidea) und der weichen Hirnhaut (Pia mater). Ihre Funktion besteht darin, das zentrale Nervensystem vor physischen Schäden zu schützen und den Fluss von Liquor cerebrospinalis zu regulieren.",
-    "enExplanation": "The meninges are protective membranes surrounding the brain and spinal cord, consisting of the dura mater, arachnoid mater, and pia mater.",
+    "deExplanation": "Die Hirnhäute sind schützende Gewebeschichten, die das Gehirn und das Rückenmark umschließen. Sie bestehen aus drei Schichten: der harten Hirnhaut (Dura mater), der Spinngewebshaut (AracHNOidea) und der weichen Hirnhaut (Pia mater). Ihre Funktion besteht darin, das zentrale Nervensystem vor physischen Schäden zu schützen und den Fluss von Liquor cerebrospinalis zu regulieren.",
+    "enExplanation": "The meninges are protective membranes surrounding the brain and spinal cord, consisting of the dura mater, aracHNOid mater, and pia mater.",
     "ukExplanation": "Менінги: захисні мембрани навколо мозку та спинного мозку, складаються з твердої матерії, арахноїди та м'якої матерії.",
     "ruExplanation": "Менинги: защитные мембраны вокруг мозга и спинного мозга, состоят из твердой, паутинообразной и мягкой мозговых оболочек.",
     "esExplanation": "Las meninges son las membranas protectoras que rodean el cerebro y la médula espinal, compuestas por la duramadre, aracnoides y piamadre.",
-    "frExplanation": "Les méninges sont les membranes protectrices entourant le cerveau et la moelle épinière, composées de la dure-mère, de l'arachnoïde et de la pie-mère.",
+    "frExplanation": "Les méninges sont les membranes protectrices entourant le cerveau et la moelle épinière, composées de la dure-mère, de l'aracHNOïde et de la pie-mère.",
     "plExplanation": "Opony mózgowo-rdzeniowe to ochronne błony wokół mózgu i rdzenia kręgowego, składające się z opony twardej, pajęczej i miękkiej.",
     "trExplanation": "Meningler, beyni ve omuriliği saran koruyucu zarlar olup dura mater, araknoid zar ve pia mater'den oluşur.",
     "arExplanation": "الأغشية السحائية هي الأغشية الواقية التي تحيط بالدماغ والحبل الشوكي، وتتكون من السحايا الصلبة والعنكبوتية والرقيقة.",
@@ -43591,24 +43591,24 @@ export const medicalTerms = [
   },
   {
     "id": 1213,
-    "lat": "Die Arachnoidea mater",
+    "lat": "Die AracHNOidea mater",
     "de": "die Spinnengewebshaut",
-    "en": "Arachnoid Mater",
+    "en": "AracHNOid Mater",
     "uk": "Павутинна мозкова оболонка",
     "ru": "Паутинная мозговая оболочка",
     "pl": "Opona pajęcza",
     "es": "Aracnoides",
-    "fr": "Arachnoïde",
+    "fr": "AracHNOïde",
     "tr": "Örümcek ağı zarı",
     "ar": "السحايا العنكبوتية",
-    "deExplanation": "Eine dünne, mittlere der drei Hirnhäute, die das Gehirn und das Rückenmark bedecken. Sie liegt zwischen der härteren Dura mater und der weicheren Pia mater. Die Arachnoidea mater spielt eine wichtige Rolle beim Schutz des zentralen Nervensystems und ist an der Rückresorption von Gehirnflüssigkeit beteiligt.",
-    "enExplanation": "The arachnoid mater is a semi-transparent membrane beneath the dura mater, filled with blood vessels and cerebrospinal fluid, supporting and surrounding the CNS.",
+    "deExplanation": "Eine dünne, mittlere der drei Hirnhäute, die das Gehirn und das Rückenmark bedecken. Sie liegt zwischen der härteren Dura mater und der weicheren Pia mater. Die AracHNOidea mater spielt eine wichtige Rolle beim Schutz des zentralen Nervensystems und ist an der Rückresorption von Gehirnflüssigkeit beteiligt.",
+    "enExplanation": "The aracHNOid mater is a semi-transparent membrane beneath the dura mater, filled with blood vessels and cerebrospinal fluid, supporting and surrounding the CNS.",
     "ukExplanation": "Арахноїда матер: напівпрозора мембрана під дурою матер, заповнена кров'яними судинами та цереброспінальною рідиною, оточує та підтримує ЦНС.",
     "ruExplanation": "Арахноида матер: полупрозрачная мембрана под дурой матер, заполненная кровеносными сосудами и цереброспинальной жидкостью, окружает и поддерживает ЦНС.",
     "esExplanation": "La aracnoides es una membrana semi-transparente bajo la duramadre, llena de vasos sanguíneos y líquido cefalorraquídeo, que rodea y apoya al SNC.",
-    "frExplanation": "L'arachnoïde est une membrane semi-transparente située sous la dure-mère, remplie de vaisseaux sanguins et de liquide céphalorachidien, qui entoure et soutient le SNC.",
+    "frExplanation": "L'aracHNOïde est une membrane semi-transparente située sous la dure-mère, remplie de vaisseaux sanguins et de liquide céphalorachidien, qui entoure et soutient le SNC.",
     "plExplanation": "Opona pajęcza to półprzezroczysta błona pod oponą twardą, wypełniona naczyniami krwionośnymi i płynem mózgowo-rdzeniowym, otaczająca i wspierająca OUN.",
-    "trExplanation": "Arachnoidea mater, dura mater'in altında bulunan, kan damarları ve serebrospinal sıvı ile dolu yarı saydam bir zar olup, SSS'yi çevreler ve destekler.",
+    "trExplanation": "AracHNOidea mater, dura mater'in altında bulunan, kan damarları ve serebrospinal sıvı ile dolu yarı saydam bir zar olup, SSS'yi çevreler ve destekler.",
     "arExplanation": "السحايا العنكبوتية هي غشاء شبه شفاف تحت السحايا الصلبة، ممتلئ بالأوعية الدموية والسائل الدماغي الشوكي، يحيط بالجهاز العصبي المركزي ويدعمه.",
     "categories": [
       "Nerologie"
