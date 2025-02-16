@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./FlashcardGame.module.scss";
-import { FaCog, FaInfoCircle, FaCheck, FaPause } from "react-icons/fa";
+import { FaCog, FaCheck, FaPause } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useTermStatus } from "../../contexts/TermStatusContext";
@@ -42,7 +42,10 @@ const FlashcardGame = () => {
       const status = termStatuses[term.id] || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+      if (
+        filterMode === "unlearned" &&
+        (status === "learned" || status === "paused")
+      )
         return false;
       return matchesRegion && matchesCategory;
     });
@@ -77,9 +80,8 @@ const FlashcardGame = () => {
 
   const togglePaused = (id) => {
     toggleStatus(id, "paused");
-    // Якщо поточний режим – "paused", після натискання перемикаємо режим на "all", 
-    // щоб картка залишалася видимою після зміни статусу:
-    if(filterMode === "paused"){
+    // Якщо поточний режим – "paused", після натискання перемикаємо режим на "all"
+    if (filterMode === "paused") {
       setFilterMode("all");
     }
   };
@@ -93,10 +95,18 @@ const FlashcardGame = () => {
     }
   };
 
+  const handlePrev = () => {
+    setFlipped(false);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+      alert("Ви на першій картці!");
+    }
+  };
+
   // Динамічне оновлення списку карток при зміні фільтрів чи статусів
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
-      // Перераховуємо картки з самого початку (без перемішування)
       const newCards = medicalTerms.filter((term) => {
         const matchesRegion =
           region === "Усі" ||
@@ -106,19 +116,19 @@ const FlashcardGame = () => {
         const status = termStatuses[term.id] || "unlearned";
         if (filterMode === "learned" && status !== "learned") return false;
         if (filterMode === "paused" && status !== "paused") return false;
-        if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+        if (
+          filterMode === "unlearned" &&
+          (status === "learned" || status === "paused")
+        )
           return false;
         return matchesRegion && matchesCategory;
       });
-      // Зберігаємо поточний порядок, залишаючи тільки ті картки, які відповідають критеріям
       const newCardsOrdered = cards.filter((card) =>
         newCards.find((nc) => nc.id === card.id)
       );
-      // Якщо поточна картка більше не входить у список, скидаємо currentIndex
       if (!newCardsOrdered.find((card) => card.id === cards[currentIndex]?.id)) {
         setCurrentIndex(0);
       }
-      // Якщо список карток змінився – оновлюємо його
       if (newCardsOrdered.length !== cards.length) {
         setCards(newCardsOrdered);
       }
@@ -126,7 +136,11 @@ const FlashcardGame = () => {
   }, [termStatuses, region, category, filterMode]);
 
   const regionsList = Array.from(
-    new Set(medicalTerms.flatMap((term) => (term.regions || []).map(unifyRegion)))
+    new Set(
+      medicalTerms.flatMap((term) =>
+        (term.regions || []).map((r) => unifyRegion(r))
+      )
+    )
   );
   const categoriesList = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories || []))
@@ -163,7 +177,10 @@ const FlashcardGame = () => {
         <h1>Гра з флешкартками</h1>
 
         <div className={styles.bottomRightSettings}>
-          <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
+          <button
+            className={styles.settingsButton}
+            onClick={() => setSettingsOpen(true)}
+          >
             <FaCog />
           </button>
         </div>
@@ -185,7 +202,10 @@ const FlashcardGame = () => {
               </div>
               <div className={styles.modalField}>
                 <label>Категорія:</label>
-                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                <select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
                   <option value="Усі">Усі</option>
                   {categoriesList.map((c) => (
                     <option key={c} value={c}>
@@ -196,7 +216,10 @@ const FlashcardGame = () => {
               </div>
               <div className={styles.modalField}>
                 <label>Режим фільтрації:</label>
-                <select value={filterMode} onChange={(e) => setFilterMode(e.target.value)}>
+                <select
+                  value={filterMode}
+                  onChange={(e) => setFilterMode(e.target.value)}
+                >
                   <option value="all">Всі</option>
                   <option value="learned">Вивчені</option>
                   <option value="unlearned">Не вивчені</option>
@@ -216,27 +239,51 @@ const FlashcardGame = () => {
               Картка {currentIndex + 1} з {cards.length}
             </div>
 
-            <div
-              className={`${styles.card} ${
-                currentStatus === "learned"
-                  ? styles.learned
-                  : currentStatus === "paused"
-                  ? styles.paused
-                  : ""
-              }`}
-              onClick={handleFlip}
-            >
-              <div className={`${styles.cardInner} ${flipped ? styles.flipped : ""}`}>
+            <div className={styles.card} onClick={handleFlip}>
+              <div
+                className={`
+                  ${styles.cardInner} 
+                  ${flipped ? styles.flipped : ""} 
+                  ${currentStatus === "learned" ? styles.learned : currentStatus === "paused" ? styles.paused : ""}
+                `}
+              >
                 <div className={styles.cardFront}>
                   <div className={styles.iconsContainer}>
-                    <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
-                      <div className={styles.infoIcon} onClick={(e) => e.stopPropagation()}>
-                        <FaInfoCircle />
-                      </div>
+                    <Tippy
+                      content={currentCard.deExplanation || "Пояснення відсутнє"}
+                      trigger="click"
+                    >
+                      <button
+                        className={styles.infoButton}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          stroke="#ededed"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                          <line
+                            x1="12"
+                            y1="12"
+                            x2="12"
+                            y2="15.5"
+                            stroke="#ededed"
+                            strokeWidth="3"
+                          />
+                          <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                        </svg>
+                      </button>
                     </Tippy>
                     <div className={styles.statusIcons}>
-                      <span
-                        className={styles.checkIcon}
+                      <button
+                        className={styles.markCompletedButton}
                         onClick={(e) => {
                           e.stopPropagation();
                           toggleLearned(currentCard.id);
@@ -244,9 +291,9 @@ const FlashcardGame = () => {
                         title="Вивчене"
                       >
                         <FaCheck />
-                      </span>
-                      <span
-                        className={styles.pauseIcon}
+                      </button>
+                      <button
+                        className={styles.deferButton}
                         onClick={(e) => {
                           e.stopPropagation();
                           togglePaused(currentCard.id);
@@ -254,21 +301,48 @@ const FlashcardGame = () => {
                         title="Пауза"
                       >
                         <FaPause />
-                      </span>
+                      </button>
                     </div>
                   </div>
                   <h3>{currentCard.lat}</h3>
                 </div>
                 <div className={styles.cardBack}>
                   <div className={styles.iconsContainer}>
-                    <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
-                      <div className={styles.infoIcon} onClick={(e) => e.stopPropagation()}>
-                        <FaInfoCircle />
-                      </div>
+                    <Tippy
+                      content={currentCard.deExplanation || "Пояснення відсутнє"}
+                      trigger="click"
+                    >
+                      <button
+                        className={styles.infoButton}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="30"
+                          height="30"
+                          fill="none"
+                          stroke="#ededed"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                          <line
+                            x1="12"
+                            y1="12"
+                            x2="12"
+                            y2="15.5"
+                            stroke="#ededed"
+                            strokeWidth="3"
+                          />
+                          <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                        </svg>
+                      </button>
                     </Tippy>
                     <div className={styles.statusIcons}>
-                      <span
-                        className={styles.checkIcon}
+                      <button
+                        className={styles.markCompletedButton}
                         onClick={(e) => {
                           e.stopPropagation();
                           toggleLearned(currentCard.id);
@@ -276,9 +350,9 @@ const FlashcardGame = () => {
                         title="Вивчене"
                       >
                         <FaCheck />
-                      </span>
-                      <span
-                        className={styles.pauseIcon}
+                      </button>
+                      <button
+                        className={styles.deferButton}
                         onClick={(e) => {
                           e.stopPropagation();
                           togglePaused(currentCard.id);
@@ -286,7 +360,7 @@ const FlashcardGame = () => {
                         title="Пауза"
                       >
                         <FaPause />
-                      </span>
+                      </button>
                     </div>
                   </div>
                   <p>{currentCard.de}</p>
@@ -294,9 +368,14 @@ const FlashcardGame = () => {
               </div>
             </div>
 
-            <button className={styles.nextButton} onClick={handleNext}>
-              Далі
-            </button>
+            <div className={styles.navigationButtons}>
+              <button className={styles.prevButton} onClick={handlePrev}>
+                НАЗАД
+              </button>
+              <button className={styles.nextButton} onClick={handleNext}>
+                ДАЛІ
+              </button>
+            </div>
 
             <div className={styles.cardProgress}>
               Переглянуто: {progress[currentCard.id] || 0} раз(ів)
