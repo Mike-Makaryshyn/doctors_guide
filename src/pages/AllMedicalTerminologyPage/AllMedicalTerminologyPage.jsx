@@ -21,7 +21,7 @@ const unifyRegion = (r) =>
 
 const AllMedicalTerminologyPage = () => {
   const { termStatuses, toggleStatus } = useTermStatus();
-  const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
+  const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
 
   // Region wird standardmäßig auf "Bayern" gesetzt und vereinheitlicht, ansonsten "Alle"
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
@@ -29,7 +29,6 @@ const AllMedicalTerminologyPage = () => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Wir behalten translationLanguage zwar im State, але im Modal wird die Sprachwahl entfernt
   const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
@@ -221,9 +220,7 @@ const AllMedicalTerminologyPage = () => {
                       className={`${styles.tile} ${
                         (termStatuses[term.id] || "unlearned") === "learned"
                           ? styles.learned
-                          : ""
-                      } ${
-                        (termStatuses[term.id] || "unlearned") === "paused"
+                          : (termStatuses[term.id] || "unlearned") === "paused"
                           ? styles.paused
                           : ""
                       }`}
@@ -303,80 +300,80 @@ const AllMedicalTerminologyPage = () => {
                 <table className={styles.terminologyTable}>
                   <thead>
                     <tr>
-                      <th>Lateinische Bezeichnung</th>
+                      <th>Begriff</th>
                       <th>Deutsche Bezeichnung</th>
                       {showDefinitions && <th>Definition</th>}
                     </tr>
                   </thead>
                   <tbody>
-                    {termsByCategory[category].map((term) => (
-                      <tr
-                        key={term.id}
-                        className={`
-                          ${
-                            (termStatuses[term.id] || "unlearned") === "learned"
+                    {termsByCategory[category].map((term) => {
+                      const status = termStatuses[term.id] || "unlearned";
+                      return (
+                        <tr
+                          key={term.id}
+                          className={
+                            status === "learned"
                               ? styles.learned
-                              : ""
-                          }
-                          ${
-                            (termStatuses[term.id] || "unlearned") === "paused"
+                              : status === "paused"
                               ? styles.paused
                               : ""
                           }
-                        `}
-                      >
-                        <td className={styles.termCell}>
-                          <span
-                            className={styles.checkIconDesktop}
-                            onClick={() => toggleLearned(term.id)}
-                            title="Gelernt"
-                          >
-                            <FaCheck />
-                          </span>
-                          <span
-                            className={styles.pauseIconDesktop}
-                            onClick={() => togglePaused(term.id)}
-                            title="Pausiert"
-                          >
-                            <FaPause />
-                          </span>
-                          {term.lat}
-                        </td>
-                        <td>
-                          {translationLanguage !== "de" ? (
-                            <Tippy
-                              content={term[translationLanguage] || "Keine Übersetzung vorhanden"}
-                              trigger="click"
-                              interactive={true}
-                              placement="right"
-                            >
-                              <span className={styles.clickableCell}>{term.de}</span>
-                            </Tippy>
-                          ) : (
-                            term.de
-                          )}
-                        </td>
-                        {showDefinitions && (
+                        >
+                          <td className={styles.termCell}>
+                            <div className={styles.cellContent}>
+                              <span
+                                className={styles.checkIconDesktop}
+                                onClick={() => toggleLearned(term.id)}
+                                title="Gelernt"
+                              >
+                                <FaCheck />
+                              </span>
+                              <span
+                                className={styles.pauseIconDesktop}
+                                onClick={() => togglePaused(term.id)}
+                                title="Pausiert"
+                              >
+                                <FaPause />
+                              </span>
+                              <span>{term.lat}</span>
+                            </div>
+                          </td>
                           <td>
                             {translationLanguage !== "de" ? (
                               <Tippy
-                                content={
-                                  term[translationLanguage + "Explanation"] ||
-                                  "Keine Übersetzung vorhanden"
-                                }
+                                content={term[translationLanguage] || "Keine Übersetzung vorhanden"}
                                 trigger="click"
                                 interactive={true}
                                 placement="right"
                               >
-                                <span className={styles.clickableCell}>{term.deExplanation}</span>
+                                <span className={styles.clickableCell}>{term.de}</span>
                               </Tippy>
                             ) : (
-                              term.deExplanation
+                              term.de
                             )}
                           </td>
-                        )}
-                      </tr>
-                    ))}
+                          {showDefinitions && (
+                            <td>
+                              {translationLanguage !== "de" ? (
+                                <Tippy
+                                  content={
+                                    term[translationLanguage + "Explanation"] ||
+                                    "Keine Übersetzung vorhanden"
+                                  }
+                                  trigger="click"
+                                  interactive={true}
+                                  placement="right"
+                                >
+                                  <span className={styles.clickableCell}>{term.deExplanation}</span>
+                                </Tippy>
+                              ) : (
+                                term.deExplanation
+                              )}
+                            </td>
+                          )}
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               )}

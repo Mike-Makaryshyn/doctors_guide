@@ -4,16 +4,25 @@ import { Link } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./TerminologyLearningPage.module.scss";
 import flashcardBg from "../../assets/flashcard-bg.jpg";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+
+// Функція для нормалізації регіону (якщо потрібно)
+const unifyRegion = (r) => (r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r);
 
 const TerminologyLearningPage = () => {
+  const { selectedRegion } = useGetGlobalInfo();
+  // Якщо вибраний регіон є, нормалізуємо його, інакше використовуємо "Alle"
+  const regionParam = selectedRegion ? unifyRegion(selectedRegion) : "Alle";
+
   return (
     <MainLayout>
       <div className={styles.container}>
         <h1>Games</h1>
         <div className={styles.gamesGrid}>
-          {/* Передаємо query-параметри, щоб встановити значення за замовчуванням */}
+          {/* Передаємо query-параметри, щоб встановити значення за замовчуванням.
+              Тепер параметр region задається відповідно до обраного регіону */}
           <Link
-            to="/flashcard-game?region=Alle&category=Alle&filterMode=unlearned"
+            to={`/flashcard-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
             style={{ backgroundImage: `url(${flashcardBg})` }}
           >
