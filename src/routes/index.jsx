@@ -80,6 +80,9 @@ const CasesListPage = React.lazy(() =>
 const EditCasePage = React.lazy(() =>
   import("../pages/EditCasePage/EditCasePage")
 );
+const TerminologyLearningPage = React.lazy(() =>
+  import("../pages/TerminologyLearningPage/TerminologyLearningPage")
+);
 const TranslatorListPage = React.lazy(() =>
   import("../pages/TranslatorListPage/TranslatorListPage")
 );
@@ -177,6 +180,10 @@ export default function Routers() {
           path={pathList.informationSources.path}
           element={<FSPFormularPage />}
         />
+        <Route
+  path={pathList.terminology_learning.path}
+  element={<TerminologyLearningPage />}
+/>
         <Route
           path={pathList.berufserlaubnis.path}
           element={<WhatIsBerufserlaubnisPage />}

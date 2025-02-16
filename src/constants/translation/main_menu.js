@@ -201,8 +201,20 @@ export const main_menu_items = {
                uk: "Медична термінологія",
                ru: "Медицинская терминология",
                de: "Medizinische Terminologie",
-               link: "/medical-terminology", // Link for the item
+               link: "/all-medical-terminology",
             },
+            {
+               en: "Terminology Learning",
+               fr: "Apprentissage de la terminologie",
+               es: "Aprendizaje de la terminología",
+               ar: "تعلم المصطلحات",
+               tr: "Terminoloji Öğrenimi",
+               pl: "Nauka terminologii",
+               uk: "Вивчення термінології",
+               ru: "Изучение терминологии",
+               de: "Terminologie Lernen",
+               link: "/terminology-learning", // посилання на відповідну сторінку
+             },
             {
                en: "Abbreviations",
                fr: "Abréviations",
@@ -318,6 +330,7 @@ export const main_menu_items = {
                de: "Übersetzung von Dokumenten",
                link: "/translation",
             },
+            
             // Add other items in this section as needed
          ],
       },
@@ -372,6 +385,7 @@ export const main_menu_items = {
                de: "Studium der medizinischen Sprache",
                link: "/medical-language-study",
             },
+            
             {
                en: "Information Sources",
                fr: "Sources d'information",

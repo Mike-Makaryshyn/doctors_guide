@@ -81,4 +81,7 @@ export const pathList = {
   abbreviations: {
     path: "/abbreviations",
   },
+  terminology_learning: {
+    path: "/terminology-learning",
+  },
 };
