@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Кнопка-шестерня для відкриття налаштувань */
+/* Кнопка-шестерня для налаштувань */
 .bottomRightSettings {
   position: fixed;
   bottom: 20px;
@@ -33,36 +33,71 @@
   transform: scale(1.1);
 }
 
-/* Модальне вікно налаштувань */
+/* Модальне вікно */
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
+  z-index: 2500;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2500;
 }
-.modalContent {
+
+/* Для десктопу – модалка поруч із кнопкою */
+.popupDesktop {
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 400px;
-  text-align: left;
-  position: relative;
+  padding: 25px 20px 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 68px;
+  right: 68px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
+
+/* Для мобільних – модалка внизу з анімацією bounce */
+.popupMobile {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  animation: popupBounce 0.6s ease-out;
+}
+
+@keyframes popupBounce {
+  0% { transform: translateY(100%); opacity: 0; }
+  60% { transform: translateY(-10px); opacity: 1; }
+  80% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
 .modalCloseButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
 }
 .modalField {
   margin-bottom: 15px;
@@ -72,6 +107,31 @@
 .modalField label {
   margin-bottom: 5px;
   font-weight: bold;
+}
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+  /* Приклад анімації для кожної букви можна реалізувати через span-елементи всередині заголовку */
+}
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
 }
 .startButton {
   width: 100%;
@@ -102,18 +162,19 @@
   justify-content: center;
   gap: 20px;
 }
-.nextButton,
-.prevButton {
-  padding: 10px 20px;
+.navButton {
+  padding: 10px;
   background-color: #007bff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
 }
-.nextButton:hover,
-.prevButton:hover {
+.navButton:hover {
   background-color: #0056b3;
 }
 
@@ -153,9 +214,10 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border: 1px solid #ddd;
+  /* Видаляємо білу рамку */
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,6 +236,12 @@
 }
 .cardBack {
   transform: rotateY(180deg);
+  /* Вимикаємо pointer events для всієї задньої сторони */
+  pointer-events: none;
+}
+.cardBack .infoButton {
+  /* Для infoButton на задній стороні знову включаємо pointer events */
+  pointer-events: auto;
 }
 
 /* Контейнер для іконок */
@@ -189,11 +257,45 @@
 .iconsContainer > * {
   pointer-events: auto;
 }
-.cardBack .iconsContainer {
-  transform: none;
+
+/* Статусні кнопки для cardFront */
+.statusIcons {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  gap: 5px;
+  z-index: 3;
 }
 
-/* Статусні кнопки */
+/* Прогрес для поточної картки */
+.cardProgress {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Стилі для статусу плитки */
+.learned {
+  background-color: #4caf50 !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.paused {
+  background-color: #ff9800 !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.learned .cardFront,
+.learned .cardBack {
+  background-color: #4caf50 !important;
+}
+.paused .cardFront,
+.paused .cardBack {
+  background-color: #ff9800 !important;
+}
+
+/* Стилі для кнопок */
 .markCompletedButton {
   background-color: #28a745;
   border: none;
@@ -204,7 +306,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-right: 4px;
@@ -212,7 +314,6 @@
 .markCompletedButton:hover {
   background-color: #218838;
 }
-
 .deferButton {
   background-color: #ffc107;
   border: none;
@@ -223,7 +324,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -247,43 +348,4 @@
 }
 .infoButton:hover svg {
   transform: scale(1.1);
-}
-
-/* Контейнер статусних іконок */
-.statusIcons {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  display: flex;
-  gap: 5px;
-  z-index: 3;
-}
-
-/* Прогрес для поточної картки */
-.cardProgress {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Стилі для статусу плитки (відповідно до CasesListPage) */
-/* Ми застосовуємо ці класи до cardInner, щоб колір відображався на всій плитці */
-.learned {
-  background-color: #4caf50 !important;
-  color: #4caf50 !important;
-  border-radius: 20px !important;
-}
-.paused {
-  background-color: #ff9800 !important;
-  color: #ff9800 !important;
-  border-radius: 20px !important;
-}
-.learned .cardFront,
-.learned .cardBack {
-  background-color: #4caf50 !important;
-}
-
-.paused .cardFront,
-.paused .cardBack {
-  background-color: #ff9800 !important;
 }
