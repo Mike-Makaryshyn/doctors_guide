@@ -27,7 +27,7 @@ const FlashcardGame = () => {
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState({});
-  // Булевий стан для перевороту: лише 0° або 180°
+  // Стан для перевороту: false = front, true = back
   const [flipped, setFlipped] = useState(false);
 
   const unifyRegion = (r) =>
@@ -74,10 +74,13 @@ const FlashcardGame = () => {
   };
 
   const toggleLearned = (id) => {
+    // Якщо картка перевернута, не робимо нічого
+    if (flipped) return;
     toggleStatus(id, "learned");
   };
 
   const togglePaused = (id) => {
+    if (flipped) return;
     toggleStatus(id, "paused");
     if (filterMode === "paused") {
       setFilterMode("all");
@@ -263,10 +266,17 @@ const FlashcardGame = () => {
                   ${currentStatus === "learned" ? styles.learned : currentStatus === "paused" ? styles.paused : ""}
                 `}
               >
-                <div className={styles.cardFront}>
+                {/* Передня сторона: якщо картка перевернута – вимикаємо pointer events */}
+                <div 
+                  className={styles.cardFront} 
+                  style={{ pointerEvents: flipped ? "none" : "auto" }}
+                >
                   <div className={styles.iconsContainer}>
                     <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
-                      <button className={styles.infoButton} onClick={(e) => e.stopPropagation()}>
+                      <button 
+                        className={styles.infoButton} 
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -309,29 +319,30 @@ const FlashcardGame = () => {
                   </div>
                   <h3>{currentCard.lat}</h3>
                 </div>
-                <div className={styles.cardBack}>
-                  {/* На cardBack рендеримо лише info-кнопку */}
-                  <div className={styles.iconsContainer}>
-                    <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
-                      <button className={styles.infoButton} onClick={(e) => e.stopPropagation()}>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="30"
-                          height="30"
-                          fill="none"
-                          stroke="#ededed"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                          <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-                          <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-                        </svg>
-                      </button>
-                    </Tippy>
-                  </div>
+                {/* Задня сторона: дозволяємо pointer events тільки тут */}
+                <div 
+                  className={styles.cardBack} 
+                  style={{ pointerEvents: flipped ? "auto" : "none" }}
+                >
+                  <Tippy content={currentCard.deExplanation || "Пояснення відсутнє"} trigger="click">
+                    <button className={styles.infoButton} onClick={(e) => e.stopPropagation()}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        stroke="#ededed"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                        <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                        <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                      </svg>
+                    </button>
+                  </Tippy>
                   <p>{currentCard.de}</p>
                 </div>
               </div>

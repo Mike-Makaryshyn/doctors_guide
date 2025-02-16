@@ -113,7 +113,6 @@
   font-size: 20px;
   color: #013b6e;
   margin-bottom: 12px;
-  /* Приклад анімації для кожної букви можна реалізувати через span-елементи всередині заголовку */
 }
 .modalSubtitle {
   font-size: 14px;
@@ -213,8 +212,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  /* Видаляємо білу рамку */
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -236,15 +235,9 @@
 }
 .cardBack {
   transform: rotateY(180deg);
-  /* Вимикаємо pointer events для всієї задньої сторони */
-  pointer-events: none;
-}
-.cardBack .infoButton {
-  /* Для infoButton на задній стороні знову включаємо pointer events */
-  pointer-events: auto;
 }
 
-/* Контейнер для іконок */
+/* Контейнер для іконок (для front-сторони) */
 .iconsContainer {
   position: absolute;
   top: 0;
@@ -342,10 +335,8 @@
   top: 5px;
   right: 5px;
   z-index: 1;
-  svg {
-    transition: transform 0.2s ease-in-out;
-  }
+  transition: transform 0.2s ease-in-out;
 }
-.infoButton:hover svg {
+.infoButton:hover {
   transform: scale(1.1);
 }
