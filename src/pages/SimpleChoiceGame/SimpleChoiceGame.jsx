@@ -19,8 +19,8 @@ const SimpleChoiceGame = () => {
   const [filterMode, setFilterMode] = useState("unlearned");
 
   // Нові налаштування гри:
-  // Режим відображення термінів: "latin-german", "german-latin", "mixed"
-  const [displayMode, setDisplayMode] = useState("latin-german");
+  // Режим відображення термінів: "LatGerman", "LatGerm", "GermLat", "Mixed"
+  const [displayMode, setDisplayMode] = useState("LatGerman");
   // Кількість запитань, що потрібно пройти
   const [questionCount, setQuestionCount] = useState(20);
 
@@ -56,15 +56,15 @@ const SimpleChoiceGame = () => {
     // В залежності від displayMode, для кожного терміну визначається питання і правильна відповідь.
     const questionsData = selectedTerms.map((term) => {
       let mode = displayMode;
-      // Якщо режим "mixed", вибираємо випадково
-      if (displayMode === "mixed") {
-        mode = Math.random() < 0.5 ? "latin-german" : "german-latin";
+      // Якщо режим "Mixed", вибираємо випадково між LatGerman і GermLat.
+      if (displayMode === "Mixed") {
+        mode = Math.random() < 0.5 ? "LatGerman" : "GermLat";
       }
       let questionText, correctAnswer;
-      if (mode === "latin-german") {
+      if (mode === "LatGerman" || mode === "LatGerm") {
         questionText = term.lat;
         correctAnswer = term.de;
-      } else {
+      } else if (mode === "GermLat") {
         questionText = term.de;
         correctAnswer = term.lat;
       }
@@ -73,7 +73,9 @@ const SimpleChoiceGame = () => {
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) => (mode === "latin-german" ? t.de : t.lat));
+        .map((t) =>
+          mode === "LatGerman" || mode === "LatGerm" ? t.de : t.lat
+        );
       const options = [...wrongAnswers, correctAnswer].sort(() => Math.random() - 0.5);
 
       return {
@@ -137,8 +139,15 @@ const SimpleChoiceGame = () => {
         {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div className={window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+            <div
+              className={
+                window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile
+              }
+            >
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setSettingsOpen(false)}
+              >
                 ×
               </button>
               <h2 className={styles.modalTitle}>Налаштування гри</h2>
@@ -188,19 +197,24 @@ const SimpleChoiceGame = () => {
                   <option value="paused">Pausiert</option>
                 </select>
               </div>
+              {/* Горизонтальний контейнер для вибору режиму відображення */}
               <div className={styles.modalField}>
                 <label>Режим відображення:</label>
-                <select
-                  value={displayMode}
-                  onChange={(e) => setDisplayMode(e.target.value)}
-                  className={styles.modalSelect}
-                >
-                  <option value="latin-german">Latin → German</option>
-                  <option value="german-latin">German → Latin</option>
-                  <option value="mixed">Mixed</option>
-                </select>
+                <div className={styles.displayModeContainer}>
+                  {["LatGerman", "LatGerm", "GermLat", "Mixed"].map((modeOption) => (
+                    <div
+                      key={modeOption}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === modeOption ? styles.selected : ""
+                      }`}
+                      onClick={() => setDisplayMode(modeOption)}
+                    >
+                      {modeOption}
+                    </div>
+                  ))}
+                </div>
               </div>
-              {/* Замість селекту для кількості запитань використовується ряд іконок */}
+              {/* Горизонтальний контейнер для вибору кількості запитань */}
               <div className={styles.modalField}>
                 <label>Кількість запитань:</label>
                 <div className={styles.questionCountContainer}>
@@ -234,18 +248,23 @@ const SimpleChoiceGame = () => {
               <div className={styles.questionSection}>
                 <h2>{questions[currentIndex].question}</h2>
                 <div className={styles.optionsContainer}>
-                  {questions[currentIndex].options.map((option, idx) => (
-                    <button
-                      key={idx}
-                      className={`
-                        ${styles.answerTile} 
-                        ${selectedAnswer === option ? (answerStatus === "correct" ? styles.correct : styles.wrong) : ""}
-                      `}
-                      onClick={() => handleAnswerSelect(option)}
-                    >
-                      {option}
-                    </button>
-                  ))}
+                  {questions[currentIndex].options.map((option, idx) => {
+                    const isCorrect =
+                      answerStatus && option === questions[currentIndex].correctAnswer;
+                    const isWrong =
+                      answerStatus === "wrong" && option === selectedAnswer;
+                    return (
+                      <button
+                        key={idx}
+                        className={`${styles.answerTile} ${
+                          isCorrect ? styles.correct : ""
+                        } ${isWrong ? styles.wrong : ""}`}
+                        onClick={() => handleAnswerSelect(option)}
+                      >
+                        {option}
+                      </button>
+                    );
+                  })}
                 </div>
                 <button className={styles.nextButton} onClick={handleNext}>
                   Наступне запитання
@@ -258,7 +277,10 @@ const SimpleChoiceGame = () => {
         {/* Кнопка налаштувань під час гри */}
         {!settingsOpen && (
           <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => setSettingsOpen(true)}
+            >
               <FaCog />
             </button>
           </div>
