@@ -8,20 +8,31 @@ import { FaCog } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useTermStatus } from "../../contexts/TermStatusContext";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+
+// Функція для уніфікації регіону (можна скопіювати з AllMedicalTerminologyPage)
+const unifyRegion = (r) =>
+  r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r;
 
 const SimpleChoiceGame = () => {
+  // Отримуємо глобальну інформацію
+  const { selectedRegion } = useGetGlobalInfo();
+
+  // Встановлюємо регіон з глобального стану (якщо немає – за замовчуванням "Bayern")
+  const initialRegion = unifyRegion(selectedRegion || "Bayern");
+
   // Стан для модального вікна налаштувань
   const [settingsOpen, setSettingsOpen] = useState(true);
 
   // Стан для вибору фільтрів (регіон, категорія, режим фільтрації)
-  const [region, setRegion] = useState("Alle");
+  const [region, setRegion] = useState(initialRegion);
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
 
-  // Нові налаштування гри:
-  // Режим відображення термінів: "LatGerman", "LatGerm", "GermLat", "Mixed"
+  // Налаштування гри:
+  // Режим відображення термінів: "LatGerman", "GermanLat", "Mixed"
   const [displayMode, setDisplayMode] = useState("LatGerman");
-  // Кількість запитань, що потрібно пройти
+  // Кількість запитань
   const [questionCount, setQuestionCount] = useState(20);
 
   // Стан для гри: список запитань, поточний індекс, вибрана відповідь, статус відповіді
@@ -32,51 +43,54 @@ const SimpleChoiceGame = () => {
 
   const { termStatuses, toggleStatus } = useTermStatus();
 
+  // Оновлення локального стану регіону при зміні глобального стану
+  useEffect(() => {
+    setRegion(unifyRegion(selectedRegion || "Bayern"));
+  }, [selectedRegion]);
+
   // Завантаження запитань із медичних термінів за фільтрами
   const loadQuestions = () => {
     const filteredTerms = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
       const matchesCategory =
-        selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+        selectedCategory === "Alle" ||
+        (term.categories || []).includes(selectedCategory);
       const status = termStatuses[term.id] || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+      if (
+        filterMode === "unlearned" &&
+        (status === "learned" || status === "paused")
+      )
         return false;
       return matchesRegion && matchesCategory;
     });
 
-    // Перемішуємо терміни
     const shuffled = filteredTerms.sort(() => Math.random() - 0.5);
-    // Обираємо лише першу частину згідно з questionCount
     const selectedTerms = shuffled.slice(0, questionCount);
 
-    // Формуємо запитання:
-    // В залежності від displayMode, для кожного терміну визначається питання і правильна відповідь.
     const questionsData = selectedTerms.map((term) => {
       let mode = displayMode;
-      // Якщо режим "Mixed", вибираємо випадково між LatGerman і GermLat.
       if (displayMode === "Mixed") {
-        mode = Math.random() < 0.5 ? "LatGerman" : "GermLat";
+        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
       }
       let questionText, correctAnswer;
-      if (mode === "LatGerman" || mode === "LatGerm") {
+      if (mode === "LatGerman") {
         questionText = term.lat;
         correctAnswer = term.de;
-      } else if (mode === "GermLat") {
+      } else if (mode === "GermanLat") {
         questionText = term.de;
         correctAnswer = term.lat;
       }
-      // Формуємо неправильні відповіді
       const wrongAnswers = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) =>
-          mode === "LatGerman" || mode === "LatGerm" ? t.de : t.lat
-        );
-      const options = [...wrongAnswers, correctAnswer].sort(() => Math.random() - 0.5);
+        .map((t) => (mode === "LatGerman" ? t.de : t.lat));
+      const options = [...wrongAnswers, correctAnswer].sort(
+        () => Math.random() - 0.5
+      );
 
       return {
         id: term.id,
@@ -92,15 +106,13 @@ const SimpleChoiceGame = () => {
     setAnswerStatus(null);
   };
 
-  // Обробка старту гри
   const handleStart = () => {
     setSettingsOpen(false);
     loadQuestions();
   };
 
-  // Обробка вибору відповіді
   const handleAnswerSelect = (option) => {
-    if (selectedAnswer !== null) return; // Забороняємо повторний вибір
+    if (selectedAnswer !== null) return;
     setSelectedAnswer(option);
     if (option === questions[currentIndex].correctAnswer) {
       setAnswerStatus("correct");
@@ -110,7 +122,6 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Перехід до наступного запитання
   const handleNext = () => {
     setSelectedAnswer(null);
     setAnswerStatus(null);
@@ -121,11 +132,8 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Динамічно формуємо списки регіонів та категорій (як у FlashcardGame)
   const regionsList = Array.from(
-    new Set(
-      medicalTerms.flatMap((term) => (term.regions || []).map((r) => r))
-    )
+    new Set(medicalTerms.flatMap((term) => term.regions || []))
   );
   const categoriesList = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories || []))
@@ -136,12 +144,11 @@ const SimpleChoiceGame = () => {
       <div className={styles.simpleChoiceGame}>
         <h1>Simple Choice Game</h1>
 
-        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
               }
             >
               <button
@@ -152,7 +159,8 @@ const SimpleChoiceGame = () => {
               </button>
               <h2 className={styles.modalTitle}>Налаштування гри</h2>
               <p className={styles.modalSubtitle}>
-                Виберіть регіон, категорію, режим фільтрації, режим відображення та кількість запитань:
+                Виберіть регіон, категорію, режим фільтрації, режим відображення та кількість
+                запитань:
               </p>
               <div className={styles.modalField}>
                 <label>Регіон:</label>
@@ -197,11 +205,11 @@ const SimpleChoiceGame = () => {
                   <option value="paused">Pausiert</option>
                 </select>
               </div>
-              {/* Горизонтальний контейнер для вибору режиму відображення */}
+              {/* Контейнер для вибору режиму відображення */}
               <div className={styles.modalField}>
                 <label>Режим відображення:</label>
                 <div className={styles.displayModeContainer}>
-                  {["LatGerman", "LatGerm", "GermLat", "Mixed"].map((modeOption) => (
+                  {["LatGerman", "GermanLat", "Mixed"].map((modeOption) => (
                     <div
                       key={modeOption}
                       className={`${styles.displayModeIcon} ${
@@ -214,7 +222,7 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-              {/* Горизонтальний контейнер для вибору кількості запитань */}
+              {/* Контейнер для вибору кількості запитань */}
               <div className={styles.modalField}>
                 <label>Кількість запитань:</label>
                 <div className={styles.questionCountContainer}>
@@ -238,7 +246,6 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Гра */}
         {!settingsOpen && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -274,8 +281,7 @@ const SimpleChoiceGame = () => {
           </>
         )}
 
-        {/* Кнопка налаштувань під час гри */}
-        {!settingsOpen && (
+        {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
               className={styles.settingsButton}

@@ -1,5 +1,3 @@
-// src/pages/SimpleChoiceGame/SimpleChoiceGame.module.scss
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .simpleChoiceGame {
@@ -9,7 +7,7 @@
   position: relative;
 }
 
-/* Модальне вікно (таке ж, як у FlashcardGame) */
+/* Модальне вікно */
 .modalOverlay {
   font-family: "Poppins", sans-serif;
   position: fixed;
@@ -17,23 +15,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2500;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popupDesktop {
+/* На десктопах – модальне вікно позиціоноване поруч із кнопкою налаштувань */
+.popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
-  width: 300px;
+  width: 350px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  position: absolute;
-  bottom: 68px;
-  right: 68px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: absolute;
+  bottom: 17px;
+  right: 79px;
 }
 
 .popupMobile {
@@ -41,7 +40,7 @@
   padding: 25px 20px 20px;
   width: 100%;
   border-radius: 12px 12px 0 0;
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -51,10 +50,20 @@
 }
 
 @keyframes popupBounce {
-  0% { transform: translateY(100%); opacity: 0; }
-  60% { transform: translateY(-10px); opacity: 1; }
-  80% { transform: translateY(5px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modalCloseButton {
@@ -93,11 +102,22 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease;
 }
 .modalSelect:focus {
-  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
 }
 .startButton {
   display: inline-block;
@@ -110,7 +130,7 @@
   background: linear-gradient(135deg, #4caf50, #008000);
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -118,15 +138,15 @@
 }
 .startButton:hover {
   background: linear-gradient(135deg, #66bb6a, #009900);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
 .startButton:active {
   transform: translateY(1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .startButton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,7 +180,7 @@
   margin-bottom: 20px;
 }
 
-/* Контейнер для плиток-відповідей, розташованих один під одним */
+/* Контейнер для плиток-відповідей (одне під одним) */
 .optionsContainer {
   display: flex;
   flex-direction: column;
@@ -169,7 +189,7 @@
   margin-bottom: 20px;
 }
 
-/* Стиль плитки для варіанту відповіді */
+/* Плитка для варіанту відповіді */
 .answerTile {
   width: 100%;
   max-width: 300px;
@@ -177,8 +197,7 @@
   min-height: 50px;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 11px 11px 22px #205f55,
-              -11px -11px 22px #349989;
+  box-shadow: 11px 11px 22px #205f55, -11px -11px 22px #349989;
   transition: transform 0.2s ease, background 0.3s ease;
   cursor: pointer;
   font-size: 16px;
@@ -191,38 +210,23 @@
   transform: scale(1.02);
 }
 
-/* Стилі для правильної відповіді */
+/* Підсвічування правильної відповіді */
 .correct {
   background: #2a7c6f !important;
-  box-shadow: inset 11px 11px 22px #205f55,
-              inset -11px -11px 22px #349989;
+  box-shadow: inset 11px 11px 22px #205f55, inset -11px -11px 22px #349989;
   color: #fff;
   font-weight: bold;
 }
 
-/* Стилі для неправильної відповіді */
+/* Підсвічування неправильної відповіді */
 .wrong {
   background: #ff5252 !important;
-  box-shadow: inset 11px 11px 22px rgba(0,0,0,0.3);
+  box-shadow: inset 11px 11px 22px rgba(0, 0, 0, 0.3);
   color: #fff;
   font-weight: bold;
 }
 
-/* Кнопка переходу до наступного запитання */
-.nextButton {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.nextButton:hover {
-  background-color: #388e3c;
-}
-
-/* Контейнер для вибору кількості запитань (іконки) – горизонтально */
+/* Контейнер для вибору кількості запитань – горизонтально */
 .questionCountContainer {
   display: flex;
   justify-content: center;
@@ -230,28 +234,23 @@
   margin-top: 10px;
 }
 
-/* Стиль для окремої іконки вибору кількості запитань (square) */
+/* Квадрат для вибору кількості запитань */
 .questionCountIcon {
   width: 50px;
   height: 50px;
   line-height: 50px;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 9px 9px 23px #9c9c9c,
-              -9px -9px 23px #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  user-select: none;
+  
 }
-
-/* Стиль для вибраної іконки для кількості запитань */
 .questionCountIcon.selected {
   background: #013b6e;
-  box-shadow: inset 9px 9px 23px #9c9c9c,
-              inset -9px -9px 23px #ffffff;
   color: #fff;
 }
 
@@ -259,32 +258,28 @@
 .displayModeContainer {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
 }
 
-/* Стиль для окремої іконки вибору режиму відображення */
+/* Плитка для режиму відображення (всього 3 варіанти) */
 .displayModeIcon {
   width: 100px;
   height: 40px;
   line-height: 40px;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 9px 9px 23px #9c9c9c,
-              -9px -9px 23px #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  user-select: none;
+  
+  font-size: 12px; /* зменшено розмір тексту */
 }
-
-/* Стиль для вибраної іконки режиму відображення */
 .displayModeIcon.selected {
   background: #013b6e;
-  box-shadow: inset 9px 9px 23px #9c9c9c,
-              inset -9px -9px 23px #ffffff;
   color: #fff;
 }
 

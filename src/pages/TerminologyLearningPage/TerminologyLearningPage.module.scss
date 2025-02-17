@@ -10,6 +10,7 @@
   justify-content: flex-start; /* вирівнювання по лівому краю */
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap; /* дозволяє перенос плиток */
 }
 
 /* Центрування плиток на мобільних пристроях */
@@ -19,7 +20,7 @@
   }
 }
 
-/* Зовнішня плитка */
+/* Плитки */
 .gameTile {
   position: relative;
   background-color: #f7f7f7;
@@ -28,45 +29,32 @@
   width: 300px;
   height: 200px;
   padding: 10px;
+  margin: 10px; /* відступ між плитками */
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
-  background-size: cover; /* щоб фон займав всю плитку */
+  background-size: cover;
   background-position: center;
-  
+
   &:hover {
     text-decoration: none;
   }
 }
 
-/* Заголовок плитки */
-.tileHeader {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  color: #023c6f; /* синій колір */
-  text-align: center;
-  margin-bottom: 10px;
-  text-decoration: none;
-  
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-/* Перевертальна картка всередині плитки */
+/* Контейнер для вмісту плитки */
 .innerTile {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px;  /* трохи ширше */
+  width: 120px;
   height: 80px;
   perspective: 1000px;
 }
 
+/* Анімація для Flashcard Game (обертальна плитка) */
 .cardInner {
   position: relative;
   width: 100%;
@@ -106,5 +94,98 @@
   }
   100% {
     transform: rotateY(360deg);
+  }
+}
+
+/* Плитка для Single Choice Game з ефектом повільного качання */
+.rockingCard {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  animation: rockAnimation 4s ease-in-out infinite;
+}
+
+@keyframes rockAnimation {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-6deg) translateY(6px);
+  }
+  50% {
+    transform: rotate(6deg) translateY(6px);
+  }
+  75% {
+    transform: rotate(-6deg) translateY(6px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+/* Заголовок плитки */
+.tileTitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #023c6f;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Контейнер для шариків із запобіганням виходу за межі */
+.dotContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Стилізація шариків (завжди круглі) */
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #023c6f;
+  border-radius: 50%;
+  animation: dotMove 4s ease-in-out infinite;
+}
+
+/* Генерація затримок для 21 шарика */
+@for $i from 1 through 21 {
+  .dot:nth-child(#{$i}) {
+    animation-delay: #{($i - 1) * 0.2}s;
+  }
+}
+
+@keyframes dotMove {
+  0% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateX(-8px) translateY(-2px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(8px) translateY(-2px);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-8px) translateY(-2px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.6;
   }
 }
