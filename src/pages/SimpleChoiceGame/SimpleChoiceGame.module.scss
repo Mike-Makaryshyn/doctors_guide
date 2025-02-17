@@ -1,0 +1,279 @@
+// src/pages/SimpleChoiceGame/SimpleChoiceGame.module.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.simpleChoiceGame {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+/* Модальне вікно (таке ж, як у FlashcardGame) */
+.modalOverlay {
+  font-family: "Poppins", sans-serif; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupDesktop {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 68px;
+  right: 68px;
+  text-align: center;
+}
+
+.popupMobile {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: popupBounce 0.6s ease-out;
+}
+
+@keyframes popupBounce {
+  0% { transform: translateY(100%); opacity: 0; }
+  60% { transform: translateY(-10px); opacity: 1; }
+  80% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.modalField label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #013b6e;
+  margin-bottom: 5px;
+}
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+.startButton {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #4caf50, #008000);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.startButton:hover {
+  background: linear-gradient(135deg, #66bb6a, #009900);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+.startButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.startButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+.startButton:active::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* Прогрес */
+.progress {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Контейнер гри */
+.gameContainer {
+  margin-top: 20px;
+}
+
+.questionSection h2 {
+  font-size: 24px;
+  color: #013b6e;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для плиток-відповідей */
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Стиль плитки для варіанту відповіді */
+.answerTile {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  min-height: 50px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 9px 9px 23px #9c9c9c,
+              -9px -9px 23px #ffffff;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+  font-size: 16px;
+  color: #013b6e;
+  text-align: center;
+  overflow: hidden;
+}
+
+.answerTile:hover {
+  transform: scale(1.02);
+}
+
+/* Стилі для правильної/неправильної відповіді */
+.correct {
+  background: #2a7c6f !important;
+  box-shadow: inset 9px 9px 23px #9c9c9c,
+              inset -9px -9px 23px #ffffff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.wrong {
+  background: #ff5252 !important;
+  box-shadow: inset 9px 9px 23px rgba(0,0,0,0.3);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Кнопка переходу до наступного запитання */
+.nextButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.nextButton:hover {
+  background-color: #388e3c;
+}
+
+/* Контейнер для вибору кількості запитань (іконки) */
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Стиль для окремої іконки вибору кількості запитань */
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 9px 9px 23px #9c9c9c,
+              -9px -9px 23px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  user-select: none;
+}
+
+/* Стиль для вибраної іконки */
+.questionCountIcon.selected {
+  background: #013b6e;
+  box-shadow: inset 9px 9px 23px #9c9c9c,
+              inset -9px -9px 23px #ffffff;
+  color: #fff;
+}
+
+/* Кнопка налаштувань у нижньому правому куті */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3500;
+}
+.settingsButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}

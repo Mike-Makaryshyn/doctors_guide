@@ -80,6 +80,9 @@ const CasesListPage = React.lazy(() =>
 const EditCasePage = React.lazy(() =>
   import("../pages/EditCasePage/EditCasePage")
 );
+const SimpleChoiceGame = React.lazy(() =>
+  import("../pages/SimpleChoiceGame/SimpleChoiceGame")
+);
 const TerminologyLearningPage = React.lazy(() =>
   import("../pages/TerminologyLearningPage/TerminologyLearningPage")
 );
@@ -124,7 +127,7 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
         />
-        
+
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />
@@ -143,7 +146,10 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
         />
-        <Route path={pathList.abbreviations.path} element={<AllMedicalAbbreviationsPage />} />
+        <Route
+          path={pathList.abbreviations.path}
+          element={<AllMedicalAbbreviationsPage />}
+        />
         <Route path={pathList.trafarette.path} element={<Trafatette />} />
         <Route
           path={pathList.language_study.path}
@@ -162,7 +168,10 @@ export default function Routers() {
           path={pathList.translation.path}
           element={<TranslatorListPage />}
         />
-
+        <Route
+          path={pathList.simple_choice.path}
+          element={<SimpleChoiceGame />}
+        />
         {/* Сторінка зі списком кейсів (MY CASES входить сюди) */}
         <Route path="/cases" element={<CasesListPage />} />
 
@@ -181,9 +190,9 @@ export default function Routers() {
           element={<FSPFormularPage />}
         />
         <Route
-  path={pathList.terminology_learning.path}
-  element={<TerminologyLearningPage />}
-/>
+          path={pathList.terminology_learning.path}
+          element={<TerminologyLearningPage />}
+        />
         <Route
           path={pathList.berufserlaubnis.path}
           element={<WhatIsBerufserlaubnisPage />}

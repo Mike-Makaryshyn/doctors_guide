@@ -84,4 +84,7 @@ export const pathList = {
   terminology_learning: {
     path: "/terminology-learning",
   },
+  simple_choice: {
+    path: "/simple-choice-game",
+  },
 };
