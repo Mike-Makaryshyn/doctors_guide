@@ -1,13 +1,20 @@
-// src/pages/SimpleChoiceGame/SimpleChoiceGame.jsx
-
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
-import { FaCog, FaPlay, FaPause, FaCheck, FaList } from "react-icons/fa";
+import {
+  FaCog,
+  FaPlay,
+  FaPause,
+  FaCheck,
+  FaList,
+  FaPen,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa";
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { categoryIcons } from "../../constants/CategoryIcons"; // Імпорт іконок категорій
+import { categoryIcons } from "../../constants/CategoryIcons";
 
 // Функція для уніфікації регіону
 const unifyRegion = (r) =>
@@ -17,20 +24,20 @@ const unifyRegion = (r) =>
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
-  "Bayern": "BY",
-  "Hessen": "HE",
-  "Niedersachsen": "NI",
+  Bayern: "BY",
+  Hessen: "HE",
+  Niedersachsen: "NI",
   "Rheinland-Pfalz": "RP",
-  "Sachsen": "SA",
-  "Brandenburg": "BB",
-  "Bremen": "HB",
-  "Saarland": "SL",
+  Sachsen: "SA",
+  Brandenburg: "BB",
+  Bremen: "HB",
+  Saarland: "SL",
   "Schleswig-Holstein": "SH",
-  "Thüringen": "TH",
-  "Berlin": "BE",
-  "Hamburg": "HH",
+  Thüringen: "TH",
+  Berlin: "BE",
+  Hamburg: "HH",
   "Mecklenburg Vorpommern": "MV",
-  "Sachsen-Anhalt": "ST"
+  "Sachsen-Anhalt": "ST",
 };
 
 // Масив режимів фільтрації
@@ -38,29 +45,50 @@ const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
   { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
-  { value: "paused", icon: <FaPause />, label: "Pausiert" }
+  { value: "paused", icon: <FaPause />, label: "Pausiert" },
+];
+
+// Варіанти кількості запитань
+const questionCountOptions = [20, 40, 60, 100, 200, "all"];
+
+// Режими відображення
+const displayModeOptions = [
+  { value: "LatGerman", label: "Lat→Ger" },
+  { value: "GermanLat", label: "Ger→Lat" },
+  { value: "Mixed", label: "Mixed" },
 ];
 
 const SimpleChoiceGame = () => {
   const { selectedRegion } = useGetGlobalInfo();
   const initialRegion = unifyRegion(selectedRegion || "Bayern");
 
+  // Модальне вікно
   const [settingsOpen, setSettingsOpen] = useState(true);
 
-  // Стан для вибору фільтрів
+  // Налаштування
   const [region, setRegion] = useState(initialRegion);
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
-
-  // Налаштування гри
+  const [allowEdit, setAllowEdit] = useState(false);
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Стан для гри
+  // Стан питань
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [answerStatus, setAnswerStatus] = useState(null);
+
+  // *** Окремі state для збереження відповідей ***
+  // Режим БЕЗ редагування: зберігаємо одну обрану відповідь
+  // answersNoEdit[questionIndex] = "яку відповідь обрали"
+  const [answersNoEdit, setAnswersNoEdit] = useState({});
+
+  // Режим З редагуванням: зберігаємо список невірних відповідей
+  // wrongSelectionsEdit[questionIndex] = ["варіант1", "варіант2", ...]
+  const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
+
+  // Завершеність кожного питання
+  // questionsCompleted[questionIndex] = true/false
+  const [questionsCompleted, setQuestionsCompleted] = useState({});
 
   const { termStatuses, toggleStatus } = useTermStatus();
 
@@ -68,7 +96,16 @@ const SimpleChoiceGame = () => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
+  // Якщо треба перезапускати гру при зміні allowEdit – можна залишити цей useEffect
+  useEffect(() => {
+    if (!settingsOpen) {
+      loadQuestions();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allowEdit]);
+
   const loadQuestions = () => {
+    // Фільтруємо
     const filteredTerms = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
@@ -86,8 +123,12 @@ const SimpleChoiceGame = () => {
       return matchesRegion && matchesCategory;
     });
 
-    const shuffled = filteredTerms.sort(() => Math.random() - 0.5);
-    const selectedTerms = shuffled.slice(0, questionCount);
+    // Перемішуємо
+    const shuffled = [...filteredTerms].sort(() => Math.random() - 0.5);
+
+    // Якщо all -> всі, інакше slice
+    const selectedTerms =
+      questionCount === "all" ? shuffled : shuffled.slice(0, questionCount);
 
     const questionsData = selectedTerms.map((term) => {
       let mode = displayMode;
@@ -102,11 +143,13 @@ const SimpleChoiceGame = () => {
         questionText = term.de;
         correctAnswer = term.lat;
       }
+      // 3 випадкові неправильні
       const wrongAnswers = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map((t) => (mode === "LatGerman" ? t.de : t.lat));
+
       const options = [...wrongAnswers, correctAnswer].sort(
         () => Math.random() - 0.5
       );
@@ -115,40 +158,75 @@ const SimpleChoiceGame = () => {
         id: term.id,
         question: questionText,
         correctAnswer,
-        options
+        options,
       };
     });
 
     setQuestions(questionsData);
     setCurrentIndex(0);
-    setSelectedAnswer(null);
-    setAnswerStatus(null);
+
+    // Скидаємо всі дані: відповіді та стани
+    setAnswersNoEdit({});
+    setWrongSelectionsEdit({});
+    setQuestionsCompleted({});
   };
 
+  // Натискаємо "Старт"
   const handleStart = () => {
     setSettingsOpen(false);
     loadQuestions();
   };
 
   const handleAnswerSelect = (option) => {
-    if (selectedAnswer !== null) return;
-    setSelectedAnswer(option);
-    if (option === questions[currentIndex].correctAnswer) {
-      setAnswerStatus("correct");
-      toggleStatus(questions[currentIndex].id, "learned");
-    } else {
-      setAnswerStatus("wrong");
+    if (!questions[currentIndex]) return;
+    const correct = questions[currentIndex].correctAnswer;
+    const qIndex = currentIndex;
+
+    // Якщо питання завершене – ігноруємо
+    if (questionsCompleted[qIndex]) return;
+
+    // --- Режим редагування ---
+    if (allowEdit) {
+      if (option === correct) {
+        // Завершити питання
+        setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
+        toggleStatus(questions[qIndex].id, "learned");
+      } else {
+        // Додаємо var до масиву неправильних (якщо ще нема)
+        setWrongSelectionsEdit((prev) => {
+          const oldList = prev[qIndex] || [];
+          if (oldList.includes(option)) return prev; // уже є
+          return {
+            ...prev,
+            [qIndex]: [...oldList, option],
+          };
+        });
+      }
+    }
+    // --- Режим без редагування ---
+    else {
+      // Зберігаємо обрану відповідь
+      setAnswersNoEdit((prev) => ({
+        ...prev,
+        [qIndex]: option,
+      }));
+      // Завершити питання
+      setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
+
+      // Якщо правильна – оновити статус
+      if (option === correct) {
+        toggleStatus(questions[qIndex].id, "learned");
+      }
     }
   };
 
-  const handleNext = () => {
-    setSelectedAnswer(null);
-    setAnswerStatus(null);
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      alert("Всі запитання пройдені!");
+  const handleNavigation = (direction) => {
+    if (direction === "prev" && currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    } else if (direction === "next" && currentIndex < questions.length - 1) {
+      setCurrentIndex((prev) => prev + 1);
     }
+    // **не** скидаємо нічого, аби при поверненні відповідь зберігалась.
   };
 
   const regionsList = Array.from(
@@ -157,6 +235,10 @@ const SimpleChoiceGame = () => {
   const categoriesList = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories || []))
   );
+
+  const currentQuestion = questions[currentIndex];
+  const qIndex = currentIndex;
+  const questionIsCompleted = questionsCompleted[qIndex] || false;
 
   return (
     <MainLayout>
@@ -180,11 +262,11 @@ const SimpleChoiceGame = () => {
               </button>
               <h2 className={styles.modalTitle}>Налаштування гри</h2>
               <p className={styles.modalSubtitle}>
-                Виберіть регіон, категорію, режим фільтрації, режим відображення та
-                кількість запитань:
+                Виберіть регіон, категорію, режим фільтрації, режим відображення,
+                кількість запитань та редагування відповіді:
               </p>
 
-              {/* Ряд для регіону, фільтра і категорії */}
+              {/* Ряд (region, filter, category, edit) */}
               <div className={styles.row}>
                 {/* Регіон */}
                 <div className={styles.regionColumn}>
@@ -213,8 +295,7 @@ const SimpleChoiceGame = () => {
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
-                      {filterModes.find((mode) => mode.value === filterMode)
-                        ?.icon}
+                      {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
                     <select
                       value={filterMode}
@@ -257,21 +338,34 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
+
+                {/* Редагування */}
+                <div className={styles.editColumn}>
+                  <label className={styles.fieldLabel}>Редагувати</label>
+                  <button
+                    className={`${styles.editToggleButton} ${
+                      allowEdit ? styles.selectedEdit : ""
+                    }`}
+                    onClick={() => setAllowEdit(!allowEdit)}
+                  >
+                    <FaPen />
+                  </button>
+                </div>
               </div>
 
               {/* Режим відображення */}
               <div className={styles.modalField}>
                 <label>Режим відображення:</label>
                 <div className={styles.displayModeContainer}>
-                  {["LatGerman", "GermanLat", "Mixed"].map((modeOption) => (
+                  {displayModeOptions.map((option) => (
                     <div
-                      key={modeOption}
+                      key={option.value}
                       className={`${styles.displayModeIcon} ${
-                        displayMode === modeOption ? styles.selected : ""
+                        displayMode === option.value ? styles.selected : ""
                       }`}
-                      onClick={() => setDisplayMode(modeOption)}
+                      onClick={() => setDisplayMode(option.value)}
                     >
-                      {modeOption}
+                      {option.label}
                     </div>
                   ))}
                 </div>
@@ -281,15 +375,15 @@ const SimpleChoiceGame = () => {
               <div className={styles.modalField}>
                 <label>Кількість запитань:</label>
                 <div className={styles.questionCountContainer}>
-                  {[20, 40, 60, 100, 200].map((count) => (
+                  {questionCountOptions.map((countOption) => (
                     <div
-                      key={count}
+                      key={countOption}
                       className={`${styles.questionCountIcon} ${
-                        questionCount === count ? styles.selected : ""
+                        questionCount === countOption ? styles.selected : ""
                       }`}
-                      onClick={() => setQuestionCount(count)}
+                      onClick={() => setQuestionCount(countOption)}
                     >
-                      {count}
+                      {countOption === "all" ? "Все" : countOption}
                     </div>
                   ))}
                 </div>
@@ -310,36 +404,100 @@ const SimpleChoiceGame = () => {
             </div>
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                <h2>{questions[currentIndex].question}</h2>
+                <h2>{currentQuestion.question}</h2>
                 <div className={styles.optionsContainer}>
-                  {questions[currentIndex].options.map((option, idx) => {
-                    const isCorrect =
-                      answerStatus &&
-                      option === questions[currentIndex].correctAnswer;
-                    const isWrong =
-                      answerStatus === "wrong" &&
-                      option === selectedAnswer;
-                    return (
-                      <button
-                        key={idx}
-                        className={`${styles.answerTile} ${
-                          isCorrect ? styles.correct : ""
-                        } ${isWrong ? styles.wrong : ""}`}
-                        onClick={() => handleAnswerSelect(option)}
-                      >
-                        {option}
-                      </button>
-                    );
+                  {currentQuestion.options.map((option, idx) => {
+                    const correct = currentQuestion.correctAnswer;
+
+                    // чи завершене це питання?
+                    if (!allowEdit) {
+                      // === БЕЗ редагування ===
+                      // одна обрана відповідь
+                      const chosenAnswer = answersNoEdit[qIndex] || null;
+                      const isCompleted = questionIsCompleted;
+                      let isWrong = false;
+                      let isCorrect = false;
+
+                      if (isCompleted) {
+                        // якщо опція = правильна -> green
+                        if (option === correct) {
+                          isCorrect = true;
+                        }
+                        // якщо це обрана, але невірна
+                        if (chosenAnswer === option && option !== correct) {
+                          isWrong = true;
+                        }
+                      }
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleAnswerSelect(option)}
+                          className={`${styles.answerTile} ${
+                            isCorrect ? styles.correct : ""
+                          } ${isWrong ? styles.wrong : ""}`}
+                        >
+                          {option}
+                        </button>
+                      );
+                    } else {
+                      // === З редагуванням ===
+                      // wrongSelectionsEdit[qIndex] -> [wrong1, wrong2, ...]
+                      const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
+                      const isCompleted = questionIsCompleted;
+                      let isWrongEdit = wrongAnswersArr.includes(option);
+                      let isCorrectEdit = false;
+
+                      // Якщо питання завершене й опція = правильна – зелений
+                      if (isCompleted && option === correct) {
+                        isCorrectEdit = true;
+                      }
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleAnswerSelect(option)}
+                          className={`${styles.answerTile} ${
+                            isCorrectEdit ? styles.correct : ""
+                          } ${isWrongEdit ? styles.wrong : ""}`}
+                        >
+                          {option}
+                        </button>
+                      );
+                    }
                   })}
                 </div>
-                <button className={styles.nextButton} onClick={handleNext}>
-                  Наступне запитання
-                </button>
+                <div className={styles.navigationContainer}>
+                  {currentIndex > 0 && (
+                    <button
+                      className={styles.navButton}
+                      onClick={() => handleNavigation("prev")}
+                    >
+                      <FaArrowLeft />
+                    </button>
+                  )}
+                  {currentIndex < questions.length - 1 && (
+                    <button
+                      className={styles.navButton}
+                      onClick={() => handleNavigation("next")}
+                    >
+                      <FaArrowRight />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </>
         )}
 
+        {/* Якщо немає запитань */}
+        {!settingsOpen && questions.length === 0 && (
+          <div style={{ marginTop: 20 }}>
+            <p>На жаль, немає термінів для відображення згідно фільтра.</p>
+          </div>
+        )}
+
+        {/* Кнопка налаштувань */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
