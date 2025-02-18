@@ -35,7 +35,7 @@
   transform: scale(0.95);
 }
 
-/* Модальне вікно */
+/* Modal Overlay */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -126,6 +126,7 @@
   margin-bottom: 12px;
 }
 
+/* Start-Button (wird auch für "Neues Spiel starten" verwendet) */
 .startButton {
   display: inline-block;
   width: 100%;
@@ -166,7 +167,7 @@
   margin-top: 20px;
 }
 
-/* Зменшена плитка з запитанням: */
+/* Frage-Box */
 .questionSection {
   max-width: 600px;
   margin: 0 auto;
@@ -181,7 +182,7 @@
   border-radius: 8px;
 }
 
-/* Відповідь-Buttons */
+/* Antwort-Buttons */
 .optionsContainer {
   display: flex;
   flex-direction: column;
@@ -200,7 +201,7 @@
   transition: transform 0.2s ease, background 0.3s ease;
   cursor: pointer;
   font-size: 20px;
-  font-weight: bold; /* Робимо текст жирним */
+  font-weight: bold;
   color: #013b6e;
   text-align: center;
   overflow: hidden;
@@ -209,10 +210,9 @@
 
 .answerTile:hover:enabled {
   transform: scale(1.05);
-  background: rgb(209, 195, 195); /* Дуже блідо-зелений */
+  background: rgb(209, 195, 195);
 }
 
-/* Правильна/Неправильна відповідь */
 .correct {
   background: #4caf50 !important;
   color: #fff;
@@ -241,7 +241,7 @@
   100% { transform: translateX(0); }
 }
 
-/* Кнопки для кількості питань */
+/* Frage-Zähler */
 .questionCountContainer {
   display: flex;
   justify-content: center;
@@ -268,7 +268,7 @@
   color: #fff;
 }
 
-/* Режими відображення */
+/* Anzeige-Modus */
 .displayModeContainer {
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@
   color: #fff;
 }
 
-/* Рядок: регіон, фільтр, категорія, редагування */
+/* Zeile: Region, Filter, Kategorie, Bearbeiten */
 .row {
   display: flex;
   justify-content: space-around;
@@ -401,7 +401,7 @@
   color: #fff;
 }
 
-/* Стрелочки для навігації */
+/* Navigation */
 .navigationContainer {
   display: flex;
   justify-content: center;
@@ -423,7 +423,7 @@
   font-size: 16px;
 }
 
-/* Кнопка налаштувань у правому нижньому куті */
+/* Einstellungen-Button */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
@@ -447,4 +447,70 @@
 
 .settingsButton:hover {
   transform: scale(1.1);
+}
+
+/* Ergebnismodal-Overlay */
+.resultsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ergebnis-Kachel */
+.resultsTile {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Schließ-Button im Ergebnismodal (ähnlich wie in den Einstellungen) */
+.resultsTile .modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.resultsTile .modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+/* Text im Ergebnismodal anpassen */
+.resultsTile h3 {
+  margin-top: 0;
+  color: #013b6e;
+  font-size: 20px; /* etwas kleiner */
+}
+
+.resultsTile p, 
+.resultsTile h4,
+.resultsTile li {
+  color: #013b6e;
+  font-size: 14px; /* kleiner als Standard */
+}
+
+/* Button "Neues Spiel starten" im Ergebnismodal (identisch zum Start-Button) */
+.restartButton {
+  @extend .startButton;
+  margin-top: 15px;
 }
