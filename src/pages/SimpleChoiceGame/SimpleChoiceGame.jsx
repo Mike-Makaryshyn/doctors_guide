@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Додано імпорт useNavigate
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
@@ -17,7 +17,7 @@ import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 
-// Abkürzungen für bestimmte Regionen
+// Абревіатури для певних регіонів
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -37,7 +37,7 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
-// Filtermodi
+// Фільтри
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -45,10 +45,10 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Anzahl Fragen
+// Кількість питань
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Anzeige-Modi
+// Режими відображення
 const displayModeOptions = [
   { value: "LatGerman", label: "Lat→Ger" },
   { value: "GermanLat", label: "Ger→Lat" },
@@ -56,11 +56,11 @@ const displayModeOptions = [
 ];
 
 const SimpleChoiceGame = () => {
-  const navigate = useNavigate(); // Використання useNavigate
+  const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
   const [settingsOpen, setSettingsOpen] = useState(true);
 
-  // Region & Filter
+  // Регіон, категорія, фільтр, режим редагування, режим відображення та кількість питань
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
@@ -68,26 +68,24 @@ const SimpleChoiceGame = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Fragezustände
+  // Стан питань
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Im Modus ohne Edit: gewählte Antwort
+  // Для режиму без редагування: обрана відповідь
   const [answersNoEdit, setAnswersNoEdit] = useState({});
-  // Im Modus mit Edit: falsche Antworten
+  // Для режиму з редагуванням: помилкові вибори
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
-  // Fertig bearbeitete Fragen
+  // Завершені питання
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
   const { termStatuses, toggleStatus } = useTermStatus();
 
   useEffect(() => {
-    // Wenn sich global die Region ändert
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
   const loadQuestions = () => {
-    // Filtern
     const filteredTerms = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
@@ -98,22 +96,15 @@ const SimpleChoiceGame = () => {
 
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (
-        filterMode === "unlearned" &&
-        (status === "learned" || status === "paused")
-      ) {
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
         return false;
       }
-
       return matchesRegion && matchesCategory;
     });
 
-    // Mischen
     const shuffled = [...filteredTerms].sort(() => Math.random() - 0.5);
-    const selectedTerms =
-      questionCount === "all" ? shuffled : shuffled.slice(0, questionCount);
+    const selectedTerms = questionCount === "all" ? shuffled : shuffled.slice(0, questionCount);
 
-    // Fragen aufbauen
     const questionsData = selectedTerms.map((term) => {
       let mode = displayMode;
       if (displayMode === "Mixed") {
@@ -127,16 +118,13 @@ const SimpleChoiceGame = () => {
         questionText = term.de;
         correctAnswer = term.lat;
       }
-      // falsche Antworten
       const wrongAnswers = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map((t) => (mode === "LatGerman" ? t.de : t.lat));
 
-      const options = [...wrongAnswers, correctAnswer].sort(
-        () => Math.random() - 0.5
-      );
+      const options = [...wrongAnswers, correctAnswer].sort(() => Math.random() - 0.5);
 
       return {
         id: term.id,
@@ -148,13 +136,11 @@ const SimpleChoiceGame = () => {
 
     setQuestions(questionsData);
     setCurrentIndex(0);
-    // Reset
     setAnswersNoEdit({});
     setWrongSelectionsEdit({});
     setQuestionsCompleted({});
   };
 
-  // Wenn man den Bearbeitungsmodus ändert
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -171,11 +157,9 @@ const SimpleChoiceGame = () => {
     if (!questions[currentIndex]) return;
     const correct = questions[currentIndex].correctAnswer;
     const qIndex = currentIndex;
-
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
-      // Edit-Modus
       if (option === correct) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
         toggleStatus(questions[qIndex].id, "learned");
@@ -187,7 +171,6 @@ const SimpleChoiceGame = () => {
         });
       }
     } else {
-      // No-Edit-Modus
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       if (option === correct) {
@@ -204,7 +187,6 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Listen für Region & Kategorie
   const regionsList = Array.from(
     new Set(medicalTerms.flatMap((term) => term.regions || []))
   );
@@ -216,34 +198,23 @@ const SimpleChoiceGame = () => {
   const qIndex = currentIndex;
   const questionIsCompleted = questionsCompleted[qIndex] || false;
 
-  // Hilfsfunktion: Abkürzung oder voller Name?
-  const getRegionLabel = (r) => {
-    return regionAbbreviations[r] || r;
-  };
-
-  // handleGoBack більше не потрібен, оскільки ми використовуємо navigate напряму
-  // Але можна залишити його, якщо хочеш використовувати його у майбутньому:
-  const handleGoBack = () => {
-    navigate("/terminology-learning");
-  };
+  const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
   return (
     <MainLayout>
       <div className={styles.simpleChoiceGame}>
-        {/* Back-Button wie im FlashcardGame */}
+        {/* Back-Button */}
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
-        <h1>Simple Choice Game</h1>
+        {/* Заголовок "Simple Choice Game" прибрано */}
 
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768
-                  ? styles.popupDesktopWide
-                  : styles.popupMobile
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
               }
             >
               <button
@@ -253,16 +224,11 @@ const SimpleChoiceGame = () => {
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellung</h2>
-
-              {/* Eine Zeile mit 4 Spalten: Region, Filter, Kategorie, Bearbeiten */}
               <div className={styles.row}>
-                {/* Region */}
                 <div className={styles.regionColumn}>
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
-                    <div className={styles.regionCell}>
-                      {getRegionLabel(region)}
-                    </div>
+                    <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select
                       className={styles.nativeSelect}
                       value={region}
@@ -277,8 +243,6 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Filter */}
                 <div className={styles.filterColumn}>
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -298,8 +262,6 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Kategorie */}
                 <div className={styles.categoryColumn}>
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -326,8 +288,6 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Bearbeiten – bekommt neue Extra-Klasse myBearByteButton */}
                 <div className={styles.editColumn}>
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
@@ -340,8 +300,6 @@ const SimpleChoiceGame = () => {
                   </button>
                 </div>
               </div>
-
-              {/* Display-Mode */}
               <div className={styles.modalField}>
                 <div className={styles.displayModeContainer}>
                   {displayModeOptions.map((option) => (
@@ -357,8 +315,6 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Anzahl Fragen */}
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer}>
                   {questionCountOptions.map((countOption) => (
@@ -374,7 +330,6 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-
               <button className={styles.startButton} onClick={handleStart}>
                 Start
               </button>
@@ -382,7 +337,6 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Spielablauf */}
         {!settingsOpen && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -397,7 +351,6 @@ const SimpleChoiceGame = () => {
                     const isCompleted = questionIsCompleted;
 
                     if (!allowEdit) {
-                      // OHNE Edit
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
                       let isCorrect = false;
@@ -423,7 +376,6 @@ const SimpleChoiceGame = () => {
                         </button>
                       );
                     } else {
-                      // MIT Edit
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
                       let isCorrectEdit = false;
@@ -469,14 +421,12 @@ const SimpleChoiceGame = () => {
           </>
         )}
 
-        {/* Falls keine Fragen übrig */}
         {!settingsOpen && questions.length === 0 && (
           <div style={{ marginTop: 20 }}>
             <p>Keine Begriffe gemäß Filter vorhanden.</p>
           </div>
         )}
 
-        {/* Einstellungs-Button unten rechts */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
