@@ -84,8 +84,8 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: absolute;
-  bottom: 68px;
-  right: 68px;
+  bottom: 45px;
+  right: 45px;
   text-align: center;
 }
 
@@ -112,7 +112,7 @@
   100% { transform: translateY(0); }
 }
 
-/* --- Close-Button mit rotem "×" (SingleChoiceGame-Stil) --- */
+/* --- Close-Button mit rotem "×" --- */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -126,7 +126,6 @@
   padding: 5px;
   border-radius: 50%;
 }
-
 .modalCloseButton:hover {
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
@@ -264,15 +263,12 @@
 }
 
 /* --- SPIEL-ANSICHT --- */
-
-/* Fortschritt */
 .progress {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: bold;
 }
 
-/* Navigationsbuttons */
 .navigationButtons {
   margin: 10px 0;
   display: flex;
@@ -312,7 +308,6 @@
   }
 }
 
-/* Inner rotation container */
 .cardInner {
   width: 100%;
   height: 100%;

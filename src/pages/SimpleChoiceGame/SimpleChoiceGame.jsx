@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Додано імпорт useNavigate
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
@@ -18,23 +19,23 @@ import { categoryIcons } from "../../constants/CategoryIcons";
 
 // Abkürzungen für bestimmte Regionen
 const regionAbbreviations = {
-    "Nordrhein-Westfalen": "NRW",
-    "Westfalen-Lippe": "W-L",
-    Bayern: "BY",
-    Hessen: "HE",
-    Niedersachsen: "NI",
-    "Rheinland-Pfalz": "RP",
-    Sachsen: "SA",
-    Brandenburg: "BB",
-    Bremen: "HB",
-    Saarland: "SL",
-    "Schleswig-Holstein": "SH",
-    Thüringen: "TH",
-    Berlin: "BE",
-    Hamburg: "HH",
-    "Mecklenburg Vorpommern": "MV",
-    "Sachsen-Anhalt": "ST",
-  };
+  "Nordrhein-Westfalen": "NRW",
+  "Westfalen-Lippe": "W-L",
+  Bayern: "BY",
+  Hessen: "HE",
+  Niedersachsen: "NI",
+  "Rheinland-Pfalz": "RP",
+  Sachsen: "SA",
+  Brandenburg: "BB",
+  Bremen: "HB",
+  Saarland: "SL",
+  "Schleswig-Holstein": "SH",
+  Thüringen: "TH",
+  Berlin: "BE",
+  Hamburg: "HH",
+  "Mecklenburg Vorpommern": "MV",
+  "Sachsen-Anhalt": "ST",
+};
 
 // Filtermodi
 const filterModes = [
@@ -55,6 +56,7 @@ const displayModeOptions = [
 ];
 
 const SimpleChoiceGame = () => {
+  const navigate = useNavigate(); // Використання useNavigate
   const { selectedRegion } = useGetGlobalInfo();
   const [settingsOpen, setSettingsOpen] = useState(true);
 
@@ -216,13 +218,23 @@ const SimpleChoiceGame = () => {
 
   // Hilfsfunktion: Abkürzung oder voller Name?
   const getRegionLabel = (r) => {
-    // Wenn Abkürzung existiert, zeige sie, sonst Region
     return regionAbbreviations[r] || r;
+  };
+
+  // handleGoBack більше не потрібен, оскільки ми використовуємо navigate напряму
+  // Але можна залишити його, якщо хочеш використовувати його у майбутньому:
+  const handleGoBack = () => {
+    navigate("/terminology-learning");
   };
 
   return (
     <MainLayout>
       <div className={styles.simpleChoiceGame}>
+        {/* Back-Button wie im FlashcardGame */}
+        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+          &#8592;
+        </button>
+
         <h1>Simple Choice Game</h1>
 
         {settingsOpen && (
@@ -315,11 +327,11 @@ const SimpleChoiceGame = () => {
                   </div>
                 </div>
 
-                {/* Bearbeiten */}
+                {/* Bearbeiten – bekommt neue Extra-Klasse myBearByteButton */}
                 <div className={styles.editColumn}>
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
-                    className={`${styles.editToggleButton} ${
+                    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
                       allowEdit ? styles.selectedEdit : ""
                     }`}
                     onClick={() => setAllowEdit(!allowEdit)}
@@ -378,9 +390,9 @@ const SimpleChoiceGame = () => {
             </div>
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                <h2>{currentQuestion.question}</h2>
+                <h2>{currentQuestion?.question}</h2>
                 <div className={styles.optionsContainer}>
-                  {currentQuestion.options.map((option, idx) => {
+                  {currentQuestion?.options.map((option, idx) => {
                     const correct = currentQuestion.correctAnswer;
                     const isCompleted = questionIsCompleted;
 
@@ -464,7 +476,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Einstellungs-Button */}
+        {/* Einstellungs-Button unten rechts */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button

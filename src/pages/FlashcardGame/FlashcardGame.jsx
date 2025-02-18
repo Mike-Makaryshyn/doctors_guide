@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./FlashcardGame.module.scss";
-
+import { useNavigate } from "react-router-dom";
 // Icons
 import {
   FaCog,
@@ -27,7 +27,8 @@ import { useTermStatus } from "../../contexts/TermStatusContext";
 import { categoryIcons } from "../../constants/CategoryIcons";
 
 /**
- * Region-Abkürzungen
+ * Region-Abkürzungen – OHNE irgendeine Funktion,
+ * die Westfalen-Lippe mit Nordrhein-Westfalen vereint.
  */
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
@@ -48,6 +49,7 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
+// Filtermodi
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -55,10 +57,15 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
+/**
+ * Zeigt entweder die Abkürzung (falls vorhanden)
+ * oder den Original-String.
+ */
 const getRegionLabel = (r) => {
   return regionAbbreviations[r] || r;
 };
 
+/** Helper: holt Query-Parameter */
 const useQuery = () => new URLSearchParams(useLocation().search);
 
 const FlashcardGame = () => {
@@ -257,9 +264,9 @@ const FlashcardGame = () => {
         <div className={styles.flashcardGame}>
           <h1>Flashcard Game</h1>
 
-          {/* Zurück-Button mit dem gewünschten main_menu_back-Stil */}
+          {/* Zurück-Button (main_menu_back) */}
           <button
-            className={"main_menu_back"}
+            className="main_menu_back"
             onClick={() => navigate("/terminology-learning")}
           >
             &#8592;
@@ -290,9 +297,9 @@ const FlashcardGame = () => {
       <div className={styles.flashcardGame}>
         <h1>Flashcard Game</h1>
 
-        {/* "Zurück"-Button mit main_menu_back-Stil */}
+        {/* "Zurück"-Button */}
         <button
-          className={"main_menu_back"}
+          className="main_menu_back"
           onClick={() => navigate("/terminology-learning")}
         >
           &#8592;
@@ -318,7 +325,6 @@ const FlashcardGame = () => {
                 window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile
               }
             >
-              {/* Close-Button: rotes „×“, so wie im SingleChoiceGame */}
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setSettingsOpen(false)}
@@ -458,13 +464,7 @@ const FlashcardGame = () => {
                           strokeLinejoin="round"
                         >
                           <circle cx="12" cy="12" r="10" fill="none" />
-                          <line
-                            x1="12"
-                            y1="12"
-                            x2="12"
-                            y2="15.5"
-                            strokeWidth="3"
-                          />
+                          <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
                           <circle cx="12" cy="7" r="0.5" />
                         </svg>
                       </button>
