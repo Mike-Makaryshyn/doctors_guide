@@ -87,4 +87,7 @@ export const pathList = {
   simple_choice: {
     path: "/simple-choice-game",
   },
+  fortune_wheel: {
+    path: "/fortune-wheel-game",
+  },
 };

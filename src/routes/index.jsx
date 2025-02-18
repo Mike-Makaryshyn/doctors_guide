@@ -32,6 +32,9 @@ const LanguageStudyPage = React.lazy(() =>
 const ExamEmplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
+const FortuneWheelGame = React.lazy(() =>
+  import("../pages/FortuneWheelGame/FortuneWheelGame")
+);
 const ExamExplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
@@ -177,6 +180,10 @@ export default function Routers() {
 
         {/* Сторінка редагування кейсу */}
         <Route path="/edit-case" element={<EditCasePage />} />
+        <Route
+          path={pathList.fortune_wheel.path}
+          element={<FortuneWheelGame />}
+        />
 
         {/* Динамічний маршрут для FSPFormularPage з параметром caseId */}
         <Route
