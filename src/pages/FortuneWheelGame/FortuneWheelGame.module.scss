@@ -7,7 +7,7 @@
   position: relative;
 }
 
-/* ---- Модальне вікно (ідентичне SimpleChoiceGame) ---- */
+/* Модальне вікно (анімації, тощо) */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -117,7 +117,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .startButton:hover {
   background: linear-gradient(135deg, #66bb6a, #009900);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -228,7 +227,6 @@
   cursor: pointer;
   text-align: center;
 }
-
 .questionCountIcon.selected {
   background: #013b6e;
   color: #fff;
@@ -257,136 +255,56 @@
   transform: scale(1.1);
 }
 
-/* ------------ Колесо (класичний стиль) ------------ */
-
-.wheelWrapper {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.fortuneWheel {
-  width: 400px;
-  height: 400px;
-  position: relative;
-}
-
-/* Коло з чорним обідком */
-.wheel {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 8px solid #000; 
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  background: #fff;
-}
-
-/* Кожен сектор від центру, але зсунутий на -90°, щоб перший був зверху */
-.wheelSector {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 50% 50%;
-  clip-path: polygon(50% 50%, 0% 0%, 100% 0%);
-}
-
-/* Текст сектора (горизонтально) */
-.sectorText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* щоб виглядати горизонтально, віднімаємо (startAngle) у JS, а тут -90. 
-     Але для простоти залишимо rotate(-90deg). 
-     Якщо треба динамічний, робимо inline-style. */
-  transform: translate(-50%, -50%) rotate(-90deg);
-  width: 120px;
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Стрілка зверху (перевернута) */
-.wheelIndicator {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%) rotate(180deg); /* розгорнута на 180 */
-  width: 0;
-  height: 0;
-  border-top: 30px solid red;           /* тепер основний трикутник зверху */
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 0;
-}
-
-/* Кнопка „Крутити“ посередині */
-.centerSpinButton {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-}
-
-/* 4 кнопки-відповіді (довкола колеса) */
+/* Відповіді */
+/* За замовчуванням - у кутах */
 .cornerAnswers {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 400px;
-  height: 400px;
   transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  z-index: 4000; 
 }
+
 .cornerAnswerButton {
   pointer-events: auto;
-  width: 100px;
-  padding: 8px 10px;
+  width: 140px;
+  padding: 12px 14px;
   background: #fff;
   color: #013b6e;
-  border: 2px solid #013b6e;
+  border: 3px solid #013b6e;
   border-radius: 8px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   position: absolute;
-}
-.cornerAnswerButton:nth-child(1) {
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.cornerAnswerButton:nth-child(2) {
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.cornerAnswerButton:nth-child(3) {
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.cornerAnswerButton:nth-child(4) {
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 .cornerAnswerButton:hover {
   background: #f7f7f7;
+  transform: scale(1.05);
+}
+
+/* Розміщення (десктоп) */
+.cornerAnswerButton:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+.cornerAnswerButton:nth-child(2) {
+  top: 10%;
+  right: 20%;
+}
+.cornerAnswerButton:nth-child(3) {
+  bottom: 10%;
+  left: 20%;
+}
+.cornerAnswerButton:nth-child(4) {
+  bottom: 10%;
+  right: 20%;
 }
 
 .correct {
@@ -398,4 +316,42 @@
   background-color: #ff5252 !important;
   color: #fff !important;
   border-color: #ff5252 !important;
+}
+
+/* --- Мобільне відображення --- */
+@media (max-width: 768px) {
+  .cornerAnswers {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* з відступом під колесом */
+  }
+
+  .cornerAnswerButton {
+    position: static;
+    transform: none;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Екран завершення гри */
+.gameOverContainer {
+  margin-top: 30px;
+}
+.gameOverBox {
+  background: #fff;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #013b6e;
+}
+.gameOverBox h2 {
+  margin-top: 0;
 }
