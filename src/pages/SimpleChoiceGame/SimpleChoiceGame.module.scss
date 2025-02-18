@@ -354,12 +354,12 @@
   pointer-events: none;
 }
 
-/* Видимий елемент для категорії */
+/* Видимий елемент для категорії – фон синій */
 .categoryCell {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  background: #ffffff;
+  background-color: #013b6e;
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   display: flex;
   align-items: center;
@@ -370,10 +370,16 @@
   pointer-events: none;
 }
 
-/* Розмір іконки категорії */
+/* Розмір іконки категорії – збільшено, задаємо білий колір */
 .categoryIcon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  /* Якщо SVG імпортується як React-компонент, fill задасть колір */
+  fill: #ffffff;
+  filter: invert(100%) brightness(200%);
+  /* Якщо через <img>, можна використати фільтр:
+     filter: invert(100%) brightness(200%);
+  */
 }
 
 /* Нативний селектор для всіх (прозорий) */
