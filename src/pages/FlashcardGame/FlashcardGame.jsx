@@ -1,10 +1,9 @@
-// src/pages/FlashcardGame/FlashcardGame.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./FlashcardGame.module.scss";
-import { useNavigate } from "react-router-dom";
+
 // Icons
 import {
   FaCog,
@@ -23,13 +22,10 @@ import "tippy.js/dist/tippy.css";
 // Context / Hooks
 import { useTermStatus } from "../../contexts/TermStatusContext";
 
-// Kategorie-Icons importieren (an dein Projekt anpassen)
+// Kategorie-Icons
 import { categoryIcons } from "../../constants/CategoryIcons";
 
-/**
- * Region-Abkürzungen – OHNE irgendeine Funktion,
- * die Westfalen-Lippe mit Nordrhein-Westfalen vereint.
- */
+// Region-Abkürzungen
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -57,15 +53,22 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-/**
- * Zeigt entweder die Abkürzung (falls vorhanden)
- * oder den Original-String.
- */
+// Anzeige-Modi
+const displayModeOptions = [
+  { value: "LatGerman", label: "Lat→Ger" },
+  { value: "GermanLat", label: "Ger→Lat" },
+  { value: "Mixed", label: "Mixed" },
+];
+
+// Anzahl Fragen
+const questionCountOptions = [20, 40, 60, 100, 200, "all"];
+
+// Hilfsfunktion, um Region-Abkürzung oder Original-String zu holen
 const getRegionLabel = (r) => {
   return regionAbbreviations[r] || r;
 };
 
-/** Helper: holt Query-Parameter */
+// URL-Parameter lesen
 const useQuery = () => new URLSearchParams(useLocation().search);
 
 const FlashcardGame = () => {
@@ -87,22 +90,27 @@ const FlashcardGame = () => {
       ? "unlearned"
       : rawFilterMode;
 
+  // Kontext: Status (learned/paused/unlearned)
   const { termStatuses, toggleStatus } = useTermStatus();
 
+  // Haupt-States
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [region, setRegion] = useState(initialRegion);
   const [category, setCategory] = useState(initialCategory);
+
   const [settingsOpen, setSettingsOpen] = useState(true);
 
+  // Neu hinzugefügte States
+  const [displayMode, setDisplayMode] = useState("LatGerman");
+  const [questionCount, setQuestionCount] = useState(20);
+
+  // Flashcard-Zustände
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Wie oft wir jede Karte angezeigt haben
   const [progress, setProgress] = useState({});
-  // false = Front, true = Back
   const [flipped, setFlipped] = useState(false);
 
-  // Mobile / Desktop
+  // Responsives Verhalten
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -110,22 +118,19 @@ const FlashcardGame = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  /**
-   * Karten-Ladefunktion, filtert und mischt die Karten
-   * auf Basis von region, category, filterMode
-   */
+  // Karten laden
   const loadCards = () => {
+    // Filtern
     const filtered = medicalTerms.filter((term) => {
-      // Region filtern
+      // Region
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
-
-      // Kategorie filtern
+      // Kategorie
       const matchesCategory =
         category === "Alle" || (term.categories || []).includes(category);
-
-      // Filtermodus
+      // Status
       const status = termStatuses[term.id] || "unlearned";
+
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (
@@ -138,15 +143,40 @@ const FlashcardGame = () => {
       return matchesRegion && matchesCategory;
     });
 
-    // zufällig mischen
+    // Anzeige-Modus (LatGerman, GermanLat, Mixed)
+    // Wenn Mixed: pro Karte zufällig entscheiden
+    const prepareCard = (term) => {
+      let mode = displayMode;
+      if (mode === "Mixed") {
+        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
+      }
+      const frontText = mode === "LatGerman" ? term.lat : term.de;
+      const backText = mode === "LatGerman" ? term.de : term.lat;
+
+      return {
+        ...term,
+        frontText,
+        backText,
+      };
+    };
+
+    // Zufällig mischen
     const shuffled = filtered.sort(() => Math.random() - 0.5);
-    setCards(shuffled);
+
+    // displayMode anwenden
+    const mapped = shuffled.map((term) => prepareCard(term));
+
+    // questionCount („all“ oder Limit)
+    const finalCards =
+      questionCount === "all" ? mapped : mapped.slice(0, questionCount);
+
+    setCards(finalCards);
     setCurrentIndex(0);
     setProgress({});
     setFlipped(false);
   };
 
-  // Start => Modal schließen und Karten laden
+  // Modal → Start
   const handleStart = () => {
     setSettingsOpen(false);
     setTimeout(() => {
@@ -159,14 +189,14 @@ const FlashcardGame = () => {
     setFlipped((prev) => !prev);
   };
 
-  // Karte auf gelernt setzen
-  const toggleLearned = (id) => {
+  // Gelernt
+  const toggleLearnedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "learned");
   };
 
-  // Karte auf pausiert setzen
-  const togglePaused = (id) => {
+  // Pausiert
+  const togglePausedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "paused");
     if (filterMode === "paused") {
@@ -194,10 +224,7 @@ const FlashcardGame = () => {
     }
   };
 
-  /**
-   * Wenn wir Einstellungen ändern und das Modal schließen,
-   * oder wenn sich termStatuses ändern, aktualisieren wir die Cards.
-   */
+  // Wenn sich etwas an termStatuses, Region, etc. ändert
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const newCards = medicalTerms.filter((term) => {
@@ -218,33 +245,25 @@ const FlashcardGame = () => {
         return matchesRegion && matchesCategory;
       });
 
-      // Prüfen, ob unsere aktuelle Karte noch in den gefilterten Karten ist
-      const newCardsOrdered = cards.filter((card) =>
-        newCards.find((nc) => nc.id === card.id)
+      // Schauen, ob die aktuelle Karte noch dabei ist
+      const updatedCards = cards.filter((c) =>
+        newCards.find((nc) => nc.id === c.id)
       );
 
-      // Falls die aktuelle Karte wegfällt, Index auf 0 setzen
-      if (
-        !newCardsOrdered.find((card) => card.id === cards[currentIndex]?.id)
-      ) {
+      // Falls nicht mehr vorhanden, gehe auf Index 0
+      if (!updatedCards.find((c) => c.id === cards[currentIndex]?.id)) {
         setCurrentIndex(0);
       }
-      // Wenn sich die Länge ändert, updaten
-      if (newCardsOrdered.length !== cards.length) {
-        setCards(newCardsOrdered);
+
+      // Wenn sich die Länge ändert
+      if (updatedCards.length !== cards.length) {
+        setCards(updatedCards);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [termStatuses, region, category, filterMode]);
 
-  // Region- und Kategorien-Listen
-  const regionsList = Array.from(
-    new Set(medicalTerms.flatMap((term) => term.regions || []))
-  );
-  const categoriesList = Array.from(
-    new Set(medicalTerms.flatMap((term) => term.categories || []))
-  );
-
-  // Jedes Mal, wenn wir eine Karte anzeigen, zählt progress hoch.
+  // Fortschritt hochzählen
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const currentCard = cards[currentIndex];
@@ -257,14 +276,13 @@ const FlashcardGame = () => {
     }
   }, [settingsOpen, currentIndex, cards]);
 
-  // Falls keine Karten gefunden wurden
+  // Keine Karten?
   if (!cards.length && !settingsOpen) {
     return (
       <MainLayout>
         <div className={styles.flashcardGame}>
           <h1>Flashcard Game</h1>
 
-          {/* Zurück-Button (main_menu_back) */}
           <button
             className="main_menu_back"
             onClick={() => navigate("/terminology-learning")}
@@ -286,7 +304,7 @@ const FlashcardGame = () => {
     );
   }
 
-  // Aktuelle Karte + Status
+  // Aktuelle Karte
   const currentCard = !settingsOpen && cards.length > 0 ? cards[currentIndex] : null;
   const currentStatus = currentCard
     ? termStatuses[currentCard.id] || "unlearned"
@@ -297,7 +315,7 @@ const FlashcardGame = () => {
       <div className={styles.flashcardGame}>
         <h1>Flashcard Game</h1>
 
-        {/* "Zurück"-Button */}
+        {/* Zurück-Button */}
         <button
           className="main_menu_back"
           onClick={() => navigate("/terminology-learning")}
@@ -305,7 +323,7 @@ const FlashcardGame = () => {
           &#8592;
         </button>
 
-        {/* Zahnrad-Button nur anzeigen, wenn Desktop oder das Modal geschlossen ist */}
+        {/* Zahnrad-Button */}
         {(!isMobile || !settingsOpen) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -322,7 +340,9 @@ const FlashcardGame = () => {
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile
+                window.innerWidth > 768
+                  ? styles.popupDesktop
+                  : styles.popupMobile
               }
             >
               <button
@@ -334,7 +354,7 @@ const FlashcardGame = () => {
 
               <h2 className={styles.modalTitle}>Spieleinstellungen</h2>
 
-              {/* In einer Zeile: Region, Filter, Kategorie */}
+              {/* Zeile: Region, Filter, Kategorie */}
               <div className={styles.row}>
                 {/* Region */}
                 <div className={styles.regionColumn}>
@@ -347,7 +367,9 @@ const FlashcardGame = () => {
                       onChange={(e) => setRegion(e.target.value)}
                     >
                       <option value="Alle">Alle</option>
-                      {regionsList.map((r) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((t) => t.regions || []))
+                      ).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -361,9 +383,7 @@ const FlashcardGame = () => {
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
-                      {
-                        filterModes.find((m) => m.value === filterMode)?.icon
-                      }
+                      {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
                     <select
                       className={styles.nativeSelect}
@@ -398,13 +418,49 @@ const FlashcardGame = () => {
                       onChange={(e) => setCategory(e.target.value)}
                     >
                       <option value="Alle">Alle</option>
-                      {categoriesList.map((c) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((t) => t.categories || []))
+                      ).map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
                       ))}
                     </select>
                   </div>
+                </div>
+              </div>
+
+              {/* Anzeige-Modus */}
+              <div className={styles.modalField}>
+                <div className={styles.displayModeContainer}>
+                  {displayModeOptions.map((option) => (
+                    <div
+                      key={option.value}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === option.value ? styles.selected : ""
+                      }`}
+                      onClick={() => setDisplayMode(option.value)}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Anzahl Fragen */}
+              <div className={styles.modalField}>
+                <div className={styles.questionCountContainer}>
+                  {questionCountOptions.map((countOption) => (
+                    <div
+                      key={countOption}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
+                      onClick={() => setQuestionCount(countOption)}
+                    >
+                      {countOption === "all" ? "Alles" : countOption}
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -464,7 +520,13 @@ const FlashcardGame = () => {
                           strokeLinejoin="round"
                         >
                           <circle cx="12" cy="12" r="10" fill="none" />
-                          <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+                          <line
+                            x1="12"
+                            y1="12"
+                            x2="12"
+                            y2="15.5"
+                            strokeWidth="3"
+                          />
                           <circle cx="12" cy="7" r="0.5" />
                         </svg>
                       </button>
@@ -474,7 +536,7 @@ const FlashcardGame = () => {
                         className={styles.markCompletedButton}
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleLearned(currentCard.id);
+                          toggleLearnedCard(currentCard.id);
                         }}
                         title="Gelernt"
                       >
@@ -484,7 +546,7 @@ const FlashcardGame = () => {
                         className={styles.deferButton}
                         onClick={(e) => {
                           e.stopPropagation();
-                          togglePaused(currentCard.id);
+                          togglePausedCard(currentCard.id);
                         }}
                         title="Pausiert"
                       >
@@ -492,7 +554,8 @@ const FlashcardGame = () => {
                       </button>
                     </div>
                   </div>
-                  <h3>{currentCard.lat}</h3>
+                  {/* Front-Text (z.B. lateinisch, wenn Lat→Ger) */}
+                  <h3>{currentCard.frontText}</h3>
                 </div>
 
                 {/* RÜCKSEITE */}
@@ -522,12 +585,19 @@ const FlashcardGame = () => {
                         strokeLinejoin="round"
                       >
                         <circle cx="12" cy="12" r="10" fill="none" />
-                        <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+                        <line
+                          x1="12"
+                          y1="12"
+                          x2="12"
+                          y2="15.5"
+                          strokeWidth="3"
+                        />
                         <circle cx="12" cy="7" r="0.5" />
                       </svg>
                     </button>
                   </Tippy>
-                  <p>{currentCard.de}</p>
+                  {/* Back-Text (z.B. deutsch, wenn Lat→Ger) */}
+                  <p>{currentCard.backText}</p>
                 </div>
               </div>
             </div>
@@ -542,7 +612,6 @@ const FlashcardGame = () => {
               </button>
             </div>
 
-            {/* Anzeige, wie oft aktuelle Karte gezeigt wurde */}
             <div className={styles.cardProgress}>
               Angezeigt: {progress[currentCard.id] || 0} Mal
             </div>

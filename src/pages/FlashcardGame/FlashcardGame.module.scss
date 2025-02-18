@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* --- Button "Zurück" im gewünschten Stil (main_menu_back) --- */
+/* --- Button "Zurück" --- */
 .main_menu_back {
   position: fixed;
   bottom: 16px;
@@ -131,7 +131,7 @@
   background-color: rgba(237, 10, 10, 0);
 }
 
-/* ...Titel, Start-Button, etc. */
+/* Titel und Start-Button */
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
@@ -262,7 +262,65 @@
   cursor: pointer;
 }
 
-/* --- SPIEL-ANSICHT --- */
+/* Zusätzliche Felder für die Anzeige-Modi und Frageanzahl */
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Anzeige-Modi */
+.displayModeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.displayModeIcon {
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 12px;
+}
+.displayModeIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+/* Anzahl Fragen */
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.questionCountIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+/* Spiel-Ansicht */
 .progress {
   margin-bottom: 20px;
   font-size: 16px;
@@ -286,6 +344,7 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
+  font-size: 16px;
 }
 .navButton:hover {
   background-color: #0056b3;
@@ -320,7 +379,7 @@
   transform: rotateY(180deg);
 }
 
-/* Card faces */
+/* Vorder- und Rückseite */
 .cardFront,
 .cardBack {
   position: absolute;
@@ -353,7 +412,7 @@
   right: auto;
 }
 
-/* Icons container (for front side) */
+/* Icons / Buttons auf der Vorderseite */
 .iconsContainer {
   position: absolute;
   top: 0;
@@ -366,8 +425,6 @@
 .iconsContainer > * {
   pointer-events: auto;
 }
-
-/* Status buttons (Gelernt, Pausiert) */
 .statusIcons {
   position: absolute;
   top: 5px;
@@ -377,7 +434,7 @@
   z-index: 3;
 }
 
-/* Button: "Gelernt" */
+/* "Gelernt" */
 .markCompletedButton {
   background-color: #28a745;
   border: none;
@@ -397,7 +454,7 @@
   background-color: #218838;
 }
 
-/* Button: "Pausiert" */
+/* "Pausiert" */
 .deferButton {
   background-color: #ffc107;
   border: none;
@@ -433,7 +490,7 @@
   background-color: rgba(76, 175, 79, 0);
 }
 
-/* Card fortschritt */
+/* Progress-Anzeige unterm Flashcard */
 .cardProgress {
   margin-top: 10px;
   font-size: 14px;
