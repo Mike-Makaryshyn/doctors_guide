@@ -475,7 +475,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Schließ-Button im Ergebnismodal (ähnlich wie in den Einstellungen) */
+/* Schließ-Button im Ergebnismodal */
 .resultsTile .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -495,21 +495,21 @@
   background-color: rgba(237, 10, 10, 0);
 }
 
-/* Text im Ergebnismodal anpassen */
+/* Text im Ergebnismodal */
 .resultsTile h3 {
   margin-top: 0;
   color: #013b6e;
-  font-size: 20px; /* etwas kleiner */
+  font-size: 20px;
 }
 
 .resultsTile p, 
 .resultsTile h4,
 .resultsTile li {
   color: #013b6e;
-  font-size: 14px; /* kleiner als Standard */
+  font-size: 14px;
 }
 
-/* Button "Neues Spiel starten" im Ergebnismodal (identisch zum Start-Button) */
+/* Button "Neues Spiel starten" */
 .restartButton {
   @extend .startButton;
   margin-top: 15px;

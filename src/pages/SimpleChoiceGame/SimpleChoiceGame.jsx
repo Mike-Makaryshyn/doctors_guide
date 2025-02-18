@@ -72,16 +72,13 @@ const SimpleChoiceGame = () => {
   // Spielzustand
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Antworten im Nicht-Bearbeitungsmodus
   const [answersNoEdit, setAnswersNoEdit] = useState({});
-  // Falsche Auswahl im Bearbeitungsmodus
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
-  // Abgeschlossene Fragen
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Verfolgung korrekter Antworten und Anzeigen
-  const [correctCounts, setCorrectCounts] = useState({}); // pro Begriff
-  const [shownCounts, setShownCounts] = useState({}); // wie oft angezeigt
+  // Zähler für korrekte Antworten und Anzeigen
+  const [correctCounts, setCorrectCounts] = useState({});
+  const [shownCounts, setShownCounts] = useState({});
 
   // Spielergebnisse
   const [gameStartTime, setGameStartTime] = useState(null);
@@ -101,14 +98,12 @@ const SimpleChoiceGame = () => {
       const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
       const matchesCategory = selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
       const status = termStatuses[term.id] || "unlearned";
-
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
       return matchesRegion && matchesCategory;
     });
 
-    // Bevorzugt Begriffe, die weniger oft angezeigt wurden
     gefilterteBegriffe.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
@@ -118,14 +113,12 @@ const SimpleChoiceGame = () => {
 
     const ausgewählteBegriffe = questionCount === "all" ? gefilterteBegriffe : gefilterteBegriffe.slice(0, questionCount);
 
-    // "Anzeigen"-Zähler aktualisieren
     const neueShownCounts = { ...shownCounts };
     ausgewählteBegriffe.forEach((term) => {
       neueShownCounts[term.id] = (neueShownCounts[term.id] || 0) + 1;
     });
     setShownCounts(neueShownCounts);
 
-    // Fragen-Daten erzeugen
     const fragenDaten = ausgewählteBegriffe.map((term) => {
       let modus = displayMode;
       if (displayMode === "Mixed") {
@@ -152,7 +145,7 @@ const SimpleChoiceGame = () => {
         frage: frageText,
         richtigeAntwort,
         optionen,
-        term: term, // für spätere Auswertung (z. B. Kategorien)
+        term: term,
       };
     });
 
@@ -176,7 +169,6 @@ const SimpleChoiceGame = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allowEdit, settingsOpen]);
 
-  // Spielstart-Funktion
   const handleStart = () => {
     setSettingsOpen(false);
     loadQuestions();
@@ -187,8 +179,12 @@ const SimpleChoiceGame = () => {
     setCorrectCounts({});
   };
 
-  // Funktion zum Beenden des Spiels (Finish)
+  // Spiel beenden (Finish)
   const finishGame = () => {
+    if (!questionsCompleted[currentIndex]) {
+      alert("Bitte beantworten Sie die aktuelle Frage!");
+      return;
+    }
     const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dauer);
     setGameFinished(true);
@@ -230,21 +226,23 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Navigation zwischen den Fragen (ohne Finish-Button)
+  // Navigation – nächster Button prüft, ob aktuelle Frage beantwortet ist
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
     } else if (direction === "next") {
+      if (!questionsCompleted[currentIndex]) {
+        alert("Bitte beantworten Sie die aktuelle Frage!");
+        return;
+      }
       if (currentIndex < questions.length - 1) {
         setCurrentIndex((prev) => prev + 1);
       }
     }
   };
 
-  // Hilfsfunktion zur Anzeige der Region
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-  // Berechnung von Fehlern nach Kategorien (nur für falsch beantwortete Fragen)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -258,12 +256,11 @@ const SimpleChoiceGame = () => {
     return fehler;
   };
 
-  // Anzeige der Ergebnisse (Ergebnis-Kachel)
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
-        {/* Schließ-Button im oberen rechten Eck */}
+        {/* Schließ-Button im Ergebnismodal */}
         <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
           ×
         </button>
@@ -283,7 +280,6 @@ const SimpleChoiceGame = () => {
             </ul>
           </div>
         )}
-        {/* Button "Neues Spiel starten" im Stil des Start-Buttons */}
         <button className={styles.startButton} onClick={handleStart}>
           Neues Spiel starten
         </button>
@@ -298,12 +294,11 @@ const SimpleChoiceGame = () => {
   return (
     <MainLayout>
       <div className={styles.simpleChoiceGame}>
-        {/* Zurück-Button */}
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
-        {/* Einstellungen */}
+        {/* Wenn Einstellungen geöffnet sind */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
@@ -417,7 +412,6 @@ const SimpleChoiceGame = () => {
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
                       let isCorrect = false;
-
                       if (isCompleted) {
                         if (option === richtigeAntwort) {
                           isCorrect = true;
@@ -426,7 +420,6 @@ const SimpleChoiceGame = () => {
                           isWrong = true;
                         }
                       }
-
                       return (
                         <button
                           key={idx}
@@ -440,11 +433,9 @@ const SimpleChoiceGame = () => {
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
                       let isCorrectEdit = false;
-
                       if (isCompleted && option === richtigeAntwort) {
                         isCorrectEdit = true;
                       }
-
                       return (
                         <button
                           key={idx}
@@ -464,11 +455,29 @@ const SimpleChoiceGame = () => {
                     </button>
                   )}
                   {currentIndex < questions.length - 1 ? (
-                    <button className={styles.navButton} onClick={() => handleNavigation("next")}>
+                    <button
+                      className={styles.navButton}
+                      onClick={() => {
+                        if (!questionsCompleted[currentIndex]) {
+                          alert("Bitte beantworten Sie die aktuelle Frage!");
+                        } else {
+                          handleNavigation("next");
+                        }
+                      }}
+                    >
                       <FaArrowRight />
                     </button>
                   ) : (
-                    <button className={styles.navButton} onClick={finishGame}>
+                    <button
+                      className={styles.navButton}
+                      onClick={() => {
+                        if (!questionsCompleted[currentIndex]) {
+                          alert("Bitte beantworten Sie die aktuelle Frage!");
+                        } else {
+                          finishGame();
+                        }
+                      }}
+                    >
                       Spiel beenden
                     </button>
                   )}
@@ -485,10 +494,16 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Fester Einstellungen-Button */}
+        {/* Einstellungen-Button – beim Klick werden auch Ergebnisse ausgeblendet */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => {
+                setSettingsOpen(true);
+                setGameFinished(false);
+              }}
+            >
               <FaCog />
             </button>
           </div>
