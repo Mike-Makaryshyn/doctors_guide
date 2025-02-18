@@ -33,7 +33,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка для Single Choice Game з качанням */}
+          {/* Плитка для Single Choice Game з анімацією лінії */}
           <Link
             to={`/simple-choice-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -42,12 +42,14 @@ const TerminologyLearningPage = () => {
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
                 <div className={styles.tileTitle}>Single Choice Game</div>
-                <div className={styles.dotContainer}>
-                  {Array(21)
-                    .fill(0)
-                    .map((_, idx) => (
-                      <div key={idx} className={styles.dot}></div>
-                    ))}
+                <div className={styles.lineAnimationContainer}>
+                  <div className={styles.leftBall}></div>
+                  <div className={styles.rightBalls}>
+                    <div className={styles.rightBall}></div>
+                    <div className={styles.rightBall}></div>
+                    <div className={styles.rightBall}></div>
+                  </div>
+                  <div className={styles.connectingLine}></div>
                 </div>
               </div>
             </div>

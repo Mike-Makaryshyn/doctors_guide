@@ -4,51 +4,70 @@ import React, { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
-import { FaCog } from "react-icons/fa";
-import Tippy from "@tippyjs/react";
-import "tippy.js/dist/tippy.css";
+import { FaCog, FaPlay, FaPause, FaCheck, FaList } from "react-icons/fa";
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { categoryIcons } from "../../constants/CategoryIcons"; // Імпорт іконок категорій
 
-// Функція для уніфікації регіону (можна скопіювати з AllMedicalTerminologyPage)
+// Функція для уніфікації регіону
 const unifyRegion = (r) =>
   r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r;
 
-const SimpleChoiceGame = () => {
-  // Отримуємо глобальну інформацію
-  const { selectedRegion } = useGetGlobalInfo();
+// Локальна мапа скорочень для регіонів
+const regionAbbreviations = {
+  "Nordrhein-Westfalen": "NRW",
+  "Westfalen-Lippe": "W-L",
+  "Bayern": "BY",
+  "Hessen": "HE",
+  "Niedersachsen": "NI",
+  "Rheinland-Pfalz": "RP",
+  "Sachsen": "SA",
+  "Brandenburg": "BB",
+  "Bremen": "HB",
+  "Saarland": "SL",
+  "Schleswig-Holstein": "SH",
+  "Thüringen": "TH",
+  "Berlin": "BE",
+  "Hamburg": "HH",
+  "Mecklenburg Vorpommern": "MV",
+  "Sachsen-Anhalt": "ST"
+};
 
-  // Встановлюємо регіон з глобального стану (якщо немає – за замовчуванням "Bayern")
+// Масив режимів фільтрації
+const filterModes = [
+  { value: "all", icon: <FaList />, label: "Alle" },
+  { value: "learned", icon: <FaCheck />, label: "Gelernt" },
+  { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
+  { value: "paused", icon: <FaPause />, label: "Pausiert" }
+];
+
+const SimpleChoiceGame = () => {
+  const { selectedRegion } = useGetGlobalInfo();
   const initialRegion = unifyRegion(selectedRegion || "Bayern");
 
-  // Стан для модального вікна налаштувань
   const [settingsOpen, setSettingsOpen] = useState(true);
 
-  // Стан для вибору фільтрів (регіон, категорія, режим фільтрації)
+  // Стан для вибору фільтрів
   const [region, setRegion] = useState(initialRegion);
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
 
-  // Налаштування гри:
-  // Режим відображення термінів: "LatGerman", "GermanLat", "Mixed"
+  // Налаштування гри
   const [displayMode, setDisplayMode] = useState("LatGerman");
-  // Кількість запитань
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Стан для гри: список запитань, поточний індекс, вибрана відповідь, статус відповіді
+  // Стан для гри
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [answerStatus, setAnswerStatus] = useState(null); // null, "correct", "wrong"
+  const [answerStatus, setAnswerStatus] = useState(null);
 
   const { termStatuses, toggleStatus } = useTermStatus();
 
-  // Оновлення локального стану регіону при зміні глобального стану
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Завантаження запитань із медичних термінів за фільтрами
   const loadQuestions = () => {
     const filteredTerms = medicalTerms.filter((term) => {
       const matchesRegion =
@@ -79,7 +98,7 @@ const SimpleChoiceGame = () => {
       if (mode === "LatGerman") {
         questionText = term.lat;
         correctAnswer = term.de;
-      } else if (mode === "GermanLat") {
+      } else {
         questionText = term.de;
         correctAnswer = term.lat;
       }
@@ -96,7 +115,7 @@ const SimpleChoiceGame = () => {
         id: term.id,
         question: questionText,
         correctAnswer,
-        options,
+        options
       };
     });
 
@@ -148,7 +167,9 @@ const SimpleChoiceGame = () => {
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+                window.innerWidth > 768
+                  ? styles.popupDesktopWide
+                  : styles.popupMobile
               }
             >
               <button
@@ -159,53 +180,86 @@ const SimpleChoiceGame = () => {
               </button>
               <h2 className={styles.modalTitle}>Налаштування гри</h2>
               <p className={styles.modalSubtitle}>
-                Виберіть регіон, категорію, режим фільтрації, режим відображення та кількість
-                запитань:
+                Виберіть регіон, категорію, режим фільтрації, режим відображення та
+                кількість запитань:
               </p>
-              <div className={styles.modalField}>
-                <label>Регіон:</label>
-                <select
-                  value={region}
-                  onChange={(e) => setRegion(e.target.value)}
-                  className={styles.modalSelect}
-                >
-                  <option value="Alle">Alle</option>
-                  {regionsList.map((r) => (
-                    <option key={r} value={r}>
-                      {r}
-                    </option>
-                  ))}
-                </select>
+
+              {/* Ряд для регіону, фільтра і категорії */}
+              <div className={styles.row}>
+                {/* Регіон */}
+                <div className={styles.regionColumn}>
+                  <label className={styles.fieldLabel}>Region</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.regionCell}>
+                      {regionAbbreviations[region] || region}
+                    </div>
+                    <select
+                      value={region}
+                      onChange={(e) => setRegion(e.target.value)}
+                      className={styles.nativeSelect}
+                    >
+                      <option value="Alle">Alle</option>
+                      {regionsList.map((r) => (
+                        <option key={r} value={r}>
+                          {r}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Фільтр */}
+                <div className={styles.filterColumn}>
+                  <label className={styles.fieldLabel}>Filter</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.filterCell}>
+                      {filterModes.find((mode) => mode.value === filterMode)
+                        ?.icon}
+                    </div>
+                    <select
+                      value={filterMode}
+                      onChange={(e) => setFilterMode(e.target.value)}
+                      className={styles.nativeSelect}
+                    >
+                      {filterModes.map((mode) => (
+                        <option key={mode.value} value={mode.value}>
+                          {mode.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Категорія */}
+                <div className={styles.categoryColumn}>
+                  <label className={styles.fieldLabel}>Kategorie</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.categoryCell}>
+                      {categoryIcons[selectedCategory] && (
+                        <img
+                          src={categoryIcons[selectedCategory]}
+                          alt={selectedCategory}
+                          className={styles.categoryIcon}
+                        />
+                      )}
+                    </div>
+                    <select
+                      value={selectedCategory}
+                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      className={styles.nativeSelect}
+                    >
+                      <option value="Alle">Alle</option>
+                      {categoriesList.map((c) => (
+                        <option key={c} value={c}>
+                          {c}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div className={styles.modalField}>
-                <label>Категорія:</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className={styles.modalSelect}
-                >
-                  <option value="Alle">Alle</option>
-                  {categoriesList.map((c) => (
-                    <option key={c} value={c}>
-                      {c}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className={styles.modalField}>
-                <label>Filtermodus:</label>
-                <select
-                  value={filterMode}
-                  onChange={(e) => setFilterMode(e.target.value)}
-                  className={styles.modalSelect}
-                >
-                  <option value="all">Alle</option>
-                  <option value="learned">Gelernt</option>
-                  <option value="unlearned">Ungelernt</option>
-                  <option value="paused">Pausiert</option>
-                </select>
-              </div>
-              {/* Контейнер для вибору режиму відображення */}
+
+              {/* Режим відображення */}
               <div className={styles.modalField}>
                 <label>Режим відображення:</label>
                 <div className={styles.displayModeContainer}>
@@ -222,7 +276,8 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-              {/* Контейнер для вибору кількості запитань */}
+
+              {/* Кількість запитань */}
               <div className={styles.modalField}>
                 <label>Кількість запитань:</label>
                 <div className={styles.questionCountContainer}>
@@ -239,6 +294,7 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
+
               <button className={styles.startButton} onClick={handleStart}>
                 Старт
               </button>
@@ -246,6 +302,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
+        {/* Гра */}
         {!settingsOpen && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -257,9 +314,11 @@ const SimpleChoiceGame = () => {
                 <div className={styles.optionsContainer}>
                   {questions[currentIndex].options.map((option, idx) => {
                     const isCorrect =
-                      answerStatus && option === questions[currentIndex].correctAnswer;
+                      answerStatus &&
+                      option === questions[currentIndex].correctAnswer;
                     const isWrong =
-                      answerStatus === "wrong" && option === selectedAnswer;
+                      answerStatus === "wrong" &&
+                      option === selectedAnswer;
                     return (
                       <button
                         key={idx}
