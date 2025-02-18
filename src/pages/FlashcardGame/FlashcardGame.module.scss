@@ -59,7 +59,7 @@
 /* На мобільних зменшуємо розмір заголовку та змінюємо позицію */
 @media (max-width: 600px) {
   .animatedTitleWrapper {
-    top: var(--mobile-title-top, 200%); /* задайте через інструменти для мобільних */
+    top: var(--mobile-title-top, 180%); /* задайте через інструменти для мобільних */
     left: var(--mobile-title-left, 50%);
   }
   .animatedLetter {
