@@ -1,12 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .flashcardGame {
-  padding: 20px;
+  padding: 60px 20px 20px; /* Більше місця згори для центрування */
   font-family: "Poppins", sans-serif;
   text-align: center;
   position: relative;
   max-width: 100%;
   box-sizing: border-box;
+}
+
+/* AnimatedTitle – позиціювання керується CSS‑змінними */
+.animatedTitleWrapper {
+  position: absolute;
+  top: var(--title-top, 280%);
+  left: var(--title-left, 40%);
+  right: var(--title-right, auto);
+  transform: translate(-50%, -50%);
+  z-index: 5000;
+}
+
+.animatedTitleContainer {
+  display: inline-block;
+}
+
+/* Ключові кадри для кожного символу: обертання з переходом кольору з білого в фіолетовий */
+@keyframes letterFlip {
+  0% {
+    transform: rotateY(90deg);
+    color: #fff;
+    opacity: 0;
+  }
+  20% {
+    transform: rotateY(0deg);
+    color: #6a0dad; /* фіолетовий */
+    opacity: 1;
+  }
+  80% {
+    transform: rotateY(0deg);
+    color: #6a0dad;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(90deg);
+    color: #fff;
+    opacity: 0;
+  }
+}
+
+.animatedLetter {
+  display: inline-block;
+  font-size: 70px;
+  font-weight: bold;
+  margin-right: 3px;
+  animation: letterFlip 3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+/* На мобільних зменшуємо розмір заголовку та змінюємо позицію */
+@media (max-width: 600px) {
+  .animatedTitleWrapper {
+    top: var(--mobile-title-top, 240%); /* задайте через інструменти для мобільних */
+    left: var(--mobile-title-left, 50%);
+  }
+  .animatedLetter {
+    font-size: var(--mobile-title-font-size, 30px);
+  }
+}
+
+/* "Ang: x" – індикатор переглядів */
+.angCounter {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #013b6e;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  z-index: 3100;
+  font-size: 16px;
+  top: 80px;
+  left: 80px;
+}
+
+@media (max-width: 768px) {
+  .angCounter {
+    top: 65px;
+    left: 5px;
+  }
 }
 
 /* --- Button "Zurück" --- */
@@ -35,14 +114,13 @@
   transform: scale(0.95);
 }
 
-/* --- Einstellungen-Knopf unten rechts --- */
+/* Кнопка налаштувань */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
   right: 0px;
   z-index: 3000;
 }
-
 .settingsButton {
   background-color: #4caf50;
   color: #fff;
@@ -60,7 +138,7 @@
   transform: scale(1.1);
 }
 
-/* --- Modal-Overlay --- */
+/* Modal-Overlay */
 .modalOverlay {
   font-family: "Poppins", sans-serif;
   position: fixed;
@@ -89,7 +167,7 @@
   text-align: center;
 }
 
-/* Mobile-Modal mit Bounce-Animation */
+/* Mobile-Modal */
 .popupMobile {
   font-family: "Poppins", sans-serif;
   background: #fff;
@@ -112,7 +190,7 @@
   100% { transform: translateY(0); }
 }
 
-/* --- Close-Button mit rotem "×" --- */
+/* Close-Button */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -131,7 +209,7 @@
   background-color: rgba(237, 10, 10, 0);
 }
 
-/* Titel und Start-Button */
+/* Заголовок та Start-Button */
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
@@ -165,14 +243,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Zeile für Region, Filter, Kategorie */
+/* Ряд: Region, Filter, Kategorie */
 .row {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 15px;
   margin-bottom: 15px;
 }
-
 .regionColumn,
 .filterColumn,
 .categoryColumn {
@@ -180,14 +257,12 @@
   flex-direction: column;
   align-items: center;
 }
-
 .fieldLabel {
   font-weight: 600;
   font-size: 14px;
   color: #013b6e;
   margin-bottom: 5px;
 }
-
 .selectWrapper {
   position: relative;
   display: inline-block;
@@ -195,7 +270,7 @@
   height: 50px;
 }
 
-/* Region => Abkürzung */
+/* Region */
 .regionCell {
   width: 50px;
   height: 50px;
@@ -212,7 +287,7 @@
   pointer-events: none;
 }
 
-/* Filter => Icon */
+/* Filter */
 .filterCell {
   width: 50px;
   height: 50px;
@@ -230,7 +305,7 @@
   pointer-events: none;
 }
 
-/* Kategorie => Icon auf dunklem Hintergrund */
+/* Kategorie */
 .categoryCell {
   width: 50px;
   height: 50px;
@@ -251,7 +326,7 @@
   filter: invert(100%);
 }
 
-/* Unsichtbares Select */
+/* Unsинявий Select */
 .nativeSelect {
   position: absolute;
   top: 0;
@@ -262,14 +337,12 @@
   cursor: pointer;
 }
 
-/* Zusätzliche Felder für die Anzeige-Modi und Frageanzahl */
+/* Anzeige-Modus та Anzahl */
 .modalField {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
-
-/* Anzeige-Modi */
 .displayModeContainer {
   display: flex;
   justify-content: center;
@@ -294,8 +367,6 @@
   background: #013b6e;
   color: #fff;
 }
-
-/* Anzahl Fragen */
 .questionCountContainer {
   display: flex;
   justify-content: center;
@@ -320,18 +391,25 @@
   color: #fff;
 }
 
-/* Spiel-Ansicht */
+/* "Karte X von Y" */
 .progress {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin: 0px 0 20px;
+  font-size: 18px;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .progress {
+    margin: 40px 0 45px;
+    font-size: 16px;
+  }
+}
 
+/* Навігація */
 .navigationButtons {
   margin: 10px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 .navButton {
   padding: 10px;
@@ -350,20 +428,20 @@
   background-color: #0056b3;
 }
 
-/* Flashcard */
+/* Картка: на десктопах – великий розмір, на мобільних – попередні стилі */
 .card {
-  width: 350px;
-  height: 210px;
+  width: 450px;
+  height: 280px;
   margin: 0 auto;
+  margin-top: 100px;
   perspective: 1000px;
   position: relative;
 }
-
 @media (max-width: 600px) {
   .card {
     width: 90%;
     min-height: 250px;
-    margin: 0 auto;
+    margin-top: 30px;
   }
 }
 
@@ -412,7 +490,7 @@
   right: auto;
 }
 
-/* Icons / Buttons auf der Vorderseite */
+/* Іконки та кнопки */
 .iconsContainer {
   position: absolute;
   top: 0;
@@ -473,7 +551,7 @@
   background-color: #ffb000;
 }
 
-/* Info-Button oben rechts */
+/* Info-Button */
 .infoButton {
   background: none;
   border: none;
@@ -490,14 +568,7 @@
   background-color: rgba(76, 175, 79, 0);
 }
 
-/* Progress-Anzeige unterm Flashcard */
-.cardProgress {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Status-Farben: learned, paused */
+/* Статуси */
 .learned {
   background-color: #4caf50 !important;
   border: none !important;
@@ -517,6 +588,7 @@
   background-color: #ff9800 !important;
 }
 
+/* Для мобільних */
 @media (max-width: 768px) {
   .cardInner.flipped .iconsContainer {
     display: none;
