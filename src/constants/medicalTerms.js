@@ -33,7 +33,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Kiefergelenkserkrankungen sowie bei der Linderung von Zahnschmerzen, indem er die Bewegung des Unterkiefers unterstützt und kontrolliert.",
+    "answer": "Der Kaumuskel"
   },
   {
     "id": 2,
@@ -76,7 +78,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Verletzung von {BLANK} kann zu erheblichen Einschränkungen in der Arm- und Schulterbeweglichkeit führen, weshalb eine frühzeitige Diagnose und spezifische physiotherapeutische Maßnahmen entscheidend sind.",
+    "answer": "des großen Brustmuskels"
   },
   {
     "id": 3,
@@ -112,7 +116,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stärkung von {BLANK} ist entscheidend für die Rehabilitation nach einer Knieoperation, da dieser Muskel eine zentrale Rolle bei der Extension des Gelenks spielt.",
+    "answer": "dem vierköpfigen Oberschenkelmuskel"
   },
   {
     "id": 4,
@@ -148,7 +154,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Schmerzen in der vorderen Bauchwand ist die Untersuchung von {BLANK} entscheidend, da dieser Muskel sowohl bei der Rumpfbeugung als auch bei der Stabilisierung des Körperkerns eine zentrale Rolle spielt.",
+    "answer": "des geraden Bauchmuskels"
   },
   {
     "id": 5,
@@ -184,7 +192,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Funktionsstörung von {BLANK} kann zu Schmerzen und eingeschränkter Beweglichkeit im Halsbereich führen, was in der Diagnostik und Therapie von zervikalen Muskelbeschwerden berücksichtigt werden muss.",
+    "answer": "des Kopfnickermuskels"
   },
   {
     "id": 6,
@@ -220,7 +230,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Schwäche von {BLANK} kann zu einem Steppergang führen, was die Bedeutung dieses Muskels für die Fußdorsalextension und die Stabilisierung des Sprunggelenks während des Gehens unterstreicht.",
+    "answer": "des vorderen Schienbeinmuskels"
   },
   {
     "id": 7,
@@ -263,7 +275,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stärkung von {BLANK} spielt eine entscheidende Rolle in der Rehabilitation nach Hüftoperationen, da diese Muskeln maßgeblich zur Stabilisierung des Beckens und zur Verbesserung der Mobilität beitragen.",
+    "answer": "den großen und kleinen Gesäßmuskeln"
   },
   {
     "id": 8,
@@ -299,7 +313,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Ruptur von {BLANK} führt oft zu einer signifikanten Knieinstabilität, die eine sofortige diagnostische Abklärung und gegebenenfalls eine chirurgische Intervention erfordert, um langfristige Funktionseinschränkungen zu vermeiden.",
+    "answer": "des vorderen Kreuzbandes"
   },
   {
     "id": 9,
@@ -335,7 +351,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Ruptur des {BLANK} führt oft zu einer erheblichen Beeinträchtigung der Kniestreckung, weshalb eine umgehende chirurgische Intervention zur Wiederherstellung der Stabilität und Funktion des Kniegelenks erforderlich sein kann.",
+    "answer": "Kniescheibenbandes"
   },
   {
     "id": 10,
@@ -371,7 +389,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} bildet die untere Begrenzung der Leistenregion und ist klinisch relevant, da es den Leistenkanal überbrückt, durch den wichtige anatomische Strukturen wie der Samenstrang und das Mutterband verlaufen, was bei Diagnose und Behandlung von",
+    "answer": "Das Leistenband"
   },
   {
     "id": 11,
@@ -407,7 +427,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In {BLANK} können Hernien entstehen, wenn Eingeweide durch eine Schwachstelle der Bauchwand vorfallen, was insbesondere bei Männern häufig zu einer chirurgischen Intervention führt.",
+    "answer": "im Leistenkanal"
   },
   {
     "id": 12,
@@ -443,7 +465,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Pathologische Veränderungen im {BLANK}, wie Bandscheibenvorfälle oder Stenosen, können zu einer signifikanten Einengung führen, die Druck auf das Rückenmark und die Nervenwurzeln ausübt und intensive neurologische Symptome verursacht.",
+    "answer": "Wirbelkanal"
   },
   {
     "id": 13,
@@ -485,7 +509,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der chirurgischen Praxis ist die Unterscheidung zwischen {BLANK} Strukturen essentiell, um präzise Eingriffe an Gefäßen und Nerven durchzuführen und Komplikationen zu vermeiden.",
+    "answer": "größeren und kleineren"
   },
   {
     "id": 14,
@@ -523,7 +549,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Unterscheidung zwischen {BLANK}en in der Anatomie ermöglicht eine präzisere Diagnose und gezielte Therapieansätze, insbesondere bei Erkrankungen und Verletzungen, die spezifische Muskeln betreffen.",
+    "answer": "langen und kurzen Muskeln"
   },
   {
     "id": 15,
@@ -563,7 +591,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der chirurgischen Praxis ist die genaue Kenntnis der {BLANK} Lage von Gefäßen und Nerven entscheidend, um während Eingriffen Komplikationen zu vermeiden und eine effektive Heilung zu gewährleisten.",
+    "answer": "oberflächlichen und tiefen"
   },
   {
     "id": 16,
@@ -602,7 +632,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Kenntnis von {BLANK} ist entscheidend für die präzise Diagnose und effektive Behandlung von Muskelverletzungen, da sie das Verständnis der Muskelmechanik und der damit verbundenen Bewegungseinschränkungen verbessert.",
+    "answer": "Ursprung und Ansatz"
   },
   {
     "id": 17,
@@ -639,7 +671,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Untersuchung des {BLANK} der Schilddrüse kann entscheidend für die Diagnose und das Management von Schilddrüsenerkrankungen sein, insbesondere wenn es um die Beurteilung von pathologischen Veränderungen geht.",
+    "answer": "Isthmus"
   },
   {
     "id": 18,
@@ -675,7 +709,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Untersuchung von {BLANK} ist besonders auf Anzeichen von Hernien oder anderen abdominalen Auffälligkeiten zu achten, da dieser Bereich nach der Geburt keine spezifische Funktion mehr erfüllt, jedoch als wichtiger anatomischer Orientierungspunkt dient.",
+    "answer": "dem Bauchnabel"
   },
   {
     "id": 19,
@@ -711,7 +747,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist entscheidend für die Überwachung und Sicherstellung einer adäquaten Versorgung des Fötus mit Sauerstoff und Nährstoffen während der Schwangerschaft.",
+    "answer": "der Nabelschnur"
   },
   {
     "id": 20,
@@ -755,7 +793,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine häufige Entzündung des Nabels bei Neugeborenen, die durch bakterielle Infektionen ausgelöst wird und Symptome wie Schwellung, Rötung sowie Eiteraustritt zeigt, erfordert eine umgehende Diagnose und Therapie, um {",
+    "answer": "Komplikationen zu vermeiden."
   },
   {
     "id": 21,
@@ -797,7 +837,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} am Zungenansatz kann bei restriktiver Beweglichkeit eine Zungenbandplastik erfordern, um die Nahrungsaufnahme und Sprachentwicklung zu verbessern.",
+    "answer": "Ein zu kurzes Frenulum"
   },
   {
     "id": 22,
@@ -834,7 +876,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Veränderungen an {BLANK} können auf systemische Erkrankungen wie Psoriasis oder Eisenmangelanämie hinweisen und erfordern eine sorgfältige diagnostische Bewertung.",
+    "answer": "den Nägeln"
   },
   {
     "id": 23,
@@ -870,7 +914,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Veränderungen im {BLANK} Bereich, wie Hämatome oder Tumoren, können oft zu deutlichen Abweichungen in der Struktur der Nagelplatte führen, die diagnostisch und therapeutisch relevant sind.",
+    "answer": "subungualen"
   },
   {
     "id": 24,
@@ -899,7 +945,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei Patienten mit Karpaltunnelsyndrom ist eine sorgfältige Untersuchung von {BLANK} entscheidend, um die motorischen Einschränkungen und die damit verbundene Verringerung der Greifkraft zu bewerten.",
+    "answer": "dem Daumenballen"
   },
   {
     "id": 25,
@@ -927,7 +975,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Verletzungen oder Erkrankungen im Bereich des {BLANK} können zu einer signifikanten Beeinträchtigung der Feinmotorik und Greiffunktion der Hand führen, was eine gezielte diagnostische und therapeutische Intervention erforderlich macht.",
+    "answer": "Kleinfingerballens"
   },
   {
     "id": 26,
@@ -965,7 +1015,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielen eine zentrale Rolle in der Orthopädie, sowohl bei der Behandlung von Frakturen als auch bei der Diagnose und Therapie von Osteoporose und anderen skelettbezogenen Erkrankungen.",
+    "answer": "Knochen"
   },
   {
     "id": 27,
@@ -1009,7 +1061,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose einer {BLANK} erfordert eine sorgfältige Untersuchung der Symptome wie Schmerzen und Schwellungen sowie bildgebende Verfahren, um eine effektive Behandlung einzuleiten und potenzielle Komplikationen frühzeitig zu erkennen.",
+    "answer": "einer Knochenentzündung"
   },
   {
     "id": 28,
@@ -1049,7 +1103,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Fraktur von {BLANK} kann zu kognitiven Beeinträchtigungen und sensorischen Ausfällen führen, weshalb eine umgehende neurologische Bewertung und gegebenenfalls eine chirurgische Intervention erforderlich sind.",
+    "answer": "des Schädelknochens"
   },
   {
     "id": 29,
@@ -1089,7 +1145,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei chirurgischen Eingriffen oder Traumata des Kopfes ist die Integrität von {BLANK} entscheidend, um das darunterliegende Gehirn vor Schäden zu schützen.",
+    "answer": "dem Schädeldach"
   },
   {
     "id": 30,
@@ -1129,7 +1187,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} umgeben und schützen das Gehirn, während sie bei Frakturen oder Tumoren eine entscheidende Rolle in der Diagnostik und Therapie spielen.",
+    "answer": "Die Schädelknochen"
   },
   {
     "id": 31,
@@ -1168,7 +1228,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Untersuchung von {BLANK} kann Aufschluss über neurologische Erkrankungen geben und ist zudem relevant für die Diagnose verschiedener dermatologischer Zustände.",
+    "answer": "der Stirn"
   },
   {
     "id": 32,
@@ -1205,7 +1267,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} können entscheidend für die Beurteilung von Sinusinfektionen sein und erfordern eine sorgfältige diagnostische Abklärung, um eine adäquate Behandlung sicherzustellen.",
+    "answer": "Stirnbeins"
   },
   {
     "id": 33,
@@ -1241,7 +1305,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Läsionen im {BLANK} führen häufig zu signifikanten Beeinträchtigungen der exekutiven Funktionen und können eine gezielte neuropsychologische Rehabilitation erfordern.",
+    "answer": "Stirnlappen"
   },
   {
     "id": 34,
@@ -1277,7 +1343,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} bildet den hinteren Teil des Schädels, umschließt das Foramen magnum und ist essentiell für die Untersuchung von Schädelbasisfrakturen sowie für die Beurteilung von Kopfverletzungen in der neurologischen Diagnostik.",
+    "answer": "Das Hinterhauptbein"
   },
   {
     "id": 35,
@@ -1313,7 +1381,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Frakturen von {BLANK} ist eine sorgfältige neurologische Überwachung erforderlich, da diese Verletzungen das Risiko einer Beeinträchtigung der zerebralen Funktion durch Kompromittierung der angrenzenden Gehirnstrukturen bergen.",
+    "answer": "den Scheitelbeinen"
   },
   {
     "id": 36,
@@ -1355,7 +1425,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verletzungen oder Erkrankungen von {BLANK} können erhebliche Auswirkungen auf das Hörvermögen und die Gleichgewichtsfunktion haben, was eine sorgfältige diagnostische Bewertung und gezielte therapeutische Maßnahmen erfordert.",
+    "answer": "des Schläfenbeins"
   },
   {
     "id": 37,
@@ -1391,7 +1463,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Hypophysentumoren ist die detaillierte Bildgebung von {BLANK} entscheidend, da dieser Knochen die Hypophyse im Türkensattel beherbergt und somit zentral für die Beurteilung der Tumorausdehnung ist.",
+    "answer": "dem Keilbein"
   },
   {
     "id": 38,
@@ -1427,7 +1501,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Aufgrund seiner zentralen Lage und der Beteiligung an der Bildung der Nasennebenhöhlen ist {BLANK} klinisch bedeutsam, da Verletzungen oder Infektionen dieses Knochens erhebliche Auswirkungen auf die Funktion der Nasen- und Schädelh",
+    "answer": "das Siebbein"
   },
   {
     "id": 39,
@@ -1464,7 +1540,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Gesichtsverletzungen ist {BLANK} häufig betroffen, was eine sorgfältige Beurteilung und möglicherweise chirurgische Interventionen zur Wiederherstellung der ästhetischen und funktionellen Integrität des Gesichtsschädels erfordert.",
+    "answer": "das Jochbein"
   },
   {
     "id": 40,
@@ -1500,7 +1578,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} können erhebliche ästhetische und funktionelle Beeinträchtigungen verursachen, weshalb eine präzise diagnostische Bildgebung und eine individuell angepasste chirurgische Intervention essenziell sind.",
+    "answer": "Jochbogens"
   },
   {
     "id": 41,
@@ -1537,7 +1617,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf eine Fraktur des {BLANK} ist eine sorgfältige diagnostische Bildgebung erforderlich, um die Integrität der knöchernen Strukturen der Nase zu beurteilen und eine angemessene Behandlung einzuleiten.",
+    "answer": "Nasenbeins"
   },
   {
     "id": 42,
@@ -1576,7 +1658,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist von entscheidender Bedeutung für die zahnmedizinische Behandlung und die plastische Gesichtschirurgie, da er nicht nur die obere Zahnreihe trägt, sondern auch den Boden der Augenhöhlen bildet und die Nasenhöhlen umschließt.",
+    "answer": "Der Oberkiefer"
   },
   {
     "id": 43,
@@ -1617,7 +1701,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnostik und Therapie von Frakturen, Entzündungen sowie Entwicklungsstörungen und beeinflusst maßgeblich die Funktionen des Kauens und Sprechens.",
+    "answer": "Der Unterkiefer"
   },
   {
     "id": 44,
@@ -1660,7 +1746,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist aufgrund seiner Rolle beim Übergang von Gehirn zu Rückenmark und bei der Regulation des zerebrospinalen Flüssigkeitsaustauschs klinisch besonders relevant, insbesondere bei der Diagnose und Behandlung von traumatischen Verletzungen,",
+    "answer": "Das große Hinterhauptsloch"
   },
   {
     "id": 45,
@@ -1700,7 +1788,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen der {BLANK} können zu schwerwiegenden neurologischen Ausfällen und intrakraniellen Blutungen führen, was eine umgehende neurochirurgische Intervention erfordert.",
+    "answer": "Schädelbasis"
   },
   {
     "id": 46,
@@ -1736,7 +1826,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist aufgrund seiner zentralen Rolle in der Sprachfunktion und seiner Verletzungsanfälligkeit bei Strangulation ein kritischer Faktor in der forensischen Medizin und Notfallversorgung.",
+    "answer": "Das Zungenbein"
   },
   {
     "id": 47,
@@ -1776,7 +1868,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Diagnostik und Therapie von Rückenschmerzen, Bandscheibenvorfällen und degenerativen Erkrankungen, was ihre Untersuchung und Behandlung in der orthopädischen und neurologischen Praxis unerläss",
+    "answer": "Die Wirbelsäule"
   },
   {
     "id": 48,
@@ -1812,7 +1906,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK}e dienen als Schutzelemente des Rückenmarks und ermöglichen durch ihre Verbindung mit Bandscheiben, Bändern und Gelenken eine flexible, jedoch stabile Struktur der Wirbelsäule, was besonders bei der Diagnose und Behandlung von Rückenleiden relevant ist.",
+    "answer": "Wirbel"
   },
   {
     "id": 49,
@@ -1853,7 +1949,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} trägt die Hauptlast des Körpergewichts und ermöglicht durch die Verbindung mit Bandscheiben, die als Stoßdämpfer fungieren, eine essentielle Flexibilität und Stabilität der Wirbelsäule, was besonders bei der Diagnose und Behandlung von degener",
+    "answer": "Der Wirbelkörper"
   },
   {
     "id": 50,
@@ -1889,7 +1987,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verletzungen oder Erkrankungen der {BLANK} können zu erheblichen Nacken- und Rückenschmerzen sowie neurologischen Symptomen führen, weshalb eine genaue Diagnose und angepasste Therapie essenziell sind.",
+    "answer": "Halswirbel"
   },
   {
     "id": 51,
@@ -1925,7 +2025,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Diagnose und Behandlung von zervikalen Verletzungen, da er wesentliche Bewegungen des Kopfes ermöglicht und direkt unter dem Schädel positioniert ist.",
+    "answer": "Der Atlas"
   },
   {
     "id": 52,
@@ -1961,7 +2063,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK}, der zweite Halswirbel, ist aufgrund seines Dens axis, der bei Verletzungen zu Instabilität oder Querschnittlähmung führen kann, von hoher klinischer Bedeutung, insbesondere in der neurologischen und orthopädischen Diagnost",
+    "answer": "Der Axiswirbel"
   },
   {
     "id": 53,
@@ -1997,7 +2101,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} dient als wichtiger Orientierungspunkt für die korrekte Identifikation und Zählung der Wirbel bei der Diagnose von Halswirbelsäulenproblemen und markiert den Übergang zur Brustwirbelsäule.",
+    "answer": "Die Vertebra prominens"
   },
   {
     "id": 54,
@@ -2033,7 +2139,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind entscheidend für die Diagnose und Therapie von Rückenbeschwerden und Haltungserkrankungen, da sie eine zentrale Rolle bei der Stabilisierung des Oberkörpers und dem Schutz der thorakalen Organe spielen.",
+    "answer": "Die Brustwirbel"
   },
   {
     "id": 55,
@@ -2069,7 +2177,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stabilität von {BLANK} ist für die Diagnose und Behandlung von Rückenschmerzen entscheidend, da sie wesentlich zur Aufrechterhaltung der Körperhaltung und zum Schutz des Rückenmarks beitragen.",
+    "answer": "der Lendenwirbel"
   },
   {
     "id": 56,
@@ -2108,7 +2218,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Rückenschmerzen oder Verletzungen im unteren Wirbelsäulenbereich ist eine genaue Untersuchung von {BLANK} essentiell, um die Ursache der Beschwerden zu identifizieren und eine adäquate Behandlung einzuleiten.",
+    "answer": "des Kreuzbeins"
   },
   {
     "id": 57,
@@ -2150,7 +2262,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Verletzungen oder Überlastung kann {BLANK} Schmerzen verursachen, die eine gezielte Diagnostik und Therapie erfordern, um die Stabilität des Beckenbereichs wiederherzustellen.",
+    "answer": "das Steißbein"
   },
   {
     "id": 58,
@@ -2187,7 +2301,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Beurteilung von Abdominalschmerzen ist die Unterscheidung zwischen {BLANK} und kranialen Beschwerden entscheidend für die Lokalisierung der betroffenen Organe und die anschließende Festlegung der diagnostischen Strategie.",
+    "answer": "kaudalen"
   },
   {
     "id": 59,
@@ -2227,7 +2343,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf eine Verletzung der vorderen Brustwand ist eine sorgfältige Untersuchung von {BLANK} unerlässlich, um Frakturen auszuschließen und eine adäquate Schmerztherapie sowie gegebenenfalls eine Stabilisierung zu gewähr",
+    "answer": "dem Brustbein"
   },
   {
     "id": 60,
@@ -2263,7 +2381,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der Traumatologie ist die Stabilisierung von {BLANK}-Frakturen entscheidend, um die Schutzfunktion für Herz und Lungen wiederherzustellen und eine effiziente Atemmechanik zu gewährleisten.",
+    "answer": "Rippen"
   },
   {
     "id": 61,
@@ -2302,7 +2422,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnose von Rotatorenmanschettenverletzungen, da es den Oberarmknochen mit dem Schlüsselbein verbindet und somit wesentlich zur Schulterstabilität beiträgt.",
+    "answer": "Das Schulterblatt"
   },
   {
     "id": 62,
@@ -2344,7 +2466,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist anfällig für Frakturen bei direkten Stößen oder Stürzen und erfordert oft eine sorgfältige diagnostische Bewertung mittels Bildgebung, um den optimalen therapeutischen Ansatz zu bestimmen.",
+    "answer": "Das Schlüsselbein"
   },
   {
     "id": 63,
@@ -2380,7 +2504,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein wichtiger anatomischer Orientierungspunkt bei der Diagnose und Behandlung des Impingement-Syndroms, da seine Form und Position direkten Einfluss auf die Bewegungsfreiheit und Schmerzempfindung im Schulterbereich haben.",
+    "answer": "Das Schulterdach"
   },
   {
     "id": 64,
@@ -2416,7 +2542,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein hochbewegliches Kugelgelenk, das häufig von Luxationen und Rotatorenmanschettenproblemen betroffen ist, was eine genaue Diagnose und spezifische therapeutische Ansätze erfordert.",
+    "answer": "Das Schultergelenk"
   },
   {
     "id": 65,
@@ -2452,7 +2580,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose und Behandlung von Entzündungen oder Verletzungen im {BLANK} sind entscheidend, um die Beweglichkeit und Schmerzfreiheit in der Schulterregion zu gewährleisten.",
+    "answer": "Schultereckgelenk"
   },
   {
     "id": 66,
@@ -2488,7 +2618,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist entscheidend für die Diagnose und Behandlung von Schulterinstabilitäten und -verletzungen, da sie die Bewegungsfreiheit und Stabilität des Gelenks maßgeblich beeinflusst.",
+    "answer": "der Gelenkpfanne"
   },
   {
     "id": 67,
@@ -2526,7 +2658,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} beeinträchtigen signifikant die Funktionalität des Schulter- und Ellenbogengelenks, erfordern eine sorgfältige diagnostische Bewertung und eine angepasste therapeutische Strategie zur Wiederherstellung der Armfunktion.",
+    "answer": "Oberarmknochens"
   },
   {
     "id": 68,
@@ -2562,7 +2696,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Untersuchung von Schulterverletzungen oder der Diagnose von Arthrose ist die Integrität von {BLANK} entscheidend, da dieser Teil des Humerus mit der Gelenkpfanne des Schulterblatts artikuliert und eine wesentliche Rolle für die Beweg",
+    "answer": "des Oberarmkopfes"
   },
   {
     "id": 69,
@@ -2598,7 +2734,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stabilität von {BLANK} ist entscheidend für die Ausführung täglicher Aktivitäten und sportlicher Leistungen, wobei Verletzungen oder degenerative Veränderungen wie Arthritis zu signifikanten Funktionseinschränkungen führen können.",
+    "answer": "des Ellenbogengelenks"
   },
   {
     "id": 70,
@@ -2637,7 +2775,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen der {BLANK} erfordern eine sorgfältige diagnostische Bewertung und eine angepasste therapeutische Strategie, um die feinmotorischen Funktionen und das taktile Empfinden der Hand wiederherzustellen.",
+    "answer": "Fingerknochen der Hand"
   },
   {
     "id": 71,
@@ -2676,7 +2816,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} treten häufig Frakturen, Rheumatoide Arthritis oder Tenosynovitis auf, was eine genaue Diagnostik und spezifische therapeutische Ansätze erfordert.",
+    "answer": "den Fingern der Hand"
   },
   {
     "id": 72,
@@ -2712,7 +2854,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Untersuchung der Oppositionsfähigkeit von {BLANK} ist entscheidend für die Diagnose von Pathologien wie dem Karpaltunnelsyndrom, bei denen die motorische Funktion dieses Fingers signifikant beeinträchtigt sein kann.",
+    "answer": "des Daumens"
   },
   {
     "id": 73,
@@ -2748,7 +2892,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Schmerzen in den Extremitäten ist es wichtig, {BLANK} auf mögliche Frakturen, Entzündungen oder strukturelle Deformitäten zu untersuchen, da diese erhebliche Auswirkungen auf die Mobilität und Funktionalität",
+    "answer": "die Fingergliedknochen"
   },
   {
     "id": 74,
@@ -2784,7 +2930,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Hüftdysplasien und Lumbalgie ist die Untersuchung von {BLANK} essentiell, da dieser als Ansatzpunkt für Muskeln und Bänder eine zentrale Rolle in der biomechanischen Funktionalität des unteren Rumpfbereichs spi",
+    "answer": "des Beckenkamms"
   },
   {
     "id": 75,
@@ -2820,7 +2968,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Dysfunktion von {BLANK} spielt eine zentrale Rolle bei der Diagnose und Behandlung von Schmerzen im unteren Rückenbereich, was eine genaue Kenntnis seiner anatomischen und funktionellen Eigenschaften erfordert.",
+    "answer": "des Iliosakralgelenks"
   },
   {
     "id": 76,
@@ -2857,7 +3007,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Frakturen von {BLANK} ist eine sorgfältige Diagnose und Therapie entscheidend, um die Stabilität des Beckens zu gewährleisten und die Funktion der ansetzenden Muskulatur und Bänder zu erhalten.",
+    "answer": "dem Darmbein"
   },
   {
     "id": 77,
@@ -2894,7 +3046,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} sind in der Orthopädie und Traumatologie von besonderer Bedeutung, da sie häufig auftreten und eine sorgfältige Diagnose und Therapie erfordern, um langfristige Funktionsstörungen im Bereich des unteren Beck",
+    "answer": "Sitzbeins"
   },
   {
     "id": 78,
@@ -2933,7 +3087,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnostik und Behandlung von Beckenverletzungen ist die Integrität von {BLANK} entscheidend, insbesondere im Hinblick auf die Stabilität der Schambeinfuge und die Symptomatik im vorderen Beckenbereich.",
+    "answer": "des Schambeins"
   },
   {
     "id": 79,
@@ -2969,7 +3125,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Flexibilität der {BLANK} erhöht sich während der Schwangerschaft signifikant, um den Geburtsvorgang zu erleichtern, was eine sorgfältige Überwachung und gegebenenfalls therapeutische Maßnahmen erfordert.",
+    "answer": "Schambeinfuge"
   },
   {
     "id": 80,
@@ -3013,7 +3171,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist für die Diagnose, Behandlung und Rehabilitation von Hüftgelenksdysplasien sowie für die Vermeidung von Arthrose entscheidend, da jede Beeinträchtigung zu signifikanten Bewegungseinschränkungen und",
+    "answer": "der Hüftgelenkspfanne"
   },
   {
     "id": 81,
@@ -3057,7 +3217,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Mobilität und ist oft von klinischer Bedeutung bei der Diagnose und Behandlung von Arthrose sowie bei der Rehabilitation nach Hüftluxationen.",
+    "answer": "Das Hüftgelenk"
   },
   {
     "id": 82,
@@ -3101,7 +3263,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine entzündliche Erkrankung, die durch Schmerzen und Bewegungseinschränkungen charakterisiert wird und häufig aufgrund von Infektionen, rheumatischen Zuständen oder Traumata auftritt, weshalb eine gezielte diagnost",
+    "answer": "Die Hüftgelenksentzündung"
   },
   {
     "id": 83,
@@ -3140,7 +3304,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist aufgrund seiner Funktion als tragender Knochen des Beins besonders anfällig für Frakturen, die eine sofortige orthopädische Intervention erfordern, um langfristige Mobilitätseinschränkungen zu vermeiden.",
+    "answer": "Der Oberschenkelknochen"
   },
   {
     "id": 84,
@@ -3176,7 +3342,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle bei der Diagnose und Behandlung von Hüftarthrose sowie bei der Bewertung von Frakturen, die durch Osteoporose oder traumatische Ereignisse verursacht werden.",
+    "answer": "Der Oberschenkelkopf"
   },
   {
     "id": 85,
@@ -3212,7 +3380,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei älteren Patienten mit Osteoporose ist {BLANK} aufgrund seiner strukturellen Eigenschaften und der hohen mechanischen Beanspruchung ein prädisponierter Ort für Frakturen, was eine sorgfältige diagnostische Bewertung und angepasste therapeutische Ma",
+    "answer": "der Oberschenkelhals"
   },
   {
     "id": 86,
@@ -3255,7 +3425,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Hüftschmerzen ist die Untersuchung der Ansatzpunkte des Gluteus medius und des Musculus iliopsoas am {BLANK} entscheidend, um entzündliche oder degenerative Veränderungen in diesem Bereich effektiv behandeln zu können.",
+    "answer": "Trochanter major und minor"
   },
   {
     "id": 87,
@@ -3291,7 +3463,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die komplexe Heilung von {BLANK} erfordert oft chirurgische Interventionen und eine umfassende Rehabilitation, da dieser Knochenbruch nicht nur den größten und stärksten Knochen betrifft, sondern auch wesentlich für die Stützfunktion des Körpers und die Mob",
+    "answer": "eines Oberschenkelbruchs"
   },
   {
     "id": 88,
@@ -3331,7 +3505,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein zentraler Bestandteil des Kniegelenks, der bei der Diagnose von Patellofemoralen Schmerzsyndromen wesentlich untersucht wird, da ihre Position und Struktur entscheidend für die korrekte Funktion des Quadrizepsmuskels und die Mechan",
+    "answer": "Die Kniescheibe"
   },
   {
     "id": 89,
@@ -3368,7 +3544,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist das größte Gelenk im menschlichen Körper und aufgrund seiner komplexen Struktur sowie der hohen Belastung besonders anfällig für Bänderrisse und degenerative Veränderungen wie Arthrose, was eine sorgfältige diagnostische Bewertung und gezielte",
+    "answer": "Das Kniegelenk"
   },
   {
     "id": 90,
@@ -3411,7 +3589,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist häufig von Frakturen betroffen, die durch direkte Traumata oder übermäßige Belastungen verursacht werden und erfordert daher eine sorgfältige diagnostische, therapeutische und rehabilitative Betreuung.",
+    "answer": "Das Schienbein"
   },
   {
     "id": 91,
@@ -3447,7 +3627,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen im Bereich des {BLANK} können zu erheblichen Stabilitätsverlusten im Kniegelenk führen und erfordern oft eine komplexe chirurgische Intervention sowie eine langfristige physiotherapeutische Nachsorge.",
+    "answer": "Schienbeinplateaus"
   },
   {
     "id": 92,
@@ -3483,7 +3665,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verletzungen der {BLANK}, wie Risse, führen häufig zu Schmerzen und Bewegungseinschränkungen im Knie, weshalb eine frühzeitige Diagnose und angepasste therapeutische Maßnahmen entscheidend für die Wiederherstellung der Gelen",
+    "answer": "Menisken"
   },
   {
     "id": 93,
@@ -3524,7 +3708,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine häufige Ursache für Kniebeschwerden sind Läsionen der {BLANK}, die diagnostisch mittels MRT erfasst und je nach Schweregrad konservativ oder operativ behandelt werden.",
+    "answer": "Menisken"
   },
   {
     "id": 94,
@@ -3565,7 +3751,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist für die Stabilisierung des Knöchels von entscheidender Bedeutung und bietet zudem wichtige Ansatzpunkte für die Muskulatur, was bei der Planung chirurgischer Eingriffe am Unterschenkel berücksichtigt werden muss.",
+    "answer": "Das Wadenbein"
   },
   {
     "id": 95,
@@ -3608,7 +3796,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen oder Verstauchungen an {BLANK} sind häufige Verletzungen, die eine sorgfältige diagnostische Bewertung und gezielte therapeutische Maßnahmen erfordern, um die Stabilität und Beweglichkeit des Sprunggelenks wiederherzustellen",
+    "answer": "den Knöcheln"
   },
   {
     "id": 96,
@@ -3645,7 +3835,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist für die korrekte Diagnose und effektive Behandlung von Sprunggelenksverletzungen entscheidend, da sie die Hauptbewegungen wie Dorsalflexion und Plantarflexion sowie die Inversion und Eversion des Fußes ermöglichen",
+    "answer": "den oberen und unteren Sprunggelenken"
   },
   {
     "id": 97,
@@ -3687,7 +3879,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist entscheidend für die biomechanische Funktion des Fußes, wobei Verletzungen oder degenerative Veränderungen dieser Strukturen häufig zu chronischen Schmerzen und Mobilitätseinschränkungen führen.",
+    "answer": "der Fußwurzelknochen"
   },
   {
     "id": 98,
@@ -3724,7 +3918,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} sind klinisch relevant, da sie starke Schmerzen verursachen und die Mobilität des Patienten signifikant einschränken können, was eine sorgfältige diagnostische Bewertung und gezielte therapeutische Maßnahmen erfordert.",
+    "answer": "Fersenbeins"
   },
   {
     "id": 99,
@@ -3760,7 +3956,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein zentraler Knochen im Aufbau des Fußes, dessen Integrität für die korrekte Übertragung von Lasten und die Erhaltung der Mobilität im oberen Sprunggelenk essentiell ist, wobei Schädigungen desselben zu sign",
+    "answer": "Das Sprungbein"
   },
   {
     "id": 100,
@@ -3798,7 +3996,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Diagnose von Plattfuß oder der Behandlung von Frakturen ist die Untersuchung von {BLANK} entscheidend, da dieser Knochen eine zentrale Rolle in der Stützstruktur des medialen Fußgewölbes spielt.",
+    "answer": "dem Kahnbein"
   },
   {
     "id": 101,
@@ -3836,7 +4036,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} können zu erheblichen Beeinträchtigungen der Fußstabilität führen und erfordern oft eine spezifische therapeutische Intervention, um die Funktion des Fußgewölbes wiederherzustellen.",
+    "answer": "Würfelbeins"
   },
   {
     "id": 102,
@@ -3878,7 +4080,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verletzungen oder Fehlstellungen der {BLANK} können zu persistierenden Schmerzen und einer signifikanten Beeinträchtigung des Gangbildes führen, weshalb eine frühzeitige Diagnose und angepasste therapeutische Maßnahmen essenziell sind.",
+    "answer": "keilförmigen Knochen"
   },
   {
     "id": 103,
@@ -3916,7 +4120,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen der {BLANK} erfordern eine sorgfältige diagnostische Beurteilung und können je nach Schweregrad konservativ mit Schienung oder operativ mittels Osteosynthese behandelt werden, um die volle Funktionalität im Abrollvorgang des Fuß",
+    "answer": "Mittelfußknochen"
   },
   {
     "id": 104,
@@ -3952,7 +4158,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen der {BLANK} beeinträchtigen wesentlich die Fortbewegungsfähigkeit und erfordern oft spezialisierte therapeutische Ansätze zur Wiederherstellung der normalen Funktion und Belastbarkeit des Fußes.",
+    "answer": "Zehenknochen"
   },
   {
     "id": 105,
@@ -3988,7 +4196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielen eine entscheidende Rolle bei der Diagnose und Behandlung von Fußverletzungen und Erkrankungen wie Verstauchungen, Frakturen und Hallux valgus.",
+    "answer": "die Zehen"
   },
   {
     "id": 106,
@@ -4031,7 +4241,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Abnormalitäten oder Verletzungen des {BLANK} können durch diagnostische Bildgebung identifiziert und müssen oft durch spezifische orthopädische oder chirurgische Maßnahmen behandelt werden, um die Fußfunktion und Mobilität zu erhalten.",
+    "answer": "großen Zehs"
   },
   {
     "id": 107,
@@ -4067,7 +4279,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Fehlstellung des großen Zehs, bei der dieser entweder zur Fußaußenseite oder zur Fußinnenseite abknickt, kann bei {BLANK} zu Schmerzen führen und die Auswahl geeigneten Schuhwerks sowie orthopädische Maßnahmen erforderlich machen.",
+    "answer": "Betroffenen"
   },
   {
     "id": 108,
@@ -4103,7 +4317,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine Zehenfehlstellung, die vor allem das Mittelgelenk betrifft und durch ein muskuläres Ungleichgewicht verursacht wird, wobei die Behandlungsoptionen von orthopädischen Hilfsmitteln bis hin zu chir",
+    "answer": "einem Hammerzeh"
   },
   {
     "id": 109,
@@ -4139,7 +4355,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf eine Verletzung von {BLANK} ist eine genaue Bildgebung unerlässlich, um die Diagnose zu bestätigen und eine angepasste Therapie einzuleiten, die oft physiotherapeutische Maßnahmen und gegebenenfalls chirurgische Eingriffe",
+    "answer": "dem Gelenkfortsatz"
   },
   {
     "id": 110,
@@ -4175,7 +4393,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Entzündung der Sehnenansätze an den {BLANK} des Humerus führt oft zu Schmerzen im Bereich des Ellenbogengelenks, was in der Diagnose und Behandlung von Epicondylitis, auch bekannt als Tennisarm oder Golferarm, eine zentrale Rol",
+    "answer": "Epikondylen"
   },
   {
     "id": 111,
@@ -4211,7 +4431,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die genaue Kenntnis der Lage von {BLANK} ist entscheidend für das präzise Platzieren von Implantaten und die Minimierung von Verletzungsrisiken während orthopädischer Eingriffe.",
+    "answer": "der Fossa"
   },
   {
     "id": 112,
@@ -4247,7 +4469,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Frakturen im Bereich von {BLANK} sind klinisch bedeutsam, da sie aufgrund ihrer Position und der Bedeutung für die strukturelle Integrität des Skeletts oft eine komplexe Behandlung und langwierige Rehabilitation erfordern.",
+    "answer": "dem Knochenschaft"
   },
   {
     "id": 113,
@@ -4291,7 +4515,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Dysfunktion der {BLANK} kann zu erheblichen Störungen des zirkadianen Rhythmus führen, was die Diagnose und Behandlung von Schlafstörungen wesentlich beeinflusst.",
+    "answer": "Zirbeldrüse"
   },
   {
     "id": 114,
@@ -4327,7 +4553,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Jugendlichen kann die Verletzung der {BLANK}, die die Wachstumsplatte enthält, zu schwerwiegenden Wachstumsstörungen und komplizierten Frakturen führen, die eine spezifische diagnostische und therapeutische Herangehensweise erfordern.",
+    "answer": "Metaphyse"
   },
   {
     "id": 115,
@@ -4363,7 +4591,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind entscheidend für die diagnostische Bewertung von Wirbelsäulenstabilität und -beweglichkeit, insbesondere bei der Untersuchung von Rückenschmerzen und neurologischen Ausfällen.",
+    "answer": "Gelenkfortsätze"
   },
   {
     "id": 116,
@@ -4399,7 +4629,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Diagnose von Wirbelsäulenverletzungen, da seine Integrität auf die Stabilität der gesamten Wirbelsäule und die Funktionalität der angrenzenden muskulären Strukturen hinweist.",
+    "answer": "Der Rippenfortsatz"
   },
   {
     "id": 117,
@@ -4435,7 +4667,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Patienten mit Rückenschmerzen kann eine Entzündung am {BLANK} zu erheblichen Beschwerden führen, da dieser als Ansatzpunkt für wichtige Rückenmuskeln dient und somit bei Bewegungen des Rückens stark beansprucht wird.",
+    "answer": "Dornfortsatz"
   },
   {
     "id": 118,
@@ -4471,7 +4705,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verletzungen oder Fehlbildungen an {BLANK} können zu erheblichen Einschränkungen in der Beweglichkeit und Stabilität der Wirbelsäule führen, was eine genaue diagnostische Bewertung und gezielte therapeutische Maßnahmen erfordert.",
+    "answer": "den Querfortsätzen"
   },
   {
     "id": 119,
@@ -4507,7 +4743,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Der {BLANK} dient als wichtiger Orientierungspunkt bei chirurgischen Eingriffen im Brustbereich und ist essentiell für die korrekte Handpositionierung während der Durchführung einer Herzdruckmassage.",
+    "answer": "Schwertfortsatz"
   },
   {
     "id": 120,
@@ -4550,7 +4788,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} am distalen Ende der Elle und der Speiche trägt wesentlich zur Stabilität des Handgelenks bei und ist ein zentraler Ansatzpunkt für therapeutische Interventionen bei Verletzungen oder degenerativen Erkrankungen dieser Region.",
+    "answer": "Der Griffelfortsatz"
   },
   {
     "id": 121,
@@ -4586,7 +4826,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Infektionen des Mittelohrs können sich auf {BLANK} ausbreiten und eine Mastoiditis verursachen, was eine sorgfältige diagnostische und therapeutische Intervention erfordert.",
+    "answer": "den Warzenfortsatz"
   },
   {
     "id": 122,
@@ -4622,7 +4864,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Schulterverletzungen oder -operationen ist die genaue Beurteilung von {BLANK} entscheidend, da dieser als Ansatzpunkt für mehrere Bänder und Muskeln eine zentrale Rolle in der Stabilität des Gelenks spielt.",
+    "answer": "des Rabenschnabelfortsatzes"
   },
   {
     "id": 123,
@@ -4659,7 +4903,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Nasenkorrekturen oder nach Traumata ist eine genaue Beurteilung von {BLANK} entscheidend, um die äußere Form der Nase wiederherzustellen und deren funktionelle Integrität zu sichern.",
+    "answer": "dem seitlichen Nasenknorpel"
   },
   {
     "id": 124,
@@ -4695,7 +4941,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stabilität und Form der Nase sowie die effiziente Luftzirkulation sind stark von der Integrität von {BLANK} abhängig, dessen Beschädigung zu Atemproblemen und strukturellen Verformungen führen kann.",
+    "answer": "dem Nasenscheidewandknorpel"
   },
   {
     "id": 125,
@@ -4731,7 +4979,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die {BLANK} humeri spielt eine entscheidende Rolle bei der Stabilisierung des Ellenbogengelenks und ermöglicht eine reibungslose Gleitbewegung der Sehnen, was für die Diagnose und Behandlung von Bewegungsstörungen und Verletzungen dieses Bereich",
+    "answer": "Trochlea"
   },
   {
     "id": 126,
@@ -4767,7 +5017,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Patienten mit peripherer arterieller Verschlusskrankheit sind {BLANK} häufig frühzeitig von Symptomen wie Taubheitsgefühlen und Schmerzen betroffen, was eine sorgfältige Beobachtung und gegebenenfalls eine Anpassung der Therapie erford",
+    "answer": "die Akren"
   },
   {
     "id": 127,
@@ -4803,7 +5055,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Stabilität und Flexibilität der unteren Wirbelsäule wird maßgeblich durch {BLANK} beeinflusst, deren Dysfunktion zu Schmerzen führen und eine gezielte physiotherapeutische Behandlung erforderlich machen kann.",
+    "answer": "die Iliosakralfuge"
   },
   {
     "id": 128,
@@ -4831,7 +5085,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} an Knochen können entscheidend für die korrekte Positionierung von Gelenkprothesen sein und beeinflussen somit maßgeblich die postoperative Mobilität und Stabilität des Patienten.",
+    "answer": "Einbuchtungen"
   },
   {
     "id": 129,
@@ -4871,7 +5127,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig durchgeführt, um krankhaftes Gewebe, wie Tumore oder entzündetes Gewebe, vollständig zu entfernen und eine präzise histologische Untersuchung zu ermöglichen, die für die Diagnosestellung und Therapieplanung essenzi",
+    "answer": "Die Exzision"
   },
   {
     "id": 130,
@@ -4911,7 +5169,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der {BLANK} eines irreparabel beschädigten Zahnes wird dieser vorsichtig aus dem Alveolarknochen gelöst, um eine weitere Infektion oder strukturelle Schäden im umliegenden Gewebe zu verhindern.",
+    "answer": "Extraktion"
   },
   {
     "id": 131,
@@ -4951,7 +5211,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Entfernung krankhaft veränderter Gewebe, wie beispielsweise Tumoren, ist eine {BLANK} oft unerlässlich, um die Ausbreitung der Erkrankung zu verhindern und eine adäquate Therapie zu ermöglichen.",
+    "answer": "Resektion"
   },
   {
     "id": 132,
@@ -4995,7 +5257,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei malignen Neoplasien oder irreversibel geschädigten Organen kann die {BLANK} als radikale Therapieoption notwendig werden, um eine vollständige Entfernung des betroffenen Gewebes zu gewährleisten und die Prognose des Patienten zu verbessern.",
+    "answer": "Exstirpation"
   },
   {
     "id": 133,
@@ -5024,7 +5288,9 @@ export const medicalTerms = [
     "regions": [
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein entscheidendes Verfahren zur Diagnosestellung und Stadienbestimmung bei malignen Erkrankungen, indem es eine mikroskopische Untersuchung der entnommenen Gewebeprobe ermöglicht.",
+    "answer": "Die Biopsie"
   },
   {
     "id": 134,
@@ -5053,7 +5319,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} in der Gebärmutter können zu abnormalen Blutungen führen und sollten aufgrund des Risikos einer malignen Transformation histologisch untersucht werden.",
+    "answer": "Polypen"
   },
   {
     "id": 135,
@@ -5081,7 +5349,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig während einer Endoskopie durchgeführt, um gutartige Auswüchse im Magen-Darm-Trakt zu entfernen, die potenziell maligne entarten können.",
+    "answer": "Die Polypektomie"
   },
   {
     "id": 136,
@@ -5125,7 +5395,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht häufig durch langanhaltenden Druck oder Reibung an den Füßen und kann bei betroffenen Patienten starke Schmerzen verursachen, weshalb eine adäquate Behandlung zur Entfernung dieser Verhornung und zur Schmerzlinderung emp",
+    "answer": "Ein Hühnerauge"
   },
   {
     "id": 137,
@@ -5153,7 +5425,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei der Behandlung von Frakturen ist die Überwachung der Entwicklung von {BLANK}, welches zunächst aus Knorpel besteht und später in harten Knochen umgewandelt wird, entscheidend für die Beurteilung der korrekten Knochenheilung und Stabilität.",
+    "answer": "des Callus"
   },
   {
     "id": 138,
@@ -5193,7 +5467,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Das Auftreten von {BLANK} in der Bauchwand, wie Leisten-, Nabel- oder Narbenbrüche, kann unbehandelt zu Einklemmungen und lebensbedrohlichen Komplikationen führen, weshalb eine frühzeitige Diagnose und adäquate",
+    "answer": "Hernien"
   },
   {
     "id": 139,
@@ -5226,7 +5502,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Bei einem Zwerchfellbruch, bei dem der Magen teilweise in den Brustkorb verlagert wird, kann eine pathologische Erweiterung des {BLANK} zu schwerwiegenden Symptomen wie Sodbrennen und Atembeschwerden führen.",
+    "answer": "Hiatus"
   },
   {
     "id": 140,
@@ -5264,7 +5542,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine häufig bei älteren Patienten auftretende Erkrankung, bei der Magenteile in die Brusthöhle verlagert werden, was durch den Rückfluss von Magensäure zu Sodbrennen führen kann und eine sorgfält",
+    "answer": "der Zwerchfellbruch"
   },
   {
     "id": 141,
@@ -5300,7 +5580,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich oft durch Schmerzen und Schwellungen in der Leistengegend, tritt überwiegend bei Frauen auf und erfordert aufgrund des Risikos einer Einklemmung des vorgefallenen Gewebes häufig eine chirurgische Intervention.",
+    "answer": "Die Schenkelhernie"
   },
   {
     "id": 142,
@@ -5339,7 +5621,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose von {BLANK} basiert auf der klinischen Untersuchung und Bildgebung, wobei die Behandlung meist chirurgisch erfolgt, um das Risiko von Komplikationen wie Einklemmung oder Strangulation des vorgefallenen Gewebes zu minimieren.",
+    "answer": "einem Leistenbruch"
   },
   {
     "id": 143,
@@ -5375,7 +5659,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der klinischen Praxis dient {BLANK} als wichtiger anatomischer Orientierungspunkt für die Durchführung von Laparoskopien und anderen abdominalen Eingriffen.",
+    "answer": "der Nabel"
   },
   {
     "id": 144,
@@ -5411,7 +5697,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose eines {BLANK} erfordert eine sorgfältige Untersuchung, da die Ausstülpung von Gewebe oder Organen durch die Bauchwand um den Bauchnabel herum nicht nur Schmerzen verursachen, sondern auch zu einem Einklemmungsrisiko füh",
+    "answer": "Nabelbruchs"
   },
   {
     "id": 145,
@@ -5448,7 +5736,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Ansammlung von Flüssigkeit in der Hülle um den Hoden, die zu einer Schwellung des Hodensacks führt, kann bei {BLANK} angeboren sein oder durch Entzündungen oder Verletzungen verursacht werden und sollte aufgrund des Potenzials, auf ernstere",
+    "answer": "einem Wasserbruch"
   },
   {
     "id": 146,
@@ -5488,7 +5778,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die {BLANK} ist eine venöse Erweiterung im Hodensack, die vorrangig linksseitig auftritt und durch eine beeinträchtigte venöse Drainage verursacht wird, was zu Schmerzen, Schwellungen und potenziellen Fertilitätsstörungen",
+    "answer": "Varikozele"
   },
   {
     "id": 147,
@@ -5527,7 +5819,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestieren sich als erweiterte, geschlängelte Venen an den Beinen, die aufgrund einer Venenklappenschwäche den Blutrückfluss zum Herzen beeinträchtigen und können zu Schmerzen sowie zu schwerwiegenden Komplikationen wie Thromb",
+    "answer": "Krampfadern"
   },
   {
     "id": 148,
@@ -5568,7 +5862,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind häufig an den unteren Extremitäten lokalisiert und können durch ihre Neigung zu Schwellungen, Schmerzen sowie Hautveränderungen erhebliche therapeutische Herausforderungen darstellen.",
+    "answer": "Krampfadern"
   },
   {
     "id": 149,
@@ -5603,7 +5899,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Das {BLANK} von Gewebe oder Organen, insbesondere im Rahmen eines Leistenbruchs, kann eine dringende chirurgische Intervention notwendig machen, um eine potenzielle Nekrose durch Unterbrechung der Blutversorgung zu verhindern.",
+    "answer": "die Einklemmung"
   },
   {
     "id": 150,
@@ -5638,7 +5936,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Ein {BLANK} einer Darmschlinge in einer Hernie erfordert oft eine sofortige chirurgische Intervention, um eine Ischämie und potenzielle Gewebenekrose zu verhindern.",
+    "answer": "Inkarzeration"
   },
   {
     "id": 151,
@@ -5675,7 +5975,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} eines Säuglings oder Kleinkindes, bei dem ein Teil der Darmwand in einen anderen gleitet, ist eine sofortige chirurgische Intervention erforderlich, um einen Darmverschluss, Schmerzen und Durchblutungsstörungen zu verhindern und schwerwiegende Kom",
+    "answer": "der Einstülpung"
   },
   {
     "id": 152,
@@ -5704,7 +6006,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Das Vorhandensein zahlreicher Ausstülpungen der Darmwand, meist im Dickdarm lokalisiert, wird bei älteren Patienten häufig während diagnostischer Untersuchungen des Magen-Darm-Trakts festgestellt und kann bei Entzündungen zu Schmerzen und weiteren Kompl",
+    "answer": "Divertikulose"
   },
   {
     "id": 153,
@@ -5748,7 +6052,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Entzündung der Darmausstülpungen, vornehmlich im Dickdarm lokalisiert, manifestiert sich durch Symptome wie Bauchschmerzen und Fieber und kann bei Nichtbehandlung zu schwerwiegenden Komplikationen wie Abszessen oder Darmperforationen füh",
+    "answer": "Divertikulitis"
   },
   {
     "id": 154,
@@ -5779,7 +6085,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine akute Verdrehung eines Darmabschnitts, die ohne sofortige chirurgische Intervention zu einer irreversiblen Ischämie und potenziellen Perforation führen kann.",
+    "answer": "dem Volvulus"
   },
   {
     "id": 155,
@@ -5819,7 +6127,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine rasche Diagnose und Intervention ist entscheidend, wenn eine Blockade des Darms die Passage des Darminhalts verhindert und dadurch {BLANK} verursacht, da sowohl mechanische Ursachen wie Tumore oder Narben als auch funktionelle Störungen der Darmmotilität zugr",
+    "answer": "einen Ileus"
   },
   {
     "id": 156,
@@ -5859,7 +6169,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Ein paralytischer {BLANK} tritt auf, wenn die Darmmotilität nachlässt, häufig bedingt durch Medikamente, chirurgische Eingriffe oder Entzündungsprozesse, und erfordert unverzügliche therapeutische Maßnahmen, um einen le",
+    "answer": "Ileus"
   },
   {
     "id": 157,
@@ -5899,7 +6211,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Ein vollständiger oder teilweiser Verschluss des Darms, der durch Tumoren, Verwachsungen oder eingeklemmte Hernien verursacht wird, manifestiert sich durch Bauchschmerzen, Erbrechen und ausbleibenden Stuhlgang und erfordert oft eine umgehende chirurg",
+    "answer": "einen Ileus"
   },
   {
     "id": 158,
@@ -5930,7 +6244,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Die chirurgische Entfernung eines Körperteils, oft eines Gliedmaßes, wird durchgeführt, um schwerwiegende Komplikationen wie Infektionen, Tumoren oder fortschreitende Krankheiten wie Diabetes zu behandeln, wenn konservative Therapien versagen",
+    "answer": "die Amputation"
   },
   {
     "id": 159,
@@ -5967,7 +6283,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Unterbrechung der Blutzufuhr führt bei {BLANK} zu schwerwiegenden Gewebeschäden und erfordert oft eine frühzeitige Diagnose und aggressive Therapie, um eine Ausbreitung der Infektion zu verhindern und Amputationen zu vermeiden.",
+    "answer": "Wundbrand"
   },
   {
     "id": 160,
@@ -5997,7 +6315,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig in klinischen Szenarien durch Hypotonie, Tachykardie und verminderter Hautturgor, was eine sofortige Rehydratationstherapie erfordert, um schwerwiegende Komplikationen, insbesondere bei vulnerablen",
+    "answer": "Die Exsikkose"
   },
   {
     "id": 161,
@@ -6033,7 +6353,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose von {BLANK} in den Extremitäten erfordert eine sorgfältige Untersuchung der zugrunde liegenden Ursachen wie Herzinsuffizienz oder Nierenfunktionsstörungen, um eine gezielte Behandlung einzuleiten und weitere gesundheitliche",
+    "answer": "Ödemen"
   },
   {
     "id": 162,
@@ -6077,7 +6399,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} im Magen-Darm-Trakt kann zu schwerwiegenden Komplikationen wie Blutungen und sekundären Infektionen führen, die eine umgehende medizinische Intervention erfordern.",
+    "answer": "Ein Geschwür"
   },
   {
     "id": 163,
@@ -6121,7 +6445,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig als persistierende, schwer heilende Wunde am Unterschenkel, die durch eine insuffiziente Blutzirkulation verursacht wird und eine umfassende Behandlung einschließlich lokaler Wundversorgung, Kompressionstherapie und gezielten",
+    "answer": "Ein Beingeschwür"
   },
   {
     "id": 164,
@@ -6165,7 +6491,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht durch anhaltenden Druck auf die Haut, vor allem über knöchernen Vorsprüngen, und erfordert zur Vermeidung von Infektionen sowie zur Förderung der Heilung eine spezielle Behandlung und sorgfältige Pflege.",
+    "answer": "Ein Dekubitus"
   },
   {
     "id": 165,
@@ -6195,7 +6523,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "Die Ansammlung von {BLANK} in einem Abszess weist auf eine intensive Immunreaktion hin und erfordert häufig eine chirurgische Intervention zur Entlastung und Vermeidung weiterer Gewebeschäden.",
+    "answer": "Eiter"
   },
   {
     "id": 166,
@@ -6223,7 +6553,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die Anwesenheit von {BLANK} in einer Wunde deutet auf eine bakterielle Infektion hin und erfordert eine umgehende medizinische Behandlung, um eine Ausbreitung der Infektion zu verhindern.",
+    "answer": "eitrigem Sekret"
   },
   {
     "id": 167,
@@ -6267,7 +6599,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Ansammlung von Eiter in einem natürlichen Körperhohlraum, typischerweise als {BLANK} bezeichnet, manifestiert sich durch Symptome wie Fieber, Brustschmerzen und Atemnot und erfordert häufig den Einsatz von Antibiotika sowie eine chirurgische Drainage",
+    "answer": "Pleuraempyem"
   },
   {
     "id": 168,
@@ -6303,7 +6637,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine abgekapselte Eiteransammlung in Geweben oder Organen, die starke Schmerzen und Schwellungen verursacht, erfordert oft eine medizinische Intervention durch Drainage oder Antibiotikatherapie, insbesondere wenn sie unter der Haut oder in sensiblen Bereichen",
+    "answer": "ein Abszess"
   },
   {
     "id": 169,
@@ -6332,7 +6668,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "In der Palliativmedizin wird {BLANK} als eine kritische Phase betrachtet, in der es primär darum geht, durch gezielte Maßnahmen das Leiden des Patienten zu minimieren und eine würdevolle Lebensqualität bis zum Ende zu gewährleisten.",
+    "answer": "der Todeskampf"
   },
   {
     "id": 170,
@@ -6372,7 +6710,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig bei der Behandlung von Kopfverletzungen oder neurologischen Erkrankungen angewendet, um durch das Bohren einer Öffnung in den Schädel Druck zu entlasten oder Zugang zum Gehirn zu gewinnen.",
+    "answer": "Die Schädelbohrung"
   },
   {
     "id": 171,
@@ -6401,7 +6741,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK}s treten häufig in Organen wie den Eierstöcken und der Leber auf und erfordern, je nach Symptomatik und Lokalisation, eine spezifische diagnostische Abklärung und gegebenenfalls eine interventionelle oder chirurgische Behandlung.",
+    "answer": "Zysten"
   },
   {
     "id": 172,
@@ -6430,7 +6772,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Eine {BLANK} tritt häufig bei Verbrennungen zweiten Grades auf und kann aufgrund der potenziellen Infektionsgefahr und der Möglichkeit einer zugrundeliegenden Autoimmunerkrankung eine sorgfältige ärztliche Überwachung und gegebenenfalls eine spez",
+    "answer": "Bulla"
   },
   {
     "id": 173,
@@ -6467,7 +6811,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} sind bei dermatologischen Untersuchungen besonders zu beachten, da sie auf infektiöse Prozesse wie Windpocken hinweisen können und eine gezielte virologische Diagnostik erfordern.",
+    "answer": "Bläschen"
   },
   {
     "id": 174,
@@ -6503,7 +6849,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} können nach chirurgischen Eingriffen entstehen und sind häufig Ursache für postoperative Schmerzen sowie funktionelle Störungen der betroffenen Organe.",
+    "answer": "Verwachsungen"
   },
   {
     "id": 175,
@@ -6538,7 +6886,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} bezeichnet das unkontrollierte Wachstum maligner Zellen, das in verschiedenen Organen auftreten kann und maßgeblich die Auswahl diagnostischer Methoden, therapeutischer Ansätze und prognostischer Bewertungen beeinflusst.",
+    "answer": "Ein Karzinom"
   },
   {
     "id": 176,
@@ -6580,7 +6930,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht aus mesenchymalen Zellen und erfordert aufgrund seines aggressiven Wachstums und der Tendenz zur Metastasierung eine umgehende diagnostische und therapeutische Intervention.",
+    "answer": "Das Sarkom"
   },
   {
     "id": 177,
@@ -6621,7 +6973,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} zeichnet sich durch seine Fähigkeit aus, umliegendes Gewebe zu infiltrieren und Fernmetastasen zu bilden, was eine aggressive Therapie und kontinuierliche Nachsorge erforderlich macht.",
+    "answer": "Ein bösartiger Tumor"
   },
   {
     "id": 178,
@@ -6658,7 +7012,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die frühzeitige Identifikation von {BLANK} in der Umwelt und deren Eliminierung ist entscheidend, um das Risiko der Krebsentstehung bei exponierten Individuen zu minimieren.",
+    "answer": "krebserregenden Stoffen"
   },
   {
     "id": 179,
@@ -6696,7 +7052,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} bezeichnet eine abnormale Entwicklung von Zellen, Geweben oder Organen, die das Risiko für Krebserkrankungen erhöhen kann und bei Neugeborenen zu Gelenkproblemen führen kann, wenn keine frühzeitige Behandlung erfolgt.",
+    "answer": "Dysplasie"
   },
   {
     "id": 180,
@@ -6734,7 +7092,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die frühzeitige Erkennung von {BLANK} ist entscheidend, um eine adäquate Therapie einzuleiten, die das Wachstum kontrolliert und die Ausbreitung in benachbarte Gewebe verhindert.",
+    "answer": "Tumoren"
   },
   {
     "id": 181,
@@ -6763,7 +7123,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Die Diagnose von {BLANK} in Knochensystem, Lunge und Leber hat entscheidende Bedeutung für die Festlegung der Therapieoptionen und die Prognose bei Krebspatienten.",
+    "answer": "Metastasen"
   },
   {
     "id": 182,
@@ -6791,7 +7153,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der medizinischen Diagnostik, indem sie durch die Analyse von Gewebeproben und Zellen die Grundlagen für die Bestimmung und Behandlung diverser Erkrankungen liefert.",
+    "answer": "Die Pathologie"
   },
   {
     "id": 183,
@@ -6827,7 +7191,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird in der Medizin eingesetzt, um durch gezielte manuelle Interventionen Funktionsstörungen des Bewegungsapparats zu diagnostizieren und zu behandeln, wobei besonders die Verbesserung der Gelenkfunktion und die Schmerzlinderung im Vordergrund",
+    "answer": "Die manuelle Therapie"
   },
   {
     "id": 184,
@@ -6855,7 +7221,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig eingesetzt, um durch gezielte Applikation ionisierender Strahlung maligne Zellen zu eliminieren und das Wachstum von Tumoren effektiv einzudämmen, wobei sie sowohl als Monotherapie als auch adjuvant zu chir",
+    "answer": "Die Strahlentherapie"
   },
   {
     "id": 185,
@@ -6883,7 +7251,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} beschäftigt sich intensiv mit der Entwicklung und Implementierung fortschrittlicher Therapien zur Verbesserung der Prognose und Lebensqualität von Patienten mit malignen Erkrankungen.",
+    "answer": "Die Onkologie"
   },
   {
     "id": 186,
@@ -6912,7 +7282,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist verantwortlich für die Leitung von Therapiemaßnahmen wie Chemotherapie, Strahlentherapie und Immuntherapie sowie die Koordination der umfassenden Betreuung von Patienten mit malignen Erkrankungen.",
+    "answer": "Der Onkologe"
   },
   {
     "id": 187,
@@ -6956,7 +7328,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Wiederherstellung der ursprünglichen Größe und Funktion der Gebärmutter nach einer Entbindung ist ein Beispiel für {BLANK}, ein Prozess, der für die postpartale Erholung der Frau essentiell ist.",
+    "answer": "die Rückbildung"
   },
   {
     "id": 188,
@@ -6984,7 +7358,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Das Verständnis von {BLANK} ist entscheidend für die Entwicklung effektiver Behandlungsstrategien gegen resistente Krankheitserreger und die Anpassung pharmakogenetischer Ansätze.",
+    "answer": "der Entwicklung"
   },
   {
     "id": 189,
@@ -7013,7 +7389,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} führt oft zu einer signifikanten Reduktion der Funktionalität betroffener Organe, was eine gezielte diagnostische Bewertung und angepasste therapeutische Maßnahmen erfordert.",
+    "answer": "Die Atrophie"
   },
   {
     "id": 190,
@@ -7056,7 +7434,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine {BLANK} des Muskelgewebes kann auf eine unzureichende Nutzung oder neurologische Störungen hinweisen und erfordert eine gezielte diagnostische Abklärung sowie möglicherweise eine angepasste Therapie.",
+    "answer": "Atrophie"
   },
   {
     "id": 191,
@@ -7097,7 +7477,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Zunahme des Herzvolumens durch die Vergrößerung der Myozyten, oft bedingt durch anhaltend erhöhten Blutdruck oder Herzklappenerkrankungen, kann auf eine {BLANK} hinweisen, die diagnostische und therapeutische Interventionen erfordert",
+    "answer": "Herzhypertrophie"
   },
   {
     "id": 192,
@@ -7137,7 +7519,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die {BLANK} des Herzmuskels bei Leistungssportlern kann sowohl eine physiologische Anpassung als auch ein potenzielles Risiko für kardiovaskuläre Erkrankungen darstellen, weshalb eine regelmäßige Überwachung mittels Echokardi",
+    "answer": "Hypertrophie"
   },
   {
     "id": 193,
@@ -7172,7 +7556,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine häufige podiatrische Komplikation, die durch in die Haut einwachsende Nägel verursacht wird und oft eine Behandlung mittels konservativer Maßnahmen wie richtiger Nagelpflege oder chirurgischer Eingr",
+    "answer": "dem eingewachsenen Zehennagel"
   },
   {
     "id": 194,
@@ -7215,7 +7601,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} dient als primäre Schutzbarriere gegen pathogene Mikroorganismen und ist zentral für die Diagnose dermatologischer Erkrankungen sowie die Implementierung entsprechender therapeutischer Maßnahmen.",
+    "answer": "Die Haut"
   },
   {
     "id": 195,
@@ -7259,7 +7647,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich typischerweise durch Symptome wie Rötung, Schwellung und Juckreiz, die durch allergische Reaktionen, irritative Einflüsse oder assoziierte Erkrankungen hervorgerufen werden können.",
+    "answer": "Die Hautentzündung"
   },
   {
     "id": 196,
@@ -7289,7 +7679,9 @@ export const medicalTerms = [
       "Hessen",
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die Integrität von {BLANK} ist entscheidend für die Prävention von Infektionen und die effektive Behandlung von dermatologischen Erkrankungen.",
+    "answer": "der Oberhaut"
   },
   {
     "id": 197,
@@ -7332,7 +7724,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der Diabetesbehandlung wird häufig {BLANK} Insulin verabreicht, um eine gleichmäßige und verzögerte Aufnahme in den Blutkreislauf zu gewährleisten.",
+    "answer": "subkutan"
   },
   {
     "id": 198,
@@ -7364,7 +7758,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} Injektionen sind besonders für Allergietests geeignet, da sie eine direkte Beobachtung der Reaktionsentwicklung in der Haut ermöglichen.",
+    "answer": "Intrakutane"
   },
   {
     "id": 199,
@@ -7401,7 +7797,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Entzündungen oder Infektionen der {BLANK} können zu schwerwiegenden Erkrankungen wie Gastritis oder Bronchitis führen, weshalb eine frühzeitige Diagnose und gezielte Therapie entscheidend sind.",
+    "answer": "Schleimhaut"
   },
   {
     "id": 200,
@@ -7432,7 +7830,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Wiederherstellung von Gewebestrukturen nach chirurgischen Eingriffen, da es eine Schlüsselrolle bei der Heilung und Regeneration spielt.",
+    "answer": "Das Bindegewebe"
   },
   {
     "id": 201,
@@ -7476,7 +7876,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die {BLANK} ist eine effektive Methode zur Verabreichung von Medikamenten, die nicht oral eingenommen werden können, und wird häufig für Impfungen sowie in Notfallsituationen genutzt, indem das Medikament schnell in den Blutkreislauf aufgenommen wird.",
+    "answer": "die intramuskuläre Injektion"
   },
   {
     "id": 202,
@@ -7518,7 +7920,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht häufig nach einem Trauma und manifestiert sich durch eine sichtbare Verfärbung sowie Schwellung der Haut, wobei die Resorption des ausgetretenen Blutes mehrere Wochen in Anspruch nehmen kann.",
+    "answer": "Ein Bluterguss"
   },
   {
     "id": 203,
@@ -7554,7 +7958,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind gutartige Tumoren, die aus Blutgefäßansammlungen bestehen und sowohl auf der Haut als auch in inneren Organen auftreten können, wobei sie in einigen Fällen aufgrund ihrer Größe oder Lokalisation eine spezifische medizinische",
+    "answer": "Hämangiome"
   },
   {
     "id": 204,
@@ -7590,7 +7996,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine maligne Neoplasie, die aus Melanozyten entsteht und aufgrund ihrer hohen Metastasierungsrate und Aggressivität eine umgehende diagnostische und therapeutische Intervention erfordert.",
+    "answer": "Das Melanom"
   },
   {
     "id": 205,
@@ -7626,7 +8034,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein maligner Tumor, der aus den Plattenepithelzellen entsteht und vor allem in sonnenexponierten Körperregionen wie Ohren, Gesicht, Händen und Kopfhaut auftritt, wobei eine frühzeitige Erkennung und Intervention ents",
+    "answer": "Das Plattenepithelkarzinom"
   },
   {
     "id": 206,
@@ -7663,7 +8073,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig als hautfarbener oder leicht rötlicher Knoten in sonnenexponierten Bereichen und erfordert aufgrund seiner potenziellen lokalen Invasivität eine zeitnahe interventionelle Therapie.",
+    "answer": "Das Basaliom"
   },
   {
     "id": 207,
@@ -7699,7 +8111,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die regelmäßige dermatologische Überwachung von {BLANK} ist essenziell, um eine potenzielle maligne Transformation frühzeitig zu erkennen und entsprechende therapeutische Maßnahmen einzuleiten.",
+    "answer": "Muttermalen"
   },
   {
     "id": 208,
@@ -7735,7 +8149,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine angeborene Hautveränderung, die durch erweiterte Kapillargefäße charakterisiert wird und vor allem im Gesicht oder Nacken auftritt, wobei sie primär kosmetische Bedenken hervorruft, jedoch auch mit vaskulären Kompl",
+    "answer": "Ein Feuermal"
   },
   {
     "id": 209,
@@ -7771,7 +8187,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} stellt eine kleine, arterielle Gefäßerweiterung dar, die typischerweise auf der Haut von Gesicht oder Brust auftritt und oft mit Leberschäden oder hormonellen Veränderungen assoziiert ist.",
+    "answer": "Ein Spinnennävus"
   },
   {
     "id": 210,
@@ -7814,7 +8232,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine chronische Dermatose, die durch depigmentierte Hautareale charakterisiert wird, welche auf den Funktionsverlust von Melanozyten zurückzuführen sind, und tritt unabhängig von Alter, Geschlecht oder ethnischer Herkunft auf.",
+    "answer": "Die Weißfleckenkrankheit"
   },
   {
     "id": 211,
@@ -7842,7 +8262,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die genetische Störung {BLANK} führt zu einer deutlichen Reduktion von Melanin, was nicht nur eine erhöhte Empfindlichkeit gegenüber UV-Strahlung mit sich bringt, sondern auch signifikante Sehprobleme durch die unzureichende Entwicklung der Retina und des Se",
+    "answer": "der Albinismus"
   },
   {
     "id": 212,
@@ -7884,7 +8306,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine chronische Hauterkrankung, die durch entzündliche Prozesse zu einer übermäßigen Bildung von Hautschuppen führt und häufig mit einer signifikanten Beeinträchtigung der Lebensqualität sowie einem erhöhten Risiko für die Entwicklung einer Psoriasis-Ar",
+    "answer": "Die Schuppenflechte"
   },
   {
     "id": 213,
@@ -7913,7 +8337,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} an der Haut oder Schleimhaut kann durch mechanische Reibung oder chemische Reizstoffe ausgelöst werden und erfordert eine sorgfältige Behandlung, um Schmerzen zu lindern und Infektionen vorzubeugen.",
+    "answer": "Eine Erosion"
   },
   {
     "id": 214,
@@ -7952,7 +8378,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine oberflächliche Hautverletzung, die durch mechanische Einwirkungen wie Reibung oder Kratzen entsteht und aufgrund der potenziellen Infektionsgefahr sowie der erforderlichen differenzierten Behandlungsansätze je nach Größe und Tiefe",
+    "answer": "Die Hautabschürfung"
   },
   {
     "id": 215,
@@ -7986,7 +8414,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um einen pathologischen Prozess, der durch Verletzung, Mangeldurchblutung oder Infektionen verursacht wird und oft eine gezielte Behandlung erfordert, um Entzündungen zu kontrollieren und weitere Komplikationen zu ver",
+    "answer": "Nekrose"
   },
   {
     "id": 216,
@@ -8028,7 +8458,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Gelbfärbung der Haut und der Augen, die auf eine erhöhte Bilirubinkonzentration im Blut zurückzuführen ist, weist häufig auf schwerwiegende Leber- oder Gallenwegserkrankungen hin und erfordert eine umfassende diagnostische Ab",
+    "answer": "Gelbsucht"
   },
   {
     "id": 217,
@@ -8067,7 +8499,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} stellt ein häufiges Symptom dar, das bei Patienten mit dermatologischen Störungen, allergischen Reaktionen sowie bei systemischen Erkrankungen wie Nieren- oder Leberdysfunktion auftritt und eine gezielte diagnostische und therapeutische Herangehensweise",
+    "answer": "Juckreiz"
   },
   {
     "id": 218,
@@ -8099,7 +8533,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich als entzündliche Hauterkrankung mit Symptomen wie Rötung, Juckreiz und Schuppung, wobei die Therapie meist Feuchtigkeitscremes und entzündungshemmende Medikamente umfasst, um die Beschwer",
+    "answer": "Ein Ekzem"
   },
   {
     "id": 219,
@@ -8139,7 +8575,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} kann sich in Form von Rötungen, Bläschen oder Pusteln manifestieren und ist oft ein Indikator für zugrunde liegende Infektionskrankheiten, allergische Reaktionen oder andere medizinische Zustände, was wesentlich zur Diagnosestellung beiträgt.",
+    "answer": "Ein Exanthem"
   },
   {
     "id": 220,
@@ -8167,7 +8605,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die Fraktur des {BLANK} occipitalis erfordert eine sorgfältige neurologische Überwachung, da sie nahe am Gehirn liegt und schwere Komplikationen nach sich ziehen kann.",
+    "answer": "Squama"
   },
   {
     "id": 221,
@@ -8196,7 +8636,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} bildet sich häufig als natürlicher Schutzmechanismus über Wundflächen, um das darunterliegende Gewebe während des Heilungsprozesses vor Infektionen und weiteren Schädigungen zu bewahren.",
+    "answer": "Eine Kruste"
   },
   {
     "id": 222,
@@ -8225,7 +8667,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht durch die Verstopfung der Poren mit Talg und abgestorbenen Hautzellen und manifestiert sich häufig als dunkler Punkt in der T-Zone von Patienten mit fettiger Haut oder Akne.",
+    "answer": "Ein Mitesser"
   },
   {
     "id": 223,
@@ -8262,7 +8706,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich durch einen übermäßigen Verlust von Kopf- oder Körperhaaren, was nicht nur emotional belastend sein kann, sondern auch auf schwerwiegende gesundheitliche Probleme hinweisen könnte, weshalb eine gründliche diagnostische Abklärung erforderlich",
+    "answer": "Alopezie"
   },
   {
     "id": 224,
@@ -8292,7 +8738,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig durch juckende Quaddeln und Rötungen der Haut, ausgelöst durch Allergene oder physikalische Reize, und erfordert eine differenzierte diagnostische Abklärung sowie eine angepasste symptomatische Therapie.",
+    "answer": "Das Nesselfieber"
   },
   {
     "id": 225,
@@ -8323,7 +8771,9 @@ export const medicalTerms = [
       "Baden-Württemberg",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig durch Symptome wie Hautausschläge und Atembeschwerden und erfordert diagnostische Verfahren wie Haut- oder Bluttests sowie therapeutische Maßnahmen, einschließlich der Vermeidung spezifischer Allergene und der Verab",
+    "answer": "Eine Allergie"
   },
   {
     "id": 226,
@@ -8355,7 +8805,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine akute bakterielle Hautinfektion, die sich durch fortschreitende Rötung, Schwellung und Schmerzen, vor allem im Gesichts- oder Beinbereich, manifestiert und primär durch Streptokokken verursacht wird, wobei eine",
+    "answer": "Die Wundrose"
   },
   {
     "id": 227,
@@ -8391,7 +8843,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine durch Erysipelothrix rhusiopathiae verursachte Hautinfektion, die vor allem bei Personen auftritt, die beruflich mit Tieren oder tierischen Produkten in Kontakt stehen, und sich typischerweise durch schmerzlose, gerötete und geschwollene Haut",
+    "answer": "Das Rotlaufähnliche"
   },
   {
     "id": 228,
@@ -8435,7 +8889,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine akute bakterielle Entzündung des Unterhautgewebes, die typischerweise durch Schmerzen, Rötung, Schwellung und Überwärmung charakterisiert ist und eine umgehende antibiotische Behandlung erfordert, um",
+    "answer": "der Bindegewebsentzündung"
   },
   {
     "id": 229,
@@ -8464,7 +8920,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Bei einer diffusen, eitrigen Entzündung des Bindegewebes, die häufig durch Streptokokken verursacht wird und sich in Haut oder Muskulatur manifestiert, ist eine schnelle antibiotische Intervention erforderlich, um die Entwicklung von Abszessen oder einer Sepsis zu verhind",
+    "answer": "einer Phlegmone"
   },
   {
     "id": 230,
@@ -8493,7 +8951,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine häufige Erscheinung bei Frauen, die durch subkutane Fettansammlungen hervorgerufen wird und vorwiegend an Oberschenkeln und Gesäß auftritt, jedoch aus medizinischer Sicht nicht als Krankheit, sondern als kosmetische Besorg",
+    "answer": "Cellulite"
   },
   {
     "id": 231,
@@ -8537,7 +8997,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Infektion des Nabels, charakterisiert durch Rötung, Schwellung und Eiterbildung, tritt vorwiegend bei Neugeborenen auf und erfordert zur Vermeidung schwerwiegender Komplikationen eine umgehende medizinische Intervention.",
+    "answer": "die Nabelentzündung"
   },
   {
     "id": 232,
@@ -8565,7 +9027,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} an der Fußsohle, verursacht durch humane Papillomaviren, manifestiert sich häufig an druckbelasteten Bereichen und erfordert eine umgehende therapeutische Intervention, um Schmerzen zu reduzieren und eine weitere Ausbreitung zu vermeiden.",
+    "answer": "Die Dornwarze"
   },
   {
     "id": 233,
@@ -8609,7 +9073,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind gutartige Hautläsionen, die durch eine Infektion mit humanen Papillomaviren entstehen und sich häufig an Händen und Füßen manifestieren, wobei sie durch direkten Kontakt oder kontaminierte Flächen übertragen werden können.",
+    "answer": "Verrucae vulgares"
   },
   {
     "id": 234,
@@ -8645,7 +9111,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird durch langanhaltende Exposition des ungeschützten Kopfes gegenüber intensiver Sonnenstrahlung verursacht und äußert sich in Symptomen wie Kopfschmerzen, Schwindel und Übelkeit, wobei präventive Maßnahmen wie",
+    "answer": "Ein Sonnenstich"
   },
   {
     "id": 235,
@@ -8674,7 +9142,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine häufige dermatologische Erkrankung, die durch intensive UV-Strahlung verursacht wird und sich durch Hautrötungen, Schmerzen sowie gelegentlich Blasen manifestiert, wobei prophylaktische Anwendung von Sonnenschutzmitteln zur Prävention",
+    "answer": "Der Sonnenbrand"
   },
   {
     "id": 236,
@@ -8702,7 +9172,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} sind kleine, warzenartige Wucherungen im Genital- und Analbereich, die durch bestimmte Typen des humanen Papillomavirus verursacht werden und aufgrund ihrer Assoziation mit einem erhöhten Krebsrisiko eine sorgfältige diagnostische und therapeut",
+    "answer": "Spitze Kondylome"
   },
   {
     "id": 237,
@@ -8746,7 +9218,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind haarähnliche Strukturen auf Bakterien, die nicht nur zur Adhäsion an Oberflächen beitragen, sondern auch eine Schlüsselrolle bei der Übertragung von Antibiotikaresistenzen spielen, was die Entwicklung neuer therapeutischer Ansätze erforderlich",
+    "answer": "Pili"
   },
   {
     "id": 238,
@@ -8788,7 +9262,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} kann durch Trauma, Infektion oder Krankheit verursacht werden und erfordert häufig spezifische diagnostische oder therapeutische Interventionen, um eine Verschlechterung des Patientenzustandes zu verhindern.",
+    "answer": "Eine Läsion"
   },
   {
     "id": 239,
@@ -8817,7 +9293,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} sind gutartige Hautgeschwülste, die durch humane Papillomviren verursacht werden und häufig an Händen und Füßen auftreten; sie können spontan remittieren, doch ihre Entfernung wird oft notwendig, wenn sie zu Beschwerden führen.",
+    "answer": "Warzen"
   },
   {
     "id": 240,
@@ -8853,7 +9331,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine gutartige Zyste, die durch die Verstopfung eines Talgdrüsenausführungsgangs entsteht und vorwiegend in behaarten Regionen wie Kopfhaut, Gesicht, Nacken oder Rücken auftritt; sie kann bei Entzündung sch",
+    "answer": "Die Grützbeutelzyste"
   },
   {
     "id": 241,
@@ -8897,7 +9377,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind entscheidend für die Diagnose und Behandlung endokriner Störungen, da ihre Fehlfunktionen zu schwerwiegenden hormonellen Imbalancen führen können.",
+    "answer": "Drüsen"
   },
   {
     "id": 242,
@@ -8941,7 +9423,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose von {BLANK} basiert auf der Identifikation typischer Symptome wie Schwellungen und Schmerzen in der betroffenen Region, ergänzt durch laborchemische Untersuchungen zur Bestimmung der zugrundeliegenden Ursache, wie Infektionen oder Autoimmun",
+    "answer": "Adenitis"
   },
   {
     "id": 243,
@@ -8985,7 +9469,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Störungen in {BLANK} können zu signifikanten hormonellen Ungleichgewichten führen, die durch Symptome wie verändertes Wachstum, Stoffwechselstörungen und reproduktive Dysfunktionen klinisch manifest werden und eine gezielte endokrinologische Ther",
+    "answer": "der Hirnanhangsdrüse"
   },
   {
     "id": 244,
@@ -9029,7 +9515,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Patienten mit Schlafstörungen oder spezifischen Neoplasien kann eine Dysfunktion der {BLANK} vorliegen, die eine gezielte Untersuchung dieses Organs im Rahmen der neuroendokrinen Diagnostik erforderlich macht.",
+    "answer": "Zirbeldrüse"
   },
   {
     "id": 245,
@@ -9073,7 +9561,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnose und Behandlung von Stoffwechselstörungen, da sie durch die Produktion von Hormonen wesentlich das Körpergewicht, die Körpertemperatur und den Energieverbrauch beeinflusst.",
+    "answer": "Die Schilddrüse"
   },
   {
     "id": 246,
@@ -9106,7 +9596,9 @@ export const medicalTerms = [
       "Berlin",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die Aufrechterhaltung von {BLANK} ist entscheidend für die effektive Behandlung von Schilddrüsenerkrankungen, da sie eine optimale Hormonbalance sicherstellt und somit den Metabolismus, das Wachstum sowie die enzymatische Aktivität im Körper",
+    "answer": "Euthyreose"
   },
   {
     "id": 247,
@@ -9147,7 +9639,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} ist eine umfassende Diagnostik entscheidend, um durch gezielte therapeutische Maßnahmen eine Normalisierung der Hormonproduktion zu erreichen und somit potenzielle kardiovaskuläre sowie psychische Komplikationen zu verhindern.",
+    "answer": "einer Schilddrüsenüberfunktion"
   },
   {
     "id": 248,
@@ -9187,7 +9681,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} führt ein Mangel an Schilddrüsenhormonen zu Symptomen wie Müdigkeit und Gewichtszunahme, wobei die Diagnose häufig durch Bluttests bestätigt und die Behandlung mit Levothyroxin eingeleitet wird.",
+    "answer": "der Schilddrüsenunterfunktion"
   },
   {
     "id": 249,
@@ -9224,7 +9720,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Vergrößerung der Schilddrüse im Vorderhalsbereich, die durch Jodmangel oder Autoimmunerkrankungen verursacht werden kann, führt bei {BLANK} häufig zu einer sichtbaren Schwellung, die diagnostisch mittels Ultraschall und",
+    "answer": "Patienten"
   },
   {
     "id": 250,
@@ -9268,7 +9766,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die an der Rückseite der Schilddrüse lokalisierten {BLANK} sind für die Regulation des Kalzium- und Phosphatspiegels verantwortlich und spielen eine zentrale Rolle bei der Diagnose und Behandlung von Hyperparathyreoidismus, der zu Knochenschw",
+    "answer": "Nebenschilddrüsen"
   },
   {
     "id": 251,
@@ -9308,7 +9808,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kommt es durch eine exzessive Produktion von Parathormon zu einem erhöhten Kalziumspiegel im Blut, was diagnostische Maßnahmen zur Früherkennung von Knochenverlust und Nierensteinen sowie entsprechende therapeutische Interventionen er",
+    "answer": "Hyperparathyreoidismus"
   },
   {
     "id": 252,
@@ -9347,7 +9849,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} führt eine unzureichende Produktion von Parathormon durch die im Halsbereich lokalisierten Nebenschilddrüsen zu Hypokalzämie, die Muskelkrämpfe und neurologische Symptome verursachen kann, was eine sorgfältige",
+    "answer": "der Nebenschilddrüsenunterfunktion"
   },
   {
     "id": 253,
@@ -9383,7 +9887,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Störungen in der Funktion von {BLANK} können zu hormonellen Dysbalancen führen, die sich in Symptomen wie Hypertonie, Hyperglykämie und vermehrter Müdigkeit manifestieren, was eine gezielte diagnostische und therapeutische Intervention erfordert.",
+    "answer": "den Nebennieren"
   },
   {
     "id": 254,
@@ -9412,7 +9918,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei der Behandlung von Nebennierentumoren, hormonellen Dysfunktionen oder einer Hormonüberproduktion kann die {BLANK} indiziert sein, um die betroffenen Drüsen, die wesentlich an der Produktion von Kortisol und Adrenalin beteiligt sind, zu",
+    "answer": "Nebennierenentfernung"
   },
   {
     "id": 255,
@@ -9456,7 +9964,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Entzündung der {BLANK} wird häufig durch Infektionen oder Gallensteine verursacht und kann in der Diagnostik durch bildgebende Verfahren sowie in der Therapie durch spezifische Medikation und gegebenenfalls chirurgische Eingriffe adressiert werden.",
+    "answer": "Ohrspeicheldrüse"
   },
   {
     "id": 256,
@@ -9500,7 +10010,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei einer Entzündung kann {BLANK} anschwellen und starke Schmerzen verursachen, was eine sorgfältige Diagnostik und gegebenenfalls eine antibiotische Behandlung erfordert.",
+    "answer": "die Ohrspeicheldrüse"
   },
   {
     "id": 257,
@@ -9544,7 +10056,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnostik und Behandlung von Diabetes mellitus Typ 1 und 2, da dieses Organ sowohl Insulin als auch Glukagon produziert, welche essentiell für die Aufrechterhaltung des Glukosegleichgewichts im Körper sind.",
+    "answer": "Die Bauchspeicheldrüse"
   },
   {
     "id": 258,
@@ -9588,7 +10102,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine akute oder chronische {BLANK} manifestiert sich häufig durch Oberbauchschmerzen, Übelkeit und Verdauungsstörungen, wobei die Diagnose mittels bildgebender Verfahren und Laborwerten gestellt und die Therapie je nach Ursache und Schweregrad individuell ange",
+    "answer": "Bauchspeicheldrüsenentzündung"
   },
   {
     "id": 259,
@@ -9632,7 +10148,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kann die Bildung von Speichelsteinen oder das Auftreten von Entzündungen die Funktion der Speichelproduktion beeinträchtigen und erfordert oft spezifische diagnostische und therapeutische Interventionen.",
+    "answer": "der Unterkieferdrüse"
   },
   {
     "id": 260,
@@ -9676,7 +10194,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Entzündungen oder Steinbildungen in {BLANK} ist eine sorgfältige Diagnostik und gegebenenfalls eine chirurgische Intervention erforderlich, um Komplikationen wie Infektionen oder Obstruktionen des Speichelabflusses zu vermeiden.",
+    "answer": "der Unterzungenspeicheldrüse"
   },
   {
     "id": 261,
@@ -9720,7 +10240,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Untersuchung von Schwellungen oder Schmerzen in {BLANK} sollten Differentialdiagnosen wie Mastitis oder maligne Neoplasien in Betracht gezogen werden, um eine adäquate Therapie einzuleiten.",
+    "answer": "der Brustdrüse"
   },
   {
     "id": 262,
@@ -9761,7 +10283,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine chronische endokrine Störung, die durch eine exzessive Sekretion von Somatotropin infolge eines Hypophysenadenoms verursacht wird und sich durch progressive Vergrößerung der distalen Körperpartien sowie durch metabolische und kardiovaskul",
+    "answer": "Akromegalie"
   },
   {
     "id": 263,
@@ -9796,7 +10320,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig durch einen Body-Mass-Index von 30 oder höher diagnostiziert und erfordert eine multidisziplinäre Behandlung, die Ernährungsumstellung, körperliche Aktivität und möglicherweise medikamentöse Interventionen oder chirurgische Ma",
+    "answer": "Adipositas"
   },
   {
     "id": 264,
@@ -9831,7 +10357,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Patienten mit einem BMI von 30 oder höher werden häufig als {BLANK} eingestuft und benötigen eine angepasste Behandlung zur Risikominimierung für Herz-Kreislauf-Erkrankungen, Diabetes und Gelenkprobleme.",
+    "answer": "adipös"
   },
   {
     "id": 265,
@@ -9867,7 +10395,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Pathogenese von metabolischen Erkrankungen, indem es durch seine Überfüllung zur Entwicklung von Typ-2-Diabetes und kardiovaskulären Störungen beitragen kann.",
+    "answer": "Das Fettgewebe"
   },
   {
     "id": 266,
@@ -9896,7 +10426,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Die Untersuchung der verengten Verbindung zwischen den Lappen der Schilddrüse ist entscheidend für die Diagnose und Behandlung von Erkrankungen, die diesen Bereich betreffen.",
+    "answer": "des Isthmus"
   },
   {
     "id": 267,
@@ -9933,7 +10465,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird in den Speicheldrüsen produziert und ist entscheidend für die präventive Zahnmedizin, da es nicht nur bei der Verdauung hilft, sondern auch die Mundhöhle reinigt und vor pathogenen Keimen schützt.",
+    "answer": "Der Speichel"
   },
   {
     "id": 268,
@@ -9962,7 +10496,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Eine Veränderung der {BLANK} kann auf pathologische Zustände wie Xerostomie oder Hypersalivation hinweisen und erfordert eine differenzierte diagnostische Abklärung.",
+    "answer": "Speichelflusses"
   },
   {
     "id": 269,
@@ -9990,7 +10526,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei {BLANK} bilden sich steinartige Ablagerungen in den Speicheldrüsen oder deren Ausführungsgängen, was den Speichelfluss behindern und zu schmerzhaften Schwellungen führen kann, insbesondere wenn die Unterkieferspeicheldrü",
+    "answer": "der Sialolithiasis"
   },
   {
     "id": 270,
@@ -10034,7 +10572,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kommt es häufig zu einer schmerzhaften Schwellung und Eiterabsonderung in der betroffenen Drüse, wobei eine schnelle therapeutische Intervention notwendig ist, um die Entwicklung eines Abszesses zu verhindern.",
+    "answer": "einer Speicheldrüsenentzündung"
   },
   {
     "id": 271,
@@ -10073,7 +10613,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnose und Behandlung von Erkrankungen wie Dysphagie, Mundhöhlenkarzinom und Sprachstörungen, indem es die primäre Schnittstelle für die Nahrungsaufnahme und die Artikulation darstellt.",
+    "answer": "Der Mund"
   },
   {
     "id": 272,
@@ -10116,7 +10658,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "In der {BLANK} beginnt die mechanische Verdauung von Nahrung durch Zerkleinerung und Einspeichelung, was für die Diagnose und Behandlung von Dysphagien und anderen Erkrankungen des Verdauungstraktes von zentraler Bedeutung ist.",
+    "answer": "Mundhöhle"
   },
   {
     "id": 273,
@@ -10145,7 +10689,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Sprachstörungen und Dysphagie, da der hintere Teil die Nasopharynxpassage während des Schluckakts abschließt und der vordere Teil die mechanische Verarbeitung der Nahrung",
+    "answer": "Der Gaumen"
   },
   {
     "id": 274,
@@ -10173,7 +10719,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kommt es während der embryonalen Entwicklung zu einem unvollständigen Verschluss der Gesichtsteile, was häufig chirurgische Korrekturen sowie eine umfassende interdisziplinäre Betreuung zur Unterstützung der Nahrungsaufnahme und Sprachentwicklung erford",
+    "answer": "der Lippen-Kiefer-Gaumenspalte"
   },
   {
     "id": 275,
@@ -10201,7 +10749,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine angeborene Fehlbildung, die oft chirurgische Eingriffe zur Korrektur von Sprech-, Ess- und Zahnentwicklungsstörungen erfordert.",
+    "answer": "der Lippen-Kiefer-Gaumenspalte"
   },
   {
     "id": 276,
@@ -10229,7 +10779,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine angeborene Fehlbildung, die chirurgisch korrigiert wird, um sowohl die funktionellen Beeinträchtigungen beim Sprechen und Essen zu verbessern als auch ästhetische Aspekte zu berücksichtigen.",
+    "answer": "der Gaumenspalte"
   },
   {
     "id": 277,
@@ -10266,7 +10818,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} im Gehirn, die die beiden Hemisphären trennt, kann bei strukturellen Anomalien oder Verletzungen von entscheidender diagnostischer Bedeutung sein.",
+    "answer": "Die Fissura longitudinalis"
   },
   {
     "id": 278,
@@ -10295,7 +10849,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Frakturen des {BLANK} können zu einer signifikanten Instabilität der Halswirbelsäule führen und erfordern eine sorgfältige neurologische Überwachung, um potenzielle Komplikationen frühzeitig zu erkennen und zu behandeln.",
+    "answer": "Zahnfortsatzes"
   },
   {
     "id": 279,
@@ -10326,7 +10882,9 @@ export const medicalTerms = [
       "Berlin",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich als brennendes Gefühl in der Brust oder hinter dem Brustbein, wird durch aufsteigende Magensäure verursacht und kann, wenn es chronisch auftritt, auf eine behandlungsbedürftige gastroösophageale Refluxkrankheit hin",
+    "answer": "Sodbrennen"
   },
   {
     "id": 280,
@@ -10358,7 +10916,9 @@ export const medicalTerms = [
       "Hamburg",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} umgibt als Teil der Mundschleimhaut die Zähne und spielt eine zentrale Rolle bei der Abwehr von Bakterien sowie der Stabilisierung der Zahnposition, wobei Entzündungen dieser Struktur ohne adäquate Behandlung zu ernstha",
+    "answer": "Das Zahnfleisch"
   },
   {
     "id": 281,
@@ -10402,7 +10962,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine unbehandelte {BLANK} manifestiert sich durch Rötung, Schwellung und Blutungen des Zahnfleisches und kann, wenn nicht rechtzeitig therapeutisch interveniert wird, zu einer fortschreitenden Parodontitis führen, die das Zahnbett irreversibel schädigt.",
+    "answer": "Zahnfleischentzündung"
   },
   {
     "id": 282,
@@ -10441,7 +11003,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein zentrales Element in der Diagnostik von Erkrankungen wie Glossitis und oralen Karzinomen, da Veränderungen in ihrer Beschaffenheit frühzeitige Indikatoren für pathologische Zustände sein können.",
+    "answer": "Die Zunge"
   },
   {
     "id": 283,
@@ -10478,7 +11042,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Planung von zahnärztlichen Füllungen ist es entscheidend, die {BLANK} Position der Kavitäten genau zu bestimmen, um eine effektive Behandlung der betroffenen Flächen sicherzustellen.",
+    "answer": "zungenwärtige"
   },
   {
     "id": 284,
@@ -10519,7 +11085,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die {BLANK}-Applikation von Nitroglycerin wird bei Angina pectoris eingesetzt, um eine schnelle Absorption und damit eine rasche Linderung der Symptome zu gewährleisten.",
+    "answer": "sublinguale"
   },
   {
     "id": 285,
@@ -10548,7 +11116,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Eine Verkürzung von {BLANK} kann bei Patienten zu Sprech- und Essstörungen führen, weshalb eine frühzeitige Diagnose und gegebenenfalls eine chirurgische Korrektur empfohlen wird.",
+    "answer": "des Zungenbändchens"
   },
   {
     "id": 286,
@@ -10587,7 +11157,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine angeborene oder chirurgisch induzierte Teilung der Zunge in zwei Lappen, die nicht nur ästhetische Bedenken hervorrufen kann, sondern auch potenziell das Sprechen und Schlucken der betroffenen Patienten beeintr",
+    "answer": "der gespaltenen Zunge"
   },
   {
     "id": 287,
@@ -10631,7 +11203,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine abnorme Größe der Zunge, sei sie vergrößert oder verkleinert, kann zu Beeinträchtigungen beim Sprechen, Kauen und Atmen führen und erfordert eine umfassende diagnostische Abklärung sowie eine angepasste therapeutische Intervention durch einen Spe",
+    "answer": "Makroglossie oder Mikroglossie"
   },
   {
     "id": 288,
@@ -10675,7 +11249,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kommt es häufig zu einer schmerzhaften Schwellung der Zunge, die diagnostische Herausforderungen bietet und eine differenzierte Therapie erfordert, um die zugrundeliegenden Ursachen wie Infektionen, Allergien oder Mangelernährung",
+    "answer": "einer Zungenentzündung"
   },
   {
     "id": 289,
@@ -10719,7 +11295,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich durch Symptome wie Rötungen, Schwellungen und Schmerzen der oralen Mukosa und erfordert eine differenzierte Diagnostik zur Identifikation der zugrunde liegenden Ursachen wie Infektionen, Allergien oder mechanische Reizungen, um eine",
+    "answer": "Die Mundschleimhautentzündung"
   },
   {
     "id": 290,
@@ -10757,7 +11335,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} kann ein Indikator für zugrunde liegende gesundheitliche Probleme sein und erfordert eine gründliche Untersuchung der oralen Hygiene sowie eine Bewertung möglicher gastrointestinaler oder systemischer Erkrankungen.",
+    "answer": "Mundgeruch"
   },
   {
     "id": 291,
@@ -10790,7 +11370,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Bei Patienten mit Dysphagie ist eine gründliche Untersuchung von {BLANK} entscheidend, um obstruktive Pathologien oder neuromuskuläre Störungen, die den Schluckvorgang beeinträchtigen, zu identifizieren und entsprechende therapeutische Maßnah",
+    "answer": "dem Rachen"
   },
   {
     "id": 292,
@@ -10834,7 +11416,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich typischerweise durch Halsschmerzen, Rötungen und Schluckbeschwerden und erfordert, insbesondere wenn durch Bakterien verursacht, oft eine gezielte antibiotische Therapie.",
+    "answer": "Die Rachenentzündung"
   },
   {
     "id": 293,
@@ -10877,7 +11461,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die endoskopische Untersuchung von {BLANK} ist entscheidend für die Diagnose und das Management von Erkrankungen wie Achalasie, Ösophagitis und Barrett-Ösophagus.",
+    "answer": "der Speiseröhre"
   },
   {
     "id": 294,
@@ -10918,7 +11504,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf Barrett-Ösophagus oder andere prämaligne Läsionen wird häufig eine {BLANK} durchgeführt, um biopsiegestützte Gewebeproben zu entnehmen und eine adäquate Therapie einzuleiten.",
+    "answer": "Ösophagoskopie"
   },
   {
     "id": 295,
@@ -10962,7 +11550,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} beschreibt das pathologische Zurückfließen von Mageninhalt in die Speiseröhre, das oft durch eine Dysfunktion des unteren Ösophagussphinkters bedingt ist und typischerweise zu Sodbrennen führt, was in der Diagnosestellung der",
+    "answer": "Der Rückfluss"
   },
   {
     "id": 296,
@@ -11005,7 +11595,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine chronische Erkrankung, die durch das regelmäßige Zurückfließen von Magensäure in die Speiseröhre gekennzeichnet ist und aufgrund einer Schwäche des unteren Schließmuskels zu Sodbrennen sowie langfristigen Sch",
+    "answer": "der Magen-Speiseröhren-Refluxkrankheit"
   },
   {
     "id": 297,
@@ -11044,7 +11636,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Diagnostik und Behandlung von Verdauungsstörungen, insbesondere bei der Untersuchung von Gastritis und Magengeschwüren, wo endoskopische Verfahren häufig zur Anwendung kommen.",
+    "answer": "Der Magen"
   },
   {
     "id": 298,
@@ -11088,7 +11682,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Entzündung der Magenschleimhaut kann durch verschiedene Faktoren wie Infektionen, Medikamente oder Stress verursacht werden und äußert sich häufig durch Symptome wie Magenschmerzen, Übelkeit und Erbrechen, wobei {BLANK} unbehandelt zu",
+    "answer": "sie"
   },
   {
     "id": 299,
@@ -11132,7 +11728,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} entsteht oft durch eine Infektion mit Helicobacter pylori oder langfristigen NSAR-Gebrauch und wird üblicherweise mit Antibiotika sowie Medikamenten, die die Magensäureproduktion reduzieren, behandelt.",
+    "answer": "Ein Magengeschwür"
   },
   {
     "id": 300,
@@ -11176,7 +11774,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich häufig durch epigastrische Schmerzen und kann bei Nichtbehandlung zu schweren Komplikationen wie Blutungen oder Perforationen führen, weshalb eine frühzeitige Diagnose und eine angepasste Therapie essenziell sind.",
+    "answer": "Ein Zwölffingerdarmgeschwür"
   },
   {
     "id": 301,
@@ -11216,7 +11816,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist meist ein harmloses Phänomen, kann jedoch bei persistierender und exzessiver Manifestation auf zugrundeliegende gastrointestinale Störungen hinweisen, die eine weiterführende diagnostische Abklärung erfordern.",
+    "answer": "Das Aufstoßen"
   },
   {
     "id": 302,
@@ -11244,7 +11846,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Das unbewusste Einnehmen von Luft während der Nahrungsaufnahme kann zu {BLANK} führen, was sich klinisch durch Symptome wie Blähungen und Völlegefühl manifestiert und diagnostische sowie therapeutische Maßnahmen erfordert.",
+    "answer": "Aerophagie"
   },
   {
     "id": 303,
@@ -11285,7 +11889,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Dysfunktion von {BLANK} kann zu Gastroparese führen, weshalb eine genaue Diagnosestellung mittels Gastroskopie und gegebenenfalls eine Anpassung der Ernährung oder medikamentöse Therapie entscheidend für die Wiederherstellung der",
+    "answer": "dem Magenpförtner"
   },
   {
     "id": 304,
@@ -11321,7 +11927,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig eingesetzt, um durch Einführung eines flexiblen Endoskops via oralis die innere Auskleidung von Speiseröhre, Magen und Duodenum zu inspizieren, wobei sie nicht nur zur Diagnose von Ulzera und Tumoren",
+    "answer": "Die Magenspiegelung"
   },
   {
     "id": 305,
@@ -11356,7 +11964,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig als therapeutische Maßnahme bei fortgeschrittenem Magenkarzinom oder therapieresistenten Ulzera eingesetzt, wobei nach dem Eingriff eine signifikante Anpassung der Ernährungsgewohnheiten erforderlich ist, um die veränd",
+    "answer": "Die Gastrektomie"
   },
   {
     "id": 306,
@@ -11400,7 +12010,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine verzögerte Magenentleerung aufgrund ineffektiver Arbeit der Magenmuskulatur, häufig verursacht durch eine neuropathische Schädigung bei Diabetes, was zu Symptomen wie Übelkeit, Erbrechen und Völlegefühl füh",
+    "answer": "der Magenlähmung"
   },
   {
     "id": 307,
@@ -11441,7 +12053,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Patienten, die aufgrund von schweren Erkrankungen wie Magenkrebs einer totalen Gastrektomie unterzogen wurden, befinden sich in einem {BLANK} Zustand und benötigen eine spezielle Ernährungsberatung sowie angepasste postoperative Betreuung.",
+    "answer": "agastrischen"
   },
   {
     "id": 308,
@@ -11475,7 +12089,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Schmerzen im {BLANK} Bereich des Abdomens können auf Erkrankungen wie Gastritis oder Pankreatitis hinweisen und erfordern eine gründliche diagnostische Abklärung.",
+    "answer": "epigastrischen"
   },
   {
     "id": 309,
@@ -11511,7 +12127,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Diagnostik und Behandlung von hepatischen Erkrankungen wie Hepatitis und Zirrhose, die durch Beeinträchtigungen ihrer Entgiftungsfunktion und Stoffwechselprozesse charakterisiert sind.",
+    "answer": "Die Leber"
   },
   {
     "id": 310,
@@ -11555,7 +12173,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} kann durch verschiedene Ätiologien wie virale Infektionen, Toxine oder Autoimmunreaktionen induziert werden und manifestiert sich häufig durch Symptome wie Abgeschlagenheit, Ikterus sowie Schmerzen im rechten Oberbauch, was eine differenzierte di",
+    "answer": "Die Hepatitis"
   },
   {
     "id": 311,
@@ -11584,7 +12204,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine nicht-entzündliche Störung, die durch Fett- oder Substanzablagerungen in den Hepatozyten charakterisiert wird und häufig aufgrund von Medikamenteneinnahme, Alkoholkonsum oder metabolischen Dysfunktionen auftritt,",
+    "answer": "Die Hepatose"
   },
   {
     "id": 312,
@@ -11613,7 +12235,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "Bei {BLANK} kommt es zu einer übermäßigen Ansammlung von Fett in den Leberzellen, was durch Faktoren wie Alkoholkonsum oder metabolische Störungen begünstigt wird und potenziell zu Entzündungen sowie einer fortschreitenden Fibrose führen",
+    "answer": "der Fettleber"
   },
   {
     "id": 313,
@@ -11653,7 +12277,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine {BLANK} kann durch Tastuntersuchung des Bauches festgestellt werden und sollte zur weiteren Abklärung potenzieller zugrundeliegender Erkrankungen wie Entzündungen, Tumoren oder Stoffwechselerkrankungen führen.",
+    "answer": "eine Lebervergrößerung"
   },
   {
     "id": 314,
@@ -11687,7 +12313,9 @@ export const medicalTerms = [
       "Hamburg",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Bei chronischen Leberschädigungen, wie sie durch anhaltenden Alkoholkonsum oder virale Hepatitiden verursacht werden, kann es zur Entwicklung von {BLANK} kommen, die ohne adäquate Therapie eine fortschreitende Beeinträchtigung der hepatischen Funktionen",
+    "answer": "Leberfibrose"
   },
   {
     "id": 315,
@@ -11716,7 +12344,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei {BLANK} wird das gesunde Lebergewebe durch Narbengewebe ersetzt, was zu einer signifikanten Einschränkung der Entgiftungs-, Proteinproduktions- und Nährstoffverdauungsfunktionen führt und häufig in einem erhöhten portalvenö",
+    "answer": "Leberzirrhose"
   },
   {
     "id": 316,
@@ -11745,7 +12375,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} umfasst ein breites Spektrum an klinischen Zuständen, die von leichten, asymptomatischen Verläufen bis hin zu schwerwiegenden, lebensbedrohlichen Zuständen reichen können, wobei die Diagnose und Therapie jeweils an",
+    "answer": "Die Lebererkrankung"
   },
   {
     "id": 317,
@@ -11783,7 +12415,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Beeinträchtigung der Leberfunktion durch {BLANK} kann zu einer signifikanten Störung im Stoffwechsel und in der Entgiftung des Körpers führen, was eine sorgfältige Überwachung und möglicherweise eine Anpassung der medikamentösen",
+    "answer": "Hepatotoxizität"
   },
   {
     "id": 318,
@@ -11815,7 +12449,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Die Überwachung von Patienten, die Medikamente einnehmen, welche {BLANK} Eigenschaften aufweisen, ist entscheidend, um frühzeitig Anzeichen einer Funktionseinschränkung der Leber zu erkennen und entsprechende therapeutische Maßnahmen einzuleiten.",
+    "answer": "leberschädigende"
   },
   {
     "id": 319,
@@ -11850,7 +12486,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Ansammlung von Flüssigkeit in der Bauchhöhle, oft verursacht durch Leberzirrhose, Herzinsuffizienz oder bestimmte Krebsarten, wird klinisch durch eine sichtbare Schwellung des Abdomens und Symptome wie Blähungen, Appetitlos",
+    "answer": "Aszites"
   },
   {
     "id": 320,
@@ -11890,7 +12528,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich als unwillkürliches, rhythmisches Muskelzittern und tritt häufig bei Patienten mit neurologischen Störungen wie Parkinson auf, wobei es die Feinmotorik signifikant beeinträchtigt und somit die Durchführung alltäglicher",
+    "answer": "Der Tremor"
   },
   {
     "id": 321,
@@ -11927,7 +12567,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine häufige Pathologie der {BLANK} umfasst Cholelithiasis, die zu kolikartigen Schmerzen führen kann und oft eine chirurgische Intervention erforderlich macht.",
+    "answer": "Gallenblase"
   },
   {
     "id": 322,
@@ -11962,7 +12604,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Verengungen oder Blockaden in {BLANK} können zu schmerzhaften Zuständen führen und erfordern oft eine gezielte diagnostische und therapeutische Intervention, um die Funktionstüchtigkeit der betroffenen Struktur wiederherzustellen.",
+    "answer": "Gängen"
   },
   {
     "id": 323,
@@ -11991,7 +12635,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die Verstopfung von {BLANK} kann zu schwerwiegenden gesundheitlichen Problemen führen, weshalb eine frühzeitige Diagnose und gezielte Therapie entscheidend sind.",
+    "answer": "Kanälen"
   },
   {
     "id": 324,
@@ -12025,7 +12671,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird in der Leber produziert und in der Gallenblase gespeichert, wobei deren Rolle bei der Emulgierung von Fetten und die Beteiligung an Erkrankungen wie Gallensteinen und Cholezystitis von besonderer klinischer Bedeutung sind.",
+    "answer": "Die Galle"
   },
   {
     "id": 325,
@@ -12062,7 +12710,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Obstruktion in den {BLANK} kann zu einer Cholestase führen, die durch erhöhte Leberenzyme und Ikterus charakterisiert ist und eine sofortige diagnostische Abklärung erfordert.",
+    "answer": "Lebergängen"
   },
   {
     "id": 326,
@@ -12097,7 +12747,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Blockaden im {BLANK} können zu einer Ansammlung von Galle führen, die klinisch durch Gelbsucht manifestiert wird und eine umgehende diagnostische und therapeutische Intervention erfordert.",
+    "answer": "Ductus hepaticus communis"
   },
   {
     "id": 327,
@@ -12132,7 +12784,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Cholezystektomie muss {BLANK} sorgfältig präpariert werden, um eine Beschädigung zu vermeiden und die Kontinuität des Galleflusses sicherzustellen.",
+    "answer": "der Gallenblasengang"
   },
   {
     "id": 328,
@@ -12167,7 +12821,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Obstruktion in {BLANK} führt häufig zu cholestatischer Gelbsucht, weshalb eine frühzeitige Diagnose und gegebenenfalls eine endoskopische retrograde Cholangiopankreatikographie entscheidend sind, um schwerwiegende Komplikationen",
+    "answer": "dem Gallengang"
   },
   {
     "id": 329,
@@ -12211,7 +12867,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine rechtzeitige Erkennung und Behandlung von {BLANK} ist entscheidend, um schwerwiegende Komplikationen wie Gallenstauung und Leberabszesse zu verhindern, insbesondere bei Patienten, die Symptome wie Gelbsucht, Fieber und Schmer",
+    "answer": "Cholangitis"
   },
   {
     "id": 330,
@@ -12255,7 +12913,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich oft durch Schmerzen im rechten oberen Quadranten, begleitet von Fieber und Übelkeit, und kann eine chirurgische Intervention zur Entfernung des betroffenen Organs erfordern.",
+    "answer": "Die Gallenblasenentzündung"
   },
   {
     "id": 331,
@@ -12284,7 +12944,9 @@ export const medicalTerms = [
     "regions": [
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine maligne Neoplasie der biliären Epithelien, die typischerweise durch spät auftretende Symptome wie Ikterus, abdominale Schmerzen und Gewichtsverlust gekennzeichnet ist und aufgrund der limitierten therapeutischen Optionen eine Heraus",
+    "answer": "Das Gallengangskarzinom"
   },
   {
     "id": 332,
@@ -12318,7 +12980,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} bilden sich in der Gallenblase Konkremente, die kolikartige Schmerzen im rechten Oberbauch, Übelkeit und Verdauungsstörungen auslösen können und potenziell eine Obstruktion der Gallengänge mit nachfolgenden schwerwiegenden Kom",
+    "answer": "Cholelithiasis"
   },
   {
     "id": 333,
@@ -12352,7 +13016,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} bilden sich Konkremente in der Gallenblase, die postprandiale Schmerzen verursachen und zu Entzündungen oder Obstruktionen der Gallenwege führen können, weshalb eine frühzeitige Diagnose und gegebenenfalls eine chirurgische",
+    "answer": "Cholezystolithiasis"
   },
   {
     "id": 334,
@@ -12381,7 +13047,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} führt oft zu einem Rückstau von Galle in die Leber, was durch Obstruktionen der Gallengänge, hepatische Pathologien oder bestimmte pharmakologische Substanzen verursacht werden kann und sich klinisch durch Symptome wie Ikterus, Pruritus und dunk",
+    "answer": "Die Gallenstauung"
   },
   {
     "id": 335,
@@ -12410,7 +13078,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei Patienten mit symptomatischen Gallensteinen oder einer Cholezystitis wird häufig eine {BLANK} durchgeführt, um Komplikationen wie eine Gallenblasenperforation zu verhindern und die Verdauungsfunktion zu verbessern.",
+    "answer": "Cholezystektomie"
   },
   {
     "id": 336,
@@ -12447,7 +13117,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Im {BLANK} befinden sich zentrale Organe wie Magen, Leber und Bauchspeicheldrüse, deren Erkrankungen, darunter Appendizitis und gastrointestinale Störungen, eine sorgfältige Diagnostik und spezifische therapeutische Ansätze er",
+    "answer": "Abdomen"
   },
   {
     "id": 337,
@@ -12483,7 +13155,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Diagnostik und Behandlung von Malabsorptionssyndromen, indem er die Absorption essentieller Nährstoffe ermöglicht und deren Defizite aufdeckt.",
+    "answer": "Der Dünndarm"
   },
   {
     "id": 338,
@@ -12522,7 +13196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist häufig von peptischen Ulzera betroffen, die durch eine übermäßige Säureproduktion verursacht werden und eine gezielte medikamentöse Therapie erfordern.",
+    "answer": "Der Zwölffingerdarm"
   },
   {
     "id": 339,
@@ -12566,7 +13242,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine Entzündung des ersten Abschnitts des Dünndarms direkt hinter dem Magen, bekannt als {BLANK}, kann durch Infektionen oder als Reaktion auf bestimmte Medikamente verursacht werden und äußert sich häufig in Symptomen wie Bauchschmerzen und Verdauungsst",
+    "answer": "Zwölffingerdarmentzündung"
   },
   {
     "id": 340,
@@ -12599,7 +13277,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "In der Gastroenterologie ist die Untersuchung von {BLANK} entscheidend für die Diagnose und Behandlung von Zuständen wie dem Kurzdarmsyndrom, wobei insbesondere die Resektion dieses Darmabschnitts erhebliche Auswirkungen auf die Nährstoff",
+    "answer": "des Leerdarms"
   },
   {
     "id": 341,
@@ -12637,7 +13317,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist der Abschnitt des Dünndarms, der nach dem Jejunum folgt und eine zentrale Rolle in der Absorption von Vitamin B12 und Gallensalzen spielt, wobei Erkrankungen wie Morbus Crohn hier häufig diagnostische und therapeutische Herausforder",
+    "answer": "Das Ileum"
   },
   {
     "id": 342,
@@ -12677,7 +13359,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Diagnose und Behandlung von Erkrankungen wie Colitis ulcerosa und Morbus Crohn, da dieser Abschnitt des Verdauungstrakts maßgeblich an der Resorption von Wasser und Elektrolyten sowie an der Stuhlspeicherung bet",
+    "answer": "Der Dickdarm"
   },
   {
     "id": 343,
@@ -12711,7 +13395,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} ist häufig von Appendizitis und Kolonkarzinomen betroffen, wobei die Diagnosestellung oft durch bildgebende Verfahren und die histopathologische Untersuchung von Biopsien erfolgt.",
+    "answer": "Der aufsteigende Dickdarm"
   },
   {
     "id": 344,
@@ -12740,7 +13426,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle in der Diagnostik und Behandlung von gastrointestinalen Erkrankungen, insbesondere bei der Identifizierung und Therapie von Colitis und Tumoren sowie bei der Bewertung von Symptomen, die durch Gasansammlungen verursacht werden",
+    "answer": "Der Querdarm"
   },
   {
     "id": 345,
@@ -12774,7 +13462,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf eine Divertikulitis wird häufig eine bildgebende Untersuchung des {BLANK} durchgeführt, um Entzündungen oder andere pathologische Veränderungen entlang der linken Seite des Bauchraums zu identifizieren.",
+    "answer": "absteigenden Dickdarms"
   },
   {
     "id": 346,
@@ -12811,7 +13501,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist häufig der Fokus klinischer Untersuchungen, insbesondere bei Verdacht auf Appendizitis, wobei die tatsächliche Entzündung meist den Wurmfortsatz betrifft.",
+    "answer": "Der Blinddarm"
   },
   {
     "id": 347,
@@ -12854,7 +13546,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Im {BLANK} treten häufig Divertikulitiden auf, die durch eine Entzündung der Ausstülpungen der Darmwand gekennzeichnet sind und eine gezielte antibiotische Therapie oder, in schweren Fällen, chirurgische Interventionen erfordern können.",
+    "answer": "im S-förmigen Grimmdarm"
   },
   {
     "id": 348,
@@ -12888,7 +13582,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine maligne Erkrankung des Gastrointestinaltrakts, die durch unkontrolliertes Zellwachstum in der Darmschleimhaut gekennzeichnet ist und sich häufig durch asymptomatische Frühstadien, aber auch durch Symptome wie Veränderungen der",
+    "answer": "Darmkrebs"
   },
   {
     "id": 349,
@@ -12930,7 +13626,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Patienten mit {BLANK} ist eine sorgfältige Diagnosestellung entscheidend, um durch angepasste Therapiemaßnahmen wie Ernährungsumstellung oder operative Interventionen Komplikationen wie Verstopfung und abdominale Schmerzen effektiv zu behandeln.",
+    "answer": "einem Megakolon"
   },
   {
     "id": 350,
@@ -12967,7 +13665,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig zur Früherkennung von Darmkrebs sowie zur Diagnose und Untersuchung von Darmbeschwerden und entzündlichen Darmerkrankungen mittels eines flexiblen Endoskops eingesetzt.",
+    "answer": "Die Dickdarmspiegelung"
   },
   {
     "id": 351,
@@ -13006,7 +13706,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine funktionelle Darmstörung, die sich durch chronische Bauchschmerzen, Blähungen und Veränderungen der Stuhlgewohnheiten manifestiert und häufig mit Stress und Ernährungsfaktoren assoziiert wird, obwohl sie selten zu schwerw",
+    "answer": "Das Reizdarmsyndrom"
   },
   {
     "id": 352,
@@ -13050,7 +13752,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} sind chronische entzündliche Darmerkrankungen, die differenzierte diagnostische Ansätze und langfristige therapeutische Strategien erfordern, um Komplikationen wie Malabsorption und intestinale Obstruktionen zu vermeiden und die Lebensqualität der Patient",
+    "answer": "Colitis ulcerosa und Morbus Crohn"
   },
   {
     "id": 353,
@@ -13084,7 +13788,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle bei der Diagnostik und Behandlung von gastrointestinalen Erkrankungen wie Hämorrhoiden, Rektumkarzinomen und Analfissuren.",
+    "answer": "Der Mastdarm"
   },
   {
     "id": 354,
@@ -13128,7 +13834,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine {BLANK} manifestiert sich oft durch anale Schmerzen, rektale Blutungen und Stuhlunregelmäßigkeiten, wobei die Diagnosestellung durch Anamnese, Inspektion und gegebenenfalls eine Biopsie erfolgt, um die zugrundeliegenden Ursachen",
+    "answer": "Proktitis"
   },
   {
     "id": 355,
@@ -13158,7 +13866,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Bei älteren Patienten kann {BLANK} zu Unbehagen und Inkontinenz führen und erfordert häufig eine chirurgische Intervention zur Wiederherstellung der anatomischen Position des Enddarms.",
+    "answer": "ein Mastdarmvorfall"
   },
   {
     "id": 356,
@@ -13192,7 +13902,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine der führenden Ursachen für krebsbedingte Todesfälle weltweit, wobei frühzeitige Diagnose durch Koloskopie und konsequente Nachsorge entscheidend für die Verbesserung der Überlebensraten sind.",
+    "answer": "Darmkrebs"
   },
   {
     "id": 357,
@@ -13226,7 +13938,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} wird zur Diagnose und Behandlung von Entzündungen, Tumoren oder Hämorrhoiden im Enddarm eingesetzt und ist ein unverzichtbares Instrument in der proktologischen Praxis.",
+    "answer": "Die Enddarmspiegelung"
   },
   {
     "id": 358,
@@ -13266,7 +13980,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} am Ende des Verdauungstraktes spielt eine entscheidende Rolle bei der Diagnose und Behandlung von Inkontinenz, während derjenige zwischen Magen und Speiseröhre zentral für die Untersuchung von Refluxerkrankungen ist.",
+    "answer": "Der Schließmuskel"
   },
   {
     "id": 359,
@@ -13304,7 +14020,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Untersuchung von {BLANK} ist essentiell für die Diagnose und Behandlung von Erkrankungen wie Hämorrhoiden und Analfissuren, die häufig mit Schmerzen und Blutungen einhergehen.",
+    "answer": "des Afters"
   },
   {
     "id": 360,
@@ -13338,7 +14056,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine regelmäßige {BLANK} ist für die Prävention von gastrointestinalen Störungen wie Obstipation und zur Förderung der intestinalen Gesundheit unerlässlich, wobei die Überwachung dieses Vorgangs in klinischen Settings auf mögliche Dysfunktionen im Verdau",
+    "answer": "Stuhlentleerung"
   },
   {
     "id": 361,
@@ -13376,7 +14096,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Analyse von {BLANK} liefert entscheidende diagnostische Informationen bei Verdauungsstörungen, Infektionen und der Früherkennung von Darmkrebs.",
+    "answer": "des Stuhls"
   },
   {
     "id": 362,
@@ -13404,7 +14126,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine pathologische Verbindung zwischen dem Analkanal und der umgebenden Haut, die typischerweise aufgrund eines vorangegangenen Abszesses entsteht und oft eine operative Intervention zur Vermeidung weiterer Komplikationen erfordert.",
+    "answer": "Eine Analfistel"
   },
   {
     "id": 363,
@@ -13433,7 +14157,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um einen schmerzhaften Längsriss der Schleimhaut des Analkanals, der typischerweise durch harten Stuhlgang verursacht wird und oft mittels topischer Salben behandelt oder in schweren Fällen chirurgisch korrigiert",
+    "answer": "einer Analfissur"
   },
   {
     "id": 364,
@@ -13470,7 +14196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} tritt häufig bei Patienten mit chronischer Verstopfung oder erhöhtem intraabdominellem Druck auf und kann Symptome wie Inkontinenz und Blutungen verursachen, weshalb oft eine chirurgische Intervention notwendig ist.",
+    "answer": "Ein Analprolaps"
   },
   {
     "id": 365,
@@ -13507,7 +14235,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Entzündungen oder Infektionen in {BLANK} können die Diagnose von Steißbeinfisteln beeinflussen und erfordern eine spezifische therapeutische Herangehensweise.",
+    "answer": "der Gesäßspalte"
   },
   {
     "id": 366,
@@ -13551,7 +14281,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei Patienten mit nicht funktionstüchtigem natürlichen Darmausgang kann die Anlage eines {BLANK} erforderlich sein, um die Ausscheidungsfunktion zu gewährleisten, insbesondere bei Zuständen wie Darmkrebs oder chronisch entzündlichen Darmerkrankungen",
+    "answer": "eines künstlichen Darmausgangs"
   },
   {
     "id": 367,
@@ -13585,7 +14317,9 @@ export const medicalTerms = [
       "Hamburg",
       "Sachsen",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "{BLANK} ist charakterisiert durch dunkel gefärbten, teerartigen Stuhl, der meist auf eine Blutung im oberen Gastrointestinaltrakt, häufig verursacht durch Magen- oder Zwölffingerdarmgeschwüre, hinweist und eine umgehende di",
+    "answer": "Der Teerstuhl"
   },
   {
     "id": 368,
@@ -13628,7 +14362,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} kann ein Indikator für ernsthafte gastrointestinale Erkrankungen sein und erfordert eine umgehende diagnostische Abklärung, um die Blutungsquelle zu identifizieren und eine zielgerichtete Therapie zu ermöglichen.",
+    "answer": "Blut im Stuhl"
   },
   {
     "id": 369,
@@ -13672,7 +14408,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei einer Vergrößerung oder Entzündung der {BLANK} können Symptome wie Juckreiz, Blutungen und Schmerzen auftreten, die eine gezielte proktologische Behandlung erfordern.",
+    "answer": "Hämorrhoiden"
   },
   {
     "id": 370,
@@ -13712,7 +14450,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Das Erbrechen von Blut kann auf ernsthafte Erkrankungen wie Magengeschwüre, Speiseröhrenvarizen oder eine Gastritis hinweisen und erfordert eine umgehende diagnostische Abklärung, um die Blutungsquelle im oberen Magen-Darm-Trakt zu",
+    "answer": "Hämatemesis"
   },
   {
     "id": 371,
@@ -13752,7 +14492,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei {BLANK} handelt es sich um eine autoimmune Störung, die durch eine Entzündungsreaktion des Immunsystems gegen Gluten in Weizen, Roggen und Gerste charakterisiert ist, was zu einer Schädigung der Darmschleimhaut und einer beeinträchtigten Nährstoffauf",
+    "answer": "Zöliakie"
   },
   {
     "id": 372,
@@ -13782,7 +14524,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "Eine Entzündung des {BLANK} führt häufig zu einer akuten Symptomatik im rechten Unterbauch, die eine sofortige chirurgische Intervention zur Vermeidung von Komplikationen wie Perforation oder Peritonitis erforderlich macht.",
+    "answer": "Wurmfortsatzes"
   },
   {
     "id": 373,
@@ -13826,7 +14570,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Entzündung des Wurmfortsatzes des Blinddarms manifestiert sich häufig durch akute Bauchschmerzen, Fieber und Übelkeit und erfordert aufgrund des Risikos eines Durchbruchs eine umgehende chirurgische Intervention, um schwerwiegendere Komplikationen",
+    "answer": "einer Blinddarmentzündung"
   },
   {
     "id": 374,
@@ -13862,7 +14608,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Entzündung des {BLANK}, bekannt als Appendizitis, erfordert häufig eine chirurgische Entfernung, um lebensbedrohliche Komplikationen wie eine Peritonitis zu vermeiden.",
+    "answer": "Wurmfortsatzes"
   },
   {
     "id": 375,
@@ -13890,7 +14638,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei der Geburt ist eine sorgfältige Überwachung von {BLANK} erforderlich, um rechtzeitig Risse zu erkennen oder prophylaktische Einschnitte vorzunehmen, die zur Vermeidung schwerwiegenderer Verletzungen der Beckenorgane beitragen können.",
+    "answer": ""
   },
   {
     "id": 376,
@@ -13929,7 +14679,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle bei der Diagnose und Behandlung von Peritonitis sowie bei der Durchführung abdomineller chirurgischer Eingriffe, indem es die inneren Organe schützt und deren Beweglichkeit ermöglicht.",
+    "answer": "Das Bauchfell"
   },
   {
     "id": 377,
@@ -13973,7 +14725,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine akute {BLANK} erfordert sofortige diagnostische Maßnahmen wie eine Abdomensonographie und Laboruntersuchungen, gefolgt von einer chirurgischen oder antibiotischen Therapie, um die Ausbreitung der Infektion zu kontrollieren und Organperforationen zu behandeln",
+    "answer": "Bauchfellentzündung"
   },
   {
     "id": 378,
@@ -14016,7 +14770,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Immunabwehr und der Fettspeicherung, während {BLANK} für die optimale Blutversorgung von Leber und Magen essentiell ist, was insbesondere bei chirurgischen Eingriffen in diesen Bereichen von Bedeut",
+    "answer": "Das große Netz, das kleine Netz"
   },
   {
     "id": 379,
@@ -14060,7 +14816,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Durchblutung und Nervenversorgung des Dünndarms hängen wesentlich von der Integrität der {BLANK} ab, deren Schädigung zu schwerwiegenden Verdauungsstörungen führen kann.",
+    "answer": "des Gekröses"
   },
   {
     "id": 380,
@@ -14097,7 +14855,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} ist ein kritischer Faktor in der Diagnostik und Behandlung von hämatologischen Erkrankungen, da es zur Filterung und Eliminierung alter Blutzellen beiträgt und bei Traumata zu lebensbedrohlichen Blutungen führen kann.",
+    "answer": "Die Milz"
   },
   {
     "id": 381,
@@ -14126,7 +14886,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist entscheidend für die Evaluation von Rumpfbeweglichkeit und Stabilität, insbesondere bei der Diagnose und Rehabilitation von Patienten mit Bauchwandhernien oder postoperativen Zuständen.",
+    "answer": "Der gerade Bauchmuskel"
   },
   {
     "id": 382,
@@ -14156,7 +14918,9 @@ export const medicalTerms = [
       "Hessen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Störungen in {BLANK} können zu Symptomen wie Sodbrennen, Blähungen und Durchfall führen, die eine angepasste Ernährung und gegebenenfalls medikamentöse Therapien erfordern.",
+    "answer": "der Verdauung"
   },
   {
     "id": 383,
@@ -14189,7 +14953,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine zentrale Rolle in der Diagnose und Behandlung von metabolischen Erkrankungen wie Diabetes und Hypothyreose, indem er die Basis für das Verständnis der zugrundeliegenden biochemischen Prozesse bietet.",
+    "answer": "Der Stoffwechsel"
   },
   {
     "id": 384,
@@ -14232,7 +14998,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Regeneration von Geweben nach Verletzungen und ist essentiell für die Energiebereitstellung sowie den Aufbau von Muskelmasse im Rahmen rehabilitativer Therapien.",
+    "answer": "Der Anabolismus"
   },
   {
     "id": 385,
@@ -14260,7 +15028,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} spielt eine entscheidende Rolle bei der Energieversorgung der Zellen und ist besonders bei der Unterstützung von Heilungsprozessen sowie bei Zuständen erhöhten metabolischen Bedarfs, wie sie bei bestimmten Erkrankungen vorkommen, von klinischer Bed",
+    "answer": "Der Katabolismus"
   },
   {
     "id": 386,
@@ -14288,7 +15058,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Die unzureichende Aufnahme von Nährstoffen im Dünndarm, verursacht durch Erkrankungen wie Zöliakie, Morbus Crohn oder Pankreasinsuffizienz, erfordert eine genaue Diagnose und gezielte Behandlung der zugrunde liegenden",
+    "answer": "Malabsorption"
   },
   {
     "id": 387,
@@ -14332,7 +15104,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich durch eine Entzündung der Schleimhäute von Magen und Dünndarm, die vorrangig durch virale oder bakterielle Infektionen ausgelöst wird und klinisch durch Symptome wie Bauchschmerzen, Durchfall sowie Übelkeit",
+    "answer": "Die Gastroenteritis"
   },
   {
     "id": 388,
@@ -14376,7 +15150,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 389,
@@ -14420,7 +15196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Die Diagnose von {BLANK} basiert auf klinischen Symptomen wie Bauchschmerzen und Durchfall sowie auf Befunden wie Entzündungsmarkern, wobei die Behandlung je nach Ätiologie Antibiotika, antiinflammatorische Therapien oder diätetische",
+    "answer": "Enterocolitis"
   },
   {
     "id": 390,
@@ -14448,7 +15226,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} ist eine infektiöse Darmerkrankung, die durch starken Durchfall, Bauchkrämpfe und Fieber charakterisiert wird und in Fällen unzureichender medizinischer Versorgung zu schwerer Dehydration und körperlicher Schwächung führen kann.",
+    "answer": "Die Ruhr"
   },
   {
     "id": 391,
@@ -14487,7 +15267,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "тут далі!",
+    "answer": ""
   },
   {
     "id": 392,
@@ -14527,7 +15309,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} tritt häufig als Begleitsymptom bei gastrointestinalen Erkrankungen, als Reaktion auf bestimmte Medikamente oder im Rahmen einer Reisekrankheit auf und erfordert eine differenzierte diagnostische Abklärung zur Identifikation der zugrundeliegenden Ursache.",
+    "answer": "Übelkeit"
   },
   {
     "id": 393,
@@ -14557,7 +15341,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Baden-Württemberg",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 394,
@@ -14599,7 +15385,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Das gewaltsame Ausstoßen von Mageninhalt kann auf Infektionen oder Vergiftungen hinweisen, während {BLANK} gravidarum oft zu Dehydration und signifikantem Gewichtsverlust führt, was eine intensivierte medizinische Überwachung und möglicherweise intr",
+    "answer": "Hyperemesis"
   },
   {
     "id": 395,
@@ -14636,7 +15424,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} manifestiert sich durch drastischen Gewichtsverlust und eine gestörte Selbstwahrnehmung, was ohne adäquate Behandlung zu ernsten Komplikationen wie Herzrhythmusstörungen und Osteoporose führen kann.",
+    "answer": ""
   },
   {
     "id": 396,
@@ -14673,7 +15463,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 397,
@@ -14713,7 +15505,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} tritt häufig als Symptom bei gastrointestinalen Infektionen auf und erfordert eine sorgfältige Diagnose der Ursache sowie Maßnahmen zur Sicherstellung einer adäquaten Hydratation des Patienten.",
+    "answer": "Durchfall"
   },
   {
     "id": 398,
@@ -14754,7 +15548,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 399,
@@ -14788,7 +15584,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 400,
@@ -14830,7 +15628,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 401,
@@ -14874,7 +15674,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 402,
@@ -14908,7 +15710,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 403,
@@ -14948,7 +15752,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Eine gesteigerte Nahrungsaufnahme kann ein Symptom für Diabetes mellitus oder Schilddrüsenstörungen sein und erfordert eine sorgfältige diagnostische Abklärung, um langfristige Gesundheitsschäden durch potenzielle Gewichtszunahme zu",
+    "answer": ""
   },
   {
     "id": 404,
@@ -14978,7 +15784,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 405,
@@ -15021,7 +15829,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 406,
@@ -15064,7 +15874,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "{BLANK} bezeichnet Symptome wie Völlegefühl, Übelkeit und Sodbrennen, die häufig auf unangemessene Ernährungsgewohnheiten, psychischen Stress oder pathologische Zustände des oberen Gastrointestinaltrakts zurückzuführen sind.",
+    "answer": ""
   },
   {
     "id": 407,
@@ -15095,7 +15907,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 408,
@@ -15134,7 +15948,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 409,
@@ -15168,7 +15984,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 410,
@@ -15207,7 +16025,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 411,
@@ -15235,7 +16055,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "{BLANK} wird häufig eingesetzt, um mittels Kontrastmittel die Struktur und Funktionalität der Gallenblase sowie der Gallengänge zu evaluieren, insbesondere bei Verdacht auf Cholelithiasis oder Cholestase.",
+    "answer": ""
   },
   {
     "id": 412,
@@ -15279,7 +16101,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 413,
@@ -15315,7 +16139,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 414,
@@ -15343,7 +16169,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 415,
@@ -15371,7 +16199,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "Bei Verdacht auf {BLANK} ist eine sofortige bildgebende Diagnostik indiziert, um das Ausmaß der Blutung zu bewerten und eine umgehende chirurgische Intervention zu planen.",
+    "answer": ""
   },
   {
     "id": 416,
@@ -15399,7 +16229,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 417,
@@ -15443,7 +16275,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 418,
@@ -15478,7 +16312,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 419,
@@ -15514,7 +16350,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 420,
@@ -15543,7 +16381,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 421,
@@ -15582,7 +16422,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 422,
@@ -15619,7 +16461,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 423,
@@ -15647,7 +16491,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 424,
@@ -15691,7 +16537,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 425,
@@ -15720,7 +16568,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 426,
@@ -15748,7 +16598,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 427,
@@ -15777,7 +16629,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 428,
@@ -15815,7 +16669,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 429,
@@ -15859,7 +16715,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 430,
@@ -15897,7 +16755,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 431,
@@ -15936,7 +16796,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 432,
@@ -15972,7 +16834,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 433,
@@ -16008,7 +16872,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 434,
@@ -16044,7 +16910,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 435,
@@ -16087,7 +16955,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 436,
@@ -16124,7 +16994,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 437,
@@ -16162,7 +17034,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 438,
@@ -16206,7 +17080,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 439,
@@ -16243,7 +17119,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 440,
@@ -16280,7 +17158,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 441,
@@ -16316,7 +17196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 442,
@@ -16352,7 +17234,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 443,
@@ -16388,7 +17272,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 444,
@@ -16417,7 +17303,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 445,
@@ -16453,7 +17341,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 446,
@@ -16489,7 +17379,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 447,
@@ -16525,7 +17417,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "Bei der Untersuchung von {BLANK} ist besondere Aufmerksamkeit geboten, insbesondere bei der Diagnose von Nabel- oder Leistenbrüchen sowie bei der Bewertung von Erkrankungen der Harnblase oder der Geschlechtsorgane.",
+    "answer": ""
   },
   {
     "id": 448,
@@ -16561,7 +17455,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 449,
@@ -16597,7 +17493,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 450,
@@ -16638,7 +17536,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 451,
@@ -16677,7 +17577,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 452,
@@ -16714,7 +17616,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 453,
@@ -16750,7 +17654,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 454,
@@ -16786,7 +17692,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 455,
@@ -16822,7 +17730,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 456,
@@ -16861,7 +17771,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 457,
@@ -16899,7 +17811,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 458,
@@ -16941,7 +17855,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 459,
@@ -16981,7 +17897,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 460,
@@ -17021,7 +17939,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 461,
@@ -17059,7 +17979,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 462,
@@ -17098,7 +18020,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 463,
@@ -17134,7 +18058,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 464,
@@ -17171,7 +18097,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 465,
@@ -17207,7 +18135,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 466,
@@ -17244,7 +18174,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 467,
@@ -17286,7 +18218,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 468,
@@ -17323,7 +18257,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 469,
@@ -17365,7 +18301,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 470,
@@ -17409,7 +18347,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 471,
@@ -17446,7 +18386,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 472,
@@ -17482,7 +18424,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 473,
@@ -17521,7 +18465,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 474,
@@ -17565,7 +18511,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 475,
@@ -17594,7 +18542,9 @@ export const medicalTerms = [
     "regions": [
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 476,
@@ -17625,7 +18575,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 477,
@@ -17664,7 +18616,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 478,
@@ -17708,7 +18662,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 479,
@@ -17737,7 +18693,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 480,
@@ -17781,7 +18739,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 481,
@@ -17821,7 +18781,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 482,
@@ -17864,7 +18826,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 483,
@@ -17907,7 +18871,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 484,
@@ -17951,7 +18917,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 485,
@@ -17994,7 +18962,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 486,
@@ -18035,7 +19005,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 487,
@@ -18078,7 +19050,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 488,
@@ -18121,7 +19095,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 489,
@@ -18164,7 +19140,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 490,
@@ -18207,7 +19185,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 491,
@@ -18250,7 +19230,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 492,
@@ -18282,7 +19264,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 493,
@@ -18320,7 +19304,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 494,
@@ -18358,7 +19344,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 495,
@@ -18402,7 +19390,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 496,
@@ -18430,7 +19420,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 497,
@@ -18474,7 +19466,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 498,
@@ -18510,7 +19504,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 499,
@@ -18553,7 +19549,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 500,
@@ -18582,7 +19580,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 501,
@@ -18611,7 +19611,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 502,
@@ -18650,7 +19652,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 503,
@@ -18687,7 +19691,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 504,
@@ -18731,7 +19737,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 505,
@@ -18768,7 +19776,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 506,
@@ -18809,7 +19819,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 507,
@@ -18840,7 +19852,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 508,
@@ -18868,7 +19882,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 509,
@@ -18907,7 +19923,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 510,
@@ -18946,7 +19964,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 511,
@@ -18984,7 +20004,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 512,
@@ -19026,7 +20048,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 513,
@@ -19056,7 +20080,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 514,
@@ -19085,7 +20111,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 515,
@@ -19121,7 +20149,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 516,
@@ -19157,7 +20187,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 517,
@@ -19200,7 +20232,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 518,
@@ -19229,7 +20263,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 519,
@@ -19257,7 +20293,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 520,
@@ -19290,7 +20328,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 521,
@@ -19319,7 +20359,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 522,
@@ -19348,7 +20390,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 523,
@@ -19392,7 +20436,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 524,
@@ -19426,7 +20472,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 525,
@@ -19456,7 +20504,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 526,
@@ -19484,7 +20534,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 527,
@@ -19525,7 +20577,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 528,
@@ -19563,7 +20617,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 529,
@@ -19601,7 +20657,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 530,
@@ -19634,7 +20692,9 @@ export const medicalTerms = [
       "Hamburg",
       "Sachsen",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 531,
@@ -19672,7 +20732,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 532,
@@ -19708,7 +20770,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 533,
@@ -19737,7 +20801,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 534,
@@ -19776,7 +20842,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 535,
@@ -19812,7 +20880,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 536,
@@ -19841,7 +20911,9 @@ export const medicalTerms = [
     "regions": [
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 537,
@@ -19870,7 +20942,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 538,
@@ -19903,7 +20977,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 539,
@@ -19940,7 +21016,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 540,
@@ -19969,7 +21047,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 541,
@@ -19998,7 +21078,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 542,
@@ -20026,7 +21108,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 543,
@@ -20057,7 +21141,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 544,
@@ -20090,7 +21176,9 @@ export const medicalTerms = [
       "Berlin",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 545,
@@ -20121,7 +21209,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 546,
@@ -20165,7 +21255,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 547,
@@ -20194,7 +21286,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 548,
@@ -20227,7 +21321,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 549,
@@ -20258,7 +21354,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 550,
@@ -20286,7 +21384,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 551,
@@ -20314,7 +21414,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 552,
@@ -20342,7 +21444,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 553,
@@ -20376,7 +21480,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 554,
@@ -20405,7 +21511,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 555,
@@ -20439,7 +21547,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 556,
@@ -20467,7 +21577,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 557,
@@ -20498,7 +21610,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 558,
@@ -20531,7 +21645,9 @@ export const medicalTerms = [
       "Berlin",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 559,
@@ -20568,7 +21684,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 560,
@@ -20612,7 +21730,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 561,
@@ -20641,7 +21761,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 562,
@@ -20670,7 +21792,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 563,
@@ -20709,7 +21833,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 564,
@@ -20744,7 +21870,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 565,
@@ -20774,7 +21902,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 566,
@@ -20802,7 +21932,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 567,
@@ -20845,7 +21977,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 568,
@@ -20887,7 +22021,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 569,
@@ -20929,7 +22065,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 570,
@@ -20972,7 +22110,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 571,
@@ -21015,7 +22155,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 572,
@@ -21058,7 +22200,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 573,
@@ -21098,7 +22242,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 574,
@@ -21138,7 +22284,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 575,
@@ -21178,7 +22326,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 576,
@@ -21212,7 +22362,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 577,
@@ -21249,7 +22401,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 578,
@@ -21285,7 +22439,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 579,
@@ -21329,7 +22485,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 580,
@@ -21368,7 +22526,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 581,
@@ -21406,7 +22566,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 582,
@@ -21443,7 +22605,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 583,
@@ -21481,7 +22645,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 584,
@@ -21517,7 +22683,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 585,
@@ -21556,7 +22724,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 586,
@@ -21599,7 +22769,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 587,
@@ -21635,7 +22807,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 588,
@@ -21672,7 +22846,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 589,
@@ -21711,7 +22887,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 590,
@@ -21739,7 +22917,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 591,
@@ -21782,7 +22962,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 592,
@@ -21811,7 +22993,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 593,
@@ -21851,7 +23035,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 594,
@@ -21879,7 +23065,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 595,
@@ -21915,7 +23103,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 596,
@@ -21945,7 +23135,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 597,
@@ -21983,7 +23175,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 598,
@@ -22012,7 +23206,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 599,
@@ -22040,7 +23236,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 600,
@@ -22071,7 +23269,9 @@ export const medicalTerms = [
       "Berlin",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 601,
@@ -22102,7 +23302,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 602,
@@ -22138,7 +23340,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 603,
@@ -22182,7 +23386,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 604,
@@ -22219,7 +23425,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 605,
@@ -22256,7 +23464,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 606,
@@ -22288,7 +23498,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 607,
@@ -22332,7 +23544,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 608,
@@ -22361,7 +23575,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 609,
@@ -22397,7 +23613,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 610,
@@ -22440,7 +23658,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 611,
@@ -22477,7 +23697,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 612,
@@ -22521,7 +23743,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 613,
@@ -22562,7 +23786,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 614,
@@ -22597,7 +23823,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 615,
@@ -22641,7 +23869,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 616,
@@ -22677,7 +23907,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 617,
@@ -22721,7 +23953,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 618,
@@ -22750,7 +23984,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 619,
@@ -22779,7 +24015,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 620,
@@ -22808,7 +24046,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 621,
@@ -22843,7 +24083,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 622,
@@ -22871,7 +24113,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 623,
@@ -22901,7 +24145,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 624,
@@ -22929,7 +24175,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 625,
@@ -22958,7 +24206,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 626,
@@ -22987,7 +24237,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 627,
@@ -23019,7 +24271,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 628,
@@ -23057,7 +24311,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 629,
@@ -23095,7 +24351,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 630,
@@ -23138,7 +24396,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 631,
@@ -23181,7 +24441,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 632,
@@ -23217,7 +24479,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 633,
@@ -23245,7 +24509,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 634,
@@ -23273,7 +24539,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 635,
@@ -23313,7 +24581,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 636,
@@ -23350,7 +24620,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 637,
@@ -23393,7 +24665,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 638,
@@ -23435,7 +24709,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 639,
@@ -23463,7 +24739,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 640,
@@ -23492,7 +24770,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 641,
@@ -23521,7 +24801,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 642,
@@ -23549,7 +24831,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 643,
@@ -23593,7 +24877,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 644,
@@ -23622,7 +24908,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 645,
@@ -23658,7 +24946,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 646,
@@ -23694,7 +24984,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 647,
@@ -23723,7 +25015,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 648,
@@ -23761,7 +25055,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 649,
@@ -23791,7 +25087,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 650,
@@ -23821,7 +25119,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 651,
@@ -23865,7 +25165,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 652,
@@ -23894,7 +25196,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 653,
@@ -23925,7 +25229,9 @@ export const medicalTerms = [
       "Berlin",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 654,
@@ -23964,7 +25270,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 655,
@@ -24003,7 +25311,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 656,
@@ -24031,7 +25341,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 657,
@@ -24075,7 +25387,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 658,
@@ -24103,7 +25417,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 659,
@@ -24133,7 +25449,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 660,
@@ -24162,7 +25480,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 661,
@@ -24190,7 +25510,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 662,
@@ -24225,7 +25547,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 663,
@@ -24256,7 +25580,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 664,
@@ -24284,7 +25610,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 665,
@@ -24312,7 +25640,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 666,
@@ -24343,7 +25673,9 @@ export const medicalTerms = [
       "Berlin",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 667,
@@ -24385,7 +25717,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 668,
@@ -24424,7 +25758,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 669,
@@ -24458,7 +25794,9 @@ export const medicalTerms = [
       "Sachsen",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 670,
@@ -24502,7 +25840,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 671,
@@ -24540,7 +25880,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 672,
@@ -24577,7 +25919,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 673,
@@ -24608,7 +25952,9 @@ export const medicalTerms = [
       "Berlin",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 674,
@@ -24648,7 +25994,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 675,
@@ -24676,7 +26024,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 676,
@@ -24713,7 +26063,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 677,
@@ -24750,7 +26102,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 678,
@@ -24778,7 +26132,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 679,
@@ -24807,7 +26163,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 680,
@@ -24836,7 +26194,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 681,
@@ -24864,7 +26224,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 682,
@@ -24903,7 +26265,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 683,
@@ -24931,7 +26295,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 684,
@@ -24961,7 +26327,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 685,
@@ -24991,7 +26359,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 686,
@@ -25020,7 +26390,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 687,
@@ -25057,7 +26429,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 688,
@@ -25085,7 +26459,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 689,
@@ -25119,7 +26495,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 690,
@@ -25156,7 +26534,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 691,
@@ -25189,7 +26569,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 692,
@@ -25217,7 +26599,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 693,
@@ -25248,7 +26632,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 694,
@@ -25276,7 +26662,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 695,
@@ -25312,7 +26700,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 696,
@@ -25347,7 +26737,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 697,
@@ -25386,7 +26778,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 698,
@@ -25415,7 +26809,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 699,
@@ -25449,7 +26845,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 700,
@@ -25478,7 +26876,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 701,
@@ -25508,7 +26908,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 702,
@@ -25537,7 +26939,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 703,
@@ -25568,7 +26972,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 704,
@@ -25612,7 +27018,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 705,
@@ -25656,7 +27064,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 706,
@@ -25691,7 +27101,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 707,
@@ -25735,7 +27147,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 708,
@@ -25772,7 +27186,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 709,
@@ -25814,7 +27230,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 710,
@@ -25842,7 +27260,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 711,
@@ -25882,7 +27302,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 712,
@@ -25914,7 +27336,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 713,
@@ -25948,7 +27372,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 714,
@@ -25991,7 +27417,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 715,
@@ -26021,7 +27449,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 716,
@@ -26050,7 +27480,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 717,
@@ -26087,7 +27519,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 718,
@@ -26117,7 +27551,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 719,
@@ -26155,7 +27591,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 720,
@@ -26185,7 +27623,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 721,
@@ -26229,7 +27669,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 722,
@@ -26261,7 +27703,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 723,
@@ -26305,7 +27749,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 724,
@@ -26344,7 +27790,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 725,
@@ -26388,7 +27836,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 726,
@@ -26416,7 +27866,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 727,
@@ -26445,7 +27897,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 728,
@@ -26476,7 +27930,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 729,
@@ -26520,7 +27976,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 730,
@@ -26554,7 +28012,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 731,
@@ -26593,7 +28053,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 732,
@@ -26622,7 +28084,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 733,
@@ -26657,7 +28121,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 734,
@@ -26696,7 +28162,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 735,
@@ -26731,7 +28199,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 736,
@@ -26766,7 +28236,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 737,
@@ -26801,7 +28273,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 738,
@@ -26844,7 +28318,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 739,
@@ -26879,7 +28355,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 740,
@@ -26922,7 +28400,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 741,
@@ -26963,7 +28443,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 742,
@@ -26998,7 +28480,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 743,
@@ -27042,7 +28526,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 744,
@@ -27078,7 +28564,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 745,
@@ -27113,7 +28601,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 746,
@@ -27149,7 +28639,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 747,
@@ -27192,7 +28684,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 748,
@@ -27236,7 +28730,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 749,
@@ -27277,7 +28773,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 750,
@@ -27317,7 +28815,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 751,
@@ -27353,7 +28853,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 752,
@@ -27390,7 +28892,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 753,
@@ -27426,7 +28930,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 754,
@@ -27463,7 +28969,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 755,
@@ -27491,7 +28999,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 756,
@@ -27520,7 +29030,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 757,
@@ -27556,7 +29068,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 758,
@@ -27592,7 +29106,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 759,
@@ -27623,7 +29139,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 760,
@@ -27652,7 +29170,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 761,
@@ -27687,7 +29207,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 762,
@@ -27722,7 +29244,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 763,
@@ -27763,7 +29287,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 764,
@@ -27807,7 +29333,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 765,
@@ -27843,7 +29371,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 766,
@@ -27872,7 +29402,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 767,
@@ -27901,7 +29433,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 768,
@@ -27931,7 +29465,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 769,
@@ -27972,7 +29508,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 770,
@@ -28001,7 +29539,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 771,
@@ -28029,7 +29569,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 772,
@@ -28058,7 +29600,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 773,
@@ -28101,7 +29645,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 774,
@@ -28131,7 +29677,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 775,
@@ -28170,7 +29718,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 776,
@@ -28205,7 +29755,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 777,
@@ -28244,7 +29796,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 778,
@@ -28273,7 +29827,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 779,
@@ -28310,7 +29866,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 780,
@@ -28349,7 +29907,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 781,
@@ -28389,7 +29949,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 782,
@@ -28430,7 +29992,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 783,
@@ -28458,7 +30022,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 784,
@@ -28499,7 +30065,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 785,
@@ -28535,7 +30103,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 786,
@@ -28571,7 +30141,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 787,
@@ -28599,7 +30171,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 788,
@@ -28639,7 +30213,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 789,
@@ -28667,7 +30243,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 790,
@@ -28703,7 +30281,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 791,
@@ -28741,7 +30321,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 792,
@@ -28777,7 +30359,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 793,
@@ -28821,7 +30405,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 794,
@@ -28860,7 +30446,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 795,
@@ -28889,7 +30477,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 796,
@@ -28917,7 +30507,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 797,
@@ -28959,7 +30551,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 798,
@@ -28999,7 +30593,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 799,
@@ -29039,7 +30635,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 800,
@@ -29079,7 +30677,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 801,
@@ -29117,7 +30717,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 802,
@@ -29159,7 +30761,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 803,
@@ -29199,7 +30803,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 804,
@@ -29234,7 +30840,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 805,
@@ -29275,7 +30883,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 806,
@@ -29303,7 +30913,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 807,
@@ -29338,7 +30950,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 808,
@@ -29367,7 +30981,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 809,
@@ -29407,7 +31023,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 810,
@@ -29444,7 +31062,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 811,
@@ -29476,7 +31096,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 812,
@@ -29504,7 +31126,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 813,
@@ -29538,7 +31162,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 814,
@@ -29567,7 +31193,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 815,
@@ -29611,7 +31239,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 816,
@@ -29640,7 +31270,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 817,
@@ -29669,7 +31301,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 818,
@@ -29700,7 +31334,9 @@ export const medicalTerms = [
       "Baden-Württemberg",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 819,
@@ -29740,7 +31376,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 820,
@@ -29769,7 +31407,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 821,
@@ -29799,7 +31439,9 @@ export const medicalTerms = [
       "Hessen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 822,
@@ -29827,7 +31469,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 823,
@@ -29857,7 +31501,9 @@ export const medicalTerms = [
       "Hessen",
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 824,
@@ -29894,7 +31540,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 825,
@@ -29938,7 +31586,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 826,
@@ -29969,7 +31619,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 827,
@@ -30004,7 +31656,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 828,
@@ -30034,7 +31688,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 829,
@@ -30062,7 +31718,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 830,
@@ -30095,7 +31753,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 831,
@@ -30131,7 +31791,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 832,
@@ -30175,7 +31837,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 833,
@@ -30216,7 +31880,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 834,
@@ -30245,7 +31911,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 835,
@@ -30273,7 +31941,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 836,
@@ -30303,7 +31973,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 837,
@@ -30347,7 +32019,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 838,
@@ -30376,7 +32050,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 839,
@@ -30404,7 +32080,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 840,
@@ -30432,7 +32110,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 841,
@@ -30469,7 +32149,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 842,
@@ -30497,7 +32179,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 843,
@@ -30540,7 +32224,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 844,
@@ -30584,7 +32270,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 845,
@@ -30625,7 +32313,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 846,
@@ -30659,7 +32349,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 847,
@@ -30698,7 +32390,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 848,
@@ -30741,7 +32435,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 849,
@@ -30785,7 +32481,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 850,
@@ -30827,7 +32525,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 851,
@@ -30869,7 +32569,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 852,
@@ -30913,7 +32615,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 853,
@@ -30957,7 +32661,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 854,
@@ -30999,7 +32705,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 855,
@@ -31035,7 +32743,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 856,
@@ -31076,7 +32786,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 857,
@@ -31106,7 +32818,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 858,
@@ -31148,7 +32862,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 859,
@@ -31183,7 +32899,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 860,
@@ -31227,7 +32945,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 861,
@@ -31263,7 +32983,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 862,
@@ -31299,7 +33021,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 863,
@@ -31328,7 +33052,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 864,
@@ -31372,7 +33098,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 865,
@@ -31412,7 +33140,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 866,
@@ -31441,7 +33171,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 867,
@@ -31476,7 +33208,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 868,
@@ -31520,7 +33254,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 869,
@@ -31548,7 +33284,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 870,
@@ -31579,7 +33317,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 871,
@@ -31614,7 +33354,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 872,
@@ -31651,7 +33393,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 873,
@@ -31680,7 +33424,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 874,
@@ -31716,7 +33462,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 875,
@@ -31753,7 +33501,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 876,
@@ -31783,7 +33533,9 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 877,
@@ -31827,7 +33579,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 878,
@@ -31864,7 +33618,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 879,
@@ -31902,7 +33658,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 880,
@@ -31946,7 +33704,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 881,
@@ -31990,7 +33750,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 882,
@@ -32032,7 +33794,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 883,
@@ -32070,7 +33834,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 884,
@@ -32099,7 +33865,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 885,
@@ -32143,7 +33911,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 886,
@@ -32187,7 +33957,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 887,
@@ -32215,7 +33987,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 888,
@@ -32246,7 +34020,9 @@ export const medicalTerms = [
       "Baden-Württemberg",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 889,
@@ -32289,7 +34065,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 890,
@@ -32317,7 +34095,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 891,
@@ -32346,7 +34126,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 892,
@@ -32375,7 +34157,9 @@ export const medicalTerms = [
     "regions": [
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 893,
@@ -32404,7 +34188,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 894,
@@ -32432,7 +34218,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 895,
@@ -32461,7 +34249,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 896,
@@ -32489,7 +34279,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 897,
@@ -32517,7 +34309,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 898,
@@ -32545,7 +34339,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 899,
@@ -32573,7 +34369,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 900,
@@ -32610,7 +34408,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 901,
@@ -32653,7 +34453,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 902,
@@ -32690,7 +34492,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 903,
@@ -32727,7 +34531,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 904,
@@ -32768,7 +34574,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 905,
@@ -32812,7 +34620,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 906,
@@ -32843,7 +34653,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 907,
@@ -32887,7 +34699,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 908,
@@ -32918,7 +34732,9 @@ export const medicalTerms = [
       "Baden-Württemberg",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 909,
@@ -32962,7 +34778,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 910,
@@ -32995,7 +34813,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 911,
@@ -33039,7 +34859,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 912,
@@ -33076,7 +34898,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 913,
@@ -33106,7 +34930,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 914,
@@ -33134,7 +34960,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 915,
@@ -33170,7 +34998,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 916,
@@ -33199,7 +35029,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 917,
@@ -33242,7 +35074,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 918,
@@ -33283,7 +35117,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 919,
@@ -33317,7 +35153,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 920,
@@ -33345,7 +35183,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 921,
@@ -33386,7 +35226,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 922,
@@ -33421,7 +35263,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 923,
@@ -33451,7 +35295,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 924,
@@ -33480,7 +35326,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 925,
@@ -33510,7 +35358,9 @@ export const medicalTerms = [
       "Hessen",
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 926,
@@ -33540,7 +35390,9 @@ export const medicalTerms = [
       "Hessen",
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 927,
@@ -33576,7 +35428,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 928,
@@ -33612,7 +35466,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 929,
@@ -33648,7 +35504,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 930,
@@ -33676,7 +35534,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 931,
@@ -33704,7 +35564,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 932,
@@ -33732,7 +35594,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 933,
@@ -33761,7 +35625,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 934,
@@ -33795,7 +35661,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 935,
@@ -33824,7 +35692,9 @@ export const medicalTerms = [
     "regions": [
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 936,
@@ -33854,7 +35724,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 937,
@@ -33888,7 +35760,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 938,
@@ -33916,7 +35790,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 939,
@@ -33944,7 +35820,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 940,
@@ -33972,7 +35850,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 941,
@@ -34003,7 +35883,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 942,
@@ -34032,7 +35914,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 943,
@@ -34073,7 +35957,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 944,
@@ -34107,7 +35993,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 945,
@@ -34138,7 +36026,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 946,
@@ -34168,7 +36058,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 947,
@@ -34199,7 +36091,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 948,
@@ -34236,7 +36130,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 949,
@@ -34275,7 +36171,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 950,
@@ -34314,7 +36212,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 951,
@@ -34357,7 +36257,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 952,
@@ -34399,7 +36301,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 953,
@@ -34427,7 +36331,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 954,
@@ -34457,7 +36363,9 @@ export const medicalTerms = [
       "Nordrhein-Westfalen",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 955,
@@ -34485,7 +36393,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 956,
@@ -34514,7 +36424,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 957,
@@ -34554,7 +36466,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 958,
@@ -34594,7 +36508,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 959,
@@ -34631,7 +36547,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 960,
@@ -34668,7 +36586,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 961,
@@ -34704,7 +36624,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 962,
@@ -34739,7 +36661,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 963,
@@ -34775,7 +36699,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 964,
@@ -34806,7 +36732,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 965,
@@ -34837,7 +36765,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 966,
@@ -34874,7 +36804,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 967,
@@ -34916,7 +36848,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 968,
@@ -34946,7 +36880,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 969,
@@ -34990,7 +36926,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 970,
@@ -35018,7 +36956,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 971,
@@ -35047,7 +36987,9 @@ export const medicalTerms = [
     "regions": [
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 972,
@@ -35085,7 +37027,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 973,
@@ -35121,7 +37065,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 974,
@@ -35157,7 +37103,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 975,
@@ -35197,7 +37145,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 976,
@@ -35240,7 +37190,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 977,
@@ -35283,7 +37235,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 978,
@@ -35319,7 +37273,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 979,
@@ -35355,7 +37311,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 980,
@@ -35391,7 +37349,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 981,
@@ -35427,7 +37387,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 982,
@@ -35463,7 +37425,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 983,
@@ -35499,7 +37463,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 984,
@@ -35540,7 +37506,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 985,
@@ -35581,7 +37549,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 986,
@@ -35612,7 +37582,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 987,
@@ -35648,7 +37620,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 988,
@@ -35676,7 +37650,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 989,
@@ -35707,7 +37683,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 990,
@@ -35744,7 +37722,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 991,
@@ -35784,7 +37764,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 992,
@@ -35812,7 +37794,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 993,
@@ -35849,7 +37833,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 994,
@@ -35893,7 +37879,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 995,
@@ -35922,7 +37910,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 996,
@@ -35951,7 +37941,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 997,
@@ -35993,7 +37985,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 998,
@@ -36037,7 +38031,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 999,
@@ -36073,7 +38069,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1000,
@@ -36102,7 +38100,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1001,
@@ -36137,7 +38137,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1002,
@@ -36181,7 +38183,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1003,
@@ -36225,7 +38229,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1004,
@@ -36262,7 +38268,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1005,
@@ -36306,7 +38314,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1006,
@@ -36335,7 +38345,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1007,
@@ -36364,7 +38376,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1008,
@@ -36398,7 +38412,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1009,
@@ -36429,7 +38445,9 @@ export const medicalTerms = [
       "Berlin",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1010,
@@ -36457,7 +38475,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1011,
@@ -36485,7 +38505,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1012,
@@ -36521,7 +38543,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1013,
@@ -36565,7 +38589,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1014,
@@ -36601,7 +38627,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1015,
@@ -36637,7 +38665,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1016,
@@ -36667,7 +38697,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1017,
@@ -36701,7 +38733,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1018,
@@ -36731,7 +38765,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1019,
@@ -36760,7 +38796,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1020,
@@ -36804,7 +38842,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1021,
@@ -36848,7 +38888,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1022,
@@ -36880,7 +38922,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1023,
@@ -36908,7 +38952,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1024,
@@ -36938,7 +38984,9 @@ export const medicalTerms = [
       "Hessen",
       "Nordrhein-Westfalen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1025,
@@ -36975,7 +39023,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1026,
@@ -37005,7 +39055,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1027,
@@ -37034,7 +39086,9 @@ export const medicalTerms = [
     "regions": [
       "Berlin",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1028,
@@ -37064,7 +39118,9 @@ export const medicalTerms = [
       "Hessen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1029,
@@ -37108,7 +39164,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1030,
@@ -37138,7 +39196,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Hamburg",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1031,
@@ -37182,7 +39242,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1032,
@@ -37226,7 +39288,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1033,
@@ -37255,7 +39319,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1034,
@@ -37289,7 +39355,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1035,
@@ -37317,7 +39385,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1036,
@@ -37361,7 +39431,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1037,
@@ -37390,7 +39462,9 @@ export const medicalTerms = [
     "regions": [
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1038,
@@ -37429,7 +39503,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1039,
@@ -37469,7 +39545,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1040,
@@ -37497,7 +39575,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1041,
@@ -37535,7 +39615,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1042,
@@ -37571,7 +39653,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1043,
@@ -37611,7 +39695,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1044,
@@ -37649,7 +39735,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1045,
@@ -37677,7 +39765,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1046,
@@ -37710,7 +39800,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1047,
@@ -37746,7 +39838,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1048,
@@ -37790,7 +39884,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1049,
@@ -37827,7 +39923,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1050,
@@ -37871,7 +39969,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1051,
@@ -37906,7 +40006,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1052,
@@ -37935,7 +40037,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Hamburg"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1053,
@@ -37970,7 +40074,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1054,
@@ -38001,7 +40107,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1055,
@@ -38030,7 +40138,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1056,
@@ -38065,7 +40175,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1057,
@@ -38108,7 +40220,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1058,
@@ -38152,7 +40266,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1059,
@@ -38193,7 +40309,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1060,
@@ -38233,7 +40351,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1061,
@@ -38270,7 +40390,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1062,
@@ -38299,7 +40421,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1063,
@@ -38339,7 +40463,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1064,
@@ -38379,7 +40505,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1065,
@@ -38419,7 +40547,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1066,
@@ -38455,7 +40585,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1067,
@@ -38490,7 +40622,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1068,
@@ -38530,7 +40664,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1069,
@@ -38574,7 +40710,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1070,
@@ -38610,7 +40748,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1071,
@@ -38647,7 +40787,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1072,
@@ -38679,7 +40821,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1073,
@@ -38713,7 +40857,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1074,
@@ -38748,7 +40894,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1075,
@@ -38784,7 +40932,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1076,
@@ -38825,7 +40975,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1077,
@@ -38855,7 +41007,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1078,
@@ -38892,7 +41046,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1079,
@@ -38929,7 +41085,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1080,
@@ -38959,7 +41117,9 @@ export const medicalTerms = [
       "Hessen",
       "Baden-Württemberg",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1081,
@@ -38990,7 +41150,9 @@ export const medicalTerms = [
       "Rheinland-Pfalz",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1082,
@@ -39033,7 +41195,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1083,
@@ -39061,7 +41225,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1084,
@@ -39092,7 +41258,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1085,
@@ -39120,7 +41288,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1086,
@@ -39160,7 +41330,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1087,
@@ -39196,7 +41368,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1088,
@@ -39238,7 +41412,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1089,
@@ -39269,7 +41445,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1090,
@@ -39300,7 +41478,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1091,
@@ -39329,7 +41509,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1092,
@@ -39358,7 +41540,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1093,
@@ -39398,7 +41582,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1094,
@@ -39438,7 +41624,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1095,
@@ -39478,7 +41666,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1096,
@@ -39515,7 +41705,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1097,
@@ -39550,7 +41742,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1098,
@@ -39590,7 +41784,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1099,
@@ -39634,7 +41830,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1100,
@@ -39671,7 +41869,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1101,
@@ -39708,7 +41908,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1102,
@@ -39740,7 +41942,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1103,
@@ -39774,7 +41978,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1104,
@@ -39809,7 +42015,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1105,
@@ -39845,7 +42053,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1106,
@@ -39879,7 +42089,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1107,
@@ -39920,7 +42132,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1108,
@@ -39950,7 +42164,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1109,
@@ -39987,7 +42203,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1110,
@@ -40024,7 +42242,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1111,
@@ -40054,7 +42274,9 @@ export const medicalTerms = [
       "Hessen",
       "Baden-Württemberg",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1112,
@@ -40094,7 +42316,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1113,
@@ -40137,7 +42361,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1114,
@@ -40165,7 +42391,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1115,
@@ -40196,7 +42424,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1116,
@@ -40224,7 +42454,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1117,
@@ -40264,7 +42496,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1118,
@@ -40294,7 +42528,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1119,
@@ -40325,7 +42561,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1120,
@@ -40356,7 +42594,9 @@ export const medicalTerms = [
       "Bayern",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1121,
@@ -40387,7 +42627,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1122,
@@ -40427,7 +42669,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1123,
@@ -40467,7 +42711,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1124,
@@ -40509,7 +42755,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1125,
@@ -40537,7 +42785,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1126,
@@ -40565,7 +42815,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1127,
@@ -40605,7 +42857,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1128,
@@ -40645,7 +42899,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1129,
@@ -40689,7 +42945,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1130,
@@ -40723,7 +42981,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1131,
@@ -40763,7 +43023,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1132,
@@ -40797,7 +43059,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1133,
@@ -40841,7 +43105,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1134,
@@ -40885,7 +43151,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1135,
@@ -40928,7 +43196,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1136,
@@ -40961,7 +43231,9 @@ export const medicalTerms = [
       "Mecklenburg Vorpommern",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1137,
@@ -40997,7 +43269,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1138,
@@ -41025,7 +43299,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1139,
@@ -41054,7 +43330,9 @@ export const medicalTerms = [
     "regions": [
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1140,
@@ -41094,7 +43372,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1141,
@@ -41135,7 +43415,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1142,
@@ -41172,7 +43454,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1143,
@@ -41216,7 +43500,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1144,
@@ -41250,7 +43536,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1145,
@@ -41280,7 +43568,9 @@ export const medicalTerms = [
       "Niedersachsen",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1146,
@@ -41314,7 +43604,9 @@ export const medicalTerms = [
       "Sachsen",
       "Sachsen-Anhalt",
       "Schleswig-Holstein"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1147,
@@ -41352,7 +43644,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1148,
@@ -41381,7 +43675,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1149,
@@ -41409,7 +43705,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1150,
@@ -41446,7 +43744,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1151,
@@ -41484,7 +43784,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1152,
@@ -41521,7 +43823,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1153,
@@ -41558,7 +43862,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1154,
@@ -41598,7 +43904,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1155,
@@ -41642,7 +43950,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1156,
@@ -41670,7 +43980,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1157,
@@ -41698,7 +44010,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1158,
@@ -41734,7 +44048,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1159,
@@ -41772,7 +44088,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1160,
@@ -41801,7 +44119,9 @@ export const medicalTerms = [
     "regions": [
       "Bayern",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1161,
@@ -41831,7 +44151,9 @@ export const medicalTerms = [
       "Bayern",
       "Niedersachsen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1162,
@@ -41873,7 +44195,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1163,
@@ -41913,7 +44237,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1164,
@@ -41957,7 +44283,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1165,
@@ -41993,7 +44321,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1166,
@@ -42037,7 +44367,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1167,
@@ -42073,7 +44405,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1168,
@@ -42109,7 +44443,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1169,
@@ -42145,7 +44481,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1170,
@@ -42182,7 +44520,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1171,
@@ -42211,7 +44551,9 @@ export const medicalTerms = [
     "regions": [
       "Baden-Württemberg",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1172,
@@ -42247,7 +44589,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1173,
@@ -42282,7 +44626,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1174,
@@ -42318,7 +44664,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1175,
@@ -42356,7 +44704,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1176,
@@ -42396,7 +44746,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1177,
@@ -42432,7 +44784,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1178,
@@ -42460,7 +44814,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1179,
@@ -42496,7 +44852,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1180,
@@ -42527,7 +44885,9 @@ export const medicalTerms = [
       "Baden-Württemberg",
       "Rheinland-Pfalz",
       "Mecklenburg Vorpommern"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1181,
@@ -42555,7 +44915,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1182,
@@ -42595,7 +44957,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1183,
@@ -42623,7 +44987,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1184,
@@ -42651,7 +45017,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1185,
@@ -42679,7 +45047,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1186,
@@ -42708,7 +45078,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1187,
@@ -42736,7 +45108,9 @@ export const medicalTerms = [
     ],
     "regions": [
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1188,
@@ -42774,7 +45148,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1189,
@@ -42803,7 +45179,9 @@ export const medicalTerms = [
     "regions": [
       "Hessen",
       "Rheinland-Pfalz"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1190,
@@ -42839,7 +45217,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1191,
@@ -42875,7 +45255,9 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
+    ],
+    "sentence": "",
+    "answer": ""
   },
   {
     "id": 1192,
@@ -42910,6214 +45292,8 @@ export const medicalTerms = [
       "Saarland",
       "Schleswig-Holstein",
       "Thüringen"
-    ]
-  },
-  {
-    "id": 1193,
-    "lat": "Deszendens",
-    "de": "absteigend",
-    "en": "Descending",
-    "uk": "Низхідний",
-    "ru": "Нисходящий",
-    "pl": "Zstępujący",
-    "es": "Descendente",
-    "fr": "Descendant",
-    "tr": "Alçalan",
-    "ar": "نازل",
-    "deExplanation": "In medizinischem Kontext beschreibt 'deszendens' oft die Richtung oder Lage einer Struktur, die nach unten verläuft oder sich nach unten bewegt. Zum Beispiel in der Anatomie könnte es sich auf einen absteigenden Teil eines Nerven, Gefäßes oder Muskels beziehen. Es ist ein vergleichender Begriff zur Bestimmung der Position oder Bewegungsrichtung.",
-    "enExplanation": "Descending refers to structures or processes moving downwards or towards the feet, like the descending aorta.",
-    "ukExplanation": "Десценденс відноситься до структур або процесів, які проходять вниз або в напрямку до ніг, як наприклад низхідна аорта.",
-    "ruExplanation": "Десценденс относится к структурам или процессам, идущим вниз или в направлении к ногам, как, например, нисходящая аорта.",
-    "esExplanation": "\"Descendente\" se refiere a estructuras o procesos que se mueven hacia abajo o hacia los pies, como la aorta descendente.",
-    "frExplanation": "Deszendens bezieht sich auf Strukturen oder Prozesse, die nach unten oder in Richtung der Füße verlaufen, wie die absteigende Aorta.",
-    "plExplanation": "\"Deszendens\" odnosi się do struktur lub procesów, które przebiegają w dół lub w kierunku stóp, jak zstępująca aorta.",
-    "trExplanation": "Deszendens, aşağıya veya ayaklara doğru ilerleyen yapıları veya süreçleri ifade eder, örneğin alçalan aort gibi.",
-    "arExplanation": "\"النازل\" يشير إلى الهياكل أو العمليات التي تتحرك للأسفل أو باتجاه القدمين، مثل الأبهر النازل.",
-    "categories": [
-      "Richtung und Bewegung"
     ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1194,
-    "lat": "Dextra",
-    "de": "rechts",
-    "en": "Right",
-    "uk": "Правий",
-    "ru": "Правый",
-    "pl": "Prawy",
-    "es": "Derecha",
-    "fr": "Droit",
-    "tr": "Sağ",
-    "ar": "يمين",
-    "deExplanation": "In der medizinischen Terminologie bezieht sich 'Dextra' auf die rechte Seite des Körpers oder eine Struktur auf der rechten Körperhälfte. Dies kann wichtig sein für die Zuordnung von Symptomen oder bei der Durchführung von medizinischen Prozeduren, um Seitenverwechslungen zu vermeiden.",
-    "enExplanation": "Dextra refers to the right side of the body or a movement towards the right side.",
-    "ukExplanation": "Декстра відноситься до правої сторони тіла або руху до правої сторони.",
-    "ruExplanation": "Декстра относится к правой стороне тела или движению к правой стороне.",
-    "esExplanation": "\"Dextra\" se refiere al lado derecho del cuerpo o un movimiento hacia el lado derecho.",
-    "frExplanation": "Dextra bezieht sich auf die rechte Seite des Körpers oder eine Bewegung zur rechten Seite hin.",
-    "plExplanation": "\"Dextra\" odnosi się do prawej strony ciała lub ruchu w kierunku prawej strony.",
-    "trExplanation": "Dextra, vücudun sağ tarafına veya sağa doğru bir harekete atıfta bulunur.",
-    "arExplanation": "\"اليمين\" يشير إلى الجانب الأيمن من الجسم أو الحركة باتجاه الجانب الأيمن.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1195,
-    "lat": "Sinistra",
-    "de": "links",
-    "en": "Left",
-    "uk": "Лівий",
-    "ru": "Левый",
-    "pl": "Lewy",
-    "es": "Izquierda",
-    "fr": "Gauche",
-    "tr": "Sol",
-    "ar": "يسار",
-    "deExplanation": "In der Medizin wird 'links' verwendet, um die Lage oder Position eines Organs oder einer Struktur in Beziehung zur Mitte des Körpers zu beschreiben. Es ist wichtig in der medizinischen Dokumentation und Kommunikation, um Klarheit über die betroffene Seite des Körpers zu gewährleisten.",
-    "enExplanation": "Sinistra refers to the left side of the body or a movement towards the left side.",
-    "ukExplanation": "Сіністра відноситься до лівої сторони тіла або руху до лівої сторони.",
-    "ruExplanation": "Синистра относится к левой стороне тела или движению к левой стороне.",
-    "esExplanation": "\"Sinistra\" se refiere al lado izquierdo del cuerpo o un movimiento hacia el lado izquierdo.",
-    "frExplanation": "Sinistra bezieht sich auf die linke Seite des Körpers oder eine Bewegung zur linken Seite hin.",
-    "plExplanation": "\"Sinistra\" odnosi się do lewej strony ciała lub ruchu w kierunku lewej strony.",
-    "trExplanation": "Sinistra, vücudun sol tarafına veya sola doğru bir harekete atıfta bulunur.",
-    "arExplanation": "\"اليسار\" يشير إلى الجانب الأيسر من الجسم أو الحركة باتجاه الجانب الأيسر.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1196,
-    "lat": "Unilateral",
-    "de": "einseitig",
-    "en": "Unilateral",
-    "uk": "Однобічний",
-    "ru": "Односторонний",
-    "pl": "Jednostronny",
-    "es": "Unilateral",
-    "fr": "Unilatéral",
-    "tr": "Tek taraflı",
-    "ar": "أحادي الجانب",
-    "deExplanation": "Bezieht sich auf eine Struktur oder Funktion, die nur auf einer Seite des Körpers vorhanden ist oder abläuft. Klinisch kann dies z. B. bei einseitigen Schmerzen oder Symptome von Bedeutung sein, die nur an einem Körperteil oder einer Seite auftreten.",
-    "enExplanation": "Unilateral means that something is located or affects only one side of the body, like unilateral swelling.",
-    "ukExplanation": "Унілатеральний означає, що щось знаходиться або впливає лише на одну сторону тіла, як наприклад унілатеральне набрякання.",
-    "ruExplanation": "Унилатеральный означает, что что-то находится или влияет только на одну сторону тела, как, например, унилатеральное отекание.",
-    "esExplanation": "\"Unilateral\" significa que algo está o afecta solo un lado del cuerpo, como una hinchazón unilateral.",
-    "frExplanation": "Unilateral bedeutet, dass sich etwas auf nur einer Seite des Körpers befindet oder betrifft, wie z.B. eine unilaterale Schwellung.",
-    "plExplanation": "\"Unilateralny\" oznacza, że coś znajduje się lub dotyczy tylko jednej strony ciała, jak np. unilateralne obrzęki.",
-    "trExplanation": "Unilateral, bir şeyin sadece vücudun bir tarafında bulunduğu veya etkilediği anlamına gelir, örneğin unilateral şişlik.",
-    "arExplanation": "\"أحادي الجانب\" يعني أن شيئًا ما يوجد أو يؤثر على جانب واحد فقط من الجسم، مثل التورم الأحادي.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1197,
-    "lat": "Bilateral",
-    "de": "beidseitig",
-    "en": "Bilateral",
-    "uk": "Двобічний",
-    "ru": "Двусторонний",
-    "pl": "Dwustronny",
-    "es": "Bilateral",
-    "fr": "Bilatéral",
-    "tr": "Çift taraflı",
-    "ar": "ثنائي الجانب",
-    "deExplanation": "Der Begriff beschreibt eine Symmetrie oder das Vorkommen eines Merkmals oder einer Erkrankung auf beiden Seiten des Körpers. Dies kann sich auf Organe, Strukturen oder Symptome beziehen, die an beiden Körperhälften gleichermaßen auftreten. Klinisch ist es relevant bei der Diagnosestellung, um die Ausdehnung oder das Muster einer Erkrankung zu erkennen.",
-    "enExplanation": "Bilateral means that something is located or affects both sides of the body, like bilateral symptoms.",
-    "ukExplanation": "Білатеральний означає, що щось знаходиться або впливає на обидві сторони тіла, як, наприклад, білатеральні симптоми.",
-    "ruExplanation": "Билатеральный означает, что что-то находится или влияет на обе стороны тела, как, например, билатеральные симптомы.",
-    "esExplanation": "\"Bilateral\" significa que algo está o afecta ambos lados del cuerpo, como síntomas bilaterales.",
-    "frExplanation": "Bilateral bedeutet, dass sich etwas auf beiden Seiten des Körpers befindet oder betrifft, wie z.B. bilaterale Symptome.",
-    "plExplanation": "\"Bilateralny\" oznacza, że coś znajduje się lub dotyczy obu stron ciała, jak np. objawy po obu stronach ciała.",
-    "trExplanation": "Bilateral, bir şeyin vücudun her iki tarafında bulunduğu veya etkilediği anlamına gelir, örneğin bilateral belirtiler.",
-    "arExplanation": "\"ثنائي الجانب\" يعني أن شيئًا ما يوجد أو يؤثر على كلا الجانبين من الجسم، مثل الأعراض الثنائية.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1198,
-    "lat": "Intern",
-    "de": "innerhalb",
-    "en": "Internal",
-    "uk": "Внутрішній",
-    "ru": "Внутренний",
-    "pl": "Wewnętrzny",
-    "es": "Interno",
-    "fr": "Interne",
-    "tr": "İç",
-    "ar": "داخلي",
-    "deExplanation": "Der Begriff 'innerhalb' beschreibt eine Lagebeziehung, bei der sich eine Struktur im Körperinneren befindet und nicht unmittelbar an der Oberfläche. Er wird häufig in der Medizin verwendet, um die Lage von Organen oder Gewebeebenen zu beschreiben.",
-    "enExplanation": "Internal refers to structures or processes occurring inside the body, like internal organs.",
-    "ukExplanation": "Інтерн відноситься до структур або процесів, які відбуваються всередині тіла, як внутрішні органи.",
-    "ruExplanation": "Интерн относится к структурам или процессам, происходящим внутри тела, как внутренние органы.",
-    "esExplanation": "\"Interno\" se refiere a estructuras o procesos que ocurren dentro del cuerpo, como órganos internos.",
-    "frExplanation": "Intern bezieht sich auf Strukturen oder Prozesse, die im Inneren des Körpers stattfinden, wie interne Organe.",
-    "plExplanation": "\"Wewnętrzny\" odnosi się do struktur lub procesów, które zachodzą wewnątrz ciała, jak organy wewnętrzne.",
-    "trExplanation": "İntern, vücudun içinde gerçekleşen yapıları veya süreçleri ifade eder, örneğin iç organlar.",
-    "arExplanation": "\"داخلي\" يشير إلى الهياكل أو العمليات التي تحدث داخل الجسم، مثل الأعضاء الداخلية.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1199,
-    "lat": "Extern",
-    "de": "äußerlich",
-    "en": "External",
-    "uk": "Зовнішній",
-    "ru": "Внешний",
-    "pl": "Zewnętrzny",
-    "es": "Externo",
-    "fr": "Externe",
-    "tr": "Dış",
-    "ar": "خارجي",
-    "deExplanation": "Der Begriff 'äußerlich' bezieht sich auf die Lage oder den Standort von Strukturen oder Vorgängen, die sich an der Außenseite oder der Oberfläche eines Organs, Gewebes oder des Körpers befinden. Klinisch wichtig bei der Diagnose und Behandlung von Hauterkrankungen oder Verletzungen, die an der Körperoberfläche auftreten.",
-    "enExplanation": "External refers to structures or processes occurring outside the body, like external wounds.",
-    "ukExplanation": "Екстерн відноситься до структур або процесів, які відбуваються зовні тіла, як зовнішні рани.",
-    "ruExplanation": "Экстерн относится к структурам или процессам, происходящим снаружи тела, как внешние раны.",
-    "esExplanation": "\"Externo\" se refiere a estructuras o procesos que ocurren fuera del cuerpo, como heridas externas.",
-    "frExplanation": "Extern bezieht sich auf Strukturen oder Prozesse, die außerhalb des Körpers stattfinden, wie externe Wunden.",
-    "plExplanation": "\"Zewnętrzny\" odnosi się do struktur lub procesów, które zachodzą na zewnątrz ciała, jak rany zewnętrzne.",
-    "trExplanation": "Ekstern, vücut dışında gerçekleşen yapıları veya süreçleri ifade eder, örneğin dış yaralar.",
-    "arExplanation": "\"خارجي\" يشير إلى الهياكل أو العمليات التي تحدث خارج الجسم، مثل الجروح الخارجية.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1200,
-    "lat": "Inklinieren",
-    "de": "das Neigen",
-    "en": "To Incline",
-    "uk": "Нахиляти",
-    "ru": "Наклонять",
-    "pl": "Pochylać",
-    "es": "Inclinar",
-    "fr": "Incliner",
-    "tr": "Eğmek",
-    "ar": "الميل",
-    "deExplanation": "Der Begriff bezieht sich auf das Beugen oder Neigen einer Struktur, oft in Bezug auf die Wirbelsäule, wo er die Bewegung beschreibt, bei der ein Teil der Wirbelsäule nach vorne geneigt wird. Dies kann in klinischen Tests zur Beurteilung der Beweglichkeit und Funktion der Wirbelsäule relevant sein.",
-    "enExplanation": "Inclination refers to the tilting or bending of a body part or structure in a certain direction.",
-    "ukExplanation": "Інклінування відноситься до нахилу або згину частини тіла або структури у певному напрямку.",
-    "ruExplanation": "Инклинирование относится к наклону или сгибанию части тела или структуры в определённом направлении.",
-    "esExplanation": "\"Inclinar\" se refiere a inclinar o doblar una parte del cuerpo o una estructura en una dirección específica.",
-    "frExplanation": "Inklinieren bezieht sich auf das Neigen oder Beugen eines Körperteils oder einer Struktur in eine bestimmte Richtung.",
-    "plExplanation": "\"Inklinacja\" odnosi się do pochylania lub zginania części ciała lub struktury w określonym kierunku.",
-    "trExplanation": "İnkline etmek, bir vücut parçasını veya yapısını belirli bir yöne eğme veya büke işlemine atıfta bulunur.",
-    "arExplanation": "\"الميل\" يشير إلى ميلان أو ثني جزء من الجسم أو هيكل في اتجاه معين.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1201,
-    "lat": "Reklinieren",
-    "de": "Zurücklehnen",
-    "en": "To Recline",
-    "uk": "Відхилятися назад",
-    "ru": "Отклоняться назад",
-    "pl": "Odpoczywać",
-    "es": "Reclinar",
-    "fr": "S'incliner",
-    "tr": "Yatmak",
-    "ar": "الاستلقاء",
-    "deExplanation": "Der Akt des Reklinierens beschreibt das Zurücklehnen oder Zurückbeugen des Körpers oder eines Körperteils, insbesondere des Kopfes oder des Oberkörpers. Dies kann sowohl passiv als auch aktiv geschehen und wird häufig in medizinischen Kontexten verwendet, um eine bestimmte Körperhaltung oder Position während einer Untersuchung oder Behandlung zu beschreiben. Klinisch wichtig ist das Reklinieren des Kopfes bei bestimmten medizinischen Verfahren, wie zum Beispiel bei der Untersuchung der Halswirbelsäule oder zur Verbesserung der Atemwege in bestimmten Notsituationen.",
-    "enExplanation": "Reclination refers to the backward tilting or bending of a body part or structure to its original or an upright position.",
-    "ukExplanation": "Реклінування відноситься до відхилення назад або згину частини тіла або структури у вихідне або пряме положення.",
-    "ruExplanation": "Реклинирование относится к отклонению назад или сгибанию части тела или структуры в исходное или прямое положение.",
-    "esExplanation": "\"Reclinar\" se refiere a inclinar hacia atrás o doblar hacia atrás una parte del cuerpo o una estructura a la posición inicial o erguida.",
-    "frExplanation": "Reklinieren bezieht sich auf das Zurückneigen oder Zurückbiegen eines Körperteils oder einer Struktur in die Ausgangs- oder eine aufrechte Position.",
-    "plExplanation": "\"Reklinacja\" odnosi się do odchylania do tyłu lub wyprostu części ciała lub struktury do pozycji wyjściowej lub pionowej.",
-    "trExplanation": "Rekline etmek, bir vücut parçasını veya yapısını başlangıç veya dik bir pozisyona geri eğme veya büke işlemine atıfta bulunur.",
-    "arExplanation": "\"الإرجاع\" يشير إلى إمالة أو ثني جزء من الجسم أو هيكل للخلف إلى وضع البداية أو الوضع المستقيم.",
-    "categories": [
-      "Richtung und Bewegung"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1202,
-    "lat": "Systema nervosum centrale (das)",
-    "de": "das zentrale Nervensystem",
-    "en": "Central Nervous System",
-    "uk": "Центральна нервова система",
-    "ru": "Центральная нервная система",
-    "pl": "Układ nerwowy centralny",
-    "es": "Sistema nervioso central",
-    "fr": "Système nerveux central",
-    "tr": "Merkezi sinir sistemi",
-    "ar": "الجهاز العصبي المركزي",
-    "deExplanation": "Das zentrale Nervensystem besteht aus Gehirn und Rückenmark und ist verantwortlich für die Verarbeitung und Weiterleitung von Informationen im Körper. Es steuert alle körperlichen Funktionen und ist wesentlich für das Denken, Fühlen und die Koordination von Bewegungen.",
-    "enExplanation": "The CNS consists of the brain and spinal cord and is responsible for processing sensory information and executing higher brain functions.",
-    "ukExplanation": "Центральна нервова система: включає мозок і спинний мозок, відповідає за обробку сенсорної інформації та виконання вищих мозкових функцій.",
-    "ruExplanation": "Центральная нервная система: включает мозг и спинной мозг, отвечает за обработку сенсорной информации и выполнение высших мозговых функций.",
-    "esExplanation": "El SNC comprende el cerebro y la médula espinal y es responsable de procesar la información sensorial y ejecutar funciones cerebrales superiores.",
-    "frExplanation": "Le système nerveux central (SNC) comprend le cerveau et la moelle épinière et est responsable du traitement des informations sensorielles et de l'exécution des fonctions cérébrales supérieures.",
-    "plExplanation": "OUN obejmuje mózg i rdzeń kręgowy i jest odpowiedzialne za przetwarzanie informacji sensorycznych i realizację wyższych funkcji mózgowych.",
-    "trExplanation": "Merkezi sinir sistemi (MSS), beyin ve omuriliği içerir ve duyusal bilgilerin işlenmesi ve üst düzey beyin işlevlerinin yürütülmesinden sorumludur.",
-    "arExplanation": "الجهاز العصبي المركزي يشمل الدماغ والحبل الشوكي وهو مسؤول عن معالجة المعلومات الحسية وتنفيذ الوظائف العقلية العليا.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1203,
-    "lat": "Cerebrum (das)",
-    "de": "das Großhirn",
-    "en": "Cerebrum",
-    "uk": "Великий мозок",
-    "ru": "Большой мозг",
-    "pl": "Mózgowie",
-    "es": "Cerebro",
-    "fr": "Cerveau",
-    "tr": "Beyin",
-    "ar": "الدماغ",
-    "deExplanation": "Das Großhirn ist der größte Teil des menschlichen Gehirns und verantwortlich für höhere Gehirnfunktionen wie Denken, Gedächtnis, sensorische Verarbeitung und freiwillige Bewegung. Es ist in zwei Hemisphären unterteilt, die durch den Corpus callosum verbunden sind, und enthält die Großhirnrinde, die für komplexe kognitive Fähigkeiten zuständig ist.",
-    "enExplanation": "The cerebrum, or forebrain, is the largest brain area responsible for cognitive functions such as thinking, memory, emotions, and language.",
-    "ukExplanation": "Мозок: найбільша частина головного мозку, відповідальна за когнітивні функції, такі як мислення, пам'ять, емоції та мова.",
-    "ruExplanation": "Мозг: наибольшая часть головного мозга, ответственная за когнитивные функции, такие как мышление, память, эмоции и язык.",
-    "esExplanation": "El cerebro, o telencéfalo, es la mayor área del cerebro, responsable de funciones cognitivas como el pensamiento, el recuerdo, las emociones y el lenguaje.",
-    "frExplanation": "Le cerveau, ou cortex cérébral, est la plus grande région du cerveau, responsable des fonctions cognitives telles que la pensée, la mémoire, les émotions et le langage.",
-    "plExplanation": "Mózgowie, czyli mózg, jest największą częścią mózgu, odpowiedzialną za funkcje poznawcze, takie jak myślenie, pamięć, emocje i mowa.",
-    "trExplanation": "Beyin veya büyük beyin, düşünme, hafıza, duygular ve dil gibi bilişsel işlevlerden sorumlu olan beyin bölgelerinden biridir.",
-    "arExplanation": "الدماغ، أو المخ الكبير، هو أكبر منطقة في الدماغ ومسؤول عن الوظائف المعرفية مثل التفكير، الذاكرة، العواطف واللغة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Schleswig-Holstein"
-    ]
-  },
-  {
-    "id": 1204,
-    "lat": "Cerebellum (das)",
-    "de": "das Kleinhirn",
-    "en": "Cerebellum",
-    "uk": "Мозочок",
-    "ru": "Мозжечок",
-    "pl": "Móżdżek",
-    "es": "Cerebelo",
-    "fr": "Cervelet",
-    "tr": "Beyincik",
-    "ar": "المخيخ",
-    "deExplanation": "Das Kleinhirn ist eine Struktur im hinteren Teil des Gehirns, die unterhalb der Großhirnhemisphären liegt. Es spielt eine zentrale Rolle bei der Koordination von Bewegungen, der Aufrechterhaltung des Gleichgewichts und der Feinmotorik. Klinisch ist es relevant für die Diagnostik und Behandlung von Störungen des Bewegungsapparates, wie etwa Ataxie oder Gleichgewichtsstörungen.",
-    "enExplanation": "The cerebellum, or little brain, regulates motor control and is essential for the fine-tuning of movements and maintaining balance.",
-    "ukExplanation": "Мозочок: регулює моторний контроль і є суттєвим для точного налаштування рухів і підтримання рівноваги.",
-    "ruExplanation": "Мозжечок: регулирует моторный контроль и существенен для точной настройки движений и поддержания равновесия.",
-    "esExplanation": "El cerebelo regula el control motor y es esencial para la afinación precisa de los movimientos y el mantenimiento del equilibrio.",
-    "frExplanation": "Le cervelet, ou petit cerveau, régule le contrôle moteur et est essentiel pour l'affinement des mouvements et le maintien de l'équilibre.",
-    "plExplanation": "Móżdżek reguluje kontrolę motoryczną i jest niezbędny do precyzyjnego dostosowania ruchów i utrzymania równowagi.",
-    "trExplanation": "Beyincik veya küçük beyin, motor kontrolü düzenler ve hareketlerin hassasiyeti ve dengeyi korumak için önemlidir.",
-    "arExplanation": "المخيخ ينظم السيطرة الحركية وهو ضروري لضبط الحركات بدقة والحفاظ على التوازن.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1205,
-    "lat": "Truncus encephali (der)",
-    "de": "der Hirnstamm",
-    "en": "Brainstem",
-    "uk": "Стовбур мозку",
-    "ru": "Ствол мозга",
-    "pl": "Pień mózgu",
-    "es": "Tronco encefálico",
-    "fr": "Tronc cérébral",
-    "tr": "Beyin sapı",
-    "ar": "جذع الدماغ",
-    "deExplanation": "Der Hirnstamm ist der unterste Teil des Gehirns und verbindet dieses mit dem Rückenmark. Er ist verantwortlich für die Steuerung lebenswichtiger Funktionen wie Atmung, Herzfrequenz und Blutdruck. Außerdem ist er an der Regulierung von Schlaf und Wachheit beteiligt und beinhaltet wichtige Nervenkerngebiete für verschiedene Reflexe und sensorische sowie motorische Bahnen.",
-    "enExplanation": "The brainstem connects the brain with the spinal cord and is responsible for basic life functions such as breathing, heartbeat, and reflexes.",
-    "ukExplanation": "Стовбур головного мозку: з'єднує мозок зі спинним мозком, відповідає за основні життєві функції, такі як дихання, серцебиття та рефлекси.",
-    "ruExplanation": "Ствол головного мозга: соединяет мозг со спинным мозгом, отвечает за основные жизненные функции, такие как дыхание, сердцебиение и рефлексы.",
-    "esExplanation": "El tronco encefálico conecta el cerebro con la médula espinal y es responsable de funciones vitales básicas como la respiración, el latido del corazón y los reflejos.",
-    "frExplanation": "Le tronc cérébral relie le cerveau à la moelle épinière et est responsable des fonctions vitales de base telles que la respiration, les battements cardiaques et les réflexes.",
-    "plExplanation": "Pień mózgu łączy mózg z rdzeniem kręgowym i jest odpowiedzialny za podstawowe funkcje życiowe, takie jak oddychanie, tętno i odruchy.",
-    "trExplanation": "Beyin sapı, beyini omurilikle birleştirir ve solunum, kalp atışı ve refleksler gibi temel yaşamsal işlevlerden sorumludur.",
-    "arExplanation": "جذع الدماغ يربط الدماغ بالحبل الشوكي وهو مسؤول عن الوظائف الحيوية الأساسية مثل التنفس، ضربات القلب والانعكاسات.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1206,
-    "lat": "Diencephalon (das)",
-    "de": "das Zwischenhirn",
-    "en": "Diencephalon",
-    "uk": "Проміжний мозок",
-    "ru": "Промежуточный мозг",
-    "pl": "Międzymózgowie",
-    "es": "Diencéfalo",
-    "fr": "Diencéphale",
-    "tr": "Arabeyin",
-    "ar": "الدينسفالون",
-    "deExplanation": "Das Zwischenhirn liegt zentral im Gehirn und ist ein Teil des Vorderhirns. Es besteht aus mehreren Strukturen, darunter der Thalamus und der Hypothalamus, und ist verantwortlich für zahlreiche Funktionen, wie die sensorische Wahrnehmung, die Steuerung autonomer Funktionen, sowie die Regulation von Schlaf-Wach-Zyklen und der Körpertemperatur. Es spielt auch eine wichtige Rolle bei der Verarbeitung und Weiterleitung von Informationen an die Großhirnrinde.",
-    "enExplanation": "The diencephalon is the part of the brain that contains the thalamus and hypothalamus, taking on central functions such as hormone regulation and control of the autonomic nervous system.",
-    "ukExplanation": "Дієнцефалон: частина мозку, що містить таламус і гіпоталамус, виконує центральні функції, такі як регуляція гормонів і управління автономною нервовою системою.",
-    "ruExplanation": "Диэнцефалон: часть мозга, содержащая таламус и гипоталамус, выполняет центральные функции, такие как регуляция гормонов и управление автономной нервной системой.",
-    "esExplanation": "El diencéfalo es la parte del cerebro que contiene el tálamo y el hipotálamo y asume funciones centrales como la regulación hormonal y el control del sistema nervioso autónomo.",
-    "frExplanation": "Le diencéphale est la partie du cerveau qui comprend le thalamus et l'hypothalamus, et qui assume des fonctions centrales telles que la régulation hormonale et le contrôle du système nerveux autonome.",
-    "plExplanation": "Diencephalon to część mózgu zawierająca wzgórze i podwzgórze, odgrywająca kluczową rolę w regulacji hormonów i kontroli autonomicznego układu nerwowego.",
-    "trExplanation": "Diyensefalon, talamus ve hipotalamusu içeren beyin bölümüdür ve hormonal düzenleme ve otonom sinir sistemi kontrolü gibi merkezi işlevleri üstlenir.",
-    "arExplanation": "الدينسفالون جزء من الدماغ يحتوي على الوطاء والهيبوثالاموس ويتولى وظائف مركزية مثل تنظيم الهرمونات والتحكم بالجهاز العصبي الذاتي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1207,
-    "lat": "Truncus encephali (der) + Diencephalon (das)",
-    "de": "der Hirnstamm + das Zwischenhirn",
-    "en": "Brainstem + Diencephalon",
-    "uk": "Стовбур мозку + Проміжний мозок",
-    "ru": "Ствол мозга + Промежуточный мозг",
-    "pl": "Pień mózgu + Międzymózgowie",
-    "es": "Tronco encefálico y diencéfalo",
-    "fr": "Tronc cérébral + Diencéphale",
-    "tr": "Beyin sapı + Arabeyin",
-    "ar": "جذع الدماغ + الدينسفالون",
-    "deExplanation": "Der Hirnstamm befindet sich am unteren Ende des Gehirns und umfasst das Mittelhirn, die Brücke und das verlängerte Mark. Er ist essenziell für die Steuerung grundlegender Lebensfunktionen wie Atmung, Herzschlag und Schlaf. Das Zwischenhirn liegt zwischen Mittelhirn und Großhirn und enthält wichtige Strukturen wie den Thalamus und Hypothalamus, die unter anderem für die Verarbeitung sensorischer Informationen und die Regulierung des autonomen Nervensystems zuständig sind.",
-    "enExplanation": "This combination includes both the brainstem and the diencephalon, with a focus on integrating the functions of the brainstem and diencephalon.",
-    "ukExplanation": "Це поєднання включає як стовбур головного мозку, так і міжмозок, фокусуючись на інтеграції функцій обох.",
-    "ruExplanation": "Это сочетание включает как ствол головного мозга, так и промежуточный мозг, сосредоточиваясь на интеграции функций обоих.",
-    "esExplanation": "Esta combinación incluye tanto el tronco encefálico como el diencéfalo, con un enfoque en la integración de las funciones del tronco encefálico y el diencéfalo.",
-    "frExplanation": "Cette combinaison comprend à la fois le tronc cérébral et le diencéphale, avec l'accent mis sur l'intégration des fonctions du tronc cérébral et du diencéphale.",
-    "plExplanation": "Ta kombinacja obejmuje zarówno pień mózgu, jak i międzymózgowie, skupiając się na integracji funkcji pnia mózgu i diencephalonu.",
-    "trExplanation": "Bu kombinasyon hem beyin sapını hem de diyensefalodu içerir ve beyin sapı ve diyensefalonun işlevlerinin entegrasyonuna odaklanır.",
-    "arExplanation": "هذا المزيج يشمل كل من جذع الدماغ والدينسفالون، مع التركيز على دمج وظائف كل من جذع الدماغ والدينسفالون.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1208,
-    "lat": "Mesencephalon (das)",
-    "de": "das Mittelhirn",
-    "en": "Mesencephalon",
-    "uk": "Середній мозок",
-    "ru": "Средний мозг",
-    "pl": "Śródmózgowie",
-    "es": "Mesencéfalo",
-    "fr": "Mésencéphale",
-    "tr": "Ortabeyin",
-    "ar": "الميزنسفالون",
-    "deExplanation": "Das Mittelhirn ist ein Teil des Gehirnstamms, der zwischen dem Zwischenhirn und dem Rautenhirn liegt. Es ist wichtig für die Steuerung von visuellen und auditorischen Reflexen sowie der Bewegungskontrolle. Klinisch relevant ist es in Bezug auf Bewegungsstörungen und Erkrankungen wie dem Parkinson-Syndrom.",
-    "enExplanation": "The mesencephalon, or midbrain, includes areas responsible for processing visual and auditory information as well as initiating movements.",
-    "ukExplanation": "Мезенцефалон: середній мозок, включає ділянки, відповідальні за обробку візуальної та аудіальної інформації та за ініціацію рухів.",
-    "ruExplanation": "Мезенцефалон: средний мозг, включает участки, ответственные за обработку визуальной и аудиальной информации и за инициацию движений.",
-    "esExplanation": "El mesencéfalo, o cerebro medio, contiene áreas responsables del procesamiento de la información visual y auditiva, así como de la iniciación de movimientos.",
-    "frExplanation": "Le mésencéphale, ou mésencéphale, comprend des zones responsables du traitement de l'information visuelle et auditive ainsi que de l'initiation des mouvements.",
-    "plExplanation": "Śródmózgowie, odpowiedzialne za przetwarzanie informacji wzrokowych i słuchowych oraz inicjowanie ruchów.",
-    "trExplanation": "Orta beyin veya mezensefalon, görsel ve işitsel bilgi işleme ve hareket başlatma sorumluluğundaki alanları içerir.",
-    "arExplanation": "المسنسفالون، أو الدماغ الأوسط، يتضمن مناطق مسؤولة عن معالجة المعلومات البصرية والسمعية وكذلك عن بدء الحركة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1209,
-    "lat": "Pons (die)",
-    "de": "die Brücke",
-    "en": "Pons",
-    "uk": "Міст",
-    "ru": "Мост",
-    "pl": "Most",
-    "es": "Puente de Varolio",
-    "fr": "Pont",
-    "tr": "Köprü",
-    "ar": "الجسر",
-    "deExplanation": "Die Brücke ist ein Teil des Hirnstamms, der sich zwischen dem Mittelhirn und der Medulla oblongata befindet. Sie spielt eine wichtige Rolle bei der Übertragung von Informationen zwischen dem Gehirn und dem Körper, der Regulierung der Atmung sowie der Kontrolle von Schlaf und Träumen. Klinisch relevant kann die Brücke bei Schlaganfällen oder anderen neurologischen Erkrankungen betroffen sein, was zu einer Beeinträchtigung der genannten Funktionen führen kann.",
-    "enExplanation": "The pons, often referred to as the bridge, is a crucial part of the brainstem that connects different brain regions and is involved in the regulation of basic functions like breathing.",
-    "ukExplanation": "Міст: важлива частина стовбура головного мозку, з'єднує різні ділянки мозку, бере участь у регуляції основних функцій, таких як дихання.",
-    "ruExplanation": "Мост: важная часть ствола головного мозга, соединяет различные участки мозга, участвует в регуляции основных функций, таких как дыхание.",
-    "esExplanation": "La protuberancia, a menudo llamada puente, es una parte esencial del tronco encefálico que conecta varias regiones del cerebro y participa en la regulación de funciones básicas como la respiración.",
-    "frExplanation": "La protubérance, souvent appelée pont, est une partie essentielle du tronc cérébral qui relie différentes régions du cerveau et participe à la régulation de fonctions de base telles que la respiration.",
-    "plExplanation": "Most, ważna część pnia mózgu, łącząca różne regiony mózgu i uczestnicząca w regulacji podstawowych funkcji, takich jak oddychanie.",
-    "trExplanation": "Pons, genellikle köprü olarak adlandırılır ve farklı beyin bölgelerini birleştirir ve solunum gibi temel işlevlerin düzenlenmesine katılır.",
-    "arExplanation": "الجسر العقلي، والذي يُعرف غالبًا بالجسر، هو جزء أساسي من جذع الدماغ يربط بين مناطق مختلفة من الدماغ ويشارك في تنظيم الوظائف الأساسية مثل التنفس.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg"
-    ]
-  },
-  {
-    "id": 1210,
-    "lat": "Medulla oblongata (der)",
-    "de": "das verlängerte Mark",
-    "en": "Medulla Oblongata",
-    "uk": "Подовжений мозок",
-    "ru": "Продолговатый мозг",
-    "pl": "Rdzeń przedłużony",
-    "es": "Bulbo raquídeo",
-    "fr": "Bulbe rachidien",
-    "tr": "Uzamış omurilik",
-    "ar": "النخاع المستطيل",
-    "deExplanation": "Das verlängerte Mark ist der unterste Teil des Gehirnstamms und geht direkt ins Rückenmark über. Es ist verantwortlich für die Regulation lebenswichtiger autonomer Funktionen wie Atmung, Herzschlag und Blutdruck. Klinisch ist es relevant, da Schädigungen in diesem Bereich lebensbedrohlich sein können.",
-    "enExplanation": "The medulla oblongata, also known as the medulla, is the lowest part of the brainstem and takes on essential tasks in the regulation of respiration, circulation, and reflexes.",
-    "ukExplanation": "Медула облонгата: нижня частина стовбура головного мозку, виконує життєво важливі завдання у регуляції дихання, кровообігу та рефлексів.",
-    "ruExplanation": "Медулла облонгата: нижняя часть ствола головного мозга, выполняет жизненно важные задачи в регуляции дыхания, кровообращения и рефлексов.",
-    "esExplanation": "La médula oblonga, también conocida como bulbo raquídeo, es la parte más baja del tronco encefálico y realiza tareas esenciales en la regulación de la respiración, circulación y reflejos.",
-    "frExplanation": "La moelle allongée, également appelée bulbe rachidien, est la partie la plus basse du tronc cérébral et assume des fonctions essentielles dans la régulation de la respiration, de la circulation et des réflexes.",
-    "plExplanation": "Rdzeń przedłużony, najniższa część pnia mózgu, pełniąca kluczowe zadania w regulacji oddychania, krążenia i odruchów.",
-    "trExplanation": "Uzamış omurilik veya bir diğer adıyla beyin kökü, beyin sapının en alt bölümüdür ve solunum, dolaşım ve reflekslerin düzenlenmesinde temel görevleri üstlenir.",
-    "arExplanation": "الميدولا أوبلونغاتا، المعروفة أيضًا بالنخاع المستطيل، هي الجزء الأدنى من جذع الدماغ وتقوم بمهام أساسية في تنظيم التنفس والدورة الدموية والانعكاسات.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1211,
-    "lat": "Meningen (die)",
-    "de": "die Hirnhäute",
-    "en": "Meninges",
-    "uk": "Мозкові оболонки",
-    "ru": "Мозговые оболочки",
-    "pl": "Opony mózgowe",
-    "es": "Meninges",
-    "fr": "Méninges",
-    "tr": "Beyin zarları",
-    "ar": "الأغشية الدماغية",
-    "deExplanation": "Die Hirnhäute sind schützende Gewebeschichten, die das Gehirn und das Rückenmark umschließen. Sie bestehen aus drei Schichten: der harten Hirnhaut (Dura mater), der Spinngewebshaut (AracHNOidea) und der weichen Hirnhaut (Pia mater). Ihre Funktion besteht darin, das zentrale Nervensystem vor physischen Schäden zu schützen und den Fluss von Liquor cerebrospinalis zu regulieren.",
-    "enExplanation": "The meninges are protective membranes surrounding the brain and spinal cord, consisting of the dura mater, aracHNOid mater, and pia mater.",
-    "ukExplanation": "Менінги: захисні мембрани навколо мозку та спинного мозку, складаються з твердої матерії, арахноїди та м'якої матерії.",
-    "ruExplanation": "Менинги: защитные мембраны вокруг мозга и спинного мозга, состоят из твердой, паутинообразной и мягкой мозговых оболочек.",
-    "esExplanation": "Las meninges son las membranas protectoras que rodean el cerebro y la médula espinal, compuestas por la duramadre, aracnoides y piamadre.",
-    "frExplanation": "Les méninges sont les membranes protectrices entourant le cerveau et la moelle épinière, composées de la dure-mère, de l'aracHNOïde et de la pie-mère.",
-    "plExplanation": "Opony mózgowo-rdzeniowe to ochronne błony wokół mózgu i rdzenia kręgowego, składające się z opony twardej, pajęczej i miękkiej.",
-    "trExplanation": "Meningler, beyni ve omuriliği saran koruyucu zarlar olup dura mater, araknoid zar ve pia mater'den oluşur.",
-    "arExplanation": "الأغشية السحائية هي الأغشية الواقية التي تحيط بالدماغ والحبل الشوكي، وتتكون من السحايا الصلبة والعنكبوتية والرقيقة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1212,
-    "lat": "Dura mater (die)",
-    "de": "die harte Hirnhaut",
-    "en": "Dura Mater",
-    "uk": "Тверда мозкова оболонка",
-    "ru": "Твердая мозговая оболочка",
-    "pl": "Opona twarda",
-    "es": "Duramadre",
-    "fr": "Dure-mère",
-    "tr": "Sert beyin zarı",
-    "ar": "السحايا الجافية",
-    "deExplanation": "Die Dura mater ist die äußerste der drei Hirn- und Rückenmarkshäute. Sie schützt das zentrale Nervensystem und trägt zur Stabilisierung und Begrenzung der Hirnbewegungen bei. Klinisch relevant ist sie bei Erkrankungen wie Meningitis oder Blutungen, die eine Entzündung oder Einblutung unter der Dura mater umfassen können.",
-    "enExplanation": "The dura mater is the tough outermost layer of the meninges, providing additional protection and stability to the central nervous system.",
-    "ukExplanation": "Дура матер: міцний зовнішній шар мозкових оболонок, забезпечує додатковий захист та стабільність центральної нервової системи.",
-    "ruExplanation": "Дура матер: прочный наружный слой мозговых оболочек, обеспечивает дополнительную защиту и стабильность центральной нервной системы.",
-    "esExplanation": "La duramadre es la robusta capa exterior de las meninges, que proporciona protección y estabilidad adicional al sistema nervioso central.",
-    "frExplanation": "La dure-mère est la couche extérieure robuste des méninges qui assure une protection et une stabilité supplémentaires au système nerveux central.",
-    "plExplanation": "Opona twarda to wytrzymała zewnętrzna warstwa opon mózgowo-rdzeniowych, zapewniająca dodatkową ochronę i stabilność układu nerwowego.",
-    "trExplanation": "Dura mater, merkezi sinir sistemi için ek koruma ve stabilite sağlayan dış tabakadır.",
-    "arExplanation": "السحايا الصلبة هي الطبقة الخارجية القوية للأغشية السحائية، توفر الحماية والاستقرار الإضافي للجهاز العصبي المركزي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1213,
-    "lat": "Arachnoidea mater (die)",
-    "de": "die Spinnengewebshaut",
-    "en": "AracHNOid Mater",
-    "uk": "Павутинна мозкова оболонка",
-    "ru": "Паутинная мозговая оболочка",
-    "pl": "Opona pajęcza",
-    "es": "Aracnoides",
-    "fr": "AracHNOïde",
-    "tr": "Örümcek ağı zarı",
-    "ar": "السحايا العنكبوتية",
-    "deExplanation": "Eine dünne, mittlere der drei Hirnhäute, die das Gehirn und das Rückenmark bedecken. Sie liegt zwischen der härteren Dura mater und der weicheren Pia mater. Die AracHNOidea mater spielt eine wichtige Rolle beim Schutz des zentralen Nervensystems und ist an der Rückresorption von Gehirnflüssigkeit beteiligt.",
-    "enExplanation": "The aracHNOid mater is a semi-transparent membrane beneath the dura mater, filled with blood vessels and cerebrospinal fluid, supporting and surrounding the CNS.",
-    "ukExplanation": "Арахноїда матер: напівпрозора мембрана під дурою матер, заповнена кров'яними судинами та цереброспінальною рідиною, оточує та підтримує ЦНС.",
-    "ruExplanation": "Арахноида матер: полупрозрачная мембрана под дурой матер, заполненная кровеносными сосудами и цереброспинальной жидкостью, окружает и поддерживает ЦНС.",
-    "esExplanation": "La aracnoides es una membrana semi-transparente bajo la duramadre, llena de vasos sanguíneos y líquido cefalorraquídeo, que rodea y apoya al SNC.",
-    "frExplanation": "L'aracHNOïde est une membrane semi-transparente située sous la dure-mère, remplie de vaisseaux sanguins et de liquide céphalorachidien, qui entoure et soutient le SNC.",
-    "plExplanation": "Opona pajęcza to półprzezroczysta błona pod oponą twardą, wypełniona naczyniami krwionośnymi i płynem mózgowo-rdzeniowym, otaczająca i wspierająca OUN.",
-    "trExplanation": "AracHNOidea mater, dura mater'in altında bulunan, kan damarları ve serebrospinal sıvı ile dolu yarı saydam bir zar olup, SSS'yi çevreler ve destekler.",
-    "arExplanation": "السحايا العنكبوتية هي غشاء شبه شفاف تحت السحايا الصلبة، ممتلئ بالأوعية الدموية والسائل الدماغي الشوكي، يحيط بالجهاز العصبي المركزي ويدعمه.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1214,
-    "lat": "Pia mater (die)",
-    "de": "die weiche Hirnhaut",
-    "en": "Pia Mater",
-    "uk": "М'яка мозкова оболонка",
-    "ru": "Мягкая мозговая оболочка",
-    "pl": "Opona miękka",
-    "es": "Piamadre",
-    "fr": "Pie-mère",
-    "tr": "Yumuşak beyin zarı",
-    "ar": "السحايا الرقيقة",
-    "deExplanation": "Die Pia mater, auch als weiche Hirnhaut bekannt, ist die innerste der drei Hirnhäute, die das Gehirn und das Rückenmark umgeben. Sie liegt direkt auf der Oberfläche des Gehirns und des Rückenmarks und ist stark vaskularisiert, das heißt, sie enthält viele Blutgefäße, die das Gewebe mit Nährstoffen versorgen. Ihre Hauptfunktion besteht darin, das zentrale Nervensystem zu schützen und zu ernähren.",
-    "enExplanation": "The pia mater is the delicate inner layer lying directly on the brain and spinal cord, playing a key role in supplying the nervous tissue.",
-    "ukExplanation": "Пія матер: тонкий внутрішній шар, що безпосередньо прилягає до головного та спинного мозку, грає важливу роль у забезпеченні нервової тканини.",
-    "ruExplanation": "Пия матер: тонкий внутренний слой, непосредственно прилегающий к головному и спинному мозгу, играет важную роль в обеспечении нервной ткани.",
-    "esExplanation": "La piamadre es la delicada capa interna que yace directamente sobre el cerebro y la médula espinal, desempeñando un papel importante en el suministro de tejido nervioso.",
-    "frExplanation": "La pie-mère est la fine couche interne qui repose directement sur le cerveau et la moelle épinière, jouant un rôle essentiel dans l'approvisionnement en tissu nerveux.",
-    "plExplanation": "Opona miękka to delikatna wewnętrzna warstwa przylegająca bezpośrednio do mózgu i rdzenia kręgowego, odgrywająca ważną rolę w zaopatrywaniu tkanki nerwowej.",
-    "trExplanation": "Pia mater, doğrudan beyin ve omurilik üzerinde bulunan ince iç tabakadır ve sinir dokusunun beslenmesinde önemli bir rol oynar.",
-    "arExplanation": "السحايا الرقيقة هي الطبقة الداخلية الرقيقة التي تقع مباشرة فوق الدماغ والحبل الشوكي، وتلعب دوراً مهماً في تزويد الأنسجة العصبية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1215,
-    "lat": "Meningitis (die)",
-    "de": "die Hirnhautentzündung",
-    "en": "Meningitis",
-    "uk": "Менінгіт",
-    "ru": "Менингит",
-    "pl": "Zapalenie opon mózgowych",
-    "es": "Meningitis",
-    "fr": "Méningite",
-    "tr": "Menenjit",
-    "ar": "التهاب السحايا",
-    "deExplanation": "Eine Entzündung der Hirnhäute, die das Gehirn und das Rückenmark umgeben. Sie wird häufig durch Infektionen mit Bakterien oder Viren verursacht und kann zu Symptomen wie Kopf- und Nackenschmerzen, Fieber und Lichtempfindlichkeit führen. Eine rechtzeitige medizinische Behandlung ist wichtig, da Meningitis schwerwiegend verlaufen kann.",
-    "enExplanation": "Meningitis is an inflammation of the meninges, often caused by infections, which can lead to severe symptoms such as headaches, fever, and neck stiffness.",
-    "ukExplanation": "Менінгіт: запалення мозкових оболонок, часто викликане інфекціями, може викликати важкі симптоми, такі як головний біль, лихоманка та жорсткість шиї.",
-    "ruExplanation": "Менингит: воспаление мозговых оболочек, часто вызванное инфекциями, может вызывать тяжелые симптомы, такие как головная боль, лихорадка и жесткость шеи.",
-    "esExplanation": "La meningitis es una inflamación de las meninges, a menudo causada por infecciones, que puede llevar a síntomas graves como dolores de cabeza, fiebre y rigidez de cuello.",
-    "frExplanation": "La méningite est une inflammation des méninges, souvent causée par des infections, pouvant entraîner des symptômes graves tels que des maux de tête, de la fièvre et une raideur du cou.",
-    "plExplanation": "Zapalenie opon mózgowych, często spowodowane infekcjami, prowadzące do poważnych objawów, takich jak bóle głowy, gorączka i sztywność karku.",
-    "trExplanation": "Meningitis, genellikle enfeksiyonlar tarafından tetiklenen, baş ağrısı, ateş ve boyun sertliği gibi ciddi semptomlara yol açabilen meninklerin bir iltihabıdır.",
-    "arExplanation": "التهاب السحايا هو التهاب في الأغشية السحائية، غالباً ما يكون بسبب العدوى، ويمكن أن يؤدي إلى أعراض شديدة مثل الصداع والحمى وتصلب الرقبة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1216,
-    "lat": "Enzephalitis (die)",
-    "de": "die Gehirnentzündung",
-    "en": "Encephalitis",
-    "uk": "Енцефаліт",
-    "ru": "Энцефалит",
-    "pl": "Zapalenie mózgu",
-    "es": "Encefalitis",
-    "fr": "Encéphalite",
-    "tr": "Ensefalit",
-    "ar": "التهاب الدماغ",
-    "deExplanation": "Eine Entzündung des Gehirns, die durch Viren oder Bakterien verursacht werden kann. Symptome können Kopfschmerzen, Fieber, Verwirrtheit sowie Krampfanfälle sein. Die Erkrankung erfordert oft eine medizinische Notfallversorgung, um Komplikationen wie bleibende neurologische Schäden zu vermeiden.",
-    "enExplanation": "Encephalitis is an inflammation of brain tissue, usually viral in origin, that can cause neurological symptoms and sometimes severe complications.",
-    "ukExplanation": "Енцефаліт: запалення тканини головного мозку, зазвичай викликане вірусами, може викликати неврологічні симптоми та іноді важкі ускладнення.",
-    "ruExplanation": "Энцефалит: воспаление ткани головного мозга, обычно вызванное вирусами, может вызывать неврологические симптомы и иногда тяжелые осложнения.",
-    "esExplanation": "La encefalitis es una inflamación del tejido cerebral, generalmente de origen viral, que puede causar síntomas neurológicos y a veces complicaciones graves.",
-    "frExplanation": "L'encéphalite est une inflammation du tissu cérébral, le plus souvent d'origine virale, pouvant causer des symptômes neurologiques et parfois des complications graves.",
-    "plExplanation": "Zapalenie mózgu, zazwyczaj o etiologii wirusowej, powodujące objawy neurologiczne i czasami poważne komplikacje.",
-    "trExplanation": "Ensefalit, genellikle viral kökenli olan ve nörolojik semptomlara ve bazen ciddi komplikasyonlara neden olabilen beyin dokusunun bir iltihabıdır.",
-    "arExplanation": "الالتهاب الدماغي هو التهاب في نسيج الدماغ، وغالباً ما يكون ناجماً عن فيروس، يمكن أن يسبب أعراضًا عصبية وأحيانًا مضاعفات خطيرة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1217,
-    "lat": "Enzephalopathie (die)",
-    "de": "die Gehirnerkrankung",
-    "en": "Encephalopathy",
-    "uk": "Енцефалопатія",
-    "ru": "Энцефалопатия",
-    "pl": "Choroba mózgu",
-    "es": "Encefalopatía",
-    "fr": "Encéphalopathie",
-    "tr": "Ensefalopati",
-    "ar": "اعتلال الدماغ",
-    "deExplanation": "Eine Störung oder Erkrankung, die das Gehirn betrifft. Ursachen können vielfältig sein, wie Stoffwechselstörungen, Vergiftungen, Infektionen oder Verletzungen. Symptome reichen von Verwirrung und Gedächtnisverlust bis zu schwerwiegenden neurologischen Ausfällen. Die Behandlung richtet sich nach der zugrunde liegenden Ursache und kann medikamentös, chirurgisch oder durch Lifestyle-Änderungen erfolgen.",
-    "enExplanation": "Encephalopathy is a term for conditions that lead to impaired brain function, caused by a range of factors from metabolic disturbances to infections.",
-    "ukExplanation": "Енцефалопатія: загальний термін для захворювань, які призводять до порушення функцій головного мозку, викликані рядом факторів, від метаболічних розладів до інфекцій.",
-    "ruExplanation": "Энцефалопатия: общий термин для заболеваний, приводящих к нарушению функций головного мозга, вызванных рядом факторов, от метаболических расстройств до инфекций.",
-    "esExplanation": "La encefalopatía es un término general para las enfermedades que conducen a una función cerebral alterada, causadas por una serie de factores, desde trastornos metabólicos hasta infecciones.",
-    "frExplanation": "L'encéphalopathie est un terme général pour les affections qui perturbent la fonction cérébrale, causées par divers facteurs, des troubles métaboliques aux infections.",
-    "plExplanation": "Encefalopatia to ogólny termin na choroby prowadzące do zaburzeń funkcji mózgu, spowodowane przez szereg czynników, od zaburzeń metabolicznych po infekcje.",
-    "trExplanation": "Ensefalopati, metabolik bozukluklardan enfeksiyonlara kadar çeşitli faktörler tarafından neden olan beyin fonksiyonunu bozan durumlar için genel bir terimdir.",
-    "arExplanation": "الاعتلال الدماغي هو مصطلح عام للأمراض التي تؤدي إلى خلل في وظائف الدماغ، يمكن أن تكون ناجمة عن عدة عوامل، من الاضطرابات الأيضية إلى العدوى.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1218,
-    "lat": "Cephalgie (die)",
-    "de": "der Kopfschmerz",
-    "en": "Cephalgia",
-    "uk": "Головний біль",
-    "ru": "Головная боль",
-    "pl": "Ból głowy",
-    "es": "Cefalea",
-    "fr": "Céphalée",
-    "tr": "Baş ağrısı",
-    "ar": "الصداع",
-    "deExplanation": "Kopfschmerz ist der Schmerz in einem beliebigen Bereich des Kopfes. Er kann verschiedene Ursachen haben, wie Spannungskopfschmerz, Migräne oder Cluster-Kopfschmerz, und kann von leicht bis stark variieren. Kopfschmerzen können primär auftreten oder im Zusammenhang mit anderen Gesundheitszuständen als Symptom sekundär sein.",
-    "enExplanation": "Headache, which presents as a painful sensation or pressure in the head. It can have various causes, such as tension, migraine, or infections.",
-    "ukExplanation": "Цефалгія: головний біль, що проявляється як болісне відчуття або тиск у голові. Має різноманітні причини, включаючи напругу, мігрень або інфекції.",
-    "ruExplanation": "Цефалгия: головная боль, проявляющаяся как болезненное ощущение или давление в голове. Имеет разнообразные причины, включая напряжение, мигрень или инфекции.",
-    "esExplanation": "La cefalalgia, o dolor de cabeza, se manifiesta como una sensación dolorosa o presión en la cabeza. Puede tener muchas causas, como tensión, migraña o infecciones.",
-    "frExplanation": "Les céphalées se manifestent comme une sensation douloureuse ou de pression dans la tête. Elles peuvent avoir diverses causes, telles que la tension, la migraine ou les infections.",
-    "plExplanation": "Bóle głowy, objawiające się jako bolesne odczucie lub nacisk w głowie. Mogą mieć różnorodne przyczyny, od napięcia, przez migrenę po infekcje.",
-    "trExplanation": "Baş ağrısı, başta acı veya baskı hissi olarak kendini gösterir. Tansiyon, migren veya enfeksiyon gibi çeşitli nedenleri olabilirler.",
-    "arExplanation": "الصداع يتجلى كإحساس مؤلم أو ضغط في الرأس. يمكن أن يكون له أسباب متعددة، مثل التوتر، الشقيقة أو العدوى.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1219,
-    "lat": "Hydrozephalus (der)",
-    "de": "der Wasserkopf",
-    "en": "Hydrocephalus",
-    "uk": "Гідроцефалія",
-    "ru": "Гидроцефалия",
-    "pl": "Wodogłowie",
-    "es": "Hidrocefalia",
-    "fr": "Hydrocéphalie",
-    "tr": "Hidrosefali",
-    "ar": "الرأس المائي",
-    "deExplanation": "Eine Erkrankung, bei der es zu einer Ansammlung von Liquor (Gehirn-Rückenmarks-Flüssigkeit) in den Hirnkammern kommt. Dies führt zu einem erhöhten Druck im Schädel und kann zu einer Vergrößerung des Kopfes sowie neurologischen Störungen führen. Häufig bei Neugeborenen oder aufgrund von Verletzungen, Infektionen oder Blutungen bei Erwachsenen.",
-    "enExplanation": "A disorder where excessive brain fluid (cerebrospinal fluid) accumulates in the brain, increasing intracranial pressure, which can lead to neurological symptoms.",
-    "ukExplanation": "Гідроцефалія: порушення, при якому накопичується занадто багато мозкової рідини (цереброспінальної рідини) в головному мозку, підвищуючи внутрішньочерепний тиск, що може призвести до неврологічних симптомів.",
-    "ruExplanation": "Гидроцефалия: нарушение, при котором накапливается слишком много мозговой жидкости (цереброспинальной жидкости) в головном мозге, повышая внутричерепное давление, что может привести к неврологическим симптомам.",
-    "esExplanation": "El hidrocefalia es un trastorno en el que se acumula demasiado líquido cefalorraquídeo en el cerebro, aumentando la presión intracraneal, lo que puede llevar a síntomas neurológicos.",
-    "frExplanation": "L'hydrocéphalie est un trouble dans lequel trop de liquide cérébrospinal s'accumule dans le cerveau, augmentant la pression intracrânienne et pouvant entraîner des symptômes neurologiques.",
-    "plExplanation": "Choroba, w której zbiera się zbyt dużo płynu mózgowo-rdzeniowego w mózgu, zwiększając ciśnienie wewnątrzczaszkowe i prowadząc do objawów neurologicznych.",
-    "trExplanation": "Hidrosefali, çok fazla serebrospinal sıvının beyinde biriktiği, intrakraniyal basıncın arttığı ve nörolojik semptomlara yol açabilen bir bozukluktur.",
-    "arExplanation": "الاستسقاء الدماغي هو اضطراب يتراكم فيه الكثير من السائل الدماغي الشوكي في الدماغ، مما يزيد من الضغط داخل الجمجمة، مما قد يؤدي إلى أعراض عصبية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern"
-    ]
-  },
-  {
-    "id": 1220,
-    "lat": "Intrakraniell",
-    "de": "intrakraniell",
-    "en": "Intracranial",
-    "uk": "Внутрішньочерепний",
-    "ru": "Внутричерепной",
-    "pl": "Śródczaszkowy",
-    "es": "Intracraneal",
-    "fr": "Intracrânien",
-    "tr": "İntrakraniyal",
-    "ar": "داخل الجمجمة",
-    "deExplanation": "Der Begriff 'intrakraniell' bezieht sich auf alles, was sich innerhalb des Schädels befindet. Es kann die Lage von Strukturen wie Gehirn, Blutgefäßen oder Hirnhäuten beschreiben. Klinisch relevant ist es bei Erkrankungen wie intrakranialem Druck, Blutungen oder Tumoren, da diese den normalen Zustand innerhalb des Schädels verändern können.",
-    "enExplanation": "Refers to everything within the cranial cavity or skull, such as tissues or structures of the brain.",
-    "ukExplanation": "Інтракраніальний: відноситься до всього, що знаходиться в межах черепного простору або черепної порожнини, як тканини або структури мозку.",
-    "ruExplanation": "Интракраниальный: относится ко всему, что находится внутри черепного пространства или черепной полости, как ткани или структуры мозга.",
-    "esExplanation": "Intracraneal se refiere a todo lo que se encuentra dentro del espacio o cavidad craneal, como los tejidos o estructuras del cerebro.",
-    "frExplanation": "Fait référence à tout ce qui se trouve à l'intérieur de la cavité crânienne, comme les tissus ou les structures du cerveau.",
-    "plExplanation": "Odnosi się do wszystkiego, co znajduje się wewnątrz czaszki, takiego jak tkanki lub struktury mózgu.",
-    "trExplanation": "Kafatası boşluğu içinde bulunan her şeyi, beyin dokusu gibi, içeren her şeyi ifade eder.",
-    "arExplanation": "الداخل جمجمي يشير إلى كل ما هو موجود داخل تجويف الجمجمة، مثل الأنسجة أو الهياكل الدماغية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1221,
-    "lat": "Medulla spinalis (das)",
-    "de": "das Rückenmark",
-    "en": "Spinal Cord (Myelon)",
-    "uk": "Спинний мозок",
-    "ru": "Спинной мозг",
-    "pl": "Rdzeń kręgowy",
-    "es": "Médula espinal",
-    "fr": "Moelle spinale",
-    "tr": "Omurilik",
-    "ar": "الحبل الشوكي",
-    "deExplanation": "Das Rückenmark ist ein zentraler Teil des Nervensystems, der sich im Wirbelkanal befindet und vom Gehirn bis in den unteren Rücken reicht. Es überträgt Nervenimpulse zwischen dem Gehirn und dem restlichen Körper und spielt eine entscheidende Rolle bei Reflexen und motorischen Funktionen. Verletzungen des Rückenmarks können zu erheblichen Funktionsverlusten und Lähmungen führen.",
-    "enExplanation": "Also known as the spinal cord; a part of the CNS located in the spinal canal that transmits nerve impulses between the brain and the body.",
-    "ukExplanation": "Медула спіналіс: також відомий як спинний мозок; частина ЦНС, яка знаходиться в хребетному каналі та передає нервові імпульси між мозком та тілом.",
-    "ruExplanation": "Медулла спиналис: также известный как спинной мозг; часть ЦНС, находящаяся в позвоночном канале и передающая нервные импульсы между мозгом и телом.",
-    "esExplanation": "También conocido como la médula espinal; una parte del SNC que se encuentra en el canal vertebral y transmite impulsos nerviosos entre el cerebro y el cuerpo.",
-    "frExplanation": "Aussi connu sous le nom de moelle épinière ; une partie du SNC située dans le canal rachidien et transmet les impulsions nerveuses entre le cerveau et le corps.",
-    "plExplanation": "Znany również jako rdzeń kręgowy; część OUN znajdująca się w kanale kręgowym, przekazująca impulsy nerwowe między mózgiem a ciałem.",
-    "trExplanation": "Medulla spinalis (Myelon) olarak da bilinir; omurilik kanalında bulunan ve beyin ile vücut arasında sinir iletimini sağlayan SSS'nin bir parçasıdır.",
-    "arExplanation": "الميدولا سبايناليس، أو الحبل الشوكي، جزء من الجهاز العصبي المركزي يقع في القناة الفقرية وينقل النبضات العصبية بين الدماغ والجسم.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1222,
-    "lat": "Ganglion (das)",
-    "de": "das Überbein",
-    "en": "Ganglion",
-    "uk": "Гангліон",
-    "ru": "Ганглий",
-    "pl": "Guzek kostny",
-    "es": "Ganglio",
-    "fr": "Ganglion",
-    "tr": "Ganglion",
-    "ar": "العقدة",
-    "deExplanation": "Ein Überbein ist eine knotige, flüssigkeitsgefüllte Schwellung, die häufig bei Gelenken oder Sehnenscheiden auftritt. Es ist gutartig und kann Schmerzen oder Bewegungseinschränkungen verursachen.",
-    "enExplanation": "A collection of nerve cells located outside the brain and spinal cord, responsible for processing and relaying sensory information.",
-    "ukExplanation": "Гангліон: збір нервових клітин, розташованих поза головним мозком та спинним мозком, відповідає за обробку та передачу сенсорної інформації.",
-    "ruExplanation": "Ганглион: сбор нервных клеток, расположенных вне головного мозга и спинного мозга, отвечает за обработку и передачу сенсорной информации.",
-    "esExplanation": "Un grupo de células nerviosas que se encuentra fuera del cerebro y la médula espinal, responsable del procesamiento y transmisión de información sensorial.",
-    "frExplanation": "Un regroupement de cellules nerveuses situées en dehors du cerveau et de la moelle épinière, responsables du traitement et de la transmission des informations sensorielles.",
-    "plExplanation": "Ganglion to zbiór komórek nerwowych znajdujących się poza mózgiem i rdzeniem kręgowym, odpowiedzialny za przetwarzanie i przekazywanie informacji sensorycznych.",
-    "trExplanation": "Ganglion, beyin ve omurilik dışında bulunan ve duyusal bilgilerin işlenmesi ve iletilmesinden sorumlu sinir hücrelerinin birikimidir.",
-    "arExplanation": "العقدة العصبية هي مجموعة من الخلايا العصبية تقع خارج الدماغ والحبل الشوكي، مسؤولة عن معالجة ونقل المعلومات الحسية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1223,
-    "lat": "Innervation (die)",
-    "de": "die Nervenversorgung",
-    "en": "Innervation",
-    "uk": "Нервове забезпечення",
-    "ru": "Нервное обеспечение",
-    "pl": "Unaczynienie",
-    "es": "Inervación",
-    "fr": "Innervation",
-    "tr": "Sinir beslenmesi",
-    "ar": "التعصيب",
-    "deExplanation": "Die Nervenversorgung bezeichnet die Zufuhr von Nervenfasern zu einem Organ, Gewebe oder Körperteil. Sie ist entscheidend für die Übertragung von Nervensignalen, die Bewegungen und sensorische Rückmeldungen ermöglichen. Klinisch relevant bei Verletzungen oder Erkrankungen, die Lähmungen oder Empfindungsstörungen verursachen können.",
-    "enExplanation": "Denotes the supply of tissues or organs with nerve fibers and is important for controlling functions in the body.",
-    "ukExplanation": "Іннервація: забезпечення тканини або органів нервовими волокнами, важливе для керування функціями в організмі.",
-    "ruExplanation": "Иннервация: обеспечение ткани или органов нервными волокнами, важное для управления функциями в организме.",
-    "esExplanation": "Se refiere al suministro de fibras nerviosas a los tejidos u órganos y es importante para el control de las funciones en el cuerpo.",
-    "frExplanation": "Désigne l'approvisionnement en fibres nerveuses des tissus ou des organes et est important pour la régulation des fonctions dans le corps.",
-    "plExplanation": "Inerwacja oznacza zaopatrzenie tkanki lub organów w włókna nerwowe i jest ważna dla sterowania funkcjami w ciele.",
-    "trExplanation": "İnervasyon, dokuların veya organların sinir lifleri ile beslenmesini ifade eder ve vücuttaki fonksiyonların kontrolü için önemlidir.",
-    "arExplanation": "التعصيب يشير إلى تزويد الأنسجة أو الأعضاء بالألياف العصبية وهو مهم للتحكم في الوظائف في الجسم.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1224,
-    "lat": "Neuralgie (die)",
-    "de": "die Nervenschmerzen",
-    "en": "Neuralgia",
-    "uk": "Невралгія",
-    "ru": "Невралгия",
-    "pl": "Bóle nerwowe",
-    "es": "Neuralgia",
-    "fr": "Névralgie",
-    "tr": "Sinir ağrısı",
-    "ar": "الألم العصبي",
-    "deExplanation": "Neuralgie bezeichnet plötzlich auftretende, brennende oder stechende Schmerzen, die entlang eines Nervs auftreten. Sie können durch verschiedene Ursachen wie Entzündungen, Verletzungen oder Druck auf den Nerv entstehen. Klinisch relevant sind Schmerztherapie und Ursachenbehandlung.",
-    "enExplanation": "Pain along a nerve, often caused by irritation or damage to the nerve, leading to intense pain sensations.",
-    "ukExplanation": "Невралгія: біль уздовж нерва, часто викликана подразненням або пошкодженням нерва, може призводити до сильних больових відчуттів.",
-    "ruExplanation": "Невралгия: боль вдоль нерва, часто вызванная раздражением или повреждением нерва, может привести к сильным болевым ощущениям.",
-    "esExplanation": "Dolor a lo largo de un nervio, a menudo causado por irritación o daño al nervio, que puede llevar a sensaciones dolorosas intensas.",
-    "frExplanation": "Des douleurs le long d'un nerf, souvent causées par une irritation ou une lésion du nerf, pouvant entraîner des sensations douloureuses intenses.",
-    "plExplanation": "Neuralgia to ból wzdłuż nerwu, często spowodowany podrażnieniem lub uszkodzeniem nerwu, prowadzący do silnych doznań bólowych.",
-    "trExplanation": "Nöralji, genellikle bir sinirin tahrişi veya hasarı nedeniyle meydana gelen sinir boyunca ağrıları ifade eder ve yoğun ağrı hissine neden olabilir.",
-    "arExplanation": "الألم العصبي هو الألم على طول العصب، غالبًا ما يكون بسبب التهيج أو الضرر العصبي، مما يؤدي إلى أحاسيس ألم شديدة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Bayern",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1225,
-    "lat": "Nervus (der)",
-    "de": "der Nerv",
-    "en": "Nerve",
-    "uk": "Нерв",
-    "ru": "Нерв",
-    "pl": "Nerw",
-    "es": "Nervio",
-    "fr": "Nerf",
-    "tr": "Sinir",
-    "ar": "العصب",
-    "deExplanation": "Ein Nerv ist ein Bündel von Fasern, das Signale zwischen verschiedenen Körperteilen und dem Gehirn oder Rückenmark überträgt. Nerven sind essenziell für motorische und sensorische Funktionen. Sie spielen eine wichtige Rolle bei der Übertragung von Informationen, die Bewegungen steuern und sensorische Eindrücke vermitteln.",
-    "enExplanation": "A nerve fiber that carries electrical signals in the body and is responsible for communication between different body parts and the brain.",
-    "ukExplanation": "Нерв: нервове волокно, що транспортує електричні сигнали в організмі, відповідальне за комунікацію між різними частинами тіла та мозком.",
-    "ruExplanation": "Нерв: нервное волокно, переносящее электрические сигналы в организме, отвечающее за коммуникацию между различными частями тела и мозгом.",
-    "esExplanation": "Una fibra nerviosa que transporta señales eléctricas en el cuerpo y es responsable de la comunicación entre diferentes partes del cuerpo y el cerebro.",
-    "frExplanation": "Bir elektrik sinyali taşıyan sinir lifi, vücuttaki farklı bölgeler ve beyin arasındaki iletişimden sorumlu.",
-    "plExplanation": "Nerw to włókno nerwowe przewodzące sygnały elektryczne w ciele, odpowiedzialne za komunikację między różnymi częściami ciała a mózgiem.",
-    "trExplanation": "Nervus, elektrik sinyali taşıyan bir sinir lifidir ve vücuttaki farklı bölgelerle beyin arasındaki iletişimden sorumludur.",
-    "arExplanation": "العصب هو ألياف عصبية تنقل الإشارات الكهربائية في الجسم وتكون مسؤولة عن التواصل بين أجزاء مختلفة من الجسم والدماغ.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1226,
-    "lat": "Neuritis (die)",
-    "de": "die Nervenentzündung",
-    "en": "Neuritis",
-    "uk": "Неврит",
-    "ru": "Неврит",
-    "pl": "Zapalenie nerwu",
-    "es": "Neuritis",
-    "fr": "Névrite",
-    "tr": "Sinir iltihabı",
-    "ar": "التهاب العصب",
-    "deExplanation": "Eine Nervenentzündung ist eine entzündliche Erkrankung eines Nervs bzw. mehrerer Nerven, die durch Infektionen, Verletzungen oder Autoimmunerkrankungen verursacht werden kann. Symptome können Schmerzen, Taubheit, Kribbeln oder Muskelschwäche sein. Die Behandlung richtet sich nach der Ursache und kann Medikamente, Physiotherapie oder chirurgische Eingriffe umfassen.",
-    "enExplanation": "Inflammatory response of a nerve, characterized by neuropathic pain, paresthesia, and possibly motor deficits.",
-    "ukExplanation": "Неврит: запальна реакція нерва, характеризується нейропатичним болем, парестезією та можливими моторними дефіцитами.",
-    "ruExplanation": "Неврит: воспалительная реакция нерва, характеризующаяся нейропатической болью, парестезией и возможными моторными дефицитами.",
-    "esExplanation": "Reacción inflamatoria de un nervio, caracterizada por dolor neuropático, parestesias y posiblemente déficits motores.",
-    "frExplanation": "Bir sinirin iltihaplanma tepkisi, nöropatik ağrı, parestezi ve olası motor eksikliklerle karakterize edilir.",
-    "plExplanation": "Neuritis to reakcja zapalna nerwu, charakteryzująca się neuropatycznym bólem, parestezją i możliwymi deficytami motorycznymi.",
-    "trExplanation": "Neuritis, bir sinirin iltihaplanma tepkisi olarak tanımlanır, nöropatik ağrı, parestezi ve olası motor eksikliklerle karakterizedir.",
-    "arExplanation": "التهاب العصب هو استجابة التهابية للعصب، تتميز بالألم العصبي والتنميل وربما العجز الحركي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1227,
-    "lat": "Radix (die)",
-    "de": "die Wurzel",
-    "en": "Root (of a nerve)",
-    "uk": "Корінь",
-    "ru": "Корень",
-    "pl": "Korzeń",
-    "es": "Raíz",
-    "fr": "Racine",
-    "tr": "Sinir kökü",
-    "ar": "الجذر",
-    "deExplanation": "Der Begriff ‚Radix‘ bezeichnet häufig den Wurzelanteil eines Nervs oder Zahns. In der Neurologie bezieht sich dies auf die Ursprungsbereiche der Nervenfasern, die aus dem Rückenmark austreten, bekannt als Nervenwurzeln. Diese spielen eine wichtige Rolle bei der Signalübertragung zwischen Rückenmark und Körper. In der Zahnmedizin bezieht sich der Begriff auf den Teil des Zahns, der im Kiefer verankert ist und für die Befestigung im Zahnfleisch verantwortlich ist.",
-    "enExplanation": "Anatomical term for the nerve root, marking the transition between central nervous structures and peripheral nerves.",
-    "ukExplanation": "Радикс: анатомічний термін для нервового кореня, який позначає перехід між центральнонервовими структурами та периферійними нервами.",
-    "ruExplanation": "Радикс: анатомический термин для нервного корня, обозначающий переход между центральнонервовыми структурами и периферийными нервами.",
-    "esExplanation": "Término anatómico para la raíz del nervio, que marca la transición entre las estructuras del sistema nervioso central y los nervios periféricos.",
-    "frExplanation": "Sinir kökünü ifade eden anatomi terimi, merkezi sinir yapıları ile periferik sinirler arasındaki geçişi işaretler.",
-    "plExplanation": "Radix to termin anatomiczny dla korzenia nerwowego, oznaczającego przejście między strukturami OUN a obwodowymi nerwami.",
-    "trExplanation": "Radix, sinir kökünü ifade eden bir anatomik terimdir ve merkezi sinir yapıları ile periferik sinirler arasındaki geçişi belirler.",
-    "arExplanation": "الجذر العصبي هو مصطلح تشريحي لجذر العصب، يمثل الانتقال بين هياكل الجهاز العصبي المركزي والأعصاب الطرفية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Niedersachsen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1228,
-    "lat": "Radikulitis (die)",
-    "de": "die Nervenwurzelentzündung",
-    "en": "Radiculitis",
-    "uk": "Радикуліт",
-    "ru": "Радикулит",
-    "pl": "Zapalenie korzenia nerwowego",
-    "es": "Radículitis",
-    "fr": "Radiculite",
-    "tr": "Sinir kökü iltihabı",
-    "ar": "التهاب جذر العصب",
-    "deExplanation": "Eine Nervenwurzelentzündung ist eine Entzündung der Spinalnervenwurzeln, die aus dem Rückenmark austreten. Diese Entzündung kann zu Schmerzen, Schwäche, Taubheit oder anderen neurologischen Symptomen im Versorgungsgebiet der betroffenen Nerven führen. Radikulitis kann durch mechanische Reizung, Infektionen oder entzündliche Prozesse verursacht werden. Häufig ist sie ein Symptom bei Bandscheibenvorfällen oder Degeneration der Wirbelsäule.",
-    "enExplanation": "Inflammation of the spinal nerve roots, often with pain radiating along the affected nerve, sensory deficits, and reflex changes.",
-    "ukExplanation": "Радикуліт: запалення спинномозкових нервових коренів, часто з випромінюванням болю вздовж ураженого нерва, сенсорними випадами та змінами рефлексів.",
-    "ruExplanation": "Радикулит: воспаление спинномозговых нервных корешков, часто с иррадиацией боли вдоль пораженного нерва, сенсорными выпадами и изменениями рефлексов.",
-    "esExplanation": "Inflamación de las raíces nerviosas espinales, a menudo con dolor irradiado a lo largo del nervio afectado, déficits sensoriales y cambios en los reflejos.",
-    "frExplanation": "Omurilik sinir köklerinin iltihaplanması, etkilenen sinir boyunca yayılan ağrı, duyusal kayıplar ve refleks değişiklikleri ile sıklıkla birlikte görülür.",
-    "plExplanation": "Radikulitis to zapalenie korzeni nerwów rdzeniowych, często z promieniującym bólem wzdłuż dotkniętego nerwu, sensorycznymi deficytami i zmianami w odruchach.",
-    "trExplanation": "Radikülit, omurilik sinir köklerinin iltihaplanmasıdır, etkilenen sinir boyunca yayılan ağrı, duyusal kayıplar ve refleks değişiklikleri ile sık sık ilişkilendirilir.",
-    "arExplanation": "التهاب الجذور العصبية الشوكية، غالباً ما يكون مصحوباً بألم ينتشر على طول العصب المصاب، والفقدان الحسي وتغييرات في ردود الفعل.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1229,
-    "lat": "Radikulär (das)",
-    "de": "das Nervenwurzelareal",
-    "en": "Radicular",
-    "uk": "Нервовокоренева зона",
-    "ru": "Нервно-корешковая зона",
-    "pl": "Obszar korzenia nerwowego",
-    "es": "Área radicular",
-    "fr": "Zone radiculaire",
-    "tr": "Sinir kökü bölgesi",
-    "ar": "منطقة جذر العصب",
-    "deExplanation": "Dieser Begriff beschreibt den Bereich, in dem Nervenwurzeln aus dem Rückenmark austreten. Bei radikulären Schmerzen werden diese Bereiche oft durch Druck oder Reizung, beispielsweise durch Bandscheibenvorfälle, betroffen, was zu charakteristischen Schmerzmustern entlang des betroffenen Nervs führt.",
-    "enExplanation": "Term describing phenomena or symptoms related to the nerve roots, especially in the context of radicular pain.",
-    "ukExplanation": "Радикулярний: термін, що описує явища або симптоми, пов'язані з нервовими коріннями, особливо в контексті радикулярних болів.",
-    "ruExplanation": "Радикулярный: термин, описывающий явления или симптомы, связанные с нервными корешками, особенно в контексте радикулярных болей.",
-    "esExplanation": "Término que describe fenómenos o síntomas relacionados con las raíces nerviosas, especialmente en el contexto de dolores radiculares.",
-    "frExplanation": "Sinir kökleriyle ilgili olan olayları veya semptomları tanımlayan bir terim, özellikle radiküler ağrı bağlamında kullanılır.",
-    "plExplanation": "Termin opisujący zjawiska lub objawy odnoszące się do korzeni nerwowych, zwłaszcza w kontekście bólu korzeniowego.",
-    "trExplanation": "Radiküler, sinir kökleri ile ilgili olan olayları veya semptomları tanımlayan bir terimdir, özellikle radiküler ağrı bağlamında kullanılır.",
-    "arExplanation": "الجذري يصف الظواهر أو الأعراض المتعلقة بجذور الأعصاب، خاصة في سياق الآلام الجذرية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1230,
-    "lat": "Plexus (der)",
-    "de": "das Nervengeflecht",
-    "en": "Plexus",
-    "uk": "Нервове сплетення",
-    "ru": "Нервное сплетение",
-    "pl": "Splot nerwowy",
-    "es": "Plexo",
-    "fr": "Plexus",
-    "tr": "Sinir ağı",
-    "ar": "الضفيرة العصبية",
-    "deExplanation": "Ein Plexus ist ein Netzwerk aus Nervenfasern, das Signale zwischen verschiedenen Teilen des Körpers überträgt. Zu den bekanntesten Plexus gehören der Plexus brachialis im Bereich der Schulter, der die Nervenversorgung des Arms übernimmt, und der Plexus lumbosacralis, der die unteren Gliedmaßen versorgt. Diese Nervengeflechte sind entscheidend für die Bewegung und Empfindung in den jeweiligen Körperbereichen.",
-    "enExplanation": "A complex network of nerve fibers acting as a mediator for signal transmission between the central nervous system and peripheral areas.",
-    "ukExplanation": "Плексус: складна мережа нервових волокон, що служить посередником для передачі сигналів між центральною нервовою системою та периферійними ділянками.",
-    "ruExplanation": "Плексус: сложная сеть нервных волокон, служащая посредником для передачи сигналов между центральной нервной системой и периферийными областями.",
-    "esExplanation": "Una red compleja de fibras nerviosas que actúa como mediadora en la transmisión de señales entre el sistema nervioso central y áreas periféricas.",
-    "frExplanation": "Un réseau complexe de fibres nerveuses servant d'intermédiaire pour la transmission des signaux entre le système nerveux central et les régions périphériques.",
-    "plExplanation": "Splot to skomplikowana sieć włókien nerwowych, działająca jako pośrednik w przekazywaniu sygnałów między OUN a obwodowymi obszarami.",
-    "trExplanation": "Pleksus, merkezi sinir sistemi ile periferik bölgeler arasında sinyal iletimi için aracı olarak hizmet eden karmaşık bir sinir lifi ağıdır.",
-    "arExplanation": "الضفيرة العصبية هي شبكة معقدة من الألياف العصبية تعمل كوسيط في نقل الإشارات بين الجهاز العصبي المركزي والمناطق الطرفية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1231,
-    "lat": "Nervus olfactorius (der)",
-    "de": "der Riech nerv",
-    "en": "Olfactory Nerve (1)",
-    "uk": "Нюховий нерв",
-    "ru": "Обонятельный нерв",
-    "pl": "Nerw węchowy",
-    "es": "Nervio olfatorio",
-    "fr": "Nerf olfactif",
-    "tr": "Koku siniri",
-    "ar": "العصب الشمي",
-    "deExplanation": "Ein Nervenstrang, der für den Geruchssinn verantwortlich ist. Er leitet Geruchsinformationen von der Nase an das Gehirn weiter. Klinisch relevant bei Verlust des Geruchssinns, bekannt als Anosmie, der durch Verletzungen oder Erkrankungen des Nervs verursacht werden kann.",
-    "enExplanation": "The olfactory nerve, responsible for the transmission of olfactory signals and thus for the sense of smell.",
-    "ukExplanation": "Нервус олфакторіус: відповідальний за передачу ольфакторних сигналів і таким чином за нюх.",
-    "ruExplanation": "Нервус олфакториус: отвечает за передачу обонятельных сигналов и, таким образом, за обоняние.",
-    "esExplanation": "El nervio olfativo, responsable de la transmisión de señales olfativas y, por lo tanto, del sentido del olfato.",
-    "frExplanation": "Le nerf olfactif, responsable de la transmission des signaux olfactifs et donc de l'odorat.",
-    "plExplanation": "Nerw węchowy, odpowiedzialny za przekazywanie sygnałów węchowych i wrażeń zapachowych.",
-    "trExplanation": "Nervus olfactorius, koku sinyallerinin iletilmesinden ve bu nedenle koku duyusundan sorumlu olan sinirdir.",
-    "arExplanation": "العصب الشمي، المسؤول عن نقل الإشارات الشمية وبالتالي حاسة الشم.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1232,
-    "lat": "Nervus opticus (der)",
-    "de": "der Sehnerv",
-    "en": "Optic Nerve (2)",
-    "uk": "Зоровий нерв",
-    "ru": "Зрительный нерв",
-    "pl": "Nerw wzrokowy",
-    "es": "Nervio óptico",
-    "fr": "Nerf optique",
-    "tr": "Görme siniri",
-    "ar": "العصب البصري",
-    "deExplanation": "Der Sehnerv ist der zweite Hirnnerv, verantwortlich für die Übertragung visueller Informationen von der Netzhaut des Auges zum Gehirn. Klinisch ist er von großer Bedeutung, da Schädigungen des Sehnervs zu Sehverlusten führen können. Er verläuft von der hinteren Augenwand bis zum optischen Chiasma, wo ein Teil der Fasern die Seite wechselt.",
-    "enExplanation": "The optic nerve, which transmits visual information from the retina to the brain, playing a key role in the process of sight.",
-    "ukExplanation": "Нервус оптікус: передає візуальну інформацію від сітківки до мозку, грає ключову роль у процесі зору.",
-    "ruExplanation": "Нервус оптикус: передает визуальную информацию от сетчатки к мозгу, играет ключевую роль в процессе зрения.",
-    "esExplanation": "El nervio óptico, que conduce información visual desde la retina al cerebro y juega un papel clave en el proceso de la visión.",
-    "frExplanation": "Le nerf optique, qui transmet les informations visuelles de la rétine au cerveau et joue un rôle clé dans le processus visuel.",
-    "plExplanation": "Nerw wzrokowy przekazujący informacje wzrokowe z siatkówki do mózgu, pełniący kluczową rolę w procesie widzenia.",
-    "trExplanation": "Nervus opticus, retina ile beyin arasında görsel bilgileri ileten ve görme sürecinde önemli bir rol oynayan bir sinirdir.",
-    "arExplanation": "العصب البصري، يقود المعلومات البصرية من الشبكية إلى الدماغ ويلعب دوراً رئيسياً في عملية الرؤية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1233,
-    "lat": "Nervus facialis (der)",
-    "de": "der Gesichtsnerv",
-    "en": "Facial Nerve (7)",
-    "uk": "Лицьовий нерв",
-    "ru": "Лицевой нерв",
-    "pl": "Nerw twarzowy",
-    "es": "Nervio facial",
-    "fr": "Nerf facial",
-    "tr": "Yüz siniri",
-    "ar": "العصب الوجهي",
-    "deExplanation": "Ein wichtiger Hirnnerv, der für die motorische Steuerung der Gesichtsmuskulatur verantwortlich ist. Er spielt eine entscheidende Rolle bei der Mimik, dem Blinzeln und der Schließung der Augen sowie bei der Speichel- und Tränenproduktion. Schäden am Gesichtsnerv können zu Lähmungen der Gesichtsmuskulatur (Fazialisparese) führen.",
-    "enExplanation": "The facial nerve, which controls motor functions in the face and is responsible for transmitting taste sensations from the anterior two-thirds of the tongue.",
-    "ukExplanation": "Нервус фаціаліс: керує моторними функціями в обличчі і відповідальний за передачу смакових відчуттів з передніх двох третин язика.",
-    "ruExplanation": "Нервус фациалис: управляет моторными функциями в лице и отвечает за передачу вкусовых ощущений с передних двух третей языка.",
-    "esExplanation": "El nervio facial, que controla las funciones motoras de la cara y es responsable de transmitir sensaciones gustativas de los dos tercios anteriores de la lengua.",
-    "frExplanation": "Le nerf facial, qui contrôle les fonctions motrices du visage et est responsable de la transmission des sensations gustatives de deux tiers antérieurs de la langue.",
-    "plExplanation": "Nerw twarzowy sterujący funkcjami motorycznymi twarzy i odpowiedzialny za przekazywanie wrażeń smakowych z przednich dwóch trzecich języka.",
-    "trExplanation": "Nervus facialis, yüzün motor fonksiyonlarını kontrol eder ve dilin ön iki üçte birinden tat duyularını ileten bir sinirdir.",
-    "arExplanation": "العصب الوجهي، الذي يتحكم في الوظائف الحركية للوجه ومسؤول عن نقل الإحساس بالطعم من الثلثين الأماميين من اللسان.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1234,
-    "lat": "Nervus vestibulocochlearis (der)",
-    "de": "der Hör- und Gleichgewichtsnerv",
-    "en": "Vestibulocochlear Nerve (8)",
-    "uk": "Слуховий та вестибулярний нерв",
-    "ru": "Вестибулокохлеарный нерв",
-    "pl": "Nerw przedsionkowo-ślimakowy",
-    "es": "Nervio vestibulococlear",
-    "fr": "Nerf vestibulocochléaire",
-    "tr": "İşitme ve denge siniri",
-    "ar": "العصب الدهليزي القوقعي",
-    "deExplanation": "Ein Nerv im Kopf, der wichtige Funktionen für das Hören und den Gleichgewichtssinn übernimmt. Der Nervus vestibulocochlearis zieht vom Innenohr zum Gehirn und ist entscheidend für die Übertragung auditiver Informationen sowie für die Aufrechterhaltung des Gleichgewichtssinns. Schäden an diesem Nerv können zu Hörverlust, Schwindel oder Gleichgewichtsstörungen führen.",
-    "enExplanation": "The vestibulocochlear nerve, responsible for hearing and balance by transmitting signals from the auditory and vestibular systems to the brain.",
-    "ukExplanation": "Нервус вестибулокохлеаріс: відповідає за слух та рівновагу, передаючи сигнали від слухової та вестибулярної систем до мозку.",
-    "ruExplanation": "Нервус вестибулокохлеарис: отвечает за слух и равновесие, передавая сигналы от слуховой и вестибулярной систем к мозгу.",
-    "esExplanation": "El nervio vestibulococlear, responsable de la audición y el equilibrio, transmite señales de los sistemas auditivos y vestibulares al cerebro.",
-    "frExplanation": "Le nerf vestibulocochléaire, responsable de l'audition et de l'équilibre en transmettant des signaux des systèmes auditifs et vestibulaires au cerveau.",
-    "plExplanation": "Nerw przedsionkowo-ślimakowy, odpowiedzialny za słuch i równowagę, przekazujący sygnały z systemów słuchowego i przedsionkowego do mózgu.",
-    "trExplanation": "Nervus vestibulocochlearis, işitme ve dengeyi sağlayan işitsel ve vestibüler sistemlerden gelen sinyalleri beyne ileterek sorumludur.",
-    "arExplanation": "العصب الدهليزي القوقعي، المسؤول عن السمع والتوازن، ينقل الإشارات من الأنظمة السمعية والدهليزية إلى الدماغ.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1235,
-    "lat": "Nervus vagus (der)",
-    "de": "der Vagusnerv",
-    "en": "Vagus Nerve (10)",
-    "uk": "Блукаючий нерв",
-    "ru": "Блуждающий нерв",
-    "pl": "Nerw błędny",
-    "es": "Nervio vago",
-    "fr": "Nerf vague",
-    "tr": "Vagus siniri",
-    "ar": "العصب المبهم",
-    "deExplanation": "Der Vagusnerv ist der zehnte Hirnnerv und spielt eine entscheidende Rolle im parasympathischen Nervensystem. Er steuert unwillkürliche Körperfunktionen, darunter Herzfrequenz und Verdauung. Der Vagusnerv zieht vom Gehirn hinunter zu vielerlei Organen im Hals, Brust- und Bauchraum, wo er zahlreiche Äste abgibt. Klinisch relevant ist er unter anderem bei Erkrankungen des Herzens, der Stimme und der Verdauungsorgane.",
-    "enExplanation": "The vagus nerve, a major part of the parasympathetic system, providing extensive internal innervation including regulation of heart activity, digestion, and respiratory functions.",
-    "ukExplanation": "Нервус вагус: важлива частина парасимпатичної системи, що забезпечує широку внутрішню іннервацію, включаючи регуляцію серцевої діяльності, травлення та дихальних функцій.",
-    "ruExplanation": "Нервус вагус: важная часть парасимпатической системы, обеспечивающая широкую внутреннюю иннервацию, включая регуляцию сердечной деятельности, пищеварения и дыхательных функций.",
-    "esExplanation": "El nervio vago, una parte importante del sistema parasimpático, proporciona una amplia inervación interna, incluyendo la regulación de la actividad cardíaca, la digestión y las funciones respiratorias.",
-    "frExplanation": "Le nerf vague, une composante importante du système parasympathique qui fournit une innervation interne étendue, y compris la régulation de l'activité cardiaque, de la digestion et de la fonction respiratoire.",
-    "plExplanation": "Nerw błędny, ważna część układu przywspółczulnego, zapewniająca rozległą wewnętrzną inerwację, w tym regulację aktywności serca, trawienia i funkcji oddechowych.",
-    "trExplanation": "Nervus vagus, geniş içsel innervasyon sağlayan parasympatik sistemin önemli bir bileşenidir, bunlar arasında kalp aktivitesinin, sindirimin ve solunum fonksiyonlarının düzenlenmesi bulunur.",
-    "arExplanation": "العصب الحائر، جزء مهم من الجهاز العصبي اللاودي، يوفر تعصيب واسع النطاق للأعضاء الداخلية، بما في ذلك تنظيم نشاط القلب والهضم ووظائف التنفس.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1236,
-    "lat": "Nervus splanchnicus (der)",
-    "de": "der große/kleine Eingeweidenerv",
-    "en": "Splanchnic Nerve (major/minor)",
-    "uk": "Великий/малий черевний нерв",
-    "ru": "Большой/малый брюшной нерв",
-    "pl": "Nerw trzewny większy/mniejszy",
-    "es": "Nervio esplácnico mayor/menor",
-    "fr": "Nerf splanchnique",
-    "tr": "Büyük/küçük karın siniri",
-    "ar": "العصب الأحشائي الكبير/الصغير",
-    "deExplanation": "Der große und der kleine Eingeweidenerv sind Nervengeflechte, die aus dem Brustbereich stammen und das sympathische Nervensystem mit den Bauchorganen verbinden. Sie spielen eine Schlüsselrolle bei der Übertragung von Schmerzempfinden und der Regulierung unwillkürlicher Funktionen, wie zum Beispiel der Magen-Darm-Motilität. Klinisch relevant sind sie beispielsweise bei der Nervenblockade zur Schmerzlinderung bei chronischen Bauchschmerzen.",
-    "enExplanation": "The splanchnic nerves, which convey visceral sensations and influence the motor control of autonomic functions of the gastrointestinal tract.",
-    "ukExplanation": "Нервус спланхнікус: симпатичні нерви, які передають вісцеральні відчуття та впливають на моторний контроль автономних функцій шлунково-кишкового тракту.",
-    "ruExplanation": "Нервус спланхникус: симпатические нервы, передающие висцеральные ощущения и влияющие на моторный контроль автономных функций желудочно-кишечного тракта.",
-    "esExplanation": "Los nervios esplácnicos, que transmiten sensaciones viscerales y afectan el control motor de funciones autónomas del tracto gastrointestinal.",
-    "frExplanation": "Les nerfs splanchniques, qui transmettent les sensations viscérales et influencent le contrôle moteur des fonctions autonomes du tractus gastro-intestinal.",
-    "plExplanation": "Nerwy trzewne, przekazujące wrażenia trzewne i wpływające na kontrolę motoryczną autonomicznych funkcji przewodu pokarmowego.",
-    "trExplanation": "Splanchnicus sinirleri, visseral duyuları ileten ve gastrointestinal sistemdeki otonom fonksiyonların motor kontrolünü etkileyen sinirlerdir.",
-    "arExplanation": "الأعصاب الحشوية، التي تنقل الإحساسات الحشوية وتؤثر على التحكم الحركي للوظائف الذاتية للجهاز الهضمي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1237,
-    "lat": "Nervus phrenicus (der)",
-    "de": "der Zwerchfellnerv",
-    "en": "Phrenic Nerve",
-    "uk": "Діафрагмальний нерв",
-    "ru": "Диафрагмальный нерв",
-    "pl": "Nerw przeponowy",
-    "es": "Nervio frénico",
-    "fr": "Nerf phrénique",
-    "tr": "Diafragma siniri",
-    "ar": "العصب الحجابي",
-    "deExplanation": "Der Zwerchfellnerv ist ein wichtiger Nerv, der das Zwerchfell innerviert, den Hauptmuskel der Atmung. Er entspringt aus den Halsnervenwurzeln C3 bis C5 und verläuft durch den Brustraum zum Zwerchfell. Bei Schädigung des Nervs kann es zu einer eingeschränkten Atemfunktion kommen.",
-    "enExplanation": "The phrenic nerve, which innervates the diaphragm and is crucial for initiating and maintaining the breathing process.",
-    "ukExplanation": "Нервус френікус: іннервує діафрагму, вирішальний для ініціації та підтримки процесу дихання.",
-    "ruExplanation": "Нервус френикус: иннервирует диафрагму, решающий для инициации и поддержки процесса дыхания.",
-    "esExplanation": "El nervio frénico, que inerva el diafragma y es crucial para iniciar y mantener el proceso respiratorio.",
-    "frExplanation": "Le nerf phrénique, qui innerve le diaphragme et est essentiel pour l'initiation et le maintien du processus respiratoire.",
-    "plExplanation": "Nerw przeponowy inerwujący przeponę, kluczowy dla inicjowania i utrzymania procesu oddychania.",
-    "trExplanation": "Nervus phrenicus, diaframı innerve eder ve solunum sürecinin başlatılması ve sürdürülmesi için önemlidir.",
-    "arExplanation": "العصب الحجابي، الذي يعصب الحجاب الحاجز وهو حاسم لبدء والحفاظ على عملية التنفس.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1238,
-    "lat": "Commotio cerebri (die)",
-    "de": "die Gehirnerschütterung",
-    "en": "Concussion",
-    "uk": "Струс мозку",
-    "ru": "Сотрясение мозга",
-    "pl": "Wstrząśnienie mózgu",
-    "es": "Conmoción cerebral",
-    "fr": "Commotion cérébrale",
-    "tr": "Beyin sarsıntısı",
-    "ar": "ارتجاج الدماغ",
-    "deExplanation": "Eine Gehirnerschütterung ist eine milde Traumaverletzung des Gehirns, die durch einen Schlag oder eine Erschütterung des Kopfes verursacht wird. Sie kann vorübergehende Symptome wie Kopfschmerzen, Verwirrung, Schwindel und Übelkeit hervorrufen. In der Regel heilen die Symptome ohne bleibende Schäden ab, jedoch sollte bei Verdacht auf eine Gehirnerschütterung ärztliche Hilfe in Anspruch genommen werden.",
-    "enExplanation": "A mild traumatic brain injury, commonly known as a concussion, typically caused by blunt force trauma leading to temporary neurological dysfunction.",
-    "ukExplanation": "Комоція мозку: легка травматична ушкодження мозку, відома як забій мозку, зазвичай спричинена тупим ударом, може призвести до тимчасових неврологічних порушень.",
-    "ruExplanation": "Коммоция мозга: легкое травматическое повреждение мозга, известное как сотрясение мозга, обычно вызванное тупым ударом, может привести к временным неврологическим нарушениям.",
-    "esExplanation": "Una lesión cerebral traumática leve, comúnmente conocida como conmoción cerebral, típicamente causada por un golpe contundente que puede llevar a disfunciones neurológicas temporales.",
-    "frExplanation": "Une légère lésion cérébrale traumatique, couramment appelée commotion cérébrale, généralement causée par un traumatisme contondant, pouvant entraîner des troubles neurologiques temporaires.",
-    "plExplanation": "Lekkie urazowe uszkodzenie mózgu, znane jako wstrząs mózgu, zazwyczaj spowodowane tępą siłą, prowadzące do przejściowych zaburzeń neurologicznych.",
-    "trExplanation": "Commotio cerebri, genellikle künt bir travma tarafından neden olan hafif bir travmatik beyin yaralanması olarak bilinir ve geçici nörolojik bozukluklara yol açabilir.",
-    "arExplanation": "الارتجاج الدماغي، إصابة دماغية صدمية خفيفة، تُعرف عموماً بالارتجاج، عادةً ما تكون ناتجة عن ضربة قوية تؤدي إلى خلل عصبي مؤقت.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1239,
-    "lat": "Contusio cerebri (die)",
-    "de": "die Gehirnprellung",
-    "en": "Brain Contusion",
-    "uk": "Удар мозку",
-    "ru": "Ушиб мозга",
-    "pl": "Stłuczenie mózgu",
-    "es": "Contusión cerebral",
-    "fr": "Contusion cérébrale",
-    "tr": "Beyin kontüzyonu",
-    "ar": "كدمة الدماغ",
-    "deExplanation": "Eine Gehirnprellung ist eine Form der traumatischen Hirnverletzung, die durch eine direkte Einwirkung von Gewalt auf den Schädel verursacht wird. Diese Verletzung führt zu einer Schädigung des Hirngewebes, die zu Blutungen, Schwellungen und Funktionsstörungen des Gehirns führen kann. Die klinische Relevanz liegt in der sorgfältigen Überwachung und Behandlung, um Komplikationen wie Hirnschwellungen oder neurologische Ausfälle zu vermeiden.",
-    "enExplanation": "A cerebral contusion, resulting from direct application of force, which can lead to localized damage to brain tissue.",
-    "ukExplanation": "Контузія мозку: ушкодження мозку, яке відбувається внаслідок прямого впливу сили, може викликати локалізоване ушкодження мозкової тканини.",
-    "ruExplanation": "Контузия мозга: повреждение мозга, происходящее вследствие прямого воздействия силы, может вызвать локализованное повреждение мозговой ткани.",
-    "esExplanation": "Una contusión cerebral causada por la aplicación directa de la fuerza, que puede llevar a daño localizado del tejido cerebral.",
-    "frExplanation": "Une contusion cérébrale, due à une action directe de violence, pouvant entraîner des lésions localisées du tissu cérébral.",
-    "plExplanation": "Stłuczenie mózgu, wynikające z bezpośredniego działania siły, prowadzące do zlokalizowanego uszkodzenia tkanki mózgowej.",
-    "trExplanation": "Contusio cerebri, doğrudan şiddet etkisi nedeniyle oluşan, beyin dokusunun yerel hasarına yol açabilen bir beyin kontüzyonu türüdür.",
-    "arExplanation": "الكدمة الدماغية، الناتجة عن التأثير المباشر للقوة، والتي يمكن أن تؤدي إلى تلف موضعي في أنسجة الدماغ.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1240,
-    "lat": "Compressio cerebri (die)",
-    "de": "die Gehirnkompression",
-    "en": "Brain Compression",
-    "uk": "Стиснення мозку",
-    "ru": "Сдавление мозга",
-    "pl": "Ucisk mózgu",
-    "es": "Compresión cerebral",
-    "fr": "Compression cérébrale",
-    "tr": "Beyin basıncı",
-    "ar": "ضغط الدماغ",
-    "deExplanation": "Eine Gehirnkompression tritt auf, wenn Druck auf das Gehirn ausgeübt wird, typischerweise durch Schwellungen, Blutungen oder Tumore. Dieser Zustand kann lebensbedrohlich sein, da er die Blutzirkulation und Sauerstoffversorgung des Gehirns beeinträchtigen kann. Symptome können Kopfschmerzen, Bewusstseinsveränderungen und neurologische Ausfälle umfassen. Eine schnelle medizinische Behandlung ist oft erforderlich, um die Ursache zu beseitigen und den Druck zu reduzieren.",
-    "enExplanation": "A condition where the brain is compressed due to increased intracranial pressure, often caused by trauma, swelling, or mass lesions within the skull.",
-    "ukExplanation": "Компресія мозку: стан, при якому мозок стискається через підвищений внутрішньочерепний тиск, часто викликаний травмою, набряком або новоутвореннями у черепі.",
-    "ruExplanation": "Компрессия мозга: состояние, при котором мозг сдавливается из-за повышенного внутричерепного давления, часто вызванное травмой, отеком или новообразованиями в черепе.",
-    "esExplanation": "Un estado en el que el cerebro es comprimido por un aumento de la presión intracraneal, frecuentemente causado por trauma, hinchazón o masas en el cráneo.",
-    "frExplanation": "Un état où le cerveau est comprimé en raison d'une pression intracrânienne élevée, souvent causée par un traumatisme, un gonflement ou des lésions cérébrales intracrâniennes.",
-    "plExplanation": "Stan, w którym mózg jest kompresowany przez zwiększone ciśnienie wewnątrzczaszkowe, często spowodowane przez uraz, obrzęk lub masy w czaszce.",
-    "trExplanation": "Compressio cerebri, genellikle travma, şişme veya intrakraniyal lezyonlar nedeniyle yüksek intrakraniyal basınç nedeniyle beyinin sıkıştığı bir durumu ifade eder.",
-    "arExplanation": "حالة يتعرض فيها الدماغ للضغط بسبب زيادة الضغط داخل الجمجمة، غالباً بسبب الصدمات أو التورم أو الأورام داخل الجمجمة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1241,
-    "lat": "Apoplexie (der)",
-    "de": "der Schlaganfall",
-    "en": "Stroke (Apoplexy)",
-    "uk": "Інсульт",
-    "ru": "Инсульт",
-    "pl": "Udar mózgu",
-    "es": "Accidente cerebrovascular",
-    "fr": "Accident vasculaire cérébral",
-    "tr": "İnme",
-    "ar": "السكتة الدماغية",
-    "deExplanation": "Ein Schlaganfall ist eine akute Störung der Blutversorgung des Gehirns, die zu einem plötzlichen Verlust bestimmter Gehirnfunktionen führt. Dies kann durch eine Verstopfung oder einen Riss eines Blutgefäßes im Gehirn verursacht werden. Klinisch ist der Schlaganfall ein Notfall und erfordert sofortige Behandlung, um bleibende Schäden zu minimieren.",
-    "enExplanation": "A sudden stroke or cerebrovascular insult, caused by disruptions in blood flow such as thrombosis or hemorrhage, leading to acute neurological deficits.",
-    "ukExplanation": "Апоплексія (інсульт): раптовий інсульт або мозковий удар, викликаний порушенням кровообігу, як тромбоз або крововилив, призводить до гострих неврологічних випадів.",
-    "ruExplanation": "Апоплексия (инсульт): внезапный инсульт или мозговой удар, вызванный нарушением кровообращения, как тромбоз или кровоизлияние, приводит к острым неврологическим выпадам.",
-    "esExplanation": "Un accidente cerebrovascular o ictus cerebral repentino, causado por trastornos del flujo sanguíneo como trombosis o hemorragia, que conduce a deficiencias neurológicas agudas.",
-    "frExplanation": "Une attaque soudaine, souvent fluctuante, due à des troubles de la circulation sanguine tels qu'une thrombose ou une hémorragie, entraînant des déficits neurologiques aigus.",
-    "plExplanation": "Apopleksja to nagły udar mózgu lub incydent mózgowy, spowodowany przez zaburzenia przepływu krwi, takie jak zakrzepica lub krwotok, prowadzący do ostrych deficytów neurologicznych.",
-    "trExplanation": "Apoplexie (Apoplex / İnfüz), tromboz veya kanama gibi kan dolaşımı bozuklukları nedeniyle meydana gelen ani bir inme ya da beyin insultudur ve akut nörolojik bozukluklara yol açar.",
-    "arExplanation": "السكتة الدماغية أو الجلطة، التي تحدث بسبب اضطرابات في تدفق الدم مثل الجلطات أو النزيف، وتؤدي إلى عجز عصبي حاد.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1242,
-    "lat": "Agnosie (die)",
-    "de": "die Agnosie",
-    "en": "Agnosia",
-    "uk": "Агнозія",
-    "ru": "Агнозия",
-    "pl": "Agnosja",
-    "es": "Agnosia",
-    "fr": "Agnosie",
-    "tr": "Agnosi",
-    "ar": "عدم القدرة على التعرف",
-    "deExplanation": "Agnosie ist ein neurologischer Zustand, bei dem eine Person unfähig ist, bestimmte Objekte, Geräusche, Personen oder andere Sinneseindrücke trotz intakter Sinnesorgane und intellektueller Fähigkeiten zu erkennen oder zu identifizieren. Ursachen können Schädigungen infolge von Schlaganfällen, Kopfverletzungen oder neurodegenerativen Erkrankungen im Gehirn sein, insbesondere in den Bereichen der Verarbeitung von sensorischen Informationen.",
-    "enExplanation": "A deficit in recognizing or assigning meaning to sensory stimuli despite intact sensory functions, often resulting from cerebral lesions.",
-    "ukExplanation": "Агнозія: дефіцит у впізнаванні або приписуванні сенсорних вражень, незважаючи на збережені сенсорні функції, часто виникає в результаті церебральних лезій.",
-    "ruExplanation": "Агнозия: дефицит в распознавании или отнесении сенсорных впечатлений, несмотря на сохраненные сенсорные функции, часто возникает в результате церебральных лезий.",
-    "esExplanation": "Un déficit en el reconocimiento o asignación de impresiones sensoriales a pesar de tener funciones sensoriales intactas, frecuentemente resultado de lesiones cerebrales.",
-    "frExplanation": "Un déficit dans la reconnaissance ou l'assignation des sensations malgré des fonctions sensorielles intactes, souvent résultant de lésions cérébrales.",
-    "plExplanation": "Agnozja to deficyt w rozpoznawaniu lub przyporządkowaniu wrażeń sensorycznych pomimo nienaruszonych funkcji zmysłów, często wynikająca z uszkodzeń mózgowych.",
-    "trExplanation": "Agnozi, çoğu zaman beyin lezyonları sonucu, intact duyusal işlevlere rağmen duyusal izlenimlerin tanınması veya atanması konusunda bir eksikliktir.",
-    "arExplanation": "عجز في التعرف أو تحديد الانطباعات الحسية على الرغم من سلامة الوظائف الحسية، غالباً نتيجة للإصابات الدماغية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1243,
-    "lat": "Amnesie (die)",
-    "de": "die Gedächtnisstörung",
-    "en": "Amnesia",
-    "uk": "Амнезія",
-    "ru": "Амнезия",
-    "pl": "Zaburzenia pamięci",
-    "es": "Amnesia",
-    "fr": "Amnésie",
-    "tr": "Hafıza bozukluğu",
-    "ar": "اضطراب الذاكرة",
-    "deExplanation": "Eine Amnesie ist eine Gedächtnisstörung, bei der Erinnerungen an Fakten oder Erfahrungen teilweise oder vollständig verloren gehen. Ursachen können physische Hirnschäden durch Trauma, Krankheit oder Schlaganfall sein, ebenso wie psychische Faktoren bei bestimmten traumatischen Erlebnissen. Klinisch relevant bei neurologischen Untersuchungen zur Diagnostik von Gehirnschädigungen oder psychiatrischen Erkrankungen.",
-    "enExplanation": "Memory loss or difficulty in retrieving memories, ranging from transient episodes to permanent conditions.",
-    "ukExplanation": "Амнезія: втрата пам'яті або труднощі при відтворенні спогадів, може варіюватися від тимчасових епізодів до постійних станів.",
-    "ruExplanation": "Амнезия: потеря памяти или трудности при воспроизведении воспоминаний, может варьироваться от временных эпизодов до постоянных состояний.",
-    "esExplanation": "Pérdida de memoria o dificultades para recuperar recuerdos, que pueden variar desde episodios temporales hasta estados permanentes.",
-    "frExplanation": "Une perte de mémoire ou des difficultés à rappeler des souvenirs, pouvant aller de périodes temporaires à des états permanents.",
-    "plExplanation": "Amnezja to utrata pamięci lub trudności w przywoływaniu wspomnień, mogące obejmować od przejściowych epizodów do trwałych stanów.",
-    "trExplanation": "Amnezi, hafıza kaybı veya anıları hatırlama konusundaki zorlukları ifade eder ve geçici dönemlerden kalıcı durumlara kadar çeşitli olabilir.",
-    "arExplanation": "فقدان الذاكرة أو صعوبات في استرجاع الذكريات، وقد تتراوح من حالات مؤقتة إلى حالات دائمة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1244,
-    "lat": "Delirium (das)",
-    "de": "das Delir",
-    "en": "Delirium",
-    "uk": "Делірій",
-    "ru": "Делирий",
-    "pl": "Delirium",
-    "es": "Delirio",
-    "fr": "Délire",
-    "tr": "Deliryum",
-    "ar": "الهذيان",
-    "deExplanation": "Ein Delir ist ein akuter, vorübergehender Zustand geistiger Verwirrung, der durch Desorientierung, gestörtes Bewusstsein und eine Beeinträchtigung der geistigen Funktionen gekennzeichnet ist. Es tritt häufig bei älteren Menschen auf, insbesondere im Zusammenhang mit Hospitalisierung oder schweren Erkrankungen. Ein Delir kann durch Faktoren wie Infektionen, Medikamentennebenwirkungen oder Stoffwechselstörungen ausgelöst werden und erfordert eine sofortige medizinische Abklärung und Behandlung.",
-    "enExplanation": "An acute, often fluctuating state of confusion and disorientation, which can be caused by factors such as infections, medications, or metabolic disturbances.",
-    "ukExplanation": "Делірій: гострий, часто коливається стан сплутаності свідомості та дезорієнтації, викликаний факторами як інфекції, ліки або метаболічні розлади.",
-    "ruExplanation": "Делирий: острый, часто колеблющийся состояние смешения сознания и дезориентации, вызванное факторами как инфекции, лекарства или метаболические расстройства.",
-    "esExplanation": "Un estado agudo y a menudo fluctuante de confusión y desorientación, causado por factores como infecciones, medicamentos o trastornos metabólicos.",
-    "frExplanation": "Un état aigu souvent fluctuant de confusion et de désorientation, pouvant être causé par des facteurs tels que les infections, les médicaments ou les troubles métaboliques.",
-    "plExplanation": "Delirium to ostry, często fluktuujący stan zamętu i dezorientacji, spowodowany przez czynniki takie jak infekcje, leki lub zaburzenia metaboliczne.",
-    "trExplanation": "Deliryum (Delir), genellikle enfeksiyonlar, ilaçlar veya metabolik bozukluklar gibi faktörler nedeniyle oluşabilen, sık sık değişken bir karmaşa ve oryantasyon kaybı durumudur.",
-    "arExplanation": "حالة حادة ومتقلبة غالباً من الارتباك وفقدان التوجه، تسببها عوامل مثل العدوى أو الأدوية أو الاضطرابات الأيضية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1245,
-    "lat": "Insomnie (die)",
-    "de": "die Schlaflosigkeit",
-    "en": "Insomnia",
-    "uk": "Безсоння",
-    "ru": "Бессонница",
-    "pl": "Bezsenność",
-    "es": "Insomnio",
-    "fr": "Insomnie",
-    "tr": "Uykusuzluk",
-    "ar": "الأرق",
-    "deExplanation": "Ein Zustand, bei dem eine Person Schwierigkeiten hat, ein- oder durchzuschlafen, was zu unzureichendem oder nicht erfrischendem Schlaf führt. Schlaflosigkeit kann temporär oder chronisch sein und beeinflusst die körperliche und geistige Gesundheit. Ursachen können Stress, gesundheitliche Probleme oder Lebensgewohnheiten sein.",
-    "enExplanation": "Difficulties with initiating or maintaining sleep, leading to impaired sleep quality and daytime fatigue.",
-    "ukExplanation": "Інсомнія: труднощі при засинанні або підтриманні сну, що призводять до порушення якості сну та денної сонливості.",
-    "ruExplanation": "Инсомния: трудности при засыпании или поддержании сна, приводящие к нарушению качества сна и дневной сонливости.",
-    "esExplanation": "Dificultades para conciliar o mantener el sueño, que conducen a una calidad de sueño deficiente y somnolencia diurna.",
-    "frExplanation": "Des difficultés à s'endormir ou à rester endormi, entraînant une altération de la qualité du sommeil et une somnolence diurne.",
-    "plExplanation": "Insomnia to trudności z zasypianiem lub przesypianiem nocy, prowadzące do pogorszenia jakości snu i zmęczenia w ciągu dnia.",
-    "trExplanation": "İnsomni, uykuya dalmakta veya uykuda kalmakta zorluk yaşama durumunu ifade eder ve uyku kalitesinin bozulmasına ve gündüz uykusuna yol açar.",
-    "arExplanation": "صعوبات في النوم أو الاستمرار في النوم، مما يؤدي إلى جودة نوم ضعيفة ونعاس خلال النهار.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern"
-    ]
-  },
-  {
-    "id": 1246,
-    "lat": "Parasomnie (die)",
-    "de": "die Schlafstörung",
-    "en": "Parasomnia",
-    "uk": "Парасомнія",
-    "ru": "Парасомния",
-    "pl": "Zaburzenia snu",
-    "es": "Parasomnia",
-    "fr": "Parasomnie",
-    "tr": "Parasomni",
-    "ar": "اضطرابات النوم",
-    "deExplanation": "Parasomnien sind Schlafstörungen, die ungewöhnliche Verhaltensweisen oder Erlebnisse während des Schlafs umfassen, wie Schlafwandeln, Albträume oder Zähneknirschen. Diese Phänomene treten typischerweise während der Übergangsphasen zwischen den Schlafstadien oder beim Aufwachen auf und können die Schlafqualität und das Wohlbefinden beeinträchtigen.",
-    "enExplanation": "Disorders that occur during sleep, such as sleepwalking, nightmares, or REM sleep behavior disorders.",
-    "ukExplanation": "Парасомнія: розлади, що відбуваються під час сну, такі як сомнамбулізм, кошмари або розлади поведінки під час сну з швидкими рухами очей (REM).",
-    "ruExplanation": "Парасомния: расстройства, происходящие во время сна, такие как лунатизм, кошмары или нарушения поведения во сне с быстрыми движениями глаз (REM).",
-    "esExplanation": "Trastornos que ocurren durante el sueño, como sonambulismo, pesadillas o trastornos de comportamiento del sueño REM.",
-    "frExplanation": "Des troubles survenant pendant le sommeil, tels que le somnambulisme, les cauchemars ou les troubles du comportement en sommeil paradoxal.",
-    "plExplanation": "Parasomnia to zaburzenia występujące podczas snu, takie jak lunatykowanie, koszmary nocne czy zaburzenia zachowania podczas snu REM.",
-    "trExplanation": "Parasomni, uyku sırasında meydana gelen, uyurgezerlik, kabuslar veya paradoksal uyku davranış bozuklukları gibi bozuklukları içeren uyku sırasında ortaya çıkan bozuklukları ifade eder.",
-    "arExplanation": "اضطرابات تحدث أثناء النوم، مثل السير أثناء النوم، والكوابيس، أو اضطرابات سلوك النوم في مرحلة الحركة السريعة للعين.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1247,
-    "lat": "Aphasie (die)",
-    "de": "die Sprachstörung",
-    "en": "Aphasia",
-    "uk": "Афазія",
-    "ru": "Афазия",
-    "pl": "Zaburzenia mowy",
-    "es": "Afasia",
-    "fr": "Aphasie",
-    "tr": "Afazi",
-    "ar": "اضطراب الكلام",
-    "deExplanation": "Aphasie ist eine erworbene Sprachstörung, die durch Schäden des Sprachzentrums im Gehirn entsteht, oft infolge eines Schlaganfalls oder einer Hirnverletzung. Sie kann verschiedene Aspekte der Sprache beeinträchtigen, wie Sprechen, Verstehen, Lesen und Schreiben, und hat erhebliche Auswirkungen auf die Kommunikationsfähigkeit der Betroffenen.",
-    "enExplanation": "An acquired language disorder due to brain damage, affecting the production or comprehension of speech.",
-    "ukExplanation": "Афазія: набуте порушення мовлення через пошкодження мозку, яке впливає на вироблення або розуміння мови.",
-    "ruExplanation": "Афазия: приобретенное нарушение речи из-за повреждения мозга, влияющее на производство или понимание речи.",
-    "esExplanation": "Un trastorno adquirido del lenguaje debido a daños cerebrales que afecta la producción o comprensión del habla.",
-    "frExplanation": "Un trouble acquis de la parole dû à des lésions cérébrales, affectant la production ou la compréhension du langage.",
-    "plExplanation": "Afazja to nabyta zaburzenie mowy spowodowane uszkodzeniami mózgu, wpływające na produkcję lub rozumienie mowy.",
-    "trExplanation": "Afezi, beyin lezyonları nedeniyle ortaya çıkan konuşma bozukluğudur ve dil üretimini veya anlayışını etkileyebilir.",
-    "arExplanation": "اضطراب في اللغة ناتج عن تلف في الدماغ يؤثر على القدرة على إنتاج أو فهم الكلام.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1248,
-    "lat": "Dysphasie (die)",
-    "de": "die Sprachstörung",
-    "en": "Dysphasia",
-    "uk": "Дисфазія",
-    "ru": "Дисфазия",
-    "pl": "Zaburzenia mowy",
-    "es": "Disfasia",
-    "fr": "Dysphasie",
-    "tr": "Afazi",
-    "ar": "اضطراب الكلام",
-    "deExplanation": "Eine Beeinträchtigung der Sprachproduktion oder des Sprachverständnisses, oft verursacht durch eine Schädigung in bestimmten Bereichen des Gehirns, wie z.B. nach einem Schlaganfall. Betroffene können Schwierigkeiten haben, Wörter zu finden, Sätze zu bilden oder gesprochene Sprache zu verstehen, was die Kommunikation im Alltag erheblich erschweren kann.",
-    "enExplanation": "A developmental language disorder that affects language acquisition and usage in children.",
-    "ukExplanation": "Дисфазія: розвитковий розлад мовлення, що впливає на навчання та використання мови у дітей.",
-    "ruExplanation": "Дисфазия: развивающееся расстройство речи, влияющее на обучение и использование языка у детей.",
-    "esExplanation": "Un trastorno del desarrollo del lenguaje que afecta la adquisición y el uso del lenguaje en niños.",
-    "frExplanation": "Un trouble du développement de la parole qui affecte l'acquisition et l'utilisation du langage chez les enfants.",
-    "plExplanation": "Dysfazja to zaburzenie rozwojowe mowy, wpływające na zdobywanie i używanie języka u dzieci.",
-    "trExplanation": "Disfazi, çocuklarda dilin öğrenimini ve kullanımını etkileyen bir konuşma gelişim bozukluğudur.",
-    "arExplanation": "اضطراب في تطور اللغة يؤثر على اكتساب واستخدام اللغة لدى الأطفال.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1249,
-    "lat": "Dysarthrie (die)",
-    "de": "die Artikulationsstörung",
-    "en": "Dysarthria",
-    "uk": "Дисартрія",
-    "ru": "Дисартрия",
-    "pl": "Zaburzenia artykulacji",
-    "es": "Disartria",
-    "fr": "Dysarthrie",
-    "tr": "Artikülasyon bozukluğu",
-    "ar": "اضطراب النطق",
-    "deExplanation": "Eine neurologische Störung, die die Fähigkeit beeinträchtigt, die Muskeln im Mund, Gesicht und Atemtrakt zu kontrollieren. Dies führt zu undeutlicher oder verwaschener Sprache. Ursache können Erkrankungen wie Schlaganfall, Multiple Sklerose oder Parkinson sein. Die Relevanz liegt in der Beeinträchtigung der verbalen Kommunikation.",
-    "enExplanation": "A motor speech disorder characterized by weakness, spasticity, or coordination problems of the muscles responsible for articulation.",
-    "ukExplanation": "Дизартрія: моторний розлад мовлення, характеризується слабкістю, спастичністю або проблемами координації м'язів, відповідальних за артикуляцію.",
-    "ruExplanation": "Дизартрия: моторное расстройство речи, характеризующееся слабостью, спастичностью или проблемами координации мышц, отвечающих за артикуляцию.",
-    "esExplanation": "Un trastorno del habla motor, caracterizado por debilidad, espasticidad o problemas de coordinación de los músculos responsables de la articulación.",
-    "frExplanation": "Une dysarthrie motrice caractérisée par une faiblesse, une spasticité ou des problèmes de coordination des muscles responsables de l'articulation.",
-    "plExplanation": "Dysartria to zaburzenie mowy o charakterze motorycznym, charakteryzujące się słabością, spastycznością lub problemami koordynacyjnymi mięśni odpowiedzialnych za artykulację.",
-    "trExplanation": "Disartri, konuşma için sorumlu kasların zayıflığı, spastisite veya koordinasyon sorunları ile karakterize olan bir motor konuşma bozukluğudur.",
-    "arExplanation": "اضطراب في الكلام الحركي، يتميز بالضعف أو التشنج أو مشاكل التنسيق في العضلات المسؤولة عن التعبير.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1250,
-    "lat": "Dyslexie (die)",
-    "de": "die Lesestörung",
-    "en": "Dyslexia",
-    "uk": "Дислексія",
-    "ru": "Дислексия",
-    "pl": "Zaburzenia czytania",
-    "es": "Dislexia",
-    "fr": "Dyslexie",
-    "tr": "Okuma bozukluğu",
-    "ar": "اضطراب القراءة",
-    "deExplanation": "Dyslexie, bekannt als Lesestörung, ist eine neurologische Entwicklungsstörung, die die Fähigkeit zum genauen und flüssigen Lesen beeinträchtigt. Sie ist oft genetisch bedingt und betrifft Bereiche des Gehirns, die für die Sprachverarbeitung zuständig sind. Klinisch ist Dyslexie relevant, da sie den schulischen und beruflichen Erfolg beeinflussen kann, erfordert aber keine anatomische Strukturangabe, da es sich um eine funktionelle Störung handelt.",
-    "enExplanation": "A specific learning disorder in reading, involving difficulties with word recognition and understanding of reading material.",
-    "ukExplanation": "Дислексія: специфічний навчальний розлад читання, що включає труднощі при впізнаванні слів та розумінні прочитаного.",
-    "ruExplanation": "Дислексия: специфическое обучающее расстройство чтения, включающее трудности при узнавании слов и понимании прочитанного.",
-    "esExplanation": "Una dificultad específica de aprendizaje en la lectura, que presenta problemas en el reconocimiento de palabras y en la comprensión de lo leído.",
-    "frExplanation": "Une dyslexie spécifique de l'apprentissage de la lecture, entraînant des difficultés de reconnaissance des mots et de compréhension de la lecture.",
-    "plExplanation": "Dysleksja to specyficzne zaburzenie uczenia się w czytaniu, powodujące trudności w rozpoznawaniu słów i zrozumieniu czytanego tekstu.",
-    "trExplanation": "Disleksi, okuma öğreniminde özel bir öğrenme bozukluğudur ve kelimeleri tanıma ve okuduğu anlama konularında zorluklar yaratır.",
-    "arExplanation": "صعوبة خاصة في تعلم القراءة تتسبب في مشاكل في التعرف على الكلمات وفهم النصوص.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1251,
-    "lat": "Dysdiadochokinese (die)",
-    "de": "die Unfähigkeit zu schnellen abwechselnden Bewegungen",
-    "en": "Dysdiadochokinesia",
-    "uk": "Дисдіадохокінез",
-    "ru": "Нарушение чередования быстрых движений",
-    "pl": "Niezdolność do szybkich naprzemiennych ruchów",
-    "es": "Disdiadococinesia",
-    "fr": "Dysdiadochokinésie",
-    "tr": "Alternatif hareketlerde zorluk",
-    "ar": "عدم القدرة على أداء الحركات البديلة السريعة",
-    "deExplanation": "Dysdiadochokinese ist eine Störung der Feinmotorik, bei der die betroffene Person Schwierigkeiten hat, schnell aufeinanderfolgende, abwechselnde Bewegungen auszuführen. Diese Problematik ist oft mit einer Schädigung im Bereich des Kleinhirns verbunden und kann ein Hinweis auf neurologische Erkrankungen wie Ataxie oder Multiple Sklerose sein. Die Bewertung der Dysdiadochokinese erfolgt häufig durch spezifische neurologische Tests, bei denen Patienten aufgefordert werden, schnelle Bewegungen auszuführen, wie das abwechselnde Drehen der Handflächen.",
-    "enExplanation": "A motor coordination disorder manifested in the inability to perform rapid alternating movements.",
-    "ukExplanation": "Дисдіадохокінез: моторний розлад координації, що проявляється в неможливості виконувати швидкі, чергові рухи.",
-    "ruExplanation": "Дисдиадохокинез: моторное расстройство координации, проявляющееся в невозможности выполнять быстрые, чередующиеся движения.",
-    "esExplanation": "Un trastorno de la coordinación motora que se manifiesta en la incapacidad para realizar movimientos rápidos y alternos.",
-    "frExplanation": "Un trouble de la coordination motrice se manifestant par l'incapacité à effectuer rapidement des mouvements alternés.",
-    "plExplanation": "Dysdiadochokineza to zaburzenie koordynacji motorycznej, objawiające się niezdolnością do szybkich, naprzemiennych ruchów.",
-    "trExplanation": "Disdiadokokinezi, hızlı, sırayla hareketleri gerçekleştirememe şeklinde kendini gösteren bir motor koordinasyon bozukluğudur.",
-    "arExplanation": "اضطراب في التنسيق الحركي يتجلى في عدم القدرة على أداء حركات سريعة ومتناوبة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1252,
-    "lat": "Logopädie (die)",
-    "de": "die Sprachtherapie",
-    "en": "Speech Therapy (Logopedia)",
-    "uk": "Логопедія",
-    "ru": "Логопедия",
-    "pl": "Terapia mowy",
-    "es": "Logopedia",
-    "fr": "Orthophonie",
-    "tr": "Konuşma terapisi",
-    "ar": "العلاج النطقي",
-    "deExplanation": "Ein Fachgebiet, das sich mit der Behandlung von Sprach-, Sprech-, Stimm-, Schluck- und Hörstörungen beschäftigt. Logopäden arbeiten mit Patienten jeden Alters, um Kommunikationsfähigkeiten zu verbessern oder wiederherzustellen, oft nach neurologischen Ereignissen oder bei Entwicklungsstörungen.",
-    "enExplanation": "The field of therapy and rehabilitation for speech, language, voice, and swallowing disorders.",
-    "ukExplanation": "Логопедія: фахова сфера терапії та реабілітації розладів мовлення, голосу, артикуляції та ковтання.",
-    "ruExplanation": "Логопедия: профессиональная сфера терапии и реабилитации расстройств речи, голоса, артикуляции и глотания.",
-    "esExplanation": "La disciplina de terapia y rehabilitación de trastornos del habla, el lenguaje, la voz y la deglución.",
-    "frExplanation": "Le domaine de la thérapie et de la rééducation des troubles de la parole, de la phonation, de la voix et de la déglutition.",
-    "plExplanation": "Logopedia to dziedzina terapii i rehabilitacji zaburzeń mowy, mówienia, głosu i połykania.",
-    "trExplanation": "Logopedi, konuşma, ses çıkarma, ses ve yutma bozukluklarının tedavi ve rehabilitasyon alanıdır.",
-    "arExplanation": "مجال العلاج وإعادة التأهيل لاضطرابات الكلام واللغة والصوت والبلع.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1253,
-    "lat": "Anästhesie (die)",
-    "de": "die Betäubung",
-    "en": "Anesthesia",
-    "uk": "Анестезія",
-    "ru": "Анестезия",
-    "pl": "Znieczulenie",
-    "es": "Anestesia",
-    "fr": "Anesthésie",
-    "tr": "Anestezi",
-    "ar": "التخدير",
-    "deExplanation": "Ein medizinisches Verfahren zur Herbeiführung eines temporären Verlustes von Empfindung oder Bewusstsein, um Schmerzen während medizinischer Eingriffe zu verhindern. Sie kann lokal, regional oder allgemein angewendet werden und spielt eine zentrale Rolle bei der Schmerzkontrolle während Operationen und anderen invasiven Prozeduren.",
-    "enExplanation": "Anesthesia refers to the targeted elimination of pain and consciousness through medication for surgical procedures but can also indicate a pathology-induced loss of sensitivity.",
-    "ukExplanation": "Анестезія: цілеспрямоване відключення відчуття болю та свідомості за допомогою медикаментів для проведення хірургічних втручань, може також вказувати на патологічну втрату чутливості.",
-    "ruExplanation": "Анестезия: целенаправленное отключение ощущения боли и сознания с помощью медикаментов для проведения хирургических вмешательств, может также указывать на патологическую потерю чувствительности.",
-    "esExplanation": "Anestesia se refiere a la eliminación intencionada de la sensación de dolor y la conciencia a través de medicamentos para permitir procedimientos quirúrgicos, pero también puede indicar una pérdida patológica de sensibilidad.",
-    "frExplanation": "L'anesthésie désigne l'abolition ciblée de la sensation de douleur et de la conscience à l'aide de médicaments afin de permettre des interventions chirurgicales, mais peut également indiquer une perte pathologique de la sensibilité.",
-    "plExplanation": "Anestezja odnosi się do celowego wyłączenia odczuwania bólu i świadomości za pomocą leków, aby umożliwić operacje chirurgiczne, ale może także wskazywać na patologiczny brak wrażliwości.",
-    "trExplanation": "Anestezi, cerrahi müdahalelere izin vermek için ilaçlar aracılığıyla ağrı algısının ve bilincin hedeflenen şekilde kaldırılması anlamına gelir, ancak aynı zamanda patolojik bir şekilde duyusal kayıp anlamına da gelebilir.",
-    "arExplanation": "التخدير يشير إلى إزالة الإحساس بالألم والوعي عمداً باستخدام الأدوية لإجراء العمليات الجراحية، ولكنه قد يشير أيضاً إلى فقدان الإحساس الناتج عن أسباب مرضية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1254,
-    "lat": "Hypästhesie (die)",
-    "de": "die verminderte Empfindlichkeit",
-    "en": "Hypoesthesia",
-    "uk": "Гіпестезія",
-    "ru": "Гипестезия",
-    "pl": "Zmniejszona wrażliwość",
-    "es": "Hipoestesia",
-    "fr": "Hypoesthésie",
-    "tr": "Duyu azalması",
-    "ar": "نقص الحساسية",
-    "deExplanation": "Hypästhesie bezeichnet eine verminderte Empfindlichkeit gegenüber Reizen, wie Berührung oder Druck, auf der Haut. Es kann verschiedene Ursachen haben, darunter Nervenschäden oder neurologische Erkrankungen, und tritt häufig in Zusammenhang mit Erkrankungen wie Diabetes, Schlaganfall oder einer peripheren Neuropathie auf. Die Bewertung der Hypästhesie erfolgt in der Regel durch neurologische Untersuchungen, wobei die spezifische Verteilung und Intensität der reduzierten Empfindung hilfreich für die Diagnose der zugrunde liegenden Ursache sein können.",
-    "enExplanation": "Hypoesthesia describes a condition of decreased sensitivity to sensory stimuli, often caused by nerve damage or neurological diseases.",
-    "ukExplanation": "Гіпестезія: стан зниженої чутливості до сенсорних подразників, часто викликаний ушкодженням нервів або неврологічними захворюваннями.",
-    "ruExplanation": "Гипестезия: состояние сниженной чувствительности к сенсорным раздражителям, часто вызванное повреждением нервов или неврологическими заболеваниями.",
-    "esExplanation": "Hipostesia describe un estado de sensibilidad reducida a estímulos sensoriales, a menudo causada por daño nervioso o trastornos neurológicos.",
-    "frExplanation": "L'hyposthésie décrit un état de sensibilité réduite aux stimuli sensoriels, souvent causé par des lésions nerveuses ou des maladies neurologiques.",
-    "plExplanation": "Hipestezja opisuje stan zmniejszonej wrażliwości na bodźce sensoryczne, często spowodowany uszkodzeniem nerwów lub chorobami neurologicznymi.",
-    "trExplanation": "Hipestezi, genellikle sinir hasarı veya nörolojik hastalıkların neden olduğu duyusal uyarıcılara karşı azalmış hassasiyet durumunu ifade eder.",
-    "arExplanation": "تشير إلى حالة من الحساسية المنخفضة تجاه المؤثرات الحسية، وغالباً ما تكون ناجمة عن تلف الأعصاب أو اضطرابات عصبية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1255,
-    "lat": "Hyperästhesie (die)",
-    "de": "die Überempfindlichkeit",
-    "en": "Hyperesthesia",
-    "uk": "Гіперестезія",
-    "ru": "Гиперестезия",
-    "pl": "Nadwrażliwość",
-    "es": "Hiperestesia",
-    "fr": "Hyperesthésie",
-    "tr": "Duyu aşırılığı",
-    "ar": "زيادة الحساسية",
-    "deExplanation": "Hyperästhesie beschreibt eine erhöhte Empfindlichkeit gegenüber sensorischen Reizen, insbesondere Berührung. Es handelt sich um einen Zustand, bei dem betroffene Personen normale Reize als unangenehm, schmerzhaft oder übermäßig spürbar wahrnehmen können. Oft tritt Hyperästhesie im Zusammenhang mit neurologischen Erkrankungen, Verletzungen oder Entzündungen auf.",
-    "enExplanation": "Hyperesthesia denotes increased sensitivity or responsiveness of an area of the skin or sense organs, often occurring as a response to nerve injury or inflammation.",
-    "ukExplanation": "Гіперестезія: підвищена чутливість або сприйнятливість області шкіри або органів чуття, часто як реакція на травму або запалення нервів.",
-    "ruExplanation": "Гиперестезия: повышенная чувствительность или восприимчивость области кожи или органов чувств, часто как реакция на травму или воспаление нервов.",
-    "esExplanation": "Hiperestesia se refiere a una sensibilidad o sensibilidad aumentada de una zona de la piel o de los órganos sensoriales, a menudo como reacción a una lesión o inflamación de los nervios.",
-    "frExplanation": "L'hyperesthésie fait référence à une sensibilité ou une réactivité accrue d'une zone de la peau ou des organes sensoriels, souvent en réponse à une lésion ou à une inflammation des nerfs.",
-    "plExplanation": "Hiperestezja oznacza zwiększoną wrażliwość lub czułość obszaru skóry lub narządów zmysłów, często jako reakcja na uraz lub zapalenie nerwów.",
-    "trExplanation": "Hiperestezi, genellikle sinirlerin hasar görmesi veya iltihaplanması sonucu deri veya duyusal organların bir bölgesinde artmış hassasiyet veya reaktiviteyi ifade eder.",
-    "arExplanation": "تشير إلى حالة من الحساسية المتزايدة لمنطقة معينة من الجلد أو الأعضاء الحسية، وغالباً ما تحدث كرد فعل للإصابة أو التهاب الأعصاب.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1256,
-    "lat": "Parästhesie (die)",
-    "de": "das Kribbeln",
-    "en": "Paresthesia",
-    "uk": "Парестезія",
-    "ru": "Парестезия",
-    "pl": "Mrowienie",
-    "es": "Parestesia",
-    "fr": "Paresthésie",
-    "tr": "Karıncalanma",
-    "ar": "الوخز",
-    "deExplanation": "Ein unangenehmes, manchmal als kribbelnd, prickelnd oder taubheitsähnlich empfundenes Gefühl auf der Haut, häufig ohne klaren äußeren Reiz. Diese Empfindungsstörung kann durch Druck auf Nerven, Durchblutungsstörungen oder neurologische Erkrankungen verursacht werden und tritt oft in Armen oder Beinen auf.",
-    "enExplanation": "Paresthesia includes abnormal sensations such as tingling, burning, or prickling, typically without an external cause and often associated with peripheral nervous system disorders.",
-    "ukExplanation": "Парестезія: аномальні відчуття, такі як поколювання, печіння чи мурашки, зазвичай без зовнішньої причини, часто пов'язані з порушеннями периферійної нервової системи.",
-    "ruExplanation": "Парестезия: аномальные ощущения, такие как покалывание, жжение или мурашки, обычно без внешней причины, часто связанные с нарушениями периферийной нервной системы.",
-    "esExplanation": "Parestesia incluye sensaciones anormales como hormigueo, ardor o picazón, típicamente sin causa externa y a menudo en relación con trastornos del sistema nervioso periférico.",
-    "frExplanation": "La paresthésie englobe des sensations anormales telles que des picotements, des brûlures ou des fourmillements, généralement sans cause externe et souvent liées à des troubles du système nerveux périphérique.",
-    "plExplanation": "Parestezja obejmuje nietypowe odczucia, takie jak mrowienie, palenie lub kłucie, zazwyczaj bez zewnętrznej przyczyny, często w związku z zaburzeniami obwodowego układu nerwowego.",
-    "trExplanation": "Parastezi, genellikle harici bir neden olmaksızın uyuşma, yanma veya karıncalanma gibi anormal duyumları içerir ve genellikle periferik sinir sistemi bozukluklarıyla ilişkilidir.",
-    "arExplanation": "تشمل الأحاسيس غير الطبيعية مثل الوخز والحرق والتنميل، عادةً دون سبب خارجي وغالباً ما تكون مرتبطة بالاضطرابات في الجهاز العصبي الطرفي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1257,
-    "lat": "Dysästhesie (die)",
-    "de": "die Empfindungsstörung",
-    "en": "Dysesthesia",
-    "uk": "Дисестезія",
-    "ru": "Дисестезия",
-    "pl": "Zaburzenia czucia",
-    "es": "Disestesia",
-    "fr": "Dysesthésie",
-    "tr": "Duyusal bozukluk",
-    "ar": "اضطراب الإحساس",
-    "deExplanation": "Eine Empfindungsstörung, bei der normale Reize als unangenehm oder schmerzhaft wahrgenommen werden. Diese kann in verschiedenen Körperbereichen auftreten und ist oft ein Symptom bei neurologischen Erkrankungen wie der Multiplen Sklerose oder Verletzungen des Nervensystems.",
-    "enExplanation": "Dysesthesia is an incorrect perception of touch that is experienced as unpleasant or painful, often caused by neurological disorders such as polyneuropathy.",
-    "ukExplanation": "Дисестезія: неправильне сприйняття дотиків, яке відчувається як неприємне або болюче, часто викликане неврологічними порушеннями, такими як полінейропатія.",
-    "ruExplanation": "Дисэстезия: неправильное восприятие прикосновений, которые воспринимаются как неприятные или болезненные, часто вызванные неврологическими расстройствами, такими как полинейропатия.",
-    "esExplanation": "Disestesia es una percepción errónea del tacto que se experimenta como desagradable o dolorosa, frecuentemente causada por trastornos neurológicos como la polineuropatía.",
-    "frExplanation": "La dysesthésie est une perception erronée du toucher perçue comme désagréable ou douloureuse, souvent causée par des troubles neurologiques tels que la polyneuropathie.",
-    "plExplanation": "Dysästhesie to błędne postrzeganie dotyku, odczuwane jako nieprzyjemne lub bolesne, często spowodowane przez zaburzenia neurologiczne, takie jak polineuropatia.",
-    "trExplanation": "Disestezi, genellikle polinöropati gibi nörolojik bozukluklar tarafından tetiklenen, dokunuşun yanlış algılanması olarak kabul edilir ve genellikle hoş olmayan veya ağrılı olarak algılanır.",
-    "arExplanation": "حالة خاطئة للإحساس باللمس يتم تجربتها على أنها غير مريحة أو مؤلمة، وغالباً ما تكون ناتجة عن اضطرابات عصبية مثل الاعتلال العصبي المتعدد.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1258,
-    "lat": "Sensus (der)",
-    "de": "die Sinneswahrnehmung",
-    "en": "Sense",
-    "uk": "Сприйняття",
-    "ru": "Сенсорное восприятие",
-    "pl": "Percepcja sensoryczna",
-    "es": "Percepción sensorial",
-    "fr": "Perception sensorielle",
-    "tr": "Duyusal algılama",
-    "ar": "الإدراك الحسي",
-    "deExplanation": "Die Sinneswahrnehmung bezieht sich auf die Fähigkeit des Körpers, Reize aus der Umgebung über die Sinne aufzunehmen und zu interpretieren. Diese Reize können visuell, auditiv, olfaktorisch, gustatorisch oder taktil sein. Die Sinneswahrnehmung ermöglicht es, die Umwelt bewusst wahrzunehmen und darauf zu reagieren, und spielt eine entscheidende Rolle im täglichen Leben sowie in der klinischen Bewertung sensorischer Defizite.",
-    "enExplanation": "Sensus describes the entirety of perception abilities and processes that enable the body to process stimuli and react to environmental changes.",
-    "ukExplanation": "Сенсус: сукупність здатностей та процесів сприйняття, що дозволяють тілу обробляти подразники та реагувати на зміни довкілля.",
-    "ruExplanation": "Сенсус: совокупность способностей и процессов восприятия, позволяющих телу обрабатывать раздражители и реагировать на изменения окружающей среды.",
-    "esExplanation": "Sensus describe la totalidad de las capacidades y procesos perceptivos que permiten al cuerpo procesar estímulos y responder a cambios en el entorno.",
-    "frExplanation": "Le sensus décrit l'ensemble des capacités et des processus de perception qui permettent au corps de traiter les stimuli et de réagir aux changements de l'environnement.",
-    "plExplanation": "Sensus opisuje zespół zdolności i procesów percepcyjnych, które pozwalają ciału przetwarzać bodźce i reagować na zmiany środowiskowe.",
-    "trExplanation": "Sensus, vücudun uyarılara yanıt vermesini sağlayan algılama yeteneklerinin ve süreçlerinin bütününü tanımlar.",
-    "arExplanation": "يصف القدرة الإجمالية للجسم على معالجة المؤثرات والاستجابة للتغيرات في البيئة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1259,
-    "lat": "Halluzination (die)",
-    "de": "die Halluzination",
-    "en": "Hallucination",
-    "uk": "Галюцинація",
-    "ru": "Галлюцинация",
-    "pl": "Halucynacja",
-    "es": "Alucinación",
-    "fr": "Hallucination",
-    "tr": "Halüsinasyon",
-    "ar": "الهلوسة",
-    "deExplanation": "Eine Halluzination ist eine Wahrnehmung, die ohne entsprechenden externen Reiz auftritt. Dabei kann es sich um visuelle, auditive oder andere sensorische Eindrücke handeln, die für den Betroffenen real erscheinen, tatsächlich jedoch nicht vorhanden sind. Halluzinationen sind oft mit psychischen Erkrankungen wie Schizophrenie, aber auch mit neurologischen Erkrankungen, Drogenkonsum oder Entzugssymptomen assoziiert.",
-    "enExplanation": "Hallucinations are perceptions without a corresponding external stimulus, which can occur in any sensory modality and are often part of mental or neurological disorders.",
-    "ukExplanation": "Галюцинації: сприйняття без відповідного зовнішнього подразника, можуть відбуватися у будь-якій сенсорній модальності, часто є частиною психічних або неврологічних розладів.",
-    "ruExplanation": "Галлюцинации: восприятие без соответствующего внешнего раздражителя, могут происходить в любой сенсорной модальности, часто являются частью психических или неврологических расстройств.",
-    "esExplanation": "Las alucinaciones son percepciones sin un estímulo externo correspondiente, que pueden ocurrir en cualquier modalidad sensorial y suelen ser parte de trastornos psíquicos o neurológicos.",
-    "frExplanation": "Les hallucinations sont des perceptions sans stimulus externe correspondant, pouvant survenir dans n'importe quelle modalité sensorielle et étant souvent associées à des troubles mentaux ou neurologiques.",
-    "plExplanation": "Halucynacje to percepcje bez odpowiedniego zewnętrznego bodźca, mogące wystąpić w każdej modalności sensorycznej, często są częścią zaburzeń psychicznych lub neurologicznych.",
-    "trExplanation": "Hallüsinasyonlar, herhangi bir dış uyarıcı olmadan meydana gelen algılamalardır ve genellikle psikolojik veya nörolojik bozuklukların bir parçasıdır.",
-    "arExplanation": "الهلوسة هي إدراكات تحدث دون محفز خارجي مطابق ويمكن أن تحدث في أي وضع حسي، وغالبًا ما تكون جزءًا من الاضطرابات النفسية أو العصبية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1260,
-    "lat": "Parese (die)",
-    "de": "die Lähmung",
-    "en": "Paresis",
-    "uk": "Парез",
-    "ru": "Парез",
-    "pl": "Porażenie",
-    "es": "Paresia",
-    "fr": "Parésie",
-    "tr": "Felç",
-    "ar": "الشلل الجزئي",
-    "deExplanation": "Eine Parese bezeichnet eine partielle Lähmung oder Schwäche der Muskeln, die durch Schädigungen im zentralen oder peripheren Nervensystem verursacht wird. Sie führt zu einer eingeschränkten Fähigkeit, betroffene Muskeln vollständig zu bewegen, und kann durch verschiedenste Ursachen wie Schlaganfälle, Verletzungen oder neurologische Erkrankungen entstehen. Klinisch relevant ist die genaue Diagnose der Ursache, um gezielte Behandlungen zu ermöglichen.",
-    "enExplanation": "Paresis refers to partial paralysis with reduced muscle strength, limiting movement and functionality, often as a result of damage to the central or peripheral nervous system.",
-    "ukExplanation": "Парез: частковий параліч зі зниженням м'язової сили, обмежує рухову та функціональну спроможність, часто виникає внаслідок ушкоджень центральної або периферійної нервової системи.",
-    "ruExplanation": "Парез: частичный паралич с понижением мышечной силы, ограничивающий двигательную и функциональную способность, часто возникает в результате повреждений центральной или периферийной нервной системы.",
-    "esExplanation": "La paresia se refiere a una parálisis parcial con disminución de la fuerza muscular que limita la capacidad de movimiento y función, a menudo como resultado de daños en el sistema nervioso central o periférico.",
-    "frExplanation": "La parésie désigne une paralysie partielle avec une force musculaire réduite, limitant la capacité de mouvement et de fonction, souvent causée par des lésions du système nerveux central ou périphérique.",
-    "plExplanation": "Pareza to częściowy paraliż z osłabieniem siły mięśniowej, ograniczający zdolność do ruchu i funkcjonowania, często jako wynik uszkodzenia w OUN lub obwodowym układzie nerwowym.",
-    "trExplanation": "Parezi, genellikle merkezi veya periferik sinir sistemi hasarı sonucu meydana gelen kısmi bir felçle karakterize edilir ve hareket ve işlev kabiliyetini kısıtlar.",
-    "arExplanation": "الشلل الجزئي يشير إلى شلل جزئي مع ضعف القوة العضلية الذي يقيد القدرة على الحركة والوظيفة، غالبًا نتيجة لأضرار في الجهاز العصبي المركزي أو الطرفي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1261,
-    "lat": "Paralyse (die)",
-    "de": "die Lähmung",
-    "en": "Paralysis",
-    "uk": "Параліч",
-    "ru": "Паралич",
-    "pl": "Paraliż",
-    "es": "Parálisis",
-    "fr": "Paralysie",
-    "tr": "Felç",
-    "ar": "الشلل",
-    "deExplanation": "Eine Lähmung ist die völlige oder teilweise Unfähigkeit eines Muskels oder einer Muskelgruppe, sich zu bewegen. Sie kann durch Schädigung des zentralen oder peripheren Nervensystems verursacht werden. Lähmungen können durch Verletzungen, Erkrankungen oder Störungen wie Schlaganfälle oder neurologische Krankheiten auftreten und haben oft erhebliche Auswirkungen auf die Lebensqualität.",
-    "enExplanation": "Paralysis means complete paralysis and loss of muscle activity in one or more areas of the body, often caused by severe nerve damage or nervous system diseases.",
-    "ukExplanation": "Параліч: повний параліч та втрата м'язової активності в одній або декількох областях тіла, часто викликаний важкими ушкодженнями нервів або захворюваннями нервової системи.",
-    "ruExplanation": "Паралич: полный паралич и потеря мышечной активности в одной или нескольких областях тела, часто вызванный тяжелыми повреждениями нервов или заболеваниями нервной системы.",
-    "esExplanation": "La parálisis significa una parálisis completa y la pérdida de actividad muscular en una o más áreas del cuerpo, a menudo causada por daños nerviosos graves o enfermedades del sistema nervioso.",
-    "frExplanation": "La paralysie signifie une paralysie complète et la perte de l'activité musculaire dans une ou plusieurs parties du corps, souvent causée par des lésions nerveuses graves ou des maladies du système nerveux.",
-    "plExplanation": "Paraliż oznacza całkowity paraliż i utratę aktywności mięśniowej w jednym lub więcej obszarach ciała, często spowodowany przez poważne uszkodzenie nerwów lub choroby układu nerwowego.",
-    "trExplanation": "Paralizi, genellikle ciddi sinir hasarı veya sinir sistemi hastalıkları nedeniyle bir veya daha fazla vücut bölgesinde tam bir felci ve kas aktivitesinin kaybını ifade eder.",
-    "arExplanation": "الشلل يعني شلل كامل وفقدان النشاط العضلي في منطقة أو أكثر من الجسم، غالبًا ما يكون ناتجًا عن أضرار شديدة في الأعصاب أو أمراض الجهاز العصبي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1262,
-    "lat": "Paraplegie (die)",
-    "de": "die Querschnittlähmung",
-    "en": "Paraplegia",
-    "uk": "Параплегія",
-    "ru": "Параплегия",
-    "pl": "Porazenie poprzeczne",
-    "es": "Paraplejía",
-    "fr": "Paraplégie",
-    "tr": "Parapleji",
-    "ar": "الشلل النصفي",
-    "deExplanation": "Eine Form der Lähmung, bei der es zu einem vollständigen oder teilweisen Funktionsverlust von Muskeln und Empfinden kommt, typischerweise der unteren Extremitäten und des Unterkörpers. Diese treten aufgrund einer Schädigung des Rückenmarks unterhalb der Brustwirbelsäule auf. Die Paraplegie erfordert umfassende medizinische Betreuung und Rehabilitation, um die Lebensqualität der Betroffenen zu verbessern.",
-    "enExplanation": "Paraplegia is a type of paralysis that refers to the loss of function and sensation in the lower extremities and lower trunk, typically caused by spinal cord injuries.",
-    "ukExplanation": "Параплегія: тип паралічу, що включає втрату функцій та відчуття у нижніх кінцівках та нижній частині тулуба, зазвичай спричинений травмами спинного мозку.",
-    "ruExplanation": "Параплегия: тип паралича, включающий потерю функций и ощущения в нижних конечностях и нижней части туловища, обычно вызванный травмами спинного мозга.",
-    "esExplanation": "La paraplejía es un tipo de parálisis que se refiere a la pérdida de función y sensación en las extremidades inferiores y la parte inferior del tronco, típicamente causada por lesiones de la médula espinal.",
-    "frExplanation": "La paraplégie est une forme de paralysie qui affecte la fonction et la sensation des membres inférieurs et de la moitié inférieure du tronc, généralement causée par des lésions de la moelle épinière.",
-    "plExplanation": "Paraplegia to rodzaj paraliżu obejmujący utratę funkcji i czucia w dolnych kończynach i dolnej części tułowia, zazwyczaj spowodowany uszkodzeniem rdzenia kręgowego.",
-    "trExplanation": "Parapleji, alt ekstremitelerin ve alt gövdenin hissi ve işlevini etkileyen bir felç türüdür ve genellikle omurilik yaralanmaları sonucu meydana gelir.",
-    "arExplanation": "الشلل النصفي نوع من الشلل يشير إلى فقدان الوظيفة والإحساس في الأطراف السفلية وأسفل الجذع، غالبًا ما يكون نتيجة إصابات النخاع الشوكي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1263,
-    "lat": "Hemiplegie (die)",
-    "de": "die Halbseitenlähmung",
-    "en": "Hemiplegia",
-    "uk": "Геміплегія",
-    "ru": "Гемиплегия",
-    "pl": "Porazenie połowicze",
-    "es": "Hemiplejía",
-    "fr": "Hémiplégie",
-    "tr": "Hemipleji",
-    "ar": "الشلل النصفي",
-    "deExplanation": "Eine Halbseitenlähmung ist eine neurologische Erkrankung, bei der eine Körperhälfte aufgrund von Schäden im Gehirn oder im Rückenmark gelähmt ist. Diese Lähmung kann durch einen Schlaganfall, eine Kopfverletzung oder andere neurologische Zustände verursacht werden. Die Betroffenen haben Schwierigkeiten bei der Bewegung und Kontrolle der betroffenen Körperseite, was sich auf Mobilität und alltägliche Tätigkeiten auswirkt. Die klinische Relevanz besteht darin, dass eine frühzeitige Diagnose und Therapie entscheidend für die Rehabilitation und Verbesserung der Lebensqualität ist.",
-    "enExplanation": "Hemiplegia is a form of paralysis affecting one side of the body, resulting in unilateral impairment of motor functions, often due to cerebrovascular events such as a stroke.",
-    "ukExplanation": "Геміплегія: форма паралічу, що вражає одну сторону тіла, призводить до одностороннього порушення рухових функцій, часто внаслідок цереброваскулярних подій, таких як інсульт.",
-    "ruExplanation": "Гемиплегия: форма паралича, поражающая одну сторону тела, приводит к одностороннему нарушению двигательных функций, часто в результате цереброваскулярных событий, таких как инсульт.",
-    "esExplanation": "La hemiplejía es una forma de parálisis que afecta a un lado del cuerpo, lo que lleva a un deterioro unilateral de las funciones motoras, a menudo debido a eventos cerebrovasculares como un derrame cerebral.",
-    "frExplanation": "L'hémiplégie est une forme de paralysie qui affecte un côté du corps, entraînant une altération unilatérale de la fonction motrice, souvent due à des événements cérébrovasculaires tels qu'un AVC.",
-    "plExplanation": "Hemiplegia to forma paraliżu dotykająca jednej strony ciała, prowadząca do jednostronnego upośledzenia funkcji motorycznych, często w wyniku zdarzeń naczyniowo-mózgowych, takich jak udar.",
-    "trExplanation": "Hemipleji, vücudun bir tarafını etkileyen bir felç türüdür ve genellikle inme gibi serebrovasküler olaylara bağlı olarak ortaya çıkar.",
-    "arExplanation": "الشلل النصفي هو شكل من أشكال الشلل يؤثر على نصف الجسم، مما يؤدي إلى ضعف في الوظائف الحركية على جانب واحد، غالبًا بسبب الأحداث الدماغية الوعائية مثل السكتة الدماغية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1264,
-    "lat": "Tetraplegie (die)",
-    "de": "die Querschnittlähmung aller vier Gliedmaßen",
-    "en": "Tetraplegia",
-    "uk": "Тетраплегія",
-    "ru": "Тетраплегия",
-    "pl": "Porazenie czterokończynowe",
-    "es": "Tetraplejía",
-    "fr": "Tétraplégie",
-    "tr": "Tetrapleji",
-    "ar": "الشلل الرباعي",
-    "deExplanation": "Tetraplegie ist ein Zustandsbild, bei dem durch eine Schädigung des Rückenmarks oder des Gehirns Lähmungen in allen vier Gliedmaßen, also Armen und Beinen, auftreten. Dies geschieht meist nach Verletzungen oder Erkrankungen der Halswirbelsäule. Die Betroffenen verlieren die Kontrolle über diese Gliedmaßen und haben oft auch Schwierigkeiten bei der Kontrolle von Rumpf und Atmung. Die klinische Relevanz liegt in der starken Einschränkung der Beweglichkeit und der Abhängigkeit von umfassender Pflege und Therapie.",
-    "enExplanation": "A type of spinal cord injury leading to paralysis of all four limbs, often caused by cervical spinal cord injuries.",
-    "ukExplanation": "Тетраплегія: форма спинномозкового паралічу, що веде до паралічу всіх чотирьох кінцівок, часто викликана травмами спинного мозку у шийному відділі.",
-    "ruExplanation": "Тетраплегия: форма спинномозгового паралича, приводящая к параличу всех четырех конечностей, часто вызванная травмами спинного мозга в шейном отделе.",
-    "esExplanation": "La tetraplejía es una forma de parálisis de la médula espinal que lleva a la parálisis de las cuatro extremidades, a menudo causada por lesiones de la médula espinal en la región cervical.",
-    "frExplanation": "La tétraplégie est une forme de paralysie qui entraîne la paralysie des quatre membres, souvent causée par des lésions de la moelle épinière au niveau cervical.",
-    "plExplanation": "Forma paraliżu przekroczowego, prowadząca do paraliżu wszystkich czterech kończyn, często spowodowana urazami rdzenia kręgowego w okolicy szyjnej.",
-    "trExplanation": "Tetrapleji, genellikle boyun bölgesindeki omurilik yaralanmaları nedeniyle dört uzvu felce uğratan bir felç türüdür.",
-    "arExplanation": "الشلل الرباعي هو شكل من أشكال الشلل الناتج عن إصابات النخاع الشوكي الذي يؤدي إلى شلل الأطراف الأربعة، غالبًا بسبب إصابات النخاع الشوكي في منطقة العنق.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1265,
-    "lat": "Facialisparese (die)",
-    "de": "die Gesichtsnervenlähmung",
-    "en": "Facial Paresis",
-    "uk": "Парез лицьового нерва",
-    "ru": "Парез лицевого нерва",
-    "pl": "Porazenie nerwu twarzowego",
-    "es": "Parálisis facial",
-    "fr": "Parésie faciale",
-    "tr": "Yüz felci",
-    "ar": "الشلل الوجهي",
-    "deExplanation": "Eine Störung des siebten Hirnnervs, die zu einer Schwäche oder Lähmung der Gesichtsmuskulatur auf einer oder beiden Seiten des Gesichts führt. Diese Erkrankung kann das Blinzeln, den Gesichtsausdruck und die Fähigkeit, die Lippen zu schließen, beeinträchtigen. Sie kann durch Infektionen, Verletzungen, autoimmune Erkrankungen oder idiopathische Ursachen hervorgerufen werden und ist oft vorübergehend, wobei eine vollständige Genesung möglich ist.",
-    "enExplanation": "Paralysis of facial nerves, resulting in limited movement of facial muscles and impairment of facial expression.",
-    "ukExplanation": "Парез лицевого нерва: параліч нервів обличчя, що веде до обмеження руху м'язів обличчя та порушення виразності обличчя.",
-    "ruExplanation": "Парез лицевого нерва: паралич нервов лица, приводящий к ограничению движения мышц лица и нарушению выразительности лица.",
-    "esExplanation": "La parálisis facial es una parálisis de los nervios faciales que lleva a la limitación del movimiento de los músculos faciales y a la alteración de la expresión facial.",
-    "frExplanation": "La parésie faciale est la paralysie des nerfs du visage, entraînant une limitation des mouvements des muscles du visage et des altérations de l'expression faciale.",
-    "plExplanation": "Paraliż nerwów twarzowych, prowadzący do ograniczenia ruchów mięśni twarzy i zaburzeń wyrazu twarzy.",
-    "trExplanation": "Fasyal paralizi, yüz sinirlerinin felci sonucu yüz kaslarının hareketlerinin sınırlanması ve yüz ifadesinin bozulmasına neden olan bir durumdur.",
-    "arExplanation": "شلل العصب الوجهي هو شلل في الأعصاب الوجهية يؤدي إلى تقييد حركة عضلات الوجه وإلى تغييرات في التعبير الوجهي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1266,
-    "lat": "Epilepsie (die)",
-    "de": "die Epilepsie",
-    "en": "Epilepsy",
-    "uk": "Епілепсія",
-    "ru": "Эпилепсия",
-    "pl": "Epilepsja",
-    "es": "Epilepsia",
-    "fr": "Épilepsie",
-    "tr": "Epilepsi",
-    "ar": "الصرع",
-    "deExplanation": "Eine neurologische Erkrankung, die durch wiederkehrende Anfälle aufgrund von abnormaler elektrischer Aktivität im Gehirn gekennzeichnet ist. Sie kann verschiedene Ursachen haben und in unterschiedlichen Formen auftreten, einschließlich fokaler und generalisierter Anfälle. Die Behandlung umfasst oft die Gabe von Medikamenten zur Kontrolle der Anfälle.",
-    "enExplanation": "A chronic brain disorder characterized by episodic, uncontrolled neuronal activity and recurrent seizures.",
-    "ukExplanation": "Епілепсія: хронічне захворювання мозку, що характеризується періодичною неконтрольованою нейронною активністю та повторюваними епілептичними нападами.",
-    "ruExplanation": "Эпилепсия: хроническое заболевание мозга, характеризующееся периодической неконтролируемой нейронной активностью и повторяющимися эпилептическими приступами.",
-    "esExplanation": "La epilepsia es una enfermedad crónica del cerebro caracterizada por actividad neuronal incontrolada y recurrente y ataques epilépticos recurrentes.",
-    "frExplanation": "L'épilepsie est une maladie chronique du cerveau caractérisée par une activité neuronale incontrôlée et des crises épileptiques récurrentes.",
-    "plExplanation": "Przewlekła choroba mózgu charakteryzująca się epizodyczną, niekontrolowaną aktywnością neuronalną i powtarzającymi się napadami padaczkowymi.",
-    "trExplanation": "Epilepsi, kontrolsüz nöronal aktivite ve tekrarlayan epileptik nöbetlere yol açan kronik bir beyin hastalığıdır.",
-    "arExplanation": "الصرع هو مرض مزمن في الدماغ يتميز بنشاط عصبي غير منضبط ومتكرر ونوبات صرع متكررة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1267,
-    "lat": "Prodrom (das)",
-    "de": "das Vorzeichen",
-    "en": "Prodrome",
-    "uk": "Продром",
-    "ru": "Продром",
-    "pl": "Zwiastun",
-    "es": "Pródromo",
-    "fr": "Prodrome",
-    "tr": "Prodrom",
-    "ar": "المقدمات",
-    "deExplanation": "Ein Prodrom bezieht sich auf frühe Symptome oder Anzeichen, die einer Krankheit vorausgehen. Diese können oft vage und unspezifisch sein, dienen aber als Warnsignal für einen kommenden Krankheitsausbruch. Prodrome sind klinisch relevant, da sie eine frühe Diagnosestellung und möglicherweise eine frühzeitige Behandlung ermöglichen.",
-    "enExplanation": "A symptomatic phase before the onset of full disease symptoms, indicating the impending manifestation of a disease.",
-    "ukExplanation": "Продром: симптоматична фаза перед появою повних симптомів хвороби, що вказує на наближення прояву захворювання.",
-    "ruExplanation": "Продром: симптоматическая фаза перед появлением полных симптомов болезни, указывающая на приближение проявления заболевания.",
-    "esExplanation": "Una fase sintomática antes del brote completo de los síntomas de la enfermedad, que indica la inminente manifestación de una enfermedad.",
-    "frExplanation": "La phase prodromique est une phase symptomatique précédant l'apparition des symptômes complets de la maladie, indiquant l'imminence de la manifestation de la maladie.",
-    "plExplanation": "Faza symptomatyczna poprzedzająca pełny wybuch objawów choroby, wskazująca na zbliżającą się manifestację choroby.",
-    "trExplanation": "Prodrom aşaması, hastalığın tam semptomlarının ortaya çıkmasından önce gelen semptomlu bir dönemdir ve hastalığın yaklaştığını gösterir.",
-    "arExplanation": "مرحلة الأعراض التي تسبق ظهور أعراض المرض الكاملة، مما يشير إلى وشك ظهور المرض.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1268,
-    "lat": "Parkinson-Krankheit (die)",
-    "de": "die Parkinson-Krankheit",
-    "en": "Parkinson's Disease",
-    "uk": "Хвороба Паркінсона",
-    "ru": "Болезнь Паркинсона",
-    "pl": "Choroba Parkinsona",
-    "es": "Enfermedad de Parkinson",
-    "fr": "Maladie de Parkinson",
-    "tr": "Parkinson hastalığı",
-    "ar": "مرض باركنسون",
-    "deExplanation": "Eine neurologische Erkrankung, die durch den fortschreitenden Verlust von Nervenzellen im Gehirn, insbesondere in einem Bereich namens Substantia nigra, gekennzeichnet ist. Dies führt zu typischen Symptomen wie Zittern, Muskelsteifheit und verlangsamten Bewegungen. Die Krankheit ist klinisch relevant, da sie die Lebensqualität der Betroffenen erheblich beeinträchtigen kann und eine langfristige medizinische und therapeutische Betreuung erfordert.",
-    "enExplanation": "A progressive neurodegenerative disorder marked by the loss of dopamine-producing cells in the brain, leading to tremor, bradykinesia, and muscle rigidity.",
-    "ukExplanation": "Паркінсонівська хвороба: прогресуюче нейродегенеративне захворювання, що характеризується втратою допамінвиробляючих клітин у мозку, що призводить до тремору, брадикінезії та м'язової жорсткості.",
-    "ruExplanation": "Болезнь Паркинсона: прогрессирующее нейродегенеративное заболевание, характеризующееся потерей допаминпродуцирующих клеток в мозге, что приводит к тремору, брадикинезии и мышечной жесткости.",
-    "esExplanation": "Enfermedad de Parkinson: Un trastorno neurodegenerativo progresivo caracterizado por la pérdida de células productoras de dopamina en el cerebro, lo que lleva a temblores, bradicinesia y rigidez muscular.",
-    "frExplanation": "La maladie de Parkinson est un trouble neurodégénératif progressif caractérisé par la perte de cellules productrices de dopamine dans le cerveau, entraînant un tremblement, une bradykinésie et une raideur musculaire.",
-    "plExplanation": "Postępujące zaburzenie neurodegeneracyjne charakteryzujące się utratą komórek produkujących dopaminę w mózgu, co prowadzi do drżenia, bradykinezy i sztywności mięśni.",
-    "trExplanation": "Parkinson hastalığı, beyindeki dopamin üreten hücrelerin kaybıyla karakterize ilerleyici bir nörodejeneratif bozukluktur ve titreme, bradikinezi ve kas sertliğine neden olur.",
-    "arExplanation": "مرض باركنسون: اضطراب عصبي تنكسي تدريجي يتميز بفقدان الخلايا المنتجة للدوبامين في الدماغ، مما يؤدي إلى الرعاش وبطء الحركة وتصلب العضلات.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1269,
-    "lat": "Spina bifida (die)",
-    "de": "der offene Rücken",
-    "en": "Spina Bifida",
-    "uk": "Спіна біфіда",
-    "ru": "Спина бифида",
-    "pl": "Rozszczep kręgosłupa",
-    "es": "Espina bífida",
-    "fr": "Spina bifida",
-    "tr": "Spina bifida",
-    "ar": "السنسنة المشقوقة",
-    "deExplanation": "Eine angeborene Fehlbildung, bei der sich die Wirbelsäule und das Rückenmark nicht vollständig schließen. Dies kann zu neurologischen Problemen und körperlichen Beeinträchtigungen führen, die von milden bis zu schweren Symptomen reichen können.",
-    "enExplanation": "A malformation of the spine and spinal cord during embryonic development, which can lead to varying degrees of disability.",
-    "ukExplanation": "Спіна біфіда: вада розвитку хребта та спинного мозку під час ембріонального розвитку, що може призвести до різних ступенів інвалідності.",
-    "ruExplanation": "Спина бифида: дефект развития позвоночника и спинного мозга во время эмбрионального развития, что может привести к различным степеням инвалидности.",
-    "esExplanation": "Espina bífida: Una malformación de la columna vertebral y la médula espinal durante el desarrollo embrionario que puede conducir a varios grados de discapacidad.",
-    "frExplanation": "La spina bifida est une malformation de la colonne vertébrale et de la moelle épinière qui se produit pendant le développement embryonnaire et qui peut entraîner différents degrés de handicap.",
-    "plExplanation": "Wada rozwojowa kręgosłupa i rdzenia kręgowego podczas rozwoju embrionalnego, prowadząca do różnych stopni niepełnosprawności.",
-    "trExplanation": "Spina bifida, embriyonik gelişim sırasında ortaya çıkan bir omurga ve omurilik anomalisi olup farklı engel derecelerine yol açabilir.",
-    "arExplanation": "السنسنة المشقوقة: تشوه خلقي في العمود الفقري والحبل الشوكي أثناء التطور الجنيني يمكن أن يؤدي إلى درجات متفاوتة من الإعاقة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1270,
-    "lat": "Cortex cerebri (der)",
-    "de": "die Großhirnrinde",
-    "en": "Cerebral Cortex",
-    "uk": "Кора головного мозку",
-    "ru": "Кора головного мозга",
-    "pl": "Kora mózgowa",
-    "es": "Corteza cerebral",
-    "fr": "Cortex cérébral",
-    "tr": "Beyin korteksi",
-    "ar": "قشرة الدماغ",
-    "deExplanation": "Die Großhirnrinde ist der äußere Teil des Gehirns und besteht aus grauer Substanz. Sie ist für eine Vielzahl von Funktionen verantwortlich, darunter Wahrnehmung, Bewusstsein, Denken, Sprache und Motorik. Sie spielt eine zentrale Rolle in der Verarbeitung von Informationen aus den Sinnesorganen und der Steuerung des Körpers. Klinisch bedeutsam ist die Großhirnrinde bei Verletzungen und Erkrankungen wie Schlaganfällen, die sensorische und kognitive Beeinträchtigungen verursachen können.",
-    "enExplanation": "The part of the brain responsible for higher cognitive functions such as memory, attention, consciousness, and language.",
-    "ukExplanation": "Кортекс мозку: частина мозку, відповідальна за вищі когнітивні функції, такі як пам'ять, увага, свідомість і мова.",
-    "ruExplanation": "Кортекс мозга: часть мозга, ответственная за высшие когнитивные функции, такие как память, внимание, сознание и речь.",
-    "esExplanation": "Corteza cerebral: La parte del cerebro responsable de funciones cognitivas superiores como memoria, atención, conciencia y lenguaje.",
-    "frExplanation": "Le cortex cérébral est la partie du cerveau responsable des fonctions cognitives supérieures telles que la mémoire, l'attention, la conscience et le langage.",
-    "plExplanation": "Część mózgu odpowiedzialna za wyższe funkcje poznawcze, takie jak pamięć, uwaga, świadomość i mowa.",
-    "trExplanation": "Cerebrum korteksi, bellek, dikkat, bilinç ve dil gibi üst düzey bilişsel işlevlerden sorumlu olan beyin bölümüdür.",
-    "arExplanation": "القشرة الدماغية: جزء من الدماغ مسؤول عن الوظائف المعرفية العليا مثل الذاكرة والانتباه والوعي واللغة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1271,
-    "lat": "Meningozele (die)",
-    "de": "die Hirnhautbruch",
-    "en": "Meningocele",
-    "uk": "Менінгоцеле",
-    "ru": "Менингоцеле",
-    "pl": "Przepuklina oponowa",
-    "es": "Meningocele",
-    "fr": "Méningocèle",
-    "tr": "Meningosel",
-    "ar": "الفتق السحائي",
-    "deExplanation": "Eine Meningozele ist eine Art von Neuralrohrdefekt, bei dem sich die schützenden Membranen um das Gehirn und Rückenmark, bekannt als Meningen, durch einen Defekt in der Wirbelsäule nach außen wölben. Sie kann neurologische Symptome verursachen und erfordert in der Regel chirurgische Korrektur, um weitere Komplikationen zu vermeiden.",
-    "enExplanation": "A rare birth defect where the meninges herniate through a gap in the spine.",
-    "ukExplanation": "Менінгоцеле: рідкісний вроджений дефект, при якому мозкові оболонки грижоподібно випинаються через щілину в хребті.",
-    "ruExplanation": "Менингоцеле: редкий врожденный дефект, при котором мозговые оболочки грыжеподобно выпячиваются через щель в позвоночнике.",
-    "esExplanation": "Meningocele: Una rara malformación congénita donde las meninges se hernian a través de una abertura en la columna vertebral.",
-    "frExplanation": "La méningocèle est une malformation congénitale rare dans laquelle les méninges font saillie à travers une ouverture dans la colonne vertébrale.",
-    "plExplanation": "Rzadka wada wrodzona, w której opony mózgowo-rdzeniowe wybrzuszają się przez szczelinę w kręgosłupie.",
-    "trExplanation": "Meningosel, omurga içinde bir açıklık aracılığıyla meninkslerin dışarı çıktığı nadir bir doğumsal bozukluktur.",
-    "arExplanation": "الميننجوسيل: تشوه خلقي نادر حيث تنفتق السحايا من خلال فتحة في العمود الفقري.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1272,
-    "lat": "Meningomyelozele (die)",
-    "de": "die Rückenmarkshautvorwölbung",
-    "en": "Meningomyelocele",
-    "uk": "Менінгомієлоцеле",
-    "ru": "Менингомиелице",
-    "pl": "Przepuklina oponowo-rdzeniowa",
-    "es": "Meningomielocele",
-    "fr": "Méningomyélocèle",
-    "tr": "Meningomiyelosel",
-    "ar": "الفتق السحائي النخاعي",
-    "deExplanation": "Eine Meningomyelozele ist eine angeborene Fehlbildung, bei der sich durch eine Öffnung in der Wirbelsäule Teile der Rückenmarkshäute und des Rückenmarks nach außen vorwölben. Diese Fehlbildung ist eine Form des Spina bifida und kann zu neurologischen Problemen führen, da die Nervenfreilegung oft zu Funktionsstörungen und Entwicklungsverzögerungen führt.",
-    "enExplanation": "A more severe form of spina bifida, where parts of the spinal cord and meninges protrude through an opening in the spine.",
-    "ukExplanation": "Менінгомієлоцеле: більш тяжка форма спіни біфіди, при якій частини спинного мозку та мозкових оболонок виступають через отвір у хребті.",
-    "ruExplanation": "Менингомиелоцеле: более тяжелая форма спины бифиды, при которой части спинного мозга и мозговых оболочек выступают через отверстие в позвоночнике.",
-    "esExplanation": "Meningomielocele: Una forma más grave de espina bífida, donde partes de la médula espinal y las meninges protruyen a través de la abertura en la columna vertebral.",
-    "frExplanation": "La méningomyélocèle est une forme plus grave de spina bifida, dans laquelle des parties de la moelle épinière et des méninges font saillie à travers l'ouverture de la colonne vertébrale.",
-    "plExplanation": "Cięższa forma rozszczepu kręgosłupa, w której części rdzenia kręgowego i opon mózgowo-rdzeniowych wystają przez otwór w kręgosłupie.",
-    "trExplanation": "Meningomyelosel, omurilik ve meninkslerin omurga açıklığından dışarı çıktığı daha ciddi bir spina bifida türüdür.",
-    "arExplanation": "الميننجوميلوسيل: شكل أشد من السنسنة المشقوقة، حيث تبرز أجزاء من الحبل الشوكي والسحايا من خلال فتحة في العمود الفقري.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1273,
-    "lat": "Alzheimer-Krankheit (die)",
-    "de": "die Alzheimer-Krankheit",
-    "en": "Alzheimer's Disease",
-    "uk": "Хвороба Альцгеймера",
-    "ru": "Болезнь Альцгеймера",
-    "pl": "Choroba Alzheimera",
-    "es": "Enfermedad de Alzheimer",
-    "fr": "Maladie d'Alzheimer",
-    "tr": "Alzheimer hastalığı",
-    "ar": "مرض ألزهايمر",
-    "deExplanation": "Eine neurodegenerative Erkrankung, die vor allem ältere Menschen betrifft und zu fortschreitendem Gedächtnisverlust, kognitivem Abbau und Verhaltensänderungen führt. Die Krankheit ist durch die Ablagerung von Beta-Amyloid-Plaques und Tau-Proteinfibrillen im Gehirn gekennzeichnet, was zu einer Beeinträchtigung der Gehirnstruktur und -funktion führt. Sie ist die häufigste Form der Demenz und hat erhebliche Auswirkungen auf das tägliche Leben der Betroffenen und ihre Familien.",
-    "enExplanation": "A progressive neurodegenerative disease characterized by the deposition of beta-amyloid plaques and tau proteins in the brain, resulting in memory loss and cognitive impairments.",
-    "ukExplanation": "Хвороба Альцгеймера: прогресуюче нейродегенеративне захворювання, що характеризується відкладенням бета-амілоїдних бляшок та тау-білків у мозку та викликає втрату пам'яті та когнітивні порушення.",
-    "ruExplanation": "Болезнь Альцгеймера: прогрессирующее нейродегенеративное заболевание, характеризующееся отложением бета-амилоидных бляшек и тау-белков в мозге и вызывающее потерю памяти и когнитивные нарушения.",
-    "esExplanation": "Enfermedad de Alzheimer: Una enfermedad neurodegenerativa progresiva caracterizada por depósitos de placas beta-amiloide y proteínas tau en el cerebro, lo que resulta en pérdida de memoria y deterioro cognitivo.",
-    "frExplanation": "La maladie d'Alzheimer est une maladie neurodégénérative progressive caractérisée par des dépôts de plaques de bêta-amyloïde et de protéines tau dans le cerveau, entraînant une perte de mémoire et des altérations cognitives.",
-    "plExplanation": "Postępująca choroba neurodegeneracyjna charakteryzująca się odkładaniem blaszek beta-amyloidu i białka tau w mózgu oraz wynikającą z tego utratą pamięci i zaburzeniami poznawczymi.",
-    "trExplanation": "Alzheimer hastalığı, beyinde beta-amiloid plakların ve tau proteinlerinin birikmesi ile karakterize ilerleyici bir nörodejeneratif hastalıktır ve bellek kaybı ve bilişsel bozukluklara yol açar.",
-    "arExplanation": "مرض الزهايمر: مرض عصبي تنكسي تدريجي يتميز بتراكم لويحات بيتا أميلويد وبروتينات تاو في الدماغ، مما يؤدي إلى فقدان الذاكرة وتدهور القدرات المعرفية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1274,
-    "lat": "Benommenheit (die)",
-    "de": "die Benommenheit",
-    "en": "Drowsiness",
-    "uk": "Запаморочення",
-    "ru": "Оглушенность",
-    "pl": "Ogłupienie",
-    "es": "Somnolencia",
-    "fr": "Somnolence",
-    "tr": "Benommenheit",
-    "ar": "النعاس",
-    "deExplanation": "Ein Zustand reduzierter Wachsamkeit und Aufmerksamkeit, oft gekennzeichnet durch ein Gefühl der Leichtigkeit im Kopf oder des Schwindels. Diese kann verschiedene Ursachen haben, einschließlich Müdigkeit, Dehydration, niedriger Blutdruck oder bestimmte medizinische Zustände. Klinisch ist es wichtig, die zugrunde liegende Ursache zu identifizieren, um geeignete Maßnahmen zu ergreifen.",
-    "enExplanation": "A state of reduced alertness and cognitive function, causing drowsiness and decreased responsiveness.",
-    "ukExplanation": "Запаморочення: стан зниженої пильності та когнітивної функції, що викликає сонливість та зменшену реактивність.",
-    "ruExplanation": "Оглушение: состояние сниженной бдительности и когнитивной функции, вызывающее сонливость и уменьшенную реактивность.",
-    "esExplanation": "Aturdimiento: Un estado de alerta y función cognitiva disminuida que puede causar somnolencia y disminución de la capacidad de respuesta.",
-    "frExplanation": "La confusion est un état de réduction de la vigilance et des fonctions cognitives, pouvant entraîner de la somnolence et une réactivité réduite.",
-    "plExplanation": "Stan zmniejszonej czujności i funkcji poznawczych, powodujący senność i zmniejszoną reaktywność.",
-    "trExplanation": "Hafiflik, uyanıklığın ve bilişsel fonksiyonların azaltıldığı bir durumdur ve uykululuk ve azalmış reaktiviteye yol açabilir.",
-    "arExplanation": "الدوار: حالة من قلة اليقظة وضعف الوظيفة المعرفية يمكن أن تسبب النعاس وتقليل الاستجابة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1275,
-    "lat": "Somnolenz (die)",
-    "de": "die Benommenheit",
-    "en": "Somnolence",
-    "uk": "Сонливість",
-    "ru": "Сомноленция",
-    "pl": "Ogłupienie",
-    "es": "Somnolencia",
-    "fr": "Somnolence",
-    "tr": "Somnolans",
-    "ar": "النعاس",
-    "deExplanation": "Ein Zustand verminderter Wachheit, bei dem die Person schläfrig ist, aber durch Reize erweckt werden kann. Häufig tritt sie bei Müdigkeit oder als Symptom bei verschiedenen Erkrankungen auf, wie bei Infektionen oder nach der Einnahme bestimmter Medikamente.",
-    "enExplanation": "Increased sleepiness where patients can easily fall asleep and struggle to stay awake.",
-    "ukExplanation": "Сомноленція: посилене сонливість, при якій пацієнти легко засинають і важко залишаються неуспаними.",
-    "ruExplanation": "Сомноленция: усиленная сонливость, при которой пациенты легко засыпают и трудно остаются бодрствующими.",
-    "esExplanation": "Somnolencia: Una somnolencia aumentada, donde los pacientes pueden quedarse dormidos fácilmente y tienen dificultades para permanecer despiertos.",
-    "frExplanation": "La somnolence est une somnolence accrue, où les patients peuvent s'endormir facilement et ont du mal à rester éveillés.",
-    "plExplanation": "Zwiększona senność, w której pacjenci łatwo zasypiają i mają trudności z pozostaniem na jawie.",
-    "trExplanation": "Somnolans, hastaların kolayca uykuya dalabildiği ve uyanık kalmakta zorlandığı artmış bir uykululuktur.",
-    "arExplanation": "النعاس: حالة متزايدة من النعاس حيث يمكن للمرضى النوم بسهولة ويجدون صعوبة في البقاء مستيقظين.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1276,
-    "lat": "Sopor (der)",
-    "de": "der tiefe Schlafzustand",
-    "en": "Sopor",
-    "uk": "Сопор",
-    "ru": "Сопор",
-    "pl": "Głęboki stan śpiączkowy",
-    "es": "Estupor",
-    "fr": "Sopor",
-    "tr": "Sopor",
-    "ar": "الغيبوبة العميقة",
-    "deExplanation": "Ein Zustand verminderter Bewusstseinslage, bei dem eine Person nur durch starke äußere Reize geweckt werden kann. Es handelt sich um eine tiefere Bewusstseinstrübung als die Somnolenz. Dieser Zustand kann durch verschiedene neurologische oder metabolische Störungen hervorgerufen werden und erfordert eine medizinische Abklärung.",
-    "enExplanation": "A state of deep unconsciousness in which the patient does not respond to external stimuli and is unarousable.",
-    "ukExplanation": "Сопор: стан глибокої непритомності, в якому пацієнт не реагує на зовнішні подразники і не пробуджується.",
-    "ruExplanation": "Сопор: состояние глубокого бессознательного состояния, в котором пациент не реагирует на внешние раздражители и не просыпается.",
-    "esExplanation": "Sopor: Un estado de profunda inconsciencia en el que el paciente no responde a estímulos externos y no puede ser despertado.",
-    "frExplanation": "Le sopor est un état de perte de conscience profonde dans lequel le patient ne réagit pas aux stimuli externes et ne peut pas être réveillé.",
-    "plExplanation": "Stan głębokiej nieprzytomności, w którym pacjent nie reaguje na bodźce zewnętrzne i nie jest w stanie obudzić się.",
-    "trExplanation": "Sopor, hastanın dış uyaranlara tepki vermediği ve uyanamadığı derin bilinçsizlik bir durumdur.",
-    "arExplanation": "الغيبوبة الضحلة: حالة عميقة من فقدان الوعي حيث لا يستجيب المريض للمؤثرات الخارجية ولا يمكن إيقاظه.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1277,
-    "lat": "Koma (das)",
-    "de": "das Koma",
-    "en": "Coma",
-    "uk": "Кома",
-    "ru": "Кома",
-    "pl": "Śpiączka",
-    "es": "Coma",
-    "fr": "Coma",
-    "tr": "Koma",
-    "ar": "الغيبوبة",
-    "deExplanation": "Ein Koma ist ein langer Zustand der Bewusstlosigkeit, in dem eine Person nicht auf ihre Umgebung reagiert. Es kann durch Verletzungen des Gehirns, Krankheiten wie Diabetes oder Infektionen ausgelöst werden. Klinisch ist es wichtig, die Ursache des Komas zu finden, um gezielt behandeln zu können.",
-    "enExplanation": "A state of deep unconsciousness with no response to external stimuli and often loss of spontaneous breathing.",
-    "ukExplanation": "Кома: стан глибокої втрати свідомості без реакцій на зовнішні подразники та часто з втратою спонтанного дихання.",
-    "ruExplanation": "Кома: состояние глубокой потери сознания без реакций на внешние раздражители и часто с потерей спонтанного дыхания.",
-    "esExplanation": "Coma: Un estado de profunda inconsciencia con falta de respuesta a estímulos externos y a menudo pérdida de la respiración espontánea.",
-    "frExplanation": "Le coma est un état de perte de conscience profonde avec une absence de réponses aux stimuli externes et une perte fréquente de la respiration spontanée.",
-    "plExplanation": "Stan głębokiej nieświadomości z brakiem reakcji na bodźce zewnętrzne i często z utratą spontanicznego oddychania.",
-    "trExplanation": "Koma, derin bilinç kaybı durumunda, dış uyaranlara cevapsızlık ve spontan solunum kaybı ile karakterizedir.",
-    "arExplanation": "الغيبوبة: حالة عميقة من فقدان الوعي مع عدم الاستجابة للمؤثرات الخارجية وغالبًا ما يفقد التنفس التلقائي.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1278,
-    "lat": "Apallisches Syndrom (das)",
-    "de": "Das Wachkoma",
-    "en": "Apallic Syndrome",
-    "uk": "Апалічний синдром",
-    "ru": "Апаллический синдром",
-    "pl": "Syndrom bezmózgowia",
-    "es": "Síndrome de desconexión cortical",
-    "fr": "Syndrome apallique",
-    "tr": "Apallik sendrom",
-    "ar": "المتلازمة الدماغية اللاقحلية",
-    "deExplanation": "Das Wachkoma, auch als apallisches Syndrom bekannt, beschreibt einen klinischen Zustand, bei dem Patienten wach wirken, aber keine bewussten Wahrnehmungen, Kommunikation oder zielgerichtete Bewegungen zeigen. Es tritt häufig nach schweren Hirnverletzungen auf und ist durch eine erhebliche Beeinträchtigung der Großhirnfunktion gekennzeichnet, während Funktionen des Zwischenhirns, des Hirnstamms und des Rückenmarks erhalten bleiben.",
-    "enExplanation": "Also known as a vegetative state, where the patient appears awake but shows no signs of awareness or purposeful response.",
-    "ukExplanation": "Апаллічний синдром: також відомий як вегетативний стан, при якому пацієнт здається пробудженим, але не проявляє ознак свідомості чи свідомої реакції.",
-    "ruExplanation": "Апаллический синдром: также известен как вегетативное состояние, при котором пациент кажется пробужденным, но не проявляет признаков сознания или осознанного реагирования.",
-    "esExplanation": "Síndrome apalíco: También conocido como estado vegetativo, en el que el paciente parece estar despierto pero no muestra signos de conciencia o respuesta voluntaria.",
-    "frExplanation": "Le syndrome apallich est également connu sous le nom d'état végétatif, où le patient semble éveillé mais ne montre aucun signe de conscience ou de réaction volontaire.",
-    "plExplanation": "Znany również jako stan wegetatywny, w którym pacjent wydaje się być przytomny, ale nie wykazuje oznak świadomości ani reakcji na wolę.",
-    "trExplanation": "Apallik sendrom, hastanın uyanık gibi göründüğü ancak bilinç veya istemli tepki belirtisi göstermediği bir durum olarak da bilinir.",
-    "arExplanation": "الحالة النباتية: المعروفة أيضًا بالحالة النباتية، حيث يبدو المريض مستيقظًا ولكن بدون علامات للوعي أو الاستجابة الإرادية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1279,
-    "lat": "Lethargie (die)",
-    "de": "die Müdigkeit",
-    "en": "Lethargy",
-    "uk": "Летаргія",
-    "ru": "Летаргия",
-    "pl": "Letarg",
-    "es": "Letargo",
-    "fr": "Léthargie",
-    "tr": "Letarji",
-    "ar": "الخمول",
-    "deExplanation": "Ein Zustand von fehlender Energie und Antriebslosigkeit, bei dem die betroffene Person eine reduzierte körperliche und geistige Aktivität zeigt. Dies kann ein Symptom für eine Vielzahl von medizinischen Zuständen sein, einschließlich Schlafstörungen, Depression oder Stoffwechselerkrankungen.",
-    "enExplanation": "A state of general sluggishness and reduced energy, leading to a marked decrease in activity.",
-    "ukExplanation": "Летаргія: стан загальної в'ялості та зниження енергії, що може призвести до значного зменшення активності.",
-    "ruExplanation": "Летаргия: состояние общей вялости и снижения энергии, что может привести к значительному уменьшению активности.",
-    "esExplanation": "Letargo: Un estado de inercia general y energía reducida, que puede llevar a una disminución significativa de la actividad.",
-    "frExplanation": "La léthargie est un état de léthargie générale et de réduction de l'énergie, pouvant entraîner une diminution marquée de l'activité.",
-    "plExplanation": "Stan ogólnej letargii i zmniejszonej energii, prowadzący do znacznego spadku aktywności.",
-    "trExplanation": "Letarji, genel bir uyuşukluk ve enerji azalması durumudur ve aktivitenin belirgin bir azalmasına neden olabilir.",
-    "arExplanation": "الخمول: حالة من الكسل العام وانخفاض الطاقة، مما قد يؤدي إلى تقليل النشاط بشكل ملحوظ.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern"
-    ]
-  },
-  {
-    "id": 1280,
-    "lat": "Dyslalie (die)",
-    "de": "die Sprachstörung",
-    "en": "Dyslalia",
-    "uk": "Дислалія",
-    "ru": "Дизлалия",
-    "pl": "Zaburzenia mowy",
-    "es": "Dislalia",
-    "fr": "Dyslalie",
-    "tr": "Konuşma bozukluğu",
-    "ar": "اضطراب الكلام",
-    "deExplanation": "Eine Sprachstörung, bei der die Aussprache bestimmter Laute oder Wörter gestört ist. Sie tritt häufig im Kindesalter auf und kann verschiedene Ursachen wie anatomische, funktionale oder psychologische Faktoren haben. Die Therapie kann durch logopädische Maßnahmen unterstützt werden, um die sprachlichen Fähigkeiten zu verbessern.",
-    "enExplanation": "A speech disorder characterized by difficulties in articulating certain sounds or words.",
-    "ukExplanation": "Дислалія: розлад мовлення, що проявляється в складнощах при артикуляції певних звуків або слів.",
-    "ruExplanation": "Дислалия: расстройство речи, проявляющееся в трудностях при артикуляции определенных звуков или слов.",
-    "esExplanation": "Dislalia: Un trastorno del habla caracterizado por dificultades en la articulación de ciertos sonidos o palabras.",
-    "frExplanation": "La dyslalie est un trouble de la parole caractérisé par des difficultés à articuler certains sons ou mots.",
-    "plExplanation": "Zaburzenie mowy charakteryzujące się trudnościami w artykulacji określonych dźwięków lub słów.",
-    "trExplanation": "Dislali, belirli sesleri veya kelimeleri telaffuz etmede zorluklarla karakterize bir konuşma bozukluğudur.",
-    "arExplanation": "الديسلاجيا: اضطراب في الكلام يتميز بصعوبات في نطق أصوات أو كلمات معينة.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1281,
-    "lat": "Tentorium (das)",
-    "de": "das Kleinhirnzelt",
-    "en": "Tentorium",
-    "uk": "Намет мозочка",
-    "ru": "Мозжечковая палатка",
-    "pl": "Namiot móżdżku",
-    "es": "Tienda del cerebelo",
-    "fr": "Tente cérébelleuse",
-    "tr": "Tentoryum cerebelli",
-    "ar": "خيمة المخيخ",
-    "deExplanation": "Das Kleinhirnzelt ist eine durale Struktur im Gehirn, die das Hirnzelt teilweise vom Kleinhirn trennt. Es bildet eine Querfalte in der harten Hirnhaut und ist von klinischer Bedeutung, da es Hirnstrukturen stützt und bei erhöhtem Hirndruck betroffen sein kann.",
-    "enExplanation": "A membrane within the skull that acts as a partition between the cerebrum and the cerebellum.",
-    "ukExplanation": "Тенторіум: мембрана в черепі, яка служить як розділова стінка між великим і малим мозком.",
-    "ruExplanation": "Тенториум: мембрана в черепе, служащая как разделительная стенка между большим и малым мозгом.",
-    "esExplanation": "Tentorio: Una membrana dentro del cráneo que actúa como una división entre el cerebro y el cerebelo.",
-    "frExplanation": "Le tentorium est une membrane à l'intérieur du crâne qui sert de séparation entre le cerveau et le cervelet.",
-    "plExplanation": "Błona wewnątrzczaszkowa działająca jako przegroda między mózgiem a móżdżkiem.",
-    "trExplanation": "Tentoryum, beyin ile beyincik arasında bir bölme görevi gören kafatası içindeki bir membrandır.",
-    "arExplanation": "الخيمة: غشاء داخل الجمجمة يعمل كحاجز بين المخ والمخيخ.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1282,
-    "lat": "Neuron (das)",
-    "de": "Das Neuron",
-    "en": "Neuron",
-    "uk": "Нейрон",
-    "ru": "Нейрон",
-    "pl": "Neuron",
-    "es": "Neurona",
-    "fr": "Neurone",
-    "tr": "Nöron",
-    "ar": "الخلية العصبية",
-    "deExplanation": "Ein Neuron ist eine spezialisierte Zelle im Nervensystem, die für die Verarbeitung und Weiterleitung von Informationen verantwortlich ist. Es besteht hauptsächlich aus einem Zellkörper, Dendriten und einem Axon. Neuronen ermöglichen die Übertragung von elektrischen Signalen durch den Körper und sind fundamental für alle neurologischen Funktionen, einschließlich der Bewegung, Wahrnehmung und kognitiven Prozesse.",
-    "enExplanation": "The basic functional unit of the nervous system, processing and transmitting electrical impulses.",
-    "ukExplanation": "Нейрон: базова функціональна одиниця нервової системи, яка обробляє та передає електричні імпульси.",
-    "ruExplanation": "Нейрон: основная функциональная единица нервной системы, обрабатывающая и передающая электрические импульсы.",
-    "esExplanation": "Neurona: La unidad funcional básica del sistema nervioso, que procesa y transmite impulsos eléctricos.",
-    "frExplanation": "Le neurone est l'unité fonctionnelle de base du système nerveux qui traite et transmet les impulsions électriques.",
-    "plExplanation": "Podstawowa jednostka funkcjonalna układu nerwowego, przetwarzająca i przekazująca impulsy elektryczne.",
-    "trExplanation": "Nöron, elektriksel uyarıları işleyen ve ileten sinir sisteminin temel işlev birimidir.",
-    "arExplanation": "الخلية العصبية: الوحدة الوظيفية الأساسية للجهاز العصبي، تعالج وتنقل النبضات الكهربائية.",
-    "categories": [
-      "Nerologie"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1283,
-    "lat": "Rekonvaleszenz (die)",
-    "de": "die Erholungsphase",
-    "en": "Convalescence",
-    "uk": "Відновлення",
-    "ru": "Восстановительный период",
-    "pl": "Okres rekonwalescencji",
-    "es": "Convalecencia",
-    "fr": "Convalescence",
-    "tr": "İyileşme dönemi",
-    "ar": "مرحلة النقاهة",
-    "deExplanation": "Die Erholungsphase ist der Zeitraum, in dem sich ein Patient nach einer Krankheit oder Operation allmählich erholt. In dieser Zeit regenerieren sich der Körper und die Kräfte, um die volle Gesundheit wiederzuerlangen. Sie ist klinisch relevant, da die ordnungsgemäße Betreuung während dieser Phase entscheidend für die vollständige Genesung ist.",
-    "enExplanation": "Convalescence refers to the recovery and recuperation period following an illness or surgery. During this time, the patient gradually rebuilds their physical and mental health.",
-    "ukExplanation": "Реконвалесценція означає фазу одужання та відновлення після хвороби або операції. У цей час пацієнт поступово відновлює своє фізичне та психічне здоров'я.",
-    "ruExplanation": "Реконвалесценция обозначает фазу выздоровления и восстановления после болезни или операции. В это время пациент постепенно восстанавливает свое физическое и психическое здоровье.",
-    "esExplanation": "La convalecencia se refiere a la fase de recuperación y restablecimiento después de una enfermedad o cirugía. Durante este tiempo, el paciente reconstruye gradualmente su salud física y mental.",
-    "frExplanation": "La convalescence désigne la phase de récupération et de rétablissement après une maladie ou une opération. Pendant cette période, le patient rétablit progressivement sa santé physique et mentale.",
-    "plExplanation": "Rekonwalescencja, okres rekonwalescencji to faza zdrowienia i regeneracji po chorobie lub operacji. W tym czasie pacjent stopniowo odbudowuje swoje zdrowie fizyczne i psychiczne.",
-    "trExplanation": "Rekonvalesans, bir hastalık veya ameliyat sonrası iyileşme ve toparlanma dönemini ifade eder. Bu süre zarfında hasta fiziksel ve zihinsel sağlığını adım adım yeniden kazanır.",
-    "arExplanation": "التعافي يشير إلى مرحلة الشفاء والاسترداد بعد المرض أو الجراحة. خلال هذا الوقت، يعيد المريض بناء صحته البدنية والعقلية تدريجيًا.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1284,
-    "lat": "Reanimation (die)",
-    "de": "die Wiederbelebung",
-    "en": "Resuscitation",
-    "uk": "Реанімація",
-    "ru": "Реанимация",
-    "pl": "Resuscytacja",
-    "es": "Reanimación",
-    "fr": "Réanimation",
-    "tr": "Canlandırma",
-    "ar": "الإنعاش",
-    "deExplanation": "Ein medizinischer Vorgang zur Wiederherstellung der Atmung und des Kreislaufs bei Patienten mit Herz-Kreislauf-Stillstand. Dazu gehören Maßnahmen wie die Herz-Lungen-Wiederbelebung (HLW) und die Anwendung eines Defibrillators. Ziel ist es, den Blutfluss zu den lebenswichtigen Organen aufrechtzuerhalten, bis eine normale Herzfunktion wiederhergestellt ist. Klinische Relevanz besteht in der Erhöhung der Überlebens- und Genesungschancen nach einem Herzstillstand.",
-    "enExplanation": "Resuscitation is a life-saving process in emergency situations aimed at reviving the cardiovascular system and restoring breathing in individuals with cardiac arrest or severe respiratory distress.",
-    "ukExplanation": "Реанімація - це процес порятунку життя в невідкладних ситуаціях, який має на меті відновлення серцево-судинної системи та дихання у людей з зупинкою серця або важкими дихальними розладами.",
-    "ruExplanation": "Реанимация - это процесс спасения жизни в экстренных ситуациях, направленный на восстановление сердечно-сосудистой системы и дыхания у людей с остановкой сердца или тяжелыми дыхательными расстройствами.",
-    "esExplanation": "La reanimación es un proceso vital en situaciones de emergencia que tiene como objetivo reactivar el sistema cardiovascular y restaurar la respiración en personas con paro cardíaco o dificultad respiratoria grave.",
-    "frExplanation": "La réanimation est un processus de sauvetage vital en situation d'urgence visant à rétablir le système cardiovasculaire et à restaurer la respiration chez les personnes en arrêt cardiaque ou en détresse respiratoire grave.",
-    "plExplanation": "Resuscytacja to proces ratujący życie w sytuacjach awaryjnych, który ma na celu przywrócenie czynności układu krążenia i oddechowego u osób z zatrzymaniem krążenia lub ciężkimi problemami z oddychaniem.",
-    "trExplanation": "Reanimasyon, acil durumlarda yaşam kurtaran bir süreçtir ve kalp durmasına veya ciddi solunum sıkıntısı yaşayan kişilerde kardiyovasküler sistemini yeniden kurmayı ve solunumu yeniden sağlamayı amaçlar.",
-    "arExplanation": "الإنعاش هو عملية إنقاذ الحياة في حالات الطوارئ، تهدف إلى إعادة تنشيط الجهاز القلبي الوعائي واستعادة التنفس للأشخاص الذين يعانون من توقف القلب أو صعوبة في التنفس الشديدة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1285,
-    "lat": "Reanimieren",
-    "de": "wiederbeleben",
-    "en": "To Resuscitate",
-    "uk": "Реанімувати",
-    "ru": "Реанимировать",
-    "pl": "Reanimować",
-    "es": "Reanimar",
-    "fr": "Réanimer",
-    "tr": "Canlandırmak",
-    "ar": "إنعاش",
-    "deExplanation": "Das Wiederbeleben bezieht sich auf das Verfahren, lebensrettende Maßnahmen durchzuführen, um eine Person, die keine Anzeichen von Lebensfunktionen zeigt, wiederzubeleben. Dies kann Herz-Lungen-Wiederbelebung (HLW), Defibrillation und andere Techniken umfassen, die darauf abzielen, die Atmung und den Kreislauf einer Person wiederherzustellen. Klinisch relevant, um den Kreislaufstillstand zu beenden und das Überleben zu sichern.",
-    "enExplanation": "Resuscitating involves performing revival measures on individuals who have suffered cardiac arrest. This includes techniques like chest compressions and artificial ventilation.",
-    "ukExplanation": "Реанімування включає проведення заходів з відновлення життєвих функцій у людей, які перенесли зупинку серця. Це включає техніки, як непрямий масаж серця та штучне дихання.",
-    "ruExplanation": "Реанимирование включает проведение мероприятий по восстановлению жизненных функций у людей, перенесших остановку сердца. Это включает техники, как непрямой массаж сердца и искусственное дыхание.",
-    "esExplanation": "Reanimar implica la realización de medidas de resucitación en personas que han sufrido un paro cardíaco. Esto incluye técnicas como la reanimación cardiopulmonar y la ventilación artificial.",
-    "frExplanation": "Reanimer, kalp durması geçiren kişilere yeniden canlandırma önlemlerini uygulamayı içeren bir işlemdir. Bu, göğüs masajı ve yapay solunum gibi teknikleri içerir.",
-    "plExplanation": "Reanimacja obejmuje przeprowadzenie działań reanimacyjnych u osób, które doznały zatrzymania akcji serca. Obejmuje to techniki takie jak masaż serca i sztuczne oddychanie.",
-    "trExplanation": "Reanimasyon, kalp durması geçiren kişilere yeniden canlandırma önlemlerinin uygulanmasını içerir. Bu, göğüs masajı ve suni solunumu içerir.",
-    "arExplanation": "إنعاش يشمل تنفيذ إجراءات الإحياء للأشخاص الذين عانوا من توقف القلب. يتضمن ذلك تقنيات مثل التدليك القلبي والتنفس الاصطناعي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1286,
-    "lat": "Remission (die)",
-    "de": "die Remission",
-    "en": "Remission",
-    "uk": "Ремісія",
-    "ru": "Ремиссия",
-    "pl": "Remisja",
-    "es": "Remisión",
-    "fr": "Rémission",
-    "tr": "Remisyon",
-    "ar": "الهدأة",
-    "deExplanation": "Die Remission bezeichnet in der Medizin das vorübergehende Nachlassen von Krankheitssymptomen. Dies bedeutet nicht, dass die Krankheit vollständig geheilt ist, sondern dass die Symptome entweder vollständig oder teilweise zurückgegangen sind. Remissionen können in vielen Krankheitsbildern auftreten, insbesondere bei chronischen Erkrankungen wie Krebs, Autoimmunerkrankungen oder rheumatischen Erkrankungen. Eine Remission kann spontan erfolgen oder durch eine gezielte medizinische Behandlung herbeigeführt werden. Es ist ein positiver Hinweis auf den Krankheitsverlauf, jedoch kann es auch Rückfälle geben, weshalb eine kontinuierliche Überwachung wichtig ist.",
-    "enExplanation": "Remission is a state in which the symptoms of a disease temporarily or permanently diminish or disappear. However, the disease is not completely cured.",
-    "ukExplanation": "Ремісія - це стан, коли симптоми хвороби тимчасово або постійно слабшають або зникають. Однак хвороба не вилікована повністю.",
-    "ruExplanation": "Ремиссия - это состояние, когда симптомы болезни временно или постоянно ослабевают или исчезают. Однако болезнь не вылечена полностью.",
-    "esExplanation": "La remisión es un estado en el que los síntomas de una enfermedad disminuyen o desaparecen temporal o permanentemente. Sin embargo, la enfermedad no está completamente curada.",
-    "frExplanation": "La rémission est un état dans lequel les symptômes d'une maladie diminuent temporairement ou de manière permanente, mais la maladie n'est pas complètement guérie.",
-    "plExplanation": "Remisja to stan, w którym objawy choroby tymczasowo lub trwale ustępują lub znikają. Choroba nie jest jednak całkowicie wyleczona.",
-    "trExplanation": "Remisyon, bir hastalığın belirtilerinin geçici veya kalıcı olarak azaldığı bir durumu ifade eder, ancak hastalık tamamen iyileşmemiştir.",
-    "arExplanation": "الهدوء هو حالة يقل فيها أو يختفي مؤقتًا أو بشكل دائم أعراض المرض. ومع ذلك، لم يتم علاج المرض بشكل كامل.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1287,
-    "lat": "Emission (die)",
-    "de": "die Ausscheidung",
-    "en": "Emission",
-    "uk": "Виділення",
-    "ru": "Выделение",
-    "pl": "Emisja",
-    "es": "Emisión",
-    "fr": "Émission",
-    "tr": "Emisyon",
-    "ar": "الإفراز",
-    "deExplanation": "Der Begriff 'Emission' wird hier im medizinischen Kontext als 'Ausscheidung' übersetzt. Dies kann sich auf die Abgabe von Stoffen aus dem Körper beziehen, wie zum Beispiel die Emission von Schweiß oder Abfallprodukten durch die Haut oder andere Organe. Es ist ein natürlicher Prozess, der für die Entgiftung und Regulierung des Körpers von wesentlicher Bedeutung ist.",
-    "enExplanation": "Emission refers to the release or discharge of substances, energy, or particles. Medically, it can encompass the excretion of waste materials or the emission of radiation.",
-    "ukExplanation": "Емісія означає випромінювання або викид речовин, енергії або частинок. В медицині це може включати виведення відходів або випромінювання.",
-    "ruExplanation": "Эмиссия означает излучение или выброс веществ, энергии или частиц. В медицине это может включать выведение отходов или излучение.",
-    "esExplanation": "La emisión se refiere a la liberación o emisión de sustancias, energía o partículas. Médicamente, puede incluir la excreción de residuos o la emisión de radiación.",
-    "frExplanation": "L'émission fait référence à l'émission ou à la diffusion de substances, d'énergie ou de particules. Sur le plan médical, cela peut inclure l'élimination de déchets ou l'émission de rayonnements.",
-    "plExplanation": "Emisja odnosi się do wydzielania lub emisji substancji, energii lub cząstek. W medycynie może to obejmować wydalanie odpadów lub emisję promieniowania.",
-    "trExplanation": "Emisyon, maddelerin, enerjinin veya parçacıkların yayılması veya yayılması anlamına gelir. Tıbbi bağlamda atık maddelerin atılması veya radyasyonun yayılması gibi şeyleri içerebilir.",
-    "arExplanation": "الإصدار يشير إلى إطلاق أو إرسال المواد أو الطاقة أو الجسيمات. في الطب، يمكن أن يشمل إفراز الفضلات أو إصدار الإشعاع.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1288,
-    "lat": "Marasmus (der)",
-    "de": "der Auszehrungszustand",
-    "en": "Marasmus",
-    "uk": "Маразм",
-    "ru": "Истощение",
-    "pl": "Marazm",
-    "es": "Marasmo",
-    "fr": "Marasme",
-    "tr": "Marazm",
-    "ar": "الهزال",
-    "deExplanation": "Ein schwerer Mangelernährungszustand, der meist aufgrund eines chronischen Energiemangels entsteht. Er ist durch einen deutlichen Verlust von Muskel- und Fettmasse gekennzeichnet, was besonders bei Kindern in Entwicklungsländern auftritt. Der Marasmus führt zu einer Schwächung des Immunsystems und erhöht das Risiko für Infektionen und andere gesundheitliche Komplikationen.",
-    "enExplanation": "Marasmus is a severe form of malnutrition characterized by an extreme lack of essential nutrients, leading to pronounced weight loss and muscle atrophy.",
-    "ukExplanation": "Маразм - це тяжка форма недоїдання, характеризується екстремальним нестачею життєво необхідних поживних речовин, що призводить до значної втрати ваги та атрофії м'язів.",
-    "ruExplanation": "Маразм - это тяжелая форма недоедания, характеризующаяся экстремальным недостатком жизненно необходимых питательных веществ, что приводит к значительной потере веса и атрофии мышц.",
-    "esExplanation": "El marasmo es una forma grave de desnutrición, caracterizada por una deficiencia extrema de nutrientes esenciales, lo que conduce a una pérdida de peso pronunciada y atrofia muscular.",
-    "frExplanation": "Le marasme est une forme grave de malnutrition caractérisée par une carence extrême en nutriments essentiels, entraînant une perte de poids prononcée et une atrophie musculaire.",
-    "plExplanation": "Marasmus to ciężka forma niedożywienia, charakteryzująca się ekstremalnym brakiem niezbędnych składników odżywczych, prowadzącym do znacznego utraty wagi i zaniku mięśni.",
-    "trExplanation": "Marasmus, temel besin maddelerinin aşırı eksikliğiyle karakterize ağır bir yetersiz beslenme türüdür, bu da belirgin kilo kaybına ve kas atrofisine neden olur.",
-    "arExplanation": "الماراسموس هو شكل شديد من سوء التغذية، يتميز بنقص شديد في العناصر الغذائية الأساسية، مما يؤدي إلى فقدان وزن حاد وضمور العضلات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1289,
-    "lat": "Immobilisation (die)",
-    "de": "die Ruhigstellung",
-    "en": "Immobilization",
-    "uk": "Іммобілізація",
-    "ru": "Иммобилизация",
-    "pl": "Unieruchomienie",
-    "es": "Inmovilización",
-    "fr": "Immobilisation",
-    "tr": "İmmobilizasyon",
-    "ar": "تثبيت",
-    "deExplanation": "Die Ruhigstellung ist eine medizinische Maßnahme zur Fixierung eines Körperteils, um Bewegungen zu verhindern und die Heilung nach Verletzungen oder Operationen zu unterstützen. Sie wird häufig bei Frakturen, Verletzungen der Bänder oder nach chirurgischen Eingriffen angewendet, um die betroffene Struktur zu stabilisieren und Schmerzen zu reduzieren.",
-    "enExplanation": "Immobilization refers to restricting or preventing movement of a body part, often by bandages or splints, to support healing processes or stabilize injuries.",
-    "ukExplanation": "Іммобілізація означає обмеження або запобігання руху частини тіла, часто за допомогою бинтів або шин, для підтримки процесів загоєння або стабілізації травм.",
-    "ruExplanation": "Иммобилизация означает ограничение или предотвращение движения части тела, часто с помощью бинтов или шин, для поддержки процессов заживления или стабилизации травм.",
-    "esExplanation": "La inmovilización se refiere a la limitación o prevención del movimiento de una parte del cuerpo, a menudo mediante vendajes o férulas, para apoyar los procesos de curación o estabilizar lesiones.",
-    "frExplanation": "L'immobilisation fait référence à la limitation ou à la prévention du mouvement d'une partie du corps, souvent à l'aide de bandages ou d'attelles, dans le but de soutenir le processus de guérison ou de stabiliser une blessure.",
-    "plExplanation": "Immobilizacja oznacza ograniczenie lub uniemożliwienie ruchu części ciała, często za pomocą opatrunków lub szyn, w celu wspierania procesów gojenia lub stabilizacji urazów.",
-    "trExplanation": "İmmobilizasyon, bir vücut bölgesinin hareketini sınırlama veya önleme anlamına gelir, genellikle bandaj veya ateller kullanılarak, iyileşme sürecini desteklemek veya bir yaralanmayı sabitlemek amacıyla yapılır.",
-    "arExplanation": "التثبيت يشير إلى تحديد أو منع حركة جزء من الجسم، غالبًا عن طريق الضمادات أو الجبائر، لدعم عمليات الشفاء أو تثبيت الإصابات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1290,
-    "lat": "Mobil",
-    "de": "beweglich",
-    "en": "Mobile",
-    "uk": "Рухливий",
-    "ru": "Подвижный",
-    "pl": "Ruchomy",
-    "es": "Móvil",
-    "fr": "Mobile",
-    "tr": "Hareketli",
-    "ar": "متحرك",
-    "deExplanation": "In der Medizin beschreibt 'beweglich' die Fähigkeit von Gelenken, Gliedmaßen oder Strukturen, sich frei und ohne Einschränkungen zu bewegen. Diese Eigenschaft ist wichtig für die normale Funktion des Bewegungsapparates und das Ausführen alltäglicher Aktivitäten. Eine Einschränkung der Beweglichkeit kann auf Verletzungen, Erkrankungen oder altersbedingte Veränderungen hinweisen.",
-    "enExplanation": "Being mobile means that an organism or body part has the ability to move freely and actively.",
-    "ukExplanation": "Мобільний означає, що організм або частина тіла має здатність вільно та активно рухатися.",
-    "ruExplanation": "Мобильный означает, что организм или часть тела имеет способность свободно и активно двигаться.",
-    "esExplanation": "Ser móvil significa que un organismo o una parte del cuerpo tiene la capacidad de moverse libre y activamente.",
-    "frExplanation": "Être mobile signifie qu'un organisme ou une partie du corps a la capacité de se déplacer librement et activement.",
-    "plExplanation": "Być mobilnym oznacza, że organizm lub część ciała jest zdolna do swobodnego i aktywnego ruchu.",
-    "trExplanation": "Mobil olmak, bir organizmanın veya vücut bölümünün serbest ve etkin bir şekilde hareket etme yeteneğine sahip olduğu anlamına gelir.",
-    "arExplanation": "القدرة على الحركة تعني أن الكائن الحي أو جزء من الجسم لديه القدرة على التحرك بحرية ونشاط.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1291,
-    "lat": "Laktose (die)",
-    "de": "der Milchzucker",
-    "en": "Lactose",
-    "uk": "Лактоза",
-    "ru": "Лактоза",
-    "pl": "Laktoza",
-    "es": "Lactosa",
-    "fr": "Lactose",
-    "tr": "Laktoz",
-    "ar": "سكر اللبن",
-    "deExplanation": "Ein natürlicher Zucker, der hauptsächlich in Milch und Milchprodukten vorkommt. Laktose besteht aus den Einfachzuckern Glukose und Galaktose. Sie wird im Dünndarm durch das Enzym Laktase in diese Einfachzucker aufgespalten, damit sie vom Körper aufgenommen werden können. Eine unzureichende Produktion von Laktase führt zu Laktoseintoleranz, bei der der Verzehr von Laktose Verdauungsprobleme wie Blähungen, Bauchschmerzen und Durchfall verursachen kann.",
-    "enExplanation": "Lactose is a sugar found in dairy products. In individuals with lactose intolerance, its consumption leads to digestive issues like bloating, diarrhea, and abdominal pain.",
-    "ukExplanation": "Лактоза - це цукор, який міститься в молочних продуктах. У людей з непереносимістю лактози споживання призводить до травленевих розладів, таких як здуття живота, діарея та біль у животі.",
-    "ruExplanation": "Лактоза - это сахар, содержащийся в молочных продуктах. У людей с непереносимостью лактозы употребление приводит к пищеварительным расстройствам, таким как вздутие живота, диарея и боли в животе.",
-    "esExplanation": "La lactosa es un azúcar presente en los productos lácteos. En personas con intolerancia a la lactosa, su consumo puede causar trastornos digestivos como hinchazón, diarrea y dolor abdominal.",
-    "frExplanation": "Le lactose est un sucre présent dans les produits laitiers. Chez les personnes intolérantes au lactose, sa consommation entraîne des problèmes de digestion tels que des ballonnements, des diarrhées et des douleurs abdominales.",
-    "plExplanation": "Laktoza to cukier występujący w produktach mlecznych. U osób z nietolerancją laktozy spożycie powoduje dolegliwości trawienne, takie jak wzdęcia, biegunka i bóle brzucha.",
-    "trExplanation": "Laktoz, süt ürünlerinde bulunan bir şekerdir. Laktoz intoleransına sahip kişilerde, tüketimi şişkinlik, ishal ve karın ağrısı gibi sindirim sorunlarına yol açar.",
-    "arExplanation": "اللاكتوز هو سكر موجود في منتجات الألبان. في الأشخاص الذين يعانون من عدم تحمل اللاكتوز، يمكن أن يؤدي تناوله إلى مشاكل في الهضم مثل الانتفاخ والإسهال وآلام البطن.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1292,
-    "lat": "Fruktose (die)",
-    "de": "die Fruchtzucker",
-    "en": "Fructose",
-    "uk": "Фруктоза",
-    "ru": "Фруктоза",
-    "pl": "Fruktoza",
-    "es": "Fructosa",
-    "fr": "Fructose",
-    "tr": "Fruktoz",
-    "ar": "سكر الفاكهة",
-    "deExplanation": "Fruktose, auch als Fruchtzucker bekannt, ist ein natürlicher Zucker, der in vielen Früchten und Honig vorkommt. Er wird häufig als Süßungsmittel in der Lebensmittelindustrie verwendet. Obwohl Fruktose in Maßen konsumiert werden kann, kann übermäßiger Konsum zu gesundheitlichen Problemen wie Insulinresistenz und Fettstoffwechselstörungen beitragen. Fruktose wird vor allem in der Leber verstoffwechselt, was sie von anderen Zuckerarten unterscheidet.",
-    "enExplanation": "Fructose is a natural sugar predominantly found in fruits, honey, and some vegetables. It's a significant energy source and plays a central role in carbohydrate metabolism.",
-    "ukExplanation": "Фруктоза - це природний цукор, який переважно міститься у фруктах, меді та деяких овочах. Вона є важливим джерелом енергії та грає центральну роль у метаболізмі вуглеводів.",
-    "ruExplanation": "Фруктоза - это естественный сахар, в основном содержащийся во фруктах, меде и некоторых овощах. Она является важным источником энергии и играет центральную роль в углеводном метаболизме.",
-    "esExplanation": "La fructosa es un azúcar natural que se encuentra principalmente en las frutas, la miel y algunas verduras. Es una importante fuente de energía y juega un papel central en el metabolismo de los carbohidratos.",
-    "frExplanation": "La fructose est un sucre naturel présent principalement dans les fruits, le miel et certains légumes. Elle est une source d'énergie importante et joue un rôle central dans le métabolisme des glucides.",
-    "plExplanation": "Fruktoza to naturalny cukier, występujący głównie w owocach, miodzie i niektórych warzywach. Jest ważnym źródłem energii i odgrywa kluczową rolę w metabolizmie węglowodanów.",
-    "trExplanation": "Fruktoz, çoğunlukla meyve, bal ve bazı sebzelerde bulunan doğal bir şekerdir. Bu, önemli bir enerji kaynağıdır ve karbonhidrat metabolizmasında merkezi bir rol oynar.",
-    "arExplanation": "الفركتوز هو سكر طبيعي يوجد بشكل رئيسي في الفواكه والعسل وبعض الخضروات. إنه مصدر مهم للطاقة ويلعب دورًا مركزيًا في عملية التمثيل الغذائي للكربوهيدرات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1293,
-    "lat": "Glukose (die)",
-    "de": "die Glukose",
-    "en": "Glucose",
-    "uk": "Глюкоза",
-    "ru": "Глюкоза",
-    "pl": "Glukoza",
-    "es": "Glucosa",
-    "fr": "Glucose",
-    "tr": "Glukoz",
-    "ar": "الجلوكوز",
-    "deExplanation": "Glukose ist ein einfacher Zucker und eine wichtige Energiequelle für den Körper. Sie wird durch den Abbau von Kohlenhydraten im Darm freigesetzt und gelangt über das Blut zu den Körperzellen. Dort wird sie für die Energiegewinnung verwendet. Abweichungen im Glukosegehalt des Blutes können auf Diabetes hinweisen, was eine Überwachung und Kontrolle des Blutzuckerspiegels erforderlich macht.",
-    "enExplanation": "Glucose is a simple sugar and the primary energy source for the body. It's present in the bloodstream and used for cellular respiration and energy production.",
-    "ukExplanation": "Глюкоза - це простий цукор та основне джерело енергії тіла. Вона присутня у кровоносній системі та використовується для клітинного дихання та виробництва енергії.",
-    "ruExplanation": "Глюкоза - это простой сахар и основной источник энергии тела. Она присутствует в кровеносной системе и используется для клеточного дыхания и производства энергии.",
-    "esExplanation": "La glucosa es un azúcar simple y la fuente primaria de energía del cuerpo. Está presente en el torrente sanguíneo y se utiliza para la respiración celular y la generación de energía.",
-    "frExplanation": "Le glucose est un sucre simple et la principale source d'énergie du corps. Il est présent dans la circulation sanguine et est utilisé pour la respiration cellulaire et la production d'énergie.",
-    "plExplanation": "Glukoza to prosty cukier i podstawowe źródło energii dla organizmu. Obecna w krwiobiegu, służy do oddychania komórkowego i produkcji energii.",
-    "trExplanation": "Glukoz, basit bir şekerdir ve vücudun başlıca enerji kaynağıdır. Kan dolaşımında bulunur ve hücresel solunum ve enerji üretimi için kullanılır.",
-    "arExplanation": "الجلوكوز هو سكر بسيط والمصدر الأساسي لطاقة الجسم. يتواجد في مجرى الدم ويستخدم لتنفس الخلايا وتوليد الطاقة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1294,
-    "lat": "Ferrum",
-    "de": "das Eisen",
-    "en": "Iron",
-    "uk": "Залізо",
-    "ru": "Железо",
-    "pl": "Żelazo",
-    "es": "Hierro",
-    "fr": "Fer",
-    "tr": "Demir",
-    "ar": "الحديد",
-    "deExplanation": "Eisen ist ein essentielles Spurenelement im menschlichen Körper, das eine entscheidende Rolle beim Transport von Sauerstoff im Blut durch die Bildung von Hämoglobin spielt. Es ist auch wichtig für den Energiestoffwechsel und die Funktion des Immunsystems. Ein Mangel kann zu Anämie führen, während ein Überschuss toxisch sein kann.",
-    "enExplanation": "Ferrum, known as iron, is an essential mineral required in the body for the formation of hemoglobin and oxygen transport in red blood cells.",
-    "ukExplanation": "Ферум, відомий як залізо, є необхідним мінералом, який потрібен організму для формування гемоглобіну та транспорту кисню у червоних кров'яних тільцях.",
-    "ruExplanation": "Феррум, известный как железо, является необходимым минералом, который требуется организму для формирования гемоглобина и транспорта кислорода в красных кровяных тельцах.",
-    "esExplanation": "El ferrum, conocido como hierro, es un mineral esencial que el cuerpo necesita para la formación de hemoglobina y el transporte de oxígeno en los glóbulos rojos.",
-    "frExplanation": "Le fer, connu sous le nom de fer, est un minéral essentiel nécessaire dans le corps pour la formation de l'hémoglobine et le transport de l'oxygène dans les globules rouges.",
-    "plExplanation": "Żelazo, znane jako żelazo, jest niezbędnym minerałem, który jest potrzebny w organizmie do produkcji hemoglobiny i transportu tlenu w czerwonych krwinkach.",
-    "trExplanation": "Demir, hemoglobin oluşumu ve kırmızı kan hücrelerindeki oksijen taşıma için vücutta gerekli olan temel bir mineraldir.",
-    "arExplanation": "الفيرم، المعروف بالحديد، هو معدن أساسي يحتاجه الجسم لتكوين الهيموجلوبين ونقل الأكسجين في خلايا الدم الحمراء.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1295,
-    "lat": "Sideropenie (die)",
-    "de": "der Eisenmangel",
-    "en": "Sideropenia (Iron Deficiency)",
-    "uk": "Дефіцит заліза",
-    "ru": "Железодефицит",
-    "pl": "Niedobór żelaza",
-    "es": "Sideropenia",
-    "fr": "Sidéropénie",
-    "tr": "Demir eksikliği",
-    "ar": "نقص الحديد",
-    "deExplanation": "Ein Zustand, bei dem im Körper nicht genügend Eisen vorhanden ist, um die normalen physiologischen Funktionen zu gewährleisten. Häufig führt dieser Mangel zu einer Anämie, da Eisen essenziell für die Bildung von Hämoglobin in den roten Blutkörperchen ist. Symptome können Müdigkeit, Schwäche und Blässe umfassen.",
-    "enExplanation": "Sideropenia denotes an iron deficiency in the body, which can lead to anemia, a condition with a lack of red blood cells or hemoglobin.",
-    "ukExplanation": "Сидеропенія означає нестачу заліза в організмі, що може призвести до анемії, захворювання з нестачею червоних кров'яних тілець або гемоглобіну.",
-    "ruExplanation": "Сидеропения означает нехватку железа в организме, что может привести к анемии, заболеванию с недостатком красных кровяных телец или гемоглобина.",
-    "esExplanation": "Sideropenia se refiere a una deficiencia de hierro en el cuerpo, que puede llevar a la anemia, una enfermedad caracterizada por una falta de glóbulos rojos o hemoglobina.",
-    "frExplanation": "La sidéropénie désigne une carence en fer dans le corps, ce qui peut entraîner une anémie, une affection caractérisée par une insuffisance de globules rouges ou d'hémoglobine.",
-    "plExplanation": "Sideropenia oznacza niedobór żelaza w organizmie, który może prowadzić do anemii, schorzenia charakteryzującego się niedoborem czerwonych krwinek lub hemoglobiny.",
-    "trExplanation": "Sideropeni, vücutta demir eksikliğini ifade eder ve bu, kırmızı kan hücreleri veya hemoglobin eksikliği ile karakterize bir duruma yol açabilir.",
-    "arExplanation": "نقص الحديد يشير إلى نقص الحديد في الجسم، والذي يمكن أن يؤدي إلى فقر الدم، وهو مرض يتميز بنقص خلايا الدم الحمراء أو الهيموجلوبين.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz",
-      "Hamburg"
-    ]
-  },
-  {
-    "id": 1296,
-    "lat": "Geron (der)",
-    "de": "der alte Mensch",
-    "en": "Geront (Elderly Person)",
-    "uk": "Літня людина",
-    "ru": "Пожилой человек",
-    "pl": "Starsza osoba",
-    "es": "Anciano",
-    "fr": "Personne âgée",
-    "tr": "Yaşlı insan",
-    "ar": "الشخص المسن",
-    "deExplanation": "Der Begriff 'Geron' bezieht sich im medizinischen Kontext häufig auf ältere Menschen oder Aspekte des Alterns. Es wird oft in der Geriatrie verwendet, einem medizinischen Fachgebiet, das sich auf die Gesundheitsversorgung älterer Menschen konzentriert. Die klinische Relevanz umfasst die Behandlung von altersbedingten Erkrankungen und die Erhaltung der Lebensqualität im höheren Lebensalter.",
-    "enExplanation": "Geron is a term that refers to elderly individuals, often used in geriatric medicine or gerontology.",
-    "ukExplanation": "Герон - це термін, який стосується літніх людей, часто використовується у геронтології або геріатрії.",
-    "ruExplanation": "Герон - это термин, относящийся к пожилым людям, часто используется в геронтологии или гериатрии.",
-    "esExplanation": "Geron es un término que se refiere a las personas mayores, comúnmente utilizado en la medicina geriátrica o gerontología.",
-    "frExplanation": "Geron, un terme se référant aux personnes âgées, est souvent utilisé en gériatrie ou en médecine gériatrique.",
-    "plExplanation": "Geron to termin odnoszący się do osób starszych, często używany w medycynie wieku podeszłego lub geriatrii.",
-    "trExplanation": "Geron, yaşlı insanları ifade eden bir terimdir ve genellikle geriatri veya yaşlılık tıbbında kullanılır.",
-    "arExplanation": "جيرون هو مصطلح يشير إلى كبار السن، يُستخدم عادة في الطب الشيخوخي أو الجرياتريا.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1297,
-    "lat": "Mors (der)",
-    "de": "das Gesäß",
-    "en": "Death",
-    "uk": "Смерть",
-    "ru": "Смерть",
-    "pl": "Śmierć",
-    "es": "Muerte",
-    "fr": "Mort",
-    "tr": "Ölüm",
-    "ar": "الموت",
-    "deExplanation": "Das Gesäß bezieht sich auf die hintere Partie des menschlichen Körpers, die aus den Gesäßmuskeln und dem darüberliegenden Weichteilgewebe besteht. Es ist wesentlich für das Sitzen, Stehen und Gehen und spielt eine Rolle bei der Stabilisierung des Beckens. Klinisch wichtig in Bezug auf Sitzbeschwerden, Kompressionen durch langes Sitzen oder Erkrankungen wie Ischias.",
-    "enExplanation": "Mors is the Latin word for death and is used to describe the final life-ending state of an organism.",
-    "ukExplanation": "Морс - це латинське слово для смерті та використовується для опису кінцевого стану життя організму.",
-    "ruExplanation": "Морс - это латинское слово для смерти и используется для описания конечного состояния жизни организма.",
-    "esExplanation": "Mors es la palabra latina para muerte y se usa para describir el estado final de la vida de un organismo.",
-    "frExplanation": "Mors, özellikle yaşlı insanları ifade etmek için kullanılan bir terimdir, genellikle geriatri veya yaşlılık tıbbında kullanılır.",
-    "plExplanation": "Mors to łacińskie słowo oznaczające śmierć i jest używane do opisania ostatecznego stanu końca życia organizmu.",
-    "trExplanation": "Mors, yaşlı insanları ifade etmek için kullanılan bir terimdir, genellikle geriatri veya yaşlılık tıbbında kullanılır.",
-    "arExplanation": "مورس هي الكلمة اللاتينية للموت وتُستخدم لوصف حالة النهاية النهائية لحياة كائن حي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1298,
-    "lat": "Letal",
-    "de": "tödlich",
-    "en": "Lethal",
-    "uk": "Смертельний",
-    "ru": "Смертельный",
-    "pl": "Śmiertelny",
-    "es": "Letal",
-    "fr": "Létal",
-    "tr": "Ölümcül",
-    "ar": "قاتل",
-    "deExplanation": "Der Begriff 'letal' beschreibt eine Eigenschaft oder Folge, die zum Tod führt. In der Medizin wird er oft im Zusammenhang mit Krankheiten, Verletzungen oder genetischen Defekten verwendet, die tödlich verlaufen können. Die Bedeutung ist bedeutsam für die Prognosebewertung und das Risikomanagement in der medizinischen Praxis.",
-    "enExplanation": "Lethal describes something that can be fatal or lead to death, such as a disease, injury, or toxin.",
-    "ukExplanation": "Летальний означає щось, що може бути смертельним або вести до смерті, як хвороба, травма або отрута.",
-    "ruExplanation": "Летальный означает что-то, что может быть смертельным или вести к смерти, как болезнь, травма или яд.",
-    "esExplanation": "Letal se refiere a algo que puede ser mortal o conducir a la muerte, como una enfermedad, una lesión o un veneno.",
-    "frExplanation": "Letal, bir hastalık, yaralanma veya zehir gibi şeylerin ölümcül veya ölüme yol açabilen bir şeyi ifade eder.",
-    "plExplanation": "Śmiertelny, oznacza coś, co może prowadzić do śmierci, jak choroba, uraz czy trucizna.",
-    "trExplanation": "Letal, bir hastalık, yaralanma veya zehir gibi şeylerin ölümcül veya ölüme yol açabilen bir şeyi ifade eder.",
-    "arExplanation": "فتاك يشير إلى شيء قد يكون مميتًا أو يؤدي إلى الموت، مثل مرض أو إصابة أو سم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1299,
-    "lat": "Moribundus (der)",
-    "de": "im Sterben Liegender",
-    "en": "Moribund",
-    "uk": "Помираючий",
-    "ru": "Агонизирующий",
-    "pl": "Osoba umierająca",
-    "es": "Moribundo",
-    "fr": "Moribond",
-    "tr": "Ölüm döşeğindeki",
-    "ar": "المحتضر",
-    "deExplanation": "Ein Begriff, der den Zustand einer Person beschreibt, die sich in der letzten Phase des Lebens befindet und in naher Zukunft versterben wird. Klinisch relevant in der Palliativmedizin und bei der Einordnung der Dringlichkeit medizinischer Interventionen.",
-    "enExplanation": "Moribundus denotes a state just before death or a dying condition.",
-    "ukExplanation": "Морібундус означає стан безпосередньо перед смертю або вмираючий стан.",
-    "ruExplanation": "Морибундус означает состояние непосредственно перед смертью или умирающее состояние.",
-    "esExplanation": "Moribundus describe un estado justo antes de la muerte o un estado de agonía.",
-    "frExplanation": "Moribundus, ölümden kısa bir süre önce veya ölüm halini ifade eder.",
-    "plExplanation": "Moribundus opisuje stan tuż przed śmiercią lub umierający stan.",
-    "trExplanation": "Moribundus, ölümden kısa bir süre önce veya ölüm halini ifade eder.",
-    "arExplanation": "موريبوندوس يصف حالة قبل الموت مباشرة أو حالة الموت.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1300,
-    "lat": "Suizid (der)",
-    "de": "der Suizid",
-    "en": "Suicide",
-    "uk": "Самогубство",
-    "ru": "Самоубийство",
-    "pl": "Samobójstwo",
-    "es": "Suicidio",
-    "fr": "Suicide",
-    "tr": "İntihar",
-    "ar": "الانتحار",
-    "deExplanation": "Suizid ist der absichtliche Akt einer Person, sich selbst das Leben zu nehmen. Es ist ein schwerwiegendes Thema im Bereich der psychischen Gesundheit und kann durch verschiedene Faktoren wie Depression, Traumata oder andere psychische sowie soziale Belastungen verursacht werden. Die Prävention von Suizid umfasst die Bereitstellung von Unterstützung und Hilfe für gefährdete Personen, unter anderem durch psychologische Beratung, Medikation und soziale Unterstützungssysteme.",
-    "enExplanation": "Suicide refers to the deliberate act of self-killing where an individual intentionally ends their own life.",
-    "ukExplanation": "Суїцид означає навмисний акт самогубства, коли людина свідомо покінчує з власним життям.",
-    "ruExplanation": "Суицид означает преднамеренный акт самоубийства, когда человек сознательно прекращает свою собственную жизнь.",
-    "esExplanation": "El suicidio se refiere al acto intencional de autodestrucción, donde una persona termina deliberadamente con su propia vida.",
-    "frExplanation": "Le suicide fait référence à l'acte intentionnel de mettre fin à sa propre vie, où une personne met délibérément fin à sa propre vie.",
-    "plExplanation": "Samobójstwo odnosi się do świadomego aktu samobójstwa, w którym osoba celowo kończy swoje życie.",
-    "trExplanation": "İntihar, bir kişinin kendi yaşamına son vermeye yönelik kasıtlı bir eylemi ifade eder, bir kişi kendi yaşamına bilinçli bir şekilde son verir.",
-    "arExplanation": "الانتحار يشير إلى الفعل المتعمد للانتحار، حيث ينهي الشخص حياته عمدًا.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1301,
-    "lat": "Rigor mortis (der)",
-    "de": "die Totenstarre",
-    "en": "Rigor Mortis",
-    "uk": "Трупне окоченіння",
-    "ru": "Трупное окоченение",
-    "pl": "Rigor Mortis | Sztywność pośmiertna",
-    "es": "Rigor mortis",
-    "fr": "Rigidité cadavérique",
-    "tr": "Rigor Mortis",
-    "ar": "جثام الجثة",
-    "deExplanation": "Ein physiologischer Zustand nach dem Tod, bei dem die Muskeln des Körpers steif werden. Dies tritt aufgrund chemischer Veränderungen in den Muskelzellen auf, besonders durch den Verlust von ATP, was zu einer dauerhaften Bindung von Aktin und Myosin führt. Die Totenstarre beginnt typischerweise innerhalb von 2 bis 4 Stunden nach dem Tod, erreicht ihren Höhepunkt nach etwa 12 Stunden und löst sich nach 48 bis 72 Stunden, wenn die Autolyse einsetzt.",
-    "enExplanation": "Rigor mortis is a post-death condition where the body's muscles stiffen. It's a natural part of postmortem changes.",
-    "ukExplanation": "Ригор мортіс - це стан після смерті, коли м'язи тіла стають жорсткими. Це природна частина післясмертних змін.",
-    "ruExplanation": "Ригор мортис - это состояние после смерти, когда мышцы тела становятся жесткими. Это естественная часть посмертных изменений.",
-    "esExplanation": "Rigor mortis es un estado después de la muerte en el que los músculos del cuerpo se endurecen. Es una parte natural de los cambios post-mortem.",
-    "frExplanation": "Le rigor mortis est un état après la mort où les muscles du corps se raidissent. Il s'agit d'une partie naturelle des changements post-mortem.",
-    "plExplanation": "Rigor mortis to stan po śmierci, w którym mięśnie ciała stają się sztywne. Jest to naturalna część zmian pośmiertnych.",
-    "trExplanation": "Rigor mortis, ölümden sonra vücut kaslarının sertleştiği bir durumu ifade eder. Bu, ölü sonrası değişikliklerin doğal bir parçasıdır.",
-    "arExplanation": "تصلب الموت هو حالة بعد الموت يتصلب فيها عضلات الجسم. إنه جزء طبيعي من التغيرات بعد الوفاة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1302,
-    "lat": "Obduktion (die)",
-    "de": "die Leichenschau",
-    "en": "Autopsy (Post-mortem Examination)",
-    "uk": "Розтин",
-    "ru": "Аутопсия",
-    "pl": "Autopsja | Sekcja zwłok",
-    "es": "Autopsia",
-    "fr": "Autopsie",
-    "tr": "Otopsi",
-    "ar": "التشريح",
-    "deExplanation": "Ein Verfahren, bei dem der Körper einer verstorbenen Person untersucht wird, um die Todesursache festzustellen. Dabei werden innere Organe inspiziert, um Krankheiten oder Verletzungen zu identifizieren. Diese Untersuchungen sind von großer Bedeutung für die medizinische Forschung sowie für rechtliche Aspekte bei ungeklärten oder unnatürlichen Todesfällen.",
-    "enExplanation": "A thorough examination of a deceased individual to determine the cause of death or gather more information about the circumstances of death.",
-    "ukExplanation": "Обдукція - це детальне дослідження померлого для встановлення причини смерті або збору додаткової інформації про обставини смерті.",
-    "ruExplanation": "Аутопсия (секция) - это детальное исследование умершего для установления причины смерти или сбора дополнительной информации о обстоятельствах смерти.",
-    "esExplanation": "La autopsia es un examen detallado de un cadáver para determinar la causa de la muerte o recolectar más información sobre las circunstancias del fallecimiento.",
-    "frExplanation": "Une autopsie est un examen détaillé d'un décédé pour déterminer la cause du décès ou recueillir d'autres informations sur les circonstances du décès.",
-    "plExplanation": "Szczegółowe badanie zmarłego w celu ustalenia przyczyny śmierci lub zebrania dodatkowych informacji o okolicznościach śmierci.",
-    "trExplanation": "Otopsi, bir ölünün ölüm nedenini belirlemek veya ölümün koşulları hakkında diğer bilgileri toplamak için yapılan ayrıntılı bir incelemedir.",
-    "arExplanation": "التشريح هو فحص مفصل لجثة لتحديد سبب الوفاة أو جمع معلومات إضافية حول ظروف الوفاة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1303,
-    "lat": "Depression (die)",
-    "de": "die Depression",
-    "en": "Depression",
-    "uk": "Депресія",
-    "ru": "Депрессия",
-    "pl": "Depresja | Depresja",
-    "es": "Depresión",
-    "fr": "Dépression",
-    "tr": "Depresyon",
-    "ar": "الاكتئاب",
-    "deExplanation": "Eine psychische Störung, die durch anhaltende Traurigkeit, Interessenverlust und Energiemangel gekennzeichnet ist. Sie kann die Funktionsfähigkeit im täglichen Leben erheblich beeinträchtigen und erfordert oft eine klinische Behandlung.",
-    "enExplanation": "A mental disorder characterized by persistent sadness, loss of interest, lack of energy, and other symptoms.",
-    "ukExplanation": "Депресія - це психічний розлад, характеризується тривалою сумнівністю, втратою інтересу, нестачею енергії та іншими симптомами.",
-    "ruExplanation": "Депрессия - это психическое расстройство, характеризующееся длительной грустью, потерей интереса, недостатком энергии и другими симптомами.",
-    "esExplanation": "La depresión es un trastorno psicológico caracterizado por tristeza persistente, pérdida de interés, falta de energía y otros síntomas.",
-    "frExplanation": "La dépression est un trouble mental caractérisé par une tristesse persistante, une perte d'intérêt, un manque d'énergie et d'autres symptômes.",
-    "plExplanation": "Zaburzenie psychiczne, charakteryzujące się długotrwałym smutkiem, brakiem zainteresowania, brakiem energii i innymi objawami.",
-    "trExplanation": "Depresyon, sürekli üzüntü, ilgi kaybı, enerji eksikliği ve diğer belirtilerle karakterize bir zihinsel bozukluktur.",
-    "arExplanation": "الاكتئاب هو اضطراب نفسي يتميز بالحزن المستمر، فقدان الاهتمام، نقص الطاقة وأعراض أخرى.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1304,
-    "lat": "Depressiv",
-    "de": "deprimiert",
-    "en": "Depressive (Depressed)",
-    "uk": "Депресивний",
-    "ru": "Депрессивный",
-    "pl": "Depresyjny | Depresyjny",
-    "es": "Deprimido",
-    "fr": "Dépressif",
-    "tr": "Depresif",
-    "ar": "مكتئب",
-    "deExplanation": "Ein Gefühlszustand, der durch anhaltende Niedergeschlagenheit, Antriebsverlust und ein vermindertes Interesse an Aktivitäten gekennzeichnet ist. Oft ein Symptom von psychischen Erkrankungen wie der Depression, die professioneller Behandlung bedarf.",
-    "enExplanation": "Describes a person suffering from depression or a general feeling of being downcast.",
-    "ukExplanation": "Депресивний описує людину, яка страждає від депресії або має загальне відчуття пригніченості.",
-    "ruExplanation": "Депрессивный описывает человека, страдающего от депрессии или имеющего общее чувство уныния.",
-    "esExplanation": "Una descripción de una persona que sufre de depresión o que tiene una sensación general de tristeza.",
-    "frExplanation": "Une description pour une personne souffrant de dépression ou ayant un sentiment général de dépression.",
-    "plExplanation": "Opis osoby cierpiącej na depresję lub ogólnego poczucia przygnębienia.",
-    "trExplanation": "Depresyonla başa çıkan veya genel bir depresyon hissi yaşayan bir kişi için bir tanımlama.",
-    "arExplanation": "وصف لشخص يعاني من الاكتئاب أو لديه شعور عام بالكآبة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1305,
-    "lat": "Melancholia (die)",
-    "de": "die Melancholie",
-    "en": "Melancholy",
-    "uk": "Меланхолія",
-    "ru": "Меланхолия",
-    "pl": "Melancholia | Melancholia",
-    "es": "Melancolía",
-    "fr": "Mélancolie",
-    "tr": "Melankoli",
-    "ar": "الميلانخوليا",
-    "deExplanation": "Ein veralteter medizinischer Begriff, früher als eine der vier Körpersäfte-Lehre bezeichneten Temperamente verstanden. Heute bezieht sich Melancholie oft auf psychologische Zustände wie tiefere Traurigkeit oder Depression. Klinisch relevant als ein Symptom oder eine Facette von affektiven Störungen wie Major Depression.",
-    "enExplanation": "A state of deep sadness and gloominess, often accompanied by thoughtful or pessimistic thinking.",
-    "ukExplanation": "Меланхолія - це стан глибокої сумності та туги, часто супроводжується задумливим або песимістичним мисленням.",
-    "ruExplanation": "Меланхолия - это состояние глубокой печали и уныния, часто сопровождаемое задумчивым или пессимистичным мышлением.",
-    "esExplanation": "Un estado de profunda tristeza y melancolía, a menudo acompañado de pensamiento reflexivo o pesimista.",
-    "frExplanation": "Un état de profonde tristesse et de mélancolie, souvent accompagné de pensées réfléchies ou pessimistes.",
-    "plExplanation": "Stan głębokiego smutku i melancholii, często towarzyszą mu refleksyjne lub pesymistyczne myślenie.",
-    "trExplanation": "Melankoli, genellikle düşünceli veya kötümser düşüncelerle birlikte derin bir üzüntü ve hüzün durumunu ifade eder.",
-    "arExplanation": "حالة من الحزن العميق والكآبة، غالبًا ما تكون مصحوبة بالتفكير التأملي أو التشاؤمي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1306,
-    "lat": "Dolor (der)",
-    "de": "der Schmerz",
-    "en": "Pain",
-    "uk": "Біль",
-    "ru": "Боль",
-    "pl": "Ból | Ból",
-    "es": "Dolor",
-    "fr": "Douleur",
-    "tr": "Ağrı",
-    "ar": "الألم",
-    "deExplanation": "Der Begriff bezeichnet ein unangenehmes Gefühl, das mit tatsächlichem oder potentiellem Gewebeschaden verbunden ist. Schmerz kann akut sein, z. B. nach einer Verletzung, oder chronisch, wenn er über einen längeren Zeitraum besteht. Er ist ein wichtiges Symptom, das hilft, medizinische Diagnosen zu stellen, und ein Teil der 'klassischen Entzündungszeichen'.",
-    "enExplanation": "A medical term for pain or discomfort in the body.",
-    "ukExplanation": "Долор - медичний термін для опису болю або дискомфорту в тілі.",
-    "ruExplanation": "Долор - медицинский термин для описания боли или дискомфорта в теле.",
-    "esExplanation": "Un término médico para el dolor o malestar en el cuerpo.",
-    "frExplanation": "Un terme médical pour la douleur ou l'inconfort dans le corps.",
-    "plExplanation": "Medyczny termin opisujący ból lub dyskomfort w ciele.",
-    "trExplanation": "Dolor, vücutta ağrı veya rahatsızlık için tıbbi bir terimdir.",
-    "arExplanation": "مصطلح طبي للألم أو الانزعاج في الجسم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1307,
-    "lat": "Dolent",
-    "de": "schmerzhaft",
-    "en": "Painful",
-    "uk": "Болючий",
-    "ru": "Болезненный",
-    "pl": "Bolesny | Bolesny",
-    "es": "Doloroso",
-    "fr": "Douloureux",
-    "tr": "Ağrılı",
-    "ar": "مؤلم",
-    "deExplanation": "Der Begriff beschreibt einen Zustand oder eine Region, die Schmerzen verursacht oder schmerzhaft ist. Er wird häufig in der klinischen Untersuchung verwendet, um Bereiche zu identifizieren, die bei Berührung oder Bewegung Schmerzempfinden auslösen.",
-    "enExplanation": "A term describing pain or suffering.",
-    "ukExplanation": "Долент описує біль або страждання.",
-    "ruExplanation": "Долент описывает боль или страдание.",
-    "esExplanation": "Un término que describe el dolor o sufrimiento.",
-    "frExplanation": "Une expression qui décrit la douleur ou la souffrance.",
-    "plExplanation": "Wyrażenie opisujące ból lub cierpienie.",
-    "trExplanation": "Dolent (Dolorosus), acı veya sıkıntıyı tanımlayan bir ifadedir.",
-    "arExplanation": "مصطلح يصف الألم أو المعاناة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1308,
-    "lat": "Indolent",
-    "de": "träge",
-    "en": "Indolent",
-    "uk": "Байдужий",
-    "ru": "Безболезненный",
-    "pl": "Obojętny | Obojętny",
-    "es": "Indolente",
-    "fr": "Indolent",
-    "tr": "İsteksiz",
-    "ar": "بطيء",
-    "deExplanation": "Indolent beschreibt einen langsamen oder wenig aggressiven Krankheitsverlauf. In der Medizin wird der Begriff häufig verwendet, um Tumore oder Infektionen zu charakterisieren, die nur langsam Fortschritte machen und oft über längere Zeit keine oder nur geringe Symptome verursachen.",
-    "enExplanation": "Describes a disease or tumor that progresses slowly and causes little pain.",
-    "ukExplanation": "Індолентний описує хворобу або пухлину, яка повільно прогресує та викликає мало болю.",
-    "ruExplanation": "Индолентный описывает болезнь или опухоль, которая медленно прогрессирует и вызывает мало боли.",
-    "esExplanation": "Describe un curso de enfermedad o tumor que progresa lentamente y causa poco dolor.",
-    "frExplanation": "Décrit l'évolution d'une maladie ou d'une tumeur qui progresse lentement et provoque peu de douleur.",
-    "plExplanation": "Opisuje przebieg choroby lub guza, który postępuje powoli i powoduje niewiele bólu.",
-    "trExplanation": "İndolent, yavaş ilerleyen ve az ağrıya neden olan bir hastalık veya tümörün gelişimini açıklar.",
-    "arExplanation": "يصف مسار مرض أو ورم يتقدم ببطء ويسبب القليل من الألم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1309,
-    "lat": "Kausalgie (die)",
-    "de": "der Brennschmerz",
-    "en": "Causalgia",
-    "uk": "Каузалгія",
-    "ru": "Каузалгия",
-    "pl": "Kauzalgia | Ból palący",
-    "es": "Causalgia",
-    "fr": "Causalgie",
-    "tr": "Yanma ağrısı",
-    "ar": "ألم حارق",
-    "deExplanation": "Ein anhaltender, brennender Schmerz, der nach einer Nervenverletzung auftreten kann. Typischerweise assoziiert mit schmerzhaften Empfindungen, die sich durch Berührung oder Temperaturänderungen verstärken. Klinisch relevant, da er oft im Zusammenhang mit Verletzungen des peripheren Nervensystems auftritt und eine Form von neuropathischem Schmerz darstellt.",
-    "enExplanation": "A condition of persistent, burning pain that may occur after nerve injury or surgery.",
-    "ukExplanation": "Каузалгія - це стан з тривалим, пекучим болем, який може виникнути після травми нерва або операції.",
-    "ruExplanation": "Каузалгия - это состояние с длительной, жгучей болью, которое может возникнуть после травмы нерва или операции.",
-    "esExplanation": "Un estado con dolor ardiente persistente que puede ocurrir después de una lesión nerviosa o cirugía.",
-    "frExplanation": "Un état de douleur brûlante persistante qui peut survenir après une lésion nerveuse ou une opération.",
-    "plExplanation": "Stan z przewlekłym, palącym bólem, który może wystąpić po urazie nerwu lub operacji.",
-    "trExplanation": "Kausalji, sinir yaralanması veya ameliyat sonrası ortaya çıkabilen sürekli yanma ağrısı durumunu ifade eder.",
-    "arExplanation": "حالة مع ألم حارق مستمر قد يحدث بعد إصابة عصبية أو جراحة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1310,
-    "lat": "Kongenital",
-    "de": "angeboren",
-    "en": "Congenital",
-    "uk": "Вроджений",
-    "ru": "Врождённый",
-    "pl": "Wrodzony | Wrodzony",
-    "es": "Congénito",
-    "fr": "Congénital",
-    "tr": "Doğuştan",
-    "ar": "خلقي",
-    "deExplanation": "Ein Begriff, der sich auf Zustände oder Eigenschaften bezieht, die bereits bei der Geburt vorhanden sind. Dies kann genetische Ursachen haben oder durch Einflüsse während der Schwangerschaft bedingt sein. Angeborene Anomalien können sowohl harmlose Besonderheiten als auch ernsthafte Fehlbildungen oder Erkrankungen umfassen.",
-    "enExplanation": "Refers to traits or conditions present from birth, as opposed to those acquired later in life.",
-    "ukExplanation": "Конгенітальний відноситься до ознак або станів, які існують з моменту народження, на відміну від набутих станів.",
-    "ruExplanation": "Конгенитальный относится к признакам или состояниям, которые существуют с момента рождения, в отличие от приобретенных состояний.",
-    "esExplanation": "Se refiere a características o condiciones presentes desde el nacimiento, en contraste con las condiciones adquiridas.",
-    "frExplanation": "Fait référence à des caractéristiques ou des conditions présentes dès la naissance, contrairement aux conditions acquises.",
-    "plExplanation": "Odnosi się do cech lub stanów obecnych od urodzenia, w przeciwieństwie do stanów nabytych.",
-    "trExplanation": "Kongenital, doğuştan var olan özellikleri veya koşulları ifade eder, kazanılan koşulların aksine.",
-    "arExplanation": "يشير إلى السمات أو الحالات الموجودة منذ الولادة، على عكس الحالات المكتسبة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern"
-    ]
-  },
-  {
-    "id": 1311,
-    "lat": "Donor (der)",
-    "de": "der Spender",
-    "en": "Donor",
-    "uk": "Донор",
-    "ru": "Донор",
-    "pl": "Dawca | Dawca",
-    "es": "Donante",
-    "fr": "Donneur",
-    "tr": "Bağışçı",
-    "ar": "المتبرع",
-    "deExplanation": "Ein Spender ist eine Person oder ein Organismus, der Gewebe, Organe, Blut oder andere biologische Materialien für eine Transplantation oder medizinischen Gebrauch zur Verfügung stellt. In der Medizin ist dies klinisch relevant, da Spenderorgane essentielle Behandlungen für Patienten mit Organversagen ermöglichen.",
-    "enExplanation": "An individual who voluntarily provides blood, organs, or tissues for transplantation or medical use.",
-    "ukExplanation": "Донор - це людина, яка добровільно надає кров, органи або тканини для трансплантацій або медичних цілей.",
-    "ruExplanation": "Донор - это человек, который добровольно предоставляет кровь, органы или ткани для трансплантаций или медицинских целей.",
-    "esExplanation": "Una persona que dona voluntariamente sangre, órganos o tejidos para trasplantes o propósitos médicos.",
-    "frExplanation": "Une personne qui donne volontairement du sang, des organes ou des tissus à des fins de transplantation ou médicales.",
-    "plExplanation": "Osoba, która dobrowolnie oddaje krew, organy lub tkanki na potrzeby transplantacji lub celów medycznych.",
-    "trExplanation": "Donör, kan, organ veya doku bağışlayan bir kişiyi ifade eder, nakil veya tıbbi amaçlar için gönüllü olarak bağışta bulunan kişi.",
-    "arExplanation": "شخص يتبرع طوعاً بالدم أو الأعضاء أو الأنسجة للزراعة أو لأغراض طبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1312,
-    "lat": "Verus",
-    "de": "echt",
-    "en": "True",
-    "uk": "Справжній",
-    "ru": "Истинный",
-    "pl": "Prawdziwy | Prawdziwy",
-    "es": "Verdadero",
-    "fr": "Véritable",
-    "tr": "Gerçek",
-    "ar": "حقيقي",
-    "deExplanation": "Der Begriff 'echt' wird in der Medizin verwendet, um eine natürliche oder nicht pathologische Beschaffenheit oder Position zu beschreiben. Es ist ein vergleichender Begriff, der oft verwendet wird, um eine bestimmte anatomische oder klinische Situation von einer anomalen oder falschen zu unterscheiden, wie zum Beispiel beim 'Pes cavus verus' (echter Hohlfuß).",
-    "enExplanation": "A term meaning \"true\" or \"genuine,\" often used to denote the authenticity of a medical observation or finding.",
-    "ukExplanation": "Верус означає \"правдивий\" або \"справжній\", часто використовується для позначення автентичності медичного спостереження або результату.",
-    "ruExplanation": "Верус означает \"истинный\" или \"настоящий\", часто используется для обозначения аутентичности медицинского наблюдения или результата.",
-    "esExplanation": "Un término que significa \"verdadero\" o \"real\", a menudo utilizado para denotar la autenticidad de una observación médica o hallazgo.",
-    "frExplanation": "Un terme signifiant \"vrai\" ou \"authentique\", souvent utilisé pour indiquer l'authenticité d'une observation médicale ou d'une constatation.",
-    "plExplanation": "Termin oznaczający \"prawdziwy\" lub \"autentyczny\", często używany do określenia autentyczności obserwacji medycznej lub wyników.",
-    "trExplanation": "Verus, genellikle tıbbi bir gözlem veya bulgunun gerçekliğini belirtmek için kullanılan \"gerçek\" veya \"doğru\" anlamına gelen bir terimdir.",
-    "arExplanation": "مصطلح يعني \"حقيقي\" أو \"واقعي\"، يستخدم غالبًا للدلالة على أصالة الملاحظة الطبية أو النتيجة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1313,
-    "lat": "Accidens",
-    "de": "zufällig",
-    "en": "Accidental",
-    "uk": "Випадковий",
-    "ru": "Случайный",
-    "pl": "Przypadkowy | Przypadkowy",
-    "es": "Accidental",
-    "fr": "Accidentel",
-    "tr": "Kazara",
-    "ar": "عرضي",
-    "deExplanation": "Der Begriff 'accidens' oder 'akzidentiell' wird in der Medizin verwendet, um Phänomene oder Ereignisse zu beschreiben, die unvorhersehbar oder nicht direkt mit der Hauptursache einer Erkrankung oder eines Zustands verbunden sind. Zum Beispiel können akzidentielle Symptome auftreten, die nicht ursprünglich durch die Grunderkrankung verursacht werden, sondern zufällig damit einhergehen.",
-    "enExplanation": "Refers to accidental or unintended events or circumstances in a medical context.",
-    "ukExplanation": "Акціденс відноситься до випадкових або ненавмисних подій або обставин у медичному контексті.",
-    "ruExplanation": "Акциденс относится к случайным или непреднамеренным событиям или обстоятельствам в медицинском контексте.",
-    "esExplanation": "Se refiere a eventos o circunstancias accidentales o no intencionales en un contexto médico.",
-    "frExplanation": "Fait référence à des événements ou circonstances accidentels ou non intentionnels dans un contexte médical.",
-    "plExplanation": "Dotyczy przypadkowych lub niezamierzonych zdarzeń lub okoliczności w kontekście medycznym.",
-    "trExplanation": "Accidens (Akzidentiell), tıbbi bir bağlamda kazara veya kasıtlı olmayan olaylar veya durumları ifade eder.",
-    "arExplanation": "يشير إلى الأحداث أو الظروف العرضية أو غير المقصودة في سياق طبي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1314,
-    "lat": "Radiatio (die)",
-    "de": "die Strahlung",
-    "en": "Radiation",
-    "uk": "Випромінювання",
-    "ru": "Радиация",
-    "pl": "Radiacja | Promieniowanie",
-    "es": "Radiación",
-    "fr": "Radiation",
-    "tr": "Radyasyon",
-    "ar": "الإشعاع",
-    "deExplanation": "In der medizinischen und anatomischen Terminologie bezieht sich 'Radiatio' meist auf Faserstrukturen im Gehirn, wie beispielsweise die 'Radiatio optica', die Sehnervenfasern vom Thalamus zur Sehrinde leitet. Die Strahlung in diesem Sinne bezeichnet die Ausbreitung oder das Ausstrahlen nervöser oder faserartiger Verbindungen. Anatomisch ist die Radiatio optica ein Bestandteil der Sehbahn und spielt eine wichtige Rolle bei der visuellen Informationsverarbeitung.",
-    "enExplanation": "Describes the spreading of energy or radiation from a central point or source.",
-    "ukExplanation": "Радіація описує поширення енергії або променів від центральної точки або джерела.",
-    "ruExplanation": "Радиация описывает распространение энергии или лучей от центральной точки или источника.",
-    "esExplanation": "Describe la propagación de energía o radiación desde un punto central o fuente.",
-    "frExplanation": "Décrit la propagation de l'énergie ou des rayons à partir d'un point ou d'une source centrale.",
-    "plExplanation": "Opisuje rozprzestrzenianie się energii lub promieniowania z centralnego punktu lub źródła.",
-    "trExplanation": "Radiatio, enerjinin veya ışınların merkezi bir noktadan veya kaynaktan yayılmasını açıklar.",
-    "arExplanation": "يصف انتشار الطاقة أو الإشعاع من نقطة مركزية أو مصدر.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1315,
-    "lat": "Circulus (der)",
-    "de": "der Gefäßkreislauf",
-    "en": "Circle",
-    "uk": "Судинний круг",
-    "ru": "Сосудистый круг",
-    "pl": "Krążenie | Krążenie",
-    "es": "Circulación",
-    "fr": "Cercle vasculaire",
-    "tr": "Damar döngüsü",
-    "ar": "الدورة الدموية",
-    "deExplanation": "Der Gefäßkreislauf ist ein System von Blutgefäßen, das das Blut im Körper zirkulieren lässt. Er besteht aus zwei Hauptkreisläufen: dem großen Kreislauf, der das Blut vom Herzen zu den Körpergeweben und zurück transportiert, und dem kleinen Kreislauf, der das Blut durch die Lungen transportiert, um es mit Sauerstoff anzureichern. Eine gesunde Funktion des Kreislaufsystems ist essenziell für die Sauerstoffversorgung und den Nährstofftransport im gesamten Körper.",
-    "enExplanation": "Refers to circular structures or processes within the body.",
-    "ukExplanation": "Циркулус відноситься до кругових структур або процесів в тілі.",
-    "ruExplanation": "Циркулус относится к круговым структурам или процессам в теле.",
-    "esExplanation": "Se refiere a estructuras o procesos circulares en el cuerpo.",
-    "frExplanation": "Fait référence à des structures ou processus circulaires dans le corps.",
-    "plExplanation": "Odnosi się do okrągłych struktur lub procesów w ciele.",
-    "trExplanation": "Circulus, vücutta dairesel yapıları veya süreçleri ifade eder.",
-    "arExplanation": "يشير إلى الهياكل أو العمليات الدائرية في الجسم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1316,
-    "lat": "Mollis",
-    "de": "weich",
-    "en": "Soft",
-    "uk": "М'який",
-    "ru": "Мягкий",
-    "pl": "Miękki | Miękki",
-    "es": "Blando",
-    "fr": "Mou",
-    "tr": "Yumuşak",
-    "ar": "لين",
-    "deExplanation": "Als Adjektiv beschreibt 'weich' in der Medizin typischerweise die Konsistenz eines Gewebes oder einer Struktur. Weiche Gewebe können auf Gewebsarten hinweisen, die weniger dicht oder weniger fest sind, was für die Diagnose und Behandlung von Verletzungen oder Erkrankungen relevant sein kann.",
-    "enExplanation": "Used to describe the softness or gentleness of tissues or organs.",
-    "ukExplanation": "Молліс використовується для опису м'якості або ніжності тканин або органів.",
-    "ruExplanation": "Моллис используется для описания мягкости или нежности тканей или органов.",
-    "esExplanation": "Se utiliza para describir la suavidad o delicadeza de tejidos u órganos.",
-    "frExplanation": "Utilisé pour décrire la douceur ou la tendresse des tissus ou des organes.",
-    "plExplanation": "Używany do opisania miękkości lub delikatności tkanek lub organów.",
-    "trExplanation": "Mollis, dokuların veya organların yumuşaklığını veya narinliğini tanımlamak için kullanılır.",
-    "arExplanation": "يُستخدم لوصف نعومة أو رقة الأنسجة أو الأعضاء.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1317,
-    "lat": "Persistierend",
-    "de": "anhaltend",
-    "en": "Persistent",
-    "uk": "Тривалий",
-    "ru": "Постоянный",
-    "pl": "Trwały | Trwały",
-    "es": "Persistente",
-    "fr": "Persistant",
-    "tr": "Sürekli",
-    "ar": "مستمر",
-    "deExplanation": "Ein Begriff, der in der Medizin verwendet wird, um etwas zu beschreiben, das fortbesteht oder andauert, z. B. Symptome oder Bedingungen, die nicht von selbst verschwinden. Klinisch relevant in der Beobachtung von Symptomen, die möglicherweise auf chronische Erkrankungen hindeuten.",
-    "enExplanation": "Indicates conditions or symptoms that are enduring or long-lasting.",
-    "ukExplanation": "Персистуючий означає стани або симптоми, які є постійними або тривалими.",
-    "ruExplanation": "Персистирующий означает состояния или симптомы, которые являются постоянными или долговременными.",
-    "esExplanation": "Indicativo de estados o síntomas que son permanentes o de larga duración.",
-    "frExplanation": "Indique des états ou des symptômes permanents ou de longue durée.",
-    "plExplanation": "Wskazuje na stany lub objawy, które są trwałe lub długotrwałe.",
-    "trExplanation": "Persistierend, kalıcı veya uzun süreli durumları veya semptomları belirtir.",
-    "arExplanation": "يشير إلى الحالات أو الأعراض التي تكون دائمة أو طويلة الأمد.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1318,
-    "lat": "Alternierend",
-    "de": "wechselnd",
-    "en": "Alternating",
-    "uk": "Черговий",
-    "ru": "Чередующийся",
-    "pl": "Zmienny | Zmienny",
-    "es": "Alternante",
-    "fr": "Alternant",
-    "tr": "Değişken",
-    "ar": "متناوب",
-    "deExplanation": "Als Adjektiv beschreibt 'wechselnd' Prozesse oder Zustände, die sich mit der Zeit oder in Abfolgen verändern. In der Medizin kann dies auf Symptome oder Schmerzarten hinweisen, die zwischen verschiedenen Zuständen oder Lokalisationen variieren.",
-    "enExplanation": "Refers to processes or patterns that occur alternately or in an alternating sequence.",
-    "ukExplanation": "Альтерніруючий відноситься до процесів або шаблонів, які відбуваються по черзі або в черговому порядку.",
-    "ruExplanation": "Альтернирующий относится к процессам или узорам, происходящим поочередно или в чередующемся порядке.",
-    "esExplanation": "Se refiere a procesos o patrones que ocurren alternativamente o en un orden alternante.",
-    "frExplanation": "Fait référence à des processus ou modèles qui se produisent alternativement ou dans un ordre alterné.",
-    "plExplanation": "Dotyczy procesów lub wzorców, które pojawiają się na przemian lub w zmiennej kolejności.",
-    "trExplanation": "Alternierend, sırayla veya sıralı bir şekilde meydana gelen süreçleri veya modelleri ifade eder.",
-    "arExplanation": "يشير إلى العمليات أو الأنماط التي تحدث بالتناوب أو في ترتيب بديل.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1319,
-    "lat": "Anamnese (die)",
-    "de": "die Krankengeschichte",
-    "en": "Anamnesis (Medical History)",
-    "uk": "Анамнез",
-    "ru": "Анамнез",
-    "pl": "Wywiad lekarski | Wywiad lekarski",
-    "es": "Historia clínica",
-    "fr": "Anamnèse",
-    "tr": "Hastalık öyküsü",
-    "ar": "التاريخ المرضي",
-    "deExplanation": "Die Anamnese umfasst die Erhebung der medizinischen Vorgeschichte eines Patienten. Sie beinhaltet Informationen über frühere Krankheiten, aktuelle Beschwerden, familiäre Krankheitsbilder und eventuelle allergische Reaktionen. Diese Informationen sind essenziell für die Diagnosestellung und die Planung der weiteren Behandlungsschritte.",
-    "enExplanation": "The systematic collection and analysis of a patient's medical history, including past symptoms, illnesses, and family health history.",
-    "ukExplanation": "Анамнез - це систематичний збір та аналіз історії хвороби пацієнта, включаючи минулі симптоми, захворювання та сімейну медичну історію.",
-    "ruExplanation": "Анамнез - это систематический сбор и анализ истории болезни пациента, включая прошлые симптомы, заболевания и семейную медицинскую историю.",
-    "esExplanation": "La recopilación y análisis sistemáticos de la historia clínica de un paciente, incluyendo síntomas pasados, enfermedades y antecedentes de salud familiar.",
-    "frExplanation": "La collecte systématique et l'analyse de l'historique médical d'un patient, y compris les symptômes passés, les maladies et les antécédents familiaux de santé.",
-    "plExplanation": "Systematyczne zbieranie i analiza historii choroby pacjenta, w tym wcześniejszych objawów, chorób i historii zdrowotnej rodziny.",
-    "trExplanation": "Anamnez, bir hastanın tıbbi geçmişini, önceki semptomlarını, hastalıklarını ve aile sağlık geçmişini içeren sistematik bir şekilde toplama ve analiz etme sürecini ifade eder.",
-    "arExplanation": "جمع وتحليل منهجي للتاريخ المرضي للمريض، بما في ذلك الأعراض السابقة والأمراض وتاريخ الصحة العائلي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1320,
-    "lat": "Inspektion (die)",
-    "de": "die Betrachtung",
-    "en": "Inspection",
-    "uk": "Огляд",
-    "ru": "Осмотр",
-    "pl": "Oględziny | Oględziny",
-    "es": "Inspección",
-    "fr": "Inspection",
-    "tr": "Muayene",
-    "ar": "الفحص",
-    "deExplanation": "Die Betrachtung ist ein diagnostisches Verfahren der ärztlichen Untersuchung, bei dem das äußere Erscheinungsbild eines Patienten beurteilt wird. Sie umfasst die Beobachtung von Hautveränderungen, Haltungsanomalien oder anderen sichtbaren Auffälligkeiten und bildet zusammen mit Palpation, Perkussion und Auskultation die Basis klinischer Beurteilung.",
-    "enExplanation": "An examination method where the physician visually examines the patient's body to identify external signs of diseases or injuries.",
-    "ukExplanation": "Інспекція - метод обстеження, при якому лікар візуально оглядає тіло пацієнта для виявлення зовнішніх ознак захворювань або травм.",
-    "ruExplanation": "Инспекция - метод обследования, при котором врач визуально осматривает тело пациента для выявления внешних признаков заболеваний или травм.",
-    "esExplanation": "Método de examinación donde el médico examina visualmente el cuerpo del paciente para detectar signos externos de enfermedades o lesiones.",
-    "frExplanation": "Une méthode d'examen où le médecin examine visuellement le corps du patient pour détecter des signes extérieurs de maladies ou de blessures.",
-    "plExplanation": "Metoda badania, podczas której lekarz wizualnie bada ciało pacjenta, aby rozpoznać zewnętrzne oznaki chorób lub urazów.",
-    "trExplanation": "İnspeksiyon, doktorun hastanın vücudunu görsel olarak incelediği bir muayene yöntemidir ve hastalıkların veya yaralanmaların dış belirtilerini tespit etmek için kullanılır.",
-    "arExplanation": "طريقة فحص يقوم فيها الطبيب بفحص جسم المريض بصريًا للكشف عن علامات خارجية للأمراض أو الإصابات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1321,
-    "lat": "Palpation (die)",
-    "de": "das Abtasten",
-    "en": "Palpation",
-    "uk": "Пальпація",
-    "ru": "Пальпация",
-    "pl": "Palpacja",
-    "es": "Palpación",
-    "fr": "Palpation",
-    "tr": "Palpasyon",
-    "ar": "الجس باليد",
-    "deExplanation": "Das Abtasten ist eine medizinische Untersuchungstechnik, bei der der Arzt mit den Händen die Oberfläche des Körpers abtastet, um Informationen über die darunterliegenden Strukturen, wie Haut, Muskulatur oder Organe, zu erhalten. Diese Methode wird häufig zur Beurteilung von Schmerzpunkten, Schwellungen oder der Beschaffenheit von Gewebe angewendet.",
-    "enExplanation": "An examination method where the physician feels tissues or organs with hands or fingers to check for abnormalities or swelling.",
-    "ukExplanation": "Пальпація - метод обстеження, при якому лікар за допомогою рук або пальців пальпує тканини або органи для виявлення аномалій або набряків.",
-    "ruExplanation": "Пальпация - метод обследования, при котором врач с помощью рук или пальцев прощупывает ткани или органы на предмет аномалий или отеков.",
-    "esExplanation": "Método de examinación en el que el médico examina tejidos u órganos con las manos o los dedos para detectar anomalías o hinchazones.",
-    "frExplanation": "Une méthode d'examen où le médecin examine les tissus ou les organes en les palpant avec les mains ou les doigts à la recherche d'anomalies ou de gonflements.",
-    "plExplanation": "Metoda badania, podczas której lekarz przez dotyk rękami lub palcami bada tkanki lub organy pod kątem anomalii lub opuchlizny.",
-    "trExplanation": "Palpasyon, doktorun dokuları veya organları elle veya parmaklarıyla yoklayarak anormallikleri veya şişlikleri araştırmak için kullandığı bir muayene yöntemidir.",
-    "arExplanation": "طريقة فحص يقوم فيها الطبيب بتحسس الأنسجة أو الأعضاء باليدين أو الأصابع للكشف عن الشذوذ أو التورم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Niedersachsen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1322,
-    "lat": "Auskultation (die)",
-    "de": "das Abhören",
-    "en": "Auscultation",
-    "uk": "Аускультація",
-    "ru": "Аускультация",
-    "pl": "Auskultacja",
-    "es": "Auscultación",
-    "fr": "Auscultation",
-    "tr": "Oskültasyon",
-    "ar": "الاستماع السريري",
-    "deExplanation": "Eine diagnostische Methode, bei der mit einem Stethoskop die Geräusche von Organen, insbesondere des Herzens und der Lungen, abgehört werden. Sie hilft, Unregelmäßigkeiten und Erkrankungen zu erkennen, wie Herzklappenfehler, Atemwegserkrankungen und andere abnormale Geräusche.",
-    "enExplanation": "A method of listening to internal body sounds, such as heart or lung, using a stethoscope to detect diseases.",
-    "ukExplanation": "Аускультація - метод, при якому внутрішні звуки тіла, наприклад серця або легень, прослуховуються за допомогою стетоскопа для виявлення захворювань.",
-    "ruExplanation": "Аускультация - метод, при котором внутренние звуки тела, например сердца или легких, прослушиваются с помощью стетоскопа для выявления заболеваний.",
-    "esExplanation": "Método para escuchar los sonidos internos del cuerpo, como del corazón o los pulmones, con un estetoscopio para indicar enfermedades.",
-    "frExplanation": "Une méthode où les bruits internes du corps, tels que le cœur ou les poumons, sont écoutés à l'aide d'un stéthoscope pour détecter des maladies.",
-    "plExplanation": "Auskultacja to metoda słuchania wewnętrznych dźwięków ciała, takich jak serce lub płuca, za pomocą stetoskopu, aby wskazywać na choroby.",
-    "trExplanation": "Aüskültasyon, iç vücut seslerinin, örneğin kalp veya akciğer seslerinin hastalıkları tespit etmek için bir stetoskop kullanılarak dinlendiği bir yöntemdir.",
-    "arExplanation": "طريقة للاستماع إلى أصوات الجسم الداخلية، مثل القلب أو الرئتين، باستخدام سماعة الطبيب للإشارة إلى الأمراض.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Schleswig-Holstein"
-    ]
-  },
-  {
-    "id": 1323,
-    "lat": "Perkussion (die)",
-    "de": "die Abklopfung",
-    "en": "Percussion",
-    "uk": "Перкусія",
-    "ru": "Перкуссия",
-    "pl": "Perkusja",
-    "es": "Percusión",
-    "fr": "Percussion",
-    "tr": "Perküsyon",
-    "ar": "الترقيق",
-    "deExplanation": "Ein diagnostisches Verfahren, bei dem durch sanftes Abklopfen der Körperoberfläche mit den Fingern oder einem speziellen Klopfinstrument Informationen über die darunterliegenden Strukturen gewonnen werden. Es wird häufig verwendet, um den Zustand von Lunge und Bauchhöhle zu beurteilen, indem der entstehende Schall analysiert wird.",
-    "enExplanation": "An examination technique where the physician taps on the body surface to make inferences about internal structures from the sound produced.",
-    "ukExplanation": "Перкусія - техніка обстеження, при якій лікар стукає по поверхні тіла, щоб на основі звуку робити висновки про внутрішні структури.",
-    "ruExplanation": "Перкуссия - техника обследования, при которой врач стучит по поверхности тела, чтобы на основе звука делать выводы о внутренних структурах.",
-    "esExplanation": "Técnica de examinación donde el médico golpea la superficie del cuerpo para deducir sobre las estructuras internas a través del sonido.",
-    "frExplanation": "Une technique d'examen où le médecin tape sur la surface du corps pour tirer des conclusions sur les structures internes en fonction du son.",
-    "plExplanation": "Perkusja to technika badania, w której lekarz opuka powierzchnię ciała, aby na podstawie dźwięku wyciągnąć wnioski o wewnętrznych strukturach.",
-    "trExplanation": "Perküsyon, doktorun vücut yüzeyine vurarak iç yapılar hakkında sesle ilgili sonuçlar çıkarmak için kullandığı bir muayene tekniğidir.",
-    "arExplanation": "تقنية فحص يقوم فيها الطبيب بطرق سطح الجسم لاستنتاج الهياكل الداخلية من خلال الصوت.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1324,
-    "lat": "Geriatrie (die)",
-    "de": "die Altersmedizin",
-    "en": "Geriatrics",
-    "uk": "Геріатрія",
-    "ru": "Гериатрия",
-    "pl": "Geriatria",
-    "es": "Geriatría",
-    "fr": "Gériatrie",
-    "tr": "Geriatri",
-    "ar": "طب الشيخوخة",
-    "deExplanation": "Ein medizinisches Fachgebiet, das sich mit der Gesundheit von älteren Menschen befasst. Es konzentriert sich auf die Prävention, Diagnose, Behandlung und Rehabilitation von körperlichen und psychiatrischen Erkrankungen im Alter. Die Geriatrie berücksichtigt die speziellen Herausforderungen und Bedürfnisse, die im fortgeschrittenen Lebensalter auftreten, und strebt eine Erhaltung der Lebensqualität und Selbstständigkeit an.",
-    "enExplanation": "The medical field focusing on the health needs, diseases, and treatment of older adults.",
-    "ukExplanation": "Геріатрія - медична спеціальність, яка займається охороною здоров'я літніх людей, їхніми захворюваннями та лікуванням.",
-    "ruExplanation": "Гериатрия - медицинская специальность, занимающаяся здравоохранением пожилых людей, их заболеваниями и лечением.",
-    "esExplanation": "Campo médico que se ocupa de las necesidades de salud de las personas mayores, sus enfermedades y tratamiento.",
-    "frExplanation": "La spécialité médicale qui traite des besoins de santé des personnes âgées, de leurs maladies et de leur traitement.",
-    "plExplanation": "Geriatria to dziedzina medycyny zajmująca się potrzebami zdrowotnymi osób starszych, ich chorobami i leczeniem.",
-    "trExplanation": "Geriatri, yaşlı insanların sağlık ihtiyaçları, hastalıkları ve tedavisi ile ilgilenen tıp alanıdır.",
-    "arExplanation": "المجال الطبي الذي يتعامل مع احتياجات الصحة لكبار السن وأمراضهم وعلاجهم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1325,
-    "lat": "Genetik (die)",
-    "de": "die Genetik",
-    "en": "Genetics",
-    "uk": "Генетика",
-    "ru": "Генетика",
-    "pl": "Genetyka",
-    "es": "Genética",
-    "fr": "Génétique",
-    "tr": "Genetik",
-    "ar": "علم الوراثة",
-    "deExplanation": "Genetik ist der Bereich der Biologie, der die Vererbung und Variation von Merkmalen in Organismen untersucht. Sie spielt eine zentrale Rolle beim Verständnis der Erbkrankheiten, der Entwicklung von Organismen und der biologischen Vielfalt. Genetik befasst sich mit Genen, DNA, Chromosomen und den Mechanismen, durch die genetische Informationen von einer Generation zur nächsten weitergegeben werden.",
-    "enExplanation": "The science of heredity and genes, studying how traits and characteristics are transmitted in organisms.",
-    "ukExplanation": "Генетика - наука про спадковість та гени, яка вивчає, як властивості та ознаки організмів передаються.",
-    "ruExplanation": "Генетика - наука о наследственности и генах, изучающая, как свойства и признаки организмов передаются.",
-    "esExplanation": "Ciencia de la herencia y los genes, estudia cómo se transmiten las características y rasgos de los organismos.",
-    "frExplanation": "La science de l'hérédité et des gènes, qui étudie comment les caractéristiques et les traits des organismes sont transmis.",
-    "plExplanation": "Genetyka to nauka o dziedziczności i genach, badająca sposób przenoszenia cech i właściwości organizmów.",
-    "trExplanation": "Genetik, özelliklerin ve özelliklerin organizmalarda nasıl aktarıldığını inceleyen kalıtım ve gen bilimidir.",
-    "arExplanation": "علم الوراثة والجينات، يدرس كيفية نقل الصفات والخصائص للكائنات الحية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1326,
-    "lat": "Parenteral",
-    "de": "parenteral",
-    "en": "Parenteral",
-    "uk": "Парентеральний",
-    "ru": "Парентеральный",
-    "pl": "Parenteralny",
-    "es": "Parenteral",
-    "fr": "Parentéral",
-    "tr": "Parenteral",
-    "ar": "التغذية الوريدية",
-    "deExplanation": "Parenteral bezeichnet die Verabreichung von Medikamenten oder Nährstoffen, die direkt in den Körper gelangen, ohne den Verdauungstrakt zu passieren. Dies geschieht normalerweise durch Injektionen oder Infusionen, wie intravenös (in die Vene), intramuskulär (in den Muskel) oder subkutan (unter die Haut). Es wird häufig verwendet, um sofortige Wirkung zu erzielen oder wenn der orale Weg nicht möglich ist.",
-    "enExplanation": "Refers to the administration of drugs or nutrients bypassing the digestive tract, e.g., by injection.",
-    "ukExplanation": "Парентеральний означає введення ліків або поживних речовин, оминаючи травний тракт, наприклад, через ін'єкцію.",
-    "ruExplanation": "Парентеральный означает введение лекарств или питательных веществ, минуя пищеварительный тракт, например, через инъекцию.",
-    "esExplanation": "Se refiere a la administración de medicamentos o nutrientes sin pasar por el tracto digestivo, por ejemplo, mediante inyección.",
-    "frExplanation": "Désigne l'administration de médicaments ou de nutriments en contournant le tractus gastro-intestinal, par exemple par injection.",
-    "plExplanation": "Parenteralny oznacza podawanie leków lub składników odżywczych z pominięciem przewodu pokarmowego, np. przez zastrzyk.",
-    "trExplanation": "Parenteral, ilaçların veya besin maddelerinin sindirim sistemi dışından verilmesini ifade eder, örneğin enjeksiyon yoluyla.",
-    "arExplanation": "يشير إلى إعطاء الأدوية أو المغذيات دون المرور عبر الجهاز الهضمي، على سبيل المثال، عن طريق الحقن.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1327,
-    "lat": "Enteral",
-    "de": "enteral",
-    "en": "Enteral",
-    "uk": "Ентеральний",
-    "ru": "Энтеральный",
-    "pl": "Enteralny",
-    "es": "Enteral",
-    "fr": "Entéral",
-    "tr": "Enteral",
-    "ar": "التغذية المعوية",
-    "deExplanation": "Enteral bezieht sich auf die Aufnahme oder Verabreichung von Nahrung und Medikamenten über den Magen-Darm-Trakt. Dies kann oral oder mittels Sondenernährung erfolgen. Die enterale Ernährung ist klinisch relevant bei Patienten, die nicht in der Lage sind, ausreichend Nahrung über den normalen Essvorgang zu sich zu nehmen, jedoch einen funktionierenden Magen-Darm-Trakt haben.",
-    "enExplanation": "Refers to the administration of drugs or food through the digestive tract, usually by swallowing.",
-    "ukExplanation": "Ентеральний відноситься до введення ліків або їжі через травний тракт, зазвичай шляхом ковтання.",
-    "ruExplanation": "Энтеральный относится к введению лекарств или пищи через пищеварительный тракт, обычно путем проглатывания.",
-    "esExplanation": "Se refiere a la administración de medicamentos o alimentos a través del tracto digestivo, generalmente por ingestión.",
-    "frExplanation": "Fait référence à l'administration de médicaments ou de nourriture par le tractus gastro-intestinal, le plus souvent par ingestion.",
-    "plExplanation": "Enteralny odnosi się do podawania leków lub pożywienia przez przewód pokarmowy, zazwyczaj przez połykanie.",
-    "trExplanation": "Enteral, ilaçların veya yiyeceklerin çoğunlukla yutma yoluyla sindirim sistemi yoluyla verilmesini ifade eder.",
-    "arExplanation": "يشير إلى إعطاء الأدوية أو الطعام عبر الجهاز الهضمي، عادةً عن طريق البلع.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1328,
-    "lat": "Postprandial",
-    "de": "nach der Mahlzeit",
-    "en": "Postprandial",
-    "uk": "Післяїдальний",
-    "ru": "Постпрандиальный",
-    "pl": "Postprandialny",
-    "es": "Postprandial",
-    "fr": "Postprandial",
-    "tr": "Postprandiyal",
-    "ar": "بعد الأكل",
-    "deExplanation": "Der Begriff beschreibt den Zeitraum oder die physiologischen Vorgänge, die nach dem Essen auftreten. Dazu gehört beispielsweise der Anstieg des Blutzuckerspiegels, der häufig nach einer Mahlzeit beobachtet wird. Der postprandiale Zustand ist klinisch relevant, besonders im Zusammenhang mit Stoffwechselerkrankungen wie Diabetes, da er Einfluss auf den Blutzuckerspiegel hat.",
-    "enExplanation": "Refers to the period after a meal, often used to monitor blood sugar levels post-eating.",
-    "ukExplanation": "Постпрандіальний відноситься до періоду часу після прийому їжі, часто використовується для моніторингу рівня цукру в крові після їжі.",
-    "ruExplanation": "Постпрандиальный относится к периоду времени после приема пищи, часто используется для мониторинга уровня сахара в крови после еды.",
-    "esExplanation": "Se refiere al período de tiempo después de una comida, a menudo utilizado para monitorear los niveles de azúcar en la sangre después de comer.",
-    "frExplanation": "Fait référence à la période après un repas, souvent utilisée pour surveiller la glycémie après avoir mangé.",
-    "plExplanation": "Postprandialny odnosi się do okresu czasu po posiłku, często używany do monitorowania poziomu cukru we krwi po jedzeniu.",
-    "trExplanation": "Postprandial, bir öğünden sonra geçen süreye atıfta bulunur ve genellikle yemekten sonra kan şekeri izlemek için kullanılır.",
-    "arExplanation": "يشير إلى الفترة الزمنية بعد تناول الطعام، غالبًا ما يستخدم لمراقبة مستويات السكر في الدم بعد الأكل.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1329,
-    "lat": "Alimentär",
-    "de": "ernährungsspezifisch",
-    "en": "Alimentary",
-    "uk": "Аліментарний",
-    "ru": "Алиментарный",
-    "pl": "Alimentarny",
-    "es": "Alimentario",
-    "fr": "Alimentaire",
-    "tr": "Alimenter",
-    "ar": "الغذائي",
-    "deExplanation": "Der Begriff 'alimentär' bezieht sich auf die Ernährung oder die Nahrungsaufnahme. In der Medizin wird er häufig verwendet, um Prozesse oder Zustände zu beschreiben, die durch die Ernährung beeinflusst werden, wie etwa alimentär bedingte Krankheiten, die durch eine bestimmte Ernährungsweise verursacht werden. Es ist kein anatomischer Begriff, sondern beschreibt eher den Einfluss der Ernährung auf die Gesundheit.",
-    "enExplanation": "Pertains to everything related to nutrition and food intake, including the intake of nutrients.",
-    "ukExplanation": "Аліментарний відноситься до всього, що пов'язано з харчуванням і прийомом їжі, включаючи постачання поживних речовин.",
-    "ruExplanation": "Алиментарный относится ко всему, связанному с питанием и приемом пищи, включая поступление питательных веществ.",
-    "esExplanation": "Se refiere a todo lo relacionado con la nutrición y la ingesta de alimentos, incluida la absorción de nutrientes.",
-    "frExplanation": "Fait référence à tout ce qui concerne la nutrition et l'apport alimentaire, y compris l'apport en nutriments.",
-    "plExplanation": "Alimentarny odnosi się do wszystkiego, co związane z odżywianiem i spożywaniem pokarmu, w tym z dostarczaniem składników odżywczych.",
-    "trExplanation": "Alimentär, beslenme ve besin alımı ile ilgili olan her şeye atıfta bulunur, besin maddelerinin alınmasını içerir.",
-    "arExplanation": "يشير إلى كل ما يتعلق بالتغذية وتناول الطعام، بما في ذلك تناول العناصر الغذائية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1330,
-    "lat": "Kontraktilität (die)",
-    "de": "die Kontraktilität",
-    "en": "Contractility",
-    "uk": "Контрактильність",
-    "ru": "Контрактильность",
-    "pl": "Kontraktylność",
-    "es": "Contractilidad",
-    "fr": "Contractilité",
-    "tr": "Kontraktilite",
-    "ar": "الانقباضية",
-    "deExplanation": "Die Kontraktilität beschreibt die Fähigkeit von Muskelgewebe, sich zusammenzuziehen und damit Kraft zu erzeugen. Dies ist besonders wichtig im Kontext des Herzmuskels, wo eine ausreichende Kontraktilität notwendig ist, um Blut effektiv durch den Körper zu pumpen. Eine gestörte Kontraktilität kann zu Herzinsuffizienz oder anderen kardialen Erkrankungen führen.",
-    "enExplanation": "The ability of muscle tissue to actively shorten and generate force, essential for movements and bodily functions.",
-    "ukExplanation": "Контрактильність - здатність м'язової тканини активно скорочуватися та генерувати силу, що є важливим для рухів та функцій тіла.",
-    "ruExplanation": "Контрактильность - способность мышечной ткани активно сокращаться и генерировать силу, что важно для движений и функций тела.",
-    "esExplanation": "La capacidad del tejido muscular para acortarse activamente y generar fuerza, esencial para los movimientos y las funciones corporales.",
-    "frExplanation": "La capacité des tissus musculaires à se raccourcir activement et à produire de la force, essentielle pour les mouvements et les fonctions corporelles.",
-    "plExplanation": "Kontraktylność to zdolność tkanki mięśniowej do aktywnego skracania się i wytwarzania siły, co jest niezbędne do ruchów i funkcji ciała.",
-    "trExplanation": "Kontraktilite, kas dokularının aktif olarak kısalma ve kuvvet üretme yeteneğini ifade eder, hareketler ve vücut fonksiyonları için temel öneme sahiptir.",
-    "arExplanation": "القدرة على تقلص الأنسجة العضلية بنشاط وتوليد القوة، وهو أمر ضروري للحركات ووظائف الجسم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1331,
-    "lat": "Kontraktil",
-    "de": "kontraktil",
-    "en": "Contractile",
-    "uk": "Контрактильний",
-    "ru": "Контрактильный",
-    "pl": "Kontraktylny",
-    "es": "Contractil",
-    "fr": "Contractile",
-    "tr": "Kontraktil",
-    "ar": "انقباضي",
-    "deExplanation": "Kontraktil bezeichnet die Fähigkeit von Muskeln oder Muskelzellen, sich zusammenzuziehen oder zu verkürzen. Dies ist eine grundlegende Eigenschaft, die es ermöglicht, mechanische Arbeit zu verrichten, wie zum Beispiel Bewegung oder Aufrechterhaltung von Körperhaltungen. Die Kontraktilität ist wichtig in verschiedenen klinischen Kontexten, besonders in der Herzphysiologie, da sie die Pumpfunktion des Herzens beeinflusst.",
-    "enExplanation": "Describes tissue, especially muscles, capable of contracting and characterizes their contraction ability.",
-    "ukExplanation": "Контрактильний означає тканину, особливо м'язи, яка може скорочуватися, і характеризує її здатність до скорочення.",
-    "ruExplanation": "Контрактильный означает ткань, особенно мышцы, которая может сокращаться, и характеризует её способность к сокращению.",
-    "esExplanation": "Se refiere a tejidos, especialmente músculos, que pueden contraerse, caracterizando su capacidad de contracción.",
-    "frExplanation": "Désigne les tissus, en particulier les muscles, qui peuvent se contracter, et caractérise leur capacité de contraction.",
-    "plExplanation": "Kontraktylny odnosi się do tkanek, zwłaszcza mięśni, które mogą się kurczyć, i charakteryzuje ich zdolność do skurczu.",
-    "trExplanation": "Kontraktil, kas gibi dokuları içeren kas gibi dokuların kasılma kapasitesini ifade eder.",
-    "arExplanation": "يشير إلى الأنسجة، وخاصة العضلات، التي يمكن أن تنقبض، ويصف قدرتها على الانقباض.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1332,
-    "lat": "Konfluierend",
-    "de": "zusammenfließend",
-    "en": "Confluent",
-    "uk": "Конфлюентний",
-    "ru": "Конфлюэнтный",
-    "pl": "Konfluentny",
-    "es": "Confluente",
-    "fr": "Confluent",
-    "tr": "Konflüan",
-    "ar": "متلازم",
-    "deExplanation": "Der Begriff 'konfluierend' beschreibt das Phänomen oder den Prozess, bei dem zwei oder mehr Entitäten, beispielsweise Blutgefäße, Lymphbahnen oder auch pathologische Hautveränderungen wie Ausschläge, miteinander verschmelzen oder in eine gemeinsame Struktur übergehen. In der Medizin ist dies wichtig, um zu verstehen, wie sich bestimmte Strukturen vernetzen oder wie sich Pathologien entwickeln können.",
-    "enExplanation": "Describes the merging of lesions or pathological changes that fuse together to form larger areas.",
-    "ukExplanation": "Конфлюентний описує зливання лезій або патологічних змін, які об'єднуються та формують більші ділянки.",
-    "ruExplanation": "Конфлюентный описывает слияние поражений или патологических изменений, которые объединяются и формируют более крупные участки.",
-    "esExplanation": "Describe la fusión de lesiones o cambios patológicos que se unen formando áreas más grandes.",
-    "frExplanation": "Décrit la fusion de lésions ou de modifications pathologiques qui fusionnent les unes avec les autres pour former de plus grandes zones.",
-    "plExplanation": "Konfluentny opisuje zlewające się ze sobą zmiany patologiczne lub zmiany chorobowe, które łączą się i tworzą większe obszary.",
-    "trExplanation": "Konfluierend, birleşerek daha büyük alanlar oluşturan lezyonların veya patolojik değişikliklerin birleşmesini açıklar.",
-    "arExplanation": "يصف تجمع الآفات أو التغيرات المرضية التي تندمج مع بعضها البعض لتشكيل مناطق أكبر.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1333,
-    "lat": "Natriumchlorid",
-    "de": "das Natriumchlorid",
-    "en": "Sodium Chloride",
-    "uk": "Хлорид натрію",
-    "ru": "Хлорид натрия",
-    "pl": "Chlorek sodu",
-    "es": "Cloruro de sodio",
-    "fr": "Chlorure de sodium",
-    "tr": "Sodyum klorür",
-    "ar": "كلوريد الصوديوم",
-    "deExplanation": "Natriumchlorid, auch als Kochsalz bekannt, ist eine chemische Verbindung aus Natrium und Chlorid. Es hat eine wichtige Rolle im Körper, indem es den Flüssigkeitshaushalt und die Nervenfunktion reguliert. In der Medizin wird Natriumchlorid oft als Kochsalzlösung verwendet, um den Flüssigkeits- und Elektrolythaushalt bei Patienten zu stabilisieren oder während intravenöser Therapien.",
-    "enExplanation": "Chemical compound known as table salt, used in medicine for fluid regulation and electrolyte replacement.",
-    "ukExplanation": "Хімічна сполука, відома як кухонна сіль, використовується в медицині для регуляції рідини та заміщення електролітів.",
-    "ruExplanation": "Химическое соединение, известное как поваренная соль, используется в медицине для регулирования жидкости и замещения электролитов.",
-    "esExplanation": "Compuesto químico conocido como sal de mesa, utilizado en medicina para la regulación de líquidos y reemplazo de electrolitos.",
-    "frExplanation": "Composé chimique connu sous le nom de sel de table, utilisé en médecine pour la régulation des liquides et le remplacement des électrolytes.",
-    "plExplanation": "Chlorek sodu to związek chemiczny znany jako sól kuchenna, stosowany w medycynie do regulacji płynów i zastępowania elektrolitów.",
-    "trExplanation": "Sodyum klorür, tıpta sıvı düzenleme ve elektrolit değiştirme amacıyla kullanılan sofra tuzu olarak bilinen bir kimyasal bileşiktir.",
-    "arExplanation": "مركب كيميائي يعرف بملح الطعام، يستخدم في الطب لتنظيم السوائل واستبدال الإلكتروليتات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1334,
-    "lat": "Vanus",
-    "de": "vergeblich",
-    "en": "Vain (Futile)",
-    "uk": "Марно",
-    "ru": "Тщетный",
-    "pl": "Próżny",
-    "es": "Vano",
-    "fr": "Vain",
-    "tr": "Boşuna",
-    "ar": "عبثا",
-    "deExplanation": "Vanus oder Frustran ist ein Begriff, der in der Medizin verwendet wird, um etwas zu beschreiben, das ohne Nutzen, Erfolg oder Wirkung ist. Es zeigt an, dass eine Behandlung, ein Verfahren oder eine Maßnahme nicht zu den gewünschten oder erwarteten Ergebnissen führt.",
-    "enExplanation": "Describes a situation or condition that remains unsuccessful or without result, especially in the context of medical treatments.",
-    "ukExplanation": "Ванус описує ситуацію або стан, який залишається без успіху чи результату, особливо в контексті медичних лікувань.",
-    "ruExplanation": "Ванус описывает ситуацию или состояние, которое остается без успеха или результата, особенно в контексте медицинских лечений.",
-    "esExplanation": "Describe una situación o estado que permanece sin éxito o resultado, especialmente en el contexto de tratamientos médicos.",
-    "frExplanation": "Décrit une situation ou un état qui reste sans succès ou sans résultat, en particulier dans le contexte des traitements médicaux.",
-    "plExplanation": "Vanus (frustran) opisuje sytuację lub stan, który pozostaje bez sukcesu lub wyniku, szczególnie w kontekście medycznego leczenia.",
-    "trExplanation": "Vanus (Frustran), özellikle tıbbi tedaviler bağlamında başarısız veya sonuçsuz kalan bir durumu veya durumu tanımlar.",
-    "arExplanation": "يصف حالة أو وضع يبقى دون نجاح أو نتيجة، وخاصة في سياق العلاجات الطبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1335,
-    "lat": "Spasmus (der)",
-    "de": "der Krampf",
-    "en": "Spasm",
-    "uk": "Спазм",
-    "ru": "Спазм",
-    "pl": "Skurcz",
-    "es": "Espasmo",
-    "fr": "Spasme",
-    "tr": "Spazm",
-    "ar": "التشنج",
-    "deExplanation": "Ein plötzlicher, unwillkürlicher Muskelkontraktion, die schmerzhaft sein kann. Krämpfe können durch Überbeanspruchung, Dehydration, oder Elektrolytungleichgewichte verursacht werden und sind häufig in den Beinmuskeln anzutreffen.",
-    "enExplanation": "A sudden, involuntary muscle contraction that can lead to pain and restricted movement.",
-    "ukExplanation": "Спазм - це раптове, неконтрольоване скорочення м'язів, що може призвести до болю та обмеженої рухливості.",
-    "ruExplanation": "Спазм - это внезапное, неконтролируемое сокращение мышц, что может привести к боли и ограниченной подвижности.",
-    "esExplanation": "Contracción muscular repentina e involuntaria que puede causar dolor y limitar la movilidad.",
-    "frExplanation": "Une contraction musculaire soudaine et involontaire qui peut entraîner des douleurs et une mobilité réduite.",
-    "plExplanation": "Spazm to nagłe, mimowolne skurcze mięśni, które mogą prowadzić do bólu i ograniczonej ruchomości.",
-    "trExplanation": "Spazmus, ani ve istemsiz bir kas kasılmasıdır ve ağrı ve sınırlı hareketliliğe neden olabilir.",
-    "arExplanation": "تقلص عضلي مفاجئ وغير إرادي يمكن أن يسبب الألم ويحد من الحركة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1336,
-    "lat": "Diameter (der)",
-    "de": "der Durchmesser",
-    "en": "Diameter",
-    "uk": "Діаметр",
-    "ru": "Диаметр",
-    "pl": "Średnica",
-    "es": "Diámetro",
-    "fr": "Diamètre",
-    "tr": "Çap",
-    "ar": "القطر",
-    "deExplanation": "Der Durchmesser bezeichnet die gerade Linie, die durch den Mittelpunkt eines Kreises oder einer Kugel verläuft und die beiden gegenüberliegenden Seiten berührt. In der Medizin ist der Durchmesser ein wichtiges Maß zur Bestimmung von Größen und Abmessungen, z. B. bei Organen, Blutgefäßen oder Tumoren, und hat klinische Relevanz bei Diagnose und Behandlung.",
-    "enExplanation": "The linear distance through the center of a circle or round structure, important for assessing anatomical structures.",
-    "ukExplanation": "Діаметр - лінійна відстань через центр кола або круглої структури, важлива для оцінки анатомічних структур.",
-    "ruExplanation": "Диаметр - линейное расстояние через центр круга или круглой структуры, важное для оценки анатомических структур.",
-    "esExplanation": "La distancia lineal a través del centro de un círculo o estructura redonda, importante para evaluar estructuras anatómicas.",
-    "frExplanation": "La distance linéaire à travers le centre d'un cercle ou d'une structure ronde, importante pour l'évaluation des structures anatomiques.",
-    "plExplanation": "Średnica to liniowa odległość przez środek koła lub okrągłej struktury, ważna do oceny struktur anatomicznych.",
-    "trExplanation": "Çap, bir dairenin veya yuvarlak bir yapının merkezi boyunca olan doğrusal uzaklığı ifade eder ve anatomik yapıların değerlendirilmesi için önemlidir.",
-    "arExplanation": "المسافة الخطية عبر مركز دائرة أو هيكل دائري، مهمة لتقييم الهياكل التشريحية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1337,
-    "lat": "Completus",
-    "de": "vollständig",
-    "en": "Complete",
-    "uk": "Повний",
-    "ru": "Полный",
-    "pl": "Kompletny",
-    "es": "Completo",
-    "fr": "Complet",
-    "tr": "Tam",
-    "ar": "كامل",
-    "deExplanation": "Der Begriff 'vollständig' wird oft verwendet, um den Zustand oder das Ausmaß einer medizinischen Struktur oder eines Prozesses zu beschreiben. Beispielsweise kann ein vollständiger Bruch bedeuten, dass der Knochen vollständig durchtrennt ist. Im klinischen Kontext bedeutet 'vollständig', dass ein Vorgang oder eine Veränderung in vollem Umfang abgeschlossen ist.",
-    "enExplanation": "Indicates the state of completeness or entirety, especially in assessing healing processes or medical interventions.",
-    "ukExplanation": "Позначає стан повноти або цілісності, особливо при оцінці процесів загоєння або медичних заходів.",
-    "ruExplanation": "Обозначает состояние полноты или целостности, особенно при оценке процессов заживления или медицинских мероприятий.",
-    "esExplanation": "Indica un estado de completitud o totalidad, especialmente en la evaluación de procesos de curación o medidas médicas.",
-    "frExplanation": "Désigne l'état de complétude ou d'intégralité, en particulier lors de l'évaluation des processus de guérison ou des mesures médicales.",
-    "plExplanation": "Kompletny oznacza stan pełności lub całości, szczególnie w ocenie procesów gojenia się lub medycznych działań.",
-    "trExplanation": "Completus, özellikle iyileşme süreçlerinin veya tıbbi önlemlerin değerlendirilmesi sırasında bütünlük veya tamamlık durumunu tanımlar.",
-    "arExplanation": "يشير إلى حالة الاكتمال أو الكمال، وخاصة في تقييم عمليات الشفاء أو الإجراءات الطبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1338,
-    "lat": "Partiell",
-    "de": "teilweise",
-    "en": "Partial",
-    "uk": "Частковий",
-    "ru": "Частичный",
-    "pl": "Częściowy",
-    "es": "Parcial",
-    "fr": "Partiel",
-    "tr": "Kısmi",
-    "ar": "جزئي",
-    "deExplanation": "Teilweise beschreibt den Zustand, in dem etwas nicht vollständig ist. In der Medizin wird dieser Begriff verwendet, um eine unvollständige Funktion oder Ausdehnung eines Phänomens zu beschreiben, wie z.B. eine partielle Lähmung, bei der nur ein Teil der Muskelfunktion verloren geht.",
-    "enExplanation": "Refers to something that is only partially present or covers only a part aspect, as opposed to the whole.",
-    "ukExplanation": "Парціальний відноситься до чогось, що присутнє лише частково або охоплює лише частину аспекту, на відміну від цілого.",
-    "ruExplanation": "Парциальный относится к чему-то, что присутствует только частично или охватывает только часть аспекта, в отличие от целого.",
-    "esExplanation": "Se refiere a algo que está presente solo en parte o que abarca solo un aspecto parcial, en contraposición a la totalidad.",
-    "frExplanation": "Fait référence à quelque chose qui n'est présent que partiellement ou qui ne couvre qu'un aspect partiel, par opposition à l'ensemble.",
-    "plExplanation": "Częściowy odnosi się do czegoś, co jest obecne tylko częściowo lub obejmuje tylko część aspektu, w przeciwieństwie do całości.",
-    "trExplanation": "Partiell (Partial), sadece kısmen var olan veya yalnızca kısmi bir yönü kapsayan bir şeyi ifade eder, tümüne karşıt olarak.",
-    "arExplanation": "يشير إلى شيء موجود جزئيًا فقط أو يشمل جانبًا جزئيًا فقط، على عكس الكل.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1339,
-    "lat": "Stimulus (der)",
-    "de": "der Reiz",
-    "en": "Stimulus",
-    "uk": "Стимул",
-    "ru": "Раздражитель",
-    "pl": "Bodziec",
-    "es": "Estímulo",
-    "fr": "Stimulus",
-    "tr": "Uyarı",
-    "ar": "المنبه",
-    "deExplanation": "Ein Stimulus oder Reiz ist ein Signal oder Ereignis, das eine Reaktion im Organismus auslöst. Im medizinischen Kontext wird er oft in Bezug auf das Nervensystem verwendet, wo sensorische Reize eine Antwort in Form von Nervenimpulsen auslösen. Ein Reiz kann physikalischer, chemischer oder biologischer Natur sein und hat eine wesentliche Bedeutung in der Diagnose und im Verständnis von Körperreaktionen auf äußere und innere Veränderungen.",
-    "enExplanation": "An external factor that elicits a specific response in the body, such as nerve impulses or hormonal stimuli.",
-    "ukExplanation": "Стимул - це зовнішній фактор, який викликає специфічну реакцію в організмі, як нервові імпульси або гормональні подразники.",
-    "ruExplanation": "Стимул - это внешний фактор, вызывающий специфическую реакцию в организме, как нервные импульсы или гормональные раздражители.",
-    "esExplanation": "Un factor externo que provoca una respuesta específica en el cuerpo, como impulsos nerviosos o estímulos hormonales.",
-    "frExplanation": "Un facteur externe qui déclenche une réponse spécifique dans le corps, comme des impulsions nerveuses ou des stimuli hormonaux.",
-    "plExplanation": "Bodziec to zewnętrzny czynnik, który wywołuje określoną reakcję w organizmie, jak impulsy nerwowe lub bodźce hormonalne.",
-    "trExplanation": "Stimulus, vücutta belirli bir tepkiyi tetikleyen harici bir faktördür, sinir impuls veya hormonel uyarıcılar gibi.",
-    "arExplanation": "عامل خارجي يثير استجابة محددة في الجسم، مثل النبضات العصبية أو المحفزات الهرمونية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1340,
-    "lat": "Irritation (die)",
-    "de": "die Reizung",
-    "en": "Irritation",
-    "uk": "Роздратування",
-    "ru": "Раздражение",
-    "pl": "Podrażnienie",
-    "es": "Irritación",
-    "fr": "Irritation",
-    "tr": "İrritasyon",
-    "ar": "التهيج",
-    "deExplanation": "Eine Reizung bezieht sich auf die Reaktion von Gewebe oder Organen auf äußere oder innere Einflüsse. Diese Einflüsse können physikalisch, chemisch oder biologisch sein und führen oft zu Symptomen wie Schmerz, Schwellung oder Rötung. Klinisch kann eine Reizung eine temporäre oder chronische Reaktion sein, die Beobachtung oder Behandlung erfordert, um eine Verschlechterung oder Komplikationen zu vermeiden.",
-    "enExplanation": "A body's response to external or internal stimuli resulting in inflammation, pain, or discomfort.",
-    "ukExplanation": "Іритація - це реакція організму на зовнішні або внутрішні подразники, що веде до запалення, болю або дискомфорту.",
-    "ruExplanation": "Ирритация - это реакция организма на внешние или внутренние раздражители, ведущая к воспалению, боли или дискомфорту.",
-    "esExplanation": "Una reacción del cuerpo a estímulos externos o internos que puede causar inflamación, dolor o malestar.",
-    "frExplanation": "Une réaction du corps à des stimuli externes ou internes qui peut entraîner une inflammation, des douleurs ou un inconfort.",
-    "plExplanation": "Podrażnienie to reakcja organizmu na zewnętrzne lub wewnętrzne bodźce, prowadząca do stanu zapalnego, bólu lub dyskomfortu.",
-    "trExplanation": "Irritation, vücudun dış veya iç uyarıcılara tepkisi olup, iltihap, ağrı veya rahatsızlığa neden olabilir.",
-    "arExplanation": "رد فعل الجسم على المحفزات الخارجية أو الداخلية التي قد تسبب الالتهاب أو الألم أو عدم الراحة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1341,
-    "lat": "Irritiert",
-    "de": "gereizt",
-    "en": "Irritated",
-    "uk": "Роздратований",
-    "ru": "Раздраженный",
-    "pl": "Podrażniony",
-    "es": "Irritado",
-    "fr": "Irrité",
-    "tr": "Tahriş olmuş",
-    "ar": "متهيج",
-    "deExplanation": "Der Begriff 'gereizt' beschreibt einen Zustand, in dem Gewebe oder Organstrukturen, wie Haut oder Schleimhäute, durch mechanische, chemische oder physikalische Einflüsse entzündet oder überempfindlich geworden sind. Dies kann klinische Relevanz haben, da eine gereizte Struktur oft auf eine Verletzung, Entzündung oder allergische Reaktion hinweist und eine Behandlung erfordert.",
-    "enExplanation": "A state in which tissue or mental well-being is affected by stimuli, leading to inflammation or discomfort.",
-    "ukExplanation": "Ірритований означає стан, в якому тканини або психічне благополуччя порушені подразниками, що може призвести до запалення або дискомфорту.",
-    "ruExplanation": "Раздраженный означает состояние, в котором ткани или психическое благополучие нарушены раздражителями, что может привести к воспалению или дискомфорту.",
-    "esExplanation": "Estado en que los tejidos o el bienestar psíquico están afectados por estímulos, lo que puede causar inflamación o malestar.",
-    "frExplanation": "Ein Zustand, in dem Gewebe oder das psychische Wohlbefinden durch Reize beeinträchtigt ist, was zu Entzündungen oder Unbehagen führen kann.",
-    "plExplanation": "Stan, w którym tkanki lub samopoczucie psychiczne są zaburzone przez bodźce, co może prowadzić do stanu zapalnego lub dyskomfortu.",
-    "trExplanation": "Irritiert, dokuların veya zihinsel refahın uyarıcılar tarafından etkilendiği bir durumu ifade eder ve iltihap veya rahatsızlığa neden olabilir.",
-    "arExplanation": "حالة يتأثر فيها النسيج أو الرفاهية النفسية بالمحفزات، مما قد يسبب الالتهاب أو عدم الراحة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1342,
-    "lat": "Bland",
-    "de": "nicht irritierend",
-    "en": "Bland (Not Irritated)",
-    "uk": "Не дратівливий",
-    "ru": "Не раздражающий",
-    "pl": "Niepodrażniający",
-    "es": "No irritante",
-    "fr": "Non irritant",
-    "tr": "Tahriş edici olmayan",
-    "ar": "غير متهيج",
-    "deExplanation": "Dies beschreibt eine Substanz oder Behandlung, die keine Reizung oder Entzündung der Haut oder von Schleimhäuten verursacht. Solche Substanzen werden oft in der Dermatologie oder bei empfindlichen Patienten verwendet, um unerwünschte Reaktionen zu vermeiden.",
-    "enExplanation": "Refers to a quality that does not cause irritation or irritation but is gentle and soothing, especially in reference to medications or treatments.",
-    "ukExplanation": "Бландний означає якість, яка не викликає подразнення або іритації, але є ніжною та м'якою, особливо у контексті ліків або лікувань.",
-    "ruExplanation": "Бландный означает качество, которое не вызывает раздражения или ирритации, но является нежным и мягким, особенно в контексте лекарств или лечений.",
-    "esExplanation": "Se refiere a una característica que no causa irritación o molestias, sino que es suave y delicada, especialmente en relación con medicamentos o tratamientos.",
-    "frExplanation": "Désigne une texture qui ne provoque pas d'irritation ou d'inconfort, mais qui est douce et apaisante, en particulier en ce qui concerne les médicaments ou les traitements.",
-    "plExplanation": "Łagodny oznacza charakterystykę, która nie powoduje podrażnienia ani drażnienia, ale jest łagodna i delikatna, szczególnie w odniesieniu do leków lub zabiegów.",
-    "trExplanation": "Bland (Irrite etmeyen), tahriş veya rahatsızlık yapmayan ancak özellikle ilaçlar veya tedavilerle ilgili olan nazik ve yatıştırıcı bir yapıyı ifade eder.",
-    "arExplanation": "يشير إلى خاصية لا تسبب تهيجًا أو إزعاجًا، بل تكون لطيفة ومعتدلة، خاصةً فيما يتعلق بالأدوية أو العلاجات.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1343,
-    "lat": "Dens serotinus (der)",
-    "de": "der Weisheitszahn",
-    "en": "Late-erupting Tooth",
-    "uk": "Зуб мудрості",
-    "ru": "Зуб мудрости",
-    "pl": "Ząb trzonowy trzeci",
-    "es": "Muela del juicio",
-    "fr": "Dent de sagesse",
-    "tr": "Yirmi yaş dişi",
-    "ar": "السن المتأخر الظهور",
-    "deExplanation": "Der Weisheitszahn ist der letzte Backenzahn in der Zahnreihe, der normalerweise zwischen dem 17. und 25. Lebensjahr durchbricht. Aufgrund von Platzmangel im Kiefer kann es häufig zu Komplikationen beim Durchbruch kommen, was zu Schmerzen oder Infektionen führen kann. Häufig müssen Weisheitszähne entfernt werden, wenn sie nicht richtig durchbrechen oder Druck auf andere Zähne ausüben.",
-    "enExplanation": "Describes a late tooth transition or the appearance of the last milk teeth, typical in the development of the dentition in children.",
-    "ukExplanation": "Денс серотінус описує пізню зміну зубів або появу останніх молочних зубів, типову для розвитку зубного ряду у дітей.",
-    "ruExplanation": "Денс серотинус описывает позднюю смену зубов или появление последних молочных зубов, типичную для развития зубного ряда у детей.",
-    "esExplanation": "Describe el cambio tardío de los dientes o la aparición de los últimos dientes de leche, típico en el desarrollo dental de los niños.",
-    "frExplanation": "Décrit une éruption tardive des dents de lait ou l'apparition des dernières dents de lait, typique du développement de la dentition chez les enfants.",
-    "plExplanation": "Dens serotinus opisuje późną wymianę zębów mlecznych lub pojawienie się ostatnich zębów mlecznych, typowe w rozwoju uzębienia u dzieci.",
-    "trExplanation": "Dens serotinus, süt dişlerinin geç dökülmesini veya son süt dişlerinin çıkmasını tanımlar, çocukların diş gelişimine özgüdür.",
-    "arExplanation": "يصف تأخر تبديل الأسنان أو ظهور آخر الأسنان اللبنية، وهو أمر نموذجي في تطور الأسنان عند الأطفال.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1344,
-    "lat": "Substituieren",
-    "de": "ersetzen",
-    "en": "To Substitute",
-    "uk": "Замінювати",
-    "ru": "Заменять",
-    "pl": "Zastąpić",
-    "es": "Sustituir",
-    "fr": "Remplacer",
-    "tr": "Yerine koymak",
-    "ar": "يحل محل",
-    "deExplanation": "Substituieren bedeutet im medizinischen Kontext das Ersetzen oder Austauschen eines fehlenden oder verlorengegangenen Stoffes, wie z. B. Hormone, Vitamine oder andere essenzielle Substanzen im Körper, um die normale Funktion wiederherzustellen oder zu verbessern.",
-    "enExplanation": "The process of replacing one component or element with another, often used in pharmaceutical or therapeutic contexts.",
-    "ukExplanation": "Субституція - процес заміщення одного компонента або елемента іншим, часто використовується у фармацевтичних або терапевтичних контекстах.",
-    "ruExplanation": "Субституция - процесс замещения одного компонента или элемента другим, часто используется в фармацевтических или терапевтических контекстах.",
-    "esExplanation": "El proceso de reemplazar un componente o elemento por otro, a menudo utilizado en contextos farmacéuticos o terapéuticos.",
-    "frExplanation": "Le processus de remplacement d'un composant ou d'un élément par un autre, souvent utilisé dans un contexte pharmaceutique ou thérapeutique.",
-    "plExplanation": "Substytucja to proces zastępowania jednego składnika lub elementu przez inny, często stosowany w kontekstach farmaceutycznych lub terapeutycznych.",
-    "trExplanation": "Substituieren, bir bileşenin veya öğenin başka bir şeyle değiştirilme sürecini tanımlar, genellikle farmasötik veya terapötik bağlamda kullanılır.",
-    "arExplanation": "عملية استبدال مكون أو عنصر بآخر، غالبًا ما تستخدم في سياقات الصيدلة أو العلاج.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1345,
-    "lat": "Invasiv",
-    "de": "invasiv",
-    "en": "Invasive",
-    "uk": "Інвазивний",
-    "ru": "Инвазивный",
-    "pl": "Inwazyjny",
-    "es": "Invasivo",
-    "fr": "Invasif",
-    "tr": "İnvaziv",
-    "ar": "غازي",
-    "deExplanation": "Der Begriff 'invasiv' beschreibt medizinische Verfahren, die in den Körper eindringen, wie Operationen oder diagnostische Methoden, bei denen Haut oder Gewebe durchdrungen wird. Diese Verfahren können Risiken wie Infektionen oder Wundheilungsstörungen mit sich bringen, sind jedoch oft notwendig, um genaue Diagnosen zu stellen oder lebensrettende Behandlungen durchzuführen.",
-    "enExplanation": "A procedure or intervention that penetrates the body, often through surgical cuts or introduction of instruments, to perform medical diagnoses or treatments.",
-    "ukExplanation": "Інвазивний означає метод або втручання, яке проникає в тіло, часто через хірургічні розрізи або введення інструментів для проведення медичних діагнозів або лікувань.",
-    "ruExplanation": "Инвазивный означает метод или вмешательство, которое проникает в тело, часто через хирургические разрезы или введение инструментов для проведения медицинских диагнозов или лечений.",
-    "esExplanation": "Un procedimiento o intervención que penetra en el cuerpo, a menudo a través de cortes quirúrgicos o la introducción de instrumentos, para realizar diagnósticos o tratamientos médicos.",
-    "frExplanation": "Une procédure ou une intervention qui pénètre dans le corps, souvent par des incisions chirurgicales ou l'introduction d'instruments pour effectuer des diagnostics ou des traitements médicaux.",
-    "plExplanation": "Inwazyjny to zabieg lub procedura, która wnika do ciała, często poprzez nacięcia chirurgiczne lub wprowadzenie instrumentów, w celu przeprowadzenia diagnoz medycznych lub leczenia.",
-    "trExplanation": "İnvaziv, sıklıkla cerrahi kesiler veya tıbbi teşhis veya tedavileri gerçekleştirmek için aletlerin yerleştirilmesi yoluyla vücuda giren bir prosedürü veya müdahaleyi ifade eder.",
-    "arExplanation": "إجراء أو تدخل يخترق الجسم، غالبًا عبر شقوق جراحية أو إدخال أدوات، لإجراء التشخيصات أو العلاجات الطبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1346,
-    "lat": "Margo anterior (der)",
-    "de": "der vordere Rand",
-    "en": "Anterior Margin",
-    "uk": "Передній край",
-    "ru": "Передний край",
-    "pl": "Brzeg przedni",
-    "es": "Margen anterior",
-    "fr": "Bord antérieur",
-    "tr": "Ön kenar",
-    "ar": "الحافة الأمامية",
-    "deExplanation": "Der vordere Rand ist eine anatomische Beschreibung, die sich auf den vorderen Bereich eines Organs oder einer Struktur bezieht, zum Beispiel bei Knochen. Er kann klinisch relevant sein, um die genaue Lage und Beziehungen zu anderen Strukturen zu definieren.",
-    "enExplanation": "Refers to the front edge or anterior boundary of an anatomical structure, important in description and localization in anatomy and surgery.",
-    "ukExplanation": "Марго антеріор відноситься до переднього краю або передньої межі анатомічної структури, важливий у описі та локалізації в анатомії та хірургії.",
-    "ruExplanation": "Марго антериор относится к переднему краю или передней границе анатомической структуры, важный в описании и локализации в анатомии и хирургии.",
-    "esExplanation": "Se refiere al borde anterior o límite de una estructura anatómica, importante en la descripción y localización en anatomía y cirugía.",
-    "frExplanation": "Se réfère au bord avant ou à la limite antérieure d'une structure anatomique, important dans la description et la localisation en anatomie et en chirurgie.",
-    "plExplanation": "Margo Anterior odnosi się do przedniej krawędzi lub granicy struktury anatomicznej, ważne w opisie i lokalizacji w anatomii i chirurgii.",
-    "trExplanation": "Margo Anterior, bir anatomik yapıyı tanımlamada ve konumlandırmada önemli olan anatomik bir yapının ön kenarı veya ön sınırına atıfta bulunur.",
-    "arExplanation": "يشير إلى الحافة الأمامية أو الحدود لبنية تشريحية، مهم في الوصف والتحديد في التشريح والجراحة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1347,
-    "lat": "Hereditär",
-    "de": "erblich",
-    "en": "Hereditary",
-    "uk": "Спадковий",
-    "ru": "Наследственный",
-    "pl": "Dziedziczny",
-    "es": "Hereditario",
-    "fr": "Héréditaire",
-    "tr": "Kalıtsal",
-    "ar": "وراثي",
-    "deExplanation": "Der Begriff 'erblich' beschreibt Eigenschaften, Merkmale oder Erkrankungen, die genetisch von den Eltern auf die Nachkommen übertragen werden. Solche Merkmale oder Krankheitsdispositionen werden durch die Gene bestimmt, die von einer Generation zur nächsten weitergegeben werden. Erblich bedingte Erkrankungen können verschiedene klinische Relevanzen haben, von milden Symptomen bis hin zu schwerwiegenden genetischen Störungen.",
-    "enExplanation": "Describes characteristics or diseases that are genetically determined and inherited from one generation to the next.",
-    "ukExplanation": "Гередитарний описує властивості або захворювання, які є генетично обумовленими та передаються від покоління до покоління.",
-    "ruExplanation": "Гередитарный описывает свойства или заболевания, которые генетически обусловлены и передаются от поколения к поколению.",
-    "esExplanation": "Describe las características o enfermedades que son genéticas y se transmiten de una generación a otra.",
-    "frExplanation": "Décrit des caractéristiques ou des maladies qui sont héritées génétiquement et transmises d'une génération à l'autre.",
-    "plExplanation": "Heredarny opisuje cechy lub choroby, które są genetycznie uwarunkowane i przekazywane z pokolenia na pokolenie.",
-    "trExplanation": "Hereditär, genetik olarak belirlenen ve bir nesilden diğerine aktarılan özellikleri veya hastalıkları tanımlar.",
-    "arExplanation": "يصف الخصائص أو الأمراض التي هي وراثية وتنتقل من جيل إلى جيل.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1348,
-    "lat": "Fugax",
-    "de": "flüchtig",
-    "en": "Fugacious (Fleeting, Transient)",
-    "uk": "Минущий",
-    "ru": "Преходящий",
-    "pl": "Przemijający",
-    "es": "Fugaz",
-    "fr": "Fugace",
-    "tr": "Geçici",
-    "ar": "عابر",
-    "deExplanation": "Der Begriff 'fugax' wird in der Medizin verwendet, um Symptome oder Zustände zu beschreiben, die plötzlich auftreten und nur von kurzer Dauer sind. Ein Beispiel dafür ist die 'Amaurosis fugax', eine vorübergehende Blindheit, die durch eine kurzzeitige Mangeldurchblutung der Netzhaut verursacht wird.",
-    "enExplanation": "Describes a fleeting, transient state or symptom, often used in describing transient medical conditions.",
-    "ukExplanation": "Фугакс описує швидкоплинний, тимчасовий стан або симптом, часто використовується у описі тимчасових медичних станів.",
-    "ruExplanation": "Фугакс описывает скоротечный, временный состояние или симптом, часто используется в описании временных медицинских состояний.",
-    "esExplanation": "Describe un estado o síntoma fugaz y transitorio, a menudo utilizado en la descripción de condiciones médicas temporales.",
-    "frExplanation": "Décrit un état ou un symptôme éphémère et temporaire, souvent utilisé dans la description de conditions médicales temporaires.",
-    "plExplanation": "Fugax opisuje chwilowy, przemijający stan lub objaw, często używany w opisie przejściowych stanów medycznych.",
-    "trExplanation": "Fugax, geçici ve geçici bir durumu veya semptomu tanımlar, genellikle geçici tıbbi koşulların tanımlanmasında kullanılır.",
-    "arExplanation": "يصف حالة أو عرضًا زائلًا ومؤقتًا، يُستخدم غالبًا في وصف الحالات الطبية المؤقتة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Bayern",
-      "Berlin",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1349,
-    "lat": "Deszendierend",
-    "de": "absteigend",
-    "en": "Descending",
-    "uk": "Спадний",
-    "ru": "Нисходящий",
-    "pl": "Zstępujący",
-    "es": "Descendente",
-    "fr": "Descendant",
-    "tr": "İnişli",
-    "ar": "نازل",
-    "deExplanation": "Beschreibt eine Richtung oder Bewegung, die von oben nach unten verläuft. Der Begriff wird häufig in der Anatomie und Medizin verwendet, um den Verlauf von Strukturen wie Nerven, Blutgefäßen oder Lymphbahnen zu beschreiben, die sich in einem abwärtigen Pfad bewegen. Klinisch relevant bei der Analyse von Pathologien, die eine Abwärtsbewegung oder -verlagerung von Organen oder Strukturen beinhalten.",
-    "enExplanation": "Refers to a movement or orientation in a downward direction, relevant in anatomy and pathology.",
-    "ukExplanation": "Десцендентний означає рух або орієнтацію в напрямку вниз, актуальний у анатомії та патології.",
-    "ruExplanation": "Десцендентный означает движение или ориентацию вниз, актуальный в анатомии и патологии.",
-    "esExplanation": "Se refiere a un movimiento o alineación en una dirección descendente, relevante en anatomía y patología.",
-    "frExplanation": "Fait référence à un mouvement ou à une orientation dans une direction descendante, pertinent en anatomie et en pathologie.",
-    "plExplanation": "Deszendierend odnosi się do ruchu lub orientacji w kierunku zstępującym, istotne w anatomii i patologii.",
-    "trExplanation": "Deszendierend, anatomide ve patolojide önemli olan aşağı yönlü bir hareketi veya yönelimi ifade eder.",
-    "arExplanation": "يشير إلى حركة أو توجه في اتجاه هابط، ذو أهمية في التشريح وعلم الأمراض.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1350,
-    "lat": "Obliqua",
-    "de": "schräg",
-    "en": "Oblique",
-    "uk": "Косий",
-    "ru": "Косой",
-    "pl": "Skośny",
-    "es": "Oblicuo",
-    "fr": "Oblique",
-    "tr": "Eğik",
-    "ar": "مائل",
-    "deExplanation": "Das Adjektiv 'schräg' bezieht sich auf anatomische Strukturen oder Bewegungsebenen, die in einem Winkel verlaufen. In der Anatomie wird es oft für Muskeln verwendet, die diagonal verlaufen, wie die schrägen Bauchmuskeln, die der Stabilisierung und Bewegung des Rumpfes dienen.",
-    "enExplanation": "Describes an oblique or inclined orientation, often in reference to muscle courses or anatomical structures.",
-    "ukExplanation": "Обліква описує косий або нахилений розташування, часто стосується м'язових шляхів або анатомічних структур.",
-    "ruExplanation": "Обликва описывает косое или наклонное расположение, часто касается мышечных путей или анатомических структур.",
-    "esExplanation": "Describe una orientación oblicua o inclinada, a menudo en relación con el trayecto de los músculos o estructuras anatómicas.",
-    "frExplanation": "Décrit une orientation inclinée ou oblique, souvent en ce qui concerne les trajets musculaires ou les structures anatomiques.",
-    "plExplanation": "Obliqua opisuje ukośną lub pochyłą orientację, często w odniesieniu do przebiegu mięśni lub struktur anatomicznych.",
-    "trExplanation": "Obliqua, souvent utilisé pour décrire une orientation inclinée ou oblique, en particulier en ce qui concerne les trajets musculaires ou les structures anatomiques.",
-    "arExplanation": "يصف توجهًا مائلًا أو منحرفًا، غالبًا فيما يتعلق بمسار العضلات أو الهياكل التشريحية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg"
-    ]
-  },
-  {
-    "id": 1351,
-    "lat": "Inflammatio",
-    "de": "die Entzündung",
-    "en": "Inflammation",
-    "uk": "Запалення",
-    "ru": "Воспаление",
-    "pl": "Zapalenie",
-    "es": "Inflamación",
-    "fr": "Inflammation",
-    "tr": "İltihap",
-    "ar": "التهاب",
-    "deExplanation": "Eine Entzündung ist die Reaktion des Körpers auf schädliche Reize wie Krankheitserreger, beschädigte Zellen oder irritierende Substanzen. Sie ist ein Teil des natürlichen Abwehrmechanismus des Körpers und kann Symptome wie Rötung, Schwellung, Hitze, Schmerz und Funktionsverlust umfassen. Entzündungen spielen eine zentrale Rolle bei der Heilung, können jedoch auch zu chronischen Erkrankungen führen, wenn sie unkontrolliert bleiben.",
-    "enExplanation": "A medical term for inflammation, refers to the bodily process that responds to damage or irritation and typically involves swelling, redness, and pain.",
-    "ukExplanation": "Інфламмаціо - медичний термін для запалення, означає тілесний процес, який реагує на пошкодження або подразнення та зазвичай включає набряк, почервоніння та біль.",
-    "ruExplanation": "Инфламмацио - медицинский термин для воспаления, означает телесный процесс, реагирующий на повреждение или раздражение и обычно включающий отек, покраснение и боль.",
-    "esExplanation": "Término médico para la inflamación, se refiere al proceso corporal que responde a daños o irritaciones e incluye típicamente hinchazón, enrojecimiento y dolor.",
-    "frExplanation": "Un terme médical pour l'inflammation, se réfère au processus corporel en réponse à des dommages ou une irritation, impliquant généralement un gonflement, une rougeur et une douleur.",
-    "plExplanation": "Inflammatio to medyczny termin na stan zapalny, odnoszący się do procesu organizmu reagującego na uszkodzenie lub drażnienie i typowo obejmujący obrzęk, zaczerwienienie i ból.",
-    "trExplanation": "Inflammatio, irritation veya zarara yanıt olarak vücuttaki süreci ifade eder ve genellikle şişme, kızarıklık ve ağrı içerir.",
-    "arExplanation": "مصطلح طبي للالتهاب، يشير إلى العملية الجسدية التي تستجيب للأضرار أو التهيج وعادة ما تشمل التورم والاحمرار والألم.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1352,
-    "lat": "Dysfunktion (die)",
-    "de": "die Funktionsstörung",
-    "en": "Dysfunction",
-    "uk": "Функціональний розлад",
-    "ru": "Функциональное расстройство",
-    "pl": "Zaburzenie funkcji",
-    "es": "Disfunción",
-    "fr": "Dysfonction",
-    "tr": "Fonksiyon bozukluğu",
-    "ar": "اضطراب وظيفي",
-    "deExplanation": "Eine Funktionsstörung beschreibt eine Beeinträchtigung der normalen Funktion eines Organs oder Systems im menschlichen Körper. Dies kann unterschiedliche Ursachen haben und betrifft die korrekte Ausführung physiologischer Prozesse, was zu gesundheitlichen Problemen führt.",
-    "enExplanation": "Refers to impaired function of an organ, system, or structure leading to impairments or diseases.",
-    "ukExplanation": "Дисфункція означає порушену функцію органу, системи або структури, що призводить до порушень або захворювань.",
-    "ruExplanation": "Дисфункция означает нарушенную функцию органа, системы или структуры, приводящую к нарушениям или заболеваниям.",
-    "esExplanation": "Indica una función alterada de un órgano, sistema o estructura, que conduce a discapacidades o enfermedades.",
-    "frExplanation": "Désigne un dysfonctionnement d'un organe, d'un système ou d'une structure qui entraîne des problèmes ou des maladies.",
-    "plExplanation": "Dysfunkcja oznacza zaburzoną funkcję organu, systemu lub struktury, prowadzącą do upośledzeń lub chorób.",
-    "trExplanation": "Dysfunktion, bir organın, sistemin veya yapının işlev bozukluğunu ifade eder ve sorunlara veya hastalıklara neden olur.",
-    "arExplanation": "يشير إلى وظيفة مضطربة لعضو أو نظام أو بنية، مما يؤدي إلى عجز أو أمراض.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1353,
-    "lat": "Konträr",
-    "de": "gegensätzlich",
-    "en": "Contrary",
-    "uk": "Протилежний",
-    "ru": "Противоположный",
-    "pl": "Przeciwny",
-    "es": "Contrario",
-    "fr": "Contradictoire",
-    "tr": "Zıt",
-    "ar": "معاكس",
-    "deExplanation": "Der Begriff 'gegensätzlich' wird verwendet, um Elemente oder Merkmale zu beschreiben, die sich in ihrer Natur oder Funktion widersprechen oder entgegenstehen. In der Medizin kann dies Kontraste oder Unterschiede zwischen Symptomen, Diagnosen oder Behandlungsmethoden umfassen.",
-    "enExplanation": "Describes something that is in direct opposition or contradiction to another thing or opinion.",
-    "ukExplanation": "Контрарний описує щось, що знаходиться у прямій протилежності або суперечності до іншої речі або думки.",
-    "ruExplanation": "Контрарный описывает что-то, находящееся в прямом противоположности или противоречии другой вещи или мнению.",
-    "esExplanation": "Describe algo que está en oposición directa o contradicción con otra cosa u opinión.",
-    "frExplanation": "Décrit quelque chose qui est en contradiction directe ou opposée à une autre chose ou opinion.",
-    "plExplanation": "Konträrny opisuje coś, co jest w bezpośredniej opozycji lub sprzeczności z inną rzeczą lub opinią.",
-    "trExplanation": "Konträr, bir şeyin veya düşüncenin doğrudan bir başka şeye veya görüşe karşıt olduğunu ifade eder.",
-    "arExplanation": "يصف شيئًا في تعارض مباشر أو تناقض مع شيء آخر أو رأي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1354,
-    "lat": "Symptom (das)",
-    "de": "das Symptom",
-    "en": "Symptom",
-    "uk": "Симптом",
-    "ru": "Симптом",
-    "pl": "Objaw",
-    "es": "Síntoma",
-    "fr": "Symptôme",
-    "tr": "Belirti",
-    "ar": "العَرَض",
-    "deExplanation": "Ein Symptom ist ein Anzeichen oder Merkmal, das auf eine bestimmte Erkrankung oder ein gesundheitliches Problem hinweist. Symptome können objektiv messbar sein, wie Fieber, oder subjektiv wahrgenommen werden, wie Schmerzen oder Müdigkeit. Sie sind wichtig für die Diagnose und Behandlungsplanung in der Medizin.",
-    "enExplanation": "An indication of a disease or health disorder that is perceived or noticed by a person, such as pain, fever, or cough.",
-    "ukExplanation": "Симптом - це ознака хвороби або порушення здоров'я, яку виявляє або визначає людина, як біль, лихоманка або кашель.",
-    "ruExplanation": "Симптом - это признак болезни или нарушения здоровья, который обнаруживает или определяет человек, как боль, лихорадка или кашель.",
-    "esExplanation": "Una señal de una enfermedad o trastorno de salud que es percibido o identificado por una persona, como dolor, fiebre o tos.",
-    "frExplanation": "Un signe d'une maladie ou d'un trouble de la santé perçu ou observé par une personne, tel que la douleur, la fièvre ou la toux.",
-    "plExplanation": "Symptom to wskazówka na chorobę lub zaburzenie zdrowia, które jest zauważane lub stwierdzane przez osobę, takie jak ból, gorączka lub kaszel.",
-    "trExplanation": "Symptom, bir kişi tarafından fark edilen veya gözlemlenen bir hastalık veya sağlık sorununun bir işaretini ifade eder, örneğin ağrı, ateş veya öksürük.",
-    "arExplanation": "علامة على مرض أو اضطراب صحي يتم إدراكه أو تحديده من قبل شخص، مثل الألم أو الحمى أو السعال.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1355,
-    "lat": "Dissemination (die)",
-    "de": "die Ausbreitung",
-    "en": "Dissemination",
-    "uk": "Поширення",
-    "ru": "Распространение",
-    "pl": "Rozprzestrzenianie się",
-    "es": "Diseminación",
-    "fr": "Propagation",
-    "tr": "Yayılma",
-    "ar": "الانتشار",
-    "deExplanation": "Dissemination bezeichnet die Verbreitung oder Streuung von Krankheitserregern, Zellen oder Molekülen im Körper. Dies kann beispielsweise die Ausbreitung eines Tumors oder einer Infektion von einem ursprünglichen Ort in andere Körperteile betreffen. Klinisch relevant ist die Dissemination in der Diagnose und Behandlung von Krankheiten wie Krebs und Infektionen, da sie das Fortschreiten der Krankheit und die Therapiemöglichkeiten beeinflussen kann.",
-    "enExplanation": "The spreading or distribution of something, such as pathogens or tumor cells in the body, or information in a community.",
-    "ukExplanation": "Дисемінація означає поширення або розповсюдження чогось, наприклад, збудників хвороби або ракових клітин в організмі або інформації в громаді.",
-    "ruExplanation": "Диссеминация означает распространение или распространение чего-то, например, возбудителей болезни или раковых клеток в организме или информации в обществе.",
-    "esExplanation": "La propagación o difusión de algo, como patógenos o células tumorales en el cuerpo o de información en una comunidad.",
-    "frExplanation": "La propagation ou la diffusion de quelque chose, par exemple de germes pathogènes ou de cellules cancéreuses dans le corps ou d'informations dans une communauté.",
-    "plExplanation": "Diseminacja to rozprzestrzenianie lub rozpowszechnianie czegoś, np. patogenów chorobotwórczych lub komórek nowotworowych w ciele lub informacji w społeczności.",
-    "trExplanation": "Dissemination, bir şeyin yayılması veya yayılması, örneğin patojen mikropların veya kanser hücrelerinin vücutta veya bilgilerin bir toplulukta yayılmasıdır.",
-    "arExplanation": "انتشار أو توزيع شيء ما، مثل مسببات الأمراض أو الخلايا السرطانية في الجسم أو المعلومات في مجتمع.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1356,
-    "lat": "Agitiertheit (die)",
-    "de": "die Unruhe",
-    "en": "Agitation",
-    "uk": "Неспокій",
-    "ru": "Возбуждение",
-    "pl": "Niepokój",
-    "es": "Agitación",
-    "fr": "Agitation",
-    "tr": "Huzursuzluk",
-    "ar": "القلق",
-    "deExplanation": "Ein Zustand intensiver innerer Unruhe und gesteigerter psychomotorischer Aktivität, der in der Psychiatrie und Medizin häufig bei Patienten mit psychiatrischen Störungen oder neurologischen Erkrankungen beobachtet wird. Dies kann sich in Form von Zittern, unkontrollierten Bewegungen oder vermehrtem Rededrang äußern und benötigt oft eine klinische Bewertung zur Feststellung der Ursache und zur Wahl der geeigneten Behandlungsmethoden.",
-    "enExplanation": "A state of restlessness or excitement caused by internal or external factors, characterized by increased activity or nervousness.",
-    "ukExplanation": "Агітація - стан збудження або неспокою, викликаний внутрішніми або зовнішніми факторами, що проявляється підвищеною активністю або нервозністю.",
-    "ruExplanation": "Агитация - состояние возбуждения или беспокойства, вызванное внутренними или внешними факторами, проявляющееся повышенной активностью или нервозностью.",
-    "esExplanation": "Un estado de inquietud o excitación causado por factores internos o externos, manifestado por una actividad o nerviosismo aumentado.",
-    "frExplanation": "Un état d'agitation ou d'excitation causé par des facteurs internes ou externes et se manifestant par une activité accrue ou de la nervosité.",
-    "plExplanation": "Agitacja to stan niepokoju lub pobudzenia, spowodowany przez wewnętrzne lub zewnętrzne czynniki, objawiający się zwiększoną aktywnością lub nerwowością.",
-    "trExplanation": "Agitiertheit (Ajitasyon), iç veya dış faktörler tarafından tetiklenen ve artmış aktivite veya sinirlilikle kendini gösteren bir ajitasyon durumunu ifade eder.",
-    "arExplanation": "حالة من القلق أو الإثارة الناجمة عن عوامل داخلية أو خارجية، تتجلى في زيادة النشاط أو العصبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1357,
-    "lat": "Prävalenz (die)",
-    "de": "die Häufigkeit",
-    "en": "Prevalence",
-    "uk": "Поширеність",
-    "ru": "Распространенность",
-    "pl": "Częstość występowania",
-    "es": "Prevalencia",
-    "fr": "Prévalence",
-    "tr": "Yaygınlık",
-    "ar": "الانتشار",
-    "deExplanation": "Ein statistisches Maß, das die Anzahl der Fälle einer bestimmten Erkrankung in einer definierten Population zu einem bestimmten Zeitpunkt oder über einen definierten Zeitraum beschreibt. Sie gibt an, wie weit verbreitet eine Krankheit in der Bevölkerung ist und wird oft in Prozent angegeben.",
-    "enExplanation": "The number of cases of a particular disease or condition in a specific population at a specific time or over a specific period.",
-    "ukExplanation": "Преваленція - кількість випадків певної хвороби або стану в певній групі населення на певний момент часу або протягом певного періоду.",
-    "ruExplanation": "Преваленция - количество случаев определенного заболевания или состояния в определенной группе населения на определенный момент времени или за определенный период.",
-    "esExplanation": "El número de casos de una enfermedad o condición específica en un grupo de población en un momento o período de tiempo determinado.",
-    "frExplanation": "Le nombre de cas d'une maladie ou d'une condition particulière dans un groupe de population donné à un moment donné ou sur une période donnée.",
-    "plExplanation": "Prewalencja to liczba przypadków określonej choroby lub stanu w określonej grupie populacyjnej w określonym czasie lub przez określony okres.",
-    "trExplanation": "Prävalenz, belirli bir hastalık veya durumun belirli bir nüfus grubunda belirli bir zamanda veya belirli bir dönemdeki vaka sayısını ifade eder.",
-    "arExplanation": "عدد حالات مرض أو حالة معينة في مجموعة سكانية في لحظة أو فترة زمنية معينة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1358,
-    "lat": "Obstruktion (die)",
-    "de": "die Verstopfung",
-    "en": "Obstruction",
-    "uk": "Закупорка",
-    "ru": "Закупорка",
-    "pl": "Zaparcie",
-    "es": "Obstrucción",
-    "fr": "Obstruction",
-    "tr": "Tıkanıklık",
-    "ar": "الانسداد",
-    "deExplanation": "Eine Verstopfung bezeichnet die Blockade oder den Verschluss eines Kanals oder einer Passage im Körper, was zu einer Behinderung des normalen Flusses führen kann. Klinisch relevant, da sie in verschiedenen Körpersystemen wie den Atemwegen, dem Verdauungstrakt oder den Blutgefäßen auftreten kann, was zu ernsten gesundheitlichen Problemen führen kann, je nach betroffenem Bereich.",
-    "enExplanation": "A blockage or narrowing in an organ or passage that impedes the normal flow of fluids or substances, such as a clogged artery or obstructed airway.",
-    "ukExplanation": "Обструкція - це блокування або звуження в органі або проході, яке перешкоджає нормальному потоку рідин або речовин, як-то закупорена артерія або закупорений дихальний шлях.",
-    "ruExplanation": "Обструкция - это блокировка или сужение в органе или проходе, препятствующее нормальному потоку жидкостей или веществ, например, закупоренная артерия или закупоренный дыхательный путь.",
-    "esExplanation": "Una obstrucción o estrechamiento en un órgano o pasaje que impide el flujo normal de líquidos o sustancias, como una arteria bloqueada o una vía respiratoria obstruida.",
-    "frExplanation": "Un blocage ou un rétrécissement dans un organe ou un passage qui entrave le flux normal de liquides ou de substances, tel qu'une artère obstruée ou une voie respiratoire obstruée.",
-    "plExplanation": "Obstrukcja to blokada lub zwężenie w organie lub przewodzie, które utrudnia normalny przepływ płynów lub substancji, jak np. zablokowana tętnica czy droga oddechowa.",
-    "trExplanation": "Obstruktion, bir organda veya geçitte normal sıvı veya maddenin akışını engelleyen bir tıkanma veya daralma durumunu ifade eder, örneğin tıkanmış bir arter veya tıkanmış bir solunum yolu.",
-    "arExplanation": "انسداد أو تضيق في عضو أو ممر يعيق التدفق الطبيعي للسوائل أو المواد، مثل شريان مسدود أو مجرى تنفسي مسدود.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1359,
-    "lat": "Liquid",
-    "de": "die Flüssigkeit",
-    "en": "Liquid",
-    "uk": "Рідина",
-    "ru": "Жидкость",
-    "pl": "Płyn",
-    "es": "Líquido",
-    "fr": "Liquide",
-    "tr": "Sıvı",
-    "ar": "السائل",
-    "deExplanation": "Flüssigkeiten spielen in vielen medizinischen Zusammenhängen eine Rolle, beispielsweise als Körperflüssigkeiten wie Blut oder Lymphe. Sie können auch als Medikamente oder Infusionen verabreicht werden. Klinisch sind Flüssigkeitsbilanzen wichtig für das Verständnis und die Behandlung von Erkrankungen, die den Flüssigkeitshaushalt betreffen.",
-    "enExplanation": "A liquid, a state of matter that is neither solid nor gaseous. In medicine, this often refers to body fluids such as blood or urine.",
-    "ukExplanation": "Рідина - стан речовини, яка не є твердою або газоподібною. У медицині часто відноситься до тілесних рідин, як кров або сеча.",
-    "ruExplanation": "Жидкость - состояние вещества, которое не является твердым или газообразным. В медицине часто относится к жидкостям тела, таким как кровь или моча.",
-    "esExplanation": "Un líquido, un estado de la materia que no es sólido ni gaseoso. En medicina, esto a menudo se refiere a fluidos corporales como sangre o orina.",
-    "frExplanation": "Un liquide, un état de la matière qui n'est ni solide ni gazeux. En médecine, cela fait souvent référence à des liquides corporels tels que le sang ou l'urine.",
-    "plExplanation": "Liquid to płyn, stan materii, który nie jest stały ani gazowy. W medycynie często odnosi się to do płynów ustrojowych, takich jak krew lub mocz.",
-    "trExplanation": "Liquid, katı veya gaz halinde olmayan bir madde durumu. Tıp alanında sıklıkla kan veya idrar gibi vücut sıvılarına atıfta bulunur.",
-    "arExplanation": "سائل، حالة من المادة ليست صلبة أو غازية. في الطب، غالبًا ما يشير هذا إلى سوائل الجسم مثل الدم أو البول.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Rheinland-Pfalz",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1360,
-    "lat": "Therapie (die)",
-    "de": "die Behandlung",
-    "en": "Therapy",
-    "uk": "Лікування",
-    "ru": "Лечение",
-    "pl": "Leczenie",
-    "es": "Terapia",
-    "fr": "Thérapie",
-    "tr": "Tedavi",
-    "ar": "العلاج",
-    "deExplanation": "Ein geplanter Prozess oder eine Reihe von Maßnahmen, die darauf abzielen, eine Krankheit zu heilen, Symptome zu lindern oder den Gesundheitszustand eines Patienten zu verbessern. Beispiele beinhalten medikamentöse Behandlungen, chirurgische Eingriffe oder physikalische Therapien.",
-    "enExplanation": "The treatment or measures to alleviate or cure diseases or health conditions, including medication, surgery, or alternative methods.",
-    "ukExplanation": "Терапія - лікування або заходи для полегшення або вилікування захворювань або станів здоров'я, включаючи медикаментозні, хірургічні або альтернативні методи.",
-    "ruExplanation": "Терапия - лечение или меры для облегчения или излечения заболеваний или состояний здоровья, включая медикаментозные, хирургические или альтернативные методы.",
-    "esExplanation": "El tratamiento o medidas para aliviar o curar enfermedades o condiciones de salud, incluyendo métodos farmacológicos, quirúrgicos o alternativos.",
-    "frExplanation": "Le traitement ou les mesures visant à soulager ou à guérir les maladies ou les états de santé, y compris les méthodes médicamenteuses, chirurgicales ou alternatives.",
-    "plExplanation": "Terapia to leczenie lub środki mające na celu złagodzenie lub wyleczenie chorób lub stanów zdrowotnych, obejmujące metody farmakologiczne, chirurgiczne lub alternatywne.",
-    "trExplanation": "Terapi, hastalıkları veya sağlık koşullarını hafifletmek veya iyileştirmek için kullanılan tedavi veya önlemlerdir; bunlar ilaç tedavisi, cerrahi veya alternatif yöntemleri içerebilir.",
-    "arExplanation": "العلاج أو الإجراءات لتخفيف أو علاج الأمراض أو الحالات الصحية، بما في ذلك الأساليب الدوائية أو الجراحية أو البديلة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1361,
-    "lat": "Prognose (die)",
-    "de": "die Prognose",
-    "en": "Prognosis",
-    "uk": "Прогноз",
-    "ru": "Прогноз",
-    "pl": "Prognoza",
-    "es": "Pronóstico",
-    "fr": "Pronostic",
-    "tr": "Prognoz",
-    "ar": "التكهن",
-    "deExplanation": "Die Prognose in der Medizin bezieht sich auf die Vorhersage des Verlaufs und des Ergebnisses einer Krankheit. Sie bewertet, wie sich eine Erkrankung wahrscheinlich entwickeln wird und wie die Chancen für eine vollständige Genesung, Stabilität oder Verschlechterung stehen. Faktoren, die die Prognose beeinflussen können, sind der allgemeine Gesundheitszustand des Patienten, das Stadium der Erkrankung und die Wirksamkeit der Behandlung.",
-    "enExplanation": "The prediction of the likely course or outcome of a disease or health condition based on medical knowledge and experience.",
-    "ukExplanation": "Прогноз - передбачення ймовірного перебігу або результату захворювання або стану здоров'я на основі медичних знань та досвіду.",
-    "ruExplanation": "Прогноз - предсказание вероятного течения или исхода заболевания или состояния здоровья на основе медицинских знаний и опыта.",
-    "esExplanation": "La predicción del curso o resultado probable de una enfermedad o condición de salud basada en conocimientos y experiencias médicas.",
-    "frExplanation": "La prédiction de l'évolution ou de l'issue probable d'une maladie ou d'un état de santé basée sur les connaissances médicales et l'expérience.",
-    "plExplanation": "Prognoza to przewidywanie prawdopodobnego przebiegu lub wyniku choroby lub stanu zdrowia oparte na wiedzy medycznej i doświadczeniu.",
-    "trExplanation": "Prognoz, bir hastalığın veya sağlık durumunun muhtemel seyrini veya sonucunu tıbbi bilgi ve deneyime dayalı olarak tahmin etmeyi ifade eder.",
-    "arExplanation": "التنبؤ بالمسار أو النتيجة المحتملة لمرض أو حالة صحية استنادًا إلى المعرفة والخبرات الطبية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Niedersachsen",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1362,
-    "lat": "Diagnose (die)",
-    "de": "die Diagnose",
-    "en": "Diagnosis",
-    "uk": "Діагноз",
-    "ru": "Диагноз",
-    "pl": "Diagnoza",
-    "es": "Diagnóstico",
-    "fr": "Diagnostic",
-    "tr": "Tanı",
-    "ar": "التشخيص",
-    "deExplanation": "Ein Prozess, bei dem ein Arzt oder eine medizinische Fachkraft eine Krankheit oder einen Gesundheitszustand identifiziert und benennt, basierend auf Symptomen, Untersuchungen und eventuell durchgeführten Tests. Die Diagnose ist entscheidend für die Planung und Durchführung einer effektiven Behandlung.",
-    "enExplanation": "The determination or identification of a disease or health condition by analyzing symptoms, clinical tests, and other diagnostic methods.",
-    "ukExplanation": "Діагноз - визначення або ідентифікація захворювання або стану здоров'я шляхом аналізу симптомів, клінічних тестів та інших діагностичних методів.",
-    "ruExplanation": "Диагноз - определение или идентификация заболевания или состояния здоровья путем анализа симптомов, клинических тестов и других диагностических методов.",
-    "esExplanation": "La determinación o identificación de una enfermedad o condición de salud mediante el análisis de síntomas, pruebas clínicas y otros métodos diagnósticos.",
-    "frExplanation": "La détermination ou l'identification d'une maladie ou d'un état de santé par l'analyse des symptômes, des tests cliniques et d'autres méthodes diagnostiques.",
-    "plExplanation": "Diagnoza to określenie lub identyfikacja choroby lub stanu zdrowia poprzez analizę objawów, testów klinicznych i innych metod diagnostycznych.",
-    "trExplanation": "Tanı, semptomların, klinik testlerin ve diğer tanı yöntemlerinin analizi yoluyla bir hastalığın veya sağlık durumunun belirlenmesi veya tanımlanması anlamına gelir.",
-    "arExplanation": "تحديد أو تشخيص مرض أو حالة صحية من خلال تحليل الأعراض والاختبارات السريرية وغيرها من الأساليب التشخيصية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Baden-Württemberg",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1363,
-    "lat": "Akut x Chronisch",
-    "de": "akut x chronisch",
-    "en": "Acute x Chronic",
-    "uk": "Гострий x Хронічний",
-    "ru": "Острый x Хронический",
-    "pl": "Ostry x Przewlekły",
-    "es": "Agudo x Crónico",
-    "fr": "Aigu x Chronique",
-    "tr": "Akut x Kronik",
-    "ar": "حاد × مزمن",
-    "deExplanation": "Akut beschreibt einen plötzlichen Beginn und eine kurze Dauer einer Erkrankung oder eines Symptoms, während chronisch eine langsame Entwicklung und eine lange Dauer bezeichnet. Akute Erkrankungen treten schnell auf und erfordern oft sofortige Behandlung, während chronische Krankheiten sich über längere Zeiträume entwickeln und oft ständige Behandlung oder Management erfordern.",
-    "enExplanation": "Acute refers to sudden, severe symptoms or health problems, while Chronic describes long-lasting, recurring, or persistent conditions.",
-    "ukExplanation": "Акутний означає раптові, сильні симптоми або проблеми зі здоров'ям, тоді як Хронічний описує довготривалі, повторювані або постійні стани.",
-    "ruExplanation": "Острая означает внезапные, сильные симптомы или проблемы со здоровьем, в то время как Хроническая описывает долгосрочные, повторяющиеся или постоянные состояния.",
-    "esExplanation": "Akut se refiere a síntomas o problemas de salud repentinos y severos, mientras que Chronisch describe condiciones de larga duración, recurrentes o persistentes.",
-    "frExplanation": "Aigu fait référence à des symptômes ou à des problèmes de santé soudains et graves, tandis que chronique décrit des états de santé de longue durée, récurrents ou persistants.",
-    "plExplanation": "Ostry odnosi się do nagłych, silnych objawów lub problemów zdrowotnych, podczas gdy przewlekły opisuje długotrwałe, nawracające lub trwałe stany.",
-    "trExplanation": "Akut, aniden ortaya çıkan şiddetli semptomlar veya sağlık sorunlarına atıfta bulunurken, kronik uzun süreli, tekrarlayan veya kalıcı sağlık durumlarını tanımlar.",
-    "arExplanation": "الحاد يشير إلى الأعراض أو المشاكل الصحية المفاجئة والشديدة، بينما المزمن يصف الحالات طويلة الأمد أو المتكررة أو المستمرة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1364,
-    "lat": "Paroxysmal",
-    "de": "plötzlich auftretend",
-    "en": "Paroxysmal",
-    "uk": "Пароксизмальний",
-    "ru": "Пароксизмальный",
-    "pl": "Napadowy",
-    "es": "Paroxístico",
-    "fr": "Paroxystique",
-    "tr": "Paroksismal",
-    "ar": "انتيابي",
-    "deExplanation": "Der Begriff paroxysmal beschreibt Vorgänge oder Symptome, die plötzlich und oft in Anfällen oder Attacken auftreten, wie etwa bei bestimmten Herzrhythmusstörungen oder Migräneanfällen. Diese Ereignisse treten unregelmäßig und oft mit starker Intensität auf, was sie von chronischen oder kontinuierlichen Abläufen unterscheidet.",
-    "enExplanation": "Sudden, recurrent outbreaks of symptoms or seizures interrupted by normal periods, such as in epilepsy or cardiac arrhythmias.",
-    "ukExplanation": "Пароксизмальний - раптові, повторювані спалахи симптомів або приступів, що перериваються нормальними періодами, як при епілепсії або порушеннях серцевого ритму.",
-    "ruExplanation": "Пароксизмальный - внезапные, повторяющиеся вспышки симптомов или приступов, прерываемые нормальными периодами, как при эпилепсии или нарушениях сердечного ритма.",
-    "esExplanation": "Brotes repentinos y recurrentes de síntomas o ataques interrumpidos por períodos normales, como en la epilepsia o trastornos del ritmo cardíaco.",
-    "frExplanation": "Des poussées soudaines et récurrentes de symptômes ou de crises interrompues par des périodes normales, comme dans l'épilepsie ou les troubles du rythme cardiaque.",
-    "plExplanation": "Paroksysmalne to nagłe, nawracające wybuchy objawów lub napadów, przerywane przez normalne okresy, jak w przypadku padaczki lub zaburzeń rytmu serca.",
-    "trExplanation": "Paroksysmal, epilepsi veya kalp ritmi bozuklukları gibi normal dönemlerle kesilen semptomların veya nöbetlerin ani ve tekrarlayan saldırılarını ifade eder.",
-    "arExplanation": "نوبات مفاجئة ومتكررة من الأعراض أو الهجمات تتخللها فترات طبيعية، كما في حالات الصرع أو اضطرابات نظم القلب.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1365,
-    "lat": "Rezidiv (das)",
-    "de": "das Wiederauftreten",
-    "en": "Relapse",
-    "uk": "Рецидив",
-    "ru": "Рецидив",
-    "pl": "Wznowa",
-    "es": "Recidiva",
-    "fr": "Récidive",
-    "tr": "Nüks",
-    "ar": "الانتكاس",
-    "deExplanation": "Das erneute Auftreten einer Krankheit oder von Symptomen nach einer Periode der Besserung oder Heilung. Klinisch relevant, da es die Notwendigkeit für eine langfristige Überwachung und möglicherweise eine Veränderung der Behandlung anzeigt.",
-    "enExplanation": "The recurrence of disease symptoms or conditions after a previous improvement or recovery, often in reference to cancer or chronic diseases.",
-    "ukExplanation": "Рецидив - повторне з'явлення симптомів захворювання або станів після попереднього поліпшення або одужання, часто у контексті раку або хронічних захворювань.",
-    "ruExplanation": "Рецидив - повторное появление симптомов заболевания или состояний после предыдущего улучшения или выздоровления, часто в контексте рака или хронических заболеваний.",
-    "esExplanation": "La reaparición de síntomas de una enfermedad o condición después de una mejora o recuperación previa, a menudo en relación con el cáncer o enfermedades crónicas.",
-    "frExplanation": "La réapparition de symptômes ou d'états de maladie après une amélioration ou une guérison précédente, souvent en référence au cancer ou aux maladies chroniques.",
-    "plExplanation": "Nawrót to ponowne pojawienie się objawów choroby lub stanu po wcześniejszej poprawie lub wyzdrowieniu, często w odniesieniu do raka lub przewlekłych chorób.",
-    "trExplanation": "Rezidiv, bir önceki iyileşme veya tedaviden sonra hastalık semptomlarının veya durumlarının yeniden ortaya çıkmasını ifade eder, genellikle kanser veya kronik hastalıklarla ilişkilendirilir.",
-    "arExplanation": "عودة أعراض مرض أو حالة بعد تحسن أو تعافي سابق، غالبًا فيما يتعلق بالسرطان أو الأمراض المزمنة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1366,
-    "lat": "Exazerbation (die)",
-    "de": "die Verschlechterung",
-    "en": "Exacerbation",
-    "uk": "Екзацербація",
-    "ru": "Обострение",
-    "pl": "Zaostrzenie",
-    "es": "Exacerbación",
-    "fr": "Exacerbation",
-    "tr": "Alevlenme",
-    "ar": "التفاقم",
-    "deExplanation": "Eine Exazerbation beschreibt die akute Verschlimmerung der Symptome einer chronischen Erkrankung, wie beispielsweise bei Asthma oder chronisch obstruktiver Lungenerkrankung (COPD). Sie ist klinisch relevant, da sie zu vermehrten Krankheitssymptomen und oft zu einem erhöhten Behandlungsbedarf führt.",
-    "enExplanation": "The aggravation or intensification of symptoms of an existing disease or health condition, often characterized by a sudden worsening or increase in the severity of symptoms.",
-    "ukExplanation": "Екзацербація - загострення або посилення симптомів існуючої хвороби або стану здоров'я, часто характеризується раптовим погіршенням або зростанням тяжкості симптомів.",
-    "ruExplanation": "Экзацербация - обострение или усиление симптомов существующего заболевания или состояния здоровья, часто характеризуется внезапным ухудшением или увеличением тяжести симптомов.",
-    "esExplanation": "El empeoramiento o intensificación de los síntomas de una enfermedad o condición de salud existente, a menudo caracterizado por un deterioro súbito o un aumento en la gravedad de los síntomas.",
-    "frExplanation": "L'exacerbation ou l'intensification des symptômes d'une maladie ou d'un état de santé existant, souvent caractérisée par une détérioration soudaine ou une augmentation de la gravité des symptômes.",
-    "plExplanation": "Zaostrzenie to pogorszenie lub nasilenie objawów istniejącej choroby lub stanu zdrowia, często charakteryzujące się nagłym pogorszeniem lub wzrostem ciężkości objawów.",
-    "trExplanation": "Exazerbasyon, mevcut bir hastalığın veya sağlık durumunun belirtilerinin şiddetlenmesi veya yoğunlaşması, genellikle ani bir kötüleşme veya belirtilerin şiddetinin artışıyla karakterize edilir.",
-    "arExplanation": "تفاقم أو تشديد أعراض مرض أو حالة صحية موجودة، غالبًا ما يتميز بتدهور مفاجئ أو زيادة في شدة الأعراض.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Bayern",
-      "Rheinland-Pfalz"
-    ]
-  },
-  {
-    "id": 1367,
-    "lat": "Occultus",
-    "de": "verborgen",
-    "en": "Occult",
-    "uk": "Окультний",
-    "ru": "Оккультный",
-    "pl": "Ukryty",
-    "es": "Oculto",
-    "fr": "Occulte",
-    "tr": "Okült",
-    "ar": "خفي",
-    "deExplanation": "Im medizinischen Kontext bezieht sich der Begriff 'okkult' auf etwas, das nicht offensichtlich ist, wie beispielsweise eine Blutung oder Erkrankung, die verborgen und nicht direkt sichtbar ist. Okkulte Blutungen können beispielsweise im Stuhl vorkommen und werden häufig durch spezielle Testverfahren entdeckt.",
-    "enExplanation": "Refers to hidden or not immediately apparent aspects, such as symptoms or disease features that are not obvious and require special investigation methods.",
-    "ukExplanation": "Окультний відноситься до прихованих або не відразу помітних аспектів, як, наприклад, симптоми або ознаки хвороби, які не очевидні і вимагають спеціальних методів дослідження.",
-    "ruExplanation": "Оккультный относится к скрытым или не сразу заметным аспектам, как, например, симптомы или признаки заболевания, которые не очевидны и требуют специальных методов исследования.",
-    "esExplanation": "Se refiere a aspectos ocultos o no inmediatamente reconocibles, como síntomas o características de enfermedades que no son obvias y requieren métodos de investigación especiales.",
-    "frExplanation": "Fait référence à des aspects cachés ou non immédiatement apparents, tels que des symptômes ou des caractéristiques de maladies qui ne sont pas évidents et nécessitent des méthodes d'examen spéciales.",
-    "plExplanation": "Okultystyczny odnosi się do ukrytych lub nieod razu rozpoznawalnych aspektów, jak np. objawy lub cechy choroby, które nie są oczywiste i wymagają specjalnych metod badawczych.",
-    "trExplanation": "Okült, genellikle belirgin olmayan ve özel muayene yöntemlerini gerektiren semptomlar veya hastalık özellikleri gibi gizli veya hemen farkedilmeyen yönleri ifade eder.",
-    "arExplanation": "يشير إلى الجوانب المخفية أو غير المعروفة على الفور، مثل الأعراض أو خصائص المرض التي ليست واضحة وتتطلب طرق فحص خاصة.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Rheinland-Pfalz",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1368,
-    "lat": "Fecal Occult Blood Test (FOBT)",
-    "de": "der Test auf verstecktes Blut im Stuhl",
-    "en": "Fecal Occult Blood Test",
-    "uk": "Тест на приховану кров у калі",
-    "ru": "Тест на скрытую кровь в кале",
-    "pl": "Test na utajoną krew w stolcu",
-    "es": "Prueba de sangre oculta en heces",
-    "fr": "Test de recherche de sang occulte dans les selles",
-    "tr": "Gizli Kan Testi",
-    "ar": "اختبار الدم الخفي في البراز",
-    "deExplanation": "Ein diagnostischer Test, der durchgeführt wird, um nicht sichtbares Blut im Stuhl nachzuweisen. Er wird häufig zur Früherkennung von Darmkrebs oder anderen Erkrankungen des Verdauungstrakts eingesetzt, bei denen Blutungen im Darm vorkommen können.",
-    "enExplanation": "A diagnostic test aimed at detecting small, non-visible amounts of blood in the stool to identify conditions such as colorectal cancer or internal bleeding.",
-    "ukExplanation": "Тест на приховану кров у фекаліях (FOBT) - діагностичний тест, який спрямований на виявлення невеликих, не видимих кількостей крові в стільці, для ідентифікації захворювань, як-то рак кишківника або внутрішні кровотечі.",
-    "ruExplanation": "Тест на скрытую кровь в фекалиях (FOBT) - диагностический тест, направленный на выявление малых, не видимых количеств крови в стуле, для идентификации заболеваний, как-то рак кишечника или внутренние кровотечения.",
-    "esExplanation": "Una prueba diagnóstica que busca detectar cantidades pequeñas, no visibles, de sangre en las heces para identificar enfermedades como cáncer de colon o hemorragias internas.",
-    "frExplanation": "Un test de diagnostic visant à détecter de faibles quantités de sang non visible dans les selles pour identifier des affections telles que le cancer colorectal ou les hémorragies internes.",
-    "plExplanation": "Test na krew utajoną w kale to diagnostyczny test mający na celu wykrycie niewielkich, niewidocznych ilości krwi w kale w celu zidentyfikowania chorób, takich jak rak jelita grubego lub wewnętrzne krwawienia.",
-    "trExplanation": "Fecal Okült Kan Testi (FOBT), dışkıda görünmeyen küçük miktarda kanı tespit etmek için kullanılan bir tanı testidir ve kolorektal kanser veya iç kanamalar gibi hastalıkları tanımlamak için kullanılır.",
-    "arExplanation": "اختبار تشخيصي يهدف إلى الكشف عن كميات صغيرة غير مرئية من الدم في البراز لتحديد أمراض مثل سرطان القولون أو النزيف الداخلي.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Hessen",
-      "Nordrhein-Westfalen",
-      "Westfalen-Lippe",
-      "Baden-Württemberg",
-      "Bayern",
-      "Berlin",
-      "Niedersachsen",
-      "Rheinland-Pfalz",
-      "Hamburg",
-      "Sachsen",
-      "Mecklenburg Vorpommern",
-      "Sachsen-Anhalt",
-      "Brandenburg",
-      "Bremen",
-      "Saarland",
-      "Schleswig-Holstein",
-      "Thüringen"
-    ]
-  },
-  {
-    "id": 1369,
-    "lat": "Artefakt (der)",
-    "de": "das Artefakt",
-    "en": "Artifact",
-    "uk": "Артефакт",
-    "ru": "Артефакт",
-    "pl": "Artefakt",
-    "es": "Artefacto",
-    "fr": "Artéfact",
-    "tr": "Artefakt",
-    "ar": "المصنوع",
-    "deExplanation": "Ein Artefakt in der Medizin bezeichnet eine Struktur oder ein Bild, das durch technische Faktoren oder äußere Einflüsse im medizinischen Bildgebungsverfahren entsteht und nicht der natürlichen Anatomie entspricht. Artefakte können die Interpretation von Röntgenbildern, CT- oder MRT-Scans erschweren und müssen bei der Diagnose berücksichtigt werden, um Fehldiagnosen zu vermeiden.",
-    "enExplanation": "A phenomenon or feature in medical images or samples that is not due to the natural composition of the examined tissue or organ but arises from external factors such as equipment settings, movement, or technical errors.",
-    "ukExplanation": "Артефакт - це явище або характеристика в медичних зображеннях або пробах, яке не обумовлене природною будовою вивченого тканини або органу, а виникає через зовнішні фактори, як-то налаштування обладнання, рух або технічні помилки.",
-    "ruExplanation": "Артефакт - это явление или характеристика в медицинских изображениях или образцах, которое не обусловлено естественным составом изучаемой ткани или органа, а возникает из-за внешних факторов, как-то настройки оборудования, движение или технические ошибки.",
-    "esExplanation": "Un fenómeno o característica en imágenes médicas o muestras que no se debe a la naturaleza natural del tejido u órgano examinado, sino que surge de factores externos como configuraciones de equipo, movimiento o errores técnicos.",
-    "frExplanation": "Un phénomène ou une caractéristique dans des images ou des échantillons médicaux qui n'est pas causé par la nature naturelle du tissu ou de l'organe examiné, mais par des facteurs externes tels que les paramètres de l'appareil, le mouvement ou des erreurs techniques.",
-    "plExplanation": "Artefakt to zjawisko lub cecha w obrazach medycznych lub próbkach, które nie są spowodowane naturalną charakterystyką badanego tkanki lub organu, ale przez czynniki zewnętrzne, takie jak ustawienia urządzenia, ruch lub błędy techniczne.",
-    "trExplanation": "Sanat, tıbbi görüntülerde veya örneklerde, incelenen doku veya organın doğal özelliği tarafından değil, cihaz ayarları, hareket veya teknik hatalar gibi dış faktörler tarafından oluşturulan bir ",
-    "arExplanation": "ظاهرة أو خاصية في الصور الطبية أو العينات لا تنتج عن طبيعة النسيج أو العضو المفحوص، بل تنشأ عن عوامل خارجية مثل إعدادات الجهاز أو الحركة أو الأخطاء التقنية.",
-    "categories": [
-      "Zusätzlich"
-    ],
-    "regions": [
-      "Rheinland-Pfalz"
-    ]
+    "sentence": "",
+    "answer": ""
   }
 ];

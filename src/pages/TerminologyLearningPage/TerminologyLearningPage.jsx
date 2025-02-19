@@ -1,22 +1,16 @@
-// src/pages/TerminologyLearningPage/TerminologyLearningPage.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./TerminologyLearningPage.module.scss";
 import flashcardBg from "../../assets/flashcard-bg.jpg";
 import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
-import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg"; // твоє зображення
+import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
+import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg"; // додайте відповідне зображення
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { pathList } from "../../routes/path"; // <-- щоб взяти pathList
-
-// Прибрали імпорт unifyRegion, щоб не було помилки
-// import { unifyRegion } from "../../utils/unifyRegion";
+import { pathList } from "../../routes/path";
 
 const TerminologyLearningPage = () => {
   const { selectedRegion } = useGetGlobalInfo();
-
-  // Якщо тобі треба підставляти в URL, але не уніфікувати:
   const regionParam = selectedRegion ? selectedRegion : "Alle";
 
   return (
@@ -47,14 +41,12 @@ const TerminologyLearningPage = () => {
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
                 <div className={styles.tileTitle}>Single Choice Game</div>
-                {/* інша анімація або контент */}
               </div>
             </div>
           </Link>
 
           {/* Плитка 3: Fortune Wheel */}
           <Link
-            // Використовуємо pathList
             to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
             style={{ backgroundImage: `url(${fortuneWheelBg})` }}
@@ -62,7 +54,19 @@ const TerminologyLearningPage = () => {
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
                 <div className={styles.tileTitle}>Fortune Wheel</div>
-                {/* можеш анімувати */}
+              </div>
+            </div>
+          </Link>
+
+          {/* Плитка 4: Fill In Blank Game */}
+          <Link
+            to={`${pathList.fill_in_blank.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${fillInBlankBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.rockingCard}>
+                <div className={styles.tileTitle}>Fill In Blank Game</div>
               </div>
             </div>
           </Link>

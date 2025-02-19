@@ -110,6 +110,9 @@ const DataCollectionPage = React.lazy(() =>
   import("../pages/DataCollectionPage/DataCollectionPage")
 );
 
+const FillInBlankGame = React.lazy(() =>
+  import("../pages/FillInBlankGame/FillInBlankGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -130,7 +133,7 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
         />
-
+        <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
         <Route path={pathList.documents.path} element={<DocumentsPage />} />

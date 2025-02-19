@@ -90,4 +90,8 @@ export const pathList = {
   fortune_wheel: {
     path: "/fortune-wheel-game",
   },
+  fill_in_blank: {
+    path: "/fill-in-blank-game",
+  },
+  
 };
