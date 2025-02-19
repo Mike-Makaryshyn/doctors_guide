@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.fortuneWheelGame {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+/* Модальне вікно (анімації, тощо) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupDesktopWide {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  bottom: 17px;
+  right: 79px;
+}
+
+.popupMobile {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: popupBounce 0.6s ease-out;
+}
+
+@keyframes popupBounce {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.startButton {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #4caf50, #008000);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.startButton:hover {
+  background: linear-gradient(135deg, #66bb6a, #009900);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.regionColumn,
+.filterColumn,
+.categoryColumn,
+.playersColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fieldLabel {
+  font-weight: 600;
+  font-size: 14px;
+  color: #013b6e;
+  margin-bottom: 5px;
+}
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.nativeSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.regionCell,
+.filterCell,
+.categoryCell,
+.playersCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoryIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.displayModeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.displayModeIcon {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+}
+.displayModeIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+.questionCountIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3500;
+}
+.settingsButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Відповіді */
+/* За замовчуванням - у кутах */
+.cornerAnswers {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 4000; 
+}
+
+.cornerAnswerButton {
+  pointer-events: auto;
+  width: 140px;
+  padding: 12px 14px;
+  background: #fff;
+  color: #013b6e;
+  border: 3px solid #013b6e;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.cornerAnswerButton:hover {
+  background: #f7f7f7;
+  transform: scale(1.05);
+}
+
+/* Розміщення (десктоп) */
+.cornerAnswerButton:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+.cornerAnswerButton:nth-child(2) {
+  top: 10%;
+  right: 20%;
+}
+.cornerAnswerButton:nth-child(3) {
+  bottom: 10%;
+  left: 20%;
+}
+.cornerAnswerButton:nth-child(4) {
+  bottom: 10%;
+  right: 20%;
+}
+
+.correct {
+  background-color: #2a7c6f !important;
+  color: #fff !important;
+  border-color: #2a7c6f !important;
+}
+.wrong {
+  background-color: #ff5252 !important;
+  color: #fff !important;
+  border-color: #ff5252 !important;
+}
+
+/* --- Мобільне відображення --- */
+@media (max-width: 768px) {
+  .cornerAnswers {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px; /* з відступом під колесом */
+  }
+
+  .cornerAnswerButton {
+    position: static;
+    transform: none;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Екран завершення гри */
+.gameOverContainer {
+  margin-top: 30px;
+}
+.gameOverBox {
+  background: #fff;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #013b6e;
+}
+.gameOverBox h2 {
+  margin-top: 0;
+}

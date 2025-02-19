@@ -1,0 +1,189 @@
+/* src/pages/FSPFormularPage/components/AdditionalInfoModal.module.scss */
+
+/* Встановлення шрифтів */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Глобальне застосування шрифту до всіх елементів сторінки */
+:global(body) {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Міксин для неоморфістичних кнопок */
+@mixin neu-button-style {
+  background: #e0e0e0;
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff,
+                3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff,
+                3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+  }
+}
+
+/* Стиль фону модального вікна */
+.modal-overlay {
+    position: fixed; /* Fixed для покриття всього екрану */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Стиль контенту модального вікна з неоморфізмом */
+.modal-content {
+    background: #e0e0e0; /* Світлий фон для неоморфізму */
+    border-radius: 20px; /* Округлені кути */
+ 
+    padding: 30px 40px;
+    max-width: 800px; /* Зменшена ширина для кращої адаптивності */
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto; /* Дозволяє прокручування */
+    position: relative; /* Відносне позиціонування для внутрішніх елементів */
+    animation: slideIn 0.3s ease;
+
+    /* Сховання смуги прокрутки */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    
+    /* Сховання смуги прокрутки для Webkit-браузерів (Chrome, Safari, Opera) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Доданий верхній відступ для уникнення перекриття */
+    padding-top: 0px;
+}
+
+/* Стиль заголовка модального вікна */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Виправлено з -65px на позитивний відступ */
+}
+
+/* Стиль заголовка модального вікна */
+.modal-title {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між іконкою та текстом */
+}
+
+/* Стиль тіло модального вікна */
+.modal-body {
+    overflow-y: auto; /* Дозволяє прокручування */
+    /* Сховання смуги прокрутки */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    
+    /* Сховання смуги прокрутки для Webkit-браузерів (Chrome, Safari, Opera) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.modal-text {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Стиль кнопки закриття */
+.close-button {
+    @include neu-button-style;
+    width: 30px;
+    height: 30px;
+    position: absolute; /* Абсолютне позиціонування відносно .modal-content */
+    top: 15px; /* Відступ зверху */
+    right: 15px; /* Відступ праворуч */
+    font-size: 16px;
+    color: #333;
+    background: #e0e0e0; /* Відповідний фон */
+    z-index: 1001; /* Забезпечує, що кнопка буде поверх контенту */
+}
+
+/* Іконка закриття */
+.close-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px 25px;
+        max-width: 90%;
+        border-radius: 15px;
+        padding-top: 0px; /* Зменшений відступ зверху */
+    }
+
+    .close-button {
+        width: 25px;
+        height: 25px;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Додаткові стилі для заголовків та списків у Markdown */
+.modal-text h3, .modal-text h4, .modal-text h5, .modal-text h6 {
+    color: #444;
+    margin-top: 20px;
+}
+
+.modal-text ul, .modal-text ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-text strong {
+    color: #000;
+}

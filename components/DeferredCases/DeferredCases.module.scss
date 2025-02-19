@@ -1,0 +1,64 @@
+/* src/components/DeferredCases/DeferredCases.module.scss */
+
+.deferredCasesWindow {
+  width: 400px; /* Фіксована ширина для квадратного вікна */
+  height: 400px; /* Фіксована висота для квадратного вікна */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Забороняємо вміст виходити за межі */
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.noCases {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}
+
+.casesList {
+  flex: 1; /* Займає всю доступну висоту після заголовка */
+  overflow-y: auto; /* Додаємо вертикальний скролінг */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Налаштування стилів для скролбару (опціонально) */
+.casesList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.casesList::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.casesList::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+  text-align: center;
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.error {
+  text-align: center;
+  color: #f44336;
+  font-weight: bold;
+}

@@ -1,0 +1,268 @@
+// src/pages/AuthPage/RegistrationPage.module.scss
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #3f6f64;
+  font-family: Arial, sans-serif;
+  position: relative; /* Для позиціонування заголовка */
+}
+
+.centeredHeading {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+
+  /* Приховуємо заголовок на десктопі */
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.contentWrapper {
+  display: flex; /* Використання flexbox для розташування форми та етапів */
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Відстань між формою та етапами */
+  width: 100%;
+  max-width: 1200px; /* Максимальна ширина контенту */
+  margin-top: 100px; /* Відступ для заголовка */
+  position: relative;
+}
+
+.formWrapper {
+  flex: 1; /* Займає рівномірний простір */
+  max-width: 800px; /* Збільшена ширина на десктопі */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitle {
+  margin-bottom: 20px;
+  color: #3f6f64;
+  text-align: center;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: 769px) {
+    grid-template-columns: 1fr 1fr; /* Два ряди на десктопі */
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #3f6f64;
+      outline: none;
+    }
+  }
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  label {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 0.95rem;
+
+    input {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    a {
+      color: #3f6f64;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+
+  @media (min-width: 769px) {
+    justify-content: center;
+  }
+}
+
+.backButton,
+.nextButton,
+.submitButton {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.backButton {
+  background-color: #ccc;
+  color: #333;
+
+  &:hover {
+    background-color: #b3b3b3;
+  }
+}
+
+.nextButton {
+  background-color: #3f6f64;
+  color: #fff;
+
+  &:hover {
+    background-color: #365b54;
+  }
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+
+  &:hover {
+    background-color: #45a049;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+.required {
+  color: red;
+}
+
+.stageMenuWrapper {
+  flex: 1; /* Займає рівномірний простір */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.stageMenuWrapper .buttonGroup {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Анімації для react-transition-group */
+.enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+}
+
+.exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exitActive {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms ease-in-out;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .formWrapper,
+  .stageMenuWrapper {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr; /* Один рядок на мобільних */
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .backButton,
+  .nextButton,
+  .submitButton {
+    width: 100%;
+  }
+
+  .centeredHeading {
+    display: block; /* Відображати заголовок на мобільних */
+  }
+}

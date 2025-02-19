@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+// Змінні
+$primary-color: #013b6e;
+$secondary-color: #4caf50;
+$border-color: #ccc;
+$warning-color: #ff9800;
+$danger-color: #f44336;
+
+// Головний контейнер таблиці
+.tableContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  overflow: visible;
+ 
+}
+
+.table + .table {
+  margin-top: 0; /* Убираем верхний отступ у следующей таблицы */
+}
+// Стилі для таблиці
+.table {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  border-collapse: separate; // Використовуємо border-spacing для відступів між рядками
+  border-spacing: 0; // Відсутність відступів між клітинками
+  table-layout: fixed; // Фіксована розкладка таблиці
+ 
+  overflow: hidden;
+  border-spacing: 0; /* Убираем промежутки между строками */
+  margin-bottom: 1px; /* Убираем нижний отступ */
+
+  thead {
+    background-color: #e0e0e0; // Темно-сірий фон для заголовка
+    font-size: 0,2 rem;
+    font-weight: 200;
+    color: $primary-color;
+  }
+  
+
+  th,
+  td {
+    padding: 20px 10px;
+    border: none; // Відсутні бордери
+    text-align: center;
+    vertical-align: middle;
+    color: $primary-color;
+    background-color: #ffffff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 35%; // Збільшена ширина першої колонки
+    text-align: left;
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: auto;
+    min-width: unset !important;
+  }
+
+  th:first-child {
+    border-top-left-radius: 13px; // Заокруглення першого верхнього кута
+  }
+
+  th:last-child {
+    border-top-right-radius: 13px; // Заокруглення останнього верхнього кута
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 13px; // Заокруглення першого нижнього кута
+  }
+
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 13px; // Заокруглення останнього нижнього кута
+  }
+
+  tbody tr {
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  tbody tr:not(:last-child) td {
+    border-bottom: 1px solid rgba($primary-color, 0.3); // Тонка горизонтальна лінія між рядками
+  }
+
+  tr:hover td {
+    background-color: #f9f9f9; // Фон при наведенні
+  }
+}
+
+// Специфічні стилі для різних таблиць
+.mainTable,
+.euTable,
+.secondTable,
+.optionalTable {
+  @extend .table;
+}
+
+.optionalTable thead {
+  background-color: #917878; // Світліший фон для опціональних таблиць
+}
+
+.secondTable {
+  position: relative; 
+  z-index: 5;
+  margin-top: -1px;
+  thead {
+    display: none;
+    background-color: #e0e0e0; // Темно-сірий фон для заголовків
+  }
+
+  th:first-child,
+  td:first-child {
+    
+    width: 37%;  /* Поточна ширина */
+    text-align: left;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    font-weight: normal; // Видалення жирного шрифту у другій колонці
+    padding-right: 100px;
+  }
+
+  th[data-column="specificColumn"],
+  td[data-column="specificColumn"] {
+    width: 40%; // Приклад для додаткової колонки
+  }
+
+  td[data-column="links"] {
+    width: 35%; /* Збільшення ширини */
+    max-width: 600px; /* Обмеження максимальної ширини */
+    text-align: center; /* Вирівнювання контенту */
+    
+  }
+  td[data-column="sent"] {
+    text-align: right;
+    padding-right: 40px;
+  }
+  
+}
+
+// Стилі для плиток
+.tileContainer {
+  display: none; // За замовчуванням ховається на десктопі
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tile {
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 12px;
+  padding: 24px;
+  border-radius: 20px; // Заокруглені кути плитки
+  color: #013b6e;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .tileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #013b6e;
+    text-align: left;
+  }
+
+  .tileTitle {
+    font-weight: 600;
+    color: #013b6e;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .checkboxGrid {
+    flex-direction: row; /* Горизонтальне розташування */
+    justify-content: flex-start; /* Вирівнювання по лівому краю */
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Перенос на новий рядок, якщо потрібно */
+  }
+
+  .completionOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 175, 80, 0.3); /* Зелений тон з прозорістю */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Заокруглення кутів плитки */
+    pointer-events: none; /* Пропускає події миші */
+    animation: pop 0.5s ease forwards;
+  }
+}
+
+.tileCompleted {
+  border-radius: 50px;
+  background: #2a7c6f;
+  box-shadow:
+    inset -20px 20px 60px #24695e,
+    inset 20px -20px 60px #308f80;
+  color: #fff;
+  border: none;
+  animation: none;
+
+  .tileTitle {
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
+
+.tile.completed {
+  background-color: #e8f5e9; // Легкий зелений фон для завершеної плитки
+  position: relative;
+}
+
+// Стилізація іконок
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.checkedIcon {
+  /* Застосовуємо зелений фільтр до вибраної іконки */
+  filter: brightness(0) saturate(100%) invert(35%) sepia(75%) saturate(500%) hue-rotate(100deg);
+}
+
+.disabledIcon {
+  /* Застосовуємо сірий фільтр до вимкнених іконок */
+  filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(7500%) hue-rotate(75deg);
+  cursor: not-allowed;
+}
+
+.iconLabel {
+  font-size: 0.6rem; // Малий розмір тексту
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Сховування чекбоксу */
+.hiddenCheckbox {
+  display: none;
+}
+
+/* Контейнер для лінків */
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  height: 60px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #013b6e;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkContainer:hover {
+  background: #f3f3f3;
+}
+
+.info {
+  color: #fb8c00; // Помаранчевий колір для інформації
+  font-weight: 500;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .table {
+    display: none; // Ховаємо таблицю на мобільних
+  }
+
+  .tileContainer {
+    display: flex; // Показуємо плитки на мобільних
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .tile,
+  .tileOptional {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 24px;
+    animation: float 6s ease-in-out infinite;
+    height: 200px; // Встановлюємо фіксовану висоту для плиток
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Центрування вмісту вертикально
+    align-items: center; // Центрування вмісту горизонтально
+    text-align: center; // Центрування тексту
+    box-sizing: border-box; // Включає padding у загальну висоту
+  }
+
+  .tileTitle {
+    font-size: 0.9rem;
+    text-align: left;
+    overflow: hidden; // Запобігає переповненню тексту
+    text-overflow: ellipsis; // Додає три крапки при переповненні
+    white-space: nowrap; // Запобігає переносу тексту
+  }
+
+  /* Розміщення чекбоксів горизонтально з мітками поруч */
+  .checkboxBox {
+    flex-direction: row; /* Горизонтальне розташування */
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .iconLabel {
+    font-size: 0.8rem;
+  }
+
+  .checkboxBox.optional .iconLabel {
+    font-size: 0.8rem;
+  }
+
+  .checkboxBox label:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Забезпечення видимості linkContainer на мобільних */
+  .linkContainer {
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .linkLabel {
+    font-size: 0.8rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+
+  /* Додаткові стилі для покращення вигляду лінків на мобільних */
+  .linkContainer a.link {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Анімації */
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(2px, -5px);
+  }
+  50% {
+    transform: translate(0px, -10px);
+  }
+  75% {
+    transform: translate(-2px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

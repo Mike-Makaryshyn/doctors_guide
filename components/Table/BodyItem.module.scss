@@ -1,0 +1,180 @@
+// src/components/Table/BodyItem.module.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+// Змінні
+$primary-color: #013b6e;
+$border-color: #ccc;
+$bg-complete: rgba(#4caf50, 0.1);
+$bg-incomplete: rgba(#ff9800, 0.1);
+
+// Основні стилі
+.rowCompleted {
+  background-color: $bg-complete;
+}
+
+.rowIncomplete {
+  background-color: $bg-incomplete;
+}
+
+.rowExcluded {
+  background-color: rgba(150, 150, 150, 0.2); /* Напівпрозорий сірий фон */
+  color: rgba(50, 50, 50, 0.6); /* Приглушений сірий колір тексту */
+  position: relative;
+  cursor: default;
+
+  /* Додаємо плюс-значок поверх рядка */
+  &::after {
+    content: "+";
+    font-size: 2rem;
+    color: rgba(80, 80, 80, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Дозволяє клікам проходити через елемент */
+  }
+
+  /* Запобігаємо змінам фону при наведенні */
+  &:hover {
+    background-color: rgba(150, 150, 150, 0.2);
+  }
+}
+
+.tableCell {
+  width: 100%; /* Дозволяємо займати всю доступну ширину */
+  max-width: 1000px; /* Обмежуємо максимальну ширину */
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal; /* Запобігає надмірному розтягненню рядка */
+}
+
+.nameField {
+  font-weight: 400;
+  color: $primary-color; // Встановлено колір тексту
+}
+
+.checkbox_wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: default; // Відміна курсора для чекбоксів
+}
+
+.req_img {
+  width: 16px;
+  height: 16px;
+}
+
+.crossButtonbody {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #f44336;
+  
+  outline: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+
+  // Повне вимкнення анімації та ефектів
+  
+}
+
+
+
+.optional_checkbox_wrapper {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 7px;
+  width: 100%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px #8c8c8c, -10px -10px 20px #ffffff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(1, 59, 110, 0.6), 0 0 40px rgba(1, 59, 110, 0.4);
+    transform: translateY(-3px);
+  }
+
+  /* Адаптивність для менших екранів */
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 12px 20px; /* Зменшення відступів для мобільних пристроїв */
+  }
+}
+.checkbox_link_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.checkbox_wrapper {
+  margin-right: 10px; /* Відступ між чекбоксом та посиланням */
+}
+@media (max-width: 768px) {
+  .checkbox_link_container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .link {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+/* Стилізація тексту */
+.link {
+  color: #013b6e;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    color: #013b6e; /* Не змінюємо колір */
+  }
+}
+
+.specialRow {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f0f8ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+/* Адаптивні стилі для мобільної версії */
+@media (max-width: 768px) {
+  .checkboxGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+.row {
+  cursor: pointer; // Додає курсор "рука" для рядків, які можна натискати
+}

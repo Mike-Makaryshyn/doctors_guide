@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --DE-BW: #f15958;
+  --DE-BY: #4a76bb;
+  --DE-BE: #297e60;
+  --DE-BB: #d38d61;
+  --DE-HB: #a91a82;
+  --DE-HH: #e0ad20;
+  --DE-HE: #49ab4a;
+  --DE-MV: #d42127;
+  --DE-NI: #8dcaa3;
+  --DE-NW: #fdd730;
+  --DE-RP: #d466a7;
+  --DE-SL: #4577b9;
+  --DE-SN: #8062aa;
+  --DE-ST: #ffa500;
+  --DE-SH: #b22222;
+  --DE-TH: #fa7e25;
+
+  /* Додаткові змінні для кольорів тексту */
+  --text-color: #013b6e; /* Синюватий колір тексту */
+  --greeting-color: #013b6e; /* Синюватий колір привітання */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+ 
+  height: calc(100vh - 10px); /* Враховується відступ зверху */
+  width: 100vw;
+  overflow: hidden; /* Забороняє скролінг */
+  font-family: 'Poppins', sans-serif; /* Використання шрифту Poppins */
+}
+
+.mapContainer {
+  height: calc(100vh - 20px); /* Забезпечує, що карта займає весь доступний простір */
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoContainer {
+  flex: 0.4;
+  background-color: #ffffff; /* Білий фон */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+  border-radius: 20px; /* Закруглені кути */
+  position: relative;
+}
+
+.currentRegionLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.rsmComposableMap {
+  width: 100%; /* Повна ширина */
+  height: 100%; /* Займає всю висоту контейнера */
+  transform: none; /* Забирає зсув, якщо такий є */
+  margin-top: 130px;
+}
+
+.geography {
+  stroke: none; /* Видалення обводки */
+  transition: fill 0.3s ease, filter 0.3s ease;
+  outline: none;
+  cursor: pointer;
+  
+  /* Видалення фокусу */
+  &:focus {
+    outline: none;
+  }
+}
+
+.geographySelected {
+  filter: brightness(1.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    filter: brightness(1.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    filter: brightness(2);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    filter: brightness(1.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.coatOfArms {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.regionName {
+  font-size: 24px;
+  font-weight: 600; /* Використання ваги 600 */
+  text-align: center;
+  color: var(--text-color); /* Синюватий колір тексту */
+}
+
+.greeting {
+  font-size: 16px;
+  font-weight: 400; /* Використання ваги 400 */
+  margin-top: 10px;
+  color: var(--greeting-color); /* Синюватий колір привітання */
+}
+
+/* Стилізація кнопки стрілочки до дашборду */
+.dashboardButton {
+  margin-top: 20px;
+  background-color: #28a745; /* Зелений колір кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.dashboardButton:hover {
+  transform: scale(1.1);
+  background-color: #218838; /* Темніший зелений при наведенні */
+}
+
+.coatOfArmsMobile {
+  width: 60px; /* Зменшено з 100px */
+  height: auto;
+  margin-top: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Закриття модального вікна */
+.closeModalButton {
+  position: absolute;
+  color: #b22222;
+  top: -16px;
+  right: -6px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Відображення тексту "Wählen Sie eine Region" */
+.infoContainer p {
+  font-size: 18px;
+  color: var(--text-color); /* Синюватий колір тексту */
+  text-align: center;
+}
+
+/* Модальне вікно на мобільних */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Вирівнювання по нижньому краю */
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #ffffff; /* Білий фон */
+  width: 100%;
+  max-height: 60%;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+  font-family: 'Poppins', sans-serif; /* Використання шрифту Poppins */
+}
+
+/* Додані нові класи для внутрішнього контенту модального вікна */
+.modalInnerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modalRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Вирівнювання по правому краю */
+}
+
+.currentRegionLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+/* Адаптація кнопки стрілочки до дашборду на мобільних */
+.dashboardButton {
+  margin-top: 10px; /* Невеликий відступ між гербом та кнопкою */
+  background-color: #28a745; /* Зелений колір кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.dashboardButton:hover {
+  transform: scale(1.1);
+  background-color: #218838; /* Темніший зелений при наведенні */
+}
+
+/* Анімація виїзду модального вікна */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 80vh;
+    width: 100vw;
+  }
+
+  .mobileHeader {
+    position: fixed;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 20px;
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .mobileButtonContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .mobileDashboardButton {
+    background-color: #28a745; /* Зелений колір кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Робимо прямокутною з легким заокругленням */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px; /* Розмір стрілки */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+    position: fixed; /* Закріплюємо у правому нижньому куті */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .mobileDashboardButton:hover {
+    background-color: #218838; /* Темніший зелений при наведенні */
+    transform: scale(1.1); /* Легка анімація збільшення */
+  }
+  
+  @media (min-width: 768px) {
+    .mobileButtonContainer {
+      display: none; /* Ховаємо мобільну кнопку на десктопах */
+    }
+  }
+  
+  .buttonText {
+    margin-left: 8px; /* Відступ для тексту "Weiter" */
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .mobileRegionName {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+  }
+  
+  .mobileCoatOfArms {
+    width: 40px;
+    height: auto;
+  }
+ 
+  .mapContainer {
+    height: calc(100vh - 70px); /* Займає майже весь екран, враховуючи відступ для заголовка */
+    width: 100%; /* Повна ширина */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Запобігає прокручуванню */
+  }
+
+  .infoContainer {
+    display: none;
+  }
+
+  .modalContent {
+    max-height: 80%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .regionName {
+    font-size: 20px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+  }
+
+  .greeting {
+    font-size: 14px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+  }
+
+  .coatOfArmsMobile {
+    width: 40px; /* Ще менше для дуже малих екранів */
+  }
+
+  /* Адаптація кнопки стрілочки до дашборду на мобільних */
+  .dashboardButton {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    margin-top: 8px; /* Менший відступ */
+  }
+
+  /* Додаткові стилі для модального вікна */
+  .modalLeft h2,
+  .modalLeft p {
+    text-align: left; /* Вирівнювання заголовків по лівому краю */
+    width: 100%;
+  }
+
+  .modalRight {
+    align-items: flex-end; /* Вирівнювання по правому краю */
+  }
+}

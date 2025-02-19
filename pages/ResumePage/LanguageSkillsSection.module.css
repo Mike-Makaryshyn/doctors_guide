@@ -1,0 +1,332 @@
+/* Загальний контейнер */
+.languageSkillsSection {
+  margin-bottom: 30px;
+  overflow: visible; /* Для десктопа */
+  position: relative;
+  padding: 20px; /* Відступ зверху, як в ActualSection */
+}
+
+/* Заголовок */
+.subheader {
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #333;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+/* Контейнер форми */
+.entriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Контейнер одного запису */
+.entryRow {
+  display: flex;
+  flex-direction: column; /* Стекання полів вертикально (desktop) */
+  gap: 10px;
+  width: 100%;
+  position: relative;
+}
+
+/* Для мобільних */
+@media (max-width: 768px) {
+  .entryRow {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Поле для мови */
+.languageCell {
+  flex: 1;
+  min-width: 500px;
+  position: relative; /* Для розміщення кнопок */
+  display: flex;
+  align-items: center;
+}
+
+/* Поле для рівня */
+.levelCell {
+  flex: 1;
+  min-width: 500px;
+  position: relative; /* Для розміщення кнопок */
+  display: flex;
+  align-items: center;
+}
+
+/* Поля вводу – ширина 100% */
+.inputField {
+  width: 100%;
+  min-height: 50px;
+  resize: none;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow:
+    6px 6px 12px rgba(19,57,51,0.5),
+    -6px -6px 12px rgba(65,191,171,0.5);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputField:focus {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+.inputFieldWithError {
+  border-color: #dc3545;
+}
+
+/* Контейнер кнопок видалення (десктоп) */
+.buttonContainer {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 10px;  /* Фіксовано: завжди у верхньому правому куті рядка */
+  right: 10px;
+  z-index: 1;
+}
+
+/* Контейнер кнопки видалення для мобільних */
+.deleteButtonContainer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Кнопки видалення */
+.deleteButton svg {
+  fill: #ff0000;
+}
+
+.deleteButton:hover {
+  background-color: transparent;
+  transform: none;
+}
+
+/* Контейнер кнопки підказки */
+.suggestionButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: -49px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Lightbulb Suggestion Button */
+.suggestionButton {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.suggestionButton:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
+/* Glowing Lightbulb Icon */
+.glowingLightbulb {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+  color: #FFD700;
+  font-size: 2rem;
+}
+
+/* Кнопка додавання нового рядка */
+.addButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Роздільник для мобільних */
+.mobileDivider {
+  display: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 10px;
+}
+
+/* Модальне вікно з підказками */
+.customDialog {
+  max-width: 400px;
+  width: 90%;
+  border-radius: 50px;
+  overflow-x: hidden; /* забороняємо горизонтальний скрол */
+  overflow-y: auto;
+  padding: 0;             /* Видаляємо внутрішній відступ */
+  margin: 0;              /* Видаляємо зовнішній відступ */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  background: #ffffff;
+  position: relative;
+}
+
+/* Заголовок модального вікна */
+.dialogTitle {
+  display: none;
+}
+
+/* Кнопка закриття модального вікна */
+.closseButton {
+  position: absolute;
+  top: -2px;
+  right: -280px;
+  background: none !important;
+  border: none;
+  font-size: 1.5rem;
+  color: #ff0000 !important;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.closseButton:hover {
+  transform: scale(1.2);
+}
+
+/* Контейнер списку */
+.dialogList {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+/* Текст підказки */
+.dialogText {
+  font-size: 1rem;
+  padding: 10px;
+  color: #013b6e;
+  transition: color 0.2s ease-in-out;
+}
+
+.dialogText:hover {
+  color: #013b6e;
+  font-weight: bold;
+}
+
+/* Анімація пульсу */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255,215,0,0.5));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255,215,0,0.9));
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255,215,0,0.5));
+  }
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+  .entryRow {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+  .languageCell,
+  .levelCell {
+    min-width: 100%;
+    flex: 1;
+    margin-bottom: 10px;
+  }
+  .languageCell {
+    margin-top: 10px;
+  }
+  .levelCell {
+    margin-top: 10px;
+  }
+  .suggestionButtonContainer {
+    position: absolute;
+    top: -15%;
+    right: -50px;
+    transform: translateY(10px);
+  }
+  .deleteButtonContainer .deleteButton svg {
+    fill: #dc3545;
+  }
+}
+@media (max-width: 768px) {
+  .deleteButtonContainer .deleteButton svg {
+    fill: #dc3545;
+  }
+  .buttonContainer {
+    display: none;
+  }
+  .deleteButtonContainer {
+    display: flex !important;
+  }
+}
+@media (max-width: 768px) {
+  .closseButton {
+      top: -7px;
+      right: -149px;
+      font-size: 1.4rem;
+    }
+
+  .customDialog {
+    width: 95%; /* Більше місця на мобільних */
+    max-width: 350px;
+  }
+}
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+  .customDialog {
+    width: 95%; /* Розтягуємо більше на мобільних */
+    max-width: 350px;
+  }
+
+  .dialogText {
+    font-size: 0.9rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

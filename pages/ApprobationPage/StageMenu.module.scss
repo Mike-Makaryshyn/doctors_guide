@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.stageMenuContainer {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 10px; /* Для десктопу, на мобільних переопреділяємо */
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* Контейнер для стадій */
+.stagesWrapper {
+  display: flex;
+  flex-direction: row; /* Горизонтальне розташування */
+  gap: 10px;
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+}
+
+/* Стандартний стиль стадії */
+.stage {
+  position: relative;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  flex: 0 0 auto;
+  width: 12vw;
+  max-width: 120px;
+  margin: 5px;
+  scroll-snap-align: center;
+  
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  .stageTitle {
+    color: #409a73;
+  }
+
+  /* Десктопний варіант активної стадії з ефектами */
+  &.active {
+    transform: scale(1.15);
+    animation: magicGlow 2s infinite, activeMovement 2s infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border: 2px dashed rgba(42, 124, 111, 0.6);
+      border-radius: 50%;
+      animation: floatingMagic 3s linear infinite;
+      pointer-events: none;
+    }
+  }
+}
+
+/* Текст активної стадії залишається білим */
+.stage.active .stageTitle {
+  color: #fff;
+}
+
+/* Анімації для десктопу */
+@keyframes magicGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(42, 124, 111, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
+  }
+}
+
+@keyframes activeMovement {
+  0% {
+    transform: scale(1.15) translateY(0);
+  }
+  50% {
+    transform: scale(1.15) translateY(-5px);
+  }
+  100% {
+    transform: scale(1.15) translateY(0);
+  }
+}
+
+@keyframes floatingMagic {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* Прогрес-коло навколо плашки */
+.progressCircle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progressSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circleBg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 2.5;
+}
+
+.circle {
+  fill: none;
+  stroke: #2a7c6f;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+/* Зображення всередині стадії */
+.stageImage {
+  position: absolute;
+  top: 49%;
+  left: 51%;
+  width: 83%;
+  height: 77%;
+  transform: translate(-50%, -50%);
+  border-radius: 32%;
+  object-fit: cover;
+}
+
+/* Заголовок (назва стадії) */
+.stageTitle {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #409a73;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Десктоп (від 768px) */
+@media (min-width: 768px) {
+  .stagesWrapper {
+    overflow-x: visible;
+    scroll-snap-type: none;
+    justify-content: center;
+  }
+}
+
+/* Мобільна версія (до 767px) */
+@media (max-width: 767px) {
+  /* Контейнер займає всю ширину, без відступів */
+  .stageMenuContainer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stagesWrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start; /* Елементи вирівнюються від самого краю */
+    padding: 0;
+    margin: 0;
+    gap: 0; /* Прибираємо проміжки між елементами */
+    -ms-overflow-style: none;  /* IE та Edge */
+ 
+  }
+  .stagesWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stage {
+    /* Кожна стадія займає третину ширини екрану */
+    flex: 0 0 calc(33.33vw);
+    max-width: calc(33.33vw);
+    margin: 5px 0; /* Залишаємо тільки вертикальні відступи */
+    scroll-snap-align: center;
+  }
+  
+  /* Для першої та останньої стадії прибираємо додаткові відступи зліва/справа */
+  .stage:first-child {
+    margin-left: 0;
+  }
+  
+  .stage:last-child {
+    margin-right: 0;
+  }
+  
+  /* Мобільне оформлення активної стадії */
+  .stage.active {
+    transform: scale(1.1);
+    border: 2px solid #2a7c6f;
+    box-shadow: 0 0 10px rgba(42, 124, 111, 0.5);
+  }
+  .stage.active::after {
+    content: none;
+  }
+}
+
+/* Кастомізація Tippy tooltip */
+.tippy-box[data-theme~="custom"] {
+  font-size: 12px;
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}

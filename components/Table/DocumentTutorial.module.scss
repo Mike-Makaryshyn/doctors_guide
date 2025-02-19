@@ -1,0 +1,142 @@
+/* src/components/Table/DocumentTutorial.module.scss */
+
+/* Глобальні стилі для react-joyride */
+:global(.react-joyride__tooltip) {
+  max-width: 250px !important; /* Було 300px */
+  min-width: 200px;
+  padding: 12px;
+  font-size: 14px; /* Менший шрифт */
+  border-radius: 20px !important;
+  text-align: justify;
+}
+:global(.react-joyride__tooltip-container) {
+  max-height: 120px; /* Обмежуємо висоту */
+  overflow-y: auto;
+  text-align: justify;; /* Додаємо прокручування, якщо контент занадто великий */
+}
+
+:global(.react-joyride__tooltip h3) {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+:global(.react-joyride__tooltip p) {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--next) {
+  background-color: #4caf50;
+  color: #fff;
+  border: 25px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+/* Локальні стилі */
+
+:global(.react-joyride__spotlight) {
+  background: rgba(211, 211, 211, 0.3); /* LightGray */
+  border: 2px solid rgba(169, 169, 169, 0.8); /* DarkGray */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(169, 169, 169, 0.6);
+  transition: box-shadow 0.3s ease; /* Анімація появи тіні */
+  padding: 2px;
+  transition: border-radius 0.3s ease; 
+}
+.tutorialButton {
+  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+  top: 60px; /* Відступ від верхнього краю */
+  right: 15px; /* Відступ від правого краю */
+  width: 45px; /* Трохи більша кнопка */
+  height: 45px;
+  background: none; /* Видаляємо фон у звичайному стані */
+  border-radius: 50%; /* Робимо кнопку круглою */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none; /* Прибираємо рамку */
+  box-shadow: none; /* Прибираємо тіні */
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out; /* Додаємо анімацію */
+
+  /* Стилі для SVG */
+  svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ededed; /* Сірий контур */
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* Коли наводимо мишку */
+  &:hover {
+    transform: scale(1.1); /* Легке збільшення */
+    background: #4caf4f00; /* Зелений фон */
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+  .tutorialButton {
+    width: 42px; /* Збільшена кнопка */
+    height: 38px;
+    right: -8px;
+    top: 50px; /* Трохи нижче на мобільних */
+    
+    svg {
+      width: 32px; /* Трохи більший розмір іконки */
+      height: 32px;
+    }
+  }
+}
+
+button[aria-label*="Закрити"],
+button[aria-label*="Close"],
+button[aria-label*="Schließen"],
+button[aria-label*="Fermer"],
+button[aria-label*="Cerrar"],
+button[aria-label*="Chiudi"],
+button[aria-label*="Fechar"],
+button[aria-label*="Zamknij"],
+button[aria-label*="Kapat"], /* Турецька */
+button[aria-label*="إغلاق"], /* Арабська */
+button[title*="Закрити"],
+button[aria-label*="Закрыть"], /* Російська (нижній регістр) */
+button[title*="Close"],
+button[title*="Schließen"],
+button[title*="Fermer"],
+button[title*="Cerrar"],
+button[title*="Chiudi"],
+button[title*="Fechar"],
+button[title*="Zamknij"],
+button[title*="Kapat"], /* Турецька */
+button[title*="إغلاق"] /* Арабська */
+button[title*="Закрыть"] /* Російська (нижній регістр) */
+{
+  display: none !important;
+}
+.tutorialHeader {
+  color: #013b6e; // Колір заголовків
+  font-weight: bold;
+  font-size: 22px; // Розмір шрифту (опціонально)
+  margin-bottom: 10px; // Відступ між заголовком і текстом
+}

@@ -1,0 +1,194 @@
+/* src/pages/NotarListPage/NotarListPage.module.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Кнопка (правий нижній кут) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* ------ Плитки ------ */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.tile {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+}
+
+.tileHeader {
+  font-size: 18px;
+  color: #013b6e;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.tileDescription {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.tileCity {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.contactRow {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contactItem {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ------ Модальне вікно (popup) ------ */
+
+/* Для десктопа: */
+.popupContainerDesktop {
+  position: fixed;
+  bottom: 70px; /* Трошки вище кнопки */
+  right: 20px;
+  z-index: 2000;
+}
+
+/* Для мобільних: на всю ширину знизу */
+.popupContainerMobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  /* Без затемнення фону */
+}
+
+.popup {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* На мобільних робимо width: 100% */
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .popup {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    /* Якщо бажано, можна додати:
+       border-bottom-left-radius: 0;
+       border-bottom-right-radius: 0;
+       для "листка" знизу. */
+  }
+}
+
+/* Кнопка закриття (хрестик) */
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+    right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  background-color: rgba(237, 10, 10, 0);
+  transform: scale(0.9);
+}
+
+/* Текст у модалці (німецькою) */
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Селектор */
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
+}
+
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}

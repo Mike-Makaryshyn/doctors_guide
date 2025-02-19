@@ -1,0 +1,87 @@
+.tabContainer {
+    padding: 20px;
+  }
+  
+  .category {
+    margin-bottom: 30px;
+  }
+  
+  .categoryHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .categoryIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .categoryTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .entryRow {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .inputField {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 18px;
+    padding-right: 50px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
+    &:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+    }
+  
+    &:disabled {
+      background-color: #e0e0e0;
+      border-color: #bdbdbd;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+  
+  .toggleFieldButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  
+    &.disabledToggle {
+      background-color: #f44336;
+    }
+  
+    &:hover {
+      opacity: 0.9;
+    }
+  }

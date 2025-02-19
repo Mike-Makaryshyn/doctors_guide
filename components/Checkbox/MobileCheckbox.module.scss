@@ -1,0 +1,55 @@
+.mobileCheckbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  color: #013b6e;
+  margin: 1px;
+
+  .checkboxInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkboxIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;    /* Змінюй це значення для ширини */
+    height: 40px;   /* Змінюй це значення для висоти */
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 8px 8px 10px #dbdbdb, -8px -8px 10px #ffffff00;
+    font-size: 7px;  /* Це розмір тексту всередині */
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+
+  /* Стан після натискання (оновлені кольори) */
+  &.active .checkboxIcon {
+    background: #2a7c6f;  /* Новий фон */
+    box-shadow: inset -20px 20px 60px #24695e, inset 20px -20px 60px #308f80;  /* Нові тіні */
+    color: #ffffff; /* Білий колір тексту після активації */
+  }
+
+  /* Галочка з правильним позиціонуванням і прозорістю */
+  &.active .checkboxIcon::after {
+    content: '\2714'; /* Unicode галочки ✓ */
+    font-size: 22px; /* Збільшений розмір галочки */
+    color: rgba(0, 0, 0, 0.2); /* Збільшена видимість галочки */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    pointer-events: none;
+    opacity: 0.5; /* Зроблено галочку трохи яскравішою */
+    z-index: 0; /* Забезпечуємо правильне розташування позаду тексту */
+  }
+}

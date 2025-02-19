@@ -1,0 +1,41 @@
+/* src/components/DeferredCases/DeferredCasesCard.module.scss */
+
+.card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; /* Фіксована висота для картки */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caseTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.caseRegion {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.viewButton {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.viewButton:hover {
+  background-color: #0056b3;
+}

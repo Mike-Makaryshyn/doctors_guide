@@ -1,0 +1,279 @@
+/* Загальні змінні */
+:root {
+    --color-primary: #f9f9f9; /* Основний колір фону */
+    --color-secondary: #ffcccc; /* Спеціальний колір для елементів */
+    --color-border: #ddd; /* Колір для меж */
+    --color-text: #000; /* Основний колір тексту */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Тінь для всіх елементів */
+    --color-shadow-hover: rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
+    --border-radius: 10px; /* Заокруглені кути */
+    --icon-top: 5px; /* Відступ для іконки з верхнього боку */
+    --icon-right: 7px; /* Відступ для іконки з правого боку */
+    --icon-size: 40px;
+}
+
+/* Основний стиль плитки */
+.tile {
+    position: relative;
+    padding: 8px;
+    margin: 0;
+    border-radius: 10px;
+    background: rgba(251, 247, 247, 0.9);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #000;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(31, 38, 135, 0.5);
+    border-color: #1abc9c;
+}
+
+/* Вібрація плиток для мобільних пристроїв */
+@media (max-width: 768px) {
+    .tile {
+        animation: vibrate 1s ease-out;
+    }
+
+    /* Анімація вібрації */
+    @keyframes vibrate {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(5px);
+        }
+        75% {
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Ефект плитки при наведенні */
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.25rem 0.5rem var(--color-shadow-hover);
+}
+
+/* Стиль для плиткової іконки */
+.tile-icon-container {
+    position: absolute;
+    top: var(--icon-top);
+    right: var(--icon-right);
+    z-index: 10;
+}
+
+.tile-header {
+    position: absolute;
+    right: -6px;
+    top: -5px;
+}
+
+.tile-icon {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+    position: absolute;
+    top: var(--icon-top);
+    right: var(--icon-right);
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Анімація при наведенні на іконку */
+.tile-icon:hover {
+    transform: scale(1.2);
+    color: #1abc9c;
+}
+
+/* Заголовок плитки */
+.tile-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Контейнер для тексту плитки */
+.personal-data {
+    position: relative;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Список для плитки */
+.tile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tile-list li {
+    margin-bottom: 5px;
+}
+
+/* Стиль для спеціальної плитки (Zusammenfassung) */
+/* Стиль для спеціальної плитки (Zusammenfassung) */
+.zusammenfassung {
+    background-color: #bc1515;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    text-align: center;
+    width: 90%; /* Розширено для відповідності */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px; /* Регулюємо висоту, щоб відповідало вигляду */
+}
+.blurred-text {
+    color: #aaa; /* Сірий колір для менш помітного тексту */
+    font-style: italic; /* Курсив для виділення */
+}
+/* Текст всередині Zusammenfassung */
+.zusammenfassung p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Встановлюємо відступи, щоб текст був по центру */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Анімація при наведенні на Zusammenfassung */
+.zusammenfassung:hover {
+    background-color: #9d1212; /* Темніший відтінок при наведенні */
+}
+
+/* src/pages/FSPFormularPage/components/TileContainer.module.scss */
+
+/* Інші стилі */
+
+/* Стиль для patient-questions */
+.patient-questions {
+    background-color: #007bff; /* Виберіть відповідний колір */
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    text-align: center;
+    width: 90%; /* Розширено для відповідності */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px; /* Регулюємо висоту, щоб відповідало вигляду */
+    transition: all 0.3s ease;
+}
+
+/* Текст всередині patient-questions */
+.patient-questions p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Встановлюємо відступи, щоб текст був по центру */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Анімація при наведенні на patient-questions */
+.patient-questions:hover {
+    background-color: #0056b3; /* Темніший відтінок при наведенні */
+}
+
+/* Інші стилі */
+.patientQuestions { /* Залишаємо для сумісності, якщо використовується в коді */
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+}
+
+.status-icon {
+    margin-left: 8px;
+}
+
+/* Стиль для блока examiner-questions */
+.examiner-questions {
+    background-color: #013b6e; /* Синій фон */
+    width: 90%; /* Ширина контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px; /* Adjust height as needed to match Zusammenfassung */
+    margin: 10px auto; /* Центруємо, додаємо margin-top та margin-bottom */
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
+    transition: all 0.3s ease;
+}
+
+/* Текст всередині examiner-questions */
+.examiner-text {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Анімація при наведенні на examiner-text */
+.examiner-questions:hover {
+    background-color: #013b6e;
+}
+
+/* Адаптивність для великих екранів */
+@media (min-width: 768px) {
+    .zusammenfassung {
+        width: 90%;
+    }
+}
+
+/* Адаптивність для маленьких екранів */
+@media (max-width: 768px) {
+    .tile {
+        padding: 0.5rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .tile-icon-container {
+        top: 6px;
+        right: 7px;
+    }
+
+    .tile-title {
+        font-size: 1rem;
+    }
+}

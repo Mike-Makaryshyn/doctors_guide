@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.App {
+   margin-top: 70px;
+}
+
+.flex {
+   display: flex;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Встановлюємо фон для всього тіла сторінки */
+}
+.flexBt {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.upcase {
+   text-transform: uppercase;
+}
+
+.firstPageImageBlock {
+   height: 40vh;
+   width: 100%;
+   background: url("./assets/first_page_bg.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 50% 50%;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.firstPageContent {
+   background-color: #2a7c6f;
+   position: relative;
+   top: 17vh;
+   padding: 20px 50px !important;
+}
+
+@media screen and (max-width: 600px) {
+   .page {
+      margin-top: 130px;
+   }
+
+   .page2 {
+      margin-top: 150px;
+   }
+
+   .firstPageContent {
+      top: 5vh;
+      width: 80%;
+      border-radius: 5px;
+      padding: 15px !important;
+   }
+
+   h2 {
+      margin-top: 10px !important;
+   }
+}
+
+.main_menu__content {
+   margin-top: 150px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   min-height: calc(100vh - 500px);
+   background-color: #2a7c6f;
+   z-index: 100;
+}
+
+.main_menu_back {
+   margin-top: auto;
+   width: 35px;
+   height: 28px;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   left: 20px;
+   bottom: 0;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+   transition: all 0.2s ease;
+}
+
+a:hover  {
+   color: rgb(143, 186, 143);
+   text-decoration: underline;
+}

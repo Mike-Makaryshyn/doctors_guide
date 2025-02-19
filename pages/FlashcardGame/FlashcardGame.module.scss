@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.flashcardGame {
+  padding: 60px 20px 20px; /* Більше місця згори для центрування */
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* AnimatedTitle – позиціювання керується CSS‑змінними */
+.animatedTitleWrapper {
+  position: absolute;
+  top: var(--title-top, 280%);
+  left: var(--title-left, 40%);
+  right: var(--title-right, auto);
+  transform: translate(-50%, -50%);
+  z-index: 5000;
+}
+
+.animatedTitleContainer {
+  display: inline-block;
+}
+
+/* Ключові кадри для кожного символу: обертання з переходом кольору з білого в фіолетовий */
+@keyframes letterFlip {
+  0% {
+    transform: rotateY(90deg);
+    color: #fff;
+    opacity: 0;
+  }
+  20% {
+    transform: rotateY(0deg);
+    color: #6a0dad; /* фіолетовий */
+    opacity: 1;
+  }
+  80% {
+    transform: rotateY(0deg);
+    color: #6a0dad;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(90deg);
+    color: #fff;
+    opacity: 0;
+  }
+}
+
+.animatedLetter {
+  display: inline-block;
+  font-size: 70px;
+  font-weight: bold;
+  margin-right: 3px;
+  animation: letterFlip 3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+/* На мобільних зменшуємо розмір заголовку та змінюємо позицію */
+@media (max-width: 600px) {
+  .animatedTitleWrapper {
+    top: var(--mobile-title-top, 180%); /* задайте через інструменти для мобільних */
+    left: var(--mobile-title-left, 50%);
+  }
+  .animatedLetter {
+    font-size: var(--mobile-title-font-size, 30px);
+  }
+}
+
+/* "Ang: x" – індикатор переглядів */
+.angCounter {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #013b6e;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  z-index: 3100;
+  font-size: 16px;
+  top: 80px;
+  left: 80px;
+}
+
+@media (max-width: 768px) {
+  .angCounter {
+    top: 65px;
+    left: 5px;
+  }
+}
+
+/* --- Button "Zurück" --- */
+.main_menu_back {
+  position: fixed;
+  bottom: 16px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.main_menu_back:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+.main_menu_back:active {
+  transform: scale(0.95);
+}
+
+/* Кнопка налаштувань */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3000;
+}
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Modal-Overlay */
+.modalOverlay {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop-Modal */
+.popupDesktop {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+  text-align: center;
+}
+
+/* Mobile-Modal */
+.popupMobile {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: popupBounce 0.6s ease-out;
+}
+
+@keyframes popupBounce {
+  0% { transform: translateY(100%); opacity: 0; }
+  60% { transform: translateY(-10px); opacity: 1; }
+  80% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Close-Button */
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+/* Заголовок та Start-Button */
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+.startButton {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #4caf50, #008000);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.startButton:hover {
+  background: linear-gradient(135deg, #66bb6a, #009900);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+.startButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ряд: Region, Filter, Kategorie */
+.row {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.regionColumn,
+.filterColumn,
+.categoryColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fieldLabel {
+  font-weight: 600;
+  font-size: 14px;
+  color: #013b6e;
+  margin-bottom: 5px;
+}
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+/* Region */
+.regionCell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Filter */
+.filterCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #013b6e;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Kategorie */
+.categoryCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #013b6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  pointer-events: none;
+}
+.categoryIcon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+}
+
+/* Unsинявий Select */
+.nativeSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Anzeige-Modus та Anzahl */
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.displayModeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.displayModeIcon {
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 12px;
+}
+.displayModeIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.questionCountIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+/* "Karte X von Y" */
+.progress {
+  margin: 0px 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .progress {
+    margin: 40px 0 45px;
+    font-size: 16px;
+  }
+}
+
+/* Навігація */
+.navigationButtons {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.navButton {
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+
+/* Картка: на десктопах – великий розмір, на мобільних – попередні стилі */
+.card {
+  width: 450px;
+  height: 280px;
+  margin: 0 auto;
+  margin-top: 100px;
+  perspective: 1000px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    min-height: 250px;
+    margin-top: 30px;
+  }
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Vorder- und Rückseite */
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cardFront h3,
+.cardBack p {
+  margin: 0;
+  word-wrap: break-word;
+  font-weight: bold;
+  font-size: 24px;
+  color: #013b6e;
+}
+.cardBack {
+  transform: rotateY(180deg);
+}
+.cardBack .infoButton {
+  left: 5px;
+  right: auto;
+}
+
+/* Іконки та кнопки */
+.iconsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.iconsContainer > * {
+  pointer-events: auto;
+}
+.statusIcons {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+/* "Gelernt" */
+.markCompletedButton {
+  background-color: #28a745;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 4px;
+}
+.markCompletedButton:hover {
+  background-color: #218838;
+}
+
+/* "Pausiert" */
+.deferButton {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.deferButton:hover {
+  background-color: #ffb000;
+}
+
+/* Info-Button */
+.infoButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+}
+.infoButton:hover {
+  transform: scale(1.1);
+  background-color: rgba(76, 175, 79, 0);
+}
+
+/* Статуси */
+.learned {
+  background-color: #4caf50 !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.paused {
+  background-color: #ff9800 !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.learned .cardFront,
+.learned .cardBack {
+  background-color: #4caf50 !important;
+}
+.paused .cardFront,
+.paused .cardBack {
+  background-color: #ff9800 !important;
+}
+
+/* Для мобільних */
+@media (max-width: 768px) {
+  .cardInner.flipped .iconsContainer {
+    display: none;
+  }
+}

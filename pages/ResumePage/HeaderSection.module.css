@@ -1,0 +1,73 @@
+/* Загальний контейнер для секції */
+.headerSection {
+  margin-bottom: 30px;
+  padding: 20px; /* Додано відступ, як в інших секціях */
+}
+
+/* Заголовок */
+.subheader {
+  font-size: 1.5em;
+  margin-bottom: 50px; /* Збільшено margin-bottom */
+  font-weight: 600;
+  color: #333;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+/* Форма */
+.entriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Ряд полів */
+.entryRow {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Поля вводу */
+.descriptionCell {
+  flex: 1;
+}
+
+.fullWidthCell {
+  flex: 1;
+  width: 100%;
+}
+
+/* Стилі для Input Полів */
+.inputField {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 
+    6px 6px 12px rgba(19, 57, 51, 0.5),
+    -6px -6px 12px rgba(65, 191, 171, 0.5);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: 
+    box-shadow 0.3s ease, 
+    border-radius 0.3s ease,
+    transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Стилі при фокусі */
+.inputField:focus {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* Стилі для плейсхолдерів */
+.inputField::placeholder {
+  color: #a9a9a9;
+  font-style: italic;
+}

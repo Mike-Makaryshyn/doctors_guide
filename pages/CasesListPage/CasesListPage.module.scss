@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Button "Einstellungen" (links unten) */
+.bottomControls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Button "Share" (rechts unten) */
+.bottomRightShare {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.shareRoundButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.shareRoundButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Spinner */
+.spinnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  --size-of-spinner: 50px;
+  --spinner-border-width: 4px;
+  --spinner-color: #08c18a;
+  --circle-color: #8bc34a24;
+  --speed-of-animation: 2s;
+  --scale: 1.3;
+  width: var(--size-of-spinner);
+  height: var(--size-of-spinner);
+  background: var(--circle-color);
+  border-radius: 50%;
+  position: relative;
+}
+.spinner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  border: var(--spinner-border-width) solid var(--spinner-color);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: spinny var(--speed-of-animation) linear infinite;
+}
+
+@keyframes spinny {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(var(--scale));
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Modal "Einstellungen" */
+.settingsModal {
+  position: fixed;
+  bottom: 80px;
+  left: 65px;
+  width: 260px;
+  background-color: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Schließen-Button bleibt rot */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #da1818; /* Rot */
+  color: #f9f9f9;
+  cursor: pointer;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keine Farbänderung auf Hover (bleibt rot) */
+.closeButton:hover {
+  background-color: #da1818;
+}
+
+/* Inhalt des Modals */
+.settingsContent {
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Akkordeon */
+.accordionSection {
+  margin-bottom: 10px;
+}
+
+.accordionHeader {
+  background-color: #4caf50;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+
+  /* Neu: Weißer Text für "Local / Online Fälle", "Sammlungen", "Meine Fälle" */
+  color: #fff;
+}
+
+.accordionHeader:hover {
+  background-color: #4caf50;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  margin-bottom: 8px;
+}
+.accordionContent.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Select "Region" */
+.regionSelect {
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Toggle Local/Online bleibt unverändert */
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.toggleSwitch {
+  position: relative;
+  width: 40px;
+  height: 24px;
+}
+.toggleInput {
+  display: none;
+}
+.toggleLabel {
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 24px;
+  background-color: #999;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.toggleLabel::before {
+  content: "";
+  position: absolute;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  top: 2px; left: 2px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.toggleInput:checked + .toggleLabel {
+  background-color: #4caf50;
+}
+.toggleInput:checked + .toggleLabel::before {
+  transform: translateX(16px);
+}
+
+/* Tiles (Kacheln) */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  /* Hier anpassen, um z.B. mittig auszurichten:
+     Wenn du "flex-start" willst, nimm: justify-content: flex-start;
+     Wenn du lieber zentriert willst, nimm: justify-content: center; */
+  justify-content: center; 
+}
+
+.tile {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 250px;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Erledigt / Verschoben */
+.completed {
+  background-color: #4caf50;
+  color: #fff;
+}
+.deferred {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+/* Buttons rechts oben */
+.actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #04AA6D;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bei Hover nicht ins Grüne wechseln, sondern je nach Button-Farbe */
+.button:hover {
+  /* Standard-Hover für alle Buttons (z.B. #039E5D) */
+  background-color: #039E5D;
+}
+
+/* "Erledigt"-Button: Grün */
+.markCompletedButton {
+  background-color: #28a745;
+}
+.markCompletedButton.active {
+  background-color: #218838;
+}
+
+/* "Später"-Button: Orange */
+.deferButton {
+  background-color: #ffc107;
+}
+
+/* HIER: Hover für deferButton => Orange bleiben */
+.deferButton:hover {
+  background-color: #ffb000; /* oder was du als orange möchtest */
+}
+.deferButton.active {
+  background-color: #e0a800;
+}
+.deferButton.active:hover {
+  background-color: #d19400; /* etwas dunkler, optional */
+}
+
+/* Edit / Delete */
+.editButton,
+.deleteButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.deleteButton {
+  background-color: #e74c3c;
+}
+.deleteButton:hover {
+  background-color: #d62c1a;
+}
+
+/* Überschrift in der Kachel */
+.tileHeader {
+  font-size: 20px;
+  color: #013b6e;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  text-align: left;
+  word-wrap: break-word;
+  flex-grow: 1;
+}
+
+/* Autor-Kacheln */
+.authorTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px;
+}
+
+/* “+” Tile */
+.addNewTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* "Zurück"-Button */
+.arrowButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: #fffbfb;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.arrowButton:hover {
+  background-color: #4caf50;
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .settingsModal {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    border-radius: 12px 12px 0 0;
+    overflow-y: auto;
+  }
+  .bottomRightShare {
+    right: 20px;
+    bottom: 80px;
+  }
+}

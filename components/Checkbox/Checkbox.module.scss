@@ -1,0 +1,92 @@
+/* src/components/Checkbox/Checkbox.module.scss */
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px; /* Відстань між чекбоксом та текстом */
+  color: #013b6e;
+  font-size: 16px;
+  user-select: none;
+  transition: opacity 0.3s;
+
+  /* Відображення тексту справа */
+  &.labelRight {
+    flex-direction: row-reverse;
+  }
+
+  /* Додаткові стилі для мобільних */
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.checkboxInput {
+  display: none; /* Сховати стандартний чекбокс */
+}
+
+.checkboxCustom {
+  border-radius: 6px; /* Зменшено з 10px до ~35% */
+  background: #ffffff;
+  box-shadow: 10px 10px 20px #8c8c8c,
+              -10px -10px 20px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px; /* Зменшено з 60px на ~35% */
+  height: 39px; /* Зменшено з 60px на ~35% */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+  position: relative;
+
+  svg {
+    width: 45%; /* Зменшено з 50% */
+    height: 45%; /* Зменшено з 50% */
+    transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+    fill: #8c8c8c00; /* Початковий колір іконки */
+  }
+
+  /* Зміна стилів при виборі чекбоксу */
+  .checkboxInput:checked + & {
+    box-shadow: inset 10px 10px 20px #ffffff,
+                inset -10px -10px 20px #ffffff;
+
+    svg {
+      fill: #4caf50; /* Зелений колір при вибраному чекбоксі */
+      transform: scale(1.8); /* Збільшення розміру іконки до приблизно 90% контейнера */
+    }
+  }
+
+  /* Зміна тіні при наведенні */
+  &:hover {
+    box-shadow: 10px 10px 20px #a0a0a0,
+                -10px -10px 20px #f0f0f0;
+  }
+
+  /* Додаткові стилі для мобільних */
+  @media (max-width: 768px) {
+    width: 52px; /* Зменшено з 80px на ~35% */
+    height: 52px; /* Зменшено з 80px на ~35% */
+
+    svg {
+      width: 45%; /* Зменшено з 50% */
+      height: 45%; /* Зменшено з 50% */
+    }
+
+    .checkboxInput:checked + & {
+      svg {
+        transform: scale(1.8); /* Збільшення розміру для мобільних */
+      }
+    }
+  }
+}
+
+.checkboxText {
+  font-size: 16px;
+  color: inherit; /* Спадкує колір від Label */
+
+  /* Додаткові стилі для мобільних */
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}

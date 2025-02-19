@@ -1,0 +1,41 @@
+/* src/components/CongratsModal/CongratsModal.module.scss */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a7c6f;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #1e5a48;
+      }
+    }
+  }

@@ -1,0 +1,210 @@
+/* Загальні стилі контейнера */
+.container {
+  position: relative;
+  padding-bottom: 60px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Горизонтальний контейнер для меню секцій */
+.iconBar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* Видаляємо white-space: nowrap – flex-контейнер і так не переносить елементи */
+  position: relative;
+}
+
+.iconBar::-webkit-scrollbar {
+  display: none;
+}
+.tutorialButton {
+  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+  top: 60px; /* Відступ від верхнього краю */
+  right: 15px; /* Відступ від правого краю */
+  width: 45px; /* Трохи більша кнопка */
+  height: 45px;
+  background: none; /* Видаляємо фон у звичайному стані */
+  border-radius: 50%; /* Робимо кнопку круглою */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none; /* Прибираємо рамку */
+  box-shadow: none; /* Прибираємо тіні */
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out; /* Додаємо анімацію */
+
+  /* Стилі для SVG */
+  svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ededed; /* Сірий контур */
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* Коли наводимо мишку */
+  &:hover {
+    transform: scale(1.1); /* Легке збільшення */
+    background: #4caf4f00; /* Зелений фон */
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+/* Стилі для кожного елемента меню */
+.iconContainer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transform-origin: center center;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+/* Неактивний елемент має стандартний розмір */
+.inactive {
+  opacity: 0.6;
+  transform: scale(1);
+}
+
+/* Активний елемент (в центрі) збільшується та має менший шрифт для підпису */
+.active {
+  transform: scale(1.5) translateY(-10px);
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Стилі для самої іконки */
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Підпис під іконкою */
+.iconLabel {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Для активного елемента зменшуємо розмір шрифту підпису, щоб текст вміщувався */
+.iconContainer.active .iconLabel {
+  font-size: 10px;
+}
+
+/* Стилі для навігаційних кнопок */
+.navButtonContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 12; 
+}
+
+.navButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.navButton:hover {
+  opacity: 1;
+}
+
+/* Стилі для завантаження */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+/* Додаткові стилі для адаптації на мобільних пристроях */
+@media (max-width: 600px) {
+  .iconBar {
+    gap: 30px; /* Збільшений інтервал між іконками */
+    justify-content: flex-start; /* Вирівнювання іконок зліва */
+    overflow-x: auto; /* Увімкнення горизонтального скролінгу */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Додаємо плавний скрол */
+  }
+
+  .iconBar::-webkit-scrollbar {
+    display: none; /* Приховування скролбару для естетичності */
+  }
+
+  .iconContainer {
+    flex: 0 0 auto; /* Вимикаємо автоматичне розтягування елементів */
+    min-width: 100px; /* Фіксована мінімальна ширина для кращої видимості */
+    scroll-snap-align: center; /* Автоматичне вирівнювання по центру при скролінгу */
+  }
+
+  .icon {
+    width: 50px; /* Збільшений розмір іконок */
+    height: 50px;
+  }
+
+  .iconLabel {
+    font-size: 12px; /* Трохи більший шрифт для підписів */
+    margin-top: 8px;  /* Більший відступ між іконкою та підписом */
+  }
+}
+/* Іконка, коли секція неактивна (зеленуватий фільтр) */
+.iconContainer.inactive .icon {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(35%) saturate(400%) hue-rotate(85deg) brightness(95%) contrast(90%);
+}
+
+/* Іконка, коли секція активна (вимкнути фільтр) */
+.iconContainer.active .icon {
+  filter: none;
+}
+/* Стилі за замовчуванням (десктоп) */
+.tutorialButton {
+  position: absolute;
+  top: -10px;       /* Відступ від верхнього краю */
+  right: -5px;     /* Відступ від правого краю */
+  z-index: 1;   /* Високий z-index, щоб бути поверх інших елементів */
+}
+
+/* Мобільна версія */
+@media (max-width: 600px) {
+  .tutorialButton {
+    /* Якщо IconBar має фіксоване позиціонування, нам потрібно врахувати його висоту */
+    /* Наприклад, якщо IconBar має висоту 60px, то задаємо top: 60px або трохи більше, щоб додати відступ */
+    position: absolute;
+    top: -22px;
+    right: -7px;
+    /* Встановлюємо нижчий z-index, ніж у IconBar, щоб під час скролінгу IconBar накладався поверх */
+    z-index: 1;
+  }
+}
+.printButton {
+  /* Якщо кнопка знаходиться всередині .navButtonContainer, її z-index може наслідуватись.
+     Але можна явно задати, щоб переконатись: */
+  position: relative;
+  z-index: 15;
+}

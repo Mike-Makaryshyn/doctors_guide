@@ -1,0 +1,358 @@
+/* src/pages/ResumePage/AktuellSection.module.css */
+
+/* Загальний контейнер */
+.aktuellSection {
+  margin-bottom: 30px;
+  overflow: visible; /* Для десктопа */
+  position: relative;
+  padding: 20px; /* Додає відступи всередині секції */
+}
+
+
+
+/* Заголовок */
+.subheader {
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #333;
+  padding-left: 20px; 
+  padding-top: 10px; 
+}
+
+/* Контейнер форми */
+.entriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Контейнер одного запису */
+.entryRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  position: relative; /* Для абсолютного позиціювання мобільних кнопок */
+}
+
+/* Поле дати */
+.dateCell {
+  flex: 2.25;
+  min-width: 300px; 
+  position: relative; 
+}
+
+/* Поле опису */
+.descriptionCell {
+  flex: 6.75; 
+  min-width: 600px; 
+  position: relative; 
+}
+
+/* Внутрішній контейнер (дата+опис) */
+.inputWithInfo {
+  position: relative;
+}
+
+/* Поле вводу дати */
+.dateInput {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  padding: 15px 60px 15px 20px; 
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Поле опису */
+.inputField,
+textarea.inputField {
+  width: 100%;
+  min-height: 50px;
+  resize: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  padding: 15px 20px; 
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  overflow: hidden; 
+  resize: none; 
+  min-height: 50px; 
+  max-height: 300px; 
+}
+
+/* Фокус */
+.inputField:focus,
+.dateInput:focus {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* Контейнер кнопок (десктоп) */
+.buttonContainer {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 1; 
+}
+
+/* Контейнер кнопки видалення для мобільних */
+.deleteButtonContainer {
+  display: none;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+}
+
+/* Кнопка додавання нового рядка */
+.addButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; 
+}
+
+/* Кнопки видалення */
+.deleteButton {
+  color: #dc3545;
+}
+.deleteButton:hover {
+  background-color: #dc3545;
+}
+
+/* suggestionButtonContainer – позиція лампочки */
+.suggestionButtonContainer {
+  position: absolute;
+  top: 39%;
+  right: -50px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .suggestionButtonContainer {
+    /* Наприклад, якщо ти хочеш зробити її ближче/вище/нижче */
+    top: -40px; 
+    right: -50px;
+    transform: translateY(0); 
+    /* Якщо треба, можеш додати інші стилі */
+  }
+}
+
+/* Стиль самої "кнопки" (IconButton) */
+.suggestionButton {
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.suggestionButton:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
+/* Ефект "світіння" лампочки */
+.glowingLightbulb {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+  color: #ffd700; 
+  font-size: 2rem; 
+}
+
+/* Анімація пульсу */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  }
+}
+
+/* Роздільник між рядками на мобільних */
+.mobileDivider {
+  display: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 10px;
+}
+
+@media (min-width: 769px) {
+  .deleteButton svg {
+    color: #ff0000 !important; 
+  }
+}
+
+/* Для мобільних: показати кнопку видалення */
+@media (max-width: 768px) {
+  .deleteButtonContainer {
+    display: flex !important;
+    position: absolute;
+    top: 61%;
+    right: -50px; 
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #ff0000 !important;
+  }
+
+  /* Приховати кнопку видалення (десктопну) */
+  .descriptionCell .buttonContainer {
+    display: none;
+  }
+
+  .deleteButtonContainer .deleteButton {
+    color: #ff0000 !important;
+  }
+
+  .mobileDivider {
+    display: block;
+  }
+
+  /* Міняти розмір флекс для мобільного */
+  .dateCell {
+    min-width: 100%;
+    flex: 1;
+  }
+
+  .descriptionCell {
+    min-width: 100%;
+    flex: 1;
+    margin-top: 10px;
+  }
+
+  /* Приховати Info Button в описі на мобільних */
+  .buttonContainer {
+    display: none;
+  }
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .descriptionCell {
+    min-width: 300px; 
+    flex: 3; 
+  }
+  .dateCell {
+    min-width: 337.5px; 
+    flex: 2.25; 
+  }
+}
+
+/* Модальне вікно */
+.customDialog {
+  max-width: 400px;
+  width: 90%;
+  overflow-x: hidden; /* забороняємо горизонтальний скрол */
+  overflow-y: auto;
+  border-radius: 50px;
+  padding: 0; 
+  margin: 0; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+}
+
+/* Список підказок */
+.dialogList {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.dialogText {
+  font-size: 1rem;
+  padding: 10px;
+  color: #013b6e;
+  transition: color 0.2s ease-in-out;
+}
+.dialogText:hover {
+  color: #013b6e;
+  font-weight: bold;
+}
+
+/* Кнопка закриття модалки */
+.closseButton {
+  position: absolute;
+  top: -2px;
+  right: -280px;
+  background: none !important;
+  border: none;
+  font-size: 1.5rem;
+  color: #ff0000 !important; 
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease, color 0.3s ease; 
+}
+
+.closseButton:hover {
+  transform: scale(1.2);
+  color: #c30000 !important; 
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.MuiDialog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+/* Бекдроп, якщо треба прозорий */
+.noBackdrop .MuiBackdrop-root {
+  background-color: transparent !important;
+}
+
+.closseButton .MuiTouchRipple-root {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .closseButton {
+      top: -7px;
+      right: -149px;
+      font-size: 1.4rem;
+    }
+
+  .customDialog {
+    width: 95%; /* Більше місця на мобільних */
+    max-width: 350px;
+  }
+}

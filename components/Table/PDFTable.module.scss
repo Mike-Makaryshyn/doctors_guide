@@ -1,0 +1,216 @@
+/* src/components/Table/PDFTable.module.scss */
+
+/* Модальне тло */
+.pdfModal {
+  position: fixed;
+  bottom: 35px;
+  right: 45px;
+  width: 330px; /* Збільшена ширина для десктопа */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 9999;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+@keyframes colorShift {
+    0% { color: #ff0000; }
+    50% { color: #ff6666; }
+    100% { color: #ff0000; }
+}
+
+.pdfIcon {
+    animation: colorShift 1.5s infinite ease-in-out;
+}
+
+.viewIcon {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: row !important;  /* Забезпечує горизонтальне розташування */
+        justify-content: center; /* Вирівнювання по центру */
+        align-items: center;
+        gap: 60px; /* Відстань між іконками */
+      }
+  .pdfModal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .modalContent {
+    padding: 15px; /* Зменшені відступи для мобільних */
+  }
+}
+
+.modalContent {
+  background-color: #fff; /* Фон білий */
+  color: #013b6e; /* Темний текст */
+  padding: 20px; /* Зменшені внутрішні відступи */
+  border-radius: 8px;
+  position: relative;
+  width: 100%; /* Використовуємо всю ширину контейнера */
+  max-width: 100%; /* Прибираємо обмеження ширини */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Оновлений стиль кнопки закриття */
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрування по центру */
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 8px 8px 16px #696969, -8px -8px 16px #ffffff;
+    padding: 10px;
+    width: 50px; /* Уніфікований розмір для всіх кнопок */
+    height: 50px;
+
+    &:hover {
+        box-shadow: 5px 5px 10px #696969, -5px -5px 10px #ffffff;
+    }
+
+    /* Центрування іконки всередині */
+    svg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px; /* Коригування розміру */
+        padding-left: 9px;
+    }
+}
+
+/* Стиль для кнопок */
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* або center для центрування */
+    align-items: center;
+    gap: 15px;
+    padding-left: 0px;
+}
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #013b6e;
+    text-align: left; /* Вирівнювання тексту */
+    margin-bottom: 25px;
+    padding-left: 0px;
+}
+.languageSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .languageContainer {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: #FFFFFF;
+      box-shadow: 8px 8px 16px #696969, -8px -8px 16px #ffffff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative; /* Змінено з absolute на relative */
+    }
+
+    select {
+        position: absolute;
+        opacity: 0;
+        width: 100%; /* Ширина на весь контейнер */
+        height: 100%; /* Висота на весь контейнер */
+        cursor: pointer;
+        left: 0; /* Змінено з відносного позиціонування */
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        gap: 60px;
+    }
+}
+
+
+/* Оновлений стиль кнопки без анімації */
+.roundButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Розмір адаптований під текст */
+  border: none;
+  border-radius: 10px; /* Легке округлення для гарного вигляду */
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #013b6e;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #f3f3f300; /* Злегка змінюємо фон при наведенні */
+  }
+}
+
+/* Контейнер для вибору мови */
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  select {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 8px 8px 16px #696969, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 4px 4px 8px #696969, -4px -4px 8px #ffffff;
+    }
+  }
+}
+
+.selectContainer label {
+  margin-bottom: 8px;
+}
+
+/* Покращення стилю select */
+#pdfLangSelect {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #ff0000;
+  background-color: #fff;
+}
+.closeButton {
+    position: absolute;
+    top: -29px;
+    right: -29px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fb0000;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0); /* Додавання фону при наведенні */
+        border-radius: 50%;
+        transform: scale(1.1);
+    }
+}
