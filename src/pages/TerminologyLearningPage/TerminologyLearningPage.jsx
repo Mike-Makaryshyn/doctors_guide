@@ -5,7 +5,8 @@ import styles from "./TerminologyLearningPage.module.scss";
 import flashcardBg from "../../assets/flashcard-bg.jpg";
 import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
-import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg"; // додайте відповідне зображення
+import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
+import translatorBg from "../../assets/translator-bg.jpg"; // Нове зображення для плитки перекладачів
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
 
@@ -70,6 +71,19 @@ const TerminologyLearningPage = () => {
               </div>
             </div>
           </Link>
+
+          {/* Нова плитка: Translator (перекладачів) */}
+          <Link
+  to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
+  className={styles.gameTile}
+  style={{ backgroundImage: `url(${translatorBg})` }}
+>
+  <div className={styles.innerTile}>
+    <div className={styles.rockingCard}>
+      <div className={styles.tileTitle}>Elective Language Game</div>
+    </div>
+  </div>
+</Link>
         </div>
       </div>
     </MainLayout>

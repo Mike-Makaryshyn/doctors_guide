@@ -93,5 +93,7 @@ export const pathList = {
   fill_in_blank: {
     path: "/fill-in-blank-game",
   },
-  
+  elective_language: {
+    path: "/elective-language-game",
+  },
 };

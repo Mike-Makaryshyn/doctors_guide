@@ -109,6 +109,9 @@ const ProtectedRoute = React.lazy(() =>
 const DataCollectionPage = React.lazy(() =>
   import("../pages/DataCollectionPage/DataCollectionPage")
 );
+const ElectiveLanguageGame = React.lazy(() =>
+  import("../pages/ElectiveLanguageGame/ElectiveLanguageGame")
+);
 
 const FillInBlankGame = React.lazy(() =>
   import("../pages/FillInBlankGame/FillInBlankGame.jsx")
@@ -132,6 +135,10 @@ export default function Routers() {
         <Route
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
+        />
+        <Route
+          path="/elective-language-game"
+          element={<ElectiveLanguageGame />}
         />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
