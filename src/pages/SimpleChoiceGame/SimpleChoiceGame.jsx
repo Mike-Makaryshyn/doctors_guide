@@ -16,6 +16,7 @@ import {
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
+import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
 
 // Abkürzungen für Regionen
 const regionAbbreviations = {
@@ -60,7 +61,7 @@ const SimpleChoiceGame = () => {
   const { selectedRegion } = useGetGlobalInfo();
   const { termStatuses, toggleStatus } = useTermStatus();
 
-  // Spiel-Einstellungen
+  // Стан гри та налаштувань
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -69,30 +70,35 @@ const SimpleChoiceGame = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Spielzustand
+  // Гра
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Zähler für korrekte Antworten und Anzeigen
+  // Рахівники для результатів
   const [correctCounts, setCorrectCounts] = useState({});
   const [shownCounts, setShownCounts] = useState({});
 
-  // Spielergebnisse
+  // Результати гри
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Region aktualisieren
+  // Стан туторіалу: запускаємо, якщо ще не пройдено
+  const [showTutorial, setShowTutorial] = useState(
+    localStorage.getItem("simpleChoiceGameTutorialCompleted") !== "true"
+  );
+
+  // Оновлення регіону
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  // Fragen laden
+  // Завантаження питань
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
@@ -156,7 +162,7 @@ const SimpleChoiceGame = () => {
     setQuestionsCompleted({});
   };
 
-  // Beim Schließen der Einstellungen wird das Spiel gestartet
+  // При закритті налаштувань запускаємо гру
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -179,7 +185,7 @@ const SimpleChoiceGame = () => {
     setCorrectCounts({});
   };
 
-  // Spiel beenden (Finish)
+  // Завершення гри
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -190,7 +196,7 @@ const SimpleChoiceGame = () => {
     setGameFinished(true);
   };
 
-  // Verarbeitung der Antwort
+  // Обробка вибору відповіді
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
     const { richtigeAntwort, id } = questions[currentIndex];
@@ -226,7 +232,7 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Navigation – nächster Button prüft, ob aktuelle Frage beantwortet ist
+  // Навігація між питаннями
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -260,7 +266,6 @@ const SimpleChoiceGame = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
-        {/* Schließ-Button im Ergebnismodal */}
         <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
           ×
         </button>
@@ -298,7 +303,7 @@ const SimpleChoiceGame = () => {
           &#8592;
         </button>
 
-        {/* Wenn Einstellungen geöffnet sind */}
+        {/* Якщо налаштування відкриті */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
@@ -309,7 +314,7 @@ const SimpleChoiceGame = () => {
               <div className={styles.row}>
                 <div className={styles.regionColumn}>
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper}>
+                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select className={styles.nativeSelect} value={region} onChange={(e) => setRegion(e.target.value)}>
                       <option value="Alle">Alle</option>
@@ -321,7 +326,7 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.filterColumn}>
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
@@ -336,7 +341,7 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.categoryColumn}>
+                <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -354,15 +359,18 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.editColumn}>
-                  <label className={styles.fieldLabel}>Bearbeiten</label>
-                  <button className={`${styles.editToggleButton} ${styles.myBearByteButton} ${allowEdit ? styles.selectedEdit : ""}`} onClick={() => setAllowEdit(!allowEdit)}>
-                    <FaPen />
-                  </button>
-                </div>
+                <div className={styles.editColumn} data-tutorial="editToggleButton">
+  <label className={styles.fieldLabel}>Bearbeiten</label>
+  <button
+    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${allowEdit ? styles.selectedEdit : ""}`}
+    onClick={() => setAllowEdit(!allowEdit)}
+  >
+    <FaPen />
+  </button>
+</div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer}>
+                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
@@ -375,7 +383,7 @@ const SimpleChoiceGame = () => {
                 </div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer}>
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
@@ -387,14 +395,39 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-              <button className={styles.startButton} onClick={handleStart}>
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Spielanzeige */}
+        {/* Кнопка туторіалу (SVG, позиціонована як у ApprobationPage, поза модальним вікном) */}
+        {settingsOpen && (
+          <button
+            data-tutorial="tutorialStartButton"
+            className={styles.tutorialButton}
+            onClick={() => setShowTutorial(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="30"
+              height="30"
+              fill="none"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+            </svg>
+          </button>
+        )}
+
+        {/* Інтерфейс гри */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -407,7 +440,6 @@ const SimpleChoiceGame = () => {
                   {aktuelleFrage?.optionen.map((option, idx) => {
                     const { richtigeAntwort } = aktuelleFrage;
                     const isCompleted = frageIstAbgeschlossen;
-
                     if (!allowEdit) {
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
@@ -487,14 +519,14 @@ const SimpleChoiceGame = () => {
           </>
         )}
 
-        {/* Ergebnismodal */}
+        {/* Модаль з результатами */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             {ErgebnisseAnzeigen()}
           </div>
         )}
 
-        {/* Einstellungen-Button – beim Klick werden auch Ergebnisse ausgeblendet */}
+        {/* Кнопка налаштувань (відкриває модальне вікно) */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -507,6 +539,11 @@ const SimpleChoiceGame = () => {
               <FaCog />
             </button>
           </div>
+        )}
+
+        {/* Рендер туторіалу */}
+        {showTutorial && (
+          <SimpleChoiceGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
         )}
       </div>
     </MainLayout>
