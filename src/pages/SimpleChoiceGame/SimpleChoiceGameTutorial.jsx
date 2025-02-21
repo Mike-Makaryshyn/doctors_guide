@@ -15,11 +15,19 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
   useEffect(() => {
     const stepsData = [
       {
+        // Вступний крок – не прив'язаний до жодного елементу
+        target: "body",
+        // Для цього кроку використовується dangerouslySetInnerHTML, щоб обробити теги <strong>
+        content: <span dangerouslySetInnerHTML={{ __html: stepsContent.intro }} />,
+        placement: "center",
+        disableBeacon: true,
+      },
+      {
         target: '[data-tutorial="regionSelect"]',
         content:
           stepsContent.regionSelect ||
           "Select your desired region. This is automatically set based on your preferences.",
-        placement: "bottom",
+        placement: "top",
         disableBeacon: true,
       },
       {
@@ -27,7 +35,7 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
         content:
           stepsContent.filterColumn ||
           "Here you can choose the filter: learned, unlearned or paused (deferred).",
-        placement: "bottom",
+        placement: "top",
         disableBeacon: true,
       },
       {
@@ -35,22 +43,22 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
         content:
           stepsContent.categorySelect ||
           "Choose the category of medical terms. By default, 'All' is selected.",
-        placement: "bottom",
+        placement: "top",
         disableBeacon: true,
       },
       {
         target: '[data-tutorial="editToggleButton"]',
         content:
           stepsContent.editToggleButton ||
-          "Activate the edit mode to modify terms directly.",
-        placement: "bottom",
+          "When edit mode is activated, you can modify your answer after an incorrect response.",
+        placement: "top",
         disableBeacon: true,
       },
       {
         target: '[data-tutorial="displayModeContainer"]',
         content:
           stepsContent.displayMode ||
-          "Here you can choose the display mode: Lat→Ger, Ger→Lat or Mixed.",
+          "Here you can choose the language mode – whether to translate from Latin to German, from German to Latin, or use a mixed mode.",
         placement: "top",
         disableBeacon: true,
       },
@@ -66,7 +74,7 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
         target: '[data-tutorial="startButton"]',
         content:
           stepsContent.startButton ||
-          "Press Start to begin the game. The tutorial ends here.",
+          "Press Start to begin the game.",
         placement: "top",
         disableBeacon: true,
       },
@@ -93,7 +101,7 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
       scrollToFirstStep={true}
       scrollOffset={200}
       showSkipButton={true}
-      showCloseButton={false} // Кнопка закриття (close) завжди прихована
+      showCloseButton={false} // Кнопка закриття завжди прихована
       callback={handleJoyrideCallback}
       styles={{
         options: {
@@ -101,8 +109,8 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
           primaryColor: "#023c6f",
         },
         buttonClose: {
-            display: "none",
-          },
+          display: "none",
+        },
       }}
       locale={{
         back: tutorialTranslations[language]?.buttons?.back || "Back",

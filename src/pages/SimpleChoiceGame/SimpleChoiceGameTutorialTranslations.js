@@ -2,10 +2,12 @@ const tutorialTranslations = {
     currentLanguage: "en", // Значення за замовчуванням
     en: {
       steps: {
+        intro:
+          "Welcome to Simple Choice Game! In this game, you'll be presented with medical terms that you need to translate from Latin to German or from German to Latin. The terms appear randomly. <strong>If you answer correctly 5 times for a term, it will automatically be marked as learned.</strong> Enjoy the game!",
         regionSelect:
           "The region is set based on your preferences; however, you can change it here.",
         filterColumn:
-          "Here you can choose the filter: learned, unlearned, or paused (deferred).",
+          "Here you can choose the filter: learned, unlearned or paused (deferred).",
         categorySelect:
           "Choose the category of medical terms. By default, 'All' is selected.",
         editToggleButton:
@@ -27,6 +29,8 @@ const tutorialTranslations = {
     },
     de: {
       steps: {
+        intro:
+          "Willkommen beim Simple Choice Game! In diesem Spiel werden Ihnen medizinische Begriffe angezeigt, die Sie von Latein ins Deutsche oder umgekehrt übersetzen müssen. Die Begriffe erscheinen zufällig. <strong>Wenn Sie einen Begriff 5 Mal korrekt beantworten, wird er automatisch als gelernt markiert.</strong> Viel Spaß beim Spielen!",
         regionSelect:
           "Die Region wird basierend auf Ihren Einstellungen festgelegt; Sie können sie jedoch hier ändern.",
         filterColumn:
@@ -52,6 +56,8 @@ const tutorialTranslations = {
     },
     uk: {
       steps: {
+        intro:
+          "Ласкаво просимо до Simple Choice Game! У цій грі вам будуть представлені медичні терміни, які потрібно перекладати з латинської на німецьку або навпаки. Термін з’являється випадковим чином. <strong>Якщо ви відповісте правильно 5 разів на один термін, він автоматично буде позначений як вивчений.</strong> Бажаємо успіхів!",
         regionSelect:
           "Регіон встановлено за вашими налаштуваннями, але його можна змінити тут.",
         filterColumn:
@@ -61,7 +67,7 @@ const tutorialTranslations = {
         editToggleButton:
           "При активованому режимі редагування ви зможете змінити свою відповідь після неправильної відповіді.",
         displayMode:
-          "Тут ви можете обрати мовний режим – чи перекладати з латині на німецьку, з німецької на латинську, або використовувати змішаний режим.",
+          "Тут ви можете обрати мовний режим – чи перекладати з латині на німецьку, з німецької на латинську, чи використовувати змішаний режим.",
         questionCount:
           "Виберіть кількість питань, які будуть відображатися в грі.",
         startButton:
@@ -77,6 +83,8 @@ const tutorialTranslations = {
     },
     ru: {
       steps: {
+        intro:
+          "Добро пожаловать в Simple Choice Game! В этой игре вам будут представлены медицинские термины, которые необходимо переводить с латинского на немецкий или наоборот. Термины появляются случайным образом. <strong>Если вы правильно ответите 5 раз на один термин, он автоматически будет отмечен как изученный.</strong> Приятной игры!",
         regionSelect:
           "Регион устанавливается на основе ваших настроек, однако вы можете изменить его здесь.",
         filterColumn:
@@ -102,6 +110,8 @@ const tutorialTranslations = {
     },
     pl: {
       steps: {
+        intro:
+          "Witamy w Simple Choice Game! W tej grze losowo pojawią się terminy medyczne, które należy przetłumaczyć z łaciny na niemiecki lub z niemieckiego na łacinę. <strong>Jeśli odpowiesz poprawnie 5 razy na dany termin, zostanie on automatycznie oznaczony jako nauczony.</strong> Miłej zabawy!",
         regionSelect:
           "Region jest ustawiony na podstawie Twoich preferencji; jednak możesz go zmienić tutaj.",
         filterColumn:
@@ -111,7 +121,7 @@ const tutorialTranslations = {
         editToggleButton:
           "Gdy tryb edycji jest aktywny, możesz zmienić swoją odpowiedź po błędnej odpowiedzi.",
         displayMode:
-          "Tutaj możesz wybrać tryb językowy – czy tłumaczyć z łaciny na niemiecki, z niemieckiego na łacinę, czy użyć trybu mieszanych.",
+          "Tutaj możesz wybrać tryb językowy – tłumaczenie z łaciny na niemiecki, z niemieckiego na łacinę lub tryb mieszany.",
         questionCount:
           "Wybierz liczbę pytań, które mają być wyświetlane w grze.",
         startButton:
@@ -127,6 +137,8 @@ const tutorialTranslations = {
     },
     ar: {
       steps: {
+        intro:
+          "مرحبًا بك في Simple Choice Game! في هذه اللعبة ستظهر لك مصطلحات طبية تحتاج إلى ترجمتها من اللاتينية إلى الألمانية أو من الألمانية إلى اللاتينية. تظهر المصطلحات بشكل عشوائي. <strong>إذا أجبت بشكل صحيح 5 مرات على مصطلح ما، فسيتم تمييزه تلقائيًا على أنه متعلم.</strong> استمتع باللعبة!",
         regionSelect:
           "يتم تعيين المنطقة بناءً على إعداداتك؛ ومع ذلك، يمكنك تغييرها هنا.",
         filterColumn:
@@ -152,6 +164,8 @@ const tutorialTranslations = {
     },
     tr: {
       steps: {
+        intro:
+          "Simple Choice Game'e hoş geldiniz! Bu oyunda, tıbbi terimler rastgele karşınıza çıkacak ve bunları Latinceden Almancaya veya Almancadan Latince'ye çevireceksiniz. <strong>Bir terime 5 defa doğru cevap verirseniz, terim otomatik olarak öğrenilmiş olarak işaretlenecektir.</strong> İyi eğlenceler!",
         regionSelect:
           "Bölge, tercihleriniz doğrultusunda ayarlanır; ancak buradan değiştirebilirsiniz.",
         filterColumn:
@@ -161,7 +175,7 @@ const tutorialTranslations = {
         editToggleButton:
           "Düzenleme modu etkinleştirildiğinde, yanlış cevap verdikten sonra cevabınızı değiştirebilirsiniz.",
         displayMode:
-          "Burada dil modunu seçebilirsiniz – Latince’den Almanca’ya, Almanca’dan Latince’ye çeviri ya da karışık mod.",
+          "Burada dil modunu seçebilirsiniz – Latinceden Almancaya, Almancadan Latince'ye veya karışık mod.",
         questionCount:
           "Oyunda gösterilecek soru sayısını seçin.",
         startButton:
@@ -177,8 +191,10 @@ const tutorialTranslations = {
     },
     fr: {
       steps: {
+        intro:
+          "Bienvenue dans Simple Choice Game ! Dans ce jeu, vous verrez des termes médicaux que vous devez traduire du latin à l'allemand ou vice versa. Les termes apparaissent de manière aléatoire. <strong>Si vous répondez correctement 5 fois à un terme, il sera automatiquement marqué comme appris.</strong> Amusez-vous bien !",
         regionSelect:
-          "La région est définie en fonction de vos préférences; toutefois, vous pouvez la modifier ici.",
+          "La région est définie en fonction de vos préférences ; toutefois, vous pouvez la modifier ici.",
         filterColumn:
           "Ici, vous pouvez choisir le filtre : appris, non appris ou en pause (différé).",
         categorySelect:
@@ -186,7 +202,7 @@ const tutorialTranslations = {
         editToggleButton:
           "Lorsque le mode édition est activé, vous pouvez modifier votre réponse après une erreur.",
         displayMode:
-          "Ici, vous pouvez choisir le mode linguistique – que ce soit pour traduire du latin à l’allemand, de l’allemand au latin ou en mode mixte.",
+          "Ici, vous pouvez choisir le mode linguistique – traduire du latin à l’allemand, de l’allemand au latin ou en mode mixte.",
         questionCount:
           "Sélectionnez le nombre de questions à afficher dans le jeu.",
         startButton:
@@ -202,6 +218,8 @@ const tutorialTranslations = {
     },
     es: {
       steps: {
+        intro:
+          "¡Bienvenido a Simple Choice Game! En este juego se te presentarán términos médicos que deberás traducir del latín al alemán o viceversa. Los términos aparecen de forma aleatoria. <strong>Si respondes correctamente 5 veces a un término, se marcará automáticamente como aprendido.</strong> ¡Disfruta del juego!",
         regionSelect:
           "La región se establece según tus preferencias; sin embargo, puedes cambiarla aquí.",
         filterColumn:
