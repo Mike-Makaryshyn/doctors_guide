@@ -112,6 +112,9 @@ const DataCollectionPage = React.lazy(() =>
 const ElectiveLanguageGame = React.lazy(() =>
   import("../pages/ElectiveLanguageGame/ElectiveLanguageGame")
 );
+const RegionalChatsPage = React.lazy(() =>
+  import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
+);
 
 const FillInBlankGame = React.lazy(() =>
   import("../pages/FillInBlankGame/FillInBlankGame.jsx")
@@ -154,6 +157,10 @@ export default function Routers() {
           path={pathList.kenntnispruefung.path}
           element={<KenntnisPruefungPage />}
         />
+        <Route
+  path={pathList.regional_chats.path}
+  element={<RegionalChatsPage />}
+/>
         <Route path="/flashcard-game" element={<FlashcardGame />} />
         <Route
           path={pathList.exam_explanations.path}

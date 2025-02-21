@@ -96,4 +96,7 @@ export const pathList = {
   elective_language: {
     path: "/elective-language-game",
   },
+  regional_chats: {
+    path: "/regional-chats",
+  },
 };
