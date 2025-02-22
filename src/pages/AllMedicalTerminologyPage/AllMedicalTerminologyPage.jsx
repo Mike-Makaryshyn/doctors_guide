@@ -327,25 +327,27 @@ const AllMedicalTerminologyPage = () => {
                             term.de
                           )}
                         </p>
-                        <p className={styles.tileExplanation}>
-                          {translationLanguage !== "de" ? (
-                            <Tippy
-                              content={
-                                term[translationLanguage + "Explanation"] ||
-                                "Keine Übersetzung vorhanden"
-                              }
-                              trigger="click"
-                              interactive={true}
-                              placement="bottom"
-                            >
-                              <span className={styles.clickableCell}>
-                                {term.deExplanation}
-                              </span>
-                            </Tippy>
-                          ) : (
-                            term.deExplanation
-                          )}
-                        </p>
+                        {showDefinition && (
+  <p className={styles.tileExplanation}>
+    {translationLanguage !== "de" ? (
+      <Tippy
+        content={
+          term[translationLanguage + "Explanation"] ||
+          "Keine Übersetzung vorhanden"
+        }
+        trigger="click"
+        interactive={true}
+        placement="bottom"
+      >
+        <span className={styles.clickableCell}>
+          {term.deExplanation}
+        </span>
+      </Tippy>
+    ) : (
+      term.deExplanation
+    )}
+  </p>
+)}
                       </div>
                     );
                   })}

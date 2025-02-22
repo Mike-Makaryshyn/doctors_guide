@@ -2,7 +2,7 @@
 
 .allMedicalTerminologyPage {
   position: relative; /* Контент сторінки */
-  padding: 20px;
+  padding: 16px;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
@@ -369,12 +369,43 @@
   justify-content: center;
   overflow-x: hidden;
   padding: 10px;
+  box-sizing: border-box;
+  max-width: 100%; /* Додаємо обмеження ширини */
 }
 
 @media (max-width: 768px) {
   .tilesContainer {
     flex-direction: column;
     gap: 12px;
+    padding: 8px; /* Трохи зменшуємо падінг для мобільних */
+  }
+
+  /* Плитка */
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%; /* Важливо, щоб плитка не виходила за межі */
+    box-sizing: border-box;
+    padding: 16px; /* Зменшуємо падінг */
+    margin-bottom: 12px; /* Зменшуємо відступ */
+  }
+
+  /* Текст та заголовки в плитці */
+  .tileHeader {
+    font-size: 20px; /* Зменшуємо шрифт */
+  }
+
+  .tileDescription {
+    font-size: 14px; /* Зменшуємо шрифт */
+  }
+
+  .tileExplanation {
+    font-size: 13px; /* Зменшуємо шрифт */
+  }
+
+  /* Іконки */
+  .checkIcon,
+  .pauseIcon {
+    font-size: 14px; /* Зменшуємо розмір іконок */
   }
 }
 
@@ -385,6 +416,9 @@
   padding: 20px;
   margin-bottom: 16px;
   position: relative;
+  width: 100%; /* Забезпечуємо повну ширину */
+  max-width: 400px; /* Обмежуємо максимальну ширину */
+  box-sizing: border-box;
 }
 
 .learned {
