@@ -92,14 +92,17 @@ const AllMedicalTerminologyPage = () => {
   }, []);
 
   // Функції перемикання статусів із логуванням
+  // Тепер після перемикання одразу викликаємо flushChanges(), щоб дані відразу відправлялися у Firebase
   const toggleLearned = (id) => {
     console.log(`Перемикання статусу "learned" для term ${id}`);
     toggleStatus(id, "learned");
+    flushChanges();
   };
 
   const togglePaused = (id) => {
     console.log(`Перемикання статусу "paused" для term ${id}`);
     toggleStatus(id, "paused");
+    flushChanges();
   };
 
   // Фільтрація термінів

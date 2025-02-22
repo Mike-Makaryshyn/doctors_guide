@@ -59,7 +59,9 @@ const displayModeOptions = [
 const SimpleChoiceGame = () => {
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
-  const { termStatuses, toggleStatus } = useTermStatus();
+
+  // Беремо з контексту потрібні функції
+  const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
   // Стан гри та налаштувань
   const [settingsOpen, setSettingsOpen] = useState(true);
@@ -78,17 +80,16 @@ const SimpleChoiceGame = () => {
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
   // Рахівники для результатів
-  const [correctCounts, setCorrectCounts] = useState({});
+  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
+  const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [shownCounts, setShownCounts] = useState({});
 
   // Результати гри
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
-  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
-  const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Стан туторіалу: запускаємо, якщо ще не пройдено
+  // Туторіал
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("simpleChoiceGameTutorialCompleted") !== "true"
   );
@@ -101,15 +102,22 @@ const SimpleChoiceGame = () => {
   // Завантаження питань
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
-      const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
-      const matchesCategory = selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
-      const status = termStatuses[term.id] || "unlearned";
+      const matchesRegion =
+        region === "Alle" || (term.regions || []).includes(region);
+      const matchesCategory =
+        selectedCategory === "Alle" ||
+        (term.categories || []).includes(selectedCategory);
+      const status = termStatuses[term.id]?.status || "unlearned";
+
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+        return false;
+
       return matchesRegion && matchesCategory;
     });
 
+    // Сортуємо, щоб частіше показувати ті, що менше бачили
     gefilterteBegriffe.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
@@ -117,7 +125,10 @@ const SimpleChoiceGame = () => {
       return countA - countB;
     });
 
-    const ausgewählteBegriffe = questionCount === "all" ? gefilterteBegriffe : gefilterteBegriffe.slice(0, questionCount);
+    const ausgewählteBegriffe =
+      questionCount === "all"
+        ? gefilterteBegriffe
+        : gefilterteBegriffe.slice(0, questionCount);
 
     const neueShownCounts = { ...shownCounts };
     ausgewählteBegriffe.forEach((term) => {
@@ -138,20 +149,25 @@ const SimpleChoiceGame = () => {
         frageText = term.de;
         richtigeAntwort = term.lat;
       }
+
+      // 3 неправильні варіанти
       const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map((t) => (modus === "LatGerman" ? t.de : t.lat));
 
-      const optionen = [...falscheAntworten, richtigeAntwort].sort(() => Math.random() - 0.5);
+      // Змішуємо правильну + 3 неправильних
+      const optionen = [...falscheAntworten, richtigeAntwort].sort(
+        () => Math.random() - 0.5
+      );
 
       return {
         id: term.id,
         frage: frageText,
         richtigeAntwort,
         optionen,
-        term: term,
+        term,
       };
     });
 
@@ -162,7 +178,7 @@ const SimpleChoiceGame = () => {
     setQuestionsCompleted({});
   };
 
-  // При закритті налаштувань запускаємо гру
+  // При закритті налаштувань (натискаємо Start) – починаємо гру
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -170,7 +186,6 @@ const SimpleChoiceGame = () => {
       setGameStartTime(Date.now());
       setCorrectAnswerCount(0);
       setIncorrectAnswerCount(0);
-      setCorrectCounts({});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allowEdit, settingsOpen]);
@@ -182,10 +197,9 @@ const SimpleChoiceGame = () => {
     setGameFinished(false);
     setCorrectAnswerCount(0);
     setIncorrectAnswerCount(0);
-    setCorrectCounts({});
   };
 
-  // Завершення гри
+  // Завершення гри: тут викликаємо flushChanges, що одразу зберігає все у Firebase
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -194,6 +208,9 @@ const SimpleChoiceGame = () => {
     const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dauer);
     setGameFinished(true);
+
+    // Викликаємо flushChanges => saveChangesToFirebase()
+    flushChanges();
   };
 
   // Обробка вибору відповіді
@@ -204,6 +221,7 @@ const SimpleChoiceGame = () => {
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
+      // Режим "редагування": одразу позначаємо "learned" якщо правильно
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
         toggleStatus(questions[qIndex].id, "learned");
@@ -215,24 +233,21 @@ const SimpleChoiceGame = () => {
         });
       }
     } else {
+      // Звичайний режим: рахуємо правильні/неправильні
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
+
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
-        setCorrectCounts((prev) => {
-          const neuerZähler = (prev[id] || 0) + 1;
-          if (neuerZähler >= 5 && (termStatuses[id] || "unlearned") !== "learned") {
-            toggleStatus(id, "learned");
-          }
-          return { ...prev, [id]: neuerZähler };
-        });
+        // Додаємо +1 до correctCount у контексті
+        recordCorrectAnswer(id);
       } else {
         setIncorrectAnswerCount((prev) => prev + 1);
       }
     }
   };
 
-  // Навігація між питаннями
+  // Навігація
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -249,6 +264,7 @@ const SimpleChoiceGame = () => {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
+  // Підрахунок помилок по категоріях (для звіту)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -262,15 +278,21 @@ const SimpleChoiceGame = () => {
     return fehler;
   };
 
+  // Рендер модалки з результатами
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
-        <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
+        <button
+          className={styles.modalCloseButton}
+          onClick={() => setGameFinished(false)}
+        >
           ×
         </button>
         <h3>Spielergebnisse</h3>
-        <p>Richtige Antworten: {correctAnswerCount} von {questions.length}</p>
+        <p>
+          Richtige Antworten: {correctAnswerCount} von {questions.length}
+        </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
         <p>Dauer: {sessionDuration} Sekunden</p>
         {Object.keys(kategorieFehler).length > 0 && (
@@ -299,15 +321,25 @@ const SimpleChoiceGame = () => {
   return (
     <MainLayout>
       <div className={styles.simpleChoiceGame}>
-        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+        <button
+          className="main_menu_back"
+          onClick={() => navigate("/terminology-learning")}
+        >
           &#8592;
         </button>
 
         {/* Якщо налаштування відкриті */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+            <div
+              className={
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+              }
+            >
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setSettingsOpen(false)}
+              >
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
@@ -316,9 +348,15 @@ const SimpleChoiceGame = () => {
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper} data-tutorial="regionSelect">
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
-                    <select className={styles.nativeSelect} value={region} onChange={(e) => setRegion(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={region}
+                      onChange={(e) => setRegion(e.target.value)}
+                    >
                       <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((term) => term.regions || []))).map((r) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((term) => term.regions || []))
+                      ).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -332,7 +370,11 @@ const SimpleChoiceGame = () => {
                     <div className={styles.filterCell}>
                       {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
-                    <select className={styles.nativeSelect} value={filterMode} onChange={(e) => setFilterMode(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={filterMode}
+                      onChange={(e) => setFilterMode(e.target.value)}
+                    >
                       {filterModes.map((mode) => (
                         <option key={mode.value} value={mode.value}>
                           {mode.label}
@@ -346,12 +388,22 @@ const SimpleChoiceGame = () => {
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
                       {categoryIcons[selectedCategory] && (
-                        <img src={categoryIcons[selectedCategory]} alt={selectedCategory} className={styles.categoryIcon} />
+                        <img
+                          src={categoryIcons[selectedCategory]}
+                          alt={selectedCategory}
+                          className={styles.categoryIcon}
+                        />
                       )}
                     </div>
-                    <select className={styles.nativeSelect} value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={selectedCategory}
+                      onChange={(e) => setSelectedCategory(e.target.value)}
+                    >
                       <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((term) => term.categories || []))).map((c) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((term) => term.categories || []))
+                      ).map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
@@ -360,21 +412,28 @@ const SimpleChoiceGame = () => {
                   </div>
                 </div>
                 <div className={styles.editColumn} data-tutorial="editToggleButton">
-  <label className={styles.fieldLabel}>Bearbeiten</label>
-  <button
-    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${allowEdit ? styles.selectedEdit : ""}`}
-    onClick={() => setAllowEdit(!allowEdit)}
-  >
-    <FaPen />
-  </button>
-</div>
+                  <label className={styles.fieldLabel}>Bearbeiten</label>
+                  <button
+                    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
+                      allowEdit ? styles.selectedEdit : ""
+                    }`}
+                    onClick={() => setAllowEdit(!allowEdit)}
+                  >
+                    <FaPen />
+                  </button>
+                </div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
+                <div
+                  className={styles.displayModeContainer}
+                  data-tutorial="displayModeContainer"
+                >
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
-                      className={`${styles.displayModeIcon} ${displayMode === option.value ? styles.selected : ""}`}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === option.value ? styles.selected : ""
+                      }`}
                       onClick={() => setDisplayMode(option.value)}
                     >
                       {option.label}
@@ -383,11 +442,16 @@ const SimpleChoiceGame = () => {
                 </div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
+                <div
+                  className={styles.questionCountContainer}
+                  data-tutorial="questionCountContainer"
+                >
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
-                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
                       onClick={() => setQuestionCount(countOption)}
                     >
                       {countOption === "all" ? "Alles" : countOption}
@@ -395,14 +459,18 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
+              <button
+                className={styles.startButton}
+                data-tutorial="startButton"
+                onClick={handleStart}
+              >
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка туторіалу (SVG, позиціонована як у ApprobationPage, поза модальним вікном) */}
+        {/* Кнопка туторіалу */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"
@@ -421,7 +489,14 @@ const SimpleChoiceGame = () => {
               strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+              <line
+                x1="12"
+                y1="12"
+                x2="12"
+                y2="15.5"
+                stroke="#ededed"
+                strokeWidth="3"
+              />
               <circle cx="12" cy="7" r="0.5" fill="#ededed" />
             </svg>
           </button>
@@ -456,7 +531,9 @@ const SimpleChoiceGame = () => {
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrect ? styles.correct : ""} ${isWrong ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${
+                            isCorrect ? styles.correct : ""
+                          } ${isWrong ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -472,7 +549,9 @@ const SimpleChoiceGame = () => {
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrectEdit ? styles.correct : ""} ${isWrongEdit ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${
+                            isCorrectEdit ? styles.correct : ""
+                          } ${isWrongEdit ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -482,7 +561,10 @@ const SimpleChoiceGame = () => {
                 </div>
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
-                    <button className={styles.navButton} onClick={() => handleNavigation("prev")}>
+                    <button
+                      className={styles.navButton}
+                      onClick={() => handleNavigation("prev")}
+                    >
                       <FaArrowLeft />
                     </button>
                   )}
@@ -526,7 +608,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Кнопка налаштувань (відкриває модальне вікно) */}
+        {/* Кнопка налаштувань */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -543,7 +625,10 @@ const SimpleChoiceGame = () => {
 
         {/* Рендер туторіалу */}
         {showTutorial && (
-          <SimpleChoiceGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+          <SimpleChoiceGameTutorial
+            run={showTutorial}
+            onFinish={() => setShowTutorial(false)}
+          />
         )}
       </div>
     </MainLayout>
