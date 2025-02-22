@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Додано useNavigate
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./TerminologyLearningPage.module.scss";
 import flashcardBg from "../../assets/flashcard-bg.jpg";
@@ -13,20 +13,21 @@ import { pathList } from "../../routes/path";
 const TerminologyLearningPage = () => {
   const { selectedRegion } = useGetGlobalInfo();
   const regionParam = selectedRegion ? selectedRegion : "Alle";
+  const navigate = useNavigate(); // Ініціалізація navigate
 
   return (
     <MainLayout>
       <div className={styles.container}>
         <h1>Games</h1>
 
-
-          {/* --- Main Menu Back Button --- */}
-          <button
+        {/* --- Main Menu Back Button --- */}
+        <button
           className={styles.main_menu_back}
-          onClick={() => navigate("/")} // Замінити "/" на потрібний маршрут
+          onClick={() => navigate("/main_menu")} // Переходить на /main_menu
         >
           &#8592;
         </button>
+
         <div className={styles.gamesGrid}>
           {/* Плитка 1: Flashcard */}
           <Link
@@ -54,8 +55,6 @@ const TerminologyLearningPage = () => {
               </div>
             </div>
           </Link>
-
-         
 
           {/* Плитка 4: Fill In Blank Game із сірим контейнером з анімацією квадратів */}
           <Link
@@ -89,8 +88,8 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-           {/* Плитка 3: Fortune Wheel із обертовим сірим кругом */}
-           <Link
+          {/* Плитка 3: Fortune Wheel із обертовим сірим кругом */}
+          <Link
             to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
             style={{ backgroundImage: `url(${fortuneWheelBg})` }}
