@@ -14,7 +14,7 @@ const AuthModal = ({ isOpen, onClose }) => {
   const { selectedLanguage } = useGetGlobalInfo();
   const t = languages[selectedLanguage] || languages[DEFAULT_LANGUAGE];
 
-  // Використовуємо useNavigate безпосередньо в компоненті
+  // Якщо не потрібне перенаправлення, можна видалити або закоментувати наступний рядок
   const navigate = useNavigate();
 
   if (!isOpen) return null;
@@ -25,7 +25,7 @@ const AuthModal = ({ isOpen, onClose }) => {
       await signInWithEmailAndPassword(auth, email, password);
       alert(t.successLogin);
       onClose();
-      navigate("/dashboard");
+      // Видаляємо перенаправлення: navigate("/dashboard");
     } catch (error) {
       alert(t.errorLogin.replace("{{message}}", error.message));
     }
@@ -37,7 +37,7 @@ const AuthModal = ({ isOpen, onClose }) => {
       await signInWithPopup(auth, provider);
       alert(t.successLogin);
       onClose();
-      navigate("/dashboard");
+      // Видаляємо перенаправлення: navigate("/dashboard");
     } catch (error) {
       alert(t.errorLogin.replace("{{message}}", error.message));
     }
@@ -45,7 +45,7 @@ const AuthModal = ({ isOpen, onClose }) => {
 
   const handleRegistrationRedirect = () => {
     onClose(); // Закриваємо модальне вікно
-    navigate("/auth/registration"); // Переходимо на сторінку реєстрації
+    navigate("/auth/registration"); // Якщо потрібне перенаправлення на реєстрацію, можна залишити
   };
 
   return (

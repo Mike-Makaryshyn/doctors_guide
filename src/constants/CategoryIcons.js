@@ -50,6 +50,6 @@ export const categoryIcons = {
   'Orthopadie': orthopaedie,
   'Pulmologie': pulmologie,
   'Richtung und Bewegung': richtungBewegung,
-  'Nerologie': nerologie,
+  'Neurologie': nerologie,
   'Zusätzlich': zusaetzlich
 };
