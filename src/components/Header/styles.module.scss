@@ -1,9 +1,8 @@
 .header {
    background-color: #4eb7a7fa;
    color: white;
-   padding: 10px 0;
-   text-align: center;
    padding: 10px 30px;
+   text-align: center;
    height: 70px;
    z-index: 200;
    position: fixed;
@@ -12,10 +11,6 @@
  
    @media (max-width: 509px) {
      font-size: 13px;
- 
-     /* Прибрати span {display: none;} щоб не ховати всі <span> */
-     /* Замість цього використовуємо класи .sRegionFull, .sRegionShort */
- 
      padding: 10px 15px;
      flex-direction: row !important;
      height: 60px !important;
@@ -38,20 +33,15 @@
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
  
- /* Спочатку за замовчуванням:
-    - Повну назву показуємо (display: inline-block), 
-    - Скорочення ховаємо (display: none). */
+ /* За замовчуванням на десктопі показуємо повну назву, а скорочення ховаємо */
  .sRegionFull {
    display: inline-block;
  }
- 
  .sRegionShort {
    display: none;
  }
  
- /* На мобільному (до 768px) — робимо навпаки:
-    - Ховаємо повну назву,
-    - Показуємо скорочення. */
+ /* На мобільних (до 768px) – ховаємо повну назву, показуємо скорочення */
  @media (max-width: 768px) {
    .sRegionFull {
      display: none;
@@ -63,18 +53,20 @@
  
  .langSelect {
    display: flex;
-   padding: 10px;
-   border-radius: 24px;
+   padding: 0px;
+   border-radius: 24px; /* округлий контейнер */
    background: #2a7c6f;
    margin-top: 0;
    border: none;
    color: white;
-   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1);
+   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
    text-align: center;
    cursor: pointer;
    transition: all 0.2s ease;
    border: 1px solid transparent;
    outline: none;
+   min-height: 47px; /* щоб селект не виглядав "плоским" */
+   line-height: normal;
  }
  
  .langSelect:hover {
@@ -83,8 +75,36 @@
    border: 1px solid white;
  }
  
-
+ /* Видаляємо стрілочку стандартного селекта */
+ select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background: transparent;
+   border: none;
+   outline: none;
+   width: 100%;
+   line-height: normal;
+ }
  
+ /* Для IE/Edge */
+ select::-ms-expand {
+   display: none;
+ }
+ 
+ /* Текст всередині option обгортаємо в optionLabel */
+ .optionLabel {
+   margin-left: 5px;
+ }
+ 
+ /* На мобільних (до 768px) приховуємо текст в optionLabel */
+ @media (max-width: 768px) {
+   .optionLabel {
+     display: none;
+   }
+ }
+ 
+ /* mainLogo та анімація сяйва */
  .mainLogo {
    font-weight: 600;
    cursor: pointer;
@@ -92,7 +112,6 @@
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
  
- /* Легке сяйво */
  .glowAnimation {
    animation: glow 4s infinite alternate;
  }
@@ -117,7 +136,6 @@
    margin-right: 20px;
  }
  
- /* Якщо хочете приховати назву мови на мобільних: */
  @media (max-width: 768px) {
    .languageLabel {
      display: none;
@@ -130,5 +148,10 @@
      display: flex;
      flex-direction: column;
      height: 130px;
+   }
+ }
+ @media (max-width: 768px) {
+   .languageLabel {
+     display: none;
    }
  }

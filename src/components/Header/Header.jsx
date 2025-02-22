@@ -46,7 +46,7 @@ import {
      window.location.reload();
    };
  
-   // Якщо клік по регіону в хедері, переходимо на сторінку карти (наприклад, /custom-germany-map)
+   // Якщо клік по регіону в хедері, переходимо на сторінку карти (наприклад, /custom-map)
    const handleRegionClick = () => {
      navigate("/custom-map");
    };
@@ -98,18 +98,16 @@ import {
    return (
      <header className={cn(styles.header, "flexBt")}>
        <h2
-         onClick={() => {
-           navigate("/main_menu");
-         }}
+         onClick={() => navigate("/main_menu")}
          className={cn(styles.mainLogo, "upcase", styles.glowAnimation)}
        >
          Germanmove
        </h2>
  
-       {/* Два елементи для регіону:
-           - .sRegionFull: показує повну назву (на десктопі)
-           - .sRegionShort: показує скорочення (на мобільних)
-           Обидва мають onClick, що викликає handleRegionClick */}
+       {/* Елементи для регіону:
+           .sRegionFull – повна назва (на десктопі)
+           .sRegionShort – скорочення (на мобільних)
+           Обидва клікабельні */}
        <span
          className={cn(styles.sRegionFull, styles.sRegion)}
          onClick={handleRegionClick}
@@ -123,8 +121,7 @@ import {
          style={{ cursor: "pointer" }}
        >
          {isRegistrationPage
-           ? translations.registration[selectedLanguage] ||
-             translations.registration.en
+           ? translations.registration[selectedLanguage] || translations.registration.en
            : regionAbbrev}
        </span>
  
@@ -140,12 +137,13 @@ import {
          >
            {languages[selectedLanguage].options.map((option) => (
              <option key={option.value} value={option.value}>
-               {languageFlags[option.value]} {option.label}
+               {languageFlags[option.value]}
+               <span className="optionLabel"> {option.label}</span>
              </option>
            ))}
          </select>
  
-         <a href={"/dashboard"} style={{ textDecoration: "none" }}>
+         <a href="/dashboard" style={{ textDecoration: "none" }}>
            <Avatar stageId={1} />
          </a>
        </div>
