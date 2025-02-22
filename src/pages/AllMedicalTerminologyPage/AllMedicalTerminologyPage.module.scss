@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .allMedicalTerminologyPage {
+  position: relative; /* Контент сторінки */
   padding: 20px;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* Back-Button – веде на /main_menu */
+/* Кнопка "Назад" */
 .main_menu_back {
   margin-top: auto;
   width: 35px;
@@ -25,15 +25,62 @@
   transform: scale(0.95);
 }
 
-/* Input для пошуку */
-.searchInput {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
+/* Контейнер для кнопки пошуку */
+.searchContainer {
+  position: fixed;
+  top: 65px;
+  right: 0px; /* Відступ справа */
+  z-index: 3000;
+  display: flex;
+  align-items: center;
 }
 
-/* Модальне вікно */
+/* Кнопка пошуку */
+.searchToggleButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.searchToggleButton:hover {
+  transform: scale(1.1);
+}
+
+/* Іконка пошуку */
+.searchToggleButton svg {
+  font-size: 20px;
+}
+
+/* Поле вводу для пошуку */
+.searchInput {
+  width: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+/* Активне поле (після кліку на кнопку пошуку) */
+.searchInput.active {
+  width: 250px;
+  opacity: 1;
+}
+
+/* Модальне вікно налаштувань */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -47,7 +94,6 @@
   align-items: center;
 }
 
-/* Модальне вікно для десктопу */
 .popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
@@ -60,7 +106,6 @@
   right: 45px;
 }
 
-/* Модальне вікно для мобільних */
 .popupMobile {
   background: #fff;
   padding: 25px 20px 20px;
@@ -92,7 +137,7 @@
   }
 }
 
-/* Кнопка закриття модального вікна (хрестик) */
+/* Кнопка закриття модалки */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -102,7 +147,7 @@
   font-size: 24px;
   cursor: pointer;
   color: #ed0a0a;
-  transition: transform 0.2sease;
+  transition: transform 0.2s ease;
   padding: 5px;
   border-radius: 50%;
 }
@@ -112,7 +157,6 @@
   transform: scale(0.9);
 }
 
-/* Заголовок модального вікна */
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
@@ -120,7 +164,6 @@
   margin-bottom: 12px;
 }
 
-/* Рядок для контейнерів у модальному вікні */
 .row {
   display: flex;
   justify-content: space-between;
@@ -128,7 +171,6 @@
   margin-top: 15px;
 }
 
-/* Контейнери для Region, Filter, Kategorie та Spiel */
 .regionColumn,
 .filterColumn,
 .categoryColumn,
@@ -139,7 +181,6 @@
   flex: 1;
 }
 
-/* Назви полів */
 .fieldLabel {
   font-weight: 600;
   font-size: 14px;
@@ -147,7 +188,6 @@
   margin-bottom: 5px;
 }
 
-/* Обгортка для селектів */
 .selectWrapper {
   position: relative;
   display: inline-block;
@@ -155,7 +195,6 @@
   height: 50px;
 }
 
-/* Для модального вікна регіон – показуємо повну назву */
 .regionCell {
   width: 50px;
   height: 50px;
@@ -172,7 +211,6 @@
   pointer-events: none;
 }
 
-/* Клітинка для фільтра */
 .filterCell {
   width: 50px;
   height: 50px;
@@ -189,7 +227,6 @@
   pointer-events: none;
 }
 
-/* Клітинка для категорії */
 .categoryCell {
   width: 50px;
   height: 50px;
@@ -205,7 +242,6 @@
   pointer-events: none;
 }
 
-/* Клітинка для іконки гри */
 .gameCell {
   width: 50px;
   height: 50px;
@@ -221,7 +257,6 @@
   pointer-events: none;
 }
 
-/* Схований селект */
 .nativeSelect {
   position: absolute;
   top: 0;
@@ -232,12 +267,12 @@
   cursor: pointer;
 }
 
-/* Кнопка налаштувань (праворуч внизу) */
+/* Кнопка налаштувань (шестерня) у нижньому правому куті */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  z-index: 3500;
+  z-index: 2000;
 }
 
 .settingsButton {
@@ -253,16 +288,15 @@
   align-items: center;
   transition: background-color 0.3s, transform 0.2s;
 }
-
 .settingsButton:hover {
   transform: scale(1.1);
 }
 
-/* Контент категорій: плитки (мобільний) або таблиця (десктоп) */
 .categorySection {
   margin-bottom: 20px;
 }
 
+/* Пульсова анімація заголовків категорій */
 .categoryHeader {
   font-size: 20px;
   font-weight: bold;
@@ -272,6 +306,28 @@
   border-radius: 10px;
   cursor: pointer;
   position: relative;
+  width: 95%;
+  margin: 5px auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.categoryHeader:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 .collapseIcon {
@@ -281,20 +337,20 @@
   transition: transform 0.3s ease;
 }
 
-/* Контейнер для плиток */
+/* Контейнер для плиток (мобільна версія) */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; // збільш відстань між плитками
+  gap: 16px;
   justify-content: center;
   overflow-x: hidden;
   padding: 10px;
 }
 
 @media (max-width: 768px) {
-  .tile {
-    flex: 1 1 100%; // кожна плитка займає 100% ширини
-    max-width: 100%;
+  .tilesContainer {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
@@ -303,11 +359,10 @@
   background: #fff;
   border-radius: 20px;
   padding: 20px;
-  margin-bottom: 16px; // додаємо простір знизу
+  margin-bottom: 16px;
   position: relative;
 }
 
-/* Вивчені та призупинені терміни */
 .learned {
   background-color: #4caf50 !important;
   color: #fff !important;
@@ -318,7 +373,6 @@
   color: #fff !important;
 }
 
-/* Іконки в плитках */
 .checkIcon,
 .pauseIcon {
   position: absolute;
@@ -337,22 +391,19 @@
   color: #f0ad4e;
 }
 
-/* Стиль для BigRef (латинський термін) */
 .tileHeader {
   font-size: 24px;
   font-weight: bold;
-  color: #013b6e; /* синій колір */
+  color: #013b6e;
   margin-bottom: 10px;
 }
 
-/* Стилі для опису (німецький текст) */
 .tileDescription {
   font-size: 16px;
   color: #333;
   margin-bottom: 8px;
 }
 
-/* Стилі для визначення */
 .tileExplanation {
   font-size: 14px;
   color: #555;
@@ -361,8 +412,8 @@
 
 /* Таблиця для десктопу */
 .terminologyTable {
-  width: 95%; // зробити таблицю вущою
-  margin: 20px auto; // центруємо
+  width: 95%;
+  margin: 20px auto;
   border-collapse: collapse;
   background: #fff;
 }
@@ -371,18 +422,30 @@
 .terminologyTable td {
   border: 1px solid #ddd;
   padding: 10px;
-  font-size: 14px;
+  text-align: center;
   color: #333;
+}
+
+.terminologyTable th:nth-child(1),
+.terminologyTable td:nth-child(1) {
+  width: 20%;
+  text-align: left;
+}
+
+.terminologyTable th:nth-child(2),
+.terminologyTable td:nth-child(2) {
+  width: 20%;
+}
+
+.terminologyTable th:nth-child(3),
+.terminologyTable td:nth-child(3) {
+  width: 60%;
   text-align: left;
 }
 
 .terminologyTable th {
   background-color: #f4f6f7;
   color: #555;
-}
-
-.terminologyTable tr:nth-child(even) {
-  background-color: #f9f9f9;
 }
 
 .terminologyTable tr:hover {
@@ -392,7 +455,9 @@
 .termCell {
   position: relative;
 }
+
 .termContent {
+  margin-left: 30px;
   font-weight: bold;
   color: #013b6e;
 }
@@ -411,10 +476,11 @@
 }
 
 .checkIconDesktop {
+  position: absolute;
+  top: 5px;
+  left: 5px;
   color: #4caf50;
-  cursor: pointer;
   font-size: 16px;
-  transition: transform 0.2s ease;
 }
 
 .checkIconDesktop:hover {
@@ -422,10 +488,11 @@
 }
 
 .pauseIconDesktop {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
   color: #f0ad4e;
-  cursor: pointer;
   font-size: 16px;
-  transition: transform 0.2s ease;
 }
 
 .pauseIconDesktop:hover {
@@ -438,14 +505,9 @@
   filter: invert(100%);
 }
 
-/* Медіа-запит для мобільних */
 @media (max-width: 768px) {
   .tile {
     flex: 1 1 100%;
     max-width: 100%;
-  }
-  .tilesContainer {
-    flex-direction: column;
-    gap: 12px;
   }
 }

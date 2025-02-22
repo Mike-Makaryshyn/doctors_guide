@@ -4,17 +4,24 @@ import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./AllMedicalTerminologyPage.module.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
-import { FaCog, FaCheck, FaPause, FaGamepad, FaList, FaPlay } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
+import {
+  FaCog,
+  FaCheck,
+  FaPause,
+  FaGamepad,
+  FaList,
+  FaPlay,
+  FaTimes,
+  FaSearch
+} from "react-icons/fa";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useTermStatus } from "../../contexts/TermStatusContext";
-import { collection, doc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { categoryIcons } from "../../constants/CategoryIcons";
 
-// Mapping для скорочень регіонів (використовується поза модальним вікном)
+// Скорочення регіонів
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -43,7 +50,7 @@ const filterModes = [
 
 const AllMedicalTerminologyPage = () => {
   const navigate = useNavigate();
-  const { termStatuses, toggleStatus, flushChanges, scheduleFlushChanges } = useTermStatus();
+  const { termStatuses, toggleStatus, scheduleFlushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const [user, loading] = useAuthState(auth);
 
@@ -62,51 +69,77 @@ const AllMedicalTerminologyPage = () => {
     );
   }
 
-  // Поза модальним – регіон відображається як скорочення
   const [region, setRegion] = useState(selectedRegion || "Bayern");
-  useEffect(() => {
-    setRegion(selectedRegion || "Bayern");
-  }, [selectedRegion]);
-
-  const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
-  useEffect(() => {
-    setTranslationLanguage(selectedLanguage || "de");
-  }, [selectedLanguage]);
-
+  const [translationLanguage, setTranslationLanguage] = useState(
+    selectedLanguage || "de"
+  );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [searchTerm, setSearchTerm] = useState("");
   const [collapsedCategories, setCollapsedCategories] = useState({});
   const [filterMode, setFilterMode] = useState("all");
 
-  // Стан модального вікна налаштувань
+  // Модалка налаштувань (кнопка з шестернею у нижньому правому куті)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
-  const settingsModalRef = useRef(null);
 
-  // BackButton – веде на /main_menu
+  // Стан пошуку: коли активний – показується поле вводу, а кнопка змінюється на хрестик.
+  // При натисканні на хрестик скидається фільтр (searchTerm очищується) і поле закривається.
+  const [isSearchActive, setIsSearchActive] = useState(false);
+
+  // Реф для відстеження кліків поза сторінкою
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    setRegion(selectedRegion || "Bayern");
+  }, [selectedRegion]);
+
+  useEffect(() => {
+    setTranslationLanguage(selectedLanguage || "de");
+  }, [selectedLanguage]);
+
   const handleBack = () => {
     navigate("/main_menu");
   };
 
-  // Для контейнера "Spiel" – при кліку редірект на /terminology-learning
   const handleGameClick = () => {
     navigate("/terminology-learning");
   };
 
+  // Закриття модального вікна налаштувань при кліку поза ним
+  const settingsModalRef = useRef(null);
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (settingsModalRef.current && !settingsModalRef.current.contains(event.target)) {
+    function handleClickOutside(event) {
+      if (
+        settingsModalRef.current &&
+        !settingsModalRef.current.contains(event.target)
+      ) {
         setIsSettingsModalOpen(false);
       }
-    };
+    }
     if (isSettingsModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isSettingsModalOpen]);
+
+  // Закриття пошуку при кліку поза сторінкою
+  useEffect(() => {
+    function handleClickOutsidePage(event) {
+      if (
+        isSearchActive &&
+        pageRef.current &&
+        !pageRef.current.contains(event.target)
+      ) {
+        setIsSearchActive(false);
+        setSearchTerm("");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutsidePage);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsidePage);
+    };
+  }, [isSearchActive]);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
@@ -124,29 +157,34 @@ const AllMedicalTerminologyPage = () => {
     scheduleFlushChanges();
   };
 
-  // Фільтрація термінів
   const filteredTerms = medicalTerms.filter((term) => {
     const matchesSearch =
       term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
+
     const matchesCategory =
-      selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+      selectedCategory === "Alle" ||
+      (term.categories || []).includes(selectedCategory);
+
     const matchesRegion =
-      // При фільтрації використовуємо повні назви
       region === "Alle" || (term.regions || []).includes(region);
+
     let base = matchesSearch && matchesCategory && matchesRegion;
     const statusObj = termStatuses[term.id];
     const status = statusObj?.status || "unlearned";
+
     if (filterMode === "learned" && status !== "learned") return false;
     if (filterMode === "paused" && status !== "paused") return false;
-    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
+    if (
+      filterMode === "unlearned" &&
+      (status === "learned" || status === "paused")
+    ) {
       return false;
     }
     return base;
   });
 
-  // Групування термінів за категоріями
   const termsByCategory = {};
   filteredTerms.forEach((term) => {
     (term.categories || []).forEach((category) => {
@@ -161,33 +199,53 @@ const AllMedicalTerminologyPage = () => {
   const handleCategoryChange = (e) => setSelectedCategory(e.target.value);
   const handleFilterModeChange = (e) => setFilterMode(e.target.value);
 
-  // Для модального вікна – у селекті відображаються повні назви регіонів
   const uniqueRegions = Array.from(
     new Set(medicalTerms.flatMap((term) => term.regions || []))
   );
   const regionOptions = ["Alle", ...uniqueRegions];
+
   const uniqueCategories = Array.from(
     new Set(medicalTerms.flatMap((term) => term.categories || []))
   );
 
   return (
     <MainLayout>
-      <div className={styles.allMedicalTerminologyPage}>
-        {/* BackButton */}
+      <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
+        {/* Кнопка "Назад" */}
         <button className={styles.main_menu_back} onClick={handleBack}>
           &#8592;
         </button>
 
-        <h1>Alle medizinische Terminologie</h1>
-        <input
-          type="text"
-          placeholder="Suche..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className={styles.searchInput}
-        />
+        {/* Контейнер для кнопки пошуку / поля вводу */}
+{/* Контейнер для кнопки пошуку / поля вводу */}
+<div className={styles.searchContainer}>
+  <input
+    type="text"
+    placeholder="Suche..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    className={`${styles.searchInput} ${isSearchActive ? styles.active : ''}`}
+    style={{ display: isSearchActive ? 'block' : 'none' }}
+    autoFocus={isSearchActive}
+  />
+  <button
+    className={styles.searchToggleButton}
+    onClick={() => {
+      if (isSearchActive) {
+        // Якщо пошук активний — скидаємо фільтр і закриваємо поле
+        setSearchTerm("");
+        setIsSearchActive(false);
+      } else {
+        // Інакше відкриваємо поле пошуку
+        setIsSearchActive(true);
+      }
+    }}
+  >
+    {isSearchActive ? <FaTimes /> : <FaSearch />}
+  </button>
+</div>
 
-        {/* Рендеринг термінів: плитки на мобільних, таблиця на десктопі */}
+        {/* Контент: мобільна (плитки) чи десктопна (таблиця) версія */}
         {isMobile ? (
           <div className={styles.tilesContainer}>
             {Object.keys(termsByCategory).map((category) => (
@@ -235,19 +293,21 @@ const AllMedicalTerminologyPage = () => {
                         >
                           <FaPause />
                         </span>
-                        {/* BigRef – латинський термін, синій жирний */}
                         <h3 className={styles.tileHeader}>{term.lat}</h3>
                         <p className={styles.tileDescription}>
                           {translationLanguage !== "de" ? (
                             <Tippy
                               content={
-                                term[translationLanguage] || "Keine Übersetzung vorhanden"
+                                term[translationLanguage] ||
+                                "Keine Übersetzung vorhanden"
                               }
                               trigger="click"
                               interactive={true}
                               placement="bottom"
                             >
-                              <span className={styles.clickableCell}>{term.de}</span>
+                              <span className={styles.clickableCell}>
+                                {term.de}
+                              </span>
                             </Tippy>
                           ) : (
                             term.de
@@ -296,113 +356,117 @@ const AllMedicalTerminologyPage = () => {
                 </span>
               </h2>
               {!collapsedCategories[category] && (
-             <table className={styles.terminologyTable}>
-             <thead>
-               <tr>
-                 <th>Begriff</th>
-                 <th>Deutsche Bezeichnung</th>
-                 <th>Definition</th>
-               </tr>
-             </thead>
-             <tbody>
-               {termsByCategory[category].map((term) => {
-                 const statusObj = termStatuses[term.id] || {};
-                 const status = statusObj.status || "unlearned";
-                 return (
-                   <tr
-                     key={term.id}
-                     className={
-                       status === "learned"
-                         ? styles.learned
-                         : status === "paused"
-                         ? styles.paused
-                         : ""
-                     }
-                   >
-                     <td className={styles.termCell}>
-                       <div className={styles.iconContainer}>
-                         <span
-                           className={styles.checkIconDesktop}
-                           onClick={() => toggleLearned(term.id)}
-                           title="Gelernt"
-                         >
-                           <FaCheck />
-                         </span>
-                         <span
-                           className={styles.pauseIconDesktop}
-                           onClick={() => togglePaused(term.id)}
-                           title="Pausiert"
-                         >
-                           <FaPause />
-                         </span>
-                       </div>
-                       <div className={styles.termContent}>
-                         {term.lat}
-                       </div>
-                     </td>
-                     <td>
-                       {translationLanguage !== "de" ? (
-                         <Tippy
-                           content={
-                             term[translationLanguage] || "Keine Übersetzung vorhanden"
-                           }
-                           trigger="click"
-                           interactive={true}
-                           placement="right"
-                         >
-                           <span className={styles.clickableCell}>{term.de}</span>
-                         </Tippy>
-                       ) : (
-                         term.de
-                       )}
-                     </td>
-                     <td>
-                       {translationLanguage !== "de" ? (
-                         <Tippy
-                           content={
-                             term[translationLanguage + "Explanation"] ||
-                             "Keine Übersetzung vorhanden"
-                           }
-                           trigger="click"
-                           interactive={true}
-                           placement="right"
-                         >
-                           <span className={styles.clickableCell}>
-                             {term.deExplanation}
-                           </span>
-                         </Tippy>
-                       ) : (
-                         term.deExplanation
-                       )}
-                     </td>
-                   </tr>
-                 );
-               })}
-             </tbody>
-           </table>
+                <table className={styles.terminologyTable}>
+                  <thead>
+                    <tr>
+                      <th>Begriff</th>
+                      <th>Deutsche Bezeichnung</th>
+                      <th>Definition</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {termsByCategory[category].map((term) => {
+                      const statusObj = termStatuses[term.id] || {};
+                      const status = statusObj.status || "unlearned";
+                      return (
+                        <tr
+                          key={term.id}
+                          className={
+                            status === "learned"
+                              ? styles.learned
+                              : status === "paused"
+                              ? styles.paused
+                              : ""
+                          }
+                        >
+                          <td className={styles.termCell}>
+                            <div className={styles.iconWrapper}>
+                              <span
+                                className={styles.checkIconDesktop}
+                                onClick={() => toggleLearned(term.id)}
+                                title="Gelernt"
+                              >
+                                <FaCheck />
+                              </span>
+                              <span
+                                className={styles.pauseIconDesktop}
+                                onClick={() => togglePaused(term.id)}
+                                title="Pausiert"
+                              >
+                                <FaPause />
+                              </span>
+                            </div>
+                            <div className={styles.termContent}>
+                              {term.lat}
+                            </div>
+                          </td>
+                          <td>
+                            {translationLanguage !== "de" ? (
+                              <Tippy
+                                content={
+                                  term[translationLanguage] ||
+                                  "Keine Übersetzung vorhanden"
+                                }
+                                trigger="click"
+                                interactive={true}
+                                placement="right"
+                              >
+                                <span className={styles.clickableCell}>
+                                  {term.de}
+                                </span>
+                              </Tippy>
+                            ) : (
+                              term.de
+                            )}
+                          </td>
+                          <td>
+                            {translationLanguage !== "de" ? (
+                              <Tippy
+                                content={
+                                  term[translationLanguage + "Explanation"] ||
+                                  "Keine Übersetzung vorhanden"
+                                }
+                                trigger="click"
+                                interactive={true}
+                                placement="right"
+                              >
+                                <span className={styles.clickableCell}>
+                                  {term.deExplanation}
+                                </span>
+                              </Tippy>
+                            ) : (
+                              term.deExplanation
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               )}
             </div>
           ))
         )}
 
-        {/* Модальне вікно налаштувань */}
+        {/* Модальне вікно налаштувань (шестерня) */}
         {isSettingsModalOpen && (
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+                window.innerWidth > 768
+                  ? styles.popupDesktopWide
+                  : styles.popupMobile
               }
               ref={settingsModalRef}
             >
-          <button
-  className={styles.modalCloseButton}
-  onClick={() => setIsSettingsModalOpen(false)} // Перевір ім'я функції
->
-  ×
-</button>
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setIsSettingsModalOpen(false)}
+              >
+                ×
+              </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                {/* Контейнер для Region – у дропдауні відображаються повні назви, але в контейнері показується абревіатура */}
                 <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
@@ -422,7 +486,6 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                {/* Контейнер для Filter */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -442,7 +505,6 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                {/* Контейнер для Kategorie */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -469,7 +531,6 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                {/* Контейнер для Spiel */}
                 <div className={styles.gameColumn} data-tutorial="gameContainer">
                   <label className={styles.fieldLabel}>Spiel</label>
                   <div
@@ -487,7 +548,7 @@ const AllMedicalTerminologyPage = () => {
           </div>
         )}
 
-        {/* Кнопка для відкриття налаштувань */}
+        {/* Кнопка налаштувань (шестерня) у нижньому правому куті */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
