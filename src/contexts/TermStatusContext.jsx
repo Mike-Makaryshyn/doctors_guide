@@ -7,20 +7,19 @@ const TermStatusContext = createContext();
 
 export const TermStatusProvider = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-
-  // Сховище статусів термінів
-  // termStatuses[termId] = { status, correctCount, updatedAt }
   const [termStatuses, setTermStatuses] = useState({});
   const unsavedChanges = useRef({});
 
-  // Завантаження з Firestore і LocalStorage
+  // Додатковий реф для дебаунс-таймера
+  const flushTimeoutRef = useRef(null);
+
+  // Завантаження даних з Firestore та LocalStorage
   useEffect(() => {
     if (loading) return;
     if (!user) {
       setTermStatuses({});
       return;
     }
-
     const fetchData = async () => {
       try {
         const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
@@ -30,11 +29,9 @@ export const TermStatusProvider = ({ children }) => {
           firebaseData = docSnap.data()?.statuses || {};
         }
         console.log("Дані з Firestore:", firebaseData);
-
         const localData = localStorage.getItem("termStatuses");
         const localStatuses = localData ? JSON.parse(localData) : {};
         const merged = Object.keys(localStatuses).length > 0 ? localStatuses : firebaseData;
-
         setTermStatuses(merged);
         localStorage.setItem("termStatuses", JSON.stringify(merged));
         unsavedChanges.current = {};
@@ -42,7 +39,6 @@ export const TermStatusProvider = ({ children }) => {
         console.error("Помилка при зчитуванні даних:", error);
       }
     };
-
     fetchData();
   }, [user, loading]);
 
@@ -50,7 +46,7 @@ export const TermStatusProvider = ({ children }) => {
     localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
   }, [termStatuses]);
 
-  // Основна функція збереження у Firebase
+  // Функція збереження змін у Firebase (залишається без змін)
   const saveChangesToFirebase = async () => {
     if (!user) {
       console.log("Немає користувача, зберігаємо лише в LocalStorage.");
@@ -98,13 +94,23 @@ export const TermStatusProvider = ({ children }) => {
     }
   };
 
-  // flushChanges – виклик збереження всіх накопичених змін
+  // Звичайний flushChanges – викликається, коли потрібне негайне збереження
   const flushChanges = () => {
     console.log("flushChanges() викликано. Зберігаємо негайно.");
     saveChangesToFirebase();
   };
 
-  // Установити статус терміну; якщо статус "paused", correctCount обнуляється
+  // Нова функція, яка планує збереження з затримкою (debounce)
+  const scheduleFlushChanges = () => {
+    if (flushTimeoutRef.current) {
+      clearTimeout(flushTimeoutRef.current);
+    }
+    flushTimeoutRef.current = setTimeout(() => {
+      flushChanges();
+      flushTimeoutRef.current = null;
+    }, 3000); // затримка 3 секунди, можна налаштувати за потребою
+  };
+
   const setStatus = (termId, status) => {
     const now = Date.now();
     setTermStatuses((prev) => {
@@ -128,7 +134,6 @@ export const TermStatusProvider = ({ children }) => {
     };
   };
 
-  // Перемикання статусу
   const toggleStatus = (termId, newStatus) => {
     const currentStatus = termStatuses[termId]?.status || "unlearned";
     const updatedStatus = currentStatus === newStatus ? "unlearned" : newStatus;
@@ -136,7 +141,6 @@ export const TermStatusProvider = ({ children }) => {
     setStatus(termId, updatedStatus);
   };
 
-  // Запис правильної відповіді; поріг = 5 для статусу "learned"
   const recordCorrectAnswer = (termId) => {
     const now = Date.now();
     setTermStatuses((prev) => {
@@ -171,6 +175,7 @@ export const TermStatusProvider = ({ children }) => {
         toggleStatus,
         recordCorrectAnswer,
         flushChanges,
+        scheduleFlushChanges, // експортуємо нову функцію
       }}
     >
       {children}

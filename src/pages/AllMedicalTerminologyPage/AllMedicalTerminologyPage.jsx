@@ -18,7 +18,8 @@ const unifyRegion = (r) =>
   r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r;
 
 const AllMedicalTerminologyPage = () => {
-  const { termStatuses, toggleStatus, flushChanges } = useTermStatus();
+  // Отримуємо функції з контексту, включаючи scheduleFlushChanges для дебаунсу
+  const { termStatuses, toggleStatus, flushChanges, scheduleFlushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const [user, loading] = useAuthState(auth);
 
@@ -92,17 +93,17 @@ const AllMedicalTerminologyPage = () => {
   }, []);
 
   // Функції перемикання статусів із логуванням
-  // Тепер після перемикання одразу викликаємо flushChanges(), щоб дані відразу відправлялися у Firebase
+  // Використовуємо scheduleFlushChanges для відкладеного збереження змін
   const toggleLearned = (id) => {
     console.log(`Перемикання статусу "learned" для term ${id}`);
     toggleStatus(id, "learned");
-    flushChanges();
+    scheduleFlushChanges();
   };
 
   const togglePaused = (id) => {
     console.log(`Перемикання статусу "paused" для term ${id}`);
     toggleStatus(id, "paused");
-    flushChanges();
+    scheduleFlushChanges();
   };
 
   // Фільтрація термінів
@@ -534,6 +535,7 @@ const AllMedicalTerminologyPage = () => {
                 </button>
               </div>
               <div style={{ marginTop: "10px" }}>
+                {/* Тут залишаємо flushChanges для негайного збереження */}
                 <button className={styles.actionButton} onClick={flushChanges}>
                   Änderungen jetzt speichern
                 </button>
