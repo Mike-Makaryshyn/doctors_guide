@@ -17,6 +17,8 @@ import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
+import { Helmet } from "react-helmet";
+import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 
 // Abkürzungen für Regionen
 const regionAbbreviations = {
@@ -320,6 +322,31 @@ const SimpleChoiceGame = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten</title>
+        <meta
+          name="description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta
+          name="keywords"
+          content="Fachbegriffe, Fachsprachenprüfung, Medizin, Terminologie, Lernen, Fachsprache"
+        />
+        <meta property="og:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
+        <meta
+          property="og:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta property="og:image" content={simpleChoiceBg} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
+        <meta
+          name="twitter:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung."
+        />
+        <meta name="twitter:image" content={simpleChoiceBg} />
+      </Helmet>
       <div className={styles.simpleChoiceGame}>
         <button
           className="main_menu_back"
