@@ -4,9 +4,28 @@
   padding: 20px;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Suchfeld */
+/* Back-Button – веде на /main_menu */
+.main_menu_back {
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+  z-index: 2000;
+}
+
+.main_menu_back:active {
+  transform: scale(0.95);
+}
+
+/* Input для пошуку */
 .searchInput {
   width: 100%;
   padding: 10px;
@@ -14,52 +33,247 @@
   font-size: 16px;
 }
 
-/* Gruppierung nach Kategorien */
-.categorySection {
-  /* Стандартний відступ між категоріями для розгорнутого стану */
-  margin-bottom: -10px;
-  overflow: hidden;
-  transition: max-height 0.5s ease, margin-bottom 0.5s ease;
-}
-
-/* Якщо категорія закрита, прибираємо відступ між категоріями */
-.categorySection.collapsed {
-  max-height: 50px; /* висота лише шапки */
-  margin-bottom: -25px; /* негативний відступ для примикання */
-}
-
-/* При розгортанні - задаємо достатньо висоти */
-.categorySection.expanded {
-  max-height: 1000px;
-  margin-bottom: 40px;
-}
-
-.categoryHeader {
-  display: flex;
-  justify-content: center; /* центрований текст */
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #013b6e; /* синій фон */
-  color: white;
-  padding: 15px;
-  border-radius: 10px; /* повністю заокруглені краї */
-  /* Видаляємо margin-bottom, щоб не створювати проміжок */
-  margin-bottom: 0;
-  position: relative;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Модальне вікно */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .categoryHeader {
-    width: 100% !important; /* примусово 100% ширини */
-    box-sizing: border-box;
+/* Модальне вікно для десктопу */
+.popupDesktopWide {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+}
+
+/* Модальне вікно для мобільних */
+.popupMobile {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: popupBounce 0.6s ease-out;
+}
+
+@keyframes popupBounce {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-/* Іконка для згорнення/розгортання */
+/* Кнопка закриття модального вікна (хрестик) */
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2sease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.modalCloseButton:hover {
+  background-color: rgba(237, 10, 10, 0);
+  transform: scale(0.9);
+}
+
+/* Заголовок модального вікна */
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+
+/* Рядок для контейнерів у модальному вікні */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Контейнери для Region, Filter, Kategorie та Spiel */
+.regionColumn,
+.filterColumn,
+.categoryColumn,
+.gameColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Назви полів */
+.fieldLabel {
+  font-weight: 600;
+  font-size: 14px;
+  color: #013b6e;
+  margin-bottom: 5px;
+}
+
+/* Обгортка для селектів */
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+/* Для модального вікна регіон – показуємо повну назву */
+.regionCell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Клітинка для фільтра */
+.filterCell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Клітинка для категорії */
+.categoryCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #013b6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  pointer-events: none;
+}
+
+/* Клітинка для іконки гри */
+.gameCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  pointer-events: none;
+}
+
+/* Схований селект */
+.nativeSelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Кнопка налаштувань (праворуч внизу) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3500;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Контент категорій: плитки (мобільний) або таблиця (десктоп) */
+.categorySection {
+  margin-bottom: 20px;
+}
+
+.categoryHeader {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #013b6e;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
 .collapseIcon {
   position: absolute;
   right: 15px;
@@ -67,67 +281,44 @@
   transition: transform 0.3s ease;
 }
 
-/* Mobile Tiles */
+/* Контейнер для плиток */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; /* збільшено відступ між плитками */
-  justify-content: flex-start;
+  gap: 30px; // збільш відстань між плитками
+  justify-content: center;
   overflow-x: hidden;
+  padding: 10px;
 }
 
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%; // кожна плитка займає 100% ширини
+    max-width: 100%;
+  }
+}
+
+/* Плитка */
 .tile {
-  position: relative;
-  background: #ffffff;
-  margin-bottom: 7px;
+  background: #fff;
   border-radius: 20px;
   padding: 20px;
-  transition: background 0.3s ease;
-  cursor: pointer;
-  flex: 1 1 calc(48% - 20px);
-  max-width: calc(48% - 20px);
+  margin-bottom: 16px; // додаємо простір знизу
+  position: relative;
 }
 
-.tileHeader {
-  font-size: 18px;
-  color: #013b6e;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.tileDescription {
-  font-size: 16px;
-  color: #013b6e;
-  margin-bottom: 8px;
-}
-
-.tileExplanation {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* Clickable Elemente */
-.clickableCell {
-  cursor: pointer;
-}
-
-/* Status Styles (аналог FlashcardGame) */
+/* Вивчені та призупинені терміни */
 .learned {
   background-color: #4caf50 !important;
-  border: none !important;
-  border-radius: 20px !important;
   color: #fff !important;
 }
 
 .paused {
   background-color: #ff9800 !important;
-  border: none !important;
-  border-radius: 20px !important;
   color: #fff !important;
 }
 
-/* Icons in Tiles (Mobile) */
+/* Іконки в плитках */
 .checkIcon,
 .pauseIcon {
   position: absolute;
@@ -146,28 +337,43 @@
   color: #f0ad4e;
 }
 
-@media (max-width: 768px) {
-  .tile {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+/* Стиль для BigRef (латинський термін) */
+.tileHeader {
+  font-size: 24px;
+  font-weight: bold;
+  color: #013b6e; /* синій колір */
+  margin-bottom: 10px;
 }
 
-/* Desktop Tabelle */
+/* Стилі для опису (німецький текст) */
+.tileDescription {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Стилі для визначення */
+.tileExplanation {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Таблиця для десктопу */
 .terminologyTable {
-  width: 100%;
+  width: 95%; // зробити таблицю вущою
+  margin: 20px auto; // центруємо
   border-collapse: collapse;
-  margin-top: 20px;
-  background: #ffffff;
+  background: #fff;
 }
 
 .terminologyTable th,
 .terminologyTable td {
   border: 1px solid #ddd;
   padding: 10px;
-  text-align: left;
   font-size: 14px;
   color: #333;
+  text-align: left;
 }
 
 .terminologyTable th {
@@ -183,9 +389,12 @@
   background-color: #eaf2f8;
 }
 
-/* Term Cell in Tabelle */
 .termCell {
   position: relative;
+}
+.termContent {
+  font-weight: bold;
+  color: #013b6e;
 }
 
 .cellContent {
@@ -194,7 +403,6 @@
   gap: 10px;
 }
 
-/* Desktop Icons */
 .checkIconDesktop,
 .pauseIconDesktop {
   font-size: 14px;
@@ -204,193 +412,40 @@
 
 .checkIconDesktop {
   color: #4caf50;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
 }
 
 .checkIconDesktop:hover {
-  color: #388e3c;
   transform: scale(1.1);
 }
 
 .pauseIconDesktop {
   color: #f0ad4e;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
 }
 
 .pauseIconDesktop:hover {
-  color: #d48806;
   transform: scale(1.1);
 }
 
-/* Modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.categoryIcon {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
 }
 
-.modalContent {
-  background: white;
-  padding: 25px 20px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: relative;
-  text-align: center;
-  width: 300px;
-}
-
-.modalActions {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.closeButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.closeButton:hover {
-  background-color: #c0392b;
-}
-
-/* Settings Button */
-.bottomRightSettings {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.settingsButton {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.settingsButton:hover {
-  transform: scale(1.1);
-}
-
-/* Popup Einstellungen */
-.popupContainerDesktop {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  z-index: 2000;
-}
-
-.popupContainerMobile {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2000;
-  display: flex;
-  justify-content: center;
-}
-
-.popup {
-  background: #fff;
-  padding: 25px 20px 20px;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  position: relative;
-  text-align: center;
-}
-
+/* Медіа-запит для мобільних */
 @media (max-width: 768px) {
-  .popup {
-    width: 100%;
-    border-radius: 12px 12px 0 0;
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-}
-
-.modalCloseButton {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  padding: 5px;
-  border-radius: 50%;
-}
-
-.modalCloseButton:hover {
-  background-color: rgba(237, 10, 10, 0);
-  transform: scale(0.9);
-}
-
-.modalTitle {
-  margin-top: 0;
-  font-size: 20px;
-  color: #013b6e;
-  margin-bottom: 12px;
-}
-
-.modalSubtitle {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 16px;
-}
-
-.modalLabel {
-  font-size: 14px;
-  font-weight: 500;
-  color: #444;
-  margin: 6px 0 4px;
-  display: block;
-}
-
-.modalSelect {
-  width: 100%;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.2s ease;
-  margin-bottom: 12px;
-}
-
-.modalSelect:focus {
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Tippy */
-:global(.tippy-box) {
-  font-family: "Poppins", sans-serif;
-}
-
-@media (max-width: 768px) {
-  :global(.tippy-box) {
-    max-width: 90% !important;
-    font-size: 14px;
+  .tilesContainer {
+    flex-direction: column;
+    gap: 12px;
   }
 }
