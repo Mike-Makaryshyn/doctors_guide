@@ -12,7 +12,7 @@ import {
   FaList,
   FaPlay,
   FaTimes,
-  FaSearch
+  FaSearch,
 } from "react-icons/fa";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
@@ -20,8 +20,9 @@ import "tippy.js/dist/tippy.css";
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import { useNavigate } from "react-router-dom";
 import { categoryIcons } from "../../constants/CategoryIcons";
+import { Helmet } from "react-helmet";
 
-// Скорочення регіонів
+// Regionskürzel
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -54,17 +55,20 @@ const AllMedicalTerminologyPage = () => {
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const [user, loading] = useAuthState(auth);
 
+  // Neuer Zustand zur Kontrolle der Anzeige/Verbergung der Spalte "Definition"
+  const [showDefinition, setShowDefinition] = useState(true);
+
   if (loading) {
     return (
       <MainLayout>
-        <p>Завантаження даних...</p>
+        <p>Daten werden geladen...</p>
       </MainLayout>
     );
   }
   if (!user) {
     return (
       <MainLayout>
-        <p>Будь ласка, увійдіть у систему для роботи з термінами.</p>
+        <p>Bitte melden Sie sich an, um mit den Begriffen zu arbeiten.</p>
       </MainLayout>
     );
   }
@@ -78,14 +82,13 @@ const AllMedicalTerminologyPage = () => {
   const [collapsedCategories, setCollapsedCategories] = useState({});
   const [filterMode, setFilterMode] = useState("all");
 
-  // Модалка налаштувань (кнопка з шестернею у нижньому правому куті)
+  // Einstellungen-Modal (Zahnradsymbol in der rechten unteren Ecke)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
 
-  // Стан пошуку: коли активний – показується поле вводу, а кнопка змінюється на хрестик.
-  // При натисканні на хрестик скидається фільтр (searchTerm очищується) і поле закривається.
+  // Suchstatus: Wenn aktiv, wird ein Eingabefeld angezeigt und die Schaltfläche wechselt zum Kreuz.
   const [isSearchActive, setIsSearchActive] = useState(false);
 
-  // Реф для відстеження кліків поза сторінкою
+  // Referenz zur Überwachung von Klicks außerhalb der Seite
   const pageRef = useRef(null);
 
   useEffect(() => {
@@ -104,7 +107,7 @@ const AllMedicalTerminologyPage = () => {
     navigate("/terminology-learning");
   };
 
-  // Закриття модального вікна налаштувань при кліку поза ним
+  // Schließen des Einstellungsmodals bei Klick außerhalb
   const settingsModalRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
@@ -123,7 +126,7 @@ const AllMedicalTerminologyPage = () => {
     };
   }, [isSettingsModalOpen]);
 
-  // Закриття пошуку при кліку поза сторінкою
+  // Schließen der Suche bei Klick außerhalb der Seite
   useEffect(() => {
     function handleClickOutsidePage(event) {
       if (
@@ -210,42 +213,53 @@ const AllMedicalTerminologyPage = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>Medizinische Fachbegriffe für die Fachsprachenprüfung in Deutschland</title>
+        <meta
+          name="description"
+          content="Diese Seite richtet sich an alle, die sich auf die Fachsprachenprüfung vorbereiten, eine Approbation anstreben und in Deutschland arbeiten möchten. Lernen Sie medizinische Fachbegriffe effektiv!"
+        />
+        <meta
+          name="keywords"
+          content="Fachsprachenprüfung, medizinische Begriffe, Approbation, Arbeitslizenz, Deutschland"
+        />
+        {/* Weitere Metadaten können hier hinzugefügt werden */}
+      </Helmet>
       <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
-        {/* Кнопка "Назад" */}
+        {/* Zurück-Button */}
         <button className={styles.main_menu_back} onClick={handleBack}>
           &#8592;
         </button>
 
-        {/* Контейнер для кнопки пошуку / поля вводу */}
-{/* Контейнер для кнопки пошуку / поля вводу */}
-<div className={styles.searchContainer}>
-  <input
-    type="text"
-    placeholder="Suche..."
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    className={`${styles.searchInput} ${isSearchActive ? styles.active : ''}`}
-    style={{ display: isSearchActive ? 'block' : 'none' }}
-    autoFocus={isSearchActive}
-  />
-  <button
-    className={styles.searchToggleButton}
-    onClick={() => {
-      if (isSearchActive) {
-        // Якщо пошук активний — скидаємо фільтр і закриваємо поле
-        setSearchTerm("");
-        setIsSearchActive(false);
-      } else {
-        // Інакше відкриваємо поле пошуку
-        setIsSearchActive(true);
-      }
-    }}
-  >
-    {isSearchActive ? <FaTimes /> : <FaSearch />}
-  </button>
-</div>
+        {/* Container für Suchschaltfläche / Eingabefeld */}
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Suche..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={`${styles.searchInput} ${
+              isSearchActive ? styles.active : ""
+            }`}
+            style={{ display: isSearchActive ? "block" : "none" }}
+            autoFocus={isSearchActive}
+          />
+          <button
+            className={styles.searchToggleButton}
+            onClick={() => {
+              if (isSearchActive) {
+                setSearchTerm("");
+                setIsSearchActive(false);
+              } else {
+                setIsSearchActive(true);
+              }
+            }}
+          >
+            {isSearchActive ? <FaTimes /> : <FaSearch />}
+          </button>
+        </div>
 
-        {/* Контент: мобільна (плитки) чи десктопна (таблиця) версія */}
+        {/* Inhalt: Mobile (Kacheln) oder Desktop (Tabelle) Version */}
         {isMobile ? (
           <div className={styles.tilesContainer}>
             {Object.keys(termsByCategory).map((category) => (
@@ -280,7 +294,7 @@ const AllMedicalTerminologyPage = () => {
                         }`}
                       >
                         <span
-                          className={styles.checkIcon}
+                          className={styles.checkIconDesktop}
                           onClick={() => toggleLearned(term.id)}
                           title="Gelernt"
                         >
@@ -359,9 +373,22 @@ const AllMedicalTerminologyPage = () => {
                 <table className={styles.terminologyTable}>
                   <thead>
                     <tr>
-                      <th>Begriff</th>
-                      <th>Deutsche Bezeichnung</th>
-                      <th>Definition</th>
+                      <th
+                        style={{
+                          width: showDefinition ? "20%" : "50%",
+                          textAlign: "left",
+                        }}
+                      >
+                        Begriff
+                      </th>
+                      <th style={{ width: showDefinition ? "20%" : "50%" }}>
+                        Deutsche Bezeichnung
+                      </th>
+                      {showDefinition && (
+                        <th style={{ width: "60%", textAlign: "left" }}>
+                          Definition
+                        </th>
+                      )}
                     </tr>
                   </thead>
                   <tbody>
@@ -396,9 +423,7 @@ const AllMedicalTerminologyPage = () => {
                                 <FaPause />
                               </span>
                             </div>
-                            <div className={styles.termContent}>
-                              {term.lat}
-                            </div>
+                            <div className={styles.termContent}>{term.lat}</div>
                           </td>
                           <td>
                             {translationLanguage !== "de" ? (
@@ -419,25 +444,27 @@ const AllMedicalTerminologyPage = () => {
                               term.de
                             )}
                           </td>
-                          <td>
-                            {translationLanguage !== "de" ? (
-                              <Tippy
-                                content={
-                                  term[translationLanguage + "Explanation"] ||
-                                  "Keine Übersetzung vorhanden"
-                                }
-                                trigger="click"
-                                interactive={true}
-                                placement="right"
-                              >
-                                <span className={styles.clickableCell}>
-                                  {term.deExplanation}
-                                </span>
-                              </Tippy>
-                            ) : (
-                              term.deExplanation
-                            )}
-                          </td>
+                          {showDefinition && (
+                            <td>
+                              {translationLanguage !== "de" ? (
+                                <Tippy
+                                  content={
+                                    term[translationLanguage + "Explanation"] ||
+                                    "Keine Übersetzung vorhanden"
+                                  }
+                                  trigger="click"
+                                  interactive={true}
+                                  placement="right"
+                                >
+                                  <span className={styles.clickableCell}>
+                                    {term.deExplanation}
+                                  </span>
+                                </Tippy>
+                              ) : (
+                                term.deExplanation
+                              )}
+                            </td>
+                          )}
                         </tr>
                       );
                     })}
@@ -448,7 +475,7 @@ const AllMedicalTerminologyPage = () => {
           ))
         )}
 
-        {/* Модальне вікно налаштувань (шестерня) */}
+        {/* Einstellungsmodal (Zahnradsymbol) */}
         {isSettingsModalOpen && (
           <div className={styles.modalOverlay}>
             <div
@@ -467,7 +494,10 @@ const AllMedicalTerminologyPage = () => {
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                <div className={styles.regionColumn} data-tutorial="regionSelect">
+                <div
+                  className={styles.regionColumn}
+                  data-tutorial="regionSelect"
+                >
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.regionCell}>
@@ -486,7 +516,10 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.filterColumn} data-tutorial="filterColumn">
+                <div
+                  className={styles.filterColumn}
+                  data-tutorial="filterColumn"
+                >
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
@@ -505,7 +538,10 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.categoryColumn} data-tutorial="categorySelect">
+                <div
+                  className={styles.categoryColumn}
+                  data-tutorial="categorySelect"
+                >
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -531,7 +567,10 @@ const AllMedicalTerminologyPage = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.gameColumn} data-tutorial="gameContainer">
+                <div
+                  className={styles.gameColumn}
+                  data-tutorial="gameContainer"
+                >
                   <label className={styles.fieldLabel}>Spiel</label>
                   <div
                     className={styles.selectWrapper}
@@ -543,12 +582,29 @@ const AllMedicalTerminologyPage = () => {
                     </div>
                   </div>
                 </div>
+                {/* Neuer Container für Definition */}
+                <div
+                  className={styles.definitionColumn}
+                  data-tutorial="definitionToggle"
+                >
+                  <label className={styles.fieldLabel}>Definition</label>
+                  <div
+                    className={`${styles.definitionToggle} ${
+                      showDefinition ? styles.active : ""
+                    }`}
+                    onClick={() => setShowDefinition((prev) => !prev)}
+                  >
+                    <span className={styles.toggleText}>
+                      {showDefinition ? "An" : "Aus"}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* Кнопка налаштувань (шестерня) у нижньому правому куті */}
+        {/* Einstellungen-Schaltfläche (Zahnradsymbol) in der rechten unteren Ecke */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}

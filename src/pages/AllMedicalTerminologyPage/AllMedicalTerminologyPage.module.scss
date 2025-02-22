@@ -54,7 +54,6 @@
   transform: scale(1.1);
 }
 
-/* Іконка пошуку */
 .searchToggleButton svg {
   font-size: 20px;
 }
@@ -74,7 +73,6 @@
   margin-right: 10px;
 }
 
-/* Активне поле (після кліку на кнопку пошуку) */
 .searchInput.active {
   width: 250px;
   opacity: 1;
@@ -171,23 +169,19 @@
   margin-top: 15px;
 }
 
+/* Контейнери для налаштувань – регіон, фільтр, категорія, гра та ERCLEARING */
 .regionColumn,
 .filterColumn,
 .categoryColumn,
-.gameColumn {
+.gameColumn,
+.erclearingColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
 }
 
-.fieldLabel {
-  font-weight: 600;
-  font-size: 14px;
-  color: #013b6e;
-  margin-bottom: 5px;
-}
-
+/* Стилізація контейнерів вибору (регіон, фільтр, категорія, гра) */
 .selectWrapper {
   position: relative;
   display: inline-block;
@@ -267,6 +261,35 @@
   cursor: pointer;
 }
 
+/* Новий контейнер ERCLEARING */
+.erclearingToggle {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* трохи ширше для вміщення тексту */
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleText {
+  font-size: 10px;
+  text-align: center;
+  color: #013b6e;
+}
+
+/* Загальний лейбл полів */
+.fieldLabel {
+  font-weight: 600;
+  font-size: 14px;
+  color: #013b6e;
+  margin-bottom: 5px;
+}
+
 /* Кнопка налаштувань (шестерня) у нижньому правому куті */
 .bottomRightSettings {
   position: fixed;
@@ -288,6 +311,7 @@
   align-items: center;
   transition: background-color 0.3s, transform 0.2s;
 }
+
 .settingsButton:hover {
   transform: scale(1.1);
 }
@@ -426,6 +450,7 @@
   color: #333;
 }
 
+/* Якщо колонка з Definition прихована, ширина перших двох колонок розтягується */
 .terminologyTable th:nth-child(1),
 .terminologyTable td:nth-child(1) {
   width: 20%;
@@ -435,6 +460,7 @@
 .terminologyTable th:nth-child(2),
 .terminologyTable td:nth-child(2) {
   width: 20%;
+  text-align: left;
 }
 
 .terminologyTable th:nth-child(3),
@@ -483,6 +509,11 @@
   font-size: 16px;
 }
 
+.learned .checkIconDesktop {
+  color: #fff; /* Іконка в білому кольорі для позначеної плитки */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 .checkIconDesktop:hover {
   transform: scale(1.1);
 }
@@ -495,8 +526,21 @@
   font-size: 16px;
 }
 
-.pauseIconDesktop:hover {
+.pauseIcon:hover {
   transform: scale(1.1);
+  color: #d68910;
+}
+
+.paused .pauseIcon {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .pauseIcon {
+    top: 5px;
+    right: 5px; /* Переміщення в правий верхній кут */
+    left: auto;
+  }
 }
 
 .categoryIcon {
@@ -510,4 +554,52 @@
     flex: 1 1 100%;
     max-width: 100%;
   }
+}
+/* Оновлений контейнер для Definition */
+.definitionColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Контейнер Definition */
+.definitionToggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff; /* Білий фон за замовчуванням */
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: #013b6e; /* Синій текст для вимкненого стану */
+}
+
+/* Активний стан (синій фон) */
+.definitionToggle.active {
+  background-color: #013b6e; /* Такий же синій, як у категоріях */
+  color: #ffffff;
+}
+.toggleText.off {
+  color: #013b6e;
+}
+
+/* Текст всередині Definition */
+.toggleText {
+  font-size: 10px;
+  text-align: center;
+  color: inherit; /* Колір змінюється залежно від активного стану */
+}
+
+/* Підпис "Definition" над полем */
+.fieldLabel {
+  font-weight: 600;
+  font-size: 14px;
+  color: #013b6e;
+  margin-bottom: 5px;
 }
