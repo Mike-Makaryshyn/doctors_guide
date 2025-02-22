@@ -46,44 +46,53 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 3: Fortune Wheel */}
-          <Link
-            to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${fortuneWheelBg})` }}
-          >
-            <div className={styles.innerTile}>
-              <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>Fortune Wheel</div>
-              </div>
-            </div>
-          </Link>
+         
 
-          {/* Плитка 4: Fill In Blank Game */}
+          {/* Плитка 4: Fill In Blank Game із сірим контейнером з анімацією квадратів */}
           <Link
             to={`${pathList.fill_in_blank.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
             style={{ backgroundImage: `url(${fillInBlankBg})` }}
           >
             <div className={styles.innerTile}>
+              <div className={styles.fillInBlankContainer}>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+              </div>
+              <div className={styles.fillInBlankText}>Fill In Blank Game</div>
+            </div>
+          </Link>
+
+          {/* Плитка 5: Translator (перекладачів) */}
+          <Link
+            to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${translatorBg})` }}
+          >
+            <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>Fill In Blank Game</div>
+                <div className={styles.tileTitle}>Elective Language Game</div>
               </div>
             </div>
           </Link>
 
-          {/* Нова плитка: Translator (перекладачів) */}
-          <Link
-  to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
-  className={styles.gameTile}
-  style={{ backgroundImage: `url(${translatorBg})` }}
->
-  <div className={styles.innerTile}>
-    <div className={styles.rockingCard}>
-      <div className={styles.tileTitle}>Elective Language Game</div>
-    </div>
-  </div>
-</Link>
+           {/* Плитка 3: Fortune Wheel із обертовим сірим кругом */}
+           <Link
+            to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${fortuneWheelBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.fortuneWheelContainer}>
+                <div className={styles.spinningCircle}></div>
+                <div className={styles.fortuneTitle}>Fortune Wheel</div>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </MainLayout>
