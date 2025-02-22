@@ -239,12 +239,7 @@ const MainMenuPage = () => {
                         ))}
                   </div>
                </div>
-               <button
-                  className={"main_menu_back"}
-                  onClick={() => handleChangePage("/lands")}
-               >
-                  &#8592;
-               </button>
+             
             </div>
          </div>
       </MainLayout>

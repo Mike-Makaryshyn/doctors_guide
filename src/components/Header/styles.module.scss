@@ -48,12 +48,13 @@
    }
    .sRegionShort {
      display: inline-block;
+     font-size: 12px;
    }
  }
  
  .langSelect {
    display: flex;
-   padding: 0px;
+   padding: 10px;
    border-radius: 24px; /* округлий контейнер */
    background: #2a7c6f;
    margin-top: 0;
