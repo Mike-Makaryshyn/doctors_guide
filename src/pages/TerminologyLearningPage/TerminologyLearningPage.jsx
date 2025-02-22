@@ -18,6 +18,15 @@ const TerminologyLearningPage = () => {
     <MainLayout>
       <div className={styles.container}>
         <h1>Games</h1>
+
+
+          {/* --- Main Menu Back Button --- */}
+          <button
+          className={styles.main_menu_back}
+          onClick={() => navigate("/")} // Замінити "/" на потрібний маршрут
+        >
+          &#8592;
+        </button>
         <div className={styles.gamesGrid}>
           {/* Плитка 1: Flashcard */}
           <Link

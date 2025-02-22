@@ -116,6 +116,9 @@ const RegionalChatsPage = React.lazy(() =>
   import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
 );
 
+const NavigateToMap = () => (
+  <Link to={pathList.custom_map.path}></Link>
+);
 const FillInBlankGame = React.lazy(() =>
   import("../pages/FillInBlankGame/FillInBlankGame.jsx")
 );
@@ -143,6 +146,7 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
         <Route path={pathList.main_menu.path} element={<MainMenuPage />} />
@@ -152,6 +156,7 @@ export default function Routers() {
           path={pathList.gleichwertigkeit.path}
           element={<GleichwertigkeitPage />}
         />
+        
         <Route path={pathList.notar_list.path} element={<NotarListPage />} />
         <Route
           path={pathList.kenntnispruefung.path}

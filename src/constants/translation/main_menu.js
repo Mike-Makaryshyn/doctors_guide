@@ -280,7 +280,7 @@ export const main_menu_items = {
                uk: "Області в Німеччині",
                ru: "Регионы в Германии",
                de: "Regionen in Deutschland",
-               link: "https://en.wikipedia.org/wiki/States_of_Germany",
+               link: "/custom-map",
             },
             {
                en: "Contact with Authorities for Approbation",

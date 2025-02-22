@@ -99,4 +99,8 @@ export const pathList = {
   regional_chats: {
     path: "/regional-chats",
   },
+  custom_map: {
+    path: "/custom-map", // <-- Це твій PATH
+  },
+
 };
