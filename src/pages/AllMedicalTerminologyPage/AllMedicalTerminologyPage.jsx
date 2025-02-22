@@ -5,7 +5,7 @@ import styles from "./AllMedicalTerminologyPage.module.scss";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "../../firebase";
+import { auth } from "../../firebase";
 import { FaCog, FaCheck, FaPause } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
@@ -20,13 +20,34 @@ const unifyRegion = (r) =>
 const AllMedicalTerminologyPage = () => {
   const { termStatuses, toggleStatus, flushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
+  const [user, loading] = useAuthState(auth);
+
+  // Якщо auth state ще завантажується, відображаємо індикатор
+  if (loading) {
+    return (
+      <MainLayout>
+        <p>Завантаження даних...</p>
+      </MainLayout>
+    );
+  }
+
+  // Якщо користувача немає, просимо увійти
+  if (!user) {
+    return (
+      <MainLayout>
+        <p>Будь ласка, увійдіть у систему для роботи з термінами.</p>
+      </MainLayout>
+    );
+  }
 
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
+  const [translationLanguage, setTranslationLanguage] = useState(
+    selectedLanguage || "de"
+  );
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
@@ -44,7 +65,10 @@ const AllMedicalTerminologyPage = () => {
   // Закриття модального вікна при кліку поза його межами
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (settingsModalRef.current && !settingsModalRef.current.contains(event.target)) {
+      if (
+        settingsModalRef.current &&
+        !settingsModalRef.current.contains(event.target)
+      ) {
         setIsSettingsModalOpen(false);
       }
     };
@@ -67,27 +91,18 @@ const AllMedicalTerminologyPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Викликаємо flushChanges під час покидання сторінки, щоб зберегти накопичені зміни
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      flushChanges();
-      e.preventDefault();
-      e.returnValue = "";
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
-  }, [flushChanges]);
-
+  // Функції перемикання статусів із логуванням
   const toggleLearned = (id) => {
+    console.log(`Перемикання статусу "learned" для term ${id}`);
     toggleStatus(id, "learned");
   };
 
   const togglePaused = (id) => {
+    console.log(`Перемикання статусу "paused" для term ${id}`);
     toggleStatus(id, "paused");
   };
 
-  // Фільтрація та розбиття термінів за категоріями
+  // Фільтрація термінів
   const uniqueRegions = Array.from(
     new Set(
       medicalTerms.flatMap((term) =>
@@ -107,18 +122,25 @@ const AllMedicalTerminologyPage = () => {
       term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
-      selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+      selectedCategory === "Alle" ||
+      (term.categories || []).includes(selectedCategory);
     const matchesRegion =
-      region === "Alle" || (term.regions || []).some((r) => unifyRegion(r) === region);
+      region === "Alle" ||
+      (term.regions || []).some((r) => unifyRegion(r) === region);
     const base = matchesSearch && matchesCategory && matchesRegion;
 
-    const status = termStatuses[term.id] || "unlearned";
+    const statusObj = termStatuses[term.id];
+    const status = statusObj?.status || "unlearned";
+
     if (filterMode === "learned" && status !== "learned") return false;
     if (filterMode === "paused" && status !== "paused") return false;
-    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
+      return false;
+    }
     return base;
   });
 
+  // Групування термінів за категоріями
   const termsByCategory = {};
   filteredTerms.forEach((term) => {
     (term.categories || []).forEach((category) => {
@@ -133,13 +155,15 @@ const AllMedicalTerminologyPage = () => {
   const handleCategoryChange = (e) => setSelectedCategory(e.target.value);
   const handleFilterModeChange = (e) => setFilterMode(e.target.value);
 
+  // Збереження у PDF
   const saveToPDF = () => {
     const doc = new jsPDF();
     doc.setFont("Helvetica", "bold");
     doc.setFontSize(16);
     doc.text("Ausgewählte medizinische Begriffe", 10, 10);
+
     const tableData = selectedDefinitions.map((termId) => {
-      const term = medicalTerms.find((term) => term.id === termId);
+      const term = medicalTerms.find((t) => t.id === termId);
       return [term.lat, term.de, term.deExplanation];
     });
     doc.autoTable({
@@ -155,17 +179,18 @@ const AllMedicalTerminologyPage = () => {
     setShowSaveModal(false);
   };
 
+  // Збереження даних у Firebase (для особистого аккаунту)
   const saveToPersonalAccount = async () => {
-    if (!auth.currentUser) {
+    if (!user) {
       alert("Bitte melden Sie sich an, um Daten zu speichern!");
       return;
     }
     try {
-      const termsCollection = collection(db, `users/${auth.currentUser.uid}/savedTerms`);
+      const { db } = await import("../../firebase");
+      const termsCollection = collection(db, `users/${user.uid}/savedTerms`);
       for (const termId of selectedDefinitions) {
-        const termDoc = doc(termsCollection, termId.toString());
-        await setDoc(termDoc, { id: termId });
-        console.log(`[Firebase] Запит setDoc для терміну ${termId}`);
+        const termDocRef = doc(termsCollection, termId.toString());
+        await setDoc(termDocRef, { id: termId });
       }
       alert("Ausgewählte Begriffe wurden erfolgreich in Ihrem Konto gespeichert!");
     } catch (error) {
@@ -216,67 +241,77 @@ const AllMedicalTerminologyPage = () => {
                   </span>
                 </h2>
                 {!collapsedCategories[category] &&
-                  termsByCategory[category].map((term) => (
-                    <div
-                      key={term.id}
-                      className={`${styles.tile} ${
-                        (termStatuses[term.id] || "unlearned") === "learned"
-                          ? styles.learned
-                          : (termStatuses[term.id] || "unlearned") === "paused"
-                          ? styles.paused
-                          : ""
-                      }`}
-                    >
-                      <span
-                        className={styles.checkIcon}
-                        onClick={() => toggleLearned(term.id)}
-                        title="Gelernt"
+                  termsByCategory[category].map((term) => {
+                    const statusObj = termStatuses[term.id] || {};
+                    const status = statusObj.status || "unlearned";
+
+                    return (
+                      <div
+                        key={term.id}
+                        className={`${styles.tile} ${
+                          status === "learned"
+                            ? styles.learned
+                            : status === "paused"
+                            ? styles.paused
+                            : ""
+                        }`}
                       >
-                        <FaCheck />
-                      </span>
-                      <span
-                        className={styles.pauseIcon}
-                        onClick={() => togglePaused(term.id)}
-                        title="Pausiert"
-                      >
-                        <FaPause />
-                      </span>
-                      <h3 className={styles.tileHeader}>{term.lat}</h3>
-                      <p className={styles.tileDescription}>
-                        {translationLanguage !== "de" ? (
-                          <Tippy
-                            content={term[translationLanguage] || "Keine Übersetzung vorhanden"}
-                            trigger="click"
-                            interactive={true}
-                            placement="bottom"
-                          >
-                            <span className={styles.clickableCell}>{term.de}</span>
-                          </Tippy>
-                        ) : (
-                          term.de
-                        )}
-                      </p>
-                      {showDefinitions && (
-                        <p className={styles.tileExplanation}>
+                        <span
+                          className={styles.checkIcon}
+                          onClick={() => toggleLearned(term.id)}
+                          title="Gelernt"
+                        >
+                          <FaCheck />
+                        </span>
+                        <span
+                          className={styles.pauseIcon}
+                          onClick={() => togglePaused(term.id)}
+                          title="Pausiert"
+                        >
+                          <FaPause />
+                        </span>
+                        <h3 className={styles.tileHeader}>{term.lat}</h3>
+                        <p className={styles.tileDescription}>
                           {translationLanguage !== "de" ? (
                             <Tippy
                               content={
-                                term[translationLanguage + "Explanation"] ||
+                                term[translationLanguage] ||
                                 "Keine Übersetzung vorhanden"
                               }
                               trigger="click"
                               interactive={true}
                               placement="bottom"
                             >
-                              <span className={styles.clickableCell}>{term.deExplanation}</span>
+                              <span className={styles.clickableCell}>{term.de}</span>
                             </Tippy>
                           ) : (
-                            term.deExplanation
+                            term.de
                           )}
                         </p>
-                      )}
-                    </div>
-                  ))}
+                        {showDefinitions && (
+                          <p className={styles.tileExplanation}>
+                            {translationLanguage !== "de" ? (
+                              <Tippy
+                                content={
+                                  term[translationLanguage + "Explanation"] ||
+                                  "Keine Übersetzung vorhanden"
+                                }
+                                trigger="click"
+                                interactive={true}
+                                placement="bottom"
+                              >
+                                <span className={styles.clickableCell}>
+                                  {term.deExplanation}
+                                </span>
+                              </Tippy>
+                            ) : (
+                              term.deExplanation
+                            )}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
               </div>
             ))}
           </div>
@@ -308,7 +343,9 @@ const AllMedicalTerminologyPage = () => {
                   </thead>
                   <tbody>
                     {termsByCategory[category].map((term) => {
-                      const status = termStatuses[term.id] || "unlearned";
+                      const statusObj = termStatuses[term.id] || {};
+                      const status = statusObj.status || "unlearned";
+
                       return (
                         <tr
                           key={term.id}
@@ -342,7 +379,10 @@ const AllMedicalTerminologyPage = () => {
                           <td>
                             {translationLanguage !== "de" ? (
                               <Tippy
-                                content={term[translationLanguage] || "Keine Übersetzung vorhanden"}
+                                content={
+                                  term[translationLanguage] ||
+                                  "Keine Übersetzung vorhanden"
+                                }
                                 trigger="click"
                                 interactive={true}
                                 placement="right"
@@ -365,7 +405,9 @@ const AllMedicalTerminologyPage = () => {
                                   interactive={true}
                                   placement="right"
                                 >
-                                  <span className={styles.clickableCell}>{term.deExplanation}</span>
+                                  <span className={styles.clickableCell}>
+                                    {term.deExplanation}
+                                  </span>
                                 </Tippy>
                               ) : (
                                 term.deExplanation
@@ -395,7 +437,10 @@ const AllMedicalTerminologyPage = () => {
                   Als PDF speichern
                 </button>
               </div>
-              <button className={styles.closeButton} onClick={() => setShowSaveModal(false)}>
+              <button
+                className={styles.closeButton}
+                onClick={() => setShowSaveModal(false)}
+              >
                 Schließen
               </button>
             </div>
@@ -403,7 +448,10 @@ const AllMedicalTerminologyPage = () => {
         )}
 
         <div className={styles.bottomRightSettings}>
-          <button className={styles.settingsButton} onClick={() => setIsSettingsModalOpen(true)}>
+          <button
+            className={styles.settingsButton}
+            onClick={() => setIsSettingsModalOpen(true)}
+          >
             <FaCog />
           </button>
         </div>
@@ -417,7 +465,10 @@ const AllMedicalTerminologyPage = () => {
             }
           >
             <div className={styles.popup} ref={settingsModalRef}>
-              <button className={styles.modalCloseButton} onClick={() => setIsSettingsModalOpen(false)}>
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setIsSettingsModalOpen(false)}
+              >
                 <AiOutlineClose />
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
@@ -426,7 +477,11 @@ const AllMedicalTerminologyPage = () => {
               </p>
               <div>
                 <label className={styles.modalLabel}>Region:</label>
-                <select value={region} onChange={handleRegionChange} className={styles.modalSelect}>
+                <select
+                  value={region}
+                  onChange={handleRegionChange}
+                  className={styles.modalSelect}
+                >
                   {Object.keys(
                     medicalTerms.reduce((acc, term) => {
                       (term.regions || []).forEach((r) => {
@@ -473,6 +528,11 @@ const AllMedicalTerminologyPage = () => {
               <div style={{ marginTop: "20px" }}>
                 <button className={styles.actionButton} onClick={goToFlashcardGame}>
                   Zum Flashcard-Spiel wechseln
+                </button>
+              </div>
+              <div style={{ marginTop: "10px" }}>
+                <button className={styles.actionButton} onClick={flushChanges}>
+                  Änderungen jetzt speichern
                 </button>
               </div>
             </div>

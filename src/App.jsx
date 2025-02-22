@@ -37,10 +37,10 @@ function App() {
   return (
     // Обгортаємо весь додаток у QueryClientProvider
     <QueryClientProvider client={queryClient}>
-      {/* Додаємо TermStatusProvider */}
-      <TermStatusProvider>
-        {/* Обгортаємо додаток у AuthProvider */}
-        <AuthProvider>
+      {/* AuthProvider тепер зовні, що забезпечує доступ до auth контексту */}
+      <AuthProvider>
+        {/* TermStatusProvider тепер знаходиться всередині AuthProvider */}
+        <TermStatusProvider>
           {/* Обгортаємо додаток у DataSourceProvider */}
           <DataSourceProvider>
             <CasesProvider>
@@ -71,8 +71,8 @@ function App() {
               </ModalProvider>
             </CasesProvider>
           </DataSourceProvider>
-        </AuthProvider>
-      </TermStatusProvider>
+        </TermStatusProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

@@ -1,112 +1,183 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
 import { auth, db } from "../firebase";
-import { collection, doc, getDocs, writeBatch } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { debounce } from "lodash";
 
 const TermStatusContext = createContext();
 
 export const TermStatusProvider = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-  const [termStatuses, setTermStatuses] = useState({});
-  // Об’єкт для збереження незбережених змін
+  const [termStatuses, setTermStatuses] = useState({}); // { "1": { status: "learned", updatedAt: ... }, ... }
+  const [offlineMode, setOfflineMode] = useState(false);
   const unsavedChanges = useRef({});
-  // Лічильник запитів до Firebase
-  const firebaseRequestCount = useRef(0);
 
-  // Функція для логування лічильника запитів
-  const logRequestCount = (action) => {
-    console.log(`[Firebase] Запит (${action}). Загальна кількість запитів: ${++firebaseRequestCount.current}`);
-  };
+  // Збільшуємо час дебаунсу до 10 секунд
+  const DEBOUNCE_TIME = 10000;
 
-  // Завантаження даних з Firebase та LocalStorage після авторизації
+  const debouncedSave = useRef(
+    debounce(() => {
+      console.log("Debounced save triggered");
+      saveChangesToFirebase();
+    }, DEBOUNCE_TIME)
+  ).current;
+
+  // Якщо auth loading триває занадто довго, вмикаємо offlineMode (наприклад, через 5 секунд)
   useEffect(() => {
-    if (!user) return;
-    const fetchStatuses = async () => {
-      console.log("[TermStatusContext] Завантаження даних з Firebase та LocalStorage...");
-      let firebaseStatuses = {};
-      try {
-        const statusesCollection = collection(db, `users/${user.uid}/termStatuses`);
-        const snapshot = await getDocs(statusesCollection);
-        logRequestCount("getDocs");
-        snapshot.forEach(docSnap => {
-          firebaseStatuses[docSnap.id] = docSnap.data().status;
-        });
-        console.log("[TermStatusContext] Дані з Firebase завантажено:", firebaseStatuses);
-      } catch (error) {
-        console.error("[TermStatusContext] Помилка завантаження з Firebase:", error);
+    const timeout = setTimeout(() => {
+      if (loading) {
+        console.warn("Auth state loading занадто довго, перемикаємося в offline режим");
+        setOfflineMode(true);
       }
-      const localData = localStorage.getItem("termStatuses");
-      const localStatuses = localData ? JSON.parse(localData) : {};
-      console.log("[TermStatusContext] Дані з LocalStorage:", localStatuses);
-      // Локальні зміни мають пріоритет над даними з Firebase
-      const mergedStatuses = { ...firebaseStatuses, ...localStatuses };
-      setTermStatuses(mergedStatuses);
-      localStorage.setItem("termStatuses", JSON.stringify(mergedStatuses));
-      console.log("[TermStatusContext] Дані об'єднані та збережені в LocalStorage:", mergedStatuses);
-    };
+    }, 5000);
+    return () => clearTimeout(timeout);
+  }, [loading]);
 
-    fetchStatuses();
-  }, [user]);
-
-  // Оновлюємо LocalStorage щоразу, коли termStatuses змінюється
-  useEffect(() => {
-    localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
-  }, [termStatuses]);
-
-  // Функція збереження змін у Firebase за допомогою batch-записів
   const saveChangesToFirebase = async () => {
-    if (!user) {
-      console.log("[TermStatusContext] Користувач не авторизований, збереження пропущено.");
+    // Якщо offlineMode увімкнено або немає користувача – зберігаємо тільки в LocalStorage
+    if (offlineMode || !user) {
+      console.log("Offline mode або немає користувача, зберігаємо тільки в LocalStorage.");
+      setTermStatuses((prev) => {
+        const newStatuses = { ...prev };
+        for (const [termId, data] of Object.entries(unsavedChanges.current)) {
+          if (data.status === "unlearned") {
+            delete newStatuses[termId];
+          } else {
+            newStatuses[termId] = data;
+          }
+        }
+        localStorage.setItem("termStatuses", JSON.stringify(newStatuses));
+        console.log("LocalStorage оновлено:", localStorage.getItem("termStatuses"));
+        return newStatuses;
+      });
+      unsavedChanges.current = {};
       return;
     }
-    if (Object.keys(unsavedChanges.current).length === 0) {
-      console.log("[TermStatusContext] Незбережених змін немає.");
+
+    if (loading) {
+      console.log("Auth state loading... Збереження відкладене.");
       return;
     }
-    console.log("[TermStatusContext] Збереження змін у Firebase:", unsavedChanges.current);
-    const statusesCollection = collection(db, `users/${user.uid}/termStatuses`);
+
     const changes = { ...unsavedChanges.current };
-    // Очищуємо unsavedChanges для запобігання повторного збереження
+    if (Object.keys(changes).length === 0) {
+      console.log("Немає незбережених змін.");
+      return;
+    }
     unsavedChanges.current = {};
 
-    const batch = writeBatch(db);
-    Object.entries(changes).forEach(([termId, status]) => {
-      const termDoc = doc(statusesCollection, termId);
-      if (status === "unlearned") {
-        batch.delete(termDoc);
-      } else {
-        batch.set(termDoc, { status }, { merge: true });
-      }
-    });
-
     try {
-      await batch.commit();
-      logRequestCount("batch.commit");
-      console.log("[TermStatusContext] Зміни успішно збережені у Firebase");
+      console.log("Зберігаємо зміни у Firestore:", changes);
+      const newTermStatuses = { ...termStatuses };
+      for (const [termId, data] of Object.entries(changes)) {
+        if (data.status === "unlearned") {
+          delete newTermStatuses[termId];
+        } else {
+          newTermStatuses[termId] = data;
+        }
+      }
+      setTermStatuses(() => {
+        localStorage.setItem("termStatuses", JSON.stringify(newTermStatuses));
+        console.log("LocalStorage оновлено:", localStorage.getItem("termStatuses"));
+        return newTermStatuses;
+      });
+
+      const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
+      await setDoc(docRef, { statuses: newTermStatuses }, { merge: true });
+
+      console.log("Зміни успішно збережені у Firestore.");
     } catch (error) {
-      console.error("[TermStatusContext] Помилка при збереженні у Firebase:", error);
-      // Повертаємо зміни назад для повторної спроби
+      console.error("Помилка при збереженні у Firebase:", error);
       unsavedChanges.current = { ...changes, ...unsavedChanges.current };
     }
   };
 
-  // Функція для оновлення статусу терміна (тільки локально)
+  // Завантаження даних із Firestore та LocalStorage
+  useEffect(() => {
+    if (loading) return;
+    if (!user) {
+      setTermStatuses({});
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
+        const docSnap = await getDoc(docRef);
+
+        let firebaseData = {};
+        if (docSnap.exists()) {
+          firebaseData = docSnap.data()?.statuses || {};
+        }
+        console.log("Дані з Firestore:", firebaseData);
+
+        const localData = localStorage.getItem("termStatuses");
+        const localStatuses = localData ? JSON.parse(localData) : {};
+        console.log("Дані з LocalStorage:", localStatuses);
+
+        // Якщо LocalStorage має дані, вони мають пріоритет
+        const merged = Object.keys(localStatuses).length > 0 ? localStatuses : firebaseData;
+
+        setTermStatuses(merged);
+        localStorage.setItem("termStatuses", JSON.stringify(merged));
+        console.log("Merged дані:", merged);
+
+        unsavedChanges.current = { ...merged };
+        debouncedSave();
+      } catch (error) {
+        console.error("Помилка при зчитуванні даних:", error);
+      }
+    };
+
+    fetchData();
+
+    const handleBeforeUnload = () => {
+      debouncedSave.flush();
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      debouncedSave.flush();
+    };
+  }, [user, loading, debouncedSave]);
+
+  // Якщо після завантаження auth state є незбережені зміни, виконуємо їх збереження
+  useEffect(() => {
+    if (!loading && user && Object.keys(unsavedChanges.current).length > 0) {
+      console.log("Auth state завантажено. Виконуємо збереження незбережених змін.");
+      saveChangesToFirebase();
+    }
+  }, [loading, user]);
+
+  // Синхронізація LocalStorage при зміні termStatuses
+  useEffect(() => {
+    localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
+    console.log("termStatuses змінено, LocalStorage:", localStorage.getItem("termStatuses"));
+  }, [termStatuses]);
+
   const setStatus = (termId, status) => {
-    setTermStatuses(prev => ({ ...prev, [termId]: status }));
-    unsavedChanges.current[termId] = status;
-    console.log(`[TermStatusContext] Статус терміна ${termId} встановлено як "${status}" локально.`);
+    const now = Date.now();
+    setTermStatuses((prev) => {
+      const updated = {
+        ...prev,
+        [termId]: { ...(prev[termId] || {}), status, updatedAt: now },
+      };
+      return updated;
+    });
+    unsavedChanges.current[termId] = { status, updatedAt: now };
+    debouncedSave();
   };
 
-  // Функція для перемикання статусу
   const toggleStatus = (termId, newStatus) => {
-    const current = termStatuses[termId] || "unlearned";
-    const updatedStatus = current === newStatus ? "unlearned" : newStatus;
+    const currentStatus = termStatuses[termId]?.status || "unlearned";
+    const updatedStatus = currentStatus === newStatus ? "unlearned" : newStatus;
+    console.log(`Перемикання статусу для term ${termId}: ${currentStatus} -> ${updatedStatus}`);
     setStatus(termId, updatedStatus);
   };
 
-  // Функція для примусового збереження змін (flush)
   const flushChanges = () => {
-    saveChangesToFirebase();
+    console.log("Примусове збереження змін...");
+    debouncedSave.flush();
   };
 
   return (
