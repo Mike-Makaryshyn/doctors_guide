@@ -17,7 +17,14 @@ import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 
-// Абревіатури для регіонів
+// Firebase Auth Imports та AuthModal
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
+import AuthModal from "../AuthPage/AuthModal";
+
+// Компонент туторіалу для FillInBlankGame
+import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
+
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -44,26 +51,40 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const questionCountOptions = [20, 40, 60, 100, 200, "all"];
+const questionCountOptions = [10, 20, 40, 60, 100, 200, "all"];
 
 const FillInBlankGame = () => {
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
   const { termStatuses, toggleStatus } = useTermStatus();
 
+  // Firebase Auth логіка
+  const [user, loading] = useAuthState(auth);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return true;
+    }
+    return false;
+  };
+
+  // Логіка туторіалу
+  const [showTutorial, setShowTutorial] = useState(
+    localStorage.getItem("fillInBlankGameTutorialCompleted") !== "true"
+  );
+
   // Стан налаштувань гри
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
-  // displayMode прибрано, оскільки не потрібен
   const [questionCount, setQuestionCount] = useState(20);
   const [allowEdit, setAllowEdit] = useState(false);
 
   // Стан гри
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Важлива змінна selectedAnswer
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
@@ -113,7 +134,7 @@ const FillInBlankGame = () => {
     });
     setShownCounts(neueShownCounts);
 
-    // Формуємо питання з реченнями, які містять {BLANK}
+    // Формуємо питання з реченнями, що містять {BLANK}
     const fragenDaten = ausgewählteBegriffe.map((term) => {
       const correctAnswer = term.answer;
       const wrongOptions = medicalTerms
@@ -312,9 +333,16 @@ const FillInBlankGame = () => {
                 {/* Region */}
                 <div className={styles.regionColumn}>
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper}>
+                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
-                    <select className={styles.nativeSelect} value={region} onChange={(e) => setRegion(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={region}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setRegion(e.target.value);
+                      }}
+                    >
                       <option value="Alle">Alle</option>
                       {Array.from(new Set(medicalTerms.flatMap((term) => term.regions || []))).map((r) => (
                         <option key={r} value={r}>
@@ -327,11 +355,18 @@ const FillInBlankGame = () => {
                 {/* Filter */}
                 <div className={styles.filterColumn}>
                   <label className={styles.fieldLabel}>Filter</label>
-                  <div className={styles.selectWrapper}>
+                  <div className={styles.selectWrapper} data-tutorial="filterColumn">
                     <div className={styles.filterCell}>
                       {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
-                    <select className={styles.nativeSelect} value={filterMode} onChange={(e) => setFilterMode(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={filterMode}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setFilterMode(e.target.value);
+                      }}
+                    >
                       {filterModes.map((mode) => (
                         <option key={mode.value} value={mode.value}>
                           {mode.label}
@@ -343,13 +378,20 @@ const FillInBlankGame = () => {
                 {/* Kategorie */}
                 <div className={styles.categoryColumn}>
                   <label className={styles.fieldLabel}>Kategorie</label>
-                  <div className={styles.selectWrapper}>
+                  <div className={styles.selectWrapper} data-tutorial="categorySelect">
                     <div className={styles.categoryCell}>
                       {categoryIcons[selectedCategory] && (
                         <img src={categoryIcons[selectedCategory]} alt={selectedCategory} className={styles.categoryIcon} />
                       )}
                     </div>
-                    <select className={styles.nativeSelect} value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={selectedCategory}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
+                    >
                       <option value="Alle">Alle</option>
                       {Array.from(new Set(medicalTerms.flatMap((term) => term.categories || []))).map((c) => (
                         <option key={c} value={c}>
@@ -360,11 +402,16 @@ const FillInBlankGame = () => {
                   </div>
                 </div>
                 {/* Bearbeiten */}
-                <div className={styles.editColumn}>
+                <div className={styles.editColumn} data-tutorial="editToggleButton">
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
-                    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${allowEdit ? styles.selectedEdit : ""}`}
-                    onClick={() => setAllowEdit(!allowEdit)}
+                    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
+                      allowEdit ? styles.selectedEdit : ""
+                    }`}
+                    onClick={() => {
+                      if (requireAuth()) return;
+                      setAllowEdit(!allowEdit);
+                    }}
                   >
                     <FaPen />
                   </button>
@@ -372,22 +419,56 @@ const FillInBlankGame = () => {
               </div>
               {/* Кількість питань */}
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer}>
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
-                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
-                      onClick={() => setQuestionCount(countOption)}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setQuestionCount(countOption);
+                      }}
                     >
                       {countOption === "all" ? "Alles" : countOption}
                     </div>
                   ))}
                 </div>
               </div>
-              <button className={styles.startButton} onClick={handleStart}>
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
+            
             </div>
+          </div>
+        )}
+  {/* Кнопка запуску туторіалу */}
+  <button
+                data-tutorial="tutorialStartButton"
+                className={styles.tutorialButton}
+                onClick={() => setShowTutorial(true)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="#ededed"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                  <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                </svg>
+              </button>
+        {/* Повідомлення, якщо за обраним фільтром немає термінів */}
+        {!settingsOpen && !gameFinished && questions.length === 0 && (
+          <div className={styles.noQuestionsMessage}>
+            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
           </div>
         )}
 
@@ -474,6 +555,7 @@ const FillInBlankGame = () => {
             <button
               className={styles.settingsButton}
               onClick={() => {
+                if (requireAuth()) return;
                 setSettingsOpen(true);
                 setGameFinished(false);
               }}
@@ -483,6 +565,12 @@ const FillInBlankGame = () => {
           </div>
         )}
       </div>
+      {/* Відображення туторіалу */}
+      {showTutorial && (
+        <FillInBlankGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+      )}
+      {/* AuthModal для неавторизованих користувачів */}
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
   );
 };

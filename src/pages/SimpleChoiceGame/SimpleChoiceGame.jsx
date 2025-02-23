@@ -22,6 +22,11 @@ import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
+// Firebase Auth Imports для логіки неавторизованих користувачів
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
+import AuthModal from "../AuthPage/AuthModal";
+
 // Abkürzungen für Regionen
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
@@ -63,6 +68,19 @@ const displayModeOptions = [
 const SimpleChoiceGame = () => {
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
+
+  // Firebase Auth State
+  const [user, loading] = useAuthState(auth);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  // Функція перевірки авторизації: якщо користувач не авторизований – відкриваємо AuthModal
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return true;
+    }
+    return false;
+  };
 
   // Функції з контексту
   const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
@@ -226,7 +244,7 @@ const SimpleChoiceGame = () => {
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
-      // У режимі редагування – для навчання: оновлюємо лише локальний стан
+      // Режим редагування – локальні зміни
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       } else {
@@ -395,7 +413,10 @@ const SimpleChoiceGame = () => {
                     <select
                       className={styles.nativeSelect}
                       value={region}
-                      onChange={(e) => setRegion(e.target.value)}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setRegion(e.target.value);
+                      }}
                     >
                       <option value="Alle">Alle</option>
                       {Array.from(
@@ -417,7 +438,10 @@ const SimpleChoiceGame = () => {
                     <select
                       className={styles.nativeSelect}
                       value={filterMode}
-                      onChange={(e) => setFilterMode(e.target.value)}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setFilterMode(e.target.value);
+                      }}
                     >
                       {filterModes.map((mode) => (
                         <option key={mode.value} value={mode.value}>
@@ -445,7 +469,10 @@ const SimpleChoiceGame = () => {
                     <select
                       className={styles.nativeSelect}
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
                     >
                       <option value="Alle">Alle</option>
                       {Array.from(
@@ -466,7 +493,10 @@ const SimpleChoiceGame = () => {
                     className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
                       allowEdit ? styles.selectedEdit : ""
                     }`}
-                    onClick={() => setAllowEdit(!allowEdit)}
+                    onClick={() => {
+                      if (requireAuth()) return;
+                      setAllowEdit(!allowEdit);
+                    }}
                   >
                     <FaPen />
                   </button>
@@ -484,7 +514,10 @@ const SimpleChoiceGame = () => {
                       className={`${styles.displayModeIcon} ${
                         displayMode === option.value ? styles.selected : ""
                       }`}
-                      onClick={() => setDisplayMode(option.value)}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setDisplayMode(option.value);
+                      }}
                     >
                       {option.label}
                     </div>
@@ -503,7 +536,10 @@ const SimpleChoiceGame = () => {
                       className={`${styles.questionCountIcon} ${
                         questionCount === countOption ? styles.selected : ""
                       }`}
-                      onClick={() => setQuestionCount(countOption)}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setQuestionCount(countOption);
+                      }}
                     >
                       {countOption === "all" ? "Alles" : countOption}
                     </div>
@@ -693,6 +729,7 @@ const SimpleChoiceGame = () => {
             <button
               className={styles.settingsButton}
               onClick={() => {
+                if (requireAuth()) return;
                 setSettingsOpen(true);
                 setGameFinished(false);
               }}
@@ -710,6 +747,7 @@ const SimpleChoiceGame = () => {
           />
         )}
       </div>
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
   );
 };

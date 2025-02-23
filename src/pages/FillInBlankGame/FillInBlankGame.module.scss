@@ -486,14 +486,17 @@
   border-radius: 10px;
   background: #ffffff;
   border: none;
-  display: flex;
+  display: flex
+;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-size: 18px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3sease, color 0.3sease;
+  margin-top: -2px;
+  align-self: center;
 }
 
 .editToggleButton:hover {
@@ -536,4 +539,26 @@
 /* Приховуємо displayModeContainer, якщо не потрібен */
 .displayModeContainer {
   display: none;
+}
+.tutorialButton {
+  position: absolute;
+  top: -20px;
+  right: -9px;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 3000;
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
 }
