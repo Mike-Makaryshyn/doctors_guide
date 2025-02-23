@@ -594,11 +594,11 @@ const FlashcardGame = () => {
 
         {/* Render Tutorial */}
         {showTutorial && (
-          <SimpleChoiceGameTutorial
-            run={showTutorial}
-            onFinish={() => setShowTutorial(false)}
-          />
-        )}
+  <FlashCardGameTutorial
+    run={showTutorial}
+    onFinish={() => setShowTutorial(false)}
+  />
+)}
       </div>
     </MainLayout>
   );
