@@ -403,11 +403,18 @@
     font-size: 16px;
   }
 }
-
+.navigationContainer {
+  margin-top: 20px; /* Додаємо відступ від картки */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative; /* Залишаємо відносне позиціонування */
+}
 /* Навігація */
 .navigationButtons {
   margin: 10px 0;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   gap: 15px;
 }
@@ -418,10 +425,11 @@
   border-radius: 6px;
   color: #fff;
   cursor: pointer;
-  display: flex;
+  display: flex
+;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s;
+  transition: background-color .3s;
   font-size: 16px;
 }
 
@@ -591,4 +599,26 @@
   .cardInner.flipped .iconsContainer {
     display: none;
   }
+}
+.tutorialButton {
+  position: absolute;
+  top: -20px;
+  right: -9px;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 3000;
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
 }
