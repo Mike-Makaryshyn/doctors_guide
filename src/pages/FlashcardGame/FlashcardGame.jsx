@@ -14,7 +14,7 @@ import {
   FaArrowLeft,
   FaArrowRight,
   FaList,
-  FaPlay
+  FaPlay,
 } from "react-icons/fa";
 
 // Tippy
@@ -48,7 +48,7 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
-// Filtermodi
+// Фільтри
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -56,20 +56,20 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Anzeige-Modi
+// Режими відображення
 const displayModeOptions = [
   { value: "LatGerman", label: "Lat→Ger" },
   { value: "GermanLat", label: "Ger→Lat" },
   { value: "Mixed", label: "Mixed" },
 ];
 
-// Anzahl Fragen (wird hier nur zur Begrenzung verwendet)
+// Кількість питань
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Hilfsfunktion: Region-Label
+// Допоміжна функція для отримання регіону
 const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-// URL‑Parameter
+// Хук для отримання URL параметрів
 const useQuery = () => new URLSearchParams(useLocation().search);
 
 import FlashCardGameTutorial from "./FlashCardGameTutorial";
@@ -79,7 +79,7 @@ const FlashcardGame = () => {
   const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
 
-  // Standardparameter aus der URL oder Fallback
+  // Отримання параметрів з URL або значення за замовчуванням
   const rawRegion = query.get("region");
   const initialRegion =
     !rawRegion || rawRegion.toLowerCase() === "all" ? "Alle" : rawRegion;
@@ -92,9 +92,15 @@ const FlashcardGame = () => {
       ? "unlearned"
       : rawFilterMode;
 
-  const { termStatuses, toggleStatus } = useTermStatus();
+  // Отримання методів з контексту
+  const {
+    termStatuses,
+    toggleStatus,
+    recordCorrectAnswer,
+    scheduleFlushChanges,
+  } = useTermStatus();
 
-  // Zustände für Einstellungen und Spiel
+  // Стан налаштувань гри
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [region, setRegion] = useState(initialRegion);
   const [category, setCategory] = useState(initialCategory);
@@ -105,10 +111,11 @@ const FlashcardGame = () => {
     localStorage.getItem("flashCardGameTutorialCompleted") !== "true"
   );
 
-  // Zustände für Karten, Fortschritt und Spielende
+  // Стан гри
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  // "Ang" – лічильник показів для кожної картки (за поточну сесію)
   const [progress, setProgress] = useState({});
   const [viewedCards, setViewedCards] = useState({});
   const [gameFinished, setGameFinished] = useState(false);
@@ -121,39 +128,57 @@ const FlashcardGame = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Lade Fortschritt aus LocalStorage
+  // Завантаження "Ang"-даних із LocalStorage
   useEffect(() => {
     const storedProgress = localStorage.getItem("flashcardProgress");
     if (storedProgress) {
       try {
         setProgress(JSON.parse(storedProgress));
       } catch (err) {
-        console.warn("Fehler beim Laden des LocalStorage:", err);
+        console.warn("Помилка при завантаженні progress з LocalStorage:", err);
       }
     }
   }, []);
 
-  // Speichere Fortschritt in LocalStorage
+  // Збереження "Ang"-даних у LocalStorage
   useEffect(() => {
     localStorage.setItem("flashcardProgress", JSON.stringify(progress));
   }, [progress]);
 
-  // Lade Karten basierend auf Filter und Einstellungen
+  // Функція завантаження карток з урахуванням фільтрів
   const loadCards = () => {
     const filtered = medicalTerms.filter((term) => {
-      const status = termStatuses[term.id] || "unlearned";
-      const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
-      const matchesCategory = category === "Alle" || (term.categories || []).includes(category);
+      const status = termStatuses[term.id]?.status || "unlearned";
+      const matchesRegion =
+        region === "Alle" || (term.regions || []).includes(region);
+      const matchesCategory =
+        category === "Alle" || (term.categories || []).includes(category);
 
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
         return false;
-
       return matchesRegion && matchesCategory;
     });
 
-    const prepareCard = (term) => {
+    // Сортуємо терміни за кількістю показів (менше показів – раніше)
+    filtered.sort((a, b) => {
+      const countA = progress[a.id] || 0;
+      const countB = progress[b.id] || 0;
+      return countA - countB;
+    });
+
+    const selectedTerms =
+      questionCount === "all" ? filtered : filtered.slice(0, questionCount);
+
+    // Оновлюємо лічильник "Ang" для кожної обраної картки
+    const newProgress = { ...progress };
+    selectedTerms.forEach((term) => {
+      newProgress[term.id] = (newProgress[term.id] || 0) + 1;
+    });
+    setProgress(newProgress);
+
+    const prepared = selectedTerms.map((term) => {
       let mode = displayMode;
       if (mode === "Mixed") {
         mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
@@ -161,51 +186,56 @@ const FlashcardGame = () => {
       const frontText = mode === "LatGerman" ? term.lat : term.de;
       const backText = mode === "LatGerman" ? term.de : term.lat;
       return { ...term, frontText, backText };
-    };
+    });
 
-    const shuffled = filtered.sort(() => Math.random() - 0.5);
-    const mapped = shuffled.map(prepareCard);
-    const finalCards = questionCount === "all" ? mapped : mapped.slice(0, questionCount);
-
-    setCards(finalCards);
+    setCards(prepared);
     setCurrentIndex(0);
     setFlipped(false);
     setViewedCards({});
   };
 
-  // Spielstart
+  // Запуск гри при закритті налаштувань
+  useEffect(() => {
+    if (!settingsOpen) {
+      loadCards();
+      setGameFinished(false);
+    }
+  }, [settingsOpen]);
+
   const handleStart = () => {
     setSettingsOpen(false);
     loadCards();
     setGameFinished(false);
   };
 
-  // Karte umdrehen
+  // Функція перевертання карти
   const handleFlip = () => {
     setFlipped((prev) => !prev);
   };
 
-  // Status umschalten (learned/paused)
+  // Функції зміни статусу: позначення картки як "Вивчений" або "Паузований"
   const toggleLearnedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "learned");
+    scheduleFlushChanges();
   };
 
   const togglePausedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "paused");
+    scheduleFlushChanges();
+    // Якщо застосовано фільтр "паузованих", вилучаємо картку із колоди
     if (filterMode === "paused") {
-      setFilterMode("all");
+      setCards((prevCards) => prevCards.filter((card) => card.id !== id));
     }
   };
 
-  // Navigation
   const handleNext = () => {
     setFlipped(false);
     if (currentIndex < cards.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      alert("Du hast alle Karten unter diesen Filtern gesehen!");
+      setGameFinished(true);
     }
   };
 
@@ -214,11 +244,11 @@ const FlashcardGame = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     } else {
-      alert("Das ist die erste Karte!");
+      alert("Ви на першій картці!");
     }
   };
 
-  // Zähle die Ansicht der aktuellen Karte (einmal pro Sitzung)
+  // При кожному показі картки оновлюємо "Ang" (збільшуємо лише, якщо ця карта ще не була відмічена в сесії)
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const currentCard = cards[currentIndex];
@@ -232,14 +262,15 @@ const FlashcardGame = () => {
     }
   }, [currentIndex, settingsOpen, cards, viewedCards]);
 
-  // Aktualisiere Karten, wenn sich Filter oder Status ändern
+  // Оновлення списку карток при зміні фільтрів чи статусів
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const newFilteredCards = medicalTerms.filter((term) => {
-        const status = termStatuses[term.id] || "unlearned";
-        const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
-        const matchesCategory = category === "Alle" || (term.categories || []).includes(category);
-
+        const status = termStatuses[term.id]?.status || "unlearned";
+        const matchesRegion =
+          region === "Alle" || (term.regions || []).includes(region);
+        const matchesCategory =
+          category === "Alle" || (term.categories || []).includes(category);
         if (filterMode === "learned" && status !== "learned") return false;
         if (filterMode === "paused" && status !== "paused") return false;
         if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
@@ -255,210 +286,88 @@ const FlashcardGame = () => {
         setCards(stillValid);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [termStatuses, region, category, filterMode]);
 
-  if (!cards.length && !settingsOpen) {
-    return (
-      <MainLayout>
-        <div className={styles.flashcardGame}>
-          <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
-            &#8592;
-          </button>
-          <p>Keine Karten unter den aktuellen Filtern gefunden.</p>
-          <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
-              <FaCog />
-            </button>
-          </div>
-        </div>
-      </MainLayout>
-    );
-  }
+  // Умовна змінна: чи немає карток?
+  const noCardsAvailable = !cards.length && !settingsOpen;
 
-  const currentCard = !settingsOpen && cards.length > 0 ? cards[currentIndex] : null;
+  // Автоматичне додавання "плюсів": якщо для карти накопичено 6 показів, додаємо +3 до correctCount
+  const currentCard = cards[currentIndex] || null;
   const currentCardProgress = currentCard ? progress[currentCard.id] || 0 : 0;
+
+  useEffect(() => {
+    if (currentCard && progress[currentCard.id] >= 6) {
+      recordCorrectAnswer(currentCard.id, 3);
+      setProgress((prev) => ({ ...prev, [currentCard.id]: 0 }));
+    }
+  }, [progress, currentCard, recordCorrectAnswer]);
 
   return (
     <MainLayout>
       <Helmet>
-        <title>Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch</title>
+        <title>Медичне Flashcard Game – Вивчайте медичні терміни граючи</title>
         <meta
           name="description"
-          content="Dieses Flashcard Game ermöglicht es Ihnen, medizinische Begriffe spielerisch zu lernen. Die Karten erscheinen zufällig, und das 'Ang'-Feld zeigt an, wie oft ein Begriff während Ihrer Sitzung angezeigt wurde. Verbessern Sie Ihr Fachwissen und Ihre Sprachkompetenz!"
+          content="Це Flashcard Game дозволяє вам вивчати медичні терміни у інтерактивному режимі. Карти з’являються випадково, а поле 'Ang' показує, скільки разів карта була показана протягом сесії. Покращуйте свої знання та мовну компетентність!"
         />
         <meta
           name="keywords"
-          content="Medizin, Flashcard, Lernen, medizinische Begriffe, Terminologie, interaktives Spiel, Fachsprache"
+          content="медицина, flashcard, вивчення, медичні терміни, термінологія, інтерактивна гра, спеціальна мова"
         />
-        <meta property="og:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
+        <meta property="og:title" content="Медичне Flashcard Game – Вивчайте медичні терміни граючи" />
         <meta
-          property="og:description"
-          content="Lernen Sie medizinische Begriffe mit diesem interaktiven Flashcard Game. Jede Karte wird mehrfach angezeigt – das 'Ang'-Feld zählt die Sichtungen pro Sitzung."
+          name="twitter:description"
+          content="Це Flashcard Game допомагає вам вивчати медичні терміни. Поле 'Ang' показує, як часто карта була показана під час сесії."
         />
         <meta property="og:image" content={flashcardBg} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
-        <meta
-          name="twitter:description"
-          content="Dieses Flashcard Game unterstützt Sie dabei, medizinische Begriffe spielerisch zu lernen. Das 'Ang'-Feld zeigt an, wie oft ein Begriff in Ihrer Sitzung angezeigt wurde."
-        />
+        <meta name="twitter:title" content="Медичне Flashcard Game – Вивчайте медичні терміни граючи" />
         <meta name="twitter:image" content={flashcardBg} />
       </Helmet>
+
       <div className={styles.flashcardGame}>
-        {/* Zurück-Button */}
-        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
+        {/* Кнопка "Назад" */}
+        <button
+          className="main_menu_back"
+          onClick={() => navigate("/terminology-learning")}
+        >
           &#8592;
         </button>
 
-        {/* Einstellungen-Button */}
+        {/* Кнопка налаштувань (внизу праворуч) */}
         {(!isMobile || !settingsOpen) && (
           <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => setSettingsOpen(true)}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => setSettingsOpen(true)}
+            >
               <FaCog />
             </button>
           </div>
         )}
 
-        {/* Anzeige des Ang-Counters */}
-        {!settingsOpen && currentCard && (
-          <div className={styles.angCounter}>Ang: {currentCardProgress}</div>
-        )}
-
-        {/* Modal mit Spieleinstellungen */}
-        {settingsOpen && (
-          <div className={styles.modalOverlay}>
-            <div className={window.innerWidth > 768 ? styles.popupDesktop : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
-                ×
-              </button>
-              <h2 className={styles.modalTitle}>Einstellungen</h2>
-              <div className={styles.row}>
-                {/* Region */}
-                <div className={styles.regionColumn}>
-                  <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
-                    <div className={styles.regionCell}>{getRegionLabel(region)}</div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={region}
-                      onChange={(e) => setRegion(e.target.value)}
-                    >
-                      <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((t) => t.regions || []))).map((r) => (
-                        <option key={r} value={r}>
-                          {r}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                {/* Filter */}
-                <div className={styles.filterColumn} data-tutorial="filterColumn">
-                  <label className={styles.fieldLabel}>Filter</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.filterCell}>
-                      {filterModes.find((m) => m.value === filterMode)?.icon}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={filterMode}
-                      onChange={(e) => setFilterMode(e.target.value)}
-                    >
-                      {filterModes.map((mode) => (
-                        <option key={mode.value} value={mode.value}>
-                          {mode.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                {/* Kategorie */}
-                <div className={styles.categoryColumn} data-tutorial="categorySelect">
-                  <label className={styles.fieldLabel}>Kategorie</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.categoryCell}>
-                      {categoryIcons[category] && (
-                        <img src={categoryIcons[category]} alt={category} className={styles.categoryIcon} />
-                      )}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                    >
-                      <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((t) => t.categories || []))).map((c) => (
-                        <option key={c} value={c}>
-                          {c}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
-                  {displayModeOptions.map((option) => (
-                    <div
-                      key={option.value}
-                      className={`${styles.displayModeIcon} ${displayMode === option.value ? styles.selected : ""}`}
-                      onClick={() => setDisplayMode(option.value)}
-                    >
-                      {option.label}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
-                  {questionCountOptions.map((countOption) => (
-                    <div
-                      key={countOption}
-                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
-                      onClick={() => setQuestionCount(countOption)}
-                    >
-                      {countOption === "all" ? "Alles" : countOption}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
-                Start
+        {/* Умовний рендеринг: якщо немає карток */}
+        {noCardsAvailable && (
+          <div>
+            <p>Немає карток за заданими фільтрами.</p>
+            <div className={styles.bottomRightSettings}>
+              <button
+                className={styles.settingsButton}
+                onClick={() => setSettingsOpen(true)}
+              >
+                <FaCog />
               </button>
             </div>
           </div>
         )}
 
-        {/* Tutorial Trigger Button */}
-        {settingsOpen && (
-          <button
-            data-tutorial="tutorialStartButton"
-            className={styles.tutorialButton}
-            onClick={() => setShowTutorial(true)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="#ededed"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-            </svg>
-          </button>
-        )}
-
-        {/* Spielinterface */}
-        {!settingsOpen && currentCard && !gameFinished && (
+        {/* Якщо є картки і гра не завершена */}
+        {!noCardsAvailable && !gameFinished && currentCard && !settingsOpen && (
           <>
+            {/* Лічильник Ang */}
+            <div className={styles.angCounter}>Ang: {currentCardProgress}</div>
+
             <div className={styles.progress}>
               Karte {currentIndex + 1} von {cards.length}
             </div>
@@ -472,10 +381,21 @@ const FlashcardGame = () => {
                   }`}
                 >
                   {/* Vorderseite */}
-                  <div className={styles.cardFront} style={{ pointerEvents: flipped ? "none" : "auto" }}>
+                  <div
+                    className={styles.cardFront}
+                    style={{ pointerEvents: flipped ? "none" : "auto" }}
+                  >
                     <div className={styles.iconsContainer}>
-                      <Tippy content={currentCard.deExplanation || "Keine Erklärung verfügbar"} trigger="click">
-                        <button className={styles.infoButton} onClick={(e) => e.stopPropagation()}>
+                      <Tippy
+                        content={
+                          currentCard.deExplanation || "Keine Erklärung verfügbar"
+                        }
+                        trigger="click"
+                      >
+                        <button
+                          className={styles.infoButton}
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -518,10 +438,22 @@ const FlashcardGame = () => {
                     </div>
                     <h3>{currentCard.frontText}</h3>
                   </div>
+
                   {/* Rückseite */}
-                  <div className={styles.cardBack} style={{ pointerEvents: flipped ? "auto" : "none" }}>
-                    <Tippy content={currentCard.deExplanation || "Keine Erklärung verfügbar"} trigger="click">
-                      <button className={styles.infoButton} onClick={(e) => e.stopPropagation()}>
+                  <div
+                    className={styles.cardBack}
+                    style={{ pointerEvents: flipped ? "auto" : "none" }}
+                  >
+                    <Tippy
+                      content={
+                        currentCard.deExplanation || "Keine Erklärung verfügbar"
+                      }
+                      trigger="click"
+                    >
+                      <button
+                        className={styles.infoButton}
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -544,6 +476,8 @@ const FlashcardGame = () => {
                 </div>
               </div>
             </div>
+
+            {/* Навігаційні кнопки */}
             <div className={styles.navigationContainer}>
               <button className={styles.navButton} onClick={handlePrev}>
                 <FaArrowLeft />
@@ -553,7 +487,10 @@ const FlashcardGame = () => {
                   <FaArrowRight />
                 </button>
               ) : (
-                <button className={styles.navButton} onClick={finishGame}>
+                <button
+                  className={styles.navButton}
+                  onClick={() => setGameFinished(true)}
+                >
                   Spiel beenden
                 </button>
               )}
@@ -561,11 +498,14 @@ const FlashcardGame = () => {
           </>
         )}
 
-        {/* Ergebnismodal */}
+        {/* Якщо гра завершена */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
-              <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setGameFinished(false)}
+              >
                 ×
               </button>
               <h3>Spielergebnisse</h3>
@@ -577,23 +517,160 @@ const FlashcardGame = () => {
           </div>
         )}
 
-        {/* Einstellungen-Button */}
-        {(!settingsOpen || window.innerWidth > 768) && (
-          <div className={styles.bottomRightSettings}>
-            <button
-              className={styles.settingsButton}
-              onClick={() => {
-                setSettingsOpen(true);
-                setGameFinished(false);
-              }}
-            >
-              <FaCog />
-            </button>
+        {/* Модаль з налаштуваннями */}
+        {settingsOpen && (
+          <div className={styles.modalOverlay}>
+       <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setSettingsOpen(false)}
+              >
+                ×
+              </button>
+              <h2 className={styles.modalTitle}>Налаштування</h2>
+              <div className={styles.row}>
+                {/* Регіон */}
+                <div className={styles.regionColumn} data-tutorial="regionSelect">
+                  <label className={styles.fieldLabel}>Регіон</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.regionCell}>{getRegionLabel(region)}</div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={region}
+                      onChange={(e) => setRegion(e.target.value)}
+                    >
+                      <option value="Alle">Alle</option>
+                      {Array.from(new Set(medicalTerms.flatMap((t) => t.regions || []))).map((r) => (
+                        <option key={r} value={r}>
+                          {r}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                {/* Фільтр */}
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
+                  <label className={styles.fieldLabel}>Фільтр</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.filterCell}>
+                      {filterModes.find((m) => m.value === filterMode)?.icon}
+                    </div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={filterMode}
+                      onChange={(e) => setFilterMode(e.target.value)}
+                    >
+                      {filterModes.map((mode) => (
+                        <option key={mode.value} value={mode.value}>
+                          {mode.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                {/* Категорія */}
+             {/* Категорія */}
+<div className={styles.categoryColumn} data-tutorial="categorySelect">
+  <label className={styles.fieldLabel}>Kategorie</label>
+  <div className={styles.selectWrapper}>
+    <div className={styles.categoryCell}>
+      {categoryIcons[category] && (
+        <img
+          src={categoryIcons[category]}
+          alt={category}
+          className={styles.categoryIcon}
+        />
+      )}
+    </div>
+    <select
+      className={styles.nativeSelect}
+      value={category}
+      onChange={(e) => setCategory(e.target.value)}
+    >
+      <option value="Alle">Alle</option>
+      {Array.from(new Set(medicalTerms.flatMap((t) => t.categories || []))).map((c) => (
+        <option key={c} value={c}>
+          {c}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+              </div>
+
+              <div className={styles.modalField}>
+                <div
+                  className={styles.displayModeContainer}
+                  data-tutorial="displayModeContainer"
+                >
+                  {displayModeOptions.map((option) => (
+                    <div
+                      key={option.value}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === option.value ? styles.selected : ""
+                      }`}
+                      onClick={() => setDisplayMode(option.value)}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.modalField}>
+                <div
+                  className={styles.questionCountContainer}
+                  data-tutorial="questionCountContainer"
+                >
+                  {questionCountOptions.map((countOption) => (
+                    <div
+                      key={countOption}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
+                      onClick={() => setQuestionCount(countOption)}
+                    >
+                      {countOption === "all" ? "Alles" : countOption}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                className={styles.startButton}
+                data-tutorial="startButton"
+                onClick={handleStart}
+              >
+                Start
+              </button>
+            </div>
           </div>
         )}
 
-        {/* Render Tutorial */}
-        {showTutorial && (
+        {/* Кнопка запуску туторіалу */}
+        {settingsOpen && (
+          <button
+            data-tutorial="tutorialStartButton"
+            className={styles.tutorialButton}
+            onClick={() => setShowTutorial(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="30"
+              height="30"
+              fill="none"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+              <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+            </svg>
+          </button>
+        )}
+            {showTutorial && (
   <FlashCardGameTutorial
     run={showTutorial}
     onFinish={() => setShowTutorial(false)}

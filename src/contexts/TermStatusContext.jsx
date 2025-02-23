@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
 import { auth, db } from "../firebase";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, updateDoc, deleteField } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const TermStatusContext = createContext();
@@ -10,7 +10,7 @@ export const TermStatusProvider = ({ children }) => {
   const [termStatuses, setTermStatuses] = useState({});
   const unsavedChanges = useRef({});
 
-  // Додатковий реф для дебаунс-таймера
+  // Реф для debounce-таймера
   const flushTimeoutRef = useRef(null);
 
   // Завантаження даних з Firestore та LocalStorage
@@ -46,7 +46,7 @@ export const TermStatusProvider = ({ children }) => {
     localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
   }, [termStatuses]);
 
-  // Функція збереження змін у Firebase (залишається без змін)
+  // Оновлена функція збереження змін
   const saveChangesToFirebase = async () => {
     if (!user) {
       console.log("Немає користувача, зберігаємо лише в LocalStorage.");
@@ -73,6 +73,8 @@ export const TermStatusProvider = ({ children }) => {
     unsavedChanges.current = {};
     try {
       console.log("Зберігаємо зміни у Firestore (миттєво):", changes);
+
+      // Оновлюємо локальний state
       const newTermStatuses = { ...termStatuses };
       for (const [termId, data] of Object.entries(changes)) {
         if (data.status === "unlearned") {
@@ -85,8 +87,25 @@ export const TermStatusProvider = ({ children }) => {
         localStorage.setItem("termStatuses", JSON.stringify(newTermStatuses));
         return newTermStatuses;
       });
+
       const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
-      await setDoc(docRef, { statuses: newTermStatuses }, { merge: true });
+
+      // Якщо FlashcardGame – використовуємо updateDoc з FieldValue.delete() для видалення ключів,
+      // інакше – повне перезаписування через setDoc з merge: true.
+      const isFlashcardGame = window.location.pathname.toLowerCase().includes("flashcard");
+      if (isFlashcardGame) {
+        const updateData = {};
+        for (const [termId, data] of Object.entries(changes)) {
+          if (data.status === "unlearned") {
+            updateData[`statuses.${termId}`] = deleteField();
+          } else {
+            updateData[`statuses.${termId}`] = data;
+          }
+        }
+        await updateDoc(docRef, updateData);
+      } else {
+        await setDoc(docRef, { statuses: newTermStatuses }, { merge: true });
+      }
       console.log("Зміни успішно збережені у Firestore.");
     } catch (error) {
       console.error("Помилка при збереженні у Firebase:", error);
@@ -94,13 +113,11 @@ export const TermStatusProvider = ({ children }) => {
     }
   };
 
-  // Звичайний flushChanges – викликається, коли потрібне негайне збереження
   const flushChanges = () => {
     console.log("flushChanges() викликано. Зберігаємо негайно.");
     saveChangesToFirebase();
   };
 
-  // Нова функція, яка планує збереження з затримкою (debounce)
   const scheduleFlushChanges = () => {
     if (flushTimeoutRef.current) {
       clearTimeout(flushTimeoutRef.current);
@@ -108,7 +125,7 @@ export const TermStatusProvider = ({ children }) => {
     flushTimeoutRef.current = setTimeout(() => {
       flushChanges();
       flushTimeoutRef.current = null;
-    }, 3000); // затримка 3 секунди, можна налаштувати за потребою
+    }, 3000);
   };
 
   const setStatus = (termId, status) => {
@@ -141,11 +158,11 @@ export const TermStatusProvider = ({ children }) => {
     setStatus(termId, updatedStatus);
   };
 
-  const recordCorrectAnswer = (termId) => {
+  const recordCorrectAnswer = (termId, increment = 1) => {
     const now = Date.now();
     setTermStatuses((prev) => {
       const current = prev[termId] || { status: "unlearned", correctCount: 0 };
-      const newCount = (current.correctCount || 0) + 1;
+      const newCount = (current.correctCount || 0) + increment;
       const newStatus = newCount >= 5 ? "learned" : current.status;
       return {
         ...prev,
@@ -157,7 +174,7 @@ export const TermStatusProvider = ({ children }) => {
       };
     });
     const oldData = termStatuses[termId] || { status: "unlearned", correctCount: 0 };
-    const newCount = (oldData.correctCount || 0) + 1;
+    const newCount = (oldData.correctCount || 0) + increment;
     const newStatus = newCount >= 5 ? "learned" : oldData.status;
     unsavedChanges.current[termId] = {
       status: newStatus,
@@ -175,7 +192,7 @@ export const TermStatusProvider = ({ children }) => {
         toggleStatus,
         recordCorrectAnswer,
         flushChanges,
-        scheduleFlushChanges, // експортуємо нову функцію
+        scheduleFlushChanges,
       }}
     >
       {children}

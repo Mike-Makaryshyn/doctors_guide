@@ -296,7 +296,9 @@ const SimpleChoiceGame = () => {
           Richtige Antworten: {correctAnswerCount} von {questions.length}
         </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
-        <p>Dauer: {sessionDuration} Sekunden</p>
+        <p>
+  Dauer: {Math.floor(sessionDuration / 60)} Minuten {sessionDuration % 60} Sekunden
+</p>
         {Object.keys(kategorieFehler).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
