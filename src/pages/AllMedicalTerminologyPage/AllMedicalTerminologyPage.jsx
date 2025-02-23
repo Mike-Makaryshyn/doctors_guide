@@ -22,6 +22,7 @@ import { useNavigate } from "react-router-dom";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
 import AuthModal from "../AuthPage/AuthModal"; // Шлях до AuthModal може бути змінено залежно від структури проекту
+import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg"; // Додано імпорт картинки
 
 // Regionskürzel
 const regionAbbreviations = {
@@ -213,6 +214,8 @@ const AllMedicalTerminologyPage = () => {
               name="keywords"
               content="Fachsprachenprüfung, medizinische Begriffe, Approbation, Arbeitslizenz, Deutschland"
             />
+            {/* Додано мета-тег з картинкою */}
+            <meta property="og:image" content={medicalTerminologyBg} />
           </Helmet>
           <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
             {/* Кнопка "Назад" */}

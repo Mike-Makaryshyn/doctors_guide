@@ -35,13 +35,13 @@
     justify-content: center;
   }
 }
+
 .main_menu_back {
   margin-top: auto;
   width: 35px;
   height: 28px;
   position: fixed;
-  display: flex
-;
+  display: flex;
   align-items: center;
   justify-content: center;
   left: 20px;
@@ -50,13 +50,13 @@
 }
 
 .main_menu_back:hover {
-
   transform: scale(1.1);
 }
 
 .main_menu_back:active {
   transform: scale(0.95);
 }
+
 /* Плитки */
 .gameTile {
   position: relative;
@@ -161,6 +161,22 @@
   margin-top: 5px;
 }
 
+/* Статичний контейнер для Medical Terminology, який наслідує стилі FillInBlankContainer, але без анімації */
+.fillInBlankContainerStatic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc; /* або інший бажаний фон */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #023c6f;
+}
+
 /* --- Стилі для Fortune Wheel --- */
 .fortuneWheelContainer {
   position: relative;
@@ -172,11 +188,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;       /* збільшено */
-  height: 100px;      /* збільшено */
+  width: 100px;
+  height: 100px;
   margin-top: 0px;
   margin-left: 5px;
-  background-color: #ccc; /* суцільний сірий колір */
+  background-color: #ccc;
   border-radius: 50%;
   box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1);
   animation: spin 2s linear infinite;
@@ -207,14 +223,12 @@
   font-size: 13px;
   color: #023c6f;
   text-align: center;
-  line-height: 100px; /* вирівнювання по висоті нового кола */
+  line-height: 100px;
   top: -12px;
   left: 6px;
-
 }
 
 /* --- Стилі для Fill In Blank Game --- */
-/* Статичний сірий контейнер, розбитий на 6 квадратів */
 .fillInBlankContainer {
   position: relative;
   width: 100%;
@@ -228,13 +242,11 @@
   gap: 5px;
 }
 
-/* Квадрати з анімацією зникання/появи */
 .square {
-  background-color: #bbb; /* трохи темніший сірий */
+  background-color: #bbb;
   animation: blink 3s infinite;
 }
 
-/* Різні затримки для ефекту */
 .square:nth-child(1) { animation-delay: 0s; }
 .square:nth-child(2) { animation-delay: 0.5s; }
 .square:nth-child(3) { animation-delay: 1s; }
@@ -247,7 +259,6 @@
   50% { opacity: 1; }
 }
 
-/* Текст, який залишається поверх контейнера Fill In Blank */
 .fillInBlankText {
   position: absolute;
   top: 50%;

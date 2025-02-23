@@ -1,19 +1,20 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom"; // Додано useNavigate
+import { Link, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./TerminologyLearningPage.module.scss";
 import flashcardBg from "../../assets/flashcard-bg.jpg";
 import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
 import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
-import translatorBg from "../../assets/translator-bg.jpg"; // Нове зображення для плитки перекладачів
+import translatorBg from "../../assets/translator-bg.jpg";
+import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg"; // Нове зображення для Medical Terminology
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
 
 const TerminologyLearningPage = () => {
   const { selectedRegion } = useGetGlobalInfo();
   const regionParam = selectedRegion ? selectedRegion : "Alle";
-  const navigate = useNavigate(); // Ініціалізація navigate
+  const navigate = useNavigate();
 
   return (
     <MainLayout>
@@ -23,12 +24,25 @@ const TerminologyLearningPage = () => {
         {/* --- Main Menu Back Button --- */}
         <button
           className={styles.main_menu_back}
-          onClick={() => navigate("/main_menu")} // Переходить на /main_menu
+          onClick={() => navigate("/main_menu")}
         >
           &#8592;
         </button>
 
         <div className={styles.gamesGrid}>
+          {/* Нова плитка: Medical Terminology */}
+          <Link
+            to="/all-medical-terminology"
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${medicalTerminologyBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.fillInBlankContainerStatic}>
+                Medical Terminology
+              </div>
+            </div>
+          </Link>
+
           {/* Плитка 1: Flashcard */}
           <Link
             to={`/flashcard-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
@@ -56,7 +70,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 4: Fill In Blank Game із сірим контейнером з анімацією квадратів */}
+          {/* Плитка 4: Fill In Blank Game */}
           <Link
             to={`${pathList.fill_in_blank.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -71,11 +85,13 @@ const TerminologyLearningPage = () => {
                 <div className={styles.square}></div>
                 <div className={styles.square}></div>
               </div>
-              <div className={styles.fillInBlankText}>Fill In Blank Game</div>
+              <div className={styles.fillInBlankText}>
+                Fill In Blank Game
+              </div>
             </div>
           </Link>
 
-          {/* Плитка 5: Translator (перекладачів) */}
+          {/* Плитка 5: Translator */}
           <Link
             to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -83,12 +99,14 @@ const TerminologyLearningPage = () => {
           >
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>Elective Language Game</div>
+                <div className={styles.tileTitle}>
+                  Elective Language Game
+                </div>
               </div>
             </div>
           </Link>
 
-          {/* Плитка 3: Fortune Wheel із обертовим сірим кругом */}
+          {/* Плитка 3: Fortune Wheel */}
           <Link
             to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
