@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
@@ -18,7 +18,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
 import { Helmet } from "react-helmet";
-import flashcardBg from "../../assets/flashcard-bg.jpg";
+import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 
 // Abkürzungen für Regionen
 const regionAbbreviations = {
@@ -58,30 +58,14 @@ const displayModeOptions = [
   { value: "Mixed", label: "Mixed" },
 ];
 
-// URL‑Parameter
-const useQuery = () => new URLSearchParams(useLocation().search);
-
 const SimpleChoiceGame = () => {
   const navigate = useNavigate();
-  const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
 
-  // Standardparameter aus URL oder Fallback
-  const rawRegion = query.get("region");
-  const initialRegion =
-    !rawRegion || rawRegion.toLowerCase() === "all" ? "Alle" : rawRegion;
-  const rawCategory = query.get("category");
-  const initialCategory =
-    !rawCategory || rawCategory.toLowerCase() === "all" ? "Alle" : rawCategory;
-  const rawFilterMode = query.get("filterMode");
-  const initialFilterMode =
-    !rawFilterMode || rawFilterMode.toLowerCase() === "all"
-      ? "unlearned"
-      : rawFilterMode;
-
+  // Беремо з контексту потрібні функції
   const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
-  // Zustände für Einstellungen und Spiel
+  // Стан гри та налаштувань
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -90,40 +74,41 @@ const SimpleChoiceGame = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Zustände für Spiel
+  // Гра
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Zähler für Ergebnisse
+  // Рахівники для результатів
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [shownCounts, setShownCounts] = useState({});
 
-  // Spiel-Ergebnisse
+  // Результати гри
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Tutorial-Zustand
+  // Туторіал
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("simpleChoiceGameTutorialCompleted") !== "true"
   );
 
-  // Aktualisiere Region aus dem Kontext
+  // Оновлення регіону
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  // Lade Fragen basierend auf den Einstellungen
+  // Завантаження питань
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
       const matchesCategory =
-        selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+        selectedCategory === "Alle" ||
+        (term.categories || []).includes(selectedCategory);
       const status = termStatuses[term.id]?.status || "unlearned";
 
       if (filterMode === "learned" && status !== "learned") return false;
@@ -134,7 +119,7 @@ const SimpleChoiceGame = () => {
       return matchesRegion && matchesCategory;
     });
 
-    // Sortiere Begriffe so, dass weniger gesehene häufiger erscheinen
+    // Сортуємо, щоб частіше показувати ті, що менше бачили
     gefilterteBegriffe.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
@@ -167,14 +152,14 @@ const SimpleChoiceGame = () => {
         richtigeAntwort = term.lat;
       }
 
-      // 3 falsche Optionen
+      // 3 неправильні варіанти
       const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map((t) => (modus === "LatGerman" ? t.de : t.lat));
 
-      // Mische die richtige Antwort mit den falschen
+      // Змішуємо правильну + 3 неправильних
       const optionen = [...falscheAntworten, richtigeAntwort].sort(
         () => Math.random() - 0.5
       );
@@ -195,7 +180,7 @@ const SimpleChoiceGame = () => {
     setQuestionsCompleted({});
   };
 
-  // Beim Schließen der Einstellungen (Start) beginne das Spiel
+  // При закритті налаштувань (натискаємо Start) – починаємо гру
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -216,7 +201,7 @@ const SimpleChoiceGame = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Spiel beenden
+  // Завершення гри: тут викликаємо flushChanges, що одразу зберігає все у Firebase
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -225,10 +210,12 @@ const SimpleChoiceGame = () => {
     const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dauer);
     setGameFinished(true);
+
+    // Викликаємо flushChanges => saveChangesToFirebase()
     flushChanges();
   };
 
-  // Antwort auswählen
+  // Обробка вибору відповіді
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
     const { richtigeAntwort, id } = questions[currentIndex];
@@ -236,6 +223,7 @@ const SimpleChoiceGame = () => {
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
+      // Режим "редагування": одразу позначаємо "learned" якщо правильно
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
         toggleStatus(questions[qIndex].id, "learned");
@@ -247,11 +235,13 @@ const SimpleChoiceGame = () => {
         });
       }
     } else {
+      // Звичайний режим: рахуємо правильні/неправильні
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
 
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
+        // Додаємо +1 до correctCount у контексті
         recordCorrectAnswer(id);
       } else {
         setIncorrectAnswerCount((prev) => prev + 1);
@@ -259,7 +249,7 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Navigation
+  // Навігація
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -276,7 +266,7 @@ const SimpleChoiceGame = () => {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-  // Berechne Fehler pro Kategorie
+  // Підрахунок помилок по категоріях (для звіту)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -290,7 +280,7 @@ const SimpleChoiceGame = () => {
     return fehler;
   };
 
-  // Ergebnisse anzeigen
+  // Рендер модалки з результатами
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
@@ -333,29 +323,29 @@ const SimpleChoiceGame = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch</title>
+        <title>Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten</title>
         <meta
           name="description"
-          content="Dieses Flashcard Game ermöglicht es Ihnen, medizinische Begriffe spielerisch zu lernen. Die Karten erscheinen zufällig und das 'Ang'-Feld zeigt an, wie oft ein Begriff während Ihrer Sitzung angezeigt wurde. Verbessern Sie Ihr Fachwissen und Ihre Sprachkompetenz!"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
         />
         <meta
           name="keywords"
-          content="Medizin, Flashcard, Lernen, medizinische Begriffe, Terminologie, interaktives Spiel, Fachsprache"
+          content="Fachbegriffe, Fachsprachenprüfung, Medizin, Terminologie, Lernen, Fachsprache"
         />
-        <meta property="og:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
+        <meta property="og:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
         <meta
           property="og:description"
-          content="Dieses Flashcard Game ermöglicht es Ihnen, medizinische Begriffe spielerisch zu lernen. Die Karten erscheinen zufällig und das 'Ang'-Feld zeigt an, wie oft ein Begriff während Ihrer Sitzung angezeigt wurde."
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
         />
-        <meta property="og:image" content={flashcardBg} />
+        <meta property="og:image" content={simpleChoiceBg} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
+        <meta name="twitter:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
         <meta
           name="twitter:description"
-          content="Dieses Flashcard Game unterstützt Sie beim spielerischen Lernen medizinischer Begriffe. Erfahren Sie, wie oft ein Begriff angezeigt wurde, und verbessern Sie Ihr Fachwissen!"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung."
         />
-        <meta name="twitter:image" content={flashcardBg} />
+        <meta name="twitter:image" content={simpleChoiceBg} />
       </Helmet>
       <div className={styles.simpleChoiceGame}>
         <button
@@ -365,10 +355,14 @@ const SimpleChoiceGame = () => {
           &#8592;
         </button>
 
-        {/* Einstellungen */}
+        {/* Якщо налаштування відкриті */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
+            <div
+              className={
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+              }
+            >
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setSettingsOpen(false)}
@@ -387,7 +381,9 @@ const SimpleChoiceGame = () => {
                       onChange={(e) => setRegion(e.target.value)}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((t) => t.regions || []))).map((r) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((term) => term.regions || []))
+                      ).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -432,7 +428,9 @@ const SimpleChoiceGame = () => {
                       onChange={(e) => setSelectedCategory(e.target.value)}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(new Set(medicalTerms.flatMap((t) => t.categories || []))).map((c) => (
+                      {Array.from(
+                        new Set(medicalTerms.flatMap((term) => term.categories || []))
+                      ).map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
@@ -453,11 +451,16 @@ const SimpleChoiceGame = () => {
                 </div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
+                <div
+                  className={styles.displayModeContainer}
+                  data-tutorial="displayModeContainer"
+                >
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
-                      className={`${styles.displayModeIcon} ${displayMode === option.value ? styles.selected : ""}`}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === option.value ? styles.selected : ""
+                      }`}
                       onClick={() => setDisplayMode(option.value)}
                     >
                       {option.label}
@@ -466,11 +469,16 @@ const SimpleChoiceGame = () => {
                 </div>
               </div>
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
+                <div
+                  className={styles.questionCountContainer}
+                  data-tutorial="questionCountContainer"
+                >
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
-                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
                       onClick={() => setQuestionCount(countOption)}
                     >
                       {countOption === "all" ? "Alles" : countOption}
@@ -478,14 +486,18 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
-              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
+              <button
+                className={styles.startButton}
+                data-tutorial="startButton"
+                onClick={handleStart}
+              >
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Tutorial Trigger */}
+        {/* Кнопка туторіалу */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"
@@ -504,13 +516,20 @@ const SimpleChoiceGame = () => {
               strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+              <line
+                x1="12"
+                y1="12"
+                x2="12"
+                y2="15.5"
+                stroke="#ededed"
+                strokeWidth="3"
+              />
               <circle cx="12" cy="7" r="0.5" fill="#ededed" />
             </svg>
           </button>
         )}
 
-        {/* Spielinterface */}
+        {/* Інтерфейс гри */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -539,7 +558,9 @@ const SimpleChoiceGame = () => {
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrect ? styles.correct : ""} ${isWrong ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${
+                            isCorrect ? styles.correct : ""
+                          } ${isWrong ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -555,7 +576,9 @@ const SimpleChoiceGame = () => {
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrectEdit ? styles.correct : ""} ${isWrongEdit ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${
+                            isCorrectEdit ? styles.correct : ""
+                          } ${isWrongEdit ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -565,7 +588,10 @@ const SimpleChoiceGame = () => {
                 </div>
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
-                    <button className={styles.navButton} onClick={() => handleNavigation("prev")}>
+                    <button
+                      className={styles.navButton}
+                      onClick={() => handleNavigation("prev")}
+                    >
                       <FaArrowLeft />
                     </button>
                   )}
@@ -602,14 +628,14 @@ const SimpleChoiceGame = () => {
           </>
         )}
 
-        {/* Ergebnismodal */}
+        {/* Модаль з результатами */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             {ErgebnisseAnzeigen()}
           </div>
         )}
 
-        {/* Einstellungen-Button */}
+        {/* Кнопка налаштувань */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -624,7 +650,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Tutorial Render */}
+        {/* Рендер туторіалу */}
         {showTutorial && (
           <SimpleChoiceGameTutorial
             run={showTutorial}

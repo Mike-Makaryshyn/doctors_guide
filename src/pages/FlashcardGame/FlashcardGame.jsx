@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
 import styles from "./FlashcardGame.module.scss";
+import { Helmet } from "react-helmet";
+import flashcardBg from "../../assets/flashcard-bg.jpg";
 
 // Icons
 import {
@@ -61,7 +63,7 @@ const displayModeOptions = [
   { value: "Mixed", label: "Mixed" },
 ];
 
-// Anzahl Fragen
+// Anzahl Fragen (wird hier nur zur Begrenzung verwendet)
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
 // Hilfsfunktion: Region-Label
@@ -77,7 +79,7 @@ const FlashcardGame = () => {
   const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
 
-  // Standardparameter aus URL oder Fallback
+  // Standardparameter aus der URL oder Fallback
   const rawRegion = query.get("region");
   const initialRegion =
     !rawRegion || rawRegion.toLowerCase() === "all" ? "Alle" : rawRegion;
@@ -92,7 +94,7 @@ const FlashcardGame = () => {
 
   const { termStatuses, toggleStatus } = useTermStatus();
 
-  // Основні стани
+  // Zustände für Einstellungen und Spiel
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [region, setRegion] = useState(initialRegion);
   const [category, setCategory] = useState(initialCategory);
@@ -119,19 +121,19 @@ const FlashcardGame = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Lade Fortschritt aus localStorage
+  // Lade Fortschritt aus LocalStorage
   useEffect(() => {
     const storedProgress = localStorage.getItem("flashcardProgress");
     if (storedProgress) {
       try {
         setProgress(JSON.parse(storedProgress));
       } catch (err) {
-        console.warn("Fehler beim Laden des localStorage:", err);
+        console.warn("Fehler beim Laden des LocalStorage:", err);
       }
     }
   }, []);
 
-  // Speichere Fortschritt in localStorage
+  // Speichere Fortschritt in LocalStorage
   useEffect(() => {
     localStorage.setItem("flashcardProgress", JSON.stringify(progress));
   }, [progress]);
@@ -183,13 +185,12 @@ const FlashcardGame = () => {
     setFlipped((prev) => !prev);
   };
 
-  // Karte als "Gelernt" markieren
+  // Status umschalten (learned/paused)
   const toggleLearnedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "learned");
   };
 
-  // Karte als "Pausiert" markieren
   const togglePausedCard = (id) => {
     if (flipped) return;
     toggleStatus(id, "paused");
@@ -198,7 +199,7 @@ const FlashcardGame = () => {
     }
   };
 
-  // Zur nächsten Karte wechseln
+  // Navigation
   const handleNext = () => {
     setFlipped(false);
     if (currentIndex < cards.length - 1) {
@@ -208,7 +209,6 @@ const FlashcardGame = () => {
     }
   };
 
-  // Zur vorherigen Karte wechseln
   const handlePrev = () => {
     setFlipped(false);
     if (currentIndex > 0) {
@@ -216,11 +216,6 @@ const FlashcardGame = () => {
     } else {
       alert("Das ist die erste Karte!");
     }
-  };
-
-  // Spiel beenden
-  const finishGame = () => {
-    setGameFinished(true);
   };
 
   // Zähle die Ansicht der aktuellen Karte (einmal pro Sitzung)
@@ -286,6 +281,31 @@ const FlashcardGame = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch</title>
+        <meta
+          name="description"
+          content="Dieses Flashcard Game ermöglicht es Ihnen, medizinische Begriffe spielerisch zu lernen. Die Karten erscheinen zufällig, und das 'Ang'-Feld zeigt an, wie oft ein Begriff während Ihrer Sitzung angezeigt wurde. Verbessern Sie Ihr Fachwissen und Ihre Sprachkompetenz!"
+        />
+        <meta
+          name="keywords"
+          content="Medizin, Flashcard, Lernen, medizinische Begriffe, Terminologie, interaktives Spiel, Fachsprache"
+        />
+        <meta property="og:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
+        <meta
+          property="og:description"
+          content="Lernen Sie medizinische Begriffe mit diesem interaktiven Flashcard Game. Jede Karte wird mehrfach angezeigt – das 'Ang'-Feld zählt die Sichtungen pro Sitzung."
+        />
+        <meta property="og:image" content={flashcardBg} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Medizinische Flashcard Game – Lernen Sie medizinische Begriffe spielerisch" />
+        <meta
+          name="twitter:description"
+          content="Dieses Flashcard Game unterstützt Sie dabei, medizinische Begriffe spielerisch zu lernen. Das 'Ang'-Feld zeigt an, wie oft ein Begriff in Ihrer Sitzung angezeigt wurde."
+        />
+        <meta name="twitter:image" content={flashcardBg} />
+      </Helmet>
       <div className={styles.flashcardGame}>
         {/* Zurück-Button */}
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
@@ -301,7 +321,7 @@ const FlashcardGame = () => {
           </div>
         )}
 
-        {/* Anzeige des Ansichts-Counters */}
+        {/* Anzeige des Ang-Counters */}
         {!settingsOpen && currentCard && (
           <div className={styles.angCounter}>Ang: {currentCardProgress}</div>
         )}
@@ -313,7 +333,7 @@ const FlashcardGame = () => {
               <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
                 ×
               </button>
-              <h2 className={styles.modalTitle}>Spieleinstellungen</h2>
+              <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
                 {/* Region */}
                 <div className={styles.regionColumn}>
@@ -334,7 +354,6 @@ const FlashcardGame = () => {
                     </select>
                   </div>
                 </div>
-
                 {/* Filter */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
@@ -355,7 +374,6 @@ const FlashcardGame = () => {
                     </select>
                   </div>
                 </div>
-
                 {/* Kategorie */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
@@ -380,8 +398,6 @@ const FlashcardGame = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Anzeige-Modus */}
               <div className={styles.modalField}>
                 <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
                   {displayModeOptions.map((option) => (
@@ -395,8 +411,6 @@ const FlashcardGame = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Anzahl Fragen */}
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
@@ -410,7 +424,6 @@ const FlashcardGame = () => {
                   ))}
                 </div>
               </div>
-
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
@@ -453,8 +466,8 @@ const FlashcardGame = () => {
               <div className={styles.card} onClick={handleFlip}>
                 <div
                   className={`${styles.cardInner} ${flipped ? styles.flipped : ""} ${
-                    (termStatuses[currentCard.id] === "learned" && styles.learned) ||
-                    (termStatuses[currentCard.id] === "paused" && styles.paused) ||
+                    (termStatuses[currentCard.id]?.status === "learned" && styles.learned) ||
+                    (termStatuses[currentCard.id]?.status === "paused" && styles.paused) ||
                     ""
                   }`}
                 >
@@ -579,9 +592,12 @@ const FlashcardGame = () => {
           </div>
         )}
 
-        {/* Render FlashCardGame Tutorial */}
+        {/* Render Tutorial */}
         {showTutorial && (
-          <FlashCardGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+          <SimpleChoiceGameTutorial
+            run={showTutorial}
+            onFinish={() => setShowTutorial(false)}
+          />
         )}
       </div>
     </MainLayout>
