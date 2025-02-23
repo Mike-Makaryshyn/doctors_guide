@@ -46,18 +46,15 @@ export const TermStatusProvider = ({ children }) => {
     localStorage.setItem("termStatuses", JSON.stringify(termStatuses));
   }, [termStatuses]);
 
-  // Оновлена функція збереження змін
+  // Оновлена функція збереження змін – тепер ми НЕ видаляємо записи для "unlearned"
   const saveChangesToFirebase = async () => {
     if (!user) {
       console.log("Немає користувача, зберігаємо лише в LocalStorage.");
       setTermStatuses((prev) => {
         const newStatuses = { ...prev };
         for (const [termId, data] of Object.entries(unsavedChanges.current)) {
-          if (data.status === "unlearned") {
-            delete newStatuses[termId];
-          } else {
-            newStatuses[termId] = data;
-          }
+          // Завжди записуємо дані, навіть якщо статус "unlearned"
+          newStatuses[termId] = data;
         }
         localStorage.setItem("termStatuses", JSON.stringify(newStatuses));
         return newStatuses;
@@ -74,14 +71,10 @@ export const TermStatusProvider = ({ children }) => {
     try {
       console.log("Зберігаємо зміни у Firestore (миттєво):", changes);
 
-      // Оновлюємо локальний state
+      // Оновлюємо локальний state – тепер кожен термін зберігається, незалежно від статусу
       const newTermStatuses = { ...termStatuses };
       for (const [termId, data] of Object.entries(changes)) {
-        if (data.status === "unlearned") {
-          delete newTermStatuses[termId];
-        } else {
-          newTermStatuses[termId] = data;
-        }
+        newTermStatuses[termId] = data;
       }
       setTermStatuses(() => {
         localStorage.setItem("termStatuses", JSON.stringify(newTermStatuses));
@@ -90,17 +83,13 @@ export const TermStatusProvider = ({ children }) => {
 
       const docRef = doc(db, "users", user.uid, "termStatuses", "allTerms");
 
-      // Якщо FlashcardGame – використовуємо updateDoc з FieldValue.delete() для видалення ключів,
-      // інакше – повне перезаписування через setDoc з merge: true.
+      // Якщо FlashcardGame – використовуємо updateDoc, інакше – setDoc з merge: true.
       const isFlashcardGame = window.location.pathname.toLowerCase().includes("flashcard");
       if (isFlashcardGame) {
         const updateData = {};
         for (const [termId, data] of Object.entries(changes)) {
-          if (data.status === "unlearned") {
-            updateData[`statuses.${termId}`] = deleteField();
-          } else {
-            updateData[`statuses.${termId}`] = data;
-          }
+          // Завжди записуємо дані, навіть якщо status === "unlearned"
+          updateData[`statuses.${termId}`] = data;
         }
         await updateDoc(docRef, updateData);
       } else {
