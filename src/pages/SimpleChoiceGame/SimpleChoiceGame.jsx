@@ -19,6 +19,8 @@ import { categoryIcons } from "../../constants/CategoryIcons";
 import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
 import { Helmet } from "react-helmet";
 import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 // Abkürzungen für Regionen
 const regionAbbreviations = {
@@ -60,12 +62,12 @@ const displayModeOptions = [
 
 const SimpleChoiceGame = () => {
   const navigate = useNavigate();
-  const { selectedRegion } = useGetGlobalInfo();
+  const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
 
-  // Беремо з контексту потрібні функції
+  // Funkcije iz konteksta
   const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
-  // Стан гри та налаштувань
+  // Stanje igre i postavki
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -74,34 +76,34 @@ const SimpleChoiceGame = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Гра
+  // Stanja igre
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Рахівники для результатів
+  // Brojači rezultata
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [shownCounts, setShownCounts] = useState({});
 
-  // Результати гри
+  // Rezultati igre
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Туторіал
+  // Tutorial
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("simpleChoiceGameTutorialCompleted") !== "true"
   );
 
-  // Оновлення регіону
+  // Ažuriranje regije
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  // Завантаження питань
+  // Učitavanje pitanja
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion =
@@ -119,7 +121,7 @@ const SimpleChoiceGame = () => {
       return matchesRegion && matchesCategory;
     });
 
-    // Сортуємо, щоб частіше показувати ті, що менше бачили
+    // Sortiramo kako bi se češće prikazivali oni koji su manje prikazani
     gefilterteBegriffe.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
@@ -152,14 +154,14 @@ const SimpleChoiceGame = () => {
         richtigeAntwort = term.lat;
       }
 
-      // 3 неправильні варіанти
+      // 3 netočna odgovora
       const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map((t) => (modus === "LatGerman" ? t.de : t.lat));
 
-      // Змішуємо правильну + 3 неправильних
+      // Miješamo točan i netočne odgovore
       const optionen = [...falscheAntworten, richtigeAntwort].sort(
         () => Math.random() - 0.5
       );
@@ -180,7 +182,7 @@ const SimpleChoiceGame = () => {
     setQuestionsCompleted({});
   };
 
-  // При закритті налаштувань (натискаємо Start) – починаємо гру
+  // Kad se postavke zatvore (klik Start) – pokreće se igra
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -201,7 +203,7 @@ const SimpleChoiceGame = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Завершення гри: тут викликаємо flushChanges, що одразу зберігає все у Firebase
+  // Završetak igre – poziva se flushChanges za spremanje u Firebase
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -210,12 +212,10 @@ const SimpleChoiceGame = () => {
     const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dauer);
     setGameFinished(true);
-
-    // Викликаємо flushChanges => saveChangesToFirebase()
     flushChanges();
   };
 
-  // Обробка вибору відповіді
+  // Obrada odabira odgovora
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
     const { richtigeAntwort, id } = questions[currentIndex];
@@ -223,7 +223,7 @@ const SimpleChoiceGame = () => {
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
-      // Режим "редагування": одразу позначаємо "learned" якщо правильно
+      // U "edit" modu, ako je odgovor točan, odmah označavamo kao "learned"
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
         toggleStatus(questions[qIndex].id, "learned");
@@ -235,13 +235,12 @@ const SimpleChoiceGame = () => {
         });
       }
     } else {
-      // Звичайний режим: рахуємо правильні/неправильні
+      // Standardni način: zabilježimo odgovor i računamo rezultate
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
 
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
-        // Додаємо +1 до correctCount у контексті
         recordCorrectAnswer(id);
       } else {
         setIncorrectAnswerCount((prev) => prev + 1);
@@ -249,7 +248,7 @@ const SimpleChoiceGame = () => {
     }
   };
 
-  // Навігація
+  // Navigacija kroz pitanja
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -266,11 +265,14 @@ const SimpleChoiceGame = () => {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-  // Підрахунок помилок по категоріях (для звіту)
+  // Izračun grešaka po kategorijama (za izvještaj)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
-      if (questionsCompleted[index] && answersNoEdit[index] !== frage.richtigeAntwort) {
+      if (
+        questionsCompleted[index] &&
+        answersNoEdit[index] !== frage.richtigeAntwort
+      ) {
         const term = frage.term;
         (term.categories || []).forEach((kategorie) => {
           fehler[kategorie] = (fehler[kategorie] || 0) + 1;
@@ -280,7 +282,7 @@ const SimpleChoiceGame = () => {
     return fehler;
   };
 
-  // Рендер модалки з результатами
+  // Prikaz rezultata igre u modal prozoru
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
@@ -297,8 +299,9 @@ const SimpleChoiceGame = () => {
         </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
         <p>
-  Dauer: {Math.floor(sessionDuration / 60)} Minuten {sessionDuration % 60} Sekunden
-</p>
+          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+          {sessionDuration % 60} Sekunden
+        </p>
         {Object.keys(kategorieFehler).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
@@ -325,7 +328,9 @@ const SimpleChoiceGame = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten</title>
+        <title>
+          Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten
+        </title>
         <meta
           name="description"
           content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
@@ -334,7 +339,10 @@ const SimpleChoiceGame = () => {
           name="keywords"
           content="Fachbegriffe, Fachsprachenprüfung, Medizin, Terminologie, Lernen, Fachsprache"
         />
-        <meta property="og:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
+        <meta
+          property="og:title"
+          content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten"
+        />
         <meta
           property="og:description"
           content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
@@ -342,14 +350,19 @@ const SimpleChoiceGame = () => {
         <meta property="og:image" content={simpleChoiceBg} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
+        <meta
+          name="twitter:title"
+          content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten"
+        />
         <meta
           name="twitter:description"
           content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung."
         />
         <meta name="twitter:image" content={simpleChoiceBg} />
       </Helmet>
+
       <div className={styles.simpleChoiceGame}>
+        {/* Dugme za povratak */}
         <button
           className="main_menu_back"
           onClick={() => navigate("/terminology-learning")}
@@ -357,7 +370,7 @@ const SimpleChoiceGame = () => {
           &#8592;
         </button>
 
-        {/* Якщо налаштування відкриті */}
+        {/* Modal postavki */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
@@ -412,7 +425,10 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-                <div className={styles.categoryColumn} data-tutorial="categorySelect">
+                <div
+                  className={styles.categoryColumn}
+                  data-tutorial="categorySelect"
+                >
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -431,7 +447,9 @@ const SimpleChoiceGame = () => {
                     >
                       <option value="Alle">Alle</option>
                       {Array.from(
-                        new Set(medicalTerms.flatMap((term) => term.categories || []))
+                        new Set(
+                          medicalTerms.flatMap((term) => term.categories || [])
+                        )
                       ).map((c) => (
                         <option key={c} value={c}>
                           {c}
@@ -452,6 +470,7 @@ const SimpleChoiceGame = () => {
                   </button>
                 </div>
               </div>
+
               <div className={styles.modalField}>
                 <div
                   className={styles.displayModeContainer}
@@ -470,6 +489,7 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
+
               <div className={styles.modalField}>
                 <div
                   className={styles.questionCountContainer}
@@ -488,6 +508,7 @@ const SimpleChoiceGame = () => {
                   ))}
                 </div>
               </div>
+
               <button
                 className={styles.startButton}
                 data-tutorial="startButton"
@@ -499,7 +520,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Кнопка туторіалу */}
+        {/* Gumb za tutorial */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"
@@ -531,19 +552,50 @@ const SimpleChoiceGame = () => {
           </button>
         )}
 
-        {/* Інтерфейс гри */}
+        {/*
+          1) Ako su postavke zatvorene, igra nije gotova,
+             ali je questions.length === 0 => nema dostupnih termina
+        */}
+        {!settingsOpen && !gameFinished && questions.length === 0 && (
+          <div className={styles.noQuestionsMessage}>
+            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+          </div>
+        )}
+
+        {/* Sučelje igre - prikaz samo ako ima pitanja */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
-            <div className={styles.progress}>
-              Frage {currentIndex + 1} von {questions.length}
+            {/* PROGRESS i ikonica "i" iznad H2 */}
+            <div className={styles.progressContainer}>
+              <div className={styles.progress}>
+                Frage {currentIndex + 1} von {questions.length}
+              </div>
+             
             </div>
+
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                <h2>{aktuelleFrage?.frage}</h2>
+              <h2 style={{ position: "relative" }}>
+  {aktuelleFrage?.frage}
+  {frageIstAbgeschlossen && (
+    <Tippy
+  content={
+    aktuelleFrage?.term?.[`${selectedLanguage}Explanation`] ||
+    "Keine zusätzliche Information vorhanden"
+  }
+  trigger="click"
+  interactive={true}
+  placement="top"
+>
+  <span className={styles.infoIcon}>i</span>
+</Tippy>
+  )}
+</h2>
                 <div className={styles.optionsContainer}>
                   {aktuelleFrage?.optionen.map((option, idx) => {
                     const { richtigeAntwort } = aktuelleFrage;
                     const isCompleted = frageIstAbgeschlossen;
+
                     if (!allowEdit) {
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
@@ -568,6 +620,7 @@ const SimpleChoiceGame = () => {
                         </button>
                       );
                     } else {
+                      // Edit mode
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
                       let isCorrectEdit = false;
@@ -630,14 +683,12 @@ const SimpleChoiceGame = () => {
           </>
         )}
 
-        {/* Модаль з результатами */}
+        {/* Modal s rezultatima */}
         {gameFinished && (
-          <div className={styles.resultsOverlay}>
-            {ErgebnisseAnzeigen()}
-          </div>
+          <div className={styles.resultsOverlay}>{ErgebnisseAnzeigen()}</div>
         )}
 
-        {/* Кнопка налаштувань */}
+        {/* Gumb za postavke (vidljiv ako su postavke zatvorene ili ekran širi) */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -652,7 +703,7 @@ const SimpleChoiceGame = () => {
           </div>
         )}
 
-        {/* Рендер туторіалу */}
+        {/* Render tutoriala */}
         {showTutorial && (
           <SimpleChoiceGameTutorial
             run={showTutorial}
