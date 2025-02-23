@@ -25,6 +25,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 5000;
 }
 
 .main_menu_back:hover,
@@ -179,7 +180,8 @@
 
 /* Речення (запитання) */
 .sentenceBox {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
   color: #013b6e;
   background: #f0f0f0;
   padding: 10px;
@@ -231,7 +233,7 @@
   background: #ffffff;
   transition: transform 0.2s ease, background 0.3s ease;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   color: #013b6e;
   text-align: center;

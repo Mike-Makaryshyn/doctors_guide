@@ -16,14 +16,15 @@ import {
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
-
-// Firebase Auth Imports та AuthModal
+import { Helmet } from "react-helmet";
+// Firebase Auth Imports
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import AuthModal from "../AuthPage/AuthModal";
-
 // Компонент туторіалу для FillInBlankGame
 import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
+// Фонове зображення для метаданих
+import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
@@ -53,6 +54,12 @@ const filterModes = [
 
 const questionCountOptions = [10, 20, 40, 60, 100, 200, "all"];
 
+const displayModeOptions = [
+  { value: "LatGerman", label: "Lat→Ger" },
+  { value: "GermanLat", label: "Ger→Lat" },
+  { value: "Mixed", label: "Mixed" },
+];
+
 const FillInBlankGame = () => {
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
@@ -81,6 +88,7 @@ const FillInBlankGame = () => {
   const [filterMode, setFilterMode] = useState("unlearned");
   const [questionCount, setQuestionCount] = useState(20);
   const [allowEdit, setAllowEdit] = useState(false);
+  const [displayMode, setDisplayMode] = useState("LatGerman");
 
   // Стан гри
   const [questions, setQuestions] = useState([]);
@@ -164,7 +172,7 @@ const FillInBlankGame = () => {
     setGameStartTime(Date.now());
   };
 
-  // При закритті налаштувань завантажуємо питання і запускаємо гру
+  // При закритті налаштувань (натискання Start) запускається гра
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -180,8 +188,25 @@ const FillInBlankGame = () => {
   const handleStart = () => {
     setSettingsOpen(false);
     loadQuestions();
-    setGameFinished(false);
     setGameStartTime(Date.now());
+    setGameFinished(false);
+    setCorrectAnswerCount(0);
+    setIncorrectAnswerCount(0);
+  };
+
+  // Завершення гри – викликається flushChanges для запису в Firebase,
+  // але лише в звичайному режимі (allowEdit === false)
+  const finishGame = () => {
+    if (!questionsCompleted[currentIndex]) {
+      alert("Bitte beantworten Sie die aktuelle Frage!");
+      return;
+    }
+    const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
+    setSessionDuration(dauer);
+    setGameFinished(true);
+    if (!allowEdit) {
+      flushChanges();
+    }
   };
 
   // Функція renderSentence розбиває речення за {BLANK} і підставляє обране слово
@@ -235,13 +260,7 @@ const FillInBlankGame = () => {
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
-        setCorrectCounts((prev) => {
-          const neuerZaehler = (prev[id] || 0) + 1;
-          if (neuerZaehler >= 5 && (termStatuses[id] || "unlearned") !== "learned") {
-            toggleStatus(id, "learned");
-          }
-          return { ...prev, [id]: neuerZaehler };
-        });
+        recordCorrectAnswer(id);
       } else {
         setIncorrectAnswerCount((prev) => prev + 1);
       }
@@ -265,7 +284,7 @@ const FillInBlankGame = () => {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-  // Підрахунок помилок за категоріями
+  // Підрахунок помилок за категоріями (для звіту)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -283,7 +302,10 @@ const FillInBlankGame = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
-        <button className={styles.modalCloseButton} onClick={() => setGameFinished(false)}>
+        <button
+          className={styles.modalCloseButton}
+          onClick={() => setGameFinished(false)}
+        >
           ×
         </button>
         <h3>Spielergebnisse</h3>
@@ -291,7 +313,10 @@ const FillInBlankGame = () => {
           Richtige Antworten: {correctAnswerCount} von {questions.length}
         </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
-        <p>Dauer: {sessionDuration} Sekunden</p>
+        <p>
+          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+          {sessionDuration % 60} Sekunden
+        </p>
         {Object.keys(kategorieFehler).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
@@ -316,6 +341,32 @@ const FillInBlankGame = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>Fachbegriffe lernen – Fill in the Blank Game</title>
+        <meta
+          name="description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta
+          name="keywords"
+          content="Fachbegriffe, Fachsprachenprüfung, Fill in the Blank, Medizin, Terminologie, Lernen, Fachsprache"
+        />
+        <meta property="og:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
+        <meta
+          property="og:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta property="og:image" content={fillInBlankBg} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
+        <meta
+          name="twitter:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta name="twitter:image" content={fillInBlankBg} />
+      </Helmet>
+
       <div className={styles.fillInBlankGame}>
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
@@ -353,9 +404,9 @@ const FillInBlankGame = () => {
                   </div>
                 </div>
                 {/* Filter */}
-                <div className={styles.filterColumn}>
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
-                  <div className={styles.selectWrapper} data-tutorial="filterColumn">
+                  <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
                       {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
@@ -376,12 +427,16 @@ const FillInBlankGame = () => {
                   </div>
                 </div>
                 {/* Kategorie */}
-                <div className={styles.categoryColumn}>
+                <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
-                  <div className={styles.selectWrapper} data-tutorial="categorySelect">
+                  <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
                       {categoryIcons[selectedCategory] && (
-                        <img src={categoryIcons[selectedCategory]} alt={selectedCategory} className={styles.categoryIcon} />
+                        <img
+                          src={categoryIcons[selectedCategory]}
+                          alt={selectedCategory}
+                          className={styles.categoryIcon}
+                        />
                       )}
                     </div>
                     <select
@@ -417,7 +472,25 @@ const FillInBlankGame = () => {
                   </button>
                 </div>
               </div>
-              {/* Кількість питань */}
+              {/* Додаткові налаштування */}
+              <div className={styles.modalField}>
+                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
+                  {displayModeOptions.map((option) => (
+                    <div
+                      key={option.value}
+                      className={`${styles.displayModeIcon} ${
+                        option.value === displayMode ? styles.selected : ""
+                      }`}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setDisplayMode(option.value);
+                      }}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              </div>
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
@@ -439,32 +512,37 @@ const FillInBlankGame = () => {
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
-            
             </div>
           </div>
         )}
-  {/* Кнопка запуску туторіалу */}
-  <button
-                data-tutorial="tutorialStartButton"
-                className={styles.tutorialButton}
-                onClick={() => setShowTutorial(true)}
+
+        {/* Кнопка запуску туторіалу – відображається ТІЛЬКИ коли відкрито модальне вікно */}
+        {settingsOpen && (
+          <div className={styles.bottomRightTutorial}>
+            <button
+              data-tutorial="tutorialStartButton"
+              className={styles.tutorialButton}
+              onClick={() => setShowTutorial(true)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#ededed"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="30"
-                  height="30"
-                  fill="none"
-                  stroke="#ededed"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                  <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-                </svg>
-              </button>
+                <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+              </svg>
+            </button>
+          </div>
+        )}
+
         {/* Повідомлення, якщо за обраним фільтром немає термінів */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
           <div className={styles.noQuestionsMessage}>
@@ -472,11 +550,13 @@ const FillInBlankGame = () => {
           </div>
         )}
 
-        {/* Екран гри */}
+        {/* Інтерфейс гри */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
-            <div className={styles.progress}>
-              Frage {currentIndex + 1} von {questions.length}
+            <div className={styles.progressContainer}>
+              <div className={styles.progress}>
+                Frage {currentIndex + 1} von {questions.length}
+              </div>
             </div>
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
