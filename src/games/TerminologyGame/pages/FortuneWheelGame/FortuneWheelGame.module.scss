@@ -7,7 +7,7 @@
   position: relative;
 }
 
-/* Back-Button */
+/* Кнопка повернення (знизу ліворуч) */
 .main_menu_back {
   position: fixed;
   bottom: 16px;
@@ -33,7 +33,31 @@
   transform: scale(0.95);
 }
 
-/* Modal Overlay */
+/* Кнопка налаштувань (праворуч унизу) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3500;
+}
+.settingsButton {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Модальне вікно */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -46,8 +70,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/* Desktop-Modal */
 .popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
@@ -59,8 +81,6 @@
   bottom: 45px;
   right: 45px;
 }
-
-/* Mobile-Modal */
 .popupMobile {
   background: #fff;
   padding: 25px 20px 20px;
@@ -74,7 +94,6 @@
   text-align: center;
   animation: popupBounce 0.6s ease-out;
 }
-
 @keyframes popupBounce {
   0% {
     transform: translateY(100%);
@@ -91,7 +110,6 @@
     transform: translateY(0);
   }
 }
-
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -109,27 +127,24 @@
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
 }
-
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
   color: #013b6e;
   margin-bottom: 12px;
 }
-
 .modalSubtitle {
   font-size: 14px;
   color: #333;
   margin-bottom: 16px;
 }
-
 .modalField {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
 
-/* Start-Button */
+/* Кнопка Start */
 .startButton {
   display: inline-block;
   width: 100%;
@@ -151,7 +166,7 @@
   transform: translateY(-2px);
 }
 
-/* Zeile für Einstellungen */
+/* Сітка налаштувань */
 .row {
   display: flex;
   justify-content: space-around;
@@ -203,13 +218,29 @@
   top: 0;
   left: 0;
   pointer-events: none;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.categoryCell {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #013b6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  pointer-events: none;
+}
+
 .categoryIcon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   filter: invert(100%);
 }
 
@@ -260,31 +291,7 @@
   color: #fff;
 }
 
-/* Einstellungen-Button in der rechten unteren Ecke */
-.bottomRightSettings {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 3500;
-}
-.settingsButton {
-  background-color: #4caf50;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.settingsButton:hover {
-  transform: scale(1.1);
-}
-
-/* Corner Answer Buttons */
+/* CornerAnswers */
 .cornerAnswers {
   position: absolute;
   top: 0;
@@ -297,9 +304,9 @@
 }
 .cornerAnswerButton {
   pointer-events: auto;
-  width: 140px;
+  width: 200px;
   padding: 12px 14px;
-  background: #fff;
+  background: #ffffff;
   color: #013b6e;
   border: 3px solid #013b6e;
   border-radius: 8px;
@@ -309,14 +316,28 @@
   position: absolute;
   font-weight: bold;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  transition: transform 0.2s ease, background 0.3s ease;
+
+
+  
+  min-height: 50px;
+  border-radius: 10px;
+ 
+  
+
+ 
+
+
+ 
+  overflow: hidden;
+  border: none;
 }
 .cornerAnswerButton:hover {
   background: #f7f7f7;
   transform: scale(1.05);
 }
 
-/* Desktop-Positionierung der Corner Answer Buttons */
+/* Desktop-розміщення */
 .cornerAnswerButton:nth-child(1) {
   top: 10%;
   left: 20%;
@@ -345,7 +366,7 @@
   border-color: #ff5252 !important;
 }
 
-/* Mobile-Ansicht */
+/* Mobile */
 @media (max-width: 768px) {
   .cornerAnswers {
     position: static;
@@ -366,7 +387,7 @@
   }
 }
 
-/* Game Over */
+/* GameOver */
 .gameOverContainer {
   margin-top: 30px;
 }
