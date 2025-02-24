@@ -156,7 +156,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* SPIЕЛ-АНСИЧТ */
+/* SPIEL-ANSICHT */
 .progress {
   margin-bottom: 50px;
   font-size: 16px;
@@ -284,34 +284,6 @@
   color: #fff;
 }
 
-/* Anzeige-Modus */
-.displayModeContainer {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.displayModeIcon {
-  width: 100px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  font-size: 12px;
-}
-
-.displayModeIcon.selected {
-  background: #013b6e;
-  color: #fff;
-}
-
 /* Zeile: Region, Filter, Kategorie, Bearbeiten */
 .row {
   display: flex;
@@ -405,11 +377,12 @@
   color: #013b6e;
   font-size: 18px;
   transition: background 0.3s ease, color 0.3s ease;
-  margin-top: -2px; /* Додай для вертикального вирівнювання */
-  align-self: center; /* Центрує кнопку всередині колонки */
+  margin-top: -2px; /* Vertikale Ausrichtung */
+  align-self: center;
 }
+
 .editToggleButton {
-  line-height: 0; /* Вирівнює іконку по центру */
+  line-height: 0; /* Icon zentriert */
 }
 
 .editToggleButton:hover {
@@ -536,66 +509,33 @@
   margin-top: 15px;
 }
 
-/* Фіксований контейнер для "D" (Deutsch) */
+/* Container für Sprachen */
 .languageCellFixed {
   @extend .languageCell;
 }
 
-.languageRow {
+/* Einheitliche Styles für die Sprachzellen (Deutsch/Select) */
+.languageCellFixed,
+.languageSelect {
+  width: 120px; /* Breite anpassen */
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  /* white-space: nowrap; // falls du sehr lange Labels hast */
 }
 
-/* Стилізація стрілки */
-.languageArrow {
-  font-size: 18px;
-  color: #013b6e;
-}
-
-/* Container für Richtungskacheln (z. B. "DE -> Ukrainisch") */
-.languageDirectionContainer {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.directionOption {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  font-size: 14px;
-}
-
-.directionOption:hover {
-  transform: scale(1.05);
-}
-
-.activeDirection {
-  @extend .directionOption;
-  background: #013b6e;
-  color: #fff;
-  transform: scale(1.05);
-}
+/* Flex-Container, in dem links und rechts die Sprachen + in der Mitte der Swap-Button sitzen */
 .languageSwapContainer {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Центруємо swap-кнопку */
-  gap: 15px;
-  margin-top: 10px;
-  position: relative;
+  align-items: center;      /* Vertikal mittig */
+  justify-content: center;  /* Horizontal zentriert */
+  gap: 10px;                /* Abstand zwischen den Elementen */
 }
 
+/* Der Button selbst */
 .swapButton {
   background: #ffffff;
   border: none;
@@ -606,33 +546,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   flex-shrink: 0;
+  margin-left: 15px; 
 }
 
-/* Анімація для кнопки */
+
 .swapButton:hover {
   background: #4caf50;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transform: rotate(180deg) scale(1.1);
 }
 
-/* Анімація при натисканні */
 .swapButton:active {
   transform: scale(0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Іконка стрілки */
 .swapIcon {
   font-size: 20px;
   color: #013b6e;
   transition: transform 0.3s ease;
 }
 
-/* Анімація при натисканні */
-
+/* Tutorial-Button */
 .tutorialButton {
   position: absolute;
   top: 47px;
@@ -653,12 +591,12 @@
 
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
+  background: rgba(76, 175, 79, 0);
 }
-/* Загальні стилі для контейнерів мови */
-/* Стиль для .languageCell */
+
+/* Basisklasse für .languageCell */
 .languageCell {
-  width: 120px; /* Фіксована ширина */
+  width: 120px;
   min-width: 120px;
   max-width: 120px;
   height: 50px;
@@ -675,25 +613,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex: 0 0 auto; /* Не дозволяємо змінювати розміри */
+  flex: 0 0 auto;
 }
 
-/* Стиль для .languageCellFixed */
+/* Für die Selectbox */
 .languageSelect {
   @extend .languageCell;
-  // ... restliche styles
-}
-
-/* Стиль для .languageSelect */
-.languageSelect {
-  width: 120px; /* Фіксована ширина */
+  width: 120px;
   min-width: 120px;
   max-width: 120px;
   height: 50px;
   line-height: 31px;
-  border-radius: 10px;
   background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
@@ -703,13 +634,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex: 0 0 auto; /* Не дозволяємо змінювати розміри */
+  flex: 0 0 auto;
 }
 
-/* Специфічний стиль для <select> */
-
-
-/* Додаємо стрілочку для select */
+/* Kleiner Pfeil in der Select-Box */
 .languageSelect::after {
   content: "▼";
   font-size: 12px;
@@ -717,7 +645,7 @@
   margin-left: 8px;
 }
 
-/* Для кращого вигляду на мобільних пристроях */
+/* Responsive */
 @media (max-width: 480px) {
   .languageCell,
   .languageCellFixed,

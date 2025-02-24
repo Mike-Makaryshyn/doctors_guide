@@ -93,11 +93,11 @@ const ElectiveLanguageGameContent = () => {
   const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Мовний напрямок – німецька завжди фіксована, а інша мова береться з electiveLang
+  // Мовний напрямок – Deutsch завжди базовий
   const sourceLang = "de";
   const targetLang = electiveLang;
 
-  // Додаємо стан для позиціонування контейнерів
+  // Для позиціонування (Swap)
   const [isGermanLeft, setIsGermanLeft] = useState(true);
 
   // Статус гри
@@ -113,10 +113,11 @@ const ElectiveLanguageGameContent = () => {
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Синхронізація з глоб. контекстом
+  // Синхронізація з глобальним контекстом
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
+
   useEffect(() => {
     setElectiveLang(
       selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
@@ -267,6 +268,7 @@ const ElectiveLanguageGameContent = () => {
   };
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
+
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -322,7 +324,7 @@ const ElectiveLanguageGameContent = () => {
   const qIndex = currentIndex;
   const frageIstAbgeschlossen = questionsCompleted[qIndex] || false;
 
-  // Стан для показу туторіалу (якщо ключ не встановлено)
+  // Стан для показу туторіалу
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("electiveLanguageGameTutorialCompleted") !== "true"
   );
@@ -371,7 +373,6 @@ const ElectiveLanguageGameContent = () => {
           &#8592;
         </button>
 
-        {/* Модальне вікно з налаштуваннями */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
@@ -390,15 +391,10 @@ const ElectiveLanguageGameContent = () => {
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
                 {/* Region */}
-                <div
-                  className={styles.regionColumn}
-                  data-tutorial="regionSelect"
-                >
+                <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
-                    <div className={styles.regionCell}>
-                      {getRegionLabel(region)}
-                    </div>
+                    <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select
                       className={styles.nativeSelect}
                       value={region}
@@ -408,11 +404,7 @@ const ElectiveLanguageGameContent = () => {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(
-                          medicalTerms.flatMap((term) => term.regions || [])
-                        )
-                      ).map((r) => (
+                      {Array.from(new Set(medicalTerms.flatMap((term) => term.regions || []))).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -422,10 +414,7 @@ const ElectiveLanguageGameContent = () => {
                 </div>
 
                 {/* Filter */}
-                <div
-                  className={styles.filterColumn}
-                  data-tutorial="filterColumn"
-                >
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
@@ -449,10 +438,7 @@ const ElectiveLanguageGameContent = () => {
                 </div>
 
                 {/* Kategorie */}
-                <div
-                  className={styles.categoryColumn}
-                  data-tutorial="categorySelect"
-                >
+                <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -473,11 +459,7 @@ const ElectiveLanguageGameContent = () => {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(
-                          medicalTerms.flatMap((term) => term.categories || [])
-                        )
-                      ).map((c) => (
+                      {Array.from(new Set(medicalTerms.flatMap((term) => term.categories || []))).map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
@@ -487,15 +469,10 @@ const ElectiveLanguageGameContent = () => {
                 </div>
 
                 {/* Bearbeiten */}
-                <div
-                  className={styles.editColumn}
-                  data-tutorial="editToggleButton"
-                >
+                <div className={styles.editColumn} data-tutorial="editToggleButton">
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
-                    className={`${styles.editToggleButton} ${
-                      allowEdit ? styles.selectedEdit : ""
-                    }`}
+                    className={`${styles.editToggleButton} ${allowEdit ? styles.selectedEdit : ""}`}
                     onClick={() => {
                       if (requireAuth()) return;
                       setAllowEdit(!allowEdit);
@@ -508,40 +485,10 @@ const ElectiveLanguageGameContent = () => {
 
               {/* Language Swap Container */}
               <div className={styles.modalField}>
-                <div
-                  className={styles.languageSwapContainer}
-                  data-tutorial="languageSwapContainer"
-                >
-                  {isGermanLeft ? (
-                    <>
-                      {/* Німецький контейнер (зліва) */}
-                      <div className={styles.languageCellFixed}>Deutsch</div>
-                      {/* Swap кнопка */}
-                      <button
-                        className={styles.swapButton}
-                        onClick={() => setIsGermanLeft((prev) => !prev)}
-                      >
-                        <FaExchangeAlt className={styles.swapIcon} />
-                      </button>
-                      {/* Контейнер для вибору другої мови (справа) */}
-                      <select
-                        className={`${styles.languageSelect} ${styles.languageCellFixed}`}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
-                        )}
-                      </select>
-                    </>
-                  ) : (
-                    <>
-                      {/* Контейнер для вибору другої мови (зліва) */}
+                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
+                  {/* Ліва колонка */}
+                  <div className={styles.languageCellFixed}>
+                    {isGermanLeft ? "Deutsch" : (
                       <select
                         className={styles.languageSelect}
                         value={electiveLang}
@@ -556,32 +503,46 @@ const ElectiveLanguageGameContent = () => {
                             )
                         )}
                       </select>
-                      {/* Swap кнопка */}
-                      <button
-                        className={styles.swapButton}
-                        onClick={() => setIsGermanLeft((prev) => !prev)}
+                    )}
+                  </div>
+
+                  {/* Swap-кнопка */}
+                  <button
+                    className={styles.swapButton}
+                    onClick={() => setIsGermanLeft((prev) => !prev)}
+                  >
+                    <FaExchangeAlt className={styles.swapIcon} />
+                  </button>
+
+                  {/* Права колонка */}
+                  <div className={styles.languageCellFixed}>
+                    {isGermanLeft ? (
+                      <select
+                        className={styles.languageSelect}
+                        value={electiveLang}
+                        onChange={(e) => setElectiveLang(e.target.value)}
                       >
-                        <FaExchangeAlt className={styles.swapIcon} />
-                      </button>
-                      {/* Німецький контейнер (справа) */}
-                      <div className={styles.languageCellFixed}>Deutsch</div>
-                    </>
-                  )}
+                        {Object.entries(languageMap).map(
+                          ([langCode, langLabel]) =>
+                            langCode !== "de" && (
+                              <option key={langCode} value={langCode}>
+                                {langLabel}
+                              </option>
+                            )
+                        )}
+                      </select>
+                    ) : "Deutsch"}
+                  </div>
                 </div>
               </div>
 
               {/* Кількість питань */}
               <div className={styles.modalField}>
-                <div
-                  className={styles.questionCountContainer}
-                  data-tutorial="questionCountContainer"
-                >
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
-                      className={`${styles.questionCountIcon} ${
-                        questionCount === countOption ? styles.selected : ""
-                      }`}
+                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
                       onClick={() => {
                         if (requireAuth()) return;
                         setQuestionCount(countOption);
@@ -593,18 +554,14 @@ const ElectiveLanguageGameContent = () => {
                 </div>
               </div>
 
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStart}
-              >
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка-тригер для туторіалу (поза модальним вікном) */}
+        {/* Tutorial-Trigger */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"
@@ -623,27 +580,18 @@ const ElectiveLanguageGameContent = () => {
               strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line
-                x1="12"
-                y1="12"
-                x2="12"
-                y2="15.5"
-                stroke="#ededed"
-                strokeWidth="3"
-              />
+              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
               <circle cx="12" cy="7" r="0.5" fill="#ededed" />
             </svg>
           </button>
         )}
 
-        {/* Якщо за фільтром немає термінів */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
           <div className={styles.noQuestionsMessage}>
             <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
           </div>
         )}
 
-        {/* Ігровий інтерфейс */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -662,19 +610,14 @@ const ElectiveLanguageGameContent = () => {
                       let isCorrect = false;
                       if (isCompleted) {
                         if (option === richtigeAntwort) isCorrect = true;
-                        if (
-                          chosenAnswer === option &&
-                          option !== richtigeAntwort
-                        )
+                        if (chosenAnswer === option && option !== richtigeAntwort)
                           isWrong = true;
                       }
                       return (
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${
-                            isCorrect ? styles.correct : ""
-                          } ${isWrong ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${isCorrect ? styles.correct : ""} ${isWrong ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -682,15 +625,12 @@ const ElectiveLanguageGameContent = () => {
                     } else {
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
-                      let isCorrectEdit =
-                        isCompleted && option === richtigeAntwort;
+                      let isCorrectEdit = isCompleted && option === richtigeAntwort;
                       return (
                         <button
                           key={idx}
                           onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${
-                            isCorrectEdit ? styles.correct : ""
-                          } ${isWrongEdit ? styles.wrong : ""}`}
+                          className={`${styles.answerTile} ${isCorrectEdit ? styles.correct : ""} ${isWrongEdit ? styles.wrong : ""}`}
                         >
                           {option}
                         </button>
@@ -700,10 +640,7 @@ const ElectiveLanguageGameContent = () => {
                 </div>
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
-                    <button
-                      className={styles.navButton}
-                      onClick={() => handleNavigation("prev")}
-                    >
+                    <button className={styles.navButton} onClick={() => handleNavigation("prev")}>
                       <FaArrowLeft />
                     </button>
                   )}
@@ -740,12 +677,10 @@ const ElectiveLanguageGameContent = () => {
           </>
         )}
 
-        {/* Модальне вікно результатів */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>{ErgebnisseAnzeigen()}</div>
         )}
 
-        {/* Кнопка для повторного відкриття налаштувань */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -762,15 +697,9 @@ const ElectiveLanguageGameContent = () => {
         )}
       </div>
 
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-      />
-      {/* Рендер туторіалу */}
-      <ElectiveLanguageGameTutorial
-        run={showTutorial}
-        onFinish={() => setShowTutorial(false)}
-      />
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+
+      <ElectiveLanguageGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
     </MainLayout>
   );
 };
