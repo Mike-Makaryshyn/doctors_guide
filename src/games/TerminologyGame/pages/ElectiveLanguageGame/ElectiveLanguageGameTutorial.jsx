@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./ElectiveLanguageGameTutorialTranslations";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import styles from "./ElectiveLanguageGameTutorial.module.scss";
 
 const ElectiveLanguageGameTutorial = ({ run, onFinish }) => {

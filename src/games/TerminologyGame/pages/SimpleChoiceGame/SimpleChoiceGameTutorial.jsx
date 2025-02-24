@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS, EVENTS } from "react-joyride";
 import tutorialTranslations from "./SimpleChoiceGameTutorialTranslations";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import styles from "./SimpleChoiceGameTutorial.module.scss";
 
 const SimpleChoiceGameTutorial = ({ run, onFinish }) => {

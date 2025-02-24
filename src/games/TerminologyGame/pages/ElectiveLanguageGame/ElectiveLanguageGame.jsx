@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
-import styles from "./FillInBlankGame.module.scss";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
+import { TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import styles from "./ElectiveLanguageGame.module.scss";
 import {
   FaCog,
-  FaArrowLeft,
-  FaArrowRight,
-  FaPen,
-  FaList,
-  FaCheck,
   FaPlay,
   FaPause,
+  FaCheck,
+  FaList,
+  FaPen,
+  FaArrowLeft,
+  FaArrowRight,
+  FaExchangeAlt,
 } from "react-icons/fa";
-import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { categoryIcons } from "../../constants/CategoryIcons";
+import { useTermStatus } from "../../../../contexts/TermStatusContext";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { Helmet } from "react-helmet";
+import translatorBg from "../../../../assets/translator-bg.jpg";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
+import ElectiveLanguageGameTutorial from "./ElectiveLanguageGameTutorial";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import AuthModal from "../AuthPage/AuthModal";
-import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
-import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
+// Kürzel für Bundesländer
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -42,6 +47,7 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
+// Filtermodi
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -49,22 +55,31 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
+// Anzahl-Fragen-Optionen
 const questionCountOptions = [10, 20, 40, 60, 100, 200, "all"];
 
-const displayModeOptions = [
-  { value: "LatGerman", label: "Lat→Ger" },
-  { value: "GermanLat", label: "Ger→Lat" },
-  { value: "Mixed", label: "Mixed" },
-];
+// Sprachzuordnung
+const languageMap = {
+  de: "Deutsch",
+  en: "Englisch",
+  uk: "Ukrainisch",
+  ru: "Russisch",
+  tr: "Türkisch",
+  ar: "Arabisch",
+  fr: "Französisch",
+  es: "Spanisch",
+  pl: "Polnisch",
+};
 
-const FillInBlankGameContent = () => {
+const ElectiveLanguageGameContent = () => {
   const navigate = useNavigate();
-  const { selectedRegion } = useGetGlobalInfo();
-  const { termStatuses, toggleStatus, flushChanges, recordCorrectAnswer } = useTermStatus();
+  const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
+  const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
-  // Firebase Auth логіка
-  const [user, loading] = useAuthState(auth);
+  // Firebase Auth State
+  const [user] = useAuthState(auth);
   const [showAuthModal, setShowAuthModal] = useState(false);
+
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -73,56 +88,70 @@ const FillInBlankGameContent = () => {
     return false;
   };
 
-  // Логіка туторіалу
-  const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("fillInBlankGameTutorialCompleted") !== "true"
-  );
-
-  // Стан налаштувань гри
+  // Einstellungen
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
+  const [electiveLang, setElectiveLang] = useState(
+    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
+  );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
-  const [questionCount, setQuestionCount] = useState(20);
   const [allowEdit, setAllowEdit] = useState(false);
-  const [displayMode, setDisplayMode] = useState("LatGerman");
+  const [questionCount, setQuestionCount] = useState(20);
 
-  // Стан гри
+  // Deutsch als Basis, andere Sprache als Ziel
+  const sourceLang = "de";
+  const targetLang = electiveLang;
+
+  // Swap-Positionierung
+  const [isGermanLeft, setIsGermanLeft] = useState(true);
+
+  // Spiel-Status
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
-  const [correctCounts, setCorrectCounts] = useState({});
-  const [shownCounts, setShownCounts] = useState({});
-
-  // Результати гри
-  const [gameStartTime, setGameStartTime] = useState(null);
-  const [gameFinished, setGameFinished] = useState(false);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
+  const [shownCounts, setShownCounts] = useState({});
+  const [gameStartTime, setGameStartTime] = useState(null);
+  const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
+  // <<-- Додаємо стан для Tutorial -->
+  const [showTutorial, setShowTutorial] = useState(
+    localStorage.getItem("electiveLanguageGameTutorialCompleted") !== "true"
+  );
+
+  // Synchronisation mit globalem Kontext
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  // Завантаження питань із JSON
+  useEffect(() => {
+    setElectiveLang(
+      selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
+    );
+  }, [selectedLanguage]);
+
+  // Fragen generieren/filtern
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
-      const matchesRegion =
-        region === "Alle" || (term.regions || []).includes(region);
+      const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
       const matchesCategory =
         selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
-      const status = termStatuses[term.id] || "unlearned";
+      const status = termStatuses[term.id]?.status || "unlearned";
+
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
         return false;
+
       return matchesRegion && matchesCategory;
     });
 
+    // Sortierung nach Häufigkeit des Zeigens
     gefilterteBegriffe.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
@@ -130,29 +159,33 @@ const FillInBlankGameContent = () => {
       return countA - countB;
     });
 
+    // Begriffe auswählen
     const ausgewählteBegriffe =
       questionCount === "all" ? gefilterteBegriffe : gefilterteBegriffe.slice(0, questionCount);
 
+    // ShownCounts aktualisieren
     const neueShownCounts = { ...shownCounts };
     ausgewählteBegriffe.forEach((term) => {
       neueShownCounts[term.id] = (neueShownCounts[term.id] || 0) + 1;
     });
     setShownCounts(neueShownCounts);
 
-    // Формуємо питання з реченнями, що містять {BLANK}
+    // Fragen-Daten anlegen
     const fragenDaten = ausgewählteBegriffe.map((term) => {
-      const correctAnswer = term.answer;
-      const wrongOptions = medicalTerms
+      const frageText = term[sourceLang] || term.de;
+      const richtigeAntwort = term[targetLang] || term.de;
+      const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) => t.de);
-      const options = [...wrongOptions, correctAnswer].sort(() => Math.random() - 0.5);
+        .map((t) => t[targetLang] || t.de);
+      const optionen = [...falscheAntworten, richtigeAntwort].sort(() => Math.random() - 0.5);
+
       return {
         id: term.id,
-        sentence: term.sentence,
-        answer: correctAnswer,
-        options,
+        frage: frageText,
+        richtigeAntwort,
+        optionen,
         term,
       };
     });
@@ -162,14 +195,8 @@ const FillInBlankGameContent = () => {
     setAnswersNoEdit({});
     setWrongSelectionsEdit({});
     setQuestionsCompleted({});
-    setCorrectAnswerCount(0);
-    setIncorrectAnswerCount(0);
-    setCorrectCounts({});
-    setGameFinished(false);
-    setGameStartTime(Date.now());
   };
 
-  // Запуск гри при закритті налаштувань
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -177,7 +204,6 @@ const FillInBlankGameContent = () => {
       setGameStartTime(Date.now());
       setCorrectAnswerCount(0);
       setIncorrectAnswerCount(0);
-      setCorrectCounts({});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allowEdit, settingsOpen]);
@@ -191,7 +217,6 @@ const FillInBlankGameContent = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Завершення гри – викликається flushChanges для запису змін, але лише в звичайному режимі
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -205,45 +230,16 @@ const FillInBlankGameContent = () => {
     }
   };
 
-  // Функція renderSentence розбиває речення за {BLANK} і підставляє обране слово
-  const renderSentence = (sentence) => {
-    const parts = sentence.split("{BLANK}");
-    let blankTileClass = styles.blankTile;
-    let blankTileText = "_____";
-    const qIndex = currentIndex;
-    const isCompleted = questionsCompleted[qIndex];
-
-    if (isCompleted) {
-      const chosen = answersNoEdit[qIndex] || "";
-      if (chosen) {
-        blankTileText = chosen;
-        if (chosen === questions[qIndex].answer) {
-          blankTileClass += " " + styles.correct;
-        } else {
-          blankTileClass += " " + styles.wrong;
-        }
-      }
-    }
-    return (
-      <div className={styles.sentenceBox}>
-        {parts[0]}
-        <span className={blankTileClass}>{blankTileText}</span>
-        {parts[1]}
-      </div>
-    );
-  };
-
-  // Обробка вибору відповіді
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
-    const { answer: richtigeAntwort, id } = questions[currentIndex];
+    const { richtigeAntwort, id } = questions[currentIndex];
     const qIndex = currentIndex;
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
-        toggleStatus(questions[qIndex].id, "learned");
+        toggleStatus(id, "learned");
       } else {
         setWrongSelectionsEdit((prev) => {
           const alteListe = prev[qIndex] || [];
@@ -254,6 +250,7 @@ const FillInBlankGameContent = () => {
     } else {
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
+
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
         recordCorrectAnswer(id);
@@ -263,7 +260,6 @@ const FillInBlankGameContent = () => {
     }
   };
 
-  // Навігація між питаннями
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -280,12 +276,15 @@ const FillInBlankGameContent = () => {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
-  // Підрахунок помилок за категоріями (для звіту)
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
-      if (questionsCompleted[index] && answersNoEdit[index] !== frage.answer) {
-        (frage.term.categories || []).forEach((kategorie) => {
+      if (
+        questionsCompleted[index] &&
+        answersNoEdit[index] !== frage.richtigeAntwort
+      ) {
+        const term = frage.term;
+        (term.categories || []).forEach((kategorie) => {
           fehler[kategorie] = (fehler[kategorie] || 0) + 1;
         });
       }
@@ -293,7 +292,6 @@ const FillInBlankGameContent = () => {
     return fehler;
   };
 
-  // Модальне вікно з результатами
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
@@ -309,10 +307,7 @@ const FillInBlankGameContent = () => {
           Richtige Antworten: {correctAnswerCount} von {questions.length}
         </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
-        <p>
-          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
-          {sessionDuration % 60} Sekunden
-        </p>
+        <p>Dauer: {sessionDuration} Sekunden</p>
         {Object.keys(kategorieFehler).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
@@ -333,41 +328,45 @@ const FillInBlankGameContent = () => {
   };
 
   const aktuelleFrage = questions[currentIndex];
+  const qIndex = currentIndex;
+  const frageIstAbgeschlossen = questionsCompleted[qIndex] || false;
 
   return (
     <MainLayout>
       <Helmet>
-        <title>Fachbegriffe lernen – Fill in the Blank Game</title>
+        <title>Fachbegriffe lernen – Elective Language Game</title>
         <meta
           name="description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Elective Language Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
         <meta
           name="keywords"
-          content="Fachbegriffe, Fachsprachenprüfung, Fill in the Blank, Medizin, Terminologie, Lernen, Fachsprache"
+          content="Fachbegriffe, Fachsprachenprüfung, Elective Language, Medizin, Terminologie, Lernen, Fachsprache"
         />
-        <meta property="og:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
+        <meta property="og:title" content="Fachbegriffe lernen – Elective Language Game" />
         <meta
-          name="og:description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+          property="og:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Elective Language Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
-        <meta property="og:image" content={fillInBlankBg} />
+        <meta property="og:image" content={translatorBg} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
+        <meta
+          name="twitter:title"
+          content="Fachbegriffe lernen – Elective Language Game"
+        />
         <meta
           name="twitter:description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Elective Language Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
-        <meta name="twitter:image" content={fillInBlankBg} />
+        <meta name="twitter:image" content={translatorBg} />
       </Helmet>
 
-      <div className={styles.fillInBlankGame}>
+      <div className={styles.electiveLanguageGame}>
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
-        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
@@ -376,10 +375,9 @@ const FillInBlankGameContent = () => {
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                {/* Region */}
-                <div className={styles.regionColumn}>
+                <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
+                  <div className={styles.selectWrapper}>
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select
                       className={styles.nativeSelect}
@@ -398,7 +396,6 @@ const FillInBlankGameContent = () => {
                     </select>
                   </div>
                 </div>
-                {/* Filter */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -421,7 +418,6 @@ const FillInBlankGameContent = () => {
                     </select>
                   </div>
                 </div>
-                {/* Kategorie */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -451,12 +447,11 @@ const FillInBlankGameContent = () => {
                     </select>
                   </div>
                 </div>
-                {/* Bearbeiten */}
                 <div className={styles.editColumn} data-tutorial="editToggleButton">
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
                     className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
-                      allowEdit ? styles.selectedEdit : ""
+                      allowEdit ? styles.selected : ""
                     }`}
                     onClick={() => {
                       if (requireAuth()) return;
@@ -467,25 +462,60 @@ const FillInBlankGameContent = () => {
                   </button>
                 </div>
               </div>
-              {/* Додаткові налаштування */}
+
+              {/* Language Swap Container */}
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
-                  {displayModeOptions.map((option) => (
-                    <div
-                      key={option.value}
-                      className={`${styles.displayModeIcon} ${
-                        option.value === displayMode ? styles.selected : ""
-                      }`}
-                      onClick={() => {
-                        if (requireAuth()) return;
-                        setDisplayMode(option.value);
-                      }}
-                    >
-                      {option.label}
-                    </div>
-                  ))}
+                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
+                  <div className={styles.languageCellFixed}>
+                    {isGermanLeft ? (
+                      "Deutsch"
+                    ) : (
+                      <select
+                        className={styles.languageSelect}
+                        value={electiveLang}
+                        onChange={(e) => setElectiveLang(e.target.value)}
+                      >
+                        {Object.entries(languageMap).map(
+                          ([langCode, langLabel]) =>
+                            langCode !== "de" && (
+                              <option key={langCode} value={langCode}>
+                                {langLabel}
+                              </option>
+                            )
+                        )}
+                      </select>
+                    )}
+                  </div>
+                  <button
+                    className={styles.swapButton}
+                    onClick={() => setIsGermanLeft((prev) => !prev)}
+                  >
+                    <FaExchangeAlt className={styles.swapIcon} />
+                  </button>
+                  <div className={styles.languageCellFixed}>
+                    {isGermanLeft ? (
+                      <select
+                        className={styles.languageSelect}
+                        value={electiveLang}
+                        onChange={(e) => setElectiveLang(e.target.value)}
+                      >
+                        {Object.entries(languageMap).map(
+                          ([langCode, langLabel]) =>
+                            langCode !== "de" && (
+                              <option key={langCode} value={langCode}>
+                                {langLabel}
+                              </option>
+                            )
+                        )}
+                      </select>
+                    ) : (
+                      "Deutsch"
+                    )}
+                  </div>
                 </div>
               </div>
+
+              {/* Anzahl Fragen */}
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
@@ -504,6 +534,7 @@ const FillInBlankGameContent = () => {
                   ))}
                 </div>
               </div>
+
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
@@ -511,71 +542,102 @@ const FillInBlankGameContent = () => {
           </div>
         )}
 
-        {/* Кнопка запуску туторіалу – відображається ТІЛЬКИ коли відкрито модальне вікно */}
+        {/* Tutorial-Trigger */}
         {settingsOpen && (
-          <div className={styles.bottomRightTutorial}>
-            <button
-              data-tutorial="tutorialStartButton"
-              className={styles.tutorialButton}
-              onClick={() => setShowTutorial(true)}
+          <button
+            data-tutorial="tutorialStartButton"
+            className={styles.tutorialButton}
+            onClick={() => setShowTutorial(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="30"
+              height="30"
+              fill="none"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-                fill="none"
-                stroke="#ededed"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-                <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-              </svg>
-            </button>
-          </div>
+              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+            </svg>
+          </button>
         )}
 
-        {/* Повідомлення, якщо за обраним фільтром немає термінів */}
-        {!settingsOpen && !gameFinished && questions.length === 0 && (
-          <div className={styles.noQuestionsMessage}>
-            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-          </div>
-        )}
+       {!settingsOpen && !gameFinished && questions.length === 0 && (
+               <div className={styles.noQuestionsMessage}>
+                 <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+               </div>
+             )}
 
-        {/* Інтерфейс гри */}
+        {/* Spiel-Interface */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
-            <div className={styles.progressContainer}>
-              <div className={styles.progress}>
-                Frage {currentIndex + 1} von {questions.length}
-              </div>
+            <div className={styles.progress}>
+              Frage {currentIndex + 1} von {questions.length}
             </div>
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                {aktuelleFrage?.sentence.includes("{BLANK}")
-                  ? renderSentence(aktuelleFrage.sentence)
-                  : aktuelleFrage?.sentence}
+                <h2 style={{ position: "relative" }}>
+                  {aktuelleFrage?.frage}
+                  {frageIstAbgeschlossen && (
+                    <Tippy
+                      content={
+                        aktuelleFrage?.term?.[`${selectedLanguage}Explanation`] ||
+                        "Keine zusätzliche Information vorhanden"
+                      }
+                      trigger="click"
+                      interactive={true}
+                      placement="top"
+                    >
+                      <span className={styles.infoIcon}>i</span>
+                    </Tippy>
+                  )}
+                </h2>
                 <div className={styles.optionsContainer}>
-                  {aktuelleFrage?.options.map((option, idx) => {
-                    let btnClass = styles.answerTile;
-                    if (questionsCompleted[currentIndex]) {
-                      if (option === aktuelleFrage.answer)
-                        btnClass += " " + styles.correct;
-                      if (option === selectedAnswer && option !== aktuelleFrage.answer)
-                        btnClass += " " + styles.wrong;
+                  {aktuelleFrage?.optionen.map((option, idx) => {
+                    const { richtigeAntwort } = aktuelleFrage;
+                    const isCompleted = frageIstAbgeschlossen;
+                    if (!allowEdit) {
+                      const chosenAnswer = answersNoEdit[qIndex] || null;
+                      let isWrong = false;
+                      let isCorrect = false;
+                      if (isCompleted) {
+                        if (option === richtigeAntwort) isCorrect = true;
+                        if (chosenAnswer === option && option !== richtigeAntwort) {
+                          isWrong = true;
+                        }
+                      }
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleAnswerSelect(option)}
+                          className={`${styles.answerTile} ${
+                            isCorrect ? styles.correct : ""
+                          } ${isWrong ? styles.wrong : ""}`}
+                        >
+                          {option}
+                        </button>
+                      );
+                    } else {
+                      const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
+                      let isWrongEdit = wrongAnswersArr.includes(option);
+                      let isCorrectEdit = isCompleted && option === richtigeAntwort;
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleAnswerSelect(option)}
+                          className={`${styles.answerTile} ${
+                            isCorrectEdit ? styles.correct : ""
+                          } ${isWrongEdit ? styles.wrong : ""}`}
+                        >
+                          {option}
+                        </button>
+                      );
                     }
-                    return (
-                      <button
-                        key={idx}
-                        className={btnClass}
-                        onClick={() => handleAnswerSelect(option)}
-                      >
-                        {option}
-                      </button>
-                    );
                   })}
                 </div>
                 <div className={styles.navigationContainer}>
@@ -617,14 +679,10 @@ const FillInBlankGameContent = () => {
           </>
         )}
 
-        {/* Модальне вікно з результатами */}
         {gameFinished && (
-          <div className={styles.resultsOverlay}>
-            {ErgebnisseAnzeigen()}
-          </div>
+          <div className={styles.resultsOverlay}>{ErgebnisseAnzeigen()}</div>
         )}
 
-        {/* Кнопка налаштувань (праворуч внизу) */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -640,22 +698,22 @@ const FillInBlankGameContent = () => {
           </div>
         )}
       </div>
-      {/* Відображення туторіалу */}
-      {showTutorial && (
-        <FillInBlankGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
-      )}
-      {/* AuthModal для неавторизованих користувачів */}
+
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+
+      <ElectiveLanguageGameTutorial
+        run={showTutorial}
+        onFinish={() => setShowTutorial(false)}
+      />
     </MainLayout>
   );
 };
 
-const FillInBlankGame = () => {
-  return (
-    <TermStatusProvider>
-      <FillInBlankGameContent />
-    </TermStatusProvider>
-  );
-};
+// Hülle für den Context
+const ElectiveLanguageGame = () => (
+  <TermStatusProvider>
+    <ElectiveLanguageGameContent />
+  </TermStatusProvider>
+);
 
-export default FillInBlankGame;
+export default ElectiveLanguageGame;

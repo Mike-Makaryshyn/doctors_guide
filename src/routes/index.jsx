@@ -33,13 +33,13 @@ const ExamEmplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
 const FortuneWheelGame = React.lazy(() =>
-  import("../pages/FortuneWheelGame/FortuneWheelGame")
+  import("../games/TerminologyGame/pages/FortuneWheelGame/FortuneWheelGame.jsx")
 );
 const ExamExplanationsPage = React.lazy(() =>
   import("../pages/ExamEmplanationsPage/ExamEmplanationsPage")
 );
 const FlashcardGame = React.lazy(() =>
-  import("../pages/FlashcardGame/FlashcardGame")
+  import("../games/TerminologyGame/pages/FlashcardGame/FlashcardGame.jsx")
 );
 const ApprobationPage = React.lazy(() =>
   import("../pages/ApprobationPage/ApprobationPage")
@@ -63,7 +63,7 @@ const KenntnisPruefungPage = React.lazy(() =>
 );
 
 const AllMedicalTerminologyPage = React.lazy(() =>
-  import("../pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage")
+  import("../games/TerminologyGame/pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage.jsx")
 );
 const EditProfilePage = React.lazy(() =>
   import("../pages/EditProfilePage/EditProfilePage")
@@ -84,7 +84,7 @@ const EditCasePage = React.lazy(() =>
   import("../pages/EditCasePage/EditCasePage")
 );
 const SimpleChoiceGame = React.lazy(() =>
-  import("../pages/SimpleChoiceGame/SimpleChoiceGame")
+  import("../games/TerminologyGame/pages/SimpleChoiceGame/SimpleChoiceGame.jsx")
 );
 const TerminologyLearningPage = React.lazy(() =>
   import("../pages/TerminologyLearningPage/TerminologyLearningPage")
@@ -110,7 +110,7 @@ const DataCollectionPage = React.lazy(() =>
   import("../pages/DataCollectionPage/DataCollectionPage")
 );
 const ElectiveLanguageGame = React.lazy(() =>
-  import("../pages/ElectiveLanguageGame/ElectiveLanguageGame")
+  import("../games/TerminologyGame/pages/ElectiveLanguageGame/ElectiveLanguageGame.jsx")
 );
 const RegionalChatsPage = React.lazy(() =>
   import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
@@ -123,7 +123,7 @@ const NavigateToMap = () => (
   <Link to={pathList.custom_map.path}></Link>
 );
 const FillInBlankGame = React.lazy(() =>
-  import("../pages/FillInBlankGame/FillInBlankGame.jsx")
+  import("../games/TerminologyGame/pages/FillInBlankGame/FillInBlankGame.jsx")
 );
 export default function Routers() {
   return (

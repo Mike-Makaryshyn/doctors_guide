@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./FlashCardGameTutorialTranslations";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import styles from "./FlashCardGameTutorial.module.scss";
 
 const FlashCardGameTutorial = ({ run, onFinish }) => {

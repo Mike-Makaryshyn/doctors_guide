@@ -21,7 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 // Імпорти для React Query
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // Імпорт нового контексту для статусів термінів
-import { TermStatusProvider } from "./contexts/TermStatusContext";
+
 import { MedicationStatusProvider } from "./contexts/MedicationStatusContext"; 
 
 // Створення екземпляру QueryClient

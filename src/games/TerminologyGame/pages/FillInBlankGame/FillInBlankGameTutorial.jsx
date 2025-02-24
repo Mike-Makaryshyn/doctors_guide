@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./FillInBlankGameTutorialTranslations";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import styles from "./FillInBlankGameTutorial.module.scss";
 
 const FillInBlankGameTutorial = ({ run, onFinish }) => {

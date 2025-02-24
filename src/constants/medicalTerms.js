@@ -32953,7 +32953,7 @@ export const medicalTerms = [
     "lat": "Lacrimal drainage (die)",
     "de": "der Tränenweg",
     "en": "Lacrimal Drainage",
-    "uk": "Сльозовий дренаж",
+    "uk": "Слізний канал",
     "ru": "Слезоотводящие пути",
     "pl": "Drenaż łzowy",
     "es": "Drenaje lagrimal",

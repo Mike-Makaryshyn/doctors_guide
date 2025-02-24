@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
 import styles from "./SimpleChoiceGame.module.scss";
 import {
   FaCog,
@@ -13,19 +13,19 @@ import {
   FaArrowLeft,
   FaArrowRight,
 } from "react-icons/fa";
-import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { categoryIcons } from "../../constants/CategoryIcons";
+import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
 import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
 import { Helmet } from "react-helmet";
-import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
+import simpleChoiceBg from "../../../../assets/simple-choice-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 // Firebase Auth Imports для логіки неавторизованих користувачів
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import AuthModal from "../AuthPage/AuthModal";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 // Abkürzungen für Regionen
 const regionAbbreviations = {
@@ -200,7 +200,7 @@ const SimpleChoiceGameContent = () => {
     setQuestionsCompleted({});
   };
 
-  // При закритті налаштувань (натискання Start) запускається гра
+  // Запуск гри при закритті налаштувань
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -221,8 +221,7 @@ const SimpleChoiceGameContent = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Завершення гри – викликається flushChanges для запису в Firebase,
-  // але лише в звичайному режимі (allowEdit === false)
+  // Завершення гри – викликається flushChanges для запису даних у Firebase
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -232,7 +231,7 @@ const SimpleChoiceGameContent = () => {
     setSessionDuration(dauer);
     setGameFinished(true);
     if (!allowEdit) {
-      flushChanges();
+      flushChanges(); // Відправка змін у Firebase через контекст
     }
   };
 
@@ -259,7 +258,7 @@ const SimpleChoiceGameContent = () => {
 
       if (option === richtigeAntwort) {
         setCorrectAnswerCount((prev) => prev + 1);
-        recordCorrectAnswer(id);
+        recordCorrectAnswer(id); // Оновлення лічильника у контексті
       } else {
         setIncorrectAnswerCount((prev) => prev + 1);
       }

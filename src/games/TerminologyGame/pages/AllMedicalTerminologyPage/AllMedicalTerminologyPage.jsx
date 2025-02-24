@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
 import styles from "./AllMedicalTerminologyPage.module.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../../../firebase";
 import {
   FaCog,
   FaCheck,
@@ -14,15 +14,15 @@ import {
   FaTimes,
   FaSearch,
 } from "react-icons/fa";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
+import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
 import { useNavigate } from "react-router-dom";
-import { categoryIcons } from "../../constants/CategoryIcons";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
-import AuthModal from "../AuthPage/AuthModal";
-import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg";
 
 // Regionskürzel
 const regionAbbreviations = {

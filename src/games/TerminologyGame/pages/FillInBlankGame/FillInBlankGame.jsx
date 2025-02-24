@@ -1,29 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
-import { TermStatusProvider } from "../../contexts/TermStatusContext";
-import styles from "./ElectiveLanguageGame.module.scss";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
+import styles from "./FillInBlankGame.module.scss";
 import {
   FaCog,
-  FaPlay,
-  FaPause,
-  FaCheck,
-  FaList,
-  FaPen,
   FaArrowLeft,
   FaArrowRight,
-  FaExchangeAlt,
+  FaPen,
+  FaList,
+  FaCheck,
+  FaPlay,
+  FaPause,
 } from "react-icons/fa";
-import { useTermStatus } from "../../contexts/TermStatusContext";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
-import translatorBg from "../../assets/translator-bg.jpg";
-import { categoryIcons } from "../../constants/CategoryIcons";
-import ElectiveLanguageGameTutorial from "./ElectiveLanguageGameTutorial";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import AuthModal from "../AuthPage/AuthModal";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
+import fillInBlankBg from "../../../../assets/fill-in-blank-bg.jpg";
 
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
@@ -53,26 +51,19 @@ const filterModes = [
 
 const questionCountOptions = [10, 20, 40, 60, 100, 200, "all"];
 
-const languageMap = {
-  de: "Deutsch",
-  en: "Englisch",
-  uk: "Ukrainisch",
-  ru: "Russisch",
-  tr: "Türkisch",
-  ar: "Arabisch",
-  fr: "Französisch",
-  es: "Spanisch",
-  pl: "Polnisch",
-};
+const displayModeOptions = [
+  { value: "LatGerman", label: "Lat→Ger" },
+  { value: "GermanLat", label: "Ger→Lat" },
+  { value: "Mixed", label: "Mixed" },
+];
 
-const ElectiveLanguageGameContent = () => {
+const FillInBlankGameContent = () => {
   const navigate = useNavigate();
-  const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
-  const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } =
-    useTermStatus();
+  const { selectedRegion } = useGetGlobalInfo();
+  const { termStatuses, toggleStatus, flushChanges, recordCorrectAnswer } = useTermStatus();
 
-  // Firebase Auth State
-  const [user] = useAuthState(auth);
+  // Firebase Auth логіка
+  const [user, loading] = useAuthState(auth);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const requireAuth = () => {
     if (!user) {
@@ -82,70 +73,52 @@ const ElectiveLanguageGameContent = () => {
     return false;
   };
 
-  // Налаштування гри
+  // Логіка туторіалу
+  const [showTutorial, setShowTutorial] = useState(
+    localStorage.getItem("fillInBlankGameTutorialCompleted") !== "true"
+  );
+
+  // Стан налаштувань гри
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
-  const [electiveLang, setElectiveLang] = useState(
-    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-  );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
-  const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
+  const [allowEdit, setAllowEdit] = useState(false);
+  const [displayMode, setDisplayMode] = useState("LatGerman");
 
-  // Мовний напрямок – Deutsch завжди базовий
-  const sourceLang = "de";
-  const targetLang = electiveLang;
-
-  // Для позиціонування (Swap)
-  const [isGermanLeft, setIsGermanLeft] = useState(true);
-
-  // Статус гри
+  // Стан гри
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
-  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
-  const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
+  const [correctCounts, setCorrectCounts] = useState({});
   const [shownCounts, setShownCounts] = useState({});
+
+  // Результати гри
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
+  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
+  const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Синхронізація з глобальним контекстом
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  useEffect(() => {
-    setElectiveLang(
-      selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-    );
-  }, [selectedLanguage]);
-
-  const localLangOptions =
-    (languages[selectedLanguage] && languages[selectedLanguage].options) ||
-    languages["de"].options;
-  const filteredLangOptions = localLangOptions.filter(
-    (opt) => opt.value !== "de"
-  );
-
-  // Генерація/завантаження питань
+  // Завантаження питань
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
       const matchesCategory =
-        selectedCategory === "Alle" ||
-        (term.categories || []).includes(selectedCategory);
-      const status = termStatuses[term.id] || "unlearned";
+        selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+      const status = termStatuses[term.id]?.status || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (
-        filterMode === "unlearned" &&
-        (status === "learned" || status === "paused")
-      )
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
         return false;
       return matchesRegion && matchesCategory;
     });
@@ -158,9 +131,7 @@ const ElectiveLanguageGameContent = () => {
     });
 
     const ausgewählteBegriffe =
-      questionCount === "all"
-        ? gefilterteBegriffe
-        : gefilterteBegriffe.slice(0, questionCount);
+      questionCount === "all" ? gefilterteBegriffe : gefilterteBegriffe.slice(0, questionCount);
 
     const neueShownCounts = { ...shownCounts };
     ausgewählteBegriffe.forEach((term) => {
@@ -168,27 +139,36 @@ const ElectiveLanguageGameContent = () => {
     });
     setShownCounts(neueShownCounts);
 
+    // Формуємо питання з реченнями, що містять {BLANK}
     const fragenDaten = ausgewählteBegriffe.map((term) => {
-      const frageText = term[sourceLang] || term.de;
-      const richtigeAntwort = term[targetLang] || term.de;
-      const falscheAntworten = medicalTerms
+      const correctAnswer = term.answer;
+      const wrongOptions = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) => t[targetLang] || t.de);
-      const optionen = [...falscheAntworten, richtigeAntwort].sort(
-        () => Math.random() - 0.5
-      );
-      return { id: term.id, frage: frageText, richtigeAntwort, optionen, term };
+        .map((t) => t.de);
+      const options = [...wrongOptions, correctAnswer].sort(() => Math.random() - 0.5);
+      return {
+        id: term.id,
+        sentence: term.sentence,
+        answer: correctAnswer,
+        options,
+        term,
+      };
     });
+
     setQuestions(fragenDaten);
     setCurrentIndex(0);
     setAnswersNoEdit({});
     setWrongSelectionsEdit({});
     setQuestionsCompleted({});
+    setCorrectAnswerCount(0);
+    setIncorrectAnswerCount(0);
+    setCorrectCounts({});
+    setGameFinished(false);
+    setGameStartTime(Date.now());
   };
 
-  // Завантаження питань після закриття налаштувань
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -196,7 +176,9 @@ const ElectiveLanguageGameContent = () => {
       setGameStartTime(Date.now());
       setCorrectAnswerCount(0);
       setIncorrectAnswerCount(0);
+      setCorrectCounts({});
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allowEdit, settingsOpen]);
 
   const handleStart = () => {
@@ -208,7 +190,6 @@ const ElectiveLanguageGameContent = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Завершення гри
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -222,17 +203,43 @@ const ElectiveLanguageGameContent = () => {
     }
   };
 
-  // Обробка вибору відповіді
+  const renderSentence = (sentence) => {
+    const parts = sentence.split("{BLANK}");
+    let blankTileClass = styles.blankTile;
+    let blankTileText = "_____";
+    const qIndex = currentIndex;
+    const isCompleted = questionsCompleted[qIndex];
+
+    if (isCompleted) {
+      const chosen = answersNoEdit[qIndex] || "";
+      if (chosen) {
+        blankTileText = chosen;
+        if (chosen === questions[qIndex].answer) {
+          blankTileClass += " " + styles.correct;
+        } else {
+          blankTileClass += " " + styles.wrong;
+        }
+      }
+    }
+    return (
+      <div className={styles.sentenceBox}>
+        {parts[0]}
+        <span className={blankTileClass}>{blankTileText}</span>
+        {parts[1]}
+      </div>
+    );
+  };
+
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
-    const { richtigeAntwort, id } = questions[currentIndex];
+    const { answer: richtigeAntwort, id } = questions[currentIndex];
     const qIndex = currentIndex;
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
-        toggleStatus(id, "learned");
+        toggleStatus(questions[qIndex].id, "learned");
       } else {
         setWrongSelectionsEdit((prev) => {
           const alteListe = prev[qIndex] || [];
@@ -252,7 +259,6 @@ const ElectiveLanguageGameContent = () => {
     }
   };
 
-  // Навігація між питаннями
   const handleNavigation = (direction) => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
@@ -272,12 +278,8 @@ const ElectiveLanguageGameContent = () => {
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
-      if (
-        questionsCompleted[index] &&
-        answersNoEdit[index] !== frage.richtigeAntwort
-      ) {
-        const term = frage.term;
-        (term.categories || []).forEach((kategorie) => {
+      if (questionsCompleted[index] && answersNoEdit[index] !== frage.answer) {
+        (frage.term.categories || []).forEach((kategorie) => {
           fehler[kategorie] = (fehler[kategorie] || 0) + 1;
         });
       }
@@ -300,12 +302,15 @@ const ElectiveLanguageGameContent = () => {
           Richtige Antworten: {correctAnswerCount} von {questions.length}
         </p>
         <p>Falsche Antworten: {incorrectAnswerCount}</p>
-        <p>Dauer: {sessionDuration} Sekunden</p>
-        {Object.keys(kategorieFehler).length > 0 && (
+        <p>
+          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+          {sessionDuration % 60} Sekunden
+        </p>
+        {Object.keys(berechneKategorieFehler()).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
             <ul>
-              {Object.entries(kategorieFehler).map(([kategorie, anzahl]) => (
+              {Object.entries(berechneKategorieFehler()).map(([kategorie, anzahl]) => (
                 <li key={kategorie}>
                   {kategorie}: {anzahl} Fehler
                 </li>
@@ -324,76 +329,50 @@ const ElectiveLanguageGameContent = () => {
   const qIndex = currentIndex;
   const frageIstAbgeschlossen = questionsCompleted[qIndex] || false;
 
-  // Стан для показу туторіалу
-  const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("electiveLanguageGameTutorialCompleted") !== "true"
-  );
-
   return (
     <MainLayout>
       <Helmet>
-        <title>
-          Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten
-        </title>
+        <title>Fachbegriffe lernen – Fill in the Blank Game</title>
         <meta
           name="description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
         <meta
           name="keywords"
-          content="Fachbegriffe, Fachsprachenprüfung, Medizin, Terminologie, Lernen, Fachsprache"
+          content="Fachbegriffe, Fachsprachenprüfung, Fill in the Blank, Medizin, Terminologie, Lernen, Fachsprache"
         />
+        <meta property="og:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
         <meta
-          property="og:title"
-          content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten"
+          name="og:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
-        <meta
-          property="og:description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
-        />
-        <meta property="og:image" content={translatorBg} />
+        <meta property="og:image" content={fillInBlankBg} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten"
-        />
+        <meta name="twitter:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
         <meta
           name="twitter:description"
-          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung."
+          content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
-        <meta name="twitter:image" content={translatorBg} />
+        <meta name="twitter:image" content={fillInBlankBg} />
       </Helmet>
 
-      <div className={styles.electiveLanguageGame}>
-        <button
-          className="main_menu_back"
-          onClick={() => navigate("/terminology-learning")}
-        >
+      <div className={styles.fillInBlankGame}>
+        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div
-              className={
-                window.innerWidth > 768
-                  ? styles.popupDesktopWide
-                  : styles.popupMobile
-              }
-            >
-              <button
-                className={styles.modalCloseButton}
-                onClick={() => setSettingsOpen(false)}
-              >
+            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
+              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                {/* Region */}
-                <div className={styles.regionColumn} data-tutorial="regionSelect">
+                <div className={styles.regionColumn}>
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper}>
+                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select
                       className={styles.nativeSelect}
@@ -412,8 +391,6 @@ const ElectiveLanguageGameContent = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Filter */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -436,8 +413,6 @@ const ElectiveLanguageGameContent = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Kategorie */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -467,12 +442,12 @@ const ElectiveLanguageGameContent = () => {
                     </select>
                   </div>
                 </div>
-
-                {/* Bearbeiten */}
                 <div className={styles.editColumn} data-tutorial="editToggleButton">
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
-                    className={`${styles.editToggleButton} ${allowEdit ? styles.selectedEdit : ""}`}
+                    className={`${styles.editToggleButton} ${styles.myBearByteButton} ${
+                      allowEdit ? styles.selectedEdit : ""
+                    }`}
                     onClick={() => {
                       if (requireAuth()) return;
                       setAllowEdit(!allowEdit);
@@ -483,66 +458,33 @@ const ElectiveLanguageGameContent = () => {
                 </div>
               </div>
 
-              {/* Language Swap Container */}
               <div className={styles.modalField}>
-                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
-                  {/* Ліва колонка */}
-                  <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? "Deutsch" : (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
-                        )}
-                      </select>
-                    )}
-                  </div>
-
-                  {/* Swap-кнопка */}
-                  <button
-                    className={styles.swapButton}
-                    onClick={() => setIsGermanLeft((prev) => !prev)}
-                  >
-                    <FaExchangeAlt className={styles.swapIcon} />
-                  </button>
-
-                  {/* Права колонка */}
-                  <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
-                        )}
-                      </select>
-                    ) : "Deutsch"}
-                  </div>
+                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
+                  {displayModeOptions.map((option) => (
+                    <div
+                      key={option.value}
+                      className={`${styles.displayModeIcon} ${
+                        displayMode === option.value ? styles.selected : ""
+                      }`}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setDisplayMode(option.value);
+                      }}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Кількість питань */}
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
-                      className={`${styles.questionCountIcon} ${questionCount === countOption ? styles.selected : ""}`}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === countOption ? styles.selected : ""
+                      }`}
                       onClick={() => {
                         if (requireAuth()) return;
                         setQuestionCount(countOption);
@@ -561,29 +503,30 @@ const ElectiveLanguageGameContent = () => {
           </div>
         )}
 
-        {/* Tutorial-Trigger */}
         {settingsOpen && (
-          <button
-            data-tutorial="tutorialStartButton"
-            className={styles.tutorialButton}
-            onClick={() => setShowTutorial(true)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="#ededed"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <div className={styles.bottomRightTutorial}>
+            <button
+              data-tutorial="tutorialStartButton"
+              className={styles.tutorialButton}
+              onClick={() => setShowTutorial(true)}
             >
-              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                fill="none"
+                stroke="#ededed"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+              </svg>
+            </button>
+          </div>
         )}
 
         {!settingsOpen && !gameFinished && questions.length === 0 && (
@@ -594,48 +537,35 @@ const ElectiveLanguageGameContent = () => {
 
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
-            <div className={styles.progress}>
-              Frage {currentIndex + 1} von {questions.length}
+            <div className={styles.progressContainer}>
+              <div className={styles.progress}>
+                Frage {currentIndex + 1} von {questions.length}
+              </div>
             </div>
+
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                <h2>{aktuelleFrage?.frage}</h2>
+                {aktuelleFrage?.sentence.includes("{BLANK}")
+                  ? renderSentence(aktuelleFrage.sentence)
+                  : aktuelleFrage?.sentence}
                 <div className={styles.optionsContainer}>
-                  {aktuelleFrage?.optionen.map((option, idx) => {
-                    const { richtigeAntwort } = aktuelleFrage;
-                    const isCompleted = frageIstAbgeschlossen;
-                    if (!allowEdit) {
-                      const chosenAnswer = answersNoEdit[qIndex] || null;
-                      let isWrong = false;
-                      let isCorrect = false;
-                      if (isCompleted) {
-                        if (option === richtigeAntwort) isCorrect = true;
-                        if (chosenAnswer === option && option !== richtigeAntwort)
-                          isWrong = true;
-                      }
-                      return (
-                        <button
-                          key={idx}
-                          onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrect ? styles.correct : ""} ${isWrong ? styles.wrong : ""}`}
-                        >
-                          {option}
-                        </button>
-                      );
-                    } else {
-                      const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
-                      let isWrongEdit = wrongAnswersArr.includes(option);
-                      let isCorrectEdit = isCompleted && option === richtigeAntwort;
-                      return (
-                        <button
-                          key={idx}
-                          onClick={() => handleAnswerSelect(option)}
-                          className={`${styles.answerTile} ${isCorrectEdit ? styles.correct : ""} ${isWrongEdit ? styles.wrong : ""}`}
-                        >
-                          {option}
-                        </button>
-                      );
+                  {aktuelleFrage?.options.map((option, idx) => {
+                    let btnClass = styles.answerTile;
+                    if (questionsCompleted[currentIndex]) {
+                      if (option === aktuelleFrage.answer)
+                        btnClass += " " + styles.correct;
+                      if (option === selectedAnswer && option !== aktuelleFrage.answer)
+                        btnClass += " " + styles.wrong;
                     }
+                    return (
+                      <button
+                        key={idx}
+                        className={btnClass}
+                        onClick={() => handleAnswerSelect(option)}
+                      >
+                        {option}
+                      </button>
+                    );
                   })}
                 </div>
                 <div className={styles.navigationContainer}>
@@ -696,18 +626,20 @@ const ElectiveLanguageGameContent = () => {
           </div>
         )}
       </div>
-
+      {showTutorial && (
+        <FillInBlankGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+      )}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-
-      <ElectiveLanguageGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
     </MainLayout>
   );
 };
 
-const ElectiveLanguageGame = () => (
-  <TermStatusProvider>
-    <ElectiveLanguageGameContent />
-  </TermStatusProvider>
-);
+const FillInBlankGame = () => {
+  return (
+    <TermStatusProvider>
+      <FillInBlankGameContent />
+    </TermStatusProvider>
+  );
+};
 
-export default ElectiveLanguageGame;
+export default FillInBlankGame;

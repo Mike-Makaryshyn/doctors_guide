@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medicalTerms } from "../../../../constants/medicalTerms";
 import styles from "./FlashcardGame.module.scss";
 import { Helmet } from "react-helmet";
-import flashcardBg from "../../assets/flashcard-bg.jpg";
+import flashcardBg from "../../../../assets/flashcard-bg.jpg";
 
 // Icons
 import {
@@ -22,11 +22,11 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 // Context / Hooks
-import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 
 // Kategorie-Icons
-import { categoryIcons } from "../../constants/CategoryIcons";
+import { categoryIcons } from "../../../../constants/CategoryIcons";
 
 // Regionsabkürzungen
 const regionAbbreviations = {
@@ -76,8 +76,8 @@ import FlashCardGameTutorial from "./FlashCardGameTutorial";
 
 // --- Firebase Auth: ---
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import AuthModal from "../AuthPage/AuthModal";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 const FlashcardGameContent = () => {
   const navigate = useNavigate();

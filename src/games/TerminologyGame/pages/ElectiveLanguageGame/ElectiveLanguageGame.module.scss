@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-.simpleChoiceGame {
+.electiveLanguageGame {
   padding: 20px;
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -573,7 +573,7 @@
 /* Tutorial-Button */
 .tutorialButton {
   position: absolute;
-  top: 47px;
+  top: -20px;
   right: -9px;
   width: 45px;
   height: 45px;
@@ -591,7 +591,7 @@
 
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76, 175, 79, 0);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
 }
 
 /* Basisklasse für .languageCell */
