@@ -578,3 +578,41 @@
   color: #fff;
   transform: scale(1.05);
 }
+.languageSwapContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.languageCell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+}
+
+.swapButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.swapButton:hover {
+  transform: rotate(180deg);
+}
+
+.swapIcon {
+  font-size: 24px;
+  color: #013b6e;
+}

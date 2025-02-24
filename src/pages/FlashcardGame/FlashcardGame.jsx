@@ -22,7 +22,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 // Context / Hooks
-import { useTermStatus } from "../../contexts/TermStatusContext";
+import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 // Kategorie-Icons
@@ -79,7 +79,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import AuthModal from "../AuthPage/AuthModal";
 
-const FlashcardGame = () => {
+const FlashcardGameContent = () => {
   const navigate = useNavigate();
   const query = useQuery();
   const { selectedRegion } = useGetGlobalInfo();
@@ -687,6 +687,14 @@ const FlashcardGame = () => {
       </div>
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
+  );
+};
+
+const FlashcardGame = () => {
+  return (
+    <TermStatusProvider>
+      <FlashcardGameContent />
+    </TermStatusProvider>
   );
 };
 

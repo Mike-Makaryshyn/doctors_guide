@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medicalTerms } from "../../constants/medicalTerms";
-import styles from "./AllMedicalTerminologyPage.module.scss";
+import { medications } from "../../constants/medications";
+import styles from "./AllMedicationsPage.module.scss";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import {
@@ -17,31 +17,18 @@ import {
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
+import { useMedicationStatus } from "../../contexts/MedicationStatusContext";
 import { useNavigate } from "react-router-dom";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
 import AuthModal from "../AuthPage/AuthModal";
-import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
+// import medicationBg from "../../assets/medication-bg.jpg"; // Видалено
 
-// Regionskürzel
+// При потребі можна адаптувати об'єкти для регіонів/категорій:
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
-  "Westfalen-Lippe": "W-L",
   Bayern: "BY",
   Hessen: "HE",
-  Niedersachsen: "NI",
-  "Rheinland-Pfalz": "RP",
-  Sachsen: "SA",
-  Brandenburg: "BB",
-  Bremen: "HB",
-  Saarland: "SL",
-  "Schleswig-Holstein": "SH",
-  Thüringen: "TH",
-  Berlin: "BE",
-  Hamburg: "HH",
-  "Mecklenburg Vorpommern": "MV",
-  "Sachsen-Anhalt": "ST",
 };
 
 const filterModes = [
@@ -51,16 +38,17 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const AllMedicalTerminologyContent = () => {
+const AllMedicationsPage = () => {
   const navigate = useNavigate();
-  const { termStatuses, toggleStatus, scheduleFlushChanges } = useTermStatus();
+  const { medicationStatuses, toggleStatus, scheduleFlushChanges } = useMedicationStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const [user, loading] = useAuthState(auth);
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Локальні стани
-  const [showDefinition, setShowDefinition] = useState(true);
+  // Стан для показу додаткових деталей (наприклад, пояснення)
+  const [showDetails, setShowDetails] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
+  // Хоча тут використовується selectedLanguage, для відображення у цій сторінці використовуватимемо поля для німецької (de)
   const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [searchTerm, setSearchTerm] = useState("");
@@ -74,6 +62,7 @@ const AllMedicalTerminologyContent = () => {
   const pageRef = useRef(null);
   const settingsModalRef = useRef(null);
 
+  // Функція перевірки авторизації
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -121,33 +110,37 @@ const AllMedicalTerminologyContent = () => {
     return () => document.removeEventListener("mousedown", handleClickOutsidePage);
   }, [isSearchActive]);
 
-  // Функції для зміни статусів термінів
+  // Функції для зміни статусів медикаментів
   const toggleLearned = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "learned");
     scheduleFlushChanges();
   };
+
   const togglePaused = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "paused");
     scheduleFlushChanges();
   };
 
-  const filteredTerms = medicalTerms.filter((term) => {
-    const matchesSearch =
-      term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      term.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      term.deExplanation.toLowerCase().includes(searchTerm.toLowerCase());
+  // Фільтрація медикаментів із захистом від undefined для полів:
+  // Використовуємо поле "lat" як базову назву, "de" як німецький переклад і "deExplanation" як пояснення
+  const filteredMedications = medications.filter((med) => {
+    const baseTerm = med.lat ? med.lat.toLowerCase() : "";
+    const translation = med.de ? med.de.toLowerCase() : "";
+    const searchLower = searchTerm.toLowerCase();
+
+    const matchesSearch = baseTerm.includes(searchLower) || translation.includes(searchLower);
 
     const matchesCategory =
       selectedCategory === "Alle" ||
-      (term.categories || []).includes(selectedCategory);
+      (med.categories || []).includes(selectedCategory);
 
     const matchesRegion =
-      region === "Alle" || (term.regions || []).includes(region);
+      region === "Alle" || (med.regions || []).includes(region);
 
-    let base = matchesSearch && matchesCategory && matchesRegion;
-    const statusObj = termStatuses[term.id];
+    const base = matchesSearch && matchesCategory && matchesRegion;
+    const statusObj = medicationStatuses[med.id];
     const status = statusObj?.status || "unlearned";
 
     if (filterMode === "learned" && status !== "learned") return false;
@@ -158,20 +151,21 @@ const AllMedicalTerminologyContent = () => {
     return base;
   });
 
-  const termsByCategory = {};
-  filteredTerms.forEach((term) => {
-    (term.categories || []).forEach((category) => {
-      if (!termsByCategory[category]) {
-        termsByCategory[category] = [];
+  // Групування медикаментів за категоріями (якщо такі поля є)
+  const medsByCategory = {};
+  filteredMedications.forEach((med) => {
+    (med.categories || []).forEach((cat) => {
+      if (!medsByCategory[cat]) {
+        medsByCategory[cat] = [];
       }
-      termsByCategory[category].push(term);
+      medsByCategory[cat].push(med);
     });
   });
 
-  const uniqueRegions = Array.from(new Set(medicalTerms.flatMap((term) => term.regions || [])));
+  const uniqueRegions = Array.from(new Set(medications.flatMap((med) => med.regions || [])));
   const regionOptions = ["Alle", ...uniqueRegions];
 
-  const uniqueCategories = Array.from(new Set(medicalTerms.flatMap((term) => term.categories || [])));
+  const uniqueCategories = Array.from(new Set(medications.flatMap((med) => med.categories || [])));
 
   // Обробники змін фільтрів
   const handleRegionChange = (e) => {
@@ -187,14 +181,14 @@ const AllMedicalTerminologyContent = () => {
     setFilterMode(e.target.value);
   };
 
-  // Обробники для навігації
+  // Обробники навігації
   const handleBack = () => {
     if (requireAuth()) return;
     navigate("/main_menu");
   };
   const handleGameClick = () => {
     if (requireAuth()) return;
-    navigate("/terminology-learning");
+    navigate("/medications-learning");
   };
 
   return (
@@ -204,21 +198,24 @@ const AllMedicalTerminologyContent = () => {
       ) : (
         <>
           <Helmet>
-            <title>Medizinische Fachbegriffe für die Fachsprachenprüfung in Deutschland</title>
+            <title>Medikamente – Übersicht und Status</title>
             <meta
               name="description"
-              content="Diese Seite richtet sich an alle, die sich auf die Fachsprachenprüfung vorbereiten, eine Approbation anstreben und in Deutschland arbeiten möchten. Lernen Sie medizinische Fachbegriffe effektiv!"
+              content="Diese Seite bietet eine Übersicht der Medikamente mit Statusanzeige. Verwalten Sie Ihre Lerneinheiten für Medikamente effektiv!"
             />
             <meta
               name="keywords"
-              content="Fachsprachenprüfung, medizinische Begriffe, Approbation, Arbeitslizenz, Deutschland"
+              content="Medikamente, lernen, Status, Approbation, Deutschland"
             />
-            <meta property="og:image" content={medicalTerminologyBg} />
+            {/* Mета-тег з картинкою тимчасово прибрано */}
           </Helmet>
-          <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
+          <div className={styles.allMedicationsPage} ref={pageRef}>
+            {/* Кнопка "Назад" */}
             <button className={styles.main_menu_back} onClick={handleBack}>
               &#8592;
             </button>
+
+            {/* Контейнер для пошуку */}
             <div className={styles.searchContainer}>
               <input
                 type="text"
@@ -250,9 +247,11 @@ const AllMedicalTerminologyContent = () => {
                 {isSearchActive ? <FaTimes /> : <FaSearch />}
               </button>
             </div>
+
+            {/* Відображення: мобільна версія (плитки) або десктоп (таблиця) */}
             {isMobile ? (
               <div className={styles.tilesContainer}>
-                {Object.keys(termsByCategory).map((category, index) => (
+                {Object.keys(medsByCategory).map((category, index) => (
                   <div key={category} className={styles.categorySection}>
                     <h2
                       onClick={() => {
@@ -273,12 +272,12 @@ const AllMedicalTerminologyContent = () => {
                       </span>
                     </h2>
                     {!collapsedCategories[category] &&
-                      termsByCategory[category].map((term) => {
-                        const statusObj = termStatuses[term.id] || {};
+                      medsByCategory[category].map((med) => {
+                        const statusObj = medicationStatuses[med.id] || {};
                         const status = statusObj.status || "unlearned";
                         return (
                           <div
-                            key={term.id}
+                            key={med.id}
                             className={`${styles.tile} ${
                               status === "learned"
                                 ? styles.learned
@@ -289,53 +288,52 @@ const AllMedicalTerminologyContent = () => {
                           >
                             <span
                               className={styles.checkIconDesktop}
-                              onClick={() => toggleLearned(term.id)}
+                              onClick={() => toggleLearned(med.id)}
                               title="Gelernt"
                             >
                               <FaCheck />
                             </span>
                             <span
                               className={styles.pauseIcon}
-                              onClick={() => togglePaused(term.id)}
+                              onClick={() => togglePaused(med.id)}
                               title="Pausiert"
                             >
                               <FaPause />
                             </span>
-                            <h3 className={styles.tileHeader}>{term.lat}</h3>
+                            <h3 className={styles.tileHeader}>{med.lat}</h3>
                             <p className={styles.tileDescription}>
                               {translationLanguage !== "de" ? (
                                 <Tippy
                                   content={
-                                    term[translationLanguage] || "Keine Übersetzung vorhanden"
+                                    med[translationLanguage] || "Keine Übersetzung vorhanden"
                                   }
                                   trigger="click"
                                   interactive={true}
                                   placement="bottom"
                                 >
-                                  <span className={styles.clickableCell}>{term.de}</span>
+                                  <span className={styles.clickableCell}>{med.de}</span>
                                 </Tippy>
                               ) : (
-                                term.de
+                                med.de
                               )}
                             </p>
-                            {showDefinition && (
+                            {showDetails && med.deExplanation && (
                               <p className={styles.tileExplanation}>
                                 {translationLanguage !== "de" ? (
                                   <Tippy
                                     content={
-                                      term[translationLanguage + "Explanation"] ||
-                                      "Keine Übersetzung vorhanden"
+                                      med[translationLanguage + "Explanation"] || "Keine Übersetzung vorhanden"
                                     }
                                     trigger="click"
                                     interactive={true}
                                     placement="bottom"
                                   >
                                     <span className={styles.clickableCell}>
-                                      {term.deExplanation}
+                                      {med.deExplanation}
                                     </span>
                                   </Tippy>
                                 ) : (
-                                  term.deExplanation
+                                  med.deExplanation
                                 )}
                               </p>
                             )}
@@ -346,7 +344,7 @@ const AllMedicalTerminologyContent = () => {
                 ))}
               </div>
             ) : (
-              Object.keys(termsByCategory).map((category, index) => (
+              Object.keys(medsByCategory).map((category, index) => (
                 <div key={category} className={styles.categorySection}>
                   <h2
                     onClick={() => {
@@ -367,27 +365,27 @@ const AllMedicalTerminologyContent = () => {
                     </span>
                   </h2>
                   {!collapsedCategories[category] && (
-                    <table className={styles.terminologyTable}>
+                    <table className={styles.medicationTable}>
                       <thead>
                         <tr>
-                          <th style={{ width: showDefinition ? "20%" : "50%", textAlign: "left" }}>
-                            Begriff
+                          <th style={{ width: showDetails ? "20%" : "50%", textAlign: "left" }}>
+                            Medikament
                           </th>
-                          <th style={{ width: showDefinition ? "20%" : "50%" }}>
-                            Deutsche Bezeichnung
+                          <th style={{ width: showDetails ? "20%" : "50%" }}>
+                            Beschreibung
                           </th>
-                          {showDefinition && (
-                            <th style={{ width: "60%", textAlign: "left" }}>Definition</th>
+                          {showDetails && (
+                            <th style={{ width: "60%", textAlign: "left" }}>Details</th>
                           )}
                         </tr>
                       </thead>
                       <tbody>
-                        {termsByCategory[category].map((term) => {
-                          const statusObj = termStatuses[term.id] || {};
+                        {medsByCategory[category].map((med) => {
+                          const statusObj = medicationStatuses[med.id] || {};
                           const status = statusObj.status || "unlearned";
                           return (
                             <tr
-                              key={term.id}
+                              key={med.id}
                               className={
                                 status === "learned"
                                   ? styles.learned
@@ -400,43 +398,43 @@ const AllMedicalTerminologyContent = () => {
                                 <div className={styles.iconWrapper}>
                                   <span
                                     className={styles.checkIconDesktop}
-                                    onClick={() => toggleLearned(term.id)}
+                                    onClick={() => toggleLearned(med.id)}
                                     title="Gelernt"
                                   >
                                     <FaCheck />
                                   </span>
                                   <span
                                     className={styles.pauseIconDesktop}
-                                    onClick={() => togglePaused(term.id)}
+                                    onClick={() => togglePaused(med.id)}
                                     title="Pausiert"
                                   >
                                     <FaPause />
                                   </span>
                                 </div>
-                                <div className={styles.termContent}>{term.lat}</div>
+                                <div className={styles.termContent}>{med.lat}</div>
                               </td>
                               <td>
                                 {translationLanguage !== "de" ? (
                                   <Tippy
                                     content={
-                                      term[translationLanguage] || "Keine Übersetzung vorhanden"
+                                      med[translationLanguage] || "Keine Übersetzung vorhanden"
                                     }
                                     trigger="click"
                                     interactive={true}
                                     placement="right"
                                   >
-                                    <span className={styles.clickableCell}>{term.de}</span>
+                                    <span className={styles.clickableCell}>{med.de}</span>
                                   </Tippy>
                                 ) : (
-                                  term.de
+                                  med.de
                                 )}
                               </td>
-                              {showDefinition && (
+                              {showDetails && (
                                 <td>
                                   {translationLanguage !== "de" ? (
                                     <Tippy
                                       content={
-                                        term[translationLanguage + "Explanation"] ||
+                                        med[translationLanguage + "Explanation"] ||
                                         "Keine Übersetzung vorhanden"
                                       }
                                       trigger="click"
@@ -444,11 +442,11 @@ const AllMedicalTerminologyContent = () => {
                                       placement="right"
                                     >
                                       <span className={styles.clickableCell}>
-                                        {term.deExplanation}
+                                        {med.deExplanation}
                                       </span>
                                     </Tippy>
                                   ) : (
-                                    term.deExplanation
+                                    med.deExplanation
                                   )}
                                 </td>
                               )}
@@ -461,6 +459,8 @@ const AllMedicalTerminologyContent = () => {
                 </div>
               ))
             )}
+
+            {/* Модальне вікно налаштувань */}
             {isSettingsModalOpen && (
               <div className={styles.modalOverlay}>
                 <div
@@ -551,17 +551,18 @@ const AllMedicalTerminologyContent = () => {
                         </div>
                       </div>
                     </div>
+                    {/* Контейнер для перемикача Details */}
                     <div className={styles.definitionColumn} data-tutorial="definitionToggle">
-                      <label className={styles.fieldLabel}>Definition</label>
+                      <label className={styles.fieldLabel}>Details</label>
                       <div
-                        className={`${styles.definitionToggle} ${showDefinition ? styles.active : ""}`}
+                        className={`${styles.definitionToggle} ${showDetails ? styles.active : ""}`}
                         onClick={() => {
                           if (requireAuth()) return;
-                          setShowDefinition((prev) => !prev);
+                          setShowDetails((prev) => !prev);
                         }}
                       >
                         <span className={styles.toggleText}>
-                          {showDefinition ? "An" : "Aus"}
+                          {showDetails ? "An" : "Aus"}
                         </span>
                       </div>
                     </div>
@@ -569,6 +570,8 @@ const AllMedicalTerminologyContent = () => {
                 </div>
               </div>
             )}
+
+            {/* Кнопка налаштувань */}
             <div className={styles.bottomRightSettings}>
               <button
                 className={styles.settingsButton}
@@ -581,6 +584,7 @@ const AllMedicalTerminologyContent = () => {
               </button>
             </div>
           </div>
+          {/* Модальне вікно авторизації */}
           <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </>
       )}
@@ -588,12 +592,4 @@ const AllMedicalTerminologyContent = () => {
   );
 };
 
-const AllMedicalTerminologyPage = () => {
-  return (
-    <TermStatusProvider>
-      <AllMedicalTerminologyContent />
-    </TermStatusProvider>
-  );
-};
-
-export default AllMedicalTerminologyPage;
+export default AllMedicationsPage;

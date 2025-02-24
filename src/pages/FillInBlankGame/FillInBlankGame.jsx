@@ -13,17 +13,14 @@ import {
   FaPlay,
   FaPause,
 } from "react-icons/fa";
-import { useTermStatus } from "../../contexts/TermStatusContext";
+import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
-// Firebase Auth Imports
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import AuthModal from "../AuthPage/AuthModal";
-// Компонент туторіалу для FillInBlankGame
 import FillInBlankGameTutorial from "./FillInBlankGameTutorial";
-// Фонове зображення для метаданих
 import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 
 const regionAbbreviations = {
@@ -60,10 +57,10 @@ const displayModeOptions = [
   { value: "Mixed", label: "Mixed" },
 ];
 
-const FillInBlankGame = () => {
+const FillInBlankGameContent = () => {
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
-  const { termStatuses, toggleStatus } = useTermStatus();
+  const { termStatuses, toggleStatus, flushChanges, recordCorrectAnswer } = useTermStatus();
 
   // Firebase Auth логіка
   const [user, loading] = useAuthState(auth);
@@ -172,7 +169,7 @@ const FillInBlankGame = () => {
     setGameStartTime(Date.now());
   };
 
-  // При закритті налаштувань (натискання Start) запускається гра
+  // Запуск гри при закритті налаштувань
   useEffect(() => {
     if (!settingsOpen) {
       loadQuestions();
@@ -194,8 +191,7 @@ const FillInBlankGame = () => {
     setIncorrectAnswerCount(0);
   };
 
-  // Завершення гри – викликається flushChanges для запису в Firebase,
-  // але лише в звичайному режимі (allowEdit === false)
+  // Завершення гри – викликається flushChanges для запису змін, але лише в звичайному режимі
   const finishGame = () => {
     if (!questionsCompleted[currentIndex]) {
       alert("Bitte beantworten Sie die aktuelle Frage!");
@@ -337,7 +333,6 @@ const FillInBlankGame = () => {
   };
 
   const aktuelleFrage = questions[currentIndex];
-  const qIndex = currentIndex;
 
   return (
     <MainLayout>
@@ -353,7 +348,7 @@ const FillInBlankGame = () => {
         />
         <meta property="og:title" content="Fachbegriffe lernen – Fill in the Blank Game" />
         <meta
-          property="og:description"
+          name="og:description"
           content="Diese Seite dient dem Erlernen von Fachbegriffen im Fill in the Blank Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
         <meta property="og:image" content={fillInBlankBg} />
@@ -652,6 +647,14 @@ const FillInBlankGame = () => {
       {/* AuthModal для неавторизованих користувачів */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
+  );
+};
+
+const FillInBlankGame = () => {
+  return (
+    <TermStatusProvider>
+      <FillInBlankGameContent />
+    </TermStatusProvider>
   );
 };
 

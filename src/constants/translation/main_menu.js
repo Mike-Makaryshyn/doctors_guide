@@ -228,6 +228,18 @@ export const main_menu_items = {
                link: "/abbreviations", 
             },
             {
+               en: "Medications",
+               fr: "Médicaments",
+               es: "Medicamentos",
+               ar: "الأدوية",
+               tr: "İlaçlar",
+               pl: "Leki",
+               uk: "Медикаменти",
+               ru: "Лекарства",
+               de: "Medikamente",
+               link: "/medications", // посилання на відповідну сторінку
+            },
+            {
                en: "Procedure Explanation",
                fr: "Explication de la procédure",
                es: "Explicación del procedimiento",

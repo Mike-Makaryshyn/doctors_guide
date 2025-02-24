@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // Імпорт нового контексту для статусів термінів
 import { TermStatusProvider } from "./contexts/TermStatusContext";
+import { MedicationStatusProvider } from "./contexts/MedicationStatusContext"; 
 
 // Створення екземпляру QueryClient
 const queryClient = new QueryClient();
@@ -39,8 +40,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       {/* AuthProvider тепер зовні, що забезпечує доступ до auth контексту */}
       <AuthProvider>
-        {/* TermStatusProvider тепер знаходиться всередині AuthProvider */}
-        <TermStatusProvider>
+   
           {/* Обгортаємо додаток у DataSourceProvider */}
           <DataSourceProvider>
             <CasesProvider>
@@ -71,7 +71,8 @@ function App() {
               </ModalProvider>
             </CasesProvider>
           </DataSourceProvider>
-        </TermStatusProvider>
+   
+      
       </AuthProvider>
     </QueryClientProvider>
   );

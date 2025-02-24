@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../constants/medicalTerms";
+import { TermStatusProvider } from "../../contexts/TermStatusContext";
 import styles from "./ElectiveLanguageGame.module.scss";
 import {
   FaCog,
@@ -12,10 +13,18 @@ import {
   FaPen,
   FaArrowLeft,
   FaArrowRight,
+  FaExchangeAlt
 } from "react-icons/fa";
 import { useTermStatus } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+import { Helmet } from "react-helmet";
 
+// Firebase Auth Imports für nicht angemeldete Nutzer
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
+import AuthModal from "../AuthPage/AuthModal";
+
+// Abkürzungen für Regionen
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -44,7 +53,7 @@ const filterModes = [
 
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Objekt для відображення повних назв мов
+// Об'єкт для відображення повних назв мов
 const languageMap = {
   de: "Deutsch",
   en: "Englisch",
@@ -57,7 +66,7 @@ const languageMap = {
   pl: "Polnisch",
 };
 
-// Об'єкт для скороченого відображення (цільова мова)
+// Об'єкт для коротких назв (більше не використовується в новому варіанті)
 const shortLangMap = {
   de: "DE",
   en: "EN",
@@ -75,12 +84,24 @@ const ElectiveLanguageGame = () => {
   const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
   const { termStatuses, toggleStatus } = useTermStatus();
 
+  // Firebase Auth State
+  const [user, loading] = useAuthState(auth);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
+  // Функція перевірки автентифікації
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return true;
+    }
+    return false;
+  };
+
   // -----------------------
-  //    Spiel-Einstellungen
+  //    Налаштування гри
   // -----------------------
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
-  // Вибір цільової мови – за замовчуванням з глобального контексту
   const [electiveLang, setElectiveLang] = useState(
     selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
   );
@@ -89,11 +110,13 @@ const ElectiveLanguageGame = () => {
   const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
 
-  // NEU: Sprachrichtung (наприклад, "de->electiveLang" або "electiveLang->de")
-  const [languageDirection, setLanguageDirection] = useState("de->electiveLang");
+  // NEU: Мовний напрямок (наприклад, "de->electiveLang" або "electiveLang->de")
+  const [languageDirection, setLanguageDirection] = useState(`de->${electiveLang}`);
+  // Деструктуризація для отримання sourceLang та targetLang
+  const [sourceLang, targetLang] = languageDirection.split("->");
 
   // -------------
-  //   Spiel-Status
+  //   Статус гри
   // -------------
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,32 +134,30 @@ const ElectiveLanguageGame = () => {
   const [sessionDuration, setSessionDuration] = useState(0);
 
   // ------------------------------
-  //   Synchronisierung mit Global
+  //   Синхронізація з глобальними налаштуваннями
   // ------------------------------
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
   useEffect(() => {
-    // Якщо глобальна мова "de", то вибір цільової мови не може бути "de"
     setElectiveLang(
       selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
     );
   }, [selectedLanguage]);
 
-  // Отримуємо варіанти мов із глобального контексту
+  // Мовні опції з глобальних налаштувань
   const localLangOptions =
     (languages[selectedLanguage] && languages[selectedLanguage].options) ||
     languages["de"].options;
 
-  // Фільтруємо, щоб не було можливості вибрати "de" для цільової мови
+  // Фільтрація для виключення "de" з вибору
   const filteredLangOptions = localLangOptions.filter((opt) => opt.value !== "de");
 
   // ----------------------------------
-  //   Fragen generieren / Neu laden
+  //   Генерація / завантаження питань
   // ----------------------------------
   const loadQuestions = () => {
-    // Фільтрація термінів
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion =
         region === "Alle" || (term.regions || []).includes(region);
@@ -333,6 +354,24 @@ const ElectiveLanguageGame = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten</title>
+        <meta
+          name="description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta
+          name="keywords"
+          content="Fachbegriffe, Fachsprachenprüfung, Medizin, Terminologie, Lernen, Fachsprache"
+        />
+        <meta property="og:title" content="Fachbegriffe lernen – Optimal auf die Fachsprachenprüfung vorbereiten" />
+        <meta
+          property="og:description"
+          content="Diese Seite dient dem Erlernen von Fachbegriffen und unterstützt Sie optimal bei der Vorbereitung auf die Fachsprachenprüfung. Erweitern Sie Ihr Fachwissen und verbessern Sie Ihre Sprachkompetenz."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <div className={styles.electiveLanguageGame}>
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
@@ -352,7 +391,14 @@ const ElectiveLanguageGame = () => {
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
-                    <select className={styles.nativeSelect} value={region} onChange={(e) => setRegion(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={region}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setRegion(e.target.value);
+                      }}
+                    >
                       <option value="Alle">Alle</option>
                       {Array.from(new Set(medicalTerms.flatMap((term) => term.regions || []))).map((r) => (
                         <option key={r} value={r}>
@@ -369,7 +415,14 @@ const ElectiveLanguageGame = () => {
                     <div className={styles.filterCell}>
                       {filterModes.find((m) => m.value === filterMode)?.icon}
                     </div>
-                    <select className={styles.nativeSelect} value={filterMode} onChange={(e) => setFilterMode(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={filterMode}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setFilterMode(e.target.value);
+                      }}
+                    >
                       {filterModes.map((mode) => (
                         <option key={mode.value} value={mode.value}>
                           {mode.label}
@@ -385,7 +438,14 @@ const ElectiveLanguageGame = () => {
                     <div className={styles.categoryCell}>
                       {/* Hier kann ein Kategorie-Icon eingebunden werden */}
                     </div>
-                    <select className={styles.nativeSelect} value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                    <select
+                      className={styles.nativeSelect}
+                      value={selectedCategory}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
+                    >
                       <option value="Alle">Alle</option>
                       {Array.from(new Set(medicalTerms.flatMap((term) => term.categories || []))).map((c) => (
                         <option key={c} value={c}>
@@ -400,66 +460,35 @@ const ElectiveLanguageGame = () => {
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
                     className={`${styles.editToggleButton} ${allowEdit ? styles.selectedEdit : ""}`}
-                    onClick={() => setAllowEdit(!allowEdit)}
+                    onClick={() => {
+                      if (requireAuth()) return;
+                      setAllowEdit(!allowEdit);
+                    }}
                   >
                     <FaPen />
                   </button>
                 </div>
               </div>
 
-              {/* NEU: Sprache-Container – ohne separate Labels */}
+              {/* NEU: Об'єднаний контейнер для мов з повними назвами */}
               <div className={styles.modalField}>
-                <div className={styles.languageRow}>
-                  {/* Linke Sprache: fest "D" */}
-                  <div className={styles.languageCellFixed}>DE</div>
-                  <FaArrowRight className={styles.languageArrow} />
-                  {/* Rechte Sprache: відображається як скорочення, вибір через select */}
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.languageCell}>
-                      {shortLangMap[electiveLang] || electiveLang.toUpperCase()}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={electiveLang}
-                      onChange={(e) => setElectiveLang(e.target.value)}
-                    >
-                      {filteredLangOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {shortLangMap[opt.value] || opt.value.toUpperCase()}
-                        </option>
-                      ))}
-                    </select>
+                <div className={styles.languageSwapContainer}>
+                  <div className={styles.languageCell}>
+                    {languageMap[sourceLang] || sourceLang}
                   </div>
-                </div>
-              </div>
 
-              {/* Sprachrichtung-Kacheln (verkleinert) */}
-              <div className={styles.modalField}>
-                <label className={styles.fieldLabel}>Sprachrichtung</label>
-                <div className={styles.languageDirectionContainer}>
-                  <div
-                    className={
-                      languageDirection === "electiveLang->de"
-                        ? styles.activeDirection
-                        : styles.directionOption
-                    }
-                    onClick={() => setLanguageDirection("electiveLang->de")}
+                  <button
+                    className={styles.swapButton}
+                    onClick={() => setLanguageDirection(prev => {
+                      const [from, to] = prev.split("->");
+                      return `${to}->${from}`;
+                    })}
                   >
-                    <span>{languageMap[electiveLang]}</span>
-                    <FaArrowRight style={{ margin: "0 5px" }} />
-                    <span>DE</span>
-                  </div>
-                  <div
-                    className={
-                      languageDirection === "de->electiveLang"
-                        ? styles.activeDirection
-                        : styles.directionOption
-                    }
-                    onClick={() => setLanguageDirection("de->electiveLang")}
-                  >
-                    <span>DE</span>
-                    <FaArrowRight style={{ margin: "0 5px" }} />
-                    <span>{languageMap[electiveLang]}</span>
+                    <FaExchangeAlt className={styles.swapIcon} />
+                  </button>
+
+                  <div className={styles.languageCell}>
+                    {languageMap[targetLang] || targetLang}
                   </div>
                 </div>
               </div>
@@ -473,7 +502,10 @@ const ElectiveLanguageGame = () => {
                       className={`${styles.questionCountIcon} ${
                         questionCount === countOption ? styles.selected : ""
                       }`}
-                      onClick={() => setQuestionCount(countOption)}
+                      onClick={() => {
+                        if (requireAuth()) return;
+                        setQuestionCount(countOption);
+                      }}
                     >
                       {countOption === "all" ? "Alles" : countOption}
                     </div>
@@ -595,6 +627,7 @@ const ElectiveLanguageGame = () => {
             <button
               className={styles.settingsButton}
               onClick={() => {
+                if (requireAuth()) return;
                 setSettingsOpen(true);
                 setGameFinished(false);
               }}
@@ -604,8 +637,15 @@ const ElectiveLanguageGame = () => {
           </div>
         )}
       </div>
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
   );
 };
 
-export default ElectiveLanguageGame;
+const ElectiveLanguageGameWithProvider = () => (
+  <TermStatusProvider>
+    <ElectiveLanguageGame />
+  </TermStatusProvider>
+);
+
+export default ElectiveLanguageGameWithProvider;

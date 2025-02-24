@@ -102,5 +102,7 @@ export const pathList = {
   custom_map: {
     path: "/custom-map", // <-- Це твій PATH
   },
-
+  all_medications: {
+    path: "/medications",
+  },
 };

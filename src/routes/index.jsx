@@ -115,6 +115,9 @@ const ElectiveLanguageGame = React.lazy(() =>
 const RegionalChatsPage = React.lazy(() =>
   import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
 );
+const AllMedicationsPage = React.lazy(() =>
+  import("../pages/AllMedicationsPage/AllMedicationsPage")
+);
 
 const NavigateToMap = () => (
   <Link to={pathList.custom_map.path}></Link>
@@ -171,6 +174,8 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
         />
+
+<Route path="/medications" element={<AllMedicationsPage />} />
         <Route
           path={pathList.abbreviations.path}
           element={<AllMedicalAbbreviationsPage />}

@@ -13,7 +13,7 @@ import {
   FaArrowLeft,
   FaArrowRight,
 } from "react-icons/fa";
-import { useTermStatus } from "../../contexts/TermStatusContext";
+import { useTermStatus, TermStatusProvider } from "../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../constants/CategoryIcons";
 import SimpleChoiceGameTutorial from "./SimpleChoiceGameTutorial";
@@ -65,7 +65,7 @@ const displayModeOptions = [
   { value: "Mixed", label: "Mixed" },
 ];
 
-const SimpleChoiceGame = () => {
+const SimpleChoiceGameContent = () => {
   const navigate = useNavigate();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
 
@@ -244,7 +244,6 @@ const SimpleChoiceGame = () => {
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
-      // Режим редагування – локальні зміни
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       } else {
@@ -255,7 +254,6 @@ const SimpleChoiceGame = () => {
         });
       }
     } else {
-      // Стандартний режим: обробка відповіді та взаємодія з Firebase
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
 
@@ -322,11 +320,11 @@ const SimpleChoiceGame = () => {
           Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
           {sessionDuration % 60} Sekunden
         </p>
-        {Object.keys(kategorieFehler).length > 0 && (
+        {Object.keys(berechneKategorieFehler()).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
             <ul>
-              {Object.entries(kategorieFehler).map(([kategorie, anzahl]) => (
+              {Object.entries(berechneKategorieFehler()).map(([kategorie, anzahl]) => (
                 <li key={kategorie}>
                   {kategorie}: {anzahl} Fehler
                 </li>
@@ -419,9 +417,7 @@ const SimpleChoiceGame = () => {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(medicalTerms.flatMap((term) => term.regions || []))
-                      ).map((r) => (
+                      {Array.from(new Set(medicalTerms.flatMap((term) => term.regions || []))).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -451,10 +447,7 @@ const SimpleChoiceGame = () => {
                     </select>
                   </div>
                 </div>
-                <div
-                  className={styles.categoryColumn}
-                  data-tutorial="categorySelect"
-                >
+                <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -475,11 +468,7 @@ const SimpleChoiceGame = () => {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(
-                          medicalTerms.flatMap((term) => term.categories || [])
-                        )
-                      ).map((c) => (
+                      {Array.from(new Set(medicalTerms.flatMap((term) => term.categories || []))).map((c) => (
                         <option key={c} value={c}>
                           {c}
                         </option>
@@ -630,7 +619,6 @@ const SimpleChoiceGame = () => {
                   {aktuelleFrage?.optionen.map((option, idx) => {
                     const { richtigeAntwort } = aktuelleFrage;
                     const isCompleted = frageIstAbgeschlossen;
-
                     if (!allowEdit) {
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
@@ -655,7 +643,6 @@ const SimpleChoiceGame = () => {
                         </button>
                       );
                     } else {
-                      // Режим редагування – лише локальні зміни
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
                       let isCorrectEdit = false;
@@ -749,6 +736,14 @@ const SimpleChoiceGame = () => {
       </div>
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
+  );
+};
+
+const SimpleChoiceGame = () => {
+  return (
+    <TermStatusProvider>
+      <SimpleChoiceGameContent />
+    </TermStatusProvider>
   );
 };
 
