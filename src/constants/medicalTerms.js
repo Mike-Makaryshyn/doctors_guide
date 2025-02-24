@@ -754,7 +754,7 @@ export const medicalTerms = [
       "Schleswig-Holstein",
       "Thüringen"
     ],
-    "sentence": "Eine häufige Entzündung des Nabels bei Neugeborenen, die durch bakterielle Infektionen ausgelöst wird und Symptome wie Schwellung, Rötung sowie Eiteraustritt zeigt, erfordert eine umgehende Diagnose und Therapie, um {",
+    "sentence": "Eine häufige Entzündung des Nabels bei Neugeborenen, die durch bakterielle Infektionen ausgelöst wird und Symptome wie Schwellung, Rötung sowie Eiteraustritt zeigt, erfordert eine umgehende Diagnose und Therapie, um {BLANK}",
     "answer": "Komplikationen zu vermeiden."
   },
   {
@@ -31370,8 +31370,8 @@ export const medicalTerms = [
       "Schleswig-Holstein",
       "Thüringen"
     ],
-    "sentence": "Eine Entzündung der Penisvorhaut, oft durch bakterielle oder fungale Infektionen bedingt, führt zu Symptomen wie Schwellung, Rötung und Schmerzhaftigkeit, weshalb eine prompte Behandlung zur Vermeidung weiterer Komplikationen",
-    "answer": "einer Vorhautentzündung"
+    "sentence": "{BLANK}, oft durch bakterielle oder fungale Infektionen bedingt, führt zu Symptomen wie Schwellung, Rötung und Schmerzhaftigkeit, weshalb eine prompte Behandlung zur Vermeidung weiterer Komplikationen",
+    "answer": "Die Vorhautentzündung"
   },
   {
     "id": 881,
@@ -44916,7 +44916,7 @@ export const medicalTerms = [
     "lat": "Cortex cerebri (der)",
     "de": "die Großhirnrinde",
     "en": "cerebral cortex",
-    "uk": "великокора",
+    "uk": "Кора головного мозку",
     "ru": "корковое вещество",
     "pl": "kora mózgowa",
     "es": "corteza cerebral",
@@ -44925,7 +44925,7 @@ export const medicalTerms = [
     "ar": "قشرة المخ",
     "deExplanation": "Die Großhirnrinde ist der äußere Teil des Gehirns, bestehend aus grauer Substanz. Sie ist für Funktionen wie Wahrnehmung, Denken, Sprache und Motorik verantwortlich und spielt eine zentrale Rolle bei der Informationsverarbeitung.",
     "enExplanation": "The cerebral cortex is the outer layer of the brain responsible for higher cognitive functions such as perception, thinking, language, and motor control.",
-    "ukExplanation": "Великокора – зовнішній шар мозку, відповідальний за вищі когнітивні функції, такі як сприйняття, мислення, мова та рух.",
+    "ukExplanation": "Кора головного мозку – зовнішній шар мозку, відповідальний за вищі когнітивні функції, такі як сприйняття, мислення, мова та рух.",
     "ruExplanation": "Великая кора – внешний слой мозга, ответственный за высшие когнитивные функции, такие как восприятие, мышление, речь и моторика.",
     "plExplanation": "Kora mózgowa to zewnętrzna warstwa mózgu, odpowiedzialna za wyższe funkcje poznawcze, takie jak percepcja, myślenie, mowa oraz kontrola ruchowa.",
     "esExplanation": "La corteza cerebral es la capa externa del cerebro y es responsable de funciones cognitivas superiores como la percepción, el pensamiento, el lenguaje y el control motor.",

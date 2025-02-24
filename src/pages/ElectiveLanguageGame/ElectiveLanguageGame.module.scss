@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .simpleChoiceGame {
   padding: 20px;
@@ -228,17 +228,33 @@
 }
 
 @keyframes explodeAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes shakeAnimation {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Frage-Zähler */
@@ -389,6 +405,11 @@
   color: #013b6e;
   font-size: 18px;
   transition: background 0.3s ease, color 0.3s ease;
+  margin-top: -2px; /* Додай для вертикального вирівнювання */
+  align-self: center; /* Центрує кнопку всередині колонки */
+}
+.editToggleButton {
+  line-height: 0; /* Вирівнює іконку по центру */
 }
 
 .editToggleButton:hover {
@@ -502,7 +523,7 @@
   font-size: 20px;
 }
 
-.resultsTile p, 
+.resultsTile p,
 .resultsTile h4,
 .resultsTile li {
   color: #013b6e;
@@ -513,18 +534,6 @@
 .restartButton {
   @extend .startButton;
   margin-top: 15px;
-}
-.languageCell {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  pointer-events: none;
 }
 
 /* Фіксований контейнер для "D" (Deutsch) */
@@ -581,38 +590,139 @@
 .languageSwapContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center; /* Центруємо swap-кнопку */
+  gap: 15px;
   margin-top: 10px;
+  position: relative;
 }
 
+.swapButton {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Анімація для кнопки */
+.swapButton:hover {
+  background: #4caf50;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* Анімація при натисканні */
+.swapButton:active {
+  transform: scale(0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Іконка стрілки */
+.swapIcon {
+  font-size: 20px;
+  color: #013b6e;
+  transition: transform 0.3s ease;
+}
+
+/* Анімація при натисканні */
+
+.tutorialButton {
+  position: absolute;
+  top: 47px;
+  right: -9px;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 3000;
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
+}
+/* Загальні стилі для контейнерів мови */
+/* Стиль для .languageCell */
 .languageCell {
-  width: 50px;
+  width: 120px; /* Фіксована ширина */
+  min-width: 120px;
+  max-width: 120px;
   height: 50px;
-  line-height: 50px;
+  line-height: 31px;
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
-}
-
-.swapButton {
-  background: transparent;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto; /* Не дозволяємо змінювати розміри */
 }
 
-.swapButton:hover {
-  transform: rotate(180deg);
+/* Стиль для .languageCellFixed */
+.languageSelect {
+  @extend .languageCell;
+  // ... restliche styles
 }
 
-.swapIcon {
-  font-size: 24px;
+/* Стиль для .languageSelect */
+.languageSelect {
+  width: 120px; /* Фіксована ширина */
+  min-width: 120px;
+  max-width: 120px;
+  height: 50px;
+  line-height: 31px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto; /* Не дозволяємо змінювати розміри */
+}
+
+/* Специфічний стиль для <select> */
+
+
+/* Додаємо стрілочку для select */
+.languageSelect::after {
+  content: "▼";
+  font-size: 12px;
+  color: #013b6e;
+  margin-left: 8px;
+}
+
+/* Для кращого вигляду на мобільних пристроях */
+@media (max-width: 480px) {
+  .languageCell,
+  .languageCellFixed,
+  .languageSelect {
+    width: 80px;
+    font-size: 12px;
+  }
 }
