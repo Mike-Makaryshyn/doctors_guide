@@ -2,30 +2,29 @@ import React, { useState, useEffect } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalTerms } from "../../../../constants/medicalTerms";
 import styles from "./FortuneWheelGame.module.scss";
-import FortuneWheelGameTutorial from "./FortuneWheelGameTutorial";
-import {
-  FaCog,
-  FaPlay,
-  FaPause,
-  FaCheck,
-  FaList,
-  FaUser,
-} from "react-icons/fa";
 
-import { Wheel } from "react-custom-roulette";
-import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import { FaCog, FaPlay, FaPause, FaCheck, FaList, FaUser } from "react-icons/fa";
+import CustomWheel from "./CustomWheel";
+import {
+  useTermStatus,
+  TermStatusProvider,
+} from "../../../../contexts/TermStatusContext";
+
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
 import medicalTerminologyBg from "../../../../assets/fortune-wheel-bg.jpg";
 
-// Функція для отримання всіх регіонів
-const getAllRegions = () => {
-  const regions = medicalTerms.flatMap((term) => term.regions || []);
-  return Array.from(new Set(regions));
-};
+import FortuneWheelGameTutorial from "./FortuneWheelGameTutorial";
 
-// Скорочення назв регіонів
+/* Хелпер-функції: видалити артиклі (der/die/das) або латинські дужки */
+function removeGermanArticle(str = "") {
+  return str.replace(/^\s*(der|die|das)\s+/i, "");
+}
+function removeLatParenthesis(str = "") {
+  return str.replace(/\([^)]*\)/g, "").trim();
+}
+
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -45,7 +44,6 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
-// Режими фільтрації
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -53,274 +51,306 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Режими відображення
 const displayModeOptions = [
   { value: "LatGerman", label: "Lat→Ger" },
   { value: "GermanLat", label: "Ger→Lat" },
   { value: "Mixed", label: "Mixed" },
 ];
 
-const questionCountOptions = [10, 20, 30, 40, 50];
+const questionCountOptions = [5, 10, 20, 30, 40, 50];
 const playersList = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const FortuneWheelGameContent = () => {
+function FortuneWheelGameContent() {
   const { selectedRegion } = useGetGlobalInfo();
-  const { termStatuses } = useTermStatus();
+  const { termStatuses, recordCorrectAnswer, flushChanges } = useTermStatus();
 
-  // Використовуємо або глобальний selectedRegion, або "Alle"
-  const initialRegion = selectedRegion || "Alle";
-
-  // Стан для модального вікна налаштувань
+  // --- SETTINGS-STATE ---
   const [settingsOpen, setSettingsOpen] = useState(true);
-
-  // Параметри фільтрації
-  const [region, setRegion] = useState(initialRegion);
+  const [region, setRegion] = useState(selectedRegion || "Alle");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(10);
-
-  // Стан гри
   const [playersCount, setPlayersCount] = useState(1);
-  const [currentPlayer, setCurrentPlayer] = useState(1);
-  const [data, setData] = useState([]);        // Дані для колеса
-  const [finalTerms, setFinalTerms] = useState([]); 
-  const [mustSpin, setMustSpin] = useState(false);
-  const [prizeNumber, setPrizeNumber] = useState(0);
-  const [winnerIndex, setWinnerIndex] = useState(null);
 
-  // Відповіді для кутових варіантів
-  const [cornerAnswers, setCornerAnswers] = useState([]);
+  // --- SCORES / MULTIPLAYER ---
+  const [scores, setScores] = useState([]);
+  const [currentPlayer, setCurrentPlayer] = useState(1);
+
+  // --- Радіальні дані (segments) ---
+  const [segments, setSegments] = useState([]);
+  const [finalTerms, setFinalTerms] = useState([]);
+
+  // --- MODAL (Питання + Відповіді) ---
+  const [showModal, setShowModal] = useState(false);
+  const [modalQuestion, setModalQuestion] = useState(null);
+  const [modalAnswers, setModalAnswers] = useState([]);
+  const [modalCorrectAnswer, setModalCorrectAnswer] = useState("");
   const [chosenAnswer, setChosenAnswer] = useState(null);
 
-  // Стан для відстеження рахунків та завершення гри
-  const [scores, setScores] = useState([]);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
+  const [currentSliceIndex, setCurrentSliceIndex] = useState(null);
+
+  // --- GAME OVER / RESULT ---
   const [initialTermCount, setInitialTermCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [sessionDuration, setSessionDuration] = useState(0);
+  const [gameStartTime, setGameStartTime] = useState(null);
 
-  // Стан для відображення вибраного терміна над колесом
-  const [winningText, setWinningText] = useState("");
+  // Запам'ятовуємо неправильні терміни, якщо потрібно повторювати
+  const [wrongTerms, setWrongTerms] = useState({});
 
-  // Стан для туторіалу
+  // Tutorial
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("fortuneWheelGameTutorialCompleted") !== "true"
   );
 
-  // Якщо глобальний регіон змінюється — оновлюємо локальний
+  // Оновлюємо кількість гравців
+  useEffect(() => {
+    setScores(new Array(playersCount).fill(0));
+    setCurrentPlayer(1);
+  }, [playersCount]);
+
+  // Беремо регіон з global, якщо він змінився
   useEffect(() => {
     setRegion(selectedRegion || "Alle");
   }, [selectedRegion]);
 
-  // Ініціалізуємо масив рахунків при зміні кількості гравців
+  // Якщо gameOver => викликаємо finish
   useEffect(() => {
-    const arr = new Array(playersCount).fill(0);
-    setScores(arr);
-  }, [playersCount]);
+    if (gameOver) {
+      finishGame();
+    }
+  }, [gameOver]);
 
-  // Обробник старту гри
-  const handleStart = () => {
+  // Якщо порожні segments і finalTerms -> gameOver
+  useEffect(() => {
+    if (!settingsOpen && segments.length === 0 && finalTerms.length === 0) {
+      setGameOver(true);
+    }
+  }, [segments, finalTerms, settingsOpen]);
+
+  // --- START ---
+  function handleStart() {
     setSettingsOpen(false);
-    loadDataForRoulette();
+    setShowResults(false);
     setGameOver(false);
-  };
+    setSessionDuration(0);
+    setGameStartTime(Date.now());
+    loadDataForWheel();
+  }
 
-  // Завантаження даних для колеса
-  const loadDataForRoulette = () => {
+  // --- DATEN LADEN ---
+  function loadDataForWheel() {
+    // Фільтрація
     const filtered = medicalTerms.filter((term) => {
-      const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
-      const matchesCategory = selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
-      const status = termStatuses[term.id] || "unlearned";
+      const matchesRegion =
+        region === "Alle" || (term.regions || []).includes(region);
+      const matchesCategory =
+        selectedCategory === "Alle" ||
+        (term.categories || []).includes(selectedCategory);
+      const status = termStatuses[term.id]?.status || "unlearned";
+
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+      if (
+        filterMode === "unlearned" &&
+        (status === "learned" || status === "paused")
+      )
+        return false;
+
       return matchesRegion && matchesCategory;
     });
 
-    // Перемішування
+    // Перемішуємо та беремо топ X
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     const finalList = shuffled.slice(0, questionCount);
 
     setFinalTerms(finalList);
     setInitialTermCount(finalList.length);
 
-    const colorPalette = ["#EE4040", "#F0CF50", "#815CD1", "#3DA5E0", "#34A24F"];
-    let newData = [];
     if (finalList.length === 0) {
-      newData = [
-        {
-          option: "Keine Begriffe gefunden",
-          style: {
-            backgroundColor: "#666666",
-            textColor: "#FFFFFF",
-            fontSize: "20px",
-            fontWeight: "bold",
-          },
-        },
-      ];
-    } else {
-      newData = finalList.map((term, idx) => {
-        let mode = displayMode;
-        if (mode === "Mixed") {
-          mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
-        }
-        const text = mode === "LatGerman" ? term.lat : term.de;
-        const color = colorPalette[idx % colorPalette.length];
-        return {
-          option: text,
-          style: {
-            backgroundColor: color,
-            textColor: "#FFFFFF",
-            fontSize: "20px",
-            fontWeight: "bold",
-          },
-        };
-      });
+      setSegments([{ labelForWheel: "Keine Begriffe gefunden", color: "#666" }]);
+      return;
     }
-    setData(newData);
 
-    setWinnerIndex(null);
-    setCornerAnswers([]);
+    // Палетка кольорів
+    const colorPalette = ["#EE4040", "#F0CF50", "#815CD1", "#3DA5E0", "#34A24F"];
+
+    // Формуємо segments
+    const newSegments = finalList.map((term, idx) => {
+      // Mixed -> випадково LatGerman чи GermanLat
+      let mode = displayMode;
+      if (mode === "Mixed") {
+        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
+      }
+
+      let labelForWheel = "";
+      if (mode === "LatGerman") {
+        labelForWheel = removeLatParenthesis(term.lat);
+      } else {
+        labelForWheel = removeGermanArticle(term.de);
+      }
+
+      return {
+        labelForWheel,
+        originalLat: term.lat,
+        originalDe: term.de,
+        actualMode: mode,
+        color: colorPalette[idx % colorPalette.length],
+      };
+    });
+
+    setSegments(newSegments);
+    setWrongTerms({});
+    setShowModal(false);
     setChosenAnswer(null);
-    setGameOver(false);
-    setWinningText("");
-  };
+    setIsAnswerCorrect(false);
+  }
 
-  // Обробник кнопки Spin
-  const handleSpinClick = () => {
-    if (data.length === 0) return;
-    if (data[0]?.option === "Keine Begriffe gefunden") return;
+  // --- STOP SPIN ---
+  function handleStopSpinning(winnerIndex) {
+    const seg = segments[winnerIndex];
+    if (!seg) return;
 
-    const newPrizeNumber = Math.floor(Math.random() * data.length);
-    setPrizeNumber(newPrizeNumber);
-    setMustSpin(true);
+    // Якщо "Keine Begriffe gefunden"
+    if (seg.labelForWheel === "Keine Begriffe gefunden") return;
 
-    // Скидання попередніх станів
-    setWinnerIndex(null);
-    setCornerAnswers([]);
-    setChosenAnswer(null);
-    setWinningText("");
-  };
-
-  // Коли колесо зупиняється
-  const handleStopSpinning = () => {
-    setMustSpin(false);
-    setWinnerIndex(prizeNumber);
-
-    if (data[prizeNumber]?.option === "Keine Begriffe gefunden") return;
-
-    const winningTerm = finalTerms[prizeNumber];
+    const winningTerm = finalTerms[winnerIndex];
     if (!winningTerm) return;
 
-    // Визначення правильної відповіді
-    let correctAnswer = "";
-    let mode = displayMode;
-    const textOnSector = data[prizeNumber].option;
-    if (mode === "Mixed") {
-      correctAnswer = textOnSector === winningTerm.lat ? winningTerm.de : winningTerm.lat;
-    } else if (mode === "LatGerman") {
-      correctAnswer = winningTerm.de;
+    // Визначаємо режим зі збереженого сегмента
+    const mode = seg.actualMode;
+
+    let questionText = "";
+    let correctAns = "";
+
+    if (mode === "LatGerman") {
+      questionText = winningTerm.lat;
+      correctAns = winningTerm.de;
     } else {
-      correctAnswer = winningTerm.lat;
+      questionText = winningTerm.de;
+      correctAns = winningTerm.lat;
     }
 
-    // Відображаємо вибраний термін над колесом
-    setWinningText(textOnSector);
+    // Знаходимо 3 неправильних варіанти
+    let allPossible = [];
+    if (mode === "LatGerman") {
+      allPossible = medicalTerms.map((t) => t.de);
+    } else {
+      allPossible = medicalTerms.map((t) => t.lat);
+    }
 
-    // Генеруємо варіанти для кутових кнопок
-    generateCornerAnswers(correctAnswer);
+    const wrongs = allPossible
+      .filter((txt) => txt !== correctAns)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
 
-    // Якщо декілька гравців – змінюємо поточного
+    const answers = [...wrongs, correctAns].sort(() => Math.random() - 0.5);
+
+    setModalQuestion(questionText);
+    setModalCorrectAnswer(correctAns);
+    setModalAnswers(answers);
+    setShowModal(true);
+    setChosenAnswer(null);
+    setIsAnswerCorrect(false);
+    setCurrentSliceIndex(winnerIndex);
+  }
+
+  // --- Обробка вибору відповіді ---
+  function handleAnswerSelect(ans) {
+    setChosenAnswer(ans);
+    setIsAnswerCorrect(ans === modalCorrectAnswer);
+  }
+
+  // --- Підтвердити MODAL ---
+  function handleModalOk() {
+    if (!chosenAnswer) return;
+
+    const isCorrect = isAnswerCorrect;
+    const idx = currentSliceIndex;
+    const winningTerm = finalTerms[idx];
+
+    if (winningTerm) {
+      if (isCorrect) {
+        // Якщо правильно -> +1 бал, видаляємо сегмент
+        setScores((old) => {
+          const newScores = [...old];
+          newScores[currentPlayer - 1] += 1;
+          return newScores;
+        });
+        recordCorrectAnswer(winningTerm.id);
+
+        setSegments((old) => old.filter((_, i) => i !== idx));
+        setFinalTerms((old) => old.filter((_, i) => i !== idx));
+      } else {
+        // Якщо неправильно -> сегмент залишається
+        if (!wrongTerms[winningTerm.id]) {
+          setWrongTerms((prev) => ({ ...prev, [winningTerm.id]: true }));
+        }
+      }
+    }
+
+    // Наступний гравець
     if (playersCount > 1) {
       setCurrentPlayer((prev) => (prev === playersCount ? 1 : prev + 1));
     }
-  };
 
-  // Генеруємо 4 варіанти відповіді
-  const generateCornerAnswers = (correct) => {
-    const allPossible = medicalTerms.flatMap((t) => [t.lat, t.de]).filter((txt) => txt !== correct);
-    const wrongs = allPossible.sort(() => Math.random() - 0.5).slice(0, 3);
-    const arr = [...wrongs, correct].sort(() => Math.random() - 0.5);
-    setCornerAnswers(arr);
-  };
+    setShowModal(false);
+    setChosenAnswer(null);
+    setIsAnswerCorrect(false);
+  }
 
-  // Обробка вибору відповіді
-  const handleAnswerSelect = (ans) => {
-    if (chosenAnswer !== null) return;
-    setChosenAnswer(ans);
+  // --- FINISH GAME ---
+  function finishGame() {
+    const dur = Math.floor((Date.now() - gameStartTime) / 1000);
+    setSessionDuration(dur);
+    setShowResults(true);
+    flushChanges();
+  }
 
-    const actualTerm = finalTerms[prizeNumber];
-    if (!actualTerm) return;
+  function renderResultsModal() {
+    if (!showResults) return null;
+    const totalCorrect = scores.reduce((a, b) => a + b, 0);
 
-    const textOnSector = data[prizeNumber].option;
-    let expectedCorrect = "";
-    if (textOnSector === actualTerm.lat) {
-      expectedCorrect = actualTerm.de;
-    } else if (textOnSector === actualTerm.de) {
-      expectedCorrect = actualTerm.lat;
-    }
-    if (displayMode === "LatGerman") {
-      expectedCorrect = actualTerm.de;
-    } else if (displayMode === "GermanLat") {
-      expectedCorrect = actualTerm.lat;
-    }
-
-    if (ans === expectedCorrect) {
-      // Якщо 1 гравець – тут можна оновити дані, наприклад, викликати recordCorrectAnswer(actualTerm.id)
-      // Видаляємо сектор
-      setData((oldData) => oldData.filter((_, i) => i !== winnerIndex));
-      setFinalTerms((oldTerms) => oldTerms.filter((_, i) => i !== winnerIndex));
-    }
-
-    // Після вибору відповіді ховаємо термін
-    setWinningText("");
-  };
-
-  // Перевірка завершення гри
-  useEffect(() => {
-    if (!settingsOpen && data.length === 0 && finalTerms.length === 0) {
-      setGameOver(true);
-    }
-  }, [data, finalTerms, settingsOpen]);
-
-  // Рендер екрану завершення гри
-  const renderGameOver = () => {
-    if (playersCount === 1) {
-      const correct = scores[0];
-      return (
-        <div className={styles.gameOverBox}>
-          <h2>Spiel beendet!</h2>
-          <p>
-            Sie haben {correct} von {initialTermCount} Begriffen richtig beantwortet.
-          </p>
-        </div>
-      );
-    }
-    const maxScore = Math.max(...scores);
-    const winners = scores
-      .map((sc, idx) => (sc === maxScore ? idx + 1 : null))
-      .filter((v) => v !== null);
-    const winnerText =
-      winners.length > 1
-        ? `Unentschieden zwischen Spielern: ${winners.join(", ")} (je ${maxScore} Punkte)`
-        : `Spieler Nr. ${winners[0]} hat mit ${maxScore} Punkten gewonnen!`;
     return (
-      <div className={styles.gameOverBox}>
-        <h2>Spiel beendet!</h2>
-        <p>Ergebnisse:</p>
-        <ul>
-          {scores.map((sc, i) => (
-            <li key={i}>
-              Spieler {i + 1}: {sc} richtig von {initialTermCount}
-            </li>
-          ))}
-        </ul>
-        <p style={{ fontWeight: "bold" }}>{winnerText}</p>
+      <div className={styles.resultsOverlay}>
+        <div className={styles.resultsBox}>
+          <button
+            className={styles.modalCloseButton}
+            onClick={() => setShowResults(false)}
+          >
+            ×
+          </button>
+          <h2>Результати</h2>
+          {playersCount === 1 ? (
+            <p>
+              Правильних: {totalCorrect} із {initialTermCount}
+            </p>
+          ) : (
+            <>
+              <p>Mehrspieler-Modus:</p>
+              <ul>
+                {scores.map((sc, i) => (
+                  <li key={i}>
+                    Гравець {i + 1}: {sc}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          <p>
+            Тривалість: {Math.floor(sessionDuration / 60)} хв{" "}
+            {sessionDuration % 60} сек
+          </p>
+          <button className={styles.startButton} onClick={handleStart}>
+            Neues Spiel
+          </button>
+        </div>
       </div>
     );
-  };
-
-  // Логіка для відображення кнопки Spin: показуємо лише, якщо варіанти відповідей відсутні
-  const showSpinButton = (!gameOver && cornerAnswers.length === 0);
+  }
 
   return (
     <MainLayout>
@@ -328,43 +358,25 @@ const FortuneWheelGameContent = () => {
         <title>Fortune Wheel – Fachbegriffe lernen</title>
         <meta
           name="description"
-          content="Spielen Sie das Fortune Wheel und lernen Sie dabei Fachbegriffe. Wählen Sie Filter und Einstellungen und drehen Sie das Rad, um einen Begriff zu gewinnen!"
-        />
-        <meta
-          name="keywords"
-          content="Fachbegriffe, Fortune Wheel, Lernspiel, Terminologie, Medizin"
+          content="Спіньте колесо та вчіть медичні терміни! Обирайте фільтри, налаштування та крутіть колесо удачі."
         />
         <meta property="og:title" content="Fortune Wheel – Fachbegriffe lernen" />
-        <meta
-          property="og:description"
-          content="Spielen Sie das Fortune Wheel und lernen Sie dabei Fachbegriffe. Drehen Sie das Rad und erhalten Sie spannende Herausforderungen!"
-        />
         <meta property="og:image" content={medicalTerminologyBg} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Fortune Wheel – Fachbegriffe lernen"
-        />
-        <meta
-          name="twitter:description"
-          content="Spielen Sie das Fortune Wheel und lernen Sie dabei Fachbegriffe."
-        />
-        <meta name="twitter:image" content={medicalTerminologyBg} />
       </Helmet>
 
       <div className={styles.fortuneWheelGame}>
-        {/* Кнопка назад */}
+        {/* Back-Button */}
         <button className="main_menu_back" onClick={() => window.history.back()}>
           &#8592;
         </button>
 
-        {/* Кнопка налаштувань (праворуч унизу) */}
+        {/* Settings-Button */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
             onClick={() => {
               setSettingsOpen(true);
+              setShowResults(false);
               setGameOver(false);
             }}
           >
@@ -372,43 +384,39 @@ const FortuneWheelGameContent = () => {
           </button>
         </div>
 
-       {settingsOpen && (
-                <button
-                  data-tutorial="tutorialStartButton"
-                  className={styles.tutorialButton}
-                  onClick={() => setShowTutorial(true)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="30"
-                    height="30"
-                    fill="none"
-                    stroke="#ededed"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                    <line
-                      x1="12"
-                      y1="12"
-                      x2="12"
-                      y2="15.5"
-                      stroke="#ededed"
-                      strokeWidth="3"
-                    />
-                    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-                  </svg>
-                </button>
-              )}
+        {/* Tutorial-Button */}
+        {settingsOpen && (
+          <button
+            data-tutorial="tutorialStartButton"
+            className={styles.tutorialButton}
+            onClick={() => setShowTutorial(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="30"
+              height="30"
+              fill="none"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" fill="none" />
+              <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+            </svg>
+          </button>
+        )}
 
-        {/* Модальне вікно налаштувань */}
+        {/* Settings-Modal */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
               className={
-                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+                window.innerWidth > 768
+                  ? styles.popupDesktopWide
+                  : styles.popupMobile
               }
             >
               <button
@@ -417,12 +425,12 @@ const FortuneWheelGameContent = () => {
               >
                 ×
               </button>
-              <h2 className={styles.modalTitle}>Einstellungen</h2>
+              <h2 className={styles.modalTitle}>Налаштування</h2>
 
               <div className={styles.row}>
-                {/* Регіон */}
-                <div className={styles.regionColumn} data-tutorial="regionSelect">
-                  <label className={styles.fieldLabel}>Region</label>
+                {/* Region */}
+                <div className={styles.regionColumn}>
+                  <label className={styles.fieldLabel}>Регіон</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.regionCell}>
                       {regionAbbreviations[region] || region}
@@ -433,21 +441,26 @@ const FortuneWheelGameContent = () => {
                       onChange={(e) => setRegion(e.target.value)}
                     >
                       <option value="Alle">Alle</option>
-                      {getAllRegions().map((r) => (
-                        <option key={r} value={r}>
-                          {r}
-                        </option>
-                      ))}
+                      {[...new Set(medicalTerms.flatMap((t) => t.regions || []))]
+                        .sort()
+                        .map((r) => (
+                          <option key={r} value={r}>
+                            {r}
+                          </option>
+                        ))}
                     </select>
                   </div>
                 </div>
 
-                {/* Фільтр */}
-                <div className={styles.filterColumn} data-tutorial="filterSelect">
-                  <label className={styles.fieldLabel}>Filter</label>
+                {/* Filter */}
+                <div className={styles.filterColumn}>
+                  <label className={styles.fieldLabel}>Фільтр</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
-                      {filterModes.find((m) => m.value === filterMode)?.icon}
+                      {
+                        filterModes.find((m) => m.value === filterMode)
+                          ?.icon
+                      }
                     </div>
                     <select
                       className={styles.nativeSelect}
@@ -463,9 +476,9 @@ const FortuneWheelGameContent = () => {
                   </div>
                 </div>
 
-                {/* Категорія */}
-                <div className={styles.categoryColumn} data-tutorial="categorySelect">
-                  <label className={styles.fieldLabel}>Kategorie</label>
+                {/* Category */}
+                <div className={styles.categoryColumn}>
+                  <label className={styles.fieldLabel}>Категорія</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
                       {categoryIcons[selectedCategory] && (
@@ -491,9 +504,9 @@ const FortuneWheelGameContent = () => {
                   </div>
                 </div>
 
-                {/* Кількість гравців */}
-                <div className={styles.playersColumn} data-tutorial="playersSelect">
-                  <label className={styles.fieldLabel}>Spieler</label>
+                {/* Players */}
+                <div className={styles.playersColumn}>
+                  <label className={styles.fieldLabel}>Гравці</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.playersCell}>
                       <FaUser style={{ marginRight: 4 }} /> x{playersCount}
@@ -513,9 +526,9 @@ const FortuneWheelGameContent = () => {
                 </div>
               </div>
 
-              {/* Режим відображення */}
-              <div className={styles.modalField} data-tutorial="displayModeSelect">
-                <label>Anzeige-Modus:</label>
+              {/* DisplayMode */}
+              <div className={styles.modalField}>
+                <label>Режим відображення:</label>
                 <div className={styles.displayModeContainer}>
                   {displayModeOptions.map((opt) => (
                     <div
@@ -531,9 +544,9 @@ const FortuneWheelGameContent = () => {
                 </div>
               </div>
 
-              {/* Кількість термінів */}
-              <div className={styles.modalField} data-tutorial="questionCountSelect">
-                <label>Anzahl Begriffe:</label>
+              {/* questionCount */}
+              <div className={styles.modalField}>
+                <label>Кількість термінів:</label>
                 <div className={styles.questionCountContainer}>
                   {questionCountOptions.map((qc) => (
                     <div
@@ -549,134 +562,98 @@ const FortuneWheelGameContent = () => {
                 </div>
               </div>
 
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStart}
-              >
-                Start
+              <button className={styles.startButton} onClick={handleStart}>
+                Старт
               </button>
             </div>
           </div>
         )}
 
-        {gameOver && (
-          <div className={styles.gameOverContainer}>{renderGameOver()}</div>
-        )}
+        {renderResultsModal()}
 
+        {/* Відображення поточного гравця (для мультиплеєра) */}
         {playersCount > 1 && !settingsOpen && !gameOver && (
           <div style={{ marginTop: 20, fontWeight: "bold", color: "#013b6e" }}>
-            Spieler {currentPlayer} von {playersCount} ist am Zug
+            Зараз хід гравця №{currentPlayer} із {playersCount}
           </div>
         )}
 
-        {/* Відображення вибраного терміна */}
-        {winningText && (
-          <div style={{ marginTop: 20, fontSize: 24, fontWeight: "bold", color: "#013b6e" }}>
-            {winningText}
+        {/* Саме колесо */}
+        {!settingsOpen && !gameOver && segments.length > 0 && (
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: 400,
+              margin: "0 auto",
+              marginTop: "-30px",
+            }}
+          >
+            {/* Колесо */}
+            <CustomWheel
+              segments={segments}
+              size={400}
+              spinDuration={3000}
+              onStopSpinning={handleStopSpinning}
+              outerPointer={true} // важливо: тепер не малюємо стрілку на canvas
+            />
           </div>
         )}
 
-        {!settingsOpen && !gameOver && data.length > 0 && (
-          <div style={{ textAlign: "center", marginTop: 20 }}>
-            <div style={{ display: "inline-block", position: "relative" }}>
-              <Wheel
-                mustStartSpinning={mustSpin}
-                prizeNumber={prizeNumber}
-                data={data.map((item, i) => {
-                  let baseStyle = { ...item.style };
-                  if (i === winnerIndex) {
-                    baseStyle.transform = "scale(1.15)";
-                    baseStyle.transition = "transform 0.7s, box-shadow 0.7s";
-                    baseStyle.boxShadow = "0 0 10px #ffffff";
-                  }
-                  return { ...item, style: baseStyle };
+        {/* MODAL з питаннями/відповідями */}
+        {showModal && (
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalBox}>
+              <h2 className={styles.modalTitle}>{modalQuestion}</h2>
+              <div className={styles.optionsBox}>
+                {modalAnswers.map((ans, idx) => {
+                  const isChosen = ans === chosenAnswer;
+                  const isCorrectChoice =
+                    isChosen && ans === modalCorrectAnswer;
+                  const isWrongChoice =
+                    isChosen && ans !== modalCorrectAnswer;
+
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => handleAnswerSelect(ans)}
+                      className={`
+                        ${styles.modalAnswerButton}
+                        ${isChosen ? styles.chosen : ""}
+                        ${isCorrectChoice ? styles.correct : ""}
+                        ${isWrongChoice ? styles.wrong : ""}
+                      `}
+                    >
+                      {ans}
+                    </button>
+                  );
                 })}
-                onStopSpinning={handleStopSpinning}
-                spinDuration={0.8}
-                size={400}
-              />
-              {/* Кнопка Spin */}
-              {showSpinButton && (
-                <button
-                  data-tutorial="spinButton"
-                  onClick={handleSpinClick}
-                  style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: "50%",
-                    backgroundColor: "#013b6e",
-                    color: "#fff",
-                    border: "none",
-                    cursor: "pointer",
-                    fontSize: 18,
-                    fontWeight: "bold",
-                    position: "absolute",
-                    left: "50%",
-                    top: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                >
-                  SPIN
-                </button>
-              )}
+              </div>
+              <button
+                className={styles.modalOkButton}
+                onClick={handleModalOk}
+                disabled={!chosenAnswer}
+              >
+                OK
+              </button>
             </div>
           </div>
         )}
 
-        {/* Відображення 4 варіантів відповіді */}
-        {!settingsOpen && !gameOver && cornerAnswers.length === 4 && (
-          <div className={styles.cornerAnswers}>
-            {cornerAnswers.map((ans, idx) => {
-              const actualTerm = finalTerms[prizeNumber];
-              if (!actualTerm) return null;
-
-              let expectedCorrect = "";
-              const textOnSector = data[prizeNumber].option;
-              if (textOnSector === actualTerm.lat) {
-                expectedCorrect = actualTerm.de;
-              } else if (textOnSector === actualTerm.de) {
-                expectedCorrect = actualTerm.lat;
-              }
-              if (displayMode === "LatGerman") {
-                expectedCorrect = actualTerm.de;
-              } else if (displayMode === "GermanLat") {
-                expectedCorrect = actualTerm.lat;
-              }
-
-              const isCorrect = ans === expectedCorrect;
-              const isChosen = chosenAnswer === ans;
-              const isWrong = isChosen && !isCorrect;
-              const isRight = isChosen && isCorrect;
-
-              return (
-                <button
-                  key={idx}
-                  className={`${styles.cornerAnswerButton} ${
-                    isRight ? styles.correct : ""
-                  } ${isWrong ? styles.wrong : ""}`}
-                  onClick={() => handleAnswerSelect(ans)}
-                >
-                  {ans}
-                </button>
-              );
-            })}
-          </div>
+        {/* Туторіал */}
+        {showTutorial && (
+          <FortuneWheelGameTutorial
+            run={showTutorial}
+            onFinish={() => {
+              setShowTutorial(false);
+              localStorage.setItem("fortuneWheelGameTutorialCompleted", "true");
+            }}
+          />
         )}
-
-        {/* Тут можна додатково розмістити інші елементи інтерфейсу */}
       </div>
-
-      {/* Туторіал для Fortune Wheel */}
-      {showTutorial && (
-        <FortuneWheelGameTutorial
-          run={showTutorial}
-          onFinish={() => setShowTutorial(false)}
-        />
-      )}
     </MainLayout>
   );
-};
+}
 
 const FortuneWheelGame = () => (
   <TermStatusProvider>

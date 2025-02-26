@@ -4,6 +4,7 @@ import AllMedicalTerminologyPage from "./pages/AllMedicalTerminologyPage/AllMedi
 import FlashcardGame from "./pages/FlashcardGame/FlashcardGame";
 import SimpleChoiceGame from "./pages/SimpleChoiceGame/SimpleChoiceGame";
 import FillInBlankGame from "./pages/FillInBlankGame/FillInBlankGame";
+import FortuneWheelGame from "./pages/FortuneWheelGame/FortuneWheelGame"; 
 
 const TerminologyGameApp = () => {
   // Можна використовувати значення: "terminology", "flashcard", "simpleChoice", "fillInBlank"
@@ -16,11 +17,13 @@ const TerminologyGameApp = () => {
         <button onClick={() => setCurrentGame("flashcard")}>Flashcard</button>
         <button onClick={() => setCurrentGame("simpleChoice")}>Simple Choice</button>
         <button onClick={() => setCurrentGame("fillInBlank")}>Fill In Blank</button>
+        <button onClick={() => setCurrentGame("fortuneWheel")}>Fortune Wheel</button> 
       </nav>
       {currentGame === "terminology" && <AllMedicalTerminologyPage />}
       {currentGame === "flashcard" && <FlashcardGame />}
       {currentGame === "simpleChoice" && <SimpleChoiceGame />}
       {currentGame === "fillInBlank" && <FillInBlankGame />}
+      {currentGame === "fortuneWheel" && <FortuneWheelGame />}
     </TermStatusProvider>
   );
 };
