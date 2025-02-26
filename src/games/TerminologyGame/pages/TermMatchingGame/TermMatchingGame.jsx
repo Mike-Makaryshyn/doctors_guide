@@ -1,29 +1,23 @@
-// ================== TermMatchingGame.jsx ==================
-// Шлях: doctors_guide/src/games/TerminologyGame/pages/TermMatchingGame/TermMatchingGame.jsx
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
-
 import { medicalTerms } from "../../../../constants/medicalTerms";
 import { TermStatusProvider } from "../../../../contexts/TermStatusContext";
 import { useTermStatus } from "../../../../contexts/TermStatusContext";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
 import { Helmet } from "react-helmet";
-
-// Icons
 import {
   FaCog,
   FaList,
   FaCheck,
   FaPlay,
   FaPause,
-  FaPen,
+  FaArrowLeft,
+  FaArrowRight,
   FaExchangeAlt,
 } from "react-icons/fa";
 
@@ -31,7 +25,7 @@ import TermMatchingGameTutorial from "./TermMatchingGameTutorial";
 import styles from "./TermMatchingGame.module.scss";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 
-// ----------- Фільтри -----------
+// Фільтри
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -39,10 +33,12 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const questionCountOptions = [5, 10, 20, 40, 60, 100, "all"];
+// Кількість термінів
+const questionCountOptions = [5, 10, 20, 30, 40, 50];
 
-// Мапа мов
+// Мапа мов (ключ "la" відповідає латинській, але в даних використовується "lat")
 const languageMap = {
+  la: "Latein",
   de: "Deutsch",
   en: "Englisch",
   uk: "Ukrainisch",
@@ -54,7 +50,7 @@ const languageMap = {
   pl: "Polnisch",
 };
 
-// Скорочення регіонів
+// Скорочення для регіонів
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -74,10 +70,22 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
+// Допоміжна функція для перемикання тексту терміна (якщо мова латинська – беремо з "lat")
+const getTermText = (term, key) => {
+  if (key === "la") {
+    return term["lat"] || "";
+  }
+  return term[key] || "";
+};
+
+function shuffleArray(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
 function TermMatchingGameContent() {
   const navigate = useNavigate();
-  const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
-  const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
+  const { selectedRegion } = useGetGlobalInfo();
+  const { termStatuses, recordCorrectAnswer } = useTermStatus();
 
   // Авторизація
   const [user] = useAuthState(auth);
@@ -90,192 +98,161 @@ function TermMatchingGameContent() {
     return false;
   };
 
-  // Стан туторіала
+  // Туторіал
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("termMatchingGameTutorialCompleted") !== "true"
   );
 
-  // Налаштування
+  // Налаштування (модальне вікно)
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
-  const [questionCount, setQuestionCount] = useState(10);
-  const [allowEdit, setAllowEdit] = useState(false);
 
-  // Мови
+  // Language Swap – за замовчуванням латина ("la")
   const [isGermanLeft, setIsGermanLeft] = useState(true);
-  const [electiveLang, setElectiveLang] = useState(
-    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-  );
+  const [electiveLang, setElectiveLang] = useState("la");
 
-  // sourceLang / targetLang
-  const sourceLang = isGermanLeft ? "de" : electiveLang;
-  const targetLang = isGermanLeft ? electiveLang : "de";
+  // Кількість термінів
+  const [questionCount, setQuestionCount] = useState(10);
 
-  // Пари для матчингу
+  // Ігровий стан
   const [pairs, setPairs] = useState([]);
   const [leftColumn, setLeftColumn] = useState([]);
   const [rightColumn, setRightColumn] = useState([]);
   const [matchedPairs, setMatchedPairs] = useState({});
-  const [selectedLeft, setSelectedLeft] = useState(null);
-  const [selectedRight, setSelectedRight] = useState(null);
-
-  // Короткочасне підсвічування помилки
   const [wrongLeft, setWrongLeft] = useState(null);
   const [wrongRight, setWrongRight] = useState(null);
 
-  // Ігровий стан
+  // Пагінація
+  const [pageIndex, setPageIndex] = useState(0);
+  const pageSize = 10;
+
+  // Результати
   const [gameFinished, setGameFinished] = useState(false);
   const [gameStartTime, setGameStartTime] = useState(null);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [correctMatchesCount, setCorrectMatchesCount] = useState(0);
 
-  // Покази термінів
+  // Лічильник показів
   const [shownCounts, setShownCounts] = useState({});
 
-  // Ефект: оновити electiveLang, якщо user змінив глобальну мову
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  useEffect(() => {
-    setElectiveLang(
-      selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-    );
-  }, [selectedLanguage]);
-
-  // Натискання "Старт" в налаштуваннях
+  /* ------------------- Підготовка гри ------------------- */
   const handleStartGame = () => {
     setSettingsOpen(false);
-    initGameData();
     setGameFinished(false);
+    setSessionDuration(0);
     setGameStartTime(Date.now());
+    setPageIndex(0);
+    initGameData();
   };
 
-  // Головна функція ініціалізації гри
   const initGameData = () => {
-    // 1) Фільтрація
+    // Фільтрація термінів
     const filtered = medicalTerms.filter((term) => {
-      const matchesRegion =
-        region === "Alle" || (term.regions || []).includes(region);
-      const matchesCategory =
-        selectedCategory === "Alle" ||
-        (term.categories || []).includes(selectedCategory);
-
+      const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
+      const matchesCategory = selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
       const status = termStatuses[term.id]?.status || "unlearned";
 
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
-        return false;
-      }
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
       return matchesRegion && matchesCategory;
     });
 
-    // 2) Сортування за показами
+    // Сортування за кількістю показів
     filtered.sort((a, b) => {
-      const countA = shownCounts[a.id] || 0;
-      const countB = shownCounts[b.id] || 0;
-      if (countA === countB) return Math.random() - 0.5;
-      return countA - countB;
+      const cA = shownCounts[a.id] || 0;
+      const cB = shownCounts[b.id] || 0;
+      if (cA === cB) return Math.random() - 0.5;
+      return cA - cB;
     });
 
-    // 3) Відрізаємо за questionCount
-    const selected =
-      questionCount === "all" ? filtered : filtered.slice(0, questionCount);
+    // Відбір термінів за questionCount
+    const selected = filtered.slice(0, questionCount);
 
-    // Оновлюємо shownCounts
+    // Оновлення лічильника показів
     const newShownCounts = { ...shownCounts };
-    selected.forEach((t) => {
-      newShownCounts[t.id] = (newShownCounts[t.id] || 0) + 1;
+    selected.forEach((term) => {
+      newShownCounts[term.id] = (newShownCounts[term.id] || 0) + 1;
     });
     setShownCounts(newShownCounts);
 
-    // 4) Формуємо пари: зліва sourceLang, справа targetLang
-    const newPairs = selected.map((term) => {
-      return {
-        id: term.id,
-        leftText: term[sourceLang] || "",
-        rightText: term[targetLang] || "",
-        original: term,
-      };
-    });
+    // Формування пар (зліва – базова мова, справа – обрана) з урахуванням виправлення для латини
+    const source = isGermanLeft ? "de" : electiveLang;
+    const target = isGermanLeft ? electiveLang : "de";
 
-    // Перемішуємо
-    const shuffledLeft = [...newPairs].sort(() => Math.random() - 0.5);
-    const shuffledRight = [...newPairs].sort(() => Math.random() - 0.5);
+    const newPairs = selected.map((term) => ({
+      id: term.id,
+      leftText: getTermText(term, source),
+      rightText: getTermText(term, target),
+      original: term,
+    }));
+
+    // Перемішування колонок
+    const shuffledLeft = shuffleArray(newPairs);
+    const shuffledRight = shuffleArray(newPairs);
 
     setPairs(newPairs);
     setLeftColumn(shuffledLeft);
     setRightColumn(shuffledRight);
-
-    // Скидаємо стан
     setMatchedPairs({});
-    setSelectedLeft(null);
-    setSelectedRight(null);
     setWrongLeft(null);
     setWrongRight(null);
     setCorrectMatchesCount(0);
   };
 
-  // Клік ліворуч
-  const handleLeftSelect = (item) => {
-    if (matchedPairs[item.id]) return; // вже знайдено
-    setSelectedLeft(item);
+  const pageCount = Math.ceil(leftColumn.length / pageSize) || 1;
+  const displayedLeft = leftColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
+  const displayedRight = rightColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
 
-    // Якщо вже вибрали правий
+  // Обробка кліків по плиткам (ліва колонка)
+  const [selectedLeft, setSelectedLeft] = useState(null);
+  const handleLeftSelect = (item) => {
+    if (matchedPairs[item.id]) return;
+    setSelectedLeft(item);
     if (selectedRight && selectedRight.id === item.id) {
       doMatch(item.id);
     } else if (selectedRight && selectedRight.id !== item.id) {
-      // Неправильна пара
       showWrong(item, selectedRight);
     }
   };
 
-  // Клік праворуч
+  // Обробка кліків по плиткам (права колонка)
+  const [selectedRight, setSelectedRight] = useState(null);
   const handleRightSelect = (item) => {
-    if (matchedPairs[item.id]) return; // вже знайдено
+    if (matchedPairs[item.id]) return;
     setSelectedRight(item);
-
-    // Якщо вже вибрали лівий
     if (selectedLeft && selectedLeft.id === item.id) {
       doMatch(item.id);
     } else if (selectedLeft && selectedLeft.id !== item.id) {
-      // Неправильна пара
       showWrong(selectedLeft, item);
     }
   };
 
-  // Обробка правильного матчу
+  // Правильний матч
   const doMatch = (id) => {
     setMatchedPairs((prev) => ({ ...prev, [id]: true }));
     setSelectedLeft(null);
     setSelectedRight(null);
-
-    if (!allowEdit) {
-      // Записуємо в контекст
-      recordCorrectAnswer(id);
-    } else {
-      // Якщо edit => помічаємо як learned відразу
-      toggleStatus(id, "learned");
-    }
+    recordCorrectAnswer(id);
     setCorrectMatchesCount((prev) => prev + 1);
   };
 
-  // Показуємо wrong (червоне підсвічування) на 1 секунду
+  // Неправильний вибір – короткочасний ефект
   const showWrong = (leftItem, rightItem) => {
     setWrongLeft(leftItem.id);
     setWrongRight(rightItem.id);
-
-    // Скидаємо вибір
     setSelectedLeft(null);
     setSelectedRight(null);
-
     setTimeout(() => {
       setWrongLeft(null);
       setWrongRight(null);
-    }, 1000);
+    }, 800);
   };
 
   // Перевірка завершення гри
@@ -284,61 +261,48 @@ function TermMatchingGameContent() {
       setGameFinished(true);
       const duration = Math.floor((Date.now() - gameStartTime) / 1000);
       setSessionDuration(duration);
-
-      if (!allowEdit) flushChanges();
     }
-  }, [matchedPairs, pairs, gameStartTime, allowEdit, flushChanges]);
+  }, [matchedPairs, pairs, gameStartTime]);
 
-  // Закінчити гру вручну, якщо потрібно
-  const finishGameEarly = () => {
-    setGameFinished(true);
-    const duration = Math.floor((Date.now() - gameStartTime) / 1000);
-    setSessionDuration(duration);
-    if (!allowEdit) flushChanges();
+  const handleNextPage = () => {
+    if (pageIndex < pageCount - 1) {
+      setPageIndex((prev) => prev + 1);
+    }
+  };
+  const handlePrevPage = () => {
+    if (pageIndex > 0) {
+      setPageIndex((prev) => prev - 1);
+    }
   };
 
-  // Допоміжна функція для відображення скорочення регіону
+  const handleCloseResults = () => {
+    setGameFinished(false);
+  };
+
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
   return (
     <MainLayout>
       <Helmet>
-        <title>Term Matching Game – Medizinische Begriffe verbinden</title>
-        <meta
-          name="description"
-          content="Verbinde medizinische Fachbegriffe in zwei Spalten nach Region, Kategorie und Filter. Wähle Deutsch oder andere Sprachen."
-        />
+        <title>Term Matching Game – mit Latein als Standard</title>
       </Helmet>
 
       <div className={styles.electiveLanguageGame}>
-        <button
-          className="main_menu_back"
-          onClick={() => navigate("/terminology-learning")}
-        >
+        {/* Кнопка "Назад" */}
+        <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
         {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div
-              className={
-                window.innerWidth > 768
-                  ? styles.popupDesktopWide
-                  : styles.popupMobile
-              }
-            >
-              <button
-                className={styles.modalCloseButton}
-                onClick={() => setSettingsOpen(false)}
-              >
+            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
+              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
-
-              {/* --- Region, Filter, Kategorie, EditMode --- */}
               <div className={styles.row}>
-                {/* Region */}
+                {/* Регіон */}
                 <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
@@ -352,9 +316,7 @@ function TermMatchingGameContent() {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(medicalTerms.flatMap((t) => t.regions || []))
-                      ).map((r) => (
+                      {Array.from(new Set(medicalTerms.flatMap((t) => t.regions || []))).map((r) => (
                         <option key={r} value={r}>
                           {r}
                         </option>
@@ -362,8 +324,7 @@ function TermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-
-                {/* Filter */}
+                {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -386,8 +347,7 @@ function TermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-
-                {/* Category */}
+                {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -409,9 +369,7 @@ function TermMatchingGameContent() {
                       }}
                     >
                       <option value="Alle">Alle</option>
-                      {Array.from(
-                        new Set(medicalTerms.flatMap((t) => t.categories || []))
-                      ).map((cat) => (
+                      {Array.from(new Set(medicalTerms.flatMap((t) => t.categories || []))).map((cat) => (
                         <option key={cat} value={cat}>
                           {cat}
                         </option>
@@ -419,31 +377,11 @@ function TermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-
-                {/* Edit */}
-                <div className={styles.editColumn} data-tutorial="editToggleButton">
-                  <label className={styles.fieldLabel}>Bearbeiten</label>
-                  <button
-                    className={`${styles.editToggleButton} ${
-                      allowEdit ? styles.selected : ""
-                    }`}
-                    onClick={() => {
-                      if (requireAuth()) return;
-                      setAllowEdit(!allowEdit);
-                    }}
-                  >
-                    <FaPen />
-                  </button>
-                </div>
               </div>
 
-              {/* --- Вибір мови (як у Elective) --- */}
+              {/* Language Swap */}
               <div className={styles.modalField}>
-                <div
-                  className={styles.languageSwapContainer}
-                  data-tutorial="languageSwapContainer"
-                >
-                  {/* Якщо isGermanLeft=true, ліворуч "Deutsch"; праворуч - select. Якщо false - навпаки */}
+                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
                   <div className={styles.languageCellFixed}>
                     {isGermanLeft ? (
                       "Deutsch"
@@ -453,26 +391,19 @@ function TermMatchingGameContent() {
                         value={electiveLang}
                         onChange={(e) => setElectiveLang(e.target.value)}
                       >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
+                        {Object.entries(languageMap).map(([code, label]) =>
+                          code !== "de" ? (
+                            <option key={code} value={code}>
+                              {label}
+                            </option>
+                          ) : null
                         )}
                       </select>
                     )}
                   </div>
-
-                  {/* swap button */}
-                  <button
-                    className={styles.swapButton}
-                    onClick={() => setIsGermanLeft((prev) => !prev)}
-                  >
+                  <button className={styles.swapButton} onClick={() => setIsGermanLeft((prev) => !prev)}>
                     <FaExchangeAlt />
                   </button>
-
                   <div className={styles.languageCellFixed}>
                     {isGermanLeft ? (
                       <select
@@ -480,13 +411,12 @@ function TermMatchingGameContent() {
                         value={electiveLang}
                         onChange={(e) => setElectiveLang(e.target.value)}
                       >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
+                        {Object.entries(languageMap).map(([code, label]) =>
+                          code !== "de" ? (
+                            <option key={code} value={code}>
+                              {label}
+                            </option>
+                          ) : null
                         )}
                       </select>
                     ) : (
@@ -496,48 +426,34 @@ function TermMatchingGameContent() {
                 </div>
               </div>
 
-              {/* --- К-сть питань --- */}
+              {/* Кількість термінів */}
               <div className={styles.modalField}>
-                <div
-                  className={styles.questionCountContainer}
-                  data-tutorial="questionCountContainer"
-                >
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((qc) => (
                     <div
                       key={qc}
-                      className={`${styles.questionCountIcon} ${
-                        questionCount === qc ? styles.selected : ""
-                      }`}
+                      className={`${styles.questionCountIcon} ${questionCount === qc ? styles.selected : ""}`}
                       onClick={() => {
                         if (requireAuth()) return;
                         setQuestionCount(qc);
                       }}
                     >
-                      {qc === "all" ? "Alles" : qc}
+                      {qc}
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* --- Кнопка START --- */}
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStartGame}
-              >
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStartGame}>
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка для запуску туторіалу */}
+        {/* Кнопка туторіалу */}
         {settingsOpen && (
-          <button
-            className={styles.tutorialButton}
-            data-tutorial="tutorialStartButton"
-            onClick={() => setShowTutorial(true)}
-          >
+          <button data-tutorial="tutorialStartButton" className={styles.tutorialButton} onClick={() => setShowTutorial(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -556,118 +472,118 @@ function TermMatchingGameContent() {
           </button>
         )}
 
-        {/* Якщо немає термінів (фільтр занадто суворий) */}
+        {/* Відображення повідомлення, якщо термінів немає */}
         {!settingsOpen && !gameFinished && pairs.length === 0 && (
           <div className={styles.noQuestionsMessage}>
-            <p>Für diese Einstellungen sind keine Begriffe vorhanden.</p>
+            <p>Keine Begriffe für diese Einstellungen.</p>
           </div>
         )}
 
-        {/* Ігровий інтерфейс (якщо є пари і гра не завершена) */}
+        {/* Гра */}
         {!settingsOpen && !gameFinished && pairs.length > 0 && (
-          <div className={styles.gameContainer}>
-            {/* Ліва колонка */}
-            <div className={styles.column} data-tutorial="termsColumn">
-              {leftColumn.map((item) => {
-                const matched = matchedPairs[item.id] ? styles.correct : "";
-                const selected = selectedLeft?.id === item.id ? styles.selected : "";
-                const isWrong = item.id === wrongLeft ? styles.wrong : "";
-
-                return (
-                  <div
-                    key={item.id}
-                    className={`${styles.answerTile} ${matched} ${selected} ${isWrong}`}
-                    onClick={() => {
-                      if (!matchedPairs[item.id]) {
-                        handleLeftSelect(item);
-                      }
-                    }}
-                  >
-                    {item.leftText}
-                  </div>
-                );
-              })}
+          <>
+            <div className={styles.progress}>
+              Seite {pageIndex + 1} / {pageCount} &nbsp;({displayedLeft.length} Begriffe)
             </div>
 
-            {/* Права колонка */}
-            <div className={styles.column} data-tutorial="definitionsColumn">
-              {rightColumn.map((item) => {
-                const matched = matchedPairs[item.id] ? styles.correct : "";
-                const selected = selectedRight?.id === item.id ? styles.selected : "";
-                const isWrong = item.id === wrongRight ? styles.wrong : "";
+            <div className={styles.gameContainer}>
+              {/* Ліва колонка */}
+              <div className={styles.column} data-tutorial="termsColumn">
+                {displayedLeft.map((item) => {
+                  const matched = matchedPairs[item.id] ? styles.correct : "";
+                  const isWrong = wrongLeft === item.id ? styles.wrong : "";
+                  const isSelected = selectedLeft?.id === item.id ? styles.selected : "";
+                  return (
+                    <div
+                      key={item.id}
+                      className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
+                      onClick={() => {
+                        if (!matchedPairs[item.id]) handleLeftSelect(item);
+                      }}
+                    >
+                      {item.leftText}
+                    </div>
+                  );
+                })}
+              </div>
 
-                return (
-                  <div
-                    key={item.id}
-                    className={`${styles.answerTile} ${matched} ${selected} ${isWrong}`}
-                    onClick={() => {
-                      if (!matchedPairs[item.id]) {
-                        handleRightSelect(item);
-                      }
-                    }}
-                  >
-                    {item.rightText}
-                  </div>
-                );
-              })}
+              {/* Права колонка */}
+              <div className={styles.column} data-tutorial="definitionsColumn">
+                {displayedRight.map((item) => {
+                  const matched = matchedPairs[item.id] ? styles.correct : "";
+                  const isWrong = wrongRight === item.id ? styles.wrong : "";
+                  const isSelected = selectedRight?.id === item.id ? styles.selected : "";
+                  return (
+                    <div
+                      key={item.id}
+                      className={`${styles.answerTile} ${matched} ${isWrong} ${isSelected}`}
+                      onClick={() => {
+                        if (!matchedPairs[item.id]) handleRightSelect(item);
+                      }}
+                    >
+                      {item.rightText}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+
+            {/* Кнопки пагінації */}
+            <div className={styles.navigationContainer}>
+              {pageIndex > 0 && (
+                <button className={styles.navButton} onClick={handlePrevPage}>
+                  <FaArrowLeft /> 
+                </button>
+              )}
+              {pageIndex < pageCount - 1 && (
+                <button className={styles.navButton} onClick={handleNextPage}>
+                   <FaArrowRight />
+                </button>
+              )}
+            </div>
+          </>
         )}
 
-        {/* Якщо гра завершена */}
+        {/* Результати гри */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
-              <button
-                className={styles.modalCloseButton}
-                onClick={() => setGameFinished(false)}
-              >
+              <button className={styles.modalCloseButton} onClick={handleCloseResults}>
                 ×
               </button>
               <h3>Ergebnisse</h3>
-              <p>
-                Sie haben alle Paare gefunden! ({correctMatchesCount} / {pairs.length})
-              </p>
+              <p>Alle Paare gefunden: {correctMatchesCount} / {pairs.length}</p>
               <p>Dauer: {sessionDuration} Sekunden</p>
-              <button
-                className={styles.startButton}
-                onClick={() => {
-                  setSettingsOpen(true);
-                  setGameFinished(false);
-                }}
-              >
+              <button className={styles.startButton} onClick={() => {
+                setSettingsOpen(true);
+                setGameFinished(false);
+              }}>
                 Neue Runde
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка "Налаштування" (праворуч внизу), якщо вже закрили модалку */}
+        {/* Кнопка налаштувань */}
         {(!settingsOpen || window.innerWidth > 768) && !gameFinished && (
           <div className={styles.bottomRightSettings}>
-            <button
-              className={styles.settingsButton}
-              onClick={() => {
-                if (requireAuth()) return;
-                setSettingsOpen(true);
-              }}
-            >
+            <button className={styles.settingsButton} onClick={() => {
+              if (requireAuth()) return;
+              setSettingsOpen(true);
+            }}>
               <FaCog />
             </button>
           </div>
         )}
       </div>
 
-      {/* Modal Авторизації */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-      {/* Туторіал */}
       <TermMatchingGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
     </MainLayout>
   );
 }
 
-// Обгортка в TermStatusProvider (як ElectiveLanguageGame)
 export default function TermMatchingGame() {
   return (
     <TermStatusProvider>

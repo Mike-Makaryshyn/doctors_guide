@@ -1,4 +1,3 @@
-/* ============== TermMatchingGame.module.scss ============== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .electiveLanguageGame {
@@ -8,13 +7,13 @@
   position: relative;
 }
 
-/* --- Кнопка Назад (фіксована внизу) --- */
+/* --- Кнопка "Назад" --- */
 .main_menu_back {
   position: fixed;
   bottom: 16px;
   left: 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -31,11 +30,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   transform: scale(1.1);
 }
+
 .main_menu_back:active {
   transform: scale(0.95);
 }
 
-/* --- Модалка Оверлей --- */
+/* --- Модальне вікно (Overlay) --- */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@
   align-items: center;
 }
 
-/* --- Desktop-Modal --- */
+/* --- Desktop Popup --- */
 .popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
@@ -62,7 +62,7 @@
   right: 45px;
 }
 
-/* --- Mobile-Modal --- */
+/* --- Mobile Popup --- */
 .popupMobile {
   background: #fff;
   padding: 25px 20px 20px;
@@ -107,12 +107,12 @@
   padding: 5px;
   border-radius: 50%;
 }
+
 .modalCloseButton:hover {
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
 }
 
-/* --- Заголовок у модалці --- */
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
@@ -120,14 +120,13 @@
   margin-bottom: 12px;
 }
 
-/* Поле/контейнер підпису */
 .modalField {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
 
-/* Кнопка Старт */
+/* --- Кнопка Start --- */
 .startButton {
   display: inline-block;
   width: 100%;
@@ -141,131 +140,154 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   transition: all 0.3s ease;
 }
+
 .startButton:hover {
   background: linear-gradient(135deg, #66bb6a, #009900);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
+
 .startButton:active {
   transform: translateY(1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Контейнер з грою --- */
-.gameContainer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 30px; /* Відстань між колонками */
+/* --- Стилі гри (без змін) --- */
+.progress {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Кожна колонка */
+.gameContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
 .column {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Плитка */
 .answerTile {
-  width: 240px;
-  min-height: 50px;
-  padding: 15px;
-  border-radius: 8px;
-  background: #ffffff;
-  font-size: 18px;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
   font-weight: 600;
   color: #013b6e;
   text-align: center;
-  border: 2px solid #eee;
+  padding: 6px 8px;
+  line-height: 1.3;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 75px; /* Було 54px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .answerTile:hover {
   transform: scale(1.03);
-  background: #e0e0e0;
+  background: #f1f1f1;
 }
 
-/* Якщо правильно (зелений фон) */
 .correct {
   background: #4caf50 !important;
-  color: #ffffff !important;
-  border: 2px solid #4caf50;
+  color: #fff !important;
   animation: pulseCorrect 0.3s ease-in-out;
 }
+
 @keyframes pulseCorrect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.06);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 
-/* Якщо тимчасово невірно (червоний) */
 .wrong {
   background: #f44336 !important;
-  color: #ffffff !important;
-  border: 2px solid #f44336;
-  animation: shakeAnimation 0.5s ease-in-out;
+  color: #fff !important;
+  animation: shakeWrong 0.4s ease-in-out;
 }
-@keyframes shakeAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-4px);
-  }
-  40% {
-    transform: translateX(4px);
-  }
-  60% {
-    transform: translateX(-4px);
-  }
-  80% {
-    transform: translateX(4px);
-  }
-  100% {
-    transform: translateX(0);
+
+@keyframes shakeWrong {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+}
+
+.gameContainer {
+  .selected {
+    background: #ffeeba !important;
+    color: #013b6e !important;
   }
 }
 
-/* Якщо вибрали (жовтий) */
-.selected {
-  background: #ffeeba !important;
-  color: #333;
+/* --- Пагінація --- */
+.navigationContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* Мобільна адаптація */
-@media (max-width: 768px) {
-  .answerTile {
-    width: 170px;
-    font-size: 16px;
-    padding: 12px;
-  }
-  .gameContainer {
-    gap: 10px;
-  }
+.navButton {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.2s;
 }
 
-@media (max-width: 480px) {
-  .answerTile {
-    width: 140px;
-    font-size: 14px;
-    padding: 10px;
-  }
+.navButton:hover {
+  background: #66bb6a;
+  transform: scale(1.05);
 }
 
-/* --- Container для Region,Filter,Category,Edit --- */
+/* --- Контейнер для вибору кількості термінів --- */
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3sease;
+  text-align: center;
+}
+
+.questionCountIcon.selected {
+  background: #013b6e;
+  color: #fff;
+}
+
+/* --- Контейнери для регіону, фільтру, категорії --- */
 .row {
   display: flex;
   justify-content: space-around;
@@ -275,8 +297,7 @@
 
 .regionColumn,
 .filterColumn,
-.categoryColumn,
-.editColumn {
+.categoryColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,28 +312,27 @@
 
 .selectWrapper {
   position: relative;
-  display: inline-block;
   width: 50px;
   height: 50px;
 }
 
-.regionCell {
+.regionCell,
+.filterCell {
   width: 50px;
   height: 50px;
   line-height: 50px;
   border-radius: 10px;
-  background: #fff;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
 }
 
-/* Category */
 .categoryCell {
   width: 50px;
   height: 50px;
@@ -327,13 +347,15 @@
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   pointer-events: none;
 }
+
+
+
 .categoryIcon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   filter: invert(100%);
 }
 
-/* Нативний select (прозорий) */
 .nativeSelect {
   position: absolute;
   top: 0;
@@ -344,190 +366,110 @@
   cursor: pointer;
 }
 
-/* Edit Toggle */
-.editToggleButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  border: none;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  font-size: 18px;
-  color: #013b6e;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-/* Quiz Count Container */
-.questionCountContainer {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-.questionCountIcon {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.questionCountIcon.selected {
-  background: #013b6e;
-  color: #fff;
-}
-
-/* Кнопка налаштувань (внизу праворуч) */
-.bottomRightSettings {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 3500;
-}
-.settingsButton {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  margin: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.settingsButton:hover {
-  transform: scale(1.1);
-}
-
-/* Результати */
-.resultsOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 3000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.resultsTile {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-.resultsTile .modalCloseButton {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  border: none;
-  background: transparent;
-  font-size: 24px;
-  color: #ed0a0a;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.resultsTile .modalCloseButton:hover {
-  transform: scale(0.9);
-  background-color: rgba(237, 10, 10, 0);
-}
-.resultsTile h3 {
-  margin-top: 0;
-  color: #013b6e;
-  font-size: 20px;
-}
-.resultsTile p {
-  color: #013b6e;
-  margin: 8px 0;
-  font-size: 15px;
-}
-.restartButton {
-  @extend .startButton;
-  margin-top: 15px;
-}
-
-/* Language Swap Container (німецька / інша мова) */
+/* --- Language Swap --- */
 .languageSwapContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
 }
 
-/* .languageCellFixed / .languageCell / .languageSelect */
 .languageCellFixed {
   width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   height: 50px;
-  border-radius: 8px;
-  background: #fff;
+  line-height: 31px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
-  box-shadow: 3px 3px 6px #666666, -3px -3px 6px #ffffff;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.languageCell {
+  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  height: 50px;
+  line-height: 31px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
+
+/* Für die Selectbox */
 .languageSelect {
+  @extend .languageCell;
   width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   height: 50px;
-  border-radius: 8px;
-  background: #fff;
+  line-height: 31px;
+  background: #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
-  box-shadow: 3px 3px 6px #666666, -3px -3px 6px #ffffff;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
-.languageSelect::after {
-  content: "▼";
-  font-size: 12px;
-  color: #013b6e;
-  margin-left: 8px;
-}
+
+/* --- Кнопка SWAP --- */
 .swapButton {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   background: #ffffff;
   border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 15px;
 }
+
 .swapButton:hover {
   background: #4caf50;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transform: rotate(180deg) scale(1.1);
 }
 
-/* Туторіал-кнопка (?) */
+.swapButton:active {
+  transform: scale(0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Кнопка туторіалу --- */
 .tutorialButton {
   position: absolute;
   top: -20px;
-  right: -8px;
+  right: -9px;
   width: 45px;
   height: 45px;
   background: none;
@@ -539,9 +481,91 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
 }
+
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(0, 255, 0, 0.15);
+  background: rgba(76, 175, 79, 0.2);
+}
+
+/* --- Результати --- */
+.resultsOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultsTile {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Кнопка налаштувань (праворуч внизу) --- */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3500;
+}
+
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* --- Повідомлення, якщо немає термінів --- */
+.noQuestionsMessage {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .gameContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .answerTile {
+    width: 48%;
+    font-size: 12px; /* Трохи зменшуємо шрифт */
+    min-height: 70px; /* Збільшуємо висоту плиток */
+    padding: 10px; /* Додаємо більше місця для тексту */
+    line-height: 1.4;
+  }
 }
