@@ -113,6 +113,12 @@ function TermMatchingGameContent() {
   const [isGermanLeft, setIsGermanLeft] = useState(true);
   const [electiveLang, setElectiveLang] = useState("la");
 
+  // Визначення мов для колонок:
+  // ліва колонка завжди відображає визначення на мові, що базується на isGermanLeft,
+  // права колонка – визначення на вибраній іншій мові.
+  const leftLang = isGermanLeft ? "de" : electiveLang;
+  const rightLang = isGermanLeft ? electiveLang : "de";
+
   // Кількість термінів
   const [questionCount, setQuestionCount] = useState(10);
 
@@ -182,14 +188,11 @@ function TermMatchingGameContent() {
     });
     setShownCounts(newShownCounts);
 
-    // Формування пар (зліва – базова мова, справа – обрана) з урахуванням виправлення для латини
-    const source = isGermanLeft ? "de" : electiveLang;
-    const target = isGermanLeft ? electiveLang : "de";
-
+    // Формування пар: ліва колонка – визначення за leftLang, права – визначення за rightLang
     const newPairs = selected.map((term) => ({
       id: term.id,
-      leftText: getTermText(term, source),
-      rightText: getTermText(term, target),
+      leftText: getTermText(term, leftLang),
+      rightText: getTermText(term, rightLang),
       original: term,
     }));
 

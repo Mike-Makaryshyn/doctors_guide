@@ -23416,7 +23416,7 @@ export const medicalTerms = [
   {
     "id": 649,
     "lat": "Mumps (der)",
-    "de": "der Mumps",
+    "de": "der Ziegenpeter",
     "en": "Mumps",
     "uk": "Свинка",
     "ru": "Свинка",
