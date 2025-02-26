@@ -37389,8 +37389,8 @@ export const medicalTerms = [
       "Schleswig-Holstein",
       "Thüringen"
     ],
-    "sentence": "Eine Entzündung der Luftröhre, die sich durch Symptome wie Husten, Halsschmerzen und Atembeschwerden manifestiert, wird in der Regel je nach Ätiologie und Symptomatik mit entzündungshemmenden Medikamenten oder Antibiotika behandelt,",
-    "answer": "die Luftröhrenentzündung"
+    "sentence": "{BLANK}, die sich durch Symptome wie Husten, Halsschmerzen und Atembeschwerden manifestiert, wird in der Regel je nach Ätiologie und Symptomatik mit entzündungshemmenden Medikamenten oder Antibiotika behandelt,",
+    "answer": "Die Luftröhrenentzündung"
   },
   {
     "id": 1059,

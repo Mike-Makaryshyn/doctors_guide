@@ -479,6 +479,7 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
+                      data-tutorial="regionSelect"
                       value={region}
                       onChange={(e) => setRegion(e.target.value)}
                     >
@@ -503,6 +504,7 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
+                      data-tutorial="filterSelect"
                       value={filterMode}
                       onChange={(e) => setFilterMode(e.target.value)}
                     >
@@ -530,6 +532,7 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
+                      data-tutorial="categorySelect"
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
                     >
@@ -552,6 +555,7 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
+                      data-tutorial="playersSelect"
                       value={playersCount}
                       onChange={(e) => setPlayersCount(Number(e.target.value))}
                     >
@@ -568,7 +572,7 @@ function FortuneWheelGameContent() {
               {/* Anzeige-Modus */}
               <div className={styles.modalField}>
                 <label>Anzeige-Modus:</label>
-                <div className={styles.displayModeContainer}>
+                <div className={styles.displayModeContainer} data-tutorial="displayModeSelect">
                   {displayModeOptions.map((opt) => (
                     <div
                       key={opt.value}
@@ -586,7 +590,7 @@ function FortuneWheelGameContent() {
               {/* Anzahl der Begriffe */}
               <div className={styles.modalField}>
                 <label>Anzahl der Begriffe:</label>
-                <div className={styles.questionCountContainer}>
+                <div className={styles.questionCountContainer} data-tutorial="questionCountSelect">
                   {questionCountOptions.map((qc) => (
                     <div
                       key={qc}
@@ -601,7 +605,11 @@ function FortuneWheelGameContent() {
                 </div>
               </div>
 
-              <button className={styles.startButton} onClick={handleStart}>
+              <button
+                className={styles.startButton}
+                data-tutorial="startButton"
+                onClick={handleStart}
+              >
                 Start
               </button>
             </div>
@@ -612,7 +620,7 @@ function FortuneWheelGameContent() {
 
         {/* Das Rad (im Container für Responsiveness) */}
         {!settingsOpen && !gameOver && segments.length > 0 && (
-          <div className={styles.wheelContainer}>
+          <div className={styles.wheelContainer} data-tutorial="spinButton">
             <CustomWheel
               segments={segments}
               size={wheelSize}

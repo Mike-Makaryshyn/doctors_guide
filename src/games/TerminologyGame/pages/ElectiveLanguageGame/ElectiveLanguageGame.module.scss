@@ -174,7 +174,7 @@
 }
 
 .questionSection h2 {
-  font-size: 28px;
+  font-size: 26px;
   color: #013b6e;
   margin-bottom: 20px;
   padding: 10px;
@@ -200,7 +200,7 @@
   background: #ffffff;
   transition: transform 0.2s ease, background 0.3s ease;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   color: #013b6e;
   text-align: center;
@@ -554,7 +554,7 @@
 
 
 .swapButton:hover {
-  background: #4caf50;
+  background: #4caf4f00;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transform: rotate(180deg) scale(1.1);
 }
