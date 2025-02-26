@@ -26863,7 +26863,7 @@ export const medicalTerms = [
       "Schleswig-Holstein",
       "Thüringen"
     ],
-    "sentence": "Ein dauerhaft niedriger Blutdruck kann bei Patienten zu Schwindel, Schwäche und Müdigkeit führen und erfordert eine sorgfältige Untersuchung, um zugrunde liegende pathologische Ursachen auszuschließen oder zu behandeln.",
+    "sentence": "Eine {BLANK} kann bei Patienten zu Schwindel, Schwäche und Müdigkeit führen und erfordert eine sorgfältige Untersuchung, um zugrunde liegende pathologische Ursachen auszuschließen oder zu behandeln.",
     "answer": "Hypotonie"
   },
   {

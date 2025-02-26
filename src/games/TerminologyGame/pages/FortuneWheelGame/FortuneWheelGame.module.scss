@@ -418,7 +418,12 @@
   border: none;
   box-shadow: none;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  z-index: 3000;
+  z-index: 10000;
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
 }
 
 /* Beispielhafter SCSS/CSS-Ausschnitt mit Overflow-Hiding: */
@@ -449,10 +454,7 @@ body {
 
 /* Rest deiner Styles unverändert oder nur minimal angepasst */
 /* ... */
-.tutorialButton:hover {
-  transform: scale(1.1);
-  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
-}
+
 .spinButton {
   animation: pulse 2s infinite;
 }
@@ -496,20 +498,23 @@ body {
     max-width: 400px;
     width: 90%;
   }
-  
   .modalCloseButton {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    background: transparent;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: #ed0a0a;
     transition: transform 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
   }
+  
   .modalCloseButton:hover {
     transform: scale(0.9);
+    background-color: rgba(237, 10, 10, 0);
   }
   /* Ergebnismodal-Overlay */
 .resultsOverlay {
