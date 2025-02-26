@@ -1,3 +1,4 @@
+/* ============== TermMatchingGame.module.scss ============== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .electiveLanguageGame {
@@ -7,7 +8,7 @@
   position: relative;
 }
 
-/* --- Back-Button --- */
+/* --- Кнопка Назад (фіксована внизу) --- */
 .main_menu_back {
   position: fixed;
   bottom: 16px;
@@ -30,12 +31,11 @@
   background-color: rgba(0, 0, 0, 0.9);
   transform: scale(1.1);
 }
-
 .main_menu_back:active {
   transform: scale(0.95);
 }
 
-/* Modal Overlay */
+/* --- Модалка Оверлей --- */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@
   align-items: center;
 }
 
-/* Desktop-Modal */
+/* --- Desktop-Modal --- */
 .popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
@@ -62,7 +62,7 @@
   right: 45px;
 }
 
-/* Mobile-Modal */
+/* --- Mobile-Modal --- */
 .popupMobile {
   background: #fff;
   padding: 25px 20px 20px;
@@ -107,18 +107,12 @@
   padding: 5px;
   border-radius: 50%;
 }
-
 .modalCloseButton:hover {
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
 }
 
-.modalField {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
+/* --- Заголовок у модалці --- */
 .modalTitle {
   margin-top: 0;
   font-size: 20px;
@@ -126,7 +120,14 @@
   margin-bottom: 12px;
 }
 
-/* Start-Button (wird auch für "Neues Spiel starten" verwendet) */
+/* Поле/контейнер підпису */
+.modalField {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Кнопка Старт */
 .startButton {
   display: inline-block;
   width: 100%;
@@ -144,147 +145,127 @@
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .startButton:hover {
   background: linear-gradient(135deg, #66bb6a, #009900);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
-
 .startButton:active {
   transform: translateY(1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* SPIEL-ANSICHT */
-.progress {
-  margin-bottom: 50px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
+/* --- Контейнер з грою --- */
 .gameContainer {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Відстань між колонками */
 }
 
-/* Frage-Box */
-.questionSection {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.questionSection h2 {
-  font-size: 28px;
-  color: #013b6e;
-  margin-bottom: 20px;
-  padding: 10px;
-  background: #f0f0f0;
-  border-radius: 8px;
-}
-
-/* Antwort-Buttons */
-.optionsContainer {
+/* Кожна колонка */
+.column {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
+/* Плитка */
 .answerTile {
-  width: 100%;
-  max-width: 300px;
-  padding: 15px;
+  width: 240px;
   min-height: 50px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 8px;
   background: #ffffff;
-  transition: transform 0.2s ease, background 0.3s ease;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
   color: #013b6e;
   text-align: center;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
   overflow: hidden;
-  border: none;
 }
 
-.answerTile:hover:enabled {
-  transform: scale(1.05);
-  background: rgb(209, 195, 195);
+.answerTile:hover {
+  transform: scale(1.03);
+  background: #e0e0e0;
 }
 
+/* Якщо правильно (зелений фон) */
 .correct {
   background: #4caf50 !important;
-  color: #fff;
-  font-weight: bold;
-  animation: explodeAnimation 0.3s ease-in-out;
+  color: #ffffff !important;
+  border: 2px solid #4caf50;
+  animation: pulseCorrect 0.3s ease-in-out;
 }
-
-.wrong {
-  background: #f44336 !important;
-  color: #fff;
-  font-weight: bold;
-  animation: shakeAnimation 0.3s ease-in-out;
-}
-
-@keyframes explodeAnimation {
+@keyframes pulseCorrect {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.06);
   }
   100% {
     transform: scale(1);
   }
 }
 
+/* Якщо тимчасово невірно (червоний) */
+.wrong {
+  background: #f44336 !important;
+  color: #ffffff !important;
+  border: 2px solid #f44336;
+  animation: shakeAnimation 0.5s ease-in-out;
+}
 @keyframes shakeAnimation {
   0% {
     transform: translateX(0);
   }
-  25% {
-    transform: translateX(-5px);
+  20% {
+    transform: translateX(-4px);
   }
-  50% {
-    transform: translateX(5px);
+  40% {
+    transform: translateX(4px);
   }
-  75% {
-    transform: translateX(-5px);
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
   }
   100% {
     transform: translateX(0);
   }
 }
 
-/* Frage-Zähler */
-.questionCountContainer {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+/* Якщо вибрали (жовтий) */
+.selected {
+  background: #ffeeba !important;
+  color: #333;
 }
 
-.questionCountIcon {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .answerTile {
+    width: 170px;
+    font-size: 16px;
+    padding: 12px;
+  }
+  .gameContainer {
+    gap: 10px;
+  }
 }
 
-.questionCountIcon.selected {
-  background: #013b6e;
-  color: #fff;
+@media (max-width: 480px) {
+  .answerTile {
+    width: 140px;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
-/* Zeile: Region, Filter, Kategorie, Bearbeiten */
+/* --- Container для Region,Filter,Category,Edit --- */
 .row {
   display: flex;
   justify-content: space-around;
@@ -315,23 +296,23 @@
   height: 50px;
 }
 
-.regionCell,
-.filterCell {
+.regionCell {
   width: 50px;
   height: 50px;
   line-height: 50px;
   border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  background: #fff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
 }
 
+/* Category */
 .categoryCell {
   width: 50px;
   height: 50px;
@@ -346,13 +327,13 @@
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   pointer-events: none;
 }
-
 .categoryIcon {
   width: 30px;
   height: 30px;
   filter: invert(100%);
 }
 
+/* Нативний select (прозорий) */
 .nativeSelect {
   position: absolute;
   top: 0;
@@ -363,68 +344,52 @@
   cursor: pointer;
 }
 
+/* Edit Toggle */
 .editToggleButton {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   background: #ffffff;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  font-size: 18px;
+  color: #013b6e;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Quiz Count Container */
+.questionCountContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.questionCountIcon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
   box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
-  font-size: 18px;
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-top: -2px; /* Vertikale Ausrichtung */
-  align-self: center;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-
-.editToggleButton {
-  line-height: 0; /* Icon zentriert */
-}
-
-.editToggleButton:hover {
-  background: #ffffff;
-  color: #013b6e;
-}
-
-.editToggleButton.selectedEdit {
+.questionCountIcon.selected {
   background: #013b6e;
   color: #fff;
 }
 
-/* Navigation */
-.navigationContainer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.navButton {
-  padding: 10px;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-  font-size: 16px;
-}
-
-/* Einstellungen-Button */
+/* Кнопка налаштувань (внизу праворуч) */
 .bottomRightSettings {
   position: fixed;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   z-index: 3500;
 }
-
 .settingsButton {
   background-color: #4caf50;
   color: #fff;
@@ -432,18 +397,18 @@
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  margin: 10px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s, transform 0.2s;
 }
-
 .settingsButton:hover {
   transform: scale(1.1);
 }
 
-/* Ergebnismodal-Overlay */
+/* Результати */
 .resultsOverlay {
   position: fixed;
   top: 0;
@@ -456,8 +421,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/* Ergebnis-Kachel */
 .resultsTile {
   background: #fff;
   padding: 20px;
@@ -468,189 +431,117 @@
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-
-/* Schließ-Button im Ergebnismodal */
 .resultsTile .modalCloseButton {
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: transparent;
   border: none;
+  background: transparent;
   font-size: 24px;
-  cursor: pointer;
   color: #ed0a0a;
-  transition: transform 0.2s ease;
   padding: 5px;
   border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-
 .resultsTile .modalCloseButton:hover {
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
 }
-
-/* Text im Ergebnismodal */
 .resultsTile h3 {
   margin-top: 0;
   color: #013b6e;
   font-size: 20px;
 }
-
-.resultsTile p,
-.resultsTile h4,
-.resultsTile li {
+.resultsTile p {
   color: #013b6e;
-  font-size: 14px;
+  margin: 8px 0;
+  font-size: 15px;
 }
-
-/* Button "Neues Spiel starten" */
 .restartButton {
   @extend .startButton;
   margin-top: 15px;
 }
 
-/* Container für Sprachen */
-.languageCellFixed {
-  @extend .languageCell;
-}
-
-/* Einheitliche Styles für die Sprachzellen (Deutsch/Select) */
-.languageCellFixed,
-.languageSelect {
-  width: 120px; /* Breite anpassen */
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 8px;
-  /* white-space: nowrap; // falls du sehr lange Labels hast */
-}
-
-/* Flex-Container, in dem links und rechts die Sprachen + in der Mitte der Swap-Button sitzen */
+/* Language Swap Container (німецька / інша мова) */
 .languageSwapContainer {
   display: flex;
-  align-items: center;      /* Vertikal mittig */
-  justify-content: center;  /* Horizontal zentriert */
-  gap: 10px;                /* Abstand zwischen den Elementen */
-}
-
-/* Der Button selbst */
-.swapButton {
-  background: #ffffff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  flex-shrink: 0;
-  margin-left: 15px; 
+  gap: 10px;
+  margin-top: 10px;
 }
 
-
-.swapButton:hover {
-  background: #4caf50;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transform: rotate(180deg) scale(1.1);
-}
-
-.swapButton:active {
-  transform: scale(0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.swapIcon {
-  font-size: 20px;
-  color: #013b6e;
-  transition: transform 0.3s ease;
-}
-
-/* Tutorial-Button */
-.tutorialButton {
-  position: absolute;
-  top: -20px;
-  right: -9px;
-  width: 45px;
-  height: 45px;
-  background: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  box-shadow: none;
-  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  z-index: 3000;
-}
-
-.tutorialButton:hover {
-  transform: scale(1.1);
-  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
-}
-
-/* Basisklasse für .languageCell */
-.languageCell {
+/* .languageCellFixed / .languageCell / .languageSelect */
+.languageCellFixed {
   width: 120px;
-  min-width: 120px;
-  max-width: 120px;
   height: 50px;
-  line-height: 31px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  border-radius: 8px;
+  background: #fff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
+  box-shadow: 3px 3px 6px #666666, -3px -3px 6px #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 0 0 auto;
 }
-
-/* Für die Selectbox */
 .languageSelect {
-  @extend .languageCell;
   width: 120px;
-  min-width: 120px;
-  max-width: 120px;
   height: 50px;
-  line-height: 31px;
-  background: #ffffff;
+  border-radius: 8px;
+  background: #fff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 0 0 auto;
+  box-shadow: 3px 3px 6px #666666, -3px -3px 6px #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-
-/* Kleiner Pfeil in der Select-Box */
 .languageSelect::after {
   content: "▼";
   font-size: 12px;
   color: #013b6e;
   margin-left: 8px;
 }
+.swapButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swapButton:hover {
+  background: #4caf50;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: rotate(180deg) scale(1.1);
+}
 
-/* Responsive */
-@media (max-width: 480px) {
-  .languageCell,
-  .languageCellFixed,
-  .languageSelect {
-    width: 80px;
-    font-size: 12px;
-  }
+/* Туторіал-кнопка (?) */
+.tutorialButton {
+  position: absolute;
+  top: -20px;
+  right: -8px;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(0, 255, 0, 0.15);
 }

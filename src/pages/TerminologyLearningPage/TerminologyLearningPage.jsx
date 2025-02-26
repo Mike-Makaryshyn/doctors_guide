@@ -10,7 +10,7 @@ import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
 import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 import translatorBg from "../../assets/translator-bg.jpg";
 import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
-import matchingGameBg from "../../assets/medical-terminology-bg.jpg"; // <-- ДОДАНО
+import matchingGameBg from "../../assets/matching-game-bg.jpg"; // <-- ДОДАНО
 
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
