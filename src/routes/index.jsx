@@ -118,7 +118,9 @@ const RegionalChatsPage = React.lazy(() =>
 const AllMedicationsPage = React.lazy(() =>
   import("../pages/AllMedicationsPage/AllMedicationsPage")
 );
-
+const TermMatchingGame = React.lazy(() =>
+  import("../games/TerminologyGame/pages/TermMatchingGame/TermMatchingGame.jsx")
+);
 const NavigateToMap = () => (
   <Link to={pathList.custom_map.path}></Link>
 );
@@ -159,6 +161,10 @@ export default function Routers() {
           path={pathList.gleichwertigkeit.path}
           element={<GleichwertigkeitPage />}
         />
+        <Route
+  path={pathList.term_matching.path}
+  element={<TermMatchingGame />}
+/>
         
         <Route path={pathList.notar_list.path} element={<NotarListPage />} />
         <Route

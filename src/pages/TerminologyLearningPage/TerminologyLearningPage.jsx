@@ -2,12 +2,16 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./TerminologyLearningPage.module.scss";
+
+// Зображення
 import flashcardBg from "../../assets/flashcard-bg.jpg";
 import simpleChoiceBg from "../../assets/simple-choice-bg.jpg";
 import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
 import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 import translatorBg from "../../assets/translator-bg.jpg";
-import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg"; // Нове зображення для Medical Terminology
+import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
+import matchingGameBg from "../../assets/medical-terminology-bg.jpg"; // <-- ДОДАНО
+
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
 
@@ -30,7 +34,7 @@ const TerminologyLearningPage = () => {
         </button>
 
         <div className={styles.gamesGrid}>
-          {/* Нова плитка: Medical Terminology */}
+          {/* 1. Medical Terminology */}
           <Link
             to="/all-medical-terminology"
             className={styles.gameTile}
@@ -43,7 +47,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 1: Flashcard */}
+          {/* 2. Flashcard */}
           <Link
             to={`/flashcard-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -57,7 +61,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 2: Simple Choice */}
+          {/* 3. Simple Choice */}
           <Link
             to={`/simple-choice-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -70,7 +74,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 4: Fill In Blank Game */}
+          {/* 4. Fill In Blank Game */}
           <Link
             to={`${pathList.fill_in_blank.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -91,7 +95,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 5: Translator */}
+          {/* 5. Translator (Elective Language) */}
           <Link
             to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -106,7 +110,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* Плитка 3: Fortune Wheel */}
+          {/* 6. Fortune Wheel */}
           <Link
             to={`${pathList.fortune_wheel.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
             className={styles.gameTile}
@@ -116,6 +120,19 @@ const TerminologyLearningPage = () => {
               <div className={styles.fortuneWheelContainer}>
                 <div className={styles.spinningCircle}></div>
                 <div className={styles.fortuneTitle}>Fortune Wheel</div>
+              </div>
+            </div>
+          </Link>
+
+          {/* 7. NEW: Term Matching Game */}
+          <Link
+            to={`${pathList.term_matching.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${matchingGameBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.rockingCard}>
+                <div className={styles.tileTitle}>Term Matching Game</div>
               </div>
             </div>
           </Link>
