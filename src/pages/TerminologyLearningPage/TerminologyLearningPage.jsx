@@ -10,7 +10,7 @@ import fortuneWheelBg from "../../assets/fortune-wheel-bg.jpg";
 import fillInBlankBg from "../../assets/fill-in-blank-bg.jpg";
 import translatorBg from "../../assets/translator-bg.jpg";
 import medicalTerminologyBg from "../../assets/medical-terminology-bg.jpg";
-import matchingGameBg from "../../assets/matching-game-bg.jpg"; // <-- ДОДАНО
+import matchingGameBg from "../../assets/matching-game-bg.jpg";
 
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { pathList } from "../../routes/path";
@@ -131,8 +131,12 @@ const TerminologyLearningPage = () => {
             style={{ backgroundImage: `url(${matchingGameBg})` }}
           >
             <div className={styles.innerTile}>
-              <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>Term Matching Game</div>
+              {/* Контейнер з 4-ма частинами (ефект "кубика-рубика") */}
+              <div className={styles.termMatchingContainer}>
+                <div className={styles.piece1}>Term</div>
+                <div className={styles.piece2}>Match</div>
+                <div className={styles.piece3}>ing</div>
+                <div className={styles.piece4}>Game</div>
               </div>
             </div>
           </Link>

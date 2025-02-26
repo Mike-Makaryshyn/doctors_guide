@@ -80,7 +80,7 @@
 @keyframes popupBounce {
   0% {
     transform: translateY(100%);
-    opacity: 0;
+    opacity: 1;
   }
   60% {
     transform: translateY(-10px);
@@ -366,13 +366,8 @@
   cursor: pointer;
 }
 
-/* --- Language Swap --- */
-.languageSwapContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
+
+
 
 .languageCellFixed {
   width: 120px;
@@ -394,6 +389,24 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   flex: 0 0 auto;
+}
+.languageCellFixed, .languageCell {
+  width: 120px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .languageCell {
@@ -438,7 +451,14 @@
   flex: 0 0 auto;
 }
 
-/* --- Кнопка SWAP --- */
+.languageSwapContainer {
+  display: flex;
+  align-items: center;      /* Vertikal mittig */
+  justify-content: center;  /* Horizontal zentriert */
+  gap: 10px;                /* Abstand zwischen den Elementen */
+}
+
+/* Der Button selbst */
 .swapButton {
   background: #ffffff;
   border: none;
@@ -449,10 +469,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   flex-shrink: 0;
-  margin-left: 15px;
+  margin-left: 15px; 
 }
+
 
 .swapButton:hover {
   background: #4caf50;
@@ -464,6 +486,13 @@
   transform: scale(0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.swapIcon {
+  font-size: 20px;
+  color: #013b6e;
+  transition: transform 0.3s ease;
+}
+
 
 /* --- Кнопка туторіалу --- */
 .tutorialButton {

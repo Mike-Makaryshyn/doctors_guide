@@ -405,8 +405,8 @@ function TermMatchingGameContent() {
                     )}
                   </div>
                   <button className={styles.swapButton} onClick={() => setIsGermanLeft((prev) => !prev)}>
-                    <FaExchangeAlt />
-                  </button>
+  <FaExchangeAlt className={styles.swapIcon} />
+</button>
                   <div className={styles.languageCellFixed}>
                     {isGermanLeft ? (
                       <select
