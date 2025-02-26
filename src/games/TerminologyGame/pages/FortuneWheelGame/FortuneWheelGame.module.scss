@@ -439,8 +439,8 @@ body {
 
 .fortuneWheelGame {
   /* Nimmt gesamten Bildschirm ein */
-  width: 100vw;
-  height: 100vh;
+  width: 70vw;
+  height: 70vh;
   position: relative;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -482,21 +482,91 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5000;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3000;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
   
-  .resultsBox {
+  /* Ergebnis-Kachel */
+  .resultsTile {
     background: #fff;
-    padding: 25px 30px;
+    padding: 20px;
     border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
     text-align: center;
     position: relative;
-    max-width: 400px;
-    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Schließ-Button im Ergebnismodal */
+  .resultsTile .modalCloseButton {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .resultsTile .modalCloseButton:hover {
+    transform: scale(0.9);
+    background-color: rgba(237, 10, 10, 0);
+  }
+  
+  /* Text im Ergebnismodal */
+  .resultsTile h3 {
+    margin-top: 0;
+    color: #013b6e;
+    font-size: 20px;
+  }
+  
+  .resultsTile p, 
+  .resultsTile h4,
+  .resultsTile li {
+    color: #013b6e;
+    font-size: 14px;
+  }
+  .scoreboard {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #013b6e;
+    font-weight: bold;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .scoreboardRow {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  .scoreboardRow {
+    margin-bottom: 4px;
+    font-size: 14px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .activeScoreboardRow {
+    transform: scale(1.2);
+    background-color: rgba(76, 175, 80, 0.3);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  /* Button "Neues Spiel starten" */
+  .restartButton {
+    @extend .startButton;
+    margin-top: 15px;
   }
   .modalCloseButton {
     position: absolute;
@@ -687,7 +757,7 @@ body {
 
 .fortuneWheelGame {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   text-align: center;
   font-family: "Poppins", sans-serif;

@@ -93,19 +93,13 @@ export default function CustomWheel({
     // Обчислюємо різницю
     let difference = pointerAngle - currentAngle - centerOfSegment;
 
-    // ---- [Необов'язково] "Нормалізуємо" difference, щоб була в діапазоні [0..2π) ----
-    // Якщо хочемо завжди додатну різницю (плюс кілька обертів), можна:
+    // Нормалізуємо difference, щоб була додатною
     while (difference < 0) {
       difference += 2 * Math.PI;
     }
-    // Або можна залишити, як є, бо нижче ми все одно додаємо minFullSpins.
 
-    // ---- Тут ми вирішуємо, скільки обертів зробити мінімально ----
-    // Наприклад, 3 повних оберти (або беремо рандом від 3 до 5)
+    // Скільки обертів зробити
     const minFullSpins = 3; 
-    // Якщо хочете рандомно:
-    // const minFullSpins = Math.floor(3 + Math.random() * 3); // від 3 до 5
-
     const finalAngle = 2 * Math.PI * minFullSpins + difference;
 
     const startAngle = currentAngle;
@@ -115,7 +109,7 @@ export default function CustomWheel({
       const elapsed = now - startTime;
       if (elapsed < spinDuration) {
         const progress = elapsed / spinDuration;
-        // Приклад easing "easeOutCubic"
+        // easing "easeOutCubic"
         const eased = 1 - Math.pow(1 - progress, 3);
         setCurrentAngle(startAngle + finalAngle * eased);
         requestAnimationFrame(animate);
@@ -136,7 +130,6 @@ export default function CustomWheel({
         width: "100%",
         maxWidth: size,
         aspectRatio: "1 / 1",
-        marginTop: "-100px",
         margin: "0 auto",
       }}
     >
@@ -154,23 +147,23 @@ export default function CustomWheel({
         }}
       />
 
-{outerPointer && (
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: "50%",
-      transform: "translate(-50%, -10px)",
-      zIndex: 2,
-      width: 0,
-      height: 0,
-      borderLeft: "10px solid transparent",
-      borderRight: "10px solid transparent",
-      borderTop: "35px solid red",
-      animation: isSpinning ? "pulse 0.5s infinite ease-in-out" : "none",
-    }}
-  />
-)}
+      {outerPointer && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translate(-50%, -10px)",
+            zIndex: 2,
+            width: 0,
+            height: 0,
+            borderLeft: "10px solid transparent",
+            borderRight: "10px solid transparent",
+            borderTop: "35px solid red",
+            animation: isSpinning ? "pulse 0.5s infinite ease-in-out" : "none",
+          }}
+        />
+      )}
 
       {/* Кнопка SPIN */}
       <button
@@ -196,16 +189,21 @@ export default function CustomWheel({
         SPIN
       </button>
 
-      {/* Анімація кнопки */}
+      {/* Анімації */}
       <style>
-  {`
-    @keyframes pulse {
-      0% { transform: translate(-50%, -10px) scale(1); }
-      50% { transform: translate(-50%, -10px) scale(1.2); }
-      100% { transform: translate(-50%, -10px) scale(1); }
-    }
-  `}
-</style>
+        {`
+          @keyframes pulse {
+            0% { transform: translate(-50%, -10px) scale(1); }
+            50% { transform: translate(-50%, -10px) scale(1.2); }
+            100% { transform: translate(-50%, -10px) scale(1); }
+          }
+          @keyframes spinPulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+          }
+        `}
+      </style>
     </div>
   );
 }
