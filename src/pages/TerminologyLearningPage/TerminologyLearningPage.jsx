@@ -130,15 +130,16 @@ const TerminologyLearningPage = () => {
             className={styles.gameTile}
             style={{ backgroundImage: `url(${matchingGameBg})` }}
           >
-            <div className={styles.innerTile}>
-              {/* Контейнер з 4-ма частинами (ефект "кубика-рубика") */}
-              <div className={styles.termMatchingContainer}>
-                <div className={styles.piece1}>Term</div>
-                <div className={styles.piece2}>Match</div>
-                <div className={styles.piece3}>ing</div>
-                <div className={styles.piece4}>Game</div>
-              </div>
-            </div>
+            <div className={styles.termMatchingContainer}>
+  {/* 4 "шматки" пазла */}
+  <div className={styles.piece1}></div>
+  <div className={styles.piece2}></div>
+  <div className={styles.piece3}></div>
+  <div className={styles.piece4}></div>
+
+  {/* Напис, який видно тільки тоді, коли шматки зійшлися */}
+  <div className={styles.termMatchingText}>Term Matching Game</div>
+</div>
           </Link>
         </div>
       </div>

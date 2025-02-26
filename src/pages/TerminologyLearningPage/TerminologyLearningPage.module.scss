@@ -300,80 +300,123 @@
 }
 
 /* Спільні стилі для чотирьох частин */
-.termMatchingContainer .piece1,
-.termMatchingContainer .piece2,
-.termMatchingContainer .piece3,
-.termMatchingContainer .piece4 {
+.termMatchingContainer {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрує внутрішню плитку */
+  width: 120px; /* Розмір внутрішньої плитки */
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================
+   TERM MATCHING "ПАЗЛ" АНІМАЦІЯ
+============================= */
+.termMatchingContainer {
+  position: relative;
+  width: 120px;  /* Ширина під твою плитку */
+  height: 80px;  /* Висота під твою плитку */
+  background-color: #ccc;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Напис, що показується в центрі на 50% анімації */
+.termMatchingText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: #023c6f;
-  /* Краще трохи менший розмір, щоб слова вмістилися */
   font-size: 14px;
-  transform-style: preserve-3d; /* для 3D-обертань */
+  text-align: center;
+  opacity: 0;                  /* Спочатку невидимий */
+  animation: showText 6s ease-in-out infinite; /* Безперервна анімація */
 }
 
 /* 
-   Логіка анімації:
-   - 0%   - розсипаний стан (подалі від центру, початкове обертання)
-   - 25%  - проміжний стан (обертається)
-   - 50%  - зібраний стан (усі слова разом)
-   - 75%  - знову проміжний (обертається в інший бік)
-   - 100% - повертаємось до початкового розсипаного стану
+   У ці моменти робимо текст видимим, 
+   коли шматки зійшлися (близько 50%)
 */
-@keyframes movePiece1 {
-  0%   { transform: translate3d(-80%, -80%, 0) rotateY(0deg);   }
-  25%  { transform: translate3d(-40%, -40%, 50px) rotateY(90deg); }
-  50%  { transform: translate3d(-10%, -10%, 0) rotateY(180deg);  }
-  75%  { transform: translate3d(-40%, -40%, -50px) rotateY(270deg); }
-  100% { transform: translate3d(-80%, -80%, 0) rotateY(360deg); }
+@keyframes showText {
+  0%, 40%  { opacity: 0; }
+  50%      { opacity: 1; }
+  60%, 100%{ opacity: 0; }
 }
 
-@keyframes movePiece2 {
-  0%   { transform: translate3d(80%, -80%, 0) rotateX(0deg); }
-  25%  { transform: translate3d(40%, -40%, 50px) rotateX(90deg); }
-  50%  { transform: translate3d(10%, -10%, 0) rotateX(180deg); }
-  75%  { transform: translate3d(40%, -40%, -50px) rotateX(270deg); }
-  100% { transform: translate3d(80%, -80%, 0) rotateX(360deg); }
+/* Кожен "шматок" — це чверть контейнера */
+.piece1, .piece2, .piece3, .piece4 {
+  position: absolute;
+  width: 50%;    /* половина ширини контейнера */
+  height: 50%;   /* половина висоти контейнера */
+  background-color: #999;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
-@keyframes movePiece3 {
-  0%   { transform: translate3d(-80%, 80%, 0) rotateY(0deg); }
-  25%  { transform: translate3d(-40%, 40%, -50px) rotateY(-90deg); }
-  50%  { transform: translate3d(-10%, 10%, 0) rotateY(-180deg); }
-  75%  { transform: translate3d(-40%, 40%, 50px) rotateY(-270deg); }
-  100% { transform: translate3d(-80%, 80%, 0) rotateY(-360deg); }
-}
-
-@keyframes movePiece4 {
-  0%   { transform: translate3d(80%, 80%, 0) rotateX(0deg); }
-  25%  { transform: translate3d(40%, 40%, -50px) rotateX(-90deg); }
-  50%  { transform: translate3d(10%, 10%, 0) rotateX(-180deg); }
-  75%  { transform: translate3d(40%, 40%, 50px) rotateX(-270deg); }
-  100% { transform: translate3d(80%, 80%, 0) rotateX(-360deg); }
-}
-
-/* Прив’язуємо анімації до кожної частини */
+/* TOP-LEFT */
 .piece1 {
   top: 0;
   left: 0;
-  animation: movePiece1 6s ease-in-out infinite;
+  animation-name: puzzlePiece1;
+}
+@keyframes puzzlePiece1 {
+  /* Початково далеко вліво-верх */
+  0%   { transform: translate(-100%, -100%); }
+  25%  { transform: translate(-50%, -50%);   }
+  /* На 50% повністю на своєму місці (0,0) */
+  50%  { transform: translate(0, 0); }
+  75%  { transform: translate(-50%, -50%); }
+  100% { transform: translate(-100%, -100%); }
 }
 
+/* TOP-RIGHT */
 .piece2 {
   top: 0;
   right: 0;
-  animation: movePiece2 6s ease-in-out infinite;
+  animation-name: puzzlePiece2;
+}
+@keyframes puzzlePiece2 {
+  0%   { transform: translate(100%, -100%); }
+  25%  { transform: translate(50%, -50%);   }
+  50%  { transform: translate(0, 0); }
+  75%  { transform: translate(50%, -50%); }
+  100% { transform: translate(100%, -100%); }
 }
 
+/* BOTTOM-LEFT */
 .piece3 {
   bottom: 0;
   left: 0;
-  animation: movePiece3 6s ease-in-out infinite;
+  animation-name: puzzlePiece3;
+}
+@keyframes puzzlePiece3 {
+  0%   { transform: translate(-100%, 100%); }
+  25%  { transform: translate(-50%, 50%);   }
+  50%  { transform: translate(0, 0); }
+  75%  { transform: translate(-50%, 50%); }
+  100% { transform: translate(-100%, 100%); }
 }
 
+/* BOTTOM-RIGHT */
 .piece4 {
   bottom: 0;
   right: 0;
-  animation: movePiece4 6s ease-in-out infinite;
+  animation-name: puzzlePiece4;
+}
+@keyframes puzzlePiece4 {
+  0%   { transform: translate(100%, 100%); }
+  25%  { transform: translate(50%, 50%);   }
+  50%  { transform: translate(0, 0); }
+  75%  { transform: translate(50%, 50%); }
+  100% { transform: translate(100%, 100%); }
 }
