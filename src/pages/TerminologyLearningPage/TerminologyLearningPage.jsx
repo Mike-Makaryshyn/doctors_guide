@@ -35,17 +35,7 @@ const TerminologyLearningPage = () => {
 
         <div className={styles.gamesGrid}>
           {/* 1. Medical Terminology */}
-          <Link
-            to="/all-medical-terminology"
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${medicalTerminologyBg})` }}
-          >
-            <div className={styles.innerTile}>
-              <div className={styles.fillInBlankContainerStatic}>
-                Medical Terminology
-              </div>
-            </div>
-          </Link>
+    
 
           {/* 2. Flashcard */}
           <Link
@@ -73,7 +63,37 @@ const TerminologyLearningPage = () => {
               </div>
             </div>
           </Link>
+                 {/* 5. Translator (Elective Language) */}
+                 <Link
+            to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${translatorBg})` }}
+          >
+            <div className={styles.innerTile}>
+              <div className={styles.rockingCard}>
+                <div className={styles.tileTitle}>
+                  Elective Language Game
+                </div>
+              </div>
+            </div>
+          </Link>
+   {/* 7. NEW: Term Matching Game */}
+   <Link
+            to={`${pathList.term_matching.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
+            className={styles.gameTile}
+            style={{ backgroundImage: `url(${matchingGameBg})` }}
+          >
+            <div className={styles.termMatchingContainer}>
+  {/* 4 "шматки" пазла */}
+  <div className={styles.piece1}></div>
+  <div className={styles.piece2}></div>
+  <div className={styles.piece3}></div>
+  <div className={styles.piece4}></div>
 
+  {/* Напис, який видно тільки тоді, коли шматки зійшлися */}
+  <div className={styles.termMatchingText}>Term Matching Game</div>
+</div>
+          </Link>
           {/* 4. Fill In Blank Game */}
           <Link
             to={`${pathList.fill_in_blank.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
@@ -95,20 +115,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* 5. Translator (Elective Language) */}
-          <Link
-            to={`/elective-language-game?region=${regionParam}&category=Alle&filterMode=unlearned`}
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${translatorBg})` }}
-          >
-            <div className={styles.innerTile}>
-              <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>
-                  Elective Language Game
-                </div>
-              </div>
-            </div>
-          </Link>
+   
 
           {/* 6. Fortune Wheel */}
           <Link
@@ -124,23 +131,7 @@ const TerminologyLearningPage = () => {
             </div>
           </Link>
 
-          {/* 7. NEW: Term Matching Game */}
-          <Link
-            to={`${pathList.term_matching.path}?region=${regionParam}&category=Alle&filterMode=unlearned`}
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${matchingGameBg})` }}
-          >
-            <div className={styles.termMatchingContainer}>
-  {/* 4 "шматки" пазла */}
-  <div className={styles.piece1}></div>
-  <div className={styles.piece2}></div>
-  <div className={styles.piece3}></div>
-  <div className={styles.piece4}></div>
-
-  {/* Напис, який видно тільки тоді, коли шматки зійшлися */}
-  <div className={styles.termMatchingText}>Term Matching Game</div>
-</div>
-          </Link>
+       
         </div>
       </div>
     </MainLayout>

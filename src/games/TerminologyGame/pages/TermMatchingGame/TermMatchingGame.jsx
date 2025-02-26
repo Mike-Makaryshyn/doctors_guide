@@ -8,7 +8,6 @@ import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
-
 import { Helmet } from "react-helmet";
 import {
   FaCog,
@@ -20,7 +19,6 @@ import {
   FaArrowRight,
   FaExchangeAlt,
 } from "react-icons/fa";
-
 import TermMatchingGameTutorial from "./TermMatchingGameTutorial";
 import styles from "./TermMatchingGame.module.scss";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
@@ -36,7 +34,7 @@ const filterModes = [
 // Кількість термінів
 const questionCountOptions = [5, 10, 20, 30, 40, 50];
 
-// Мапа мов (ключ "la" відповідає латинській, але в даних використовується "lat")
+// Мапа мов (ключ "la" відповідає латинській)
 const languageMap = {
   la: "Latein",
   de: "Deutsch",
@@ -70,7 +68,7 @@ const regionAbbreviations = {
   "Sachsen-Anhalt": "ST",
 };
 
-// Допоміжна функція для перемикання тексту терміна (якщо мова латинська – беремо з "lat")
+// Допоміжна функція для отримання тексту терміна (якщо мова латинська – беремо з "lat")
 const getTermText = (term, key) => {
   if (key === "la") {
     return term["lat"] || "";
@@ -85,7 +83,7 @@ function shuffleArray(arr) {
 function TermMatchingGameContent() {
   const navigate = useNavigate();
   const { selectedRegion } = useGetGlobalInfo();
-  const { termStatuses, recordCorrectAnswer } = useTermStatus();
+  const { termStatuses, flushChanges } = useTermStatus();
 
   // Авторизація
   const [user] = useAuthState(auth);
@@ -114,8 +112,7 @@ function TermMatchingGameContent() {
   const [electiveLang, setElectiveLang] = useState("la");
 
   // Визначення мов для колонок:
-  // ліва колонка завжди відображає визначення на мові, що базується на isGermanLeft,
-  // права колонка – визначення на вибраній іншій мові.
+  // Якщо isGermanLeft true – ліва колонка: "de", права: electiveLang; інакше – навпаки.
   const leftLang = isGermanLeft ? "de" : electiveLang;
   const rightLang = isGermanLeft ? electiveLang : "de";
 
@@ -139,6 +136,8 @@ function TermMatchingGameContent() {
   const [gameStartTime, setGameStartTime] = useState(null);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [correctMatchesCount, setCorrectMatchesCount] = useState(0);
+  // Акумулятор для правильних відповідей (запам'ятовує id термінів, що були зіставлені)
+  const [correctMatchIds, setCorrectMatchIds] = useState([]);
 
   // Лічильник показів
   const [shownCounts, setShownCounts] = useState({});
@@ -154,6 +153,7 @@ function TermMatchingGameContent() {
     setSessionDuration(0);
     setGameStartTime(Date.now());
     setPageIndex(0);
+    setCorrectMatchIds([]);
     initGameData();
   };
 
@@ -161,12 +161,13 @@ function TermMatchingGameContent() {
     // Фільтрація термінів
     const filtered = medicalTerms.filter((term) => {
       const matchesRegion = region === "Alle" || (term.regions || []).includes(region);
-      const matchesCategory = selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
+      const matchesCategory =
+        selectedCategory === "Alle" || (term.categories || []).includes(selectedCategory);
       const status = termStatuses[term.id]?.status || "unlearned";
-
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
-      if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+      if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
+        return false;
       return matchesRegion && matchesCategory;
     });
 
@@ -188,7 +189,7 @@ function TermMatchingGameContent() {
     });
     setShownCounts(newShownCounts);
 
-    // Формування пар: ліва колонка – визначення за leftLang, права – визначення за rightLang
+    // Формування пар: ліва колонка – текст за leftLang, права – текст за rightLang
     const newPairs = selected.map((term) => ({
       id: term.id,
       leftText: getTermText(term, leftLang),
@@ -213,8 +214,10 @@ function TermMatchingGameContent() {
   const displayedLeft = leftColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
   const displayedRight = rightColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
 
-  // Обробка кліків по плиткам (ліва колонка)
+  // Обробка виборів
   const [selectedLeft, setSelectedLeft] = useState(null);
+  const [selectedRight, setSelectedRight] = useState(null);
+
   const handleLeftSelect = (item) => {
     if (matchedPairs[item.id]) return;
     setSelectedLeft(item);
@@ -225,8 +228,6 @@ function TermMatchingGameContent() {
     }
   };
 
-  // Обробка кліків по плиткам (права колонка)
-  const [selectedRight, setSelectedRight] = useState(null);
   const handleRightSelect = (item) => {
     if (matchedPairs[item.id]) return;
     setSelectedRight(item);
@@ -237,16 +238,15 @@ function TermMatchingGameContent() {
     }
   };
 
-  // Правильний матч
+  // При правильному матчі – не оновлюємо Firebase миттєво, а акумулюємо id
   const doMatch = (id) => {
     setMatchedPairs((prev) => ({ ...prev, [id]: true }));
     setSelectedLeft(null);
     setSelectedRight(null);
-    recordCorrectAnswer(id);
+    setCorrectMatchIds((prev) => [...prev, id]);
     setCorrectMatchesCount((prev) => prev + 1);
   };
 
-  // Неправильний вибір – короткочасний ефект
   const showWrong = (leftItem, rightItem) => {
     setWrongLeft(leftItem.id);
     setWrongRight(rightItem.id);
@@ -258,7 +258,7 @@ function TermMatchingGameContent() {
     }, 800);
   };
 
-  // Перевірка завершення гри
+  // Коли всі пари знайдені – завершуємо гру і відвантажуємо дані
   useEffect(() => {
     if (pairs.length > 0 && Object.keys(matchedPairs).length === pairs.length) {
       setGameFinished(true);
@@ -266,6 +266,13 @@ function TermMatchingGameContent() {
       setSessionDuration(duration);
     }
   }, [matchedPairs, pairs, gameStartTime]);
+
+  // Після завершення гри викликаємо flushChanges, щоб відправити накопичені дані
+  useEffect(() => {
+    if (gameFinished) {
+      flushChanges();
+    }
+  }, [gameFinished, flushChanges]);
 
   const handleNextPage = () => {
     if (pageIndex < pageCount - 1) {
@@ -291,12 +298,10 @@ function TermMatchingGameContent() {
       </Helmet>
 
       <div className={styles.electiveLanguageGame}>
-        {/* Кнопка "Назад" */}
         <button className="main_menu_back" onClick={() => navigate("/terminology-learning")}>
           &#8592;
         </button>
 
-        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
@@ -305,7 +310,6 @@ function TermMatchingGameContent() {
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                {/* Регіон */}
                 <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
                   <div className={styles.selectWrapper}>
@@ -327,7 +331,6 @@ function TermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-                {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -350,7 +353,6 @@ function TermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-                {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -386,27 +388,21 @@ function TermMatchingGameContent() {
               <div className={styles.modalField}>
                 <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
                   <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? (
-                      "Deutsch"
-                    ) : (
+                    {isGermanLeft ? "Deutsch" : (
                       <select
                         className={styles.languageSelect}
                         value={electiveLang}
                         onChange={(e) => setElectiveLang(e.target.value)}
                       >
                         {Object.entries(languageMap).map(([code, label]) =>
-                          code !== "de" ? (
-                            <option key={code} value={code}>
-                              {label}
-                            </option>
-                          ) : null
+                          code !== "de" ? <option key={code} value={code}>{label}</option> : null
                         )}
                       </select>
                     )}
                   </div>
                   <button className={styles.swapButton} onClick={() => setIsGermanLeft((prev) => !prev)}>
-  <FaExchangeAlt className={styles.swapIcon} />
-</button>
+                    <FaExchangeAlt className={styles.swapIcon} />
+                  </button>
                   <div className={styles.languageCellFixed}>
                     {isGermanLeft ? (
                       <select
@@ -415,16 +411,10 @@ function TermMatchingGameContent() {
                         onChange={(e) => setElectiveLang(e.target.value)}
                       >
                         {Object.entries(languageMap).map(([code, label]) =>
-                          code !== "de" ? (
-                            <option key={code} value={code}>
-                              {label}
-                            </option>
-                          ) : null
+                          code !== "de" ? <option key={code} value={code}>{label}</option> : null
                         )}
                       </select>
-                    ) : (
-                      "Deutsch"
-                    )}
+                    ) : "Deutsch"}
                   </div>
                 </div>
               </div>
@@ -457,17 +447,7 @@ function TermMatchingGameContent() {
         {/* Кнопка туторіалу */}
         {settingsOpen && (
           <button data-tutorial="tutorialStartButton" className={styles.tutorialButton} onClick={() => setShowTutorial(true)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="26"
-              fill="none"
-              stroke="#ededed"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              viewBox="0 0 24 24"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#ededed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
               <line x1="12" y1="12" x2="12" y2="16" />
               <circle cx="12" cy="8" r="0.5" fill="#ededed" />
@@ -475,7 +455,7 @@ function TermMatchingGameContent() {
           </button>
         )}
 
-        {/* Відображення повідомлення, якщо термінів немає */}
+        {/* Повідомлення, якщо термінів немає */}
         {!settingsOpen && !gameFinished && pairs.length === 0 && (
           <div className={styles.noQuestionsMessage}>
             <p>Keine Begriffe für diese Einstellungen.</p>
@@ -531,7 +511,7 @@ function TermMatchingGameContent() {
               </div>
             </div>
 
-            {/* Кнопки пагінації */}
+            {/* Пагінація */}
             <div className={styles.navigationContainer}>
               {pageIndex > 0 && (
                 <button className={styles.navButton} onClick={handlePrevPage}>
@@ -540,14 +520,14 @@ function TermMatchingGameContent() {
               )}
               {pageIndex < pageCount - 1 && (
                 <button className={styles.navButton} onClick={handleNextPage}>
-                   <FaArrowRight />
+                  <FaArrowRight />
                 </button>
               )}
             </div>
           </>
         )}
 
-        {/* Результати гри */}
+        {/* Результати */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
@@ -581,7 +561,6 @@ function TermMatchingGameContent() {
       </div>
 
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-
       <TermMatchingGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
     </MainLayout>
   );

@@ -49,7 +49,7 @@
   align-items: center;
 }
 
-/* --- Desktop Popup --- */
+/* --- Popup для Desktop --- */
 .popupDesktopWide {
   background: #fff;
   padding: 25px 20px 20px;
@@ -62,7 +62,7 @@
   right: 45px;
 }
 
-/* --- Mobile Popup --- */
+/* --- Popup для Mobile --- */
 .popupMobile {
   background: #fff;
   padding: 25px 20px 20px;
@@ -154,7 +154,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Стилі гри (без змін) --- */
+/* --- Інші стилі --- */
 .progress {
   margin-bottom: 30px;
   font-size: 16px;
@@ -168,12 +168,15 @@
   gap: 40px;
 }
 
+/* Колонки зберігаємо як flex-колонки (рядок) як на десктопі */
 .column {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 24%;
 }
 
+/* Стиль для плиток (відповідей) */
 .answerTile {
   width: 300px;
   background: #fff;
@@ -187,7 +190,7 @@
   line-height: 1.3;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 75px; /* Було 54px */
+  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,14 +230,7 @@
   75% { transform: translateX(-4px); }
 }
 
-.gameContainer {
-  .selected {
-    background: #ffeeba !important;
-    color: #013b6e !important;
-  }
-}
-
-/* --- Пагінація --- */
+/* Пагінація */
 .navigationContainer {
   margin-top: 20px;
   display: flex;
@@ -261,7 +257,7 @@
   transform: scale(1.05);
 }
 
-/* --- Контейнер для вибору кількості термінів --- */
+/* Контейнер для вибору кількості термінів */
 .questionCountContainer {
   display: flex;
   justify-content: center;
@@ -278,7 +274,7 @@
   color: #013b6e;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3sease;
+  transition: all 0.3s ease;
   text-align: center;
 }
 
@@ -287,7 +283,7 @@
   color: #fff;
 }
 
-/* --- Контейнери для регіону, фільтру, категорії --- */
+/* Контейнери для регіону, фільтру, категорії */
 .row {
   display: flex;
   justify-content: space-around;
@@ -348,8 +344,6 @@
   pointer-events: none;
 }
 
-
-
 .categoryIcon {
   width: 24px;
   height: 24px;
@@ -366,79 +360,17 @@
   cursor: pointer;
 }
 
-
-
-
-.languageCellFixed {
-  width: 120px;
-  min-width: 120px;
-  max-width: 120px;
-  height: 50px;
-  line-height: 31px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  display: flex
-;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 0 0 auto;
-}
-.languageCellFixed, .languageCell {
-  width: 120px;
-  min-width: 120px;
-  height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.languageCell {
-  width: 120px;
-  min-width: 120px;
-  max-width: 120px;
-  height: 50px;
-  line-height: 31px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 0 0 auto;
-}
-
-/* Für die Selectbox */
+/* Стилі для мовових блоків */
+.languageCellFixed,
+.languageCell,
 .languageSelect {
-  @extend .languageCell;
   width: 120px;
   min-width: 120px;
-  max-width: 120px;
   height: 50px;
   line-height: 31px;
+  border-radius: 10px;
   background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
   color: #013b6e;
   font-weight: 600;
   text-align: center;
@@ -451,14 +383,14 @@
   flex: 0 0 auto;
 }
 
+/* Language Swap Container */
 .languageSwapContainer {
   display: flex;
-  align-items: center;      /* Vertikal mittig */
-  justify-content: center;  /* Horizontal zentriert */
-  gap: 10px;                /* Abstand zwischen den Elementen */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* Der Button selbst */
 .swapButton {
   background: #ffffff;
   border: none;
@@ -469,12 +401,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   flex-shrink: 0;
-  margin-left: 15px; 
+  margin-left: 15px;
 }
-
 
 .swapButton:hover {
   background: #4caf50;
@@ -493,7 +423,6 @@
   transition: transform 0.3s ease;
 }
 
-
 /* --- Кнопка туторіалу --- */
 .tutorialButton {
   position: absolute;
@@ -503,36 +432,22 @@
   height: 45px;
   background: none;
   border-radius: 50%;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  z-index: 3000;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 3000;
 }
 
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76, 175, 79, 0.2);
+  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
 }
 
-/* --- Результати --- */
-.resultsOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 3000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ergebnismodal-Overlay */
+/* Результати гри */
 .resultsOverlay {
   position: fixed;
   top: 0;
@@ -546,7 +461,6 @@
   align-items: center;
 }
 
-/* Ergebnis-Kachel */
 .resultsTile {
   background: #fff;
   padding: 20px;
@@ -558,7 +472,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Schließ-Button im Ergebnismodal */
 .resultsTile .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -578,7 +491,6 @@
   background-color: rgba(237, 10, 10, 0);
 }
 
-/* Text im Ergebnismodal */
 .resultsTile h3 {
   margin-top: 0;
   color: #013b6e;
@@ -592,7 +504,7 @@
   font-size: 14px;
 }
 
-/* --- Кнопка налаштувань (праворуч внизу) --- */
+/* Кнопка налаштувань (праворуч внизу) */
 .bottomRightSettings {
   position: fixed;
   bottom: 0;
@@ -619,7 +531,7 @@
   transform: scale(1.1);
 }
 
-/* --- Повідомлення, якщо немає термінів --- */
+/* Повідомлення, якщо немає термінів */
 .noQuestionsMessage {
   margin-top: 30px;
   color: #fff;
@@ -627,23 +539,21 @@
   font-weight: 600;
 }
 
-/* --- Responsive --- */
+/* --- Responsive: зберігаємо розташування колонок як на десктопах --- */
 @media (max-width: 600px) {
   .gameContainer {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .column {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
+  .column {
+    width: 50%;
+  }
   .answerTile {
-    width: 48%;
-    font-size: 12px; /* Трохи зменшуємо шрифт */
-    min-height: 70px; /* Збільшуємо висоту плиток */
-    padding: 10px; /* Додаємо більше місця для тексту */
+    width: 90%;
+    font-size: 12px;
+    min-height: 70px;
+    padding: 10px;
     line-height: 1.4;
   }
 }
