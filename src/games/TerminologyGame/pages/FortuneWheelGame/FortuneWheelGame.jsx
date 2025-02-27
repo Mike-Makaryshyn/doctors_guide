@@ -83,7 +83,7 @@ function FortuneWheelGameContent() {
   const [scores, setScores] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
-  // --- RAD-DATEN (Segments) ---
+  // --- RAD-DATEN (Segmente) ---
   const [segments, setSegments] = useState([]);
   const [finalTerms, setFinalTerms] = useState([]);
 
@@ -100,11 +100,12 @@ function FortuneWheelGameContent() {
   // --- SPIELENDE / ERGEBNISSE ---
   const [initialTermCount, setInitialTermCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [gameFinished, setGameFinished] = useState(false); // Zustand für Ergebnismodal
   const [showResults, setShowResults] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [gameStartTime, setGameStartTime] = useState(null);
 
-  // Wir merken uns falsche Begriffe, falls Wiederholung nötig
+  // Falsche Begriffe merken, falls Wiederholung notwendig
   const [wrongTerms, setWrongTerms] = useState({});
 
   // Tutorial
@@ -112,13 +113,13 @@ function FortuneWheelGameContent() {
     localStorage.getItem("fortuneWheelGameTutorialCompleted") !== "true"
   );
 
-  // Wir aktualisieren die Spieleranzahl
+  // Spieleranzahl aktualisieren
   useEffect(() => {
     setScores(new Array(playersCount).fill(0));
     setCurrentPlayer(1);
   }, [playersCount]);
 
-  // Wir übernehmen Region aus global, falls geändert
+  // Region aus global übernehmen, falls geändert
   useEffect(() => {
     setRegion(selectedRegion || "Alle");
   }, [selectedRegion]);
@@ -130,14 +131,14 @@ function FortuneWheelGameContent() {
     }
   }, [gameOver]);
 
-  // Wenn segments und finalTerms leer sind => gameOver
+  // Wenn Segmente und FinalTerms leer sind => Spiel beenden
   useEffect(() => {
     if (!settingsOpen && segments.length === 0 && finalTerms.length === 0) {
       setGameOver(true);
     }
   }, [segments, finalTerms, settingsOpen]);
 
-  // HINZUGEFÜGT: Kontrolle der Radgröße (größer auf Desktop)
+  // --- Kontrolle der Radgröße (größer auf Desktop) ---
   const [wheelSize, setWheelSize] = useState(300);
   useEffect(() => {
     function handleResize() {
@@ -157,6 +158,7 @@ function FortuneWheelGameContent() {
     setSettingsOpen(false);
     setShowResults(false);
     setGameOver(false);
+    setGameFinished(false);
     setSessionDuration(0);
     setGameStartTime(Date.now());
     loadDataForWheel();
@@ -200,7 +202,6 @@ function FortuneWheelGameContent() {
     const colorPalette = ["#EE4040", "#F0CF50", "#815CD1", "#3DA5E0", "#34A24F"];
 
     // Erstellen der Segmente
-    const arcSize = (2 * Math.PI) / finalList.length;
     const newSegments = finalList.map((term, idx) => {
       // Mixed -> zufällig LatGerman oder GermanLat
       let mode = displayMode;
@@ -242,7 +243,7 @@ function FortuneWheelGameContent() {
     const winningTerm = finalTerms[winnerIndex];
     if (!winningTerm) return;
 
-    // Wir bestimmen den Modus aus dem gespeicherten Segment
+    // Modus aus dem Segment bestimmen
     const mode = seg.actualMode;
 
     let questionText = "";
@@ -256,7 +257,7 @@ function FortuneWheelGameContent() {
       correctAns = winningTerm.lat;
     }
 
-    // Wir finden 3 falsche Varianten
+    // Drei falsche Varianten finden
     let allPossible = [];
     if (mode === "LatGerman") {
       allPossible = medicalTerms.map((t) => t.de);
@@ -296,7 +297,7 @@ function FortuneWheelGameContent() {
 
     if (winningTerm) {
       if (isCorrect) {
-        // Wenn richtig -> +1 Punkt, Segment entfernen
+        // Bei richtiger Antwort: Punkt + Segment entfernen
         setScores((old) => {
           const newScores = [...old];
           newScores[currentPlayer - 1] += 1;
@@ -307,7 +308,7 @@ function FortuneWheelGameContent() {
         setSegments((old) => old.filter((_, i) => i !== idx));
         setFinalTerms((old) => old.filter((_, i) => i !== idx));
       } else {
-        // Wenn falsch -> Segment bleibt
+        // Bei falscher Antwort: Segment bleibt
         if (!wrongTerms[winningTerm.id]) {
           setWrongTerms((prev) => ({ ...prev, [winningTerm.id]: true }));
         }
@@ -328,13 +329,13 @@ function FortuneWheelGameContent() {
   function finishGame() {
     const dur = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dur);
-    setShowResults(true);
+    setGameFinished(true); // Ergebnismodal anzeigen
     flushChanges();
   }
 
-  // Modal für Ergebnisse
+  // --- Modal für Ergebnisse (analog zu SimpleChoiceGame) ---
   function renderResultsModal() {
-    if (!showResults) return null;
+    if (!gameFinished) return null;
     const totalCorrect = scores.reduce((a, b) => a + b, 0);
 
     return (
@@ -342,15 +343,21 @@ function FortuneWheelGameContent() {
         <div className={styles.resultsBox}>
           <button
             className={styles.modalCloseButton}
-            onClick={() => setShowResults(false)}
+            onClick={() => setGameFinished(false)}
           >
             ×
           </button>
           <h2>Ergebnisse</h2>
           {playersCount === 1 ? (
-            <p>
-              Richtig: {totalCorrect} von {initialTermCount}
-            </p>
+            <>
+              <p>
+                Richtig: {totalCorrect} von {initialTermCount}
+              </p>
+              <p>
+                Dauer: {Math.floor(sessionDuration / 60)} Min.{" "}
+                {sessionDuration % 60} Sek.
+              </p>
+            </>
           ) : (
             <>
               <p>Mehrspieler-Modus:</p>
@@ -363,10 +370,6 @@ function FortuneWheelGameContent() {
               </ul>
             </>
           )}
-          <p>
-            Dauer: {Math.floor(sessionDuration / 60)} Min.{" "}
-            {sessionDuration % 60} Sek.
-          </p>
           <button className={styles.startButton} onClick={handleStart}>
             Neues Spiel
           </button>
@@ -383,16 +386,13 @@ function FortuneWheelGameContent() {
           name="description"
           content="Drehen Sie das Glücksrad und lernen Sie medizinische Fachbegriffe! Wählen Sie Filter, Einstellungen und testen Sie Ihr Wissen."
         />
-        <meta
-          property="og:title"
-          content="Glücksrad – Medizinische Fachbegriffe lernen"
-        />
+        <meta property="og:title" content="Glücksrad – Medizinische Fachbegriffe lernen" />
         <meta property="og:image" content={medicalTerminologyBg} />
       </Helmet>
 
       <div className={styles.fortuneWheelGame}>
-        {/* Scoreboard links für Multiplayer */}
-        {playersCount > 1 && !settingsOpen && !gameOver && (
+        {/* Scoreboard für Multiplayer */}
+        {playersCount > 1 && !settingsOpen && !gameFinished && (
           <div className={styles.scoreboard}>
             {scores.map((score, index) => (
               <div
@@ -418,8 +418,7 @@ function FortuneWheelGameContent() {
             className={styles.settingsButton}
             onClick={() => {
               setSettingsOpen(true);
-              setShowResults(false);
-              setGameOver(false);
+              setGameFinished(false);
             }}
           >
             <FaCog />
@@ -463,25 +462,29 @@ function FortuneWheelGameContent() {
             >
               <button
                 className={styles.modalCloseButton}
-                onClick={() => setSettingsOpen(false)}
+                onClick={() => {
+                  if (!gameStartTime) {
+                    alert("Spiel noch nicht gestartet. Bitte wählen Sie zuerst die Filter und drücken Sie 'Start'.");
+                    return;
+                  }
+                  setSettingsOpen(false);
+                }}
               >
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
-
               <div className={styles.row}>
                 {/* Region */}
                 <div className={styles.regionColumn}>
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.regionCell}>
-                      {regionAbbreviations[region] || region}
-                    </div>
+                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
+                    <div className={styles.regionCell}>{regionAbbreviations[region] || region}</div>
                     <select
                       className={styles.nativeSelect}
-                      data-tutorial="regionSelect"
                       value={region}
-                      onChange={(e) => setRegion(e.target.value)}
+                      onChange={(e) => {
+                        setRegion(e.target.value);
+                      }}
                     >
                       <option value="Alle">Alle</option>
                       {[...new Set(medicalTerms.flatMap((t) => t.regions || []))]
@@ -504,7 +507,6 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
-                      data-tutorial="filterSelect"
                       value={filterMode}
                       onChange={(e) => setFilterMode(e.target.value)}
                     >
@@ -532,7 +534,6 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
-                      data-tutorial="categorySelect"
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
                     >
@@ -555,7 +556,6 @@ function FortuneWheelGameContent() {
                     </div>
                     <select
                       className={styles.nativeSelect}
-                      data-tutorial="playersSelect"
                       value={playersCount}
                       onChange={(e) => setPlayersCount(Number(e.target.value))}
                     >
@@ -572,7 +572,7 @@ function FortuneWheelGameContent() {
               {/* Anzeige-Modus */}
               <div className={styles.modalField}>
                 <label>Anzeige-Modus:</label>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeSelect">
+                <div className={styles.displayModeContainer}>
                   {displayModeOptions.map((opt) => (
                     <div
                       key={opt.value}
@@ -590,7 +590,7 @@ function FortuneWheelGameContent() {
               {/* Anzahl der Begriffe */}
               <div className={styles.modalField}>
                 <label>Anzahl der Begriffe:</label>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountSelect">
+                <div className={styles.questionCountContainer}>
                   {questionCountOptions.map((qc) => (
                     <div
                       key={qc}
@@ -605,22 +605,26 @@ function FortuneWheelGameContent() {
                 </div>
               </div>
 
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStart}
-              >
+              <button className={styles.startButton} onClick={handleStart}>
                 Start
               </button>
             </div>
           </div>
         )}
 
+        {/* Falls Einstellungen geschlossen, Spiel nicht beendet und keine Begriffe vorhanden */}
+        {!settingsOpen && !gameFinished && finalTerms.length === 0 && (
+          <div className={styles.noQuestionsMessage}>
+            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+          </div>
+        )}
+
+        {/* Anzeige des Ergebnismodals nach Spielende */}
         {renderResultsModal()}
 
-        {/* Das Rad (im Container für Responsiveness) */}
-        {!settingsOpen && !gameOver && segments.length > 0 && (
-          <div className={styles.wheelContainer} data-tutorial="spinButton">
+        {/* Das Glücksrad */}
+        {!settingsOpen && !gameFinished && segments.length > 0 && (
+          <div className={styles.wheelContainer}>
             <CustomWheel
               segments={segments}
               size={wheelSize}
@@ -631,7 +635,7 @@ function FortuneWheelGameContent() {
           </div>
         )}
 
-        {/* MODAL mit Frage + Antworten */}
+        {/* MODAL für Frage + Antworten */}
         {showModal && (
           <div className={styles.modalOverlay}>
             <div className={styles.modalBox}>
