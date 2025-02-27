@@ -458,7 +458,7 @@ function TermMatchingGameContent() {
         {/* Повідомлення, якщо термінів немає */}
         {!settingsOpen && !gameFinished && pairs.length === 0 && (
           <div className={styles.noQuestionsMessage}>
-            <p>Keine Begriffe für diese Einstellungen.</p>
+            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
           </div>
         )}
 
@@ -536,7 +536,10 @@ function TermMatchingGameContent() {
               </button>
               <h3>Ergebnisse</h3>
               <p>Alle Paare gefunden: {correctMatchesCount} / {pairs.length}</p>
-              <p>Dauer: {sessionDuration} Sekunden</p>
+              <p>
+          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+          {sessionDuration % 60} Sekunden
+        </p>
               <button className={styles.startButton} onClick={() => {
                 setSettingsOpen(true);
                 setGameFinished(false);

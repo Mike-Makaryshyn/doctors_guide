@@ -287,7 +287,7 @@
 .row {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 5px;
   margin-bottom: 15px;
 }
 
@@ -532,12 +532,7 @@
 }
 
 /* Повідомлення, якщо немає термінів */
-.noQuestionsMessage {
-  margin-top: 30px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-}
+
 
 /* --- Responsive: зберігаємо розташування колонок як на десктопах --- */
 @media (max-width: 600px) {

@@ -288,7 +288,7 @@
 .row {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 5px;
   margin-bottom: 15px;
 }
 
@@ -532,7 +532,7 @@
   display: flex;
   align-items: center;      /* Vertikal mittig */
   justify-content: center;  /* Horizontal zentriert */
-  gap: 10px;                /* Abstand zwischen den Elementen */
+  gap: 0px;                /* Abstand zwischen den Elementen */
 }
 
 /* Der Button selbst */
