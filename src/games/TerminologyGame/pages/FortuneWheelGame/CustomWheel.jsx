@@ -8,38 +8,70 @@ export default function CustomWheel({
   outerPointer = false,
 }) {
   const canvasRef = useRef(null);
+
+  // Кут, на який зараз повернене колесо
   const [currentAngle, setCurrentAngle] = useState(0);
+
+  // Чи триває зараз обертання
   const [isSpinning, setIsSpinning] = useState(false);
 
-  // Для анімованих меж (необов'язково)
-  const [borderHue, setBorderHue] = useState(0);
+  // Індекс сегмента, який «підсвічується» (ефект пробігання)
+  const [activeSegmentIndex, setActiveSegmentIndex] = useState(0);
 
-  // Кут одного сегмента
+  // Кут одного сегмента (2π / кількість сегментів)
   const arcSize = segments.length ? (2 * Math.PI) / segments.length : 0;
 
-  // Анімація hue
-  useEffect(() => {
-    let animId;
-    function animateHue() {
-      setBorderHue((prev) => (prev + 1) % 360);
-      animId = requestAnimationFrame(animateHue);
-    }
-    animId = requestAnimationFrame(animateHue);
-    return () => cancelAnimationFrame(animId);
-  }, []);
+  // Палітра кольорів за замовчуванням (якщо не задано у segments)
+  const defaultColors = [
+    "#FFB6C1", "#ADD8E6", "#90EE90", "#F0E68C",
+    "#FFA07A", "#DDA0DD", "#87CEFA", "#FF69B4"
+  ];
 
-  // Перемальовуємо коли currentAngle або segments змінились
+  // Ефект: якщо колесо не крутиться, кожні 500 мс «підсвічуємо» наступний сегмент
+  useEffect(() => {
+    if (!isSpinning && segments.length) {
+      const intervalId = setInterval(() => {
+        setActiveSegmentIndex((prev) => (prev + 1) % segments.length);
+      }, 500);
+      return () => clearInterval(intervalId);
+    }
+  }, [isSpinning, segments.length]);
+
+  // Ініціалізація canvas з урахуванням HiDPI (retina) екранів
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    canvas.style.width = size + "px";
+    canvas.style.height = size + "px";
+
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr);
+
+    ctx.imageSmoothingEnabled = true;
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+
+    drawWheel(); 
+    // eslint-disable-next-line
+  }, [size]);
+
+  // Коли змінюється currentAngle або activeSegmentIndex, перемальовуємо колесо
   useEffect(() => {
     drawWheel();
-  }, [currentAngle, segments, borderHue]);
+  }, [currentAngle, activeSegmentIndex, segments]);
 
+  /** Малюємо колесо */
   function drawWheel() {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
 
-    const w = canvas.width;
-    const h = canvas.height;
+    const ctx = canvas.getContext("2d");
+    const w = size;
+    const h = size;
     const cx = w / 2;
     const cy = h / 2;
 
@@ -51,23 +83,31 @@ export default function CustomWheel({
     segments.forEach((seg, i) => {
       const startAngle = i * arcSize;
       const endAngle = startAngle + arcSize;
-      // Фон сегмента
+
+      // Колір сегмента
+      const baseColor = seg.color || defaultColors[i % defaultColors.length];
+
+      // Якщо сегмент активний, робимо його світлішим
+      const fillColor =
+        i === activeSegmentIndex ? lightenColor(baseColor, 0.3) : baseColor;
+
+      // Сегмент
       ctx.beginPath();
       ctx.moveTo(0, 0);
       ctx.arc(0, 0, cx, startAngle, endAngle);
-      ctx.fillStyle = seg.color || "#ccc";
+      ctx.fillStyle = fillColor;
       ctx.fill();
 
-      // Межа (анімована)
-      ctx.strokeStyle = `hsl(${(borderHue + i * 30) % 360}, 100%, 50%)`;
-      ctx.lineWidth = 3;
+      // Тонка біла обводка
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 2;
       ctx.stroke();
 
       // Текст
       ctx.save();
       const textAngle = startAngle + arcSize / 2;
       ctx.rotate(textAngle);
-      ctx.font = '14px "Poppins", sans-serif';
+      ctx.font = 'bold 15px "Poppins", sans-serif';
       ctx.fillStyle = "#000";
       ctx.textAlign = "right";
       ctx.fillText(seg.labelForWheel, cx * 0.9, 5);
@@ -77,7 +117,10 @@ export default function CustomWheel({
     ctx.restore();
   }
 
-  /** Запускає обертання */
+  /**
+   * Запускаємо обертання.
+   * Після завершення обертання викликаємо onStopSpinning(winnerIndex).
+   */
   function spin() {
     if (isSpinning || !segments.length) return;
     setIsSpinning(true);
@@ -85,22 +128,29 @@ export default function CustomWheel({
     // Випадковий індекс виграшного сегмента
     const randomIndex = Math.floor(Math.random() * segments.length);
 
-    // Зверху колеса -> -Math.PI / 2
+    // Стрілочка (12-та година) = -90° = -Math.PI/2
     const pointerAngle = -Math.PI / 2;
+
+    // Нормалізуємо поточний кут, щоб був у [0, 2π)
+    let normalizedAngle = currentAngle % (2 * Math.PI);
+    if (normalizedAngle < 0) {
+      normalizedAngle += 2 * Math.PI;
+    }
+
     // Центр обраного сегмента
     const centerOfSegment = randomIndex * arcSize + arcSize / 2;
 
-    // Обчислюємо різницю
-    let difference = pointerAngle - currentAngle - centerOfSegment;
-
-    // Нормалізуємо difference, щоб була додатною
+    // Різниця
+    let difference = pointerAngle - normalizedAngle - centerOfSegment;
     while (difference < 0) {
       difference += 2 * Math.PI;
     }
 
-    // Скільки обертів зробити
-    const minFullSpins = 3; 
-    const finalAngle = 2 * Math.PI * minFullSpins + difference;
+    // Скільки робимо повних обертів
+    const minFullSpins = 3;
+
+    // Негативний кут, щоб колесо крутилося «у зворотний» бік (як у вашому коді)
+    const finalAngle = -(2 * Math.PI * minFullSpins + difference);
 
     const startAngle = currentAngle;
     const startTime = performance.now();
@@ -114,13 +164,31 @@ export default function CustomWheel({
         setCurrentAngle(startAngle + finalAngle * eased);
         requestAnimationFrame(animate);
       } else {
+        // Виставляємо остаточний кут
         setCurrentAngle(startAngle + finalAngle);
         setIsSpinning(false);
-        // Кажемо, який сегмент випав
+        // Повідомляємо, який сегмент виграв
         onStopSpinning(randomIndex);
       }
     }
+
     requestAnimationFrame(animate);
+  }
+
+  /**
+   * Освітлити колір (наблизити до білого)
+   */
+  function lightenColor(hex, factor) {
+    // hex формату "#RRGGBB"
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+
+    const newR = Math.round(r + (255 - r) * factor);
+    const newG = Math.round(g + (255 - g) * factor);
+    const newB = Math.round(b + (255 - b) * factor);
+
+    return `rgb(${newR}, ${newG}, ${newB})`;
   }
 
   return (
@@ -136,24 +204,21 @@ export default function CustomWheel({
       {/* Canvas */}
       <canvas
         ref={canvasRef}
-        width={size}
-        height={size}
         style={{
-          width: "100%",
-          height: "auto",
           display: "block",
           borderRadius: "50%",
           backgroundColor: "#fff",
         }}
       />
 
+      {/* Зовнішній трикутник (стрілочка) */}
       {outerPointer && (
         <div
           style={{
             position: "absolute",
             top: 0,
             left: "50%",
-            transform: "translate(-50%, -10px)",
+            transform: "translate(-50%, -12px)",
             zIndex: 2,
             width: 0,
             height: 0,
@@ -171,11 +236,11 @@ export default function CustomWheel({
         disabled={isSpinning || !segments.length}
         style={{
           position: "absolute",
-          top: "50%",
+          top: "48%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: 40,
-          height: 40,
+          width: 45,
+          height: 45,
           borderRadius: "50%",
           backgroundColor: "#013b6e",
           color: "#fff",
@@ -183,19 +248,19 @@ export default function CustomWheel({
           fontWeight: "bold",
           border: "none",
           cursor: "pointer",
-          animation: isSpinning ? "none" : "spinPulse 2s infinite",
+          animation: !isSpinning ? "spinPulse 2s infinite" : "none",
         }}
       >
         SPIN
       </button>
 
-      {/* Анімації */}
+      {/* Анімації keyframes */}
       <style>
         {`
           @keyframes pulse {
-            0% { transform: translate(-50%, -10px) scale(1); }
-            50% { transform: translate(-50%, -10px) scale(1.2); }
-            100% { transform: translate(-50%, -10px) scale(1); }
+            0% { transform: translate(-50%, -12px) scale(1); }
+            50% { transform: translate(-50%, -12px) scale(1.2); }
+            100% { transform: translate(-50%, -12px) scale(1); }
           }
           @keyframes spinPulse {
             0% { transform: translate(-50%, -50%) scale(1); }
