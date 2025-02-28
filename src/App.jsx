@@ -22,7 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // Імпорт нового контексту для статусів термінів
 
-import { MedicationStatusProvider } from "./contexts/MedicationStatusContext"; 
+
 
 // Створення екземпляру QueryClient
 const queryClient = new QueryClient();

@@ -76,8 +76,19 @@
   font-size: 20px;
   color: #013b6e;
   margin-bottom: 12px;
+ 
+}
+.main_menu_back {
+  z-index: 4000; /* або інше значення, що гарантує, що вона буде над іншими шарами */
+}
+.resultsBox h2 {
+  color: #013b6e;
 }
 
+.resultsBox p,
+.resultsBox li {
+  color: #013b6e;
+}
 .modalCloseButton {
   position: absolute;
   top: -10px;
