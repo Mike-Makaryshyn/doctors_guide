@@ -119,10 +119,13 @@ const ElectiveLanguageGameContent = () => {
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // <<-- Додаємо стан для Tutorial -->
+  // Zustand für Tutorial
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("electiveLanguageGameTutorialCompleted") !== "true"
   );
+
+  // Neuer Zustand für Spielstart
+  const [gameStarted, setGameStarted] = useState(false);
 
   // Synchronisation mit globalem Kontext
   useEffect(() => {
@@ -197,18 +200,10 @@ const ElectiveLanguageGameContent = () => {
     setQuestionsCompleted({});
   };
 
-  useEffect(() => {
-    if (!settingsOpen) {
-      loadQuestions();
-      setGameFinished(false);
-      setGameStartTime(Date.now());
-      setCorrectAnswerCount(0);
-      setIncorrectAnswerCount(0);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allowEdit, settingsOpen]);
+  // Entfernen des useEffect, der loadQuestions bei Änderung von settingsOpen auslöst
 
   const handleStart = () => {
+    setGameStarted(true);
     setSettingsOpen(false);
     loadQuestions();
     setGameStartTime(Date.now());
@@ -567,11 +562,11 @@ const ElectiveLanguageGameContent = () => {
           </button>
         )}
 
-       {!settingsOpen && !gameFinished && questions.length === 0 && (
-               <div className={styles.noQuestionsMessage}>
-                 <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-               </div>
-             )}
+        {!settingsOpen && !gameFinished && questions.length === 0 && (
+          <div className={styles.noQuestionsMessage}>
+            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+          </div>
+        )}
 
         {/* Spiel-Interface */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (

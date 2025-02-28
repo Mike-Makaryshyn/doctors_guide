@@ -116,12 +116,26 @@ const SimpleChoiceGameContent = () => {
     localStorage.getItem("simpleChoiceGameTutorialCompleted") !== "true"
   );
 
+  // Новий стан для відслідковування, чи почата гра
+  const [gameStarted, setGameStarted] = useState(false);
+
   // Оновлення регіону
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
-  // Завантаження питань
+  // Видалено useEffect, який запускав loadQuestions при зміні settingsOpen
+
+  // Функція для закриття налаштувань без перезавантаження гри
+  const closeSettings = () => {
+    if (!gameStarted) {
+      setSettingsOpen(false);
+    } else {
+      setSettingsOpen(false);
+    }
+  };
+
+  // Завантаження питань – викликається лише при натисканні кнопки "Start"
   const loadQuestions = () => {
     const gefilterteBegriffe = medicalTerms.filter((term) => {
       const matchesRegion =
@@ -200,19 +214,8 @@ const SimpleChoiceGameContent = () => {
     setQuestionsCompleted({});
   };
 
-  // Запуск гри при закритті налаштувань
-  useEffect(() => {
-    if (!settingsOpen) {
-      loadQuestions();
-      setGameFinished(false);
-      setGameStartTime(Date.now());
-      setCorrectAnswerCount(0);
-      setIncorrectAnswerCount(0);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allowEdit, settingsOpen]);
-
   const handleStart = () => {
+    setGameStarted(true);
     setSettingsOpen(false);
     loadQuestions();
     setGameStartTime(Date.now());
@@ -390,22 +393,15 @@ const SimpleChoiceGameContent = () => {
         {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div
-              className={
-                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
-              }
-            >
-              <button
-                className={styles.modalCloseButton}
-                onClick={() => setSettingsOpen(false)}
-              >
+            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
+              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                <div className={styles.regionColumn}>
+                <div className={styles.regionColumn} data-tutorial="regionSelect">
                   <label className={styles.fieldLabel}>Region</label>
-                  <div className={styles.selectWrapper} data-tutorial="regionSelect">
+                  <div className={styles.selectWrapper}>
                     <div className={styles.regionCell}>{getRegionLabel(region)}</div>
                     <select
                       className={styles.nativeSelect}
@@ -492,10 +488,7 @@ const SimpleChoiceGameContent = () => {
               </div>
 
               <div className={styles.modalField}>
-                <div
-                  className={styles.displayModeContainer}
-                  data-tutorial="displayModeContainer"
-                >
+                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
@@ -514,10 +507,7 @@ const SimpleChoiceGameContent = () => {
               </div>
 
               <div className={styles.modalField}>
-                <div
-                  className={styles.questionCountContainer}
-                  data-tutorial="questionCountContainer"
-                >
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
@@ -535,11 +525,7 @@ const SimpleChoiceGameContent = () => {
                 </div>
               </div>
 
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStart}
-              >
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
             </div>
@@ -565,22 +551,12 @@ const SimpleChoiceGameContent = () => {
               strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line
-                x1="12"
-                y1="12"
-                x2="12"
-                y2="15.5"
-                stroke="#ededed"
-                strokeWidth="3"
-              />
+              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
               <circle cx="12" cy="7" r="0.5" fill="#ededed" />
             </svg>
           </button>
         )}
 
-        {/*
-          Якщо налаштування закриті, але немає питань – повідомлення, що терміни відсутні.
-        */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
           <div className={styles.noQuestionsMessage}>
             <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
@@ -664,10 +640,7 @@ const SimpleChoiceGameContent = () => {
                 </div>
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
-                    <button
-                      className={styles.navButton}
-                      onClick={() => handleNavigation("prev")}
-                    >
+                    <button className={styles.navButton} onClick={() => handleNavigation("prev")}>
                       <FaArrowLeft />
                     </button>
                   )}
@@ -724,16 +697,16 @@ const SimpleChoiceGameContent = () => {
             </button>
           </div>
         )}
-
-        {/* Відображення tutorial */}
-        {showTutorial && (
-          <SimpleChoiceGameTutorial
-            run={showTutorial}
-            onFinish={() => setShowTutorial(false)}
-          />
-        )}
       </div>
+
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+
+      {showTutorial && (
+        <SimpleChoiceGameTutorial
+          run={showTutorial}
+          onFinish={() => setShowTutorial(false)}
+        />
+      )}
     </MainLayout>
   );
 };

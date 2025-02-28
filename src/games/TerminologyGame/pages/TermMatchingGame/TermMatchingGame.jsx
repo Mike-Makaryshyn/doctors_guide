@@ -112,7 +112,7 @@ function TermMatchingGameContent() {
   const [electiveLang, setElectiveLang] = useState("la");
 
   // Визначення мов для колонок:
-  // Якщо isGermanLeft true – ліва колонка: "de", права: electiveLang; інакше – навпаки.
+  // Якщо isGermanLeft true – ліва колонка: "de", права – electiveLang; інакше – навпаки.
   const leftLang = isGermanLeft ? "de" : electiveLang;
   const rightLang = isGermanLeft ? electiveLang : "de";
 
@@ -142,12 +142,16 @@ function TermMatchingGameContent() {
   // Лічильник показів
   const [shownCounts, setShownCounts] = useState({});
 
+  // Новий стан для відслідковування, чи почата гра
+  const [gameStarted, setGameStarted] = useState(false);
+
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
 
   /* ------------------- Підготовка гри ------------------- */
   const handleStartGame = () => {
+    setGameStarted(true);
     setSettingsOpen(false);
     setGameFinished(false);
     setSessionDuration(0);
@@ -291,6 +295,11 @@ function TermMatchingGameContent() {
 
   const getRegionLabel = (r) => regionAbbreviations[r] || r;
 
+  // Функція для закриття налаштувань без перезавантаження гри
+  const closeSettings = () => {
+    setSettingsOpen(false);
+  };
+
   return (
     <MainLayout>
       <Helmet>
@@ -305,7 +314,7 @@ function TermMatchingGameContent() {
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+              <button className={styles.modalCloseButton} onClick={closeSettings}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
@@ -537,9 +546,9 @@ function TermMatchingGameContent() {
               <h3>Ergebnisse</h3>
               <p>Alle Paare gefunden: {correctMatchesCount} / {pairs.length}</p>
               <p>
-          Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
-          {sessionDuration % 60} Sekunden
-        </p>
+                Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+                {sessionDuration % 60} Sekunden
+              </p>
               <button className={styles.startButton} onClick={() => {
                 setSettingsOpen(true);
                 setGameFinished(false);

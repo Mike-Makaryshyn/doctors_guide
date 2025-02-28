@@ -104,6 +104,9 @@ const FillInBlankGameContent = () => {
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [sessionDuration, setSessionDuration] = useState(0);
 
+  // Новий стейт для відслідковування, чи почата гра
+  const [gameStarted, setGameStarted] = useState(false);
+
   useEffect(() => {
     setRegion(selectedRegion || "Bayern");
   }, [selectedRegion]);
@@ -169,19 +172,10 @@ const FillInBlankGameContent = () => {
     setGameStartTime(Date.now());
   };
 
-  useEffect(() => {
-    if (!settingsOpen) {
-      loadQuestions();
-      setGameFinished(false);
-      setGameStartTime(Date.now());
-      setCorrectAnswerCount(0);
-      setIncorrectAnswerCount(0);
-      setCorrectCounts({});
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allowEdit, settingsOpen]);
+  // Видалено useEffect, який спрацьовував при зміні settingsOpen і перезавантажував гру
 
   const handleStart = () => {
+    setGameStarted(true);
     setSettingsOpen(false);
     loadQuestions();
     setGameStartTime(Date.now());
@@ -291,6 +285,7 @@ const FillInBlankGameContent = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
       <div className={styles.resultsTile}>
+        {/* Кнопка закриття результатного модального вікна */}
         <button
           className={styles.modalCloseButton}
           onClick={() => setGameFinished(false)}
@@ -329,6 +324,15 @@ const FillInBlankGameContent = () => {
   const qIndex = currentIndex;
   const frageIstAbgeschlossen = questionsCompleted[qIndex] || false;
 
+  // Функція для простого закриття модального вікна налаштувань
+  const closeSettings = () => {
+    if (!gameStarted) {
+      setSettingsOpen(false);
+    } else {
+      setSettingsOpen(false);
+    }
+  };
+
   return (
     <MainLayout>
       <Helmet>
@@ -365,7 +369,8 @@ const FillInBlankGameContent = () => {
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+              {/* Використовуємо closeSettings для простого закриття модального вікна */}
+              <button className={styles.modalCloseButton} onClick={closeSettings}>
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>

@@ -104,7 +104,7 @@ export default function CustomWheel({
       ctx.save();
       const textAngle = startAngle + arcSize / 2;
       ctx.rotate(textAngle);
-      ctx.font = 'bold 15px "Poppins", sans-serif';
+      ctx.font = 'bold 12px "Poppins", sans-serif';
       ctx.fillStyle = "#000";
       ctx.textAlign = "right";
       ctx.fillText(seg.labelForWheel, cx * 0.9, 5);
