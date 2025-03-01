@@ -114,7 +114,6 @@ const AllMedicationsContent = () => {
   };
 
   const handleBack = () => {
-    if (requireAuth()) return;
     navigate("/main_menu");
   };
 
