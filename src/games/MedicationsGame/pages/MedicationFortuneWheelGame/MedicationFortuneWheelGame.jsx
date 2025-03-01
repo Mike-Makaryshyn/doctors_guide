@@ -6,17 +6,35 @@ import { useNavigate } from "react-router-dom";
 import { FaCog, FaPlay, FaPause, FaCheck, FaList, FaUser } from "react-icons/fa";
 import CustomWheel from "./CustomWheel";
 import { useMedicationStatus, MedicationStatusProvider } from "../../../../contexts/MedicationStatusContext";
-import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
 import fortuneWheelBg from "../../../../assets/medication-fortune-wheel-bg.jpg";
 import MedicationFortuneWheelGameTutorial from "./MedicationFortuneWheelGameTutorial";
 
-/** Допоміжні функції для очищення тексту (якщо потрібно) */
+// Додаткові імпорти для аутентифікації
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+
+/** Допоміжні функції */
 function removeGermanArticle(str = "") {
   return str.replace(/^\s*(der|die|das)\s+/i, "");
 }
 function removeLatParenthesis(str = "") {
   return str.replace(/\([^)]*\)/g, "").trim();
+}
+
+/**
+ * Функція, що повертає категорії, де "Alle" завжди на першій позиції,
+ * решта сортуються за алфавітом, а "Andere" завжди в кінці.
+ */
+function getSortedCategories(categories) {
+  const filtered = categories.filter(c => c !== "Alle");
+  let others = filtered.sort((a, b) => a.localeCompare(b, "de"));
+  if (others.includes("Andere")) {
+    others = others.filter(c => c !== "Andere");
+    others.push("Andere");
+  }
+  return ["Alle", ...others];
 }
 
 const filterModes = [
@@ -37,26 +55,37 @@ const playersList = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function MedicationFortuneWheelGameContent() {
   const navigate = useNavigate();
-  // Замість вибору регіону – працюємо лише з категоріями
   const { medicationStatuses, recordCorrectAnswer, flushChanges } = useMedicationStatus();
 
-  // Стан налаштувань та ігрових даних
+  // Аутентифікація
+  const [user] = useAuthState(auth);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return false;
+    }
+    return true;
+  };
+
+  // Стан налаштувань і даних гри
   const [settingsOpen, setSettingsOpen] = useState(true);
+  // Початкове значення – "Alle"
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(10);
   const [playersCount, setPlayersCount] = useState(1);
 
-  // Система балів для мультиплеєра
+  // Стан для багатокористувацьких балів
   const [scores, setScores] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
-  // Сегменти колеса та список медикаментів
+  // Сегменти колеса і список медикаментів
   const [segments, setSegments] = useState([]);
   const [finalMeds, setFinalMeds] = useState([]);
 
-  // Стан модального вікна для запитань
+  // Стан модального вікна з питанням
   const [showModal, setShowModal] = useState(false);
   const [modalQuestion, setModalQuestion] = useState(null);
   const [modalAnswers, setModalAnswers] = useState([]);
@@ -65,21 +94,21 @@ function MedicationFortuneWheelGameContent() {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [currentSliceIndex, setCurrentSliceIndex] = useState(null);
 
-  // Стан ігрових лічильників та часу
+  // Стан для підрахунку гри і часу
   const [initialMedCount, setInitialMedCount] = useState(0);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [gameStartTime, setGameStartTime] = useState(null);
 
-  // Невірні медикаменти (для повторення)
+  // Невірні відповіді (для повторення)
   const [wrongMeds, setWrongMeds] = useState({});
 
-  // Туторіал
+  // Тут керуємо станом туторіалу
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("medicationFortuneWheelTutorialCompleted") !== "true"
   );
 
-  // Контроль розміру колеса
+  // Керування розміром колеса
   const [wheelSize, setWheelSize] = useState(300);
   useEffect(() => {
     function handleResize() {
@@ -90,13 +119,13 @@ function MedicationFortuneWheelGameContent() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // При зміні кількості гравців – оновлюємо рахунок
+  // Оновлення балів при зміні кількості гравців
   useEffect(() => {
     setScores(new Array(playersCount).fill(0));
     setCurrentPlayer(1);
   }, [playersCount]);
 
-  /** Функція старту гри (нової сесії) */
+  /** Функція старту гри (нова сесія) */
   function startGame() {
     setSettingsOpen(false);
     setGameFinished(false);
@@ -105,16 +134,18 @@ function MedicationFortuneWheelGameContent() {
     loadDataForWheel();
   }
 
-  /** Функція для закриття вікна налаштувань */
+  /** Закриття налаштувань */
   function closeSettings() {
     setSettingsOpen(false);
   }
 
-  /** Формуємо масив finalMeds та сегментів */
+  /** Побудова списку finalMeds і сегментів */
   function loadDataForWheel() {
-    // Фільтруємо за категорією та статусом
+    // Фільтрація за категорією та статусом
     const filtered = medications.filter((med) => {
-      const matchesCategory = selectedCategory === "Alle" || (med.categories || []).includes(selectedCategory);
+      const matchesCategory =
+        selectedCategory === "Alle" ||
+        (med.categories || []).includes(selectedCategory);
       const status = medicationStatuses[med.id]?.status || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
@@ -139,7 +170,6 @@ function MedicationFortuneWheelGameContent() {
       if (mode === "Mixed") {
         mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
       }
-      // Припустимо, що медикаменти мають поля "lat" та "de"
       const labelForWheel =
         mode === "LatGerman"
           ? removeLatParenthesis(med.lat)
@@ -162,6 +192,8 @@ function MedicationFortuneWheelGameContent() {
 
   /** Функція, що викликається при зупинці колеса – вибір сегмента */
   function handleStopSpinning(winnerIndex) {
+    if (!requireAuth()) return;
+
     const seg = segments[winnerIndex];
     if (!seg || seg.labelForWheel === "Keine Begriffe gefunden") return;
     const winningMed = finalMeds[winnerIndex];
@@ -188,32 +220,31 @@ function MedicationFortuneWheelGameContent() {
     setCurrentSliceIndex(winnerIndex);
   }
 
-  /** Обробка вибору відповіді у модальному вікні */
+  /** Обробка вибору відповіді в модальному вікні */
   function handleAnswerSelect(ans) {
+    if (!requireAuth()) return;
     setChosenAnswer(ans);
     setIsAnswerCorrect(ans === modalCorrectAnswer);
   }
 
   /** Обробка кнопки OK у модальному вікні */
   function handleModalOk() {
+    if (!requireAuth()) return;
     if (!chosenAnswer) return;
     const isCorrect = isAnswerCorrect;
     const idx = currentSliceIndex;
     const winningMed = finalMeds[idx];
     if (winningMed) {
       if (isCorrect) {
-        // Оновлюємо рахунок для поточного гравця
         setScores((old) => {
           const newScores = [...old];
           newScores[currentPlayer - 1] += 1;
           return newScores;
         });
         recordCorrectAnswer(winningMed.id);
-        // Видаляємо сегмент та відповідний медикамент із списку
         setSegments((old) => old.filter((_, i) => i !== idx));
         setFinalMeds((prevFinalMeds) => {
           const newFinalMeds = prevFinalMeds.filter((_, i) => i !== idx);
-          // Якщо більше немає елементів – завершуємо гру
           if (newFinalMeds.length === 0) {
             finishGame();
           }
@@ -233,7 +264,7 @@ function MedicationFortuneWheelGameContent() {
     setIsAnswerCorrect(false);
   }
 
-  /** Завершення гри – викликається, коли більше немає елементів */
+  /** Завершення гри */
   function finishGame() {
     const dur = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dur);
@@ -241,11 +272,11 @@ function MedicationFortuneWheelGameContent() {
     flushChanges();
   }
 
-  /** Рендер результатного модального вікна */
+  /** Рендеринг модального вікна з результатами */
   function renderResultsModal() {
     if (!gameFinished) return null;
     const totalCorrect = scores.reduce((a, b) => a + b, 0);
-  
+
     return (
       <div className={styles.resultsOverlay}>
         <div className={styles.resultsBox}>
@@ -279,6 +310,16 @@ function MedicationFortuneWheelGameContent() {
     );
   }
 
+  // Отримуємо список категорій із даних медикаментів
+  const availableCategories = Object.keys(
+    medications.reduce((acc, med) => {
+      (med.categories || []).forEach((cat) => { acc[cat] = true; });
+      return acc;
+    }, {})
+  );
+  // Додаємо "Alle" вручну та сортуємо за допомогою нашої функції getSortedCategories
+  const allCategories = getSortedCategories(["Alle", ...availableCategories.filter(c => c !== "Alle")]);
+
   return (
     <MainLayout>
       <Helmet>
@@ -292,7 +333,7 @@ function MedicationFortuneWheelGameContent() {
       </Helmet>
 
       <div className={styles.fortuneWheelGame}>
-        {/* Рахунок гравців, якщо більше одного */}
+        {/* Баланс для багатокористувацького режиму */}
         {playersCount > 1 && !settingsOpen && !gameFinished && (
           <div className={styles.scoreboard}>
             {scores.map((score, index) => (
@@ -308,12 +349,12 @@ function MedicationFortuneWheelGameContent() {
           </div>
         )}
 
-        {/* Back-Button */}
+        {/* Кнопка "назад" */}
         <button className="main_menu_back" onClick={() => navigate("/medications-learning")}>
           &#8592;
         </button>
 
-        {/* Кнопка "Налаштування" */}
+        {/* Кнопка налаштувань */}
         <div className={styles.bottomRightSettings}>
           <button
             className={styles.settingsButton}
@@ -326,7 +367,7 @@ function MedicationFortuneWheelGameContent() {
           </button>
         </div>
 
-        {/* Кнопка для запуску туторіалу */}
+        {/* Кнопка туторіалу */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"
@@ -341,7 +382,7 @@ function MedicationFortuneWheelGameContent() {
           </button>
         )}
 
-        {/* Вікно налаштувань */}
+        {/* Модаль налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={styles.settingsModalBox}>
@@ -350,26 +391,22 @@ function MedicationFortuneWheelGameContent() {
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
               <div className={styles.row}>
-                {/* Категорії */}
+                {/* Контейнер для категорій */}
                 <div className={styles.categoryColumn}>
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper} data-tutorial="categorySelect">
                     <div className={styles.categoryCell}>
-                      {categoryIcons[selectedCategory] && (
-                        <img
-                          src={categoryIcons[selectedCategory]}
-                          alt={selectedCategory}
-                          className={styles.categoryIcon}
-                        />
-                      )}
+                      {selectedCategory === "Andere" ? "Andr." : selectedCategory}
                     </div>
                     <select
                       className={styles.nativeSelect}
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
                     >
-                      <option value="Alle">Alle</option>
-                      {Object.keys(categoryIcons).map((cat) => (
+                      {allCategories.map((cat) => (
                         <option key={cat} value={cat}>
                           {cat}
                         </option>
@@ -388,7 +425,10 @@ function MedicationFortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={filterMode}
-                      onChange={(e) => setFilterMode(e.target.value)}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setFilterMode(e.target.value);
+                      }}
                     >
                       {filterModes.map((f) => (
                         <option key={f.value} value={f.value}>
@@ -399,7 +439,7 @@ function MedicationFortuneWheelGameContent() {
                   </div>
                 </div>
 
-                {/* Spieler */}
+                {/* Кількість гравців */}
                 <div className={styles.playersColumn}>
                   <label className={styles.fieldLabel}>Spieler</label>
                   <div className={styles.selectWrapper} data-tutorial="playersSelect">
@@ -409,7 +449,10 @@ function MedicationFortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={playersCount}
-                      onChange={(e) => setPlayersCount(Number(e.target.value))}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setPlayersCount(Number(e.target.value));
+                      }}
                     >
                       {playersList.map((p) => (
                         <option key={p} value={p}>
@@ -421,7 +464,7 @@ function MedicationFortuneWheelGameContent() {
                 </div>
               </div>
 
-              {/* Anzeige-Modus */}
+              {/* Режим відображення */}
               <div className={styles.modalField}>
                 <div className={styles.displayModeContainer} data-tutorial="displayModeSelect">
                   {displayModeOptions.map((opt) => (
@@ -430,7 +473,10 @@ function MedicationFortuneWheelGameContent() {
                       className={`${styles.displayModeIcon} ${
                         displayMode === opt.value ? styles.selected : ""
                       }`}
-                      onClick={() => setDisplayMode(opt.value)}
+                      onClick={() => {
+                        if (!requireAuth()) return;
+                        setDisplayMode(opt.value);
+                      }}
                     >
                       {opt.label}
                     </div>
@@ -438,7 +484,7 @@ function MedicationFortuneWheelGameContent() {
                 </div>
               </div>
 
-              {/* Anzahl der Begriffe */}
+              {/* Кількість понять */}
               <div className={styles.modalField}>
                 <div className={styles.questionCountContainer} data-tutorial="questionCountSelect">
                   {questionCountOptions.map((qc) => (
@@ -447,7 +493,10 @@ function MedicationFortuneWheelGameContent() {
                       className={`${styles.questionCountIcon} ${
                         questionCount === qc ? styles.selected : ""
                       }`}
-                      onClick={() => setQuestionCount(qc)}
+                      onClick={() => {
+                        if (!requireAuth()) return;
+                        setQuestionCount(qc);
+                      }}
                     >
                       {qc}
                     </div>
@@ -455,6 +504,7 @@ function MedicationFortuneWheelGameContent() {
                 </div>
               </div>
 
+              {/* Кнопка старту */}
               <button className={styles.startButton} data-tutorial="startButton" onClick={startGame}>
                 Start
               </button>
@@ -462,7 +512,7 @@ function MedicationFortuneWheelGameContent() {
           </div>
         )}
 
-        {/* Якщо немає медикаментів і гра не завершена */}
+        {/* Повідомлення, якщо для даного фільтру немає медикаментів */}
         {!settingsOpen && !gameFinished && finalMeds.length === 0 && (
           <div className={styles.noQuestionsOverlay}>
             <div className={styles.noQuestionsMessage}>
@@ -471,10 +521,10 @@ function MedicationFortuneWheelGameContent() {
           </div>
         )}
 
-        {/* Модальне вікно результатів */}
+        {/* Модаль з результатами */}
         {renderResultsModal()}
 
-        {/* Колесо */}
+        {/* Відображення колеса */}
         {!settingsOpen && !gameFinished && segments.length > 0 && (
           <div className={styles.wheelContainer} data-tutorial="spinButton">
             <CustomWheel
@@ -487,7 +537,7 @@ function MedicationFortuneWheelGameContent() {
           </div>
         )}
 
-        {/* Модальне вікно з питанням */}
+        {/* Модаль з питанням */}
         {showModal && (
           <div className={styles.modalOverlay}>
             <div className={styles.questionModalBox}>
@@ -531,6 +581,14 @@ function MedicationFortuneWheelGameContent() {
           />
         )}
       </div>
+
+      {/* Модаль аутентифікації */}
+      {showAuthModal && (
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+        />
+      )}
     </MainLayout>
   );
 }

@@ -12,6 +12,11 @@ import { Helmet } from "react-helmet";
 import medicalTerminologyBg from "../../../../assets/fortune-wheel-bg.jpg";
 import FortuneWheelGameTutorial from "./FortuneWheelGameTutorial";
 
+// Додаткові імпорти для авторизації
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../../firebase";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+
 /** Допоміжні функції для очищення тексту */
 function removeGermanArticle(str = "") {
   return str.replace(/^\s*(der|die|das)\s+/i, "");
@@ -60,6 +65,17 @@ function FortuneWheelGameContent() {
   const { selectedRegion } = useGetGlobalInfo();
   const { termStatuses, recordCorrectAnswer, flushChanges } = useTermStatus();
 
+  // Авторизація
+  const [user] = useAuthState(auth);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return false;
+    }
+    return true;
+  };
+
   // Стан налаштувань та ігрових даних
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Alle");
@@ -98,6 +114,7 @@ function FortuneWheelGameContent() {
     // Просто закриваємо модалку результатів, не змінюючи даних гри
     setGameFinished(false);
   };
+
   // Туторіал
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("fortuneWheelGameTutorialCompleted") !== "true"
@@ -190,6 +207,9 @@ function FortuneWheelGameContent() {
 
   /** Функція, що викликається при зупинці колеса – вибір сегмента */
   function handleStopSpinning(winnerIndex) {
+    // Якщо користувач не авторизований, показуємо AuthModal та виходимо
+    if (!requireAuth()) return;
+
     const seg = segments[winnerIndex];
     if (!seg || seg.labelForWheel === "Keine Begriffe gefunden") return;
     const winningTerm = finalTerms[winnerIndex];
@@ -218,12 +238,16 @@ function FortuneWheelGameContent() {
 
   /** Обробка вибору відповіді у модальному вікні */
   function handleAnswerSelect(ans) {
+    // Блокуємо дію для неавторизованих користувачів
+    if (!requireAuth()) return;
     setChosenAnswer(ans);
     setIsAnswerCorrect(ans === modalCorrectAnswer);
   }
 
   /** Обробка кнопки OK у модальному вікні */
   function handleModalOk() {
+    // Блокуємо дію для неавторизованих користувачів
+    if (!requireAuth()) return;
     if (!chosenAnswer) return;
     const isCorrect = isAnswerCorrect;
     const idx = currentSliceIndex;
@@ -237,7 +261,7 @@ function FortuneWheelGameContent() {
           return newScores;
         });
         recordCorrectAnswer(winningTerm.id);
-        // Видаляємо сегмент та відповідний термін із списку за допомогою callback
+        // Видаляємо сегмент та відповідний термін із списку
         setSegments((old) => old.filter((_, i) => i !== idx));
         setFinalTerms((prevFinalTerms) => {
           const newFinalTerms = prevFinalTerms.filter((_, i) => i !== idx);
@@ -277,8 +301,7 @@ function FortuneWheelGameContent() {
   
     return (
       <div className={styles.resultsOverlay}>
-    <div className={styles.resultsBox}>
-    
+        <div className={styles.resultsBox}>
           <h2 className={styles.modalTitle}>Ergebnisse</h2>
           {playersCount === 1 ? (
             <>
@@ -390,7 +413,10 @@ function FortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={region}
-                      onChange={(e) => setRegion(e.target.value)}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setRegion(e.target.value);
+                      }}
                     >
                       <option value="Alle">Alle</option>
                       {[...new Set(medicalTerms.flatMap((t) => t.regions || []))]
@@ -414,7 +440,10 @@ function FortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={filterMode}
-                      onChange={(e) => setFilterMode(e.target.value)}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setFilterMode(e.target.value);
+                      }}
                     >
                       {filterModes.map((f) => (
                         <option key={f.value} value={f.value}>
@@ -441,7 +470,10 @@ function FortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
                     >
                       <option value="Alle">Alle</option>
                       {Object.keys(categoryIcons).map((cat) => (
@@ -463,7 +495,10 @@ function FortuneWheelGameContent() {
                     <select
                       className={styles.nativeSelect}
                       value={playersCount}
-                      onChange={(e) => setPlayersCount(Number(e.target.value))}
+                      onChange={(e) => {
+                        if (!requireAuth()) return;
+                        setPlayersCount(Number(e.target.value));
+                      }}
                     >
                       {playersList.map((p) => (
                         <option key={p} value={p}>
@@ -475,7 +510,7 @@ function FortuneWheelGameContent() {
                 </div>
               </div>
 
-              {/* Anzeige-Modus */}
+              {/* Anzeige-Modус */}
               <div className={styles.modalField}>
                 <div className={styles.displayModeContainer} data-tutorial="displayModeSelect">
                   {displayModeOptions.map((opt) => (
@@ -484,7 +519,10 @@ function FortuneWheelGameContent() {
                       className={`${styles.displayModeIcon} ${
                         displayMode === opt.value ? styles.selected : ""
                       }`}
-                      onClick={() => setDisplayMode(opt.value)}
+                      onClick={() => {
+                        if (!requireAuth()) return;
+                        setDisplayMode(opt.value);
+                      }}
                     >
                       {opt.label}
                     </div>
@@ -501,7 +539,10 @@ function FortuneWheelGameContent() {
                       className={`${styles.questionCountIcon} ${
                         questionCount === qc ? styles.selected : ""
                       }`}
-                      onClick={() => setQuestionCount(qc)}
+                      onClick={() => {
+                        if (!requireAuth()) return;
+                        setQuestionCount(qc);
+                      }}
                     >
                       {qc}
                     </div>
@@ -509,6 +550,7 @@ function FortuneWheelGameContent() {
                 </div>
               </div>
 
+              {/* Start-кнопка залишається активною */}
               <button className={styles.startButton} data-tutorial="startButton" onClick={startGame}>
                 Start
               </button>
@@ -518,10 +560,11 @@ function FortuneWheelGameContent() {
 
         {/* Якщо немає термінів і гра не завершена */}
         {!settingsOpen && !gameFinished && finalTerms.length === 0 && (
-            <div className={styles.noQuestionsOverlay}>
-          <div className={styles.noQuestionsMessage}>
-            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-          </div></div>
+          <div className={styles.noQuestionsOverlay}>
+            <div className={styles.noQuestionsMessage}>
+              <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+            </div>
+          </div>
         )}
 
         {/* Модальне вікно результатів */}
@@ -584,6 +627,11 @@ function FortuneWheelGameContent() {
           />
         )}
       </div>
+      
+      {/* Auth-Modal: відкривається, якщо спроба дії відбувається без авторизації */}
+      {showAuthModal && (
+        <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+      )}
     </MainLayout>
   );
 }
