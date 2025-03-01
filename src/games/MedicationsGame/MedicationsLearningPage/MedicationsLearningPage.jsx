@@ -34,16 +34,17 @@ const MedicationsLearningPage = () => {
         <div className={styles.gamesGrid}>
           {/* 1. Flashcard */}
           <div
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${flashcardBg})` }}
-          >
-            <div className={styles.innerTile}>
-              <div className={styles.cardInner}>
-                <div className={styles.innerFront}>Flashcard</div>
-                <div className={styles.innerBack}>Game</div>
-              </div>
-            </div>
-          </div>
+  className={styles.gameTile}
+  style={{ backgroundImage: `url(${flashcardBg})` }}
+  onClick={() => navigate("/medications-flashcard-game")}
+>
+  <div className={styles.innerTile}>
+    <div className={styles.cardInner}>
+      <div className={styles.innerFront}>Flashcard</div>
+      <div className={styles.innerBack}>Game</div>
+    </div>
+  </div>
+</div>
 
           {/* 2. Simple Choice */}
           <div

@@ -130,6 +130,9 @@ const FillInBlankGame = React.lazy(() =>
 const MedicationsLearningPage = React.lazy(() =>
   import("../games/MedicationsGame/MedicationsLearningPage/MedicationsLearningPage.jsx")
 );
+const MedicationFlashcardGame = React.lazy(() =>
+  import("../games/MedicationsGame/pages/FlashcardGame/MedicationFlashcardGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -175,6 +178,7 @@ export default function Routers() {
           path={pathList.kenntnispruefung.path}
           element={<KenntnisPruefungPage />}
         />
+        <Route path="/medications-flashcard-game" element={<MedicationFlashcardGame />} />
         <Route
   path={pathList.regional_chats.path}
   element={<RegionalChatsPage />}
