@@ -1,0 +1,50 @@
+/* src/forum/RecordDetail.module.scss */
+.container {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .createdAt {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .commentsSection {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .commentsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .commentItem {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+  }
+  
+  .addComment {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #013b6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

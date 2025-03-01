@@ -139,6 +139,12 @@ const MedicationSimpleChoiceGame = React.lazy(() =>
 const MedicationElectiveLanguageGame = React.lazy(() =>
   import("../games/MedicationsGame/pages/MedicationElectiveLanguageGame/MedicationElectiveLanguageGame.jsx")
 );
+// всередині src/routes/index.jsx (на рівні з іншими lazy-імпортами)
+const ForumRoutes = React.lazy(() => import("../forum/ForumRoutes.jsx"));
+
+const MedicationsTermMatchingGame = React.lazy(() =>
+  import("../games/MedicationsGame/pages/TermMatchingGame/MedicationsTermMatchingGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -167,6 +173,7 @@ export default function Routers() {
   path={pathList.medications_elective_language.path}
   element={<MedicationElectiveLanguageGame />}
 />
+<Route path="/forum/*" element={<ForumRoutes />} />
         <Route path="/medications-learning" element={<MedicationsLearningPage />} />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
@@ -178,6 +185,10 @@ export default function Routers() {
           path={pathList.gleichwertigkeit.path}
           element={<GleichwertigkeitPage />}
         />
+        <Route
+  path={pathList.medications_term_matching.path}
+  element={<MedicationsTermMatchingGame/>}
+/>
           <Route
       path={pathList.medications_simple_choice.path}
       element={<MedicationSimpleChoiceGame />}

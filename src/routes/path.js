@@ -117,4 +117,7 @@ export const pathList = {
   medications_elective_language: {
     path: "/medications-elective-language-game",
   },
+  medications_term_matching: {
+    path: "/medications_term-matching-game",
+  },
 };

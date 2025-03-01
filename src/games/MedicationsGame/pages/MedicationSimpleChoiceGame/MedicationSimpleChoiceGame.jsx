@@ -1,5 +1,3 @@
-// doctors_guide/src/games/MedicationsGame/pages/MedicationSimpleChoiceGame/MedicationSimpleChoiceGame.jsx
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
@@ -30,7 +28,7 @@ import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import FloatingExamples from "./FloatingExamples";
 
-// Функція для сортування категорій: алфавітно, "Andere" завжди остання
+// Funktion zur Sortierung der Kategorien: alphabetisch, "Andere" stets zuletzt
 const sortCategoriesWithAndereLast = (categories) => {
   let sorted = [...categories].sort();
   if (sorted.includes("Andere")) {
@@ -40,7 +38,7 @@ const sortCategoriesWithAndereLast = (categories) => {
   return sorted;
 };
 
-// Filter моди
+// Filter-Modi
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -48,10 +46,10 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Кількість питань
+// Anzahl Fragen
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Режими відображення: Мед.→Deu, Deu→Мед., Gemischt
+// Anzeige-Modi: Med.→Deu, Deu→Med., Gemischt
 const displayModeOptions = [
   { value: "LatGerman", label: "Med.→Deu" },
   { value: "GermanLat", label: "Deu→Med." },
@@ -73,10 +71,10 @@ const MedicationSimpleChoiceGameContent = () => {
     return false;
   };
 
-  // Контекст медикаментів
+  // Kontext der Medikamente
   const { medicationStatuses, recordCorrectAnswer, flushChanges } = useMedicationStatus();
 
-  // Налаштування гри
+  // Spieleinstellungen
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [filterMode, setFilterMode] = useState("unlearned");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -84,31 +82,31 @@ const MedicationSimpleChoiceGameContent = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Стан гри
+  // Spielzustände
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Лічильники
+  // Zähler
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [shownCounts, setShownCounts] = useState({});
 
-  // Час початку гри та результат
+  // Spielstartzeit und Ergebnis
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Tutorial
+  // Tutorial-Zustand
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("medicationSimpleChoiceGameTutorialCompleted") !== "true"
   );
 
   const [gameStarted, setGameStarted] = useState(false);
 
-  // Отримуємо всі категорії з медикаментів і сортуємо їх
+  // Alle Kategorien aus den Medikamenten ermitteln und sortieren
   let allCategories = Array.from(
     new Set(medications.flatMap((med) => med.categories || []))
   );
@@ -118,7 +116,7 @@ const MedicationSimpleChoiceGameContent = () => {
     setSettingsOpen(false);
   };
 
-  // Завантаження питань
+  // Laden der Fragen
   const loadQuestions = () => {
     const gefilterteMeds = medications.filter((med) => {
       const status = medicationStatuses[med.id]?.status || "unlearned";
@@ -148,7 +146,7 @@ const MedicationSimpleChoiceGameContent = () => {
     });
     setShownCounts(neueShownCounts);
 
-    // Формуємо питання: залежно від displayMode
+    // Fragen zusammenstellen: je nach displayMode
     const fragenDaten = ausgewählteMeds.map((med) => {
       let modus = displayMode;
       if (modus === "Mixed") {
@@ -163,7 +161,7 @@ const MedicationSimpleChoiceGameContent = () => {
         richtigeAntwort = med.lat;
       }
 
-      // 3 випадкові помилкові відповіді
+      // 3 zufällige falsche Antworten
       const falscheAntworten = medications
         .filter((m) => m.id !== med.id)
         .sort(() => Math.random() - 0.5)
@@ -177,7 +175,7 @@ const MedicationSimpleChoiceGameContent = () => {
         frage: frageText,
         richtigeAntwort,
         optionen,
-        med, // зберігаємо оригінальний об'єкт медикамента
+        med,
       };
     });
 
@@ -253,7 +251,6 @@ const MedicationSimpleChoiceGameContent = () => {
     }
   };
 
-  // Обчислення помилок за категоріями
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -336,13 +333,11 @@ const MedicationSimpleChoiceGameContent = () => {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* FloatingExamples: якщо для поточного медикамента є приклади */}
       {aktuelleFrage?.med?.examples && (
         <FloatingExamples examples={aktuelleFrage.med.examples} />
       )}
 
       <div className={styles.medicationSimpleChoiceGame}>
-        {/* Zurück-Button */}
         <button
           className="main_menu_back"
           onClick={() => navigate("/medications-learning")}
@@ -350,10 +345,8 @@ const MedicationSimpleChoiceGameContent = () => {
           &#8592;
         </button>
 
-        {/* AuthModal */}
         <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-        {/* Налаштування (Modal) */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
@@ -368,10 +361,11 @@ const MedicationSimpleChoiceGameContent = () => {
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
+              {/* Dummy-Element für den regionSelect-Tutorialschritt */}
+              <div data-tutorial="regionSelect" />
 
               <div className={styles.row}>
-                {/* Filter */}
-                <div className={styles.filterColumn}>
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.filterCell}>
@@ -394,8 +388,7 @@ const MedicationSimpleChoiceGameContent = () => {
                   </div>
                 </div>
 
-                {/* Kategorie */}
-                <div className={styles.categoryColumn}>
+                <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
                     <div className={styles.categoryCell}>
@@ -419,7 +412,6 @@ const MedicationSimpleChoiceGameContent = () => {
                   </div>
                 </div>
 
-                {/* Bearbeiten-Toggle */}
                 <div className={styles.editColumn}>
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
@@ -430,15 +422,15 @@ const MedicationSimpleChoiceGameContent = () => {
                       if (requireAuth()) return;
                       setAllowEdit(!allowEdit);
                     }}
+                    data-tutorial="editToggleButton"
                   >
                     <FaPen />
                   </button>
                 </div>
               </div>
 
-              {/* Anzeige-Modus */}
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer}>
+                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
@@ -456,9 +448,8 @@ const MedicationSimpleChoiceGameContent = () => {
                 </div>
               </div>
 
-              {/* Anzahl Fragen */}
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer}>
+                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
@@ -476,14 +467,13 @@ const MedicationSimpleChoiceGameContent = () => {
                 </div>
               </div>
 
-              <button className={styles.startButton} onClick={handleStart}>
+              <button className={styles.startButton} onClick={handleStart} data-tutorial="startButton">
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Tutorial-Button */}
         {settingsOpen && (
           <button
             className={styles.tutorialButton}
@@ -507,7 +497,6 @@ const MedicationSimpleChoiceGameContent = () => {
           </button>
         )}
 
-        {/* Відображення, якщо питань немає */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
           <div className={styles.noQuestionsOverlay}>
             <div className={styles.noQuestionsMessage}>
@@ -516,7 +505,6 @@ const MedicationSimpleChoiceGameContent = () => {
           </div>
         )}
 
-        {/* Ігровий інтерфейс */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progressContainer}>

@@ -1,0 +1,36 @@
+/* src/forum/UserRecordsPage.module.scss */
+.container {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .emptyState {
+    margin-top: 2rem;
+  }
+  
+  .addButton {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #013b6e;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .recordsList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .recordItem {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .date {
+    font-size: 0.9rem;
+    color: #777;
+  }

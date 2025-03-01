@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import Joyride, { STATUS, EVENTS } from "react-joyride";
-import tutorialTranslations from "./SimpleChoiceGameTutorialTranslations";
+import Joyride, { STATUS } from "react-joyride";
+import tutorialTranslations from "./TermMatchingGameTutorialTranslations";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-import styles from "./SimpleChoiceGameTutorial.module.scss";
+import styles from "./TermMatchingGameTutorial.module.scss";
 
-const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
+const TermMatchingGameTutorial = ({ run, onFinish }) => {
   const { selectedLanguage } = useGetGlobalInfo() || {};
   const language = selectedLanguage || tutorialTranslations.currentLanguage || "en";
   const stepsContent = tutorialTranslations[language]?.steps || {};
@@ -15,59 +15,50 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
   useEffect(() => {
     const stepsData = [
       {
-        // Вступний крок – не прив'язаний до жодного елементу
         target: "body",
-        // Для цього кроку використовується dangerouslySetInnerHTML, щоб обробити теги <strong>
         content: <span dangerouslySetInnerHTML={{ __html: stepsContent.intro }} />,
         placement: "center",
         disableBeacon: true,
       },
-
+      {
+        target: '[data-tutorial="regionSelect"]',
+        content: stepsContent.regionSelect || "Select your desired region.",
+        placement: "top",
+        disableBeacon: true,
+      },
+      {
+        target: ".selectWrapper",
+        content: stepsContent.selectWrapper || "This container allows you to choose the region.",
+        placement: "top",
+        disableBeacon: true,
+      },
       {
         target: '[data-tutorial="filterColumn"]',
-        content:
-          stepsContent.filterColumn ||
-          "Here you can choose the filter: learned, unlearned or paused (deferred).",
+        content: stepsContent.filterColumn || "Choose the filter: learned, unlearned or paused.",
         placement: "top",
         disableBeacon: true,
       },
       {
         target: '[data-tutorial="categorySelect"]',
-        content:
-          stepsContent.categorySelect ||
-          "Choose the category of medical terms. By default, 'All' is selected.",
+        content: stepsContent.categorySelect || "Choose the category of terms.",
         placement: "top",
         disableBeacon: true,
       },
       {
-        target: '[data-tutorial="editToggleButton"]',
-        content:
-          stepsContent.editToggleButton ||
-          "When edit mode is activated, you can modify your answer after an incorrect response.",
-        placement: "top",
-        disableBeacon: true,
-      },
-      {
-        target: '[data-tutorial="displayModeContainer"]',
-        content:
-          stepsContent.displayMode ||
-          "Here you can choose the language mode – whether to translate from Latin to German, from German to Latin, or use a mixed mode.",
+        target: '[data-tutorial="languageSwapContainer"]',
+        content: stepsContent.languageSwapContainer || "Use this container to swap the translation direction: left is always German, right is your chosen language.",
         placement: "top",
         disableBeacon: true,
       },
       {
         target: '[data-tutorial="questionCountContainer"]',
-        content:
-          stepsContent.questionCount ||
-          "Select the number of questions to be displayed in the game.",
+        content: stepsContent.questionCountContainer || "Select the number of terms for the game.",
         placement: "top",
         disableBeacon: true,
       },
       {
         target: '[data-tutorial="startButton"]',
-        content:
-          stepsContent.startButton ||
-          "Press Start to begin the game.",
+        content: stepsContent.startButton || "Press Start to begin the game.",
         placement: "top",
         disableBeacon: true,
       },
@@ -78,10 +69,10 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
   const handleJoyrideCallback = (data) => {
     const { status } = data;
     if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
+      localStorage.setItem("termMatchingGameTutorialCompleted", "true");
       if (typeof onFinish === "function") {
         onFinish();
       }
-      localStorage.setItem("simpleChoiceGameTutorialCompleted", "true");
     }
   };
 
@@ -94,7 +85,7 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
       scrollToFirstStep={true}
       scrollOffset={200}
       showSkipButton={true}
-      showCloseButton={false} // Кнопка закриття завжди прихована
+      showCloseButton={false}
       callback={handleJoyrideCallback}
       styles={{
         options: {
@@ -116,4 +107,4 @@ const SimpleChoiceGameTutorial = ({ run, onFinish }) => {
   );
 };
 
-export default SimpleChoiceGameTutorial;
+export default TermMatchingGameTutorial;

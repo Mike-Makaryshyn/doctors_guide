@@ -542,9 +542,41 @@
 
 @media (max-width: 768px) {
   .tutorialButton {
-    top: -253px;
+    top: -233px;
     right: -10px;
   }
+}
+
+.editToggleButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: -2px; /* Vertikale Ausrichtung */
+  align-self: center;
+}
+
+.editToggleButton {
+  line-height: 0; /* Icon zentriert */
+}
+
+.editToggleButton:hover {
+  background: #ffffff;
+  color: #013b6e;
+}
+
+.editToggleButton.selectedEdit {
+  background: #013b6e;
+  color: #fff;
 }
 .infoIcon {
   position: absolute; /* Щоб розташувати всередині h2 */

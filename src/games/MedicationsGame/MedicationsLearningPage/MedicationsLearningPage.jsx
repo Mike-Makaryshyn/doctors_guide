@@ -71,11 +71,12 @@ const MedicationsLearningPage = () => {
               </div>
             </div>
           </div>
-
+          
           {/* 4. Term Matching Game */}
           <div
             className={styles.gameTile}
             style={{ backgroundImage: `url(${matchingGameBg})` }}
+            onClick={() => navigate("/medications_term-matching-game")}
           >
             <div className={styles.termMatchingContainer}>
               <div className={styles.piece1}></div>

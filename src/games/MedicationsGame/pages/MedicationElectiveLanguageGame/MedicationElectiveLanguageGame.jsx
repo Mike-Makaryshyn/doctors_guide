@@ -63,7 +63,14 @@ const MedicationElectiveLanguageGameContent = () => {
     }
     return false;
   };
-
+  const sortCategoriesWithAndereLast = (categories) => {
+    let sorted = [...categories].sort((a, b) => a.localeCompare(b));
+    if (sorted.includes("Andere")) {
+      sorted = sorted.filter((cat) => cat !== "Andere");
+      sorted.push("Andere");
+    }
+    return sorted;
+  };
   // Статуси Medication
   const { medicationStatuses, toggleStatus, recordCorrectAnswer, flushChanges } =
     useMedicationStatus();
@@ -101,9 +108,9 @@ const MedicationElectiveLanguageGameContent = () => {
   );
 
   // Категорії
-  const allCategories = Array.from(
-    new Set(medications.flatMap((m) => m.categories || []))
-  ).sort();
+  const allCategories = sortCategoriesWithAndereLast(
+    Array.from(new Set(medications.flatMap((m) => m.categories || [])))
+  );
 
   // Завантаження питань
   const loadQuestions = () => {
@@ -361,34 +368,33 @@ const MedicationElectiveLanguageGameContent = () => {
 
                 {/* Kategorie */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
-                  <label className={styles.fieldLabel}>Kategorie</label>
-                  <div className={styles.selectWrapper}>
-                    <div className={styles.categoryCell}>
-                      {categoryIcons[selectedCategory] && (
-                        <img
-                          src={categoryIcons[selectedCategory]}
-                          alt={selectedCategory}
-                          className={styles.categoryIcon}
-                        />
-                      )}
-                    </div>
-                    <select
-                      className={styles.nativeSelect}
-                      value={selectedCategory}
-                      onChange={(e) => {
-                        if (requireAuth()) return;
-                        setSelectedCategory(e.target.value);
-                      }}
-                    >
-                      <option value="Alle">Alle</option>
-                      {allCategories.map((cat) => (
-                        <option key={cat} value={cat}>
-                          {cat}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+  <label className={styles.fieldLabel}>Kategorie</label>
+  <div className={styles.selectWrapper}>
+    {/* Відображаємо категорію як текст або скорочення */}
+    <div className={styles.categoryCell}>
+      {selectedCategory === "Alle"
+        ? "Alle"
+        : selectedCategory === "Andere"
+        ? "Andr."
+        : selectedCategory}
+    </div>
+    <select
+      className={styles.nativeSelect}
+      value={selectedCategory}
+      onChange={(e) => {
+        if (requireAuth()) return;
+        setSelectedCategory(e.target.value);
+      }}
+    >
+      <option value="Alle">Alle</option>
+      {allCategories.map((cat) => (
+        <option key={cat} value={cat}>
+          {cat}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
 
                 {/* Edit */}
                 <div className={styles.editColumn} data-tutorial="editToggleButton">
