@@ -535,8 +535,10 @@ const FillInBlankGameContent = () => {
         )}
 
         {!settingsOpen && !gameFinished && questions.length === 0 && (
+            <div className={styles.noQuestionsOverlay}>
           <div className={styles.noQuestionsMessage}>
             <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+          </div>
           </div>
         )}
 

@@ -94,7 +94,10 @@ function FortuneWheelGameContent() {
 
   // Невірні терміни (для повторення)
   const [wrongTerms, setWrongTerms] = useState({});
-
+  const closeResultsModal = () => {
+    // Просто закриваємо модалку результатів, не змінюючи даних гри
+    setGameFinished(false);
+  };
   // Туторіал
   const [showTutorial, setShowTutorial] = useState(
     localStorage.getItem("fortuneWheelGameTutorialCompleted") !== "true"
@@ -264,6 +267,7 @@ function FortuneWheelGameContent() {
     setSessionDuration(dur);
     setGameFinished(true);
     flushChanges();
+    // НЕ викликайте тут setFinalTerms([]) чи інше очищення!
   }
 
   /** Рендер результатного модального вікна */
@@ -273,13 +277,8 @@ function FortuneWheelGameContent() {
   
     return (
       <div className={styles.resultsOverlay}>
-        <div className={styles.resultsBox}>
-          <button
-            className={styles.modalCloseButton}
-            onClick={() => setGameFinished(false)}
-          >
-            ×
-          </button>
+    <div className={styles.resultsBox}>
+    
           <h2 className={styles.modalTitle}>Ergebnisse</h2>
           {playersCount === 1 ? (
             <>
