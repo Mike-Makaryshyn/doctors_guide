@@ -5424,35 +5424,7 @@ export const medications = [
       "Jojobaöl"
     ]
   },
-  {
-    "id": 176,
-    "lat": "",
-    "de": "",
-    "en": "",
-    "uk": "",
-    "ru": "",
-    "pl": "",
-    "es": "",
-    "fr": "",
-    "tr": "",
-    "ar": "",
-    "deExplanation": "Bitte geben Sie den Namen des Medikaments an, damit ich Ihnen eine passende Erklärung liefern kann.",
-    "enExplanation": "I'm sorry, but without the specific name of the medication, I am unable to provide an appropriate explanation. Please provide the name of the medication so that I can offer you an accurate and concise explanation for an English-speaking medical audience.",
-    "ukExplanation": "Препарат призначений для лікування (назва препарату). Він використовується для (опис основних медичних властивостей препарату). Пам'ятайте, що перед застосуванням будь-якого медичного засобу важливо проконсультуватися з лікарем.",
-    "ruExplanation": "Этот препарат называется [название препарата на русском]. Он применяется для лечения [название заболевания или состояния]. Механизм действия препарата заключается в [описание механизма действия]. Важно соблюдать назначенную врачом дозировку и обращать внимание на возможные побочные эффекты. При возникновении вопросов или забот обратитесь за консультацией к врачу или аптекарю.",
-    "plExplanation": "Proszę podać nazwę leku, abyśmy mogli dostarczyć odpowiednie wyjaśnienie.",
-    "esExplanation": "Lamentablemente, no puedo mejorar la explicación sin conocer el nombre del medicamento en cuestión. Por favor, proporcióname el nombre del medicamento para poder brindarte una explicación adecuada.",
-    "frExplanation": "L'explication actuelle n'est pas complète car le nom du médicament en question n'a pas été fourni. Pourriez-vous me donner le nom du médicament afin que je puisse vous fournir une explication appropriée ?",
-    "trExplanation": "Üzgünüm, verdiğiniz bilgiler doğru bir şekilde tamamlanmamış. Lütfen ilacın Latince terimini ve Türkçe adını belirtirseniz, size uygun bir açıklama yapabilirim.",
-    "arExplanation": "شكرًا لك على المعلومات. بناءً على طلبك، لا يمكنني تقديم تحسين للشرح بدون معرفة اسم الدواء والمصطلح اللاتيني المرتبط به. يرجى تقديم اسم الدواء حتى أتمكن من تزويدك بتحسين مناسب ودقيق للشرح.",
-    "categories": [
-      ""
-    ],
-    "examples": [
-      "Ibuprofen",
-      "Diclofenac"
-    ]
-  },
+
   {
     "id": 177,
     "lat": "die Fettsäure",
