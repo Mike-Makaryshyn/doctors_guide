@@ -21,6 +21,7 @@ import {
 import TermMatchingGameTutorial from "./TermMatchingGameTutorial";
 import styles from "./TermMatchingGame.module.scss";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
+import matchingGameBg from "../../../../assets/medication-matching-game-bg.jpg";
 
 // Допоміжна функція для сортування категорій: алфавітно, з "Andere" завжди останньою
 const sortCategoriesWithAndereLast = (categories) => {
@@ -48,6 +49,7 @@ const languageMap = {
   es: "Spanisch",
   pl: "Polnisch",
 };
+
 // Фільтр-моди (визначення змінної)
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
@@ -55,6 +57,7 @@ const filterModes = [
   { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
+
 // Видалено скорочення регіонів, оскільки регіональний фільтр більше не потрібен
 
 // Допоміжна функція для отримання тексту терміна
@@ -280,6 +283,12 @@ function MedicationTermMatchingGameContent() {
     <MainLayout>
       <Helmet>
         <title>Medikamente lernen – Term Matching Game</title>
+        <meta property="og:title" content="Medikamente lernen – Term Matching Game" />
+        <meta property="og:description" content="Lerne Medikamente mit einem interaktiven Zuordnungsspiel!" />
+        <meta property="og:image" content={matchingGameBg} />
+        <meta property="og:type" content="website" />
+        {/* Метадані ABUS */}
+        <meta name="abus" content="ABUS metadata for Term Matching Game" />
       </Helmet>
 
       <div className={styles.electiveLanguageGame}>
@@ -320,33 +329,33 @@ function MedicationTermMatchingGameContent() {
                 </div>
                 {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
-  <label className={styles.fieldLabel}>Kategorie</label>
-  <div className={styles.selectWrapper}>
-    {/* Відображаємо категорію як текст або скорочення */}
-    <div className={styles.categoryCell}>
-      {selectedCategory === "Alle"
-        ? "Alle"
-        : selectedCategory === "Andere"
-        ? "Andr."
-        : selectedCategory}
-    </div>
-    <select
-      className={styles.nativeSelect}
-      value={selectedCategory}
-      onChange={(e) => {
-        if (requireAuth()) return;
-        setSelectedCategory(e.target.value);
-      }}
-    >
-      <option value="Alle">Alle</option>
-      {allCategories.map((cat) => (
-        <option key={cat} value={cat}>
-          {cat}
-        </option>
-      ))}
-    </select>
-  </div>
-</div>
+                  <label className={styles.fieldLabel}>Kategorie</label>
+                  <div className={styles.selectWrapper}>
+                    {/* Відображаємо категорію як текст або скорочення */}
+                    <div className={styles.categoryCell}>
+                      {selectedCategory === "Alle"
+                        ? "Alle"
+                        : selectedCategory === "Andere"
+                        ? "Andr."
+                        : selectedCategory}
+                    </div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={selectedCategory}
+                      onChange={(e) => {
+                        if (requireAuth()) return;
+                        setSelectedCategory(e.target.value);
+                      }}
+                    >
+                      <option value="Alle">Alle</option>
+                      {allCategories.map((cat) => (
+                        <option key={cat} value={cat}>
+                          {cat}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
               </div>
 
               {/* Language Swap */}

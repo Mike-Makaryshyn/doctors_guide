@@ -32,8 +32,8 @@ import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg"
 
 // Mappings für Kategorie-Icons
 const categoryIcons = {
-  Alle: <FaInfinity className={styles.customIcon} />,
-  Andere: <FaGlasses className={styles.customIcon} />,
+  Alle: <FaInfinity className={styles.customIcon} color="white" />,
+  Andere: <FaGlasses className={styles.customIcon} color="white" />,
 };
 
 const filterModes = [
