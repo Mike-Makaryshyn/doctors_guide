@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .allMedicalTerminologyPage {
-  position: relative; /* Контент сторінки */
+  position: relative; /* Kontent der Seite */
   padding: 16px;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
-/* Кнопка "Назад" */
+/* Back-Button */
 .main_menu_back {
   margin-top: auto;
   width: 35px;
@@ -25,17 +25,17 @@
   transform: scale(0.95);
 }
 
-/* Контейнер для кнопки пошуку */
+/* Search-Container */
 .searchContainer {
   position: fixed;
   top: 65px;
-  right: 0px; /* Відступ справа */
+  right: 0px; /* Abstand rechts */
   z-index: 3000;
   display: flex;
   align-items: center;
 }
 
-/* Кнопка пошуку */
+/* Search-Button */
 .searchToggleButton {
   background-color: #4caf50;
   color: #fff;
@@ -58,7 +58,7 @@
   font-size: 20px;
 }
 
-/* Поле вводу для пошуку */
+/* Search-Input */
 .searchInput {
   width: 0;
   padding: 10px;
@@ -78,7 +78,7 @@
   opacity: 1;
 }
 
-/* Модальне вікно налаштувань */
+/* Modal-Overlay */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -135,7 +135,7 @@
   }
 }
 
-/* Кнопка закриття модалки */
+/* Close-Button */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -169,7 +169,7 @@
   margin-top: 15px;
 }
 
-/* Контейнери для налаштувань – регіон, фільтр, категорія, гра та ERCLEARING */
+/* Settings-Container (Region, Filter, Kategorie, Spiel, ERCLEARING) */
 .regionColumn,
 .filterColumn,
 .categoryColumn,
@@ -181,7 +181,7 @@
   flex: 1;
 }
 
-/* Стилізація контейнерів вибору (регіон, фільтр, категорія, гра) */
+/* Select-Wrapper */
 .selectWrapper {
   position: relative;
   display: inline-block;
@@ -261,11 +261,11 @@
   cursor: pointer;
 }
 
-/* Новий контейнер ERCLEARING */
+/* Neuer Container ERCLEARING */
 .erclearingToggle {
   position: relative;
   display: inline-block;
-  width: 60px; /* трохи ширше для вміщення тексту */
+  width: 60px;
   height: 60px;
   background-color: #ffffff;
   box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
@@ -282,7 +282,7 @@
   color: #013b6e;
 }
 
-/* Загальний лейбл полів */
+/* Allgemeines Feld-Label */
 .fieldLabel {
   font-weight: 600;
   font-size: 14px;
@@ -290,7 +290,7 @@
   margin-bottom: 5px;
 }
 
-/* Кнопка налаштувань (шестерня) у нижньому правому куті */
+/* Settings-Button (unten rechts) */
 .bottomRightSettings {
   position: fixed;
   bottom: 0px;
@@ -320,7 +320,7 @@
   margin-bottom: 20px;
 }
 
-/* Пульсова анімація заголовків категорій */
+/* Pulsierende Animation für Kategorienüberschriften */
 .categoryHeader {
   font-size: 20px;
   font-weight: bold;
@@ -361,11 +361,11 @@
   transition: transform 0.3s ease;
 }
 
-/* Контейнер для плиток (мобільна версія) */
+/* Tiles-Container (Mobile) */
 .tilesContainer {
   display: flex;
-  flex-direction: column; /* Для мобільних */
-  gap: 12px; /* Контролює відстань між плитками */
+  flex-direction: column;
+  gap: 12px;
   justify-content: center;
   overflow-x: hidden;
   padding: 10px;
@@ -378,40 +378,37 @@
     flex-direction: column;
     gap: 0px;
     padding: 8px;
-    align-items: stretch; /* Додаємо */
+    align-items: stretch;
   }
 
-
-  /* Плитка */
+  /* Tile (Mobile) */
   .tile {
     flex: 1 1 100%;
-    max-width: 100%; /* Важливо, щоб плитка не виходила за межі */
+    max-width: 100%;
     box-sizing: border-box;
-    padding: 16px; /* Зменшуємо падінг */
-    margin-bottom: 12px; /* Зменшуємо відступ */
+    padding: 16px;
+    margin-bottom: 12px;
   }
 
-  /* Текст та заголовки в плитці */
   .tileHeader {
-    font-size: 20px; /* Зменшуємо шрифт */
+    font-size: 20px;
   }
 
   .tileDescription {
-    font-size: 14px; /* Зменшуємо шрифт */
+    font-size: 14px;
   }
 
   .tileExplanation {
-    font-size: 13px; /* Зменшуємо шрифт */
+    font-size: 13px;
   }
 
-  /* Іконки */
   .checkIcon,
   .pauseIcon {
-    font-size: 14px; /* Зменшуємо розмір іконок */
+    font-size: 14px;
   }
 }
 
-/* Плитка */
+/* Tile (Desktop) */
 .tile {
   background: #fff;
   border-radius: 20px;
@@ -420,7 +417,6 @@
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
-  /* Видаляємо margin */
   margin: 5px;
 }
 
@@ -471,7 +467,7 @@
   line-height: 1.4;
 }
 
-/* Таблиця для десктопу */
+/* Tabelle (Desktop) */
 .terminologyTable {
   width: 95%;
   margin: 20px auto;
@@ -487,7 +483,6 @@
   color: #333;
 }
 
-/* Якщо колонка з Definition прихована, ширина перших двох колонок розтягується */
 .terminologyTable th:nth-child(1),
 .terminologyTable td:nth-child(1) {
   width: 20%;
@@ -547,7 +542,7 @@
 }
 
 .learned .checkIconDesktop {
-  color: #fff; /* Іконка в білому кольорі для позначеної плитки */
+  color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -575,7 +570,7 @@
 @media (max-width: 768px) {
   .pauseIcon {
     top: 5px;
-    right: 5px; /* Переміщення в правий верхній кут */
+    right: 5px;
     left: auto;
   }
 }
@@ -592,7 +587,8 @@
     max-width: 100%;
   }
 }
-/* Оновлений контейнер для Definition */
+
+/* Definition-Container */
 .definitionColumn {
   display: flex;
   flex-direction: column;
@@ -600,43 +596,61 @@
   flex: 1;
 }
 
-/* Контейнер Definition */
 .definitionToggle {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  background-color: #ffffff; /* Білий фон за замовчуванням */
+  background-color: #ffffff;
   box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  color: #013b6e; /* Синій текст для вимкненого стану */
+  color: #013b6e;
 }
 
-/* Активний стан (синій фон) */
 .definitionToggle.active {
-  background-color: #013b6e; /* Такий же синій, як у категоріях */
+  background-color: #013b6e;
   color: #ffffff;
 }
+
 .toggleText.off {
   color: #013b6e;
 }
 
-/* Текст всередині Definition */
 .toggleText {
   font-size: 10px;
   text-align: center;
-  color: inherit; /* Колір змінюється залежно від активного стану */
+  color: inherit;
 }
 
-/* Підпис "Definition" над полем */
 .fieldLabel {
   font-weight: 600;
   font-size: 14px;
   color: #013b6e;
   margin-bottom: 5px;
+}
+
+.noDefinition {
+  .iconWrapper {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .checkIconDesktop,
+  .pauseIconDesktop {
+    position: static;
+    top: auto;
+    left: auto;
+    bottom: auto;
+  }
+}
+.categoryLetter {
+  font-weight: bold;
+  font-size: larger;
+  text-transform: uppercase;
 }

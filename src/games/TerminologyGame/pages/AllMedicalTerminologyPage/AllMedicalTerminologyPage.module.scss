@@ -640,3 +640,18 @@
   color: #013b6e;
   margin-bottom: 5px;
 }
+.noDefinition {
+  .iconWrapper {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .checkIconDesktop,
+  .pauseIconDesktop {
+    position: static;
+    top: auto;
+    left: auto;
+    bottom: auto;
+  }
+}

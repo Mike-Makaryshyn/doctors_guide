@@ -12233,37 +12233,7 @@ export const medications = [
       "Alirocumab"
     ]
   },
-  {
-    "id": 397,
-    "lat": "Фахова назва (DE)",
-    "de": "Звичайна назва (DE)",
-    "en": "EN",
-    "uk": "UA",
-    "ru": "RU",
-    "pl": "PL",
-    "es": "ES",
-    "fr": "FR",
-    "tr": "TR",
-    "ar": "AR",
-    "deExplanation": "Звичайна назва (DE)\" oder bekannt als \"Фахова назва (DE)\" wird zur Behandlung von [spezifische Erkrankung oder Zustand] eingesetzt, indem es [Wirkmechanismus]. Wichtige Nebenwirkungen können [Nebenwirkungen] umfassen.",
-    "enExplanation": "The medication known as \"EN\" (Latin term: \"Фахова назва (DE)\") is commonly used to treat [specific condition or disease] by [mechanism of action]. It is also known by its generic name \"DE\". Important side effects may include [list of side effects].",
-    "ukExplanation": "Препарат \"UA\" використовується для лікування [конкретного захворювання або стану], діючи шляхом [механізм дії]. Важливі побічні ефекти можуть включати [побічні ефекти].",
-    "ruExplanation": "Препарат \"RU\" используется для лечения [spezifische Erkrankung или Zustand] путем [Wirkmechanismus]. Важные побочные эффекты могут включать в себя [Nebenwirkungen]. \n\nУлучшенное объяснение:\nПрепарат \"RU\" (Фахова назва (DE)) предназначен для лечения [spezifische Erkrankung или Zustand] путем [Wirkmechanismus]. Важные побочные эффекты могут включать в себя [Nebenwirkungen]. Важно проконсультироваться с врачом перед началом приема данного препарата и строго соблюдать рекомендации по дозировке и продолжительности курса лечения.",
-    "plExplanation": "Stosuje się lek o nazwie \"PL\" do leczenia [specyficzna choroba lub stan], poprzez działanie [mechanizm działania]. Możliwe skutki uboczne to [skutki uboczne].",
-    "esExplanation": "El medicamento conocido como \"ES\" se utiliza para tratar [especificar enfermedad o condición] al actuar mediante [mecanismo de acción]. Es importante tener en cuenta que este medicamento puede provocar [efectos secundarios].",
-    "frExplanation": "Le médicament \"FR\", également connu sous le nom de \"Фахова назва (DE)\", est utilisé pour traiter [nom de la maladie ou de l'état spécifique] en agissant par [mécanisme d'action]. Parmi les effets secondaires importants associés à ce médicament, on peut citer [liste des effets secondaires].",
-    "trExplanation": "TR\" adlı ilaç, Фахovа назва (DE) olarak da bilinen Звичайна назва (DE) adıyla bilinir. Belirli hastalık veya durumları tedavi etmek için kullanılan ve Etki mekanizması ile etki gösteren bir ilaçtır. Önemli yan etkiler arasında Yan etkiler bulunabilir. Türkçe'de \"TR\" adıyla kullanılan bu ilaç etkilidir.",
-    "arExplanation": "يُستخدم الدواء المعروف بـ \"AR\" لعلاج [اسم الحالة أو المرض المحدد] من خلال [آلية التأثير]. قد تشمل الآثار الجانبية الهامة [الآثار الجانبية]. يرجى استشارة الطبيب قبل استخدام هذا الدواء والإبلاغ عن أي آثار جانبية تظهر.",
-    "categories": [
-      "andere"
-    ],
-    "sentence": "{BLANK} wird zur Behandlung von Diabetes eingesetzt, indem es die Insulinproduktion im Körper erhöht.",
-    "answer": "Metformin",
-    "examples": [
-      "Beispiel1",
-      "Beispiel2"
-    ]
-  },
+
   {
     "id": 398,
     "lat": "der Oxytocin-Agonist",
@@ -14864,35 +14834,7 @@ export const medications = [
       "Ephedrin"
     ]
   },
-  {
-    "id": 482,
-    "lat": "Фахова назва (DE)",
-    "de": "Звичайна назва (DE)",
-    "en": "EN",
-    "uk": "UA",
-    "ru": "RU",
-    "pl": "PL",
-    "es": "ES",
-    "fr": "FR",
-    "tr": "TR",
-    "ar": "AR",
-    "deExplanation": "Звичайна назва (DE)\" oder \"Фахова назва (DE)\" wird zur Behandlung von [Indikation] eingesetzt und wirkt durch [Wirkmechanismus]; mögliche wichtige Nebenwirkungen umfassen [Nebenwirkungen].",
-    "enExplanation": "The medication \"EN\" is commonly used to treat [Indication] by working through [Mechanism of action]. Important potential side effects may include [Side effects].",
-    "ukExplanation": "Цей препарат, під назвою \"UA\", призначений для лікування [індикація]. Він працює шляхом [механізм дії]. Серед можливих важливих побічних ефектів можуть виникнути [небажані реакції].",
-    "ruExplanation": "Препарат \"RU\" (Фахова назва (DE)) применяется для лечения [Indikation] и оказывает свое действие путем [Wirkmechanismus]. Важные возможные побочные эффекты включают [Nebenwirkungen]. Перед началом применения препарата \"RU\" необходимо проконсультироваться с врачом и строго соблюдать рекомендации специалиста.",
-    "plExplanation": "Stosowany w leczeniu [Indikation], lek o nazwie \"PL\" działa poprzez [Wirkmechanismus]. Możliwe istotne skutki uboczne to [Nebenwirkungen].",
-    "esExplanation": "El medicamento \"ES\" se utiliza para tratar [Indicación] y actúa mediante [Mecanismo de acción]. Entre los posibles efectos secundarios importantes se incluyen [Nebenwirkungen].",
-    "frExplanation": "Le médicament \"FR\" est utilisé pour traiter [Indication] en agissant à travers [Mécanisme d'action]. Parmi les effets secondaires importants possibles, on peut citer [Nebenwirkungen].",
-    "trExplanation": "Фахова назва (DE)\" adlı ilaç, [Endikasyon] tedavisinde kullanılan ve [Etki mekanizması] ile etki gösteren bir ilaçtır; olası önemli yan etkiler arasında [Yan etkiler] bulunmaktadır. Bu ilacın Türkçe adı ise \"TR\" şeklindedir.",
-    "arExplanation": "يتم استخدام الدواء \"AR\" لعلاج [Indikation]، حيث يعمل عن طريق [Wirkmechanismus]. يشمل الآثار الجانبية الهامة المحتملة [Nebenwirkungen]. \"AR\" هو الاسم العربي لهذا الدواء والمصطلح اللاتيني الصحيح هو \"Фахова назва (DE)\". يرجى استشارة الطبيب قبل استخدام هذا الدواء والإبلاغ عن أي آثار جانبية تظهر.",
-    "categories": [
-      "andere"
-    ],
-    "examples": [
-      "Beispiel1",
-      "Beispiel2"
-    ]
-  },
+
   {
     "id": 483,
     "lat": "der Tauchertropfen",
@@ -16160,37 +16102,7 @@ export const medications = [
       "Methotrexat"
     ]
   },
-  {
-    "id": 524,
-    "lat": "Фахова назва (DE)",
-    "de": "Звичайна назва (DE)",
-    "en": "EN",
-    "uk": "UA",
-    "ru": "RU",
-    "pl": "PL",
-    "es": "ES",
-    "fr": "FR",
-    "tr": "TR",
-    "ar": "AR",
-    "deExplanation": "Звичайна назва (DE)\" oder auch bekannt als \"Фахова назва (DE)\" wird zur Behandlung von [spezifische Krankheit oder Zustand] eingesetzt, indem es [Wirkmechanismus, z.B. die Rezeptoren blockiert, Hormonproduktion steigert etc.]. Zu den wichtigen Nebenwirkungen gehören [Nebenwirkungen, z.B. Übelkeit, Schwindel, Blutdruckabfall etc.].",
-    "enExplanation": "EN\" is a medication, also known by its Latin term \"Фахова назва (DE),\" used in the treatment of [specific disease or condition]. It works by [mechanism of action, e.g. blocking receptors, increasing hormone production etc.]. Common side effects may include [side effects, e.g. nausea, dizziness, decrease in blood pressure].",
-    "ukExplanation": "Фахова назва (DE)\" або відомий як \"Фахова назва (DE)\" - лікарський засіб, призначений для лікування [конкретної хвороби або стану], шляхом блокування [механізму дії, наприклад, рецепторів, підвищення продукції гормонів тощо]. Серед важливих побічних реакцій можуть бути [побічні ефекти, такі як нудота, запаморочення, падіння артеріального тиску тощо].\"\n\nЦе покращене пояснення відповідає українським медичним стандартам та передає інформацію про препарат чітко та зрозуміло.",
-    "ruExplanation": "Препарат \"RU\" используется для лечения [специфического заболевания или состояния], блокируя [механизм действия, например, рецепторы, увеличивая выработку гормонов и т. д.]. Среди важных побочных эффектов могут возникнуть [побочные эффекты, такие как тошнота, головокружение, падение артериального давления и т. д.]. Важно проконсультироваться с врачом перед началом приема данного препарата и строго соблюдать рекомендации специалиста.",
-    "plExplanation": "Nazwa leku \"Фахова назва (DE)\", znana również jako \"Звичайна назва (DE)\", jest stosowana w leczeniu [specyficzna choroba lub stan] poprzez [mechanizm działania, np. blokowanie receptorów, zwiększanie produkcji hormonów itp.]. Ważne skutki uboczne obejmują [skutki uboczne, np. nudności, zawroty głowy, spadek ciśnienia krwi itp.]. Nazwa leku w języku polskim to \"PL\".",
-    "esExplanation": "El medicamento \"ES\", también conocido como \"Фахова назва (DE)\", se utiliza para tratar [especificar enfermedad o condición] al [mecanismo de acción, por ejemplo, bloquear receptores, aumentar la producción de hormonas, etc.]. Entre los efectos secundarios importantes se incluyen [efectos secundarios, como náuseas, mareos, hipotensión, etc.].",
-    "frExplanation": "Le médicament \"FR\" est couramment utilisé pour traiter [nom de la maladie ou de l'état spécifique] en agissant sur [mécanisme d'action, par exemple en bloquant les récepteurs, en augmentant la production d'hormones, etc.]. Parmi les effets secondaires importants, on peut citer [effets secondaires, tels que nausées, vertiges, chute de la pression artérielle, etc.].",
-    "trExplanation": "Türkçe adı: TR olan bu ilaç, [belirli hastalık veya durumu] tedavi etmek için kullanılan ve [reçeteleri engelleyen, hormon üretimini artıran vb.] bir mekanizma ile etki eden Фаховa назвa (DE) veya yaygın olarak bilinen Звичайна назва (DE) adlı ilaçtır. Kullanımı sırasında bulantı, baş dönmesi, tansiyon düşüklüğü gibi önemli yan etkiler görülebilir.",
-    "arExplanation": "يُستخدم الدواء المعروف بالاسم العلمي \"AR\" لعلاج [اسم المرض أو الحالة المحددة] عن طريق [آلية التأثير، مثل حجب المستقبلات، زيادة إنتاج الهرمونات إلخ]. ومن الآثار الجانبية الهامة للدواء [الآثار الجانبية، مثل الغثيان، الدوار، انخفاض ضغط الدم إلخ].",
-    "categories": [
-      "andere"
-    ],
-    "sentence": "{BLANK} wird zur Behandlung von Bluthochdruck eingesetzt, indem es die Blutgefäße erweitert und somit den Blutdruck senkt.",
-    "answer": "Звичайна назва (DE)",
-    "examples": [
-      "Ibuprofen",
-      "Naproxen"
-    ]
-  },
+
   {
     "id": 525,
     "lat": "der VEGF-Inhibitor",

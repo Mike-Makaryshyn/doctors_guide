@@ -367,7 +367,13 @@ const AllMedicalTerminologyContent = () => {
                     </span>
                   </h2>
                   {!collapsedCategories[category] && (
-                    <table className={styles.terminologyTable}>
+                    <table
+                      className={
+                        !isMobile && !showDefinition
+                          ? `${styles.terminologyTable} ${styles.noDefinition}`
+                          : styles.terminologyTable
+                      }
+                    >
                       <thead>
                         <tr>
                           <th style={{ width: showDefinition ? "20%" : "50%", textAlign: "left" }}>
