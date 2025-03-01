@@ -29,7 +29,6 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import MedicationElectiveLanguageGameTutorial from "./MedicationElectiveLanguageGameTutorial";
 
-// === Фільтри, опції, тощо ===
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -76,11 +75,11 @@ const MedicationElectiveLanguageGameContent = () => {
   const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Мова
+  // Мова: якщо вибрана мова не "de", то використовуємо її, інакше – англійську
   const [electiveLang, setElectiveLang] = useState(
     selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
   );
-  // true => Frage німецькою, відповідь – обрана мова
+  // true: запитання німецькою, відповідь – обрана інша мова; false – навпаки
   const [isGermanLeft, setIsGermanLeft] = useState(true);
 
   // Стан гри
@@ -106,7 +105,7 @@ const MedicationElectiveLanguageGameContent = () => {
     new Set(medications.flatMap((m) => m.categories || []))
   ).sort();
 
-  // Завантажити питання
+  // Завантаження питань
   const loadQuestions = () => {
     let filtered = medications.filter((med) => {
       const status = medicationStatuses[med.id]?.status || "unlearned";
@@ -131,22 +130,18 @@ const MedicationElectiveLanguageGameContent = () => {
       return countA - countB;
     });
 
-    // Вибираємо потрібну кількість
     const selectedMeds =
       questionCount === "all" ? filtered : filtered.slice(0, questionCount);
 
-    // Оновлюємо лічильники показів
     const newShown = { ...shownCounts };
     selectedMeds.forEach((m) => {
       newShown[m.id] = (newShown[m.id] || 0) + 1;
     });
     setShownCounts(newShown);
 
-    // Мова запитання/відповіді
     const questionLang = isGermanLeft ? "de" : electiveLang;
     const answerLang = isGermanLeft ? electiveLang : "de";
 
-    // Формуємо масив питань
     const fragen = selectedMeds.map((med) => {
       const frageText = med[questionLang] || med.de;
       const richtigeAntwort = med[answerLang] || med.de;
@@ -169,7 +164,6 @@ const MedicationElectiveLanguageGameContent = () => {
       };
     });
 
-    // Скидаємо стани гри
     setQuestions(fragen);
     setCurrentIndex(0);
     setAnswersNoEdit({});
@@ -196,7 +190,6 @@ const MedicationElectiveLanguageGameContent = () => {
     const duration = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(duration);
     setGameFinished(true);
-
     if (!allowEdit) {
       flushChanges();
     }
@@ -206,10 +199,9 @@ const MedicationElectiveLanguageGameContent = () => {
   const handleAnswerSelect = (option) => {
     if (!questions[currentIndex]) return;
     const { richtigeAntwort, id } = questions[currentIndex];
+    if (questionsCompleted[currentIndex]) return;
 
-    if (questionsCompleted[currentIndex]) return; // уже відповіли
     if (allowEdit) {
-      // Режим редагування
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [currentIndex]: true }));
         toggleStatus(id, "learned");
@@ -221,7 +213,6 @@ const MedicationElectiveLanguageGameContent = () => {
         });
       }
     } else {
-      // Звичайний режим
       setAnswersNoEdit((prev) => ({ ...prev, [currentIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [currentIndex]: true }));
 
@@ -234,11 +225,11 @@ const MedicationElectiveLanguageGameContent = () => {
     }
   };
 
-  // Навігація
-  const handleNavigation = (dir) => {
-    if (dir === "prev" && currentIndex > 0) {
+  // Навігація між питаннями
+  const handleNavigation = (direction) => {
+    if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
-    } else if (dir === "next") {
+    } else if (direction === "next") {
       if (!questionsCompleted[currentIndex]) {
         alert("Bitte beantworten Sie die aktuelle Frage!");
         return;
@@ -262,7 +253,7 @@ const MedicationElectiveLanguageGameContent = () => {
     return errors;
   };
 
-  // Відображення результатів
+  // Відображення результатів гри
   const ErgebnisseAnzeigen = () => {
     const catErrors = calcCategoryErrors();
     return (
@@ -281,11 +272,11 @@ const MedicationElectiveLanguageGameContent = () => {
         <p>
           Dauer: {Math.floor(sessionDuration / 60)} min {sessionDuration % 60} s
         </p>
-        {Object.keys(catErrors).length > 0 && (
+        {Object.keys(calcCategoryErrors()).length > 0 && (
           <div>
             <h4>Fehler in den Kategorien:</h4>
             <ul>
-              {Object.entries(catErrors).map(([cat, anzahl]) => (
+              {Object.entries(calcCategoryErrors()).map(([cat, anzahl]) => (
                 <li key={cat}>
                   {cat}: {anzahl} Fehler
                 </li>
@@ -300,7 +291,6 @@ const MedicationElectiveLanguageGameContent = () => {
     );
   };
 
-  // Поточне питання
   const currentQuestion = questions[currentIndex];
   const questionIsCompleted = questionsCompleted[currentIndex] || false;
 
@@ -360,9 +350,9 @@ const MedicationElectiveLanguageGameContent = () => {
                         setFilterMode(e.target.value);
                       }}
                     >
-                      {filterModes.map((fm) => (
-                        <option key={fm.value} value={fm.value}>
-                          {fm.label}
+                      {filterModes.map((mode) => (
+                        <option key={mode.value} value={mode.value}>
+                          {mode.label}
                         </option>
                       ))}
                     </select>
@@ -512,11 +502,7 @@ const MedicationElectiveLanguageGameContent = () => {
               </button>
 
               {/* Старт гри */}
-              <button
-                className={styles.startButton}
-                data-tutorial="startButton"
-                onClick={handleStart}
-              >
+              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
             </div>
@@ -540,7 +526,7 @@ const MedicationElectiveLanguageGameContent = () => {
             </div>
             <div className={styles.gameContainer}>
               <div className={styles.questionSection}>
-                <h2>
+                <h2 style={{ position: "relative" }}>
                   {currentQuestion?.frage}
                   {questionIsCompleted && (
                     <Tippy
@@ -564,7 +550,6 @@ const MedicationElectiveLanguageGameContent = () => {
                     const isCompleted = questionsCompleted[currentIndex];
 
                     if (!allowEdit) {
-                      // Звичайний режим
                       const chosenAnswer = answersNoEdit[currentIndex] || null;
                       let isCorrect = false;
                       let isWrong = false;
@@ -586,7 +571,6 @@ const MedicationElectiveLanguageGameContent = () => {
                         </button>
                       );
                     } else {
-                      // Режим редагування
                       const wrongArr = wrongSelectionsEdit[currentIndex] || [];
                       let isWrongEdit = wrongArr.includes(option);
                       let isCorrectEdit = isCompleted && option === richtigeAntwort;
@@ -604,13 +588,9 @@ const MedicationElectiveLanguageGameContent = () => {
                     }
                   })}
                 </div>
-
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
-                    <button
-                      className={styles.navButton}
-                      onClick={() => handleNavigation("prev")}
-                    >
+                    <button className={styles.navButton} onClick={() => handleNavigation("prev")}>
                       <FaArrowLeft />
                     </button>
                   )}
@@ -667,10 +647,8 @@ const MedicationElectiveLanguageGameContent = () => {
         </div>
       </div>
 
-      {/* AuthModal дубль */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-      {/* Туторіал */}
       {showTutorial && (
         <MedicationElectiveLanguageGameTutorial
           run={showTutorial}

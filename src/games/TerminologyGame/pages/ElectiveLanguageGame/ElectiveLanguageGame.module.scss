@@ -679,3 +679,25 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   pointer-events: auto; /* Блок отримує кліки */
 }
+.infoIcon {
+  position: absolute; /* Щоб розташувати всередині h2 */
+  top: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Без фону */
+  color: #013b6e; /* Такий самий відтінок як заголовок */
+  border: 1px solid #013b6e; /* Легка рамка для виділення */
+  border-radius: 50%;
+  font-size: 10px; /* Зменшений шрифт */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.infoIcon:hover {
+  background: rgba(1, 59, 110, 0.1); /* Легкий фон при наведенні */
+  transform: scale(1.1);
+}

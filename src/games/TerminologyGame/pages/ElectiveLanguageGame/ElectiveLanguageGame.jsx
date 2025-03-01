@@ -73,7 +73,7 @@ const languageMap = {
 
 const ElectiveLanguageGameContent = () => {
   const navigate = useNavigate();
-  const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
+  const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const { termStatuses, toggleStatus, recordCorrectAnswer, flushChanges } = useTermStatus();
 
   // Firebase Auth State
@@ -91,20 +91,16 @@ const ElectiveLanguageGameContent = () => {
   // Einstellungen
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Bayern");
-  const [electiveLang, setElectiveLang] = useState(
-    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-  );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Deutsch als Basis, andere Sprache als Ziel
-  const sourceLang = "de";
-  const targetLang = electiveLang;
-
-  // Swap-Positionierung
-  const [isGermanLeft, setIsGermanLeft] = useState(true);
+  // Мовний свап: окремі стани для мови питань (leftLang) та відповіді (rightLang)
+  const [leftLang, setLeftLang] = useState("de");
+  const [rightLang, setRightLang] = useState(
+    selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
+  );
 
   // Spiel-Status
   const [questions, setQuestions] = useState([]);
@@ -133,10 +129,21 @@ const ElectiveLanguageGameContent = () => {
   }, [selectedRegion]);
 
   useEffect(() => {
-    setElectiveLang(
+    // Якщо обрана мова змінюється в глобальному контексті – оновлюємо праву мову,
+    // якщо вона не "de"
+    setRightLang(
       selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
     );
   }, [selectedLanguage]);
+
+  // Функція для свапу мов
+  const swapLanguages = () => {
+    setLeftLang((prev) => {
+      const newLeft = rightLang;
+      setRightLang(prev);
+      return newLeft;
+    });
+  };
 
   // Fragen generieren/filtern
   const loadQuestions = () => {
@@ -173,15 +180,19 @@ const ElectiveLanguageGameContent = () => {
     });
     setShownCounts(neueShownCounts);
 
+    // Обчислюємо мови для питань і відповідей
+    const questionLang = leftLang;
+    const answerLang = rightLang;
+
     // Fragen-Daten anlegen
     const fragenDaten = ausgewählteBegriffe.map((term) => {
-      const frageText = term[sourceLang] || term.de;
-      const richtigeAntwort = term[targetLang] || term.de;
+      const frageText = term[questionLang] || term.de;
+      const richtigeAntwort = term[answerLang] || term.de;
       const falscheAntworten = medicalTerms
         .filter((t) => t.id !== term.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((t) => t[targetLang] || t.de);
+        .map((t) => t[answerLang] || t.de);
       const optionen = [...falscheAntworten, richtigeAntwort].sort(() => Math.random() - 0.5);
 
       return {
@@ -199,8 +210,6 @@ const ElectiveLanguageGameContent = () => {
     setWrongSelectionsEdit({});
     setQuestionsCompleted({});
   };
-
-  // Entfernen des useEffect, der loadQuestions bei Änderung von settingsOpen auslöst
 
   const handleStart = () => {
     setGameStarted(true);
@@ -340,7 +349,7 @@ const ElectiveLanguageGameContent = () => {
         />
         <meta property="og:title" content="Fachbegriffe lernen – Elective Language Game" />
         <meta
-          property="og:description"
+          name="og:description"
           content="Diese Seite dient dem Erlernen von Fachbegriffen im Elective Language Game. Bereiten Sie sich optimal auf die Fachsprachenprüfung vor und verbessern Sie Ihre Sprachkompetenz."
         />
         <meta property="og:image" content={translatorBg} />
@@ -458,78 +467,86 @@ const ElectiveLanguageGameContent = () => {
                 </div>
               </div>
 
-              {/* Language Swap Container */}
-              <div className={styles.modalField}>
-                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
+              {/* Мовний Swap Container */}
+              <div className={styles.modalField} data-tutorial="languageSwapContainer">
+                <div className={styles.languageSwapContainer}>
                   <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? (
-                      "Deutsch"
-                    ) : (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
-                        )}
-                      </select>
-                    )}
+                    <select
+                      className={styles.languageSelect}
+                      value={leftLang}
+                      onChange={(e) => setLeftLang(e.target.value)}
+                    >
+                      {Object.entries(languageMap).map(([code, label]) => (
+                        <option key={code} value={code}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
                   </div>
-                  <button
-                    className={styles.swapButton}
-                    onClick={() => setIsGermanLeft((prev) => !prev)}
-                  >
+                  <button className={styles.swapButton} onClick={swapLanguages}>
                     <FaExchangeAlt className={styles.swapIcon} />
                   </button>
                   <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(
-                          ([langCode, langLabel]) =>
-                            langCode !== "de" && (
-                              <option key={langCode} value={langCode}>
-                                {langLabel}
-                              </option>
-                            )
-                        )}
-                      </select>
-                    ) : (
-                      "Deutsch"
-                    )}
+                    <select
+                      className={styles.languageSelect}
+                      value={rightLang}
+                      onChange={(e) => setRightLang(e.target.value)}
+                    >
+                      {Object.entries(languageMap).map(([code, label]) => (
+                        <option key={code} value={code}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               </div>
 
-              {/* Anzahl Fragen */}
-              <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
-                  {questionCountOptions.map((countOption) => (
+              {/* Кількість питань */}
+              <div className={styles.modalField} data-tutorial="questionCountContainer">
+                <div className={styles.questionCountContainer}>
+                  {questionCountOptions.map((cnt) => (
                     <div
-                      key={countOption}
+                      key={cnt}
                       className={`${styles.questionCountIcon} ${
-                        questionCount === countOption ? styles.selected : ""
+                        questionCount === cnt ? styles.selected : ""
                       }`}
                       onClick={() => {
                         if (requireAuth()) return;
-                        setQuestionCount(countOption);
+                        setQuestionCount(cnt);
                       }}
                     >
-                      {countOption === "all" ? "Alles" : countOption}
+                      {cnt === "all" ? "Alles" : cnt}
                     </div>
                   ))}
                 </div>
               </div>
 
+              {/* Кнопка туторіалу */}
+              <button
+                data-tutorial="tutorialStartButton"
+                className={styles.tutorialButton}
+                onClick={() => setShowTutorial(true)}
+                title="Tutorial starten"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="#ededed"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                  <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                </svg>
+              </button>
+
+              {/* Старт гри */}
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
                 Start
               </button>
@@ -537,39 +554,16 @@ const ElectiveLanguageGameContent = () => {
           </div>
         )}
 
-        {/* Tutorial-Trigger */}
-        {settingsOpen && (
-          <button
-            data-tutorial="tutorialStartButton"
-            className={styles.tutorialButton}
-            onClick={() => setShowTutorial(true)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="30"
-              height="30"
-              fill="none"
-              stroke="#ededed"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-              <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-              <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-            </svg>
-          </button>
-        )}
-
+        {/* Якщо немає запитань */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
-           <div className={styles.noQuestionsOverlay}>
-          <div className={styles.noQuestionsMessage}>
-            <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-          </div> </div>
+          <div className={styles.noQuestionsOverlay}>
+            <div className={styles.noQuestionsMessage}>
+              <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+            </div>
+          </div>
         )}
 
-        {/* Spiel-Interface */}
+        {/* Інтерфейс гри */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progress}>
@@ -582,7 +576,8 @@ const ElectiveLanguageGameContent = () => {
                   {frageIstAbgeschlossen && (
                     <Tippy
                       content={
-                        aktuelleFrage?.term?.[`${selectedLanguage}Explanation`] ||
+                        // Пояснення – використовується поле з поясненням відповідної мови (для відповіді)
+                        aktuelleFrage?.term?.[`${rightLang}Explanation`] ||
                         "Keine zusätzliche Information vorhanden"
                       }
                       trigger="click"
@@ -599,8 +594,8 @@ const ElectiveLanguageGameContent = () => {
                     const isCompleted = frageIstAbgeschlossen;
                     if (!allowEdit) {
                       const chosenAnswer = answersNoEdit[qIndex] || null;
-                      let isWrong = false;
                       let isCorrect = false;
+                      let isWrong = false;
                       if (isCompleted) {
                         if (option === richtigeAntwort) isCorrect = true;
                         if (chosenAnswer === option && option !== richtigeAntwort) {
@@ -619,8 +614,8 @@ const ElectiveLanguageGameContent = () => {
                         </button>
                       );
                     } else {
-                      const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
-                      let isWrongEdit = wrongAnswersArr.includes(option);
+                      const wrongArr = wrongSelectionsEdit[currentIndex] || [];
+                      let isWrongEdit = wrongArr.includes(option);
                       let isCorrectEdit = isCompleted && option === richtigeAntwort;
                       return (
                         <button
