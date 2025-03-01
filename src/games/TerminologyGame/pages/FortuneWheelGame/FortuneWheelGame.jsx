@@ -518,9 +518,10 @@ function FortuneWheelGameContent() {
 
         {/* Якщо немає термінів і гра не завершена */}
         {!settingsOpen && !gameFinished && finalTerms.length === 0 && (
+            <div className={styles.noQuestionsOverlay}>
           <div className={styles.noQuestionsMessage}>
             <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-          </div>
+          </div></div>
         )}
 
         {/* Модальне вікно результатів */}

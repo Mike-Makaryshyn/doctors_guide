@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import MainLayout from "../../layouts/MainLayout/MainLayout";
-import { medications } from "../../constants/medications";
-import styles from "./AllMedicationsPage.module.scss";
+import MainLayout from "../../../../layouts/MainLayout/MainLayout";
+import { medications } from "../../../../constants/medications"; 
+// ↑ Масив об'єктів медикаментів (аналогічно до medicalTerms)
+import styles from "./AllMedicationsPage.module.scss"; 
+// ↑ Скопіюйте або створіть файл зі стилями (див. нижче)
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../../../firebase";
 import {
   FaCog,
   FaCheck,
@@ -14,23 +16,41 @@ import {
   FaTimes,
   FaSearch,
 } from "react-icons/fa";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
+
+// Якщо треба тягнути "selectedLanguage" чи інше, можна використати власний хук
+// import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo"; 
+
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useMedicationStatus } from "../../contexts/MedicationStatusContext";
+
+// Контекст для статусів медикаментів
+import { useMedicationStatus, MedicationStatusProvider } from "../../../../contexts/MedicationStatusContext";
+
+// Для навігації
 import { useNavigate } from "react-router-dom";
-import { categoryIcons } from "../../constants/CategoryIcons";
+
+// Якщо є іконки для категорій — можна підключити
+// import { categoryIcons } from "../../../../constants/CategoryIcons";
+
+// SEO
 import { Helmet } from "react-helmet";
-import AuthModal from "../AuthPage/AuthModal";
-// import medicationBg from "../../assets/medication-bg.jpg"; // Видалено
 
-// При потребі можна адаптувати об'єкти для регіонів/категорій:
-const regionAbbreviations = {
-  "Nordrhein-Westfalen": "NRW",
-  Bayern: "BY",
-  Hessen: "HE",
-};
+// Модалка авторизації
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
+// (Якщо маєте фон-картинку для OG, як у термінології)
+import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg";
+
+// ---------------------------------------------------------------------
+// Алфавітний фільтр: "Alle", A-Z, "Under" (все, що не починається з латинської літери)
+const alphabetOptions = [
+  "Alle",
+  "A","B","C","D","E","F","G","H","I","J","K","L","M",
+  "N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+  "Under",
+];
+
+// Інші фільтри (learned, unlearned, paused)
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -38,31 +58,50 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const AllMedicationsPage = () => {
+const AllMedicationsContent = () => {
   const navigate = useNavigate();
-  const { medicationStatuses, toggleStatus, scheduleFlushChanges } = useMedicationStatus();
-  const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
+
+  // Підтягнути статуси медикаментів із контексту
+  const { medicationStatuses, toggleStatus } = useMedicationStatus();
+
+  // Якщо треба затримка збереження, можна використати щось на кшталт scheduleFlushChanges() —
+  // але в MedicationStatusContext це можна реалізувати інакше. Тож пропускаємо.
+
+  // Якщо треба глобальні налаштування (наприклад, мову):
+  // const { selectedLanguage } = useGetGlobalInfo();
+  // const translationLanguage = selectedLanguage || "de";
+
+  // Або просто залишимо можливість перемикати мови вручну (тут не будемо, аби не ускладнювати).
+
+  // Авторизація
   const [user, loading] = useAuthState(auth);
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Стан для показу додаткових деталей (наприклад, пояснення)
-  const [showDetails, setShowDetails] = useState(true);
-  const [region, setRegion] = useState(selectedRegion || "Bayern");
-  // Хоча тут використовується selectedLanguage, для відображення у цій сторінці використовуватимемо поля для німецької (de)
-  const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
-  const [selectedCategory, setSelectedCategory] = useState("Alle");
+  // Локальні стани
   const [searchTerm, setSearchTerm] = useState("");
-  const [collapsedCategories, setCollapsedCategories] = useState({});
-  const [filterMode, setFilterMode] = useState("all");
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
+
+  const [filterMode, setFilterMode] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("Alle");
+  const [showDefinition, setShowDefinition] = useState(true);
+
+  // Новий стан для алфавітного фільтра
+  const [selectedLetter, setSelectedLetter] = useState("Alle");
+
+  // Для мобільного/десктопного відображення
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Референції
+  // Для згортання категорій
+  const [collapsedCategories, setCollapsedCategories] = useState({});
+
+  // Модалка налаштувань
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+
+  // Рефи
   const pageRef = useRef(null);
   const settingsModalRef = useRef(null);
 
-  // Функція перевірки авторизації
+  // Хелпер для вимоги авторизації
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -71,21 +110,26 @@ const AllMedicationsPage = () => {
     return false;
   };
 
-  useEffect(() => {
-    setRegion(selectedRegion || "Bayern");
-  }, [selectedRegion]);
-
-  useEffect(() => {
-    setTranslationLanguage(selectedLanguage || "de");
-  }, [selectedLanguage]);
-
+  // Слухаємо зміни розміру вікна, щоб перемикати мобільний/десктоп
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Закриття модального вікна налаштувань при кліку поза ним
+  // Закривати поле пошуку при кліку поза ним
+  useEffect(() => {
+    function handleClickOutsidePage(event) {
+      if (isSearchActive && pageRef.current && !pageRef.current.contains(event.target)) {
+        setIsSearchActive(false);
+        setSearchTerm("");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutsidePage);
+    return () => document.removeEventListener("mousedown", handleClickOutsidePage);
+  }, [isSearchActive]);
+
+  // Закриття модалки налаштувань при кліку поза нею
   useEffect(() => {
     function handleClickOutside(event) {
       if (settingsModalRef.current && !settingsModalRef.current.contains(event.target)) {
@@ -98,98 +142,82 @@ const AllMedicationsPage = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isSettingsModalOpen]);
 
-  // Закриття поля пошуку при кліку поза ним
-  useEffect(() => {
-    function handleClickOutsidePage(event) {
-      if (isSearchActive && pageRef.current && !pageRef.current.contains(event.target)) {
-        setIsSearchActive(false);
-        setSearchTerm("");
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutsidePage);
-    return () => document.removeEventListener("mousedown", handleClickOutsidePage);
-  }, [isSearchActive]);
+  // Клік на кнопці "Back"
+  const handleBack = () => {
+    if (requireAuth()) return;
+    navigate("/main_menu");
+  };
 
-  // Функції для зміни статусів медикаментів
-  const toggleLearned = (id) => {
+  // Клік на "Spiel" (гру) — можете вести на /medications-learning чи куди треба
+  const handleGameClick = () => {
+    if (requireAuth()) return;
+    navigate("/medications-learning");
+  };
+
+  // Зміна статусу (learned/paused)
+  const handleToggleLearned = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "learned");
-    scheduleFlushChanges();
   };
-
-  const togglePaused = (id) => {
+  const handleTogglePaused = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "paused");
-    scheduleFlushChanges();
   };
 
-  // Фільтрація медикаментів із захистом від undefined для полів:
-  // Використовуємо поле "lat" як базову назву, "de" як німецький переклад і "deExplanation" як пояснення
-  const filteredMedications = medications.filter((med) => {
-    const baseTerm = med.lat ? med.lat.toLowerCase() : "";
-    const translation = med.de ? med.de.toLowerCase() : "";
-    const searchLower = searchTerm.toLowerCase();
+  // Фільтр за пошуком, категорією, статусом і алфавітною літерою
+  const filteredMeds = medications.filter((med) => {
+    // Пошук (за lat, de, deExplanation — можна додати інші)
+    const matchesSearch =
+      med.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      med.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (med.deExplanation || "").toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesSearch = baseTerm.includes(searchLower) || translation.includes(searchLower);
-
+    // Категорія
     const matchesCategory =
       selectedCategory === "Alle" ||
       (med.categories || []).includes(selectedCategory);
 
-    const matchesRegion =
-      region === "Alle" || (med.regions || []).includes(region);
-
-    const base = matchesSearch && matchesCategory && matchesRegion;
+    // Статус
     const statusObj = medicationStatuses[med.id];
     const status = statusObj?.status || "unlearned";
-
     if (filterMode === "learned" && status !== "learned") return false;
     if (filterMode === "paused" && status !== "paused") return false;
     if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
       return false;
     }
-    return base;
+
+    // Алфавіт
+    // - Якщо "Alle", пропускаємо
+    // - Якщо "Under", лишаємо ті, що не починаються з [A-Za-z]
+    // - Інакше порівнюємо з selectedLetter
+    let matchesLetter = true;
+    if (selectedLetter !== "Alle") {
+      const firstChar = med.lat.charAt(0).toUpperCase();
+      if (selectedLetter === "Under") {
+        // Перевірка: якщо перша літера не A-Z
+        matchesLetter = !/^[A-Z]$/.test(firstChar);
+      } else {
+        // Перевірка: якщо перша літера == selectedLetter
+        matchesLetter = firstChar === selectedLetter;
+      }
+    }
+
+    return matchesSearch && matchesCategory && matchesLetter;
   });
 
-  // Групування медикаментів за категоріями (якщо такі поля є)
+  // Розбиваємо за категоріями (як у термінології)
   const medsByCategory = {};
-  filteredMedications.forEach((med) => {
+  filteredMeds.forEach((med) => {
     (med.categories || []).forEach((cat) => {
-      if (!medsByCategory[cat]) {
-        medsByCategory[cat] = [];
-      }
+      if (!medsByCategory[cat]) medsByCategory[cat] = [];
       medsByCategory[cat].push(med);
     });
   });
 
-  const uniqueRegions = Array.from(new Set(medications.flatMap((med) => med.regions || [])));
-  const regionOptions = ["Alle", ...uniqueRegions];
-
-  const uniqueCategories = Array.from(new Set(medications.flatMap((med) => med.categories || [])));
-
-  // Обробники змін фільтрів
-  const handleRegionChange = (e) => {
-    if (requireAuth()) return;
-    setRegion(e.target.value);
-  };
-  const handleCategoryChange = (e) => {
-    if (requireAuth()) return;
-    setSelectedCategory(e.target.value);
-  };
-  const handleFilterModeChange = (e) => {
-    if (requireAuth()) return;
-    setFilterMode(e.target.value);
-  };
-
-  // Обробники навігації
-  const handleBack = () => {
-    if (requireAuth()) return;
-    navigate("/main_menu");
-  };
-  const handleGameClick = () => {
-    if (requireAuth()) return;
-    navigate("/medications-learning");
-  };
+  // Унікальні категорії
+  const uniqueCategories = Array.from(
+    new Set(medications.flatMap((m) => m.categories || []))
+  );
 
   return (
     <MainLayout>
@@ -198,24 +226,25 @@ const AllMedicationsPage = () => {
       ) : (
         <>
           <Helmet>
-            <title>Medikamente – Übersicht und Status</title>
+            <title>Medikamente - Übersicht</title>
             <meta
               name="description"
-              content="Diese Seite bietet eine Übersicht der Medikamente mit Statusanzeige. Verwalten Sie Ihre Lerneinheiten für Medikamente effektiv!"
+              content="Seite für medizinische Fachbegriffe (Medikamente) mit Filter, Suche und Lerne-Status."
             />
             <meta
               name="keywords"
-              content="Medikamente, lernen, Status, Approbation, Deutschland"
+              content="Medikamente, Laxative, Abführmittel, Fachsprache, Lernen"
             />
-            {/* Mета-тег з картинкою тимчасово прибрано */}
+            <meta property="og:image" content={medicalTerminologyBg} />
           </Helmet>
+
           <div className={styles.allMedicationsPage} ref={pageRef}>
-            {/* Кнопка "Назад" */}
+            {/* Кнопка Back */}
             <button className={styles.main_menu_back} onClick={handleBack}>
               &#8592;
             </button>
 
-            {/* Контейнер для пошуку */}
+            {/* Пошук */}
             <div className={styles.searchContainer}>
               <input
                 type="text"
@@ -248,13 +277,16 @@ const AllMedicationsPage = () => {
               </button>
             </div>
 
-            {/* Відображення: мобільна версія (плитки) або десктоп (таблиця) */}
+            {/* Відображення (мобільна/десктопна) */}
             {isMobile ? (
+              // ----------------- МОБІЛЬНІ "ПЛИТКИ" -----------------
               <div className={styles.tilesContainer}>
                 {Object.keys(medsByCategory).map((category, index) => (
                   <div key={category} className={styles.categorySection}>
                     <h2
                       onClick={() => {
+                        // Якщо хочете дозволити відкривати тільки першу категорію без логіну —
+                        // робимо як у прикладі: if (!user && index !== 0) ...
                         if (!user && index !== 0) {
                           setShowAuthModal(true);
                           return;
@@ -288,53 +320,24 @@ const AllMedicationsPage = () => {
                           >
                             <span
                               className={styles.checkIconDesktop}
-                              onClick={() => toggleLearned(med.id)}
+                              onClick={() => handleToggleLearned(med.id)}
                               title="Gelernt"
                             >
                               <FaCheck />
                             </span>
                             <span
                               className={styles.pauseIcon}
-                              onClick={() => togglePaused(med.id)}
+                              onClick={() => handleTogglePaused(med.id)}
                               title="Pausiert"
                             >
                               <FaPause />
                             </span>
                             <h3 className={styles.tileHeader}>{med.lat}</h3>
-                            <p className={styles.tileDescription}>
-                              {translationLanguage !== "de" ? (
-                                <Tippy
-                                  content={
-                                    med[translationLanguage] || "Keine Übersetzung vorhanden"
-                                  }
-                                  trigger="click"
-                                  interactive={true}
-                                  placement="bottom"
-                                >
-                                  <span className={styles.clickableCell}>{med.de}</span>
-                                </Tippy>
-                              ) : (
-                                med.de
-                              )}
-                            </p>
-                            {showDetails && med.deExplanation && (
+                            {/* Якщо треба багатомовність, робимо Tippy, як у термінології */}
+                            <p className={styles.tileDescription}>{med.de}</p>
+                            {showDefinition && (
                               <p className={styles.tileExplanation}>
-                                {translationLanguage !== "de" ? (
-                                  <Tippy
-                                    content={
-                                      med[translationLanguage + "Explanation"] || "Keine Übersetzung vorhanden"
-                                    }
-                                    trigger="click"
-                                    interactive={true}
-                                    placement="bottom"
-                                  >
-                                    <span className={styles.clickableCell}>
-                                      {med.deExplanation}
-                                    </span>
-                                  </Tippy>
-                                ) : (
-                                  med.deExplanation
-                                )}
+                                {med.deExplanation}
                               </p>
                             )}
                           </div>
@@ -344,6 +347,7 @@ const AllMedicationsPage = () => {
                 ))}
               </div>
             ) : (
+              // ----------------- ДЕСКТОПНА "ТАБЛИЦЯ" -----------------
               Object.keys(medsByCategory).map((category, index) => (
                 <div key={category} className={styles.categorySection}>
                   <h2
@@ -365,17 +369,17 @@ const AllMedicationsPage = () => {
                     </span>
                   </h2>
                   {!collapsedCategories[category] && (
-                    <table className={styles.medicationTable}>
+                    <table className={styles.terminologyTable}>
                       <thead>
                         <tr>
-                          <th style={{ width: showDetails ? "20%" : "50%", textAlign: "left" }}>
-                            Medikament
+                          <th style={{ width: showDefinition ? "20%" : "50%", textAlign: "left" }}>
+                            Begriff
                           </th>
-                          <th style={{ width: showDetails ? "20%" : "50%" }}>
-                            Beschreibung
+                          <th style={{ width: showDefinition ? "20%" : "50%" }}>
+                            Deutsche Bezeichnung
                           </th>
-                          {showDetails && (
-                            <th style={{ width: "60%", textAlign: "left" }}>Details</th>
+                          {showDefinition && (
+                            <th style={{ width: "60%", textAlign: "left" }}>Definition</th>
                           )}
                         </tr>
                       </thead>
@@ -398,14 +402,14 @@ const AllMedicationsPage = () => {
                                 <div className={styles.iconWrapper}>
                                   <span
                                     className={styles.checkIconDesktop}
-                                    onClick={() => toggleLearned(med.id)}
+                                    onClick={() => handleToggleLearned(med.id)}
                                     title="Gelernt"
                                   >
                                     <FaCheck />
                                   </span>
                                   <span
                                     className={styles.pauseIconDesktop}
-                                    onClick={() => togglePaused(med.id)}
+                                    onClick={() => handleTogglePaused(med.id)}
                                     title="Pausiert"
                                   >
                                     <FaPause />
@@ -413,43 +417,8 @@ const AllMedicationsPage = () => {
                                 </div>
                                 <div className={styles.termContent}>{med.lat}</div>
                               </td>
-                              <td>
-                                {translationLanguage !== "de" ? (
-                                  <Tippy
-                                    content={
-                                      med[translationLanguage] || "Keine Übersetzung vorhanden"
-                                    }
-                                    trigger="click"
-                                    interactive={true}
-                                    placement="right"
-                                  >
-                                    <span className={styles.clickableCell}>{med.de}</span>
-                                  </Tippy>
-                                ) : (
-                                  med.de
-                                )}
-                              </td>
-                              {showDetails && (
-                                <td>
-                                  {translationLanguage !== "de" ? (
-                                    <Tippy
-                                      content={
-                                        med[translationLanguage + "Explanation"] ||
-                                        "Keine Übersetzung vorhanden"
-                                      }
-                                      trigger="click"
-                                      interactive={true}
-                                      placement="right"
-                                    >
-                                      <span className={styles.clickableCell}>
-                                        {med.deExplanation}
-                                      </span>
-                                    </Tippy>
-                                  ) : (
-                                    med.deExplanation
-                                  )}
-                                </td>
-                              )}
+                              <td>{med.de}</td>
+                              {showDefinition && <td>{med.deExplanation}</td>}
                             </tr>
                           );
                         })}
@@ -460,11 +429,15 @@ const AllMedicationsPage = () => {
               ))
             )}
 
-            {/* Модальне вікно налаштувань */}
+            {/* Модалка налаштувань (шестерня внизу праворуч) */}
             {isSettingsModalOpen && (
               <div className={styles.modalOverlay}>
                 <div
-                  className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}
+                  className={
+                    window.innerWidth > 768
+                      ? styles.popupDesktopWide
+                      : styles.popupMobile
+                  }
                   ref={settingsModalRef}
                 >
                   <button
@@ -474,26 +447,31 @@ const AllMedicationsPage = () => {
                     ×
                   </button>
                   <h2 className={styles.modalTitle}>Einstellungen</h2>
+
                   <div className={styles.row}>
-                    <div className={styles.regionColumn} data-tutorial="regionSelect">
-                      <label className={styles.fieldLabel}>Region</label>
+                    {/* Алфавітний фільтр (замість регіонів) */}
+                    <div className={styles.regionColumn} data-tutorial="alphabetSelect">
+                      <label className={styles.fieldLabel}>Alphabet</label>
                       <div className={styles.selectWrapper}>
-                        <div className={styles.regionCell}>
-                          {regionAbbreviations[region] || region}
-                        </div>
+                        <div className={styles.regionCell}>{selectedLetter}</div>
                         <select
                           className={styles.nativeSelect}
-                          value={region}
-                          onChange={handleRegionChange}
+                          value={selectedLetter}
+                          onChange={(e) => {
+                            if (requireAuth()) return;
+                            setSelectedLetter(e.target.value);
+                          }}
                         >
-                          {regionOptions.map((r) => (
-                            <option key={r} value={r}>
-                              {r}
+                          {alphabetOptions.map((letter) => (
+                            <option key={letter} value={letter}>
+                              {letter}
                             </option>
                           ))}
                         </select>
                       </div>
                     </div>
+
+                    {/* Фільтр learned/paused/unlearned */}
                     <div className={styles.filterColumn} data-tutorial="filterColumn">
                       <label className={styles.fieldLabel}>Filter</label>
                       <div className={styles.selectWrapper}>
@@ -503,7 +481,10 @@ const AllMedicationsPage = () => {
                         <select
                           className={styles.nativeSelect}
                           value={filterMode}
-                          onChange={handleFilterModeChange}
+                          onChange={(e) => {
+                            if (requireAuth()) return;
+                            setFilterMode(e.target.value);
+                          }}
                         >
                           {filterModes.map((mode) => (
                             <option key={mode.value} value={mode.value}>
@@ -513,22 +494,28 @@ const AllMedicationsPage = () => {
                         </select>
                       </div>
                     </div>
+
+                    {/* Категорія (якщо треба) */}
                     <div className={styles.categoryColumn} data-tutorial="categorySelect">
                       <label className={styles.fieldLabel}>Kategorie</label>
                       <div className={styles.selectWrapper}>
                         <div className={styles.categoryCell}>
-                          {categoryIcons[selectedCategory] && (
+                          {/* Якщо хочете іконку категорії — використайте categoryIcons */}
+                          {/* {categoryIcons[selectedCategory] && (
                             <img
                               src={categoryIcons[selectedCategory]}
                               alt={selectedCategory}
                               className={styles.categoryIcon}
                             />
-                          )}
+                          )} */}
                         </div>
                         <select
                           className={styles.nativeSelect}
                           value={selectedCategory}
-                          onChange={handleCategoryChange}
+                          onChange={(e) => {
+                            if (requireAuth()) return;
+                            setSelectedCategory(e.target.value);
+                          }}
                         >
                           <option value="Alle">Alle</option>
                           {uniqueCategories.map((c) => (
@@ -539,6 +526,8 @@ const AllMedicationsPage = () => {
                         </select>
                       </div>
                     </div>
+
+                    {/* Кнопка "Spiel" (аналог Game) */}
                     <div className={styles.gameColumn} data-tutorial="gameContainer">
                       <label className={styles.fieldLabel}>Spiel</label>
                       <div
@@ -551,18 +540,21 @@ const AllMedicationsPage = () => {
                         </div>
                       </div>
                     </div>
-                    {/* Контейнер для перемикача Details */}
+
+                    {/* Перемикач Definition */}
                     <div className={styles.definitionColumn} data-tutorial="definitionToggle">
-                      <label className={styles.fieldLabel}>Details</label>
+                      <label className={styles.fieldLabel}>Definition</label>
                       <div
-                        className={`${styles.definitionToggle} ${showDetails ? styles.active : ""}`}
+                        className={`${styles.definitionToggle} ${
+                          showDefinition ? styles.active : ""
+                        }`}
                         onClick={() => {
                           if (requireAuth()) return;
-                          setShowDetails((prev) => !prev);
+                          setShowDefinition((prev) => !prev);
                         }}
                       >
                         <span className={styles.toggleText}>
-                          {showDetails ? "An" : "Aus"}
+                          {showDefinition ? "An" : "Aus"}
                         </span>
                       </div>
                     </div>
@@ -571,7 +563,7 @@ const AllMedicationsPage = () => {
               </div>
             )}
 
-            {/* Кнопка налаштувань */}
+            {/* Кнопка-шестерня (відкрити модалку) */}
             <div className={styles.bottomRightSettings}>
               <button
                 className={styles.settingsButton}
@@ -584,11 +576,20 @@ const AllMedicationsPage = () => {
               </button>
             </div>
           </div>
-          {/* Модальне вікно авторизації */}
+
+          {/* Модалка авторизації (якщо користувач не залогінений) */}
           <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </>
       )}
     </MainLayout>
+  );
+};
+
+const AllMedicationsPage = () => {
+  return (
+    <MedicationStatusProvider>
+      <AllMedicationsContent />
+    </MedicationStatusProvider>
   );
 };
 

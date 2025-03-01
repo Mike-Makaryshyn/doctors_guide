@@ -116,7 +116,7 @@ const RegionalChatsPage = React.lazy(() =>
   import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
 );
 const AllMedicationsPage = React.lazy(() =>
-  import("../pages/AllMedicationsPage/AllMedicationsPage")
+  import("../games/MedicationsGame/pages/AllMedicationsPage/AllMedicationsPage.jsx")
 );
 const TermMatchingGame = React.lazy(() =>
   import("../games/TerminologyGame/pages/TermMatchingGame/TermMatchingGame.jsx")
