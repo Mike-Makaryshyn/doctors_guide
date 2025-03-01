@@ -391,9 +391,13 @@ const MedicationSimpleChoiceGameContent = () => {
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
-                    <div className={styles.categoryCell}>
-                      {selectedCategory}
-                    </div>
+                  <div className={styles.categoryCell}>
+  {selectedCategory === "Alle"
+    ? "Alle"
+    : selectedCategory === "Andere"
+    ? "Andr."
+    : selectedCategory}
+</div>
                     <select
                       className={styles.nativeSelect}
                       value={selectedCategory}

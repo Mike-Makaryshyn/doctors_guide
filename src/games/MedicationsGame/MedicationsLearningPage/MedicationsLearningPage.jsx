@@ -86,11 +86,12 @@ const MedicationsLearningPage = () => {
               <div className={styles.termMatchingText}>Term Matching Game</div>
             </div>
           </div>
-
+         
           {/* 5. Fill In Blank Game */}
           <div
             className={styles.gameTile}
             style={{ backgroundImage: `url(${fillInBlankBg})` }}
+            onClick={() => navigate("/medications-fill-in-blank-game")}
           >
             <div className={styles.innerTile}>
               <div className={styles.fillInBlankContainer}>
@@ -106,11 +107,12 @@ const MedicationsLearningPage = () => {
               </div>
             </div>
           </div>
-
+         
           {/* 6. Fortune Wheel */}
           <div
             className={styles.gameTile}
             style={{ backgroundImage: `url(${fortuneWheelBg})` }}
+            onClick={() => navigate("/medications-fortune-wheel-game")}
           >
             <div className={styles.innerTile}>
               <div className={styles.fortuneWheelContainer}>

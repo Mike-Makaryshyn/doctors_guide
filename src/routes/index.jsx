@@ -63,7 +63,9 @@ const KenntnisPruefungPage = React.lazy(() =>
 );
 
 const AllMedicalTerminologyPage = React.lazy(() =>
-  import("../games/TerminologyGame/pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage.jsx")
+  import(
+    "../games/TerminologyGame/pages/AllMedicalTerminologyPage/AllMedicalTerminologyPage.jsx"
+  )
 );
 const EditProfilePage = React.lazy(() =>
   import("../pages/EditProfilePage/EditProfilePage")
@@ -110,40 +112,62 @@ const DataCollectionPage = React.lazy(() =>
   import("../pages/DataCollectionPage/DataCollectionPage")
 );
 const ElectiveLanguageGame = React.lazy(() =>
-  import("../games/TerminologyGame/pages/ElectiveLanguageGame/ElectiveLanguageGame.jsx")
+  import(
+    "../games/TerminologyGame/pages/ElectiveLanguageGame/ElectiveLanguageGame.jsx"
+  )
 );
 const RegionalChatsPage = React.lazy(() =>
   import("../pages/RegionalChatsPage/RegionalChatsPage.jsx")
 );
 const AllMedicationsPage = React.lazy(() =>
-  import("../games/MedicationsGame/pages/AllMedicationsPage/AllMedicationsPage.jsx")
+  import(
+    "../games/MedicationsGame/pages/AllMedicationsPage/AllMedicationsPage.jsx"
+  )
 );
 const TermMatchingGame = React.lazy(() =>
   import("../games/TerminologyGame/pages/TermMatchingGame/TermMatchingGame.jsx")
 );
-const NavigateToMap = () => (
-  <Link to={pathList.custom_map.path}></Link>
-);
+const NavigateToMap = () => <Link to={pathList.custom_map.path}></Link>;
 const FillInBlankGame = React.lazy(() =>
   import("../games/TerminologyGame/pages/FillInBlankGame/FillInBlankGame.jsx")
 );
 const MedicationsLearningPage = React.lazy(() =>
-  import("../games/MedicationsGame/MedicationsLearningPage/MedicationsLearningPage.jsx")
+  import(
+    "../games/MedicationsGame/MedicationsLearningPage/MedicationsLearningPage.jsx"
+  )
 );
 const MedicationFlashcardGame = React.lazy(() =>
-  import("../games/MedicationsGame/pages/FlashcardGame/MedicationFlashcardGame.jsx")
+  import(
+    "../games/MedicationsGame/pages/FlashcardGame/MedicationFlashcardGame.jsx"
+  )
 );
 const MedicationSimpleChoiceGame = React.lazy(() =>
-  import("../games/MedicationsGame/pages/MedicationSimpleChoiceGame/MedicationSimpleChoiceGame.jsx")
+  import(
+    "../games/MedicationsGame/pages/MedicationSimpleChoiceGame/MedicationSimpleChoiceGame.jsx"
+  )
 );
 const MedicationElectiveLanguageGame = React.lazy(() =>
-  import("../games/MedicationsGame/pages/MedicationElectiveLanguageGame/MedicationElectiveLanguageGame.jsx")
+  import(
+    "../games/MedicationsGame/pages/MedicationElectiveLanguageGame/MedicationElectiveLanguageGame.jsx"
+  )
 );
 // всередині src/routes/index.jsx (на рівні з іншими lazy-імпортами)
 const ForumRoutes = React.lazy(() => import("../forum/ForumRoutes.jsx"));
 
 const MedicationsTermMatchingGame = React.lazy(() =>
-  import("../games/MedicationsGame/pages/TermMatchingGame/MedicationsTermMatchingGame.jsx")
+  import(
+    "../games/MedicationsGame/pages/TermMatchingGame/MedicationsTermMatchingGame.jsx"
+  )
+);
+
+const MedicationFortuneWheelGame = React.lazy(() =>
+  import("../games/MedicationsGame/pages/MedicationFortuneWheelGame/MedicationFortuneWheelGame.jsx")
+);
+
+const MedicationFillInBlankGame = React.lazy(() =>
+  import(
+    "../games/MedicationsGame/pages/FillInBlankGame/MedicationFillInBlankGame.jsx"
+  )
 );
 export default function Routers() {
   return (
@@ -170,11 +194,22 @@ export default function Routers() {
           element={<ElectiveLanguageGame />}
         />
         <Route
-  path={pathList.medications_elective_language.path}
-  element={<MedicationElectiveLanguageGame />}
-/>
-<Route path="/forum/*" element={<ForumRoutes />} />
-        <Route path="/medications-learning" element={<MedicationsLearningPage />} />
+          path={pathList.medications_fill_in_blank.path}
+          element={<MedicationFillInBlankGame />}
+        />
+          <Route
+          path="/medications-fortune-wheel-game"
+          element={<MedicationFortuneWheelGame />}
+        />
+        <Route
+          path={pathList.medications_elective_language.path}
+          element={<MedicationElectiveLanguageGame />}
+        />
+        <Route path="/forum/*" element={<ForumRoutes />} />
+        <Route
+          path="/medications-learning"
+          element={<MedicationsLearningPage />}
+        />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />
@@ -186,35 +221,38 @@ export default function Routers() {
           element={<GleichwertigkeitPage />}
         />
         <Route
-  path={pathList.medications_term_matching.path}
-  element={<MedicationsTermMatchingGame/>}
-/>
-          <Route
-      path={pathList.medications_simple_choice.path}
-      element={<MedicationSimpleChoiceGame />}
-    />
+          path={pathList.medications_term_matching.path}
+          element={<MedicationsTermMatchingGame />}
+        />
         <Route
-  path={pathList.term_matching.path}
-  element={<TermMatchingGame />}
-/>
-        
+          path={pathList.medications_simple_choice.path}
+          element={<MedicationSimpleChoiceGame />}
+        />
+        <Route
+          path={pathList.term_matching.path}
+          element={<TermMatchingGame />}
+        />
+
         <Route path={pathList.notar_list.path} element={<NotarListPage />} />
         <Route
           path={pathList.kenntnispruefung.path}
           element={<KenntnisPruefungPage />}
         />
-        <Route path="/medications-flashcard-game" element={<MedicationFlashcardGame />} />
         <Route
-  path={pathList.regional_chats.path}
-  element={<RegionalChatsPage />}
-/>
+          path="/medications-flashcard-game"
+          element={<MedicationFlashcardGame />}
+        />
+        <Route
+          path={pathList.regional_chats.path}
+          element={<RegionalChatsPage />}
+        />
         <Route path="/flashcard-game" element={<FlashcardGame />} />
         <Route
           path={pathList.exam_explanations.path}
           element={<ExamEmplanationsPage />}
         />
 
-<Route path="/medications" element={<AllMedicationsPage />} />
+        <Route path="/medications" element={<AllMedicationsPage />} />
         <Route
           path={pathList.abbreviations.path}
           element={<AllMedicalAbbreviationsPage />}

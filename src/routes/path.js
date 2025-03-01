@@ -120,4 +120,10 @@ export const pathList = {
   medications_term_matching: {
     path: "/medications_term-matching-game",
   },
+  medications_fill_in_blank: {
+    path: "/medications-fill-in-blank-game",
+  },
+  medication_fortune_wheel: {
+    path: "/medications-fortune-wheel-game",
+  },
 };
