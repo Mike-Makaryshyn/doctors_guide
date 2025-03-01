@@ -114,4 +114,7 @@ export const pathList = {
   medications_simple_choice: {
     path: "/medications-simple-choice-game",
   },
+  medications_elective_language: {
+    path: "/medications-elective-language-game",
+  },
 };

@@ -49,7 +49,7 @@ const MedicationsLearningPage = () => {
           {/* 2. Simple Choice */}
           <div
         className={styles.gameTile}
-        style={{ backgroundImage: `url(${flashcardBg})` }}
+        style={{ backgroundImage: `url(${simpleChoiceBg})` }}
         onClick={() => navigate("/medications-simple-choice-game")}
       >
             <div className={styles.innerTile}>
@@ -58,11 +58,12 @@ const MedicationsLearningPage = () => {
               </div>
             </div>
           </div>
-
+         
           {/* 3. Elective Language (якщо потрібно) */}
           <div
             className={styles.gameTile}
             style={{ backgroundImage: `url(${translatorBg})` }}
+            onClick={() => navigate("/medications-elective-language-game")}
           >
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>

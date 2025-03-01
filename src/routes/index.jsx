@@ -136,6 +136,9 @@ const MedicationFlashcardGame = React.lazy(() =>
 const MedicationSimpleChoiceGame = React.lazy(() =>
   import("../games/MedicationsGame/pages/MedicationSimpleChoiceGame/MedicationSimpleChoiceGame.jsx")
 );
+const MedicationElectiveLanguageGame = React.lazy(() =>
+  import("../games/MedicationsGame/pages/MedicationElectiveLanguageGame/MedicationElectiveLanguageGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -160,6 +163,10 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route
+  path={pathList.medications_elective_language.path}
+  element={<MedicationElectiveLanguageGame />}
+/>
         <Route path="/medications-learning" element={<MedicationsLearningPage />} />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
