@@ -240,6 +240,18 @@ export const main_menu_items = {
                link: "/medications", // посилання на відповідну сторінку
             },
             {
+               en: "Medications Learning",
+               fr: "Apprentissage des médicaments",
+               es: "Aprendizaje de los medicamentos",
+               ar: "تعلم الأدوية",
+               tr: "İlaç Öğrenimi",
+               pl: "Nauka leków",
+               uk: "Вивчення медикаментів",
+               ru: "Изучение медикаментов",
+               de: "Medikamenten Lernen",
+               link: "/medications-learning", // посилання на новий маршрут
+             },
+            {
                en: "Procedure Explanation",
                fr: "Explication de la procédure",
                es: "Explicación del procedimiento",

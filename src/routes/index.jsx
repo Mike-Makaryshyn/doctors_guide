@@ -127,6 +127,9 @@ const NavigateToMap = () => (
 const FillInBlankGame = React.lazy(() =>
   import("../games/TerminologyGame/pages/FillInBlankGame/FillInBlankGame.jsx")
 );
+const MedicationsLearningPage = React.lazy(() =>
+  import("../games/MedicationsGame/MedicationsLearningPage/MedicationsLearningPage.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -151,6 +154,7 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route path="/medications-learning" element={<MedicationsLearningPage />} />
         <Route path={pathList.custom_map.path} element={<CustomGermanyMap />} />
         <Route path="/fill-in-blank-game" element={<FillInBlankGame />} />
         <Route path={pathList.lands.path} element={<GermanyLandsPage />} />

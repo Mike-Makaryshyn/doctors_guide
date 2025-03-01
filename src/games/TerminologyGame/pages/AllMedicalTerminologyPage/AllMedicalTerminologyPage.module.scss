@@ -655,3 +655,12 @@
     bottom: auto;
   }
 }
+@media (max-width: 768px) {
+  .tilesContainer {
+    padding-left: 4;
+  }
+
+  .tile {
+    margin-left: 0;
+  }
+}

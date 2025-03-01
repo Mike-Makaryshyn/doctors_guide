@@ -108,4 +108,7 @@ export const pathList = {
   term_matching: {
     path: "/term-matching-game",
   },
+  medications_learning: {
+    path: "/medications-learning",
+  },
 };
