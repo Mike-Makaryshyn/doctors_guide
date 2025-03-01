@@ -189,7 +189,6 @@ const AllMedicalTerminologyContent = () => {
 
   // Обробники для навігації
   const handleBack = () => {
-    if (requireAuth()) return;
     navigate("/main_menu");
   };
   const handleGameClick = () => {

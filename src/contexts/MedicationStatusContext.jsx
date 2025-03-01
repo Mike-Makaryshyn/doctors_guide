@@ -11,7 +11,6 @@ export const MedicationStatusProvider = ({ children }) => {
   const unsavedChanges = useRef({});
   const flushTimeoutRef = useRef(null);
 
-  // Завантаження даних з Firestore та LocalStorage
   useEffect(() => {
     if (loading) return;
     if (!user) {
@@ -26,7 +25,7 @@ export const MedicationStatusProvider = ({ children }) => {
         if (docSnap.exists()) {
           firebaseData = docSnap.data()?.statuses || {};
         }
-        console.log("Дані з Firestore:", firebaseData);
+        console.log("Дані з Firestore (medicationStatuses):", firebaseData);
         const localData = localStorage.getItem("medicationStatuses");
         const localStatuses = localData ? JSON.parse(localData) : {};
         const merged = Object.keys(localStatuses).length > 0 ? localStatuses : firebaseData;
@@ -34,7 +33,7 @@ export const MedicationStatusProvider = ({ children }) => {
         localStorage.setItem("medicationStatuses", JSON.stringify(merged));
         unsavedChanges.current = {};
       } catch (error) {
-        console.error("Помилка при зчитуванні даних:", error);
+        console.error("Помилка при зчитуванні даних (medications):", error);
       }
     };
     fetchData();
@@ -44,10 +43,9 @@ export const MedicationStatusProvider = ({ children }) => {
     localStorage.setItem("medicationStatuses", JSON.stringify(medicationStatuses));
   }, [medicationStatuses]);
 
-  // Функція збереження змін у Firebase
   const saveChangesToFirebase = async () => {
     if (!user) {
-      console.log("Немає користувача, зберігаємо лише в LocalStorage.");
+      console.log("Немає користувача (medications), зберігаємо лише локально.");
       setMedicationStatuses((prev) => {
         const newStatuses = { ...prev };
         for (const [medId, data] of Object.entries(unsavedChanges.current)) {
@@ -61,12 +59,12 @@ export const MedicationStatusProvider = ({ children }) => {
     }
     const changes = { ...unsavedChanges.current };
     if (Object.keys(changes).length === 0) {
-      console.log("Немає незбережених змін.");
+      console.log("Немає незбережених змін (medications).");
       return;
     }
     unsavedChanges.current = {};
     try {
-      console.log("Зберігаємо зміни у Firestore (миттєво):", changes);
+      console.log("Зберігаємо зміни у Firestore (medications):", changes);
       const newMedicationStatuses = { ...medicationStatuses };
       for (const [medId, data] of Object.entries(changes)) {
         newMedicationStatuses[medId] = data;
@@ -77,15 +75,15 @@ export const MedicationStatusProvider = ({ children }) => {
       });
       const docRef = doc(db, "users", user.uid, "medicationStatuses", "allMedications");
       await setDoc(docRef, { statuses: newMedicationStatuses }, { merge: true });
-      console.log("Зміни успішно збережені у Firestore.");
+      console.log("Зміни (medications) успішно збережені у Firestore.");
     } catch (error) {
-      console.error("Помилка при збереженні у Firebase:", error);
+      console.error("Помилка при збереженні у Firebase (medications):", error);
       unsavedChanges.current = { ...changes, ...unsavedChanges.current };
     }
   };
 
   const flushChanges = () => {
-    console.log("flushChanges() викликано. Зберігаємо негайно.");
+    console.log("flushChanges() викликано (medications). Зберігаємо негайно.");
     saveChangesToFirebase();
   };
 
@@ -99,7 +97,6 @@ export const MedicationStatusProvider = ({ children }) => {
     }, 3000);
   };
 
-  // Функції для встановлення та перемикання статусів
   const setStatus = (medId, status) => {
     const now = Date.now();
     setMedicationStatuses((prev) => {
@@ -124,8 +121,34 @@ export const MedicationStatusProvider = ({ children }) => {
   const toggleStatus = (medId, newStatus) => {
     const currentStatus = medicationStatuses[medId]?.status || "unlearned";
     const updatedStatus = currentStatus === newStatus ? "unlearned" : newStatus;
-    console.log(`Перемикання статусу для medication ${medId}: ${currentStatus} -> ${updatedStatus}`);
+    console.log(`Переключення статусу для medication ${medId}: ${currentStatus} -> ${updatedStatus}`);
     setStatus(medId, updatedStatus);
+  };
+
+  const recordCorrectAnswer = (medId, increment = 1) => {
+    const now = Date.now();
+    setMedicationStatuses((prev) => {
+      const current = prev[medId] || { status: "unlearned", correctCount: 0 };
+      const newCount = (current.correctCount || 0) + increment;
+      const newStatus = newCount >= 5 ? "learned" : current.status;
+      return {
+        ...prev,
+        [medId]: {
+          status: newStatus,
+          correctCount: newCount,
+          updatedAt: now,
+        },
+      };
+    });
+    const oldData = medicationStatuses[medId] || { status: "unlearned", correctCount: 0 };
+    const newCount = (oldData.correctCount || 0) + increment;
+    const newStatus = newCount >= 5 ? "learned" : oldData.status;
+    unsavedChanges.current[medId] = {
+      status: newStatus,
+      correctCount: newCount,
+      updatedAt: now,
+    };
+    console.log(`Medication ${medId} -> correctCount: ${newCount}, status: ${newStatus}`);
   };
 
   return (
@@ -134,6 +157,7 @@ export const MedicationStatusProvider = ({ children }) => {
         medicationStatuses,
         setStatus,
         toggleStatus,
+        recordCorrectAnswer,
         flushChanges,
         scheduleFlushChanges,
       }}

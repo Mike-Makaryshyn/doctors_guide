@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.allMedicalTerminologyPage {
+.allMedicationsPage {
   position: relative; /* Kontent der Seite */
   padding: 16px;
   font-family: "Poppins", sans-serif;
@@ -169,12 +169,11 @@
   margin-top: 15px;
 }
 
-/* Settings-Container (Region, Filter, Kategorie, Spiel, ERCLEARING) */
-.regionColumn,
+/* Settings-Container (Filter, Kategorie, Spiel, etc.) */
 .filterColumn,
 .categoryColumn,
 .gameColumn,
-.erclearingColumn {
+.definitionColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,22 +186,6 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-}
-
-.regionCell {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  color: #013b6e;
-  font-weight: 600;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
 }
 
 .filterCell {
@@ -261,27 +244,6 @@
   cursor: pointer;
 }
 
-/* Neuer Container ERCLEARING */
-.erclearingToggle {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  background-color: #ffffff;
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.toggleText {
-  font-size: 10px;
-  text-align: center;
-  color: #013b6e;
-}
-
 /* Allgemeines Feld-Label */
 .fieldLabel {
   font-weight: 600;
@@ -316,6 +278,7 @@
   transform: scale(1.1);
 }
 
+/* Kategorien-Überschrift */
 .categorySection {
   margin-bottom: 20px;
 }
@@ -467,7 +430,7 @@
   line-height: 1.4;
 }
 
-/* Tabelle (Desktop) */
+/* Tabelle (Desktop) - identisch zum Fachbegriffe-Style */
 .terminologyTable {
   width: 95%;
   margin: 20px auto;
@@ -575,27 +538,18 @@
   }
 }
 
+/* Für Icons (z.B. FaGlasses) invertieren */
+.customIcon {
+  filter: invert(100%);
+}
+
 .categoryIcon {
   width: 30px;
   height: 30px;
   filter: invert(100%);
 }
 
-@media (max-width: 768px) {
-  .tile {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
 /* Definition-Container */
-.definitionColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
 .definitionToggle {
   position: relative;
   display: inline-block;
@@ -627,13 +581,6 @@
   color: inherit;
 }
 
-.fieldLabel {
-  font-weight: 600;
-  font-size: 14px;
-  color: #013b6e;
-  margin-bottom: 5px;
-}
-
 .noDefinition {
   .iconWrapper {
     position: static;
@@ -649,8 +596,26 @@
     bottom: auto;
   }
 }
+
 .categoryLetter {
   font-weight: bold;
   font-size: larger;
   text-transform: uppercase;
+}
+
+@keyframes popupBounce {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

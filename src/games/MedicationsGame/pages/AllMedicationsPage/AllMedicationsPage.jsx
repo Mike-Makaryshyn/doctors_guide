@@ -30,7 +30,7 @@ import { Helmet } from "react-helmet";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg";
 
-// Мапінг категорій для селектора
+// Mappings für Kategorie-Icons
 const categoryIcons = {
   Alle: <FaInfinity className={styles.customIcon} />,
   Andere: <FaGlasses className={styles.customIcon} />,
@@ -43,13 +43,14 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-const AllMedicationsContent = () => {
+const AllMedicationsPageContent = () => {
   const navigate = useNavigate();
-  const { medicationStatuses, toggleStatus } = useMedicationStatus();
+  const { medicationStatuses, toggleStatus, scheduleFlushChanges } = useMedicationStatus();
   const [user, loading] = useAuthState(auth);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const { selectedLanguage } = useGetGlobalInfo();
   const [translationLanguage, setTranslationLanguage] = useState("de");
+
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
@@ -106,11 +107,13 @@ const AllMedicationsContent = () => {
   const handleToggleLearned = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "learned");
+    scheduleFlushChanges();
   };
 
   const handleTogglePaused = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "paused");
+    scheduleFlushChanges();
   };
 
   const handleBack = () => {
@@ -122,16 +125,20 @@ const AllMedicationsContent = () => {
     navigate("/medications-learning");
   };
 
+  // Filterung der Medikamente
   const filteredMeds = medications.filter((med) => {
     const matchesSearch =
       med.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
       med.de.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (med[`${translationLanguage}Explanation`] || "").toLowerCase().includes(searchTerm.toLowerCase());
+
     const statusObj = medicationStatuses[med.id];
     const status = statusObj?.status || "unlearned";
+
     if (filterMode === "learned" && status !== "learned") return false;
     if (filterMode === "paused" && status !== "paused") return false;
     if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+
     return matchesSearch;
   });
 
@@ -140,16 +147,29 @@ const AllMedicationsContent = () => {
     return (med.categories || []).includes(selectedCategory);
   });
 
+  // Kategorien ermitteln und "Andere" ans Ende schieben
   let allCategories = Array.from(new Set(medications.flatMap((m) => m.categories || []))).sort();
+  if (allCategories.includes("Andere")) {
+    allCategories = allCategories.filter((cat) => cat !== "Andere");
+    allCategories.push("Andere");
+  }
+  const uniqueCategories = allCategories;
 
-  // Перемістити "Andere" в кінець списку
-  allCategories = allCategories.filter(cat => cat !== "Andere");
-  allCategories.push("Andere");
   const categoriesToRender = selectedCategory === "Alle" ? allCategories : [selectedCategory];
   const medsByCategory = {};
   categoriesToRender.forEach((cat) => {
     medsByCategory[cat] = medsFilteredByCategory.filter((med) => (med.categories || []).includes(cat));
   });
+
+  const handleCategoryChange = (e) => {
+    if (requireAuth()) return;
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleFilterModeChange = (e) => {
+    if (requireAuth()) return;
+    setFilterMode(e.target.value);
+  };
 
   return (
     <MainLayout>
@@ -161,16 +181,18 @@ const AllMedicationsContent = () => {
             <title>Medikamente - Übersicht</title>
             <meta
               name="description"
-              content="Seite für medizinische Fachbegriffe (Medikamente) mit Filter, Suche, Lerne-Status und Übersetzungen."
+              content="Seite für Medikamente mit Filter, Suche, Lernstatus und Übersetzungen."
             />
             <meta name="keywords" content="Medikamente, Fachsprache, Lernen" />
             <meta property="og:image" content={medicalTerminologyBg} />
           </Helmet>
-          <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
+
+          <div className={styles.allMedicationsPage} ref={pageRef}>
             <button className={styles.main_menu_back} onClick={handleBack}>
               &#8592;
             </button>
 
+            {/* Suchfeld */}
             <div className={styles.searchContainer}>
               <input
                 type="text"
@@ -203,11 +225,13 @@ const AllMedicationsContent = () => {
               </button>
             </div>
 
+            {/* Mobile Darstellung (Tiles) */}
             {isMobile ? (
               <div className={styles.tilesContainer}>
                 {categoriesToRender.map((category, index) => {
                   const medsInCategory = medsByCategory[category] || [];
                   if (medsInCategory.length === 0) return null;
+
                   return (
                     <div key={category} className={styles.categorySection}>
                       <h2
@@ -228,10 +252,12 @@ const AllMedicationsContent = () => {
                           {collapsedCategories[category] ? "▼" : "▲"}
                         </span>
                       </h2>
+
                       {!collapsedCategories[category] &&
                         medsInCategory.map((med) => {
                           const statusObj = medicationStatuses[med.id] || {};
                           const status = statusObj.status || "unlearned";
+
                           return (
                             <div
                               key={med.id}
@@ -257,6 +283,7 @@ const AllMedicationsContent = () => {
                               >
                                 <FaPause />
                               </span>
+
                               {med.examples && med.examples.length > 0 ? (
                                 <Tippy
                                   content={
@@ -279,6 +306,7 @@ const AllMedicationsContent = () => {
                               ) : (
                                 <h3 className={styles.tileHeader}>{med.lat}</h3>
                               )}
+
                               <p className={styles.tileDescription}>
                                 {translationLanguage !== "de" ? (
                                   <Tippy
@@ -293,6 +321,7 @@ const AllMedicationsContent = () => {
                                   med.de
                                 )}
                               </p>
+
                               {showDefinition && (
                                 <p className={styles.tileExplanation}>
                                   {translationLanguage !== "de" ? (
@@ -305,9 +334,7 @@ const AllMedicationsContent = () => {
                                       interactive={true}
                                       placement="bottom"
                                     >
-                                      <span className={styles.clickableCell}>
-                                        {med.deExplanation}
-                                      </span>
+                                      <span className={styles.clickableCell}>{med.deExplanation}</span>
                                     </Tippy>
                                   ) : (
                                     med.deExplanation
@@ -322,9 +349,11 @@ const AllMedicationsContent = () => {
                 })}
               </div>
             ) : (
+              /* Desktop Darstellung (Tabelle) */
               categoriesToRender.map((category, index) => {
                 const medsInCategory = medsByCategory[category] || [];
                 if (medsInCategory.length === 0) return null;
+
                 return (
                   <div key={category} className={styles.categorySection}>
                     <h2
@@ -345,6 +374,7 @@ const AllMedicationsContent = () => {
                         {collapsedCategories[category] ? "▼" : "▲"}
                       </span>
                     </h2>
+
                     {!collapsedCategories[category] && (
                       <table
                         className={
@@ -358,7 +388,8 @@ const AllMedicationsContent = () => {
                             <th style={{ width: showDefinition ? "20%" : "50%", textAlign: "left" }}>
                               Begriff
                             </th>
-                            <th style={{ width: showDefinition ? "20%" : "50%" }}>
+                            {/* Hier das textAlign: "left" angleichen */}
+                            <th style={{ width: showDefinition ? "20%" : "50%", textAlign: "left" }}>
                               Deutsche Bezeichnung
                             </th>
                             {showDefinition && (
@@ -370,6 +401,7 @@ const AllMedicationsContent = () => {
                           {medsInCategory.map((med) => {
                             const statusObj = medicationStatuses[med.id] || {};
                             const status = statusObj.status || "unlearned";
+
                             return (
                               <tr
                                 key={med.id}
@@ -398,6 +430,7 @@ const AllMedicationsContent = () => {
                                       <FaPause />
                                     </span>
                                   </div>
+
                                   {med.examples && med.examples.length > 0 ? (
                                     <Tippy
                                       content={
@@ -413,7 +446,10 @@ const AllMedicationsContent = () => {
                                       interactive={true}
                                       placement="right"
                                     >
-                                      <div className={styles.termContent} style={{ cursor: "pointer" }}>
+                                      <div
+                                        className={styles.termContent}
+                                        style={{ cursor: "pointer" }}
+                                      >
                                         {med.lat}
                                       </div>
                                     </Tippy>
@@ -421,10 +457,13 @@ const AllMedicationsContent = () => {
                                     <div className={styles.termContent}>{med.lat}</div>
                                   )}
                                 </td>
+
                                 <td>
                                   {translationLanguage !== "de" ? (
                                     <Tippy
-                                      content={med[translationLanguage] || "Keine Übersetzung vorhanden"}
+                                      content={
+                                        med[translationLanguage] || "Keine Übersetzung vorhanden"
+                                      }
                                       trigger="click"
                                       interactive={true}
                                       placement="right"
@@ -435,6 +474,7 @@ const AllMedicationsContent = () => {
                                     med.de
                                   )}
                                 </td>
+
                                 {showDefinition && (
                                   <td>
                                     {translationLanguage !== "de" ? (
@@ -447,7 +487,9 @@ const AllMedicationsContent = () => {
                                         interactive={true}
                                         placement="right"
                                       >
-                                        <span className={styles.clickableCell}>{med.deExplanation}</span>
+                                        <span className={styles.clickableCell}>
+                                          {med.deExplanation}
+                                        </span>
                                       </Tippy>
                                     ) : (
                                       med.deExplanation
@@ -465,13 +507,17 @@ const AllMedicationsContent = () => {
               })
             )}
 
+            {/* Modal für Einstellungen */}
             {isSettingsModalOpen && (
               <div className={styles.modalOverlay}>
                 <div
                   className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}
                   ref={settingsModalRef}
                 >
-                  <button className={styles.modalCloseButton} onClick={() => setIsSettingsModalOpen(false)}>
+                  <button
+                    className={styles.modalCloseButton}
+                    onClick={() => setIsSettingsModalOpen(false)}
+                  >
                     ×
                   </button>
                   <h2 className={styles.modalTitle}>Einstellungen</h2>
@@ -485,10 +531,7 @@ const AllMedicationsContent = () => {
                         <select
                           className={styles.nativeSelect}
                           value={filterMode}
-                          onChange={(e) => {
-                            if (requireAuth()) return;
-                            setFilterMode(e.target.value);
-                          }}
+                          onChange={handleFilterModeChange}
                         >
                           {filterModes.map((mode) => (
                             <option key={mode.value} value={mode.value}>
@@ -499,36 +542,33 @@ const AllMedicationsContent = () => {
                       </div>
                     </div>
 
-                    {/* Оновлено: Селектор категорій */}
+                    {/* Kategorie-Selektor */}
                     <div className={styles.categoryColumn} data-tutorial="categorySelect">
                       <label className={styles.fieldLabel}>Kategorie</label>
                       <div className={styles.selectWrapper}>
-                      <div className={styles.categoryCell}>
-  {selectedCategory === "Andere" ? (
-    <FaGlasses className={styles.customIcon} />
-  ) : categoryIcons[selectedCategory] ? (
-    categoryIcons[selectedCategory]
-  ) : (
-    <span className={styles.categoryLetter}>
-      {selectedCategory.charAt(0).toUpperCase()}
-    </span>
-  )}
-</div>
-<select
-  className={styles.nativeSelect}
-  value={selectedCategory}
-  onChange={(e) => {
-    if (requireAuth()) return;
-    setSelectedCategory(e.target.value);
-  }}
->
-  <option value="Alle">Alle</option>
-  {allCategories.map((cat) => (
-  <option key={cat} value={cat}>
-  {cat === "Andere" ? "Andere" : cat}
-</option>
-  ))}
-</select>
+                        <div className={styles.categoryCell}>
+                          {selectedCategory === "Andere" ? (
+                            <FaGlasses className={styles.customIcon} />
+                          ) : categoryIcons[selectedCategory] ? (
+                            categoryIcons[selectedCategory]
+                          ) : (
+                            <span className={styles.categoryLetter}>
+                              {selectedCategory.charAt(0).toUpperCase()}
+                            </span>
+                          )}
+                        </div>
+                        <select
+                          className={styles.nativeSelect}
+                          value={selectedCategory}
+                          onChange={handleCategoryChange}
+                        >
+                          <option value="Alle">Alle</option>
+                          {allCategories.map((cat) => (
+                            <option key={cat} value={cat}>
+                              {cat === "Andere" ? "Andere" : cat}
+                            </option>
+                          ))}
+                        </select>
                       </div>
                     </div>
 
@@ -587,7 +627,7 @@ const AllMedicationsContent = () => {
 const AllMedicationsPage = () => {
   return (
     <MedicationStatusProvider>
-      <AllMedicationsContent />
+      <AllMedicationsPageContent />
     </MedicationStatusProvider>
   );
 };
