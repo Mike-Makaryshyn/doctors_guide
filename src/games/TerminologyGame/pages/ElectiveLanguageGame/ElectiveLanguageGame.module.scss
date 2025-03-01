@@ -654,3 +654,13 @@
     font-size: 12px;
   }
 }
+.noQuestionsMessage {
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  color: #013b6e;
+  text-align: left; /* або center, якщо хочеш відцентрувати */
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}

@@ -18,14 +18,32 @@ export default function CustomWheel({
   // Індекс сегмента, який «блимає» (ефект пробігання)
   const [activeSegmentIndex, setActiveSegmentIndex] = useState(0);
 
-  // Кут одного сегмента (2π / кількість)
+  // --- Додаємо стейт для керування розміром шрифту
+  const [fontSize, setFontSize] = useState(12);
+
+  // Кут одного сегмента
   const arcSize = segments.length ? (2 * Math.PI) / segments.length : 0;
 
-  // Дефолтні кольори, якщо у segments не задано `color`
+  // Дефолтні кольори
   const defaultColors = [
     "#FFB6C1", "#ADD8E6", "#90EE90", "#F0E68C",
     "#FFA07A", "#DDA0DD", "#87CEFA", "#FF69B4"
   ];
+
+  // --- useEffect, що змінює fontSize для мобільних
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 768) {
+        // Було 10, робимо 9
+        setFontSize(8);
+      } else {
+        setFontSize(12);
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Якщо не крутиться – підсвічуємо наступний сегмент кожні 500 мс
   useEffect(() => {
@@ -104,7 +122,9 @@ export default function CustomWheel({
       ctx.save();
       const textAngle = startAngle + arcSize / 2;
       ctx.rotate(textAngle);
-      ctx.font = 'bold 12px "Poppins", sans-serif';
+
+      // --- Використовуємо стейт fontSize, щоб змінювати розмір шрифту
+      ctx.font = `bold ${fontSize}px "Poppins", sans-serif`;
       ctx.fillStyle = "#000";
       ctx.textAlign = "right";
       ctx.fillText(seg.labelForWheel, cx * 0.9, 5);
@@ -114,40 +134,24 @@ export default function CustomWheel({
     ctx.restore();
   }
 
-  /**
-   * Запускаємо обертання (за годинниковою стрілкою).
-   * По завершенні викликаємо onStopSpinning(winnerIndex).
-   */
   function spin() {
     if (isSpinning || !segments.length) return;
     setIsSpinning(true);
 
-    // Випадковий індекс сегмента
     const randomIndex = Math.floor(Math.random() * segments.length);
-
-    // Кут стрілки (12-та година) => -90° => -Math.PI/2
     const pointerAngle = -Math.PI / 2;
 
-    // Нормалізуємо currentAngle до [0, 2π)
     let normalizedAngle = currentAngle % (2 * Math.PI);
     if (normalizedAngle < 0) normalizedAngle += 2 * Math.PI;
 
-    // Кут центру сегмента
     const centerOfSegment = randomIndex * arcSize + arcSize / 2;
-
-    // Різниця, аби цей сегмент потрапив на 12:00
     let difference = pointerAngle - normalizedAngle - centerOfSegment;
     while (difference < 0) {
       difference += 2 * Math.PI;
     }
 
-    // Мінімум 3 повних оберти
     const minFullSpins = 3;
-
-    // Позитивний кут => колесо обертається за годинниковою стрілкою
-    // Якщо хочете у протилежний бік – див. пояснення нижче.
     const finalAngle = 2 * Math.PI * minFullSpins + difference;
-
     const startAngle = currentAngle;
     const startTime = performance.now();
 
@@ -155,15 +159,12 @@ export default function CustomWheel({
       const elapsed = now - startTime;
       if (elapsed < spinDuration) {
         const progress = elapsed / spinDuration;
-        // easeOutCubic
-        const eased = 1 - Math.pow(1 - progress, 3);
+        const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
         setCurrentAngle(startAngle + finalAngle * eased);
         requestAnimationFrame(animate);
       } else {
-        // Кінець
         setCurrentAngle(startAngle + finalAngle);
         setIsSpinning(false);
-        // Повідомляємо, який сегмент виграв
         onStopSpinning(randomIndex);
       }
     }
@@ -203,7 +204,6 @@ export default function CustomWheel({
         }}
       />
 
-      {/* Стрілка зверху */}
       {outerPointer && (
         <div
           style={{
@@ -222,7 +222,6 @@ export default function CustomWheel({
         />
       )}
 
-      {/* Кнопка SPIN */}
       <button
         onClick={spin}
         disabled={isSpinning || !segments.length}
@@ -231,12 +230,12 @@ export default function CustomWheel({
           top: "48%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: 45,
-          height: 45,
+          width: 40,
+          height: 40,
           borderRadius: "50%",
           backgroundColor: "#013b6e",
           color: "#fff",
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: "bold",
           border: "none",
           cursor: "pointer",
@@ -246,7 +245,6 @@ export default function CustomWheel({
         SPIN
       </button>
 
-      {/* Анімації */}
       <style>
         {`
           @keyframes pulse {

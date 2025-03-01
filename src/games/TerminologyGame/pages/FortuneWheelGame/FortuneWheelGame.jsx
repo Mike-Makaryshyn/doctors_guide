@@ -155,7 +155,7 @@ function FortuneWheelGameContent() {
     setInitialTermCount(finalList.length);
 
     if (finalList.length === 0) {
-      setSegments([{ labelForWheel: "Keine Begriffe gefunden", color: "#666" }]);
+      setSegments([]); // Порожній масив
       return;
     }
 
@@ -270,10 +270,14 @@ function FortuneWheelGameContent() {
   function renderResultsModal() {
     if (!gameFinished) return null;
     const totalCorrect = scores.reduce((a, b) => a + b, 0);
+  
     return (
       <div className={styles.resultsOverlay}>
         <div className={styles.resultsBox}>
-          <button className={styles.modalCloseButton} onClick={closeSettings}>
+          <button
+            className={styles.modalCloseButton}
+            onClick={() => setGameFinished(false)}
+          >
             ×
           </button>
           <h2 className={styles.modalTitle}>Ergebnisse</h2>
