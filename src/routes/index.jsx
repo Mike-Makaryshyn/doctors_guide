@@ -133,6 +133,9 @@ const MedicationsLearningPage = React.lazy(() =>
 const MedicationFlashcardGame = React.lazy(() =>
   import("../games/MedicationsGame/pages/FlashcardGame/MedicationFlashcardGame.jsx")
 );
+const MedicationSimpleChoiceGame = React.lazy(() =>
+  import("../games/MedicationsGame/pages/MedicationSimpleChoiceGame/MedicationSimpleChoiceGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -168,6 +171,10 @@ export default function Routers() {
           path={pathList.gleichwertigkeit.path}
           element={<GleichwertigkeitPage />}
         />
+          <Route
+      path={pathList.medications_simple_choice.path}
+      element={<MedicationSimpleChoiceGame />}
+    />
         <Route
   path={pathList.term_matching.path}
   element={<TermMatchingGame />}

@@ -48,9 +48,10 @@ const MedicationsLearningPage = () => {
 
           {/* 2. Simple Choice */}
           <div
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${simpleChoiceBg})` }}
-          >
+        className={styles.gameTile}
+        style={{ backgroundImage: `url(${flashcardBg})` }}
+        onClick={() => navigate("/medications-simple-choice-game")}
+      >
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
                 <div className={styles.tileTitle}>Single Choice Game</div>
