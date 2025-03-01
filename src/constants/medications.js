@@ -3028,7 +3028,7 @@ export const medications = [
     "trExplanation": "Esansiyel yağlar, aromaterapi için kullanılan ve kişinin iyi hissetmesine yardımcı olmak ve stresi azaltmak amacıyla kullanılan yağlardır. Ancak, doğrudan cilde temas halinde alerjik reaksiyonlara neden olabilir veya yanlış uygulama durumunda baş ağrısı ve baş dönmesine yol açabilirler. Bu nedenle, esansiyel yağların dikkatli ve doğru şekilde kullanılması önemlidir. Esansiyel yağlar aynı zamanda \"das ätherische Öl\" olarak da bilinir.",
     "arExplanation": "زيوت عطرية\" هي مستخلصات طبيعية تستخدم في علاج الروائح والعطور وتستخدم أيضًا في العلاج النفسي والعلاج الطبيعي. يمكن أن تزيد زيوت العطر من الشعور بالراحة وتقليل التوتر. ومع ذلك، يجب الانتباه إلى أن الاتصال المباشر بالجلد قد يسبب ردود فعل تحسسية أو يمكن أن يسبب الصداع والدوخة عند استخدامه بشكل غير صحيح. يرجى استخدام زيت العطر بحذر وتحت إشراف طبيب أو متخصص وفقًا للإرشادات الموصى بها لتجنب الاستجابات غير المرغوب فيها.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "Zur Steigerung des Wohlbefindens und zur Reduktion von Stress wird {BLANK} häufig in der Aromatherapie eingesetzt.",
     "answer": "das Duftöl",
@@ -3059,7 +3059,7 @@ export const medications = [
     "trExplanation": "Aşındırıcı madde, siğil veya diğer cilt lezyonlarının çıkarılmasında kullanılan bir ilaçtır. Üst cilt tabakalarını kimyasal olarak yok ederek etki eder. Ancak, ciddi cilt tahrişlerine ve yara izlerine neden olabilir.",
     "arExplanation": "مادة كاوية\" هي مصطلح يستخدم لوصف دواء يستخدم لإزالة الثآليل أو الشوائب الجلدية الأخرى عن طريق تدمير الطبقات العليا من الجلد بشكل كيميائي. ومع ذلك، يجب أن يُلاحظ أن استخدام مادة كاوية يمكن أن يسبب تهيجات جلدية شديدة وترك ندبات. يُنصح بتوجيه العناية الطبية الفورية في حالة حدوث أي تفاعلات جلدية غير مرغوب فيها.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "{BLANK} wird häufig zur Behandlung von hartnäckigen Warzen eingesetzt.",
     "answer": "das Verätzungsmittel",
@@ -9837,7 +9837,7 @@ export const medications = [
     "trExplanation": "Östrojen antagonistleri, yaygın olarak meme kanseri ilaçları olarak bilinir. Bu ilaçlar, östrojenin reseptörlere bağlanmasını engelleyerek östrojen bağımlı meme kanseri hücrelerinin büyümesini durdurur. Sıcak basmaları, ruh hali değişiklikleri ve artmış tromboz riski gibi önemli yan etkileri bulunmaktadır.",
     "arExplanation": "مثبط الإستروجين\" هو دواء يعمل كمضاد لهرمون الإستروجين، والذي يستخدم في علاج سرطان الثدي. يعمل هذا الدواء عن طريق منع ارتباط الإستروجين بمستقبلاته، مما يعيق نمو الخلايا السرطانية التي تعتمد على الإستروجين. من الآثار الجانبية الشائعة لهذا الدواء الهبات الساخنة، التقلبات المزاجية وزيادة خطر تكوُّن الجلطات.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "{BLANK} werden häufig zur Behandlung von hormonrezeptorpositivem Brustkrebs bei postmenopausalen Frauen eingesetzt.",
     "answer": "das Brustkrebsmedikament",
@@ -9868,7 +9868,7 @@ export const medications = [
     "trExplanation": "Östrojen, menopoz belirtileri gibi sıcak basmaların tedavisinde ve osteoporozun önlenmesinde kullanılan bir hormon preparatıdır. Önemli yan etkiler arasında kan pıhtılaşması riskinin artması ve belirli kanser türleri bulunmaktadır. Tedavi sırasında düzenli olarak doktorunuzla iletişimde olmanız önemlidir.",
     "arExplanation": "الاستروجين هو هرمون أنثوي يستخدم لعلاج أعراض سن اليأس مثل الهبات الساخنة وللوقاية من هشاشة العظام. يمكن أن تشمل الآثار الجانبية الهامة زيادة خطر تكوّن الجلطات الدموية واحتمال زيادة خطر بعض أنواع السرطانات.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "{BLANK} wird häufig zur Linderung von menopausalen Beschwerden wie Hitzewallungen eingesetzt.",
     "answer": "das Hormonpräparat",
@@ -10736,7 +10736,7 @@ export const medications = [
     "trExplanation": "Östrojen antagonistleri, östrojenin etkisini engelleyerek meme kanseri hücrelerinin büyümesini yavaşlatan veya durduran ilaçlardır. Bu ilaçlar aynı zamanda meme kanseri tedavisinde kullanılan ilaçlar arasında yer almaktadır. Yaygın yan etkiler arasında sıcak basmaları, yorgunluk ve kemik yoğunluğunun azalması bulunabilir.",
     "arExplanation": "مثبط الإستروجين (دواء سرطان الثدي)\" هو دواء يعمل كمضاد للإستروجين، وهو مركب يهدف إلى منع تأثير الإستروجين على خلايا سرطان الثدي. يتم استخدام هذا الدواء لتباطؤ أو إيقاف نمو أنواع سرطان الثدي الإيجابية للإستروجين. يمكن أن تتضمن الآثار الجانبية الشائعة لهذا الدواء الهبات الساخنة، التعب، وفقدان الكتلة العظمية.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "{BLANK} wird häufig zur Behandlung von östrogenrezeptor-positivem Brustkrebs eingesetzt, um das Tumorwachstum zu verlangsamen.",
     "answer": "das Brustkrebsmedikament",
@@ -10767,7 +10767,7 @@ export const medications = [
     "trExplanation": "Östrojen (hormon preparatı), menopoz belirtileri olan sıcak basmalar ve vajinal kuruluk gibi durumların tedavisinde kullanılan bir hormon preparatıdır. Ayrıca osteoporoz riskini azaltabilir. Önemli yan etkiler arasında kan pıhtılaşma riskinin artması ve meme kanseri gibi belirli kanser türleri bulunmaktadır. Bu ilacın kullanımıyla ilgili detaylı bilgi için sağlık uzmanınıza danışınız.",
     "arExplanation": "الإستروجين هو هرمون يستخدم في علاج أعراض سن اليأس مثل الهبات الساخنة والجفاف في المهبل، كما يمكن أن يقلل من خطر هشاشة العظام. ومع ذلك، يجب مراعاة الآثار الجانبية المحتملة لاستخدامه، مثل زيادة خطر تكون الجلطات الدموية وزيادة خطر الإصابة ببعض أنواع السرطان، مثل سرطان الثدي.",
     "categories": [
-      "andere"
+      "Andere"
     ],
     "sentence": "{BLANK} wird häufig zur Linderung von Menopausesymptomen wie Hitzewallungen und vaginaler Trockenheit eingesetzt.",
     "answer": "das Hormonpräparat",

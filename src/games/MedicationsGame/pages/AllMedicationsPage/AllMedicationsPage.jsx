@@ -141,7 +141,11 @@ const AllMedicationsContent = () => {
     return (med.categories || []).includes(selectedCategory);
   });
 
-  const allCategories = Array.from(new Set(medications.flatMap((m) => m.categories || []))).sort();
+  let allCategories = Array.from(new Set(medications.flatMap((m) => m.categories || []))).sort();
+
+  // Перемістити "Andere" в кінець списку
+  allCategories = allCategories.filter(cat => cat !== "Andere");
+  allCategories.push("Andere");
   const categoriesToRender = selectedCategory === "Alle" ? allCategories : [selectedCategory];
   const medsByCategory = {};
   categoriesToRender.forEach((cat) => {
@@ -522,7 +526,7 @@ const AllMedicationsContent = () => {
   <option value="Alle">Alle</option>
   {allCategories.map((cat) => (
   <option key={cat} value={cat}>
-  {cat === "Andere" ? "ANDERE" : cat}
+  {cat === "Andere" ? "Andere" : cat}
 </option>
   ))}
 </select>
