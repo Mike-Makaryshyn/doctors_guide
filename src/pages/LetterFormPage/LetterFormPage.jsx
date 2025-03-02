@@ -235,17 +235,17 @@ const LetterFormPage = () => {
     <MainLayout>
       {/* Мета-дані для SEO та соціальних мереж */}
       <Helmet>
-        <title>Супровідний лист та збір документів для аплікації</title>
-        <meta
-          name="description"
-          content="Апробація збору документів та супровідного листа для аплікації. Збір необхідних документів та оформлення листа."
-        />
-        <meta property="og:title" content="Супровідний лист та збір документів" />
-        <meta property="og:description" content="Апробація збору документів та супровідного листа для аплікації." />
-        <meta property="og:image" content={documentImage} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={documentImage} />
-      </Helmet>
+  <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
+  <meta
+    name="description"
+    content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation. Hier finden Sie alle notwendigen Informationen und Unterlagen."
+  />
+  <meta property="og:title" content="Begleitschreiben und Dokumentensammlung" />
+  <meta property="og:description" content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation." />
+  <meta property="og:image" content={documentImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={documentImage} />
+</Helmet>
 
       {/* Модальне вікно авторизації */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
