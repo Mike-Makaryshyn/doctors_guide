@@ -172,6 +172,9 @@ const MedicationFillInBlankGame = React.lazy(() =>
 const AbbreviationsLearningPage = React.lazy(() =>
   import("../games/AbbreviationsGame/AbbreviationsLearningPage/AbbreviationsLearningPage.jsx")
 );
+const LetterFormPage = React.lazy(() =>
+  import("../pages/LetterFormPage/LetterFormPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -208,6 +211,7 @@ export default function Routers() {
   path={pathList.abbreviations_learning.path}
   element={<AbbreviationsLearningPage />}
 />
+<Route path={pathList.cover_letter.path} element={<LetterFormPage />} />
         <Route
           path={pathList.medications_elective_language.path}
           element={<MedicationElectiveLanguageGame />}

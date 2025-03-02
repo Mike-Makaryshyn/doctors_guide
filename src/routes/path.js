@@ -129,4 +129,8 @@ export const pathList = {
   abbreviations_learning: {
     path: "/abbreviations-learning",
   },
+  cover_letter: {
+    path: "/cover-letter",
+  },
+  
 };
