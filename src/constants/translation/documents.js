@@ -234,6 +234,7 @@ export const documentsNonEU = [
       ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
       de: "Identitätsüberprüfung (Reisepass oder Pass)",
     },
+    letterName: { de: "Passkopie" },
   },
   {
     id: 2,
@@ -250,6 +251,7 @@ export const documentsNonEU = [
       ru: "Свидетельство о рождении или выписка из семейной книги",
       de: "Geburtsurkunde oder Auszug aus dem Familienbuch",
     },
+    letterName: { de: "Geburtsurkunde" },
   },
   {
     id: 7,
@@ -268,6 +270,7 @@ export const documentsNonEU = [
     },
     English: "Diploma",
     German: "Диплом про закінчену вищу освіту",
+    letterName: { de: "Diplom" },
   },
   {
     id: 8,
@@ -284,6 +287,7 @@ export const documentsNonEU = [
       ru: "Приложение к диплому, предоставляющее обзор всех пройденных курсов с указанием часов (не учебный план)",
       de: "Diplomzusatz, der einen Überblick über alle abgeschlossenen Kurse mit Stunden enthält (Notenübersicht)",
     },
+    letterName: { de: "Diplomzusatz/Notenübersicht" },
   },
   {
     id: 9,
@@ -300,6 +304,7 @@ export const documentsNonEU = [
       ru: "Доказательства специализированной медицинской подготовки или свидетельства о приобретенном профессиональном опыте / Сертификат специалиста",
       de: "Nachweis einer spezialisierten medizinischen Ausbildung oder eines erworbenen Berufserfahrungsnachweises / Facharztzeugnis",
     },
+    letterName: { de: "Nachweis einer spezialisierten medizinischen Ausbildung" },
   },
   {
     id: 10,
@@ -317,6 +322,7 @@ export const documentsNonEU = [
       de: "Lehrplan/Ausführlicher Lehrplan mit Stunden und behandelten Fächern",
     },
     ready_copies: notNeededText,
+    letterName: { de: "Lehrplan/Curriculum" },
   },
   {
     id: 5,
@@ -335,6 +341,7 @@ export const documentsNonEU = [
     },
     English: "Certificate of Good Standing",
     German: "Dovídka допропорядочності (Certificate of good Standing)",
+    letterName: { de: "Unbedenklichkeitsbescheinigung" },
   },
   {
     id: 4,
@@ -351,6 +358,7 @@ export const documentsNonEU = [
       ru: "Выписка из штрафных реестров из всех стран, где вы проживали в последние 5 лет (не должна быть старше 3 месяцев на момент подачи заявления)",
       de: "Auszug aus dem Strafregister aller Länder, in denen Sie in den letzten 5 Jahren gelebt haben (darf zum Zeitpunkt der Antragstellung nicht älter als 3 Monate sein)",
     },
+    letterName: { de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe" },
   },
   // Документи з documentsEU
 ];
@@ -376,6 +384,7 @@ export const documentsEU = [
       ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
       de: "Identitätsüberprüfung (Reisepass oder Pass)",
     },
+    letterName: { de: "Passkopie" },
   },
   {
     id: 12,
@@ -392,6 +401,7 @@ export const documentsEU = [
       ru: "Свидетельство о рождении или выписка из семейной книги",
       de: "Geburtsurkunde oder Auszug aus dem Familienbuch",
     },
+    letterName: { de: "Geburtsurkunde" },
   },
 
   {
@@ -409,6 +419,7 @@ export const documentsEU = [
       ru: "Справка о благонадежности (Certificate of Good Standing) выдается соответствующими структурами здравоохранения, где вы работали по профессии",
       de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren (Certificate of good Standing)",
     },
+    letterName: { de: "Unbedenklichkeitsbescheinigung" },
   },
   {
     id: 15,
@@ -425,6 +436,7 @@ export const documentsEU = [
       ru: "Диплом о высшем образовании",
       de: "Hochschulabschluss (Diplom)",
     },
+    letterName: { de: "Diplom/Hochschulabschluss" },
   },
   {
     id: 16,
@@ -441,6 +453,7 @@ export const documentsEU = [
       ru: "Приложение к диплому, предоставляющее обзор всех пройденных курсов с указанием часов (не учебный план)",
       de: "Diplomzusatz, der einen Überblick über alle abgeschlossenen Kurse mit Stunden enthält (Notenübersicht)",
     },
+    letterName: { de: "Diplomzusatz/Notenübersicht" },
   },
   {
     id: 26,
@@ -457,6 +470,7 @@ export const documentsEU = [
       ru: "Доказательство профессионального опыта или приобретенных прав (Статья 23 Директивы 2005/36/EC)",
       de: "Nachweis der Berufserfahrung oder erworbener Rechte (Artikel 23 der Richtlinie 2005/36/EG)",
     },
+    letterName: { de: "Nachweis Berufserfahrung (Artikel 23 der Richtlinie 2005/36/EG)" },
   },
   {
     id: 13,
@@ -473,6 +487,7 @@ export const documentsEU = [
       ru: "Выписка из штрафных реестров из всех стран, где вы проживали в последние 5 лет (не должна быть старше 3 месяцев на момент подачи заявления)",
       de: "Auszug aus dem Strafregister aller Länder, in denen Sie in den letzten 5 Jahren gelebt haben (darf zum Zeitpunkt der Antragstellung nicht älter als 3 Monate sein)",
     },
+    letterName: { de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe" },
   },
 
 ];
@@ -493,6 +508,7 @@ export const documentsOptional = [
       ru: "Свидетельство о смене имени или фамилии",
       de: "Bescheinigung über Namens- oder Nachnamensänderung",
     },
+    letterName: { de: "Namensänderungsbescheinigung" },
   },
   {
     id: 20,
@@ -510,6 +526,7 @@ export const documentsOptional = [
       ru: "Доказательство практических навыков во время обучения/ Сертификат специалиста подтверждает это",
       de: "Nachweis praktischer Fähigkeiten während der Ausbildung/ Das Fachzertifikat bestätigt dies",
     },
+    letterName: { de: "Nachweis praktischer Fähigkeiten" },
   },
   {
     id: 21,
@@ -527,6 +544,7 @@ export const documentsOptional = [
       ru: "Доказательство приобретенных практических навыков в ходе обучения",
       de: "Nachweis der während der Ausbildung erworbenen praktischen Fähigkeiten",
     },
+    letterName: { de: "Nachweis praktischer Ausbildung" },
   },
   {
     id: 22,
@@ -544,6 +562,7 @@ export const documentsOptional = [
       ru: "Доказательство признания образования в одной из стран ЕС",
       de: "Nachweis der Anerkennung von Bildung in einem EU-Land",
     },
+    letterName: { de: "Nachweis Anerkennung Bildung in einem EU-Land" },
   },
   {
     id: 23,
@@ -562,6 +581,7 @@ export const documentsOptional = [
       ru: "Рекомендация с предыдущего места работы",
       de: "Referenz von einem früheren Arbeitsplatz",
     },
+    letterName: { de: "Arbeitsreferenz" },
   },
   {
     id: 24,
@@ -580,6 +600,7 @@ export const documentsOptional = [
       ru: "Сертификаты о пройденных курсах повышения квалификации",
       de: "Zertifikate für absolvierte Fortbildungskurse",
     },
+    letterName: { de: "Fortbildungszertifikate" },
   },
   {
     id: 17,
@@ -602,6 +623,7 @@ export const documentsOptional = [
       ru: "Справка о несудимости из Германии (если вы находились в Германии более 6 месяцев до подачи заявления)",
       de: "Führungszeugnis der Belegart „O“ aus Deutschland (wenn Sie sich vor der Antragstellung länger als 6 Monate in Deutschland aufgehalten haben). Das Dokument muss professionell ins Deutsche übersetzt und notariell beglaubigt werden.",
     },
+    letterName: { de: "Führungszeugnis Deutschland" },
   },
   {
     id: 25,
@@ -623,6 +645,7 @@ export const documentsOptional = [
       ru: "Регистрация проживания в Германии",
       de: "Wohnsitzanmeldung in Deutschland",
     },
+    letterName: { de: "Meldebescheinigung" },
   },
   {
     id: 30, // Присвой унікальний ID
@@ -644,5 +667,6 @@ export const documentsOptional = [
       uk: "Пропозиція про роботу в {region}",
       ru: "Предложение о работе в {region}",
     },
+    letterName: { de: "Stellenzusage" },
   },
 ];

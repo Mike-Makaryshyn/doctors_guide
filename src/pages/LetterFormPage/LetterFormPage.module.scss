@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Контейнер сторінки */
+.letterFormContainer {
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  /* Прибираємо горизонтальний скрол */
+  overflow-x: hidden;
+}
+
+/* Плаваюча кнопка налаштувань (правий нижній кут) */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 3000;
+}
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.settingsButton:hover {
+  transform: scale(1.1);
+}
+
+/* Заголовок сторінки */
+.pageTitle {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #ffffff; /* Синій текст */
+  text-align: center;
+}
+
+/* Обгортка для двох колонок: зліва (адреса) і справа (регіон) */
+.columnsWrapper {
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Ліва колонка (наша адреса) */
+.leftColumn {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Права колонка (адреса регіону) */
+.rightColumn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Адаптивність: на мобільному (<=768px) колонки стають одна під одною */
+@media (max-width: 768px) {
+  .columnsWrapper {
+    flex-wrap: wrap;
+  }
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+  }
+}
+
+/* Плитка з нашою адресою */
+.userAddressCard {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
+              -6px -6px 12px rgba(65, 191, 171, 0.2);
+  color: #013b6e;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Заголовок усередині плиток */
+.subTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #013b6e;
+}
+
+/* Рядок для інпутів */
+.inputRow {
+  margin-bottom: 15px;
+}
+
+/* Інпути */
+.inputField {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
+              -6px -6px 12px rgba(65, 191, 171, 0.2);
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #013b6e;
+  transition: box-shadow 0.3s ease;
+}
+.inputField:focus {
+  box-shadow: inset 3px 3px 6px rgba(19, 57, 51, 0.2),
+              inset -3px -3px 6px rgba(65, 191, 171, 0.2);
+}
+
+/* Плитка з адресою регіону */
+.regionTile {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
+              -6px -6px 12px rgba(65, 191, 171, 0.2);
+  color: #013b6e;
+  position: relative;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Контейнер для іконки + селект */
+.iconSelectContainer {
+    position: relative;
+    /* Зробимо контейнер достатньо великим,
+       щоб іконка була в ньому по центру */
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+
+/* Анімація іконки */
+@keyframes pulseIcon {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.mapIcon {
+    position: absolute;
+    /* Розміщуємо іконку по центру контейнера */
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #013b6e;
+    cursor: pointer;
+    animation: pulseIcon 2s infinite ease-in-out;
+  }
+
+/* Прозорий select поверх іконки */
+/* Прозорий select поверх іконки */
+.hiddenSelect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Розтягуємо select на весь контейнер */
+    width: 100%;
+    height: 100%;
+    /* Якщо треба, можна зменшити opacity,
+       щоб не бачили текст усередині select */
+    opacity: 0;
+    cursor: pointer;
+  }
+
+/* Текст адреси */
+.addressInfo {
+    margin-top: 10px;
+    color: #013b6e;
+  }
+  
+  /* Медіа-запити для шрифту адреси */
+  @media (max-width: 768px) {
+    .addressInfo {
+      font-size: 0.90rem;
+    }
+  }
+  @media (min-width: 769px) {
+    .addressInfo {
+      font-size: 1.2rem;
+    }
+  }
+
+.errorText {
+  color: red;
+}
+
+/* Контейнер для textarea (мінімальний) */
+.textAreaFullWidth {
+  position: relative; /* щоб кнопка всередині могла позиціонуватись */
+  margin-bottom: 20px;
+}
+
+/* Підпис над textarea */
+.label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #013b6e;
+  margin-bottom: 8px;
+}
+
+/* Кнопка для генерації тексту (правий верхній кут textarea-контейнера) */
+.allInOneButton {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: rgba(1, 59, 110, 0); /* Напівпрозорий фон */
+    color: #013b6e;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulseAnimation 2s infinite ease-in-out;
+  }
+  
+  /* Анімація пульсації */
+  @keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* При наведенні - змінюємо тільки прозорість */
+  .allInOneButton:hover {
+    background-color: rgba(1, 59, 110, 0); /* Трохи менш прозорий */
+  }
+
+/* Textarea (автоматичне розширення, білій фон, заокруглення 12px) */
+.bigTextArea {
+  width: 100%;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
+              -6px -6px 12px rgba(65, 191, 171, 0.2);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+  transition: box-shadow 0.3s ease;
+  min-height: 100px;
+  color: #013b6e;
+}
+.bigTextArea:focus {
+  box-shadow: inset 3px 3px 6px rgba(19, 57, 51, 0.2),
+              inset -3px -3px 6px rgba(65, 191, 171, 0.2);
+}
+
+/* Модальне вікно - без змін */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupDesktop {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    padding: 20px 15px;
+    width: 280px; /* Було 320px */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+  }
+  
+  /* Заголовок модального вікна */
+  .modalTitle {
+    margin-top: 0;
+    font-size: 22px;
+    color: #6a0dad; /* Фіолетовий колір */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+.popupMobile {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2502;
+  text-align: center;
+  animation: popupBounce 0.6s ease-out;
+}
+@keyframes popupBounce {
+  0%   { transform: translateY(100%); opacity: 0; }
+  60%  { transform: translateY(-10px); opacity: 1; }
+  80%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Кнопка-контейнер у модальному вікні */
+.smallModalButton {
+  width: 85px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.smallModalButton:hover {
+  transform: scale(1.05);
+}
+
+/* Додаткові контейнери за потреби */
+.threeContainersWrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.settingsContainer {
+  flex: 1;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: inset 3px 3px 6px rgba(19, 57, 51, 0.05),
+              inset -3px -3px 6px rgba(65, 191, 171, 0.05);
+}
+.akInputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .toggleButton {
+    margin-left: 10px;
+    padding: 0 10px;
+    height: 48px; /* співпадає з висотою .inputField */
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* Контейнер кнопки (обгортка) */
+// Контейнер для кнопок (горизонтальне розміщення)
+.buttonsArea {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  // Контейнери кнопок
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Квадратні кнопки (як FilterCell та CategoryCell)
+  .squareButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+    color: #013b6e;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .squareButton:hover {
+    background: #013b6e;
+    color: #fff;
+  }
+  
+  // Іконка всередині кнопки
+  .iconInside {
+    width: 24px;
+    height: 24px;
+  }
+  /* Іконка "Documents" - постійний синьо-фіолетовий фон + біла іконка */
+.squareButton.documentsButton {
+    background: #013b6e !important; /* Синьо-фіолетовий колір, що використовується в текстах */
+    color: #fff !important; /* Біла іконка */
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* При наведенні – той самий стиль */
+  .squareButton.documentsButton:hover {
+    background: #013b6e !important;
+    color: #fff !important;
+    transform: scale(1.05);
+  }
+  .whiteIcon {
+    color: #fff !important;
+  }
+  .documentsButton .iconInside {
+    filter: invert(100%);
+  }
+  .invertedIcon {
+    filter: invert(100%);
+  }
+  /* Біла іконка всередині "Documents" */
+  .squareButton.documentsButton .iconInside {
+    filter: invert(100%);
+    transform: translateY(3px);
+  }

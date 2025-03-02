@@ -42,6 +42,7 @@ export const documentsSecond = [
       ru: "Документ об обладании достаточными знаниями немецкого языка. Минимальный сертификат B2",
       de: "Nachweis ausreichender Kenntnisse der deutschen Sprache. Mindestens B2-Zertifikat",
     },
+    letterName: "Sprachkenntnisnachweis B2", // тільки німецькою
     links: createLinks(
       {
         uk: "Вивчення мови",
@@ -73,6 +74,7 @@ export const documentsSecond = [
       ru: "Актуальное, табличное, лично подписанное резюме (отражающее учебу и карьерный путь до даты подачи заявки без пробелов)",
       de: "Aktueller, tabellarischer, persönlich unterschriebener Lebenslauf (darin sind Studium und der berufliche Werdegang bis zum Datum der Antragstellung lückenlos darzustellen)",
     },
+    letterName: "Tabellarischer Lebenslauf", 
     links: createLinks(
       {
         en: "Create a CV",
@@ -105,6 +107,7 @@ export const documentsSecond = [
       ru: "Письменное, лично подписанное заявление на немецком языке на выдачу лицензии и, при необходимости, профессионального разрешения",
       de: "Schriftlicher, persönlich unterschriebener Antrag in deutscher Sprache auf Erteilung der Approbation und ggf. einer Berufserlaubnis",
     },
+    letterName: "Antrag auf Erteilung der Approbation",
     links: {
       "Non-EU": [
         {
@@ -640,6 +643,7 @@ export const documentsSecond = [
       ru: " Письменное, неофициальное, лично подписанное заявление о том, что вы ранее не подавали заявление на получение лицензии в Германии",
       de: " Schriftliche, formlose, persönlich unterschriebene Erklärung, dass Sie in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt haben",
     },
+    letterName: "Schriftliche, formlose, persönlich unterschriebene Erklärung, dass ich in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt habe",
     links: {
       "Non-EU": [
         {
@@ -1174,6 +1178,7 @@ export const documentsSecond = [
       ru: "Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
       de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
     },
+    letterName: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
     links: {
       "Non-EU": [
         {
@@ -1707,6 +1712,7 @@ export const documentsSecond = [
       ru: "Актуальная медицинская справка, подтверждающая вашу пригодность к выполнению профессиональных обязанностей (справка должна быть выдана не ранее чем за три месяца до подачи заявления)",
       de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
     },
+    letterName: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
     links: {
       "Non-EU": [
         {

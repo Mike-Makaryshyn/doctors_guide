@@ -161,6 +161,18 @@ export const main_menu_items = {
                de: "Dokumentensammlung",
                link: "/documents",
             },
+            {
+               en: "Cover Letter",
+               fr: "Lettre de motivation",
+               es: "Carta de presentación",
+               ar: "رسالة تغطية",
+               tr: "Ön Yazı",
+               pl: "List motywacyjny",
+               uk: "Супровідний лист",
+               ru: "Сопроводительное письмо",
+               de: "Begleitschreiben",
+               link: "/cover-letter",
+            },
          ],
       },
       {
@@ -536,18 +548,7 @@ export const main_menu_items = {
                de: "Lebenslauf",
                link: "/resume",
             },
-            {
-               en: "Cover Letter",
-               fr: "Lettre de motivation",
-               es: "Carta de presentación",
-               ar: "رسالة تغطية",
-               tr: "Ön Yazı",
-               pl: "List motywacyjny",
-               uk: "Супровідний лист",
-               ru: "Сопроводительное письмо",
-               de: "Begleitschreiben",
-               link: "/cover-letter",
-            },
+         
             {
                en: "Necessary Documents",
                fr: "Documents nécessaires",
