@@ -2,293 +2,630 @@ import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
 import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
 import styles from "./AllMedicalAbbreviationsPage.module.scss";
-import { jsPDF } from "jspdf";
-import "jspdf-autotable";
-import { FaCog, FaCheck, FaPause } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
+import {
+  FaCog,
+  FaCheck,
+  FaPause,
+  FaGamepad,
+  FaList,
+  FaPlay,
+  FaTimes,
+  FaSearch,
+  FaInfinity,
+  FaGlasses,
+} from "react-icons/fa";
+
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+
+import {
+  useAbbreviationsStatus,
+  AbbreviationsStatusProvider,
+} from "../../../../contexts/AbbreviationsStatusContext";
+
+import { useNavigate } from "react-router-dom";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-import { AbbreviationsStatusProvider, useAbbreviationsStatus } from "../../../../contexts/AbbreviationsStatusContext";
+import { Helmet } from "react-helmet";
+import AuthModal from "../../../../pages/AuthPage/AuthModal";
+import bgImage from "../../../../assets/medical-terminology-bg.jpg";
+
+// Mappings für Kategorie-Icons (kann bei Bedarf erweitert werden)
+const categoryIcons = {
+  Alle: <FaInfinity className={styles.customIcon} color="white" />,
+  Andere: <FaGlasses className={styles.customIcon} color="white" />,
+};
+
+// Mögliche Filter-Modi (Lernstatus)
+const filterModes = [
+  { value: "all", icon: <FaList />, label: "Alle" },
+  { value: "learned", icon: <FaCheck />, label: "Gelernt" },
+  { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
+  { value: "paused", icon: <FaPause />, label: "Pausiert" },
+];
 
 const AllMedicalAbbreviationsPageContent = () => {
-  const { selectedRegion, selectedLanguage, languages } = useGetGlobalInfo();
+  const navigate = useNavigate();
+  const { abbreviationStatuses, toggleStatus, scheduleFlushChanges } = useAbbreviationsStatus();
+  const { selectedLanguage } = useGetGlobalInfo();
 
-  const [region, setRegion] = useState(selectedRegion || "Bayern");
-  useEffect(() => {
-    setRegion(selectedRegion || "Bayern");
-  }, [selectedRegion]);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [translationLanguage, setTranslationLanguage] = useState("de");
+  const [showDefinition, setShowDefinition] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("Alle");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [collapsedCategories, setCollapsedCategories] = useState({});
+  const [filterMode, setFilterMode] = useState("all");
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
+  const [isSearchActive, setIsSearchActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
+  const pageRef = useRef(null);
+  const settingsModalRef = useRef(null);
+
+  // Falls du echte Auth hast, kannst du das anpassen
+  const requireAuth = () => {
+    // Beispiel: immer false => Auth erfordert -> öffne Modal
+    if (!true) {
+      setShowAuthModal(true);
+      return true;
+    }
+    return false;
+  };
+
+  // Sprache aus globalen Infos holen
   useEffect(() => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
 
-  // Показ визначень
-  const [showDefinitions, setShowDefinitions] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [showSaveModal, setShowSaveModal] = useState(false);
-
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
-  const settingsModalRef = useRef(null);
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (settingsModalRef.current && !settingsModalRef.current.contains(event.target)) {
-        setIsSettingsModalOpen(false);
-      }
-    };
-    if (isSettingsModalOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isSettingsModalOpen]);
-
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // Fenstergröße beobachten
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Отримуємо дані з контексту для статусів абревіатур
-  const { abbreviationStatuses, toggleStatus, scheduleFlushChanges } = useAbbreviationsStatus();
+  // Klick außerhalb des Einstellungs-Modals schließt dieses
+  useEffect(() => {
+    const handleClickOutsideModal = (event) => {
+      if (
+        settingsModalRef.current &&
+        !settingsModalRef.current.contains(event.target)
+      ) {
+        setIsSettingsModalOpen(false);
+      }
+    };
+    if (isSettingsModalOpen) {
+      document.addEventListener("mousedown", handleClickOutsideModal);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutsideModal);
+  }, [isSettingsModalOpen]);
 
-  // Фільтрація абревіатур
-  const filteredAbbreviations = medicalAbbreviations.filter((abbr) => {
+  // Klick außerhalb der Seite schließt die Suche
+  useEffect(() => {
+    const handleClickOutsidePage = (event) => {
+      if (
+        isSearchActive &&
+        pageRef.current &&
+        !pageRef.current.contains(event.target)
+      ) {
+        setIsSearchActive(false);
+        setSearchTerm("");
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutsidePage);
+    return () => document.removeEventListener("mousedown", handleClickOutsidePage);
+  }, [isSearchActive]);
+
+  // Lernstatus toggeln
+  const handleToggleLearned = (id) => {
+    if (requireAuth()) return;
+    toggleStatus(id, "learned");
+    scheduleFlushChanges();
+  };
+
+  const handleTogglePaused = (id) => {
+    if (requireAuth()) return;
+    toggleStatus(id, "paused");
+    scheduleFlushChanges();
+  };
+
+  // Navigation
+  const handleBack = () => {
+    navigate("/main_menu");
+  };
+
+  const handleGameClick = () => {
+    if (requireAuth()) return;
+    navigate("/abbreviations-learning");
+  };
+
+  // 1) Abkürzungen nach Suchbegriff + Lernstatus filtern
+  const filteredAbbr = medicalAbbreviations.filter((abbr) => {
     const matchesSearch =
-      abbr.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       abbr.abbreviation.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      abbr.explanation.de.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesRegion =
-      region === "Усі" ||
-      !(abbr.regions && abbr.regions.length) ||
-      (abbr.regions || []).includes(region);
-    return matchesSearch && matchesRegion;
+      abbr.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (abbr.explanation[translationLanguage] || abbr.explanation.de)
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+
+    const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
+    if (filterMode === "learned" && status !== "learned") return false;
+    if (filterMode === "paused" && status !== "paused") return false;
+    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+
+    return matchesSearch;
   });
 
-  const saveToPDF = () => {
-    const doc = new jsPDF();
-    doc.setFont("Helvetica", "bold");
-    doc.setFontSize(16);
-    doc.text("Ausgewählte medizinische Abkürzungen", 10, 10);
-    const tableData = filteredAbbreviations.map((abbr) => {
-      const explanation =
-        translationLanguage !== "de"
-          ? abbr.explanation[translationLanguage] || abbr.explanation.de
-          : abbr.explanation.de;
-      return [abbr.abbreviation, abbr.name, explanation];
-    });
-    doc.autoTable({
-      head: [["Abkürzung", "Name", "Erklärung"]],
-      body: tableData,
-      startY: 20,
-      styles: { font: "Helvetica", fontSize: 10, cellPadding: 5 },
-      headStyles: { fillColor: [52, 152, 219], textColor: 255, halign: "center" },
-      bodyStyles: { textColor: [33, 33, 33] },
-    });
-    doc.save("selected_abbreviations.pdf");
-    setShowSaveModal(false);
+  // 2) Kategorie-Filter anwenden (keine Buchstaben-Gruppierung, nur Kategorien)
+  const abbrFilteredByCategory = filteredAbbr.filter((abbr) => {
+    if (selectedCategory === "Alle") return true;
+    return (abbr.categories || []).includes(selectedCategory);
+  });
+
+  // 3) Alle Kategorien sammeln und "Andere" ans Ende schieben
+  let allCategories = Array.from(
+    new Set(medicalAbbreviations.flatMap((a) => a.categories || []))
+  ).sort();
+  if (allCategories.includes("Andere")) {
+    allCategories = allCategories.filter((cat) => cat !== "Andere");
+    allCategories.push("Andere");
+  }
+
+  // Kategorien, die wir tatsächlich rendern
+  // - bei "Alle" => alle
+  // - ansonsten nur die gewählte
+  const categoriesToRender =
+    selectedCategory === "Alle" ? allCategories : [selectedCategory];
+
+  // 4) Abkürzungen in einem Objekt nach Kategorien gruppieren
+  const abbrByCategory = {};
+  categoriesToRender.forEach((cat) => {
+    abbrByCategory[cat] = abbrFilteredByCategory.filter((abbr) =>
+      (abbr.categories || []).includes(cat)
+    );
+  });
+
+  // Filter / Kategorie-Selektoren
+  const handleFilterModeChange = (e) => {
+    if (requireAuth()) return;
+    setFilterMode(e.target.value);
   };
 
-  const saveToPersonalAccount = async () => {
-    alert("Definitionen wurden gespeichert!");
-    setShowSaveModal(false);
+  const handleCategoryChange = (e) => {
+    if (requireAuth()) return;
+    setSelectedCategory(e.target.value);
   };
-
-  const handleRegionChange = (e) => setRegion(e.target.value);
-  const handleTranslationChange = (e) => setTranslationLanguage(e.target.value);
 
   return (
     <MainLayout>
-      <div className={styles.allMedicalAbbreviationsPage}>
-        <h1>Medizinische Abkürzungen</h1>
-        <input
-          type="text"
-          placeholder="Suche..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className={styles.searchInput}
+      <Helmet>
+        <title>Abkürzungen - Übersicht</title>
+        <meta
+          name="description"
+          content="Seite für medizinische Abkürzungen mit Filter, Suche, Lernstatus und Übersetzungen."
         />
+        <meta name="keywords" content="Abkürzungen, Medizin, Lernen" />
+        <meta property="og:image" content={bgImage} />
+      </Helmet>
 
-        {isMobile ? (
-          <div className={styles.tilesContainer}>
-            {filteredAbbreviations.map((abbr) => {
-              const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
-              return (
-                <div
-                  key={abbr.id}
-                  className={`${styles.tile} ${status === "learned" ? styles.learned : ""} ${status === "paused" ? styles.paused : ""}`}
-                >
-                  <span
-                    className={styles.checkIcon}
-                    onClick={() => {
-                      toggleStatus(abbr.id, "learned");
-                      scheduleFlushChanges();
-                    }}
-                    title="Als erledigt markieren"
-                  >
-                    <FaCheck />
-                  </span>
-                  <span
-                    className={styles.pauseIcon}
-                    onClick={() => {
-                      toggleStatus(abbr.id, "paused");
-                      scheduleFlushChanges();
-                    }}
-                    title="Pause"
-                  >
-                    <FaPause />
-                  </span>
-                  <h3 className={styles.tileHeader}>{abbr.abbreviation}</h3>
-                  <p className={styles.tileDescription}>{abbr.name}</p>
-                  {showDefinitions && (
-                    <p className={styles.tileExplanation}>
-                      <Tippy
-                        content={abbr.explanation[translationLanguage] || abbr.explanation.de}
-                        trigger="click"
-                        interactive={true}
-                        placement="bottom"
-                      >
-                        <span className={styles.clickableCell}>{abbr.explanation.de}</span>
-                      </Tippy>
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <table className={styles.terminologyTable}>
-            <thead>
-              <tr>
-                <th>Abkürzung</th>
-                <th>Name</th>
-                {showDefinitions && <th>Erklärung</th>}
-              </tr>
-            </thead>
-            <tbody>
-              {filteredAbbreviations.map((abbr) => {
-                const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
-                return (
-                  <tr
-                    key={abbr.id}
-                    className={`${status === "learned" ? styles.learned : ""} ${status === "paused" ? styles.paused : ""}`}
-                  >
-                    <td className={styles.abbreviationCell}>
-                      <span
-                        className={styles.checkIconDesktop}
-                        onClick={() => {
-                          toggleStatus(abbr.id, "learned");
-                          scheduleFlushChanges();
-                        }}
-                        title="Als erledigt markieren"
-                      >
-                        <FaCheck />
-                      </span>
-                      <span
-                        className={styles.pauseIconDesktop}
-                        onClick={() => {
-                          toggleStatus(abbr.id, "paused");
-                          scheduleFlushChanges();
-                        }}
-                        title="Pause"
-                      >
-                        <FaPause />
-                      </span>
-                      {abbr.abbreviation}
-                    </td>
-                    <td className={styles.nameCell}>{abbr.name}</td>
-                    {showDefinitions && (
-                      <td className={styles.explanationCell}>
-                        <Tippy
-                          content={abbr.explanation[translationLanguage] || abbr.explanation.de}
-                          trigger="click"
-                          interactive={true}
-                          placement="right"
-                        >
-                          <span className={styles.clickableCell}>{abbr.explanation.de}</span>
-                        </Tippy>
-                      </td>
-                    )}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )}
+      <div className={styles.allMedicalAbbreviationsPage} ref={pageRef}>
+        {/* Zurück-Button */}
+        <button className={styles.main_menu_back} onClick={handleBack}>
+          &#8592;
+        </button>
 
-        {showSaveModal && (
-          <div className={styles.modal}>
-            <div className={styles.modalContent}>
-              <h2>Wohin speichern?</h2>
-              <p>Wählen Sie, wie Sie die Abkürzungen speichern möchten:</p>
-              <div className={styles.modalActions}>
-                <button className={styles.actionButton} onClick={saveToPersonalAccount}>
-                  Persönliches Konto
-                </button>
-                <button className={styles.actionButton} onClick={saveToPDF}>
-                  Als PDF speichern
-                </button>
-              </div>
-              <button className={styles.closeButton} onClick={() => setShowSaveModal(false)}>
-                Schließen
-              </button>
-            </div>
-          </div>
-        )}
-
-        <div className={styles.bottomRightSettings}>
-          <button className={styles.settingsButton} onClick={() => setIsSettingsModalOpen(true)}>
-            <FaCog />
+        {/* Such-Container */}
+        <div className={styles.searchContainer}>
+          <input
+            type="text"
+            placeholder="Suche..."
+            value={searchTerm}
+            onChange={(e) => {
+              if (requireAuth()) return;
+              setSearchTerm(e.target.value);
+            }}
+            className={`${styles.searchInput} ${isSearchActive ? styles.active : ""}`}
+            style={{ display: isSearchActive ? "block" : "none" }}
+            autoFocus={isSearchActive}
+          />
+          <button
+            className={styles.searchToggleButton}
+            onClick={() => {
+              // Beispiel: wenn du echte Auth hast, abfragen:
+              if (requireAuth()) return;
+              if (isSearchActive) {
+                setSearchTerm("");
+                setIsSearchActive(false);
+              } else {
+                setIsSearchActive(true);
+              }
+            }}
+          >
+            {isSearchActive ? <FaTimes /> : <FaSearch />}
           </button>
         </div>
 
+        {/* Daten-Anzeige */}
+        {isMobile ? (
+          // --- MOBILE: Kacheln pro Kategorie ---
+          categoriesToRender.map((cat) => {
+            const abbrInCategory = abbrByCategory[cat] || [];
+            if (abbrInCategory.length === 0) return null;
+
+            return (
+              <div key={cat} className={styles.categorySection}>
+                {/* Kategorie-Überschrift (mit Klick zum Ein-/Ausklappen) */}
+                <h2
+                  onClick={() =>
+                    setCollapsedCategories((prev) => ({
+                      ...prev,
+                      [cat]: !prev[cat],
+                    }))
+                  }
+                  className={styles.categoryHeader}
+                >
+                  {cat}
+                  <span className={styles.collapseIcon}>
+                    {collapsedCategories[cat] ? "▼" : "▲"}
+                  </span>
+                </h2>
+
+                {/* Bei Bedarf ausklappbar */}
+                {!collapsedCategories[cat] &&
+                  abbrInCategory.map((abbr) => {
+                    const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
+                    return (
+                      <div
+                        key={abbr.id}
+                        className={`${styles.tile} ${
+                          status === "learned"
+                            ? styles.learned
+                            : status === "paused"
+                            ? styles.paused
+                            : ""
+                        }`}
+                      >
+                        <span
+                          className={styles.checkIconDesktop}
+                          onClick={() => handleToggleLearned(abbr.id)}
+                          title="Gelernt"
+                        >
+                          <FaCheck />
+                        </span>
+                        <span
+                          className={styles.pauseIcon}
+                          onClick={() => handleTogglePaused(abbr.id)}
+                          title="Pausiert"
+                        >
+                          <FaPause />
+                        </span>
+
+                        <h3 className={styles.tileHeader}>{abbr.abbreviation}</h3>
+                        {/* name / Bezeichnung */}
+                        <p className={styles.tileDescription}>
+                          {translationLanguage !== "de" ? (
+                            <Tippy
+                              content={abbr.name || "Keine Übersetzung vorhanden"}
+                              trigger="click"
+                              interactive={true}
+                              placement="bottom"
+                            >
+                              <span className={styles.clickableCell}>{abbr.name}</span>
+                            </Tippy>
+                          ) : showDefinition ? (
+                            abbr.name
+                          ) : (
+                            <Tippy
+                              content={abbr.explanation.de}
+                              trigger="click"
+                              interactive={true}
+                              placement="bottom"
+                            >
+                              <span className={styles.clickableCell}>{abbr.name}</span>
+                            </Tippy>
+                          )}
+                        </p>
+                        {/* Definition */}
+                        {showDefinition && (
+                          <p className={styles.tileExplanation}>
+                            {translationLanguage !== "de" ? (
+                              <Tippy
+                                content={
+                                  abbr.explanation[translationLanguage] ||
+                                  abbr.explanation.de
+                                }
+                                trigger="click"
+                                interactive={true}
+                                placement="bottom"
+                              >
+                                <span className={styles.clickableCell}>
+                                  {abbr.explanation.de}
+                                </span>
+                              </Tippy>
+                            ) : (
+                              abbr.explanation.de
+                            )}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
+              </div>
+            );
+          })
+        ) : (
+          // --- DESKTOP: Tabelle pro Kategorie ---
+          categoriesToRender.map((cat) => {
+            const abbrInCategory = abbrByCategory[cat] || [];
+            if (abbrInCategory.length === 0) return null;
+
+            return (
+              <div key={cat} className={styles.categorySection}>
+                <h2
+                  onClick={() =>
+                    setCollapsedCategories((prev) => ({
+                      ...prev,
+                      [cat]: !prev[cat],
+                    }))
+                  }
+                  className={styles.categoryHeader}
+                >
+                  {cat}
+                  <span className={styles.collapseIcon}>
+                    {collapsedCategories[cat] ? "▼" : "▲"}
+                  </span>
+                </h2>
+
+                {!collapsedCategories[cat] && (
+                  <table className={styles.terminologyTable}>
+                    <thead>
+                      <tr>
+                        <th
+                          style={{
+                            width: showDefinition ? "20%" : "50%",
+                            textAlign: "left",
+                          }}
+                        >
+                          Begriff
+                        </th>
+                        <th
+                          style={{
+                            width: showDefinition ? "20%" : "50%",
+                            textAlign: "left",
+                          }}
+                        >
+                          Deutsche Bezeichnung
+                        </th>
+                        {showDefinition && (
+                          <th style={{ width: "60%", textAlign: "left" }}>
+                            Definition
+                          </th>
+                        )}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {abbrInCategory.map((abbr) => {
+                        const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
+                        return (
+                          <tr
+                            key={abbr.id}
+                            className={
+                              status === "learned"
+                                ? styles.learned
+                                : status === "paused"
+                                ? styles.paused
+                                : ""
+                            }
+                          >
+                            <td className={styles.termCell}>
+                              <div className={styles.iconWrapper}>
+                                <span
+                                  className={styles.checkIconDesktop}
+                                  onClick={() => handleToggleLearned(abbr.id)}
+                                  title="Gelernt"
+                                >
+                                  <FaCheck />
+                                </span>
+                                <span
+                                  className={styles.pauseIconDesktop}
+                                  onClick={() => handleTogglePaused(abbr.id)}
+                                  title="Pausiert"
+                                >
+                                  <FaPause />
+                                </span>
+                              </div>
+                              <div
+                                className={styles.termContent}
+                                style={{ cursor: "pointer" }}
+                              >
+                                {abbr.abbreviation}
+                              </div>
+                            </td>
+                            <td>
+                              {translationLanguage !== "de" ? (
+                                <Tippy
+                                  content={abbr.name || "Keine Übersetzung vorhanden"}
+                                  trigger="click"
+                                  interactive={true}
+                                  placement="right"
+                                >
+                                  <span className={styles.clickableCell}>
+                                    {abbr.name}
+                                  </span>
+                                </Tippy>
+                              ) : showDefinition ? (
+                                abbr.name
+                              ) : (
+                                <Tippy
+                                  content={abbr.explanation.de}
+                                  trigger="click"
+                                  interactive={true}
+                                  placement="right"
+                                >
+                                  <span className={styles.clickableCell}>
+                                    {abbr.name}
+                                  </span>
+                                </Tippy>
+                              )}
+                            </td>
+                            {showDefinition && (
+                              <td>
+                                {translationLanguage !== "de" ? (
+                                  <Tippy
+                                    content={
+                                      abbr.explanation[translationLanguage] ||
+                                      abbr.explanation.de
+                                    }
+                                    trigger="click"
+                                    interactive={true}
+                                    placement="right"
+                                  >
+                                    <span className={styles.clickableCell}>
+                                      {abbr.explanation.de}
+                                    </span>
+                                  </Tippy>
+                                ) : (
+                                  abbr.explanation.de
+                                )}
+                              </td>
+                            )}
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+            );
+          })
+        )}
+
+        {/* Modal: Einstellungen */}
         {isSettingsModalOpen && (
-          <div className={window.innerWidth > 768 ? styles.popupContainerDesktop : styles.popupContainerMobile}>
-            <div className={styles.popup} ref={settingsModalRef}>
-              <button className={styles.modalCloseButton} onClick={() => setIsSettingsModalOpen(false)}>
-                <AiOutlineClose />
+          <div className={styles.modalOverlay}>
+            <div
+              className={
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+              }
+              ref={settingsModalRef}
+            >
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setIsSettingsModalOpen(false)}
+              >
+                ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
-              <p className={styles.modalSubtitle}>Wählen Sie Region, Sprache und weitere Optionen:</p>
-              <div>
-                <label className={styles.modalLabel}>Region:</label>
-                <select value={region} onChange={handleRegionChange} className={styles.modalSelect}>
-                  {/*
-                    Тут можна вивести список регіонів. Наприклад, якщо ви зберігаєте їх у константі,
-                    то відобразіть відповідні <option> елементи.
-                  */}
-                  <option value="Bayern">Bayern</option>
-                  <option value="Усі">Усі</option>
-                </select>
+              <div className={styles.row}>
+                {/* Filter (Lernstatus) */}
+                <div className={styles.filterColumn} data-tutorial="filterColumn">
+                  <label className={styles.fieldLabel}>Filter</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.filterCell}>
+                      {filterModes.find((m) => m.value === filterMode)?.icon}
+                    </div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={filterMode}
+                      onChange={handleFilterModeChange}
+                    >
+                      {filterModes.map((mode) => (
+                        <option key={mode.value} value={mode.value}>
+                          {mode.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Kategorie-Auswahl */}
+                <div
+                  className={styles.categoryColumn}
+                  data-tutorial="categorySelect"
+                >
+                  <label className={styles.fieldLabel}>Kategorie</label>
+                  <div className={styles.selectWrapper}>
+                    <div className={styles.categoryCell}>
+                      {selectedCategory === "Andere" ? (
+                        <FaGlasses className={styles.customIcon} />
+                      ) : categoryIcons[selectedCategory] ? (
+                        categoryIcons[selectedCategory]
+                      ) : (
+                        <span className={styles.categoryLetter}>
+                          {selectedCategory.charAt(0).toUpperCase()}
+                        </span>
+                      )}
+                    </div>
+                    <select
+                      className={styles.nativeSelect}
+                      value={selectedCategory}
+                      onChange={handleCategoryChange}
+                    >
+                      <option value="Alle">Alle</option>
+                      {allCategories.map((cat) => (
+                        <option key={cat} value={cat}>
+                          {cat === "Andere" ? "Andere" : cat}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Spiel-Button */}
+                <div className={styles.gameColumn} data-tutorial="gameContainer">
+                  <label className={styles.fieldLabel}>Spiel</label>
+                  <div
+                    className={styles.selectWrapper}
+                    onClick={handleGameClick}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <div className={styles.gameCell}>
+                      <FaGamepad size={24} color="#013b6e" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Definition an/aus */}
+                <div
+                  className={styles.definitionColumn}
+                  data-tutorial="definitionToggle"
+                >
+                  <label className={styles.fieldLabel}>Definition</label>
+                  <div
+                    className={`${styles.definitionToggle} ${
+                      showDefinition ? styles.active : ""
+                    }`}
+                    onClick={() => {
+                      if (requireAuth()) return;
+                      setShowDefinition((prev) => !prev);
+                    }}
+                  >
+                    <span className={styles.toggleText}>
+                      {showDefinition ? "An" : "Aus"}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <label className={styles.modalLabel}>Sprache:</label>
-                <select value={translationLanguage} onChange={handleTranslationChange} className={styles.modalSelect}>
-                  {(languages[selectedLanguage]?.options || languages["de"].options).map((opt) => (
-                    <option key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className={styles.modalLabel}>Erklärung anzeigen:</label>
-                <input
-                  type="checkbox"
-                  checked={showDefinitions}
-                  onChange={() => setShowDefinitions((prev) => !prev)}
-                />
-              </div>
-              {/* Якщо потрібен фільтр режим (наприклад, learned/unlearned/paused), додайте ще один select */}
             </div>
           </div>
         )}
+
+        {/* Button, um das Einstellungsmodal zu öffnen */}
+        <div className={styles.bottomRightSettings}>
+          <button
+            className={styles.settingsButton}
+            onClick={() => {
+              if (requireAuth()) return;
+              setIsSettingsModalOpen(true);
+            }}
+          >
+            <FaCog />
+          </button>
+        </div>
       </div>
+
+      {/* Beispiel-AuthModal (Demo) */}
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </MainLayout>
   );
 };
