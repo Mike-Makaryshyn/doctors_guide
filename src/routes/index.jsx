@@ -95,7 +95,7 @@ const TranslatorListPage = React.lazy(() =>
   import("../pages/TranslatorListPage/TranslatorListPage")
 );
 const AllMedicalAbbreviationsPage = React.lazy(() =>
-  import("../pages/AllMedicalAbbreviationsPage/AllMedicalAbbreviationsPage")
+  import("../games/AbbreviationsGame/pages/AllMedicalAbbreviationsPage/AllMedicalAbbreviationsPage.jsx")
 );
 // Auth and Dashboard
 const AuthPage = React.lazy(() => import("../pages/AuthPage/AuthPage"));
@@ -169,6 +169,9 @@ const MedicationFillInBlankGame = React.lazy(() =>
     "../games/MedicationsGame/pages/FillInBlankGame/MedicationFillInBlankGame.jsx"
   )
 );
+const AbbreviationsLearningPage = React.lazy(() =>
+  import("../games/AbbreviationsGame/AbbreviationsLearningPage/AbbreviationsLearningPage.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -201,6 +204,10 @@ export default function Routers() {
           path="/medications-fortune-wheel-game"
           element={<MedicationFortuneWheelGame />}
         />
+        <Route
+  path={pathList.abbreviations_learning.path}
+  element={<AbbreviationsLearningPage />}
+/>
         <Route
           path={pathList.medications_elective_language.path}
           element={<MedicationElectiveLanguageGame />}

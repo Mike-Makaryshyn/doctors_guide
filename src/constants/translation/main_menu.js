@@ -228,6 +228,18 @@ export const main_menu_items = {
                link: "/abbreviations", 
             },
             {
+               en: "Abbreviations Learning",
+               fr: "Apprentissage des abréviations",
+               es: "Aprendizaje de abreviaturas",
+               ar: "تعلم الاختصارات",
+               tr: "Kısaltmalar Öğrenimi",
+               pl: "Nauka skrótów",
+               uk: "Вивчення скорочень",
+               ru: "Изучение сокращений",
+               de: "Abkürzungen Lernen",
+               link: "/abbreviations-learning",
+            },
+            {
                en: "Medications",
                fr: "Médicaments",
                es: "Medicamentos",

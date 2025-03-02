@@ -524,27 +524,27 @@ const ElectiveLanguageGameContent = () => {
 
               {/* Кнопка туторіалу */}
               <button
-                data-tutorial="tutorialStartButton"
-                className={styles.tutorialButton}
-                onClick={() => setShowTutorial(true)}
-                title="Tutorial starten"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="30"
-                  height="30"
-                  fill="none"
-                  stroke="#ededed"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                  <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-                </svg>
-              </button>
+  data-tutorial="tutorialStartButton"
+  className={styles.tutorialButton}
+  onClick={() => setShowTutorial(true)}
+  title="Tutorial starten"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="30"
+    height="30"
+    fill="none"
+    stroke="#ededed"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+    <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+  </svg>
+</button>
 
               {/* Старт гри */}
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>

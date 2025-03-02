@@ -30,9 +30,6 @@ import {
 // Hooks
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 
-// Statt Icons in der Kategorie-Anzeige einfach nur Buchstaben/Text
-// (Kategorie-Icons nicht mehr notwendig)
-
 // Filter-Modi
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
@@ -59,10 +56,10 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
-// Importiere unsere neue Komponente, die die Examples herumfliegen lässt
+// Компонента для плаваючих прикладів
 import FloatingExamples from "./FloatingExamples";
 
-// Kleiner Helper, um „Andere“ nach hinten zu schieben
+// Helper для сортування категорій (інші – завжди останні)
 const sortCategoriesWithAndereLast = (categories) => {
   let sorted = [...categories].sort();
   if (sorted.includes("Andere")) {
@@ -100,15 +97,9 @@ const MedicationFlashcardGameContent = () => {
       ? "unlearned"
       : rawFilterMode;
 
-  // Kontext
-  const {
-    medicationStatuses,
-    toggleStatus,
-    recordCorrectAnswer,
-    scheduleFlushChanges,
-  } = useMedicationStatus();
-
-  // Einstellungen
+  // Налаштування
+  const { medicationStatuses, toggleStatus, recordCorrectAnswer, scheduleFlushChanges } =
+    useMedicationStatus();
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [category, setCategory] = useState(initialCategory);
   const [settingsOpen, setSettingsOpen] = useState(true);
@@ -120,16 +111,16 @@ const MedicationFlashcardGameContent = () => {
     localStorage.getItem("medicationsFlashCardGameTutorialCompleted") !== "true"
   );
 
-  // Karten-Spielzustand
+  // Стан гри (картки, поточний індекс, перевернута карта)
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
-  // Fortschritt
+  // Прогрес гри
   const [progress, setProgress] = useState({});
   const [viewedCards, setViewedCards] = useState({});
 
-  // Responsives Layout
+  // Відповідність мобільного режиму
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -137,7 +128,7 @@ const MedicationFlashcardGameContent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // LocalStorage: Laden
+  // LocalStorage: завантаження прогресу
   useEffect(() => {
     const storedProgress = localStorage.getItem("medicationsFlashkartenFortschritt");
     if (storedProgress) {
@@ -149,17 +140,17 @@ const MedicationFlashcardGameContent = () => {
     }
   }, []);
 
-  // LocalStorage: Speichern
+  // LocalStorage: збереження прогресу
   useEffect(() => {
     localStorage.setItem("medicationsFlashkartenFortschritt", JSON.stringify(progress));
   }, [progress]);
 
-  // Kategorien vorbereiten
+  // Підготовка категорій
   const allCategories = sortCategoriesWithAndereLast(
     Array.from(new Set(medications.flatMap((m) => m.categories || [])))
   );
 
-  // Karten laden
+  // Завантаження карток (без автоматичного скидання при закритті модального вікна)
   const loadCards = () => {
     const filtered = medications.filter((med) => {
       const status = medicationStatuses[med.id]?.status || "unlearned";
@@ -174,29 +165,28 @@ const MedicationFlashcardGameContent = () => {
           return false;
         }
       }
-
       return true;
     });
 
-    // Sortieren nach wenig angezeigten Karten zuerst
+    // Сортування за кількістю переглядів (від меншого до більшого)
     filtered.sort((a, b) => {
       const countA = progress[a.id] || 0;
       const countB = progress[b.id] || 0;
       return countA - countB;
     });
 
-    // Anzahl begrenzen
+    // Обмеження кількості
     const selectedMeds =
       questionCount === "Alle" ? filtered : filtered.slice(0, questionCount);
 
-    // Beim Laden: "Ang" (Zähler) +1
+    // При завантаженні збільшуємо лічильник переглядів
     const newProgress = { ...progress };
     selectedMeds.forEach((med) => {
       newProgress[med.id] = (newProgress[med.id] || 0) + 1;
     });
     setProgress(newProgress);
 
-    // Front/Back je nach Modus
+    // Формуємо текст для передньої/задньої сторінки залежно від режиму
     const prepared = selectedMeds.map((med) => {
       let mode = displayMode;
       if (mode === "Mixed") {
@@ -213,14 +203,7 @@ const MedicationFlashcardGameContent = () => {
     setViewedCards({});
   };
 
-  // Starte das Spiel
-  useEffect(() => {
-    if (!settingsOpen) {
-      loadCards();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [settingsOpen]);
-
+  // Старт гри – завантажує картки та закриває модальне вікно
   const handleStart = () => {
     setSettingsOpen(false);
     loadCards();
@@ -235,7 +218,7 @@ const MedicationFlashcardGameContent = () => {
     setFlipped((prev) => !prev);
   };
 
-  // Karte als gelernt markieren
+  // Відмітка картки як "вивченої"
   const toggleLearnedCard = (id) => {
     if (flipped) return;
     if (requireAuth()) return;
@@ -243,7 +226,7 @@ const MedicationFlashcardGameContent = () => {
     scheduleFlushChanges();
   };
 
-  // Karte pausieren
+  // Відмітка картки як "пауза"
   const togglePausedCard = (id) => {
     if (flipped) return;
     if (requireAuth()) return;
@@ -254,7 +237,7 @@ const MedicationFlashcardGameContent = () => {
     }
   };
 
-  // Navigation
+  // Навігація
   const handleNext = () => {
     setFlipped(false);
     if (currentIndex < cards.length - 1) {
@@ -270,7 +253,7 @@ const MedicationFlashcardGameContent = () => {
     }
   };
 
-  // Fortschritt aktualisieren, wenn neue Karte sichtbar wird
+  // Оновлення прогресу при переході на нову картку
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const currentCard = cards[currentIndex];
@@ -284,7 +267,7 @@ const MedicationFlashcardGameContent = () => {
     }
   }, [currentIndex, settingsOpen, cards, viewedCards]);
 
-  // Filter neu anwenden, wenn sich statuses etc. ändern
+  // Перевірка фільтрів при зміні статусів
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const newFiltered = medications.filter((med) => {
@@ -306,7 +289,6 @@ const MedicationFlashcardGameContent = () => {
       const validIds = newFiltered.map((m) => m.id);
       const stillValid = cards.filter((c) => validIds.includes(c.id));
 
-      // Falls aktuelle Karte herausgefiltert wurde
       if (!stillValid.find((c) => c.id === cards[currentIndex]?.id)) {
         setCurrentIndex(0);
       }
@@ -316,7 +298,7 @@ const MedicationFlashcardGameContent = () => {
     }
   }, [medicationStatuses, category, filterMode]);
 
-  // Wenn Karte 6+ Mal angezeigt wurde, als "korrekt" werten
+  // Якщо картка показується 6+ разів, вона вважається "вивченою"
   const currentCard = cards[currentIndex] || null;
   const currentCardProgress = currentCard ? progress[currentCard.id] || 0 : 0;
   useEffect(() => {
@@ -355,16 +337,13 @@ const MedicationFlashcardGameContent = () => {
         <meta name="twitter:image" content={flashcardBg} />
       </Helmet>
 
-      {/* 
-        Komponente für die herumfliegenden Beispiele.
-        Falls `currentCard` existiert und es `examples` gibt, geben wir sie an FloatingExamples.
-      */}
- {currentCard && currentCard.examples && (
-  <FloatingExamples examples={currentCard.examples} />
-)}
+      {/* Показ прикладів, якщо вони є */}
+      {currentCard && currentCard.examples && (
+        <FloatingExamples examples={currentCard.examples} />
+      )}
 
       <div className={styles.flashcardGame}>
-        {/* Schaltfläche Zurück */}
+        {/* Кнопка назад */}
         <button
           className="main_menu_back"
           onClick={() => navigate("/medications-learning")}
@@ -375,7 +354,7 @@ const MedicationFlashcardGameContent = () => {
         {/* AuthModal */}
         <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
-        {/* Button Einstellungen (unten rechts) */}
+        {/* Кнопка для відкриття налаштувань (внизу праворуч) */}
         {(!isMobile || !settingsOpen) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -387,13 +366,14 @@ const MedicationFlashcardGameContent = () => {
           </div>
         )}
 
-        {/* Wenn keine Karten nach Filtern */}
+        {/* Якщо немає карток після фільтрації */}
         {!cards.length && !settingsOpen && (
           <div>
             <div className={styles.noQuestionsOverlay}>
-                     <div className={styles.noQuestionsMessage}>
-                       <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-                     </div> </div>
+              <div className={styles.noQuestionsMessage}>
+                <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+              </div>
+            </div>
             <div className={styles.bottomRightSettings}>
               <button
                 className={styles.settingsButton}
@@ -405,7 +385,7 @@ const MedicationFlashcardGameContent = () => {
           </div>
         )}
 
-        {/* Kartenanzeige */}
+        {/* Показ картки */}
         {cards.length > 0 && !settingsOpen && currentCard && (
           <>
             <div className={styles.angCounter}>Ang: {currentCardProgress}</div>
@@ -426,7 +406,7 @@ const MedicationFlashcardGameContent = () => {
                     ""
                   }`}
                 >
-                  {/* Front */}
+                  {/* Передня сторона */}
                   <div
                     className={styles.cardFront}
                     style={{ pointerEvents: flipped ? "none" : "auto" }}
@@ -452,13 +432,7 @@ const MedicationFlashcardGameContent = () => {
                             strokeLinejoin="round"
                           >
                             <circle cx="12" cy="12" r="10" fill="none" />
-                            <line
-                              x1="12"
-                              y1="12"
-                              x2="12"
-                              y2="15.5"
-                              strokeWidth="3"
-                            />
+                            <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
                             <circle cx="12" cy="7" r="0.5" />
                           </svg>
                         </button>
@@ -489,7 +463,7 @@ const MedicationFlashcardGameContent = () => {
                     <h3>{currentCard.frontText}</h3>
                   </div>
 
-                  {/* Back */}
+                  {/* Задня сторона */}
                   <div
                     className={styles.cardBack}
                     style={{ pointerEvents: flipped ? "auto" : "none" }}
@@ -514,13 +488,7 @@ const MedicationFlashcardGameContent = () => {
                           strokeLinejoin="round"
                         >
                           <circle cx="12" cy="12" r="10" fill="none" />
-                          <line
-                            x1="12"
-                            y1="12"
-                            x2="12"
-                            y2="15.5"
-                            strokeWidth="3"
-                          />
+                          <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
                           <circle cx="12" cy="7" r="0.5" />
                         </svg>
                       </button>
@@ -548,10 +516,11 @@ const MedicationFlashcardGameContent = () => {
           </>
         )}
 
-        {/* Einstellungen */}
+        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
+              {/* Кнопка закриття, яка ТІЛЬКИ закриває модальне вікно */}
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setSettingsOpen(false)}
@@ -561,7 +530,7 @@ const MedicationFlashcardGameContent = () => {
               <h2 className={styles.modalTitle}>Einstellungen</h2>
 
               <div className={styles.row}>
-                {/* Filter */}
+                {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -585,11 +554,10 @@ const MedicationFlashcardGameContent = () => {
                   </div>
                 </div>
 
-                {/* Kategorie (nur Buchstaben/Text, wie gewünscht) */}
+                {/* Категорія (лише текст) */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
-                    {/* Zeige die Kategorie als reinen Text oder Buchstaben */}
                     <div className={styles.categoryCell}>
                       {category === "Alle"
                         ? "Alle"
@@ -616,7 +584,7 @@ const MedicationFlashcardGameContent = () => {
                 </div>
               </div>
 
-              {/* Anzeige-Modus */}
+              {/* Режим відображення */}
               <div className={styles.modalField}>
                 <div
                   className={styles.displayModeContainer}
@@ -639,7 +607,7 @@ const MedicationFlashcardGameContent = () => {
                 </div>
               </div>
 
-              {/* Anzahl Fragen */}
+              {/* Кількість питань */}
               <div className={styles.modalField}>
                 <div
                   className={styles.questionCountContainer}
@@ -673,7 +641,7 @@ const MedicationFlashcardGameContent = () => {
           </div>
         )}
 
-        {/* Tutorial */}
+        {/* Кнопка для запуску туторіалу */}
         {settingsOpen && (
           <button
             data-tutorial="tutorialStartButton"

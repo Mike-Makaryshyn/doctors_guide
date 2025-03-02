@@ -211,12 +211,9 @@ const FlashcardGameContent = () => {
     setViewedCards({});
   };
 
-  // Starten des Spiels beim Schließen der Einstellungen
-  useEffect(() => {
-    if (!settingsOpen) {
-      loadCards();
-    }
-  }, [settingsOpen]);
+  // Hinweis: Das automatische Laden der Karten beim Schließen der Einstellungen
+  // wurde entfernt, damit die bereits gestartete Sitzung nicht zurückgesetzt wird.
+  // Die Karten werden nur über handleStart() geladen.
 
   const handleStart = () => {
     // Start darf immer erfolgen, auch ohne Autorisierung
@@ -367,7 +364,11 @@ const FlashcardGameContent = () => {
         {/* Falls keine Karten vorhanden */}
         {!cards.length && !settingsOpen && (
           <div>
+              <div className={styles.noQuestionsOverlay}>
+                        <div className={styles.noQuestionsMessage}>
             <p>Keine Karten mit den gewählten Filtern gefunden.</p>
+            </div>
+            </div>
             <div className={styles.bottomRightSettings}>
               <button
                 className={styles.settingsButton}
@@ -500,7 +501,7 @@ const FlashcardGameContent = () => {
               </button>
               {currentIndex < cards.length - 1 ? (
                 <button className={styles.navButton} onClick={handleNext}>
-                   <FaArrowRight />
+                  <FaArrowRight />
                 </button>
               ) : (
                 <button className={styles.navButton} onClick={handleRestart}>

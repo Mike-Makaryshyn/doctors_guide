@@ -126,4 +126,7 @@ export const pathList = {
   medication_fortune_wheel: {
     path: "/medications-fortune-wheel-game",
   },
+  abbreviations_learning: {
+    path: "/abbreviations-learning",
+  },
 };

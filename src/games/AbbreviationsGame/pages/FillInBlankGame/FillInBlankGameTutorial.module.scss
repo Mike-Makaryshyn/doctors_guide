@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global styles for react-joyride tooltips */
+:global(.react-joyride__tooltip) {
+  max-width: 400px !important;
+  min-width: 200px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 20px !important;
+  text-align: justify;
+}
+
+
+:global(.react-joyride__tooltip-container) {
+  max-height: 120px;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  :global(.react-joyride__tooltip-close),
+  :global(button.react-joyride__tooltip-close) {
+    display: none !important;
+  }
+}
+
+:global(.react-joyride__tooltip),
+:global(.react-joyride__tooltip div),
+:global(.react-joyride__tooltip span) {
+  text-align: justify !important;
+}
+
+:global(.react-joyride__tooltip h3) {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+:global(.react-joyride__tooltip p) {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--next) {
+  background-color: #4caf50;
+  color: #fff;
+  border: 25px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Styles for the tutorial trigger button */
+.tutorialButton {
+  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
+  top: 60px; /* Відступ від верхнього краю */
+  right: 15px; /* Відступ від правого краю */
+  width: 45px;
+  height: 45px;
+  background: none; /* Без фону */
+  border-radius: 50%; /* Кругла кнопка */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none; /* Без рамки */
+  box-shadow: none; /* Без тіні */
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 3000; /* Забезпечуємо, що кнопка завжди на передньому фоні */
+}
+
+.tutorialButton:hover {
+  transform: scale(1.1);
+  background: rgba(76, 175, 80, 0.2); /* Зміна бекґраунду при наведенні */
+}
+
+.tutorialButton span {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .tutorialButton {
+    width: 42px;
+    height: 38px;
+    right: -8px;
+    top: 50px;
+  }
+  .tutorialButton svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 768px) {
+    :global(.react-joyride__tooltip-close),
+    :global(button.react-joyride__tooltip-close) {
+      display: none !important;
+    }
+  }

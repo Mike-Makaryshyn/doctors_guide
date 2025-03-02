@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.allMedicalAbbreviationsPage {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Suche */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Plattenanzeige (Tiles) für mobile */
+.tilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+.tile {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  /* Standardbox-shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.tileHeader {
+  font-size: 18px;
+  color: #013b6e;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tileDescription {
+  font-size: 16px;
+  color: #013b6e;
+  margin-bottom: 8px;
+}
+.tileExplanation {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Inline Icons */
+.inlineIcons {
+  display: inline-flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.inlineIcon {
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+/* Für mobile Tiles: Icons – immer oben links, inline vor dem Inhalt */
+.checkIcon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 16px;
+  color: #4caf50;
+  cursor: pointer;
+}
+.pauseIcon {
+  position: absolute;
+  top: 8px;
+  left: 32px;
+  font-size: 16px;
+  color: #f0ad4e;
+  cursor: pointer;
+}
+
+/* Standard-Styling für mobile Tiles bleibt unverändert */
+
+/* Wenn Tile als "gelernt" oder "pausiert" markiert wird, ändert sich nur das Styling.
+   Die Tile behält ihre ursprünglichen Maße. */
+.learned {
+  border-radius: 20px !important;
+  background: #2a7c6f !important;
+  box-shadow: inset 20px 20px 36px #194941, inset -20px -20px 36px #3baf9d !important;
+  color: #fff !important;
+}
+.paused {
+  border-radius: 20px !important;
+  background: #ff9800 !important;
+  box-shadow: inset 8px 8px 16px #854f00, inset -8px -8px 16px #ffe100 !important;
+  color: #fff !important;
+}
+
+/* Tabelle für Desktop */
+.terminologyTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 12px; /* abgerundeter Container */
+  overflow: hidden;
+  /* Keine Rahmen oder Schachmuster */
+}
+.terminologyTable th,
+.terminologyTable td {
+  /* Rahmen entfernen */
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+}
+.terminologyTable th {
+  background-color: #f4f6f7;
+  color: #555;
+}
+/* Spaltenbreiten: 15% für Abkürzung, 15% für Name, 70% für Erklärung */
+.terminologyTable th:nth-child(1),
+.terminologyTable td:nth-child(1) {
+  width: 15%;
+}
+.terminologyTable th:nth-child(2),
+.terminologyTable td:nth-child(2) {
+  width: 15%;
+}
+.terminologyTable th:nth-child(3),
+.terminologyTable td:nth-child(3) {
+  width: 70%;
+}
+
+/* In der ersten Spalte der Desktop-Tabelle: Icons inline vor dem Text */
+.abbreviationCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkIconDesktop {
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.checkIconDesktop:hover {
+  color: #388e3c;
+  transform: scale(1.1);
+}
+.pauseIconDesktop {
+  font-size: 14px;
+  color: #f0ad4e;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.pauseIconDesktop:hover {
+  color: #d48806;
+  transform: scale(1.1);
+}
+
+/* Für Zeilen mit "gelernten" bzw. "pausierten" Definitionen: Ganze Zeile als Block */
+.learned {
+  border-radius: 20px !important;
+  background: #2a7c6f !important;
+  box-shadow: inset 20px 20px 36px #194941, inset -20px -20px 36px #3baf9d !important;
+  color: #fff !important;
+}
+.learned td {
+  border: none !important;
+}
+.paused {
+  border-radius: 20px !important;
+  background: #ff9800 !important;
+  box-shadow: inset 8px 8px 16px #854f00, inset -8px -8px 16px #ffe100 !important;
+  color: #fff !important;
+}
+.paused td {
+  border: none !important;
+}
+
+/* Filter-Select in den Einstellungen */
+.modalSelect {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+.modalSelect:focus {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+/* Einstellungen-Button */
+.bottomRightSettings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.settingsButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.settingsButton:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modalContent {
+  background: white;
+  padding: 25px 20px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  width: 300px;
+}
+.modalActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.closeButton:hover {
+  background-color: #c0392b;
+}
+
+/* Popup Einstellungen (Desktop und Mobile) */
+.popupContainerDesktop {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 2000;
+}
+.popupContainerMobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+}
+.popup {
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .popup {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+}
+.modalCloseButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  background-color: rgba(237,10,10,0);
+  transform: scale(0.9);
+}
+.modalTitle {
+  margin-top: 0;
+  font-size: 20px;
+  color: #013b6e;
+  margin-bottom: 12px;
+}
+.modalSubtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+}
+.modalLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin: 6px 0 4px;
+  display: block;
+}
+
+/* Tippy */
+:global(.tippy-box) {
+  font-family: "Poppins", sans-serif;
+}
+@media (max-width: 768px) {
+  :global(.tippy-box) {
+    max-width: 90% !important;
+    font-size: 14px;
+  }
+}
