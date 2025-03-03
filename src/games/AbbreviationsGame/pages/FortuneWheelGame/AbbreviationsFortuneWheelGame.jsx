@@ -1,26 +1,20 @@
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../../firebase";
 import React, { useState, useEffect } from "react";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
-import { medications } from "../../../../constants/medications";
-import styles from "./MedicationFortuneWheelGame.module.scss";
+import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
+import styles from "./AbbreviationsFortuneWheelGame.module.scss";
 import { useNavigate } from "react-router-dom";
 import { FaCog, FaPlay, FaPause, FaCheck, FaList, FaUser } from "react-icons/fa";
 import CustomWheel from "./CustomWheel";
-import { useMedicationStatus, MedicationStatusProvider } from "../../../../contexts/MedicationStatusContext";
+import { useAbbreviationsStatus, AbbreviationsStatusProvider } from "../../../../contexts/AbbreviationsStatusContext";
 import { Helmet } from "react-helmet";
-import fortuneWheelBg from "../../../../assets/medication-fortune-wheel-bg.jpg";
-import MedicationFortuneWheelGameTutorial from "./MedicationFortuneWheelGameTutorial";
+import abbreviationWheelBg from "../../../../assets/abbreviation-fortune-wheel-bg.jpg";
+import AbbreviationsFortuneWheelGameTutorial from "./AbbreviationsFortuneWheelGameTutorial";
 
-// Додаткові імпорти для аутентифікації
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../../../firebase";
-import AuthModal from "../../../../pages/AuthPage/AuthModal";
-
-/** Допоміжні функції */
-function removeGermanArticle(str = "") {
-  return str.replace(/^\s*(der|die|das)\s+/i, "");
-}
-function removeLatParenthesis(str = "") {
-  return str.replace(/\([^)]*\)/g, "").trim();
+// Якщо необхідно – допоміжні функції для форматування (можна налаштувати за потребою)
+function removeExtraSpaces(str = "") {
+  return str.trim();
 }
 
 /**
@@ -45,17 +39,17 @@ const filterModes = [
 ];
 
 const displayModeOptions = [
-  { value: "LatGerman", label: "Lat→Ger" },
-  { value: "GermanLat", label: "Ger→Lat" },
+  { value: "LatGerman", label: "Abk.→Deu" },
+  { value: "GermanLat", label: "Deu→Abk." },
   { value: "Mixed", label: "Mixed" },
 ];
 
 const questionCountOptions = [5, 10, 20, 30, 40, 50];
 const playersList = [1, 2, 3, 4, 5, 6, 7, 8];
 
-function MedicationFortuneWheelGameContent() {
+function AbbreviationsFortuneWheelGameContent() {
   const navigate = useNavigate();
-  const { medicationStatuses, recordCorrectAnswer, flushChanges } = useMedicationStatus();
+  const { abbreviationStatuses, recordCorrectAnswer, flushChanges } = useAbbreviationsStatus();
 
   // Аутентифікація
   const [user] = useAuthState(auth);
@@ -70,20 +64,19 @@ function MedicationFortuneWheelGameContent() {
 
   // Стан налаштувань і даних гри
   const [settingsOpen, setSettingsOpen] = useState(true);
-  // Початкове значення – "Alle"
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [filterMode, setFilterMode] = useState("unlearned");
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(10);
   const [playersCount, setPlayersCount] = useState(1);
 
-  // Стан для багатокористувацьких балів
+  // Стан для балів багатокористувацького режиму
   const [scores, setScores] = useState([]);
   const [currentPlayer, setCurrentPlayer] = useState(1);
 
-  // Сегменти колеса і список медикаментів
+  // Сегменти колеса і список абревіатур
   const [segments, setSegments] = useState([]);
-  const [finalMeds, setFinalMeds] = useState([]);
+  const [finalAbbrs, setFinalAbbrs] = useState([]);
 
   // Стан модального вікна з питанням
   const [showModal, setShowModal] = useState(false);
@@ -95,17 +88,17 @@ function MedicationFortuneWheelGameContent() {
   const [currentSliceIndex, setCurrentSliceIndex] = useState(null);
 
   // Стан для підрахунку гри і часу
-  const [initialMedCount, setInitialMedCount] = useState(0);
+  const [initialAbbrCount, setInitialAbbrCount] = useState(0);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [gameStartTime, setGameStartTime] = useState(null);
 
   // Невірні відповіді (для повторення)
-  const [wrongMeds, setWrongMeds] = useState({});
+  const [wrongAbbrs, setWrongAbbrs] = useState({});
 
-  // Тут керуємо станом туторіалу
+  // Туторіал
   const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("medicationFortuneWheelTutorialCompleted") !== "true"
+    localStorage.getItem("abbreviationsFortuneWheelTutorialCompleted") !== "true"
   );
 
   // Керування розміром колеса
@@ -125,7 +118,7 @@ function MedicationFortuneWheelGameContent() {
     setCurrentPlayer(1);
   }, [playersCount]);
 
-  /** Функція старту гри (нова сесія) */
+  /** Старт гри (нова сесія) */
   function startGame() {
     setSettingsOpen(false);
     setGameFinished(false);
@@ -139,14 +132,14 @@ function MedicationFortuneWheelGameContent() {
     setSettingsOpen(false);
   }
 
-  /** Побудова списку finalMeds і сегментів */
+  /** Побудова списку finalAbbrs і сегментів */
   function loadDataForWheel() {
     // Фільтрація за категорією та статусом
-    const filtered = medications.filter((med) => {
+    const filtered = medicalAbbreviations.filter((abbr) => {
       const matchesCategory =
         selectedCategory === "Alle" ||
-        (med.categories || []).includes(selectedCategory);
-      const status = medicationStatuses[med.id]?.status || "unlearned";
+        (abbr.categories || []).includes(selectedCategory);
+      const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
@@ -156,8 +149,8 @@ function MedicationFortuneWheelGameContent() {
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     const finalList = shuffled.slice(0, questionCount);
 
-    setFinalMeds(finalList);
-    setInitialMedCount(finalList.length);
+    setFinalAbbrs(finalList);
+    setInitialAbbrCount(finalList.length);
 
     if (finalList.length === 0) {
       setSegments([]);
@@ -165,46 +158,49 @@ function MedicationFortuneWheelGameContent() {
     }
 
     const colorPalette = ["#EE4040", "#F0CF50", "#815CD1", "#3DA5E0", "#34A24F"];
-    const newSegments = finalList.map((med, idx) => {
+    const newSegments = finalList.map((abbr, idx) => {
       let mode = displayMode;
       if (mode === "Mixed") {
         mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
       }
+      // В режимі LatGerman показуємо абревіатуру, інакше – назву
       const labelForWheel =
         mode === "LatGerman"
-          ? removeLatParenthesis(med.lat)
-          : removeGermanArticle(med.de);
+          ? removeExtraSpaces(abbr.abbreviation)
+          : removeExtraSpaces(abbr.name);
       return {
         labelForWheel,
-        originalLat: med.lat,
-        originalDe: med.de,
+        originalAbbreviation: abbr.abbreviation,
+        originalName: abbr.name,
         actualMode: mode,
         color: colorPalette[idx % colorPalette.length],
       };
     });
 
     setSegments(newSegments);
-    setWrongMeds({});
+    setWrongAbbrs({});
     setShowModal(false);
     setChosenAnswer(null);
     setIsAnswerCorrect(false);
   }
 
-  /** Функція, що викликається при зупинці колеса – вибір сегмента */
+  /** Викликається при зупинці колеса – вибір сегмента */
   function handleStopSpinning(winnerIndex) {
     if (!requireAuth()) return;
 
     const seg = segments[winnerIndex];
     if (!seg || seg.labelForWheel === "Keine Begriffe gefunden") return;
-    const winningMed = finalMeds[winnerIndex];
-    if (!winningMed) return;
+    const winningAbbr = finalAbbrs[winnerIndex];
+    if (!winningAbbr) return;
     const mode = seg.actualMode;
-    let questionText = mode === "LatGerman" ? winningMed.lat : winningMed.de;
-    let correctAns = mode === "LatGerman" ? winningMed.de : winningMed.lat;
-    let allPossible =
+    const questionText =
+      mode === "LatGerman" ? winningAbbr.abbreviation : winningAbbr.name;
+    const correctAns =
+      mode === "LatGerman" ? winningAbbr.name : winningAbbr.abbreviation;
+    const allPossible =
       mode === "LatGerman"
-        ? medications.map((m) => m.de)
-        : medications.map((m) => m.lat);
+        ? medicalAbbreviations.map((a) => a.name)
+        : medicalAbbreviations.map((a) => a.abbreviation);
     const wrongs = allPossible
       .filter((txt) => txt !== correctAns)
       .sort(() => Math.random() - 0.5)
@@ -233,26 +229,26 @@ function MedicationFortuneWheelGameContent() {
     if (!chosenAnswer) return;
     const isCorrect = isAnswerCorrect;
     const idx = currentSliceIndex;
-    const winningMed = finalMeds[idx];
-    if (winningMed) {
+    const winningAbbr = finalAbbrs[idx];
+    if (winningAbbr) {
       if (isCorrect) {
         setScores((old) => {
           const newScores = [...old];
           newScores[currentPlayer - 1] += 1;
           return newScores;
         });
-        recordCorrectAnswer(winningMed.id);
+        recordCorrectAnswer(winningAbbr.id);
         setSegments((old) => old.filter((_, i) => i !== idx));
-        setFinalMeds((prevFinalMeds) => {
-          const newFinalMeds = prevFinalMeds.filter((_, i) => i !== idx);
-          if (newFinalMeds.length === 0) {
+        setFinalAbbrs((prevFinalAbbrs) => {
+          const newFinalAbbrs = prevFinalAbbrs.filter((_, i) => i !== idx);
+          if (newFinalAbbrs.length === 0) {
             finishGame();
           }
-          return newFinalMeds;
+          return newFinalAbbrs;
         });
       } else {
-        if (!wrongMeds[winningMed.id]) {
-          setWrongMeds((prev) => ({ ...prev, [winningMed.id]: true }));
+        if (!wrongAbbrs[winningAbbr.id]) {
+          setWrongAbbrs((prev) => ({ ...prev, [winningAbbr.id]: true }));
         }
       }
     }
@@ -284,7 +280,7 @@ function MedicationFortuneWheelGameContent() {
           {playersCount === 1 ? (
             <>
               <p>
-                Richtig: {totalCorrect} von {initialMedCount}
+                Richtig: {totalCorrect} von {initialAbbrCount}
               </p>
               <p>
                 Dauer: {Math.floor(sessionDuration / 60)} Min. {sessionDuration % 60} Sek.
@@ -310,30 +306,29 @@ function MedicationFortuneWheelGameContent() {
     );
   }
 
-  // Отримуємо список категорій із даних медикаментів
+  // Отримання списку категорій із даних абревіатур
   const availableCategories = Object.keys(
-    medications.reduce((acc, med) => {
-      (med.categories || []).forEach((cat) => { acc[cat] = true; });
+    medicalAbbreviations.reduce((acc, abbr) => {
+      (abbr.categories || []).forEach((cat) => { acc[cat] = true; });
       return acc;
     }, {})
   );
-  // Додаємо "Alle" вручну та сортуємо за допомогою нашої функції getSortedCategories
   const allCategories = getSortedCategories(["Alle", ...availableCategories.filter(c => c !== "Alle")]);
 
   return (
     <MainLayout>
       <Helmet>
-        <title>Glücksrad – Medikamente lernen</title>
+        <title>Glücksrad – Abkürzungen lernen</title>
         <meta
           name="description"
-          content="Drehen Sie das Glücksrad und lernen Sie Medikamente! Wählen Sie Filter, Einstellungen und testen Sie Ihr Wissen."
+          content="Drehen Sie das Glücksrad und lernen Sie Abkürzungen! Wählen Sie Filter, Einstellungen und testen Sie Ihr Wissen."
         />
-        <meta property="og:title" content="Glücksrad – Medikamente lernen" />
-        <meta property="og:image" content={fortuneWheelBg} />
+        <meta property="og:title" content="Glücksrad – Abkürzungen lernen" />
+        <meta property="og:image" content={abbreviationWheelBg} />
       </Helmet>
 
       <div className={styles.fortuneWheelGame}>
-        {/* Баланс для багатокористувацького режиму */}
+        {/* Багатокористувацький баланс */}
         {playersCount > 1 && !settingsOpen && !gameFinished && (
           <div className={styles.scoreboard}>
             {scores.map((score, index) => (
@@ -350,7 +345,7 @@ function MedicationFortuneWheelGameContent() {
         )}
 
         {/* Кнопка "назад" */}
-        <button className="main_menu_back" onClick={() => navigate("/medications-learning")}>
+        <button className="main_menu_back" onClick={() => navigate("/abbreviations-learning")}>
           &#8592;
         </button>
 
@@ -512,8 +507,8 @@ function MedicationFortuneWheelGameContent() {
           </div>
         )}
 
-        {/* Повідомлення, якщо для даного фільтру немає медикаментів */}
-        {!settingsOpen && !gameFinished && finalMeds.length === 0 && (
+        {/* Повідомлення, якщо для даного фільтру немає абревіатур */}
+        {!settingsOpen && !gameFinished && finalAbbrs.length === 0 && (
           <div className={styles.noQuestionsOverlay}>
             <div className={styles.noQuestionsMessage}>
               <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
@@ -572,11 +567,11 @@ function MedicationFortuneWheelGameContent() {
 
         {/* Туторіал */}
         {showTutorial && (
-          <MedicationFortuneWheelGameTutorial
+          <AbbreviationsFortuneWheelGameTutorial
             run={showTutorial}
             onFinish={() => {
               setShowTutorial(false);
-              localStorage.setItem("medicationFortuneWheelTutorialCompleted", "true");
+              localStorage.setItem("abbreviationsFortuneWheelTutorialCompleted", "true");
             }}
           />
         )}
@@ -593,10 +588,10 @@ function MedicationFortuneWheelGameContent() {
   );
 }
 
-const MedicationFortuneWheelGame = () => (
-  <MedicationStatusProvider>
-    <MedicationFortuneWheelGameContent />
-  </MedicationStatusProvider>
+const AbbreviationsFortuneWheelGame = () => (
+  <AbbreviationsStatusProvider>
+    <AbbreviationsFortuneWheelGameContent />
+  </AbbreviationsStatusProvider>
 );
 
-export default MedicationFortuneWheelGame;
+export default AbbreviationsFortuneWheelGame;

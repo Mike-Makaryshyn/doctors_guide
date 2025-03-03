@@ -184,6 +184,9 @@ const AbbreviationsSimpleChoiceGame = React.lazy(() =>
 const AbbreviationsTermMatchingGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/TermMatchingGame/AbbreviationsTermMatchingGame.jsx")
 );
+const AbbreviationsFortuneWheelGame = React.lazy(() =>
+  import("../games/AbbreviationsGame/pages/FortuneWheelGame/AbbreviationsFortuneWheelGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -204,6 +207,10 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
         />
+        <Route
+  path={pathList.abbreviations_fortune_wheel.path}
+  element={<AbbreviationsFortuneWheelGame />}
+/>
         <Route path="/abbreviations-simplechoice-game" element={<AbbreviationsSimpleChoiceGame />} />
         <Route path="/abbreviations-flashcard-game" element={<AbbreviationsFlashcardGame />} />
         <Route

@@ -141,5 +141,8 @@ export const pathList = {
   abbreviations_term_matching: {
     path: "/abbreviations-term-matching-game",
   },
+  abbreviations_fortune_wheel: {
+    path: "/abbreviations-fortune-wheel-game",
+  },
  
 };
