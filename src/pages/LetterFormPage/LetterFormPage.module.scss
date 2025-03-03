@@ -7,7 +7,7 @@
   position: relative;
   min-height: 100vh;
   /* Прибираємо горизонтальний скрол */
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 /* Плаваюча кнопка налаштувань (правий нижній кут) */
@@ -274,7 +274,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 3000;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,4 +474,34 @@
   .squareButton.documentsButton .iconInside {
     filter: invert(100%);
     transform: translateY(3px);
+  }
+/* Sicherstellen, dass der Container keinen unnötigen stacking context erzeugt */
+.letterFormContainer {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    overflow: visible; /* overflow nicht verstecken */
+  }
+  
+  /* Aktualisierte Zurück-Schaltfläche */
+  .main_menu_back {
+    margin-top: auto;
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 20px;
+    bottom: 0;
+    z-index: 2000;
+  }
+  
+  .main_menu_back:hover {
+    transform: scale(1.1);
+  }
+  
+  .main_menu_back:active {
+    transform: scale(0.95);
   }

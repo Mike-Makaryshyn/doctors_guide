@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db, auth } from "../../firebase";
-
+import { useNavigate } from "react-router-dom";
 import LetterGenerator from "./LetterGenerator.jsx";
 import { previewLetterPDF, downloadLetterPDF } from "./LetterPDFGenerator.jsx";
 import { FaEye, FaDownload } from "react-icons/fa";
@@ -16,34 +16,35 @@ import approbationAddresses from "../../constants/translation/approbationAddress
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 
-// Іконки (react-icons)
+// Icons (react-icons)
 import { FaMapMarkedAlt, FaFileAlt, FaCog } from "react-icons/fa";
 
-// React Router (для посилання всередині SPA)
+// React Router (für SPA-Links)
 import { Link } from "react-router-dom";
 
-// Для модального вікна авторизації
+// Für das Authentifizierungsmodal
 import AuthModal from "../../pages/AuthPage/AuthModal";
 
-// Для модального вікна (PDF Функція)
+// Für das PDF-Modal
 import Modal from "react-modal";
 Modal.setAppElement("#root");
 
 import { Helmet } from "react-helmet";
-import documentImage from "../../assets/documentImage.jpg"; // заміни documentImage.jpg на свою назву файлу
+import documentImage from "../../assets/documentImage.jpg"; // ersetze durch den korrekten Dateinamen
 
 import styles from "./LetterFormPage.module.scss";
 
-// Функція для уніфікації регіону
+// Funktion zur Vereinheitlichung des Regionsnamens
 const unifyRegion = (r) => (r === "Westfalen-Lippe" ? "Nordrhein-Westfalen" : r);
 
 const LetterFormPage = () => {
   const { user, selectedRegion } = useGetGlobalInfo();
+  const navigate = useNavigate();
 
-  // Додано стан для модального вікна авторизації
+  // Zustand für das Authentifizierungsmodal
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Функція для перевірки авторизації
+  // Authentifizierungsprüfung
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -65,13 +66,13 @@ const LetterFormPage = () => {
     telefon: "",
     aktenzeichenEnabled: false,
     aktenzeichen: "",
-    // Поля для ActionSession видалено!
+    // Weitere Felder für ActionSession wurden entfernt
   });
 
-  // Стан модального вікна "Налаштування"
+  // Zustand für das Einstellungen-Modal
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
 
-  // Визначення мобільного режиму
+  // Mobile Modus feststellen
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -79,17 +80,17 @@ const LetterFormPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // При зміні глобального регіону
+  // Globalen Region-Namen aktualisieren
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Обробник змін у власній адресі
+  // Handler für Änderungen der persönlichen Daten
   const handlePersonalDataChange = (field, value) => {
     setPersonalData((prev) => ({ ...prev, [field]: value }));
   };
 
-  // Перемикач для Aktenzeichen
+  // Toggle für Aktenzeichen
   const toggleAktenzeichen = () => {
     setPersonalData((prev) => ({
       ...prev,
@@ -97,7 +98,7 @@ const LetterFormPage = () => {
     }));
   };
 
-  // 1. Завантаження даних
+  // 1. Daten laden
   const fetchData = useCallback(async () => {
     if (!user) return;
     try {
@@ -124,7 +125,7 @@ const LetterFormPage = () => {
     }
   }, [user]);
 
-  // 2. Генерація листа
+  // 2. Brieftext generieren
   const generateLetterText = useCallback(() => {
     if (!category) return;
 
@@ -197,23 +198,21 @@ const LetterFormPage = () => {
     setLetterText(text);
   }, [checkboxes, category]);
 
-  // Виклик generateLetterText, щойно змінилися checkboxes або category
+  // Brieftext neu generieren, wenn sich Checkboxes oder Kategorie ändern
   useEffect(() => {
     generateLetterText();
   }, [checkboxes, category, generateLetterText]);
 
-  // 3. Визначення адреси за регіоном
+  // 3. Adresse basierend auf der Region bestimmen
   const addressData = approbationAddresses.find((item) => item.region === region);
 
-  // Єдина кнопка, що викликає fetchData
+  // Button, der fetchData aufruft
   const handleAllInOneClick = async () => {
     if (requireAuth()) return;
     await fetchData();
   };
 
-  // ----------------------------
-  // Автоматичне збільшення textarea
-  // ----------------------------
+  // Automatisches Anpassen der Textarea-Größe
   const textAreaRef = useRef(null);
   const autoResize = (elem) => {
     if (!elem) return;
@@ -233,27 +232,34 @@ const LetterFormPage = () => {
 
   return (
     <MainLayout>
-      {/* Мета-дані для SEO та соціальних мереж */}
+      {/* Zurück-Schaltfläche */}
+      <button
+        className={styles.main_menu_back}
+        onClick={() => navigate("/main_menu")}
+      >
+        &#8592;
+      </button>
+      {/* Meta-Daten für SEO und soziale Medien */}
       <Helmet>
-  <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
-  <meta
-    name="description"
-    content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation. Hier finden Sie alle notwendigen Informationen und Unterlagen."
-  />
-  <meta property="og:title" content="Begleitschreiben und Dokumentensammlung" />
-  <meta property="og:description" content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation." />
-  <meta property="og:image" content={documentImage} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content={documentImage} />
-</Helmet>
+        <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
+        <meta
+          name="description"
+          content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation. Hier finden Sie alle notwendigen Informationen und Unterlagen."
+        />
+        <meta property="og:title" content="Begleitschreiben und Dokumentensammlung" />
+        <meta property="og:description" content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation." />
+        <meta property="og:image" content={documentImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={documentImage} />
+      </Helmet>
 
-      {/* Модальне вікно авторизації */}
+      {/* Auth-Modal */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-      
+
       <div className={styles.letterFormContainer}>
         <h1 className={styles.pageTitle}>Begleitschreiben mit Dokumenten</h1>
         <div className={styles.columnsWrapper}>
-          {/* Ліва колонка: наша адреса */}
+          {/* Linke Spalte: Eigene Adresse */}
           <div className={styles.leftColumn}>
             <div className={styles.userAddressCard}>
               <h2 className={styles.subTitle}>Deine Adresse</h2>
@@ -304,7 +310,7 @@ const LetterFormPage = () => {
                   </button>
                 </div>
               </div>
-              {/* Поля для ActionSession видалено */}
+              {/* E-Mail */}
               <div className={styles.inputRow}>
                 <input
                   type="email"
@@ -314,6 +320,7 @@ const LetterFormPage = () => {
                   onChange={(e) => handlePersonalDataChange("email", e.target.value)}
                 />
               </div>
+              {/* Telefon */}
               <div className={styles.inputRow}>
                 <input
                   type="text"
@@ -326,7 +333,7 @@ const LetterFormPage = () => {
             </div>
           </div>
 
-          {/* Права колонка: адреса регіону */}
+          {/* Rechte Spalte: Adressdaten der Region */}
           <div className={styles.rightColumn}>
             <div className={styles.regionTile}>
               <div className={styles.iconSelectContainer}>
@@ -373,7 +380,7 @@ const LetterFormPage = () => {
           </div>
         </div>
 
-        {/* Textarea та кнопка "All in One" */}
+        {/* Textarea und "All in One"-Button */}
         <div className={styles.textAreaFullWidth}>
           <button
             className={styles.allInOneButton}
@@ -391,7 +398,7 @@ const LetterFormPage = () => {
           />
         </div>
 
-        {/* Модальне вікно налаштувань */}
+        {/* Einstellungen-Modal */}
         {settingsModalOpen && (
           <div className={styles.modalOverlay}>
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
@@ -402,10 +409,10 @@ const LetterFormPage = () => {
                 ×
               </button>
 
-              {/* Заголовок модального вікна */}
+              {/* Modal-Titel */}
               <h2 className={styles.modalTitle}>PDF Funktion</h2>
 
-              {/* Дві кнопки для Vorschau & Druck PDF */}
+              {/* Buttons für Vorschau & Druck PDF */}
               <div className={styles.buttonsArea}>
                 <div className={styles.iconButton}>
                   <button
@@ -446,14 +453,14 @@ const LetterFormPage = () => {
 
               <div className={styles.documentsContainer}>
                 <Link to="/documents" className={styles.documentsButton}>
-                  {/* Пустий контейнер для посилання */}
+                  {/* Leerer Container für den Link */}
                 </Link>
               </div>
             </div>
           </div>
         )}
 
-        {/* Плаваюча кнопка налаштувань у нижньому правому куті */}
+        {/* Schwebende Einstellungen-Schaltfläche im unteren rechten Bereich */}
         {!settingsModalOpen && (
           <div className={styles.bottomRightSettings}>
             <button
