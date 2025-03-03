@@ -169,6 +169,9 @@ const MedicationFillInBlankGame = React.lazy(() =>
     "../games/MedicationsGame/pages/FillInBlankGame/MedicationFillInBlankGame.jsx"
   )
 );
+const AbbreviationsFlashcardGame = React.lazy(() =>
+  import("../games/AbbreviationsGame/pages/FlashcardGame/AbbreviationsFlashcardGame.jsx")
+);
 const AbbreviationsLearningPage = React.lazy(() =>
   import("../games/AbbreviationsGame/AbbreviationsLearningPage/AbbreviationsLearningPage.jsx")
 );
@@ -195,6 +198,7 @@ export default function Routers() {
           path={pathList.exam_explanations.path}
           element={<ExamExplanationsPage />}
         />
+        <Route path="/abbreviations-flashcard-game" element={<AbbreviationsFlashcardGame />} />
         <Route
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}

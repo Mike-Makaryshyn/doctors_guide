@@ -1,19 +1,19 @@
 const tutorialTranslations = {
-  currentLanguage: "en", // Значення за замовчуванням
+  currentLanguage: "en", // Default language
   en: {
     steps: {
       intro:
-        "Welcome to Flashcard Game! In this game, flashcards with medications will be displayed randomly. Each card is shown repeatedly, and the 'Ang' field indicates how many times the medication has been displayed during your session. Enjoy the game and practice your knowledge of medications!",
+        "Welcome to Flashcard Game! In this game, flashcards with abbreviations will be displayed randomly. Each card is shown repeatedly, and the 'Ang' field indicates how many times the abbreviation has been displayed during your session. Enjoy the game and practice your knowledge of abbreviations!",
       regionSelect:
         "The region is set based on your preferences; however, you can change it here.",
       filterColumn:
         "Here you can choose the filter: learned, unlearned, or paused (deferred).",
       categorySelect:
-        "Choose the category of medications. By default, 'All' is selected.",
+        "Choose the category of abbreviations. By default, 'All' is selected.",
       editToggleButton:
         "When edit mode is activated, you can modify your answer after an incorrect response.",
       displayMode:
-        "Here you can choose the language mode – whether to display from Latin to German, from German to Latin, or use a mixed mode.",
+        "Here you can choose the language mode:\n• Abk.→De: The abbreviation is displayed on the front of the card and the full German term on the back.\n• De→Abk: The full German term is displayed on the front, with the abbreviation on the back.\n• Mixed: The mode is randomly chosen for each card.",
       questionCount:
         "Select the number of questions to be displayed in the game.",
       startButton:
@@ -30,17 +30,17 @@ const tutorialTranslations = {
   de: {
     steps: {
       intro:
-        "Willkommen beim Flashcard Game! In diesem Spiel werden Ihnen Flashcards mit Medikamenten zufällig angezeigt. Jede Karte wird mehrfach gezeigt und das Feld „Ang“ zeigt an, wie oft das Medikament während Ihrer Sitzung bereits angezeigt wurde. Viel Spaß beim Lernen und Üben Ihres Medikamentenwissens!",
+        "Willkommen beim Flashcard Game! In diesem Spiel werden Ihnen Flashcards mit Abkürzungen zufällig angezeigt. Jede Karte wird mehrfach gezeigt und das Feld „Ang“ zeigt an, wie oft die Abkürzung während Ihrer Sitzung bereits angezeigt wurde. Viel Spaß beim Lernen und Üben Ihres Abkürzungswissens!",
       regionSelect:
         "Die Region wird basierend auf Ihren Einstellungen festgelegt; Sie können sie jedoch hier ändern.",
       filterColumn:
         "Hier können Sie den Filter auswählen: Gelernt, Ungelernt oder Pausiert (als aufgeschoben).",
       categorySelect:
-        "Wählen Sie die Kategorie der Medikamente. Standardmäßig ist 'Alle' ausgewählt.",
+        "Wählen Sie die Kategorie der Abkürzungen. Standardmäßig ist 'Alle' ausgewählt.",
       editToggleButton:
         "Wenn der Bearbeitungsmodus aktiviert ist, können Sie Ihre Antwort nach einer falschen Antwort ändern.",
       displayMode:
-        "Hier können Sie den Sprachmodus wählen – ob Sie von Latein nach Deutsch, von Deutsch nach Latein oder einen gemischten Modus verwenden möchten.",
+        "Hier können Sie den Sprachmodus wählen:\n• Abk.→De: Auf der Vorderseite wird die Abkürzung angezeigt, auf der Rückseite der volle deutsche Begriff.\n• De→Abk: Auf der Vorderseite wird der volle deutsche Begriff angezeigt, auf der Rückseite die Abkürzung.\n• Gemischt: Für jede Karte wird der Modus zufällig gewählt.",
       questionCount:
         "Wählen Sie die Anzahl der Fragen, die im Spiel angezeigt werden sollen.",
       startButton:
@@ -57,17 +57,17 @@ const tutorialTranslations = {
   uk: {
     steps: {
       intro:
-        "Ласкаво просимо до Flashcard Game! У цій грі вам будуть представлені флеш-карти з медикаментами, які з’являються випадковим чином. Кожну карту показують кілька разів, а поле «Ang» показує, скільки разів медикамент був відображений за сесію. Бажаємо успіхів у вивченні медикаментів!",
+        "Ласкаво просимо до Flashcard Game! У цій грі вам будуть представлені флеш-карти з абревіаціями, які з’являються випадковим чином. Кожну карту показують кілька разів, а поле «Ang» показує, скільки разів абревіація була відображена за сесію. Бажаємо успіхів у вивченні абревіацій!",
       regionSelect:
         "Регіон встановлено за вашими налаштуваннями, але його можна змінити тут.",
       filterColumn:
         "Тут ви можете обрати фільтр: вивчені, невивчені або призупинені (відкладені).",
       categorySelect:
-        "Виберіть категорію медикаментів. За замовчуванням обрано «Всі».",
+        "Виберіть категорію абревіацій. За замовчуванням обрано «Всі».",
       editToggleButton:
         "При активованому режимі редагування ви зможете змінити свою відповідь після неправильної відповіді.",
       displayMode:
-        "Тут ви можете обрати мовний режим – чи показувати з латинської на німецьку, з німецької на латинську, чи використовувати змішаний режим.",
+        "Тут ви можете обрати мовний режим:\n• Abk.→De: На передній стороні показується абревіатура, а на задній – повна німецька назва.\n• De→Abk: На передній стороні показується повна німецька назва, а на задній – абревіатура.\n• Змішаний: Для кожної карти режим вибирається випадковим чином.",
       questionCount:
         "Виберіть кількість питань, які будуть відображатися в грі.",
       startButton:
@@ -84,17 +84,17 @@ const tutorialTranslations = {
   ru: {
     steps: {
       intro:
-        "Добро пожаловать в Flashcard Game! В этой игре вам будут показаны флеш-карты с медикаментами, которые появляются случайным образом. Каждая карта показывается несколько раз, а поле «Ang» отображает, сколько раз медикамент был показан за сессию. Приятной игры и успешного изучения медикаментов!",
+        "Добро пожаловать в Flashcard Game! В этой игре вам будут показаны флеш-карты с аббревиатурами, которые появляются случайным образом. Каждая карта показывается несколько раз, а поле «Ang» отображает, сколько раз аббревиатура была показана за сессию. Приятной игры и успешного изучения аббревиатур!",
       regionSelect:
         "Регион устанавливается на основе ваших настроек, однако вы можете изменить его здесь.",
       filterColumn:
         "Здесь вы можете выбрать фильтр: изученные, не изученные или отложенные.",
       categorySelect:
-        "Выберите категорию медикаментов. По умолчанию выбраны все.",
+        "Выберите категорию аббревиатур. По умолчанию выбраны все.",
       editToggleButton:
         "При активированном режиме редактирования вы сможете изменить свой ответ после неверного ответа.",
       displayMode:
-        "Здесь вы можете выбрать языковой режим – отображать с латинского на немецкий, с немецкого на латинский или использовать смешанный режим.",
+        "Здесь вы можете выбрать языковой режим:\n• Abk.→De: На лицевой стороне карточки отображается аббревиатура, а на оборотной – полное название на немецком языке.\n• De→Abk: На лицевой стороне отображается полное название, а на оборотной – аббревиатура.\n• Смешанный: Для каждой карточки режим выбирается случайным образом.",
       questionCount:
         "Выберите количество вопросов, которые будут отображаться в игре.",
       startButton:
@@ -111,17 +111,17 @@ const tutorialTranslations = {
   pl: {
     steps: {
       intro:
-        "Witamy w Flashcard Game! W tej grze losowo pojawią się fiszki z lekami. Każda fiszka jest pokazywana wielokrotnie, a pole 'Ang' informuje, ile razy dany lek został wyświetlony w trakcie sesji. Miłej zabawy i powodzenia w nauce leków!",
+        "Witamy w Flashcard Game! W tej grze losowo pojawią się fiszki z skrótami. Każda fiszka jest pokazywana wielokrotnie, a pole 'Ang' informuje, ile razy dany skrót został wyświetlony podczas sesji. Miłej zabawy i powodzenia w nauce skrótów!",
       regionSelect:
         "Region jest ustawiony na podstawie Twoich preferencji; jednak możesz go zmienić tutaj.",
       filterColumn:
         "Tutaj możesz wybrać filtr: nauczone, nienauczone lub wstrzymane (odłożone).",
       categorySelect:
-        "Wybierz kategorię leków. Domyślnie wybrane są wszystkie.",
+        "Wybierz kategorię skrótów. Domyślnie wybrane są wszystkie.",
       editToggleButton:
         "Gdy tryb edycji jest aktywny, możesz zmienić swoją odpowiedź po błędnej odpowiedzi.",
       displayMode:
-        "Tutaj możesz wybrać tryb językowy – wyświetlanie z łaciny na niemiecki, z niemieckiego na łacinę lub tryb mieszany.",
+        "Tutaj możesz wybrać tryb językowy:\n• Abk.→De: Na przedniej stronie wyświetlany jest skrót, a na tylnej – pełna niemiecka nazwa.\n• De→Abk: Na przedniej stronie wyświetlana jest pełna niemiecka nazwa, a na tylnej – skrót.\n• Tryb mieszany: Tryb dla każdej fiszki jest wybierany losowo.",
       questionCount:
         "Wybierz liczbę pytań, które mają być wyświetlane w grze.",
       startButton:
@@ -138,17 +138,17 @@ const tutorialTranslations = {
   ar: {
     steps: {
       intro:
-        "مرحبًا بك في Flashcard Game! في هذه اللعبة ستظهر لك بطاقات تعليمية تحتوي على أدوية تظهر بشكل عشوائي. يتم عرض كل بطاقة عدة مرات، ويُظهر حقل 'Ang' عدد المرات التي ظهرت فيها البطاقة خلال الجلسة. استمتع باللعبة وتعلم معلومات عن الأدوية!",
+        "مرحبًا بك في Flashcard Game! في هذه اللعبة ستظهر لك بطاقات تعليمية تحتوي على اختصارات تظهر بشكل عشوائي. يتم عرض كل بطاقة عدة مرات، ويُظهر حقل 'Ang' عدد المرات التي ظهرت فيها الاختصارات خلال الجلسة. استمتع باللعبة وتعلم معلومات عن الاختصارات!",
       regionSelect:
         "يتم تعيين المنطقة بناءً على إعداداتك؛ ومع ذلك، يمكنك تغييرها هنا.",
       filterColumn:
-        "هنا يمكنك اختيار المرشح: المُتعلمة، غير المُتعلمة أو المؤجلة.",
+        "هنا يمكنك اختيار المرشح: المتعلمة، غير المتعلمة أو المؤجلة.",
       categorySelect:
-        "اختر فئة الأدوية. بشكل افتراضي، يتم اختيار الكل.",
+        "اختر فئة الاختصارات. بشكل افتراضي، يتم اختيار الكل.",
       editToggleButton:
         "عند تفعيل وضع التعديل، يمكنك تعديل إجابتك بعد الإجابة الخاطئة.",
       displayMode:
-        "هنا يمكنك اختيار الوضع اللغوي – سواء لعرض المعلومات من اللاتينية إلى الألمانية، أو من الألمانية إلى اللاتينية، أو استخدام الوضع المختلط.",
+        "هنا يمكنك اختيار الوضع اللغوي:\n• Abk.→De: تُعرض الاختصارات على الجهة الأمامية وتظهر التسمية الكاملة باللغة الألمانية على الجهة الخلفية.\n• De→Abk: تُعرض التسمية الكاملة على الجهة الأمامية وتظهر الاختصارات على الجهة الخلفية.\n• الوضع المختلط: يُختار الوضع عشوائيًا لكل بطاقة.",
       questionCount:
         "اختر عدد الأسئلة التي ستظهر في اللعبة.",
       startButton:
@@ -165,17 +165,17 @@ const tutorialTranslations = {
   tr: {
     steps: {
       intro:
-        "Flashcard Game'e hoş geldiniz! Bu oyunda, ilaçlarla ilgili flashcard'lar rastgele gösterilir. Her kart birkaç kez gösterilir ve 'Ang' alanı, ilacın seans boyunca kaç kere görüntülendiğini belirtir. İyi eğlenceler ve ilaç bilgilerinizi geliştirmede başarılar!",
+        "Flashcard Game'e hoş geldiniz! Bu oyunda, kısaltmalarla ilgili flashcard'lar rastgele gösterilir. Her kart birkaç kez gösterilir ve 'Ang' alanı, kısaltmanın seans boyunca kaç kere görüntülendiğini belirtir. İyi eğlenceler ve kısaltmalar hakkındaki bilginizi geliştirmede başarılar!",
       regionSelect:
         "Bölge, tercihleriniz doğrultusunda ayarlanır; ancak buradan değiştirebilirsiniz.",
       filterColumn:
         "Burada, öğrenilmiş, öğrenilmemiş veya askıya alınmış (ertelemiş) filtreyi seçebilirsiniz.",
       categorySelect:
-        "İlaçların kategorisini seçin. Varsayılan olarak 'Hepsi' seçilidir.",
+        "Kısaltmaların kategorisini seçin. Varsayılan olarak 'Hepsi' seçilidir.",
       editToggleButton:
         "Düzenleme modu etkinleştirildiğinde, yanlış cevap verdikten sonra cevabınızı değiştirebilirsiniz.",
       displayMode:
-        "Burada dil modunu seçebilirsiniz – bilgileri Latinceden Almancaya, Almancadan Latince'ye veya karışık modda görüntüleyebilirsiniz.",
+        "Burada dil modunu seçebilirsiniz:\n• Abk.→De: Kartın ön yüzünde kısaltma, arka yüzünde tam Almanca ifade gösterilir.\n• De→Abk: Kartın ön yüzünde tam Almanca ifade, arka yüzünde kısaltma gösterilir.\n• Karışık: Her kart için mod rastgele seçilir.",
       questionCount:
         "Oyunda gösterilecek soru sayısını seçin.",
       startButton:
@@ -192,17 +192,17 @@ const tutorialTranslations = {
   fr: {
     steps: {
       intro:
-        "Bienvenue dans Flashcard Game ! Dans ce jeu, des flashcards présentant des médicaments seront affichées de manière aléatoire. Chaque carte est présentée plusieurs fois et le champ 'Ang' indique le nombre de fois où le médicament a été affiché durant votre session. Amusez-vous bien et renforcez vos connaissances sur les médicaments !",
+        "Bienvenue dans Flashcard Game ! Dans ce jeu, des flashcards présentant des abréviations seront affichées de manière aléatoire. Chaque carte est présentée plusieurs fois et le champ 'Ang' indique le nombre de fois où l’abréviation a été affichée durant votre session. Amusez-vous bien et renforcez vos connaissances sur les abréviations !",
       regionSelect:
         "La région est définie en fonction de vos préférences ; toutefois, vous pouvez la modifier ici.",
       filterColumn:
         "Ici, vous pouvez choisir le filtre : appris, non appris ou en pause (différé).",
       categorySelect:
-        "Choisissez la catégorie des médicaments. Par défaut, « Tous » est sélectionné.",
+        "Choisissez la catégorie des abréviations. Par défaut, « Tous » est sélectionné.",
       editToggleButton:
         "Lorsque le mode édition est activé, vous pouvez modifier votre réponse après une erreur.",
       displayMode:
-        "Ici, vous pouvez choisir le mode linguistique – afficher du latin à l’allemand, de l’allemand au latin ou en mode mixte.",
+        "Ici, vous pouvez choisir le mode linguistique :\n• Abk.→De : La carte affiche l’abréviation sur le devant et le terme complet en allemand au verso.\n• De→Abk : La carte affiche le terme complet sur le devant et l’abréviation au verso.\n• Mode mixte : Pour chaque carte, le mode est choisi aléatoirement.",
       questionCount:
         "Sélectionnez le nombre de questions à afficher dans le jeu.",
       startButton:
@@ -219,17 +219,17 @@ const tutorialTranslations = {
   es: {
     steps: {
       intro:
-        "¡Bienvenido a Flashcard Game! En este juego se te presentarán tarjetas educativas con medicamentos que se mostrarán de forma aleatoria. Cada tarjeta se muestra varias veces y el campo 'Ang' indica cuántas veces se ha mostrado el medicamento durante tu sesión. ¡Disfruta del juego y mejora tus conocimientos sobre medicamentos!",
+        "¡Bienvenido a Flashcard Game! En este juego se te presentarán tarjetas educativas con abreviaturas que se mostrarán de forma aleatoria. Cada tarjeta se muestra varias veces y el campo 'Ang' indica cuántas veces se ha mostrado la abreviatura durante tu sesión. ¡Disfruta del juego y mejora tus conocimientos sobre abreviaturas!",
       regionSelect:
         "La región se establece según tus preferencias; sin embargo, puedes cambiarla aquí.",
       filterColumn:
         "Aquí puedes elegir el filtro: aprendido, no aprendido o en pausa (diferido).",
       categorySelect:
-        "Elige la categoría de medicamentos. Por defecto, se selecciona 'Todos'.",
+        "Elige la categoría de abreviaturas. Por defecto, se selecciona 'Todos'.",
       editToggleButton:
         "Cuando se active el modo de edición, podrás modificar tu respuesta tras un error.",
       displayMode:
-        "Aquí puedes elegir el modo lingüístico: mostrar de latín a alemán, de alemán a latín o modo mixto.",
+        "Aquí puedes elegir el modo lingüístico:\n• Abk.→De: La tarjeta muestra la abreviatura en la parte frontal y el término completo en alemán en la parte posterior.\n• De→Abk: La tarjeta muestra el término completo en la parte frontal y la abreviatura en la parte posterior.\n• Mixto: El modo se elige al azar para cada tarjeta.",
       questionCount:
         "Selecciona la cantidad de preguntas que se mostrarán en el juego.",
       startButton:

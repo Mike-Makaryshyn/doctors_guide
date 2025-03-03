@@ -132,5 +132,8 @@ export const pathList = {
   cover_letter: {
     path: "/cover-letter",
   },
+  abbreviations_flashcard: {
+    path: "/abbreviations-flashcard-game",
+  },
   
 };

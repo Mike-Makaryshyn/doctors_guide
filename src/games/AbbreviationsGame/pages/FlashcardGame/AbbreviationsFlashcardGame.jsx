@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+// Це моя версія гри для абревіацій – AbbreviationsFlashcardGame (інші частини залишились без змін)
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
-import { medications } from "../../../../constants/medications";
-import styles from "./MedicationFlashcardGame.module.scss";
+import { medicalAbbreviations as abbreviations } from "../../../../constants/medicalAbbreviations";
+import styles from "./AbbreviationsFlashcardGame.module.scss";
 import { Helmet } from "react-helmet";
-import flashcardBg from "../../../../assets/medication-flashcard-bg.jpg";
+import flashcardBg from "../../../../assets/abbreviation-flashcard-bg.jpg";
 
 // Icons
 import {
@@ -21,16 +22,16 @@ import {
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-// Kontext
+// Context
 import {
-  useMedicationStatus,
-  MedicationStatusProvider,
-} from "../../../../contexts/MedicationStatusContext";
+  useAbbreviationsStatus,
+  AbbreviationsStatusProvider,
+} from "../../../../contexts/AbbreviationsStatusContext";
 
 // Hooks
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 
-// Filter-Modi
+// Filter modes
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -38,10 +39,10 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Anzeige-Modi
+// Display modes – як у Medication: «LatGerman», «GermanLat», «Mixed»
 const displayModeOptions = [
-  { value: "LatGerman", label: "Med.→Deu" },
-  { value: "GermanLat", label: "Deu→Med." },
+  { value: "LatGerman", label: "Abk.→Deu" },
+  { value: "GermanLat", label: "Deu→Abk." },
   { value: "Mixed", label: "Gemischt" },
 ];
 
@@ -49,17 +50,14 @@ const displayModeOptions = [
 const questionCountOptions = [20, 40, 60, 100, 200, "Alle"];
 
 // Tutorial
-import FlashCardGameTutorial from "./MedicationFlashCardGameTutorial";
+import FlashCardGameTutorial from "./AbbreviationsFlashCardGameTutorial";
 
 // Firebase Auth
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 
-// Компонента для плаваючих прикладів
-import FloatingExamples from "./FloatingExamples";
-
-// Helper для сортування категорій (інші – завжди останні)
+// Helper для сортування категорій
 const sortCategoriesWithAndereLast = (categories) => {
   let sorted = [...categories].sort();
   if (sorted.includes("Andere")) {
@@ -71,7 +69,7 @@ const sortCategoriesWithAndereLast = (categories) => {
 
 const useQuery = () => new URLSearchParams(useLocation().search);
 
-const MedicationFlashcardGameContent = () => {
+const AbbreviationsFlashcardGameContent = () => {
   const navigate = useNavigate();
   const query = useQuery();
 
@@ -86,7 +84,7 @@ const MedicationFlashcardGameContent = () => {
     return false;
   };
 
-  // URL-Parameter
+  // URL-параметри
   const rawCategory = query.get("category");
   const initialCategory =
     !rawCategory || rawCategory.toLowerCase() === "all" ? "Alle" : rawCategory;
@@ -98,20 +96,20 @@ const MedicationFlashcardGameContent = () => {
       : rawFilterMode;
 
   // Налаштування
-  const { medicationStatuses, toggleStatus, recordCorrectAnswer, scheduleFlushChanges } =
-    useMedicationStatus();
+  const { abbreviationStatuses, toggleStatus, recordCorrectAnswer, scheduleFlushChanges } =
+    useAbbreviationsStatus();
   const [filterMode, setFilterMode] = useState(initialFilterMode);
   const [category, setCategory] = useState(initialCategory);
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Tutorial
+  // Tutorial state
   const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("medicationsFlashCardGameTutorialCompleted") !== "true"
+    localStorage.getItem("abbreviationsFlashCardGameTutorialCompleted") !== "true"
   );
 
-  // Стан гри (картки, поточний індекс, перевернута карта)
+  // Стан гри: карточки, поточний індекс, перевернута карта
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -120,7 +118,7 @@ const MedicationFlashcardGameContent = () => {
   const [progress, setProgress] = useState({});
   const [viewedCards, setViewedCards] = useState({});
 
-  // Відповідність мобільного режиму
+  // Адаптація під мобільний режим
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -128,9 +126,9 @@ const MedicationFlashcardGameContent = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // LocalStorage: завантаження прогресу
+  // Завантаження прогресу з LocalStorage
   useEffect(() => {
-    const storedProgress = localStorage.getItem("medicationsFlashkartenFortschritt");
+    const storedProgress = localStorage.getItem("abbreviationsFlashkartenFortschritt");
     if (storedProgress) {
       try {
         setProgress(JSON.parse(storedProgress));
@@ -140,61 +138,61 @@ const MedicationFlashcardGameContent = () => {
     }
   }, []);
 
-  // LocalStorage: збереження прогресу
+  // Збереження прогресу в LocalStorage
   useEffect(() => {
-    localStorage.setItem("medicationsFlashkartenFortschritt", JSON.stringify(progress));
+    localStorage.setItem("abbreviationsFlashkartenFortschritt", JSON.stringify(progress));
   }, [progress]);
 
   // Підготовка категорій
   const allCategories = sortCategoriesWithAndereLast(
-    Array.from(new Set(medications.flatMap((m) => m.categories || [])))
+    Array.from(new Set(abbreviations.flatMap((abbr) => abbr.categories || [])))
   );
 
-  // Завантаження карток (без автоматичного скидання при закритті модального вікна)
+  // Завантаження карточок
   const loadCards = () => {
-    const filtered = medications.filter((med) => {
-      const status = medicationStatuses[med.id]?.status || "unlearned";
-
+    const filtered = abbreviations.filter((abbr) => {
+      const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
         return false;
-
       if (category !== "Alle") {
-        if (!(med.categories || []).includes(category)) {
+        if (!(abbr.categories || []).includes(category)) {
           return false;
         }
       }
       return true;
     });
 
-    // Сортування за кількістю переглядів (від меншого до більшого)
+    // Сортування за кількістю переглядів
     filtered.sort((a, b) => {
       const countA = progress[a.id] || 0;
       const countB = progress[b.id] || 0;
       return countA - countB;
     });
 
-    // Обмеження кількості
-    const selectedMeds =
+    const selectedAbbreviations =
       questionCount === "Alle" ? filtered : filtered.slice(0, questionCount);
 
-    // При завантаженні збільшуємо лічильник переглядів
+    // Збільшення лічильника переглядів
     const newProgress = { ...progress };
-    selectedMeds.forEach((med) => {
-      newProgress[med.id] = (newProgress[med.id] || 0) + 1;
+    selectedAbbreviations.forEach((abbr) => {
+      newProgress[abbr.id] = (newProgress[abbr.id] || 0) + 1;
     });
     setProgress(newProgress);
 
-    // Формуємо текст для передньої/задньої сторінки залежно від режиму
-    const prepared = selectedMeds.map((med) => {
+    // Формування карточок:
+    // При режимі "LatGerman": передня сторона – abbr.abbreviation, задня – abbr.name;
+    // При режимі "GermanLat": передня сторона – abbr.name, задня – abbr.abbreviation;
+    // При "Mixed": випадковий вибір.
+    const prepared = selectedAbbreviations.map((abbr) => {
       let mode = displayMode;
       if (mode === "Mixed") {
         mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
       }
-      const frontText = mode === "LatGerman" ? med.lat : med.de;
-      const backText = mode === "LatGerman" ? med.de : med.lat;
-      return { ...med, frontText, backText };
+      const frontText = mode === "LatGerman" ? abbr.abbreviation : abbr.name;
+      const backText = mode === "LatGerman" ? abbr.name : abbr.abbreviation;
+      return { ...abbr, frontText, backText };
     });
 
     setCards(prepared);
@@ -203,7 +201,7 @@ const MedicationFlashcardGameContent = () => {
     setViewedCards({});
   };
 
-  // Старт гри – завантажує картки та закриває модальне вікно
+  // Старт гри – завантаження карточок та закриття модального вікна
   const handleStart = () => {
     setSettingsOpen(false);
     loadCards();
@@ -218,7 +216,7 @@ const MedicationFlashcardGameContent = () => {
     setFlipped((prev) => !prev);
   };
 
-  // Відмітка картки як "вивченої"
+  // Відмітка карточки як "вивченої"
   const toggleLearnedCard = (id) => {
     if (flipped) return;
     if (requireAuth()) return;
@@ -226,7 +224,7 @@ const MedicationFlashcardGameContent = () => {
     scheduleFlushChanges();
   };
 
-  // Відмітка картки як "пауза"
+  // Відмітка карточки як "пауза"
   const togglePausedCard = (id) => {
     if (flipped) return;
     if (requireAuth()) return;
@@ -237,7 +235,7 @@ const MedicationFlashcardGameContent = () => {
     }
   };
 
-  // Навігація
+  // Навігація між карточками
   const handleNext = () => {
     setFlipped(false);
     if (currentIndex < cards.length - 1) {
@@ -253,7 +251,7 @@ const MedicationFlashcardGameContent = () => {
     }
   };
 
-  // Оновлення прогресу при переході на нову картку
+  // Оновлення прогресу при переході на нову карточку
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
       const currentCard = cards[currentIndex];
@@ -267,28 +265,24 @@ const MedicationFlashcardGameContent = () => {
     }
   }, [currentIndex, settingsOpen, cards, viewedCards]);
 
-  // Перевірка фільтрів при зміні статусів
+  // Оновлення фільтрів при зміні статусів
   useEffect(() => {
     if (!settingsOpen && cards.length > 0) {
-      const newFiltered = medications.filter((med) => {
-        const status = medicationStatuses[med.id]?.status || "unlearned";
-
+      const newFiltered = abbreviations.filter((abbr) => {
+        const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
         if (filterMode === "learned" && status !== "learned") return false;
         if (filterMode === "paused" && status !== "paused") return false;
         if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
           return false;
-
         if (category !== "Alle") {
-          if (!(med.categories || []).includes(category)) {
+          if (!(abbr.categories || []).includes(category)) {
             return false;
           }
         }
         return true;
       });
-
-      const validIds = newFiltered.map((m) => m.id);
+      const validIds = newFiltered.map((a) => a.id);
       const stillValid = cards.filter((c) => validIds.includes(c.id));
-
       if (!stillValid.find((c) => c.id === cards[currentIndex]?.id)) {
         setCurrentIndex(0);
       }
@@ -296,9 +290,9 @@ const MedicationFlashcardGameContent = () => {
         setCards(stillValid);
       }
     }
-  }, [medicationStatuses, category, filterMode]);
+  }, [abbreviationStatuses, category, filterMode]);
 
-  // Якщо картка показується 6+ разів, вона вважається "вивченою"
+  // Якщо карточка переглянута 6+ разів – вона позначається як "вивчена"
   const currentCard = cards[currentIndex] || null;
   const currentCardProgress = currentCard ? progress[currentCard.id] || 0 : 0;
   useEffect(() => {
@@ -311,50 +305,40 @@ const MedicationFlashcardGameContent = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>Medikamenten-Flashcard-Spiel für Fachsprachenprüfung</title>
+        <title>Abbreviations-Flashcard-Spiel für medizinische Fachsprache</title>
         <meta
           name="description"
-          content="Dieses Flashcard-Spiel unterstützt Sie bei der Fachsprachenprüfung im medizinischen Bereich. Lernen Sie Fachbegriffe und Medikationswissen interaktiv."
+          content="Dieses Flashcard-Spiel unterstützt Sie beim Erlernen medizinischer Abkürzungen. Trainieren Sie Ihr Wissen interaktiv und bereiten Sie sich auf die Fachsprachprüfung vor."
         />
         <meta
           name="keywords"
-          content="Medikamente, Fachsprachenprüfung, Flashcard, Lernen, medizinische Fachsprache"
+          content="medizinische Abkürzungen, Fachsprache, Flashcard, Lernen, medizinische Terminologie"
         />
         <meta
           property="og:title"
-          content="Medikamenten-Flashcard-Spiel für Fachsprachenprüfung"
+          content="Abbreviations-Flashcard-Spiel für medizinische Fachsprache"
         />
         <meta
           name="twitter:description"
-          content="Interaktives Flashcard-Spiel zur Vorbereitung auf die Fachsprachenprüfung im medizinischen Bereich."
+          content="Interaktives Flashcard-Spiel zum Erlernen medizinischer Abkürzungen für die Fachsprachprüfung."
         />
         <meta property="og:image" content={flashcardBg} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Medikamenten-Flashcard-Spiel für Fachsprachenprüfung"
+          content="Abbreviations-Flashcard-Spiel für medizinische Fachsprache"
         />
         <meta name="twitter:image" content={flashcardBg} />
       </Helmet>
-
-      {/* Показ прикладів, якщо вони є */}
-      {currentCard && currentCard.examples && (
-        <FloatingExamples examples={currentCard.examples} />
-      )}
-
       <div className={styles.flashcardGame}>
-        {/* Кнопка назад */}
+        {/* Кнопка "назад" */}
         <button
           className="main_menu_back"
-          onClick={() => navigate("/medications-learning")}
+          onClick={() => navigate("/abbreviations-learning")}
         >
           &#8592;
         </button>
-
-        {/* AuthModal */}
-        <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-
-        {/* Кнопка для відкриття налаштувань (внизу праворуч) */}
+{/* Кнопка для відкриття налаштувань (внизу праворуч) */}
         {(!isMobile || !settingsOpen) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -365,27 +349,7 @@ const MedicationFlashcardGameContent = () => {
             </button>
           </div>
         )}
-
-        {/* Якщо немає карток після фільтрації */}
-        {!cards.length && !settingsOpen && (
-          <div>
-            <div className={styles.noQuestionsOverlay}>
-              <div className={styles.noQuestionsMessage}>
-                <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
-              </div>
-            </div>
-            <div className={styles.bottomRightSettings}>
-              <button
-                className={styles.settingsButton}
-                onClick={() => setSettingsOpen(true)}
-              >
-                <FaCog />
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Показ картки */}
+        {/* Відображення карточки */}
         {cards.length > 0 && !settingsOpen && currentCard && (
           <>
             <div className={styles.angCounter}>Ang: {currentCardProgress}</div>
@@ -399,9 +363,9 @@ const MedicationFlashcardGameContent = () => {
                   className={`${styles.cardInner} ${
                     flipped ? styles.flipped : ""
                   } ${
-                    (medicationStatuses[currentCard.id]?.status === "learned" &&
+                    (abbreviationStatuses[currentCard.id]?.status === "learned" &&
                       styles.learned) ||
-                    (medicationStatuses[currentCard.id]?.status === "paused" &&
+                    (abbreviationStatuses[currentCard.id]?.status === "paused" &&
                       styles.paused) ||
                     ""
                   }`}
@@ -413,7 +377,9 @@ const MedicationFlashcardGameContent = () => {
                   >
                     <div className={styles.iconsContainer}>
                       <Tippy
-                        content={currentCard.deExplanation || "Keine Erklärung verfügbar"}
+                        content={
+                          currentCard.explanation?.de || "Keine Erklärung verfügbar"
+                        }
                         trigger="click"
                       >
                         <button
@@ -469,7 +435,9 @@ const MedicationFlashcardGameContent = () => {
                     style={{ pointerEvents: flipped ? "auto" : "none" }}
                   >
                     <Tippy
-                      content={currentCard.deExplanation || "Keine Erklärung verfügbar"}
+                      content={
+                        currentCard.explanation?.de || "Keine Erklärung verfügbar"
+                      }
                       trigger="click"
                     >
                       <button
@@ -520,7 +488,7 @@ const MedicationFlashcardGameContent = () => {
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
-              {/* Кнопка закриття, яка ТІЛЬКИ закриває модальне вікно */}
+              {/* Кнопка закриття */}
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setSettingsOpen(false)}
@@ -528,7 +496,6 @@ const MedicationFlashcardGameContent = () => {
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
-
               <div className={styles.row}>
                 {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
@@ -554,7 +521,7 @@ const MedicationFlashcardGameContent = () => {
                   </div>
                 </div>
 
-                {/* Категорія (лише текст) */}
+                {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
@@ -670,7 +637,7 @@ const MedicationFlashcardGameContent = () => {
             run={showTutorial}
             onFinish={() => {
               setShowTutorial(false);
-              localStorage.setItem("medicationsFlashCardGameTutorialCompleted", "true");
+              localStorage.setItem("abbreviationsFlashCardGameTutorialCompleted", "true");
             }}
           />
         )}
@@ -679,12 +646,12 @@ const MedicationFlashcardGameContent = () => {
   );
 };
 
-const MedicationFlashcardGame = () => {
+const AbbreviationsFlashcardGame = () => {
   return (
-    <MedicationStatusProvider>
-      <MedicationFlashcardGameContent />
-    </MedicationStatusProvider>
+    <AbbreviationsStatusProvider>
+      <AbbreviationsFlashcardGameContent />
+    </AbbreviationsStatusProvider>
   );
 };
 
-export default MedicationFlashcardGame;
+export default AbbreviationsFlashcardGame;
