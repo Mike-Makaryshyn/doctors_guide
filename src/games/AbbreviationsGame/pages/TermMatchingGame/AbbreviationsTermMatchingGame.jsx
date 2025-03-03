@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
-import { medications } from "../../../../constants/medications";
-import { MedicationStatusProvider, useMedicationStatus } from "../../../../contexts/MedicationStatusContext";
-import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
+import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
+import {
+  AbbreviationsStatusProvider,
+  useAbbreviationsStatus,
+} from "../../../../contexts/AbbreviationsStatusContext";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
@@ -16,12 +18,10 @@ import {
   FaPause,
   FaArrowLeft,
   FaArrowRight,
-  FaExchangeAlt,
 } from "react-icons/fa";
-import TermMatchingGameTutorial from "./TermMatchingGameTutorial";
+import AbbreviationsTermMatchingGameTutorial from "./AbbreviationsTermMatchingGameTutorial";
 import styles from "./TermMatchingGame.module.scss";
-import { categoryIcons } from "../../../../constants/CategoryIcons";
-import matchingGameBg from "../../../../assets/medication-matching-game-bg.jpg";
+import matchingGameBg from "../../../../assets/abbreviation-term-matching-bg.jpg";
 
 // Допоміжна функція для сортування категорій: алфавітно, з "Andere" завжди останньою
 const sortCategoriesWithAndereLast = (categories) => {
@@ -33,24 +33,17 @@ const sortCategoriesWithAndereLast = (categories) => {
   return sorted;
 };
 
-// Опції вибору кількості термінів – доповнено варіантом "Alles"
+// Опції вибору кількості абревіатур
 const questionCountOptions = [10, 20, 40, 60, "all"];
 
-// Мапа мов (ключ "la" – латинська)
-const languageMap = {
-  la: "Latein",
-  de: "Deutsch",
-  en: "Englisch",
-  uk: "Ukrainisch",
-  ru: "Russisch",
-  tr: "Türkisch",
-  ar: "Arabisch",
-  fr: "Französisch",
-  es: "Spanisch",
-  pl: "Polnisch",
-};
+// Режими відображення: Abk.→Deu, Deu→Abk., Gemischt
+const displayModeOptions = [
+  { value: "LatGerman", label: "Abk.→Deu" },
+  { value: "GermanLat", label: "Deu→Abk." },
+  { value: "Mixed", label: "Gemischt" },
+];
 
-// Фільтр-моди (визначення змінної)
+// Фільтр-моди
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -58,24 +51,14 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Видалено скорочення регіонів, оскільки регіональний фільтр більше не потрібен
-
-// Допоміжна функція для отримання тексту терміна
-const getTermText = (term, key) => {
-  if (key === "la") {
-    return term["lat"] || "";
-  }
-  return term[key] || "";
-};
-
+// Функція для перетасування масиву
 function shuffleArray(arr) {
   return [...arr].sort(() => Math.random() - 0.5);
 }
 
-function MedicationTermMatchingGameContent() {
+function AbbreviationsTermMatchingGameContent() {
   const navigate = useNavigate();
-  // З регіональним фільтром більше не працюємо – його видалено
-  const { medicationStatuses, flushChanges } = useMedicationStatus();
+  const { abbreviationStatuses, flushChanges } = useAbbreviationsStatus();
 
   // Авторизація
   const [user] = useAuthState(auth);
@@ -90,28 +73,23 @@ function MedicationTermMatchingGameContent() {
 
   // Туторіал
   const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("termMatchingGameTutorialCompleted") !== "true"
+    localStorage.getItem("abbreviationsTermMatchingGameTutorialCompleted") !== "true"
   );
 
   // Налаштування гри
   const [settingsOpen, setSettingsOpen] = useState(true);
-  // Видалено налаштування регіону – воно більше не використовується
   const [filterMode, setFilterMode] = useState("unlearned");
-  // Отримання всіх категорій із даних і сортування їх за допомогою sortCategoriesWithAndereLast
+
+  // Категорії (якщо абревіатури мають categories)
   const allCategories = sortCategoriesWithAndereLast(
-    Array.from(new Set(medications.flatMap((t) => t.categories || [])))
+    Array.from(new Set(medicalAbbreviations.flatMap((a) => a.categories || [])))
   );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
 
-  // Мовний swap – за замовчуванням латина ("la")
-  const [isGermanLeft, setIsGermanLeft] = useState(true);
-  const [electiveLang, setElectiveLang] = useState("la");
+  // Режим відображення
+  const [displayMode, setDisplayMode] = useState("LatGerman");
 
-  // Визначення мов для колонок
-  const leftLang = isGermanLeft ? "de" : electiveLang;
-  const rightLang = isGermanLeft ? electiveLang : "de";
-
-  // Кількість термінів
+  // Кількість абревіатур
   const [questionCount, setQuestionCount] = useState(10);
 
   // Ігровий стан
@@ -126,16 +104,14 @@ function MedicationTermMatchingGameContent() {
   const [pageIndex, setPageIndex] = useState(0);
   const pageSize = 10;
 
-  // Результати гри
+  // Результати
   const [gameFinished, setGameFinished] = useState(false);
   const [gameStartTime, setGameStartTime] = useState(null);
   const [sessionDuration, setSessionDuration] = useState(0);
   const [correctMatchesCount, setCorrectMatchesCount] = useState(0);
-  const [correctMatchIds, setCorrectMatchIds] = useState([]);
 
   // Лічильник показів
   const [shownCounts, setShownCounts] = useState({});
-
   const [gameStarted, setGameStarted] = useState(false);
 
   /* ------------------- Підготовка гри ------------------- */
@@ -146,17 +122,19 @@ function MedicationTermMatchingGameContent() {
     setSessionDuration(0);
     setGameStartTime(Date.now());
     setPageIndex(0);
-    setCorrectMatchIds([]);
+    setCorrectMatchesCount(0);
     initGameData();
   };
 
+  // Ініціалізація (формування) питань
   const initGameData = () => {
-    // Фільтрація термінів – фільтруємо лише за категоріями та статусом
-    let filtered = medications.filter((term) => {
+    // 1. Фільтрація абревіатур за категорією та статусом
+    let filtered = medicalAbbreviations.filter((abbr) => {
       const matchesCategory =
         selectedCategory === "Alle" ||
-        (term.categories || []).includes(selectedCategory);
-      const status = medicationStatuses[term.id]?.status || "unlearned";
+        (abbr.categories || []).includes(selectedCategory);
+      const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
+
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
@@ -164,55 +142,75 @@ function MedicationTermMatchingGameContent() {
       return matchesCategory;
     });
 
-    // Сортування та відбір термінів: якщо вибрано "all" – використовуємо всі, інакше – обрізаємо
+    // 2. Сортування за кількістю показів
     filtered = filtered.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
       if (countA === countB) return Math.random() - 0.5;
       return countA - countB;
     });
+
+    // 3. Відбір потрібної кількості (questionCount)
     if (questionCount !== "all") {
       filtered = filtered.slice(0, questionCount);
     }
 
-    // Оновлення лічильника показів
+    // 4. Оновлення лічильників показів
     const newShownCounts = { ...shownCounts };
-    filtered.forEach((term) => {
-      newShownCounts[term.id] = (newShownCounts[term.id] || 0) + 1;
+    filtered.forEach((abbr) => {
+      newShownCounts[abbr.id] = (newShownCounts[abbr.id] || 0) + 1;
     });
     setShownCounts(newShownCounts);
 
-    // Формування пар
-    const newPairs = filtered.map((term) => ({
-      id: term.id,
-      leftText: getTermText(term, leftLang),
-      rightText: getTermText(term, rightLang),
-      original: term,
-    }));
+    // 5. Формування пар: ліва й права колонки
+    const newPairs = filtered.map((abbr) => {
+      let mode = displayMode;
+      if (mode === "Mixed") {
+        mode = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
+      }
+      let leftText, rightText;
+      if (mode === "LatGerman") {
+        leftText = abbr.abbreviation;
+        rightText = abbr.name;
+      } else {
+        leftText = abbr.name;
+        rightText = abbr.abbreviation;
+      }
+      return {
+        id: abbr.id,
+        leftText,
+        rightText,
+        original: abbr,
+      };
+    });
 
+    // Перетасовка лівого та правого списків
     const shuffledLeft = shuffleArray(newPairs);
     const shuffledRight = shuffleArray(newPairs);
 
+    // Заносимо у стейт
     setPairs(newPairs);
     setLeftColumn(shuffledLeft);
     setRightColumn(shuffledRight);
     setMatchedPairs({});
     setWrongLeft(null);
     setWrongRight(null);
-    setCorrectMatchesCount(0);
   };
 
+  // Підрахунок кількості сторінок
   const pageCount = Math.ceil(leftColumn.length / pageSize) || 1;
   const displayedLeft = leftColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
   const displayedRight = rightColumn.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize);
 
-  // Обробка вибору
+  // Стан вибраних елементів
   const [selectedLeft, setSelectedLeft] = useState(null);
   const [selectedRight, setSelectedRight] = useState(null);
 
+  // Обробка кліку по лівій колонці
   const handleLeftSelect = (item) => {
     if (matchedPairs[item.id]) return;
     setSelectedLeft(item);
+    // Якщо вже вибрано елемент справа, перевіряємо, чи це пара
     if (selectedRight && selectedRight.id === item.id) {
       doMatch(item.id);
     } else if (selectedRight && selectedRight.id !== item.id) {
@@ -220,9 +218,11 @@ function MedicationTermMatchingGameContent() {
     }
   };
 
+  // Обробка кліку по правій колонці
   const handleRightSelect = (item) => {
     if (matchedPairs[item.id]) return;
     setSelectedRight(item);
+    // Якщо вже вибрано елемент зліва, перевіряємо, чи це пара
     if (selectedLeft && selectedLeft.id === item.id) {
       doMatch(item.id);
     } else if (selectedLeft && selectedLeft.id !== item.id) {
@@ -230,14 +230,15 @@ function MedicationTermMatchingGameContent() {
     }
   };
 
+  // Якщо вгадали
   const doMatch = (id) => {
     setMatchedPairs((prev) => ({ ...prev, [id]: true }));
     setSelectedLeft(null);
     setSelectedRight(null);
-    setCorrectMatchIds((prev) => [...prev, id]);
     setCorrectMatchesCount((prev) => prev + 1);
   };
 
+  // Якщо помилилися
   const showWrong = (leftItem, rightItem) => {
     setWrongLeft(leftItem.id);
     setWrongRight(rightItem.id);
@@ -249,7 +250,7 @@ function MedicationTermMatchingGameContent() {
     }, 800);
   };
 
-  // Завершення гри при знаходженні всіх пар
+  // Перевірка, чи всі пари знайдено
   useEffect(() => {
     if (pairs.length > 0 && Object.keys(matchedPairs).length === pairs.length) {
       setGameFinished(true);
@@ -258,12 +259,14 @@ function MedicationTermMatchingGameContent() {
     }
   }, [matchedPairs, pairs, gameStartTime]);
 
+  // Зберігаємо зміни в контекст/Firebase
   useEffect(() => {
     if (gameFinished) {
       flushChanges();
     }
   }, [gameFinished, flushChanges]);
 
+  // Пагінація
   const handleNextPage = () => {
     if (pageIndex < pageCount - 1) {
       setPageIndex((prev) => prev + 1);
@@ -275,6 +278,7 @@ function MedicationTermMatchingGameContent() {
     }
   };
 
+  // Закриття вікна результатів
   const handleCloseResults = () => {
     setGameFinished(false);
   };
@@ -282,27 +286,39 @@ function MedicationTermMatchingGameContent() {
   return (
     <MainLayout>
       <Helmet>
-        <title>Medikamente lernen – Term Matching Game</title>
-        <meta property="og:title" content="Medikamente lernen – Term Matching Game" />
-        <meta property="og:description" content="Lerne Medikamente mit einem interaktiven Zuordnungsspiel!" />
+        <title>Abkürzungen lernen – Term Matching Game</title>
+        <meta property="og:title" content="Abkürzungen lernen – Term Matching Game" />
+        <meta
+          property="og:description"
+          content="Interaktives Zuordnungsspiel zum Lernen medizinischer Abkürzungen!"
+        />
         <meta property="og:image" content={matchingGameBg} />
         <meta property="og:type" content="website" />
-        {/* Метадані ABUS */}
-        <meta name="abus" content="ABUS metadata for Term Matching Game" />
       </Helmet>
 
       <div className={styles.electiveLanguageGame}>
-        <button className="main_menu_back" onClick={() => navigate("/medications-learning")}>
+        {/* Кнопка повернення */}
+        <button className="main_menu_back" onClick={() => navigate("/abbreviations-learning")}>
           &#8592;
         </button>
 
+        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
-            <div className={window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile}>
-              <button className={styles.modalCloseButton} onClick={() => setSettingsOpen(false)}>
+            <div
+              className={
+                window.innerWidth > 768 ? styles.popupDesktopWide : styles.popupMobile
+              }
+            >
+              <button
+                className={styles.modalCloseButton}
+                onClick={() => setSettingsOpen(false)}
+              >
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
+
+              {/* Перший ряд: Filter / Kategorie / (Режим відображення) */}
               <div className={styles.row}>
                 {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
@@ -327,11 +343,11 @@ function MedicationTermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
+
                 {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
-                    {/* Відображаємо категорію як текст або скорочення */}
                     <div className={styles.categoryCell}>
                       {selectedCategory === "Alle"
                         ? "Alle"
@@ -356,50 +372,37 @@ function MedicationTermMatchingGameContent() {
                     </select>
                   </div>
                 </div>
-              </div>
 
-              {/* Language Swap */}
-              <div className={styles.modalField}>
-                <div className={styles.languageSwapContainer} data-tutorial="languageSwapContainer">
-                  <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? "Deutsch" : (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
+                {/* Режим відображення */}
+                <div className={styles.modalField} data-tutorial="displayModeContainer">
+                <div className={styles.modalField} style={{ width: "100%" }}>
+                    {displayModeOptions.map((option) => (
+                      <div
+                        key={option.value}
+                        className={`${styles.displayModeIcon} ${
+                          displayMode === option.value ? styles.selected : ""
+                        }`}
+                        onClick={() => {
+                          if (requireAuth()) return;
+                          setDisplayMode(option.value);
+                        }}
                       >
-                        {Object.entries(languageMap).map(([code, label]) =>
-                          code !== "de" ? <option key={code} value={code}>{label}</option> : null
-                        )}
-                      </select>
-                    )}
-                  </div>
-                  <button className={styles.swapButton} onClick={() => setIsGermanLeft((prev) => !prev)}>
-                    <FaExchangeAlt className={styles.swapIcon} />
-                  </button>
-                  <div className={styles.languageCellFixed}>
-                    {isGermanLeft ? (
-                      <select
-                        className={styles.languageSelect}
-                        value={electiveLang}
-                        onChange={(e) => setElectiveLang(e.target.value)}
-                      >
-                        {Object.entries(languageMap).map(([code, label]) =>
-                          code !== "de" ? <option key={code} value={code}>{label}</option> : null
-                        )}
-                      </select>
-                    ) : "Deutsch"}
+                        {option.label}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
-              {/* Кількість термінів */}
-              <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
+              {/* Другий ряд: Кількість абревіатур */}
+              <div className={styles.modalField} data-tutorial="questionCountContainer">
+                <div className={styles.questionCountContainer}>
                   {questionCountOptions.map((qc) => (
                     <div
                       key={qc}
-                      className={`${styles.questionCountIcon} ${questionCount === qc ? styles.selected : ""}`}
+                      className={`${styles.questionCountIcon} ${
+                        questionCount === qc ? styles.selected : ""
+                      }`}
                       onClick={() => {
                         if (requireAuth()) return;
                         setQuestionCount(qc);
@@ -411,17 +414,36 @@ function MedicationTermMatchingGameContent() {
                 </div>
               </div>
 
-              <button className={styles.startButton} data-tutorial="startButton" onClick={handleStartGame}>
+              {/* Кнопка Start */}
+              <button
+                className={styles.startButton}
+                data-tutorial="startButton"
+                onClick={handleStartGame}
+              >
                 Start
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка туторіалу */}
+        {/* Кнопка для туторіалу */}
         {settingsOpen && (
-          <button data-tutorial="tutorialStartButton" className={styles.tutorialButton} onClick={() => setShowTutorial(true)}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#ededed" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+          <button
+            data-tutorial="tutorialStartButton"
+            className={styles.tutorialButton}
+            onClick={() => setShowTutorial(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              fill="none"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
               <circle cx="12" cy="12" r="10" />
               <line x1="12" y1="12" x2="12" y2="16" />
               <circle cx="12" cy="8" r="0.5" fill="#ededed" />
@@ -429,20 +451,21 @@ function MedicationTermMatchingGameContent() {
           </button>
         )}
 
-        {/* Повідомлення, якщо термінів немає */}
+        {/* Повідомлення, якщо немає питань */}
         {!settingsOpen && !gameFinished && pairs.length === 0 && (
           <div className={styles.noQuestionsOverlay}>
             <div className={styles.noQuestionsMessage}>
-              <p>Für diesen Filter sind zurzeit keine Begriffe verfügbar.</p>
+              <p>Für diesen Filter sind zurzeit keine Abkürzungen verfügbar.</p>
             </div>
           </div>
         )}
 
-        {/* Гра */}
+        {/* Основна гра */}
         {!settingsOpen && !gameFinished && pairs.length > 0 && (
           <>
             <div className={styles.progress}>
-              Seite {pageIndex + 1} / {pageCount} &nbsp;({displayedLeft.length} Begriffe)
+              Seite {pageIndex + 1} / {pageCount} &nbsp;(
+              {displayedLeft.length} Begriffe)
             </div>
 
             <div className={styles.gameContainer}>
@@ -491,7 +514,7 @@ function MedicationTermMatchingGameContent() {
             <div className={styles.navigationContainer}>
               {pageIndex > 0 && (
                 <button className={styles.navButton} onClick={handlePrevPage}>
-                  <FaArrowLeft /> 
+                  <FaArrowLeft />
                 </button>
               )}
               {pageIndex < pageCount - 1 && (
@@ -503,51 +526,73 @@ function MedicationTermMatchingGameContent() {
           </>
         )}
 
-        {/* Результати */}
+        {/* Результати гри */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>
             <div className={styles.resultsTile}>
-              <button className={styles.modalCloseButton} onClick={handleCloseResults}>
+              <button
+                className={styles.modalCloseButton}
+                onClick={handleCloseResults}
+              >
                 ×
               </button>
               <h3>Ergebnisse</h3>
-              <p>Alle Paare gefunden: {correctMatchesCount} / {pairs.length}</p>
               <p>
-                Dauer: {Math.floor(sessionDuration / 60)} Minuten {sessionDuration % 60} Sekunden
+                Alle Paare gefunden: {correctMatchesCount} / {pairs.length}
               </p>
-              <button className={styles.startButton} onClick={() => {
-                setSettingsOpen(true);
-                setGameFinished(false);
-              }}>
+              <p>
+                Dauer: {Math.floor(sessionDuration / 60)} Minuten{" "}
+                {sessionDuration % 60} Sekunden
+              </p>
+              <button
+                className={styles.startButton}
+                onClick={() => {
+                  setSettingsOpen(true);
+                  setGameFinished(false);
+                }}
+              >
                 Neue Runde
               </button>
             </div>
           </div>
         )}
 
-        {/* Кнопка налаштувань */}
+        {/* Кнопка налаштувань (якщо не мобільний або якщо налаштування вже закриті) */}
         {(!settingsOpen || window.innerWidth > 768) && !gameFinished && (
           <div className={styles.bottomRightSettings}>
-            <button className={styles.settingsButton} onClick={() => {
-              if (requireAuth()) return;
-              setSettingsOpen(true);
-            }}>
+            <button
+              className={styles.settingsButton}
+              onClick={() => {
+                if (requireAuth()) return;
+                setSettingsOpen(true);
+              }}
+            >
               <FaCog />
             </button>
           </div>
         )}
       </div>
 
+      {/* Модальне вікно авторизації */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-      <TermMatchingGameTutorial run={showTutorial} onFinish={() => setShowTutorial(false)} />
+
+      {/* Туторіал */}
+      <AbbreviationsTermMatchingGameTutorial
+        run={showTutorial}
+        onFinish={() => {
+          setShowTutorial(false);
+          localStorage.setItem("abbreviationsTermMatchingGameTutorialCompleted", "true");
+        }}
+      />
     </MainLayout>
   );
 }
 
-export default function MedicationTermMatchingGame() {
+// Експорт за замовчуванням
+export default function AbbreviationsTermMatchingGame() {
   return (
-    <MedicationStatusProvider>
-      <MedicationTermMatchingGameContent />
-    </MedicationStatusProvider>
+    <AbbreviationsStatusProvider>
+      <AbbreviationsTermMatchingGameContent />
+    </AbbreviationsStatusProvider>
   );
 }

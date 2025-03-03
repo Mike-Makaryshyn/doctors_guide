@@ -45,7 +45,7 @@ const TermMatchingGameTutorial = ({ run, onFinish }) => {
         disableBeacon: true,
       },
       {
-        target: '[data-tutorial="languageSwapContainer"]',
+        target: '[data-tutorial="displayModeContainer"]',
         content: stepsContent.languageSwapContainer || "Use this container to swap the translation direction: left is always German, right is your chosen language.",
         placement: "top",
         disableBeacon: true,

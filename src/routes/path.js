@@ -138,5 +138,8 @@ export const pathList = {
   abbreviations_simplechoice: {
     path: "/abbreviations-simplechoice-game",
   },
+  abbreviations_term_matching: {
+    path: "/abbreviations-term-matching-game",
+  },
  
 };

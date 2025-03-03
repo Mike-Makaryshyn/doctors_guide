@@ -121,8 +121,9 @@
 }
 
 .modalField {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   display: flex;
+  gap: 7px;
   flex-direction: column;
 }
 
@@ -580,4 +581,30 @@
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   pointer-events: auto; /* Блок отримує кліки */
+}
+.displayModeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0;
+}
+
+.displayModeIcon {
+  width: 85px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #666666, -5px -5px 9px #ffffff;
+  color: #013b6e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 12px;
+}
+
+.displayModeIcon.selected {
+  background: #013b6e;
+  color: #fff;
 }

@@ -3,19 +3,19 @@ const tutorialTranslations = {
   en: {
     steps: {
       intro:
-        "Welcome to Term Matching Game! In this game, you need to match the terms on the left (in German) with the correct definitions on the right (in your chosen language). Please note that we focus on learning more medications specifically for the Fachsprachprüfung. These are important medications for your exam.",
+        "Welcome to the Abbreviations Term Matching Game! In this game, you need to match the abbreviations on the left with their correct German expansions on the right. Please note that we focus on learning important abbreviations specifically for the Fachsprachprüfung. These abbreviations are essential for your exam.",
       regionSelect:
-        "The region is set automatically based on your global preferences; however, you can change it here.",
+        "The region is set automatically based on your global preferences; however, you can change it here if needed.",
       selectWrapper:
-        "This container (NativeSelect) lets you choose the region.",
+        "This container (NativeSelect) lets you choose the region, if applicable.",
       filterColumn:
-        "Here you can select the filter: learned, unlearned, or paused.",
+        "Here you can select the filter for abbreviations: learned, unlearned, or paused.",
       categorySelect:
-        "Choose the category of terms. Approximately 20 categories are available.",
-      languageSwapContainer:
-        "Use this container to swap the translation direction. On the left, you always have German, and on the right, your chosen language.",
+        "Choose the category of abbreviations. Approximately 20 categories are available.",
+      displayModeContainer:
+        "Use this container to choose how abbreviations are displayed:\n• 'Abk.→Deu': the abbreviation is shown on the left and its German expansion on the right;\n• 'Deu→Abk.': the German expansion is shown on the left and the abbreviation on the right;\n• 'Gemischt': a random order is used.",
       questionCountContainer:
-        "Select the number of terms to be included in the game.",
+        "Select the number of abbreviations you want to include in the game.",
       startButton:
         "Press Start to begin the game."
     },
@@ -30,19 +30,19 @@ const tutorialTranslations = {
   de: {
     steps: {
       intro:
-        "Willkommen beim Term Matching Game! In diesem Spiel müssen Sie die Begriffe links (auf Deutsch) den richtigen Definitionen rechts (in der von Ihnen gewählten Sprache) zuordnen. Bitte beachten Sie, dass wir uns speziell auf wichtige Medikamente für die Fachsprachprüfung konzentrieren. Diese Medikamente sind essenziell für Ihre Prüfung.",
+        "Willkommen beim Abkürzungen-Term-Matching-Spiel! In diesem Spiel müssen Sie die Abkürzungen links mit ihrer korrekten deutschen Bedeutung rechts zuordnen. Bitte beachten Sie, dass wir uns speziell auf wichtige Abkürzungen für die Fachsprachprüfung konzentrieren. Diese Abkürzungen sind für Ihre Prüfung essenziell.",
       regionSelect:
-        "Die Region wird automatisch anhand Ihrer globalen Einstellungen festgelegt; Sie können sie jedoch hier ändern.",
+        "Die Region wird automatisch anhand Ihrer globalen Einstellungen festgelegt; Sie können sie jedoch hier bei Bedarf ändern.",
       selectWrapper:
-        "Dieser Container (NativeSelect) ermöglicht die Auswahl der Region.",
+        "Dieser Container (NativeSelect) ermöglicht die Auswahl der Region (falls benötigt).",
       filterColumn:
-        "Hier können Sie den Filter auswählen: Gelernt, Ungelernt oder Pausiert.",
+        "Hier können Sie den Filter für Abkürzungen auswählen: Gelernt, Ungelernt oder Pausiert.",
       categorySelect:
-        "Wählen Sie die Kategorie der Begriffe. Es stehen ca. 20 Kategorien zur Verfügung.",
-      languageSwapContainer:
-        "Verwenden Sie diesen Container, um die Übersetzungsrichtung zu wechseln. Links ist immer Deutsch, rechts die von Ihnen gewählte Sprache.",
+        "Wählen Sie die Kategorie der Abkürzungen. Es stehen ca. 20 Kategorien zur Verfügung.",
+      displayModeContainer:
+        "Verwenden Sie diesen Bereich, um festzulegen, wie Abkürzungen angezeigt werden:\n• 'Abk.→Deu': Die Abkürzung wird links und ihre deutsche Bedeutung rechts angezeigt;\n• 'Deu→Abk.': Die deutsche Bedeutung wird links und die Abkürzung rechts angezeigt;\n• 'Gemischt': Zufällige Anordnung.",
       questionCountContainer:
-        "Wählen Sie die Anzahl der Begriffe, die im Spiel enthalten sein sollen.",
+        "Wählen Sie die Anzahl der Abkürzungen, die im Spiel enthalten sein sollen.",
       startButton:
         "Drücken Sie auf Start, um das Spiel zu beginnen."
     },
@@ -57,21 +57,21 @@ const tutorialTranslations = {
   uk: {
     steps: {
       intro:
-        "Ласкаво просимо до Term Matching Game! У цій грі вам потрібно зіставити терміни зліва (німецькою) з правильними визначеннями справа (у вибраній вами мові). Зверніть увагу, що ми зосереджуємось на вивченні важливих медикаментів саме для Фахспрахенпрюфунка. Це важливі медикаменти для вашого іспиту.",
+        "Ласкаво просимо до гри з відпрацювання абревіатур! У цій грі вам потрібно зіставити медичні абревіатури зліва з їх правильною німецькою розшифровкою справа. Зверніть увагу, що ми зосереджуємось на вивченні важливих абревіатур саме для Фахспрахенпрюфунка. Ці абревіатури є ключовими для вашого іспиту.",
       regionSelect:
-        "Регіон встановлюється автоматично відповідно до ваших глобальних налаштувань; проте його можна змінити тут.",
+        "Регіон встановлюється автоматично відповідно до ваших глобальних налаштувань; проте за потреби його можна змінити.",
       selectWrapper:
-        "Цей контейнер (NativeSelect) дозволяє обрати регіон.",
+        "Цей контейнер (NativeSelect) дозволяє обрати регіон (за потреби).",
       filterColumn:
-        "Тут ви можете обрати фільтр: вивчені, невивчені або призупинені.",
+        "Тут можна обрати фільтр для абревіатур: вивчені, невивчені або призупинені.",
       categorySelect:
-        "Виберіть категорію термінів. Доступно приблизно 20 категорій.",
-      languageSwapContainer:
-        "Використовуйте цей контейнер для зміни напрямку перекладу. Ліворуч завжди німецька, праворуч – вибрана вами мова.",
+        "Виберіть категорію абревіатур. Доступно приблизно 20 категорій.",
+      displayModeContainer:
+        "У цьому блоці ви обираєте, як відображатимуться абревіатури:\n• «Abk.→Deu»: абревіатура зліва, німецька розшифровка справа;\n• «Deu→Abk.»: німецька розшифровка зліва, абревіатура справа;\n• «Gemischt»: випадковий порядок.",
       questionCountContainer:
-        "Виберіть кількість термінів, що будуть включені до гри.",
+        "Оберіть кількість абревіатур, які будуть включені до гри.",
       startButton:
-        "Натисніть Старт, щоб розпочати гру."
+        "Натисніть «Старт», щоб розпочати гру."
     },
     buttons: {
       back: "Назад",
@@ -84,21 +84,21 @@ const tutorialTranslations = {
   ru: {
     steps: {
       intro:
-        "Добро пожаловать в Term Matching Game! В этой игре вам нужно сопоставить термины слева (на немецком) с правильными определениями справа (на выбранном вами языке). Обратите внимание, что мы уделяем особое внимание изучению важных медикаментов для Фахспрахенпрюфунка. Эти медикаменты являются ключевыми для вашего экзамена.",
+        "Добро пожаловать в игру по сопоставлению аббревиатур! В этой игре вам нужно сопоставить медицинские аббревиатуры слева с их правильными немецкими расшифровками справа. Обратите внимание, что мы уделяем особое внимание важным аббревиатурам для Fachsprachprüfung. Эти аббревиатуры крайне важны для вашего экзамена.",
       regionSelect:
-        "Регион устанавливается автоматически согласно вашим глобальным настройкам; однако вы можете изменить его здесь.",
+        "Регион определяется автоматически на основе ваших глобальных настроек; при необходимости вы можете изменить его здесь.",
       selectWrapper:
-        "Этот контейнер (NativeSelect) позволяет выбрать регион.",
+        "Этот контейнер (NativeSelect) позволяет выбрать регион (если нужно).",
       filterColumn:
-        "Здесь вы можете выбрать фильтр: изученные, не изученные или отложенные.",
+        "Здесь вы можете выбрать фильтр для аббревиатур: изученные, не изученные или отложенные.",
       categorySelect:
-        "Выберите категорию терминов. Доступно примерно 20 категорий.",
-      languageSwapContainer:
-        "Используйте этот контейнер для смены направления перевода. Слева всегда немецкий, справа – выбранный вами язык.",
+        "Выберите категорию аббревиатур. Доступно около 20 категорий.",
+      displayModeContainer:
+        "В этом блоке можно выбрать способ отображения аббревиатур:\n• «Abk.→Deu»: аббревиатура слева, немецкая расшифровка справа;\n• «Deu→Abk.»: немецкая расшифровка слева, аббревиатура справа;\n• «Gemischt»: случайный порядок.",
       questionCountContainer:
-        "Выберите количество терминов, которые будут включены в игру.",
+        "Выберите количество аббревиатур, которые будут включены в игру.",
       startButton:
-        "Нажмите Старт, чтобы начать игру."
+        "Нажмите «Старт», чтобы начать игру."
     },
     buttons: {
       back: "Назад",
@@ -111,21 +111,21 @@ const tutorialTranslations = {
   pl: {
     steps: {
       intro:
-        "Witamy w Term Matching Game! W tej grze musisz dopasować terminy po lewej stronie (niemieckim) do odpowiednich definicji po prawej (w wybranym przez Ciebie języku). Zwróć uwagę, że koncentrujemy się na nauce ważnych leków niezbędnych do egzaminu Fachsprachprüfung. Są to kluczowe leki dla Twojego egzaminu.",
+        "Witamy w grze do dopasowywania skrótów medycznych! W tej grze musisz dopasować skróty po lewej stronie do ich niemieckich rozwinięć po prawej stronie. Zwróć uwagę, że skupiamy się na nauce ważnych skrótów niezbędnych do egzaminu Fachsprachprüfung. Te skróty są kluczowe na Twoim egzaminie.",
       regionSelect:
-        "Region jest ustawiany automatycznie na podstawie Twoich globalnych ustawień, jednak możesz go zmienić tutaj.",
+        "Region jest ustawiany automatycznie na podstawie Twoich globalnych ustawień; w razie potrzeby możesz go zmienić.",
       selectWrapper:
-        "Ten kontener (NativeSelect) umożliwia wybór regionu.",
+        "Ten kontener (NativeSelect) umożliwia wybór regionu (jeśli jest to potrzebne).",
       filterColumn:
-        "Tutaj możesz wybrać filtr: nauczone, nienauczone lub wstrzymane.",
+        "Tutaj możesz wybrać filtr dla skrótów: nauczone, nienauczone lub wstrzymane.",
       categorySelect:
-        "Wybierz kategorię terminów. Dostępnych jest około 20 kategorii.",
-      languageSwapContainer:
-        "Użyj tego kontenera, aby zmienić kierunek tłumaczenia. Po lewej stronie zawsze niemiecki, po prawej – wybrany przez Ciebie język.",
+        "Wybierz kategorię skrótów. Dostępnych jest około 20 kategorii.",
+      displayModeContainer:
+        "W tym bloku wybierasz sposób wyświetlania skrótów:\n• „Abk.→Deu”: skrót po lewej, niemieckie rozwinięcie po prawej;\n• „Deu→Abk.”: niemieckie rozwinięcie po lewej, skrót po prawej;\n• „Gemischt”: losowa kolejność.",
       questionCountContainer:
-        "Wybierz liczbę terminów, które mają zostać uwzględnione w grze.",
+        "Wybierz liczbę skrótów, które mają zostać uwzględnione w grze.",
       startButton:
-        "Naciśnij Start, aby rozpocząć grę."
+        "Naciśnij „Start”, aby rozpocząć grę."
     },
     buttons: {
       back: "Wstecz",
@@ -138,21 +138,21 @@ const tutorialTranslations = {
   ar: {
     steps: {
       intro:
-        "مرحبًا بك في Term Matching Game! في هذه اللعبة، يتعين عليك مطابقة المصطلحات الموجودة على اليسار (بالألمانية) مع التعاريف الصحيحة على اليمين (باللغة التي تختارها). يرجى ملاحظة أننا نركز على تعلم المزيد من الأدوية المهمة خصيصًا لاختبار Fachsprachprüfung. هذه الأدوية مهمة لامتحانك.",
+        "مرحبًا بك في لعبة مطابقة الاختصارات الطبية! في هذه اللعبة، يتعين عليك مطابقة الاختصارات الطبية الموجودة على اليسار مع توسعاتها الألمانية الصحيحة على اليمين. يرجى ملاحظة أننا نركز على تعلم الاختصارات المهمة لاختبار Fachsprachprüfung. هذه الاختصارات مهمة لامتحانك.",
       regionSelect:
-        "يتم تعيين المنطقة تلقائيًا بناءً على إعداداتك العالمية؛ ومع ذلك، يمكنك تغييرها هنا.",
+        "يتم تعيين المنطقة تلقائيًا وفقًا لإعداداتك العالمية؛ ومع ذلك، يمكنك تغييرها هنا إذا لزم الأمر.",
       selectWrapper:
-        "هذا الحاوية (NativeSelect) تتيح لك اختيار المنطقة.",
+        "هذا الحاوية (NativeSelect) تتيح لك اختيار المنطقة (إذا كان ذلك ضروريًا).",
       filterColumn:
-        "هنا يمكنك اختيار الفلتر: المُتعلمة، غير المُتعلمة أو المؤجلة.",
+        "هنا يمكنك اختيار الفلتر للاختصارات: المُتعلمة، غير المُتعلمة أو المؤجلة.",
       categorySelect:
-        "اختر فئة المصطلحات. يتوفر حوالي 20 فئة.",
-      languageSwapContainer:
-        "استخدم هذا الحاوية لتبديل اتجاه الترجمة. على اليسار دائمًا الألمانية، وعلى اليمين اللغة المختارة.",
+        "اختر فئة الاختصارات. يوجد حوالي 20 فئة متاحة.",
+      displayModeContainer:
+        "في هذا القسم يمكنك اختيار كيفية عرض الاختصارات:\n• 'Abk.→Deu': يُعرض الاختصار على اليسار والتوسعة الألمانية على اليمين؛\n• 'Deu→Abk.': يُعرض النص الألماني على اليسار والاختصار على اليمين؛\n• 'Gemischt': ترتيب عشوائي.",
       questionCountContainer:
-        "اختر عدد المصطلحات التي ستدرج في اللعبة.",
+        "اختر عدد الاختصارات التي سيتم تضمينها في اللعبة.",
       startButton:
-        "اضغط على بدء لبدء اللعبة."
+        "اضغط على 'بدء' لبدء اللعبة."
     },
     buttons: {
       back: "رجوع",
@@ -165,21 +165,21 @@ const tutorialTranslations = {
   tr: {
     steps: {
       intro:
-        "Term Matching Game'e hoş geldiniz! Bu oyunda, soldaki terimleri (Almanca) sağdaki doğru tanımlarla eşleştirmeniz gerekmektedir (seçtiğiniz dilde). Lütfen dikkat edin, özellikle Fachsprachprüfung için önemli olan ilaçları öğrenmeye odaklanıyoruz. Bunlar, sınavınız için kritik öneme sahip ilaçlardır.",
+        "Abbreviations Term Matching Game'e hoş geldiniz! Bu oyunda, soldaki tıbbi kısaltmaları doğru Almanca açılımlarıyla sağda eşleştirmeniz gerekiyor. Lütfen dikkat edin, özellikle Fachsprachprüfung için önemli olan kısaltmaları öğrenmeye odaklanıyoruz. Bu kısaltmalar sınavınız için kritiktir.",
       regionSelect:
-        "Bölge, global tercihlerinize göre otomatik olarak ayarlanır; ancak buradan değiştirebilirsiniz.",
+        "Bölge, global tercihlerinize göre otomatik olarak ayarlanır; ancak gerektiğinde buradan değiştirebilirsiniz.",
       selectWrapper:
-        "Bu kapsayıcı (NativeSelect) bölge seçmenizi sağlar.",
+        "Bu kapsayıcı (NativeSelect) gerekiyorsa bölge seçmenize olanak tanır.",
       filterColumn:
-        "Burada, öğrenilmiş, öğrenilmemiş veya askıya alınmış filtresini seçebilirsiniz.",
+        "Burada kısaltmalar için filtreyi seçebilirsiniz: öğrenilmiş, öğrenilmemiş veya askıya alınmış.",
       categorySelect:
-        "Terimlerin kategorisini seçin. Yaklaşık 20 kategori mevcuttur.",
-      languageSwapContainer:
-        "Bu kapsayıcı, çeviri yönünü değiştirmek için kullanılır. Solda her zaman Almanca, sağda ise seçtiğiniz dil bulunur.",
+        "Kısaltmaların kategorisini seçin. Yaklaşık 20 kategori mevcuttur.",
+      displayModeContainer:
+        "Bu bölümde kısaltmaların nasıl gösterileceğini seçebilirsiniz:\n• 'Abk.→Deu': solda kısaltma, sağda Almanca açıklama;\n• 'Deu→Abk.': solda Almanca açıklama, sağda kısaltma;\n• 'Gemischt': rastgele sıralama.",
       questionCountContainer:
-        "Oyuna dahil edilecek terim sayısını seçin.",
+        "Oyuna dahil edilecek kısaltma sayısını seçin.",
       startButton:
-        "Oyunu başlatmak için Başlat'a basın."
+        "Oyunu başlatmak için 'Start' düğmesine basın."
     },
     buttons: {
       back: "Geri",
@@ -192,21 +192,21 @@ const tutorialTranslations = {
   fr: {
     steps: {
       intro:
-        "Bienvenue dans Term Matching Game ! Dans ce jeu, vous devez associer les termes à gauche (en allemand) aux définitions correctes à droite (dans la langue de votre choix). Veuillez noter que nous nous concentrons sur l'apprentissage d'une plus grande variété de médicaments essentiels pour la Fachsprachprüfung. Ces médicaments sont cruciaux pour votre examen.",
+        "Bienvenue dans le jeu d'association d'abréviations ! Dans ce jeu, vous devez associer les abréviations médicales à gauche à leurs développements allemands corrects à droite. Notez que nous nous concentrons sur l'apprentissage des abréviations essentielles pour la Fachsprachprüfung, indispensables pour votre examen.",
       regionSelect:
-        "La région est définie automatiquement en fonction de vos préférences globales ; toutefois, vous pouvez la modifier ici.",
+        "La région est définie automatiquement en fonction de vos préférences globales ; toutefois, vous pouvez la modifier ici si nécessaire.",
       selectWrapper:
-        "Ce conteneur (NativeSelect) vous permet de choisir la région.",
+        "Ce conteneur (NativeSelect) vous permet de choisir la région (si besoin).",
       filterColumn:
-        "Ici, vous pouvez choisir le filtre : appris, non appris ou en pause.",
+        "Ici, vous pouvez choisir le filtre pour les abréviations : apprises, non apprises ou en pause.",
       categorySelect:
-        "Choisissez la catégorie des termes. Environ 20 catégories sont disponibles.",
-      languageSwapContainer:
-        "Utilisez ce conteneur pour inverser la direction de traduction. À gauche, vous avez toujours l'allemand, à droite la langue choisie.",
+        "Choisissez la catégorie des abréviations. Environ 20 catégories sont disponibles.",
+      displayModeContainer:
+        "Dans cette section, vous déterminez comment les abréviations sont affichées :\n• 'Abk.→Deu': abréviation à gauche, développement allemand à droite;\n• 'Deu→Abk.': texte allemand à gauche, abréviation à droite;\n• 'Gemischt': ordre aléatoire.",
       questionCountContainer:
-        "Sélectionnez le nombre de termes à inclure dans le jeu.",
+        "Sélectionnez le nombre d'abréviations à inclure dans le jeu.",
       startButton:
-        "Appuyez sur Démarrer pour commencer le jeu."
+        "Appuyez sur 'Start' pour commencer la partie."
     },
     buttons: {
       back: "Retour",
@@ -219,21 +219,21 @@ const tutorialTranslations = {
   es: {
     steps: {
       intro:
-        "¡Bienvenido a Term Matching Game! En este juego, debes emparejar los términos de la izquierda (en alemán) con las definiciones correctas de la derecha (en el idioma que elijas). Ten en cuenta que nos enfocamos en aprender una mayor cantidad de medicamentos importantes para la Fachsprachprüfung. Estos medicamentos son fundamentales para tu examen.",
+        "¡Bienvenido al juego de asociación de abreviaturas! En este juego, debes emparejar las abreviaturas médicas de la izquierda con sus correspondientes desarrollos en alemán a la derecha. Ten en cuenta que nos enfocamos en aprender abreviaturas importantes para la Fachsprachprüfung, esenciales para tu examen.",
       regionSelect:
-        "La región se establece automáticamente según tus preferencias globales; sin embargo, puedes cambiarla aquí.",
+        "La región se establece automáticamente según tus preferencias globales; sin embargo, puedes cambiarla aquí si es necesario.",
       selectWrapper:
-        "Este contenedor (NativeSelect) te permite seleccionar la región.",
+        "Este contenedor (NativeSelect) te permite seleccionar la región (si es necesario).",
       filterColumn:
-        "Aquí puedes elegir el filtro: aprendido, no aprendido o en pausa.",
+        "Aquí puedes elegir el filtro para las abreviaturas: aprendidas, no aprendidas o en pausa.",
       categorySelect:
-        "Elige la categoría de términos. Hay aproximadamente 20 categorías disponibles.",
-      languageSwapContainer:
-        "Utiliza este contenedor para invertir la dirección de traducción. A la izquierda siempre tienes el alemán y a la derecha el idioma seleccionado.",
+        "Elige la categoría de abreviaturas. Hay aproximadamente 20 categorías disponibles.",
+      displayModeContainer:
+        "En esta sección decides cómo se mostrarán las abreviaturas:\n• 'Abk.→Deu': abreviatura a la izquierda, desarrollo en alemán a la derecha;\n• 'Deu→Abk.': texto en alemán a la izquierda, abreviatura a la derecha;\n• 'Gemischt': orden aleatorio.",
       questionCountContainer:
-        "Selecciona el número de términos que se incluirán en el juego.",
+        "Selecciona cuántas abreviaturas deseas incluir en el juego.",
       startButton:
-        "Presiona Iniciar para comenzar el juego."
+        "Presiona 'Start' para comenzar el juego."
     },
     buttons: {
       back: "Atrás",
@@ -244,5 +244,5 @@ const tutorialTranslations = {
     }
   }
 };
-  
+
 export default tutorialTranslations;

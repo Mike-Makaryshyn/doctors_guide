@@ -181,6 +181,9 @@ const LetterFormPage = React.lazy(() =>
 const AbbreviationsSimpleChoiceGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/SimpleChoiceGame/AbbreviationsSimpleChoiceGame.jsx")
 );
+const AbbreviationsTermMatchingGame = React.lazy(() =>
+  import("../games/AbbreviationsGame/pages/TermMatchingGame/AbbreviationsTermMatchingGame.jsx")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -207,6 +210,10 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route
+  path={pathList.abbreviations_term_matching.path}
+  element={<AbbreviationsTermMatchingGame />}
+/>
         <Route
           path={pathList.medications_fill_in_blank.path}
           element={<MedicationFillInBlankGame />}
