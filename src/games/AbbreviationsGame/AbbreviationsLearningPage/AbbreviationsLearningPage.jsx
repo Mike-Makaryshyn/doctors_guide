@@ -68,7 +68,7 @@ const AbbreviationsLearningPage = () => {
           <div
             className={styles.gameTile}
             style={{ backgroundImage: `url(${simpleChoiceBg})` }}
-            onClick={() => navigate("/abbreviations-simple-choice-game")}
+            onClick={() => navigate("/abbreviations-simplechoice-game")}
           >
             <div className={styles.innerTile}>
               <div className={styles.rockingCard}>
@@ -77,17 +77,7 @@ const AbbreviationsLearningPage = () => {
             </div>
           </div>
           {/* 3. Elective Language Game */}
-          <div
-            className={styles.gameTile}
-            style={{ backgroundImage: `url(${electiveLanguageBg})` }}
-            onClick={() => navigate("/abbreviations-elective-language-game")}
-          >
-            <div className={styles.innerTile}>
-              <div className={styles.rockingCard}>
-                <div className={styles.tileTitle}>Elective Language Game</div>
-              </div>
-            </div>
-          </div>
+      
           {/* 4. Term Matching Game */}
           <div
             className={styles.gameTile}

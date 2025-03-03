@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../../../../layouts/MainLayout/MainLayout";
-import { medications } from "../../../../constants/medications";
-import styles from "./MedicationSimpleChoiceGame.module.scss";
+import { medicalAbbreviations } from "../../../../constants/medicalAbbreviations";
+import styles from "./AbbreviationsSimpleChoiceGame.module.scss";
 import {
   FaCog,
   FaPlay,
@@ -14,21 +14,20 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import {
-  useMedicationStatus,
-  MedicationStatusProvider,
-} from "../../../../contexts/MedicationStatusContext";
+  useAbbreviationsStatus,
+  AbbreviationsStatusProvider,
+} from "../../../../contexts/AbbreviationsStatusContext";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
-import MedicationSimpleChoiceGameTutorial from "./MedicationSimpleChoiceGameTutorial";
+import AbbreviationsSimpleChoiceGameTutorial from "./AbbreviationsSimpleChoiceGameTutorial";
 import { Helmet } from "react-helmet";
-import medicationSimpleChoiceBg from "../../../../assets/medication-simple-choice-bg.jpg";
+import simpleChoiceBg from "../../../../assets/abbreviation-simple-choice-bg.jpg";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../../firebase";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
-import FloatingExamples from "./FloatingExamples";
 
-// Funktion zur Sortierung der Kategorien: alphabetisch, "Andere" stets zuletzt
+// Функція для сортування категорій: алфавітно, "Andere" завжди останньою
 const sortCategoriesWithAndereLast = (categories) => {
   let sorted = [...categories].sort();
   if (sorted.includes("Andere")) {
@@ -38,7 +37,7 @@ const sortCategoriesWithAndereLast = (categories) => {
   return sorted;
 };
 
-// Filter-Modi
+// Фільтр-режими
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
@@ -46,17 +45,17 @@ const filterModes = [
   { value: "paused", icon: <FaPause />, label: "Pausiert" },
 ];
 
-// Anzahl Fragen
+// Кількість питань
 const questionCountOptions = [20, 40, 60, 100, 200, "all"];
 
-// Anzeige-Modi: Med.→Deu, Deu→Med., Gemischt
+// Режими відображення: Abk.→Deu, Deu→Abk., Gemischt
 const displayModeOptions = [
-  { value: "LatGerman", label: "Med.→Deu" },
-  { value: "GermanLat", label: "Deu→Med." },
+  { value: "LatGerman", label: "Abk.→Deu" },
+  { value: "GermanLat", label: "Deu→Abk." },
   { value: "Mixed", label: "Gemischt" },
 ];
 
-const MedicationSimpleChoiceGameContent = () => {
+const AbbreviationsSimpleChoiceGameContent = () => {
   const navigate = useNavigate();
   const { selectedLanguage } = useGetGlobalInfo();
 
@@ -71,10 +70,10 @@ const MedicationSimpleChoiceGameContent = () => {
     return false;
   };
 
-  // Kontext der Medikamente
-  const { medicationStatuses, recordCorrectAnswer, flushChanges } = useMedicationStatus();
+  // Контекст абревіатур
+  const { abbreviationStatuses, recordCorrectAnswer, flushChanges } = useAbbreviationsStatus();
 
-  // Spieleinstellungen
+  // Налаштування гри
   const [settingsOpen, setSettingsOpen] = useState(true);
   const [filterMode, setFilterMode] = useState("unlearned");
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -82,33 +81,33 @@ const MedicationSimpleChoiceGameContent = () => {
   const [displayMode, setDisplayMode] = useState("LatGerman");
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Spielzustände
+  // Стан гри
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answersNoEdit, setAnswersNoEdit] = useState({});
   const [wrongSelectionsEdit, setWrongSelectionsEdit] = useState({});
   const [questionsCompleted, setQuestionsCompleted] = useState({});
 
-  // Zähler
+  // Лічильники
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const [incorrectAnswerCount, setIncorrectAnswerCount] = useState(0);
   const [shownCounts, setShownCounts] = useState({});
 
-  // Spielstartzeit und Ergebnis
+  // Час початку гри та результати
   const [gameStartTime, setGameStartTime] = useState(null);
   const [gameFinished, setGameFinished] = useState(false);
   const [sessionDuration, setSessionDuration] = useState(0);
 
-  // Tutorial-Zustand
+  // Стан туторіалу
   const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("medicationSimpleChoiceGameTutorialCompleted") !== "true"
+    localStorage.getItem("abbreviationsSimpleChoiceGameTutorialCompleted") !== "true"
   );
 
   const [gameStarted, setGameStarted] = useState(false);
 
-  // Alle Kategorien aus den Medikamenten ermitteln und sortieren
+  // Отримання всіх категорій з абревіатур і їх сортування
   let allCategories = Array.from(
-    new Set(medications.flatMap((med) => med.categories || []))
+    new Set(medicalAbbreviations.flatMap((abbr) => abbr.categories || []))
   );
   allCategories = sortCategoriesWithAndereLast(allCategories);
 
@@ -116,66 +115,71 @@ const MedicationSimpleChoiceGameContent = () => {
     setSettingsOpen(false);
   };
 
-  // Laden der Fragen
+  // Завантаження питань
   const loadQuestions = () => {
-    const gefilterteMeds = medications.filter((med) => {
-      const status = medicationStatuses[med.id]?.status || "unlearned";
+    const gefilterteAbbrs = medicalAbbreviations.filter((abbr) => {
+      const status = abbreviationStatuses[abbr.id]?.status || "unlearned";
       if (filterMode === "learned" && status !== "learned") return false;
       if (filterMode === "paused" && status !== "paused") return false;
       if (filterMode === "unlearned" && (status === "learned" || status === "paused"))
         return false;
-      if (selectedCategory !== "Alle" && !(med.categories || []).includes(selectedCategory)) {
+      if (selectedCategory !== "Alle" && !(abbr.categories || []).includes(selectedCategory)) {
         return false;
       }
       return true;
     });
 
-    gefilterteMeds.sort((a, b) => {
+    // Сортування за кількістю показів (shownCounts), щоб частіше показувати ті, які менше "бачили"
+    gefilterteAbbrs.sort((a, b) => {
       const countA = shownCounts[a.id] || 0;
       const countB = shownCounts[b.id] || 0;
       if (countA === countB) return Math.random() - 0.5;
       return countA - countB;
     });
 
-    const ausgewählteMeds =
-      questionCount === "all" ? gefilterteMeds : gefilterteMeds.slice(0, questionCount);
+    // Вибираємо потрібну кількість абревіатур
+    const ausgewählteAbbrs =
+      questionCount === "all" ? gefilterteAbbrs : gefilterteAbbrs.slice(0, questionCount);
 
+    // Оновлюємо лічильники показів
     const neueShownCounts = { ...shownCounts };
-    ausgewählteMeds.forEach((med) => {
-      neueShownCounts[med.id] = (neueShownCounts[med.id] || 0) + 1;
+    ausgewählteAbbrs.forEach((abbr) => {
+      neueShownCounts[abbr.id] = (neueShownCounts[abbr.id] || 0) + 1;
     });
     setShownCounts(neueShownCounts);
 
-    // Fragen zusammenstellen: je nach displayMode
-    const fragenDaten = ausgewählteMeds.map((med) => {
+    // Формування питань залежно від displayMode
+    const fragenDaten = ausgewählteAbbrs.map((abbr) => {
       let modus = displayMode;
       if (modus === "Mixed") {
         modus = Math.random() < 0.5 ? "LatGerman" : "GermanLat";
       }
       let frageText, richtigeAntwort;
       if (modus === "LatGerman") {
-        frageText = med.lat;
-        richtigeAntwort = med.de;
+        frageText = abbr.abbreviation;
+        richtigeAntwort = abbr.name;
       } else {
-        frageText = med.de;
-        richtigeAntwort = med.lat;
+        frageText = abbr.name;
+        richtigeAntwort = abbr.abbreviation;
       }
 
-      // 3 zufällige falsche Antworten
-      const falscheAntworten = medications
-        .filter((m) => m.id !== med.id)
+      // 3 випадкові неправильні відповіді
+      const falscheAntworten = medicalAbbreviations
+        .filter((a) => a.id !== abbr.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
-        .map((m) => (modus === "LatGerman" ? m.de : m.lat));
+        .map((a) => (modus === "LatGerman" ? a.name : a.abbreviation));
 
-      const optionen = [...falscheAntworten, richtigeAntwort].sort(() => Math.random() - 0.5);
+      const optionen = [...falscheAntworten, richtigeAntwort].sort(
+        () => Math.random() - 0.5
+      );
 
       return {
-        id: med.id,
+        id: abbr.id,
         frage: frageText,
         richtigeAntwort,
         optionen,
-        med,
+        abbr,
       };
     });
 
@@ -204,6 +208,8 @@ const MedicationSimpleChoiceGameContent = () => {
     const dauer = Math.floor((Date.now() - gameStartTime) / 1000);
     setSessionDuration(dauer);
     setGameFinished(true);
+
+    // Зберігаємо зміни в Firebase, якщо не в режимі редагування
     if (!allowEdit) {
       flushChanges();
     }
@@ -213,9 +219,12 @@ const MedicationSimpleChoiceGameContent = () => {
     if (!questions[currentIndex]) return;
     const { richtigeAntwort, id } = questions[currentIndex];
     const qIndex = currentIndex;
+    // Якщо питання вже завершене, повторно не обробляємо
     if (questionsCompleted[qIndex]) return;
 
     if (allowEdit) {
+      // У режимі редагування «правильна» відповідь відзначається лише тоді,
+      // коли користувач обрав правильний варіант.
       if (option === richtigeAntwort) {
         setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       } else {
@@ -226,6 +235,7 @@ const MedicationSimpleChoiceGameContent = () => {
         });
       }
     } else {
+      // У звичайному режимі відповіді фіксуються одразу
       setAnswersNoEdit((prev) => ({ ...prev, [qIndex]: option }));
       setQuestionsCompleted((prev) => ({ ...prev, [qIndex]: true }));
       if (option === richtigeAntwort) {
@@ -241,6 +251,7 @@ const MedicationSimpleChoiceGameContent = () => {
     if (direction === "prev" && currentIndex > 0) {
       setCurrentIndex((prev) => prev - 1);
     } else if (direction === "next") {
+      // Перевірка, чи завершене поточне питання
       if (!questionsCompleted[currentIndex]) {
         alert("Bitte beantworten Sie die aktuelle Frage!");
         return;
@@ -251,6 +262,7 @@ const MedicationSimpleChoiceGameContent = () => {
     }
   };
 
+  // Підрахунок помилок за категоріями
   const berechneKategorieFehler = () => {
     const fehler = {};
     questions.forEach((frage, index) => {
@@ -258,8 +270,8 @@ const MedicationSimpleChoiceGameContent = () => {
         questionsCompleted[index] &&
         answersNoEdit[index] !== frage.richtigeAntwort
       ) {
-        const medObj = frage.med;
-        (medObj.categories || []).forEach((kategorie) => {
+        const abbrObj = frage.abbr;
+        (abbrObj.categories || []).forEach((kategorie) => {
           fehler[kategorie] = (fehler[kategorie] || 0) + 1;
         });
       }
@@ -267,6 +279,7 @@ const MedicationSimpleChoiceGameContent = () => {
     return fehler;
   };
 
+  // Компонент виводу результатів
   const ErgebnisseAnzeigen = () => {
     const kategorieFehler = berechneKategorieFehler();
     return (
@@ -312,41 +325,40 @@ const MedicationSimpleChoiceGameContent = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>Medikamente lernen – Single-Choice-Quiz für die Fachsprache</title>
+        <title>Abkürzungen lernen – Single-Choice-Quiz für die Fachsprache</title>
         <meta
           name="description"
-          content="Lerne wichtige Medikamente mit diesem Single-Choice-Quiz. Perfekt zur Vorbereitung auf die Fachsprachenprüfung oder für das klinische Alltagwissen."
+          content="Lerne wichtige Abkürzungen mit diesem Single-Choice-Quiz. Perfekt zur Vorbereitung auf die Fachsprachprüfung oder für das klinische Alltagwissen."
         />
         <meta
           name="keywords"
-          content="Medikamente, Fachsprachenprüfung, Lernen, Medizin, Single-Choice, Quiz"
+          content="Abkürzungen, Fachsprachprüfung, Lernen, Medizin, Single-Choice, Quiz"
         />
         <meta
           property="og:title"
-          content="Medikamente lernen – Single-Choice-Quiz für die Fachsprache"
+          content="Abkürzungen lernen – Single-Choice-Quiz für die Fachsprache"
         />
         <meta
           property="og:description"
-          content="Interaktives Single-Choice-Spiel zum Erlernen medizinischer Medikamente und Fachbegriffe."
+          content="Interaktives Single-Choice-Spiel zum Erlernen medizinischer Abkürzungen und Fachbegriffe."
         />
-        <meta property="og:image" content={medicationSimpleChoiceBg} />
+        <meta property="og:image" content={simpleChoiceBg} />
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {aktuelleFrage?.med?.examples && (
-        <FloatingExamples examples={aktuelleFrage.med.examples} />
-      )}
+      {/* Вилучено FloatingExamples */}
 
-      <div className={styles.medicationSimpleChoiceGame}>
+      <div className={styles.abbreviationsSimpleChoiceGame}>
         <button
           className="main_menu_back"
-          onClick={() => navigate("/medications-learning")}
+          onClick={() => navigate("/abbreviations-learning")}
         >
           &#8592;
         </button>
 
         <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
+        {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>
             <div
@@ -361,10 +373,11 @@ const MedicationSimpleChoiceGameContent = () => {
                 ×
               </button>
               <h2 className={styles.modalTitle}>Einstellungen</h2>
-              {/* Dummy-Element für den regionSelect-Tutorialschritt */}
+              {/* Dummy-елемент для regionSelect-туторіалу */}
               <div data-tutorial="regionSelect" />
 
               <div className={styles.row}>
+                {/* Фільтр */}
                 <div className={styles.filterColumn} data-tutorial="filterColumn">
                   <label className={styles.fieldLabel}>Filter</label>
                   <div className={styles.selectWrapper}>
@@ -388,16 +401,17 @@ const MedicationSimpleChoiceGameContent = () => {
                   </div>
                 </div>
 
+                {/* Категорія */}
                 <div className={styles.categoryColumn} data-tutorial="categorySelect">
                   <label className={styles.fieldLabel}>Kategorie</label>
                   <div className={styles.selectWrapper}>
-                  <div className={styles.categoryCell}>
-  {selectedCategory === "Alle"
-    ? "Alle"
-    : selectedCategory === "Andere"
-    ? "Andr."
-    : selectedCategory}
-</div>
+                    <div className={styles.categoryCell}>
+                      {selectedCategory === "Alle"
+                        ? "Alle"
+                        : selectedCategory === "Andere"
+                        ? "Andr."
+                        : selectedCategory}
+                    </div>
                     <select
                       className={styles.nativeSelect}
                       value={selectedCategory}
@@ -416,6 +430,7 @@ const MedicationSimpleChoiceGameContent = () => {
                   </div>
                 </div>
 
+                {/* Режим редагування */}
                 <div className={styles.editColumn}>
                   <label className={styles.fieldLabel}>Bearbeiten</label>
                   <button
@@ -433,8 +448,12 @@ const MedicationSimpleChoiceGameContent = () => {
                 </div>
               </div>
 
+              {/* Режим відображення */}
               <div className={styles.modalField}>
-                <div className={styles.displayModeContainer} data-tutorial="displayModeContainer">
+                <div
+                  className={styles.displayModeContainer}
+                  data-tutorial="displayModeContainer"
+                >
                   {displayModeOptions.map((option) => (
                     <div
                       key={option.value}
@@ -452,8 +471,12 @@ const MedicationSimpleChoiceGameContent = () => {
                 </div>
               </div>
 
+              {/* Кількість питань */}
               <div className={styles.modalField}>
-                <div className={styles.questionCountContainer} data-tutorial="questionCountContainer">
+                <div
+                  className={styles.questionCountContainer}
+                  data-tutorial="questionCountContainer"
+                >
                   {questionCountOptions.map((countOption) => (
                     <div
                       key={countOption}
@@ -465,19 +488,26 @@ const MedicationSimpleChoiceGameContent = () => {
                         setQuestionCount(countOption);
                       }}
                     >
-                      {countOption === "all" || countOption === "Alle" ? "Alle" : countOption}
+                      {countOption === "all" || countOption === "Alle"
+                        ? "Alle"
+                        : countOption}
                     </div>
                   ))}
                 </div>
               </div>
 
-              <button className={styles.startButton} onClick={handleStart} data-tutorial="startButton">
+              <button
+                className={styles.startButton}
+                onClick={handleStart}
+                data-tutorial="startButton"
+              >
                 Start
               </button>
             </div>
           </div>
         )}
 
+        {/* Кнопка запуску туторіалу */}
         {settingsOpen && (
           <button
             className={styles.tutorialButton}
@@ -501,14 +531,16 @@ const MedicationSimpleChoiceGameContent = () => {
           </button>
         )}
 
+        {/* Якщо немає питань */}
         {!settingsOpen && !gameFinished && questions.length === 0 && (
           <div className={styles.noQuestionsOverlay}>
             <div className={styles.noQuestionsMessage}>
-              <p>Für diesen Filter sind zurzeit keine Medikamente verfügbar.</p>
+              <p>Für diesen Filter sind zurzeit keine Abkürzungen verfügbar.</p>
             </div>
           </div>
         )}
 
+        {/* Якщо є питання і гра не завершена */}
         {!settingsOpen && !gameFinished && questions.length > 0 && (
           <>
             <div className={styles.progressContainer}>
@@ -524,7 +556,7 @@ const MedicationSimpleChoiceGameContent = () => {
                   {frageIstAbgeschlossen && (
                     <Tippy
                       content={
-                        aktuelleFrage?.med?.[`${selectedLanguage}Explanation`] ||
+                        aktuelleFrage?.abbr?.explanation?.[selectedLanguage] ||
                         "Keine zusätzliche Info"
                       }
                       trigger="click"
@@ -535,11 +567,14 @@ const MedicationSimpleChoiceGameContent = () => {
                     </Tippy>
                   )}
                 </h2>
+
                 <div className={styles.optionsContainer}>
                   {aktuelleFrage?.optionen.map((option, idx) => {
                     const { richtigeAntwort } = aktuelleFrage;
                     const isCompleted = frageIstAbgeschlossen;
+
                     if (!allowEdit) {
+                      // Звичайний режим
                       const chosenAnswer = answersNoEdit[qIndex] || null;
                       let isWrong = false;
                       let isCorrect = false;
@@ -563,6 +598,7 @@ const MedicationSimpleChoiceGameContent = () => {
                         </button>
                       );
                     } else {
+                      // Режим редагування
                       const wrongAnswersArr = wrongSelectionsEdit[qIndex] || [];
                       let isWrongEdit = wrongAnswersArr.includes(option);
                       let isCorrectEdit = false;
@@ -583,6 +619,7 @@ const MedicationSimpleChoiceGameContent = () => {
                     }
                   })}
                 </div>
+
                 <div className={styles.navigationContainer}>
                   {currentIndex > 0 && (
                     <button
@@ -625,10 +662,12 @@ const MedicationSimpleChoiceGameContent = () => {
           </>
         )}
 
+        {/* Якщо гра завершена */}
         {gameFinished && (
           <div className={styles.resultsOverlay}>{ErgebnisseAnzeigen()}</div>
         )}
 
+        {/* Кнопка для відкриття налаштувань (якщо не мобільний або якщо налаштування вже закриті) */}
         {(!settingsOpen || window.innerWidth > 768) && (
           <div className={styles.bottomRightSettings}>
             <button
@@ -647,12 +686,13 @@ const MedicationSimpleChoiceGameContent = () => {
 
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
+      {/* Туторіал */}
       {showTutorial && (
-        <MedicationSimpleChoiceGameTutorial
+        <AbbreviationsSimpleChoiceGameTutorial
           run={showTutorial}
           onFinish={() => {
             setShowTutorial(false);
-            localStorage.setItem("medicationSimpleChoiceGameTutorialCompleted", "true");
+            localStorage.setItem("abbreviationsSimpleChoiceGameTutorialCompleted", "true");
           }}
         />
       )}
@@ -660,12 +700,12 @@ const MedicationSimpleChoiceGameContent = () => {
   );
 };
 
-const MedicationSimpleChoiceGame = () => {
+const AbbreviationsSimpleChoiceGame = () => {
   return (
-    <MedicationStatusProvider>
-      <MedicationSimpleChoiceGameContent />
-    </MedicationStatusProvider>
+    <AbbreviationsStatusProvider>
+      <AbbreviationsSimpleChoiceGameContent />
+    </AbbreviationsStatusProvider>
   );
 };
 
-export default MedicationSimpleChoiceGame;
+export default AbbreviationsSimpleChoiceGame;

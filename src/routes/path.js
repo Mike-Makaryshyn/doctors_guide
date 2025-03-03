@@ -135,5 +135,8 @@ export const pathList = {
   abbreviations_flashcard: {
     path: "/abbreviations-flashcard-game",
   },
-  
+  abbreviations_simplechoice: {
+    path: "/abbreviations-simplechoice-game",
+  },
+ 
 };
