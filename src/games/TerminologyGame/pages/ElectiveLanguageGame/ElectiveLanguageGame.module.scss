@@ -572,9 +572,9 @@
 
 /* Tutorial-Button */
 .tutorialButton {
-  position: absolute;
-  top: -220px;
-  right: -60px;
+  position: fixed;
+  top: 54px;       /* При необхідності відкоригуйте це значення */
+  right: 0px;     /* Змініть значення з -9px на позитивне, щоб кнопка була на потрібній відстані від правого краю */
   width: 45px;
   height: 45px;
   background: none;
@@ -584,14 +584,12 @@
   justify-content: center;
   cursor: pointer;
   border: none;
-  box-shadow: none;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  z-index: 3000;
+  z-index: 10000;
 }
-
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
+  background: rgba(76, 175, 79, 0);
 }
 
 /* Basisklasse für .languageCell */
