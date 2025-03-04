@@ -65,26 +65,24 @@
 
 /* Styles for the tutorial trigger button */
 .tutorialButton {
-  position: absolute; /* Фіксуємо в правому верхньому куті сторінки */
-  top: 60px; /* Відступ від верхнього краю */
-  right: 15px; /* Відступ від правого краю */
+  position: fixed;
+  top: 54px;       /* При необхідності відкоригуйте це значення */
+  right: 20px;     /* Змініть значення з -9px на позитивне, щоб кнопка була на потрібній відстані від правого краю */
   width: 45px;
   height: 45px;
-  background: none; /* Без фону */
-  border-radius: 50%; /* Кругла кнопка */
+  background: none;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: none; /* Без рамки */
-  box-shadow: none; /* Без тіні */
+  border: none;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  z-index: 3000; /* Забезпечуємо, що кнопка завжди на передньому фоні */
+  z-index: 10000;
 }
-
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76, 175, 80, 0.2); /* Зміна бекґраунду при наведенні */
+  background: rgba(76, 175, 79, 0);
 }
 
 .tutorialButton span {

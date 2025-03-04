@@ -431,9 +431,9 @@
 }
 
 .tutorialButton {
-  position: absolute;
-  top: -20px;
-  right: -9px;
+  position: fixed;
+  top: 54px;
+  right: -9px; /* Passe diesen Wert ggf. an */
   width: 45px;
   height: 45px;
   background: none;

@@ -431,9 +431,9 @@
 }
 
 .tutorialButton {
-  position: absolute;
-  top: -20px;
-  right: -9px;
+  position: fixed;
+  top: 54px;       /* При необхідності відкоригуйте це значення */
+  right: 0px;     /* Змініть значення з -9px на позитивне, щоб кнопка була на потрібній відстані від правого краю */
   width: 45px;
   height: 45px;
   background: none;
@@ -448,7 +448,7 @@
 }
 .tutorialButton:hover {
   transform: scale(1.1);
-  background: rgba(76,175,79,0);
+  background: rgba(76, 175, 79, 0);
 }
 
 .modal-open {
