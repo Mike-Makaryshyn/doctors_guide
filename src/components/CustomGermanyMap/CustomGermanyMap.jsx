@@ -1,9 +1,6 @@
 // CustomGermanyMap.jsx
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
-import { geoCentroid } from "d3-geo";
 import styles from "./CustomGermanyMap.module.css";
 import germanyGeo from "./germanyGeo.json";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
@@ -12,9 +9,6 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
-// ===============================
-//   Wappen-Imports (Beispiele)
-// ===============================
 import BadenWuerttembergCoat from "../../assets/coats/Baden-Württember.svg";
 import BayernCoat from "../../assets/coats/Bayer.svg";
 import BerlinCoat from "../../assets/coats/Berlin.svg";
@@ -25,8 +19,7 @@ import HessenCoat from "../../assets/coats/Hessen.svg";
 import MecklenburgVorpommernCoat from "../../assets/coats/Mecklenburg-Vorpommern.svg";
 import NiedersachsenCoat from "../../assets/coats/Niedersachsen.svg";
 import NordrheinWestfalenCoat from "../../assets/coats/Nordrhein-Westfalen.svg";
-// Falls du wirklich ein separates Wappen willst, kannst du hier eine eigene SVG angeben
-import WestfalenLippeCoat from "../../assets/coats/Nordrhein-Westfalen.svg"; 
+import WestfalenLippeCoat from "../../assets/coats/Nordrhein-Westfalen.svg";
 import RheinlandPfalzCoat from "../../assets/coats/Rheinland-Pfalz.svg";
 import SaarlandCoat from "../../assets/coats/Saarland.svg";
 import SachsenCoat from "../../assets/coats/Sachsen.svg";
@@ -34,47 +27,37 @@ import SachsenAnhaltCoat from "../../assets/coats/Sachsen-Anhalt.svg";
 import SchleswigHolsteinCoat from "../../assets/coats/Schleswig-Holstein.svg";
 import ThueringenCoat from "../../assets/coats/Thüringen.svg";
 
-// ==================================================================
-// (1) Mapping-Funktion: Aus dem GeoJSON-Namen => "dein" Standardname
-// ==================================================================
+// Name-Mappings, falls gebraucht
 const nameMappings = {
-  // Mecklenburg-Vorpommern (Bindestrich) zu Mecklenburg Vorpommern (Leerzeichen)
   "Mecklenburg-Vorpommern": "Mecklenburg Vorpommern",
-
-  // NRW-Fälle. Manche GeoJSON-Dateien enthalten Zusätze wie "-Münster", "-Westfalen" etc.
   "Nordrhein-Westfalen-Münster": "Nordrhein-Westfalen",
-  // Beispiel: falls du "Westfalen-Lippe" wirklich trennen willst
   "Nordrhein-Westfalen-Westfalen": "Westfalen-Lippe",
-
-  // Wenn dein GeoJSON noch mehr Varianten hat, hier ergänzen:
-  // "Baden-Wuerttemberg": "Baden-Württemberg",
-  // "Thueringen": "Thüringen",
-  // etc.
 };
 
 function unifyRegionName(rawName) {
   return nameMappings[rawName] || rawName;
 }
 
-// ==================================================================
-// (2) Einzige, gültige Namen in Farbe, Gruß, Wappen usw.
-// ==================================================================
+// Jetzt vier Teilregionen mit eigenen (ähnlichen) Farben
 const regionColors = {
-  "Baden-Württemberg": "var(--DE-BW)",
+  // BW-Hauptregion (falls vorhanden)
+  "Baden-Württemberg": "#f15958",
+
+  "Baden-Württemberg-Freiburg": "#f15958",
+  "Baden-Württemberg-Karlsruhe": "#ed625b",
+  "Baden-Württemberg-Stuttgart": "#f17666",
+  "Baden-Württemberg-Reutlingen": "#f18d79",
+
   Bayern: "var(--DE-BY)",
   Berlin: "var(--DE-BE)",
   Brandenburg: "var(--DE-BB)",
   Bremen: "var(--DE-HB)",
   Hamburg: "var(--DE-HH)",
   Hessen: "var(--DE-HE)",
-  "Mecklenburg Vorpommern": "var(--DE-MV)", // <-- mit Leerzeichen
+  "Mecklenburg Vorpommern": "var(--DE-MV)",
   Niedersachsen: "var(--DE-NI)",
-
-  // NRW als ein Bereich
   "Nordrhein-Westfalen": "var(--DE-NW)",
-  // Westfalen-Lippe separat, falls du es so brauchst:
   "Westfalen-Lippe": "var(--DE-NW)",
-
   "Rheinland-Pfalz": "var(--DE-RP)",
   Saarland: "var(--DE-SL)",
   Sachsen: "var(--DE-SN)",
@@ -83,20 +66,24 @@ const regionColors = {
   Thüringen: "var(--DE-TH)",
 };
 
+// Greetings etc. 1:1 beibehalten
 const regionGreetings = {
   "Baden-Württemberg": "Grüß Gott",
+  "Baden-Württemberg-Freiburg": "Grüß Gott",
+  "Baden-Württemberg-Karlsruhe": "Grüß Gott",
+  "Baden-Württemberg-Stuttgart": "Grüß Gott",
+  "Baden-Württemberg-Reutlingen": "Grüß Gott",
+
   Bayern: "Servus",
   Berlin: "Hallo",
   Brandenburg: "Guten Tag",
   Bremen: "Moin",
   Hamburg: "Moin Moin",
   Hessen: "Gude",
-  "Mecklenburg Vorpommern": "Moin", 
+  "Mecklenburg Vorpommern": "Moin",
   Niedersachsen: "Moin",
-
   "Nordrhein-Westfalen": "Hallo NRW",
   "Westfalen-Lippe": "Hallo Westfalen-Lippe",
-
   "Rheinland-Pfalz": "Guten Tag",
   Saarland: "Hallo",
   Sachsen: "Guten Tag",
@@ -105,9 +92,13 @@ const regionGreetings = {
   Thüringen: "Guten Tag",
 };
 
-// Coat-of-Arms (Wappen)
 const regionCoatsOfArms = {
   "Baden-Württemberg": BadenWuerttembergCoat,
+  "Baden-Württemberg-Freiburg": BadenWuerttembergCoat,
+  "Baden-Württemberg-Karlsruhe": BadenWuerttembergCoat,
+  "Baden-Württemberg-Stuttgart": BadenWuerttembergCoat,
+  "Baden-Württemberg-Reutlingen": BadenWuerttembergCoat,
+
   Bayern: BayernCoat,
   Berlin: BerlinCoat,
   Brandenburg: BrandenburgCoat,
@@ -116,10 +107,8 @@ const regionCoatsOfArms = {
   Hessen: HessenCoat,
   "Mecklenburg Vorpommern": MecklenburgVorpommernCoat,
   Niedersachsen: NiedersachsenCoat,
-
   "Nordrhein-Westfalen": NordrheinWestfalenCoat,
   "Westfalen-Lippe": WestfalenLippeCoat,
-
   "Rheinland-Pfalz": RheinlandPfalzCoat,
   Saarland: SaarlandCoat,
   Sachsen: SachsenCoat,
@@ -128,9 +117,7 @@ const regionCoatsOfArms = {
   Thüringen: ThueringenCoat,
 };
 
-// ==================================================================
-// (3) Die Hauptkomponente CustomGermanyMap
-// ==================================================================
+// Hauptkomponente
 const CustomGermanyMap = () => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
@@ -166,15 +153,13 @@ const CustomGermanyMap = () => {
       );
       if (confirmChange) {
         handleChangeRegion(pendingRegion);
-        navigate("/dashboard");
+        navigate("/main_menu"); 
       }
     }
   };
 
-  // Wird im UI angezeigt: Hover > Pending-Klick > ausgewählt
   const displayedRegion = hoveredRegion || pendingRegion || selectedRegion;
 
-  // Scroll-Sperre für Mobile, wenn das Modal offen ist
   useEffect(() => {
     if (isModalOpen && isMobile) {
       document.body.style.overflow = "hidden";
@@ -188,7 +173,6 @@ const CustomGermanyMap = () => {
 
   return (
     <MainLayout>
-      {/* Button (nur mobil sichtbar), um ins Dashboard zu gehen */}
       {isMobile && (
         <div className={styles.mobileButtonContainer}>
           <button
@@ -206,14 +190,12 @@ const CustomGermanyMap = () => {
       )}
 
       <div className={styles.container}>
-        {/* Überschrift mit dem aktuellen Regionen-Namen (mobil) */}
         {isMobile && displayedRegion && (
           <div className={styles.mobileHeader}>
             <h2 className={styles.mobileRegionName}>{displayedRegion}</h2>
           </div>
         )}
 
-        {/* Die eigentliche Karte */}
         <div className={styles.mapContainer}>
           <ComposableMap
             projection="geoMercator"
@@ -229,6 +211,7 @@ const CustomGermanyMap = () => {
                   const rawName = geo.properties.name;
                   const regionName = unifyRegionName(rawName);
                   const isSelected = selectedRegion === regionName;
+                  const fillColor = regionColors[regionName] || "#cccccc";
 
                   return (
                     <Geography
@@ -242,15 +225,15 @@ const CustomGermanyMap = () => {
                       }`}
                       style={{
                         default: {
-                          fill: regionColors[regionName] || "#cccccc",
+                          fill: fillColor,
                           outline: "none",
                         },
                         hover: {
-                          fill: regionColors[regionName] || "#aaaaaa",
+                          fill: fillColor,
                           outline: "none",
                         },
                         pressed: {
-                          fill: regionColors[regionName] || "#888888",
+                          fill: fillColor,
                           outline: "none",
                         },
                       }}
@@ -262,11 +245,9 @@ const CustomGermanyMap = () => {
           </ComposableMap>
         </div>
 
-        {/* Rechte Infospalte oder unten, je nach Layout */}
         <div className={styles.infoContainer}>
           {displayedRegion ? (
             <>
-              {/* Nur anzeigen, wenn displayedRegion = selectedRegion */}
               {displayedRegion === selectedRegion && (
                 <p className={styles.currentRegionLabel}>
                   Aktuell ausgewählte Region:
@@ -276,7 +257,6 @@ const CustomGermanyMap = () => {
               <p className={styles.greeting}>
                 {regionGreetings[displayedRegion]}
               </p>
-              {/* Wappen, sofern vorhanden */}
               {regionCoatsOfArms[displayedRegion] && (
                 <img
                   src={regionCoatsOfArms[displayedRegion]}
@@ -284,7 +264,6 @@ const CustomGermanyMap = () => {
                   className={styles.coatOfArms}
                 />
               )}
-              {/* Desktop-Button (falls nicht mobil) */}
               {!isMobile && (
                 <button
                   className={styles.mobileDashboardButton}
