@@ -45,6 +45,12 @@ const regionAbbreviations = {
   Hamburg: "HH",
   "Mecklenburg Vorpommern": "MV",
   "Sachsen-Anhalt": "ST",
+
+  // Оновлені записи для чотирьох підрегіонів BW:
+  "Baden-Württemberg-Freiburg": "BWF",
+  "Baden-Württemberg-Karlsruhe": "BWK",
+  "Baden-Württemberg-Stuttgart": "BWS",
+  "Baden-Württemberg-Reutlingen": "BWR",
 };
 
 // Filtermodi
