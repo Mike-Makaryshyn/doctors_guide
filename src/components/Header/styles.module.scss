@@ -32,6 +32,11 @@
    font-size: 18px;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
+ @media (max-width: 768px) {
+  .optionLabel {
+    display: none;
+  }
+}
  
  /* За замовчуванням на десктопі показуємо повну назву, а скорочення ховаємо */
  .sRegionFull {

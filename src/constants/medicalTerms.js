@@ -45410,7 +45410,11 @@ export const medicalTerms = [
       "Bremen",
       "Saarland",
       "Schleswig-Holstein",
-      "Thüringen"
+      "Thüringen",
+      "Baden-Württemberg-Freiburg",
+      "Baden-Württemberg-Karlsruhe",
+      "Baden-Württemberg-Stuttgart",
+      "Baden-Württemberg-Reutlingen"
     ],
     "sentence": "{BLANK} spielt eine zentrale Rolle bei der Stabilisierung des hinteren Gehirnanteils und kann bei pathologischen Zuständen von Bedeutung sein.",
     "answer": "das Kleinhirnzelt"

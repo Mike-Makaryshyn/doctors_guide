@@ -74,7 +74,7 @@ export const documentsSecond = [
       ru: "Актуальное, табличное, лично подписанное резюме (отражающее учебу и карьерный путь до даты подачи заявки без пробелов)",
       de: "Aktueller, tabellarischer, persönlich unterschriebener Lebenslauf (darin sind Studium und der berufliche Werdegang bis zum Datum der Antragstellung lückenlos darzustellen)",
     },
-    letterName: "Tabellarischer Lebenslauf", 
+    letterName: "Tabellarischer Lebenslauf",
     links: createLinks(
       {
         en: "Create a CV",
@@ -140,8 +140,55 @@ export const documentsSecond = [
             de: "Füllen Sie den Antrag hier aus",
           },
         },
+
+        // (Замість одного "Baden-Württemberg" – чотири)
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
           text: {
             en: "Fill out the application here",
@@ -170,7 +217,6 @@ export const documentsSecond = [
             de: "Füllen Sie den Antrag hier aus",
           },
         },
-        
 
         {
           landName: "Brandenburg",
@@ -400,7 +446,7 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
           text: {
             en: "Fill out the application here.",
@@ -414,6 +460,54 @@ export const documentsSecond = [
             de: "Füllen Sie den Antrag hier aus.",
           },
         },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+          },
+        },
+
+
+
         {
           landName: "Nordrhein-Westfalen",
           link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
@@ -643,7 +737,8 @@ export const documentsSecond = [
       ru: " Письменное, неофициальное, лично подписанное заявление о том, что вы ранее не подавали заявление на получение лицензии в Германии",
       de: " Schriftliche, formlose, persönlich unterschriebene Erklärung, dass Sie in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt haben",
     },
-    letterName: "Schriftliche, formlose, persönlich unterschriebene Erklärung, dass ich in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt habe",
+    letterName:
+      "Schriftliche, formlose, persönlich unterschriebene Erklärung, dass ich in der Vergangenheit in Deutschland noch keinen Antrag auf Erteilung der Approbation gestellt habe",
     links: {
       "Non-EU": [
         {
@@ -677,6 +772,51 @@ export const documentsSecond = [
           },
         },
         {
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
           landName: "Baden-Württemberg",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
           text: {
@@ -692,7 +832,7 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Nordrhein-Westfalen",
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
@@ -934,7 +1074,52 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here.",
@@ -1178,7 +1363,8 @@ export const documentsSecond = [
       ru: "Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
       de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
     },
-    letterName: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
+    letterName:
+      "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
     links: {
       "Non-EU": [
         {
@@ -1212,7 +1398,52 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
@@ -1469,7 +1700,7 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Freiburg",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
           text: {
             en: "The relevant form is included in the application for licensure.",
@@ -1484,7 +1715,52 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Nordrhein-Westfalen",
+          landName: "Baden-Württemberg-Reutlingen",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
           link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure.",
@@ -1712,7 +1988,8 @@ export const documentsSecond = [
       ru: "Актуальная медицинская справка, подтверждающая вашу пригодность к выполнению профессиональных обязанностей (справка должна быть выдана не ранее чем за три месяца до подачи заявления)",
       de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
     },
-    letterName: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
+    letterName:
+      "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
     links: {
       "Non-EU": [
         {
@@ -1746,7 +2023,52 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
           text: {
             en: "Fill out the application here",
@@ -2004,7 +2326,52 @@ export const documentsSecond = [
           },
         },
         {
-          landName: "Baden-Württemberg",
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+          },
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
           link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
           text: {
             en: "Fill out the application here",

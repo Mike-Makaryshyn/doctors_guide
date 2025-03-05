@@ -8,7 +8,20 @@ import { AiOutlineClose } from "react-icons/ai";
 
 // Якщо глобально вибрано "Westfalen-Lippe", перетворюємо на "Nordrhein-Westfalen"
 const unifyRegion = (r) => {
+  // 1) Westfalen-Lippe => NRW
   if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
+
+  // 2) Baden-Württemberg-Freiburg usw. => "Baden-Württemberg"
+  if (
+    r === "Baden-Württemberg-Freiburg" ||
+    r === "Baden-Württemberg-Karlsruhe" ||
+    r === "Baden-Württemberg-Stuttgart" ||
+    r === "Baden-Württemberg-Reutlingen"
+  ) {
+    return "Baden-Württemberg";
+  }
+
+  // 3) Alles andere unverändert
   return r;
 };
 

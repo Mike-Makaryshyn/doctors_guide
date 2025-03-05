@@ -4,7 +4,9 @@ import React, { createContext, useState, useCallback, useMemo } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
-// Імпортуємо локальні файли (імена файлів без дефісів/умляутів)
+// ==========================
+//  Import vorhandener Daten
+// ==========================
 import THUERINGEN_DATA from "../constants/translation/Fall/Thüringen.js";
 import BADENWUERTTEMB_DATA from "../constants/translation/Fall/Baden-Württemberg.js";
 import BAYERN_DATA from "../constants/translation/Fall/Bayern.js";
@@ -22,18 +24,20 @@ import SACHSEN_DATA from "../constants/translation/Fall/Sachsen.js";
 import SACHSENANHALT_DATA from "../constants/translation/Fall/Sachsen-Anhalt.js";
 import SCHLESWIGHOLSTEIN_DATA from "../constants/translation/Fall/Schleswig-Holstein.js";
 import WESTFALEN_DATA from "../constants/translation/Fall/Westfalen-Lippe.js";
+
+// ==============================
+//  Neue 4 Dateien für Sub-BW
+// ==============================
+import BW_FREIBURG_DATA from "../constants/translation/Fall/Baden-Württemberg-Freiburg.js";
+import BW_KARLSRUHE_DATA from "../constants/translation/Fall/Baden-Württemberg-Karlsruhe.js";
+import BW_STUTTGART_DATA from "../constants/translation/Fall/Baden-Württemberg-Stuttgart.js";
+import BW_REUTLINGEN_DATA from "../constants/translation/Fall/Baden-Württemberg-Reutlingen.js";
+
 export const DataSourceContext = createContext();
 
-/**
- * DataSourceProvider:
- * - Зберігає локальні дані (sources.local) для кожного регіону.
- * - Завантажує дані з Firebase (sources.firebase) при необхідності.
- *
- * Документ у колекції "cases" в Firestore має ім'я, що відповідає ключу (наприклад, "Thüringen").
- */
 export const DataSourceProvider = ({ children }) => {
   const [dataSources, setDataSources] = useState({
-    // === THÜRINGEN (документ Firestore також названий "Thüringen") ===
+    // === THÜRINGEN
     "Thüringen": {
       key: "Thueringen",
       name: "Thüringen",
@@ -43,37 +47,112 @@ export const DataSourceProvider = ({ children }) => {
         local: THUERINGEN_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
-          sourceType: "local", // Додаємо sourceType
+          sourceType: "local",
         })),
         firebase: [],
       },
       files: THUERINGEN_DATA.map((item) => ({
         id: item.id,
         name: item.fullName || "Без імені",
-        sourceType: "local", // Додаємо sourceType
+        sourceType: "local",
       })),
     },
 
-    // === Інші регіони ===
-    "Baden-Württemberg": {
-      key: "BadenWuerttemberg",
-      name: "Baden-Württemberg",
-      region: "Baden-Württemberg",
+
+
+    // =================================================
+    // (1) Baden-Württemberg-Freiburg
+    // =================================================
+    "Baden-Württemberg-Freiburg": {
+      key: "BadenWuerttembergFreiburg",
+      name: "Baden-Württemberg-Freiburg",
+      region: "Baden-Württemberg-Freiburg",
       type: "dynamic",
       sources: {
-        local: BADENWUERTTEMB_DATA.map((item) => ({
+        local: BW_FREIBURG_DATA.map((item) => ({
           id: item.id,
           name: item.fullName || "Без імені",
           sourceType: "local",
         })),
         firebase: [],
       },
-      files: BADENWUERTTEMB_DATA.map((item) => ({
+      files: BW_FREIBURG_DATA.map((item) => ({
         id: item.id,
         name: item.fullName || "Без імені",
         sourceType: "local",
       })),
     },
+
+    // =================================================
+    // (2) Baden-Württemberg-Karlsruhe
+    // =================================================
+    "Baden-Württemberg-Karlsruhe": {
+      key: "BadenWuerttembergKarlsruhe",
+      name: "Baden-Württemberg-Karlsruhe",
+      region: "Baden-Württemberg-Karlsruhe",
+      type: "dynamic",
+      sources: {
+        local: BW_KARLSRUHE_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+          sourceType: "local",
+        })),
+        firebase: [],
+      },
+      files: BW_KARLSRUHE_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
+    },
+
+    // =================================================
+    // (3) Baden-Württemberg-Stuttgart
+    // =================================================
+    "Baden-Württemberg-Stuttgart": {
+      key: "BadenWuerttembergStuttgart",
+      name: "Baden-Württemberg-Stuttgart",
+      region: "Baden-Württemberg-Stuttgart",
+      type: "dynamic",
+      sources: {
+        local: BW_STUTTGART_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+          sourceType: "local",
+        })),
+        firebase: [],
+      },
+      files: BW_STUTTGART_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
+    },
+
+    // =================================================
+    // (4) Baden-Württemberg-Reutlingen
+    // =================================================
+    "Baden-Württemberg-Reutlingen": {
+      key: "BadenWuerttembergReutlingen",
+      name: "Baden-Württemberg-Reutlingen",
+      region: "Baden-Württemberg-Reutlingen",
+      type: "dynamic",
+      sources: {
+        local: BW_REUTLINGEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+          sourceType: "local",
+        })),
+        firebase: [],
+      },
+      files: BW_REUTLINGEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
+    },
+
+    // === Andere Regionen (alle unverändert) ===
     Bayern: {
       key: "Bayern",
       name: "Bayern",
@@ -246,24 +325,24 @@ export const DataSourceProvider = ({ children }) => {
       })),
     },
     "Westfalen-Lippe": {
-  key: "WestfalenLippe",
-  name: "Westfalen-Lippe",
-  region: "Westfalen-Lippe",
-  type: "dynamic",
-  sources: {
-    local: WESTFALEN_DATA.map((item) => ({
-      id: item.id,
-      name: item.fullName || "Без імені",
-      sourceType: "local", // Indicates local data
-    })),
-    firebase: [], // Placeholder for Firebase data
-  },
-  files: WESTFALEN_DATA.map((item) => ({
-    id: item.id,
-    name: item.fullName || "Без імені",
-    sourceType: "local", // Indicates the source type
-  })),
-},
+      key: "WestfalenLippe",
+      name: "Westfalen-Lippe",
+      region: "Westfalen-Lippe",
+      type: "dynamic",
+      sources: {
+        local: WESTFALEN_DATA.map((item) => ({
+          id: item.id,
+          name: item.fullName || "Без імені",
+          sourceType: "local",
+        })),
+        firebase: [],
+      },
+      files: WESTFALEN_DATA.map((item) => ({
+        id: item.id,
+        name: item.fullName || "Без імені",
+        sourceType: "local",
+      })),
+    },
     "Rheinland-Pfalz": {
       key: "RheinlandPfalz",
       name: "Rheinland-Pfalz",
@@ -361,26 +440,21 @@ export const DataSourceProvider = ({ children }) => {
     },
   });
 
-  /**
-   * Завантажує випадки з Firebase для вибраного регіону (regionKey),
-   * а потім зберігає їх у sources.firebase та оновлює files.
-   *
-   * Ім'я документа в Firestore відповідає ключу (наприклад, "Thüringen").
-   */
+  // Funktion, die Daten aus Firebase lädt
   const fetchFirebaseCases = useCallback(async (regionKey) => {
     try {
       const docRef = doc(db, "cases", regionKey);
       const docSnap = await getDoc(docRef);
 
       if (!docSnap.exists()) {
-        console.error(`Документ "${regionKey}" не знайдено в Firestore.`);
+        console.error(`Dokument "${regionKey}" nicht in Firestore gefunden.`);
         return;
       }
 
       const docData = docSnap.data();
       const fetchedCases = docData.cases || [];
 
-      console.log(`Отримані випадки з Firebase [${regionKey}]:`, fetchedCases);
+      console.log(`Firebase-Fälle erhalten [${regionKey}]:`, fetchedCases);
 
       const mapped = fetchedCases.map((caseItem) => ({
         ...caseItem,
@@ -403,13 +477,14 @@ export const DataSourceProvider = ({ children }) => {
         };
       });
     } catch (error) {
-      console.error(`Помилка при завантаженні Firebase для регіону ${regionKey}:`, error);
+      console.error(
+        `Fehler beim Laden aus Firebase für Region ${regionKey}:`,
+        error
+      );
     }
   }, []);
 
-  /**
-   * Повертає масив кейсів для (regionKey, source)
-   */
+  // Aktuelle Cases abrufen
   const getCurrentCases = useCallback(
     (regionKey, source) => {
       if (!dataSources[regionKey]?.sources) return [];
@@ -418,11 +493,14 @@ export const DataSourceProvider = ({ children }) => {
     [dataSources]
   );
 
-  const contextValue = useMemo(() => ({
-    dataSources,
-    fetchFirebaseCases,
-    getCurrentCases,
-  }), [dataSources, fetchFirebaseCases, getCurrentCases]);
+  const contextValue = useMemo(
+    () => ({
+      dataSources,
+      fetchFirebaseCases,
+      getCurrentCases,
+    }),
+    [dataSources, fetchFirebaseCases, getCurrentCases]
+  );
 
   return (
     <DataSourceContext.Provider value={contextValue}>
