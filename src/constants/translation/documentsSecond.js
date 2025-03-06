@@ -1697,9 +1697,11 @@ export const documentsSecond = [
       ar: "إقرار مكتوب وغير رسمي وموقع شخصيًا بأنك لم تقدم طلبًا للحصول على الترخيص في ألمانيا سابقًا",
       tr: "Aşağıdaki ifadeyi içeren yazılı, resmi olmayan beyan: 'Burada, sabıka kaydım olmadığını ve aleyhimde devam eden herhangi bir yargı ceza davası veya savcılık soruşturması bulunmadığını beyan ederim",
       pl: " Pisemne, nieformalne oświadczenie o następującej treści: 'Niniejszym oświadczam, że nie jestem karany i że nie toczy się przeciwko mnie żadne sądowe postępowanie karne ani prokuratorskie postępowanie przygotowawcze",
-      uk: "Письмова, неформальна заява з наступним текстом: 'Цим заявляю, що у мене немає судимості і що проти мене не ведеться жодне судове кримінальне провадження чи прокурорське розслідування",
-      ru: "Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
+      uk: " Письмова, неформальна заява з наступним текстом: 'Цим заявляю, що у мене немає судимості і що проти мене не ведеться жодне судове кримінальне провадження чи прокурорське розслідування",
+      ru: " Письменное, неофициальное заявление со следующим текстом: 'Настоящим заявляю, что у меня нет судимости и что против меня не ведется ни одного судебного уголовного дела или прокурорского расследования",
       de: "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
+      el: "Γραπτή, ανεπίσημη δήλωση με το εξής κείμενο: «Δηλώνω με το παρόν ότι δεν έχω ποινικό μητρώο και ότι ούτε διεξάγεται καμία δικαστική ποινική διαδικασία ούτε βρίσκεται σε εξέλιξη καμία έρευνα από τον εισαγγελέα κατά μου",
+      ro: "Declarație scrisă, informală, cu următorul text: 'Prin prezenta declar că nu am antecedente penale și că niciun proces penal judiciar sau investigație procuroruală nu este în curs împotriva mea"
     },
     letterName:
       "Schriftliche, formlose Erklärung mit folgendem Wortlaut: „Hiermit erkläre ich, dass ich nicht vorbestraft bin und dass weder ein gerichtliches Strafverfahren noch ein staatsanwaltschaftliches Ermittlungsverfahren gegen mich anhängig ist",
@@ -1718,7 +1720,9 @@ export const documentsSecond = [
             uk: "Подача заяви проходить онлайн",
             ru: "Подача заявления осуществляется онлайн",
             de: "Der Antrag wird online eingereicht",
-          },
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά",
+            ro: "Cererea se depune online"
+          }
         },
         {
           landName: "Niedersachsen",
@@ -1733,7 +1737,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Freiburg",
@@ -1741,14 +1747,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Karlsruhe",
@@ -1756,14 +1764,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Stuttgart",
@@ -1771,14 +1781,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Reutlingen",
@@ -1786,14 +1798,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Nordrhein-Westfalen",
@@ -1801,59 +1815,67 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Westfalen-Lippe",
           link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            tr: "İlgili form lisans başvurusuna dahildir.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια.",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Brandenburg",
           link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-6_Drittland_Vordruck_Versicherungen_zum_Antrag.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
-          landName: "Mecklenburg Vorpommern",
-          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1664377",
+          landName: "Mecklenburg-Vorpommern",
+          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1672074",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hessen",
@@ -1861,14 +1883,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen-Anhalt",
@@ -1877,58 +1901,66 @@ export const documentsSecond = [
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
             es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
-          landName: "RheinlandPfalz",
-          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Berufserlaubnis_Antrag_Ausland.pdf",
+          landName: "Rheinland-Pfalz",
+          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Approbation_EU_Antrag.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen",
-          link: "https://www.lds.sachsen.de/ref/?ID=10904&art_param=485&abteilung_id=4&referat_id=16",
+          link: "https://fs.egov.sachsen.de/formserv/findform?shortname=sms_ld_apparzt_3&formtecid=2&areashortname=142",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Thüringen",
           link: "https://thformular.thueringen.de/thueform/dct/eject/htmlprint/C5E1F70311B776FAB55ECDF320F5A3FC.pdf?MANDANTID=26&FORMUID=GESUNDAUSB-227-TH-TLVWA",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
           landName: "SchleswigHolstein",
@@ -1943,11 +1975,13 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Saarland",
-          link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Antrag_Erteilung_Approbation.pdf?__blob=publicationFile&v=6",
+          link: null, // Since "Does not exist"
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -1957,23 +1991,25 @@ export const documentsSecond = [
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            de: "Füllen Sie den Antrag hier aus"
+          }
         },
         {
           landName: "Berlin",
-          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/drittstaat/ds_akad_antrag_app_be_app_zap_pap.pdf",
+          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/europaeische-union/1eu_approbation_antrag.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hamburg",
@@ -1981,14 +2017,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Bremen",
@@ -2002,9 +2040,9 @@ export const documentsSecond = [
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
-        },
+            de: "Füllen Sie den Antrag hier aus"
+          }
+        }
       ],
       EU: [
         {
@@ -2020,7 +2058,9 @@ export const documentsSecond = [
             uk: "Проходить онлайн.",
             ru: "Подача заявления осуществляется онлайн.",
             de: "Der Antrag wird online eingereicht.",
-          },
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά.",
+            ro: "Cererea se depune online."
+          }
         },
         {
           landName: "Niedersachsen",
@@ -2035,7 +2075,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут.",
             ru: "Заполните заявление здесь.",
             de: "Füllen Sie den Antrag hier aus.",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Freiburg",
@@ -2043,14 +2085,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
             uk: "Знаходиться в документі.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
           landName: "Baden-Württemberg-Reutlingen",
@@ -2058,14 +2102,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
             uk: "Знаходиться в документі.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
           landName: "Baden-Württemberg-Karlsruhe",
@@ -2073,14 +2119,16 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
             uk: "Знаходиться в документі.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
           landName: "Baden-Württemberg-Stuttgart",
@@ -2088,48 +2136,54 @@ export const documentsSecond = [
           text: {
             en: "The relevant form is included in the application for licensure.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
             uk: "Знаходиться в документі.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
-          landName: "Baden-Württemberg-Stuttgart",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
-          text: {
-            en: "The relevant form is included in the application for licensure.",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
-        },
-        {
-          landName: "Westfalen-Lippe",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          landName: "Baden-Württemberg-Reutlingen",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Brandenburg",
-          link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-3_EU_Vordruck_Versicherungen_zum_Antrag.pdf",
+          link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-6_Drittland_Vordruck_Versicherungen_zum_Antrag.pdf",
           text: {
             en: "Fill out the application here.",
             fr: "Remplissez la demande ici.",
@@ -2140,174 +2194,171 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут.",
             ru: "Заполните заявление здесь.",
             de: "Füllen Sie den Antrag hier aus.",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Mecklenburg-Vorpommern",
           link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1672074",
           text: {
-            en: "The relevant form is included in the application for licensure.",
+            en: "The relevant form is included in the application for licensure. Link here.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hessen",
-          link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-12/merkblatt_und_approbationsantrag_eu_medizin.pdf",
+          link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-03/antrag_medizin_approbation_und_berufserlaubnis_drittstaaten_stand_16.02.23.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure.",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen-Anhalt",
-          link: "https://lvwa.sachsen-anhalt.de/fileadmin/Bibliothek/Politik_und_Verwaltung/LVWA/LVwA/Dokumente/5_famgesjugvers/507/ausland/Straffreiheitserklaerung.pdf",
+          link: "https://lvwa.sachsen-anhalt.de/fileadmin/Bibliothek/Politik_und_Verwaltung/LVWA/LVwA/Dokumente/5_famgesjugvers/507/ausland/Antrag_auf_Erteilung_der_Approbation-Berufserlaubnis.pdf",
           text: {
-            en: "Fill out the application here.",
-            fr: "Remplissez la demande ici.",
-            es: "Complete la solicitud aquí.",
-            ar: "املأ الطلب هنا.",
-            tr: "Başvuruyu burada doldurun.",
-            pl: "Wypełnij wniosek tutaj.",
-            uk: "Заповнити заяву тут.",
-            ru: "Заполните заявление здесь.",
-            de: "Füllen Sie den Antrag hier aus.",
-          },
-        },
-        {
-          landName: "Rheinland-Pfalz",
-          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Approbation_EU_Antrag.pdf",
-          text: {
-            en: "The relevant form is included in the application for licensure.",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen",
           link: "https://fs.egov.sachsen.de/formserv/findform?shortname=sms_ld_apparzt_3&formtecid=2&areashortname=142",
           text: {
-            en: "The relevant form is included in the application for licensure.",
+            en: "The relevant form is included in the application for licensure. Link here.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Thüringen",
           link: "https://thformular.thueringen.de/thueform/dct/eject/htmlprint/C5E1F70311B776FAB55ECDF320F5A3FC.pdf?MANDANTID=26&FORMUID=GESUNDAUSB-227-TH-TLVWA",
           text: {
-            en: "The relevant form is included in the application for licensure.",
+            en: "The relevant form is included in the application for licensure. Link here.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici."
+          }
         },
         {
-          landName: "Schleswig-Holstein",
+          landName: "SchleswigHolstein",
           link: "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/LASD/Aufgaben/Gesundheitsberufe/AkademischeHeilberufe/Arzt/Download/Allgemein/01_Erklaerung_zur_Straffreiheit.pdf?__blob=publicationFile&v=1",
           text: {
-            en: "Fill out the application here.",
-            fr: "Remplissez la demande ici.",
-            es: "Complete la solicitud aquí.",
-            ar: "املأ الطلب هنا.",
-            tr: "Başvuruyu burada doldurun.",
-            pl: "Wypełnij wniosek tutaj.",
-            uk: "Заповнити заяву тут.",
-            ru: "Заполните заявление здесь.",
-            de: "Füllen Sie den Antrag hier aus.",
-          },
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus"
+          }
         },
         {
           landName: "Saarland",
-          link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Antrag_Erteilung_Approbation.pdf?__blob=publicationFile&v=6",
+          link: null, // Since "Does not exist"
           text: {
-            en: "Fill out the application here.",
-            fr: "Remplissez la demande ici.",
-            es: "Complete la solicitud aquí.",
-            ar: "املأ الطلب هنا.",
-            tr: "Başvuruyu burada doldurun.",
-            pl: "Wypełnij wniosek tutaj.",
-            uk: "Заповнити заяву тут.",
-            ru: "Заполните заявление здесь.",
-            de: "Füllen Sie den Antrag hier aus.",
-          },
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus"
+          }
         },
         {
           landName: "Berlin",
           link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/europaeische-union/1eu_approbation_antrag.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure.",
+            en: "The relevant form is included in the application for licensure. Link here.",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
-            uk: "Знаходиться в документі.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier.",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here."
+          }
         },
         {
           landName: "Hamburg",
-          link: "https://www.hamburg.de/contentblob/2773700/f308f6887c612e299d0b933fdf23ca39/data/merkblatt-beantragung-approbation-eu.pdf",
+          link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-drittst-.pdf",
           text: {
-            en: "Fill out the application here.",
-            fr: "Remplissez la demande ici.",
-            es: "Complete la solicitud aquí.",
-            ar: "املأ الطلب هنا.",
-            tr: "Başvuruyu burada doldurun.",
-            pl: "Wypełnij wniosek tutaj.",
-            uk: "Заповнити заяву тут.",
-            ru: "Заполните заявление здесь.",
-            de: "Füllen Sie den Antrag hier aus.",
-          },
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here."
+          }
         },
         {
           landName: "Bremen",
           link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
           text: {
-            en: "Fill out the application here.",
-            fr: "Remplissez la demande ici.",
-            es: "Complete la solicitud aquí.",
-            ar: "املأ الطلب هنا.",
-            tr: "Başvuruyu burada doldurun.",
-            pl: "Wypełnij wniosek tutaj.",
-            uk: "Заповнити заяву тут.",
-            ru: "Заполните заявление здесь.",
-            de: "Füllen Sie den Antrag hier aus.",
-          },
-        },
-      ],
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus"
+          }
+        }
+      ]
     },
   },
   //ärztliche Bescheinigung
@@ -2325,6 +2376,8 @@ export const documentsSecond = [
       uk: "Актуальна медична довідка, що підтверджує вашу придатність до здійснення професійної діяльності (довідка повинна бути видана не пізніше ніж за три місяці до дати подання заяви)",
       ru: "Актуальная медицинская справка, подтверждающая вашу пригодность к выполнению профессиональных обязанностей (справка должна быть выдана не ранее чем за три месяца до подачи заявления)",
       de: "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
+      el: "Τρέχουσα ιατρική βεβαίωση που επιβεβαιώνει την υγειονομική σας καταλληλότητα για την άσκηση του επαγγέλματός σας (η βεβαίωση δεν πρέπει να έχει εκδοθεί περισσότερο από τρεις μήνες πριν από την ημερομηνία υποβολής της αίτησης)",
+      ro: "Certificatul medical actual care confirmă aptitudinea dumneavoastră de sănătate pentru a practica profesia (certificatul nu trebuie să fi fost emis cu mai mult de trei luni înainte de data depunerii cererii)"
     },
     letterName:
       "Aktuelle ärztliche Bescheinigung über Ihre gesundheitliche Eignung zur Ausübung Ihres Berufs (die Bescheinigung darf nicht früher als drei Monate vor Antragstellung ausgestellt worden sein)",
@@ -2332,7 +2385,7 @@ export const documentsSecond = [
       "Non-EU": [
         {
           landName: "Bayern",
-          link: "https://formularserver.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
+          link: "https://formularserver.bayern.de/intelliform/forms/stmi/regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -2343,7 +2396,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Niedersachsen",
@@ -2358,7 +2413,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Karlsruhe",
@@ -2373,7 +2430,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Freiburg",
@@ -2388,7 +2447,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Stuttgart",
@@ -2403,7 +2464,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Reutlingen",
@@ -2418,37 +2481,43 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Nordrhein-Westfalen",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацію. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Westfalen-Lippe",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Brandenburg",
@@ -2463,37 +2532,43 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
-          landName: "Mecklenburg Vorpommern",
-          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1638895",
+          landName: "Mecklenburg-Vorpommern",
+          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1672074",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hessen",
-          link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-03/aerztliche_bescheinigung_neu.pdf",
+          link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-12/merkblatt_und_approbationsantrag_eu_medizin.pdf",
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
             es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen-Anhalt",
@@ -2502,43 +2577,49 @@ export const documentsSecond = [
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
             es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
-          landName: "RheinlandPfalz",
-          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Aerztliche_Bescheinigung.pdf",
+          landName: "Rheinland-Pfalz",
+          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Approbation_EU_Antrag.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Sachsen",
-          link: "https://www.lds.sachsen.de/ref/?ID=10676&art_param=485&abteilung_id=4&referat_id=16",
+          link: "https://fs.egov.sachsen.de/formserv/findform?shortname=sms_ld_apparzt_3&formtecid=2&areashortname=142",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Thüringen",
@@ -2553,7 +2634,9 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "SchleswigHolstein",
@@ -2568,11 +2651,13 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Saarland",
-          link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Formular_Ärztliches_Attest.pdf?__blob=publicationFile&v=2",
+          link: null, // Since "Does not exist"
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -2582,12 +2667,46 @@ export const documentsSecond = [
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            de: "Füllen Sie den Antrag hier aus"
+          }
         },
         {
           landName: "Berlin",
-          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/aerztliche-bescheinigung_eu_ds_akad.pdf",
+          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/europaeische-union/1eu_approbation_antrag.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Hamburg",
+          link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-eu.pdf",
+          text: {
+            en: "The application is submitted online",
+            fr: "La demande se fait en ligne",
+            es: "La solicitud se realiza en línea",
+            ar: "يتم تقديم الطلب عبر الإنترنت",
+            tr: "Başvuru çevrimiçi olarak yapılır",
+            pl: "Wniosek składany jest online",
+            uk: "Подача заяви проходить онлайн",
+            ru: "Подача заявления осуществляется онлайн",
+            de: "Der Antrag wird online eingereicht",
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά",
+            ro: "Cererea se depune online"
+          }
+        },
+        {
+          landName: "Bremen",
+          link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -2598,160 +2717,130 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
-        },
-        {
-          landName: "Hamburg",
-          link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-drittst-.pdf",
-          text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
-        },
-        {
-          landName: "Bremen",
-          link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Antrag%20Erteilung%20einer%20Approbation.pdf",
-          text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-            de: "Füllen Sie den Antrag hier aus",
-          },
-        },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        }
       ],
       EU: [
         {
           landName: "Bayern",
-          link: "https://formularserver.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
+          link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The application is submitted online.",
+            fr: "La demande se fait en ligne.",
+            es: "La solicitud se realiza en línea.",
+            ar: "يتم تقديم الطلب عبر الإنترنت.",
+            tr: "Başvuru çevrimiçi olarak yapılır.",
+            pl: "Wniosek składany jest online.",
+            uk: "Проходить онлайн.",
+            ru: "Подача заявления осуществляется онлайн.",
+            de: "Der Antrag wird online eingereicht.",
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά.",
+            ro: "Cererea se depune online."
+          }
         },
         {
           landName: "Niedersachsen",
-          link: "https://www.nizza.niedersachsen.de/download/200366/Aerztin_Arzt_aerztliche_Bescheinigung.pdf",
+          link: "https://www.nizza.niedersachsen.de/download/203484/Aerztin_Arzt_Erklaerung_Straffreiheit.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
-        },
-        {
-          landName: "Baden-Württemberg-Karlsruhe",
-          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
-          text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
-        },
-        {
-          landName: "Baden-Württemberg-Stuttgart",
-          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
-          text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Baden-Württemberg-Freiburg",
-          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Baden-Württemberg-Reutlingen",
-          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_nonEU_Anl2.pdf",
-          text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
-        },
-        {
-          landName: "Nordrhein-Westfalen",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
             ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Westfalen-Lippe",
-          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-EU-Abschluss.pdf",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
           text: {
             en: "The relevant form is included in the application for licensure. Link here",
             fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
             ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
             tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: " Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Brandenburg",
@@ -2766,22 +2855,26 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Mecklenburg-Vorpommern",
-          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1638895",
+          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1672074",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hessen",
@@ -2790,13 +2883,15 @@ export const documentsSecond = [
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
             es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Sachsen-Anhalt",
@@ -2805,43 +2900,49 @@ export const documentsSecond = [
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
             es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Rheinland-Pfalz",
-          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Aerztliche_Bescheinigung.pdf",
+          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Approbation_EU_Antrag.pdf",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Sachsen",
-          link: "https://www.lds.sachsen.de/ref/?ID=10676&art_param=485&abteilung_id=4&referat_id=16",
+          link: "https://fs.egov.sachsen.de/formserv/findform?shortname=sms_ld_apparzt_3&formtecid=2&areashortname=142",
           text: {
-            en: "Fill out the application here",
-            fr: "Remplissez la demande ici",
-            es: "Complete la solicitud aquí",
-            ar: "املأ الطلب هنا",
-            tr: "Başvuruyu burada doldurun",
-            pl: "Wypełnij wniosek tutaj",
-            uk: "Заповнити заяву тут",
-            ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
         },
         {
           landName: "Thüringen",
@@ -2856,10 +2957,12 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
-          landName: "Schleswig-Holstein",
+          landName: "SchleswigHolstein",
           link: "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/LASD/Aufgaben/Gesundheitsberufe/AkademischeHeilberufe/Arzt/Download/Allgemein/00_Aerztliche_Bescheinigung.pdf?__blob=publicationFile&v=1",
           text: {
             en: "Fill out the application here",
@@ -2871,11 +2974,13 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
         },
         {
           landName: "Saarland",
-          link: "https://www.saarland.de/SharedDocs/Downloads/DE/landesamt-fuer-soziales/lpa/Formular_Ärztliches_Attest.pdf?__blob=publicationFile&v=2",
+          link: null, // Since "Does not exist"
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -2885,12 +2990,46 @@ export const documentsSecond = [
             pl: "Wypełnij wniosek tutaj",
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
-            de: "Füllen Sie den Antrag hier aus",
-          },
+            de: "Füllen Sie den Antrag hier aus"
+          }
         },
         {
           landName: "Berlin",
-          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/aerztliche-bescheinigung_eu_ds_akad.pdf",
+          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/europaeische-union/1eu_approbation_antrag.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Hamburg",
+          link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-eu.pdf",
+          text: {
+            en: "The application is submitted online",
+            fr: "La demande se fait en ligne",
+            es: "La solicitud se realiza en línea",
+            ar: "يتم تقديم الطلب عبر الإنترنت",
+            tr: "Başvuru çevrimiçi olarak yapılır",
+            pl: "Wniosek składany jest online",
+            uk: "Подача заяви проходить онлайн",
+            ru: "Подача заявления осуществляется онлайн",
+            de: "Der Antrag wird online eingereicht",
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά",
+            ro: "Cererea se depune online"
+          }
+        },
+        {
+          landName: "Bremen",
+          link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
           text: {
             en: "Fill out the application here",
             fr: "Remplissez la demande ici",
@@ -2901,40 +3040,335 @@ export const documentsSecond = [
             uk: "Заповнити заяву тут",
             ru: "Заполните заявление здесь",
             de: "Füllen Sie den Antrag hier aus",
-          },
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        }
+      ],
+      EU: [
+        {
+          landName: "Bayern",
+          link: "https://formularserver-bp.bayern.de/intelliform/forms/stmi+regierungen/rob/rob-zz/55.3/rob_55.3-020-zz/index?caller=8995476647409",
+          text: {
+            en: "The application is submitted online.",
+            fr: "La demande se fait en ligne.",
+            es: "La solicitud se realiza en línea.",
+            ar: "يتم تقديم الطلب عبر الإنترنت.",
+            tr: "Başvuru çevrimiçi olarak yapılır.",
+            pl: "Wniosek składany jest online.",
+            uk: "Проходить онлайн.",
+            ru: "Подача заявления осуществляется онлайн.",
+            de: "Der Antrag wird online eingereicht.",
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά.",
+            ro: "Cererea se depune online."
+          }
+        },
+        {
+          landName: "Niedersachsen",
+          link: "https://www.nizza.niedersachsen.de/download/203484/Aerztin_Arzt_Erklaerung_Straffreiheit.pdf",
+          text: {
+            en: "Fill out the application here.",
+            fr: "Remplissez la demande ici.",
+            es: "Complete la solicitud aquí.",
+            ar: "املأ الطلب هنا.",
+            tr: "Başvuruyu burada doldurun.",
+            pl: "Wypełnij wniosek tutaj.",
+            uk: "Заповнити заяву тут.",
+            ru: "Заполните заявление здесь.",
+            de: "Füllen Sie den Antrag hier aus.",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Freiburg",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Karlsruhe",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Stuttgart",
+          link: "https://rp.baden-wuerttemberg.de/fileadmin/RP-Internet/Themenportal/Schule_und_Bildung/Berufliche_Ausbildung/Aerztin_Arzt_Ausbildung_Approbation/_DocumentLibraries/Documents/LPA_Arzt_Appr_Antrag_EU.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here.",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Baden-Württemberg-Reutlingen",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Westfalen-Lippe",
+          link: "https://www.bezreg-muenster.de/de/gesundheit_und_soziales/zag/approbation_nrw/_ablage/dokumente/BRMS-DS-Abschluss.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Brandenburg",
+          link: "https://lavg.brandenburg.de/sixcms/media.php/9/G1-A-8_Ärztliche_Bescheinigung.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        },
+        {
+          landName: "Mecklenburg-Vorpommern",
+          link: "https://www.lagus.mv-regierung.de/serviceassistent/download?id=1672074",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Hessen",
+          link: "https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2023-12/merkblatt_und_approbationsantrag_eu_medizin.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Sachsen-Anhalt",
+          link: "https://lvwa.sachsen-anhalt.de/fileadmin/Bibliothek/Politik_und_Verwaltung/LVWA/LVwA/Dokumente/5_famgesjugvers/507/ausland/Erklaerung_-_aerztliche_Geeignetheit.pdf",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        },
+        {
+          landName: "Rheinland-Pfalz",
+          link: "https://lsjv.rlp.de/fileadmin/lsjv/Themen/Gesundheit/Gesundheitsberufe/Approbationen/Medizin/Arzt_Approbation_EU_Antrag.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
+        },
+        {
+          landName: "Sachsen",
+          link: "https://fs.egov.sachsen.de/formserv/findform?shortname=sms_ld_apparzt_3&formtecid=2&areashortname=142",
+          text: {
+            en: "The relevant form is included in the application for licensure.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluido en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Знаходиться в документі.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere."
+          }
+        },
+        {
+          landName: "Thüringen",
+          link: "https://thformular.thueringen.de/thueform/cfs/eject/pdf/2382.pdf?MANDANTID=26&FORMUID=GESUNDAUSB-002-TH-TLVWA",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        },
+        {
+          landName: "SchleswigHolstein",
+          link: "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/LASD/Aufgaben/Gesundheitsberufe/AkademischeHeilberufe/Arzt/Download/Allgemein/00_Aerztliche_Bescheinigung.pdf?__blob=publicationFile&v=1",
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        },
+        {
+          landName: "Saarland",
+          link: null, // Since "Does not exist"
+          text: {
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus"
+          }
+        },
+        {
+          landName: "Berlin",
+          link: "https://www.berlin.de/lageso/_assets/gesundheit/berufe-im-gesundheitswesen/europaeische-union/1eu_approbation_antrag.pdf",
+          text: {
+            en: "The relevant form is included in the application for licensure. Link here.",
+            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici.",
+            es: "El formulario correspondiente está incluso en la solicitud de licence. Enlace aquí.",
+            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا.",
+            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada.",
+            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj.",
+            uk: "Відповідний формуляр знаходиться в заяві на апробацию. Посилання тут.",
+            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь.",
+            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link here",
+            el: "Η σχετική φόρμα περιλαμβάνεται στην αίτηση για άδεια. Σύνδεσμος εδώ",
+            ro: "Formularul corespunzător este inclus în cererea pentru licențiere. Link aici"
+          }
         },
         {
           landName: "Hamburg",
-          link: "https://www.hamburg.de/contentblob/2773700/f308f6887c612e299d0b933fdf23ca39/data/merkblatt-beantragung-approbation-eu.pdf",
+          link: "https://www.hamburg.de/contentblob/2773710/841b6159e9ffdae88157737739103790/data/merkblatt-beantragung-approbation-eu.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
+            en: "The application is submitted online",
+            fr: "La demande se fait en ligne",
+            es: "La solicitud se realiza en línea",
+            ar: "يتم تقديم الطلب عبر الإنترنت",
+            tr: "Başvuru çevrimiçi olarak yapılır",
+            pl: "Wniosek składany jest online",
+            uk: "Подача заяви проходить онлайн",
+            ru: "Подача заявления осуществляется онлайн",
+            de: "Der Antrag wird online eingereicht",
+            el: "Η αίτηση υποβάλλεται ηλεκτρονικά",
+            ro: "Cererea se depune online"
+          }
         },
         {
           landName: "Bremen",
-          link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Antrag%20Erteilung%20einer%20Approbation.pdf",
+          link: "https://www.gesundheit.bremen.de/sixcms/media.php/13/Onlineformular%20Straf-%20und%20berufsgerichtliche%20Erklärung.pdf",
           text: {
-            en: "The relevant form is included in the application for licensure. Link here",
-            fr: "Le formulaire correspondant est inclus dans la demande de licence. Lien ici",
-            es: "El formulario correspondiente está incluido en la solicitud de licencia. Enlace aquí",
-            ar: "النموذج المناسب مدرج في طلب الترخيص. الرابط هنا",
-            tr: "İlgili form lisans başvurusuna dahildir. Bağlantı burada",
-            pl: "Odpowiedni formularz jest zawarty we wniosku o licencję. Link tutaj",
-            uk: "Відповідний формуляр знаходиться в заяві на Апробацію. Посилання тут",
-            ru: "Соответствующий формуляр включен в заявку на лицензию. Ссылка здесь",
-            de: "Das entsprechende Formular ist im Antrag auf Approbation enthalten. Link hier",
-          },
-        },
-      ],
-    },
+            en: "Fill out the application here",
+            fr: "Remplissez la demande ici",
+            es: "Complete la solicitud aquí",
+            ar: "املأ الطلب هنا",
+            tr: "Başvuruyu burada doldurun",
+            pl: "Wypełnij wniosek tutaj",
+            uk: "Заповнити заяву тут",
+            ru: "Заполните заявление здесь",
+            de: "Füllen Sie den Antrag hier aus",
+            el: "Συμπληρώστε την αίτηση εδώ",
+            ro: "Completați cererea aici"
+          }
+        }
+      ]
+    }
   },
 
   // END OF THE LINE
