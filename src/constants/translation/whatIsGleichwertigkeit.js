@@ -1,452 +1,602 @@
 export const GLEICHWERTIGKEIT_INFO = {
-    de: {
-      title: "Gleichwertigkeit der medizinischen Ausbildung in Deutschland",
-      intro:
-        "Die Gleichwertigkeitsanerkennung ist ein Verfahren, das es Ärzten ermöglicht, ihre im Ausland erworbenen medizinischen Qualifikationen als gleichwertig zur deutschen Ausbildung anerkennen zu lassen. Dieses Verfahren bietet einen alternativen Weg zur Kenntnisprüfung, wenn die ausländischen Qualifikationen als vergleichbar bewertet werden, und erleichtert so den direkten Einstieg in die ärztliche Berufsausübung.",
-      definition:
-        "Gleichwertigkeit bedeutet, dass die im Ausland absolvierte medizinische Ausbildung inhaltlich und qualitativ den Anforderungen des deutschen Medizinstudiums entspricht. Dies umfasst sowohl theoretische Grundlagen als auch praktische klinische Fertigkeiten. Wird die Gleichwertigkeit anerkannt, entfällt in der Regel die Notwendigkeit, zusätzliche Prüfungen abzulegen.",
-      requirements: {
-        title: "Voraussetzungen für die Gleichwertigkeitsanerkennung",
-        points: [
-          "Medizinische Ausbildung:\n• Erfolgreicher Abschluss eines Medizinstudiums im Ausland, der den deutschen Standards entspricht.\n• Nachweis fundierter theoretischer Kenntnisse und praktischer Erfahrungen durch Zeugnisse, Diplome und Fortbildungszertifikate.",
-          "Erforderliche Dokumente:\n• Beglaubigte Zeugnisse, Diplome und Zertifikate, die den gesamten Ausbildungsweg belegen.\n• Offizielle Übersetzungen und Apostillen der relevanten Unterlagen, um internationale Standards zu erfüllen.\n• Nachweise über praktische Erfahrungen und zusätzliche Weiterbildungen, die die Qualifikation untermauern.",
-          "Sprachliche Anforderungen:\n• Nachweis von Deutschkenntnissen, in der Regel mindestens auf dem Niveau B2, häufig auch C1 im medizinischen Kontext."
-        ]
-      },
-      process: {
-        title: "Ablauf des Anerkennungsverfahrens",
-        steps: [
-          {
-            title: "Einreichung der Unterlagen",
-            description: [
-              "Der Antragsteller reicht alle erforderlichen Dokumente bei der zuständigen Behörde ein. Dazu gehören alle akademischen Nachweise, praktische Erfahrungen sowie offizielle Übersetzungen und Beglaubigungen."
-            ]
-          },
-          {
-            title: "Erstellung des Gutachtens",
-            description: [
-              "Ein Fachgremium prüft die eingereichten Unterlagen sorgfältig und erstellt ein detailliertes Gutachten, das klärt, ob die im Ausland erworbene Ausbildung den deutschen Standards entspricht."
-            ]
-          },
-          {
-            title: "Entscheidung über das weitere Verfahren",
-            description: [
-              "Wird die Gleichwertigkeit anerkannt, entfällt in der Regel die Notwendigkeit, die Kenntnisprüfung abzulegen, und der Weg zur Approbation wird direkt fortgesetzt. Andernfalls muss der Arzt die Kenntnisprüfung absolvieren, um seine fachliche Kompetenz nachzuweisen."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Vorteile der Gleichwertigkeitsanerkennung",
-        points: [
-          "Zeitersparnis: Eine positive Bewertung im Gutachten ermöglicht den direkten Zugang zur Approbation ohne zusätzliche Prüfungen.",
-          "Direkter Zugang zur Berufsausübung: Die Anerkennung erleichtert die uneingeschränkte Tätigkeit als Arzt in Deutschland.",
-          "Individuelle Bewertung: Das Gutachten erlaubt eine detaillierte, fallbezogene Bewertung der medizinischen Ausbildung und praktischen Erfahrungen."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Detaillierte Übersicht des Anerkennungsverfahrens",
-      detailedReview:
-        "Der Anerkennungsprozess beginnt mit der Zusammenstellung und Einreichung aller erforderlichen Unterlagen, die den Bildungs- und Berufsweg dokumentieren. Anschließend wird durch ein Expertengremium ein Gutachten erstellt, das die Gleichwertigkeit der im Ausland erworbenen Qualifikationen mit den deutschen Standards überprüft. Bei positiver Bewertung entfällt in der Regel die Notwendigkeit einer Kenntnisprüfung, was den Weg zur vollen Approbation erheblich verkürzt. Dieser strukturierte und individuelle Bewertungsprozess stellt sicher, dass alle relevanten Aspekte der Ausbildung und Erfahrung eines Arztes umfassend berücksichtigt werden."
+  de: {
+    title: "Gleichwertigkeit der medizinischen Ausbildung in Deutschland",
+    intro:
+      "Wer als Ärztin oder Arzt in Deutschland arbeiten möchte, stößt früher oder später auf das Thema der Gleichwertigkeitsanerkennung. Für viele ausländische Medizinerinnen und Mediziner ist diese Anerkennung der Schlüssel, um die eigene Ausbildung mit dem deutschen Medizinstudium gleichzustellen – ohne zwingend eine Kenntnisprüfung ablegen zu müssen. Aber was genau verbirgt sich hinter diesem Verfahren, wie läuft es ab und welche Vorteile bietet es?",
+    definition:
+      "Gleichwertigkeit bedeutet, dass die im Ausland absolvierte medizinische Ausbildung inhaltlich und qualitativ den Anforderungen des deutschen Medizinstudiums entspricht. Konkret heißt das, dass:\n•	Theoretische Grundlagen: Alle wichtigen Themenbereiche (z. B. Anatomie, Physiologie, Pathologie) vergleichbar vermittelt wurden.\n•	Praktische Fertigkeiten: Klinische Erfahrungen, wie Famulaturen und das Praktische Jahr, dem in Deutschland geforderten Niveau entsprechen.\n•	Qualitative Standards: Prüfungsformen und Lehrpläne in etwa gleichwertig sind.\nWird die Gleichwertigkeit anerkannt, entfällt in der Regel die Notwendigkeit, zusätzliche Prüfungen abzulegen.",
+    requirements: {
+      title: "Voraussetzungen für die Gleichwertigkeitsanerkennung",
+      points: [
+        "Medizinische Ausbildung:\n  • Erfolgreicher Abschluss eines Medizinstudiums im Ausland, das den deutschen Standards entspricht.\n  • Nachweis fundierter theoretischer und praktischer Kenntnisse durch Zeugnisse, Diplome und Fortbildungszertifikate.",
+        "Erforderliche Dokumente:\n  • Beglaubigte Zeugnisse, Diplome und Abschlüsse, die den gesamten Ausbildungsweg dokumentieren.\n  • Offizielle Übersetzungen und Apostillen der relevanten Unterlagen.\n  • Weitere Nachweise wie Arbeitszeugnisse oder Fortbildungszertifikate.",
+        "Sprachliche Anforderungen:\n  • Nachweis von Deutschkenntnissen, in der Regel mindestens B2, häufig auch C1 im medizinischen Kontext."
+      ]
     },
-    uk: {
-      title: "Визнання рівноцінності медичної освіти в Німеччині",
-      intro:
-        "Визнання рівноцінності – це процедура, яка дозволяє лікарям отримати офіційне підтвердження, що їх освіта, здобута за кордоном, є рівноцінною німецькій медичній освіті. Цей процес є важливою альтернативою складанню іспиту з професійних знань, що значно полегшує шлях до отримання аппробації.",
-      definition:
-        "Рівноцінність означає, що освіта, отримана за кордоном, відповідає змісту та якості медичної освіти, що надається в Німеччині. При позитивному визнанні рівноцінності, додаткове складання іспиту зазвичай не потрібно, що дозволяє лікарю швидше розпочати незалежну практику.",
-      requirements: {
-        title: "Вимоги для визнання рівноцінності",
-        points: [
-          "Медична освіта:\n• Успішне завершення медичного університету за кордоном, яке відповідає стандартам Німеччини.\n• Підтвердження теоретичних та практичних знань за допомогою дипломів, сертифікатів та курсів підвищення кваліфікації.",
-          "Необхідні документи:\n• Завірені дипломи, сертифікати та виписки, що документують весь освітній шлях.\n• Офіційні переклади та апостилі документів.\n• Підтвердження практичного досвіду та участі в додаткових навчальних програмах.",
-          "Мовні вимоги:\n• Підтвердження знань німецької мови (зазвичай рівень не менше B2, часто C1 у медичному контексті)."
-        ]
-      },
-      process: {
-        title: "Етапи процедури визнання",
-        steps: [
-          {
-            title: "Подача документів",
-            description: [
-              "Заявник подає всі необхідні документи до компетентного органу, що включає академічні та практичні підтвердження."
-            ]
-          },
-          {
-            title: "Складання експертного висновку",
-            description: [
-              "Фахівці ретельно оцінюють надані документи і складають детальний висновок, що визначає, чи відповідає освіта стандартам Німеччини."
-            ]
-          },
-          {
-            title: "Рішення щодо подальших дій",
-            description: [
-              "При позитивному висновку лікар може одразу приступити до отримання аппробації, а при негативному – йому доведеться складати іспит з професійних знань."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Переваги визнання рівноцінності",
-        points: [
-          "Економія часу: Позитивний висновок дозволяє уникнути додаткових іспитів, що скорочує загальний термін отримання ліцензії.",
-          "Прямий доступ до практики: Визнання рівноцінності полегшує незалежну лікарську діяльність без зайвих процедур.",
-          "Індивідуальна оцінка: Експертний висновок надає детальну оцінку вашої освіти та практичного досвіду з урахуванням індивідуальних особливостей."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Детальний огляд процедури визнання рівноцінності",
-      detailedReview:
-        "Процедура визнання рівноцінності розпочинається зі збору всіх необхідних документів, що підтверджують ваш освітній та професійний шлях. Далі фахівці проводять детальну оцінку цих документів і складають висновок, який визначає, чи відповідає ваша освіта стандартам Німеччини. При позитивному висновку додаткові іспити, як правило, не потрібні, що значно прискорює процес отримання аппробації. Такий індивідуальний підхід гарантує, що кожен випадок розглядається максимально ретельно та об'єктивно."
-    },
-    en: {
-      title: "Equivalence of Medical Education in Germany",
-      intro:
-        "The recognition of equivalence is a procedure that enables physicians to have their foreign-acquired medical qualifications officially recognized as equivalent to the German medical education. This process serves as an important alternative to the Knowledge Examination when the qualifications are deemed comparable, streamlining the pathway to full licensure.",
-      definition:
-        "Equivalence means that the medical education obtained abroad is comparable in both content and quality to the German curriculum. When recognized, this equivalence eliminates the need for additional examinations, allowing for a faster transition to full licensure.",
-      requirements: {
-        title: "Requirements for Equivalence Recognition",
-        points: [
-          "Medical Education:\n• Successful completion of a medical degree abroad, demonstrating comparable theoretical and practical knowledge to German standards.\n• Evidence of clinical training and postgraduate education through diplomas, certificates, and continuing education records.",
-          "Required Documents:\n• Certified diplomas, certificates, and academic transcripts that document your educational journey.\n• Official translations and apostilles of all relevant documents.\n• Proof of practical experience and further training.",
-          "Language Requirements:\n• Proof of German language proficiency, typically at least at the B2 level—often C1 in a medical context."
-        ]
-      },
-      process: {
-        title: "Recognition Procedure",
-        steps: [
-          {
-            title: "Submission of Documents",
-            description: [
-              "The applicant must submit all required documents to the competent authority. This includes academic records, certificates, and officially translated copies."
-            ]
-          },
-          {
-            title: "Preparation of the Evaluation Report",
-            description: [
-              "A panel of experts reviews the submitted documents and prepares a detailed evaluation report to determine if the foreign education meets German standards."
-            ]
-          },
-          {
-            title: "Decision on Further Steps",
-            description: [
-              "If equivalence is recognized, the need to take the Knowledge Examination is typically waived, allowing direct progression toward full licensure. Otherwise, the candidate must pass the Knowledge Examination."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Advantages of Equivalence Recognition",
-        points: [
-          "Time Savings: A positive evaluation eliminates the need for additional examinations, significantly speeding up the licensure process.",
-          "Direct Access to Practice: Recognized equivalence allows physicians to begin independent practice without further testing.",
-          "Individualized Assessment: The evaluation report provides a detailed and personalized assessment of your education and professional experience."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Detailed Overview of the Recognition Procedure",
-      detailedReview:
-        "The recognition procedure starts with the collection and submission of all necessary documents that demonstrate your educational and professional background. An expert panel then reviews these documents and prepares a comprehensive evaluation report. If your qualifications are deemed equivalent to German standards, the Knowledge Examination is generally waived, allowing you to proceed directly to full licensure. This structured process ensures that every aspect of your training is thoroughly assessed and validated."
-    },
-    ru: {
-      title: "Равнозначность медицинского образования в Германии",
-      intro:
-        "Процедура признания равнозначности позволяет врачам получить официальное признание их зарубежного медицинского образования как эквивалентного немецкому. Этот процесс является важной альтернативой сдаче экзамена на знание, если квалификации оцениваются как сопоставимые, что значительно ускоряет получение полной лицензии.",
-      definition:
-        "Равнозначность означает, что образование, полученное за рубежом, соответствует содержанию и качеству немецкого медицинского обучения. При положительном решении о признании равнозначности необходимость сдачи дополнительного экзамена отпадает.",
-      requirements: {
-        title: "Требования для признания равнозначности",
-        points: [
-          "Медицинское образование:\n• Успешное окончание медицинского образования за рубежом, подтвержденное дипломами, сертификатами и курсами повышения квалификации, соответствующими немецким стандартам.\n• Документальное подтверждение теоретических и практических знаний.",
-          "Необходимые документы:\n• Заверенные дипломы, сертификаты и академические справки.\n• Официальные переводы и апостили документов.\n• Доказательства практического опыта и участия в дополнительных образовательных программах.",
-          "Языковые требования:\n• Подтверждение знания немецкого языка, как правило, на уровне не ниже B2, часто C1 в медицинском контексте."
-        ]
-      },
-      process: {
-        title: "Процедура признания",
-        steps: [
-          {
-            title: "Подача документов",
-            description: [
-              "Заявитель предоставляет все необходимые документы, подтверждающие его образование и опыт, в соответствующий орган."
-            ]
-          },
-          {
-            title: "Составление экспертного заключения",
-            description: [
-              "Группа экспертов тщательно анализирует представленные документы и составляет подробное заключение, определяющее, соответствует ли образование немецким стандартам."
-            ]
-          },
-          {
-            title: "Решение о дальнейшем процессе",
-            description: [
-              "При признании равнозначности дальнейшие экзамены обычно не требуются, что позволяет напрямую приступить к получению полной лицензии. В противном случае врачу необходимо сдать дополнительный экзамен."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Преимущества признания равнозначности",
-        points: [
-          "Экономия времени: Положительное экспертное заключение исключает необходимость в дополнительном экзамене, что ускоряет процесс получения лицензии.",
-          "Прямой доступ к практике: Признание равнозначности позволяет сразу приступать к независимой медицинской деятельности.",
-          "Индивидуальная оценка: Экспертное заключение обеспечивает подробную оценку вашего образования и профессионального опыта, учитывая индивидуальные особенности."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Детальный обзор процедуры признания равнозначности",
-      detailedReview:
-        "Процедура признания равнозначности начинается с подачи всех необходимых документов, подтверждающих ваш образовательный и профессиональный путь. После этого группа экспертов проводит всестороннюю оценку и составляет подробное заключение. Если ваше образование признается эквивалентным, необходимость сдачи дополнительного экзамена отпадает, что значительно ускоряет получение полной лицензии. Этот структурированный подход обеспечивает справедливую и индивидуальную оценку всех аспектов вашей квалификации."
-    },
-    fr: {
-      title: "Équivalence de la formation médicale en Allemagne",
-      intro:
-        "La reconnaissance de l’équivalence permet aux médecins d’obtenir la validation officielle de leurs qualifications médicales acquises à l’étranger, en les comparant aux normes de la formation médicale allemande. Ce processus représente une alternative importante à l’examen de connaissances lorsque les qualifications sont jugées comparables, facilitant ainsi l’accès à l’approbation complète.",
-      definition:
-        "L’équivalence signifie que la formation médicale suivie à l’étranger est comparable, tant par son contenu que par sa qualité, à celle dispensée en Allemagne. Une reconnaissance positive élimine généralement la nécessité de passer un examen complémentaire.",
-      requirements: {
-        title: "Conditions requises pour la reconnaissance de l’équivalence",
-        points: [
-          "Formation médicale :\n• Obtention d’un diplôme de médecine obtenu à l’étranger.\n• Preuve des connaissances théoriques et pratiques par le biais de diplômes, certificats et attestations de formation continue.",
-          "Documents requis :\n• Diplômes, certificats et relevés de notes certifiés.\n• Traductions officielles et apostilles des documents pertinents.\n• Preuves d’expérience professionnelle et de formation complémentaire.",
-          "Exigences linguistiques :\n• Maîtrise de l’allemand, généralement au niveau minimum B2, souvent C1 dans un contexte médical."
-        ]
-      },
-      process: {
-        title: "Processus de reconnaissance",
-        steps: [
-          {
-            title: "Dépôt du dossier",
-            description: [
-              "Le candidat doit soumettre l’ensemble des documents requis à l’autorité compétente, incluant toutes les preuves de sa formation et de son expérience pratique."
-            ]
-          },
-          {
-            title: "Rédaction du rapport d’expertise",
-            description: [
-              "Un comité d’experts examine minutieusement les documents soumis et rédige un rapport détaillé afin de déterminer si la formation suivie à l’étranger est équivalente à celle dispensée en Allemagne."
-            ]
-          },
-          {
-            title: "Décision sur la suite du processus",
-            description: [
-              "Si l’équivalence est reconnue, le candidat n’a généralement pas besoin de passer l’examen de connaissances, ce qui permet d’accéder directement à l’approbation complète. Sinon, il devra démontrer ses compétences par le biais d’un examen complémentaire."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Avantages de la reconnaissance de l’équivalence",
-        points: [
-          "Gain de temps : Une évaluation positive évite de passer un examen supplémentaire, accélérant ainsi le processus d’obtention de la licence.",
-          "Accès direct à la pratique : La reconnaissance de l’équivalence permet d’exercer la médecine sans procédures supplémentaires.",
-          "Évaluation personnalisée : Le rapport d’expertise offre une analyse détaillée et individualisée de votre formation et de votre expérience professionnelle."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Vue d’ensemble détaillée du processus de reconnaissance",
-      detailedReview:
-        "Le processus de reconnaissance commence par la soumission de tous les documents attestant de votre formation et de votre expérience. Ensuite, un comité d’experts examine minutieusement ces documents et rédige un rapport d’expertise. En cas de reconnaissance positive, l’examen de connaissances n’est généralement pas nécessaire, permettant ainsi une transition directe vers l’approbation complète. Ce processus structuré garantit une évaluation complète et individualisée de vos qualifications."
-    },
-    es: {
-      title: "Equivalencia de la formación médica en Alemania",
-      intro:
-        "El reconocimiento de la equivalencia es un procedimiento que permite a los médicos obtener el reconocimiento oficial de que sus cualificaciones médicas obtenidas en el extranjero son equivalentes a la formación médica alemana. Este proceso es una alternativa importante al examen de conocimientos cuando las titulaciones son consideradas comparables, facilitando el acceso directo a la licencia completa.",
-      definition:
-        "La equivalencia implica que la formación médica cursada en el extranjero es comparable en contenido y calidad con la educación médica en Alemania. Cuando se reconoce la equivalencia, generalmente no es necesario rendir un examen adicional, lo que agiliza el proceso de obtención de la licencia.",
-      requirements: {
-        title: "Requisitos para el reconocimiento de la equivalencia",
-        points: [
-          "Formación médica:\n• Haber completado los estudios de medicina en el extranjero, demostrando que se han adquirido conocimientos teóricos y prácticos comparables a los estándares alemanes.\n• Presentar diplomas, certificados y otros documentos que acrediten la formación y, en su caso, cursos de posgrado.",
-          "Documentos requeridos:\n• Diplomas, certificados y expedientes académicos certificados.\n• Traducciones oficiales y apostillas de los documentos pertinentes.\n• Evidencias de experiencia práctica y formación complementaria.",
-          "Requisitos lingüísticos:\n• Demostrar dominio del alemán, generalmente a nivel mínimo B2, preferiblemente C1 en un contexto médico."
-        ]
-      },
-      process: {
-        title: "Procedimiento de reconocimiento",
-        steps: [
-          {
-            title: "Presentación de documentos",
-            description: [
-              "El solicitante debe presentar todos los documentos requeridos ante la autoridad competente, incluyendo los registros académicos y las evidencias de experiencia práctica."
-            ]
-          },
-          {
-            title: "Elaboración del informe de evaluación",
-            description: [
-              "Un panel de expertos revisa la documentación y redacta un informe detallado para determinar si la formación médica es equivalente a la alemana."
-            ]
-          },
-          {
-            title: "Decisión sobre el procedimiento",
-            description: [
-              "Si se reconoce la equivalencia, generalmente se elimina la necesidad de realizar un examen adicional, lo que permite acceder directamente a la licencia completa. En caso contrario, el médico deberá rendir un examen para demostrar sus competencias."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Ventajas del reconocimiento de la equivalencia",
-        points: [
-          "Ahorro de tiempo: Una evaluación positiva evita la necesidad de rendir exámenes adicionales, acelerando el proceso de obtención de la licencia.",
-          "Acceso directo a la práctica: El reconocimiento de la equivalencia permite a los médicos comenzar a ejercer sin procedimientos complementarios.",
-          "Evaluación individualizada: El informe de evaluación proporciona una valoración detallada y personalizada de la formación y experiencia profesional."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Visión detallada del procedimiento de reconocimiento",
-      detailedReview:
-        "El proceso de reconocimiento comienza con la presentación de todos los documentos que acrediten la formación y la experiencia clínica del médico. A continuación, un panel de expertos evalúa minuciosamente esta documentación y elabora un informe de evaluación. Si el informe es favorable, generalmente se prescinde de rendir el examen de conocimientos, lo que permite una transición directa hacia la obtención de la licencia completa. Este enfoque estructurado garantiza una valoración exhaustiva de las cualificaciones del médico."
-    },
-    ar: {
-        title: "معادلة التعليم الطبي في ألمانيا",
-        intro:
-          "إجراء الاعتراف بالمعادلة هو عملية تمكن الأطباء من الحصول على اعتراف رسمي بأن مؤهلاتهم الطبية التي تم الحصول عليها في الخارج معادلة للتعليم الطبي الألماني. يمثل هذا الإجراء بديلاً مهماً لامتحان المعرفة إذا تم اعتبار المؤهلات متكافئة، مما يسهل الوصول إلى الترخيص الكامل.",
-        definition:
-          "المعادلة تعني أن التعليم الطبي الذي تم الحصول عليه في الخارج يتوافق في المحتوى والجودة مع المناهج الألمانية. عند الاعتراف بها، تلغي المعادلة الحاجة إلى اجتياز امتحانات إضافية، مما يتيح الانتقال السريع للحصول على الترخيص.",
-        requirements: {
-          title: "متطلبات الاعتراف بالمعادلة",
-          points: [
-            "التعليم الطبي:\n• إتمام شهادة طبية ناجحة في الخارج تثبت المعرفة النظرية والعملية المطابقة للمعايير الألمانية.\n• إثبات التدريب السريري والتعليم المتقدم من خلال الدبلومات والشهادات وسجلات التعليم المستمر.",
-            "الوثائق المطلوبة:\n• شهادات الدبلومات الأكاديمية المصدقة.\n• الترجمات الرسمية والتصديقات الدولية (الأبوستيل) للوثائق.\n• إثبات الخبرة العملية والتدريب الإضافي.",
-            "متطلبات اللغة:\n• إثبات إجادة اللغة الألمانية، عادةً بمستوى لا يقل عن B2 وغالباً C1 في السياق الطبي."
+    process: {
+      title: "Ablauf des Anerkennungsverfahrens",
+      steps: [
+        {
+          title: "Einreichung der Unterlagen",
+          description: [
+            "Der Antragsteller reicht alle erforderlichen Dokumente bei der zuständigen Behörde ein – dazu zählen akademische Zeugnisse, Nachweise über praktische Erfahrungen sowie beglaubigte Übersetzungen."
           ]
         },
-        process: {
-          title: "إجراءات الاعتراف",
-          steps: [
-            {
-              title: "تقديم المستندات",
-              description: [
-                "يجب على المتقدم تقديم جميع الوثائق المطلوبة للسلطة المختصة، بما في ذلك السجلات الأكاديمية وشهادات الخبرة العملية والترجمات الرسمية."
-              ]
-            },
-            {
-              title: "إعداد تقرير التقييم",
-              description: [
-                "يقوم فريق الخبراء بمراجعة الوثائق المقدمة وإعداد تقرير تقييم تفصيلي لتحديد ما إذا كان التعليم الطبي يلبي المعايير الألمانية."
-              ]
-            },
-            {
-              title: "القرار بشأن الإجراءات الإضافية",
-              description: [
-                "إذا تم الاعتراف بالمعادلة، يتم التخلي عن الحاجة إلى امتحان المعرفة مما يسمح بالتقدم المباشر نحو الترخيص الكامل. في حالة عدم الاعتراف، يجب اجتياز امتحان المعرفة."
-              ]
-            }
+        {
+          title: "Erstellung des Gutachtens",
+          description: [
+            "Ein Fachgremium prüft die eingereichten Unterlagen sorgfältig und erstellt ein detailliertes Gutachten, das festlegt, ob die im Ausland erworbene Ausbildung den deutschen Anforderungen entspricht."
           ]
         },
-        preparation: {
-          title: "فوائد الاعتراف بالمعادلة",
-          points: [
-            "توفير الوقت: يلغي التقييم الإيجابي الحاجة إلى امتحانات إضافية، مما يسرع عملية الحصول على الترخيص.",
-            "الوصول المباشر للممارسة: يتيح الاعتراف بالمعادلة البدء في ممارسة الطب بشكل مستقل دون اختبارات إضافية.",
-            "تقييم فردي: يقدم تقرير التقييم تحليلاً مفصلاً وشخصياً لتعليمك وخبرتك المهنية."
+        {
+          title: "Entscheidung über das weitere Verfahren",
+          description: [
+            "Wird die Gleichwertigkeit anerkannt, entfällt in der Regel die Notwendigkeit der Kenntnisprüfung und der Weg zur Approbation wird direkt fortgesetzt. Andernfalls muss der Arzt die Kenntnisprüfung ablegen oder es werden Ausgleichsmaßnahmen angeordnet."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Vorteile der Gleichwertigkeitsanerkennung",
+      points: [
+        "Zeitersparnis: Bei positiver Bewertung entfällt die zusätzliche Kenntnisprüfung, sodass du direkt in den Prozess zur Approbation einsteigen kannst.",
+        "Rechtliche Klarheit: Deine ausländische Ausbildung wird offiziell als gleichwertig anerkannt, was deine Qualifikationen rechtlich absichert.",
+        "Verbesserte Berufsperspektiven: Mit einer anerkannten Ausbildung kannst du uneingeschränkt in Deutschland arbeiten, was deinen beruflichen Werdegang erheblich erleichtert."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Detaillierte Übersicht des Anerkennungsverfahrens",
+    detailedReview:
+      "Der Anerkennungsprozess beginnt mit der sorgfältigen Zusammenstellung aller erforderlichen Unterlagen, die deinen Bildungs- und Berufsweg dokumentieren. Anschließend wird durch ein Expertengremium ein Gutachten erstellt, das prüft, ob deine Ausbildung den deutschen Standards entspricht – insbesondere hinsichtlich theoretischer Inhalte, praktischer Fertigkeiten und qualitativer Aspekte. Bei positiver Bewertung entfällt in der Regel die Notwendigkeit einer zusätzlichen Kenntnisprüfung, was den Weg zur Approbation erheblich verkürzt. Dieser strukturierte und individuelle Prozess stellt sicher, dass alle relevanten Aspekte deines Werdegangs umfassend berücksichtigt werden."
+  },
+  uk: {
+    title: "Визнання рівноцінності медичної освіти в Німеччині",
+    intro:
+      "Ті, хто прагне працювати лікарем у Німеччині, рано чи пізно стикаються з питанням визнання рівноцінності освіти. Для багатьох іноземних медиків це визнання є ключовим для того, щоб їх освіта була офіційно прирівняна до німецької, без необхідності складати додаткові іспити. Але що саме означає ця процедура, як вона проходить і які переваги вона надає?",
+    definition:
+      "Визнання рівноцінності означає, що освіта, здобута за кордоном, відповідає змісту та якості медичної освіти, що надається в Німеччині. Це стосується:\n•	Теоретичних основ: Всі ключові теми (наприклад, анатомія, фізіологія, патологія) викладені у порівнянному обсязі.\n•	Практичних навичок: Клінічний досвід, зокрема проходження практики, відповідає вимогам, що пред'являються в Німеччині.\n•	Якісних стандартів: Система оцінювання та навчальні плани є подібними до німецьких.\nПри позитивному визнанні рівноцінності зазвичай не потрібно складати додатковий іспит.",
+    requirements: {
+      title: "Вимоги для визнання рівноцінності",
+      points: [
+        "Медична освіта:\n  • Успішне завершення медичного університету за кордоном, яке відповідає стандартам Німеччини.\n  • Підтвердження теоретичних та практичних знань через дипломи, сертифікати та курси підвищення кваліфікації.",
+        "Необхідні документи:\n  • Завірені копії дипломів, сертифікатів та виписок з оцінками.\n  • Офіційні переклади та апостилі документів.\n  • Додаткові документи, що підтверджують практичний досвід та участь у додаткових навчальних програмах.",
+        "Мовні вимоги:\n  • Підтвердження знань німецької мови (зазвичай на рівні B2, часто C1 у медичному контексті)."
+      ]
+    },
+    process: {
+      title: "Етапи процедури визнання",
+      steps: [
+        {
+          title: "Подача документів",
+          description: [
+            "Заявник подає всі необхідні документи до відповідного органу, що включає академічні та практичні підтвердження."
           ]
         },
-        additionalCourses: "",
-        detailedReviewTitle: "نظرة شاملة على إجراءات الاعتراف",
-        detailedReview:
-          "تبدأ إجراءات الاعتراف بجمع وتقديم جميع المستندات المطلوبة التي توضح الخلفية التعليمية والمهنية. بعد ذلك، يقوم فريق من الخبراء بمراجعة الوثائق وإعداد تقرير تقييم شامل. إذا تم الاعتراف بالمؤهلات على أنها معادلة للمعايير الألمانية، يتم التخلي عن امتحان المعرفة، مما يسمح بالتقدم المباشر للحصول على الترخيص الكامل. يضمن هذا النهج الهيكلي تقييمًا شاملاً ودقيقًا لجميع جوانب تدريبك."
-      },
-      tr: {
-        title: "Almanya'da Tıbbi Eğitim Eşdeğerliği",
-        intro:
-          "Eşdeğerlik tanınması, hekimlerin yurt dışında aldıkları tıbbi yeterliliklerin Almanya’daki tıbbi eğitime eşdeğer olarak resmi olarak tanınmasını sağlayan bir prosedürdür. Bu süreç, yeterlilikler karşılaştırılabilir olarak değerlendirildiğinde Bilgi Sınavına önemli bir alternatif sunar ve tam lisansa geçişi kolaylaştırır.",
-        definition:
-          "Eşdeğerlik, yurt dışında alınan tıbbi eğitimin içerik ve kalite açısından Alman müfredatına eşdeğer olduğu anlamına gelir. Tanındığında, bu eşdeğerlik ek sınavlara duyulan ihtiyacı ortadan kaldırır ve tam lisansa hızlı bir geçiş sağlar.",
-        requirements: {
-          title: "Eşdeğerlik Tanınması için Gereksinimler",
-          points: [
-            "Tıbbi Eğitim:\n• Yurtdışında başarıyla tamamlanmış bir tıp derecesi.\n• Alman standartlarına uygun teorik ve pratik bilginin diploması, sertifikaları ve ileri eğitim kayıtları ile kanıtlanması.",
-            "Gerekli Belgeler:\n• Sertifikalı diplomalar, sertifikalar ve akademik transkriptler.\n• Resmi belgelerin tercümeleri ve apostilleri.\n• Pratik deneyim ve ileri eğitim kanıtları.",
-            "Dil Gereklilikleri:\n• Genellikle en az B2 seviyesinde, tıbbi bağlamda ise C1 seviyesinde Almanca dil yeterliliği kanıtı."
+        {
+          title: "Складання експертного висновку",
+          description: [
+            "Фахівці ретельно перевіряють надані документи і складають детальний висновок, який визначає, чи відповідає ваша освіта стандартам Німеччини."
           ]
         },
-        process: {
-          title: "Tanınma Prosedürü",
-          steps: [
-            {
-              title: "Belgelerin Teslimi",
-              description: [
-                "Başvuru sahibi, tüm gerekli belgeleri ilgili otoriteye sunmalıdır. Buna akademik kayıtlar, sertifikalar ve resmi tercümeler dahildir."
-              ]
-            },
-            {
-              title: "Değerlendirme Raporunun Hazırlanması",
-              description: [
-                "Uzmanlardan oluşan bir kurul, sunulan belgeleri inceler ve yabancı eğitimin Alman standartlarına uygun olup olmadığını belirlemek için ayrıntılı bir değerlendirme raporu hazırlar."
-              ]
-            },
-            {
-              title: "İlerleme Adımlarına Karar",
-              description: [
-                "Eşdeğerlik tanınırsa, Bilgi Sınavına gerek kalmaz ve tam lisansa doğru doğrudan ilerleme sağlanır. Aksi takdirde, adayın Bilgi Sınavını geçmesi gerekir."
-              ]
-            }
+        {
+          title: "Рішення щодо подальших дій",
+          description: [
+            "При позитивному висновку додаткове складання іспиту, як правило, не потрібно, що дозволяє безпосередньо приступити до отримання аппробації. Якщо ж деякі аспекти не відповідають стандартам, може бути призначено складання іспиту."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Переваги визнання рівноцінності",
+      points: [
+        "Заощадження часу: Позитивна оцінка дозволяє уникнути додаткових іспитів і швидше отримати аппробацію.",
+        "Прямий доступ до практики: Визнання рівноцінності забезпечує можливість незалежної лікарської діяльності.",
+        "Індивідуальна оцінка: Експертний висновок детально аналізує вашу освіту та досвід, враховуючи індивідуальні особливості."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Детальний огляд процедури визнання",
+    detailedReview:
+      "Процедура визнання рівноцінності починається зі збору та подання всіх необхідних документів, що підтверджують ваш освітній та професійний шлях. Далі фахівці ретельно перевіряють ці документи та складають висновок, який визначає, чи відповідає ваша освіта стандартам Німеччини. При позитивному висновку зазвичай не потрібно складати додатковий іспит, що значно скорочує час на отримання аппробації. Такий структурований підхід гарантує ретельну та об'єктивну оцінку всіх аспектів вашої кваліфікації."
+  },
+  en: {
+    title: "Equivalence of Medical Education in Germany",
+    intro:
+      "The recognition of equivalence is a procedure that enables physicians to have their foreign-acquired medical qualifications officially recognized as equivalent to the German medical education. This process offers an alternative pathway to the Knowledge Examination when the foreign qualifications are deemed comparable, streamlining the route to full licensure.",
+    definition:
+      "Equivalence means that the medical education completed abroad is comparable in both content and quality to that provided by German medical schools. This includes:\n•	Theoretical foundations: All essential subjects (e.g., anatomy, physiology, pathology) are covered to a comparable extent.\n•	Practical skills: Clinical and practical experiences, such as internships and the practical year, meet the required level in Germany.\n•	Quality standards: The overall quality of education, including the examination system and curricula, is comparable.\nWhen recognized, additional examinations are usually not required.",
+    requirements: {
+      title: "Requirements for Equivalence Recognition",
+      points: [
+        "Medical Education:\n  • Successful completion of a medical degree abroad that meets German standards.\n  • Evidence of comprehensive theoretical and practical knowledge through diplomas, certificates, and continuing education records.",
+        "Required Documents:\n  • Certified copies of diplomas, certificates, and transcripts documenting your entire educational journey.\n  • Official translations and apostilles to verify the authenticity of non-German documents.\n  • Additional proofs such as work references or further training certificates.",
+        "Language Requirements:\n  • Proof of German language proficiency, usually at least B2, often C1 in a medical context."
+      ]
+    },
+    process: {
+      title: "Recognition Procedure",
+      steps: [
+        {
+          title: "Submission of Documents",
+          description: [
+            "The applicant submits all required documents to the competent authority, including academic records, certificates, and official translations."
           ]
         },
-        preparation: {
-          title: "Eşdeğerlik Tanınmasının Avantajları",
-          points: [
-            "Zaman Tasarrufu: Olumlu bir değerlendirme ek sınavlara duyulan ihtiyacı ortadan kaldırır, lisans alma sürecini önemli ölçüde hızlandırır.",
-            "Doğrudan Uygulamaya Erişim: Tanınmış eşdeğerlik, doktorların bağımsız bir şekilde çalışmaya başlamalarına olanak tanır.",
-            "Bireyselleştirilmiş Değerlendirme: Değerlendirme raporu, eğitiminiz ve mesleki deneyiminiz hakkında ayrıntılı ve kişiselleştirilmiş bir analiz sunar."
+        {
+          title: "Preparation of the Evaluation Report",
+          description: [
+            "A panel of experts carefully reviews the submitted documents and prepares a detailed evaluation report to determine whether the foreign education meets German standards."
           ]
         },
-        additionalCourses: "",
-        detailedReviewTitle: "Tanınma Prosedürünün Ayrıntılı Genel Görünümü",
-        detailedReview:
-          "Tanınma prosedürü, eğitim ve mesleki geçmişinizi belgeleyen tüm gerekli belgelerin toplanması ve teslimiyle başlar. Bir uzman paneli daha sonra bu belgeleri inceler ve kapsamlı bir değerlendirme raporu hazırlar. Eğer nitelikleriniz Alman standartlarına eşdeğer olarak kabul edilirse, Bilgi Sınavı genellikle iptal edilir ve tam lisansa doğrudan ilerleme sağlanır. Bu yapılandırılmış süreç, eğitiminizin her yönünün titizlikle değerlendirilmesini ve doğrulanmasını sağlar."
-      },
-    pl: {
-      title: "Równoważność kształcenia medycznego w Niemczech",
-      intro:
-        "Uznanie równoważności to procedura umożliwiająca lekarzom uzyskanie oficjalnego potwierdzenia, że ich zagraniczne kwalifikacje medyczne są równoważne z niemieckim systemem kształcenia. Procedura ta stanowi istotną alternatywę dla zdawania egzaminu wiedzy, gdyż pozwala na bezpośredni dostęp do pełnej aprobaty.",
-      definition:
-        "Równoważność oznacza, że wykształcenie medyczne zdobyte za granicą pod względem treści i jakości odpowiada standardom niemieckiego kształcenia medycznego. W przypadku uznania równoważności, zazwyczaj nie ma potrzeby zdawania dodatkowego egzaminu, co znacząco przyspiesza proces uzyskania licencji.",
-      requirements: {
-        title: "Wymagania dla uznania równoważności",
-        points: [
-          "Wykształcenie medyczne:\n• Ukończenie studiów medycznych za granicą, spełniających niemieckie standardy.\n• Potwierdzenie zarówno teoretycznych, jak i praktycznych umiejętności poprzez dyplomy, certyfikaty oraz szkolenia podyplomowe.",
-          "Wymagane dokumenty:\n• Uwierzytelnione dyplomy, certyfikaty i świadectwa ukończenia studiów.\n• Oficjalne tłumaczenia dokumentów wraz z apostille.\n• Dowody doświadczenia zawodowego i uczestnictwa w kursach doskonalących.",
-          "Wymagania językowe:\n• Potwierdzenie znajomości języka niemieckiego, zazwyczaj na poziomie co najmniej B2, często C1 w kontekście medycznym."
-        ]
-      },
-      process: {
-        title: "Przebieg procedury uznania",
-        steps: [
-          {
-            title: "Złożenie dokumentów",
-            description: [
-              "Wnioskodawca składa wszystkie wymagane dokumenty w odpowiednim organie, potwierdzające jego wykształcenie oraz doświadczenie zawodowe."
-            ]
-          },
-          {
-            title: "Sporządzenie opinii eksperckiej",
-            description: [
-              "Grupa ekspertów analizuje przedstawione dokumenty i sporządza szczegółową opinię, która ustala, czy wykształcenie jest równoważne z niemieckimi standardami."
-            ]
-          },
-          {
-            title: "Decyzja o dalszym postępowaniu",
-            description: [
-              "Przy pozytywnej opinii egzamin wiedzy zazwyczaj nie jest wymagany, co umożliwia bezpośredni dostęp do pełnej aprobaty. W przeciwnym razie konieczne jest przystąpienie do dodatkowego egzaminu."
-            ]
-          }
-        ]
-      },
-      preparation: {
-        title: "Zalety uznania równoważności",
-        points: [
-          "Oszczędność czasu: Pozytywna opinia ekspercka pozwala uniknąć zdawania dodatkowego egzaminu, co skraca czas potrzebny na uzyskanie licencji.",
-          "Bezpośredni dostęp do praktyki: Uznanie równoważności umożliwia lekarzom natychmiastowe rozpoczęcie samodzielnej praktyki.",
-          "Indywidualna ocena: Opinia ekspercka zapewnia szczegółową, spersonalizowaną ocenę kwalifikacji, uwzględniając specyfikę indywidualnego przypadku."
-        ]
-      },
-      additionalCourses: "",
-      detailedReviewTitle: "Szczegółowy przegląd procedury uznania równoważności",
-      detailedReview:
-        "Proces uznania równoważności rozpoczyna się od zebrania i złożenia kompletu dokumentów potwierdzających wykształcenie i doświadczenie. Następnie grupa ekspertów przeprowadza szczegółową analizę tych dokumentów, sporządzając opinię, która określa, czy kwalifikacje są zgodne z niemieckimi standardami. Po uzyskaniu pozytywnej oceny zazwyczaj nie jest wymagane zdawanie dodatkowego egzaminu, co umożliwia szybsze uzyskanie pełnej aprobaty. Taki uporządkowany proces gwarantuje rzetelną i indywidualną ocenę wszystkich aspektów kwalifikacji."
-    }
-  };
+        {
+          title: "Decision on Further Steps",
+          description: [
+            "If equivalence is recognized, the Knowledge Examination is generally waived, allowing direct progression towards full licensure. Otherwise, the candidate must pass the Knowledge Examination."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Advantages of Equivalence Recognition",
+      points: [
+        "Time Savings: A positive evaluation eliminates the need for additional examinations, significantly shortening the licensure process.",
+        "Direct Access to Practice: Recognized equivalence allows physicians to work independently in Germany without further tests.",
+        "Individualized Assessment: The evaluation report provides a detailed, personalized assessment of your education and professional experience."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Detailed Overview of the Recognition Procedure",
+    detailedReview:
+      "The recognition procedure begins with the collection and submission of all documents that verify your educational and professional background. An expert panel then reviews these documents and prepares a comprehensive evaluation report. If your qualifications are deemed equivalent to German standards, the Knowledge Examination is usually waived, allowing you to proceed directly to full licensure. This structured and individualized process ensures that every aspect of your training is thoroughly evaluated."
+  },
+  ru: {
+    title: "Равнозначность медицинского образования в Германии",
+    intro:
+      "Процедура признания равнозначности позволяет врачам получить официальное признание, что их зарубежное медицинское образование соответствует немецким стандартам. Этот процесс является важной альтернативой сдаче экзамена на знание, если квалификации оцениваются как сопоставимые, что значительно ускоряет получение полной лицензии.",
+    definition:
+      "Равнозначность означает, что образование, полученное за рубежом, по содержанию и качеству соответствует тому, что предлагают немецкие медицинские вузы. Это включает:\n•	Теоретические основы: Все ключевые предметы (например, анатомия, физиология, патология) изучаются в сопоставимом объеме.\n•	Практические навыки: Клинический опыт, такой как прохождение практики и стажировок, соответствует требованиям Германии.\n•	Качественные стандарты: Общая система оценивания и учебные программы сопоставимы с немецкими.\nПри положительном решении, дополнительная сдача экзаменов, как правило, не требуется.",
+    requirements: {
+      title: "Требования для признания равнозначности",
+      points: [
+        "Медицинское образование:\n  • Успешное окончание медицинского вуза за рубежом, которое соответствует немецким стандартам.\n  • Подтверждение теоретических и практических знаний посредством дипломов, сертификатов и курсов повышения квалификации.",
+        "Необходимые документы:\n  • Заверенные копии дипломов, сертификатов и выписок, подтверждающих весь образовательный путь.\n  • Официальные переводы и апостили для документов, не выданных на немецком языке.\n  • Дополнительные документы, подтверждающие практический опыт и участие в дополнительных образовательных программах.",
+        "Языковые требования:\n  • Подтверждение знания немецкого языка, как правило, на уровне не ниже B2, часто C1 в медицинском контексте."
+      ]
+    },
+    process: {
+      title: "Процедура признания",
+      steps: [
+        {
+          title: "Подача документов",
+          description: [
+            "Заявитель предоставляет все необходимые документы, подтверждающие его образование и опыт, в соответствующий орган."
+          ]
+        },
+        {
+          title: "Составление экспертного заключения",
+          description: [
+            "Группа экспертов тщательно анализирует представленные документы и составляет подробное заключение, которое определяет, соответствует ли образование немецким стандартам."
+          ]
+        },
+        {
+          title: "Решение о дальнейших действиях",
+          description: [
+            "При положительном заключении дополнительное сдача экзамена, как правило, не требуется, что позволяет напрямую приступить к получению лицензии. В противном случае необходимо сдавать дополнительный экзамен."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Преимущества признания равнозначности",
+      points: [
+        "Экономия времени: Положительное экспертное заключение позволяет избежать дополнительных экзаменов, сокращая время получения лицензии.",
+        "Прямой доступ к практике: Признание равнозначности обеспечивает возможность немедленного начала независимой врачебной деятельности.",
+        "Индивидуальная оценка: Экспертное заключение предоставляет подробную и индивидуальную оценку вашего образования и опыта."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Детальный обзор процедуры признания равнозначности",
+    detailedReview:
+      "Процедура признания равнозначности начинается с подачи всех необходимых документов, подтверждающих ваш образовательный и профессиональный путь. Затем группа экспертов проводит всестороннюю оценку этих документов и составляет подробное заключение. Если ваши квалификации признаются эквивалентными, дополнительный экзамен, как правило, не требуется, что ускоряет получение полной лицензии. Такой структурированный процесс гарантирует тщательную и объективную оценку всех аспектов вашей квалификации."
+  },
+  tr: {
+    title: "Almanya'da Tıbbi Eğitimin Eşdeğerliği",
+    intro:
+      "Almanya’da çalışmak isteyen hekimler için, yabancı ülkelerde alınan tıbbi eğitimin eşdeğerliği konusu kaçınılmazdır. Bu tanıma, yabancı eğitimlerin Alman tıp eğitimiyle karşılaştırılarak eşdeğer bulunmasını sağlar ve böylece ek sınavlara gerek kalmadan doğrudan uygulamaya geçişe olanak tanır.",
+    definition:
+      "Eşdeğerlik, yurt dışında alınan tıbbi eğitimin içerik ve kalite açısından Alman tıp eğitimi standartlarına uygun olduğunu gösterir. Bu,;\n•	Teorik temeller: Anatomiden fizyolojiye, patolojiden diğer temel konulara kadar tüm önemli derslerin benzer düzeyde işlendiğini,\n•	Pratik beceriler: Klinik deneyimlerin ve uygulamalı eğitimlerin Alman standartlarına denk geldiğini,\n•	Kalitatif standartlar: Eğitim kalitesi ve sınav sistemlerinin birbirine yakın olduğunu ifade eder.\nEğer eşdeğerlik tanınırsa, genellikle ek sınavlara gerek kalmaz.",
+    requirements: {
+      title: "Eşdeğerlik Tanınması için Gereksinimler",
+      points: [
+        "Tıbbi Eğitim:\n  • Yurt dışında alınmış, Alman standartlarına uygun bir tıp eğitimi.\n  • Teorik ve pratik bilgilerin diploması, sertifikaları ve ileri eğitim belgeleri ile kanıtlanması.",
+        "Gerekli Belgeler:\n  • Sertifikalı diplomalar, sertifikalar ve akademik transkriptler.\n  • Resmi tercümeler ve apostiller.\n  • Ek deneyim ve eğitim belgeleri.",
+        "Dil Gereklilikleri:\n  • Genellikle en az B2 seviyesinde, tıbbi bağlamda ise C1 seviyesinde Almanca bilgisi."
+      ]
+    },
+    process: {
+      title: "Tanınma Süreci",
+      steps: [
+        {
+          title: "Belgelerin Teslimi",
+          description: [
+            "Başvuru sahibi, gerekli tüm belgeleri ilgili otoriteye sunar. Bu belgeler, eğitim ve mesleki deneyimi kanıtlar niteliktedir."
+          ]
+        },
+        {
+          title: "Değerlendirme Raporunun Hazırlanması",
+          description: [
+            "Uzmanlardan oluşan bir kurul, sunulan belgeleri detaylıca inceler ve yabancı eğitimin Alman standartlarına uygunluğunu belirten bir rapor hazırlar."
+          ]
+        },
+        {
+          title: "İlerleme Kararı",
+          description: [
+            "Eğer eşdeğerlik tanınırsa, Bilgi Sınavına gerek kalmadan tam lisansa geçiş sağlanır. Aksi halde, ek sınavlara veya tamamlayıcı eğitimlere ihtiyaç duyulur."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Eşdeğerlik Tanınmasının Avantajları",
+      points: [
+        "Zaman Tasarrufu: Olumlu değerlendirme ek sınavlara ihtiyaç duyulmamasını sağlar.",
+        "Doğrudan Uygulamaya Erişim: Tanınmış eşdeğerlikle hekimler bağımsız çalışmaya hemen başlayabilir.",
+        "Bireyselleştirilmiş Değerlendirme: Değerlendirme raporu, eğitim ve mesleki deneyiminiz hakkında ayrıntılı bilgi sunar."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Eşdeğerlik Tanınma Sürecinin Detaylı Genel Görünümü",
+    detailedReview:
+      "Eşdeğerlik tanınması süreci, eğitim ve mesleki geçmişinizi belgeleyen tüm gerekli evrakların toplanması ve teslimi ile başlar. Uzmanlardan oluşan bir kurul, bu belgeleri titizlikle inceler ve kapsamlı bir değerlendirme raporu hazırlar. Eğer nitelikleriniz Alman standartlarına eşdeğer bulunursa, ek sınavlara gerek kalmaz ve tam lisansa doğrudan geçiş sağlanır. Bu yapılandırılmış süreç, tüm eğitim ve deneyim unsurlarınızın detaylıca değerlendirilmesini garanti eder."
+  },
+  fr: {
+    title: "Équivalence de la formation médicale en Allemagne",
+    intro:
+      "La reconnaissance de l’équivalence est une procédure permettant aux médecins d’obtenir une validation officielle de leurs qualifications acquises à l’étranger, attestant qu’elles sont comparables à la formation médicale allemande. Cette démarche constitue une alternative importante à l’examen de connaissances lorsque les diplômes sont jugés équivalents, facilitant ainsi l’accès direct à l’approbation complète.",
+    definition:
+      "L’équivalence signifie que la formation médicale suivie à l’étranger est comparable, tant en contenu qu’en qualité, aux exigences du cursus médical allemand. Concrètement, cela implique que :\n•	Les bases théoriques (anatomie, physiologie, pathologie, etc.) ont été enseignées dans une mesure comparable,\n•	Les compétences pratiques acquises lors des stages cliniques ou de l’année pratique répondent aux exigences allemandes,\n•	Les standards qualitatifs, tels que les systèmes d’examen et les programmes d’études, sont similaires.\nLorsque l’équivalence est reconnue, il n’est généralement pas nécessaire de passer un examen complémentaire.",
+    requirements: {
+      title: "Conditions requises pour la reconnaissance de l’équivalence",
+      points: [
+        "Formation médicale :\n  • Diplôme de médecine obtenu à l’étranger, conforme aux standards allemands.\n  • Preuve des connaissances théoriques et pratiques via diplômes, certificats et formations continues.",
+        "Documents requis :\n  • Diplômes, certificats et relevés de notes certifiés.\n  • Traductions officielles et apostilles.\n  • Preuves d’expérience professionnelle et de formations complémentaires.",
+        "Exigences linguistiques :\n  • Maîtrise de l’allemand, généralement au minimum au niveau B2 (souvent C1 en contexte médical)."
+      ]
+    },
+    process: {
+      title: "Processus de reconnaissance",
+      steps: [
+        {
+          title: "Dépôt du dossier",
+          description: [
+            "Le candidat doit soumettre tous les documents nécessaires attestant de sa formation et de son expérience, auprès de l’autorité compétente."
+          ]
+        },
+        {
+          title: "Rédaction du rapport d’expertise",
+          description: [
+            "Un comité d’experts examine minutieusement les documents fournis et rédige un rapport détaillé afin de déterminer si la formation étrangère est équivalente aux normes allemandes."
+          ]
+        },
+        {
+          title: "Décision sur la suite du processus",
+          description: [
+            "Si l’équivalence est reconnue, il n’est généralement pas nécessaire de passer un examen complémentaire, ce qui permet de poursuivre directement vers l’approbation complète. Dans le cas contraire, le candidat devra passer un examen de connaissances."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Avantages de la reconnaissance de l’équivalence",
+      points: [
+        "Gain de temps : Une évaluation positive permet d’éviter des examens supplémentaires et d’accélérer l’obtention de la licence.",
+        "Accès direct à la pratique : La reconnaissance de l’équivalence autorise l’exercice indépendant de la médecine sans formalités supplémentaires.",
+        "Évaluation personnalisée : Le rapport d’expertise offre une analyse détaillée et individualisée de votre parcours éducatif et professionnel."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Vue d’ensemble détaillée du processus de reconnaissance",
+    detailedReview:
+      "Le processus de reconnaissance commence par la collecte et la soumission de tous les documents attestant de votre formation et de votre expérience. Un comité d’experts examine ensuite ces documents et rédige un rapport d’expertise complet. En cas de reconnaissance positive, l’examen de connaissances n’est généralement pas requis, permettant une transition directe vers l’approbation complète. Ce processus structuré garantit une évaluation approfondie et individualisée de vos qualifications."
+  },
+  es: {
+    title: "Equivalencia de la formación médica en Alemania",
+    intro:
+      "El reconocimiento de la equivalencia es un procedimiento que permite a los médicos obtener el reconocimiento oficial de que sus cualificaciones médicas obtenidas en el extranjero son equivalentes a la formación médica en Alemania. Este proceso representa una alternativa importante al examen de conocimientos cuando las titulaciones se consideran comparables, facilitando así el acceso directo a la licencia completa.",
+    definition:
+      "La equivalencia significa que la formación médica cursada en el extranjero es comparable en contenido y calidad con la educación médica alemana. Esto implica que:\n•	Los fundamentos teóricos (anatomía, fisiología, patología, etc.) se han enseñado en un grado similar,\n•	Las habilidades prácticas, adquiridas a través de prácticas clínicas y otros entrenamientos, cumplen con los estándares alemanes,\n•	Los estándares de calidad, en cuanto a sistemas de evaluación y planes de estudio, son comparables.\nCuando se reconoce la equivalencia, generalmente no es necesario rendir exámenes adicionales.",
+    requirements: {
+      title: "Requisitos para el reconocimiento de la equivalencia",
+      points: [
+        "Formación médica:\n  • Haber completado los estudios de medicina en el extranjero de manera exitosa y en línea con los estándares alemanes.\n  • Presentar diplomas, certificados y registros de educación continua que demuestren tanto conocimientos teóricos como prácticos.",
+        "Documentos requeridos:\n  • Copias certificadas de diplomas, certificados y expedientes académicos.\n  • Traducciones oficiales y apostillas de los documentos necesarios.\n  • Evidencia de experiencia clínica y formación adicional.",
+        "Requisitos lingüísticos:\n  • Se requiere demostrar dominio del alemán, usualmente a un nivel mínimo de B2 (preferiblemente C1 en contexto médico)."
+      ]
+    },
+    process: {
+      title: "Procedimiento de reconocimiento",
+      steps: [
+        {
+          title: "Presentación de documentos",
+          description: [
+            "El solicitante debe presentar todos los documentos requeridos que acrediten su formación y experiencia profesional ante la autoridad competente."
+          ]
+        },
+        {
+          title: "Elaboración del informe de evaluación",
+          description: [
+            "Un panel de expertos analiza minuciosamente la documentación y elabora un informe detallado que determina si la formación obtenida en el extranjero es equivalente a la formación médica alemana."
+          ]
+        },
+        {
+          title: "Decisión sobre el proceso",
+          description: [
+            "Si se reconoce la equivalencia, generalmente no es necesario rendir el examen de conocimientos, lo que permite avanzar directamente hacia la obtención de la licencia completa. En caso contrario, se requerirá que el médico realice un examen adicional."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Ventajas del reconocimiento de la equivalencia",
+      points: [
+        "Ahorro de tiempo: Una evaluación positiva elimina la necesidad de exámenes adicionales, acelerando el proceso de obtención de la licencia.",
+        "Acceso directo a la práctica: El reconocimiento de la equivalencia permite a los médicos comenzar a ejercer de forma independiente sin pasos adicionales.",
+        "Evaluación individualizada: El informe de evaluación proporciona un análisis detallado y personalizado de tu formación y experiencia profesional."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Visión detallada del procedimiento de reconocimiento",
+    detailedReview:
+      "El proceso de reconocimiento comienza con la recopilación y presentación de todos los documentos que acrediten tu trayectoria educativa y profesional. Posteriormente, un panel de expertos examina la documentación y elabora un informe exhaustivo que determina si tus cualificaciones son equivalentes a los estándares alemanes. Si se reconoce la equivalencia, generalmente se omite el examen de conocimientos, lo que permite un acceso más rápido a la licencia completa. Este proceso estructurado garantiza una evaluación completa y personalizada de tus cualificaciones."
+  },
+  ar: {
+    title: "معادلة التعليم الطبي في ألمانيا",
+    intro:
+      "إجراءات الاعتراف بالمعادلة تمكّن الأطباء من الحصول على اعتراف رسمي بأن مؤهلاتهم الطبية التي اكتسبوها في الخارج معادلة للتعليم الطبي الألماني. يُعتبر هذا الإجراء بديلاً مهماً لامتحان المعرفة إذا تم اعتبار المؤهلات متكافئة، مما يسهل الحصول على الترخيص الكامل.",
+    definition:
+      "المعادلة تعني أن التعليم الطبي الذي حصلت عليه في الخارج يتوافق في المحتوى والجودة مع متطلبات التعليم الطبي في ألمانيا. هذا يشمل:\n•	المبادئ النظرية: تم تغطية جميع المواضيع الأساسية مثل التشريح، الفسيولوجيا، وعلم الأمراض بالمستوى المطلوب.\n•	المهارات العملية: تتوافق الخبرات السريرية والتدريبات العملية مع المعايير الألمانية.\n•	المعايير النوعية: نظام الامتحانات والخطط الدراسية مشابهة للنظام الألماني.\nفي حال تم الاعتراف بالمعادلة، غالباً لا يكون من الضروري اجتياز امتحانات إضافية.",
+    requirements: {
+      title: "متطلبات الاعتراف بالمعادلة",
+      points: [
+        "التعليم الطبي:\n  • إتمام التعليم الطبي في الخارج بنجاح بما يتوافق مع معايير ألمانيا.\n  • تقديم شهادات ودبلومات تثبت المعرفة النظرية والعملية، بالإضافة إلى شهادات الدورات التدريبية.\n",
+        "الوثائق المطلوبة:\n  • نسخ موثقة من الشهادات والدبلومات والسجلات الأكاديمية.\n  • ترجمة رسمية واعتماد (أبوستيل) للوثائق غير الألمانية.\n  • إثبات الخبرة العملية والمشاركة في البرامج التدريبية الإضافية.",
+        "متطلبات اللغة:\n  • إثبات إجادة اللغة الألمانية، عادةً بمستوى لا يقل عن B2، وغالباً C1 في السياق الطبي."
+      ]
+    },
+    process: {
+      title: "إجراءات الاعتراف",
+      steps: [
+        {
+          title: "تقديم المستندات",
+          description: [
+            "يقوم المتقدم بتقديم جميع الوثائق المطلوبة التي تثبت مؤهلاته التعليمية والمهنية إلى الجهة المختصة."
+          ]
+        },
+        {
+          title: "إعداد تقرير التقييم",
+          description: [
+            "يقوم فريق من الخبراء بمراجعة الوثائق بدقة وإعداد تقرير مفصل يحدد ما إذا كانت المؤهلات متوافقة مع المعايير الألمانية."
+          ]
+        },
+        {
+          title: "اتخاذ القرار بشأن الإجراءات الإضافية",
+          description: [
+            "إذا تم الاعتراف بالمعادلة، لا يكون هناك حاجة لامتحان إضافي، مما يتيح الانتقال المباشر إلى الحصول على الترخيص الكامل. وإلا، يتعين على الطبيب اجتياز امتحان المعرفة."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "فوائد الاعتراف بالمعادلة",
+      points: [
+        "توفير الوقت: التقييم الإيجابي يلغي الحاجة لامتحانات إضافية، مما يسرع عملية الحصول على الترخيص.",
+        "الوصول المباشر للممارسة: الاعتراف بالمعادلة يسمح ببدء العمل بشكل مستقل دون اختبارات إضافية.",
+        "تقييم فردي: يقدم تقرير التقييم تحليلًا مفصلًا وشخصيًا لمؤهلاتك التعليمية والمهنية."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "نظرة شاملة على إجراءات الاعتراف",
+    detailedReview:
+      "تبدأ إجراءات الاعتراف بجمع وتقديم كافة الوثائق التي تثبت مسارك التعليمي والمهني. يقوم فريق من الخبراء بمراجعة هذه الوثائق وإعداد تقرير تقييم مفصل. إذا ثبت أن مؤهلاتك مطابقة للمعايير الألمانية، يتم إلغاء الحاجة لامتحان إضافي، مما يتيح الانتقال السريع للحصول على الترخيص الكامل. يضمن هذا النهج المنظم تقييمًا شاملاً ودقيقًا لجميع جوانب مؤهلاتك."
+  },
+  ro: {
+    title: "Echivalența studiilor medicale în Germania",
+    intro:
+      "Recunoașterea echivalenței este o procedură care permite medicilor să obțină recunoașterea oficială că calificările lor medicale dobândite în străinătate sunt echivalente cu studiile medicale din Germania. Acest proces reprezintă o alternativă importantă la examenul de cunoștințe atunci când calificările sunt considerate comparabile, facilitând astfel accesul direct la aprobarea completă.",
+    definition:
+      "Echivalența înseamnă că studiile medicale finalizate în străinătate corespund ca conținut și calitate cu cerințele studiilor medicale din Germania. Concret, acest lucru presupune că:\n• Baza teoretică: Toate domeniile esențiale (de exemplu, anatomie, fiziologie, patologie) au fost predate într-o manieră comparabilă.\n• Competențele practice: Experiența clinică, cum ar fi stagiile și anul practic, corespund nivelului cerut în Germania.\n• Standardele calitative: Calitatea studiilor, inclusiv sistemul de examene și programele de studii, este comparabilă.\nÎn cazul în care se recunoaște echivalența, de regulă nu mai este necesară susținerea unui examen suplimentar.",
+    requirements: {
+      title: "Cerințele pentru recunoașterea echivalenței",
+      points: [
+        "Studii medicale:\n  • Finalizarea cu succes a studiilor medicale în străinătate, care să corespundă standardelor germane.\n  • Dovada cunoștințelor teoretice și practice prin diplome, certificate și cursuri de perfecționare.",
+        "Documente necesare:\n  • Copii legalizate ale diplomelor, certificatelor și foilor matricole care documentează întregul parcurs educațional.\n  • Traduceri oficiale și apostile pentru documentele care nu sunt emise în limba germană.\n  • Dovezi ale experienței practice și ale participării la programe de formare continuă.",
+        "Cerințe lingvistice:\n  • Dovada competenței în limba germană, de regulă la nivelul B2 (adesea C1 în context medical)."
+      ]
+    },
+    process: {
+      title: "Procedura de recunoaștere",
+      steps: [
+        {
+          title: "Depunerea documentelor",
+          description: [
+            "Solicitantul depune toate documentele necesare la autoritatea competentă, care includ dovezi ale studiilor și experienței practice."
+          ]
+        },
+        {
+          title: "Elaborarea raportului de evaluare",
+          description: [
+            "Un grup de experți analizează documentele depuse și întocmește un raport detaliat care stabilește dacă studiile medicale sunt echivalente cu cele din Germania."
+          ]
+        },
+        {
+          title: "Decizia privind pașii următori",
+          description: [
+            "Dacă echivalența este recunoscută, de regulă nu este necesar să susțineți un examen suplimentar, permițând accesul direct la aprobarea completă. În caz contrar, va trebui să susțineți un examen de cunoștințe."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Avantajele recunoașterii echivalenței",
+      points: [
+        "Economisirea timpului: Un raport de evaluare favorabil elimină necesitatea unui examen suplimentar, accelerând procesul de obținere a licenței.",
+        "Acces direct la practică: Recunoașterea echivalenței vă permite să începeți activitatea medicală independentă fără proceduri suplimentare.",
+        "Evaluare individualizată: Raportul de evaluare oferă o analiză detaliată și personalizată a pregătirii și experienței dumneavoastră."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Prezentare detaliată a procedurii de recunoaștere",
+    detailedReview:
+      "Procedura de recunoaștere începe cu colectarea și depunerea tuturor documentelor care atestă parcursul dumneavoastră educațional și profesional. Ulterior, un grup de experți analizează cu atenție aceste documente și întocmește un raport de evaluare cuprinzător. Dacă calificările sunt recunoscute ca fiind echivalente cu standardele germane, de regulă nu mai este necesar să susțineți un examen suplimentar, ceea ce permite o tranziție rapidă către aprobarea completă. Acest proces structurat asigură o evaluare obiectivă și detaliată a tuturor aspectelor pregătirii dumneavoastră."
+  },
+  el: {
+    title: "Ισοδυναμία της ιατρικής εκπαίδευσης στη Γερμανία",
+    intro:
+      "Η αναγνώριση της ισοδυναμίας αποτελεί μια διαδικασία που επιτρέπει στους γιατρούς να λάβουν επίσημη αναγνώριση ότι τα ιατρικά τους προσόντα, που αποκτήθηκαν στο εξωτερικό, είναι ισοδύναμα με την ιατρική εκπαίδευση στη Γερμανία. Αυτή η διαδικασία προσφέρει μια σημαντική εναλλακτική λύση στο εξεταστικό σύστημα, εφόσον τα προσόντα θεωρούνται συγκρίσιμα, διευκολύνοντας έτσι την άμεση μετάβαση στην πλήρη αδειοδότηση.",
+    definition:
+      "Η ισοδυναμία σημαίνει ότι η ιατρική εκπαίδευση που έχει αποκτηθεί στο εξωτερικό είναι συγκρίσιμη ως προς το περιεχόμενο και την ποιότητα με το πρόγραμμα σπουδών στη Γερμανία. Αυτό περιλαμβάνει:\n•	Θεωρητικές βάσεις: Όλα τα βασικά μαθήματα (π.χ. ανατομία, φυσιολογία, παθολογία) έχουν διδαχθεί σε συγκρίσιμη έκταση.\n•	Πρακτικές δεξιότητες: Η κλινική εμπειρία και η πρακτική κατάρτιση ανταποκρίνονται στα γερμανικά πρότυπα.\n•	Ποιοτικά πρότυπα: Το σύστημα αξιολόγησης και τα προγράμματα σπουδών είναι συγκρίσιμα.\nΣε περίπτωση που αναγνωριστεί η ισοδυναμία, συνήθως δεν απαιτείται περαιτέρω εξέταση.",
+    requirements: {
+      title: "Απαιτήσεις για την αναγνώριση της ισοδυναμίας",
+      points: [
+        "Ιατρική εκπαίδευση:\n  • Επιτυχής ολοκλήρωση των ιατρικών σπουδών στο εξωτερικό, σύμφωνα με τα γερμανικά πρότυπα.\n  • Απόδειξη θεωρητικών και πρακτικών γνώσεων μέσω αποφοίτησης, πιστοποιητικών και επιμορφωτικών προγραμμάτων.",
+        "Απαραίτητα έγγραφα:\n  • Επικυρωμένα αποδεικτικά στοιχεία (αποφοίτησης, πιστοποιητικά, εξεταστικά δελτία).\n  • Επίσημες μεταφράσεις και apostille για έγγραφα που δεν είναι στα γερμανικά.\n  • Αποδεικτικά στοιχεία κλινικής εμπειρίας και πρόσθετης εκπαίδευσης.",
+        "Γλωσσικές απαιτήσεις:\n  • Απόδειξη επάρκειας στη γερμανική γλώσσα, συνήθως τουλάχιστον σε επίπεδο B2, ιδανικά C1 σε ιατρικό πλαίσιο."
+      ]
+    },
+    process: {
+      title: "Διαδικασία αναγνώρισης",
+      steps: [
+        {
+          title: "Υποβολή εγγράφων",
+          description: [
+            "Ο υποψήφιος υποβάλλει όλα τα απαραίτητα έγγραφα στην αρμόδια αρχή, που περιλαμβάνουν αποδεικτικά στοιχεία για την εκπαίδευση και την επαγγελματική του εμπειρία."
+          ]
+        },
+        {
+          title: "Σύνταξη έκθεσης αξιολόγησης",
+          description: [
+            "Μια ομάδα ειδικών εξετάζει προσεκτικά τα υποβληθέντα έγγραφα και συντάσσει μια λεπτομερή έκθεση αξιολόγησης, που καθορίζει αν η εκπαίδευση στο εξωτερικό είναι ισοδύναμη με αυτή στη Γερμανία."
+          ]
+        },
+        {
+          title: "Απόφαση για τα επόμενα βήματα",
+          description: [
+            "Εάν αναγνωριστεί η ισοδυναμία, συνήθως δεν απαιτείται περαιτέρω εξέταση, επιτρέποντας την άμεση μετάβαση στην πλήρη αδειοδότηση. Διαφορετικά, ο γιατρός θα πρέπει να υποβληθεί σε πρόσθετη αξιολόγηση."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Πλεονεκτήματα της αναγνώρισης της ισοδυναμίας",
+      points: [
+        "Εξοικονόμηση χρόνου: Η θετική αξιολόγηση εξαλείφει την ανάγκη για επιπλέον εξετάσεις, επιταχύνοντας τη διαδικασία απόκτησης της άδειας.",
+        "Άμεση πρόσβαση στην πρακτική: Η αναγνώριση της ισοδυναμίας επιτρέπει στους γιατρούς να αρχίσουν να εργάζονται ανεξάρτητα χωρίς επιπλέον δοκιμασίες.",
+        "Προσωπική αξιολόγηση: Η έκθεση αξιολόγησης παρέχει μια λεπτομερή και εξατομικευμένη ανάλυση της εκπαίδευσής σας και της επαγγελματικής σας εμπειρίας."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Αναλυτική επισκόπηση της διαδικασίας αναγνώρισης",
+    detailedReview:
+      "Η διαδικασία αναγνώρισης ξεκινά με τη συγκέντρωση και υποβολή όλων των απαραίτητων εγγράφων που αποδεικνύουν το εκπαιδευτικό και επαγγελματικό σας υπόβαθρο. Στη συνέχεια, μια ομάδα ειδικών εξετάζει λεπτομερώς αυτά τα έγγραφα και συντάσσει μια ολοκληρωμένη έκθεση αξιολόγησης. Εάν τα προσόντα σας θεωρηθούν ισοδύναμα με τα γερμανικά πρότυπα, δεν απαιτείται περαιτέρω εξέταση, επιτρέποντας έτσι μια ταχύτερη μετάβαση στην πλήρη αδειοδότηση. Αυτή η δομημένη διαδικασία εξασφαλίζει ότι κάθε πτυχή της κατάρτισής σας αξιολογείται διεξοδικά."
+  },
+  ro: {
+    title: "Echivalența studiilor medicale în Germania",
+    intro:
+      "Recunoașterea echivalenței este o procedură prin care medicii pot obține validarea oficială că calificările medicale obținute în străinătate sunt echivalente cu studiile medicale din Germania. Acest proces reprezintă o alternativă importantă la examenul de cunoștințe, atunci când studiile sunt considerate comparabile, facilitând astfel accesul direct la aprobarea completă.",
+    definition:
+      "Echivalența înseamnă că studiile medicale finalizate în străinătate corespund ca conținut și calitate cu cerințele din Germania. Concret, acest lucru presupune că:\n• Baza teoretică: Toate domeniile esențiale (ex. anatomie, fiziologie, patologie) sunt predate într-o măsură comparabilă.\n• Competențele practice: Experiența clinică și pregătirea practică (stagiile, anul practic) sunt la nivelul cerut.\n• Standardele de calitate: Sistemul de evaluare și planurile de studii sunt similare.\nAtunci când echivalența este recunoscută,, de regulă, nu mai este necesară susținerea unui examen suplimentar.",
+    requirements: {
+      title: "Cerințele pentru recunoașterea echivalenței",
+      points: [
+        "Studii medicale:\n  • Finalizarea cu succes a studiilor medicale în străinătate, în conformitate cu standardele germane.\n  • Dovada cunoștințelor teoretice și practice prin diplome, certificate și cursuri de perfecționare.",
+        "Documente necesare:\n  • Copii legalizate ale diplomelor, certificatelor și foilor matricole care documentează întregul parcurs educațional.\n  • Traduceri oficiale și apostile pentru documentele care nu sunt în limba germană.\n  • Dovezi suplimentare, cum ar fi scrisori de recomandare sau certificate de formare continuă.",
+        "Cerințe lingvistice:\n  • Dovada competenței în limba germană, de regulă la nivelul B2 (ideal C1 în context medical)."
+      ]
+    },
+    process: {
+      title: "Procedura de recunoaștere",
+      steps: [
+        {
+          title: "Depunerea documentelor",
+          description: [
+            "Candidatul depune toate documentele necesare la autoritatea competentă, care atestă studiile și experiența sa practică."
+          ]
+        },
+        {
+          title: "Elaborarea raportului de evaluare",
+          description: [
+            "Un grup de experți analizează cu atenție documentele depuse și întocmește un raport detaliat pentru a stabili dacă studiile sunt echivalente cu standardele germane."
+          ]
+        },
+        {
+          title: "Decizia privind pașii următori",
+          description: [
+            "Dacă echivalența este recunoscută, de regulă nu este necesar un examen suplimentar, iar procesul de obținere a aprobării se accelerează. În caz contrar, va trebui să susțineți un examen de cunoștințe."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Avantajele recunoașterii echivalenței",
+      points: [
+        "Economisirea timpului: Un raport de evaluare favorabil elimină necesitatea unui examen suplimentar, accelerând procesul de aprobare.",
+        "Acces direct la practica medicală: Recunoașterea echivalenței permite medicilor să înceapă activitatea independentă imediat.",
+        "Evaluare individualizată: Raportul de evaluare oferă o analiză detaliată și personalizată a studiilor și experienței tale."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Prezentare detaliată a procedurii de recunoaștere",
+    detailedReview:
+      "Procedura de recunoaștere începe cu colectarea și depunerea tuturor documentelor care atestă parcursul tău educațional și profesional. Ulterior, un grup de experți analizează cu atenție aceste documente și întocmește un raport de evaluare complet. Dacă calificările tale sunt considerate echivalente cu standardele germane, de regulă nu va fi necesar să susții un examen suplimentar, ceea ce permite o tranziție rapidă către aprobarea completă. Acest proces structurat asigură o evaluare detaliată și corectă a tuturor aspectelor calificărilor tale."
+  },
+  el: {
+    title: "Ισοδυναμία της ιατρικής εκπαίδευσης στη Γερμανία",
+    intro:
+      "Η αναγνώριση της ισοδυναμίας αποτελεί μια διαδικασία μέσω της οποίας οι γιατροί μπορούν να λάβουν επίσημη επιβεβαίωση ότι τα προσόντα τους, που αποκτήθηκαν στο εξωτερικό, είναι ισοδύναμα με την ιατρική εκπαίδευση στη Γερμανία. Αυτή η διαδικασία προσφέρει μια σημαντική εναλλακτική λύση στο παραδοσιακό σύστημα εξετάσεων, επιταχύνοντας την απόκτηση πλήρους αδειοδότησης.",
+    definition:
+      "Η ισοδυναμία σημαίνει ότι η εκπαίδευση που λάβατε στο εξωτερικό πληροί τα ίδια περιεχόμενα και ποιοτικά πρότυπα με αυτά που προσφέρονται στα γερμανικά ιατρικά προγράμματα. Συγκεκριμένα, αυτό σημαίνει ότι:\n• Οι θεωρητικές βάσεις (π.χ. ανατομία, φυσιολογία, παθολογία) διδάσκονται σε συγκρίσιμη έκταση,\n• Οι πρακτικές δεξιότητες, όπως οι κλινικές πρακτικές, ανταποκρίνονται στα γερμανικά πρότυπα,\n• Τα ποιοτικά πρότυπα, συμπεριλαμβανομένου του συστήματος εξετάσεων και των προγραμμάτων σπουδών, είναι συγκρίσιμα.\nΌταν αναγνωρίζεται η ισοδυναμία, συνήθως δεν απαιτείται περαιτέρω εξέταση.",
+    requirements: {
+      title: "Απαιτήσεις για την αναγνώριση της ισοδυναμίας",
+      points: [
+        "Ιατρική εκπαίδευση:\n  • Επιτυχής ολοκλήρωση σπουδών ιατρικής στο εξωτερικό σύμφωνα με τα γερμανικά πρότυπα.\n  • Απόδειξη θεωρητικών και πρακτικών γνώσεων μέσω αποφοίτησης, πιστοποιητικών και επιμορφωτικών προγραμμάτων.",
+        "Απαραίτητα έγγραφα:\n  • Επικυρωμένα αποδεικτικά στοιχεία (πτυχία, πιστοποιητικά, βαθμολογίες).\n  • Επίσημες μεταφράσεις και apostille για έγγραφα που δεν είναι στα γερμανικά.\n  • Πρόσθετα αποδεικτικά στοιχεία κλινικής εμπειρίας και επιπλέον εκπαίδευσης.",
+        "Γλωσσικές απαιτήσεις:\n  • Απόδειξη επάρκειας στη γερμανική γλώσσα, συνήθως τουλάχιστον σε επίπεδο B2, ιδανικά C1 σε ιατρικό πλαίσιο."
+      ]
+    },
+    process: {
+      title: "Διαδικασία αναγνώρισης",
+      steps: [
+        {
+          title: "Υποβολή εγγράφων",
+          description: [
+            "Ο υποψήφιος υποβάλλει όλα τα απαραίτητα έγγραφα που αποδεικνύουν την εκπαίδευση και την επαγγελματική του εμπειρία στην αρμόδια αρχή."
+          ]
+        },
+        {
+          title: "Σύνταξη έκθεσης αξιολόγησης",
+          description: [
+            "Μια ομάδα ειδικών εξετάζει λεπτομερώς τα υποβληθέντα έγγραφα και συντάσσει μια ολοκληρωμένη έκθεση αξιολόγησης για να διαπιστώσει αν η εκπαίδευσή σας πληροί τα γερμανικά πρότυπα."
+          ]
+        },
+        {
+          title: "Απόφαση για τα επόμενα βήματα",
+          description: [
+            "Εάν η ισοδυναμία αναγνωριστεί, συνήθως δεν απαιτείται περαιτέρω εξέταση, επιτρέποντας άμεση μετάβαση στην πλήρη αδειοδότηση. Διαφορετικά, ο υποψήφιος θα πρέπει να υποβληθεί σε πρόσθετη αξιολόγηση."
+          ]
+        }
+      ]
+    },
+    preparation: {
+      title: "Πλεονεκτήματα της αναγνώρισης της ισοδυναμίας",
+      points: [
+        "Εξοικονόμηση χρόνου: Μια θετική αξιολόγηση εξαλείφει την ανάγκη για επιπλέον εξετάσεις, επιταχύνοντας τη διαδικασία απόκτησης της άδειας.",
+        "Άμεση πρόσβαση στην πρακτική: Η αναγνώριση της ισοδυναμίας επιτρέπει στους γιατρούς να αρχίσουν άμεσα να εργάζονται ανεξάρτητα.",
+        "Αναλυτική και εξατομικευμένη αξιολόγηση: Η έκθεση αξιολόγησης παρέχει λεπτομερή ανάλυση της εκπαίδευσης και της επαγγελματικής σας εμπειρίας."
+      ]
+    },
+    additionalCourses: "",
+    detailedReviewTitle: "Αναλυτική επισκόπηση της διαδικασίας αναγνώρισης",
+    detailedReview:
+      "Η διαδικασία αναγνώρισης ξεκινά με τη συγκέντρωση και υποβολή όλων των απαραίτητων εγγράφων που αποδεικνύουν το εκπαιδευτικό και επαγγελματικό σας υπόβαθρο. Στη συνέχεια, μια ομάδα ειδικών αναλύει προσεκτικά αυτά τα έγγραφα και συντάσσει μια ολοκληρωμένη έκθεση αξιολόγησης. Εάν τα προσόντα σας θεωρηθούν ισοδύναμα με τα γερμανικά πρότυπα, συνήθως δεν απαιτείται περαιτέρω εξέταση, επιτρέποντας έτσι μια ταχύτερη μετάβαση στην πλήρη αδειοδότηση. Αυτό το δομημένο σύστημα διασφαλίζει μια λεπτομερή και αντικειμενική αξιολόγηση όλων των πτυχών της κατάρτισής σας."
+  }
+};

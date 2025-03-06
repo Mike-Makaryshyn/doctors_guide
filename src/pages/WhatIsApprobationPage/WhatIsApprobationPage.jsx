@@ -6,9 +6,9 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
 
-// Компонент для рендерингу абзаців із підтримкою переносів рядків
-const RenderParagraphs = ({ text }) => {
-  return text.split("\n\n").map((para, index) => (
+// Компонент для рендеринга абзацев с сохранением переносов строк
+const RenderParagraphs = ({ text }) =>
+  text.split("\n\n").map((para, index) => (
     <p key={index} className="white-space-pre-line">
       {para.split("\n").map((line, i, arr) => (
         <React.Fragment key={i}>
@@ -18,7 +18,6 @@ const RenderParagraphs = ({ text }) => {
       ))}
     </p>
   ));
-};
 
 const WhatIsApprobationPage = () => {
   const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
@@ -32,11 +31,11 @@ const WhatIsApprobationPage = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>{content?.title || "What is Approbation?"}</title>
+        <title>{content.title || "What is Approbation?"}</title>
         <meta
           name="description"
           content={
-            content?.intro ||
+            content.intro ||
             "Learn about the process of obtaining Approbation for doctors in Germany."
           }
         />
@@ -46,7 +45,7 @@ const WhatIsApprobationPage = () => {
         />
         <meta name="author" content="Doctors Guide Team" />
       </Helmet>
-      <div className="page page1 containerBigger mt-20">
+      <div className={cn("page", "page1", "containerBigger", "mt-20")}>
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.what_is_approbation__content)}>
           <button
@@ -56,64 +55,105 @@ const WhatIsApprobationPage = () => {
             &#8592;
           </button>
 
-          {/* Заголовок, вступ та (опційне) визначення */}
+          {/* Заголовок и вступ */}
           <section>
-            <h1>{content?.title || "Title not available"}</h1>
-            <h4>{content?.intro || "Intro not available"}</h4>
-            {content?.definition && (
-              <p className="white-space-pre-line">{content.definition}</p>
-            )}
+            <h1>{content.title}</h1>
+            <h4>{content.intro}</h4>
           </section>
 
-          {/* Секція з вимогами до отримання апробації */}
-          <section>
-            <h2>{content?.process?.title || "Process Requirements"}</h2>
-            {content?.process?.desc && (
-              <RenderParagraphs text={content.process.desc} />
-            )}
-            {content?.process?.steps?.map((step, index) => (
-              <div key={index}>
-                <h4>{step.title || "Step title not available"}</h4>
-                <ul>
-                  {step.description.map((desc, idx) => (
-                    <li key={idx}>{desc}</li>
-                  ))}
-                </ul>
-              </div>
-            )) || <p>No steps available</p>}
-          </section>
-
-          {/* Секція з етапами отримання апробації */}
-          <section>
-            <h2>{content?.preparation?.title || "Preparation Steps"}</h2>
-            {content?.preparation?.desc && (
-              <RenderParagraphs text={content.preparation.desc} />
-            )}
-            <ul>
-              {content?.preparation?.points?.map((point, index) => (
-                <li key={index}>{point || "Point not available"}</li>
-              )) || <li>No preparation points available</li>}
-            </ul>
-          </section>
-
-          {/* Секція з перевагами апробації */}
-          <section>
-            <h2>{content?.requirements?.title || "Benefits / Advantages"}</h2>
-            {content?.requirements?.desc && (
-              <RenderParagraphs text={content.requirements.desc} />
-            )}
-            <ul>
-              {content?.requirements?.points?.map((point, index) => (
-                <li key={index}>{point}</li>
-              )) || <li>No requirements available</li>}
-            </ul>
-          </section>
-
-          {/* Секція з детальним оглядом процесу */}
-          {content?.detailedReview && (
+          {/* Rechtsgrundlagen / Правовая база */}
+          {content.rechtsgrundlagen && (
             <section>
-              <h2>{content.detailedReviewTitle || "Detailed Process Overview"}</h2>
-              <RenderParagraphs text={content.detailedReview} />
+              <h2>{content.rechtsgrundlagen.title}</h2>
+              <ul>
+                {content.rechtsgrundlagen.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {/* Voraussetzungen / Вимоги */}
+          {content.voraussetzungen && (
+            <section>
+              <h2>{content.voraussetzungen.title}</h2>
+              {content.voraussetzungen.sections.map((sec, index) => (
+                <div key={index}>
+                  <h3>{sec.title}</h3>
+                  <ul>
+                    {sec.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {/* Schritte / Этапы */}
+          {content.schritte && (
+            <section>
+              <h2>{content.schritte.title}</h2>
+              {content.schritte.steps.map((step, index) => (
+                <div key={index}>
+                  <h3>{step.title}</h3>
+                  <ul>
+                    {step.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {/* Vorteile / Преимущества */}
+          {content.vorteile && (
+            <section>
+              <h2>{content.vorteile.title}</h2>
+              <ul>
+                {content.vorteile.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {/* Tipps / Практические советы */}
+          {content.tipps && (
+            <section>
+              <h2>{content.tipps.title}</h2>
+              {content.tipps.tips.map((tip, index) => (
+                <div key={index}>
+                  <h3>{tip.title}</h3>
+                  <ul>
+                    {tip.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {/* FAQ */}
+          {content.faq && (
+            <section>
+              <h2>{content.faq.title}</h2>
+              {content.faq.questions.map((q, index) => (
+                <div key={index}>
+                  <h4>{q.question}</h4>
+                  <p>{q.answer}</p>
+                </div>
+              ))}
+            </section>
+          )}
+
+          {/* Fazit / Вывод */}
+          {content.fazit && (
+            <section>
+              <h2>{content.fazit.title}</h2>
+              <p>{content.fazit.text}</p>
             </section>
           )}
         </div>
