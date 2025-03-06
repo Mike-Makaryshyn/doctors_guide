@@ -13,6 +13,8 @@ export const columnsFirst = [
       pl: "Dokument",
       ru: "Документ",
       de: "Dokument",
+      el: "Έγγραφο",
+      ro: "Document",
     },
     shortLabel: {
       uk: "Док.",
@@ -24,6 +26,8 @@ export const columnsFirst = [
       pl: "Dok.",
       ru: "Док.",
       de: "Dok.",
+      el: "Έγγ.",
+      ro: "Doc.",
     },
   },
   {
@@ -38,6 +42,8 @@ export const columnsFirst = [
       pl: "Dostępne",
       ru: "Доступно",
       de: "Verfügbar",
+      el: "Διαθέσιμο",
+      ro: "Disponibil",
     },
     shortLabel: {
       uk: "Наяв.",
@@ -49,6 +55,8 @@ export const columnsFirst = [
       pl: "Dost.",
       ru: "Дост.",
       de: "Verfüg.",
+      el: "Διαθ.",
+      ro: "Disp.",
     },
   },
   {
@@ -63,6 +71,8 @@ export const columnsFirst = [
       pl: "Apostille",
       ru: "Апостиль",
       de: "Apostille",
+      el: "Σφραγίδα της Χάγης",
+      ro: "Apostilă",
     },
     shortLabel: {
       uk: "Апост.",
@@ -74,6 +84,8 @@ export const columnsFirst = [
       pl: "Apos.",
       ru: "Апост.",
       de: "Apost.",
+      el: "Σφρ.",
+      ro: "Ap.",
     },
   },
   {
@@ -88,6 +100,8 @@ export const columnsFirst = [
       pl: "Notarialnie poświadczone",
       ru: "Заверено нотариусом",
       de: "Notariell beglaubigt",
+      el: "Επικυρωμένο από συμβολαιογράφο",
+      ro: "Notarizat",
     },
     shortLabel: {
       uk: "Нотар.",
@@ -99,6 +113,8 @@ export const columnsFirst = [
       pl: "Notar.",
       ru: "Нотар.",
       de: "Notar.",
+      el: "Συμβ.",
+      ro: "Not.",
     },
   },
   {
@@ -113,6 +129,8 @@ export const columnsFirst = [
       pl: "Profesjonalne tłumaczenie",
       ru: "Профессиональный перевод",
       de: "Professionelle Übersetzung",
+      el: "Επαγγελματική Μετάφραση",
+      ro: "Traducere profesională",
     },
     shortLabel: {
       uk: "Переклад",
@@ -124,6 +142,8 @@ export const columnsFirst = [
       pl: "Tłum.",
       ru: "Перев.",
       de: "Übers.",
+      el: "Μετ.",
+      ro: "Trad.",
     },
   },
   {
@@ -138,6 +158,8 @@ export const columnsFirst = [
       pl: "Potwierdzone kopie",
       ru: "Заверенные копии",
       de: "Beglaubigte Kopien",
+      el: "Επικυρωμένα Αντίγραφα",
+      ro: "Copii certificate",
     },
     shortLabel: {
       uk: "Зав.копії",
@@ -149,6 +171,8 @@ export const columnsFirst = [
       pl: "Potw. kop.",
       ru: "Зав. коп.",
       de: "Begl. Kop.",
+      el: "Επικ. Αν.",
+      ro: "Cop. cert.",
     },
   },
   {
@@ -163,6 +187,8 @@ export const columnsFirst = [
       pl: "Wysłane",
       ru: "Отправлено",
       de: "Gesendet",
+      el: "Απεστάλη",
+      ro: "Trimis",
     },
     shortLabel: {
       uk: "Відпр.",
@@ -174,6 +200,8 @@ export const columnsFirst = [
       pl: "Wysł.",
       ru: "Отпр.",
       de: "Gesendet",
+      el: "Απ.",
+      ro: "Tr.",
     },
   },
 ];

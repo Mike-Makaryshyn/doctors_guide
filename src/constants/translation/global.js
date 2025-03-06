@@ -8,11 +8,13 @@ export const languageFlags = {
    fr: "🇫🇷", // French
    es: "🇪🇸", // Spanish
    pl: "🇵🇱", // Polish
+   el: "🇬🇷", // Greek
+   ro: "🇷🇴", // Romanian
 };
 
 export const DOMAIN_NAME = `https://doctors-guide-chi.vercel.app`;
 
-export const DEFAULT_LANGUAGE = 'de'
+export const DEFAULT_LANGUAGE = 'de';
 
 export const languages = {
    ar: {
@@ -32,6 +34,8 @@ export const languages = {
          { value: "fr", label: "الفرنسية" },
          { value: "es", label: "الإسبانية" },
          { value: "pl", label: "البولندية" },
+         { value: "el", label: "اليونانية" },
+         { value: "ro", label: "الرومانية" },
       ],
       requirements: {
          title: "المتطلبات للاعتراف الطبي في ألمانيا:",
@@ -44,22 +48,23 @@ export const languages = {
    },
    de: {
       choose_region: "Bitte wählen Sie Ihr Bundesland:",
-      welcome:
-         "Herzlich willkommen in unserer App für Ärzte, die planen, nach Deutschland zu ziehen!",
+      welcome: "Herzlich willkommen in unserer App für Ärzte, die planen, nach Deutschland zu ziehen!",
       next: "Weiter",
       back: "Zurück",
       continue: "Fortfahren",
       language: "Sprache wählen:",
       options: [
-            { "value": "de", "label": "Deutsch" },
-            { "value": "en", "label": "Englisch" },
-            { "value": "uk", "label": "Ukrainisch" },
-            { "value": "ru", "label": "Russisch" },
-            { "value": "tr", "label": "Türkisch" },
-            { "value": "ar", "label": "Arabisch" },
-            { "value": "fr", "label": "Französisch" },
-            { "value": "es", "label": "Spanisch" },
-            { "value": "pl", "label": "Polnisch" }
+         { value: "de", label: "Deutsch" },
+         { value: "en", label: "Englisch" },
+         { value: "uk", label: "Ukrainisch" },
+         { value: "ru", label: "Russisch" },
+         { value: "tr", label: "Türkisch" },
+         { value: "ar", label: "Arabisch" },
+         { value: "fr", label: "Französisch" },
+         { value: "es", label: "Spanisch" },
+         { value: "pl", label: "Polnisch" },
+         { value: "el", label: "Griechisch" },
+         { value: "ro", label: "Rumänisch" },
       ],
       requirements: {
          title: "Voraussetzungen für die medizinische Anerkennung in Deutschland:",
@@ -91,6 +96,8 @@ export const languages = {
          { value: "fr", label: "French" },
          { value: "es", label: "Spanish" },
          { value: "pl", label: "Polish" },
+         { value: "el", label: "Greek" },
+         { value: "ro", label: "Romanian" },
       ],
       requirements: {
          title: "Requirements for medical recognition in Germany:",
@@ -106,8 +113,7 @@ export const languages = {
    },
    uk: {
       choose_region: "Будь ласка, оберіть свою область:",
-      welcome:
-         "Ласкаво просимо до нашого додатку для лікарів, які планують переїхати до Німеччини!",
+      welcome: "Ласкаво просимо до нашого додатку для лікарів, які планують переїхати до Німеччини!",
       next: "Далі",
       back: "Назад",
       continue: "Продовжити",
@@ -122,6 +128,8 @@ export const languages = {
          { value: "fr", label: "Français" },
          { value: "es", label: "Español" },
          { value: "pl", label: "Polski" },
+         { value: "el", label: "Грецька" },
+         { value: "ro", label: "Румунська" },
       ],
       requirements: {
          title: "Вимоги до медичного визнання в Німеччині:",
@@ -137,8 +145,7 @@ export const languages = {
    },
    ru: {
       choose_region: "Пожалуйста, выберите свой регион:",
-      welcome:
-         "Добро пожаловать в наше приложение для врачей, планирующих переезд в Германию!",
+      welcome: "Добро пожаловать в наше приложение для врачей, планирующих переезд в Германию!",
       next: "Далее",
       back: "Назад",
       continue: "Продолжить",
@@ -153,6 +160,8 @@ export const languages = {
          { value: "fr", label: "Французский" },
          { value: "es", label: "Испанский" },
          { value: "pl", label: "Польский" },
+         { value: "el", label: "Греческий" },
+         { value: "ro", label: "Румынский" },
       ],
       requirements: {
          title: "Требования к медицинскому признанию в Германии:",
@@ -168,8 +177,7 @@ export const languages = {
    },
    tr: {
       choose_region: "Lütfen bölgenizi seçin:",
-      welcome:
-         "Almanya'ya taşınmayı planlayan doktorlar için uygulamamıza hoş geldiniz!",
+      welcome: "Almanya'ya taşınmayı planlayan doktorlar için uygulamamıza hoş geldiniz!",
       next: "İleri",
       back: "Geri",
       continue: "Devam",
@@ -184,6 +192,8 @@ export const languages = {
          { value: "fr", label: "Fransızca" },
          { value: "es", label: "İspanyolca" },
          { value: "pl", label: "Lehçe" },
+         { value: "el", label: "Yunanca" },
+         { value: "ro", label: "Rumence" },
       ],
       requirements: {
          title: "Almanya'da tıbbi tanınma için gereksinimler:",
@@ -199,8 +209,7 @@ export const languages = {
    },
    pl: {
       choose_region: "Proszę wybrać swoje województwo:",
-      welcome:
-         "Witamy w naszej aplikacji dla lekarzy planujących przeprowadzkę do Niemiec!",
+      welcome: "Witamy w naszej aplikacji dla lekarzy planujących przeprowadzkę do Niemiec!",
       next: "Dalej",
       back: "Wstecz",
       continue: "Kontynuuj",
@@ -215,6 +224,8 @@ export const languages = {
          { value: "fr", label: "Francuski" },
          { value: "es", label: "Hiszpański" },
          { value: "pl", label: "Polski" },
+         { value: "el", label: "Grecki" },
+         { value: "ro", label: "Rumuński" },
       ],
       requirements: {
          title: "Wymagania dotyczące uznania kwalifikacji medycznych w Niemczech:",
@@ -230,8 +241,7 @@ export const languages = {
    },
    fr: {
       choose_region: "Veuillez choisir votre région :",
-      welcome:
-         "Bienvenue dans notre application pour les médecins qui envisagent de déménager en Allemagne !",
+      welcome: "Bienvenue dans notre application pour les médecins qui envisagent de déménager en Allemagne !",
       next: "Suivant",
       back: "Retour",
       continue: "Continuer",
@@ -246,6 +256,8 @@ export const languages = {
          { value: "fr", label: "Français" },
          { value: "es", label: "Espagnol" },
          { value: "pl", label: "Polonais" },
+         { value: "el", label: "Grec" },
+         { value: "ro", label: "Roumain" },
       ],
       requirements: {
          title: "Exigences pour la reconnaissance médicale en Allemagne :",
@@ -276,14 +288,83 @@ export const languages = {
          { value: "fr", label: "Francés" },
          { value: "es", label: "Español" },
          { value: "pl", label: "Polaco" },
+         { value: "el", label: "Griego" },
+         { value: "ro", label: "Rumano" },
       ],
       requirements: {
          title: "Requisitos para el reconocimiento médico en Alemania:",
-         medEducation: "Formación médica: Estudios de medicina completados en una universidad en Ucrania. Se prefiere la finalización de los estudios en la facultad de medicina.",
+         medEducation:
+            "Formación médica: Estudios de medicina completados en una universidad en Ucrania. Se prefiere la finalización de los estudios en la facultad de medicina.",
          aip: "Prácticas médicas (AiP): Prácticas médicas (AiP) completadas con éxito en Ucrania.",
-         license: "Licencia en Ucrania: Autorización para ejercer actividades médicas en Ucrania.",
-         languageSkills: "Habilidades lingüísticas: Certificado actual de competencia en alemán en el nivel B2.",
+         license:
+            "Licencia en Ucrania: Autorización para ejercer actividades médicas en Ucrania.",
+         languageSkills:
+            "Habilidades lingüísticas: Certificado actual de competencia en alemán en el nivel B2.",
          note: "Nota: Estos requisitos son generales y pueden variar según el estado federal en Alemania. Es importante seguir las actualizaciones y verificar los requisitos específicos en los sitios web oficiales de las autoridades sanitarias de los estados federados.",
+      },
+   },
+   el: {
+      choose_region: "Παρακαλώ επιλέξτε την περιφέρειά σας:",
+      welcome: "Καλώς ήρθατε στην εφαρμογή μας για γιατρούς που σκοπεύουν να μετακομίσουν στη Γερμανία!",
+      next: "Επόμενο",
+      back: "Πίσω",
+      continue: "Συνέχεια",
+      language: "Επιλέξτε γλώσσα:",
+      options: [
+         { value: "de", label: "Γερμανικά" },
+         { value: "en", label: "Αγγλικά" },
+         { value: "uk", label: "Ουκρανικά" },
+         { value: "ru", label: "Ρωσικά" },
+         { value: "tr", label: "Τουρκικά" },
+         { value: "ar", label: "Αραβικά" },
+         { value: "fr", label: "Γαλλικά" },
+         { value: "es", label: "Ισπανικά" },
+         { value: "pl", label: "Πολωνικά" },
+         { value: "el", label: "Ελληνικά" },
+         { value: "ro", label: "Ρουμανικά" },
+      ],
+      requirements: {
+         title: "Απαιτήσεις για την ιατρική αναγνώριση στη Γερμανία:",
+         medEducation:
+            "Ιατρική Εκπαίδευση: Ολοκληρωμένες σπουδές ιατρικής σε πανεπιστήμιο στην Ουκρανία. Συνιστάται η ολοκλήρωση σπουδών σε ιατρική σχολή.",
+         aip: "Ιατρική Πρακτική (AiP): Επιτυχής ολοκλήρωση της ιατρικής πρακτικής (AiP) στην Ουκρανία.",
+         license:
+            "Άδεια στην Ουκρανία: Εξουσιοδότηση για την άσκηση ιατρικών δραστηριοτήτων στην Ουκρανία.",
+         languageSkills:
+            "Γλωσσικές Δεξιότητες: Επικαιροποιημένο πιστοποιητικό γνώσης της γερμανικής γλώσσας σε επίπεδο B2.",
+         note: "Σημείωση: Αυτές οι απαιτήσεις είναι γενικές και ενδέχεται να διαφέρουν ανάλογα με το ομόσπονδο κρατίδιο στη Γερμανία. Είναι σημαντικό να παρακολουθείτε τις ενημερώσεις και να ελέγχετε τις συγκεκριμένες απαιτήσεις στους επίσημους ιστότοπους των αρμόδιων υγειονομικών αρχών.",
+      },
+   },
+   ro: {
+      choose_region: "Vă rugăm să vă alegeți regiunea:",
+      welcome: "Bun venit în aplicația noastră pentru medici care planifică să se mute în Germania!",
+      next: "Următorul",
+      back: "Înapoi",
+      continue: "Continuați",
+      language: "Selectați limba:",
+      options: [
+         { value: "de", label: "Germană" },
+         { value: "en", label: "Engleză" },
+         { value: "uk", label: "Ucraineană" },
+         { value: "ru", label: "Rusă" },
+         { value: "tr", label: "Turcă" },
+         { value: "ar", label: "Arabă" },
+         { value: "fr", label: "Franceză" },
+         { value: "es", label: "Spaniolă" },
+         { value: "pl", label: "Poloneză" },
+         { value: "el", label: "Greacă" },
+         { value: "ro", label: "Română" },
+      ],
+      requirements: {
+         title: "Cerințe pentru recunoașterea medicală în Germania:",
+         medEducation:
+            "Educație medicală: Studii medicale finalizate la o universitate din Ucraina. Este de preferat finalizarea studiilor la facultatea de medicină.",
+         aip: "Medic în stagiu (AiP): Stagiul de medic (AiP) finalizat cu succes în Ucraina.",
+         license:
+            "Licență în Ucraina: Autorizație pentru a practica activități medicale în Ucraina.",
+         languageSkills:
+            "Competențe lingvistice: Certificat actual de competență în limba germană la nivel B2.",
+         note: "Notă: Aceste cerințe sunt generale și pot varia în funcție de landul din Germania. Este important să urmăriți actualizările și să verificați cerințele specifice pe site-urile oficiale ale autorităților de sănătate ale fiecărui land.",
       },
    },
 };

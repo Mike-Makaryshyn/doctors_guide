@@ -8,6 +8,7 @@ const defaultProps = {
   ready_copies: "not_check",
   sent: "not_check",
 };
+
 export const sendOriginalText = {
   uk: "Оригінал надсилається за місцем вимоги",
   en: "The original is sent to the place of requirement",
@@ -18,7 +19,10 @@ export const sendOriginalText = {
   pl: "Oryginał jest wysyłany na miejsce wymagań",
   ru: "Оригинал отправляется по месту требования",
   de: "Das Original wird an den erforderlichen Ort gesendet",
+  el: "Το πρωτότυπο αποστέλλεται στον αρμόδιο φορέα",
+  ro: "Originalul este trimis către locul în care este solicitat",
 };
+
 export const messages = {
   en: {
     lessThan20: "There is some job to do. Don't hesitate!",
@@ -74,6 +78,18 @@ export const messages = {
     between50And80: "Jesteśmy w połowie drogi!",
     greaterThan80: "Świetna robota!",
   },
+  el: {
+    lessThan20: "Υπάρχει αρκετή δουλειά να γίνει!",
+    between20And50: "Ας συνεχίσουμε!",
+    between50And80: "Έχουμε διανύσει τη μισή διαδρομή!",
+    greaterThan80: "Μπράβο!",
+  },
+  ro: {
+    lessThan20: "Mai sunt lucruri de făcut! Nu ezita!",
+    between20And50: "Să continuăm!",
+    between50And80: "Suntem la jumătatea drumului!",
+    greaterThan80: "Foarte bine!",
+  },
 };
 
 export const notNeededText = {
@@ -86,6 +102,8 @@ export const notNeededText = {
   pl: "Niepotrzebne",
   ru: "Не нужно",
   de: "Nicht nötig",
+  el: "Δεν χρειάζεται",
+  ro: "Nu este necesar",
 };
 
 export const columnsFirst = [
@@ -101,6 +119,8 @@ export const columnsFirst = [
       pl: "Dokument",
       ru: "Документ",
       de: "Dokument",
+      el: "Έγγραφο",
+      ro: "Document",
     },
   },
   {
@@ -115,6 +135,8 @@ export const columnsFirst = [
       pl: "Dostępne",
       ru: "Доступно",
       de: "Verfügbar",
+      el: "Διαθέσιμο",
+      ro: "Disponibil",
     },
   },
   {
@@ -129,6 +151,8 @@ export const columnsFirst = [
       pl: "Apostille",
       ru: "Апостиль",
       de: "Apostille",
+      el: "Σφραγίδα της Χάγης (Apostille)",
+      ro: "Apostilă",
     },
   },
   {
@@ -143,6 +167,8 @@ export const columnsFirst = [
       pl: "Notarialnie poświadczone",
       ru: "Заверено нотариусом",
       de: "Notariell beglaubigt",
+      el: "Επικυρωμένο από συμβολαιογράφο",
+      ro: "Notarizat",
     },
   },
   {
@@ -157,6 +183,8 @@ export const columnsFirst = [
       pl: "Profesjonalne tłumaczenie",
       ru: "Профессиональный перевод",
       de: "Professionelle Übersetzung",
+      el: "Επαγγελματική Μετάφραση",
+      ro: "Traducere profesională",
     },
   },
   {
@@ -171,6 +199,8 @@ export const columnsFirst = [
       pl: "Potwierdzone kopie",
       ru: "Заверенные копии",
       de: "Beglaubigte Kopien",
+      el: "Επικυρωμένα Αντίγραφα",
+      ro: "Copii certificate",
     },
   },
   {
@@ -185,6 +215,8 @@ export const columnsFirst = [
       pl: "Wysłane",
       ru: "Отправлено",
       de: "Gesendet",
+      el: "Απεστάλη",
+      ro: "Trimis",
     },
   },
 ];
@@ -200,6 +232,8 @@ export const titles = {
     pl: "Składanie Wniosków",
     ru: "Подача заявлений",
     de: "Einreichung von Anträgen",
+    el: "Υποβολή Αιτήσεων",
+    ro: "Depunerea Cererilor",
   },
   optional: {
     uk: "Опціональні документи",
@@ -211,12 +245,12 @@ export const titles = {
     pl: "Dokumenty Opcjonalne",
     ru: "Дополнительные документы",
     de: "Optionale Dokumente",
+    el: "Προαιρετικά Έγγραφα",
+    ro: "Documente Opționale",
   },
 };
 
-// Подача заяви
 export const documentsNonEU = [
-  // Документи з не ЄС
   {
     id: 1,
     ...defaultProps,
@@ -233,6 +267,8 @@ export const documentsNonEU = [
       uk: "Підтвердження особистості (Закордонний паспорт або паспорт)",
       ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
       de: "Identitätsüberprüfung (Reisepass oder Pass)",
+      el: "Επιβεβαίωση ταυτότητας (Ξένο διαβατήριο ή διαβατήριο)",
+      ro: "Verificarea identității (Pașaport străin sau pașaport)",
     },
     letterName: { de: "Passkopie" },
   },
@@ -250,6 +286,8 @@ export const documentsNonEU = [
       uk: "Свідоцтво про народження чи виписка із сімейної книги",
       ru: "Свидетельство о рождении или выписка из семейной книги",
       de: "Geburtsurkunde oder Auszug aus dem Familienbuch",
+      el: "Ληξιαρχική πράξη γέννησης ή απόσπασμα οικογενειακού βιβλιαρίου",
+      ro: "Certificat de naștere sau extras din registrul de familie",
     },
     letterName: { de: "Geburtsurkunde" },
   },
@@ -267,6 +305,8 @@ export const documentsNonEU = [
       uk: "Диплом про закінчену вищу освіту",
       ru: "Диплом о высшем образовании",
       de: "Hochschulabschluss",
+      el: "Πτυχίο Ανώτερης Εκπαίδευσης",
+      ro: "Diplomă de învățământ superior",
     },
     English: "Diploma",
     German: "Диплом про закінчену вищу освіту",
@@ -286,6 +326,8 @@ export const documentsNonEU = [
       uk: "Додаток до диплому, де вписаний огляд усіх пройдених предметів із годинами (не курікуюм)",
       ru: "Приложение к диплому, предоставляющее обзор всех пройденных курсов с указанием часов (не учебный план)",
       de: "Diplomzusatz, der einen Überblick über alle abgeschlossenen Kurse mit Stunden enthält (Notenübersicht)",
+      el: "Παράρτημα διπλώματος που παρέχει επισκόπηση όλων των ολοκληρωμένων μαθημάτων με ώρες (όχι αναλυτικό πρόγραμμα)",
+      ro: "Supliment la diplomă care oferă o prezentare a tuturor cursurilor finalizate cu ore (nu plan de învățământ)",
     },
     letterName: { de: "Diplomzusatz/Notenübersicht" },
   },
@@ -303,6 +345,8 @@ export const documentsNonEU = [
       uk: "Докази спеціалізованої медичної підготовки або свідоцтва про набутий професійний досвід/ Сертифікат спеціаліста",
       ru: "Доказательства специализированной медицинской подготовки или свидетельства о приобретенном профессиональном опыте / Сертификат специалиста",
       de: "Nachweis einer spezialisierten medizinischen Ausbildung oder eines erworbenen Berufserfahrungsnachweises / Facharztzeugnis",
+      el: "Απόδειξη εξειδικευμένης ιατρικής εκπαίδευσης ή απόδειξη επαγγελματικής εμπειρίας / Πιστοποιητικό ειδικότητας",
+      ro: "Dovada formării medicale specializate sau dovada experienței profesionale dobândite / Certificat de specialist",
     },
     letterName: { de: "Nachweis einer spezialisierten medizinischen Ausbildung" },
   },
@@ -320,6 +364,8 @@ export const documentsNonEU = [
       uk: "Курікулюм/Розгорнутий навчальний план із годинами та пройденими предметами",
       ru: "Учебный план/Детализированный учебный план с часами и пройденными предметами",
       de: "Lehrplan/Ausführlicher Lehrplan mit Stunden und behandelten Fächern",
+      el: "Αναλυτικό πρόγραμμα/Λεπτομερής σύνοψη με ώρες και αντικείμενα",
+      ro: "Curriculum/Programă detaliată cu ore și discipline abordate",
     },
     ready_copies: notNeededText,
     letterName: { de: "Lehrplan/Curriculum" },
@@ -338,6 +384,8 @@ export const documentsNonEU = [
       uk: "Довідка допропорядочності (Certificate of good Standing) видається відповідними структурами охорони здоровя де ви працювали по професії",
       ru: "Справка о благонадежности (Certificate of Good Standing) выдается соответствующими структурами здравоохранения, где вы работали по профессии",
       de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren (Certificate of good Standing)",
+      el: "Πιστοποιητικό καλής επαγγελματικής κατάστασης (Certificate of Good Standing) εκδίδεται από τις αρμόδιες υγειονομικές αρχές όπου έχετε εργαστεί επαγγελματικά",
+      ro: "Un Certificat de Bună Conduită (Certificate of Good Standing) este emis de autoritățile sanitare competente unde ați lucrat profesional",
     },
     English: "Certificate of Good Standing",
     German: "Dovídka допропорядочності (Certificate of good Standing)",
@@ -357,16 +405,16 @@ export const documentsNonEU = [
       uk: "Витяг з штрафових регістрів із всіх країн де ви перебували останніх 5 років (має бути не старшим ніж 3 місяці до моменту подання заяви)",
       ru: "Выписка из штрафных реестров из всех стран, где вы проживали в последние 5 лет (не должна быть старше 3 месяцев на момент подачи заявления)",
       de: "Auszug aus dem Strafregister aller Länder, in denen Sie in den letzten 5 Jahren gelebt haben (darf zum Zeitpunkt der Antragstellung nicht älter als 3 Monate sein)",
+      el: "Απόσπασμα από ποινικά μητρώα όλων των χωρών στις οποίες έχετε διαμείνει τα τελευταία 5 χρόνια (δεν πρέπει να είναι παλαιότερο των 3 μηνών κατά την υποβολή της αίτησης)",
+      ro: "Extras din registrele penale din toate țările în care ați locuit în ultimii 5 ani (nu trebuie să aibă mai mult de 3 luni la momentul depunerii cererii)",
     },
-    letterName: { de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe" },
+    letterName: {
+      de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe",
+    },
   },
-  // Документи з documentsEU
 ];
 
 export const documentsEU = [
-  // Документи з не ЄС
-
-  // Документи з documentsEU
   {
     id: 11,
     ...defaultProps,
@@ -383,6 +431,8 @@ export const documentsEU = [
       uk: "Підтвердження особистості ІІІІ (Закордонний паспорт або паспорт)",
       ru: "Подтверждение личности (Заграничный паспорт или паспорт)",
       de: "Identitätsüberprüfung (Reisepass oder Pass)",
+      el: "Επιβεβαίωση ταυτότητας (Ξένο διαβατήριο ή διαβατήριο)",
+      ro: "Verificarea identității (Pașaport străin sau pașaport)",
     },
     letterName: { de: "Passkopie" },
   },
@@ -400,10 +450,11 @@ export const documentsEU = [
       uk: "Свідоцтво про народження чи виписка із сімейної книги",
       ru: "Свидетельство о рождении или выписка из семейной книги",
       de: "Geburtsurkunde oder Auszug aus dem Familienbuch",
+      el: "Ληξιαρχική πράξη γέννησης ή απόσπασμα οικογενειακού βιβλιαρίου",
+      ro: "Certificat de naștere sau extras din registrul de familie",
     },
     letterName: { de: "Geburtsurkunde" },
   },
-
   {
     id: 14,
     ...defaultProps,
@@ -418,6 +469,8 @@ export const documentsEU = [
       uk: "Довідка допропорядочності (Certificate of good Standing) видається відповідними структурами охорони здоровя де ви працювали по професії",
       ru: "Справка о благонадежности (Certificate of Good Standing) выдается соответствующими структурами здравоохранения, где вы работали по профессии",
       de: "Ein Zertifikat über gutes Ansehen wird von den zuständigen Gesundheitsbehörden ausgestellt, wo Sie beruflich tätig waren (Certificate of good Standing)",
+      el: "Πιστοποιητικό καλής επαγγελματικής κατάστασης (Certificate of Good Standing) εκδίδεται από τις αρμόδιες υγειονομικές αρχές όπου έχετε εργαστεί επαγγελματικά",
+      ro: "Un Certificat de Bună Conduită (Certificate of Good Standing) este emis de autoritățile sanitare competente unde ați lucrat profesional",
     },
     letterName: { de: "Unbedenklichkeitsbescheinigung" },
   },
@@ -435,6 +488,8 @@ export const documentsEU = [
       uk: "Диплом про закінчену вищу освіту",
       ru: "Диплом о высшем образовании",
       de: "Hochschulabschluss (Diplom)",
+      el: "Πτυχίο Ανώτερης Εκπαίδευσης",
+      ro: "Diplomă de învățământ superior",
     },
     letterName: { de: "Diplom/Hochschulabschluss" },
   },
@@ -452,6 +507,8 @@ export const documentsEU = [
       uk: "Додаток до диплому, де вписаний огляд усіх пройдених предметів із годинами (не курікуюм)",
       ru: "Приложение к диплому, предоставляющее обзор всех пройденных курсов с указанием часов (не учебный план)",
       de: "Diplomzusatz, der einen Überblick über alle abgeschlossenen Kurse mit Stunden enthält (Notenübersicht)",
+      el: "Παράρτημα διπλώματος που παρέχει επισκόπηση όλων των ολοκληρωμένων μαθημάτων με ώρες (όχι αναλυτικό πρόγραμμα)",
+      ro: "Supliment la diplomă care oferă o prezentare a tuturor cursurilor finalizate cu ore (nu plan de învățământ)",
     },
     letterName: { de: "Diplomzusatz/Notenübersicht" },
   },
@@ -469,8 +526,12 @@ export const documentsEU = [
       uk: "Доказ професійного досвіду або набутого права (Стаття 23 Директиви 2005/36/ЄС)",
       ru: "Доказательство профессионального опыта или приобретенных прав (Статья 23 Директивы 2005/36/EC)",
       de: "Nachweis der Berufserfahrung oder erworbener Rechte (Artikel 23 der Richtlinie 2005/36/EG)",
+      el: "Απόδειξη επαγγελματικής εμπειρίας ή κεκτημένων δικαιωμάτων (Άρθρο 23 της Οδηγίας 2005/36/ΕΚ)",
+      ro: "Dovada experienței profesionale sau a drepturilor dobândite (Articolul 23 din Directiva 2005/36/CE)",
     },
-    letterName: { de: "Nachweis Berufserfahrung (Artikel 23 der Richtlinie 2005/36/EG)" },
+    letterName: {
+      de: "Nachweis Berufserfahrung (Artikel 23 der Richtlinie 2005/36/EG)",
+    },
   },
   {
     id: 13,
@@ -486,11 +547,15 @@ export const documentsEU = [
       uk: "Витяг з штрафових регістрів із всіх країн де ви перебували останніх 5 років (має бути не старшим ніж 3 місяці до моменту подання заяви)",
       ru: "Выписка из штрафных реестров из всех стран, где вы проживали в последние 5 лет (не должна быть старше 3 месяцев на момент подачи заявления)",
       de: "Auszug aus dem Strafregister aller Länder, in denen Sie in den letzten 5 Jahren gelebt haben (darf zum Zeitpunkt der Antragstellung nicht älter als 3 Monate sein)",
+      el: "Απόσπασμα από ποινικά μητρώα όλων των χωρών στις οποίες έχετε διαμείνει τα τελευταία 5 χρόνια (δεν πρέπει να είναι παλαιότερο των 3 μηνών κατά την υποβολή της αίτησης)",
+      ro: "Extras din registrele penale din toate țările în care ați locuit în ultimii 5 ani (nu trebuie să aibă mai mult de 3 luni la momentul depunerii cererii)",
     },
-    letterName: { de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe" },
+    letterName: {
+      de: "Auszug aus dem Strafregister aller Länder, in denen ich in den letzten 5 Jahren gelebt habe",
+    },
   },
-
 ];
+
 export const documentsOptional = [
   {
     id: 19,
@@ -507,6 +572,8 @@ export const documentsOptional = [
       uk: "Свідоцтво про зміну ім’я чи прізвища",
       ru: "Свидетельство о смене имени или фамилии",
       de: "Bescheinigung über Namens- oder Nachnamensänderung",
+      el: "Πιστοποιητικό αλλαγής ονόματος ή επωνύμου",
+      ro: "Certificat de schimbare a numelui sau prenumelui",
     },
     letterName: { de: "Namensänderungsbescheinigung" },
   },
@@ -525,6 +592,8 @@ export const documentsOptional = [
       uk: "Доказ про проходження практичних навичок протягом навчання/ Сертифікат спеціаліста доказує це",
       ru: "Доказательство практических навыков во время обучения/ Сертификат специалиста подтверждает это",
       de: "Nachweis praktischer Fähigkeiten während der Ausbildung/ Das Fachzertifikat bestätigt dies",
+      el: "Απόδειξη πρακτικών δεξιοτήτων κατά την εκπαίδευση/ Το πιστοποιητικό ειδικότητας το αποδεικνύει",
+      ro: "Dovada abilităților practice în timpul formării / Certificatul de specialist atestă acest lucru",
     },
     letterName: { de: "Nachweis praktischer Fähigkeiten" },
   },
@@ -543,6 +612,8 @@ export const documentsOptional = [
       uk: "Доказ про проходження практичних навичок протягом навчання",
       ru: "Доказательство приобретенных практических навыков в ходе обучения",
       de: "Nachweis der während der Ausbildung erworbenen praktischen Fähigkeiten",
+      el: "Απόδειξη πρακτικών δεξιοτήτων που αποκτήθηκαν κατά την εκπαίδευση",
+      ro: "Dovada abilităților practice dobândite în timpul formării",
     },
     letterName: { de: "Nachweis praktischer Ausbildung" },
   },
@@ -561,6 +632,8 @@ export const documentsOptional = [
       uk: "Доказ про визнання освіти в одній із країн ЄС",
       ru: "Доказательство признания образования в одной из стран ЕС",
       de: "Nachweis der Anerkennung von Bildung in einem EU-Land",
+      el: "Απόδειξη αναγνώρισης εκπαίδευσης σε χώρα της ΕΕ",
+      ro: "Dovada recunoașterii educației într-o țară a UE",
     },
     letterName: { de: "Nachweis Anerkennung Bildung in einem EU-Land" },
   },
@@ -580,6 +653,8 @@ export const documentsOptional = [
       uk: "Характеристика із попередньго місця роботи",
       ru: "Рекомендация с предыдущего места работы",
       de: "Referenz von einem früheren Arbeitsplatz",
+      el: "Συστατική επιστολή από προηγούμενο χώρο εργασίας",
+      ro: "Referință de la un loc de muncă anterior",
     },
     letterName: { de: "Arbeitsreferenz" },
   },
@@ -599,6 +674,8 @@ export const documentsOptional = [
       uk: "Сертифікати про пройдені курси підвищення кваліфікації",
       ru: "Сертификаты о пройденных курсах повышения квалификации",
       de: "Zertifikate für absolvierte Fortbildungskurse",
+      el: "Πιστοποιητικά ολοκληρωμένων σεμιναρίων επαγγελματικής κατάρτισης",
+      ro: "Certificate pentru cursurile de dezvoltare profesională finalizate",
     },
     letterName: { de: "Fortbildungszertifikate" },
   },
@@ -622,6 +699,8 @@ export const documentsOptional = [
       uk: "Довідка про несудимість із Німеччини (у разі, якщо до подання заяви ви перебуваєте в Німеччині більш ніж 6 місяців)",
       ru: "Справка о несудимости из Германии (если вы находились в Германии более 6 месяцев до подачи заявления)",
       de: "Führungszeugnis der Belegart „O“ aus Deutschland (wenn Sie sich vor der Antragstellung länger als 6 Monate in Deutschland aufgehalten haben). Das Dokument muss professionell ins Deutsche übersetzt und notariell beglaubigt werden.",
+      el: "Πιστοποιητικό λευκού ποινικού μητρώου από τη Γερμανία (αν έχετε μείνει στη Γερμανία περισσότερο από 6 μήνες πριν από την αίτηση)",
+      ro: "Certificat de cazier judiciar din Germania (dacă ați stat în Germania mai mult de 6 luni înainte de depunerea cererii)",
     },
     letterName: { de: "Führungszeugnis Deutschland" },
   },
@@ -644,11 +723,13 @@ export const documentsOptional = [
       uk: "Прописка в Німеччині",
       ru: "Регистрация проживания в Германии",
       de: "Wohnsitzanmeldung in Deutschland",
+      el: "Δήλωση κατοικίας στη Γερμανία",
+      ro: "Înregistrarea reședinței în Germania",
     },
     letterName: { de: "Meldebescheinigung" },
   },
   {
-    id: 30, // Присвой унікальний ID
+    id: 30,
     ...defaultProps,
     optional: true,
     hide: true,
@@ -666,6 +747,8 @@ export const documentsOptional = [
       pl: "Oferta pracy w {region}",
       uk: "Пропозиція про роботу в {region}",
       ru: "Предложение о работе в {region}",
+      el: "Προσφορά εργασίας στην περιοχή {region}",
+      ro: "Ofertă de angajare în {region}",
     },
     letterName: { de: "Stellenzusage" },
   },
