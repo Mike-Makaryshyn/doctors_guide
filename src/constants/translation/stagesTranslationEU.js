@@ -2619,4 +2619,601 @@ export const APPROBATION_STAGES_EU = {
         "Félicitations ! Vous avez terminé l'étape 'Médecin légendaire'. Bienvenue dans la vie professionnelle en Allemagne !",
     },
   ],
+el: [
+    {
+      id: 1,
+      title: "Εξερευνητής",
+      avatar: "/assets/man-stage-1.png",
+      description:
+        "Αυτός είναι κάποιος που μόλις ξεκινάει το ταξίδι του, εξερευνά ευκαιρίες, μαθαίνει τα βασικά για τη μετακόμιση και τις απαιτήσεις για την έγκριση, και αρχίζει να συγκεντρώνει τα απαραίτητα έγγραφα.",
+      tasks: [
+        { id: "1.1", title: "Ερευνήστε πιθανούς προορισμούς για τη μετακόμιση" },
+        {
+          id: "1.2",
+          title: "Γνωρίστε τις απαιτήσεις για την έγκριση",
+          link: "/approbation",
+        },
+        {
+          id: "1.3",
+          title: "Γνωρίστε τις απαιτήσεις για την αναγνώριση ισοδυναμίας",
+          link: "/gleichwertigkeit",
+        },
+        {
+          id: "1.4",
+          title: "Γνωρίστε τις απαιτήσεις για την συγκριτική αξιολόγηση",
+          link: "/vergleichsgutachten",
+        },
+        {
+          id: "1.5",
+          title: "Γνωρίστε τις απαιτήσεις για την επαγγελματική άδεια",
+          link: "/berufserlaubnis",
+        },
+        {
+          id: "1.6",
+          title: "Γνωρίστε τις απαιτήσεις για την εξειδικευμένη γλωσσική εξέταση",
+          link: "/what-is-fsp",
+        },
+        { id: "1.7", title: "Συγκεντρώστε έγγραφα", link: "/documents" },
+        { id: "1.8", title: "Μελετήστε τη γλώσσα", link: "/language-study" },
+        { id: "1.9", title: "Συμμετέχετε σε περιφερειακές συνομιλίες", link: "/regional-chats" },
+        {
+          id: "1.10",
+          title:
+            "Ελέγξτε τις επίσημες ιστοσελίδες των ιατρικών συλλόγων για ενημερωμένες πληροφορίες",
+        },
+      ],
+      congratsMessage:
+        "Συγχαρητήρια! Ολοκληρώσατε το στάδιο 'Εξερευνητής'. Συνεχίστε την πορεία σας!",
+    },
+    {
+      id: 2,
+      title: "Νεοεισερχόμενος",
+      description:
+        "Αυτός είναι κάποιος που έχει ήδη μετακομίσει στη Γερμανία, έχει ετοιμάσει τα βασικά έγγραφα και συνεχίζει να προσαρμόζεται.",
+      tasks: [
+        {
+          id: "2.2",
+          title: "Ξεκινήστε να συγκεντρώνετε έγγραφα για το ιατρικό σύλλογο",
+          link: "/documents",
+        },
+        {
+          id: "2.3",
+          title: "Βρείτε έναν συμβολαιογράφο για πιστοποιημένες αντιγραφή",
+          link: "/notarization",
+        },
+        {
+          id: "2.4",
+          title: "Βρείτε έναν μεταφραστή για πιστοποιημένες αντιγραφή",
+          link: "/translation",
+        },
+        {
+          id: "2.5",
+          title: "Ζητήστε τη μετάφραση του πτυχίου σας από πιστοποιημένο μεταφραστή",
+          link: "/translation",
+        },
+        {
+          id: "2.6",
+          title: "Μάθετε τις απαιτήσεις έγκρισης στην περιοχή σας",
+          link: "/medical-chambers",
+        },
+        {
+          id: "2.7",
+          title:
+            "Εντοπίστε τους περιφερειακούς ιατρικούς συλλόγους και ελέγξτε τη λίστα των απαιτούμενων εγγράφων",
+          link: "/medical-chambers",
+        },
+        {
+          id: "2.8",
+          title: "Εγγραφείτε σε μαθήματα γλώσσας (επίπεδο B1 ή υψηλότερο)",
+          link: "/language-study",
+        },
+        {
+          id: "2.9",
+          title:
+            "Συμμετέχετε σε περιφερειακές ομάδες ή κοινότητες ιατρών στο Telegram ή στο Facebook",
+          link: "/regional-chats",
+        },
+        {
+          id: "2.10",
+          title:
+            "Λάβετε, αν χρειάζεται, πιστοποιητικό για την απουσία ποινικών μητρώων",
+          link: "/documents",
+        },
+        {
+          id: "2.11",
+          title:
+            "Επικοινωνήστε με σύμβουλο ή πρακτορείο σχετικά με την έγκριση (αν χρειάζεται)",
+          link: "/personal-consultation",
+        },
+        { id: "2.12", title: "Βρείτε οικογενειακό γιατρό και εγγραφείτε σε αυτόν" },
+      ],
+      congratsMessage:
+        "Συγχαρητήρια! Ολοκληρώσατε το στάδιο 'Νεοεισερχόμενος'. Το επόμενο βήμα είναι κοντά!",
+    },
+    {
+      id: 3,
+      title: "Κυνηγός Εγγράφων",
+      description:
+        "Αυτός είναι κάποιος που συλλέγει, προετοιμάζει και υποβάλλει ενεργά έγγραφα για την αναγνώριση του πτυχίου του.",
+      tasks: [
+        {
+          id: "3.1",
+          title: "Συγκεντρώστε όλα τα απαραίτητα ακαδημαϊκά έγγραφα",
+          link: "/documents",
+        },
+        {
+          id: "3.2",
+          title: "Λάβετε πιστοποιητικό για την απουσία ποινικών μητρώων",
+          link: "/documents",
+        },
+        {
+          id: "3.3",
+          title:
+            "Λάβετε πιστοποιητικό επαγγελματικής εμπειρίας (αν απαιτείται)",
+          link: "/documents",
+        },
+        {
+          id: "3.4",
+          title: "Ζητήστε μετάφραση των εγγράφων από πιστοποιημένο μεταφραστή",
+          link: "/translation",
+        },
+        {
+          id: "3.5",
+          title: "Πιστοποιήστε νομικά τις μεταφράσεις και τα αντίγραφα των εγγράφων",
+          link: "/notarization",
+        },
+        {
+          id: "3.6",
+          title:
+            "Υποβάλετε τα έγγραφα στον αρμόδιο ιατρικό σύλλογο για αξιολόγηση",
+          link: "/medical-chambers",
+        },
+      ],
+      congratsMessage:
+        "Τέλεια! Ολοκληρώσατε το στάδιο 'Κυνηγός Εγγράφων'. Είστε πιο κοντά στον στόχο σας!",
+    },
+    {
+      id: 4,
+      title: "Εγγραφή στο FSP",
+      description:
+        "Αυτός είναι κάποιος που εγγράφεται για την ειδική γλωσσική εξέταση (FSP). Ολοκληρώστε τη διαδικασία εγγραφής, πληρώστε τα απαιτούμενα τέλη και προετοιμάστε τα έγγραφα για την εξέταση. Μόλις περάσετε το FSP, θα λάβετε αυτόματα την έγκριση.",
+      tasks: [
+        {
+          id: "4.1",
+          title: "Ελέγξτε τις απαιτήσεις και τις προθεσμίες εγγραφής",
+          link: "/what-is-fsp",
+        },
+        {
+          id: "4.2",
+          title: "Συμπληρώστε και υποβάλετε τη φόρμα εγγραφής για το FSP",
+          link: "/registration",
+        },
+        {
+          id: "4.3",
+          title: "Πληρώστε τα τέλη εγγραφής",
+          link: "/fees",
+        },
+        {
+          id: "4.4",
+          title: "Επιβεβαιώστε το πρόγραμμα εξέτασής σας",
+          link: "/exam-schedule",
+        },
+      ],
+      congratsMessage:
+        "Τέλεια! Ολοκληρώσατε το στάδιο 'Εγγραφή στο FSP'. Ετοιμαστείτε για την εξέταση!",
+    },
+    {
+      id: 5,
+      title: "Μαχητής της Γλώσσας",
+      description:
+        "Αυτός είναι κάποιος που βελτιώνει τις επικοινωνιακές και κλινικές γλωσσικές του δεξιότητες για να προετοιμαστεί για την επαγγελματική πρακτική.",
+      tasks: [
+        {
+          id: "5.1",
+          title: "Μελετήστε ιατρική ορολογία με τη βοήθεια λεξικών και εφαρμογών",
+          link: "/all-medical-terminology",
+        },
+        {
+          id: "5.2",
+          title: "Μάθετε όλες τις ιατρικές συντομογραφίες",
+          link: "/all-abbreviations",
+        },
+        {
+          id: "5.3",
+          title:
+            "Εξασκηθείτε στη συζήτηση ιατρικών περιπτώσεων που αφορούν την περιοχή σας",
+          link: "/cases",
+        },
+        {
+          id: "5.4",
+          title: "Πρακτική ιατρικών συμβουλών με συνεργάτη",
+          link: "/simulation-partner",
+        },
+        {
+          id: "5.5",
+          title:
+            "Δημιουργήστε πρότυπα φράσεων για την εξήγηση διαδικασιών στους ασθενείς",
+        },
+        {
+          id: "5.6",
+          title:
+            "Βελτιώστε τις κλινικές επικοινωνιακές σας δεξιότητες μέσω εργαστηρίων ή παιχνιδιών ρόλων",
+          link: "/language-study",
+        },
+      ],
+      congratsMessage:
+        "Συγχαρητήρια! Ολοκληρώσατε το στάδιο 'Μαχητής της Γλώσσας'. Ένα ακόμη βήμα προς την επιτυχία!",
+    },
+    {
+      id: 6,
+      title: "Μάστερ της Γλώσσας",
+      description:
+        "Αυτός είναι κάποιος που έχει επιτύχει υψηλό επίπεδο γλωσσικής επάρκειας και προετοιμάζεται να αναζητήσει εργασία.",
+      tasks: [
+        { id: "6.1", title: "Μελετήστε τη γλώσσα μέχρι να φτάσετε στο επίπεδο C1" },
+        {
+          id: "6.2",
+          title: "Προετοιμάστε ένα βιογραφικό και μια συνοδευτική επιστολή",
+          link: "/resume",
+        },
+        { id: "6.3", title: "Συγκεντρώστε ένα portfolio επαγγελματικών εγγράφων" },
+        {
+          id: "6.4",
+          title: "Αποστείλετε αιτήσεις εργασίας σε νοσοκομεία",
+          link: "/job-search",
+        },
+        {
+          id: "6.5",
+          title: "Ενημερωθείτε για τις απαιτήσεις απόκτησης Berufserlaubnis",
+          link: "/berufserlaubnis",
+        },
+      ],
+      congratsMessage:
+        "Τέλεια! Ολοκληρώσατε το στάδιο 'Μάστερ της Γλώσσας'. Η επιτυχία είναι κοντά!",
+    },
+    {
+      id: 7,
+      title: "Πρόχειρη Εργασία",
+      description:
+        "Αυτός είναι κάποιος που, μετά την επιτυχή κατακράτηση του FSP και την αυτόματη απόκτηση της έγκρισης, ξεκινάει μια δοκιμαστική περίοδο εργασίας για να αποκτήσει πρακτική εμπειρία.",
+      tasks: [
+        {
+          id: "7.1",
+          title: "Ξεκινήστε δοκιμαστική εργασία υπό επίβλεψη σε νοσοκομείο ή κλινική",
+          link: "/job-search",
+        },
+        {
+          id: "7.2",
+          title: "Ενημερώστε το βιογραφικό σας και προετοιμαστείτε για συνεντεύξεις",
+          link: "/resume",
+        },
+        {
+          id: "7.3",
+          title: "Γνωρίστε τους κανόνες και τις προσδοκίες του εργασιακού χώρου",
+          link: "/medical-chambers",
+        },
+        {
+          id: "7.4",
+          title: "Ενταχθείτε σε επαγγελματικά δίκτυα και προγράμματα καθοδήγησης",
+          link: "/regional-chats",
+        },
+      ],
+      congratsMessage:
+        "Συγχαρητήρια! Ολοκληρώσατε το στάδιο 'Πρόχειρη Εργασία'. Το επόμενο βήμα είναι κοντά!",
+    },
+    {
+      id: 8,
+      title: "Θρυλικός Γιατρός",
+      description:
+        "Αυτός είναι κάποιος που ολοκληρώνει την δοκιμαστική περίοδο και ξεκινάει επίσημα να εργάζεται ως γιατρός στη Γερμανία.",
+      tasks: [
+        { id: "8.1", title: "Ξεκινήστε επίσημα να εργάζεστε σε νοσοκομείο ή κλινική", link: "/job-search" },
+        { id: "8.2", title: "Αναπτύξτε ένα μακροπρόθεσμο σχέδιο καριέρας" },
+        { id: "8.3", title: "Συμμετέχετε σε επαγγελματικά συνέδρια ή σεμινάρια", link: "/job-search" },
+        { id: "8.4", title: "Αποκτήστε πιστοποίηση σε μια ειδικότητα (αν χρειάζεται)", link: "/berufserlaubnis" },
+      ],
+      congratsMessage:
+        "Συγχαρητήρια! Ολοκληρώσατε το στάδιο 'Θρυλικός Γιατρός'. Καλώς ήρθατε στην επαγγελματική ζωή στη Γερμανία!",
+    },
+  ],
+
+  // ------------------ New Romanian Translations ------------------
+  ro: [
+    {
+      id: 1,
+      title: "Explorator",
+      avatar: "/assets/man-stage-1.png",
+      description:
+        "Aceasta este o persoană care abia își începe călătoria, explorează oportunități, învață elementele de bază ale relocării și cerințele pentru aprobare și începe să adune documentele necesare.",
+      tasks: [
+        { id: "1.1", title: "Cercetează regiunile potențiale pentru relocare" },
+        {
+          id: "1.2",
+          title: "Familiarizează-te cu cerințele pentru aprobare",
+          link: "/approbation",
+        },
+        {
+          id: "1.3",
+          title: "Familiarizează-te cu cerințele pentru recunoașterea echivalenței",
+          link: "/gleichwertigkeit",
+        },
+        {
+          id: "1.4",
+          title: "Familiarizează-te cu cerințele pentru evaluarea comparativă",
+          link: "/vergleichsgutachten",
+        },
+        {
+          id: "1.5",
+          title: "Familiarizează-te cu cerințele pentru permisul profesional",
+          link: "/berufserlaubnis",
+        },
+        {
+          id: "1.6",
+          title: "Familiarizează-te cu cerințele pentru examenul de limbă specializat",
+          link: "/what-is-fsp",
+        },
+        { id: "1.7", title: "Adună documente", link: "/documents" },
+        { id: "1.8", title: "Studiu de limbă", link: "/language-study" },
+        { id: "1.9", title: "Alătură-te discuțiilor regionale", link: "/regional-chats" },
+        {
+          id: "1.10",
+          title:
+            "Consultă site-urile oficiale ale camerelor medicale pentru informații actualizate",
+        },
+      ],
+      congratsMessage:
+        "Bravo! Ai finalizat stadiul 'Explorator'. Continuă să înaintezi!",
+    },
+    {
+      id: 2,
+      title: "Nou-venit",
+      description:
+        "Aceasta este o persoană care s-a mutat deja în Germania, și-a pregătit documentele esențiale și continuă să se adapteze.",
+      tasks: [
+        {
+          id: "2.2",
+          title: "Începe să aduni documentele pentru camera medicală",
+          link: "/documents",
+        },
+        {
+          id: "2.3",
+          title: "Găsește un notar pentru realizarea copiilor certificate",
+          link: "/notarization",
+        },
+        {
+          id: "2.4",
+          title: "Găsește un traducător pentru copiile certificate",
+          link: "/translation",
+        },
+        {
+          id: "2.5",
+          title: "Solicită traducerea diplomei de către un traducător certificat",
+          link: "/translation",
+        },
+        {
+          id: "2.6",
+          title: "Obține informații despre cerințele de aprobare din regiunea ta",
+          link: "/medical-chambers",
+        },
+        {
+          id: "2.7",
+          title: "Identifică camerele medicale regionale și verifică lista documentelor necesare",
+          link: "/medical-chambers",
+        },
+        {
+          id: "2.8",
+          title: "Înscrie-te la cursuri de limbă (nivel B1 sau mai sus)",
+          link: "/language-study",
+        },
+        {
+          id: "2.9",
+          title: "Alătură-te grupurilor sau comunităților de medici regionale pe Telegram sau Facebook",
+          link: "/regional-chats",
+        },
+        {
+          id: "2.10",
+          title: "Obține, dacă este necesar, un certificat de cazier judiciar din țara ta",
+          link: "/documents",
+        },
+        {
+          id: "2.11",
+          title: "Contactează un consultant sau o agenție în legătură cu aprobare (dacă este necesar)",
+          link: "/personal-consultation",
+        },
+        { id: "2.12", title: "Găsește un medic de familie și înregistrează-te la el" },
+      ],
+      congratsMessage:
+        "Felicitări! Ai finalizat stadiul 'Nou-venit'. Următorul pas este aproape!",
+    },
+    {
+      id: 3,
+      title: "Vânător de Documente",
+      description:
+        "Aceasta este o persoană care adună, pregătește și depune activ documentele pentru recunoașterea diplomei.",
+      tasks: [
+        {
+          id: "3.1",
+          title: "Colectează toate documentele academice necesare",
+          link: "/documents",
+        },
+        {
+          id: "3.2",
+          title: "Obține un certificat de cazier judiciar",
+          link: "/documents",
+        },
+        {
+          id: "3.3",
+          title: "Obține, dacă este necesar, un certificat de experiență profesională",
+          link: "/documents",
+        },
+        {
+          id: "3.4",
+          title: "Solicită traducerea documentelor de către un traducător certificat",
+          link: "/translation",
+        },
+        {
+          id: "3.5",
+          title: "Certifică traducerile și copiile documentelor prin notar",
+          link: "/notarization",
+        },
+        {
+          id: "3.6",
+          title:
+            "Depune documentele la camera medicală competentă pentru evaluare",
+          link: "/medical-chambers",
+        },
+      ],
+      congratsMessage:
+        "Excelent! Ai finalizat stadiul 'Vânător de Documente'. Ești din ce în ce mai aproape de obiectivul tău!",
+    },
+    {
+      id: 4,
+      title: "Înregistrare FSP",
+      description:
+        "Aceasta este o persoană care se înregistrează pentru examenul de limbă specializat (FSP). Finalizează procesul de înregistrare, plătește taxele necesare și pregătește documentele cerute pentru examen. Odată ce treci FSP, vei primi automat aprobarea.",
+      tasks: [
+        {
+          id: "4.1",
+          title: "Verifică cerințele de înregistrare și termenele limită",
+          link: "/what-is-fsp",
+        },
+        {
+          id: "4.2",
+          title:
+            "Completează și depune formularul de înregistrare pentru FSP",
+          link: "/registration",
+        },
+        {
+          id: "4.3",
+          title: "Plătește taxele de înregistrare",
+          link: "/fees",
+        },
+        {
+          id: "4.4",
+          title: "Confirmă programul examenului tău",
+          link: "/exam-schedule",
+        },
+      ],
+      congratsMessage:
+        "Excelent! Ai finalizat stadiul 'Înregistrare FSP'. Pregătește-te pentru examen!",
+    },
+    {
+      id: 5,
+      title: "Luptător de Limbă",
+      description:
+        "Aceasta este o persoană care își îmbunătățește abilitățile de comunicare și limbaj clinic în pregătirea pentru practica profesională.",
+      tasks: [
+        {
+          id: "5.1",
+          title:
+            "Învață terminologia medicală folosind dicționare și aplicații",
+          link: "/all-medical-terminology",
+        },
+        {
+          id: "5.2",
+          title: "Învață toate abrevierile medicale",
+          link: "/all-abbreviations",
+        },
+        {
+          id: "5.3",
+          title:
+            "Exersează discuția cazurilor medicale relevante pentru regiunea ta",
+          link: "/cases",
+        },
+        {
+          id: "5.4",
+          title: "Exersează consultațiile medicale cu un partener",
+          link: "/simulation-partner",
+        },
+        {
+          id: "5.5",
+          title:
+            "Creează modele de fraze pentru a explica procedurile pacienților",
+        },
+        {
+          id: "5.6",
+          title:
+            "Îmbunătățește-ți abilitățile de comunicare clinică prin ateliere sau jocuri de rol",
+          link: "/language-study",
+        },
+      ],
+      congratsMessage:
+        "Felicitări! Ai finalizat stadiul 'Luptător de Limbă'. Încă un pas către succes!",
+    },
+    {
+      id: 6,
+      title: "Maestrul Limbii",
+      description:
+        "Aceasta este o persoană care a atins un nivel ridicat de competență lingvistică și se pregătește să caute un loc de muncă.",
+      tasks: [
+        { id: "6.1", title: "Învață limba până când atingi nivelul C1" },
+        {
+          id: "6.2",
+          title: "Pregătește un CV și o scrisoare de intenție",
+          link: "/resume",
+        },
+        { id: "6.3", title: "Creează un portofoliu de documente profesionale" },
+        {
+          id: "6.4",
+          title: "Trimite cereri de angajare la spitale",
+          link: "/job-search",
+        },
+        {
+          id: "6.5",
+          title:
+            "Informează-te cu privire la cerințele pentru obținerea unui permis profesional (Berufserlaubnis)",
+          link: "/berufserlaubnis",
+        },
+      ],
+      congratsMessage:
+        "Excelent! Ai finalizat stadiul 'Maestrul Limbii'. Succesul este aproape!",
+    },
+    {
+      id: 7,
+      title: "Proberuf",
+      description:
+        "Aceasta este o persoană care, după ce a promovat FSP și a primit aprobarea automat, începe o perioadă de probă pentru a câștiga experiență practică.",
+      tasks: [
+        {
+          id: "7.1",
+          title:
+            "Începe o perioadă de probă sub supraveghere într-un spital sau clinică",
+          link: "/job-search",
+        },
+        {
+          id: "7.2",
+          title: "Actualizează-ți CV-ul și pregătește-te pentru interviuri",
+          link: "/resume",
+        },
+        {
+          id: "7.3",
+          title:
+            "Familiarizează-te cu regulile și așteptările la locul de muncă",
+          link: "/medical-chambers",
+        },
+        {
+          id: "7.4",
+          title:
+            "Alătură-te rețelelor profesionale și programelor de mentorat",
+          link: "/regional-chats",
+        },
+      ],
+      congratsMessage:
+        "Excelent! Ai finalizat stadiul 'Proberuf'. Următorul pas este aproape!",
+    },
+    {
+      id: 8,
+      title: "Doctor Legendar",
+      description:
+        "Aceasta este o persoană care și-a finalizat perioada de probă și a început oficial să lucreze ca doctor în Germania.",
+      tasks: [
+        { id: "8.1", title: "Începe oficial să lucrezi într-un spital sau clinică", link: "/job-search" },
+        { id: "8.2", title: "Dezvoltă un plan de carieră pe termen lung" },
+        { id: "8.3", title: "Participă la conferințe sau seminarii profesionale", link: "/job-search" },
+        { id: "8.4", title: "Obține certificarea într-o specialitate (dacă este necesar)", link: "/berufserlaubnis" },
+      ],
+      congratsMessage:
+        "Felicitări! Ai finalizat stadiul 'Doctor Legendar'. Bine ai venit în viața profesională din Germania!",
+    },
+  ],
 };
