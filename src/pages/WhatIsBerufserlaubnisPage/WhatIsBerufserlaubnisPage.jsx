@@ -5,6 +5,7 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import berufserlaubnisImage from "../../assets/whatisbilder/berufserlaubnis-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -32,12 +33,12 @@ const WhatIsBerufserlaubnisPage = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>{content.title || "Temporary License for Physicians"}</title>
+        <title>{content.title || "Was ist Berufserlaubnis?"}</title>
         <meta
           name="description"
           content={
             content.intro ||
-            "Learn about the temporary license for practicing medicine in Germany."
+            "Erfahren Sie, wie Sie in Deutschland eine Berufserlaubnis als Arzt erhalten können."
           }
         />
         <meta
@@ -45,6 +46,16 @@ const WhatIsBerufserlaubnisPage = () => {
           content="Berufserlaubnis, temporary license, physicians, Germany, medical license"
         />
         <meta name="author" content="Doctors Guide Team" />
+        {/* Open Graph Metadaten */}
+        <meta property="og:title" content={content.title || "Was ist Berufserlaubnis?"} />
+        <meta
+          property="og:description"
+          content={
+            content.intro ||
+            "Erfahren Sie, wie Sie in Deutschland eine Berufserlaubnis als Arzt erhalten können."
+          }
+        />
+        <meta property="og:image" content={berufserlaubnisImage} />
       </Helmet>
       <div className="page page1 containerBigger mt-20">
         <div className="firstPageImageBlock"></div>

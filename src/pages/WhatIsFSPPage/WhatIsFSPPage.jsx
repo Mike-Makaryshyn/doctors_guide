@@ -1,9 +1,11 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { FSP_INFO } from "../../constants/translation/whatIsFSP";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import fspImage from "../../assets/whatisbilder/fsp-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -38,6 +40,31 @@ const WhatIsFSPPage = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+        <title>{content.title || "Was ist FSP?"}</title>
+        <meta
+          name="description"
+          content={
+            content.intro ||
+            "Erfahren Sie alles über FSP, den Prüfungsprozess und die Vorbereitung."
+          }
+        />
+        <meta
+          name="keywords"
+          content="FSP, Prüfung, Vorbereitung, Ärzte, Deutschland"
+        />
+        <meta name="author" content="Doctors Guide Team" />
+        {/* Open Graph Metadaten */}
+        <meta property="og:title" content={content.title || "Was ist FSP?"} />
+        <meta
+          property="og:description"
+          content={
+            content.intro ||
+            "Erfahren Sie alles über FSP, den Prüfungsprozess und die Vorbereitung."
+          }
+        />
+        <meta property="og:image" content={fspImage} />
+      </Helmet>
       <div className="page page1 containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.what_is_fsp__content)}>

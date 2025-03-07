@@ -5,8 +5,9 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import guideImage from "../../assets/whatisbilder/guide-image.jpg"; // імпорт картинки для мета-даних
 
-// Компонент для рендеринга абзацев с сохранением переносов строк
+// Компонент для рендеринга абзаців з сохраненням переносів строк
 const RenderParagraphs = ({ text }) =>
   text.split("\n\n").map((para, index) => (
     <p key={index} className="white-space-pre-line">
@@ -31,12 +32,12 @@ const WhatIsApprobationPage = () => {
   return (
     <MainLayout>
       <Helmet>
-        <title>{content.title || "What is Approbation?"}</title>
+        <title>{content.title || "Was ist Approbation?"}</title>
         <meta
           name="description"
           content={
             content.intro ||
-            "Learn about the process of obtaining Approbation for doctors in Germany."
+            "Erfahren Sie, wie Sie in Deutschland die Approbation als Arzt erhalten können."
           }
         />
         <meta
@@ -44,6 +45,16 @@ const WhatIsApprobationPage = () => {
           content="Approbation, doctors in Germany, medical license, Germany"
         />
         <meta name="author" content="Doctors Guide Team" />
+        {/* Open Graph Metadaten */}
+        <meta property="og:title" content={content.title || "Was ist Approbation?"} />
+        <meta
+          property="og:description"
+          content={
+            content.intro ||
+            "Erfahren Sie, wie Sie in Deutschland die Approbation als Arzt erhalten können."
+          }
+        />
+        <meta property="og:image" content={guideImage} />
       </Helmet>
       <div className={cn("page", "page1", "containerBigger", "mt-20")}>
         <div className="firstPageImageBlock"></div>
@@ -55,13 +66,13 @@ const WhatIsApprobationPage = () => {
             &#8592;
           </button>
 
-          {/* Заголовок и вступ */}
+          {/* Заголовок та вступ */}
           <section>
             <h1>{content.title}</h1>
             <h4>{content.intro}</h4>
           </section>
 
-          {/* Rechtsgrundlagen / Правовая база */}
+          {/* Rechtsgrundlagen / Правова база */}
           {content.rechtsgrundlagen && (
             <section>
               <h2>{content.rechtsgrundlagen.title}</h2>
@@ -90,7 +101,7 @@ const WhatIsApprobationPage = () => {
             </section>
           )}
 
-          {/* Schritte / Этапы */}
+          {/* Schritte / Етапи */}
           {content.schritte && (
             <section>
               <h2>{content.schritte.title}</h2>
@@ -107,7 +118,7 @@ const WhatIsApprobationPage = () => {
             </section>
           )}
 
-          {/* Vorteile / Преимущества */}
+          {/* Vorteile / Переваги */}
           {content.vorteile && (
             <section>
               <h2>{content.vorteile.title}</h2>
@@ -119,7 +130,7 @@ const WhatIsApprobationPage = () => {
             </section>
           )}
 
-          {/* Tipps / Практические советы */}
+          {/* Tipps / Практичні поради */}
           {content.tipps && (
             <section>
               <h2>{content.tipps.title}</h2>
@@ -149,7 +160,7 @@ const WhatIsApprobationPage = () => {
             </section>
           )}
 
-          {/* Fazit / Вывод */}
+          {/* Fazit / Висновок */}
           {content.fazit && (
             <section>
               <h2>{content.fazit.title}</h2>

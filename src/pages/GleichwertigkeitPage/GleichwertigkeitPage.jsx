@@ -5,6 +5,7 @@ import { GLEICHWERTIGKEIT_INFO } from "../../constants/translation/whatIsGleichw
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import gleichwertigkeitImage from "../../assets/whatisbilder/gleichwertigkeit-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -35,8 +36,21 @@ const GleichwertigkeitPage = () => {
         <title>{content.title || "Gleichwertigkeit der medizinischen Ausbildung"}</title>
         <meta
           name="description"
-          content={content.intro || "Information about the recognition of the equivalence of foreign medical education in Germany."}
+          content={
+            content.intro ||
+            "Information about the recognition of the equivalence of foreign medical education in Germany."
+          }
         />
+        {/* Open Graph Metadaten */}
+        <meta property="og:title" content={content.title || "Gleichwertigkeit der medizinischen Ausbildung"} />
+        <meta
+          property="og:description"
+          content={
+            content.intro ||
+            "Information about the recognition of the equivalence of foreign medical education in Germany."
+          }
+        />
+        <meta property="og:image" content={gleichwertigkeitImage} />
       </Helmet>
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>

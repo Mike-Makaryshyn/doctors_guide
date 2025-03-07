@@ -5,6 +5,7 @@ import { VERGLEICHSGUTACHTEN_INFO } from "../../constants/translation/whatIsVerg
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import styles from "./styles.module.scss";
 import cn from "classnames";
+import vergleichsgutachtenImage from "../../assets/whatisbilder/vergleichsgutachten-image.jpg"; // імпорт картинки для мета-даних
 
 // Компонент для рендерингу абзаців із підтримкою переносів рядків
 const RenderParagraphs = ({ text }) => {
@@ -35,8 +36,21 @@ const VergleichsgutachtenPage = () => {
         <title>{content.title || "Vergleichsgutachten"}</title>
         <meta
           name="description"
-          content={content.intro || "Detailed information on the comparative expert report for foreign medical education."}
+          content={
+            content.intro ||
+            "Detailed information on the comparative expert report for foreign medical education."
+          }
         />
+        {/* Open Graph Metadaten */}
+        <meta property="og:title" content={content.title || "Vergleichsgutachten"} />
+        <meta
+          property="og:description"
+          content={
+            content.intro ||
+            "Detailed information on the comparative expert report for foreign medical education."
+          }
+        />
+        <meta property="og:image" content={vergleichsgutachtenImage} />
       </Helmet>
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
