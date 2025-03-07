@@ -75,6 +75,8 @@ const languageMap = {
   fr: "Französisch",
   es: "Spanisch",
   pl: "Polnisch",
+  ro: "Rumänisch",    // neu hinzugefügt
+  el: "Griechisch",   // neu hinzugefügt
 };
 
 const ElectiveLanguageGameContent = () => {
