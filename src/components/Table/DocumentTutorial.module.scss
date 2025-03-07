@@ -109,6 +109,11 @@
   }
 }
 
+button[aria-label*="Κλείσιμο"],
+button[title*="Κλείσιμο"],
+button[aria-label*="Închide"],
+button[title*="Închide"],
+/* існуючі селектори */
 button[aria-label*="Закрити"],
 button[aria-label*="Close"],
 button[aria-label*="Schließen"],
@@ -117,10 +122,10 @@ button[aria-label*="Cerrar"],
 button[aria-label*="Chiudi"],
 button[aria-label*="Fechar"],
 button[aria-label*="Zamknij"],
-button[aria-label*="Kapat"], /* Турецька */
-button[aria-label*="إغلاق"], /* Арабська */
+button[aria-label*="Kapat"],
+button[aria-label*="إغلاق"],
 button[title*="Закрити"],
-button[aria-label*="Закрыть"], /* Російська (нижній регістр) */
+button[aria-label*="Закрыть"],
 button[title*="Close"],
 button[title*="Schließen"],
 button[title*="Fermer"],
@@ -128,9 +133,9 @@ button[title*="Cerrar"],
 button[title*="Chiudi"],
 button[title*="Fechar"],
 button[title*="Zamknij"],
-button[title*="Kapat"], /* Турецька */
-button[title*="إغلاق"] /* Арабська */
-button[title*="Закрыть"] /* Російська (нижній регістр) */
+button[title*="Kapat"],
+button[title*="إغلاق"],
+button[title*="Закрыть"]
 {
   display: none !important;
 }

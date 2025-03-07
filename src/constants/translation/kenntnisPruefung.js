@@ -1,3 +1,5 @@
+// src/constants/translation/kenntnisPruefung.js
+
 export const KENNTNISPRUEFUNG_INFO = {
   de: {
     title: "Kenntnisprüfung für Ärzte in Deutschland",
@@ -14,18 +16,39 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Vorbereitung auf die Kenntnisprüfung: Intensive Sprachkurse, fachspezifische Vorbereitungskurse, Übungsgruppen und praktische Workshops helfen, die Prüfung optimal zu meistern.",
     faq: [
-      { question: "Wie viele Versuche gibt es?", answer: "Je nach Bundesland sind meist ein oder zwei Wiederholungen möglich." },
-      { question: "Wie hoch sind die Kosten?", answer: "Die Prüfungsgebühren variieren stark – oft zwischen 350 und mehreren tausend Euro, zuzüglich Vorbereitungskosten." },
-      { question: "Kann ich während der Vorbereitung schon arbeiten?", answer: "Mit einer befristeten Berufserlaubnis ist das in vielen Fällen möglich, meist unter Aufsicht." },
-      { question: "Was passiert nach erfolgreichem Bestehen?", answer: "Dein Abschluss gilt als gleichwertig, und du kannst die Approbation beantragen." }
+      {
+        question: "Wie viele Versuche gibt es?",
+        answer: "Je nach Bundesland sind meist ein oder zwei Wiederholungen möglich."
+      },
+      {
+        question: "Wie hoch sind die Kosten?",
+        answer: "Die Prüfungsgebühren variieren stark – oft zwischen 350 und mehreren tausend Euro, zuzüglich Vorbereitungskosten."
+      },
+      {
+        question: "Kann ich während der Vorbereitung schon arbeiten?",
+        answer: "Mit einer befristeten Berufserlaubnis ist das in vielen Fällen möglich, meist unter Aufsicht."
+      },
+      {
+        question: "Was passiert nach erfolgreichem Bestehen?",
+        answer: "Dein Abschluss gilt als gleichwertig, und du kannst die Approbation beantragen."
+      }
     ],
     conclusion:
-      "Fazit: Die Kenntnisprüfung ist ein wesentlicher Mechanismus, um sicherzustellen, dass deine ausländische Ausbildung den hohen Anforderungen des deutschen Gesundheitssystems entspricht. Mit gezielter Vorbereitung kannst du diese Hürde erfolgreich überwinden und den Weg zu einer eigenständigen ärztlichen Tätigkeit in Deutschland ebnen."
+      "Fazit: Die Kenntnisprüfung ist ein wesentlicher Mechanismus, um sicherzustellen, dass deine ausländische Ausbildung den hohen Anforderungen des deutschen Gesundheitssystems entspricht. Mit gezielter Vorbereitung kannst du diese Hürde erfolgreich überwinden und den Weg zu einer eigenständigen ärztlichen Tätigkeit in Deutschland ebnen.",
+    headings: {
+      definition: "Definition",
+      whenNeeded: "Wann ist die Prüfung nötig?",
+      contents: "Prüfungsinhalte",
+      process: "Ablauf der Prüfung",
+      preparation: "Vorbereitung",
+      faq: "FAQ",
+      conclusion: "Fazit"
+    }
   },
   uk: {
     title: "Іспит з професійних знань для лікарів у Німеччині",
     intro:
-      "Іспит з професійних знань — це ключовий етап для лікарів з іноземною освітою, який необхідний для отримання повної аппробації в Німеччині. Він проводиться, коли виявлено суттєві відмінності між вашою медичною підготовкою та стандартами німецького медичної освіти або коли документи не підтверджують рівноцінність.",
+      "Іспит з професійних знань — це ключовий етап для лікарів з іноземною освітою, який необхідний для отримання повної аппробації в Німеччині. Він проводиться, коли виявлено суттєві відмінності між вашою медичною підготовкою та стандартами німецького медичного навчання або коли документи не підтверджують рівноцінність.",
     definition:
       "Що таке іспит з професійних знань? Це державний тест, що оцінює як теоретичні знання, так і практичні навички, зокрема з діагностики, терапії, фармакології та надання невідкладної допомоги.",
     whenNeeded:
@@ -37,13 +60,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Підготовка до іспиту: Інтенсивні курси німецької мови, спеціалізовані підготовчі курси, навчальні групи та практичні тренінги допомагають максимально підготуватися до іспиту.",
     faq: [
-      { question: "Скільки спроб допускається?", answer: "Зазвичай допускається одна-дві спроби, залежно від регіону." },
-      { question: "Які витрати пов’язані з іспитом?", answer: "Вартість іспиту може варіюватися від 350 до декількох тисяч євро, плюс витрати на підготовку." },
-      { question: "Чи можна працювати під час підготовки?", answer: "Зазвичай це можливо за умови тимчасового дозволу на роботу під наглядом." },
-      { question: "Що відбувається після успішного складання?", answer: "Ваш диплом визнається рівноцінним, і ви можете подати заявку на отримання аппробації." }
+      {
+        question: "Скільки спроб допускається?",
+        answer: "Зазвичай допускається одна-дві спроби, залежно від регіону."
+      },
+      {
+        question: "Які витрати пов’язані з іспитом?",
+        answer: "Вартість іспиту може варіюватися від 350 до декількох тисяч євро, плюс витрати на підготовку."
+      },
+      {
+        question: "Чи можна працювати під час підготовки?",
+        answer: "Зазвичай це можливо за умови тимчасового дозволу на роботу під наглядом."
+      },
+      {
+        question: "Що відбувається після успішного складання?",
+        answer: "Ваш диплом визнається рівноцінним, і ви можете подати заявку на отримання аппробації."
+      }
     ],
     conclusion:
-      "Висновок: Іспит з професійних знань є важливим інструментом для підтвердження того, що ваша освіта відповідає стандартам Німеччини. З ретельною підготовкою ви зможете подолати цей етап і розпочати незалежну лікарську практику."
+      "Висновок: Іспит з професійних знань є важливим інструментом для підтвердження того, що ваша освіта відповідає стандартам Німеччини. З ретельною підготовкою ви зможете подолати цей етап і розпочати незалежну лікарську практику.",
+    headings: {
+      definition: "Визначення",
+      whenNeeded: "Коли потрібен іспит?",
+      contents: "Зміст іспиту",
+      process: "Процедура проведення",
+      preparation: "Підготовка",
+      faq: "Поширені запитання",
+      conclusion: "Висновок"
+    }
   },
   en: {
     title: "Knowledge Examination for Physicians in Germany",
@@ -60,13 +104,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Preparation: Intensive language courses, subject-specific preparatory courses, study groups, and practical workshops are recommended to optimize your readiness for the exam.",
     faq: [
-      { question: "How many attempts are allowed?", answer: "Typically, one or two retakes are permitted, depending on the state." },
-      { question: "What are the costs?", answer: "Examination fees vary widely, often ranging from 350 to several thousand euros, plus additional preparation expenses." },
-      { question: "Can I work during my preparation?", answer: "Many candidates work under a temporary license, often under supervision, while preparing for the exam." },
-      { question: "What happens after passing?", answer: "Your qualification is recognized as equivalent, paving the way to apply for full licensure." }
+      {
+        question: "How many attempts are allowed?",
+        answer: "Typically, one or two retakes are permitted, depending on the state."
+      },
+      {
+        question: "What are the costs?",
+        answer: "Examination fees vary widely, often ranging from 350 to several thousand euros, plus additional preparation expenses."
+      },
+      {
+        question: "Can I work during my preparation?",
+        answer: "Many candidates work under a temporary license, often under supervision, while preparing for the exam."
+      },
+      {
+        question: "What happens after passing?",
+        answer: "Your qualification is recognized as equivalent, paving the way to apply for full licensure."
+      }
     ],
     conclusion:
-      "Conclusion: The Knowledge Examination is essential to ensure that your medical education meets German standards. With targeted preparation and the right support, you can successfully overcome this hurdle and embark on an independent medical career in Germany."
+      "Conclusion: The Knowledge Examination is essential to ensure that your medical education meets German standards. With targeted preparation and the right support, you can successfully overcome this hurdle and embark on an independent medical career in Germany.",
+    headings: {
+      definition: "Definition",
+      whenNeeded: "When is it needed?",
+      contents: "Exam Contents",
+      process: "Examination Process",
+      preparation: "Preparation",
+      faq: "FAQ",
+      conclusion: "Conclusion"
+    }
   },
   ru: {
     title: "Экзамен на знание для врачей в Германии",
@@ -83,13 +148,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Подготовка к экзамену: Рекомендуется посещение интенсивных языковых и подготовительных курсов, участие в учебных группах и практических семинарах для оптимальной подготовки.",
     faq: [
-      { question: "Сколько попыток допускается?", answer: "В зависимости от региона обычно допускается одна-две попытки." },
-      { question: "Каковы затраты?", answer: "Стоимость экзамена варьируется: от 350 до нескольких тысяч евро, плюс дополнительные расходы на подготовку." },
-      { question: "Можно ли работать во время подготовки?", answer: "Да, часто разрешается работать по временной лицензии, но под наблюдением." },
-      { question: "Что происходит после успешной сдачи?", answer: "Ваш диплом признается равноценным, и вы можете подать заявление на получение полной лицензии." }
+      {
+        question: "Сколько попыток допускается?",
+        answer: "В зависимости от региона обычно допускается одна-две попытки."
+      },
+      {
+        question: "Каковы затраты?",
+        answer: "Стоимость экзамена варьируется: от 350 до нескольких тысяч евро, плюс дополнительные расходы на подготовку."
+      },
+      {
+        question: "Можно ли работать во время подготовки?",
+        answer: "Да, часто разрешается работать по временной лицензии, но под наблюдением."
+      },
+      {
+        question: "Что происходит после успешной сдачи?",
+        answer: "Ваш диплом признается равноценным, и вы можете подать заявление на получение полной лицензии."
+      }
     ],
     conclusion:
-      "Итог: Экзамен на знание является важным инструментом для подтверждения соответствия вашего образования высоким стандартам Германии. Тщательная подготовка позволяет успешно пройти экзамен и открыть путь к независимой врачебной практике."
+      "Итог: Экзамен на знание является важным инструментом для подтверждения соответствия вашего образования высоким стандартам Германии. Тщательная подготовка позволяет успешно пройти экзамен и открыть путь к независимой врачебной практике.",
+    headings: {
+      definition: "Определение",
+      whenNeeded: "Когда требуется?",
+      contents: "Содержание экзамена",
+      process: "Процедура проведения",
+      preparation: "Подготовка",
+      faq: "FAQ",
+      conclusion: "Итог"
+    }
   },
   tr: {
     title: "Almanya’da Doktorlar için Kenntnisprüfung",
@@ -106,13 +192,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Hazırlık: Yoğun Almanca kursları, tıbbi bilgi yenileme kursları, çalışma grupları ve pratik atölyeler, sınava hazırlıkta büyük fayda sağlar.",
     faq: [
-      { question: "Kaç deneme yapılabilir?", answer: "Genellikle bölgeye göre bir ya da iki deneme hakkı verilir." },
-      { question: "Sınav maliyeti nedir?", answer: "Ücretler 350’den başlayıp birkaç bin Euro’ya kadar çıkabilir, ayrıca hazırlık masrafları da söz konusu olabilir." },
-      { question: "Hazırlık sürecinde çalışabilir miyim?", answer: "Evet, çoğu aday geçici çalışma izni ile çalışırken hazırlanabilir." },
-      { question: "Sınavı başarıyla geçerse ne olur?", answer: "Başarılı sonuç, eğitiminizin Alman standartlarıyla eşdeğer olduğunu gösterir ve tam lisansa geçişi sağlar." }
+      {
+        question: "Kaç deneme yapılabilir?",
+        answer: "Genellikle bölgeye göre bir ya da iki deneme hakkı verilir."
+      },
+      {
+        question: "Sınav maliyeti nedir?",
+        answer: "Ücretler 350’den başlayıp birkaç bin Euro’ya kadar çıkabilir, ayrıca hazırlık masrafları da söz konusu olabilir."
+      },
+      {
+        question: "Hazırlık sürecinde çalışabilir miyim?",
+        answer: "Evet, çoğu aday geçici çalışma izni ile çalışırken hazırlanabilir."
+      },
+      {
+        question: "Sınavı başarıyla geçerse ne olur?",
+        answer: "Başarılı sonuç, eğitiminizin Alman standartlarıyla eşdeğer olduğunu gösterir ve tam lisansa geçişi sağlar."
+      }
     ],
     conclusion:
-      "Sonuç: Kenntnisprüfung, yabancı tıp eğitiminin Alman standartlarına uyumunu belgeleyen önemli bir sınavdır. Disiplinli bir hazırlık süreci, sınavı başarıyla geçmenizi sağlar ve bağımsız olarak çalışmaya başlamanız için kapıları açar."
+      "Sonuç: Kenntnisprüfung, yabancı tıp eğitiminin Alman standartlarına uyumunu belgeleyen önemli bir sınavdır. Disiplinli bir hazırlık süreci, sınavı başarıyla geçmenizi sağlar ve bağımsız olarak çalışmaya başlamanız için kapıları açar.",
+    headings: {
+      definition: "Tanım",
+      whenNeeded: "Ne zaman gerekli?",
+      contents: "Sınav İçeriği",
+      process: "Sınav Süreci",
+      preparation: "Hazırlık",
+      faq: "FAQ",
+      conclusion: "Sonuç"
+    }
   },
   fr: {
     title: "Examen de Connaissances pour les Médecins en Allemagne",
@@ -129,13 +236,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Préparation : Des cours intensifs d’allemand, des formations spécifiques et des ateliers pratiques sont recommandés pour optimiser vos chances de succès.",
     faq: [
-      { question: "Combien de tentatives sont autorisées ?", answer: "En fonction du Land, généralement une ou deux tentatives sont possibles." },
-      { question: "Quel est le coût de l’examen ?", answer: "Les frais varient considérablement, souvent entre 350 et plusieurs milliers d’euros, sans compter les coûts supplémentaires de préparation." },
-      { question: "Puis-je travailler pendant ma préparation ?", answer: "Oui, de nombreux candidats travaillent sous licence temporaire tout en se préparant." },
-      { question: "Que se passe-t-il après la réussite ?", answer: "Votre formation est alors reconnue comme équivalente, et vous pouvez demander l’approbation complète." }
+      {
+        question: "Combien de tentatives sont autorisées ?",
+        answer: "En fonction du Land, généralement une ou deux tentatives sont possibles."
+      },
+      {
+        question: "Quel est le coût de l’examen ?",
+        answer: "Les frais varient considérablement, souvent entre 350 et plusieurs milliers d’euros, sans compter les coûts supplémentaires de préparation."
+      },
+      {
+        question: "Puis-je travailler pendant ma préparation ?",
+        answer: "Oui, de nombreux candidats travaillent sous licence temporaire tout en se préparant."
+      },
+      {
+        question: "Que se passe-t-il après la réussite ?",
+        answer: "Votre formation est alors reconnue comme équivalente, et vous pouvez demander l’approbation complète."
+      }
     ],
     conclusion:
-      "Conclusion : L’examen de connaissances est une étape essentielle pour garantir que votre formation médicale répond aux standards allemands. Une préparation rigoureuse vous permettra de franchir cet obstacle et d’ouvrir la voie à une carrière médicale indépendante en Allemagne."
+      "Conclusion : L’examen de connaissances est une étape essentielle pour garantir que votre formation médicale répond aux standards allemands. Une préparation rigoureuse vous permettra de franchir cet obstacle et d’ouvrir la voie à une carrière médicale indépendante en Allemagne.",
+    headings: {
+      definition: "Définition",
+      whenNeeded: "Quand est-il nécessaire ?",
+      contents: "Contenu de l’examen",
+      process: "Déroulement de l’examen",
+      preparation: "Préparation",
+      faq: "FAQ",
+      conclusion: "Conclusion"
+    }
   },
   es: {
     title: "Examen de Conocimientos para Médicos en Alemania",
@@ -152,13 +280,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Preparación: Se recomienda la participación en cursos intensivos de alemán, formación específica y talleres prácticos para optimizar la preparación para el examen.",
     faq: [
-      { question: "¿Cuántos intentos se permiten?", answer: "Generalmente se permiten uno o dos intentos, dependiendo del estado." },
-      { question: "¿Cuál es el costo del examen?", answer: "Las tarifas varían ampliamente, desde 350 hasta varios miles de euros, sin contar los gastos adicionales de preparación." },
-      { question: "¿Puedo trabajar mientras me preparo?", answer: "Sí, muchos candidatos trabajan con un permiso temporal mientras se preparan para el examen." },
-      { question: "¿Qué sucede tras aprobar el examen?", answer: "Se reconoce que tu formación es equivalente, lo que te permite solicitar la licencia completa." }
+      {
+        question: "¿Cuántos intentos se permiten?",
+        answer: "Generalmente se permiten uno o dos intentos, dependiendo del estado."
+      },
+      {
+        question: "¿Cuál es el costo del examen?",
+        answer: "Las tarifas varían ampliamente, desde 350 hasta varios miles de euros, sin contar los gastos adicionales de preparación."
+      },
+      {
+        question: "¿Puedo trabajar mientras me preparo?",
+        answer: "Sí, muchos candidatos trabajan con un permiso temporal mientras se preparan para el examen."
+      },
+      {
+        question: "¿Qué sucede tras aprobar el examen?",
+        answer: "Se reconoce que tu formación es equivalente, lo que te permite solicitar la licencia completa."
+      }
     ],
     conclusion:
-      "Conclusión: El examen de conocimientos es fundamental para asegurar que tu formación médica cumple con los altos estándares alemanes. Con una preparación enfocada, puedes superar este reto y acceder a una carrera médica independiente en Alemania."
+      "Conclusión: El examen de conocimientos es fundamental para asegurar que tu formación médica cumple con los altos estándares alemanes. Con una preparación enfocada, puedes superar este reto y acceder a una carrera médica independiente en Alemania.",
+    headings: {
+      definition: "Definición",
+      whenNeeded: "¿Cuándo es necesario?",
+      contents: "Contenidos del examen",
+      process: "Proceso del examen",
+      preparation: "Preparación",
+      faq: "FAQ",
+      conclusion: "Conclusión"
+    }
   },
   pl: {
     title: "Egzamin Wiedzy dla Lekarzy w Niemczech",
@@ -175,13 +324,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Przygotowanie: Intensywne kursy językowe, przygotowawcze kursy merytoryczne, grupy naukowe oraz warsztaty praktyczne pomagają w optymalnym przygotowaniu do egzaminu.",
     faq: [
-      { question: "Ile prób zdawania egzaminu jest dopuszczalnych?", answer: "Zależnie od landu, zazwyczaj dopuszczalne są jedna lub dwie próby." },
-      { question: "Jakie są koszty egzaminu?", answer: "Opłaty egzaminacyjne wahają się od 350 do kilku tysięcy euro, w zależności od regionu i przygotowania." },
-      { question: "Czy można pracować podczas przygotowań?", answer: "Tak, wielu kandydatów pracuje na podstawie tymczasowego pozwolenia, najczęściej pod nadzorem." },
-      { question: "Co się dzieje po zdaniu egzaminu?", answer: "Zdany egzamin potwierdza równoważność wykształcenia, umożliwiając ubieganie się o pełną aprobatę." }
+      {
+        question: "Ile prób zdawania egzaminu jest dopuszczalnych?",
+        answer: "Zależnie od landu, zazwyczaj dopuszczalne są jedna lub dwie próby."
+      },
+      {
+        question: "Jakie są koszty egzaminu?",
+        answer: "Opłaty egzaminacyjne wahają się od 350 do kilku tysięcy euro, w zależności od regionu i przygotowania."
+      },
+      {
+        question: "Czy można pracować podczas przygotowań?",
+        answer: "Tak, wielu kandydatów pracuje na podstawie tymczasowego pozwolenia, najczęściej pod nadzorem."
+      },
+      {
+        question: "Co się dzieje po zdaniu egzaminu?",
+        answer: "Zdany egzamin potwierdza równoważność wykształcenia, umożliwiając ubieganie się o pełną aprobatę."
+      }
     ],
     conclusion:
-      "Podsumowanie: Egzamin wiedzy jest kluczowym narzędziem potwierdzającym, że Twoje wykształcenie medyczne odpowiada niemieckim standardom. Dzięki systematycznej i intensywnej przygotowaniu możesz pomyślnie go zdać i otworzyć drogę do niezależnej praktyki lekarskiej w Niemczech."
+      "Podsumowanie: Egzamin wiedzy jest kluczowym narzędziem potwierdzającym, że Twoje wykształcenie medyczne odpowiada niemieckim standardom. Dzięki systematycznej i intensywnej przygotowaniu możesz pomyślnie go zdać i otworzyć drogę do niezależnej praktyki lekarskiej w Niemczech.",
+    headings: {
+      definition: "Definicja",
+      whenNeeded: "Kiedy jest konieczny?",
+      contents: "Zakres egzaminu",
+      process: "Przebieg egzaminu",
+      preparation: "Przygotowanie",
+      faq: "FAQ",
+      conclusion: "Podsumowanie"
+    }
   },
   el: {
     title: "Εξέταση Γνώσεων για Ιατρούς στη Γερμανία",
@@ -198,13 +368,34 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Προετοιμασία: Συνιστάται η παρακολούθηση εντατικών μαθημάτων γερμανικής γλώσσας, εξειδικευμένων μαθημάτων και πρακτικών εργαστηρίων, προκειμένου να βελτιωθείτε τόσο γλωσσικά όσο και σε θεματικές ιατρικές περιοχές.",
     faq: [
-      { question: "Πόσες προσπάθειες επιτρέπονται;", answer: "Συνήθως επιτρέπονται μία έως δύο προσπάθειες, ανάλογα με την περιοχή." },
-      { question: "Ποιο είναι το κόστος;", answer: "Το κόστος διαφέρει σημαντικά, συχνά κυμαίνεται μεταξύ 350 και μερικών χιλιάδων ευρώ, συν τυχόν επιπλέον έξοδα προετοιμασίας." },
-      { question: "Μπορώ να εργάζομαι κατά την προετοιμασία;", answer: "Ναι, πολλοί υποψήφιοι εργάζονται με προσωρινή άδεια υπό επίβλεψη." },
-      { question: "Τι συμβαίνει μετά την επιτυχή εξέταση;", answer: "Η επιτυχία σημαίνει ότι η εκπαίδευσή σας αναγνωρίζεται ως ισοδύναμη, επιτρέποντάς σας να υποβάλετε αίτηση για πλήρη αδειοδότηση." }
+      {
+        question: "Πόσες προσπάθειες επιτρέπονται;",
+        answer: "Συνήθως επιτρέπονται μία έως δύο προσπάθειες, ανάλογα με την περιοχή."
+      },
+      {
+        question: "Ποιο είναι το κόστος;",
+        answer: "Το κόστος διαφέρει σημαντικά, συχνά κυμαίνεται μεταξύ 350 και μερικών χιλιάδων ευρώ, συν τυχόν επιπλέον έξοδα προετοιμασίας."
+      },
+      {
+        question: "Μπορώ να εργάζομαι κατά την προετοιμασία;",
+        answer: "Ναι, πολλοί υποψήφιοι εργάζονται με προσωρινή άδεια υπό επίβλεψη."
+      },
+      {
+        question: "Τι συμβαίνει μετά την επιτυχή εξέταση;",
+        answer: "Η επιτυχία σημαίνει ότι η εκπαίδευσή σας αναγνωρίζεται ως ισοδύναμη, επιτρέποντάς σας να υποβάλετε αίτηση για πλήρη αδειοδότηση."
+      }
     ],
     conclusion:
-      "Συμπέρασμα: Η εξέταση γνώσεων αποτελεί θεμέλιο για την επαλήθευση της επαγγελματικής σας κατάρτισης σύμφωνα με τα γερμανικά πρότυπα. Με συστηματική προετοιμασία μπορείτε να την περάσετε επιτυχώς και να ανοίξετε το δρόμο για μια ανεξάρτητη ιατρική καριέρα στη Γερμανία."
+      "Συμπέρασμα: Η εξέταση γνώσεων αποτελεί θεμέλιο για την επαλήθευση της επαγγελματικής σας κατάρτισης σύμφωνα με τα γερμανικά πρότυπα. Με συστηματική προετοιμασία μπορείτε να την περάσετε επιτυχώς και να ανοίξετε το δρόμο για μια ανεξάρτητη ιατρική καριέρα στη Γερμανία.",
+    headings: {
+      definition: "Ορισμός",
+      whenNeeded: "Πότε απαιτείται;",
+      contents: "Περιεχόμενο",
+      process: "Διαδικασία",
+      preparation: "Προετοιμασία",
+      faq: "FAQ",
+      conclusion: "Συμπέρασμα"
+    }
   },
   ro: {
     title: "Examenul de Cunoștințe pentru Medici în Germania",
@@ -221,12 +412,33 @@ export const KENNTNISPRUEFUNG_INFO = {
     preparation:
       "Pregătirea: Se recomandă participarea la cursuri intensive de limba germană, cursuri de pregătire specifică și ateliere practice pentru a asigura o pregătire completă pentru examen.",
     faq: [
-      { question: "Câte încercări sunt permise?", answer: "În funcție de land, de regulă se acordă una sau două încercări." },
-      { question: "Care sunt costurile?", answer: "Taxele variază semnificativ, de la 350 până la câteva mii de euro, plus costurile suplimentare de pregătire." },
-      { question: "Pot lucra în timpul pregătirii?", answer: "Da, mulți candidați lucrează pe baza unui permis temporar, de obicei sub supraveghere." },
-      { question: "Ce se întâmplă după ce treci examenul?", answer: "Diploma ta este recunoscută ca echivalentă, ceea ce îți permite să soliciți aprobarea completă." }
+      {
+        question: "Câte încercări sunt permise?",
+        answer: "În funcție de land, de regulă se acordă una sau două încercări."
+      },
+      {
+        question: "Care sunt costurile?",
+        answer: "Taxele variază semnificativ, de la 350 până la câteva mii de euro, plus costurile suplimentare de pregătire."
+      },
+      {
+        question: "Pot lucra în timpul pregătirii?",
+        answer: "Da, mulți candidați lucrează pe baza unui permis temporar, de obicei sub supraveghere."
+      },
+      {
+        question: "Ce se întâmplă după ce treci examenul?",
+        answer: "Diploma ta este recunoscută ca echivalentă, ceea ce îți permite să soliciți aprobarea completă."
+      }
     ],
     conclusion:
-      "Concluzie: Examenul de cunoștințe este esențial pentru a asigura că pregătirea ta medicală se ridică la standardele germane. O pregătire bine structurată te va ajuta să treci cu succes acest test și să îți deschizi drumul spre o carieră medicală independentă în Germania."
+      "Concluzie: Examenul de cunoștințe este esențial pentru a asigura că pregătirea ta medicală se ridică la standardele germane. O pregătire bine structurată te va ajuta să treci cu succes acest test și să îți deschizi drumul spre o carieră medicală independentă în Germania.",
+    headings: {
+      definition: "Definiție",
+      whenNeeded: "Când este necesar?",
+      contents: "Conținutul examenului",
+      process: "Procesul",
+      preparation: "Pregătire",
+      faq: "FAQ",
+      conclusion: "Concluzie"
+    }
   }
 };

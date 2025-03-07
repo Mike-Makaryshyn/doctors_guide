@@ -23,13 +23,15 @@ const RenderParagraphs = ({ text }) => {
 
 const KenntnisPruefungPage = () => {
   const { selectedLanguage: language, handleChangePage } = useGetGlobalInfo();
-
-  // Отримання контенту відповідно до вибраної мови
   const content = KENNTNISPRUEFUNG_INFO[language];
+
   if (!content) {
     console.error(`Content for language '${language}' is undefined.`);
     return <div>Content not available for this language.</div>;
   }
+
+  // Витягуємо заголовки з content.headings
+  const headings = content.headings || {};
 
   return (
     <MainLayout>
@@ -56,10 +58,7 @@ const KenntnisPruefungPage = () => {
       <div className="page containerBigger mt-20">
         <div className="firstPageImageBlock"></div>
         <div className={cn("main_menu__content", styles.knowledge_examination_content)}>
-          <button
-            className="main_menu_back"
-            onClick={() => handleChangePage("/main_menu")}
-          >
+          <button className="main_menu_back" onClick={() => handleChangePage("/main_menu")}>
             &#8592;
           </button>
 
@@ -72,6 +71,7 @@ const KenntnisPruefungPage = () => {
           {/* Definition */}
           {content.definition && (
             <section>
+              <h2>{headings.definition || "Definition"}</h2>
               <RenderParagraphs text={content.definition} />
             </section>
           )}
@@ -79,6 +79,7 @@ const KenntnisPruefungPage = () => {
           {/* When Needed */}
           {content.whenNeeded && (
             <section>
+              <h2>{headings.whenNeeded || "Wann ist die Prüfung nötig?"}</h2>
               <RenderParagraphs text={content.whenNeeded} />
             </section>
           )}
@@ -86,6 +87,7 @@ const KenntnisPruefungPage = () => {
           {/* Contents */}
           {content.contents && (
             <section>
+              <h2>{headings.contents || "Prüfungsinhalte"}</h2>
               <RenderParagraphs text={content.contents} />
             </section>
           )}
@@ -93,6 +95,7 @@ const KenntnisPruefungPage = () => {
           {/* Process */}
           {content.process && (
             <section>
+              <h2>{headings.process || "Ablauf der Prüfung"}</h2>
               <RenderParagraphs text={content.process} />
             </section>
           )}
@@ -100,6 +103,7 @@ const KenntnisPruefungPage = () => {
           {/* Preparation */}
           {content.preparation && (
             <section>
+              <h2>{headings.preparation || "Vorbereitung"}</h2>
               <RenderParagraphs text={content.preparation} />
             </section>
           )}
@@ -107,6 +111,7 @@ const KenntnisPruefungPage = () => {
           {/* FAQ */}
           {content.faq && Array.isArray(content.faq) && (
             <section>
+              <h2>{headings.faq || "FAQ"}</h2>
               {content.faq.map((item, index) => (
                 <div key={index}>
                   <strong>{item.question}</strong>
@@ -119,6 +124,7 @@ const KenntnisPruefungPage = () => {
           {/* Conclusion */}
           {content.conclusion && (
             <section>
+              <h2>{headings.conclusion || "Fazit"}</h2>
               <RenderParagraphs text={content.conclusion} />
             </section>
           )}
