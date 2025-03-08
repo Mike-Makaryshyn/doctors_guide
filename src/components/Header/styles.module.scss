@@ -1,163 +1,145 @@
 .header {
-   background-color: #4eb7a7fa;
-   color: white;
-   padding: 10px 30px;
-   text-align: center;
-   height: 70px;
-   z-index: 200;
-   position: fixed;
-   width: 100%;
-   top: 0;
- 
-   @media (max-width: 509px) {
-     font-size: 13px;
-     padding: 10px 15px;
-     flex-direction: row !important;
-     height: 60px !important;
-     align-items: center;
- 
-     select {
-       font-size: 12px;
-       margin-bottom: 0;
-     }
- 
-     h2 {
-       margin: 0 !important;
-     }
-   }
- }
- 
- .sRegion {
-   font-weight: 600;
-   font-size: 18px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- }
- @media (max-width: 768px) {
-  .optionLabel {
-    display: none;
+  background-color: #4eb7a7fa;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  height: 70px;
+  z-index: 200;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 509px) {
+    font-size: 13px;
+    padding: 10px 15px;
+    flex-direction: row !important;
+    height: 60px !important;
+
+    select {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 !important;
+    }
   }
 }
- 
- /* За замовчуванням на десктопі показуємо повну назву, а скорочення ховаємо */
- .sRegionFull {
-   display: inline-block;
- }
- .sRegionShort {
-   display: none;
- }
- 
- /* На мобільних (до 768px) – ховаємо повну назву, показуємо скорочення */
- @media (max-width: 768px) {
-   .sRegionFull {
-     display: none;
-   }
-   .sRegionShort {
-     display: inline-block;
-     font-size: 12px;
-   }
- }
- 
- .langSelect {
-   display: flex;
-   padding: 10px;
-   border-radius: 24px; /* округлий контейнер */
-   background: #2a7c6f;
-   margin-top: 0;
-   border: none;
-   color: white;
-   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-   text-align: center;
-   cursor: pointer;
-   transition: all 0.2s ease;
-   border: 1px solid transparent;
-   outline: none;
-   min-height: 47px; /* щоб селект не виглядав "плоским" */
-   line-height: normal;
- }
- 
- .langSelect:hover {
-   background: #5abbab;
-   color: #384e4b;
-   border: 1px solid white;
- }
- 
- /* Видаляємо стрілочку стандартного селекта */
- select {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-   background: transparent;
-   border: none;
-   outline: none;
-   width: 100%;
-   line-height: normal;
- }
- 
- /* Для IE/Edge */
- select::-ms-expand {
-   display: none;
- }
- 
- /* Текст всередині option обгортаємо в optionLabel */
- .optionLabel {
-   margin-left: 5px;
- }
- 
- /* На мобільних (до 768px) приховуємо текст в optionLabel */
- @media (max-width: 768px) {
-   .optionLabel {
-     display: none;
-   }
- }
- 
- /* mainLogo та анімація сяйва */
- .mainLogo {
-   font-weight: 600;
-   cursor: pointer;
-   transition: all 0.2s ease;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- }
- 
- .glowAnimation {
-   animation: glow 4s infinite alternate;
- }
- 
- @keyframes glow {
-   0% {
-     text-shadow: none;
-   }
-   50% {
-     text-shadow: 0 0 2px #fff;
-   }
-   100% {
-     text-shadow: 0 0 4px #fff, 0 0 6px #f0f;
-   }
- }
- 
- .mainLogo:hover {
-   color: rgb(231, 236, 231);
- }
- 
- .languageLabel {
-   margin-right: 20px;
- }
- 
- @media (max-width: 768px) {
-   .languageLabel {
-     display: none;
-   }
- }
- 
- @media screen and (max-width: 600px) {
-   .header {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     height: 130px;
-   }
- }
- @media (max-width: 768px) {
-   .languageLabel {
-     display: none;
-   }
- }
+
+/* Для десктопу (повна назва регіону) */
+.sRegionFull {
+  display: inline-block;
+}
+
+/* Для мобільного (скорочена назва регіону) */
+.sRegionShort {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* При ширині <= 768px ховаємо повну назву регіону,
+     а показуємо скорочену */
+  .sRegionFull {
+    display: none;
+  }
+  .sRegionShort {
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+
+.langSelect {
+  /* Загальні стилі */
+  display: flex;
+  padding: 10px;
+  border-radius: 24px;
+  background: #2a7c6f;
+  margin-top: 0;
+  border: none;
+  color: white;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  outline: none;
+  min-height: 47px;
+  line-height: normal;
+
+  &:hover {
+    background: #5abbab;
+    color: #384e4b;
+    border: 1px solid white;
+  }
+
+  /* Адаптивне зменшення поля на мобільних */
+  @media (max-width: 768px) {
+    /* Робимо менший паддінг, щоб контейнер став вужчим */
+    padding: 0px 0px;
+    /* Можна ще менше, якщо треба */
+    border-radius: 25px;
+    min-height: 40px;
+    /* Знімаємо фіксовану висоту */
+    font-size: 10px;
+    width: auto; 
+    /* Щоб не розтягувалося */
+    display: inline-flex; 
+    /* Дозволяє «обтікати» за вмістом, замість розтягуватися */
+  }
+}
+
+/* Прибираємо стандартну стрілочку (Chrome, Safari) */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  /* Важливо: якщо лишити width: 100%, select буде розтягуватись 
+     під батьківський .langSelect. Краще авто, щоб був вужчий. */
+  width: auto; 
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    /* Додатково можна зменшити паддінг select’у, якщо треба */
+    padding: 0;
+  }
+}
+
+/* Для IE/Edge */
+select::-ms-expand {
+  display: none;
+}
+
+/* Анімація для логотипа */
+.mainLogo {
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.glowAnimation {
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 0 0 2px #fff;
+  }
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 6px #f0f;
+  }
+}
+
+.mainLogo:hover {
+  color: rgb(231, 236, 231);
+}
