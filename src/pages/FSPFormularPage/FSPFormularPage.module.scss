@@ -29,7 +29,7 @@ $time: 0.6s;
 .columns {
   display: flex;
   flex-wrap: wrap; /* Адаптивне відображення плиток */
-  gap: 9px; /* Зменшені відступи між колонками */
+  gap: 9px;        /* Зменшені відступи між колонками */
   width: 100%;
   justify-content: space-between;
 }
@@ -88,6 +88,7 @@ $time: 0.6s;
   color: #333;
   width: 100%;
   transition: all 0.3s ease;
+
   &:hover {
     background-color: #f9f9f9;
     border-color: #007bff;
@@ -97,20 +98,20 @@ $time: 0.6s;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   }
+
+  option {
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #ffffff;
+
+    &:hover {
+      background-color: #e6f7ff;
+    }
+  }
 }
 
-.case-select option {
-  padding: 8px;
-  font-size: 14px;
-  color: #333;
-  background-color: #ffffff;
-}
-
-.case-select option:hover {
-  background-color: #e6f7ff;
-}
-
-/* Кнопка налаштувань */
+/* Кнопка налаштувань (шестерня) */
 .settings-button {
   position: fixed;
   bottom: 0px;
@@ -127,18 +128,18 @@ $time: 0.6s;
   align-items: center;
   z-index: 1000;
   transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #7dc722;
+    transform: scale(1.1);
+  }
 }
 
-.settings-button:hover {
-  background-color: #7dc722;
-  transform: scale(1.1);
-}
-
-/* Neues Einstellungen-Modal */
+/* Модальне вікно для налаштувань */
 .settings-modal {
   position: fixed;
   bottom: 45px;
-  right: 45px; /* Модальне вікно розташоване справа */
+  right: 45px;
   background: #fff;
   padding: 25px 20px 20px;
   width: 350px;
@@ -147,6 +148,18 @@ $time: 0.6s;
   z-index: 1000;
   animation: fadeIn 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  text-align: center; /* Вирівнюємо контент по центру */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .settings-content {
@@ -164,6 +177,7 @@ $time: 0.6s;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 15px; /* Щоб елементи не накладались один на одного */
 }
 
 .settings-modal label {
@@ -172,7 +186,7 @@ $time: 0.6s;
   color: #555;
 }
 
-/* Новий нативний селект для регіону */
+/* Нативний селект для регіону */
 .nativeSelect {
   width: 100%;
   padding: 6px 12px;
@@ -187,23 +201,6 @@ $time: 0.6s;
 .region-selector {
   position: relative;
   display: inline-block;
-}
-
-/* Старі стилі для кнопки регіону (якщо потрібні) */
-.region-button {
-  padding: 6px 12px;
-  background-color: rgba(0, 123, 255, 0.8);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  width: 100%;
-  text-align: left;
-}
-
-.region-button:hover {
-  background-color: #0056b3;
 }
 
 /* Випадаючий список регіонів */
@@ -231,10 +228,10 @@ $time: 0.6s;
   font-size: 14px;
   color: #000;
   font-weight: bold;
-}
 
-.region-option:hover {
-  background-color: #f1f1f1;
+  &:hover {
+    background-color: #f1f1f1;
+  }
 }
 
 /* Back Button */
@@ -254,15 +251,14 @@ $time: 0.6s;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.main_menu_back:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  transform: scale(1.1);
-}
-
-.main_menu_back:active {
-  transform: scale(0.95);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 /* Горизонтальне розташування кнопок дій */
@@ -270,7 +266,7 @@ $time: 0.6s;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 10px;
+  gap: 0px;
   margin-top: 15px;
 }
 
@@ -284,16 +280,16 @@ $time: 0.6s;
   font-size: 18px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0); /* Прозорий фон, щоб уникнути зміни кольору */
+  }
 }
 
-.actionButton:hover {
-  transform: scale(1.05);
-}
-
-/* Кнопка закриття модального вікна */
+/* Кнопка закриття модального вікна (x) */
 .close-button {
-  /* Можна використати міксин neu-button-style, якщо він у вас визначений, або просто задайте стилі */
   position: absolute;
   top: -21px;
   right: -14px;
@@ -304,71 +300,73 @@ $time: 0.6s;
   color: #4d4d4d;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-.close-button:hover {
-  transform: scale(1.1);
-}
-
-/* Switch-Stile */
+/* Switch-Stile (Lokal / Firebase) */
 .switch {
   font-size: 17px;
   position: relative;
   display: inline-block;
   width: 3.5em;
   height: 2em;
-}
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
-  transition: 0.4s;
-  border-radius: 5px;
-  
-  &::before {
+  .slider {
     position: absolute;
-    content: "";
-    height: 1.4em;
-    width: 0.1em;
-    border-radius: 0;
-    left: 0.3em;
-    bottom: 0.3em;
-    background-color: white;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 0.4s;
+    border-radius: 5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1.4em;
+      width: 0.1em;
+      border-radius: 0;
+      left: 0.3em;
+      bottom: 0.3em;
+      background-color: white;
+      transition: 0.4s;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(0,0,0);
+
+    &::before {
+      transform: translateX(2.8em) rotate(360deg);
+    }
   }
 }
 
-.switch input:checked + .slider {
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(0,0,0);
-}
-
-.switch input:checked + .slider::before {
-  transform: translateX(2.8em) rotate(360deg);
-}
-
-/* Інші стилі (адаптивність, повідомлення, тощо) */
+/* Адаптивність, повідомлення, тощо */
 @media (max-width: 768px) {
   .column {
     flex: 1 1 100%;
     max-width: 100%;
   }
+
   .tile {
     padding: 8px;
     font-size: 12px;
   }
+
   .settings-modal {
     left: 0;
     right: 0;
@@ -378,23 +376,22 @@ $time: 0.6s;
     padding: 20px;
     height: 400px;
   }
+
   .buttons-container {
     flex-direction: row;
   }
+
   .region-selector,
   .region-dropdown,
   .react-select-container {
     width: 100%;
   }
+
   .close-button {
     top: -17px;
     right: -18px;
     padding: 6px 10px;
     font-size: 14px;
-  }
-  ._slider_yvv6p_298 {
-    width: 8em;
-    aspect-ratio: 1.8 / 1;
   }
 }
 
@@ -424,16 +421,10 @@ $time: 0.6s;
   text-decoration: none;
   color: #007bff;
   cursor: pointer;
-}
 
-.deferred-case-link:hover {
-  text-decoration: underline;
-}
-
-.case-select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* Data Source Toggle */
@@ -444,6 +435,7 @@ $time: 0.6s;
   margin-top: 10px;
 }
 
+/* Активні стани */
 .label-left,
 .label-right {
   margin: 0 0.5em;
@@ -457,14 +449,13 @@ $time: 0.6s;
   font-weight: bold;
 }
 
-/* Aktive Button-Stile */
 .mark-completed-button.active,
 .defer-case-button.active {
   background-color: #007bff;
   color: #fff;
 }
 
-/* Container für Auswahlfelder (Region, Fall) */
+/* Контейнер для вибору (Region, Fall) */
 .selectionContainer {
   width: 100%;
   padding: 6px 12px;
@@ -474,109 +465,55 @@ $time: 0.6s;
   margin-bottom: 15px;
 }
 
-/* Anpassung für Region und Fall Auswahl im Einstellungen Modal */
-.settings-modal .region-selector {
-  width: 100%;
-  padding: 6px 12px;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  margin-bottom: 15px;
-}
+/* ----------------- Додаткові налаштування для модального вікна ----------------- */
 
-.settings-modal .nativeSelect {
+/* Region-Auswahl: розмір як у Fall-Auswahl, більший та жирний текст */
+.settings-modal .field .region-selector {
   width: 100%;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 14px;
-}
-
-.settings-modal .case-select {
-  width: 100%;
-  padding: 6px 12px;
+  max-width: 100%;
+  height: 40px;
+  padding: 6px 10px;
   border-radius: 10px;
-  background: #fff;
+  background: #013b6e; /* Фіолетовий фон */
   box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  margin-bottom: 15px;
   border: none;
+  margin-bottom: 0px;
+  font-weight: 600;
   font-size: 16px;
-  color: #333;
-}
-
-.settings-modal .case-select:focus {
-  outline: none;
-}
-.main_menu_back {
-  position: fixed;
-  bottom: 16px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.main_menu_back:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  transform: scale(1.1);
-}
-
-.main_menu_back:active {
-  transform: scale(0.95);
-}
-.settings-modal .field .region-selector {
-  width: 100%;
-  max-width: 100%; // Щоб відповідало селектору випадків
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: #6a5acd; // Фіолетовий колір
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  border: none;
-  margin-bottom: 15px;
-  font-weight: 700;  // Текст жирніший
-  font-size: 18px;   // Трохи більший шрифт
-  color: #ffffff;    // Білий текст
-  text-align: center; // Центрування тексту
+  text-align: center;
   cursor: pointer;
 }
 
-// Стилі самого select всередині
 .settings-modal .field .region-selector .nativeSelect {
   width: 100%;
   height: 100%;
-  padding: 6px;
   border: none;
   background: transparent;
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
-  text-align: inherit;
-  cursor: inherit;
+  text-align: center;
+  cursor: pointer;
 
   &:focus {
     outline: none;
   }
 }
 
-// Стилі для селектора випадків
+/* Fall-Auswahl (білий фон, ті ж розміри) */
 .settings-modal .field .case-select {
   width: 100%;
   padding: 8px 12px;
   border-radius: 10px;
-  background: #ffffff; // Білий фон
+  height: 40px;
+  background: #ffffff;
   box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
   border: none;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-size: 16px;
   color: #013b6e;
@@ -588,7 +525,7 @@ $time: 0.6s;
   }
 }
 
-// Стилі для кнопки закриття модального вікна (як у прикладі з перекликів)
+/* Кнопка закриття вікна (x) - без зміни кольору при наведенні */
 .settings-modal .close-button {
   position: absolute;
   top: -10px;
@@ -600,20 +537,49 @@ $time: 0.6s;
   color: #ed0a0a;
   padding: 5px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.1); // Тільки збільшення без зміни кольору
+    transform: scale(1.2);
     background-color: transparent;
-  }
-
-  &:active {
-    transform: scale(0.95);
   }
 }
 
-// Прибрана зміна кольору при наведенні для кнопок у модальному вікні (✓, ⏸, ⟳, ➕)
+/* Hover-ефект для кнопок (✓, ⏸, ⟳, ➕) - тільки scale */
 .settings-modal .buttons-container .actionButton:hover {
-  transform: scale(1.1); // Тільки ефект збільшення
-  background-color: inherit; // Без зміни бекграунду
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0); /* Прозорий фон */
+}
+.modalCloseButton {
+  position: absolute;
+  top: -35px;
+  right: -30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modalCloseButton:hover {
+  transform: scale(0.9);
+  background-color: rgba(237, 10, 10, 0);
+}
+.icon-common {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.actionButton.active {
+  background: #013b6e;
+  color: #ffffff;
+}
+.actionButton.active:hover {
+  background: #013b6e !important; /* Залишаємо фон синім */
+  color: #ffffff !important; /* Іконка залишається білою */
+  opacity: 0.9; /* Легке затемнення при наведенні */
 }

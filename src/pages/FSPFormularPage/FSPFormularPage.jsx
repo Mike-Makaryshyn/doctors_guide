@@ -32,7 +32,7 @@ import { parseData } from "../../utils/dataParser";
 import useIsMobile from "../../hooks/useIsMobile";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
-import { FaCog } from "react-icons/fa";
+import { FaCheck, FaPause, FaCog, FaPlus, FaSync } from "react-icons/fa";
 
 // Firebase
 import { db, auth } from "../../firebase";
@@ -65,7 +65,7 @@ const FSPFormularPage = () => {
   const { sourceType: routeSourceType, caseId: routeCaseId } = useParams();
 
   // Data from DataSourceContext
-  const { dataSources, fetchFirebaseCases, getCurrentCases } = useContext(DataSourceContext);
+  const { dataSources, fetchFirebaseCases } = useContext(DataSourceContext);
 
   // Global hook
   const {
@@ -79,8 +79,7 @@ const FSPFormularPage = () => {
     handleChangePage,
   } = useGetGlobalInfo() || {};
 
-  // Використання кастомного хука
-  const isNavigatingWithCaseId = !!routeCaseId;
+  // Custom Hook für Region und sourceType
   const {
     localRegion,
     setLocalRegion,
@@ -94,7 +93,7 @@ const FSPFormularPage = () => {
     handleChangeRegion
   );
 
-  // ---- Local States ----
+  // ---- Lokale States ----
   const [parseModal, setParseModal] = useState(false);
   const [infoModal, setInfoModal] = useState(false);
   const [userCasesModal, setUserCasesModal] = useState(false);
@@ -113,7 +112,7 @@ const FSPFormularPage = () => {
   // Handle caseId once
   const [isCaseIdHandled, setIsCaseIdHandled] = useState(false);
 
-  // Видаляємо стару логіку для кастомного вибору регіону; використовуємо native select
+  // Region auswählen
   const handleRegionSelect = (regionId) => {
     setLocalRegion(regionId, false);
     setSelectedCase("");
@@ -125,7 +124,7 @@ const FSPFormularPage = () => {
     }
   };
 
-  // ---- Auth ----
+  // ---- Auth-Überwachung ----
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
@@ -153,7 +152,7 @@ const FSPFormularPage = () => {
     return () => unsubscribe();
   }, []);
 
-  // ---- Loading Firebase Cases when sourceType or localRegion changes ----
+  // ---- Loading Firebase Cases, wenn sourceType oder localRegion wechselt ----
   const [isLoading, setIsLoading] = useState(false);
   const [errorState, setErrorState] = useState(null);
 
@@ -175,7 +174,7 @@ const FSPFormularPage = () => {
     loadFirebaseCases();
   }, [sourceType, localRegion, fetchFirebaseCases]);
 
-  // ---- If user navigated via URL with caseId, search for this case ----
+  // ---- URL: caseId -> Fall suchen ----
   useEffect(() => {
     const fetchSelectedCase = async () => {
       if (user && routeCaseId && !isCaseIdHandled) {
@@ -195,7 +194,15 @@ const FSPFormularPage = () => {
     };
 
     fetchSelectedCase();
-  }, [dataSources, user, routeCaseId, isCaseIdHandled, sourceType, fetchFirebaseCases]);
+  }, [
+    dataSources,
+    user,
+    routeCaseId,
+    isCaseIdHandled,
+    sourceType,
+    fetchFirebaseCases,
+    setLocalRegion,
+  ]);
 
   useEffect(() => {
     if (user && routeCaseId && !isCaseIdHandled) {
@@ -205,14 +212,19 @@ const FSPFormularPage = () => {
         )
       );
 
-      if (regionId && dataSources[regionId]?.files?.some(file => String(file.id) === String(routeCaseId))) {
+      if (
+        regionId &&
+        dataSources[regionId]?.files?.some(
+          (file) => String(file.id) === String(routeCaseId)
+        )
+      ) {
         setSelectedCase(routeCaseId);
         setIsCaseIdHandled(true);
       }
     }
   }, [dataSources, user, routeCaseId, isCaseIdHandled]);
 
-  // ---- Saving selectedCase to Firestore when it changes ----
+  // ---- Speichere ausgewählten Fall in Firestore ----
   useEffect(() => {
     const saveSelectedCase = async () => {
       if (!user) return;
@@ -252,13 +264,6 @@ const FSPFormularPage = () => {
     saveSelectedCase();
   }, [selectedCase, localRegion, user, dataSources]);
 
-  // ---- Checking if localRegion exists in dataSources ----
-  useEffect(() => {
-    if (localRegion && !dataSources[localRegion]) {
-      console.warn(`localRegion "${localRegion}" не знайдено у dataSources`);
-    }
-  }, [localRegion, dataSources]);
-
   // ---- Horizontal scroll on mobile ----
   const columnsRef = useRef(null);
   const isMobile = useIsMobile();
@@ -276,9 +281,7 @@ const FSPFormularPage = () => {
     columnsRef.current.scrollLeft = scrollLeft - moveX;
   };
 
-  /**
-   * handleParseData: Loads or parses a case.
-   */
+  // ---- Daten parsen/auswählen ----
   const handleParseData = useCallback(
     async (sourceId, fileId) => {
       setIsLoading(true);
@@ -324,7 +327,10 @@ const FSPFormularPage = () => {
         }
 
         if (selectedItem.summary) {
-          setParsedData((prev) => ({ ...prev, summary: selectedItem.summary }));
+          setParsedData((prev) => ({
+            ...prev,
+            summary: selectedItem.summary,
+          }));
         }
         if (selectedItem.examinerQuestions) {
           setParsedData((prev) => ({
@@ -346,8 +352,9 @@ const FSPFormularPage = () => {
         setIsLoading(false);
       }
     },
-    [sourceType, dataSources]
+    [sourceType, dataSources, parseData]
   );
+
   useEffect(() => {
     if (localRegion && selectedCase && dataSources[localRegion]) {
       const timeout = setTimeout(() => {
@@ -356,15 +363,16 @@ const FSPFormularPage = () => {
       return () => clearTimeout(timeout);
     }
   }, [localRegion, selectedCase, sourceType, dataSources, handleParseData]);
+
   useEffect(() => {
     if (localRegion && selectedCase && dataSources[localRegion]) {
       handleParseData(localRegion, selectedCase);
     } else if (!dataSources[localRegion]) {
-      console.warn(`Дані для регіону ${localRegion} ще не завантажені.`);
+      console.warn(`Daten für Region ${localRegion} sind noch nicht geladen.`);
     }
   }, [localRegion, selectedCase, sourceType, dataSources, handleParseData]);
 
-  // ---- Open additional info modal ----
+  // ---- InfoModal öffnen ----
   const handleOpenInfoModal = (type) => {
     if (isLoading) {
       toast.info("Data is still loading. Please wait.");
@@ -419,21 +427,23 @@ const FSPFormularPage = () => {
       setInfoModal(true);
     }
   }, [additionalInfo]);
+
+  // ---- Konsolenwarnung, wenn kein Fall gewählt ----
   useEffect(() => {
     if (!selectedCase || Object.keys(parsedData).length === 0) {
-      console.warn("Дані для вибраного випадку ще не завантажені.");
+      console.warn("Daten für den ausgewählten Fall sind noch nicht geladen.");
     } else {
-      console.log("Дані для вибраного випадку успішно завантажені:", parsedData);
+      console.log("Daten für den ausgewählten Fall erfolgreich geladen:", parsedData);
     }
   }, [selectedCase, parsedData]);
 
-  // ---- Change case in Select ----
+  // ---- Case Select (Dropdown) ändern ----
   const handleCaseChange = (option) => {
     setSelectedCase(option.value);
     setParsedData({});
   };
 
-  // ---- Open user cases modal (optional) ----
+  // ---- User Cases Modal öffnen (optional) ----
   const handleOpenUserCasesModal = async (sourceId, fileId) => {
     const source = dataSources[sourceId];
     if (!source.type || source.type !== "firebase") return;
@@ -449,7 +459,7 @@ const FSPFormularPage = () => {
     }
   };
 
-  // ---- Mark case as completed ----
+  // ---- Fall als erledigt markieren ----
   const handleMarkAsCompleted = async () => {
     if (!user) {
       toast.error("User is not authenticated.");
@@ -471,7 +481,9 @@ const FSPFormularPage = () => {
         });
         setUserData((prev) => ({
           ...prev,
-          [completedCasesKey]: prev[completedCasesKey].filter((id) => id !== String(selectedCase)),
+          [completedCasesKey]: prev[completedCasesKey].filter(
+            (id) => id !== String(selectedCase)
+          ),
         }));
         toast.success("Status 'erledigt' entfernt.");
       } else {
@@ -481,8 +493,13 @@ const FSPFormularPage = () => {
         });
         setUserData((prev) => ({
           ...prev,
-          [completedCasesKey]: [...(prev[completedCasesKey] || []), String(selectedCase)],
-          [deferredCasesKey]: prev[deferredCasesKey]?.filter((id) => id !== String(selectedCase)),
+          [completedCasesKey]: [
+            ...(prev[completedCasesKey] || []),
+            String(selectedCase),
+          ],
+          [deferredCasesKey]: prev[deferredCasesKey]?.filter(
+            (id) => id !== String(selectedCase)
+          ),
         }));
         toast.success("Status 'erledigt' hinzugefügt.");
       }
@@ -492,7 +509,7 @@ const FSPFormularPage = () => {
     }
   };
 
-  // ---- Defer case for later ----
+  // ---- Fall verschieben ----
   const handleDeferCase = async () => {
     if (!user) {
       toast.error("User is not authenticated.");
@@ -514,7 +531,9 @@ const FSPFormularPage = () => {
         });
         setUserData((prev) => ({
           ...prev,
-          [deferredCasesKey]: prev[deferredCasesKey].filter((id) => id !== String(selectedCase)),
+          [deferredCasesKey]: prev[deferredCasesKey].filter(
+            (id) => id !== String(selectedCase)
+          ),
         }));
         toast.success("Status 'verschoben' entfernt.");
       } else {
@@ -524,8 +543,13 @@ const FSPFormularPage = () => {
         });
         setUserData((prev) => ({
           ...prev,
-          [deferredCasesKey]: [...(prev[deferredCasesKey] || []), String(selectedCase)],
-          [completedCasesKey]: prev[completedCasesKey]?.filter((id) => id !== String(selectedCase)),
+          [deferredCasesKey]: [
+            ...(prev[deferredCasesKey] || []),
+            String(selectedCase),
+          ],
+          [completedCasesKey]: prev[completedCasesKey]?.filter(
+            (id) => id !== String(selectedCase)
+          ),
         }));
         toast.success("Status 'verschoben' hinzugefügt.");
       }
@@ -535,19 +559,19 @@ const FSPFormularPage = () => {
     }
   };
 
-  // ---- Reset case selection ----
+  // ---- Auswahl zurücksetzen ----
   const handleReset = () => {
     setSelectedCase("");
     setParsedData({});
     setFallType("");
   };
 
-  // Cog button settings: open when changing page (optional)
+  // ---- Einstellungen automatisch öffnen (optional) ----
   useEffect(() => {
     setIsSettingsOpen(!!currentPage);
   }, [currentPage]);
 
-  // Close settings menu when clicking outside
+  // ---- Einstellungen schließen bei Klick außerhalb ----
   const settingsRefSettings = useRef(null);
   const settingsButtonRefSettings = useRef(null);
 
@@ -571,7 +595,7 @@ const FSPFormularPage = () => {
     };
   }, [isSettingsOpen]);
 
-  // Examiner & Patient Questions
+  // ---- Fragen / Patientenfragen ----
   const handleExaminerQuestionsClick = () => {
     handleOpenInfoModal("examinerQuestions");
   };
@@ -579,94 +603,38 @@ const FSPFormularPage = () => {
     handleOpenInfoModal("patientQuestions");
   };
 
-  // Prepare case list for Select
-  const getCaseOptions = () => {
-    if (!localRegion || !dataSources[localRegion]?.files) {
-      console.log("Файли для локального регіону відсутні:", localRegion);
-      return [];
-    }
-
-    console.log("Файли для локального регіону:", dataSources[localRegion].files);
-
-    return dataSources[localRegion].files
-      .filter((file) => file.id)
-      .map(createCaseOption);
-  };
-
-  const createCaseOption = (file) => {
-    let status = "";
-    if (userData) {
-      const completedCasesKey = `completedCases_${localRegion}`;
-      const deferredCasesKey = `deferredCases_${localRegion}`;
-      if (userData[completedCasesKey]?.includes(String(file.id))) {
-        status = "completed";
-      }
-      if (userData[deferredCasesKey]?.includes(String(file.id))) {
-        status = "deferred";
-      }
-    }
-    return {
-      value: file.id,
-      label: (
-        <div className={styles["option-label"]}>
-          <span>{file.name || "Без Імені"}</span>
-          {status === "completed" && <span className={styles["status-icon"]}>✔️</span>}
-          {status === "deferred" && <span className={styles["status-icon"]}>⏸️</span>}
-        </div>
-      ),
-    };
-  };
-
-  // Styles for React Select
-  const customSelectStyles = {
-    control: (provided) => ({
-      ...provided,
-      borderColor: "#ccc",
-      boxShadow: "none",
-      "&:hover": {
-        borderColor: "#007bff",
-      },
-    }),
-    option: (provided) => ({
-      ...provided,
-      display: "flex",
-      alignItems: "center",
-    }),
-    singleValue: (provided) => ({
-      ...provided,
-      display: "flex",
-      alignItems: "center",
-    }),
-  };
-
-  // Logging for debugging
+  // ---- Logging / Debug ----
   useEffect(() => {
     console.log("DataSources updated:", dataSources);
   }, [dataSources]);
-  
+
   useEffect(() => {
     console.log("Selected Case:", selectedCase);
     console.log("Parsed Data:", parsedData);
   }, [selectedCase, parsedData]);
+
   useEffect(() => {
     if (selectedCase && localRegion && dataSources[localRegion]) {
       const caseExists = dataSources[localRegion]?.files?.some(
         (file) => String(file.id) === String(selectedCase)
       );
       if (!caseExists) {
-        console.warn(`Випадок ${selectedCase} не знайдено в регіоні ${localRegion}`);
+        console.warn(
+          `Fall ${selectedCase} wurde in Region ${localRegion} nicht gefunden.`
+        );
       }
     }
   }, [selectedCase, localRegion, dataSources]);
+
   return (
     <MainLayout>
       {!user ? (
         <div className={styles["unauthenticated-container"]}>
           <p className={styles["error-message"]}>
-            Ви не автентифіковані. Будь ласка, увійдіть у систему.
+            Sie sind nicht eingeloggt. Bitte melden Sie sich an.
           </p>
           <Link to="/login">
-            <button className={styles["login-button"]}>Увійти</button>
+            <button className={styles["login-button"]}>Einloggen</button>
           </Link>
         </div>
       ) : (
@@ -701,7 +669,11 @@ const FSPFormularPage = () => {
                 <div className={styles["field"]}>
                   <label>Datenquelle wählen:</label>
                   <div className={styles["data-source-toggle"]}>
-                    <span className={`${styles["label-left"]} ${sourceType === "local" ? styles["label-active"] : ""}`}>
+                    <span
+                      className={`${styles["label-left"]} ${
+                        sourceType === "local" ? styles["label-active"] : ""
+                      }`}
+                    >
                       Lokal
                     </span>
                     <label className={styles["switch"]}>
@@ -709,13 +681,19 @@ const FSPFormularPage = () => {
                         type="checkbox"
                         checked={sourceType === "firebase"}
                         onChange={() =>
-                          setSourceType((prev) => (prev === "local" ? "firebase" : "local"))
+                          setSourceType((prev) =>
+                            prev === "local" ? "firebase" : "local"
+                          )
                         }
                         aria-label="Umschalter für Datenquelle"
                       />
                       <span className={styles["slider"]}></span>
                     </label>
-                    <span className={`${styles["label-right"]} ${sourceType === "firebase" ? styles["label-active"] : ""}`}>
+                    <span
+                      className={`${styles["label-right"]} ${
+                        sourceType === "firebase" ? styles["label-active"] : ""
+                      }`}
+                    >
                       Firebase
                     </span>
                   </div>
@@ -723,7 +701,7 @@ const FSPFormularPage = () => {
 
                 {/* Region Selector (Native Select) */}
                 <div className={styles["field"]}>
-                  <label>Region wählen:</label>
+                 
                   <div className={styles["region-selector"]}>
                     <select
                       className={styles["nativeSelect"]}
@@ -743,7 +721,7 @@ const FSPFormularPage = () => {
 
                 {/* Case Selector */}
                 <div className={styles["field"]}>
-                  <label htmlFor="case-select">Fall wählen:</label>
+                
                   <select
                     id="case-select"
                     className={styles["case-select"]}
@@ -766,110 +744,138 @@ const FSPFormularPage = () => {
                   </select>
                 </div>
 
-                {/* Action Buttons */}
                 <div className={styles["buttons-container"]}>
-                  <Link to="/data-collection">
-                    <button
-                      className={styles["actionButton"]}
-                      aria-label="Neuen Fall hinzufügen"
-                    >
-                      ➕
-                    </button>
-                  </Link>
+  <Link to="/data-collection">
+    <button
+      className={styles["actionButton"]}
+      aria-label="Neuen Fall hinzufügen"
+    >
+      <FaPlus className={styles["icon-common"]} />
+    </button>
+  </Link>
 
-                  <button
-                    className={`${styles["actionButton"]} ${
-                      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
-                        ? styles["active"]
-                        : ""
-                    }`}
-                    onClick={handleMarkAsCompleted}
-                    disabled={!selectedCase}
-                    aria-pressed={userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))}
-                    aria-label="Fall als erledigt markieren"
-                  >
-                    ✓
-                  </button>
+  <button
+    className={`${styles["actionButton"]} ${
+      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
+        ? styles["active"]
+        : ""
+    }`}
+    onClick={handleMarkAsCompleted}
+    disabled={!selectedCase}
+    aria-pressed={
+      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
+    }
+    aria-label="Fall als erledigt markieren"
+  >
+    <FaCheck className={styles["icon-common"]} />
+  </button>
 
-                  <button
-                    className={`${styles["actionButton"]} ${
-                      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
-                        ? styles["active"]
-                        : ""
-                    }`}
-                    onClick={handleDeferCase}
-                    disabled={!selectedCase}
-                    aria-pressed={userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))}
-                    aria-label="Fall verschieben"
-                  >
-                    ⏸
-                  </button>
+  <button
+    className={`${styles["actionButton"]} ${
+      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
+        ? styles["active"]
+        : ""
+    }`}
+    onClick={handleDeferCase}
+    disabled={!selectedCase}
+    aria-pressed={
+      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
+    }
+    aria-label="Fall verschieben"
+  >
+    <FaPause className={styles["icon-common"]} />
+  </button>
 
-                  <button
-                    className={styles["actionButton"]}
-                    onClick={handleReset}
-                    disabled={!selectedCase}
-                    aria-label="Fall zurücksetzen"
-                  >
-                    ⟳
-                  </button>
-                </div>
+  <button
+    className={styles["actionButton"]}
+    onClick={handleReset}
+    disabled={!selectedCase}
+    aria-label="Fall zurücksetzen"
+  >
+    <FaSync className={styles["icon-common"]} />
+  </button>
+</div>
 
                 {/* Close Button */}
                 <button
-                  className={styles["close-button"]}
-                  onClick={() => setIsSettingsOpen(false)}
-                  aria-label="Einstellungen schließen"
+                  className={styles.modalCloseButton}
+                  onClick={() => setSettingsOpen(false)}
                 >
-                  ✕
+                  ×
                 </button>
               </div>
             </div>
           )}
 
-          {/* Main Content */}
+          {/* Hauptinhalt */}
           <div className={styles["fsp-container"]}>
-            {isLoading && <p className={styles["loading-message"]}>Daten werden geladen...</p>}
-            {errorState && <p className={styles["error-message"]}>{errorState}</p>}
+            {isLoading && (
+              <p className={styles["loading-message"]}>Daten werden geladen...</p>
+            )}
+            {errorState && (
+              <p className={styles["error-message"]}>{errorState}</p>
+            )}
 
             {!isLoading && !errorState && (
               <div
-                className={`${styles["columns"]} ${isMobile ? styles["mobile"] : ""}`}
+                className={`${styles["columns"]} ${
+                  isMobile ? styles["mobile"] : ""
+                }`}
                 ref={columnsRef}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
               >
                 {/* Column 1 */}
                 <div className={styles["column"]}>
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("personalData")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("personalData")}
+                  >
                     <h3 className={styles["tile-title"]}>Persönliche Daten</h3>
                     <PersonalData parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("currentAnamnese")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("currentAnamnese")}
+                  >
                     <h3 className={styles["tile-title"]}>Aktuelle Anamnese</h3>
                     <AktuelleAnamnese parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("reiseImpfstatus")}>
-                    <h3 className={styles["tile-title"]}>Reise- und Impfstatus</h3>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("reiseImpfstatus")}
+                  >
+                    <h3 className={styles["tile-title"]}>
+                      Reise- und Impfstatus
+                    </h3>
                     <ReiseImpfstatus parsedData={parsedData} />
                   </div>
                 </div>
 
                 {/* Column 2 */}
                 <div className={styles["column"]}>
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("vegetativeAnamnese")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
+                  >
                     <h3 className={styles["tile-title"]}>Vegetative Anamnese</h3>
                     <VegetativeAnamnese parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("zusammenfassung")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("zusammenfassung")}
+                  >
                     <h3 className={styles["tile-title"]}></h3>
                     <Zusammenfassung parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("vorerkrankungen")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("vorerkrankungen")}
+                  >
                     <h3 className={styles["tile-title"]}>Vorerkrankungen</h3>
                     <Vorerkrankungen parsedData={parsedData} />
                   </div>
@@ -877,62 +883,107 @@ const FSPFormularPage = () => {
 
                 {/* Column 3 */}
                 <div className={styles["column"]}>
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("previousOperations")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("previousOperations")}
+                  >
                     <h3 className={styles["tile-title"]}>Frühere Operationen</h3>
                     <PreviousOperations parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("medications")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("medications")}
+                  >
                     <h3 className={styles["tile-title"]}>Medikamente</h3>
                     <Medications parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}>
-                    <h3 className={styles["tile-title"]}>Unverträglichkeiten</h3>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() =>
+                      handleOpenInfoModal("allergiesAndIntolerances")
+                    }
+                  >
+                    <h3 className={styles["tile-title"]}>
+                      Unverträglichkeiten
+                    </h3>
                     <AllergiesAndIntolerances parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("noxen")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("noxen")}
+                  >
                     <h3 className={styles["tile-title"]}>Noxen</h3>
                     <Noxen parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("familienanamnese")}>
-                    <h3 className={styles["tile-title"]}>Familiäre Erkrankungen</h3>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("familienanamnese")}
+                  >
+                    <h3 className={styles["tile-title"]}>
+                      Familiäre Erkrankungen
+                    </h3>
                     <Familienanamnese parsedData={parsedData} />
                   </div>
                 </div>
 
                 {/* Column 4 */}
                 <div className={styles["column"]}>
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("sozialanamnese")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("sozialanamnese")}
+                  >
                     <h3 className={styles["tile-title"]}>Soziale Anamnese</h3>
                     <Sozialanamnese parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("differentialDiagnosis")}>
-                    <h3 className={styles["tile-title"]}>Differentialdiagnose</h3>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() =>
+                      handleOpenInfoModal("differentialDiagnosis")
+                    }
+                  >
+                    <h3 className={styles["tile-title"]}>
+                      Differentialdiagnose
+                    </h3>
                     <DifferentialDiagnosis parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
+                  >
                     <h3 className={styles["tile-title"]}>Diagnose</h3>
                     <PreliminaryDiagnosis parsedData={parsedData} />
                   </div>
 
-                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("proposedProcedures")}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={() => handleOpenInfoModal("proposedProcedures")}
+                  >
                     <h3 className={styles["tile-title"]}>Untersuchungen</h3>
                     <ProposedProcedures parsedData={parsedData} />
                   </div>
 
                   {/* Examiner & Patient Questions */}
-                  <div className={styles["tile"]} onClick={handlePatientQuestionsClick}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={handlePatientQuestionsClick}
+                  >
                     <h3 className={styles["tile-title"]}></h3>
                     <PatientQuestions parsedData={parsedData} />
                   </div>
-                  <div className={styles["tile"]} onClick={handleExaminerQuestionsClick}>
+                  <div
+                    className={styles["tile"]}
+                    onClick={handleExaminerQuestionsClick}
+                  >
                     <h3 className={styles["tile-title"]}></h3>
-                    <ExaminerQuestions onQuestionClick={handleExaminerQuestionsClick} />
+                    <ExaminerQuestions
+                      onQuestionClick={handleExaminerQuestionsClick}
+                    />
                   </div>
                 </div>
               </div>
