@@ -12,21 +12,24 @@ import {
   FaList,
   FaPlay,
   FaTimes,
-  FaSearch,
+  FaSearch
 } from "react-icons/fa";
 import useGetGlobalInfo from "../../../../hooks/useGetGlobalInfo";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { useTermStatus, TermStatusProvider } from "../../../../contexts/TermStatusContext";
+import {
+  useTermStatus,
+  TermStatusProvider
+} from "../../../../contexts/TermStatusContext";
 import { useNavigate } from "react-router-dom";
 import { categoryIcons } from "../../../../constants/CategoryIcons";
 import { Helmet } from "react-helmet";
 import AuthModal from "../../../../pages/AuthPage/AuthModal";
 import medicalTerminologyBg from "../../../../assets/medical-terminology-bg.jpg";
 
-// ================================
-//  Додали скорочення для 4 підрегіонів
-// ================================
+// Import the tutorial component
+import AllMedicalTerminologyTutorial from "./AllMedicalTerminologyTutorial";
+
 const regionAbbreviations = {
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
@@ -44,19 +47,17 @@ const regionAbbreviations = {
   Hamburg: "HH",
   "Mecklenburg Vorpommern": "MV",
   "Sachsen-Anhalt": "ST",
-
-  // Оновлені записи для чотирьох підрегіонів BW:
   "Baden-Württemberg-Freiburg": "BWF",
   "Baden-Württemberg-Karlsruhe": "BWK",
   "Baden-Württemberg-Stuttgart": "BWS",
-  "Baden-Württemberg-Reutlingen": "BWR",
+  "Baden-Württemberg-Reutlingen": "BWR"
 };
 
 const filterModes = [
   { value: "all", icon: <FaList />, label: "Alle" },
   { value: "learned", icon: <FaCheck />, label: "Gelernt" },
   { value: "unlearned", icon: <FaPlay />, label: "Ungelernt" },
-  { value: "paused", icon: <FaPause />, label: "Pausiert" },
+  { value: "paused", icon: <FaPause />, label: "Pausiert" }
 ];
 
 const AllMedicalTerminologyContent = () => {
@@ -64,14 +65,16 @@ const AllMedicalTerminologyContent = () => {
   const { termStatuses, toggleStatus, scheduleFlushChanges } = useTermStatus();
   const { selectedRegion, selectedLanguage } = useGetGlobalInfo();
   const [user, loading] = useAuthState(auth);
-  const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // ============================================================
-  //  (1) Замінили "Bayern" на "Alle" як дефолтне значення region
-  // ============================================================
+  // =========================
+  // STATES
+  // =========================
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDefinition, setShowDefinition] = useState(true);
   const [region, setRegion] = useState(selectedRegion || "Alle");
-  const [translationLanguage, setTranslationLanguage] = useState(selectedLanguage || "de");
+  const [translationLanguage, setTranslationLanguage] = useState(
+    selectedLanguage || "de"
+  );
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [searchTerm, setSearchTerm] = useState("");
   const [collapsedCategories, setCollapsedCategories] = useState({});
@@ -80,10 +83,95 @@ const AllMedicalTerminologyContent = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Референції
+  // Tutorial: whether to show it (true/false)
+  const [showTutorial, setShowTutorial] = useState(
+    localStorage.getItem("allMedicalTerminologyTutorialCompleted") !== "true"
+  );
+
+  // =========================
+  // REFS
+  // =========================
   const pageRef = useRef(null);
   const settingsModalRef = useRef(null);
+  const joyrideRef = useRef(null);
 
+  // =========================
+  // EFFECTS
+  // =========================
+
+  // 1) If the tutorial hasn't been completed, open the modal
+  useEffect(() => {
+    if (showTutorial) {
+      setIsSettingsModalOpen(true);
+    }
+  }, [showTutorial]);
+
+  // 2) Close modal on clicking outside (if tutorial is not active)
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (showTutorial) return;
+      if (
+        settingsModalRef.current &&
+        !settingsModalRef.current.contains(event.target)
+      ) {
+        setIsSettingsModalOpen(false);
+      }
+    }
+    if (isSettingsModalOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSettingsModalOpen, showTutorial]);
+
+  // 3) Initialize region & language
+  useEffect(() => {
+    setRegion(selectedRegion || "Alle");
+  }, [selectedRegion]);
+
+  useEffect(() => {
+    setTranslationLanguage(selectedLanguage || "de");
+  }, [selectedLanguage]);
+
+  // 4) Listen for resize events
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // 5) Close search field when clicking outside
+  useEffect(() => {
+    function handleClickOutsidePage(event) {
+      if (
+        isSearchActive &&
+        pageRef.current &&
+        !pageRef.current.contains(event.target)
+      ) {
+        setIsSearchActive(false);
+        setSearchTerm("");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutsidePage);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutsidePage);
+  }, [isSearchActive]);
+
+  // 6) Disable scroll when modal or tutorial is active
+  useEffect(() => {
+    if (isSettingsModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      if (!showTutorial) {
+        document.body.style.overflow = "auto";
+      }
+    }
+  }, [isSettingsModalOpen, showTutorial]);
+
+  // =========================
+  // FUNCTIONS
+  // =========================
   const requireAuth = () => {
     if (!user) {
       setShowAuthModal(true);
@@ -92,60 +180,52 @@ const AllMedicalTerminologyContent = () => {
     return false;
   };
 
-  useEffect(() => {
-    // Якщо змінюється selectedRegion з глобального хука,
-    // оновлюємо state region
-    setRegion(selectedRegion || "Alle");
-  }, [selectedRegion]);
-
-  useEffect(() => {
-    setTranslationLanguage(selectedLanguage || "de");
-  }, [selectedLanguage]);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Закриття модального вікна налаштувань при кліку поза ним
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (settingsModalRef.current && !settingsModalRef.current.contains(event.target)) {
-        setIsSettingsModalOpen(false);
-      }
-    }
-    if (isSettingsModalOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isSettingsModalOpen]);
-
-  // Закриття поля пошуку при кліку поза ним
-  useEffect(() => {
-    function handleClickOutsidePage(event) {
-      if (isSearchActive && pageRef.current && !pageRef.current.contains(event.target)) {
-        setIsSearchActive(false);
-        setSearchTerm("");
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutsidePage);
-    return () => document.removeEventListener("mousedown", handleClickOutsidePage);
-  }, [isSearchActive]);
-
-  // Функції для зміни статусів термінів
   const toggleLearned = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "learned");
     scheduleFlushChanges();
   };
+
   const togglePaused = (id) => {
     if (requireAuth()) return;
     toggleStatus(id, "paused");
     scheduleFlushChanges();
   };
 
-  // Фільтрація термінів
+  const handleRegionChange = (e) => {
+    if (requireAuth()) return;
+    setRegion(e.target.value);
+  };
+
+  const handleCategoryChange = (e) => {
+    if (requireAuth()) return;
+    setSelectedCategory(e.target.value);
+  };
+
+  const handleFilterModeChange = (e) => {
+    if (requireAuth()) return;
+    setFilterMode(e.target.value);
+  };
+
+  const handleBack = () => {
+    navigate("/main_menu");
+  };
+
+  const handleGameClick = () => {
+    if (requireAuth()) return;
+    navigate("/terminology-learning");
+  };
+
+  /**
+   * When the user clicks 'Close Modal' during the tutorial step, we call this
+   */
+  const handleModalComplete = () => {
+    setIsSettingsModalOpen(false);
+  };
+
+  // =========================
+  // FILTERING
+  // =========================
   const filteredTerms = medicalTerms.filter((term) => {
     const matchesSearch =
       term.lat.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -158,20 +238,17 @@ const AllMedicalTerminologyContent = () => {
     const matchesRegion =
       region === "Alle" || (term.regions || []).includes(region);
 
-    let base = matchesSearch && matchesCategory && matchesRegion;
-
     const statusObj = termStatuses[term.id];
     const status = statusObj?.status || "unlearned";
 
     if (filterMode === "learned" && status !== "learned") return false;
     if (filterMode === "paused" && status !== "paused") return false;
-    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) {
-      return false;
-    }
-    return base;
+    if (filterMode === "unlearned" && (status === "learned" || status === "paused")) return false;
+
+    return matchesSearch && matchesCategory && matchesRegion;
   });
 
-  // Групування термінів по категоріях
+  // Group terms by category
   const termsByCategory = {};
   filteredTerms.forEach((term) => {
     (term.categories || []).forEach((category) => {
@@ -182,40 +259,14 @@ const AllMedicalTerminologyContent = () => {
     });
   });
 
-  // Побудова списку унікальних регіонів
-  const uniqueRegions = Array.from(
-    new Set(medicalTerms.flatMap((term) => term.regions || []))
-  );
+  // Options for selects
+  const uniqueRegions = Array.from(new Set(medicalTerms.flatMap((term) => term.regions || [])));
   const regionOptions = ["Alle", ...uniqueRegions];
+  const uniqueCategories = Array.from(new Set(medicalTerms.flatMap((term) => term.categories || [])));
 
-  // Унікальні категорії
-  const uniqueCategories = Array.from(
-    new Set(medicalTerms.flatMap((term) => term.categories || []))
-  );
-
-  // Обробники змін фільтрів
-  const handleRegionChange = (e) => {
-    if (requireAuth()) return;
-    setRegion(e.target.value);
-  };
-  const handleCategoryChange = (e) => {
-    if (requireAuth()) return;
-    setSelectedCategory(e.target.value);
-  };
-  const handleFilterModeChange = (e) => {
-    if (requireAuth()) return;
-    setFilterMode(e.target.value);
-  };
-
-  // Навігація
-  const handleBack = () => {
-    navigate("/main_menu");
-  };
-  const handleGameClick = () => {
-    if (requireAuth()) return;
-    navigate("/terminology-learning");
-  };
-
+  // =========================
+  // RENDER
+  // =========================
   return (
     <MainLayout>
       {loading ? (
@@ -223,7 +274,9 @@ const AllMedicalTerminologyContent = () => {
       ) : (
         <>
           <Helmet>
-            <title>Medizinische Fachbegriffe für die Fachsprachenprüfung in Deutschland</title>
+            <title>
+              Medizinische Fachbegriffe für die Fachsprachenprüfung in Deutschland
+            </title>
             <meta
               name="description"
               content="Diese Seite richtet sich an alle, die sich auf die Fachsprachenprüfung vorbereiten, eine Approbation anstreben und in Deutschland arbeiten möchten. Lernen Sie medizinische Fachbegriffe effektiv!"
@@ -236,11 +289,13 @@ const AllMedicalTerminologyContent = () => {
           </Helmet>
 
           <div className={styles.allMedicalTerminologyPage} ref={pageRef}>
+            {/* Back Button */}
             <button className={styles.main_menu_back} onClick={handleBack}>
               &#8592;
             </button>
 
-            <div className={styles.searchContainer}>
+            {/* Search Field (data-tutorial="searchField") */}
+            <div className={styles.searchContainer} data-tutorial="searchField">
               <input
                 type="text"
                 placeholder="Suche..."
@@ -272,8 +327,9 @@ const AllMedicalTerminologyContent = () => {
               </button>
             </div>
 
-            {/* =============== Відображення списку термінів =============== */}
+            {/* Terms List */}
             {isMobile ? (
+              // Mobile version (tiles)
               <div className={styles.tilesContainer}>
                 {Object.keys(termsByCategory).map((category, index) => (
                   <div key={category} className={styles.categorySection}>
@@ -285,10 +341,11 @@ const AllMedicalTerminologyContent = () => {
                         }
                         setCollapsedCategories((prev) => ({
                           ...prev,
-                          [category]: !prev[category],
+                          [category]: !prev[category]
                         }));
                       }}
                       className={styles.categoryHeader}
+                      data-tutorial="categoryHeader"
                     >
                       {category}
                       <span className={styles.collapseIcon}>
@@ -311,6 +368,7 @@ const AllMedicalTerminologyContent = () => {
                             }`}
                           >
                             <span
+                              data-tutorial="checkIcon"
                               className={styles.checkIconDesktop}
                               onClick={() => toggleLearned(term.id)}
                               title="Gelernt"
@@ -318,6 +376,7 @@ const AllMedicalTerminologyContent = () => {
                               <FaCheck />
                             </span>
                             <span
+                              data-tutorial="pauseIconMobile"
                               className={styles.pauseIcon}
                               onClick={() => togglePaused(term.id)}
                               title="Pausiert"
@@ -325,12 +384,11 @@ const AllMedicalTerminologyContent = () => {
                               <FaPause />
                             </span>
                             <h3 className={styles.tileHeader}>{term.lat}</h3>
-                            <p className={styles.tileDescription}>
+                            <p className={styles.tileDescription} data-tutorial="germanDefinition">
                               {translationLanguage !== "de" ? (
                                 <Tippy
                                   content={
-                                    term[translationLanguage] ||
-                                    "Keine Übersetzung vorhanden"
+                                    term[translationLanguage] || "Keine Übersetzung vorhanden"
                                   }
                                   trigger="click"
                                   interactive={true}
@@ -345,12 +403,11 @@ const AllMedicalTerminologyContent = () => {
                               )}
                             </p>
                             {showDefinition && (
-                              <p className={styles.tileExplanation}>
+                              <p className={styles.tileExplanation} data-tutorial="explanationCell">
                                 {translationLanguage !== "de" ? (
                                   <Tippy
                                     content={
-                                      term[translationLanguage + "Explanation"] ||
-                                      "Keine Übersetzung vorhanden"
+                                      term[translationLanguage + "Explanation"] || "Keine Übersetzung vorhanden"
                                     }
                                     trigger="click"
                                     interactive={true}
@@ -372,6 +429,7 @@ const AllMedicalTerminologyContent = () => {
                 ))}
               </div>
             ) : (
+              // Desktop version (table)
               Object.keys(termsByCategory).map((category, index) => (
                 <div key={category} className={styles.categorySection}>
                   <h2
@@ -382,10 +440,11 @@ const AllMedicalTerminologyContent = () => {
                       }
                       setCollapsedCategories((prev) => ({
                         ...prev,
-                        [category]: !prev[category],
+                        [category]: !prev[category]
                       }));
                     }}
                     className={styles.categoryHeader}
+                    data-tutorial="categoryHeader"
                   >
                     {category}
                     <span className={styles.collapseIcon}>
@@ -405,7 +464,7 @@ const AllMedicalTerminologyContent = () => {
                           <th
                             style={{
                               width: showDefinition ? "20%" : "50%",
-                              textAlign: "left",
+                              textAlign: "left"
                             }}
                           >
                             Begriff
@@ -438,6 +497,7 @@ const AllMedicalTerminologyContent = () => {
                               <td className={styles.termCell}>
                                 <div className={styles.iconWrapper}>
                                   <span
+                                    data-tutorial="checkIcon"
                                     className={styles.checkIconDesktop}
                                     onClick={() => toggleLearned(term.id)}
                                     title="Gelernt"
@@ -445,6 +505,7 @@ const AllMedicalTerminologyContent = () => {
                                     <FaCheck />
                                   </span>
                                   <span
+                                    data-tutorial="pauseIconDesktop"
                                     className={styles.pauseIconDesktop}
                                     onClick={() => togglePaused(term.id)}
                                     title="Pausiert"
@@ -452,16 +513,13 @@ const AllMedicalTerminologyContent = () => {
                                     <FaPause />
                                   </span>
                                 </div>
-                                <div className={styles.termContent}>
-                                  {term.lat}
-                                </div>
+                                <div className={styles.termContent}>{term.lat}</div>
                               </td>
-                              <td>
+                              <td data-tutorial="germanDefinition">
                                 {translationLanguage !== "de" ? (
                                   <Tippy
                                     content={
-                                      term[translationLanguage] ||
-                                      "Keine Übersetzung vorhanden"
+                                      term[translationLanguage] || "Keine Übersetzung vorhanden"
                                     }
                                     trigger="click"
                                     interactive={true}
@@ -476,13 +534,11 @@ const AllMedicalTerminologyContent = () => {
                                 )}
                               </td>
                               {showDefinition && (
-                                <td>
+                                <td data-tutorial="explanationCell">
                                   {translationLanguage !== "de" ? (
                                     <Tippy
                                       content={
-                                        term[
-                                          translationLanguage + "Explanation"
-                                        ] || "Keine Übersetzung vorhanden"
+                                        term[translationLanguage + "Explanation"] || "Keine Übersetzung vorhanden"
                                       }
                                       trigger="click"
                                       interactive={true}
@@ -507,6 +563,7 @@ const AllMedicalTerminologyContent = () => {
               ))
             )}
 
+            {/* Modal Overlay (data-tutorial attributes) */}
             {isSettingsModalOpen && (
               <div className={styles.modalOverlay}>
                 <div
@@ -517,18 +574,22 @@ const AllMedicalTerminologyContent = () => {
                   }
                   ref={settingsModalRef}
                 >
+                  {/* Close Button */}
                   <button
                     className={styles.modalCloseButton}
-                    onClick={() => setIsSettingsModalOpen(false)}
+                    onClick={() => {
+                      if (!showTutorial) {
+                        setIsSettingsModalOpen(false);
+                      }
+                    }}
+                    data-tutorial="closeModal"
                   >
                     ×
                   </button>
                   <h2 className={styles.modalTitle}>Einstellungen</h2>
                   <div className={styles.row}>
-                    <div
-                      className={styles.regionColumn}
-                      data-tutorial="regionSelect"
-                    >
+                    {/* REGION */}
+                    <div className={styles.regionColumn} data-tutorial="regionSelect">
                       <label className={styles.fieldLabel}>Region</label>
                       <div className={styles.selectWrapper}>
                         <div className={styles.regionCell}>
@@ -538,6 +599,7 @@ const AllMedicalTerminologyContent = () => {
                           className={styles.nativeSelect}
                           value={region}
                           onChange={handleRegionChange}
+                          data-tutorial="nativeSelectClick"
                         >
                           {regionOptions.map((r) => (
                             <option key={r} value={r}>
@@ -547,17 +609,12 @@ const AllMedicalTerminologyContent = () => {
                         </select>
                       </div>
                     </div>
-                    <div
-                      className={styles.filterColumn}
-                      data-tutorial="filterColumn"
-                    >
+                    {/* FILTER */}
+                    <div className={styles.filterColumn} data-tutorial="filterColumn">
                       <label className={styles.fieldLabel}>Filter</label>
                       <div className={styles.selectWrapper}>
                         <div className={styles.filterCell}>
-                          {
-                            filterModes.find((m) => m.value === filterMode)
-                              ?.icon
-                          }
+                          {filterModes.find((m) => m.value === filterMode)?.icon}
                         </div>
                         <select
                           className={styles.nativeSelect}
@@ -572,10 +629,8 @@ const AllMedicalTerminologyContent = () => {
                         </select>
                       </div>
                     </div>
-                    <div
-                      className={styles.categoryColumn}
-                      data-tutorial="categorySelect"
-                    >
+                    {/* CATEGORY */}
+                    <div className={styles.categoryColumn} data-tutorial="categorySelect">
                       <label className={styles.fieldLabel}>Kategorie</label>
                       <div className={styles.selectWrapper}>
                         <div className={styles.categoryCell}>
@@ -601,10 +656,8 @@ const AllMedicalTerminologyContent = () => {
                         </select>
                       </div>
                     </div>
-                    <div
-                      className={styles.gameColumn}
-                      data-tutorial="gameContainer"
-                    >
+                    {/* GAME */}
+                    <div className={styles.gameColumn} data-tutorial="gameContainer">
                       <label className={styles.fieldLabel}>Spiel</label>
                       <div
                         className={styles.selectWrapper}
@@ -616,15 +669,11 @@ const AllMedicalTerminologyContent = () => {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={styles.definitionColumn}
-                      data-tutorial="definitionToggle"
-                    >
+                    {/* DEFINITION TOGGLE */}
+                    <div className={styles.definitionColumn} data-tutorial="definitionToggle">
                       <label className={styles.fieldLabel}>Definition</label>
                       <div
-                        className={`${styles.definitionToggle} ${
-                          showDefinition ? styles.active : ""
-                        }`}
+                        className={`${styles.definitionToggle} ${showDefinition ? styles.active : ""}`}
                         onClick={() => {
                           if (requireAuth()) return;
                           setShowDefinition((prev) => !prev);
@@ -639,6 +688,8 @@ const AllMedicalTerminologyContent = () => {
                 </div>
               </div>
             )}
+
+            {/* Settings Button (bottom right) */}
             <div className={styles.bottomRightSettings}>
               <button
                 className={styles.settingsButton}
@@ -650,8 +701,53 @@ const AllMedicalTerminologyContent = () => {
                 <FaCog />
               </button>
             </div>
+
+            {/* Tutorial Button - displayed ONLY when modal is open */}
+            {isSettingsModalOpen && (
+              <div className={styles.bottomLeftTutorial}>
+                <button
+                  className={styles.tutorialButton}
+                  onClick={() => {
+                    localStorage.removeItem("allMedicalTerminologyTutorialCompleted");
+                    setShowTutorial(true);
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="30"
+                    height="30"
+                    fill="none"
+                    stroke="#ededed"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                    <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+                    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                  </svg>
+                </button>
+              </div>
+            )}
           </div>
-          <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+
+          {/* Auth Modal */}
+          <AuthModal
+            isOpen={showAuthModal}
+            onClose={() => setShowAuthModal(false)}
+          />
+
+          {/* Tutorial (Joyride) */}
+          {showTutorial && (
+            <AllMedicalTerminologyTutorial
+              ref={joyrideRef}
+              run={showTutorial}
+              onFinish={() => setShowTutorial(false)}
+              onModalComplete={handleModalComplete}
+              selectedLanguage={selectedLanguage}
+            />
+          )}
         </>
       )}
     </MainLayout>

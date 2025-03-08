@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:global(.react-joyride__tooltip) {
+  max-width: 400px !important;
+  min-width: 200px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 20px !important;
+  text-align: justify;
+}
+
+:global(.react-joyride__tooltip-container) {
+  max-height: 120px;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  :global(.react-joyride__tooltip-close),
+  :global(button.react-joyride__tooltip-close) {
+    display: none !important;
+  }
+}
+
+:global(.react-joyride__tooltip),
+:global(.react-joyride__tooltip div),
+:global(.react-joyride__tooltip span) {
+  text-align: justify !important;
+}
+
+:global(.react-joyride__tooltip h3) {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+:global(.react-joyride__tooltip p) {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--next) {
+  background-color: #4caf50;
+  color: #fff;
+  border: 25px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+:global(.react-joyride__tooltip-container .react-joyride__button--skip) {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.popupDesktopWide,
+.popupMobile {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden; /* Забороняємо внутрішню прокрутку */
+}

@@ -113,6 +113,7 @@ const Header = () => {
         className={cn(styles.sRegionFull, styles.sRegion)}
         onClick={handleRegionClick}
         style={{ cursor: "pointer" }}
+        data-testid="region-select-full"  // Додано атрибут для вибору регіону (повна назва)
       >
         {titleToShow}
       </span>
@@ -122,6 +123,7 @@ const Header = () => {
         className={cn(styles.sRegionShort, styles.sRegion)}
         onClick={handleRegionClick}
         style={{ cursor: "pointer" }}
+        data-testid="region-select-short"  // Додано атрибут для вибору регіону (абревіатура)
       >
         {isRegistrationPage
           ? translations.registration[selectedLanguage] ||
@@ -138,6 +140,7 @@ const Header = () => {
           className={styles.langSelect}
           value={selectedLanguage}
           onChange={handleChangeLanguage}
+          data-testid="language-select"  // Додано атрибут для вибору мови
         >
           {languages[selectedLanguage].options.map((option) => (
             <option key={option.value} value={option.value}>

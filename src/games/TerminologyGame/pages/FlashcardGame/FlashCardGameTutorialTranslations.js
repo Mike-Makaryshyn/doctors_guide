@@ -216,6 +216,61 @@ const tutorialTranslations = {
       skip: "Passer"
     }
   },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Flashcard Game! În acest joc, cardurile cu termeni medicali vor fi afișate aleatoriu. Fiecare card este prezentat de mai multe ori, iar câmpul 'Ang' indică de câte ori termenul a fost afișat în timpul sesiunii dumneavoastră. Bucurați-vă de joc și exersați-vă terminologia medicală!",
+      regionSelect:
+        "Regiunea este setată pe baza preferințelor dvs.; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățați, neînvățați sau în așteptare (amânate).",
+      categorySelect:
+        "Alegeți categoria termenilor medicali. Implicit, este selectat 'Toate'.",
+      editToggleButton:
+        "Când modul de editare este activ, puteți modifica răspunsul după o greșeală.",
+      displayMode:
+        "Aici puteți alege modul lingvistic – de la latină la germană, de la germană la latină sau un mod mixt.",
+      questionCount:
+        "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următor",
+      skip: "Sari peste"
+    }
+  },
+
+  el: {
+    steps: {
+      intro:
+        "Καλώς ορίσατε στο Flashcard Game! Σε αυτό το παιχνίδι, οι κάρτες με ιατρικούς όρους εμφανίζονται τυχαία. Κάθε κάρτα προβάλλεται επανειλημμένα και το πεδίο 'Ang' δείχνει πόσες φορές έχει εμφανιστεί ο όρος κατά τη διάρκεια της συνεδρίας σας. Απολαύστε το παιχνίδι και εξασκηθείτε στην ιατρική ορολογία!",
+      regionSelect:
+        "Η περιοχή ορίζεται βάσει των προτιμήσεών σας, αλλά μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μαθεμένοι, μη μαθεμένοι ή σε αναμονή (αναβλημένοι).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των ιατρικών όρων. Από προεπιλογή, επιλέγεται το 'Όλα'.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λάθος.",
+      displayMode:
+        "Εδώ μπορείτε να επιλέξετε τη γλωσσική λειτουργία – από τα Λατινικά στα Γερμανικά, από τα Γερμανικά στα Λατινικά ή σε μεικτό τρόπο.",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+      startButton:
+        "Πατήστε Start για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράλειψη"
+    }
+  },
   es: {
     steps: {
       intro:
