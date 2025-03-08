@@ -641,12 +641,12 @@ const FSPFormularPage = () => {
         <>
           {/* Back Button */}
           <button
-            className="main_menu_back"
-            onClick={() => navigate("/main_menu")}
-            aria-label="Zurück"
-          >
-            &#8592;
-          </button>
+  className={styles["main_menu_back"]}
+  onClick={() => navigate("/main_menu")}
+  aria-label="Zurück"
+>
+  &#8592;
+</button>
 
           {/* Settings Button */}
           <button
@@ -799,7 +799,7 @@ const FSPFormularPage = () => {
                 {/* Close Button */}
                 <button
                   className={styles.modalCloseButton}
-                  onClick={() => setSettingsOpen(false)}
+                  onClick={() => setIsSettingsOpen(false)}
                 >
                   ×
                 </button>
