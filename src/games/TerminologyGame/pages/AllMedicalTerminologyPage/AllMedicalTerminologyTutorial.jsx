@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./AllMedicalTerminologyTutorialTranslations";
 
@@ -15,8 +15,9 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
     const translations = tutorialTranslations[language];
 
     // Формуємо масив кроків:
-    // Перші кроки стосуються модального вікна (включно з кроком для закриття модалки)
     const [steps, setSteps] = useState([]);
+    // Стан, щоб один раз закрити модалку
+    const [modalClosed, setModalClosed] = useState(false);
 
     useEffect(() => {
       const stepsData = [
@@ -64,8 +65,6 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
           disableBeacon: true,
           disableScrolling: true,
         },
-        // КРОК ДЛЯ ЗАКРИТТЯ МОДАЛЬНОГО ВІКНА
-   
         // --- КРОКИ ДЛЯ ОСНОВНОЇ СТОРІНКИ ---
         {
           target: '[data-tutorial="searchField"]',
@@ -122,7 +121,16 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
 
     const handleJoyrideCallback = (data) => {
       console.log("Joyride callback:", data);
-      const { status, index, action, lifecycle } = data;
+      const { status, index, action } = data;
+
+      // Якщо ми переходимо до кроків основної сторінки (індекс 6 і більше)
+      // і модальне вікно ще не було закрито, закриваємо його
+      if (index >= 6 && !modalClosed) {
+        if (onModalComplete) {
+          onModalComplete();
+        }
+        setModalClosed(true);
+      }
 
       // Якщо тур завершився або його скіпнули
       if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
