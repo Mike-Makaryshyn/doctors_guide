@@ -113,19 +113,13 @@ const FSPFormularPage = () => {
   // Handle caseId once
   const [isCaseIdHandled, setIsCaseIdHandled] = useState(false);
 
-  // Dropdown for selecting region
-  const [isRegionDropdownOpen, setIsRegionDropdownOpen] = useState(false);
-  const toggleRegionDropdown = () => setIsRegionDropdownOpen(!isRegionDropdownOpen);
-
+  // Видаляємо стару логіку для кастомного вибору регіону; використовуємо native select
   const handleRegionSelect = (regionId) => {
-    // При зміні регіону через налаштування, не оновлювати глобальний стан
     setLocalRegion(regionId, false);
-    setIsRegionDropdownOpen(false);
     setSelectedCase("");
     setParsedData({});
     setFallType("");
 
-    // Якщо sourceType є "firebase", завантажуємо випадки для обраного регіону
     if (sourceType === "firebase") {
       fetchFirebaseCases(regionId);
     }
@@ -141,7 +135,6 @@ const FSPFormularPage = () => {
           if (userDocSnap.exists()) {
             setUserData(userDocSnap.data());
           } else {
-            // Якщо документ користувача ще не створено
             await setDoc(userDocRef, {});
             setUserData({});
           }
@@ -151,7 +144,6 @@ const FSPFormularPage = () => {
           setUserData(null);
         }
       } else {
-        // Неавтентифікований користувач
         setSelectedCase("");
         setParsedData({});
         setFallType("");
@@ -183,11 +175,10 @@ const FSPFormularPage = () => {
     loadFirebaseCases();
   }, [sourceType, localRegion, fetchFirebaseCases]);
 
-  // ---- If user navigated via URL with caseId (and is authenticated), search for this case ----
+  // ---- If user navigated via URL with caseId, search for this case ----
   useEffect(() => {
     const fetchSelectedCase = async () => {
       if (user && routeCaseId && !isCaseIdHandled) {
-        // Пошук regionId, який містить caseId в локальних або Firebase випадках
         const regionId = Object.keys(dataSources).find((region) =>
           dataSources[region]?.files?.some(
             (file) => String(file.id) === String(routeCaseId)
@@ -195,8 +186,7 @@ const FSPFormularPage = () => {
         );
 
         if (regionId) {
-          setLocalRegion(regionId, false); // Не оновлюємо глобальний стан
-          // Ми не встановлюємо selectedCase тут, чекаємо, поки dataSources будуть оновлені
+          setLocalRegion(regionId, false);
         } else {
           setSelectedCase("");
           setIsCaseIdHandled(true);
@@ -248,7 +238,7 @@ const FSPFormularPage = () => {
           console.error("Error saving case:", error);
           toast.error("Failed to save case.");
         }
-      } else if (!selectedCase && localRegion) { // Виправлено з regionKey на localRegion
+      } else if (!selectedCase && localRegion) {
         const userDocRef = doc(db, "users", user.uid);
         try {
           await updateDoc(userDocRef, { [`selectedCase_${localRegion}`]: "" });
@@ -287,8 +277,7 @@ const FSPFormularPage = () => {
   };
 
   /**
-   * handleParseData: Loads or parses a case (depending on dataSourceType).
-   * Avoids duplicate calls if the object hasn't changed.
+   * handleParseData: Loads or parses a case.
    */
   const handleParseData = useCallback(
     async (sourceId, fileId) => {
@@ -306,13 +295,12 @@ const FSPFormularPage = () => {
           data = await parseData(sourceId, "local", null, fileId, dataSources);
         } else if (sourceType === "firebase" && source.sources?.firebase) {
           data = source.sources.firebase.map((firebaseFile) => ({
-            ...firebaseFile, // Залишаємо всі ключі без змін
-            fileDisplayName: firebaseFile.fullName || "Без Імені", // Для відображення у випадаючому списку
+            ...firebaseFile,
+            fileDisplayName: firebaseFile.fullName || "Без Імені",
             specialty: firebaseFile.specialty || "",
             summary: firebaseFile.summary || "",
             examinerQuestions: firebaseFile.examinerQuestions || "",
             patientQuestions: firebaseFile.patientQuestions || "",
-            // Додайте інші необхідні поля
           }));
         } else {
           throw new Error("Invalid data source type");
@@ -323,21 +311,18 @@ const FSPFormularPage = () => {
 
         console.log("Selected Item:", selectedItem);
 
-        // Update parsedData only if the object has actually changed
         setParsedData((prevData) => {
           const prevString = JSON.stringify(prevData);
           const newString = JSON.stringify(selectedItem);
           return prevString !== newString ? selectedItem : prevData;
         });
 
-        // If there's a specialty – save it for FallSpecificData
         if (selectedItem.specialty) {
           setFallType(selectedItem.specialty.toLowerCase());
         } else {
           setFallType("");
         }
 
-        // If there are other fields (summary, examinerQuestions, patientQuestions)
         if (selectedItem.summary) {
           setParsedData((prev) => ({ ...prev, summary: selectedItem.summary }));
         }
@@ -367,11 +352,10 @@ const FSPFormularPage = () => {
     if (localRegion && selectedCase && dataSources[localRegion]) {
       const timeout = setTimeout(() => {
         handleParseData(localRegion, selectedCase);
-      }, 500); // Затримка 500 мс для синхронізації даних
+      }, 500);
       return () => clearTimeout(timeout);
     }
   }, [localRegion, selectedCase, sourceType, dataSources, handleParseData]);
-  // Call handleParseData when localRegion / selectedCase / sourceType changes
   useEffect(() => {
     if (localRegion && selectedCase && dataSources[localRegion]) {
       handleParseData(localRegion, selectedCase);
@@ -415,7 +399,6 @@ const FSPFormularPage = () => {
       infoText = "Information is unavailable.";
     }
 
-    // Add title if needed
     const newInfo = {
       text: infoText,
       type,
@@ -431,7 +414,6 @@ const FSPFormularPage = () => {
     setAdditionalInfo(newInfo);
   };
 
-  // Open the modal as soon as additional text appears
   useEffect(() => {
     if (additionalInfo.text) {
       setInfoModal(true);
@@ -444,6 +426,7 @@ const FSPFormularPage = () => {
       console.log("Дані для вибраного випадку успішно завантажені:", parsedData);
     }
   }, [selectedCase, parsedData]);
+
   // ---- Change case in Select ----
   const handleCaseChange = (option) => {
     setSelectedCase(option.value);
@@ -483,7 +466,6 @@ const FSPFormularPage = () => {
       const isCompleted = userData?.[completedCasesKey]?.includes(String(selectedCase));
 
       if (isCompleted) {
-        // Видалити з completedCases
         await updateDoc(userDocRef, {
           [completedCasesKey]: arrayRemove(String(selectedCase)),
         });
@@ -491,9 +473,8 @@ const FSPFormularPage = () => {
           ...prev,
           [completedCasesKey]: prev[completedCasesKey].filter((id) => id !== String(selectedCase)),
         }));
-        toast.success("Статус виконано видалено.");
+        toast.success("Status 'erledigt' entfernt.");
       } else {
-        // Додати до completedCases і видалити з deferredCases (якщо є)
         await updateDoc(userDocRef, {
           [completedCasesKey]: arrayUnion(String(selectedCase)),
           [deferredCasesKey]: arrayRemove(String(selectedCase)),
@@ -503,7 +484,7 @@ const FSPFormularPage = () => {
           [completedCasesKey]: [...(prev[completedCasesKey] || []), String(selectedCase)],
           [deferredCasesKey]: prev[deferredCasesKey]?.filter((id) => id !== String(selectedCase)),
         }));
-        toast.success("Статус виконано додано.");
+        toast.success("Status 'erledigt' hinzugefügt.");
       }
     } catch (error) {
       console.error("Error marking case as completed:", error);
@@ -528,7 +509,6 @@ const FSPFormularPage = () => {
       const isDeferred = userData?.[deferredCasesKey]?.includes(String(selectedCase));
 
       if (isDeferred) {
-        // Видалити з deferredCases
         await updateDoc(userDocRef, {
           [deferredCasesKey]: arrayRemove(String(selectedCase)),
         });
@@ -536,9 +516,8 @@ const FSPFormularPage = () => {
           ...prev,
           [deferredCasesKey]: prev[deferredCasesKey].filter((id) => id !== String(selectedCase)),
         }));
-        toast.success("Статус відкладено видалено.");
+        toast.success("Status 'verschoben' entfernt.");
       } else {
-        // Додати до deferredCases і видалити з completedCases (якщо є)
         await updateDoc(userDocRef, {
           [deferredCasesKey]: arrayUnion(String(selectedCase)),
           [completedCasesKey]: arrayRemove(String(selectedCase)),
@@ -548,7 +527,7 @@ const FSPFormularPage = () => {
           [deferredCasesKey]: [...(prev[deferredCasesKey] || []), String(selectedCase)],
           [completedCasesKey]: prev[completedCasesKey]?.filter((id) => id !== String(selectedCase)),
         }));
-        toast.success("Статус відкладено додано.");
+        toast.success("Status 'verschoben' hinzugefügt.");
       }
     } catch (error) {
       console.error("Error deferring case:", error);
@@ -610,7 +589,7 @@ const FSPFormularPage = () => {
     console.log("Файли для локального регіону:", dataSources[localRegion].files);
 
     return dataSources[localRegion].files
-      .filter((file) => file.id) // Додано фільтр наявності id
+      .filter((file) => file.id)
       .map(createCaseOption);
   };
 
@@ -692,12 +671,21 @@ const FSPFormularPage = () => {
         </div>
       ) : (
         <>
+          {/* Back Button */}
+          <button
+            className="main_menu_back"
+            onClick={() => navigate("/main_menu")}
+            aria-label="Zurück"
+          >
+            &#8592;
+          </button>
+
           {/* Settings Button */}
           <button
             className={styles["settings-button"]}
             onClick={() => setIsSettingsOpen(!isSettingsOpen)}
             ref={settingsButtonRefSettings}
-            aria-label="Відкрити Налаштування"
+            aria-label="Einstellungen öffnen"
             aria-expanded={isSettingsOpen}
             aria-controls="settings-modal"
           >
@@ -707,18 +695,14 @@ const FSPFormularPage = () => {
           {isSettingsOpen && (
             <div className={styles["settings-modal"]} ref={settingsRefSettings}>
               <div className={styles["settings-content"]}>
-                <h3>Налаштування</h3>
+                <h3>Einstellungen</h3>
 
                 {/* Data Source Toggle */}
                 <div className={styles["field"]}>
-                  <label>Виберіть Джерело Даних:</label>
+                  <label>Datenquelle wählen:</label>
                   <div className={styles["data-source-toggle"]}>
-                    <span
-                      className={`${styles["label-left"]} ${
-                        sourceType === "local" ? styles["label-active"] : ""
-                      }`}
-                    >
-                      Локально
+                    <span className={`${styles["label-left"]} ${sourceType === "local" ? styles["label-active"] : ""}`}>
+                      Lokal
                     </span>
                     <label className={styles["switch"]}>
                       <input
@@ -727,91 +711,74 @@ const FSPFormularPage = () => {
                         onChange={() =>
                           setSourceType((prev) => (prev === "local" ? "firebase" : "local"))
                         }
-                        aria-label="Перемикач для вибору джерела даних"
+                        aria-label="Umschalter für Datenquelle"
                       />
                       <span className={styles["slider"]}></span>
                     </label>
-                    <span
-                      className={`${styles["label-right"]} ${
-                        sourceType === "firebase" ? styles["label-active"] : ""
-                      }`}
-                    >
+                    <span className={`${styles["label-right"]} ${sourceType === "firebase" ? styles["label-active"] : ""}`}>
                       Firebase
                     </span>
                   </div>
                 </div>
 
-                {/* Region Selector */}
+                {/* Region Selector (Native Select) */}
                 <div className={styles["field"]}>
-                  <label>Виберіть Регіон:</label>
+                  <label>Region wählen:</label>
                   <div className={styles["region-selector"]}>
-                    <button
-                      className={styles["region-button"]}
-                      onClick={toggleRegionDropdown}
-                      aria-haspopup="true"
-                      aria-expanded={isRegionDropdownOpen}
+                    <select
+                      className={styles["nativeSelect"]}
+                      value={localRegion}
+                      onChange={(e) => handleRegionSelect(e.target.value)}
                     >
-                      {localRegion
-                        ? dataSources[localRegion]?.name || "Виберіть Регіон"
-                        : "Виберіть Регіон"}
-                    </button>
-                    {isRegionDropdownOpen && (
-                      <ul className={styles["region-dropdown"]}>
-                        {Object.keys(dataSources)
-                          .filter((r) => dataSources[r].type === "dynamic")
-                          .map((r) => (
-                            <li key={r}>
-                              <button
-                                className={styles["region-option"]}
-                                onClick={() => handleRegionSelect(r)}
-                              >
-                                {dataSources[r].name}
-                              </button>
-                            </li>
-                          ))}
-                      </ul>
-                    )}
+                      {Object.keys(dataSources)
+                        .filter((r) => dataSources[r].type === "dynamic")
+                        .map((r) => (
+                          <option key={r} value={r}>
+                            {dataSources[r].name}
+                          </option>
+                        ))}
+                    </select>
                   </div>
                 </div>
 
                 {/* Case Selector */}
                 <div className={styles["field"]}>
-                  <label htmlFor="case-select">Виберіть Випадок:</label>
+                  <label htmlFor="case-select">Fall wählen:</label>
                   <select
                     id="case-select"
                     className={styles["case-select"]}
                     onChange={(e) => setSelectedCase(e.target.value)}
                     value={selectedCase || ""}
                   >
-                    <option value="">-- Виберіть Випадок --</option>
+                    <option value="">-- Fall wählen --</option>
                     {sourceType === "local" &&
                       dataSources[localRegion]?.sources?.local.map((file) => (
                         <option key={file.id} value={file.id}>
-                          {file.fileDisplayName || file.name || "Без Імені"}
+                          {file.fileDisplayName || file.name || "Ohne Namen"}
                         </option>
                       ))}
                     {sourceType === "firebase" &&
                       dataSources[localRegion]?.sources?.firebase.map((file) => (
                         <option key={file.id} value={file.id}>
-                          {file.fileDisplayName || file.name || "Без Імені"}
+                          {file.fileDisplayName || file.name || "Ohne Namen"}
                         </option>
                       ))}
                   </select>
                 </div>
 
-                {/* Buttons: Add, Complete, Defer, Reset */}
+                {/* Action Buttons */}
                 <div className={styles["buttons-container"]}>
                   <Link to="/data-collection">
                     <button
-                      className={styles["add-case-button"]}
-                      aria-label="Додати Новий Випадок"
+                      className={styles["actionButton"]}
+                      aria-label="Neuen Fall hinzufügen"
                     >
                       ➕
                     </button>
                   </Link>
 
                   <button
-                    className={`${styles["mark-completed-button"]} ${
+                    className={`${styles["actionButton"]} ${
                       userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
                         ? styles["active"]
                         : ""
@@ -819,13 +786,13 @@ const FSPFormularPage = () => {
                     onClick={handleMarkAsCompleted}
                     disabled={!selectedCase}
                     aria-pressed={userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))}
-                    aria-label="Позначити Випадок як Завершений"
+                    aria-label="Fall als erledigt markieren"
                   >
                     ✓
                   </button>
 
                   <button
-                    className={`${styles["defer-case-button"]} ${
+                    className={`${styles["actionButton"]} ${
                       userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
                         ? styles["active"]
                         : ""
@@ -833,16 +800,16 @@ const FSPFormularPage = () => {
                     onClick={handleDeferCase}
                     disabled={!selectedCase}
                     aria-pressed={userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))}
-                    aria-label="Відкласти Випадок на Пізніше"
+                    aria-label="Fall verschieben"
                   >
                     ⏸
                   </button>
 
                   <button
-                    className={styles["reset-button"]}
+                    className={styles["actionButton"]}
                     onClick={handleReset}
                     disabled={!selectedCase}
-                    aria-label="Скинути Вибір Випадку"
+                    aria-label="Fall zurücksetzen"
                   >
                     ⟳
                   </button>
@@ -852,7 +819,7 @@ const FSPFormularPage = () => {
                 <button
                   className={styles["close-button"]}
                   onClick={() => setIsSettingsOpen(false)}
-                  aria-label="Закрити Налаштування"
+                  aria-label="Einstellungen schließen"
                 >
                   ✕
                 </button>
@@ -862,7 +829,7 @@ const FSPFormularPage = () => {
 
           {/* Main Content */}
           <div className={styles["fsp-container"]}>
-            {isLoading && <p className={styles["loading-message"]}>Завантаження даних...</p>}
+            {isLoading && <p className={styles["loading-message"]}>Daten werden geladen...</p>}
             {errorState && <p className={styles["error-message"]}>{errorState}</p>}
 
             {!isLoading && !errorState && (
@@ -874,53 +841,35 @@ const FSPFormularPage = () => {
               >
                 {/* Column 1 */}
                 <div className={styles["column"]}>
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("personalData")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("personalData")}>
                     <h3 className={styles["tile-title"]}>Persönliche Daten</h3>
                     <PersonalData parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("currentAnamnese")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("currentAnamnese")}>
                     <h3 className={styles["tile-title"]}>Aktuelle Anamnese</h3>
                     <AktuelleAnamnese parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("reiseImpfstatus")}
-                  >
-                    <h3 className={styles["tile-title"]}>Reise- та Impfstatus</h3>
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("reiseImpfstatus")}>
+                    <h3 className={styles["tile-title"]}>Reise- und Impfstatus</h3>
                     <ReiseImpfstatus parsedData={parsedData} />
                   </div>
                 </div>
 
                 {/* Column 2 */}
                 <div className={styles["column"]}>
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("vegetativeAnamnese")}>
                     <h3 className={styles["tile-title"]}>Vegetative Anamnese</h3>
                     <VegetativeAnamnese parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("zusammenfassung")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("zusammenfassung")}>
                     <h3 className={styles["tile-title"]}></h3>
                     <Zusammenfassung parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("vorerkrankungen")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("vorerkrankungen")}>
                     <h3 className={styles["tile-title"]}>Vorerkrankungen</h3>
                     <Vorerkrankungen parsedData={parsedData} />
                   </div>
@@ -928,42 +877,27 @@ const FSPFormularPage = () => {
 
                 {/* Column 3 */}
                 <div className={styles["column"]}>
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("previousOperations")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("previousOperations")}>
                     <h3 className={styles["tile-title"]}>Frühere Operationen</h3>
                     <PreviousOperations parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("medications")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("medications")}>
                     <h3 className={styles["tile-title"]}>Medikamente</h3>
                     <Medications parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("allergiesAndIntolerances")}>
                     <h3 className={styles["tile-title"]}>Unverträglichkeiten</h3>
                     <AllergiesAndIntolerances parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("noxen")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("noxen")}>
                     <h3 className={styles["tile-title"]}>Noxen</h3>
                     <Noxen parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("familienanamnese")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("familienanamnese")}>
                     <h3 className={styles["tile-title"]}>Familiäre Erkrankungen</h3>
                     <Familienanamnese parsedData={parsedData} />
                   </div>
@@ -971,34 +905,22 @@ const FSPFormularPage = () => {
 
                 {/* Column 4 */}
                 <div className={styles["column"]}>
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("sozialanamnese")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("sozialanamnese")}>
                     <h3 className={styles["tile-title"]}>Soziale Anamnese</h3>
                     <Sozialanamnese parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("differentialDiagnosis")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("differentialDiagnosis")}>
                     <h3 className={styles["tile-title"]}>Differentialdiagnose</h3>
                     <DifferentialDiagnosis parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("preliminaryDiagnosis")}>
                     <h3 className={styles["tile-title"]}>Diagnose</h3>
                     <PreliminaryDiagnosis parsedData={parsedData} />
                   </div>
 
-                  <div
-                    className={styles["tile"]}
-                    onClick={() => handleOpenInfoModal("proposedProcedures")}
-                  >
+                  <div className={styles["tile"]} onClick={() => handleOpenInfoModal("proposedProcedures")}>
                     <h3 className={styles["tile-title"]}>Untersuchungen</h3>
                     <ProposedProcedures parsedData={parsedData} />
                   </div>
@@ -1040,7 +962,7 @@ const FSPFormularPage = () => {
           <UserCasesModal
             isOpen={userCasesModal}
             onClose={() => setUserCasesModal(false)}
-            title="Випадки Користувача"
+            title="Benutzerfälle"
             userCases={userCasesData}
           />
 
