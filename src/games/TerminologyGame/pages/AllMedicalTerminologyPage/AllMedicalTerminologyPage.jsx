@@ -739,7 +739,7 @@ const AllMedicalTerminologyContent = () => {
                   position: "fixed",
                   top: "65px",
                   left: "5px",
-                  zIndex: 99999,
+                  zIndex: 9999,
                   width: "35px",
                   height: "35px",
                   padding: "5px",
