@@ -83,10 +83,10 @@ const AllMedicalTerminologyContent = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Tutorial: whether to show it (true/false)
-  const [showTutorial, setShowTutorial] = useState(
-    localStorage.getItem("allMedicalTerminologyTutorialCompleted") !== "true"
-  );
+  // Tutorial: тепер початкове значення false, щоб туторіал не запускався автоматично
+  const [showTutorial, setShowTutorial] = useState(false);
+  // Стан для керування ключем туторіалу (примусовий перезапуск)
+  const [tutorialKey, setTutorialKey] = useState(0);
 
   // =========================
   // REFS
@@ -99,21 +99,25 @@ const AllMedicalTerminologyContent = () => {
   // EFFECTS
   // =========================
 
-  // 1) If the tutorial hasn't been completed, open the modal
+  // 1) Якщо туторіал ще не пройдено, відкриваємо модальне вікно,
+  // але лише якщо воно ще не відкрито
   useEffect(() => {
-    if (showTutorial) {
+    if (showTutorial && !isSettingsModalOpen) {
       setIsSettingsModalOpen(true);
     }
-  }, [showTutorial]);
+  }, [showTutorial, isSettingsModalOpen]);
 
-  // 2) Close modal on clicking outside (if tutorial is not active)
+  // 2) Закриваємо модальне вікно при кліку поза ним (якщо туторіал не активний)
   useEffect(() => {
     function handleClickOutside(event) {
+      // Якщо клік відбувся по кнопці туторіалу, не закривати модалку
+      if (event.target.closest(".tutorialButton")) return;
       if (showTutorial) return;
       if (
         settingsModalRef.current &&
         !settingsModalRef.current.contains(event.target)
       ) {
+        console.log("Click outside modal detected, closing modal");
         setIsSettingsModalOpen(false);
       }
     }
@@ -125,7 +129,7 @@ const AllMedicalTerminologyContent = () => {
     };
   }, [isSettingsModalOpen, showTutorial]);
 
-  // 3) Initialize region & language
+  // 3) Ініціалізація регіону та мови
   useEffect(() => {
     setRegion(selectedRegion || "Alle");
   }, [selectedRegion]);
@@ -134,14 +138,14 @@ const AllMedicalTerminologyContent = () => {
     setTranslationLanguage(selectedLanguage || "de");
   }, [selectedLanguage]);
 
-  // 4) Listen for resize events
+  // 4) Слухач подій зміни розміру вікна
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 5) Close search field when clicking outside
+  // 5) Закриття пошукового поля при кліку поза ним
   useEffect(() => {
     function handleClickOutsidePage(event) {
       if (
@@ -158,7 +162,7 @@ const AllMedicalTerminologyContent = () => {
       document.removeEventListener("mousedown", handleClickOutsidePage);
   }, [isSearchActive]);
 
-  // 6) Disable scroll when modal or tutorial is active
+  // 6) Забороняємо скрол, коли модальне вікно або туторіал активні
   useEffect(() => {
     if (isSettingsModalOpen) {
       document.body.style.overflow = "hidden";
@@ -217,7 +221,7 @@ const AllMedicalTerminologyContent = () => {
   };
 
   /**
-   * When the user clicks 'Close Modal' during the tutorial step, we call this
+   * Викликається при кліку "Close Modal" під час туторіалу
    */
   const handleModalComplete = () => {
     setIsSettingsModalOpen(false);
@@ -248,7 +252,7 @@ const AllMedicalTerminologyContent = () => {
     return matchesSearch && matchesCategory && matchesRegion;
   });
 
-  // Group terms by category
+  // Групування термінів за категоріями
   const termsByCategory = {};
   filteredTerms.forEach((term) => {
     (term.categories || []).forEach((category) => {
@@ -259,7 +263,7 @@ const AllMedicalTerminologyContent = () => {
     });
   });
 
-  // Options for selects
+  // Опції для селектів
   const uniqueRegions = Array.from(new Set(medicalTerms.flatMap((term) => term.regions || [])));
   const regionOptions = ["Alle", ...uniqueRegions];
   const uniqueCategories = Array.from(new Set(medicalTerms.flatMap((term) => term.categories || [])));
@@ -702,32 +706,43 @@ const AllMedicalTerminologyContent = () => {
               </button>
             </div>
 
-            {/* Tutorial Button - displayed ONLY when modal is open */}
+            {/* Tutorial Button - відображається тільки коли модальне вікно відкрито */}
             {isSettingsModalOpen && (
-              <div className={styles.bottomLeftTutorial}>
-                <button
-                  className={styles.tutorialButton}
-                  onClick={() => {
-                    localStorage.removeItem("allMedicalTerminologyTutorialCompleted");
-                    setShowTutorial(true);
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="30"
-                    height="30"
-                    fill="none"
-                    stroke="#ededed"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-                    <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
-                    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-                  </svg>
-                </button>
+              <div
+                className="tutorialButton"
+                style={{
+                  position: "fixed",
+                  top: "65px",
+                  left: "5px",
+                  zIndex: 99999,
+                 
+                  padding: "10px",
+                  cursor: "pointer"
+                }}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  console.log("Tutorial button clicked!");
+                  localStorage.removeItem("allMedicalTerminologyTutorialCompleted");
+                  setTutorialKey((prev) => prev + 1);
+                  setShowTutorial(true);
+                  setIsSettingsModalOpen(true);
+                }}
+              >
+              <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width="30"
+  height="30"
+  fill="none"
+  stroke="#ededed"
+  strokeWidth="2.5"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+>
+  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+  <line x1="12" y1="12" x2="12" y2="15.5" strokeWidth="3" />
+  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+</svg>
               </div>
             )}
           </div>
@@ -739,15 +754,20 @@ const AllMedicalTerminologyContent = () => {
           />
 
           {/* Tutorial (Joyride) */}
-          {showTutorial && (
-            <AllMedicalTerminologyTutorial
-              ref={joyrideRef}
-              run={showTutorial}
-              onFinish={() => setShowTutorial(false)}
-              onModalComplete={handleModalComplete}
-              selectedLanguage={selectedLanguage}
-            />
-          )}
+{/* Tutorial (Joyride) */}
+{showTutorial && (
+  <AllMedicalTerminologyTutorial
+    key={tutorialKey}
+    ref={joyrideRef}
+    run={showTutorial}
+    onFinish={() => {
+      setShowTutorial(false);
+      setIsSettingsModalOpen(false); // Закриваємо модальне вікно після завершення туторіалу
+    }}
+    onModalComplete={handleModalComplete}
+    selectedLanguage={selectedLanguage}
+  />
+)}
         </>
       )}
     </MainLayout>

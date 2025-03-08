@@ -6,7 +6,7 @@ import tutorialTranslations from "./AllMedicalTerminologyTutorialTranslations";
  * Пропи:
  *  - run: boolean (чи запущений туторіал)
  *  - onFinish: callback (коли туторіал завершено або скіпнуто)
- *  - onModalComplete: callback (викликається на кроці "Закрити модалку") — якщо треба
+ *  - onModalComplete: callback (викликається, щоб закрити модальне вікно)
  *  - selectedLanguage: "de" | "ua" | тощо (визначає, якою мовою показувати тексти)
  */
 const AllMedicalTerminologyTutorial = React.forwardRef(
@@ -14,7 +14,8 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
     const language = selectedLanguage || "de";
     const translations = tutorialTranslations[language];
 
-    // Усі кроки (модалка + основна сторінка) в одному масиві
+    // Формуємо масив кроків:
+    // Перші кроки стосуються модального вікна (включно з кроком для закриття модалки)
     const [steps, setSteps] = useState([]);
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
           content: <span>{translations.steps.intro}</span>,
           placement: "center",
           disableBeacon: true,
-          disableScrolling: true, // Не скролимо на цьому кроці
+          disableScrolling: true,
         },
         // --- КРОКИ ДЛЯ МОДАЛЬНОГО ВІКНА ---
         {
@@ -63,21 +64,15 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
           disableBeacon: true,
           disableScrolling: true,
         },
-        // Якщо НЕ потрібно позначати кнопку "Закрити модалку", видаляємо цей крок
-        // {
-        //   target: '[data-tutorial="closeModal"]',
-        //   content: <span>{translations.steps.closeModal}</span>,
-        //   placement: "top",
-        //   disableBeacon: true,
-        //   disableScrolling: true,
-        // },
+        // КРОК ДЛЯ ЗАКРИТТЯ МОДАЛЬНОГО ВІКНА
+   
         // --- КРОКИ ДЛЯ ОСНОВНОЇ СТОРІНКИ ---
         {
           target: '[data-tutorial="searchField"]',
           content: <span>{translations.steps.searchField}</span>,
           placement: "bottom",
           disableBeacon: true,
-          disableScrolling: false, // Дозволяємо скрол
+          disableScrolling: false,
         },
         {
           target: '[data-tutorial="categoryHeader"]',
@@ -100,7 +95,6 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
           disableBeacon: true,
           disableScrolling: false,
         },
-        // КРОКИ ДЛЯ ПОЗНАЧЕННЯ ІКОНОК (CHECK / PAUSE)
         {
           target: '[data-tutorial="checkIcon"]',
           content: <span>{translations.steps.checkIcon}</span>,
@@ -127,24 +121,15 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
     }, [translations]);
 
     const handleJoyrideCallback = (data) => {
+      console.log("Joyride callback:", data);
       const { status, index, action, lifecycle } = data;
-
-      // Якщо є крок, де потрібно закрити модалку, можна обробити його тут:
-      // if (index === 5 && action === "next" && lifecycle === "complete") {
-      //   if (onModalComplete) {
-      //     onModalComplete();
-      //   }
-      //   setTimeout(() => {
-      //     joyrideRef.current?.helpers?.update();
-      //   }, 300);
-      // }
 
       // Якщо тур завершився або його скіпнули
       if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
+        console.log("Tutorial finished or skipped:", status);
         if (onFinish) {
           onFinish();
         }
-        localStorage.setItem("allMedicalTerminologyTutorialCompleted", "true");
       }
     };
 
@@ -157,7 +142,7 @@ const AllMedicalTerminologyTutorial = React.forwardRef(
         scrollToFirstStep={true}
         scrollToSteps={true}
         disableScrollParentFix={false}
-        scrollOffset={120} // Збільшений відступ для кроків на основній сторінці
+        scrollOffset={120}
         scrollIntoViewOptions={{
           behavior: "smooth",
           block: "center",
