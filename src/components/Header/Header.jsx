@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import {
   languageFlags,
   languages,
@@ -11,13 +10,17 @@ import styles from "./styles.module.scss";
 import cn from "classnames";
 import Avatar from "../../components/Avatar/Avatar";
 
-/** Скорочення для регіонів (приклад) */
+/** 
+ * Einziger Objekt mit Abkürzungen:
+ * Nun mit einzelnen BW-Subregions für Kurz-Notation
+ */
 const shortRegions = {
   "Baden-Württemberg": "BW",
   "Baden-Württemberg-Freiburg": "BW-FR",
   "Baden-Württemberg-Karlsruhe": "BW-KA",
   "Baden-Württemberg-Stuttgart": "BW-ST",
   "Baden-Württemberg-Reutlingen": "BW-RE",
+
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
   Bayern: "BY",
@@ -36,60 +39,27 @@ const shortRegions = {
   "Sachsen-Anhalt": "ST",
 };
 
-/**
- * Короткі позначення мов для мобільного списку.
- * Вони використовуються для відображення вибраної мови.
- */
-const shortLangLabels = {
-  de: "DE",
-  en: "EN",
-  uk: "UA",
-  ru: "RU",
-  tr: "TR",
-  ar: "AR",
-  fr: "FR",
-  es: "ES",
-  pl: "PL",
-  el: "EL",
-  ro: "RO",
-};
-
 const Header = () => {
-  // Визначаємо, чи це мобільний екран (ширина < 768)
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Отримуємо вибрану мову з localStorage (або DEFAULT_LANGUAGE)
   const selectedLanguage = localStorageGet("selectedLanguage", DEFAULT_LANGUAGE);
-
-  // Дані про регіон, навігація тощо
   const { selectedRegion } = useGetGlobalInfo();
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Зміна мови: зберігаємо в localStorage і перезавантажуємо сторінку
   const handleChangeLanguage = (event) => {
     const newLanguage = event.target.value;
     localStorageSet("selectedLanguage", newLanguage);
-    window.location.reload();
+    window.location.reload(); 
   };
 
-  // Клік по регіону: перехід на карту
+  // Klick auf den Regionsnamen => zur Karte navigieren
   const handleRegionClick = () => {
     navigate("/custom-map");
   };
 
-  // Перевірка, чи це сторінка реєстрації
+  // Prüfung: Registrierungsseite?
   const isRegistrationPage = location?.pathname === "/auth/registration";
 
-  // Приклади перекладів
+  // Dynamische Übersetzungen
   const translations = {
     registration: {
       en: "Registration",
@@ -115,12 +85,16 @@ const Header = () => {
     },
   };
 
-  // Формуємо назву регіону
+  // Abkürzung oder Originalregion
   const regionAbbrev = shortRegions[selectedRegion] || selectedRegion;
+
+  // Ganze Region oder "Authorization required"
   const regionFullOrAuth =
     selectedRegion ||
     translations.authRequired[selectedLanguage] ||
     translations.authRequired.en;
+
+  // Anzeige je nach Seite
   const titleToShow = isRegistrationPage
     ? translations.registration[selectedLanguage] || translations.registration.en
     : regionFullOrAuth;
@@ -134,20 +108,22 @@ const Header = () => {
         Germanmove
       </h2>
 
-      {/* На десктопі: повна назва регіону або "Registration"/"Authorization required" */}
+      {/* Desktop: voller Regionsname oder "Registration"/"Authorization required" */}
       <span
         className={cn(styles.sRegionFull, styles.sRegion)}
         onClick={handleRegionClick}
         style={{ cursor: "pointer" }}
+        data-testid="region-select-full"  // Додано атрибут для вибору регіону (повна назва)
       >
         {titleToShow}
       </span>
 
-      {/* На мобільних: скорочена назва регіону */}
+      {/* Mobile: nur Abkürzung */}
       <span
         className={cn(styles.sRegionShort, styles.sRegion)}
         onClick={handleRegionClick}
         style={{ cursor: "pointer" }}
+        data-testid="region-select-short"  // Додано атрибут для вибору регіону (абревіатура)
       >
         {isRegistrationPage
           ? translations.registration[selectedLanguage] ||
@@ -156,33 +132,24 @@ const Header = () => {
       </span>
 
       <div className="flexBt">
+        <span className={styles.languageLabel}>
+          {languages[selectedLanguage].language}
+        </span>
+
         <select
           className={styles.langSelect}
           value={selectedLanguage}
           onChange={handleChangeLanguage}
-          data-testid="language-select"
+          data-testid="language-select"  // Додано атрибут для вибору мови
         >
-          {languages[selectedLanguage].options.map((option) => {
-            const isSelected = option.value === selectedLanguage;
-            if (isMobile) {
-              return (
-                <option key={option.value} value={option.value}>
-                  {isSelected
-                    ? // Для вибраної мови на мобільних: прапорець + скорочене позначення
-                      `${languageFlags[option.value]} ${shortLangLabels[option.value] || option.label}`
-                    : // Для невибраних: прапорець + повна назва
-                      `${languageFlags[option.value]} ${option.label}`}
-                </option>
-              );
-            } else {
-              // На десктопі завжди: прапорець + повна назва
-              return (
-                <option key={option.value} value={option.value}>
-                  {languageFlags[option.value]} {option.label}
-                </option>
-              );
-            }
-          })}
+          {languages[selectedLanguage].options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {/* Zeige immer Flagge */}
+              {languageFlags[option.value]}
+              {/* Der Sprachname kommt in eine .optionLabel => Mobile: hidden */}
+              <span className="optionLabel"> {option.label}</span>
+            </option>
+          ))}
         </select>
 
         <a href="/dashboard" style={{ textDecoration: "none" }}>
