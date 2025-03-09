@@ -152,15 +152,17 @@
   100% { transform: scale(1); }
 }
 .mapIcon {
-    position: absolute;
-    /* Розміщуємо іконку по центру контейнера */
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #013b6e;
-    cursor: pointer;
-    animation: pulseIcon 2s infinite ease-in-out;
-  }
+  position: absolute;
+  /* Die Mitte von oben/unten */
+  top: 50%;
+  /* Die Mitte von links/rechts */
+  left: 50%;
+  /* Icon um die Hälfte seiner Größe verschieben, damit es wirklich zentriert ist */
+  transform: translate(-50%, -50%);
+  color: #013b6e;
+  cursor: pointer;
+  animation: pulseIcon 2s infinite ease-in-out;
+}
 
 /* Прозорий select поверх іконки */
 /* Прозорий select поверх іконки */
@@ -547,4 +549,26 @@
                   inset -3px -3px 6px rgba(65, 191, 171, 0.2);
       cursor: default; /* Щоб не показувати "палець" */
     }
+  }
+  .tutorialButton {
+    position: fixed;
+    top: 60px;
+    right: -9px;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+    z-index: 3000;
+  }
+  
+  .tutorialButton:hover {
+    transform: scale(1.1);
+    background: rgba(76, 175, 79, 0); /* наприклад, зелений напівпрозорий фон */
   }
