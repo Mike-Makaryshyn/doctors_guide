@@ -78,7 +78,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="userAddressCard"]',
           content: <span>{translations.steps.userAddressCard}</span>,
-          placement: "right", // Зверніть увагу: тут "center", а не "сenter"
+          placement: "right",
           disableBeacon: true,
         },
         {
@@ -176,17 +176,15 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
           wordWrap: "break-word",
         },
         tooltip: {
-          maxWidth: "auto",
+          maxWidth: isMobile ? "90vw" : "auto",
+          position: isMobile ? "fixed" : "absolute",
+          top: isMobile ? "50%" : undefined,
           left: "50% !important",
-          transform: "translateX(-50%) !important",
+          transform: isMobile
+            ? "translate(-50%, -50%) !important"
+            : "translateX(-50%) !important",
           margin: "0 auto",
           overflowWrap: "break-word",
-          // Можна додатково відкоригувати під ще менші розміри
-          "@media (max-width: 600px)": {
-            maxWidth: "90%",
-            left: "50% !important",
-            transform: "translateX(-50%) !important",
-          },
         },
       }}
       locale={{
