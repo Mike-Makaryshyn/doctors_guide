@@ -105,6 +105,11 @@ const ApprobationPage = () => {
     return () => window.removeEventListener("startTutorial", handleStartTutorial);
   }, []);
 
+  const handleBack = () => {
+    // Navigate to Main Menu. Adjust the URL as necessary
+    window.location.href = '/';
+  };
+
   return (
     <MainLayout>
       <div className={styles.container}>
@@ -180,6 +185,14 @@ const ApprobationPage = () => {
           <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
           <circle cx="12" cy="7" r="0.5" fill="#ededed" />
         </svg>
+      </button>
+
+      {/* Main Menu Back Button */}
+      <button
+        className={styles.main_menu_back}
+        onClick={handleBack}
+      >
+        &#8592;
       </button>
 
       {/* Підключення компоненту туторіалу */}

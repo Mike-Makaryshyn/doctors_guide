@@ -122,3 +122,19 @@
     height: 45px;
   }
 }
+.main_menu_back {
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+  z-index: 2000;
+}
+
+.main_menu_back:active {
+  transform: scale(0.95);
+}
