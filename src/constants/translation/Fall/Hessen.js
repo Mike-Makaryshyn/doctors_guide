@@ -2,6 +2,7 @@ const HESSEN_DATA = [
   {
     id: 7,
     fullName: "V.a. Divertikulitis",
+    specialty: "harnweginfekt",
     name: "Frederik",
     surname: "zu Äusigler",
     birthdate: "30.05.1958",
@@ -121,9 +122,11 @@ const HESSEN_DATA = [
 
   {
     id: 30, // Einzigartige Identifikationsnummer
-
+    
+  
     fullName: "V.a. Bronchialkarzinom",
     name: "Maria",
+    specialty: "bronchialkarzinom",
     surname: "Kaiser",
     birthdate: "23.09.1968",
     age: "54",
@@ -239,6 +242,7 @@ const HESSEN_DATA = [
 
     fullName: "V.a. Hirntumor",
     name: "Uta",
+    specialty: "coloncarcinome",
     surname: "Kästner",
     birthdate: "Unbekannt",
     age: "56",

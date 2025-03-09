@@ -62,7 +62,7 @@
     animation: slideIn 0.3s ease;
 
     /* Сховання смуги прокрутки */
-    scrollbar-width: none; /* Firefox */
+ 
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     
     /* Сховання смуги прокрутки для Webkit-браузерів (Chrome, Safari, Opera) */
@@ -97,7 +97,7 @@
 .modal-body {
     overflow-y: auto; /* Дозволяє прокручування */
     /* Сховання смуги прокрутки */
-    scrollbar-width: none; /* Firefox */
+
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     
     /* Сховання смуги прокрутки для Webkit-браузерів (Chrome, Safari, Opera) */
