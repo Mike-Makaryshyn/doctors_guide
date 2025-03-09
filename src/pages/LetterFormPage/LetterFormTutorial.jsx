@@ -78,7 +78,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="userAddressCard"]',
           content: <span>{translations.steps.userAddressCard}</span>,
-          placement: "right",
+          placement: "right", // Зверніть увагу: тут "center", а не "сenter"
           disableBeacon: true,
         },
         {
@@ -149,7 +149,6 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
       localStorage.setItem("letterFormTutorialCompleted", "true");
     }
   };
-
   return (
     <Joyride
       ref={joyrideRef}
@@ -157,7 +156,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
       run={run}
       continuous={true}
       scrollToFirstStep={true}
-      scrollOffset={100}
+      scrollOffset={200}
       showSkipButton={true}
       showCloseButton={false}
       callback={handleJoyrideCallback}
@@ -165,26 +164,9 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         options: {
           zIndex: 10000,
           primaryColor: "#023c6f",
-          spotlightPadding: 10,
         },
         buttonClose: {
           display: "none",
-        },
-        tooltipContainer: {
-          textAlign: "center",
-          whiteSpace: "normal",
-          wordWrap: "break-word",
-        },
-        tooltip: {
-          maxWidth: isMobile ? "90vw" : "auto",
-          position: isMobile ? "fixed" : "absolute",
-          top: isMobile ? "50%" : undefined,
-          left: "50% !important",
-          transform: isMobile
-            ? "translate(-50%, -50%) !important"
-            : "translateX(-50%) !important",
-          margin: "0 auto",
-          overflowWrap: "break-word",
         },
       }}
       locale={{
