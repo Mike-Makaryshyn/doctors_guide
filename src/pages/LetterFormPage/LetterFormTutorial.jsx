@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./LetterFormTutorialTranslations";
 import useGetGlobalInfo from "../../../src/hooks/useGetGlobalInfo";
-import styles from "./LetterFormTutorial.module.scss";
 
 const LetterFormTutorial = ({ run, onFinish, openModal }) => {
   const { selectedLanguage } = useGetGlobalInfo();
@@ -51,7 +50,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="settingsButton"]',
           content: <span>{translations.steps.settingsButton}</span>,
-          placement: "left",
+          placement: "top",
           disableBeacon: true,
         },
         {
@@ -183,7 +182,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
     },
     tooltip: {
       maxWidth: isMobile ? 300 : 350,
-      width: "90%",
+      width: "140%",
       boxSizing: "border-box",
       // На мобільних пристроях центровано підказку
       left: isMobile ? "50%" : undefined,
