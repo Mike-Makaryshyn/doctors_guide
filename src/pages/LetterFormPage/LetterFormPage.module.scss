@@ -505,3 +505,46 @@
   .main_menu_back:active {
     transform: scale(0.95);
   }
+  .subregionToggle {
+    display: flex;
+    justify-content: center; /* Кнопки по центру */
+    gap: 1rem;               /* Відстань між кнопками */
+    margin-top: 1rem;
+  }
+  
+  /* Звичайна кнопка (неактивна) */
+  .subregionButton {
+    /* Щоб виглядало, як інші «неуморфні» елементи */
+    background: #ffffff;
+    box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.2),
+                -6px -6px 12px rgba(65, 191, 171, 0.2);
+    border: none;             /* Прибираємо рамку */
+    border-radius: 12px;      /* Аналогічне заокруглення, як в inputField */
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #013b6e;           /* Той самий колір тексту, що й в полях */
+    transition: none;         /* Вимикаємо анімації hover */
+    
+    &:hover {
+      background-color: #ffffff; /* Без зміни кольору */
+    }
+  }
+  
+  /* Активна кнопка (коли підрегіон обраний) */
+  .subregionButtonActive {
+    @extend .subregionButton;
+    background-color: #013b6e;
+    color: #fff;
+    box-shadow: inset 3px 3px 6px rgba(19, 57, 51, 0.2),
+                inset -3px -3px 6px rgba(65, 191, 171, 0.2);
+  
+    /* Додаємо правило, яке "глушить" hover */
+    &:hover {
+      background-color: #013b6e;
+      color: #fff;
+      box-shadow: inset 3px 3px 6px rgba(19, 57, 51, 0.2),
+                  inset -3px -3px 6px rgba(65, 191, 171, 0.2);
+      cursor: default; /* Щоб не показувати "палець" */
+    }
+  }

@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db, auth } from "../../firebase";
+import { db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import LetterGenerator from "./LetterGenerator.jsx";
 import { previewLetterPDF, downloadLetterPDF } from "./LetterPDFGenerator.jsx";
-import { FaEye, FaDownload } from "react-icons/fa";
 import {
   documentsEU,
   documentsNonEU,
@@ -15,32 +13,19 @@ import approbationAddresses from "../../constants/translation/approbationAddress
 
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
-
-// Icons (react-icons)
-import { FaMapMarkedAlt, FaFileAlt, FaCog } from "react-icons/fa";
-
-// React Router (für SPA-Links)
-import { Link } from "react-router-dom";
-
-// Für das Authentifizierungsmodal
 import AuthModal from "../../pages/AuthPage/AuthModal";
-
-// Für das PDF-Modal
 import Modal from "react-modal";
-Modal.setAppElement("#root");
-
 import { Helmet } from "react-helmet";
-import documentImage from "../../assets/documentImage.jpg"; // ersetze durch den korrekten Dateinamen
-
+import { FaMapMarkedAlt, FaFileAlt, FaCog, FaEye, FaDownload } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import documentImage from "../../assets/documentImage.jpg";
 import styles from "./LetterFormPage.module.scss";
 
-// Funktion zur Vereinheitlichung des Regionsnamens
-// Funktion zur Vereinheitlichung des Regionsnamens
-const unifyRegion = (r) => {
-  // 1) Westfalen-Lippe => NRW
-  if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
+Modal.setAppElement("#root");
 
-  // 2) Baden-Württemberg-Freiburg usw. => "Baden-Württemberg"
+// Функція для уніфікації назв деяких регіонів
+const unifyRegion = (r) => {
+  if (r === "Westfalen-Lippe") return "Nordrhein-Westfalen";
   if (
     r === "Baden-Württemberg-Freiburg" ||
     r === "Baden-Württemberg-Karlsruhe" ||
@@ -49,8 +34,6 @@ const unifyRegion = (r) => {
   ) {
     return "Baden-Württemberg";
   }
-
-  // 3) Alles andere unverändert
   return r;
 };
 
@@ -58,23 +41,27 @@ const LetterFormPage = () => {
   const { user, selectedRegion } = useGetGlobalInfo();
   const navigate = useNavigate();
 
-  // Zustand für das Authentifizierungsmodal
+  // Стан для підрегіону Баварії
+  // Якщо користувач обрав Bayern у дропдауні, але ще не натиснув жодну кнопку,
+  // то bavariaSubregion залишається порожнім ("").
+  const [bavariaSubregion, setBavariaSubregion] = useState("");
+
+  // Стан для модалки авторизації
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Authentifizierungsprüfung
-  const requireAuth = () => {
-    if (!user) {
-      setShowAuthModal(true);
-      return true;
-    }
-    return false;
-  };
-
+  // Стан для чекбоксів (дані про документи)
   const [checkboxes, setCheckboxes] = useState({});
+
+  // Категорія (EU / Non-EU)
   const [category, setCategory] = useState(null);
+
+  // Текст листа
   const [letterText, setLetterText] = useState("");
 
+  // Основний стейт для регіону
   const [region, setRegion] = useState(unifyRegion(selectedRegion || "Bayern"));
+
+  // Персональні дані
   const [personalData, setPersonalData] = useState({
     name: "",
     strasse: "",
@@ -83,31 +70,49 @@ const LetterFormPage = () => {
     telefon: "",
     aktenzeichenEnabled: false,
     aktenzeichen: "",
-    // Weitere Felder für ActionSession wurden entfernt
   });
 
-  // Zustand für das Einstellungen-Modal
+  // Стан для модалки налаштувань (PDF тощо)
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
 
-  // Mobile Modus feststellen
+  // Перевірка, чи мобільний розмір екрана
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // Слухач зміни розміру вікна
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Globalen Region-Namen aktualisieren
+  // Коли змінюється глобальний selectedRegion, уніфікуємо його
   useEffect(() => {
     setRegion(unifyRegion(selectedRegion || "Bayern"));
   }, [selectedRegion]);
 
-  // Handler für Änderungen der persönlichen Daten
+  // Якщо користувач обрав у дропдауні щось, що не "Bayern",
+  // скидаємо підрегіон, щоб знову не залишався Oberbayern/Unterfranken.
+  useEffect(() => {
+    if (region !== "Bayern") {
+      setBavariaSubregion("");
+    }
+  }, [region]);
+
+  // Перевірка, чи користувач авторизований
+  const requireAuth = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return true;
+    }
+    return false;
+  };
+
+  // Обробник зміни полів персональних даних
   const handlePersonalDataChange = (field, value) => {
     setPersonalData((prev) => ({ ...prev, [field]: value }));
   };
 
-  // Toggle für Aktenzeichen
+  // Вмикання / вимикання поля "Aktenzeichen"
   const toggleAktenzeichen = () => {
     setPersonalData((prev) => ({
       ...prev,
@@ -115,7 +120,7 @@ const LetterFormPage = () => {
     }));
   };
 
-  // 1. Daten laden
+  // Завантаження даних із Firestore (чекбокси, категорія)
   const fetchData = useCallback(async () => {
     if (!user) return;
     try {
@@ -130,19 +135,20 @@ const LetterFormPage = () => {
       const dataSnap = await getDoc(dataDocRef);
       if (dataSnap.exists()) {
         const userData = dataSnap.data();
+        // Визначаємо, EU чи Non-EU
         setCategory(
           userData.educationRegion === "EU" || userData.educationRegion === "Non-EU"
             ? userData.educationRegion
             : "Non-EU"
         );
       }
-      console.log("Daten erfolgreich von Firestore abgerufen!");
+      console.log("Дані успішно отримано з Firestore!");
     } catch (error) {
-      console.error("Fehler beim Abrufen der Daten aus Firestore:", error);
+      console.error("Помилка при отриманні даних з Firestore:", error);
     }
   }, [user]);
 
-  // 2. Brieftext generieren
+  // Генерація тексту листа на основі вибраних документів
   const generateLetterText = useCallback(() => {
     if (!category) return;
 
@@ -184,7 +190,9 @@ const LetterFormPage = () => {
         docName = docItem.category?.de || "N/A";
       }
 
+      // Якщо цей документ належить до secondDocs
       if (documentsSecondIDs.includes(docItem.id)) {
+        // Припустимо, id=17 завжди оригінал
         if (docItem.id === 17) {
           text += `${index + 1}. ${docName} – es wird als Original versandt.\n`;
         } else {
@@ -192,6 +200,7 @@ const LetterFormPage = () => {
           text += `${index + 1}. ${docName} – es wird als ${copyType} versandt.\n`;
         }
       } else {
+        // Для інших документів
         const statusParts = [];
         if (docState.notary) statusParts.push("notariell beglaubigt");
         if (docState.translation) statusParts.push("übersetzt");
@@ -215,21 +224,32 @@ const LetterFormPage = () => {
     setLetterText(text);
   }, [checkboxes, category]);
 
-  // Brieftext neu generieren, wenn sich Checkboxes oder Kategorie ändern
+  // Генеруємо текст листа при зміні чекбоксів чи категорії
   useEffect(() => {
     generateLetterText();
   }, [checkboxes, category, generateLetterText]);
 
-  // 3. Adresse basierend auf der Region bestimmen
-  const addressData = approbationAddresses.find((item) => item.region === region);
+  // Якщо region === "Bayern" і subregion встановлений, то шукаємо "Bayern-Oberbayern" або "Bayern-Unterfranken"
+  // Інакше, якщо region !== "Bayern", шукаємо просто region
+  const computedRegionKey =
+  region !== "Bayern"
+    ? region
+    : bavariaSubregion
+    ? `Bayern (${bavariaSubregion})`
+    : null; // null, якщо підрегіон ще не обрано
 
-  // Button, der fetchData aufruft
+  // Шукаємо адресу, якщо computedRegionKey не null
+  const addressData = computedRegionKey
+    ? approbationAddresses.find((item) => item.region === computedRegionKey)
+    : null;
+
+  // Кнопка "All in One"
   const handleAllInOneClick = async () => {
     if (requireAuth()) return;
     await fetchData();
   };
 
-  // Automatisches Anpassen der Textarea-Größe
+  // Автоматичне розширення textarea
   const textAreaRef = useRef(null);
   const autoResize = (elem) => {
     if (!elem) return;
@@ -249,14 +269,12 @@ const LetterFormPage = () => {
 
   return (
     <MainLayout>
-      {/* Zurück-Schaltfläche */}
-      <button
-        className={styles.main_menu_back}
-        onClick={() => navigate("/main_menu")}
-      >
+      {/* Кнопка для повернення назад */}
+      <button className={styles.main_menu_back} onClick={() => navigate("/main_menu")}>
         &#8592;
       </button>
-      {/* Meta-Daten für SEO und soziale Medien */}
+
+      {/* SEO-дані */}
       <Helmet>
         <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
         <meta
@@ -264,19 +282,23 @@ const LetterFormPage = () => {
           content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation. Hier finden Sie alle notwendigen Informationen und Unterlagen."
         />
         <meta property="og:title" content="Begleitschreiben und Dokumentensammlung" />
-        <meta property="og:description" content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation." />
+        <meta
+          property="og:description"
+          content="Testversion zur Sammlung von Dokumenten und dem Begleitschreiben für die Approbation."
+        />
         <meta property="og:image" content={documentImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={documentImage} />
       </Helmet>
 
-      {/* Auth-Modal */}
+      {/* Модальне вікно авторизації */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
       <div className={styles.letterFormContainer}>
         <h1 className={styles.pageTitle}>Begleitschreiben mit Dokumenten</h1>
+
         <div className={styles.columnsWrapper}>
-          {/* Linke Spalte: Eigene Adresse */}
+          {/* Ліва колонка: форма особистих даних */}
           <div className={styles.leftColumn}>
             <div className={styles.userAddressCard}>
               <h2 className={styles.subTitle}>Deine Adresse</h2>
@@ -307,7 +329,6 @@ const LetterFormPage = () => {
                   onChange={(e) => handlePersonalDataChange("plzOrt", e.target.value)}
                 />
               </div>
-              {/* Aktenzeichen */}
               <div className={styles.inputRow}>
                 <div className={styles.akInputContainer}>
                   <input
@@ -327,7 +348,6 @@ const LetterFormPage = () => {
                   </button>
                 </div>
               </div>
-              {/* E-Mail */}
               <div className={styles.inputRow}>
                 <input
                   type="email"
@@ -337,7 +357,6 @@ const LetterFormPage = () => {
                   onChange={(e) => handlePersonalDataChange("email", e.target.value)}
                 />
               </div>
-              {/* Telefon */}
               <div className={styles.inputRow}>
                 <input
                   type="text"
@@ -350,9 +369,10 @@ const LetterFormPage = () => {
             </div>
           </div>
 
-          {/* Rechte Spalte: Adressdaten der Region */}
+          {/* Права колонка: вибір регіону + адреса */}
           <div className={styles.rightColumn}>
             <div className={styles.regionTile}>
+              {/* Іконка та загальний select для регіону */}
               <div className={styles.iconSelectContainer}>
                 <FaMapMarkedAlt className={styles.mapIcon} size={24} />
                 <select
@@ -367,37 +387,84 @@ const LetterFormPage = () => {
                   ))}
                 </select>
               </div>
-              <h2 className={styles.subTitle}>Adresse für {region}</h2>
-              {addressData ? (
-                <div className={styles.addressInfo}>
-                  <p>
-                    <strong>{addressData.office}</strong>
-                  </p>
-                  {addressData.department && <p>{addressData.department}</p>}
-                  {Array.isArray(addressData.address) ? (
-                    addressData.address.map((line, idx) => <p key={idx}>{line}</p>)
-                  ) : (
-                    <p>{addressData.address}</p>
-                  )}
-                  {addressData.email && (
-                    <p>
-                      E-Mail:{" "}
-                      {typeof addressData.email === "object"
-                        ? JSON.stringify(addressData.email, null, 2)
-                        : addressData.email}
-                    </p>
-                  )}
+
+              <h2 className={styles.subTitle}>
+                {/* Якщо користувач обрав Bayern + підрегіон, то показуємо, наприклад: 
+                    "Adresse für Bayern (Oberbayern)" */}
+                {region === "Bayern" && bavariaSubregion
+                  ? `Adresse für Bayern (${bavariaSubregion})`
+                  : `Adresse für ${region}`}
+              </h2>
+
+              {/* Якщо region === "Bayern", відображаємо дві кнопки для Oberbayern / Unterfranken */}
+              {region === "Bayern" && (
+                <div className={styles.subregionToggle}>
+                  <button
+                    type="button"
+                    className={
+                      bavariaSubregion === "Oberbayern"
+                        ? styles.subregionButtonActive
+                        : styles.subregionButton
+                    }
+                    onClick={() => setBavariaSubregion("Oberbayern")}
+                  >
+                    Oberbayern
+                  </button>
+                  <button
+                    type="button"
+                    className={
+                      bavariaSubregion === "Unterfranken"
+                        ? styles.subregionButtonActive
+                        : styles.subregionButton
+                    }
+                    onClick={() => setBavariaSubregion("Unterfranken")}
+                  >
+                    Unterfranken
+                  </button>
                 </div>
+              )}
+
+              {/* Відображення адреси, якщо знайдено (і якщо є computedRegionKey) */}
+              {computedRegionKey ? (
+                addressData ? (
+                  <div className={styles.addressInfo}>
+                    <p>
+                      <strong>{addressData.office}</strong>
+                    </p>
+                    {addressData.department && <p>{addressData.department}</p>}
+                    {Array.isArray(addressData.address) ? (
+                      addressData.address.map((line, idx) => <p key={idx}>{line}</p>)
+                    ) : (
+                      <p>{addressData.address}</p>
+                    )}
+                    {addressData.email && (
+                      <p>
+                        E-Mail:{" "}
+                        {typeof addressData.email === "object"
+                          ? JSON.stringify(addressData.email, null, 2)
+                          : addressData.email}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  // Якщо computedRegionKey є, але addressData не знайдено
+                  <p className={styles.errorText}>
+                    Keine Adresse für diesen Region gefunden.
+                  </p>
+                )
               ) : (
-                <p className={styles.errorText}>
-                  Keine Adresse für diesen Region gefunden.
-                </p>
+                // Якщо region === "Bayern", але підрегіон ще не обрано (bavariaSubregion === "")
+                region === "Bayern" && (
+                  <p style={{ marginTop: "10px", color: "#013b6e" }}>
+                    Bitte wählen Sie Oberbayern oder Unterfranken.
+                  </p>
+                )
               )}
             </div>
           </div>
         </div>
 
-        {/* Textarea und "All in One"-Button */}
+        {/* Текстове поле + кнопка завантаження даних */}
         <div className={styles.textAreaFullWidth}>
           <button
             className={styles.allInOneButton}
@@ -415,7 +482,7 @@ const LetterFormPage = () => {
           />
         </div>
 
-        {/* Einstellungen-Modal */}
+        {/* Модальне вікно з налаштуваннями (PDF, preview, download) */}
         {settingsModalOpen && (
           <div className={styles.modalOverlay}>
             <div className={isMobile ? styles.popupMobile : styles.popupDesktop}>
@@ -426,10 +493,8 @@ const LetterFormPage = () => {
                 ×
               </button>
 
-              {/* Modal-Titel */}
               <h2 className={styles.modalTitle}>PDF Funktion</h2>
 
-              {/* Buttons für Vorschau & Druck PDF */}
               <div className={styles.buttonsArea}>
                 <div className={styles.iconButton}>
                   <button
@@ -470,14 +535,14 @@ const LetterFormPage = () => {
 
               <div className={styles.documentsContainer}>
                 <Link to="/documents" className={styles.documentsButton}>
-                  {/* Leerer Container für den Link */}
+                  {/* Порожній контейнер для посилання */}
                 </Link>
               </div>
             </div>
           </div>
         )}
 
-        {/* Schwebende Einstellungen-Schaltfläche im unteren rechten Bereich */}
+        {/* Кнопка «шестерня» для відкриття налаштувань */}
         {!settingsModalOpen && (
           <div className={styles.bottomRightSettings}>
             <button
