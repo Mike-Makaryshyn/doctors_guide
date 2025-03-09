@@ -6,7 +6,8 @@ import styles from "./LetterFormTutorial.module.scss";
 
 const LetterFormTutorial = ({ run, onFinish, openModal }) => {
   const { selectedLanguage } = useGetGlobalInfo();
-  const language = selectedLanguage || tutorialTranslations.currentLanguage || "en";
+  const language =
+    selectedLanguage || tutorialTranslations.currentLanguage || "en";
   const translations = tutorialTranslations[language];
 
   const [steps, setSteps] = useState([]);
@@ -18,10 +19,9 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
     if (isMobile) {
       stepsData = [
         {
-          // Вступний крок: показ повідомлення по центру екрану
-          target: "body",
-          content: <span dangerouslySetInnerHTML={{ __html: translations.steps.intro }} />,
-          placement: "center",
+          target: '[data-tutorial="userAddressCard"]',
+          content: <span>{translations.steps.userAddressCard}</span>,
+          placement: "center", // Зверніть увагу: тут "center", а не "сenter"
           disableBeacon: true,
         },
         {
@@ -76,16 +76,9 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
     } else {
       stepsData = [
         {
-          // Вступний крок для десктопної версії
-          target: "body",
-          content: <span dangerouslySetInnerHTML={{ __html: translations.steps.intro }} />,
-          placement: "center",
-          disableBeacon: true,
-        },
-        {
           target: '[data-tutorial="userAddressCard"]',
           content: <span>{translations.steps.userAddressCard}</span>,
-          placement: "right",
+          placement: "center", // Зверніть увагу: тут "center", а не "сenter"
           disableBeacon: true,
         },
         {
@@ -179,9 +172,16 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         },
         tooltipContainer: {
           textAlign: "center",
+          whiteSpace: "normal",
+          wordWrap: "break-word",
         },
         tooltip: {
-          maxWidth: 350,
+          maxWidth: "90%",
+          left: "50% !important",
+          transform: "translateX(-50%) !important",
+          margin: "0 auto",
+          overflowWrap: "break-word",
+          // Можна додатково відкоригувати під ще менші розміри
           "@media (max-width: 600px)": {
             maxWidth: "90%",
             left: "50% !important",
