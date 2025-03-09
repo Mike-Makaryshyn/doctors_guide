@@ -44,7 +44,7 @@
   input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    accent-color: #ffffff;
+    /* accent-color: #ffffff; // видалити або закоментувати */
     border-radius: 5px;
     cursor: pointer;
   }
@@ -61,10 +61,16 @@
 }
 
 .infoIcon {
-  font-size: 18px;
+  font-size: 12px;     /* Можна залишити 18px, якщо хочете більше */
+  width: 14px;         /* Фіксована ширина */
+  height: 14px;        /* Фіксована висота */
+  line-height: 18px;   /* Центрування іконки по вертикалі */
+  min-width: 14px;
+  min-height: 14px;
   color: #2a7c6f;
   cursor: pointer;
   margin-left: 10px;
+  flex-shrink: 0;    
   
   &:hover {
     color: #205f55;
