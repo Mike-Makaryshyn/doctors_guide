@@ -78,7 +78,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="userAddressCard"]',
           content: <span>{translations.steps.userAddressCard}</span>,
-          placement: "center", // Зверніть увагу: тут "center", а не "сenter"
+          placement: "right", // Зверніть увагу: тут "center", а не "сenter"
           disableBeacon: true,
         },
         {
@@ -176,7 +176,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
           wordWrap: "break-word",
         },
         tooltip: {
-          maxWidth: "90%",
+          maxWidth: auto,
           left: "50% !important",
           transform: "translateX(-50%) !important",
           margin: "0 auto",
