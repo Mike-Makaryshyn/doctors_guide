@@ -176,7 +176,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
           wordWrap: "break-word",
         },
         tooltip: {
-          maxWidth: auto,
+          maxWidth: "auto",
           left: "50% !important",
           transform: "translateX(-50%) !important",
           margin: "0 auto",
