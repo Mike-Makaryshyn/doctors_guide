@@ -33,7 +33,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="selectAddress"]',
           content: <span>{translations.steps.selectAddress}</span>,
-          placement: "top",
+          placement: "left",
           disableBeacon: true,
         },
         {
@@ -45,7 +45,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="allInOneButton"]',
           content: <span>{translations.steps.allInOneButton}</span>,
-          placement: "top",
+          placement: "left",
           disableBeacon: true,
         },
         {
@@ -69,7 +69,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="documentsButton"]',
           content: <span>{translations.steps.documentsButton}</span>,
-          placement: "top",
+          placement: "left",
           disableBeacon: true,
         },
       ];
