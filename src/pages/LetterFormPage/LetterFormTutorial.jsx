@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Joyride, { STATUS } from "react-joyride";
 import tutorialTranslations from "./LetterFormTutorialTranslations";
 import useGetGlobalInfo from "../../../src/hooks/useGetGlobalInfo";
+import styles from "./LetterFormTutorial.module.scss";
 
 const LetterFormTutorial = ({ run, onFinish, openModal }) => {
   const { selectedLanguage } = useGetGlobalInfo();
@@ -50,7 +51,7 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
         {
           target: '[data-tutorial="settingsButton"]',
           content: <span>{translations.steps.settingsButton}</span>,
-          placement: "top",
+          placement: "left",
           disableBeacon: true,
         },
         {
@@ -157,46 +158,45 @@ const LetterFormTutorial = ({ run, onFinish, openModal }) => {
   };
 
   return (
-<Joyride
-  ref={joyrideRef}
-  steps={steps}
-  run={run}
-  continuous={true}
-  scrollToFirstStep={true}
-  scrollOffset={100}
-  showSkipButton={true}
-  showCloseButton={false}
-  callback={handleJoyrideCallback}
-  styles={{
-    options: {
-      zIndex: 10000,
-      primaryColor: "#023c6f",
-      spotlightPadding: 10,
-    },
-    buttonClose: {
-      display: "none",
-    },
-    tooltipContainer: {
-      textAlign: "center",
-      boxSizing: "border-box",
-    },
-    tooltip: {
-      maxWidth: isMobile ? 300 : 350,
-      width: "140%",
-      boxSizing: "border-box",
-      // На мобільних пристроях центровано підказку
-      left: isMobile ? "50%" : undefined,
-      transform: isMobile ? "translateX(-50%)" : undefined,
-    },
-  }}
-  locale={{
-    back: translations.buttons.back,
-    close: translations.buttons.close,
-    last: translations.buttons.last,
-    next: translations.buttons.next,
-    skip: translations.buttons.skip,
-  }}
-/>
+    <Joyride
+      ref={joyrideRef}
+      steps={steps}
+      run={run}
+      continuous={true}
+      scrollToFirstStep={true}
+      scrollOffset={100}
+      showSkipButton={true}
+      showCloseButton={false}
+      callback={handleJoyrideCallback}
+      styles={{
+        options: {
+          zIndex: 10000,
+          primaryColor: "#023c6f",
+          spotlightPadding: 10,
+        },
+        buttonClose: {
+          display: "none",
+        },
+        tooltipContainer: {
+          textAlign: "center",
+        },
+        tooltip: {
+          maxWidth: 350,
+          "@media (max-width: 600px)": {
+            maxWidth: "90%",
+            left: "50% !important",
+            transform: "translateX(-50%) !important",
+          },
+        },
+      }}
+      locale={{
+        back: translations.buttons.back,
+        close: translations.buttons.close,
+        last: translations.buttons.last,
+        next: translations.buttons.next,
+        skip: translations.buttons.skip,
+      }}
+    />
   );
 };
 

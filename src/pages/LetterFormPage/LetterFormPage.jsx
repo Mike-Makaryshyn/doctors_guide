@@ -262,9 +262,7 @@ const LetterFormPage = () => {
 
   return (
     <MainLayout>
-      <button className={styles.main_menu_back} onClick={() => navigate("/main_menu")}>
-        &#8592;
-      </button>
+   
 
       <Helmet>
         <title>Begleitschreiben und Dokumentensammlung für die Approbation</title>
@@ -375,7 +373,9 @@ const LetterFormPage = () => {
                   ))}
                 </select>
               </div>
-
+              <button className={styles.main_menu_back} onClick={() => navigate("/main_menu")}>
+        &#8592;
+      </button>
               <h2 className={styles.subTitle}>
                 {region === "Bayern" && bavariaSubregion
                   ? `Adresse für Bayern (${bavariaSubregion})`
