@@ -242,7 +242,61 @@ const tutorialTranslations = {
         next: "Siguiente",
         skip: "Omitir"
       }
-    }
+    },
+    el: {
+      steps: {
+        intro:
+          "Καλώς ήρθατε στο Elective Language Game! Σε αυτό το παιχνίδι, θα εξασκήσετε ιατρικούς όρους σε διάφορες γλώσσες. <strong>Εάν απαντήσετε σωστά 5 φορές για έναν όρο, θα επισημανθεί αυτόματα ως μάθημένος.</strong> Καλή διασκέδαση!",
+        regionSelect:
+          "Η περιοχή ορίζεται βάσει των προτιμήσεών σας; ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+        filterColumn:
+          "Εδώ μπορείτε να επιλέξετε το φίλτρο: Μαθημένα, Μη Μαθημένα ή σε παύση.",
+        categorySelect:
+          "Επιλέξτε την κατηγορία των ιατρικών όρων. Από προεπιλογή, έχει επιλεγεί 'Όλα'.",
+        editToggleButton:
+          "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λανθασμένη απάντηση.",
+        languageSwapContainer:
+          "Χρησιμοποιήστε αυτό το κοντέινερ για να ανταλλάξετε τη διεύθυνση μετάφρασης. Κάντε κλικ στο κουμπί για να ανταλλάξετε τις γλώσσες προέλευσης και προορισμού.",
+        questionCount:
+          "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+        startButton:
+          "Πατήστε Εκκίνηση για να ξεκινήσετε το παιχνίδι."
+      },
+      buttons: {
+        back: "Πίσω",
+        close: "Κλείσιμο",
+        last: "Τέλος",
+        next: "Επόμενο",
+        skip: "Παράβλεψη"
+      }
+    },
+    ro: {
+      steps: {
+        intro:
+          "Bine ați venit la Elective Language Game! În acest joc, veți exersa termeni medicali în diferite limbi. <strong>Dacă răspundeți corect de 5 ori la un termen, acesta va fi marcat automat ca învățat.</strong> Distracție plăcută!",
+        regionSelect:
+          "Regiunea este setată în funcție de preferințele dvs.; totuși, o puteți schimba aici.",
+        filterColumn:
+          "Aici puteți alege filtrul: învățat, neînvățat sau în pauză.",
+        categorySelect:
+          "Alegeți categoria termenilor medicali. În mod implicit, este selectat 'Toate'.",
+        editToggleButton:
+          "Când modul de editare este activat, puteți modifica răspunsul după un răspuns greșit.",
+        languageSwapContainer:
+          "Utilizați acest container pentru a schimba direcția traducerii. Apăsați butonul pentru a schimba limbile sursă și țintă.",
+        questionCount:
+          "Selectați numărul de întrebări care vor fi afișate în joc.",
+        startButton:
+          "Apăsați Start pentru a începe jocul."
+      },
+      buttons: {
+        back: "Înapoi",
+        close: "Închideți",
+        last: "Finalizare",
+        next: "Următorul",
+        skip: "Sari peste"
+      }
+    },
   };
   
   export default tutorialTranslations;

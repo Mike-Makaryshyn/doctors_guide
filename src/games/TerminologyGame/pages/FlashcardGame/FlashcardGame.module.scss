@@ -208,23 +208,7 @@
   transform: scale(0.9);
   background-color: rgba(237, 10, 10, 0);
 }
-.modalCloseButton {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  transition: transform 0.2s ease;
-  padding: 5px;
-  border-radius: 50%;
-}
-.modalCloseButton:hover {
-  transform: scale(0.9);
-  background-color: rgba(237, 10, 10, 0);
-}
+
 
 /* Заголовок та Start-Button */
 .modalTitle {

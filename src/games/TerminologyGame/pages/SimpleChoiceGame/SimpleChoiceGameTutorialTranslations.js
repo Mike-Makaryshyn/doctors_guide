@@ -242,6 +242,60 @@ const tutorialTranslations = {
         next: "Siguiente",
         skip: "Omitir"
       }
+    },
+    el: {
+      steps: {
+        intro:
+          "Καλώς ήρθατε στο Simple Choice Game! Σε αυτό το παιχνίδι, θα σας παρουσιαστούν ιατρικοί όροι που πρέπει να μεταφράσετε από τα Λατινικά στα Γερμανικά ή αντίστροφα. Οι όροι εμφανίζονται τυχαία. <strong>Εάν απαντήσετε σωστά 5 φορές σε έναν όρο, θα επισημανθεί αυτόματα ως μαθεμένος.</strong> Καλή διασκέδαση!",
+        regionSelect:
+          "Η περιοχή έχει οριστεί με βάση τις προτιμήσεις σας. Ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+        filterColumn:
+          "Εδώ μπορείτε να επιλέξετε το φίλτρο: μαθεμένοι, αμάθητοι ή σε παύση.",
+        categorySelect:
+          "Επιλέξτε την κατηγορία των ιατρικών όρων. Από προεπιλογή, είναι επιλεγμένο το 'Όλα'.",
+        editToggleButton:
+          "Όταν είναι ενεργοποιημένη η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από ένα λανθασμένο αποτέλεσμα.",
+        displayMode:
+          "Εδώ μπορείτε να επιλέξετε τη γλωσσική λειτουργία – μετάφραση από τα Λατινικά στα Γερμανικά, από τα Γερμανικά στα Λατινικά ή μεικτή λειτουργία.",
+        questionCount:
+          "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+        startButton:
+          "Πατήστε Έναρξη για να ξεκινήσετε το παιχνίδι."
+      },
+      buttons: {
+        back: "Πίσω",
+        close: "Κλείσιμο",
+        last: "Ολοκλήρωση",
+        next: "Επόμενο",
+        skip: "Παράλειψη"
+      }
+    },
+    ro: {
+      steps: {
+        intro:
+          "Bine ai venit la Simple Choice Game! În acest joc, ți se vor prezenta termeni medicali pe care trebuie să îi traduci din latină în germană sau invers. Termenii apar aleatoriu. <strong>Dacă răspunzi corect de 5 ori la un termen, acesta va fi marcat automat ca învățat.</strong> Distracție plăcută!",
+        regionSelect:
+          "Regiunea este setată pe baza preferințelor tale; totuși, o poți modifica aici.",
+        filterColumn:
+          "Aici poți alege filtrul: învățat, neînvățat sau în așteptare.",
+        categorySelect:
+          "Alege categoria termenilor medicali. În mod implicit, este selectată opțiunea 'Toate'.",
+        editToggleButton:
+          "Când modul de editare este activat, poți modifica răspunsul tău după un răspuns incorect.",
+        displayMode:
+          "Aici poți alege modul lingvistic – traducere din latină în germană, din germană în latină sau mod mixt.",
+        questionCount:
+          "Selectează numărul de întrebări care vor fi afișate în joc.",
+        startButton:
+          "Apasă Start pentru a începe jocul."
+      },
+      buttons: {
+        back: "Înapoi",
+        close: "Închide",
+        last: "Finalizare",
+        next: "Următor",
+        skip: "Omite"
+      }
     }
   };
   

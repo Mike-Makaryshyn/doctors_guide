@@ -242,6 +242,60 @@ const tutorialTranslations = {
         next: "Siguiente",
         skip: "Omitir"
       }
+    },
+    el: {
+      steps: {
+        intro:
+          "Καλώς ήρθατε στο Term Matching Game! Σε αυτό το παιχνίδι, πρέπει να αντιστοιχίσετε τους όρους στα αριστερά (στα Γερμανικά) με τους σωστούς ορισμούς στα δεξιά (στη γλώσσα που έχετε επιλέξει).",
+        regionSelect:
+          "Η περιοχή ορίζεται αυτόματα βάσει των παγκόσμιων ρυθμίσεών σας. Ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+        selectWrapper:
+          "Αυτό το κοντέινερ (NativeSelect) σας επιτρέπει να επιλέξετε την περιοχή.",
+        filterColumn:
+          "Εδώ μπορείτε να επιλέξετε το φίλτρο: μάθηκα, δεν έχω μάθει ή σε παύση.",
+        categorySelect:
+          "Επιλέξτε την κατηγορία των όρων. Υπάρχουν περίπου 20 κατηγορίες διαθέσιμες.",
+        languageSwapContainer:
+          "Χρησιμοποιήστε αυτό το κοντέινερ για να αλλάξετε την κατεύθυνση της μετάφρασης. Στα αριστερά έχετε πάντα τα Γερμανικά, και στα δεξιά τη γλώσσα που έχετε επιλέξει.",
+        questionCountContainer:
+          "Επιλέξτε τον αριθμό των όρων που θα συμπεριληφθούν στο παιχνίδι.",
+        startButton:
+          "Πατήστε Start για να ξεκινήσετε το παιχνίδι."
+      },
+      buttons: {
+        back: "Πίσω",
+        close: "Κλείσιμο",
+        last: "Τέλος",
+        next: "Επόμενο",
+        skip: "Παράλειψη"
+      }
+    },
+    ro: {
+      steps: {
+        intro:
+          "Bine ai venit la Term Matching Game! În acest joc, trebuie să asociezi termenii din stânga (în germană) cu definițiile corecte din dreapta (în limba aleasă de tine).",
+        regionSelect:
+          "Regiunea este setată automat în funcție de preferințele tale globale; totuși, o poți schimba aici.",
+        selectWrapper:
+          "Acest container (NativeSelect) îți permite să alegi regiunea.",
+        filterColumn:
+          "Aici poți selecta filtrul: învățat, neînvățat sau întrerupt.",
+        categorySelect:
+          "Alege categoria termenilor. Sunt disponibile aproximativ 20 de categorii.",
+        languageSwapContainer:
+          "Folosește acest container pentru a schimba direcția de traducere. În stânga ai întotdeauna germana, iar în dreapta limba aleasă de tine.",
+        questionCountContainer:
+          "Selectează numărul de termeni care vor fi incluși în joc.",
+        startButton:
+          "Apasă Start pentru a începe jocul."
+      },
+      buttons: {
+        back: "Înapoi",
+        close: "Închide",
+        last: "Finalizare",
+        next: "Următor",
+        skip: "Sari peste"
+      }
     }
   };
   

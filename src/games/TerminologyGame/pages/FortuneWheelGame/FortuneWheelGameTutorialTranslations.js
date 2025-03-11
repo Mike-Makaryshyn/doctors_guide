@@ -261,6 +261,63 @@ const tutorialTranslations = {
         skip: "Omitir",
       },
     },
-  };
-  
-  export default tutorialTranslations;
+    el: {
+      steps: {
+        intro:
+          "Καλώς ήρθατε στο Fortune Wheel Game! Περιστρέψτε τον τροχό για να μάθετε ιατρικούς όρους. <strong>Προσαρμόστε τα φίλτρα και τις ρυθμίσεις σας για να εξατομικεύσετε την εμπειρία μάθησης.</strong>",
+        regionSelect:
+          "Επιλέξτε την περιοχή σας εδώ. Αυτό φιλτράρει τους ιατρικούς όρους βάσει γεωγραφικής περιοχής.",
+        filterSelect:
+          "Επιλέξτε το φίλτρο: μαθευμένα, αμάθευτα ή σε παύση.",
+        categorySelect:
+          "Επιλέξτε την κατηγορία ιατρικών όρων. Από προεπιλογή επιλέγεται 'Όλα'.",
+        playersSelect:
+          "Ορίστε τον αριθμό των παικτών για τη λειτουργία πολλών παικτών.",
+        displayModeSelect:
+          "Επιλέξτε τη λειτουργία εμφάνισης (Λατινικά→Γερμανικά, Γερμανικά→Λατινικά ή Μεικτό).",
+        questionCountSelect:
+          "Επιλέξτε τον αριθμό των όρων που θα συμπεριληφθούν στο παιχνίδι.",
+        startButton:
+          "Κάντε κλικ στο Έναρξη για να ξεκινήσετε το παιχνίδι.",
+        spinButton:
+          "Πατήστε αυτό το κουμπί για να περιστρέψετε τον τροχό και να αποκαλύψετε έναν όρο.",
+      },
+      buttons: {
+        back: "Πίσω",
+        close: "Κλείσιμο",
+        last: "Τέλος",
+        next: "Επόμενο",
+        skip: "Παράβλεψη",
+      },
+    },
+    ro: {
+      steps: {
+        intro:
+          "Bine ați venit la Fortune Wheel Game! Rotiți roata pentru a învăța termeni medicali. <strong>Ajustați filtrele și setările pentru a vă personaliza experiența de învățare.</strong>",
+        regionSelect:
+          "Selectați regiunea dumneavoastră aici. Acest filtru organizează termenii medicali în funcție de zonă geografică.",
+        filterSelect:
+          "Alegeți filtrul: învățat, neînvățat sau în pauză.",
+        categorySelect:
+          "Selectați categoria termenilor medicali. Implicit, este selectat 'Toate'.",
+        playersSelect:
+          "Stabiliți numărul de jucători pentru modul multiplayer.",
+        displayModeSelect:
+          "Alegeți modul de afișare (Latină→Germană, Germană→Latină sau Mixt).",
+        questionCountSelect:
+          "Selectați numărul de termeni care vor fi incluși în joc.",
+        startButton:
+          "Faceți clic pe Start pentru a începe jocul.",
+        spinButton:
+          "Apăsați acest buton pentru a roti roata și a dezvălui un termen.",
+      },
+      buttons: {
+        back: "Înapoi",
+        close: "Închide",
+        last: "Finalizare",
+        next: "Următorul",
+        skip: "Sari peste",
+      },
+    },
+};  
+export default tutorialTranslations;
