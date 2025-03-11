@@ -483,7 +483,25 @@ const AbbreviationsFlashcardGameContent = () => {
             </div>
           </>
         )}
-
+ 
+        {!cards.length && !settingsOpen && (
+          <div>
+            <div className={styles.noQuestionsOverlay}>
+              <div className={styles.noQuestionsMessage}>
+                <p>Keine Karten mit den gewählten Filtern gefunden.</p>
+              </div>
+            </div>
+            <div className={styles.bottomRightSettings}>
+              <button
+                className={styles.settingsButton}
+                onClick={() => setSettingsOpen(true)}
+              >
+                <FaCog />
+              </button>
+            </div>
+          </div>
+        )}
+ 
         {/* Модальне вікно налаштувань */}
         {settingsOpen && (
           <div className={styles.modalOverlay}>

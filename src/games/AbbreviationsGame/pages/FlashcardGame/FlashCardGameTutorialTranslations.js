@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Flashcard Game! Σε αυτό το παιχνίδι, οι κάρτες με συντομογραφίες θα εμφανίζονται τυχαία. Κάθε κάρτα εμφανίζεται επανειλημμένα, και το πεδίο 'Ang' δείχνει πόσες φορές έχει εμφανιστεί η συντομογραφία κατά τη διάρκεια της συνεδρίας σας. Καλή διασκέδαση και εξασκήστε τις γνώσεις σας στις συντομογραφίες!",
+      regionSelect:
+        "Η περιοχή έχει οριστεί βάσει των προτιμήσεών σας, αλλά μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μαθευμένα, αμάθευτα ή σε παύση (αναβλημένα).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των συντομογραφιών. Από προεπιλογή, έχει επιλεγεί 'Όλα'.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λανθασμένη απάντηση.",
+      displayMode:
+        "Εδώ μπορείτε να επιλέξετε τη γλωσσική λειτουργία:\n• Abk.→De: Η συντομογραφία εμφανίζεται στην μπροστινή πλευρά της κάρτας και ο πλήρης γερμανικός όρος στην πίσω πλευρά.\n• De→Abk: Ο πλήρης γερμανικός όρος εμφανίζεται στην μπροστινή πλευρά, με τη συντομογραφία στην πίσω πλευρά.\n• Mixed: Η λειτουργία επιλέγεται τυχαία για κάθε κάρτα.",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+      startButton:
+        "Πατήστε 'Έναρξη' για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Flashcard Game! În acest joc, cardurile cu abrevieri vor fi afișate aleatoriu. Fiecare card este afișat de mai multe ori, iar câmpul 'Ang' indică de câte ori a fost afișată abrevierea în sesiunea dumneavoastră. Bucurați-vă de joc și exersați-vă cunoștințele despre abrevieri!",
+      regionSelect:
+        "Regiunea este setată pe baza preferințelor dumneavoastră; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățate, neînvățate sau pauzate (amânate).",
+      categorySelect:
+        "Alegeți categoria abrevierilor. Implicit, este selectat 'Toate'.",
+      editToggleButton:
+        "Când modul de editare este activat, puteți modifica răspunsul după un răspuns incorect.",
+      displayMode:
+        "Aici puteți alege modul lingvistic:\n• Abk.→De: Abrevierea este afișată pe fața cardului și termenul complet în germană pe verso.\n• De→Abk: Termenul complet în germană este afișat pe fața cardului, iar abrevierea pe verso.\n• Mixed: Modul este ales aleatoriu pentru fiecare card.",
+      questionCount:
+        "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați 'Start' pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 

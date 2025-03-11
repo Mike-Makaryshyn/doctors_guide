@@ -251,6 +251,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Simple Choice Game για συντομογραφίες! Σε αυτό το παιχνίδι, θα σας παρουσιαστούν συντομογραφίες που πρέπει να ερμηνεύσετε από Abk. σε Deu ή από Deu σε Abk. Τα στοιχεία εμφανίζονται τυχαία. <strong>Εάν απαντήσετε σωστά 5 φορές για μια συντομογραφία, θα επισημανθεί αυτόματα ως μάθευμενη.</strong> Καλή διασκέδαση!",
+      regionSelect:
+        "Η περιοχή καθορίζεται βάσει των προτιμήσεών σας, ωστόσο μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μάθευμενες, αμάθευμενες ή σε παύση (αναβλημένες).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των συντομογραφιών. Από προεπιλογή, έχει επιλεγεί 'Όλα'. Οι κατηγορίες ταξινομούνται αλφαβητικά από το A έως το Z.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λάθος απάντηση.",
+      displayMode:
+        "Εδώ μπορείτε να επιλέξετε τον τρόπο εμφάνισης των ερωτήσεων: ερμηνεία από συντομογραφία (Abk.) σε Γερμανικά (Deu), από Γερμανικά (Deu) σε συντομογραφία (Abk.) ή χρήση ενός μικτού τρόπου (τυχαία εναλλαγή).",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανιστούν στο παιχνίδι.",
+      startButton:
+        "Πατήστε 'Έναρξη' για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Simple Choice Game pentru abrevieri! În acest joc, vi se vor prezenta abrevieri pe care trebuie să le interpretați din Abk. în Deu sau din Deu în Abk. Elementele apar aleatoriu. <strong>Dacă răspundeți corect de 5 ori la o abreviere, aceasta va fi marcată automat ca învățată.</strong> Bucurați-vă de joc!",
+      regionSelect:
+        "Regiunea este setată pe baza preferințelor dumneavoastră; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățate, neînvățate sau în pauză (amânate).",
+      categorySelect:
+        "Alegeți categoria abrevierilor. Implicit, este selectat 'Toate'. Categoriile sunt sortate alfabetic de la A la Z.",
+      editToggleButton:
+        "Când modul de editare este activat, puteți modifica răspunsul după un răspuns incorect.",
+      displayMode:
+        "Aici puteți alege modul de afișare a întrebărilor: interpretare din abreviere (Abk.) în germană (Deu), din germană (Deu) în abreviere (Abk.) sau utilizați un mod mixt (alternare aleatorie).",
+      questionCount:
+        "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați 'Start' pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 

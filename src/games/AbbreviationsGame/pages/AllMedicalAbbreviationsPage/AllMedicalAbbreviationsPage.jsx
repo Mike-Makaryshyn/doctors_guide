@@ -342,7 +342,7 @@ const AllMedicalAbbreviationsPageContent = () => {
                           </h3>
                           {/* name */}
                           <p className={styles.tileDescription}>
-                            {translationLanguage !== "de" ? (
+                          {translationLanguage !== "de" ? (
                               <Tippy
                                 content={
                                   abbr.name || "Keine Übersetzung vorhanden"
@@ -351,10 +351,7 @@ const AllMedicalAbbreviationsPageContent = () => {
                                 interactive={true}
                                 placement="bottom"
                               >
-                                <span
-                                  className={styles.clickableCell}
-                                  data-tutorial="definitionCell"
-                                >
+                                <span className={styles.clickableCell}>
                                   {abbr.name}
                                 </span>
                               </Tippy>
@@ -367,10 +364,7 @@ const AllMedicalAbbreviationsPageContent = () => {
                                 interactive={true}
                                 placement="bottom"
                               >
-                                <span
-                                  className={styles.clickableCell}
-                                  data-tutorial="definitionCell"
-                                >
+                                <span className={styles.clickableCell}>
                                   {abbr.name}
                                 </span>
                               </Tippy>

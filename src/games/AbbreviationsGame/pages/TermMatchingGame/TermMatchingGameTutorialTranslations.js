@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο παιχνίδι αντιστοίχισης συντομογραφιών! Σε αυτό το παιχνίδι, πρέπει να αντιστοιχίσετε τις συντομογραφίες στην αριστερή πλευρά με τις σωστές γερμανικές επεκτάσεις τους στη δεξιά πλευρά. Παρακαλώ σημειώστε ότι εστιάζουμε στη μάθηση σημαντικών συντομογραφιών ειδικά για την Fachsprachprüfung. Αυτές οι συντομογραφίες είναι ουσιώδεις για την εξέτασή σας.",
+      regionSelect:
+        "Η περιοχή ορίζεται αυτόματα βάσει των παγκόσμιων προτιμήσεών σας. Ωστόσο, μπορείτε να την αλλάξετε εδώ αν χρειάζεται.",
+      selectWrapper:
+        "Αυτό το κοντέινερ (NativeSelect) σας επιτρέπει να επιλέξετε την περιοχή, εάν αυτό ισχύει.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο για τις συντομογραφίες: μαθευμένες, αμάθευτες ή σε παύση.",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των συντομογραφιών. Υπάρχουν περίπου 20 κατηγορίες διαθέσιμες.",
+      displayModeContainer:
+        "Χρησιμοποιήστε αυτό το κοντέινερ για να επιλέξετε πώς θα εμφανίζονται οι συντομογραφίες:\n• 'Abk.→Deu': η συντομογραφία εμφανίζεται στην αριστερή πλευρά και η γερμανική της επεξήγηση στη δεξιά;\n• 'Deu→Abk.': η γερμανική επεξήγηση εμφανίζεται στην αριστερή και η συντομογραφία στη δεξιά;\n• 'Gemischt': χρησιμοποιείται τυχαία σειρά.",
+      questionCountContainer:
+        "Επιλέξτε τον αριθμό των συντομογραφιών που θέλετε να συμπεριλάβετε στο παιχνίδι.",
+      startButton:
+        "Πατήστε 'Start' για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la jocul de potrivire a abrevierilor! În acest joc, trebuie să asociați abrevierile din stânga cu dezvoltările lor corecte în germană din dreapta. Vă rugăm să rețineți că ne concentrăm pe învățarea abrevierilor importante, specifice pentru examenul Fachsprachprüfung. Aceste abrevieri sunt esențiale pentru examenul dumneavoastră.",
+      regionSelect:
+        "Regiunea este setată automat pe baza preferințelor dumneavoastră globale; cu toate acestea, o puteți schimba aici, dacă este necesar.",
+      selectWrapper:
+        "Acest container (NativeSelect) vă permite să alegeți regiunea, dacă este cazul.",
+      filterColumn:
+        "Aici puteți selecta filtrul pentru abrevieri: învățate, neînvățate sau în pauză.",
+      categorySelect:
+        "Alegeți categoria abrevierilor. Sunt disponibile aproximativ 20 de categorii.",
+      displayModeContainer:
+        "Utilizați acest container pentru a alege modul de afișare a abrevierilor:\n• 'Abk.→Deu': abrevierea este afișată în stânga, iar dezvoltarea ei în germană în dreapta;\n• 'Deu→Abk.': dezvoltarea în germană este afișată în stânga, iar abrevierea în dreapta;\n• 'Gemischt': se utilizează o ordine aleatorie.",
+      questionCountContainer:
+        "Selectați numărul de abrevieri pe care doriți să le includeți în joc.",
+      startButton:
+        "Apăsați 'Start' pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 
