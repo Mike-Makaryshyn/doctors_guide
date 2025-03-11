@@ -2,7 +2,7 @@ const HESSEN_DATA = [
   {
     id: 7,
     fullName: "V.a. Divertikulitis",
-    specialty: "ulcusventriculi",
+    specialty: "harnweginfekt",
     name: "Frederik",
     surname: "zu Äusigler",
     birthdate: "30.05.1958",
