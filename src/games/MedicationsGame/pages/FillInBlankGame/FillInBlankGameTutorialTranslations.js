@@ -99,8 +99,182 @@ const tutorialTranslations = {
         next: "Далее",
         skip: "Пропустить"
       }
+    },
+    pl: {
+      steps: {
+        intro:
+          "Witamy w grze Uzupełnij Lukę! W tej grze otrzymasz zdania zawierające lukę. Twoim zadaniem jest uzupełnienie luki poprawną odpowiedzią. <strong>Jeśli 5 razy odpowiesz poprawnie na dany termin, zostanie on automatycznie oznaczony jako nauczony.</strong> Miłej zabawy!",
+        regionSelect:
+          "Region jest ustawiany na podstawie Twoich globalnych ustawień; możesz go jednak zmienić tutaj.",
+        filterColumn:
+          "Tutaj możesz wybrać filtr: nauczone, nienauczone lub wstrzymane (odłożone).",
+        categorySelect:
+          "Wybierz kategorię terminów medycznych. Domyślnie wybrano 'Wszystkie'.",
+        editToggleButton:
+          "Ten przycisk włącza tryb edycji, umożliwiając zmianę odpowiedzi, jeśli była błędna.",
+        questionCount:
+          "Wybierz liczbę pytań, które będą wyświetlane w grze.",
+        startButton:
+          "Naciśnij Start, aby rozpocząć grę."
+      },
+      buttons: {
+        back: "Wstecz",
+        close: "Zamknij",
+        last: "Zakończ",
+        next: "Dalej",
+        skip: "Pomiń"
+      }
+    },
+    ar: {
+      steps: {
+        intro:
+          "مرحبًا بك في لعبة املأ الفراغ! في هذه اللعبة، ستُعرض عليك جمل تحتوي على فراغ. مهمتك هي ملء الفراغ بالإجابة الصحيحة. <strong>إذا أجبت بشكل صحيح 5 مرات على مصطلح ما، فسيتم تحديده تلقائيًا على أنه متعلم.</strong> استمتع باللعبة!",
+        regionSelect:
+          "يتم تعيين المنطقة بناءً على تفضيلاتك العالمية؛ ومع ذلك، يمكنك تغييرها هنا.",
+        filterColumn:
+          "هنا يمكنك اختيار المرشح: المتعلم، غير المتعلم أو المؤجل.",
+        categorySelect:
+          "اختر فئة المصطلحات الطبية. افتراضيًا، يتم اختيار 'الكل'.",
+        editToggleButton:
+          "يُتيح هذا الزر وضع التعديل، مما يسمح لك بتغيير إجابتك إذا كانت خاطئة.",
+        questionCount:
+          "اختر عدد الأسئلة التي ستُعرض في اللعبة.",
+        startButton:
+          "اضغط على Start لبدء اللعبة."
+      },
+      buttons: {
+        back: "رجوع",
+        close: "إغلاق",
+        last: "إنهاء",
+        next: "التالي",
+        skip: "تخطي"
+      }
+    },
+    tr: {
+      steps: {
+        intro:
+          "Boşluğu Doldur Oyunu'na hoş geldiniz! Bu oyunda, boşluk içeren cümleler karşınıza çıkacak. Göreviniz boşluğu doğru cevapla doldurmaktır. <strong>Eğer bir terim için 5 kez doğru cevap verirseniz, o terim otomatik olarak öğrenilmiş olarak işaretlenecektir.</strong> İyi eğlenceler!",
+        regionSelect:
+          "Bölge, genel tercihlerinize göre ayarlanır; ancak buradan değiştirebilirsiniz.",
+        filterColumn:
+          "Burada filtreyi seçebilirsiniz: öğrenilmiş, öğrenilmemiş veya askıya alınmış (ertelemiş).",
+        categorySelect:
+          "Tıbbi terim kategorisini seçin. Varsayılan olarak 'Hepsi' seçilidir.",
+        editToggleButton:
+          "Bu düğme, hatalı cevap verdiğinizde cevabınızı değiştirebilmeniz için düzenleme modunu etkinleştirir.",
+        questionCount:
+          "Oyunda görüntülenecek soru sayısını seçin.",
+        startButton:
+          "Oyunu başlatmak için Start'a basın."
+      },
+      buttons: {
+        back: "Geri",
+        close: "Kapat",
+        last: "Bitir",
+        next: "İleri",
+        skip: "Atla"
+      }
+    },
+    fr: {
+      steps: {
+        intro:
+          "Bienvenue dans le jeu Complétez la phrase ! Dans ce jeu, des phrases avec un espace vide vous seront présentées. Votre tâche est de compléter l'espace avec la bonne réponse. <strong>Si vous répondez correctement 5 fois pour un terme, il sera automatiquement marqué comme appris.</strong> Amusez-vous bien !",
+        regionSelect:
+          "La région est définie en fonction de vos préférences globales ; toutefois, vous pouvez la modifier ici.",
+        filterColumn:
+          "Ici, vous pouvez choisir le filtre : appris, non appris ou en pause (différé).",
+        categorySelect:
+          "Choisissez la catégorie des termes médicaux. Par défaut, 'Tous' est sélectionné.",
+        editToggleButton:
+          "Ce bouton active le mode édition, vous permettant de modifier votre réponse en cas d'erreur.",
+        questionCount:
+          "Sélectionnez le nombre de questions à afficher dans le jeu.",
+        startButton:
+          "Appuyez sur Start pour commencer le jeu."
+      },
+      buttons: {
+        back: "Retour",
+        close: "Fermer",
+        last: "Terminer",
+        next: "Suivant",
+        skip: "Passer"
+      }
+    },
+    es: {
+      steps: {
+        intro:
+          "¡Bienvenido al juego Rellena el Espacio! En este juego, se te presentarán oraciones con un espacio en blanco. Tu tarea es completar el espacio con la respuesta correcta. <strong>Si respondes correctamente 5 veces para un término, se marcará automáticamente como aprendido.</strong> ¡Disfruta del juego!",
+        regionSelect:
+          "La región se establece según tus preferencias globales; sin embargo, puedes cambiarla aquí.",
+        filterColumn:
+          "Aquí puedes elegir el filtro: aprendido, no aprendido o en pausa (diferido).",
+        categorySelect:
+          "Elige la categoría de términos médicos. Por defecto, se selecciona 'Todos'.",
+        editToggleButton:
+          "Este botón activa el modo de edición, permitiéndote cambiar tu respuesta si respondes incorrectamente.",
+        questionCount:
+          "Selecciona el número de preguntas que se mostrarán en el juego.",
+        startButton:
+          "Presiona Start para comenzar el juego."
+      },
+      buttons: {
+        back: "Atrás",
+        close: "Cerrar",
+        last: "Finalizar",
+        next: "Siguiente",
+        skip: "Omitir"
+      }
+    },
+    el: {
+      steps: {
+        intro:
+          "Καλώς ήρθατε στο παιχνίδι Συμπληρώστε το Κενό! Σε αυτό το παιχνίδι, θα σας παρουσιαστούν προτάσεις που περιέχουν ένα κενό. Η αποστολή σας είναι να συμπληρώσετε το κενό με τη σωστή απάντηση. <strong>Εάν απαντήσετε σωστά 5 φορές σε έναν όρο, θα επισημανθεί αυτόματα ως μάθει.</strong> Καλή διασκέδαση!",
+        regionSelect:
+          "Η περιοχή καθορίζεται βάσει των παγκόσμιων προτιμήσεών σας· ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+        filterColumn:
+          "Εδώ μπορείτε να επιλέξετε το φίλτρο: μαθευμένους, αμάθευτους ή σε παύση.",
+        categorySelect:
+          "Επιλέξτε την κατηγορία των ιατρικών όρων. Από προεπιλογή, επιλέγεται το 'Όλα'.",
+        editToggleButton:
+          "Αυτό το κουμπί ενεργοποιεί τη λειτουργία επεξεργασίας, επιτρέποντάς σας να αλλάξετε την απάντησή σας σε περίπτωση λάθους.",
+        questionCount:
+          "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+        startButton:
+          "Πατήστε Start για να ξεκινήσετε το παιχνίδι."
+      },
+      buttons: {
+        back: "Πίσω",
+        close: "Κλείσιμο",
+        last: "Τέλος",
+        next: "Επόμενο",
+        skip: "Παράβλεψη"
+      }
+    },
+    ro: {
+      steps: {
+        intro:
+          "Bine ați venit la jocul Completează Spațiul! În acest joc, vi se vor prezenta propoziții care conțin un spațiu liber. Sarcina dvs. este să completați spațiul cu răspunsul corect. <strong>Dacă răspundeți corect de 5 ori la un termen, acesta va fi marcat automat ca învățat.</strong> Bucurați-vă de joc!",
+      regionSelect:
+          "Regiunea este setată în funcție de preferințele dvs. globale; totuși, o puteți schimba aici.",
+      filterColumn:
+          "Aici puteți alege filtrul: învățate, neînvățate sau în pauză (amânate).",
+      categorySelect:
+          "Alegeți categoria termenilor medicali. Implicit, este selectat 'Toate'.",
+      editToggleButton:
+          "Acest buton activează modul de editare, permițându-vă să vă schimbați răspunsul în caz de eroare.",
+      questionCount:
+          "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+          "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
     }
-    // За потреби додайте інші мови (pl, ar, tr, fr, es) за аналогією
-  };
-  
-  export default tutorialTranslations;
+  }
+};  
+
+export default tutorialTranslations;

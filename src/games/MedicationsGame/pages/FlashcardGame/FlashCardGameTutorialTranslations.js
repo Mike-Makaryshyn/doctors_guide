@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Flashcard Game! Σε αυτό το παιχνίδι, θα εμφανίζονται τυχαία flashcards με φάρμακα. Κάθε κάρτα εμφανίζεται επανειλημμένα, και το πεδίο 'Ang' δείχνει πόσες φορές έχει εμφανιστεί το φάρμακο κατά τη διάρκεια της συνεδρίας σας. Απολαύστε το παιχνίδι και εξασκηθείτε στις γνώσεις σας για τα φάρμακα!",
+      regionSelect:
+        "Η περιοχή καθορίζεται βάσει των προτιμήσεών σας· ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μάθημένα, αμαθημένα ή σε παύση (αναβλημένα).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των φαρμάκων. Από προεπιλογή έχει επιλεγεί το 'Όλα'.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λανθασμένη απάντηση.",
+      displayMode:
+        "Εδώ μπορείτε να επιλέξετε τον γλωσσικό τρόπο εμφάνισης – είτε από Λατινικά σε Γερμανικά, είτε από Γερμανικά σε Λατινικά, είτε να χρησιμοποιήσετε μικτό τρόπο.",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανιστούν στο παιχνίδι.",
+      startButton:
+        "Πατήστε το Start για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Flashcard Game! În acest joc, veți vedea flashcard-uri cu medicamente afișate aleatoriu. Fiecare card este afișat de mai multe ori, iar câmpul 'Ang' indică de câte ori a fost afișat medicamentul în timpul sesiunii dvs. Bucurați-vă de joc și exersați-vă cunoștințele despre medicamente!",
+      regionSelect:
+        "Regiunea este setată în funcție de preferințele dvs.; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățate, neînvățate sau în pauză (amânate).",
+      categorySelect:
+        "Alegeți categoria medicamentelor. Implicit, este selectat 'Toate'.",
+      editToggleButton:
+        "Când modul de editare este activ, puteți schimba răspunsul dacă acesta este incorect.",
+      displayMode:
+        "Aici puteți alege modul lingvistic – fie să afișați de la latină la germană, fie de la germană la latină, sau să utilizați un mod mixt.",
+      questionCount:
+        "Alegeți numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 

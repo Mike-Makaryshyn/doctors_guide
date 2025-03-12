@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Simple Choice Game για Φάρμακα! Σε αυτό το παιχνίδι, θα σας παρουσιαστούν φάρμακα που πρέπει να μεταφράσετε από τα Λατινικά στα Γερμανικά ή από τα Γερμανικά στα Λατινικά. Τα φάρμακα εμφανίζονται τυχαία. <strong>Εάν απαντήσετε σωστά 5 φορές για ένα φάρμακο, θα επισημανθεί αυτόματα ως μάθημένο.</strong> Απολαύστε το παιχνίδι!",
+      regionSelect:
+        "Η περιοχή ορίζεται βάσει των προτιμήσεών σας· ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μάθημένα, αμαθημένα ή σε παύση (αναβλημένα).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των φαρμάκων. Από προεπιλογή έχει επιλεγεί το 'Όλα'. Οι κατηγορίες ταξινομούνται αλφαβητικά από το A έως το Z.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λανθασμένη απάντηση.",
+      displayMode:
+        "Εδώ μπορείτε να επιλέξετε τον γλωσσικό τρόπο – είτε να μεταφράσετε από τα Λατινικά στα Γερμανικά, είτε από τα Γερμανικά στα Λατινικά, είτε να χρησιμοποιήσετε μικτό τρόπο.",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+      startButton:
+        "Πατήστε το Start για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Simple Choice Game pentru Medicamente! În acest joc, vi se vor prezenta medicamente pe care trebuie să le traduceți din latină în germană sau din germană în latină. Medicamentele apar aleatoriu. <strong>Dacă răspundeți corect de 5 ori pentru un medicament, acesta va fi marcat automat ca învățat.</strong> Bucurați-vă de joc!",
+      regionSelect:
+        "Regiunea este setată pe baza preferințelor dvs.; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățate, neînvățate sau în pauză (amânate).",
+      categorySelect:
+        "Alegeți categoria medicamentelor. Implicit, este selectat 'Toate'. Categoriile sunt sortate alfabetic de la A la Z.",
+      editToggleButton:
+        "Când modul de editare este activ, puteți modifica răspunsul după o eroare.",
+      displayMode:
+        "Aici puteți alege modul lingvistic – fie să traduceți din latină în germană, fie din germană în latină, fie să utilizați modul mixt.",
+      questionCount:
+        "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 

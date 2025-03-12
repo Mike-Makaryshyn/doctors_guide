@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Elective Language Game – Medications Edition! Σε αυτό το παιχνίδι, θα εξασκηθείτε στα ονόματα φαρμάκων σε διάφορες γλώσσες. <strong>Εάν απαντήσετε σωστά 5 φορές για ένα φάρμακο, θα επισημανθεί αυτόματα ως μάθημένο.</strong> Αυτό το παιχνίδι έχει σχεδιαστεί για να σας βοηθήσει να προετοιμαστείτε για την Fachsprachenprüfung. Καλή διασκέδαση!",
+      regionSelect:
+        "Η περιοχή καθορίζεται βάσει των προτιμήσεών σας· ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+      filterColumn:
+        "Εδώ μπορείτε να επιλέξετε το φίλτρο: μάθημένα, αμαθημένα ή σε παύση (αναβλημένα).",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των φαρμάκων. Από προεπιλογή, έχει επιλεγεί το 'Όλα'.",
+      editToggleButton:
+        "Όταν ενεργοποιείται η λειτουργία επεξεργασίας, μπορείτε να τροποποιήσετε την απάντησή σας μετά από λανθασμένη απάντηση.",
+      languageSwapContainer:
+        "Χρησιμοποιήστε αυτό το κοντέινερ για να αλλάξετε την κατεύθυνση της μετάφρασης. Κάντε κλικ στο κουμπί για να ανταλλάξετε τη γλώσσα πηγής με τη γλώσσα στόχο.",
+      questionCount:
+        "Επιλέξτε τον αριθμό των ερωτήσεων που θα εμφανίζονται στο παιχνίδι.",
+      startButton:
+        "Πατήστε το Start για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Elective Language Game – Medications Edition! În acest joc, vă veți exersa numele medicamentelor în diferite limbi. <strong>Dacă răspundeți corect de 5 ori pentru un medicament, acesta va fi marcat automat ca învățat.</strong> Acest joc este conceput pentru a vă ajuta să vă pregătiți pentru examenul Fachsprachenprüfung. Bucurați-vă de joc!",
+      regionSelect:
+        "Regiunea este setată în funcție de preferințele dvs.; totuși, o puteți schimba aici.",
+      filterColumn:
+        "Aici puteți alege filtrul: învățate, neînvățate sau în pauză (amânate).",
+      categorySelect:
+        "Alegeți categoria medicamentelor. Implicit, este selectat 'Toate'.",
+      editToggleButton:
+        "Când modul de editare este activat, puteți modifica răspunsul după o greșeală.",
+      languageSwapContainer:
+        "Utilizați acest container pentru a schimba direcția traducerii. Apăsați butonul pentru a schimba limbile sursă și țintă.",
+      questionCount:
+        "Selectați numărul de întrebări care vor fi afișate în joc.",
+      startButton:
+        "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
 

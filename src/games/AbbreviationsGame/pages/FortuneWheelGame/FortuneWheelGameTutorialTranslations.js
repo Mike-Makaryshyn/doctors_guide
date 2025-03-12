@@ -261,6 +261,64 @@ const tutorialTranslations = {
       skip: "Omitir",
     },
   },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Fortune Wheel Game για την εκμάθηση ιατρικών συντομογραφιών! Περιστρέψτε τον τροχό για να δοκιμάσετε τις γνώσεις σας στις συντομογραφίες. <strong>Ρυθμίστε τα φίλτρα και τις ρυθμίσεις σας για να εξατομικεύσετε την εμπειρία μάθησής σας.</strong>",
+      regionSelect:
+        "Επιλέξτε την περιοχή σας εδώ. Αυτό φιλτράρει τους ιατρικούς όρους βάσει γεωγραφικής περιοχής.",
+      filterSelect:
+        "Επιλέξτε το φίλτρο: μαθευμένες, αμάθευτες ή σε παύση.",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των ιατρικών όρων. Από προεπιλογή επιλέγεται 'Όλα'.",
+      playersSelect:
+        "Καθορίστε τον αριθμό των παικτών για τη λειτουργία πολλαπλών παικτών.",
+      displayModeSelect:
+        "Επιλέξτε τον τρόπο εμφάνισης: Στον τρόπο 'Συντομογραφία→Γερμανικά', η συντομογραφία εμφανίζεται αριστερά και πρέπει να ανακαλέσετε τον πλήρη γερμανικό όρο· στον τρόπο 'Γερμανικά→Συντομογραφία', ο γερμανικός όρος εμφανίζεται αριστερά και πρέπει να ανακαλέσετε τη συντομογραφία· στον τρόπο 'Μικτός', ο τρόπος επιλέγεται τυχαία για κάθε όρο.",
+      questionCountSelect:
+        "Επιλέξτε τον αριθμό των όρων που θα συμπεριληφθούν στο παιχνίδι.",
+      startButton:
+        "Κάντε κλικ στο Start για να ξεκινήσετε το παιχνίδι.",
+      spinButton:
+        "Πατήστε αυτό το κουμπί για να περιστρέψετε τον τροχό και να αποκαλύψετε έναν όρο."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Fortune Wheel Game pentru învățarea abrevierilor medicale! Rotiți roata pentru a vă testa cunoștințele despre abrevieri. <strong>Reglați filtrele și setările pentru a vă personaliza experiența de învățare.</strong>",
+      regionSelect:
+        "Selectați regiunea dvs. aici. Aceasta filtrează termenii medicali în funcție de zonă geografică.",
+      filterSelect:
+        "Alegeți filtrul: învățate, neînvățate sau în pauză.",
+      categorySelect:
+        "Selectați categoria termenilor medicali. Implicit, este selectat 'Toate'.",
+      playersSelect:
+        "Stabiliți numărul de jucători pentru modul multiplayer.",
+      displayModeSelect:
+        "Alegeți modul de afișare: în modul 'Abreviere→Germană', partea stângă afișează abrevierea și trebuie să menționați termenul complet în germană; în modul 'Germană→Abreviere', partea stângă afișează termenul german și trebuie să menționați abrevierea; în modul 'Mixte', modul este determinat aleatoriu pentru fiecare termen.",
+      questionCountSelect:
+        "Selectați numărul de termeni care vor fi incluși în joc.",
+      startButton:
+        "Faceți clic pe Start pentru a începe jocul.",
+      spinButton:
+        "Apăsați acest buton pentru a roti roata și a dezvălui un termen."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
+  }
 };
 
 export default tutorialTranslations;

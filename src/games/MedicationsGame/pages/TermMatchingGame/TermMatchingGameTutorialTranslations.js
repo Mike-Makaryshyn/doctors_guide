@@ -242,6 +242,60 @@ const tutorialTranslations = {
       next: "Siguiente",
       skip: "Omitir"
     }
+  },
+  el: {
+    steps: {
+      intro:
+        "Καλώς ήρθατε στο Term Matching Game! Σε αυτό το παιχνίδι, πρέπει να αντιστοιχίσετε τους όρους από τα αριστερά (στα Γερμανικά) με τις σωστές ορισμούς από τα δεξιά (στην επιλεγμένη σας γλώσσα). Παρακαλούμε σημειώστε ότι εστιάζουμε στη μελέτη σημαντικών φαρμάκων για την Fachsprachprüfung. Αυτά τα φάρμακα είναι κρίσιμα για την εξέτασή σας.",
+      regionSelect:
+        "Η περιοχή ορίζεται αυτόματα βάσει των παγκόσμιων προτιμήσεών σας· ωστόσο, μπορείτε να την αλλάξετε εδώ.",
+      selectWrapper:
+        "Αυτό το κοντέινερ (NativeSelect) σας επιτρέπει να επιλέξετε την περιοχή.",
+      filterColumn:
+        "Επιλέξτε το φίλτρο: μάθημένα, αμαθημένα ή σε παύση.",
+      categorySelect:
+        "Επιλέξτε την κατηγορία των όρων. Διατίθενται περίπου 20 κατηγορίες.",
+      languageSwapContainer:
+        "Χρησιμοποιήστε αυτό το κοντέινερ για να αλλάξετε την κατεύθυνση της μετάφρασης. Στα αριστερά είναι πάντα τα Γερμανικά, στα δεξιά η επιλεγμένη σας γλώσσα.",
+      questionCountContainer:
+        "Επιλέξτε τον αριθμό των όρων που θα συμπεριληφθούν στο παιχνίδι.",
+      startButton:
+        "Πατήστε το Start για να ξεκινήσετε το παιχνίδι."
+    },
+    buttons: {
+      back: "Πίσω",
+      close: "Κλείσιμο",
+      last: "Τέλος",
+      next: "Επόμενο",
+      skip: "Παράβλεψη"
+    }
+  },
+  ro: {
+    steps: {
+      intro:
+        "Bine ați venit la Term Matching Game! În acest joc, trebuie să asociați termenii din stânga (în germană) cu definițiile corecte din dreapta (în limba aleasă de dvs.). Vă rugăm să rețineți că ne concentrăm pe învățarea medicamentelor importante pentru Fachsprachprüfung. Aceste medicamente sunt esențiale pentru examenul dvs.",
+      regionSelect:
+        "Regiunea este setată automat în funcție de preferințele dvs. globale; totuși, o puteți schimba aici.",
+      selectWrapper:
+        "Acest container (NativeSelect) vă permite să alegeți regiunea.",
+      filterColumn:
+        "Alegeți filtrul: învățate, neînvățate sau în pauză.",
+      categorySelect:
+        "Alegeți categoria termenilor. Sunt disponibile aproximativ 20 de categorii.",
+      languageSwapContainer:
+        "Utilizați acest container pentru a schimba direcția traducerii. În stânga este întotdeauna limba germană, iar în dreapta limba aleasă de dvs.",
+      questionCountContainer:
+        "Selectați numărul de termeni care vor fi incluși în joc.",
+      startButton:
+        "Apăsați Start pentru a începe jocul."
+    },
+    buttons: {
+      back: "Înapoi",
+      close: "Închide",
+      last: "Finalizare",
+      next: "Următorul",
+      skip: "Sari peste"
+    }
   }
 };
   
