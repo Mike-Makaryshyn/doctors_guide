@@ -3,7 +3,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 1,
     fullName: "V.a. Panikattacke",
-    specialty: "Psychosomatik",
+    specialty: "panischeAttacken",
     name: "Karin",
     surname: "Hartmann",
     birthdate: "",
@@ -542,7 +542,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 6,
     fullName: "V.a. Gonarthrose",
-    specialty: "patellafraktur",
+    specialty: "gonarthrose",
     name: "Purkhard",
     surname: "Schwulinski",
     birthdate: "",
@@ -1080,7 +1080,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 11,
     fullName: "V.a. Panikattacke",
-    specialty: "Psychosomatik",
+    specialty: "panischeAttacken",
     name: "Karin",
     surname: "Hartmann",
     birthdate: "",
@@ -1177,7 +1177,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 12,
     fullName: "V.a. Magenkarzinom",
-    specialty: "Gastroenterologie",
+    specialty: "magenkarzinom",
     name: "Julian",
     surname: "Brückner",
     birthdate: "",
@@ -1371,7 +1371,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 14,
     fullName: "V.a. Hepatische Enzephalopathie",
-    specialty: "Gastroenterologie",
+    specialty: "hepatischeenzephalopathie",
     name: "Max",
     surname: "Freudenberg",
     birthdate: "12.03.1978",
@@ -1565,7 +1565,7 @@ const BW_FREIBURG_DATA = [
   {
     id: 16,
     fullName: "V.a. Karzinoid",
-    specialty: "Endokrinologie / Onkologie",
+    specialty: "karzinoid",
     name: "Michael",
     surname: "",
     birthdate: "",

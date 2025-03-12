@@ -54781,16 +54781,3243 @@ Einleiten ergänzender diagnostischer Maßnahmen zur Bestätigung der LAE, Ident
 
 `
   }
+},
+panischeAttacken: {
+  name: "Panische Attacken",
+  currentAnamnese: {
+    additionalInfo: `
+**Aktueller Anamnese: Panische Attacken**
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+• Herausfinden, weshalb der Patient ärztliche Hilfe sucht – ob es um akute Panikattacken, Angstgefühle, Herzrasen oder generelle Unruhe geht.  
+
+**Beispielfragen:**  
+• „Was führt Sie heute zu uns?“  
+• „Haben Sie in letzter Zeit starke Angstattacken oder plötzliche Panikgefühle erlebt?“  
+• „Wann treten diese Attacken besonders häufig auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bekomme immer wieder plötzlich starke Angst, mein Herz rast, und ich denke, ich könnte sterben.“  
+• *Arzt:* „Wir werden Ihre Symptome genauer untersuchen, um die Intensität und Häufigkeit Ihrer Panikattacken festzustellen.“  
+
+---
+
+**2. Lokalisation und Art der Beschwerden**  
+**Ziel:**  
+• Bestimmen, wie sich die Panikattacken äußern (körperliche Symptome wie Herzrasen, Schwitzen, Zittern, Engegefühl in der Brust; psychische Symptome wie Todesangst, Kontrollverlust).  
+
+**Beispielfragen:**  
+• „Welche Körperbereiche sind besonders betroffen? Spüren Sie das Herzrasen oder ein Engegefühl in der Brust?“  
+• „Empfinden Sie ein intensives Angst- oder Ohnmachtsgefühl?“  
+• „Haben Sie das Gefühl, zu ersticken oder keine Luft zu bekommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe dann ein starkes Engegefühl in der Brust und Schwindel, manchmal denke ich, ich verliere gleich die Kontrolle.“  
+• *Arzt:* „Das hilft uns, Ihre körperlichen und psychischen Symptome während einer Panikattacke besser zu verstehen.“  
+
+---
+
+**3. Zeitverlauf und Dauer**  
+**Ziel:**  
+• Erfassung, wann die ersten Panikattacken auftraten, wie häufig sie auftreten und wie lange sie anhalten.  
+
+**Beispielfragen:**  
+• „Seit wann leiden Sie an Panikattacken?“  
+• „Treten die Attacken plötzlich auf oder können Sie sie kommen sehen?“  
+• „Wie lange halten diese Angstzustände in der Regel an?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Die ersten Attacken hatte ich vor ein paar Monaten, sie dauern meist nur wenige Minuten, fühlen sich aber sehr lang an.“  
+• *Arzt:* „Die Dauer und Häufigkeit der Attacken sind wichtige Anhaltspunkte für die Diagnose und Therapieplanung.“  
+
+---
+
+**4. Detaillierte Symptombeschreibung**  
+**Ziel:**  
+• Genaues Erfassen aller Symptome, z. B. Herzrasen, Atemnot, Schwitzen, Zittern, Schwindel, Angst vor Kontrollverlust oder Angst zu sterben.  
+
+**Beispielfragen:**  
+• „Wie würden Sie Ihr Herzrasen beschreiben – sehr schnell, unregelmäßig?“  
+• „Haben Sie während der Attacken das Gefühl, verrückt zu werden oder die Kontrolle zu verlieren?“  
+• „Leiden Sie dabei unter anderen körperlichen Symptomen wie Übelkeit oder Kribbeln in den Gliedmaßen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich spüre mein Herz bis zum Hals schlagen, mir wird schwindelig, und ich glaube, jeden Moment könnte etwas Schlimmes passieren.“  
+• *Arzt:* „Diese Schilderungen geben einen genauen Einblick in die Intensität und die Vielfalt der Symptome während einer Panikattacke.“  
+
+---
+
+**5. Begleitende Symptome**  
+**Ziel:**  
+• Erfassen von weiteren Beschwerden, die oft mit Panikattacken einhergehen, wie Schlafstörungen, generelle innere Unruhe, Stimmungsschwankungen oder depressive Episoden.  
+
+**Beispielfragen:**  
+• „Haben Sie auch Schwierigkeiten beim Ein- oder Durchschlafen?“  
+• „Fühlen Sie sich oft nervös oder angespannt, auch außerhalb der Attacken?“  
+• „Gibt es Tage, an denen Sie sich niedergeschlagen oder depressiv fühlen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin ständig angespannt, schlafe schlecht und mache mir oft Sorgen über Kleinigkeiten.“  
+• *Arzt:* „Diese chronische Anspannung kann die Häufigkeit und Schwere der Panikattacken beeinflussen.“  
+
+---
+
+**6. Auslöser und Risikofaktoren**  
+**Ziel:**  
+• Identifikation potenzieller Auslöser wie Stress, Konflikte, bestimmte Situationen (z. B. Menschenmengen, geschlossene Räume) oder traumatische Erlebnisse.  
+
+**Beispielfragen:**  
+• „Gibt es bestimmte Situationen, in denen Sie die Attacken häufiger bekommen, z. B. in der Öffentlichkeit, im Auto oder in engen Räumen?“  
+• „Hatten Sie in letzter Zeit besonders viel Stress oder persönliche Belastungen?“  
+• „Haben Sie traumatische Erfahrungen gemacht, an die Sie oft denken müssen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meistens treten die Attacken auf, wenn ich in einem Kaufhaus oder in vollen Bussen bin. Ich hatte auch viel Stress auf der Arbeit.“  
+• *Arzt:* „Diese Faktoren sind wichtig, um mögliche Auslöser zu erkennen und Strategien zu entwickeln, damit umzugehen.“  
+
+---
+
+**7. Intensität der Beschwerden und funktionelle Einschränkung**  
+**Ziel:**  
+• Quantitative Einschätzung, wie stark Panikattacken den Alltag beeinträchtigen, z. B. in Bezug auf Beruf, Beziehungen und soziale Aktivitäten.  
+
+**Beispielfragen:**  
+• „Wie stark schätzen Sie Ihre Angst während einer Attacke auf einer Skala von 0 bis 10 ein?“  
+• „Beeinträchtigt Ihre Angst Ihren Tagesablauf, z. B. bei der Arbeit oder im sozialen Leben?“  
+• „Haben Sie Aktivitäten vermieden, weil Sie Angst vor einer Panikattacke hatten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich würde die Angst mit 9 oder 10 bewerten, ich vermeide inzwischen sogar Einkäufe, weil ich Angst vor einer Attacke habe.“  
+• *Arzt:* „Diese Angaben verdeutlichen den Schweregrad der Beeinträchtigung und sind wesentlich für den Therapieansatz.“  
+
+---
+
+**8. Maßnahmen zur Symptomlinderung**  
+**Ziel:**  
+• Erfassen, welche Selbsthilfemaßnahmen oder professionellen Unterstützungsangebote bereits genutzt wurden, um die Panikattacken zu lindern.  
+
+**Beispielfragen:**  
+• „Haben Sie bereits versucht, Entspannungstechniken wie Atemübungen oder Meditation anzuwenden?“  
+• „Waren Sie schon in psychotherapeutischer Behandlung, z. B. kognitive Verhaltenstherapie?“  
+• „Haben Medikamente wie Beruhigungsmittel oder Antidepressiva eine Rolle gespielt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe versucht, Atemübungen zu machen, das hilft manchmal, aber die Angst kommt schnell wieder.“  
+• *Arzt:* „Wir werden prüfen, ob eine kombinierte Therapie aus Psychotherapie und eventuell medikamentöser Unterstützung sinnvoll ist.“  
+
+---
+
+**9. Vorherige medizinische Betreuung**  
+**Ziel:**  
+• Erfassen, ob und welche Behandlungen wegen Panikattacken oder anderer Angststörungen bereits stattgefunden haben (Psychotherapie, Notaufnahmenbesuche etc.).  
+
+**Beispielfragen:**  
+• „Haben Sie sich schon einmal in der Notaufnahme vorgestellt, weil Sie dachten, es sei ein Herzproblem?“  
+• „Gab es in der Vergangenheit psychiatrische oder psychotherapeutische Behandlungen?“  
+• „Wurden Sie bereits medikamentös eingestellt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich war einmal in der Notaufnahme, weil ich dachte, ich hätte einen Herzinfarkt, aber es war eine Panikattacke. Eine richtige Therapie hatte ich bisher nicht.“  
+• *Arzt:* „Das ist typisch – viele Patienten glauben bei einer Panikattacke, ein akutes Herzproblem zu haben. Wir müssen daher Ihre Vorgeschichte gut kennen.“  
+
+---
+
+**10. Weitere relevante Informationen**  
+**Ziel:**  
+• Zusätzliche Aspekte erfassen, etwa den allgemeinen Gesundheitszustand, beruflichen Stress, familiäre Situation oder andere psychische Belastungen.  
+
+**Beispielfragen:**  
+• „Gibt es noch andere Symptome, die Ihnen wichtig erscheinen?“  
+• „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+• „Gab es kürzlich Veränderungen in Ihrem Privat- oder Berufsleben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe aktuell viel Druck auf der Arbeit und mich vor kurzem von meinem Partner getrennt. Das macht mich zusätzlich ängstlich.“  
+• *Arzt:* „Diese psychosozialen Faktoren sind relevant, um ein umfassendes Bild Ihrer Situation zu bekommen und eine passgenaue Behandlung zu planen.“  
+`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+**Vegetative Anamnese bei Panischen Attacken**
+
+**1. Allgemeiner Zustand**  
+**Ziel:**  
+Erfassen, wie sich die Panikattacken auf das allgemeine Befinden auswirken, z. B. in Form von ständiger Unruhe, Erschöpfung oder Nervosität.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich oft angespannt oder rastlos?“  
+• „Haben Sie das Gefühl, ständig auf der Hut zu sein?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin fast immer nervös, selbst wenn objektiv nichts passiert.“  
+• *Arzt:* „Diese andauernde innere Anspannung kann ein Anzeichen dafür sein, dass Ihre Angstproblematik insgesamt sehr präsent ist.“  
+
+---
+
+**2. Appetit und Gewicht**  
+**Ziel:**  
+Erfassen, ob es durch die Angstzustände zu Appetitverlust oder -steigerung kommt und ob das Gewicht beeinflusst ist.
+
+**Beispielfragen:**  
+• „Haben Sie bemerkt, dass Sie weniger oder mehr essen als früher?“  
+• „Haben Sie in letzter Zeit ungewollt Gewicht verloren oder zugenommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe oft keinen Appetit, besonders wenn ich Angst habe.“  
+• *Arzt:* „Gewichtsveränderungen können auf eine Veränderung im Essverhalten durch stressbedingte Angst hinweisen.“  
+
+---
+
+**3. Durstgefühl**  
+**Ziel:**  
+Erfassen, ob ein vermehrter Durst oder Mundtrockenheit auftritt, was bei Angstzuständen und Stressreaktionen vorkommen kann.
+
+**Beispielfragen:**  
+• „Haben Sie öfter Durst, insbesondere in Situationen, in denen Sie sich ängstlich fühlen?“  
+• „Fühlen Sie häufig eine trockene Mundhöhle?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich panisch werde, trocknet mein Mund sofort aus, und ich muss etwas trinken.“  
+• *Arzt:* „Diese Stressreaktion ist nicht ungewöhnlich und kann Teil des vegetativen Ungleichgewichts sein.“  
+
+---
+
+**4. Erbrechen**  
+**Ziel:**  
+Abklären, ob starke Übelkeit oder Erbrechen während oder nach einer Panikattacke auftreten.
+
+**Beispielfragen:**  
+• „Haben Sie während einer Panikattacke das Gefühl, sich übergeben zu müssen?“  
+• „Ist es schon einmal tatsächlich zu Erbrechen gekommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich war einige Male kurz davor zu erbrechen, aber es kam noch nie dazu.“  
+• *Arzt:* „Starke Übelkeit und Brechreiz können mit intensiven Angstzuständen verbunden sein.“  
+
+---
+
+**5. Stuhlgang**  
+**Ziel:**  
+Erfassen, ob Durchfall oder Verstopfung im Zusammenhang mit Stress und Angst auftreten.
+
+**Beispielfragen:**  
+• „Haben Sie Veränderungen in Ihrem Stuhlgang bemerkt, z. B. Durchfall bei starker Nervosität?“  
+• „Tritt dies vor allem in Angstphasen auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich sehr nervös bin, bekomme ich schnell Durchfall.“  
+• *Arzt:* „Die Reaktion des Darms auf Stress ist ein häufiges Phänomen und kann mit der Panikproblematik zusammenhängen.“  
+
+---
+
+**6. Wasserlassen**  
+**Ziel:**  
+Erfassen, ob häufiger Harndrang als Angstsymptom auftritt.
+
+**Beispielfragen:**  
+• „Müssen Sie in Stresssituationen häufiger zur Toilette?“  
+• „Ist Ihnen ein verstärkter Harndrang aufgefallen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor einer wichtigen Situation oder wenn ich Panik bekomme, muss ich oft zur Toilette.“  
+• *Arzt:* „Auch dies kann eine vegetative Begleiterscheinung von Angstzuständen sein.“  
+
+---
+
+**7. Schwitzen**  
+**Ziel:**  
+Erfassen von vermehrtem Schwitzen, insbesondere kaltem Schweiß oder Schweißausbrüchen während einer Panikattacke.
+
+**Beispielfragen:**  
+• „Bemerken Sie, dass Sie während einer Attacke stark schwitzen?“  
+• „Treten Schweißausbrüche in Zusammenhang mit Ihrer Angst auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich schwitze dann richtig stark, besonders an den Händen und unter den Armen.“  
+• *Arzt:* „Starkes Schwitzen ist ein typisches Symptom, wenn das sympathische Nervensystem aktiviert ist.“  
+
+---
+
+**8. Schwindel**  
+**Ziel:**  
+Abklären von Schwindel- oder Benommenheitsgefühlen, die häufig bei Panikattacken auftreten.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich während der Panik manchmal benommen oder haben Sie das Gefühl, gleich ohnmächtig zu werden?“  
+• „Treten diese Symptome eher in stressigen Situationen auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal denke ich, ich kann nicht mehr klar sehen oder werde gleich umkippen.“  
+• *Arzt:* „Schwindel ist ein häufiges Begleitsymptom und kann die Angst weiter verstärken.“  
+
+---
+
+**9. Bewusstsein**  
+**Ziel:**  
+Erfassen von Bewusstseinsstörungen oder Derealisation/Depersonalisation, die bei schweren Panikattacken vorkommen können.
+
+**Beispielfragen:**  
+• „Haben Sie das Gefühl, dass die Umwelt unwirklich wirkt oder Sie sich selbst fremd fühlen?“  
+• „Gab es Momente, in denen Sie fast das Bewusstsein verloren haben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich fühle mich manchmal wie in einem Traum oder als wäre ich nicht wirklich in meinem Körper.“  
+• *Arzt:* „Diese Zustände gehören zu den häufigen Begleiterscheinungen von ausgeprägten Panikattacken.“  
+
+---
+
+**10. Herzklopfen**  
+**Ziel:**  
+Erfassen von Herzrasen, Palpitationen oder Herzstolpern als körperliche Hauptsymptome bei Panikattacken.
+
+**Beispielfragen:**  
+• „Haben Sie das Gefühl, Ihr Herz schlägt unnormal schnell oder kräftig?“  
+• „Fühlen Sie ein starkes Klopfen bis zum Hals?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mein Herz rast dann so sehr, dass ich denke, es platzt gleich.“  
+• *Arzt:* „Herzklopfen oder Herzrasen ist eines der zentralen körperlichen Symptome bei Panikattacken.“  
+
+---
+
+**11. Atemnot**  
+**Ziel:**  
+Erfassen, ob während der Panikattacken das Gefühl von Atemnot oder Beklemmung auftritt.
+
+**Beispielfragen:**  
+• „Haben Sie das Gefühl, nicht genug Luft zu bekommen?“  
+• „Atmen Sie während einer Attacke schneller oder flacher?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hyperventiliere manchmal, sodass mir ganz schwindelig wird.“  
+• *Arzt:* „Atemnot und Hyperventilation können den Teufelskreis der Angst weiter anfeuern.“  
+
+---
+
+**12. Hitzempfinden**  
+**Ziel:**  
+Erfassen von Hitzegefühlen oder Hitzewallungen in akuten Angstsituationen.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich bei einer Attacke plötzlich sehr heiß?“  
+• „Treten solche Hitzewallungen oft zusammen mit Herzrasen auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal wird mir so heiß, als ob mir das Blut in den Kopf schießt.“  
+• *Arzt:* „Hitzewallungen sind ebenfalls eine vegetative Reaktion, die bei Panikattacken auftreten kann.“  
+
+---
+
+**13. Kältegefühl**  
+**Ziel:**  
+Abklären, ob Kältegefühle, Frösteln oder Gänsehaut als Teil der Paniksymptome auftreten.
+
+**Beispielfragen:**  
+• „Haben Sie öfter das Gefühl, zu frieren oder Gänsehaut zu bekommen, wenn Sie panisch werden?“  
+• „Kommt es zu unkontrollierbarem Zittern?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ja, manchmal zittere ich richtig am ganzen Körper und fühle mich eiskalt.“  
+• *Arzt:* „Kälteempfinden und Zittern können auch zur typischen Stressreaktion gehören.“  
+
+---
+
+**14. Schlaf**  
+**Ziel:**  
+Erfassen der Schlafqualität, da Schlafstörungen (Einschlaf- und Durchschlafprobleme) häufig mit Angststörungen verbunden sind.
+
+**Beispielfragen:**  
+• „Haben Sie Schwierigkeiten beim Einschlafen wegen Ihrer Angst?“  
+• „Wachen Sie nachts auf und fühlen sich panisch?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wache oft mit Herzrasen auf und brauche lange, um wieder einzuschlafen.“  
+• *Arzt:* „Schlafstörungen verstärken oft die allgemeine Anspannung und können Panikattacken weiter begünstigen.“  
+
+---
+
+**15. Sexualanamnese**  
+**Ziel:**  
+Erfassen, ob die Panikattacken zu Veränderungen im Sexualleben führen, z. B. durch verminderte Libido oder Angst vor Intimität.
+
+**Beispielfragen:**  
+• „Haben Sie Veränderungen in Ihrem Sexualtrieb festgestellt?“  
+• „Beeinflussen Ihre Ängste oder Panikattacken Ihr Sexualleben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe wenig Interesse an Sex, weil ich ständig unter Anspannung stehe.“  
+• *Arzt:* „Diese Information ist wichtig, um die Lebensqualität insgesamt zu berücksichtigen.“  
+
+---
+
+**16. Sonstiges**  
+**Ziel:**  
+Weitere vegetative Symptome oder Auffälligkeiten erfassen, die für das Gesamtbild relevant sein könnten.
+
+**Beispielfragen:**  
+• „Gibt es noch andere körperliche Reaktionen, die Sie beobachten?“  
+• „Möchten Sie sonstige Veränderungen Ihres vegetativen Befindens ergänzen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe manchmal ein starkes Kribbeln in den Fingern oder im Gesicht.“  
+• *Arzt:* „Ein Kribbeln (Parästhesien) kann bei Hyperventilation und Panikattacken auftreten.“  
+
+---
+
+**17. Gynäkologische Anamnese (bei weiblichen Patienten)**  
+**Ziel:**  
+Abklären, ob hormonelle oder zyklusbedingte Faktoren die Panikattacken beeinflussen.
+
+**Beispielfragen:**  
+• „Haben Sie bemerkt, dass die Panikattacken zyklusabhängig stärker oder schwächer sind?“  
+• „Wirken sich Ihre Menstruationsbeschwerden auf Ihre Angstgefühle aus?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patientin:* „In der Woche vor meiner Periode bin ich emotional sehr labil und anfälliger für Angst.“  
+• *Arzt:* „Hormonelle Schwankungen können das Angstgeschehen verstärken – das sollten wir im Behandlungsverlauf berücksichtigen.“  
+`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+Erfassen von bereits bestehenden Erkrankungen, die mit Angst- oder Panikstörungen in Verbindung stehen oder die durch Stress und Angst verstärkt werden können.
+
+**Relevante Aspekte:**  
+- Frühere psychische Erkrankungen (z. B. Depression, Phobien, Zwangsstörungen)  
+- Körperliche Erkrankungen, die Herzklopfen oder Atemnot verursachen könnten (z. B. Schilddrüsenüberfunktion)  
+- Familienanamnese mit Angststörungen oder anderen psychischen Erkrankungen
+
+**Beispielfragen:**  
+• „Haben Sie in der Vergangenheit bereits psychotherapeutische oder psychiatrische Behandlungen gehabt?“  
+• „Leiden Sie an körperlichen Krankheiten, die Angstattacken begünstigen könnten, z. B. Schilddrüsenprobleme?“  
+• „Sind Fälle von Angststörungen in Ihrer Familie bekannt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte einmal eine leichte Depression, aber eine Angststörung wurde damals nicht diagnostiziert. Meine Mutter leidet an einer Angstneurose.“  
+• *Arzt:* „Diese Informationen sind wichtig, um zu beurteilen, ob genetische oder psychische Vorbelastungen vorliegen.“  
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+Erfassen, ob Operationen oder andere invasive Eingriffe stattgefunden haben, die traumatisch waren und Angstzustände begünstigen könnten.
+
+**Relevante Aspekte:**  
+- Operationen unter Vollnarkose (Angst vor Kontrollverlust)  
+- Negative Erfahrungen während medizinischer Eingriffe
+
+**Beispielfragen:**  
+• „Wurden Sie in der Vergangenheit operiert, und hatten Sie damals starke Ängste?“  
+• „Haben Sie schlechte Erfahrungen mit ärztlichen Eingriffen gemacht?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte vor Jahren eine OP, bei der ich kurz vorm Einschlafen panische Angst bekam, seitdem fühle ich mich bei jeder Behandlung unwohl.“  
+• *Arzt:* „Solche traumatischen Erlebnisse können Panikattacken begünstigen und sind wichtig für die Anamnese.“  
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+Erfassen der aktuellen Medikation und möglicher früherer Behandlungen mit Psychopharmaka oder angstlösenden Mitteln.
+
+**Relevante Aspekte:**  
+- Benzodiazepine oder andere Beruhigungsmittel (Abhängigkeitspotenzial)  
+- Antidepressiva (SSRIs, SNRIs)  
+- Betablocker (zur Symptomkontrolle von Herzrasen)  
+- Selbstmedikation (Alkohol, pflanzliche Beruhigungsmittel)
+
+**Beispielfragen:**  
+• „Nehmen Sie regelmäßig Medikamente gegen Angst oder Depressionen ein?“  
+• „Haben Sie früher Beruhigungsmittel (z. B. Benzodiazepine) verschrieben bekommen?“  
+• „Nutzen Sie Betablocker, um Herzrasen zu kontrollieren?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe von meinem Hausarzt ein Beruhigungsmittel bekommen, nehme es aber nur bei Bedarf.“  
+• *Arzt:* „Wir werden gemeinsam schauen, ob eine andere medikamentöse Einstellung oder eine begleitende Therapie sinnvoll ist.“  
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+Ermitteln, ob Allergien oder Unverträglichkeiten vorliegen, die bei einer angedachten medikamentösen Therapie (z. B. Antidepressiva) beachtet werden müssen.
+
+**Relevante Aspekte:**  
+- Bekannte Allergien gegen Psychopharmaka  
+- Unverträglichkeiten von Hilfsstoffen oder pflanzlichen Präparaten
+
+**Beispielfragen:**  
+• „Haben Sie bekannte Allergien gegen bestimmte Medikamente, insbesondere gegen angstlösende Präparate?“  
+• „Reagieren Sie empfindlich auf pflanzliche Mittel?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mir sind keine Allergien gegen Medikamente bekannt.“  
+• *Arzt:* „Gut, dann können wir die medikamentöse Therapie ohne große Einschränkungen planen.“  
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+Abklären, ob weitere schädliche Einflüsse oder Risikofaktoren bestehen, die Panikattacken begünstigen oder verstärken können.
+
+**Wichtige Noxen:**  
+- **Nikotinabusus:** Rauchen kann Angstzustände verstärken, Herzrasen fördern  
+- **Alkoholkonsum:** Temporäre Beruhigung, langfristig aber verstärkende Wirkung auf Ängste  
+- **Drogenkonsum:** Bestimmte Substanzen können Panikattacken auslösen oder verschlimmern  
+- **Übermäßiger Koffeinkonsum:** Koffein kann Herzrasen und innere Unruhe verstärken  
+
+**Beispielfragen:**  
+• „Rauchen Sie oder nehmen Sie andere Substanzen zu sich, um Stress zu reduzieren?“  
+• „Wie viel Kaffee oder Energy-Drinks trinken Sie täglich?“  
+• „Gibt es Zeiten, in denen Sie Alkohol oder Drogen missbrauchen, um Ihre Ängste zu lindern?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich rauche gelegentlich und trinke viel Kaffee, gerade wenn ich gestresst bin.“  
+• *Arzt:* „Diese Faktoren können Panikattacken weiter anheizen – wir sollten darüber sprechen, wie Sie den Konsum reduzieren können.“  
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+Erfassen, ob es in der Familie Fälle von Angststörungen, Depressionen oder anderen psychischen Erkrankungen gibt, die das Risiko für Panikattacken erhöhen können.
+
+**Beispielfragen:**  
+• „Gibt es in Ihrer Familie bekannte Fälle von Panikstörungen oder anderen psychischen Erkrankungen?“  
+• „Leidet ein Familienmitglied unter Depressionen oder ähnlichen Beschwerden?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meine Tante hatte wohl auch immer schon starke Ängste, das wurde aber nie richtig behandelt.“  
+• *Arzt:* „Eine familiäre Häufung kann darauf hindeuten, dass eine gewisse Anfälligkeit besteht.“  
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+Erfassung der Lebensumstände, sozialen Faktoren und Stressoren, die Panikattacken beeinflussen können.
+
+**Relevante Bereiche:**
+
+**Beruf und Arbeitsumfeld**  
+- **Relevanz:**  
+Hoher Leistungsdruck oder Mobbing können Angststörungen auslösen oder verschlimmern.  
+- **Beispielfragen:**  
+• „Wie hoch empfinden Sie den Stress in Ihrem Beruf?“  
+• „Fühlen Sie sich in Ihrem Arbeitsumfeld unterstützt oder eher belastet?“
+
+**Wohnsituation und Freizeit**  
+- **Relevanz:**  
+Familiäre Konflikte oder beengte Wohnverhältnisse können Unsicherheit und Stress verstärken.  
+- **Beispielfragen:**  
+• „Wie ist Ihre Wohnsituation? Leben Sie allein oder mit anderen Personen zusammen?“  
+• „Haben Sie ausreichend Erholungsmöglichkeiten und Freiräume?“
+
+**Lebensstil und Ernährungsgewohnheiten**  
+- **Relevanz:**  
+Eine ungesunde Lebensweise (Bewegungsmangel, schlechte Ernährung) kann das Stressempfinden erhöhen.  
+- **Beispielfragen:**  
+• „Wie sieht Ihr Tagesablauf aus? Treiben Sie Sport?“  
+• „Achten Sie auf eine ausgewogene Ernährung?“
+
+**Psychosoziale Faktoren**  
+- **Relevanz:**  
+Konflikte, Verlustereignisse oder traumatische Erlebnisse können Panikattacken begünstigen.  
+- **Beispielfragen:**  
+• „Fühlen Sie sich häufig allein gelassen oder haben Sie ein stabiles soziales Netzwerk?“  
+• „Gibt es aktuelle Konflikte im Familien- oder Freundeskreis?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe einen stressigen Job, wohne allein und sehe meine Freunde selten. Ich fühle mich oft isoliert.“  
+• *Arzt:* „Diese sozialen und emotionalen Faktoren können zu Ihrer Angstproblematik beitragen und sind für die Therapieplanung wichtig.“  
+`
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+Abgrenzung von anderen Erkrankungen oder Störungen, die ähnliche Symptome hervorrufen können (z. B. Herzrhythmusstörungen, Hyperthyreose, andere Angststörungen).
+
+**Beispiele für Differenzialdiagnosen:**  
+1. **Herz-Kreislauf-Erkrankungen:**  
+  - Herzstolpern, Herzrhythmusstörungen oder Angina pectoris können ähnliche Symptome auslösen.  
+2. **Hyperthyreose (Schilddrüsenüberfunktion):**  
+  - Führt zu Herzrasen, Nervosität und Gewichtsverlust, kann mit Panik verwechselt werden.  
+3. **Generalisierte Angststörung:**  
+  - Durch anhaltende und diffuse Ängste gekennzeichnet, nicht nur anfallsweise.  
+4. **Soziale Phobie:**  
+  - Ängste in sozialen Situationen mit starker Selbstwahrnehmung, kann Panikattacken ähneln.  
+
+**Abgrenzung:**  
+- Anhand einer gründlichen Anamnese, körperlichen Untersuchung, ggf. Schilddrüsenfunktionsdiagnostik, EKG und weiterer apparativer Untersuchungen.  
+- Psychologische Testverfahren zur Unterscheidung verschiedener Angstformen können ebenfalls hilfreich sein.  
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+Auf Basis der anamnestischen Daten, psychologischen Befunde und ergänzender Untersuchungen eine fundierte Diagnose zu stellen, die auf eine Panikstörung bzw. episodische Panikattacken hinweist.
+
+**Diagnostische Ansätze und Begründung:**  
+- **Symptomatik:**  
+- Wiederkehrende Panikattacken mit intensivem Angstgefühl, körperlichen Symptomen wie Herzrasen, Atemnot, Schwindel und Furcht vor Kontrollverlust.  
+- **Ausschluss organischer Ursachen:**  
+- Durch medizinische Untersuchungen wie EKG oder Schilddrüsentests.  
+- **Psychologische Evaluation:**  
+- Erfassung von Angstauslösern, Dauer, Intensität und Häufigkeit der Attacken sowie ggf. Komorbiditäten (Depression, andere Angststörungen).
+
+**Typische Diagnose:**  
+- Panikstörung (episodisch auftretende Angstanfälle), häufig mit Vermeidungsverhalten und starker Beeinträchtigung der Lebensqualität.  
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen**
+
+**Ziel:**  
+Einleiten ergänzender diagnostischer Maßnahmen zur Bestätigung der Verdachtsdiagnose, Ausschluss körperlicher Ursachen und Planung eines geeigneten Therapieansatzes.
+
+**Klinische Untersuchung:**  
+- **Allgemeiner Status:**  
+- Messung von Blutdruck, Herzfrequenz, Auskultation von Herz und Lunge.  
+- **Psychischer Status:**  
+- Beobachtung von Unruhe, Angstzeichen, Befragung zu Stimmung und Gedanken.
+
+**Laboruntersuchungen:**  
+- **Schilddrüsenwerte (TSH, fT3, fT4):**  
+- Ausschluss einer Hyperthyreose.  
+- **Basislabor:**  
+- Blutbild, Elektrolyte zur allgemeinen Gesundheitskontrolle.
+
+**Apparative Diagnostik:**  
+- **EKG oder Belastungs-EKG:**  
+- Ausschluss von Herzrhythmusstörungen.  
+- **Langzeit-Blutdruckmessung:**  
+- Falls Verdacht auf Bluthochdruck oder Schwankungen.
+
+**Psychologische Testverfahren:**  
+- **Angstfragebögen oder Strukturierte Interviews:**  
+- Genaue Erfassung der Ausprägung und Art der Angstsymptome.  
+- **Fragebögen zu Komorbiditäten:**  
+- Ausschluss oder Bestätigung weiterer Störungen wie Depression oder Phobien.
+
+**Beispielfragen:**  
+• „Möchten Sie ein EKG zur Sicherheit machen, um organische Ursachen auszuschließen?“  
+• „Würden Sie sich einer psychologischen Diagnostik stellen, um genaue Werte zur Intensität Ihrer Angst zu erhalten?“  
+• „Haben Sie Bedenken hinsichtlich einer Blutabnahme oder spezifischen Untersuchungen?“  
+
+`
+  }
+
+
+
+
+
+
+
+
+
+
+
+},
+gonarthrose: {
+  name: "Gonarthrose",
+  currentAnamnese: {
+    additionalInfo: `
+**Aktueller Anamnese: Gonarthrose**
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+• Herausfinden, warum der Patient ärztliche Hilfe sucht – ob es um anhaltende Knieschmerzen, Bewegungseinschränkungen oder eine akute Verschlechterung geht.
+
+**Beispielfragen:**  
+• „Was führt Sie heute zu mir? Haben Sie starke Knieschmerzen oder Probleme beim Gehen bemerkt?“  
+• „Haben sich Ihre Kniebeschwerden in letzter Zeit verschlimmert oder verändern sie sich schubweise?“  
+• „Können Sie noch alltägliche Aktivitäten ohne Schmerzen ausführen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe schon seit Monaten Schmerzen im Knie, und jetzt kann ich kaum noch Treppen steigen.“  
+• *Arzt:* „Wir werden Ihre Beschwerden und deren Verlauf genau erfassen, um den Schweregrad der Gonarthrose zu bestimmen.“
+
+---
+
+**2. Lokalisation und Art der Beschwerden**  
+**Ziel:**  
+• Bestimmen, ob die Schmerzen vorwiegend im medialen, lateralen oder patellofemoralen Kniebereich auftreten, sowie die Schmerzcharakteristik (dumpf, stechend, belastungsabhängig).
+
+**Beispielfragen:**  
+• „Wo genau am Knie verspüren Sie den Schmerz – eher an der Innenseite, Außenseite oder unterhalb der Kniescheibe?“  
+• „Ist der Schmerz eher stechend, ziehend oder dumpf?“  
+• „Spüren Sie ein Knirschen oder Reiben im Kniegelenk?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Der Schmerz sitzt überwiegend an der Innenseite des Knies, vor allem wenn ich mich hinsetze oder aufstehe.“  
+• *Arzt:* „Das deutet auf Veränderungen im medialen Gelenkabschnitt hin und kann typisch für Gonarthrose sein.“
+
+---
+
+**3. Zeitverlauf und Dauer**  
+**Ziel:**  
+• Erfassung, wann die Kniebeschwerden erstmals auftraten, ob sie langsam begannen und sich allmählich verstärkten oder plötzlich auftraten.
+
+**Beispielfragen:**  
+• „Seit wann haben Sie Knieprobleme? Waren diese anfangs nur gelegentlich oder durchgehend vorhanden?“  
+• „Gab es ein bestimmtes Ereignis, nach dem die Schmerzen erstmals auftraten?“  
+• „Haben Sie vor Kurzem eine Bewegung oder Belastung erlebt, die die Beschwerden ausgelöst haben könnte?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Die Schmerzen haben vor etwa einem Jahr angefangen und wurden immer schlimmer.“  
+• *Arzt:* „Der schleichende Beginn ist typisch für eine degenerative Veränderung wie Gonarthrose.“
+
+---
+
+**4. Detaillierte Symptombeschreibung**  
+**Ziel:**  
+• Umfassende Erfassung aller Beschwerden, z. B. Schmerzen bei Belastung, Steifigkeitsgefühl nach dem Aufstehen, Schwellungen oder Instabilität im Knie.
+
+**Beispielfragen:**  
+• „Wie ist das Schmerzverhalten im Tagesverlauf? Wird es gegen Abend schlimmer?“  
+• „Haben Sie ein Steifheitsgefühl im Knie nach längerem Sitzen oder nach dem Aufstehen (Anlaufschmerz)?“  
+• „Wird das Knie gelegentlich dick oder überwärmt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor allem nach dem Aufstehen ist das Knie sehr steif, und die ersten Schritte sind schmerzhaft. Im Laufe des Tages wird es ein wenig besser.“  
+• *Arzt:* „Typische Anlaufschmerzen und Steifigkeit sprechen für eine Arthrose-Problematik im Knie.“
+
+---
+
+**5. Begleitende Symptome**  
+**Ziel:**  
+• Erfassen, ob weitere Gelenke betroffen sind, ob es allgemeine Anzeichen von Entzündung gibt (Rötung, Erwärmung) oder ob es Blockaden bzw. Instabilitätsgefühle gibt.
+
+**Beispielfragen:**  
+• „Gibt es bei Ihnen auch Probleme mit anderen Gelenken, z. B. Hüften oder Fußgelenken?“  
+• „Haben Sie Schwellungen, Rötungen oder Wärmeentwicklung am Knie bemerkt?“  
+• „Fühlt sich das Knie manchmal instabil an, als würde es nachgeben?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal habe ich das Gefühl, dass mein Knie ‚wegknicken‘ könnte. Es fühlt sich nicht mehr sicher an.“  
+• *Arzt:* „Instabilitätsgefühle können bei fortgeschrittener Gonarthrose auftreten, wenn die Bandstrukturen geschwächt sind.“
+
+---
+
+**6. Auslöser und Risikofaktoren**  
+**Ziel:**  
+• Identifikation von Faktoren, die Gonarthrose begünstigen können, z. B. Übergewicht, Fehlstellungen, berufliche oder sportliche Belastung.
+
+**Beispielfragen:**  
+• „Gibt es in Ihrem Alltag starke Belastungen für das Knie (z. B. durch Beruf oder Sport)?“  
+• „Liegt eine X- oder O-Bein-Stellung vor?“  
+• „Haben Sie in letzter Zeit an Gewicht zugenommen oder bestehen bekannte Stoffwechselerkrankungen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich arbeite viel im Stehen und trage häufig schwere Lasten, was das Knie sehr belastet.“  
+• *Arzt:* „Berufliche Belastung und Übergewicht können den Gelenkverschleiß deutlich beschleunigen.“
+
+---
+
+**7. Intensität der Beschwerden und funktionelle Einschränkung**  
+**Ziel:**  
+• Quantitative Einschätzung, wie stark die Schmerzen den Alltag beeinflussen und ob wichtige Aktivitäten (Treppensteigen, längeres Gehen) beeinträchtigt sind.
+
+**Beispielfragen:**  
+• „Wie stark schätzen Sie Ihre Knieschmerzen auf einer Skala von 0 bis 10?“  
+• „Beeinträchtigen die Schmerzen Ihre Fähigkeit, alltägliche Dinge wie Einkaufen oder Spazierengehen zu erledigen?“  
+• „Haben Sie Probleme beim Treppensteigen oder Aufstehen von einem Stuhl?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Bei einer Belastung über 10–15 Minuten werden die Schmerzen unerträglich – ich würde sie mit 8 bewerten.“  
+• *Arzt:* „Eine Schmerzintensität von 8 deutet auf eine erhebliche Beeinträchtigung hin und erfordert eine gezielte Therapie.“
+
+---
+
+**8. Maßnahmen zur Symptomlinderung**  
+**Ziel:**  
+• Erfassen, welche Maßnahmen (z. B. Schonung, Schmerzmittel, Physiotherapie) bereits ergriffen wurden und wie erfolgreich sie waren.
+
+**Beispielfragen:**  
+• „Welche Medikamente oder Hausmittel nutzen Sie, um die Knieschmerzen zu lindern?“  
+• „Haben Sie schon Physiotherapie oder andere Anwendungen wie Kälte- oder Wärmetherapie ausprobiert?“  
+• „Spüren Sie eine Besserung, wenn Sie das Knie entlasten oder hochlegen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe Ibuprofen eingenommen und eine Zeit lang Physiotherapie gemacht, die Schmerzen kommen aber immer wieder.“  
+• *Arzt:* „Wir werden schauen, ob wir die Therapie anpassen können, zum Beispiel durch gezielte Übungen oder andere Schmerzmittel.“
+
+---
+
+**9. Vorherige medizinische Betreuung**  
+**Ziel:**  
+• Erfassen, ob der Patient bereits wegen Gonarthrose oder ähnlichen Gelenkbeschwerden in Behandlung war und ob bildgebende Untersuchungen vorliegen.
+
+**Beispielfragen:**  
+• „Seit wann ist Ihnen bekannt, dass Sie eventuell eine Arthrose haben?“  
+• „Wurden bereits Röntgenaufnahmen oder ein MRT vom Knie gemacht?“  
+• „Gab es früher Operationen oder andere Eingriffe im Kniebereich?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor einem halben Jahr hat mir der Orthopäde gesagt, dass ich Abnutzungserscheinungen im Knie habe. Ein Röntgen wurde schon gemacht.“  
+• *Arzt:* „Dann sollten wir die vorhandenen Befunde einsehen, um die Fortschreitung zu beurteilen und weitere Schritte zu planen.“
+
+---
+
+**10. Weitere relevante Informationen**  
+**Ziel:**  
+• Erfassen zusätzlicher Aspekte, wie allgemeiner Gesundheitszustand, beruflicher Stress, sportliche Aktivitäten oder andere Gelenkbeschwerden, die die Therapie beeinflussen könnten.
+
+**Beispielfragen:**  
+• „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+• „Gab es in letzter Zeit eine Veränderung im Arbeits- oder Freizeitverhalten, die das Knie zusätzlich beanspruchen könnte?“  
+• „Haben Sie auch Schmerzen in anderen Gelenken, die auf eine Arthrose hindeuten?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin grundsätzlich fit, habe aber mein Sportpensum deutlich reduziert, weil das Knie nicht mehr mitmacht.“  
+• *Arzt:* „Diese Informationen helfen uns, den Umfang der Arthrose und den Einfluss auf Ihren Alltag besser einzuschätzen.`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+**Vegetative Anamnese bei Gonarthrose**
+
+**1. Allgemeiner Zustand**  
+**Ziel:**  
+Erfassung, ob die chronischen Knieschmerzen zu allgemeiner Erschöpfung, Müdigkeit oder Abgeschlagenheit führen.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich durch die dauerhaften Knieschmerzen oft müde oder erschöpft?“  
+• „Beeinflusst der Schmerz Ihren allgemeinen Antrieb und Ihre Energie im Alltag?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin abends oft völlig fertig, weil die Schmerzen mich tagsüber sehr anstrengen.“  
+• *Arzt:* „Chronische Schmerzen können den gesamten Organismus belasten und zu Müdigkeit führen.“
+
+---
+
+**2. Appetit und Gewicht**  
+**Ziel:**  
+Erfassen, ob sich durch Schmerzen der Appetit verändert hat und ob Gewichtszunahme oder -abnahme besteht, was die Gelenke zusätzlich belasten kann.
+
+**Beispielfragen:**  
+• „Hat sich Ihr Appetit aufgrund der Schmerzen verändert?“  
+• „Haben Sie in letzter Zeit ungewollt Gewicht verloren oder zugenommen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe ein paar Kilo zugenommen, weil ich mich weniger bewege und trotzdem gleich esse.“  
+• *Arzt:* „Übergewicht kann die Knie zusätzlich belasten und sollte gegebenenfalls reduziert werden.“
+
+---
+
+**3. Durstgefühl**  
+**Ziel:**  
+Abklären, ob vermehrter Durst besteht, was eher indirekt mit Gonarthrose zusammenhängen könnte (z. B. durch Schmerzmittel).
+
+**Beispielfragen:**  
+• „Trinken Sie mehr als sonst, zum Beispiel wegen Trockenheitsgefühlen durch Medikamente?“  
+• „Haben Sie das Gefühl, Sie müssen häufiger etwas trinken?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Seit ich Schmerztabletten nehme, habe ich das Gefühl, mehr Wasser trinken zu müssen.“  
+• *Arzt:* „Das könnten Nebenwirkungen der Medikamente sein, wir behalten das im Blick.“
+
+---
+
+**4. Erbrechen**  
+**Ziel:**  
+Erfassen von Übelkeit oder Erbrechen, das im Zusammenhang mit starken Schmerzen oder Medikamenten auftreten kann.
+
+**Beispielfragen:**  
+• „Haben Sie schon einmal Übelkeit oder Erbrechen nach starker Schmerzmitteleinnahme verspürt?“  
+• „Treten Magenbeschwerden auf, wenn die Schmerzen sehr intensiv sind?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich vertrage Ibuprofen nicht so gut, mir wird manchmal leicht übel davon.“  
+• *Arzt:* „Wir prüfen, ob eine bessere Magenverträglichkeit gewährleistet werden kann oder alternative Mittel sinnvoll sind.“
+
+---
+
+**5. Stuhlgang**  
+**Ziel:**  
+Erfassen von Veränderungen im Stuhlgang, die durch Schmerzmittel (z. B. Opioide) verursacht werden können.
+
+**Beispielfragen:**  
+• „Haben Sie Probleme mit Verstopfung oder Durchfall, insbesondere seit Einnahme bestimmter Medikamente?“  
+• „Hat sich Ihr Stuhlgang generell verändert?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe immer wieder Verstopfung, seit ich die Schmerzmittel regelmäßig nehme.“  
+• *Arzt:* „Das ist eine häufige Nebenwirkung. Wir können Optionen besprechen, um dem entgegenzuwirken.“
+
+---
+
+**6. Wasserlassen**  
+**Ziel:**  
+Abklären, ob Probleme beim Wasserlassen bestehen, die indirekt mit Gonarthrose zusammenhängen könnten (z. B. Schmerzen bei Bewegung).
+
+**Beispielfragen:**  
+• „Müssen Sie nachts häufig aufstehen, um zur Toilette zu gehen, und bereitet Ihnen das Knie dabei Schwierigkeiten?“  
+• „Haben Sie Veränderungen in der Häufigkeit oder im Drang bemerkt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich versuche manchmal, das nächtliche Wasserlassen hinauszuzögern, weil mir das Aufstehen so weh tut.“  
+• *Arzt:* „Das verdeutlicht, wie stark die Schmerzen Ihren Alltag beeinflussen – auch nachts.“
+
+---
+
+**7. Schwitzen**  
+**Ziel:**  
+Erfassen von übermäßigem Schwitzen, das selten direkt durch Gonarthrose verursacht wird, aber etwa bei starken Schmerzen oder Nebenwirkungen von Medikamenten auftreten kann.
+
+**Beispielfragen:**  
+• „Haben Sie vermehrt Schweißausbrüche, insbesondere wenn die Schmerzen stark sind?“  
+• „Treten diese Symptome eher tagsüber oder nachts auf?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn der Schmerz sehr stark ist, schwitze ich manchmal, aber das ist nicht regelmäßig.“  
+• *Arzt:* „Wir werden beobachten, ob es einen Zusammenhang mit der Medikamenteneinnahme oder Schmerzspitzen gibt.“
+
+---
+
+**8. Schwindel**  
+**Ziel:**  
+Abklären von Schwindelgefühlen, die bei Schmerzmitteln oder bei längerem Stehen durch das schmerzende Knie ausgelöst werden können.
+
+**Beispielfragen:**  
+• „Wird Ihnen manchmal schwindelig, wenn Sie längere Zeit stehen und das Knie sich meldet?“  
+• „Haben Sie Kreislaufbeschwerden im Zusammenhang mit Ihren Schmerzen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal wird mir beim Aufstehen leicht schwindelig, vor allem wenn das Knie steif ist und ich unsicher trete.“  
+• *Arzt:* „Das kann daran liegen, dass Sie sich instinktiv schonen und dabei der Kreislauf nicht gut in Schwung kommt.“
+
+---
+
+**9. Bewusstsein**  
+**Ziel:**  
+Erfassen von Bewusstseinsstörungen, die in diesem Kontext selten sind, aber bei starken Schmerzmitteln auftreten könnten.
+
+**Beispielfragen:**  
+• „Haben Sie schon einmal das Gefühl gehabt, Sie könnten das Bewusstsein verlieren, wenn die Schmerzen sehr stark waren?“  
+• „Gab es Episoden von Verwirrtheit oder Benommenheit?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Nein, ich hatte noch nie einen Ohnmachtsanfall, nur kurze Benommenheit.“  
+• *Arzt:* „Benommenheit kann durch die Schmerzmittel begünstigt werden. Wir beobachten das weiter.“
+
+---
+
+**10. Herzklopfen**  
+**Ziel:**  
+Erfassen von Herzrasen oder Palpitationen, eventuell stressbedingt durch chronische Schmerzen.
+
+**Beispielfragen:**  
+• „Verspüren Sie manchmal Herzklopfen oder Herzrasen, wenn die Schmerzen stark sind?“  
+• „Fühlen Sie sich dadurch beunruhigt oder ängstlich?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich stark gehbehindert bin, steigt mein Puls sehr an, ich werde unruhig.“  
+• *Arzt:* „Stress und Schmerzen können die Herzfrequenz beeinflussen. Wir behalten das im Blick.“
+
+---
+
+**11. Atemnot**  
+**Ziel:**  
+Abklären, ob Schmerzen eine Hyperventilation oder Atemnot auslösen, was eher selten bei Gonarthrose ist, aber bei Bewegungseinschränkung vorkommen kann.
+
+**Beispielfragen:**  
+• „Haben Sie Atemprobleme, wenn Sie sich bewegen und das Knie schmerzt?“  
+• „Haben Sie das Gefühl, keine Luft zu bekommen, wenn der Schmerz plötzlich auftritt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Eher nicht, nur wenn ich zu schnell gehe und das Knie wehtut, atme ich schwerer.“  
+• *Arzt:* „Das liegt vermutlich an der körperlichen Anstrengung und Schonhaltung, wir werden das dokumentieren.“
+
+---
+
+**12. Hitzempfinden**  
+**Ziel:**  
+Erfassen von Hitzewallungen oder Hitzegefühlen, die selten direkt mit Gonarthrose zusammenhängen, jedoch bei entzündlichen Schüben auftreten können.
+
+**Beispielfragen:**  
+• „Haben Sie manchmal das Gefühl, das Knie sei heiß oder dass eine Hitze durch den Körper geht?“  
+• „Spüren Sie allgemein Hitzewallungen, wenn die Schmerzen stärker werden?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Das Knie fühlt sich manchmal heiß an, wenn es geschwollen ist, aber sonst habe ich keine Hitzewallungen.“  
+• *Arzt:* „Das könnte auf entzündliche Prozesse in Phasen einer aktivierten Arthrose hindeuten.“
+
+---
+
+**13. Kältegefühl**  
+**Ziel:**  
+Abklären, ob ein Kälteempfinden oder Frösteln auftritt, was eher unspezifisch ist, aber in Zusammenhang mit Schmerzen stehen kann.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich manchmal kälter als sonst, insbesondere im betroffenen Knie?“  
+• „Verstärkt sich der Schmerz bei kaltem Wetter?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Bei kaltem Wetter tun mir die Gelenke immer besonders weh, dann friere ich auch leichter.“  
+• *Arzt:* „Kältereiz kann Arthroseschmerzen verstärken, viele Patienten empfinden Wärme als wohltuend.“
+
+---
+
+**14. Schlaf**  
+**Ziel:**  
+Erfassen von Schlafstörungen aufgrund nächtlicher Schmerzen und Bewegungsunfähigkeit.
+
+**Beispielfragen:**  
+• „Werden Sie nachts häufig wach, weil das Knie schmerzt?“  
+• „Haben Sie Schwierigkeiten, eine schmerzfreie Schlafposition zu finden?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wache regelmäßig auf, wenn ich mich umdrehe und das Knie weh tut.“  
+• *Arzt:* „Schlafmangel durch Schmerzen verschlechtert die Lebensqualität und kann die Schmerzempfindlichkeit erhöhen.“
+
+---
+
+**15. Sexualanamnese**  
+**Ziel:**  
+Erfassen, ob Gonarthrose die Sexualität einschränkt, etwa durch Schmerzen in bestimmten Positionen.
+
+**Beispielfragen:**  
+• „Beeinflussen die Knieschmerzen Ihr Sexualleben?“  
+• „Gibt es Stellungen oder Bewegungen, die Sie besonders meiden, weil sie Schmerzen verursachen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manche Positionen schmerzen sehr im Knie, daher verzichte ich darauf.“  
+• *Arzt:* „Wir können bei Bedarf Hilfestellungen geben, wie Sie Ihren Alltag und auch Ihr Sexualleben an die Einschränkungen anpassen können.“
+
+---
+
+**16. Sonstiges**  
+**Ziel:**  
+Erfassen weiterer vegetativer Symptome oder Auffälligkeiten, die für das Gesamtbild relevant sein könnten.
+
+**Beispielfragen:**  
+• „Gibt es noch andere körperliche Veränderungen, die Sie bemerkt haben?“  
+• „Möchten Sie weitere Aspekte Ihres Befindens ergänzen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Insgesamt fühle ich mich oft abgeschlagen, was sicher auch an den Schmerzen liegt.“  
+• *Arzt:* „Wir werden alle Faktoren erfassen, um ein umfassendes Bild zu erhalten und die Therapie entsprechend anzupassen.“
+
+---
+
+**17. Gynäkologische Anamnese (bei weiblichen Patienten)**  
+**Ziel:**  
+Abklären, ob hormonelle Faktoren oder zyklusbedingte Schwankungen das Schmerzempfinden beeinflussen.
+
+**Beispielfragen:**  
+• „Haben Sie den Eindruck, dass sich Ihre Knieschmerzen zyklusbedingt verstärken?“  
+• „Wirken sich Ihre Menstruation oder Wechseljahresbeschwerden auf Ihre Knieprobleme aus?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patientin:* „Mir ist kein deutlicher Zusammenhang aufgefallen, nur in den Wechseljahren habe ich allgemein mehr Gelenkbeschwerden gehabt.“  
+• *Arzt:* „Das kann eine Rolle spielen, wir berücksichtigen das in der ganzheitlichen Betrachtung.`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+Erfassen von bereits bestehenden Erkrankungen, die den Verlauf der Gonarthrose beeinflussen oder begünstigen können (z. B. Rheuma, Gicht, Fehlstellungen).
+
+**Relevante Aspekte:**  
+- Frühere Knieverletzungen (Meniskusschäden, Bänderrisse)  
+- Andere arthrotische Veränderungen (Hüftgelenk, Wirbelsäule)  
+- Stoffwechselstörungen wie Diabetes oder Gicht
+
+**Beispielfragen:**  
+• „Wurden bei Ihnen bereits Knieverletzungen diagnostiziert, zum Beispiel ein Meniskusriss?“  
+• „Liegen rheumatische Erkrankungen vor, wie Rheumatoide Arthritis?“  
+• „Sind andere Gelenke ebenfalls von Arthrose betroffen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor Jahren hatte ich einen Kreuzbandriss, der nicht optimal verheilt ist.“  
+• *Arzt:* „Alte Knieverletzungen können den Knorpelabbau beschleunigen und somit Gonarthrose fördern.“  
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+Erfassen, ob Operationen am Knie durchgeführt wurden, die das Gelenk nachhaltig beeinflussen, z. B. arthroskopische Eingriffe, Bandrekonstruktionen oder Teilprothesen.
+
+**Relevante Aspekte:**  
+- Arthroskopische Meniskusentfernung oder Glättung  
+- Bandplastik (Kreuzband, Seitenbänder)  
+- Teil- oder Totalendoprothese
+
+**Beispielfragen:**  
+• „Wurden Sie bereits am Knie operiert? Wenn ja, aus welchem Grund?“  
+• „Gab es nach diesen Eingriffen Komplikationen oder lang anhaltende Beschwerden?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ja, eine Arthroskopie wegen Meniskusschaden vor fünf Jahren. Danach war es eine Zeit lang besser, jetzt kommen die Schmerzen aber wieder.“  
+• *Arzt:* „Operationsnarben oder Knorpelglättungen können langfristig die Gelenksituation beeinflussen. Wir werden das berücksichtigen.“  
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+Erfassen, welche Medikamente aktuell oder in der Vergangenheit zur Behandlung der Gonarthrose oder allgemeiner Beschwerden eingenommen werden.
+
+**Relevante Aspekte:**  
+- Analgetika (NSAR, Paracetamol, Opioide)  
+- Knorpelschutzpräparate (z. B. Glucosamin, Chondroitin)  
+- Injektionstherapien (Hyaluronsäure, Kortison)  
+- Physiotherapeutische Anwendungen (ggf. mit begleitender Medikation)
+
+**Beispielfragen:**  
+• „Welche Schmerzmittel nehmen Sie regelmäßig ein?“  
+• „Haben Sie bereits Hyaluronsäure- oder Kortisonspritzen ins Knie erhalten?“  
+• „Nehmen Sie Nahrungsergänzungsmittel für den Knorpelaufbau?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme Ibuprofen, wenn die Schmerzen stark sind, und habe einmal Kortisonspritzen bekommen.“  
+• *Arzt:* „Wir prüfen, ob eine angepasste Medikation oder alternative Behandlung sinnvoll ist, um Nebenwirkungen zu minimieren.“  
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+Identifizieren, ob Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen oder invasiven Therapie (z. B. Injektionen) beachtet werden müssen.
+
+**Relevante Aspekte:**  
+- Allergien gegen NSAR oder Injektionssubstanzen  
+- Unverträglichkeiten von Hilfsstoffen in Medikamenten
+
+**Beispielfragen:**  
+• „Haben Sie bekannte Allergien gegen Schmerzmittel oder Kortisonpräparate?“  
+• „Gab es in der Vergangenheit allergische Reaktionen auf Hyaluronsäure oder Lokalanästhetika?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich vertrage Diclofenac nicht – davon bekomme ich Hautausschlag.“  
+• *Arzt:* „Das werden wir bei der Auswahl der geeigneten Schmerztherapie unbedingt berücksichtigen.“  
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+Erfassen von Risikofaktoren und schädlichen Einflüssen, die die Kniegelenke belasten und den Verlauf der Gonarthrose verschlimmern können.
+
+**Wichtige Noxen:**  
+- **Übergewicht:** Erhöhter Druck auf das Kniegelenk  
+- **Fehlbelastungen:** Berufliche oder sportliche Überbelastung  
+- **Rauchen:** Beeinträchtigung der Durchblutung und Heilungsprozesse  
+- **Alkohol:** Indirekte Auswirkungen auf Entzündungsprozesse und Gesundheitszustand
+
+**Beispielfragen:**  
+• „Rauchen Sie oder waren Sie Raucher?“  
+• „Haben Sie Übergewicht oder starke Gewichtsschwankungen bemerkt?“  
+• „Gibt es berufliche Tätigkeiten, bei denen das Knie stark beansprucht wird?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich stehe beruflich viel und habe auch ein paar Kilo zu viel, das merke ich am Knie.“  
+• *Arzt:* „Wir sollten gemeinsam schauen, wie Sie die Belastung reduzieren und das Gewicht etwas anpassen können, um das Knie zu entlasten.“  
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+Erfassen, ob es in der Familie Fälle von Arthrose oder anderen degenerativen Gelenkerkrankungen gibt, die das Risiko für Gonarthrose erhöhen könnten.
+
+**Beispielfragen:**  
+• „Gibt es in Ihrer Familie bekanntes Auftreten von Arthrose, etwa bei Eltern oder Großeltern?“  
+• „Leidet jemand in Ihrer Familie ebenfalls an Kniegelenkbeschwerden?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meine Mutter hatte eine Knieprothese wegen Arthrose, das scheint wohl in der Familie zu liegen.“  
+• *Arzt:* „Eine familiäre Disposition kann den Verschleiß begünstigen. Das berücksichtigen wir in der Risikoeinschätzung.“  
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+Erfassung der Lebensumstände und sozialen Faktoren, die den Verlauf der Gonarthrose und die allgemeine Gesundheit beeinflussen können.
+
+**Relevante Bereiche:**
+
+**Beruf und Arbeitsumfeld**  
+- **Relevanz:**  
+Ständige Belastung, langes Stehen oder schweres Heben können Gonarthrose verschlimmern.  
+- **Beispielfragen:**  
+• „Wie hoch ist die körperliche Belastung in Ihrem Beruf?“  
+• „Können Sie zwischendurch Pausen oder Schonhaltungen einlegen?“
+
+**Wohnsituation und Freizeit**  
+- **Relevanz:**  
+Barrierefreiheit der Wohnung (Treppen, kein Aufzug) kann die Beweglichkeit einschränken und Schmerzen verstärken.  
+- **Beispielfragen:**  
+• „Wohnen Sie in einem Haus mit vielen Stufen?“  
+• „Haben Sie in Ihrer Freizeit Möglichkeiten für Ausgleichssport oder Erholung?“
+
+**Lebensstil und Ernährungsgewohnheiten**  
+- **Relevanz:**  
+Ausgewogene Ernährung und moderater Sport können die Gelenke schonen und entlasten.  
+- **Beispielfragen:**  
+• „Achten Sie auf eine gesunde Ernährung?“  
+• „Treiben Sie regelmäßig Sport, z. B. schwimmen oder Rad fahren?“
+
+**Psychosoziale Faktoren**  
+- **Relevanz:**  
+Stress kann Schmerzen verstärken, und mangelnde soziale Unterstützung kann die Belastung erhöhen.  
+- **Beispielfragen:**  
+• „Belastet Sie Ihre Arbeit oder Ihr privates Umfeld psychisch?“  
+• „Haben Sie Angehörige oder Freunde, die Ihnen helfen könnten, wenn das Knie schmerzt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wohne im dritten Stock ohne Aufzug, was mit dem schmerzenden Knie sehr anstrengend ist.“  
+• *Arzt:* „Wir sollten über Möglichkeiten sprechen, wie Sie Ihren Alltag anpassen oder Unterstützung bekommen können, um die Belastung des Knies zu reduzieren.`  
+
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+Abgrenzung anderer Erkrankungen, die ähnliche Knieschmerzen verursachen können.
+
+**Beispiele für Differenzialdiagnosen:**  
+1. **Rheumatoide Arthritis:**  
+  - Entzündliche Gelenkerkrankung, häufig symmetrische Gelenkbeteiligung, Morgensteifigkeit.  
+2. **Meniskusläsion:**  
+  - Akute oder chronische Verletzung, kann stechende Schmerzen und Blockaden verursachen.  
+3. **Baker-Zyste (Poplitealzyste):**  
+  - Schwellung in der Kniekehle, kann Spannungsgefühl verursachen.  
+4. **Patellofemorales Schmerzsyndrom:**  
+  - Vor allem Schmerzen in oder um die Kniescheibe, bei Beugebelastungen.
+
+**Abgrenzung:**  
+- Durch bildgebende Verfahren (Röntgen, MRT), klinische Untersuchung (Bänder-, Meniskustests) und ggf. Laborwerte (Entzündungsparameter) kann die Diagnose Gonarthrose von anderen Ursachen unterschieden werden.  
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+Auf Basis der Anamnese, klinischer Untersuchung und ergänzender diagnostischer Methoden eine fundierte Diagnose der Gonarthrose zu stellen.
+
+**Diagnostische Ansätze und Begründung:**  
+- **Symptomatik:**  
+- Typischer Anlaufschmerz, Belastungsschmerz, Steifigkeit und ggf. Reibegeräusche im Knie.  
+- **Klinische Untersuchung:**  
+- Palpation, Bewegungstests (Einschränkung der Flexion/Extension, Krepitationen), Achsenfehlstellungen.  
+- **Bildgebung:**  
+- Röntgen des Kniegelenks in verschiedenen Ebenen, evt. MRT zur Beurteilung von Knorpel/Meniskus.
+
+**Typische Diagnose:**  
+- Gonarthrose (degenerative Kniegelenkserkrankung), gekennzeichnet durch Knorpelverschleiß, mögliche Osteophytenbildung und Bewegungseinschränkung.  
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen**
+
+**Ziel:**  
+Einleiten ergänzender diagnostischer Maßnahmen zur Bestätigung der Verdachtsdiagnose, Beurteilung des Knorpelschadens und Planung der weiteren Therapie.
+
+**Klinische Untersuchung:**  
+- **Inspektion und Palpation:**  
+- Achsabweichungen (X-/O-Bein), Schwellungen, Druckschmerzpunkte.  
+- **Bewegungstests:**  
+- Beurteilung der Beweglichkeit, Stabilität (Seitenbänder, Kreuzbänder) und Meniskustests.
+
+**Bildgebende Verfahren:**  
+- **Röntgen Knie in zwei Ebenen:**  
+- Beurteilung des Gelenkspalts, eventuelle Osteophyten, subchondrale Sklerosierungen.  
+- **MRT (Magnetresonanztomographie):**  
+- Detaillierte Darstellung von Knorpel, Meniskus und Bändern, falls unklare Befunde oder Differentialdiagnosen bestehen.
+
+**Laboruntersuchungen:**  
+- **Entzündungsparameter (CRP, BSG):**  
+- Ausschluss einer entzündlichen Gelenkerkrankung.  
+- **Evtl. Gelenkpunktion:**  
+- Bei Erguss zur Analyse der Gelenkflüssigkeit, Ausschluss von Infektionen oder Kristallarthropathien.
+
+**Spezielle diagnostische Tests:**  
+- **Knorpel-Ultraschall oder Arthroskopie (seltener):**  
+- Bei besonderen Fragestellungen oder geplanter therapeutischer Intervention.
+
+**Beispielfragen:**  
+• „Wollen wir ein Röntgen oder MRT machen, um das Ausmaß des Knorpelschadens zu beurteilen?“  
+• „Sollen wir eine Blutuntersuchung durchführen, um entzündliche Ursachen auszuschließen?“  
+• „Ist eine Gelenkpunktion erforderlich, wenn das Knie geschwollen ist und wir eine Entzündung vermuten?“
+`
+  }
+},
+magenkarzinom: {
+  name: "Magenkarzinom",
+  currentAnamnese: {
+    additionalInfo: `
+**Aktueller Anamnese: Magenkarzinom**
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+• Herausfinden, warum der Patient ärztliche Hilfe sucht – ob es um anhaltende Oberbauchschmerzen, ungewollten Gewichtsverlust, Übelkeit oder andere auffällige Symptome geht.  
+
+**Beispielfragen:**  
+• „Was führt Sie heute zu mir? Haben Sie Beschwerden im Oberbauch, Übelkeit oder Appetitlosigkeit bemerkt?“  
+• „Gab es jüngst Veränderungen in Ihren Essgewohnheiten oder Ihrer Verdauung?“  
+• „Haben Sie ungewollt Gewicht verloren oder anhaltende Magenbeschwerden?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe seit einigen Wochen immer wieder starke Magenschmerzen und fühle mich zunehmend schwach. Ich habe auch keinen Appetit mehr.“  
+• *Arzt:* „Wir werden Ihre Symptome genauer besprechen und eventuell weiterführende Untersuchungen planen, um die Ursache, zum Beispiel ein Magenkarzinom, abzuklären.“  
+
+---
+
+**2. Lokalisation und Art der Beschwerden**  
+**Ziel:**  
+• Bestimmen, ob die Schmerzen oder Beschwerden primär im Oberbauch lokalisiert sind, wie sie sich äußern (dumpf, brennend, stechend) und ob sie in andere Bereiche ausstrahlen.  
+
+**Beispielfragen:**  
+• „Wo genau verspüren Sie die Schmerzen – eher im mittleren Oberbauch, links oder rechts?“  
+• „Ist der Schmerz eher brennend, drückend oder stechend?“  
+• „Strahlen die Schmerzen in den Rücken oder in die Brustgegend aus?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe einen dumpfen, drückenden Schmerz im Oberbauch, manchmal strahlt er in den Rücken.“  
+• *Arzt:* „Das hilft uns, die Region besser einzugrenzen und mögliche Ursachen für Ihre Beschwerden zu erkennen.“  
+
+---
+
+**3. Zeitverlauf und Dauer**  
+**Ziel:**  
+• Erfassung, wann die Beschwerden zum ersten Mal auftraten, ob sie akut oder schleichend begannen, und ob es Phasen der Besserung oder Verschlimmerung gibt.  
+
+**Beispielfragen:**  
+• „Seit wann haben Sie diese Magenprobleme?“  
+• „Hatten Sie anfangs nur gelegentlich Beschwerden, die sich inzwischen verstärkt haben?“  
+• „Gibt es Tageszeiten oder Situationen, in denen der Schmerz stärker ist?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor einigen Monaten hatte ich nur leichte Magenbeschwerden, inzwischen sind sie fast täglich da.“  
+• *Arzt:* „Der langsame Beginn und die zunehmende Intensität können wichtige Hinweise auf ein malignes Geschehen sein.“  
+
+---
+
+**4. Detaillierte Symptombeschreibung**  
+**Ziel:**  
+• Umfassende Erfassung aller Beschwerden, z. B. Übelkeit, Erbrechen, Appetitlosigkeit, Völlegefühl, Aufstoßen, Schluckbeschwerden oder Leistungsknick.  
+
+**Beispielfragen:**  
+• „Haben Sie Übelkeit oder Erbrechen, möglicherweise sogar blutiges Erbrechen bemerkt?“  
+• „Fühlen Sie sich nach kleinen Mahlzeiten bereits voll (Frühsättigung)?“  
+• „Haben Sie Probleme beim Schlucken oder ein ständiges Völlegefühl?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich kann nur noch sehr wenig essen, fühle mich dann gleich satt und habe manchmal Übelkeit.“  
+• *Arzt:* „Frühsättigung und anhaltende Übelkeit sind typische Alarmsymptome, die wir weiter untersuchen sollten.“  
+
+---
+
+**5. Begleitende Symptome**  
+**Ziel:**  
+• Erfassen von weiteren Beschwerden wie Gewichtsabnahme, Müdigkeit, Abgeschlagenheit, Blut im Stuhl (Teerstuhl) oder Sodbrennen, die mit einem Magenkarzinom einhergehen können.  
+
+**Beispielfragen:**  
+• „Haben Sie ungewollt Gewicht verloren oder fühlen Sie sich häufig schwach?“  
+• „Ist Ihnen ein schwarzer, teerartiger Stuhl (Meläna) aufgefallen?“  
+• „Treten Sodbrennen oder saures Aufstoßen auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe in den letzten zwei Monaten etwa fünf Kilogramm abgenommen, obwohl ich das nicht wollte.“  
+• *Arzt:* „Dieser ungewollte Gewichtsverlust ist ein Warnzeichen, das in Verbindung mit Magenbeschwerden abgeklärt werden muss.“  
+
+---
+
+**6. Auslöser und Risikofaktoren**  
+**Ziel:**  
+• Identifikation von Faktoren, die ein Magenkarzinom begünstigen können, z. B. Infektion mit Helicobacter pylori, chronische Gastritis, familiäre Vorbelastung, Rauchen oder Alkohol.  
+
+**Beispielfragen:**  
+• „Wissen Sie, ob bei Ihnen eine Helicobacter-pylori-Infektion oder eine chronische Gastritis vorliegt?“  
+• „Gibt es berufliche oder private Belastungen, die die Situation verschlimmern könnten?“  
+• „Haben Sie in der Vergangenheit viel geraucht oder regelmäßig Alkohol konsumiert?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte früher öfter Magenprobleme und habe vom Hausarzt die Diagnose einer Gastritis bekommen. Rauchen tue ich seit 20 Jahren.“  
+• *Arzt:* „Chronische Gastritis, Helicobacter pylori und langjähriges Rauchen erhöhen das Risiko für Magenkrebs deutlich.“  
+
+---
+
+**7. Intensität der Beschwerden und funktionelle Einschränkung**  
+**Ziel:**  
+• Quantitative Einschätzung, wie stark die Symptome den Alltag beeinträchtigen und ob es Einschränkungen im Ernährungsverhalten oder bei Alltagsaktivitäten gibt.  
+
+**Beispielfragen:**  
+• „Wie stark schätzen Sie Ihre Schmerzen oder Beschwerden auf einer Skala von 0 bis 10?“  
+• „Beeinträchtigen die Symptome Ihre Fähigkeit, normal zu essen und Ihren Alltag zu bewältigen?“  
+• „Fühlen Sie sich durch die Beschwerden stark in Ihrer Lebensqualität eingeschränkt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe oft so starke Magenkrämpfe, dass ich kaum noch zur Arbeit gehen kann – das ist bestimmt eine 8 auf der Schmerzskala.“  
+• *Arzt:* „Eine so hohe Schmerzintensität und Einschränkung sollte schnellstmöglich weiter untersucht werden.“  
+
+---
+
+**8. Maßnahmen zur Symptomlinderung**  
+**Ziel:**  
+• Erfassen, welche Schritte (z. B. Protonenpumpenhemmer, Schonkost, Hausmittel) bereits unternommen wurden und ob eine vorübergehende Besserung erzielt wurde.  
+
+**Beispielfragen:**  
+• „Haben Sie bereits magenschonende Medikamente wie Protonenpumpenhemmer oder Antazida genommen?“  
+• „Haben Sie versucht, Ihre Ernährung umzustellen oder bestimmte Reizstoffe zu meiden?“  
+• „Gab es eine Phase, in der Sie schmerzfrei waren oder sich besser gefühlt haben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe einige Zeit Pantoprazol genommen. Anfänglich wurde es besser, aber jetzt sind die Beschwerden wieder stärker.“  
+• *Arzt:* „Das könnte darauf hindeuten, dass die Ursache tiefer liegt als eine reine Übersäuerung oder Gastritis und wir eine endoskopische Abklärung benötigen.“  
+
+---
+
+**9. Vorherige medizinische Betreuung**  
+**Ziel:**  
+• Erfassen, ob bereits Untersuchungen wie Magenspiegelungen (Gastroskopie) durchgeführt wurden, ob auffällige Befunde bekannt sind oder frühere Diagnosen (z. B. Ulkus) vorlagen.  
+
+**Beispielfragen:**  
+• „Wurde bei Ihnen schon einmal eine Magenspiegelung gemacht, und wenn ja, wann?“  
+• „Gab es dabei auffällige Befunde wie Geschwüre oder Polypen?“  
+• „Mussten Sie sich schon einmal stationär behandeln lassen wegen starker Magenbeschwerden?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor etwa zwei Jahren hatte ich eine Gastroskopie wegen eines Magengeschwürs. Damals wurde kein bösartiger Befund festgestellt.“  
+• *Arzt:* „Wir sollten gegebenenfalls eine erneute Gastroskopie veranlassen, um einen aktuellen Blick in den Magen zu werfen.“  
+
+---
+
+**10. Weitere relevante Informationen**  
+**Ziel:**  
+• Erfassen zusätzlicher Aspekte, wie allgemeiner Gesundheitszustand, berufliche oder familiäre Belastungen sowie psychosoziale Faktoren, die den Verlauf einer Krebserkrankung beeinflussen können.  
+
+**Beispielfragen:**  
+• „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+• „Gibt es in Ihrem beruflichen Umfeld oder Privatleben viel Stress?“  
+• „Fühlen Sie sich psychisch sehr belastet durch die aktuelle Situation?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin generell sehr erschöpft und habe viel beruflichen Druck. Auch habe ich Angst, dass es etwas Ernstes ist.“  
+• *Arzt:* „Diese Faktoren können Auswirkungen auf den Krankheitsverlauf haben. Wir berücksichtigen das in unserer Planung.`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+**Vegetative Anamnese bei Magenkarzinom**
+
+**1. Allgemeiner Zustand**  
+**Ziel:**  
+Erfassen, ob die Magenbeschwerden und ein möglicher Tumor zu allgemeiner Schwäche, Müdigkeit oder Antriebslosigkeit führen.  
+
+**Beispielfragen:**  
+• „Fühlen Sie sich durch Ihre Magenbeschwerden oft ausgelaugt oder erschöpft?“  
+• „Haben Sie das Gefühl, immer weniger Energie zu haben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin ständig schlapp und habe das Gefühl, gar nicht mehr richtig zu Kräften zu kommen.“  
+• *Arzt:* „Tumorerkrankungen können zu starker Müdigkeit führen, was wir bei der Therapieplanung beachten werden.“  
+
+---
+
+**2. Appetit und Gewicht**  
+**Ziel:**  
+Erfassen von Appetitlosigkeit, Gewichtsveränderungen (insbesondere Gewichtsverlust) und deren Einfluss auf den Ernährungszustand.  
+
+**Beispielfragen:**  
+• „Haben Sie den Eindruck, dass Ihr Appetit in letzter Zeit stark abgenommen hat?“  
+• „Haben Sie ungewollt an Gewicht verloren, ohne es zu wollen oder zu planen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich kann kaum noch etwas essen, fühle mich sofort satt. Insgesamt habe ich schon 6 Kilo abgenommen.“  
+• *Arzt:* „Deutlicher Gewichtsverlust und schlechte Nahrungsaufnahme sind charakteristisch für fortgeschrittene Magenprobleme, ggf. ein Hinweis auf ein Karzinom.“  
+
+---
+
+**3. Durstgefühl**  
+**Ziel:**  
+Abklären, ob vermehrter Durst besteht, was bei verminderter Nahrungsaufnahme auftreten kann, oder ob Trinkmenge reduziert ist.  
+
+**Beispielfragen:**  
+• „Trinken Sie ausreichend oder haben Sie auch weniger Durst als sonst?“  
+• „Haben Sie das Gefühl, häufiger trinken zu müssen, um Übelkeit zu vermeiden?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich trinke gelegentlich mehr Tee gegen das Übelkeitsgefühl, aber mein Durst ist nicht besonders groß.“  
+• *Arzt:* „Flüssigkeitszufuhr ist wichtig, insbesondere wenn die Nahrungsaufnahme eingeschränkt ist. Wir behalten das im Blick.“  
+
+---
+
+**4. Erbrechen**  
+**Ziel:**  
+Erfassen von Übelkeit oder Erbrechen, ggf. blutigem Erbrechen (Hämatemesis) als Hinweis auf fortgeschrittene Schleimhautschäden oder tumorbedingte Läsionen.  
+
+**Beispielfragen:**  
+• „Kommt es häufiger zu Erbrechen, vielleicht sogar mit Blutbeimengungen?“  
+• „Ist Ihnen dauerhaft übel oder tritt die Übelkeit nur zu bestimmten Tageszeiten auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal muss ich mich nach dem Essen übergeben, es ist jedoch kein Blut sichtbar.“  
+• *Arzt:* „Erbrechen nach dem Essen kann auf eine Magenausgangsverengung oder ernsthaftere Prozesse hinweisen.“  
+
+---
+
+**5. Stuhlgang**  
+**Ziel:**  
+Erfassen von Veränderungen im Stuhlverhalten, z. B. dunkler Stuhl (Meläna) bei Blutungen, Verstopfung oder Durchfall durch veränderte Ernährung.  
+
+**Beispielfragen:**  
+• „Haben Sie Veränderungen in Ihrem Stuhlgang bemerkt, z. B. dunkle Verfärbungen?“  
+• „Neigen Sie seit den Magenbeschwerden eher zu Durchfall oder Verstopfung?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mein Stuhl ist manchmal sehr dunkel, aber ich weiß nicht, ob das Blut sein könnte.“  
+• *Arzt:* „Dunkler bis schwarzer Stuhl kann auf Blutungen aus dem oberen Gastrointestinaltrakt hindeuten – das sollten wir abklären.“  
+
+---
+
+**6. Wasserlassen**  
+**Ziel:**  
+Abklären, ob Probleme beim Wasserlassen bestehen, die auf Dehydration oder andere Begleiterscheinungen einer Tumorerkrankung schließen lassen könnten.  
+
+**Beispielfragen:**  
+• „Müssen Sie seltener auf die Toilette als früher, weil Sie weniger trinken?“  
+• „Haben Sie Veränderungen in der Häufigkeit oder im Drang bemerkt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich trinke weniger und muss daher auch seltener zur Toilette. Aber sonst ist mir nichts weiter aufgefallen.“  
+• *Arzt:* „Eine ausreichende Flüssigkeitsversorgung ist wichtig, wir müssen klären, wie Ihr allgemeiner Flüssigkeitshaushalt ist.“  
+
+---
+
+**7. Schwitzen**  
+**Ziel:**  
+Erfassen von Nachtschweiß oder übermäßigem Schwitzen, das auf eine tumorbedingte Belastung oder Begleitinfektionen hindeuten kann.  
+
+**Beispielfragen:**  
+• „Haben Sie vermehrt Schweißausbrüche, besonders nachts?“  
+• „Wachen Sie manchmal schweißgebadet auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich schwitze nachts oft stark, manchmal muss ich sogar mein Nachthemd wechseln.“  
+• *Arzt:* „Nachtschweiß ist ein mögliches Warnzeichen und kann im Zusammenhang mit Tumorerkrankungen stehen.“  
+
+---
+
+**8. Schwindel**  
+**Ziel:**  
+Abklären von Schwindelgefühlen, die bei Blutarmut (Anämie durch chronische Blutungen) oder Elektrolytstörungen durch unzureichende Ernährung auftreten können.  
+
+**Beispielfragen:**  
+• „Wird Ihnen manchmal schwindelig, besonders beim Aufstehen?“  
+• „Haben Sie sich schon einmal so benommen gefühlt, dass Sie fast umgekippt wären?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich länger stehe, wird mir manchmal schwarz vor Augen.“  
+• *Arzt:* „Das kann auf eine Anämie oder Kreislaufprobleme hindeuten. Wir werden das im Labor prüfen.“  
+
+---
+
+**9. Bewusstsein**  
+**Ziel:**  
+Erfassen von möglichen Benommenheits- oder Verwirrtheitszuständen bei stark reduzierter Ernährung oder metabolischen Veränderungen.  
+
+**Beispielfragen:**  
+• „Haben Sie sich in letzter Zeit benommen oder verwirrt gefühlt?“  
+• „Gab es Momente, in denen Sie fast das Bewusstsein verloren haben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin manchmal sehr benommen und kann mich kaum konzentrieren.“  
+• *Arzt:* „Ein reduzierter Allgemeinzustand kann durch Unterernährung oder Tumorfolgen verursacht werden.“  
+
+---
+
+**10. Herzklopfen**  
+**Ziel:**  
+Erfassen von Herzrasen oder Palpitationen, die bei Anämie oder Stress durch Tumorerkrankungen auftreten können.  
+
+**Beispielfragen:**  
+• „Haben Sie manchmal das Gefühl, Ihr Herz schlägt schneller oder stärker als gewöhnlich?“  
+• „Fühlen Sie Herzklopfen, wenn Sie sich aufregen oder nur leichte Aktivitäten ausführen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Bei Belastung fängt mein Herz oft an zu rasen, früher war das nicht so.“  
+• *Arzt:* „Das kann auf eine verringerte Sauerstofftransportkapazität durch Anämie hindeuten, wir sollten das näher untersuchen.“  
+
+---
+
+**11. Atemnot**  
+**Ziel:**  
+Abklären, ob der Patient kurzatmig wird – ggf. durch allgemeine Schwäche, Blutarmut oder Begleiterkrankungen.  
+
+**Beispielfragen:**  
+• „Fühlen Sie sich manchmal kurzatmig, auch bei leichten Tätigkeiten?“  
+• „Haben Sie das Gefühl, nicht richtig durchatmen zu können?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich Treppen steige, komme ich sehr schnell aus der Puste.“  
+• *Arzt:* „Das können wir in Verbindung mit Ihrem Blutbild beurteilen, um eine Anämie auszuschließen oder zu bestätigen.“  
+
+---
+
+**12. Hitzempfinden**  
+**Ziel:**  
+Erfassen von Hitzewallungen, die eher unspezifisch sind, aber in Stresssituationen oder bei Fieber auftreten können.  
+
+**Beispielfragen:**  
+• „Haben Sie manchmal ein Hitzegefühl, als würde Ihnen heiß werden, ohne äußeren Anlass?“  
+• „Treten diese Hitzewallungen in Verbindung mit Fieber oder anderen Symptomen auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mir wird manchmal heiß, wenn ich besonders erschöpft bin, aber Fieber habe ich keins gemessen.“  
+• *Arzt:* „Wir werden darauf achten, ob es Zeichen einer Infektion oder eines Fieberschubes gibt.“  
+
+---
+
+**13. Kältegefühl**  
+**Ziel:**  
+Abklären, ob der Patient vermehrt friert oder Schüttelfrost empfindet, was auf Kreislaufprobleme oder Infektionen hindeuten kann.  
+
+**Beispielfragen:**  
+• „Fühlen Sie sich manchmal ungewöhnlich kalt oder fröstelig?“  
+• „Haben Sie Schüttelfrost bemerkt, auch ohne Fieber?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich fröstle schneller als früher, manchmal ist mir regelrecht kalt, obwohl es warm ist.“  
+• *Arzt:* „Das kann durch eine reduzierte Durchblutung oder Abgeschlagenheit bei Tumorerkrankungen begünstigt werden.“  
+
+---
+
+**14. Schlaf**  
+**Ziel:**  
+Erfassen von Schlafstörungen durch Schmerzen, Übelkeit oder nächtliches Schwitzen, die bei einem Magenkarzinom vorkommen können.  
+
+**Beispielfragen:**  
+• „Können Sie gut schlafen, oder werden Sie von Schmerzen oder Übelkeit geweckt?“  
+• „Fühlen Sie sich morgens erholt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wache häufig auf, weil mir übel ist oder ich schweißgebadet bin.“  
+• *Arzt:* „Gestörter Schlaf kann Ihre Erholungsphase beeinträchtigen und sollte in der Therapie berücksichtigt werden.“  
+
+---
+
+**15. Sexualanamnese**  
+**Ziel:**  
+Erfassen, ob die allgemeine Schwäche und Appetitlosigkeit auch das Sexualleben beeinflusst.  
+
+**Beispielfragen:**  
+• „Haben Sie Veränderungen in Ihrem Sexualtrieb festgestellt?“  
+• „Beeinträchtigen Ihre Magenbeschwerden Ihre Sexualität?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe kaum noch Interesse an Sex, fühle mich viel zu erschöpft.“  
+• *Arzt:* „Tumorerkrankungen und die damit verbundene Schwäche können auch die Libido stark beeinträchtigen.“  
+
+---
+
+**16. Sonstiges**  
+**Ziel:**  
+Erfassen weiterer vegetativer Symptome oder Auffälligkeiten, die für das Gesamtbild wichtig sind.  
+
+**Beispielfragen:**  
+• „Gibt es weitere körperliche oder psychische Veränderungen, die Sie bemerkt haben?“  
+• „Möchten Sie noch andere Symptome erwähnen, die Ihnen auffallen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich fühle mich manchmal komplett überfordert und ängstlich wegen der unklaren Diagnose.“  
+• *Arzt:* „Ihre Sorgen sind verständlich, wir sollten Sie auch psychologisch unterstützen, falls erforderlich.“  
+
+---
+
+**17. Gynäkologische Anamnese (bei weiblichen Patienten)**  
+**Ziel:**  
+Abklären, ob hormonelle Faktoren oder zyklusbedingte Schwankungen das allgemeine Befinden beeinträchtigen und ob gynäkologische Symptome bestehen.  
+
+**Beispielfragen:**  
+• „Haben Sie bemerkt, dass Ihre Magenbeschwerden zyklusabhängig stärker oder schwächer sind?“  
+• „Gibt es gynäkologische Probleme, die gleichzeitig auftreten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patientin:* „Ich kann keine klare Verbindung zum Zyklus herstellen, die Magenbeschwerden sind eher unabhängig davon.“  
+• *Arzt:* „Gut, wir konzentrieren uns vorerst auf die gastrointestinalen Ursachen, behalten aber alle Faktoren im Blick.`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+Erfassen von bereits bestehenden Erkrankungen, die das Risiko für Magenkarzinom erhöhen oder den Verlauf beeinflussen können (z. B. chronische Gastritis, Morbus Crohn, Anämie).  
+
+**Relevante Aspekte:**  
+- Frühere gastrointestinale Erkrankungen (Ulzera, Gastritis)  
+- Gastrointestinale Polypen oder Tumoren in der Vergangenheit  
+- Autoimmune oder chronisch-entzündliche Erkrankungen (Morbus Crohn)
+
+**Beispielfragen:**  
+• „Hatten Sie in der Vergangenheit bereits Magen- oder Darmgeschwüre?“  
+• „Liegen chronisch-entzündliche Darmerkrankungen vor?“  
+• „Wurde bei Ihnen jemals eine perniziöse Anämie oder eine andere Form von Blutarmut diagnostiziert?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte vor ein paar Jahren ein Magengeschwür, das behandelt wurde.“  
+• *Arzt:* „Chronische Magenläsionen können langfristig das Karzinomrisiko erhöhen, daher ist eine engmaschige Kontrolle wichtig.“  
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+Erfassen, ob operative Eingriffe am Magen-Darm-Trakt vorgenommen wurden, die den aktuellen Zustand beeinflussen könnten (z. B. Gastrektomie, Magenbypass).  
+
+**Relevante Aspekte:**  
+- Resektionen von Magen- oder Darmanteilen  
+- Operative Eingriffe wegen Magenulzera oder Blutungen  
+- Komplikationen nach früheren Operationen
+
+**Beispielfragen:**  
+• „Wurden Sie schon einmal am Magen operiert?“  
+• „Gab es nach einer früheren Operation anhaltende Beschwerden oder Komplikationen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wurde vor Jahren wegen eines schweren Geschwürs teiloperiert, und ein Teil des Magens wurde entfernt.“  
+• *Arzt:* „Postoperative Veränderungen können das Risiko für maligne Prozesse beeinflussen – wir müssen das mitberücksichtigen.“  
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+Erfassen, welche Medikamente aktuell oder in der Vergangenheit eingenommen werden, die den Magen beeinflussen könnten (z. B. NSAR, Kortison, Säureblocker).  
+
+**Relevante Aspekte:**  
+- Protonenpumpenhemmer (PPI) oder H2-Blocker  
+- NSAR (Diclofenac, Ibuprofen) bei chronischen Schmerzen  
+- Kortikosteroide  
+- Chemotherapeutika oder andere Tumormedikamente bei Vor- oder Begleiterkrankungen
+
+**Beispielfragen:**  
+• „Nehmen Sie regelmäßig Schmerzmittel ein, die den Magen reizen könnten?“  
+• „Haben Sie in letzter Zeit häufig Protonenpumpenhemmer gebraucht?“  
+• „Gibt es Medikamente, die Ihnen Ihr Arzt zur Blutverdünnung verschrieben hat?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe häufig Ibuprofen genommen, weil ich Rückenschmerzen hatte. Einen Magenschutz habe ich nicht immer genommen.“  
+• *Arzt:* „Langfristiger Gebrauch von NSAR ohne Magenschutz kann die Magenschleimhaut schädigen – wir prüfen, ob das eine Rolle spielt.“  
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+Identifizieren, ob Allergien oder Nahrungsmittelunverträglichkeiten vorliegen, die die Beschwerden erklären oder die Therapie beeinflussen könnten.  
+
+**Relevante Aspekte:**  
+- Medikamentenallergien (z. B. Antibiotika, Kontrastmittel)  
+- Lebensmittelintoleranzen (Laktose, Fruktose)  
+- Unverträglichkeiten gegenüber Zusatzstoffen
+
+**Beispielfragen:**  
+• „Sind Ihnen Allergien gegen Medikamente bekannt?“  
+• „Reagieren Sie empfindlich auf bestimmte Lebensmittel?“  
+• „Gab es schon einmal allergische Reaktionen, die ärztlich behandelt werden mussten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe keine Medikamentenallergien, vertrage aber keine Milchprodukte gut.“  
+• *Arzt:* „Unverträglichkeiten können Symptome verstärken, sind aber meist nicht die alleinige Ursache für Magenkarzinom. Wir behalten es trotzdem im Blick.“  
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+Erfassen von Risikofaktoren und schädlichen Einflüssen, die die Magenmukosa schädigen oder ein Karzinom begünstigen können.  
+
+**Wichtige Noxen:**  
+- **Rauchen:** Begünstigt verschiedene Krebserkrankungen, darunter Magenkrebs.  
+- **Alkohol:** Kann die Schleimhaut reizen und das Risiko erhöhen.  
+- **Ungesunde Ernährung:** Stark gesalzene, gepökelte Speisen, geringer Obst-/Gemüseverzehr.
+
+**Beispielfragen:**  
+• „Rauchen Sie oder haben Sie früher geraucht?“  
+• „Trinken Sie regelmäßig Alkohol?“  
+• „Ernähren Sie sich eher einseitig oder sehr salz- und konservierungsmittelreich?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich rauche seit 15 Jahren etwa eine halbe Schachtel am Tag und trinke am Wochenende gerne Bier.“  
+• *Arzt:* „Rauchen und Alkohol sind wichtige Risikofaktoren für Magenkrebs – eine Reduktion wäre sehr sinnvoll.“  
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+Erfassen, ob es in der Familie Fälle von Magenkarzinom oder anderen bösartigen Erkrankungen (z. B. familiärer Krebscluster) gibt, die das individuelle Risiko erhöhen.  
+
+**Beispielfragen:**  
+• „Sind in Ihrer Familie Fälle von Magenkrebs oder anderen Krebsarten aufgetreten?“  
+• „Gibt es eine familiäre Häufung von Tumorerkrankungen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mein Vater starb an Magenkrebs, und auch eine Tante hatte Darmkrebs.“  
+• *Arzt:* „Eine familiäre Vorbelastung kann das Risiko erhöhen – wir sollten das in Betracht ziehen und ggf. genetische Aspekte prüfen.“  
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+Erfassung der Lebensumstände und sozialen Faktoren, die den Verlauf des Magenkarzinoms und die allgemeine Versorgung beeinflussen können.  
+
+**Relevante Bereiche:**
+
+**Beruf und Arbeitsumfeld**  
+- **Relevanz:**  
+Stress, Schichtarbeit, unregelmäßige Essenszeiten können Magenprobleme verschlimmern.  
+- **Beispielfragen:**  
+• „Arbeiten Sie in Schichten oder haben Sie einen sehr stressigen Job?“  
+• „Sind regelmäßige Mahlzeiten bei Ihnen möglich?“
+
+**Wohnsituation und Freizeit**  
+- **Relevanz:**  
+Fehlende Unterstützung bei fortschreitender Krebserkrankung kann die Lebensqualität stark beeinflussen.  
+- **Beispielfragen:**  
+• „Leben Sie allein oder mit Ihrer Familie?“  
+• „Können Sie sich bei Bedarf Hilfe organisieren, etwa beim Einkaufen?“
+
+**Lebensstil und Ernährungsgewohnheiten**  
+- **Relevanz:**  
+Gesunde, ausgewogene Ernährung und ausreichende Nährstoffzufuhr sind für Krebspatienten essenziell.  
+- **Beispielfragen:**  
+• „Haben Sie derzeit die Möglichkeit, sich ausgewogen zu ernähren?“  
+• „Kochen Sie selbst oder greifen Sie eher zu Fertigprodukten?“
+
+**Psychosoziale Faktoren**  
+- **Relevanz:**  
+Die Diagnose Krebs verursacht oft Angst und Depression; fehlendes soziales Netz verstärkt diese Belastung.  
+- **Beispielfragen:**  
+• „Wie geht Ihre Familie oder Ihr soziales Umfeld mit Ihrer möglichen Erkrankung um?“  
+• „Fühlen Sie sich emotional unterstützt oder eher alleingelassen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich lebe allein und habe nicht so viel Kontakt zu Verwandten. Einkaufen und Kochen fallen mir zunehmend schwerer.“  
+• *Arzt:* „Wir sollten über soziale Unterstützung und eventuell Ernährungsberatung sprechen, um Sie besser zu versorgen.`  
+
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+Abgrenzung anderer gastrointestinaler Erkrankungen, die ähnliche Symptome wie ein Magenkarzinom zeigen können.  
+
+**Beispiele für Differenzialdiagnosen:**  
+1. **Gastritis (akut oder chronisch):**  
+   - Übelkeit, Oberbauchschmerzen, kann jedoch meist mit PPI gebessert werden.  
+2. **Magen- oder Duodenalulkus:**  
+   - Lokalisierte Schmerzen, häufig in Abhängigkeit von Nahrungsaufnahme, ggf. Blutungen.  
+3. **Funktionelle Dyspepsie:**  
+   - Reizmagen-Syndrom, jedoch ohne Gewichtsverlust oder Alarmsymptome.  
+4. **Pankreaskarzinom (bauchspeicheldrüsenbedingt):**  
+   - Kann ähnliche Oberbauchbeschwerden und Gewichtsverlust verursachen.  
+
+**Abgrenzung:**  
+- Endoskopie (Gastroskopie) mit Biopsie ist zentral zur Klärung eines Magenkarzinoms.  
+- Sonografie, CT oder MRT, je nach Befund und Verdacht auf andere Ursachen.  
+- Laborwerte (Tumormarker wie CA 19-9, CEA, aber eher unspezifisch).  
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+Auf Basis der Anamnese, klinischen Untersuchung und ergänzender diagnostischer Methoden eine fundierte Diagnose zu stellen – Magenkarzinom oder alternative Ursache.  
+
+**Diagnostische Ansätze und Begründung:**  
+- **Symptomatik:**  
+  - Chronische Oberbauchschmerzen, Gewichtsverlust, Übelkeit, Erbrechen, Anämiezeichen.  
+- **Klinische Untersuchung:**  
+  - Palpation des Abdomens, ggf. tastbarer Tumor oder Lymphknoten (Virchow-Lymphknoten).  
+- **Bildgebung und Endoskopie:**  
+  - Gastroskopie mit Biopsie: Goldstandard zur Erkennung von malignen Prozessen.  
+  - CT-Abdomen zur Staging-Diagnostik.
+
+**Typische Diagnose:**  
+- Magenkarzinom (Adenokarzinom des Magens), ggf. mit Lymphknotenmetastasen und weiterführendem Staging erforderlich.  
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen**
+
+**Ziel:**  
+Einleiten ergänzender diagnostischer Maßnahmen zur Bestätigung der Verdachtsdiagnose, Stadieneinteilung und Therapieplanung.  
+
+**Klinische Untersuchung:**  
+- **Abdomen-Inspektion und -Palpation:**  
+  - Suche nach Abwehrspannung, tastbaren Tumoren oder Aszites.  
+- **Status Lymphknoten:**  
+  - Virchow-LK (linke supraklavikuläre Region), ggf. andere auffällige Regionen.
+
+**Endoskopische Verfahren:**  
+- **Gastroskopie (ÖGD):**  
+  - Biopsieentnahmen zum histologischen Nachweis eines malignen Prozesses.  
+- **Endosonografie (falls verfügbar):**  
+  - Beurteilung der Tumorinfiltrationstiefe und lokaler Lymphknoten.
+
+**Bildgebende Verfahren:**  
+- **CT-Abdomen und Becken (ggf. Thorax):**  
+  - Zur Stadieneinteilung und Ausschluss von Fernmetastasen.  
+- **MRT oder PET-CT (optional):**  
+  - Bei speziellen Fragestellungen oder zum Metastasenausschluss.
+
+**Laboruntersuchungen:**  
+- **Großes Blutbild:**  
+  - Prüfung auf Anämie.  
+- **Tumormarker (z. B. CA 19-9, CEA):**  
+  - Unspezifisch, können aber zur Verlaufskontrolle herangezogen werden.  
+- **Helicobacter-pylori-Status:**  
+  - Für die Ursachensuche und Begleittherapie relevant.
+
+**Spezielle diagnostische Tests:**  
+- **Genetische Tests** (bei familiärer Häufung):  
+  - Ausschluss oder Bestätigung hereditärer Tumorsyndrome (z. B. Hereditäres diffuses Magenkarzinom).
+
+**Beispielfragen:**  
+• „Möchten Sie einer Magenspiegelung zustimmen, bei der wir Gewebeproben entnehmen können?“  
+• „Sollen wir eine CT-Untersuchung veranlassen, um eventuelle Metastasen auszuschließen?“  
+• „Besteht eine familiäre Belastung, bei der genetische Tests sinnvoll sein könnten?“
+`
+  }
+},
+hepatischeenzephalopathie: {
+  name: "Hepatische Enzephalopathie",
+  currentAnamnese: {
+    additionalInfo: `
+**Aktueller Anamnese: Hepatische Enzephalopathie**
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+• Herausfinden, warum der Patient ärztliche Hilfe sucht – ob es um neurologische Auffälligkeiten wie Verwirrtheit, verändertes Bewusstsein, Gedächtnisstörungen oder flapping tremor (Asterixis) geht.  
+
+**Beispielfragen:**  
+• „Was führt Sie heute zu mir? Haben Sie Gedächtnislücken, Konzentrationsprobleme oder Verwirrtheitszustände bemerkt?“  
+• „Fällt Ihnen auf, dass Sie manchmal unkontrollierte Bewegungen der Hände haben (flapping tremor)?“  
+• „Gibt es Situationen, in denen Sie zeitlich oder räumlich durcheinander geraten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich vergesse in letzter Zeit sehr viel, wirke oft benommen, und meine Frau sagt, ich wäre phasenweise verwirrt.“  
+• *Arzt:* „Wir werden Ihre neurologischen Symptome genauer untersuchen, um eine mögliche hepatische Enzephalopathie abzuklären.“  
+
+---
+
+**2. Lokalisation und Art der Beschwerden**  
+**Ziel:**  
+• Bestimmen, welche neuropsychiatrischen Symptome auftreten (Konzentrationsstörungen, Bewusstseinsveränderung, motorische Auffälligkeiten) und inwieweit sie sich äußern.  
+
+**Beispielfragen:**  
+• „Treten die Verwirrtheitszustände eher morgens oder abends auf?“  
+• „Haben Sie Schwierigkeiten, klare Sätze zu formulieren oder Wörter zu finden?“  
+• „Sind Ihnen motorische Auffälligkeiten wie Zittern oder unkontrollierte Bewegungen aufgefallen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor allem abends oder nach einer größeren Mahlzeit fühle ich mich benommen und meine Hände zittern.“  
+• *Arzt:* „Diese zeitabhängigen Schwankungen können ein Hinweis auf eine Enzephalopathie bei eingeschränkter Leberfunktion sein.“  
+
+---
+
+**3. Zeitverlauf und Dauer**  
+**Ziel:**  
+• Erfassung, wann die Symptome erstmals auftraten, ob sie sich langsam entwickelten oder ob es akute Verschlechterungen (Exazerbationen) gibt.  
+
+**Beispielfragen:**  
+• „Seit wann bemerken Sie diese Benommenheit und Konzentrationsprobleme?“  
+• „Gibt es Phasen, in denen die Beschwerden zunehmen oder sich spontan verbessern?“  
+• „Hatten Sie in letzter Zeit vermehrt Krankenhausaufenthalte, Infektionen oder andere Belastungen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor ein paar Wochen fing es an, da war ich noch im Krankenhaus wegen meiner Leberzirrhose. Danach hat es sich immer weiter gesteigert.“  
+• *Arzt:* „Hepatische Enzephalopathie kann sich schleichend entwickeln oder akut verschlechtern, zum Beispiel nach Infektionen oder Blutungen.“  
+
+---
+
+**4. Detaillierte Symptombeschreibung**  
+**Ziel:**  
+• Umfassende Erfassung aller neuropsychiatrischen Beschwerden, wie kognitive Störungen (Vergesslichkeit), psychische Veränderungen (Reizbarkeit, Lethargie), motorische Phänomene (Asterixis).  
+
+**Beispielfragen:**  
+• „Haben Sie Probleme, Alltagsaufgaben wie Kochen oder Rechnen durchzuführen?“  
+• „Fühlen Sie sich häufig antriebslos oder gereizt?“  
+• „Können Sie Veränderungen bei Ihrer Handschrift oder Feinmotorik feststellen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meine Handschrift ist unleserlicher geworden, und ich merke, dass ich alltägliche Dinge vergesse.“  
+• *Arzt:* „Diese kognitiven und motorischen Auffälligkeiten passen zum Krankheitsbild einer hepatischen Enzephalopathie.“  
+
+---
+
+**5. Begleitende Symptome**  
+**Ziel:**  
+• Erfassen von weiteren Beschwerden, die bei fortgeschrittener Lebererkrankung auftreten können, z. B. Ikterus, Aszites, Übelkeit oder allgemeine Schwäche.  
+
+**Beispielfragen:**  
+• „Haben Sie eine Gelbfärbung der Haut oder Augen (Ikterus) bemerkt?“  
+• „Ist Ihr Bauchumfang größer geworden oder haben Sie Wasseransammlungen (Aszites) festgestellt?“  
+• „Fühlen Sie sich oft abgeschlagen oder haben Sie Appetitlosigkeit?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meine Augen sind manchmal gelblich, und der Bauch hat sich aufgebläht. Ich esse auch kaum noch, habe keinen richtigen Appetit.“  
+• *Arzt:* „Leberfunktionsstörungen können zu vielfältigen Beschwerden führen, die wir gesamthaft betrachten müssen.“  
+
+---
+
+**6. Auslöser und Risikofaktoren**  
+**Ziel:**  
+• Identifikation von Faktoren, die eine hepatische Enzephalopathie auslösen oder verschlechtern können, z. B. hohe Eiweißzufuhr, Infektionen, gastrointestinale Blutungen, Elektrolytstörungen.  
+
+**Beispielfragen:**  
+• „Hatten Sie kürzlich eine Blutung aus Krampfadern in der Speiseröhre (Ösophagusvarizen)?“  
+• „Gab es Änderungen in Ihrer Ernährung, z. B. sehr eiweißreiches Essen?“  
+• „Sind Infektionen, Fieber oder andere Stressfaktoren aufgetreten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte vor Kurzem eine Blutung und war deswegen in der Notaufnahme. Danach wurde es schlimmer mit der Verwirrung.“  
+• *Arzt:* „Blutungen im Magen-Darm-Trakt führen zu Ammoniakbildung, was eine Enzephalopathie verschlechtern kann.“  
+
+---
+
+**7. Intensität der Beschwerden und funktionelle Einschränkung**  
+**Ziel:**  
+• Quantitative Einschätzung, wie stark die kognitiven und motorischen Ausfälle den Alltag beeinträchtigen, ob die Arbeitsfähigkeit eingeschränkt ist.  
+
+**Beispielfragen:**  
+• „Wie sehr schränken Sie die Symptome auf einer Skala von 0 bis 10 in Ihrem Alltag ein?“  
+• „Haben Sie Schwierigkeiten, einfache Tätigkeiten wie Ankleiden oder Bezahlen an der Kasse zu erledigen?“  
+• „Fühlen Sie sich noch sicher beim Autofahren oder bei der Bedienung technischer Geräte?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich traue mich nicht mehr, Auto zu fahren, weil ich oft nicht richtig reagieren kann – das wäre bestimmt eine 8 an Einschränkung.“  
+• *Arzt:* „Eine so starke Beeinträchtigung spricht für eine fortgeschrittene hepatische Enzephalopathie, die wir rasch behandeln müssen.“  
+
+---
+
+**8. Maßnahmen zur Symptomlinderung**  
+**Ziel:**  
+• Erfassen, welche therapeutischen Schritte (z. B. Laktulose, Rifaximin, eiweißarme Diät) bereits eingeleitet wurden und wie erfolgreich sie waren.  
+
+**Beispielfragen:**  
+• „Nehmen Sie regelmäßig Laktulose oder andere Mittel ein, um Ammoniak zu reduzieren?“  
+• „Haben Sie versucht, Ihre Eiweißzufuhr in der Ernährung zu reduzieren?“  
+• „Gab es eine Besserung Ihrer Symptome nach bestimmten Interventionen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme Laktulose, aber manchmal vergesse ich es. Wenn ich es nehme, habe ich häufig Durchfall, was unangenehm ist.“  
+• *Arzt:* „Die Therapie mit Laktulose ist zentral, wir müssen das Dosismanagement anpassen, sodass Ihre Lebensqualität möglichst wenig leidet.“  
+
+---
+
+**9. Vorherige medizinische Betreuung**  
+**Ziel:**  
+• Erfassen, ob der Patient bereits wegen einer Lebererkrankung oder explizit wegen Enzephalopathie in Behandlung war, ob diagnostische Maßnahmen (z. B. Ammoniakspiegelmessung) durchgeführt wurden.  
+
+**Beispielfragen:**  
+• „Sind Sie aufgrund Ihrer Lebererkrankung schon länger in ärztlicher Behandlung?“  
+• „Wurde bei Ihnen schon einmal der Ammoniakwert im Blut oder eine EEG-Untersuchung gemacht?“  
+• „Hatten Sie frühere Krankenhausaufenthalte wegen Bewusstseinseintrübungen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ja, ich habe eine diagnostizierte Zirrhose und war wegen Verwirrtheit schon zweimal im Krankenhaus.“  
+• *Arzt:* „Wir sollten bestehende Befunde einsehen und die bisherige Therapie überprüfen, um Ihre Enzephalopathie besser zu steuern.“  
+
+---
+
+**10. Weitere relevante Informationen**  
+**Ziel:**  
+• Erfassen zusätzlicher Aspekte wie allgemeiner Gesundheitszustand, berufliche Stressfaktoren und psychosoziale Umstände, die die Erkrankung beeinflussen.  
+
+**Beispielfragen:**  
+• „Wie würden Sie Ihren allgemeinen Gesundheitszustand beschreiben?“  
+• „Gibt es in Ihrem Alltag Stress, der Ihre Erkrankung verschlechtern könnte?“  
+• „Möchten Sie noch weitere Symptome oder Probleme ansprechen, die für uns wichtig sein könnten?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich arbeite noch in Teilzeit, aber ich merke, dass ich kaum noch Kraft habe. Ich bin auch sehr ängstlich wegen meiner Erkrankung.“  
+• *Arzt:* „Ihr allgemeiner Zustand und Ihre psychische Verfassung sind wichtige Aspekte, die in unsere Gesamtbeurteilung einfließen.`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+**Vegetative Anamnese bei Hepatischer Enzephalopathie**
+
+**1. Allgemeiner Zustand**  
+**Ziel:**  
+Erfassen, ob die durch Leberfunktionsstörungen verursachten neurologischen Symptome zu allgemeiner Müdigkeit, Erschöpfung oder verminderter Belastbarkeit führen.  
+
+**Beispielfragen:**  
+• „Fühlen Sie sich häufig müde oder schwach, unabhängig von körperlicher Aktivität?“  
+• „Haben Sie das Gefühl, dass Ihre Leistungsfähigkeit insgesamt stark abgenommen hat?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin selbst nach kleinen Tätigkeiten völlig erschöpft und könnte mich ständig hinlegen.“  
+• *Arzt:* „Das kann ein Hinweis auf fortgeschrittene Leberfunktionsstörungen und eine Enzephalopathie sein.“  
+
+---
+
+**2. Appetit und Gewicht**  
+**Ziel:**  
+Erfassen von Appetitveränderungen und Gewichtsverlust, die bei Lebererkrankungen und Enzephalopathie (z. B. durch Übelkeit oder veränderten Stoffwechsel) auftreten können.  
+
+**Beispielfragen:**  
+• „Hat sich Ihr Appetit verändert, essen Sie weniger als sonst?“  
+• „Haben Sie in letzter Zeit ungewollt Gewicht verloren oder zugenommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich esse kaum noch, weil ich oft Übelkeit habe. Entsprechend habe ich auch abgenommen.“  
+• *Arzt:* „Mangelernährung kann die Enzephalopathie verschlechtern, daher ist eine ausgewogene, aber kontrollierte Ernährung wichtig.“  
+
+---
+
+**3. Durstgefühl**  
+**Ziel:**  
+Abklären, ob vermehrter Durst oder veränderte Trinkgewohnheiten auftreten, was bei Diuretikatherapie oder Elektrolytstörungen wichtig sein kann.  
+
+**Beispielfragen:**  
+• „Trinken Sie ausreichend oder haben Sie das Gefühl, weniger oder mehr Durst als sonst zu haben?“  
+• „Nehmen Sie entwässernde Medikamente, die Ihren Flüssigkeitshaushalt beeinflussen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme Diuretika, deswegen versuche ich weniger zu trinken, aber manchmal habe ich dann doch Durst.“  
+• *Arzt:* „Die richtige Balance ist entscheidend, besonders bei Leberzirrhose und Aszites. Wir müssen das individuell anpassen.“  
+
+---
+
+**4. Erbrechen**  
+**Ziel:**  
+Erfassen von Übelkeit oder Erbrechen, die bei hepatischer Enzephalopathie indirekt durch Ammoniak oder andere Toxine und Grunderkrankungen auftreten können.  
+
+**Beispielfragen:**  
+• „Kommt es häufig zu Übelkeit oder Erbrechen, besonders in Zusammenhang mit Ihren neurologischen Symptomen?“  
+• „Haben Sie aufgefallen, ob Erbrochenes Blut oder ungewöhnliche Färbungen aufweist?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Gelegentlich übergebe ich mich, vor allem wenn ich zu viel Eiweiß esse. Blut habe ich bisher nicht gesehen.“  
+• *Arzt:* „Übelkeit kann ein Symptom der Lebererkrankung sein, wir sollten aber auch nach anderen Ursachen für Erbrechen suchen, wie Varizenblutungen.“  
+
+---
+
+**5. Stuhlgang**  
+**Ziel:**  
+Erfassen von Veränderungen im Stuhlverhalten, besonders bei Laktulosetherapie (Durchfall), oder dunklem Stuhl (Blutung), was Enzephalopathie-Auslöser sein kann.  
+
+**Beispielfragen:**  
+• „Haben Sie seit der Einnahme von Laktulose häufig Durchfall?“  
+• „Ist Ihnen ein dunkler oder schwarzer Stuhl (Teerstuhl) aufgefallen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Durch die Laktulose gehe ich öfter auf die Toilette, manchmal sehr flüssig. Schwarzer Stuhl ist mir nicht aufgefallen.“  
+• *Arzt:* „Die vermehrten Stuhlgänge sollen helfen, Ammoniak auszuleiten. Wir müssen aber aufpassen, dass Sie nicht zu stark dehydrieren.“  
+
+---
+
+**6. Wasserlassen**  
+**Ziel:**  
+Abklären, ob durch Diuretika oder Nierenfunktionsstörungen (hepatorenales Syndrom) Veränderungen beim Wasserlassen auftreten.  
+
+**Beispielfragen:**  
+• „Müssen Sie häufiger oder weniger als früher zur Toilette?“  
+• „Haben Sie dunklen Urin oder Schaum bemerkt, was auf Eiweiß im Urin hinweisen könnte?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe das Gefühl, dass ich weniger Urin ausscheide, obwohl ich mich an meine Trinkvorgaben halte.“  
+• *Arzt:* „Das könnte auf ein Nierenproblem oder eine unzureichende Flüssigkeitszufuhr hinweisen. Wir werden das genauer untersuchen.“  
+
+---
+
+**7. Schwitzen**  
+**Ziel:**  
+Erfassen von vermehrtem Schwitzen (Hyperhidrose), das bei Stoffwechselentgleisungen oder Infektionen auftreten kann und die Enzephalopathie beeinflussen könnte.  
+
+**Beispielfragen:**  
+• „Haben Sie vermehrt Schweißausbrüche bemerkt, vor allem nachts?“  
+• „Fühlen Sie sich dabei eher fiebrig oder haben Sie tatsächlich erhöhte Temperaturen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich schwitze manchmal sehr stark in der Nacht, aber Fieber habe ich nicht gemessen.“  
+• *Arzt:* „Nachtschweiß kann auf Infektionen oder Stoffwechselprobleme hindeuten, was die Enzephalopathie verschlimmern könnte.“  
+
+---
+
+**8. Schwindel**  
+**Ziel:**  
+Abklären von Schwindelgefühlen, die bei niedriger Blutdrucklage, Elektrolytstörungen oder durch die Enzephalopathie selbst ausgelöst werden können.  
+
+**Beispielfragen:**  
+• „Wird Ihnen schnell schwindelig, besonders beim Aufstehen?“  
+• „Haben Sie Gleichgewichtsprobleme, die nicht nur vom Zittern kommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Beim Aufstehen wird mir oft schwarz vor Augen, und ich taumele leicht.“  
+• *Arzt:* „Das kann auf Kreislaufprobleme oder eine allgemeine Schwäche durch die Lebererkrankung hinweisen. Wir beobachten das weiter.“  
+
+---
+
+**9. Bewusstsein**  
+**Ziel:**  
+Erfassen von Bewusstseinsstörungen oder Episoden, in denen der Patient kaum ansprechbar ist (Somnolenz, Koma bei schwerer Enzephalopathie).  
+
+**Beispielfragen:**  
+• „Gab es Phasen, in denen Sie kaum noch ansprechbar waren oder sich an nichts erinnern?“  
+• „Fühlten Sie sich schon einmal so benommen, dass Sie Ihre Umgebung nicht mehr wahrnahmen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meine Familie sagt, ich war manchmal komplett verwirrt und habe seltsame Dinge geredet, an die ich mich kaum erinnere.“  
+• *Arzt:* „Solche Episoden können Teil des Enzephalopathie-Spektrums sein, das reicht von milder Verwirrtheit bis zum Leberkoma.“  
+
+---
+
+**10. Herzklopfen**  
+**Ziel:**  
+Erfassen von Palpitationen, die durch unregelmäßige Kreislaufbelastungen oder Stressreaktionen bei fortgeschrittener Erkrankung auftreten können.  
+
+**Beispielfragen:**  
+• „Haben Sie manchmal das Gefühl, Ihr Herz schlägt unregelmäßig oder sehr schnell?“  
+• „Treten Herzklopfen und Unruhe gemeinsam auf?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Gelegentlich stolpert mein Herz, vor allem wenn ich mich aufrege oder schwach fühle.“  
+• *Arzt:* „Wir werden das EKG und Ihren Elektrolythaushalt prüfen, um Herzrhythmusstörungen auszuschließen.“  
+
+---
+
+**11. Atemnot**  
+**Ziel:**  
+Abklären, ob Atemprobleme (z. B. Dyspnoe) auftreten, möglicherweise durch Aszites, Pleuraergüsse oder allgemeine Schwäche.  
+
+**Beispielfragen:**  
+• „Fühlen Sie sich kurzatmig, besonders in Ruhe oder bei leichter Anstrengung?“  
+• „Liegt ein Druckgefühl in der Brust vor?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ich die Treppe hochgehen will, schnaufe ich schnell, was früher nicht so war.“  
+• *Arzt:* „Aszites oder eine begleitende Herz-Kreislauf-Schwäche können die Atemnot erklären. Wir untersuchen das weiter.“  
+
+---
+
+**12. Hitzempfinden**  
+**Ziel:**  
+Erfassen von Hitzewallungen, die selten direkt mit der Enzephalopathie zusammenhängen, aber bei Stoffwechselstörungen oder Infektionen vorkommen können.  
+
+**Beispielfragen:**  
+• „Haben Sie plötzlich auftretende Hitzewellen?“  
+• „Fühlen Sie sich manchmal regelrecht überhitzt, ohne dass Sie Fieber haben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal wird mir kurz sehr heiß, aber es vergeht auch wieder schnell.“  
+• *Arzt:* „Wir werden weitere Ursachen wie Infektionen ausschließen und Ihren Temperaturverlauf beobachten.“  
+
+---
+
+**13. Kältegefühl**  
+**Ziel:**  
+Abklären, ob der Patient sich vermehrt kalt fühlt, was auf eine schlechte Durchblutung oder niedrigen Blutdruck bei Lebererkrankungen hinweisen kann.  
+
+**Beispielfragen:**  
+• „Frieren Sie schneller als früher, auch wenn es nicht besonders kalt ist?“  
+• „Haben Sie Schüttelfrost oder Frösteln bemerkt, ohne Fieber?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich friere sehr schnell und brauche manchmal eine Decke, obwohl es angenehm warm ist.“  
+• *Arzt:* „Das könnte an Kreislauf- oder Stoffwechselveränderungen liegen, die in Ihrer Situation häufig sind.“  
+
+---
+
+**14. Schlaf**  
+**Ziel:**  
+Erfassen von Schlafstörungen, die bei Enzephalopathie (z. B. Tag-Nacht-Umkehr) oder durch Schmerzen, Juckreiz, etc. auftreten können.  
+
+**Beispielfragen:**  
+• „Haben Sie Schwierigkeiten beim Ein- oder Durchschlafen?“  
+• „Fühlen Sie sich tagsüber sehr müde und nachts wach?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich kann nachts kaum schlafen, döse aber tagsüber ständig weg. Mein Schlafrhythmus ist völlig durcheinander.“  
+• *Arzt:* „Eine Tag-Nacht-Umkehr ist typisch bei hepatischer Enzephalopathie und erschwert den Alltag zusätzlich.“  
+
+---
+
+**15. Sexualanamnese**  
+**Ziel:**  
+Erfassen, ob die allgemeine Schwäche oder Hormonveränderungen (Hypogonadismus bei Leberzirrhose) die Sexualität beeinträchtigen.  
+
+**Beispielfragen:**  
+• „Haben Sie Veränderungen in Ihrem Sexualtrieb oder Ihrer Potenz bemerkt?“  
+• „Beeinträchtigt Ihre Erkrankung Ihr Sexualleben?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mir fehlt oft die Energie und der Antrieb. Auch Libido habe ich kaum noch.“  
+• *Arzt:* „Hormonelle und psychische Faktoren können bei Lebererkrankungen eine Rolle spielen und die Sexualfunktion beeinträchtigen.“  
+
+---
+
+**16. Sonstiges**  
+**Ziel:**  
+Erfassen weiterer vegetativer Symptome oder Auffälligkeiten, die für das Gesamtbild relevant sein könnten.  
+
+**Beispielfragen:**  
+• „Gibt es noch andere Beschwerden, die Sie nicht zuordnen können?“  
+• „Möchten Sie etwas ergänzen, was Ihnen auffällig erscheint?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe manchmal starken Juckreiz, der mich nachts wachhält.“  
+• *Arzt:* „Juckreiz kann bei cholestatischen Lebererkrankungen auftreten und den Schlaf und das Allgemeinbefinden beeinträchtigen.“  
+
+---
+
+**17. Gynäkologische Anamnese (bei weiblichen Patienten)**  
+**Ziel:**  
+Abklären, ob hormonelle Schwankungen, Zyklusstörungen oder andere gynäkologische Aspekte die Gesamtsymptomatik beeinflussen.  
+
+**Beispielfragen:**  
+• „Haben Sie Zyklusstörungen oder bemerken Sie andere hormonelle Veränderungen?“  
+• „Fühlen Sie sich während Ihrer Periode besonders abgeschlagen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patientin:* „Meine Regel kommt unregelmäßig, und ich habe mehr Wassereinlagerungen als sonst.“  
+• *Arzt:* „Leberbedingte Hormonveränderungen können den Zyklus stören, wir behalten das im Blick.`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+Erfassen von bereits bestehenden Lebererkrankungen oder anderen chronischen Erkrankungen, die das Risiko für eine hepatische Enzephalopathie erhöhen.  
+
+**Relevante Aspekte:**  
+- Leberzirrhose (z. B. aufgrund von Alkohol, Hepatitis B/C, NASH)  
+- Chronische Hepatitis, Autoimmunhepatitis  
+- Portale Hypertension, Ösophagusvarizen  
+- Nierenfunktionsstörungen (hepatorenales Syndrom)
+
+**Beispielfragen:**  
+• „Seit wann ist Ihnen Ihre Lebererkrankung bekannt und wie wurde sie diagnostiziert?“  
+• „Hatten Sie schon einmal Komplikationen wie Varizenblutungen oder Aszites?“  
+• „Sind andere Organe (Nieren, Herz) ebenfalls beeinträchtigt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe eine alkoholbedingte Leberzirrhose seit drei Jahren, war aber nicht immer konsequent mit der Therapie.“  
+• *Arzt:* „Leberzirrhose ist der Hauptauslöser für hepatische Enzephalopathie – das werden wir weiter überwachen.“  
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+Erfassen von operativen Eingriffen an der Leber oder am Portalvenensystem (z. B. TIPS-Anlage) oder anderen Eingriffen, die den Krankheitsverlauf beeinflussen können.  
+
+**Relevante Aspekte:**  
+- TIPS (Transjugulärer Intrahepatischer Portosystemischer Stent-Shunt)  
+- Lebertransplantation oder resektive Eingriffe  
+- Chirurgische Versorgung von Ösophagusvarizen
+
+**Beispielfragen:**  
+• „Wurde bei Ihnen ein TIPS angelegt, um den Pfortaderdruck zu reduzieren?“  
+• „Gab es Operationen an der Leber, z. B. Teilresektionen oder Transplantation?“  
+• „Haben Sie wegen Varizenblutungen schon einen endoskopischen Eingriff gehabt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor einem Jahr bekam ich einen TIPS wegen starker Varizen. Danach habe ich vermehrt Verwirrtheitsanfälle.“  
+• *Arzt:* „Ein TIPS kann das Risiko für Enzephalopathien erhöhen, weil mehr Ammoniak das Gehirn erreicht.“  
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+Erfassen, welche Medikamente (insbesondere Laktulose, Antibiotika wie Rifaximin, Diuretika, Betablocker, sedierende Substanzen) eingenommen werden und ob sie die Enzephalopathie beeinflussen.  
+
+**Relevante Aspekte:**  
+- Laktulose, Rifaximin zur Ammoniakreduktion  
+- Diuretika (Spironolacton, Furosemid) bei Aszites  
+- Betablocker (Propranolol, Carvedilol) bei portaler Hypertension  
+- Sedativa oder Opiate (können Enzephalopathie verstärken)
+
+**Beispielfragen:**  
+• „Nehmen Sie Laktulose oder Rifaximin regelmäßig ein?“  
+• „Haben Sie Schlaf- oder Beruhigungsmittel, die Ihre Bewusstseinslage beeinflussen könnten?“  
+• „Welche Diuretika haben Sie verordnet bekommen?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme Laktulose nur, wenn ich mich sehr benommen fühle. Rifaximin kenne ich nicht.“  
+• *Arzt:* „Die kontinuierliche Einnahme ist wichtig, damit der Ammoniakspiegel gesenkt bleibt. Wir werden darüber sprechen.“  
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+Identifizieren, ob Allergien oder Unverträglichkeiten gegen Medikamente vorliegen, die für die Therapie der hepatischen Enzephalopathie relevant sind (z. B. Lactulose, Antibiotika).  
+
+**Relevante Aspekte:**  
+- Allergien gegen Antibiotika (Rifaximin, Neomycin)  
+- Intoleranz gegen Lactulose (starke Blähungen, Durchfall)  
+- Allgemeine Medikamentenunverträglichkeiten
+
+**Beispielfragen:**  
+• „Reagieren Sie empfindlich auf bestimmte Antibiotika?“  
+• „Haben Sie Lactulose schon einmal nicht vertragen, z. B. mit übermäßigem Durchfall?“  
+• „Gab es allergische Reaktionen auf Betablocker oder Diuretika?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich vertrage Lactulose schlecht, habe immer extremen Durchfall, aber eine Allergie ist mir nicht bekannt.“  
+• *Arzt:* „Wir können die Dosierung anpassen oder Alternativen prüfen, dennoch ist Lactulose meist unverzichtbar für die Ammoniakreduktion.“  
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+Erfassen von Risikofaktoren und schädlichen Einflüssen, die die Leberfunktion und damit die Enzephalopathie verschlechtern können.  
+
+**Wichtige Noxen:**  
+- **Alkoholkonsum:** Häufigster Auslöser für Leberzirrhose  
+- **Hepatotoxische Substanzen oder Drogen**  
+- **Ungesunde Ernährung:** Hoher Eiweißkonsum ohne ärztliche Abstimmung
+
+**Beispielfragen:**  
+• „Trinken Sie aktuell Alkohol oder haben Sie früher viel getrunken?“  
+• „Nehmen Sie andere Substanzen (Drogen, Medikamente) ein, die die Leber belasten?“  
+• „Wie sieht Ihre Ernährung aus – eher eiweißreich oder unkontrolliert?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe lange Zeit viel Alkohol getrunken, seit einem Jahr aber reduziert. Drogen nehme ich keine.“  
+• *Arzt:* „Weiterer Alkoholkonsum kann die Leber weiter schädigen und die Enzephalopathie verschlimmern – eine konsequente Abstinenz ist ratsam.“  
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+Erfassen, ob es in der Familie Fälle von Lebererkrankungen (z. B. Hämochromatose, Morbus Wilson) oder anderen genetischen Faktoren gibt, die eine Leberzirrhose begünstigen könnten.  
+
+**Beispielfragen:**  
+• „Gibt es in Ihrer Familie Fälle von chronischen Lebererkrankungen oder Stoffwechselstörungen?“  
+• „Sind Ihnen andere Angehörige mit einer Enzephalopathie oder ähnlichen Symptomen bekannt?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Meines Wissens hat niemand in meiner Familie Leberprobleme gehabt, außer mein Großvater hatte auch stark getrunken.“  
+• *Arzt:* „Familiäre Belastungen wie Hämochromatose oder Morbus Wilson sind eher selten, aber wir prüfen das, falls Hinweise bestehen.“  
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+Erfassung der Lebensumstände und sozialen Faktoren, die den Verlauf der hepatischen Enzephalopathie und die allgemeine Versorgung beeinflussen können.  
+
+**Relevante Bereiche:**
+
+**Beruf und Arbeitsumfeld**  
+- **Relevanz:**  
+Physische oder psychische Belastung kann die Erkrankung verschlechtern, ggf. Arbeitsunfähigkeit.  
+- **Beispielfragen:**  
+• „Sind Sie noch berufstätig oder bereits arbeitsunfähig?“  
+• „Stehen Sie unter starkem beruflichen Stress?“
+
+**Wohnsituation und Freizeit**  
+- **Relevanz:**  
+Unterstützung durch Familienangehörige oder Pflegepersonal kann wichtig sein.  
+- **Beispielfragen:**  
+• „Leben Sie allein oder haben Sie jemanden, der sich um Sie kümmern kann?“  
+• „Gibt es Barrieren im Haushalt, die Ihre Mobilität einschränken?“
+
+**Lebensstil und Ernährungsgewohnheiten**  
+- **Relevanz:**  
+Kontrollierte Eiweißzufuhr, Vermeidung von Alkohol, ausreichende Kalorienzufuhr trotz eingeschränkter Leberfunktion.  
+- **Beispielfragen:**  
+• „Wie oft essen Sie am Tag und was überwiegend?“  
+• „Achten Sie auf salz- oder eiweißreduzierte Kost?“
+
+**Psychosoziale Faktoren**  
+- **Relevanz:**  
+Angst, Depression oder mangelnde soziale Unterstützung können die Therapie erschweren.  
+- **Beispielfragen:**  
+• „Fühlen Sie sich psychisch stark belastet durch Ihre Erkrankung?“  
+• „Haben Sie ein soziales Netzwerk oder Beratungsstellen, die Ihnen helfen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich wohne allein und habe wenig Kontakt zu Freunden, meine Familie ist nicht in der Nähe.“  
+• *Arzt:* „Wir sollten prüfen, ob eine ambulante Pflege oder regelmäßige Kontrolle möglich ist, um Sie bestmöglich zu unterstützen.`
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+Abgrenzung anderer Erkrankungen, die ähnliche neurologische oder psychische Symptome hervorrufen können (z. B. Delir, Wernicke-Enzephalopathie, metabolische Störungen).  
+
+**Beispiele für Differenzialdiagnosen:**  
+1. **Delir anderer Genese (z. B. durch Infektionen, Elektrolytverschiebungen):**  
+   - Akuter Beginn, oft fluktuierender Verlauf.  
+2. **Wernicke-Enzephalopathie (Thiaminmangel):**  
+   - Typisch bei Alkoholikern, Symptome wie Ophthalmoplegie, Ataxie, Verwirrtheit.  
+3. **Urämische Enzephalopathie:**  
+   - Bei Nierenversagen ähnliche neurologische Symptome.  
+4. **Portosystemische Enzephalopathie durch TIPS ohne Leberzirrhose:**  
+   - Seltener, aber möglich bei erhöhtem portosystemischem Shunting.
+
+**Abgrenzung:**  
+- Bestimmung des Ammoniakspiegels, Leberwerte (ALT, AST, Bilirubin), Gerinnungsstatus.  
+- Bildgebung und ggf. EEG zur Abgrenzung anderer Hirnerkrankungen.  
+- Ausschluss von Infektionen (z. B. Meningitis, Sepsis) oder Mangelzuständen (Vitamin B1).  
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+Auf Basis der Anamnese, klinischen Untersuchung und spezifischer Tests (Ammoniakspiegel, Neurotests) eine fundierte Diagnose der hepatischen Enzephalopathie zu stellen.  
+
+**Diagnostische Ansätze und Begründung:**  
+- **Symptomatik:**  
+  - Neuropsychiatrische Auffälligkeiten (Verwirrtheit, Asterixis, kognitive Defizite).  
+- **Klinische Untersuchung:**  
+  - Flapping tremor (Asterixis), Bewusstseinsstatus, Umkehr des Tag-Nacht-Rhythmus.  
+- **Labor und Verfahren:**  
+  - Ammoniak im Blut, Leberfunktionsparameter (Bilirubin, INR, Albumin), ggf. EEG-Veränderungen.
+
+**Typische Diagnose:**  
+- Hepatische Enzephalopathie (HE), häufig assoziiert mit einer chronischen Lebererkrankung (Zirrhose) oder portosystemischen Shunts.  
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen**
+
+**Ziel:**  
+Einleiten ergänzender diagnostischer Maßnahmen zur Bestätigung der Verdachtsdiagnose, Beurteilung des Schweregrades und Planung der weiteren Therapie.  
+
+**Klinische Untersuchung:**  
+- **Neurologischer Status:**  
+  - Beurteilung von Bewusstsein, Motorik (Asterixis), Reflexen, kognitiven Fähigkeiten.  
+- **Abdomenuntersuchung:**  
+  - Palpation der Leber (Größe, Konsistenz), Aszites, Leberhautzeichen.
+
+**Laboruntersuchungen:**  
+- **Ammoniakspiegel:**  
+  - Zur Beurteilung der Hyperammonämie, die Enzephalopathie auslösen kann.  
+- **Leberwerte (AST, ALT, Gamma-GT, AP, Bilirubin), Gerinnung (INR) und Elektrolyte:**  
+  - Zur Einschätzung der Leberfunktion und möglicher Auslöser (z. B. Hypokaliämie).  
+- **Nierenfunktion:**  
+  - Kreatinin, Harnstoff, um ein hepatorenales Syndrom auszuschließen.
+
+**Apparative Diagnostik:**  
+- **Sonographie des Abdomens:**  
+  - Beurteilung von Leberstruktur, Portalvenenfluss, Aszites.  
+- **Doppler-Ultraschall oder Duplex:**  
+  - Zur Bestimmung des Blutflusses im Pfortadersystem.  
+- **EEG (Elektroenzephalogramm):**  
+  - Bei unklaren Fällen oder zur Verlaufsbeurteilung (Verlangsamung als Zeichen der Enzephalopathie).
+
+**Spezielle diagnostische Tests:**  
+- **Neuropsychologische Tests (z. B. Zahlenverbindungstest):**  
+  - Erfassung subtiler kognitiver Defizite bei minimaler HE.  
+- **Bildgebung (MRT) bei differentialdiagnostischen Zweifeln:**  
+  - Ausschluss anderer Hirnpathologien.
+
+**Beispielfragen:**  
+• „Wollen wir den Ammoniakspiegel bestimmen, um eine Überprüfung der Enzephalopathie-Ausprägung zu haben?“  
+• „Soll eine Sonographie oder ein MRT durchgeführt werden, um andere Ursachen auszuschließen?“  
+• „Kennen Sie bereits den Zahlenverbindungstest oder ähnliche kurze kognitive Tests?“
+`
+  }
+},
+karzinoid: {
+  name: "Karzinoid",
+  currentAnamnese: {
+    additionalInfo: `
+**Aktueller Anamnese: Karzinoid**
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+• Herausfinden, warum der Patient ärztliche Hilfe sucht – ob es um anhaltende Durchfälle, Hitzewallungen (Flush), Atembeschwerden oder abdominale Schmerzen geht, die auf ein Karzinoid-Syndrom hindeuten könnten.
+
+**Beispielfragen:**  
+• „Was führt Sie heute zu mir? Haben Sie häufige Durchfälle, Hitzegefühle oder Herzrasen bemerkt?“  
+• „Treten die Beschwerden vor allem in bestimmten Situationen auf, z. B. nach dem Essen oder bei Stress?“  
+• „Haben Sie in letzter Zeit eine unerklärliche Rötung oder Schwellung im Gesicht bemerkt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bekomme manchmal plötzlich heftige Hitzewallungen im Gesicht und Oberkörper, dazu habe ich öfter Durchfall.“  
+• *Arzt:* „Wir sollten klären, ob diese anfallsartigen Beschwerden auf ein Karzinoid-Syndrom hinweisen könnten.“  
+
+---
+
+**2. Lokalisation und Art der Beschwerden**  
+**Ziel:**  
+• Bestimmen, welche Körperregionen oder Organsysteme betroffen sind (z. B. Gesichtsrötung bei Flush, Bauchschmerzen in der rechten Unterbauchregion, Atemwege bei Bronchospasmus).
+
+**Beispielfragen:**  
+• „Wo genau verspüren Sie Schmerzen – im Oberbauch, Unterbauch oder diffus?“  
+• „Ist die Rötung eher im Gesicht und am Hals lokalisiert?“  
+• „Haben Sie Atembeschwerden oder Hustenanfälle, wenn die Hitzewallungen auftreten?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Die Schmerzen sind meist im rechten Unterbauch, und wenn die Hitzewallungen kommen, spüre ich oft ein Engegefühl in der Brust.“  
+• *Arzt:* „Beschwerden im rechten Unterbauch könnten auf einen Dünndarmtumor hinweisen, der ein Karzinoid sein könnte.“  
+
+---
+
+**3. Zeitverlauf und Dauer**  
+**Ziel:**  
+• Erfassung, wann die Symptome erstmals auftraten, ob sie episodisch sind, sich allmählich verstärkt haben oder schubweise auftreten.
+
+**Beispielfragen:**  
+• „Seit wann haben Sie diese Flush-Episoden und Durchfälle?“  
+• „Treten die Beschwerden plötzlich auf und klingen dann nach einigen Minuten oder Stunden ab?“  
+• „Gab es eine kontinuierliche Zunahme der Symptome oder bleiben sie ungefähr gleich?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Vor etwa einem Jahr hatte ich nur selten solche Anfälle, inzwischen habe ich sie fast täglich.“  
+• *Arzt:* „Die schleichende Zunahme der Anfallshäufigkeit kann auf ein langsam wachsendes neuroendokrines Geschehen hindeuten.“  
+
+---
+
+**4. Detaillierte Symptombeschreibung**  
+**Ziel:**  
+• Umfassende Erfassung aller Beschwerden wie Flush, Durchfall, Herzklopfen, Bronchospasmus, abdominale Schmerzen, die zum Karzinoid-Syndrom gehören können.
+
+**Beispielfragen:**  
+• „Treten bei Ihnen Herzrasen oder Herzklopfen während der Flush-Episoden auf?“  
+• „Leiden Sie unter wässrigem Durchfall, und wie oft am Tag?“  
+• „Gibt es eine Veränderung der Stuhlkonsistenz oder -farbe?“  
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe mindestens dreimal am Tag wässrigen Stuhl, manchmal begleitet von Herzklopfen und rotem Gesicht.“  
+• *Arzt:* „Dieses Zusammenspiel von Durchfall, Flush und Tachykardie passt gut in das Bild eines Karzinoid-Syndroms.“  
+
+---
+
+**5. Begleitende Symptome**  
+**Ziel:**  
+• Erfassen weiterer Beschwerden wie Gewichtsverlust, Appetitlosigkeit, Hautveränderungen oder Atemnot, die mit einem Karzinoid einhergehen können.
+
+**Beispielfragen:**  
+• „Haben Sie in letzter Zeit ungewollt Gewicht verloren?“  
+• „Fühlen Sie sich öfter kurzatmig oder haben Sie pfeifende Atemgeräusche bemerkt?“  
+• „Treten Schwellungen an den Beinen auf oder bemerken Sie Ödeme?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme seit einigen Monaten kontinuierlich ab, ohne dass ich meine Ernährung umgestellt habe.“  
+• *Arzt:* „Ungewollter Gewichtsverlust kann ein Hinweis auf eine ernsthafte Erkrankung sein, möglicherweise ein Karzinoid-Tumor.“  
+
+---
+
+**6. Auslöser und Risikofaktoren**  
+**Ziel:**  
+• Identifikation von Faktoren, die Karzinoid-Symptome auslösen oder verschlimmern, z. B. bestimmte Nahrungsmittel, Alkohol, Stress oder körperliche Anstrengung.
+
+**Beispielfragen:**  
+• „Haben Sie das Gefühl, dass bestimmte Lebensmittel (z. B. Käse, Schokolade, Alkohol) die Hitzewallungen oder Durchfälle auslösen?“  
+• „Verstärken sich die Symptome bei Stress oder nach körperlicher Aktivität?“  
+• „Rauchen Sie oder konsumieren Sie regelmäßig Alkohol?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Immer wenn ich Wein trinke oder sehr scharfe Speisen esse, werde ich knallrot und bekomme Herzklopfen.“  
+• *Arzt:* „Alkohol oder scharfe Gewürze können Flush-Anfälle bei Karzinoid verstärken.“  
+
+---
+
+**7. Intensität der Beschwerden und funktionelle Einschränkung**  
+**Ziel:**  
+• Quantitative Einschätzung, wie stark die Symptome den Alltag beeinträchtigen, ob Sozialleben und Berufsfähigkeit eingeschränkt sind.
+
+**Beispielfragen:**  
+• „Wie stark beeinträchtigen Sie diese Flush-Anfälle auf einer Skala von 0 bis 10?“  
+• „Fällt es Ihnen schwer, Ihrem normalen Tagesablauf nachzugehen?“  
+• „Haben Sie sich deswegen schon einmal krankgemeldet oder mussten den Beruf wechseln?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn ein starker Anfall kommt, kann ich kaum weiterarbeiten, das wäre eine 8 oder 9 auf der Skala.“  
+• *Arzt:* „Derartige Einschränkungen zeigen, dass eine gezielte Diagnose und Therapie dringend nötig sind.“  
+
+---
+
+**8. Maßnahmen zur Symptomlinderung**  
+**Ziel:**  
+• Erfassen, welche Medikamente oder Hausmittel bereits eingenommen wurden (z. B. Octreotid zur Unterdrückung der Hormonausschüttung), ob diätetische Maßnahmen helfen.
+
+**Beispielfragen:**  
+• „Nehmen Sie aktuell Medikamente gegen die Flush-Anfälle, z. B. Somatostatin-Analoga (Octreotid)?“  
+• „Haben Sie versucht, reizende Lebensmittel oder Alkohol zu meiden, und hat das geholfen?“  
+• „Gab es eine Phase, in der die Durchfälle durch bestimmte Maßnahmen besser wurden?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe nur loperamidhaltige Mittel gegen Durchfall genommen, aber das hilft nur kurz.“  
+• *Arzt:* „Bei Karzinoiden ist die Ausschaltung der Hormonproduktion entscheidend, hier könnten Somatostatin-Analoga eine Option sein.“  
+
+---
+
+**9. Vorherige medizinische Betreuung**  
+**Ziel:**  
+• Erfassen, ob der Patient bereits wegen Karzinoid oder damit verbundener Symptome in Behandlung war und ob bildgebende Untersuchungen (CT, MRT, Octreotid-Szintigrafie) durchgeführt wurden.
+
+**Beispielfragen:**  
+• „Waren Sie schon einmal beim Gastroenterologen, weil jemand einen Tumor im Dünndarm oder in der Lunge vermutet hat?“  
+• „Wurde bei Ihnen schon eine spezielle Untersuchung wie eine Octreotid-Szintigrafie oder Gallium-PET/CT gemacht?“  
+• „Hatten Sie in der Vergangenheit auffällige Laborwerte, z. B. erhöhte Serotoninwerte?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe bisher nur Ultraschalluntersuchungen wegen Bauchschmerzen machen lassen, da war nichts eindeutig zu sehen.“  
+• *Arzt:* „Wir sollten genauer hinsehen, etwa mit CT, MRT oder einer Szintigrafie, um einen Karzinoid-Tumor aufzuspüren.“  
+
+---
+
+**10. Weitere relevante Informationen**  
+**Ziel:**  
+• Erfassen zusätzlicher Aspekte wie allgemeiner Gesundheitszustand, berufliche Belastungen oder familiäre Disposition, die die Diagnose oder Therapie beeinflussen könnten.
+
+**Beispielfragen:**  
+• „Gab es in letzter Zeit besondere Stressfaktoren oder Veränderungen in Ihrem Berufs- oder Privatleben?“  
+• „Fühlen Sie sich insgesamt eher geschwächt oder haben Sie das Gefühl, Ihr allgemeiner Zustand verschlechtert sich?“  
+• „Möchten Sie noch etwas ergänzen, das Ihnen wichtig erscheint?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin generell sehr erschöpft und mache mir Sorgen, dass es etwas Ernstes ist.“  
+• *Arzt:* „Wir berücksichtigen Ihre Ängste und sorgen für eine umfassende Abklärung, um schnell Klarheit zu schaffen.`
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+**Vegetative Anamnese bei Karzinoid**
+
+**1. Allgemeiner Zustand**  
+**Ziel:**  
+Erfassen, ob die Hormonüberproduktion (Serotonin, Histamin etc.) zu allgemeiner Schwäche oder Abgeschlagenheit führt.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich häufig müde oder abgeschlagen?“  
+• „Haben Sie das Gefühl, dass Ihnen im Alltag schneller die Energie ausgeht?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich fühle mich oft schlapp, besonders nach diesen Flush-Anfällen.“  
+• *Arzt:* „Durch die ständige hormonelle Belastung kann es zu einem chronischen Erschöpfungszustand kommen.“  
+
+---
+
+**2. Appetit und Gewicht**  
+**Ziel:**  
+Erfassen von Appetitveränderungen, Gewichtsverlust oder Gewichtszunahme durch hormonelle Effekte, Durchfälle oder Abneigung gegen bestimmte Speisen.
+
+**Beispielfragen:**  
+• „Haben Sie weniger Appetit, oder kommt es durch die Durchfälle zum Gewichtsverlust?“  
+• „Essen Sie noch normal oder meiden Sie bestimmte Speisen aus Angst vor Flush-Anfällen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe deutlich abgenommen, weil ich manche Speisen nicht mehr vertrage und häufiger Durchfall habe.“  
+• *Arzt:* „Ein dauerhafter Gewichtsverlust ist alarmierend und sollte im Zusammenhang mit den Karzinoid-Symptomen weiterverfolgt werden.“  
+
+---
+
+**3. Durstgefühl**  
+**Ziel:**  
+Abklären, ob vermehrter Durst durch häufige Durchfälle oder hormonelle Dysregulation besteht.
+
+**Beispielfragen:**  
+• „Trinken Sie mehr als früher, besonders an Tagen mit vielen Durchfällen?“  
+• „Haben Sie ein ständiges Trockenheitsgefühl im Mund?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich trinke viel Wasser, weil ich nach den Durchfällen dehydriert bin.“  
+• *Arzt:* „Ausreichende Flüssigkeitszufuhr ist wichtig, um den Elektrolythaushalt stabil zu halten.“  
+
+---
+
+**4. Erbrechen**  
+**Ziel:**  
+Erfassen von Übelkeit oder Erbrechen, die bei Karzinoid-Syndrom vorkommen können, besonders bei starkem Hormonüberschuss.
+
+**Beispielfragen:**  
+• „Müssen Sie sich manchmal übergeben, wenn Flush-Episoden besonders stark sind?“  
+• „Haben Sie das Gefühl, Ihre Übelkeit steht in Zusammenhang mit bestimmten Nahrungsmitteln?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Gelegentlich kommt Übelkeit dazu, aber Erbrechen habe ich eher selten.“  
+• *Arzt:* „Übelkeit kann durch vermehrte Serotoninausschüttung auftreten, wir beobachten das weiter.“  
+
+---
+
+**5. Stuhlgang**  
+**Ziel:**  
+Erfassen von Veränderungen im Stuhlverhalten, vor allem häufige wässrige Durchfälle im Rahmen des Karzinoid-Syndroms.
+
+**Beispielfragen:**  
+• „Wie häufig sind Ihre Stuhlgänge am Tag und wie ist die Konsistenz?“  
+• „Treffen Sie bestimmte Maßnahmen, z. B. loperamidhaltige Mittel, gegen Durchfall?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe tagsüber mindestens drei bis vier wässrige Stühle.“  
+• *Arzt:* „Das ist ein typisches Symptom; wir müssen darauf achten, dass kein Elektrolytmangel entsteht.“  
+
+---
+
+**6. Wasserlassen**  
+**Ziel:**  
+Abklären, ob veränderte Trinkmengen oder Durchfälle das Miktionsverhalten beeinflussen, was beim Karzinoid weniger im Vordergrund steht, aber kontrolliert werden sollte.
+
+**Beispielfragen:**  
+• „Müssen Sie häufiger zur Toilette, weil Sie mehr trinken, oder hat sich das kaum verändert?“  
+• „Gab es Veränderungen der Urinfarbe oder -menge?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich trinke zwar mehr, gehe aber auch öfter zur Toilette. Sonst nichts Auffälliges.“  
+• *Arzt:* „Wir behalten das im Blick, um Dehydrierung zu vermeiden und die Nierenfunktion zu prüfen.“  
+
+---
+
+**7. Schwitzen**  
+**Ziel:**  
+Erfassen von übermäßigem Schwitzen (besonders während Flush-Attacken), das Teil des Karzinoid-Syndroms sein kann.
+
+**Beispielfragen:**  
+• „Treten während einer Flush-Episode starke Schweißausbrüche auf?“  
+• „Fühlen Sie sich dabei eher fiebrig oder einfach nur stark erhitzt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Wenn mein Gesicht rot wird, schwitze ich meist auch sehr stark, besonders im Nacken- und Brustbereich.“  
+• *Arzt:* „Das ist typisch für Karzinoid-Flush-Attacken und hängt mit der Hormonfreisetzung zusammen.“  
+
+---
+
+**8. Schwindel**  
+**Ziel:**  
+Abklären von Schwindelgefühlen, die bei Flush-Anfällen durch vasodilatative Effekte oder Hypotonie auftreten können.
+
+**Beispielfragen:**  
+• „Wird Ihnen bei den Flush-Attacken manchmal schwindelig oder schwarz vor Augen?“  
+• „Fühlen Sie sich benommen, wenn der Anfall abklingt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal muss ich mich hinsetzen, weil mir plötzlich ganz schwummrig wird.“  
+• *Arzt:* „Die Hormonbedingte Gefäßerweiterung kann den Blutdruck senken und Schwindel auslösen.“  
+
+---
+
+**9. Bewusstsein**  
+**Ziel:**  
+Erfassen von kurzzeitigen Bewusstseinseintrübungen oder Ohnmachtsanfällen bei sehr starken Flush-Episoden.
+
+**Beispielfragen:**  
+• „Gab es Situationen, in denen Sie das Bewusstsein verloren haben?“  
+• „Haben Sie Erinnerungslücken während besonders intensiver Anfälle?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich bin einmal fast umgekippt, aber richtig ohnmächtig war ich nicht.“  
+• *Arzt:* „Das sollten wir weiterhin beobachten, um Risiken zu minimieren.“  
+
+---
+
+**10. Herzklopfen**  
+**Ziel:**  
+Erfassen von Tachykardie oder Palpitationen (Herzrasen), die bei Flush-Episoden typisch sind.
+
+**Beispielfragen:**  
+• „Spüren Sie während oder kurz nach den Hitzewallungen ein starkes Herzklopfen?“  
+• „Fühlen Sie sich dabei unruhig oder ängstlich?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Mein Puls rast oft, wenn ich rot werde, das macht mir dann auch Angst.“  
+• *Arzt:* „Das Herzrasen ist eine häufige Begleiterscheinung, wir werden EKG und Herzfunktionen prüfen.“  
+
+---
+
+**11. Atemnot**  
+**Ziel:**  
+Abklären, ob Atemnot oder bronchospastische Beschwerden auftreten, da ein Karzinoid-Syndrom auch Bronchospasmen auslösen kann.
+
+**Beispielfragen:**  
+• „Fällt Ihnen das Atmen schwer, wenn die Flush-Anfälle kommen?“  
+• „Haben Sie pfeifende Atemgeräusche oder Husten?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Manchmal habe ich das Gefühl, ich bekomme weniger Luft, und muss tief durchatmen.“  
+• *Arzt:* „Das könnte auf bronchospastische Reaktionen hindeuten, ein Symptom des Karzinoid-Syndroms.“  
+
+---
+
+**12. Hitzempfinden**  
+**Ziel:**  
+Erfassen von Hitzewallungen, dem Leitsymptom des Karzinoid-Syndroms (Flush).
+
+**Beispielfragen:**  
+• „Werden Sie plötzlich von extremer Hitze durchströmt, besonders im Gesichts- und Halsbereich?“  
+• „Wie würden Sie die Intensität dieser Hitzewallungen beschreiben?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Es fühlt sich an, als würde ich glühen, und meine Haut wird knallrot.“  
+• *Arzt:* „Das ist ein klassischer Flush, bedingt durch vasoaktive Substanzen, die das Karzinoid produziert.“  
+
+---
+
+**13. Kältegefühl**  
+**Ziel:**  
+Abklären, ob nach den Flush-Episoden oder unabhängig davon Kälteempfinden auftritt, was eher seltener ist.
+
+**Beispielfragen:**  
+• „Fühlen Sie sich nach dem Flush plötzlich ausgekühlt?“  
+• „Haben Sie manchmal ein Frösteln, obwohl es nicht kalt ist?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Nach den Hitzewallungen bin ich manchmal verschwitzt und friere schnell.“  
+• *Arzt:* „Der Körper reagiert auf Temperaturveränderungen durch Schwitzen und anschließendes Auskühlen.“  
+
+---
+
+**14. Schlaf**  
+**Ziel:**  
+Erfassen von Schlafstörungen durch nächtliche Flush-Episoden oder Durchfälle, die beim Karzinoid-Syndrom vorkommen können.
+
+**Beispielfragen:**  
+• „Wachen Sie nachts wegen Hitzeattacken oder Durchfällen auf?“  
+• „Können Sie danach wieder einschlafen oder sind Sie dann lange wach?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Nachts hatte ich auch schon solche Anfälle, da war ich durchgeschwitzt und hatte Herzrasen. Schlafen ging dann kaum noch.“  
+• *Arzt:* „Nächtliche Flush-Episoden können die Erholungsphase stark beeinträchtigen. Wir sollten das bei der Therapie berücksichtigen.“  
+
+---
+
+**15. Sexualanamnese**  
+**Ziel:**  
+Erfassen, ob häufige Flush-Anfälle oder allgemeine Krankheitszeichen das Sexualleben beeinträchtigen.
+
+**Beispielfragen:**  
+• „Beeinflussen Ihre Beschwerden Ihr Interesse an Sexualität oder Ihre Leistungsfähigkeit?“  
+• „Haben Sie während intimer Momente auch Flush-Episoden?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe weniger Interesse, weil ich mich ständig schlapp fühle und Angst habe, einen Anfall zu bekommen.“  
+• *Arzt:* „Diese Einschränkungen gehören zum Gesamtbild und sollten mit in die Therapieüberlegungen einfließen.“  
+
+---
+
+**16. Sonstiges**  
+**Ziel:**  
+Erfassen weiterer vegetativer Symptome oder Auffälligkeiten, die relevant sein könnten (z. B. Herzrhythmusstörungen, hormonelle Schwankungen).
+
+**Beispielfragen:**  
+• „Gibt es sonstige körperliche Veränderungen, die Sie noch nicht erwähnt haben?“  
+• „Möchten Sie weitere Symptome hinzufügen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich habe manchmal so ein Kribbeln in den Händen, wenn der Flush kommt.“  
+• *Arzt:* „Sensibilitätsstörungen können auftreten, wir werden das im Kontext Ihrer anderen Beschwerden betrachten.“  
+
+---
+
+**17. Gynäkologische Anamnese (bei weiblichen Patienten)**  
+**Ziel:**  
+Abklären, ob hormonelle Faktoren oder zyklusbedingte Schwankungen die Flush-Episoden beeinflussen.
+
+**Beispielfragen:**  
+• „Bemerken Sie zyklusabhängige Unterschiede bei den Hitzewallungen oder Durchfällen?“  
+• „Haben sich Ihre Monatsblutungen verändert, seit die Anfälle häufiger auftreten?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patientin:* „Ich habe nicht bemerkt, dass es speziell zum Zyklus passt, die Anfälle kommen eher unvorhersehbar.“  
+• *Arzt:* „Dann ist eine hormonelle Verbindung weniger wahrscheinlich, wir konzentrieren uns auf die Karzinoid-Symptomatik.`
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+Erfassen, ob bereits bekannte chronische Erkrankungen oder Tumoren vorliegen, die auf Karzinoid hindeuten oder dessen Verlauf beeinflussen können.
+
+**Relevante Aspekte:**  
+- Andere neuroendokrine Tumoren, familiäre Syndrome (z. B. MEN1)  
+- Chronisch-entzündliche Darmerkrankungen  
+- Lebermetastasen oder andere Malignome
+
+**Beispielfragen:**  
+• „Sind in der Vergangenheit Tumorerkrankungen bei Ihnen aufgetreten?“  
+• „Liegen hormonelle oder endokrine Störungen vor, z. B. Nebenschilddrüsen- oder Hypophysenerkrankungen?“  
+• „Gab es Hinweise auf Lebermetastasen in früheren Untersuchungen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Nein, ich hatte bisher keine Krebsdiagnose, nur mal eine Magen-Darm-Spiegelung wegen Polypen.“  
+• *Arzt:* „Polypen können harmlos sein, aber in Kombination mit Ihren Symptomen untersuchen wir genauer, ob ein neuroendokriner Tumor entstanden ist.“  
+`
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+Erfassen, ob operative Eingriffe am Gastrointestinaltrakt, an endokrinen Organen oder anderen Lokalisationen vorgenommen wurden, die den Karzinoidverdacht beeinflussen könnten.
+
+**Relevante Aspekte:**  
+- Darmresektionen, Appendektomie (Appendixkarzinoid)  
+- Leberchirurgie, Resektion von Metastasen  
+- Chirurgische Eingriffe bei Metastasierungen
+
+**Beispielfragen:**  
+• „Wurden Sie schon einmal wegen Blinddarmentzündung operiert (Appendektomie)?“  
+• „Gab es Operationen an der Leber oder Gallenblase?“  
+• „Sind Ihnen Metastasen in anderen Organen bekannt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich hatte vor zehn Jahren eine Blinddarmoperation, aber da war alles unauffällig.“  
+• *Arzt:* „Ein Karzinoid wird oft zufällig bei einer Appendektomie entdeckt. Wir prüfen die alten OP-Berichte.“  
+`
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+Erfassen, welche Medikamente derzeit eingenommen werden, die das Karzinoid-Syndrom beeinflussen oder deren Wirkung von Karzinoid-Hormonen verändert werden könnte.
+
+**Relevante Aspekte:**  
+- Antidiarrhoika (Loperamid)  
+- Betablocker (können Flush beeinflussen)  
+- Serotonin-aktive Substanzen (Antidepressiva)  
+- Protonenpumpenhemmer oder H2-Blocker
+
+**Beispielfragen:**  
+• „Nehmen Sie regelmäßig etwas gegen Durchfall?“  
+• „Haben Sie Betablocker oder serotonerge Medikamente verschrieben bekommen?“  
+• „Gibt es Magenschutzpräparate, die Sie einnehmen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich nehme Loperamid bei Bedarf und einen Betablocker wegen Bluthochdruck.“  
+• *Arzt:* „Betablocker können Flush-Attacken beeinflussen. Wir berücksichtigen das bei der Abklärung Ihres Verdachts auf Karzinoid.“  
+`
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+Identifizieren, ob Allergien oder Nahrungsmittelunverträglichkeiten vorliegen, die die Symptomatik ähnlich wie Karzinoid imitieren oder verstärken könnten.
+
+**Relevante Aspekte:**  
+- Nahrungsmittelunverträglichkeiten, Histamin-Intoleranz  
+- Medikamentenallergien (z. B. Kontrastmittel)  
+- Additive wie Glutamat
+
+**Beispielfragen:**  
+• „Reagieren Sie empfindlich auf histaminhaltige Lebensmittel (Rotwein, gereifter Käse)?“  
+• „Sind Ihnen Allergien gegen Kontrastmittel bekannt, falls wir eine CT-Untersuchung machen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich vertrage keinen Rotwein, da werde ich direkt rot und bekomme Herzklopfen.“  
+• *Arzt:* „Wir müssen differenzieren, ob eine Histamin-Intoleranz oder ein Karzinoid vorliegt – beide können Flush auslösen.“  
+`
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+Erfassen von Risikofaktoren wie Rauchen, Alkohol oder berufliche Exposition, die Karzinoide nicht unbedingt direkt auslösen, aber die Gesamtgesundheit und Tumorprogression beeinflussen können.
+
+**Wichtige Noxen:**  
+- **Rauchen:** Generelles Krebsrisiko erhöht  
+- **Alkohol:** Belastung für Leber, kann Flush-Anfälle verstärken  
+- **Ungesunde Ernährung:** Hoher Verzehr von Histamin- oder Serotonin-Vorstufen
+
+**Beispielfragen:**  
+• „Rauchen Sie regelmäßig oder haben Sie früher geraucht?“  
+• „Trinken Sie Alkohol und haben Sie das Gefühl, dass Flush-Episoden dann zunehmen?“  
+• „Arbeiten Sie in einem Umfeld mit möglichen karzinogenen Stoffen?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich rauche ab und zu, Alkohol trinke ich selten. Aber wenn ich trinke, werde ich stark rot.“  
+• *Arzt:* „Wir werden sehen, ob diese Faktoren Ihre Symptome verschlimmern oder ob ein neuroendokriner Tumor unabhängig davon vorliegt.“  
+`
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+Erfassen, ob es in der Familie ähnliche neuroendokrine Tumoren, endokrine Syndrome (MEN1) oder Krebserkrankungen gibt, die ein erhöhtes Risiko für Karzinoide bedeuten könnten.
+
+**Beispielfragen:**  
+• „Gibt es in Ihrer Familie Fälle von neuroendokrinen Tumoren oder anderen seltenen Krebserkrankungen?“  
+• „Ist Ihnen ein familiäres Syndrom wie MEN1 oder MEN2 bekannt?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Nicht, dass ich wüsste. Meine Eltern hatten keine derartigen Erkrankungen.“  
+• *Arzt:* „Familiäre Häufungen sind eher selten, aber wir müssen es ausschließen, falls es Hinweise gibt.“  
+`
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+Erfassung der Lebensumstände und sozialen Faktoren, die den Verlauf eines Karzinoid-Tumors und das Karzinoid-Syndrom beeinflussen (z. B. Ernährung, Stress, Unterstützung).
+
+**Relevante Bereiche:**
+
+**Beruf und Arbeitsumfeld**  
+- **Relevanz:**  
+Stress, unregelmäßige Mahlzeiten können Flush und Durchfall begünstigen.  
+- **Beispielfragen:**  
+• „Ist Ihr Beruf sehr stressig oder unregelmäßig im Tagesablauf?“  
+• „Essen Sie häufig außer Haus, was die Ernährung weniger kontrollierbar macht?“
+
+**Wohnsituation und Freizeit**  
+- **Relevanz:**  
+Hilfestellung bei häufigen Anfällen, Unterstützung im Alltag.  
+- **Beispielfragen:**  
+• „Leben Sie allein oder haben Sie jemanden, der Ihnen im Alltag helfen kann?“  
+• „Haben Sie bei stärkeren Anfällen eine Möglichkeit, sich schnell zurückzuziehen?“
+
+**Lebensstil und Ernährungsgewohnheiten**  
+- **Relevanz:**  
+Verzicht auf triggerspezifische Lebensmittel (z. B. Alkohol, stark gewürzte Speisen).  
+- **Beispielfragen:**  
+• „Achten Sie auf bestimmte Diätempfehlungen, um Flush-Anfälle zu reduzieren?“  
+• „Vermeiden Sie Alkohol und sehr scharfe Speisen?“
+
+**Psychosoziale Faktoren**  
+- **Relevanz:**  
+Angst vor Anfällen in der Öffentlichkeit, möglicher Rückzug, psychische Belastung.  
+- **Beispielfragen:**  
+• „Belasten Sie die Anfälle auch psychisch, z. B. Angstzustände in Gesellschaft?“  
+• „Fühlen Sie sich durch Ihre Beschwerden isoliert?“
+
+**Mögliche Antworten / Follow-ups:**  
+• *Patient:* „Ich esse meist in der Kantine und kann nicht wirklich auswählen, was auf den Tisch kommt. Mir ist das oft unangenehm, wenn ein Flush kommt.“  
+• *Arzt:* „Wir sollten überlegen, wie Sie Ihre Ernährung und Ihren Alltag besser anpassen können, um die Anfälle zu reduzieren.`
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+Abgrenzung anderer Erkrankungen mit ähnlichen Symptomen (Flush, Durchfall, Tachykardie).
+
+**Beispiele für Differenzialdiagnosen:**  
+1. **Phäochromozytom:**  
+   - Hormonproduzierender Tumor des Nebennierenmarks, verursacht Bluthochdruck, Tachykardie, Schweißausbrüche.  
+2. **Hyperthyreose (Schilddrüsenüberfunktion):**  
+   - Kann zu Wärmeintoleranz, Gewichtsverlust, Tachykardie führen.  
+3. **Mastzellerkrankungen (Mastozytose):**  
+   - Flush, Juckreiz, Anaphylaxie-artige Reaktionen.  
+4. **Menopausale Hitzewallungen (bei Frauen):**  
+   - Hormonell bedingt, jedoch meist nicht mit Durchfall oder Tachykardie verbunden.
+
+**Abgrenzung:**  
+- Bestimmung spezifischer Tumormarker (Chromogranin A, 5-HIAA im Urin)  
+- Differenzierung durch bildgebende Verfahren (CT, MRT, Octreotid-Szintigrafie)  
+- Labordiagnostik (T3, T4, TSH für Schilddrüse; Metanephrine für Phäochromozytom)  
+`
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+Auf Basis von Anamnese, klinischer Untersuchung und weiteren Befunden eine fundierte Diagnose eines Karzinoid-Tumors bzw. Karzinoid-Syndroms zu stellen.
+
+**Diagnostische Ansätze und Begründung:**  
+- **Symptomatik:**  
+  - Flush, Durchfall, Tachykardie, ggf. Bronchospasmus, Hinweis auf neuroendokrine Aktivität.  
+- **Labordiagnostik:**  
+  - Erhöhte 5-HIAA-Ausscheidung im 24h-Urin (Metabolit von Serotonin)  
+  - Chromogranin A als Tumormarker  
+- **Bildgebung/Endoskopie:**  
+  - Lokalisation des Tumors (Dünndarm, Appendix, Lunge) per CT/MRT oder endoskopisch.  
+- **Spezielle Verfahren:**  
+  - Octreotid-Szintigrafie oder Ga-68-DOTATOC-PET/CT zur genauen Tumorsuche.
+
+**Typische Diagnose:**  
+- Karzinoid-Tumor (meist im Gastrointestinaltrakt) mit Syndrom durch Hormonfreisetzung (Serotonin, etc.).  
+`
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen**
+
+**Ziel:**  
+Einleiten weiterführender diagnostischer Maßnahmen zur Bestätigung der Karzinoid-Diagnose, Feststellung von Metastasen und Therapieplanung.
+
+**Klinische Untersuchung:**  
+- **Körperliche Inspektion:**  
+  - Beobachtung von Flush, Herz-Kreislauf-Status, Auskultation der Lunge.  
+- **Palpation des Abdomens:**  
+  - Suche nach resistenten Tumormassen, Lebervergrößerungen bei Metastasen.
+
+**Laboruntersuchungen:**  
+- **24h-Urin auf 5-HIAA:**  
+  - Wichtigster Parameter beim Verdacht auf Karzinoid.  
+- **Chromogranin A:**  
+  - Tumormarker für neuroendokrine Tumoren.  
+- **Blutbild, Leberwerte:**  
+  - Ausschluss anderer Ursachen, Beurteilung der Organfunktion.
+
+**Bildgebende Verfahren:**  
+- **CT/MRT Abdomen und Thorax:**  
+  - Lokalisation und Ausbreitung des Tumors.  
+- **Octreotid-Szintigrafie (Somatostatin-Rezeptor-Scan) oder Ga-68-DOTATOC-PET/CT:**  
+  - Detaillierte Darstellung von Karzinoid-Herd und Metastasen.
+
+**Endoskopische Untersuchungen:**  
+- **Gastroskopie, Koloskopie oder Kapselendoskopie:**  
+  - Bei Verdacht auf Karzinoid im Magen-Darm-Trakt.  
+- **Bronchoskopie:**  
+  - Bei Verdacht auf bronchiales Karzinoid.
+
+**Spezielle diagnostische Tests:**  
+- **Provokationstests** (selten erforderlich):  
+  - z. B. Pentagastrin-Test, heute eher unüblich.  
+
+**Beispielfragen:**  
+• „Möchten Sie einer 24-Stunden-Urinuntersuchung auf 5-HIAA zustimmen?“  
+• „Sollte ein CT oder MRT durchgeführt werden, um die Tumorlokalisation zu klären?“  
+• „Ist eine endoskopische Abklärung (Magen-, Darmspiegelung) notwendig, um eine Karzinoid-Quelle zu finden?“
+`
+  }
 }
 
-
-
-
-
-
-
-
-
 };
-
 export default FallSpecificData;
