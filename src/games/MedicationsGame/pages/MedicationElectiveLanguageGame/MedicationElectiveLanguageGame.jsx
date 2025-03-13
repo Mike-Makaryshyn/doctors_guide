@@ -47,6 +47,8 @@ const languageMap = {
   fr: "Französisch",
   es: "Spanisch",
   pl: "Polnisch",
+  ro: "Rumänisch",
+  el: "Griechisch",
 };
 
 const MedicationElectiveLanguageGameContent = () => {
