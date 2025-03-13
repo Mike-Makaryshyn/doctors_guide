@@ -513,10 +513,11 @@
 
 /* Tutorial Button (inside modal) */
 /* Tutorial-Button */
+/* Замість: .tutorialButton { position: absolute; top: -220px; right: -60px; ... } */
 .tutorialButton {
-  position: absolute;
-  top: -220px;
-  right: -60px;
+  position: fixed;      /* фіксоване позиціонування відносно усього вікна */
+  top: 60px;            /* налаштуйте це під потрібний відступ згори */
+  right: 15px;          /* налаштуйте відступ від правого краю */
   width: 45px;
   height: 45px;
   background: none;
@@ -528,7 +529,7 @@
   border: none;
   box-shadow: none;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  z-index: 3000;
+  z-index: 4000; /* або інше, аби перекрити модальні вікна */
 }
 
 .tutorialButton:hover {
