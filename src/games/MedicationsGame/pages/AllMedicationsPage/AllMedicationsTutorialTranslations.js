@@ -17,6 +17,8 @@ const tutorialTranslations = {
           "Use this search field to filter for specific abbreviations or keywords. Enter a query to quickly find the desired abbreviation.",
         categoryHeader:
           "Here you can see the various categories. Click on a category to expand or collapse the associated abbreviations, keeping your view organized.",
+        termContent:
+          "Here the main name of the medication is displayed. If you click on this field, a medication example will appear.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "Click here to view the medication's definition. Clicking will display the translation in your selected language.",
@@ -54,7 +56,9 @@ const tutorialTranslations = {
           "Verwenden Sie dieses Suchfeld, um gezielt nach bestimmten Abkürzungen oder Schlagwörtern zu suchen. Geben Sie ein Stichwort ein, um die Liste zu filtern und so schneller die gewünschte Abkürzung zu finden.",
         categoryHeader:
           "Hier sehen Sie die verschiedenen Kategorien. Klicken Sie auf eine Kategorie, um die zugehörigen Abkürzungen anzuzeigen oder zu verbergen. So behalten Sie den Überblick über thematisch zusammengehörende Abkürzungen.",
-        // Оновлений текст для definitionCell:
+        termContent:
+          "Hier wird der Hauptname des Medikaments angezeigt. Wenn Sie auf dieses Feld klicken, wird ein Beispielmedikament angezeigt.",
+        // Оновлений текст für definitionCell:
         definitionCell:
           "Klicken Sie hier, um die Definition des Medikaments anzuzeigen. Beim Klicken wird die Übersetzung in Ihrer ausgewählten Sprache dargestellt.",
         checkIcon:
@@ -91,15 +95,17 @@ const tutorialTranslations = {
           "Використовуйте це поле пошуку для фільтрації за конкретними скороченнями або ключовими словами. Введіть запит для швидкого знаходження потрібного скорочення.",
         categoryHeader:
           "Тут відображаються різні категорії. Натисніть на категорію, щоб відкрити або закрити відповідні скорочення, що допоможе зберегти порядок.",
+        termContent:
+          "Тут відображається головна назва медикамента. Натисніть на це поле, щоб побачити приклад медикаментів.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "Натисніть тут, щоб побачити визначення медикамента. Після натискання відобразиться переклад на обрану вами мову.",
         checkIcon:
           "За допомогою цього символу ви відмічаєте скорочення як вивчене.",
         pauseIconDesktop:
-          "Відкладіть медикамент (Desktop), щоб вивчити його пізніше.",
+          "Відкладіть медикамент, щоб вивчити його пізніше.",
         pauseIconMobile:
-          "Відкладіть медикамент (Mobile), щоб вивчити його пізніше."
+          "Відкладіть медикамент, щоб вивчити його пізніше."
       },
       buttons: {
         back: "Назад",
@@ -128,15 +134,17 @@ const tutorialTranslations = {
           "Используйте это поле поиска для фильтрации по конкретным сокращениям или ключевым словам. Введите запрос для быстрого нахождения нужного сокращения.",
         categoryHeader:
           "Здесь отображаются различные категории. Нажмите на категорию, чтобы развернуть или свернуть список сокращений, что поможет сохранить порядок.",
+        termContent:
+          "Здесь отображается основное название медикамента. Если вы нажмете на это поле, появится пример медикамента.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "Нажмите здесь, чтобы увидеть определение медикамента. При нажатии будет показан перевод на выбранный язык.",
         checkIcon:
           "Отметьте сокращение как изученное.",
         pauseIconDesktop:
-          "Отложите медикамент (Desktop), чтобы изучить его позже.",
+          "Отложите медикамент, чтобы изучить его позже.",
         pauseIconMobile:
-          "Отложите медикамент (Mobile), чтобы изучить его позже."
+          "Отложите медикамент, чтобы изучить его позже."
       },
       buttons: {
         back: "Назад",
@@ -165,6 +173,8 @@ const tutorialTranslations = {
           "Belirli kısaltmalar veya anahtar kelimeler için filtreleme yapmak üzere bu arama alanını kullanın. Hızlıca aradığınız kısaltmayı bulmak için sorgu girin.",
         categoryHeader:
           "Burada çeşitli kategoriler görünür. Bir kategoriye tıklayarak ilgili kısaltmaları açın veya kapatın, böylece düzeni koruyabilirsiniz.",
+        termContent:
+          "Burada ilacın ana adı görüntülenir. Bu alana tıkladığınızda, bir ilaç örneği gösterilecektir.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "İlacın tanımını görmek için buraya tıklayın. Tıkladığınızda, seçtiğiniz dilde çeviri görüntülenecektir.",
@@ -200,9 +210,13 @@ const tutorialTranslations = {
           "Dowiedz się, jak zamknąć okno modalne, aby wrócić do głównej zawartości.",
         searchField:
           "Użyj tego pola wyszukiwania, aby filtrować konkretne skróty lub słowa kluczowe. Wpisz zapytanie, aby szybko znaleźć poszukiwaną skrót.",
+        categorySelect:
+          "Wybierz kategorię, aby pogrupować skróty tematycznie. Ułatwia to celowe uczenie się i powtarzanie kluczowych skrótów.",
         categoryHeader:
           "Tutaj widzisz różne kategorie. Kliknij kategorię, aby rozwinąć lub zwinąć odpowiadające jej skróty i zachować porządek.",
-        // Оновлений текст для definitionCell:
+        termContent:
+          "Tutaj wyświetlana jest główna nazwa leku. Jeśli klikniesz na to pole, pojawi się przykład leku.",
+        // Оновлений текст dla definitionCell:
         definitionCell:
           "Kliknij tutaj, aby zobaczyć definicję leku. Po kliknięciu zostanie wyświetlone tłumaczenie w wybranym języku.",
         checkIcon:
@@ -239,6 +253,8 @@ const tutorialTranslations = {
           "استخدم حقل البحث هذا لتصفية الاختصارات أو الكلمات المفتاحية المحددة. أدخل استعلامًا للعثور بسرعة على الاختصار المطلوب.",
         categoryHeader:
           "هنا يمكنك رؤية الفئات المختلفة. انقر على فئة لعرض أو إخفاء الاختصارات المرتبطة بها، مما يساعدك على تنظيم المحتوى.",
+        termContent:
+          "هنا يتم عرض الاسم الرئيسي للدواء. إذا نقرت على هذا الحقل، سيظهر مثال للدواء.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "انقر هنا لعرض تعريف الدواء. عند النقر، سيتم عرض الترجمة باللغة التي اخترتها.",
@@ -276,6 +292,8 @@ const tutorialTranslations = {
           "Utilisez ce champ de recherche pour filtrer des abréviations ou des mots-clés spécifiques. Entrez une requête pour trouver rapidement l’abréviation souhaitée.",
         categoryHeader:
           "Ici, vous pouvez voir les différentes catégories. Cliquez sur une catégorie pour développer ou réduire les abréviations associées, afin de garder une vue organisée.",
+        termContent:
+          "Ici, le nom principal du médicament est affiché. Si vous cliquez sur ce champ, un exemple de médicament apparaîtra.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "Cliquez ici pour afficher la définition du médicament. En cliquant, la traduction dans votre langue sera affichée.",
@@ -313,6 +331,8 @@ const tutorialTranslations = {
           "Utiliza este campo de búsqueda para filtrar abreviaturas o palabras clave específicas. Ingresa una consulta para encontrar rápidamente la abreviatura deseada.",
         categoryHeader:
           "Aquí puedes ver las diversas categorías. Haz clic en una categoría para expandir o contraer las abreviaturas asociadas, manteniendo tu vista organizada.",
+        termContent:
+          "Aquí se muestra el nombre principal del medicamento. Si haces clic en este campo, aparecerá un ejemplo de medicamento.",
         // Оновлений текст для definitionCell:
         definitionCell:
           "Haz clic aquí para ver la definición del medicamento. Al hacer clic, se mostrará la traducción en el idioma seleccionado.",
@@ -350,6 +370,8 @@ const tutorialTranslations = {
           "Χρησιμοποιήστε αυτό το πεδίο αναζήτησης για να φιλτράρετε συγκεκριμένες συντομογραφίες ή λέξεις-κλειδιά. Εισάγετε ένα ερώτημα για να βρείτε γρήγορα τη συντομογραφία που επιθυμείτε.",
         categoryHeader:
           "Εδώ μπορείτε να δείτε τις διάφορες κατηγορίες. Κάντε κλικ σε μια κατηγορία για να επεκτείνετε ή να συρρικνώσετε τις συντομογραφίες που της ανήκουν, διατηρώντας την προβολή οργανωμένη.",
+        termContent:
+          "Εδώ εμφανίζεται το κύριο όνομα του φαρμάκου. Αν κάνετε κλικ σε αυτό το πεδίο, θα εμφανιστεί ένα παράδειγμα φαρμάκου.",
         // Οновлений текст για definitionCell:
         definitionCell:
           "Κάντε κλικ εδώ για να δείτε τον ορισμό του φαρμάκου. Με το κλικ, θα εμφανιστεί η μετάφραση στη γλώσσα που έχετε επιλέξει.",
@@ -387,6 +409,8 @@ const tutorialTranslations = {
           "Utilizați acest câmp de căutare pentru a filtra abrevierile sau cuvintele cheie specifice. Introduceți o interogare pentru a găsi rapid abrevierea dorită.",
         categoryHeader:
           "Aici puteți vedea diferitele categorii. Faceți clic pe o categorie pentru a extinde sau restrânge abrevierile asociate, păstrându-vă vizualizarea organizată.",
+        termContent:
+          "Aici este afișat numele principal al medicamentului. Dacă faceți clic pe acest câmp, va apărea un exemplu de medicament.",
         // Оновлений текст pentru definitionCell:
         definitionCell:
           "Faceți clic aici pentru a vedea definiția medicamentului. La clic, se va afișa traducerea în limba selectată.",

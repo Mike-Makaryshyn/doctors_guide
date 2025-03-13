@@ -66,12 +66,12 @@ const AllMedicationsTutorial = React.forwardRef(
           disableScrolling: false,
         },
         {
-            target: '[data-tutorial="termContent"]',
-            content: <span>{translations.steps.termContent}</span>,
-            placement: "bottom", // oder "top" - je nach Layout
-            disableBeacon: true,
-            disableScrolling: false,
-          },
+          target: '[data-tutorial="termContent"]',
+          content: <span>{translations.steps.termContent}</span>,
+          placement: "bottom",
+          disableBeacon: true,
+          disableScrolling: false,
+        },
         {
           target: '[data-tutorial="definitionCell"]',
           content: <span>{translations.steps.definitionCell}</span>,
@@ -79,7 +79,6 @@ const AllMedicationsTutorial = React.forwardRef(
           disableBeacon: true,
           disableScrolling: false,
         },
-     
         {
           target: '[data-tutorial="checkIcon"]',
           content: <span>{translations.steps.checkIcon}</span>,
@@ -97,7 +96,7 @@ const AllMedicationsTutorial = React.forwardRef(
         {
           target: '[data-tutorial="pauseIconMobile"]',
           content: <span>{translations.steps.pauseIconMobile}</span>,
-          placement: "top",
+          placement: "left",
           disableBeacon: true,
           disableScrolling: false,
         },
@@ -155,6 +154,11 @@ const AllMedicationsTutorial = React.forwardRef(
             primaryColor: "#023c6f",
           },
           buttonClose: { display: "none" },
+          // Додаємо адаптивні стилі для тултіпу
+          tooltip: {
+            maxWidth: "90vw",
+            wordWrap: "break-word",
+          },
         }}
       />
     );
