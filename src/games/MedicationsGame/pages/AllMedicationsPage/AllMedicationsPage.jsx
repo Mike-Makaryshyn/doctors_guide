@@ -392,6 +392,7 @@ const AllMedicationsPageContent = () => {
                                 >
                                   <h3
                                     className={styles.tileHeader}
+                                    data-tutorial="termContent"
                                     style={{ cursor: "pointer" }}
                                   >
                                     {med.lat}
@@ -401,7 +402,8 @@ const AllMedicationsPageContent = () => {
                                 <h3 className={styles.tileHeader}>{med.lat}</h3>
                               )}
 
-                              <p className={styles.tileDescription}data-tutorial="descriptionCell">
+<p className={styles.tileDescription}
+                             >
                                 
                                 {translationLanguage !== "de" ? (
                                   <Tippy
@@ -423,7 +425,8 @@ const AllMedicationsPageContent = () => {
                               </p>
 
                               {showDefinition && (
-                                <p className={styles.tileExplanation}>
+                                <p className={styles.tileExplanation}  data-tutorial="descriptionCell"
+>
                                   {translationLanguage !== "de" ? (
                                     <Tippy
                                       content={
@@ -578,6 +581,7 @@ const AllMedicationsPageContent = () => {
                                     >
                                       <div
                                         className={styles.termContent}
+                                        data-tutorial="termContent"
                                         style={{ cursor: "pointer" }}
                                       >
                                         {med.lat}
@@ -591,6 +595,7 @@ const AllMedicationsPageContent = () => {
                                 </td>
 
                                 <td>
+                                  
                                   {translationLanguage !== "de" ? (
                                     <Tippy
                                       content={
@@ -613,7 +618,7 @@ const AllMedicationsPageContent = () => {
                                 </td>
 
                                 {showDefinition && (
-                                  <td>
+                                  <td data-tutorial="descriptionCell">
                                     {translationLanguage !== "de" ? (
                                       <Tippy
                                         content={

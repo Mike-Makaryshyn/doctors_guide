@@ -4,17 +4,17 @@ import tutorialTranslations from "./AllMedicationsTutorialTranslations"; // Beis
 
 const AllMedicationsTutorial = React.forwardRef(
   ({ run, onFinish, onModalComplete, selectedLanguage = "de" }, joyrideRef) => {
-    // Aktuelle Sprache (z.B. 'de' oder 'en')
+    // Поточна мова (наприклад, "de", "en", "uk", "ru", "tr")
     const language = selectedLanguage || "de";
-    // Übersetzungsobjekt laden (z.B. { steps: { ... }, buttons: { ... } })
+    // Завантаження об'єкта перекладів; якщо потрібна мова не знайдена – використовуємо німецький
     const translations = tutorialTranslations[language] || tutorialTranslations.de;
 
     const [steps, setSteps] = useState([]);
-    // Wird genutzt, um Modal nur einmal zu schließen
+    // Використовується, щоб закривати модальне вікно лише один раз (для кроків, де це потрібно)
     const [modalClosed, setModalClosed] = useState(false);
 
     useEffect(() => {
-      // Definiere die Reihenfolge und Inhalte der Schritte analog zum AbbreviationsTutorial
+      // Визначення послідовності кроків туторіалу
       const stepsData = [
         {
           target: "body",
@@ -66,19 +66,20 @@ const AllMedicationsTutorial = React.forwardRef(
           disableScrolling: false,
         },
         {
+            target: '[data-tutorial="termContent"]',
+            content: <span>{translations.steps.termContent}</span>,
+            placement: "bottom", // oder "top" - je nach Layout
+            disableBeacon: true,
+            disableScrolling: false,
+          },
+        {
           target: '[data-tutorial="definitionCell"]',
           content: <span>{translations.steps.definitionCell}</span>,
           placement: "bottom",
           disableBeacon: true,
           disableScrolling: false,
         },
-        {
-            target: '[data-tutorial="descriptionCell"]',
-            content: <span>Hier siehst du die Bezeichnung!</span>,
-            placement: 'bottom', // oder top/left/right, je nach Layout
-            disableBeacon: true,
-            disableScrolling: false,
-          },
+     
         {
           target: '[data-tutorial="checkIcon"]',
           content: <span>{translations.steps.checkIcon}</span>,
@@ -106,13 +107,13 @@ const AllMedicationsTutorial = React.forwardRef(
     }, [translations]);
 
     /**
-     * Wird nach jedem Schritt aufgerufen. Wir können hier überwachen,
-     * wann wir die Einstellungen-Modal o.Ä. schließen wollen.
+     * Callback, який викликається після кожного кроку.
+     * Тут можна відслідковувати, коли потрібно закрити модальне вікно налаштувань.
      */
     const handleJoyrideCallback = (data) => {
       const { status, index } = data;
 
-      // Beispiel: ab einem gewissen Schritt (index >= 5) soll die Modal geschlossen werden
+      // Приклад: від кроку з індексом >= 5 закриваємо модальне вікно, якщо ще не закрито
       if (index >= 5 && !modalClosed) {
         if (onModalComplete) {
           onModalComplete();
@@ -120,7 +121,7 @@ const AllMedicationsTutorial = React.forwardRef(
         setModalClosed(true);
       }
 
-      // Wenn das Tutorial fertig ist (durchgelaufen oder übersprungen)
+      // Якщо туторіал завершено або пропущено – викликаємо onFinish
       if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
         if (onFinish) {
           onFinish();
