@@ -12,7 +12,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
-import { v4 as uuidv4 } from "uuid"; // Для генерації унікальних ID
+import { v4 as uuidv4 } from "uuid";
 
 // Імпортуємо вкладки
 import Tab1 from "./Tab1";
@@ -21,12 +21,12 @@ import Tab3 from "./Tab3";
 import Tab4 from "./Tab4";
 import Tab5 from "./Tab5";
 
-// Імпортуємо іконки
-import DatenIcon from "../../assets/DataCollectionPage/Daten.png";
-import AnamneseIcon from "../../assets/DataCollectionPage/Anamnese.png";
-import ArztPatientIcon from "../../assets/DataCollectionPage/ArztPatient.png";
-import ArztArztIcon from "../../assets/DataCollectionPage/ArztArzt.png";
-import FeedbackIcon from "../../assets/DataCollectionPage/Feedback.png";
+// Імпортуємо іконки (відносні шляхи до папки assets)
+import DatenIcon from "../../assets/asket_daten.png";
+import AnamneseIcon from "../../assets/asket_anamnese.png";
+import ArztPatientIcon from "../../assets/asket_arzt_patient.png";
+import ArztArztIcon from "../../assets/asket_arzt_arzt.png";
+import FeedbackIcon from "../../assets/asket_feedback.png";
 import { FaSave, FaArrowLeft } from "react-icons/fa";
 
 import { useSwipeable } from "react-swipeable";
@@ -49,7 +49,7 @@ const DataCollectionPage = () => {
   const { selectedRegion: globalRegion } = useGetGlobalInfo();
   const navigate = useNavigate();
 
-  // Отримуємо дані користувача (припускаючи, що userData доступні через контекст або іншим способом)
+  // Отримуємо дані користувача
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: ""
@@ -75,7 +75,7 @@ const DataCollectionPage = () => {
     return savedData ? JSON.parse(savedData) : {};
   });
 
-  // Стан для відстеження, які поля у другій вкладці включені (за замовчуванням включені)
+  // Стан для відстеження, які поля у другій вкладці включені
   const [includedFieldsTab2, setIncludedFieldsTab2] = useState(() => {
     const savedIncluded = localStorage.getItem(LOCAL_STORAGE_KEY_INCLUDED_TAB2);
     return savedIncluded
@@ -93,12 +93,12 @@ const DataCollectionPage = () => {
   });
 
   const [selectedRegion, setSelectedRegion] = useState(globalRegion || "");
-  const [activeTab, setActiveTab] = useState(1); // Початкова активна вкладка - 1
+  const [activeTab, setActiveTab] = useState(1);
 
-  // Стан для контролю включення/виключення поля вибору регіону
+  // Стан для контролю поля вибору регіону
   const [isRegionIncluded, setIsRegionIncluded] = useState(() => {
     const savedState = localStorage.getItem(LOCAL_STORAGE_KEY_REGION_INCLUSION);
-    return savedState ? JSON.parse(savedState) : true; // За замовчуванням включено
+    return savedState ? JSON.parse(savedState) : true;
   });
 
   useEffect(() => {
@@ -108,7 +108,7 @@ const DataCollectionPage = () => {
     }
   }, [globalRegion]);
 
-  // Функція для оновлення локальних даних
+  // Оновлення локальних даних
   const updateLocalData = (newData) => {
     setLocalData((prevData) => {
       const updatedData = {
@@ -121,7 +121,7 @@ const DataCollectionPage = () => {
     });
   };
 
-  // Функція для оновлення включених полів у другій вкладці
+  // Оновлення включених полів у другій вкладці
   const updateIncludedFieldsTab2 = (field, isIncluded) => {
     setIncludedFieldsTab2((prevIncluded) => {
       const updatedIncluded = {
@@ -133,7 +133,7 @@ const DataCollectionPage = () => {
         JSON.stringify(updatedIncluded)
       );
       console.log("Updated includedFieldsTab2:", updatedIncluded);
-      // Якщо поле виключено, видаляємо його значення з localData
+      // Якщо поле виключено, видаляємо його значення
       if (!isIncluded) {
         const { [field]: _, ...rest } = localData;
         setLocalData(rest);
@@ -143,7 +143,7 @@ const DataCollectionPage = () => {
     });
   };
 
-  // Функція для включення/виключення поля вибору регіону
+  // Включення/виключення поля вибору регіону
   const toggleRegionInclusion = () => {
     setIsRegionIncluded((prev) => {
       const newState = !prev;
@@ -151,7 +151,6 @@ const DataCollectionPage = () => {
         LOCAL_STORAGE_KEY_REGION_INCLUSION,
         JSON.stringify(newState)
       );
-      // Якщо виключаємо, видаляємо поле з localData
       if (!newState) {
         const { region, ...rest } = localData;
         setLocalData(rest);
@@ -161,12 +160,12 @@ const DataCollectionPage = () => {
     });
   };
 
-  // Функція для включення/виключення конкретного поля у вкладці 2
+  // Тогл поля у вкладці 2
   const toggleFieldInclusionTab2 = (field) => {
     updateIncludedFieldsTab2(field, !includedFieldsTab2[field]);
   };
 
-  // Функція для збереження даних до Firebase
+  // Збереження даних до Firebase
   const saveAllToFirebase = async () => {
     try {
       const user = auth.currentUser;
@@ -178,21 +177,18 @@ const DataCollectionPage = () => {
         throw new Error("Регіон не обрано. Будь ласка, виберіть регіон перед збереженням.");
       }
 
-      // Визначаємо обов'язкові поля для перевірки
+      // Обов'язкові поля
       const requiredFields = isRegionIncluded ? ["name_tab1", "region"] : ["name_tab1"];
-
       for (let field of requiredFields) {
         if (!localData[field]) {
           throw new Error(`Поле "${field}" є обов'язковим.`);
         }
       }
 
-      // Визначаємо документ для збереження
-      const docRef = doc(db, "cases", selectedRegion || "default_region"); // Використовується "default_region", якщо регіон виключено
+      const docRef = doc(db, "cases", selectedRegion || "default_region");
 
-      // Створюємо об'єкт для збереження, включаючи лише заповнені поля
       let newCase = {
-        id: uuidv4(), // Використання UUID для унікального ID
+        id: uuidv4(),
         authorId: user.uid,
       };
 
@@ -200,17 +196,17 @@ const DataCollectionPage = () => {
       if (localData.name_tab1) newCase.name_tab1 = localData.name_tab1;
       if (isRegionIncluded && selectedRegion) newCase.region = selectedRegion;
 
-      // Вкладка 2 (Серіалізуємо examinerQuestions)
+      // Вкладка 2
       if (localData.examinerQuestions && Array.isArray(localData.examinerQuestions)) {
         newCase.examinerQuestions = serializeExaminerQuestions(localData.examinerQuestions);
       }
 
-      // Вкладка 3 (Серіалізуємо patientQuestions)
+      // Вкладка 3
       if (localData.patientQuestions && Array.isArray(localData.patientQuestions)) {
         newCase.patientQuestions = serializePatientQuestions(localData.patientQuestions);
       }
 
-      // Додаткове Поле FullName (оновлено формат)
+      // Додаткове поле FullName
       const fullName = `${localData.theme} by ${userData.firstName}`;
       newCase.fullName = fullName;
 
@@ -220,7 +216,6 @@ const DataCollectionPage = () => {
         address_tab4: "address_tab4",
         comments_tab5: "comments_tab5",
       };
-
       Object.keys(fieldsTabs3to5).forEach((field) => {
         if (localData[field]) {
           newCase[field] = localData[field];
@@ -235,7 +230,7 @@ const DataCollectionPage = () => {
         cases: arrayUnion(newCase),
       });
 
-      // Очищуємо дані після успішного збереження
+      // Очищення даних
       if (isRegionIncluded) {
         setLocalData({ region: selectedRegion });
         localStorage.setItem(LOCAL_STORAGE_KEY_DATA, JSON.stringify({ region: selectedRegion }));
@@ -281,21 +276,21 @@ const DataCollectionPage = () => {
     }
   };
 
-  // Обгортка для кнопки збереження з підтвердженням
+  // Кнопка збереження
   const handleSaveButtonClick = () => {
     if (window.confirm("Ви дійсно хочете зберегти всі дані?")) {
       saveAllToFirebase();
     }
   };
 
-  // Функція для зміни регіону
+  // Зміна регіону
   const handleRegionChange = (e) => {
     const region = e.target.value;
     setSelectedRegion(region);
     updateLocalData({ region });
   };
 
-  // Функція для рендерингу полів залежно від активної вкладки
+  // Рендеринг контенту вкладок
   const renderTabContent = () => {
     switch (activeTab) {
       case 1:
@@ -330,6 +325,7 @@ const DataCollectionPage = () => {
     }
   };
 
+  // Свайпи
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (activeTab < 5) setActiveTab(activeTab + 1);
@@ -341,7 +337,7 @@ const DataCollectionPage = () => {
     trackMouse: true
   });
 
-  // Десеріалізація examinerQuestions та patientQuestions при завантаженні даних з localStorage
+  // Десеріалізація
   useEffect(() => {
     const updatedData = { ...localData };
     let shouldUpdate = false;
@@ -360,29 +356,31 @@ const DataCollectionPage = () => {
       setLocalData(updatedData);
       localStorage.setItem(LOCAL_STORAGE_KEY_DATA, JSON.stringify(updatedData));
     }
-  }, []); // Виконується лише один раз при завантаженні компонента
+  }, []);
 
   return (
     <MainLayout>
       <div className={styles.container} {...handlers}>
         <ToastContainer />
 
-        {/* Tab Menu rendered as round containers with images */}
+        {/* Коло + назва в окремому обгортанні */}
         <div className={styles.tabMenuContainer} {...handlers}>
           {[
-            { id: 1, title: 'Daten', image: DatenIcon },
-            { id: 2, title: 'Anamnese', image: AnamneseIcon },
-            { id: 3, title: 'Arzt-Patient', image: ArztPatientIcon },
-            { id: 4, title: 'Arzt-Arzt', image: ArztArztIcon },
-            { id: 5, title: 'Feedback', image: FeedbackIcon }
+            { id: 1, title: "Daten", image: DatenIcon },
+            { id: 2, title: "Anamnese", image: AnamneseIcon },
+            { id: 3, title: "Arzt-Patient", image: ArztPatientIcon },
+            { id: 4, title: "Arzt-Arzt", image: ArztArztIcon },
+            { id: 5, title: "Feedback", image: FeedbackIcon }
           ].map((tab) => (
-            <div
-              key={tab.id}
-              className={`${styles.tabCircle} ${activeTab === tab.id ? styles.active : ''}`}
-              onClick={() => setActiveTab(tab.id)}
-              data-tab-id={tab.id}
-            >
-              <img src={tab.image} alt={tab.title} />
+            <div key={tab.id} className={styles.tabCircleWrapper}>
+              <div
+                className={`${styles.tabCircle} ${activeTab === tab.id ? styles.active : ""}`}
+                onClick={() => setActiveTab(tab.id)}
+                data-tab-id={tab.id}
+              >
+                <img src={tab.image} alt={tab.title} />
+              </div>
+              {/* Текст під колом */}
               <span className={styles.tabTitle}>{tab.title}</span>
             </div>
           ))}
@@ -392,14 +390,14 @@ const DataCollectionPage = () => {
         <div className={styles.tabContent}>{renderTabContent()}</div>
       </div>
 
-      {/* Кнопка BackMenu у лівому нижньому куті */}
+      {/* Кнопка BackMenu */}
       <div className={styles.main_menu_back}>
         <button onClick={() => navigate(-1)} className={styles.main_menu_back}>
           &#8592;
         </button>
       </div>
 
-      {/* Нова кнопка для збереження даних у правому нижньому куті */}
+      {/* Кнопка збереження */}
       <div className={styles.bottomRightSave}>
         <button onClick={handleSaveButtonClick} className={styles.saveButtonNew}>
           <FaSave />

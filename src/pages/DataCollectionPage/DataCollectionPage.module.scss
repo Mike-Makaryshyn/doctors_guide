@@ -1,9 +1,11 @@
 /* src/pages/DataCollectionPage/DataCollectionPage.module.scss */
 
+/* Основний контейнер */
 .container {
     padding: 20px;
   }
   
+  /* Приклад стилів для якихось рядків введення */
   .entryRow {
     margin-bottom: 15px;
     display: flex;
@@ -39,9 +41,7 @@
     flex: 1;
   }
   
-  /* Старі стилі для табів більше не використовуються */
-  
-  /* Нові стилі для Tab Menu, що відображається як круглі контейнери з картинками */
+  /* Контейнер для всіх табів */
   .tabMenuContainer {
     display: flex;
     flex-direction: row;
@@ -52,44 +52,59 @@
     scroll-snap-type: x mandatory;
   }
   
-  .tabCircle {
-    flex: 0 0 auto;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #fff;
+  /* Новий контейнер-обгортка: зберігає коло та текст під ним */
+  .tabCircleWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 5px; /* відстань між колом та підписом */
+  }
+  
+  /* Власне коло */
+  .tabCircle {
+    flex: 0 0 auto;
+    width: 120px; /* збільшуємо коло */
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden; /* обрізає зображення всередині кола */
+    position: relative;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     scroll-snap-align: center;
     cursor: pointer;
   }
   
+  /* Зображення займає всю площу кола і обрізається */
+  .tabCircle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* дозволяє обрізати картинку під коло */
+  }
+  
+  /* Ефект при наведенні */
   .tabCircle:hover {
     transform: translateY(-5px) scale(1.05);
   }
   
-  .tabCircle img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
-  }
-  
+  /* Підпис під колом */
   .tabTitle {
-    font-size: 10px;
+    font-size: 14px;
     text-align: center;
     color: #013b6e;
   }
   
+  /* Активний таб */
   .tabCircle.active {
     transform: scale(1.15);
     box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
     border: 2px dashed rgba(42, 124, 111, 0.6);
   }
   
+  /* Контент вибраної вкладки */
   .tabContent {
     padding: 20px;
     border: none;
@@ -99,7 +114,7 @@
     flex-direction: column;
   }
   
-  /* Кнопка для збереження даних (правий нижній кут) */
+  /* Кнопка для збереження (правий нижній кут) */
   .bottomRightSave {
     position: fixed;
     bottom: 0;
@@ -140,26 +155,22 @@
     z-index: 2000;
   }
   
-  /* Додаткові стилі для мобільних пристроїв */
+  /* Мобільна адаптація */
   @media (max-width: 768px) {
     .tabMenuContainer {
       justify-content: center;
+      padding: 0;
     }
-    
+  
     .tabCircle {
-      width: 70px;
-      height: 70px;
+      width: 100px;
+      height: 100px;
     }
-    
-    .tabCircle img {
-      width: 35px;
-      height: 35px;
-    }
-    
+  
     .tabTitle {
-      display: none;
+      font-size: 12px;
     }
-    
+  
     .tabContent {
       padding: 10px;
     }
