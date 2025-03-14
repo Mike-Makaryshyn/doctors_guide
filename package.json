@@ -60,8 +60,6 @@
     "react-leaflet": "^4.2.1",
     "react-markdown": "^9.0.1",
     "react-modal": "^3.16.3",
-    "react-native-paper": "^5.12.5",
-    "react-native-wheel-of-fortune": "^1.5.4",
     "react-query": "^3.39.3",
     "react-resizable": "^3.0.5",
     "react-responsive": "^10.0.1",
