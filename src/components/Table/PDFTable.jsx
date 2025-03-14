@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect } from "react";
-import jsPDF from "jspdf";
+import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import PropTypes from "prop-types";
 import { FaDownload, FaEye, FaTimes } from "react-icons/fa";
@@ -10,7 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
 import { notNeededText } from "../../constants/translation/documents";
 
-// Додаємо імпорт шрифтів із src/assets
+// Імпорти шрифтів
 import notoSansFont from "../../assets/fonts/NotoSans-VariableFont.ttf";
 import notoNaskhArabicFont from "../../assets/fonts/NotoNaskhArabic.ttf";
 import openSansFont from "../../assets/fonts/OpenSans-VariableFont.ttf";
@@ -98,6 +98,24 @@ const tableHeaders = {
     copies: "Kopie",
     sent: "Wysłane",
   },
+  el: {
+    document: "Έγγραφο",
+    available: "Διαθέσιμο",
+    apostille: "Αποστίλλη",
+    notarized: "Πιστοποιημένο",
+    translation: "Μετάφραση",
+    copies: "Αντίγραφα",
+    sent: "Απεστάλη",
+  },
+  ro: {
+    document: "Document",
+    available: "Disponibil",
+    apostille: "Apostilă",
+    notarized: "Notarizat",
+    translation: "Traducere",
+    copies: "Copii",
+    sent: "Trimis",
+  },
 };
 
 // ---------- 2) Функція завантаження локального шрифту ----------
@@ -124,6 +142,8 @@ const languageFlags = {
   fr: "🇫🇷",
   es: "🇪🇸",
   pl: "🇵🇱",
+  el: "🇬🇷",
+  ro: "🇷🇴",
 };
 
 // ---------- Хелпер для рядків таблиці ----------
@@ -168,7 +188,7 @@ function makeRowObject(doc, checkboxes, language) {
   return {
     title,
     available,
-    apostile: apostille,
+    apostille,
     notary,
     translation,
     ready_copies,
@@ -194,7 +214,7 @@ const PDFTable = ({
   const [creationDate, setCreationDate] = useState("");
 
   // ---------------------------------------------------------------------
-  // 2) useEffect: завантажуємо ім'я та прізвище з Firebase
+  // 2) Завантаження даних з Firebase
   // ---------------------------------------------------------------------
   useEffect(() => {
     const unsubAuth = onAuthStateChanged(auth, (user) => {
@@ -216,37 +236,32 @@ const PDFTable = ({
         setLastName("");
       }
     });
-
     return () => unsubAuth();
   }, []);
 
   // ---------------------------------------------------------------------
-  // 3) Колонки для ПЕРШОЇ (користувацької) сторінки
+  // 3) Колонки для першої (користувацької) сторінки
   // ---------------------------------------------------------------------
   const firstTableColumns = useMemo(() => {
-    const th = tableHeaders[pdfLanguage] || tableHeaders.en; 
-    // якщо обрана мова недоступна – fallback англійською
-
-    if (category === "EU") {
-      return [
-        { header: th.document, dataKey: "title" },
-        { header: th.available, dataKey: "available" },
-        { header: th.notarized, dataKey: "notary" },
-        { header: th.translation, dataKey: "translation" },
-        { header: th.copies, dataKey: "ready_copies" },
-        { header: th.sent, dataKey: "sent" },
-      ];
-    } else {
-      return [
-        { header: th.document, dataKey: "title" },
-        { header: th.available, dataKey: "available" },
-        { header: th.apostille, dataKey: "apostile" },
-        { header: th.notarized, dataKey: "notary" },
-        { header: th.translation, dataKey: "translation" },
-        { header: th.copies, dataKey: "ready_copies" },
-        { header: th.sent, dataKey: "sent" },
-      ];
-    }
+    const th = tableHeaders[pdfLanguage] || tableHeaders.en;
+    return category === "EU"
+      ? [
+          { header: th.document, dataKey: "title" },
+          { header: th.available, dataKey: "available" },
+          { header: th.notarized, dataKey: "notary" },
+          { header: th.translation, dataKey: "translation" },
+          { header: th.copies, dataKey: "ready_copies" },
+          { header: th.sent, dataKey: "sent" },
+        ]
+      : [
+          { header: th.document, dataKey: "title" },
+          { header: th.available, dataKey: "available" },
+          { header: th.apostille, dataKey: "apostile" },
+          { header: th.notarized, dataKey: "notary" },
+          { header: th.translation, dataKey: "translation" },
+          { header: th.copies, dataKey: "ready_copies" },
+          { header: th.sent, dataKey: "sent" },
+        ];
   }, [category, pdfLanguage]);
 
   const secondTableColumns = useMemo(() => {
@@ -259,31 +274,28 @@ const PDFTable = ({
   }, [pdfLanguage]);
 
   // ---------------------------------------------------------------------
-  // 4) Колонки для ДРУГОЇ (німецької) сторінки
-  //    Завжди беремо переклад "de" для заголовків
+  // 4) Колонки для другої (німецької) сторінки (заголовки завжди німецькою)
   // ---------------------------------------------------------------------
   const firstTableColumnsGerman = useMemo(() => {
     const th = tableHeaders.de;
-    if (category === "EU") {
-      return [
-        { header: th.document, dataKey: "title" },
-        { header: th.available, dataKey: "available" },
-        { header: th.notarized, dataKey: "notary" },
-        { header: th.translation, dataKey: "translation" },
-        { header: th.copies, dataKey: "ready_copies" },
-        { header: th.sent, dataKey: "sent" },
-      ];
-    } else {
-      return [
-        { header: th.document, dataKey: "title" },
-        { header: th.available, dataKey: "available" },
-        { header: th.apostille, dataKey: "apostile" },
-        { header: th.notarized, dataKey: "notary" },
-        { header: th.translation, dataKey: "translation" },
-        { header: th.copies, dataKey: "ready_copies" },
-        { header: th.sent, dataKey: "sent" },
-      ];
-    }
+    return category === "EU"
+      ? [
+          { header: th.document, dataKey: "title" },
+          { header: th.available, dataKey: "available" },
+          { header: th.notarized, dataKey: "notary" },
+          { header: th.translation, dataKey: "translation" },
+          { header: th.copies, dataKey: "ready_copies" },
+          { header: th.sent, dataKey: "sent" },
+        ]
+      : [
+          { header: th.document, dataKey: "title" },
+          { header: th.available, dataKey: "available" },
+          { header: th.apostille, dataKey: "apostile" },
+          { header: th.notarized, dataKey: "notary" },
+          { header: th.translation, dataKey: "translation" },
+          { header: th.copies, dataKey: "ready_copies" },
+          { header: th.sent, dataKey: "sent" },
+        ];
   }, [category]);
 
   const secondTableColumnsGerman = useMemo(() => {
@@ -296,7 +308,7 @@ const PDFTable = ({
   }, []);
 
   // ---------------------------------------------------------------------
-  // 5) Масив документів (mainDocs + optional і secondDocs)
+  // 5) Формування масивів документів
   // ---------------------------------------------------------------------
   const mainDocs = useMemo(() => {
     return category === "EU" ? documents.mainEU : documents.mainNonEU;
@@ -317,9 +329,8 @@ const PDFTable = ({
   }, [documents.second, checkboxes]);
 
   // ---------------------------------------------------------------------
-  // 6) Тіла таблиць: перша сторінка = pdfLanguage, друга сторінка = "de"
+  // 6) Формування тіл таблиць
   // ---------------------------------------------------------------------
-  // -- Перша сторінка (користувацька)
   const firstTableBody_userLang = useMemo(() => {
     return firstTableDocs
       .map((doc) => makeRowObject(doc, checkboxes, pdfLanguage))
@@ -332,7 +343,6 @@ const PDFTable = ({
       .filter((row) => row.title.trim() !== "");
   }, [secondTableDocs, checkboxes, pdfLanguage]);
 
-  // -- Друга сторінка (німецька)
   const firstTableBody_german = useMemo(() => {
     return firstTableDocs
       .map((doc) => makeRowObject(doc, checkboxes, "de"))
@@ -346,7 +356,7 @@ const PDFTable = ({
   }, [secondTableDocs, checkboxes]);
 
   // ---------------------------------------------------------------------
-  // 7) Функція заголовка (header) на кожній сторінці
+  // 7) Функція заголовка на кожній сторінці
   // ---------------------------------------------------------------------
   function addPageHeader(pdfInstance, fName, lName, dateStr) {
     pdfInstance.setFontSize(12);
@@ -356,7 +366,7 @@ const PDFTable = ({
   }
 
   // ---------------------------------------------------------------------
-  // 8) Футер-слоган (оновлений)
+  // 8) Функція для футера-слогану
   // ---------------------------------------------------------------------
   const didDrawPageFooter = (doc) => (data) => {
     const pageHeight = doc.internal.pageSize.getHeight();
@@ -366,13 +376,11 @@ const PDFTable = ({
     // Робимо "GermanMove" 14pt жирним
     doc.setFontSize(16);
     doc.setFont("NotoSans", "bold");
-    doc.text("GermanMove ", sloganX, sloganY); 
-    // зверніть увагу: додаємо пробіл у кінці рядка
+    doc.text("GermanMove ", sloganX, sloganY);
 
-    // А решту тексту 10pt normal
+    // Решта тексту 10pt normal
     doc.setFont("NotoSans", "normal");
     doc.setFontSize(10);
-
     const offset = doc.getTextWidth("GermanMove ");
     doc.text(
       "            makes your journey to German approbation easier",
@@ -382,17 +390,16 @@ const PDFTable = ({
   };
 
   // ---------------------------------------------------------------------
-  // 9) Генеруємо PDF (ЗАВАНТАЖЕННЯ)
+  // 9) Генерація PDF (Завантаження)
   // ---------------------------------------------------------------------
   const handleGeneratePDF = async () => {
     const doc = new jsPDF("l", "pt", "a4");
 
-    // Завантажуємо шрифти з імпортованих модулів
+    // Завантаження шрифтів
     const notoSans = await loadFont(notoSansFont, "NotoSans");
     const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
     const openSans = await loadFont(openSansFont, "OpenSans");
 
-    // Додаємо у pdf
     doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
     doc.addFont("NotoSans.ttf", "NotoSans", "normal");
 
@@ -402,14 +409,16 @@ const PDFTable = ({
     doc.addFileToVFS("OpenSans.ttf", openSans.base64Font);
     doc.addFont("OpenSans.ttf", "OpenSans", "normal");
 
-    // Визначаємо шрифт для першої сторінки (залежно від pdfLanguage)
+    // Встановлення шрифту залежно від мови
     if (pdfLanguage === "ar") {
       doc.setFont("NotoNaskhArabic", "normal");
     } else {
       doc.setFont("NotoSans", "normal");
     }
+    // Визначення поточного шрифту
+    const currentFontName = pdfLanguage === "ar" ? "NotoNaskhArabic" : "NotoSans";
 
-    // ---------- Перша сторінка (користувацька мова) ----------
+    // Перша сторінка (користувацька мова)
     addPageHeader(doc, firstName, lastName, creationDate);
 
     doc.autoTable({
@@ -419,7 +428,7 @@ const PDFTable = ({
       margin: { left: 40, right: 40 },
       theme: "grid",
       styles: {
-        font: doc.getFont().fontName, // використовує поточний
+        font: currentFontName,
         fontSize: 10,
         cellPadding: 3,
         lineWidth: 0.5,
@@ -435,113 +444,7 @@ const PDFTable = ({
       margin: { left: 40, right: 40 },
       theme: "grid",
       styles: {
-        font: doc.getFont().fontName,
-        fontSize: 10,
-        cellPadding: 3,
-        lineWidth: 0.5,
-      },
-      headStyles: { fillColor: [220, 220, 220] },
-      didDrawPage: didDrawPageFooter(doc),
-    });
-
-    // ---------- Друга сторінка (німецька) ----------
-    doc.addPage("l");
-    // Тепер точно ставимо NotoSans
-    doc.setFont("NotoSans", "normal");
-
-    addPageHeader(doc, firstName, lastName, creationDate);
-
-    doc.autoTable({
-      columns: firstTableColumnsGerman,
-      body: firstTableBody_german,
-      startY: 50,
-      margin: { left: 40, right: 40 },
-      theme: "grid",
-      styles: {
-        font: "NotoSans",
-        fontSize: 10,
-        cellPadding: 3,
-        lineWidth: 0.5,
-      },
-      headStyles: { fillColor: [220, 220, 220] },
-      didDrawPage: didDrawPageFooter(doc),
-    });
-
-    doc.autoTable({
-      columns: secondTableColumnsGerman,
-      body: secondTableBody_german,
-      startY: doc.lastAutoTable.finalY + 20,
-      margin: { left: 40, right: 40 },
-      theme: "grid",
-      styles: {
-        font: "NotoSans",
-        fontSize: 10,
-        cellPadding: 3,
-        lineWidth: 0.5,
-      },
-      headStyles: { fillColor: [220, 220, 220] },
-      didDrawPage: didDrawPageFooter(doc),
-    });
-
-    // Зберігаємо
-    doc.save(`documents_${pdfLanguage}_and_de.pdf`);
-    onClose();
-  };
-
-  // ---------------------------------------------------------------------
-  // 10) Переглянути PDF (ВІДКРИТТЯ У НОВОМУ ВІКНІ)
-  // ---------------------------------------------------------------------
-  const handleViewPDF = async () => {
-    const doc = new jsPDF("l", "pt", "a4");
-
-    // Завантажуємо шрифти з імпортованих модулів
-    const notoSans = await loadFont(notoSansFont, "NotoSans");
-    const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
-    const openSans = await loadFont(openSansFont, "OpenSans");
-
-    doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
-    doc.addFont("NotoSans.ttf", "NotoSans", "normal");
-
-    doc.addFileToVFS("NotoNaskhArabic.ttf", notoNaskhArabic.base64Font);
-    doc.addFont("NotoNaskhArabic.ttf", "NotoNaskhArabic", "normal");
-
-    doc.addFileToVFS("OpenSans.ttf", openSans.base64Font);
-    doc.addFont("OpenSans.ttf", "OpenSans", "normal");
-
-    // Встановлюємо шрифт залежно від pdfLanguage
-    if (pdfLanguage === "ar") {
-      doc.setFont("NotoNaskhArabic", "normal");
-    } else {
-      doc.setFont("NotoSans", "normal");
-    }
-
-    // Перша сторінка
-    addPageHeader(doc, firstName, lastName, creationDate);
-
-    doc.autoTable({
-      columns: firstTableColumns,
-      body: firstTableBody_userLang,
-      startY: 50,
-      margin: { left: 40, right: 40 },
-      theme: "grid",
-      styles: {
-        font: doc.getFont().fontName,
-        fontSize: 10,
-        cellPadding: 3,
-        lineWidth: 0.5,
-      },
-      headStyles: { fillColor: [220, 220, 220] },
-      didDrawPage: didDrawPageFooter(doc),
-    });
-
-    doc.autoTable({
-      columns: secondTableColumns,
-      body: secondTableBody_userLang,
-      startY: doc.lastAutoTable.finalY + 20,
-      margin: { left: 40, right: 40 },
-      theme: "grid",
-      styles: {
-        font: doc.getFont().fontName,
+        font: currentFontName,
         fontSize: 10,
         cellPadding: 3,
         lineWidth: 0.5,
@@ -553,7 +456,6 @@ const PDFTable = ({
     // Друга сторінка (німецька)
     doc.addPage("l");
     doc.setFont("NotoSans", "normal");
-
     addPageHeader(doc, firstName, lastName, creationDate);
 
     doc.autoTable({
@@ -588,7 +490,111 @@ const PDFTable = ({
       didDrawPage: didDrawPageFooter(doc),
     });
 
-    // Відкрити у новому вікні
+    // Збереження PDF
+    doc.save(`documents_${pdfLanguage}_and_de.pdf`);
+    onClose();
+  };
+
+  // ---------------------------------------------------------------------
+  // 10) Перегляд PDF (відкриття у новому вікні)
+  // ---------------------------------------------------------------------
+  const handleViewPDF = async () => {
+    const doc = new jsPDF("l", "pt", "a4");
+
+    doc.setFont("helvetica", "normal");
+    console.log("Is doc an instance of jsPDF?", doc instanceof jsPDF);
+
+    const notoSans = await loadFont(notoSansFont, "NotoSans");
+    const notoNaskhArabic = await loadFont(notoNaskhArabicFont, "NotoNaskhArabic");
+    const openSans = await loadFont(openSansFont, "OpenSans");
+
+    doc.addFileToVFS("NotoSans.ttf", notoSans.base64Font);
+    doc.addFont("NotoSans.ttf", "NotoSans", "normal");
+
+    doc.addFileToVFS("NotoNaskhArabic.ttf", notoNaskhArabic.base64Font);
+    doc.addFont("NotoNaskhArabic.ttf", "NotoNaskhArabic", "normal");
+
+    doc.addFileToVFS("OpenSans.ttf", openSans.base64Font);
+    doc.addFont("OpenSans.ttf", "OpenSans", "normal");
+
+    if (pdfLanguage === "ar") {
+      doc.setFont("NotoNaskhArabic", "normal");
+    } else {
+      doc.setFont("NotoSans", "normal");
+    }
+    const currentFontName = pdfLanguage === "ar" ? "NotoNaskhArabic" : "NotoSans";
+
+    // Перша сторінка
+    addPageHeader(doc, firstName, lastName, creationDate);
+
+    doc.autoTable({
+      columns: firstTableColumns,
+      body: firstTableBody_userLang,
+      startY: 50,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: {
+        font: currentFontName,
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
+      headStyles: { fillColor: [220, 220, 220] },
+      didDrawPage: didDrawPageFooter(doc),
+    });
+
+    doc.autoTable({
+      columns: secondTableColumns,
+      body: secondTableBody_userLang,
+      startY: doc.lastAutoTable.finalY + 20,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: {
+        font: currentFontName,
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
+      headStyles: { fillColor: [220, 220, 220] },
+      didDrawPage: didDrawPageFooter(doc),
+    });
+
+    doc.addPage("l");
+    doc.setFont("NotoSans", "normal");
+    addPageHeader(doc, firstName, lastName, creationDate);
+
+    doc.autoTable({
+      columns: firstTableColumnsGerman,
+      body: firstTableBody_german,
+      startY: 50,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
+      headStyles: { fillColor: [220, 220, 220] },
+      didDrawPage: didDrawPageFooter(doc),
+    });
+
+    doc.autoTable({
+      columns: secondTableColumnsGerman,
+      body: secondTableBody_german,
+      startY: doc.lastAutoTable.finalY + 20,
+      margin: { left: 40, right: 40 },
+      theme: "grid",
+      styles: {
+        font: "NotoSans",
+        fontSize: 10,
+        cellPadding: 3,
+        lineWidth: 0.5,
+      },
+      headStyles: { fillColor: [220, 220, 220] },
+      didDrawPage: didDrawPageFooter(doc),
+    });
+
     const pdfBlob = doc.output("bloburl");
     window.location.href = pdfBlob;
     onClose();
@@ -603,11 +609,8 @@ const PDFTable = ({
         <button className={styles.closeButton} onClick={onClose}>
           <FaTimes />
         </button>
-
         <div className={styles.modalTitle}>PDF Table</div>
-
         <div className={styles.buttons}>
-          {/* Вибір мови */}
           <div className={styles.languageSelect}>
             <div className={styles.languageContainer}>
               <span>
@@ -626,15 +629,11 @@ const PDFTable = ({
               </select>
             </div>
           </div>
-
-          {/* Кнопка перегляду PDF */}
           <div className={styles.buttonContainer}>
             <button className={styles.roundButton} onClick={handleViewPDF}>
               <FaEye className={styles.viewIcon} />
             </button>
           </div>
-
-          {/* Кнопка завантаження PDF */}
           <div className={styles.buttonContainer}>
             <button className={styles.roundButton} onClick={handleGeneratePDF}>
               <FaDownload className={styles.pdfIcon} />
