@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import jsPDF from "jspdf";
-
+import autoTable from "jspdf-autotable";
 import PropTypes from "prop-types";
 import { FaDownload, FaEye, FaTimes } from "react-icons/fa";
 import styles from "./PDFTable.module.scss";
