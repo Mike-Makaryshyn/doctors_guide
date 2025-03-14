@@ -8,7 +8,7 @@ import { db } from "../firebase";
 //  Import vorhandener Daten
 // ==========================
 import THUERINGEN_DATA from "../constants/translation/Fall/Thüringen.js";
-import BADENWUERTTEMB_DATA from "../constants/translation/Fall/Baden-Württemberg.js";
+
 import BAYERN_DATA from "../constants/translation/Fall/Bayern.js";
 import BERLIN_DATA from "../constants/translation/Fall/Berlin.js";
 import BRANDENBURG_DATA from "../constants/translation/Fall/Brandenburg.js";
