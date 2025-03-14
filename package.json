@@ -80,7 +80,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.9",
     "yup": "^1.6.1",
-    "zwitch": "^2.0.4"
+    "zwitch": "^1.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
