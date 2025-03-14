@@ -24,10 +24,6 @@ import SACHSEN_DATA from "../constants/translation/Fall/Sachsen.js";
 import SACHSENANHALT_DATA from "../constants/translation/Fall/Sachsen-Anhalt.js";
 import SCHLESWIGHOLSTEIN_DATA from "../constants/translation/Fall/Schleswig-Holstein.js";
 import WESTFALEN_DATA from "../constants/translation/Fall/Westfalen-Lippe.js";
-
-// ==============================
-//  Neue 4 Dateien für Sub-BW
-// ==============================
 import BW_FREIBURG_DATA from "../constants/translation/Fall/Baden-Württemberg-Freiburg.js";
 import BW_KARLSRUHE_DATA from "../constants/translation/Fall/Baden-Württemberg-Karlsruhe.js";
 import BW_STUTTGART_DATA from "../constants/translation/Fall/Baden-Württemberg-Stuttgart.js";
