@@ -7,5 +7,8 @@ export default defineConfig({
    build: {
       outDir: "dist",
    },
+   optimizeDeps: {
+      include: ["zwitch"],
+   },
    assetsInclude: ["**/*.png", "**/*.PNG"], // Додаємо підтримку файлів з розширенням png та PNG
 });
