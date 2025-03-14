@@ -27,15 +27,17 @@ import AnamneseIcon from "../../assets/DataCollectionPage/Anamnese.png";
 import ArztPatientIcon from "../../assets/DataCollectionPage/ArztPatient.png";
 import ArztArztIcon from "../../assets/DataCollectionPage/ArztArzt.png";
 import FeedbackIcon from "../../assets/DataCollectionPage/Feedback.png";
+import { FaSave, FaArrowLeft } from "react-icons/fa";
 
-import { useSwipeable } from 'react-swipeable';
+import { useSwipeable } from "react-swipeable";
+import { useNavigate } from "react-router-dom";
 
 // Імпортуємо утиліти
-import { 
-  serializeExaminerQuestions, 
-  deserializeExaminerQuestions, 
-  serializePatientQuestions, 
-  deserializePatientQuestions 
+import {
+  serializeExaminerQuestions,
+  deserializeExaminerQuestions,
+  serializePatientQuestions,
+  deserializePatientQuestions
 } from "./utils";
 
 const LOCAL_STORAGE_KEY_DATA = "dataCollectionLocalData";
@@ -45,6 +47,7 @@ const LOCAL_STORAGE_KEY_REGION_INCLUSION = "isRegionIncluded";
 const DataCollectionPage = () => {
   const { dataSources } = useContext(DataSourceContext);
   const { selectedRegion: globalRegion } = useGetGlobalInfo();
+  const navigate = useNavigate();
 
   // Отримуємо дані користувача (припускаючи, що userData доступні через контекст або іншим способом)
   const [userData, setUserData] = useState({
@@ -224,8 +227,6 @@ const DataCollectionPage = () => {
         }
       });
 
-      // Якщо у вас є додаткові поля у вкладках 3-5, додайте їх тут аналогічним чином.
-
       console.log("New Case to Save:", newCase);
       console.log("Local Data:", localData);
       console.log("Included Fields Tab2:", includedFieldsTab2);
@@ -277,6 +278,13 @@ const DataCollectionPage = () => {
     } catch (error) {
       console.error("Помилка при збереженні даних до Firebase:", error);
       toast.error(error.message || "Сталася помилка при збереженні даних.");
+    }
+  };
+
+  // Обгортка для кнопки збереження з підтвердженням
+  const handleSaveButtonClick = () => {
+    if (window.confirm("Ви дійсно хочете зберегти всі дані?")) {
+      saveAllToFirebase();
     }
   };
 
@@ -362,45 +370,35 @@ const DataCollectionPage = () => {
         {/* Вкладки */}
         <div className={styles.tabs}>
           <button
-            className={`${styles.tabButton} ${
-              activeTab === 1 ? styles.active : ""
-            }`}
+            className={`${styles.tabButton} ${activeTab === 1 ? styles.active : ""}`}
             onClick={() => setActiveTab(1)}
           >
             <img src={DatenIcon} alt="Daten" />
             <span>Daten</span>
           </button>
           <button
-            className={`${styles.tabButton} ${
-              activeTab === 2 ? styles.active : ""
-            }`}
+            className={`${styles.tabButton} ${activeTab === 2 ? styles.active : ""}`}
             onClick={() => setActiveTab(2)}
           >
             <img src={AnamneseIcon} alt="Anamnese" />
             <span>Anamnese</span>
           </button>
           <button
-            className={`${styles.tabButton} ${
-              activeTab === 3 ? styles.active : ""
-            }`}
+            className={`${styles.tabButton} ${activeTab === 3 ? styles.active : ""}`}
             onClick={() => setActiveTab(3)}
           >
             <img src={ArztPatientIcon} alt="Arzt-Patient Gespräch" />
             <span>Arzt-Patient</span>
           </button>
           <button
-            className={`${styles.tabButton} ${
-              activeTab === 4 ? styles.active : ""
-            }`}
+            className={`${styles.tabButton} ${activeTab === 4 ? styles.active : ""}`}
             onClick={() => setActiveTab(4)}
           >
             <img src={ArztArztIcon} alt="Arzt-Arzt Gespräch" />
             <span>Arzt-Arzt</span>
           </button>
           <button
-            className={`${styles.tabButton} ${
-              activeTab === 5 ? styles.active : ""
-            }`}
+            className={`${styles.tabButton} ${activeTab === 5 ? styles.active : ""}`}
             onClick={() => setActiveTab(5)}
           >
             <img src={FeedbackIcon} alt="Feedback" />
@@ -410,13 +408,20 @@ const DataCollectionPage = () => {
 
         {/* Вміст поточної вкладки */}
         <div className={styles.tabContent}>{renderTabContent()}</div>
+      </div>
 
-        {/* Кнопка для збереження даних */}
-        <div className={styles.saveButtonContainer}>
-          <button onClick={saveAllToFirebase} className={styles.saveButton}>
-            Зберегти всі дані
-          </button>
-        </div>
+      {/* Кнопка BackMenu у лівому нижньому куті */}
+      <div className={styles.main_menu_back}>
+        <button onClick={() => navigate(-1)} className={styles.main_menu_back}>
+        &#8592;
+        </button>
+      </div>
+
+      {/* Нова кнопка для збереження даних у правому нижньому куті */}
+      <div className={styles.bottomRightSave}>
+        <button onClick={handleSaveButtonClick} className={styles.saveButtonNew}>
+          <FaSave />
+        </button>
       </div>
     </MainLayout>
   );

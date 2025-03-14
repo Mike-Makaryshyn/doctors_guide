@@ -1,7 +1,6 @@
-// src/pages/DataCollectionPage/Tab1.jsx
-
 import React, { useState } from "react";
 import styles from "./Tab1.module.scss";
+import fallSpecificData from "../../constants/translation/FallSpecificData";
 
 const Tab1 = ({
   selectedRegion,
@@ -28,8 +27,8 @@ const Tab1 = ({
 
   return (
     <div className={styles.tabContainer}>
+      {/* Поле "Місце екзамену" - без підпису */}
       <div className={styles.entryRow}>
-        <label className={styles.label}>Місце екзамену:</label>
         <div className={styles.regionField}>
           <select
             value={selectedRegion}
@@ -39,7 +38,7 @@ const Tab1 = ({
             onBlur={handleInputBlur}
             disabled={inputState === "disabled"}
           >
-            <option value="">-- Оберіть місце екзамену --</option>
+            <option value="">-- Prüfungsort --</option>
             {dataSources && Object.keys(dataSources).length > 0 ? (
               Object.keys(dataSources).map((region) => (
                 <option key={region} value={region}>
@@ -53,8 +52,8 @@ const Tab1 = ({
         </div>
       </div>
 
+      {/* Поле "Ім'я" - без підпису, placeholder всередині */}
       <div className={styles.entryRow}>
-        <label className={styles.label}>Ім'я (Вкладка 1):</label>
         <input
           type="text"
           value={localData.name_tab1 || ""}
@@ -63,22 +62,27 @@ const Tab1 = ({
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
+          placeholder="Name"
         />
       </div>
 
-      {/* Додавання нового поля "Тема" */}
+      {/* Поле "Тема" - без підпису, дропдаун з німецьким текстом */}
       <div className={styles.entryRow}>
-        <label className={styles.label}>Тема:</label>
-        <input
-          type="text"
+        <select
           value={localData.theme || ""}
           onChange={(e) => updateLocalData({ theme: e.target.value })}
           className={`${styles.inputField} ${styles[inputState]}`}
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
-          placeholder="Введіть тему..."
-        />
+        >
+          <option value="">-- Thema auswählen --</option>
+          {Object.keys(fallSpecificData).map((key) => (
+            <option key={key} value={key}>
+              {fallSpecificData[key].name}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );
