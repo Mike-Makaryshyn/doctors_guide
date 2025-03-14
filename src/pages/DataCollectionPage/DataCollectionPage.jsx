@@ -367,43 +367,25 @@ const DataCollectionPage = () => {
       <div className={styles.container} {...handlers}>
         <ToastContainer />
 
-        {/* Вкладки */}
-        <div className={styles.tabs}>
-          <button
-            className={`${styles.tabButton} ${activeTab === 1 ? styles.active : ""}`}
-            onClick={() => setActiveTab(1)}
-          >
-            <img src={DatenIcon} alt="Daten" />
-            <span>Daten</span>
-          </button>
-          <button
-            className={`${styles.tabButton} ${activeTab === 2 ? styles.active : ""}`}
-            onClick={() => setActiveTab(2)}
-          >
-            <img src={AnamneseIcon} alt="Anamnese" />
-            <span>Anamnese</span>
-          </button>
-          <button
-            className={`${styles.tabButton} ${activeTab === 3 ? styles.active : ""}`}
-            onClick={() => setActiveTab(3)}
-          >
-            <img src={ArztPatientIcon} alt="Arzt-Patient Gespräch" />
-            <span>Arzt-Patient</span>
-          </button>
-          <button
-            className={`${styles.tabButton} ${activeTab === 4 ? styles.active : ""}`}
-            onClick={() => setActiveTab(4)}
-          >
-            <img src={ArztArztIcon} alt="Arzt-Arzt Gespräch" />
-            <span>Arzt-Arzt</span>
-          </button>
-          <button
-            className={`${styles.tabButton} ${activeTab === 5 ? styles.active : ""}`}
-            onClick={() => setActiveTab(5)}
-          >
-            <img src={FeedbackIcon} alt="Feedback" />
-            <span>Feedback</span>
-          </button>
+        {/* Tab Menu rendered as round containers with images */}
+        <div className={styles.tabMenuContainer} {...handlers}>
+          {[
+            { id: 1, title: 'Daten', image: DatenIcon },
+            { id: 2, title: 'Anamnese', image: AnamneseIcon },
+            { id: 3, title: 'Arzt-Patient', image: ArztPatientIcon },
+            { id: 4, title: 'Arzt-Arzt', image: ArztArztIcon },
+            { id: 5, title: 'Feedback', image: FeedbackIcon }
+          ].map((tab) => (
+            <div
+              key={tab.id}
+              className={`${styles.tabCircle} ${activeTab === tab.id ? styles.active : ''}`}
+              onClick={() => setActiveTab(tab.id)}
+              data-tab-id={tab.id}
+            >
+              <img src={tab.image} alt={tab.title} />
+              <span className={styles.tabTitle}>{tab.title}</span>
+            </div>
+          ))}
         </div>
 
         {/* Вміст поточної вкладки */}
@@ -413,7 +395,7 @@ const DataCollectionPage = () => {
       {/* Кнопка BackMenu у лівому нижньому куті */}
       <div className={styles.main_menu_back}>
         <button onClick={() => navigate(-1)} className={styles.main_menu_back}>
-        &#8592;
+          &#8592;
         </button>
       </div>
 
