@@ -7926,7 +7926,7 @@ const BW_REUTLINGEN_DATA = [
       "Welche Differenzialdiagnosen kommen in Betracht?\n**Antwort:** Infektiöse Gastroenteritis, Laktoseintoleranz, Kolorektales Karzinom.\nWelche zusätzlichen Untersuchungen würden Sie durchführen?\n**Antwort:** Test auf okkultes Blut im Stuhl.",
     patientQuestions:
       "Könnte es Krebs sein?\nGibt es Risiken bei der Blutabnahme?\nWarum machen wir diese Untersuchungen?",
-  },
+  }
 ];
 
 BW_REUTLINGEN_DATA.regionName = "Baden-Württemberg-Reutlingen";
