@@ -1,92 +1,100 @@
 /* src/pages/DataCollectionPage/Tab4.module.scss */
 
 .tabContainer {
-    padding: 20px;
-  }
-  
-  .entryRow {
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fafafa;
-  }
-  
-  .fieldGroup {
-    margin-bottom: 15px;
-  }
-  
-  .label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #333;
-    font-weight: bold; /* Додаємо жирне форматування */
-  }
-  
-  .inputField {
-    width: 100%;
-    padding: 12px 18px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    resize: none; /* Відключаємо ручне зміщення */
-    
-    &:focus {
-      border-color: #4caf50;
-      box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
-    }
-  
-    &:disabled {
-      background-color: #e0e0e0;
-      border-color: #bdbdbd;
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
-  }
-  
-  .autoExpand {
-    overflow: hidden;
-  }
-  
-  .addButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #04aa6d;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  
-    &:hover {
-      background-color: #038c5a;
-    }
-  }
-  
-  .removeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #f44336;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  
-    &:hover {
-      color: #d32f2f;
-    }
-  }
+  padding: 20px;
+}
+
+.category {
+  margin-bottom: 30px;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.categoryIcon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.categoryTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.entryRow {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Стиль для полів вводу, який відповідає прикладу з Tab2 */
+.inputField,
+textarea.inputField {
+  width: 100%;
+  min-height: 50px;
+  resize: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputField:focus,
+.dateInput:focus {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+  min-height: 50px;
+  max-height: 300px;
+}
+
+.addButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.addButton:hover {
+  background-color: #038c5a;
+}
+
+.removeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #f44336;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.removeButton:hover {
+  color: #d32f2f;
+}

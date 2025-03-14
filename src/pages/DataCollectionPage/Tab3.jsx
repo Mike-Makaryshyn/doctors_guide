@@ -1,12 +1,8 @@
-// src/pages/DataCollectionPage/Tab3.jsx
-
 import React from "react";
-import styles from "./Tab3.module.scss"; // Імпорт окремого SCSS модуля
+import styles from "./Tab3.module.scss"; // Import the SCSS module
 
 const Tab3 = ({ localData, updateLocalData }) => {
-  const patientQuestions = localData.patientQuestions || [
-    { question: "", answer: "" },
-  ];
+  const patientQuestions = localData.patientQuestions || [{ question: "", answer: "" }];
 
   const handleChange = (index, field, value) => {
     const updatedQuestions = [...patientQuestions];
@@ -15,10 +11,7 @@ const Tab3 = ({ localData, updateLocalData }) => {
   };
 
   const addQuestionAnswerPair = () => {
-    const updatedQuestions = [
-      ...patientQuestions,
-      { question: "", answer: "" },
-    ];
+    const updatedQuestions = [...patientQuestions, { question: "", answer: "" }];
     updateLocalData({ patientQuestions: updatedQuestions });
   };
 
@@ -36,48 +29,34 @@ const Tab3 = ({ localData, updateLocalData }) => {
   return (
     <div className={styles.tabContainer}>
       {patientQuestions.map((pair, index) => (
-        <div key={index} className={styles.entryRow}>
-          <div className={styles.fieldGroup}>
-            <label htmlFor={`question-${index}`} className={styles.label}>
-              Frage:
-            </label>
-            <textarea
-              id={`question-${index}`}
-              value={pair.question}
-              onChange={(e) =>
-                handleChange(index, "question", e.target.value)
-              }
-              onInput={handleAutoExpand}
-              className={`${styles.inputField} ${styles.autoExpand}`}
-              placeholder="Введіть запитання..."
-            />
-          </div>
-          <div className={styles.fieldGroup}>
-            <label htmlFor={`answer-${index}`} className={styles.label}>
-              Antwort:
-            </label>
-            <textarea
-              id={`answer-${index}`}
-              value={pair.answer}
-              onChange={(e) =>
-                handleChange(index, "answer", e.target.value)
-              }
-              onInput={handleAutoExpand}
-              className={`${styles.inputField} ${styles.autoExpand}`}
-              placeholder="Введіть відповідь..."
-            />
-          </div>
+        <div key={index} className={styles.tile}>
+          <textarea
+            id={`question-${index}`}
+            value={pair.question}
+            onChange={(e) => handleChange(index, "question", e.target.value)}
+            onInput={handleAutoExpand}
+            className={`${styles.inputField} ${styles.autoExpand}`}
+            placeholder="Frage"
+          />
+          <textarea
+            id={`answer-${index}`}
+            value={pair.answer}
+            onChange={(e) => handleChange(index, "answer", e.target.value)}
+            onInput={handleAutoExpand}
+            className={`${styles.inputField} ${styles.autoExpand}`}
+            placeholder="Antwort"
+          />
           <button
             onClick={() => removeQuestionAnswerPair(index)}
             className={styles.removeButton}
-            title="Видалити цю пару"
+            title="Diese Zeile löschen"
           >
             &times;
           </button>
         </div>
       ))}
-      <button onClick={addQuestionAnswerPair} className={styles.addButton}>
-        + Додати ще одне поле
+      <button onClick={addQuestionAnswerPair} className={styles.addButton} title="Feld hinzufügen">
+        +
       </button>
     </div>
   );

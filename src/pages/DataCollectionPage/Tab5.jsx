@@ -1,20 +1,24 @@
-// src/pages/DataCollectionPage/Tab5.jsx
-
 import React from "react";
-import styles from "./Tab5.module.scss"; // Імпорт окремого SCSS модуля
+import styles from "./Tab5.module.scss";
 
 const Tab5 = ({ localData, updateLocalData }) => {
+  const handleAutoExpand = (e) => {
+    const field = e.target;
+    field.style.height = "auto";
+    field.style.height = `${field.scrollHeight}px`;
+  };
+
   return (
     <div className={styles.tabContainer}>
-      <div className={styles.entryRow}>
-        <label className={styles.label}>Коментарі:</label>
+      <div className={styles.tile}>
         <textarea
-          value={localData.comments_tab5 || ""}
-          onChange={(e) => updateLocalData({ comments_tab5: e.target.value })}
-          className={styles.textAreaField}
+          value={localData.feedback || ""}
+          onChange={(e) => updateLocalData({ feedback: e.target.value })}
+          onInput={handleAutoExpand}
+          className={`${styles.inputField} ${styles.autoExpand}`}
+          placeholder="Feedback"
         />
       </div>
-      {/* Додайте інші поля вкладки 5 за потреби */}
     </div>
   );
 };

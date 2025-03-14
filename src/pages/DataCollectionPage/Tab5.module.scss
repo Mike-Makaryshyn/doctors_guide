@@ -1,32 +1,72 @@
-/* src/pages/DataCollectionPage/Tab5.module.scss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .tabContainer {
-    /* Специфічні стилі для вкладки 5 */
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.tile {
+  /* Десктоп (ширина понад 768px): 450px */
+  width: 450px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.inputField {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  color: #333;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+
+.inputField::placeholder {
+  color: #999;
+}
+
+.inputField:focus {
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+.autoExpand {
+  overflow: hidden;
+}
+
+/* На мобільних (до 768px) плитка розтягується на всю ширину екрану */
+@media (max-width: 768px) {
+  .tabContainer {
+    padding: 10px; /* Можна трохи зменшити, щоб плитка була ще ширшою відносно екрану */
   }
-  
-  .entryRow {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+  .tile {
+    width: 150%;
+    border-radius: 10px; /* за бажанням можна зменшити/забрати */
+    margin: 0; /* прибираємо зайві відступи */
   }
-  
-  .label {
-    margin-right: 10px;
-    font-weight: bold;
-    width: 200px;
-  }
-  
-  .textAreaField {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex: 1;
-    resize: vertical;
-    height: 100px;
-  }
-  
-  /* Додаткові стилі для специфічних елементів вкладки 5 */
+}
