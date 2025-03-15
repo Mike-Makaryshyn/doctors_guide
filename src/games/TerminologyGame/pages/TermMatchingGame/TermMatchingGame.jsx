@@ -46,6 +46,8 @@ const languageMap = {
   fr: "Französisch",
   es: "Spanisch",
   pl: "Polnisch",
+  ro: "Rumänisch",    // neu hinzugefügt
+  el: "Griechisch",
 };
 
 // Скорочення для регіонів

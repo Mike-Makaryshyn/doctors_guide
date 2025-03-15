@@ -66,6 +66,7 @@ const questionCountOptions = [10, 20, 40, 60, 100, 200, "all"];
 
 // Sprachzuordnung
 const languageMap = {
+  lat: "Latein",
   de: "Deutsch",
   en: "Englisch",
   uk: "Ukrainisch",
@@ -104,11 +105,17 @@ const ElectiveLanguageGameContent = () => {
   const [allowEdit, setAllowEdit] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Мовний свап: окремі стани для мови питань (leftLang) та відповіді (rightLang)
-  const [leftLang, setLeftLang] = useState("de");
-  const [rightLang, setRightLang] = useState(
+  // Нові стани для мов:
+  // fixedLang – мова, яку можна вибирати лише між "de" та "lat"
+  // selectableLang – мова, що обирається з-поміж усіх інших (без fixedLang)
+  const [fixedLang, setFixedLang] = useState("de");
+  const [selectableLang, setSelectableLang] = useState(
     selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
   );
+
+  // Прапорець, який визначає, яка сторона фіксована
+  // Якщо isFixedLeft === true, то зліва fixedLang, справа selectableLang; інакше навпаки.
+  const [isFixedLeft, setIsFixedLeft] = useState(true);
 
   // Spiel-Status
   const [questions, setQuestions] = useState([]);
@@ -137,21 +144,11 @@ const ElectiveLanguageGameContent = () => {
   }, [selectedRegion]);
 
   useEffect(() => {
-    // Якщо обрана мова змінюється в глобальному контексті – оновлюємо праву мову,
-    // якщо вона не "de"
-    setRightLang(
-      selectedLanguage && selectedLanguage !== "de" ? selectedLanguage : "en"
-    );
+    // Wenn die globale Sprache sich ändert und nicht 'de' ist, setzen wir sie als selectableLang
+    if (selectedLanguage && selectedLanguage !== "de") {
+      setSelectableLang(selectedLanguage);
+    }
   }, [selectedLanguage]);
-
-  // Функція для свапу мов
-  const swapLanguages = () => {
-    setLeftLang((prev) => {
-      const newLeft = rightLang;
-      setRightLang(prev);
-      return newLeft;
-    });
-  };
 
   // Fragen generieren/filtern
   const loadQuestions = () => {
@@ -188,9 +185,9 @@ const ElectiveLanguageGameContent = () => {
     });
     setShownCounts(neueShownCounts);
 
-    // Обчислюємо мови для питань і відповідей
-    const questionLang = leftLang;
-    const answerLang = rightLang;
+    // Logik: якщо isFixedLeft === true, то питання в fixedLang, відповідь в selectableLang; інакше навпаки
+    const questionLang = isFixedLeft ? fixedLang : selectableLang;
+    const answerLang = isFixedLeft ? selectableLang : fixedLang;
 
     // Fragen-Daten anlegen
     const fragenDaten = ausgewählteBegriffe.map((term) => {
@@ -475,38 +472,84 @@ const ElectiveLanguageGameContent = () => {
                 </div>
               </div>
 
-              {/* Мовний Swap Container */}
+              {/* Updated language swap container with side swapping */}
               <div className={styles.modalField} data-tutorial="languageSwapContainer">
                 <div className={styles.languageSwapContainer}>
-                  <div className={styles.languageCellFixed}>
-                    <select
-                      className={styles.languageSelect}
-                      value={leftLang}
-                      onChange={(e) => setLeftLang(e.target.value)}
-                    >
-                      {Object.entries(languageMap).map(([code, label]) => (
-                        <option key={code} value={code}>
-                          {label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <button className={styles.swapButton} onClick={swapLanguages}>
-                    <FaExchangeAlt className={styles.swapIcon} />
-                  </button>
-                  <div className={styles.languageCellFixed}>
-                    <select
-                      className={styles.languageSelect}
-                      value={rightLang}
-                      onChange={(e) => setRightLang(e.target.value)}
-                    >
-                      {Object.entries(languageMap).map(([code, label]) => (
-                        <option key={code} value={code}>
-                          {label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  {isFixedLeft ? (
+                    <>
+                      {/* Left: fixed language select (only 'de' or 'lat') */}
+                      <div className={styles.languageCellFixed}>
+                        <select
+                          className={styles.languageSelect}
+                          value={fixedLang}
+                          onChange={(e) => setFixedLang(e.target.value)}
+                        >
+                          <option value="de">Deutsch</option>
+                          <option value="lat">Latein</option>
+                        </select>
+                      </div>
+                      {/* Swap button to toggle sides */}
+                      <button
+                        className={styles.swapButton}
+                        onClick={() => setIsFixedLeft(!isFixedLeft)}
+                      >
+                        <FaExchangeAlt className={styles.swapIcon} />
+                      </button>
+                      {/* Right: selectable language select (all languages except the fixed one) */}
+                      <div className={styles.languageCellFixed}>
+                        <select
+                          className={styles.languageSelect}
+                          value={selectableLang}
+                          onChange={(e) => setSelectableLang(e.target.value)}
+                        >
+                          {Object.entries(languageMap)
+                            .filter(([code]) => code !== fixedLang)
+                            .map(([code, label]) => (
+                              <option key={code} value={code}>
+                                {label}
+                              </option>
+                            ))}
+                        </select>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Left: selectable language select */}
+                      <div className={styles.languageCellFixed}>
+                        <select
+                          className={styles.languageSelect}
+                          value={selectableLang}
+                          onChange={(e) => setSelectableLang(e.target.value)}
+                        >
+                          {Object.entries(languageMap)
+                            .filter(([code]) => code !== fixedLang)
+                            .map(([code, label]) => (
+                              <option key={code} value={code}>
+                                {label}
+                              </option>
+                            ))}
+                        </select>
+                      </div>
+                      {/* Swap button */}
+                      <button
+                        className={styles.swapButton}
+                        onClick={() => setIsFixedLeft(!isFixedLeft)}
+                      >
+                        <FaExchangeAlt className={styles.swapIcon} />
+                      </button>
+                      {/* Right: fixed language select */}
+                      <div className={styles.languageCellFixed}>
+                        <select
+                          className={styles.languageSelect}
+                          value={fixedLang}
+                          onChange={(e) => setFixedLang(e.target.value)}
+                        >
+                          <option value="de">Deutsch</option>
+                          <option value="lat">Latein</option>
+                        </select>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -532,27 +575,27 @@ const ElectiveLanguageGameContent = () => {
 
               {/* Кнопка туторіалу */}
               <button
-  data-tutorial="tutorialStartButton"
-  className={styles.tutorialButton}
-  onClick={() => setShowTutorial(true)}
-  title="Tutorial starten"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="30"
-    height="30"
-    fill="none"
-    stroke="#ededed"
-    strokeWidth="2.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
-    <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
-    <circle cx="12" cy="7" r="0.5" fill="#ededed" />
-  </svg>
-</button>
+                data-tutorial="tutorialStartButton"
+                className={styles.tutorialButton}
+                onClick={() => setShowTutorial(true)}
+                title="Tutorial starten"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="#ededed"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" stroke="#ededed" fill="none" />
+                  <line x1="12" y1="12" x2="12" y2="15.5" stroke="#ededed" strokeWidth="3" />
+                  <circle cx="12" cy="7" r="0.5" fill="#ededed" />
+                </svg>
+              </button>
 
               {/* Старт гри */}
               <button className={styles.startButton} data-tutorial="startButton" onClick={handleStart}>
@@ -585,8 +628,9 @@ const ElectiveLanguageGameContent = () => {
                     <Tippy
                       content={
                         // Пояснення – використовується поле з поясненням відповідної мови (для відповіді)
-                        aktuelleFrage?.term?.[`${rightLang}Explanation`] ||
-                        "Keine zusätzliche Information vorhanden"
+                        aktuelleFrage?.term?.[
+                          isFixedLeft ? `${selectableLang}Explanation` : `${fixedLang}Explanation`
+                        ] || "Keine zusätzliche Information vorhanden"
                       }
                       trigger="click"
                       interactive={true}
