@@ -4710,8 +4710,8 @@ physicalExamination: "Klinische Untersuchung inkl. neurologischer Untersuchung, 
 laboratoryTests: "Blutbild, Blutzucker, HbA1c, Nierenwerte, Elektrolyte",
 instrumentalExamination: "",
 examinerQuestions: "1. Welche Laborparameter bestätigen die Diagnose Diabetes mellitus?\n2. Wie unterscheiden Sie Diabetes mellitus von Diabetes insipidus anhand von Symptomen und Labortests?\n3. Welche weiteren Untersuchungen wären zur Bewertung diabetischer Komplikationen sinnvoll?",
-patientQuestions: "1. Welche Therapieoptionen gibt es (medikamentöse Behandlung und Lebensstiländerungen)?\n2. Wie oft müssen Kontrolluntersuchungen erfolgen?\n3. Wie lange dauert es, bis sich meine Symptome bessern?",
-examinerQuestionsAdditional: "Fachbegriffe: gastroenteritis, Icterus, neuralgie"
+patientQuestions: "1. Welche Therapieoptionen gibt es (medikamentöse Behandlung und Lebensstiländerungen)?\n2. Wie oft müssen Kontrolluntersuchungen erfolgen?\n3. Wie lange dauert es, bis sich meine Symptome bessern?"
+
 },
 {
 id: 438,
@@ -5219,7 +5219,7 @@ patientQuestions: "1. Welche Therapie wird empfohlen?\n2. Muss ich ins Krankenha
 examinerQuestionsAdditional: ""
 },
 {
-id: "444",
+id: 444,
 examDate: "",
 fullName: "Beziehungskonflikt / Emotionale Distanzierung",
 specialty: "",
@@ -5387,7 +5387,6 @@ patientQuestions: "1. Wie kann ich lernen, meine Gefühle konstruktiver zu verar
     patientQuestions: "1. Muss ich stationär behandelt werden?\n2. Welche Medikamente werden verabreicht?\n3. Wie lange dauert die Behandlung?"
   }
   ];
-
 
 BERLIN_DATA.regionName = "Berlin";
 
