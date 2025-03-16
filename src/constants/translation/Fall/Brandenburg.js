@@ -81,7 +81,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Abdomen-Sonographie",
     examinerQuestions: "1. Welche Befunde sind am relevantesten?\n**Antwort:** Bitte erläutern Sie die wichtigsten klinischen Hinweise.\n\n2. Wie beurteilen Sie die Prognose?\n**Antwort:** Bitte nennen Sie die voraussichtliche Heilungsdauer und mögliche Komplikationen.",
-    patientQuestions: "1. Wie empfinden Sie Ihre Beschwerden?\n**Antwort:** Bitte beschreiben Sie Ihre Symptome.\n\n2. Wann kann ich meine alltäglichen Aktivitäten wieder aufnehmen?\n**Antwort:** Bitte geben Sie Hinweise zur körperlichen Schonung und zum Belastungsaufbau."
+   patientQuestions: "1. Besteht ein Risiko für Komplikationen nach der Operation?\n**Antwort:** Mögliche Risiken sind Infektionen oder Narbenbrüche, aber diese sind selten.\n\n2. Wie lange dauert die Erholungsphase nach dem Eingriff?\n**Antwort:** Die vollständige Erholung dauert etwa 4-6 Wochen, je nach individueller Heilung.\n\n3. Wann kann ich wieder meinen Alltagstätigkeiten nachgehen?\n**Antwort:** Leichte Aktivitäten sind nach 2 Wochen möglich, schweres Heben sollte für 6 Wochen vermieden werden.\n\n4. Welche Symptome erfordern eine sofortige ärztliche Vorstellung?\n**Antwort:** Starke Schmerzen, Fieber oder Rötung/Schwellung im OP-Bereich sollten sofort abgeklärt werden."
 },
 {
     id: 466,
@@ -165,7 +165,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Blutbild (Erhöhte Leukozyten), evtl. CRP, BSG",
     instrumentalExamination: "Ultraschall; evtl. frühere Gastroskopie (vor 5 Jahren)",
     examinerQuestions: "1. Wieso haben Sie eine Appendizitis festgestellt?\n**Antwort:** Ultraschall zeigte Befunde, die während der Operation bestätigt wurden.\n\n2. Bei wem ist eine Wanderung der Schmerzen von der Nabelgegend in den rechten Unterbauch typisch?\n**Antwort:** Vor allem bei Kindern.\n\n3. Welche Schnitttechnik und welche Probleme treten bei einer Laparotomie auf?\n**Antwort:** Es muss auf Adhesionen und Verklebungen geachtet werden.\n\n4. Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Cephalgie (Migräne vs. HTN), Gastritis/Ulcus ventriculi.",
-    patientQuestions: "1. Welche Symptome bereiten Ihnen die größten Beschwerden?\n**Antwort:** Bitte beschreiben Sie Ihre Schmerzen.\n\n2. Wie fühlen Sie sich insgesamt?\n**Antwort:** Bitte teilen Sie mir Ihr allgemeines Befinden mit."
+    patientQuestions: "1. Wie lange muss ich nach der Operation im Krankenhaus bleiben?\n**Antwort:** In der Regel beträgt der stationäre Aufenthalt 3-5 Tage, je nach Heilungsverlauf.\n\n2. Wann darf ich wieder normal essen und trinken?\n**Antwort:** Nach der Operation beginnt die Nahrungsaufnahme schrittweise, beginnend mit Flüssigkeiten.\n\n3. Gibt es spezielle Verhaltensregeln nach der Operation?\n**Antwort:** Körperliche Schonung wird für 4-6 Wochen empfohlen, schweres Heben sollte vermieden werden.\n\n4. Welche Anzeichen deuten auf Komplikationen hin?\n**Antwort:** Starke anhaltende Schmerzen, Fieber oder eitriger Ausfluss aus der Wunde sollten ärztlich abgeklärt werden."
 },
 {
     id: 467,
@@ -249,7 +249,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "BB und Sono können relevante Befunde zeigen",
     examinerQuestions: "1. Welche Befunde sprechen für ein Hodgkin Lymphom?\n**Antwort:** Bitte erläutern Sie die histologischen und sonographischen Befunde.\n\n2. Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Bitte vergleichen Sie die Symptome mit anderen lymphatischen Erkrankungen.",
-    patientQuestions: "1. Haben Sie Schmerzen oder Beschwerden am Hals?\n**Antwort:** Bitte beschreiben Sie, wie sich die Beule anfühlt.\n\n2. Wie lange bestehen die Fatigue und die nächtliche Hyperhidrose?\n**Antwort:** Bitte geben Sie den Zeitraum an."
+  patientQuestions: "1. Ist die Schwellung am Hals gefährlich?\n**Antwort:** Eine genaue Diagnose erfordert weitere Untersuchungen, aber vergrößerte Lymphknoten können verschiedene Ursachen haben.\n\n2. Welche Tests sind notwendig, um die Ursache festzustellen?\n**Antwort:** Blutuntersuchungen und eine Sonographie helfen, die Schwellung genauer zu beurteilen.\n\n3. Ist meine Müdigkeit ein Zeichen einer ernsthaften Erkrankung?\n**Antwort:** Fatigue kann viele Ursachen haben, darunter Infektionen oder immunologische Prozesse, die abgeklärt werden sollten.\n\n4. Kann diese Erkrankung behandelt werden?\n**Antwort:** Ja, es gibt verschiedene Therapieoptionen, abhängig von der genauen Diagnose."
 },
 {
     id: 468,
@@ -417,7 +417,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Bestimmung der Schilddrüsenwerte, evtl. Entzündungsparameter",
     instrumentalExamination: "Ultraschall der Halsregion",
     examinerQuestions: "1. Welche Untersuchungen sind zur Abklärung einer Struma erforderlich?\n**Antwort:** Bitte erläutern Sie den Einsatz von Ultraschall und die Interpretation der Schilddrüsenwerte.\n\n2. Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Bitte nennen Sie alternative Ursachen für eine Halsvergrößerung.",
-    patientQuestions: "1. Haben Sie Beschwerden beim Schlucken oder Atmen?\n**Antwort:** Bitte beschreiben Sie, ob und wie sich die Schwellung auswirkt.\n\n2. Wie stark beeinträchtigt Sie die Schwellung im Alltag?\n**Antwort:** Bitte geben Sie an, ob es zu funktionellen Einschränkungen kommt."
+patientQuestions: "1. Ist meine Gewichtsabnahme besorgniserregend?\n**Antwort:** Gewichtsverlust kann ein Zeichen einer Schilddrüsenüberfunktion sein, genauere Untersuchungen sind notwendig.\n\n2. Warum schwitze ich so stark, besonders an den Händen?\n**Antwort:** Übermäßiges Schwitzen ist ein häufiges Symptom der Hyperthyreose aufgrund des erhöhten Stoffwechsels.\n\n3. Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Therapie umfasst meist Thyreostatika, eine Radiojodtherapie oder eine Operation, abhängig von der Ursache.\n\n4. Wann werde ich mich wieder besser fühlen?\n**Antwort:** Die Symptome bessern sich in der Regel nach Beginn der Therapie innerhalb einiger Wochen."
 },
 {
     id: 470,
@@ -501,7 +501,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "",
     examinerQuestions: "1. Wie unterscheidet man zwischen TIA und Schlaganfall?\n**Antwort:** Bitte erläutern Sie die Unterschiede in der klinischen Präsentation und im zeitlichen Verlauf.\n\n2. Was sind die Vor- und Nachteile der laparoskopischen Appendektomie im Vergleich zur offenen Appendektomie?\n**Antwort:** Bitte diskutieren Sie die minimalinvasiven Ansätze versus die traditionelle Methode.",
-    patientQuestions: "1. Haben Sie Schmerzen im Unterbauch und wie stark sind diese?\n**Antwort:** Bitte bewerten Sie Ihre Schmerzen auf einer Skala von 1 bis 10.\n\n2. Fühlen Sie sich allgemein schwach oder energielos?\n**Antwort:** Bitte teilen Sie mir Ihr allgemeines Befinden mit."
+  patientQuestions: "1. Muss meine Blinddarmentzündung operiert werden?\n**Antwort:** In den meisten Fällen ist eine Operation notwendig, um Komplikationen zu vermeiden.\n\n2. Wie lange dauert der Krankenhausaufenthalt nach der Operation?\n**Antwort:** In der Regel bleiben Patienten 1-3 Tage im Krankenhaus, abhängig vom Verlauf.\n\n3. Gibt es alternative Behandlungsmöglichkeiten zur Operation?\n**Antwort:** In seltenen Fällen kann eine Antibiotikatherapie erwogen werden, aber eine Operation ist meist die sicherste Option.\n\n4. Wann kann ich nach der Operation wieder normal essen?\n**Antwort:** Leichte Kost ist oft bereits am ersten Tag nach der Operation möglich."
 },
 {
     id: 471,
@@ -585,7 +585,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Ultraschall der Hals- und Bauchregion zur Abklärung der Hernie",
     examinerQuestions: "1. Welche Befunde stützen die Diagnose einer Narbenhernie im Epigastrium?\n**Antwort:** Bitte erläutern Sie die klinischen und sonographischen Befunde, insbesondere den Druckschmerz und die nicht wegdrückbare Beule.\n\n2. Welche therapeutischen Maßnahmen sind indiziert und wann sollte die Patientin mobilisiert werden?\n**Antwort:** Diskutieren Sie die Netzimplantation (Sublay-Technik) und das Pneumonierisiko.",
-    patientQuestions: "1. Haben Sie Schmerzen im Epigastrium und wie würden Sie diese auf einer Skala von 1 bis 10 bewerten?\n**Antwort:** Bitte beschreiben Sie Ihre Schmerzintensität.\n\n2. Beeinträchtigt die Schwellung Ihre alltäglichen Aktivitäten?\n**Antwort:** Bitte geben Sie an, ob und wie sich die Schwellung auf Ihre Mobilität auswirkt."
+   patientQuestions: "1. Muss meine Hernie operiert werden?\n**Antwort:** Eine Operation ist oft notwendig, besonders bei Schmerzen oder Komplikationen.\n\n2. Wie lange dauert die Erholung nach der Operation?\n**Antwort:** Die Erholungszeit beträgt in der Regel 4-6 Wochen, je nach Heilungsverlauf.\n\n3. Gibt es Alternativen zur Operation?\n**Antwort:** In bestimmten Fällen kann eine konservative Therapie mit einem Bauchgurt erwogen werden, jedoch ist eine OP meist die beste Lösung.\n\n4. Wann kann ich nach der Operation wieder normal gehen?\n**Antwort:** Leichte Bewegung ist meist nach wenigen Tagen möglich, schwere Belastungen sollten für einige Wochen vermieden werden."
 },
 {
     id: 472,
@@ -669,11 +669,11 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Ultraschall (USG) bestätigt die Diagnose; bei Unsicherheiten wurde eine CT durchgeführt",
     examinerQuestions: "1. Welche Operationsindikation ergibt sich aus den erhöhten Entzündungsparametern?\n**Antwort:** Eine frühzeitige Operation ist angezeigt, um eine Perforation/Peritonitis zu vermeiden.\n\n2. Wie beurteilen Sie das Risiko der idiopathischen Thrombozytopenie für die OP?\n**Antwort:** Trotz eines Wertes von ca. 60.000 ist bei einem Notfall eine Operation indiziert, da Werte über 30.000 als ausreichend gelten.",
-    patientQuestions: "1. Haben Sie starke Schmerzen im rechten Unterbauch?\n**Antwort:** Bitte bewerten Sie Ihre Schmerzintensität auf einer Skala von 1 bis 10.\n\n2. Fühlen Sie sich allgemein schwach oder fiebrig?\n**Antwort:** Bitte teilen Sie mir Ihr allgemeines Befinden mit."
+ patientQuestions: "1. Muss ich nach der Operation besondere Vorsichtsmaßnahmen treffen?\n**Antwort:** Ja, körperliche Schonung und das Vermeiden schwerer Belastungen für etwa 4-6 Wochen sind wichtig.\n\n2. Wie lange werde ich im Krankenhaus bleiben?\n**Antwort:** In der Regel beträgt der Aufenthalt 2-3 Tage, je nach Heilungsverlauf.\n\n3. Hat meine Thrombozytopenie Einfluss auf die Heilung?\n**Antwort:** Eine sorgfältige Überwachung ist erforderlich, aber die meisten Patienten erholen sich ohne Komplikationen.\n\n4. Wann kann ich wieder normal essen?\n**Antwort:** Leichte Kost ist meist schon am ersten Tag nach der Operation erlaubt."
 },
 {
     id: 473,
-    examDate: "Heute",
+    examDate: "",
     fullName: "Hyperthyreose",
     specialty: "",
     name: "",
@@ -753,7 +753,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "TSH erniedrigt, fT3 und fT4 erhöht",
     instrumentalExamination: "Sonographie: vergrößerte Schilddrüse; weitere Untersuchungen: TSH-Rezeptor-Antikörper, Szintigraphie; EKG: Sinustachykardie",
     examinerQuestions: "1. Welche Laborbefunde bestätigen die Diagnose einer Hyperthyreose?\n**Antwort:** Senkung von TSH und Erhöhung von fT3, fT4.\n\n2. Welche weiteren Untersuchungen sind zur Therapieplanung erforderlich?\n**Antwort:** TSH-Rezeptor-Antikörper, Szintigraphie; EKG zeigt Sinustachykardie.\n\n3. Benötigt der Patient eine Operation?\n**Antwort:** Ja, eine operative Therapie ist später indiziert.",
-    patientQuestions: "1. Haben Sie Halsschmerzen oder Beschwerden im Bereich der Schilddrüse?\n**Antwort:** Bitte beschreiben Sie Ihre Symptome.\n\n2. Fühlen Sie sich durch die Tachykardie und Hyperhidrose belastet?\n**Antwort:** Bitte teilen Sie mir Ihr allgemeines Befinden mit."
+  patientQuestions: "1. Warum schwitze ich so stark und habe Herzrasen?\n**Antwort:** Diese Symptome sind typisch für eine Hyperthyreose, da der Stoffwechsel beschleunigt ist.\n\n2. Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Therapie umfasst meist Medikamente (Thyreostatika), Radiojodtherapie oder eine Operation.\n\n3. Wann werde ich mich wieder besser fühlen?\n**Antwort:** Nach Beginn der Therapie kann es einige Wochen dauern, bis sich die Symptome verbessern.\n\n4. Ist die Erkrankung heilbar?\n**Antwort:** Ja, mit der richtigen Behandlung kann die Schilddrüsenfunktion stabilisiert werden."
 },
 {
     id: 474,
@@ -841,7 +841,7 @@ const BRANDENBURG_DATA = [
 },
 {
     id: 478,
-    examDate: "Letzten Donnerstag",
+    examDate: "",
     fullName: "Cholezystitis",
     specialty: "",
     name: "Monica",
@@ -921,7 +921,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Leukozytose, positive Cholestase-Werte",
     instrumentalExamination: "Abdomensonographie: entzündete Gallenblase mit direktem Steinnachweis",
     examinerQuestions: "1. Welche Methode ist das Verfahren der Wahl zur Freimachung der Gallengänge?\n**Antwort:** ERCP, durchgeführt von einem Gastroenterologen.\n\n2. Welche Kriterien sind notwendig, um eine Entlassung zu erwägen?\n**Antwort:** Normalisierung der Vitalparameter, Rückgang der Entzündungsparameter und stabile Allgemeinsituation.\n\n3. Welche postoperativen Überwachungsmaßnahmen empfehlen Sie bezüglich Komplikationen (z. B. Messung der Sauerstoffsättigung und Vitalparameter)?\n**Antwort:** Die Überwachung erfolgt intraoperativ und postoperativ zur Sicherstellung einer stabilen Versorgung.",
-    patientQuestions: "1. Fühlen Sie sich stabil genug, um entlassen zu werden?\n**Antwort:** Bitte bewerten Sie Ihr aktuelles Befinden.\n\n2. Haben Sie noch Fragen zur postoperativen Versorgung und zu Lebensstiländerungen?\n**Antwort:** Bitte teilen Sie mir Ihre Bedenken mit."
+ patientQuestions: "1. Wann kann ich nach der Operation wieder normal essen?\n**Antwort:** Leichte Schonkost ist meist schon am ersten Tag nach der Operation möglich.\n\n2. Wie lange werde ich im Krankenhaus bleiben?\n**Antwort:** In der Regel beträgt der stationäre Aufenthalt 2-3 Tage, je nach Heilungsverlauf.\n\n3. Wann kann ich wieder arbeiten?\n**Antwort:** Je nach körperlicher Belastung der Arbeit ist eine Rückkehr nach 1-2 Wochen möglich.\n\n4. Welche Anzeichen deuten auf mögliche Komplikationen hin?\n**Antwort:** Anhaltende starke Schmerzen, Fieber oder Wundinfektionen sollten ärztlich abgeklärt werden."
 },
 {
     id: 479,
@@ -1005,7 +1005,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Erhöhte Leukozyten (20.000), erhöhtes CRP, erhöhtes Procalcitonin, Dimere unauffällig",
     instrumentalExamination: "Röntgenbild: Lungeninfiltrat rechts; Sputumkultur: Klebsiella pneumoniae nachgewiesen",
     examinerQuestions: "1. Welche Therapiestrategien setzen Sie bei dieser Pneumonie ein?\n**Antwort:** Paracetamol als Antipyretikum und Levofloxacine i.v., danach Umstellung auf orale Therapie.\n\n2. Welche Ursachen können einer Pneumonie zugrunde liegen?\n**Antwort:** Bakterielle Infektionen, in diesem Fall Klebsiella pneumoniae.\n\n3. Wie unterscheiden Sie Diabetes mellitus Typ 1 von Typ 2?\n**Antwort:** Durch Insulinabhängigkeit, Altersdifferenz und C-Peptid-Spiegel.\n\n4. Welche Maßnahmen der Atemgymnastik und Laborüberwachung empfehlen Sie?\n**Antwort:** Regelmäßige Atemgymnastik und Kontrolle der Laborwerte (Leukozyten, CRP) zur Überwachung der Therapie.",
-    patientQuestions: "1. Fühlen Sie sich stabil genug, um bald entlassen zu werden?\n**Antwort:** Bitte bewerten Sie Ihr Befinden.\n\n2. Haben Sie noch Fragen zu den nächsten Schritten der Behandlung?\n**Antwort:** Bitte teilen Sie mir Ihre Bedenken mit."
+patientQuestions: "1. Wann kann ich wieder zur Arbeit zurückkehren?\n**Antwort:** Nach Abklingen der Symptome und in Absprache mit dem Hausarzt, in der Regel nach 1-2 Wochen.\n\n2. Muss ich nach der Entlassung noch Medikamente einnehmen?\n**Antwort:** Ja, die Antibiotikatherapie sollte wie verordnet vollständig beendet werden.\n\n3. Wie kann ich eine erneute Pneumonie vermeiden?\n**Antwort:** Regelmäßige Atemgymnastik, ausreichende Flüssigkeitszufuhr und gegebenenfalls Impfungen können vorbeugen.\n\n4. Ist meine Lunge nach der Infektion dauerhaft geschädigt?\n**Antwort:** In den meisten Fällen heilt die Lunge vollständig aus, eine Kontrolle nach einigen Wochen wird empfohlen."
 },
 {
     id: 480,
@@ -1089,11 +1089,11 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Craniale CT: Keine intrakraniellen Blutungen, kein Hirnödem, keine Schädelfrakturen; Kontroll-CT unauffällig",
     examinerQuestions: "1. Welche Maßnahmen werden im Schockraum nach dem ABCDE-Schema durchgeführt?\n**Antwort:** Erste Beurteilung und Stabilisierung der Vitalfunktionen.\n\n2. Welche Befunde erwarten Sie in der cranialen CT bei einem SHT?\n**Antwort:** Ausschluss von intrakraniellen Blutungen, Hirnödem und Schädelfrakturen.\n\n3. Wie gestalten Sie den weiteren Überwachungsplan?\n**Antwort:** Überwachung auf der Intensivstation mit einer Kontroll-CT am 4. Aufenthaltstag.",
-    patientQuestions: "1. Fühlen Sie sich nach der Behandlung stabiler?\n**Antwort:** Bitte bewerten Sie Ihr aktuelles Befinden.\n\n2. Haben Sie noch Beschwerden, die Sie beunruhigen?\n**Antwort:** Bitte teilen Sie mir Ihr allgemeines Wohlbefinden mit."
+patientQuestions: "1. Wann darf ich wieder Sport treiben?\n**Antwort:** Körperliche Schonung wird für mindestens 2 Wochen empfohlen, intensiver Sport sollte erst nach ärztlicher Freigabe wieder aufgenommen werden.\n\n2. Ist eine weitere Untersuchung oder Kontrolle notwendig?\n**Antwort:** Eine Kontrolluntersuchung nach etwa einer Woche wird empfohlen, um den Heilungsverlauf zu überprüfen.\n\n3. Können nach einer Gehirnerschütterung Langzeitfolgen auftreten?\n**Antwort:** In der Regel heilt eine leichte Gehirnerschütterung folgenlos aus, allerdings sollten länger anhaltende Kopfschmerzen oder Konzentrationsprobleme abgeklärt werden.\n\n4. Wann darf ich wieder arbeiten?\n**Antwort:** Je nach Tätigkeit ist eine Rückkehr zur Arbeit nach wenigen Tagen möglich, bei körperlich anstrengenden Berufen sollte die Belastung langsam gesteigert werden."
 },
 {
     id: 481,
-    examDate: "September 2022",
+    examDate: "09.09.2022",
     fullName: "Urolithiasis",
     specialty: "",
     name: "Matthias",
@@ -1173,7 +1173,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Ultraschall der Nieren und Harnwege zur Darstellung von Harnsteinen",
     examinerQuestions: "1. Welche bildgebenden Verfahren eignen sich zur Diagnose einer Urolithiasis?\n**Antwort:** Ultraschall und ggf. CT der Harnwege.\n\n2. Welche Maßnahmen ergreifen Sie zur Schmerztherapie und zur Überwachung der Hämaturie?\n**Antwort:** Bitte erläutern Sie Ihre medikamentöse und konservative Therapie.\n\n3. Wie beurteilen Sie die Risikofaktoren bei diesem Patienten?\n**Antwort:** Berücksichtigen Sie die arterielle Hypertonie und erhöhten Blutfettwerte.\n\n4. Welche Bedeutung haben die folgenden Fachbegriffe: Gliom, Zervix utri, Sigmadivertikulose und Radius?\n**Antwort:** Bitte erläutern Sie deren klinische Relevanz, auch wenn sie nicht direkt zum Fall passen.",
-    patientQuestions: "1. Haben Sie seit Beginn der Beschwerden Schwierigkeiten beim Wasserlassen?\n**Antwort:** Bitte beschreiben Sie Ihre Empfindungen.\n\n2. Wie stark sind Ihre Flankenschmerzen aktuell auf einer Skala von 1 bis 10?\n**Antwort:** Bitte bewerten Sie Ihre Schmerzen."
+patientQuestions: "1. Wie lange dauert es, bis der Nierenstein von selbst abgeht?\n**Antwort:** Dies hängt von der Größe des Steins ab, kleinere Steine (<5 mm) gehen oft innerhalb von wenigen Tagen bis Wochen spontan ab.\n\n2. Muss ich operiert werden oder gibt es andere Behandlungsmöglichkeiten?\n**Antwort:** Kleinere Steine können mit Schmerzmitteln und erhöhter Flüssigkeitszufuhr ausgeschieden werden, größere Steine erfordern möglicherweise eine Stoßwellentherapie oder eine Operation.\n\n3. Kann ich durch meine Ernährung das Risiko für neue Steine verringern?\n**Antwort:** Ja, eine ausreichende Flüssigkeitszufuhr und eine angepasste Ernährung je nach Steinart können helfen, neue Steine zu vermeiden.\n\n4. Welche Symptome deuten darauf hin, dass ich sofort einen Arzt aufsuchen sollte?\n**Antwort:** Starke anhaltende Schmerzen, hohes Fieber oder blutiger Urin in großen Mengen sollten sofort abgeklärt werden."
 },
 {
     id: 482,
@@ -1257,7 +1257,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Erhöhtes CRP, erhöhte BSG, Leukozytose",
     instrumentalExamination: "Röntgenbild: Lungeninfiltrat rechts",
     examinerQuestions: "1. Welche Antibiotika würden Sie in diesem Fall einsetzen und warum?\n**Antwort:** Bitte erläutern Sie Ihre Auswahl und Dosierung.\n\n2. Welche zusätzlichen Maßnahmen (z. B. Atemgymnastik, Temperaturkontrolle) empfehlen Sie?\n**Antwort:** Bitte erläutern Sie Ihre Therapieempfehlungen.\n\n3. Wie unterscheiden Sie Pleurapneumonie von anderen Pneumonieformen?\n**Antwort:** Bitte nennen Sie die charakteristischen Befunde.",
-    patientQuestions: "1. Fühlen Sie sich nach der Behandlung stabil genug, um bald entlassen zu werden?\n**Antwort:** Bitte bewerten Sie Ihr aktuelles Befinden.\n\n2. Haben Sie noch Fragen zu Ihrer weiteren Behandlung oder Nachsorge?\n**Antwort:** Bitte teilen Sie mir Ihr Befinden mit."
+patientQuestions: "1. Wie lange dauert es, bis ich mich wieder vollständig erhole?\n**Antwort:** Die Genesung dauert in der Regel 1-2 Wochen, abhängig vom individuellen Verlauf und der Therapie.\n\n2. Muss ich nach der Entlassung weiterhin Medikamente einnehmen?\n**Antwort:** Ja, die Antibiotikatherapie sollte wie verordnet zu Ende genommen werden, um Rückfälle zu vermeiden.\n\n3. Kann ich eine erneute Lungenentzündung verhindern?\n**Antwort:** Regelmäßige Atemübungen, ausreichende Flüssigkeitszufuhr und gegebenenfalls Impfungen können vorbeugen.\n\n4. Wann darf ich wieder körperlich aktiv sein?\n**Antwort:** Nach vollständiger Genesung und in Absprache mit dem Arzt kann leichte körperliche Aktivität wieder aufgenommen werden."
 },
 {
     id: 483,
@@ -1341,7 +1341,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Erhöhte Cholestaseparameter",
     instrumentalExamination: "Sonographie: Wandverdickung der Gallenblase, Choledocholithiasis",
     examinerQuestions: "1. Welche bildgebenden Verfahren bestätigen die Diagnose der akuten Cholezystitis?\n**Antwort:** Ultraschall und ERCP.\n\n2. Wie wurde die Cholezystektomie durchgeführt?\n**Antwort:** Laparoskopisch, endoskopisch mit Trokaren und Insufflation.\n\n3. Welche postoperativen Maßnahmen planen Sie?\n**Antwort:** Entlassung in ambulante Betreuung, Entfernung des Nahtmaterials am 10. postoperativen Tag.\n\n4. Welche Ernährungsempfehlungen geben Sie bei Hypercholesterinämie und arterieller Hypertonie?\n**Antwort:** Fettarme Ernährung und Reduktion des Salzkonsums.",
-    patientQuestions: "1. Fühlen Sie sich nach der Operation stabil genug, um entlassen zu werden?\n**Antwort:** Bitte bewerten Sie Ihr aktuelles Befinden.\n\n2. Haben Sie noch Fragen zu Ihrer weiteren ambulanten Betreuung?\n**Antwort:** Bitte teilen Sie mir Ihr Befinden mit."
+patientQuestions: "1. Wann kann ich nach der Operation wieder normal essen?\n**Antwort:** Eine leichte, fettarme Kost wird in den ersten Wochen empfohlen, danach schrittweise normale Ernährung.\n\n2. Muss ich nach der Operation bestimmte Medikamente einnehmen?\n**Antwort:** Schmerzmittel bei Bedarf, gegebenenfalls Probiotika oder Magenschutzmittel.\n\n3. Wann darf ich wieder körperlich aktiv sein?\n**Antwort:** Leichte Bewegung ist nach wenigen Tagen möglich, schweres Heben sollte für etwa 4-6 Wochen vermieden werden.\n\n4. Gibt es ein Risiko, dass sich wieder Gallensteine bilden?\n**Antwort:** Nach einer Cholezystektomie ist das Risiko deutlich reduziert, eine gesunde Ernährung kann vorbeugen."
 },
 {
     id: 484,
@@ -1425,7 +1425,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Keine bildgebenden Untersuchungen durchgeführt",
     examinerQuestions: "1. Welche Parameter prüfen Sie bei einem Patienten mit SHT?\n**Antwort:** Orientiertheit, Pupillenreaktion und motorisch-sensorische Funktionen.\n\n2. Was bedeutet der GCS-Wert und wie interpretieren Sie ihn?\n**Antwort:** Der Glasgow Coma Scale (GCS) bewertet das Bewusstsein; ein hoher Wert weist auf gute neurologische Funktion hin.\n\n3. Erläutern Sie den Begriff 'Artefakt' im Kontext der Bildgebung.",
-    patientQuestions: "1. Fühlen Sie sich nach dem Unfall benommen oder verwirrt?\n**Antwort:** Bitte teilen Sie mir Ihr aktuelles Befinden mit.\n\n2. Haben Sie anhaltende Kopfschmerzen oder Übelkeit?\n**Antwort:** Bitte bewerten Sie Ihre Symptome auf einer Skala von 1 bis 10."
+patientQuestions: "1. Wann darf ich wieder Sport treiben?\n**Antwort:** Körperliche Schonung wird für mindestens 1-2 Wochen empfohlen, intensiver Sport sollte erst nach ärztlicher Freigabe erfolgen.\n\n2. Können nach einer Gehirnerschütterung Langzeitfolgen auftreten?\n**Antwort:** In der Regel heilt eine Gehirnerschütterung folgenlos aus, aber anhaltende Symptome wie Kopfschmerzen oder Konzentrationsprobleme sollten ärztlich abgeklärt werden.\n\n3. Ist eine weitere Kontrolle oder Untersuchung notwendig?\n**Antwort:** Eine Kontrolluntersuchung nach etwa einer Woche wird empfohlen, um den Heilungsverlauf zu überprüfen.\n\n4. Wann darf ich wieder zur Arbeit oder zur Universität zurückkehren?\n**Antwort:** Je nach Beschwerden ist eine Rückkehr nach wenigen Tagen möglich, bei anhaltenden Symptomen sollte eine Schonzeit eingehalten werden."
 },
 {
     id: 485,
@@ -1509,7 +1509,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "",
     examinerQuestions: "1. Welche bildgebenden Verfahren würden Sie zur Abklärung des Schultergelenks einsetzen?\n**Antwort:** Bitte erläutern Sie den Einsatz von Röntgen und ggf. Ultraschall.\n\n2. Welche Therapieoptionen (konservativ vs. operativ) ziehen Sie in Betracht?\n**Antwort:** Diskutieren Sie die Vor- und Nachteile der Behandlung.\n\n3. Wie beurteilen Sie den Einfluss der Nebendiagnose Hypothyreose auf den Heilungsverlauf?\n**Antwort:** Bitte erläutern Sie mögliche Auswirkungen.",
-    patientQuestions: "1. Haben Sie nach der Stabilisierung des Gelenks eine Besserung der Schmerzen bemerkt?\n**Antwort:** Bitte bewerten Sie Ihre Schmerzreduktion auf einer Skala von 1 bis 10.\n\n2. Bestehen noch weitere Beschwerden, insbesondere in der Hüfte?\n**Antwort:** Bitte teilen Sie mir Ihr aktuelles Befinden mit."
+patientQuestions: "1. Wie lange dauert die Heilung nach einer Schulterluxation?\n**Antwort:** In der Regel dauert die vollständige Heilung 4-6 Wochen, abhängig von der Therapie und individuellen Faktoren.\n\n2. Muss ich eine Operation durchführen lassen?\n**Antwort:** Meistens reicht eine konservative Therapie mit Ruhigstellung und Physiotherapie, eine Operation ist nur bei komplizierten Fällen notwendig.\n\n3. Wann kann ich meinen Arm wieder normal bewegen?\n**Antwort:** Leichte Bewegungen sind nach wenigen Tagen erlaubt, starke Belastungen sollten für mehrere Wochen vermieden werden.\n\n4. Gibt es spezielle Übungen zur schnelleren Genesung?\n**Antwort:** Ja, gezielte Physiotherapie und Mobilisationsübungen helfen, die Beweglichkeit und Stabilität der Schulter wiederherzustellen."
 },
 {
     id: 486,
@@ -1593,7 +1593,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "Erwartet: Erhöhte Entzündungsparameter (CRP, BSG) und Leukozytose",
     instrumentalExamination: "Röntgenuntersuchung zur Darstellung eines Lungeninfiltrats",
     examinerQuestions: "1. Welche diagnostischen Maßnahmen und apparative Untersuchungen leiten Sie bei dieser Pneumonie ein?\n**Antwort:** Bitte erläutern Sie die erforderlichen Laboruntersuchungen und das Röntgenbild.\n\n2. Welche Antibiotika und Dosierungen würden Sie verabreichen, und wie differenzieren Sie DM Typ 1 von DM Typ 2?\n**Antwort:** Bitte diskutieren Sie Ihre Therapieoptionen und die Unterschiede in der Diabetesbehandlung.",
-    patientQuestions: "1. Fühlen Sie sich stabil genug, um bald entlassen zu werden?\n**Antwort:** Bitte bewerten Sie Ihr aktuelles Befinden.\n\n2. Haben Sie noch Fragen zu Ihrer weiteren ambulanten Behandlung?\n**Antwort:** Bitte teilen Sie mir Ihre Bedenken mit."
+patientQuestions: "1. Wie lange dauert es, bis ich mich von der Lungenentzündung erhole?\n**Antwort:** Die Genesung dauert in der Regel 1-2 Wochen, abhängig vom individuellen Verlauf und der Therapie.\n\n2. Muss ich nach der Entlassung weiterhin Medikamente einnehmen?\n**Antwort:** Ja, die Antibiotikatherapie sollte wie verordnet vollständig abgeschlossen werden.\n\n3. Wie kann ich eine erneute Pneumonie verhindern?\n**Antwort:** Regelmäßige Atemübungen, ausreichende Flüssigkeitszufuhr und gegebenenfalls Impfungen können vorbeugen.\n\n4. Wann darf ich wieder körperlich aktiv sein?\n**Antwort:** Nach vollständiger Genesung und in Absprache mit dem Arzt kann leichte körperliche Aktivität langsam wieder aufgenommen werden."
 },
 {
     id: 487,
@@ -1677,7 +1677,7 @@ const BRANDENBURG_DATA = [
     laboratoryTests: "",
     instrumentalExamination: "Kraniale CT: Ausschluss von Hirnblutung und Infarktfrühzeichen; farbkodierte Dopplexsonografie: Stenose in der A. Carotis interna rechts",
     examinerQuestions: "1. Welche weiteren diagnostischen Maßnahmen würden Sie zur Abklärung einer Amaurosis fugax einleiten?\n**Antwort:** Bitte erläutern Sie den Einsatz von kranialen CT und Dopplexsonografie der Halsgefäße.\n\n2. Welche Bedeutung haben die Fachbegriffe RKI, Anämie, Ischämie, TIA und KHK im Kontext dieses Falls?\n**Antwort:** Bitte erklären Sie deren Relevanz für vaskuläre Ursachen der Amaurosis fugax.\n\n3. Wie leiten Sie das weitere Vorgehen in Bezug auf Diagnostik und Therapie ein?\n**Antwort:** Bitte skizzieren Sie Ihr Vorgehen hinsichtlich PTA und Stentimplantation.",
-    patientQuestions: "1. Haben Sie nach dem Vorfall wieder normal gesehen?\n**Antwort:** Bitte beschreiben Sie Ihre Sehkraft nach dem Ereignis.\n\n2. Haben Sie noch weitere Beschwerden im Zusammenhang mit dem Vorfall?\n**Antwort:** Bitte teilen Sie mir Ihr aktuelles Befinden mit."
+patientQuestions: "1. Ist mein Sehverlust ein Anzeichen für einen Schlaganfall?\n**Antwort:** Eine Amaurosis fugax kann ein Warnsignal für eine Durchblutungsstörung sein, daher sind weitere Untersuchungen notwendig.\n\n2. Muss ich mich auf weitere Behandlungen einstellen?\n**Antwort:** Je nach Befund kann eine medikamentöse Therapie oder ein Eingriff wie eine Stentimplantation erforderlich sein.\n\n3. Wie kann ich das Risiko eines erneuten Vorfalls verringern?\n**Antwort:** Eine gute Kontrolle von Blutdruck, Blutzucker und Cholesterin sowie das Vermeiden von Nikotin helfen, das Risiko zu senken.\n\n4. Darf ich nach der Behandlung wieder normal meinen Alltag führen?\n**Antwort:** Ja, mit regelmäßiger ärztlicher Kontrolle und Anpassung des Lebensstils können Sie Ihren Alltag weitgehend normal fortsetzen."
 }
 
     // Додаткові об'єкти для інших тестових даних (опціонально)
