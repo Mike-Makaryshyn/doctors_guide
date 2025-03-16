@@ -3203,7 +3203,7 @@ const HESSEN_DATA = [
     patientQuestions: "Habe ich eine gefährliche Erkrankung?\nMuss ich operiert werden?\nWie lange muss ich im Krankenhaus bleiben?\nKann ich langfristige Schäden davontragen?"
   },
   {
-    id: "",
+    id: 655,
     fullName: "V.a. Benigne Prostatahyperplasie",
     specialty: "Urologie",
     name: "Hans-Karl",
