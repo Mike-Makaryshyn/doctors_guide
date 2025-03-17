@@ -10,11 +10,6 @@
     align-items: flex-start; /* Вирівнюємо елементи по верху */
 }
 
-.userTile {
-    flex: 0 0 300px; /* Фіксована ширина плитки з особистими даними */
-    max-width: 300px;
-}
-
 .progressBar {
     flex: 0 0 150px; /* Ширина для Progress Bar */
     max-width: 150px;
@@ -108,4 +103,21 @@
     .circularButtonWrapper {
         margin-top: 20px;
     }
+}
+.userTile {
+    position: relative;
+    flex: 0 0 350px;
+    max-width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.editButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
 }

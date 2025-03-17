@@ -6,17 +6,14 @@ import { signOut } from "firebase/auth";
 import ProgressBar from "./ProgressBar.jsx";
 import { Link } from "react-router-dom";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import AuthStatus from "../../components/AuthStatus/AuthStatus";
 import MainLayout from "../../layouts/MainLayout/MainLayout.jsx";
 import SavedCasesWidget from "../../components/SavedCasesWidget.jsx";
 import RegistrationTile from "../../pages/AuthPage/RegistrationTile.jsx";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import styles from "./Dashboard.module.scss";
 import { toast } from "react-toastify";
-import useGetGlobalInfo from "../../hooks/useGetGlobalInfo.js";
-
-// Тут імпортуємо тільки StageTasksWidget – без прямого імпорту StageTasks!
 import StageTasksWidget from "../../components/StageTasksWidget.jsx";
+import Avatar from "../../components/Avatar/Avatar.jsx";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -26,124 +23,49 @@ const Dashboard = () => {
   const { fetchFirebaseCases } = useContext(DataSourceContext);
 
   useEffect(() => {
-    const fetchProgress = async () => {
+    const fetchData = async () => {
       if (!user) return;
       try {
-        const docRef = doc(db, "users", user.uid, "data", "documents");
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          setProgress(data.progress || 0);
-        }
-      } catch (error) {
-        console.error("Помилка завантаження прогресу:", error);
-        toast.error("Fehler beim Laden des Fortschritts.");
+        const userDoc = await getDoc(doc(db, "users", user.uid, "userData", "data"));
+        const progressDoc = await getDoc(doc(db, "users", user.uid, "data", "documents"));
+        const mainDoc = await getDoc(doc(db, "users", user.uid));
+        if (userDoc.exists()) setUserData(userDoc.data());
+        if (progressDoc.exists()) setProgress(progressDoc.data().progress || 0);
+        if (mainDoc.exists()) setActiveStage(mainDoc.data().activeStage);
+      } catch {
+        toast.error("Error loading dashboard data");
       }
     };
-
-    const fetchUserData = async () => {
-      if (!user) return;
-      try {
-        const docRef = doc(db, "users", user.uid, "userData", "data");
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          setUserData(docSnap.data());
-        } else {
-          console.log("Дані користувача не знайдено.");
-        }
-      } catch (error) {
-        console.error("Помилка завантаження даних користувача:", error);
-        toast.error("Fehler beim Laden der Benutzerdaten.");
-      }
-    };
-
-    const fetchActiveStage = async () => {
-      if (!user) return;
-      try {
-        // Активний етап зберігається в головному документі користувача
-        const docRef = doc(db, "users", user.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          const data = docSnap.data();
-          if (data.activeStage) {
-            setActiveStage(data.activeStage);
-          }
-        }
-      } catch (error) {
-        console.error("Помилка при зчитуванні activeStage:", error);
-      }
-    };
-
-    fetchProgress();
-    fetchUserData();
-    fetchActiveStage();
+    fetchData();
   }, [user]);
 
   const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-      console.log("Користувач успішно вийшов із системи.");
-    } catch (error) {
-      console.error("Помилка під час виходу з профілю:", error);
-      toast.error("Fehler beim Ausloggen.");
-    }
+    try { await signOut(auth); } catch { toast.error("Error signing out"); }
   };
 
   return (
     <MainLayout>
       <ProtectedRoute>
         <div className={styles.container}>
-          <div className={styles.dashboardContent}>
-            {/* Плитка з особистими даними */}
-            {userData && (
-              <div className={styles.userTile}>
-                <RegistrationTile data={userData} />
-              </div>
-            )}
-
-            {/* Прогрес-бар */}
-            <div className={styles.progressBar}>
+          <div className={styles.dashboardGrid}>
+          {userData && (
+  <div className={styles.userTile}>
+    <Avatar src={userData.avatarUrl} alt={`${userData.name}`} size="large" />
+    <Link to="/edit-profile" className={styles.editButton} title="Редагувати профіль">✏️</Link>
+    <RegistrationTile data={userData} />
+  </div>
+)}
+            <div className={styles.tile}>
               <ProgressBar progress={progress} />
             </div>
-
-            {/* Кнопка у вигляді кружка */}
-            <div className={styles.circularButtonWrapper}>
-              <div
-                className={styles.circularButton}
-                onClick={() => (window.location.href = "/custom-map")}
-              >
-                <span>Germany Lands</span>
-              </div>
-            </div>
-
-            {/* Saved Cases Widget */}
-            <SavedCasesWidget />
-
-            {/* Віджет із завданнями активного етапу */}
+            <SavedCasesWidget className={styles.tile}/>
             {activeStage && (
-              <div className={styles.stageTasksWidget}>
-                <StageTasksWidget
-                  selectedStageId={activeStage}
-                  user={user}
-                  language="de" // або змініть за потреби
-                  activeStageTitle={`Активний етап: ${activeStage}`}
-                />
-              </div>
+              <StageTasksWidget selectedStageId={activeStage} user={user} language="de" activeStageTitle={`Активний етап: ${activeStage}`} className={styles.tile}/>
             )}
           </div>
-
-          {/* Додатковий контент */}
-          <div className={styles.additionalContent}>
-            <Link to="/main_menu" className={styles.mainMenuLink}>
-              До головного меню
-            </Link>
-          </div>
-
-          {/* Кнопка виходу */}
           <div className={styles.bottomControls}>
-            <button onClick={handleSignOut} className={styles.signOutButton}>
-              Вийти з профілю
-            </button>
+            <Link to="/main_menu">До головного меню</Link>
+            <button onClick={handleSignOut}>Вийти з профілю</button>
           </div>
         </div>
       </ProtectedRoute>

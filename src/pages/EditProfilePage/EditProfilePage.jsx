@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import styles from './EditProfilePage.module.scss';
 
 const EditProfilePage = () => {
   const [user] = useAuthState(auth);
@@ -14,11 +15,12 @@ const EditProfilePage = () => {
   const [country, setCountry] = useState("");
   const [location, setLocation] = useState("");
   const [recognitionStatus, setRecognitionStatus] = useState("");
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     const fetchUserData = async () => {
       if (user) {
-        const docRef = doc(db, "users", user.uid);
+        const docRef = doc(db, "users", user.uid, "userData", "data");
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           const data = docSnap.data();
@@ -28,6 +30,7 @@ const EditProfilePage = () => {
           setCountry(data.country || "");
           setLocation(data.location || "");
           setRecognitionStatus(data.recognitionStatus || "Eingetreten");
+          setEmail(data.email || "");
         }
       }
     };
@@ -37,7 +40,7 @@ const EditProfilePage = () => {
   const handleSave = async (e) => {
     e.preventDefault();
     if (user) {
-      const docRef = doc(db, "users", user.uid);
+      const docRef = doc(db, "users", user.uid, "userData", "data");
       await updateDoc(docRef, {
         firstName,
         lastName,
@@ -45,6 +48,7 @@ const EditProfilePage = () => {
         country,
         location,
         recognitionStatus,
+        email,
       });
       alert("Дані успішно оновлені!");
       navigate("/dashboard"); // Повернення до особистого кабінету
@@ -52,60 +56,62 @@ const EditProfilePage = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Редагування профілю</h1>
-      <form onSubmit={handleSave}>
+    <div className={styles.editProfileContainer}>
+      <h1>Profil bearbeiten</h1>
+      <form onSubmit={handleSave} className={styles.editProfileForm}>
         <input
           type="text"
-          placeholder="Ім'я"
+          placeholder="Vorname"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           required
-          style={{ padding: "10px", margin: "10px", width: "300px" }}
+          className={styles.inputField}
         />
         <input
           type="text"
-          placeholder="Прізвище"
+          placeholder="Nachname"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           required
-          style={{ padding: "10px", margin: "10px", width: "300px" }}
+          className={styles.inputField}
         />
         <input
           type="text"
-          placeholder="Спеціальність"
+          placeholder="Fachgebiet"
           value={specialty}
           onChange={(e) => setSpecialty(e.target.value)}
           required
-          style={{ padding: "10px", margin: "10px", width: "300px" }}
+          className={styles.inputField}
         />
         <input
           type="text"
-          placeholder="Країна походження"
+          placeholder="Herkunftsland"
           value={country}
           onChange={(e) => setCountry(e.target.value)}
           required
-          style={{ padding: "10px", margin: "10px", width: "300px" }}
+          className={styles.inputField}
         />
         <input
           type="text"
-          placeholder="Місце проживання"
+          placeholder="Wohnort"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
           required
-          style={{ padding: "10px", margin: "10px", width: "300px" }}
+          className={styles.inputField}
+        />
+        <input
+          type="email"
+          placeholder="E-Mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className={styles.inputField}
         />
         <select
           value={recognitionStatus}
           onChange={(e) => setRecognitionStatus(e.target.value)}
           required
-          style={{
-            padding: "10px",
-            margin: "10px",
-            width: "320px",
-            border: "1px solid #ccc",
-            borderRadius: "5px",
-          }}
+          className={styles.inputField}
         >
           <option value="Eingetreten">Eingetreten</option>
           <option value="Angefangen">Angefangen</option>
@@ -113,34 +119,12 @@ const EditProfilePage = () => {
           <option value="Approbation">Approbation</option>
         </select>
         <br />
-        <button
-          type="submit"
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#3498db",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-            marginTop: "20px",
-          }}
-        >
-          Зберегти
+        <button type="submit" className={styles.buttonPrimary}>
+          Speichern
         </button>
       </form>
-      <button
-        onClick={() => navigate("/dashboard")}
-        style={{
-          padding: "10px 20px",
-          backgroundColor: "#e74c3c",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-          marginTop: "10px",
-        }}
-      >
-        Скасувати
+      <button onClick={() => navigate("/dashboard")} className={styles.buttonSecondary}>
+        Abbrechen
       </button>
     </div>
   );
