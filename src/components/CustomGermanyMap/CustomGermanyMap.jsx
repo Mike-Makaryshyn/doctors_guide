@@ -109,7 +109,7 @@ const regionCoatsOfArms = {
   Thüringen: ThueringenCoat,
 };
 
-const CustomGermanyMap = () => {
+const CustomGermanyMap = ({ registrationMode = false }) => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
   const [hoveredRegion, setHoveredRegion] = useState(null);
@@ -139,12 +139,18 @@ const CustomGermanyMap = () => {
 
   const handleDashboardClick = () => {
     if (pendingRegion) {
-      const confirmChange = window.confirm(
-        `Möchten Sie die Region auf "${pendingRegion}" wirklich ändern?`
-      );
-      if (confirmChange) {
+      // In non-registration mode, show confirmation dialog
+      if (!registrationMode) {
+        const confirmChange = window.confirm(
+          `Möchten Sie die Region auf "${pendingRegion}" wirklich ändern?`
+        );
+        if (confirmChange) {
+          handleChangeRegion(pendingRegion);
+          navigate("/main_menu"); 
+        }
+      } else {
+        // In registration mode, simply update the region without confirmation
         handleChangeRegion(pendingRegion);
-        navigate("/main_menu"); 
       }
     }
   };
@@ -164,7 +170,8 @@ const CustomGermanyMap = () => {
 
   return (
     <MainLayout>
-      {isMobile && (
+      {/* Render arrow button only if not in registration mode */}
+      {!registrationMode && isMobile && (
         <div className={styles.mobileButtonContainer}>
           <button
             className={isMobile ? styles.mobileDashboardButton : styles.desktopDashboardButton}
@@ -238,7 +245,8 @@ const CustomGermanyMap = () => {
                   className={styles.coatOfArms}
                 />
               )}
-              {!isMobile && (
+              {/* Render arrow button for desktop only if not in registration mode */}
+              {!registrationMode && !isMobile && (
                 <button
                   className={styles.mobileDashboardButton}
                   onClick={handleDashboardClick}

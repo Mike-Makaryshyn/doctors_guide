@@ -13,7 +13,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import CustomGermanyMap from "../../components/CustomGermanyMap/CustomGermanyMap";
 
 const RegistrationPage = () => {
-  // Три етапи: "form" (заповнення форми), "stageMenu" (вибір стейджу) та "map" (карта)
+  // Drei Schritte: "form", "stageMenu", "map"
   const [currentStep, setCurrentStep] = useState("form");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedStage, setSelectedStage] = useState(null);
@@ -37,26 +37,26 @@ const RegistrationPage = () => {
       agreePrivacy: false,
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("Ім’я є обов'язковим"),
-      lastName: Yup.string().required("Прізвище є обов'язковим"),
+      firstName: Yup.string().required("Vorname ist erforderlich"),
+      lastName: Yup.string().required("Nachname ist erforderlich"),
       email: Yup.string()
-        .email("Невірний формат електронної пошти")
-        .required("Електронна пошта є обов'язковою"),
+        .email("Ungültiges E-Mail Format")
+        .required("E-Mail ist erforderlich"),
       password: Yup.string()
-        .min(6, "Пароль повинен містити щонайменше 6 символів")
-        .required("Пароль є обов'язковим"),
+        .min(6, "Passwort muss mindestens 6 Zeichen enthalten")
+        .required("Passwort ist erforderlich"),
       repeatPassword: Yup.string()
-        .oneOf([Yup.ref("password"), null], "Паролі повинні співпадати")
-        .required("Підтвердження пароля є обов'язковим"),
-      birthDate: Yup.date().required("Дата народження є обов'язковою"),
-      educationRegion: Yup.string().required("Регіон освіти є обов'язковим"),
-      agreeTerms: Yup.boolean().oneOf([true], "Ви повинні погодитися з умовами"),
-      agreePrivacy: Yup.boolean().oneOf([true], "Ви повинні погодитися з політикою конфіденційності"),
+        .oneOf([Yup.ref("password"), null], "Passwörter müssen übereinstimmen")
+        .required("Passwortbestätigung ist erforderlich"),
+      birthDate: Yup.date().required("Geburtsdatum ist erforderlich"),
+      educationRegion: Yup.string().required("Bildungsregion ist erforderlich"),
+      agreeTerms: Yup.boolean().oneOf([true], "Sie müssen den AGB zustimmen"),
+      agreePrivacy: Yup.boolean().oneOf([true], "Sie müssen der Datenschutzerklärung zustimmen"),
     }),
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        // Реєстрація користувача
+        // Benutzerregistrierung
         const userCredential = await createUserWithEmailAndPassword(
           auth,
           values.email,
@@ -64,10 +64,14 @@ const RegistrationPage = () => {
         );
         const user = userCredential.user;
 
-        // Запис даних у Firestore
-        await setDoc(doc(db, "users", user.uid), {
-          activeStage: selectedStage || 1,
-        }, { merge: true });
+        // Daten in Firestore speichern
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            activeStage: selectedStage || 1,
+          },
+          { merge: true }
+        );
 
         await setDoc(doc(db, "users", user.uid, "userData", "data"), {
           firstName: values.firstName,
@@ -84,26 +88,24 @@ const RegistrationPage = () => {
           activeStep: "completed",
         });
 
-        // Очищення тимчасових даних
+        // Temporäre Daten löschen
         localStorage.removeItem("tempSelectedStage");
 
-        alert("Реєстрація успішна!");
+        alert("Registrierung erfolgreich!");
         navigate("/dashboard");
       } catch (error) {
         console.error("Error registering user:", error.message);
-        alert(`Реєстрація не вдалася: ${error.message}`);
+        alert(`Registrierung fehlgeschlagen: ${error.message}`);
       } finally {
         setIsLoading(false);
       }
     },
   });
 
-  const stagesProgress = formik.values.educationRegion === "EU"
-    ? [25, 50, 75, 100]
-    : [33, 66, 100];
+  const stagesProgress =
+    formik.values.educationRegion === "EU" ? [25, 50, 75, 100] : [33, 66, 100];
 
   const handleStageSelect = useCallback((stageId) => {
-    console.log("Selected stage:", stageId);
     setSelectedStage(stageId);
   }, []);
 
@@ -115,10 +117,19 @@ const RegistrationPage = () => {
     }
   }, [currentStep]);
 
+  // Функція для визначення класу помилки
+  const getFieldClass = (fieldName) => {
+    const isError =
+      formik.touched[fieldName] && formik.errors[fieldName] ? styles.errorField : "";
+    return `${styles.inputField} ${isError}`.trim();
+  };
+
   return (
     <MainLayout>
       <div className={styles.pageContainer}>
-        <h1 className={styles.centeredHeading}>Реєстрація</h1>
+        {/* Заголовок «Registrierung» */}
+        <h1 className={styles.centeredHeading}>Registrierung</h1>
+
         <div className={styles.contentWrapper}>
           <TransitionGroup component={null}>
             <CSSTransition
@@ -134,49 +145,45 @@ const RegistrationPage = () => {
               {currentStep === "form" ? (
                 <div className={styles.formWrapper}>
                   <form className={styles.form} onSubmit={formik.handleSubmit}>
-                    <h2 className={styles.formTitle}>Основна інформація</h2>
                     <div className={styles.formGrid}>
-                      {/* Поля форми */}
+                      {/* Vorname */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="firstName">
-                          Ім’я <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="firstName"
                           name="firstName"
                           type="text"
+                          placeholder="Vorname"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.firstName}
                           autoComplete="given-name"
                           required
+                          className={getFieldClass("firstName")}
                         />
                         {formik.touched.firstName && formik.errors.firstName && (
                           <div className={styles.error}>{formik.errors.firstName}</div>
                         )}
                       </div>
+                      {/* Nachname */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="lastName">
-                          Прізвище <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="lastName"
                           name="lastName"
                           type="text"
+                          placeholder="Nachname"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.lastName}
                           autoComplete="family-name"
                           required
+                          className={getFieldClass("lastName")}
                         />
                         {formik.touched.lastName && formik.errors.lastName && (
                           <div className={styles.error}>{formik.errors.lastName}</div>
                         )}
                       </div>
+                      {/* Geburtsdatum */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="birthDate">
-                          Дата народження <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="birthDate"
                           name="birthDate"
@@ -186,70 +193,68 @@ const RegistrationPage = () => {
                           value={formik.values.birthDate}
                           autoComplete="bday"
                           required
+                          className={getFieldClass("birthDate")}
                         />
                         {formik.touched.birthDate && formik.errors.birthDate && (
                           <div className={styles.error}>{formik.errors.birthDate}</div>
                         )}
                       </div>
+                      {/* E-Mail */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="email">
-                          Електронна пошта <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="email"
                           name="email"
                           type="email"
+                          placeholder="E-Mail"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.email}
                           autoComplete="email"
                           required
+                          className={getFieldClass("email")}
                         />
                         {formik.touched.email && formik.errors.email && (
                           <div className={styles.error}>{formik.errors.email}</div>
                         )}
                       </div>
+                      {/* Passwort */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="password">
-                          Пароль <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="password"
                           name="password"
                           type="password"
+                          placeholder="Passwort"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.password}
                           autoComplete="new-password"
                           required
+                          className={getFieldClass("password")}
                         />
                         {formik.touched.password && formik.errors.password && (
                           <div className={styles.error}>{formik.errors.password}</div>
                         )}
                       </div>
+                      {/* Passwort bestätigen */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="repeatPassword">
-                          Підтвердження пароля <span className={styles.required}>*</span>
-                        </label>
                         <input
                           id="repeatPassword"
                           name="repeatPassword"
                           type="password"
+                          placeholder="Passwort bestätigen"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.repeatPassword}
                           autoComplete="new-password"
                           required
+                          className={getFieldClass("repeatPassword")}
                         />
                         {formik.touched.repeatPassword && formik.errors.repeatPassword && (
                           <div className={styles.error}>{formik.errors.repeatPassword}</div>
                         )}
                       </div>
+                      {/* Bildungsregion */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="educationRegion">
-                          Регіон отримання медичної освіти{" "}
-                          <span className={styles.required}>*</span>
-                        </label>
                         <select
                           id="educationRegion"
                           name="educationRegion"
@@ -257,57 +262,60 @@ const RegistrationPage = () => {
                           onBlur={formik.handleBlur}
                           value={formik.values.educationRegion}
                           required
+                          className={getFieldClass("educationRegion")}
                         >
-                          <option value="">-- Виберіть регіон --</option>
-                          <option value="EU">ЄС (EU)</option>
-                          <option value="Non-EU">Не ЄС (Non-EU)</option>
+                          <option value="">-- Region wählen --</option>
+                          <option value="EU">EU</option>
+                          <option value="Non-EU">Non-EU</option>
                         </select>
                         {formik.touched.educationRegion && formik.errors.educationRegion && (
                           <div className={styles.error}>{formik.errors.educationRegion}</div>
                         )}
                       </div>
+                      {/* Fachgebiet */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="specialty">Фах (спеціальність)</label>
                         <input
                           id="specialty"
                           name="specialty"
                           type="text"
+                          placeholder="Fachgebiet"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.specialty}
                           autoComplete="off"
+                          className={styles.inputField}
                         />
                       </div>
+                      {/* Deutschniveau */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="germanLevel">
-                          Рівень знань німецької мови (наприклад: B2, C1)
-                        </label>
                         <input
                           id="germanLevel"
                           name="germanLevel"
                           type="text"
+                          placeholder="Deutschniveau (z.B.: B2, C1)"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.germanLevel}
                           autoComplete="off"
+                          className={styles.inputField}
                         />
                       </div>
+                      {/* Verfahrenstyp */}
                       <div className={styles.formGroup}>
-                        <label htmlFor="procedureType">
-                          Тип процедури, яку плануєте проходити
-                        </label>
                         <select
                           id="procedureType"
                           name="procedureType"
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.procedureType}
+                          className={styles.inputField}
                         >
-                          <option value="">-- Виберіть тип процедури --</option>
+                          <option value="">-- Typ wählen --</option>
                           <option value="Kenntnisprüfung">Kenntnisprüfung</option>
                           <option value="Gleichwertigkeitsprüfung">Gleichwertigkeitsprüfung</option>
                         </select>
                       </div>
+                      {/* Newsletter */}
                       <div className={styles.checkboxGroup}>
                         <label>
                           <input
@@ -318,9 +326,10 @@ const RegistrationPage = () => {
                             onBlur={formik.handleBlur}
                             checked={formik.values.subscribe}
                           />
-                          Підписатися на наші новини
+                          Newsletter abonnieren
                         </label>
                       </div>
+                      {/* AGB */}
                       <div className={styles.checkboxGroup}>
                         <label>
                           <input
@@ -332,12 +341,13 @@ const RegistrationPage = () => {
                             checked={formik.values.agreeTerms}
                             required
                           />
-                          Я погоджуюсь з умовами
+                          Ich stimme den AGB zu
                         </label>
                         {formik.touched.agreeTerms && formik.errors.agreeTerms && (
                           <div className={styles.error}>{formik.errors.agreeTerms}</div>
                         )}
                       </div>
+                      {/* Datenschutzerklärung */}
                       <div className={styles.checkboxGroup}>
                         <label>
                           <input
@@ -349,7 +359,7 @@ const RegistrationPage = () => {
                             checked={formik.values.agreePrivacy}
                             required
                           />
-                          Я погоджуюсь з політикою конфіденційності
+                          Ich stimme der Datenschutzerklärung zu
                         </label>
                         {formik.touched.agreePrivacy && formik.errors.agreePrivacy && (
                           <div className={styles.error}>{formik.errors.agreePrivacy}</div>
@@ -363,7 +373,7 @@ const RegistrationPage = () => {
                         className={styles.nextButton}
                         disabled={!formik.isValid || !formik.dirty}
                       >
-                        Далі
+                        Weiter
                       </button>
                     </div>
                   </form>
@@ -381,7 +391,7 @@ const RegistrationPage = () => {
                   />
                   <div className={styles.buttonGroup}>
                     <button type="button" onClick={handleBack} className={styles.backButton}>
-                      Назад
+                      Zurück
                     </button>
                     <button
                       type="button"
@@ -389,16 +399,16 @@ const RegistrationPage = () => {
                       onClick={() => setCurrentStep("map")}
                       disabled={!selectedStage}
                     >
-                      Далі
+                      Weiter
                     </button>
                   </div>
                 </div>
               ) : currentStep === "map" ? (
                 <div className={styles.mapStepWrapper}>
-                  <CustomGermanyMap />
+                  <CustomGermanyMap registrationMode={true} />
                   <div className={styles.buttonGroup}>
                     <button type="button" onClick={handleBack} className={styles.backButton}>
-                      Назад
+                      Zurück
                     </button>
                     <button
                       type="button"
@@ -406,7 +416,7 @@ const RegistrationPage = () => {
                       onClick={formik.handleSubmit}
                       disabled={isLoading}
                     >
-                      {isLoading ? "Реєстрація..." : "Зареєструватися"}
+                      {isLoading ? "Registrierung..." : "Registrieren"}
                     </button>
                   </div>
                 </div>

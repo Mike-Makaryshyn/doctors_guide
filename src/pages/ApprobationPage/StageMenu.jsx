@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { APPROBATION_STAGES_NON_EU } from "../../constants/translation/stagesTranslationNonEU";
 import { APPROBATION_STAGES_EU } from "../../constants/translation/stagesTranslationEU";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 import styles from "./StageMenu.module.scss";
 import classNames from "classnames";
@@ -39,14 +39,40 @@ const StageMenu = ({
   isRegistration,
   stagesProgress,
   activeStage,
-  educationRegion,
+  educationRegion, // може передаватися при реєстрації
 }) => {
-  // Отримуємо глобальні дані, зокрема глобальну категорію (EU/Non‑EU)
-  const { selectedLanguage: language, user, educationCategory: globalCategory } = useGetGlobalInfo();
-  console.log("Global category in StageMenu:", globalCategory);
-  
-  // Якщо це реєстрація і передано educationRegion, використовуємо його, інакше – глобальну категорію (за замовчуванням Non‑EU)
-  const effectiveCategory = isRegistration && educationRegion ? educationRegion : (globalCategory || "Non-EU");
+  // Отримуємо глобальні дані (мова, користувач), але не користуємось educationCategory з useGetGlobalInfo,
+  // оскільки ми завантажуємо educationRegion окремо із Firebase
+  const { selectedLanguage: language, user } = useGetGlobalInfo();
+
+  // Стан для зберігання educationRegion, завантаженого з Firebase (userData/data)
+  const [firebaseEducationRegion, setFirebaseEducationRegion] = useState("Non-EU");
+
+  useEffect(() => {
+    if (user) {
+      const dataDocRef = doc(db, "users", user.uid, "userData", "data");
+      const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          const fetchedRegion = data.educationRegion;
+          if (fetchedRegion === "EU" || fetchedRegion === "Non-EU") {
+            setFirebaseEducationRegion(fetchedRegion);
+          } else {
+            console.warn("Invalid or missing educationRegion. Defaulting to Non-EU.");
+            setFirebaseEducationRegion("Non-EU");
+          }
+        } else {
+          // Якщо документ відсутній, встановлюємо за замовчуванням Non-EU
+          setFirebaseEducationRegion("Non-EU");
+        }
+      });
+      return () => unsubscribe();
+    }
+  }, [user]);
+
+  // Визначаємо ефективну категорію:
+  // Якщо це реєстрація і передано educationRegion як проп – використовуємо його, інакше – firebaseEducationRegion.
+  const effectiveCategory = isRegistration && educationRegion ? educationRegion : firebaseEducationRegion;
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
   const stagesWrapperRef = useRef(null);
