@@ -39,9 +39,14 @@ const StageMenu = ({
   isRegistration,
   stagesProgress,
   activeStage,
+  educationRegion,
 }) => {
-  const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
-  const effectiveCategory = globalCategory || "Non-EU";
+  // Отримуємо глобальні дані, зокрема глобальну категорію (EU/Non‑EU)
+  const { selectedLanguage: language, user, educationCategory: globalCategory } = useGetGlobalInfo();
+  console.log("Global category in StageMenu:", globalCategory);
+  
+  // Якщо це реєстрація і передано educationRegion, використовуємо його, інакше – глобальну категорію (за замовчуванням Non‑EU)
+  const effectiveCategory = isRegistration && educationRegion ? educationRegion : (globalCategory || "Non-EU");
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
   const stagesWrapperRef = useRef(null);
@@ -199,12 +204,14 @@ StageMenu.propTypes = {
   isRegistration: PropTypes.bool,
   stagesProgress: PropTypes.arrayOf(PropTypes.number).isRequired,
   activeStage: PropTypes.number,
+  educationRegion: PropTypes.string,
 };
 
 StageMenu.defaultProps = {
   onStageVisible: null,
   isRegistration: false,
   activeStage: null,
+  educationRegion: "",
 };
 
 export default StageMenu;

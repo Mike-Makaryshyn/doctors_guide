@@ -1,88 +1,125 @@
 .editProfileContainer {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .editProfileForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .inputField,
-  textarea.inputField {
-    width: 100%;
-    max-width: 320px;
-    min-height: 50px;
-    resize: none;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
-    padding: 15px 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .inputField:focus,
-  textarea.inputField:focus {
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
-  }
-  
-  textarea {
-    overflow: hidden;
-    resize: none;
-    min-height: 50px;
-    max-height: 300px;
-  }
-  
-  .selectField {
-    width: 100%;
-    max-width: 320px;
-    padding: 15px;
-    border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
-    border: none;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
-  }
-  
-  .selectField:focus {
-    box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
-  }
-  
-  .formButton {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .saveButton {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  .saveButton:hover {
-    background-color: #2980b9;
-  }
-  
-  .cancelButton {
-    background-color: #e74c3c;
-    color: white;
-    margin-top: 10px;
-  }
-  
-  .cancelButton:hover {
-    background-color: #c0392b;
-  }
+  text-align: center;
+  margin-top: 50px;
+}
+
+.editProfileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputField,
+textarea.inputField {
+  width: 100%;
+  max-width: 320px;
+  min-height: 50px;
+  resize: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputField:focus,
+textarea.inputField:focus {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+  min-height: 50px;
+  max-height: 300px;
+}
+
+.selectField {
+  width: 100%;
+  max-width: 320px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
+  border: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.selectField:focus {
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+.formButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton {
+  background-color: #3498db;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #2980b9;
+}
+
+.cancelButton {
+  background-color: #e74c3c;
+  color: white;
+  margin-top: 10px;
+}
+
+.cancelButton:hover {
+  background-color: #c0392b;
+}
+
+/* Оформлення двох кнопок без заголовка */
+.regionSelector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+/* Прибрали regionLabel, бо текст не потрібен */
+
+/* Кнопки для вибору EU / Non-EU */
+.regionButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #4caf50;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5), -6px -6px 12px rgba(65, 191, 171, 0.5);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.regionButton:hover {
+  transform: translateY(-1px);
+}
+
+.regionButton:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* Активна кнопка */
+.active {
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}

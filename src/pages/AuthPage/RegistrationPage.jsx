@@ -1,5 +1,3 @@
-// src/pages/AuthPage/RegistrationPage.jsx
-
 import React, { useState, useCallback } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -10,16 +8,17 @@ import { useNavigate } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "../ApprobationPage/StageMenu";
 import styles from "./RegistrationPage.module.scss";
-import { useAuth } from "../../contexts/AuthContext"; // Імпорт useAuth
-
-import { CSSTransition, TransitionGroup } from "react-transition-group"; // Для анімацій
+import { useAuth } from "../../contexts/AuthContext";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import CustomGermanyMap from "../../components/CustomGermanyMap/CustomGermanyMap";
 
 const RegistrationPage = () => {
-  const [currentStep, setCurrentStep] = useState("form"); // "form" або "stageMenu"
+  // Три етапи: "form" (заповнення форми), "stageMenu" (вибір стейджу) та "map" (карта)
+  const [currentStep, setCurrentStep] = useState("form");
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedStage, setSelectedStage] = useState(null); // Додано для зберігання вибраного етапу
+  const [selectedStage, setSelectedStage] = useState(null);
   const navigate = useNavigate();
-  const { currentUser } = useAuth(); // Використання глобального контексту
+  const { currentUser } = useAuth();
 
   const formik = useFormik({
     initialValues: {
@@ -51,10 +50,8 @@ const RegistrationPage = () => {
         .required("Підтвердження пароля є обов'язковим"),
       birthDate: Yup.date().required("Дата народження є обов'язковою"),
       educationRegion: Yup.string().required("Регіон освіти є обов'язковим"),
-      agreeTerms: Yup.boolean()
-        .oneOf([true], "Ви повинні погодитися з умовами"),
-      agreePrivacy: Yup.boolean()
-        .oneOf([true], "Ви повинні погодитися з політикою конфіденційності"),
+      agreeTerms: Yup.boolean().oneOf([true], "Ви повинні погодитися з умовами"),
+      agreePrivacy: Yup.boolean().oneOf([true], "Ви повинні погодитися з політикою конфіденційності"),
     }),
     onSubmit: async (values) => {
       setIsLoading(true);
@@ -67,9 +64,9 @@ const RegistrationPage = () => {
         );
         const user = userCredential.user;
 
-        // Запис даних у Firestore у документ користувача разом із activeStage
+        // Запис даних у Firestore
         await setDoc(doc(db, "users", user.uid), {
-          activeStage: selectedStage || 1, // Записуємо вибраний етап або дефолтний
+          activeStage: selectedStage || 1,
         }, { merge: true });
 
         await setDoc(doc(db, "users", user.uid, "userData", "data"), {
@@ -87,7 +84,7 @@ const RegistrationPage = () => {
           activeStep: "completed",
         });
 
-        // Очищення localStorage після успішної реєстрації
+        // Очищення тимчасових даних
         localStorage.removeItem("tempSelectedStage");
 
         alert("Реєстрація успішна!");
@@ -101,23 +98,28 @@ const RegistrationPage = () => {
     },
   });
 
+  const stagesProgress = formik.values.educationRegion === "EU"
+    ? [25, 50, 75, 100]
+    : [33, 66, 100];
+
   const handleStageSelect = useCallback((stageId) => {
     console.log("Selected stage:", stageId);
-    setSelectedStage(stageId); // Оновлюємо локальний стан
+    setSelectedStage(stageId);
   }, []);
 
   const handleBack = useCallback(() => {
-    setCurrentStep("form");
-  }, []);
+    if (currentStep === "stageMenu") {
+      setCurrentStep("form");
+    } else if (currentStep === "map") {
+      setCurrentStep("stageMenu");
+    }
+  }, [currentStep]);
 
   return (
     <MainLayout>
       <div className={styles.pageContainer}>
-        {/* Заголовок видаляється на десктопі */}
         <h1 className={styles.centeredHeading}>Реєстрація</h1>
-
         <div className={styles.contentWrapper}>
-          {/* Анімаційний контейнер */}
           <TransitionGroup component={null}>
             <CSSTransition
               key={currentStep}
@@ -134,8 +136,7 @@ const RegistrationPage = () => {
                   <form className={styles.form} onSubmit={formik.handleSubmit}>
                     <h2 className={styles.formTitle}>Основна інформація</h2>
                     <div className={styles.formGrid}>
-                      {/* Ваші поля форми */}
-                      {/* ... */}
+                      {/* Поля форми */}
                       <div className={styles.formGroup}>
                         <label htmlFor="firstName">
                           Ім’я <span className={styles.required}>*</span>
@@ -150,11 +151,9 @@ const RegistrationPage = () => {
                           autoComplete="given-name"
                           required
                         />
-                        {formik.touched.firstName && formik.errors.firstName ? (
-                          <div className={styles.error}>
-                            {formik.errors.firstName}
-                          </div>
-                        ) : null}
+                        {formik.touched.firstName && formik.errors.firstName && (
+                          <div className={styles.error}>{formik.errors.firstName}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="lastName">
@@ -170,11 +169,9 @@ const RegistrationPage = () => {
                           autoComplete="family-name"
                           required
                         />
-                        {formik.touched.lastName && formik.errors.lastName ? (
-                          <div className={styles.error}>
-                            {formik.errors.lastName}
-                          </div>
-                        ) : null}
+                        {formik.touched.lastName && formik.errors.lastName && (
+                          <div className={styles.error}>{formik.errors.lastName}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="birthDate">
@@ -190,11 +187,9 @@ const RegistrationPage = () => {
                           autoComplete="bday"
                           required
                         />
-                        {formik.touched.birthDate && formik.errors.birthDate ? (
-                          <div className={styles.error}>
-                            {formik.errors.birthDate}
-                          </div>
-                        ) : null}
+                        {formik.touched.birthDate && formik.errors.birthDate && (
+                          <div className={styles.error}>{formik.errors.birthDate}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="email">
@@ -210,11 +205,9 @@ const RegistrationPage = () => {
                           autoComplete="email"
                           required
                         />
-                        {formik.touched.email && formik.errors.email ? (
-                          <div className={styles.error}>
-                            {formik.errors.email}
-                          </div>
-                        ) : null}
+                        {formik.touched.email && formik.errors.email && (
+                          <div className={styles.error}>{formik.errors.email}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="password">
@@ -230,11 +223,9 @@ const RegistrationPage = () => {
                           autoComplete="new-password"
                           required
                         />
-                        {formik.touched.password && formik.errors.password ? (
-                          <div className={styles.error}>
-                            {formik.errors.password}
-                          </div>
-                        ) : null}
+                        {formik.touched.password && formik.errors.password && (
+                          <div className={styles.error}>{formik.errors.password}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="repeatPassword">
@@ -250,12 +241,9 @@ const RegistrationPage = () => {
                           autoComplete="new-password"
                           required
                         />
-                        {formik.touched.repeatPassword &&
-                        formik.errors.repeatPassword ? (
-                          <div className={styles.error}>
-                            {formik.errors.repeatPassword}
-                          </div>
-                        ) : null}
+                        {formik.touched.repeatPassword && formik.errors.repeatPassword && (
+                          <div className={styles.error}>{formik.errors.repeatPassword}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="educationRegion">
@@ -268,19 +256,15 @@ const RegistrationPage = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.educationRegion}
-                          autoComplete="organization" // Або інше відповідне значення
                           required
                         >
                           <option value="">-- Виберіть регіон --</option>
                           <option value="EU">ЄС (EU)</option>
                           <option value="Non-EU">Не ЄС (Non-EU)</option>
                         </select>
-                        {formik.touched.educationRegion &&
-                        formik.errors.educationRegion ? (
-                          <div className={styles.error}>
-                            {formik.errors.educationRegion}
-                          </div>
-                        ) : null}
+                        {formik.touched.educationRegion && formik.errors.educationRegion && (
+                          <div className={styles.error}>{formik.errors.educationRegion}</div>
+                        )}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="specialty">Фах (спеціальність)</label>
@@ -293,11 +277,6 @@ const RegistrationPage = () => {
                           value={formik.values.specialty}
                           autoComplete="off"
                         />
-                        {formik.touched.specialty && formik.errors.specialty ? (
-                          <div className={styles.error}>
-                            {formik.errors.specialty}
-                          </div>
-                        ) : null}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="germanLevel">
@@ -312,12 +291,6 @@ const RegistrationPage = () => {
                           value={formik.values.germanLevel}
                           autoComplete="off"
                         />
-                        {formik.touched.germanLevel &&
-                        formik.errors.germanLevel ? (
-                          <div className={styles.error}>
-                            {formik.errors.germanLevel}
-                          </div>
-                        ) : null}
                       </div>
                       <div className={styles.formGroup}>
                         <label htmlFor="procedureType">
@@ -329,118 +302,115 @@ const RegistrationPage = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.procedureType}
-                          autoComplete="off"
                         >
                           <option value="">-- Виберіть тип процедури --</option>
-                          <option value="Kenntnisprüfung">
-                            Kenntnisprüfung
-                          </option>
-                          <option value="Gleichwertigkeitsprüfung">
-                            Gleichwertigkeitsprüfung
-                          </option>
+                          <option value="Kenntnisprüfung">Kenntnisprüfung</option>
+                          <option value="Gleichwertigkeitsprüfung">Gleichwertigkeitsprüfung</option>
                         </select>
-                        {formik.touched.procedureType &&
-                        formik.errors.procedureType ? (
-                          <div className={styles.error}>
-                            {formik.errors.procedureType}
-                          </div>
-                        ) : null}
                       </div>
-                    </div>
-                    <div className={styles.checkboxGroup}>
-                      <label>
-                        <input
-                          id="subscribe"
-                          name="subscribe"
-                          type="checkbox"
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                          checked={formik.values.subscribe}
-                        />
-                        Підписатися на наші новини
-                      </label>
-                    </div>
-                    <div className={styles.checkboxGroup}>
-                      <label>
-                        <input
-                          id="agreeTerms"
-                          name="agreeTerms"
-                          type="checkbox"
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                          checked={formik.values.agreeTerms}
-                          required
-                        />
-                        Я погоджуюсь з умовами
-                      </label>
-                      {formik.touched.agreeTerms &&
-                      formik.errors.agreeTerms ? (
-                        <div className={styles.error}>
-                          {formik.errors.agreeTerms}
-                        </div>
-                      ) : null}
-                    </div>
-                    <div className={styles.checkboxGroup}>
-                      <label>
-                        <input
-                          id="agreePrivacy"
-                          name="agreePrivacy"
-                          type="checkbox"
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                          checked={formik.values.agreePrivacy}
-                          required
-                        />
-                        Я погоджуюсь з політикою конфіденційності
-                      </label>
-                      {formik.touched.agreePrivacy &&
-                      formik.errors.agreePrivacy ? (
-                        <div className={styles.error}>
-                          {formik.errors.agreePrivacy}
-                        </div>
-                      ) : null}
+                      <div className={styles.checkboxGroup}>
+                        <label>
+                          <input
+                            id="subscribe"
+                            name="subscribe"
+                            type="checkbox"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={formik.values.subscribe}
+                          />
+                          Підписатися на наші новини
+                        </label>
+                      </div>
+                      <div className={styles.checkboxGroup}>
+                        <label>
+                          <input
+                            id="agreeTerms"
+                            name="agreeTerms"
+                            type="checkbox"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={formik.values.agreeTerms}
+                            required
+                          />
+                          Я погоджуюсь з умовами
+                        </label>
+                        {formik.touched.agreeTerms && formik.errors.agreeTerms && (
+                          <div className={styles.error}>{formik.errors.agreeTerms}</div>
+                        )}
+                      </div>
+                      <div className={styles.checkboxGroup}>
+                        <label>
+                          <input
+                            id="agreePrivacy"
+                            name="agreePrivacy"
+                            type="checkbox"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            checked={formik.values.agreePrivacy}
+                            required
+                          />
+                          Я погоджуюсь з політикою конфіденційності
+                        </label>
+                        {formik.touched.agreePrivacy && formik.errors.agreePrivacy && (
+                          <div className={styles.error}>{formik.errors.agreePrivacy}</div>
+                        )}
+                      </div>
                     </div>
                     <div className={styles.buttonGroup}>
                       <button
                         type="button"
                         onClick={() => setCurrentStep("stageMenu")}
                         className={styles.nextButton}
-                        disabled={!formik.isValid || !formik.dirty} // Видалено !selectedStage
+                        disabled={!formik.isValid || !formik.dirty}
                       >
                         Далі
                       </button>
                     </div>
                   </form>
                 </div>
-              ) : (
+              ) : currentStep === "stageMenu" ? (
                 <div className={styles.stageMenuWrapper}>
                   <StageMenu
                     onStageSelect={handleStageSelect}
                     isRegistration={true}
-                    stagesProgress={[33, 66, 100]} // Відсотки прогресу для трьох етапів
-                    activeStage={selectedStage} // Передаємо вибраний етап
+                    stagesProgress={stagesProgress}
+                    activeStage={selectedStage}
                     enableSwipe={false}
                     gridView={true}
+                    educationRegion={formik.values.educationRegion}
                   />
                   <div className={styles.buttonGroup}>
+                    <button type="button" onClick={handleBack} className={styles.backButton}>
+                      Назад
+                    </button>
                     <button
                       type="button"
-                      onClick={handleBack}
-                      className={styles.backButton}
+                      className={styles.nextButton}
+                      onClick={() => setCurrentStep("map")}
+                      disabled={!selectedStage}
                     >
+                      Далі
+                    </button>
+                  </div>
+                </div>
+              ) : currentStep === "map" ? (
+                <div className={styles.mapStepWrapper}>
+                  <CustomGermanyMap />
+                  <div className={styles.buttonGroup}>
+                    <button type="button" onClick={handleBack} className={styles.backButton}>
                       Назад
                     </button>
                     <button
                       type="button"
                       className={styles.submitButton}
                       onClick={formik.handleSubmit}
-                      disabled={isLoading || !selectedStage}
+                      disabled={isLoading}
                     >
                       {isLoading ? "Реєстрація..." : "Зареєструватися"}
                     </button>
                   </div>
                 </div>
-              )}
+              ) : null}
             </CSSTransition>
           </TransitionGroup>
         </div>

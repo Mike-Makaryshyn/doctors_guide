@@ -1,4 +1,3 @@
-// CustomGermanyMap.jsx
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import styles from "./CustomGermanyMap.module.css";
@@ -27,7 +26,7 @@ import SachsenAnhaltCoat from "../../assets/coats/Sachsen-Anhalt.svg";
 import SchleswigHolsteinCoat from "../../assets/coats/Schleswig-Holstein.svg";
 import ThueringenCoat from "../../assets/coats/Thüringen.svg";
 
-// Name-Mappings, falls gebraucht
+// Name-Mappings, якщо потрібно
 const nameMappings = {
   "Mecklenburg-Vorpommern": "Mecklenburg Vorpommern",
   "Nordrhein-Westfalen-Münster": "Nordrhein-Westfalen",
@@ -38,16 +37,12 @@ function unifyRegionName(rawName) {
   return nameMappings[rawName] || rawName;
 }
 
-// Jetzt vier Teilregionen mit eigenen (ähnlichen) Farben
 const regionColors = {
-  // BW-Hauptregion (falls vorhanden)
   "Baden-Württemberg": "#f15958",
-
   "Baden-Württemberg-Freiburg": "#f15958",
   "Baden-Württemberg-Karlsruhe": "#ed625b",
   "Baden-Württemberg-Stuttgart": "#f17666",
   "Baden-Württemberg-Reutlingen": "#f18d79",
-
   Bayern: "var(--DE-BY)",
   Berlin: "var(--DE-BE)",
   Brandenburg: "var(--DE-BB)",
@@ -66,14 +61,12 @@ const regionColors = {
   Thüringen: "var(--DE-TH)",
 };
 
-// Greetings etc. 1:1 beibehalten
 const regionGreetings = {
   "Baden-Württemberg": "Grüß Gott",
   "Baden-Württemberg-Freiburg": "Grüß Gott",
   "Baden-Württemberg-Karlsruhe": "Grüß Gott",
   "Baden-Württemberg-Stuttgart": "Grüß Gott",
   "Baden-Württemberg-Reutlingen": "Grüß Gott",
-
   Bayern: "Servus",
   Berlin: "Hallo",
   Brandenburg: "Guten Tag",
@@ -98,7 +91,6 @@ const regionCoatsOfArms = {
   "Baden-Württemberg-Karlsruhe": BadenWuerttembergCoat,
   "Baden-Württemberg-Stuttgart": BadenWuerttembergCoat,
   "Baden-Württemberg-Reutlingen": BadenWuerttembergCoat,
-
   Bayern: BayernCoat,
   Berlin: BerlinCoat,
   Brandenburg: BrandenburgCoat,
@@ -117,7 +109,6 @@ const regionCoatsOfArms = {
   Thüringen: ThueringenCoat,
 };
 
-// Hauptkomponente
 const CustomGermanyMap = () => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
@@ -176,11 +167,7 @@ const CustomGermanyMap = () => {
       {isMobile && (
         <div className={styles.mobileButtonContainer}>
           <button
-            className={
-              isMobile
-                ? styles.mobileDashboardButton
-                : styles.desktopDashboardButton
-            }
+            className={isMobile ? styles.mobileDashboardButton : styles.desktopDashboardButton}
             onClick={handleDashboardClick}
             aria-label="Zum Dashboard wechseln"
           >
@@ -224,18 +211,9 @@ const CustomGermanyMap = () => {
                         isSelected ? styles.geographySelected : ""
                       }`}
                       style={{
-                        default: {
-                          fill: fillColor,
-                          outline: "none",
-                        },
-                        hover: {
-                          fill: fillColor,
-                          outline: "none",
-                        },
-                        pressed: {
-                          fill: fillColor,
-                          outline: "none",
-                        },
+                        default: { fill: fillColor, outline: "none" },
+                        hover: { fill: fillColor, outline: "none" },
+                        pressed: { fill: fillColor, outline: "none" },
                       }}
                     />
                   );
@@ -249,14 +227,10 @@ const CustomGermanyMap = () => {
           {displayedRegion ? (
             <>
               {displayedRegion === selectedRegion && (
-                <p className={styles.currentRegionLabel}>
-                  Aktuell ausgewählte Region:
-                </p>
+                <p className={styles.currentRegionLabel}>Aktuell ausgewählte Region:</p>
               )}
               <h2 className={styles.regionName}>{displayedRegion}</h2>
-              <p className={styles.greeting}>
-                {regionGreetings[displayedRegion]}
-              </p>
+              <p className={styles.greeting}>{regionGreetings[displayedRegion]}</p>
               {regionCoatsOfArms[displayedRegion] && (
                 <img
                   src={regionCoatsOfArms[displayedRegion]}

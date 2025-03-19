@@ -9,8 +9,8 @@ import { db } from "../../firebase";
 import styles from "./styles.module.scss";
 
 const ApprobationPage = () => {
-  const { selectedLanguage: language, user, category: globalCategory } = useGetGlobalInfo();
-  const effectiveCategory = globalCategory || "Non-EU";
+const { selectedLanguage: language, user, educationCategory } = useGetGlobalInfo();
+const effectiveCategory = educationCategory || "Non-EU";
 
   const [activeStage, setActiveStage] = useState(1);
   const [stagesProgress, setStagesProgress] = useState(Array(9).fill(0));
