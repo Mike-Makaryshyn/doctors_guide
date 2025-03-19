@@ -181,6 +181,9 @@ const LetterFormPage = React.lazy(() =>
 const AbbreviationsSimpleChoiceGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/SimpleChoiceGame/AbbreviationsSimpleChoiceGame.jsx")
 );
+const CalendarPage = React.lazy(() =>
+  import("../pages/CalendarPage/CalendarPage")
+);
 const AbbreviationsTermMatchingGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/TermMatchingGame/AbbreviationsTermMatchingGame.jsx")
 );
@@ -225,6 +228,7 @@ export default function Routers() {
           path={pathList.medications_fill_in_blank.path}
           element={<MedicationFillInBlankGame />}
         />
+        <Route path={pathList.calendar.path} element={<CalendarPage />} />
           <Route
           path="/medications-fortune-wheel-game"
           element={<MedicationFortuneWheelGame />}

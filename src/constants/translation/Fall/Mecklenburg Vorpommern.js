@@ -2187,7 +2187,7 @@ patientQuestions: ""
 {
 id: 689,
 fullName: "Akute Cholezystitis bei Cholezystolithiasis",
-examDate: "16.07.2020 bis 20.07.2020",
+examDate: "16.07.2020",
 specialty: "Chirurgie / Gastroenterologie",
 name: "Schmidt",
 surname: "",
