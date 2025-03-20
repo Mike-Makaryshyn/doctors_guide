@@ -1,5 +1,3 @@
-// src/pages/AuthPage/RegistrationPage.module.scss
-
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -18,6 +16,7 @@
   }
 }
 
+/* Додаємо .errorField для shake-анімації */
 .errorField {
   border: 2px solid red !important;
   animation: shake 0.3s linear;
@@ -40,7 +39,6 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
-  /* Видаляємо absolute та медіа-запит, щоб не ховати заголовок на десктопі */
 }
 
 .contentWrapper {
@@ -51,18 +49,17 @@
   gap: 30px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 30px; /* Зменшили відступ, щоб усе було ближче до центру */
+  margin-top: 30px;
   position: relative;
 }
 
 .formWrapper {
   width: 100%;
   max-width: 800px;
-  display: flex;
+  display: contents;
   flex-direction: column;
   padding: 20px;
   border-radius: 20px;
-  /* Без фону та тіні */
 }
 
 .form {
@@ -87,7 +84,6 @@
     font-weight: bold;
   }
 
-  /* Стандартний стиль для input і select */
   input,
   select {
     width: 100%;
@@ -106,11 +102,11 @@
   }
 }
 
-/* Стилі для \"inputField\" (як в EditProfilePage) */
+/* Стилі для .inputField */
 .inputField,
 textarea.inputField {
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
   min-height: 50px;
   resize: none;
   border-radius: 12px;
@@ -160,96 +156,115 @@ textarea.inputField:focus {
     align-items: center;
     color: #333;
     font-size: 0.95rem;
+    margin-bottom: 10px;
 
     input {
       margin-right: 10px;
       transform: scale(1.2);
     }
 
-    a {
-      color: #3f6f64;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    &.errorField {
+      border: 2px solid red;
+      animation: shake 0.3s linear;
+      padding: 5px;
+      border-radius: 8px;
     }
   }
 }
 
-.buttonGroup {
+/* Стилі для кнопок EU / Non-EU */
+.regionSelector {
   display: flex;
-  justify-content: flex-end;
   gap: 15px;
-  margin-top: 30px;
-
-  @media (min-width: 769px) {
-    justify-content: center;
-  }
+  margin-top: 5px;
 }
 
-.backButton,
-.nextButton,
-.submitButton {
-  padding: 12px 25px;
+.regionButton {
+  flex: 1;
+  padding: 10px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: #4caf50;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+    -6px -6px 12px rgba(65, 191, 171, 0.5);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.backButton {
-  background-color: #ccc;
-  color: #333;
-
-  &:hover {
-    background-color: #b3b3b3;
-  }
-}
-
-.nextButton {
-  background-color: #3f6f64;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
   color: #fff;
 
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+  }
+}
+
+.active {
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* Окремі стилі для кнопок із position: fixed */
+
+/* Кнопка "Назад" – зліва */
+.backButton {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4caf50;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+/* Кнопка "Далі" – справа */
+.nextButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   &:hover {
     background-color: #365b54;
   }
 }
 
+/* Кнопка "Завершити" – справа */
 .submitButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
   background-color: #4caf50;
-  color: white;
-
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: #45a049;
   }
-
   &:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
   }
-}
-
-.required {
-  color: red;
-}
-
-.stageMenuWrapper {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.stageMenuWrapper .buttonGroup {
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 /* Анімації для react-transition-group */
@@ -288,15 +303,12 @@ textarea.inputField:focus {
     padding: 30px 20px;
   }
 
-  .buttonGroup {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .backButton,
   .nextButton,
   .submitButton {
     width: 100%;
+    position: static;
+    margin-top: 20px;
   }
 
   .centeredHeading {
