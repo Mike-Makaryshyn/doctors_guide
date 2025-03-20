@@ -396,7 +396,7 @@ const RegistrationPage = () => {
                     onClick={handleBack}
                     className={styles.backButton}
                   >
-                    Zurück
+                     &#8592;
                   </button>
                   <button
                     type="button"
@@ -419,13 +419,13 @@ const RegistrationPage = () => {
                      &#8592;
                   </button>
                   <button
-                    type="button"
-                    className={styles.submitButton}
-                    onClick={formik.handleSubmit}
-                    disabled={isLoading}
-                  >
-                    {isLoading ? "Registrierung..." : "Registrieren"}
-                  </button>
+  type="button"
+  className={styles.submitButton}
+  onClick={formik.handleSubmit}
+  disabled={isLoading}
+>
+&#x2691;
+</button>
                 </div>
               ) : null}
             </CSSTransition>

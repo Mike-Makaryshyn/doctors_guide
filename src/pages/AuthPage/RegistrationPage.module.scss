@@ -209,64 +209,48 @@ textarea.inputField:focus {
 
 /* Окремі стилі для кнопок із position: fixed */
 
-/* Кнопка "Назад" – зліва */
+/* Кнопка "Назад" – зліва, з іконкою стрілки вліво */
 .backButton {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 12px;
-  background-color: #4caf50;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  &:hover {
-    background-color: #45a049;
-  }
-}
-
-/* Кнопка "Далі" – справа */
-.nextButton {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  margin-top: auto;
   width: 35px;
-    height: 28px;
-  padding: 10px 20px;
-  border: none;
-
-  background-color: #4caf50;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  &:hover {
-    background-color: #365b54;
-  }
+  height: 28px;
+  position: fixed;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+  /* Використовується Unicode-символ для стрілки вліво (←) */
 }
 
-/* Кнопка "Завершити" – справа */
-.submitButton {
+/* Кнопка "Далі" – справа, з іконкою стрілки вправо */
+.nextButton {
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 12px;
-  background-color: #4caf50;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  &:hover {
-    background-color: #45a049;
-  }
-  &:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-  }
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  bottom: 0;
+ 
+}
+
+/* Кнопка "Завершити" – справа, з іконкою прапорця */
+.submitButton {
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  bottom: 0;
 }
 
 /* Анімації для react-transition-group */
@@ -292,7 +276,7 @@ textarea.inputField:focus {
   transition: all 500ms ease-in-out;
 }
 
-/* Responsive Styles */
+/* Responsive Styles: кнопки залишаються fixed навіть на мобільних */
 @media (max-width: 768px) {
   .contentWrapper {
     gap: 20px;
@@ -303,14 +287,6 @@ textarea.inputField:focus {
   .stageMenuWrapper {
     max-width: 100%;
     padding: 30px 20px;
-  }
-
-  .backButton,
-  .nextButton,
-  .submitButton {
-    width: 100%;
-    position: static;
-    margin-top: 20px;
   }
 
   .centeredHeading {
