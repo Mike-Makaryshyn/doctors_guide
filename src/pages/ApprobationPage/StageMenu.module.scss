@@ -227,3 +227,63 @@
   color: #fff;
   border-radius: 4px;
 }
+/* Стилі, які застосовуються лише під час реєстрації */
+.registrationLayout {
+  /* Можна налаштувати фон або відступи, якщо потрібно */
+  max-width: 1200px; /* або інше значення, яке тобі підходить */
+  margin: 0 auto;    /* горизонтальне вирівнювання по центру */
+  padding: 20px; 
+}
+
+/* Для контейнера стадій під час реєстрації на десктопі: grid layout */
+.registrationWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 стовпці */
+  gap: 20px;  /* Відступи між елементами */
+  overflow-x: visible; /* Вимикаємо горизонтальну прокрутку */
+  scroll-snap-type: none; /* Вимикаємо scroll-snap */
+  justify-items: center;
+}
+
+/* Мобільний варіант для реєстрації: вертикальний список */
+@media (max-width: 767px) {
+  .registrationWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Якщо хочете вирівняти по центру */
+    gap: 20px;
+  }
+
+  .registrationWrapper .stage {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+  }
+
+  .registrationWrapper .stageImage {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.registrationWrapper .stage {
+  /* Перекриваємо базові стилі */
+  width: 160px !important;
+  height: 160px !important;
+  max-width: none !important;
+  margin: 10px; /* за потреби */
+
+  /* Якщо в базовому .stage ще є якісь обмеження (flex, calc(33.33vw)), 
+     їх теж варто переважити або видалити, 
+     наприклад: */
+  flex: 0 0 auto !important;
+}
+
+.registrationWrapper .stageImage {
+  width: 80% !important;
+  height: 80% !important;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

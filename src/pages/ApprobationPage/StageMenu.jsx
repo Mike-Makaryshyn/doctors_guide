@@ -46,7 +46,8 @@ const StageMenu = ({
   const { selectedLanguage: language, user } = useGetGlobalInfo();
 
   // Стан для зберігання educationRegion, завантаженого з Firebase (userData/data)
-  const [firebaseEducationRegion, setFirebaseEducationRegion] = useState("Non-EU");
+  const [firebaseEducationRegion, setFirebaseEducationRegion] =
+    useState("Non-EU");
 
   useEffect(() => {
     if (user) {
@@ -58,7 +59,9 @@ const StageMenu = ({
           if (fetchedRegion === "EU" || fetchedRegion === "Non-EU") {
             setFirebaseEducationRegion(fetchedRegion);
           } else {
-            console.warn("Invalid or missing educationRegion. Defaulting to Non-EU.");
+            console.warn(
+              "Invalid or missing educationRegion. Defaulting to Non-EU."
+            );
             setFirebaseEducationRegion("Non-EU");
           }
         } else {
@@ -72,7 +75,10 @@ const StageMenu = ({
 
   // Визначаємо ефективну категорію:
   // Якщо це реєстрація і передано educationRegion як проп – використовуємо його, інакше – firebaseEducationRegion.
-  const effectiveCategory = isRegistration && educationRegion ? educationRegion : firebaseEducationRegion;
+  const effectiveCategory =
+    isRegistration && educationRegion
+      ? educationRegion
+      : firebaseEducationRegion;
   const normalizedCategory = effectiveCategory.trim().toUpperCase();
 
   const stagesWrapperRef = useRef(null);
@@ -92,7 +98,8 @@ const StageMenu = ({
     console.log(
       normalizedCategory === "EU"
         ? "Using EU stages:" + JSON.stringify(APPROBATION_STAGES_EU[language])
-        : "Using Non-EU stages:" + JSON.stringify(APPROBATION_STAGES_NON_EU[language])
+        : "Using Non-EU stages:" +
+            JSON.stringify(APPROBATION_STAGES_NON_EU[language])
     );
   }, [effectiveCategory, normalizedCategory, language]);
 
@@ -155,7 +162,8 @@ const StageMenu = ({
     preventDefaultTouchmoveEvent: true,
   });
 
-  const activeStageObj = stages.find((s) => s.id === activeStage) || stages[0] || {};
+  const activeStageObj =
+    stages.find((s) => s.id === activeStage) || stages[0] || {};
 
   return (
     <>
@@ -163,7 +171,9 @@ const StageMenu = ({
         <div
           {...(isMobile ? swipeHandlers : {})}
           ref={stagesWrapperRef}
-          className={styles.stagesWrapper}
+          className={classNames(styles.stagesWrapper, {
+            [styles.registrationWrapper]: isRegistration,
+          })}
         >
           {stages.map((stage, index) => (
             <Tippy
@@ -187,7 +197,9 @@ const StageMenu = ({
                   <svg
                     className={styles.progressSvg}
                     viewBox="0 0 36 36"
-                    {...(stage.id === 1 ? { "data-tutorial": "stageProgressBar" } : {})}
+                    {...(stage.id === 1
+                      ? { "data-tutorial": "stageProgressBar" }
+                      : {})}
                   >
                     <path
                       className={styles.circleBg}
@@ -216,9 +228,7 @@ const StageMenu = ({
         </div>
       </div>
       {isMobile && (
-        <div className={styles.activeStageTitle}>
-          {activeStageObj.title}
-        </div>
+        <div className={styles.activeStageTitle}>{activeStageObj.title}</div>
       )}
     </>
   );

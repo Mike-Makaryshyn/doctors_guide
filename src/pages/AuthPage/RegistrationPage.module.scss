@@ -22,16 +22,7 @@
   animation: shake 0.3s linear;
 }
 
-.pageContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  min-height: 100vh;
-  background-color: #3f6f64;
-  font-family: Arial, sans-serif;
-  position: relative;
-}
+
 
 .centeredHeading {
   color: #fff;
@@ -41,25 +32,37 @@
   margin-bottom: 20px;
 }
 
+
+
 .contentWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   width: 100%;
   max-width: 1200px;
-  margin-top: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   position: relative;
+  margin-top: 30px;
 }
 
 .formWrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 800px;
-  display: contents;
-  flex-direction: column;
   padding: 20px;
   border-radius: 20px;
+  margin: 0 auto;
+}
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #3f6f6400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; // якщо хочете вертикальне вирівнювання */
 }
 
 .form {
@@ -68,9 +71,12 @@
 }
 
 .formGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex
+  ;
+      flex-direction: column;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-content: space-around;
 }
 
 .formGroup {
@@ -171,7 +177,53 @@ textarea.inputField:focus {
     }
   }
 }
+.checkboxGroup input[type="checkbox"] {
 
+
+  outline: none;
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 8px rgba(19, 57, 51, 0.2),
+              -4px -4px 8px rgba(65, 191, 171, 0.2);
+  transition: background 0.3s, box-shadow 0.3s;
+  margin-right: 10px;
+  position: relative;
+}
+
+.checkboxGroup input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEgMTJsNiA2IDEyLTEyIi8+PC9zdmc+");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.checkboxGroup input[type="checkbox"]:checked {
+  background: #4caf50;
+  border-color: #3f6f64;
+  box-shadow: inset 2px 2px 5px rgba(19, 57, 51, 0.3),
+              inset -2px -2px 5px rgba(65, 191, 171, 0.3);
+}
+
+.checkboxGroup input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+.checkboxGroup input[type="checkbox"]:hover {
+  box-shadow: 2px 2px 4px rgba(19, 57, 51, 0.3),
+              -2px -2px 4px rgba(65, 191, 171, 0.3);
+}
 /* Стилі для кнопок EU / Non-EU */
 .regionSelector {
   display: flex;
@@ -252,7 +304,26 @@ textarea.inputField:focus {
   right: 10px;
   bottom: 0;
 }
+/* Вирівнюємо розмір date-поля з іншими інпутами */
+input[type="date"] {
+  width: 100% !important;
+  max-width: 400px;
+  min-height: 50px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: none; 
+  opacity: 1; /* Щоби не змінювався колір іконки */
+}
 /* Анімації для react-transition-group */
 .enter {
   opacity: 0;
@@ -275,7 +346,25 @@ textarea.inputField:focus {
   transform: translateX(-100%);
   transition: all 500ms ease-in-out;
 }
+.stageMenuWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  justify-content: center; /* аби колонки вирівнювалися по центру */
+  align-items: center;     /* вертикальне вирівнювання в кожному рядку */
+  margin: 0 auto;          /* щоб сама .stageMenuWrapper теж була по центру */
+  max-width: 1200px;       /* або інше */
+}
 
+/* Для мобільних (max-width: 768px) */
+@media (max-width: 768px) {
+  .stageMenuWrapper {
+    /* Перемикаємося на одну колонку, або дві – на твій вибір */
+    grid-template-columns: 2fr;
+    gap: 10px;
+    padding: 10px;
+  }
+}
 /* Responsive Styles: кнопки залишаються fixed навіть на мобільних */
 @media (max-width: 768px) {
   .contentWrapper {
@@ -283,8 +372,8 @@ textarea.inputField:focus {
     margin-top: 50px;
   }
 
-  .formWrapper,
-  .stageMenuWrapper {
+  .formWrapper
+   {
     max-width: 100%;
     padding: 30px 20px;
   }

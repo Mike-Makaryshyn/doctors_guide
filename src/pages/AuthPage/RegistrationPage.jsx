@@ -35,7 +35,10 @@ const RegistrationPage = () => {
     birthDate: Yup.date().required("Geburtsdatum ist erforderlich"),
     educationRegion: Yup.string().required("Bildungsregion ist erforderlich"),
     agreeTerms: Yup.boolean().oneOf([true], "AGB erforderlich"),
-    agreePrivacy: Yup.boolean().oneOf([true], "Datenschutzerklärung erforderlich"),
+    agreePrivacy: Yup.boolean().oneOf(
+      [true],
+      "Datenschutzerklärung erforderlich"
+    ),
   });
 
   // Ініціалізація Formik
@@ -157,7 +160,10 @@ const RegistrationPage = () => {
                           id="firstName"
                           name="firstName"
                           type="text"
-                          placeholder={placeholderWithError("firstName", "Vorname")}
+                          placeholder={placeholderWithError(
+                            "firstName",
+                            "Vorname"
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.firstName}
@@ -171,7 +177,10 @@ const RegistrationPage = () => {
                           id="lastName"
                           name="lastName"
                           type="text"
-                          placeholder={placeholderWithError("lastName", "Nachname")}
+                          placeholder={placeholderWithError(
+                            "lastName",
+                            "Nachname"
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.lastName}
@@ -185,7 +194,11 @@ const RegistrationPage = () => {
                           id="birthDate"
                           name="birthDate"
                           type="date"
-                          placeholder={placeholderWithError("birthDate", "Geburtsdatum")}
+                          lang="de" // <-- додаємо
+                          placeholder={placeholderWithError(
+                            "birthDate",
+                            "Geburtsdatum"
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.birthDate}
@@ -213,7 +226,10 @@ const RegistrationPage = () => {
                           id="password"
                           name="password"
                           type="password"
-                          placeholder={placeholderWithError("password", "Passwort")}
+                          placeholder={placeholderWithError(
+                            "password",
+                            "Passwort"
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.password}
@@ -227,7 +243,10 @@ const RegistrationPage = () => {
                           id="repeatPassword"
                           name="repeatPassword"
                           type="password"
-                          placeholder={placeholderWithError("repeatPassword", "Passwort bestätigen")}
+                          placeholder={placeholderWithError(
+                            "repeatPassword",
+                            "Passwort bestätigen"
+                          )}
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                           value={formik.values.repeatPassword}
@@ -239,7 +258,8 @@ const RegistrationPage = () => {
                       <div className={styles.formGroup}>
                         <div
                           className={
-                            formik.touched.educationRegion && formik.errors.educationRegion
+                            formik.touched.educationRegion &&
+                            formik.errors.educationRegion
                               ? `${styles.regionSelector} ${styles.errorField}`
                               : styles.regionSelector
                           }
@@ -247,18 +267,26 @@ const RegistrationPage = () => {
                           <button
                             type="button"
                             className={`${styles.regionButton} ${
-                              formik.values.educationRegion === "EU" ? styles.active : ""
+                              formik.values.educationRegion === "EU"
+                                ? styles.active
+                                : ""
                             }`}
-                            onClick={() => formik.setFieldValue("educationRegion", "EU")}
+                            onClick={() =>
+                              formik.setFieldValue("educationRegion", "EU")
+                            }
                           >
                             EU
                           </button>
                           <button
                             type="button"
                             className={`${styles.regionButton} ${
-                              formik.values.educationRegion === "Non-EU" ? styles.active : ""
+                              formik.values.educationRegion === "Non-EU"
+                                ? styles.active
+                                : ""
                             }`}
-                            onClick={() => formik.setFieldValue("educationRegion", "Non-EU")}
+                            onClick={() =>
+                              formik.setFieldValue("educationRegion", "Non-EU")
+                            }
                           >
                             Non-EU
                           </button>
@@ -301,7 +329,9 @@ const RegistrationPage = () => {
                           className={styles.inputField}
                         >
                           <option value="">-- Typ wählen --</option>
-                          <option value="Kenntnisprüfung">Kenntnisprüfung</option>
+                          <option value="Kenntnisprüfung">
+                            Kenntnisprüfung
+                          </option>
                           <option value="Gleichwertigkeitsprüfung">
                             Gleichwertigkeitsprüfung
                           </option>
@@ -325,7 +355,8 @@ const RegistrationPage = () => {
                       <div className={styles.checkboxGroup}>
                         <label
                           className={
-                            formik.touched.agreeTerms && formik.errors.agreeTerms
+                            formik.touched.agreeTerms &&
+                            formik.errors.agreeTerms
                               ? styles.errorField
                               : ""
                           }
@@ -348,7 +379,8 @@ const RegistrationPage = () => {
                       <div className={styles.checkboxGroup}>
                         <label
                           className={
-                            formik.touched.agreePrivacy && formik.errors.agreePrivacy
+                            formik.touched.agreePrivacy &&
+                            formik.errors.agreePrivacy
                               ? styles.errorField
                               : ""
                           }
@@ -362,7 +394,8 @@ const RegistrationPage = () => {
                             checked={formik.values.agreePrivacy}
                             required
                           />
-                          {formik.touched.agreePrivacy && formik.errors.agreePrivacy
+                          {formik.touched.agreePrivacy &&
+                          formik.errors.agreePrivacy
                             ? formik.errors.agreePrivacy
                             : "Ich stimme der Datenschutzerklärung zu"}
                         </label>
@@ -375,7 +408,7 @@ const RegistrationPage = () => {
                       className={styles.nextButton}
                       disabled={!formik.isValid || !formik.dirty}
                     >
-                        &#8594;
+                      &#8594;
                     </button>
                   </form>
                 </div>
@@ -396,7 +429,7 @@ const RegistrationPage = () => {
                     onClick={handleBack}
                     className={styles.backButton}
                   >
-                     &#8592;
+                    &#8592;
                   </button>
                   <button
                     type="button"
@@ -404,7 +437,7 @@ const RegistrationPage = () => {
                     onClick={() => setCurrentStep("map")}
                     disabled={!selectedStage}
                   >
-                      &#8594;
+                    &#8594;
                   </button>
                 </div>
               ) : currentStep === "map" ? (
@@ -416,16 +449,16 @@ const RegistrationPage = () => {
                     onClick={handleBack}
                     className={styles.backButton}
                   >
-                     &#8592;
+                    &#8592;
                   </button>
                   <button
-  type="button"
-  className={styles.submitButton}
-  onClick={formik.handleSubmit}
-  disabled={isLoading}
->
-&#x2691;
-</button>
+                    type="button"
+                    className={styles.submitButton}
+                    onClick={formik.handleSubmit}
+                    disabled={isLoading}
+                  >
+                    &#x2691;
+                  </button>
                 </div>
               ) : null}
             </CSSTransition>
