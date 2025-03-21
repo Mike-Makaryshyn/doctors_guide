@@ -304,6 +304,11 @@ textarea.inputField:focus {
   right: 10px;
   bottom: 0;
 }
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 /* Вирівнюємо розмір date-поля з іншими інпутами */
 input[type="date"] {
   width: 100% !important;

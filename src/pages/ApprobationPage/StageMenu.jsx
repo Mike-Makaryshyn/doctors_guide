@@ -41,11 +41,7 @@ const StageMenu = ({
   activeStage,
   educationRegion, // може передаватися при реєстрації
 }) => {
-  // Отримуємо глобальні дані (мова, користувач), але не користуємось educationCategory з useGetGlobalInfo,
-  // оскільки ми завантажуємо educationRegion окремо із Firebase
   const { selectedLanguage: language, user } = useGetGlobalInfo();
-
-  // Стан для зберігання educationRegion, завантаженого з Firebase (userData/data)
   const [firebaseEducationRegion, setFirebaseEducationRegion] =
     useState("Non-EU");
 
@@ -65,7 +61,6 @@ const StageMenu = ({
             setFirebaseEducationRegion("Non-EU");
           }
         } else {
-          // Якщо документ відсутній, встановлюємо за замовчуванням Non-EU
           setFirebaseEducationRegion("Non-EU");
         }
       });
@@ -73,8 +68,6 @@ const StageMenu = ({
     }
   }, [user]);
 
-  // Визначаємо ефективну категорію:
-  // Якщо це реєстрація і передано educationRegion як проп – використовуємо його, інакше – firebaseEducationRegion.
   const effectiveCategory =
     isRegistration && educationRegion
       ? educationRegion
@@ -194,27 +187,27 @@ const StageMenu = ({
                 onClick={() => handleStageClick(stage.id)}
               >
                 <div className={styles.progressCircle}>
-                  <svg
-                    className={styles.progressSvg}
-                    viewBox="0 0 36 36"
-                    {...(stage.id === 1
-                      ? { "data-tutorial": "stageProgressBar" }
-                      : {})}
-                  >
-                    <path
-                      className={styles.circleBg}
-                      d="M18 2.0845
-                         a 15.9155 15.9155 0 0 1 0 31.831
-                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                    />
-                    <path
-                      className={styles.circle}
-                      strokeDasharray={`${stagesProgress[index]}, 100`}
-                      d="M18 2.0845
-                         a 15.9155 15.9155 0 0 1 0 31.831
-                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                    />
-                  </svg>
+                  {!isRegistration && (
+                    <svg
+                      className={styles.progressSvg}
+                      viewBox="0 0 36 36"
+                      {...(stage.id === 1 ? { "data-tutorial": "stageProgressBar" } : {})}
+                    >
+                      <path
+                        className={styles.circleBg}
+                        d="M18 2.0845
+                           a 15.9155 15.9155 0 0 1 0 31.831
+                           a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path
+                        className={styles.circle}
+                        strokeDasharray={`${stagesProgress[index]}, 100`}
+                        d="M18 2.0845
+                           a 15.9155 15.9155 0 0 1 0 31.831
+                           a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                    </svg>
+                  )}
                   <img
                     src={stageImages[index]}
                     alt={`Stage ${index + 1}`}
