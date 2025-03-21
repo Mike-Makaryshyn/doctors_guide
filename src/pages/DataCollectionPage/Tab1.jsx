@@ -27,7 +27,7 @@ const Tab1 = ({
 
   return (
     <div className={styles.tabContainer}>
-      {/* Поле "Місце екзамену" - без підпису */}
+      {/* Поле \"Місце екзамену\" (Prüfungsort) */}
       <div className={styles.entryRow}>
         <div className={styles.regionField}>
           <select
@@ -52,7 +52,7 @@ const Tab1 = ({
         </div>
       </div>
 
-      {/* Поле "Ім'я" - без підпису, placeholder всередині */}
+      {/* Поле \"Ім'я\" (NAME) */}
       <div className={styles.entryRow}>
         <input
           type="text"
@@ -62,11 +62,11 @@ const Tab1 = ({
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
-          placeholder="Name"
+          placeholder="NAME"
         />
       </div>
 
-      {/* Поле "Тема" - без підпису, дропдаун з німецьким текстом */}
+      {/* Поле \"Тема\" (Thema (zusätzliche Info)) */}
       <div className={styles.entryRow}>
         <select
           value={localData.theme || ""}
@@ -76,13 +76,47 @@ const Tab1 = ({
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
         >
-          <option value="">-- Thema auswählen --</option>
+          <option value="">-- Thema (zusätzliche Info) --</option>
           {Object.keys(fallSpecificData).map((key) => (
             <option key={key} value={key}>
               {fallSpecificData[key].name}
             </option>
           ))}
         </select>
+      </div>
+
+      {/* Поле \"Дата екзамену\" (Prüfungsdatum) */}
+      <div className={styles.entryRow}>
+        <input
+          type="date"
+          value={localData.examDate || ""}
+          onChange={(e) => updateLocalData({ examDate: e.target.value })}
+          className={`${styles.inputField} ${styles[inputState]}`}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+          disabled={inputState === "disabled"}
+          placeholder="Prüfungsdatum"
+        />
+      </div>
+
+      {/* Статус екзамену (Bestanden/Nicht bestanden) */}
+      <div className={styles.entryRow}>
+        <div className={styles.statusContainer}>
+          <button
+            type="button"
+            className={styles.examStatusButton}
+            onClick={() => updateLocalData({ examStatus: "passed" })}
+          >
+            Bestanden
+          </button>
+          <button
+            type="button"
+            className={styles.examStatusButton}
+            onClick={() => updateLocalData({ examStatus: "failed" })}
+          >
+            Nicht bestanden
+          </button>
+        </div>
       </div>
     </div>
   );

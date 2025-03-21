@@ -2,176 +2,195 @@
 
 /* Основний контейнер */
 .container {
-    padding: 20px;
-  }
-  
-  /* Приклад стилів для якихось рядків введення */
-  .entryRow {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .label {
-    margin-right: 10px;
-    font-weight: bold;
-    width: 200px;
-  }
-  
-  .inputField,
-  .textAreaField,
-  .selectField {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex: 1;
-  }
-  
-  .textAreaField {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  .selectField {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex: 1;
-  }
-  
-  /* Контейнер для всіх табів */
+  padding: 20px;
+}
+
+/* Приклад стилів для якихось рядків введення */
+.entryRow {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  margin-right: 10px;
+  font-weight: bold;
+  width: 200px;
+}
+
+.inputField,
+.textAreaField,
+.selectField {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.textAreaField {
+  resize: vertical;
+  height: 100px;
+}
+
+.selectField {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+/* Контейнер для всіх табів */
+.tabMenuContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;         /* <-- Wichtig für horizontales Scrollen */
+  padding: 10px;
+  justify-content: center;  /* <-- Desktop: Tabs bleiben zentriert */
+  scroll-snap-type: x mandatory;
+  /* Auf großen Screens also wie vorher: zentriert. */
+  -ms-overflow-style: none; /* IE and Edge */
+     /* Firefox */
+}
+
+.tabMenuContainer::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Новий контейнер-обгортка: зберігає коло та текст під ним */
+.tabCircleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* відстань між колом та підписом */
+}
+
+/* Власне коло */
+.tabCircle {
+  flex: 0 0 auto;
+  width: 120px; /* збільшуємо коло */
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden; /* обрізає зображення всередині кола */
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  scroll-snap-align: center; /* <-- Standard: Mittiges „Einschnappen“ */
+  cursor: pointer;
+}
+
+/* Зображення займає всю площу кола і обрізається */
+.tabCircle img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* дозволяє обрізати картинку під коло */
+}
+
+/* Ефект при наведенні */
+.tabCircle:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Підпис під колом */
+.tabTitle {
+  font-size: 14px;
+  text-align: center;
+  color: #013b6e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Активний таб */
+.tabCircle.active {
+  transform: scale(1.15);
+  box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
+  border: 2px dashed rgba(42, 124, 111, 0.6);
+}
+
+/* Контент вибраної вкладки */
+.tabContent {
+  padding: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Кнопка для збереження (правий нижній кут) */
+.bottomRightSave {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3000;
+  margin: 10px;
+}
+
+.saveButtonNew {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.saveButtonNew:hover {
+  transform: scale(1.1);
+}
+
+/* Кнопка BackMenu (лівий нижній кут) */
+.main_menu_back {
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+  z-index: 2000;
+}
+
+/* --- Мобільна адаптація --- */
+@media (max-width: 768px) {
+
   .tabMenuContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    overflow-x: auto;
+    /* Statt center => flex-start, damit die 1. Tab nicht verschwindet */
+    justify-content: flex-start;
+    
+    /* etwas Platz, damit das erste Element nicht abgeschnitten wird */
+    scroll-padding-left: 20px;
+
+    /* Auch etwas Padding, damit man nicht direkt am Bildschirmrand klebt */
     padding: 10px;
-    justify-content: center;
-    scroll-snap-type: x mandatory;
   }
-  
-  /* Новий контейнер-обгортка: зберігає коло та текст під ним */
-  .tabCircleWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* відстань між колом та підписом */
-  }
-  
-  /* Власне коло */
+
+  /* Für Mobile passen wir das Snapping an:
+     -> „start“ statt „center“, damit das 1. Element nicht halb verdeckt ist */
   .tabCircle {
-    flex: 0 0 auto;
-    width: 120px; /* збільшуємо коло */
-    height: 120px;
-    border-radius: 50%;
-    background: #fff;
-    overflow: hidden; /* обрізає зображення всередині кола */
-    position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    scroll-snap-align: center;
-    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    scroll-snap-align: start;
   }
-  
-  /* Зображення займає всю площу кола і обрізається */
-  .tabCircle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* дозволяє обрізати картинку під коло */
-  }
-  
-  /* Ефект при наведенні */
-  .tabCircle:hover {
-    transform: translateY(-5px) scale(1.05);
-  }
-  
-  /* Підпис під колом */
+
   .tabTitle {
-    font-size: 14px;
-    text-align: center;
-    color: #013b6e;
+    font-size: 12px;
   }
-  
-  /* Активний таб */
-  .tabCircle.active {
-    transform: scale(1.15);
-    box-shadow: 0 0 10px rgba(42, 124, 111, 0.6);
-    border: 2px dashed rgba(42, 124, 111, 0.6);
-  }
-  
-  /* Контент вибраної вкладки */
+
   .tabContent {
-    padding: 20px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 10px;
   }
-  
-  /* Кнопка для збереження (правий нижній кут) */
-  .bottomRightSave {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    z-index: 3000;
-    margin: 10px;
-  }
-  
-  .saveButtonNew {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .saveButtonNew:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Кнопка BackMenu (лівий нижній кут) */
-  .main_menu_back {
-    margin-top: auto;
-    width: 35px;
-    height: 28px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 20px;
-    bottom: 0;
-    z-index: 2000;
-  }
-  
-  /* Мобільна адаптація */
-  @media (max-width: 768px) {
-    .tabMenuContainer {
-      justify-content: center;
-      padding: 0;
-    }
-  
-    .tabCircle {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .tabTitle {
-      font-size: 12px;
-    }
-  
-    .tabContent {
-      padding: 10px;
-    }
-  }
+}

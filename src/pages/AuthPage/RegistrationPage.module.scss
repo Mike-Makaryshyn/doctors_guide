@@ -309,6 +309,18 @@ input[type="date"] {
   -moz-appearance: none;
   appearance: none;
 }
+/* Schriftfarbe für Datumstext */
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #333; /* oder eine andere gut sichtbare Farbe */
+}
+
+/* Optional: Platzhalterfarbe anpassen */
+input[type="date"]::-webkit-input-placeholder {
+  color: #888; /* etwas helleres Grau */
+}
 /* Вирівнюємо розмір date-поля з іншими інпутами */
 input[type="date"] {
   width: 100% !important;

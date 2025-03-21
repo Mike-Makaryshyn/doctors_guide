@@ -1,5 +1,3 @@
-// src/pages/DataCollectionPage/Tab1.module.scss
-
 .tabContainer {
   padding: 20px;
 }
@@ -36,7 +34,7 @@
   box-sizing: border-box;
 }
 
-/* Оновлений стиль для полів вводу, що відповідає прикладу з Tab2 */
+/* Felder: NAME, Thema, Date etc. */
 .inputField,
 textarea.inputField {
   width: 100%;
@@ -68,4 +66,57 @@ textarea {
   resize: none;
   min-height: 50px;
   max-height: 300px;
+}
+
+/* Einheitliches Styling für das Datum-Feld */
+input[type="date"] {
+  width: 100% !important; /* Macht das Datumsfeld genauso breit wie die anderen Felder */
+  max-width: 400px;
+  min-height: 50px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
+}
+
+/* Container + Buttons für \"Bestanden\" / \"Nicht bestanden\" */
+.statusContainer {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.examStatusButton {
+  flex: 1; /* 50% Breite pro Button, da 2 Buttons = 100% */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #4caf50;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  color: #fff;
+}
+
+.examStatusButton:hover {
+  transform: translateY(-1px);
+}
+
+.examStatusButton:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
 }
