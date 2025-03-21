@@ -134,6 +134,7 @@ const THUERINGEN_DATA = [
         operationCourseComplications: "Keine Komplikationen",
         hospitalStayDuration: "3 Tage",
     },
+    
 ];
 
 THUERINGEN_DATA.regionName = "Thüringen";

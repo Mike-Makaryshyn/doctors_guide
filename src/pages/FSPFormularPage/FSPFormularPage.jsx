@@ -1,6 +1,12 @@
 // src/pages/FSPFormularPage/FSPFormularPage.jsx
 
-import React, { useState, useRef, useContext, useEffect, useCallback } from "react";
+import React, {
+  useState,
+  useRef,
+  useContext,
+  useEffect,
+  useCallback,
+} from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import styles from "./FSPFormularPage.module.scss";
 import FSPFormularPageData from "../../constants/translation/FSPFormularPage";
@@ -33,10 +39,18 @@ import useIsMobile from "../../hooks/useIsMobile";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { FaCheck, FaPause, FaCog, FaPlus, FaSync } from "react-icons/fa";
-
+import { previewFSPPDF, downloadFSPPDF } from "./pdfFSPFormular"; // <-- Імпорт
+import { FaPrint, FaEye, FaDownload } from "react-icons/fa";
 // Firebase
 import { db, auth } from "../../firebase";
-import { doc, setDoc, getDoc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import {
+  doc,
+  setDoc,
+  getDoc,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+} from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 
 // Toast
@@ -162,7 +176,9 @@ const FSPFormularPage = () => {
         setIsLoading(true);
         try {
           await fetchFirebaseCases(localRegion);
-          console.log(`Firebase cases for region ${localRegion} loaded successfully.`);
+          console.log(
+            `Firebase cases for region ${localRegion} loaded successfully.`
+          );
         } catch (e) {
           console.error("Error loading from Firebase:", e);
           setErrorState("Failed to fetch data from Firebase.");
@@ -263,7 +279,21 @@ const FSPFormularPage = () => {
 
     saveSelectedCase();
   }, [selectedCase, localRegion, user, dataSources]);
+  const handlePrintPreview = () => {
+    if (!parsedData || Object.keys(parsedData).length === 0) {
+      alert("Daten fehlen oder sind noch nicht geladen!");
+      return;
+    }
+    previewFSPPDF(parsedData);
+  };
 
+  const handlePrintDownload = () => {
+    if (!parsedData || Object.keys(parsedData).length === 0) {
+      alert("Daten fehlen oder sind noch nicht geladen!");
+      return;
+    }
+    downloadFSPPDF(parsedData);
+  };
   // ---- Horizontal scroll on mobile ----
   const columnsRef = useRef(null);
   const isMobile = useIsMobile();
@@ -433,7 +463,10 @@ const FSPFormularPage = () => {
     if (!selectedCase || Object.keys(parsedData).length === 0) {
       console.warn("Daten für den ausgewählten Fall sind noch nicht geladen.");
     } else {
-      console.log("Daten für den ausgewählten Fall erfolgreich geladen:", parsedData);
+      console.log(
+        "Daten für den ausgewählten Fall erfolgreich geladen:",
+        parsedData
+      );
     }
   }, [selectedCase, parsedData]);
 
@@ -473,7 +506,9 @@ const FSPFormularPage = () => {
     try {
       const completedCasesKey = `completedCases_${localRegion}`;
       const deferredCasesKey = `deferredCases_${localRegion}`;
-      const isCompleted = userData?.[completedCasesKey]?.includes(String(selectedCase));
+      const isCompleted = userData?.[completedCasesKey]?.includes(
+        String(selectedCase)
+      );
 
       if (isCompleted) {
         await updateDoc(userDocRef, {
@@ -523,7 +558,9 @@ const FSPFormularPage = () => {
     try {
       const deferredCasesKey = `deferredCases_${localRegion}`;
       const completedCasesKey = `completedCases_${localRegion}`;
-      const isDeferred = userData?.[deferredCasesKey]?.includes(String(selectedCase));
+      const isDeferred = userData?.[deferredCasesKey]?.includes(
+        String(selectedCase)
+      );
 
       if (isDeferred) {
         await updateDoc(userDocRef, {
@@ -641,12 +678,12 @@ const FSPFormularPage = () => {
         <>
           {/* Back Button */}
           <button
-  className={styles["main_menu_back"]}
-  onClick={() => navigate("/main_menu")}
-  aria-label="Zurück"
->
-  &#8592;
-</button>
+            className={styles["main_menu_back"]}
+            onClick={() => navigate("/main_menu")}
+            aria-label="Zurück"
+          >
+            &#8592;
+          </button>
 
           {/* Settings Button */}
           <button
@@ -701,7 +738,6 @@ const FSPFormularPage = () => {
 
                 {/* Region Selector (Native Select) */}
                 <div className={styles["field"]}>
-                 
                   <div className={styles["region-selector"]}>
                     <select
                       className={styles["nativeSelect"]}
@@ -721,7 +757,6 @@ const FSPFormularPage = () => {
 
                 {/* Case Selector */}
                 <div className={styles["field"]}>
-                
                   <select
                     id="case-select"
                     className={styles["case-select"]}
@@ -736,65 +771,78 @@ const FSPFormularPage = () => {
                         </option>
                       ))}
                     {sourceType === "firebase" &&
-                      dataSources[localRegion]?.sources?.firebase.map((file) => (
-                        <option key={file.id} value={file.id}>
-                          {file.fileDisplayName || file.name || "Ohne Namen"}
-                        </option>
-                      ))}
+                      dataSources[localRegion]?.sources?.firebase.map(
+                        (file) => (
+                          <option key={file.id} value={file.id}>
+                            {file.fileDisplayName || file.name || "Ohne Namen"}
+                          </option>
+                        )
+                      )}
                   </select>
                 </div>
 
                 <div className={styles["buttons-container"]}>
-  <Link to="/data-collection">
-    <button
-      className={styles["actionButton"]}
-      aria-label="Neuen Fall hinzufügen"
-    >
-      <FaPlus className={styles["icon-common"]} />
-    </button>
-  </Link>
+                  <Link to="/data-collection">
+                    <button
+                      className={styles["actionButton"]}
+                      aria-label="Neuen Fall hinzufügen"
+                    >
+                      <FaPlus className={styles["icon-common"]} />
+                    </button>
+                  </Link>
 
-  <button
-    className={`${styles["actionButton"]} ${
-      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
-        ? styles["active"]
-        : ""
-    }`}
-    onClick={handleMarkAsCompleted}
-    disabled={!selectedCase}
-    aria-pressed={
-      userData?.[`completedCases_${localRegion}`]?.includes(String(selectedCase))
-    }
-    aria-label="Fall als erledigt markieren"
-  >
-    <FaCheck className={styles["icon-common"]} />
-  </button>
+                  <button
+                    className={`${styles["actionButton"]} ${
+                      userData?.[`completedCases_${localRegion}`]?.includes(
+                        String(selectedCase)
+                      )
+                        ? styles["active"]
+                        : ""
+                    }`}
+                    onClick={handleMarkAsCompleted}
+                    disabled={!selectedCase}
+                    aria-pressed={userData?.[
+                      `completedCases_${localRegion}`
+                    ]?.includes(String(selectedCase))}
+                    aria-label="Fall als erledigt markieren"
+                  >
+                    <FaCheck className={styles["icon-common"]} />
+                  </button>
 
-  <button
-    className={`${styles["actionButton"]} ${
-      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
-        ? styles["active"]
-        : ""
-    }`}
-    onClick={handleDeferCase}
-    disabled={!selectedCase}
-    aria-pressed={
-      userData?.[`deferredCases_${localRegion}`]?.includes(String(selectedCase))
-    }
-    aria-label="Fall verschieben"
-  >
-    <FaPause className={styles["icon-common"]} />
-  </button>
+                  <button
+                    className={`${styles["actionButton"]} ${
+                      userData?.[`deferredCases_${localRegion}`]?.includes(
+                        String(selectedCase)
+                      )
+                        ? styles["active"]
+                        : ""
+                    }`}
+                    onClick={handleDeferCase}
+                    disabled={!selectedCase}
+                    aria-pressed={userData?.[
+                      `deferredCases_${localRegion}`
+                    ]?.includes(String(selectedCase))}
+                    aria-label="Fall verschieben"
+                  >
+                    <FaPause className={styles["icon-common"]} />
+                  </button>
 
-  <button
-    className={styles["actionButton"]}
-    onClick={handleReset}
-    disabled={!selectedCase}
-    aria-label="Fall zurücksetzen"
-  >
-    <FaSync className={styles["icon-common"]} />
-  </button>
-</div>
+                  <button
+                    className={styles["actionButton"]}
+                    onClick={handleReset}
+                    disabled={!selectedCase}
+                    aria-label="Fall zurücksetzen"
+                  >
+                    <FaSync className={styles["icon-common"]} />
+                  </button>
+                  <button onClick={handlePrintPreview}>
+          <FaEye /> 
+        </button>
+        <button onClick={handlePrintDownload}>
+          <FaDownload /> 
+        </button>
+                  
+                </div>
 
                 {/* Close Button */}
                 <button
@@ -810,7 +858,9 @@ const FSPFormularPage = () => {
           {/* Hauptinhalt */}
           <div className={styles["fsp-container"]}>
             {isLoading && (
-              <p className={styles["loading-message"]}>Daten werden geladen...</p>
+              <p className={styles["loading-message"]}>
+                Daten werden geladen...
+              </p>
             )}
             {errorState && (
               <p className={styles["error-message"]}>{errorState}</p>
@@ -860,7 +910,9 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("vegetativeAnamnese")}
                   >
-                    <h3 className={styles["tile-title"]}>Vegetative Anamnese</h3>
+                    <h3 className={styles["tile-title"]}>
+                      Vegetative Anamnese
+                    </h3>
                     <VegetativeAnamnese parsedData={parsedData} />
                   </div>
 
@@ -887,7 +939,9 @@ const FSPFormularPage = () => {
                     className={styles["tile"]}
                     onClick={() => handleOpenInfoModal("previousOperations")}
                   >
-                    <h3 className={styles["tile-title"]}>Frühere Operationen</h3>
+                    <h3 className={styles["tile-title"]}>
+                      Frühere Operationen
+                    </h3>
                     <PreviousOperations parsedData={parsedData} />
                   </div>
 
@@ -942,9 +996,7 @@ const FSPFormularPage = () => {
 
                   <div
                     className={styles["tile"]}
-                    onClick={() =>
-                      handleOpenInfoModal("differentialDiagnosis")
-                    }
+                    onClick={() => handleOpenInfoModal("differentialDiagnosis")}
                   >
                     <h3 className={styles["tile-title"]}>
                       Differentialdiagnose
