@@ -4,31 +4,127 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 
 /**
- * Головна функція формування PDF
+ * (A) Спрощена функція для очищення Markdown,
+ * але лишаємо в спокої '**' щоб потім обробити жирне.
+ * Прибираємо всі інші символи: `_ # >` і блоки ```...```.
  */
-function createFSPPDFDocument(parsedData) {
-  // Ініціалізуємо jsPDF
+function stripMarkdownExceptBold(text) {
+  if (!text) return "";
+  let result = text;
+  // Видаляємо блоки ```...```
+  result = result.replace(/```[^```]*```/gs, "");
+  // Знімаємо _ (але не чіпаємо **)
+  result = result.replace(/\_/g, "");
+  // Прибираємо # і > (початок рядка)
+  result = result.replace(/^#+\s?/gm, "");
+  result = result.replace(/^>\s?/gm, "");
+  return result.trim();
+}
+
+/**
+ * Розбиває рядок на сегменти з урахуванням '**'.
+ * Напр.: "Hello **bold** world" => ["Hello ", "**bold**", " world"].
+ * Використовуємо потім, щоб сегмент з '**' вивести жирним.
+ */
+function splitBoldSegments(line) {
+  // Якщо немає `**`, повертаємо весь рядок як один сегмент
+  if (!line.includes("**")) {
+    return [{ text: line, isBold: false }];
+  }
+
+  const segments = [];
+  let startIndex = 0;
+  let isBold = false;
+
+  // Шукаємо усі входження `**`
+  let match;
+  const pattern = /\*\*/g;
+  while ((match = pattern.exec(line)) !== null) {
+    const idx = match.index;
+    // Сегмент між startIndex і idx
+    if (idx > startIndex) {
+      segments.push({
+        text: line.slice(startIndex, idx),
+        isBold,
+      });
+    }
+    // Перемикаємо isBold
+    isBold = !isBold;
+    startIndex = idx + 2; // пропускаємо **
+  }
+
+  // Останній шматок
+  if (startIndex < line.length) {
+    segments.push({ text: line.slice(startIndex), isBold });
+  }
+
+  return segments;
+}
+
+/**
+ * Малює колонтитул (footer) на поточній сторінці.
+ * Викликаємо перед тим, як перейти на нову сторінку,
+ * і обов’язково один раз у кінці документу.
+ */
+function drawFooter(doc) {
+  const pageHeight = doc.internal.pageSize.getHeight();
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+
+  // Текст колонтитулу (знизу сторінки)
+  doc.text(
+    "GermanMove jour provide to Germany Approbation                      deutsche-approbation.com",
+    10,
+    pageHeight - 5
+  );
+}
+
+/**
+ * Головна функція створення PDF-документа
+ */
+function createFSPPDFDocument(parsedData, regionName = "") {
   const doc = new jsPDF({
-    // При потребі: format: "a4", orientation: "p"
+    // Наприклад: format: "a4", orientation: "p"
   });
 
-  let yPos = 10; // Відлік вертикальної позиції
+  let yPos = 10;
+
+  // Використовуємо helvetica для сучаснішого вигляду
   doc.setFont("helvetica", "normal");
   doc.setFontSize(10);
 
+  const pageHeight = doc.internal.pageSize.getHeight();
   const pageWidth = doc.internal.pageSize.getWidth();
 
-  // (A) Якщо є fullName, друкуємо праворуч угорі
-  if (parsedData.fullName) {
+  /**
+   * функція-хелпер для створення «нової сторінки»:
+   * 1) Малюємо footer на поточній
+   * 2) doc.addPage()
+   * 3) Повертаємо 10 (початок yPos)
+   */
+  function doPageBreak() {
+    // Спочатку домальовуємо footer для поточної сторінки
+    drawFooter(doc);
+    doc.addPage();
+    return 10; // Початок нової сторінки
+  }
+
+  // -- Якщо є fullName або regionName, друкуємо праворуч угорі
+  if (parsedData.fullName || regionName) {
     doc.setFontSize(12);
     doc.setFont("helvetica", "bold");
-    doc.text(parsedData.fullName, pageWidth - 10, yPos, {
+
+    const textToPrint = regionName
+      ? `${parsedData.fullName || ""} (${regionName})`
+      : parsedData.fullName;
+
+    doc.text(textToPrint.trim(), pageWidth - 10, yPos, {
       align: "right",
     });
     yPos += 8;
   }
 
-  // (B) Якщо є поле T, виводимо теж праворуч
+  // -- Якщо є поле T, друкуємо також праворуч, меншим шрифтом
   if (parsedData.T) {
     doc.setFontSize(10);
     doc.setFont("helvetica", "normal");
@@ -36,7 +132,7 @@ function createFSPPDFDocument(parsedData) {
     yPos += 6;
   }
 
-  // (C) РОЗДІЛ «Persönliche Daten»
+  // (1) Persönliche Daten
   yPos = addTileSection(doc, yPos, "Persönliche Daten", [
     {
       label: "Vornamen",
@@ -49,9 +145,7 @@ function createFSPPDFDocument(parsedData) {
     {
       label: "Geburtsdatum/Alter",
       value: parsedData.birthdate
-        ? `${parsedData.birthdate}${
-            parsedData.age ? " / " + parsedData.age : ""
-          }`
+        ? `${parsedData.birthdate}${parsedData.age ? " / " + parsedData.age : ""}`
         : "",
     },
     {
@@ -70,9 +164,9 @@ function createFSPPDFDocument(parsedData) {
       label: "Hausarzt",
       value: parsedData.hausarzt,
     },
-  ]);
+  ], doc);
 
-  // (D) РОЗДІЛ «Aktuelle Anamnese»
+  // (2) Aktuelle Anamnese
   yPos = addTileSection(doc, yPos, "Aktuelle Anamnese", [
     {
       label: "Besuchsgrund",
@@ -126,9 +220,9 @@ function createFSPPDFDocument(parsedData) {
       label: "Andere begleitende Symptome",
       value: parsedData.additionalSymptoms,
     },
-  ]);
+  ], doc);
 
-  // (E) РОЗДІЛ «Reise- und Impfstatus»
+  // (3) Reise- und Impfstatus
   yPos = addTileSection(doc, yPos, "Reise- und Impfstatus", [
     {
       label: "Impfung",
@@ -138,9 +232,9 @@ function createFSPPDFDocument(parsedData) {
       label: "Reise",
       value: parsedData.travelHistory,
     },
-  ]);
+  ], doc);
 
-  // (F) РОЗДІЛ «Vegetative Anamnese»
+  // (4) Vegetative Anamnese
   yPos = addTileSection(doc, yPos, "Vegetative Anamnese", [
     {
       label: "Allgemeiner Zustand",
@@ -152,7 +246,7 @@ function createFSPPDFDocument(parsedData) {
     },
     {
       label: "Gewicht",
-      value: parsedData.weightLoss, // У компоненті викор. weightLoss
+      value: parsedData.weightLoss,
     },
     {
       label: "Durstgefühl",
@@ -218,102 +312,365 @@ function createFSPPDFDocument(parsedData) {
       label: "Gynäkologische Anamnese",
       value: parsedData.gynecologicalHistory,
     },
-  ]);
+  ], doc);
 
-  // (G) РОЗДІЛ «Zusammenfassung»
-  // Якщо треба просто один ключ "summary"
+  // (5) Zusammenfassung
+  const summaryClean = stripMarkdownExceptBold(parsedData.summary);
   yPos = addTileSection(doc, yPos, "Zusammenfassung", [
     {
-      label: "Zusammenfassung",
-      value: parsedData.summary,
+      label: "",
+      value: summaryClean,
     },
-  ]);
+  ], doc);
+
+  // (6) Familienanamnese
+  yPos = addTileSection(doc, yPos, "Familienanamnese", [
+    {
+      label: "Genetische Erkrankungen",
+      value: parsedData.geneticDiseases,
+    },
+    {
+      label: "Eltern",
+      value: parsedData.parents,
+    },
+    {
+      label: "Geschwister",
+      value: parsedData.siblings,
+    },
+  ], doc);
+
+  // (7) Sozialanamnese
+  yPos = addTileSection(doc, yPos, "Sozialanamnese", [
+    {
+      label: "Beruf",
+      value: parsedData.profession,
+    },
+    {
+      label: "Familienstand",
+      value: parsedData.maritalStatus,
+    },
+    {
+      label: "Kinder",
+      value: parsedData.children,
+    },
+    {
+      label: "Wohnsituation",
+      value: parsedData.livingConditions,
+    },
+    {
+      label: "Psychosomatische Anamnese/Stress",
+      value: parsedData.psychosomaticHistory,
+    },
+    {
+      label: "Körperliche Aktivität",
+      value: parsedData.physicalActivity,
+    },
+    {
+      label: "Ernährungsgewohnheiten",
+      value: parsedData.dietaryHabits,
+    },
+  ], doc);
+
+  // (8) Vorerkrankungen
+  yPos = addTileSection(doc, yPos, "Vorerkrankungen", [
+    {
+      label: "Infektionskrankheiten",
+      value: parsedData.infectiousDiseases,
+    },
+    {
+      label: "Chronische Erkrankungen",
+      value: parsedData.chronicDiseases,
+    },
+    {
+      label: "Weitere relevante Erkrankungen",
+      value: parsedData.otherRelevantDiseases,
+    },
+  ], doc);
+
+  // (9) Frühere Operationen
+  yPos = addTileSection(doc, yPos, "Frühere Operationen", [
+    {
+      label: "Frühere Operationen",
+      value: parsedData.pastOperations,
+    },
+    {
+      label: "Operationsverlauf und Komplikationen",
+      value: parsedData.operationCourseComplications,
+    },
+    {
+      label: "Dauer des Krankenhausaufenthalts",
+      value: parsedData.hospitalStayDuration,
+    },
+  ], doc);
+
+  // (10) Medikamentenanamnese
+  yPos = addTileSection(doc, yPos, "Medikamentenanamnese", [
+    {
+      label: "Medikamenteneinnahme",
+      value: parsedData.allgemeineMedikamenteneinnahme,
+    },
+    {
+      label: "Medikamenteninformationen",
+      value: parsedData.detaillierteMedikamenteninformationen,
+    },
+  ], doc);
+
+  // (11) Allergien und Unverträglichkeiten
+  yPos = addTileSection(doc, yPos, "Allergien und Unverträglichkeiten", [
+    {
+      label: "Medikamentenallergien",
+      value: parsedData.specificMedicationAllergies,
+    },
+    {
+      label: "Symptomatik allergischer Reaktionen",
+      value: parsedData.allergicReactionSymptoms,
+    },
+    {
+      label: "Allergieauslöser",
+      value: parsedData.allergyTriggers,
+    },
+    {
+      label: "Haushaltsallergene",
+      value: parsedData.householdAllergens,
+    },
+    {
+      label: "Unverträglichkeiten",
+      value: parsedData.specificIntolerances,
+    },
+  ], doc);
+
+  // (12) Noxen
+  yPos = addTileSection(doc, yPos, "Noxen", [
+    {
+      label: "Rauchverhalten",
+      value: parsedData.rauchverhalten,
+    },
+    {
+      label: "Alkoholkonsum",
+      value: parsedData.alkoholkonsum,
+    },
+    {
+      label: "Drogengebrauch",
+      value: parsedData.drogengebrauch,
+    },
+  ], doc);
+
+  // (13) Differentialdiagnose
+  yPos = addTileSection(doc, yPos, "Differentialdiagnose", [
+    {
+      label: "Differentiale Diagnosen",
+      value: parsedData.possibleDiagnoses,
+    },
+    {
+      label: "Abgrenzung",
+      value: parsedData.differentiation,
+    },
+  ], doc);
+
+  // (14) Vorläufige Diagnose
+  yPos = addTileSection(doc, yPos, "Vorläufige Diagnose", [
+    {
+      label: "Vermutete Diagnose",
+      value: parsedData.suspectedDiagnosis,
+    },
+    {
+      label: "Begründung",
+      value: parsedData.justification,
+    },
+  ], doc);
+
+  // (15) Diagnostische Empfehlungen
+  yPos = addTileSection(doc, yPos, "Diagnostische Empfehlungen", [
+    {
+      label: "Körperliche Untersuchung",
+      value: parsedData.physicalExamination,
+    },
+    {
+      label: "Laboruntersuchung",
+      value: parsedData.laboratoryTests,
+    },
+    {
+      label: "Apparative Untersuchung",
+      value: parsedData.instrumentalExamination,
+    },
+  ], doc);
+
+  // (16) Patientenfragen (Markdown, збереження жирного)
+  const patientQClean = stripMarkdownExceptBold(parsedData.patientQuestions);
+  yPos = addTileSection(doc, yPos, "Patientenfragen", [
+    {
+      label: "",
+      value: patientQClean,
+    },
+  ], doc, true);
+
+  // (17) Fragen des Prüfers (Markdown, збереження жирного)
+  const examinerQClean = stripMarkdownExceptBold(parsedData.examinerQuestions);
+  yPos = addTileSection(doc, yPos, "Fragen des Prüfers", [
+    {
+      label: "",
+      value: examinerQClean,
+    },
+  ], doc, true);
 
   return doc;
 }
 
 /**
- * Відкрити PDF у новій вкладці (Preview)
+ * (C) Перегляд PDF у новій вкладці
  */
-export const previewFSPPDF = (parsedData) => {
+export const previewFSPPDF = (parsedData, regionName = "") => {
   if (!parsedData) {
     alert("parsedData is empty or undefined!");
     return;
   }
-  const doc = createFSPPDFDocument(parsedData);
+  const doc = createFSPPDFDocument(parsedData, regionName);
   const pdfBlobUrl = doc.output("bloburl");
   window.open(pdfBlobUrl, "_blank");
 };
 
 /**
- * Завантажити PDF (Download)
+ * (D) Завантаження PDF
  */
-export const downloadFSPPDF = (parsedData) => {
+export const downloadFSPPDF = (parsedData, regionName = "") => {
   if (!parsedData) {
     alert("parsedData is empty or undefined!");
     return;
   }
-  const doc = createFSPPDFDocument(parsedData);
+  const doc = createFSPPDFDocument(parsedData, regionName);
   doc.save("FSPFormular.pdf");
 };
 
 /**
- * Допоміжна функція відтворення розділу PDF
- * - Друкує лише ті поля, де є текст (value.trim() !== "")
- * - Заголовок розділу більший і жирний (14)
- * - Кожен label друкується ЖИРНИМ (10), value — нормальним
- * - Якщо текст довгий, виконується автоперенос
+ * (E) Допоміжна функція виводу розділу
+ * - Тільки непорожні поля
+ * - Заголовок секції (14px, жирний)
+ * - Лейбл друкуємо «3x жирним» (times, bold, кілька разів), розмір 10px
+ * - Менші відступи між рядками (для value: +4, після поля: +5)
+ * - Якщо поле не вміщається – додаємо сторінку
+ * - Якщо label порожній – не друкуємо «label:»
+ * - Якщо preserveBold=true, шукаємо у value '**..**' і виводимо їх жирним.
  */
-function addTileSection(doc, yPos, sectionTitle, fields) {
-  // Фільтруємо лише непорожні поля
+function addTileSection(doc, startY, sectionTitle, fields, docRef, preserveBold = false) {
+  let yPos = startY;
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const leftMargin = 10;
+  const bottomMargin = 15; // запас знизу
+  const maxWidth = 180;
+
+  // Залишаємо лише непорожні поля
   const nonEmptyFields = fields.filter(
     (f) => f.value && String(f.value).trim() !== ""
   );
+  if (nonEmptyFields.length === 0) return yPos;
 
-  if (nonEmptyFields.length === 0) {
-    // Якщо розділ порожній, пропускаємо
-    return yPos;
-  }
-
-  // 1) Заголовок секції
-  doc.setFont("helvetica", "bold");
+  // Заголовок секції
+  doc.setFont("times", "bold");
   doc.setFontSize(14);
-  doc.text(sectionTitle, 10, yPos);
+  doc.text(sectionTitle, leftMargin, yPos);
   yPos += 8;
 
-  // 2) Перемикаємося на стандартний розмір,
-  // але label друкуватимемо жирним
-  const maxWidth = 180;
-
+  // Друкуємо кожне поле
   nonEmptyFields.forEach((field) => {
-    // label:
-    doc.setFont("helvetica", "bold");
+    // Якщо майже немає місця – нова сторінка
+    if (yPos > pageHeight - bottomMargin) {
+      doc.addPage();
+      yPos = 10;
+    }
+
+    // (A) label
+    doc.setFont("times", "bold");
     doc.setFontSize(10);
-    const labelStr = `${field.label}: `;
-    const labelWidth = doc.getTextWidth(labelStr);
 
-    // value (автоперенос):
-    doc.setFont("helvetica", "normal");
-    const splittedValue = doc.splitTextToSize(String(field.value), maxWidth - labelWidth - 2);
-
-    // Друкуємо label + перший ряд value на одному рядку
-    doc.text(labelStr, 10, yPos);
-
-    if (splittedValue.length > 0) {
-      doc.text(splittedValue[0], 10 + labelWidth, yPos);
+    let labelStr = "";
+    let labelWidth = 0;
+    if (field.label && field.label.trim() !== "") {
+      labelStr = `${field.label}: `;
+      labelWidth = doc.getTextWidth(labelStr);
     }
 
-    // Якщо лишились інші рядки value, друкуємо нижче
-    for (let i = 1; i < splittedValue.length; i++) {
-      yPos += 5;
-      doc.text(splittedValue[i], 10, yPos);
+    // (B) value
+    doc.setFont("times", "normal");
+
+    // якщо потрібно зберегти жирний текст, виділяємо '**'
+    let splittedLines;
+    if (preserveBold) {
+      // Для зберігання bold, ми не split'имо textToSize одразу.
+      // Спочатку розіб'ємо value на окремі рядки, splitTextToSize,
+      // а потім для кожного рядка — на сегменти (isBold чи ні).
+      const rawWrapped = doc.splitTextToSize(String(field.value), maxWidth - labelWidth - 2);
+      splittedLines = rawWrapped; // масив рядків
+    } else {
+      // звичайний режим
+      splittedLines = doc.splitTextToSize(String(field.value), maxWidth - labelWidth - 2);
     }
 
-    // Відступ після поля
-    yPos += 7;
+    // "3х жирний" лейбл
+    if (labelStr) {
+      const xLabel = leftMargin;
+      const yLabel = yPos;
+      for (let offsetY of [0, 0.1, -0.1]) {
+        doc.text(labelStr, xLabel, yLabel + offsetY, {
+          renderingMode: "fill",
+        });
+      }
+    }
+
+    // Перший ряд
+    if (splittedLines.length > 0) {
+      // Якщо preserveBold, друкуємо зі splitBoldSegments
+      if (preserveBold) {
+        printMarkdownLine(doc, splittedLines[0], leftMargin + labelWidth, yPos);
+      } else {
+        doc.text(splittedLines[0], leftMargin + labelWidth, yPos);
+      }
+    }
+
+    // Решта рядків
+    for (let i = 1; i < splittedLines.length; i++) {
+      yPos += 4;
+      if (yPos > pageHeight - bottomMargin) {
+        doc.addPage();
+        yPos = 10;
+      }
+      if (preserveBold) {
+        printMarkdownLine(doc, splittedLines[i], leftMargin, yPos);
+      } else {
+        doc.text(splittedLines[i], leftMargin, yPos);
+      }
+    }
+
+    yPos += 5; // відступ після поля
   });
 
-  // Відступ після секції
   yPos += 5;
   return yPos;
+}
+
+/**
+ * Допоміжна функція: друкує рядок, розбиваючи '**bold**' сегменти.
+ * Для кожного сегмента: якщо isBold==true, друкуємо 3x.
+ */
+function printMarkdownLine(doc, lineStr, x, y) {
+  const segments = splitBoldSegments(lineStr);
+  let currentX = x;
+
+  segments.forEach((seg) => {
+    if (!seg.text) return;
+    const w = doc.getTextWidth(seg.text);
+    if (seg.isBold) {
+      // 3х жирний
+      doc.setFont("times", "bold");
+      for (let offsetY of [0, 0.1, -0.1]) {
+        doc.text(seg.text, currentX, y + offsetY, {
+          renderingMode: "fill",
+        });
+      }
+      // повертаємось
+      doc.setFont("times", "normal");
+    } else {
+      doc.text(seg.text, currentX, y);
+    }
+    currentX += w;
+  });
 }
