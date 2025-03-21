@@ -62,7 +62,7 @@ const Tab1 = ({
           onFocus={handleInputFocus}
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
-          placeholder="NAME"
+          placeholder="Fallname"
         />
       </div>
 
@@ -76,7 +76,7 @@ const Tab1 = ({
           onBlur={handleInputBlur}
           disabled={inputState === "disabled"}
         >
-          <option value="">-- Thema (zusätzliche Info) --</option>
+          <option value="">Thema (zusätzliche Info)</option>
           {Object.keys(fallSpecificData).map((key) => (
             <option key={key} value={key}>
               {fallSpecificData[key].name}
