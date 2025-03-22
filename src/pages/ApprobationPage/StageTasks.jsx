@@ -28,6 +28,7 @@ const StageTasks = ({ selectedStageId, user, onProgressUpdate, language = "en" }
     const unsubscribe = onSnapshot(dataDocRef, (docSnap) => {
       if (docSnap.exists()) {
         const data = docSnap.data();
+        console.log('Fetched educationRegion:', data.educationRegion);
         const fetchedCategory = data.educationRegion;
         if (fetchedCategory === "EU" || fetchedCategory === "Non-EU") {
           setLocalCategory(fetchedCategory);
