@@ -30,10 +30,10 @@ const approbationAddresses = [
       region: "Brandenburg",
       office: "Landesamt für Arbeitsschutz, Verbraucherschutz und Gesundheit (LAVG)",
       address: ["Horstweg 57,", "14478 Potsdam, Deutschland"],
-      email: {
-        EU_EEA: "G1-Berufsrecht@lavg.brandenburg.de",
-        nonEU: "AHB@lavg.brandenburg.de"
-      }
+      email: 
+        "G1-Berufsrecht@lavg.brandenburg.de"
+        
+      
     },
     {
       region: "Bremen",

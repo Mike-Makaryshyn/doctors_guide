@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { auth, db } from "../../firebase";
@@ -12,14 +12,17 @@ import { useAuth } from "../../contexts/AuthContext";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import CustomGermanyMap from "../../components/CustomGermanyMap/CustomGermanyMap";
+import { localStorageSet } from "../../utils/localStorage";
 
 const RegistrationPage = () => {
   const [currentStep, setCurrentStep] = useState("form");
   const [isLoading, setIsLoading] = useState(false);
   const [selectedStage, setSelectedStage] = useState(null);
+  // Додаємо локальний стан для регіону
+  const [localRegion, setLocalRegion] = useState("");
   const navigate = useNavigate();
   const { currentUser } = useAuth();
-  const { selectedRegion } = useGetGlobalInfo();
+  const { selectedRegion } = useGetGlobalInfo(); // глобальний стан, але для збереження регіону ми використовуватимемо локальний стан
 
   // Схема валідації
   const validationSchema = Yup.object({
@@ -64,38 +67,24 @@ const RegistrationPage = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
+        // Створюємо користувача та отримуємо user
         const userCredential = await createUserWithEmailAndPassword(
           auth,
           values.email,
           values.password
         );
-        await setDoc(
-          doc(db, "users", user.uid),
-          {
-            selectedRegion: selectedRegion, // або використовуйте значення з useGetGlobalInfo, якщо воно вже оновлене
-          },
-          { merge: true }
-        );
         const user = userCredential.user;
-    
-        // Збереження activeStage
+
+        // Записуємо activeStage та localRegion в один виклик
         await setDoc(
           doc(db, "users", user.uid),
           {
             activeStage: selectedStage || 1,
+            selectedRegion: localRegion,
           },
           { merge: true }
         );
-    
-        // **Додайте збереження selectedRegion сюди:**
-        await setDoc(
-          doc(db, "users", user.uid),
-          {
-            selectedRegion: selectedRegion,
-          },
-          { merge: true }
-        );
-    
+
         // Збереження інших даних користувача
         await setDoc(doc(db, "users", user.uid, "userData", "data"), {
           firstName: values.firstName,
@@ -103,7 +92,7 @@ const RegistrationPage = () => {
           email: values.email,
           birthDate: values.birthDate,
           educationRegion: values.educationRegion,
-          region: selectedRegion, // переконайтеся, що це значення актуальне
+          region: localRegion, // використовуємо локальний стан
           specialty: values.specialty || null,
           germanLevel: values.germanLevel || null,
           procedureType: values.procedureType || null,
@@ -112,9 +101,9 @@ const RegistrationPage = () => {
           agreePrivacy: values.agreePrivacy,
           activeStep: "completed",
         });
-    
+
         localStorage.removeItem("tempSelectedStage");
-    
+
         alert("Registrierung erfolgreich!");
         navigate("/dashboard");
       } catch (error) {
@@ -154,9 +143,11 @@ const RegistrationPage = () => {
     const hasError = formik.touched[fieldName] && formik.errors[fieldName];
     return hasError ? formik.errors[fieldName] : defaultPlaceholder;
   };
+
   useEffect(() => {
     localStorageSet("selectedRegion", "");
   }, []);
+
   return (
     <MainLayout>
       <div className={styles.pageContainer}>
@@ -217,7 +208,7 @@ const RegistrationPage = () => {
                           id="birthDate"
                           name="birthDate"
                           type="date"
-                          lang="de" // <-- додаємо
+                          lang="de"
                           placeholder={placeholderWithError(
                             "birthDate",
                             "Geburtsdatum"
@@ -424,7 +415,7 @@ const RegistrationPage = () => {
                         </label>
                       </div>
                     </div>
-                    {/* На цьому кроці показуємо лише кнопку "Далі" */}
+                    {/* Кнопка "Далі" */}
                     <button
                       type="button"
                       onClick={() => setCurrentStep("stageMenu")}
@@ -446,7 +437,6 @@ const RegistrationPage = () => {
                     gridView={true}
                     educationRegion={formik.values.educationRegion}
                   />
-                  {/* Тут дві кнопки: "Назад" (ліворуч) і "Далі" (праворуч) */}
                   <button
                     type="button"
                     onClick={handleBack}
@@ -465,8 +455,10 @@ const RegistrationPage = () => {
                 </div>
               ) : currentStep === "map" ? (
                 <div className={styles.mapStepWrapper}>
-               <CustomGermanyMap registrationMode={true} onRegionSelect={setSelectedRegion} />
-                  {/* Тут дві кнопки: "Назад" (ліворуч) і "Завершити" (праворуч) */}
+                  <CustomGermanyMap
+                    registrationMode={true}
+                    onRegionSelect={setLocalRegion}
+                  />
                   <button
                     type="button"
                     onClick={handleBack}

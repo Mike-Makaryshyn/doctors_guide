@@ -150,4 +150,10 @@ export const pathList = {
   region_cases: {
     path: "/region-cases",
   },
+  simulation: {
+    path: "/simulation",
+  },
+  add_simulation: {
+    path: "/add-simulation",
+  },
 };

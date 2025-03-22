@@ -193,6 +193,12 @@ const AbbreviationsFortuneWheelGame = React.lazy(() =>
 const RegionCasesPage = React.lazy(() =>
   import("../pages/RegionCasesPage/RegionCasesPage")
 );
+const AddSimulationEntryPage = React.lazy(() =>
+  import("../pages/SimulationPage/AddSimulationEntryPage")
+);
+const SimulationPage = React.lazy(() =>
+  import("../pages/SimulationPage/SimulationPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -223,6 +229,8 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route path={pathList.add_simulation.path} element={<AddSimulationEntryPage />} />
+        <Route path={pathList.simulation.path} element={<SimulationPage />} />
         <Route path={pathList.region_cases.path} element={<RegionCasesPage />} />
         <Route
   path={pathList.abbreviations_term_matching.path}

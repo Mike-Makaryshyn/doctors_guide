@@ -590,7 +590,7 @@ export const main_menu_items = {
           de: "Einen Simulationpartner finden",
           el: "Βρείτε Συνεργάτη Προσομοίωσης",
           ro: "Găsiți un partener de simulare",
-          link: "/simulation-partner",
+          link: "/simulation",
         },
       ],
     },
