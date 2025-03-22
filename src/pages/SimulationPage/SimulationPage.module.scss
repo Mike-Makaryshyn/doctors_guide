@@ -20,7 +20,7 @@ $transition-time: 0.3s;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start; /* Ліворуч */
+  justify-content: flex-start;
 }
 
 /* Плитка (3 в ряд) */
@@ -77,31 +77,31 @@ $transition-time: 0.3s;
 /* Кнопка налаштувань (шестерня) */
 .settingsButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: $accent;
-  color: $secondary;
+  bottom: 0px;
+  right: 0px;
+  background-color: #4caf50;
+  color: #fff;
   border: none;
   border-radius: 50%;
   width: 44px;
   height: 44px;
   cursor: pointer;
-  display: flex;
+  display: flex
+;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000;
 }
 .settingsButton:hover {
   background-color: darken($accent, 10%);
   transform: scale(1.1);
 }
 
-/* Модальне вікно */
+/* Модальне вікно (десктоп) */
 .settingsModal {
   position: fixed;
-  bottom: 70px;
-  right: 20px;
+  bottom: 45px;
+  right: 45px;
   background: $secondary;
   padding: 25px 20px 20px;
   width: 300px;
@@ -109,6 +109,20 @@ $transition-time: 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 2000;
   text-align: center;
+  animation: fadeIn 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Анімація для модалки */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Кнопка закриття */
@@ -127,6 +141,7 @@ $transition-time: 0.3s;
 }
 .modalCloseButton:hover {
   transform: scale(0.9);
+  background-color: transparent;
 }
 
 /* Синій контейнер для селекта регіону */
@@ -158,15 +173,17 @@ $transition-time: 0.3s;
   }
 }
 
-/* Кнопки в модалці (квадратні) */
+/* Кнопки в модалці (квадратні, в один ряд) */
 .modalButtons {
   display: flex;
   gap: 10px;
   justify-content: center;
+  
+  align-items: center;
   margin-top: 15px;
 }
 
-/* Квадратна кнопка плюс (Anzeige aufgeben) */
+/* Квадратна кнопка (Anzeige aufgeben) */
 .addButton {
   width: 50px;
   height: 50px;
@@ -178,18 +195,20 @@ $transition-time: 0.3s;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .addButton:hover {
   background-color: darken($primary, 10%);
 }
 
-/* Квадратна кнопка для "Anzeige löschen" */
+/* Квадратна кнопка (Anzeige löschen) */
 .deleteButton {
   width: 50px;
   height: 50px;
   background-color: $danger;
   border: none;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,10 +240,37 @@ $transition-time: 0.3s;
   transform: scale(1.1);
 }
 
-/* Адаптивність */
+/* --- MOBILE STYLE --- */
 @media (max-width: 768px) {
   .tile {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  /* Модальне вікно на всю ширину знизу */
+  .settingsModal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 185px; /* або auto + max-height */
+    border-radius: 16px 16px 0 0;
+    animation: slideUp 0.3s ease; /* аналогічно FSPFormularPage */
+    overflow-y: auto;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  /* Переміщаємо кнопку закриття вище */
+  .modalCloseButton {
+    top: -15px;
+    right: -9px;
   }
 }

@@ -7,54 +7,11 @@ import { auth, db } from "../../firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
-import { FaCog, FaArrowLeft, FaPlus, FaTrash } from "react-icons/fa";
+import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
 import styles from "./SimulationPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
-// Список регіонів
-const regions = [
-  "Baden-Württemberg-Karlsruhe",
-  "Baden-Württemberg-Reutlingen",
-  "Baden-Württemberg-Stuttgart",
-  "Baden-Württemberg-Freiburg",
-  "Bayern",
-  "Berlin",
-  "Brandenburg",
-  "Bremen",
-  "Hamburg",
-  "Hessen",
-  "Mecklenburg Vorpommern",
-  "Niedersachsen",
-  "Nordrhein-Westfalen",
-  "Rheinland-Pfalz",
-  "Saarland",
-  "Sachsen",
-  "Sachsen-Anhalt",
-  "Schleswig-Holstein",
-  "Thüringen",
-  "Westfalen-Lippe",
-];
-
-// Мова (для повної назви у плитці)
-const languageOptions = [
-  { value: "de", label: "Deutsch" },
-  { value: "en", label: "English" },
-  { value: "uk", label: "Ukrainisch" },
-  { value: "ru", label: "Russisch" },
-  { value: "tr", label: "Türkisch" },
-  { value: "ar", label: "Arabisch" },
-  { value: "fr", label: "Französisch" },
-  { value: "es", label: "Spanisch" },
-  { value: "pl", label: "Polnisch" },
-  { value: "el", label: "Griechisch" },
-  { value: "ro", label: "Rumänisch" },
-];
-
-// Допоміжна функція для виводу повної назви мови
-function getLanguageLabel(langKey) {
-  const found = languageOptions.find((opt) => opt.value === langKey);
-  return found ? found.label : langKey;
-}
+// ... (інші імпорти, списки regions, languageOptions тощо)
 
 const SimulationPage = () => {
   const navigate = useNavigate();
@@ -67,7 +24,7 @@ const SimulationPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
-  // Завантаження оголошень із Firestore
+  // Функція завантаження з Firestore
   const fetchSimulationCases = async () => {
     try {
       const docRef = doc(db, "simulation", region);
@@ -90,11 +47,11 @@ const SimulationPage = () => {
 
   // Закриття модалки при кліку поза нею
   useEffect(() => {
-    function handleClickOutside(e) {
+    const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
         setIsModalOpen(false);
       }
-    }
+    };
     if (isModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
@@ -106,13 +63,39 @@ const SimulationPage = () => {
   const handleRegionChange = (e) => {
     setRegion(e.target.value);
   };
-
+  const regions = [
+    "Baden-Württemberg-Karlsruhe",
+    "Baden-Württemberg-Reutlingen",
+    "Baden-Württemberg-Stuttgart",
+    "Baden-Württemberg-Freiburg",
+    "Bayern",
+    "Berlin",
+    "Brandenburg",
+    "Bremen",
+    "Hamburg",
+    "Hessen",
+    "Mecklenburg Vorpommern",
+    "Niedersachsen",
+    "Nordrhein-Westfalen",
+    "Rheinland-Pfalz",
+    "Saarland",
+    "Sachsen",
+    "Sachsen-Anhalt",
+    "Schleswig-Holstein",
+    "Thüringen",
+    "Westfalen-Lippe",
+  ];
   // Видалення оголошення поточного користувача
   const handleDeleteCase = async () => {
     if (!user) {
       toast.error("Bitte melden Sie sich an, um Ihre Anzeige zu löschen.");
       return;
     }
+    const confirmed = window.confirm(
+      "Sind Sie sicher, dass Sie Ihre Anzeige löschen möchten?"
+    );
+    if (!confirmed) return;
+
     try {
       const docRef = doc(db, "simulation", region);
       const docSnap = await getDoc(docRef);
@@ -122,7 +105,6 @@ const SimulationPage = () => {
       }
       const data = docSnap.data();
       const arrayCases = data.arrayCases || [];
-      // Залишаємо лише ті, що не належать поточному користувачеві
       const filtered = arrayCases.filter((item) => item.uid !== user.uid);
 
       if (filtered.length === arrayCases.length) {
@@ -133,7 +115,6 @@ const SimulationPage = () => {
       }
       await updateDoc(docRef, { arrayCases: filtered });
       toast.success("Ihre Anzeige wurde erfolgreich gelöscht!");
-      // Оновлюємо список
       fetchSimulationCases();
     } catch (error) {
       console.error("Error deleting user case:", error);
@@ -182,7 +163,7 @@ const SimulationPage = () => {
                   )}
                   {item.language && (
                     <p className={styles.tileItem}>
-                      <strong>Sprache:</strong> {getLanguageLabel(item.language)}
+                      <strong>Sprache:</strong> {item.language}
                     </p>
                   )}
                   {item.preferredContact && (
@@ -217,7 +198,7 @@ const SimulationPage = () => {
                 ×
               </button>
 
-              {/* Контейнер для вибору регіону (синій) */}
+              {/* Синій контейнер для вибору регіону */}
               <div className={styles.nativeSelectContainer}>
                 <select
                   className={styles.nativeSelect}
@@ -233,7 +214,7 @@ const SimulationPage = () => {
                 </select>
               </div>
 
-              {/* Кнопки (квадратні) */}
+              {/* Кнопки (квадратні) в один ряд */}
               <div className={styles.modalButtons}>
                 {/* Anzeige aufgeben */}
                 <Link
@@ -242,7 +223,7 @@ const SimulationPage = () => {
                   onClick={() => setIsModalOpen(false)}
                   aria-label="Anzeige aufgeben"
                 >
-                  <FaPlus size={20} />
+                  <FaUserPlus size={20} />
                 </Link>
 
                 {/* Anzeige löschen */}
