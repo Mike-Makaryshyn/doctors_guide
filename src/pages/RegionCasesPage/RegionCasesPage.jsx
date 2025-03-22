@@ -9,36 +9,37 @@ import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
 const RegionCasesPage = () => {
   const navigate = useNavigate();
-  // Отримуємо глобальне значення регіону
+
+  // Globales Region-Objekt holen
   const { selectedRegion } = useGetGlobalInfo();
-  // Ініціалізуємо локальне значення регіону з глобального
+
+  // Lokaler State für Region (fällt zurück auf "Brandenburg", falls kein selectedRegion existiert)
   const [region, setRegion] = useState(selectedRegion || "Brandenburg");
 
-  // При зміні global state selectedRegion оновлюємо локальне значення
+  // Wenn sich der globale selectedRegion ändert, aktualisieren wir unseren lokalen State
   useEffect(() => {
     if (selectedRegion) {
       setRegion(selectedRegion);
     }
   }, [selectedRegion]);
 
-  // Стан для модального вікна
+  // Modal-Status
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // Реф для модального вікна (для закриття при кліку поза ним)
   const modalRef = useRef(null);
 
-  // Стан для відзначених кейсів (зберігається в localStorage)
+  // Abgehakte/erledigte Cases (werden in localStorage pro Region gespeichert)
   const [completedCases, setCompletedCases] = useState(() => {
     const stored = localStorage.getItem(`completedCases_region_${region}`);
     return stored ? JSON.parse(stored) : [];
   });
 
-  // При зміні локального регіону оновлюємо дані з localStorage
+  // Immer wenn sich die Region ändert, neu aus localStorage laden
   useEffect(() => {
     const stored = localStorage.getItem(`completedCases_region_${region}`);
     setCompletedCases(stored ? JSON.parse(stored) : []);
   }, [region]);
 
-  // Закриття модального вікна при кліку поза його межами
+  // Klick außerhalb des Modals => Modal schließen
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -55,31 +56,35 @@ const RegionCasesPage = () => {
     };
   }, [isModalOpen]);
 
-  // Локальна зміна регіону через модальне вікно – глобальний стан не оновлюється
+  // Lokales Region-Ändern im Modal (kein Update vom globalen State)
   const handleRegionChange = (e) => {
     setRegion(e.target.value);
   };
 
-  // Закриття модального вікна після підтвердження
+  // Modal schließen nach Klick auf "Bestätigen"
   const handleModalSubmit = () => {
     setIsModalOpen(false);
   };
 
-  // Функція для відмітки кейсу (зберігається локально)
+  // Case abhaken/entfernen
   const toggleCompleted = (index) => {
     const updated = completedCases.includes(index)
       ? completedCases.filter((i) => i !== index)
       : [...completedCases, index];
+
     setCompletedCases(updated);
-    localStorage.setItem(`completedCases_region_${region}`, JSON.stringify(updated));
+    localStorage.setItem(
+      `completedCases_region_${region}`,
+      JSON.stringify(updated)
+    );
   };
 
-  // Отримання кейсів для обраного регіону
+  // Cases für die gewählte Region holen
   const casesForRegion = regionCases[region] || [];
 
   return (
     <MainLayout>
-      {/* Кнопка "Назад" для повернення в головне меню */}
+      {/* Button "Zurück" zum Hauptmenü */}
       <button
         className={styles.main_menu_back}
         onClick={() => navigate("/main_menu")}
@@ -87,8 +92,11 @@ const RegionCasesPage = () => {
       >
         &#8592;
       </button>
+
       <div className={styles.container}>
         <h1>Fälle für Region: {region}</h1>
+
+        {/* Kachel-Container (responsiv in der SCSS geregelt) */}
         <div className={styles.casesContainer}>
           {casesForRegion.length > 0 ? (
             casesForRegion.map((caseItem, index) => (
@@ -107,6 +115,7 @@ const RegionCasesPage = () => {
           )}
         </div>
 
+        {/* Modal für Einstellungen */}
         {isModalOpen && (
           <div className={styles.settingsModal}>
             <div className={styles.settingsContent} ref={modalRef}>
@@ -116,16 +125,20 @@ const RegionCasesPage = () => {
               >
                 ×
               </button>
+
               <div className={styles.regionSelector}>
-                <label>Wähle eine Region:</label>
-                <select value={region} onChange={handleRegionChange}>
-                  {Object.keys(regionCases).map((r) => (
-                    <option key={r} value={r}>
-                      {r}
-                    </option>
-                  ))}
-                </select>
+                <label className={styles.regionLabel}>Ausgewählte Region:</label>
+                <div className={styles.regionSelectorBox}>
+                  <select value={region} onChange={handleRegionChange}>
+                    {Object.keys(regionCases).map((r) => (
+                      <option key={r} value={r}>
+                        {r}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
+
               <button onClick={handleModalSubmit} className={styles.submitButton}>
                 Bestätigen
               </button>
@@ -133,7 +146,7 @@ const RegionCasesPage = () => {
           </div>
         )}
 
-        {/* Кнопка відкриття модального вікна з іконкою шестерні */}
+        {/* Button zum Öffnen des Modals (Zahnrad) */}
         <button
           onClick={() => setIsModalOpen(true)}
           className={styles.settingsButton}

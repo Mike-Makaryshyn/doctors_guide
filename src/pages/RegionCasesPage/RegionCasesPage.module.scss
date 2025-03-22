@@ -14,55 +14,55 @@
   margin-top: 20px;
 }
 
+/* Kachel-Stil – на десктопах збільшено розміри */
 .caseTile {
   background: rgba(251, 247, 247, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 20px;
-  padding: 10px;
-  font-size: 14px;
+  border-radius: 10px;
+  padding: 20px;            /* збільшено padding */
+  font-size: 18px;          /* збільшено розмір шрифту */
   color: #333;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #4caf50;
+  }
 }
 
-.caseTile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  border-color: #1abc9c;
-}
-
-/* Markierung für abgeschlossene Fälle (grüner Hintergrund) */
+/* Якщо позначено як виконано (completed) -> зелений фон */
 .completed {
-  background-color: #c8e6c9;
+  background-color: #4caf50;
 }
 
-/* Settings button styled similar to FSPFormularPage */
+/* Zahnrad-Button (Settings) */
 .settingsButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
   background-color: rgba(125, 199, 34, 0.8);
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-size: 14px;
+
+  &:hover {
+    background-color: #7dc722;
+    transform: scale(1.1);
+  }
 }
 
-.settingsButton:hover {
-  background-color: #7dc722;
-  transform: scale(1.1);
-}
-
-/* Modal styles similar to FSPFormularPage modal */
+/* Modal-Fenster (Desktop) */
 .settingsModal {
   position: fixed;
   bottom: 45px;
@@ -75,7 +75,7 @@
   z-index: 2000;
   animation: fadeIn 0.3s ease;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  text-align: center;
+  text-align: center; /* Inhalt zentrieren */
 }
 
 @keyframes fadeIn {
@@ -93,50 +93,79 @@
   position: relative;
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
+/* Modal-Schließen (X) */
+.modalCloseButton {
+  position: absolute;
+  top: -35px;
+  right: -30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  transition: transform 0.2s ease;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 2000;
+  pointer-events: auto;
+
+  &:hover {
+    transform: scale(0.9);
+    background-color: rgba(237, 10, 10, 0);
+  }
 }
 
-.settingsContent label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #555;
-}
-
-/* Region select container styled as on Approbation Pages */
+/* Inhalt im Modal */
 .regionSelector {
   width: 100%;
-  height: 40px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  background: #013b6e; /* blue background */
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  border: none;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 16px;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.regionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #013b6e;
+  text-align: center;
+}
+
+/* Blaue Box um das <select> */
+.regionSelectorBox {
+  width: 100%;
+  padding: 6px 10px;
+  height: 40px;
+  border-radius: 10px;
+  background: #013b6e;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.regionSelector label {
-  margin-bottom: 5px;
-}
-
-.regionSelector select {
+.regionSelectorBox select {
   width: 100%;
-  padding: 6px 12px;
+  height: 100%;
+  padding: 0 12px;
   border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #333;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  line-height: 29px; /* Text vertikal mittig */
+  appearance: none;
+  z-index: 1000;
+
+  option {
+    background: #013b6e;
+    color: #ffffff;
+  }
 }
 
+/* Bestätigen-Button */
 .submitButton {
   width: 100%;
   padding: 10px;
@@ -147,31 +176,13 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background: #012a58;
+  }
 }
 
-.submitButton:hover {
-  background: #012a58;
-}
-
-.modalCloseButton {
-  position: absolute;
-  top: -35px;
-  right: -30px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ed0a0a;
-  padding: 5px;
-  border-radius: 50%;
-  z-index: 2000;
-}
-
-.modalCloseButton:hover {
-  transform: scale(0.9);
-}
-
-/* Main Menu Back Button (wie in FSPFormularPage) */
+/* Zurück-Button links unten */
 .main_menu_back {
   position: fixed;
   bottom: 0;
@@ -184,13 +195,56 @@
   z-index: 3000;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #43a047;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
-.main_menu_back:hover {
-  background-color: #43a047;
-  transform: scale(1.1);
-}
+/* ------------------------------
+   RESPONSIVE-Anpassungen
+-------------------------------*/
+@media (max-width: 768px) {
+  .casesContainer {
+    display: flex;
+    flex-direction: column; /* Kacheln untereinander */
+    gap: 10px;
+  }
 
-.main_menu_back:active {
-  transform: scale(0.95);
+  .caseTile {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Modal wird am Handy als "Bottom Sheet" gezeigt */
+  .settingsModal {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 60%; /* oder 70% je nach Wunsch */
+    border-radius: 16px 16px 0 0;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+  }
+
+  .main_menu_back {
+    z-index: 100; // lower than modal's z-index
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
