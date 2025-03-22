@@ -16,7 +16,7 @@ const useGetGlobalInfo = () => {
   const navigate = useNavigate();
   const selectedLanguage = localStorageGet("selectedLanguage", DEFAULT_LANGUAGE);
   const currentPage = user ? localStorageGet("currentPage", "/main_menu") : "/main_menu";
-  const selectedRegion = user ? localStorageGet("selectedRegion", "") : "";
+  const [selectedRegion, setSelectedRegion] = useState(localStorageGet("selectedRegion", ""));
 
   // =======================
   // Код для роботи з регіоном
@@ -38,7 +38,9 @@ const useGetGlobalInfo = () => {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         const firebaseRegion = docSnap.data().selectedRegion;
-        if (firebaseRegion) {
+        // Оновлюємо лише, якщо стан ще порожній
+        if (firebaseRegion && firebaseRegion !== selectedRegion) {
+          setSelectedRegion(firebaseRegion);
           localStorageSet("selectedRegion", firebaseRegion);
         }
       }
@@ -48,8 +50,9 @@ const useGetGlobalInfo = () => {
   };
 
   const handleChangeRegion = (newRegion) => {
+    setSelectedRegion(newRegion); // оновлюємо стан
+    localStorageSet("selectedRegion", newRegion);
     if (user) {
-      localStorageSet("selectedRegion", newRegion);
       saveSelectedRegionToFirebase(newRegion);
     } else {
       console.warn("Unauthorized user cannot change region.");

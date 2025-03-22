@@ -109,7 +109,7 @@ const regionCoatsOfArms = {
   Thüringen: ThueringenCoat,
 };
 
-const CustomGermanyMap = ({ registrationMode = false }) => {
+const CustomGermanyMap = ({ registrationMode = false, onRegionSelect }) => {
   const { selectedRegion, handleChangeRegion } = useGetGlobalInfo();
   const [pendingRegion, setPendingRegion] = useState(null);
   const [hoveredRegion, setHoveredRegion] = useState(null);
@@ -132,14 +132,20 @@ const CustomGermanyMap = ({ registrationMode = false }) => {
     const rawName = geo.properties.name;
     const unified = unifyRegionName(rawName);
     setPendingRegion(unified);
-    if (isMobile) {
+    if (registrationMode) {
+      // Якщо реєстрація – оновлюємо глобальний стан відразу
+      handleChangeRegion(unified);
+      // Викликаємо callback для оновлення регіону в RegistrationPage
+      if (typeof onRegionSelect === "function") {
+        onRegionSelect(unified);
+      }
+    } else if (isMobile) {
       setIsModalOpen(true);
     }
   };
 
   const handleDashboardClick = () => {
     if (pendingRegion) {
-      // In non-registration mode, show confirmation dialog
       if (!registrationMode) {
         const confirmChange = window.confirm(
           `Möchten Sie die Region auf "${pendingRegion}" wirklich ändern?`
@@ -149,7 +155,7 @@ const CustomGermanyMap = ({ registrationMode = false }) => {
           navigate("/main_menu"); 
         }
       } else {
-        // In registration mode, simply update the region without confirmation
+        // У режимі реєстрації просто оновлюємо регіон без підтвердження
         handleChangeRegion(pendingRegion);
       }
     }

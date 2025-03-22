@@ -9,6 +9,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import StageMenu from "../ApprobationPage/StageMenu";
 import styles from "./RegistrationPage.module.scss";
 import { useAuth } from "../../contexts/AuthContext";
+import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import CustomGermanyMap from "../../components/CustomGermanyMap/CustomGermanyMap";
 
@@ -18,6 +19,7 @@ const RegistrationPage = () => {
   const [selectedStage, setSelectedStage] = useState(null);
   const navigate = useNavigate();
   const { currentUser } = useAuth();
+  const { selectedRegion } = useGetGlobalInfo();
 
   // Схема валідації
   const validationSchema = Yup.object({
@@ -67,8 +69,16 @@ const RegistrationPage = () => {
           values.email,
           values.password
         );
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            selectedRegion: selectedRegion, // або використовуйте значення з useGetGlobalInfo, якщо воно вже оновлене
+          },
+          { merge: true }
+        );
         const user = userCredential.user;
-
+    
+        // Збереження activeStage
         await setDoc(
           doc(db, "users", user.uid),
           {
@@ -76,13 +86,24 @@ const RegistrationPage = () => {
           },
           { merge: true }
         );
-
+    
+        // **Додайте збереження selectedRegion сюди:**
+        await setDoc(
+          doc(db, "users", user.uid),
+          {
+            selectedRegion: selectedRegion,
+          },
+          { merge: true }
+        );
+    
+        // Збереження інших даних користувача
         await setDoc(doc(db, "users", user.uid, "userData", "data"), {
           firstName: values.firstName,
           lastName: values.lastName,
           email: values.email,
           birthDate: values.birthDate,
           educationRegion: values.educationRegion,
+          region: selectedRegion, // переконайтеся, що це значення актуальне
           specialty: values.specialty || null,
           germanLevel: values.germanLevel || null,
           procedureType: values.procedureType || null,
@@ -91,9 +112,9 @@ const RegistrationPage = () => {
           agreePrivacy: values.agreePrivacy,
           activeStep: "completed",
         });
-
+    
         localStorage.removeItem("tempSelectedStage");
-
+    
         alert("Registrierung erfolgreich!");
         navigate("/dashboard");
       } catch (error) {
@@ -133,7 +154,9 @@ const RegistrationPage = () => {
     const hasError = formik.touched[fieldName] && formik.errors[fieldName];
     return hasError ? formik.errors[fieldName] : defaultPlaceholder;
   };
-
+  useEffect(() => {
+    localStorageSet("selectedRegion", "");
+  }, []);
   return (
     <MainLayout>
       <div className={styles.pageContainer}>
@@ -442,7 +465,7 @@ const RegistrationPage = () => {
                 </div>
               ) : currentStep === "map" ? (
                 <div className={styles.mapStepWrapper}>
-                  <CustomGermanyMap registrationMode={true} />
+               <CustomGermanyMap registrationMode={true} onRegionSelect={setSelectedRegion} />
                   {/* Тут дві кнопки: "Назад" (ліворуч) і "Завершити" (праворуч) */}
                   <button
                     type="button"
