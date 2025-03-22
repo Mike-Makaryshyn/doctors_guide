@@ -308,9 +308,9 @@ const AddSimulationEntryPage = () => {
         </div>
         {/* Back-Button (лівий нижньому куті) */}
         <div className={styles.main_menu_back}>
-          <button onClick={() => navigate(-1)} className={styles.backButton}>
-          &#8592;
-          </button>
+        <button onClick={() => navigate("/simulation")} className={styles.backButton}>
+  &#8592;
+</button>
         </div>
         {/* Save-Button (правий нижньому куті) */}
         {!alreadySubmitted && (

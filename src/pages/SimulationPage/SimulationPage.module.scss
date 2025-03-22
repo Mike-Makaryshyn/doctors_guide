@@ -1,17 +1,32 @@
+/* SimulationPage.module.scss */
+
+/* ------------------- Farben & Variablen ------------------- */
 $primary: #013b6e;
 $secondary: #fff;
 $accent: #7dc722;
 $danger: #ed0a0a;
 $transition-time: 0.3s;
 
-/* Основний контейнер */
+/* ------------------- Keyframes ------------------- */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ------------------- Hauptcontainer ------------------- */
 .container {
   padding: 20px;
   margin-top: 55px;
   position: relative;
 }
 
-/* Контейнер для плиток */
+/* ------------------- Tiles-Container ------------------- */
 .tilesContainer {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +34,7 @@ $transition-time: 0.3s;
   justify-content: flex-start;
 }
 
-/* Плитка (3 в ряд) */
+/* ------------------- Einzelne Tile ------------------- */
 .tile {
   flex: 0 0 calc(25% - 20px);
   max-width: calc(33.33% - 20px);
@@ -37,14 +52,14 @@ $transition-time: 0.3s;
   flex-direction: column;
   min-height: 200px;
   align-items: flex-start;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Заголовок плитки */
+/* ------------------- Tile Header ------------------- */
 .tileHeader {
   font-size: 16px;
   color: $primary;
@@ -52,7 +67,7 @@ $transition-time: 0.3s;
   margin-bottom: 0px;
 }
 
-/* Елементи плитки */
+/* ------------------- Tile Item ------------------- */
 .tileItem {
   font-size: 14px;
   margin-bottom: 0px;
@@ -60,18 +75,19 @@ $transition-time: 0.3s;
   color: $primary;
 }
 
-/* Посилання */
+/* ------------------- Links ------------------- */
 .link {
   color: $primary;
   text-decoration: none;
   transition: color 0.2s ease;
-}
-.link:hover {
-  color: $accent;
-  text-decoration: none;
+
+  &:hover {
+    color: $accent;
+    text-decoration: none;
+  }
 }
 
-/* Кнопка налаштувань (шестерня) */
+/* ------------------- Button: Einstellungen (Zahnrad) ------------------- */
 .settingsButton {
   position: fixed;
   bottom: 0px;
@@ -88,16 +104,17 @@ $transition-time: 0.3s;
   align-items: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
   z-index: 1000;
-}
-.settingsButton:hover {
-  background-color: darken($accent, 10%);
-  transform: scale(1.1);
+
+  &:hover {
+    background-color: darken($accent, 10%);
+    transform: scale(1.1);
+  }
 }
 
-/* Модальне вікно */
+/* ------------------- Modales Einstellungs-Fenster ------------------- */
 .settingsModal {
   position: fixed;
-  bottom: 45px;
+  bottom: 45px;  /* Standard: Desktop */
   right: 45px;
   background: $secondary;
   padding: 25px 20px 20px;
@@ -108,7 +125,7 @@ $transition-time: 0.3s;
   text-align: center;
 }
 
-/* Кнопка закриття модалки */
+/* ------------------- Schließen-Button (X) ------------------- */
 .modalCloseButton {
   position: absolute;
   top: -10px;
@@ -121,20 +138,21 @@ $transition-time: 0.3s;
   transition: transform 0.2s ease;
   padding: 5px;
   border-radius: 50%;
-}
-.modalCloseButton:hover {
-  transform: scale(0.9);
-  background-color: transparent;
+
+  &:hover {
+    transform: scale(0.9);
+    background-color: transparent;
+  }
 }
 
-/* Синій контейнер для вибору регіону */
+/* ------------------- Region-Auswahl (blauer Container) ------------------- */
 .nativeSelectContainer {
   width: 100%;
   max-width: 280px;
   background-color: $primary;
   border-radius: 8px;
   box-shadow: 5px 5px 9px rgba(102, 102, 102, 0.5), -5px -5px 9px #fff;
-  margin-bottom: 10px;
+  margin: 0 auto 10px; /* zentriert (links/rechts auto) + Abstand unten */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,12 +168,13 @@ $transition-time: 0.3s;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+
   &:focus {
     outline: none;
   }
 }
 
-/* Рядок для контейнерів у модальному вікні (мова та кнопки) */
+/* ------------------- Zeile im Modal (Sprache + Buttons) ------------------- */
 .modalRow {
   display: flex;
   gap: 20px;
@@ -163,102 +182,100 @@ $transition-time: 0.3s;
   align-items: center;
 }
 
-/* Контейнер для вибору мови, який відображає лише абревіатуру (50x50px) */
+/* ------------------- Sprach-Select-Container ------------------- */
 .languageSelectContainer {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: $primary;
-    border-radius: 10px;
+    border-radius: 12px; /* gleicher Radius wie .actionButton/.deleteButton */
     box-shadow: 5px 5px 9px rgba(102, 102, 102, 0.5), -5px -5px 9px #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
   }
-  
-  .languageSelect {
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    color: $secondary;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;       /* замість 50px, щоб не обрізати текст */
-    padding: 0;
-    margin: 0;
-    text-align: center;
-     /* вибране значення теж по центру */
-    cursor: pointer;
-  
-    /* Ховаємо стандартну стрілку */
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-  
-    &:focus {
-      outline: none;
-    }
-  
-    /* Опції теж центруємо */
-    option {
-      text-align: center;
-      font-size: 16px;
-    }
-  }
 
-/* Уніфікований стиль для кнопок додавання (без зміни фону при наведенні) */
-.actionButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background: #fff; /* постійно білий фон */
-    box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-    color: $primary; /* колір іконки */
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
-    
-    &:hover {
-      transform: scale(1.05);
-      background: #fff !important; /* фон не змінюється */
-      color: $primary !important;   /* колір не змінюється */
-    }
-    
-    &:active,
-    &:focus {
-      background: #fff !important;
-      color: $primary !important;
-    }
-  }
-
-/* Стиль для кнопки видалення: червоний бекграунд, біла іконка */
-.deleteButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  background: $danger; // червоний фон
-  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
-  color: $secondary;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
+/* 
+   Damit iOS das wirklich mittig anzeigt, 
+   nutzen wir flex statt line-height.
+*/
+.languageSelect {
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease;
+  justify-content: center;
 
-  &:hover {
-    transform: scale(1.05);
-    background: $danger !important; // Залишаємо червоний фон
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: $secondary;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  option {
+    text-align: center;
+    font-size: 16px;
   }
 }
 
-/* Кнопка Back */
+/* ------------------- Action-Buttons (Neuer Eintrag) ------------------- */
+/* Vergrößern wir auf 60x60 px */
+.actionButton,
+.deleteButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 20px;   /* etwas größerer Icon/Text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  transition: transform 0.2s ease;
+  border: none;
+}
+
+.actionButton {
+  background: #fff; /* bleibt immer weiß */
+  color: $primary;
+
+  &:hover {
+    transform: scale(1.05);
+    background: #fff !important;
+    color: $primary !important;
+  }
+
+  &:active,
+  &:focus {
+    background: #fff !important;
+    color: $primary !important;
+  }
+}
+
+/* ------------------- Löschen-Button (rot) ------------------- */
+.deleteButton {
+  background: $danger;
+  color: $secondary;
+
+  &:hover {
+    transform: scale(1.05);
+    background: $danger !important; // bleibt rot
+  }
+}
+
+/* ------------------- Zurück-Button ------------------- */
 .main_menu_back {
   position: fixed;
   bottom: 20px;
@@ -267,23 +284,40 @@ $transition-time: 0.3s;
 }
 
 .backButton {
-    margin-top: auto;
-    width: 35px;
-    height: 28px;
-    position: fixed;
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    left: 20px;
-    bottom: 0;
-}
-.backButton:hover {
-  transform: scale(1.1);
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-/* Адаптивність */
+/* ------------------- Responsive Styles ------------------- */
 @media (max-width: 768px) {
+  /* Modal fährt von unten hoch (keine Abstände) */
+  .settingsModal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+    z-index: 3000;
+    overflow-y: auto;
+    width: 100%;
+    animation: slideUp 0.3s ease; /* Slide-Up-Effekt */
+  }
+
+  /* Tiles untereinander */
   .tile {
     flex: 1 1 100%;
     max-width: 100%;

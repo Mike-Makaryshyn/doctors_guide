@@ -40,8 +40,14 @@
   text-align: left;
 }
 
-/* Поля введення за стилем Tab1.module.scss */
+/* ====== 1) Стилі для .inputField (звичайні <input>) ====== */
 .inputField {
+  min-height: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  -webkit-text-fill-color: #333;
+
   width: 100%;
   padding: 15px 20px;
   border: none;
@@ -54,11 +60,28 @@
   transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: #999;
+  }
 }
 
+/* ====== 2) Стилі для .selectField (випадаючі списки <select>) ====== */
 .selectField {
+  /* Замість фіксованого line-height: 50px робимо normal, 
+     щоб текст у списку не обрізався */
+  min-height: 50px;
+  height: 50px;
+  line-height: normal;
+  color: #333;
+  -webkit-text-fill-color: #333;
+
   width: 100%;
-  padding: 15px 20px;
+  /* Зменшуємо top/bottom padding, щоб текст не «з’їдався» на iOS */
+  padding: 10px 20px; 
   border: none;
   outline: none;
   font-size: 16px;
@@ -68,7 +91,34 @@
               -6px -6px 12px rgba(65, 191, 171, 0.5);
   transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  -webkit-appearance: none;
   appearance: none;
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+/* Додаткові налаштування для <input type="date"> */
+input[type="date"].inputField {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Встановлюємо висоту, щоб зрівняти з іншими полями */
+  height: 50px !important;
+  line-height: 50px !important;
+  
+  padding: 15px 20px;
+  width: 100% !important;
+}
+
+/* Приховуємо стандартний іконковий елемент календаря в iOS */
+input[type="date"].inputField::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
 }
 
 /* Фіксована кнопка збереження (правий нижній кут) */
@@ -107,26 +157,26 @@
 }
 
 .backButton {
-    margin-top: auto;
-    width: 35px;
-    height: 28px;
-    position: fixed;
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    left: 20px;
-    bottom: 0;
-    z-index: 2000;
+  margin-top: auto;
+  width: 35px;
+  height: 28px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 20px;
+  bottom: 0;
+  z-index: 2000;
 }
 
 .backButton:hover {
-    background-color: #43a047;  /* трохи темніший зелений при наведенні */
+  background-color: #43a047;  /* трохи темніший зелений при наведенні */
   transform: scale(1.1);
 }
+
 .main_menu_back:active {
-    transform: scale(0.95);
-  }
+  transform: scale(0.95);
+}
 
 /* Інформаційне повідомлення, якщо кейс вже додано */
 .infoMessage {
@@ -139,53 +189,23 @@
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-  .inputField, .selectField {
+  .inputField {
     padding: 12px 16px;
     font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .selectField {
+    padding: 10px 16px;
+    font-size: 14px;
+    height: 50px;
+    line-height: normal; /* залишається normal, щоб текст не обрізався */
   }
 }
+
 .inputField:focus,
 .selectField:focus {
   box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
   outline: none;
-}
-.inputField,
-.selectField {
-  /* Einheitliche Höhe */
-  min-height: 50px;
-
-  /* Einheitliche Schrift- und Textfarbe */
-  color: #333;
-
-  /* Optional: Falls iOS / Safari auf Mobilgeräten “blaue” Farbe zeigt */
-  -webkit-text-fill-color: #333;
-
-  /* Ansonsten deine bisherigen Styles hier behalten */
-  width: 100%;
-  padding: 15px 20px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
-              -6px -6px 12px rgba(65, 191, 171, 0.5);
-  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-
-  /* Platzhalter-Farbe angleichen */
-  &::placeholder {
-    color: #999;
-  }
-}
-
-/* Falls du einheitlich explizit auch für date-Input was überschreiben willst: */
-input[type="date"].inputField {
-  /* z. B. Breite erzwingen, iOS setzt gern eigene */
-  width: 100% !important;
-  min-height: 50px;
-  color: #333;
-  -webkit-text-fill-color: #333;
-  /* usw. */
 }
