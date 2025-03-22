@@ -187,3 +187,37 @@
 .modal-text strong {
     color: #000;
 }
+
+.modal-header {
+    position: relative; // додаємо!
+}
+  
+.modalCloseButton {
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ed0a0a;
+    transition: transform 0.2s ease;
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 2000;
+    pointer-events: auto;
+    top: calc(50% - 47vh);
+    right: calc(50% - 407px + 0px);
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+    .modalCloseButton {
+        font-size: 20px;
+        top: calc(50% - 47vh);
+        right: calc(5% + -9px);/* адаптація правого відступу */
+    }
+}

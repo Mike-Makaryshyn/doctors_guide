@@ -1,5 +1,3 @@
-// src/components/AdditionalInfoModal.jsx
-
 import React, { memo, useEffect } from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
@@ -52,15 +50,11 @@ const AdditionalInfoModal = ({ isOpen, onClose, additionalInfo }) => {
           </h2>
           {/* Кнопка закриття */}
           <button
-            className={styles["close-button"]}
+            className={styles.modalCloseButton}
             onClick={onClose}
             aria-label="Закрити модальне вікно"
           >
-            {/* SVG іконка */}
-            <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-              <line x1="1" y1="1" x2="13" y2="13" stroke="#333" strokeWidth="2"/>
-              <line x1="13" y1="1" x2="1" y2="13" stroke="#333" strokeWidth="2"/>
-            </svg>
+            ×
           </button>
         </div>
 

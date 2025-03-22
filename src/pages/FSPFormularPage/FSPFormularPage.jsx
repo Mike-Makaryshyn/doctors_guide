@@ -40,7 +40,7 @@ import MainLayout from "../../layouts/MainLayout/MainLayout";
 import { DataSourceContext } from "../../contexts/DataSourceContext";
 import { FaCheck, FaPause, FaCog, FaPlus, FaSync } from "react-icons/fa";
 import { previewFSPPDF, downloadFSPPDF } from "./pdfFSPFormular"; // <-- Імпорт
-import { FaPrint, FaEye, FaDownload } from "react-icons/fa";
+import { FaPrint, FaDownload, FaFilePdf } from "react-icons/fa";
 // Firebase
 import { db, auth } from "../../firebase";
 import {
@@ -837,12 +837,10 @@ const FSPFormularPage = () => {
                   >
                     <FaSync className={styles["icon-common"]} />
                   </button>
-                  <button onClick={handlePrintPreview}>
-          <FaEye /> 
-        </button>
-        <button onClick={handlePrintDownload}>
-          <FaDownload /> 
-        </button>
+                  <button className={styles["actionButton"]} onClick={handlePrintPreview} aria-label="PDF Vorschau">
+                    <FaFilePdf className={styles["icon-common"]} />
+                  </button>
+        
                   
                 </div>
 

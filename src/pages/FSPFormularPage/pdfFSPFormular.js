@@ -96,7 +96,7 @@ function createFSPPDFDocument(parsedData, regionName = "") {
   doc.setFontSize(12);
 
   // Зменшуємо міжрядковий інтервал, налаштуйте під ваш смак
-  doc.setLineHeightFactor(1.2);
+  doc.setLineHeightFactor(0.2);
 
   const pageHeight = doc.internal.pageSize.getHeight();
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -365,7 +365,7 @@ function addTileSection(doc, startY, sectionTitle, fields, preserveBold = false)
   doc.setFont("arial", "bold");
   doc.setFontSize(14);
   doc.text(sectionTitle, leftMargin, yPos);
-  yPos += 10;
+  yPos += 8;
 
   // Кожне поле
   nonEmptyFields.forEach((field) => {
@@ -399,7 +399,7 @@ function addTileSection(doc, startY, sectionTitle, fields, preserveBold = false)
     splitted.forEach((oneLine, idx) => {
       // Якщо це не перший рядок, переносимося нижче
       if (idx > 0) {
-        yPos += 6;
+        yPos += 5;
         // Перевірка кінця сторінки
         if (yPos > pageHeight - bottomMargin - 10) {
           yPos = doPageBreak();
@@ -417,7 +417,7 @@ function addTileSection(doc, startY, sectionTitle, fields, preserveBold = false)
       );
     });
 
-    yPos += 10; // відступ після поля
+    yPos += 5; // відступ після поля
   });
 
   yPos += 5;
