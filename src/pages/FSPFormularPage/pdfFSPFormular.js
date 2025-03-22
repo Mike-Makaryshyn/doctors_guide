@@ -91,12 +91,12 @@ function createFSPPDFDocument(parsedData, regionName = "") {
 
   let yPos = 10;
 
-  // Використовуємо Arial, збільшимо розмір шрифту
+  // Використовуємо Arial, збільшимо (або зменшимо) розмір шрифту
   doc.setFont("arial", "normal");
   doc.setFontSize(12);
 
-  // Ще більший міжрядковий інтервал
-  doc.setLineHeightFactor(1.3);
+  // Зменшуємо міжрядковий інтервал, налаштуйте під ваш смак
+  doc.setLineHeightFactor(1.2);
 
   const pageHeight = doc.internal.pageSize.getHeight();
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -106,25 +106,38 @@ function createFSPPDFDocument(parsedData, regionName = "") {
    * Функція-хелпер для «переносу сторінки»:
    * 1) Малюємо footer на поточній сторінці
    * 2) doc.addPage()
-   * 3) Повертаємо 10 (початок yPos)
+   * 3) Повертаємо 10 (початок yPos), водночас відновлюємо розмір/шрифт
    */
   function doPageBreak() {
     drawFooter(doc); // Спочатку футер на поточній
     doc.addPage();
+    // ВАЖЛИВО: відновлюємо шрифт та інтервал
+    doc.setFont("arial", "normal");
+    doc.setFontSize(12);
+    doc.setLineHeightFactor(1.2);
     return 10; // Тепер починаємо нову сторінку з y=10
   }
 
   // (Приклад) Якщо є fullName або regionName, друкуємо праворуч угорі
+  // <<< ADDED/CHANGED >>> Тепер друкуємо спочатку fullName, потім нижче regionName
   if (parsedData.fullName || regionName) {
     doc.setFontSize(14);
     doc.setFont("arial", "bold");
 
-    const textToPrint = regionName
-      ? `${parsedData.fullName || ""} (${regionName})`
-      : parsedData.fullName;
+    // Якщо є fullName
+    if (parsedData.fullName) {
+      doc.text(parsedData.fullName.trim(), pageWidth - 10, yPos, {
+        align: "right",
+      });
+      yPos += 8;
+    }
 
-    doc.text(textToPrint.trim(), pageWidth - 10, yPos, { align: "right" });
-    yPos += 8;
+    // Якщо є назва регіону
+    if (regionName) {
+      doc.setFontSize(12);
+      doc.text(regionName.trim(), pageWidth - 10, yPos, { align: "right" });
+      yPos += 8;
+    }
   }
 
   // Якщо є поле T
@@ -197,12 +210,19 @@ function createFSPPDFDocument(parsedData, regionName = "") {
     { label: "Gynäkologische Anamnese", value: parsedData.gynecologicalHistory },
   ]);
 
-  // (5) Zusammenfassung
-  // !!! Переконайтеся, що ви викликаєте stripMarkdownExceptBold
-  const summaryClean = stripMarkdownExceptBold(parsedData.summary);
-  yPos = addTileSection(doc, yPos, "Zusammenfassung", [
-    { label: "", value: summaryClean },
-  ]);
+  // (5) Zamenfassung (або Zusammenfassung)
+  // <<< ADDED/CHANGED >>> Тепер беремо parsedData.Zamenfassung (або Summer), прибираємо Markdown
+// (5) Zusammenfassung
+const zusammenfassungClean = stripMarkdownExceptBold(
+  parsedData.Zamenfassung || parsedData.summary || ""
+);
+yPos = addTileSection(
+  doc,
+  yPos,
+  "Zusammenfassung",              // німецький заголовок
+  [{ label: "", value: zusammenfassungClean }],
+  true                            // <-- ВАЖЛИВО: увімкнути preserveBold
+);
 
   // (6) Familienanamnese
   yPos = addTileSection(doc, yPos, "Familienanamnese", [
@@ -369,31 +389,33 @@ function addTileSection(doc, startY, sectionTitle, fields, preserveBold = false)
     doc.setFont("arial", "normal");
     doc.setFontSize(12);
 
+    // Розбиваємо текст поля на рядки
     const splitted = doc.splitTextToSize(
       String(field.value),
       maxWidth - labelWidth
     );
 
-    if (splitted.length > 0) {
-      // Перший рядок
-      if (preserveBold) {
-        printMarkdownLine(doc, splitted[0], leftMargin + labelWidth, yPos);
-      } else {
-        doc.text(splitted[0], leftMargin + labelWidth, yPos);
+    // Тепер кожен рядок (splitted[i]) друкуємо однаково
+    splitted.forEach((oneLine, idx) => {
+      // Якщо це не перший рядок, переносимося нижче
+      if (idx > 0) {
+        yPos += 6;
+        // Перевірка кінця сторінки
+        if (yPos > pageHeight - bottomMargin - 10) {
+          yPos = doPageBreak();
+        }
       }
-    }
 
-    for (let i = 1; i < splitted.length; i++) {
-      yPos += 6;
-      if (yPos > pageHeight - bottomMargin - 10) {
-        yPos = doPageBreak();
-      }
-      if (preserveBold) {
-        printMarkdownLine(doc, splitted[i], leftMargin, yPos);
-      } else {
-        doc.text(splitted[i], leftMargin, yPos);
-      }
-    }
+      // Якщо preserveBold == true, викликаємо printMarkdownLine
+      // Якщо preserveBold == false, теж викликаємо printMarkdownLine,
+      // щоб гарантовано мати відступи між сегментами (після кожного).
+      printMarkdownLine(
+        doc,
+        oneLine,
+        leftMargin + (idx === 0 ? labelWidth : 0),
+        yPos
+      );
+    });
 
     yPos += 10; // відступ після поля
   });
@@ -405,13 +427,17 @@ function addTileSection(doc, startY, sectionTitle, fields, preserveBold = false)
   function doPageBreak() {
     drawFooter(doc);
     doc.addPage();
+    // Знову відновлюємо шрифт, розмір, інтервал
+    doc.setFont("arial", "normal");
+    doc.setFontSize(12);
+    doc.setLineHeightFactor(1.2);
     return 10;
   }
 }
 
 /**
  * (H) Друкує рядок, розбиваючи '**bold**' сегменти.
- * Якщо isBold==true, друкуємо один раз жирним.
+ * Якщо isBold==true, друкуємо жирним.
  */
 function printMarkdownLine(doc, lineStr, x, y) {
   const segments = splitBoldSegments(lineStr);
@@ -419,8 +445,10 @@ function printMarkdownLine(doc, lineStr, x, y) {
 
   segments.forEach((seg) => {
     if (!seg.text) return;
+
     const w = doc.getTextWidth(seg.text);
 
+    // Якщо сегмент жирний
     if (seg.isBold) {
       doc.setFont("arial", "bold");
       doc.text(seg.text, currentX, y);
@@ -428,6 +456,11 @@ function printMarkdownLine(doc, lineStr, x, y) {
     } else {
       doc.text(seg.text, currentX, y);
     }
+
+    // Зрушуємо позицію на довжину надрукованого тексту
     currentX += w;
+
+    // *** Завжди додаємо один пробіл після сегмента ***
+    currentX += doc.getTextWidth(" ");
   });
 }

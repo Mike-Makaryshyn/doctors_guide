@@ -284,7 +284,8 @@ const FSPFormularPage = () => {
       alert("Daten fehlen oder sind noch nicht geladen!");
       return;
     }
-    previewFSPPDF(parsedData);
+    // передаємо localRegion другим аргументом
+    previewFSPPDF(parsedData, localRegion);
   };
 
   const handlePrintDownload = () => {
@@ -292,7 +293,8 @@ const FSPFormularPage = () => {
       alert("Daten fehlen oder sind noch nicht geladen!");
       return;
     }
-    downloadFSPPDF(parsedData);
+    // те саме при завантаженні
+    downloadFSPPDF(parsedData, localRegion);
   };
   // ---- Horizontal scroll on mobile ----
   const columnsRef = useRef(null);
