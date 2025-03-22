@@ -1,4 +1,3 @@
-// src/pages/SimulationPage/SimulationPage.jsx
 import React, { useState, useEffect, useRef } from "react";
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
@@ -11,20 +10,59 @@ import { FaCog, FaArrowLeft, FaUserPlus, FaTrash } from "react-icons/fa";
 import styles from "./SimulationPage.module.scss";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
 
-// ... (інші імпорти, списки regions, languageOptions тощо)
+// Список регіонів
+const regions = [
+  "Baden-Württemberg-Karlsruhe",
+  "Baden-Württemberg-Reutlingen",
+  "Baden-Württemberg-Stuttgart",
+  "Baden-Württemberg-Freiburg",
+  "Bayern",
+  "Berlin",
+  "Brandenburg",
+  "Bremen",
+  "Hamburg",
+  "Hessen",
+  "Mecklenburg Vorpommern",
+  "Niedersachsen",
+  "Nordrhein-Westfalen",
+  "Rheinland-Pfalz",
+  "Saarland",
+  "Sachsen",
+  "Sachsen-Anhalt",
+  "Schleswig-Holstein",
+  "Thüringen",
+  "Westfalen-Lippe",
+];
+
+// Опції мов (повна назва)
+const languageOptions = [
+  { value: "de", label: "Deutsch" },
+  { value: "en", label: "English" },
+  { value: "uk", label: "Ukrainisch" },
+  { value: "ru", label: "Russisch" },
+  { value: "tr", label: "Türkisch" },
+  { value: "ar", label: "Arabisch" },
+  { value: "fr", label: "Französisch" },
+  { value: "es", label: "Spanisch" },
+  { value: "pl", label: "Polnisch" },
+  { value: "el", label: "Griechisch" },
+  { value: "ro", label: "Rumänisch" },
+];
 
 const SimulationPage = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const { selectedRegion: globalRegion } = useGetGlobalInfo();
 
-  // Використовуємо регіон із глобальних налаштувань або "Bayern"
   const [region, setRegion] = useState(globalRegion || "Bayern");
   const [simulationCases, setSimulationCases] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
-  // Функція завантаження з Firestore
+  // Стан для фільтрації за мовою – фільтрація реалізована лише в модальному вікні
+  const [languageFilter, setLanguageFilter] = useState("");
+
+  // Функція завантаження оголошень із Firestore
   const fetchSimulationCases = async () => {
     try {
       const docRef = doc(db, "simulation", region);
@@ -45,7 +83,11 @@ const SimulationPage = () => {
     fetchSimulationCases();
   }, [region]);
 
-  // Закриття модалки при кліку поза нею
+  const filteredCases = languageFilter
+    ? simulationCases.filter((item) => item.language === languageFilter)
+    : simulationCases;
+
+  // Закриття модального вікна при кліку поза ним
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -63,29 +105,8 @@ const SimulationPage = () => {
   const handleRegionChange = (e) => {
     setRegion(e.target.value);
   };
-  const regions = [
-    "Baden-Württemberg-Karlsruhe",
-    "Baden-Württemberg-Reutlingen",
-    "Baden-Württemberg-Stuttgart",
-    "Baden-Württemberg-Freiburg",
-    "Bayern",
-    "Berlin",
-    "Brandenburg",
-    "Bremen",
-    "Hamburg",
-    "Hessen",
-    "Mecklenburg Vorpommern",
-    "Niedersachsen",
-    "Nordrhein-Westfalen",
-    "Rheinland-Pfalz",
-    "Saarland",
-    "Sachsen",
-    "Sachsen-Anhalt",
-    "Schleswig-Holstein",
-    "Thüringen",
-    "Westfalen-Lippe",
-  ];
-  // Видалення оголошення поточного користувача
+
+  // Видалення оголошення з підтвердженням
   const handleDeleteCase = async () => {
     if (!user) {
       toast.error("Bitte melden Sie sich an, um Ihre Anzeige zu löschen.");
@@ -95,7 +116,6 @@ const SimulationPage = () => {
       "Sind Sie sicher, dass Sie Ihre Anzeige löschen möchten?"
     );
     if (!confirmed) return;
-
     try {
       const docRef = doc(db, "simulation", region);
       const docSnap = await getDoc(docRef);
@@ -106,7 +126,6 @@ const SimulationPage = () => {
       const data = docSnap.data();
       const arrayCases = data.arrayCases || [];
       const filtered = arrayCases.filter((item) => item.uid !== user.uid);
-
       if (filtered.length === arrayCases.length) {
         toast.info(
           "Sie haben noch keine Anzeige aufgegeben oder sie wurde bereits gelöscht."
@@ -122,11 +141,18 @@ const SimulationPage = () => {
     }
   };
 
+  const getLanguageLabel = (languageCode) => {
+    const language = languageOptions.find(
+      (lang) => lang.value === languageCode
+    );
+    return language ? language.label : languageCode;
+  };
+
   return (
     <MainLayout>
       <ProtectedRoute>
         <div className={styles.container}>
-          {/* Кнопка (шестерня) */}
+          {/* Кнопка налаштувань */}
           <button
             className={styles.settingsButton}
             onClick={() => setIsModalOpen(true)}
@@ -137,10 +163,10 @@ const SimulationPage = () => {
 
           {/* Список плиток */}
           <div className={styles.tilesContainer}>
-            {simulationCases.length === 0 ? (
-              <p>Keine Einträge</p>
+            {filteredCases.length === 0 ? (
+              <p style={{ color: "#013b6e" }}>Keine Einträge</p>
             ) : (
-              simulationCases.map((item, index) => (
+              filteredCases.map((item, index) => (
                 <div key={index} className={styles.tile}>
                   <h3 className={styles.tileHeader}>
                     {item.firstName} {item.lastName}
@@ -161,14 +187,15 @@ const SimulationPage = () => {
                       </a>
                     </p>
                   )}
-                  {item.language && (
-                    <p className={styles.tileItem}>
-                      <strong>Sprache:</strong> {item.language}
-                    </p>
-                  )}
                   {item.preferredContact && (
                     <p className={styles.tileItem}>
                       <strong>Kontakt:</strong> {item.preferredContact}
+                    </p>
+                  )}
+                  {item.language && (
+                    <p className={styles.tileItem}>
+                      <strong>Sprache:</strong>{" "}
+                      {getLanguageLabel(item.language)}
                     </p>
                   )}
                   {item.pruefungsdatum && (
@@ -186,10 +213,10 @@ const SimulationPage = () => {
             )}
           </div>
 
-          {/* Модалка */}
+          {/* Модальне вікно */}
           {isModalOpen && (
             <div className={styles.settingsModal} ref={modalRef}>
-              {/* Хрестик (закрити) */}
+              {/* Кнопка закриття модалки */}
               <button
                 className={styles.modalCloseButton}
                 onClick={() => setIsModalOpen(false)}
@@ -198,7 +225,7 @@ const SimulationPage = () => {
                 ×
               </button>
 
-              {/* Синій контейнер для вибору регіону */}
+              {/* Контейнер для вибору регіону */}
               <div className={styles.nativeSelectContainer}>
                 <select
                   className={styles.nativeSelect}
@@ -214,19 +241,40 @@ const SimulationPage = () => {
                 </select>
               </div>
 
-              {/* Кнопки (квадратні) в один ряд */}
-              <div className={styles.modalButtons}>
-                {/* Anzeige aufgeben */}
+              {/* Рядок для вибору мови та кнопок */}
+              <div className={styles.modalRow}>
+                {/* Контейнер для вибору мови (при відкритті drop-down показує повні назви) */}
+                <div className={styles.languageSelectContainer}>
+                  <select
+                    className={styles.languageSelect}
+                    value={languageFilter}
+                    onChange={(e) => setLanguageFilter(e.target.value)}
+                    aria-label="Sprache auswählen"
+                  >
+                    <option value="">&infin;</option>
+                    {languageOptions.map((lang) => (
+                      <option
+                        key={lang.value}
+                        value={lang.value}
+                        title={lang.label}
+                      >
+                        {lang.value.toUpperCase()}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Кнопка для додавання нового випадку */}
                 <Link
                   to="/add-simulation"
-                  className={styles.addButton}
+                  className={styles.actionButton}
                   onClick={() => setIsModalOpen(false)}
                   aria-label="Anzeige aufgeben"
                 >
                   <FaUserPlus size={20} />
                 </Link>
 
-                {/* Anzeige löschen */}
+                {/* Кнопка для видалення випадку */}
                 <button
                   className={styles.deleteButton}
                   onClick={() => {
@@ -242,14 +290,14 @@ const SimulationPage = () => {
           )}
         </div>
 
-        {/* Кнопка Back (зліва внизу) */}
+        {/* Кнопка Back */}
         <div className={styles.main_menu_back}>
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/main_menu")}
             className={styles.backButton}
             aria-label="Zurück"
           >
-            <FaArrowLeft />
+            &#8592;
           </button>
         </div>
       </ProtectedRoute>

@@ -149,3 +149,43 @@
   box-shadow: inset 3px 3px 5px #133933, inset -3px -3px 5px #41bfab;
   outline: none;
 }
+.inputField,
+.selectField {
+  /* Einheitliche Höhe */
+  min-height: 50px;
+
+  /* Einheitliche Schrift- und Textfarbe */
+  color: #333;
+
+  /* Optional: Falls iOS / Safari auf Mobilgeräten “blaue” Farbe zeigt */
+  -webkit-text-fill-color: #333;
+
+  /* Ansonsten deine bisherigen Styles hier behalten */
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px rgba(19, 57, 51, 0.5),
+              -6px -6px 12px rgba(65, 191, 171, 0.5);
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  /* Platzhalter-Farbe angleichen */
+  &::placeholder {
+    color: #999;
+  }
+}
+
+/* Falls du einheitlich explizit auch für date-Input was überschreiben willst: */
+input[type="date"].inputField {
+  /* z. B. Breite erzwingen, iOS setzt gern eigene */
+  width: 100% !important;
+  min-height: 50px;
+  color: #333;
+  -webkit-text-fill-color: #333;
+  /* usw. */
+}
