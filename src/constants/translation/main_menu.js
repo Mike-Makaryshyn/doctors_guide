@@ -355,6 +355,20 @@ export const main_menu_items = {
           ro: "Chat în regiune",
           link: "/chat-in-region",
         },
+        {
+          en: "Frequent Cases in Region",
+          fr: "Cas fréquents dans la région",
+          es: "Casos frecuentes en la región",
+          ar: "الحالات الشائعة في المنطقة",
+          tr: "Bölgedeki Sık Görülen Vakalar",
+          pl: "Częste przypadki w regionie",
+          uk: "Часті випадки в регіоні",
+          ru: "Частые случаи в регионе",
+          de: "Häufige Fälle in Region",
+          el: "Συχνές περιπτώσεις στην Περιφέρεια",
+          ro: "Cazuri frecvente în regiune",
+          link: "/region-cases"
+        },
       ],
     },
     {

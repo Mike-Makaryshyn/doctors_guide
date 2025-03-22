@@ -147,5 +147,7 @@ export const pathList = {
   abbreviations_fortune_wheel: {
     path: "/abbreviations-fortune-wheel-game",
   },
- 
+  region_cases: {
+    path: "/region-cases",
+  },
 };

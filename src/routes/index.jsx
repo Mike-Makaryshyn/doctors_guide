@@ -190,6 +190,9 @@ const AbbreviationsTermMatchingGame = React.lazy(() =>
 const AbbreviationsFortuneWheelGame = React.lazy(() =>
   import("../games/AbbreviationsGame/pages/FortuneWheelGame/AbbreviationsFortuneWheelGame.jsx")
 );
+const RegionCasesPage = React.lazy(() =>
+  import("../pages/RegionCasesPage/RegionCasesPage")
+);
 export default function Routers() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -220,6 +223,7 @@ export default function Routers() {
           path="/elective-language-game"
           element={<ElectiveLanguageGame />}
         />
+        <Route path={pathList.region_cases.path} element={<RegionCasesPage />} />
         <Route
   path={pathList.abbreviations_term_matching.path}
   element={<AbbreviationsTermMatchingGame />}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.container {
+  padding: 20px;
+  margin-top: 55px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.casesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.caseTile {
+  background: rgba(251, 247, 247, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.caseTile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: #1abc9c;
+}
+
+/* Markierung für abgeschlossene Fälle (grüner Hintergrund) */
+.completed {
+  background-color: #c8e6c9;
+}
+
+/* Settings button styled similar to FSPFormularPage */
+.settingsButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(125, 199, 34, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+
+.settingsButton:hover {
+  background-color: #7dc722;
+  transform: scale(1.1);
+}
+
+/* Modal styles similar to FSPFormularPage modal */
+.settingsModal {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  background: #fff;
+  padding: 25px 20px 20px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settingsContent {
+  position: relative;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.settingsContent label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Region select container styled as on Approbation Pages */
+.regionSelector {
+  width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #013b6e; /* blue background */
+  box-shadow: 5px 5px 9px #666, -5px -5px 9px #fff;
+  border: none;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.regionSelector label {
+  margin-bottom: 5px;
+}
+
+.regionSelector select {
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background: #013b6e;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #012a58;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: -35px;
+  right: -30px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ed0a0a;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 2000;
+}
+
+.modalCloseButton:hover {
+  transform: scale(0.9);
+}
+
+/* Main Menu Back Button (wie in FSPFormularPage) */
+.main_menu_back {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  width: 35px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main_menu_back:hover {
+  background-color: #43a047;
+  transform: scale(1.1);
+}
+
+.main_menu_back:active {
+  transform: scale(0.95);
+}
