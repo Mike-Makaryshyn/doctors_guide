@@ -14,8 +14,6 @@ import NORDRHEIN_DATA from './Nordrhein-Westfalen';
 import RHEINLAND_DATA from './Rheinland-Pfalz';
 import SACHSENANHALT_DATA from './Sachsen-Anhalt';
 import SACHSEN_DATA from './Sachsen';
-import THUERINGEN_DATA from './Thüringen';
-import WESTFALEN_DATA from './Westfalen-Lippe';
 
 const dataFiles = [
   { label: BW_FREIBURG_DATA.regionName, value: 'freiburg', data: BW_FREIBURG_DATA },
@@ -34,8 +32,6 @@ const dataFiles = [
   { label: RHEINLAND_DATA.regionName, value: 'rheinland-pfalz', data: RHEINLAND_DATA },
   { label: SACHSENANHALT_DATA.regionName, value: 'sachsen-anhalt', data: SACHSENANHALT_DATA },
   { label: SACHSEN_DATA.regionName, value: 'sachsen', data: SACHSEN_DATA },
-  { label: THUERINGEN_DATA.regionName, value: 'thueringen', data: THUERINGEN_DATA },
-  { label: WESTFALEN_DATA.regionName, value: 'westfalen-lippe', data: WESTFALEN_DATA },
 ];
 
 export default dataFiles;

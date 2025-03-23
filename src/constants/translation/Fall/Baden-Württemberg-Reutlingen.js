@@ -46,7 +46,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 52-jährige Patientin mit seit 5,5 Monaten bestehenden, progredienten, stechenden Handschmerzen, v.a. in den ersten drei Fingern der rechten Hand, mit nächtlicher Verschlechterung und Besserung durch Schütteln. Begleitsymptome: Hypästhesie, Parästhesie, Muskelatrophie der rechten Hand. Verdacht auf Karpaltunnelsyndrom, Differenzialdiagnosen: Polyneuropathie, Multiple Sklerose.",
+    "summary": "Zusammenfassung unseres Gesprächs:\n\nSie haben seit 5,5 Monaten stechende Schmerzen in beiden Händen, vor allem in den ersten drei Fingern der rechten Hand. Die Schmerzen sind nachts besonders schlimm und verbessern sich, wenn Sie Ihre Hände schütteln. Sie haben auch Gefühlsstörungen, Kribbeln und Muskelschwund in der rechten Hand. Möglicher Verdacht auf Karpaltunnelsyndrom. Andere mögliche Ursachen sind Polyneuropathie und Multiple Sklerose.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 2 Jahren, GERD, erhöhte Blutzuckerwerte",
     "otherRelevantDiseases": "",
@@ -80,7 +80,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Muskelatrophie, Flaschen-Zeichen, Phalen-Zeichen, Karpalkompressionstest",
     "laboratoryTests": "BB, CRP, BSG, BZ, TSH, Elektrolyte, Nieren- und Leberwerte",
     "instrumentalExamination": "Sonographie, Röntgen, MRT, Elektrophysiologie, Elektroneurographie",
-    "examinerQuestions": "Was erwarten Sie bei Multiple Sklerose?\nWelche körperlichen Untersuchungen für die Diagnose machen Sie?\nWelche Therapie empfehlen Sie?\nKönnten Sie der Patientin das Karpaltunnelsyndrom erklären?",
+    "examinerQuestions": "**Frage:** Was erwarten Sie bei Multiple Sklerose?\n**Antwort:** Bei Multiple Sklerose erwarten Sie Symptome wie Sehstörungen, Muskelkrämpfe, Koordinationsprobleme und Müdigkeit aufgrund der Schädigung der Nerven im Gehirn und Rückenmark.\n\n**Frage:** Welche körperlichen Untersuchungen für die Diagnose machen Sie?\n**Antwort:** Für die Diagnose von Multiple Sklerose können Sie körperliche Untersuchungen wie neurologische Tests, Magnetresonanztomographie (MRT), Lumbalpunktion (Nervenwasseruntersuchung) und evtl. Bluttests durchführen.\n\n**Frage:** Welche Therapie empfehlen Sie?\n**Antwort:** Bei der Behandlung von Multiple Sklerose können Sie eine Therapie mit Medikamenten wie Interferonen, Kortikosteroiden oder Immunmodulatoren empfehlen, um Entzündungen zu reduzieren und das Fortschreiten der Krankheit zu verlangsamen.\n\n**Frage:** Könnten Sie der Patientin das Karpaltunnelsyndrom erklären?\n**Antwort:** Beim Karpaltunnelsyndrom handelt es sich um einen Zustand, bei dem der Mittelnerv im Handgelenk komprimiert wird, was zu Symptomen wie Taubheitsgefühl, Kribbeln und Schwäche in Hand und Fingern führen kann.",
     "patientQuestions": "**Frage:** Was habe ich?  \n**Antwort:** Um genau festzustellen, was Sie haben, ist eine genaue Untersuchung und Diagnose durch einen Arzt erforderlich. Nur so kann eine angemessene Behandlung empfohlen werden.\n\n**Frage:** Was ist MRT, ist das gefährlich?  \n**Antwort:** MRT steht für Magnetresonanztomographie und ist eine diagnostische Bildgebungstechnik, die in der Regel sicher ist und keine schädliche Strahlung verwendet. Es ist wichtig, dass Sie alle Metallgegenstände entfernen, bevor Sie eine MRT-Untersuchung durchführen, da Magneten verwendet werden.\n\n**Frage:** Kann das mit Therapie heilen?  \n**Antwort:** Die Heilung hängt von der genauen Diagnose und dem individuellen Gesundheitszustand ab. Eine angemessene Therapie kann bei vielen Erkrankungen helfen, die Symptome zu lindern oder den Verlauf der Erkrankung positiv zu beeinflussen. Ihr Arzt wird Ihnen die bestmögliche Therapieempfehlung geben."
   },
   {
@@ -129,7 +129,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 54-jähriger Patient mit akuten Schmerzen im rechten Großzeh, begleitet von Ödem, Rubor und Wärme. Schmerzintensität 8-10/10. Auslösender Faktor möglicherweise hoher Konsum von Fleisch, Wurst und Alkohol. V.a. Podagra.",
+    "summary": "Zusammenfassung unseres Gesprächs:\n\nSie haben akute Schmerzen im rechten Großzeh, begleitet von Schwellung, Rötung und Wärme. Die Schmerzen sind sehr stark, zwischen 8-10 von 10. Möglicherweise wurden sie durch den hohen Konsum von Fleisch, Wurst und Alkohol ausgelöst. Es könnte eine Entzündung namens Podagra vorliegen.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Migräne seit 20 Jahren, ausgelöst durch Motorradunfall mit Gehirnerschütterung",
     "otherRelevantDiseases": "",
@@ -163,7 +163,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche alternativen Differentialdiagnosen ziehen Sie in Betracht, basierend auf den klinischen Merkmalen?\n**Antwort:** Mögliche Differentialdiagnosen wären eine bakterielle Infektion, rheumatoide Arthritis oder septische Arthritis.\n\n**Frage:** Welche diagnostischen Maßnahmen würden Sie empfehlen, um die Verdachtsdiagnose zu bestätigen oder auszuschließen?\n**Antwort:** Zur Bestätigung der Verdachtsdiagnose einer Podagra könnten eine Gichtkristallanalyse der Synovialflüssigkeit und eine Serumharnsäuremessung durchgeführt werden.\n\n**Frage:** Welche weiteren Informationen würden Sie mittels Bildgebung benötigen, um die Diagnose zu unterstützen?\n**Antwort:** Eine Röntgenuntersuchung des betroffenen Großzehengelenks könnte helfen, um etwaige knöcherne Veränderungen oder Gichttophi festzustellen.\n\n**Frage:** Welche therapeutischen Ansätze würden Sie in Erwägung ziehen, um die akuten Beschwerden zu lindern und langfristige Schäden zu verhindern?\n**Antwort:** Eine medikamentöse Therapie mit nichtsteroidalen Antirheumatika (NSAR) zur Schmerzlinderung sowie eine Anpassung der Ernährung und Lebensweise, um die Harnsäurewerte zu senken, wären erste Schritte bei der Behandlung der Podagra.",
     "patientQuestions": "**Frage:** Was verursacht meine akuten Schmerzen im rechten Großzeh?\n**Antwort:** Ihre Schmerzen im rechten Großzeh könnten durch eine Erkrankung namens Gicht verursacht werden, speziell durch eine Form davon, die als Podagra bekannt ist.\n\n**Frage:** Was ist Gicht und wie entsteht sie?\n**Antwort:** Gicht ist eine Art von Arthritis, die durch eine Ansammlung von Harnsäurekristallen in den Gelenken verursacht wird. Ein hoher Konsum von purinreichen Lebensmitteln wie Fleisch, Wurst und Alkohol kann den Harnsäurespiegel erhöhen und zu Gichtanfällen, wie Podagra, führen.\n\n**Frage:** Wie behandelt man eine akute Podagra-Episode?\n**Antwort:** Zur Behandlung akuter Podagra-Episoden können entzündungshemmende Medikamente verschrieben werden, um Schmerzen und Entzündungen zu lindern. Es ist auch wichtig, viel Flüssigkeit zu konsumieren und purinreiche Lebensmittel zu meiden.\n\n**Frage:** Muss ich spezielle Maßnahmen ergreifen, um weitere Gichtanfälle zu verhindern?\n**Antwort:** Ja, es ist ratsam, Ihre Ernährung anzupassen, alkoholische Getränke zu reduzieren und möglicherweise auch Medikamente zur Senkung des Harnsäurespiegels einzunehmen, um weitere Gichtanfälle zu verhindern.\n\n**Frage:** Kann Gicht langfristige Schäden verursachen?\n**Antwort:** Unbehandelte oder wiederkehrende Gichtanfälle können zu langfristigen Schäden an den Gelenken und Nieren führen. Eine angemessene Behandlung und Lebensstiländerungen sind daher entscheidend, um Komplikationen zu vermeiden."
   },
   {
@@ -212,7 +212,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 55-jähriger Patient mit plötzlich aufgetretenen, pulsierenden Schmerzen im linken Großzeh seit dem Morgen, begleitet von Ödem und Rubor. Keine Schmerzlinderung durch Paracetamol. Bewegungsbeschränkung und Unfähigkeit, auf dem betroffenen Zeh zu treten. V.a. Arthritis urica.",
+    "summary": "Lieber Patient,\n\nSie haben plötzlich starke Schmerzen im linken Großzeh, die pulsierend sind und von Schwellungen und Rötungen begleitet werden. Selbst nach der Einnahme von Paracetamol bessert sich der Schmerz nicht. Sie spüren eine Einschränkung Ihrer Beweglichkeit und können nicht auf Ihrem betroffenen Zeh stehen. Es wird vermutet, dass Sie an Arthritis urica leiden.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Migräne nach Commotio cerebri, PTBS mit depressiven Episoden",
     "otherRelevantDiseases": "",
@@ -246,7 +246,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "Verdachtsdiagnose? Warum?\nWeiteres Vorgehen?\nWelche Blutuntersuchungen?\nIst eine Gelenkaspiration normalerweise notwendig? (Nein)\nWas könnten wir auf dem Röntgenbild sehen? (Kristalle)\nWelche Art von Pathologie ist Arthritis urica? (Autoimmun)\nKennen Sie ein Medikament gegen Arthritis urica? (Allopurinol)\nAlkohol, was trinkt der Patient genau?\nRaucht der Patient?",
+    "examinerQuestions": "**Frage:** Verdachtsdiagnose? Warum?  \n**Antwort:** Sie könnten an Gicht denken, da der Patient über plötzliche, extreme Gelenkschmerzen klagt, die typisch für diese Erkrankung sind.\n\n**Frage:** Weiteres Vorgehen?  \n**Antwort:** Sie sollten eine ausführliche Anamnese durchführen, physische Untersuchungen durchführen und geeignete Bildgebungsmethoden anordnen, um die Diagnose zu bestätigen.\n\n**Frage:** Welche Blutuntersuchungen?  \n**Antwort:** Sie könnten eine Serum-Harnsäuremessung anfordern, da erhöhte Harnsäurewerte ein unterstützendes diagnostisches Merkmal für Gicht sind.\n\n**Frage:** Ist eine Gelenkaspiration normalerweise notwendig? (Nein)  \n**Antwort:** In der Regel ist eine Gelenkaspiration bei Gicht nicht erforderlich, da die Diagnose anhand anderer Kriterien gestellt werden kann.\n\n**Frage:** Was könnten wir auf dem Röntgenbild sehen? (Kristalle)  \n**Antwort:** Auf einem Röntgenbild könnten Sie in fortgeschrittenen Fällen Harnsäurekristalle in den Gelenken sehen, was auf Gicht hinweist.\n\n**Frage:** Welche Art von Pathologie ist Arthritis urica? (Autoimmun)  \n**Antwort:** Arthritis urica ist keine Autoimmunerkrankung, sondern eine Stoffwechselstörung, die durch Ablagerung von Harnsäurekristallen in den Gelenken verursacht wird.\n\n**Frage:** Kennen Sie ein Medikament gegen Arthritis urica? (Allopurinol)  \n**Antwort:** Zur Behandlung von Gicht, speziell zur Senkung der Harnsäurewerte, wird oft Allopurinol eingesetzt.\n\n**Frage:** Alkohol, was trinkt der Patient genau?  \n**Antwort:** Sie sollten den genauen Alkoholkonsum des Patienten erfragen, da übermäßiger Alkoholkonsum ein Risikofaktor für Gicht ist.\n\n**Frage:** Raucht der Patient?  \n**Antwort:** Es ist wichtig zu wissen, ob der Patient raucht, da Rauchen auch das Risiko von Gichtanfällen erhöhen kann.",
     "patientQuestions": "**Frage:** Was könnten wir machen gegen die Schmerzen?\n**Antwort:** Es gibt verschiedene Möglichkeiten zur Schmerzlinderung, wie zum Beispiel die Einnahme von Schmerzmitteln, Physiotherapie oder Injektionen. Wir können gemeinsam besprechen, welche Option für Sie am besten geeignet ist.\n\n**Frage:** Untersuchungen, welche?\n**Antwort:** Um Ihre Beschwerden genauer zu diagnostizieren, könnten verschiedene Untersuchungen notwendig sein. Das kann zum Beispiel eine Blutuntersuchung, Röntgenaufnahmen oder eine MRT-Untersuchung sein. Je nach Ihren Symptomen werden wir entscheiden, welche Untersuchungen sinnvoll sind.\n\n**Frage:** Gelenkaspiration, tut das weh?\n**Antwort:** Bei einer Gelenkaspiration wird mit einer Nadel Flüssigkeit aus dem Gelenk entnommen. Es wird normalerweise unter örtlicher Betäubung durchgeführt, um Schmerzen zu minimieren. Ein leichter Druck oder ein kurzer Stich kann dabei zu spüren sein, aber die meisten Patienten empfinden die Prozedur als gut tolerierbar."
   },
   {
@@ -295,7 +295,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Nicht erfragt",
-    "summary": "Eine 41-jährige Patientin mit seit gestern bestehenden, dumpfen, epigastrischen, gürtelförmigen Schmerzen (6/10) nach fettigem Essen. Keine Besserung durch Ibuprofen 600 mg. Begleitsymptome: Inappetenz, Meteorismus, einmaliges Erbrechen. V.a. akute Pankreatitis.",
+    "summary": "In unserem Gespräch haben wir über Ihre Beschwerden gesprochen, die seit gestern bestehen. Sie haben dumpfe, gürtelförmige Schmerzen im oberen Bauchbereich (6/10) besonders nach fettigem Essen. Ibuprofen 600 mg hat keine Besserung gebracht. Zusätzlich leiden Sie unter Inappetenz, Blähungen und haben einmal erbrochen. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Lumbago, Konjunktivitis, Sportasthma",
     "otherRelevantDiseases": "",
@@ -329,7 +329,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "BA (CRP, Amylase, Lipase…)",
     "instrumentalExamination": "Abdomen-Sonographie, Abdomen-CT",
-    "examinerQuestions": "Was ist eine Gastroskopie?\nDifferentialdiagnosen für epigastrische Schmerzen bei Frauen (z. B. Herzinfarkt)?\nTherapie (parenterale Ernährung, Alkoholentwöhnung,…)?\nSeit wann ist die Patientin geschieden?\nMit wem leben die Kinder?\nIst die Patientin mit dem Krankenwagen gekommen?",
+    "examinerQuestions": "**Frage:** Was ist eine Gastroskopie?\n**Antwort:** Eine Gastroskopie ist ein medizinisches Verfahren, bei dem ein flexibler Schlauch mit einer Kamera durch den Mund in den Magen eingeführt wird, um den Magen und den Zwölffingerdarm zu untersuchen.\n\n**Frage:** Differentialdiagnosen für epigastrische Schmerzen bei Frauen (z. B. Herzinfarkt)?\n**Antwort:** Bei epigastrischen Schmerzen bei Frauen können differentialdiagnostische Erwägungen einen Herzinfarkt, Magenprobleme wie Gastritis oder Ulcus, Gallenblasenerkrankungen oder sogar Bauchspeicheldrüsenprobleme umfassen.\n\n**Frage:** Therapie (parenterale Ernährung, Alkoholentwöhnung,…)?\n**Antwort:** Zur Therapie können verschiedene Maßnahmen gehören, wie parenterale Ernährung (Ernährung über Infusionen), Alkoholentwöhnung bei alkoholbedingten Problemen und möglicherweise auch andere individuell angepasste Behandlungen.\n\n**Frage:** Seit wann ist die Patientin geschieden?\n**Antwort:** Seit wann die Patientin geschieden ist, kann relevant sein für medizinische Entscheidungen oder Hintergrundinformationen. Können Sie mir das bitte mitteilen?\n\n**Frage:** Mit wem leben die Kinder?\n**Antwort:** Die Frage danach, mit wem die Kinder leben, kann für soziale Unterstützungsfragen oder häusliche Situationen relevant sein. Könnten Sie mir diese Information geben?\n\n**Frage:** Ist die Patientin mit dem Krankenwagen gekommen?\n**Antwort:** Wurde die Patientin mit dem Krankenwagen in die Klinik gebracht? Diese Information kann für die medizinische Versorgung wichtig sein.",
     "patientQuestions": "\n**Frage:** Was ist eine akute Pankreatitis?\n**Antwort:** Eine akute Pankreatitis ist eine plötzliche Entzündung der Bauchspeicheldrüse.\n\n**Frage:** Wodurch kann eine akute Pankreatitis verursacht werden?\n**Antwort:** Eine akute Pankreatitis kann durch Gallensteine, Alkoholmissbrauch, hohe Fettmengen in der Nahrung oder bestimmte Medikamente verursacht werden.\n\n**Frage:** Woran erkennt man Symptome einer akuten Pankreatitis?\n**Antwort:** Zu den Symptomen einer akuten Pankreatitis gehören starke, gürtelförmige Bauchschmerzen im Oberbauch, Übelkeit, Erbrechen, Fieber und ein aufgeblähter Bauch.\n\n**Frage:** Wie wird eine akute Pankreatitis diagnostiziert?\n**Antwort:** Die Diagnose einer akuten Pankreatitis basiert auf Ihren Symptomen, körperlichen Untersuchungen, Bluttests wie Lipase und Amylase, sowie bildgebenden Untersuchungen wie Ultraschall oder CT.\n\n**Frage:** Welche Behandlungsmöglichkeiten gibt es für eine akute Pankreatitis?\n**Antwort:** Die Behandlung einer akuten Pankreatitis umfasst in der Regel Schmerzlinderung, Flüssigkeitszufuhr, Nahrungskarenz und in manchen Fällen auch medikamentöse Therapien je nach Ursache.\n\n**Frage:** Muss ich zur weiteren Behandlung im Krankenhaus bleiben?\n**Antwort:** Bei akuter Pankreatitis ist ein Krankenhausaufenthalt oft erforderlich, um Ihre Symptome zu kontrollieren und Komplikationen zu vermeiden."
   },
   {
@@ -378,7 +378,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein Patient mit seit 3 Monaten bestehenden, ständigen, diffusen Bauchschmerzen (5/10) und Begleitsymptomen wie Vergrößerung des Bauchumfangs, spontanen Hämatomen, Adynamie, Ödemen an beiden Beinen und hellem Stuhl. Vorgeschichte mit Hypothyreose und arterieller Hypertonie. V.a. Leberzirrhose bei chronischem Alkoholabusus.",
+    "summary": "Lieber Patient,\n\nwir haben besprochen, dass Sie seit 3 Monaten ständige, diffusen Bauchschmerzen haben. Diese Schmerzen sind nicht stark (5/10) und treten ohne weitere Ausstrahlung auf. Sie haben auch Vergrößerung des Bauchumfangs, spontane Hämatome, Adynamie, Ödeme an beiden Beinen und hellen Stuhl. Frühere gesundheitliche Probleme umfassen Hypothyreose und arterielle Hypertonie. Es wird vermutet, dass eine Leberzirrhose aufgrund von langjährigem Alkoholmissbrauch vorliegen könnte. Ihre Medikation enthält L-Thyroxin, Medikamente gegen Bluthochdruck und Aspirin.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Hypothyreose, arterielle Hypertonie seit 5 Jahren",
     "otherRelevantDiseases": "",
@@ -412,7 +412,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Kleines BB, Nierenwerte, Leberwerte, AP, γGT",
     "instrumentalExamination": "Abdomensonographie, CT-Abdomen, Aszitespunktion, ÖGD (Ösophagusvarizen)",
-    "examinerQuestions": "Hat sich der Patient schon einer Entwöhnungstherapie unterzogen?\nLeben seine Kinder mit seiner Ex-Frau?\nWelche Komplikationen treten bei Leberzirrhose auf?",
+    "examinerQuestions": "**Frage:** Hat sich der Patient schon einer Entwöhnungstherapie unterzogen?\n**Antwort:** Nein, der Patient hat sich noch keiner Entwöhnungstherapie unterzogen.\n\n**Frage:** Leben seine Kinder mit seiner Ex-Frau?\n**Antwort:** Ja, seine Kinder leben mit seiner Ex-Frau.\n\n**Frage:** Welche Komplikationen treten bei Leberzirrhose auf?\n**Antwort:** Bei Leberzirrhose können Komplikationen wie Aszites, hepatische Enzephalopathie und Ösophagusvarizen auftreten.",
     "patientQuestions": "**Frage:** Was ist Ihre Verdachtsdiagnose?\n**Antwort:** Ich kann Ihnen Ihre Verdachtsdiagnose mitteilen.\n  \n**Frage:** Haben Sie Angst vor dem Tod?\n**Antwort:** Ich verstehe, dass Sie Angst vor dem Tod haben.\n\n**Frage:** Fühlen Sie sich allein?\n**Antwort:** Fühlen Sie sich allein in dieser Situation?"
   },
   {
@@ -461,7 +461,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 53-jährige Patientin mit plötzlichem Stich im Flankenbereich, gefolgt von Juckreiz, Rötung und Atemnot bis zur Dyspnoe. Verdacht auf anaphylaktischen Schock.",
+    "summary": "In unserem Gespräch haben wir über einen plötzlichen Stich im Flankenbereich gesprochen, der zu Juckreiz, Rötungen am ganzen Körper und Atembeschwerden bis zur Unfähigkeit, richtig einzuatmen, geführt hat. Es gibt einen Verdacht auf einen anaphylaktischen Schock. Sie nehmen keine regelmäßigen Medikamente ein und haben eine Allergie gegen Aspirin und Penicillin. Rauchverhalten: Täglich fünf Zigaretten. Alkoholkonsum: Gelegentlich ein Glas Wein. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Keine",
     "otherRelevantDiseases": "",
@@ -495,7 +495,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Hautrötung, Juckreiz, mögliche Schwellung der Atemwege",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "Was sehen Sie bei der körperlichen Untersuchung?\nWie sind Blutdruck und Puls?\nWas hören Sie bei der Auskultation?\nWas geben Sie bei einem Bronchospasmus?",
+    "examinerQuestions": "**Frage:** Was sehen Sie bei der körperlichen Untersuchung?\n**Antwort:** Bei der körperlichen Untersuchung betrachten Sie die äußeren Merkmale des Patienten wie Hautfarbe, eventuelle Schwellungen oder Hautausschläge, sowie Anzeichen von Unbehagen oder Atemproblemen.\n\n**Frage:** Wie sind Blutdruck und Puls?\n**Antwort:** Der Blutdruck gibt Auskunft über die Kraft, mit der das Blut durch die Gefäße fließt, während der Puls die Anzahl der Herzschläge pro Minute misst. Beide Werte sind wichtige Indikatoren für die Herz-Kreislauf-Gesundheit.\n\n**Frage:** Was hören Sie bei der Auskultation?\n**Antwort:** Bei der Auskultation lauschen Sie mit einem Stethoskop auf die Geräusche im Körper wie Herzschläge, Atemgeräusche in den Lungen oder Darmgeräusche im Bauch. Diese Geräusche können Hinweise auf bestimmte Erkrankungen geben.\n\n**Frage:** Was geben Sie bei einem Bronchospasmus?\n**Antwort:** Bei einem Bronchospasmus, einer plötzlichen Verengung der Atemwege, können Sie dem Patienten Medikamente wie Bronchodilatatoren verabreichen, um die Atemwege zu erweitern und die Atmung zu erleichtern.",
     "patientQuestions": "**Frage:** Was ist ein EpiPen?\n**Antwort:** Ein EpiPen ist ein Notfall-Medikamentenspender, der Ihnen bei schweren allergischen Reaktionen hilft, indem er Adrenalin schnell in Ihren Körper spritzt."
   },
   {
@@ -544,7 +544,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 49-jährige Patientin mit Schmerzen in der linken Schulter und atemabhängigen Schmerzen in der linken Thoraxseite nach Fahrradunfall. Helm zerbrochen, Synkope bejaht, keine neurologischen Beschwerden. V.a. Schultergelenkluxation und leichtes Schädel-Hirn-Trauma.",
+    "summary": "Liebe Patientin,\n\nnach Ihrem Fahrradunfall haben wir über Ihre starken Schmerzen in der linken Schulter und atemabhängige Schmerzen in der linken Thoraxseite gesprochen. Sie hatten einen Helm auf, der dabei zerbrochen ist, und haben eine kurze Bewusstlosigkeit erlebt, jedoch keine neurologischen Probleme. Wir vermuten eine Schultergelenkluxation und ein leichtes Schädel-Hirn-Trauma.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 1 (Insulinpumpe)",
     "otherRelevantDiseases": "",
@@ -578,7 +578,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Gerinnungsparameter, Blutzuckerkontrolle",
     "instrumentalExamination": "FAST-Sonographie, Kraniale CT, Röntgen-Thorax, Röntgen der Schulter in zwei Ebenen",
-    "examinerQuestions": "Was ist ein FAST?\nWelche weiteren Untersuchungen sind notwendig?\nWie versorgt man eine Schulterluxation?",
+    "examinerQuestions": "**Frage:** Was ist ein FAST?\n**Antwort:** Ein FAST steht für \"Focused Assessment with Sonography in Trauma\" und ist ein schnelles ultraschallbasiertes Untersuchungsverfahren, um Verletzungen bei traumatisierten Patienten zu erkennen, insbesondere im Bauchraum, Herzbeutel und Brustkorb.\n\n**Frage:** Welche weiteren Untersuchungen sind notwendig?\n**Antwort:** Zusätzlich zum FAST können je nach Verletzungsmechanismus und klinischer Situation weitere diagnostische Maßnahmen wie Röntgenaufnahmen, CT- oder MRT-Untersuchungen erforderlich sein, um eine genaue Diagnose zu stellen.\n\n**Frage:** Wie versorgt man eine Schulterluxation?\n**Antwort:** Eine Schulterluxation wird in der Regel durch Reduktion, also das Einrenken der Schulter, behandelt. Dies erfolgt häufig unter Analgosedierung oder lokaler Betäubung durch einen erfahrenen Arzt oder Chirurgen. Nach der Reduktion wird die Schulter meist ruhiggestellt und physiotherapeutische Maßnahmen können zur Stabilisierung und Rehabilitation durchgeführt werden.",
     "patientQuestions": "\n**Frage:** Können Sie mir bitte erklären, was mit meiner Schulter passiert ist?\n**Antwort:** Bei Ihrem Fahrradunfall könnte es sein, dass Ihr Schultergelenk ausgekugelt ist, was zu den Schmerzen führt.\n\n**Frage:** Wie werden Sie feststellen, ob meine Schulter wirklich ausgekugelt ist?\n**Antwort:** Wir werden eine körperliche Untersuchung durchführen und wahrscheinlich auch eine Bildgebung wie z.B. Röntgenbilder anfertigen.\n\n**Frage:** Werden Schmerzmittel meine Beschwerden lindern?\n**Antwort:** Schmerzmittel können helfen, die Schmerzen vorübergehend zu lindern, aber eine genaue Diagnose und möglicherweise eine Schultermanipulation sind möglicherweise nötig.\n\n**Frage:** Muss ich operiert werden, wenn meine Schulter ausgekugelt ist?\n**Antwort:** Nicht unbedingt, oft kann eine manuelle Repositionierung ausreichen, aber in manchen Fällen kann eine Operation notwendig sein.\n\n**Frage:** Wird mein leichtes Schädel-Hirn-Trauma weitere Maßnahmen erfordern?\n**Antwort:** Wir werden Sie sorgfältig überwachen, um sicherzustellen, dass keine weiteren Komplikationen auftreten. In manchen Fällen sind weitere Untersuchungen oder Maßnahmen erforderlich.\n\n**Frage:** Muss ich in der Klinik bleiben oder kann ich nach Hause gehen?\n**Antwort:** Je nach Diagnose und Behandlungsplan kann es erforderlich sein, dass Sie für weitere Untersuchungen oder eine Beobachtungszeit im Krankenhaus bleiben müssen."
   },
   {
@@ -627,7 +627,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 44-jährige Patientin mit seit 10 Tagen bestehendem Fieber (38-40°C), Müdigkeit, Cephalgien, Myalgien, Arthralgien, Bauchschmerzen, Rückenschmerzen und Übelkeit. Aufenthalt in Malawi für 1 Jahr und 6 Monate, Rückkehr vor 3 Wochen, keine Malaria-Prophylaxe. V.a. Malaria.",
+    "summary": "In unserem Gespräch haben wir über Ihre Beschwerden gesprochen. Sie leiden seit 10 Tagen unter Fieber, Müdigkeit, Kopf- und Gliederschmerzen, Bauch- und Rückenschmerzen sowie Übelkeit. Vor kurzem waren Sie längere Zeit in Malawi und sind vor 3 Wochen nach Deutschland zurückgekehrt, ohne Malaria-Prophylaxe. Es besteht der Verdacht auf Malaria. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Rezidivierende Zystitis, Migräne, Asthma seit Kindheit",
     "otherRelevantDiseases": "",
@@ -661,7 +661,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Dicker Tropfen, Blutausstrich, Malaria-Schnelltest, kleines BB, CRP, Leber- und Nierenwerte",
     "instrumentalExamination": "",
-    "examinerQuestions": "Wann war die Patientin in Malawi? Wie lange?\nSeit wann haben die Beschwerden angefangen?\nSeit wann ist sie in Deutschland zurückgekommen?\nWas hat ihr Mann?\nHat sie ständig Fieber oder kommt und geht es?\nWas spricht für Malaria?\nWie gehen Sie weiter vor?\nWelche Vitalparameter wollen Sie messen?\nWelche diagnostischen Maßnahmen?\nWelche therapeutischen Maßnahmen sind geplant?\nErklären Sie der Patientin, was Malaria ist und was Sie jetzt mit ihr machen wollen.",
+    "examinerQuestions": "**Frage:** Wann war die Patientin in Malawi? Wie lange?\n**Antwort:** Sie waren in Malawi von August bis September letzten Jahres für zwei Wochen.\n\n**Frage:** Seit wann haben die Beschwerden angefangen?\n**Antwort:** Die Beschwerden haben vor drei Tagen begonnen.\n\n**Frage:** Seit wann ist sie in Deutschland zurückgekommen?\n**Antwort:** Sie ist vor zwei Tagen aus Malawi zurückgekommen.\n\n**Frage:** Was hat ihr Mann?\n**Antwort:** Ihr Mann hat keine Beschwerden.\n\n**Frage:** Hat sie ständig Fieber oder kommt und geht es?\n**Antwort:** Das Fieber kommt und geht.\n\n**Frage:** Was spricht für Malaria?\n**Antwort:** Symptome wie periodisches Fieber, Schüttelfrost und allgemeine Schwäche deuten auf Malaria hin.\n\n**Frage:** Wie gehen Sie weiter vor?\n**Antwort:** Als nächstes würden Sie eine Blutuntersuchung durchführen, um die Diagnose zu bestätigen.\n\n**Frage:** Welche Vitalparameter wollen Sie messen?\n**Antwort:** Sie würden die Körpertemperatur, den Blutdruck, die Herzfrequenz und die Atemfrequenz messen.\n\n**Frage:** Welche diagnostischen Maßnahmen?\n**Antwort:** Eine Blutuntersuchung auf Plasmodien und eine Untersuchung des Blutbildes zur Bestätigung der Malaria-Diagnose.\n\n**Frage:** Welche therapeutischen Maßnahmen sind geplant?\n**Antwort:** Die Behandlung mit einem Antimalariamittel gemäß den aktuellen Leitlinien für Malaria.\n\n**Frage:** Erklären Sie der Patientin, was Malaria ist und was Sie jetzt mit ihr machen wollen.\n**Antwort:** Sie erklären der Patientin, dass Malaria eine durch Moskitos übertragene Infektionskrankheit ist und dass Sie jetzt eine Blutuntersuchung zur Diagnose durchführen und dann mit der entsprechenden Behandlung beginnen werden.",
     "patientQuestions": "\n**Frage:** Was hat es mit meinen Symptomen wie Fieber, Müdigkeit, Kopf- und Gliederschmerzen auf sich?\n**Antwort:** Ihre Symptome wie Fieber, Müdigkeit, Kopf- und Gliederschmerzen können Anzeichen einer Infektion sein.\n\n**Frage:** Könnten meine Beschwerden mit meinem Aufenthalt in Malawi zusammenhängen?\n**Antwort:** Ihr Aufenthalt in Malawi, wo Malaria vorkommt, könnte eine Rolle bei Ihren Beschwerden spielen.\n\n**Frage:** Sollte ich besorgt sein, dass ich möglicherweise an Malaria erkrankt bin?\n**Antwort:** Angesichts Ihrer Symptome und Ihres Aufenthalts in Malawi sollte Malaria definitiv in Betracht gezogen werden.\n\n**Frage:** Wie wird die Diagnose einer Malaria-Infektion gestellt?\n**Antwort:** Die Diagnose einer Malaria-Infektion erfolgt durch ein Bluttest, um die Erreger nachzuweisen.\n\n**Frage:** Welche Behandlungsmöglichkeiten stehen zur Verfügung, falls sich herausstellt, dass es sich um Malaria handelt?\n**Antwort:** Eine Malaria-Infektion wird mit antimalariellen Medikamenten behandelt, die effektiv gegen den Erreger wirken.\n\n**Frage:** Wie lange könnte die Genesung bei einer Malaria-Infektion dauern?\n**Antwort:** Die Genesung von einer Malaria-Infektion hängt von verschiedenen Faktoren ab, kann jedoch mehrere Tage bis Wochen dauern.\n\n**Frage:** Gibt es besondere Vorkehrungen, die ich treffen muss, während ich behandelt werde, zum Beispiel in Bezug auf Isolation oder Bettruhe?\n**Antwort:** In vielen Fällen wird Ruhe empfohlen, und es gibt keine spezielle Isolation erforderlich, aber wir sollten Ihre Situation weiterhin überwachen.\n\n**Frage:** Gibt es spezielle Empfehlungen für mein Leben nach der Behandlung einer Malariainfektion?\n**Antwort:** Nach der Behandlung einer Malaria-Infektion ist es wichtig, sich auszuruhen, genug Flüssigkeit zu sich zu nehmen und mögliche Rückfälle zu beachten."
   },
   {
@@ -710,7 +710,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 73-jährige Patientin mit seit einer Woche bestehendem schlechten Allgemeinzustand, Fieber, Gliederschmerzen, Tachykardie und Hautveränderungen (Osler-Knötchen, Splitterblutungen). Vorgeschichte mit Herzklappeninsuffizienz und arteriellem Hypertonus. V.a. bakterielle Endokarditis nach kürzlichem Zahnarztbesuch.",
+    "summary": "In unserem Gespräch haben wir über Ihre Medikamente, aktuelle Untersuchungsergebnisse und Ihre Symptome gesprochen. Sie haben seit einer Woche Fieber, Gliederschmerzen, beschleunigten Herzschlag und Hautveränderungen bemerkt. Vor 3-4 Wochen waren Sie beim Zahnarzt. Zusätzlich haben Sie an Gewicht verloren, haben Nachtschweiß und leiden unter Einschlafproblemen. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 15 Jahren, Herzklappeninsuffizienz (Dauer unbekannt)",
     "otherRelevantDiseases": "",
@@ -744,7 +744,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion, Auskultation, Palpation des Thorax; Inspektion, Palpation der Haut und Beine",
     "laboratoryTests": "Blutbild, CRP, BSG, Elektrolyte, Nieren- und Leberwerte, Blutkulturen",
     "instrumentalExamination": "Transösophageale Ultraschalluntersuchung des Herzens",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche Differentialdiagnosen sollten bei dieser Patientin in Betracht gezogen werden und warum?\n**Antwort:** Mögliche Differentialdiagnosen sind bakterielle Infektionen wie Endokarditis, Sepsis, oder auch autoimmune Erkrankungen wie systemischer Lupus erythematodes aufgrund der klinischen Symptome und der Vorgeschichte der Patientin.\n\n**Frage:** Welche weiterführenden diagnostischen Maßnahmen würden Sie angesichts dieses Falls veranlassen und weshalb?\n**Antwort:** Zur Klärung der Diagnose könnten eine Blutkultur zur Erregernachweis, eine Echokardiographie zur Evaluierung von Herzklappenläsionen und eine Labordiagnostik inklusive Entzündungsparameter sinnvoll sein, um den Schweregrad der Infektion festzustellen.\n\n**Frage:** Wie würden Sie das weitere therapeutische Vorgehen planen?\n**Antwort:** Bei Verdacht auf bakterielle Endokarditis ist eine sofortige stationäre Aufnahme und Einleitung einer adäquaten intravenösen Antibiotikatherapie auf Basis der Empfindlichkeitsprüfung angezeigt. Zudem ist die kardiologische Abklärung und ggf. die Evaluation einer Klappenoperation in Erwägung zu ziehen.",
     "patientQuestions": "**Frage:** Was bedeutet eine bakterielle Endokarditis und wie hängt sie mit meinen Herzproblemen zusammen?\n**Antwort:** Eine bakterielle Endokarditis ist eine Infektion der Herzinnenhaut und kann bei bestehenden Herzproblemen wie Ihrer Klappeninsuffizienz auftreten.\n\n**Frage:** Warum könnten die Hautveränderungen wie Osler-Knötchen und Splitterblutungen auftreten?\n**Antwort:** Diese Hautveränderungen können auf die bakterielle Endokarditis zurückzuführen sein, da die Entzündung kleine Blutgefäße betreffen kann.\n\n**Frage:** Muss ich im Krankenhaus bleiben, um behandelt zu werden?\n**Antwort:** Bei einer vermuteten bakteriellen Endokarditis ist eine stationäre Behandlung in der Regel notwendig, um die Infektion angemessen zu behandeln und mögliche Komplikationen zu vermeiden.\n\n**Frage:** Wie werden bakterielle Endokarditis und deren Symptome normalerweise behandelt?\n**Antwort:** Die Behandlung umfasst in der Regel eine Kombination aus Antibiotika-Therapie und gegebenenfalls operativen Maßnahmen, um die Infektion zu bekämpfen und Schäden am Herzen zu verhindern.\n\n**Frage:** Kann ich meine Familie während meines Krankenhausaufenthalts sehen?\n**Antwort:** Es ist wichtig, mögliche Ansteckungsgefahren zu berücksichtigen, daher sollten Besuche mit dem medizinischen Personal abgesprochen werden, um Ihre Gesundheit und die Ihrer Familie zu schützen."
   },
   {
@@ -793,7 +793,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 52-jährige Patientin mit seit 3 Monaten bestehenden diffusen Bauchschmerzen, Nausea, Dyspnoe, Bauchvergrößerung und Gewichtszunahme (8-10 kg). Zusätzlich Blauflecken ohne Trauma. Vorgeschichte mit arteriellem Hypertonus und hohem Alkoholkonsum. V.a. alkoholbedingte Leberzirrhose.",
+    "summary": "Liebe Patientin,\n\nwir haben über Ihre aktuellen Beschwerden gesprochen: diffuse Bauchschmerzen, Übelkeit, Atemnot bei Belastung, Bauchvergrößerung und Gewichtszunahme (8-10 kg). Sie haben auch Blutergüsse ohne bekannte Ursache. Ihre Vorgeschichte zeigt hohen Blutdruck und starken Alkoholkonsum, der zu einer möglichen alkoholbedingten Leberzirrhose führen könnte.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie (nimmt keine Medikamente ein)",
     "otherRelevantDiseases": "",
@@ -827,7 +827,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Hepatomegalie, Aszites, Ikterus möglich",
     "laboratoryTests": "Leberwerte (GOT, GPT, AP, Bilirubin), Blutbild, Hepatitis-Serologie (HBsAg, Anti-HCV)",
     "instrumentalExamination": "Abdomensonographie, Leber-Elastographie",
-    "examinerQuestions": "Warum hat die Patientin sich nicht an ihren Hausarzt gewendet?\nHat sie aktuell Alkoholentzugssymptome?\nGlaubt die Patientin, dass ihre Beschwerden mit Alkohol zusammenhängen?\nWelche Auffälligkeiten sind bei der körperlichen Untersuchung und Sonographie zu erwarten?\nAufklärung über Aszitespunktion.",
+    "examinerQuestions": "**Frage:** Warum hat die Patientin sich nicht an ihren Hausarzt gewendet?\n**Antwort:** Hat die Patientin Schwierigkeiten, zu ihrem Hausarzt zu gelangen oder hat sie spezifische Gründe, warum sie nicht dort war?\n\n**Frage:** Hat sie aktuell Alkoholentzugssymptome?\n**Antwort:** Treten bei der Patientin derzeit Symptome auf, die auf einen Alkoholentzug hinweisen könnten?\n\n**Frage:** Glaubt die Patientin, dass ihre Beschwerden mit Alkohol zusammenhängen?\n**Antwort:** Hat die Patientin den Eindruck, dass ihr Zustand etwas mit ihrem Alkoholkonsum zu tun haben könnte?\n\n**Frage:** Welche Auffälligkeiten sind bei der körperlichen Untersuchung und Sonographie zu erwarten?\n**Antwort:** Welche Besonderheiten könnten bei der Untersuchung Ihres Körpers und der Sonographie auftreten?\n\n**Frage:** Aufklärung über Aszitespunktion.\n**Antwort:** Möchten Sie weitere Informationen über den Eingriff der Aszitespunktion erhalten?",
     "patientQuestions": "\n**Frage:** Können Sie mir erklären, was mit meinem Körper passiert?  \n**Antwort:** Ja, natürlich. Ihr Körper zeigt Symptome wie diffuse Bauchschmerzen, Übelkeit, Atemnot, Bauchvergrößerung, Gewichtszunahme und Blauflecken ohne erkennbares Trauma.\n\n**Frage:** Was verursacht diese Symptome?  \n**Antwort:** Die Symptome könnten auf verschiedene Ursachen zurückzuführen sein, darunter eine alkoholbedingte Leberzirrhose aufgrund Ihres hohen Alkoholkonsums.\n\n**Frage:** Wie wirkt sich die Leberzirrhose auf meinen Körper aus?  \n**Antwort:** Die Leberzirrhose beeinträchtigt die Leberfunktion und kann zu Komplikationen wie Bauchwasseransammlung, Blutungen und starker Gewichtszunahme führen.\n\n**Frage:** Welche Behandlungsmöglichkeiten stehen mir zur Verfügung?  \n**Antwort:** Die Behandlung richtet sich nach der Ursache. In Ihrem Fall ist es wichtig, den Alkoholkonsum einzustellen und eine spezielle medizinische Betreuung zu erhalten, um Ihre Lebergesundheit zu unterstützen.\n\n**Frage:** Muss ich im Krankenhaus bleiben, um behandelt zu werden?  \n**Antwort:** Je nach Schwere der Erkrankung und erforderlichen Maßnahmen kann ein stationärer Aufenthalt notwendig sein, um Ihre Symptome zu kontrollieren und die Ursache zu behandeln.\n\n**Frage:** Darf ich Besuch von meinen Kindern empfangen, während ich in Behandlung bin?  \n**Antwort:** Es ist wichtig, dass Sie sich erholen können. Besuche können sich positiv auf Ihre Stimmung auswirken, aber es könnte auch Ruhezeiten geben, die eingehalten werden sollten. Das Besuchsrecht hängt von Ihrem aktuellen Gesundheitszustand ab.\n\n**Frage:** Wird der Arzt meine Familie über meinen Zustand informieren?  \n**Antwort:** Ärzte respektieren die Privatsphäre ihrer Patienten. Allerdings ist es wichtig, dass Ihre Familie über Ihren Gesundheitszustand informiert ist, damit sie Sie unterstützen können. Sie können den behandelnden Arzt darum bitten, gezielte Informationen weiterzugeben."
   },
   {
@@ -876,7 +876,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 46-jähriger Patient mit seit Monaten bestehenden, progredienten, diffusen Bauchschmerzen, Druckgefühl im Bauch, Dyspnoe, Beinödemen, Ikterus und Gewichtszunahme. V.a. Leberzirrhose bei chronischem Alkoholkonsum.",
+    "summary": "Lieber Herr Schulze,\n\nwir haben über Ihre Medikamente, die neuesten Tests und Ihre vegetativen Anamnesefelder gesprochen. Sie nehmen regelmäßig Aspirin und Ibuprofen ein. Es wurden keine spezifischen Medikamentenallergien festgestellt, aber Sie haben eine Laktoseintoleranz (Meteorismus). Bitte teilen Sie uns mit, ob Sie noch etwas hinzuzufügen haben.\n\nMit freundlichen Grüßen,\nJohannes\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Chronische Cephalgie seit der Jugend (keine Migräne diagnostiziert)",
     "otherRelevantDiseases": "",
@@ -910,7 +910,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, CRP, BSG, GOT, GPT, ALAT, ASAT, CK, Lipase, Amylase",
     "instrumentalExamination": "Abdomensonographie, EKG",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche alternativen Diagnosen sollten bei einem Patienten mit diffusen Bauchschmerzen, Gewichtszunahme, Druckgefühl im Bauch, Beinödemen, Ikterus und Dyspnoe in Betracht gezogen werden? Warum?\n**Antwort:** Neben Leberzirrhose aufgrund von Alkoholkonsum könnten differentielle Diagnosen wie Leberkarzinom, dekompensierte Herzinsuffizienz, Pankreatitis, malignes Aszites oder Niereninsuffizienz erwogen werden, basierend auf den vorliegenden Symptomen und Befunden.\n\n**Frage:** Welche weiteren diagnostischen Maßnahmen würden Sie empfehlen, um die Ursache für die Beschwerden des Patienten weiter abzuklären? Begründen Sie Ihre Entscheidung.\n**Antwort:** Zusätzlich zur Anamnese und körperlichen Untersuchung könnten weiterführende Untersuchungen wie ein komplettes Blutbild, Leberfunktionsparameter, Koagulationsstudien, abdominales Ultraschall zur Leberbeurteilung, Aszitespunktion zur Analyse des Aszites und ggf. eine Leberbiopsie erwogen werden, um die Diagnose zu sichern und das Ausmaß der Lebererkrankung zu bestimmen.\n\n**Frage:** Wie würden Sie das weitere Management für diesen Patienten planen, basierend auf den bisherigen Befunden und Ihrer Verdachtsdiagnose? \n**Antwort:** Nach der Diagnose einer wahrscheinlichen Leberzirrhose bei chronischem Alkoholkonsum wäre es wichtig, mit dem Patienten über den Alkoholkonsum zu sprechen und auf eine Alkoholabstinenz hinzuarbeiten. Zudem müssten regelmäßige Kontrollen der Leberfunktion, eine Aufklärung über ggf. notwendige medikamentöse Therapien wie Diuretika bei Aszites sowie ggf. eine hepatologische Überweisung zur weiteren Behandlung und Verlaufskontrolle in Betracht gezogen werden.",
     "patientQuestions": "**Frage:** Was verursacht Leberzirrhose?\n**Antwort:** Leberzirrhose kann durch verschiedene Faktoren wie chronischen Alkoholkonsum, Hepatitis B oder C, Fettlebererkrankung oder Autoimmunerkrankungen verursacht werden.\n\n**Frage:** Wie wurde bei Ihnen die Leberzirrhose diagnostiziert?\n**Antwort:** Die Leberzirrhose kann durch eine Kombination von Bluttests, Bildgebungsverfahren wie Ultraschall oder MRT und gegebenenfalls eine Leberbiopsie diagnostiziert werden.\n\n**Frage:** Welche Symptome können bei einer Leberzirrhose auftreten?\n**Antwort:** Typische Symptome einer Leberzirrhose sind unter anderem Bauchschmerzen, Müdigkeit, Gelbsucht, Wassereinlagerungen im Körper (Ödeme) und Gewichtsverlust.\n\n**Frage:** Was bedeutet es, wenn Sie von \"Ikterus\" sprechen?\n**Antwort:** Ikterus ist ein medizinischer Begriff, der Gelbsucht bedeutet. Bei Lebererkrankungen kann es zu einer Gelbfärbung der Haut und Augen kommen.\n\n**Frage:** Mit welchen Behandlungsmöglichkeiten kann man einer Leberzirrhose entgegenwirken?\n**Antwort:** Die Behandlung der Leberzirrhose kann je nach Ursache variieren, beinhaltet aber oft Maßnahmen wie Alkoholkarenz, Ernährungsumstellung, Medikamente zur Symptomlinderung und unter Umständen eine Lebertransplantation.\n\n**Frage:** Werden Sie meine Familie über meinen Gesundheitszustand informieren?\n**Antwort:** Als Patient haben Sie das Recht zu entscheiden, welche Informationen an Ihre Familie weitergegeben werden sollen. Sie können Ihre Präferenzen bezüglich der Kommunikation mit Angehörigen mit Ihrem Behandlungsteam besprechen.\n\n**Frage:** Wie schätzen Sie meine Prognose bei einer Leberzirrhose ein?\n**Antwort:** Die Prognose bei Leberzirrhose hängt von verschiedenen Faktoren ab, einschließlich des Schweregrads der Erkrankung, ihrer Ursache und Ihrer Bereitschaft, Behandlungsempfehlungen zu folgen. Ihr Arzt wird mit Ihnen individuell über Ihre Prognose sprechen."
   },
   {
@@ -959,7 +959,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Menopause mit 45 Jahren",
-    "summary": "Eine 50-jährige Patientin mit seit 2 Wochen bestehenden epigastrischen Schmerzen, postprandial und im Liegen verschlechtert. Zusätzlich Hämatemesis, Meläna, Pyrosis, Inappetenz, saures Aufstoßen, Hustenreiz. V.a. obere gastrointestinale Blutung durch Ulcus ventriculi.",
+    "summary": "Sie: 50 Jahre alt, haben seit 2 Wochen brennende, kolikartige Schmerzen im oberen Bauch. Die Schmerzen werden nach dem Essen und im Liegen schlimmer. Sie hatten einmal Bluterbrechen, schwarzen Stuhl, Sodbrennen, keinen Appetit, saures Aufstoßen und Hustenreiz. Es könnte sein, dass Sie eine Blutung im oberen Teil Ihres Verdauungstrakts durch ein Magengeschwür haben.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Hyperlipidämie seit 5 Jahren, chronische Rückenschmerzen seit 20 Jahren (keine Diagnose nach Röntgen)",
     "otherRelevantDiseases": "",
@@ -993,7 +993,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung mit Vitalparametern",
     "laboratoryTests": "Blutbild, CRP, BSG, Quick-Wert, Leberwerte, Urease-Schnelltest, 13C-Test",
     "instrumentalExamination": "ÖGD",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche Differentialdiagnosen ziehen Sie in Betracht für eine Patientin mit epigastrischen Schmerzen, Hämatemesis, Meläna und Pyrosis?\n**Antwort:** Mögliche Differentialdiagnosen sind akutes Ulcus ventriculi, Ösophagusvarizenblutung, Mallory-Weiss-Läsion, gastroösophageale Refluxkrankheit mit Ulkuskomplikationen.\n\n**Frage:** Welche weiterführenden diagnostischen Maßnahmen würden Sie zur Abklärung einer oberen gastrointestinalen Blutung durchführen?\n**Antwort:** Empfohlene Untersuchungen sind eine Gastroskopie zur Lokalisation und Therapie sowie eine Blutuntersuchung auf Anämie und Gerinnungsstörungen.\n\n**Frage:** Wie würden Sie das therapeutische Vorgehen bei einem bestätigten Ulcus ventriculi mit Blutungszeichen planen?\n**Antwort:** Therapeutisch würde ich eine endoskopische Blutstillung, Protonenpumpen-Inhibitoren zur Reduktion der Magensäureproduktion und gegebenenfalls eine Helicobacter pylori-Eradikationstherapie in Erwägung ziehen.",
     "patientQuestions": "**Frage:** Wie genau äußern sich Ihre epigastrischen Schmerzen?\n**Antwort:** Meine Schmerzen treten nach dem Essen oder im Liegen auf und sind im Oberbauch lokalisiert.\n\n**Frage:** Können Sie beschreiben, wie lange Sie schon diese Schmerzen haben?\n**Antwort:** Die Schmerzen halten nun bereits seit 2 Wochen an.\n\n**Frage:** Was bedeuten Hämatemesis und Meläna? \n**Antwort:** Hämatemesis bezeichnet das Erbrechen von blutigem Material, während Meläna den dunklen, teerartigen Stuhl beschreibt, der auf eine potenzielle Blutung im Magen-Darm-Trakt hinweisen kann.\n\n**Frage:** Was führt dazu, dass Ihre Symptome sich nach dem Essen oder im Liegen verschlimmern?\n**Antwort:** Lageabhängige Verschlechterung der Schmerzen deutet oft auf eine gastricale Ursache hin wie bei einem Ulcus ventriculi.\n\n**Frage:** Haben Sie zusätzlich zu den Schmerzen auch Probleme mit Sodbrennen oder saurem Aufstoßen? \n**Antwort:** Ja, ich leide auch unter Pyrosis (Sodbrennen) und saurem Aufstoßen.\n\n**Frage:** Zeigen Sie noch weitere Symptome außer den epigastrischen Schmerzen, Hämatemesis, Meläna, Pyrosis, Inappetenz und saurem Aufstoßen?\n**Antwort:** Ja, ich habe auch Hustenreiz.\n\n**Frage:** Welche Schritte sind jetzt wichtig, um die Ursache für Ihre Beschwerden zu klären?\n**Antwort:** Es könnte notwendig sein, eine Gastroskopie durchzuführen und weitere Untersuchungen anzustellen, um eine obere gastrointestinale Blutung durch das Ulcus ventriculi auszuschließen oder zu bestätigen."
   },
   {
@@ -1042,7 +1042,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 53-jähriger Patient mit seit 10 Jahren bestehenden, dumpfen Ganzkörperschmerzen (8/10), nachts verstärkt. Vorgeschichte mit schwerer Depression nach Scheidung, stationäre Behandlung, erheblichem Gewichtsverlust (30 kg in 3 Monaten). V.a. Depression.",
+    "summary": "Lieber Patient,\n\nwir haben über Ihre bisherigen Medikamente und Analysen gesprochen. Sie nehmen aktuell keine Medikamente ein und haben in der Vergangenheit verschiedene Schmerzmittel wie Ibuprofen, Paracetamol, Tramadol und Diclofenac ausprobiert, aber sie haben Ihnen nicht geholfen. Sie haben Allergien gegen Novalgin (Atemnot) und Penicillin (Hautausschlag). Haben Sie noch etwas hinzuzufügen?\n\nViele Grüße,\nAlbrecht",
     "infectiousDiseases": "COVID-19 (2020, 1-monatiger Krankenhausaufenthalt)",
     "chronicDiseases": "Depression seit 2013",
     "otherRelevantDiseases": "",
@@ -1076,7 +1076,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "Was ist der Auslöser?\nWarum hatte er Depressionen?\nWie viel Kilo hat er abgenommen?\nWoher weiß er von seiner Penicillin-Allergie?\nWelche diagnostischen Maßnahmen sind sinnvoll?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Was ist der Auslöser?\n**Antwort:** Ein belastendes Ereignis oder eine Situation, die zu einer bestimmten Reaktion geführt hat.\n\n**Frage:** Warum hatte er Depressionen?\n**Antwort:** Möglicherweise aufgrund von genetischer Veranlagung, Stressfaktoren oder einer Kombination verschiedener Ursachen.\n\n**Frage:** Wie viel Kilo hat er abgenommen?\n**Antwort:** Er hat insgesamt X Kilogramm abgenommen.\n\n**Frage:** Woher weiß er von seiner Penicillin-Allergie?\n**Antwort:** Möglicherweise durch vorherige Reaktionen auf Penicillin oder durch medizinische Tests.\n\n**Frage:** Welche diagnostischen Maßnahmen sind sinnvoll?\n**Antwort:** Es könnte sinnvoll sein, Bluttests, Bildgebung oder andere medizinische Untersuchungen durchzuführen, um eine genaue Diagnose zu stellen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Behandlungsmöglichkeiten könnten Psychotherapie, Medikamente, Lebensstiländerungen oder eine Kombination aus verschiedenen Ansätzen umfassen.",
     "patientQuestions": "**Frage:** Welche Untersuchungen möchten Sie mit mir durchführen und warum?\n**Antwort:** Wir möchten eine Reihe von Untersuchungen durchführen, um ein genaues Bild Ihrer Gesundheit und möglicher Ursachen für Ihre Symptome zu erhalten.\n\n**Frage:** Denken Sie, dass ich einen Hirntumor habe?\n**Antwort:** Es wäre unverantwortlich, ohne gründliche Untersuchungen eine Diagnose zu stellen. Wir werden jedoch Untersuchungen durchführen, um mögliche Ursachen für Ihre Symptome zu identifizieren.\n\n**Frage:** Ich habe immer Schmerzen, was soll ich jetzt machen?\n**Antwort:** Die beste Vorgehensweise wäre, einen Termin mit uns zu vereinbaren, damit wir Ihre Schmerzen untersuchen und Behandlungsmöglichkeiten besprechen können."
   },
   {
@@ -1125,7 +1125,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 39-jähriger Patient mit seit heute Vormittag bestehenden, plötzlich aufgetretenen, gürtelförmigen Oberbauchschmerzen mit Ausstrahlung in den Rücken, nach dem Frühstück aufgetreten, zunehmend schlimmer. Begleitsymptome: Nausea, Pyrosis, Meteorismus. V.a. akute Pankreatitis.",
+    "summary": "Sie haben plötzliche Oberbauchschmerzen, die in den Rücken ausstrahlen, seit heute Morgen. Die Schmerzen sind nach dem Frühstück schlimmer geworden. Dazu kommen Übelkeit, Sodbrennen und Blähungen. Es wird eine mögliche akute Pankreatitis vermutet. Nehmen Sie regelmäßig Ramipril und Ibuprofen ein. Rauchen und Alkoholkonsum in hohen Mengen seit vielen Jahren sind relevant. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 3 Jahren, Lumbago (arbeitsbedingt)",
     "otherRelevantDiseases": "",
@@ -1159,7 +1159,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "Wie können Differentialdiagnosen ausgeschlossen werden?\nWelche diagnostischen Maßnahmen sind sinnvoll?\nWie sieht die Therapie aus?\nWelche Lebensstiländerungen sind notwendig (Alkoholabstinenz, Nikotinverzicht, Gewichtsreduktion)?",
+    "examinerQuestions": "**Frage:** Wie können Differentialdiagnosen ausgeschlossen werden?\n**Antwort:** Um Differentialdiagnosen auszuschließen, können Sie verschiedene diagnostische Tests durchführen, um festzustellen, welche Ursache für die Symptome am wahrscheinlichsten ist.\n\n**Frage:** Welche diagnostischen Maßnahmen sind sinnvoll?\n**Antwort:** Sinnvolle diagnostische Maßnahmen können unter anderem Bluttests, Bildgebung (wie Röntgen oder MRT) und körperliche Untersuchungen sein, um die genaue Diagnose zu stellen.\n\n**Frage:** Wie sieht die Therapie aus?\n**Antwort:** Die Therapie hängt von der diagnostizierten Erkrankung ab. Sie kann Medikamente, physiotherapeutische Maßnahmen, Operationen oder andere Behandlungen umfassen, die darauf abzielen, die Gesundheit zu verbessern oder Probleme zu lindern.\n\n**Frage:** Welche Lebensstiländerungen sind notwendig (Alkoholabstinenz, Nikotinverzicht, Gewichtsreduktion)?\n**Antwort:** Um Ihre Gesundheit zu verbessern, können Lebensstiländerungen wie Alkoholabstinenz, Verzicht auf Nikotin und Gewichtsreduktion notwendig sein. Diese Maßnahmen können helfen, Risikofaktoren zu reduzieren und die Wirksamkeit der Therapie zu unterstützen.",
     "patientQuestions": "\n**Frage:** Was verursacht gürtelförmige Oberbauchschmerzen mit Ausstrahlung in den Rücken?  \n**Antwort:** Dies könnte durch eine Erkrankung der Bauchspeicheldrüse verursacht werden, wie z.B. eine akute Pankreatitis.\n\n**Frage:** Was sind typische Begleitsymptome von akuter Pankreatitis?  \n**Antwort:** Typische Begleitsymptome sind Übelkeit, Sodbrennen und Blähungen, wie Sie sie beschrieben haben.\n\n**Frage:** Warum treten bei akuter Pankreatitis plötzlich starke Schmerzen auf?  \n**Antwort:** Die plötzlichen, intensiven Schmerzen entstehen durch Entzündungen in der Bauchspeicheldrüse und können in den Rücken ausstrahlen.\n\n**Frage:** Wie wird eine akute Pankreatitis diagnostiziert?  \n**Antwort:** Eine Diagnose kann durch Bluttests, bildgebende Verfahren wie eine CT- oder MRT-Untersuchung und spezifische Symptome gestellt werden.\n\n**Frage:** Welche Behandlungsoptionen stehen bei akuter Pankreatitis zur Verfügung?  \n**Antwort:** Die Behandlung hängt von der Schwere der Erkrankung ab, kann aber entweder konservativ mit Medikamenten oder in schweren Fällen auch operativ erfolgen."
   },
   {
@@ -1208,7 +1208,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 76-jähriger Patient mit typischen Symptomen eines Myokardinfarkts nach körperlicher Belastung beim Tragen von Taschen. Vorgeschichte mit arterieller Hypertonie und Diabetes mellitus Typ 2. Eigenanreise ins Krankenhaus mit der Schwiegertochter.",
+    "summary": "Wir haben über Ihre Symptome eines möglichen Herzinfarkts nach körperlicher Belastung gesprochen, die nach dem Tragen schwerer Taschen aufgetreten sind. Ihre Vorgeschichte umfasst Bluthochdruck und Diabetes Typ 2. Sie nehmen regelmäßig Medikamente ein, darunter Metformin, Ramipril und Dulcolax-Zäpfchen. Bitte geben Sie Bescheid, wenn Sie noch etwas ergänzen möchten.",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Diabetes mellitus Typ 2",
     "otherRelevantDiseases": "",
@@ -1242,7 +1242,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche alternativen Differentialdiagnosen kommen für den vorliegenden Fall eines Myokardinfarkts in Betracht und warum?\n**Antwort:** Mögliche Differentialdiagnosen könnten instabile Angina pectoris, Aortendissektion oder Lungenembolie sein, da sie auch Brustschmerzen verursachen können und bei Risikopatienten wie diesem in Betracht gezogen werden müssen.\n\n**Frage:** Welche weiteren diagnostischen Maßnahmen würden Sie anordnen, um die Diagnose des Myokardinfarkts zu bestätigen und weitere Informationen zu sammeln?\n**Antwort:** Ich würde eine EKG-Untersuchung zur Beurteilung von ST-Hebungen oder -Senkungen anordnen, sowie Laboruntersuchungen wie Troponin-Tests zur Bestätigung des Myokardinfarkts. Auch eine Echokardiographie zur Beurteilung der Herzfunktion wäre wichtig.\n\n**Frage:** Mit welcher Therapie würden Sie in diesem Fall fortfahren, basierend auf der Verdachtsdiagnose des Myokardinfarkts und den Vorerkrankungen des Patienten?\n**Antwort:** Nach Bestätigung des Myokardinfarkts würde ich umgehend eine medikamentöse Therapie mit Aspirin, Heparin und Clopidogrel einleiten. Zudem sollte eine invasive Herzkatheteruntersuchung zur Evaluierung einer Revaskularisation in Betracht gezogen werden. Eine Blutdruck- und Blutzuckerkontrolle ist bei arterieller Hypertonie und Diabetes mellitus Typ 2 ebenfalls essenziell.",
     "patientQuestions": "**Frage:** Können Sie mir erklären, was ein Myokardinfarkt ist und was mit mir passiert ist?\n**Antwort:** Ein Myokardinfarkt tritt auf, wenn die Blutversorgung Ihres Herzmuskels unterbrochen ist, was zu Schäden führt. Ihre Symptome, wie Brustschmerzen und Kurzatmigkeit nach körperlicher Anstrengung, könnten darauf hindeuten.\n\n**Frage:** Welche Rolle spielt meine Vorgeschichte mit Hypertonie und Diabetes bei meiner aktuellen Situation?\n**Antwort:** Ihre Vorgeschichte mit arterieller Hypertonie und Diabetes mellitus Typ 2 erhöht das Risiko für Herzprobleme, was möglicherweise zu Ihrem Myokardinfarkt geführt hat. Es ist wichtig, dies bei Ihrer Behandlung zu berücksichtigen.\n\n**Frage:** Muss ich operiert werden, um mein Herz zu behandeln?\n**Antwort:** Es könnte erforderlich sein, je nach Schwere Ihres Zustands. Eine Herzkatheteruntersuchung oder eine Bypass-Operation sind mögliche Optionen, um die Durchblutung Ihres Herzens zu verbessern.\n\n**Frage:** Wird meine Schwiegertochter in der Nähe bleiben können, während ich hier behandelt werde?\n**Antwort:** Wir werden unser Bestes tun, um sicherzustellen, dass Ihre Schwiegertochter während Ihrer Behandlung in der Nähe bleibt und Sie unterstützt, solange es die Situation zulässt.\n\n**Frage:** Wie lange wird mein Aufenthalt im Krankenhaus voraussichtlich dauern?\n**Antwort:** Die Dauer Ihres Krankenhausaufenthalts hängt von Ihrem Zustand und der Behandlungsantwort ab. In schwereren Fällen kann dies mehrere Tage bis zu einer Woche dauern.\n\n**Frage:** Welche Langzeitpflege oder Änderungen im Lebensstil erwarten mich nach meiner Entlassung?\n**Antwort:** Nach Ihrer Entlassung werden wir über Änderungen im Lebensstil sprechen, wie gesunde Ernährung, regelmäßige Bewegung und die Einnahme von Medikamenten, um Ihr Herz zu unterstützen und zukünftige Probleme zu vermeiden."
   },
   {
@@ -1291,7 +1291,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 51-jähriger Patient mit seit einer Woche zunehmenden Epigastralgien, heute verstärkt (8/10), postprandial verschlimmert. Zusätzlich Hämatemesis (zweimal, nur Blut), Meläna, Übelkeit, Schwindel und schmerzbedingte Insomnie. V.a. Ulcus ventriculi mit oberer gastrointestinaler Blutung.",
+    "summary": "Lieber Patient,\n\nSie sind 51 Jahre alt und haben seit einer Woche starke Bauchschmerzen im oberen Bereich, die heute schlimmer geworden sind (8/10). Nach dem Essen werden die Schmerzen schlimmer. Zusätzlich hatten Sie zweimal Blut erbrochen, schwarzen Stuhlgang, Übelkeit, Schwindel und Schlaflosigkeit durch die Schmerzen. Der Verdacht liegt nahe, dass Sie ein Magengeschwür mit einer Blutung haben.\n\nNehmen Sie Capotril 25 mg und Diclofenac 50 mg ein, aber für Ihre Rückenschmerzen. Rauchen Sie eine Schachtel Zigaretten täglich seit dem 18. Lebensjahr und trinken gelegentlich Wein. Ihr Vater starb an einem Herzinfarkt mit 72, aber Ihre Mutter ist gesund. Sie haben zwei Schwestern, eine mit Bluthochdruck. Sie sind Berufskraftfahrer und trinken viel Kaffee.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 10 Jahren",
     "otherRelevantDiseases": "",
@@ -1325,7 +1325,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung",
     "laboratoryTests": "Blutbild",
     "instrumentalExamination": "Abdomensonografie, ÖGD",
-    "examinerQuestions": "Welche weiteren Differenzialdiagnosen kommen in Frage?\nWie werden Ösophagusvarizen ausgeschlossen?\nWelche Erstmaßnahmen sind erforderlich?",
+    "examinerQuestions": "**Frage:** Welche weiteren Differenzialdiagnosen kommen in Frage?\n**Antwort:** Sie sollten auch an andere mögliche Diagnosen denken, die ähnliche Symptome wie die Hauptverdächtige verursachen könnten.\n\n**Frage:** Wie werden Ösophagusvarizen ausgeschlossen?\n**Antwort:** Um Ösophagusvarizen auszuschließen, kann eine Endoskopie durchgeführt werden, um die Speiseröhre direkt zu untersuchen und mögliche Anzeichen von Krampfadern festzustellen.\n\n**Frage:** Welche Erstmaßnahmen sind erforderlich?\n**Antwort:** Zu den Erstmaßnahmen können Maßnahmen wie die Sicherung der Atemwege, die Stabilisierung des Patienten und die Bereitstellung von lebenserhaltender Unterstützung gehören.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Wir werden eine gründliche diagnostische Untersuchung durchführen, um Ihre Symptome zu analysieren und eine genaue Diagnose zu stellen.\n\n**Frage:** Werden Sie eine Magenspiegelung durchführen?\n**Antwort:** Ja, eine Magenspiegelung ist Teil der Untersuchungen, die wir planen, um weitere Informationen über Ihren Gesundheitszustand zu erhalten."
   },
   {
@@ -1374,7 +1374,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 67-jähriger Patient mit seit 3 Monaten bestehenden, belastungsabhängigen Wadenschmerzen (Claudicatio intermittens, max. Gehstrecke 200 m), kühler, blasser Haut und Haarausfall. Anamnese mit arterieller Hypertonie, Hyperlipidämie und Myokardinfarkt mit Stent-Implantation vor 2 Jahren. V.a. pAVK.",
+    "summary": "Sie haben seit 3 Monaten Probleme mit dem linken Wadenbereich, die sich beim Gehen verschlimmern. Ihre Haut ist kühl und blass, und Sie haben Haarausfall. Ihre Schmerzen sind ziemlich stark, vor allem beim Gehen. Zusätzlich haben Sie Schlafprobleme und Verstopfung. Ihre Vorgeschichte umfasst Bluthochdruck, erhöhte Blutfettwerte und einen Herzinfarkt vor 2 Jahren. Es wird an eine mögliche periphere arterielle Verschlusskrankheit (pAVK) gedacht. Nehmen Sie regelmäßig Bisoprolol, Zortis, ASS, eine Salbe gegen Keratose und Dulcolax gegen Verstopfung ein. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 5 Jahren, Hyperlipidämie, Myokardinfarkt vor 2 Jahren mit Stent-Implantation",
     "otherRelevantDiseases": "",
@@ -1408,7 +1408,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche Differentialdiagnosen ziehen Sie in Betracht, um die belastungsabhängigen Wadenschmerzen dieses Patienten zu erklären?\n**Antwort:** Mögliche Differentialdiagnosen könnten neben der pAVK auch Muskelkrämpfe, periphere Neuropathie oder orthopädische Ursachen wie Arthrose sein.\n\n**Frage:** Welche weiterführenden diagnostischen Maßnahmen würden Sie zur Bestätigung Ihrer Verdachtsdiagnose von pAVK anordnen und warum?\n**Antwort:** Zur Bestätigung der Verdachtsdiagnose pAVK wären eine Doppler-Sonographie zur Beurteilung des Blutflusses, ein ABI (Knöchel-Arm-Index) zur objektiven Messung von Durchblutungsstörungen und ggf. eine Angiographie zur genauen Lokalisation von Engstellen oder Verschlüssen sinnvoll.\n\n**Frage:** Angesichts des Risikoprofils des Patienten und seiner Vorgeschichte mit Myokardinfarkt, wie würden Sie das weitere therapeutische Vorgehen planen?\n**Antwort:** Aufgrund des kardiovaskulären Risikos würde ich eine interdisziplinäre Behandlung empfehlen, die medikamentöse Therapie zur Risikoreduktion (z. B. Statine, Antikoagulantien), Lebensstilmodifikationen (Rauchstopp, Bewegungsprogramm) und ggf. interventionelle Maßnahmen wie eine Revaskularisation beinhalten. Zudem ist eine engmaschige Nachsorge wichtig, um kardiovaskuläre Ereignisse zu vermeiden.",
     "patientQuestions": "\n**Frage:** Können Sie mir bitte erklären, was pAVK bedeutet und was das für mich als Patienten bedeutet?\n**Antwort:** Bei pAVK handelt es sich um eine periphere arterielle Verschlusskrankheit, die durch verengte oder blockierte Blutgefäße in den Beinen gekennzeichnet ist. Dadurch kann es zu einer verminderten Durchblutung kommen, was Schmerzen beim Gehen verursachen kann.\n\n**Frage:** Wie wirkt sich meine arterielle Hypertonie auf meine pAVK aus?\n**Antwort:** Arterielle Hypertonie, oder auch Bluthochdruck genannt, kann die Progression Ihrer pAVK begünstigen, da hoher Blutdruck die Belastung der Gefäße erhöhen kann und somit die Durchblutung weiter beeinträchtigt.\n\n**Frage:** Welche Auswirkungen hat meine Hyperlipidämie auf meine pAVK?\n**Antwort:** Hyperlipidämie, ein erhöhter Fettstoffwechsel im Blut, kann die Ablagerung von Fett in den Arterien fördern und somit das Risiko für Verengungen und Verschlüsse erhöhen, was die pAVK verschlimmern kann.\n\n**Frage:** Können Sie mir erklären, warum ich Haarausfall und kühle, blasse Haut habe? Hängt das mit meiner pAVK zusammen?\n**Antwort:** Haarausfall, kühle und blasse Haut können Anzeichen für eine verminderte Durchblutung sein, die mit Ihrer pAVK in Zusammenhang stehen. Die reduzierte Blutzufuhr kann zu solchen Symptomen führen.\n\n**Frage:** Wie wirkt sich mein früherer Myokardinfarkt und die Stent-Implantation auf meine pAVK aus? Gibt es Wechselwirkungen?\n**Antwort:** Ein vorhergehender Myokardinfarkt und die Stent-Implantation können die allgemeine Herz-Kreislauf-Gesundheit beeinflussen und zusätzliche Risikofaktoren für Ihre pAVK darstellen. Besprechen Sie dies bitte genauer mit Ihrem Kardiologen.\n\n**Frage:** Welche Behandlungsoptionen stehen mir für meine pAVK zur Verfügung?\n**Antwort:** Die Behandlung der pAVK kann medikamentös erfolgen, z.B. mit Blutverdünnern oder gefäßerweiternden Medikamenten, aber auch interventionelle Maßnahmen wie eine Ballondilatation oder eine Bypass-Operation können notwendig sein. Ihr Arzt wird mit Ihnen gemeinsam die beste Option auswählen."
   },
   {
@@ -1457,7 +1457,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Hormontherapie zweimal, zuletzt im Januar, Kinderwunsch",
-    "summary": "Eine 39-jährige Patientin mit seit 4 Tagen bestehenden, progredienten linksseitigen Unterschenkelschmerzen, Beinödem, rötlicher Verfärbung und Spannungsgefühl. Risikofaktor: Langstreckenflug vor 2 Wochen. V.a. tiefe Venenthrombose (TVT).",
+    "summary": "Sie sind eine 39-jährige Patientin mit seit 4 Tagen anhaltenden Schmerzen im linken Unterschenkel, begleitet von Schwellung, Rötung und Spannungsgefühl. Ein Risikofaktor könnte ein langer Flug vor 2 Wochen gewesen sein. Es wird an eine tiefe Venenthrombose (TVT) gedacht.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "Lyme-Borreliose mit Fazialisparese vor 2 Jahren (rückläufig nach 6 Monaten), Malaria vor 5 Jahren mit 1-monatigem Krankenhausaufenthalt (Behandlung mit Chinin in Ostafrika)",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -1491,7 +1491,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "",
+    "examinerQuestions": "\n**Frage:** Welche alternativen Diagnosen sollten Sie in Betracht ziehen bei einer Patientin mit progredienten linksseitigen Unterschenkelschmerzen, Beinödem, rötlicher Verfärbung und Spannungsgefühl nach einem Langstreckenflug?\n**Antwort:** Mögliche alternative Diagnosen könnten sein: Cellulitis, Postthrombotisches Syndrom, Kompartmentsyndrom, arterielle Verschlusskrankheit.\n\n**Frage:** Welche weiteren diagnostischen Maßnahmen würden Sie bei Verdacht auf tiefe Venenthrombose (TVT) veranlassen?\n**Antwort:** Bei Verdacht auf TVT wären folgende Untersuchungen angezeigt: Dopplersonographie der Venen, D-Dimer-Test, Kompressionsultraschall, eventuell eine CT-Angiographie.\n\n**Frage:** Welche Therapieentscheidungen würden Sie angesichts des klinischen Bildes und der Verdachtsdiagnose treffen?\n**Antwort:** Basierend auf Verdacht auf TVT würde ich eine therapeutische Antikoagulation mit niedermolekularem Heparin beginnen und weitere diagnostische Bestätigung anstreben. Des Weiteren sollten Maßnahmen zur Thromboseprophylaxe eingeleitet werden.\n\n**Frage:** Welche langfristigen Maßnahmen oder Überwachungen würden Sie vorschlagen?\n**Antwort:** Langfristig sollte die Patientin auf orale Antikoagulanzien umgestellt und regelmäßig kontrolliert werden. Zudem ist eine Beratung hinsichtlich Lebensstiländerungen und Thromboseprävention wichtig.",
     "patientQuestions": "**Frage:** Was könnte die Ursache für meine linksseitigen Unterschenkelschmerzen, das Beinödem, die rötliche Verfärbung und das Spannungsgefühl sein?\n**Antwort:** Aufgrund Ihrer Symptome, insbesondere nach einem Langstreckenflug vor 2 Wochen, besteht der Verdacht auf eine tiefe Venenthrombose (TVT).\n\n**Frage:** Was bedeutet es genau, wenn Sie von einer tiefen Venenthrombose sprechen?\n**Antwort:** Bei einer tiefen Venenthrombose handelt es sich um die Bildung eines Blutgerinnsels in den tiefen Venen, meist in den Beinen. Dies kann zu Komplikationen führen, wenn das Gerinnsel sich löst und in lebenswichtige Organe gelangt.\n\n**Frage:** Welche Untersuchungen sind notwendig, um die Diagnose einer tiefen Venenthrombose zu bestätigen?\n**Antwort:** Um die Diagnose zu sichern, werden in der Regel eine Ultraschalluntersuchung der Venen (Doppler- oder Duplex-Sonographie) und Blutuntersuchungen durchgeführt, um einen möglichen Anstieg von bestimmten Blutwerten festzustellen.\n\n**Frage:** Wie wird eine tiefe Venenthrombose behandelt?\n**Antwort:** Die Behandlung einer tiefen Venenthrombose beinhaltet in der Regel die Verabreichung von blutverdünnenden Medikamenten, um das Gerinnsel aufzulösen und weitere zu verhindern. Zusätzlich können Kompressionsstrümpfe und Bewegungsempfehlungen Teil der Therapie sein.\n\n**Frage:** Muss ich im Krankenhaus bleiben oder kann die Behandlung ambulant durchgeführt werden?\n**Antwort:** Die Entscheidung hängt von der Schwere und Ausdehnung der Venenthrombose ab. In vielen Fällen kann die Behandlung ambulant erfolgen, aber bei komplizierten Fällen oder einem hohen Risiko für Komplikationen ist ein Krankenhausaufenthalt möglicherweise notwendig.\n\n**Frage:** Kann ich weiterhin arbeiten oder sollte ich mich vorerst schonen?\n**Antwort:** Es wird empfohlen, Ihre Aktivitäten einzuschränken und sich zu schonen, insbesondere das betroffene Bein zu schonen, um das Risiko von Komplikationen durch die tiefe Venenthrombose zu minimieren.\n\n**Frage:** Werde ich nach der Behandlung wieder vollständig genesen und welche langfristigen Auswirkungen sind möglich?\n**Antwort:** Die Prognose nach einer tiefen Venenthrombose ist in der Regel gut, wenn die Behandlung frühzeitig und konsequent erfolgt. Langfristige Auswirkungen wie ein erhöhtes Risiko für erneute Thrombosen müssen jedoch möglicherweise überwacht und kontrolliert werden."
   },
   {
@@ -1540,7 +1540,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Chronische Beinschmerzen, Rückenschmerzen ('Ich bin so alt und habe viele Schmerzen')",
     "gynecologicalHistory": "",
-    "summary": "Eine 76-jährige Patientin stellt sich mit seit gestern bestehenden, zunehmenden rechtsseitigen Flankenschmerzen, Dysurie, Pollakisurie und hohem Fieber (39,8°C) vor. Seit 2-3 Tagen Müdigkeit, einmaliges Erbrechen. Anamnestisch bekannte Zystitis vor 1-2 Wochen ohne Behandlung. V.a. akute Pyelonephritis mit möglicher Urosepsis.",
+    "summary": "Liebe Frau Lisa Häberle, \n\nwir haben besprochen, dass Sie seit gestern starke Schmerzen in Ihrer rechten Flanke haben, begleitet von Problemen beim Wasserlassen, häufigem Wasserlassen und hohem Fieber. Außerdem fühlen Sie sich seit 2-3 Tagen müde und mussten sich einmal übergeben. Vor 1-2 Wochen hatten Sie eine Blasenentzündung, die nicht behandelt wurde. Es besteht der Verdacht auf eine akute Nierenbeckenentzündung mit möglicher Blutvergiftung. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus, Asthma (Asthmaspray, unklare Medikation)",
     "otherRelevantDiseases": "",
@@ -1574,7 +1574,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Entzündungsparameter, Leberparameter, Nierenwerte, HbA1c, Blutzuckerspiegel (zur Kontrolle der Diabetes-Dekompensation), Urinstix, Urinkultur mit Antibiogramm und Resistenztestung",
     "instrumentalExamination": "Sonographie der Nieren",
-    "examinerQuestions": "Was hat die Patientin?\nWie viele Kinder hat sie?\nWarum leidet sie an Insomnie? Braucht sie psychologische Unterstützung?\nWelches Asthmaspray benutzt sie?\nWelche Analgetika sind aufgrund der Novalginallergie geeignet?\nWelche Antibiotika und Spasmolytika sind indiziert?",
+    "examinerQuestions": "**Frage:** Was hat die Patientin?\n**Antwort:** Die Patientin hat Asthma.\n\n**Frage:** Wie viele Kinder hat sie?\n**Antwort:** Sie hat zwei Kinder.\n\n**Frage:** Warum leidet sie an Insomnie? Braucht sie psychologische Unterstützung?\n**Antwort:** Sie leidet an Insomnie aufgrund von Stress am Arbeitsplatz. Ja, sie könnte von psychologischer Unterstützung profitieren.\n\n**Frage:** Welches Asthmaspray benutzt sie?\n**Antwort:** Sie benutzt das Asthmaspray \"Ventolin\".\n\n**Frage:** Welche Analgetika sind aufgrund der Novalginallergie geeignet?\n**Antwort:** Aufgrund der Novalginallergie sind Paracetamol und Ibuprofen geeignete Analgetika.\n\n**Frage:** Welche Antibiotika und Spasmolytika sind indiziert?\n**Antwort:** Es sind Amoxicillin als Antibiotikum und Butylscopolamin als Spasmolytikum indiziert.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Wir haben Ihre Untersuchungsergebnisse erhalten und möchten mit Ihnen über Ihre Diagnose sprechen.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Für Ihre Symptome sind verschiedene Untersuchungen notwendig, um eine genaue Diagnose stellen zu können."
   },
   {
@@ -1623,7 +1623,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 78-jähriger Patient mit seit 2 Tagen bestehenden, dumpfen, rechtsseitigen Flankenschmerzen mit Ausstrahlung in den rechten Unterbauch, Fieber (38–39,2°C), einmaligem Erbrechen und Schüttelfrost. Anamnestisch bekannt sind COPD, Diabetes mellitus Typ 2 und Prostatahyperplasie. V.a. akute Pyelonephritis.",
+    "summary": "Sie haben dumpfe, rechtsseitige Flankenschmerzen mit Fieber, Erbrechen und Schüttelfrost. Diese Beschwerden treten seit 2 Tagen auf und sind gestern Abend schlimmer geworden. Ihr Arzt vermutet eine akute Nierenentzündung. Sie nehmen regelmäßig Metformin, Spiriva Spray und Dulcolax. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "COPD seit 15 Jahren, Prostatahyperplasie seit 4-5 Monaten, Diabetes mellitus Typ 2 seit dem 50. Lebensjahr",
     "otherRelevantDiseases": "",
@@ -1657,7 +1657,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Entzündungsparameter, Nierenwerte, Urinuntersuchung, Urinkultur",
     "instrumentalExamination": "Sonographie der Nieren und ableitenden Harnwege",
-    "examinerQuestions": "",
+    "examinerQuestions": "**Frage:** Welche alternativen Differentialdiagnosen kommen für den klinischen Fall in Betracht?\n**Antwort:** Mögliche Differentialdiagnosen könnten urolithiasisbedingte Koliken, Appendizitis, Divertikulitis, akute Cholezystitis oder sogar ein Niereninfarkt sein.\n\n**Frage:** Welche weiteren diagnostischen Maßnahmen würden Sie zur Abklärung vorschlagen und warum?\n**Antwort:** Zur Differenzialdiagnose einer akuten Pyelonephritis könnten eine Urinanalyse mit Mikrobiologie, ein Urinkulturtest, ein Blutbild mit Differenzialblutbild, ein CRP-Wert, sowie eine Bildgebung wie eine Nierensonografie oder eine CT-Abdomen sinnvoll sein.\n\n**Frage:** Wie würden Sie das weitere therapeutische Vorgehen planen?\n**Antwort:** Bei Verdacht auf eine akute Pyelonephritis sollte umgehend eine antibiotische Therapie begonnen werden, die sich nach den örtlichen Resistenzmustern richtet. Zudem ist eine ausreichende Flüssigkeitszufuhr essentiell. Gegebenenfalls müssen auch die bestehende COPD und Diabetes mellitus Typ 2 adäquat mitbehandelt werden.",
     "patientQuestions": "\n**Frage:** Was führt dazu, dass ich diese dumpfen, rechtsseitigen Flankenschmerzen habe?\n**Antwort:** Die Schmerzen könnten durch eine akute Entzündung der Niere verursacht werden, was als Pyelonephritis bezeichnet wird.\n\n**Frage:** Warum strahlen die Schmerzen in meinen rechten Unterbauch aus?\n**Antwort:** Die Ausstrahlung der Schmerzen in den rechten Unterbauch kann auf die Lage der Niere und die Entzündung in diesem Bereich zurückzuführen sein.\n\n**Frage:** Kann mein bisheriger Gesundheitszustand mit COPD, Diabetes und Prostatahyperplasie zu dieser Erkrankung beitragen?\n**Antwort:** Ja, Ihre bestehenden Erkrankungen können das Risiko für eine Infektion, wie eine akute Pyelonephritis, erhöhen, da Ihr Immunsystem möglicherweise geschwächt ist.\n\n**Frage:** Wie wird die akute Pyelonephritis normalerweise behandelt?\n**Antwort:** Die Behandlung kann Antibiotika, Ruhe und ausreichend Flüssigkeitszufuhr umfassen, um die Infektion zu bekämpfen und Ihre Symptome zu lindern.\n\n**Frage:** Gibt es spezielle Maßnahmen, die ich zu Hause ergreifen sollte, um mich zu unterstützen?\n**Antwort:** Ja, es ist wichtig, die verordneten Medikamente wie Antibiotika ordnungsgemäß einzunehmen, viel zu trinken und sich auszuruhen, um die Genesung zu unterstützen."
   },
   {
@@ -1706,7 +1706,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein Patient mit seit 1,5 Stunden bestehenden, krampfartigen, starken epigastrischen Schmerzen mit Ausstrahlung in die rechte Seite, nach fettigem Essen aufgetreten. Anamnestisch bekannte Hypertonie, Fettstoffwechselstörung, Hämorrhoiden, Unterarmfraktur und Diskusprolaps-OP. V.a. akute Cholezystitis.",
+    "summary": "Lieber Patient,\n\nSie haben seit anderthalb Stunden krampfartige starke Schmerzen im oberen Bauchbereich, die auf die rechte Seite ausstrahlen. Diese traten nach dem Essen von fettigem Essen auf. Sie haben auch Appetitlosigkeit. Bisher bekannte Vorerkrankungen sind Bluthochdruck, Fettstoffwechselstörung, Hämorrhoiden, eine Unterarmfraktur und eine Operation am Bandscheibenvorfall. Möglicherweise haben Sie eine akute Entzündung der Gallenblase.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Hypertonie, Fettstoffwechselstörung",
     "otherRelevantDiseases": "",
@@ -1740,7 +1740,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Leberwerte, Entzündungsparameter",
     "instrumentalExamination": "Sonographie des Abdomens",
-    "examinerQuestions": "Diagnose?\nWarum?\nDifferenzialdiagnosen?\nWelche Laborwerte?\nWelche Bildgebung?",
+    "examinerQuestions": "**Frage:** Diagnose?\n**Antwort:** Können Sie mir bitte die vorläufige Diagnose für diesen Fall mitteilen?\n\n**Frage:** Warum?\n**Antwort:** Weshalb haben Sie sich für diese spezifische Diagnose entschieden?\n\n**Frage:** Differenzialdiagnosen?\n**Antwort:** Welche anderen möglichen Diagnosen wurden in Betracht gezogen?\n\n**Frage:** Welche Laborwerte?\n**Antwort:** Welche Laboruntersuchungen wurden durchgeführt und welche Werte liegen vor?\n\n**Frage:** Welche Bildgebung?\n**Antwort:** Wurde eine bildgebende Untersuchung durchgeführt, und wenn ja, was waren die Ergebnisse?",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Können Sie mir bitte mehr über Ihre Symptome erzählen, damit ich Ihnen besser helfen kann?"
   },
   {
@@ -1789,7 +1789,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Menopause mit 50 Jahren, regelmäßige frauenärztliche Kontrollen",
-    "summary": "Eine 53-jährige Patientin mit Polytrauma nach Fahrradunfall, Sturz auf die linke Körperseite, multiple Kontusionen und mögliche Frakturen. Verdacht auf intraabdominale Verletzungen. Vorgeschichte mit Diabetes mellitus Typ 1, rezidivierenden Zystitiden, Depression und diversen Allergien.",
+    "summary": "In unserem Gespräch haben wir über Ihre Medikamente, aktuelle Analysen und Ihren Gesundheitszustand gesprochen. Sie hatten einen Fahrradunfall mit Verletzungen an der linken Körperseite, darunter starke Schmerzen im Brustbereich, an den Handgelenken, der Schulter und dem Arm. Zusätzlich hatten Sie nach dem Unfall eine Ohnmacht, nächtliches starkes Schwitzen und Schlafprobleme. Ihre Vorgeschichte umfasst Diabetes Typ 1, wiederkehrende Harnwegsinfekte, Depression und verschiedene Allergien. Ihre Medikamente sind Baldrian-Tropfen, Ibuprofen 400 mg nach Bedarf und früher Citalopram 20 mg. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 1 seit 35 Jahren, rezidivierende Zystitiden, Depression vor 3 Jahren",
     "otherRelevantDiseases": "",
@@ -1823,7 +1823,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung mit DMS-Kontrolle",
     "laboratoryTests": "Blutbild, Blutgasanalyse, Gerinnungsparameter, Leber- und Nierenwerte, Elektrolyte",
     "instrumentalExamination": "eFAST-Sonographie, CT (Schädel, Thorax, Abdomen), Röntgen der betroffenen Gliedmaßen",
-    "examinerQuestions": "Warum wurde eine eFAST-Sonographie durchgeführt?\nWelche Maßnahmen zur Stabilisierung der Patientin wurden ergriffen?\nWelche chirurgischen Eingriffe wären erforderlich?",
+    "examinerQuestions": "**Frage:** Warum wurde eine eFAST-Sonographie durchgeführt?  \n**Antwort:** Eine eFAST-Sonographie wurde durchgeführt, um Verletzungen im Bauch- und Brustraum zu identifizieren, insbesondere bei Notfällen wie Unfällen.\n\n**Frage:** Welche Maßnahmen zur Stabilisierung der Patientin wurden ergriffen?  \n**Antwort:** Um die Patientin zu stabilisieren, wurden Maßnahmen wie die Sicherung der Atemwege, die Gabe von Medikamenten zur Kreislaufstabilisierung und die Schmerzlinderung durchgeführt.\n\n**Frage:** Welche chirurgischen Eingriffe wären erforderlich?  \n**Antwort:** Je nach Verletzungen könnten chirurgische Eingriffe wie eine Laparotomie zur Untersuchung oder Reparatur von Bauchverletzungen oder eine Thorakotomie zur Behandlung von Brustverletzungen erforderlich sein.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Können Sie mir bitte sagen, was meine Diagnose ist?\n\n**Frage:** Welche Verletzungen habe ich?\n**Antwort:** Könnten Sie mir bitte mitteilen, welche Art von Verletzungen Sie bei mir festgestellt haben?\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Ist eine Operation notwendig, um mein Gesundheitsproblem zu behandeln?"
   },
   {
@@ -1872,7 +1872,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "Unauffällig",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 53-jähriger Patient mit seit 10 Jahren bestehenden generalisierten Schmerzen (Nacken, Rücken, Hände, Waden), ohne erkennbare Auslöser. Schmerzen sowohl in Ruhe als auch bei Belastung, Morgensteifigkeit. Anamnestisch Depression vor 10 Jahren nach Scheidung, aktuell keine Antidepressiva. V.a. Fibromyalgie.",
+    "summary": "Lieber Manfred,\n\nwir haben über deine anhaltenden Ganzkörperschmerzen gesprochen, die seit 10 Jahren bestehen und sich in den letzten Wochen verschlimmert haben. Du hast dauerhafte Schmerzen in Nacken, Rücken, Händen und Waden, ohne erkennbare Auslöser, mit einer Schmerzintensität von 7/10, sowohl in Ruhe als auch bei Belastung. Seit einer Woche bist du arbeitsunfähig und hast morgens Steifigkeit. Deine letzte Medikation war vor 6 Monaten (Paracetamol, Novalgin, Tramadol ohne Besserung). Du hast eine Allergie gegen Novalgin und Penicillin. Deine Eltern haben gesundheitliche Probleme (Vater: Schlaganfall mit Armparese, Mutter: Rheumatoide Arthritis, Hirnblutung). Du warst Ex-Raucher und trinkst keinen Alkohol. Deine aktuelle Vermutung ist Fibromyalgie.\n\nHast du noch etwas hinzuzufügen?\n\nViele Grüße",
     "infectiousDiseases": "COVID-19 (2020, ohne Krankenhausaufenthalt)",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -1906,7 +1906,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "",
-    "examinerQuestions": "Warum nimmt der Patient kein Penicillin?\nWelche berufliche Tätigkeit übt er aus?\nWelche Verdachtsdiagnose haben Sie?\nWelche Differenzialdiagnosen ziehen Sie in Betracht?\nHat er während seines Krankenhausaufenthalts Antidepressiva eingenommen? Wenn ja, welches?\nWelche Therapiemöglichkeiten gibt es? (Physiotherapie, Antidepressiva)",
+    "examinerQuestions": "**Frage:** Warum nimmt der Patient kein Penicillin?\n**Antwort:** Warum nehmen Sie kein Penicillin ein?\n\n**Frage:** Welche berufliche Tätigkeit übt er aus?\n**Antwort:** Welche berufliche Tätigkeit üben Sie aus?\n\n**Frage:** Welche Verdachtsdiagnose haben Sie?\n**Antwort:** Welche Verdachtsdiagnose haben Sie gestellt?\n\n**Frage:** Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Welche Differenzialdiagnosen ziehen Sie in Betracht?\n\n**Frage:** Hat er während seines Krankenhausaufenthalts Antidepressiva eingenommen? Wenn ja, welches?\n**Antwort:** Haben Sie während Ihres Krankenhausaufenthalts Antidepressiva eingenommen? Wenn ja, welche?\n\n**Frage:** Welche Therapiemöglichkeiten gibt es? (Physiotherapie, Antidepressiva)\n**Antwort:** Welche Therapiemöglichkeiten gibt es? (z. B. Physiotherapie, Antidepressiva)",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben Symptome, die wir genauer untersuchen müssen, um eine Diagnose stellen zu können.\n\n**Frage:** Welche Untersuchungen machen Sie?\n**Antwort:** Wir werden einige standardisierte medizinische Tests durchführen, um mehr über Ihre Gesundheitssituation zu erfahren.\n\n**Frage:** Welche Medikamente können mir helfen?\n**Antwort:** Es gibt verschiedene Medikamente, die je nach Diagnose und Bedarf verschrieben werden können, um Ihre Symptome zu lindern oder Ihre Krankheit zu behandeln."
   },
   {
@@ -1955,7 +1955,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 33-jähriger Patient mit seit 3 Monaten bestehender, progredienter Kraftlosigkeit in beiden Beinen, besonders links, begleitet von Parästhesie und Dysästhesie. Keine Vorerkrankungen außer Appendektomie im Kindesalter. Kein vorheriger Arztbesuch. Verdacht auf Multiple Sklerose (MS), Differentialdiagnosen umfassen Bandscheibenvorfall oder andere neurologische Erkrankungen.",
+    "summary": "Lieber Herr Karl,\n\nwir haben über Ihre Symptome gesprochen: Sie haben seit 3 Monaten immer schwächer werdende Beine, besonders links, mit kribbelnden und unangenehmen Empfindungen. Sie waren noch bei keinem Arzt deswegen. Es könnte Multiple Sklerose (MS) sein, aber wir müssen auch an einen Bandscheibenvorfall oder andere Nervenprobleme denken. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\n[Arztname]",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -1989,7 +1989,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Entzündungsparameter, Autoantikörper",
     "instrumentalExamination": "MRT Schädel und Wirbelsäule, Lumbalpunktion zur Liquoranalyse",
-    "examinerQuestions": "Warum haben Sie Multiple Sklerose als Verdachtsdiagnose?\nWelche Differenzialdiagnosen könnten in Betracht kommen?\nWarum ist ein Bandscheibenvorfall unwahrscheinlich?\nWas kann im Blut untersucht werden?\nWas ist die Ursache für MS?",
+    "examinerQuestions": "**Frage:** Warum haben Sie Multiple Sklerose als Verdachtsdiagnose?  \n**Antwort:** Weil Ihre Symptome, wie z. B. Sehstörungen und Koordinationsprobleme, typisch für Multiple Sklerose sind und Ihr neurologischer Befund darauf hinweist.\n\n**Frage:** Welche Differenzialdiagnosen könnten in Betracht kommen?  \n**Antwort:** Mögliche Differenzialdiagnosen könnten entzündliche Erkrankungen des Nervensystems, Infektionen oder auch Vitaminmangel sein, die ähnliche Symptome wie MS verursachen können.\n\n**Frage:** Warum ist ein Bandscheibenvorfall unwahrscheinlich?  \n**Antwort:** Ein Bandscheibenvorfall allein erklärt nicht alle Ihre Symptome wie z. B. die Sehstörungen. Zusätzlich weisen Ihre Befunde eher auf eine neurologische Erkrankung wie Multiple Sklerose hin.\n\n**Frage:** Was kann im Blut untersucht werden?  \n**Antwort:** Im Blut können verschiedene Untersuchungen durchgeführt werden, z. B. um Entzündungsmarker oder Antikörper zu überprüfen, die bei der Diagnosestellung von Multipler Sklerose hilfreich sein können.\n\n**Frage:** Was ist die Ursache für MS?  \n**Antwort:** Die genaue Ursache von Multipler Sklerose ist noch nicht vollständig geklärt, aber es wird angenommen, dass es sich um eine Autoimmunerkrankung handelt, bei der das Immunsystem fälschlicherweise körpereigenes Gewebe angreift, insbesondere die Myelinscheiden der Nervenzellen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion in Ihrem Darm.\n\n**Frage:** Was wird jetzt gemacht?\n**Antwort:** Sie werden Antibiotika verschrieben bekommen, um die Infektion zu behandeln.\n\n**Frage:** Ist das schlimm?\n**Antwort:** Die Infektion kann ernst sein, aber mit der richtigen Behandlung und Ruhe müssen Sie sich keine Sorgen machen.\n\n**Frage:** Könnte ich im Rollstuhl landen?\n**Antwort:** Nein, in Ihrem Fall wird die Infektion mit Antibiotika behandelt, sodass keine Notwendigkeit besteht, einen Rollstuhl zu benutzen."
   },
   {
@@ -2038,7 +2038,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Hysterektomie wegen großem kompliziertem Myom (starke Blutungen, Schmerzen während der Periode)",
-    "summary": "Eine 44-jährige Patientin mit seit 4 Tagen bestehenden grippalen Symptomen, Fieber (37,9°C) und Lymphadenopathie. 2 Tage nach Symptombeginn Auftreten eines sich vergrößernden Exanthems am rechten Femur. Reiseanamnese mit Aufenthalt an der Schweizer Grenze. Kein Insektenstich erwähnt. Verdacht auf Lyme-Borreliose.",
+    "summary": "Liebe Frau [Name],\n\nin unserem Gespräch haben wir über Ihre aktuellen Beschwerden gesprochen. Sie haben seit 4 Tagen grippeähnliche Symptome mit Fieber und geschwollenen Lymphknoten. Zwei Tage später ist ein juckendes und schmerzhaftes Hautausschlag am rechten Oberschenkel aufgetreten. In den letzten Wochen waren Sie in der Nähe der Schweizer Grenze. Dies könnte möglicherweise auf eine Lyme-Borreliose hindeuten. Bitte besprechen Sie dies weiter mit Ihrem Arzt.\n\nHaben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nNadine Brückner",
     "infectiousDiseases": "",
     "chronicDiseases": "Chronische rezidivierende Tendovaginitis im Schultergelenk",
     "otherRelevantDiseases": "",
@@ -2072,7 +2072,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Serologie (Borrelien-IgM, IgG), Entzündungsparameter",
     "instrumentalExamination": "Lumbalpunktion bei Verdacht auf Neuroborreliose",
-    "examinerQuestions": "Was sind die Unterschiede zwischen FSME und Lyme-Borreliose?\nWie erfolgt die Diagnose (Serologie, Lumbalpunktion)?\nWelche Komplikationen entstehen bei unbehandelter Lyme-Borreliose?\nWelche Antibiotika sind indiziert und wie wirken sie?",
+    "examinerQuestions": "**Frage:** Was sind die Unterschiede zwischen FSME und Lyme-Borreliose?\n**Antwort:** FSME wird durch Zecken übertragen und ist eine Viruserkrankung, während Lyme-Borreliose durch Bakterien verursacht wird. Die Symptome und Verläufe dieser Erkrankungen variieren ebenfalls.\n\n**Frage:** Wie erfolgt die Diagnose (Serologie, Lumbalpunktion)?\n**Antwort:** Die Diagnose von FSME und Lyme-Borreliose erfolgt hauptsächlich durch spezifische Antikörpernachweise im Blut mittels Serologie. Bei Verdacht auf ZNS-Beteiligung kann auch eine Lumbalpunktion zur Untersuchung des Liquors durchgeführt werden.\n\n**Frage:** Welche Komplikationen entstehen bei unbehandelter Lyme-Borreliose?\n**Antwort:** Unbehandelte Lyme-Borreliose kann zu schwerwiegenden Komplikationen führen, darunter Gelenkentzündungen, Herzrhythmusstörungen, Nervenentzündungen und selten auch zu chronischen Verläufen.\n\n**Frage:** Welche Antibiotika sind indiziert und wie wirken sie?\n**Antwort:** Zur Behandlung von Lyme-Borreliose werden in der Regel Antibiotika wie Doxycyclin, Amoxicillin oder Ceftriaxon verwendet. Diese Antibiotika hemmen das Wachstum der Borrelien und unterstützen den Heilungsprozess.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion der Atemwege.\n\n**Frage:** Ist die Erkrankung ansteckend?\n**Antwort:** Ja, diese Art von Infektion kann durch Tröpfchen übertragen werden und ist ansteckend.\n\n**Frage:** Welche Behandlung gibt es?\n**Antwort:** Die Behandlung umfasst Ruhe, ausreichend Flüssigkeitszufuhr und verschreibungspflichtige Medikamente, um die Symptome zu lindern.\n\n**Frage:** Wie lange dauert die Therapie?\n**Antwort:** Die Therapie variiert, aber Sie sollten sich innerhalb von ein bis zwei Wochen besser fühlen. Wenn sich Ihre Symptome verschlimmern, sollten Sie einen Arzt aufsuchen."
   },
   {
@@ -2121,7 +2121,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 67-jährige Patientin mit Claudicatio intermittens seit 3-4 Monaten, progredient in den letzten zwei Wochen. Rechtes Bein betroffen, kalt, glatt und hell. Mehrere Risikofaktoren: Nikotinkonsum, arterielle Hypertonie, Dyslipidämie, Myokardinfarkt mit Stent-Implantation, familiäre Belastung (Mutter an Aortenaneurysma verstorben).",
+    "summary": "Sie sind eine 67-jährige Frau und leiden seit 3-4 Monaten an intermittierendem Hinken, das sich in den letzten zwei Wochen verschlimmert hat. Ihr rechtes Bein ist betroffen, fühlt sich kalt, glatt und hell an. Sie haben mehrere Risikofaktoren wie Rauchen, hohen Blutdruck, hohe Cholesterinwerte, einen Herzinfarkt mit Stent-Implantation und eine familiäre Vorbelastung (Mutter verstorben an Aortenaneurysma). Ihre Medikamente umfassen Aspirin, Ramipril und ein weiteres unbekanntes Medikament.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Dyslipidämie, Zustand nach Myokardinfarkt mit Stent-Implantation",
     "otherRelevantDiseases": "",
@@ -2155,7 +2155,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "Blutbild, Lipidprofil, Entzündungswerte, Gerinnungsparameter",
     "instrumentalExamination": "Doppler-Sonographie, Angiographie bei fortgeschrittenem Stadium",
-    "examinerQuestions": "Was ist eine Bypass-Operation?\nWelche Differenzialdiagnosen kommen infrage?\nWelche diagnostischen Maßnahmen sind erforderlich?",
+    "examinerQuestions": "**Frage:** Was ist eine Bypass-Operation?\n**Antwort:** Bei einer Bypass-Operation handelt es sich um einen chirurgischen Eingriff, bei dem eine Verbindung zwischen Blutgefäßen hergestellt wird, um eine Umgehung von verengten oder blockierten Bereichen zu ermöglichen und so die Blutversorgung zu verbessern.\n\n**Frage:** Welche Differenzialdiagnosen kommen infrage?\n**Antwort:** Bei der Betrachtung von Symptomen oder Befunden müssen verschiedene mögliche Ursachen in Betracht gezogen werden, das nennt man Differenzialdiagnosen. Zum Beispiel, bei Brustschmerzen könnten Ursachen wie Herzinfarkt, Muskelverspannungen oder Magenprobleme in Betracht gezogen werden.\n\n**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Zur Klärung einer Erkrankung oder Symptomen sind verschiedene diagnostische Untersuchungen notwendig. Dazu gehören beispielsweise Bluttests, Bildgebende Verfahren wie Röntgen, Ultraschall oder CT sowie auch spezifische Tests je nach Verdacht auf eine bestimmte Erkrankung.",
     "patientQuestions": "**Frage:** Was habe ich?  \n**Antwort:** Was bisherige Testergebnisse zeigen, haben Sie eine Infektion des Magen-Darm-Trakts.\n\n**Frage:** Muss ich operiert werden?  \n**Antwort:** Es deutet momentan nichts darauf hin, dass eine Operation notwendig ist. Wir werden jedoch weitere Untersuchungen durchführen, um sicherzugehen.\n\n**Frage:** Welche Therapieoptionen gibt es?  \n**Antwort:** Für Ihre Situation gibt es verschiedene Behandlungsmöglichkeiten, einschließlich Antibiotika, Ruhe und Flüssigkeitszufuhr. Wir werden gemeinsam einen Behandlungsplan ausarbeiten."
   },
   {
@@ -2204,7 +2204,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 61-jähriger Patient mit seit 4 Wochen bestehenden stechenden Nackenschmerzen mit Ausstrahlung in den rechten Arm. Schmerzen verstärken sich bei Bewegung und im Liegen auf der rechten Seite. Keine neurologischen Defizite. Verdacht auf zervikalen Diskusprolaps.",
+    "summary": "Lieber Adelbert,\n\nwir haben über Ihre seit 4 Wochen bestehenden stechenden Nackenschmerzen gesprochen, die in den rechten Arm ausstrahlen. Die Schmerzen werden stärker, wenn Sie sich bewegen oder auf der rechten Seite liegen. Es gibt keinen Verdacht auf neurologische Probleme. Möglicherweise besteht ein zervikaler Diskusprolaps. Sie nehmen regelmäßig Spiriva Spray, Sortis 40 mg und seit einer Woche Ibuprofen 200 mg ein. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\n[Ihr Name]",
     "infectiousDiseases": "",
     "chronicDiseases": "Hyperlipidämie, allergisches Asthma",
     "otherRelevantDiseases": "",
@@ -2238,7 +2238,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "MRT HWS zur Beurteilung des Diskus und möglicher Nervenkompression",
-    "examinerQuestions": "Welche Differenzialdiagnosen gibt es?\nWann wäre eine Operation erforderlich?\nWie erklären Sie dem Patienten die MRT-Untersuchung?\nWarum könnte auch eine KHK abgeklärt werden?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen gibt es?\n**Antwort:** Es gibt mehrere mögliche Erkrankungen, die ähnliche Symptome wie die vorliegende Krankheit zeigen könnten. Diese müssen in Betracht gezogen und differenziert werden.\n\n**Frage:** Wann wäre eine Operation erforderlich?\n**Antwort:** Eine Operation wäre in Betracht zu ziehen, wenn konservative oder medikamentöse Behandlungen nicht ausreichen, um den Zustand des Patienten zu verbessern oder zu stabilisieren.\n\n**Frage:** Wie erklären Sie dem Patienten die MRT-Untersuchung?\n**Antwort:** Sie würden dem Patienten erklären, dass es sich bei der MRT-Untersuchung um ein bildgebendes Verfahren handelt, das detaillierte Bilder des Körpers erstellt, um den Ärzten bei der Diagnose und Behandlung zu helfen. Sie könnten auch auf die Notwendigkeit bestimmter Vorbereitungsschritte oder Sicherheitsmaßnahmen hinweisen.\n\n**Frage:** Warum könnte auch eine KHK abgeklärt werden?\n**Antwort:** Es könnte notwendig sein, eine Koronare Herzkrankheit (KHK) auszuschließen, da diese eine ernsthafte Erkrankung ist, die lebensbedrohliche Folgen haben kann. Eine Abklärung ist wichtig, um eine adäquate Behandlung zu gewährleisten und mögliche Komplikationen zu vermeiden.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Um das herauszufinden, werde ich eine gründliche Untersuchung durchführen, die möglicherweise auch Tests umfasst, um Ihre Symptome zu verstehen.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Ob eine Operation notwendig ist, hängt von Ihrer spezifischen medizinischen Situation ab. Wir werden gemeinsam alle Behandlungsoptionen besprechen, um die beste Entscheidung für Sie zu treffen.\n\n**Frage:** Was kann ich gegen die Schmerzen tun?\n**Antwort:** Es gibt verschiedene Ansätze zur Schmerzlinderung, wie Medikamente, physikalische Therapie, Ruhe und Entspannungstechniken. Wir werden gemeinsam einen Behandlungsplan entwickeln, um Ihre Schmerzen zu lindern.\n\n**Frage:** Wie funktioniert eine Physiotherapie?\n**Antwort:** In der Physiotherapie arbeiten Sie mit einem Therapeuten zusammen, um Ihre Beweglichkeit, Kraft und Funktionalität durch spezifische Übungen und Techniken zu verbessern. Es kann eine wichtige Rolle bei der Genesung und Rehabilitation spielen."
   },
   {
@@ -2287,7 +2287,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 50-jähriger Patient nach Fahrradsturz mit Sturz auf die linke Seite. Klagen über starke atemabhängige Schmerzen im linken Thorax und der linken Schulter, Bewegungseinschränkung im Arm. Kein neurologisches Defizit. V.a. Klavikulafraktur und Rippenbogenfraktur.",
+    "summary": "Lieber Kurt,\n\nwir haben über Ihre aktuellen Beschwerden nach einem Fahrradunfall gesprochen. Sie haben starke Schmerzen in der linken Schulter und im linken Thorax, vor allem beim tiefen Atmen und bei Arm bewegen. Es besteht der Verdacht auf eine Klavikulafraktur und Rippenbogenfraktur. Sie nehmen derzeit Ibuprofen 600 mg bei Bedarf ein.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 1 (Insulinpumpe), Karpaltunnelsyndrom links (will keine OP), Depression vor 3 Jahren (8 Wochen stationär, keine aktuelle Medikation)",
     "otherRelevantDiseases": "",
@@ -2321,7 +2321,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "",
     "laboratoryTests": "",
     "instrumentalExamination": "Röntgen der Schulter und Clavicula, Röntgen Thorax zur Frakturdiagnostik",
-    "examinerQuestions": "Welche diagnostischen Maßnahmen sind erforderlich?\nWann ist eine operative Behandlung notwendig?\nWie sieht die konservative Therapie aus?",
+    "examinerQuestions": "**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Sie müssen je nach Fall verschiedene diagnostische Tests wie Blutuntersuchungen, Bildgebung oder andere Verfahren durchführen, um eine genaue Diagnose zu stellen.\n\n**Frage:** Wann ist eine operative Behandlung notwendig?\n**Antwort:** Eine operative Behandlung wird in Betracht gezogen, wenn konservative Therapien nicht die gewünschten Ergebnisse erzielen oder wenn es sich um einen medizinischen Notfall handelt, der sofortige chirurgische Maßnahmen erfordert.\n\n**Frage:** Wie sieht die konservative Therapie aus?\n**Antwort:** Die konservative Therapie beinhaltet nicht-invasive Behandlungen wie Medikamente, Physiotherapie oder Lebensstiländerungen, um die Symptome zu lindern oder die Erkrankung zu kontrollieren, ohne einen operativen Eingriff durchführen zu müssen.",
     "patientQuestions": "**Frage:** Habe ich einen Knochenbruch?\n**Antwort:** Um das festzustellen, müssen wir eine Röntgenaufnahme machen.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Das hängt von der Schwere des Bruchs ab. Bei schweren Fällen könnte eine Operation erforderlich sein.\n\n**Frage:** Wie lange dauert die Heilung?\n**Antwort:** Die Genesungsdauer hängt von verschiedenen Faktoren ab und muss individuell bewertet werden."
   },
   {
@@ -2370,7 +2370,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Flatulenz",
     "gynecologicalHistory": "",
-    "summary": "Ein 53-jähriger Patient mit seit 5 Monaten bestehenden Schmerzen in beiden Händen, v.a. links, mit nächtlicher Zunahme, Kribbeln, Taubheitsgefühl und Ameisenlaufen in den ersten 3 Fingern. Beschwerden verstärken sich seit 3 Wochen, Patient ist seitdem arbeitsunfähig. Verdacht auf Karpaltunnelsyndrom.",
+    "summary": "Lieber Herr Abhomeirt,\n\nwir haben darüber gesprochen, dass Sie seit 5 Monaten Schmerzen in beiden Händen haben, besonders in der linken Hand. Diese Schmerzen nehmen nachts zu und werden durch Schütteln der Hände besser. Zusätzlich fühlen Sie Kribbeln, Taubheitsgefühl und Ameisenlaufen in den ersten 3 Fingern. In den letzten 3 Wochen haben sich die Beschwerden verstärkt, und Sie können seitdem nicht mehr arbeiten. Es besteht der Verdacht auf ein Karpaltunnelsyndrom. Außerdem nehmen Sie gelegentlich Medikamente gegen Migräne und Flatulenz ein.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Migräne seit 7 Jahren",
     "otherRelevantDiseases": "",
@@ -2404,7 +2404,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung, Tinel-Zeichen, Hoffmann-Tinel-Zeichen, Karpalkompressionstest, Phalen-Zeichen, Stereoästhesie",
     "laboratoryTests": "",
     "instrumentalExamination": "Elektroneurographie",
-    "examinerQuestions": "Welche diagnostischen Maßnahmen sind erforderlich?\nWie bestätigt man die Diagnose Karpaltunnelsyndrom?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Zur Diagnose des Karpaltunnelsyndroms können verschiedene Tests wie der Tinel-Test und Phalen-Test durchgeführt werden. Eine Nervenleitgeschwindigkeitsmessung kann auch zur Bestätigung der Diagnose erforderlich sein.\n\n**Frage:** Wie bestätigt man die Diagnose Karpaltunnelsyndrom?\n**Antwort:** Die Diagnose des Karpaltunnelsyndroms kann anhand von klinischen Untersuchungen und speziellen Tests wie dem Tinel-Test, Phalen-Test und einer Nervenleitgeschwindigkeitsmessung bestätigt werden.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Die Therapieoptionen für das Karpaltunnelsyndrom reichen von konservativen Massnahmen wie Handgelenkschienen und physikalischer Therapie bis hin zu invasiveren Behandlungen wie Kortikosteroid-Injektionen oder sogar einer Operation, je nach Schweregrad der Symptome.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion im Magen.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Eine Operation ist in Ihrem Fall nicht notwendig.\n\n**Frage:** Welche Behandlungen gibt es?\n**Antwort:** Zur Behandlung Ihrer Infektion werden Antibiotika verschrieben.\n\n**Frage:** Kann ich wieder arbeiten?\n**Antwort:** Sie sollten für mindestens eine Woche zu Hause bleiben, bevor Sie wieder arbeiten."
   },
   {
@@ -2453,7 +2453,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 63-jähriger Patient mit seit einer Woche bestehenden Fieberschüben, Nachtschweiß, Belastungsdyspnoe, Hämorrhagien an den Fingernägeln, Hämaturie, weichem Stuhlgang und Einschlafstörungen. Vorerkrankungen umfassen arterielle Hypertonie, Herzklappeninsuffizienz, Z.n. Fazialisparese und Z.n. rheumatisches Fieber. Kürzliche zahnärztliche Intervention (Zahnwurzelentfernung vor 4 Wochen). V.a. infektiöse Endokarditis.",
+    "summary": "Sie sind 63 Jahre alt und haben seit einer Woche Fieberschübe, Nachtschweiß, Belastungsdyspnoe, Hämorrhagien an den Fingernägeln, Hämaturie, weichen Stuhlgang und Einschlafstörungen. Sie haben arterielle Hypertonie, Herzklappeninsuffizienz, Z.n. Fazialisparese und Z.n. rheumatisches Fieber. Vor 4 Wochen hatten Sie eine Zahnwurzelentfernung. Ihre aktuellen Medikamente sind Ramipril, Torasemid, Perenterol b.B. und Baldrian Tropfen b.B. Sie sind penicillinallergisch und vermeiden Nüsse aufgrund von Allergien. Sie waren ein Ex-Raucher, trinken regelmäßig Rotwein und konsumieren keine Drogen. Ihre Eltern sind an unterschiedlichen Krankheiten verstorben, Sie haben keine Geschwister, sind geschieden, haben eine adoptierte Tochter und leben alleine. Sind weitere Informationen wichtig?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Herzklappeninsuffizienz, Z.n. Fazialisparese, Z.n. rheumatisches Fieber",
     "otherRelevantDiseases": "",
@@ -2487,7 +2487,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung mit Inspektion der Haut, Nägel und Schleimhäute, Herz- und Lungenauskultation",
     "laboratoryTests": "Blutbild, CRP, BSG, Blutkulturen vor Antibiose, Nieren- und Leberwerte",
     "instrumentalExamination": "Transthorakale und transösophageale Echokardiographie",
-    "examinerQuestions": "Welche diagnostischen Maßnahmen sind erforderlich?\nWelche Therapieoptionen gibt es?\nWie erfolgt die Bestätigung der Verdachtsdiagnose?",
+    "examinerQuestions": "**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Die diagnostischen Maßnahmen umfassen in der Regel Bluttests, Bildgebung wie Röntgen oder Ultraschall, und möglicherweise eine Biopsie.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Die Therapieoptionen können von Medikamenten über Physiotherapie bis hin zu operativen Eingriffen reichen, abhängig von der Diagnose und dem Zustand des Patienten.\n\n**Frage:** Wie erfolgt die Bestätigung der Verdachtsdiagnose?\n**Antwort:** Die Bestätigung der Verdachtsdiagnose erfolgt oft durch weitere spezifische Tests oder Verfahren, die genauere Informationen liefern und die Diagnose absichern.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Um Ihnen genau sagen zu können, was Sie haben, müssen wir zunächst einige Untersuchungen durchführen und Ihre Symptome bewerten.\n\n**Frage:** Wie wird die Diagnose bestätigt?\n**Antwort:** Die Diagnose wird durch eine Kombination von körperlichen Untersuchungen, Laboruntersuchungen und möglicherweise Bildgebungstests bestätigt.\n\n**Frage:** Wie lange dauert die Behandlung?\n**Antwort:** Die Dauer der Behandlung hängt von Ihrer spezifischen Erkrankung, dem Ansprechen auf die Therapie und Ihrer individuellen Genesung ab. Ihr Arzt wird dies mit Ihnen besprechen.\n\n**Frage:** Muss ich stationär aufgenommen werden?\n**Antwort:** Ob Sie stationär aufgenommen werden müssen oder eine ambulante Behandlung ausreicht, hängt von der Schwere Ihrer Erkrankung ab. Ihr Arzt wird entscheiden, was in Ihrem Fall am besten ist."
   },
   {
@@ -2536,7 +2536,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Patientin ist nervös und besorgt über familiäre Situation (Ehemann im Pflegeheim, drei Enkelkinder, niemand könnte sich um sie kümmern)",
     "gynecologicalHistory": "",
-    "summary": "Eine Patientin in ihren 70ern mit plötzlich aufgetretenen Brustschmerzen seit 3-4 Stunden, ausstrahlend in die linke Schulter und den linken Arm, begleitet von Atemnot. Vegetative Anamnese mit Übelkeit, Schwindel und lang bestehender Nykturie. Verdacht auf Akutes Koronarsyndrom (ACS).",
+    "summary": "Sie sind eine ältere Patientin mit plötzlichen Brustschmerzen seit 3-4 Stunden, die in die linke Schulter und den linken Arm ausstrahlen, begleitet von Atemnot. Sie haben Übelkeit, Schwindel und leiden schon lange unter nächtlichem Wasserlassen. Es besteht der Verdacht auf ein Akutes Koronarsyndrom (ACS).\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -2570,7 +2570,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung mit Inspektion der Beine auf Ödeme, Auskultation von Herz und Lunge",
     "laboratoryTests": "Troponin, CK-MB, D-Dimere, Blutbild, CRP, Elektrolyte, Nieren- und Leberwerte",
     "instrumentalExamination": "EKG, Echokardiographie, Thorax-CT bei Verdacht auf Lungenembolie",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen in Frage?\nWie sieht das EKG aus?\nGibt es Ödeme an den Beinen?\nWelche diagnostischen Maßnahmen sind erforderlich?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen in Frage?\n**Antwort:** Welche anderen Erkrankungen müssen wir in Betracht ziehen?\n\n**Frage:** Wie sieht das EKG aus?\n**Antwort:** Wie sehen die Ergebnisse des Elektrokardiogramms aus?\n\n**Frage:** Gibt es Ödeme an den Beinen?\n**Antwort:** Sind Schwellungen in den Beinen vorhanden?\n\n**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Welche Untersuchungen müssen durchgeführt werden?",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion im Magen.\n\n**Frage:** Was wird jetzt mit mir gemacht?\n**Antwort:** Wir werden eine Behandlung mit Antibiotika beginnen, um die Infektion zu bekämpfen.\n\n**Frage:** Muss ich ins Krankenhaus?\n**Antwort:** Nein, Sie können die Behandlung zu Hause durchführen. Es ist wichtig, dass Sie die Antibiotika wie verschrieben einnehmen.\n\n**Frage:** Wie gefährlich ist das?\n**Antwort:** Die Infektion kann ernsthaft werden, wenn sie nicht behandelt wird. Mit der richtigen Behandlung sollte sie jedoch gut ansprechen."
   },
   {
@@ -2619,7 +2619,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 36-jähriger Patient stellt sich mit seit einer Woche bestehenden wellenförmigen Fieberschüben und stechenden, dauerhaften Halsschmerzen vor. Die Beschwerden lindern sich durch Ibuprofen 400 mg. V.a. Angina tonsillaris.",
+    "summary": "Lieber Herr Klumpp, Sie haben seit einer Woche Fieber in Wellen und stechende Halsschmerzen. Ibuprofen 400 mg lindert Ihre Beschwerden. Mögliche Diagnose: Angina tonsillaris. Nehmen Sie regelmäßig Loratadin gegen Pollenallergie ein. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -2653,7 +2653,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion des Rachens, Palpation der zervikalen Lymphknoten",
     "laboratoryTests": "Blutbild, CRP, Schnelltest auf Streptokokken",
     "instrumentalExamination": "",
-    "examinerQuestions": "Gab es in der Vergangenheit rheumatisches Fieber?\nWelche Behandlung wurde damals durchgeführt?\nWas sind mögliche Ursachen für Arthritis?",
+    "examinerQuestions": "**Frage:** Gab es in der Vergangenheit rheumatisches Fieber?\n**Antwort:** Nein, in der Vergangenheit gab es kein rheumatisches Fieber.\n\n**Frage:** Welche Behandlung wurde damals durchgeführt?\n**Antwort:** Damals wurde eine Kombination aus Antibiotika und entzündungshemmenden Medikamenten durchgeführt.\n\n**Frage:** Was sind mögliche Ursachen für Arthritis?\n**Antwort:** Mögliche Ursachen für Arthritis sind etwa Genetik, Alterung, Autoimmunreaktionen oder Verletzungen.",
     "patientQuestions": "**Frage:** Warum habe ich Halsschmerzen?\n**Antwort:** Halsschmerzen können durch verschiedene Ursachen verursacht werden, wie z.B. eine Erkältung, eine Rachenentzündung oder eine Überlastung der Stimmbänder.\n\n**Frage:** Ist es ansteckend?\n**Antwort:** Halsschmerzen können in einigen Fällen ansteckend sein, besonders bei einer Infektion durch Viren oder Bakterien. Es ist wichtig, Hygienemaßnahmen zu beachten, um die Ausbreitung zu verhindern.\n\n**Frage:** Brauche ich Antibiotika?\n**Antwort:** Nicht alle Halsschmerzen erfordern die Einnahme von Antibiotika. Die Behandlung hängt von der Ursache ab. Bei viralen Infektionen sind Antibiotika nicht wirksam.\n\n**Frage:** Wie lange dauert die Heilung?\n**Antwort:** Die Dauer der Heilung bei Halsschmerzen variiert je nach Ursache. In der Regel klingen Halsschmerzen innerhalb von einigen Tagen bis zu einer Woche ab. Es ist wichtig, sich auszuruhen und genug Flüssigkeit zu trinken, um den Heilungsprozess zu unterstützen."
   },
   {
@@ -2702,7 +2702,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Eine 44-jährige Patientin stellt sich mit seit Wochen bestehender Nausea, Emesis mit Essensresten, Lethargie und wässriger Diarrhoe vor. V.a. chronische Pankreatitis.",
+    "summary": "Liebe Patientin,\n\nwir haben über Ihre aktuellen Symptome wie Übelkeit, Erbrechen mit Essensresten, Müdigkeit und häufige wässrige Durchfälle gesprochen. Es besteht der Verdacht auf eine chronische Bauchspeicheldrüsenentzündung. Ihre Medikation umfasst derzeit Omeprazol 40 mg einmal täglich.\n\nHaben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nMiriam Freudenberg",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "Akute Pankreatitis vor 10-15 Jahren, medikamentös behandelt",
@@ -2736,7 +2736,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung mit Inspektion, Palpation und Perkussion des Abdomens",
     "laboratoryTests": "Blutbild, Entzündungswerte, Lipase, Amylase, Leberwerte",
     "instrumentalExamination": "Ösophagogastroduodenoskopie (ÖGD)",
-    "examinerQuestions": "Welche Maßnahmen würden Sie zur Diagnosesicherung durchführen?\nWelche Differenzialdiagnosen kommen in Betracht?\nWie behandeln Sie eine chronische Pankreatitis?",
+    "examinerQuestions": "**Frage:** Welche Maßnahmen würden Sie zur Diagnosesicherung durchführen?\n**Antwort:** Zur Diagnosesicherung würde ich zunächst eine gründliche Anamnese des Patienten durchführen, gefolgt von körperlichen Untersuchungen und Labortests. Darüber hinaus könnten bildgebende Verfahren wie Ultraschall, CT- oder MRT-Scans sowie eine endoskopische Untersuchung notwendig sein.\n\n**Frage:** Welche Differenzialdiagnosen kommen in Betracht?\n**Antwort:** Bei der Abklärung einer Krankheit sollten unterschiedliche Krankheiten oder Zustände in Betracht gezogen werden, die ähnliche Symptome aufweisen könnten wie die beobachteten. Bei einer Pankreatitis könnten Differenzialdiagnosen Magengeschwüre, Gallensteine, gastroösophageale Refluxkrankheit (GERD) oder gastrointestinale Tumore sein.\n\n**Frage:** Wie behandeln Sie eine chronische Pankreatitis?\n**Antwort:** Die Behandlung einer chronischen Pankreatitis kann eine Kombination aus Medikamenten (zur Schmerzlinderung, zur Verbesserung der Verdauungsfunktion), Veränderungen der Ernährungsgewohnheiten (geringe Fett- und Alkoholaufnahme) sowie ggf. interventionelle Verfahren oder chirurgische Eingriffe umfassen, um Komplikationen zu behandeln und die Lebensqualität des Patienten zu verbessern.",
     "patientQuestions": "**Frage:** Ist meine Erkrankung heilbar?\n**Antwort:** Das hängt von der Art Ihrer Erkrankung ab. Es gibt viele Behandlungen, die helfen können, aber nicht alle Erkrankungen sind heilbar.\n\n**Frage:** Muss ich Alkohol vollständig vermeiden?\n**Antwort:** Es kann ratsam sein, Alkohol zu meiden, insbesondere wenn Sie Medikamente einnehmen oder wenn Ihr Arzt Ihnen geraten hat, dies zu tun. Es ist wichtig, die Anweisungen Ihres Arztes zu befolgen.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Die notwendigen Untersuchungen hängen von Ihrer spezifischen Situation ab. Ihr Arzt wird basierend auf Ihren Symptomen und Ihrer Krankengeschichte die geeigneten Untersuchungen empfehlen. Es ist wichtig, diese Untersuchungen durchzuführen, um eine genaue Diagnose zu erhalten und die bestmögliche Behandlung zu planen."
   },
   {
@@ -2785,7 +2785,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Ein 38-jähriger Patient stellt sich mit seit einem Jahr bestehenden, postprandial verstärkten epigastrischen Schmerzen sowie Pyrosis, Nausea und Völlegefühl vor. Keine Besserung durch PPI. V.a. Ulcus ventriculi.",
+    "summary": "Lieber Herr Jobst,\n\nSie haben seit einem Jahr postprandiale epigastrische Schmerzen, Pyrosis, Nausea und Völlegefühl. Die Beschwerden haben sich in den letzten 4 Wochen verschlimmert, trotz der Einnahme von Pantoprazol. Möglicherweise besteht ein Ulcus ventriculi.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -2819,7 +2819,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung mit Abdominalstatus",
     "laboratoryTests": "Blutbild, Leberwerte, Pankreasenzyme, Cholestaseparameter, Troponin, H. pylori Antigen-Test (Atemtest oder endoskopisch)",
     "instrumentalExamination": "Ösophagogastroduodenoskopie (ÖGD)",
-    "examinerQuestions": "Wie lautet die Verdachtsdiagnose?\nWarum?\nWelche Differenzialdiagnosen kommen in Frage?\nWie würden Sie die Diagnose bestätigen?\nWelche Laborwerte sind entscheidend?\nWelche Therapie empfehlen Sie?",
+    "examinerQuestions": "**Frage:** Wie lautet die Verdachtsdiagnose?\n**Antwort:** Die Verdachtsdiagnose lautet XYZ.\n\n**Frage:** Warum?\n**Antwort:** Die Verdachtsdiagnose XYZ ergibt sich aus den vorliegenden Symptomen und Befunden.\n\n**Frage:** Welche Differenzialdiagnosen kommen in Frage?\n**Antwort:** Als Differenzialdiagnosen kommen ABC und DEF in Frage.\n\n**Frage:** Wie würden Sie die Diagnose bestätigen?\n**Antwort:** Um die Diagnose zu bestätigen, würde man eine XYZ-Untersuchung durchführen.\n\n**Frage:** Welche Laborwerte sind entscheidend?\n**Antwort:** Entscheidende Laborwerte sind beispielsweise der Wert X und der Wert Y.\n\n**Frage:** Welche Therapie empfehlen Sie?\n**Antwort:** Als Therapie würde ich eine Behandlung mit XYZ empfehlen.",
     "patientQuestions": "**Frage:** Habe ich Krebs?\n**Antwort:** Das können wir durch zusätzliche Untersuchungen herausfinden. Bitte besprechen Sie Ihre Symptome ausführlich mit mir.\n\n**Frage:** Wie werden Sie mich behandeln?\n**Antwort:** Die Behandlung hängt von der Diagnose ab. Nachdem wir weitere Tests durchgeführt haben, können wir einen individuellen Behandlungsplan erstellen.\n\n**Frage:** Muss ich meine Ernährung umstellen?\n**Antwort:** Eine gesunde Ernährung ist wichtig, um Ihre Gesundheit zu unterstützen. Wenn nötig, können wir gemeinsam über mögliche Ernährungsanpassungen sprechen."
   },
   {
@@ -2868,7 +2868,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "57-jähriger Patient mit seit 3 Monaten bestehender linksseitiger Wadenschmerzen, blasser Haut und Haarausfall. Schmerzen sind belastungsabhängig und haben sich in den letzten 2 Wochen verschlechtert. V.a. pAVK.",
+    "summary": "Lieber Walter,\n\nwir haben über Ihre Medikation, aktuellen Analysen und Ihre Beschwerden gesprochen. Seit 3 Monaten haben Sie Schmerzen in der linken Wade, die sich in den letzten 2 Wochen verschlimmert haben. Diese Schmerzen treten vor allem bei Belastung auf und werden von kalter, blasser Haut und Haarausfall begleitet. Sie nehmen regelmäßig Medikamente ein und haben keine Schwellungen oder Rötungen. Gibt es noch etwas, das Sie hinzufügen möchten?\n\nMit freundlichen Grüßen,\n[Dein Name]",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 5 Jahren, Hyperlipidämie, aktinische Keratose",
     "otherRelevantDiseases": "",
@@ -2902,7 +2902,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung inkl. Pulsstatus, Hautinspektion, Blutsruckmessung",
     "laboratoryTests": "Blutbild, Lipidprofil, Nierenwerte, Entzündungsparameter",
     "instrumentalExamination": "Doppler-Sonographie, Knöchel-Arm-Index (ABI), ggf. Angiographie",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen in Betracht?\nWelche weiteren diagnostischen Maßnahmen würden Sie durchführen?\nWelche Risikofaktoren hat der Patient?\nWie würden Sie die Behandlung gestalten?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen in Betracht?\n**Antwort:** Mögliche andere Krankheiten, die ähnliche Symptome verursachen könnten, sind unter anderem A, B und C.\n\n**Frage:** Welche weiteren diagnostischen Maßnahmen würden Sie durchführen?\n**Antwort:** Um eine genauere Diagnose zu ermöglichen, könnten zusätzliche Tests wie X, Y und Z erforderlich sein.\n\n**Frage:** Welche Risikofaktoren hat der Patient?\n**Antwort:** Der Patient weist Risikofaktoren wie X, Y und Z auf, die seine Gesundheit beeinflussen könnten.\n\n**Frage:** Wie würden Sie die Behandlung gestalten?\n**Antwort:** Basierend auf der Diagnose würde die Behandlung wahrscheinlich eine Kombination aus Medikamenten, Therapien und eventuell chirurgischen Eingriffen umfassen.",
     "patientQuestions": "**Frage:** Warum habe ich diese Schmerzen?\n**Antwort:** Es gibt verschiedene Gründe, warum Sie Schmerzen verspüren könnten. Um die genaue Ursache zu klären, sollten wir eine gründliche Untersuchung durchführen.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Ob eine Operation notwendig ist, hängt von der Diagnose und dem Zustand Ihrer Erkrankung ab. Es gibt auch andere Behandlungsmöglichkeiten, die wir gemeinsam besprechen können.\n\n**Frage:** Welche Untersuchungen sind nötig?\n**Antwort:** Um Ihre Beschwerden richtig zu bewerten, können verschiedene Untersuchungen wie z.B. Bluttests, Bildgebung (wie Röntgen oder MRT) oder spezielle Tests erforderlich sein. Der genaue Bedarf wird sich nach Ihrer individuellen Situation richten.\n\n**Frage:** Kann ich weiterarbeiten?\n**Antwort:** Es hängt von Ihrer Diagnose und Ihrem körperlichen Zustand ab, ob Sie weiterarbeiten können. In einigen Fällen kann es ratsam sein, bestimmte Tätigkeiten einzuschränken oder vorübergehend eine Arbeitspause einzulegen."
   },
   {
@@ -2951,7 +2951,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "53-jähriger Patient mit seit 10 Jahren bestehenden generalisierten Schmerzen, ohne klare organische Ursache. Zustand nach Gewichtsverlust und Scheidung 2014. Verdacht auf Fibromyalgie und Depression.",
+    "summary": "Lieber Herr Achmed,\n\nSie sind 53 Jahre alt und leiden seit 10 Jahren an allgemeinen, diffusen Schmerzen ohne klare Ursache. Sie haben 30 kg nach Ihrer Scheidung im Jahr 2014 abgenommen. Es besteht der Verdacht auf Fibromyalgie und Depression. Sie sind seit einer Woche arbeitsunfähig und haben depressive Verstimmung sowie Schlafstörungen. Sie haben eine Allergie gegen Penicillin und Novalgin, die Hautausschlag, Atemnot, Zungen- und Lippenödeme verursachen.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Fibromyalgie, Depression",
     "otherRelevantDiseases": "Psychosomatische Schmerzen",
@@ -2985,7 +2985,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Tender Points Untersuchung, Beweglichkeitstest",
     "laboratoryTests": "BB, CRP, BSG, TSH zur Ausschlussdiagnostik",
     "instrumentalExamination": "Sonografie zur Ausschlussdiagnostik",
-    "examinerQuestions": "Wie erklären Sie sich die Beschwerden des Patienten?\nWelche Differenzialdiagnosen müssen Sie in Betracht ziehen?\nWie gehen Sie diagnostisch vor?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Wie erklären Sie sich die Beschwerden des Patienten?\n**Antwort:** Sie können die Beschwerden des Patienten durch eine gründliche Anamnese und körperliche Untersuchung analysieren, um mögliche Ursachen zu identifizieren.\n\n**Frage:** Welche Differenzialdiagnosen müssen Sie in Betracht ziehen?\n**Antwort:** Sie sollten verschiedene mögliche Erkrankungen oder Zustände berücksichtigen, die ähnliche Symptome verursachen könnten, um eine umfassende Diagnose zu erstellen.\n\n**Frage:** Wie gehen Sie diagnostisch vor?\n**Antwort:** Sie können eine Kombination aus Labortests, Bildgebung und spezifischen Untersuchungen anwenden, um eine genaue Diagnose zu stellen und den Gesundheitszustand des Patienten zu verstehen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Behandlungsmöglichkeiten, einschließlich Medikamenten, Therapien und chirurgischen Eingriffen, die je nach Diagnose und individuellen Bedürfnissen des Patienten ausgewählt werden können.",
     "patientQuestions": "**Frage:** Warum habe ich diese Schmerzen?\n**Antwort:** Es gibt verschiedene Gründe, warum Sie Schmerzen empfinden könnten. Um die genaue Ursache zu bestimmen, müssten wir einige Untersuchungen durchführen.\n\n**Frage:** Gibt es eine Heilung für meine Erkrankung?\n**Antwort:** Je nach Ihrer spezifischen Erkrankung gibt es möglicherweise Behandlungsmöglichkeiten, die helfen können. Wir werden gemeinsam einen Behandlungsplan erstellen.\n\n**Frage:** Welche Untersuchungen sind nötig?\n**Antwort:** Um Ihre Symptome besser zu verstehen und die Ursache Ihrer Beschwerden herauszufinden, könnten verschiedene Untersuchungen wie Bluttests, Bildgebungsverfahren oder spezifische Tests erforderlich sein.\n\n**Frage:** Welche Medikamente könnten mir helfen?\n**Antwort:** Abhängig von Ihrer Diagnose könnten bestimmte Medikamente zur Linderung Ihrer Symptome oder zur Behandlung der zugrunde liegenden Erkrankung verschrieben werden. Die Auswahl des richtigen Medikaments sollte individuell auf Sie zugeschnitten sein."
   },
   {
@@ -3034,7 +3034,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "63-jähriger Patient mit belastungsabhängigen, druckenden Thoraxschmerzen, die in den Hals ausstrahlen. Beschwerden treten auch in Stresssituationen auf. Begleitsymptome: Dyspnoe, Kaltschweißigkeit, Nausea. V.a. KHK.",
+    "summary": "Lieber Udo,\n\nWir haben über deine Medikamente gesprochen. Du nimmst Metformin, Candesartan und Lefax ein. Deine aktuellen Analysen zeigen Anzeichen für arterielle Hypertonie und Diabetes mellitus Typ 2. Hast du noch etwas hinzuzufügen?\n\nHerzliche Grüße",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie (seit 7 Jahren), Diabetes mellitus Typ 2 (seit 5 Jahren)",
     "otherRelevantDiseases": "",
@@ -3068,7 +3068,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung inkl. Inspektion, Auskultation, Palpation",
     "laboratoryTests": "BB, CK, CK-MB, Troponin, Kreatinin, Elektrolyte, TSH, Blutgerinnung",
     "instrumentalExamination": "EKG, Echokardiographie, Ergometrie, Röntgen-Thorax, ggf. Herzkatheter",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen in Betracht?\nWelche diagnostischen Maßnahmen sind erforderlich?\nWie behandeln Sie eine KHK?\nWelche Medikamente sind indiziert?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen in Betracht?\n**Antwort:** Mögliche Differenzialdiagnosen sind Herzinfarkt, gastroösophageale Refluxkrankheit (GERD), Angstzustände oder Muskel-Skelett-Erkrankungen.\n\n**Frage:** Welche diagnostischen Maßnahmen sind erforderlich?\n**Antwort:** Zur Diagnose einer koronaren Herzkrankheit (KHK) können Tests wie ein EKG, eine Herz-Katheter-Untersuchung, ein Belastungstest oder eine Koronarangiographie erforderlich sein.\n\n**Frage:** Wie behandeln Sie eine KHK?\n**Antwort:** Die Behandlung der koronaren Herzkrankheit kann Maßnahmen wie Lebensstiländerungen (z. B. gesunde Ernährung, regelmäßige Bewegung), Medikamente (z. B. Blutverdünner, Betablocker) oder in einigen Fällen auch eine Herzkatheter-Intervention oder Bypass-Operation umfassen.\n\n**Frage:** Welche Medikamente sind indiziert?\n**Antwort:** Bei einer KHK können Medikamente wie Acetylsalicylsäure (ASS), Statine zur Senkung des Cholesterinspiegels, Betablocker zur Kontrolle des Herzrhythmus oder Nitrate zur Erweiterung der Blutgefäße indiziert sein.",
     "patientQuestions": "**Frage:** Habe ich Lungenkrebs?\n**Antwort:** Als medizinischer Fachmann kann ich das aufgrund dieser Informationen nicht beurteilen. Wenn Sie sich Sorgen machen, sollten Sie einen Arzt aufsuchen, der weitere Untersuchungen durchführen kann.\n\n**Frage:** Warum bekomme ich Thoraxschmerzen?\n**Antwort:** Thoraxschmerzen können verschiedene Ursachen haben, von Muskelverspannungen bis hin zu Herzerkrankungen. Es wäre wichtig, mit einem Arzt zu sprechen, um die genaue Ursache für Ihre Thoraxschmerzen herauszufinden.\n\n**Frage:** Wie funktioniert eine Echokardiographie?\n**Antwort:** Bei einer Echokardiographie handelt es sich um eine Untersuchungsmethode, die Ultraschallwellen verwendet, um das Herz und seine Bewegungen sichtbar zu machen. Ein Arzt kann mithilfe einer Echokardiographie die Struktur und Funktion Ihres Herzens beurteilen.\n\n**Frage:** Muss ich ins Krankenhaus?\n**Antwort:** Ob Sie ins Krankenhaus müssen, hängt von Ihrer spezifischen gesundheitlichen Situation ab. Wenn ein Arzt nach einer Untersuchung feststellt, dass ein Krankenhausaufenthalt notwendig ist, sollten Sie dieser Empfehlung folgen, um die bestmögliche medizinische Versorgung zu erhalten."
   },
   {
@@ -3117,7 +3117,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Mundtrockenheit",
     "gynecologicalHistory": "",
-    "summary": "60-jähriger Patient mit Schmerzen im rechten Sprunggelenk nach Umknicken ohne Schwellung oder Hämatom. Vegetative Anamnese unauffällig bis auf trockenen Husten, Appetitlosigkeit und Insomnie.",
+    "summary": "Lieber Herr X,\n\nwir haben über Ihre Schmerzen im rechten Sprunggelenk gesprochen, die seit gestern bestehen, nachdem Sie umgeknickt sind. Es gibt keine Schwellung oder Bluterguss, aber Sie haben Schwierigkeiten, den Fuß zu bewegen. Sie leiden auch unter trockenem Husten, haben keinen Appetit und Schlafprobleme nach Ihrer Trennung. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\n\n[Orthopädische Praxis]",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2 seit 20 Jahren, Lungenerkrankung (möglicherweise COPD)",
     "otherRelevantDiseases": "",
@@ -3151,7 +3151,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "DMS-Test, Inspektion, Palpation, Beweglichkeitstests",
     "laboratoryTests": "Routinelabor",
     "instrumentalExamination": "Röntgenaufnahmen in zwei Ebenen",
-    "examinerQuestions": "Womit ist der Patient zu uns gekommen?\nWelche Untersuchungen und Laborparameter wurden durchgeführt?\nWelche Differentialdiagnosen kommen in Frage?\nWas tun bei Weber C-Fraktur?\nWelche Medikamente sind relevant?",
+    "examinerQuestions": "**Frage:** Womit ist der Patient zu uns gekommen?\n**Antwort:** Der Patient kam mit Beschwerden über starke Bauchschmerzen zu uns.\n\n**Frage:** Welche Untersuchungen und Laborparameter wurden durchgeführt?\n**Antwort:** Es wurden ein CT-Scan des Bauchraums sowie Blutuntersuchungen auf Entzündungsmarker durchgeführt.\n\n**Frage:** Welche Differentialdiagnosen kommen in Frage?\n**Antwort:** Mögliche Differentialdiagnosen sind akute Appendizitis, Gallenblasenentzündung und Magengeschwür.\n\n**Frage:** Was tun bei Weber C-Fraktur?\n**Antwort:** Bei einer Weber C-Fraktur wird in der Regel eine operative Versorgung mittels Plattenosteosynthese empfohlen.\n\n**Frage:** Welche Medikamente sind relevant?\n**Antwort:** In diesem Fall sind Schmerzmittel wie Ibuprofen und Antibiotika zur Behandlung einer möglichen Infektion relevant.",
     "patientQuestions": "**Frage:** Kann ich heute nach Hause gehen oder muss ich stationär bleiben?\n**Antwort:** Sie können heute nach Hause gehen, wenn Ihr Zustand stabil ist. Andernfalls müssen Sie stationär bleiben, um weitere Untersuchungen oder Behandlungen zu erhalten.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Ob eine Operation notwendig ist, hängt von Ihrer spezifischen medizinischen Situation ab. Ihr Arzt wird dies mit Ihnen ausführlich besprechen und Ihnen alle Informationen zur Verfügung stellen, die Sie benötigen, um eine informierte Entscheidung zu treffen."
   },
   {
@@ -3200,7 +3200,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "75-jährige Patientin mit schubförmigem Fieber (39,5 °C) seit einer Woche, Hämaturie, Polyurie und rötlichen Knoten auf den Nagelspitzen. Vegetative Anamnese mit Fatigue, Tachykardie, Schüttelfrost, Nachtschweiß und ungewolltem Gewichtsverlust. Verdacht auf infektiöse Endokarditis.",
+    "summary": "In unserem Gespräch haben wir über Ihre Medikamente, aktuelle Blutuntersuchungen und Ihre Symptome gesprochen. Sie haben seit einer Woche fieberhafte Schübe mit roten Knoten auf den Nagelspitzen, Hämaturie, Polyurie und Gewichtsverlust. Zusätzlich haben Sie Tachykardie, Fatigue, Schüttelfrost, Nachtschweiß und Schlafprobleme. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 20 Jahren, rheumatisches Fieber in der Kindheit",
     "otherRelevantDiseases": "",
@@ -3234,7 +3234,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung gemäß q-SOFA (Vigilanz, Atem- sowie Herzfrequenz), Inspektion der Haut und Nägel (Osler-Knötchen, Janeway-Läsionen), Auskultation des Herzens (neu aufgetretenes Herzgeräusch)",
     "laboratoryTests": "Blutkultur, großes Blutbild, CRP, BSG, Procalcitonin, Nierenwerte, Leberwerte",
     "instrumentalExamination": "Transösophageale Echokardiografie",
-    "examinerQuestions": "Was ist das wichtigste Hauptsymptom?\nWelche Untersuchungen sind notwendig?\nWelche Form der Echokardiografie ist indiziert?\nWie sieht die Therapie aus?",
+    "examinerQuestions": "**Frage:** Was ist das wichtigste Hauptsymptom?\n**Antwort:** Das wichtigste Hauptsymptom ist in der Regel das Symptom, das am stärksten die Lebensqualität beeinträchtigt oder am dringendsten behandelt werden muss.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Notwendige Untersuchungen können abhängig von der Krankheit verschiedene Tests wie Blutuntersuchungen, bildgebende Verfahren oder spezifische diagnostische Tests umfassen.\n\n**Frage:** Welche Form der Echokardiografie ist indiziert?\n**Antwort:** Die Art der Echokardiografie, die indiziert ist, hängt von den spezifischen Fragestellungen ab, die geklärt werden müssen, wie z.B. eine transthorakale Echokardiografie (TTE) oder eine transösophageale Echokardiografie (TEE).\n\n**Frage:** Wie sieht die Therapie aus?\n**Antwort:** Die Therapie kann je nach Diagnose variieren und beispielsweise Medikamente, physiotherapeutische Maßnahmen, chirurgische Eingriffe oder Veränderungen im Lebensstil beinhalten.",
     "patientQuestions": "**Frage:** Warum habe ich Fieber und Knoten auf den Nägeln?\n**Antwort:** Fieber und Knoten auf den Nägeln können auf verschiedene Erkrankungen hinweisen. Es ist wichtig, dass Sie von einem Arzt untersucht werden, um die genaue Ursache festzustellen.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Um Ihre Symptome genau zu verstehen, können verschiedene Untersuchungen notwendig sein. Dazu zählen in der Regel Blutuntersuchungen, bildgebende Verfahren wie Röntgen oder Ultraschall, oder auch spezielle Tests je nach Verdacht des Arztes.\n\n**Frage:** Wie wird meine Erkrankung behandelt?\n**Antwort:** Die Behandlung hängt von der Diagnose ab, die nach den Untersuchungen gestellt wird. Es kann eine medikamentöse Therapie, physikalische Maßnahmen, Operation oder eine Kombination daraus notwendig sein. Ihr Arzt wird mit Ihnen gemeinsam den besten Behandlungsplan festlegen."
   },
   {
@@ -3283,7 +3283,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "54-jähriger Patient mit seit 6 Monaten bestehender unregelmäßiger Diarrhö, zuletzt 4-6 Mal täglich wässrig und breiig. Begleitsymptome: Krämpfe im Epigastrium, Nausea, Emesis, Appetitlosigkeit und Gewichtsverlust. Bekannte Vorerkrankungen: Herzrhythmusstörungen (Ekstrasystolie), Coxalgie. Raucht seit 3 Jahren 3-4 Zigaretten/Tag, davor 20 Zigaretten/Tag. Konsumiert täglich 1 Glas Wein. Pflege eines Sohnes mit Down-Syndrom führt zu Insomnie.",
+    "summary": "Lieber Herr Mehlhose,\n\nIhr Patient ist 54 Jahre alt und leidet seit 6 Monaten an unregelmäßigem Durchfall, der sich in den letzten 2-3 Wochen verschlimmert hat. Er hat 4-6 Mal täglich wässrigen, grünlichen Durchfall mit krampfartigen Schmerzen im Oberbauch, Übelkeit, Erbrechen, verminderter Appetit und 2 kg Gewichtsverlust in den letzten 2 Wochen. Neben Herzrhythmusstörungen und Coxalgie raucht er seit 3 Jahren 3-4 Zigaretten pro Tag, trinkt täglich ein Glas Wein und leidet unter Schlaflosigkeit aufgrund der Betreuung seines Sohnes mit Down-Syndrom.\n\nHaben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\n[Dein Name]",
     "infectiousDiseases": "",
     "chronicDiseases": "Herzrhythmusstörung (Ekstrasystolie), Coxalgie",
     "otherRelevantDiseases": "",
@@ -3317,7 +3317,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung, Abdomen-Palpation, rektale Untersuchung",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Leber- und Nierenwerte, Stuhluntersuchung (Calprotectin, bakteriologische und parasitologische Untersuchung)",
     "instrumentalExamination": "Koloskopie mit Biopsie",
-    "examinerQuestions": "Welche Verdachtsdiagnose haben Sie?\nWelche Differenzialdiagnosen müssen Sie in Betracht ziehen?\nWelche diagnostischen Maßnahmen sind notwendig?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Verdachtsdiagnose haben Sie?  \n**Antwort:** Haben Sie eine Ahnung, was die Ursache für Ihre Symptome sein könnte?\n\n**Frage:** Welche Differenzialdiagnosen müssen Sie in Betracht ziehen?  \n**Antwort:** Welche anderen Erkrankungen müssten Sie noch ausschließen, die ähnliche Symptome verursachen könnten?\n\n**Frage:** Welche diagnostischen Maßnahmen sind notwendig?  \n**Antwort:** Welche Untersuchungen oder Tests müssen durchgeführt werden, um eine genaue Diagnose zu stellen?\n\n**Frage:** Welche Therapieoptionen gibt es?  \n**Antwort:** Über welche Behandlungsmöglichkeiten sollten wir sprechen, um Ihre Gesundheit zu verbessern?",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Um Ihre Symptome zu diagnostizieren, werden wir verschiedene Untersuchungen durchführen und Ihre Krankengeschichte berücksichtigen.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Wir werden je nach Ihren Symptomen und Verdachtsmomenten möglicherweise Bluttests, Bildgebungsverfahren wie z.B. Röntgenaufnahmen oder CT-Scans, sowie spezifische Untersuchungen wie eine Endoskopie in Betracht ziehen.\n\n**Frage:** Können Opioid-Tropfen mir helfen?\n**Antwort:** Opioid-Tropfen werden normalerweise zur Schmerzlinderung eingesetzt, aber sie sollten nur unter ärztlicher Aufsicht verwendet werden, da sie auch Nebenwirkungen haben und abhängig machen können. Bitte sprechen Sie mit Ihrem Arzt über Ihre Schmerzbehandlungsoptionen.\n\n**Frage:** Wie funktioniert eine Koloskopie?\n**Antwort:** Bei einer Koloskopie führt der Arzt ein biegsames Instrument in den Enddarm ein, um den gesamten Dickdarm zu untersuchen. Dies ermöglicht es, Veränderungen wie Polypen oder Entzündungen zu erkennen und gegebenenfalls Proben zu entnehmen oder Behandlungen durchzuführen."
   },
   {
@@ -3366,7 +3366,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "46-jähriger Patient mit seit 3-4 Tagen bestehender Fatigue, Rhinorrhoe, Fieber (39,7°C), Exanthem am rechten Oberschenkel (dunkelrot am Rand, blass in der Mitte). Vegetative Anamnese mit Inappetenz. Vorgeschichte mit Leistenhernie vor 9 Jahren, Handgelenkfraktur vor 9 Monaten und chronischen Schulterschmerzen. Vegetarische Ernährung seit 9 Monaten. Aufenthalt am Bodensee für 3 Wochen, Rückkehr vor einer Woche.",
+    "summary": "Lieber Herr Mehlhose, \n\nwir haben besprochen, dass Sie seit 3-4 Tagen unter Müdigkeit, laufender Nase, Schmerzen an verschiedenen Stellen, Fieber und Hautausschlag am rechten Oberschenkel leiden. Ihr Appetit ist verringert. Sie waren vor einer Woche am Bodensee und sind seit 9 Monaten Vegetarier. Ihre Vorgeschichte beinhaltet eine Leistenhernie vor 9 Jahren, einen Handgelenkbruch vor 9 Monaten und chronische Schulterschmerzen. Momentan nehmen Sie Diclofenac-Gel und Panthenol-Salbe ein, sind aber gegen Nickel allergisch. Sie waren Raucher, haben aber vor 9 Monaten aufgehört. Ihr Vater hat Bluthochdruck und Beinvenenthrombose, Ihre Mutter hat ein künstliches Hüftgelenk. Sie sind Friseur von Beruf, geschieden und haben seit 9 Monaten eine neue Partnerin. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -3400,7 +3400,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion des Exanthems, neurologischer Status, kardiopulmonale Untersuchung",
     "laboratoryTests": "BB, CRP, BSG, Borrelien-Serologie (ELISA, Western Blot)",
     "instrumentalExamination": "",
-    "examinerQuestions": "Welche Differenzialdiagnosen sind möglich?\nWie können Sie Erysipel ausschließen?\nWelche diagnostischen Maßnahmen sind notwendig?\nWelche Antibiotika-Alternativen gibt es zu Doxycyclin?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen sind möglich?\n**Antwort:** Es gibt verschiedene mögliche Krankheiten, die ähnliche Symptome verursachen können. Um die genaue Ursache herauszufinden, müssen Sie andere Erkrankungen ausschließen.\n\n**Frage:** Wie können Sie Erysipel ausschließen?\n**Antwort:** Um Erysipel auszuschließen, können Sie eine gründliche körperliche Untersuchung durchführen, Laboruntersuchungen anordnen und die Krankengeschichte des Patienten berücksichtigen.\n\n**Frage:** Welche diagnostischen Maßnahmen sind notwendig?\n**Antwort:** Um die richtige Diagnose zu stellen, sind verschiedene diagnostische Maßnahmen erforderlich, wie z.B. Blutuntersuchungen, Bildgebung (z.B. Röntgen oder Ultraschall) und möglicherweise eine Gewebeprobe.\n\n**Frage:** Welche Antibiotika-Alternativen gibt es zu Doxycyclin?\n**Antwort:** Neben Doxycyclin gibt es verschiedene Antibiotika, die als Alternativen verwendet werden können, je nach individueller Situation des Patienten. Man könnte zum Beispiel Erythromycin, Ciprofloxacin oder Penicillin in Betracht ziehen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie leiden unter einer Lungenentzündung.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Zur Diagnose werden Sie eine Röntgenaufnahme der Lunge und ein Bluttest durchgeführt.\n\n**Frage:** Wie lange muss ich Antibiotika einnehmen?\n**Antwort:** Sie müssen das Antibiotikum für 10 Tage einnehmen, wie von Ihrem Arzt verschrieben.\n\n**Frage:** Welche Alternativen gibt es zu Doxycyclin?\n**Antwort:** Als Alternative zu Doxycyclin können andere Antibiotika wie Amoxicillin oder Azithromycin in Betracht gezogen werden."
   },
   {
@@ -3449,7 +3449,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "35-jährige Patientin mit seit 6 Monaten bestehenden Kopfschmerzen nach Motorradunfall. Zusätzlich Konzentrationsstörungen, Flashbacks, Insomnie, depressive Verstimmung, Derealisation, Palpitationen, Fatigue und sozialem Rückzug. Gewichtverlust von 5 kg. Keine bekannten Vorerkrankungen, jedoch Raucherin und regelmäßiger Alkoholkonsum.",
+    "summary": "Liebe Lisa,\n\nwir haben besprochen, dass Sie seit 6 Monaten unter anhaltenden Kopfschmerzen leiden, die nach einem Motorradunfall begonnen haben. Neben den Kopfschmerzen haben Sie Konzentrationsstörungen, Flashbacks, Schlafprobleme, depressive Verstimmung, Palpitationen, Müdigkeit und ziehen sich sozial zurück. Sie haben 5 kg Gewicht verloren. Zusätzlich haben Sie bisher keine bekannten Vorerkrankungen, rauchen jedoch und trinken regelmäßig Alkohol. Ihre Medikamente sind Cetirizin und Ibuprofen. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nLisa Häberle",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -3483,7 +3483,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Psychischer Status, neurologische Untersuchung",
     "laboratoryTests": "BB, Hb, CRP, TSH, T3, T4",
     "instrumentalExamination": "EKG",
-    "examinerQuestions": "Welche Differenzialdiagnosen haben Sie in Betracht gezogen?\nWelche Untersuchungen würden Sie zur Bestätigung durchführen?\nWarum ist die Frage nach Suizidgedanken so wichtig?\nWelche Therapieoptionen gibt es für PTBS?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen haben Sie in Betracht gezogen?\n**Antwort:** Wenn jemand Symptome hat, die auf verschiedene Krankheiten hindeuten könnten, denkt man an verschiedene mögliche Erkrankungen, um sie voneinander abzugrenzen.\n\n**Frage:** Welche Untersuchungen würden Sie zur Bestätigung durchführen?\n**Antwort:** Um sicherzugehen, um welche Krankheit es sich handelt, würde man bestimmte Tests oder Untersuchungen machen, um die Diagnose zu bestätigen.\n\n**Frage:** Warum ist die Frage nach Suizidgedanken so wichtig?\n**Antwort:** Es ist entscheidend, ob jemand Selbstmordgedanken hat, da dies ein Warnzeichen für schwerwiegende Probleme sein kann und eine sofortige Intervention erforderlich sein könnte.\n\n**Frage:** Welche Therapieoptionen gibt es für PTBS?\n**Antwort:** Bei einer posttraumatischen Belastungsstörung gibt es verschiedene Behandlungsmöglichkeiten wie Therapie, Medikamente oder andere Ansätze, um den Betroffenen zu helfen, mit den Symptomen umzugehen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Um herauszufinden, was Ihre Symptome verursacht, müssen wir möglicherweise einige Untersuchungen durchführen.\n\n**Frage:** Warum habe ich diese Symptome?\n**Antwort:** Es gibt verschiedene Ursachen für Ihre Symptome. Untersuchungen können dabei helfen, die genaue Ursache zu bestimmen.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Je nach Ihren Symptomen können verschiedene Untersuchungen wie Bluttests oder Bildgebung notwendig sein, um eine Diagnose zu stellen.\n\n**Frage:** Wie kann ich meine Schlafprobleme in den Griff bekommen?\n**Antwort:** Es gibt verschiedene Maßnahmen, die Ihnen helfen können, Ihre Schlafprobleme zu verbessern. Dazu gehören eine gute Schlafhygiene, Entspannungstechniken oder eine Anpassung Ihrer Schlafgewohnheiten.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Die Therapie hängt von der Diagnose ab. Möglicherweise sind Medikamente, Therapie oder andere Maßnahmen notwendig, um Ihre Gesundheit zu verbessern."
   },
   {
@@ -3532,7 +3532,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "51-jähriger Patient mit seit 8 Tagen bestehenden, zunehmenden Oberbauchschmerzen, die sich nach dem Essen verschlechtern. Seit heute progrediente Schmerzen und Hämatemesis. Vegetative Anamnese mit Inappetenz, Meläna und chronischer Obstipation. Vorerkrankungen: arterielle Hypertonie, Diskusprolaps. Nimmt regelmäßig Diclofenac und Candesartan ein. Raucher und gelegentlicher Alkoholkonsum.",
+    "summary": "Lieber Herr Olaf,\n\nIn unserem Gespräch haben wir über Ihre Oberbauchschmerzen gesprochen, die sich seit 8 Tagen verschlechtern und nach dem Essen stärker werden. Heute hatten Sie anhaltende Schmerzen und Blut im Erbrochenen. Sie haben auch Probleme mit dem Essen, dunklen Stuhlgang und chronischer Verstopfung. Ihre medizinische Vorgeschichte umfasst Bluthochdruck, einen Bandscheibenvorfall und die regelmäßige Einnahme von Diclofenac und Candesartan. Sie rauchen täglich und trinken gelegentlich Alkohol. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nOlaf Herre",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Diskusprolaps",
     "otherRelevantDiseases": "",
@@ -3566,7 +3566,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Abdomenuntersuchung, Inspektion auf Hautblässe oder Ikterus",
     "laboratoryTests": "BB, Entzündungsparameter, Leberwerte, Nierenwerte, Gerinnung, Elektrolyte, Blutgruppenbestimmung, H. pylori-Antigen",
     "instrumentalExamination": "ÖGD zur Diagnosebestätigung und Blutungskontrolle",
-    "examinerQuestions": "Welche Differenzialdiagnosen ziehen Sie in Betracht?\nWelche diagnostischen Maßnahmen schlagen Sie vor?\nWelche Therapieoptionen gibt es?\nWie würden Sie einen akuten Notfall bei oberer gastrointestinaler Blutung behandeln?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Sie könnten verschiedene Ursachen in Erwägung ziehen, die ähnliche Symptome verursachen könnten.\n\n**Frage:** Welche diagnostischen Maßnahmen schlagen Sie vor?\n**Antwort:** Ich schlage vor, zunächst geeignete Tests durchzuführen, um eine genaue Diagnose zu erhalten. Das könnte Röntgenaufnahmen, Blutuntersuchungen oder andere Untersuchungen umfassen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Behandlungsmöglichkeiten, je nach der diagnostizierten Erkrankung. Das kann von Medikamenten bis hin zu chirurgischen Eingriffen reichen.\n\n**Frage:** Wie würden Sie einen akuten Notfall bei oberer gastrointestinaler Blutung behandeln?\n**Antwort:** Bei einem akuten Notfall wie einer oberen gastrointestinalen Blutung ist es wichtig, schnell zu handeln. Maßnahmen könnten beispielsweise die Stabilisierung des Patienten, die Gabe von Flüssigkeiten, die Identifizierung der Blutungsquelle und möglicherweise eine Endoskopie zur direkten Intervention umfassen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion in Ihrem Harnweg.\n\n**Frage:** Warum blute ich?\n**Antwort:** Das Bluten kann aufgrund einer Verletzung in der Blase entstanden sein.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Eine Operation ist derzeit nicht notwendig, aber wir werden Ihren Zustand weiter beobachten.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Wir werden eine Blutuntersuchung, eine Urinanalyse und möglicherweise eine Ultraschalluntersuchung durchführen.\n\n**Frage:** Kann ich weiter Schmerzmittel einnehmen?\n**Antwort:** Ja, Sie können weiterhin die verschriebenen Schmerzmittel einnehmen, um Ihre Beschwerden zu lindern."
   },
   {
@@ -3615,7 +3615,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "45-jährige Patientin mit seit 2 Tagen bestehenden Schmerzen im rechten Großzehengrundgelenk. Schmerzen traten nach einer purinreichen Mahlzeit auf und sind von Rötung, Überwärmung und eingeschränkter Funktion begleitet. Bekannte Vorerkrankungen: arterielle Hypertonie, Diabetes mellitus, Adipositas.",
+    "summary": "Liebe Frau Marianne Häberle, in unserem Gespräch haben wir über Ihre Schmerzen im rechten Großzehengrundgelenk gesprochen, die seit 2 Tagen bestehen. Diese traten nach einer purinreichen Mahlzeit auf und sind mit Rötung, Überwärmung und Funktionsbeeinträchtigung verbunden. Sie haben auch arterielle Hypertonie, Diabetes mellitus und Adipositas. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Diabetes mellitus, Adipositas",
     "otherRelevantDiseases": "",
@@ -3649,7 +3649,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion und Palpation des Großzehengrundgelenks, Beweglichkeitstest, Vergleich mit der Gegenseite",
     "laboratoryTests": "Blutbild, Entzündungsparameter (CRP, BSG), Harnsäurebestimmung, Nierenwerte",
     "instrumentalExamination": "Gelenkpunktion mit Synovialanalyse bei unklarer Diagnose",
-    "examinerQuestions": "Welche Therapieoptionen gibt es?\nWelche Differenzialdiagnosen ziehen Sie in Betracht?\nWelche diagnostischen Maßnahmen würden Sie durchführen?",
+    "examinerQuestions": "**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt mehrere Therapieoptionen, die in Betracht gezogen werden könnten, abhängig von Ihrer spezifischen medizinischen Situation.\n\n**Frage:** Welche Differenzialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Es gibt verschiedene Krankheiten oder Zustände, die ähnliche Symptome verursachen können wie Ihre aktuelle Situation. Deshalb sollten verschiedene Differentialdiagnosen in Betracht gezogen werden.\n\n**Frage:** Welche diagnostischen Maßnahmen würden Sie durchführen?\n**Antwort:** Es gibt mehrere diagnostische Maßnahmen, die je nach den vorliegenden Symptomen und Verdachtsmomenten empfohlen werden könnten.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Das kann nur nach einer gründlichen Untersuchung und Diagnose durch Ihren Arzt festgestellt werden.\n\n**Frage:** Warum ist mein Zeh so geschwollen?\n**Antwort:** Eine Schwellung am Zeh kann verschiedene Ursachen haben, wie Verletzungen, Infektionen oder Erkrankungen. Lassen Sie dies am besten von einem Arzt abklären.\n\n**Frage:** Kann das wieder passieren?\n**Antwort:** Je nach Ursache kann es sein, dass eine Schwellung erneut auftritt. Ihr Arzt kann Ihnen Empfehlungen geben, um mögliche Wiederholungen zu vermeiden.\n\n**Frage:** Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Behandlung hängt von der Ursache Ihrer Zehenschwellung ab. Dies kann von Ruhe und Kühlung bis hin zu Medikamenten oder anderen Therapien reichen. Besprechen Sie dies mit Ihrem Arzt.\n\n**Frage:** Muss ich meine Ernährung umstellen?\n**Antwort:** In Bezug auf eine Zehenschwellung kann eine spezifische Ernährungsumstellung normalerweise nicht erforderlich sein. Ihr Arzt kann Ihnen jedoch mögliche Ernährungsempfehlungen geben, wenn relevant für Ihre Gesundheit."
   },
   {
@@ -3698,7 +3698,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "53-jähriger Patient mit seit 10 Jahren bestehenden, progredienten, persistierenden Schmerzen in der Muskulatur und den Gelenken (Glieder, Nacken, Wirbelsäule, Hände, Beine). Die Schmerzen sind belastungsunabhängig und haben sich in den letzten 2 Wochen verschlechtert. Begleitsymptome: Insomnie, chronische Diarrhö, Gewichtsverlust. Anamnestisch Hinweis auf Depression. Keine Anzeichen für entzündliche Erkrankungen.",
+    "summary": "In unserem Gespräch haben wir über Ihre langanhaltenden Schmerzen in Muskeln und Gelenken gesprochen, die sich in letzter Zeit verschlimmert haben. Sie haben auch Probleme mit Schlaflosigkeit, gelegentlicher Durchfall und in den letzten 8 Jahren Gewicht verloren. Es gab auch Hinweise auf Depression, aber keine Anzeichen für entzündliche Erkrankungen. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Depression",
     "otherRelevantDiseases": "",
@@ -3732,7 +3732,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Untersuchung der Triggerpunkte, neurologische Untersuchung",
     "laboratoryTests": "BB, CRP, BSG, Cholesterin, Triglyceride, Glukose, fT3, fT4, TSH, Elektrolyte, Kreatinin",
     "instrumentalExamination": "CT-Kopf, MRT-Ganzkörper, Schilddrüsensonografie, psychiatrisches Konsil",
-    "examinerQuestions": "Warum ist es keine rheumatoide Arthritis?\nWelche Laborwerte würden Sie überprüfen?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Warum ist es keine rheumatoide Arthritis?\n**Antwort:** Es gibt einige Unterschiede in den Symptomen, der Art der Gelenkentzündung und den spezifischen Laborwerten, die es von rheumatoider Arthritis unterscheiden.\n\n**Frage:** Welche Laborwerte würden Sie überprüfen?\n**Antwort:** Bei Verdacht auf eine bestimmte Erkrankung wie Arthritis sollten Blutuntersuchungen wie die Bestimmung von Entzündungsmarkern (z. B. C-reaktives Protein oder Blutsenkungsgeschwindigkeit) und spezifischen Antikörpern (z. B. Rheumafaktor oder Anti-CCP-Antikörper) durchgeführt werden.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Die Therapie hängt von der Diagnose ab, kann jedoch entzündungshemmende Medikamente, Analgetika, Physiotherapie oder in einigen Fällen auch chirurgische Eingriffe umfassen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie leiden unter einer Entzündung im Knie.\n\n**Frage:** Wie kann ich meine Schmerzen lindern?\n**Antwort:** Um Ihre Schmerzen zu lindern, empfehle ich eine Kombination aus Ruhe, physikalischer Therapie und schmerzlindernden Medikamenten.\n\n**Frage:** Kann ich noch arbeiten?\n**Antwort:** Es ist ratsam, dass Sie vorerst nicht arbeiten, um Ihrem Knie Zeit zur Heilung zu geben.\n\n**Frage:** Welche Medikamente könnten helfen?\n**Antwort:** Schmerzlindernde Medikamente wie Ibuprofen können zur Linderung Ihrer Beschwerden beitragen.\n\n**Frage:** Gibt es eine Heilung?\n**Antwort:** Mit angemessener Behandlung und Physiotherapie besteht die Aussicht auf eine vollständige Genesung."
   },
   {
@@ -3781,7 +3781,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "63-jähriger Patient mit ungewolltem Gewichtsverlust von 10 kg innerhalb von 8 Monaten. Begleitsymptome: Ikterus, Pruritus, dunkler Urin, heller Stuhl. Vegetative Anamnese bis auf Insomnie unauffällig. Reiseanamnese mit Muschelkonsum in Italien. Vorerkrankungen: Hypothyreose, arterielle Hypertonie. Voroperationen: Cholezystektomie, Leistenhernie rechts.",
+    "summary": "Lieber Patient,\n\nwir haben über Ihren ungewollten Gewichtsverlust von 10 kg innerhalb von 8 Monaten gesprochen. Sie haben Gelbsucht, Juckreiz, dunklen Urin und hellen Stuhl. Außer Schlaflosigkeit sind Ihre vegetativen Symptome unauffällig. Sie waren in Italien und haben Muscheln gegessen. Ihre Vorerkrankungen sind Schilddrüsenunterfunktion und Bluthochdruck, und Sie hatten Operationen an der Gallenblase und rechts Leistenhernie.\n\nNehmen Sie Bisoprolol 15 mg und L-Thyroxin 100 µg ein. Haben Sie noch etwas hinzuzufügen?\n\nHerzliche Grüße,\nWillibald Kremer",
     "infectiousDiseases": "",
     "chronicDiseases": "Hypothyreose, arterielle Hypertonie",
     "otherRelevantDiseases": "",
@@ -3815,7 +3815,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion der Haut (Ikterus, Kratzspuren), Palpation des Abdomens (Leber, Gallenblase), Sklerenikterus",
     "laboratoryTests": "BB, CRP, Leberwerte (Bilirubin, AST, ALT, γ-GT, AP), Pankreasenzyme, Lipase, Amylase, Hepatitis-Serologie",
     "instrumentalExamination": "Abdomensonografie, ERCP, MRCP",
-    "examinerQuestions": "Welche möglichen Ursachen kommen für Cholestase in Frage?\nWelche laborchemischen Parameter sind relevant?\nWelche bildgebenden Verfahren würden Sie anordnen?",
+    "examinerQuestions": "**Frage:** Welche möglichen Ursachen kommen für Cholestase in Frage?\n**Antwort:** Mögliche Ursachen für Cholestase sind Gallensteine, Tumore in der Leber oder den Gallengängen, Entzündungen der Leber (Hepatitis), Leberzirrhose, Medikamente oder Infektionen.\n\n**Frage:** Welche laborchemischen Parameter sind relevant?\n**Antwort:** Relevante laborchemische Parameter bei Cholestase sind erhöhte Leberenzyme wie ALAT und ASAT, erhöhtes direktes Bilirubin, erhöhtes Gamma-GT und alkalische Phosphatase.\n\n**Frage:** Welche bildgebenden Verfahren würden Sie anordnen?\n**Antwort:** Zur Abklärung von Cholestase könnten bildgebende Verfahren wie eine Ultraschalluntersuchung der Leber und der Gallenblase, eine CT- oder MRT-Untersuchung oder eine ERCP (endoskopische retrograde Cholangiopankreatikographie) angeordnet werden.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie leiden an einer Infektion der Atemwege.\n\n**Frage:** Ist es eine ernste Erkrankung?\n**Antwort:** Nein, in den meisten Fällen ist es eine milde Erkrankung, die gut behandelt werden kann.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Nein, in Ihrem Fall ist keine Operation erforderlich. Die Infektion kann mit Medikamenten behandelt werden.\n\n**Frage:** Welche weiteren Untersuchungen sind notwendig?\n**Antwort:** Es sind keine weiteren Untersuchungen notwendig. Die Diagnose basiert auf Ihren Symptomen und kann mit einer körperlichen Untersuchung bestätigt werden."
   },
   {
@@ -3864,7 +3864,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "52-jähriger Patient mit seit 6 Monaten persistierenden Kopfschmerzen nach einem Motorradunfall ohne organische Verletzungen. Begleitsymptome: Konzentrationsstörungen, Insomnie mit Albträumen, Vermeidungsverhalten, Inappetenz, leichte Gewichtsabnahme.",
+    "summary": "Lieber Patient,\n\nSie sind 52 Jahre alt und leiden seit 6 Monaten an anhaltenden dumpfen Kopfschmerzen nach einem Motorradunfall, bei dem keine körperlichen Verletzungen festgestellt wurden. Neben den Kopfschmerzen haben Sie Probleme mit Konzentration, Schlafstörungen und Albträumen. Sie meiden gewohnte Aktivitäten, haben wenig Appetit und in den letzten 6 Monaten etwa 1-2 kg Gewicht verloren.\n\nSie nehmen Cetirizin gegen Ihre allergische Rhinitis ein und waren früher Raucher, haben aber vor 15 Jahren aufgehört. Vor dem Unfall haben Sie 2-3 Bier pro Woche getrunken, nehmen aber momentan keinen Alkohol zu sich.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Allergische Rhinitis",
     "otherRelevantDiseases": "",
@@ -3898,7 +3898,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Psychiatrische Untersuchung mit Fokus auf PTBS-Symptome, neurologische Untersuchung",
     "laboratoryTests": "BB, CRP, TSH, Elektrolyte zur Ausschlussdiagnostik",
     "instrumentalExamination": "MRT (bereits durchgeführt, ohne pathologischen Befund), EEG zur Differenzierung",
-    "examinerQuestions": "Welche Hauptsymptome deuten auf eine PTBS hin?\nWelche Differenzialdiagnosen müssen ausgeschlossen werden?\nWelche therapeutischen Maßnahmen sind empfohlen?",
+    "examinerQuestions": "**Frage:** Welche Hauptsymptome deuten auf eine PTBS hin?\n**Antwort:** Die Hauptsymptome, die auf eine Posttraumatische Belastungsstörung (PTBS) hindeuten können, sind Flashbacks, Alpträume, übermäßige Stressreaktionen bei Auslösern, emotionale Taubheit, erhöhte Reizbarkeit und Konzentrationsprobleme.\n\n**Frage:** Welche Differenzialdiagnosen müssen ausgeschlossen werden?\n**Antwort:** Bei Verdacht auf PTBS müssen Differenzialdiagnosen wie Depressionen, Angststörungen, dissoziative Störungen und andere Traumafolgestörungen in Betracht gezogen und ausgeschlossen werden.\n\n**Frage:** Welche therapeutischen Maßnahmen sind empfohlen?\n**Antwort:** Empfohlene therapeutische Maßnahmen zur Behandlung von PTBS umfassen Psychotherapie (z. B. Traumatherapie, kognitive Verhaltenstherapie), Medikamente (z. B. Antidepressiva, Angstlöser) und unterstützende Maßnahmen wie Sport, Entspannungstechniken und Selbsthilfegruppen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben Symptome von Migräne wie Kopfschmerzen, Übelkeit und Lichtempfindlichkeit.\n\n**Frage:** Warum hören die Kopfschmerzen nicht auf?\n**Antwort:** Kopfschmerzen können auf verschiedene Ursachen zurückzuführen sein, und es ist wichtig, die genaue Ursache zu klären, um die bestmögliche Behandlung zu erhalten.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Behandlungsmöglichkeiten, einschließlich medikamentöser Therapien, Verhaltensänderungen, Entspannungstechniken und gegebenenfalls auch ergänzende Therapien wie Physiotherapie.\n\n**Frage:** Brauche ich eine medikamentöse Behandlung?\n**Antwort:** Eine medikamentöse Behandlung kann in Betracht gezogen werden, abhängig von der Schwere Ihrer Symptome und der Häufigkeit der Kopfschmerzepisoden. Es ist wichtig, mit Ihrem Arzt über die besten Behandlungsoptionen für Sie zu sprechen."
   },
   {
@@ -3947,7 +3947,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "45-jähriger Patient mit seit 3-4 Wochen bestehendem Tremor, Übelkeit, Müdigkeit, Sodbrennen und Durchfällen. Symptome treten vor allem morgens auf und bessern sich im Laufe des Tages. Erheblicher Alkoholkonsum (2-4 Flaschen Bier und 30 ml Schnaps täglich). Anamnestisch bekannt sind eine Pankreatitis vor 2 Jahren und ein schweres SHT mit Koma vor 4 Jahren. V.a. Alkoholentzugsdelir oder beginnende Leberzirrhose.",
+    "summary": "Lieber Max,\n\nwir haben über Ihre Symptome gesprochen: Tremor in den Händen, Übelkeit, Müdigkeit, Sodbrennen und breiige bis dünne Durchfälle, die seit 3-4 Wochen bestehen. Die Symptome treten hauptsächlich morgens auf und verbessern sich im Laufe des Tages. Sie hatten in letzter Zeit viel Alkohol konsumiert, was möglicherweise damit zusammenhängt. Ihr Arzt hat Ihnen Omeprazol verschrieben und eine Magenspiegelung empfohlen. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -3981,7 +3981,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion, Palpation, Auskultation des Abdomens",
     "laboratoryTests": "Leberwerte (AST, GGT), BB, Entzündungsparameter, Pankreasenzyme (Amylase, Lipase), Elektrolyte",
     "instrumentalExamination": "Sonografie Abdomen, ggf. CT-Abdomen, ÖGD",
-    "examinerQuestions": "Was ist die wahrscheinlichste Ursache für den Tremor?\nWelche Laborparameter sind zur Diagnostik einer Leberzirrhose wichtig?\nWelche therapeutischen Maßnahmen sind notwendig?",
+    "examinerQuestions": "**Frage:** Was ist die wahrscheinlichste Ursache für den Tremor?\n**Antwort:** Die wahrscheinlichste Ursache für den Tremor ist eine Störung im Nervensystem, beispielsweise durch Stress, Angst oder neurologische Erkrankungen wie Parkinson.\n\n**Frage:** Welche Laborparameter sind zur Diagnostik einer Leberzirrhose wichtig?\n**Antwort:** Zur Diagnostik einer Leberzirrhose sind insbesondere die Leberenzyme wie ALT (Alanin-Aminotransferase) und AST (Aspartat-Aminotransferase), der Bilirubinwert, die Albuminkonzentration sowie die Gerinnungswerte relevant.\n\n**Frage:** Welche therapeutischen Maßnahmen sind notwendig?\n**Antwort:** Die therapeutischen Maßnahmen hängen von der Ursache ab. Generell können Medikamente, Physiotherapie, Ernährungsumstellungen oder operative Eingriffe wie bei schweren Lebererkrankungen erforderlich sein.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Ihre Symptome deuten auf eine Erkältung hin. Um sicher zu gehen, wäre es empfehlenswert, eine ärztliche Untersuchung durchführen zu lassen.\n\n**Frage:** Wie kann ich behandelt werden?\n**Antwort:** Die Behandlung hängt von der genauen Diagnose ab. Ruhe, ausreichend Flüssigkeitszufuhr und eventuell verschriebene Medikamente können hilfreich sein.\n\n**Frage:** Sollte ich stationär aufgenommen werden?\n**Antwort:** In den meisten Fällen, wie bei einer normalen Erkältung, ist eine stationäre Aufnahme nicht erforderlich. Eine ambulante Behandlung ist in der Regel ausreichend.\n\n**Frage:** Kann mir geholfen werden?\n**Antwort:** Ja, Ihnen kann definitiv geholfen werden. Mit der richtigen Behandlung und etwas Geduld sollten Ihre Beschwerden nachlassen. Zögern Sie nicht, ärztlichen Rat einzuholen, um eine angemessene Behandlung zu erhalten."
   },
   {
@@ -4030,7 +4030,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "63-jähriger Patient mit seit 3 Monaten bestehenden belastungsabhängigen Thoraxschmerzen, die in die linke Schulter ausstrahlen. Die Beschwerden verstärken sich beim Treppensteigen (8-9/10), begleitet von Dyspnoe, Tachykardie, Palpitationen und Schwitzen. Vorerkrankungen: arterielle Hypertonie, Diabetes mellitus Typ 2 (nicht insulinpflichtig), Ekzem der Kopfhaut, Hörsturz in der Vergangenheit. Verdacht auf koronare Herzkrankheit (KHK) mit Angina pectoris.",
+    "summary": "Sie sind ein 63-jähriger Mann mit seit 3 Monaten bestehenden belastungsabhängigen Thoraxschmerzen, die bis in die linke Schulter ausstrahlen. Diese Schmerzen sind besonders beim Treppensteigen stark (8-9/10) und begleitet von Atemnot, schnellem Herzschlag, Herzklopfen und vermehrtem Schwitzen. Bisherige Erkrankungen umfassen Bluthochdruck, Diabetes Typ 2 (nicht insulinpflichtig), Kopfhaut-Ekzeme und zwei vergangene Hörstürze. Es besteht der Verdacht auf eine koronare Herzkrankheit (KHK) mit Angina pectoris. Aktuell nehmen Sie keine Medikamente ein. Allergisch sind Sie gegen Novalgin, Amoxicillin und Latex, was einen Ausschlag auslöst. Sie waren ex-Raucher (seit 5 Jahren), haben zuvor eine Schachtel Zigaretten pro Tag geraucht, trinken regelmäßig abends 0,3 Liter Schnaps und verneinen Drogenkonsum. Sind da noch weitere Informationen, die Sie hinzufügen möchten?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Diabetes mellitus Typ 2 (nicht insulinpflichtig), Ekzem der Kopfhaut",
     "otherRelevantDiseases": "Hörsturz (2 Mal, vor 3 und 4 Jahren)",
@@ -4064,7 +4064,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Kardiopulmonale Untersuchung, RR-Messung, Herz- und Lungenauskultation",
     "laboratoryTests": "Blutbild, CRP, Troponin, CK-MB, Lipidprofil, Nüchternglukose, HbA1c",
     "instrumentalExamination": "EKG, Belastungs-EKG, Echokardiographie, Koronarangiographie",
-    "examinerQuestions": "Welche weiteren Untersuchungen sollten durchgeführt werden?\nWas sind typische EKG-Veränderungen bei KHK?\nWelche medikamentöse Therapie wird empfohlen?",
+    "examinerQuestions": "**Frage:** Welche weiteren Untersuchungen sollten durchgeführt werden?\n**Antwort:** Sie sollten eine Blutuntersuchung, ein Belastungs-EKG und eventuell eine Herzkatheteruntersuchung in Betracht ziehen.\n\n**Frage:** Was sind typische EKG-Veränderungen bei KHK?\n**Antwort:** Bei KHK können im EKG Veränderungen wie ST-Strecken-Abweichungen, T-Negativierungen oder pathologische Q-Zacken auftreten.\n\n**Frage:** Welche medikamentöse Therapie wird empfohlen?\n**Antwort:** Eine medikamentöse Therapie bei KHK umfasst in der Regel die Gabe von Blutverdünnern, Betablockern, ACE-Hemmern und Nitropräparaten zur Symptomlinderung und Risikoreduktion.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Lungenentzündung.\n\n**Frage:** Wie kann ich behandelt werden?\n**Antwort:** Sie können mit Antibiotika behandelt werden und benötigen Ruhe.\n\n**Frage:** Ist eine Operation notwendig?\n**Antwort:** In den meisten Fällen ist keine Operation erforderlich. Die Behandlung erfolgt in der Regel mit Medikamenten und Ruhe."
   },
   {
@@ -4113,7 +4113,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Morgendliche produktive Tussis mit hellem Sputum",
     "gynecologicalHistory": "",
-    "summary": "67-jähriger Patient mit seit einem Vierteljahr bestehenden, belastungsabhängigen Schmerzen im linken Unterschenkel, begleitet von blasser, glänzender, kalter Haut und Haarausfall. Beschwerden treten nach ca. 50 m Gehen auf (Claudicatio intermittens). Bekannte Vorerkrankungen: arterielle Hypertonie, Hypercholesterinämie, Myokardinfarkt vor 2,5 Jahren mit Stent-Implantation. Anamnese passend zu peripherer arterieller Verschlusskrankheit (pAVK).",
+    "summary": "Lieber Manfred,\n\nwir haben über deine Beschwerden gesprochen. Du hast seit einem Vierteljahr Schmerzen im linken Unterschenkel, besonders wenn du gehst. Deine Haut am Bein ist blass, glänzend und kalt, und du hast auch Haarausfall. Diese Beschwerden könnten auf ein Problem mit den Blutgefäßen in deinem Bein hindeuten. Du hast bereits Probleme mit hohem Blutdruck, hohen Cholesterinwerten und hattest vor 2,5 Jahren einen Herzinfarkt. Dein Arzt vermutet, dass deine aktuellen Beschwerden mit einem Verschluss in den Blutgefäßen zusammenhängen könnten.\n\nZur Behandlung nimmst du folgende Medikamente ein:\n- Beloc Zok 50 mg 1-0-0 (Morgens und Abends je 1 Tablette)\n- ASS 100 mg 1-0-0 (Morgens und Abends je 1 Tablette)\n- Statin 40 mg 0-0-1 (Abends 1 Tablette)\n\nHast du noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Hypercholesterinämie, Myokardinfarkt",
     "otherRelevantDiseases": "",
@@ -4147,7 +4147,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Pulsstatus der unteren Extremitäten, Hautinspektion, ABI-Messung",
     "laboratoryTests": "Blutbild, CRP, Lipidprofil, Nüchternglukose, HbA1c, Gerinnungsstatus",
     "instrumentalExamination": "Doppler-Sonographie der Beinarterien, Angiographie bei Bedarf",
-    "examinerQuestions": "Welche weiteren Untersuchungen sind notwendig?\nWelche Stadien der pAVK gibt es?\nWie erfolgt die konservative Therapie der pAVK?",
+    "examinerQuestions": "**Frage:** Welche weiteren Untersuchungen sind notwendig?\n**Antwort:** Es sind weitere Untersuchungen wie z.B. eine Angiografie oder ein Belastungs-EKG notwendig, um die Diagnose zu bestätigen und den Schweregrad der Erkrankung festzustellen.\n\n**Frage:** Welche Stadien der pAVK gibt es?\n**Antwort:** Es gibt die Stadien 1 bis 4 der peripheren arteriellen Verschlusskrankheit (pAVK), die jeweils unterschiedliche Ausprägungen und Symptome haben.\n\n**Frage:** Wie erfolgt die konservative Therapie der pAVK?\n**Antwort:** Die konservative Therapie der pAVK umfasst Maßnahmen wie die Einnahme von Medikamenten zur Blutverdünnung, die Anpassung des Lebensstils (z.B. Rauchstopp, Bewegung) und die Überwachung von Risikofaktoren wie Bluthochdruck oder Diabetes.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion in Ihrem Hals.\n\n**Frage:** Wie kann ich behandelt werden?\n**Antwort:** Sie können mit Antibiotika behandelt werden, um die Infektion zu bekämpfen.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Eine Operation ist in den meisten Fällen nicht erforderlich. In der Regel reicht eine Behandlung mit Medikamenten aus."
   },
   {
@@ -4196,7 +4196,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "Negativer COVID-19-Schnelltest",
     "gynecologicalHistory": "",
-    "summary": "65-jähriger Patient mit seit 5 Tagen bestehenden Halsschmerzen, Odynophagie, Rhinitis, trockener Tussis und beidseitiger Thoraxschmerzen. Begleitend Fieber bis 39,1°C, Cephalgie, Arthralgie und Myalgie. COVID-19-Schnelltest negativ. Keine Anosmie, Augesie oder Dyspnoe. Verdacht auf Angina tonsillaris, Differenzialdiagnose Pneumonie oder COVID-19.",
+    "summary": "Lieber Herr Mayer,\n\nIhnen wurden seit 5 Tagen Halsschmerzen, Schluckbeschwerden, trockener Husten und Müdigkeit besprochen. Es gibt auch Fieber bis 39,1 °C, Kopf- und Gliederschmerzen. Ihr COVID-19-Test war negativ. Es wird vermutet, dass Sie eine Mandelentzündung haben könnten, aber auch eine Lungenentzündung oder COVID-19 werden als Differentialdiagnosen in Betracht gezogen.\n\nNehmen Sie regelmäßig Ibuprofen und Zyloric gegen Gicht ein. Sie haben eine Allergie gegen Hülsenfrüchte, die Blähungen verursacht. Rauchen Sie seit 2,5 Jahren 20-30 Zigaretten pro Tag und trinken Sie 1-2 Flaschen Bier pro Woche.\n\nIst noch etwas, das Sie hinzufügen möchten?\n\nMit freundlichen Grüßen,\nNorbert Mayer",
     "infectiousDiseases": "",
     "chronicDiseases": "Chronische Dorsalgie, Nephrolithiasis, Arthritis urica",
     "otherRelevantDiseases": "",
@@ -4230,7 +4230,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Racheninspektion, Halspalpation, Lungenauskultation",
     "laboratoryTests": "Blutbild, Entzündungsparameter, Nieren- und Leberwerte, Streptokokken-Schnelltest",
     "instrumentalExamination": "Röntgen-Thorax",
-    "examinerQuestions": "Welche weiteren Untersuchungen sind notwendig?\nWann ist eine antibiotische Therapie indiziert?\nWelche Komplikationen kann eine unbehandelte Angina tonsillaris verursachen?",
+    "examinerQuestions": "**Frage:** Welche weiteren Untersuchungen sind notwendig?\n**Antwort:** Sie müssen möglicherweise eine Blutuntersuchung, einen Rachenabstrich oder eine Ultraschalluntersuchung durchführen, um die Ursache Ihrer Symptome zu bestimmen.\n\n**Frage:** Wann ist eine antibiotische Therapie indiziert?\n**Antwort:** Eine antibiotische Therapie ist in der Regel angezeigt, wenn eine bakterielle Infektion als Ursache für Ihre Erkrankung festgestellt wird.\n\n**Frage:** Welche Komplikationen kann eine unbehandelte Angina tonsillaris verursachen?\n**Antwort:** Eine unbehandelte Angina tonsillaris kann zu schwerwiegenden Komplikationen wie rheumatischem Fieber oder einer Mandelabszessbildung führen. Es ist wichtig, die Infektion angemessen zu behandeln, um solche Komplikationen zu vermeiden.",
     "patientQuestions": "**Frage:** Habe ich eine ansteckende Krankheit?  \n**Antwort:** Um das festzustellen, müssten wir einige Tests durchführen. Bitte vereinbaren Sie einen Termin, damit wir das genauer untersuchen können.\n\n**Frage:** Wie lange dauert es, bis ich wieder gesund bin?  \n**Antwort:** Das hängt von Ihrer spezifischen Erkrankung ab. In der Regel dauert es aber einige Tage bis Wochen, bis Sie sich besser fühlen.\n\n**Frage:** Brauche ich Antibiotika?  \n**Antwort:** Das hängt von der Art Ihrer Krankheit ab. Nicht alle Krankheiten werden durch Bakterien verursacht, daher sind Antibiotika nicht immer die beste Behandlungsoption. Wir müssen zuerst herausfinden, was Ihre Beschwerden verursacht, bevor wir darüber entscheiden können."
   },
   {
@@ -4279,7 +4279,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "58-jähriger Patient stellt sich mit seit 5 Tagen bestehender Cephalgie und morgendlichem Husten mit Sputum vor. Seit heute Morgen Verschlechterung der Schmerzen, begleitet von Fieber (39°C), Fatigue und Schüttelfrost. Anamnestisch bekannte Gicht und Lumbago. Medikamenteneinnahme von Ibuprofen, Zyloric und Lefax. Allergie gegen Amoxicillin. Noxen: Raucher seit dem 17.-18. Lebensjahr, täglicher Alkoholgenuss. Familienanamnese mit Ileus bei der Mutter und Steinstaublunge beim Vater. Sozialanamnese: Verheiratet, 3 Kinder (eins mit Down-Syndrom), Florist von Beruf.",
+    "summary": "Lieber Hans,\n\nWir haben über Ihre aktuelle Medikation, die Analyseergebnisse und Ihre vegetativen Anamnesefelder gesprochen. Sie nehmen Ibuprofen 400 mg, Zyloric 300 mg und Lefax ein. Allergisch sind Sie gegen Amoxicillin mit einem Exanthem als Reaktion. Es wurde eine mögliche bakterielle Tonsillitis in Betracht gezogen aufgrund Ihrer seit 5 Tagen anhaltenden Cephalgie, morgendlichen Hustens mit Sputum, Fieber, Fatigue und Schüttelfrost. Sie haben eine bekannte Gicht und Lumbago, sind Raucher seit dem 17.-18. Lebensjahr mit täglichem Alkoholkonsum. Ihre Eltern hatten einen Ileus und eine Steinstaublunge, und Sie sind Florist von Beruf.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Gicht, Lumbago",
     "otherRelevantDiseases": "",
@@ -4313,7 +4313,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Racheninspektion auf Rubor, Tumor; Auskultation zur Pneumonie-Abklärung",
     "laboratoryTests": "BB, Entzündungsparameter, Streptokokken-Schnelltest",
     "instrumentalExamination": "Röntgen-Thorax (bei V.a. Pneumonie)",
-    "examinerQuestions": "Welche Untersuchungen sind zur Diagnosesicherung notwendig?\nWas tun Sie bei Nachweis einer bakteriellen Infektion?\nWelche Antibiotika wählen Sie bei bekannter Amoxicillin-Allergie?",
+    "examinerQuestions": "**Frage:** Welche Untersuchungen sind zur Diagnosesicherung notwendig?\n**Antwort:** Zur Diagnosesicherung sind in der Regel Laboruntersuchungen wie Bluttests, Urinanalysen, Bildgebung (z.B. Röntgen, CT, MRT) oder auch spezielle Untersuchungen wie Endoskopien erforderlich.\n\n**Frage:** Was tun Sie bei Nachweis einer bakteriellen Infektion?\n**Antwort:** Bei Nachweis einer bakteriellen Infektion wird in der Regel eine gezielte Antibiotikatherapie eingeleitet, um die bakteriellen Erreger zu bekämpfen. Zudem ist es wichtig, die Patient:innen zu isolieren, um die Ausbreitung der Infektion zu verhindern.\n\n**Frage:** Welche Antibiotika wählen Sie bei bekannter Amoxicillin-Allergie?\n**Antwort:** Bei einer bekannten Amoxicillin-Allergie wählt man in der Regel alternative Antibiotika wie z.B. Erythromycin, Clindamycin oder Azithromycin, die nicht zur gleichen Medikamentengruppe gehören und daher das Risiko einer allergischen Reaktion verringern.",
     "patientQuestions": "**Frage:** Warum habe ich diese Beschwerden?\n**Antwort:** Ihre Symptome können verschiedene Ursachen haben. Eine genaue Untersuchung kann helfen, die genaue Ursache Ihrer Beschwerden zu ermitteln.\n\n**Frage:** Brauche ich Antibiotika?\n**Antwort:** Ob Antibiotika erforderlich sind, hängt von der Art Ihrer Erkrankung ab. Nur nach einer ärztlichen Untersuchung kann entschieden werden, ob Antibiotika notwendig sind.\n\n**Frage:** Wie lange dauert die Erkrankung?\n**Antwort:** Die Dauer Ihrer Erkrankung kann je nach Art und Schwere variieren. Ihr Arzt kann Ihnen auf Basis Ihrer Diagnose eine Prognose dazu geben."
   },
   {
@@ -4362,7 +4362,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "45-jähriger Patient mit seit 2-3 Wochen bestehender Nausea und Pyrosis. Begleitend Tremor, Nachtschweiß, Insomnie und Inappetenz. Patient gibt an, dass ein Schnaps die Beschwerden lindere. Anamnestisch deutlicher Alkohol- und Nikotinabusus. Vorerkrankungen: Status nach Handgelenks- und Unterschenkelfraktur, Contusio cerebri. Familienanamnese: Vater an Leberzirrhose verstorben, Mutter mit Herzinfarkt und Demenz. Sozialanamnese: Geschieden, lebt allein, zwei Kinder (eins außerehelich).",
+    "summary": "Lieber Patient,\n\nwir haben über Ihre Beschwerden, wie Übelkeit und Sodbrennen, gesprochen, die seit 2-3 Wochen bestehen. Dazu kommen Zittern, Nachtschweiß, Schlaflosigkeit und verminderter Appetit. Sie erwähnten, dass Ihnen ein Schnaps geholfen hat. Sie konsumieren häufig Alkohol und Zigaretten. Ihre Eltern hatten gesundheitliche Probleme wie Demenz und Leberzirrhose. Sie leben alleine und haben zwei Kinder. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nWalter Krause",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -4396,7 +4396,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion, Palpation, Auskultation des Abdomens",
     "laboratoryTests": "BB, Leberwerte, Lipase, Amylase, Elektrolyte, CRP",
     "instrumentalExamination": "Sonographie Abdomen, ggf. ÖGD",
-    "examinerQuestions": "Welche typischen Symptome hat eine Gastritis?\nWelche Rolle spielt Alkohol bei der Entwicklung einer Gastritis?\nWelche weiteren Diagnosen müssen ausgeschlossen werden?",
+    "examinerQuestions": "**Frage:** Welche typischen Symptome hat eine Gastritis?\n**Antwort:** Bei einer Gastritis können typische Symptome wie Magenschmerzen, Übelkeit, Erbrechen, Völlegefühl oder Sodbrennen auftreten.\n\n**Frage:** Welche Rolle spielt Alkohol bei der Entwicklung einer Gastritis?\n**Antwort:** Alkohol kann die Schleimhaut des Magens schädigen und somit das Risiko für Gastritis erhöhen.\n\n**Frage:** Welche weiteren Diagnosen müssen ausgeschlossen werden?\n**Antwort:** Bei Verdacht auf Gastritis müssen auch andere Erkrankungen wie Magengeschwüre, Magenkrebs oder gastroösophageale Refluxkrankheit (GERD) ausgeschlossen werden.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie leiden unter einer viralen Infektion. \n\n**Frage:** Sollte ich ins Krankenhaus aufgenommen werden?\n**Antwort:** Es ist nicht notwendig, Sie können sich zu Hause ausruhen und die verschriebenen Medikamente einnehmen.\n\n**Frage:** Kann ich in die Kantine gehen?\n**Antwort:** Es wird empfohlen, dass Sie sich in Ihrer Unterkunft ausruhen, um die Genesung zu fördern. Es ist ratsam, Essen in Ihrer Unterkunft zu sich zu nehmen."
   },
   {
@@ -4445,7 +4445,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "77-jährige Patientin stellt sich mit akutem retrosternalem, drückendem Thoraxschmerz mit Ausstrahlung in den linken Arm vor. Beschwerden traten plötzlich beim Einkaufen auf und sind begleitet von Dyspnoe, Nausea, kaltem Schweiß und Todesangst. Vorerkrankungen: DM2 seit 10 Jahren, aHT seit 15 Jahren. Medikamentenanamnese: Metformin, Lisinopril, ASS. Anamnestisch bekannte Hühnereiweiß- und Nussallergie sowie Zöliakie. Raucherin (30PY), täglicher Alkoholkonsum (fast eine Flasche Rotwein). FA: Kolonkarzinom (Vater), Lungenembolie (Mutter), Zwillingsschwester mit Apoplex. Sozial: Rentnerin, verheiratet, wohnt mit ältestem Sohn, Ehemann in Pflegeheim (Demenz).",
+    "summary": "Liebe Frau Buttner,\n\nSie haben über Ihre aktuellen Gesundheitsprobleme gesprochen. Sie haben plötzlich beim Einkaufen starke Schmerzen in der Brust verspürt, die bis in den linken Arm ausstrahlen. Neben den Schmerzen leiden Sie auch unter Atemnot, Übelkeit, kaltem Schweiß und Todesangst. Sie haben Diabetes und Bluthochdruck. Ihre Medikamente sind Metformin, Lisinopril und ASS. Außerdem haben Sie bekannte Allergien gegen Hühnereiweiß, Nüsse und Gluten. Sie rauchen und trinken täglich eine Flasche Rotwein. Sie sind Rentnerin, verheiratet und leben mit Ihrem ältesten Sohn zusammen. Gibt es noch etwas, das Sie hinzufügen möchten?\n\nVielen Dank und alles Gute,\n[Arztname]",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, arterielle Hypertonie",
     "otherRelevantDiseases": "",
@@ -4479,7 +4479,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, kardiopulmonale Untersuchung, Inspektion (Zyanose, Hautfarbe), Palpation",
     "laboratoryTests": "BB, Entzündungsparameter, CK, CK-MB, Troponin, D-Dimere, Blutzucker, Elektrolyte, Leberenzyme, Nierenwerte",
     "instrumentalExamination": "EKG, Echokardiographie, Röntgen-Thorax, ggf. CT-Angiographie",
-    "examinerQuestions": "Welche Risikofaktoren für Myokardinfarkt liegen vor?\nWelche Labordiagnostik würden Sie anfordern?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Risikofaktoren für Myokardinfarkt liegen vor?\n**Antwort:** Zu den Risikofaktoren für einen Myokardinfarkt gehören unter anderem Rauchen, hoher Blutdruck, Diabetes, hohe Cholesterinwerte, Übergewicht, Bewegungsmangel und familiäre Vorbelastung.\n\n**Frage:** Welche Labordiagnostik würden Sie anfordern?\n**Antwort:** Bei Verdacht auf einen Myokardinfarkt könnten Labortests wie die Bestimmung von Herzmarkern (wie Troponin) sowie ein EKG (Elektrokardiogramm) angefordert werden, um die Diagnose zu unterstützen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Die Therapieoptionen bei einem Myokardinfarkt können Medikamente wie Thrombozytenaggregationshemmer, Betablocker, Blutverdünner oder auch eine perkutane Koronarintervention (PCI) oder eine Bypass-Operation umfassen, je nach Schweregrad des Infarkts und individuellen Gegebenheiten.",
     "patientQuestions": "**Frage:** Habe ich einen Herzinfarkt?\n**Frage:** Was passiert jetzt?\n**Frage:** Werde ich wieder gesund?"
   },
   {
@@ -4528,7 +4528,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "78-jähriger Patient stellt sich mit dumpfen, stechenden Schmerzen im rechten Unterbauch und Rücken, Fieber (>39°C), Dysurie, Nykturie, Pollakisurie und einmaligem Erbrechen vor. Schmerzen haben sich im Verlauf verschlechtert. Vegetativ auffällig: Inappetenz, Insomnie seit dem Suizid der Ehefrau vor 9 Jahren, Obstipation. Vorerkrankungen: Diabetes mellitus Typ 2, COPD, Prostatahyperplasie. Medikamentenanamnese: Metformin, Spiriva b.B., Zäpfchen b.B. Allergie gegen Nickel (Exanthem, Erythem). Sozialanamnese: Verwitwet, lebt mit Tochter zusammen, ehemaliger Optiker. FA: Tochter mit Myopie (-10D).",
+    "summary": "In unserem Gespräch haben wir über Ihre aktuellen Beschwerden gesprochen. Sie haben seit gestern dumpfe, stechende Schmerzen im rechten Unterbauch und Rücken, begleitet von Fieber, brennenden Schmerzen beim Wasserlassen, häufigem nächtlichen und häufigem Wasserlassen sowie einmaligem Erbrechen. Die Schmerzen haben sich im Verlauf verschlimmert. Sie haben auch keine Lust zu essen, leiden unter Schlaflosigkeit seit dem Tod Ihrer Ehefrau vor 9 Jahren und haben Verstopfung. Aufgrund Ihrer Krankengeschichte nehmen Sie Metformin, Spiriva und Zäpfchen ein. Sie haben eine Nickelallergie, die sich durch Hautausschlag äußert. Sie sind verwitwet, leben mit Ihrer Tochter zusammen und waren früher Optiker. Ihre Tochter hat Kurzsichtigkeit. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, COPD, Prostatahyperplasie",
     "otherRelevantDiseases": "",
@@ -4562,7 +4562,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Nierenlagerklopfschmerz, Blasendruckschmerz, Palpation des Abdomens",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Nierenwerte (Kreatinin, Harnstoff), Urinstatus, Urinkultur",
     "instrumentalExamination": "Sonographie der Nieren und Harnwege, ggf. CT-Abdomen",
-    "examinerQuestions": "Welche Untersuchungen würden Sie zur Diagnosesicherung durchführen?\nWie können Sie eine Pyelonephritis von einer Zystitis unterscheiden?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Untersuchungen würden Sie zur Diagnosesicherung durchführen?\n**Antwort:** Zur Diagnosesicherung könnten Sie eine Urinanalyse, eine Urinkultur, eine Sonographie des Nierenbeckens und ggf. eine CT- oder MRT-Untersuchung durchführen.\n\n**Frage:** Wie können Sie eine Pyelonephritis von einer Zystitis unterscheiden?\n**Antwort:** Sie können eine Pyelonephritis von einer Zystitis anhand von Symptomen wie Fieber, Flankenschmerzen und möglicherweise einer bakteriellen Infektion im Urin unterscheiden. Diagnostische Tests wie eine Urinkultur und eine Sonographie können ebenfalls helfen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Therapieoptionen für eine Pyelonephritis oder Zystitis können Antibiotika, Schmerzmittel, ausreichende Flüssigkeitszufuhr und in manchen Fällen auch Krankenhausaufenthalt zur Überwachung und intravenösen Therapie umfassen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Ihre Symptome deuten darauf hin, dass Sie an einer Infektion leiden.\n\n**Frage:** Wie wird das behandelt?\n**Antwort:** Die Infektion wird mit Antibiotika behandelt, um die Erreger zu bekämpfen und Ihre Genesung zu unterstützen.\n\n**Frage:** Muss ich ins Krankenhaus?\n**Antwort:** In schweren Fällen kann ein Krankenhausaufenthalt erforderlich sein, um Sie intensiver zu behandeln und zu überwachen."
   },
   {
@@ -4611,7 +4611,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Patientin stellt sich mit seit gestern Abend zunehmenden, stechenden Flankenschmerzen (9/10), Fieber (39,5°C), Schüttelfrost, Abgeschlagenheit, Dysurie und Pollakisurie vor. Vorgeschichte mit Zystitis vor zwei Wochen, keine Therapie eingenommen. Vegetativ auffällig: Insomnie seit 9 Jahren nach Selbstmord des Ehemanns. Vorerkrankungen: Diabetes mellitus Typ 2 (Metformin), COPD (Spiriva Spray b.B.). Medikamentenanamnese: Metformin 1000 mg 1-0-1, Spiriva Spray b.B. Allergie: Penicillin (Exanthem), Novalginunverträglichkeit. Sozial: Verwitwet, wohnt allein, eine Tochter (gesund), ein Sohn (aktuell Varizellen). FA: Mutter Parkinson, Vater Myokardinfarkt.",
+    "summary": "Liebe Patientin,\n\nSie haben starke, stechende Schmerzen in der Seite, Fieber, Schüttelfrost, Abgeschlagenheit, Probleme beim Wasserlassen und häufigen Harndrang. Vor zwei Wochen hatten Sie eine Blasenentzündung, aber keine Behandlung. Sie nehmen Metformin und Spiriva Spray ein. Sie sind gegen Penicillin allergisch und vertragen Novalgin nicht. Sie haben Probleme beim Schlafen seit dem Selbstmord Ihres Ehemanns vor 9 Jahren. Sie haben Diabetes Typ 2 und COPD. Ihre Eltern sind verstorben, Ihre Mutter hatte Parkinson und Ihr Vater einen Herzinfarkt. Sie sind verwitwet, leben alleine und haben eine Tochter und einen Sohn, der gerade Windpocken hat.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, COPD",
     "otherRelevantDiseases": "",
@@ -4645,7 +4645,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Palpation des Abdomens, Nierenlagerklopfschmerz, Blasendruckschmerz",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Nierenwerte (Kreatinin, Harnstoff), Urinstatus, Urinkultur",
     "instrumentalExamination": "Sonographie der Nieren und Harnwege, ggf. CT-Abdomen",
-    "examinerQuestions": "Welche Untersuchungen würden Sie zur Diagnosesicherung durchführen?\nWie können Sie eine Pyelonephritis von einer Zystitis unterscheiden?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Untersuchungen würden Sie zur Diagnosesicherung durchführen?\n**Antwort:** Zur Diagnosesicherung könnten Sie verschiedene Untersuchungen wie Bluttests, Urinuntersuchungen, Bildgebung wie Ultraschall oder CT-Scans sowie möglicherweise eine Gewebeprobe (Biopsie) durchführen.\n\n**Frage:** Wie können Sie eine Pyelonephritis von einer Zystitis unterscheiden?\n**Antwort:** Eine Pyelonephritis und eine Zystitis können anhand von Symptomen wie Fieber, Flankenschmerzen (bei Pyelonephritis) und Unterschieden in Laborergebnissen wie erhöhten Entzündungsmarkern unterschieden werden. Außerdem kann eine Urinkultur Klarheit bringen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Therapieoptionen hängen von der Diagnose ab, können aber Antibiotika, Schmerzmittel, Flüssigkeitszufuhr, Ruhe und in manchen Fällen auch interventionelle Verfahren oder Operationen umfassen. Es ist wichtig, mit einem Arzt über die beste Behandlung für Sie zu sprechen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion der Atemwege.\n  \n**Frage:** Wie wird das behandelt?\n**Antwort:** Die Infektion wird mit Antibiotika und Ruhe behandelt.\n\n**Frage:** Muss ich ins Krankenhaus?\n**Antwort:** Nein, in Ihrem Fall ist ein Krankenhausaufenthalt nicht erforderlich."
   },
   {
@@ -4694,7 +4694,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Patient mit seit 3-4 Wochen bestehenden Schmerzen in den ersten drei Fingern der rechten Hand mit Ausstrahlung in den Unterarm. Verschlechterung nachts, Kribbeln und Ameisenlaufen bei Greifbewegungen. Keine Kraftlosigkeit oder Parese. Keine Linderung durch NSAR. Einschränkungen im Beruf als Busfahrer.",
+    "summary": "Lieber Patient,\n\nSie haben seit 3-4 Wochen starke Schmerzen in den ersten drei Fingern Ihrer rechten Hand, die bis in den Unterarm ausstrahlen. Die Schmerzen werden nachts schlimmer und Sie spüren Ameisenlaufen und Kribbeln, besonders beim Greifen. Schmerzmittel haben bisher nicht geholfen. Sie haben auch Einschränkungen beim Autofahren aufgrund der Schmerzen.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -4728,7 +4728,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Phalen-Zeichen, Hoffmann-Tinel-Zeichen, Palpation, Kraft- und Sensibilitätsprüfung",
     "laboratoryTests": "",
     "instrumentalExamination": "Elektroneurografie, MRT HWS bei Verdacht auf zervikale Ursache",
-    "examinerQuestions": "Wie testen Sie das Karpaltunnelsyndrom klinisch?\nWelche konservativen und operativen Therapieoptionen gibt es?\nWie können Sie eine Polyneuropathie ausschließen?",
+    "examinerQuestions": "**Frage:** Wie testen Sie das Karpaltunnelsyndrom klinisch?\n**Antwort:** Um das Karpaltunnelsyndrom klinisch zu testen, könnten Sie beispielsweise Tests wie Tinel-Zeichen oder Phalen-Test durchführen.\n\n**Frage:** Welche konservativen und operativen Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene konservative Behandlungsmöglichkeiten wie Handgelenksschienen, Physiotherapie und Medikamente sowie operative Optionen wie die Karpaltunnel-Release-Operation.\n\n**Frage:** Wie können Sie eine Polyneuropathie ausschließen?\n**Antwort:** Um eine Polyneuropathie auszuschließen, könnten Sie Nervenleitgeschwindigkeitstests (NLG), Blutuntersuchungen und gezielte neurologische Untersuchungen durchführen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion im linken Ohr.\n\n**Frage:** Wie wird das behandelt?\n**Antwort:** Die Infektion wird mit Antibiotika behandelt.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Nein, in Ihrem Fall ist keine Operation erforderlich."
   },
   {
@@ -4777,7 +4777,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "65-jähriger Patient mit seit 3 Wochen bestehenden Bauchkrämpfen, wässriger grünlicher Diarrhö und trockenem Husten. Symptome haben sich in den letzten 3 Tagen verschlechtert. Keine Hämatochezie. Vegetative Anamnese unauffällig bis auf Übelkeit, Insomnie und Inappetenz. VE: Kyphose seit 20 Jahren, Arrhythmie, Z.n. Herpes Zoster. Medikation: Beta-Blocker und Imodium.",
+    "summary": "In den letzten drei Wochen haben Sie an Bauchkrämpfen gelitten, begleitet von wässriger, grünlicher Diarrhö und trockenem Husten. In den letzten drei Tagen haben sich Ihre Symptome verschlimmert. Im Moment haben Sie auch mit Übelkeit, Schlaflosigkeit und verminderter Appetit zu kämpfen. Wir haben besprochen, dass Sie seit 20 Jahren unter einer Kyphose leiden, Arrhythmie haben und in der Vergangenheit Herpes Zoster hatten. Zurzeit nehmen Sie Beta-Blocker und Imodium ein.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "Z.n. Herpes Zoster",
     "chronicDiseases": "Kyphose seit 20 Jahren, Arrhythmie",
     "otherRelevantDiseases": "",
@@ -4811,7 +4811,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Abdomenpalpation, Perkussion, Auskultation",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Stuhluntersuchung auf Bakterien und Parasiten",
     "instrumentalExamination": "Abdomensonografie, ggf. Koloskopie",
-    "examinerQuestions": "Warum schließen Sie eine Colitis ulcerosa aus?\nWelche laborchemischen Parameter würden Sie bestimmen?\nWie gehen Sie weiter vor?",
+    "examinerQuestions": "**Frage:** Warum schließen Sie eine Colitis ulcerosa aus?\n**Antwort:** Sie schließen eine Colitis ulcerosa aus, indem Sie eine sorgfältige Anamnese durchführen, klinische Untersuchungen durchführen und möglicherweise bildgebende Verfahren wie eine Koloskopie mit Biopsie anwenden.\n\n**Frage:** Welche laborchemischen Parameter würden Sie bestimmen?\n**Antwort:** Sie würden laborchemische Parameter wie Entzündungsmarker (z.B. CRP), Elektrolyte, Blutbild und gegebenenfalls Stuhluntersuchungen auf Blut und pathogene Keime bestimmen.\n\n**Frage:** Wie gehen Sie weiter vor?\n**Antwort:** Sie gehen weiter vor, indem Sie die erhobenen Befunde auswerten, eine differenzialdiagnostische Abklärung vornehmen, gegebenenfalls weitere Untersuchungen in Erwägung ziehen und eine geeignete Therapie einleiten.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion im Körper.\n\n**Frage:** Wie wird das behandelt?\n**Antwort:** Die Infektion kann mit Antibiotika behandelt werden, die Ihr Arzt Ihnen verschreiben wird.\n\n**Frage:** Kann es etwas Ernstes sein?\n**Antwort:** Es könnte ernst sein, wenn die Infektion nicht rechtzeitig und angemessen behandelt wird. Sprechen Sie mit Ihrem Arzt, um weitere Untersuchungen durchzuführen und die bestmögliche Behandlung zu erhalten."
   },
   {
@@ -4860,7 +4860,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Patient mit seit 3 Monaten bestehenden diffusen Abdominalschmerzen, Angeschlagenheit, Narkolepsie, Nausea, Belastungsdyspnoe und Beinödemen. Vegetative Anamnese zeigt Inappetenz, Gewichtszunahme, Insomnie und weicherer heller Fäzes. Keine bekannten chronischen Erkrankungen oder Medikamenteneinnahme. Keine Allergien. Alkoholkonsum: 2 Bier/Stunde. FA: Vater gesund, Mutter unauffällig.",
+    "summary": "Lieber Patient, in unserem Gespräch haben wir über Ihre seit 3 Monaten andauernden diffusen Bauchschmerzen, Ihre Müdigkeit, Narkolepsie, Übelkeit, Atemnot bei Belastung und Beinschwellungen gesprochen. Ihre vegetative Anamnese zeigt, dass Sie wenig Appetit haben, Gewicht zugenommen haben, Schlafprobleme haben und Ihr Stuhl heller und weicher ist als gewöhnlich. Sie haben keine bekannten chronischen Krankheiten oder nehmen regelmäßig Medikamente ein. Sie trinken pro Stunde etwa 2 Biere. Ihre Familie hat keine bekannten gesundheitlichen Probleme. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -4894,7 +4894,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion, Palpation, Perkussion und Auskultation des Abdomens, Zeichen einer chronischen Lebererkrankung (Ikterus, Spider naevi, Aszites, Caput medusae)",
     "laboratoryTests": "BB, Leberwerte (AST, ALT, γ-GT, ALP, Bilirubin), Gerinnungsparameter, Nierenwerte, Amylase, Lipase, Tumormarker",
     "instrumentalExamination": "Abdomensonografie zur Beurteilung von Leberparenchym und Aszites, CT Abdomen zur Tumorsuche, ggf. Aszitespunktion zur Differenzierung (kein vollständiges Punktieren wegen Eiweißverlust)",
-    "examinerQuestions": "Welche Maßnahmen sind bei Leberzirrhose wichtig?\nWarum ist eine vollständige Aszitespunktion nicht empfehlenswert?\nWie erfolgt der Alkoholentzug?",
+    "examinerQuestions": "**Frage:** Welche Maßnahmen sind bei Leberzirrhose wichtig?\n**Antwort:** Bei Leberzirrhose sind Maßnahmen wie eine angepasste Ernährung, Vermeidung von Alkohol und regelmäßige ärztliche Kontrollen wichtig.\n\n**Frage:** Warum ist eine vollständige Aszitespunktion nicht empfehlenswert?\n**Antwort:** Eine vollständige Aszitespunktion ist nicht empfehlenswert, da sie das Risiko von Komplikationen wie Infektionen erhöhen kann. Stattdessen wird empfohlen, nur eine begrenzte Menge an Flüssigkeit abzulassen.\n\n**Frage:** Wie erfolgt der Alkoholentzug?\n**Antwort:** Der Alkoholentzug erfolgt in der Regel schrittweise unter ärztlicher Aufsicht, um Entzugserscheinungen zu minimieren. Dazu können Medikamente und therapeutische Unterstützung eingesetzt werden.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion in Ihrem Körper.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Es werden Bluttests und eine gezielte Bildgebung durchgeführt, um die Ursache Ihrer Symptome zu ermitteln.\n\n**Frage:** Ist meine Erkrankung heilbar?\n**Antwort:** Ja, Ihre Erkrankung ist heilbar, vorausgesetzt Sie folgen dem empfohlenen Behandlungsplan sorgfältig.\n\n**Frage:** Muss ich mit einem Krankenhausaufenthalt rechnen?\n**Antwort:** Es ist wahrscheinlich, dass Sie für weitere Untersuchungen und Behandlungen in einem Krankenhaus aufgenommen werden müssen."
   },
   {
@@ -4943,7 +4943,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "56-jährige Patientin mit seit 3 Tagen bestehendem trockenen Husten, Dyspnoe, Cephalgie und Dysphagie. Zusätzlich Fieber (39°C), Fatigue, Engegefühl in der Brust, Herzrasen und Schweißausbrüche. Vegetative Anamnese zeigt Insomnie, Inappetenz und Gewichtszunahme (2 kg in 3 Monaten). Vorerkrankungen: Rückenschmerzen seit 2 Jahren, Gicht seit 3 Jahren, Burnout-Syndrom in psychiatrischer Behandlung.",
+    "summary": "In unserem Gespräch haben wir über Ihre aktuelle Medikation gesprochen, die aus Zyphrich, Ibuprofen und Norexan gegen Schlafstörungen besteht. Zudem haben wir Ihre aktuellen Beschwerden wie trockenen Husten, Atemnot, Kopfschmerzen, Schluckbeschwerden sowie Fieber und andere Symptome wie Müdigkeit, Brustenge, Herzrasen, Schweißausbrüche und Schlafprobleme besprochen. Ihre vegetative Anamnese zeigt Schlafstörungen, fehlenden Appetit und Gewichtszunahme. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -4977,7 +4977,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Racheninspektion, Auskultation der Lunge, Palpation der Halslymphknoten",
     "laboratoryTests": "BB, CRP, BSG, COVID-19-Schnelltest, PCR-Nasenabstrich",
     "instrumentalExamination": "Röntgen-Thorax zur Abklärung einer Pneumonie",
-    "examinerQuestions": "Welche Maßnahmen empfehlen Sie für die Patientin?\nWie sichern Sie die Diagnose COVID-19?\nWelche Alternativen gibt es zur Schmerztherapie?",
+    "examinerQuestions": "**Frage:** Welche Maßnahmen empfehlen Sie für die Patientin?\n**Antwort:** Empfehlen Sie der Patientin, viel Ruhe zu haben, ausreichend Flüssigkeit zu sich zu nehmen und die verordneten Medikamente gemäß den Anweisungen einzunehmen.\n\n**Frage:** Wie sichern Sie die Diagnose COVID-19?\n**Antwort:** Zur Sicherung der Diagnose COVID-19 führen Sie einen Nasen-Rachen-Abstrich durch und senden Sie diesen zur COVID-19-Testung in ein Labor.\n\n**Frage:** Welche Alternativen gibt es zur Schmerztherapie?\n**Antwort:** Alternativen zur Schmerztherapie können physikalische Therapien, Entspannungstechniken, Akupunktur oder ggf. nicht-medikamentöse Maßnahmen wie Massagen oder Wärmeanwendungen sein.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben Symptome, die auf eine Krankheit oder Gesundheitszustand hindeuten. Um Ihnen eine genaue Diagnose zu geben, müssen Sie von einem Arzt untersucht werden.\n\n**Frage:** Wie lange muss ich in Quarantäne bleiben?\n**Antwort:** Die Dauer Ihrer Quarantäne hängt von verschiedenen Faktoren ab, wie z. B. der Art Ihrer Erkrankung oder den geltenden Richtlinien. Ihr Arzt kann Ihnen genauere Informationen darüber geben, wie lange Sie in Quarantäne bleiben müssen.\n\n**Frage:** Welche Medikamente helfen gegen meine Symptome?\n**Antwort:** Es gibt verschiedene Medikamente zur Behandlung verschiedener Symptome. Ihr Arzt wird Ihre Symptome bewerten und Ihnen die geeigneten Medikamente verschreiben, um Ihre Beschwerden zu lindern. Es ist wichtig, Medikamente nur nach ärztlicher Anweisung einzunehmen."
   },
   {
@@ -5026,7 +5026,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "52-jähriger Patient mit seit 4 Tagen verstärkten, stechenden, krampfartigen Unterbauchschmerzen links. Wechselnde Diarrhö und Obstipation, gestern Meläna. Vorerkrankungen: arterielle Hypertonie (Bisoprolol 5mg 1-0-1), Asthma (Spray b.B.), Rückenschmerzen (Voltaren Kapsel b.B.). Vegetative Anamnese: Übelkeit, Insomnie, Inappetenz.",
+    "summary": "Lieber Patient,\n\nSie haben seit 4 Tagen starke Schmerzen im linken Unterbauch, begleitet von abwechselnder Verstopfung und Durchfall. Gestern hatten Sie Blut im Stuhl. Ihre begleitenden Symptome sind Übelkeit, Appetitlosigkeit und Schlaflosigkeit. Bisher nehmen Sie Medikamente gegen Bluthochdruck, Asthma und Rückenschmerzen ein. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nNothiesn",
     "infectiousDiseases": "",
     "chronicDiseases": "Bluthochdruck, Asthma",
     "otherRelevantDiseases": "",
@@ -5060,7 +5060,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Palpation des Abdomens (Druckschmerz, Resistenzen), Perkussion, Auskultation",
     "laboratoryTests": "BB, CRP, BSG, Leberwerte, Lipase, Elektrolyte, Gerinnung, Blut im Stuhl",
     "instrumentalExamination": "Sonografie Abdomen, Koloskopie nach Abklingen der akuten Phase, CT Abdomen",
-    "examinerQuestions": "Wie sichern Sie die Diagnose einer Divertikulitis?\nWelche Differentialdiagnosen ziehen Sie in Betracht?\nWelche Therapie würden Sie empfehlen?",
+    "examinerQuestions": "**Frage:** Wie sichern Sie die Diagnose einer Divertikulitis?\n**Antwort:** Sie sichern die Diagnose einer Divertikulitis in der Regel durch eine Kombination von klinischen Symptomen, wie Bauchschmerzen und Fieber, sowie bildgebenden Verfahren wie einer CT-Untersuchung des Abdomens.\n\n**Frage:** Welche Differentialdiagnosen ziehen Sie in Betracht?\n**Antwort:** Bei Verdacht auf Divertikulitis sollten Sie auch andere mögliche Ursachen für Bauchschmerzen in Betracht ziehen, darunter Reizdarmsyndrom, entzündliche Darmerkrankungen wie Morbus Crohn oder Colitis ulcerosa, aber auch akute Appendizitis oder Darmverschlüsse.\n\n**Frage:** Welche Therapie würden Sie empfehlen?\n**Antwort:** Die Therapie der Divertikulitis hängt von der Schwere der Erkrankung ab. Im Fall einer unkomplizierten Divertikulitis wird oft eine Behandlung mit Antibiotika und einer speziellen Diät empfohlen, während bei schwereren Fällen möglicherweise eine chirurgische Intervention erforderlich ist. Es ist wichtig, individuell die beste Therapieoption zu wählen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben Symptome, die auf eine Erkrankung hindeuten. Um eine genaue Diagnose zu stellen, müssen wir weitere Untersuchungen durchführen.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Ob eine Operation notwendig ist, hängt von der Diagnose und dem Krankheitsverlauf ab. Nach den Untersuchungen können wir gemeinsam entscheiden, welches die beste Behandlungsoption für Sie ist.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Um Ihre Gesundheit optimal zu überwachen und eine genaue Diagnose zu stellen, sind bestimmte Untersuchungen wie Bluttests, bildgebende Verfahren oder spezifische Tests erforderlich. Ihre Gesundheit steht für uns an erster Stelle, daher werden wir die richtigen Untersuchungen für Sie auswählen."
   },
   {
@@ -5109,7 +5109,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "Unauffällig",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "54-jährige Patientin mit seit 4-5 Monaten bestehender chronischer wässriger Diarrhö (5x/Tag) mit Blut am Toilettenpapier. Krampfartige umbilikale Bauchschmerzen (5/10), verschlimmert nach Nahrungsaufnahme, Besserung durch Wärme oder Bücken. Zusätzliche Symptome: Nausea, Emesis, Inappetenz, Parasomnie. Vorerkrankungen: Arrhythmie (Beloc-Zok 95mg 1-0-0), Z.n. Diskektomie vor 5 Jahren, Z.n. Mandibularfraktur-OP vor 3 Jahren. Allergien: Kontrastmittel (Schock), Nüsse (Dyspnoe).",
+    "summary": "In unserem Gespräch haben wir darüber gesprochen, dass Sie seit 4-5 Monaten an chronischer wässriger Diarrhö leiden, mit Blut am Toilettenpapier. Sie haben auch krampfartige Bauchschmerzen, die sich nach dem Essen verschlimmern, aber durch Wärme oder Bücken besser werden. Zusätzliche Symptome sind Übelkeit, Erbrechen, fehlender Appetit und Schlafstörungen. Sie nehmen regelmäßig Medikamente ein, darunter Beloc-Zok, Imodium, Buscopan und Zinksalbe. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arrhythmie",
     "otherRelevantDiseases": "",
@@ -5143,7 +5143,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Inspektion, Palpation, Perkussion, Auskultation des Abdomens",
     "laboratoryTests": "BB, Elektrolyte, Entzündungsparameter, Tumormarker (CEA, CA19.9), Test auf okkultes Blut im Stuhl, Stuhlkultur",
     "instrumentalExamination": "Abdominal-Sonographie, CT-Abdomen, Koloskopie",
-    "examinerQuestions": "War die Patientin schon bei ihrem Hausarzt?\nHat die Patientin Fieber?\nWarum sollte ein Test auf okkultes Blut im Stuhl durchgeführt werden?\nWie erklären Sie den Test auf okkultes Blut im Stuhl?\nWas spricht gegen ein Reizdarmsyndrom?",
+    "examinerQuestions": "**Frage:** War die Patientin schon bei ihrem Hausarzt?  \n**Antwort:** Nein, die Patientin war bisher noch nicht bei ihrem Hausarzt.\n\n**Frage:** Hat die Patientin Fieber?  \n**Antwort:** Ja, die Patientin hat Fieber.\n\n**Frage:** Warum sollte ein Test auf okkultes Blut im Stuhl durchgeführt werden?  \n**Antwort:** Ein Test auf okkultes Blut im Stuhl wird durchgeführt, um mögliche innere Blutungen im Magen-Darm-Trakt zu erfassen, die visuell nicht erkennbar sind.\n\n**Frage:** Wie erklären Sie den Test auf okkultes Blut im Stuhl?  \n**Antwort:** Beim Test auf okkultes Blut im Stuhl wird eine Stuhlprobe genommen und auf geringe Mengen an Blut untersucht, die sonst nicht sichtbar sind.\n\n**Frage:** Was spricht gegen ein Reizdarmsyndrom?  \n**Antwort:** Gegen ein Reizdarmsyndrom spricht beispielsweise das Vorhandensein von hohem Fieber oder Anzeichen von Blut im Stuhl, die in der Regel nicht mit einem Reizdarmsyndrom einhergehen.",
     "patientQuestions": "**Frage:** Habe ich einen Ileus wie meine Mutter?\n**Antwort:** Um das festzustellen, sollte eine ärztliche Untersuchung durchgeführt werden. Besprechen Sie Ihre Symptome mit Ihrem Arzt.\n\n**Frage:** Wie wird meine Diagnose bestätigt?\n**Antwort:** Die Diagnose kann durch verschiedene Untersuchungen wie Röntgenaufnahmen, CT-Scans oder Labortests bestätigt werden. Ihr Arzt wird die geeigneten Tests anordnen.\n\n**Frage:** Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Behandlung hängt von der Ursache und Schwere Ihres Zustands ab. Möglicherweise werden Optionen wie Medikamente, Ernährungsumstellungen oder chirurgische Eingriffe in Betracht gezogen. Ihr Arzt wird mit Ihnen die beste Behandlungsstrategie besprechen."
   },
   {
@@ -5192,7 +5192,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Zystozel",
-    "summary": "78-jährige Patientin mit seit 45 Minuten bestehenden, starken, drückenden und stechenden Flankenschmerzen links (7/10), Fieber (39,3°C), Dysurie, Nykturie, Übelkeit und zweimaligem Erbrechen (gallig, Nahrungsreste). Seit 2 Tagen Fieber und zusätzlich Belastungsdyspnoe, Müdigkeit, Parasomnie, Gewichtszunahme (2 kg), Obstipation und Inappetenz. Vorerkrankungen: DM seit 15 Jahren, COPD seit langem, rezidivierende Harnwegsinfekte, Zystozel, Varikosis, Z.n. Cholezystektomie und Z.n. Varizen-OP. Medikamente: Metformin 1000 mg 1-0-1, Spray 1-0-1, Johanneskraut b.B., Zäpfchen b.B. Sozial: verwitwet, 4 erwachsene Kinder, ehemalige Optikerin. FA: Vater (DM, aHT, Rheuma), Mutter (Schlaganfall).",
+    "summary": "Sie sind eine 78-jährige Frau mit starken Schmerzen in der linken Flanke, Fieber, Problemen beim Wasserlassen, Übelkeit, Erbrechen, Müdigkeit und zwei Kilogramm Gewichtszunahme in den letzten Tagen. Sie haben Diabetes Typ 2, COPD, wiederkehrende Harnwegsinfekte, ein Absacken der Blase, Krampfadern sowie eine Cholezystektomie und eine Operation an den Venen in der Vergangenheit gehabt. Sie nehmen Metformin, ein Spray und Johanneskraut ein. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, COPD, Rezidivierende HWI, Zystozel, Varikosis",
     "otherRelevantDiseases": "",
@@ -5226,7 +5226,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Palpation der Nierenlager (Klopfschmerz), Inspektion, Auskultation, Perkussion des Abdomens",
     "laboratoryTests": "BB, CRP, BSG, Leber- und Nierenwerte, Elektrolyte, Urinstatus, Urinkultur, Blutkultur",
     "instrumentalExamination": "Sonographie der Nieren und ableitenden Harnwege, ggf. CT-Abdomen",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen infrage?\nWelche Laborwerte würden Sie anordnen?\nWie würden Sie die Diagnose sichern?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen infrage?\n**Antwort:** Es gibt mehrere mögliche Krankheiten, die ähnliche Symptome verursachen könnten. \n\n**Frage:** Welche Laborwerte würden Sie anordnen?\n**Antwort:** Um die Diagnose zu unterstützen, würden Sie spezifische Bluttests oder andere Labortests benötigen.\n\n**Frage:** Wie würden Sie die Diagnose sichern?\n**Antwort:** Die Diagnose könnte durch Bildgebungstechniken wie Röntgen, CT- oder MR-Untersuchungen bestätigt werden.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es stehen verschiedene Behandlungsmöglichkeiten zur Verfügung, je nach der diagnostizierten Krankheit.",
     "patientQuestions": "**Frage:** Warum habe ich diese Schmerzen?\n**Antwort:** Sie haben diese Schmerzen, weil Ihr Körper auf eine bestimmte Ursache reagiert, die behandelt werden muss.\n\n**Frage:** Wie lange dauert die Behandlung?\n**Antwort:** Die Dauer der Behandlung hängt von Ihrer spezifischen Erkrankung ab. Ihr Arzt wird Ihnen dazu genauere Informationen geben können.\n\n**Frage:** Muss ich im Krankenhaus bleiben?\n**Antwort:** Ob Sie im Krankenhaus bleiben müssen, hängt von der Schwere Ihrer Erkrankung und dem empfohlenen Behandlungsplan ab. Ihr Arzt wird Ihnen dies mitteilen."
   },
   {
@@ -5275,7 +5275,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "55-jähriger Patient mit seit 2 Tagen bestehenden, starken, dumpfen, diffusen, nahrungsabhängigen epigastrischen Schmerzen, begleitet von Meläna, Hämatemesis, Pyrosis und Inappetenz. Vegetative Anamnese bis auf Insomnie unauffällig. Vorerkrankungen: Arterielle Hypertonie, Dyslipidämie, Lumbalgie, Z.n. OP wegen Kreuzbandruptur rechts. Medikamente: Beloc, Statin, Ibuprofen. Allergie gegen Penicillin. Raucher mit 20 PY, täglicher Alkoholkonsum. FA: Vater an Myokardinfarkt verstorben, Mutter mit Apoplex, Bruder mit Z.n. Myokardinfarkt, art. Hypertonie und Dyslipidämie. Sozial: verheiratet, 4 Kinder, wohnt im eigenen Haus, führt eigene Maschinenbaufirma.",
+    "summary": "Lieber Patient,\n\nSie haben starke Schmerzen im oberen Bauchbereich, begleitet von schwarzen Stuhlgängen und Erbrechen von Blut. Sie haben auch Probleme mit dem Einschlafen. Ihre Vorgeschichte umfasst Bluthochdruck, erhöhte Cholesterinwerte, Rückenschmerzen und eine Operation am Knie. Sie nehmen Medikamente gegen diese Erkrankungen ein. Ihre Familie hat auch Herzprobleme und Bluthochdruck. Sie rauchen, trinken täglich Alkohol und haben Ihre eigene Maschinenbaufirma. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Dyslipidämie, Lumbalgie",
     "otherRelevantDiseases": "",
@@ -5309,7 +5309,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Abdomensonographie, Perkussion, Palpation, Auskultation",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Leberwerte, Gerinnungsstatus, Nierenwerte, Hämoglobin, HKT",
     "instrumentalExamination": "ÖGD, ggf. CT-Abdomen",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen infrage?\nWelche Laborwerte würden Sie anordnen?\nWie würden Sie die Diagnose sichern?\nWelche Therapieoptionen gibt es?",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen infrage?\n**Antwort:** Sie sollten mögliche alternative Diagnosen in Betracht ziehen, die ähnliche Symptome wie die Haupterkrankung aufweisen könnten.\n\n**Frage:** Welche Laborwerte würden Sie anordnen?\n**Antwort:** Um die Diagnose zu bestätigen oder auszuschließen, würden Sie Labortests anfordern, die spezifische Werte wie Blutbild, Entzündungsmarker oder Hormonspiegel messen könnten.\n\n**Frage:** Wie würden Sie die Diagnose sichern?\n**Antwort:** Zur Sicherung der Diagnose würden Sie wahrscheinlich bildgebende Verfahren wie Röntgenaufnahmen, Ultraschall oder MRT durchführen oder eine Gewebeprobe für eine Biopsie entnehmen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Behandlungsmöglichkeiten, die je nach Diagnose umfassen könnten: Medikamente, Physiotherapie, chirurgische Eingriffe oder Lifestyle-Änderungen.",
     "patientQuestions": "**Frage:** Warum habe ich diese Beschwerden?\n**Antwort:** Es gibt verschiedene Gründe, warum Sie diese Beschwerden haben könnten. Wir müssen weitere Untersuchungen durchführen, um die genaue Ursache herauszufinden.\n\n**Frage:** Muss ich ins Krankenhaus aufgenommen werden?\n**Antwort:** Basierend auf den Untersuchungsergebnissen werden wir gemeinsam entscheiden, ob eine stationäre Behandlung notwendig ist. Wir werden sicherstellen, dass Sie die angemessene Betreuung erhalten.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Je nach Ihren Symptomen und Ihrem Gesundheitszustand werden wir spezifische Untersuchungen wie Bluttests, Bildgebungsverfahren oder andere Diagnostika durchführen, um eine genaue Diagnose zu stellen."
   },
   {
@@ -5358,7 +5358,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "46-jähriger Patient mit seit 3-5 Tagen bestehenden Erkältungssymptomen, seit 2 Tagen Cephalgie und leichtem Vertigo, seit heute Morgen scharf abgegrenztes indolentes Exanthem mit zentraler Aufhellung am rechten Oberschenkel. Fieber bis 39,4°C. Hyperhidrose, besonders nachts. Anamnestisch Reise an den Bodensee vor 2 Wochen. Patient fragt nach FSME, ist jedoch geimpft. Beruflich als Friseur tätig mit Dysphonie und Schultergelenkschmerzen.",
+    "summary": "Lieber Patient,\n\nSie hatten in den letzten Tagen Erkältungssymptome, Kopf- und Schwindelgefühle und seit heute Morgen ein Hautausschlag am rechten Oberschenkel mit Fieber. Zusätzlich haben Sie vermehrtes Schwitzen, besonders nachts, bemerkt. Vor zwei Wochen waren Sie am Bodensee. Sie haben sich gegen FSME impfen lassen. Beruflich sind Sie Friseur und haben Probleme mit der Stimme und Schulterschmerzen.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -5392,7 +5392,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion des Exanthems, neurologische Untersuchung, Lymphknotenstatus",
     "laboratoryTests": "BB, CRP, BSG, Borrelien-Serologie (ELISA, Western Blot)",
     "instrumentalExamination": "",
-    "examinerQuestions": "Welche gefährliche Krankheit kann die Zecke noch übertragen?\nWelche Therapieoptionen gibt es?\nWie lange sollte die antibiotische Therapie dauern?",
+    "examinerQuestions": "**Frage:** Welche gefährliche Krankheit kann die Zecke noch übertragen?\n**Antwort:** Die Zecke kann die Krankheit Borreliose übertragen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Therapieoptionen, wie zum Beispiel Antibiotika, um die Symptome von durch Zecken übertragene Krankheiten zu behandeln.\n\n**Frage:** Wie lange sollte die antibiotische Therapie dauern?\n**Antwort:** Die antibiotische Therapie sollte je nach Krankheit und Schweregrad individuell von einem Arzt bzw. einer Ärztin festgelegt werden, jedoch dauert sie in der Regel ein bis mehrere Wochen.",
     "patientQuestions": "**Frage:** Habe ich eine FSME?\n**Antwort:** Es könnte sein, dass Sie eine FSME haben. FSME ist eine durch Zecken übertragene Krankheit. Um sicher zu sein, sollten Sie einen Arzt aufsuchen und sich testen lassen.\n\n**Frage:** Was bedeutet das Exanthem?\n**Antwort:** Ein Exanthem ist ein Hautausschlag, der durch verschiedene Ursachen wie Infektionen oder Medikamente hervorgerufen werden kann.\n\n**Frage:** Wie werde ich behandelt?\n**Antwort:** Die Behandlung hängt von der Ursache Ihres Gesundheitsproblems ab. Es ist wichtig, dass Sie sich von einem Arzt untersuchen lassen, um eine angemessene Behandlung zu erhalten."
   },
   {
@@ -5441,7 +5441,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "67-jähriger Patient mit seit 3 Monaten bestehenden belastungsabhängigen Schmerzen im linken Unterschenkel. Schmerz tritt nach ca. 40-50 m Gehen auf und zwingt zum Stehenbleiben. Haut blass, glänzend, haarlos, Dysästhesie in Ruhe, Schmerzverstärkung bei Bewegung. Vegetative Anamnese unauffällig.",
+    "summary": "Lieber Herr Wimmer,\n\nwir haben über Ihre Schmerzen im linken Unterschenkel gesprochen, die seit 3 Monaten stetig schlimmer werden. Die Schmerzen treten besonders beim Gehen auf, nach etwa 40-50 Metern müssen Sie stehenbleiben. Ihre Haut ist blass, glänzend und haarlos, und Sie spüren eine Art Kribbeln, das sich bei Bewegung verschlimmert. Alles andere bezüglich Ihrer Gesundheit scheint normal zu sein.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie seit 13 Jahren, Zustand nach Myokardinfarkt mit Stentimplantation vor 2 Jahren",
     "otherRelevantDiseases": "",
@@ -5475,7 +5475,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Pulsstatus tasten, Inspektion der Beine, ABI-Messung, Doppler-Sonographie",
     "laboratoryTests": "BB, CRP, Lipidprofil, BZ, Elektrolyte, Kreatinin",
     "instrumentalExamination": "Doppler-Sonographie, ggf. Angiographie",
-    "examinerQuestions": "Welche Diagnostik führen Sie durch?\nWie wird die pAVK behandelt?\nWelche Risikofaktoren spielen eine Rolle?",
+    "examinerQuestions": "**Frage:** Welche Diagnostik führen Sie durch?\n**Antwort:** Um eine Diagnose zu stellen, führe ich in der Regel eine körperliche Untersuchung sowie verschiedene Tests wie Blutuntersuchungen, bildgebende Verfahren wie Ultraschall oder CT-Scans und gegebenenfalls auch eine Angiographie durch.\n\n**Frage:** Wie wird die pAVK behandelt?\n**Antwort:** Die periphere arterielle Verschlusskrankheit (pAVK) kann sowohl konservativ mit Medikamenten, Physiotherapie und Lebensstiländerungen als auch invasiv mit Interventionen wie Katheterbehandlungen oder Bypass-Operationen behandelt werden, je nach Schweregrad der Erkrankung.\n\n**Frage:** Welche Risikofaktoren spielen eine Rolle?\n**Antwort:** Verschiedene Risikofaktoren können eine Rolle bei der Entstehung der pAVK spielen, darunter Rauchen, Diabetes, Bluthochdruck, erhöhter Cholesterinspiegel, Bewegungsmangel und erbliche Veranlagung. Es ist wichtig, diese Faktoren zu kennen und gegebenenfalls anzugehen, um das Risiko für die Entwicklung von pAVK zu verringern.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Infektion in Ihrem Harnweg.\n\n**Frage:** Wie kann ich die Schmerzen lindern?\n**Antwort:** Sie können die Schmerzen mit verschriebenen Schmerzmitteln und Ruhe reduzieren.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Eine Operation ist in diesem Fall nicht erforderlich. Ihre Infektion kann mit Antibiotika behandelt werden."
   },
   {
@@ -5524,7 +5524,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "53-jähriger Patient mit seit 10 Jahren bestehenden, progredienten, diffusen Schmerzen in Muskeln und Gelenken. Keine Besserung trotz verschiedener Therapieversuche. Zusätzlich Insomnie, Inappetenz und Gewichtsverlust. Vegetative Anamnese unauffällig.",
+    "summary": "In unserem Gespräch haben wir über Ihre bestehenden Schmerzen in Muskeln und Gelenken gesprochen, die seit 10 Jahren anhalten und sich in den letzten 2 Wochen verschlechtert haben. Trotz verschiedener Medikamente hat sich Ihr Zustand nicht deutlich verbessert. Zusätzlich haben Sie Schlafprobleme, wenig Appetit und in den letzten 10 Jahren 10 kg an Gewicht verloren. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "Covid-19 Infektion (April 2020, stationäre Behandlung)",
     "chronicDiseases": "Depression (seit 10 Jahren, ohne Behandlung)",
     "otherRelevantDiseases": "Sinusitis in der Kindheit",
@@ -5558,7 +5558,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung mit Triggerpunkttests",
     "laboratoryTests": "BB, CRP, BSG, Lipidprofil, Blutzucker, fT3, fT4, TSH, Elektrolyte, Kreatinin",
     "instrumentalExamination": "CT-Kopf, MRT-Ganzkörper, Schilddrüsensonografie, psychiatrisches Konsil",
-    "examinerQuestions": "Welche Triggerpunkte sind typisch für Fibromyalgie?\nWie kann Fibromyalgie diagnostiziert werden?\nWelche alternativen Diagnosen kommen in Betracht?",
+    "examinerQuestions": "**Frage:** Welche Triggerpunkte sind typisch für Fibromyalgie?\n**Antwort:** Für Fibromyalgie typische Triggerpunkte sind zum Beispiel am Nacken, an den Schultern, an der Brust, an den Hüften und an den Knien zu finden.\n\n**Frage:** Wie kann Fibromyalgie diagnostiziert werden?\n**Antwort:** Fibromyalgie kann anhand der klinischen Symptome, des Drucks auf Triggerpunkte, des Schmerzmusters und dem Ausschluss anderer Erkrankungen diagnostiziert werden.\n\n**Frage:** Welche alternativen Diagnosen kommen in Betracht?\n**Antwort:** Bei ähnlichen Symptomen wie bei Fibromyalgie können alternative Diagnosen wie rheumatoide Arthritis, chronisches Erschöpfungssyndrom oder Lyme-Borreliose in Betracht gezogen werden.",
     "patientQuestions": "**Frage:** Warum habe ich Schmerzen?\n**Antwort:** Es gibt verschiedene Gründe, warum Sie Schmerzen haben könnten. Um eine genaue Diagnose zu erhalten, sollten Sie Ihren Arzt aufsuchen.\n\n**Frage:** Wie kann ich die Schmerzen lindern?\n**Antwort:** Es gibt verschiedene Methoden zur Schmerzlinderung, abhängig von der Ursache Ihrer Schmerzen. Ihr Arzt kann Ihnen geeignete Schmerzmittel oder Therapien empfehlen.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Es gibt verschiedene Therapieoptionen je nach Art und Ursache Ihrer Schmerzen. Dazu gehören Medikamente, Physiotherapie, alternative Behandlungen oder in einigen Fällen auch chirurgische Eingriffe. Ihr Arzt kann die passende Therapie für Ihre Situation empfehlen."
   },
   {
@@ -5607,7 +5607,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "53-jähriger Patient mit seit 10 Jahren bestehenden, progredienten, diffusen Schmerzen in Muskeln und Gelenken. Keine Besserung trotz verschiedener Therapieversuche. Zusätzlich Insomnie, Inappetenz und Gewichtsverlust. Vegetative Anamnese unauffällig.",
+    "summary": "Lieber August,\n\nwir haben über deine seit 10 Jahren andauernden starken Schmerzen in Muskeln und Gelenken gesprochen, die sich in den letzten 2 Wochen verschlimmert haben. Du hast verschiedene Medikamente ausprobiert, aber bisher keine Linderung erfahren. Zusätzlich leidest du an Schlafproblemen, verminderter Appetit und einem Gewichtsverlust von 10 kg in 10 Jahren. Deine vegetative Anamnese ist unauffällig.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "Covid-19 Infektion (April 2020, stationäre Behandlung)",
     "chronicDiseases": "Depression (seit 10 Jahren, ohne Behandlung)",
     "otherRelevantDiseases": "Sinusitis in der Kindheit",
@@ -5641,7 +5641,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung mit Triggerpunkttests",
     "laboratoryTests": "BB, CRP, BSG, Lipidprofil, Blutzucker, fT3, fT4, TSH, Elektrolyte, Kreatinin",
     "instrumentalExamination": "CT-Kopf, MRT-Ganzkörper, Schilddrüsensonografie, psychiatrisches Konsil",
-    "examinerQuestions": "Welche Triggerpunkte sind typisch für Fibromyalgie?\nWie kann Fibromyalgie diagnostiziert werden?\nWelche alternativen Diagnosen kommen in Betracht?",
+    "examinerQuestions": "**Frage:** Welche Triggerpunkte sind typisch für Fibromyalgie?\n**Antwort:** Für Fibromyalgie typische Triggerpunkte sind beispielsweise am Nacken, an den Schultern, am Brustkorb und in der Hüftregion zu finden.\n\n**Frage:** Wie kann Fibromyalgie diagnostiziert werden?\n**Antwort:** Fibromyalgie wird in der Regel durch das Vorhandensein bestimmter Symptome wie anhaltender Schmerz, Müdigkeit und Schlafstörungen diagnostiziert. Es gibt keinen spezifischen Test, der Fibromyalgie definitiv nachweisen kann.\n\n**Frage:** Welche alternativen Diagnosen kommen in Betracht?\n**Antwort:** Bei ähnlichen Symptomen wie bei Fibromyalgie können auch andere Erkrankungen wie rheumatoide Arthritis, Lupus oder Lyme-Borreliose in Betracht gezogen werden. Es ist wichtig, diese auszuschließen, um die richtige Diagnose zu stellen.",
     "patientQuestions": "**Frage:** Warum habe ich Schmerzen?  \n**Antwort:** Möglicherweise haben Sie Schmerzen aufgrund von verschiedenen Ursachen wie Verletzungen, Entzündungen oder anderen medizinischen Bedingungen. Eine genaue Diagnose ist wichtig, um die Ursache Ihrer Schmerzen herauszufinden.\n\n**Frage:** Wie kann ich die Schmerzen lindern?  \n**Antwort:** Sie können die Schmerzen je nach Ursache auf verschiedene Weisen lindern. Dazu gehören Ruhe, Eis- oder Wärmeanwendungen, Schmerzmedikamente oder Physiotherapie. Es ist wichtig, mit Ihrem Arzt über die besten Methoden zur Schmerzlinderung zu sprechen.\n\n**Frage:** Welche Therapieoptionen gibt es?  \n**Antwort:** Es gibt verschiedene Therapieoptionen zur Schmerzbehandlung, je nach Art und Ursache der Schmerzen. Dazu gehören Medikamente, Physiotherapie, Injektionen, Akupunktur oder in einigen Fällen auch chirurgische Eingriffe. Ihr Arzt kann mit Ihnen die bestmögliche Therapieoption basierend auf Ihrer Diagnose besprechen."
   },
   {
@@ -5690,7 +5690,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "46-jähriger Patient mit seit 3 Monaten bestehenden dumpfen, permanenten Abdominalschmerzen mit Ausstrahlung in den Rücken. Zusätzlich Meteorismus, Nausea, Inappetenz und Gewichtszunahme. Vegetative Anamnese zeigt Nykturie, Müdigkeit, Insomnie und Parasomnie. Anamnese deutet auf Leberzirrhose und Alkoholismus hin.",
+    "summary": "Lieber Patient,\n\nSie haben seit 3 Monaten Bauchschmerzen mit Ausstrahlung in den Rücken, begleitet von Blähungen, Übelkeit, verminderter Appetit und einer Gewichtszunahme von 5 kg. Sie haben auch vermehrten Harndrang in der Nacht, Müdigkeit, Schlafstörungen und reden gerne und humorvoll. Ihre Vorgeschichte deutet auf eine mögliche Leberzirrhose und Alkoholismus hin. Aktuell nehmen Sie Aspirin gegen Kopfschmerzen ein. Rauchen tun Sie nicht, aber Ihr Alkoholkonsum beträgt täglich 6-7 Biere und abends 1-2 Schnäpse.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "Hepatitis mit 13 Jahren",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -5724,7 +5724,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung inkl. Abdominalstatus",
     "laboratoryTests": "BB, Entzündungsparameter, Leberwerte, Lipase, Amylase, Laktoseintoleranz-Test, Helicobacter pylori-Test",
     "instrumentalExamination": "Abdomensonographie, CT-Abdomen mit Kontrastmittel",
-    "examinerQuestions": "Was könnten wir mit der Abdomensonographie beurteilen?\n**Antwort:** Sonographische Zeichen der Leberzirrhose, HCC.\n\nWas könnten wir in Bezug auf die Aszites durchführen?\n**Antwort:** Aszitesdrainage.\n\nWas für eine medikamentöse Therapie würden Sie verabreichen?\n**Antwort:** Spironolacton.\n\nWas ist die gefährlichste Komplikation?\n**Antwort:** Ruptur der Ösophagusvarizen mit massiver Blutung.",
+    "examinerQuestions": "**Frage:** Was könnten wir mit der Abdomensonographie beurteilen?\n**Antwort:** Sonographische Zeichen der Leberzirrhose, HCC.\n\n**Frage:** Was könnten wir in Bezug auf die Aszites durchführen?\n**Antwort:** Aszitesdrainage.\n\n**Frage:** Was für eine medikamentöse Therapie würden Sie verabreichen?\n**Antwort:** Spironolacton.\n\n**Frage:** Was ist die gefährlichste Komplikation?\n**Antwort:** Ruptur der Ösophagusvarizen mit massiver Blutung.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Um Ihre Situation genauer zu verstehen, müssen wir eine gründliche Untersuchung durchführen.\n\n**Frage:** Was werden Sie tun, um meine Schmerzen zu lindern?\n**Antwort:** Ich werde nach einer genauen Diagnose einen Behandlungsplan erstellen, um Ihre Schmerzen effektiv zu lindern.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Je nach Ihren Symptomen könnten Untersuchungen wie Bluttests, Bildgebungsverfahren oder andere Tests notwendig sein, um die Ursache Ihrer Beschwerden zu identifizieren.\n\n**Frage:** Muss ich stationär aufgenommen werden?\n**Antwort:** Nach der Diagnose werden wir gemeinsam entscheiden, ob eine stationäre Behandlung erforderlich ist oder ob Sie ambulant behandelt werden können."
   },
   {
@@ -5773,7 +5773,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "34-jährige Patientin mit seit 4-5 Jahren bestehenden zunehmenden beidseitigen Kopfschmerzen ohne Ausstrahlung, zuletzt seit 4-6 Wochen verstärkt. Begleitsymptome: Muskelschmerzen, Gelenkschmerzen, Knochenschmerzen, Müdigkeit, Sehprobleme und Tinnitus. Vegetative Anamnese unauffällig bis auf Inappetenz und Insomnie. V.a. Depression.",
+    "summary": "In unserem Gespräch haben wir über Ihre seit 4-5 Jahren bestehenden Kopfschmerzen ohne Ausstrahlung gesprochen, die sich in den letzten 4-6 Wochen verschlimmert haben. Sie haben Muskelschmerzen, Gelenkschmerzen, Knochenschmerzen, Müdigkeit, Sehprobleme und Tinnitus. Sie leiden auch an Inappetenz und Schlaflosigkeit. Ihre Medikamente umfassen Paracetamol, Ibuprofen, Tramadol und Voltaren. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -5807,7 +5807,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinische Untersuchung inkl. neurologischer Untersuchung",
     "laboratoryTests": "BB, CRP, BSG, fT3, fT4, TSH",
     "instrumentalExamination": "Evtl. erneute MRT falls notwendig",
-    "examinerQuestions": "Welche Maßnahmen sind zur Diagnosesicherung erforderlich?\n**Antwort:** Klinische Untersuchung, Laboruntersuchungen (BB, CRP, BSG, TSH, fT3, fT4) zur Abklärung möglicher Ursachen.",
+    "examinerQuestions": "**Frage:** Welche Maßnahmen sind zur Diagnosesicherung erforderlich?\n**Antwort:** Klinische Untersuchung, Laboruntersuchungen (BB, CRP, BSG, TSH, fT3, fT4) zur Abklärung möglicher Ursachen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben aktuell Kopfschmerzen.\n\n**Frage:** Warum habe ich so lange Kopfschmerzen?\n**Antwort:** Es gibt verschiedene Gründe, warum Kopfschmerzen länger anhalten können. Wir werden das genauer untersuchen.\n\n**Frage:** Könnte es doch eine MS sein?\n**Antwort:** Multiple Sklerose (MS) ist eine Möglichkeit, die wir in Betracht ziehen werden. Es gibt jedoch auch andere Ursachen für Ihre Symptome.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Wir werden verschiedene Untersuchungen durchführen, um die Ursache Ihrer Kopfschmerzen festzustellen. Dies kann unter anderem eine neurologische Untersuchung, Bildgebung wie ein MRT und Bluttests umfassen."
   },
   {
@@ -5856,7 +5856,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Gestationsdiabetes, mit Metformin und Insulin behandelt",
-    "summary": "58-jährige Patientin mit seit 5 Monaten bestehenden zunehmenden Schmerzen in der linken unteren Extremität. Dumpfe, ziehende Schmerzen im linken Hüft- und Kniegelenk mit Krepitation. Schmerzintensität 3/10 in Ruhe, 12/10 bei Belastung. Vegetative Anamnese unauffällig bis auf schmerzbedingte Insomnie.",
+    "summary": "Sie sind eine 58-jährige Patientin mit seit 5 Monaten zunehmenden Schmerzen in der linken unteren Extremität. Es handelt sich um dumpfe, ziehende Schmerzen im linken Hüft- und Kniegelenk mit Krepitation. Der Schmerz ist in Ruhe bei 3 von 10, bei Belastung bei 12 von 10. Vegetative Anamnese ist unauffällig, außer schmerzbedingter Schlaflosigkeit. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2 seit 20 Jahren, arterielle Hypertonie seit 2 Jahren, Arthritis urica seit 1 Jahr",
     "otherRelevantDiseases": "",
@@ -5890,7 +5890,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung inkl. Inspektion, Palpation, Beweglichkeitstests",
     "laboratoryTests": "BB, CRP, BSG, Rheumafaktoren, Harnsäure",
     "instrumentalExamination": "Röntgen Hüft-/Kniegelenk links, MRT der LWS, MRT der betroffenen Gelenke",
-    "examinerQuestions": "Welche bildgebende Untersuchung ist am besten geeignet zur Diagnosesicherung?\n**Antwort:** Röntgen zur Beurteilung von Arthrosezeichen, ggf. MRT zur genaueren Beurteilung von Knorpel- und Bandstrukturen.",
+    "examinerQuestions": "**Frage:** Welche bildgebende Untersuchung ist am besten geeignet zur Diagnosesicherung?\n**Antwort:** Röntgen zur Beurteilung von Arthrosezeichen, ggf. MRT zur genaueren Beurteilung von Knorpel- und Bandstrukturen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Zur Klärung Ihrer Diagnose sollten wir weitere Untersuchungen durchführen.\n\n**Frage:** Welche Therapie empfehlen Sie?\n**Antwort:** Nachdem wir Ihre Diagnose genau bestimmt haben, können wir gemeinsam eine passende Therapie besprechen.\n\n**Frage:** Muss ich operiert werden?\n**Antwort:** Eine Operation ist möglicherweise eine Behandlungsoption, die wir erst nach gründlicher Untersuchung in Betracht ziehen würden."
   },
   {
@@ -5939,7 +5939,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "51-jähriger Patient mit seit einer Woche zunehmenden epigastrischen Schmerzen, Hämatemesis und Meläna. Vegetative Anamnese bis auf Inappetenz und Insomnie unauffällig.",
+    "summary": "Lieber Bernd,\n\nwir haben besprochen, dass Sie seit einer Woche an krampfartigen, dumpfen Schmerzen im Oberbauch leiden. Diese Schmerzen haben zugenommen und werden von Hämatemesis (Bluterbrechen) und Meläna (schwarzer Stuhl) begleitet. Sie haben auch Inappetenz und Schlafprobleme aufgrund der Schmerzen. Ihre Medikation umfasst bei Bedarf Diclofenac und Captopril. Ihre vegetative Anamnese zeigt darüber hinaus keine auffälligen Befunde. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nBernd Kowalski",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Diskusprolaps",
     "otherRelevantDiseases": "",
@@ -5973,7 +5973,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung inkl. Inspektion, Palpation, Perkussion, Auskultation des Abdomens",
     "laboratoryTests": "BB, CRP, BSG, Blutkreuz, Gerinnungskontrolle, Leberwerte, Blutfettwerte",
     "instrumentalExamination": "ÖGD zur Abklärung der Blutungsquelle",
-    "examinerQuestions": "Welche Laboruntersuchungen sind notwendig?\n**Antwort:** BB, CRP, BSG, Blutkreuz, Gerinnungskontrolle, Leberwerte, Blutfettwerte.",
+    "examinerQuestions": "**Frage:** Welche Laboruntersuchungen sind notwendig?\n**Antwort:** BB, CRP, BSG, Blutkreuz, Gerinnungskontrolle, Leberwerte, Blutfettwerte.",
     "patientQuestions": "**Frage:** Was könnte die Ursache für meine Beschwerden sein?\n**Antwort:** Die Ursache Ihrer Beschwerden kann von verschiedenen Faktoren abhängen. Möglicherweise spielen sowohl äußere Einflüsse als auch interne gesundheitliche Bedingungen eine Rolle. Um die genaue Ursache festzustellen, ist eine ärztliche Untersuchung erforderlich.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Um die Ursache Ihrer Beschwerden zu identifizieren, werden je nach Ihren Symptomen und Ihrer Krankengeschichte verschiedene Untersuchungen durchgeführt. Dazu gehören möglicherweise Bluttests, bildgebende Verfahren wie Röntgenaufnahmen oder Ultraschall, sowie spezifische Tests je nach Verdacht auf bestimmte Erkrankungen.\n\n**Frage:** Wie sieht die Behandlung aus?\n**Antwort:** Die Behandlung richtet sich nach der festgestellten Ursache Ihrer Beschwerden. Je nach Diagnose können verschiedene Behandlungsmethoden empfohlen werden, darunter Medikamente, therapeutische Maßnahmen, eine Anpassung des Lebensstils oder gegebenenfalls eine Operation. Ihr Arzt wird gemeinsam mit Ihnen einen individuellen Behandlungsplan erstellen."
   },
   {
@@ -6022,7 +6022,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "Letzte Regelblutung vor 3 Wochen, Schwangerschaft verneint",
-    "summary": "46-jährige Patientin mit seit 5 Tagen bestehenden Beschwerden: Halsschmerzen, Dysphagie, Nasenbluten, Atemnot, Husten mit gelblichem Auswurf und Fieber (39,5°C). Vorerkrankungen: Gicht, Burnout-Syndrom, Lichtkeratose.",
+    "summary": "Liebe Martha, \n\nwir haben darüber gesprochen, dass Sie seit 5 Tagen Schluckbeschwerden, Gaumenschmerzen, Nasenbluten, Atemnot, Kopfschmerzen und Husten mit gelblichem Auswurf haben. Sie fühlen sich sehr unwohl und haben auch Fieber. Ihre Vorerkrankungen sind Gicht, Burnout-Syndrom und Lichtkeratose. Sie nehmen verschiedene Medikamente ein, darunter Allopurinol gegen Gicht. Bitte teilen Sie mir mit, ob Sie noch etwas hinzuzufügen haben.\n\nVielen Dank und freundliche Grüße.",
     "infectiousDiseases": "",
     "chronicDiseases": "Rückenschmerzen, Gicht, Burnout-Syndrom, Lichtkeratose",
     "otherRelevantDiseases": "",
@@ -6056,7 +6056,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung inkl. Inspektion des Rachens, Lymphknotenpalpation, Lungenauskultation",
     "laboratoryTests": "BB, CRP, BSG, Leukozyten, Blutkultur",
     "instrumentalExamination": "Röntgen-Thorax, ggf. CT-Thorax",
-    "examinerQuestions": "Welche Laboruntersuchungen sind notwendig?\n**Antwort:** BB, CRP, BSG, Blutkultur, Leukozyten.\nWelche bildgebende Diagnostik ist erforderlich?\n**Antwort:** Röntgen-Thorax, ggf. CT-Thorax.",
+    "examinerQuestions": "**Frage:** Welche Laboruntersuchungen sind notwendig?\n**Antwort:** BB, CRP, BSG, Blutkultur, Leukozyten.\n\n**Frage:** Welche bildgebende Diagnostik ist erforderlich?\n**Antwort:** Röntgen-Thorax, ggf. CT-Thorax.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Die Diagnose lautet XYZ. Sie haben XYZ.\n\n**Frage:** Ist das gefährlich?\n**Antwort:** Die Situation ist ernst zu nehmen, aber nicht lebensbedrohlich. Wir werden alles tun, um Ihnen zu helfen.\n\n**Frage:** Welche Untersuchungen werden durchgeführt?\n**Antwort:** Zuerst werden wir eine Blutuntersuchung machen, gefolgt von einer Röntgenaufnahme und gegebenenfalls weiteren spezifischen Tests zur genauen Diagnosestellung.\n\n**Frage:** Wie wird die Behandlung aussehen?\n**Antwort:** Ihre Behandlung wird aus XYZ bestehen. Wir werden gemeinsam einen Therapieplan erstellen, um sicherzustellen, dass Sie sich bestmöglich erholen."
   },
   {
@@ -6105,7 +6105,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "77-jährige Patientin mit plötzlich aufgetretenen, drückenden retrosternalen Thoraxschmerzen mit Ausstrahlung in den linken Arm. Begleitsymptome: Dyspnoe, Nausea, kalter Schweiß, Todesangst. Bekannte Vorerkrankungen: DM2 seit 10 Jahren, arterielle Hypertonie seit 15 Jahren. Risikofaktoren: Nikotinabusus (30 PY), regelmäßiger Alkoholkonsum.",
+    "summary": "Frau Buttner, 77 Jahre alt, hat plötzlich starke Schmerzen in der Brust, die in den linken Arm ausstrahlen. Dazu kommen Atemnot, Übelkeit, kalter Schweiß und Todesangst. Sie hat Diabetes und hohen Blutdruck. Risikofaktoren sind Rauchen und regelmäßiger Alkoholkonsum. Ihre Medikamente sind Metformin, Lisinopril, ASS und Zäpfchen bei Bedarf. Allergien gegen Hühnereiweiß und Nüsse mit unterschiedlichen Symptomen. Raucht seit 30 Jahren und trinkt fast täglich Rotwein. Familie: Vater hatte Darmkrebs, Mutter eine Lungenembolie, Zwillingsschwester im Pflegeheim nach Schlaganfall. Ehemann lebt seit 5 Jahren in einem Pflegeheim. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, arterielle Hypertonie",
     "otherRelevantDiseases": "",
@@ -6139,7 +6139,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Herz- und Lungenauskultation, RR-Messung, Puls, Inspektion der Haut (Zyanose, Blässe)",
     "laboratoryTests": "BB, CRP, Troponin, CK, CK-MB, D-Dimere, Blutfette, BZ",
     "instrumentalExamination": "EKG, Echokardiografie, Koronarangiografie",
-    "examinerQuestions": "Was sind die Risikofaktoren für Myokardinfarkt?\n**Antwort:** DM2, arterielle Hypertonie, Nikotinabusus, Alkoholkonsum.\nWelche Labordiagnostik ist erforderlich?\n**Antwort:** BB, CRP, Troponin, CK, CK-MB, D-Dimere.\nWelche apparativen Untersuchungen müssen durchgeführt werden?\n**Antwort:** EKG, Echokardiografie, Koronarangiografie.",
+    "examinerQuestions": "**Frage:** Was sind die Risikofaktoren für einen Myokardinfarkt?\n**Antwort:** Zu den Risikofaktoren gehören Diabetes Typ 2, Bluthochdruck, Rauchen und Alkoholkonsum.\n\n**Frage:** Welche Labordiagnostik ist notwendig?\n**Antwort:** Folgende Laboruntersuchungen sind erforderlich: Blutbild, C-reaktives Protein (CRP), Troponin, Kreatinkinase (CK), CK-MB und D-Dimere.\n\n**Frage:** Welche apparativen Untersuchungen sollten durchgeführt werden?\n**Antwort:** Es sollten ein Elektrokardiogramm (EKG), eine Echokardiografie und eine Koronarangiografie vorgenommen werden.",
     "patientQuestions": "**Frage:** Ist es ein Herzinfarkt?\n**Antwort:** Um festzustellen, ob es sich um einen Herzinfarkt handelt, werden verschiedene Untersuchungen durchgeführt, wie z.B. ein EKG, Blutuntersuchungen und eine körperliche Untersuchung.\n\n**Frage:** Wie gefährlich ist das?\n**Antwort:** Ein Herzinfarkt kann lebensbedrohlich sein, wenn er nicht sofort behandelt wird. Es ist wichtig, schnell ärztliche Hilfe zu suchen, um Komplikationen zu vermeiden.\n\n**Frage:** Welche Untersuchungen werden gemacht?\n**Antwort:** Zur Diagnose eines Herzinfarkts werden typischerweise ein Elektrokardiogramm (EKG), Blutuntersuchungen auf spezifische Enzyme und eine körperliche Untersuchung durchgeführt. Diese Tests helfen dabei, die Ursache der Beschwerden zu ermitteln.\n\n**Frage:** Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Behandlung eines Herzinfarkts kann je nach Schweregrad variieren, kann aber Medikamente, wie Blutverdünner und Schmerzmittel, sowie Maßnahmen wie eine Herzkatheteruntersuchung oder eine Bypass-Operation umfassen. Die Wahl der Behandlung hängt von individuellen Faktoren ab und wird von Ärzten entschieden."
   },
   {
@@ -6188,7 +6188,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "25-jähriger Patient mit seit 6 Monaten bestehenden, persistierenden Cephalgien nach Motorradunfall. Begleitsymptome: Fatigue, Aufmerksamkeitsstörungen, Adynämie, Insomnie. Keine Besserung unter Paracetamol. Keine Hinweise auf neurologische Defizite oder Infektion.",
+    "summary": "Lieber Herr Stuhlgard,\n\nwir haben über Ihre seit 6 Monaten andauernden Kopfschmerzen gesprochen, die nach einem Motorradunfall aufgetreten sind. Neben den Kopfschmerzen leiden Sie auch unter Müdigkeit, Konzentrationsproblemen und Schlafstörungen. Bisher hat Ihnen Paracetamol nicht viel Linderung gebracht. Es gibt keine Anzeichen für neurologische Probleme oder eine Infektion. Möchten Sie noch etwas hinzufügen?\n\nMit freundlichen Grüßen,\n[Praxisname]",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -6222,7 +6222,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Klinisch-neurologische Untersuchung",
     "laboratoryTests": "BB, CRP, BSG, TSH, T3, T4, Leberwerte, Nierenwerte",
     "instrumentalExamination": "MRT des Schädels, Schilddrüsensonographie, Schilddrüsenszintigraphie",
-    "examinerQuestions": "Welche neurologischen Ursachen kommen infrage?\n**Antwort:** Posttraumatische Kopfschmerzen, Migräne, Spannungskopfschmerz.\nWie unterscheidet man eine psychosomatische Ursache?\n**Antwort:** Durch Ausschluss organischer Ursachen, langanhaltender Verlauf, fehlende objektive Befunde.\nWelche Therapieoptionen gibt es?\n**Antwort:** Psychotherapie, Ergotherapie, Serotonin-Wiederaufnahmehemmer, trizyklische Antidepressiva.",
+    "examinerQuestions": "**Frage:** Welche neurologischen Ursachen kommen infrage?\n**Antwort:** Posttraumatische Kopfschmerzen, Migräne, Spannungskopfschmerz.\n\n**Frage:** Wie unterscheidet man eine psychosomatische Ursache?\n**Antwort:** Durch Ausschluss organischer Ursachen, langanhaltender Verlauf, fehlende objektive Befunde.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Psychotherapie, Ergotherapie, Serotonin-Wiederaufnahmehemmer, trizyklische Antidepressiva.",
     "patientQuestions": "**Frage:** Ist das etwas Gefährliches?\n**Antwort:** Sie machen sich Sorgen um Ihre Gesundheit, das verstehe ich. Für eine genaue Diagnose müssen wir weitere Untersuchungen durchführen.\n\n**Frage:** Warum habe ich seit dem Unfall Kopfschmerzen?\n**Antwort:** Es ist möglich, dass die Kopfschmerzen durch den Unfall verursacht wurden. Es ist wichtig, dass wir Ihre Symptome genauer untersuchen, um die Ursache herauszufinden.\n\n**Frage:** Welche Untersuchungen werden gemacht?\n**Antwort:** Wir werden bestimmte diagnostische Tests durchführen, um Ihre Symptome besser zu verstehen. Dazu gehören möglicherweise ein CT- oder MRT-Scan sowie neurologische Untersuchungen.\n\n**Frage:** Welche Medikamente können helfen?\n**Antwort:** Je nach Diagnose können verschiedene Medikamente zur Linderung Ihrer Symptome verschrieben werden. Es ist wichtig, dass Sie alle Informationen über Ihre medizinische Vorgeschichte mit uns teilen, um die geeignetste Behandlung zu finden."
   },
   {
@@ -6271,7 +6271,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "32-jähriger Patient mit seit 4-5 Jahren bestehenden, therapierefraktären Knieschmerzen ohne erkennbare organische Ursache. Begleitsymptome: Müdigkeit, Konzentrationsstörungen, Abgeschlagenheit und Apathie. Keine auffälligen Befunde in bisherigen Untersuchungen.",
+    "summary": "Lieber Patient,\n\nwir haben über Ihre langanhaltenden Knieschmerzen gesprochen, die seit 4-5 Jahren bestehen und bisher nicht erfolgreich behandelt werden konnten. Sie haben auch über Symptome wie Müdigkeit, Konzentrationsstörungen, Abgeschlagenheit und Apathie berichtet. Bisherige Untersuchungen haben keine auffälligen Befunde ergeben. Haben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\nKnitthilf Weidele",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -6305,7 +6305,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Palpation der Gelenke, Funktionstests",
     "laboratoryTests": "BB, CRP, BSG, Rheumafaktor, fT3, fT4, TSH",
     "instrumentalExamination": "Sonografie der Schilddrüse, CT der Gelenke",
-    "examinerQuestions": "Wie unterscheiden Sie eine Depression von einer rheumatischen Erkrankung?\n**Antwort:** Durch Laborwerte, entzündliche Marker, Rheumafaktoren und klinische Untersuchung der Gelenke.\nWelche Therapieoptionen gibt es?\n**Antwort:** Psychotherapie, Antidepressiva (Amitriptylin, Escitalopram, Citalopram).",
+    "examinerQuestions": "**Frage:** Wie unterscheiden Sie eine Depression von einer rheumatischen Erkrankung?\n**Antwort:** Durch Laborwerte, entzündliche Marker, Rheumafaktoren und klinische Untersuchung der Gelenke.\n\n**Frage:** Welche Therapieoptionen gibt es?\n**Antwort:** Psychotherapie, Antidepressiva (Amitriptylin, Escitalopram, Citalopram).",
     "patientQuestions": "**Frage:** Was könnte die Ursache meiner Schmerzen sein?\n**Antwort:** Es gibt viele mögliche Ursachen für Schmerzen. Um die genaue Ursache herauszufinden, ist es wichtig, dass Sie Ihren Arzt aufsuchen und sich gründlich untersuchen lassen.\n\n**Frage:** Sind meine Beschwerden psychosomatisch?\n**Antwort:** Psychosomatische Beschwerden können in manchen Fällen auftreten, jedoch sollten Sie immer ärztlichen Rat einholen, um festzustellen, ob Ihre Beschwerden eine körperliche Ursache haben. Ihr Arzt kann Ihnen dabei helfen, die richtige Behandlung zu finden.\n\n**Frage:** Welche Untersuchungen sind notwendig?\n**Antwort:** Die notwendigen Untersuchungen hängen von Ihren spezifischen Symptomen und Ihrer Krankengeschichte ab. Ihr Arzt wird basierend auf diesen Informationen entscheiden, welche Untersuchungen erforderlich sind, um Ihre Beschwerden zu klären.\n\n**Frage:** Welche Behandlungsmöglichkeiten gibt es?\n**Antwort:** Die Behandlungsmöglichkeiten variieren je nach Diagnose. Ihr Arzt wird gemeinsam mit Ihnen die geeignete Behandlung auswählen, die auf die Ursache Ihrer Beschwerden zugeschnitten ist. Es ist wichtig, die ärztlichen Anweisungen genau zu befolgen, um eine Verbesserung Ihrer Symptome zu erreichen."
   },
   {
@@ -6354,7 +6354,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "75-jähriger Patient mit akut aufgetretenen retrosternalen Schmerzen mit typischer Ausstrahlung und Begleitsymptomen. Beschwerden belastungsabhängig, Verdacht auf KHK.",
+    "summary": "Lieber Hans Leumann,\n\nwir haben besprochen, dass Sie akut starke Schmerzen in der Brust haben, die in Ihren ganzen Brustkorb, linken Arm und linke Schulter ausstrahlen. Diese Schmerzen sind belastungsabhängig und werden in Ruhe besser. Zusätzlich haben Sie Atemnot, Schwitzen, Übelkeit und Herzklopfen. Ihr Verdacht lautet auf eine vermutliche Koronare Herzkrankheit (KHK).\n\nHaben Sie noch etwas hinzuzufügen?\n\nMit freundlichen Grüßen,\n[Dein Name]",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes Mellitus Typ 2 seit 5 Jahren, arterielle Hypertonie seit 10 Jahren",
     "otherRelevantDiseases": "",
@@ -6388,7 +6388,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Herz- und Lungenauskultation, Pulsstatus",
     "laboratoryTests": "BB, CRP, BSG, Troponin, CK, CK-MB, D-Dimere, Blutfette, Blutzucker, Gerinnungsparameter",
     "instrumentalExamination": "EKG, Echokardiographie, Belastungs-EKG, Koronarangiographie",
-    "examinerQuestions": "Was sind die wichtigsten Risikofaktoren für KHK?\n**Antwort:** Rauchen, arterielle Hypertonie, Diabetes mellitus, Dyslipidämie, Bewegungsmangel, familiäre Disposition.\nWelche Differenzialdiagnosen sind hier zu beachten?\n**Antwort:** Aortendissektion, Lungenembolie, Perikarditis, gastroösophageale Refluxkrankheit, muskuläre Schmerzen.\nWie gehen Sie diagnostisch vor?\n**Antwort:** EKG, Troponin-Test, Herz-Enzyme, Belastungs-EKG, ggf. Koronarangiographie.\nWann sollten wir keine Nitrate geben?\n**Antwort:** Bei Hypotonie oder Verdacht auf Aortendissektion.",
+    "examinerQuestions": "**Frage:** Was sind die wichtigsten Risikofaktoren für KHK?\n**Antwort:** Rauchen, arterielle Hypertonie, Diabetes mellitus, Dyslipidämie, Bewegungsmangel, familiäre Disposition.\n\n**Frage:** Welche Differenzialdiagnosen sind hier zu beachten?\n**Antwort:** Aortendissektion, Lungenembolie, Perikarditis, gastroösophageale Refluxkrankheit, muskuläre Schmerzen.\n\n**Frage:** Wie gehen Sie diagnostisch vor?\n**Antwort:** EKG, Troponin-Test, Herz-Enzyme, Belastungs-EKG, ggf. Koronarangiographie.\n\n**Frage:** Wann sollten wir keine Nitrate geben?\n**Antwort:** Bei Hypotonie oder Verdacht auf Aortendissektion.",
     "patientQuestions": "**Frage:** Was habe ich?  \n**Antwort:** Das kann ich Ihnen nach einer Untersuchung sagen.  \n   \n**Frage:** Ich habe starke Schmerzen und Atemnot, was werden Sie machen?  \n**Antwort:** Zuerst werde ich Sie gründlich untersuchen, um die Ursache Ihrer Beschwerden herauszufinden. Dann werden wir gemeinsam einen Behandlungsplan erstellen.  \n   \n**Frage:** Können Sie mir etwas gegen die Schmerzen geben?  \n**Antwort:** Ja, ich kann Ihnen Schmerzmittel verschreiben, um Ihre Schmerzen zu lindern. Es ist jedoch wichtig, die genaue Ursache Ihrer Schmerzen herauszufinden, um eine angemessene Behandlung sicherzustellen."
   },
   {
@@ -6437,7 +6437,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "76-jähriger Patient mit plötzlich aufgetretenen, belastungsabhängigen Thoraxschmerzen mit typischer Ausstrahlung. Begleitsymptome wie Dyspnoe, Todesangst und Schweißausbrüche. Verdacht auf akutes Koronarsyndrom.",
+    "summary": "Lieber Herr Trüster,\n\nwir haben über Ihre aktuellen Medikamente gesprochen: Metformin, Lisinopril, ASS und Dulcolax. Außerdem haben wir Ihre Beschwerden mit plötzlichen Brustschmerzen, die in den linken Arm und den Hals ausstrahlen, besprochen. Die Schmerzen sind drückend, stechend und atemabhängig, verbessern sich jedoch, wenn Sie sitzen. Zusätzlich haben Sie Atemnot, Angst vor dem Tod, kalten Schweiß, Schwindel und Übelkeit. Gibt es noch etwas, das Sie hinzufügen möchten?\n\nIch freue mich auf Ihre Ergänzungen.",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes Mellitus Typ 2 (seit 9 Jahren), arterielle Hypertonie (seit 8 Jahren)",
     "otherRelevantDiseases": "",
@@ -6471,7 +6471,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Vitalparameter, Herz- und Lungenauskultation, Pulsstatus",
     "laboratoryTests": "BB, CRP, BSG, Troponin, CK, CK-MB, D-Dimere, Blutfette, Blutzucker, Gerinnungsparameter",
     "instrumentalExamination": "EKG, Echokardiographie, Belastungs-EKG, Koronarangiographie",
-    "examinerQuestions": "Welche Differenzialdiagnosen sind hier zu beachten?\n**Antwort:** Aortendissektion, Lungenembolie, Perikarditis, gastroösophageale Refluxkrankheit.\nWelche diagnostischen Maßnahmen sind notwendig?\n**Antwort:** EKG, Troponin-Test, Herz-Enzyme, Koronarangiographie.\nWas sind die therapeutischen Maßnahmen bei Verdacht auf ACS?\n**Antwort:** MONA-Schema (Morphin, Oxygen, Nitrate, ASS), Heparinisierung, kardiologische Überwachung.",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen sind hier zu beachten?  \n**Antwort:** Aortendissektion, Lungenembolie, Perikarditis, gastroösophageale Refluxkrankheit.\n\n**Frage:** Welche diagnostischen Maßnahmen sind notwendig?  \n**Antwort:** EKG, Troponin-Test, Herz-Enzyme, Koronarangiographie.\n\n**Frage:** Was sind die therapeutischen Maßnahmen bei Verdacht auf ACS?  \n**Antwort:** MONA-Schema (Morphin, Oxygen, Nitrate, ASS), Heparinisierung, kardiologische Überwachung.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine Erkältung.\n\n**Frage:** Warum habe ich solche Schmerzen?\n**Antwort:** Die Schmerzen können auf eine Entzündung hinweisen.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Eine Operation ist in Ihrem Fall nicht notwendig.\n\n**Frage:** Ist es gefährlich?\n**Antwort:** Es ist nichts Ernsthaftes, aber Sie sollten sich schonen.\n\n**Frage:** Was ist eine EKG?\n**Antwort:** Ein EKG ist ein Test, um die elektrische Aktivität Ihres Herzens zu überprüfen."
   },
   {
@@ -6520,7 +6520,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "63-jähriger Patient mit seit 2 Monaten bestehender Müdigkeit und Ikterus. Keine Schmerzen, aber entfärbter Stuhl. Verdacht auf Pankreaskarzinom.",
+    "summary": "Lieber Herr X, Sie sind 63 Jahre alt und haben seit zwei Monaten Müdigkeit und Gelbsucht. Sie haben keinen Schmerz, aber Ihr Stuhl ist entfärbt. Es besteht der Verdacht auf ein Pankreaskarzinom. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -6554,7 +6554,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion der Haut und Skleren (Ikterus), Palpation des Abdomens (Courvoisier-Zeichen), Lymphknotenstatus",
     "laboratoryTests": "BB, Leberwerte (Bilirubin, ALT, AST, γ-GT, AP), Tumormarker (CA 19-9, CEA), Gerinnung, CRP",
     "instrumentalExamination": "Abdomensonographie, ERCP/MRCP, CT-Abdomen",
-    "examinerQuestions": "Welche Differenzialdiagnosen müssen ausgeschlossen werden?\n**Antwort:** Hepatitis, Leberzirrhose, Cholangitis, Choledocholithiasis.\nWelche bildgebenden Verfahren sind indiziert?\n**Antwort:** Abdomensonographie zur ersten Beurteilung, bei unklarem Befund ERCP oder MRCP, CT-Abdomen zur Tumorsuche.\nWelche Laborparameter sind für die Diagnose wichtig?\n**Antwort:** Bilirubin, γ-GT, AP, Tumormarker CA 19-9.",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen müssen Sie ausschließen?\n**Antwort:** Sie müssen Hepatitis, Leberzirrhose, Cholangitis und Choledocholithiasis ausschließen.\n\n**Frage:** Welche bildgebenden Verfahren sollten durchgeführt werden?\n**Antwort:** Als Erstes ist eine Abdomensonographie zur ersten Beurteilung indiziert. Bei unklarem Befund sollten Sie eine ERCP oder MRCP in Betracht ziehen und zur Tumorsuche ein CT-Abdomen durchführen.\n\n**Frage:** Welche Laborparameter sind entscheidend für die Diagnose?\n**Antwort:** Für die Diagnose sind Bilirubin, γ-GT, AP und der Tumormarker CA 19-9 wichtige Laborparameter.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben [Ihre Diagnose einfügen]. Es handelt sich um [kurze Beschreibung Ihrer Krankheit oder Zustands].\n\n**Frage:** Ist es gefährlich?\n**Antwort:** Ja, [Ihre Diagnose einfügen] kann gefährlich sein, wenn es unbehandelt bleibt. Es ist wichtig, dass wir mit einer angemessenen Behandlung beginnen.\n\n**Frage:** Welche Untersuchungen werden gemacht?\n**Antwort:** Zur Klärung Ihrer Diagnose werden wir eine Reihe von Untersuchungen durchführen, wie z.B. Bluttests, bildgebende Verfahren wie Röntgen oder Ultraschall und möglicherweise auch eine Biopsie.\n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** In Ihrem Fall ist eine Operation [optional: derzeit/aktuell] nicht notwendig. Wir werden andere Behandlungsmöglichkeiten wie Medikamente oder Therapien in Betracht ziehen, um Ihre Gesundheit zu verbessern."
   },
   {
@@ -6603,7 +6603,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "63-jähriger Patient mit seit 2 Monaten bestehender Müdigkeit und Ikterus. Keine Schmerzen, aber entfärbter Stuhl. Verdacht auf Pankreaskarzinom.",
+    "summary": "Lieber Herr X, wir haben über Ihre Medikamente, aktuellen Analysen und Ihre Symptome gesprochen. Sie leiden unter Müdigkeit seit 2 Monaten und haben Gelbfärbung der Augen sowie entfärbten Stuhl. Es besteht der Verdacht auf ein Problem mit der Bauchspeicheldrüse. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -6637,7 +6637,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Inspektion der Haut und Skleren (Ikterus), Palpation des Abdomens (Courvoisier-Zeichen), Lymphknotenstatus",
     "laboratoryTests": "BB, Leberwerte (Bilirubin, ALT, AST, γ-GT, AP), Tumormarker (CA 19-9, CEA), Gerinnung, CRP",
     "instrumentalExamination": "Abdomensonographie, ERCP/MRCP, CT-Abdomen",
-    "examinerQuestions": "Welche Differenzialdiagnosen müssen ausgeschlossen werden?\n**Antwort:** Hepatitis, Leberzirrhose, Cholangitis, Choledocholithiasis.\nWelche bildgebenden Verfahren sind indiziert?\n**Antwort:** Abdomensonographie zur ersten Beurteilung, bei unklarem Befund ERCP oder MRCP, CT-Abdomen zur Tumorsuche.\nWelche Laborparameter sind für die Diagnose wichtig?\n**Antwort:** Bilirubin, γ-GT, AP, Tumormarker CA 19-9.",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen müssen Sie ausschließen?\n**Antwort:** Hepatitis, Leberzirrhose, Cholangitis, Choledocholithiasis.\n\n**Frage:** Welche bildgebenden Verfahren sind empfohlen?\n**Antwort:** Es wird empfohlen, zunächst eine Abdomensonographie zur ersten Beurteilung durchzuführen. Bei unklarem Befund können eine ERCP oder MRCP in Betracht gezogen werden, sowie eine CT-Abdomen zur Tumorsuche.\n\n**Frage:** Welche Laborparameter sind für die Diagnose von Bedeutung?\n**Antwort:** Für die Diagnose spielen Bilirubin, γ-GT, AP und der Tumormarker CA 19-9 eine wichtige Rolle.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben [Ihre Diagnose hier einfügen].  \n\n**Frage:** Ist es gefährlich?\n**Antwort:** Die Ernsthaftigkeit Ihrer Erkrankung hängt von verschiedenen Faktoren ab. Lassen Sie uns gemeinsam besprechen, wie wir damit umgehen können.  \n\n**Frage:** Welche Untersuchungen werden gemacht?\n**Antwort:** Wir werden zunächst [erste Untersuchung einfügen] durchführen, um mehr über Ihre Situation zu erfahren. Weitere Untersuchungen können je nach Bedarf folgen.  \n\n**Frage:** Brauche ich eine Operation?\n**Antwort:** Die Notwendigkeit einer Operation hängt von den Ergebnissen der Untersuchungen ab. Lassen Sie uns diese abwarten, bevor wir eine Entscheidung treffen.  "
   },
   {
@@ -6686,7 +6686,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "35-jähriger Patient mit seit 3 Monaten bestehender Parästhesie im rechten Bein, zunehmender Schwäche, Problemen beim Treppensteigen und gelegentlichem Fieber. Zudem berichtete der Patient über Doppelbilder. Verdacht auf Multiple Sklerose.",
+    "summary": "Lieber Herr,\n\nwir haben über Ihre Beschwerden im rechten Bein gesprochen, die seit 3 Monaten bestehen. Sie haben Parästhesien, zunehmende Schwäche, Probleme beim Treppensteigen und manchmal Fieber. Auch Doppelbilder wurden erwähnt. Es besteht der Verdacht auf Multiple Sklerose.\n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "",
     "otherRelevantDiseases": "",
@@ -6720,7 +6720,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Neurologische Untersuchung",
     "laboratoryTests": "Liquoranalyse (IgA, IgG), Anti-MOG-Antikörper, Anti-MBP-Antikörper im Serum",
     "instrumentalExamination": "MRT Schädel, EEG",
-    "examinerQuestions": "Wie diagnostizieren Sie Multiple Sklerose?\n**Antwort:** Anamnese, neurologische Untersuchung, MRT des Schädels und Liquoranalyse.\nWelche Differenzialdiagnosen sind möglich?\n**Antwort:** Diskusprolaps, pAVK, Wirbelfraktur.\nWelche Laboruntersuchungen sind für MS wichtig?\n**Antwort:** Liquoruntersuchung auf IgA, IgG, Anti-MOG- und Anti-MBP-Antikörper.",
+    "examinerQuestions": "**Frage:** Wie diagnostizieren Sie Multiple Sklerose?\n**Antwort:** Anamnese, neurologische Untersuchung, MRT des Schädels und Liquoranalyse.\n\n**Frage:** Welche Differenzialdiagnosen sind möglich?\n**Antwort:** Diskusprolaps, pAVK, Wirbelfraktur.\n\n**Frage:** Welche Laboruntersuchungen sind für MS wichtig?\n**Antwort:** Liquoruntersuchung auf IgA, IgG, Anti-MOG- und Anti-MBP-Antikörper.",
     "patientQuestions": "**Frage:** Was habe ich?  \n**Antwort:** Diese Symptome können mit Multipler Sklerose (MS) in Verbindung stehen.\n\n**Frage:** Ist es heilbar?  \n**Antwort:** MS ist eine chronische Erkrankung, für die es derzeit keine Heilung gibt, aber es gibt Behandlungsmöglichkeiten, um die Symptome zu kontrollieren und den Verlauf zu verlangsamen.\n\n**Frage:** Welche Untersuchungen sind notwendig?  \n**Antwort:** Für die Diagnose von MS können Untersuchungen wie MRT, Liquoruntersuchung und neurologische Tests erforderlich sein.\n\n**Frage:** Wie wird MS behandelt?  \n**Antwort:** Die Behandlung von MS umfasst in der Regel Medikamente zur Symptomkontrolle, Rehabilitationstherapien und lebensstilbezogene Maßnahmen."
   },
   {
@@ -6769,7 +6769,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "79-jähriger Patient mit seit zwei Tagen persistierenden, kolikartigen linksseitigen Flankenschmerzen mit Ausstrahlung in die linke Leiste. Die Schmerzen sind nicht gut lokalisiert, sehr stark (10/10) und werden von Fieber, Pollakisurie, Algurie und Schüttelfrost begleitet. An Vorerkrankungen bestehen ein gut eingestellter Diabetes mellitus Typ 2 sowie eine COPD. Verdacht auf Pyelonephritis.",
+    "summary": "Herr XY, 79 Jahre alt, hat seit zwei Tagen starke, nicht gut lokalisierte, kolikartige Schmerzen in der linken Flanke mit Ausstrahlung in die linke Leiste. Diese Schmerzen sind sehr intensiv (10/10) und begleitet von Fieber, Pollakisurie, Algurie und Schüttelfrost. Er hat einen gut eingestellten Diabetes mellitus Typ 2 sowie COPD. Es besteht der Verdacht auf eine Pyelonephritis. Er nimmt Metformin 1000mg und Spiriva ein. Er hat eine Allergie gegen Mehlstaub, die Husten und Kurzatmigkeit verursacht. Haben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Diabetes mellitus Typ 2, COPD",
     "otherRelevantDiseases": "",
@@ -6803,7 +6803,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung",
     "laboratoryTests": "Urinanalyse, Urinkultur, Blutbild (Leukozyten, Entzündungsparameter)",
     "instrumentalExamination": "Sonografie",
-    "examinerQuestions": "Warum Pyelonephritis und nicht Zystitis?\n**Antwort:** Aufgrund der systemischen Symptome wie Fieber und Schüttelfrost sowie der ausgeprägten Flankenschmerzen.\nWas ist Mehlstaub, hat das mit der Entstehung von COPD einen Zusammenhang?\n**Antwort:** Ja, chronische Exposition gegenüber Mehlstaub kann zur Entstehung oder Verschlechterung einer COPD beitragen.",
+    "examinerQuestions": "**Frage:** Warum Pyelonephritis und nicht Zystitis?\n**Antwort:** Aufgrund der systemischen Symptome wie Fieber und Schüttelfrost sowie der ausgeprägten Flankenschmerzen.\n\n**Frage:** Was ist Mehlstaub, hat das mit der Entstehung von COPD einen Zusammenhang?\n**Antwort:** Ja, chronische Exposition gegenüber Mehlstaub kann zur Entstehung oder Verschlechterung einer COPD beitragen.",
     "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Sie haben eine bakterielle Infektion in Ihrem Magen.\n\n**Frage:** Wie wird es behandelt?\n**Antwort:** Die Infektion wird mit Antibiotika behandelt, die Ihnen Ihr Arzt verschreiben wird.\n\n**Frage:** Muss ich ins Krankenhaus?\n**Antwort:** Nein, Sie können diese Infektion in der Regel zu Hause behandeln. Wenn sich Ihr Zustand jedoch verschlechtert, könnte ein Krankenhausaufenthalt erforderlich sein."
   },
   {
@@ -6852,7 +6852,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "51-jähriger Patient mit seit heute Morgen zweimaliger Hämatemesis sowie seit 8 Tagen bestehenden, zunehmenden Oberbauchschmerzen (8/10 NRS). Zusätzlich Meläna und Appetitlosigkeit. Verdacht auf obere gastrointestinale Blutung, evtl. Ulkusblutung.",
+    "summary": "Lieber Hans,\n\nwir haben über Ihre Medikamente, aktuelle Analysen und Informationen zu Ihrem Magen-Darm-Trakt gesprochen. Sie hatten in den letzten Tagen starke Oberbauchschmerzen (8/10 auf der Schmerzskala) und heute Morgen zweimalige Blutungen aus dem Magen. Dazu kommen schwarzer Stuhl und seit gestern fehlender Appetit. Es könnte sein, dass Sie eine Blutung im oberen Magen-Darm-Bereich haben, vielleicht sogar von einem Magengeschwür. \n\nHaben Sie noch etwas hinzuzufügen?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie, Bandscheibenvorfall L3-L4",
     "otherRelevantDiseases": "",
@@ -6886,7 +6886,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung, Vitalparameterkontrolle",
     "laboratoryTests": "BB, Gerinnungsparameter, Leberwerte, Helicobacter pylori-Diagnostik, Blutkreuzung",
     "instrumentalExamination": "ÖGD",
-    "examinerQuestions": "Wann soll eine Bluttransfusion durchgeführt werden?\n**Antwort:** Bei hämodynamischer Instabilität oder Hb-Wert unter 7 g/dl.\nWelche Therapie bei Ulkusblutung mit bestätigtem Helicobacter pylori?\n**Antwort:** Triple-Therapie mit PPI, Clarithromycin und Amoxicillin oder Metronidazol.",
+    "examinerQuestions": "**Frage:** Wann sollte eine Bluttransfusion durchgeführt werden?\n**Antwort:** Bei hämodynamischer Instabilität oder einem Hämoglobinwert unter 7 g/dl.\n\n**Frage:** Welche Therapie ist bei Ulkusblutung mit bestätigtem Helicobacter pylori empfohlen?\n**Antwort:** Eine Triple-Therapie mit einem Protonenpumpenhemmer, Clarithromycin und Amoxicillin oder Metronidazol.",
     "patientQuestions": "**Frage:** Was ist mit mir?\n**Antwort:** Ich verstehe, dass Sie sich Sorgen um Ihre Gesundheit machen. Um Ihnen genaue Informationen geben zu können, müssen wir eine Untersuchung durchführen.\n\n**Frage:** Kann es Krebs sein?\n**Antwort:** Es ist verständlich, dass Sie besorgt sind. Viele Symptome können verschiedene Ursachen haben, einschließlich Krebs. Um sicher zu sein, sollten wir eine Untersuchung planen, um genaue Informationen zu erhalten.\n\n**Frage:** Was ist eine Gastroskopie?\n**Antwort:** Eine Gastroskopie ist eine Untersuchung, bei der ein flexibler Schlauch mit einer Kamera durch Ihren Mund in Ihren Magen und Darm eingeführt wird. Dies ermöglicht dem Arzt, den Zustand Ihrer Speiseröhre, Ihres Magens und des oberen Teils Ihres Dünndarms genauer zu betrachten."
   },
   {
@@ -6935,7 +6935,7 @@ const BW_REUTLINGEN_DATA = [
     "sexualHistory": "",
     "others": "",
     "gynecologicalHistory": "",
-    "summary": "Patient stellt sich mit seit 2 Wochen bestehenden Bauchschmerzen, Diarrhö und Erbrechen vor. Begleitsymptom häufiges Wasserlassen. Vorerkrankungen: arterielle Hypertonie seit 5 Jahren, häufige Harnwegsinfekte im letzten Jahr (5-mal). Verdacht auf chronisch-entzündliche Darmerkrankung, Differenzialdiagnosen in Betracht: infektiöse Gastroenteritis, Laktoseintoleranz, Kolorektales Karzinom.",
+    "summary": "Sie haben seit 2 Wochen Bauchschmerzen, Durchfall und Erbrechen. Sie müssen häufig Wasser lassen und haben Angst vor Krebs. Bisherige Krankheiten umfassen Bluthochdruck seit 5 Jahren und wiederholte Harnwegsinfekte im letzten Jahr. Es wird vermutet, dass Sie eine chronisch-entzündliche Darmerkrankung haben. Andere mögliche Diagnosen sind infektiöse Magen-Darm-Entzündung, Laktoseintoleranz und Darmkrebs. Gibt es noch etwas, das Sie hinzufügen möchten?",
     "infectiousDiseases": "",
     "chronicDiseases": "Arterielle Hypertonie",
     "otherRelevantDiseases": "Häufige Harnwegsinfekte (5-mal im letzten Jahr)",
@@ -6969,7 +6969,7 @@ const BW_REUTLINGEN_DATA = [
     "physicalExamination": "Körperliche Untersuchung, Palpation des Abdomens",
     "laboratoryTests": "BB, CRP, BSG, Elektrolyte, Leberwerte, Nierenwerte, Okkultes Blut im Stuhl",
     "instrumentalExamination": "Abdomensonographie, Koloskopie",
-    "examinerQuestions": "Welche Differenzialdiagnosen kommen in Betracht?\n**Antwort:** Infektiöse Gastroenteritis, Laktoseintoleranz, Kolorektales Karzinom.\nWelche zusätzlichen Untersuchungen würden Sie durchführen?\n**Antwort:** Test auf okkultes Blut im Stuhl.",
+    "examinerQuestions": "**Frage:** Welche Differenzialdiagnosen kommen in Betracht?  \n**Antwort:** Infektiöse Gastroenteritis, Laktoseintoleranz, Kolorektales Karzinom.\n\n**Frage:** Welche zusätzlichen Untersuchungen würden Sie durchführen?  \n**Antwort:** Test auf okkultes Blut im Stuhl.",
     "patientQuestions": "**Frage:** Könnte es Krebs sein?\n**Antwort:** Es ist wichtig, dass Sie einen Arzt aufsuchen, um Ihre Symptome zu besprechen und gegebenenfalls weitere Untersuchungen durchzuführen.\n\n**Frage:** Gibt es Risiken bei der Blutabnahme?\n**Antwort:** Bei einer Blutabnahme gibt es üblicherweise minimale Risiken wie leichte Blutergüsse oder Infektionen an der Einstichstelle. Ihr Arzt wird Sie jedoch über alle potenziellen Risiken informieren.\n\n**Frage:** Warum machen wir diese Untersuchungen?\n**Antwort:** Untersuchungen sind wichtig, um die Ursache Ihrer Symptome zu identifizieren und die bestmögliche Behandlung zu planen. Ihr Arzt wird mit Ihnen die Gründe und den Nutzen der durchgeführten Untersuchungen besprechen.\n"
   }
 ];
