@@ -3,7 +3,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 232,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Infektiologie",
+    "specialty": "pneumonie",
     "name": "Katharina",
     "surname": "Meise",
     "birthdate": "01.06.1967",
@@ -86,7 +86,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 233,
     "fullName": "V.a. Ulcus duodeni",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Heiner",
     "surname": "Hermann",
     "birthdate": "",
@@ -169,7 +169,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 234,
     "fullName": "V.a. Lyme-Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Anna",
     "surname": "",
     "birthdate": "24.07.1990",
@@ -252,7 +252,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 235,
     "fullName": "V.a. Magenkarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -335,7 +335,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 237,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Martina",
     "surname": "Müller",
     "birthdate": "",
@@ -418,7 +418,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 238,
     "fullName": "V.a. Ösophaguskarzinom mit TVT",
-    "specialty": "Onkologie / Angiologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Yasmin",
     "surname": "Sauer",
     "birthdate": "",
@@ -501,7 +501,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 239,
     "fullName": "V.a. Diabetes mellitus Typ 2",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Herr",
     "surname": "Rosnier",
     "birthdate": "",
@@ -584,7 +584,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 240,
     "fullName": "V.a. Asthma bronchiale",
-    "specialty": "Pneumologie",
+    "specialty": "asthmabronchiale",
     "name": "Maximilian",
     "surname": "Volk",
     "birthdate": "",
@@ -667,7 +667,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 241,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Brigitte",
     "surname": "Kaiser",
     "birthdate": "11.12.1971",
@@ -750,7 +750,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 242,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Onkologie / Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Anna",
     "surname": "Sichel",
     "birthdate": "",
@@ -833,7 +833,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 243,
     "fullName": "V.a. Leberzirrhose (evtl. primär biliäre Cholangitis)",
-    "specialty": "Gastroenterologie / Hepatologie",
+    "specialty": "leberzirrhose",
     "name": "Marianne",
     "surname": "Allgaier",
     "birthdate": "",
@@ -916,7 +916,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 244,
     "fullName": "V.a. Akute Pankreatitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Thursten",
     "surname": "Frankhauser",
     "birthdate": "",
@@ -999,7 +999,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 245,
     "fullName": "V.a. gastrointestinale Blutung aufgrund von Ulcus ventriculi",
-    "specialty": "Gastroenterologie / Notfallmedizin",
+    "specialty": "ulcusventriculi",
     "name": "Manfred",
     "surname": "Kaiser-Schnitt",
     "birthdate": "10.04.1967",
@@ -1082,7 +1082,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 246,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie / Innere Medizin",
+    "specialty": "tiefevenenthrombose",
     "name": "Jacob",
     "surname": "Peter",
     "birthdate": "14.12.1972",
@@ -1165,7 +1165,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 247,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "Gastroenterologie / Infektiologie",
+    "specialty": "gastroenteritis",
     "name": "Herr",
     "surname": "Müller",
     "birthdate": "",
@@ -1248,7 +1248,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 248,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie / Gastroenterologie",
+    "specialty": "appendizitis",
     "name": "Herr",
     "surname": "Schmidt",
     "birthdate": "01.03.1982",
@@ -1331,7 +1331,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 249,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "Gastroenterologie / Infektiologie",
+    "specialty": "gastroenteritis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1414,7 +1414,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 250,
     "fullName": "V.a. COPD-Exazerbation, Differenzialdiagnose: Bronchialkarzinom",
-    "specialty": "Pneumologie / Innere Medizin",
+    "specialty": "copd",
     "name": "Michael",
     "surname": "Witzinger",
     "birthdate": "24.07.1957",
@@ -1497,7 +1497,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 251,
     "fullName": "V.a. Reizdarmsyndrom (RDS) oder Divertikulitis",
-    "specialty": "Gastroenterologie / Psychosomatik",
+    "specialty": "reizdarmsyndrom",
     "name": "Heiko",
     "surname": "Lehnmann",
     "birthdate": "",
@@ -1580,7 +1580,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 252,
     "fullName": "V.a. Ösophaguskarzinom oder Achalasie",
-    "specialty": "Gastroenterologie / Onkologie",
+    "specialty": "oesophaguskarzinom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1663,7 +1663,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 253,
     "fullName": "V.a. Prostatahyperplasie",
-    "specialty": "Urologie",
+    "specialty": "benigneprostatahyperplasie",
     "name": "Friedrich",
     "surname": "Schiller",
     "birthdate": "01.04.1942",
@@ -1746,7 +1746,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 254,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pyelonephritis",
     "name": "Heiko",
     "surname": "Lehmann",
     "birthdate": "",
@@ -1829,7 +1829,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 255,
     "fullName": "V.a. Alkoholinduzierte Pankreatitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1912,7 +1912,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 256,
     "fullName": "V.a. Asthmaexazerbation",
-    "specialty": "Pneumologie",
+    "specialty": "asthmabronchiale",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1995,7 +1995,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 257,
     "fullName": "V.a. Somatoforme Störung",
-    "specialty": "Psychosomatik / Neurologie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2078,7 +2078,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 258,
     "fullName": "V.a. Anorexia nervosa",
-    "specialty": "Psychiatrie / Psychosomatik",
+    "specialty": "OBRABOTYTY!",
     "name": "Lukas",
     "surname": "Steigern",
     "birthdate": "",
@@ -2161,7 +2161,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 259,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Rudi",
     "surname": "Weher",
     "birthdate": "",
@@ -2244,7 +2244,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 260,
     "fullName": "V.a. Magenulkus",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2327,7 +2327,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 261,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie / Onkologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Marianna",
     "surname": "",
     "birthdate": "",
@@ -2410,7 +2410,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 262,
     "fullName": "V.a. rheumatisches Fieber",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "Sonja",
     "surname": "Starkmann",
     "birthdate": "",
@@ -2493,7 +2493,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 263,
     "fullName": "V.a. Zöliakie (Sprue)",
-    "specialty": "Gastroenterologie",
+    "specialty": "zoeliakie",
     "name": "Gustav",
     "surname": "Hirschmann",
     "birthdate": "",
@@ -2576,7 +2576,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 264,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Endokrinologie",
+    "specialty": "hypothyreose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2659,7 +2659,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 265,
     "fullName": "V.a. Endokarditis",
-    "specialty": "Kardiologie",
+    "specialty": "endokarditis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2742,7 +2742,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 266,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Endokrinologie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2825,7 +2825,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 267,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2908,7 +2908,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 268,
     "fullName": "V.a. periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Walter",
     "surname": "Vogel",
     "birthdate": "",
@@ -2991,7 +2991,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 269,
     "fullName": "V.a. Lyme-Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Hansjögi",
     "surname": "Maier",
     "birthdate": "",
@@ -3074,7 +3074,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 270,
     "fullName": "V.a. Magenkarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "magenkarzinom",
     "name": "Julian",
     "surname": "Brückner",
     "birthdate": "",
@@ -3157,7 +3157,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 271,
     "fullName": "V.a. Akutes Koronarsyndrom (ACS)",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Mannfred",
     "surname": "Thomas",
     "birthdate": "02.01.1969",
@@ -3240,7 +3240,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 272,
     "fullName": "V.a. Gastroduodenale Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3323,7 +3323,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 273,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie",
+    "specialty": "tiefevenenthrombose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3406,7 +3406,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 274,
     "fullName": "V.a. Diskusprolaps der HWS",
-    "specialty": "Orthopädie/Neurochirurgie",
+    "specialty": "halswirbelsaeulensyndrom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3489,7 +3489,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 275,
     "fullName": "V.a. Migräne mit Aura",
-    "specialty": "Neurologie",
+    "specialty": "migraene",
     "name": "Alfred",
     "surname": "Novermann",
     "birthdate": "22.05.1985",
@@ -3572,7 +3572,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 276,
     "fullName": "V.a. Hyperthyreose",
-    "specialty": "Endokrinologie",
+    "specialty": "hyperthyreose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3655,7 +3655,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 277,
     "fullName": "V.a. Cholelithiasis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gallensteine",
     "name": "Heiner",
     "surname": "Hermann",
     "birthdate": "",
@@ -3738,7 +3738,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 278,
     "fullName": "V.a. TVT und Ösophaguskarzinom",
-    "specialty": "Innere Medizin / Angiologie / Gastroenterologie",
+    "specialty": "tiefevenenthrombose",
     "name": "Georg",
     "surname": "Sauer",
     "birthdate": "01.04.1955",
@@ -3821,7 +3821,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 279,
     "fullName": "V.a. Prostatahyperplasie",
-    "specialty": "Urologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Herr",
     "surname": "Meier",
     "birthdate": "",
@@ -3904,7 +3904,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 280,
     "fullName": "V.a. Gonarthrose",
-    "specialty": "Orthopädie",
+    "specialty": "gonarthrose",
     "name": "Herr",
     "surname": "Schmolinski",
     "birthdate": "01.03.1954",
@@ -3987,7 +3987,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 282,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Endokrinologie",
+    "specialty": "hypothyreose",
     "name": "",
     "surname": "",
     "birthdate": "17.07.1970",
@@ -4070,7 +4070,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 283,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "Nephrologie/Urologie",
+    "specialty": "pyelonephritis",
     "name": "Karl-Heinz",
     "surname": "Krämer",
     "birthdate": "",
@@ -4153,7 +4153,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 284,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Allgemein-/Viszeralchirurgie",
+    "specialty": "appendizitis",
     "name": "Nathalie",
     "surname": "Schmidt",
     "birthdate": "",
@@ -4236,7 +4236,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 285,
     "fullName": "V.a. Hyperthyreose",
-    "specialty": "Endokrinologie",
+    "specialty": "hyperthyreose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4319,7 +4319,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 286,
     "fullName": "V.a. virale oder bakterielle Infektion",
-    "specialty": "Innere Medizin",
+    "specialty": "pneumonie",
     "name": "Peter",
     "surname": "Schuler",
     "birthdate": "",
@@ -4402,7 +4402,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 287,
     "fullName": "V.a. Kolonkarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "coloncarcinome",
     "name": "",
     "surname": "Hauptmann",
     "birthdate": "06.04.1964",
@@ -4485,7 +4485,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 288,
     "fullName": "V.a. COPD-Exazerbation",
-    "specialty": "Pneumologie",
+    "specialty": "copd",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4568,7 +4568,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 289,
     "fullName": "V.a. Karzinoidsyndrom",
-    "specialty": "Endokrinologie/Onkologie",
+    "specialty": "karzinoid",
     "name": "Gabi",
     "surname": "Hubertus",
     "birthdate": "25.08.1974",
@@ -4651,7 +4651,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 290,
     "fullName": "V.a. akute Exazerbation einer COPD",
-    "specialty": "Pneumologie",
+    "specialty": "copd",
     "name": "Manfred",
     "surname": "Thaler",
     "birthdate": "",
@@ -4734,7 +4734,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 291,
     "fullName": "V.a. Influenza",
-    "specialty": "Infektiologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Susanne",
     "surname": "Kleinmeier",
     "birthdate": "",
@@ -4817,7 +4817,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 292,
     "fullName": "V.a. Magenkarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "magenkarzinom",
     "name": "Julian",
     "surname": "Bruckner",
     "birthdate": "05.03.1961",
@@ -4900,7 +4900,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 293,
     "fullName": "V.a. Ulcus ventriculi mit Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Kowalski",
     "surname": "",
     "birthdate": "",
@@ -4983,7 +4983,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 294,
     "fullName": "V.a. distale Sprunggelenkfraktur Typ Weber A",
-    "specialty": "Orthopädie/Unfallchirurgie",
+    "specialty": "OBRABOTYTY!",
     "name": "Karl",
     "surname": "Schrüder",
     "birthdate": "",
@@ -5066,7 +5066,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 295,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Innere Medizin/Pneumologie",
+    "specialty": "pneumonie",
     "name": "Karl-Ludwig",
     "surname": "Maiße",
     "birthdate": "",
@@ -5149,7 +5149,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 296,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Otto",
     "surname": "Schuster",
     "birthdate": "",
@@ -5232,7 +5232,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 297,
     "fullName": "V.a. Lyme-Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Hans-Jögi",
     "surname": "Maier",
     "birthdate": "",
@@ -5315,7 +5315,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 298,
     "fullName": "V.a. Magenkarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "magenkarzinom",
     "name": "Julian",
     "surname": "",
     "birthdate": "12.03.1961",
@@ -5398,7 +5398,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 299,
     "fullName": "V.a. Leberzirrhose",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "Allgaier",
     "surname": "",
     "birthdate": "",
@@ -5481,7 +5481,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 300,
     "fullName": "V.a. Transitorische ischämische Attacke (TIA)",
-    "specialty": "Neurologie",
+    "specialty": "transitorischesschaemischeattacke",
     "name": "Arnd",
     "surname": "Kartmann",
     "birthdate": "",
@@ -5564,7 +5564,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 301,
     "fullName": "V.a. Laktoseintoleranz",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Gerhard",
     "surname": "Kremer",
     "birthdate": "11.05.1993",
@@ -5647,7 +5647,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 302,
     "fullName": "V.a. Alkoholabusus",
-    "specialty": "Innere Medizin",
+    "specialty": "hepatischeenzephalopathie",
     "name": "Max",
     "surname": "Freudenberg",
     "birthdate": "",
@@ -5730,7 +5730,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 303,
     "fullName": "V.a. Somatoforme Störung",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Gotthielf",
     "surname": "Weidel",
     "birthdate": "",
@@ -5813,7 +5813,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 304,
     "fullName": "V.a. Schenkelhalsfraktur",
-    "specialty": "Orthopädie",
+    "specialty": "OBRABOTYTY!",
     "name": "Michael",
     "surname": "Neumeister",
     "birthdate": "",
@@ -5896,7 +5896,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 305,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Innere Medizin",
+    "specialty": "diabetesmellitus",
     "name": "Anton",
     "surname": "Kaiser",
     "birthdate": "",
@@ -5979,7 +5979,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 306,
     "fullName": "V.a. Schenkelhalsfraktur",
-    "specialty": "Orthopädie/Unfallchirurgie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -6062,7 +6062,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 307,
     "fullName": "V.a. Apoplex",
-    "specialty": "Neurologie",
+    "specialty": "hirnblutung",
     "name": "Arnd",
     "surname": "Kartmann",
     "birthdate": "01.01.1971",
@@ -6145,7 +6145,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 308,
     "fullName": "V.a. Typhus Fieber",
-    "specialty": "Infektiologie",
+    "specialty": "malaria",
     "name": "Heinz Peter",
     "surname": "Kleinweber",
     "birthdate": "",
@@ -6228,7 +6228,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 309,
     "fullName": "V.a. Ulcus Duodeni",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Frida",
     "surname": "Zimmermann",
     "birthdate": "",
@@ -6311,7 +6311,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 310,
     "fullName": "V.a. Koxarthrose",
-    "specialty": "Orthopädie",
+    "specialty": "coxarthrose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -6394,7 +6394,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 311,
     "fullName": "V.a. rheumatisches Fieber",
-    "specialty": "Rheumatologie",
+    "specialty": "endokarditis",
     "name": "Olaf",
     "surname": "Starkmann",
     "birthdate": "",

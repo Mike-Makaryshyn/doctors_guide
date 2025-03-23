@@ -2,7 +2,7 @@ const SACHSEN_DATA = [
   {
     "id": 1084,
     "fullName": "V.a. Commotio cerebri",
-    "specialty": "orthopädie, neurologie",
+    "specialty": "hirnblutung",
     "name": "Karsten",
     "surname": "Weissenbach",
     "birthdate": "",
@@ -85,7 +85,7 @@ const SACHSEN_DATA = [
   {
     "id": 1085,
     "fullName": "V.a. Epicondylitis lateralis re.",
-    "specialty": "orthopädie",
+    "specialty": "rheumatoidearthritis",
     "name": "Mondschein",
     "surname": "",
     "birthdate": "30.12.",
@@ -168,7 +168,7 @@ const SACHSEN_DATA = [
   {
     "id": 1086,
     "fullName": "V.a. Epicondylitis lateralis re.",
-    "specialty": "orthopädie",
+    "specialty": "epicondylitisLateralis",
     "name": "Olaf",
     "surname": "Monschein",
     "birthdate": "31.12.1984",
@@ -251,7 +251,7 @@ const SACHSEN_DATA = [
   {
     "id": 1087,
     "fullName": "V.a. Coxarthrose",
-    "specialty": "orthopädie",
+    "specialty": "coxarthrose",
     "name": "Danilo",
     "surname": "Kötter",
     "birthdate": "",
@@ -334,7 +334,7 @@ const SACHSEN_DATA = [
   {
     "id": 1088,
     "fullName": "V.a. Coxarthrose",
-    "specialty": "orthopädie",
+    "specialty": "coxarthrose",
     "name": "Danilo",
     "surname": "Kötter",
     "birthdate": "23.07.1938",
@@ -417,7 +417,7 @@ const SACHSEN_DATA = [
   {
     "id": 1089,
     "fullName": "V.a. HWS-Diskusprolaps",
-    "specialty": "orthopädie, neurologie",
+    "specialty": "halswirbelsaeulensyndrom",
     "name": "Manfred",
     "surname": "Becher",
     "birthdate": "",
@@ -500,7 +500,7 @@ const SACHSEN_DATA = [
   {
     "id": 1090,
     "fullName": "V.a. LWS-Diskusprolaps mit v.a. Kauda-Syndrom",
-    "specialty": "orthopädie, neurologie",
+    "specialty": "bandscheibenvorfall",
     "name": "Peter",
     "surname": "Sinn",
     "birthdate": "xx.xx.xxxx",
@@ -583,7 +583,7 @@ const SACHSEN_DATA = [
   {
     "id": 1091,
     "fullName": "V.a. LWS-Diskusprolaps",
-    "specialty": "orthopädie, neurologie",
+    "specialty": "bandscheibenvorfall",
     "name": "Christian",
     "surname": "Kaiser",
     "birthdate": "19.10.1965",
@@ -666,7 +666,7 @@ const SACHSEN_DATA = [
   {
     "id": 1092,
     "fullName": "V.a. LWS- oder HWS-Diskusprolaps",
-    "specialty": "orthopädie, neurologie",
+    "specialty": "bandscheibenvorfall",
     "name": "Olaf",
     "surname": "Mondschein",
     "birthdate": "",
@@ -749,7 +749,7 @@ const SACHSEN_DATA = [
   {
     "id": 1093,
     "fullName": "V.a. HWS-Diskusprolaps, Omarthrose oder Schulterimpingement",
-    "specialty": "orthopädie, neurologie, onkologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Max",
     "surname": "Krug",
     "birthdate": "29.07.1962",
@@ -832,7 +832,7 @@ const SACHSEN_DATA = [
   {
     "id": 1094,
     "fullName": "V.a. HWS-Diskusprolaps oder Kalkschulter",
-    "specialty": "orthopädie, neurologie, onkologie",
+    "specialty": "schultergelenkluxation",
     "name": "Max",
     "surname": "Krug",
     "birthdate": "29.07.1962",
@@ -915,7 +915,7 @@ const SACHSEN_DATA = [
   {
     "id": 1095,
     "fullName": "V.a. Sprunggelenkfraktur",
-    "specialty": "orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Tino",
     "surname": "Busch",
     "birthdate": "",
@@ -998,7 +998,7 @@ const SACHSEN_DATA = [
   {
     "id": 1096,
     "fullName": "V.a. Sprunggelenkfraktur rechts",
-    "specialty": "orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Stefanie",
     "surname": "Busch",
     "birthdate": "",
@@ -1081,7 +1081,7 @@ const SACHSEN_DATA = [
   {
     "id": 1097,
     "fullName": "V.a. Sprunggelenkfraktur",
-    "specialty": "orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Matthias",
     "surname": "Schilli",
     "birthdate": "",
@@ -1164,7 +1164,7 @@ const SACHSEN_DATA = [
   {
     "id": 1098,
     "fullName": "V.a. Knie-Luxation rechts",
-    "specialty": "orthopädie, sportmedizin",
+    "specialty": "patellafraktur",
     "name": "Peter",
     "surname": "Petersen",
     "birthdate": "12.05.1999",
@@ -1247,7 +1247,7 @@ const SACHSEN_DATA = [
   {
     "id": 1099,
     "fullName": "V.a. Demenz",
-    "specialty": "neurologie, geriatrie",
+    "specialty": "demenz",
     "name": "Robert",
     "surname": "Scholz",
     "birthdate": "04.03.1965",
@@ -1330,7 +1330,7 @@ const SACHSEN_DATA = [
   {
     "id": 1100,
     "fullName": "V.a. Kauda-Syndrom",
-    "specialty": "neurologie, orthopädie",
+    "specialty": "bandscheibenvorfall",
     "name": "Frank",
     "surname": "Grüschcker",
     "birthdate": "29.06.1986",
@@ -1413,7 +1413,7 @@ const SACHSEN_DATA = [
   {
     "id": 1101,
     "fullName": "V.a. Kauda-Syndrom",
-    "specialty": "neurologie, orthopädie",
+    "specialty": "bandscheibenvorfall",
     "name": "Marc",
     "surname": "Peterson",
     "birthdate": "12.05.1984",
@@ -1496,7 +1496,7 @@ const SACHSEN_DATA = [
   {
     "id": 1102,
     "fullName": "V.a. Apoplex",
-    "specialty": "neurologie",
+    "specialty": "hirnblutung",
     "name": "Katarina",
     "surname": "Kencht",
     "birthdate": "",
@@ -1579,7 +1579,7 @@ const SACHSEN_DATA = [
   {
     "id": 1103,
     "fullName": "V.a. Apoplex",
-    "specialty": "neurologie",
+    "specialty": "apoplex",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1662,7 +1662,7 @@ const SACHSEN_DATA = [
   {
     "id": 1104,
     "fullName": "V.a. Apoplex",
-    "specialty": "neurologie",
+    "specialty": "hirnblutung",
     "name": "Herr",
     "surname": "Knecht",
     "birthdate": "",
@@ -1745,7 +1745,7 @@ const SACHSEN_DATA = [
   {
     "id": 1105,
     "fullName": "V.a. Apoplex",
-    "specialty": "neurologie",
+    "specialty": "apoplex",
     "name": "Herr",
     "surname": "Knecht",
     "birthdate": "03.05.1966",
@@ -1828,7 +1828,7 @@ const SACHSEN_DATA = [
   {
     "id": 1107,
     "fullName": "V.a. Apoplex",
-    "specialty": "neurologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Hannes",
     "surname": "Knecht",
     "birthdate": "",
@@ -1911,7 +1911,7 @@ const SACHSEN_DATA = [
   {
     "id": 1108,
     "fullName": "V.a. Fazialisparese",
-    "specialty": "neurologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Herr",
     "surname": "Marquardt",
     "birthdate": "15.05.1999",
@@ -1994,7 +1994,7 @@ const SACHSEN_DATA = [
   {
     "id": 1109,
     "fullName": "V.a. Epilepsie",
-    "specialty": "neurologie",
+    "specialty": "hirntumor",
     "name": "Christian",
     "surname": "Schauer",
     "birthdate": "",
@@ -2077,7 +2077,7 @@ const SACHSEN_DATA = [
   {
     "id": 1110,
     "fullName": "V.a. Epilepsie",
-    "specialty": "neurologie",
+    "specialty": "hirntumor",
     "name": "Christian",
     "surname": "Schauer",
     "birthdate": "",
@@ -2160,7 +2160,7 @@ const SACHSEN_DATA = [
   {
     "id": 1111,
     "fullName": "V.a. Morbus Parkinson",
-    "specialty": "neurologie",
+    "specialty": "morbusparkinson",
     "name": "Hitzfeldt",
     "surname": "",
     "birthdate": "",
@@ -2243,7 +2243,7 @@ const SACHSEN_DATA = [
   {
     "id": 1112,
     "fullName": "V.a. Morbus Parkinson",
-    "specialty": "neurologie",
+    "specialty": "morbusparkinson",
     "name": "Robert",
     "surname": "Scholz",
     "birthdate": "04.03.1965",
@@ -2326,7 +2326,7 @@ const SACHSEN_DATA = [
   {
     "id": 1113,
     "fullName": "V.a. Meningitis",
-    "specialty": "neurologie",
+    "specialty": "meningitis",
     "name": "Sven",
     "surname": "Straube",
     "birthdate": "31.12.1995",
@@ -2409,7 +2409,7 @@ const SACHSEN_DATA = [
   {
     "id": 1114,
     "fullName": "V.a. Optikusneuritis bei Multipler Sklerose",
-    "specialty": "neurologie",
+    "specialty": "multiplesklerose",
     "name": "Alexander",
     "surname": "Heideck",
     "birthdate": "12.07.1991",
@@ -2492,7 +2492,7 @@ const SACHSEN_DATA = [
   {
     "id": 1115,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "",
     "surname": "Weistermann",
     "birthdate": "12.08.1957",
@@ -2575,7 +2575,7 @@ const SACHSEN_DATA = [
   {
     "id": 1116,
     "fullName": "V.a. Cholelithiasis",
-    "specialty": "gastroenterologie",
+    "specialty": "gallensteine",
     "name": "",
     "surname": "Geißner",
     "birthdate": "",
@@ -2658,7 +2658,7 @@ const SACHSEN_DATA = [
   {
     "id": 1117,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2741,7 +2741,7 @@ const SACHSEN_DATA = [
   {
     "id": 1118,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Holger",
     "surname": "Eicher",
     "birthdate": "",
@@ -2824,7 +2824,7 @@ const SACHSEN_DATA = [
   {
     "id": 1119,
     "fullName": "V.a. Ulkus ventriculi mit oberer gastrointestinaler Blutung",
-    "specialty": "gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Jens",
     "surname": "Klauch",
     "birthdate": "18.04.1967",
@@ -2907,7 +2907,7 @@ const SACHSEN_DATA = [
   {
     "id": 1120,
     "fullName": "V.a. Gastroduodenales Ulkus mit Meläna und Hämatemesis",
-    "specialty": "gastroenterologie",
+    "specialty": "magenkarzinom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2990,7 +2990,7 @@ const SACHSEN_DATA = [
   {
     "id": 1121,
     "fullName": "V.a. chronische gastrointestinale Erkrankung",
-    "specialty": "gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Martin",
     "surname": "Uhlig",
     "birthdate": "",
@@ -3073,7 +3073,7 @@ const SACHSEN_DATA = [
   {
     "id": 1122,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Martin",
     "surname": "Uhlig",
     "birthdate": "",
@@ -3156,7 +3156,7 @@ const SACHSEN_DATA = [
   {
     "id": 1123,
     "fullName": "V.a. Ösophagusdysphagie",
-    "specialty": "gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Willy",
     "surname": "Rettich",
     "birthdate": "17.09.1972",
@@ -3239,7 +3239,7 @@ const SACHSEN_DATA = [
   {
     "id": 1124,
     "fullName": "V.a. gastroösophageale Refluxkrankheit (GERD) oder maligne Erkrankung",
-    "specialty": "gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Friedheim",
     "surname": "Denne",
     "birthdate": "",
@@ -3322,7 +3322,7 @@ const SACHSEN_DATA = [
   {
     "id": 1125,
     "fullName": "V.a. Ösophagusfremdkörper",
-    "specialty": "gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Willy",
     "surname": "Rettich",
     "birthdate": "13.09.1971",
@@ -3405,7 +3405,7 @@ const SACHSEN_DATA = [
   {
     "id": 1126,
     "fullName": "V.a. Extrauterine Gravidität",
-    "specialty": "gynäkologie",
+    "specialty": "extrauteringraviditaet",
     "name": "Inga",
     "surname": "",
     "birthdate": "",
@@ -3488,7 +3488,7 @@ const SACHSEN_DATA = [
   {
     "id": 1127,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "angiologie",
+    "specialty": "tiefevenenthrombose",
     "name": "Gutz",
     "surname": "Albrech",
     "birthdate": "29.02.1971",
@@ -3571,7 +3571,7 @@ const SACHSEN_DATA = [
   {
     "id": 1128,
     "fullName": "V.a. Periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3654,7 +3654,7 @@ const SACHSEN_DATA = [
   {
     "id": 1129,
     "fullName": "V.a. Periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Günter",
     "surname": "Leuterer",
     "birthdate": "",
@@ -3737,7 +3737,7 @@ const SACHSEN_DATA = [
   {
     "id": 1130,
     "fullName": "V.a. Periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Günter",
     "surname": "Leuterer",
     "birthdate": "",
@@ -3820,7 +3820,7 @@ const SACHSEN_DATA = [
   {
     "id": 1132,
     "fullName": "V.a. Hypertensive Krise",
-    "specialty": "innere medizin",
+    "specialty": "hypertensiveentgleisung",
     "name": "Sabrine",
     "surname": "Weigert",
     "birthdate": "",
@@ -3903,7 +3903,7 @@ const SACHSEN_DATA = [
   {
     "id": 1133,
     "fullName": "V.a. Herzinfarkt",
-    "specialty": "kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Martin",
     "surname": "Brüsel",
     "birthdate": "27.11.1958",
@@ -3986,7 +3986,7 @@ const SACHSEN_DATA = [
   {
     "id": 1134,
     "fullName": "V.a. Blasenkarzinom",
-    "specialty": "urologie",
+    "specialty": "blasenkarzinom",
     "name": "Franz",
     "surname": "Fuchs",
     "birthdate": "29.02.1964",
@@ -4069,7 +4069,7 @@ const SACHSEN_DATA = [
   {
     "id": 1135,
     "fullName": "V.a. Blasenkarzinom",
-    "specialty": "urologie",
+    "specialty": "blasenkarzinom",
     "name": "Franz",
     "surname": "Fuchs",
     "birthdate": "29.02.1964",
@@ -4152,7 +4152,7 @@ const SACHSEN_DATA = [
   {
     "id": 1136,
     "fullName": "V.a. Pneumonie",
-    "specialty": "pneumologie",
+    "specialty": "pneumonie",
     "name": "Dietrich",
     "surname": "Meisel",
     "birthdate": "",
@@ -4235,7 +4235,7 @@ const SACHSEN_DATA = [
   {
     "id": 1137,
     "fullName": "V.a. COPD",
-    "specialty": "pneumologie",
+    "specialty": "copd",
     "name": "Wowereit",
     "surname": "",
     "birthdate": "",
@@ -4318,7 +4318,7 @@ const SACHSEN_DATA = [
   {
     "id": 1138,
     "fullName": "V.a. Asthma bronchiale",
-    "specialty": "pneumologie",
+    "specialty": "asthmabronchiale",
     "name": "Piet",
     "surname": "Hauke",
     "birthdate": "14.08.1990",
@@ -4401,7 +4401,7 @@ const SACHSEN_DATA = [
   {
     "id": 1139,
     "fullName": "V.a. Tonsillitis vs. Diphtherie",
-    "specialty": "hals-nasen-ohrenheilkunde",
+    "specialty": "anginatonsillaris",
     "name": "Kirsch",
     "surname": "Kirschen",
     "birthdate": "",
@@ -4484,7 +4484,7 @@ const SACHSEN_DATA = [
   {
     "id": 1140,
     "fullName": "V.a. bakterielle Pharyngitis oder Tonsillitis",
-    "specialty": "hals-nasen-ohrenheilkunde",
+    "specialty": "infektioesemononukleose",
     "name": "Unbekannt",
     "surname": "",
     "birthdate": "",
@@ -4567,7 +4567,7 @@ const SACHSEN_DATA = [
   {
     "id": 1141,
     "fullName": "V.a. Hyperthyreose",
-    "specialty": "endokrinologie",
+    "specialty": "hyperthyreose",
     "name": "Vicky",
     "surname": "Hickmann",
     "birthdate": "",
@@ -4650,7 +4650,7 @@ const SACHSEN_DATA = [
   {
     "id": 1142,
     "fullName": "V.a. Angioödem",
-    "specialty": "allergologie",
+    "specialty": "angiooedem",
     "name": "",
     "surname": "",
     "birthdate": "",

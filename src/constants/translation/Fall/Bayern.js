@@ -2,7 +2,7 @@ const BAYERN_DATA = [
   {
     "id": 331,
     "fullName": "V.a. pAVK",
-    "specialty": "",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Alfons",
     "surname": "Böhm",
     "birthdate": "",
@@ -85,7 +85,7 @@ const BAYERN_DATA = [
   {
     "id": 332,
     "fullName": "V.a. TVT",
-    "specialty": "",
+    "specialty": "tiefevenenthrombose",
     "name": "Rio",
     "surname": "Neumann",
     "birthdate": "",
@@ -168,7 +168,7 @@ const BAYERN_DATA = [
   {
     "id": 333,
     "fullName": "V.a. TVT und Sinusitis",
-    "specialty": "",
+    "specialty": "tiefevenenthrombose",
     "name": "Josef",
     "surname": "Schneider",
     "birthdate": "",
@@ -251,7 +251,7 @@ const BAYERN_DATA = [
   {
     "id": 333,
     "fullName": "V.a. Ulcus cruris venosum",
-    "specialty": "",
+    "specialty": "ulcuscruris",
     "name": "Sissi",
     "surname": "Wagner",
     "birthdate": "",
@@ -334,7 +334,7 @@ const BAYERN_DATA = [
   {
     "id": 334,
     "fullName": "V.a. dekompensierte Globalherzinsuffizienz",
-    "specialty": "",
+    "specialty": "herzinsuffizienz",
     "name": "Konstanze",
     "surname": "Mayer",
     "birthdate": "",
@@ -417,7 +417,7 @@ const BAYERN_DATA = [
   {
     "id": 335,
     "fullName": "V.a. Pneumonie",
-    "specialty": "",
+    "specialty": "pneumonie",
     "name": "Rudolph",
     "surname": "Pohl",
     "birthdate": "",
@@ -499,7 +499,7 @@ const BAYERN_DATA = [
   {
     "id": 336,
     "fullName": "V.a. Asthma bronchiale",
-    "specialty": "",
+    "specialty": "asthmabronchiale",
     "name": "Ferdinand",
     "surname": "Düsterhof",
     "birthdate": "",
@@ -582,7 +582,7 @@ const BAYERN_DATA = [
   {
     "id": 358,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "",
+    "specialty": "oesophaguskarzinom",
     "name": "Ludwig",
     "surname": "Schreiner",
     "birthdate": "",
@@ -665,7 +665,7 @@ const BAYERN_DATA = [
   {
     "id": 337,
     "fullName": "V.a. Ulcus ventriculi",
-    "specialty": "",
+    "specialty": "ulcusventriculi",
     "name": "Jacob",
     "surname": "Bauer",
     "birthdate": "",
@@ -748,7 +748,7 @@ const BAYERN_DATA = [
   {
     "id": 338,
     "fullName": "V.a. Cholezystolithiasis",
-    "specialty": "",
+    "specialty": "OBRABOTYTY!",
     "name": "Maik",
     "surname": "Keller",
     "birthdate": "",
@@ -831,7 +831,7 @@ const BAYERN_DATA = [
   {
     "id": 339,
     "fullName": "V.a. CED",
-    "specialty": "",
+    "specialty": "morbuschroncolitisulcerosa",
     "name": "Maximilian",
     "surname": "Ziegler",
     "birthdate": "",
@@ -914,7 +914,7 @@ const BAYERN_DATA = [
   {
     "id": 340,
     "fullName": "V.a. Hypothyreose",
-    "specialty": "",
+    "specialty": "hypothyreose",
     "name": "Valentin",
     "surname": "Peters",
     "birthdate": "",
@@ -997,7 +997,7 @@ const BAYERN_DATA = [
   {
     "id": 341,
     "fullName": "V.a. Hyperthyreose",
-    "specialty": "",
+    "specialty": "hyperthyreose",
     "name": "Daniel",
     "surname": "Stein",
     "birthdate": "",
@@ -1080,7 +1080,7 @@ const BAYERN_DATA = [
   {
     "id": 342,
     "fullName": "V.a. Hypoglykämie",
-    "specialty": "",
+    "specialty": "hypoglykaemie",
     "name": "Rupert",
     "surname": "Vögel",
     "birthdate": "",
@@ -1163,7 +1163,7 @@ const BAYERN_DATA = [
   {
     "id": 343,
     "fullName": "V.a. Hodgkin-Lymphom",
-    "specialty": "",
+    "specialty": "OBRABOTYTY!",
     "name": "Hermann",
     "surname": "Lorenz",
     "birthdate": "",
@@ -1246,7 +1246,7 @@ const BAYERN_DATA = [
   {
     "id": 344,
     "fullName": "V.a. akute Leukämie",
-    "specialty": "",
+    "specialty": "leukaemie",
     "name": "Cornelia",
     "surname": "Jäger",
     "birthdate": "",
@@ -1329,7 +1329,7 @@ const BAYERN_DATA = [
   {
     "id": 345,
     "fullName": "V.a. Migräne",
-    "specialty": "",
+    "specialty": "migraene",
     "name": "Lothar",
     "surname": "Schwarz",
     "birthdate": "",
@@ -1412,7 +1412,7 @@ const BAYERN_DATA = [
   {
     "id": 346,
     "fullName": "V.a. Angina tonsillaris",
-    "specialty": "",
+    "specialty": "infektioesemononukleose",
     "name": "Rudolph",
     "surname": "Pohl",
     "birthdate": "",
@@ -1495,7 +1495,7 @@ const BAYERN_DATA = [
   {
     "id": 347,
     "fullName": "V.a. Infektiöse Mononukleose (Pfeiffer-Drüsenfieber)",
-    "specialty": "",
+    "specialty": "infektioesemononukleose",
     "name": "Hannes",
     "surname": "Brandt",
     "birthdate": "",
@@ -1578,7 +1578,7 @@ const BAYERN_DATA = [
   {
     "id": 348,
     "fullName": "V.a. distale Radiusfraktur rechts und stumpfes Thoraxtrauma",
-    "specialty": "",
+    "specialty": "distaleradiusfraktur",
     "name": "Benedikt",
     "surname": "Herrmann",
     "birthdate": "",
@@ -1661,7 +1661,7 @@ const BAYERN_DATA = [
   {
     "id": 349,
     "fullName": "V.a. distale Radiusfraktur links und Hüftgelenksdistorsion links",
-    "specialty": "",
+    "specialty": "distaleradiusfraktur",
     "name": "Reingard",
     "surname": "Sommer",
     "birthdate": "",
@@ -1744,7 +1744,7 @@ const BAYERN_DATA = [
   {
     "id": 350,
     "fullName": "V.a. distale Radiusfraktur links und Hüftgelenksdistorsion links",
-    "specialty": "",
+    "specialty": "distaleradiusfraktur",
     "name": "Reingard",
     "surname": "Sommer",
     "birthdate": "",
@@ -1827,7 +1827,7 @@ const BAYERN_DATA = [
   {
     "id": 351,
     "fullName": "V.a. Sprunggelenksdistorsion links",
-    "specialty": "",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Florian",
     "surname": "Krone",
     "birthdate": "",
@@ -1910,7 +1910,7 @@ const BAYERN_DATA = [
   {
     "id": 352,
     "fullName": "V.a. SHT 1. Grades / Commotio cerebri",
-    "specialty": "",
+    "specialty": "hirnblutung",
     "name": "Benno",
     "surname": "Fischer",
     "birthdate": "",
@@ -1993,7 +1993,7 @@ const BAYERN_DATA = [
   {
     "id": 353,
     "fullName": "V.a. stumpfes abdominales Trauma",
-    "specialty": "",
+    "specialty": "akutesabdomenmesenterialinfarkt",
     "name": "Franziska",
     "surname": "Lehmann",
     "birthdate": "19.04.1995",
@@ -2076,7 +2076,7 @@ const BAYERN_DATA = [
   {
     "id": 354,
     "fullName": "V.a. HWS-Diskusprolaps",
-    "specialty": "",
+    "specialty": "halswirbelsaeulensyndrom",
     "name": "Simon",
     "surname": "Mayer",
     "birthdate": "",
@@ -2159,7 +2159,7 @@ const BAYERN_DATA = [
   {
     "id": 355,
     "fullName": "V.a. LWS-Diskusprolaps",
-    "specialty": "",
+    "specialty": "bandscheibenvorfall",
     "name": "Eva",
     "surname": "Haas",
     "birthdate": "",
@@ -2242,7 +2242,7 @@ const BAYERN_DATA = [
   {
     "id": 356,
     "fullName": "V.a. Urolithiasis",
-    "specialty": "",
+    "specialty": "nephrolithiasis",
     "name": "Monika",
     "surname": "Weber",
     "birthdate": "",
@@ -2325,7 +2325,7 @@ const BAYERN_DATA = [
   {
     "id": 357,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "",
+    "specialty": "pyelonephritis",
     "name": "Kai-Uwe",
     "surname": "Fuchs",
     "birthdate": "",

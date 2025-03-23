@@ -86,7 +86,7 @@ const BW_FREIBURG_DATA = [
   {
     "id": 2,
     "fullName": "V.a. Kolonkarzinom",
-    "specialty": "coloncarcinome",
+    "specialty": "divertikulitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -169,7 +169,7 @@ const BW_FREIBURG_DATA = [
   {
     "id": 3,
     "fullName": "V.a. Gastritis / Ulkus",
-    "specialty": "ulcusventriculi",
+    "specialty": "gastroenteritis",
     "name": "Anton",
     "surname": "Beuerle",
     "birthdate": "29.03.XXXX",
@@ -335,7 +335,7 @@ const BW_FREIBURG_DATA = [
   {
     "id": 5,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "divertikulitis",
+    "specialty": "appendizitis",
     "name": "Rudi",
     "surname": "Wehner",
     "birthdate": "",
@@ -999,7 +999,7 @@ const BW_FREIBURG_DATA = [
   {
     "id": 13,
     "fullName": "V.a. Cholelithiasis",
-    "specialty": "cholezystitis",
+    "specialty": "gallensteine",
     "name": "Heiner",
     "surname": "Hartmann",
     "birthdate": "",
@@ -1331,7 +1331,7 @@ const BW_FREIBURG_DATA = [
   {
     "id": 17,
     "fullName": "V.a. Divertikulitis mit paralytischem Subileus",
-    "specialty": "divertikulitis",
+    "specialty": "gastroenteritis",
     "name": "Kerstin",
     "surname": "Whener",
     "birthdate": "",

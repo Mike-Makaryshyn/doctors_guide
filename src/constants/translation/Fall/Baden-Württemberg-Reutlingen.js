@@ -3,7 +3,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 127,
     "fullName": "V.a. Karpaltunnelsyndrom",
-    "specialty": "Neurologie",
+    "specialty": "multiplesklerose",
     "name": "Karla",
     "surname": "Mäyerle-Schäubele",
     "birthdate": "15.09.1972",
@@ -86,7 +86,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 128,
     "fullName": "V.a. Podagra",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "",
     "surname": "Schneller",
     "birthdate": "",
@@ -169,7 +169,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 129,
     "fullName": "V.a. Arthritis urica",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "Billi",
     "surname": "Speidel",
     "birthdate": "15.12.1979",
@@ -252,7 +252,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 130,
     "fullName": "V.a. akute Pankreatitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Häberle",
     "surname": "",
     "birthdate": "",
@@ -335,7 +335,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 131,
     "fullName": "V.a. Leberzirrhose bei Alkoholabhängigkeit",
-    "specialty": "Gastroenterologie",
+    "specialty": "hepatischeenzephalopathie",
     "name": "Karl",
     "surname": "Aupperle",
     "birthdate": "",
@@ -418,7 +418,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 132,
     "fullName": "Anaphylaktischer Schock",
-    "specialty": "Allergologie / Notfallmedizin",
+    "specialty": "angiooedem",
     "name": "Schaubele",
     "surname": "",
     "birthdate": "",
@@ -501,7 +501,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 133,
     "fullName": "V.a. Schultergelenkluxation und leichtes Schädel-Hirn-Trauma",
-    "specialty": "Unfallchirurgie / Orthopädie",
+    "specialty": "schultergelenkluxation",
     "name": "Enga",
     "surname": "Schäuberle",
     "birthdate": "",
@@ -584,7 +584,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 134,
     "fullName": "V.a. Malaria",
-    "specialty": "Infektiologie",
+    "specialty": "malaria",
     "name": "Hanna",
     "surname": "Hüber",
     "birthdate": "",
@@ -667,7 +667,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 135,
     "fullName": "V.a. bakterielle Endokarditis",
-    "specialty": "Kardiologie / Infektiologie",
+    "specialty": "endokarditis",
     "name": "Möller-Ohm",
     "surname": "",
     "birthdate": "",
@@ -750,7 +750,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 136,
     "fullName": "V.a. alkoholbedingte Leberzirrhose",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "Lisa",
     "surname": "Puf-Hälefi",
     "birthdate": "",
@@ -833,7 +833,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 137,
     "fullName": "V.a. Leberzirrhose",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "Johannes",
     "surname": "Schulze",
     "birthdate": "03.06.1978",
@@ -916,7 +916,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 138,
     "fullName": "V.a. obere gastrointestinale Blutung (Ulcus ventriculi)",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "",
     "surname": "X.",
     "birthdate": "",
@@ -999,7 +999,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 139,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Albrecht",
     "surname": "Mussigman",
     "birthdate": "",
@@ -1082,7 +1082,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 140,
     "fullName": "V.a. akute Pankreatitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Eissler",
     "surname": "",
     "birthdate": "",
@@ -1165,7 +1165,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 141,
     "fullName": "V.a. Myokardinfarkt",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Ahlberg",
     "surname": "",
     "birthdate": "",
@@ -1248,7 +1248,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 142,
     "fullName": "V.a. Ulcus ventriculi mit oberer gastrointestinaler Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Kolkowski",
     "surname": "",
     "birthdate": "",
@@ -1331,7 +1331,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 143,
     "fullName": "V.a. pAVK",
-    "specialty": "Angiologie / Kardiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Bauer",
     "surname": "",
     "birthdate": "21.02.1955",
@@ -1414,7 +1414,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 144,
     "fullName": "V.a. tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie / Innere Medizin",
+    "specialty": "tiefevenenthrombose",
     "name": "Lila",
     "surname": "Biberle",
     "birthdate": "07.12.1984",
@@ -1497,7 +1497,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 145,
     "fullName": "V.a. akute Pyelonephritis mit Urosepsis",
-    "specialty": "Nephrologie / Urologie",
+    "specialty": "pyelonephritis",
     "name": "Lisa",
     "surname": "Häberle",
     "birthdate": "",
@@ -1580,7 +1580,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 146,
     "fullName": "V.a. akute Pyelonephritis",
-    "specialty": "Nephrologie / Urologie",
+    "specialty": "pyelonephritis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1663,7 +1663,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 147,
     "fullName": "V.a. akute Cholezystitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1746,7 +1746,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 148,
     "fullName": "V.a. Polytrauma nach Fahrradunfall",
-    "specialty": "Traumatologie / Unfallchirurgie",
+    "specialty": "polytrauma",
     "name": "Ina",
     "surname": "Scheubel",
     "birthdate": "24.12.1970",
@@ -1829,7 +1829,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 149,
     "fullName": "V.a. Fibromyalgie",
-    "specialty": "Rheumatologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Manfred",
     "surname": "",
     "birthdate": "",
@@ -1912,7 +1912,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 150,
     "fullName": "V.a. Multiple Sklerose (MS)",
-    "specialty": "Neurologie",
+    "specialty": "multiplesklerose",
     "name": "Karl",
     "surname": "Ohn...",
     "birthdate": "",
@@ -1995,7 +1995,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 151,
     "fullName": "V.a. Lyme-Borreliose",
-    "specialty": "Infektiologie / Neurologie",
+    "specialty": "lymeborreliose",
     "name": "Nadine",
     "surname": "Brückner",
     "birthdate": "",
@@ -2078,7 +2078,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 152,
     "fullName": "V.a. periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "Angiologie / Gefäßchirurgie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2161,7 +2161,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 153,
     "fullName": "V.a. zervikaler Diskusprolaps",
-    "specialty": "Orthopädie / Neurochirurgie",
+    "specialty": "bandscheibenvorfall",
     "name": "Adelbert",
     "surname": "Mussik",
     "birthdate": "",
@@ -2244,7 +2244,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 154,
     "fullName": "V.a. Klavikulafraktur und Rippenbogenfraktur",
-    "specialty": "Traumatologie / Orthopädie",
+    "specialty": "OBRABOTYTY!",
     "name": "Kurt",
     "surname": "Schroben-Hauser",
     "birthdate": "23.03.1970",
@@ -2327,7 +2327,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 155,
     "fullName": "V.a. Karpaltunnelsyndrom",
-    "specialty": "Neurologie / Orthopädie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Herr",
     "surname": "Abhomeirt",
     "birthdate": "23.10.1970",
@@ -2410,7 +2410,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 156,
     "fullName": "V.a. infektiöse Endokarditis",
-    "specialty": "Kardiologie / Infektiologie",
+    "specialty": "endokarditis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2493,7 +2493,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 157,
     "fullName": "V.a. Akutes Koronarsyndrom (ACS)",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2576,7 +2576,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 158,
     "fullName": "V.a. Angina tonsillaris",
-    "specialty": "Hals-Nasen-Ohrenheilkunde",
+    "specialty": "anginatonsillaris",
     "name": "Herr",
     "surname": "Klumpp",
     "birthdate": "",
@@ -2659,7 +2659,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 159,
     "fullName": "V.a. chronische Pankreatitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Miriam",
     "surname": "Freudenberg",
     "birthdate": "01.05.1980",
@@ -2742,7 +2742,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 160,
     "fullName": "V.a. Ulcus ventriculi",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Jobst",
     "surname": "Donalies",
     "birthdate": "",
@@ -2825,7 +2825,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 161,
     "fullName": "V.a. pAVK",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Walter",
     "surname": "Schmitbauer",
     "birthdate": "21.05.1965",
@@ -2908,7 +2908,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 162,
     "fullName": "V.a. Fibromyalgie, Depression, psychosomatische Schmerzen",
-    "specialty": "Psychosomatik",
+    "specialty": "OBRABOTYTY!",
     "name": "Achmed",
     "surname": "Schoeuerle",
     "birthdate": "23.10.1970",
@@ -2991,7 +2991,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 163,
     "fullName": "V.a. KHK",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Udo",
     "surname": "Goguztke",
     "birthdate": "20.03.1960",
@@ -3074,7 +3074,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 164,
     "fullName": "V.a. Sprunggelenksfraktur",
-    "specialty": "Orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "X",
     "surname": "",
     "birthdate": "",
@@ -3157,7 +3157,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 165,
     "fullName": "V.a. Endokarditis",
-    "specialty": "Kardiologie",
+    "specialty": "endokarditis",
     "name": "Frau Mölle-Uhm",
     "surname": "",
     "birthdate": "",
@@ -3240,7 +3240,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 166,
     "fullName": "V.a. chronisch-entzündliche Darmerkrankung",
-    "specialty": "Gastroenterologie",
+    "specialty": "morbuschroncolitisulcerosa",
     "name": "Thomas",
     "surname": "Mehlhose",
     "birthdate": "",
@@ -3323,7 +3323,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 167,
     "fullName": "V.a. Lyme-Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Herr Mehlhose",
     "surname": "",
     "birthdate": "",
@@ -3406,7 +3406,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 168,
     "fullName": "V.a. Posttraumatische Belastungsstörung (PTBS)",
-    "specialty": "Psychiatrie",
+    "specialty": "hirntumor",
     "name": "Lisa",
     "surname": "Häberle",
     "birthdate": "22.02.1988",
@@ -3489,7 +3489,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 169,
     "fullName": "V.a. Ulcus ventriculi mit oberer gastrointestinaler Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Olaf",
     "surname": "Herre",
     "birthdate": "",
@@ -3572,7 +3572,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 170,
     "fullName": "V.a. Gichtanfall",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "Marianne",
     "surname": "Häberle",
     "birthdate": "",
@@ -3655,7 +3655,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 171,
     "fullName": "V.a. Fibromyalgie",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "Igor",
     "surname": "Slivoviz",
     "birthdate": "12.01.1970",
@@ -3738,7 +3738,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 172,
     "fullName": "V.a. Cholestase",
-    "specialty": "Gastroenterologie",
+    "specialty": "gallensteine",
     "name": "Willibald",
     "surname": "Kremer",
     "birthdate": "",
@@ -3821,7 +3821,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 174,
     "fullName": "V.a. Posttraumatische Belastungsstörung",
-    "specialty": "Psychiatrie",
+    "specialty": "schultergelenkluxation",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3904,7 +3904,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 175,
     "fullName": "V.a. Alkoholentzugsdelir / Leberzirrhose",
-    "specialty": "Gastroenterologie / Psychiatrie",
+    "specialty": "leberzirrhose",
     "name": "Max",
     "surname": "Putzke",
     "birthdate": "23.10.1977",
@@ -3987,7 +3987,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 176,
     "fullName": "V.a. KHK / Angina pectoris",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4070,7 +4070,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 177,
     "fullName": "V.a. pAVK",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Manfred",
     "surname": "Löffler",
     "birthdate": "",
@@ -4153,7 +4153,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 178,
     "fullName": "V.a. Angina tonsillaris",
-    "specialty": "Hals-Nasen-Ohrenheilkunde",
+    "specialty": "anginatonsillaris",
     "name": "Norbert",
     "surname": "Mayer",
     "birthdate": "",
@@ -4236,7 +4236,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 179,
     "fullName": "V.a. bakterielle Tonsillitis",
-    "specialty": "Allgemeinmedizin",
+    "specialty": "anginatonsillaris",
     "name": "Hans",
     "surname": "Salzbrenner",
     "birthdate": "",
@@ -4319,7 +4319,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 180,
     "fullName": "V.a. Alkoholassoziierte Gastritis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Walter",
     "surname": "Krause",
     "birthdate": "",
@@ -4402,7 +4402,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 181,
     "fullName": "V.a. Akutes Koronarsyndrom (ACS)",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Frau",
     "surname": "Buttner",
     "birthdate": "",
@@ -4485,7 +4485,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 182,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "Urologie",
+    "specialty": "pyelonephritis",
     "name": "Stefan",
     "surname": "Aumiller",
     "birthdate": "",
@@ -4568,7 +4568,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 183,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "Urologie",
+    "specialty": "pyelonephritis",
     "name": "Lisa",
     "surname": "Häberle",
     "birthdate": "",
@@ -4651,7 +4651,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 184,
     "fullName": "V.a. Karpaltunnelsyndrom",
-    "specialty": "Neurologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Harri",
     "surname": "Büchert",
     "birthdate": "16.09.1959",
@@ -4734,7 +4734,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 185,
     "fullName": "V.a. infektiöse Gastroenteritis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Klaus",
     "surname": "Knopf",
     "birthdate": "",
@@ -4817,7 +4817,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 186,
     "fullName": "V.a. Leberzirrhose",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4900,7 +4900,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 187,
     "fullName": "V.a. COVID-19-Infektion",
-    "specialty": "Infektiologie",
+    "specialty": "pneumonie",
     "name": "Matha",
     "surname": "Bühreln",
     "birthdate": "",
@@ -4983,7 +4983,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 188,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "reizdarmsyndrom",
     "name": "Nothiesn",
     "surname": "",
     "birthdate": "",
@@ -5066,7 +5066,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 189,
     "fullName": "V.a. Chronisch-entzündliche Darmerkrankung (CED)",
-    "specialty": "Gastroenterologie",
+    "specialty": "morbuschroncolitisulcerosa",
     "name": "Tanya",
     "surname": "Krüger",
     "birthdate": "27.04.1968",
@@ -5149,7 +5149,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 190,
     "fullName": "V.a. Akute Pyelonephritis",
-    "specialty": "Nephrologie/Urologie",
+    "specialty": "pyelonephritis",
     "name": "Frau",
     "surname": "Scholler",
     "birthdate": "",
@@ -5232,7 +5232,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 191,
     "fullName": "V.a. Obere gastrointestinale Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Leo",
     "surname": "Häberle",
     "birthdate": "",
@@ -5315,7 +5315,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 192,
     "fullName": "V.a. Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Henle",
     "surname": "",
     "birthdate": "",
@@ -5398,7 +5398,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 193,
     "fullName": "V.a. pAVK",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Wimmer",
     "surname": "",
     "birthdate": "30.03.1955",
@@ -5481,7 +5481,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 194,
     "fullName": "V.a. Fibromyalgie",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "August",
     "surname": "Nordmann",
     "birthdate": "12.02.1969",
@@ -5564,7 +5564,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 195,
     "fullName": "V.a. Fibromyalgie",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "August",
     "surname": "Nordmann",
     "birthdate": "12.02.1969",
@@ -5647,7 +5647,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 196,
     "fullName": "V.a. Leberzirrhose und Alkoholismus",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "Jürgen",
     "surname": "Weit",
     "birthdate": "",
@@ -5730,7 +5730,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 197,
     "fullName": "V.a. Depression",
-    "specialty": "Neurologie/Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Frau",
     "surname": "Weindele",
     "birthdate": "",
@@ -5813,7 +5813,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 198,
     "fullName": "V.a. Coxarthrose/Gonarthrose links",
-    "specialty": "Orthopädie",
+    "specialty": "coxarthrose",
     "name": "Luise",
     "surname": "King",
     "birthdate": "20.08.1963",
@@ -5896,7 +5896,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 199,
     "fullName": "V.a. Ulcus ventriculi mit oberer gastrointestinaler Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Bernd",
     "surname": "Kowalski",
     "birthdate": "13.09.1970",
@@ -5979,7 +5979,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 200,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Martha",
     "surname": "Pöhlmann",
     "birthdate": "",
@@ -6062,7 +6062,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 201,
     "fullName": "V.a. Myokardinfarkt",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Frau",
     "surname": "Buttner",
     "birthdate": "",
@@ -6145,7 +6145,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 202,
     "fullName": "V.a. psychosomatische Schmerzen",
-    "specialty": "Neurologie/Psychiatrie",
+    "specialty": "migraene",
     "name": "Höelhm",
     "surname": "Stuhlgard",
     "birthdate": "05.03.1996",
@@ -6228,7 +6228,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 203,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie/Rheumatologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Knitthilf",
     "surname": "Weidele",
     "birthdate": "",
@@ -6311,7 +6311,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 205,
     "fullName": "V.a. Koronare Herzkrankheit (KHK)",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Hans",
     "surname": "Leumann",
     "birthdate": "",
@@ -6394,7 +6394,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 206,
     "fullName": "V.a. Akutes Koronarsyndrom",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Herr",
     "surname": "Trüster",
     "birthdate": "",
@@ -6477,7 +6477,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 207,
     "fullName": "V.a. Pankreaskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Herr",
     "surname": "X",
     "birthdate": "",
@@ -6560,7 +6560,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 208,
     "fullName": "V.a. Pankreaskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "pankreatitis",
     "name": "Herr",
     "surname": "X",
     "birthdate": "",
@@ -6643,7 +6643,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 209,
     "fullName": "V.a. Multiple Sklerose",
-    "specialty": "Neurologie",
+    "specialty": "multiplesklerose",
     "name": "Herr",
     "surname": "",
     "birthdate": "",
@@ -6726,7 +6726,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 210,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "Nephrologie/Urologie",
+    "specialty": "pyelonephritis",
     "name": "Herr",
     "surname": "XY",
     "birthdate": "",
@@ -6809,7 +6809,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 211,
     "fullName": "V.a. obere gastrointestinale Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Hans",
     "surname": "Aufobermaier",
     "birthdate": "",
@@ -6892,7 +6892,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 212,
     "fullName": "V.a. chronisch-entzündliche Darmerkrankung",
-    "specialty": "Gastroenterologie",
+    "specialty": "morbuschroncolitisulcerosa",
     "name": "",
     "surname": "",
     "birthdate": "",

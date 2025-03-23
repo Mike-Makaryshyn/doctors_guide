@@ -2,7 +2,7 @@ const HESSEN_DATA = [
   {
     "id": 623,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Frederik",
     "surname": "zu Äusigler",
     "birthdate": "30.05.1958",
@@ -85,7 +85,7 @@ const HESSEN_DATA = [
   {
     "id": 624,
     "fullName": "V.a. Bronchialkarzinom",
-    "specialty": "Pneumologie",
+    "specialty": "copd",
     "name": "Maria",
     "surname": "Kaiser",
     "birthdate": "23.09.1968",
@@ -168,7 +168,7 @@ const HESSEN_DATA = [
   {
     "id": 625,
     "fullName": "V.a. Hirntumor",
-    "specialty": "Neurologie",
+    "specialty": "hirntumor",
     "name": "Uta",
     "surname": "Kästner",
     "birthdate": "",
@@ -251,7 +251,7 @@ const HESSEN_DATA = [
   {
     "id": 626,
     "fullName": "V.a. KHK und Myokardinfarkt",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Mieke",
     "surname": "",
     "birthdate": "",
@@ -334,7 +334,7 @@ const HESSEN_DATA = [
   {
     "id": 627,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie",
+    "specialty": "tiefevenenthrombose",
     "name": "Elisabeth",
     "surname": "Müller",
     "birthdate": "",
@@ -417,7 +417,7 @@ const HESSEN_DATA = [
   {
     "id": 628,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie",
+    "specialty": "tiefevenenthrombose",
     "name": "Elisabeth",
     "surname": "Müller",
     "birthdate": "",
@@ -500,7 +500,7 @@ const HESSEN_DATA = [
   {
     "id": 631,
     "fullName": "V.a. Herzinsuffizienz",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Stephanie",
     "surname": "Meyer",
     "birthdate": "",
@@ -583,7 +583,7 @@ const HESSEN_DATA = [
   {
     "id": 633,
     "fullName": "V.a. Gastroenteritis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Thomas",
     "surname": "Mayer",
     "birthdate": "",
@@ -666,7 +666,7 @@ const HESSEN_DATA = [
   {
     "id": 634,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Thomas",
     "surname": "Mayer",
     "birthdate": "",
@@ -749,7 +749,7 @@ const HESSEN_DATA = [
   {
     "id": 635,
     "fullName": "V.a. Cholelithiasis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gallensteine",
     "name": "Stephan",
     "surname": "Schmitt",
     "birthdate": "",
@@ -832,7 +832,7 @@ const HESSEN_DATA = [
   {
     "id": 636,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "coloncarcinome",
     "name": "Friedel",
     "surname": "Rossman",
     "birthdate": "",
@@ -915,7 +915,7 @@ const HESSEN_DATA = [
   {
     "id": 638,
     "fullName": "V.a. Herpes Zoster",
-    "specialty": "Dermatologie",
+    "specialty": "herpeszoster",
     "name": "Gieger",
     "surname": "",
     "birthdate": "",
@@ -998,7 +998,7 @@ const HESSEN_DATA = [
   {
     "id": 639,
     "fullName": "V.a. Erysipel",
-    "specialty": "Dermatologie",
+    "specialty": "wundrose",
     "name": "Schmidbauer",
     "surname": "",
     "birthdate": "",
@@ -1081,7 +1081,7 @@ const HESSEN_DATA = [
   {
     "id": 640,
     "fullName": "V.a. Pyelonephritis",
-    "specialty": "Urologie",
+    "specialty": "pyelonephritis",
     "name": "Joseph",
     "surname": "Mayer",
     "birthdate": "28.12.1954",
@@ -1164,7 +1164,7 @@ const HESSEN_DATA = [
   {
     "id": 643,
     "fullName": "V.a. diabetische Polyneuropathie, Ulcus cruris",
-    "specialty": "Endokrinologie/Angiologie",
+    "specialty": "diabetischepolyneuropathieunddiabetischerfuss",
     "name": "Andreas",
     "surname": "Vonschmittgall-Wieber",
     "birthdate": "",
@@ -1247,7 +1247,7 @@ const HESSEN_DATA = [
   {
     "id": 644,
     "fullName": "V.a. diabetische Polyneuropathie, pAVK",
-    "specialty": "Endokrinologie/Angiologie",
+    "specialty": "diabetischepolyneuropathieunddiabetischerfuss",
     "name": "Andreas",
     "surname": "Schmittgall-Wieber",
     "birthdate": "",
@@ -1330,7 +1330,7 @@ const HESSEN_DATA = [
   {
     "id": 645,
     "fullName": "V.a. COPD",
-    "specialty": "Pneumologie",
+    "specialty": "copd",
     "name": "Hannilore",
     "surname": "Kaiser",
     "birthdate": "23.01.1966",
@@ -1413,7 +1413,7 @@ const HESSEN_DATA = [
   {
     "id": 645,
     "fullName": "V.a. chronische Bronchitis",
-    "specialty": "Pneumologie",
+    "specialty": "copd",
     "name": "",
     "surname": "Nowitzky",
     "birthdate": "",
@@ -1496,7 +1496,7 @@ const HESSEN_DATA = [
   {
     "id": 646,
     "fullName": "V.a. Rippenkontusion",
-    "specialty": "Orthopädie/Unfallchirurgie",
+    "specialty": "OBRABOTYTY!",
     "name": "Carl",
     "surname": "Braus",
     "birthdate": "",
@@ -1579,7 +1579,7 @@ const HESSEN_DATA = [
   {
     "id": 648,
     "fullName": "V.a. Radiusfraktur oder Weichteilverletzung",
-    "specialty": "Unfallchirurgie/Orthopädie",
+    "specialty": "distaleradiusfraktur",
     "name": "Herr",
     "surname": "Hübsch",
     "birthdate": "",
@@ -1662,7 +1662,7 @@ const HESSEN_DATA = [
   {
     "id": 649,
     "fullName": "V.a. Rheumatoide Arthritis",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "Yasmin",
     "surname": "Chonwitzki",
     "birthdate": "02.02.1984",
@@ -1745,7 +1745,7 @@ const HESSEN_DATA = [
   {
     "id": 650,
     "fullName": "V.a. Hemikranie (Migräne) mit Aura",
-    "specialty": "Neurologie",
+    "specialty": "migraene",
     "name": "Tom",
     "surname": "Selzer",
     "birthdate": "",
@@ -1828,7 +1828,7 @@ const HESSEN_DATA = [
   {
     "id": 651,
     "fullName": "V.a. Borreliose",
-    "specialty": "Infektiologie",
+    "specialty": "lymeborreliose",
     "name": "Herr",
     "surname": "Rauter",
     "birthdate": "",
@@ -1911,7 +1911,7 @@ const HESSEN_DATA = [
   {
     "id": 652,
     "fullName": "V.a. Malaria",
-    "specialty": "Infektiologie",
+    "specialty": "malaria",
     "name": "Sören",
     "surname": "Von Unruh",
     "birthdate": "31.08.1979",
@@ -1994,7 +1994,7 @@ const HESSEN_DATA = [
   {
     "id": 653,
     "fullName": "V.a. Malaria",
-    "specialty": "Infektiologie",
+    "specialty": "malaria",
     "name": "Jochen",
     "surname": "Traumgiebel",
     "birthdate": "23.05.2001",
@@ -2077,7 +2077,7 @@ const HESSEN_DATA = [
   {
     "id": 654,
     "fullName": "V.a. Intrazerebrale Blutung",
-    "specialty": "Neurologie",
+    "specialty": "hirnblutung",
     "name": "Anja",
     "surname": "Schäuble",
     "birthdate": "1966",
@@ -2160,7 +2160,7 @@ const HESSEN_DATA = [
   {
     "id": 655,
     "fullName": "V.a. Benigne Prostatahyperplasie",
-    "specialty": "Urologie",
+    "specialty": "benigneprostatahyperplasie",
     "name": "Hans-Karl",
     "surname": "Besier",
     "birthdate": "27.06.1947",

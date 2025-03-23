@@ -3,7 +3,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 36,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Ulrich",
     "surname": "Mais",
     "birthdate": "",
@@ -86,7 +86,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 38,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Klaus",
     "surname": "Mais",
     "birthdate": "",
@@ -169,7 +169,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 39,
     "fullName": "V.a. Diabetes mellitus Typ 1",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Franz",
     "surname": "Maier",
     "birthdate": "",
@@ -252,7 +252,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 40,
     "fullName": "V.a. obere gastrointestinale Blutung (Ulcus ventriculi)",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Manfred",
     "surname": "Kaiser-Schmitt",
     "birthdate": "13.03.1957",
@@ -335,7 +335,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 41,
     "fullName": "V.a. Diabetes mellitus Typ 1",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Franz",
     "surname": "Maier",
     "birthdate": "",
@@ -418,7 +418,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 42,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "Hans",
     "surname": "Müller",
     "birthdate": "",
@@ -501,7 +501,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 43,
     "fullName": "V.a. gastroösophageale Refluxkrankheit (GERD)",
-    "specialty": "Gastroenterologie",
+    "specialty": "gerd",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -584,7 +584,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 44,
     "fullName": "V.a. Abszess am Gesäß",
-    "specialty": "Chirurgie",
+    "specialty": "ulcuscruris",
     "name": "Bernhard",
     "surname": "Lauber",
     "birthdate": "",
@@ -667,7 +667,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 45,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Otto",
     "surname": "Schutser",
     "birthdate": "",
@@ -750,7 +750,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 46,
     "fullName": "V.a. stabile Angina pectoris",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Josef",
     "surname": "Renner",
     "birthdate": "",
@@ -833,7 +833,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 47,
     "fullName": "V.a. Multiple Sklerose",
-    "specialty": "Neurologie",
+    "specialty": "multiplesklerose",
     "name": "Klaus",
     "surname": "Huber",
     "birthdate": "",
@@ -916,7 +916,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 48,
     "fullName": "V.a. Diabetes mellitus Typ 1",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Franz",
     "surname": "Meyer",
     "birthdate": "",
@@ -999,7 +999,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 49,
     "fullName": "V.a. Diabetes mellitus Typ 1",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Franz",
     "surname": "Meyer",
     "birthdate": "",
@@ -1082,7 +1082,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 50,
     "fullName": "V.a. Sprunggelenkfraktur rechts",
-    "specialty": "Orthopädie/Unfallchirurgie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1165,7 +1165,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 51,
     "fullName": "V.a. KHK (koronare Herzkrankheit)",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Johans",
     "surname": "Schulze",
     "birthdate": "",
@@ -1248,7 +1248,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 52,
     "fullName": "V.a. obstruktives Schlafapnoe-Syndrom",
-    "specialty": "Pneumologie / Schlafmedizin",
+    "specialty": "osas",
     "name": "Hanz",
     "surname": "Müller",
     "birthdate": "01.06.1963",
@@ -1331,7 +1331,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 53,
     "fullName": "V.a. obere gastrointestinale Blutung (z. B. Ulcus ventriculi/duodeni)",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Peter",
     "surname": "Kowalski",
     "birthdate": "",
@@ -1414,7 +1414,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 54,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1497,7 +1497,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 55,
     "fullName": "V.a. Zöliakie",
-    "specialty": "Gastroenterologie",
+    "specialty": "zoeliakie",
     "name": "Gustav",
     "surname": "Hirschmann",
     "birthdate": "",
@@ -1580,7 +1580,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 56,
     "fullName": "V.a. Cholezystolithiasis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gallensteine",
     "name": "Hans",
     "surname": "Müller",
     "birthdate": "",
@@ -1663,7 +1663,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 57,
     "fullName": "V.a. Leberzirrhose",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "Peter",
     "surname": "Schulze",
     "birthdate": "",
@@ -1746,7 +1746,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 58,
     "fullName": "V.a. zervikale Radikulopathie",
-    "specialty": "Orthopädie/Neurologie",
+    "specialty": "halswirbelsaeulensyndrom",
     "name": "Jusef",
     "surname": "Stelzer",
     "birthdate": "",
@@ -1829,7 +1829,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 59,
     "fullName": "V.a. osteoporotische Wirbelfraktur",
-    "specialty": "Orthopädie / Innere Medizin",
+    "specialty": "bandscheibenvorfall",
     "name": "Rainer",
     "surname": "Hober",
     "birthdate": "",
@@ -1912,7 +1912,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 60,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Klaus",
     "surname": "Maier",
     "birthdate": "",
@@ -1995,7 +1995,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 61,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie/Onkologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Otto",
     "surname": "Schuster",
     "birthdate": "01.03.1970",
@@ -2078,7 +2078,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 62,
     "fullName": "V.a. peptisches Ulkus mit Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "OBRABOTYTY!",
     "name": "Peter",
     "surname": "Keller",
     "birthdate": "09.02.1974",
@@ -2161,7 +2161,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 63,
     "fullName": "V.a. instabile Angina pectoris",
-    "specialty": "Kardiologie",
+    "specialty": "koronareherzkrankheit",
     "name": "Joachim",
     "surname": "Schulze",
     "birthdate": "",
@@ -2244,7 +2244,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 64,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Franz",
     "surname": "Wehner",
     "birthdate": "",
@@ -2327,7 +2327,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 65,
     "fullName": "V.a. periphere arterielle Verschlusskrankheit (PAVK)",
-    "specialty": "Angiologie / Kardiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Walter",
     "surname": "Vögel",
     "birthdate": "",
@@ -2410,7 +2410,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 66,
     "fullName": "V.a. Diabetes mellitus Typ 1",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Josef",
     "surname": "Meyer",
     "birthdate": "",
@@ -2493,7 +2493,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 67,
     "fullName": "V.a. Cholezystolithiasis",
-    "specialty": "Gastroenterologie",
+    "specialty": "gallensteine",
     "name": "Klaus",
     "surname": "Müller",
     "birthdate": "",
@@ -2576,7 +2576,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 68,
     "fullName": "V.a. obere gastrointestinale Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "ulcusventriculi",
     "name": "Klaus",
     "surname": "Müller",
     "birthdate": "",
@@ -2659,7 +2659,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": "",
     "fullName": "V.a. obere gastrointestinale Blutung",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2742,7 +2742,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 69,
     "fullName": "V.a. Laktoseintoleranz",
-    "specialty": "Gastroenterologie",
+    "specialty": "reizdarmsyndrom",
     "name": "Peter",
     "surname": "Novak",
     "birthdate": "",
@@ -2825,7 +2825,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 70,
     "fullName": "V.a. Depression mit Suizidgedanken",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Thomas",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -2908,7 +2908,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 71,
     "fullName": "V.a. Leberzirrhose mit portaler Hypertension",
-    "specialty": "Gastroenterologie",
+    "specialty": "leberzirrhose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -2991,7 +2991,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 72,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "Peter",
     "surname": "Schmidt",
     "birthdate": "",
@@ -3074,7 +3074,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 73,
     "fullName": "V.a. Rheumatoide Arthritis",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3157,7 +3157,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 74,
     "fullName": "V.a. Migräne",
-    "specialty": "Neurologie",
+    "specialty": "migraene",
     "name": "Paul",
     "surname": "Kovermann",
     "birthdate": "",
@@ -3240,7 +3240,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 75,
     "fullName": "V.a. Rheumatisches Fieber",
-    "specialty": "Innere Medizin",
+    "specialty": "endokarditis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3323,7 +3323,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 75,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Franz",
     "surname": "Mühe",
     "birthdate": "11.12.1971",
@@ -3406,7 +3406,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 76,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Franz",
     "surname": "Müller",
     "birthdate": "",
@@ -3489,7 +3489,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 77,
     "fullName": "V.a. Arthritis urica",
-    "specialty": "Rheumatologie",
+    "specialty": "rheumatoidearthritis",
     "name": "Hans",
     "surname": "Hedgke",
     "birthdate": "",
@@ -3572,7 +3572,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 78,
     "fullName": "V.a. Koxarthrose",
-    "specialty": "Orthopädie",
+    "specialty": "coxarthrose",
     "name": "Johannes",
     "surname": "King",
     "birthdate": "",
@@ -3655,7 +3655,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 79,
     "fullName": "V.a. Metabolisches Syndrom",
-    "specialty": "Endokrinologie",
+    "specialty": "diabetesmellitus",
     "name": "Anton",
     "surname": "Kaiser",
     "birthdate": "",
@@ -3738,7 +3738,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 80,
     "fullName": "V.a. Pertussis",
-    "specialty": "Infektiologie",
+    "specialty": "pneumonie",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -3821,7 +3821,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 81,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Heinz",
     "surname": "Mühe",
     "birthdate": "",
@@ -3904,7 +3904,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 82,
     "fullName": "V.a. Ösophaguskarzinom",
-    "specialty": "Gastroenterologie",
+    "specialty": "oesophaguskarzinom",
     "name": "Heinz",
     "surname": "Mühe",
     "birthdate": "",
@@ -3987,7 +3987,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 83,
     "fullName": "V.a. Migräne",
-    "specialty": "Neurologie",
+    "specialty": "hirntumor",
     "name": "Elke",
     "surname": "Kovermann",
     "birthdate": "",
@@ -4070,7 +4070,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 84,
     "fullName": "V.a. Gichtanfall",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4153,7 +4153,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 85,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4236,7 +4236,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 86,
     "fullName": "V.a. Weichteilabszess",
-    "specialty": "Chirurgie",
+    "specialty": "ulcuscruris",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4319,7 +4319,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 87,
     "fullName": "V.a. Sprunggelenkfraktur",
-    "specialty": "Orthopädie/Unfallchirurgie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Klaus",
     "surname": "Schröder",
     "birthdate": "",
@@ -4402,7 +4402,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 88,
     "fullName": "V.a. Anorexia nervosa",
-    "specialty": "Psychosomatik",
+    "specialty": "OBRABOTYTY!",
     "name": "Julia",
     "surname": "Springer",
     "birthdate": "19.09.2003",
@@ -4485,7 +4485,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 89,
     "fullName": "V.a. Divertikulitis",
-    "specialty": "Gastroenterologie",
+    "specialty": "divertikulitis",
     "name": "Ulrich",
     "surname": "Wehmer",
     "birthdate": "",
@@ -4568,7 +4568,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 90,
     "fullName": "V.a. Tiefe Venenthrombose (TVT)",
-    "specialty": "Angiologie",
+    "specialty": "tiefevenenthrombose",
     "name": "Anna",
     "surname": "Müller",
     "birthdate": "04.04.1971",
@@ -4651,7 +4651,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 91,
     "fullName": "V.a. Periphere arterielle Verschlusskrankheit (pAVK)",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4734,7 +4734,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 92,
     "fullName": "V.a. Alzheimer-Krankheit",
-    "specialty": "Neurologie",
+    "specialty": "demenz",
     "name": "Klaus",
     "surname": "Benzler",
     "birthdate": "",
@@ -4817,7 +4817,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 93,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Mais",
     "surname": "",
     "birthdate": "",
@@ -4900,7 +4900,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 94,
     "fullName": "V.a. Diskusprolaps",
-    "specialty": "Orthopädie",
+    "specialty": "halswirbelsaeulensyndrom",
     "name": "Kleist",
     "surname": "",
     "birthdate": "",
@@ -4983,7 +4983,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 95,
     "fullName": "V.a. Reizdarmsyndrom",
-    "specialty": "Gastroenterologie",
+    "specialty": "reizdarmsyndrom",
     "name": "Klaus",
     "surname": "Müller",
     "birthdate": "",
@@ -5066,7 +5066,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 96,
     "fullName": "V.a. pAVK",
-    "specialty": "Angiologie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Warter",
     "surname": "Vogel",
     "birthdate": "19.09.1956",
@@ -5149,7 +5149,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 97,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Allgemeinchirurgie",
+    "specialty": "appendizitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -5232,7 +5232,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 98,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Karl",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -5315,7 +5315,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 99,
     "fullName": "V.a. Gichtanfall (Podagra)",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -5398,7 +5398,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 100,
     "fullName": "V.a. Zöliakie",
-    "specialty": "Gastroenterologie",
+    "specialty": "gastroenteritis",
     "name": "Gustav",
     "surname": "Hirschmann",
     "birthdate": "",
@@ -5481,7 +5481,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 101,
     "fullName": "V.a. Pyelonephritis und diabetische Nephropathie",
-    "specialty": "nephrologie",
+    "specialty": "pyelonephritis",
     "name": "Herr",
     "surname": "Unbekannt",
     "birthdate": "",
@@ -5564,7 +5564,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 102,
     "fullName": "V.a. Wirbelfraktur oder Bandscheibenvorfall",
-    "specialty": "orthopädie",
+    "specialty": "bandscheibenvorfall",
     "name": "Reiner",
     "surname": "Züblin",
     "birthdate": "",
@@ -5647,7 +5647,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 103,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "Theo",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -5730,7 +5730,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 104,
     "fullName": "V.a. Gichtanfall (Podagra)",
-    "specialty": "Rheumatologie",
+    "specialty": "arthritisurica",
     "name": "Nobert",
     "surname": "Bethge",
     "birthdate": "",
@@ -5813,7 +5813,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 105,
     "fullName": "V.a. Oberschenkelhalsfraktur",
-    "specialty": "Orthopädie",
+    "specialty": "patellafraktur",
     "name": "Lisele",
     "surname": "Müller",
     "birthdate": "",
@@ -5896,7 +5896,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 106,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie",
+    "specialty": "migraene",
     "name": "Theo",
     "surname": "Heidenreich",
     "birthdate": "",
@@ -5979,7 +5979,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 107,
     "fullName": "V.a. Depression",
-    "specialty": "Psychiatrie",
+    "specialty": "OBRABOTYTY!",
     "name": "X",
     "surname": "",
     "birthdate": "",

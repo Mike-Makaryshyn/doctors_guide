@@ -2,7 +2,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1040,
     "fullName": "V.a. Schädel-Hirn-Trauma",
-    "specialty": "Neurologie/Unfallchirurgie",
+    "specialty": "hirnblutung",
     "name": "S...",
     "surname": "",
     "birthdate": "19.10.1980",
@@ -85,7 +85,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1041,
     "fullName": "V.a. Schädel-Hirn-Trauma",
-    "specialty": "Neurologie/Unfallchirurgie",
+    "specialty": "hirnblutung",
     "name": "Simone",
     "surname": "",
     "birthdate": "",
@@ -168,7 +168,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1042,
     "fullName": "V.a. Schädel-Hirn-Trauma mit subarachnoidaler Blutung",
-    "specialty": "Neurologie/Unfallchirurgie",
+    "specialty": "hirnblutung",
     "name": "Laura",
     "surname": "Schö.",
     "birthdate": "30.08.1992",
@@ -251,7 +251,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1043,
     "fullName": "V.a. Schädel-Hirn-Trauma mit Subarachnoidalblutung",
-    "specialty": "Neurologie/Unfallchirurgie",
+    "specialty": "hirnblutung",
     "name": "Margarita",
     "surname": "Knurt",
     "birthdate": "",
@@ -334,7 +334,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1044,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "Seeger",
     "surname": "",
     "birthdate": "",
@@ -417,7 +417,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1045,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -500,7 +500,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1046,
     "fullName": "V.a. Appendizitis",
-    "specialty": "Chirurgie",
+    "specialty": "appendizitis",
     "name": "M.M.",
     "surname": "",
     "birthdate": "",
@@ -583,7 +583,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1046,
     "fullName": "V.a. Infekt mit Fieber und Gelenkbeteiligung",
-    "specialty": "Innere Medizin",
+    "specialty": "infektioesemononukleose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -666,7 +666,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1048,
     "fullName": "V.a. Infektive Endokarditis mit arteriellem Verschluss",
-    "specialty": "Kardiologie/Gefäßchirurgie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Maike",
     "surname": "Meyer",
     "birthdate": "",
@@ -749,7 +749,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1049,
     "fullName": "V.a. Infektive Endokarditis mit embolischer pAVK",
-    "specialty": "Kardiologie/Gefäßchirurgie",
+    "specialty": "peripherearterielleverschlusskrankheit",
     "name": "Maike",
     "surname": "Meyer",
     "birthdate": "",
@@ -832,7 +832,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1050,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "akutesabdomenmesenterialinfarkt",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -915,7 +915,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1051,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Mathilda",
     "surname": "Mühller",
     "birthdate": "28.02.1961",
@@ -998,7 +998,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1052,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Christina",
     "surname": "Schwalbe",
     "birthdate": "11.08.1980",
@@ -1081,7 +1081,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1053,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Christina",
     "surname": "Schwalbe",
     "birthdate": "",
@@ -1164,7 +1164,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1054,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Frau",
     "surname": "Schmidt",
     "birthdate": "1950",
@@ -1247,7 +1247,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1055,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Christina",
     "surname": "Schwalbe",
     "birthdate": "",
@@ -1330,7 +1330,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1056,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Frau",
     "surname": "Schmitt",
     "birthdate": "",
@@ -1413,7 +1413,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1057,
     "fullName": "V.a. Pneumonie",
-    "specialty": "Pneumologie",
+    "specialty": "pneumonie",
     "name": "Frau",
     "surname": "Schwalbe",
     "birthdate": "",
@@ -1496,7 +1496,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1058,
     "fullName": "V.a. OSG-Fraktur",
-    "specialty": "Orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Christine",
     "surname": "Schwalbe",
     "birthdate": "",
@@ -1579,7 +1579,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1059,
     "fullName": "V.a. Supinationstrauma OSG rechts",
-    "specialty": "Orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -1662,7 +1662,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1060,
     "fullName": "V.a. Sprunggelenkfraktur (OSG)",
-    "specialty": "Orthopädie",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Jana",
     "surname": "Zimmermann",
     "birthdate": "",
@@ -1745,7 +1745,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1062,
     "fullName": "V.a. Bandscheibenvorfall L5/S1",
-    "specialty": "Orthopädie/Neurologie",
+    "specialty": "bandscheibenvorfall",
     "name": "Frau",
     "surname": "Meyer",
     "birthdate": "",
@@ -1828,7 +1828,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1063,
     "fullName": "V.a. LWS-Syndrom",
-    "specialty": "Orthopädie/Neurologie",
+    "specialty": "bandscheibenvorfall",
     "name": "Frau",
     "surname": "Meyer",
     "birthdate": "",
@@ -1911,7 +1911,7 @@ const SACHSENANHALT_DATA = [
   {
     "id": 1064,
     "fullName": "V.a. Harnwegsinfektion",
-    "specialty": "Urologie",
+    "specialty": "blasenkarzinom",
     "name": "Astrid",
     "surname": "Seeger",
     "birthdate": "03.10.1990",
