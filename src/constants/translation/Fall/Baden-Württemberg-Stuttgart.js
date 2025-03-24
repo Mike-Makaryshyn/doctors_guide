@@ -1995,7 +1995,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 257,
     "fullName": "V.a. Somatoforme Störung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "somatoforme_stoerung",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -5730,7 +5730,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 303,
     "fullName": "V.a. Somatoforme Störung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "somatoforme_stoerung",
     "name": "Gotthielf",
     "surname": "Weidel",
     "birthdate": "",

@@ -67656,7 +67656,7 @@ schenkelhalsfraktur: {
     `
   },
 },
-anämie: {
+anaemie: {
   name: "Anämie",
   currentAnamnese: {
     additionalInfo: `
@@ -68134,6 +68134,1397 @@ anämie: {
 - „Sind Sie bereit, sich einer umfassenden Blutuntersuchung zu unterziehen?“  
 - „Wären Sie offen für eine Ernährungsberatung, um Ihre Essgewohnheiten zu verbessern?“  
 - „Wie stehen Sie zu einer medikamentösen Therapie zur Verbesserung Ihrer Blutwerte?“
+    `
+  },
+},
+karpaltunnelsyndrom: {
+  name: "Karpaltunnelsyndrom",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Karpaltunnelsyndrom**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung der Hauptbeschwerden im Bereich der Hand und des Handgelenks, die zu einer Vorstellung in der Praxis führen.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Art und den Beginn der Beschwerden zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Seit wann haben Sie Beschwerden in der Hand oder im Handgelenk?“  
+- „Gab es einen auslösenden Vorfall oder eine Überlastung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe seit einigen Monaten Schmerzen und Kribbeln in meiner rechten Hand, vor allem nachts.“  
+- *Arzt:* „Haben Sie bemerkt, dass die Beschwerden bei bestimmten Tätigkeiten, wie Tippen oder Greifen, zunehmen?“
+
+---
+
+**2. Schmerzlokalisation und Symptomcharakteristik**  
+**Ziel:**  
+- Detaillierte Erfassung, wo genau die Schmerzen und das Kribbeln auftreten (Daumen, Zeigefinger, Mittelfinger) und wie sie sich anfühlen.
+
+**Anleitung:**  
+- Fragen zur genauen Lokalisation und zum Charakter der Schmerzen und sensorischen Veränderungen stellen.
+
+**Beispielfragen:**  
+- „Wo genau spüren Sie das Kribbeln – in Daumen, Zeige- oder Mittelfinger?“  
+- „Wie würden Sie den Schmerz beschreiben – dumpf, stechend oder brennend?“  
+- „Strahlen die Beschwerden in den Unterarm aus?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Das Kribbeln ist vor allem im Daumen und Zeigefinger spürbar, begleitet von einem brennenden Schmerz.“  
+- *Arzt:* „Verschlimmern sich die Symptome bei Bewegung oder längerer Belastung?“
+
+---
+
+**3. Zeitlicher Verlauf und Dynamik der Symptome**  
+**Ziel:**  
+- Klärung, wann die Beschwerden erstmals auftraten, ob sie allmählich begannen und wie sich der Verlauf entwickelt hat.
+
+**Anleitung:**  
+- Nach dem Beginn der Symptome und möglichen Schwankungen im Tagesverlauf fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie die ersten Symptome bemerkt?“  
+- „Haben sich die Beschwerden im Laufe der Zeit verstärkt?“  
+- „Gibt es Tageszeiten, zu denen die Symptome besonders stark auftreten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Symptome begannen vor etwa sechs Monaten und haben sich allmählich verschlechtert, besonders nachts.“  
+- *Arzt:* „Treffen die Beschwerden auch im Ruhezustand zu, oder treten sie vor allem bei Belastung auf?“
+
+---
+
+**4. Funktionseinschränkung und Alltagsaktivitäten**  
+**Ziel:**  
+- Erfassung, inwieweit die Beschwerden die Handfunktion und alltägliche Aktivitäten beeinträchtigen.
+
+**Anleitung:**  
+- Fragen zur Beeinträchtigung bei Tätigkeiten wie Schreiben, Greifen oder Heben stellen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Greifen oder Halten von Gegenständen?“  
+- „Beeinträchtigen die Beschwerden Ihre Arbeit oder Freizeitaktivitäten?“  
+- „Müssen Sie bestimmte Tätigkeiten einschränken?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ja, ich habe Probleme beim Schreiben und Halten von Gegenständen, was meinen Arbeitsalltag stark beeinträchtigt.“  
+- *Arzt:* „In welchem Maße schränkt Sie dies in Ihrem Alltag ein – auf einer Skala von 0 bis 10?“
+
+---
+
+**5. Sensibilitätsstörungen und Kribbeln**  
+**Ziel:**  
+- Erfassen von sensorischen Veränderungen wie Kribbeln, Taubheitsgefühlen oder vermindertem Tastgefühl.
+
+**Anleitung:**  
+- Fragen zur Art und Intensität der Sensibilitätsstörungen stellen.
+
+**Beispielfragen:**  
+- „Spüren Sie ein Kribbeln oder Taubheitsgefühl in Ihrer Hand?“  
+- „Verändert sich dieses Gefühl bei bestimmten Bewegungen?“  
+- „Wie stark empfinden Sie diese Störungen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich verspüre ein anhaltendes Kribbeln, das besonders nachts sehr störend ist.“  
+- *Arzt:* „Beeinflusst das Kribbeln auch Ihre Feinmotorik, wie das Tippen auf der Tastatur?“
+
+---
+
+**6. Belastungssituation und Überlastung**  
+**Ziel:**  
+- Erfragen, ob die Symptome mit beruflicher oder sportlicher Überlastung in Zusammenhang stehen.
+
+**Anleitung:**  
+- Fragen zu Arbeitsgewohnheiten, Handbelastungen und wiederholten Tätigkeiten stellen.
+
+**Beispielfragen:**  
+- „Üben Sie beruflich oder privat Tätigkeiten aus, die Ihre Hände stark beanspruchen?“  
+- „Hat sich Ihr Arbeitsalltag in letzter Zeit verändert?“  
+- „Gibt es Tätigkeiten, nach denen die Symptome besonders stark auftreten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich arbeite täglich am Computer und fühle mich nach längerer Arbeit mit der Hand überlastet.“  
+- *Arzt:* „Haben Sie schon ergonomische Maßnahmen ausprobiert?“
+
+---
+
+**7. Vorherige Behandlungsversuche und Selbstmaßnahmen**  
+**Ziel:**  
+- Erfassen, welche Maßnahmen der Patient bereits zur Linderung der Beschwerden ergriffen hat.
+
+**Anleitung:**  
+- Fragen zur Einnahme von Schmerzmitteln, Anwendung von Kälte-/Wärmebehandlungen oder Ergonomieanpassungen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie bereits Schmerzmittel eingenommen?“  
+- „Haben Sie schon Kälte- oder Wärmeanwendungen ausprobiert?“  
+- „Welche Maßnahmen haben Ihnen bisher geholfen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich nehme gelegentlich Ibuprofen und benutze Kühlkompressen, aber der Effekt ist nur kurzfristig.“  
+- *Arzt:* „Haben Sie bereits ergonomische Anpassungen an Ihrem Arbeitsplatz vorgenommen?“
+
+---
+
+**8. Vorherige Diagnostik und bildgebende Verfahren**  
+**Ziel:**  
+- Erfassen, ob bereits diagnostische Maßnahmen (z. B. Nervenleitungsstudien, Ultraschall, MRT) durchgeführt wurden.
+
+**Anleitung:**  
+- Fragen zu bisherigen Untersuchungen und deren Befunden stellen.
+
+**Beispielfragen:**  
+- „Wurden bei Ihnen schon Nervenleitungsuntersuchungen oder bildgebende Verfahren durchgeführt?“  
+- „Gab es Befunde, die auf eine Kompression des Nervus medianus hindeuten?“  
+- „Wann wurde die letzte Diagnostik vorgenommen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich hatte vor einigen Wochen eine Ultraschalluntersuchung, die Hinweise auf eine Kompression im Karpaltunnel ergab.“  
+- *Arzt:* „Wurde bereits eine elektrophysiologische Untersuchung durchgeführt?“
+
+---
+
+**9. Vorerkrankungen im Bereich der Hand und des Nervensystems**  
+**Ziel:**  
+- Erfassen, ob bereits andere Erkrankungen vorliegen, die die Symptome beeinflussen könnten.
+
+**Anleitung:**  
+- Fragen zu bekannten Erkrankungen wie Diabetes, rheumatischen Erkrankungen oder vorangegangenen Handverletzungen stellen.
+
+**Beispielfragen:**  
+- „Leiden Sie an chronischen Erkrankungen, die Ihre Nervenfunktion beeinträchtigen könnten?“  
+- „Hatten Sie in der Vergangenheit Verletzungen oder Operationen im Bereich der Hand?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe keinen bekannten Diabetes oder andere systemische Erkrankungen, die die Nerven betreffen.“  
+- *Arzt:* „Das hilft uns, die Beschwerden primär dem Karpaltunnelsyndrom zuzuordnen.“
+
+---
+
+**10. Weitere relevante Anamneseaspekte**  
+**Ziel:**  
+- Erfassen zusätzlicher Risikofaktoren wie Übergewicht, berufliche Belastungen und Handstress.
+
+**Anleitung:**  
+- Offene Fragen zu Lebensstil, Beruf und allgemeinen Risikofaktoren stellen.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihren beruflichen Alltag beschreiben?“  
+- „Haben Sie Übergewicht oder andere Risikofaktoren, die Ihre Nerven belasten könnten?“  
+- „Gab es in letzter Zeit besondere Belastungen, die Ihre Symptome beeinflussen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich arbeite viel am Computer, was meine Symptome vermutlich verschlimmert, und habe gelegentlich Übergewicht.“  
+- *Arzt:* „Diese Faktoren fließen in die Gesamtbeurteilung ein.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Karpaltunnelsyndrom**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen Befindens und der Vitalität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines körperliches Befinden beschreiben?“  
+- „Fühlen Sie sich im Alltag energiegeladen oder eher erschöpft?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich meistens normal, aber während der Beschwerden in der Hand bin ich oft angespannt.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassen, ob sich der Appetit oder die Ernährungsgewohnheiten verändert haben, auch wenn dies weniger zentral für das Syndrom ist.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie regelmäßig und ausgewogen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine Essgewohnheiten haben sich nicht wesentlich verändert.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Überprüfung, ob es signifikante Veränderungen im Gewicht gibt, die auf einen allgemein gestörten Gesundheitszustand hindeuten.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt an Gewicht zu- oder abgenommen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Gewicht ist stabil, ich habe keine Veränderungen festgestellt.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schmerzen und nächtliche Beschwerden (z. B. Kribbeln) den Schlaf beeinträchtigen können.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Wacht Ihre Hand nachts vermehrt auf?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, ich werde oft von dem Kribbeln in meiner Hand geweckt und schlafe dadurch unruhig.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung von Veränderungen im Wärmeempfinden, die indirekt durch Stress oder Schmerzen entstehen können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich in den betroffenen Händen häufig ungewöhnlich warm oder kalt?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Nein, das Temperaturgefühl in der Hand ist für mich normal.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Bewertung der allgemeinen Energie und Belastbarkeit, auch wenn das Syndrom primär lokal begrenzt ist.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm?“  
+- „Beeinträchtigt der Zustand Ihre generelle Leistungsfähigkeit?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine allgemeine Energie ist normal, nur die Hand ist belastet.“
+
+---
+
+**7. Weitere vegetative Symptome**  
+**Ziel:**  
+- Erfassung zusätzlicher vegetativer Beschwerden, die in Zusammenhang mit chronischem Stress auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie vermehrt Schwitzen oder Herzklopfen bemerkt?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Nein, ich habe keine weiteren vegetativen Symptome festgestellt.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit Erkrankungen vorlagen, die den Nervus medianus oder die Handfunktion beeinträchtigen könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Handverletzungen oder Nervenprobleme?“  
+- „Leiden Sie an chronischen Erkrankungen wie Diabetes, die neuropathische Beschwerden verursachen können?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte bisher keine relevanten Handverletzungen, und bei mir liegt kein Diabetes vor.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob bereits operative Eingriffe im Handbereich erfolgt sind, die Einfluss auf die aktuelle Symptomatik haben könnten.
+
+**Beispielfragen:**  
+- „Wurden Sie schon einmal operativ am Handgelenk behandelt?“  
+- „Gab es in der Vergangenheit Eingriffe, die zu Narben oder Nervenschäden führten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche Medikamente aktuell eingenommen werden, die Einfluss auf Nerven oder die Schmerzempfindung haben könnten.
+
+**Beispielfragen:**  
+- „Nehmen Sie regelmäßig Schmerzmittel ein?“  
+- „Gab es Änderungen in Ihrer Medikation, die mit dem Auftreten der Symptome zusammenfallen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich nehme gelegentlich Ibuprofen ein, ansonsten keine speziellen Medikamente.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die für eventuelle Behandlungen berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen Schmerzmittel oder andere Medikamente?“  
+- „Gab es in der Vergangenheit unerwünschte Reaktionen auf Medikamente?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von Risikofaktoren und belastenden Einflüssen, die zur Entstehung des Karpaltunnelsyndroms beitragen können.
+
+**Beispiele:**  
+- Übermäßige Nutzung der Hand am Computer, repetitive Bewegungen, ergonomische Fehlbelastung.
+
+**Beispielfragen:**  
+- „Wie viele Stunden arbeiten Sie täglich am Computer?“  
+- „Haben Sie ergonomische Hilfsmittel am Arbeitsplatz?“  
+- „Gab es Veränderungen in Ihren Arbeitsgewohnheiten, die zu einer Überlastung führen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite täglich mehr als 8 Stunden am Computer und habe bisher keine speziellen ergonomischen Anpassungen vorgenommen.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von Karpaltunnelsyndrom oder anderen Nervenleiden vorkommen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Karpaltunnelsyndrom oder ähnlichen Beschwerden?“  
+- „Wurden bei nahen Verwandten Nervenprobleme diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es keine bekannten Fälle von Karpaltunnelsyndrom.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf die Entstehung und den Verlauf des Karpaltunnelsyndroms haben können.
+
+**Relevante Bereiche:**  
+- Berufliche Belastungen, Arbeitsplatzgestaltung, Freizeitaktivitäten und Erholungsphasen.
+
+**Beispielfragen:**  
+- „Wie sieht Ihr beruflicher Alltag aus?“  
+- „Haben Sie regelmäßige Pausen und ergonomische Arbeitsbedingungen?“  
+- „Beeinflusst Ihr Beruf Ihre Handbelastung?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich arbeite in einem Büro ohne ergonomisch eingerichteten Arbeitsplatz, was meine Beschwerden verstärkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung anderer Ursachen von Handbeschwerden, die ähnliche Symptome wie das Karpaltunnelsyndrom verursachen können.
+
+**Beispiele:**  
+1. Periphere Neuropathien – z. B. durch Diabetes.  
+2. Nervenkompressionen im Bereich des Ellenbogens oder Schultergürtels.  
+3. Tendinitis oder Sehnenscheidenentzündung.  
+4. Zervikale Radikulopathie – Nervenwurzelreizung in der Halswirbelsäule.
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch andere neurologische Probleme erklärt werden?“  
+- „Wurden andere Kompressionssyndrome bereits ausgeschlossen?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Die elektrophysiologischen Untersuchungen deuten primär auf eine Kompression im Karpaltunnel hin, andere Ursachen wurden bislang nicht bestätigt.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen Daten, klinischen Befunden und ersten Untersuchungen.
+
+**Kriterien:**  
+- Vorhandensein von Schmerzen, Kribbeln und Sensibilitätsstörungen in den medianal versorgten Fingern.  
+- Belastungsabhängige Verschlechterung der Symptome und Beeinträchtigung der Handfunktion.  
+- Befunde in elektrophysiologischen Untersuchungen und bildgebenden Verfahren, die eine Nervenkompression bestätigen.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden Symptome und der bisherigen Befunde besteht der Verdacht auf ein Karpaltunnelsyndrom, das durch weiterführende Untersuchungen weiter abgeklärt werden muss.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung der weiteren diagnostischen und therapeutischen Schritte zur Bestätigung der Diagnose und zur Planung der Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Bildgebende und elektrophysiologische Verfahren:**  
+- **Ultraschalluntersuchung:** Zur Darstellung der Nerven und Weichteile im Bereich des Karpaltunnels.  
+- **Nervenleitungsstudien und Elektromyographie (EMG):** Zur funktionellen Beurteilung des Nervus medianus.
+
+**Therapeutische Interventionen:**  
+- **Konservative Therapie:** Einsatz von Schienen, Ergonomieanpassungen, Physiotherapie und medikamentöser Schmerzbehandlung (z. B. NSAR).  
+- **Injektionstherapie:** Lokale Kortikosteroidinjektion bei anhaltenden Beschwerden.  
+- **Operative Therapie:** Bei konservativ nicht ausreichendem Behandlungserfolg (z. B. Karpaltunnelspaltung).
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich weiteren elektrophysiologischen Untersuchungen zu unterziehen?“  
+- „Wären Sie offen für eine konservative Therapie mit ergonomischen Anpassungen und Physiotherapie?“  
+- „Falls erforderlich, würden Sie auch eine operative Behandlung in Betracht ziehen?“
+    `
+  },
+},
+somatoforme_stoerung: {
+  name: "Somatoforme Störung",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Somatoforme Störung**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassen, weshalb der Patient aufgrund körperlicher Beschwerden ohne nachweisbare organische Ursache vorstellig wird.
+
+**Anleitung:**  
+- Offene Fragen stellen, um die Art und Dauer der Beschwerden sowie den subjektiven Leidensdruck zu eruieren.
+
+**Beispielfragen:**  
+- „Was führt Sie heute zu uns?“  
+- „Welche körperlichen Beschwerden plagen Sie, und seit wann bestehen diese?“  
+- „Haben Sie bereits verschiedene Untersuchungen hinter sich, die Ihre Symptome nicht erklären konnten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich leide seit über sechs Monaten unter anhaltenden Schmerzen in verschiedenen Körperregionen, obwohl alle Untersuchungen unauffällig waren.“  
+- *Arzt:* „Wie stark beeinträchtigen diese Beschwerden Ihren Alltag und Ihr Wohlbefinden?“  
+
+---
+
+**2. Beschwerdecharakteristik und Symptomvariabilität**  
+**Ziel:**  
+- Detaillierte Erfassung der Art, Intensität und Variabilität der körperlichen Symptome, die typisch für somatoforme Störungen sind.
+
+**Anleitung:**  
+- Fragen stellen, die klären, ob die Symptome wechselhaft, diffuse und schwer lokalisierbar sind.
+
+**Beispielfragen:**  
+- „Wie würden Sie die Art Ihrer Schmerzen oder Beschwerden beschreiben – sind sie konstant, intermittierend oder wechselhaft?“  
+- „Können Sie die Beschwerden genau lokalisieren oder sind sie diffus verteilt?“  
+- „Verändern sich die Symptome in Abhängigkeit von Ihrer Stimmung oder Stressbelastung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Schmerzen sind oft diffus, wechseln in ihrer Intensität und können an verschiedenen Körperstellen auftreten, ohne dass eine klare Ursache feststellbar ist.“  
+- *Arzt:* „Beeinträchtigen diese Schwankungen auch Ihr alltägliches Funktionieren?“
+
+---
+
+**3. Zeitverlauf und Verlaufsmuster**  
+**Ziel:**  
+- Erfassen, wann die Beschwerden erstmals auftraten, wie sie sich entwickelt haben und ob sie konstant oder episodisch auftreten.
+
+**Anleitung:**  
+- Nach dem zeitlichen Beginn und möglichen Veränderungen im Verlauf fragen.
+
+**Beispielfragen:**  
+- „Wann haben Sie zum ersten Mal diese Beschwerden bemerkt?“  
+- „Haben sich die Symptome über die Zeit verändert – wurden sie stärker oder schwächer?“  
+- „Gibt es bestimmte Auslöser oder Situationen, in denen die Beschwerden zunehmen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden traten vor etwa einem Jahr auf und sind seither in ihrer Intensität und Häufigkeit schwankend.“  
+- *Arzt:* „Gab es belastende Ereignisse, die den Verlauf Ihrer Symptome beeinflusst haben?“
+
+---
+
+**4. Vorangegangene Untersuchungen und Behandlungen**  
+**Ziel:**  
+- Erfassen, welche diagnostischen Maßnahmen bereits durchgeführt wurden und ob Behandlungsversuche erfolgt sind.
+
+**Anleitung:**  
+- Fragen zu bisherigen ärztlichen Untersuchungen und Therapieansätzen stellen.
+
+**Beispielfragen:**  
+- „Welche Untersuchungen wurden bereits durchgeführt, um die Ursache Ihrer Beschwerden zu finden?“  
+- „Hatten Sie schon therapeutische Maßnahmen, und wenn ja, welche Wirkung hatten diese?“  
+- „Gab es stationäre Behandlungen oder ambulante Therapieversuche?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich wurde bereits mehrfach untersucht – Bluttests, Bildgebungsverfahren und neurologische Untersuchungen – aber es konnte keine organische Ursache gefunden werden. Auch Therapieversuche in Psychotherapie haben bisher nur begrenzte Wirkung gezeigt.“  
+- *Arzt:* „Welche Art von Therapien wurden bisher durchgeführt, und wie lange haben diese angedauert?“
+
+---
+
+**5. Subjektiver Leidensdruck und Funktionsbeeinträchtigung**  
+**Ziel:**  
+- Erfassung der subjektiven Belastung und der Beeinträchtigung im Alltag durch die körperlichen Beschwerden.
+
+**Anleitung:**  
+- Fragen zu psychosozialen Auswirkungen, Arbeitsfähigkeit und sozialen Aktivitäten stellen.
+
+**Beispielfragen:**  
+- „Wie sehr beeinträchtigen die Beschwerden Ihren Alltag?“  
+- „Haben Sie Schwierigkeiten bei der Arbeit oder im privaten Leben?“  
+- „Fühlen Sie sich emotional überfordert durch die ständigen körperlichen Symptome?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Die Beschwerden rauben mir viel Lebensqualität; ich kann kaum arbeiten und fühle mich emotional ausgelaugt.“  
+- *Arzt:* „Das ist ein wichtiger Aspekt – inwiefern beeinflusst das auch Ihr soziales Leben?“
+
+---
+
+**6. Wahrnehmung des eigenen Körpers und Krankheitsangst**  
+**Ziel:**  
+- Erfassung, wie der Patient seinen Körper wahrnimmt und ob Ängste vor einer schwerwiegenden Erkrankung bestehen.
+
+**Anleitung:**  
+- Fragen zur Körperwahrnehmung, Selbstbeobachtung und zu Ängsten bezüglich einer organischen Erkrankung stellen.
+
+**Beispielfragen:**  
+- „Wie nehmen Sie Ihren eigenen Körper wahr?“  
+- „Haben Sie Angst, dass Ihre Beschwerden auf eine ernsthafte Erkrankung hindeuten?“  
+- „Überwachen Sie ständig Ihre Symptome und suchen Sie häufig ärztliche Hilfe?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich bin ständig besorgt, dass etwas Ernstes vorliegen könnte, obwohl mir schon mehrfach gesagt wurde, dass keine organische Ursache erkennbar ist.“  
+- *Arzt:* „Diese Krankheitsangst ist typisch und sollte ebenfalls therapeutisch adressiert werden.“
+
+---
+
+**7. Psychosoziale Stressfaktoren und Lebensumstände**  
+**Ziel:**  
+- Erfassen, ob psychosoziale Belastungen zur Entwicklung und Aufrechterhaltung der somatoformen Störung beitragen.
+
+**Anleitung:**  
+- Fragen zu persönlichen, familiären und beruflichen Stressfaktoren stellen.
+
+**Beispielfragen:**  
+- „Gab es in Ihrem Leben belastende Ereignisse oder anhaltenden Stress?“  
+- „Wie wirkt sich Ihr beruflicher Alltag auf Ihre Gesundheit aus?“  
+- „Fühlen Sie sich von Ihrem sozialen Umfeld unterstützt?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich stehe unter ständigem beruflichem und familiärem Stress und habe das Gefühl, dass ich keine ausreichende Unterstützung bekomme.“  
+- *Arzt:* „Diese Stressoren können erheblich zur Symptomatik beitragen.“
+
+---
+
+**8. Körperliche Aktivität und Erholungsphasen**  
+**Ziel:**  
+- Erfassen, ob der Patient körperlich aktiv ist oder ausreichende Erholungsphasen hat, was den allgemeinen Gesundheitszustand beeinflussen kann.
+
+**Anleitung:**  
+- Fragen zu Sport, Freizeitaktivitäten und Erholungszeiten stellen.
+
+**Beispielfragen:**  
+- „Sind Sie regelmäßig körperlich aktiv?“  
+- „Wie verbringen Sie Ihre Freizeit, und finden Sie auch Ruhephasen?“  
+- „Beeinträchtigt der chronische Stress Ihre Erholungsfähigkeit?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich habe kaum noch Energie für sportliche Aktivitäten und finde kaum Erholung im Alltag.“  
+- *Arzt:* „Das könnte den Zustand weiter verschlechtern und sollte in der Therapie berücksichtigt werden.“
+
+---
+
+**9. Subjektive Wahrnehmung der Beschwerden**  
+**Ziel:**  
+- Erfassen, wie intensiv der Patient seine körperlichen Beschwerden empfindet und wie diese seinen Alltag prägen.
+
+**Anleitung:**  
+- Fragen zur subjektiven Schmerzwahrnehmung, Müdigkeit und allgemeinen Symptomintensität stellen.
+
+**Beispielfragen:**  
+- „Wie stark würden Sie Ihre körperlichen Beschwerden auf einer Skala von 0 bis 10 bewerten?“  
+- „Fühlen Sie sich oft von Ihren Symptomen überwältigt?“  
+- „Beeinträchtigen diese Symptome Ihre Lebensqualität erheblich?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich würde meine Beschwerden oft mit 7 oder 8 bewerten, sie dominieren meinen Alltag.“  
+- *Arzt:* „Diese Einschätzung ist wichtig, um den Therapiebedarf zu ermitteln.“
+
+---
+
+**10. Akute Ereignisse und vorangegangene Krisen**  
+**Ziel:**  
+- Erfassen, ob es in der Vergangenheit akute Krisen oder Ereignisse gab, die in Zusammenhang mit den Beschwerden stehen könnten.
+
+**Anleitung:**  
+- Fragen zu kürzlich erlebten Krisen oder gesundheitlichen Notfällen stellen.
+
+**Beispielfragen:**  
+- „Gab es in letzter Zeit Ereignisse, die Ihre Symptome verschlimmert haben?“  
+- „Mussten Sie bereits Notfallmaßnahmen in Anspruch nehmen?“  
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient:* „Ich musste in der Vergangenheit mehrfach medizinische Hilfe in Anspruch nehmen, da die Beschwerden sehr belastend waren.“  
+- *Arzt:* „Diese Ereignisse unterstreichen den Schweregrad Ihrer Symptomatik.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Somatoformer Störung**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen und seelischen Befindens.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden derzeit beschreiben?“  
+- „Fühlen Sie sich häufig erschöpft oder kraftlos?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft ausgelaugt und körperlich schwach, auch ohne erkennbare Ursache.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Feststellung, ob sich Essgewohnheiten verändert haben, was auf eine somatoforme Belastung hinweisen kann.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit festgestellt?“  
+- „Essen Sie weniger oder unregelmäßig?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein Appetit ist oft vermindert, und ich esse unregelmäßig, was mir zusätzlich Sorgen bereitet.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Dokumentation von ungewolltem Gewichtsverlust oder Gewichtszunahme, die als vegetative Reaktion auftreten können.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt Gewicht verloren oder zugenommen?“  
+- „Wie hat sich Ihr Gewicht verändert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe ohne bewusste Diät einen leichten Gewichtsverlust bemerkt.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da Schlafstörungen häufig bei somatoformen Störungen vorkommen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich schlafe unruhig und wache oft auf, ohne mich wirklich erholt zu fühlen.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung von Veränderungen im Wärmeempfinden, z. B. Kälteempfindlichkeit, die als vegetatives Symptom auftreten können.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich häufig ungewöhnlich kalt oder warm?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe oft das Gefühl, dass mir kalt ist, auch wenn es außen normal ist.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Bewertung der körperlichen und geistigen Energie sowie der Belastbarkeit.
+
+**Beispielfragen:**  
+- „Fühlen Sie sich tagsüber oft energiearm oder antriebslos?“  
+- „Beeinträchtigt dieser Zustand Ihre täglichen Aktivitäten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich ständig müde und habe wenig Antrieb, was meinen Alltag stark einschränkt.“
+
+---
+
+**7. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Erfassen, ob Symptome wie Herzrasen oder Schwindel auftreten, die häufig mit vegetativen Dysregulationen einhergehen.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz schneller schlägt oder unregelmäßig pocht?“  
+- „Fühlen Sie sich bei leichter Belastung schwindelig?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ja, manchmal bekomme ich schon bei geringster Anstrengung Herzrasen und Schwindel.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Einschätzung des subjektiven vegetativen Zustands und der Lebensqualität.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden beschreiben?“  
+- „Welche vegetativen Symptome stören Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mein allgemeines Wohlbefinden ist stark beeinträchtigt – ich fühle mich körperlich und seelisch sehr belastet.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits somatoforme oder andere psychische Störungen (z. B. Depression, Angststörungen) diagnostiziert wurden, die das Risiko für eine somatoforme Störung erhöhen.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal ähnliche Beschwerden oder somatoforme Symptome?“  
+- „Wurden bei Ihnen in der Vergangenheit Depressionen oder Angststörungen diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich hatte in der Vergangenheit Phasen, in denen ich mich sehr bedrückt und ängstlich fühlte, ohne dass ein organischer Befund vorlag.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe erfolgt sind, die eventuell zu anhaltenden körperlichen Beschwerden führten, auch wenn diese nicht ursächlich für die somatoforme Störung sind.
+
+**Beispielfragen:**  
+- „Wurden Sie jemals operativ behandelt, und wenn ja, in welchem Zusammenhang?“  
+- „Gab es nach früheren Eingriffen Komplikationen, die Sie noch belasten?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich wurde bisher nicht operiert, abgesehen von kleineren ambulanten Eingriffen, die keinen Einfluss auf meine aktuellen Beschwerden haben.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, welche medikamentösen Behandlungen aktuell oder in der Vergangenheit eingenommen wurden, insbesondere solche zur Behandlung von psychischen Symptomen.
+
+**Beispielfragen:**  
+- „Nehmen Sie aktuell Medikamente, wie Antidepressiva oder Anxiolytika?“  
+- „Gab es in der Vergangenheit medikamentöse Therapien im Zusammenhang mit Ihren Beschwerden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich habe in der Vergangenheit Antidepressiva eingenommen, jedoch variiert die Wirkung, und momentan nehme ich keine spezifische Medikation mehr.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien oder Unverträglichkeiten vorliegen, die bei der medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie Allergien gegen bestimmte Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen, die berücksichtigt werden müssen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von belastenden Faktoren und Risikofaktoren, die zur Entwicklung und Aufrechterhaltung der somatoformen Störung beitragen können.
+
+**Beispiele:**  
+- Chronischer Stress, familiäre Konflikte, hohe Leistungsanforderungen, gesellschaftliche Ideale.
+
+**Beispielfragen:**  
+- „Erleben Sie in Ihrem Alltag einen hohen Stresspegel, sei es beruflich oder privat?“  
+- „Gibt es belastende Ereignisse oder Konflikte in Ihrem Umfeld?“  
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich stehe unter konstantem beruflichen und familiären Stress, der mich sehr belastet.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie Fälle von somatoformen Störungen, Depressionen oder Angststörungen vorkommen, die das individuelle Risiko erhöhen können.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie ähnliche Beschwerden oder psychische Erkrankungen?“  
+- „Wurden bei nahen Verwandten somatoforme Störungen oder andere psychische Erkrankungen diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient:* „In meiner Familie gibt es mehrere Fälle von Depressionen und Angststörungen, aber keine spezifisch somatoformen Störungen.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen und beruflichen Lebensumstände, die Einfluss auf die Entwicklung und den Verlauf der somatoformen Störung haben können.
+
+**Relevante Bereiche:**  
+- Beruflicher Stress, soziale Isolation, Unterstützung durch Familie und Freunde, Freizeitaktivitäten.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Lebenssituation beschreiben?“  
+- „Haben Sie ein unterstützendes soziales Umfeld?“  
+- „Beeinflusst Ihr Beruf Ihr psychisches Wohlbefinden?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Ich fühle mich oft isoliert und habe das Gefühl, dass mein beruflicher Stress meine Beschwerden verstärkt.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen psychischen und somatischen Erkrankungen, die ähnliche Symptome hervorrufen können.
+
+**Beispiele:**  
+1. Major Depression – mit körperlichen Symptomen wie Müdigkeit und Appetitlosigkeit.  
+2. Angststörungen – die ebenfalls zu körperlichen Beschwerden führen können.  
+3. Somatisierungsstörung – bei der multiple körperliche Beschwerden ohne organische Grundlage auftreten.  
+4. Hypothyreose – als endokrine Ursache für Müdigkeit und Gewichtszunahme.
+
+**Beispielfragen:**  
+- „Können Ihre Symptome auch durch eine Depression oder eine Angststörung erklärt werden?“  
+- „Wurden andere körperliche Ursachen, wie eine Schilddrüsenunterfunktion, bereits ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient:* „Meine bisherigen Untersuchungen zeigen keine organische Ursache, und meine Symptome passen am ehesten zu einer somatoformen Störung.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den anamnestischen und vegetativen Befunden.
+
+**Kriterien:**  
+- Vorliegen vielfältiger, wechselhafter körperlicher Beschwerden ohne nachweisbare organische Ursache.  
+- Hoher subjektiver Leidensdruck und wiederholte Arztbesuche trotz unauffälliger Befunde.  
+- Psychosoziale Belastungen, die das Symptombild verstärken.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden anamnestischen Daten und des hohen subjektiven Leidensdrucks besteht der Verdacht auf eine somatoforme Störung, die im Rahmen einer interdisziplinären Therapie weiter abgeklärt werden muss.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und zur Einleitung einer adäquaten Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Diagnostische Verfahren:**  
+- **Umfassende Blutuntersuchungen:** Ausschluss organischer Ursachen (z. B. Schilddrüsenwerte, Entzündungsparameter).  
+- **Psychologische Diagnostik:** Einsatz standardisierter Fragebögen (z. B. Somatic Symptom Scale, PHQ-15) und ausführliche klinische Interviews zur Erfassung der psychischen Belastung.
+
+**Therapeutische Interventionen:**  
+- **Psychotherapie:** Vorzugsweise kognitive Verhaltenstherapie oder interpersonelle Therapie zur Bearbeitung der somatoformen Beschwerden und Krankheitsangst.  
+- **Stressmanagement und Entspannungstechniken:** Training zur Reduktion von Stress und Verbesserung der Körperwahrnehmung.  
+- **Multidisziplinäre Betreuung:** Zusammenarbeit zwischen Psychiater, Psychotherapeut und Hausarzt zur ganzheitlichen Behandlung.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, sich einer intensiven psychotherapeutischen Behandlung zu unterziehen?“  
+- „Wären Sie offen für die Teilnahme an einem Stressmanagement-Programm?“  
+- „Haben Sie bereits Erfahrungen mit Entspannungstechniken gesammelt?“
+
+    `
+  },
+},
+beziehungskonflikt_emotionale_distanzierung: {
+  name: "Beziehungskonflikt / Emotionale Distanzierung",
+  currentAnamnese: {
+    additionalInfo: `
+### **Aktuelle Anamnese: Beziehungskonflikt / Emotionale Distanzierung**
+
+---
+
+**1. Besuchsgrund erfragen**  
+**Ziel:**  
+- Erfassung der Hauptgründe, weshalb der Patient oder die Patientin aufgrund von Beziehungsproblemen und emotionaler Distanzierung vorstellig wird.
+
+**Anleitung:**  
+- Offene Fragen stellen, um den subjektiven Leidensdruck, Konflikte in Beziehungen und emotionale Rückzüge zu erfassen.
+
+**Beispielfragen:**  
+- „Was hat Sie dazu veranlasst, heute Hilfe zu suchen?“  
+- „Welche Probleme erleben Sie aktuell in Ihrer Beziehung?“  
+- „Haben Sie das Gefühl, dass sich Ihre emotionale Nähe zu Ihrem Partner verändert hat?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich fühle mich in meiner Partnerschaft zunehmend isoliert und es kommt häufig zu Konflikten, die mich sehr belasten.“  
+- *Arzt:* „Seit wann haben Sie diese Schwierigkeiten, und gab es einen auslösenden Vorfall?“
+
+---
+
+**2. Beschreibung der Beziehungskonflikte**  
+**Ziel:**  
+- Detaillierte Erfassung der Konfliktsituationen, Streitpunkte und Kommunikationsprobleme in der Beziehung.
+
+**Anleitung:**  
+- Fragen stellen, die klären, welche Themen oder Verhaltensweisen zu Konflikten führen.
+
+**Beispielfragen:**  
+- „Welche Themen führen am häufigsten zu Auseinandersetzungen?“  
+- „Wie gehen Sie und Ihr Partner miteinander um, wenn Konflikte auftreten?“  
+- „Fühlen Sie sich gehört und verstanden in Ihrer Beziehung?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Es geht vor allem um alltägliche Entscheidungen und mangelnde Unterstützung – ich habe das Gefühl, dass meine Bedürfnisse ignoriert werden.“  
+- *Arzt:* „Welche Auswirkungen haben diese Konflikte auf Ihr Selbstwertgefühl und Ihre Stimmung?“
+
+---
+
+**3. Emotionale Distanzierung und Rückzug**  
+**Ziel:**  
+- Erfassen, inwieweit sich der Patient emotional von seinem Partner distanziert und welche Auswirkungen dies auf das individuelle Wohlbefinden hat.
+
+**Anleitung:**  
+- Fragen zu Veränderungen in der emotionalen Nähe, dem Gefühl von Einsamkeit und Rückzug aus der Beziehung stellen.
+
+**Beispielfragen:**  
+- „Haben Sie das Gefühl, dass Sie sich emotional von Ihrem Partner entfernen?“  
+- „Wie erleben Sie Ihre Intimität und Nähe in der Beziehung?“  
+- „Fühlen Sie sich oft allein, auch wenn Ihr Partner anwesend ist?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich fühle mich innerlich leer und ziehe mich zunehmend zurück, selbst wenn wir zusammen sind.“  
+- *Arzt:* „Haben Sie bereits versucht, mit Ihrem Partner über diese Gefühle zu sprechen?“
+
+---
+
+**4. Psychische Belastung und Stress**  
+**Ziel:**  
+- Erfassung der psychischen Belastung und des emotionalen Stresses, der durch Beziehungskonflikte hervorgerufen wird.
+
+**Anleitung:**  
+- Fragen stellen, die klären, inwieweit Beziehungskonflikte zu allgemeiner Anspannung, Angst oder depressiven Verstimmungen führen.
+
+**Beispielfragen:**  
+- „Wie stark belasten Sie die aktuellen Konflikte in Ihrem Alltag?“  
+- „Haben Sie Symptome wie Angst, innere Unruhe oder depressive Verstimmungen bemerkt?“  
+- „Beeinträchtigen diese Konflikte Ihre Schlafqualität?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich fühle mich ständig angespannt und habe Schwierigkeiten, abzuschalten – das führt auch zu Schlafproblemen.“  
+- *Arzt:* „Diese Belastungen sollten wir in der weiteren Diagnostik und Therapie berücksichtigen.“
+
+---
+
+**5. Kommunikationsverhalten und Konfliktlösung**  
+**Ziel:**  
+- Erfassen, wie der Patient Konflikte in der Beziehung kommuniziert und welche Lösungsstrategien (oder deren Fehlen) vorliegen.
+
+**Anleitung:**  
+- Fragen zu bisherigen Versuchen der Konfliktlösung und zur Kommunikation in der Partnerschaft stellen.
+
+**Beispielfragen:**  
+- „Wie gehen Sie und Ihr Partner mit Konflikten um?“  
+- „Haben Sie Strategien entwickelt, um Probleme anzusprechen?“  
+- „Fühlen Sie sich in der Lage, offen über Ihre Gefühle zu sprechen?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Oft schweige ich, um weitere Konflikte zu vermeiden, was aber dazu führt, dass sich Probleme anhäufen.“  
+- *Arzt:* „Haben Sie schon einmal professionelle Hilfe zur Verbesserung der Kommunikation in Anspruch genommen?“
+
+---
+
+**6. Auswirkungen auf das Selbstbild und Selbstwertgefühl**  
+**Ziel:**  
+- Erfassung, wie Beziehungskonflikte und emotionale Distanzierung das Selbstbild und Selbstwertgefühl beeinflussen.
+
+**Anleitung:**  
+- Fragen stellen, die klären, ob der Patient sich minderwertig fühlt oder sein Selbstwertgefühl leidet.
+
+**Beispielfragen:**  
+- „Wie schätzen Sie Ihr Selbstwertgefühl in Ihrer aktuellen Beziehungssituation ein?“  
+- „Fühlen Sie sich oft abgelehnt oder unwichtig?“  
+- „Hat sich Ihr Selbstbild im Laufe der Zeit verändert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich fühle mich häufig unsicher und habe das Gefühl, nicht genug zu sein.“  
+- *Arzt:* „Diese Aspekte sind zentral, um gezielt an Ihrem Selbstwert zu arbeiten.“
+
+---
+
+**7. Vorangegangene Therapieversuche und Selbsthilfemaßnahmen**  
+**Ziel:**  
+- Erfassen, ob der Patient bereits psychotherapeutische oder andere interventionelle Maßnahmen zur Bearbeitung der Beziehungskonflikte unternommen hat.
+
+**Anleitung:**  
+- Fragen zu bisherigen Therapieerfahrungen und Selbsthilfeansätzen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie bereits eine Paar- oder Einzeltherapie versucht?“  
+- „Welche Maßnahmen haben Sie ergriffen, um Ihre Situation zu verbessern?“  
+- „Gab es positive oder negative Erfahrungen in bisherigen Therapien?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich war schon in Einzeltherapie, jedoch ohne nachhaltige Verbesserung meiner Beziehungssituation.“  
+- *Arzt:* „Welche Aspekte der Therapie empfanden Sie als besonders hilfreich oder hinderlich?“
+
+---
+
+**8. Subjektiver Leidensdruck und Alltagseinschränkung**  
+**Ziel:**  
+- Erfassung, inwieweit die Beziehungskonflikte und emotionale Distanzierung den Alltag und das allgemeine Wohlbefinden beeinträchtigen.
+
+**Anleitung:**  
+- Fragen zur Beeinträchtigung von Beruf, Freizeit und sozialen Aktivitäten stellen.
+
+**Beispielfragen:**  
+- „Inwiefern beeinträchtigen die Beziehungskonflikte Ihren Alltag?“  
+- „Fühlen Sie sich in Ihrer Freizeit oder im Beruf eingeschränkt?“  
+- „Wie stark würden Sie den subjektiven Leidensdruck auf einer Skala von 0 bis 10 bewerten?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Die Konflikte belasten mich sehr – ich fühle mich oft überfordert und kann meine Freizeit kaum genießen.“  
+- *Arzt:* „Das gibt uns wichtige Hinweise auf den Behandlungsbedarf.“
+
+---
+
+**9. Wahrnehmung und Interpretation körperlicher Symptome**  
+**Ziel:**  
+- Erfassung, ob körperliche Beschwerden als Ausdruck der psychischen Belastung interpretiert werden und ob diese eine somatisierende Komponente haben.
+
+**Anleitung:**  
+- Fragen zur Verbindung von körperlichen Symptomen mit emotionalen Zuständen stellen.
+
+**Beispielfragen:**  
+- „Haben Sie körperliche Beschwerden, die Sie mit Ihren Beziehungskonflikten in Verbindung bringen?“  
+- „Wie interpretieren Sie Schmerzen oder Verspannungen in Ihrem Körper?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „Ich bekomme oft Kopfschmerzen und Magenbeschwerden, die ich mit dem ständigen Stress in der Beziehung verbinde.“  
+- *Arzt:* „Diese somatischen Symptome sind oft ein Hinweis auf eine tiefgreifende psychische Belastung.“
+
+---
+
+**10. Akute Krisen und emotionale Ausnahmesituationen**  
+**Ziel:**  
+- Erfassen, ob es in jüngerer Vergangenheit zu emotionalen Krisen oder akuten Konfliktsituationen kam, die das gegenwärtige Bild prägen.
+
+**Anleitung:**  
+- Fragen zu kürzlich erlebten Krisen oder stark belastenden Ereignissen stellen.
+
+**Beispielfragen:**  
+- „Gab es in letzter Zeit Ereignisse, die Ihre Beziehungssituation dramatisch verändert haben?“  
+- „Wie haben Sie auf akute Konfliktsituationen reagiert?“
+
+**Mögliche Antworten und Follow-ups:**  
+- *Patient/in:* „In den letzten Monaten gab es wiederholt heftige Auseinandersetzungen, die mich emotional sehr mitgenommen haben.“  
+- *Arzt:* „Diese akuten Ereignisse sollten wir in der weiteren Therapieplanung berücksichtigen.“
+    `
+  },
+  vegetativeAnamnese: {
+    additionalInfo: `
+### **Vegetative Anamnese bei Beziehungskonflikt / Emotionaler Distanzierung**
+
+---
+
+**1. Allgemeiner Gesundheitszustand**  
+**Ziel:**  
+- Erfassung des allgemeinen körperlichen und seelischen Befindens im Zusammenhang mit anhaltendem Stress.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Befinden aktuell einschätzen?“  
+- „Fühlen Sie sich häufig erschöpft oder angespannt?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich fühle mich oft erschöpft und emotional ausgelaugt, besonders nach Konfliktsituationen.“
+
+---
+
+**2. Appetit und Essgewohnheiten**  
+**Ziel:**  
+- Erfassung, ob sich Essgewohnheiten als Reaktion auf emotionalen Stress verändert haben.
+
+**Beispielfragen:**  
+- „Haben Sie Veränderungen in Ihrem Appetit bemerkt?“  
+- „Essen Sie mehr oder weniger als früher?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „In stressigen Phasen esse ich oft zu wenig, was zu einem verminderten Appetit führt.“
+
+---
+
+**3. Gewichtsentwicklung**  
+**Ziel:**  
+- Dokumentation von Gewichtsschwankungen, die durch emotionale Belastung hervorgerufen werden können.
+
+**Beispielfragen:**  
+- „Haben Sie in letzter Zeit ungewollt Gewicht verloren oder zugenommen?“  
+- „Wie hat sich Ihr Gewicht verändert?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich habe in stressigen Zeiten abgenommen, was mir Sorgen bereitet.“
+
+---
+
+**4. Schlafverhalten**  
+**Ziel:**  
+- Bewertung der Schlafqualität, da emotionale Belastungen häufig zu Schlafstörungen führen.
+
+**Beispielfragen:**  
+- „Haben Sie Schwierigkeiten beim Einschlafen oder Durchschlafen?“  
+- „Fühlen Sie sich nach dem Schlaf ausgeruht?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich schlafe unruhig und wache häufig auf, was meine Erschöpfung verstärkt.“
+
+---
+
+**5. Thermoregulation**  
+**Ziel:**  
+- Erfassung, ob emotionale Stresssituationen Veränderungen im Wärmeempfinden hervorrufen (z. B. Hitzewallungen oder Frösteln).
+
+**Beispielfragen:**  
+- „Fühlen Sie sich in stressigen Situationen oft plötzlich heiß oder kalt?“  
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ja, ich bemerke, dass mir in solchen Momenten oft schweißgebadet ist oder ich plötzlich friere.“
+
+---
+
+**6. Energielevel und Antrieb**  
+**Ziel:**  
+- Erfassung der körperlichen und geistigen Energie, da emotionale Distanzierung häufig mit Erschöpfung einhergeht.
+
+**Beispielfragen:**  
+- „Wie ist Ihr allgemeines Energielevel tagsüber?“  
+- „Haben Sie das Gefühl, dass Sie weniger Antrieb haben als früher?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich fühle mich oft kraftlos und antriebslos, was meinen Alltag stark beeinträchtigt.“
+
+---
+
+**7. Herz-Kreislauf-Reaktionen**  
+**Ziel:**  
+- Erfassen, ob durch anhaltenden Stress Symptome wie Herzrasen oder Schwindel auftreten.
+
+**Beispielfragen:**  
+- „Haben Sie bemerkt, dass Ihr Herz in stressigen Momenten schneller schlägt?“  
+- „Fühlen Sie sich bei emotionaler Belastung schwindelig?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ja, in akuten Stresssituationen bekomme ich oft Herzrasen und Schwindel.“
+
+---
+
+**8. Allgemeines Wohlbefinden**  
+**Ziel:**  
+- Zusammenfassende Bewertung des subjektiven vegetativen Zustands.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihr allgemeines Wohlbefinden derzeit beschreiben?“  
+- „Welche vegetativen Symptome stören Sie am meisten?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich fühle mich sowohl körperlich als auch seelisch stark belastet und angeschlagen.“
+    `
+  },
+  vorerkrankungen: {
+    additionalInfo: `
+**Vorerkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Vergangenheit bereits psychische Störungen (z. B. Depression, Angststörungen) oder Beziehungsprobleme diagnostiziert wurden, die das aktuelle Bild beeinflussen könnten.
+
+**Beispielfragen:**  
+- „Hatten Sie schon einmal Therapieerfahrungen wegen Beziehungskonflikten oder emotionaler Distanzierung?“  
+- „Wurden in der Vergangenheit Depressionen oder Angststörungen diagnostiziert?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich hatte in der Vergangenheit bereits depressive Episoden und Angstzustände, die mit meinen Beziehungskonflikten zusammenhängen.“
+    `
+  },
+  previousOperations: {
+    additionalInfo: `
+**Frühere Operationen**
+
+**Ziel:**  
+- Erfassen, ob operative Eingriffe vorliegen, die in einem psychosomatischen Kontext relevant sein könnten (z. B. Eingriffe, die Körperbildprobleme nach sich ziehen).
+
+**Beispielfragen:**  
+- „Wurden Sie jemals operativ behandelt, die Auswirkungen auf Ihr Körperbild hatten?“  
+- „Gab es postoperative Komplikationen, die Sie emotional belastet haben?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich wurde bisher nicht operiert, sodass dieser Aspekt nicht relevant ist.“
+    `
+  },
+  medications: {
+    additionalInfo: `
+**Medikamente**
+
+**Ziel:**  
+- Erfassen, ob aktuell oder in der Vergangenheit Medikamente zur Behandlung psychischer Symptome eingenommen wurden.
+
+**Beispielfragen:**  
+- „Nehmen Sie derzeit Medikamente, wie Antidepressiva oder Anxiolytika?“  
+- „Gab es in der Vergangenheit medikamentöse Therapieversuche und wie haben Sie darauf reagiert?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich habe in der Vergangenheit Antidepressiva ausprobiert, derzeit nehme ich jedoch keine spezifische Medikation ein.“
+    `
+  },
+  allergiesAndIntolerances: {
+    additionalInfo: `
+**Unverträglichkeiten (Allergien und Intoleranzen)**
+
+**Ziel:**  
+- Erfassen, ob bekannte Allergien vorliegen, die bei einer eventuellen medikamentösen Therapie berücksichtigt werden müssen.
+
+**Beispielfragen:**  
+- „Haben Sie bekannte Allergien gegen Medikamente?“  
+- „Gab es in der Vergangenheit allergische Reaktionen, die für die Therapie relevant sein könnten?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Mir sind keine Allergien gegen Medikamente bekannt.“
+    `
+  },
+  noxen: {
+    additionalInfo: `
+**Noxen**
+
+**Ziel:**  
+- Erfassen von belastenden Faktoren und Risikofaktoren, die zur Entwicklung und Aufrechterhaltung der somatoformen Störung beitragen können.
+
+**Beispiele:**  
+- Chronischer Stress, hohe Leistungsanforderungen, familiäre Konflikte und gesellschaftliche Erwartungen.
+
+**Beispielfragen:**  
+- „Erleben Sie einen hohen emotionalen oder beruflichen Stress?“  
+- „Gibt es belastende familiäre oder gesellschaftliche Umstände, die Sie zusätzlich stressen?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich stehe unter konstantem Stress, sowohl beruflich als auch privat, was meine Beschwerden verstärkt.“
+    `
+  },
+  familienanamnese: {
+    additionalInfo: `
+**Familiäre Erkrankungen**
+
+**Ziel:**  
+- Erfassen, ob in der Familie psychische Erkrankungen, wie Depressionen, Angststörungen oder Beziehungskonflikte, vorkommen, die das individuelle Risiko erhöhen könnten.
+
+**Beispielfragen:**  
+- „Gab es in Ihrer Familie Fälle von Depression oder Angststörungen?“  
+- „Wurden bei nahen Verwandten Beziehungskonflikte oder emotionale Distanzierung als belastende Faktoren beschrieben?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „In meiner Familie gibt es mehrere Fälle von Depressionen und Angststörungen, was mich zusätzlich belastet.“
+    `
+  },
+  sozialanamnese: {
+    additionalInfo: `
+**Soziale Anamnese**
+
+**Ziel:**  
+- Erfassen der sozialen, beruflichen und privaten Lebensumstände, die Einfluss auf die Beziehung und das emotionale Wohlbefinden haben.
+
+**Relevante Bereiche:**  
+- Beziehungssituation, Unterstützung durch das soziale Umfeld, beruflicher Stress und Freizeitaktivitäten.
+
+**Beispielfragen:**  
+- „Wie würden Sie Ihre aktuelle Beziehungssituation beschreiben?“  
+- „Haben Sie ein stabiles und unterstützendes soziales Netzwerk?“  
+- „Beeinflusst Ihr beruflicher Alltag Ihre emotionale Verfassung?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Ich fühle mich in meiner Beziehung oft isoliert und bekomme wenig Unterstützung von meinem Umfeld, was mich zusätzlich belastet.“
+    `
+  },
+  differentialDiagnosis: {
+    additionalInfo: `
+**Differentialdiagnose**
+
+**Ziel:**  
+- Abgrenzung von anderen psychischen Störungen, die ähnliche Symptome hervorrufen können.
+
+**Beispiele:**  
+1. Major Depression – mit dominierenden depressiven Symptomen.  
+2. Angststörungen – die ebenfalls zu körperlichen und emotionalen Beschwerden führen können.  
+3. Anpassungsstörung – als Reaktion auf belastende Lebensereignisse.  
+4. Persönlichkeitsstörungen – bei denen Beziehungskonflikte und emotionale Instabilität im Vordergrund stehen.
+
+**Beispielfragen:**  
+- „Können Ihre Beschwerden auch durch eine Major Depression erklärt werden?“  
+- „Wurden andere psychische Erkrankungen bereits diagnostiziert oder ausgeschlossen?“
+
+**Mögliche Antworten:**  
+- *Patient/in:* „Obwohl ich depressive Verstimmungen habe, dominieren in erster Linie die Beziehungskonflikte und die emotionale Distanzierung, was eher auf eine somatoforme oder anpassungsbezogene Problematik hindeutet.“
+    `
+  },
+  preliminaryDiagnosis: {
+    additionalInfo: `
+**Diagnose**
+
+**Ziel:**  
+- Formulierung eines vorläufigen Diagnosevorschlags basierend auf den gesammelten anamnestischen und vegetativen Befunden.
+
+**Kriterien:**  
+- Anhaltende Beziehungskonflikte und emotionale Distanzierung mit hohem subjektiven Leidensdruck.  
+- Wiederholte Arztbesuche trotz unauffälliger organischer Befunde.  
+- Erhebliche psychosoziale Belastungen und beeinträchtigtes Selbstwertgefühl.
+
+**Beispielfazit:**  
+- „Aufgrund der vorliegenden anamnestischen Daten und des hohen subjektiven Leidensdrucks besteht der Verdacht auf eine somatoforme bzw. anpassungsbezogene Störung im Kontext von Beziehungskonflikten und emotionaler Distanzierung, die eine interdisziplinäre therapeutische Intervention erfordert.“
+    `
+  },
+  proposedProcedures: {
+    additionalInfo: `
+**Untersuchungen und weitere Maßnahmen**
+
+**Ziel:**  
+- Festlegung weiterer diagnostischer und therapeutischer Schritte zur Bestätigung der Diagnose und Planung einer interdisziplinären Behandlung.
+
+**Vorgeschlagene Maßnahmen:**
+
+**Psychologische Diagnostik:**  
+- Einsatz standardisierter Fragebögen (z. B. Beck-Depressions-Inventar, State-Trait-Angstinventar, Relationship Assessment Scale).  
+- Durchführung ausführlicher klinischer Interviews zur Erfassung von Beziehungsdynamiken und emotionaler Distanzierung.
+
+**Therapeutische Interventionen:**  
+- **Psychotherapie:** Vorzugsweise kognitive Verhaltenstherapie oder interpersonelle Therapie zur Bearbeitung der Beziehungskonflikte und zur Verbesserung der emotionalen Kommunikation.  
+- **Paartherapie:** Falls beide Partner an der Problematik mitwirken möchten, um Konfliktlösungsstrategien zu erarbeiten.  
+- **Stressmanagement:** Training und Entspannungsverfahren zur Reduktion von psychosozialem Stress.
+
+**Beispielfragen zur weiteren Planung:**  
+- „Sind Sie bereit, an einem intensiven psychotherapeutischen Programm teilzunehmen?“  
+- „Wären Sie offen für eine Paartherapie, um die Beziehungskonflikte gemeinsam anzugehen?“  
+- „Haben Sie bereits Erfahrungen mit Stressmanagement-Techniken gesammelt?“
+
     `
   },
 }

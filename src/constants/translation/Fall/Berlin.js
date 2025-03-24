@@ -5217,7 +5217,7 @@ const BERLIN_DATA = [
     "id": 444,
     "examDate": "",
     "fullName": "Beziehungskonflikt / Emotionale Distanzierung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "beziehungskonflikt_emotionale_distanzierung",
     "name": "Max",
     "surname": "Mustermann",
     "birthdate": "",

@@ -4651,7 +4651,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 184,
     "fullName": "V.a. Karpaltunnelsyndrom",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "karpaltunnelsyndrom",
     "name": "Harri",
     "surname": "Büchert",
     "birthdate": "16.09.1959",
