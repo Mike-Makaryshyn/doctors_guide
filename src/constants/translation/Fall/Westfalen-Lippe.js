@@ -507,7 +507,7 @@ const WESTFALEN_DATA = [
     "id": 1256,
     "examDate": "04.12.2021",
     "fullName": "V.a. Epilepsie",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "epilepsie",
     "name": "Nadine",
     "surname": "Dietrich",
     "birthdate": "",

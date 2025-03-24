@@ -748,7 +748,7 @@ const BAYERN_DATA = [
   {
     "id": 338,
     "fullName": "V.a. Cholezystolithiasis",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "cholezystitis",
     "name": "Maik",
     "surname": "Keller",
     "birthdate": "",
@@ -1163,7 +1163,7 @@ const BAYERN_DATA = [
   {
     "id": 343,
     "fullName": "V.a. Hodgkin-Lymphom",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "limfoma",
     "name": "Hermann",
     "surname": "Lorenz",
     "birthdate": "",

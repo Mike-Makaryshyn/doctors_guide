@@ -591,7 +591,7 @@ const RHEINLAND_DATA = [
     "id": 1007,
     "examDate": "",
     "fullName": "V.a. Cholelithiasis / Cholezystitis",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "cholezystitis",
     "name": "Franziska",
     "surname": "Hoffmann",
     "birthdate": "19.10.1973",

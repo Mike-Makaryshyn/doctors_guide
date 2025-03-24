@@ -1263,7 +1263,7 @@ const MECKLENBURG_DATA = [
     "id": 682,
     "fullName": "Akute rezidivierende Tonsillitis",
     "examDate": "10.08.2021 bis 12.08.2021",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "anginatonsillaris",
     "name": "Theo",
     "surname": "Eichstädt",
     "birthdate": "01.07.1966",

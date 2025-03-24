@@ -2775,7 +2775,7 @@ const THUERINGEN_DATA = [
     "id": 1202,
     "examDate": "04.10.2021",
     "fullName": "V.a. Schlafapnoe-Syndrom",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "osas",
     "name": "Hubert",
     "surname": "",
     "birthdate": "",

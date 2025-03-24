@@ -2078,7 +2078,7 @@ const BW_KARLSRUHE_DATA = [
   {
     "id": 62,
     "fullName": "V.a. peptisches Ulkus mit Blutung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "ulcusventriculi",
     "name": "Peter",
     "surname": "Keller",
     "birthdate": "09.02.1974",

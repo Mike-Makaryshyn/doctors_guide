@@ -3821,7 +3821,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 279,
     "fullName": "V.a. Prostatahyperplasie",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "benigneprostatahyperplasie",
     "name": "Herr",
     "surname": "Meier",
     "birthdate": "",
@@ -4983,7 +4983,7 @@ const BW_STUTTGART_DATA = [
   {
     "id": 294,
     "fullName": "V.a. distale Sprunggelenkfraktur Typ Weber A",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "sprunggelenksfrakturen",
     "name": "Karl",
     "surname": "Schrüder",
     "birthdate": "",

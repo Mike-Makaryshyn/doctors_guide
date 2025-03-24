@@ -1663,7 +1663,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 147,
     "fullName": "V.a. akute Cholezystitis",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "cholezystitis",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -4817,7 +4817,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 186,
     "fullName": "V.a. Leberzirrhose",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "leberzirrhose",
     "name": "",
     "surname": "",
     "birthdate": "",
@@ -5232,7 +5232,7 @@ const BW_REUTLINGEN_DATA = [
   {
     "id": 191,
     "fullName": "V.a. Obere gastrointestinale Blutung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "ulcusventriculi",
     "name": "Leo",
     "surname": "Häberle",
     "birthdate": "",

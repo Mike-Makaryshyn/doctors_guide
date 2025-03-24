@@ -749,7 +749,7 @@ const SACHSEN_DATA = [
   {
     "id": 1093,
     "fullName": "V.a. HWS-Diskusprolaps, Omarthrose oder Schulterimpingement",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "bandscheibenvorfall",
     "name": "Max",
     "surname": "Krug",
     "birthdate": "29.07.1962",
@@ -1828,7 +1828,7 @@ const SACHSEN_DATA = [
   {
     "id": 1107,
     "fullName": "V.a. Apoplex",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "apoplex",
     "name": "Hannes",
     "surname": "Knecht",
     "birthdate": "",
@@ -1911,7 +1911,7 @@ const SACHSEN_DATA = [
   {
     "id": 1108,
     "fullName": "V.a. Fazialisparese",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "faszialparese",
     "name": "Herr",
     "surname": "Marquardt",
     "birthdate": "15.05.1999",
@@ -2990,7 +2990,7 @@ const SACHSEN_DATA = [
   {
     "id": 1121,
     "fullName": "V.a. chronische gastrointestinale Erkrankung",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "morbuschroncolitisulcerosa",
     "name": "Martin",
     "surname": "Uhlig",
     "birthdate": "",

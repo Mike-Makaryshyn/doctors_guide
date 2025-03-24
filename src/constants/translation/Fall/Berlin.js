@@ -2019,7 +2019,7 @@ const BERLIN_DATA = [
     "id": 404,
     "examDate": "",
     "fullName": "Cholezystitis",
-    "specialty": "OBRABOTYTY!",
+    "specialty": "cholezystitis",
     "name": "Deins",
     "surname": "Blumer",
     "birthdate": "",
