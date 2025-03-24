@@ -10,25 +10,22 @@
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 9999;
   display: flex;
-  justify-content: flex-start; /* меню буде ліворуч */
+  justify-content: flex-start;
   align-items: stretch;
 }
 
-/* Основний контейнер меню (виїжджає зліва) */
-/* Змінено фон на #3F3F3F */
+/* Контейнер меню, що виїжджає зліва */
 .sideMenu {
   width: 280px;
-  border-radius: 12px; 
   height: 100%;
-  background-color: #ffffff;
-  color: #023c6f; /* колір шрифту */
+  background-color: #ffffff; /* білий фон */
+  color: #023c6f;
   transform: translateX(-100%);
   animation: slideIn 0.4s forwards ease;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
 }
 
-/* Анімація для плавного виїзду */
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
@@ -43,15 +40,13 @@
   padding: 20px;
 }
 
-/* Акордеон – кожна секція */
+/* Акордеон */
 .accordionSection {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
-/* Заголовок секції – робимо його як панель ("стіною") */
-/* Оновлено в .accordionHeader */
 .accordionHeader {
   display: flex;
   justify-content: space-between;
@@ -59,25 +54,14 @@
   cursor: pointer;
   font-weight: 600;
   padding: 8px 12px;
-  background-color: #ffffff10; /* легкий прозорий фон */
-  border: 1px solid #023c6f;   /* обводка в кольорі шрифту */
-  border-radius: 12px;         /* збільшене заокруглення */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-color: #ffffff10;
+  border: 1px solid #023c6f;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-family: 'Papin', sans-serif;
   color: #023c6f;
-  text-align: left;            /* вирівнювання тексту ліворуч */
-}
-
-/* Оновлено в .menuLink */
-.menuLink {
-  color: #023c6f;
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 12px;         /* заокруглення посилань */
-  transition: background-color 0.3s ease;
-  font-family: 'Papin', sans-serif;
-  text-align: left;            /* вирівнювання тексту ліворуч */
+  text-align: left;
 }
 
 .accordionHeader:hover {
@@ -85,7 +69,6 @@
   transform: translateY(-2px);
 }
 
-/* Стрілочка, яка обертається при відкритті */
 .accordionArrow {
   transition: transform 0.3s ease;
   margin-left: 8px;
@@ -95,7 +78,6 @@
   transform: rotate(180deg);
 }
 
-/* Тіло акордеону */
 .accordionBody {
   padding-left: 10px;
   display: flex;
@@ -113,9 +95,54 @@
   }
 }
 
-/* Стиль для посилань у меню */
-
+.menuLink {
+  color: #023c6f;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  font-family: 'Papin', sans-serif;
+  text-align: left;
+}
 
 .menuLink:hover {
   background-color: rgba(2, 59, 110, 0.1);
+}
+
+/* Стиль для активного посилання (вказує, що це поточна сторінка) */
+.activeLink {
+  background-color: rgba(2, 59, 110, 0.2);
+  font-weight: bold;
+}
+
+/* Блок для авторизації */
+.authBlock {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.authButton {
+  background-color: #023c6f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.authButton:hover {
+  background-color: #03528c;
+}
+
+/* Приклад для блоку аватара */
+.avatarBlock {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

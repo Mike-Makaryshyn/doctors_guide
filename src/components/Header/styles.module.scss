@@ -114,6 +114,7 @@ select::-ms-expand {
 .mainLogo {
   font-weight: 600;
   cursor: pointer;
+  margin-left: 0;
   transition: all 0.2s ease;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -161,6 +162,7 @@ select::-ms-expand {
     display: none;
   }
 }
+
 .burgerButton {
   background: none;
   border: none;
@@ -168,4 +170,6 @@ select::-ms-expand {
   cursor: pointer;
   color: white;
   padding: 0;
+  margin-right: 10px; // невеликий відступ між бургером і логотипом
 }
+
