@@ -28,7 +28,31 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
-
+.highlighted {
+    background-color: #91cb53; /* світло-жовтий фон, як маркер */
+    padding: 0 2px; /* трохи відступу для кращого вигляду */
+    border-radius: 2px; /* заокруглення кутів */
+  }
+  .highlighted {
+    position: relative;       // робимо контейнер позиційованим
+    display: inline-block;    // дозволяє точно контролювати розміщення псевдоелемента
+    z-index: 0;               // псевдоелемент буде позаду тексту
+    
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;            // позаду самого тексту
+      top: 0.2em;             // трохи зміщуємо згори
+      left: -0.1em;           // і зліва, щоб фон «виходив» за текст
+      right: -0.1em;
+      bottom: 0.2em;
+      
+      // колір «маркера»
+      border-radius: 4px;        // трохи заокруглення
+      filter: blur(2px);         // «фаззi»-ефект (ступінь розмиття можна змінювати)
+      opacity: 0.8;             // прозорість, щоб виглядало ніжніше
+    }
+  }
 .tile:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(31, 38, 135, 0.5);

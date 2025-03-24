@@ -19,13 +19,13 @@ const PreliminaryDiagnosis = ({ parsedData = {} }) => {
 
     const getFieldValue = (value) => {
         if (!isDataParsed) {
-            return ""; // Порожнє значення до запарсення
+          return ""; // Поки дані не завантажені – нічого не показувати
         }
         if (value === null || value === undefined || value === "") {
-            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих значень
+          return <span className={styles["blurred-text"]}>Keine Angabe</span>;
         }
-        return value; // Повертаємо значення, якщо воно є
-    };
+        return <span className={styles["highlighted"]}>{value}</span>;
+      };
 
     useEffect(() => {
         if (parsedData && Object.keys(parsedData).length > 0) {

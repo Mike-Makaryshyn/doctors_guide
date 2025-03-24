@@ -21,13 +21,13 @@ const PersonalData = ({ parsedData = {} }) => {
     // Функція для отримання значення поля
     const getFieldValue = (value) => {
         if (!isDataParsed) {
-            return ""; // Порожнє значення до обробки даних
+          return ""; // Поки дані не завантажені – нічого не показувати
         }
         if (value === null || value === undefined || value === "") {
-            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Заблюрений текст для пустих полів
+          return <span className={styles["blurred-text"]}>Keine Angabe</span>;
         }
-        return value;
-    };
+        return <span className={styles["highlighted"]}>{value}</span>;
+      };
 
     // Відстеження зміни parsedData
     useEffect(() => {

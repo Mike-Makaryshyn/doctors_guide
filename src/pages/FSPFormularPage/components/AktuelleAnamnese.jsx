@@ -18,13 +18,13 @@ const AktuelleAnamnese = ({ parsedData = {} }) => {
 
     const getFieldValue = (value) => {
         if (!isDataParsed) {
-            return ""; // Показуємо порожнє значення до запарсення
+          return ""; // Поки дані не завантажені – нічого не показувати
         }
         if (value === null || value === undefined || value === "") {
-            return <span className={styles["blurred-text"]}>Keine Angabe</span>; // Якщо значення пусте, додаємо заблюрений текст
+          return <span className={styles["blurred-text"]}>Keine Angabe</span>;
         }
-        return value; // Якщо значення є, показуємо його
-    };
+        return <span className={styles["highlighted"]}>{value}</span>;
+      };
 
     useEffect(() => {
         if (parsedData && Object.keys(parsedData).length > 0) {
