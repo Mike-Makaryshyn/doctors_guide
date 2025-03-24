@@ -756,7 +756,7 @@ const THUERINGEN_DATA = [
       "patientQuestions": "**Frage:** Warum habe ich diese Schmerzen?  \n**Antwort:** Es könnte eine Entzündung im Darmbereich sein – wir untersuchen das genau.\n\n**Frage:** Was bedeutet Divertikulitis?  \n**Antwort:** Das ist eine Entzündung von Ausstülpungen im Dickdarm.\n\n**Frage:** Ist das gefährlich?  \n**Antwort:** Wenn man es früh behandelt, meistens nicht – aber es kann Komplikationen geben.\n\n**Frage:** Warum bekomme ich Fieber und Harndrang?  \n**Antwort:** Möglicherweise ist auch die Blase mitbetroffen – wir prüfen das durch eine Urinuntersuchung. "
     },
     {
-      "id": 1179,
+      "id": 1233,
       "examDate": "18.11.2024",
       "fullName": "V.a. Diskusprolaps",
       "specialty": "orthopädie",
@@ -1680,7 +1680,7 @@ const THUERINGEN_DATA = [
       "patientQuestions": "**Frage:** Was habe ich?\n**Antwort:** Wahrscheinlich liegt eine Durchblutungsstörung Ihrer Beine vor.\n\n**Frage:** Ist das gefährlich?\n**Antwort:** Ja, unbehandelt kann es zu Gewebeschäden kommen.\n\n**Frage:** Was wird gemacht?\n**Antwort:** Untersuchung der Gefäße, Labor und ggf. Operation.\n\n**Frage:** Warum soll ich nüchtern bleiben?\n**Antwort:** Falls eine Not-OP notwendig ist, um das Bein zu retten."
     },
     {
-      "id": 1190,
+      "id": 1230,
       "examDate": "",
       "fullName": "V.a. Herzinsuffizienz",
       "specialty": "kardiologie",
@@ -3780,7 +3780,7 @@ const THUERINGEN_DATA = [
       "patientQuestions": "**Frage:** Was habe ich?  \n**Antwort:** Wir vermuten einen Schlaganfall, müssen aber andere Ursachen wie Unterzucker ausschließen\n\n**Frage:** Was wird gemacht?  \n**Antwort:** Blutuntersuchung und Bildgebung (CT) zur weiteren Abklärung"
     },
     {
-      "id": 1214,
+      "id": 1231,
       "examDate": "22.02.2021",
       "fullName": "V.a. Schlaganfall",
       "specialty": "neurologie",

@@ -1,0 +1,121 @@
+/* SideMenu.module.scss */
+
+/* Оверлей (півпрозорий фон), який покриває весь екран */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-start; /* меню буде ліворуч */
+  align-items: stretch;
+}
+
+/* Основний контейнер меню (виїжджає зліва) */
+/* Змінено фон на #3F3F3F */
+.sideMenu {
+  width: 280px;
+  border-radius: 12px; 
+  height: 100%;
+  background-color: #ffffff;
+  color: #023c6f; /* колір шрифту */
+  transform: translateX(-100%);
+  animation: slideIn 0.4s forwards ease;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+/* Анімація для плавного виїзду */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Вміст меню */
+.sideMenuContent {
+  padding: 20px;
+}
+
+/* Акордеон – кожна секція */
+.accordionSection {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+/* Заголовок секції – робимо його як панель ("стіною") */
+/* Оновлено в .accordionHeader */
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 12px;
+  background-color: #ffffff10; /* легкий прозорий фон */
+  border: 1px solid #023c6f;   /* обводка в кольорі шрифту */
+  border-radius: 12px;         /* збільшене заокруглення */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Papin', sans-serif;
+  color: #023c6f;
+  text-align: left;            /* вирівнювання тексту ліворуч */
+}
+
+/* Оновлено в .menuLink */
+.menuLink {
+  color: #023c6f;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 12px;         /* заокруглення посилань */
+  transition: background-color 0.3s ease;
+  font-family: 'Papin', sans-serif;
+  text-align: left;            /* вирівнювання тексту ліворуч */
+}
+
+.accordionHeader:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Стрілочка, яка обертається при відкритті */
+.accordionArrow {
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+/* Тіло акордеону */
+.accordionBody {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Стиль для посилань у меню */
+
+
+.menuLink:hover {
+  background-color: rgba(2, 59, 110, 0.1);
+}

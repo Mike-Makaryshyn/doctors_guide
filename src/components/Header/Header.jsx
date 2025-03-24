@@ -1,26 +1,26 @@
+import React, { useState } from "react";
+import cn from "classnames";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import {
   languageFlags,
   languages,
   DEFAULT_LANGUAGE,
 } from "../../constants/translation/global";
 import { localStorageGet, localStorageSet } from "../../utils/localStorage";
-import { useNavigate, useLocation } from "react-router-dom";
 import useGetGlobalInfo from "../../hooks/useGetGlobalInfo";
-import styles from "./styles.module.scss";
-import cn from "classnames";
-import Avatar from "../../components/Avatar/Avatar";
+import { main_menu_items } from "../../constants/translation/main_menu";
 
-/** 
- * Einziger Objekt mit Abkürzungen:
- * Nun mit einzelnen BW-Subregions für Kurz-Notation
- */
+import Avatar from "../../components/Avatar/Avatar";
+import SideMenu from "../SideMenu/SideMenu"; // окремий компонент для сайд-меню
+import styles from "./styles.module.scss";
+
 const shortRegions = {
   "Baden-Württemberg": "BW",
   "Baden-Württemberg-Freiburg": "BW-FR",
   "Baden-Württemberg-Karlsruhe": "BW-KA",
   "Baden-Württemberg-Stuttgart": "BW-ST",
   "Baden-Württemberg-Reutlingen": "BW-RE",
-
   "Nordrhein-Westfalen": "NRW",
   "Westfalen-Lippe": "W-L",
   Bayern: "BY",
@@ -45,21 +45,25 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Стан для відкривання/закривання сайд-меню
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+
   const handleChangeLanguage = (event) => {
     const newLanguage = event.target.value;
     localStorageSet("selectedLanguage", newLanguage);
-    window.location.reload(); 
+    window.location.reload();
   };
 
-  // Klick auf den Regionsnamen => zur Karte navigieren
+  // Перехід до мапи при кліку на регіон
   const handleRegionClick = () => {
     navigate("/custom-map");
   };
 
-  // Prüfung: Registrierungsseite?
+  // Перевірка, чи це сторінка реєстрації
   const isRegistrationPage = location?.pathname === "/auth/registration";
 
-  // Dynamische Übersetzungen
+  // Текстові переклади
   const translations = {
     registration: {
       en: "Registration",
@@ -85,78 +89,84 @@ const Header = () => {
     },
   };
 
-  // Abkürzung oder Originalregion
   const regionAbbrev = shortRegions[selectedRegion] || selectedRegion;
-
-  // Ganze Region oder "Authorization required"
   const regionFullOrAuth =
     selectedRegion ||
     translations.authRequired[selectedLanguage] ||
     translations.authRequired.en;
-
-  // Anzeige je nach Seite
   const titleToShow = isRegistrationPage
     ? translations.registration[selectedLanguage] || translations.registration.en
     : regionFullOrAuth;
 
   return (
-    <header className={cn(styles.header, "flexBt")}>
-      <h2
-        onClick={() => navigate("/main_menu")}
-        className={cn(styles.mainLogo, "upcase", styles.glowAnimation)}
-      >
-        Germanmove
-      </h2>
+    <>
+      <header className={cn(styles.header, "flexBt")}>
+        {/* Кнопка "бургер" з трьома рисочками, без фону */}
+        <button className={styles.burgerButton} onClick={toggleMenu}>
+          ☰
+        </button>
 
-      {/* Desktop: voller Regionsname oder "Registration"/"Authorization required" */}
-      <span
-        className={cn(styles.sRegionFull, styles.sRegion)}
-        onClick={handleRegionClick}
-        style={{ cursor: "pointer" }}
-        data-testid="region-select-full"  // Додано атрибут для вибору регіону (повна назва)
-      >
-        {titleToShow}
-      </span>
+        {/* Лого */}
+        <h2
+          onClick={() => navigate("/main_menu")}
+          className={cn(styles.mainLogo, "upcase", styles.glowAnimation)}
+        >
+          Germanmove
+        </h2>
 
-      {/* Mobile: nur Abkürzung */}
-      <span
-        className={cn(styles.sRegionShort, styles.sRegion)}
-        onClick={handleRegionClick}
-        style={{ cursor: "pointer" }}
-        data-testid="region-select-short"  // Додано атрибут для вибору регіону (абревіатура)
-      >
-        {isRegistrationPage
-          ? translations.registration[selectedLanguage] ||
-            translations.registration.en
-          : regionAbbrev}
-      </span>
-
-      <div className="flexBt">
-        <span className={styles.languageLabel}>
-          {languages[selectedLanguage].language}
+        {/* Назва регіону для десктопа */}
+        <span
+          className={cn(styles.sRegionFull, styles.sRegion)}
+          onClick={handleRegionClick}
+          style={{ cursor: "pointer" }}
+          data-testid="region-select-full"
+        >
+          {titleToShow}
         </span>
 
-        <select
-          className={styles.langSelect}
-          value={selectedLanguage}
-          onChange={handleChangeLanguage}
-          data-testid="language-select"  // Додано атрибут для вибору мови
+        {/* Назва регіону для мобільних */}
+        <span
+          className={cn(styles.sRegionShort, styles.sRegion)}
+          onClick={handleRegionClick}
+          style={{ cursor: "pointer" }}
+          data-testid="region-select-short"
         >
-          {languages[selectedLanguage].options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {/* Zeige immer Flagge */}
-              {languageFlags[option.value]}
-              {/* Der Sprachname kommt in eine .optionLabel => Mobile: hidden */}
-              <span className="optionLabel"> {option.label}</span>
-            </option>
-          ))}
-        </select>
+          {isRegistrationPage
+            ? translations.registration[selectedLanguage] ||
+              translations.registration.en
+            : regionAbbrev}
+        </span>
 
-        <a href="/dashboard" style={{ textDecoration: "none" }}>
-          <Avatar stageId={1} />
-        </a>
-      </div>
-    </header>
+        <div className="flexBt">
+          <span className={styles.languageLabel}>
+            {languages[selectedLanguage].language}
+          </span>
+
+          <select
+            className={styles.langSelect}
+            value={selectedLanguage}
+            onChange={handleChangeLanguage}
+            data-testid="language-select"
+          >
+            {languages[selectedLanguage].options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {languageFlags[option.value]}{" "}
+                <span className="optionLabel"> {option.label}</span>
+              </option>
+            ))}
+          </select>
+
+    
+        </div>
+      </header>
+
+      {/* Рендер сайд-меню як окремого компонента */}
+      <SideMenu
+        language={selectedLanguage}
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
+    </>
   );
 };
 
